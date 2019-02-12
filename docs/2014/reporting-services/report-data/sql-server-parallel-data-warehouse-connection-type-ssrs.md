@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3925fd3d-2aa1-4768-96ad-cfc2c0ba9283
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 671f574f81bdceb35c1ee235f8ae545b5ae60296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 6b50d6757c4ea635da35e881219dd63871dc0967
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372831"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039310"
 ---
 # <a name="sql-server-parallel-data-warehouse-connection-type-ssrs"></a>Type de connexion à un entrepôt de données SQL Server Parallel Data Warehouse (SSRS)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] est un appareil d'entrepôt de données évolutif qui offre performances et montée en charge via le traitement parallèle massif. [!INCLUDE[ssDW](../../../includes/ssdw-md.md)] utilise des bases de données [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] pour le traitement distribué et le stockage des données.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e8eff470-64d6-41c3-b98b-5ec916c121c3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d465bc3b1b0d8a70ff4e205b3c1851750455e814
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a7c5191a5b2964d8dbf9f5611cc051cdae4ffe33
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075739"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036170"
 ---
 # <a name="reporting-services-extension-library"></a>Bibliothèque d'extensions Reporting Services
   La bibliothèque d'extensions Reporting Services est un ensemble de classes, d'interfaces et de types de valeur inclus dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Cette bibliothèque fournit l’accès aux fonctionnalités du système ; elle est conçue pour servir de base sur laquelle les applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peuvent être utilisées pour étendre les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

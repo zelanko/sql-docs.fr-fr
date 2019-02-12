@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cb41b6fe5e19d69c68e7942dd1581eb7792a06af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117849"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043050"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Contrôle de l'affichage de la région de données de tableau matriciel sur une page de rapport (Générateur de rapports et SSRS)
   Cette rubrique décrit les propriétés pour une région de données de tableau matriciel qui permettent de modifier la façon dont une région de données de tableau matriciel s'affiche dans un rapport.  
@@ -56,7 +56,7 @@ ms.locfileid: "48117849"
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Contrôle du rendu de groupes de lignes et de colonnes de tableau matriciel  
  Le rendu de groupes de régions de données de tableau matriciel dépend de la structure de groupe. Une région de données du tableau matriciel peut comporter quatre zones, comme indiqué dans l'illustration suivante :  
   
- ![Zones de région de données de tableau matriciel](../media/rs-tablixareas.gif "zones de région de données de tableau matriciel")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  La zone de groupe de lignes et la zone de groupe de colonnes contiennent des en-têtes de groupe. Lorsqu'une région de données de tableau matriciel possède des en-têtes de groupe, vous contrôlez la façon dont les lignes et les colonnes se répètent en définissant des propriétés dans la page **Général** de la boîte de dialogue **Propriétés du tableau matriciel** .  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48117849"
 ## <a name="see-also"></a>Voir aussi  
  [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Régions de données imbriquées &#40;Générateur de rapports et SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
- [Page de contrôle des sauts, des en-têtes, colonnes et lignes &#40;Générateur de rapports et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
+ [Contrôle des sauts de page, des en-têtes, des colonnes et des lignes &#40;Générateur de rapports et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
  [Tables &#40;Générateur de rapports et SSRS&#41;](tables-report-builder-and-ssrs.md)   
  [Matrices &#40;Générateur de rapports et SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   

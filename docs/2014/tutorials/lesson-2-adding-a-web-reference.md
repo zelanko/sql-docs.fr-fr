@@ -1,29 +1,28 @@
 ---
-title: 'Leçon 2 : Ajout d’une référence Web | Microsoft Docs'
+title: 'Leçon 2 : Ajout d’une référence Web | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a2c2b8b8-6b13-45ca-ab3b-1582447b6807
-author: craigg-msft
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: be009e76b1de70b405cf8b4e3faff2c1461f6dcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102509"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031761"
 ---
-# <a name="lesson-2-adding-a-web-reference"></a>Leçon 2 : ajout d'une référence Web
+# <a name="lesson-2-adding-a-web-reference"></a>Leçon 2 : Ajouter une référence Web
   La découverte de service Web est le processus suivant lequel un client recherche un service Web et obtient sa description. Dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], le processus de la découverte de service Web implique l'interrogation d'un site Web suivant un algorithme prédéterminé. L'objectif de ce processus est de rechercher la description du service, qui correspond à un document XML utilisant le langage WSDL (Web Services Description Language).  
   
  La description du service décrit les services disponibles et la manière d'interagir avec ces derniers. Sans une description de service, il est impossible d'interagir par programme avec un service Web.  
   
- Votre application doit pouvoir communiquer avec le service Web et le rechercher lors de l'exécution. L'ajout d'une référence Web à votre projet pour le service Web permet cela en générant une classe proxy qui joue le rôle d'interface avec le service Web et qui en fournit une représentation locale. Pour plus d'informations, consultez « Procédure : générer un XML d'un proxy de service Web » dans la documentation [!INCLUDE[vsprvs](../includes/vsprvs-md.md)].  
+ Votre application doit pouvoir communiquer avec le service Web et le rechercher lors de l'exécution. L'ajout d'une référence Web à votre projet pour le service Web permet cela en générant une classe proxy qui joue le rôle d'interface avec le service Web et qui en fournit une représentation locale. Pour plus d'informations, consultez « Procédure : Générer un Proxy de Service Web XML » dans votre [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] documentation.  
   
 ### <a name="to-add-a-web-reference"></a>Pour ajouter une référence Web  
   
@@ -53,7 +52,7 @@ ms.locfileid: "48102509"
   
 ## <a name="see-also"></a>Voir aussi  
  [Service web Report Server](../reporting-services/report-server-web-service/report-server-web-service.md)   
- [Leçon 3 : Accès au Service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
+ [Leçon 3 : L’accès au Service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)   
  [Le Service Report Server Web à l’aide de Visual Basic ou Visual C# de l’accès à&#35; &#40;didacticiel SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

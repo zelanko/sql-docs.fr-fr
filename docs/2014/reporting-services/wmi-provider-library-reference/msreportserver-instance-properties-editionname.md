@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 983a5f94-f3c7-4b3a-943e-35fcb9822cc6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08798562f2c7a011e775c46482efa92493311177
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f3e86324f580968df31b15ee12895072895e587
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065079"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040690"
 ---
 # <a name="editionname-property-wmi-msreportserverinstance"></a>Propriété EditionName (WMI MSReportServer_Instance)
   Retourne le nom explicite de l'édition du serveur de rapports. En lecture seule.  
@@ -34,12 +34,12 @@ public string EditionName;
 ```  
   
 ## <a name="property-value"></a>Valeur de propriété  
- Un `string` qui contient le nom lisible de l’édition de serveur de rapports.  
+ `string` qui contient le nom lisible de l'édition du serveur de rapports.  
   
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspc](../../includes/ssrswminmspc-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

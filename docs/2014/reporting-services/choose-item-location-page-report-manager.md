@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 91d0f854c3023d91214e7537692381b412e8726a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4140fe03cb091a119942c563afe7f41ae69c5103
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121500"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038530"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Page Choisir l'emplacement de l'élément (Gestionnaire de rapports)
   La page Choisir l'emplacement de l'élément vous permet de sélectionner un dossier pour un nouveau rapport lié ou modèle. Si vous créez un rapport lié ou un modèle pour un groupe d'utilisateurs spécifique, vous pouvez souhaiter placer l'élément dans un dossier qui contient d'autres rapports et modèles qu'ils utilisent. Vous devez choisir un dossier qui existe déjà et pour lequel vous êtes autorisé à ajouter du contenu.  

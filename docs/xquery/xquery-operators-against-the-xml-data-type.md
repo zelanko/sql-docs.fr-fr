@@ -14,15 +14,15 @@ helpviewer_keywords:
 - operators [XQuery]
 - xml data type [SQL Server], XQuery
 ms.assetid: 39ca3d2e-e928-4333-872b-75c4ccde8e79
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5ba69530f6c9cb8451211a2dcec333d347062b74
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2786295b344cfc2df6ae613e42a39f71aee4d3d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671858"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038890"
 ---
 # <a name="xquery-operators-against-the-xml-data-type"></a>Opérateurs XQuery sur le type de données xml
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,9 +56,9 @@ WHERE  AdditionalContactInfo.value('
       'bit')= cast(1 as bit)  
 ```  
   
- Il existe un autre moyen d’observer le fonctionne de la requête précédente : chaque valeur numéro de téléphone téléphone récupérée à partir du **AdditionalContactInfo** colonne est comparée à l’ensemble de deux numéros de téléphone. Si la valeur se trouve dans le jeu, le client correspondant est retourné dans le résultat.  
+ Il existe un autre moyen d'observer le fonctionnement de la requête précédente : Chaque valeur de numéro téléphone téléphone récupérée à partir de la **AdditionalContactInfo** colonne est comparée à l’ensemble de deux numéros de téléphone. Si la valeur se trouve dans le jeu, le client correspondant est retourné dans le résultat.  
   
-### <a name="b-using-a-numeric-operator"></a>B. Utilisation d'un opérateur numérique  
+### <a name="b-using-a-numeric-operator"></a>b. Utilisation d'un opérateur numérique  
  L'opérateur + de cette requête est un opérateur de valeur, car il s'applique à un seul élément. Par exemple, la valeur 1 est ajoutée à une taille de lot retournée par la requête :  
   
 ```sql

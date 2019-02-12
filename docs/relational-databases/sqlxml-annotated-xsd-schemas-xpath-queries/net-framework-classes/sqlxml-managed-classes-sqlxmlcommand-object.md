@@ -28,16 +28,16 @@ helpviewer_keywords:
 - ClientSideXML property
 - CommandStream property
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3ae51af994665ac4234dc44e84fb5c2c405aa1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502564"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041500"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>Classes managées SQLXML - Objet SqlXmlCommand
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ public SqlXmlCommand(string cnString)
  ExecuteToStream void publique (Stream outputStream)  
  Écrit les résultats de la requête dans un flux de données existant. Cette méthode est utile lorsque vous avez un flux auquel vous voulez ajouter (par exemple, pour obtenir les résultats de requête écrites dans le System.Web.HttpResponse.OutputStream) les résultats. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
- ExecuteXmlReader() de XmlReader  
+ XmlReader ExecuteXmlReader()  
  Retourne un objet XmlReader. Vous pouvez utiliser cette méthode à manipuler directement les données dans l’objet XmlReader ou incorporer dans l’architecture chainable de System.Xml. Pour plus d'informations, consultez la documentation sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Pour obtenir un exemple fonctionnel, consultez [l’exécution de requêtes SQL à l’aide de la méthode ExecuteXMLReader](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  Objet de TheSqlXmlCommand prend également en charge ces méthodes supplémentaires :  

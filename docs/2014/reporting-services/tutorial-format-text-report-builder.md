@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff0a14a546a14d37461193b71b4d682deb25925a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350103"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030617"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Didacticiel : Format texte (Générateur de rapports)
   Dans ce didacticiel, vous pouvez vous entraîner à mettre en forme le texte de plusieurs façons. Après avoir configuré le rapport vierge avec la source de données et le dataset, vous pourrez choisir les étapes que vous souhaitez explorer.  
@@ -71,11 +71,11 @@ ms.locfileid: "53350103"
   
 1.  Dans le volet des données de rapport, cliquez sur **Nouveau**, puis sur **Source de données**.  
   
-2.  Dans le **nom** , tapez : **TextDataSource**  
+2.  Dans la zone **Nom**, tapez : **TextDataSource**  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
-4.  Vérifiez que le type de connexion est bien Microsoft SQL Server puis, dans la zone **Chaîne de connexion** , tapez : **Source de données = \<nom_serveur >**  
+4.  Vérifiez que le type de connexion est bien Microsoft SQL Server puis, dans la zone **Chaîne de connexion** , tapez : **Source de données = \<nom_serveur>**  
   
     > [!NOTE]  
     >  L’expression \<servername >, par exemple rapport001, spécifie un ordinateur sur lequel une instance du moteur de base de données SQL Server est installée. Ce didacticiel n'a pas besoin de données spécifiques. Il a juste besoin d'une connexion à une base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] . Si une connexion à une source de données est déjà répertoriée sous **Connexions à la source de données**, vous pouvez la sélectionner et passer à la procédure suivante, « Pour créer un dataset ». Pour plus d’informations, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "53350103"
   
 2.  Vérifiez que la source de données est **TextDataSource**.  
   
-3.  Dans le **nom** , tapez : **TextDataset.**  
+3.  Dans la zone **Nom**, tapez : **TextDataset.**  
   
 4.  Vérifiez que le type de requête **Texte** est sélectionné, puis cliquez sur **Concepteur de requêtes**.  
   

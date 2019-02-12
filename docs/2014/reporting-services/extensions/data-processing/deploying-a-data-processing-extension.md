@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: e5c0b5a9-1386-47cb-aade-96653ecfaa54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0751e3e72e7a6b9df1d2cdb8d414cfa263d38426
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5164cdfd418ad8f813b47813f7caee4799e41d90
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021400"
 ---
 # <a name="deploying-a-data-processing-extension"></a>Déploiement d'une extension pour le traitement des données
   Une fois que vous avez écrit et compilé votre extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans une bibliothèque [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous devez la rendre détectable par le serveur de rapports et par le Concepteur de rapports. Cette opération est aussi simple que de copier l'extension vers les répertoires appropriés et d'ajouter des entrées aux fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriés.  
@@ -35,7 +35,7 @@ ms.locfileid: "48109591"
 |---------------|-----------------|  
 |`Name`|Nom unique de l'extension, par exemple, « SQL » pour l'extension pour le traitement des données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou « OLEDB » pour l'extension pour le traitement des données OLE DB. La longueur maximale de l'attribut `Name` s'élève à 255 caractères. Le nom doit être unique au sein de toutes les entrées de l’élément **Extension** d’un fichier de configuration.|  
 |`Type`|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
-|`Visible`|La valeur `false` indique que l'extension pour le traitement des données ne doit pas être visible dans les interfaces utilisateur. Si l’attribut n’est pas inclus, la valeur par défaut est `true`.|  
+|`Visible`|La valeur `false` indique que l'extension pour le traitement des données ne doit pas être visible dans les interfaces utilisateur. Si cet attribut n'est pas défini, la valeur par défaut est `true`.|  
   
  Pour plus d’informations sur les fichiers RSReportServer.config ou RSReportDesigner.config, consultez [Fichiers de configuration de Reporting Services](../../report-server/reporting-services-configuration-files.md).  
   
@@ -43,8 +43,8 @@ ms.locfileid: "48109591"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Procédure : déployer une extension pour le traitement des données sur un serveur de rapports](deploying-a-data-processing-extension-to-a-report-server.md)|Décrit comment déployer votre extension pour le traitement des données sur un serveur de rapports.|  
-|[Procédure : déployer une extension pour le traitement des données sur le Concepteur de rapports](deploying-a-data-processing-extension-to-report-designer.md)|Décrit comment déployer votre extension pour le traitement des données sur le Générateur de rapports.|  
+|[Procédure : Déployer une Extension de traitement des données à un serveur de rapports](deploying-a-data-processing-extension-to-a-report-server.md)|Décrit comment déployer votre extension pour le traitement des données sur un serveur de rapports.|  
+|[Procédure : Déployer une Extension de traitement des données dans le Concepteur de rapports](deploying-a-data-processing-extension-to-report-designer.md)|Décrit comment déployer votre extension pour le traitement des données sur le Générateur de rapports.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Extensions Reporting Services](../reporting-services-extensions.md)   

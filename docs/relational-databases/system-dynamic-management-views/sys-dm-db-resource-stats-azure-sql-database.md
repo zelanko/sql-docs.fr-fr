@@ -2,10 +2,8 @@
 title: Sys.dm_db_resource_stats (base de données Azure SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2018
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.dm_db_resource_stats
@@ -22,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: fbf31fb20ebab569e681cda717cb62ff5f973447
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b05472f52bf182768740c8c01e8b60021dc898f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396786"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030150"
 ---
 # <a name="sysdmdbresourcestats-azure-sql-database"></a>sys.dm_db_resource_stats (base de données Azure SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -37,15 +35,15 @@ ms.locfileid: "52396786"
 |Colonnes|Type de données|Description|  
 |-------------|---------------|-----------------|  
 |end_time|**datetime**|Heure UTC indiquant la fin de l'intervalle de rapports actuel.|  
-|avg_cpu_percent|**décimale (5,2)**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
-|avg_data_io_percent|**décimale (5,2)**|Utilisation d’e/s en pourcentage de la limite du niveau de service de données moyen.|  
-|avg_log_write_percent|**décimale (5,2)**|Utilisation de débit d’e/s en tant que pourcentage de la limite du niveau de service moyenne d’écriture.|  
-|avg_memory_usage_percent|**décimale (5,2)**|Utilisation moyenne de la mémoire en pourcentage de la limite de la couche de service.<br /><br /> Cela inclut la mémoire utilisée pour le stockage d’objets de l’OLTP en mémoire.|  
-|xtp_storage_percent|**décimale (5,2)**|Utilisation du stockage pour l’OLTP en mémoire en pourcentage de la limite du niveau de service (à la fin de la période de rapport). Cela inclut la mémoire utilisée pour le stockage des objets OLTP en mémoire suivants : tables optimisées en mémoire, les index et les variables de table. Il inclut également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si l’OLTP en mémoire n’est pas utilisé dans la base de données.|  
-|max_worker_percent|**décimale (5,2)**|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite de niveau de service de la base de données.|  
-|max_session_percent|**décimale (5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.|  
+|avg_cpu_percent|**decimal (5,2)**|Utilisation moyenne du calcul en pourcentage de la limite de la couche de service.|  
+|avg_data_io_percent|**decimal (5,2)**|Utilisation d’e/s en pourcentage de la limite du niveau de service de données moyen.|  
+|avg_log_write_percent|**decimal (5,2)**|Utilisation de débit d’e/s en tant que pourcentage de la limite du niveau de service moyenne d’écriture.|  
+|avg_memory_usage_percent|**decimal (5,2)**|Utilisation moyenne de la mémoire en pourcentage de la limite de la couche de service.<br /><br /> Cela inclut la mémoire utilisée pour le stockage d’objets de l’OLTP en mémoire.|  
+|xtp_storage_percent|**decimal (5,2)**|Utilisation du stockage pour l’OLTP en mémoire en pourcentage de la limite du niveau de service (à la fin de la période de rapport). Cela inclut la mémoire utilisée pour le stockage des objets OLTP en mémoire suivants : tables optimisées en mémoire, les index et les variables de table. Il inclut également la mémoire utilisée pour le traitement des opérations ALTER TABLE.<br /><br /> Retourne 0 si l’OLTP en mémoire n’est pas utilisé dans la base de données.|  
+|max_worker_percent|**decimal (5,2)**|Nombre maximal d’ouvriers simultanés (demandes) en pourcentage de la limite de niveau de service de la base de données.|  
+|max_session_percent|**decimal (5,2)**|Nombre maximal de sessions simultané en pourcentage de la limite de niveau de service de la base de données.|  
 |dtu_limit|**Int**|Base de données max DTU paramètre actuel de cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle VCORE, cette colonne est NULL.|
-|cpu_limit|**décimale (5,2)**|Nombre de vCores pour cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle dtu, cette colonne est NULL.|
+|cpu_limit|**decimal (5,2)**|Nombre de vCores pour cette base de données pendant cet intervalle. Pour les bases de données à l’aide du modèle dtu, cette colonne est NULL.|
 |||
   
 > [!TIP]  

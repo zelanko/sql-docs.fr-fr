@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 3a740f8a-1060-4ec3-938b-2305b6887ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bb0768e479c9a308121d99202fea7ea497acd1e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4966841751b7eaf0382cc02d19fd2dac99462386
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182179"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034080"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Publication des sources de données et des rapports
   Avant de publier votre rapport, vous devez en afficher un aperçu pour voir à quoi il ressemblera une fois exécuté. Vous pouvez continuer à peaufiner sa conception jusqu'à ce que vous soyez satisfait du résultat obtenu.  
@@ -36,7 +36,7 @@ ms.locfileid: "48182179"
  [Publication de rapports sur un serveur de rapports](publishing-reports-to-a-report-server.md)  
  Décrit comment publier un rapport sur un serveur de rapports.  
   
- [Exemples d’URL pour les éléments de rapport publiés sur un serveur de rapports en Mode SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
+ [Exemples d’URL pour les éléments de rapport publiés sur un serveur de rapports en mode SharePoint &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)  
  Décrit comment publier un rapport sur un site SharePoint.  
   
 ## <a name="see-also"></a>Voir aussi  

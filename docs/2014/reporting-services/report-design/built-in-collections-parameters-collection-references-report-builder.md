@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d7f84157b46b7e6490da1c524b0be314dc69325b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0aeef25c70e3e8ff7be1cbec739063ffe2c20dbb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167742"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037151"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Références à la collection Parameters (Générateur de rapports et SSRS)
   Les paramètres de rapport font partie des collections intégrées que vous pouvez référencer à partir d'une expression. En incluant des paramètres dans une expression, vous pouvez personnaliser les données et l'apparence d'un rapport en fonction des choix faits par un utilisateur. Des expressions peuvent être utilisées pour toutes les propriétés des éléments de rapport ou propriétés des zones de texte qui comportent l’option (*Fx*) ou \<**Expression**>. Les expressions sont également utilisées pour contrôler différemment le contenu et l'apparence d'un rapport. Pour plus d’informations, consultez [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  
   
- Lorsque vous comparez des valeurs de paramètres à des valeurs de champs de dataset au moment de l'exécution, les types de données des deux éléments que vous comparez doivent être identiques. Les paramètres de rapport peuvent être de l'un des types suivants : Booléen, DateTime, Entier, Float ou Texte, qui représente le type de données sous-jacent Chaîne. Si nécessaire, vous pouvez convertir le type de données de la valeur du paramètre pour qu'il corresponde à la valeur du dataset. Pour plus d’informations, consultez [des Types de données dans les Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md).  
+ Lorsque vous comparez des valeurs de paramètres à des valeurs de champs de dataset au moment de l'exécution, les types de données des deux éléments que vous comparez doivent être identiques. Les types des paramètres de rapport sont les suivants : Boolean, DateTime, Integer, Float ou Text, qui représente le type de données sous-jacent String. Si nécessaire, vous pouvez convertir le type de données de la valeur du paramètre pour qu'il corresponde à la valeur du dataset. Pour plus d’informations, consultez [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
  Pour inclure une référence de paramètre dans une expression, vous devez comprendre comment spécifier la syntaxe correcte pour la référence de paramètre, laquelle varie suivant que le paramètre est un paramètre à valeur unique ou à valeurs multiples.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "48167742"
 |`=Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Value(0)`|Retourne la première valeur dans un paramètre à valeurs multiples.|  
 |`=Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Value(Parameters!`  *\<Nom_paramètre_à_valeurs_multiples>*`.Count-1)`|Retourne la dernière valeur dans un paramètre à valeurs multiples.|  
 |`=Split("Value1,Value2,Value3",",")`|Retourne un tableau de valeurs.<br /><br /> Permet de créer un tableau de valeurs pour un paramètre de type `String` à valeurs multiples. Vous pouvez utiliser un délimiteur dans le second paramètre pour établir un fractionnement (Split). Cette expression peut être utilisée pour définir les valeurs par défaut d'un paramètre à valeurs multiples ou pour créer un paramètre à valeurs multiples à envoyer à un rapport d'extraction ou de type sous-rapport.|  
-|`=Join(Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Value,", ")`|Retourne un `String` qui se compose d’une liste délimitée par des virgules des valeurs dans un paramètre à valeurs multiples. Vous pouvez utiliser un délimiteur dans le second paramètre pour établir une liaison (Join).|  
+|`=Join(Parameters!` *\<Nom_paramètre_à_valeurs_multiples>* `.Value,", ")`|Retourne une valeur de type `String` qui est composée d'une liste de valeurs délimitées par des virgules dans un paramètre à valeurs multiples. Vous pouvez utiliser un délimiteur dans le second paramètre pour établir une liaison (Join).|  
   
  Pour plus d’informations sur l’utilisation de paramètres dans un filtre, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md).  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48167742"
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Filtres couramment utilisés &#40;Générateur de rapports et SSRS&#41;](commonly-used-filters-report-builder-and-ssrs.md)   
  [Ajouter, modifier ou supprimer un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Didacticiel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Didacticiels &#40;Générateur de rapports&#41;](../report-builder-tutorials.md)   
- [Collections intégrées dans les Expressions &#40;Générateur de rapports et SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
+ [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](built-in-collections-in-expressions-report-builder.md)  
   
   

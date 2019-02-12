@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a64c28884b5c656e75e172f36b2bb008a1bbfdcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2a05787e4e06c7cf178c2618e2fbfbac4de596cd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077379"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035060"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports
   Cette rubrique constitue une référence concernant les autorisations de SharePoint utilisables pour accorder un accès à des opérations sur un serveur de rapports qui s'exécute en mode intégré SharePoint. Si vous créez des niveaux d'autorisation personnalisés, cette rubrique peut vous aider à choisir les autorisations à utiliser.  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7482b4a2ac81541cdd9f6317d7f76291e34aa162
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420650"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079465"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>Configurer l’accès HTTP à Analysis Services sur IIS 8.0
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -111,6 +111,8 @@ ms.locfileid: "52420650"
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
+> [!NOTE]  
+>  Le Gestionnaire des services Internet ne peut pas être en mesure de se connecter à Analysis Services dans la version actuelle, si la base de données est une sauvegarde à partir d’une précédente. Cela est provoqué par des modifications dans le MSMDPUMP et doit être résolu en copiant le fichier msmdpump.dll à partir de la version précédente du travail.
   
 ##  <a name="bkmk_appPool"></a> Étape 2 : Créer un pool d'applications et un répertoire virtuel dans IIS  
  Ensuite, créez un pool d’applications et un point de terminaison pour la pompe.  
@@ -148,7 +150,7 @@ ms.locfileid: "52420650"
 > [!NOTE]  
 >  Les versions antérieures de ces instructions incluaient les étapes de création d'un répertoire virtuel. Cette étape n'est plus nécessaire.  
   
-##  <a name="bkmk_auth"></a> Étape 3 : Configurer l'authentification IIS et ajouter l'extension  
+##  <a name="bkmk_auth"></a> Étape 3 : Configurer l'authentification IIS et ajouter l'extension  
  Dans cette étape, vous allez plus loin dans la configuration du répertoire virtuel SSAS que vous venez de créer. Vous allez spécifier une méthode d'authentification, puis ajouter un mappage de scripts. Les méthodes d'authentification prises en charge pour Analysis Services via HTTP sont les suivantes :  
   
 -   Authentification Windows (Kerberos ou NTLM)  

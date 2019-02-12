@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1f331902d6bf92c1accb7db8600ff33d96252cb4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 812f9351e294b4af9fb6854937a1a6cd211e8147
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357485"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036640"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint
   Cette rubrique compare les fonctionnalités d'autorisation basées sur les rôles et les tâches en mode natif [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aux fonctionnalités de sécurité dans les produits SharePoint. Cette rubrique compare la terminologie et les caractéristiques des rôles, des tâches, des groupes SharePoint, des niveaux d'autorisation et des autorisations.  
@@ -44,15 +44,15 @@ ms.locfileid: "53357485"
 ##  <a name="bkmk_compare_tools_terms"></a> Comparer les outils et la terminologie liés aux autorisations  
  **Mode natif :** Les objets d'autorisation de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif (rôles et tâches) sont créés dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et configurés pour chaque utilisateur individuellement dans le Gestionnaire de rapports.  
   
- **Mode SharePoint :** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] En mode SharePoint utilise les fonctionnalités d’autorisation SharePoint. Les groupes et les autorisations SharePoint sont gérés depuis la page **Paramètres du site** .  
+ **Mode SharePoint :** Le mode SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] utilise les fonctionnalités d’autorisation de SharePoint. Les groupes et les autorisations SharePoint sont gérés depuis la page **Paramètres du site** .  
   
  Le tableau suivant compare des objets et les concepts liés aux autorisations entre le mode natif [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et SharePoint.  
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif|SharePoint|  
 |---------------------------------------------|----------------|  
-|**Rôle :** Par exemple « Gestionnaire de contenu ».|**Groupe :** Par exemple le groupe « Visionneuses » par défaut.|  
-|---|**Groupe de niveau d’autorisation :** Par exemple « Afficher uniquement » pour le groupe « Visionneuses ».|  
-|**Tâches :** « Gérer les rapports », par exemple.|**Autorisations :** Par exemple, dans « Afficher uniquement » groupe, il existe des autorisations de liste d’afficher les éléments, afficher les versions et afficher les pages d’application.|  
+|**Rôle :** Par exemple « Gestionnaire de contenu ».|**Groupe :** Par exemple le groupe « Visiteurs » par défaut.|  
+|---|**Groupe de niveau d’autorisation :** Par exemple « Afficher uniquement » pour le groupe « Visiteurs ».|  
+|**Tâches :** « Gérer les rapports », par exemple.|**Autorisations :** Par exemple, au sein du groupe « Afficher uniquement », il existe des autorisations de liste des éléments de la vue, des versions de la vue et des pages d’application de la vue.|  
   
  Pour plus d'informations sur les autorisations SharePoint, consultez [Autorisations et niveaux d'autorisation](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) et [Déterminer les niveaux d'autorisation et les groupes dans SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "53357485"
 |**Mes rapports**|Il n'y a pas de groupe équivalent. **Mes rapports** n'est pas pris en charge sur un serveur de rapports qui s'exécute en mode SharePoint. Vous pouvez utiliser les fonctionnalités relatives à Mon Site dans [!INCLUDE[winSPServ](../includes/winspserv-md.md)] si vous souhaitez utiliser des fonctionnalités équivalentes.|  
 |**Serveur de publication**<br /><br /> Ajoutez, mettez à jour, affichez et supprimez des rapports, des modèles de rapport, des sources de données partagées et des ressources.|Utilisez le groupe **Membres** pour accorder des autorisations d'ajouter des éléments, de modifier des éléments et de mettre à jour des références à des éléments dépendants sur un site SharePoint. Le groupe **Membres** possède les autorisations de niveau Collaboration qui permettent aux membres du groupe d'afficher des pages, d'ajouter et de mettre à jour des éléments, de soumettre à l'approbation des modifications.|  
 |**Générateur de rapports**<br /><br /> Affichez des rapports, auto-gérez des abonnements individuels et ouvrez des rapports dans le Générateur de rapports.|Il n'existe pas de niveau d'autorisation prédéfini ou de groupe SharePoint équivalent à la définition de rapport du Générateur de rapports. Par défaut, les utilisateurs qui appartiennent aux groupes **Membres** ou **Propriétaires** sont autorisés à utiliser le Générateur de rapports. Si vous souhaitez élargir l'accès du Générateur de rapports à davantage d'utilisateurs, vous devez créer des paramètres de sécurité personnalisés pour fournir un niveau d'autorisation similaire à celui fourni par le rôle de Générateur de rapports. Pour plus d’information, consultez [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md).|  
-|-|Utilisez le groupe **Visionneuses** pour accorder des autorisations pour afficher des rapports rendus. Le groupe **Visionneuses** ne peut pas télécharger ou afficher le contenu d'éléments de rapport.<br /><br /> **Remarque :** À compter de SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le **visionneuses** groupe ne dispose pas des autorisations nécessaires pour créer des abonnements.|  
+|-|Utilisez le groupe **Visionneuses** pour accorder des autorisations pour afficher des rapports rendus. Le groupe **Visionneuses** ne peut pas télécharger ou afficher le contenu d'éléments de rapport.<br /><br /> **Remarque :** À compter de SQL Server 2012 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le groupe **Visiteurs** ne dispose pas d’autorisations permettant de créer des abonnements.|  
 |**Utilisateur système** et **Administrateur système**|Ces rôles ne sont pas nécessaires pour un serveur de rapports qui s'exécute en mode SharePoint. Les rôles**Utilisateur système** et **Administrateur système** correspondent à des autorisations de niveau d'application Web et de batterie de serveurs SharePoint. Le serveur de rapports ne fournit pas de fonctionnalités qui nécessitent des autorisations à ce niveau.|  
   
 ##  <a name="bkmk_compare_tasks_permissions"></a> Comparaison des tâches en mode natif et des autorisations SharePoint  

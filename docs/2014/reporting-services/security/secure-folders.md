@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0fd91f77-0143-476b-9af0-87293be78e44
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 88cd7f9323740df84f9123a37c69765f37fb14ec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 055c0b60ae13f1933d0de753a3096f9b48786aa2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182709"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034820"
 ---
 # <a name="secure-folders"></a>Dossiers sécurisés
   La sécurité des dossiers constitue la base de la sécurisation de tout autre contenu du serveur de rapports. Étant donné que la sécurité est héritée au sein de la structure de dossiers, vous pouvez désigner de grandes ou de petites sections de la hiérarchie de dossiers afin d'autoriser certains types d'accès.  
@@ -37,7 +37,7 @@ ms.locfileid: "48182709"
   
 |Sélectionnez cette tâche|Pour autoriser les opérations suivantes|  
 |----------------------|---------------------------|  
-|Afficher les dossiers|Visualiser les propriétés de la hiérarchie et d'accès en lecture seule du dossier qui indiquent les dates de création et de modification de celui-ci.<br /><br /> Les utilisateurs ne peuvent afficher les éléments contenus dans le dossier que si des rôles qui incluent également les tâches « Afficher les rapports », « Afficher les modèles », « Afficher les ressources » et « Afficher les sources de données » leur ont été attribués.|  
+|Afficher les dossiers|Visualiser les propriétés de la hiérarchie et d'accès en lecture seule du dossier qui indiquent les dates de création et de modification de celui-ci.<br /><br /> Les utilisateurs ne peuvent pas afficher les éléments dans le dossier, sauf si elles sont affectées aux rôles qui incluent également les tâches suivantes : « Afficher les rapports, » « Afficher les modèles », « Afficher les ressources » et « Sources de données d’affichage ».|  
 |Gérer les dossiers|Visualiser les propriétés du dossier, modifier le nom ou la description ou déplacer le dossier. Cette tâche permet aux utilisateurs de créer des dossiers.|  
 |Gérer les rapports|Ajouter des rapports depuis le système de fichiers à un dossier et publier les rapports depuis le Générateur de rapports sur le serveur de rapports.|  
 |Gérer les sources de données|Ajouter de nouveaux éléments de source de données partagée à un dossier et modifier les sources de données partagées existantes.|  

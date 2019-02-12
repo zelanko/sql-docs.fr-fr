@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d6226b0c-0398-4185-8565-96099876fc21
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5aa5aca2f152a66d838fd49662c937932586338a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d0933593220b73b8d57d76645ebea05d733e5661
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181169"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043110"
 ---
 # <a name="rectangles-and-lines-report-builder-and-ssrs"></a>Rectangles et lignes (Générateur de rapports et SSRS)
   Les rectangles et les lignes permettent de créer des effets visuels dans un rapport. Vous pouvez afficher des propriétés sur ces éléments de rapports à partir de la section Bordure sous l'onglet Dossier de base, puis définir d'autres propriétés à l'aide du volet Propriétés. Vous pouvez ajouter des fonctionnalités, telles qu'une couleur ou une image d'arrière-plan, une info-bulle ou un signet, à un rectangle.  
@@ -49,11 +49,11 @@ ms.locfileid: "48181169"
 ##  <a name="HowTo"></a> Rubriques de procédures  
  [Ajouter une bordure à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-border-to-a-report-report-builder-and-ssrs.md)  
   
- [Ajouter un Rectangle ou un conteneur &#40;Générateur de rapports et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Ajouter un rectangle ou un conteneur &#40;Générateur de rapports et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
  [Ajouter et modifier une ligne &#40;Générateur de rapports et SSRS&#41;](add-and-modify-a-line-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter un Rectangle ou un conteneur &#40;Générateur de rapports et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
+ [Ajouter un rectangle ou un conteneur &#40;Générateur de rapports et SSRS&#41;](add-a-rectangle-or-container-report-builder-and-ssrs.md)  
   
   

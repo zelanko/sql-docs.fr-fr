@@ -1,25 +1,24 @@
 ---
-title: 'Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données de panier d’achat | Microsoft Docs'
+title: 'Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 2265baf4c4a342692ae67afcbcc50a0bb0d0a283
-ms.sourcegitcommit: 3cd6068f3baf434a4a8074ba67223899e77a690b
+manager: kfile
+ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49461975"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041450"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Market Basket
-  Dans cette leçon, vous allez ajouter deux modèles d’exploration de données à la structure d’exploration de données Market Basket que vous avez créé dans [leçon 1 : création de la Structure d’exploration de données de panier](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Ces modèles d'exploration de données vous permettent de créer des prédictions.  
+# <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Leçon 2 : Ajout de modèles d'exploration de données à la structure d'exploration de données Market Basket
+  Dans cette leçon, vous allez ajouter deux modèles d’exploration de données à la structure d’exploration de données Market Basket que vous avez créé dans [leçon 1 : Création de la Structure d’exploration de données de panier](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). Ces modèles d'exploration de données vous permettent de créer des prédictions.  
   
  Pour prévoir les types de produits que les clients sont susceptibles d’acheter en même temps, vous allez créer deux modèles d’exploration de données à l’aide de la [algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md) et deux valeurs différentes pour le *MINIMUM_PROBABILTY* paramètre.  
   
@@ -286,6 +285,6 @@ ADD MINING MODEL [<mining model name>]
  Dans la leçon suivante, vous allez traiter la structure d'exploration de données Market Basket et ses modèles d'exploration de données associés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Traitement de la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
+ [Leçon 3 : Traitement de la Structure d’exploration de données de panier d’achat](../../2014/tutorials/lesson-3-processing-the-market-basket-mining-structure.md)  
   
   

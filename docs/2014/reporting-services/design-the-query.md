@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.designquery.f1
 ms.assetid: 2dad800f-10a1-453c-8761-2935b9826d84
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8eae5e75ec1573faf906b359c7a3314fb513887c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4ce60e8326149ac0d8e7f54a84dd344f5088ee3d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032617"
 ---
 # <a name="design-the-query"></a>Concevoir la requête
   Utilisez cette page de l'Assistant Rapport pour créer une requête en la tapant manuellement, en utilisant le Générateur de requêtes pour créer une requête de manière interactive ou en important une requête à partir d'un autre rapport.  

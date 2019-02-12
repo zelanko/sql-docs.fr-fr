@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1d3b2573-e29d-480d-9dde-d26379c86618
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 60c12e1ea7f184770d07fcd4af42b81ca41d13db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 731d0eb5f61bd9b9002e674a9dc276db5621591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082014"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030560"
 ---
 # <a name="add-and-verify-a-data-connection-or-data-source-report-builder-and-ssrs"></a>Ajouter et vérifier une connexion de données ou une source de données (Générateur de rapports et SSRS)
   Dans le Générateur de rapports, vous pouvez ajouter une source de données partagée depuis le serveur de rapports ou créer une source de données incorporée pour votre rapport. Dans le Concepteur de rapports, vous pouvez créer une source de données partagée ou une source de données incorporée et la déployer sur un serveur de rapports.  
@@ -59,7 +59,7 @@ ms.locfileid: "48082014"
   
     2.  Spécifiez une chaîne de connexion en utilisant l'une des méthodes suivantes :  
   
-    -   Tapez directement la chaîne de connexion dans la zone de texte **Chaîne de connexion** . Pour obtenir la liste des exemples de chaînes de connexion, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+    -   Tapez directement la chaîne de connexion dans la zone de texte **Chaîne de connexion** . Pour obtenir une liste d’exemples de chaînes de connexion, consultez [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
     -   Cliquez sur le bouton d’expression (**fx)** pour créer une expression qui prend la valeur d’une chaîne de connexion. Dans la boîte de dialogue **Expression** , tapez l'expression dans le volet Expression. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -81,9 +81,9 @@ ms.locfileid: "48082014"
   
 2.  Cliquez sur **Tester la connexion**.  
   
-3.  Si la connexion a abouti, le message suivant apparaît : « La connexion a été correctement créée ». [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3.  Si la connexion est établie, le message suivant apparaît : « Connexion créée avec succès ». [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-4.  Si la connexion n'a pas abouti, le message suivant s'affiche : « Impossible de se connecter à la source de données ».  
+4.  Si la connexion n’est pas établie, le message suivant apparaît : « Impossible de se connecter à la source de données. »  
   
 5.  Cliquez sur **Détails**et utilisez les informations pour corriger le problème.  
   

@@ -14,25 +14,25 @@ helpviewer_keywords:
 - SqlXmlParameter object
 - Name property
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4bd59dd23b80569d95896f320252ad8d498be569
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb7d6de3e00430e39d51dd365282e997a1e284d0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707747"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036180"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlparameter-object"></a>Classes managées SQLXML - Objet SqlXmlParameter
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   L’objet SqlXmlParameter prend en charge ces propriétés :  
   
- Nom     
+ Créer une vue d’abonnement  
  Nom du paramètre. Des paramètres peuvent être passés aux commandes. Appel de la méthode CreateParameter de l’objet SqlXmlCommand crée l’objet de paramètre.  
   
- Valeur  
+ Value  
  Valeur du paramètre. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md).  
   
 ## <a name="see-also"></a>Voir aussi  

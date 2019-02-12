@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f87ce79b-00d7-4458-a17e-e253a20f720d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 05ea4e197a727db6afffeedc3c26be676e358f73
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6bd9094c0b8e14bfc71440b72fb02bd69fd47cfb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101059"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040780"
 ---
 # <a name="hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs"></a>Masquer un en-tête ou un pied de page sur la première ou la dernière page (Générateur de rapports et SSRS)
   Un rapport peut contenir un en-tête et un pied de page qui s'affichent dans la partie supérieure ou inférieure de chaque page. Après avoir ajouté un en-tête ou un pied de page, vous pouvez le masquer de manière sélective sur la première et la dernière page d'un rapport.  
@@ -51,6 +51,6 @@ ms.locfileid: "48101059"
 ## <a name="see-also"></a>Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Ajouter ou supprimer un en-tête de Page ou le pied de page &#40;Générateur de rapports et SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+ [Ajouter ou supprimer un en-tête ou un pied de page &#40;Générateur de rapports et SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
   

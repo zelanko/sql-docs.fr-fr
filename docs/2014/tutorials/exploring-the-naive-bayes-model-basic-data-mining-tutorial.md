@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b06708d5-4477-4a51-bf8d-0b1e3c1f9ebb
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4cc0e052b49cbfbf2324850aced8bd4753ca7ee3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058169"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023530"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Exploration du modèle Naive Bayes (Didacticiel sur l'exploration de données de base)
   Le [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme Naive Bayes fournit plusieurs méthodes pour l’affichage de l’interaction entre l’achat de vélos et les attributs d’entrée.  
@@ -43,7 +42,7 @@ ms.locfileid: "48058169"
      Si vous faites glisser le curseur vers le bas, seuls les attributs qui ont la plus grande incidence sur la colonne [Bike Buyer] restent affichés. En ajustant le curseur, vous pouvez constater que les attributs les plus influents sont : le nombre de voitures possédées, la distance domicile-travail, et le nombre total d'enfants.  
  
   
-##  <a name="AttributeProfiles"></a> Profils d’attribut  
+##  <a name="AttributeProfiles"></a> Profils d'attribut  
  Le **profils d’attribut** onglet décrit comment les différents États des attributs d’entrée affectent le résultat de l’attribut prédictible.  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>Pour explorer le modèle sous l'onglet Profils d'attribut  
@@ -65,7 +64,7 @@ ms.locfileid: "48058169"
      Le **légende d’exploration de données** affiche une vue plus détaillée.  
   
   
-##  <a name="AttributeCharacteristics"></a> Caractéristiques d’attribut  
+##  <a name="AttributeCharacteristics"></a> Caractéristiques d'attribut  
  Avec le **caractéristiques d’attribut** onglet, vous pouvez sélectionner un attribut et une valeur pour afficher la fréquence à laquelle les valeurs pour d’autres attributs apparaissent dans les cas de valeurs sélectionnées.  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>Pour explorer le modèle sous l'onglet Caractéristiques d'attribut  
@@ -77,7 +76,7 @@ ms.locfileid: "48058169"
      Dans la visionneuse, vous constaterez que les clients qui n'ont pas d'enfants, font des trajets courts entre leur domicile et bureau, et habitent dans la région North America sont plus susceptibles d'acheter un vélo.  
   
   
-##  <a name="AttributeDiscrimination"></a> Discrimination d’attribut  
+##  <a name="AttributeDiscrimination"></a> Discrimination d'attribut  
  Avec le **Discrimination d’attribut** onglet, vous pouvez examiner la relation entre deux valeurs discrètes de l’achat de vélos et d’autres valeurs d’attribut. Étant donné que le `TM_NaiveBayes` modèle a seulement deux États, 1 et 0, il est inutile d’apporter des modifications à la visionneuse.  
   
  Dans la visionneuse, vous constatez que les personnes qui ne sont pas propriétaires de voitures achètent généralement des vélos et que les personnes propriétaires de deux voitures n'en achètent généralement pas.  
@@ -90,7 +89,7 @@ ms.locfileid: "48058169"
 -   [Exploration du modèle de Clustering &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 5 : Test des modèles &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Leçon 5 : Test des modèles &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="previous-task-in-lesson"></a>Tâche précédente de la leçon  
  [Exploration du modèle de Clustering &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/exploring-the-clustering-model-basic-data-mining-tutorial.md)  

@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data sources
 ms.assetid: f417782c-b85a-4c4d-8a40-839176daba56
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1862d4d8a1437f223e688b0b2b95ad5b5768e6a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 97a619b1618c1e733a61e5cd9ea825e07efddcac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224436"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031950"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Connexions de données ou sources de données incorporées et partagées (Générateur de rapports et SSRS)
   Les rapports utilisent des connexions de données pour récupérer les données nécessaires lorsqu'une requête s'exécute ou lorsque le rapport est traité. Dans la liste correspondante, choisissez un type de connexion de données intégré pour vous connecter à une base de données relationnelle, une base de données multidimensionnelle, un service Web ou toute autre source de données. Les termes suivants sont utilisés lors de la description des connexions de données.  
@@ -45,11 +45,11 @@ ms.locfileid: "48224436"
 ## <a name="shared-data-sources"></a>Sources de données partagées  
  Les sources de données partagées sont utiles lorsque vous disposez de sources de données que vous utilisez souvent. Il est recommandé d'utiliser des sources de données partagées dans la mesure du possible. Celles-ci permettent de gérer plus facilement les rapports et l'accès aux rapports, et de sécuriser davantage les rapports et les sources de données auxquelles ils accèdent. Si vous avez besoin d'une source de données partagée, demandez à votre administrateur système d'en créer une pour vous.  
   
- Dans le Générateur de rapports, vous ne pouvez pas créer de source de données partagée. Vous pouvez rechercher et sélectionner une source de données partagée à partir du serveur de rapports. Pour plus d’informations, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ Dans le Générateur de rapports, vous ne pouvez pas créer de source de données partagée. Vous pouvez rechercher et sélectionner une source de données partagée à partir du serveur de rapports. Pour plus d'informations, consultez [Data Connections, Data Sources, and Connection Strings in Report Builder](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
  Dans le Concepteur de rapports, vous ne pouvez pas rechercher une source de données partagée située sur le serveur de rapports. Vous pouvez créer des sources de données partagées dans le cadre d'un projet au sein de l'Explorateur de solutions, puis déterminer s'il convient de les déployer sur un serveur de rapports. Vous pouvez choisir de les utiliser localement uniquement, en raison des différences en matière d'informations d'identification requises sur votre ordinateur ou le serveur de rapports. Pour plus d’informations, consultez [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- L’icône suivante indique un élément de source de données partagée dans l’arborescence de dossiers de serveur de rapports : ![icône de source de données partagée](media/hlp-16datasource.png "icône de source de données partagée")  
+ L'icône suivante indique un élément de source de données partagée dans l'arborescence des dossiers du serveur de rapports : ![Icône Source de données partagée](media/hlp-16datasource.png "Icône Source de données partagée")  
   
 ## <a name="embedded-data-sources"></a>Sources de données incorporées  
  Une source de données incorporée est une connexion de données enregistrée dans la définition de rapport. Les informations de connexion à la source de données incorporée peuvent être utilisées uniquement par le rapport dans lequel elles sont incorporées. Pour définir et gérer des sources de données incorporées, utilisez la boîte de dialogue **Propriétés de la source de données** .  
@@ -57,7 +57,7 @@ ms.locfileid: "48224436"
 ##  <a name="Comparing"></a> Comparaison incorporé et Sources de données partagées  
  Le tableau suivant indique les différences entre les sources de données incorporées et partagées :  
   
-|Description|Source de données<br /><br /> Source de données|Partagés<br /><br /> Data Source|  
+|Description|Source de données<br /><br /> Source de données|Partagés<br /><br /> Source de données|  
 |-----------------|------------------------------|----------------------------|  
 |La connexion de données est incorporée dans la définition de rapport.|![Disponible](media/greencheck.gif "Disponible")||  
 |Le pointeur vers la connexion de données sur le serveur de rapports est incorporé dans la définition de rapport.||![Disponible](media/greencheck.gif "Disponible")|  
@@ -70,7 +70,7 @@ ms.locfileid: "48224436"
   
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
- [Concepts de création de rapports &#40;Générateur de rapports et SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  

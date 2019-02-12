@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0379e0105522caf643d2295070da395df51a41a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e0bebad59894c150a77dd7b8fc3036fe50029e7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112851"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023650"
 ---
 # <a name="monitoring-report-server-performance"></a>Analyse des performances d'un serveur de rapports
   Utilisez les outils d'analyse des performances sur un serveur de rapports pour évaluer l'activité du serveur, observer les tendances, diagnostiquer les goulots d'étranglement du système ou collecter des données permettant de déterminer si la configuration actuelle est suffisante. Pour optimiser les performances du serveur, vous pouvez spécifier la fréquence de recyclage du domaine d'application du serveur de rapports. Pour plus d’informations, consultez [Configurer la mémoire disponible pour les applications du serveur de rapports](../report-server/configure-available-memory-for-report-server-applications.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48112851"
   
  Le Gestionnaire des tâches fournit des informations sur les programmes et les processus en cours d'exécution sur votre ordinateur. Il vous permet de surveiller les indicateurs clés des performances de votre serveur de rapports. Vous pouvez également évaluer l'activité des processus en cours d'exécution et afficher des graphiques et des données sur l'utilisation de l'UC et de la mémoire. Pour plus d'informations sur l'utilisation du Gestionnaire des tâches, consultez la documentation du produit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
- Vous pouvez utiliser la Console de performance et l'Observateur d'événements pour créer des journaux et des alertes à propos du traitement des rapports et de la consommation de ressources. Pour plus d’informations sur les événements de Windows qui sont générés par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [journal des applications Windows](windows-application-log.md). Pour plus d'informations sur la Console de performance, consultez la section « Compteurs de performances Windows » plus loin dans cette rubrique.  
+ Vous pouvez utiliser la Console de performance et l'Observateur d'événements pour créer des journaux et des alertes à propos du traitement des rapports et de la consommation de ressources. Pour plus d’informations sur les événements Windows générés par [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Journal des applications Windows](windows-application-log.md). Pour plus d'informations sur la Console de performance, consultez la section « Compteurs de performances Windows » plus loin dans cette rubrique.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les utilitaires fournissent également des informations sur la base de données du serveur de rapports et sur les bases de données temporaires utilisées pour la gestion des sessions et de la mise en cache.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48112851"
   
 -   `MSRS 2011 Windows Service` et `MSRS 2011 Windows Service SharePoint Mode` pour surveiller les opérations planifiées et la remise de rapport. Ces objets de performance incluent une collection de compteurs utilisée pour suivre le traitement des rapports initialisé via des opérations planifiées. Les opérations planifiées englobent l'abonnement et la remise, les instantanés d'exécution de rapport et l'historique de rapport.  
   
--   `ReportServer:Service` et `ReportServerSharePoint:Service` pour surveiller les événements liés à HTTP et la gestion de la mémoire. Ces compteurs sont spécifiques à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], et ils suivent les événements liés à HTTP pour le serveur de rapports, notamment les demandes, les connexions et les tentatives d’ouverture de session. Cet objet de performance inclut également des compteurs liés à la gestion de la mémoire.  
+-   `ReportServer:Service` et `ReportServerSharePoint:Service` pour surveiller des événements liés à HTTP et la gestion de la mémoire. Ces compteurs sont spécifiques à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], et ils suivent les événements liés à HTTP pour le serveur de rapports, notamment les demandes, les connexions et les tentatives d’ouverture de session. Cet objet de performance inclut également des compteurs liés à la gestion de la mémoire.  
   
  Si vous possédez plusieurs instances de serveurs de rapports sur un seul ordinateur, vous pouvez les analyser collectivement ou individuellement. Choisissez les instances à inclure au moment où vous ajoutez un compteur. Pour plus d’informations sur l’utilisation de la Console de performances (perfmon.msc) et l’ajout de compteurs, consultez la documentation du produit [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48112851"
   
 |Objet de performance|Remarques|  
 |------------------------|-----------|  
-|`.NET CLR Data` et `.NET CLR Memory`|Le Gestionnaire de rapports utilise les compteurs de performances d' [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Pour plus d'informations, consultez la rubrique relative à l'amélioration des performances et de l'évolutivité des applications .NET, « Improving .NET Application Performance and Scalability » (en anglais) sur MSDN.|  
+|`.NET CLR Data` et `.NET CLR Memory`|Le Gestionnaire de rapports utilise les compteurs de performances d' [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] . Pour plus d'informations, consultez la rubrique relative à l'amélioration des performances et de l'évolutivité des applications .NET, « Improving .NET Application Performance and Scalability » (en anglais) sur MSDN.|  
 |`Process`|Ajoutez les compteurs de performances `Elapsed Time` et `ID Process` pour une instance ReportingServicesService de façon à suivre le temps de fonctionnement de processus par ID de processus.|  
   
 ## <a name="sharepoint-events"></a>Événements SharePoint  

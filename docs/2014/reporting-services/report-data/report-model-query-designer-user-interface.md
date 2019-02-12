@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: db86c208-ff1e-4297-aa0c-c250f053f83e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 77b3d858696c5dc4d2ed6422eb414f6b650a0487
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 34ae0dfd8786d1c8c99d9a256f8ad8236055828e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110597"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037030"
 ---
 # <a name="report-model-query-designer-user-interface"></a>Interface utilisateur du concepteur de requêtes de modèle de rapport
   Le Concepteur de rapports fournit deux Concepteurs de requêtes pour vous aider à spécifier les données d'une source de données de modèle de serveur de rapports à utiliser dans un rapport. Utilisez le concepteur de requêtes graphique pour explorer et choisir les entités de modèle et les champs d'entité. Utilisez le Concepteur de requêtes textuel pour travailler directement avec une spécification SMDL (Semantic Model Definition Language) au format XML.  
@@ -56,7 +56,7 @@ ms.locfileid: "48110597"
 |Bouton|Description|  
 |------------|-----------------|  
 |**Modifier en tant que texte**|Bascule entre le Concepteur de requêtes textuel et le concepteur de requêtes graphique. La requête pour une source de données modèle de Serveur de rapports est une spécification SMQL (Semantic Model Query Language) en XML.|  
-|**Importer**|Importe une requête existante à partir d'un fichier de définition de rapport (.rdl) sur le système de fichiers. Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
+|**Importer**|Importe une requête existante à partir d'un fichier de définition de rapport (.rdl) sur le système de fichiers. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).|  
 |![Annuler action](../media/rsqdicon-undo.gif "Annuler action")|Annule la dernière action.|  
 |![Rétablir action](../media/rsqdicon-redo.gif "Rétablir action")|Rétablit la dernière action.|  
 |![Exécuter la requête](../../analysis-services/media/rsqdicon-run.gif "Exécuter la requête")|Exécute la requête et affiche les résultats dans le volet Résultat.|  

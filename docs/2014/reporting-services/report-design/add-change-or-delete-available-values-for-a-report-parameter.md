@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 0e03264c-523f-4c59-b71b-ceef600f75f6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 120390e99a8eb94a24bb2cd56253debd9450ac52
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e0807838468e00ea9d6a323ac5ab1542ac1e06d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098761"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036680"
 ---
 # <a name="add-change-or-delete-available-values-for-a-report-parameter-report-builder-and-ssrs"></a>Ajouter, modifier ou supprimer les valeurs disponibles d'un paramètre de rapport (Générateur de rapports et SSRS)
   Après avoir créé un paramètre de rapport, vous pouvez spécifier une liste de valeurs disponibles visibles par l'utilisateur. Une liste de valeurs disponibles limite les choix qu'un utilisateur peut faire aux valeurs valides pour le paramètre.  
@@ -32,7 +32,7 @@ ms.locfileid: "48098761"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
- Après la publication d'un rapport, vous pouvez remplacer les valeurs disponibles définies dans l'outil de création de rapports en définissant les valeurs de propriété de paramètre sur le serveur de rapports. Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md).  
+ Après la publication d'un rapport, vous pouvez remplacer les valeurs disponibles définies dans l'outil de création de rapports en définissant les valeurs de propriété de paramètre sur le serveur de rapports. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md).  
   
 ### <a name="to-add-or-change-the-available-values-for-a-report-parameter"></a>Pour ajouter ou modifier les valeurs disponibles d'un paramètre de rapport  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48098761"
  [Ajouter des paramètres en cascade à un rapport &#40;Générateur de rapports et SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
  [Ajouter, modifier ou supprimer les valeurs par défaut d’un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
  [Références à la collection Parameters&#40;Générateur de rapports et SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
- [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Didacticiel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

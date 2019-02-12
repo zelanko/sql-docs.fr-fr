@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7bb3166f-9374-4449-b66a-ffb77298507d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8c58757e975f4a5ef68804f190aafeec0197a902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d83f8d097c74b0a7171d0e91e1d36ad716a00415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128259"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023540"
 ---
 # <a name="upload-file-page-report-manager"></a>Page Télécharger un fichier (Gestionnaire de rapports)
   La page Télécharger un fichier vous permet de publier un fichier du système de fichiers dans la base de données du serveur de rapports. Les fichiers téléchargés sont représentés comme des éléments dans l'arborescence des dossiers du serveur de rapports.  
@@ -57,8 +57,8 @@ ms.locfileid: "48128259"
  Activez cette case à cocher si vous souhaitez remplacer un élément existant par une nouvelle version. Pour remplacer une version existante, le nom du nouvel élément et celui de l'élément existant doivent être identiques.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Télécharger des fichiers dans un dossier](report-server/upload-files-to-a-folder.md)  
   

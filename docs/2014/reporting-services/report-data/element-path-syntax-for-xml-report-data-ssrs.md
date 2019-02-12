@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e43bf28f3908c50bb22fb1d426c84c943321c376
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0cd7ef91cd1e682c7a238c029f6a072613b2efb9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058889"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025670"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>Syntaxe du chemin d'accès à l'élément pour des données de rapport XML (SSRS)
   Dans le Concepteur de rapports, vous spécifiez les données à utiliser pour un rapport à partir d'une source de données XML en définissant un chemin d'accès à l'élément qui respecte la casse. Le chemin d'accès à l'élément indique comment parcourir les nœuds hiérarchiques XML et leurs attributs dans la source de données XML. Pour utiliser le chemin d'accès à l'élément par défaut, laissez la requête du dataset ou `ElementPath` XML dans `Query` XML vide. Lorsque les données sont extraites de la source de données XML, les nœuds d'élément possédant des valeurs de texte et des attributs de nœud d'élément deviennent des colonnes dans le jeu de résultats. Les valeurs des nœuds et les attributs deviennent les données de ligne lorsque vous exécutez la requête. Les colonnes apparaissent sous la forme de collection de champs de dataset dans le volet des données de rapport. Cette rubrique décrit la syntaxe du chemin d'accès à l'élément.  
@@ -77,15 +77,15 @@ XMLLocalName :: =
 |----------|----------------|  
 |Element path|Définit la séquence de nœuds à parcourir dans le document XML afin de récupérer les données de champ d'un dataset avec une source de données XML.|  
 |`ElementNode`|Nœud XML dans le document XML. Les nœuds sont désignés par des balises et existent dans une relation hiérarchique avec d'autres nœuds. Par exemple, \<Customers> est le nœud de l’élément racine. \<Customer> est un sous-élément de \<Customers>.|  
-|`XMLName`|Nom du nœud. Par exemple, le nom du nœud Customers est Customers. Un `XMLName` peuvent être précédées d’un identificateur d’espace de noms à un nom unique chaque nœud.|  
-|`Encoding`|Indique que le `Value` pour cet élément est encodé en XML et doit être décodé et inclus en tant que sous-élément de cet élément.|  
-|`FieldList`|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée (**{}**), aucun champ de ce nœud n’est utilisé.<br /><br /> Un `FieldList` ne peut pas contenir à la fois un `Value` et un `Element` ou `ElementNode`.|  
+|`XMLName`|Nom du nœud. Par exemple, le nom du nœud Customers est Customers. Un `XMLName` peut porter comme préfixe un identificateur d'espace de noms qui identifie de façon unique chaque nœud.|  
+|`Encoding`|Indique que `Value` pour cet élément est encodé en XML et doit être décodé et inclus en tant que sous-élément de cet élément.|  
+|`FieldList`|Définit l'ensemble des éléments et des attributs à utiliser pour récupérer des données.<br /><br /> Si ce terme n'est pas spécifié, tous les attributs et les sous-éléments sont utilisés comme champs. Si la liste de champs vide est spécifiée (**{}**), aucun champ de ce nœud n’est utilisé.<br /><br /> `FieldList` ne peut pas contenir à la fois `Value` et `Element` ou `ElementNode`.|  
 |`Field`|Spécifie les données qui sont extraites en tant que champ de dataset.|  
-|`Attribute`|Une paire nom-valeur dans le `ElementNode`. Par exemple, dans le nœud d’élément \<Customer ID = « 1 » >, `ID` est un attribut et `@ID(Integer)` retourne « 1 » comme type d’entier dans le champ de données correspondant `ID`.|  
+|`Attribute`|Paire nom-valeur dans `ElementNode`. Par exemple, dans le nœud d’élément \<Customer ID = « 1 » >, `ID` est un attribut et `@ID(Integer)` retourne « 1 » comme type d’entier dans le champ de données correspondant `ID`.|  
 |`Value`|Valeur de l'élément. `Value` ne peut être utilisé que sur le dernier `ElementNode` dans le chemin de l'élément. Par exemple, étant donné que \<retourner > est un nœud terminal, si vous l’incluez à la fin du chemin d’un élément, la valeur de `Return {@}` est `Chair`.|  
 |`Element`|Valeur du sous-élément nommé. Par exemple, Customers {}/Customer {}/LastName récupère des valeurs pour l'élément LastName uniquement.|  
 |`Type`|Type de données facultatif utilisé pour le champ créé à partir de cet élément.|  
-|`NamespacePrefix`|`NamespacePrefix` est défini dans l'élément de requête XML. Si aucun élément de requête XML n’existe, espaces de noms dans le code XML `ElementPath` sont ignorés. S'il existe un élément de requête XML, `ElementPath` XML possède un attribut `IgnoreNamespaces` facultatif. Si IgnoreNamespaces a la valeur `true`, espaces de noms dans le code XML `ElementPath` et le document XML sont ignorés. Pour plus d’informations, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md).|  
+|`NamespacePrefix`|`NamespacePrefix` est défini dans l'élément de requête XML. S'il n'existe aucun élément de requête XML, les espaces de noms dans `ElementPath` XML sont ignorés. S'il existe un élément de requête XML, `ElementPath` XML possède un attribut `IgnoreNamespaces` facultatif. Si IgnoreNamespaces a la valeur `true`, espaces de noms dans le code XML `ElementPath` et le document XML sont ignorés. Pour plus d’informations, consultez [Syntaxe de requête XML pour les données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md).|  
   
 ## <a name="example---no-namespaces"></a>Exemples - Aucun espace de noms  
  Les exemples suivants utilisent le document XML Customers.xml. Ce tableau présente des exemples de syntaxe du chemin d'accès à l'élément et les résultats de l'utilisation du chemin d'accès à l'élément dans une requête qui définit un dataset, en fonction du document XML comme source de données.  
@@ -135,7 +135,7 @@ XMLLocalName :: =
     |8|Crystal|Hu|20|  
     |15|Wyatt|Diaz|33|  
   
-#### <a name="xml-document-customersxml"></a>Document XML : Customers.xml  
+#### <a name="xml-document-customersxml"></a>Document XML : Customers.xml  
  Pour vous entraîner avec les exemples de chemin d’élément présentés dans la section précédente, vous pouvez copier ce code XML et l’enregistrer dans une URL à laquelle le Concepteur de rapports peut accéder, puis utiliser le document XML comme source de données XML : par exemple, `http://localhost/Customers.xml`.  
   
 ```  

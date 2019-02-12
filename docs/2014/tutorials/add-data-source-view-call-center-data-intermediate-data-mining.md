@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a448e7e4-dbd1-4d31-90bc-4d4a1c23b352
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f212c6436af0e35c7cfaceadf8c519765d0a07a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171944"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035040"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données pour les données de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   Au cours de cette tâche, vous allez ajouter une vue de source de données qui sera utilisée pour accéder aux données d'un centre d'appels. Les mêmes données seront utilisées pour générer aussi bien le modèle de réseau neuronal initial destiné à l'exploration que le modèle de régression logistique que vous utiliserez pour faire des recommandations.  
@@ -33,7 +32,7 @@ ms.locfileid: "48171944"
   
 2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] source de données. Si vous n’avez pas de cette source de données, consultez [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). Cliquez sur **Suivant**.  
+3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] source de données. Si vous n’avez pas de cette source de données, consultez [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md). Cliquer sur **Suivant**.  
   
 4.  Sur le **sélectionner des Tables et vues** page, sélectionnez le tableau suivant et puis cliquez sur la flèche droite pour l’ajouter à la vue de source de données :  
   
@@ -41,7 +40,7 @@ ms.locfileid: "48171944"
   
     -   **DimDate**  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Sur le **fin de l’Assistant** page, la vue de source de données est nommée par défaut [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Remplacez le nom par **CallCenter**, puis cliquez sur **Terminer**.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "48171944"
 |FactCallCenterID|Clé arbitraire créée lorsque les données ont été importées vers l'entrepôt de données.<br /><br /> Cette colonne identifie les enregistrements uniques et doit être utilisée comme clé de cas du modèle d'exploration de données.|  
 |DateKey|Date de fonctionnement du centre d'appels, sous la forme d'un entier. Les clés de date entières sont souvent utilisées dans les entrepôts de données, mais vous souhaitez peut-être obtenir la date au format date/heure si vous vouliez fonctionner par groupements de valeurs de date.<br /><br /> Notez que les dates ne sont pas uniques car le fournisseur fournit un rapport distinct pour chaque équipe et pour chaque jour de fonctionnement.|  
 |WageType|Indique si le jour était un jour de semaine, de week-end ou un jour férié.<br /><br /> Il est possible que les week-ends et jours de la semaine ne soit une différence de qualité de service client pour utiliser cette colonne en tant qu’entrée.|  
-|Shift|Indique l'équipe pour laquelle les appels sont enregistrés. Ce centre d'appels divise la journée de travail en quatre équipes : AM, PM1, PM2 et Midnight.<br /><br /> Il est possible que les horaires des équipes influencent la qualité du service client. Vous utiliserez donc cela comme entrée.|  
+|Shift|Indique l'équipe pour laquelle les appels sont enregistrés. Ce centre d’appels divise la journée de travail en quatre équipes : AM, PM1, PM2 et Midnight.<br /><br /> Il est possible que les horaires des équipes influencent la qualité du service client. Vous utiliserez donc cela comme entrée.|  
 |LevelOneOperators|Indique le nombre d’opérateurs de niveau 1 sur droit.<br /><br /> Les employés de centre d'appels débutent au niveau 1. Ces employés ont donc moins d'expérience.|  
 |LevelTwoOperators|Indique le nombre d'opérateurs de niveau 2 qui sont en service.<br /><br /> Un employé doit enregistrer un certain nombre d’heures de service pour être considérée comme un opérateur de niveau 2.|  
 |TotalOperators|Nombre total d'opérateurs présents pendant le temps de travail de l'équipe.|  

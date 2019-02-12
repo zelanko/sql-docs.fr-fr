@@ -11,14 +11,14 @@ f1_keywords:
 - "10082"
 ms.assetid: 3414c857-8ea6-4fc4-a6d5-b4883c039efa
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7e6f4a3f590c196731ed186f95cf5dc4078a1fc0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 4acfe27815dc8eeb2f15a685937d5870fd74368b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504140"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040990"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>Boîte de dialogue Propriétés du rapport, Références (Générateur de rapports)
   Sélectionnez **Références** dans la boîte de dialogue **Propriétés du rapport** pour ajouter ou supprimer des références aux assemblys personnalisés ou externes et aux instances de classes personnalisées qui sont utilisées par des expressions dans la définition de rapport. Les assemblys personnalisés ne sont pas pris en charge en mode local dans le Générateur de rapports. Pour créer des rapports qui utilisent des assemblys personnalisés, utilisez le Concepteur de rapports dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

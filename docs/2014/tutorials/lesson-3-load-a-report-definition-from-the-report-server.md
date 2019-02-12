@@ -1,24 +1,23 @@
 ---
-title: 'Leçon 3 : Charger une définition de rapport du serveur de rapports | Microsoft Docs'
+title: 'Leçon 3 : Charger une définition de rapport du serveur de rapports | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ad8b31c-43b0-4481-a31b-090cbed4a438
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c9555f2ec58aefa5f0a3b071b0d4cf7c8ee7ff14
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d4c51002c8c829417c63a0dd6c59a3538604fd81
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813872"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025640"
 ---
-# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Leçon 3 : chargement d'une définition de rapport à partir du serveur de rapports
+# <a name="lesson-3-load-a-report-definition-from-the-report-server"></a>Leçon 3 : Chargement d'une définition de rapport à partir du serveur de rapports
   Après avoir créé votre projet et généré les classes à partir du schéma RDL, vous êtes prêt à charger une définition du rapport depuis le serveur de rapports.  
   
 ### <a name="to-load-a-report-definition"></a>Pour charger une définition de rapport  
@@ -98,7 +97,7 @@ ms.locfileid: "51813872"
     ```  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la leçon suivante, vous allez écrire le code permettant de mettre à jour la définition du rapport chargée depuis le serveur de rapports. Consultez [leçon 4 : mettre à jour la définition de rapport par programme](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
+ Dans la leçon suivante, vous allez écrire le code permettant de mettre à jour la définition du rapport chargée depuis le serveur de rapports. Consultez [leçon 4 : Mettre à jour la définition de rapport par programme](../../2014/tutorials/lesson-4-update-the-report-definition-programmatically.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

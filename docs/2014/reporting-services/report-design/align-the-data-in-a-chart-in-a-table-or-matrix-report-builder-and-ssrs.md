@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7277e8a0b50fb8e67a6601218190241c11efbd74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ea4000b6d02965d7e050704889e9cf449db9f684
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102409"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036471"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>Aligner les données d'un graphique dans une table ou une matrice (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques simples de petite taille qui communiquent beaucoup d'informations avec peu de détails superflus. Lorsque vous activez cette option, les valeurs dans vos graphiques sparkline et barres de données sont alignées dans les différentes cellules de la table ou matrice, même s'il manque des valeurs dans les données sur lesquelles ils sont basés.  
   
  ![rs_SparklineAlignData](../media/rs-sparklinealigndata.gif "rs_SparklineAlignData")  
   
- Dans cette image, l'histogramme affiche les ventes quotidiennes pour chaque employé. Notez que les jours pendant lesquels un employé ne génère aucun chiffre d'affaires, le graphique laisse un espace et aligne les jours suivants horizontalement. Il aligne également les graphiques verticalement en définissant les tailles des différents graphiques les unes par rapport aux autres. Pour plus d’informations, consultez [Sparklines and Data Bars &#40;Report Builder and SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
+ Dans cette image, l'histogramme affiche les ventes quotidiennes pour chaque employé. Notez que les jours pendant lesquels un employé ne génère aucun chiffre d'affaires, le graphique laisse un espace et aligne les jours suivants horizontalement. Il aligne également les graphiques verticalement en définissant les tailles des différents graphiques les unes par rapport aux autres. Pour plus d’informations, consultez [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -38,6 +38,6 @@ ms.locfileid: "48102409"
   
 ## <a name="see-also"></a>Voir aussi  
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Ajouter des graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
+ [Ajouter des graphiques sparkline et des barres de données &#40;Générateur de rapports et SSRS&#41;](add-sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
   

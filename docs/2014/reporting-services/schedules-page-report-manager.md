@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ef19d96e-9f00-4434-950e-152dda9c1ced
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d4c3dab6371b9272436a49147c8ff2c09b2620d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3dc1cfa85fde084327567e36fea728d9c76ef3f6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157189"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028250"
 ---
 # <a name="schedules-page-report-manager"></a>Page Planifications (Gestionnaire de rapports)
   La page Planifications vous permet de créer, modifier, supprimer, suspendre ou reprendre des planifications partagées. Une planification partagée est une planification nommée que vous créez et gérez séparément à partir des rapports, des abonnements et des autres processus qui utilisent des informations de planification. Les utilisateurs peuvent sélectionner les planifications partagées que vous leur fournissez.  

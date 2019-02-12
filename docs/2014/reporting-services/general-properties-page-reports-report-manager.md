@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 66c99d28-ab41-45f0-bf02-ed560293595d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8606f2ee9afeb0e5e3ab0663290471b0d2d4463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 408d86a821d2596172570f513ee8398e43298f91
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206161"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030270"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Page Propriétés générales, Rapports (Gestionnaire de rapports)
   La page Propriétés générales des rapports vous permet de renommer, supprimer, déplacer ou remplacer la définition de rapport. Vous pouvez également utiliser cette page pour créer un rapport lié. Des informations détaillées sur l'utilisateur qui a créé et modifié le rapport, et la date des modifications sont affichées dans la partie supérieure de la page.  
@@ -34,7 +34,7 @@ ms.locfileid: "48206161"
   
 ## <a name="options"></a>Options  
  **Nom**  
- Spécifie le nom du rapport. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : \@ & = +, $ * \< >  
+ Spécifie le nom du rapport. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et certains symboles. N'utilisez pas les caractères ; ? : \@ & = + , $ * \< >  
   
  " ou / lorsque vous spécifiez un nom.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48206161"
   
  La copie que vous avez ouverte est identique à la définition de rapport d'origine qui a été initialement publiée sur le serveur de rapports. Toutes les propriétés qui ont été définies pour le rapport après sa publication (telles que les paramètres et les propriétés de source de données) ne sont pas reflétées dans le fichier que vous ouvrez.  
   
- Vous pouvez modifier la définition de rapport et l'enregistrer dans un nouveau fichier dans un dossier partagé, et télécharger la définition vers le serveur de rapports sous la forme d'un nouvel élément. Les modifications que vous apportez à la définition de rapport lorsqu’il est ouvert dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou une autre application) ne sont pas enregistrées directement sur le serveur de rapports. Vous devez télécharger le fichier pour publier le rapport modifié sur le serveur de rapports.  
+ Vous pouvez modifier la définition de rapport et l'enregistrer dans un nouveau fichier dans un dossier partagé, et télécharger la définition vers le serveur de rapports sous la forme d'un nouvel élément. Les modifications que vous apportez à la définition de rapport lorsqu'il est ouvert dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou une autre application) ne sont pas enregistrées directement sur le serveur de rapports. Vous devez télécharger le fichier pour publier le rapport modifié sur le serveur de rapports.  
   
  **Remplacer**  
  Cliquez pour remplacer la définition de rapport utilisée dans le rapport actuel par une définition différente d'un fichier .rdl situé dans le système de fichiers. Si vous mettez à jour une définition de rapport, vous devez redéfinir les paramètres de la source de données une fois la mise à jour terminée.  
@@ -70,7 +70,7 @@ ms.locfileid: "48206161"
  Cliquez pour sélectionner une autre définition de rapport pour le rapport lié. Cette option apparaît si le rapport est un rapport lié. Si le rapport est un rapport lié, vous pouvez définir cette propriété pour remplacer la définition de rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

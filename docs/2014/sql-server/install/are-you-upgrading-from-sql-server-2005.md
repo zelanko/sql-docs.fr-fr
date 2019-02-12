@@ -8,15 +8,15 @@ ms.technology:
 - database-engine
 ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
-author: douglaslms
-ms.author: douglasl
+author: MashaMSFT
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 768d35d4cc2763ee055fc2bebfee3e954a64dc65
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e3f76346bf77e782eb47999a7acc36369fbec104
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350194"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038840"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>Effectuez-vous une mise à niveau à partir de SQL Server 2005 ?
   La fin du support étendu pour SQL Server 2005 est une bonne raison d’effectuer une mise à niveau vers une version plus récente de SQL Server et vers Azure SQL Database. La mise à niveau vous permet de maintenir la sécurité et la conformité, d’atteindre des performances élevées et d’optimiser l’infrastructure de votre plateforme de données.  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 45546e63eff82c5ba4467193811b572756331513
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cb76a3dfff5ec980d94e3ecf27de6b588c98cf1a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201499"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040510"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Ajouter des données à un rapport (Générateur de rapports et SSRS)
   Pour ajouter des données à un rapport, vous devez créer des datasets. Chaque dataset représente le jeu de résultats émanant de l'exécution d'une commande de requête sur une source de données. Les colonnes du jeu de résultats représentent la collection de champs. Les lignes du jeu de résultats constituent les données. Un dataset ne contient pas les données proprement dites. Il contient les informations nécessaires à la récupération d'un jeu de données spécifique à partir d'une source de données.  
@@ -39,7 +39,7 @@ ms.locfileid: "48201499"
   
  Vous pouvez également ajouter des datasets à un rapport en ajoutant des parties de rapports qui contiennent les datasets dont elles dépendent. [!INCLUDE[ssRBrptparts](../../../includes/ssrbrptparts-md.md)]  
   
- Pour savoir comment créer un rapport qui affiche les données d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Pour générer un rapport qui inclue ses propres données, consultez [Didacticiel : créer un rapport de graphique rapide en mode hors connexion &#40;Générateur de rapports&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
+ Pour savoir comment créer un rapport qui affiche les données d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de base de données, consultez [didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md). Pour générer un rapport qui inclut ses propres données, consultez [didacticiel : Créer un rapport de graphique rapide en mode hors connexion &#40;Générateur de rapports&#41;](../report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "48201499"
   
 -   [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
--   [Graphiques &#40;Générateur de rapports et SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)  
+-   [Graphiques (Générateur de rapports et SSRS)](../report-design/charts-report-builder-and-ssrs.md)  
   
 -   [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
@@ -74,9 +74,9 @@ ms.locfileid: "48201499"
   
 -   [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
--   [Parties de rapport &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
+-   [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)  
   
--   [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
@@ -110,13 +110,13 @@ ms.locfileid: "48201499"
   
  [Ajouter, modifier ou actualiser des champs dans le volet des données de rapport &#40;Générateur de rapports et SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Générer une requête dans le Concepteur de requêtes relationnelles &#40;Générateur de rapports et SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Générer une requête dans le concepteur de requêtes relationnelles &#40;Générateur de rapports et SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Afficher des Datasets masqués pour les valeurs de paramètre des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Afficher des datasets masqués pour les valeurs de paramètres des données multidimensionnelles &#40;Générateur de rapports et SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
  [Ajouter un filtre à un dataset &#40;Générateur de rapports et SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Définir un Message d’absence de données pour une région de données &#40;Générateur de rapports et SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Définir un message d’absence de données pour une région de données &#40;Générateur de rapports et SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
  [Associer un paramètre de requête à un paramètre de rapport &#40;Générateur de rapports et SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
@@ -125,20 +125,20 @@ ms.locfileid: "48201499"
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
 ##  <a name="Section"></a> Dans cette section  
- [Composants de rapports et jeux de données dans le Générateur de rapports](report-parts-and-datasets-in-report-builder.md)  
+ [Parties de rapports et datasets dans le Générateur de rapports](report-parts-and-datasets-in-report-builder.md)  
   
  [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
  [Spécifier des informations d’identification dans le Générateur de rapports](../specify-credentials-in-report-builder.md)  
   
- [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vue Conception de rapport &#40;Générateur de rapports&#41;](../report-builder/report-design-view-report-builder.md)   
- [Concepts de création de rapports &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Mode Conception de rapport &#40;Générateur de rapports&#41;](../report-builder/report-design-view-report-builder.md)   
+ [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

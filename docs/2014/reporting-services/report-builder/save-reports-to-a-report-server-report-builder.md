@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2d0efbb500a3c433f4670c3ec2ad2e35d88b8b59
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+manager: kfile
+ms.openlocfilehash: ad9c1fed7e328540513ee3955b95704d51e8008f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168913"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039150"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Enregistrer des rapports sur un serveur de rapports (Générateur de rapports)
   Dans le Générateur de rapports, vous pouvez enregistrer une définition de rapport sur un serveur de rapports (on parle également de publier un rapport). Le fait d'enregistrer un rapport sur un serveur de rapports permet aux autres utilisateurs de le consulter. Chaque fois que vous exécutez le rapport publié, vous récupérez les données les plus récentes. Pour enregistrer une copie statique d'un rapport rendu, exportez le rapport sous un format de fichier différent et enregistrez-le ou utilisez la fonctionnalité d'historique de rapport pour enregistrer des versions de rapports rendus.  

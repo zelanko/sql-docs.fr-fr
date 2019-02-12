@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a752a226a550e867fed5b0ca59143a72df6c7dcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 651f8f2fa263918a59a4756a53f1e86f4679c60e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183289"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025691"
 ---
 # <a name="reporting-services-configuration-files"></a>Fichiers de configuration de Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stocke les informations sur les composants dans le Registre et dans des fichiers de configuration qui sont copiés dans le système de fichiers au cours de l'installation. Les fichiers de configuration contiennent une combinaison de valeurs destinées à un usage interne uniquement et de valeurs définies par l'utilisateur. Les valeurs définies par l'utilisateur sont spécifiées par le biais du programme d'installation, des outils de configuration, des utilitaires de ligne de commande ou en modifiant manuellement les fichiers de configuration.  
@@ -46,7 +46,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
   
 |Stockage dans :|Description|Emplacement|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Stocke les paramètres de configuration des fonctionnalités du service Report Server : Gestionnaire de rapports, service Web Report Server et traitement en arrière-plan. Pour plus d’informations sur chaque paramètre, consultez [fichier de Configuration RSReportServer](rsreportserver-config-configuration-file.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
+|RSReportServer.config|Stocke les paramètres de configuration des fonctionnalités du service Report Server : Le Gestionnaire de rapports, le service Web Report Server et le traitement en arrière-plan. Pour plus d'informations sur chaque paramètre, consultez [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Stocke les stratégies de sécurité d'accès du code pour les extensions serveur. Pour plus d'informations sur ce fichier, consultez [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
 |RSMgrPolicy.config|Stocke les stratégies de sécurité d'accès du code pour le Gestionnaire de rapports. Pour plus d'informations sur ce fichier, consultez [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Répertoire d’installation>\Reporting Services\ReportManager|  
 |Web.config pour le service Web Report Server|Inclut uniquement les paramètres requis pour ASP.NET.|\<Répertoire d’installation>\Reporting Services\ReportServer|  
@@ -57,7 +57,7 @@ C:\Program Files\Microsoft SQL Server\MSRS12.MSSQLSERVER
 |RSPreviewPolicy.config|Stocke les stratégies de sécurité d'accès du code pour les extensions serveur utilisées pendant l'aperçu du rapport. Pour plus d'informations sur ce fichier, consultez [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|C:\Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssembliesr|  
   
 ##  <a name="bkmk_config_file_Summary_sharepoint_mode"></a> Résumé des fichiers de configuration (mode SharePoint)  
- Le tableau suivant fournit une description des fichiers de configuration utilisés pour un serveur de rapports en mode SharePoint. La plupart des paramètres de configuration sont stockés dans les bases de données d'application du service SharePoint. Pour plus d’informations, consultez [Service Reporting Services SharePoint et applications de service](../reporting-services-sharepoint-service-and-service-applications.md).  
+ Le tableau suivant fournit une description des fichiers de configuration utilisés pour un serveur de rapports en mode SharePoint. La plupart des paramètres de configuration sont stockés dans les bases de données d'application du service SharePoint. Pour plus d’informations, consultez [Services Reporting Services SharePoint et applications de service](../reporting-services-sharepoint-service-and-service-applications.md).  
   
  Par défaut, le répertoire d'installation pour le mode SharePoint est le suivant :  
   
@@ -67,10 +67,10 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |Stockage dans :|Description|Emplacement|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Stocke les paramètres de configuration des fonctionnalités du service Report Server : Gestionnaire de rapports, service Web Report Server et traitement en arrière-plan. Pour plus d’informations sur chaque paramètre, consultez [fichier de Configuration RSReportServer](rsreportserver-config-configuration-file.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
+|RSReportServer.config|Stocke les paramètres de configuration des fonctionnalités du service Report Server : Le Gestionnaire de rapports, le service Web Report Server et le traitement en arrière-plan. Pour plus d'informations sur chaque paramètre, consultez [RSReportServer Configuration File](rsreportserver-config-configuration-file.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
 |RSSrvPolicy.config|Stocke les stratégies de sécurité d'accès du code pour les extensions serveur. Pour plus d'informations sur ce fichier, consultez [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Répertoire d’installation>\Reporting Services\ReportServer|  
 |Web.config pour le service Web Report Server|Inclut uniquement les paramètres requis pour ASP.NET.|\<Répertoire d’installation>\Reporting Services\ReportServer|  
-|Paramètres du Registre|Stocke l'état de la configuration et d'autres paramètres utilisés pour la désinstallation de Reporting Services. Stocke également des informations sur chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Ne modifiez pas directement ces paramètres, car cela risque de rendre votre installation non valide.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<ID_Instance\> \Setup<br /><br /> Exemple d'ID d'instance : MSSQL12.MSSQLSERVER<br /><br /> **- et -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
+|Paramètres du Registre|Stocke l'état de la configuration et d'autres paramètres utilisés pour la désinstallation de Reporting Services. Stocke également des informations sur chaque application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> Ne modifiez pas directement ces paramètres, car cela risque de rendre votre installation non valide.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<ID_Instance\> \Setup<br /><br /> Exemple d’ID d’instance : MSSQL12.MSSQLSERVER<br /><br /> **- et -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  
 |RSReportDesigner.config|Stocke les paramètres de configuration du Concepteur de rapports. Pour plus d’informations, consultez [RSReportDesigner Configuration File](rsreportdesigner-configuration-file.md).|\<lecteur>:\Program Files\Microsoft Visual Studio 10\Common7\IDE\PrivateAssemblies.|  
   
 ## <a name="see-also"></a>Voir aussi  

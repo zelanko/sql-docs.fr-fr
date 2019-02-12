@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 68ec746e-8c82-47f5-8c3d-dbe403a441e5
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 76c8b145b5ad43cdba6a2d55cdcf62fedc0e2ff3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fdd1083f5e8d8e725378dd5cbec62351249ec1bd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225955"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043250"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportation vers un fichier CSV (Générateur de rapports et SSRS)
   L'extension de rendu CSV (valeurs séparées par des virgules) permet de rendre les rapports sous la forme d'une représentation aplatie des données d'un rapport dans un format standardisé, texte brut qui peut être facilement lu et échangé avec de nombreuses applications.  
   
- L'extension de rendu CSV utilise un caractère en tant que délimiteur de chaîne pour dissocier les champs et les lignes. Le délimiteur peut être configuré pour être un caractère autre que la virgule. Le fichier résultant peut être ouvert dans un tableur comme [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou utilisé comme format d'importation pour d'autres programmes. Le rapport exporté devient un fichier .csv et retourne un type MIME de `text/csv`.  
+ L'extension de rendu CSV utilise un caractère en tant que délimiteur de chaîne pour dissocier les champs et les lignes. Le délimiteur peut être configuré pour être un caractère autre que la virgule. Le fichier résultant peut être ouvert dans un tableur comme [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] ou utilisé comme format d'importation pour d'autres programmes. Le rapport exporté devient un fichier .csv et retourne un type MIME `text/csv`.  
   
  Si vous souhaitez utiliser des données liées aux graphiques, barres de données, graphiques sparkline, jauges et indicateurs dans [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)], exportez le rapport vers un fichier CSV, puis ouvrez le fichier dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48225955"
   
 -   Ligne  
   
--   image  
+-   Image  
   
 -   Rectangle  
   
@@ -64,12 +64,12 @@ ms.locfileid: "48225955"
   
  Les autres éléments de rapport sont triés, de haut en bas, puis de gauche à droite. Chaque élément est ensuite rendu dans une colonne. Si le rapport comporte des éléments de données imbriqués comme des listes ou des tableaux, les éléments parents sont répétés dans chaque enregistrement.  
   
- Le tableau suivant indique l'apparence des éléments de rapport lors du rendu :  
+ Le tableau suivant indique l'apparence des éléments de rapport lors du rendu :  
   
 |Élément|Comportement de rendu|  
 |----------|------------------------|  
 |Zone de texte|Effectue le rendu du contenu de la zone de texte. En mode par défaut, les éléments sont mis en forme en fonction des propriétés de mise en forme de l'élément. En mode conforme, la mise en forme peut être modifiée par les paramètres d'informations de périphérique. Pour plus d'informations sur les modes de rendu CSV, voir ci-dessous.|  
-|Table|Effectue le rendu en développant la table et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne. Les rapports d'extraction ne sont pas pris en charge.|  
+|Table de charge de travail|Effectue le rendu en développant la table et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne. Les rapports d'extraction ne sont pas pris en charge.|  
 |Matrice|Effectue le rendu en développant la matrice et en créant une ligne et une colonne pour chaque ligne et colonne au niveau de détails le plus bas. Les colonnes et les lignes de sous-total ne comprennent pas de titres de colonne ou de ligne.|  
 |Liste|Effectue le rendu d'un enregistrement pour chaque instance ou ligne de détails dans la liste.|  
 |Sous-rapport|L'élément parent est répété pour chaque instance du contenu.|  
@@ -93,7 +93,7 @@ ms.locfileid: "48225955"
   
 -   Les régions de données d'homologue sont des régions de données ou des groupes dynamiques qui partagent une région de données commune ou un ancêtre dynamique commun. Les données d'homologue sont identifiées par une création de branche au niveau de l'arborescence aplatie.  
   
- Pour plus d’informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
+ Pour plus d'informations, consultez [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  
   
  
   
@@ -148,7 +148,7 @@ ms.locfileid: "48225955"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   

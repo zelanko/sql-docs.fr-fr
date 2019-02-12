@@ -1,9 +1,8 @@
 ---
-title: Sys.dm_repl_articles (Transact-SQL) | Microsoft Docs
+title: sys.dm_repl_articles (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -19,12 +18,12 @@ ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 48112a8cf804b329b16aadc04992ac04b852ba07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791069"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031830"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ ms.locfileid: "47791069"
 |**cmdTypeUpd**|**Int**|Syntaxe d'appel pour la procédure stockée de mise à jour, pouvant être une de ces valeurs.<br /><br /> **0** = XCALL<br /><br /> **1** = APPEL<br /><br /> **2** = SQL<br /><br /> **3** = NONE<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = INCONNU|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Commande ou procédure stockée utilisée pour les mises à jour partielles.|  
 |**cmdTypePartialUpd**|**Int**|Syntaxe d'appel pour la procédure stockée de mise à jour partielle, pouvant être une de ces valeurs.<br /><br /> **2** = SQL|  
-|**numCol**|**Int**|Nombre de colonnes dans la partition pour un article filtré verticalement.|  
-|**artcmdtype**|**tinyint**|Type de commande actuellement répliqué, pouvant être une de ces valeurs.<br /><br /> **1** = INSERTION<br /><br /> **2** = DELETE<br /><br /> **3** = MISE À JOUR<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = none<br /><br /> **6** = pour usage interne uniquement<br /><br /> **7** = pour usage interne uniquement<br /><br /> **8** = mise à jour partielle|  
+|**numcol**|**Int**|Nombre de colonnes dans la partition pour un article filtré verticalement.|  
+|**artcmdtype**|**tinyint**|Type de commande actuellement répliqué, pouvant être une de ces valeurs.<br /><br /> **1** = INSERT<br /><br /> **2** = DELETE<br /><br /> **3** = UPDATE<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = none<br /><br /> **6** = pour usage interne uniquement<br /><br /> **7** = pour usage interne uniquement<br /><br /> **8** = mise à jour partielle|  
 |**artgeninscmd**|**nvarchar(510)**|Modèle de commande INSERT reposant sur les colonnes incluses dans l'article.|  
 |**artgendelcmd**|**nvarchar(510)**|Modèle de commande DELETE, qui peut inclure la clé primaire ou les colonnes incluses dans l'article, selon la syntaxe d'appel utilisée.|  
 |**artgenupdcmd**|**nvarchar(510)**|Modèle de commande UPDATE, qui peut inclure la clé primaire, les colonnes mises à jour ou une liste complète de colonnes, selon la syntaxe d'appel utilisée.|  
@@ -66,7 +65,7 @@ ms.locfileid: "47791069"
 |**fPubAllowUpdate**|**tinyint**|Indique si la publication autorise la mise à jour d'abonnements.|  
 |**intPublicationOptions**|**bigint**|Image précisant les options de publication supplémentaires, où les valeurs des options au niveau du bit peuvent être :<br /><br /> **0 x 1** - activées pour la réplication d’égal à égal.<br /><br /> **0 x 2** -publier des modifications locales uniquement.<br /><br /> **0 x 4** - activée pour les abonnés non SQL Server.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l’autorisation VIEW DATABASE STATE sur la base de données de publication pour appeler **dm_repl_articles**.  
   
 ## <a name="remarks"></a>Notes  

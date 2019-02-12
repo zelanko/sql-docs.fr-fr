@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: ceb68b8b-9214-4745-abc9-f47f33ecd6f7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8ce8a1662a57a4273e6449ecb94a410cd4dd798f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96a324942c8494cc815b99263493b81a4a5477e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192809"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030530"
 ---
 # <a name="omitting-values-for-optional-web-service-objects"></a>Omission de valeurs pour les objets de service Web facultatifs
   Les propriétés de plusieurs des types complexes du services web Report Server sont souvent suivies d’une propriété appelée Specified. Lorsque c'est le cas, le nom des propriétés se compose de leur nom original suivi de la mention « Specified ». La présence de cette mention signifie que certaines valeurs des propriétés peuvent parfois être omises. Ce phénomène est la conséquence directe de la conversion à partir du langage WSDL (Web Service Description Language) dans une classe proxy du [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Par exemple, la propriété de service Web <xref:ReportService2010.DataSourceDefinition.Enabled%2A> de type complexe <xref:ReportService2010.DataSourceDefinition> est suivie d'une propriété intitulée <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A>. Lorsque vous développez une application et que vous ne souhaitez pas définir de valeur pour la propriété <xref:ReportService2010.DataSourceDefinition.Enabled%2A>, vous n'avez pas à attribuer de valeur à <xref:ReportService2010.DataSourceDefinition.Enabled%2A>, la valeur par défaut `true` étant en effet utilisée. Toutefois, pour que cette opération se vérifie, vous devez au préalable définir <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A> sur `false`. Lorsque vous attribuez une valeur à la propriété <xref:ReportService2010.DataSourceDefinition.Enabled%2A>, vous devez définir <xref:ReportService2010.DataSourceDefinition.EnabledSpecified%2A> sur `true`. Seules les propriétés accessibles en écriture nécessitent de respecter cette condition. En revanche, les propriétés en lecture seule ne requièrent aucune action de votre part.  

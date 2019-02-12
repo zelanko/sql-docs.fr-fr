@@ -18,18 +18,18 @@ helpviewer_keywords:
 ms.assetid: e416be75-5234-4aa6-a3de-77f60f25169a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a35e16107d926bc9815e2e6de2d43a35172bd2e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a1bc66e2d415b9f46193e1fce0b18a58bc570d34
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070279"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042960"
 ---
 # <a name="pause-and-resume-shared-schedules"></a>Pause and Resume Shared Schedules
   Vous pouvez suspendre et reprendre une planification partagée en cours d'utilisation. Le fait de suspendre une planification partagée fournit un moyen de geler temporairement une planification qui est utilisée pour déclencher un traitement de rapport et des abonnements. Seules les planifications partagées peuvent être suspendues et reprises. Vous ne pouvez pas suspendre des planifications spécifiques aux rapports.  
   
- Vous ne pouvez pas suspendre et reprendre un traitement de rapport en cours. Vous ne pouvez suspendre et reprendre que les planifications faisant partie de la file d'attente des planifications du service Agent SQL Server. Un travail en cours ne fait pas partie du champ d'intervention du moteur de planification. Pour plus d’informations, consultez [gérer un processus en cours d’exécution](manage-a-running-process.md)  
+ Vous ne pouvez pas suspendre et reprendre un traitement de rapport en cours. Vous ne pouvez suspendre et reprendre que les planifications faisant partie de la file d'attente des planifications du service Agent SQL Server. Un travail en cours ne fait pas partie du champ d'intervention du moteur de planification. Pour plus d’informations, consultez [Gérer un processus en cours d’exécution](manage-a-running-process.md).  
   
  Pendant qu'une planification partagée est suspendue, toutes les opérations censées s'exécuter sont temporairement autorisées à ne pas avoir lieu. Lorsque vous reprenez une planification partagée, le traitement du rapport et de la planification se produit à l'heure planifiée suivante, en fonction de l'heure locale du serveur. Le serveur de rapports en mode natif ou les applications de service SharePoint n'effectuent pas les opérations planifiées qui étaient censées s'exécuter si la planification n'avait pas été suspendue.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48070279"
 -   [Suspendre et reprendre des planifications partagées (mode SharePoint)](#bkmk_sharepoint)  
   
 ##  <a name="bkmk_native"></a> Suspendre et reprendre des planifications partagées (mode natif)  
- Pour suspendre et reprendre une planification partagée, utilisez la page Planifications du Gestionnaire de rapports. Vous ne pouvez pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; ce dernier n'a pas les options nécessaires pour vous permettre de suspendre et de reprendre des planifications. Pour plus d’informations, consultez [créer, modifier et supprimer les planifications](create-modify-and-delete-schedules.md).  
+ Pour suspendre et reprendre une planification partagée, utilisez la page Planifications du Gestionnaire de rapports. Vous ne pouvez pas utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; ce dernier n'a pas les options nécessaires pour vous permettre de suspendre et de reprendre des planifications. Pour plus d’informations, consultez [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md).  
   
 #### <a name="to-pause-or-resume-a-shared-schedule"></a>Pour suspendre ou reprendre une planification partagée  
   
@@ -66,7 +66,7 @@ ms.locfileid: "48070279"
 ## <a name="see-also"></a>Voir aussi  
  [Planifications](schedules.md)   
  [Create, Modify, and Delete Schedules](create-modify-and-delete-schedules.md)   
- [Modifier les fuseaux horaires et les paramètres d’horloge sur un serveur de rapports](change-time-zones-and-clock-settings-on-a-report-server.md)   
- [Gérer un processus en cours d'exécution](manage-a-running-process.md)  
+ [Modifier les fuseaux horaires et les paramètres d'horloge sur un serveur de rapports](change-time-zones-and-clock-settings-on-a-report-server.md)   
+ [Gérer un processus en cours d’exécution](manage-a-running-process.md)  
   
   

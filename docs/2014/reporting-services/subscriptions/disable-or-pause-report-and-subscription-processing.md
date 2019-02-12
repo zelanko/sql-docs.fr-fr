@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 3cf9a240-24cc-46d4-bec6-976f82d8f830
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c15666aecbbdde8ca95eaf684bf9909454d3d42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 68d6284f7b7b832b37806d2fb39e506689a3b031
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129309"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040680"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Suspendre le traitement des rapports et des abonnements
   Vous ne pouvez pas suspendre directement un rapport ou un abonnement. Cependant, vous pouvez bloquer le traitement du rapport et de l'abonnement avant le démarrage du processus ou lorsqu'une connexion à une source de données est établie. Vous pouvez également empêcher le traitement d'un rapport ou d'un abonnement en le rendant inaccessible aux utilisateurs.  
@@ -49,7 +49,7 @@ ms.locfileid: "48129309"
   
 ## <a name="see-also"></a>Voir aussi  
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
- [Propriétés de sécurité, éléments de la page &#40;Gestionnaire de rapports&#41;](../security-properties-page-items-report-manager.md)  
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
+ [Page Propriétés de sécurité, Éléments &#40;Gestionnaire de rapports&#41;](../security-properties-page-items-report-manager.md)  
   
   

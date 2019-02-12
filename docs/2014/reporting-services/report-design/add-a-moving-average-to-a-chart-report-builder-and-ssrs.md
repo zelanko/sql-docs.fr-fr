@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 166cf9c1-0750-4866-8381-542e4fbfe65a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a636209c9db85065c79d4ef6aa158ab5b312c263
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d7e25415949df060c04f4355b7895ed2085a4baf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134124"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038080"
 ---
 # <a name="add-a-moving-average-to-a-chart-report-builder-and-ssrs"></a>Ajouter une moyenne mobile à un graphique (Générateur de rapports et SSRS)
   Une moyenne mobile est une moyenne des données de votre série, calculée sur une période de temps définie. La moyenne mobile peut être indiquée sur le graphique pour identifier les tendances significatives.  

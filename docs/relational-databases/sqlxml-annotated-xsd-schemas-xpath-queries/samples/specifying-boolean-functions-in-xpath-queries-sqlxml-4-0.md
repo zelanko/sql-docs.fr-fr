@@ -14,16 +14,16 @@ helpviewer_keywords:
 - true function
 - Boolean functions
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c5b0db6e7cd897117f1e6004594fd9fcad6a2a83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 414a391591577d554d88b6b5b5aac901834e8509
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764727"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041640"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>Spécification de fonctions booléennes dans des requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "47764727"
 </ROOT>  
 ```  
   
-## <a name="b-specify-the-true-and-false-boolean-functions"></a>B. Spécifier les fonctions booléennes true() et false()  
+## <a name="b-specify-the-true-and-false-boolean-functions"></a>b. Spécifier les fonctions booléennes true() et false()  
  Cette requête retourne tous les  **\<client >** éléments enfants du nœud de contexte qui n’ont pas  **\<ordre >** éléments enfants. En termes relationnels, cette requête retourne tous les clients qui n'ont pas passé de commandes.  
   
 ```  

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - user interface, dialog boxes
 ms.assetid: 2da24891-0b6d-4d3c-8b18-81b98752642f
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8b17ca71df37b908fd0a4530c13580dbf2ab1f56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 7be737e0c8534b936d08aaf8f37fc320f831b509
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085679"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034190"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants
   Cette section contient des informations d'aide pour de nombreux assistants, vues, volets et boîtes de dialogue du Générateur de rapports. Vous pouvez également obtenir de l'aide en appuyant sur F1 ou en cliquant sur le bouton Aide affiché dans la boîte de dialogue.  

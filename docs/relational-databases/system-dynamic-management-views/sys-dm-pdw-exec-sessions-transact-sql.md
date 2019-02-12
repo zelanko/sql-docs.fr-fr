@@ -1,9 +1,9 @@
 ---
-title: Sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_exec_sessions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dade699d433ce2b7ab95d3f09f370adedc8bcf2e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 41042d1dff7a64a8a2d2fe093276f61ab254da56
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664058"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039860"
 ---
-# <a name="sysdmpdwexecsessions-transact-sql"></a>Sys.dm_pdw_exec_sessions (Transact-SQL)
+# <a name="sysdmpdwexecsessions-transact-sql"></a>sys.dm_pdw_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur toutes les sessions actuellement ou récemment ouvert sur l’appliance. Elle répertorie une ligne par session.  
@@ -28,7 +28,7 @@ ms.locfileid: "51664058"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |session_id|**nvarchar(32)**|L’id de la requête actuelle ou la dernière requête exécuter (si la session est ARRÊTÉE et l’exécution de la requête au moment de l’arrêt). Clé pour cette vue.|Unique dans toutes les sessions dans le système.|  
-|status|**nvarchar(10)**|Pour les sessions en cours, identifie si la session est actuellement actif ou inactif. Pour des sessions précédentes, la session état peut être fermée ou arrêtée (si la session a dû être fermée).|'ACTIVE', 'FERMÉ', 'INACTIVE', 'TERMINÉ'|  
+|status|**nvarchar(10)**|Pour les sessions en cours, identifie si la session est actuellement actif ou inactif. Pour des sessions précédentes, la session état peut être fermée ou arrêtée (si la session a dû être fermée).|'ACTIVE', 'CLOSED', 'IDLE', 'TERMINATED'|  
 |request_id|**nvarchar(32)**|L’id de la requête actuelle ou de la dernière exécution de la requête.|Unique pour toutes les requêtes dans le système. Null si aucun n’a pas été exécuté.|  
 |security_id|**varbinary(85)**|ID de sécurité de l’entité de la session en cours d’exécution.||  
 |login_name|**nvarchar(128)**|Le nom de connexion du principal qui exécute la session.|Toute chaîne conforme aux conventions d’affectation de noms utilisateur.|  
@@ -41,7 +41,7 @@ ms.locfileid: "51664058"
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section de valeurs de la vue système maximales dans le [valeurs minimales et maximales (SQL Server PDW)](https://msdn.microsoft.com/5243f018-2713-45e3-9b61-39b2a57401b9) rubrique.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation `VIEW SERVER STATE`.  
   
 ## <a name="see-also"></a>Voir aussi  

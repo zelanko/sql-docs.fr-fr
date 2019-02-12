@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 11daa013-ec17-4760-80e3-6d84cd8d5722
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9169fbb442302461bb7b987e6f43919947bc109e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7f5cdd32104a9477dddb2620b749b647ad775d8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053129"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023480"
 ---
 # <a name="using-an-external-dataset-with-reporting-services"></a>Utilisation d'un dataset externe avec Reporting Services
   L’objet **DataSet** joue un rôle essentiel dans la prise en charge de scénarios de données déconnectés et distribués avec [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]. L’objet **DataSet** est une représentation résidant en mémoire de données qui fournit un modèle de programmation relationnel cohérent indépendamment de la source de données. Il peut être utilisé avec plusieurs sources de données différentes, avec des données XML ou pour gérer des données locales à l'application. L’objet **DataSet** représente un jeu complet de données, y compris des tables associées, des contraintes et des relations entre les tables. En raison de la polyvalence de l’objet **DataSet** concernant le stockage et l’exposition des données, il est probable que vos données soient traitées et transformées en objet **DataSet** avant toute création de rapport sur ces données.  

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 1e58c1c2-5ecf-4ce6-9d04-0a8acfba17be
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2757c13236b871eccc91066e064924c27cc19a93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6ead1d37c40a1d0cd2d6ee668bb99d595554006a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056809"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041480"
 ---
 # <a name="create-modify-and-delete-shared-data-sources-ssrs"></a>Créer, modifier, puis supprimer des sources de données partagées (SSRS)
   Une source de données partagée est un ensemble de propriétés de connexion à la source de données pouvant être référencées par plusieurs rapports, modèles et abonnements pilotés par les données qui s’exécutent sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Les sources de données partagées permettent de gérer facilement des propriétés de source de données qui changent souvent dans le temps. Si le compte ou le mot de passe d'un utilisateur change ou bien si vous déplacez la base de données sur un serveur différent, vous pouvez mettre à jour les informations de connexion à un seul endroit.  
@@ -35,11 +35,11 @@ ms.locfileid: "48056809"
   
 |Élément|Description|  
 |----------|-----------------|  
-|Nom   |Nom qui identifie l'élément au sein de la hiérarchie des dossiers du serveur de rapports.|  
+|Créer une vue d’abonnement|Nom qui identifie l'élément au sein de la hiérarchie des dossiers du serveur de rapports.|  
 |Description|Description qui apparaît avec l'élément dans le Gestionnaire de rapports lorsque vous consultez le contenu du dossier.|  
 |Type de connexion|Extension pour le traitement des données utilisée avec la source de données. Vous ne pouvez utiliser que les extensions pour le traitement des données qui sont déployées sur le serveur de rapports. Pour plus d’informations sur les extensions pour le traitement des données incluses dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md).|  
 |Chaîne de connexion|Chaîne de connexion pour la base de données. Pour plus d’informations et pour consulter des exemples de chaînes de connexion aux sources de données fréquemment utilisées, consultez [des connexions de données, les Sources de données et les chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).|  
-|Type d'informations d'identification|Spécifie la façon dont les informations d'identification sont obtenues pour la connexion et si elles doivent être utilisées une fois la connexion établie. Pour plus d’informations, consultez [spécifier les informations d’identification et les informations de connexion pour les Sources de données de rapport](../../integration-services/connection-manager/data-sources.md).|  
+|Type d'informations d'identification|Spécifie la façon dont les informations d'identification sont obtenues pour la connexion et si elles doivent être utilisées une fois la connexion établie. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../integration-services/connection-manager/data-sources.md).|  
   
  Une source de données partagée ne contient pas d'informations de requête utilisées pour récupérer des données. La requête est toujours conservée dans une définition de rapport.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48056809"
   
  Pour plus d'informations sur la création d'une source de données partagée, consultez :  
   
--   [Créer une Source de données incorporée ou partagée &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
+-   [Créer une source de données incorporée ou partagée &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)  
   
 -   [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)  
   
@@ -70,13 +70,13 @@ ms.locfileid: "48056809"
  Il n'existe pas d'opération d'annulation pour la suppression d'une source de données partagée. Toutefois, si vous supprimez par erreur une source de données partagée, vous pouvez en créer une autre en utilisant les mêmes valeurs de propriété que celles de la source que vous avez supprimée. Vous devrez ouvrir chaque rapport, modèle et abonnement piloté par les données pour relier la source de données partagée à l'élément qui l'utilise, mais tant que les propriétés de source de données sont les mêmes qu'avant, les rapports, modèles et abonnements continueront de fonctionner comme avant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer et gérer des Sources de données partagées &#40;Reporting Services dans SharePoint Mode intégré&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
+ [Créer et gérer des sources de données partagées &#40;Reporting Services en mode intégré SharePoint&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)   
  [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Gérer les Sources de données de rapport](manage-report-data-sources.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
- [Incorporée et partagée des connexions de données ou Sources de données &#40;Générateur de rapports et SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Gérer des sources de données de rapports](manage-report-data-sources.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
+ [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Page des propriétés des sources de données &#40;Gestionnaire de rapports&#41;](../data-sources-properties-page-report-manager.md)   
- [Créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Configurer les propriétés de Source de données pour un rapport &#40;le Gestionnaire de rapports&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8e255792-d9ef-496f-a26c-9e969c1209a0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d6f4508dda8496d9065655f5a8e298feaa4e9ad3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7f600e646e4690ed735b908861bd61516337cfd
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134029"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042860"
 ---
 # <a name="limit-report-history-report-manager"></a>Limiter l'historique de rapport (Gestionnaire de rapports)
   L'historique de rapport est un ensemble d'instantanés de rapport que vous créez au fil du temps. Vous pouvez soit créer l'historique de rapport à la demande, soit planifier la fréquence à laquelle un instantané est créée et ajoutée à l'historique de rapport.  
@@ -48,7 +48,7 @@ ms.locfileid: "48134029"
 4.  Sélectionnez les options pour votre rapport, puis cliquez sur **Appliquer**. Pour plus d’informations sur chaque option, consultez [Page de propriétés Options d’instantanés &#40;Gestionnaire de rapports&#41;](../snapshot-options-properties-page-report-manager.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter un instantané à l’historique de rapport &#40;le Gestionnaire de rapports&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)  
   
   

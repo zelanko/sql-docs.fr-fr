@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dbc01e78-5993-47e5-af04-34f9e3bbcee1
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f0d3d0a5638ae331f4b183e5b0232a27f07951c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75998722f773685e419f0618dc75864ae5fece16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48097849"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028230"
 ---
 # <a name="allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs"></a>Autoriser l'agrandissement ou la réduction d'une zone de texte (Générateur de rapports et SSRS)
   Par défaut, les zones de texte ont une taille fixe. Vous pouvez définir les options qui permettent d'agrandir ou de réduire la zone de texte en fonction de son contenu. Ces options correspondent aux propriétés `CanGrow` ou `CanShrink` du volet Propriétés.  

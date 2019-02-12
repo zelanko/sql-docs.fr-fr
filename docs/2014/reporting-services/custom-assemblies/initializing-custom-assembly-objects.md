@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 26fd74dc-d02f-40f7-aeb3-50ce05e9e6b9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b5d14f94a9fdd71a628ddecdc1b91bad8e11e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2b3f2f6fc33a5722fdae20e3b3b351ab23c61f45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096681"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034130"
 ---
 # <a name="initializing-custom-assembly-objects"></a>Initialisation d'objets Assembly personnalisés
-  Dans certains cas, vous pouvez être amené à initialiser des valeurs de propriété et de champ dans vos classes d'assembly personnalisées lorsque vous les instanciez. Vous aurez vraisemblablement besoin d'initialiser vos classes personnalisées avec des valeurs disponibles à partir des collections d'objets globales du rapport. Pour cela, substituez la méthode **OnInit** de l’objet **Code** d’un rapport. Pour accéder à **OnInit**, utilisez l’élément **Code** de la définition de rapport. Deux techniques vous permettent d’initialiser les valeurs de propriété ou de champ des classes dans un assembly personnalisé que vous projetez d’utiliser dans votre rapport : vous pouvez soit déclarer et créer une instance de votre classe à l’aide **d’OnInit**, soit appeler une méthode publiquement disponible à l’aide **d’OnInit**.  
+  Dans certains cas, vous pouvez être amené à initialiser des valeurs de propriété et de champ dans vos classes d'assembly personnalisées lorsque vous les instanciez. Vous aurez vraisemblablement besoin d'initialiser vos classes personnalisées avec des valeurs disponibles à partir des collections d'objets globales du rapport. Pour cela, substituez la méthode **OnInit** de l’objet **Code** d’un rapport. Pour accéder à **OnInit**, utilisez l’élément **Code** de la définition de rapport. Il existe deux techniques pour une propriété lors de l’initialisation ou de valeurs de champ des classes dans un assembly personnalisé que vous projetez d’utiliser dans votre rapport : Vous pouvez déclarer et créer une nouvelle instance de votre classe à l’aide **OnInit**, ou vous pouvez appeler une méthode publiquement disponible à l’aide **OnInit**.  
   
 ## <a name="global-object-collections-and-initialization"></a>Collections d'objets globales et initialisation  
  Plusieurs collections sont disponibles pour initialiser vos variables de classe personnalisées. Vous pouvez utiliser les collections **Globals** et **User**. Les collections **Parameters**, **Fields** et **ReportItems** ne sont pas disponibles au moment où, dans le cycle de vie du rapport, la méthode **OnInit** est appelée. Pour utiliser les collections partagées, **Globals** ou **User**, vous devez inclure la référence d’objet **Report**. Par exemple, pour initialiser votre classe personnalisée selon la langue actuelle de l’utilisateur qui accède au rapport, votre élément **Code** peut se présenter comme suit :  

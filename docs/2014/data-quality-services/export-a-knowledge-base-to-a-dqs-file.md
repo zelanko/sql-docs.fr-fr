@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a324ead5-c8aa-4e26-abe3-ef415add00f8
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 412744c2bd1ea88e3a85f0cacad5267b1d341969
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: de560c0638da3a55a045342f08ded333ce952e2a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033376"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041340"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Exporter une base de connaissances dans un fichier .dqs
   Cette rubrique décrit comment exporter une base de connaissances entière dans un fichier de données .dqs dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Vous pouvez exporter un domaine ou la totalité d'une base de connaissances vers un fichier de données. Pour plus d’informations sur l’exportation d’un domaine, consultez [Exporter un domaine vers un fichier .dqs](../../2014/data-quality-services/export-a-domain-to-a-dqs-file.md).  
@@ -46,7 +46,7 @@ ms.locfileid: "51033376"
   
 5.  Dans la boîte de dialogue **Exporter la Base de connaissances** , vérifiez que la ligne d'état indique que l'exportation est terminée. Cliquez sur **OK**.  
   
-##  <a name="FollowUp"></a> Suivi : Après l'exportation d'un domaine vers un fichier .dqs  
+##  <a name="FollowUp"></a> Suivi : Après avoir exporté un domaine vers un fichier .dqs  
  Après avoir exporté une base de connaissances dans un fichier .dqs, vous pouvez importer la base de connaissances dans le même [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (avec un nouveau nom) ou dans un [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]différent.  
   
   

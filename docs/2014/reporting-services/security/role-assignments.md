@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 600e112c-1897-48a6-93c0-6e9f3f12dc01
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 007a1a199bdb61efe0ce559ae2df4d5234e2e764
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: faf66ef9c84c5a2b93a7b7ec42bd3a0ccf6f2e8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206089"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043158"
 ---
 # <a name="role-assignments"></a>Attributions de rôles
   Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], les *attributions de rôles* déterminent l’accès aux éléments stockés et au serveur de rapports proprement dit. Une attribution de rôle est composée des parties suivantes :  
@@ -41,7 +41,7 @@ ms.locfileid: "48206089"
 Diagramme des attributions de rôles  
   
 ## <a name="system-level-and-item-level-role-assignments"></a>Attributions de rôles de niveau système et de niveau élément  
- Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], la sécurité basée sur les rôles s'articule autour des niveaux suivants :  
+ Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , la sécurité basée sur les rôles s'articule autour des niveaux suivants :  
   
 -   Les attributions de rôles de niveau élément contrôlent l'accès aux rapports, dossiers, modèles de rapport, sources de données partagées et ressources figurant dans la hiérarchie des dossiers du serveur de rapports. Les attributions de rôles de niveau élément sont définies lorsque vous créez une attribution de rôle sur un élément spécifique ou sur le dossier racine.  
   
@@ -59,13 +59,13 @@ Diagramme des attributions de rôles
 ## <a name="predefined-role-assignments"></a>Attributions de rôles prédéfinies  
  Par défaut, les attributions de rôles prédéfinies intégrées permettent aux administrateurs locaux de gérer le serveur de rapports. Vous devez ajouter des attributions de rôles pour accorder l'accès à d'autres utilisateurs.  
   
- Pour plus d’informations sur les attributions de rôles prédéfinis qui fournissent la sécurité par défaut, consultez [rôles prédéfinis](role-definitions-predefined-roles.md).  
+ Pour plus d'informations sur les attributions de rôles prédéfinies qui assurent la sécurité par défaut, consultez [Rôles prédéfinis](role-definitions-predefined-roles.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)   
  [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)   
- [Définir des autorisations pour les éléments de serveur de rapports sur un Site SharePoint &#40;Reporting Services dans SharePoint Mode intégré&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
+ [Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
  [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)  
   
   

@@ -11,14 +11,14 @@ f1_keywords:
 - sql12.rtp.rptwizard.choosetablelayout.f1
 ms.assetid: 370079eb-4a13-42f6-8f90-8fb8adf4d55e
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7bdf0dfcaefa63b611a86a6bb5a10d58045c6602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 167abcad8787ff3bdd0591696dbd6b365037d174
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053729"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020790"
 ---
 # <a name="choose-the-table-layout"></a>Choisir la mise en page du tableau
   Utilisez cette page de l'Assistant Rapport pour définir la mise en page du tableau dans le rapport.  
@@ -27,7 +27,7 @@ ms.locfileid: "48053729"
  **En escalier**  
  Créez un rapport qui contient une colonne pour chaque champ, où les champs de groupe s'affichent dans les en-têtes de groupe à gauche des colonnes de champs de détail. Ce type de table ne comporte pas de pieds de page de groupe.  
   
- **Bloc**  
+ **Block**  
  Créez un rapport qui contient une colonne pour chaque champ, où les champs de groupe s'affichent dans la première ligne de détail de chaque groupe. Ce type de tableau ne possède des pieds de page de groupe que si l'option **Inclure les sous-totaux** est également sélectionnée.  
   
  **Inclure les sous-totaux**  

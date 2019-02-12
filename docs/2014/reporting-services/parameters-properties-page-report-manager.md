@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ebb53598-2378-46ae-8935-d5192f8ea49a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 37b865f5f1e0ff029f030fcfab5bc1534fcb4a3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8b41d68eea7ced40f88fa505db1f8342c8c9faeb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153721"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020749"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Page de propriétés des paramètres (Gestionnaire de rapports)
   La page de propriétés des paramètres vous permet d'afficher ou de modifier les paramètres d'un rapport paramétrable.  
@@ -56,7 +56,7 @@ ms.locfileid: "48153721"
  **Null**  
  Activez cette case à cocher pour spécifier comme Null la valeur par défaut. Une valeur Null signifie que le rapport s'exécute même si l'utilisateur ne fournit pas de valeur de paramètre. Si cette colonne ne contient aucune case à cocher, cela signifie que le paramètre n'accepte pas les valeurs Null.  
   
- **Masquer**  
+ **Hide**  
  Activez cette case à cocher pour masquer le paramètre dans la zone de paramètres qui s'affiche dans la partie supérieure du rapport. Ce paramètre apparaît toujours dans les pages de définition d'abonnement et peut toujours être spécifié dans l'URL d'un rapport. Il est utile de masquer ce paramètre si vous souhaitez que le rapport soit toujours exécuté avec une valeur par défaut que vous spécifiez.  
   
  Désactivez cette case à cocher si vous souhaitez afficher le paramètre dans le rapport.  

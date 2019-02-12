@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 8bc0bb53-ad8a-464d-bb6a-7fea5fa62c5c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4bffdacee7496c27f41db7897861e3ec1f015dc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc714c2ffb7f4483823e7e49e9825c070a0b9672
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173599"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021410"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Ajouter un nouveau rapport ou un rapport existant à un projet de rapport (SSRS)
-  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez ajouter un nouveau rapport à l’aide de l’Assistant rapport ou en ajoutant un nouveau rapport vide à votre projet. Vous pouvez aussi ajouter un rapport existant. Après avoir ajouté un rapport, vous pouvez voir son nom sous le dossier **Rapports** de votre projet.  
+  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez ajouter un nouveau rapport en utilisant l'Assistant Rapport ou en ajoutant un nouveau rapport vide à votre projet. Vous pouvez aussi ajouter un rapport existant. Après avoir ajouté un rapport, vous pouvez voir son nom sous le dossier **Rapports** de votre projet.  
   
 > [!NOTE]  
 >  Pour afficher l'aperçu d'un rapport avec les sources de données existantes, vous devez disposer d'autorisations sur la source de données à partir du client de création de votre rapport. Pour plus d’informations, consultez [créer une Source de données partagée ou un Embedded &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "48173599"
   
     -   **Choisissez un type de rapport.** L'étape suivante consiste à sélectionner le type de rapport souhaité. Vous pouvez choisir un rapport tabulaire ou de matrice. Un rapport tabulaire comporte un nombre fixe de colonnes. Un rapport de matrice (ou tableau croisé dynamique) comporte un nombre variable de colonnes qui dépend des résultats de la requête. Un rapport cartographique affiche des informations analytiques sur un arrière-plan géographique.  
   
-    -   **Choisissez un Style.** L'étape suivante consiste à appliquer un style au rapport en utilisant un modèle de style. Sélectionnez un modèle pour appliquer au rapport des styles comme des polices, des couleurs et des styles de bordure. Le Concepteur de rapports fournit six modèles de style : Ardoise, Forêt, Entreprise, Gras, Océan et Générique. Vous pouvez également ajouter des modèles de style supplémentaires.  
+    -   **Choisissez un Style.** L'étape suivante consiste à appliquer un style au rapport en utilisant un modèle de style. Sélectionnez un modèle pour appliquer au rapport des styles comme des polices, des couleurs et des styles de bordure. Le Concepteur de rapports fournit six modèles de style : Ardoise, forêt, entreprise, gras, océan et générique. Vous pouvez également ajouter des modèles de style supplémentaires.  
   
         > [!NOTE]  
         >  Vous pouvez modifier des modèles existants ou ajouter de nouveaux en modifiant le fichier StyleTemplates.xml dans le \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\< lang\>dossier, où \<lang > est le langage que vous utilisez (par exemple, si vous utilisez la version en langue anglaise de [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], le nom du dossier est « Fr »). Ce dossier se trouve sur l'ordinateur sur lequel le Concepteur de rapports est installé. Il existe deux exemplaires du fichier StyleTemplates.xml. Pour modifier les styles appliqués via l'Assistant Rapport, modifiez le fichier qui est dans le dossier créé pour la langue que vous utilisez.  

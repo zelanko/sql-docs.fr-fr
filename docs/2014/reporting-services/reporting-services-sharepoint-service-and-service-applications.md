@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 501aa9ee-8c13-458c-bf6f-24e00c82681b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 582b6dea85eae5db3232de86f071a8606bfe36cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 02acf78c8f7c30172271062f090411f5fb8f2e1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538522"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037362"
 ---
 # <a name="reporting-services-sharepoint-service-and-service-applications"></a>Services Reporting Services SharePoint et applications de service
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint repose sur l'architecture de service SharePoint et utilise un service SharePoint et l'une des nombreuses applications de service disponibles. Lorsque vous créez une application de service, le service devient disponible et la base de données d'application de service est générée. Vous pouvez créer plusieurs applications de service Reporting Services mais une application de service est suffisante pour la plupart des scénarios de déploiement.  

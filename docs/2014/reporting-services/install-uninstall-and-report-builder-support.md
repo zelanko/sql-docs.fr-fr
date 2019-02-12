@@ -11,14 +11,14 @@ helpviewer_keywords:
 - administering Report Builder
 ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 216623bca9dbbc086a600578c174a60d1797a2f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 58cd6e3180de71aff25a4ed07e3ab53c91bd5ba8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377511"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034240"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installer, désinstaller et prendre en charge le Générateur de rapports
   Le Générateur de rapports est un outil de création de rapports permettant de créer, mettre à jour et partager des rapports, des parties de rapports et des datasets partagés. Le Générateur de rapports est disponible dans deux versions : autonome et [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La version autonome est installée sur votre ordinateur par vos propres soins ou par un administrateur. La version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est installée automatiquement avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] et téléchargée sur votre ordinateur à partir du Gestionnaire de rapports ou d'un site SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

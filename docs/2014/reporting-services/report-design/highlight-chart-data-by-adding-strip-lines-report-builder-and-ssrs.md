@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: addd6137-4b6e-4e88-a7e8-9600fcd1ccce
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5aae805b154d8c8876766f98e4d17c277a034764
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 6935c6a113aa90d656b6aa91c5fd840856b11774
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528252"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026020"
 ---
 # <a name="highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs"></a>Mettre en surbrillance des données de graphique en ajoutant des bandes (Générateur de rapports et SSRS)
   Les franges sont des plages horizontales ou verticales qui assombrissent l'arrière-plan du graphique à intervalles réguliers ou personnalisés. Vous pouvez utiliser des bandes pour obtenir les résultats suivants :  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: a1e9122c-aa0b-45de-b536-4f1202875ab1
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f87046df4e41f40bc5de5f2a720247738841ff24
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7d138662d8b72a99d84d9a224b97bed6be58c675
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376341"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029890"
 ---
 # <a name="implementing-the-isubscriptionbaseuiusercontrol-interface-for-a-delivery-extension"></a>Implémentation de l'interface ISubscriptionBaseUIUserControl pour une extension de remise
   Les extensions de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] peuvent contenir une implémentation d'une interface utilisateur d'abonnement pour rassembler des informations spécifiques à l'extension dans le Gestionnaire de rapports. L'interface utilisateur est appelée lorsqu'un utilisateur crée un abonnement ou en modifie un. Lorsqu'un nouvel abonnement est créé, l'interface utilisateur affiche des valeurs par défaut appropriées et active des utilisateurs pour interagir avec le fournisseur de remise. Lorsqu'un abonnement est modifié, l'interface utilisateur est pré-remplie avec les informations dans l'abonnement actuel.  

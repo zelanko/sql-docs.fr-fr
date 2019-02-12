@@ -11,14 +11,14 @@ f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bb8ac0237fc9175f29471a66b7e3916122b55707
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 207aa0b0657670d93dbdfc92b80a0c3d3285de7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082285"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030200"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Boîte de dialogue Propriétés du dataset, Paramètres (Générateur de rapports)
   Sélectionnez **paramètres** sur le **propriétés du Dataset** boîte de dialogue pour ajouter, modifier et supprimer des paramètres de requête.  
@@ -80,7 +80,7 @@ ms.locfileid: "48082285"
  [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Boîte de dialogue Propriétés de DataSet, requête &#40;Générateur de rapports&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Didacticiel : ajouter un paramètre à un rapport &#40;Générateur de rapports&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Didacticiel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
  [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../../2014/reporting-services/query-designers-report-builder.md)   

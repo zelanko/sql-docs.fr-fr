@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 57d09ad0-66a8-44f2-a81f-736217e3815c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3e0c8983e0e1e8f6407077b5927852c4165b702b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54a93f0d33927652bd8efe0f1ffa9369fc398038
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114259"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042550"
 ---
 # <a name="databaseservername-property-wmi-msreportserverconfigurationsetting"></a>Propriété DatabaseServerName (WMI MSReportServer_ConfigurationSetting)
   Spécifie le nom du serveur sur lequel la base de données du serveur de rapports est installée. En lecture/écriture.  
@@ -45,7 +45,7 @@ public string DatabaseServerName;
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

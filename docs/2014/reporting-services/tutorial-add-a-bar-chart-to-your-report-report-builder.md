@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Ajouter un graphique à barres à votre rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 25d3fafc654ab1c272d7688e49d67cd2af5d1820
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106799"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041420"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à barres à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : Ajouter un graphique à barres à votre rapport (Générateur de rapports)
   Un graphique à barres représente les données de catégorie horizontalement. Cela peut aider à :  
   
 -   améliorer la lisibilité des noms de catégorie longs ;  
@@ -55,11 +55,11 @@ ms.locfileid: "48106799"
 10. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, la création d’un dataset et le choix d’une source de données, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, créer un jeu de données et choisissez une source de données, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Chart"></a> 1. Créer un rapport de graphique à partir de l'Assistant Graphique  
@@ -111,7 +111,7 @@ ms.locfileid: "48106799"
   
 8.  (Facultatif) Cliquez sur le bouton Exécuter (**!**) pour voir les données sur lesquelles votre graphique sera basé.  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 ##  <a name="ChartType"></a> 2. Choisir le type de graphique  
  Vous avez le choix entre plusieurs types de graphiques prédéfinis.  
@@ -126,11 +126,11 @@ ms.locfileid: "48106799"
   
 3.  Faites glisser LastName vers le volet Catégories.  
   
-4.  Faites glisser SalesYear2009 vers le volet valeurs. SalesYear2009 représente le montant des ventes de chaque commercial pour l'année 2009. Le volet Valeurs affiche `[Sum(SalesYear2009)]`, car le graphique affiche l'agrégat pour chaque produit.  
+4.  Faites glisser SalesYear2009 vers le volet valeurs. SalesYear2009 représente le montant des ventes de chaque commercial pour l'année 2009. Le volet Valeurs affiche `[Sum(SalesYear2009)]` , car le graphique affiche l'agrégat pour chaque produit.  
   
 5.  Faites glisser SalesYear2008 vers le volet valeurs sous SalesYear2009. SalesYear2008 représente le montant des ventes de chaque commercial pour l'année 2008.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Sur le **choisir un style** page, dans le volet Styles, sélectionnez un style.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48106799"
   
 1.  Basculez en mode création de rapport.  
   
-2.  Sélectionnez les mots **titre du graphique** en haut du graphique, puis tapez le texte suivant : **ventes pour 2008 et 2009**.  
+2.  Sélectionnez les mots **titre du graphique** en haut du graphique, puis tapez le texte suivant : **Ventes pour 2008 et 2009**.  
   
 3.  Cliquez n'importe où en dehors du texte.  
   
@@ -294,7 +294,7 @@ ms.locfileid: "48106799"
   
 5.  Cliquez sur **Ajouter**. Un nouveau filtre vide apparaît.  
   
-6.  Dans **Expression**, type **[SUM (salesyear2009)]**. Cette opération crée l’expression sous-jacente `=Sum(Fields!SalesYear2009.Value)`, que vous pouvez voir si vous cliquez sur le **fx** bouton.  
+6.  Dans **Expression**, type **[SUM (salesyear2009)]**. Cela crée l’expression sous-jacente `=Sum(Fields!SalesYear2009.Value)`, que vous pouvez afficher en cliquant sur le bouton **fx** .  
   
 7.  Vérifiez que le type de données est **Text**.  
   

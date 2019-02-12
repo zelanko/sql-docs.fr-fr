@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 0f5f0d2a-9537-4152-b441-b40d7f04cf4c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 345523929eddcefc072bc7f55be49fc5e26057d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 74b66ac83d47d87d82db9826424b8e0237d123d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192629"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028300"
 ---
 # <a name="formatting-lines-colors-and-images-report-builder-and-ssrs"></a>Mise en forme des lignes, couleurs et images (Générateur de rapports et SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vous donne la possibilité de mettre en forme des lignes, des couleurs, des régions de données, des images ainsi que d'autres éléments de rapport.  
@@ -57,8 +57,8 @@ ms.locfileid: "48192629"
  Vous pouvez également ajouter des images telles que des logos à l'arrière-plan de votre rapport, à un rectangle, une zone de texte, un tableau, une matrice ou toute partie d'un graphique, ainsi qu'aux sections de corps et de page d'un rapport. Pour plus d’informations, consultez [Images &#40;Générateur de rapports et SSRS&#41;](images-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Mise en forme de texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
- [Mise en forme des nombres et des Dates &#40;Générateur de rapports et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
+ [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Mise en forme des nombres et des dates &#40;Générateur de rapports et SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Boîte de dialogue Remplissage &#40;Générateur de rapports et SSRS&#41;](../fill-dialog-box-report-builder-and-ssrs.md)  
   

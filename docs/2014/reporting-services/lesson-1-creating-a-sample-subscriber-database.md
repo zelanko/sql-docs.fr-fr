@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : création d’un exemple de base de données de l’abonné | Microsoft Docs'
+title: 'Leçon 1 : Création d’une base de données exemple abonné | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 516353788009feae4ac643182cac644b65e422f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a754f0d81714e3f483ee5abeab1850c61592ab6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156039"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039240"
 ---
-# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Leçon 1 : Création d'un exemple de base de données de l'abonné
+# <a name="lesson-1-creating-a-sample-subscriber-database"></a>Leçon 1 : Création d'une base de données d'abonnés exemple
   Avant de pouvoir définir un abonnement piloté par les données, vous devez disposer d'une source de données qui fournit les données d'abonnement. Au cours de cette étape, vous allez créer une petite base de données pour y stocker les données d'abonnement qui seront utilisées dans ce didacticiel. Ensuite, une fois l'abonnement traité, le serveur de rapports extrait ces données et les utilise pour personnaliser le résultat du rapport, les options de remise et le format de présentation du rapport.  
   
  Cette leçon suppose que vous utilisez [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour créer un [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] base de données.  
@@ -61,7 +61,7 @@ ms.locfileid: "48156039"
 7.  Utilisez une instruction SELECT pour vérifier que votre table comporte bien trois lignes de données. Par exemple : `select * from OrderInfo`  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé les données d'abonnement sur lesquelles seront basées la distribution des rapports et en fonction desquelles les résultats des rapports varieront pour chaque abonné. Ensuite, vous allez modifier les propriétés de la source de données du rapport que vous distribuerez aux abonnés. La modification des propriétés de la source de données est destinée à préparer le rapport pour la remise de l'abonnement piloté par les données. Vous allez également modifier la conception du rapport afin d'inclure un paramètre que l'abonnement utilisera avec les données d'abonné. [Leçon 2 : Modification des propriétés d’une source de données de rapport](lesson-2-modifying-the-report-data-source-properties.md)  
+ Vous avez créé les données d'abonnement sur lesquelles seront basées la distribution des rapports et en fonction desquelles les résultats des rapports varieront pour chaque abonné. Ensuite, vous allez modifier les propriétés de la source de données du rapport que vous distribuerez aux abonnés. La modification des propriétés de la source de données est destinée à préparer le rapport pour la remise de l'abonnement piloté par les données. Vous allez également modifier la conception du rapport afin d'inclure un paramètre que l'abonnement utilisera avec les données d'abonné. [Leçon 2 : Propriétés de la modification des données de rapport Source](lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   

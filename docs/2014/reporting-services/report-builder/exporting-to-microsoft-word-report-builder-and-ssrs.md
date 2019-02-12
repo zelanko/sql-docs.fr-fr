@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: dc149e8d8af6b2b5f08d849f3fda261849ff9d8f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 30401dfbc8d9ea9e4c77dad1516b9301d6dae833
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361091"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030400"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportation vers Microsoft Word (Générateur de rapports et SSRS)
   L'extension de rendu Word effectue le rendu de rapports au format natif de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. Il s'agit du format Office Open XML.  
@@ -77,9 +77,9 @@ ms.locfileid: "53361091"
   
  Cela se produit parce que le convertisseur Word analyse le rapport et recherche les champs pertinents à la pagination tels que **PageNumber** et **TotalPages** et ne gère que des références simples, sans appels à une fonction. Dans ce cas, l'expression appelle la fonction **ToString** . Les deux expressions suivantes sont équivalentes et permettent d'obtenir l'une comme le résultat escompté lorsque vous prévisualisez le rapport dans le Générateur de rapports ou le Concepteur de rapports ou restituez le rapport publié dans le Gestionnaire de rapports ou une bibliothèque SharePoint. Toutefois, le convertisseur Word analyse uniquement la seconde expression et restitue les numéros de page corrects.  
   
--   **Expression complexe :**  Expression est `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
+-   **Expression complexe :**  L’expression est `="Average Sales " & Avg(Fields!YTDPurchase.Value, "Sales") & " Page Number " & Globals!PageNumber`  
   
--   **Expression avec séquences de texte :** Texte, **chiffre d’affaires moyen**et expression, `=Avg(Fields!YTDPurchase.Value, "Sales)`et le texte, **numéro de Page**et expression `=Globals!PageNumber`  
+-   **Expression avec séquences de texte :** Texte, **Montant moyen des ventes** et expression, `=Avg(Fields!YTDPurchase.Value, "Sales)`, et texte, **Numéro de Page** et expression `=Globals!PageNumber`  
   
  Pour éviter ce problème, utilisez plusieurs séquences de texte plutôt qu'une expression complexe lorsque vous utilisez des expressions dans les pieds de page et les en-têtes. Les deux expressions suivantes sont équivalentes. La première est une expression complexe, la seconde utilise des séquences de texte. Le convertisseur Word analyse uniquement la seconde expression avec succès.  
   

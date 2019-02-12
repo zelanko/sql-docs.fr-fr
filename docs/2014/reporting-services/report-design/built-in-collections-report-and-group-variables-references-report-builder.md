@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 49bcb746b5f6b1312609ead4dedadba44a180855
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139611"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043390"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Références à des collections de variables de rapport et de groupe (Générateur de rapports et SSRS)
   Lorsqu'un calcul complexe est utilisé plusieurs fois dans les expressions d'un rapport, vous pouvez créer une variable. Vous pouvez créer une variable de rapport ou une variable de groupe. Les noms de variable doivent être uniques dans un rapport.  
@@ -53,7 +53,7 @@ ms.locfileid: "48139611"
     > [!NOTE]  
     >  Vous ne pouvez pas contrôler le moment où le processeur de rapports initialise une variable ou évalue une expression qui met à jour une variable. L'ordre d'exécution pour l'initialisation d'une variable est non défini.  
   
- Pour plus d’informations sur les sessions, consultez [aperçu des rapports dans le Générateur de rapports](../report-builder/previewing-reports-in-report-builder.md).  
+ Pour plus d’informations sur les sessions, consultez [Aperçu des rapports dans le Générateur de rapports](../report-builder/previewing-reports-in-report-builder.md).  
   
 ## <a name="group-variables"></a>Variables de groupe  
  Utilisez une variable de groupe pour calculer une expression complexe dans l'étendue d'un groupe. Une variable de groupe est valide uniquement dans l'étendue du groupe et ses groupes enfants.  
@@ -74,7 +74,7 @@ ms.locfileid: "48139611"
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Collections intégrées dans les Expressions &#40;Générateur de rapports et SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

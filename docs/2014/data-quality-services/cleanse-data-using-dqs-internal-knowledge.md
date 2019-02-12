@@ -12,15 +12,15 @@ f1_keywords:
 - sql12.dqs.dqproject.correction.f1
 - sql12.dqs.dqproject.interactivecleansing.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ad4feee8fe6a47b82196f6684a9c56b663a42c71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aa900fc136729eace74af6ceaf8d6f26b7900f99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392272"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038330"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Nettoyer des données à l'aide de la base de connaissances DQS (interne)
   Cette rubrique explique comment nettoyer vos données en utilisant un projet de qualité des données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le nettoyage des données est effectué sur vos données sources à l'aide d'une base de connaissances générée dans DQS sur un ensemble de données de haute qualité. Pour plus d’informations, consultez [Construction d’une base de connaissances](../../2014/data-quality-services/building-a-knowledge-base.md).  

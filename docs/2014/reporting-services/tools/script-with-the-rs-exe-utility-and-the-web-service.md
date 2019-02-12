@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0ec5ac6e-b3cf-49cd-96f6-6b4b7dc29982
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d45faf1a4ec47c09a8ac58f731cc4dbfce3eff2a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9469f3b28c6821f5829e84d96dab2617f85670c5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354365"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040870"
 ---
 # <a name="script-with-the-rsexe-utility-and-the-web-service"></a>Écrire des scripts avec l'utilitaire rs.exe et le service Web
   Les développeurs et les administrateurs du serveur de rapports peuvent effectuer des opérations sur un serveur de rapports grâce à l’utilitaire **rs** (RS.exe). Ils peuvent ainsi administrer par programmation un serveur de rapports à l’aide de scripts écrits avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  

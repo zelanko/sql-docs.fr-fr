@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e8366781f25829b0063479c2874a56c184e73bad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355703"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036910"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Leçon 2 : Nettoyage des données des fournisseurs avec la base de connaissances Fournisseurs
   Dans cette leçon, vous nettoyez les données des fournisseurs dans un fichier Excel à l’aide de la **fournisseurs** vous avez créé dans la première leçon de base de connaissances. Nettoyage des données dans DQS comprend un **processus assisté par ordinateur** qui analyse la façon dont les données sont conformes à la base de connaissances dans une base de connaissances et un **processus interactif** qui vous permet de réviser et modifier résultats du processus assisté par ordinateur. La fonctionnalité de nettoyage des données identifie les données incorrectes dans votre source de données et les corrige, ou suggère des corrections. Elle normalise et enrichit également les données client en utilisant des valeurs de domaine, des valeurs menantes pour les synonymes, des règles de domaine, des relations à base de termes et des données de référence. Vous pouvez approuver ou refuser en mode interactif les modifications proposées par le processus assisté par ordinateur. Consultez [nettoyage des données](https://msdn.microsoft.com/library/gg524800.aspx) pour plus d’informations.  

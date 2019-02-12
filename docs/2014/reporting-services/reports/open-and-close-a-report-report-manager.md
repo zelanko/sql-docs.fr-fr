@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b8db59646eb8bbb4d4bbe35c0fc54e4b243d4b28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 41d67805a939cd6b5826dd227cc02e348e48dc32
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065729"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034394"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Ouvrir et fermer un rapport (Gestionnaire de rapports)
   Vous pouvez utiliser le Gestionnaire de rapports pour afficher les rapports publiés sur un serveur de rapports. Par défaut, tous les rapports s'ouvrent au format HTML. Une fois qu'un rapport est ouvert, vous pouvez l'exporter pour l'afficher dans d'autres formats d'application. Si le rapport contient des fonctionnalités interactives, ou s'il s'agit d'un rapport du Générateur de rapports qui contient des données interactives, vous pouvez cliquer sur les liens pour afficher des rapports ou des données supplémentaires.  
@@ -42,8 +42,8 @@ ms.locfileid: "48065729"
      La fermeture d'un rapport n'entraîne pas sa suppression dans le cache du navigateur. Vous devez fermer le navigateur pour déconnecter le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Recherche de rapports et autres éléments &#40;Générateur de rapports et SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
+ [Recherche de rapports et d’autres éléments &#40;Générateur de rapports et SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
  [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   

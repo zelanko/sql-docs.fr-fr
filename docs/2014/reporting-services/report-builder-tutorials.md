@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9e9139fca7370ce061500528630cffc6c0e5b4e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a7d077ffdddaf88a004e5b1fc7e35c08fb3e2562
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159653"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032410"
 ---
 # <a name="tutorials-report-builder"></a>Didacticiels (Générateur de rapports)
   Utilisez les didacticiels suivants relatifs au Générateur de rapports pour apprendre à créer des rapports de base.  
   
- [Prérequis pour les didacticiels &#40;Générateur de rapports&#41;](prerequisites-for-tutorials-report-builder.md)  
+ [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](prerequisites-for-tutorials-report-builder.md)  
  Pour utiliser ces didacticiels, vous devez disposer d’un accès en lecture seule à une base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] et d’autorisations d’accès à un serveur de rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] .  
   
  Pour obtenir de l'aide sur ces conditions préalables, contactez l'administrateur de votre serveur de rapports.  
   
- [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
+ [Autres méthodes d’obtention d’une connexion de données &#40;Générateur de rapports&#41;](alternative-ways-to-get-a-data-connection-report-builder.md)  
  La plupart de ces didacticiels utilisent des sources de données incorporées. Si vous avez accès à des sources de données partagées vous pouvez les utiliser à la place. Cette rubrique fournit la procédure permettant d'utiliser des sources de données partagées.  
   
  [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](tutorial-creating-a-basic-table-report-report-builder.md)  
@@ -38,19 +38,19 @@ ms.locfileid: "48159653"
  [Didacticiel : Création d’un rapport de forme libre &#40;Générateur de rapports&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à créer un rapport de forme libre entièrement nouveau. Ce rapport a l'apparence d'un bulletin d'informations.  
   
- [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](tutorial-format-text-report-builder.md)  
+ [Didacticiel : Mettre en forme texte &#40;Générateur de rapports&#41;](tutorial-format-text-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre quelques-unes des nombreuses manières de mettre en forme le texte de vos rapports.  
   
- [Didacticiel : Ajouter un histogramme à votre rapport &#40;Générateur de rapports&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [Didacticiel : Ajouter un histogramme au rapport &#40;Générateur de rapports&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à ajouter un histogramme avec une moyenne mobile à un rapport.  
   
  [Didacticiel : Ajouter un graphique à secteurs à votre rapport &#40;Générateur de rapports&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à ajouter un graphique à secteurs à un rapport.  
   
- [Didacticiel : ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Didacticiel : Ajouter un graphique à barres à votre rapport &#40;Générateur de rapports&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à ajouter un graphique à barres à un rapport.  
   
- [Didacticiel : ajouter un graphique sparkline à un rapport &#40;Générateur de rapports et SSRS&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
+ [Didacticiel : Ajouter un graphique Sparkline à un rapport &#40;Générateur de rapports&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à créer une matrice, puis à ajouter un jeu de graphiques sparkline à la matrice.  
   
  [Didacticiel : Ajout d’un indicateur de performance clé à votre rapport &#40;Générateur de rapports&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
@@ -65,7 +65,7 @@ ms.locfileid: "48159653"
  [Didacticiel : Création d’un rapport principal et l’extraction &#40;Générateur de rapports&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à créer des rapports pour un scénario d'extraction basé sur un cube Analysis Services. Vous allez créer le rapport principal et l'activer en vue de l'extraction, ainsi que le rapport cible de l'action d'extraction.  
   
- [Didacticiel : introduction aux expressions](tutorial-introducing-expressions.md)  
+ [Didacticiel : Introduction aux expressions](tutorial-introducing-expressions.md)  
  Suivez les étapes de ce didacticiel pour apprendre à utiliser des expressions pour concaténer, calculer et rechercher des valeurs de champs et les afficher dans un rapport. Vous apprendrez également à afficher de manière conditionnelle différents états d'image et d'indicateur à l'aide d'expressions.  
   
 ## <a name="see-also"></a>Voir aussi  

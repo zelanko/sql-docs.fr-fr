@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bc993c0881eb4aeeddb18c8df0efad69dbba261e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 20fd3bccea72f0869f267058ca6bf71acbb20425
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418350"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032310"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Leçon 5 : Concevoir le rapport enfant à l’aide de l’Assistant rapport
   Après avoir créé une connexion de données et une table de données pour le rapport enfant, l'étape suivante consiste à concevoir le rapport enfant à l'aide de l'Assistant Rapport dans le Concepteur de rapports. Pour plus d’informations sur le Concepteur de rapports, consultez [Concevoir des rapports à l’aide du Concepteur de rapports &#40;SSRS&#41;](tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 79565c22eab900eb152f8b5fa52748b3e5a09a16
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 40c66dfbb4ed728df49e3756af7baea17197b502
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394250"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034830"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Afficher des en-têtes de ligne et de colonne sur plusieurs pages (Générateur de rapports et SSRS)
   Vous pouvez décider de répéter les en-têtes de ligne et de colonne sur chaque page pour une région de données de tableau matriciel qui couvre plusieurs pages. Une région de données de tableau matriciel peut être une table, une matrice ou une liste.  

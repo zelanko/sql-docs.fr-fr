@@ -19,16 +19,16 @@ helpviewer_keywords:
 ms.assetid: 2280fff6-3de7-44b1-87da-5db0ec975928
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5076b0d7eb5e81a71aafc840521d7924c83433a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 90a41365f249c112b7ac1c0a07bdfd1186c6a97b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189529"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032473"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilisation des fichiers de stratégie de sécurité Reporting Services
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stocke les informations de stratégie de sécurité dans trois fichiers de configuration qui sont copiés dans le système de fichiers au cours de l'installation. Ces fichiers de configuration peuvent contenir une combinaison de stratégies de sécurité à usage interne et définies par l'utilisateur pour les assemblys de code dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Les trois fichiers de configuration correspondent à trois composants sécurisables dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] : le service Windows Report Server, l'application Web du Gestionnaire de rapports et la fenêtre d'aperçu du Concepteur de rapports.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stocke les informations de stratégie de sécurité dans trois fichiers de configuration qui sont copiés dans le système de fichiers au cours de l'installation. Ces fichiers de configuration peuvent contenir une combinaison de stratégies de sécurité à usage interne et définies par l'utilisateur pour les assemblys de code dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Les trois fichiers de configuration correspondent à trois composants sécurisables dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Le serveur de rapports et de service Windows, l’application Web du Gestionnaire de rapports et le Concepteur de rapports afficher un aperçu de fenêtre.  
   
 > [!NOTE]  
 >  Il y a deux modes d’aperçu pour le Concepteur de rapports : l’onglet d’aperçu et la fenêtre d’aperçu contextuelle, qui s’affiche quand votre projet de rapport démarre en mode **DebugLocal**. L’onglet **Aperçu** n’est pas un composant sécurisable et n’applique pas de paramètres de stratégie de sécurité. La fenêtre d'aperçu est destinée à simuler les fonctionnalités du serveur de rapports ; par conséquent, elle dispose d'un fichier de configuration de stratégie que vous ou un administrateur devez modifier pour utiliser les assemblys et extensions personnalisés dans le Concepteur de rapports.  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dcb7caf2-d19a-4bc5-afb3-2b61ad11cac5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1aa999d8ec8eaa1ef16fdaf34c52d48cb230fc47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5efe51d0c91a0321a17e539aeddbb26f0dc3a5fe
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155929"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036249"
 ---
 # <a name="removing-a-delivery-extension"></a>Suppression d'une extension de remise
   Pour supprimer une extension de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], supprimez simplement l’élément **Extension** de votre extension de remise du fichier de configuration. Une fois les informations de configuration supprimées, l'extension de remise n'est plus disponible pour le serveur de rapports.  

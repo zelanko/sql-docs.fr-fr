@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 723d1cb0-c2e7-4763-8690-a6a7a8bbbb90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4064188dee8f8902712962c93715e6ebce839b03
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4269c5219dc52df82f46f1d495d895321fc6f276
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173179"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023590"
 ---
 # <a name="cache-a-report-report-manager"></a>mettre en cache un rapport (Gestionnaire de rapports)
   L'un des moyens d'améliorer les performances est de configurer les propriétés de mise en cache d'un rapport. Lorsqu'un rapport est mis en cache, une copie du rapport rendu est enregistrée pour une courte durée. Le premier utilisateur qui demande le rapport doit attendre que son traitement soit entièrement terminé avant de pouvoir l'afficher. Les utilisateurs ultérieurs qui demandent le rapport pendant la période de mise en cache peuvent le consulter immédiatement, car son traitement a déjà eu lieu.  
@@ -50,7 +50,7 @@ ms.locfileid: "48173179"
 7.  Cliquez sur **Appliquer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement de rapport](set-report-processing-properties.md)   
- [La mise en cache des rapports &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Définir les propriétés de traitement d’un rapport](set-report-processing-properties.md)   
+ [Mise en cache de rapports &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

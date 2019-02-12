@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4f3299b67ffb55723a59326ec884d9ad30617e24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 0cddac844ac9603da32a4fabc47fa71a8ddcd226
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036600"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Utilisation du contrôle RSClientPrint dans les applications personnalisées
   Le contrôle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] ActiveX **RSPrintClient** permet une impression côté client des rapports affichés dans la Visionneuse HTML. À partir de la boîte de dialogue **Imprimer** de ce contrôle, un utilisateur peut démarrer un travail d’impression, afficher l’aperçu d’un rapport, spécifier les pages à imprimer et modifier les marges. Lors d'une impression côté client, le serveur de rapports génère le rendu du rapport dans l'extension de rendu (EMF) d'image, puis utilise les fonctionnalités d'impression du système d'exploitation afin de créer le travail d'impression et de l'envoyer à une imprimante.  
@@ -44,7 +44,7 @@ ms.locfileid: "48212659"
 -   Consultez les rubriques de la documentation en ligne en matière de rendu d'image (EMF) pour comprendre la façon dont les pages sont rendues lors de l'aperçu avant impression et de la sortie.  
   
 ## <a name="rsprintclient-overview"></a>Présentation de RSPrintClient   
- Le contrôle affiche une boîte de dialogue d'impression personnalisée qui prend en charge les fonctionnalités communes aux autres boîtes de dialogue d'impression, notamment l'aperçu avant impression, les options de pages pour les choix spécifiques liés aux pages, aux plages, aux marges des pages et à l'orientation. Le contrôle est créé sous forme de package désigné en tant que fichier CAB. Le texte de la boîte de dialogue**Imprimer** est localisé dans toutes les langues prises en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le contrôle ActiveX **RSPrintClient** utilise l’extension de rendu d’image (EMF) pour imprimer le rapport. Les informations de périphérique EMF suivantes sont utilisées : StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight et PageWidth. Les autres paramètres d'informations de périphérique pour le rendu d'image ne sont pas pris en charge.  
+ Le contrôle affiche une boîte de dialogue d'impression personnalisée qui prend en charge les fonctionnalités communes aux autres boîtes de dialogue d'impression, notamment l'aperçu avant impression, les options de pages pour les choix spécifiques liés aux pages, aux plages, aux marges des pages et à l'orientation. Le contrôle est créé sous forme de package désigné en tant que fichier CAB. Le texte de la boîte de dialogue**Imprimer** est localisé dans toutes les langues prises en charge dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Le contrôle ActiveX **RSPrintClient** utilise l’extension de rendu d’image (EMF) pour imprimer le rapport. Les informations de périphérique EMF suivantes sont utilisées : StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight et PageWidth. Les autres paramètres d'informations de périphérique pour le rendu d'image ne sont pas pris en charge.  
   
 ### <a name="language-support"></a>Prise en charge de la langue  
  Le contrôle d'impression fournit une interface utilisateur en plusieurs langues ; par ailleurs, il accepte les valeurs d'entrée calibrées selon les différents systèmes de mesure. La langue et le système de mesure utilisés sont déterminés par les propriétés **Culture** et **UICulture**. Les deux propriétés acceptent les valeurs LCID. Si vous spécifiez une valeur LCID pour une langue qui représente une variante d'une autre langue prise en charge, vous obtiendrez la langue la plus proche. Si vous spécifiez une valeur LCID qui n'est pas prise en charge et pour laquelle il n'existe aucune valeur LCID approchante, vous obtiendrez l'anglais (États-Unis).  
@@ -67,7 +67,7 @@ ms.locfileid: "48212659"
   
 ### <a name="rsclientprint-properties"></a>Propriétés de RSClientPrint  
   
-|Propriété|Type|L/E|Valeur par défaut|Description|  
+|Propriété|Type|L/E|Par défaut|Description|  
 |--------------|----------|--------|-------------|-----------------|  
 |MarginLeft|Double|L/E|paramètre du rapport|Obtient ou définit la marge de gauche. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
 |MarginRight|Double|L/E|paramètre du rapport|Obtient ou définit la marge de droite. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
@@ -75,8 +75,8 @@ ms.locfileid: "48212659"
 |MarginBottom|Double|L/E|paramètre du rapport|Obtient ou définit la marge inférieure. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans le rapport, est de 12,2 millimètres.|  
 |PageWidth|Double|L/E|paramètre du rapport|Obtient ou définit la largeur de page. La valeur par défaut, si elle n’est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 215,9 millimètres.|  
 |PageHeight|Double|L/E|paramètre du rapport|Obtient ou définit la hauteur de page. La valeur par défaut, si elle n'est pas définie par le développeur ou spécifiée dans la définition de rapport, est de 279,4 millimètres.|  
-|Culture|Int32|L/E|Paramètres régionaux du navigateur|Spécifie l'identificateur de paramètres régionaux (LCID). Cette valeur détermine l'unité de mesure de l'entrée d'utilisateur. Par exemple, si un utilisateur tape `3`, la valeur est mesurée en millimètres si la langue est le Français ou en pouces si la langue est anglais (États-Unis). Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|UICulture|String|L/E|Culture du client|Spécifie la localisation de la chaîne de la boîte de dialogue. Le texte de la boîte de dialogue d'impression est disponible dans les langues suivantes : chinois simplifié, chinois traditionnel, anglais, français, allemand, italien, japonais, coréen, et espagnol. Les valeurs suivantes sont valides : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|Culture|Int32|L/E|Paramètres régionaux du navigateur|Spécifie l'identificateur de paramètres régionaux (LCID). Cette valeur détermine l'unité de mesure de l'entrée d'utilisateur. Par exemple, si un utilisateur tape `3`, la valeur est mesurée en millimètres si la langue est le Français ou en pouces si la langue est anglais (États-Unis). Les valeurs valides sont les suivantes : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
+|UICulture|String|L/E|Culture du client|Spécifie la localisation de la chaîne de la boîte de dialogue. Le texte de la boîte de dialogue Imprimer est localisé dans les langues suivantes : chinois simplifié, chinois traditionnel, anglais, français, allemand, italien, japonais, coréen et espagnol. Les valeurs valides sont les suivantes : 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Booléen|L/E|False|Spécifie si le contrôle émet une commande GET destinée au serveur de rapports pour établir une connexion pour l'impression hors session.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Quand définir la propriété Authenticate  

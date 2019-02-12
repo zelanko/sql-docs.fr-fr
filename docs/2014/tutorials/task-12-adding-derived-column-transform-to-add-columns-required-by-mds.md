@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 98ccb271-04da-4126-9729-67e9a479aaef
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 104fdfdebf01bece9f5a3762b33b9e31f40d06d8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c80f719bd756a0ad241ef270507e638b08c2081
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125329"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036511"
 ---
 # <a name="task-12-adding-derived-column-transform-to-add-columns-required-by-mds"></a>Tâche 12 : Ajout d'une transformation de colonne dérivée pour ajouter les colonnes requises par MDS
   Dans cette tâche, vous allez ajouter une transformation de colonne dérivée au flux de données. Vous ajoutez deux colonnes dérivées, **ImportType** et **BatchTag**, vers les enregistrements transmis à cette transformation. Vous devez ajouter ces colonnes avant de télécharger les données dans des tables intermédiaires dans MDS. Ces deux colonnes sont requises pour les tables intermédiaires dans MDS. Consultez [Tables intermédiaires des membres feuille](../master-data-services/leaf-member-staging-table-master-data-services.md) pour plus d’informations.  
@@ -60,6 +57,6 @@ ms.locfileid: "48125329"
 15. Cliquez sur **OK** pour fermer la **Transformation de colonne dérivée** boîte de dialogue.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 13 : Ajout d’une destination OLE DB pour écrire des données dans une table intermédiaire MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
+ [Tâche 13 : Ajout de Destination OLE DB pour écrire des données dans la Table intermédiaire MDS](../../2014/tutorials/task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table.md)  
   
   

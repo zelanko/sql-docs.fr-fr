@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c69e1d2021e4c92dc87bd866ec851d0a3349fe1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139459"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034544"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nouvelle planification : Modifier la Page de planification (Gestionnaire de rapports)
   La page Nouvelle planification / Modifier la planification permet de créer une planification pour un rapport. Les planifications sont utilisées avec des abonnements. Elles permettent en outre d'actualiser des rapports mis en cache et de créer des instantanés en tant qu'éléments autonomes ou dans un historique de rapport.  
@@ -79,7 +79,7 @@ ms.locfileid: "48139459"
   
 -   **Heure** définit une planification qui s'exécute toutes les heures. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification.  
   
--   **Jour** définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : chaque \< *jour*>, tous les jours ouvrables et chaque \< *nombre*> jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
+-   **Jour** définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : Chaque \< *jour*>, tous les jours ouvrables et chaque \< *nombre*> jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
   
 -   **Semaine** définit une planification qui s'exécute toutes les semaines à une heure spécifique. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "48139459"
  Les planifications expirent sans notification. Après la date de fin, elles ne s'exécutent plus. Les planifications expirées ne sont pas supprimées. Elles ne peuvent être supprimées que manuellement. Ainsi, si vous choisissez de continuer à utiliser la planification, vous pouvez rallonger la date de fin.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: Agent de distribution de réplication | Microsoft Docs
 ms.custom: ''
-ms.date: 29/10/2018
+ms.date: 10/29/2018
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: replication
@@ -15,12 +15,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f036e5cf48ce7909b63d34f98861e398b0274b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0a1bdbe715aa970f87596060a774ac2b1ed8df15
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128299"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028060"
 ---
 # <a name="replication-distribution-agent"></a>Agent de distribution de réplication
   L'Agent de distribution de réplication est un fichier exécutable qui déplace l'instantané (pour la réplication d'instantané et la réplication transactionnelle) et les transactions contenues dans les tables de base de données de distribution (pour la réplication transactionnelle) vers les tables de destination au niveau des Abonnés.  

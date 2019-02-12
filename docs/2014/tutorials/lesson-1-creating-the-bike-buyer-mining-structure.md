@@ -1,22 +1,21 @@
 ---
-title: 'Leçon 1 : Création de la Structure d’exploration de données Bike Buyer | Microsoft Docs'
+title: 'Leçon 1 : Création de la Structure d’exploration de données Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a73ac60b-660f-458a-bd2f-993fbeba7226
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d6aa8d340b64f98193b31b6ebc6321407cff8368
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082679"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025800"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Leçon 1 : Création de la structure d'exploration de données Bike Buyer
   Dans cette leçon, vous allez créer une structure d'exploration de données à l'aide de laquelle vous pouvez prévoir si un acheteur potentiel de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est intéressé par l'achat d'un vélo. Si vous n’êtes pas familiarisé avec les structures d’exploration de données et leur rôle dans l’exploration de données, consultez [les Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
@@ -95,9 +94,9 @@ WITH HOLDOUT (<holdout specifier>)
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>Pour créer une requête DMX dans SQL Server Management Studio  
   
-1.  Ouvrir [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Ouvrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Dans le **se connecter au serveur** boîte de dialogue pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, type `LocalHost`, ou tapez le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous souhaitez vous connecter à pour cette leçon. Cliquez sur **Se connecter**.  
+2.  Dans le **se connecter au serveur** boîte de dialogue pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, type `LocalHost`, ou tapez le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous souhaitez vous connecter à pour cette leçon. Cliquer sur **Se connecter**.  
   
 3.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX** pour ouvrir le **éditeur de requête**et une nouvelle requête vide.  
   
@@ -215,6 +214,6 @@ WITH HOLDOUT (<holdout specifier>)
  Dans la leçon suivante, vous allez ajouter des modèles d'exploration de données à la structure que vous venez de créer.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
+ [Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Bike Buyer](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md)  
   
   

@@ -11,14 +11,14 @@ f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 2568f22f30ffb722aa7438f9b83f35a7e39f1f5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138729"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031850"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Boîte de dialogue Propriétés de la source de données, Général (Générateur de rapports)
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés de la source de données** pour sélectionner une source de données partagée à partir d'un serveur de rapports, ou pour créer ou modifier les informations de connexion d'une source de données incorporée au rapport.  
@@ -67,8 +67,8 @@ ms.locfileid: "48138729"
 ## <a name="see-also"></a>Voir aussi  
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
- [Connexions de données, Sources de données et chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Informations d’identification, boîte de dialogue Propriétés de Source de données &#40;Générateur de rapports&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [Aide du Générateur de rapports pour les boîtes de dialogue, volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

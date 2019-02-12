@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dqs.administration.rdsconfiguration.f1
 - sql12.dqs.administration.configuration.createDirectRDS.f1
 ms.assetid: fae745e7-57a7-4cbc-8979-56ea8e392e4e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: da0514f10e4669d5e1e0bd20469b5922d38f2d70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c89d09d077a5b416d4afb46b195a03c5144c4108
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367251"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037240"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurer DQS pour utiliser des données de référence
   Cette rubrique explique comment configurer [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) afin d'utiliser des données de référence pour le nettoyage de vos données. Vous pouvez utiliser des données de référence provenant de Windows Azure Marketplace ou de fournisseurs de données de référence tiers en ligne directs.  

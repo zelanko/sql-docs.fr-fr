@@ -2,10 +2,9 @@
 title: sp_set_database_firewall_rule (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: ''
+ms.service: sql-database
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_set_database_firewall_rule
@@ -22,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 8530d8a2d19a5dd9f50fb437626202565435222a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800677"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025460"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
  **[@name**  =] [N]'*nom*'  
  Le nom utilisé pour décrire et distinguer le paramètre de pare-feu au niveau base de données. *nom* est **nvarchar (128)** sans valeur par défaut. L’identificateur Unicode `N` est facultatif pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
- **[@start_ip_address**  =] '*start_ip_address*'  
+ **[@start_ip_address** =] '*start_ip_address*'  
  Adresse IP la plus basse dans la plage de paramètres de pare-feu au niveau base de données. Les adresses IP supérieures ou égales à celle-ci peuvent essayer de se connecter à l'instance [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. L"adresse IP la plus basse possible est `0.0.0.0`. *start_ip_address* est **varchar (50)** sans valeur par défaut.  
   
  [**@end_ip_address** =] '*end_ip_address*'  
@@ -64,7 +63,7 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
   
  Lorsque vous ajoutez un paramètre de pare-feu au niveau de la base de données où le début et fin des adresses IP sont égaux à `0.0.0.0`, vous activez l’accès à votre base de données dans le [!INCLUDE[ssSDS](../../includes/sssds-md.md)] serveur à partir de n’importe quelle ressource Azure. Spécifiez une valeur pour le *nom* n’oubliez pas de paramètre qui vous aideront à ce qui concerne le paramètre de pare-feu.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Exige l’autorisation **CONTROL** sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -89,7 +88,7 @@ EXECUTE sp_set_database_firewall_rule N'Example DB Setting 1', '0.0.0.4', '0.0.0
   
 ## <a name="see-also"></a>Voir aussi  
  [Pare-feu de base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Comment : configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Procédure : Configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_delete_database_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)   
  [Sys.database_firewall_rules &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  

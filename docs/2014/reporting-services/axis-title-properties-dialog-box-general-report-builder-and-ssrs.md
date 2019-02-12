@@ -12,14 +12,14 @@ f1_keywords:
 - sql12.rtp.rptdesigner.axistitleproperties.general.f1
 ms.assetid: e4ef6cc0-ec84-4a89-86ed-a3f8523402d9
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 3e20efdcc1d5ca2833896ae583583ed04449b996
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 070b47688067e493321ce25d05f09eec6e44197e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064929"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038850"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés du titre de l'axe, Général (Générateur de rapports et SSRS)
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés du titre de l'axe** pour définir le titre de l'axe. Le titre de l'axe s'affiche sous l'axe des abscisses ou à côté de l'axe des ordonnées.  

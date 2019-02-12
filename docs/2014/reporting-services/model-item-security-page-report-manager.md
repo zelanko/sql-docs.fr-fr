@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 8c5b29ae-1f17-41f2-ab59-97899b8fb4fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08742a78d0992467a8fb596ecc4f267576f00701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a89e2e627b297d5d6dc9795217b727aeb20d7c74
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195069"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025790"
 ---
 # <a name="model-item-security-page-report-manager"></a>Page Sécurité de l'élément de modèle (Gestionnaire de rapports)
   Utilisez cette page pour sécuriser des parties d'un modèle en accordant ou en refusant des autorisations en lecture seule sur des éléments particuliers. La sécurité de l'élément de modèle affecte l'exploration de données appropriée au moment de l'exécution et la possibilité d'utiliser des parties d'un modèle publié lors de la création de rapports dans le Générateur de rapports. Pour utiliser cette fonctionnalité, vous devez disposer des autorisations de gestionnaire de contenu.  

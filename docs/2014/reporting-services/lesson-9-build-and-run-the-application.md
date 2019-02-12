@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 9 : générer et exécuter l’application | Microsoft Docs'
+title: 'Leçon 9 : Générer et exécuter l’Application | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7ea204b4e7b9d066a2b4f7de6063c095d02967d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 47519a65a927184f67799a7c82a9a10d1d39c91f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096459"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042793"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Lesson 9: Build and Run the Application
+# <a name="lesson-9-build-and-run-the-application"></a>Leçon 9 : Générer et exécuter l’Application
   Après avoir créé un filtre de données pour la table de données, l'étape suivante consiste à générer et à exécuter l'application de site Web.  
   
 ### <a name="to-build-and-run-the-application"></a>Pour générer et exécuter l'application  

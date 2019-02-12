@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: fb22cffa-ac99-4d34-ac4a-9c93068e33e8
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 109c4eb07dd34aa5ef3e41d794edfc39ffffcac8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119869"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027990"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Création de prédictions de série chronologique (Didacticiel intermédiaire sur l'exploration de données)
   Dans les tâches précédentes de cette leçon, vous avez créé un modèle de série chronologique et exploré les résultats. Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] crée toujours un jeu de cinq (5) prédictions pour un modèle de série chronologique et affiche les valeurs prédites dans le graphique de prévision. Toutefois, vous pouvez également créer des prévisions en générant des requêtes de prédiction DMX (Data Mining Extensions).  
@@ -88,41 +87,41 @@ ms.locfileid: "48119869"
   
 |$TIME|Montant|  
 |-----------|------------|  
-|25/7/2008|99978.00|  
-|25/8/2008|145575.07|  
-|25/9/2008|116835.19|  
-|25/10/2008|116537.38|  
-|25/11/2008|107760.55|  
+|7/25/2008|99978.00|  
+|8/25/2008|145575.07|  
+|9/25/2008|116835.19|  
+|10/25/2008|116537.38|  
+|11/25/2008|107760.55|  
   
  **M200 Europe PredictQuantity**  
   
 |$TIME|Quantité|  
 |-----------|--------------|  
-|25/7/2008|52|  
-|25/8/2008|67|  
-|25/9/2008|58|  
-|25/10/2008|57|  
-|25/11/2008|54|  
+|7/25/2008|52|  
+|8/25/2008|67|  
+|9/25/2008|58|  
+|10/25/2008|57|  
+|11/25/2008|54|  
   
  **M200 North America - PredictAmount**  
   
 |$TIME|Montant|  
 |-----------|------------|  
-|25/7/2008|348533.93|  
-|25/8/2008|340097.98|  
-|25/9/2008|257986.19|  
-|25/10/2008|374658.24|  
-|25/11/2008|379241.44|  
+|7/25/2008|348533.93|  
+|8/25/2008|340097.98|  
+|9/25/2008|257986.19|  
+|10/25/2008|374658.24|  
+|11/25/2008|379241.44|  
   
  **M200 North America - PredictQuantity**  
   
 |$TIME|Quantité|  
 |-----------|--------------|  
-|25/7/2008|272|  
-|25/8/2008|152|  
-|25/9/2008|250|  
-|25/10/2008|181|  
-|25/11/2008|290|  
+|7/25/2008|272|  
+|8/25/2008|152|  
+|9/25/2008|250|  
+|10/25/2008|181|  
+|11/25/2008|290|  
   
 > [!WARNING]  
 >  Les dates utilisées dans l'exemple de base de données ont changé pour cette version. Si vous utilisez une version antérieure des exemples de données, vous pouvez obtenir des résultats différents.  

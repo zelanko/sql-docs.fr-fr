@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 99d7bcaf87fec0181392fd8673cb90df37849308
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082829"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043270"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
   Lorsque vous créez des rapports, il est important de comprendre le comportement des convertisseurs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin de garantir que le rapport rendu aura l'apparence souhaitée, notamment en termes de mise en page et de sauts de page. Vous souhaiterez probablement aussi vous assurer que le rapport rendu sera ajusté au format de papier utilisé couramment dans votre organisation.  
@@ -44,19 +44,19 @@ ms.locfileid: "48082829"
   
  Vous pouvez définir des propriétés sur les éléments de rapport pour les masquer ou les afficher initialement sur la page. Vous pouvez définir des propriétés de visibilité sur les lignes, colonnes ou groupes pour les régions de données et fournir des boutons bascule pour permettre à l'utilisateur d'afficher ou de masquer de façon interactive les données de rapport. Vous pouvez définir la visibilité ou la visibilité initiale à l'aide d'expressions, notamment des expressions basées sur les paramètres de rapport.  
   
- Lorsqu'un rapport est traité, ses données sont associées aux éléments de disposition du rapport et les données combinées sont envoyées à un convertisseur de rapport. Le convertisseur respecte des règles prédéfinies pour l'expansion des éléments de rapport et détermine la quantité de données tenant sur chaque page. Pour concevoir un rapport facile à lire et optimisé pour le convertisseur que vous prévoyez d'utiliser, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d’informations, consultez [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
+ Lorsqu'un rapport est traité, ses données sont associées aux éléments de disposition du rapport et les données combinées sont envoyées à un convertisseur de rapport. Le convertisseur respecte des règles prédéfinies pour l'expansion des éléments de rapport et détermine la quantité de données tenant sur chaque page. Pour concevoir un rapport facile à lire et optimisé pour le convertisseur que vous prévoyez d'utiliser, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour plus d’informations, voir [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
 ##  <a name="RenderingExtensions"></a> Convertisseurs  
  Reporting Services inclut un jeu de convertisseurs, également connu sous le nom d'extensions de rendu, que vous pouvez utiliser pour exporter des rapports vers des formats différents. Il existe trois types de convertisseurs :  
   
--   **Convertisseurs de données** Les convertisseurs de données suppriment du rapport toute la mise en forme et les informations relatives à la disposition et affichent uniquement les données. Le fichier résultant peut être utilisé pour importer les données de rapport brutes dans un autre type de fichier, tel qu'Excel, une autre base de données, un message de données XML ou une application personnalisée. Les convertisseurs de données disponibles sont : CSV et XML.  
+-   **Convertisseurs de données** Les convertisseurs de données suppriment du rapport toute la mise en forme et les informations relatives à la disposition et affichent uniquement les données. Le fichier résultant peut être utilisé pour importer les données de rapport brutes dans un autre type de fichier, tel qu'Excel, une autre base de données, un message de données XML ou une application personnalisée. Les convertisseurs de données disponibles sont : CSV et XML.  
   
     > [!NOTE]  
     >  Bien qu'il ne permette l'exportation directe vers un autre format, l'outil de rendu Atom génère des fichiers de données à partir de rapports.  
   
 -   **Convertisseurs de saut de page conditionnelle** Les convertisseurs de saut de page conditionnelle conservent la disposition et la mise en forme du rapport. Le fichier résultant est optimisé pour l'affichage à l'écran et la remise, par exemple sur une page Web. Les convertisseurs de saut de page conditionnelle disponibles sont : [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word, archive Web (MHTML) et HTML.  
   
--   **Convertisseurs de saut de page manuel** Les convertisseurs de saut de page manuel conservent la disposition et la mise en forme du rapport. Le fichier résultant est optimisé pour une impression cohérente ou pour l'affichage en ligne du rapport dans un format de livre. Les convertisseurs de saut de page manuel suivants sont pris en charge : TIFF et PDF.  
+-   **Convertisseurs de saut de page manuel** Les convertisseurs de saut de page manuel conservent la disposition et la mise en forme du rapport. Le fichier résultant est optimisé pour une impression cohérente ou pour l'affichage en ligne du rapport dans un format de livre. Les convertisseurs de saut de page manuel disponibles sont prises en charge : TIFF et PDF.  
   
  Lorsque vous affichez un aperçu de rapport dans le Générateur de rapports ou le Concepteur de rapports ou que vous exécutez un rapport dans le Gestionnaire de rapports, le rapport est toujours rendu en premier au format HTML. Après avoir exécuté le rapport, vous pouvez l'exporter vers différents formats de fichiers. Pour plus d’informations, consultez [exportation des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48082829"
 ##  <a name="Pagination"></a> Pagination  
  La pagination fait référence au nombre de pages au sein d'un rapport et à la façon dont les éléments d'un rapport sont réorganisés sur ces pages. La pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dépend de l'extension de rendu que vous utilisez pour afficher et remettre le rapport et des options de saut de page et d'ajustement configurées pour le rapport.  
   
- Pour concevoir avec succès un rapport facile à lire par vos utilisateurs et qui est optimisé pour le convertisseur que vous prévoyez d’utiliser pour remettre votre rapport, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les rapports exportés à l'aide des extensions de rendu des données et de saut de page conditionnelle ne sont en général pas affectés par la pagination. Lorsque vous utilisez une extension de rendu des données, le rapport est restitué comme ensemble de lignes disposé en table au format XML ou CSV. Pour assurer que les données du rapport exporté sont utilisables, vous devez comprendre les règles appliquées pour effectuer le rendu d'un ensemble de lignes aplati disposé en table dans un rapport.  
+ Pour concevoir avec succès un rapport facile à lire par vos utilisateurs et qui est optimisé pour le convertisseur que vous prévoyez d'utiliser pour remettre votre rapport, vous devez comprendre les règles utilisées pour contrôler la pagination dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Les rapports exportés à l'aide des extensions de rendu des données et de saut de page conditionnelle ne sont en général pas affectés par la pagination. Lorsque vous utilisez une extension de rendu des données, le rapport est restitué comme ensemble de lignes disposé en table au format XML ou CSV. Pour assurer que les données du rapport exporté sont utilisables, vous devez comprendre les règles appliquées pour effectuer le rendu d'un ensemble de lignes aplati disposé en table dans un rapport.  
   
  Lorsque vous utilisez une extension de rendu de saut de page conditionnelle telle que l'extension de rendu HTML, vous souhaiterez peut-être savoir quelle est l'apparence du rapport imprimé et également comment il est restitué par un convertisseur de saut de page manuel tel que PDF. Pendant la création ou la mise à jour d'un rapport, vous pouvez afficher l'aperçu du rapport et l'exporter dans le Générateur de rapports ou le Concepteur de rapports.  
   
@@ -95,17 +95,17 @@ ms.locfileid: "48082829"
 ##  <a name="HowTo"></a> Rubriques de procédures  
  Cette section répertorie les procédures qui vous indiquent pas à pas comment utiliser la pagination dans les rapports.  
   
--   [Ajouter un saut de Page &#40;Générateur de rapports et SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
+-   [Ajouter un saut de page &#40;Générateur de rapports et SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Afficher des en-têtes de ligne et colonne sur plusieurs Pages &#40;Générateur de rapports et SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Afficher des en-têtes de ligne et de colonne sur plusieurs pages &#40;Générateur de rapports et SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
--   [Ajouter ou supprimer un en-tête de Page ou le pied de page &#40;Générateur de rapports et SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
+-   [Ajouter ou supprimer un en-tête ou un pied de page &#40;Générateur de rapports et SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
 -   [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;Générateur de rapports et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
--   [Afficher les numéros de Page ou d’autres propriétés de rapport &#40;Générateur de rapports et SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
+-   [Afficher les numéros de page ou d’autres propriétés de rapport &#40;Générateur de rapports et SSRS&#41;](display-page-numbers-or-other-report-properties-report-builder-and-ssrs.md)  
   
--   [Masquer un en-tête de Page ou le pied de page sur la première ou la dernière Page &#40;Générateur de rapports et SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
+-   [Masquer un en-tête ou un pied de page sur la première ou la dernière page &#40;Générateur de rapports et SSRS&#41;](hide-a-page-header-or-footer-on-the-first-or-last-page-report-builder-and-ssrs.md)  
   
   
   
@@ -115,13 +115,13 @@ ms.locfileid: "48082829"
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  
  Présente des informations sur l'utilisation des en-têtes et des pieds de page dans les rapports et sur le contrôle de la pagination à l'aide de ces éléments.  
   
- [Page de contrôle des sauts, des en-têtes, colonnes et lignes &#40;Générateur de rapports et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
+ [Contrôle des sauts de page, des en-têtes, des colonnes et des lignes &#40;Générateur de rapports et SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)  
  Présente des informations sur l'utilisation de sauts de page.  
   
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

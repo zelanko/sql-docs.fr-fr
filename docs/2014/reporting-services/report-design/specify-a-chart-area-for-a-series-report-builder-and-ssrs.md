@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: dc3c365b-c263-402a-bf6f-c2a7081db073
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 34337c9418151e873726e5b04fd62e41f18c004c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8578b33bb47a6bcf8c38ae091c4e959085c30b06
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100322"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020726"
 ---
 # <a name="specify-a-chart-area-for-a-series-report-builder-and-ssrs"></a>Spécifier une zone de graphique pour une série (Générateur de rapports et SSRS)
   Le graphique est le conteneur de niveau supérieur qui inclut la bordure externe, le titre du graphique et la légende. Par défaut, le graphique contient une zone de graphique par défaut. La zone de graphique n'est pas visible à la surface du graphique, mais vous pouvez la considérer comme un conteneur qui comprend uniquement les étiquettes d'axe, le titre de l'axe et la zone de traçage d'une ou plusieurs série(s). L'illustration suivante montre le concept de zones de graphique dans un unique graphique.  
@@ -45,10 +45,10 @@ ms.locfileid: "48100322"
   
 ## <a name="see-also"></a>Voir aussi  
  [Plusieurs séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](multiple-series-on-a-chart-report-builder-and-ssrs.md)   
- [Mise en forme des Points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Graphiques polaires &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](shape-charts-report-builder-and-ssrs.md)   
- [Graphiques en secteurs &#40;Générateur de rapports et SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Graphiques à secteurs &#40;Générateur de rapports et SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
   
   

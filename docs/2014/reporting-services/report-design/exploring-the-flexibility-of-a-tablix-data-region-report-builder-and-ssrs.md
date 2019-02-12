@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: fef19359-a618-4d21-a7e4-e391cdefd4eb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 673dcead751bf5db8da326de5cfe8e3aa18288a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a18d86d6e67eb88e9ce0d63298cab86ade9a8bb2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038070"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Exploration de la souplesse d'une région de données de tableau matriciel (Générateur de rapports et SSRS)
   Lorsque vous ajoutez une région de données de table, de matrice ou de liste à partir de l'onglet Insérer sur le ruban, vous démarrez avec un modèle initial de région de données de tableau matriciel, mais vous n'êtes pas limité par ce modèle. Vous pouvez continuer à développer vos affichages de données en ajoutant ou en supprimant des fonctionnalités de région de données de tableau matriciel (groupes, lignes et colonnes, par exemple).  
   
- Lorsque vous supprimez un groupe de lignes ou de colonnes, vous avez la possibilité de supprimer les lignes et les colonnes qui sont utilisées pour afficher les valeurs de groupe. Vous pouvez également ajouter ou supprimer des lignes et des colonnes manuellement. Pour comprendre comment les lignes et colonnes sont utilisés pour afficher les données de détail et de groupe, consultez [région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
+ Lorsque vous supprimez un groupe de lignes ou de colonnes, vous avez la possibilité de supprimer les lignes et les colonnes qui sont utilisées pour afficher les valeurs de groupe. Vous pouvez également ajouter ou supprimer des lignes et des colonnes manuellement. Pour comprendre l’utilisation des lignes et des colonnes pour afficher des données de détail et de groupe, consultez [Région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md).  
   
  Après avoir modifié la structure de la région de données de tableau matriciel, vous pouvez définir des propriétés pour vous aider à contrôler le rendu de la région de données par le rapport. Par exemple, vous pouvez répéter des en-têtes de colonnes en haut de chaque page ou conserver un en-tête de groupe avec le groupe. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a640d8a5950f8a1f37b34becf470daf423ee49e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210939"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021380"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Zones de région de données de tableau matriciel (Générateur de rapports et SSRS)
   Une région de données de tableau matriciel a quatre zones qui contiennent des cellules de tableau matriciel : l’angle, la zone de groupe de lignes, la zone de groupe de colonnes et le corps. Les cellules de chaque zone remplissent une fonction distincte. Les cellules ajoutées à la zone du corps du tableau matriciel permettent d'afficher des données détaillées ainsi que des données groupées. Le Générateur de rapports et le Concepteur de rapports ajoutent des cellules à la zone de groupe de lignes ou à la zone de groupe de colonnes lorsque vous créez un groupe pour afficher les valeurs d'instance de groupe. Le Générateur de rapports et le Concepteur de rapports créent des cellules d'angle de tableau matriciel lorsqu'il existe à la fois des groupes de lignes et des groupes de colonnes.  
@@ -26,7 +26,7 @@ ms.locfileid: "48210939"
   
  Sur l'aire de conception, les traits en pointillés délimitent les quatre zones d'une région de données de tableau matriciel. L'illustration suivante montre les zones d'une région de tableau matriciel contenant : des groupes de lignes imbriqués dépendant de la catégorie et de la sous-catégorie, des groupes de colonnes imbriqués dépendant de la géographie, du pays et/ou de la région, ainsi qu'un groupe de colonnes adjacent dépendant de l'année.  
   
- ![Zones de région de données de tableau matriciel](../media/rs-tablixareas.gif "zones de région de données de tableau matriciel")  
+ ![Tablix data region areas](../media/rs-tablixareas.gif "Tablix data region areas")  
   
  La liste suivante présente chaque zone :  
   

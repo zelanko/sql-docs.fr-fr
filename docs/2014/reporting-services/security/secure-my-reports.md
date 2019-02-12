@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f6f52a6d9a1a28d103f407da049814bbf4a6c0f6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1ff256deda15e2abdecbff4dc94cc1dcd9d2d5c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166309"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035170"
 ---
 # <a name="secure-my-reports"></a>Sécuriser Mes Rapports
   La fonctionnalité Mes Rapports offre un espace géré par l'utilisateur pour utiliser des rapports. Pour remplir sa fonction, le dossier Mes Rapports nécessite des autorisations moins restrictives que d'autres dossiers d'utilisation générale. Les utilisateurs qui disposent uniquement d'autorisations d'affichage et d'exécution de rapports dans d'autres dossiers peuvent nécessiter un ensemble étendu d'autorisations pour gérer leurs dossiers Mes rapports et leurs contenus. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] offre une attribution et une définition de rôles spécialisées à cette fin.  
@@ -49,7 +49,7 @@ ms.locfileid: "48166309"
 ## <a name="denying-access-to-my-reports"></a>Refus d'accès à Mes Rapports  
  Vous pouvez empêcher les utilisateurs d'accéder à Mes Rapports comme suit :  
   
--   Désactivation de Mes Rapports dans la page Paramètres du site. Pour plus d’informations, consultez [activer et désactiver Mes rapports](../report-server/enable-and-disable-my-reports.md).  
+-   Désactivation de Mes Rapports dans la page Paramètres du site. Pour plus d’informations, consultez [Activer et désactiver Mes rapports](../report-server/enable-and-disable-my-reports.md).  
   
 -   Suppression de toutes les tâches du rôle **Mes Rapports** .  
   

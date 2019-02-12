@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e60e5bab-b286-4897-9685-9ff12703517d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 066982863d07cd125b5904e4c7467ffe9da5b107
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: efed574d2fc68fc88d5352b6bb6db09e6cab4076
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217499"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026040"
 ---
 # <a name="lookup-function-report-builder-and-ssrs"></a>Fonction Lookup (Générateur de rapports et SSRS)
   Retourne la première valeur correspondante pour le nom spécifié d'un dataset contenant des paires nom/valeur.  
@@ -45,12 +45,12 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
  Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Products ».  
   
 ## <a name="return"></a>Return  
- Retourne un `Variant`, ou `Nothing` s’il n’existe aucune correspondance.  
+ Retourne une valeur `Variant`, ou `Nothing` si aucune correspondance n'est trouvée.  
   
 ## <a name="remarks"></a>Notes  
- Utilisez `Lookup` pour récupérer la valeur à partir du dataset spécifié pour une paire nom/valeur où il existe une relation 1 à 1. Par exemple, pour un champ d'ID dans une table, vous pouvez utiliser `Lookup` pour récupérer le champ Nom correspondant d'un dataset qui n'est pas lié à la région de données.  
+ Utilisez `Lookup` pour récupérer la valeur du dataset spécifié pour une paire nom/valeur où il y a une relation un-à-un. Par exemple, pour un champ d'ID dans une table, vous pouvez utiliser `Lookup` pour récupérer le champ Nom correspondant d'un dataset qui n'est pas lié à la région de données.  
   
- `Lookup` effectue les opérations suivantes :  
+ La fonction `Lookup` effectue les actions suivantes :  
   
 -   Évalue l'expression source dans l'étendue actuelle.  
   
@@ -74,7 +74,7 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
   
 -   `Lookup` ne peut pas être utilisé comme expression pour les éléments de rapport suivants :  
   
-    -   des chaînes de connexion dynamiques pour une source de données ;  
+    -   des chaînes de connexion dynamiques pour une source de données ;  
   
     -   des champs calculés dans un dataset ;  
   
@@ -98,9 +98,9 @@ Lookup(source_expression, destination_expression, result_expression, dataset)
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

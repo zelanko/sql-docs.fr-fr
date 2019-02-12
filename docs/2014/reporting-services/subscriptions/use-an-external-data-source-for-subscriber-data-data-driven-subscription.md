@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1cade8ec-729c-4df8-a428-e75c9ad86369
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0112a4a9ae89dbfc2aedad38c16056a4d246964
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5b80a150bb44690bb4fbc836ba12f41fa8f82c28
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174709"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043060"
 ---
 # <a name="use-an-external-data-source-for-subscriber-data-data-driven-subscription"></a>Utiliser une source de données externe pour les données des abonnés (abonnements pilotés par les données)
   Dans un abonnement piloté par les données, les données d'abonnement dynamiques sont fournies par une requête ou une commande qui récupère les données à partir d'une source de données externe. Il est possible de récupérer les données d'abonnement à partir de n'importe quelle source de données gérée qui répond aux impératifs du traitement des abonnements pilotés par les données. La syntaxe de la requête ou de la commande doit être valide pour l'extension de traitement de données installée avec votre serveur de rapports.  
   
 ## <a name="data-processing-requirements"></a>Impératifs liés au traitement des données  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise les extensions pour le traitement des données afin de récupérer les données d’abonnement. Les types de sources de données recommandés sont les suivants :  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise les extensions pour le traitement des données afin de récupérer les données d’abonnement. Les types de sources de données recommandés sont les suivants :  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données relationnelles  
   
@@ -81,7 +81,7 @@ ms.locfileid: "48174709"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer, modifier et supprimer un abonnement piloté par les données](data-driven-subscriptions.md)   
- [Abonnements pilotés par les données](data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](data-driven-subscriptions.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)  
   
   

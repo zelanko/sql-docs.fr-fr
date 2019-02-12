@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6f4a11e6-6151-47be-a43f-e3dbf6c0e737
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: b6b6d7a48ce8bff2e4fd75ba3e168eb1f7fe2180
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 87aa869269b11ce6e3d3c54296ed08861e0406bb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110619"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034760"
 ---
 # <a name="set-synchronization-scope-report-builder-and-ssrs"></a>Définir l'étendue de synchronisation (Générateur de rapports et SSRS)
   Les indicateurs transmettent les valeurs des données en synchronisant la plage des valeurs d'indicateur dans une étendue spécifiée. Par défaut, l'étendue est le conteneur parent de l'indicateur, tel que la table ou matrice qui contient l'indicateur. Vous pouvez modifier la synchronisation de l'indicateur selon la disposition de votre rapport. Par exemple, si une région de données, comme une table, a un groupe de lignes, vous pouvez spécifier ce groupe comme étendue de l'indicateur. L'indicateur peut également omettre la synchronisation.  

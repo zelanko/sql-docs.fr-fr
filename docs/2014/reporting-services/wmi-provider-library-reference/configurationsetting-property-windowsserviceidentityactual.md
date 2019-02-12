@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1003de5a101720c0ad5dc86869f17f2f8508a059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a1b926b148874573c8c1106be2982dd0e929c50d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032201"
 ---
 # <a name="windowsserviceidentityactual-property-wmi-msreportserverconfigurationsetting"></a>Propriété WindowsServiceIdentityActual (WMI MSReportServer_ConfigurationSetting)
   Identité sous laquelle le service Windows Report Server s'exécute. En lecture seule.  
@@ -40,12 +40,12 @@ public string WindowsServiceIdentityActual;
 ```  
   
 ## <a name="property-values"></a>Valeurs de la propriété  
- Un `String` objet contenant l’identité du service Windows de serveur de rapports s’exécute sous.  
+ Objet `String` contenant l'identité sous laquelle le service Windows Report Server s'exécute.  
   
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

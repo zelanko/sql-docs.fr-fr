@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9d718ba8-d323-49fb-aac8-e7013a117b75
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: abf8cdd0eb4ffceb21061ea0101a42e4b84f3773
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 181670ab62d31fbb7b6815518129dd5b4e8a1b1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105709"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040500"
 ---
 # <a name="rownumber-function-report-builder-and-ssrs"></a>Fonction RowNumber (Générateur de rapports et SSRS)
   Retourne un nombre évolutif du nombre de lignes pour l'étendue spécifiée.  
@@ -33,7 +33,7 @@ RowNumber(scope)
   
 #### <a name="parameters"></a>Paramètres  
  *portée*  
- (`String`) Le nom d’un dataset, région de données, ou groupe ou null (`Nothing` dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie le contexte dans lequel évaluer le nombre de lignes. `Nothing` Spécifie le contexte le plus extérieur, habituellement le dataset du rapport.  
+ (`String`) Nom d'un dataset, d'une région de données ou d'un groupe, ou valeur Null (`Nothing` en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]), qui spécifie le contexte dans lequel évaluer le nombre de lignes. `Nothing` spécifie le contexte le plus à l'extérieur, habituellement le dataset du rapport.  
   
 ## <a name="remarks"></a>Notes  
  `RowNumber` Retourne une valeur en cours d’exécution du nombre de lignes dans l’étendue spécifiée, tout comme [RunningValue](report-builder-functions-runningvalue-function.md) retourne la valeur en cours d’exécution d’une fonction d’agrégation. Lorsque vous spécifiez une étendue, vous spécifiez quand réinitialiser le nombre de lignes à 1.  
@@ -48,16 +48,16 @@ RowNumber(scope)
  Pour plus d’informations, consultez [Référence aux fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md) et [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ## <a name="code-example"></a>Exemple de code  
- Ce qui suit est une expression que vous pouvez utiliser pour le `BackgroundColor` propriété d’une ligne de détail de la région de données du tableau matriciel pour faire alterner la couleur des lignes de détails pour chaque groupe, en commençant toujours par le blanc.  
+ L'exemple ci-dessous est une expression que vous pouvez utiliser pour la propriété `BackgroundColor` d'une ligne de détails de région de données de tableau matriciel pour faire alterner la couleur des lignes de détails de chaque groupe, en commençant toujours par le blanc.  
   
 ```  
 =IIF(RowNumber("GroupbyCategory") Mod 2, "White", "PaleGreen")  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

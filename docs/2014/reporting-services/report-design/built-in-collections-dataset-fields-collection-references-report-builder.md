@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 006c6bd3-d776-4c20-9092-32e40688ac49
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: f6ea6edf61734e794cc588c82aefa4e60141365c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 906cda310ff4478854d2b308332571fa6dbdd155
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093306"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037157"
 ---
 # <a name="dataset-fields-collection-references-report-builder-and-ssrs"></a>Références à une collection de champs de dataset (Générateur de rapports et SSRS)
   Chaque dataset d’un rapport contient une collection Fields. La collection Fields comprend l’ensemble de champs spécifiés par la requête de dataset, ainsi que tous les champs calculés supplémentaires que vous créez. Après avoir créé un dataset, la collection de champs apparaît dans le volet **Données du rapport** .  
@@ -41,7 +41,7 @@ ms.locfileid: "48093306"
  `=IIF(IsNothing(Fields!MiddleName.Value),"No Middle Name",Fields!MiddleName.Value)`  
   
 ### <a name="detecting-missing-fields-for-dynamic-queries-at-run-time"></a>Détection de champs manquants pour les requêtes dynamiques au moment de l'exécution  
- Par défaut, les éléments de la collection Fields disposent de deux propriétés : Value et IsMissing. La propriété IsMissing indique si un champ défini pour un dataset au moment de la conception figure dans les champs récupérés au moment de l’exécution. Par exemple, votre requête peut appeler une procédure stockée dans laquelle le jeu de résultats varie en fonction d’un paramètre d’entrée, ou votre requête peut être `SELECT * FROM` *\<table>* où la définition de table a changé.  
+ Par défaut, les éléments de la collection de champs ont deux propriétés : Value et IsMissing. La propriété IsMissing indique si un champ défini pour un dataset au moment de la conception figure dans les champs récupérés au moment de l’exécution. Par exemple, votre requête peut appeler une procédure stockée dans laquelle le jeu de résultats varie en fonction d’un paramètre d’entrée, ou votre requête peut être `SELECT * FROM` *\<table>* où la définition de table a changé.  
   
 > [!NOTE]  
 >  IsMissing détecte les modifications du schéma de dataset entre le moment de la conception et celui de l’exécution pour tout type de source de données. IsMissing ne peut pas être utilisée pour détecter des membres vides dans un cube multidimensionnel et n’est pas liée aux concepts de langage de requête MDX de `EMPTY` et `NON EMPTY`.  
@@ -89,7 +89,7 @@ End Function
 ### <a name="using-extended-field-properties"></a>Utilisation des propriétés de champ étendues  
  Les propriétés de champ étendues sont des propriétés supplémentaires définies sur un champ par l'extension pour le traitement des données, qui est déterminée par le type de source de données du dataset. Les propriétés de champ étendues sont prédéfinies ou spécifiques à un type de source de données. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
- Si vous spécifiez une propriété qui n’est pas pris en charge pour ce champ, l’expression prend la valeur `null` (`Nothing` dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Si un fournisseur de données ne prend pas en charge les propriétés de champ étendues, ou si le champ est introuvable lorsque la requête est exécutée, la valeur de la propriété est `null` (`Nothing` dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) pour les propriétés de type `String` et `Object`, et zéro (0) pour les propriétés de type `Integer`. Une extension pour le traitement des données peut tirer parti des propriétés prédéfinies en optimisant les requêtes qui intègrent cette syntaxe.  
+ Si vous spécifiez une propriété qui n'est pas prise en charge pour ce champ, l'expression prend la valeur `null` (`Nothing` dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]). Si un fournisseur de données ne prend pas en charge les propriétés de champ étendues ou si le champ est introuvable lors de l'exécution de la requête, la valeur de la propriété est `null` (`Nothing` dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]) pour les propriétés de type `String` et `Object`, et zéro (0) pour les propriétés de type `Integer`. Une extension pour le traitement des données peut tirer parti des propriétés prédéfinies en optimisant les requêtes qui intègrent cette syntaxe.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   

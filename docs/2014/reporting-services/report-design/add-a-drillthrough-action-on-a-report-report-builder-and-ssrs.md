@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 153729c4-d01e-4629-b78f-0cfd5a7f83da
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 80b5c2e77c5e10a543c7847bd2bd2e60d9d50920
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9861bc63a8fd1e4dd76fb030baf2a11c2774961a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221749"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027571"
 ---
 # <a name="add-a-drillthrough-action-on-a-report-report-builder-and-ssrs"></a>Ajouter une action d'extraction à un rapport (Générateur de rapports et SSRS)
   Le rapport qui s’ouvre quand vous cliquez sur le lien dans le rapport principal est appelé *rapport d’extraction*. Ce lien d'extraction autorise une action d'extraction.  
@@ -61,8 +61,8 @@ ms.locfileid: "48221749"
 7.  Pour tester le lien, exécutez le rapport et cliquez sur l'élément de rapport sur lequel vous avez défini ce lien.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Boîte de dialogue de propriétés action &#40;Générateur de rapports et SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
- [Mise en forme des Points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Boîte de dialogue Propriétés relatives aux actions &#40;Générateur de rapports et SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md)   
+ [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](show-tooltips-on-a-series-report-builder-and-ssrs.md)  
   
   

@@ -1,11 +1,10 @@
 ---
-title: Sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_os_event_logs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
-ms.prod_service: pdw
-ms.reviewer: ''
 ms.technology: system-objects
+ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -14,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: f778d8904e80aa8874c5ec346cb378f7c9355c03
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7365cf89d1f8bb69cefbbb13585a296a78bcd4b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656466"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039120"
 ---
-# <a name="sysdmpdwoseventlogs-transact-sql"></a>Sys.dm_pdw_os_event_logs (Transact-SQL)
+# <a name="sysdmpdwoseventlogs-transact-sql"></a>sys.dm_pdw_os_event_logs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   Contient des informations concernant l’événement Windows différents journaux sur les différents nœuds.  
@@ -29,7 +28,7 @@ ms.locfileid: "51656466"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**Int**|Nœud d’appliance que provient ce journal.<br /><br /> pdw_node_id et nom_journal forment la clé pour cette vue.||  
-|nom_journal|**nvarchar(255)**|Nom du journal des événements Windows.<br /><br /> pdw_node_id et nom_journal forment la clé pour cette vue.||  
+|log_name|**nvarchar(255)**|Nom du journal des événements Windows.<br /><br /> pdw_node_id et nom_journal forment la clé pour cette vue.||  
 |log_source|**nvarchar(255)**|Nom de source de journal des événements Windows.||  
 |event_id|**Int**|ID de l’événement. N’est pas unique.||  
 |event_type|**nvarchar(255)**|Type de l’événement, en identifiant la gravité.|« Informations », « Avertissement », « Erreur »|  

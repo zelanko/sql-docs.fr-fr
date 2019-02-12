@@ -10,22 +10,22 @@ ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4c72d35c92cabae9f9b1f73daa8c665c1b19771b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053889"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042830"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Références à la collection ReportItems (Générateur de rapports et SSRS)
-  La collection intégrée `ReportItems` constitue l'ensemble des zones de texte des éléments de rapport, tels que les lignes d'une région de données ou les zones de texte de l'aire de conception du rapport. Le `ReportItems` collection inclut des zones de texte qui se trouvent dans l’étendue actuelle d’un en-tête de page, le pied de page ou le corps du rapport. Cette collection est déterminée au moment de l'exécution par le processeur de rapports et le convertisseur de rapports. L'étendue actuelle change à mesure que le processeur de rapports combine successivement les données du rapport et ses éléments de mise en page lorsque l'utilisateur visualise les pages du rapport. Vous pouvez utiliser le `ReportItems` collection intégrée pour produire des en-têtes de page de type dictionnaire qui représentent le premier et dernier éléments de chaque page.  
+  La collection intégrée `ReportItems` constitue l'ensemble des zones de texte des éléments de rapport, tels que les lignes d'une région de données ou les zones de texte de l'aire de conception du rapport. La collection `ReportItems` comprend les zones de texte situées dans l'étendue actuelle d'un en-tête de page, d'un pied de page ou du corps du rapport. Cette collection est déterminée au moment de l'exécution par le processeur de rapports et le convertisseur de rapports. L'étendue actuelle change à mesure que le processeur de rapports combine successivement les données du rapport et ses éléments de mise en page lorsque l'utilisateur visualise les pages du rapport. Vous pouvez utiliser la collection intégrée `ReportItems` pour produire des en-têtes de page de type dictionnaire, qui représentent le premier et le dernier éléments de chaque page.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Utilisation de la propriété Value de ReportItems  
- Éléments de la `ReportItems` collection n'avoir qu’une seule propriété : valeur. La valeur d'un élément de `ReportItems` peut être utilisée pour afficher ou pour calculer des données provenant d'un autre champ du rapport. Pour accéder à la valeur de la zone de texte actuelle, vous pouvez utiliser l’entité [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] globale intégrée Me.Value ou simplement Value. Dans les fonctions de rapport telles que First et les fonctions d'agrégation, il convient toutefois d'utiliser la syntaxe complète.  
+ Éléments de la `ReportItems` collection n'avoir qu’une seule propriété : Valeur : La valeur d'un élément de `ReportItems` peut être utilisée pour afficher ou pour calculer des données provenant d'un autre champ du rapport. Pour accéder à la valeur de la zone de texte actuelle, vous pouvez utiliser l’entité [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] globale intégrée Me.Value ou simplement Value. Dans les fonctions de rapport telles que First et les fonctions d'agrégation, il convient toutefois d'utiliser la syntaxe complète.  
   
  Exemple :  
   
@@ -47,14 +47,14 @@ ms.locfileid: "48053889"
  Dans une section d'en-tête ou de pied de page, seules les zones de texte de la page actuelle sont disponibles en tant que membres de la collection `ReportItems`. Par exemple, si `ReportItems!textboxLastName.Value` fait référence à une zone de texte qui ne figure que sur la première page d’une région de données qui en comprend plusieurs, vous voyez une valeur pour la première page, mais toutes les autres pages affichent **#Erreur** pour indiquer que l’expression n’a pas pu être évaluée comme écrite.  
   
 ## <a name="scope-for-the-reportitems-collection"></a>Étendue de la collection ReportItems  
- À mesure que le rapport est traité, chaque zone de texte du corps du rapport ou d'une région de données est évaluée dans le contexte de son dataset, de sa région de données et des associations de groupes. L’étendue pour une référence à la `ReportItems` collection est l’étendue actuelle ou n’importe quel point supérieur à la portée actuelle.  
+ À mesure que le rapport est traité, chaque zone de texte du corps du rapport ou d'une région de données est évaluée dans le contexte de son dataset, de sa région de données et des associations de groupes. L'étendue d'une référence à la collection `ReportItems` est l'étendue actuelle ou tout point situé plus haut.  
   
  Par exemple, une zone de texte d'une ligne située dans un groupe parent ne doit pas contenir d'expression faisant référence au nom d'une zone de texte d'une ligne située dans un groupe enfant. Une telle expression ne donne pas de valeur dans le rapport, car la zone de texte de la ligne enfant n'appartient pas à l'étendue. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collections intégrées dans les Expressions &#40;Générateur de rapports et SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
+ [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](built-in-collections-in-expressions-report-builder.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Filtrer, regrouper et trier les données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+ [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
   
   

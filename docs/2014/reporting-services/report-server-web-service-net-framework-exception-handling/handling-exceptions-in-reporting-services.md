@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1a443432-2db5-48c5-bc29-433b4688082f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3cecbb0fcdbaae51e53c5277402b264d9c2468ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7a83a40ebb3cc8a77e63bd7ab8b67d815f5c4a98
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068409"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041240"
 ---
 # <a name="handling-exceptions-in-reporting-services"></a>Gestion des exceptions dans Reporting Services
   Lorsqu'une demande de client de l'API SOAP Reporting Services ne peut pas être exécutée, le serveur de rapports retourne une erreur au lieu des résultats attendus de l'appel. Quand un appel ne peut pas être passé, une erreur pour le service web Report Server est retournée sous la forme d’élément XML **Fault** SOAP. L’élément descriptif principal de l’erreur est l’élément **detail**, qui inclut toutes les informations sur l’erreur fournies par le serveur de rapports, ainsi que d’éventuelles informations supplémentaires sur l’erreur du service web. L’information essentielle de l’élément **detail** est le code d’erreur du serveur de rapports. En fonction du message et du code d'erreur, vous pouvez déterminer l'action appropriée suivante à prendre dans vos applications. Pour plus d'informations sur les erreurs SOAP, consultez le site Web du W3C (World Wide Consortium) à l'adresse http://www.w3.org/TR/SOAP.  

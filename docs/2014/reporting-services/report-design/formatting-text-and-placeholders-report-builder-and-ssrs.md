@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: 26a4baf2-7bc5-4634-b136-552687ffa477
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0b2dc831119ae6356761b525f76fe11b37236724
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 12daff3490a0ca11fefa5c120952b30499118a4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111743"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037430"
 ---
 # <a name="formatting-text-and-placeholders-report-builder-and-ssrs"></a>Mise en forme du texte et des espaces réservés (Générateur de rapports et SSRS)
   Les zones de texte peuvent être des éléments de rapport ou correspondre aux cellules individuelles d'une région de données dans lesquelles figure du texte, un champ calculé, un pointeur renvoyant au champ d'une base de données ou une combinaison de ces trois éléments. Vous pouvez associer des polices et des couleurs, ajouter des styles gras et italiques et appliquer des styles de paragraphe (par exemple, un alignement et des retraits négatifs). Vous pouvez mettre en forme une zone de texte tout entière ou bien mettre en forme un texte spécifique, des nombres, des expressions ou des champs à l'intérieur de la zone de texte.  
@@ -34,7 +34,7 @@ ms.locfileid: "48111743"
   
  Dans cette illustration, la zone de texte proprement dite a une bordure ; par ailleurs, l'ensemble du texte figure dans la même zone de texte mais le texte comporte diverses mises en forme.  
   
- Pour une prise en main rapide, consultez [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).  
+ Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -46,7 +46,7 @@ ms.locfileid: "48111743"
   
 -   Faites glisser l’un des champs du volet **Données du rapport** vers la zone de texte concernée. Si vous faites glisser l'expression vers n'importe quelle autre zone du corps du rapport, une nouvelle zone de texte contenant un espace réservé sera créée. Cet espace réservé aura pour valeur l'expression du champ déposé précédemment sur la zone de texte.  
   
--   Cliquez avec le bouton droit n’importe où dans la zone de texte, puis sélectionnez **Insérer un espace réservé**. La boîte de dialogue **Propriétés de l’espace réservé** permet de définir l’expression qui correspondra à la valeur de votre espace réservé. Pour plus d’informations, consultez [boîte de dialogue de propriétés espace réservé, général &#40;Générateur de rapports et SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
+-   Cliquez avec le bouton droit n’importe où dans la zone de texte, puis sélectionnez **Insérer un espace réservé**. La boîte de dialogue **Propriétés de l’espace réservé** permet de définir l’expression qui correspondra à la valeur de votre espace réservé. Pour plus d’informations, consultez [Boîte de dialogue Propriétés de l’espace réservé, Général &#40;Générateur de rapports et SSRS&#41;](../placeholder-properties-dialog-box-general-report-builder-and-ssrs.md).  
   
 -   Tapez toute expression simple ou complexe dans la zone de texte. Par exemple, si vous tapez **Nom : [Nom]** dans la zone de texte, le texte **[Nom]** sera affiché sous la forme d’un espace réservé qui représentera l’expression `=Fields!Name.Value`.  
   

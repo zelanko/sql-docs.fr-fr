@@ -19,13 +19,13 @@ f1_keywords:
 ms.assetid: 6de1a725-9f06-4708-be26-2d55e442e344
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 400b7ca37d5eef130df855b3519079e2ccc8799e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ff184ad75c495d9f18f5e9d9e1d3aa1bdfa7132e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376121"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042765"
 ---
 # <a name="formatting-numbers-and-dates-report-builder-and-ssrs"></a>Mise en forme des nombres et des dates (Générateur de rapports et SSRS)
   Vous pouvez mettre en forme les nombres et les dates dans les régions de données en sélectionnant un format dans la page **Nombre** de la boîte de dialogue **Propriétés** de la région de données correspondante.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2665040a-1291-4064-ba01-f458637dda57
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b91be4b60c65a246b56a2d08142ce6937d80cea0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162579"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034800"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données à des fins de prévision (Didacticiel sur l'exploration de données intermédiaire)
   Au cours de cette tâche, vous allez ajouter une vue de source de données qui sera utilisée pour le scénario de prévision. Un modèle de prévision requiert que les données contiennent une colonne pouvant être utilisée pour identifier des étapes dans une série chronologique. Si vous envisagez d'analyser plusieurs séries de données, toutes les séries doivent se terminer à la même date ou heure.  
@@ -27,14 +26,14 @@ ms.locfileid: "48162579"
   
 2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données. Cliquez sur **Suivant**.  
+3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données. Cliquer sur **Suivant**.  
   
     > [!NOTE]  
     >  Si vous n’avez pas de cette source de données, vous trouverez les étapes pour créer la source de données dans le [Basic Data Mining Tutorial](../../2014/tutorials/basic-data-mining-tutorial.md).  
   
 4.  Sur le **sélectionner des Tables et vues** page, sélectionnez la table vTimeSeries (dbo) et puis cliquez sur la flèche droite pour l’ajouter à la vue de source de données.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Sur le **fin de l’Assistant** page, la vue de source de données est nommée par défaut [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Remplacez le nom par **SalesByRegion**, puis cliquez sur **Terminer**.  
   

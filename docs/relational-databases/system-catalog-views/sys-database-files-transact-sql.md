@@ -1,8 +1,8 @@
 ---
-title: Sys.database_files (Transact-SQL) | Microsoft Docs
+title: sys.database_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/19/2016
-ms.prod: ''
+ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: system-objects
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a237a562b747922fba4c294330bc9db067822242
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36fe2a156a7c83e8f884c135f24351371b0af533
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689957"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032300"
 ---
 # <a name="sysdatabasefiles-transact-sql"></a>sys.database_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "47689957"
 |**state_desc**|**nvarchar(60)**|Description de l'état du fichier :<br /><br /> ONLINE<br /><br /> RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT<br /><br /> OFFLINE<br /><br /> DEFUNCT<br /><br /> Pour plus d’informations, consultez [États des fichiers](../../relational-databases/databases/file-states.md).|  
 |**size**|**Int**|Taille actuelle du fichier (en pages de 8 Ko)<br /><br /> 0 = Non applicable<br /><br /> Dans le cas d'un instantané de base de données, size reflète l'espace maximal que celle-ci peut utiliser pour le fichier.<br /><br /> Pour les conteneurs de groupe de fichiers FILESTREAM, taille reflète que la taille du conteneur utilisée actuelle.|  
 |**max_size**|**Int**|Taille maximale du fichier, en pages de 8 Ko :<br /><br /> 0 = aucune croissance n'est autorisée.<br /><br /> -1 = Le fichier peut croître tant que le disque n'est pas saturé.<br /><br /> 268435456 = Le fichier journal peut croître pour atteindre une taille maximale de 2 To.<br /><br /> Pour les conteneurs de groupe de fichiers FILESTREAM, max_size reflète la taille maximale du conteneur.<br /><br /> Notez que les bases de données qui sont mis à niveau avec une taille de fichier journal illimitée signalera -1 pour la taille maximale du fichier journal.|  
-|**Croissance**|**Int**|0 = la taille du fichier est fixe et celui-ci ne croît pas.<br /><br /> >0 = le fichier croît automatiquement.<br /><br /> Si is_percent_growth = 0, l'incrément de croissance est en unités de pages de 8 Ko, arrondies aux 64 kilo-octets les plus proches.<br /><br /> Si is_percent_growth a pour valeur 1, l'incrément de croissance est exprimé sous la forme d'un pourcentage à nombre entier.|  
+|**growth**|**Int**|0 = la taille du fichier est fixe et celui-ci ne croît pas.<br /><br /> >0 = le fichier croît automatiquement.<br /><br /> Si is_percent_growth = 0, l'incrément de croissance est en unités de pages de 8 Ko, arrondies aux 64 kilo-octets les plus proches.<br /><br /> Si is_percent_growth a pour valeur 1, l'incrément de croissance est exprimé sous la forme d'un pourcentage à nombre entier.|  
 |**is_media_read_only**|**bit**|1 = le fichier se trouve sur un support en lecture seule.<br /><br /> 0 = Le fichier se trouve sur un support en lecture-écriture.|  
 |**is_read_only**|**bit**|1 = le fichier est marqué comme étant accessible en lecture seule.<br /><br /> 0 = Le fichier est marqué en lecture-écriture.|  
 |**is_sparse**|**bit**|1 = le fichier est un fichier partiellement alloué.<br /><br /> 0 = le fichier n'est pas un fichier partiellement alloué.<br /><br /> Pour plus d’informations, consultez [Afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).|  
-|**is_percent_growth a pour valeur**|**bit**|1 = la croissance du fichier est exprimée en pourcentage.<br /><br /> 0 = importance de croissance absolue en pages.|  
+|**is_percent_growth**|**bit**|1 = la croissance du fichier est exprimée en pourcentage.<br /><br /> 0 = importance de croissance absolue en pages.|  
 |**is_name_reserved**|**bit**|1 = Le nom du fichier supprimé (name ou physical_name) ne peut être réutilisé qu'après la prochaine sauvegarde du journal. Lorsque des fichiers sont supprimés d'une base de données, les noms logiques restent réservés jusqu'à la prochaine sauvegarde du journal. Cette colonne concerne uniquement le mode de restauration complète et le mode de récupération utilisant les journaux de transactions.|  
 |**create_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal (LSN) auquel le fichier a été créé.|  
 |**drop_lsn**|**numeric(25,0)**|LSN auquel le fichier a été supprimé.<br /><br /> 0 = Le nom de fichier n'est pas disponible pour réutilisation.|  
@@ -68,7 +68,7 @@ ms.locfileid: "47689957"
 > [!NOTE]  
 >  Lorsque vous supprimez ou reconstruisez des index volumineux ou lorsque vous supprimez ou tronquez des tables volumineuses, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] diffère les désallocations des pages actives et de leurs blocs associés jusqu'à ce que la transaction soit validée. Les opérations de suppression différées ne libèrent pas immédiatement l'espace alloué. Par conséquent, les valeurs retournées par sys.database_files immédiatement après avoir supprimé ou tronqué un objet volumineux ne reflètent pas l'espace disque réel.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
 
 ## <a name="examples"></a>Exemples  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b18501020d1764399315202d2c7efe9a31549172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5567ee441075f015a7d6418761b30d29c591698f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167219"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035130"
 ---
 # <a name="predefined-roles"></a>Predefined Roles
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est installé avec des rôles prédéfinis que vous pouvez utiliser pour accorder l'accès aux opérations du serveur de rapports. Chaque rôle prédéfini décrit une collection de tâches associées. Vous pouvez assigner des groupes et des comptes d'utilisateurs à des rôles prédéfinis pour fournir l'accès immédiat aux opérations du serveur de rapports.  
@@ -70,7 +70,7 @@ ms.locfileid: "48167219"
 |Gérer l'historique de rapport|Créer, afficher et supprimer l'historique de rapport, afficher les propriétés de l'historique de rapport. Afficher et modifier les paramètres qui déterminent les limites de l'historique des instantanés ainsi que le fonctionnement de la mise en cache.|  
 |Gérer les rapports|Ajouter et supprimer des rapports, modifier des paramètres de rapport, afficher et modifier des propriétés de rapport, afficher et modifier des sources de données qui fournissent du contenu au rapport, afficher et modifier des définitions de rapports et définir des stratégies au niveau du rapport.|  
 |Gérer les ressources|Créer, modifier et supprimer des ressources. Afficher et modifier des propriétés de ressource.|  
-|Définir des stratégies de sécurité pour les éléments|Définir des stratégies de sécurité pour les rapports, les rapports liés, les dossiers, les ressources et les sources de données. Pour plus d’informations, consultez [éléments sécurisables](securable-items.md).|  
+|Définir des stratégies de sécurité pour les éléments|Définir des stratégies de sécurité pour les rapports, les rapports liés, les dossiers, les ressources et les sources de données. Pour plus d’informations, consultez [Éléments sécurisables](securable-items.md).|  
 |Afficher les sources de données|Afficher les éléments de source de données partagée dans la hiérarchie de dossiers.|  
 |Afficher les rapports|Exécuter les rapports et afficher les propriétés de rapports.|  
 |Afficher les modèles|Afficher des modèles de l'arborescence des dossiers, utiliser des modèles comme sources de données pour un rapport et exécuter des requêtes sur le modèle pour récupérer des données.|  
@@ -189,7 +189,7 @@ ms.locfileid: "48167219"
 |Tâche|Description|  
 |----------|-----------------|  
 |Exécuter les définitions de rapport|Démarrer l'exécution de la définition de rapport sans la publier sur un serveur de rapports.|  
-|Gérer les travaux|Afficher et annuler les travaux en cours d'exécution. Pour plus d’informations, consultez [gérer un processus en cours d’exécution](../subscriptions/manage-a-running-process.md).|  
+|Gérer les travaux|Afficher et annuler les travaux en cours d'exécution. Pour plus d’informations, consultez [Gérer un processus en cours d’exécution](../subscriptions/manage-a-running-process.md).|  
 |Gérer les propriétés du serveur de rapports|Afficher et modifier les propriétés qui s'appliquent au serveur de rapports et aux éléments gérés par le serveur de rapports.<br /><br /> Cette tâche permet le changement de nom du Gestionnaire de rapports, l'activation de Mes Rapports et la définition des paramètres par défaut de l'historique de rapport.|  
 |Gérer les rôles|Créer, afficher, modifier et supprimer les définitions de rôles.<br /><br /> Les membres du rôle **Administrateur système** peuvent utiliser la page Paramètres du site pour gérer les rôles.|  
 |Gérer les planifications partagées|Créer, afficher, modifier et supprimer les planifications partagées qui sont utilisées pour exécuter ou actualiser les rapports.|  
@@ -214,7 +214,7 @@ ms.locfileid: "48167219"
  [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](role-definitions-create-delete-or-modify.md)   
  [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](grant-user-access-to-a-report-server.md)   
  [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](role-assignments-modify-or-delete.md)   
- [Octroi d'autorisations sur un serveur de rapports en mode natif](granting-permissions-on-a-native-mode-report-server.md)   
+ [Granting Permissions on a Native Mode Report Server](granting-permissions-on-a-native-mode-report-server.md)   
  [Tâches et autorisations](tasks-and-permissions.md)  
   
   

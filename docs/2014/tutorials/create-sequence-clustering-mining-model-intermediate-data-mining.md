@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9339227-6c2e-4c4b-8be2-8c1960bc4a8d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8e91853bba6b33ed57cc0152e266994d4e0ef528
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092904"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039351"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Création d'une structure de modèle d'exploration de données Sequence Clustering (Didacticiel intermédiaire sur l'exploration de données)
   La première étape pour créer un modèle d'exploration de données Sequence Clustering est d'utiliser l'Assistant Exploration de données pour créer une nouvelle structure d'exploration de données et un modèle d'exploration de données selon l'algorithme MSC ([!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering).  
@@ -33,15 +32,15 @@ ms.locfileid: "48092904"
   
 3.  Sur le **sélectionner la méthode de définition** page, vérifiez que **à partir de l’entrepôt de données ou de la base de données relationnelle existant** est sélectionnée, puis cliquez sur **suivant**.  
   
-4.  Sur le **créer la Structure d’exploration de données** page, vérifiez que l’option **créer la structure d’exploration de données avec un modèle d’exploration de données** est sélectionné. Ensuite, cliquez sur la liste déroulante pour l’option, **quelle technique d’exploration de données voulez-vous utiliser ?**, puis sélectionnez **Microsoft Sequence Clustering**. Cliquez sur **Suivant**.  
+4.  Sur le **créer la Structure d’exploration de données** page, vérifiez que l’option **créer la structure d’exploration de données avec un modèle d’exploration de données** est sélectionné. Ensuite, cliquez sur la liste déroulante pour l’option, **quelle technique d’exploration de données voulez-vous utiliser ?**, puis sélectionnez **Microsoft Sequence Clustering**. Cliquer sur **Suivant**.  
   
      Le **sélectionner une vue de Source de données** page s’affiche. Sous **vues de sources de données disponibles**, sélectionnez `Orders`.  
   
      Orders est la même vue de source de données que vous avez utilisée pour le scénario d'analyse de panier. Si vous n’avez pas créé cette vue de source de données, consultez [Ajout d’une vue de Source de données avec des Tables imbriquées &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial.md).  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
-6.  Sur le **spécifier les Types de Table** page, sélectionnez le **cas** case à cocher à côté de la **vAssocSeqOrders** de table, puis sélectionnez le **imbriqués** case à cocher à côté du **vAssocSeqLineItems** table. Cliquez sur **Suivant**.  
+6.  Sur le **spécifier les Types de Table** page, sélectionnez le **cas** case à cocher à côté de la **vAssocSeqOrders** de table, puis sélectionnez le **imbriqués** case à cocher à côté du **vAssocSeqLineItems** table. Cliquer sur **Suivant**.  
   
     > [!NOTE]  
     >  Si une erreur se produit lorsque vous sélectionnez le **cas** ou **Nested** cases à cocher, il peut être que la jointure dans la vue de source de données n’est pas correcte. La table imbriquée, **vAssocSeqLineItems**, doit être connectée à la table de cas **vAssocSeqOrders,** par une jointure plusieurs-à-un. Vous pouvez modifier la relation en cliquant avec le bouton droit sur la ligne de jointure et en inversant la direction de la jointure. Pour plus d’informations, consultez [créer ou modifier une boîte de dialogue relation &#40;Analysis Services - données multidimensionnelles&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
@@ -73,7 +72,7 @@ ms.locfileid: "48092904"
     |Tables/Colonnes|Type de contenu|Type de données|  
     |---------------------|------------------|---------------|  
     |IncomeGroup|Discret|Texte|  
-    |OrderNumber|Key|Texte|  
+    |OrderNumber|Touche|Texte|  
     |Région|Discret|Texte|  
     |vAssocSeqLineItems|||  
     |Numéro de ligne|Séquence clé|Long|  
@@ -91,7 +90,7 @@ ms.locfileid: "48092904"
  [Traitement du modèle Sequence Clustering](../../2014/tutorials/processing-the-sequence-clustering-model.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur d’exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Concepteur d'exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algorithme MSC (Microsoft Sequence Clustering)](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)  
   
   

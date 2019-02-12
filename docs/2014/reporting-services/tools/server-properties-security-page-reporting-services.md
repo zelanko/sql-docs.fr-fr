@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: f49aedc6-f145-4df1-8f69-d5d910f492c6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9513e66b92a97f1d546d7b33cc20849e8bff868a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 89d8b7165bf32d4d4d300f753b9c3821b6f23134
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161439"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041170"
 ---
 # <a name="server-properties-security-page---reporting-services"></a>Propriétés du serveur (page Sécurité) - Reporting Services
   Utilisez cette page pour désactiver des fonctionnalités qui peuvent nuire potentiellement à un serveur de rapports. La désactivation de ces fonctionnalités limitera certaines d'entre elles, mais peut améliorer la sécurité globale du serveur de rapports en atténuant des menaces spécifiques.  
@@ -34,9 +34,9 @@ ms.locfileid: "48161439"
  **Activer la génération d'états ad hoc**  
  Spécifiez si les utilisateurs peuvent effectuer des requêtes ad hoc à partir d'un rapport du Générateur de rapports, où les nouveaux rapports sont générés automatiquement lorsqu'un utilisateur clique sur des données d'intérêt.  
   
- La définition de cette option détermine si la propriété `EnableLoadReportDefinition` sur le serveur de rapports a la valeur `True` ou `False`. Si vous désactivez cette option, la propriété sera la valeur `False` et le serveur ne générera pas les rapports générés interactifs créés pendant l’exploration de données de rapport. Tous les appels à la méthode `LoadReportDefinition` seront bloqués.  
+ La définition de cette option détermine si la propriété `EnableLoadReportDefinition` sur le serveur de rapports a la valeur `True` ou `False`. Si vous désactivez cette option, la propriété aura la valeur `False` et le serveur de rapports ne générera pas les rapports générés interactifs créés pendant l'exploration de données. Tous les appels à la méthode `LoadReportDefinition` seront bloqués.  
   
- La désactivation de cette option atténue la menace qu’un utilisateur malveillant lance une attaque par déni de service en surchargeant le serveur de rapports avec `LoadReportDefinition` demandes.  
+ La désactivation de cette option atténue la menace qu'un utilisateur malveillant lance une attaque par déni de service en surchargeant le serveur de rapports avec des demandes `LoadReportDefinition`.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   

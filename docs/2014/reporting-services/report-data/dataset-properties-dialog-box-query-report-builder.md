@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 75432318-0b00-4797-917c-0a2e74f9d951
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30dea5e6c9df6f1bd7f22d0ff37ca8800b21b095
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bc761a1d54108818142c075ff3cceadc8875cc9c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132989"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038430"
 ---
 # <a name="dataset-properties-dialog-box-query-report-builder"></a>Boîte de dialogue Propriétés du dataset, Requête (Générateur de rapports)
   Sélectionnez **Requête** dans la boîte de dialogue **Propriétés du dataset** afin de choisir un dataset partagé dans un serveur de rapports ou de créer un dataset incorporé. Dans le cas d'un dataset incorporé, vous devez choisir une source de données et générer une requête.  
@@ -33,7 +33,7 @@ ms.locfileid: "48132989"
   
 -   [Boîte de dialogue Propriétés du dataset, Filtres &#40;Générateur de rapports&#41;](../dataset-properties-dialog-box-filters-report-builder.md)  
   
- Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Options  
  **Nom**  

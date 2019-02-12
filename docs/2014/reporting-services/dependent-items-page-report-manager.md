@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f43168d9085ba513094f9cce05c16a173c260e68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197583"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030070"
 ---
 # <a name="dependent-items-page-report-manager"></a>Page Éléments dépendants (Gestionnaire de rapports)
   La page Éléments dépendants vous permet d'afficher la liste des rapports et modèles qui font référence à une source de données partagée. L'icône de chaque type d'élément indique s'il s'agit d'un rapport ou d'un modèle. Cette page peut être affichée en mode Liste ou Détails. Utilisez le mode Détails pour afficher plus d'informations sur chaque élément. Des options de page supplémentaires sont disponibles en mode Détails. Pour vous aider à gérer la source de données partagée, cette page fournit des liens vers les rapports et modèles qui utilisent la source de données, des métriques sur la dernière exécution ou modification du rapport ou modèle, des boutons Supprimer et Déplacer afin que vous puissiez supprimer facilement les rapports et modèles qui ne sont plus utilisés, ou les déplacer vers un emplacement différent pendant que vous déterminez s'ils sont toujours nécessaires.  
@@ -64,8 +64,8 @@ ms.locfileid: "48197583"
   
 ## <a name="see-also"></a>Voir aussi  
  [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

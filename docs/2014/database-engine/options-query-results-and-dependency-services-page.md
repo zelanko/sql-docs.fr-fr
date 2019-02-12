@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-author: mashamsft
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8f587ee792809f9612ca9fca1264794e843172a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c5c7afe44889dd380e9048044a34a94410213f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118619"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035200"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Options (Résultats de la requête et Page Services de dépendance)
   Utilisez cette page pour spécifier le serveur auquel se connecter pour les services de dépendance. Les services de dépendance vous permettent d'extraire des informations à propos des dépendances entre des objets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stockés sur des serveurs différents. Afficher les dépendances d’objets à l’aide de la **dépendances d’objets** boîte de dialogue dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
@@ -53,6 +52,4 @@ ms.locfileid: "48118619"
  Si vous utilisez l'authentification SQL Server, entrez un mot de passe.  
   
  **Tester**  
- Cliquez pour vérifier la connexion.  
-  
-  
+ Cliquez pour vérifier la connexion.

@@ -28,13 +28,13 @@ helpviewer_keywords:
 ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ce1866d4ffde34052a05ec6fbcbcd2c0dacaea42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 52fac65fdc332f6c0868af84fbeb84c195e1b0f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082241"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039260"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Spécifier des informations d'identification et de connexion pour les sources de données de rapport
   Un serveur de rapports utilise des informations d'identification pour se connecter à des sources de données externes qui fournissent du contenu aux rapports ou des informations de destinataire aux abonnements pilotés par les données. Vous pouvez spécifier des informations d'identification qui utilisent l'authentification Windows, l'authentification de base de données, aucune authentification ou une authentification personnalisée. Lors de l'envoi d'une demande de connexion sur le réseau, le serveur de rapports emprunte l'identité d'un compte d'utilisateur ou du compte d'exécution sans assistance. Pour plus d’informations sur le contexte de sécurité sous lequel une demande de connexion est émise, consultez [Configuration d’une source de données et connexions réseau](#DataSourceConfigurationConnections) plus loin dans cette rubrique.  
@@ -111,7 +111,7 @@ ms.locfileid: "48082241"
     2.  Si le compte figure dans la liste, sélectionnez-le et cliquez sur **Supprimer**.  
   
 #### <a name="using-impersonation-with-stored-credentials"></a>Utilisation d'emprunt d'identité avec stockage des informations d'identification  
- Vous pouvez également utiliser des informations d'identification pour emprunter l'identité d'un autre utilisateur. Pour les bases de données SQL Server, à l’aide de l’emprunt d’identité options définit le [SETUSER](/sql/t-sql/statements/setuser-transact-sql) (fonction).  
+ Vous pouvez également utiliser des informations d'identification pour emprunter l'identité d'un autre utilisateur. Pour les bases de données SQL Server, l’utilisation d’options d’emprunt d’identité définit la fonction [SETUSER](/sql/t-sql/statements/setuser-transact-sql) .  
   
 > [!IMPORTANT]  
 >  N'utilisez pas l'emprunt d'identité pour les rapports qui prennent en charge les abonnements ou qui utilisent des planifications pour générer des historiques de rapports ou actualiser un instantané d'exécution de rapport.  
@@ -138,14 +138,14 @@ ms.locfileid: "48082241"
 |None|Emprunter l'identité du compte d'exécution sans assistance.|Pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC et OLE DB :<br /><br /> Utiliser les informations d'identification définies dans la chaîne de connexion. La connexion échoue sur le serveur de rapports si le compte d'exécution sans assistance n'est pas défini.<br /><br /> Pour [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> La connexion échoue toujours si aucune information d'identification n'est spécifiée, même si le compte d'exécution sans assistance est défini.<br /><br /> Pour XML :<br /><br /> Se connecter comme utilisateur anonyme si le compte d'exécution sans assistance est défini ; sinon, la connexion échoue.|  
   
 ## <a name="setting-credentials-programmatically"></a>Définition des informations d'identification par programme  
- Vous pouvez définir des informations d'identification dans votre code pour contrôler l'accès aux rapports et au serveur de rapports. Pour plus d’informations, consultez [des Sources de données et les méthodes de connexion](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
+ Vous pouvez définir des informations d'identification dans votre code pour contrôler l'accès aux rapports et au serveur de rapports. Pour plus d’informations, consultez [Sources de données et méthodes de connexion](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Connexions de données, Sources de données et chaînes de connexion dans Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Gérer les Sources de données de rapport](../../integration-services/connection-manager/data-sources.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
- [Créer, supprimer ou modifier une Source de données partagée &#40;le Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Configurer les propriétés de Source de données pour un rapport &#40;le Gestionnaire de rapports&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Gérer des sources de données de rapports](../../integration-services/connection-manager/data-sources.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
+ [Créer, supprimer ou modifier une source de données partagée &#40;Gestionnaire de rapports&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
+ [Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

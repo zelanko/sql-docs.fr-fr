@@ -4,25 +4,24 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a6c138e-643b-4ae6-ad08-93631f149c20
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 559f6aa6b31b8998703a93e84dc100ce375cbda8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a86ddf0a715fc3a2313f555e898b3bd94cf66d8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139529"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030590"
 ---
 # <a name="modifying-the-forecasting-structure-intermediate-data-mining-tutorial"></a>Modification de la structure de prévision (Didacticiel sur l'exploration de données intermédiaire)
   La structure d'exploration de données créée dans la tâche précédente contient un seul modèle de prédiction. Avant de pouvoir traiter et explorer le modèle, vous devez légèrement modifier sa structure et modifier l'une de ses propriétés.  
   
 ## <a name="modifying-the-mining-structure"></a>Modification de la structure d'exploration de données  
- Vous pouvez modifier la structure d’exploration de données à l’aide de la **Structure d’exploration de** onglet du Concepteur d’exploration de données. Lors de la création du modèle à l'aide de l'Assistant Exploration de données, vous avez utilisé trois colonnes : ReportingDate, ModelRegion et Quantity. Toutefois, le **Forecasting** table contient également une colonne de montant, ce qui vous permet de prévoir la quantité de ventes. À l’aide de la **Structure d’exploration de** onglet, vous pouvez ajouter cette colonne à partir de la vue de source de données à la structure d’exploration de données.  
+ Vous pouvez modifier la structure d’exploration de données à l’aide de la **Structure d’exploration de** onglet du Concepteur d’exploration de données. Lorsque vous avez créé le modèle avec l’Assistant exploration de données, vous avez utilisé trois colonnes : ReportingDate, ModelRegion et Quantity. Toutefois, le **Forecasting** table contient également une colonne de montant, ce qui vous permet de prévoir la quantité de ventes. À l’aide de la **Structure d’exploration de** onglet, vous pouvez ajouter cette colonne à partir de la vue de source de données à la structure d’exploration de données.  
   
 #### <a name="to-add-the-amount-column-to-the-forecasting-mining-structure"></a>Pour ajouter la colonne Amount dans la table Forecasting de la structure d'exploration de données  
   
@@ -54,7 +53,7 @@ ms.locfileid: "48139529"
  [Personnalisation et traitement du modèle de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/customize-process-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -10,23 +10,23 @@ ms.topic: conceptual
 ms.assetid: 1d7d87e2-bf0d-4ebb-a287-80b5a967a3f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a4636dd2c129a6efad2bb9349082e5bcfe40fd9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a8600fd0e9da41644e99950a7d3df1d7d4764b99
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076721"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038450"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propriétés de champ étendues pour une base de données Analysis Services (SSRS)
   L’extension pour le traitement des données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de champ étendues. Les propriétés de champs étendues sont des propriétés complémentaires aux propriétés `Value` et `IsMissing` qui sont disponibles sur la source de données et prises en charge par l'extension pour le traitement des données. Les propriétés étendues ne figurent pas dans le volet des données de rapport dans le cadre de la collection de champs pour un dataset de rapport. Vous pouvez inclure des valeurs de propriété de champ étendues dans votre rapport en écrivant des expressions qui en spécifient le nom à l’aide intégrée `Fields` collection.  
   
- Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Propriétés prédéfinies sont des propriétés communes à plusieurs sources de données qui sont mappés aux noms de propriété de champ spécifique et sont accessibles via l’intégrée `Fields` collection par nom. Les propriétés personnalisées sont spécifiques à chaque fournisseur de données et sont accessibles par l'intermédiaire de la collection `Fields` intégrée uniquement par la syntaxe utilisant le nom de la propriété étendue comme chaîne.  
+ Les propriétés étendues incluent des propriétés prédéfinies et des propriétés personnalisées. Les propriétés prédéfinies sont des propriétés communes à plusieurs sources de données qui sont mappées à des noms de propriétés de champs spécifiques. Elles sont accessibles par nom par l'intermédiaire de la collection `Fields` intégrée. Les propriétés personnalisées sont spécifiques à chaque fournisseur de données et sont accessibles par l'intermédiaire de la collection `Fields` intégrée uniquement par la syntaxe utilisant le nom de la propriété étendue comme chaîne.  
   
  Quand vous utilisez le Concepteur de requêtes MDX [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en mode graphique pour définir votre requête, un ensemble prédéfini de propriétés de cellule et de propriétés de dimension est ajouté automatiquement à la requête MDX. Vous pouvez uniquement utiliser des propriétés étendues qui sont répertoriées spécifiquement dans la requête MDX de votre rapport. Selon votre rapport, vous souhaiterez peut-être modifier le texte de la commande MDX par défaut pour inclure d'autres propriétés personnalisées ou de dimension définies dans le cube. Pour plus d’informations sur les champs étendus disponibles dans les sources de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](../../analysis-services/creating-and-using-property-values-mdx.md).  
   
 ## <a name="working-with-field-properties-in-a-report"></a>Utilisation des propriétés de champ dans un rapport  
- Les propriétés de champ étendues incluent des propriétés prédéfinies et des propriétés spécifiques au fournisseur de données. Les propriétés de champ n’apparaissent pas avec la liste de champs dans le volet **Données du rapport** , même si elles figurent dans la requête générée pour un dataset ; par conséquent, vous ne pouvez pas faire glisser les propriétés de champ vers l’aire de conception du rapport. Au lieu de cela, vous devez faire glisser le champ dans le rapport, puis modifier le `Value` propriété du champ à la propriété que vous souhaitez utiliser. Par exemple, si les données de cellule d’un cube ont déjà été mises en forme, vous pouvez utiliser la propriété de champ FormattedValue en utilisant l’expression suivante : `=Fields!FieldName.FormattedValue`.  
+ Les propriétés de champ étendues incluent des propriétés prédéfinies et des propriétés spécifiques au fournisseur de données. Les propriétés de champ n’apparaissent pas avec la liste de champs dans le volet **Données du rapport** , même si elles figurent dans la requête générée pour un dataset ; par conséquent, vous ne pouvez pas faire glisser les propriétés de champ vers l’aire de conception du rapport. Vous devez faire glisser le champ dans le rapport, puis remplacer la propriété `Value` du champ par la propriété que vous voulez utiliser. Par exemple, si les données de cellule d’un cube ont déjà été mises en forme, vous pouvez utiliser la propriété de champ FormattedValue en utilisant l’expression suivante : `=Fields!FieldName.FormattedValue`.  
   
  Pour faire référence à une propriété étendue qui n'est pas prédéfinie, utilisez la syntaxe suivante dans une expression :  
   
@@ -129,7 +129,7 @@ CELL PROPERTIES
   
  Même si les propriétés font partie de l'instruction select MDX, elles n'apparaissent pas dans les colonnes du jeu de résultats. Cependant, les données sont disponibles pour un rapport à l'aide de la fonctionnalité des propriétés étendues. Dans un volet des résultats d’une requête MDX dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez double-cliquer sur la cellule et afficher les valeurs de propriétés de cellules si elles sont définies dans le cube. Si vous double-cliquez sur la première cellule Nombre de commandes qui contient le chiffre 1,379, une fenêtre contextuelle s'affiche avec les propriétés de cellule suivantes :  
   
-|Propriété|Valeur|  
+|Propriété|Value|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |Value|2481|  
@@ -141,7 +141,7 @@ CELL PROPERTIES
 |FONT_SIZE|(Null)|  
 |FONT_FLAGS|(Null)|  
   
- Si vous créez un dataset de rapport avec cette requête et que vous liez celui-ci à une table, vous pouvez consulter la propriété VALUE par défaut pour un champ ; par exemple, `=Fields!Month_of_Year!Value`. Si vous définissez cette expression en tant que l’expression de tri pour la table, vos résultats seront pour trier la table par ordre alphabétique par mois, car le champ valeur utilise un `String` type de données. Pour trier la table pour afficher les mois dans l'ordre d'apparition au cours de l'année (janvier au début, décembre à la fin), utilisez l'expression suivante :  
+ Si vous créez un dataset de rapport avec cette requête et que vous liez celui-ci à une table, vous pouvez consulter la propriété VALUE par défaut pour un champ ; par exemple, `=Fields!Month_of_Year!Value`. Si vous définissez cette expression comme l'expression de tri pour la table, vos résultats trient la table alphabétiquement par mois car le champ Valeur utilise un type de données `String`. Pour trier la table pour afficher les mois dans l'ordre d'apparition au cours de l'année (janvier au début, décembre à la fin), utilisez l'expression suivante :  
   
 ```  
 =Fields!Month_of_Year("MEMBER_VALUE")  
@@ -151,7 +151,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Collections intégrées dans les Expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Collections intégrées dans les expressions &#40;Générateur de rapports et SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

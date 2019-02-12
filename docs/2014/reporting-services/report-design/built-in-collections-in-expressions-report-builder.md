@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 78d5e3b8-9320-4e4b-a025-e2de3cf7afa7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 6065291efcf59f5ac5341b47bfdae95afb35a119
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7a94b17d36429c27e2ddc9b958a4d0e8d8278f9c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037210"
 ---
 # <a name="built-in-collections-in-expressions-report-builder-and-ssrs"></a>Collections intégrées dans les expressions (Générateur de rapports et SSRS)
-  Dans une expression d'un rapport, vous avez la possibilité d'inclure des références aux collections intégrées suivantes : ReportItems, Parameters, Fields, DataSets, DataSources, Variables, ainsi que des champs prédéfinis pour les informations globales telles que le nom du rapport. Les collections ne sont pas toutes répertoriées dans la boîte de dialogue **Expression** . En effet, les collections DataSets et DataSources ne sont disponibles qu'au moment de l'exécution pour les rapports publiés sur un serveur de rapports. La collection ReportItems représente l'ensemble des zones de texte figurant dans une partie du rapport, comme celles qui sont situées dans une page ou dans un en-tête de page.  
+  Dans une expression dans un rapport, vous pouvez inclure des références aux collections intégrées suivantes : ReportItems, paramètres, champs, DataSets, DataSources, Variables et des champs prédéfinis pour des informations globales telles que le nom du rapport. Les collections ne sont pas toutes répertoriées dans la boîte de dialogue **Expression** . En effet, les collections DataSets et DataSources ne sont disponibles qu'au moment de l'exécution pour les rapports publiés sur un serveur de rapports. La collection ReportItems représente l'ensemble des zones de texte figurant dans une partie du rapport, comme celles qui sont situées dans une page ou dans un en-tête de page.  
   
  Pour plus d’informations, consultez [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "48095659"
 |`Globals`|Champs prédéfinis|`=Globals.ReportName`<br /><br /> `- or -`<br /><br /> `=Globals.PageNumber`|Représente les variables globales utilisables pour des rapports, par exemple le nom du rapport ou le numéro de page. Toujours disponible.<br /><br /> Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |`User`|Champs prédéfinis|`=User.UserID`<br /><br /> - ou -<br /><br /> `=User.Language`|Représente une collection de données sur l'utilisateur exécutant le rapport, par exemple le paramètre de langue ou l'ID utilisateur. Toujours disponible.<br /><br /> Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).|  
 |`Parameters`|Paramètres|`=Parameters("ReportMonth").Value`<br /><br /> - ou -<br /><br /> `=Parameters!ReportYear.Value`|Représente la collection des paramètres de rapport, chacun pouvant correspondre à une valeur unique ou à plusieurs valeurs. Non disponible tant que l'initialisation du traitement n'est pas terminée. Pour plus d’informations, consultez [Informations de référence sur la collection de paramètres &#40;Générateur de rapports et SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).|  
-|`Fields(` *\<Jeu de données >* `)`|Champs|`=Fields!Sales.Value`|Représente la collection des champs du dataset qui sont disponibles pour le rapport. Disponibles après extraction des données d'une source de données dans un dataset. Pour plus d’informations, consultez [Référence à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](built-in-collections-dataset-fields-collection-references-report-builder.md).|  
+|`Fields(` *\<Dataset>* `)`|Champs|`=Fields!Sales.Value`|Représente la collection des champs du dataset qui sont disponibles pour le rapport. Disponibles après extraction des données d'une source de données dans un dataset. Pour plus d’informations, consultez [Référence à une collection de champs de dataset &#40;Générateur de rapports et SSRS&#41;](built-in-collections-dataset-fields-collection-references-report-builder.md).|  
 |`DataSets`|Non affichée|`=DataSets("TopEmployees").CommandText`|Représente la collection de sources de données référencées à partir du corps d'une définition de rapport. N'inclut pas les sources de données utilisées uniquement dans les en-têtes ou les pieds de page. Non disponible dans l'aperçu local. Pour plus d’informations, consultez [Références à des collections DataSources et DataSets &#40;Générateur de rapports et SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |`DataSources`|Non affichée|`=DataSources("AdventureWorks2012").Type`|Représente la collection des sources de données référencées à partir du corps d'un rapport. N'inclut pas les sources de données utilisées uniquement dans les en-têtes ou les pieds de page. Non disponible dans l'aperçu local. Pour plus d’informations, consultez [Références à des collections DataSources et DataSets &#40;Générateur de rapports et SSRS&#41;](built-in-collections-datasources-and-datasets-references-report-builder.md).|  
 |`Variables`|`Variables`|`=Variables!CustomTimeStamp.Value`|Représente la collection des variables de rapport et de groupe. Pour plus d’informations, consultez [Références à des collections de variables de rapport et de groupe &#40;Générateur de rapports et SSRS&#41;](built-in-collections-report-and-group-variables-references-report-builder.md).|  
@@ -52,7 +52,7 @@ ms.locfileid: "48095659"
 |*Collection.Membre*|`=User.Language`|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter une Expression &#40;Générateur de rapports et SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
+ [Ajouter une expression &#40;Générateur de rapports et SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   
   

@@ -20,13 +20,13 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9e58bcac859d4774803d3cec639a3b7582ee0065
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 447ca38b75b21bdb2015a29ea6ff357eba6f24db
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528690"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025720"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Graphiques (Générateur de rapports et SSRS)
   Lorsque vous souhaitez résumer des données sous un format visuel, utilisez la région de données de graphique. Les graphiques vous permettent de présenter d'un coup d'œil de grandes quantités d'informations de synthèse. Il est important de se préparer avec soin et de comprendre vos données avant de créer un graphique, car ceci vous aidera à concevoir vos graphiques rapidement et efficacement. Pour plus d’informations, consultez [Ajouter un graphique à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). Pour commencer à utiliser immédiatement un graphique, consultez la barre de colonne, graphique sparkline et des didacticiels de graphique à secteurs dans [didacticiels &#40;Générateur de rapports&#41; ](../report-builder-tutorials.md) ou la barre et les didacticiels de graphique à secteurs dans [didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

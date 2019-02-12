@@ -1,7 +1,7 @@
 ---
 title: Propriétés du serveur (page Avancé) - Reporting Services | Microsoft Docs
 ms.custom: ''
-ms.date: 2016-10-18
+ms.date: 10/18/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology:
@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 07b78a84-a6aa-4502-861d-349720ef790e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8756be81a5517602558ab974bb63310e19c32049
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 21379656c56fa1e28b8cd098d046fb4fe721179c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119870"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041580"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propriétés du serveur (page Avancé) - Reporting Services
   Utilisez cette page pour définir des propriétés système sur le serveur de rapports. Il existe plusieurs façons de définir des propriétés système. Cet outil fournit une interface utilisateur graphique afin que vous puissiez définir des propriétés sans devoir écrire du code.  
@@ -54,7 +54,7 @@ ms.locfileid: "49119870"
  Nombre maximal de jours pendant lesquels un paramètre stocké peut être stocké. Les valeurs valides sont comprises entre `-1`, `+1` et `2,147,483,647`. La valeur par défaut est `180` jours.  
   
  **StoredParametersThreshold**  
- Spécifie le nombre maximal de valeurs de paramètre qui peut être stocké par le serveur de rapports. Les valeurs valides sont comprises entre `-1`, `+1` et `2,147,483,647`. La valeur par défaut est `1500`.  
+ Nombre maximal de valeurs de paramètres qui peuvent être stockées par le serveur de rapports. Les valeurs valides sont comprises entre `-1`, `+1` et `2,147,483,647`. La valeur par défaut est `1500`.  
   
  **UseSessionCookies**  
  Indique si le serveur de rapports doit utiliser les cookies de session lors la communication avec les navigateurs clients. La valeur par défaut est `true`.  

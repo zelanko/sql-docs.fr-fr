@@ -12,14 +12,14 @@ f1_keywords:
 - "10120"
 ms.assetid: 44b5edd3-5c11-4d3d-91b8-5871aa0572ed
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 7c99c1033472a58437913fe8a3356e0c3219075c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: efa4a345fd41c21057369570312f400393752fd0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156379"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029910"
 ---
 # <a name="data-source-properties-dialog-box-general"></a>Boîte de dialogue Propriétés de la source de données, Général
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés de la source de données** pour afficher et modifier les informations de connexion d'une source de données du rapport.  

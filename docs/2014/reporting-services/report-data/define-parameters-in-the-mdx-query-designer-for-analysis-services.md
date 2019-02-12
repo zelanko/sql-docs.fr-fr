@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ad1e5bc-f510-4752-b4f6-589e55317a90
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81faaac64b045911ca6b8cfc6dabaa5389ce8a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bbd72a6eadac5f65d292b742885c1af957a637e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159519"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039680"
 ---
 # <a name="define-parameters-in-the-mdx-query-designer-for-analysis-services-report-builder-and-ssrs"></a>Définir des paramètres dans le Concepteur de requêtes MDX pour Analysis Services (Générateur de rapports et SSRS)
   Pour paramétrer une requête MDX pour une source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vous devez ajouter un paramètre de requête à la requête. Dans le Concepteur de requêtes MDX, vous pouvez ajouter un paramètre de requête à la fois en mode Création et en mode Requête en spécifiant un filtre. Après avoir défini la requête avec un paramètre de requête, Reporting Services crée automatiquement un paramètre de rapport et un dataset pour fournir la liste des valeurs valides. Cela permet à un utilisateur de spécifier une valeur transmise directement à la requête.  
@@ -32,7 +32,7 @@ ms.locfileid: "48159519"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-design-mode"></a>Pour définir un paramètre de requête dans MDX en mode Création  
   
-1.  Dans le volet données du rapport, cliquez sur un jeu de données créé à partir d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] type de source de données et puis cliquez sur **requête**. Le Concepteur de requêtes MDX s'ouvre en mode Création.  
+1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur un dataset créé à partir d’un type de source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , puis cliquez sur **Requête**. Le Concepteur de requêtes MDX s'ouvre en mode Création.  
   
 2.  Faites glisser une dimension vers la zone de filtre et placez-la sur la première cellule de la colonne **Dimension** .  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48159519"
   
 ### <a name="to-define-a-query-parameter-in-mdx-in-query-mode"></a>Pour définir un paramètre de requête dans MDX en mode Requête  
   
-1.  Dans le volet données du rapport, cliquez sur un jeu de données créé à partir d’un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] type de source de données et puis cliquez sur **requête**. Le Concepteur de requêtes MDX s'ouvre en mode Création.  
+1.  Dans le volet Données du rapport, cliquez avec le bouton droit sur un dataset créé à partir d’un type de source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , puis cliquez sur **Requête**. Le Concepteur de requêtes MDX s'ouvre en mode Création.  
   
 2.  Dans la barre d'outils, cliquez sur **Création** pour passer au mode Requête.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48159519"
      Pour afficher le dataset qui fournit des valeurs disponibles pour le paramètre de rapport, cliquez avec le bouton droit sur tout espace vide dans le volet des données de rapport, puis cliquez sur **Afficher les datasets masqués**. Le volet des données de rapport affiche tous les datasets dans le rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Type de connexion Analysis Services pour MDX &#40;SSRS&#41;](analysis-services-connection-type-for-mdx-ssrs.md)   
- [Interface utilisateur du concepteur de requêtes MDX Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
+ [Type de connexion Analysis Services pour MDX (SSRS)](analysis-services-connection-type-for-mdx-ssrs.md)   
+ [Interface utilisateur du Concepteur de requêtes MDX Analysis Services](analysis-services-mdx-query-designer-user-interface.md)  
   
   

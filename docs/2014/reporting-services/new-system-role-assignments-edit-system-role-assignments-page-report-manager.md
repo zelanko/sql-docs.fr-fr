@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 26a2ca4499787fce12508e55bb5197b6f0c6f527
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7c1354228c1afbebe519a94d16973d024b84caac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053989"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032390"
 ---
-# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Page Nouvelle attribution de rôle système : Modifier les attributions de rôles système (Gestionnaire de rapports)
+# <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nouvelle attribution de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports)
   La page Nouvelle attribution de rôle système ou Modifier les attributions de rôle système vous permet de définir la sécurité pour le serveur de rapports. La sécurité est définie par l'intermédiaire des attributions de rôle qui mappent des groupes ou des utilisateurs spécifiques aux tâches qu'ils peuvent effectuer. La liste des tâches est représentée sous la forme d'une définition de rôle que vous sélectionnez lors de l'attribution de rôle.  
   
  Au niveau système, les attributions de rôle que vous créez ou modifiez s'appliquent à l'ensemble du serveur de rapports. Par exemple, la possibilité de créer des planifications partagées est spécifiée au niveau système, car celles-ci sont utilisées par tout le système.  
@@ -52,9 +52,9 @@ ms.locfileid: "48053989"
  **Roles**  
  Fournit une liste de rôles au niveau du système que vous pouvez attribuer à d'autres utilisateurs. Vous pouvez spécifier plusieurs rôles pour une attribution de rôle unique.  
   
- Le Gestionnaire de rapports n'affiche pas les tâches dans chaque rôle ni ne propose de façon d'ajouter ou de modifier les tâches. Vous devez utiliser les rôles comme ils sont définis. Pour créer, modifier, ou supprimer des rôles, utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
+ Le Gestionnaire de rapports n'affiche pas les tâches dans chaque rôle ni ne propose de façon d'ajouter ou de modifier les tâches. Vous devez utiliser les rôles comme ils sont définis. Pour créer, modifier ou supprimer des rôles, utilisez [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
- Notez que si vous utilisez [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services, vous devez utiliser les rôles par défaut qui sont fournies.  
+ Notez que, si vous utilisez [!INCLUDE[ssExpressEd2005](../includes/ssexpressed2005-md.md)] with Advanced Services, vous devez utiliser les rôles par défaut fournis.  
   
  **Descriptions**  
  Affiche des informations supplémentaires sur le rôle. Pour les rôles prédéfinis, tels que Utilisateur système ou Administrateur système, la description résume les tâches que chaque rôle prend en charge.  

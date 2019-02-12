@@ -1,24 +1,23 @@
 ---
-title: 'Leçon 4 : Exploration des modèles de publipostage ciblé (didacticiel d’exploration de données de base) | Microsoft Docs'
+title: 'Leçon 4 : Exploration des modèles de publipostage ciblé (didacticiel d’exploration de données de base) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 820a65ce9d45a72fe6a7629aebb7bb10374dbfae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 97db61dc3b9adf2e345957c8e08aa752e51286e0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147311"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039900"
 ---
-# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Leçon 4 : Exploration des modèles de publipostage ciblé (Didacticiel sur l'exploration de données de base)
+# <a name="lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial"></a>Leçon 4 : Exploration des modèles de publipostage ciblé (didacticiel d’exploration de données de base)
   Une fois que les modèles inclus dans votre projet sont traités, vous pouvez les explorer pour rechercher des tendances intéressantes. Étant donné que les motifs peuvent être complexes et difficiles en examinant simplement des nombres, l'exploration de données SQL Server fournit des outils visuels qui vous aident à analyser les données et à comprendre les règles et les relations que les algorithmes ont découvert dans les données. Utilisez également un large éventail de tests de précision pour valider votre dataset ou découvrir quel modèle est le plus performant avant de le déployer.  
   
  Lorsque vous utilisez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour Explorer vos modèles, chaque modèle que vous avez créé est répertorié dans le **visionneuse de modèle d’exploration de données** onglet dans le Concepteur d’exploration de données. Vous pouvez utiliser les visionneuses pour explorer les modèles. Ces visionneuses sont également disponibles dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -52,10 +51,10 @@ ms.locfileid: "48147311"
  [Leçon 3 : Ajout et traitement des modèles](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 5 : Test des modèles &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
+ [Leçon 5 : Test des modèles &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../2014/analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Visionneuses de modèle d’exploration de données](../../2014/analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

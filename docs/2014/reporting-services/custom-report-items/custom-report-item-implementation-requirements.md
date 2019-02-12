@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cfacd816-00d6-4a3d-be72-1bba6f7f6886
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 534197a9ed148685d58c5f3ff17b6b329e9ee913
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dc2898fd9bca67b0b6838e685ad0cb7e2739e3c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219469"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029810"
 ---
 # <a name="custom-report-item-implementation-requirements"></a>Conditions d'implémentation des éléments de rapports personnalisés
   Cette rubrique examine les conditions préalables au développement et au déploiement d'éléments de rapports personnalisés.  
@@ -50,7 +50,7 @@ ms.locfileid: "48219469"
 ## <a name="see-also"></a>Voir aussi  
  [Création d’un composant d’exécution d’éléments de rapport personnalisé](creating-a-custom-report-item-run-time-component.md)   
  [Création d’un composant au moment de la conception d’éléments de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)   
- [Procédure : déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)   
+ [Procédure : Déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)   
  [Bibliothèques de classes d'éléments de rapports personnalisés](custom-report-item-class-libraries.md)  
   
   
