@@ -12,15 +12,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3f5cec577ba63659e33aa564d5ae4225f8594429
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: dff9b07ddf0bd5062c1e10a2d31fe2fe1fa5c50f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51029996"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020170"
 ---
 # <a name="create-a-data-quality-project"></a>Créer un projet de qualité des données
   Cette rubrique explique comment créer un projet de qualité des données à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Un projet de qualité des données est utilisé pour exécuter l'activité de nettoyage ou de correspondance dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -51,13 +51,13 @@ ms.locfileid: "51029996"
   
     4.  Dans la zone **Sélectionner une activité** , cliquez sur l'activité que vous souhaitez exécuter à l'aide de ce projet de qualité des données :  
   
-        -   **Nettoyage**: sélectionnez cette activité pour nettoyer les données sources.  
+        -   **Nettoyage**: Sélectionnez cette activité pour nettoyer les données sources.  
   
-        -   **Correspondance**: sélectionnez cette activité pour effectuer la correspondance. Cette activité est disponible uniquement si la base de connaissances sélectionnée pour le projet de qualité des données contient une stratégie correspondante.  
+        -   **Mise en correspondance**: Sélectionnez cette activité pour effectuer une correspondance. Cette activité est disponible uniquement si la base de connaissances sélectionnée pour le projet de qualité des données contient une stratégie correspondante.  
   
 4.  Cliquez sur **Créer** pour créer un projet de qualité des données.  
   
-##  <a name="FollowUp"></a> Suivi : Après la création d'un projet de qualité des données  
+##  <a name="FollowUp"></a> Suivi : Après avoir créé un projet de qualité des données  
  Après avoir créé un projet de qualité des données, un Assistant vous est proposé pour effectuer l'activité sélectionnée : nettoyage ou correspondance. Pour plus d’informations sur les activités de nettoyage et de correspondance, consultez [Nettoyage des données](../../2014/data-quality-services/data-cleansing.md) et [Correspondance de données](../../2014/data-quality-services/data-matching.md).  
   
   

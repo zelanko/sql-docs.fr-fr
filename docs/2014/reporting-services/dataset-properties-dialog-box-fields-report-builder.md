@@ -11,19 +11,19 @@ f1_keywords:
 - "10021"
 ms.assetid: 75c7e54a-3d20-4c9a-88da-ab36dce2ce42
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1dcbab871d5353d4f42183e89fadb6e83ed52e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 14c65afb6cab1062dfe0a1d5ac3e23444f89d481
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116929"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011070"
 ---
 # <a name="dataset-properties-dialog-box-fields-report-builder"></a>Boîte de dialogue Propriétés du dataset, Champs (Générateur de rapports)
   Sélectionnez **Champs** dans la boîte de dialogue **Propriétés du dataset** pour modifier la collection de champs pour le dataset du rapport. La liste des champs est automatiquement remplie, mais vous pouvez utiliser **Champs** pour ajouter, modifier, et supprimer les champs de requête et les champs calculés.  
   
- Les champs calculés sont pris en charge uniquement sur les datasets incorporés. Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Les champs calculés sont pris en charge uniquement sur les datasets incorporés. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Options  
  **Ajouter**  

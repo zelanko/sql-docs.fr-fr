@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e1fb1f7f249d8252873eb7ecc879aac05fb496b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b759391592a84d0509a8036277ccb6e0cc92a279
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081549"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011501"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Options d’actualisation du cache (Gestionnaire de rapports)
   La page Options d'actualisation du cache permet de créer des planifications pour précharger des copies temporaires des données d'un rapport ou d'un dataset partagé dans le cache. Un plan d'actualisation inclut une planification et la possibilité de spécifier ou de remplacer des valeurs pour les paramètres. Dans le cas d'un dataset partagé, vous ne pouvez pas remplacer les valeurs des paramètres marqués en lecture seule. Vous pouvez créer et utiliser plusieurs plans d'actualisation dans la page des options d'actualisation.  
@@ -66,12 +66,12 @@ ms.locfileid: "48081549"
  **Configurer**  
  Cliquez pour ouvrir la page Planification qui permet de spécifier les informations de fréquence.  
   
- Pour plus d’informations, consultez [nouvelle planification : modifier la Page planification &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
+ Pour plus d’informations, consultez [nouvelle planification : Modifier la Page planification &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-schedule-edit-schedule-page-report-manager.md).  
   
  **Planification partagée**  
  Sélectionnez cette option pour sélectionner une planification existante.  
   
- Pour plus d’informations, consultez [créer, modifier et supprimer les planifications](subscriptions/create-modify-and-delete-schedules.md).  
+ Pour plus d’informations, consultez [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md).  
   
  **@\<** *Paramètre* **>**  
  Spécifiez une combinaison de valeurs de paramètre. Cette section apparaît uniquement si le rapport ou le dataset actuel comporte des paramètres.  
@@ -103,7 +103,7 @@ ms.locfileid: "48081549"
   
  Si la définition du dataset partagé spécifie l'option **Omettre de la requête** pour un paramètre, il est inutile de fournir une valeur par défaut. Cet indicateur signale que le paramètre de dataset n'est pas utilisé dans la requête. Par exemple, le paramètre apparaît dans la définition du dataset partagé, car il s'agit d'un paramètre de rapport employé uniquement dans le filtre de dataset.  
   
- Pour afficher ou modifier les options des paramètres de dataset, vous devez modifier la définition du dataset partagé. Pour plus d’informations, consultez [gérer des Datasets partagés](report-data/manage-shared-datasets.md).  
+ Pour afficher ou modifier les options des paramètres de dataset, vous devez modifier la définition du dataset partagé. Pour plus d’informations, consultez [Gérer des datasets partagés](report-data/manage-shared-datasets.md).  
   
 ### <a name="report-parameters"></a>Paramètres de rapport  
  Dans le cas d'un rapport, chaque valeur de paramètre doit être valide pour que vous puissiez créer un plan d'actualisation du cache. Vous devez taper ou sélectionner une valeur par défaut pour chaque paramètre de rapport. La valeur que vous définissez remplace la valeur par défaut définie pour le paramètre de rapport sur le serveur de rapports.  
@@ -130,7 +130,7 @@ ms.locfileid: "48081549"
   
 ## <a name="see-also"></a>Voir aussi  
  [Tâches au niveau élément](security/tasks-and-permissions-item-level-tasks.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Gérer des datasets partagés](report-data/manage-shared-datasets.md)  

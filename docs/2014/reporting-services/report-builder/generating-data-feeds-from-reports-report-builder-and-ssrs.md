@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4e00789f-6967-42e5-b2b4-03181fdb1e2c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ff83364a11c50ce5403b434052bdb28d53aaf2b3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 17f63e9c4f6d1e560e6945a1ae6f01100d59703a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377591"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020680"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Génération de flux de données à partir de rapports (Générateur de rapports et SSRS)
   L'extension de rendu [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Atom génère un document de service Atom qui répertorie les flux de données disponibles d'un rapport et les flux de données des régions de données d'un rapport. Cette extension est utilisée pour générer des flux de données compatibles avec Atom pouvant être lus et échangés avec des applications qui prennent en charge les flux de données générés à partir de rapports. Par exemple, vous pouvez utiliser l'extension de rendu Atom pour générer des flux de données que vous pourrez ensuite utiliser dans le client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
@@ -57,7 +57,7 @@ ms.locfileid: "53377591"
   
  ![RS_Atom_PeerDynamicColumns](../media/rs-atom-peerdynamiccolumns.gif "RS_Atom_PeerDynamicColumns")  
   
- Le document de service Atom généré à partir de ce rapport inclut deux flux de données, un pour chacune des colonnes homologues dynamiques : Territory et Year. Le diagramme ci-dessous illustre le contenu de chaque flux.  
+ Le document de service Atom généré à partir de ce rapport inclut deux flux, un pour chacune des colonnes homologues dynamiques : Territory et Year. Le diagramme ci-dessous illustre le contenu de chaque flux.  
   
  ![RS_Atom_PeerDynamicDataFeeds](../media/rs-atom-peerdynamicdatafeeds.gif "RS_Atom_PeerDynamicDataFeeds")  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 3 : définition d’un abonnement piloté par les données | Microsoft Docs'
+title: 'Leçon 3 : Définition d’un abonnement piloté par les données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.topic: conceptual
 ms.assetid: 89197b9b-7502-4fe2-bea3-ed7943eebf3b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ccb9733badf6ec9bac12d383c20d4aea5090c0a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 54fd143d2b3af2596ff44a313b2d35b29fc1604a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058729"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015537"
 ---
-# <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
+# <a name="lesson-3-defining-a-data-driven-subscription"></a>Leçon 3 : Définition d'un abonnement piloté par les données
   Au cours de cette leçon, vous allez utiliser les pages d'abonnement piloté par les données pour vous connecter à une source de données d'abonnement, créer une requête qui extrait des données d'abonnement et mapper le jeu de résultats aux options de remise et de rapport.  
   
 > [!NOTE]  
->  Avant de commencer, assurez-vous que le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent est en cours d'exécution. Sans ce service, vous ne pouvez pas enregistrer l'abonnement.  
+>  Avant de commencer, assurez-vous que le service [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent est en cours d'exécution. Sans ce service, vous ne pouvez pas enregistrer l'abonnement.  
   
- Cette leçon suppose que vous avez terminé les leçons 1 et 2, et que la source de données du rapport utilise des informations d'identification stockées.  Pour plus d’informations, consultez [Leçon 2 : Modification des propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md)  
+ Cette leçon suppose que vous avez terminé les leçons 1 et 2, et que la source de données du rapport utilise des informations d'identification stockées.  Pour plus d’informations, consultez la [Leçon 2 : Modification des propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md).  
   
  Dans cette rubrique :  
   
@@ -140,9 +140,9 @@ ms.locfileid: "48058729"
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Abonnements et remises &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [Abonnements pilotés par les données](subscriptions/data-driven-subscriptions.md)   
+ [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
  [Créer, modifier et supprimer un abonnement piloté par les données](subscriptions/create-modify-and-delete-data-driven-subscriptions.md)   
- [Utiliser une Source de données externe pour les données d’abonné &#40;abonnement piloté par les données&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
+ [Utiliser une source de données externe pour les données des abonnés &#40;abonnements pilotés par les données&#41;](subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)  
   
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e66a3277554c349b18499b4a1b4546ed504a043c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 57b93a04e4003d56e7e6a1aef4b264240f2b7f46
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165369"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022180"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserverconfigurationsetting"></a>Méthode ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
   Retourne la liste des installations du serveur de rapports qui sont présentes dans la base de données du serveur de rapports, même si elles n'ont pas accès aux informations sécurisées.  
@@ -73,7 +73,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ## <a name="remarks"></a>Notes  
  ListReportServersInDatabase répertorie les installations du serveur de rapports qui sont présentes dans la base de données du serveur de rapports, qu’elles aient accès ou non aux informations sécurisées, et retourne un ensemble de tableaux correspondants qui contiennent des informations à propos de chaque installation.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 39f8f2b9f8926a81c808e82f57cad13934336902
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 95772746d8f13993962f67bff863865dec519f70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133259"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011160"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Créer un dataset partagé ou incorporé (Générateur de rapports et SSRS)
   Vous pouvez créer un dataset incorporé pour une utilisation dans un rapport unique ou un dataset partagé à enregistrer sur un serveur de rapports, en vue d'une utilisation par plusieurs rapports. Pour créer un dataset, vous devez disposer d'une source de données incorporée ou partagée.  
@@ -37,7 +37,7 @@ ms.locfileid: "48133259"
   
 3.  Éventuellement déployez des datasets partagés et la source de données partagées avec le rapport. Pour chaque type d'élément, utilisez les propriétés du projet pour spécifier les chemins d'accès aux dossiers sur le serveur de rapports ou le site SharePoint.  
   
- Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
@@ -117,7 +117,7 @@ ms.locfileid: "48133259"
  [Concepteurs de requêtes &#40;Générateur de rapports&#41;](../query-designers-report-builder.md)   
  [Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Ajouter des données à un rapport &#40;Générateur de rapports et SSRS&#41;](report-datasets-ssrs.md)   
- [Connexions de données, Sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
+ [Connexions de données, sources de données et chaînes de connexion dans le Générateur de rapports](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

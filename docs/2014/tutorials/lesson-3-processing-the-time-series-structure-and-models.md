@@ -1,24 +1,23 @@
 ---
-title: 'Traitement de la leçon 3 : La série chronologique Structure et des modèles | Microsoft Docs'
+title: 'Leçon 3 : Traitement de la série chronologique Structure et modèles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 16e27b57-eae1-47a7-a02c-47b6ed487d87
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 605476076746aafe6336c82a8cd6c5b2a32b30c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 493d27c9836eb765c655eba5bbb004e4d48cde40
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026270"
 ---
-# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Leçon 3 : Traitement de la structure et des modèles de série chronologique
+# <a name="lesson-3-processing-the-time-series-structure-and-models"></a>Leçon 3 : Traitement de la série chronologique Structure et modèles
   Dans cette leçon, vous allez utiliser le [INSERT INTO &#40;DMX&#41; ](/sql/dmx/insert-into-dmx) instruction pour traiter la série chronologique, structures d’exploration de données et que vous avez créé des modèles d’exploration de données.  
   
  Lorsque vous traitez une structure d'exploration de données, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] lit les données sources et génère les structures qui soutiennent les modèles d'exploration de données. Vous devez toujours traiter un modèle et une structure d'exploration de données au moment où vous les créez. Si vous spécifiez la structure d'exploration de données lors de l'utilisation de l'instruction INSERT INTO, l'instruction traite la structure et tous ses modèles d'exploration de données associés.  
@@ -123,7 +122,7 @@ OPENQUERY (<source data definition>)
     FROM vTimeSeries ORDER BY [ReportingDate]')  
     ```  
   
-     La requête source fait référence le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données définie dans le projet exemple IntermediateTutorial. Elle utilise cette source de données pour accéder à la vue vTimeSeries. Cette vue renferme les données sources à utiliser pour l'apprentissage du modèle d'exploration de données. Si vous n’êtes pas familiarisé avec ce projet ou ces vues, consultez[leçon 2 : génération d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+     La requête source fait référence le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] source de données définie dans le projet exemple IntermediateTutorial. Elle utilise cette source de données pour accéder à la vue vTimeSeries. Cette vue renferme les données sources à utiliser pour l'apprentissage du modèle d'exploration de données. Si vous n’êtes pas familiarisé avec ce projet ou ces vues, consultez[leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
      L'instruction tout entière doit se présenter comme suit :  
   
@@ -147,11 +146,11 @@ OPENQUERY (<source data definition>)
  Une fois que l'exécution de la requête est terminée, vous pouvez créer des prédictions en utilisant les modèles d'exploration de données traités. Dans la leçon suivante, vous allez créer plusieurs prédictions basées sur les modèles d'exploration de données que vous avez créés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Création de prédictions de série chronologique à l’aide d’extensions DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Leçon 4 : Création de prédictions de série chronologique à l’aide de DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)   
  [&#60;requête de source de données&#62;](/sql/dmx/source-data-query)   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](/sql/dmx/source-data-query-openquery)  
+ [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery)  
   
   

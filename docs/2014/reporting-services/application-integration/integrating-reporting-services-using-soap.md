@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6bc17af5-883c-4bfa-87d9-48cd7056d145
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a7deac283e848ec932b266ac77cf4f5575da5d38
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bec5c1b3d2df5c6a721179de5848fd90c08fdd4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057839"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018021"
 ---
 # <a name="integrating-reporting-services-using-soap"></a>Intégration de Reporting Services à l'aide de SOAP
   L’API SOAP de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit plusieurs points de terminaison de service web pour développer des solutions de création de rapports personnalisées. Les points de terminaison se répartissent actuellement dans deux catégories : la gestion et l'exécution. Les fonctionnalités de gestion sont exposées par le biais des points de terminaison <xref:ReportService2005>, <xref:ReportService2006> et <xref:ReportService2010>. Le point de terminaison <xref:ReportService2005> est utilisé pour gérer un serveur de rapports configuré en mode natif et le point de terminaison <xref:ReportService2006> est utilisé pour gérer un serveur de rapports configuré pour le mode intégré SharePoint. Le <xref:ReportService2010> fusionne les fonctionnalités de <xref:ReportService2005> et de <xref:ReportService2006> et peut gérer un serveur de rapports configuré pour le mode natif ou intégré SharePoint.  

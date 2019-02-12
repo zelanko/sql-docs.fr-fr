@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 491a85a3-f323-4155-a0a8-de2779899995
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ecb5d4b5216139c7d762b03fd5a8a8fbc6a1b5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 29824d30b1fdd96c2bc847b8908b49340a05aaf3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165959"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026900"
 ---
 # <a name="my-subscriptions-page-report-manager"></a>Page Mes abonnements (Gestionnaire de rapports)
   La page Mes abonnements vous permet d'afficher tous vos abonnements à un seul emplacement. À partir de cette page, vous pouvez accéder à vos propres abonnements et les modifier ou les supprimer. Vous ne possédez que les abonnements que vous créez. En revanche, vous ne pouvez pas accéder aux abonnements des autres utilisateurs ou à ceux que vous utilisez mais dont vous n'êtes pas propriétaire (par exemple, si votre nom a été ajouté à un abonnement existant défini par un autre utilisateur). Vous ne pouvez pas créer d'abonnements à partir de cette page. Pour plus d’informations sur la création d’abonnements, consultez le [nouvel abonnement ou modifier la Page d’abonnement &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/new-subscription-or-edit-subscription-page-report-manager.md).  
@@ -61,14 +61,14 @@ ms.locfileid: "48165959"
  Indique à quel moment a eu lieu le dernier traitement de l'abonnement.  
   
  **État**  
- Indique l'état de l'abonnement En règle générale, l'état est « Nouveau » ou correspond à la date et à l'heure de la dernière exécution de l'abonnement.  
+ Indique l'état de l'abonnement En règle générale, l'état est « Nouveau » ou correspond à la date et à l'heure de la dernière exécution de l'abonnement.  
   
- La valeur d'état « Données incorrectes » se présente lorsque l'abonnement comporte un pointeur vers des valeurs chiffrées qui ne sont plus valides, c'est-à-dire vers les informations d'identification utilisées pour exécuter le rapport). Les valeurs chiffrées existantes deviennent inutilisables lorsque les clés symétriques utilisées pour chiffrer et déchiffrer les données sont recréées sur le serveur de rapports.  
+ La valeur d'état « Données incorrectes » se présente lorsque l'abonnement comporte un pointeur vers des valeurs chiffrées qui ne sont plus valides, c'est-à-dire vers les informations d'identification utilisées pour exécuter le rapport). Les valeurs chiffrées existantes deviennent inutilisables lorsque les clés symétriques utilisées pour chiffrer et déchiffrer les données sont recréées sur le serveur de rapports.  
   
  Il n'est pas possible de traiter un abonnement s'il a été désactivé. Pour mettre à jour l'abonnement et le rendre opérationnel, ouvrez-le, puis enregistrez-le.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Abonnements et remises &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
+ [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

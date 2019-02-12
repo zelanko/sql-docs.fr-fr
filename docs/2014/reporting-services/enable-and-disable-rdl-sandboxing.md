@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d5619e9f-ec5b-4376-9b34-1f74de6fade7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f49c20c8efe233bb49194364943f7ebb95ed6497
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 2db60863c1ae8c21e391d62182cb27a52558a1e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415277"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013180"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Activer et désactiver sandboxing RDL
   La fonctionnalité Sandboxing RDL (Report Definition Language) vous permet de détecter et restreindre l'utilisation de types spécifiques de ressources, par les locataires individuels, dans un environnement où plusieurs locataires utilisent une batterie de serveurs Web unique de serveurs de rapports. Citons pour exemple un scénario de services d'hébergement où vous pouvez maintenir une batterie de serveurs Web uniques de serveurs de rapports utilisés par plusieurs locataires, et peut-être différentes sociétés. En tant qu'administrateur de serveur de rapports, vous pouvez activer cette fonctionnalité pour aider à accomplir les objectifs suivants :  

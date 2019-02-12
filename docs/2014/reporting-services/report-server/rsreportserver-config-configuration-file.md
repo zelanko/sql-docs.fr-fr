@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4cab512c13e324c9593f6983ede6851c9d87cc7e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366781"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015600"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   Le fichier **RsReportServer.config** stocke les paramètres utilisés par le Gestionnaire de rapports, le service Web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  
@@ -71,7 +71,7 @@ ms.locfileid: "53366781"
   
     -   [RDLSandboxing](#bkmk_rdlsandboxing)  
   
--   [MapTileServerConfiguration (fichier RSReportServer.config)](#bkmk_MapTileServer)  
+-   [MapTileServerConfiguration (RSReportServer.config file)](#bkmk_MapTileServer)  
   
 -   [Fichier de Configuration par défaut pour un serveur de rapports en Mode natif](#bkmk_nativedefaultfile)  
   

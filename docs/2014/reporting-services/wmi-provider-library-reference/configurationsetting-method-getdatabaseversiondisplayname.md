@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e1286424-7043-4f12-a7ad-1cf69e81baa4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 574d5520c150aa26f81ae8393872acb49b9d87bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8777faa32fd31bb31a161f8e4bcb6c297ff2c4b9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141499"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013360"
 ---
 # <a name="getdatabaseversiondisplayname-method-wmi"></a>Méthode GetDatabaseVersionDisplayName (WMI)
   Obtient le nom complet de la chaîne de version d'une base de données de serveur de rapports spécifique.  
@@ -61,7 +61,7 @@ public void GetDatabaseVersionDisplayName(string Version, string DisplayName, ou
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

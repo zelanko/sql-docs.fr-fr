@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7ab343a4c6f70d97aa5e770b8ca21dd4d835f05c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 676bbf12efa9b8640ef244f6dd57325b047d79ba
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375931"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018920"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Configurer une URL (Gestionnaire de configuration de SSRS)
   Avant de pouvoir utiliser le Gestionnaire de rapports ou le service Web Report Server, vous devez configurer au moins une URL pour chaque application. La configuration des URL est obligatoire si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode « fichiers uniquement » (autrement dit, en sélectionnant l'option **Installer mais ne pas configurer le serveur** sur la page Options d'installation du serveur de rapports dans l'Assistant Installation). Si vous avez installé [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans la configuration par défaut, les URL sont déjà configurées pour chaque application. Si vous disposez d'un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint et que vous mettez à jour l'URL du service Web Report Server à l'aide de l'outil de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous devez également mettre à jour l'URL dans l'Administration centrale de SharePoint.  

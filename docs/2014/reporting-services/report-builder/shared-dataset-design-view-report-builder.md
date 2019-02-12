@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 897f44349c04f02a6b41823590998b09221e3a03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0053228f5d52f2a1dad8e41e2406d34fdaf9b2b2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354193"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014440"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Mode création de dataset partagé (Générateur de rapports)
   La fenêtre du mode création de dataset partagé vous aide à créer une requête de dataset que vous pouvez partager avec d'autres utilisateurs. La fenêtre vous permet de sélectionner une source de données partagée, de spécifier des propriétés pour le dataset partagé et de créer une requête dans le concepteur de requêtes.  

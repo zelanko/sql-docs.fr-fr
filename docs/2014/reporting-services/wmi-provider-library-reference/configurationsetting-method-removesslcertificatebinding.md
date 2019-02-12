@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bdd7f7431e4a266e17343d0d793b3bbaaffd2d6d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e479580d9d5b7720fe4fb7b641236ec12e4537c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146959"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024241"
 ---
 # <a name="removesslcertificatebindings-method-wmi-msreportserverconfigurationsetting"></a>Méthode RemoveSSLCertificateBindings (WMI MSReportServer_ConfigurationSetting)
   Supprime une liaison de certificat SSL.  
@@ -66,7 +66,7 @@ public void RemoveSSLCertificateBindings(string Application,
 ## <a name="remarks"></a>Notes  
  Cette méthode supprime la liaison spécifique du fichier rsreportserver.config et éventuellement HTTP.SYS.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

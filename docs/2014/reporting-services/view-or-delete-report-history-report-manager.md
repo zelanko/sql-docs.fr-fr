@@ -24,14 +24,14 @@ helpviewer_keywords:
 - report snapshots [Reporting Services], creating
 ms.assetid: 44cb1e6f-a6b8-498a-8e8b-ca28e7ab1007
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: e73924828fcae11908e83f2383e63dd68670071e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: b0f5f3d9c3dc788a4b55932e8a28b43a6b4135bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117889"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031389"
 ---
 # <a name="view-or-delete-report-history-report-manager"></a>Afficher ou supprimer l'historique de rapport (Gestionnaire de rapports)
   L'historique de rapport est conservé avec le rapport sur lequel il est basé. Tout utilisateur autorisé à afficher un rapport peut en consulter l'historique.  
@@ -55,10 +55,10 @@ ms.locfileid: "48117889"
 3.  Sélectionnez la case à cocher en regard de l’instantané d’historique à supprimer, puis cliquez sur **supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter un instantané à l’historique de rapport &#40;le Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Page de l’historique de rapport &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/report-history-page-report-manager.md)   
- [Définir les propriétés de traitement de rapport](report-server/set-report-processing-properties.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Définir les propriétés de traitement d’un rapport](report-server/set-report-processing-properties.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Créer, modifier et supprimer des instantanés dans l'historique de rapport](report-server/create-modify-and-delete-snapshots-in-report-history.md)  
   
   

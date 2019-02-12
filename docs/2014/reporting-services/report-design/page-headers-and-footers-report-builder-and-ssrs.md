@@ -23,13 +23,13 @@ f1_keywords:
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 18228ba7240b2d26462545463d8cf5fdf8636a5a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 9dfeb15d58f34759da6c340f66ce5935c0b71e41
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098439"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038000"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>En-têtes et pieds de page (Générateur de rapports et SSRS)
   Un rapport peut contenir un en-tête et un pied de page. Ces informations sont situées respectivement le long des bords supérieur et inférieur de chaque page. Les en-têtes et pieds de page peuvent contenir du texte statique, des images, des rectangles, des bordures, une couleur d'arrière-plan, des images d'arrière-plan et des expressions. Les expressions contiennent des références de champs de dataset pour des rapports qui utilisent un seul dataset, ainsi que des appels de fonction d'agrégation qui intègrent le dataset sous forme d'étendue.  
@@ -58,9 +58,9 @@ ms.locfileid: "48098439"
   
 |Pris en charge par l'expression|Agrégats ReportItems|Agrégats du dataset (le nom du dataset doit correspondre à l'étendue)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Zones de texte apparaissant dans le corps du rapport|Oui|non|  
-|&PageNumber|Oui|non|  
-|&TotalPages|Oui|non|  
+|Zones de texte apparaissant dans le corps du rapport|Oui|Non|  
+|&PageNumber|Oui|Non|  
+|&TotalPages|Oui|Non|  
 |Fonction d'agrégation|Oui. Par exemple,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Oui. Par exemple,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Collection de champs pour les éléments figurant sur les pages|Indirectement. Par exemple,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Oui. Par exemple,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Image liée aux données|Indirectement. Par exemple : `=ReportItems!TXT_Photo.Value`|Oui. Par exemple,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  
@@ -128,7 +128,7 @@ ms.locfileid: "48098439"
  Pour plus d’informations, consultez [Exportation vers Microsoft Excel &#40;Générateur de rapports et SSRS&#41;](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Incorporer une Image dans un rapport &#40;Générateur de rapports et SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
+ [Incorporer une image dans un rapport &#40;Générateur de rapports et SSRS&#41;](embed-an-image-in-a-report-report-builder-and-ssrs.md)   
  [Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)  
   
   

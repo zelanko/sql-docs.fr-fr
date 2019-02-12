@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 99ebb4dc-41cc-42ac-82dd-a2b0e31155a0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 2330060b0a659715f8a8b80c3d2e1fbe24e93d04
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1b1bed586c6ec2878fd2a63f7d9ca8bce46bab53
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050895"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017699"
 ---
 # <a name="rendering-report-items-report-builder-and-ssrs"></a>Rendu des éléments de rapport (Générateur de rapports et SSRS)
   Le nombre, la taille et l'emplacement des éléments de rapport affectent la façon dont les convertisseurs mettent en page le corps du rapport. Vous trouverez ci-dessous une description de la façon dont les éléments de rapport sont rendus.  
@@ -78,7 +78,7 @@ ms.locfileid: "48050895"
   
 -   Les en-têtes de colonne et de ligne répétés.  
   
-     Les en-têtes sont prioritaires sur les pieds de page. Les groupes répétés internes sont prioritaires sur les groupes externes. Éléments pour lesquels le `RepeatWith` propriété est définie et qui sont plus proches de la région de données cible sont prioritaires sur les éléments plus éloignés de la région de données.  
+     Les en-têtes sont prioritaires sur les pieds de page. Les groupes répétés internes sont prioritaires sur les groupes externes. Les éléments pour lesquels la propriété `RepeatWith` est définie et qui sont plus proches de la région de données cible sont prioritaires sur les éléments plus éloignés de la région de données.  
   
 -   Petits éléments de rapport, tels que les zones de texte ou les rectangles, avec une propriété KeepTogether explicite ayant la valeur `true`.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "48050895"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

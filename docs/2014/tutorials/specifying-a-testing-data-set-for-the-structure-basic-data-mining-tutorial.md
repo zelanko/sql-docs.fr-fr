@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 75cd508f-b126-418b-848d-3c4c3e6c303f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 1e0bee469bd6dbbc93a48051e7c2e236c6c65c74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180919"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028890"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Spécification d'un jeu de données de test pour la structure (Didacticiel sur l'exploration de données de base)
   Dans les écrans finals de l'Assistant Exploration de données, vous allez diviser vos données en un jeu de test et un jeu d'apprentissage. Vous nommerez ensuite votre structure et activerez l'extraction sur le modèle.  
@@ -30,7 +29,7 @@ ms.locfileid: "48180919"
   
 2.  Pour **nombre maximal de cas dans le jeu de données de test**, type `1000`.  
   
-3.  Cliquez sur **Suivant**.  
+3.  Cliquer sur **Suivant**.  
   
 ## <a name="specifying-drillthrough"></a>Spécification de l'extraction  
  L'extraction peut être activée sur les modèles et sur les structures. La case à cocher dans cette boîte de dialogue active l'extraction sur le modèle nommé. Une fois le modèle traité, vous serez en mesure d'extraire des informations détaillées des données d'apprentissage qui ont été utilisées pour créer le modèle.  

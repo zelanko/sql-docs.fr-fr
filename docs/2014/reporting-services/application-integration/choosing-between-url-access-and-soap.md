@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: bccdc243-4366-4ce5-8e63-3dd6c463fa52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 34b6f109ab102f39908639f6182c25ca4cbb60e0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: b21a8b6f0865ae0b8b51f4923809eb3dd5f7e204
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363891"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011810"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>Choix entre l'accès URL et SOAP
   L'intégration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dans des applications personnalisées peut s'avérer difficile. Toutefois, la difficulté ne se trouve pas dans la complexité du modèle de programmation ou les API, mais dans les nombreuses méthodes possibles pour l'intégrer. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] a été conçu dès le départ comme une plate-forme de développeur, et en tant que tel, a été créé avec une flexibilité de la programmation à l'esprit. Avec la flexibilité apparaît le besoin de prendre des décisions importantes concernant l'intégration de la navigation entre les rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les fonctionnalités de gestion dans vos applications de gestion existantes.  

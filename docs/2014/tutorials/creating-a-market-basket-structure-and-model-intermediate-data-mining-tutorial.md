@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 659b7a4e-f687-44d9-a60a-86490ccbf90f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 983f5547f816785e592aa27c442db6a92b519cae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177426"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019450"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Création d'une structure et d'un modèle de panier d'achat (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous avez créé une vue de source de données, vous allez utiliser l'Assistant Exploration de données pour créer une structure d'exploration de données. Au cours de cette tâche, vous allez créer une structure d'exploration de données et un modèle d'exploration de données basés sur l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Association.  
@@ -36,7 +35,7 @@ ms.locfileid: "48177426"
   
 5.  Sélectionnez **commandes**sous **vues de sources de données disponibles**, puis cliquez sur **suivant**.  
   
-6.  Sur le **spécifier les Types de Table** , dans la ligne de la table vAssocSeqLineItems, sélectionnez le **Nested** et dans la ligne de la table imbriquée vAssocSeqOrders, cochez la **cas** case à cocher. Cliquez sur **Suivant**.  
+6.  Sur le **spécifier les Types de Table** , dans la ligne de la table vAssocSeqLineItems, sélectionnez le **Nested** et dans la ligne de la table imbriquée vAssocSeqOrders, cochez la **cas** case à cocher. Cliquer sur **Suivant**.  
   
 7.  Sur le **spécifier les données d’apprentissage** page, désactivez les cases qui peuvent être archivés. Définissez la clé pour la table de cas vAssocSeqOrders en activant le **clé** case à cocher en regard d’OrderNumber.  
   
@@ -50,19 +49,19 @@ ms.locfileid: "48177426"
   
      ![aspect de la boîte de dialogue](../../2014/tutorials/media/tutorial-configassocmodel.gif "aspect de la boîte de dialogue")  
   
-10. Cliquez sur **Suivant**.  
+10. Cliquer sur **Suivant**.  
   
 11. Sur le **colonnes spécifier Type de contenu et données**page, passez en revue les sélections, qui doivent être comme indiqué dans le tableau suivant, puis cliquez sur **suivant**.  
   
     |Colonnes|Type de contenu|Type de données|  
     |-------------|------------------|---------------|  
     |IncomeGroup|Discret|Texte|  
-    |Numéro de commande|Key|Texte|  
+    |Numéro de commande|Touche|Texte|  
     |Région|Discret|Texte|  
     |vAssocSeqLineItems|||  
-    |Modèle|Key|Texte|  
+    |Modèle|Touche|Texte|  
   
-12. Sur le **créer le test défini** page, la valeur par défaut pour l’option **pourcentage des données de test** 30 pour cent. Modifier ce paramètre pour **0**. Cliquez sur **Suivant**.  
+12. Sur le **créer le test défini** page, la valeur par défaut pour l’option **pourcentage des données de test** 30 pour cent. Modifier ce paramètre pour **0**. Cliquer sur **Suivant**.  
   
     > [!NOTE]  
     >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] fournit différents graphiques pour mesurer la précision du modèle. Toutefois, certains types de graphiques d'analyse de précision, tels que le graphique de courbes d'élévation et le rapport de validation croisée, sont conçus pour la classification et l'évaluation. Elles ne sont pas prises en charge à des fins de prédiction associative.  

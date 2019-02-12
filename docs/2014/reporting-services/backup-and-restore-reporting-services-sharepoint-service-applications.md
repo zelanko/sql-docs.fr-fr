@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 63511e175a98e366bfeb4d02ba3085d8e9943813
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368401"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033830"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Applications de service SharePoint de sauvegarde et de restauration Reporting Services
   Cette rubrique explique comment sauvegarder et restaurer une application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à l'aide de l'Administration centrale de SharePoint ou PowerShell. La rubrique contient :  

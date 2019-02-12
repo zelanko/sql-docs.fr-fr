@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2cf353aedff8d906ebb2aa53a4bab269f6083854
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a605117b6d2b1011d9285c0fb02275e5abeb35ac
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071289"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56019330"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Configurer l’authentification de base sur le serveur de rapports
   Par défaut, Reporting Services accepte les demandes qui spécifient l'authentification Negotiate et NTLM. Si votre déploiement inclut des applications clientes ou des navigateurs qui utilisent l'authentification de base, vous devez l'ajouter à la liste des types pris en charge. De plus, si vous voulez utiliser le Générateur de rapports, vous devez activer l'accès anonyme aux fichiers Générateur de rapports.  
@@ -41,7 +41,7 @@ ms.locfileid: "48071289"
   
      Le fichier se trouve dans  *\<lecteur > :* \Program Files\Microsoft SQL Server\MSRS12. MSSQLSERVER\Reporting Services\ReportServer.  
   
-2.  Trouver <`Authentication`>.  
+2.  Recherchez <`Authentication`>.  
   
 3.  Copiez, parmi les structures XML suivantes, celle qui répond le mieux à vos besoins. La première structure XML fournit des espaces réservés pour spécifier tous les éléments décrits dans la section suivante :  
   
@@ -68,9 +68,9 @@ ms.locfileid: "48071289"
   
 4.  Collez-la sur les entrées existantes de <`Authentication`>.  
   
-     Si vous utilisez plusieurs types d’authentification, ajoutez simplement le `RSWindowsBasic` élément mais ne supprimez pas les entrées pour `RSWindowsNegotiate`, `RSWindowsNTLM`, ou `RSWindowsKerberos`.  
+     Si vous utilisez plusieurs types d'authentification, ajoutez juste l'élément `RSWindowsBasic` mais ne supprimez pas les entrées pour `RSWindowsNegotiate`, `RSWindowsNTLM` ou `RSWindowsKerberos`.  
   
-     Pour prendre en charge le navigateur Safari, vous ne pouvez pas configurer le serveur de rapports pour utiliser plusieurs types d'authentification. Vous devez spécifier uniquement `RSWindowsBasic` et supprimer les autres entrées.  
+     Pour prendre en charge le navigateur Safari, vous ne pouvez pas configurer le serveur de rapports pour utiliser plusieurs types d'authentification. Vous devez spécifier `RSWindowsBasic` uniquement et supprimer les autres entrées.  
   
      Notez que vous ne pouvez pas utiliser `Custom` avec d'autres types d'authentification.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48071289"
   
 |Élément|Requis|Valeurs valides|  
 |-------------|--------------|------------------|  
-|LogonMethod|Oui<br /><br /> Si vous ne spécifiez pas de valeur, 3 est utilisé.|`2` = Ouverture de session réseau, destinée aux serveurs hautes performances authentifier les mots de passe en texte brut<br /><br /> `3` = Ouverture de session texte en clair, ce qui conserve les informations d’identification d’ouverture de session dans le package d’authentification qui est envoyé avec chaque requête HTTP, permet au serveur d’emprunter l’identité de l’utilisateur lors de la connexion à d’autres serveurs dans le réseau. (Par défaut)<br /><br /> Remarque : les valeurs 0 (pour l’ouverture de session interactive) et 1 (pour l’ouverture de session par fichier de commande) ne sont pas prises en charge dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
+|LogonMethod|Oui<br /><br /> Si vous ne spécifiez pas de valeur, 3 est utilisé.|`2` = ouverture de session réseau, destinée aux serveurs hautes performances pour l’authentification des mots de passe en texte brut.<br /><br /> `3` = ouverture de session basée sur du texte en clair ; les informations d’identification d’ouverture de session sont conservées dans le package d’authentification envoyé avec chaque requête HTTP, ce qui permet au serveur d’emprunter l’identité de l’utilisateur lors de la connexion à d’autres serveurs du réseau. (Par défaut)<br /><br /> Remarque : Les valeurs 0 (pour l'ouverture de session interactive) et 1 (pour l'ouverture de session par lot) ne sont pas prises en charge dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|  
 |Realm|Ce paramètre est facultatif|Spécifie une partition de ressource qui inclut les fonctionnalités d'autorisation et d'authentification permettant de contrôler l'accès aux ressources protégées de votre organisation.|  
 |DefaultDomain|Ce paramètre est facultatif|Spécifie le domaine utilisé par le serveur pour authentifier l'utilisateur. Cette valeur est facultative, mais si vous l'omettez, le serveur de rapports utilise le nom d'ordinateur comme domaine. Si l'ordinateur est membre du domaine, ce domaine est le domaine par défaut. Si vous avez installé le serveur de rapports sur un contrôleur de domaine, le domaine utilisé est celui contrôlé par l'ordinateur.|  
   
@@ -136,17 +136,17 @@ ms.locfileid: "48071289"
     </configuration>  
     ```  
   
-     Mode d’authentification doit être défini sur `Windows` si vous incluez un fichier Web.config.  
+     Le mode d’authentification doit avoir la valeur `Windows` si vous incluez un fichier Web.config.  
   
-     `Identity impersonate` peut être `True` ou `False`.  
+     `Identity impersonate` peut avoir la valeur `True` ou `False`.  
   
-    -   Affectez-lui la valeur `False` si vous ne souhaitez pas ASP.NET de lire le jeton de sécurité. La demande s'exécute dans le contexte de sécurité du service Report Server.  
+    -   Affectez-lui la valeur `False` pour qu'ASP.NET ne lise pas le jeton de sécurité. La demande s'exécute dans le contexte de sécurité du service Report Server.  
   
-    -   Affectez-lui la valeur `True` si vous souhaitez qu’ASP.NET lise le jeton de sécurité à partir de la couche hôte. Si vous lui affectez la valeur `True`, vous devez également spécifier `userName` et `password` pour désigner un compte anonyme. Les informations d'identification que vous spécifiez déterminent le contexte de sécurité sous lequel la demande est émise.  
+    -   Affectez-lui la valeur `True` pour qu'ASP.NET lise le jeton de sécurité de la couche hôte. Si vous lui affectez la valeur `True`, vous devez également spécifier `userName` et `password` pour désigner un compte anonyme. Les informations d'identification que vous spécifiez déterminent le contexte de sécurité sous lequel la demande est émise.  
   
 5.  Enregistrez le fichier Web.config dans le dossier ReportBuilder\bin.  
   
-6.  Ouvrez le fichier RSReportServer.config, dans la section Services, recherchez `IsReportManagerEnabled` et ajoutez le paramètre suivant en dessous :  
+6.  Ouvrez le fichier RSReportServer.config, dans la section Services, recherchez `IsReportManagerEnabled` et ajoutez en dessous le paramètre suivant :  
   
     ```  
     <IsReportBuilderAnonymousAccessEnabled>True</IsReportBuilderAnonymousAccessEnabled>  
@@ -157,7 +157,7 @@ ms.locfileid: "48071289"
 8.  Redémarrez le serveur de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Domaines d’application pour les Applications de serveur de rapports](../report-server/application-domains-for-report-server-applications.md)   
- [Sécurité et Protection de Reporting Services](reporting-services-security-and-protection.md)  
+ [Domaines d'application des applications du serveur de rapports](../report-server/application-domains-for-report-server-applications.md)   
+ [Sécurité et protection de Reporting Services](reporting-services-security-and-protection.md)  
   
   

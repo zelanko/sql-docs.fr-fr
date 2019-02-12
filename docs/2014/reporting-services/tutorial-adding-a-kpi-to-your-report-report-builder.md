@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : ajout d’un indicateur de performance clé à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Ajout d’un indicateur de performance clé à votre rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 595e05361087ad821b8baeaf6a676936626eb1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056520"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037660"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : ajout d'un indicateur de performance clé à un rapport (Générateur de rapports)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : Ajout d’un indicateur de performance clé à votre rapport (Générateur de rapports)
   Un indicateur de performance clé (KPI) est une valeur mesurable qui revêt une importance significative sur le plan opérationnel. Ce didacticiel vous apprend comment inclure un indicateur de performance clé dans un rapport. Dans ce scénario, le récapitulatif des ventes par sous-catégories de produits est l'indicateur de performance clé. L'état actuel de l'indicateur de performance clé est indiqué à l'aide de couleurs, de jauges et d'indicateurs.  
   
  L'illustration suivante montre le rapport que vous allez créer.  
@@ -45,11 +45,11 @@ ms.locfileid: "48056520"
 7.  [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, choisissez une source de données, créer un jeu de données et exécuter l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
 ##  <a name="Table"></a> 1. Créer un rapport de tableau et un dataset à partir de l'Assistant Tableau ou matrice  
@@ -73,11 +73,11 @@ ms.locfileid: "48056520"
   
 4.  Dans la page Choisir un jeu de données, cliquez sur **créer un jeu de données**.  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Dans la page **Créer une requête** , cliquez sur **Modifier en tant que texte**.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "48056520"
        'SLR Camera' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-10. Cliquez sur **Suivant**.  
+10. Cliquer sur **Suivant**.  
   
 ##  <a name="CompleteWizard"></a> 2. Organiser les données, choisir la mise en page et le style à partir de l'Assistant Tableau ou matrice  
  Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la table ou de la matrice.  
@@ -139,7 +139,7 @@ ms.locfileid: "48056520"
   
      Les étapes 4 et 5 organisent les valeurs des champs par date, puis par l'ensemble des ventes pour chaque date.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
      Lorsque vous exécutez le rapport, le tableau affiche chaque date, toutes les commandes pour chaque date et tous les produits, quantités et totaux de ventes pour chaque commande.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "48056520"
   
      Dans ce didacticiel, le rapport que vous créez n'utilise pas la fonctionnalité d'exploration vers le bas qui permet à un utilisateur de développer une hiérarchie de groupe parente afin d'afficher les lignes de groupes enfants et les lignes de détails.  
   
-10. Cliquez sur **Suivant**.  
+10. Cliquer sur **Suivant**.  
   
 11. Dans la page Choisir un style, dans le volet Styles, sélectionnez un style.  
   
@@ -159,7 +159,7 @@ ms.locfileid: "48056520"
   
 12. Cliquez sur **Terminer**.  
   
-     Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet Groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+     Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 13. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -308,7 +308,7 @@ ms.locfileid: "48056520"
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+     Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
 4.  Dans **Nom**, remplacez le nom par défaut par **Product Sales KPI**.  
   

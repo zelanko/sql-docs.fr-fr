@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fcca7243-a702-4725-8e6f-cf118e988acf
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 94095fd1879b4f4343a7a65dfd9d018ca355084f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154219"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026176"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes (Générateur de rapports et SSRS)
   Dans un rapport, un filtre est une partie d'un dataset, d'une région de données ou d'un groupe de régions de données que vous créez pour limiter les données utilisées dans le rapport. Les filtres vous aident à contrôler les données de rapport si vous ne pouvez pas modifier la requête de dataset, par exemple, si vous utilisez un dataset partagé.  
@@ -84,11 +84,11 @@ ms.locfileid: "48154219"
 |--------------|------------|  
 |**Equal, Like, NotEqual, GreaterThan, GreaterThanOrEqual, LessThan, LessThanOrEqual**|Compare l'expression à une valeur.|  
 |**TopN, BottomN**|Compare l'expression à une valeur `Integer`.|  
-|**TopPercent, BottomPercent**|Compare l’expression à une `Integer` ou `Float` valeur.|  
+|**TopPercent, BottomPercent**|Compare l'expression à une valeur `Integer` ou `Float`.|  
 |**Entre**|Teste si l'expression est comprise entre deux valeurs (y compris ces valeurs).|  
 |**Dans**|Teste si l'expression est contenue dans un jeu de valeurs.|  
   
-### <a name="value"></a>Valeur  
+### <a name="value"></a>Value  
  L’expression Valeur spécifie la dernière partie de l’équation de filtre. Le processeur de rapports convertit l'expression évaluée dans le type de données que vous avez spécifié, puis évalue l'équation de filtre entière pour déterminer si les données spécifiées dans le champ Expression sont filtrées ou non.  
   
  Pour effectuer une conversion dans un type de données autre que CLR standard, vous devez modifier l'expression afin de procéder à une conversion explicite dans un type de données spécifique. Vous pouvez utiliser les fonctions de conversion répertoriées dans la boîte de dialogue **Expression** sous **Fonctions communes**, **Conversion**. Par exemple, pour un champ `ListPrice` qui représente les données stockées avec un type de données **monétaire** sur une source de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , l’extension de traitement des données retourne la valeur du champ en utilisant le type de données <xref:System.Decimal> . Pour définir qu’un filtre doit utiliser seulement des valeurs supérieures à **50000,00 $** dans la devise du rapport, convertissez la valeur en Décimal en utilisant l’expression `=CDec(50000.00)`.  
@@ -96,7 +96,7 @@ ms.locfileid: "48154219"
  Cette valeur peut également inclure une référence de paramètre permettant à un utilisateur de sélectionner de manière interactive une valeur de filtre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md)  
   
   

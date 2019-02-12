@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 58cbdfeb-1105-4a7d-a3b8-b897ff95f367
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13f2be6cfa210e0c5d1026a13cd413eec0cad485
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2052f5614f5a1e810e2f0c50981c391c027073ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182989"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022910"
 ---
 # <a name="security-considerations-for-extensions"></a>Considérations sur la sécurité pour les extensions
   Toute application qui cible le CLR (Common Language Runtime) doit interagir avec le système de sécurité du CLR. Lorsqu'une application de ce type est exécutée, elle est automatiquement évaluée et reçoit un jeu d'autorisations de la part du CLR. En fonction des autorisations reçues par l'application, elle continue de s'exécuter ou génère une exception de sécurité. Les paramètres et stratégies de sécurité locale définis dans les fichiers de configuration de stratégie de sécurité pour un serveur de rapports particulier définissent les autorisations de code reçues par un assembly.  

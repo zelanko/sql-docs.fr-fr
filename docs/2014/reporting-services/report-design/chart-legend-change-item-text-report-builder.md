@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 9e82fa34-17ed-494f-b25d-03dcc353a21f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ba16d9d50faaaef740f3aa4c4eaff5122fdff438
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 93a8d8b8c93dc340b4ffa0337f14478bc4bf910a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081039"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015770"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Modifier le texte d'un élément de légende (Générateur de rapports et SSRS)
   Lorsqu'un champ est placé dans la zone Valeurs du graphique, un élément de légende contenant le nom de ce champ est automatiquement généré. Chaque élément de légende est relié à une série individuelle sur le graphique, à l’exception des graphiques à base de formes, pour lesquels la légende est reliée à des points de données individuels et non à des séries individuelles.  
   
- Sur les graphiques à base de formes, vous pouvez modifier le texte d'un élément de légende pour afficher davantage d'informations sur des points de données individuels. Par exemple, si vous souhaitez afficher les valeurs des points de données sous forme de pourcentages dans la légende, vous pouvez utiliser un mot clé comme `#PERCENT`. Vous pouvez ajouter des codes de format .NET Framework en plus des mots clés pour appliquer des formats de nombre et de date. Pour plus d’informations sur les mots clés, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Sur les graphiques à base de formes, vous pouvez modifier le texte d'un élément de légende pour afficher davantage d'informations sur des points de données individuels. Par exemple, si vous souhaitez afficher les valeurs des points de données sous forme de pourcentages dans la légende, vous pouvez utiliser un mot clé tel que `#PERCENT`). Vous pouvez ajouter des codes de format .NET Framework en plus des mots clés pour appliquer des formats de nombre et de date. Pour plus d’informations sur les mots clés, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
  ![Graphique pointu](../media/sharpchart.png "Graphique pointu")  
   
@@ -57,6 +57,6 @@ ms.locfileid: "48081039"
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Mise en forme des couleurs des séries sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Masquer des éléments de légende sur le graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-hide-items-report-builder.md)  
+ [Masquer des éléments de légende dans le graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-hide-items-report-builder.md)  
   
   

@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: f3f5d85f-9359-4508-bc5a-7f78a3cf7421
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fae03147c4e5364ae7c41590c88c9b6791a6370c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+manager: kfile
+ms.openlocfilehash: 75123271b73c166f87be0ab1a83242736fa966ca
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119986"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009703"
 ---
 # <a name="report-server-web-service-endpoints"></a>Points de terminaison du service Web Report Server
   Le service Web Report Server fournit plusieurs points de terminaison pour la gestion d’un serveur de rapports aussi bien que l'exécution de rapports et la navigation dans ces derniers.  
   
 ## <a name="the-management-endpoints"></a>Points de terminaison de gestion  
- Trois points de terminaison sont disponibles pour la gestion des objets sur un serveur de rapports, <xref:ReportService2005>, <xref:ReportService2006> et <xref:ReportService2010>. Le point de terminaison <xref:ReportService2005> permet de gérer des objets sur un serveur de rapports qui est configuré pour le mode natif. Le point de terminaison <xref:ReportService2006> permet de gérer des objets sur un serveur de rapports qui est configuré pour le mode intégré SharePoint. Le <xref:ReportService2010> point de terminaison fusionne les fonctionnalités de <xref:ReportService2005> et <xref:ReportService2006> et peut gérer des objets sur un serveur de rapports qui sont configurés pour le mode natif ou mode intégré SharePoint.  
+ Trois points de terminaison sont disponibles pour la gestion des objets sur un serveur de rapports, <xref:ReportService2005>, <xref:ReportService2006> et <xref:ReportService2010>. Le point de terminaison <xref:ReportService2005> permet de gérer des objets sur un serveur de rapports qui est configuré pour le mode natif. Le point de terminaison <xref:ReportService2006> permet de gérer des objets sur un serveur de rapports qui est configuré pour le mode intégré SharePoint. Le point de terminaison <xref:ReportService2010> fusionne les fonctionnalités de <xref:ReportService2005> et <xref:ReportService2006> et peut gérer des objets sur un serveur de rapports configuré pour le mode natif ou intégré SharePoint.  
   
 > [!IMPORTANT]  
 >  Lorsqu'un serveur de rapports est configuré pour le mode intégré SharePoint, les API <xref:ReportService2005> renvoient une erreur `rsOperationNotSupportedSharePointMode`. Si le serveur de rapports est configuré pour le mode natif, les API <xref:ReportService2006> retournent une erreur `rsOperationNotSupportedNativeMode`. De la même façon, lorsque les API spécifiques au mode dans <xref:ReportService2010> sont utilisées sur des modes involontaires, les API retourneront les erreurs correspondantes.  
@@ -67,7 +67,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
   
 |Point de terminaison proxy|Description|  
 |--------------------|-----------------|  
-|<xref:ReportService2006>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode intégré SharePoint. **Remarque :** ce point de terminaison est déconseillé dans [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
+|<xref:ReportService2006>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode intégré SharePoint. **Remarque :**  Ce point de terminaison est déconseillé dans [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)].|  
 |<xref:ReportService2010>|Fournit les API permettant de gérer un serveur de rapports configuré pour le mode natif ou intégré SharePoint.|  
 |<xref:ReportExecution2005>|Fournit les API pour l'exécution de rapports et la navigation dans ces derniers.|  
 |<xref:ReportServiceAuthentication>|Fournit les API pour l'authentification des utilisateurs avec un serveur de rapports lorsque l'application Web SharePoint est configurée pour l'authentification par formulaires.|  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: dde3664d-90b5-4b12-969e-39152c86e58a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 511a057721f1dbd8273fe1909c4eaae31dd128f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d9d658bed81c38078f64981cbfb3be6b289ffb22
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119439"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029340"
 ---
 # <a name="edit-a-data-alert-in-alert-designer"></a>Modifier une alerte de données dans le Concepteur d'alertes
   Vous ouvrez la définition d'alerte de données que vous souhaitez modifier dans le Gestionnaire des alertes de données. Uniquement l'utilisateur qui a créé la définition d'alerte peut la modifier. Pour plus d’informations sur l’ouverture du Gestionnaire des alertes de données, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "48119439"
   
      La définition de l'alerte s'ouvre dans le Concepteur d'alertes de données.  
   
-2.  Mettez à jour les règles, les paramètres de planification et les paramètres de courrier électronique. Pour plus d’informations, consultez [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md) et [créer une alerte dans Concepteur d’alertes de données](create-a-data-alert-in-data-alert-designer.md).  
+2.  Mettez à jour les règles, les paramètres de planification et les paramètres de courrier électronique. Pour plus d’informations, consultez [Concepteur d’alertes de données](../../2014/reporting-services/data-alert-designer.md) et [Créer une alerte de données dans le Concepteur d’alertes](create-a-data-alert-in-data-alert-designer.md).  
   
     > [!NOTE]  
     >  Vous ne pouvez pas choisir un flux de données différent. Si vous souhaitez utiliser un flux de données différent, vous devez créer une nouvelle définition d'alerte de données.  

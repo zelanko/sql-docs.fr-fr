@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b3e15a4a-98f8-4dbb-b847-bbcb20327051
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3a5c489125d4a35b5c886ba6d6304b22ceec5c4a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: cfaaa8504a018bad1740c1fb381471e9b4b82878
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375351"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011041"
 ---
 # <a name="creating-a-custom-report-item-run-time-component"></a>Création d'un composant d'exécution d'élément de rapport personnalisé
   Le composant d’exécution d’élément de rapport personnalisé est implémenté en tant que composant [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] à l’aide de tout langage Conforme CLS et est appelé par le processeur de rapports au moment de l’exécution. Les propriétés du composant d'exécution sont définies dans l'environnement de conception en modifiant le composant de conception d'élément de rapport personnalisé y correspondant.  
@@ -137,6 +137,6 @@ namespace Microsoft.Samples.ReportingServices
  [Architecture des éléments de rapports personnalisés](custom-report-item-architecture.md)   
  [Création d’un composant au moment de la conception d’éléments de rapport personnalisé](creating-a-custom-report-item-design-time-component.md)   
  [Bibliothèques de classes d’éléments de rapports personnalisés](custom-report-item-class-libraries.md)   
- [Comment : Déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
+ [Guide pratique pour déployer un élément de rapport personnalisé](how-to-deploy-a-custom-report-item.md)  
   
   

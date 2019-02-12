@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 852b4947-a090-4e54-8555-5a503945ceab
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7317cafbcff5c02322eae2671939f22344ef25bc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a670fe4019d1bc8eebfeb385a63b0c0e58ae61d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098689"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031441"
 ---
 # <a name="web-service-authentication"></a>Authentification du service web
   Vous pouvez utiliser l'authentification Windows ou l'authentification de base pour authentifier les appels effectués auprès du service Web Report Server. Tout client qui effectue des demandes SOAP au serveur de rapports doit implémenter la partie cliente de l'un des protocoles d'authentification pris en charge. Si vous utilisez [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous pouvez utiliser les classes HTTP du code managé pour implémenter l’authentification. L'utilisation de ces API simplifie l'envoi des informations d'authentification et des demandes SOAP.  
@@ -56,7 +56,7 @@ ReportingService service = new ReportingService();
 service.Credentials = new System.Net.NetworkCredential("username", "password", "domain");  
 ```  
   
- Les informations d'identification doivent être définies avant d'appeler chacune des méthodes du service Web Report Server. Si vous ne définissez pas ces informations, vous recevez le code d'erreur HTTP 401 : Accès refusé. Vous devez authentifier le service avant de l’utiliser, mais après avoir défini les informations d’identification, il n’est pas nécessaire de les définir à nouveau si vous continuez à utiliser la même variable de service (telle que *rs*).  
+ Les informations d'identification doivent être définies avant d'appeler chacune des méthodes du service Web Report Server. Si vous ne définissez pas les informations d’identification, vous recevez le code d’erreur erreur HTTP 401 : Accès refusé. Vous devez authentifier le service avant de l’utiliser, mais après avoir défini les informations d’identification, il n’est pas nécessaire de les définir à nouveau si vous continuez à utiliser la même variable de service (telle que *rs*).  
   
 ## <a name="custom-authentication"></a>Authentification personnalisée  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] inclut une API de programmation qui permet aux développeurs de concevoir et de développer des extensions d'authentification personnalisées appelées extensions de sécurité. Pour plus d’informations, consultez [Implémentation d’une extension de sécurité](../../extensions/security-extension/implementing-a-security-extension.md).  

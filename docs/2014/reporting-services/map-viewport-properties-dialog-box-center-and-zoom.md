@@ -12,14 +12,14 @@ f1_keywords:
 - "10506"
 ms.assetid: 642a06f5-293f-48e0-97a6-1489dbefa719
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 205471b262ae041858db72c5db8d9c603eb716b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 883f39c6d7db59fd02aea53096b3502c722dca54
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072029"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026174"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Boîte de dialogue Propriétés du point de vue de la carte, Centrer et zoomer
   Sélectionnez **Centrer et zoomer** dans la boîte de dialogue **Propriétés de la fenêtre d'affichage de la carte** pour définir le centre d'affichage et le facteur de zoom d'une carte. Après avoir spécifié une source de données cartographiques et les limites de la carte que vous souhaitez inclure dans votre rapport, vous pouvez spécifier le centre d'affichage et le facteur de zoom pour contrôler encore davantage l'affichage de la carte. Les options disponibles varient en fonction de la méthode utilisée pour spécifier le centre et les valeurs de zoom. Cliquez sur le bouton **Expression** (*fx*) pour modifier une expression qui définit la valeur de l'option.  
@@ -45,7 +45,7 @@ ms.locfileid: "48072029"
  Sélectionnez une option pour spécifier le centre d'affichage et le niveau de zoom.  
   
  **Vue Centre (X) %**  
- Coordonnée horizontale. La valeur par défaut, 50 %, centre la vue à mi-chemin entre les valeurs horizontales minimale et maximale.  
+ Coordonnée horizontale. La valeur par défaut, 50 %, centre la vue à mi-chemin entre les valeurs horizontales minimale et maximale.  
   
  **Vue Centre (Y) %**  
  Coordonnée verticale. La valeur par défaut, 50 %, centre la vue à mi-chemin entre les valeurs verticales minimale et maximale.  

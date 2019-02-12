@@ -31,15 +31,15 @@ f1_keywords:
 - "10244"
 - sql12.rtp.rptdesigner.seriesproperties.action.f1
 ms.assetid: 2c5d915b-4f97-42cf-b8f1-49ca3ff3d0f9
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: f68471e05ea1fd8e3b2680e81bd3e8512a2c79bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 63c9b4e601faad155d6f843b6ccef2f1cac7698a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370651"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017981"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés relatives aux actions (Générateur de rapports et SSRS)
   Vous pouvez utiliser la boîte de dialogue **Action** pour activer les options de lien hypertexte pour un graphique, une jauge ou des éléments cartographiques prenant les liens en charge. Définissez une action afin qu'un utilisateur puisse cliquer sur le rapport et aller à une URL, à un rapport différent sur le même serveur de rapports ou sur un site SharePoint intégré à un serveur de rapports, ou encore à un emplacement différent dans le même rapport.  
@@ -84,7 +84,7 @@ ms.locfileid: "53370651"
  **Valeur**  
  Tapez ou sélectionnez une valeur à transmettre pour le paramètre nommé dans le rapport d'extraction. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
- **Omettre**  
+ **Omit**  
  Sélectionnez pour empêcher le paramètre de s'exécuter. Par défaut, cette case à cocher est désactivée et n'est pas active. Pour cocher la case, cliquez sur le bouton **Expression** (*fx*) et tapez **True** ou créez une expression. La case est cochée quand vous cliquez sur **OK** dans la boîte de dialogue **Expression** .  
   
  **Atteindre le signet**  

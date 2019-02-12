@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaa0d4a48f1e5feb90fdf2fd8270b287fa7fc97
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145889"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037810"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Concevoir des rapports à l'aide du Concepteur de rapports (SSRS)
   Utilisez le Concepteur de rapports pour créer des rapports et des solutions de création de rapports complets de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le Concepteur de rapports fournit une interface graphique dans laquelle vous pouvez définir les sources de données, les datasets et les requêtes, les positions de mise en page des rapports pour les régions de données et les champs, ainsi que des fonctionnalités interactives telles que les paramètres et les jeux de rapports qui fonctionnent ensemble.  
@@ -34,7 +34,7 @@ ms.locfileid: "48145889"
   
 -   conserver un ensemble de copies principales pour les rapports et les éléments connexes. Après le déploiement, les rapports publiés peuvent être accidentellement modifiés.  
   
- Utilisez les informations de cette rubrique pour concevoir des rapports et des éléments associés pour un projet de rapport dans une solution de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Pour plus d’informations sur les solutions et les projets multiples dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
+ Utilisez les informations de cette rubrique pour concevoir des rapports et des éléments associés pour un projet de rapport dans une solution de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Pour plus d’informations sur les solutions et les projets multiples dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consultez [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
 ##  <a name="bkmk_SharedDataSources"></a> Sources de données partagées  
  Utilisez [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] pour définir et déployer des sources de données partagées pour une solution de création de rapports. Les sources de données partagées peuvent être déployées indépendamment des autres éléments dans un projet à l'aide de les propriétés de **OverwriteDataSources** et de **TargetDataSourceFolder** . Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "48145889"
   
     -   Appuyez sur F5.  
   
-     Si vous utilisez une configuration de projet qui crée le rapport mais ne le déploie pas, le rapport est spécifié dans le `StartItem` propriété de la configuration actuelle s’ouvre dans une fenêtre d’aperçu distincte.  
+     Si vous utilisez une configuration de projet qui crée le rapport mais ne le déploie pas, le rapport spécifié dans la propriété `StartItem` de la configuration actuelle s'ouvre dans une fenêtre d'aperçu distincte.  
   
     > [!NOTE]  
     >  Pour utiliser le mode débogage, vous devez définir un élément de départ. Dans l’Explorateur de solutions, cliquez sur le projet de rapport, cliquez sur **propriétés**, puis, dans `StartItem`, sélectionnez le nom du rapport à afficher.  
@@ -183,12 +183,12 @@ ms.locfileid: "48145889"
 |3|Problèmes de génération mineurs qui modifient si peu la mise en page de rapport qu'ils peuvent passer inaperçus.|  
 |4|Utilisé uniquement pour la publication d'avertissements.|  
   
- Lorsque vous tentez d’afficher un aperçu ou déployez un rapport qui contient les éléments de rapport nouveaux dans [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], telles que des cartes et barres de données, ces éléments de rapport peuvent être supprimés à partir du rapport. Par défaut, la propriété ErrorLevel de la configuration a la valeur 2, ce qui provoquerait l’échec de la génération du rapport si la carte était supprimée. Toutefois, si vous remplacez la valeur de la propriété ErrorLevel par 0 ou 1, la carte est supprimée, un avertissement émis, et le processus de génération continue.  
+ Lorsque vous essayez d'afficher l'aperçu d'un rapport qui contient des éléments de rapport nouveaux dans [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], (tels que les cartes et barres de données), ou de déployer ce rapport, ces éléments de rapport peuvent être supprimés du rapport. Par défaut, la propriété ErrorLevel de la configuration a la valeur 2, ce qui provoquerait l’échec de la génération du rapport si la carte était supprimée. Toutefois, si vous remplacez la valeur de la propriété ErrorLevel par 0 ou 1, la carte est supprimée, un avertissement émis, et le processus de génération continue.  
   
   
 ## <a name="see-also"></a>Voir aussi  
  [Reporting Services dans SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
  [Interroger des outils de conception dans le rapport concepteur SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
- [Déploiement et prise en charge des versions dans SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+ [Déploiement et prise en charge des versions dans les outils de données SQL Server &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

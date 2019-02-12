@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a14cd7f1-7a10-4ec6-af6a-f5f0676a0308
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 70db9a9ff6ed8aa5c9a960ae40009369341b99b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 648b9d561ae340b67ed5e2d1aa878969e5a3bc47
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068039"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016750"
 ---
 # <a name="adding-a-data-source-view-with-nested-tables-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données avec les tables imbriquées (Didacticiel intermédiaire sur l'exploration de données)
   Pour créer un modèle de panier d'achat, vous devez utiliser une vue de source de données qui prend en charge les données associatives. Cette vue de source de données sera également utilisée pour le scénario Sequence Clustering.  
@@ -48,7 +47,7 @@ ms.locfileid: "48068039"
   
 2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**.  
   
-3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] source de données que vous avez créé dans le didacticiel d’exploration de données base de données. Cliquez sur **Suivant**.  
+3.  Sur le **sélectionner une Source de données** page sous **sources de données relationnelles**, sélectionnez le [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)] source de données que vous avez créé dans le didacticiel d’exploration de données base de données. Cliquer sur **Suivant**.  
   
 4.  Sur le **sélectionner des Tables et vues** page, sélectionnez les tables suivantes, puis cliquez sur la flèche droite pour les inclure dans la nouvelle vue de source de données :  
   
@@ -56,7 +55,7 @@ ms.locfileid: "48068039"
   
     -   `vAssocSeqLineItems`  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Sur le **fin de l’Assistant** page, la vue de source de données est nommée par défaut [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]. Remplacez le nom par `Orders`, puis cliquez sur **Terminer**.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "48068039"
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c548fed8-5e04-4faf-8b10-b37c86178056
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dd8afe71a455d64ce10fe6677567c3d78577c8bf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 96c8db6fa6d21c0354047061d708250861f0b0c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201999"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016680"
 ---
 # <a name="issharepointintegrated-property-wmi"></a>Propriété IsSharePointIntegrated (WMI)
   Spécifie si le serveur de rapports s'exécute en mode intégré SharePoint. À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], cette propriété retourne toujours `False`, car en mode SharePoint, les instances de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sont des services partagés SharePoint et ne sont pas contrôlées par les fournisseurs WMI.  
@@ -39,7 +39,7 @@ public Boolean IsSharePointIntegrated;
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

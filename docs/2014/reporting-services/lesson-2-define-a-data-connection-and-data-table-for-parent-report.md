@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5dba0a87f34c794e22fa52274591bbec0db63f86
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 0a19f5fd51cf4e1b24e898ef3016c46edc152920
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358541"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022874"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Leçon 2 : Définir une connexion de données et une table de données pour le rapport parent
   Après avoir créé un projet de site Web à l'aide du modèle de site Web ASP.NET pour Visual C#, l'étape suivante consiste à créer une connexion de données et une table de données pour le rapport parent. Dans ce didacticiel, la connexion de données doit s'établir avec la base de données AdventureWorks2008. Vous avez également la possibilité de vous connecter à la base de données AdventureWorks2012.  

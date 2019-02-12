@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9140c5f2-b340-45a6-9c27-d870d15aafea
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 8a66c6284ea53f65351a964e3f24492c569521af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: bee5ca4ded1b2fd5cbda0712cb766c825b9d0318
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544264"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022360"
 ---
 # <a name="predicting-associations-intermediate-data-mining-tutorial"></a>Prédiction d'associations (Didacticiel sur l'exploration de données intermédiaire)
   Après avoir traité les modèles, vous pouvez utiliser les informations sur les associations stockées dans le modèle pour créer des prédictions. Dans la dernière tâche de cette leçon, vous apprenez comment générer des requêtes de prédiction sur les modèles d'association que vous avez créés. Cette leçon suppose que vous savez comment utiliser le Générateur de requêtes de prédiction et que vous souhaitez apprendre à générer des requêtes de prédiction sur des modèles d'association. Pour plus d’informations comment utiliser le Générateur de requête de prédiction, consultez [Interfaces de requête d’exploration de données](../../2014/analysis-services/data-mining/data-mining-query-tools.md).  
@@ -125,8 +124,8 @@ ms.locfileid: "52544264"
 |Modèle|$SUPPORT|$PROBABILITY|$ADJUSTEDPROBABILITY|  
 |-----------|--------------|------------------|--------------------------|  
 |Sport-100|4334|0.291...|0.252...|  
-|Water Bottle|2866|0,192...|0,175...|  
-|Patch Kit|2113|0,142...|0.132|  
+|Water Bottle|2866|0.192...|0.175...|  
+|Patch Kit|2113|0.142...|0.132|  
   
 ## <a name="working-with-results"></a>Utilisation des résultats  
  En présence d'un grand nombre de tables imbriquées dans les résultats, vous pouvez aplatir les résultats pour faciliter leur affichage. Pour cela, vous pouvez modifier la requête manuellement et ajouter le mot clé `FLATTENED`.  

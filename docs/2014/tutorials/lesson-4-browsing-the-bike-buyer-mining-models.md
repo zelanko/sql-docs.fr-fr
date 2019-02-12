@@ -1,25 +1,24 @@
 ---
-title: 'Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer | Microsoft Docs'
+title: 'Leçon 4 : Exploration des modèles d’exploration de données Bike Buyer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: f04abc5506e78e332b188cfc87c727b0000ca621
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+manager: kfile
+ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147344"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011528"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Leçon 4 : Exploration des modèles d'exploration de données Bike Buyer
-  Dans cette leçon, vous allez utiliser le [SELECT (DMX)](/sql/dmx/select-dmx) instruction pour Explorer le contenu dans l’arbre de décision et clustering d’exploration de données que vous avez créé dans les modèles [leçon 2 : ajout de modèles d’exploration de données à la Structure d’exploration de données prédictive](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
+  Dans cette leçon, vous allez utiliser le [SELECT (DMX)](/sql/dmx/select-dmx) instruction pour Explorer le contenu dans l’arbre de décision et clustering d’exploration de données que vous avez créé dans les modèles [leçon 2 : Ajout de modèles d’exploration de la structure d’exploration de données prédictive](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  
   
  Les colonnes figurant dans un modèle d'exploration de données ne sont pas les colonnes définies par la structure d'exploration de données ; elles forment plutôt un ensemble spécifique de colonnes décrivant des tendances et des modèles identifiés par l'algorithme. Ces colonnes du modèle d’exploration de données sont décrits dans le [de lignes DMSCHEMA_MINING_MODEL_CONTENT](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset) ensemble de lignes de schéma. Par exemple, la colonne MODEL_NAME située dans l'ensemble de lignes du schéma contient le nom du modèle d'exploration de données. Dans le cadre d'un modèle d'exploration de données clustering, la colonne NODE_CAPTION renferme le nom de chaque cluster et la colonne NODE_DESCRIPTION contient une description des caractéristiques de chacun de ces clusters. Vous pouvez parcourir ces colonnes à l’aide de SELECT FROM \<modèle >. Instruction contenue dans DMX. Le recours à cette instruction est également possible si vous souhaitez explorer les données utilisées pour la création du modèle d'exploration de données. Pour utiliser cette instruction, vous devez activer la fonction d'extraction dans la structure d'exploration de données. Pour plus d’informations sur l’instruction, consultez [SELECT FROM &#60;modèle&#62;. CAS &#40;DMX&#41;](/sql/dmx/select-from-model-content-dmx).  
   
@@ -258,6 +257,6 @@ SELECT DISTINCT [<column>]
  Au cours de la leçon suivante, vous allez évaluer si des clients potentiels sont des acheteurs de vélos à l'aide du modèle d'exploration de données d'arbre de décision.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 5 : Exécution des requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
+ [Leçon 5 : L’exécution de requêtes de prédiction](../../2014/tutorials/lesson-5-executing-prediction-queries.md)  
   
   

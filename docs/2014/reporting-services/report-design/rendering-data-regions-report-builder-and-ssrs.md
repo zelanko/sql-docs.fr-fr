@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: daaae13c2bda044a304fbe9c8b8602174b05a679
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057645"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020371"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendu des régions de données (Générateur de rapports et SSRS)
   En plus des comportements de rendu généraux qui s'appliquent à tous les éléments de rapport, les régions de données suivent des comportements de pagination et de rendu supplémentaires. Les règles de rendu spécifiques aux régions de données comprennent la croissance d'une région de données, le rendu de cellules spéciales, telles que la cellule d'angle ou les cellules d'en-tête, le rendu de la lecture de droite à gauche d'une région de données. Cette rubrique présente le rendu des différents composants d'une région de données.  
@@ -42,7 +42,7 @@ ms.locfileid: "48057645"
  L'angle supérieur gauche est appelé angle de tableau matriciel. L'angle de tableau matriciel peut contenir d'autres éléments de rapport mais, si les sauts de page logiques sont insérés dans l'angle, ils sont ignorés lorsque la région de données de tableau matriciel est rendue.  
   
 ### <a name="tablix-body"></a>Corps de tableau matriciel  
- Le corps de tableau matriciel est composé de cellules de tableau matriciel. Le corps de tableau matriciel est rendu en fonction des règles de pagination et des comportements de rendu d'éléments de rapport. Pour plus d’informations, consultez [rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
+ Le corps de tableau matriciel est composé de cellules de tableau matriciel. Le corps de tableau matriciel est rendu en fonction des règles de pagination et des comportements de rendu d'éléments de rapport. Pour plus d’informations, consultez [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md).  
   
 ## <a name="chart-gauge-and-map-data-regions"></a>Régions de données de graphique, jauge et plan  
  Les régions de données de graphique, jauge et plan se comportent comme des images lorsqu'elles sont rendues et affichées dans le corps du rapport. Les valeurs au sein de la région de données peuvent avoir des actions associées, telles que la liaison à un autre rapport ou l'ouverture d'un signet, et ces actions peuvent également être rendues, si le convertisseur le prend en charge.  
@@ -50,7 +50,7 @@ ms.locfileid: "48057645"
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md)   
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](rendering-report-items-report-builder-and-ssrs.md)   
  [Listes &#40;Générateur de rapports et SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   

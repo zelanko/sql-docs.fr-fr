@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,15 +13,15 @@ helpviewer_keywords:
 - Reporting Services, Web service
 - Web service [Reporting Services], tutorials
 ms.assetid: cf688163-4ac0-475b-b6dd-6f2f05b553c6
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 44a9bd204b352ee0ab891dceb65922cc877704c7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+author: markingmyname
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366681"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015620"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Accès au service Web Report Server avec Visual Basic ou Visual C# (didacticiel SSRS)
   Ce didacticiel vous montre comment accéder à partir d’une application créée avec le service Web Report Server [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] ou [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[csprcs](../includes/csprcs-md.md)].  
@@ -52,15 +51,15 @@ ms.locfileid: "53366681"
 > [!NOTE]  
 >  Les exemples ne sont pas installés automatiquement, mais peuvent l'être à tout moment. Pour plus d’informations sur les exemples, consultez [SQL Server Product Samples](https://go.microsoft.com/fwlink/?LinkId=182887).  
   
- **Durée estimée pour suivre le didacticiel :** 60 minutes  
+ **Durée estimée pour effectuer le tutoriel :** 60 minutes  
   
 ## <a name="tasks"></a>Tâches  
- [Leçon 1 : Création du projet de Client de Service Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
+ [Leçon 1 : Création du projet de Client de Service Web](../../2014/tutorials/lesson-1-creating-the-web-service-client-project.md)  
   
  [Leçon 2 : Ajout d’une référence Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
- [Leçon 3 : L’accès au Service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
+ [Leçon 3 : L’accès au Service Web](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
- [Leçon 4 : Exécution de l’Application &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
+ [Leçon 4 : Exécution de l’Application &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   
   

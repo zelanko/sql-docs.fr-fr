@@ -1,27 +1,24 @@
 ---
-title: 'Tâche 5 : Création d’un attribut basé sur un domaine à partir d’Excel | Microsoft Docs'
+title: 'Tâche 5 : Création d’un attribut basé sur un domaine à partir d’Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 07cbc624-2c6b-4568-96e4-f18663a05d80
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 73d495f35e09ce893e9f8e763a7daa83851c1463
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1a2826bb0c9b542837e05b7f600c9ce7d934fd4e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031600"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tâche 5 : Créer un attribut basé sur un domaine à partir d'Excel
-  Dans cette tâche, vous convertissez le **état** attribut de la **fournisseur** entité en tant qu’un **attribut basé sur un domaine**. Après avoir configuré l’attribut d’état pour être basés sur un domaine et le publier dans MDS, une nouvelle entité appelée **état** va être créé sur le serveur MDS avec toutes les valeurs dans la colonne et le **état** attribut de la **Fournisseur** entité sera remplie avec les valeurs à partir de la **état** entité. À présent, le **fournisseurs** modèle doit avoir deux entités : **fournisseur** et **état** où le **état** attribut de la  **Fournisseur** entité est un attribut basé sur le domaine qui dépend de **état** entité.  
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Tâche 5 : Créer un attribut basé sur un domaine à partir d'Excel
+  Dans cette tâche, vous convertissez le **état** attribut de la **fournisseur** entité en tant qu’un **attribut basé sur un domaine**. Après avoir configuré l’attribut d’état pour être basés sur un domaine et le publier dans MDS, une nouvelle entité appelée **état** va être créé sur le serveur MDS avec toutes les valeurs dans la colonne et le **état** attribut de la **Fournisseur** entité sera remplie avec les valeurs à partir de la **état** entité. À présent, le **fournisseurs** modèle doit avoir deux entités : **Fournisseur** et **état** où le **état** attribut de la **fournisseur** entité est un attribut basé sur le domaine qui dépend de **état** entité.  
   
 1.  Basculez vers **Excel** fenêtre a **Cleansed and Matched Suppliers.xlsx** ouvrir.  
   
@@ -44,6 +41,6 @@ ms.locfileid: "48146339"
      ![Excel - liste déroulante liste avec les états](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel - liste déroulante liste des États")  
   
 ## <a name="next-step"></a>Étape suivante  
- [Tâche 6 : Vérification que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [Tâche 6 : Vérifiez que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

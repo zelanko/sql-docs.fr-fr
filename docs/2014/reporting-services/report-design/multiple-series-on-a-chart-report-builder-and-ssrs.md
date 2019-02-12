@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b99e4398-1fba-4824-958f-5c75d10485ea
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 9fe0efd10d2c9c9e972aaf32214d3e799de12d92
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 91222c11318ffd88a152b24b284bdf8b11ed6d7b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160725"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011281"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Plusieurs séries sur un graphique (Générateur de rapports et SSRS)
   Lorsque plusieurs séries sont affichées sur un graphique, vous devez déterminer la meilleure méthode de comparaison de ces séries. Vous pouvez utiliser un graphique empilé pour afficher les proportions relatives de chaque série. Si vous comparez uniquement deux séries qui partagent un axe des abscisses commun (x), utilisez l'axe secondaire. Cela peut s'avérer utile lorsque vous affichez deux séries de données associées (le prix et le volume ou les recettes et les taxes, par exemple). Si le graphique devient illisible, envisagez d'utiliser plusieurs zones de graphique pour produire davantage de séparation visuelle entre chaque série.  

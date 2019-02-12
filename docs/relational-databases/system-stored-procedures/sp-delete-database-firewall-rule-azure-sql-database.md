@@ -2,10 +2,8 @@
 title: sp_delete_database_firewall_rule (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2017
-ms.prod: ''
-ms.prod_service: sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_delete_database_firewall_rule
@@ -21,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4afb4873f05c1ee2a0c0f55c443070bfbf760706
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: eb8ee3482868f64765e7bf90e962c9756eadbdbc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168902"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015100"
 ---
 # <a name="spdeletedatabasefirewallrule-azure-sql-database"></a>sp_delete_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ sp_delete_database_firewall_rule [@name =] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@name =**] **'**_nom_**'**  
+ [**@name =**] **'**_name_**'**  
  Nom du paramètre de pare-feu de niveau base de données qui sera supprimé. *nom* est **nvarchar (128)** sans valeur par défaut. L’identificateur Unicode `N` est facultatif pour [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Uniquement au niveau du serveur principal connexion créée par le processus d’approvisionnement ou une entité de sécurité Azure Active Directory affecté comme administrateur peut supprimer les règles de pare-feu au niveau de la base de données.  
   
 ## <a name="example"></a>Exemple  
@@ -60,7 +58,7 @@ EXECUTE sp_delete_database_firewall_rule N'Example DB Setting 1';
   
 ## <a name="see-also"></a>Voir aussi  
  [Pare-feu de base de données SQL Azure](https://azure.microsoft.com/documentation/articles/sql-database-firewall-configure/)   
- [Comment : configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
+ [Procédure : Configurer les paramètres de pare-feu (base de données SQL Azure)](https://azure.microsoft.com/documentation/articles/sql-database-configure-firewall-settings/)   
  [sp_set_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)   
  [sp_set_database_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)   
  [Sys.database_firewall_rules &#40;base de données SQL Azure&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)  

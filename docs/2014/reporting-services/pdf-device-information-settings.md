@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: 9a4aabe5-dbdc-4884-b999-1200983fee47
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6484ee2466fc58c6d7330822f4f47e43fcdcd955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 185b7c9119dbd5a6105152aadcf1241abc6b82ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148299"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56025040"
 ---
 # <a name="pdf-device-information-settings"></a>Paramètres d'informations de périphérique PDF
   Le tableau suivant répertorie les paramètres d'informations de périphérique qui permettent un rendu des rapports au format PDF.  
   
-|Paramètre|Valeur|  
+|Paramètre|Value|  
 |-------------|-----------|  
 |**Colonnes**|Nombre de colonnes à définir pour le rapport. Cette valeur remplace les paramètres d'origine du rapport.|  
 |**ColumnSpacing**|Espacement entre les colonnes à définir pour le rapport. Cette valeur remplace les paramètres d'origine du rapport.|  
@@ -41,8 +41,8 @@ ms.locfileid: "48148299"
 |`StartPage`|Première page du rapport à restituer. Lorsque ce paramètre a pour valeur `0`, cela signifie que toutes les pages sont restituées. La valeur par défaut est `1`.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transmission de paramètres d’informations de périphérique aux Extensions de rendu](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Transmission de paramètres d'informations de périphérique aux extensions de rendu](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Personnaliser les paramètres d'extension de rendu dans RSReportServer.Config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Informations techniques de référence &#40;SSRS&#41;](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

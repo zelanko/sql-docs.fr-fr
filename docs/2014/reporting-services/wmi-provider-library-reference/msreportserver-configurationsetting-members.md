@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5e21a53a-a2f8-4b35-a8d9-5483519e3857
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 981db90ba9114b26b0581f9b1e3d62561c8b6939
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7acfc09d226c3e352feae42e76d85f1dd8d1a531
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180619"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024170"
 ---
 # <a name="msreportserverconfigurationsetting-members"></a>Membres MSReportServer_ConfigurationSetting
   La classe MSReportServer_ConfigurationSetting contient les propriétés et méthodes suivantes.  
@@ -97,6 +97,6 @@ ms.locfileid: "48180619"
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|Fait en sorte que le service Windows Report Server s'exécute en tant que l'utilisateur Windows spécifié et accorde des autorisations de système de fichiers suffisantes à ce compte pour permettre au serveur de rapports de fonctionner.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
+ [MSReportServer_ConfigurationSetting Class](msreportserver-configurationsetting-class.md)  
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 938a6450-67c1-4eef-80b4-8fdaefeed584
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a042f9f28b9be59f3f72773ae745308fe160853d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 3381439af3f5393b51fdcd88ce13f04ae4160690
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369431"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027070"
 ---
 # <a name="drillthrough-reports-report-builder-and-ssrs"></a>Rapports d'extraction (Générateur de rapports et SSRS)
   Un rapport d'extraction est un rapport que l'utilisateur ouvre en cliquant sur un lien situé dans un autre rapport. Il contient en général des détails sur un élément figurant dans le rapport de synthèse d'origine. Par exemple, dans cette illustration, le rapport de synthèse des ventes répertorie les commandes client et les totaux. Lorsque l'utilisateur clique sur un numéro de commande dans la liste de résumé, un autre rapport s'affiche pour présenter des informations sur la commande en question.  

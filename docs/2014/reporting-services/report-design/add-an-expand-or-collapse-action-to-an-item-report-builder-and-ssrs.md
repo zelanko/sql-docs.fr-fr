@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5d3914822d937d37c0965b69c93c9e06434c044e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 21726a3f57db48a9dd1ec163de7ece3ba5e544c4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223806"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037776"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Ajouter une action Développer ou Réduire à un élément (Générateur de rapports et SSRS)
   Vous pouvez permettre à un utilisateur de développer ou de réduire interactivement des éléments de rapport, ou dans une table ou une matrice, de développer ou de réduire des lignes et des colonnes associées à un groupe. Pour autoriser les utilisateurs à développer ou réduire un élément, définissez les propriétés de visibilité de cet élément. La définition de la visibilité s'effectue dans une Visionneuse de rapports HTML et porte parfois le nom d'action d' *exploration* .  
@@ -97,7 +97,7 @@ ms.locfileid: "48223806"
      ![Exécution du rapport avec développement d’une table](../media/expandcollapse-runreport-reporttable.png "Rapport en cours d’exécution avec développement d’une table")  
   
 ## <a name="see-also"></a>Voir aussi  
- [Action d’extraction &#40;Générateur de rapports et SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Action d’exploration &#40;Générateur de rapports et SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Masquer un élément &#40;Générateur de rapports et SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

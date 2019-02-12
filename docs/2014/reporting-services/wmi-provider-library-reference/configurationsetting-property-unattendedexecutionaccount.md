@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: ab5203ba-c01e-4020-8619-ee290cf9da07
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 631fb365701436ef0e3531aae07f7d553353d265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 59148f4664497d96fcf836c8205434d97a2d6dd5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153809"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028480"
 ---
 # <a name="unattendedexecutionaccount-property-wmi-msreportserverconfigurationsetting"></a>Propriété UnattendedExecutionAccount (WMI MSReportServer_ConfigurationSetting)
   Retourne le compte d'utilisateur dont le serveur de rapports emprunte l'identité lorsqu'il exécute des rapports sans assistance. En lecture seule.  
@@ -45,7 +45,7 @@ public string UnattendedExecutionAccount;
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

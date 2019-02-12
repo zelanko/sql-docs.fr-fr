@@ -12,14 +12,14 @@ helpviewer_keywords:
 - shared data sources [Reporting Services]
 ms.assetid: 2d3428e4-a810-4e66-a287-ff18e57fad76
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 89ac992a05c043dc22dd2ff3ef85d62284b77955
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 3253c8c13b950f661ee7ddc7925aac19221d3173
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181409"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011180"
 ---
 # <a name="create-and-manage-shared-data-sources-reporting-services-in-sharepoint-integrated-mode"></a>Créer et gérer des sources de données partagées (Reporting Services en mode intégré SharePoint)
   Lorsque vous exécutez un rapport à partir d'une bibliothèque SharePoint, les informations de connexion peuvent être définies dans le rapport ou dans un fichier externe lié au rapport. Si les informations de connexion sont incorporées dans le rapport, elles constituent une source de données personnalisée. Si les informations de connexion sont définies dans un fichier externe, elles constituent une source de données partagée. Le fichier externe peut être un fichier de source de données du serveur de rapports (.rsds) ou un fichier de connexion de données Office (.odc).  
@@ -51,7 +51,7 @@ ms.locfileid: "48181409"
   
     -   Sélectionnez **Demander des informations d'identification** pour que l'utilisateur entre ses informations d'identification chaque fois qu'il exécute le rapport. Ne sélectionnez pas cette option si vous voulez planifier un abonnement ou un traitement de données pour ce rapport.  
   
-    -   Sélectionnez **Informations d'identification stockées** , si vous souhaitez accéder aux données via un jeu unique d'informations d'identification. Les informations d'identification sont chiffrées avant d'être stockées. Vous pouvez sélectionner les options appropriées pour déterminer le mode de stockage des informations d'identification. Sélectionnez l'option Utiliser les informations d'identification Windows si les informations d'identification stockées appartiennent à un compte d'utilisateur Windows. Sélectionnez l'option **Définir le contexte d'exécution pour ce compte** pour définir le contexte d'exécution sur le serveur de base de données. Pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bases de données, cette option définit la fonction SETUSER. Pour plus d’informations, consultez [SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql).  
+    -   Sélectionnez **Informations d'identification stockées** , si vous souhaitez accéder aux données via un jeu unique d'informations d'identification. Les informations d'identification sont chiffrées avant d'être stockées. Vous pouvez sélectionner les options appropriées pour déterminer le mode de stockage des informations d'identification. Sélectionnez l'option Utiliser les informations d'identification Windows si les informations d'identification stockées appartiennent à un compte d'utilisateur Windows. Sélectionnez l'option **Définir le contexte d'exécution pour ce compte** pour définir le contexte d'exécution sur le serveur de base de données. Pour les bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cette option définit la fonction SETUSER. Pour plus d’informations, consultez [SETUSER &#40;Transact-SQL&#41;](/sql/t-sql/statements/setuser-transact-sql).  
   
     -   Sélectionnez **Informations d’identification non requises** , si vous voulez spécifier les informations d’identification dans la chaîne de connexion, ou si vous voulez exécuter le rapport à l’aide d’un compte doté de privilèges minimaux et configuré sur le serveur de rapports. Si ce compte n'est pas configuré sur le serveur de rapports, les utilisateurs sont invités à fournir des informations d'identification ; par ailleurs, les opérations planifiées définies pour le rapport ne s'exécutent pas.  
   

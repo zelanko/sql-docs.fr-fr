@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ad14d7005dc01c700b99c4a41cc8f95cac30da02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adfda7de7c700959e375678a8d45b4c522b59577
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078640"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031462"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint (Reporting Services en mode intégré SharePoint)
   Si les paramètres de sécurité par défaut n'offrent pas le niveau d'accès souhaité, vous pouvez créer des niveaux d'autorisation pour fournir un accès aux opérations ou éléments spécifiques d'un serveur de rapports. Les paramètres de sécurité personnalisés peuvent s'avérer utiles si vous souhaitez restreindre l'accès à un rapport particulier.  
@@ -76,7 +76,7 @@ ms.locfileid: "48078640"
  [Utiliser la sécurité intégrée dans Windows SharePoint Services pour les éléments de serveur de rapports](use-built-in-security-in-windows-sharepoint-services-for-report-server-items.md)   
  [Définir des autorisations pour des opérations de serveurs de rapports dans une application web SharePoint](set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
  [Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md)   
- [Site SharePoint et List Permission Reference for Report Server Items](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
+ [Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports](sharepoint-site-and-list-permission-reference-for-report-server-items.md)   
  [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

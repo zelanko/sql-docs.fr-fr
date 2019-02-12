@@ -17,13 +17,13 @@ f1_keywords:
 ms.assetid: b5e9ef21-11b7-4ed2-838e-d8eecdb5c5f0
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 320737c3a84eb1f01899c14dfb2f4c1eefb60856
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 90a8f755b49e0b4f931325de25abea3654cc7d1f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354472"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013960"
 ---
 # <a name="maps-report-builder-and-ssrs"></a>Cartes (Générateur de rapports et SSRS)
   Pour visualiser des données métier sur un arrière-plan géographique, vous pouvez ajouter une carte à votre rapport. Le type de carte que vous sélectionnez dépend des informations que vous souhaitez communiquer dans votre rapport. Vous pouvez ajouter une carte qui affiche uniquement des emplacements géographiques, ou une carte à bulles dans laquelle la taille des bulles varie en fonction du nombre de ménages habitant dans une zone, ou une carte à marqueurs faisant varier le style de marqueur en fonction du produit ayant le plus gros chiffre d'affaires pour chaque magasin, ou encore une carte linéaire pour afficher des itinéraires entre des magasins.  
@@ -274,6 +274,6 @@ ms.locfileid: "53354472"
   
  [Ajouter des emplacements personnalisés à une carte &#40;Générateur de rapports et SSRS&#41;](add-custom-locations-to-a-map-report-builder-and-ssrs.md)  
   
- [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes liés aux rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

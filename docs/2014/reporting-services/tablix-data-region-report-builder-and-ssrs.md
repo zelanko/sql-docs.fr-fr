@@ -9,14 +9,14 @@ ms.technology:
 ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 78c4b9e0674150c83d79c31a313fc44233f032f1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: cb3b78d2770e220f2401bc39ba21c390d6886b4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132432"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040180"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Région de données de tableau matriciel (Générateur de rapports et SSRS)
   Une région de données de tableau matriciel est un élément de rapport à disposition généralisée qui affiche les données du rapport dans des cellules organisées en lignes et colonnes. Les données du rapport peuvent être des données de détail récupérées à partir de la source de données ou des données de détail agrégées organisées en groupes de votre invention. Chaque cellule de tableau matriciel peut contenir un élément de rapport, par exemple une zone de texte ou une image, ou une autre région de données telle qu'une région de tableau matriciel, un graphique ou une jauge. Pour ajouter plusieurs éléments de rapport à une cellule, commencez par ajouter un rectangle pour servir de conteneur. Ajoutez ensuite les éléments de rapport au rectangle.  
@@ -81,7 +81,7 @@ ms.locfileid: "48132432"
 ## <a name="see-also"></a>Voir aussi  
  [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
  [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/controlling-the-tablix-data-region-display-on-a-report-page.md)   
- [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS&#41;](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
+ [Exploration de la souplesse d’une région de données de tableau matriciel &#40;Générateur de rapports et SSRS &#41;](report-design/exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

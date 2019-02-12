@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : déployer une extension pour le traitement des données sur le Concepteur de rapports | Microsoft Docs'
+title: 'Procédure : Déployer une Extension de traitement des données dans le Concepteur de rapports | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,15 +14,15 @@ helpviewer_keywords:
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 242071ac3ee49932f1767d6736cba5c17993ff40
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ded3d366450ab3d5ea3375bb02929b4b52337d0f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088482"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011561"
 ---
-# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Procédure : déployer une extension pour le traitement des données sur le Concepteur de rapports
+# <a name="how-to-deploy-a-data-processing-extension-to-report-designer"></a>Procédure : Déployer une Extension de traitement des données dans le Concepteur de rapports
   Le Concepteur de rapports utilise des extensions pour le traitement des données afin de récupérer et traiter des données pendant que vous concevez des rapports. Vous devez déployer votre assembly d'extension pour le traitement des données sur le Concepteur de rapports en tant qu'assembly privé. Vous devez également créer une entrée dans le fichier de configuration du Concepteur de rapports (RSReportDesigner.config.)  
   
 #### <a name="to-deploy-a-data-processing-extension-assembly"></a>Pour déployer un assembly d'extension pour le traitement des données  

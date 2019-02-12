@@ -1,9 +1,9 @@
 ---
-title: Sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
-ms.prod: ''
-ms.prod_service: sql-data-warehouse, pdw
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ''
 ms.topic: language-reference
 dev_langs:
@@ -13,14 +13,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ed96138b4808448fef815fad90342e671f37ed5f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: edbed9f5f0e8672c4f779431f810099b50470a9a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409589"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016790"
 ---
-# <a name="sysdmpdwexecrequests-transact-sql"></a>Sys.dm_pdw_exec_requests (Transact-SQL)
+# <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   Contient des informations sur toutes les demandes actuellement ou récemment active dans [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Elle répertorie une ligne par/requête de la demande.  
@@ -28,8 +28,8 @@ ms.locfileid: "52409589"
 |Nom de la colonne|Type de données|Description|Plage|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|Clé pour cette vue. Id numérique unique associé à la demande.|Unique pour toutes les requêtes dans le système.|  
-|session_id|**nvarchar(32)**|Id numérique unique associé à la session dans laquelle cette requête a été exécutée. Consultez [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|status|**nvarchar(32)**|État actuel de la demande.|« Running », « Suspendue », « Terminée », « Annulé », « Échec ».|  
+|session_id|**nvarchar(32)**|Id numérique unique associé à la session dans laquelle cette requête a été exécutée. See [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|status|**nvarchar(32)**|État actuel de la demande.|'Running', 'Suspended', 'Completed', 'Cancelled', 'Failed'.|  
 |submit_time|**datetime**|Heure à laquelle la demande a été soumise pour exécution.|Valide **datetime** inférieure ou égale à l’heure actuelle et start_time.|  
 |start_time|**datetime**|Heure de début de l’exécution de la demande.|NULL pour les demandes en file d’attente ; Sinon, valide **datetime** inférieure ou égale à l’heure actuelle.|  
 |end_compile_time|**datetime**|Heure à laquelle le moteur a terminé la compilation de la demande.|NULL pour les requêtes qui n’ont pas été compilés encore ; sinon valide **datetime** start_time inférieure et inférieure ou égale à l’heure actuelle.|

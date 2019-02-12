@@ -15,13 +15,13 @@ f1_keywords:
 ms.assetid: fe541501-cac5-47b1-b95f-c410db789190
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d3be68007b9398b356d86cb0c1395be62c60aac0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2c8f3d7062f0ab720767c13bb486a4060cec8ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166811"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016010"
 ---
 # <a name="formatting-series-colors-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des couleurs des séries sur un graphique (Générateur de rapports et SSRS)
   Reporting Services fournit plusieurs palettes intégrées pour les graphiques. Vous pouvez également définir une palette personnalisée. Par défaut, les graphiques utilisent intégrés **BrightPastel** palette de couleurs pour remplir chaque série. Ces couleurs sont également présentes dans la légende. Lorsque plusieurs séries sont ajoutées au graphique, le graphique assigne une couleur à chaque série, dans l'ordre dans lequel les couleurs ont été définies dans la palette.  
@@ -46,18 +46,18 @@ ms.locfileid: "48166811"
 ## <a name="using-a-color-fill-on-each-series"></a>Utilisation d'une couleur de remplissage pour chaque série  
  Vous pouvez également définir vos propres couleurs en spécifiant une couleur pour chaque série du graphique. Pour ce faire, ouvrez la boîte de dialogue **Propriétés de la série** et définissez la propriété **Couleur** du paramètre **Remplissage**. Cette opération remplace toutes les palettes définies. En général, mieux vaut utiliser une palette personnalisée pour définir vos propres couleurs. En effet, le nombre de séries dans votre dataset peut ne pas être connu jusqu'au traitement du rapport.  
   
- Cette approche est particulièrement adaptée si vous souhaitez définir une couleur de série conditionnelle, basée sur une expression.  Pour plus d’informations, consultez [mise en forme des Points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
+ Cette approche est particulièrement adaptée si vous souhaitez définir une couleur de série conditionnelle, basée sur une expression.  Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Spécifier des couleurs cohérentes pour plusieurs graphiques à base de formes &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)  
   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
- [Mettez en surbrillance les données du graphique en ajoutant des franges &#40;Générateur de rapports et SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
+ [Mettre en surbrillance des données de graphique en ajoutant des bandes &#40;Générateur de rapports et SSRS&#41;](highlight-chart-data-by-adding-strip-lines-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
- [Ajouter des styles de biseau, de relief et de texture à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
+ [Ajouter des styles de biseau, du relief et des textures à un graphique &#40;Générateur de rapports et SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md)   
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Mise en forme de la légende sur un graphique &#40;Générateur de rapports et SSRS&#41;](chart-legend-formatting-report-builder.md)  
   

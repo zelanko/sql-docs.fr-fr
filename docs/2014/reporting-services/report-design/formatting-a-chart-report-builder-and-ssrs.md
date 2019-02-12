@@ -51,13 +51,13 @@ f1_keywords:
 ms.assetid: d3984300-c766-42f8-b7c4-863123d67c99
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: cdaecf8a8090cdd37fde7c199747b5a5e12c390b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cea1d745b677bfa67f6847f2b42ed3701914f1e1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184349"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027160"
 ---
 # <a name="formatting-a-chart-report-builder-and-ssrs"></a>Mise en forme d'un graphique (Générateur de rapports et SSRS)
   Après avoir défini les données et l'aspect de votre graphique, vous pouvez ajouter une mise en forme pour améliorer l'apparence globale et mettre en évidence les principaux points de données. Les options de mise en forme les plus courantes peuvent être modifiées dans la boîte de dialogue Propriétés qui apparaît lorsque vous cliquez avec le bouton droit sur un élément de graphique pour afficher son menu contextuel. Chaque élément de graphique possède sa propre boîte de dialogue. Pour plus d’informations sur les éléments des graphiques, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  

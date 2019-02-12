@@ -1,24 +1,23 @@
 ---
-title: 'Leçon 3 : Ajout et traitement des modèles | Microsoft Docs'
+title: 'Leçon 3 : Ajout et traitement des modèles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: cc29927a-c368-4b8a-bbd0-af89a9f54dc9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: b1ed899f1f96ef2c6bf57179bae8a2aa76f9e5a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166459"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018930"
 ---
-# <a name="lesson-3-adding-and-processing-models"></a>Leçon 3 : ajout et traitement des modèles
+# <a name="lesson-3-adding-and-processing-models"></a>Leçon 3 : Ajout et traitement des modèles
   La structure d'exploration de données initiale que vous avez créée au cours de la leçon précédente contient un modèle d'exploration de données unique qui est basé sur l'algorithme MDT ([!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees). Vous pouvez utiliser ce modèle pour identifier les clients de la campagne de publipostage ciblée. Cependant, pour garantir que votre analyse est complète, il est recommandé de créer des modèles associés à l'aide de différents algorithmes et de comparer leurs résultats. De cette façon vous pouvez également obtenir différentes analyses. Par conséquent, vous allez créer deux modèles, puis les traiter et les déployer.  
   
  Dans cette leçon, vous allez créer un ensemble de modèles d'exploration de données qui aideront à trouver les clients probables parmi la liste des clients potentiels.  
@@ -38,9 +37,9 @@ ms.locfileid: "48166459"
  [Leçon 2 : Création d’une Structure de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Exploration des modèles de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
+ [Leçon 4 : Exploration des modèles de publipostage ciblé &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des modèles d’exploration de données à une Structure &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+ [Ajouter des modèles d’exploration de données à une structure &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

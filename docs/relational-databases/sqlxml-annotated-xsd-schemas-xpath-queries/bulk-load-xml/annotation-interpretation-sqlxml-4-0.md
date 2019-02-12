@@ -1,5 +1,5 @@
 ---
-title: Interprétation des annotations (SQLXML 4.0) | Microsoft Docs
+title: Annotation Interpretation (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - bulk load [SQLXML], annotation interpretations
 - annotated XDR schemas, XML Bulk Load
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5d4f968e0672d8072985479d39ed515e2207df12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 45e1210d5ab8f0cac15bc6c4b0bc6a9e80ef790f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603537"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033070"
 ---
 # <a name="annotation-interpretation-sqlxml-40"></a>Interprétation d'annotation (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,16 +36,16 @@ ms.locfileid: "47603537"
  [SQL : Relationship et la règle de tri par clé &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-relationship-and-key-ordering-rule.md)  
  Décrit comment la **SQL : Relationship** annotation est interprétée de chargement en masse XML.  
   
- [SQL : mappé &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md)  
+ [sql:mapped &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-mapped.md)  
  Décrit comment la **sql : mappé** annotation est interprétée de chargement en masse XML.  
   
  [SQL : limit-champ et SQL : limit-valeur &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-limit-field-and-sql-limit-value.md)  
  Décrit comment la **SQL : limit-champ** et **SQL : limit-valeur** annotations sont interprétées dans le chargement en masse XML.  
   
- [SQL : Overflow-champ &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
+ [sql:overflow-field &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sql-overflow-field.md)  
  Décrit comment la **SQL : Overflow** annotation est interprétée de chargement en masse XML.  
   
- [Autres Annotations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md)  
+ [Other Annotations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-other-annotations.md)  
  Décrit comment les annotations suivantes sont interprétées dans le chargement en masse XML : **SQL : ID-préfixe**, **SQL : use-cdata**, **SQL : url-encode**, **sql : schéma de mappage est**, **SQL : Key-champs**.  
   
   

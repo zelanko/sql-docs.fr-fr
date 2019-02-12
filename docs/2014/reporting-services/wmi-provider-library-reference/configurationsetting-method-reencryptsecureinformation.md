@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8a487497-c207-45b2-8c92-87c58cc68716
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4cf5c75a959c0794fea1d66b137c2370dfb3d6b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b02e6f8bbaa25b3141d602107fa44ca526c9eb31
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217799"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022050"
 ---
 # <a name="reencryptsecureinformation-method-wmi-msreportserverconfigurationsetting"></a>Méthode ReencryptSecureInformation (WMI MSReportServer_ConfigurationSetting)
   Génère une nouvelle clé de chiffrement et rechiffre toutes les informations sécurisées dans le catalogue à l'aide de cette nouvelle clé.  
@@ -58,7 +58,7 @@ public void ReencryptSecureInformation (out Int32 HRESULT, out string[] Extended
   
  Si cette méthode est exécutée sur un ordinateur dans un déploiement avec montée en puissance parallèle, chaque ordinateur dans le déploiement avec montée en puissance parallèle doit être réinitialisé.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

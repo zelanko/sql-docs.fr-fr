@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: e12227fa9390b733ad28ec02a5b31c13a4204c26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512552"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023751"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
   Ce didacticiel vous apprend comment créer deux types de rapports : un rapport d'extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. L'illustration suivante montre les rapports que vous allez créer.  
@@ -98,7 +98,7 @@ ms.locfileid: "52512552"
   
 3.  Dans le volet droit, vérifiez que **Assistant Tableau ou matrice** est sélectionné.  
   
-##  <a name="DConnection"></a> 1 a. Spécifier une connexion de données  
+##  <a name="DConnection"></a> 1a. Spécifier une connexion de données  
  Une connexion de données contient les informations nécessaires pour se connecter à une source de données externe telle qu'un cube Analysis Services ou une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour spécifier une connexion de données, vous pouvez utiliser une source de données partagée sur le serveur de rapports ou créer une source de données incorporée utilisée uniquement dans ce rapport. Dans ce didacticiel, vous allez utiliser une source de données incorporée. Pour en savoir plus sur l’utilisation d’une source de données partagée, consultez [Autres manières d’obtenir une connexion de données &#40;Générateur de rapports&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
@@ -144,7 +144,7 @@ ms.locfileid: "52512552"
   
 14. Cliquer sur **Suivant**.  
   
-##  <a name="DMDXQuery"></a> 1 b. Créer une requête MDX  
+##  <a name="DMDXQuery"></a> 1b. Créer une requête MDX  
  Dans un rapport, vous pouvez utiliser un dataset partagé qui comprend une requête prédéfinie, ou vous pouvez créer un dataset incorporé utilisable uniquement dans votre rapport. Dans ce didacticiel, vous allez créer un dataset incorporé.  
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
@@ -239,7 +239,7 @@ ms.locfileid: "52512552"
   
 6.  Cliquer sur **Suivant**.  
   
-##  <a name="DTotals"></a> 1D. Ajouter des sous-totaux et des totaux  
+##  <a name="DTotals"></a> 1d. Ajouter des sous-totaux et des totaux  
  Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lignes dans lesquelles afficher les valeurs d'agrégat des champs. Vous pouvez également afficher toutes les données ou laisser l'utilisateur développer/réduire les données regroupées de manière interactive.  
   
 #### <a name="to-add-subtotals-and-totals"></a>Pour ajouter des sous-totaux et des totaux  
@@ -250,7 +250,7 @@ ms.locfileid: "52512552"
   
 2.  Cliquer sur **Suivant**.  
   
-##  <a name="DStyle"></a> 1E. Choisir un style  
+##  <a name="DStyle"></a> 1e. Choisir un style  
  Un style spécifie un style de police, un jeu de couleurs et un style de bordure.  
   
 #### <a name="to-specify-a-style"></a>Pour spécifier un style  
@@ -399,7 +399,7 @@ ms.locfileid: "52512552"
   
 2.  Dans la boîte de dialogue **Prise en main** , vérifiez que **Nouveau rapport** est sélectionné, puis cliquez sur **Assistant Tableau ou matrice**.  
   
-##  <a name="MConnection"></a> 1 a. Spécifier une connexion de données  
+##  <a name="MConnection"></a> 1a. Spécifier une connexion de données  
  Vous allez ajouter une source de données incorporée au rapport principal.  
   
 #### <a name="to-create-an-embedded-data-source"></a>Pour créer une source de données incorporée  
@@ -438,7 +438,7 @@ ms.locfileid: "52512552"
   
 14. Cliquer sur **Suivant**.  
   
-##  <a name="MMDXQuery"></a> 1 b. Créer une requête MDX  
+##  <a name="MMDXQuery"></a> 1b. Créer une requête MDX  
  À présent, créez un dataset incorporé. Pour ce faire, vous allez utiliser le concepteur de requêtes afin de créer des filtres, des paramètres et des membres calculés, ainsi que le dataset lui-même.  
   
 #### <a name="to-create-query-filters"></a>Pour créer des filtres de requête  
@@ -555,7 +555,7 @@ ms.locfileid: "52512552"
   
      Les étapes 3 et 4 spécifient les données à afficher dans la matrice.  
   
-##  <a name="MTotals"></a> 1D. Ajouter des sous-totaux et des totaux  
+##  <a name="MTotals"></a> 1d. Ajouter des sous-totaux et des totaux  
  Vous pouvez afficher des sous-totaux et des totaux généraux dans les rapports. Les données dans le rapport principal s'affichent sous la forme d'un indicateur ; vous allez supprimer le total général après avoir exécuté l'assistant.  
   
 #### <a name="to-add-subtotals-and-grand-totals"></a>Pour ajouter des sous-totaux et des totaux généraux  
@@ -566,7 +566,7 @@ ms.locfileid: "52512552"
   
 2.  Cliquer sur **Suivant**.  
   
-##  <a name="MStyle"></a> 1E. Choisir un style  
+##  <a name="MStyle"></a> 1e. Choisir un style  
  Appliquez le style Ardoise au rapport. Il s'agit du même style que celui utilisé par le rapport d'extraction.  
   
 #### <a name="to-specify-a-style"></a>Pour spécifier un style  

@@ -20,13 +20,13 @@ f1_keywords:
 ms.assetid: 7f1f5584-37b4-4fa2-ae44-8988c5f0c744
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: d5c6ca9ae7bca2b9c6dc55f65cbbb95917fd96db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: fc596a1075a2795f9db622bc2cdecc1e7885c0da
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158909"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027250"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Modifier l'affichage des polygones, des lignes et des points à l'aide de règles et de données analytiques (Générateur de rapports et SSRS)
   Les options d'affichage pour les polygones, les lignes et les points d'une couche sont contrôlées en définissant des options pour la couche, en établissant des règles pour les éléments cartographiques de la couche ou en remplaçant des options pour des éléments cartographiques incorporés spécifiques sur une couche.  
@@ -101,15 +101,15 @@ ms.locfileid: "48158909"
 ##  <a name="Distribution"></a> Fonctionnement des options de distribution  
  Pour créer une distribution de valeurs, vous pouvez diviser vos données en plages. Vous spécifiez le type de distribution, le nombre de sous-plages et les valeurs de plage minimale et maximale.  
   
- Dans la liste suivante, supposez que vous avez trois éléments cartographiques et six valeurs analytiques connexes qui varient de 1 à 9 999 avec les valeurs suivantes : 1, 10, 200, 2 000, 4 777, 8 999.  
+ Dans la liste suivante, supposez que vous avez trois éléments cartographiques et six valeurs analytiques connexes qui varient de 1 à 9 999 avec les valeurs suivantes : 1, 10, 200, 2000, 4777, 8999.  
   
--   **EqualInterval.** Créez des plages qui divisent les données en intervalles de plage égaux. Pour l'exemple, les trois plages seraient 0-2999, 3000-5999, 6000-8999. Sous-plage 1 : 1, 10, 200, 500. Sous-plage 2 : 4777. Sous-plage 3 : 8999. Cette méthode ne prend pas en considération la distribution des données. Les valeurs très élevées ou très basses peuvent dénaturer les résultats de distribution.  
+-   **EqualInterval.** Créez des plages qui divisent les données en intervalles de plage égaux. Pour l'exemple, les trois plages seraient 0-2999, 3000-5999, 6000-8999. Sous-plage 1 : 1, 10, 200, 500. Sous-plage 2 : 4777. Sous-plage 3 : 8999. Cette méthode ne prend pas en considération la distribution des données. Les valeurs très élevées ou très basses peuvent dénaturer les résultats de distribution.  
   
--   **EqualDistribution.** Créez des plages qui divisent les données de sorte que chaque plage ait un même nombre d'éléments. Dans l'exemple de données, les trois plages seraient 0-10, 11-500 et 501-8999. Sous-plage 1 : 1, 10. Sous-plage 2 : 200, 500. Sous-plage 3 : 4777, 8999. Cette méthode peut déformer la distribution en créant des divisions couvrant des plages très grandes ou très petites.  
+-   **EqualDistribution.** Créez des plages qui divisent les données de sorte que chaque plage ait un même nombre d'éléments. Dans l'exemple de données, les trois plages seraient 0-10, 11-500 et 501-8999. Sous-plage 1 : 1, 10 : Sous-plage 2 : 200, 500. Sous-plage 3 : 4777, 8999. Cette méthode peut déformer la distribution en créant des divisions couvrant des plages très grandes ou très petites.  
   
 -   **Optimal.** Créez des plages qui ajustent automatiquement la distribution pour créer des sous-plages équilibrées. Le nombre de sous-plages est déterminé par l'algorithme.  
   
--   **Custom.** Spécifiez votre propre nombre de plages pour contrôler la distribution de valeurs. Pour les données d'exemple, vous pouvez spécifier 3 plages : 1-2, 3-8, 9.  
+-   **Custom.** Spécifiez votre propre nombre de plages pour contrôler la distribution de valeurs. Pour les exemples de données, vous pouvez spécifier trois plages : 1-2, 3-8, 9.  
   
  Les valeurs de distribution sont utilisées par les règles pour faire varier les valeurs d'affichage des éléments cartographiques.  
   

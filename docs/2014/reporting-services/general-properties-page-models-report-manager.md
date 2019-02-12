@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 7ad59850-8135-4c4d-95e9-6d705b6d77a8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3f3756fb68ba46b1ac7b34237753dbd57d0b6775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bdc8abebbf713372caf31429082f9d3fda4cfc42
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146249"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018241"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Page Propriétés générales, Modèles (Gestionnaire de rapports)
   La page des propriétés générales des modèles de rapport vous permet de renommer, supprimer, déplacer ou remplacer le fichier de définition de modèle (.smdl). Des informations détaillées sur l'utilisateur qui a créé ou modifié le modèle et la date des modifications sont affichées en haut de la page.  
@@ -38,13 +38,13 @@ ms.locfileid: "48146249"
  **Nom**  
  Spécifie le nom du modèle. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères suivants dans le nom :  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Description**  
  Tapez la description du modèle. Cette description apparaît dans la page Contenu. Elle est visible par les utilisateurs qui sont autorisés à accéder au modèle.  
   
  **Masqué dans la vue liste**  
- Activez cette case à cocher pour masquer l'élément lorsque le dossier est défini en mode d'affichage des listes. L'affichage des listes est un mode de consultation du contenu des dossiers qui est pris en charge dans le Gestionnaire de rapports. Vous pouvez définir cette option dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour définir la manière dont cet élément est affiché dans le Gestionnaire de rapports. Pour plus d’informations sur les modes d’affichage dans le Gestionnaire de rapports, consultez [Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
+ Activez cette case à cocher pour masquer l'élément lorsque le dossier est défini en mode d'affichage des listes. L'affichage des listes est un mode de consultation du contenu des dossiers qui est pris en charge dans le Gestionnaire de rapports. Vous pouvez définir cette option dans [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] pour déterminer le mode d'affichage de cet élément dans le Gestionnaire de rapports. Pour plus d’informations sur les modes d’affichage dans le Gestionnaire de rapports, consultez [Page contenu &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
  **Appliquer**  
  Cliquez pour enregistrer vos modifications.  
@@ -60,7 +60,7 @@ ms.locfileid: "48146249"
   
  La copie que vous avez ouverte est identique à la définition de modèle d'origine qui a été initialement publiée sur le serveur de rapports. Toutes les propriétés qui ont été définies pour le modèle après sa publication (telles que les propriétés de source de données) ne sont pas reflétées dans le fichier que vous ouvrez.  
   
- Vous pouvez modifier la définition du modèle et l'enregistrer dans un nouveau fichier dans un dossier partagé, et télécharger la définition vers le serveur de rapports sous la forme d'un nouvel élément. Les modifications que vous apportez à la définition du modèle lorsqu’il est ouvert dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou une autre application) ne sont pas enregistrées directement sur le serveur de rapports. Vous devez télécharger le fichier pour publier le modèle modifié sur le serveur de rapports.  
+ Vous pouvez modifier la définition du modèle et l'enregistrer dans un nouveau fichier dans un dossier partagé, et télécharger la définition vers le serveur de rapports sous la forme d'un nouvel élément. Les modifications que vous apportez à la définition du modèle lorsqu'il est ouvert dans [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] (ou une autre application) ne sont pas enregistrées directement sur le serveur de rapports. Vous devez télécharger le fichier pour publier le modèle modifié sur le serveur de rapports.  
   
  Notez que, si vous souhaitez ouvrir le modèle de rapport dans le Générateur de modèles, vous devez l'enregistrer en tant que fichier .smdl, puis ajouter le fichier .smdl à un projet dans le Générateur de modèles.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "48146249"
  Cliquez pour régénérer un modèle par défaut qui remplace la version actuelle. Cette option apparaît après que le modèle a été généré. Le modèle généré est basé sur la source de données partagée. Il ne peut pas être personnalisé avant d'être généré. Toutefois, après l'avoir généré, vous pouvez cliquer sur **Modifier** pour ouvrir la définition du modèle, l'enregistrer dans le système de fichiers, puis l'ajouter à un projet dans le Générateur de modèles. Après avoir affiné le modèle, vous pouvez le télécharger sur le serveur de rapports en tant que nouvel élément ou cliquer sur **Mettre à jour** sur cette page pour remplacer le modèle généré par la version que vous avez modifiée dans le Générateur de modèles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Lier un rapport ou un modèle à une Source de données partagée &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Lier un rapport ou un modèle à une source de données partagée &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Aide du serveur de rapports dans Management Studio via la touche F1](tools/report-server-in-management-studio-f1-help.md)  
   
   

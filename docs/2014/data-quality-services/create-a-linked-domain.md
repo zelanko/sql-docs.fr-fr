@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dqs.kb.linkeddomain.f1
 ms.assetid: fd99d422-c53d-4d7c-9cdd-303c703683b6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 114dcb05567fc58cb58ce46cae064f2514c1331e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 800326d3255180087cb7603435e2d0e1a8c8e029
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396500"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033650"
 ---
 # <a name="create-a-linked-domain"></a>Créer un domaine lié
   Cette rubrique explique comment créer un domaine lié dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine lié est créé à partir d'un autre domaine existant, et hérite de toutes les valeurs, règles et propriétés du domaine auquel il est lié, à l'exception du nom et de la description. Vous pouvez gérer un ensemble de domaines liés comme un seul domaine. En liant un domaine à l'autre, vous créez un domaine qui hérite son contenu de l'autre domaine.  

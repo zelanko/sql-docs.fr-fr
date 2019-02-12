@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82fc4ba2-291a-4939-a025-271b8d687c54
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c040f3afade749772ae1560e9f99af8cd4ac0a85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e145eb63a357c628d46ce4c57218cbac1dfc149
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114289"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029143"
 ---
 # <a name="rename-a-report-server-computer"></a>Changement de nom d'un ordinateur serveur de rapports
   Le renommage d’un ordinateur entraîne une modification équivalente du nom pour le serveur web et l’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (si elle se trouve sur le même ordinateur). Dans certains cas, il est possible que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne soit pas accessible après la modification du nom d'un ordinateur. Suivez les instructions de cette rubrique pour reconfigurer un serveur de rapports après un changement de nom d'ordinateur.  
@@ -39,18 +39,18 @@ ms.locfileid: "48114289"
 ## <a name="renaming-a-report-server-computer"></a>Changement de nom d'un ordinateur serveur de rapports  
  Si vous renommez un ordinateur qui exécute un serveur de rapports, procédez comme suit :  
   
-1.  Ouvrez **RSReportServer.config** dans un éditeur de texte et modifiez le `UrlRoot` paramètre afin de refléter le nouveau nom du serveur. Le paramètre `UrlRoot` est utilisé par les extensions de remise pour composer l'URL permettant d'accéder aux éléments stockés sur le serveur de rapports. La modification de l’adresse URL de serveur de rapports requiert que vous mettez à jour le `UrlRoot` paramètre afin que les abonnements continuent à remettre des rapports comme prévu.  
+1.  Ouvrez **RSReportServer.config** dans un éditeur de texte et modifiez le `UrlRoot` paramètre afin de refléter le nouveau nom du serveur. Le paramètre `UrlRoot` est utilisé par les extensions de remise pour composer l'URL permettant d'accéder aux éléments stockés sur le serveur de rapports. Pour changer l'adresse URL du serveur de rapports, vous devez mettre à jour le paramètre `UrlRoot` afin que les abonnements continuent à remettre des rapports comme prévu.  
   
-2.  Dans le même fichier, s’il est défini, modifiez le `ReportServerUrl` paramètre afin de refléter le nouveau nom du serveur. Notez que ce paramètre n'est pas utilisé dans chaque installation. S'il est vide, ne faites rien.  
+2.  Dans le même fichier, s'il est défini, modifiez le paramètre `ReportServerUrl` en fonction du nouveau nom du serveur. Notez que ce paramètre n'est pas utilisé dans chaque installation. S'il est vide, ne faites rien.  
   
     > [!NOTE]  
     >  Si vous utilisez le service WINS (Windows Internet Naming Service) sur le réseau de votre entreprise, le serveur de rapports et le Gestionnaire de rapports peuvent continuer à être disponibles sous le nom précédent pendant une certaine période de temps. WINS mappe une adresse IP à chaque ordinateur qui utilise ce service. Une fois que WINS a actualisé l'adresse IP pour l'ordinateur renommé, l'ancien nom ne peut plus être utilisé pour accéder à un serveur de rapports ou au Gestionnaire de rapports.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichier de Configuration RSReportServer](rsreportserver-config-configuration-file.md)   
- [Gestionnaire de Configuration de Reporting Services &#40;en Mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](reporting-services-report-server-native-mode.md)   
- [Démarrer et arrêter le Service Report Server](start-and-stop-the-report-server-service.md)   
+ [Démarrer et arrêter le service Report Server](start-and-stop-the-report-server-service.md)   
  [Utilitaire rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)  
   
   

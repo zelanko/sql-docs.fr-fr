@@ -14,14 +14,14 @@ helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 42dc3c37a93bf3240b4332915488ad293b68ec66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 59f66df0022d81c3aa12015b265ccd8b7d735190
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184659"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031447"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Sélectionner une couleur (Générateur de rapports et SSRS)
   Utilisez la boîte de dialogue **Sélectionner une couleur** pour spécifier les options de couleur d'un graphique ou de l'arrière-plan d'une cellule ou de plusieurs cellules dans une région de données ou une zone de texte.  
@@ -63,7 +63,7 @@ ms.locfileid: "48184659"
  **Bleu**  
  Valeur décimale pour la composante bleue de la couleur RVB. Utilisez la zone de sélection numérique pour modifier la valeur ou tapez une valeur comprise entre 0 et 255.  
   
- **alpha**  
+ **Alpha**  
  Valeur décimale pour la composante alpha ou de transparence de la couleur. Lorsque cette valeur est activée, vous pouvez utiliser le commutateur de curseur pour ajuster le degré de transparence voulu.  
   
  **Teinte**  
@@ -72,7 +72,7 @@ ms.locfileid: "48184659"
  **Saturation**  
  Valeur décimale pour la saturation de la couleur TSL. Utilisez la zone de sélection numérique pour modifier la valeur ou tapez une valeur comprise entre 0 et 255.  
   
- **Luminosité**  
+ **Brightness**  
  Valeur décimale pour la luminosité de la couleur TSL. Utilisez la zone de sélection numérique pour modifier la valeur ou tapez une valeur comprise entre 0 et 255.  
   
  **Échantillon de couleur**  
@@ -80,6 +80,6 @@ ms.locfileid: "48184659"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Mise en forme de texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
+ [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)  
   
   

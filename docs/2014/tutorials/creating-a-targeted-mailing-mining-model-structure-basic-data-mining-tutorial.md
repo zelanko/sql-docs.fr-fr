@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a9c67f29-0c47-4a5a-862b-db0f5213c2c9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 112b45f2d5797d6797903661de0376bd4d316c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087709"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030800"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Création d'une structure de modèle d'exploration de données pour le publipostage ciblé (Didacticiel sur l'exploration de données de base)
   La première étape dans la création d'un scénario de publipostage ciblé consiste à utiliser l'Assistant Exploration de données dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une structure d'exploration de données et un modèle d'exploration de données du type Arbres de décision.  
@@ -36,11 +35,11 @@ ms.locfileid: "48087709"
     > [!NOTE]  
     >  Si vous obtenez un avertissement indiquant qu'aucun algorithme d'exploration de données n'a été trouvé, les propriétés du projet ne sont peut-être pas configurées correctement. Cet avertissement se produit lorsque le projet tente d'extraire une liste d'algorithmes d'exploration de données du serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et ne trouve pas le serveur. Par défaut, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] utilisera **localhost** que le serveur. Si vous utilisez une instance différente ou une instance nommée, vous devez modifier les propriétés du projet. Pour plus d’informations, consultez [création d’un projet Analysis Services &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  
   
-5.  Cliquez sur **Suivant**.  
+5.  Cliquer sur **Suivant**.  
   
 6.  Sur le **sélectionner une vue de Source de données** page, dans le **vues de sources de données disponibles** volet, sélectionnez **publipostage ciblé**. Vous pouvez cliquer sur **Parcourir** pour afficher les tables dans la vue de source de données, puis cliquez sur **fermer** pour revenir à l’Assistant.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Sur le **spécifier les Types de Table** , sélectionnez la case à cocher dans la **cas** colonne pour que vTargetMail l’utiliser comme la table de cas, puis cliquez sur **suivant**. Vous utiliserez ultérieurement la table ProspectiveBuyer à des fins de test ; ignorez-la pour le moment.  
   
@@ -101,20 +100,20 @@ ms.locfileid: "48087709"
   
     -   **EmailAddress**  
   
-    -   **firstName**  
+    -   **FirstName**  
   
-    -   **lastName**  
+    -   **LastName**  
   
      Vérifiez que ces lignes n'ont des coches que dans la colonne gauche. Ces colonnes seront ajoutées à votre structure mais ne seront pas incluses dans le modèle. Toutefois, une fois le modèle construit, elles seront disponibles pour l'extraction et le test. Pour plus d’informations sur l’extraction, consultez [requêtes d’extraction &#40;d’exploration de données&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
-14. Cliquez sur **Suivant**.  
+14. Cliquer sur **Suivant**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
  [Spécification du Type de données et d’un Type de contenu &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/specifying-the-data-type-and-content-type-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Spécifier les Types de tables &#40;Assistant exploration de données&#41;](../../2014/analysis-services/specify-table-types-data-mining-wizard.md)   
- [Concepteur d’exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Concepteur d'exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algorithme MDT (Microsoft Decision Trees)](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  
   
   

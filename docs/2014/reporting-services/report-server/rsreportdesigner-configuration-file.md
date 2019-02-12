@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: fdcc9c58-3bad-45b3-ba8e-c7816d64f14c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ad5a5660e642c13a604b9fdb1a7e5aac516686ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 8c979e7ee3d3dcb2f4dba96e73b1d38c526bcb7a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211705"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012890"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>fichier de configuration RSReportDesigner
-  Le fichier RSReportDesigner.config stocke les paramètres relatifs aux extensions de rendu et de traitement de données accessibles au Concepteur de rapports. Informations d’extension de traitement des données sont stockées dans le `Data` élément. Les informations d'extension de rendu sont stockées dans l'élément `Render`. L'élément `Designer` énumère les générateurs de requêtes utilisés dans le Concepteur de rapports.  
+  Le fichier RSReportDesigner.config stocke les paramètres relatifs aux extensions de rendu et de traitement de données accessibles au Concepteur de rapports. Les informations d'extension pour le traitement des données sont stockées dans l'élément `Data`. Les informations d'extension de rendu sont stockées dans l'élément `Render`. L'élément `Designer` énumère les générateurs de requêtes utilisés dans le Concepteur de rapports.  
   
  Le Concepteur de rapports utilise la fonctionnalité de serveur de rapports incorporée pour afficher un aperçu des rapports. Des paramètres serveur peuvent être spécifiés pour prendre en charge le traitement local côté serveur des opérations d'aperçu. Pour plus d’informations sur les paramètres de configuration de serveur de rapports, consultez [fichier de Configuration RSReportServer](rsreportserver-config-configuration-file.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "48211705"
 ## <a name="editing-guidelines"></a>Instructions de modification  
  Ne modifiez pas les paramètres de ce fichier sauf si vous déployez ou supprimez une extension personnalisée, désactivez la mise en cache lors de l'aperçu ou inscrivez une nouvelle extension de traitement des données après la mise à niveau d'un Service Pack.  
   
- Des instructions spécifiques relatives à la modification des fichiers de configuration sont disponibles si vous personnalisez des paramètres d'extension de rendu. Pour plus d’informations, consultez [personnaliser les paramètres d’Extension de rendu dans RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md).  
+ Des instructions spécifiques relatives à la modification des fichiers de configuration sont disponibles si vous personnalisez des paramètres d'extension de rendu. Pour plus d’informations, consultez [Personnaliser les paramètres d’extension de rendu dans RSReportServer.Config](../customize-rendering-extension-parameters-in-rsreportserver-config.md).  
   
  Pour obtenir des instructions sur la modification des fichiers de configuration, consultez [Modifier un fichier de configuration Reporting Services &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
@@ -62,9 +62,9 @@ ms.locfileid: "48211705"
 |`SessionCookies`|Spécifie si le serveur de rapports utilise des cookies de navigateur pour conserver les informations de session. Les valeurs valides sont `true` et `false`. La valeur par défaut est `true`. Si vous définissez cette valeur sur « false », les données de session sont stockées dans la base de données **reportservertempdb** .|  
 |`SessionTimeoutMinutes`|Spécifie la durée pendant laquelle un cookie de session est valable. La valeur par défaut est 3 minutes.|  
 |`PolicyLevel`|Spécifie le fichier de configuration de la stratégie de sécurité. La valeur valide est Rspreviewpolicy.config. Pour plus d'informations, consultez [Using Reporting Services Security Policy Files](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
-|`CacheDataForPreview`|Lorsque la valeur `True`, le Concepteur de rapports stocke les données dans un fichier de cache sur l’ordinateur local. Les valeurs valides sont `True` (valeur par défaut) et `False`. Pour plus d’informations, consultez [Aperçu des rapports](../reports/previewing-reports.md).|  
-|`Render`|Énumère les extensions de rendu accessibles au Concepteur de rapports à des fins d'aperçu. L'ensemble des extensions de rendu utilisé pour l'aperçu doit être identique à celui installé avec le serveur de rapports.<br /><br /> `Name` Spécifie l’extension de rendu. Si vous appelez une extension de rendu à l'aide de code, utilisez cette valeur pour appeler une extension spécifique.<br /><br /> `Type` Spécifie le nom de classe qualifié complet de la classe d’extension, ainsi que le nom de la bibliothèque, séparés par des virgules.<br /><br /> `Visible` spécifie si le nom apparaît dans une interface utilisateur. Cette valeur peut être `True` (valeur par défaut) ou `False`. Si la valeur est `True`, le nom apparaît dans les interfaces utilisateur.|  
-|`Data`|Énumère les extensions de traitement des données accessibles au Concepteur de rapports pour se connecter aux sources de données qui alimentent les rapports. L'ensemble d'extensions de traitement de données utilisé dans le Concepteur de rapports peut être identique à celui installé avec le serveur de rapports. Si vous ajoutez ou supprimez des extensions personnalisées, consultez [déploiement d’une Extension de traitement des données](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` spécifie l'extension pour le traitement des données.<br /><br /> `Type` Spécifie le nom de classe qualifié complet de la classe d’extension, ainsi que le nom de la bibliothèque, séparés par des virgules.|  
+|`CacheDataForPreview`|Si vous affectez la valeur `True` à ce paramètre, le Concepteur de rapports stocke les données dans un fichier mis en cache sur l'ordinateur local. Les valeurs valides sont `True` (valeur par défaut) et `False`. Pour plus d’informations, consultez [Aperçu des rapports](../reports/previewing-reports.md).|  
+|`Render`|Énumère les extensions de rendu accessibles au Concepteur de rapports à des fins d'aperçu. L'ensemble des extensions de rendu utilisé pour l'aperçu doit être identique à celui installé avec le serveur de rapports.<br /><br /> `Name` spécifie l'extension de rendu. Si vous appelez une extension de rendu à l'aide de code, utilisez cette valeur pour appeler une extension spécifique.<br /><br /> `Type` spécifie le nom de classe complet de la classe d'extension et le nom de la bibliothèque séparés par une virgule.<br /><br /> `Visible` spécifie si le nom apparaît dans une interface utilisateur. Cette valeur peut être `True` (par défaut) ou `False`. Si la valeur est `True`, le nom apparaît dans les interfaces utilisateur.|  
+|`Data`|Énumère les extensions de traitement des données accessibles au Concepteur de rapports pour se connecter aux sources de données qui alimentent les rapports. L'ensemble d'extensions de traitement de données utilisé dans le Concepteur de rapports peut être identique à celui installé avec le serveur de rapports. Si vous ajoutez ou que vous supprimez des extensions personnalisées, consultez [Déploiement d’une extension pour le traitement des données](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` spécifie l'extension pour le traitement des données.<br /><br /> `Type` spécifie le nom de classe complet de la classe d'extension et le nom de la bibliothèque séparés par une virgule.|  
 |`Designer`|Énumère les générateurs de requêtes accessibles au Concepteur de rapports. Les générateurs de requête fournissent une interface utilisateur pour générer des requêtes permettant d'extraire des données pour les rapports. Ils peuvent varier en fonction des extensions de traitement de données. Par défaut, Reporting Services fournit une interface utilisateur d'outil de données visuelle pour toutes les extensions de traitement de données qui sont incluses dans le produit. Toutefois, si vous développez ou utilisez des extensions de traitement de données tierces, d'autres interfaces de générateurs de requête peuvent être utilisées.|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|Spécifie la durée d'attente pour le démarrage du service de traitement des aperçus avant l'affichage d'un message d'erreur. La valeur par défaut est 15 secondes.|  
   

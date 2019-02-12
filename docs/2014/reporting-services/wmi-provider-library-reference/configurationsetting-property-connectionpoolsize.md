@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b80c8e5d-b725-4fe4-aec6-02fb18ec4434
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f4f555db5b87e2233229215da5b800c0eedea61c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 589069aebe2275fd06e58385fd85cffaaa3c1222
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172079"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016130"
 ---
 # <a name="connectionpoolsize-property-wmi-msreportserverconfigurationsetting"></a>Propriété ConnectionPoolSize (WMI MSReportServer_ConfigurationSetting)
   Taille du pool de connexions qu’utilise le serveur de rapports pour communiquer avec l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge la base de données du serveur de rapports. En lecture seule.  
@@ -45,7 +45,7 @@ public UInt32 ConnectionPoolSize;
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

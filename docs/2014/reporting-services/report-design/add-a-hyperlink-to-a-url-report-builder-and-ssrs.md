@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1219998db8ec07de6e03aa14b3aefaee6515e235
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366171"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010190"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
   Vous pouvez ajouter un lien hypertexte à un élément de rapport lorsque vous souhaitez que les utilisateurs soient en mesure de cliquer sur un lien dans un rapport et d'ouvrir un navigateur vers l'URL que vous spécifiez. Un lien hypertexte peut être une URL statique ou une expression qui est évaluée en une URL. Si une base de données comprend un champ avec des URL, vous pouvez insérer ce champ dans l'expression de façon à produire une liste dynamique de liens hypertexte dans le rapport. Vous pouvez ajouter des liens hypertexte aux zones de texte, aux images, aux graphiques et aux jauges. Vous devez vous assurer que l'utilisateur a accès à l'URL que vous fournissez.  
@@ -28,7 +28,7 @@ ms.locfileid: "53366171"
   
  Vous pouvez ajouter un lien hypertexte à une URL vers tout élément qui a une propriété **Action** , par exemple une zone de texte, une image ou une série calculée dans un graphique. Lorsque l'utilisateur clique sur l'élément de rapport en question, l'action que vous définissez est exécutée. Pour plus d’informations, consultez [Boîte de dialogue Propriétés relatives aux actions &#40;Générateur de rapports et SSRS&#41;](../action-properties-dialog-box-report-builder-and-ssrs.md) et [Spécification de chemins d’accès à des éléments externes &#40;Générateur de rapports et SSRS&#41;](specifying-paths-to-external-items-report-builder-and-ssrs.md).  
   
- Pour rapidement commencer, consultez [didacticiel : Mettre en forme texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).  
+ Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  Les liens qui sont associés à des champs de dataset peuvent être vulnérables à des opérations de falsification à des fins malveillantes. Pour plus d’informations, consultez [Sécuriser des rapports et des ressources](../security/secure-reports-and-resources.md) dans la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][documentation en ligne](https://go.microsoft.com/fwlink/?LinkId=154888) sur msdn.microsoft.com.  
