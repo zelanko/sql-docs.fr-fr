@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 30576bc7ff9cb2049dc035a9f7b4efa152f5f3b5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192139"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031982"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Page des propriétés des sources de données (Gestionnaire de rapports)
   La page de propriétés des sources de données permet de définir la connexion du rapport actif à une source de données externe. Vous pouvez remplacer les informations de connexion à la source de données publiées à l'origine avec le rapport. Si plusieurs sources de données sont utilisées avec un rapport, chacune d'elles possède sa propre section dans la page de propriétés. Les sources de données sont répertoriées dans l'ordre dans lequel elles sont définies dans le rapport.  
@@ -67,17 +67,17 @@ ms.locfileid: "48192139"
  **Informations d’identification fournies par l’utilisateur qui exécute le rapport**  
  Chaque utilisateur doit fournir un nom d'utilisateur et un mot de passe pour accéder à la source de données. Vous pouvez définir le texte de l'invite qui demande les informations d'identification aux utilisateurs. La chaîne de texte par défaut est la suivante : « Entrer un nom d'utilisateur et un mot de passe pour accéder à la source de données ».  
   
- Activez la case à cocher **Utiliser en tant qu’informations d’identification Windows lors de la connexion à la source de données** si les informations d’identification fournies par l’utilisateur sont des informations d’identification de l’authentification Windows. Ne sélectionnez pas cette case à cocher si vous utilisez l’authentification de base de données (par exemple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentification).  
+ Activez la case à cocher **Utiliser en tant qu’informations d’identification Windows lors de la connexion à la source de données** si les informations d’identification fournies par l’utilisateur sont des informations d’identification de l’authentification Windows. N'activez pas cette case à cocher si vous utilisez une authentification dans la base de données (par exemple, l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
  **Informations d’identification stockées en toute sécurité dans le serveur de rapports**  
  Stocke un nom d'utilisateur et un mot de passe chiffrés dans la base de données du serveur de rapports. Sélectionnez cette option pour exécuter un rapport sans assistance (par exemple, des rapports qui sont démarrés par des planifications ou des événements au lieu des actions utilisateur). Si vous utilisez la sécurité par défaut, le nom d'utilisateur doit être un compte de domaine Windows. Spécifiez le compte sous ce format : \<domaine >\\< nom d’utilisateur\>. Le compte que vous spécifiez doit disposer d'autorisations d'ouverture d'une session locale sur l'ordinateur qui héberge la source de données utilisée par le rapport.  
   
- Activez la case à cocher **Utiliser en tant qu'informations d'identification Windows lors de la connexion à la source de données** si les informations d'identification sont des informations d'identification de l'authentification Windows. Ne sélectionnez pas cette case à cocher si vous utilisez l’authentification de base de données (par exemple, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] authentification).  
+ Activez la case à cocher **Utiliser en tant qu'informations d'identification Windows lors de la connexion à la source de données** si les informations d'identification sont des informations d'identification de l'authentification Windows. N'activez pas cette case à cocher si vous utilisez une authentification dans la base de données (par exemple, l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ).  
   
- Sélectionnez **Emprunter l'identité de l'utilisateur authentifié une fois la connexion établie à la source de données** pour autoriser la délégation des informations d'identification, mais uniquement si une source de données prend en charge l'emprunt d'identité. Pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bases de données, cette option définit la fonction SETUSER.  
+ Sélectionnez **Emprunter l'identité de l'utilisateur authentifié une fois la connexion établie à la source de données** pour autoriser la délégation des informations d'identification, mais uniquement si une source de données prend en charge l'emprunt d'identité. Pour les bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cette option définit la fonction SETUSER.  
   
 > [!TIP]  
->  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend en charge uniquement les informations d’identification du compte Windows. Sélectionnez donc les deux options « Utilisent comme informations d’identification Windows lors de la connexion à la source de données » et « Emprunter l’identité de l’utilisateur authentifié après la réalisation d’une connexion à la source de données » pour un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source de données.  
+>  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]prend en charge uniquement les informations d’identification du compte Windows. Sélectionnez donc les deux options Utiliser comme informations d'identification Windows lors de la connexion à la source de données et Emprunter l'identité de l'utilisateur authentifié une fois la connexion établie à la source de données pour une source de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  **Sécurité intégrée de Windows**  
  Utilise les informations d'identification Windows de l'utilisateur actuel pour accéder à la source de données. Sélectionnez cette option lorsque les informations d'identification utilisées pour accéder à la source de données sont identiques à celles utilisées pour ouvrir une session sur le domaine réseau. Cette option convient mieux lorsque l'authentification Kerberos est activée pour votre domaine ou que la source de données se trouve sur le même ordinateur que le serveur de rapports. Si Kerberos n'est pas activé, les informations d'identification Windows peuvent être transmises à un autre ordinateur. Si des connexions supplémentaires à des ordinateurs sont requises, vous obtiendrez une erreur à la place des données attendues.  
@@ -95,7 +95,7 @@ ms.locfileid: "48192139"
  Cliquez pour enregistrer vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les Sources de données de rapport](report-data/manage-report-data-sources.md)   
+ [Gérer des sources de données de rapports](report-data/manage-report-data-sources.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   

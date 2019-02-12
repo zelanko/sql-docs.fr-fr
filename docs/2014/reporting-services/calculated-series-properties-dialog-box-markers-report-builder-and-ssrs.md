@@ -12,17 +12,17 @@ f1_keywords:
 - sql12.rtp.rptdesigner.calculatedseriesproperties.markers.f1
 ms.assetid: 3a0bb42a-af1b-4228-bc9d-f9a02bb3b987
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 0ffa3f0b1709754dc7fd4269ca403a86856b4863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 8e4d6eef27b79e86f8994dd6e79d3de83c809f48
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48053415"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029830"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la série calculée, Marqueurs (Générateur de rapports et SSRS)
-  Sélectionnez **Marqueurs** dans la boîte de dialogue **Propriétés de la série calculée** pour définir le mode d'affichage des marqueurs sur chaque point de données d'une série. Les marqueurs ne sont disponibles que pour certains types de graphique. Les types de graphique suivants prennent en charge les marqueurs : en aires, à barres, histogramme, en courbes, polaire et nuage de points. Pour plus d’informations sur les fonctionnalités des graphiques, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
+  Sélectionnez **Marqueurs** dans la boîte de dialogue **Propriétés de la série calculée** pour définir le mode d'affichage des marqueurs sur chaque point de données d'une série. Les marqueurs ne sont disponibles que pour certains types de graphique. Les types de graphique suivants prennent en charge les marqueurs : Zone, barre, colonne, ligne, polaire et à nuages de points. Pour plus d’informations sur les fonctionnalités des graphiques, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
   
 ## <a name="options"></a>Options  
  **Type de marqueur**  
@@ -46,7 +46,7 @@ ms.locfileid: "48053415"
  [Mise en forme des étiquettes des axes sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Définir les couleurs d’un graphique à l’aide d’une palette &#40;Générateur de rapports et SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Tracer des données sur un axe secondaire &#40;Générateur de rapports et SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
- [Mise en forme des Points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
+ [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Ajouter une moyenne mobile à un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  
   
   

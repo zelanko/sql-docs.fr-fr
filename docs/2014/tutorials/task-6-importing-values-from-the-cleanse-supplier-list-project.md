@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fec0deef-a729-4ff1-b709-72d2b3f407ac
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5ac003c18ae36f4cd2d58a1355df16d6d2f9b066
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0780636d3bcaecfe0519192bd450bb538d78bbf9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359851"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042920"
 ---
 # <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Tâche 6 : Importation de valeurs depuis le projet de nettoyage de la liste des fournisseurs
   Dans cette tâche, vous allez importer les connaissances de qualité des données collectées pendant le processus de nettoyage. Consultez [l’importation des valeurs de projet de nettoyage dans un domaine](https://msdn.microsoft.com/library/hh479581.aspx) rubrique pour plus d’informations. Vous également exporter la base de connaissances dans un fichier DQS avant de publier la mise à jour **fournisseurs** base de connaissances.  
@@ -68,6 +65,6 @@ ms.locfileid: "53359851"
 14. Cliquez sur **OK** dans le message de confirmation.  
   
 ## <a name="next-step"></a>Étape suivante  
- [Leçon 3 : Correspondance des données pour supprimer les doublons de la liste des fournisseurs](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [Leçon 3 : Correspondance des données pour supprimer les doublons de la liste des fournisseurs](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

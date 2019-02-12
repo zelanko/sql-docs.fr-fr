@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8083fef109483f423cfabf0ecf2c256c405cd11c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 54a32a3961336f22fed462cd955027f3387a1e70
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352473"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032700"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Sources de données prises en charge par Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] récupère des données de rapport dans des sources de données par l’intermédiaire d’une couche de données extensibles et modulaire qui utilise des extensions pour le traitement des données. Pour récupérer des données de rapport à partir d’une source de données, vous devez sélectionner une extension pour le traitement des données qui prend en charge le type de source de données, la version du logiciel s’exécutant sur la source de données ainsi que la plateforme de la source de données ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]32 bits ou 64 bits).  
@@ -94,13 +94,13 @@ ms.locfileid: "53352473"
   
 -   Nom du fournisseur de données/extension pour le traitement des données : L'extension pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ou tout autre fournisseur de données qui correspond au type de source de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sélectionné. Cette colonne répond à la question : « Quand je sélectionne un type de source de données, quelle extension pour le traitement des données ou fournisseur de données correspondant est utilisé ? »  
   
--   Version du fournisseur de données sous-jacent (facultatif) : certains types de sources de données prennent en charge plusieurs fournisseurs de données. Il peut s'agir de versions différentes du même fournisseur ou de différentes implémentations tierces pour un type de fournisseur de données. Le nom du fournisseur apparaît souvent dans la chaîne de connexion une fois que vous avez configuré une source de données. Cette colonne répond à la question : « Après avoir sélectionné le type de source de données, quel fournisseur de données faut-il sélectionner dans le **propriétés de connexion** boîte de dialogue ? »  
+-   Version du fournisseur de données sous-jacent (facultatif) : certains types de sources de données prennent en charge plusieurs fournisseurs de données. Il peut s'agir de versions différentes du même fournisseur ou de différentes implémentations tierces pour un type de fournisseur de données. Le nom du fournisseur apparaît souvent dans la chaîne de connexion une fois que vous avez configuré une source de données. Cette colonne répond à la question : « Après avoir sélectionné le type de source de données, quel fournisseur de données faut-il sélectionner dans la boîte de dialogue **Propriétés de connexion** ? »  
   
--   Source de données  *\<plateforme >*: plateforme de la source de données prise en charge par l'extension pour le traitement des données ou le fournisseur de données pour la source de données cible. Cette colonne répond à la question : « Est-ce que cette extension pour le traitement des données ou ce fournisseur de données peut extraire des données d'une source de données sur ce type de plateforme ? »  
+-   *\<plateforme>* de la source de données : plateforme de la source de données prise en charge par l'extension pour le traitement des données ou le fournisseur de données pour la source de données cible. Cette colonne répond à la question : « Est-ce que cette extension pour le traitement des données ou ce fournisseur de données peut extraire des données d'une source de données sur ce type de plateforme ? »  
   
 -   Version de la source de données : version de la source de données cible prise en charge par le fournisseur de données ou par l'extension pour le traitement des données. Cette colonne répond à la question : « Cette extension pour le traitement des données ou ce fournisseur de données peut-il extraire des données à partir de cette version de la source de données ? »  
   
--   RS  *\<plateforme >*: plateformes pour le serveur de rapports et le client de création de rapports où vous pouvez installer une extension pour le traitement des données ou un fournisseur de données personnalisé(e). Les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrées sont fournies avec toutes les installations de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Une extension pour le traitement des données personnalisée ou un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être compilé en mode natif pour une plateforme spécifique. Cette colonne répond à la question : « Cette extension pour le traitement des données ou ce fournisseur de données peut-il être installé sur ce type de plateforme ? »  
+-   *\<plateforme>* du serveur de rapports : plateformes pour le serveur de rapports et le client de création de rapports où vous pouvez installer une extension pour le traitement des données ou un fournisseur de données personnalisé(e). Les extensions pour le traitement des données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrées sont fournies avec toutes les installations de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Une extension pour le traitement des données personnalisée ou un fournisseur de données [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] doit être compilé en mode natif pour une plateforme spécifique. Cette colonne répond à la question : « Cette extension pour le traitement des données ou ce fournisseur de données peut-il être installé sur ce type de plateforme ? »  
   
 ###  <a name="DataSourcesTable"></a> Types de sources de données  
   
@@ -314,7 +314,7 @@ ms.locfileid: "53352473"
  Les informations d'identification que vous pouvez spécifier dépendent de l'implémentation que l'application cliente utilise. Pour plus d’informations, consultez [Type de connexion de liste SharePoint &#40;SSRS&#41;](sharepoint-list-connection-type-ssrs.md).  
   
 ###  <a name="XML"></a> Extension pour le traitement des données XML  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension pour le traitement des données XML qui vous permet d’utiliser des données XML dans un rapport. Les données peuvent être récupérées à partir d'un document XML, d'un service Web ou d'une application Web accessible via une URL. Pour plus d’informations, consultez [Type de connexion XML &#40;SSRS&#41;](xml-connection-type-ssrs.md). Pour plus d’informations sur le concepteur de requêtes associé, consultez la section relative au concepteur de requêtes textuel dans [Interface utilisateur du concepteur de requêtes graphique](graphical-query-designer-user-interface.md). Pour obtenir des exemples, consultez [Reporting Services : À l’aide de XML et des Sources de données de Service Web](https://go.microsoft.com/fwlink/?LinkId=81654).  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension pour le traitement des données XML qui vous permet d’utiliser des données XML dans un rapport. Les données peuvent être récupérées à partir d'un document XML, d'un service Web ou d'une application Web accessible via une URL. Pour plus d’informations, consultez [Type de connexion XML &#40;SSRS&#41;](xml-connection-type-ssrs.md). Pour plus d’informations sur le concepteur de requêtes associé, consultez la section relative au concepteur de requêtes textuel dans [Interface utilisateur du concepteur de requêtes graphique](graphical-query-designer-user-interface.md). Pour obtenir des exemples, consultez [Reporting Services : Utilisation de sources de données de services web et XML](https://go.microsoft.com/fwlink/?LinkId=81654).  
   
  [Retourner à la table des sources de données](#DataSourcesTable)  
   

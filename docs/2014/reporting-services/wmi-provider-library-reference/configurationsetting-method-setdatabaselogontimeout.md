@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b8773596-5b98-4355-a4ab-4412e1317c67
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1d3d01b2042d163fdee45a87b7341a1a3b6dd3ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d864f76898e98c904fd35682984bf60b97c77c9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126777"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042330"
 ---
 # <a name="setdatabaselogontimeout-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetDatabaseLogonTimeout (WMI MSReportServer_ConfigurationSetting)
   Spécifie la valeur de délai par défaut pour l'établissement d'une connexion à la base de données du serveur de rapports.  
@@ -51,7 +51,7 @@ public void SetDatabaseLogonTimeout(Int32 LogonTimeout,
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

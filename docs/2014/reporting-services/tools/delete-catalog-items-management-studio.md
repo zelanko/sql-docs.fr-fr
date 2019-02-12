@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: b0599e01-6dc3-4484-80d4-022a412e0ebd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13a64b2cd44f5df1dfe8201b56c351937849364a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 089bd1fbfeaf86c2f5a96e2cfcf790a90431a452
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48141539"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036530"
 ---
 # <a name="delete-catalog-items-management-studio"></a>Suppression des éléments du catalogue (Management Studio)
   Utilisez cette page pour supprimer des planifications partagées et des définitions de rôle.  
   
- Si vous supprimez une planification partagée utilisée par plusieurs rapports et abonnements, le serveur de rapports créera des planifications individuelles pour chaque rapport et abonnement qui a précédemment utilisé la planification partagée. Chaque nouvelle planification individuelle contiendra la date, l'heure et la périodicité spécifiée dans la planification partagée. Notez que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne fournit pas de gestion centrale des planifications individuelles. Si vous supprimez une planification partagée, vous devez désormais gérer les informations de planification pour chaque élément individuel. Avant de supprimer une planification partagée, utilisez la [page rapports](schedule-properties-reports-page.md) pour déterminer les rapports qui utilisent actuellement la planification partagée.  
+ Si vous supprimez une planification partagée utilisée par plusieurs rapports et abonnements, le serveur de rapports créera des planifications individuelles pour chaque rapport et abonnement qui a précédemment utilisé la planification partagée. Chaque nouvelle planification individuelle contiendra la date, l'heure et la périodicité spécifiée dans la planification partagée. Notez que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne fournit pas de gestion centrale des planifications individuelles. Si vous supprimez une planification partagée, vous devez désormais gérer les informations de planification pour chaque élément individuel. Avant de supprimer une planification partagée, utilisez la [page Rapports](schedule-properties-reports-page.md) pour déterminer les rapports qui l'utilisent actuellement.  
   
  Pour les définitions de rôle, vous ne pouvez supprimer que celles qui ne sont pas utilisées activement dans une attribution de rôle. Si vous essayez de supprimer un rôle qui est actuellement en cours d'utilisation, le serveur de rapports ne supprimera pas le rôle et un message d'erreur s'affichera à cet effet. Si cette page contient une définition de rôle unique qui n'est pas actuellement en cours d'utilisation, elle est supprimée lorsque vous cliquez sur **OK**. Si cette page contient plusieurs rôles, vous ne pouvez pas sélectionner les rôles à conserver ou supprimer. Toutes les définitions de rôle inutilisées sont supprimées lorsque vous cliquez sur **OK**.  
   
@@ -48,6 +48,6 @@ ms.locfileid: "48141539"
 ## <a name="see-also"></a>Voir aussi  
  [Supprimer un élément &#40;Management Studio&#41;](delete-an-item-management-studio.md)   
  [Aide du serveur de rapports dans Management Studio accessible par la touche F1](report-server-in-management-studio-f1-help.md)   
- [Créer, modifier et supprimer des planifications](../subscriptions/create-modify-and-delete-schedules.md)  
+ [Create, Modify, and Delete Schedules](../subscriptions/create-modify-and-delete-schedules.md)  
   
   

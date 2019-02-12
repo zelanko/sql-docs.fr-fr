@@ -22,13 +22,13 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 81ad874c4d7e3c417058b2403c1307893300feaa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 231fbf5211654d126f09ceb048501c7b2eacf0c3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118779"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039580"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Cette rubrique est consacrée à la création, la modification et la suppression des planifications.  
@@ -200,8 +200,8 @@ ms.locfileid: "48118779"
  Si vous supprimez une planification partagée utilisée par plusieurs rapports et abonnements, le serveur de rapports créera des planifications individuelles pour chaque rapport et abonnement qui a précédemment utilisé la planification partagée. Chaque nouvelle planification individuelle contiendra la date, l'heure et la périodicité spécifiée dans la planification partagée. Notez que [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne fournit pas de gestion centrale des planifications individuelles. Si vous supprimez une planification partagée, vous devez désormais gérer les informations de planification pour chaque élément individuel. Avant de supprimer une planification partagée, utilisez la [page Rapports](../tools/schedule-properties-reports-page.md) pour déterminer les rapports qui l'utilisent actuellement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Planifications](schedules.md)   
- [Suspendre et reprendre des planifications partagées](pause-and-resume-shared-schedules.md)   
+ [Schedules](schedules.md)   
+ [Pause and Resume Shared Schedules](pause-and-resume-shared-schedules.md)   
  [Mettre en cache un rapport &#40;Gestionnaire de rapports&#41;](../report-server/cache-a-report-report-manager.md)   
  [Ajouter un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)  
   

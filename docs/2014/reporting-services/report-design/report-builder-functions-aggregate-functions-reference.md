@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 7d3a6843ea643ac447e42a1d78f5f2e7b3bc09da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 51dac05945565e7952141b247f3f3e326e7ad9d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194115"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040880"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Référence aux fonctions d'agrégation (Générateur de rapports et SSRS)
   Pour inclure des valeurs agrégées dans votre rapport, vous pouvez utiliser des fonctions d'agrégation intégrées dans des expressions. La fonction d'agrégation par défaut pour les champs de type numérique est SUM. Vous pouvez modifier l'expression et utiliser une fonction d'agrégation intégrée différente ou spécifier une étendue différente. L'étendue identifie le jeu de données à utiliser pour le calcul.  
@@ -56,7 +56,7 @@ ms.locfileid: "48194115"
 |**Fonction**|**Description**|  
 |------------------|---------------------|  
 |[Avg](report-builder-functions-avg-function.md)|Retourne la moyenne de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée dans l'étendue donnée.|  
-|[Nombre](report-builder-functions-count-function.md)|Retourne le nombre de valeurs non Null spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.|  
+|[Compter](report-builder-functions-count-function.md)|Retourne le nombre de valeurs non Null spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.|  
 |[CountDistinct](report-builder-functions-countdistinct-function.md)|Retourne le nombre de toutes les valeurs non Null distinctes spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.|  
 |[Max](report-builder-functions-max-function.md)|Retourne la valeur maximale de toutes les valeurs numériques non Null spécifiées par l'expression, dans le contexte de l'étendue donnée. Vous pouvez utiliser cette fonction pour spécifier une valeur maximale d'axe de graphique afin de contrôler l'échelle.|  
 |[Min](report-builder-functions-min-function.md)|Retourne la valeur minimale de toutes les valeurs numériques non Null spécifiées par l'expression, dans le contexte de l'étendue donnée. Vous pouvez utiliser cette fonction pour spécifier une valeur minimale d'axe de graphique afin de contrôler l'échelle.|  
@@ -73,18 +73,18 @@ ms.locfileid: "48194115"
 |Emplacement dans le rapport|Champs|Paramètres|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |En-tête de page<br /><br /> Pied de page|Oui|Oui|Un au plus<br /><br /> Remarque 1|Oui|Oui|Oui|Oui|  
-|Corps|Oui<br /><br /> Remarque 2|Oui|Seuls les éléments dans l'étendue active ou une étendue contenante<br /><br /> Remarque 3|non|Oui|Oui|Oui|  
-|Paramètre de rapport|non|Seuls les premiers paramètres dans la liste<br /><br /> Remarque 4|non|non|non|non|non|  
-|Champ|Oui|Oui|non|non|non|non|non|  
-|Paramètre de requête|non|Oui|non|non|non|non|non|  
-|Expression de groupe|Oui|Oui|non|non|Oui|non|non|  
-|Expression de tri|Oui|Oui|non|non|Oui|Oui<br /><br /> Remarque 5|non|  
-|Expression de filtre|Oui|Oui|non|non|Oui|Oui<br /><br /> Remarque 6|non|  
-|Code|non|Oui<br /><br /> Remarque 7|non|non|non|non|non|  
-|Report.Language|non|Oui|non|non|non|non|non|  
-|Variables|Oui|Oui|non|non|Oui|Étendue active ou contenante|non|  
-|Agrégats|Oui|Oui|Uniquement dans l'en-tête de page/le pied de page|Uniquement dans les agrégats d'élément de rapport|Oui|non|non|  
-|Fonctions de recherche|Oui|Oui|Oui|non|Oui|non|non|  
+|Corps|Oui<br /><br /> Remarque 2|Oui|Seuls les éléments dans l'étendue active ou une étendue contenante<br /><br /> Remarque 3|Non|Oui|Oui|Oui|  
+|Paramètre de rapport|Non|Seuls les premiers paramètres dans la liste<br /><br /> Remarque 4|Non|Non|Non|Non|Non|  
+|Champ|Oui|Oui|Non|Non|Non|Non|Non|  
+|Paramètre de requête|Non|Oui|Non|Non|Non|Non|Non|  
+|Expression de groupe|Oui|Oui|Non|Non|Oui|Non|Non|  
+|Expression de tri|Oui|Oui|Non|Non|Oui|Oui<br /><br /> Remarque 5|Non|  
+|Expression de filtre|Oui|Oui|Non|Non|Oui|Oui<br /><br /> Remarque 6|Non|  
+|Code|Non|Oui<br /><br /> Remarque 7|Non|Non|Non|Non|Non|  
+|Report.Language|Non|Oui|Non|Non|Non|Non|Non|  
+|Variables|Oui|Oui|Non|Non|Oui|Étendue active ou contenante|Non|  
+|Agrégats|Oui|Oui|Uniquement dans l'en-tête de page/le pied de page|Uniquement dans les agrégats d'élément de rapport|Oui|Non|Non|  
+|Fonctions de recherche|Oui|Oui|Oui|Non|Oui|Non|Non|  
   
 -   **Remarque 1.** ReportItems doit exister dans la page de rapport rendue, sinon sa valeur est Null. Si la visibilité d'un élément de rapport dépend d'une expression qui prend la valeur False, l'élément de rapport n'existe pas dans la page.  
   
@@ -107,13 +107,13 @@ ms.locfileid: "48194115"
   
 |Contexte|RunningValue|RowNumber|Première<br /><br /> Dernière|Previous|Sum et autres fonctions Presort|Agrégats ReportItem|Fonctions de recherche|Fonction d'agrégation|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valeur d'exécution|non|non|non|non|Oui|non|Oui|non|  
-|Première<br /><br /> Dernière|non|non|non|non|Oui|non|non|non|  
-|Previous|Oui|Oui|Oui|non|Oui|non|Oui|non|  
-|Sum et autres fonctions Presort|non|non|non|non|Oui|non|Oui|non|  
-|Agrégats ReportItem|non|non|non|non|non|non|non|non|  
-|Fonctions de recherche|Oui|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|non|non|  
-|Fonction d'agrégation|non|non|non|non|non|non|non|non|  
+|Valeur d'exécution|Non|Non|Non|Non|Oui|Non|Oui|Non|  
+|Première<br /><br /> Dernière|Non|Non|Non|Non|Oui|Non|Non|Non|  
+|Previous|Oui|Oui|Oui|Non|Oui|Non|Oui|Non|  
+|Sum et autres fonctions Presort|Non|Non|Non|Non|Oui|Non|Oui|Non|  
+|Agrégats ReportItem|Non|Non|Non|Non|Non|Non|Non|Non|  
+|Fonctions de recherche|Oui|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Non|Non|  
+|Fonction d'agrégation|Non|Non|Non|Non|Non|Non|Non|Non|  
   
 -   **Remarque 1.** Les fonctions d’agrégation sont autorisées uniquement à l’intérieur de l’expression *Source* d’une fonction Lookup si cette dernière n’est pas contenue dans un agrégat. Les fonctions d'agrégation ne sont pas autorisées à l'intérieur des expressions *Destination* ou *Result* d'une fonction Lookup.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48194115"
   
 |**Fonction**|**Description**|  
 |------------------|---------------------|  
-|[RowNumber](report-builder-functions-rownumber-function.md)|Retourne un nombre évolutif du nombre de lignes pour l'étendue spécifiée. Le `RowNumber` fonction redémarre le comptage à 1, et non à 0.|  
+|[RowNumber](report-builder-functions-rownumber-function.md)|Retourne un nombre évolutif du nombre de lignes pour l'étendue spécifiée. La fonction `RowNumber` redémarre le comptage à 1, et non à 0.|  
 |[RunningValue](report-builder-functions-runningvalue-function.md)|Retourne un agrégat cumulé de toutes les valeurs numériques non Null spécifiées par l'expression, évaluée pour l'étendue donnée.|  
   
 ##  <a name="RetrievingRowCounts"></a> Récupération de nombres de lignes  
@@ -138,17 +138,17 @@ ms.locfileid: "48194115"
 |**Fonction**|**Description**|  
 |------------------|---------------------|  
 |[Fonction Lookup](report-builder-functions-lookup-function.md)|Retourne une valeur à partir d'un dataset pour une expression spécifiée.|  
-|[LookupSet, fonction](report-builder-functions-lookupset-function.md)|Retourne un ensemble de valeurs à partir d'un dataset pour une expression spécifiée.|  
-|[Multilookup, fonction](report-builder-functions-multilookup-function.md)|Retourne le jeu de valeurs de première correspondance pour un ensemble de noms à partir d'un dataset contenant des paires nom/valeur.|  
+|[Fonction LookupSet](report-builder-functions-lookupset-function.md)|Retourne un ensemble de valeurs à partir d'un dataset pour une expression spécifiée.|  
+|[Fonction Multilookup](report-builder-functions-multilookup-function.md)|Retourne le jeu de valeurs de première correspondance pour un ensemble de noms à partir d'un dataset contenant des paires nom/valeur.|  
   
 ##  <a name="RetrievingPostsortValues"></a> Récupération de valeurs dépendantes du tri  
- Les fonctions intégrées suivantes retournent la première valeur, la dernière valeur ou la valeur précédente dans une étendue donnée. Ces fonctions dépendent de l'ordre de tri des valeurs de données. Utilisez ces fonctions pour, par exemple, rechercher les première et dernière valeurs d'une page afin de créer un en-tête de page de type dictionnaire. Utilisez `Previous` pour comparer une valeur d’une ligne avec la valeur de la ligne précédente dans une étendue spécifique, par exemple, pour rechercher en pourcentage sur les valeurs de l’année dans une table.  
+ Les fonctions intégrées suivantes retournent la première valeur, la dernière valeur ou la valeur précédente dans une étendue donnée. Ces fonctions dépendent de l'ordre de tri des valeurs de données. Utilisez ces fonctions pour, par exemple, rechercher les première et dernière valeurs d'une page afin de créer un en-tête de page de type dictionnaire. Utilisez `Previous` pour comparer une valeur d'une ligne avec la valeur de la ligne précédente dans une étendue spécifique pour, par exemple, rechercher des valeurs d'une année sur l'autre en pourcentage dans une table.  
   
 |**Fonction**|**Description**|  
 |------------------|---------------------|  
 |[Première](report-builder-functions-first-function.md)|Retourne la première valeur dans l'étendue donnée de l'expression spécifiée.|  
 |[Dernière](report-builder-functions-last-function.md)|Retourne la dernière valeur dans l'étendue donnée de l'expression spécifiée.|  
-|[Précédent](report-builder-functions-previous-function.md)|Retourne la valeur ou la valeur d'agrégation spécifiée pour l'instance précédente d'un élément dans l'étendue spécifiée.|  
+|[Previous](report-builder-functions-previous-function.md)|Retourne la valeur ou la valeur d'agrégation spécifiée pour l'instance précédente d'un élément dans l'étendue spécifiée.|  
   
 ##  <a name="RetrievingServerAggregates"></a> Récupération d'agrégats de serveurs  
  La fonction intégrée suivante récupère des agrégats personnalisés du fournisseur de données. Par exemple, un type de la source de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous permet d'extraire des agrégats calculés sur le serveur de source de données pour une utilisation dans un en-tête de groupe.  
@@ -165,15 +165,15 @@ ms.locfileid: "48194115"
 |[InScope](report-builder-functions-inscope-function.md)|Indique si l'instance active d'un élément se trouve dans l'étendue spécifiée.|  
   
 ##  <a name="RetrievingRecursiveLevel"></a> Récupération du niveau récursif  
- La fonction intégrée suivante récupère le niveau actuel lorsqu'une hiérarchie récursive est traitée. Utiliser le résultat de cette fonction avec la `Padding` propriété dans une zone de texte pour contrôler le niveau de retrait d’une hiérarchie visuelle pour un groupe récursif. Pour plus d’informations, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+ La fonction intégrée suivante récupère le niveau actuel lorsqu'une hiérarchie récursive est traitée. Utilisez le résultat de cette fonction avec la propriété `Padding` dans une zone de texte pour contrôler le niveau de retrait d'une hiérarchie visuelle pour un groupe récursif. Pour plus d’informations, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 |Fonction|Description|  
 |--------------|-----------------|  
 |[Level](report-builder-functions-level-function.md)|Retourne le niveau de profondeur actuel d'une hiérarchie récursive.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Étendue des expressions pour les totaux, les agrégats et les Collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
+ [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f8439c48f7379b983b46edcaf1111606c1a3fbcc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193199"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040640"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
   Vous pouvez créer des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour remettre les rapports à partir d’une application web SharePoint qui est intégrée à un serveur de rapports en mode SharePoint. Les abonnements peuvent remettre des rapports dans une bibliothèque de documents, un dossier de fichiers ou sous forme de courrier électronique. Cette rubrique résume les conditions requises et les étapes de création d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -31,11 +31,11 @@ ms.locfileid: "48193199"
   
  Lorsque vous créez un abonnement, il existe trois méthodes pour spécifier sa remise :  
   
--   **Bibliothèque de documents**: vous pouvez créer un abonnement qui remet un document basé sur le rapport d'origine dans une bibliothèque située sur le même site SharePoint que le rapport d'origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
+-   **Bibliothèque de documents**: Vous pouvez créer un abonnement qui remet un document basé sur le rapport d'origine dans une bibliothèque située sur le même site SharePoint que le rapport d'origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
   
--   **Dossier de fichiers :** vous pouvez remettre un document basé sur le rapport d'origine dans un dossier partagé du système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
+-   **Dossier de fichiers :** Vous pouvez remettre un document basé sur le rapport d'origine dans un dossier partagé du système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
   
--   **Courrier électronique :** si le serveur de rapports est configuré pour utiliser l’extension de remise par messagerie du serveur de rapports, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte de réception. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
+-   **Adresse de messagerie :** Si le serveur de rapports est configuré pour utiliser l'extension de remise par messagerie du serveur de rapports, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte de réception. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
   
  **Dans cette rubrique :**  
   
@@ -135,7 +135,7 @@ ms.locfileid: "48193199"
   
 8.  Dans **Contenu du rapport**, spécifiez si vous souhaitez incorporer le rapport réel dans le corps du message.  
   
-     Le format de rendu et le navigateur déterminent si le rapport est incorporé ou joint. Si votre navigateur prend en charge les formats HTML 4.0 et MHTML et si vous sélectionnez le format de rendu Archive Web, le rapport est incorporé au message. Tous les autres formats de rendu (CSV, PDF, etc.) remettent les rapports sous forme de pièces jointes. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne vérifie pas la taille de la pièce jointe ou du message avant d'envoyer le rapport. Si la pièce jointe ou le message dépasse la limite maximale autorisée par votre serveur de messagerie, le rapport ne sera pas remis. Choisissez une des autres options de remise (URL ou notification) pour les rapports volumineux.  
+     Le format de rendu et le navigateur déterminent si le rapport est incorporé ou joint. Si votre navigateur prend en charge les formats HTML 4.0 et MHTML et si vous sélectionnez le format de rendu Archive Web, le rapport est incorporé au message. Tous les autres formats de rendu (CSV, PDF, etc.) remettent les rapports sous forme de pièces jointes. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ne vérifie pas la taille de la pièce jointe ou du message avant d'envoyer le rapport. Si la pièce jointe ou le message dépasse la limite maximale autorisée par votre serveur de messagerie, le rapport ne sera pas remis. Choisissez une des autres options de remise (URL ou notification) pour les rapports volumineux.  
   
 9. Dans **Événement de remise**, spécifiez la planification ou l'événement qui doit déclencher l'exécution de l'abonnement. Vous pouvez créer une planification personnalisée, sélectionner une planification partagée (le cas échéant) ou exécuter l'abonnement lors de l'actualisation des données pour un rapport s'exécutant avec des données d'instantanés. Pour plus d’informations sur les planifications et le traitement des données, consultez [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md).  
   
@@ -158,7 +158,7 @@ ms.locfileid: "48193199"
 3.  Activez la case à cocher en regard de l'abonnement, puis cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Abonnements et remises &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
+ [Abonnements et remise &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Remise par e-mail dans Reporting Services](e-mail-delivery-in-reporting-services.md)   
  [Remise par partage de fichiers dans Reporting Services](file-share-delivery-in-reporting-services.md)   
  [Remise à une bibliothèque SharePoint dans Reporting Services](sharepoint-library-delivery-in-reporting-services.md)   

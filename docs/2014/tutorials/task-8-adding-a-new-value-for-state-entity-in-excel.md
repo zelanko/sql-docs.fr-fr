@@ -4,21 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- data-quality-services
-- integration-services
-- master-data-services
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 04fe6fa0a9036ca3835fd4bc0afcb0e35854fd85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222155"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032030"
 ---
 # <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tâche 8 : Ajout d'une nouvelle valeur pour l'entité État dans Excel
   Dans cette tâche, vous allez ajouter une valeur pour l'entité État dans Excel et publier la modification sur le serveur MDS.  
@@ -29,11 +26,11 @@ ms.locfileid: "48222155"
   
 2.  Dans **Excel**, cliquez sur le **données maîtres** onglet dans le menu, puis cliquez sur **afficher l’Explorateur** sur le ruban.  
   
-3.  Dans le **Explorateur de données de référence**, sélectionnez **fournisseurs** pour **modèle**. Vous devez voir deux entités : **fournisseur** et **état** dans la liste des entités.  
+3.  Dans le **Explorateur de données de référence**, sélectionnez **fournisseurs** pour **modèle**. Vous devez voir deux entités : **Fournisseur** et **état** dans la liste des entités.  
   
 4.  Double-cliquez sur **état** dans la liste. Tous les membres de la **état** entité à partir de MDS doit être affichée dans la feuille de calcul.  
   
-5.  Maintenant, ajoutez une ligne à la fin avec les valeurs suivantes : **Caroline du Nord** pour **nom** et **NC** pour **Code**. Les codes de couleur différencient tous les nouveaux enregistrements, ou les enregistrements mis à jour, des autres enregistrements.  
+5.  Maintenant, ajoutez une ligne à la fin, avec les valeurs suivantes : **Caroline du Nord** pour **nom** et **NC** pour **Code**. Les codes de couleur différencient tous les nouveaux enregistrements, ou les enregistrements mis à jour, des autres enregistrements.  
   
      ![Excel - ajouter North Carolina aux États](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - ajouter North Carolina aux États")  
   

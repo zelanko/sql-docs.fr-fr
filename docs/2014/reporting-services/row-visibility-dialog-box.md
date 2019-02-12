@@ -12,14 +12,14 @@ f1_keywords:
 - "10126"
 ms.assetid: 557ecf70-62b1-47f5-9322-0ebdc809d018
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 8da7ce8a8f967a702f169ed6519f7d187f42a8e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 5782db21318108e9460217c200af79ea427cc4bf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091873"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028130"
 ---
 # <a name="row-visibility-dialog-box"></a>Boîte de dialogue Visibilité de ligne
   Utilisez la boîte de dialogue **Visibilité de ligne** pour afficher ou masquer la ligne sélectionnée lorsque le rapport est exécuté pour la première fois ou pour utiliser un autre élément de rapport pour activer/désactiver la visibilité de la ligne.  
@@ -31,13 +31,13 @@ ms.locfileid: "48091873"
  **Afficher**  
  Sélectionnez cette option pour afficher l'élément de rapport.  
   
- **Masquer**  
+ **Hide**  
  Sélectionnez cette option pour masquer l'élément de rapport.  
   
  **Afficher ou masquer en fonction d’une expression**  
  Sélectionnez cette option pour faire varier la visibilité initiale à l'aide d'une expression.  
   
- Tapez une expression qui prend la valeur d’un `Boolean` valeur `True` pour masquer l’élément et `False` pour afficher l’élément. Cliquez sur le bouton Expression (**fx**) pour modifier l’expression.  
+ Tapez une expression prenant la valeur `Boolean` `True` pour masquer l'élément et la valeur `False` pour l'afficher. Cliquez sur le bouton Expression (**fx**) pour modifier l’expression.  
   
  **Affichage peut être activé ou désactivé par cet élément de rapport**  
  Choisissez cette option pour afficher une image bascule qui permet à l'utilisateur d'afficher ou de masquer cet élément de rapport dans une visionneuse de rapports HTML.  

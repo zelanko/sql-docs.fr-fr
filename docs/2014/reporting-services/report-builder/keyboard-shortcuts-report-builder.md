@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ad184e1faf16a06de851475d4f96fc89d398b758
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: dd30631b5ecdcfb55fcb571bd8bf3c1eb39713dc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081949"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031940"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
   Lorsque vous travaillez dans le Générateur de rapports, vous avez accès à toutes les touches de raccourci de navigation fournies par l'environnement Windows. Vous pouvez sélectionner l'un des différents schémas de configuration du clavier standard.  

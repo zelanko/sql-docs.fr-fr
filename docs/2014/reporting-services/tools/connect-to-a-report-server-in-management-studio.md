@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c875ff87-ee7d-443a-a702-bdb4b6c27c6e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70c4c6cb0a72a4feffad2323dc1dd22534560f3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 450ecc2a61951e0a6b0fa587002ed99a5fb59c4d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099039"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041370"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Se connecter à un serveur de rapports dans Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] fournit l’Explorateur d’objets, qui vous permet de vous connecter à n’importe quel serveur de la famille [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et de parcourir son contenu sous forme graphique. Pour Reporting Services, vous pouvez utiliser l'Explorateur d'objets pour effectuer les opérations suivantes :  
@@ -50,7 +50,7 @@ ms.locfileid: "48099039"
   
 4.  Sélectionnez le type d'authentification. Si vous utilisez l'authentification Windows, vous devez vous connecter à l'aide de vos informations d'identification. Si vous sélectionnez l'authentification de base ou l'authentification par formulaire, tapez les informations relatives au compte et au mot de passe.  
   
-5.  Cliquez sur **Se connecter**. Le serveur de rapports apparaît dans l'Explorateur d'objets.  
+5.  Cliquer sur **Se connecter**. Le serveur de rapports apparaît dans l'Explorateur d'objets.  
   
 6.  Cliquez avec le bouton droit sur le nœud du serveur afin de définir les propriétés système et les paramètres par défaut du serveur. Pour plus d’informations, consultez [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](set-report-server-properties-management-studio.md).  
   
@@ -64,7 +64,7 @@ ms.locfileid: "48099039"
   
 4.  Sélectionnez le type d'authentification. Si vous utilisez l'authentification Windows, vous devez vous connecter à l'aide de vos informations d'identification. Si vous sélectionnez l'authentification de base ou l'authentification par formulaire, tapez les informations relatives au compte et au mot de passe.  
   
-5.  Cliquez sur **Se connecter**. Le serveur de rapports apparaît dans l'Explorateur d'objets.  
+5.  Cliquer sur **Se connecter**. Le serveur de rapports apparaît dans l'Explorateur d'objets.  
   
 6.  Cliquez avec le bouton droit sur le nœud du serveur afin de définir les propriétés système et les paramètres par défaut du serveur. Pour plus d’informations, consultez [Définir les propriétés du serveur de rapports &#40;Management Studio&#41;](set-report-server-properties-management-studio.md).  
   
@@ -101,15 +101,15 @@ ms.locfileid: "48099039"
   
  Quand vous indiquez [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en tant que type de serveur dans la boîte de dialogue **Se connecter au serveur** , vous pouvez spécifier un nom de serveur de rapports ou un point de terminaison au service web.  
   
-|Se connecter à|Tâches|Permissions|  
+|Se connecter à|Tâches|Autorisations|  
 |----------------|-----------|-----------------|  
 |Serveur de rapports en mode natif, connecté en tant qu'instance par défaut ou nommée :<br /><br /> \<nom du serveur>\<_instance><br /><br /> La connexion au serveur de rapports est établie à travers le fournisseur WMI de Report Server.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
-|Serveur de rapports en mode natif, connecté en tant qu'instance par défaut ou nommée, via le point de terminaison au service Web Report Server :<br /><br /> http://\<servername > / reportserver<br /><br /> La spécification de l'URL du serveur de rapports offre un autre moyen de se connecter au serveur de rapports.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
-|Serveur de rapports en mode intégré SharePoint, connecté via le site SharePoint :<br /><br /> http://\<webserver > /\<SharePointSite >|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez des planifications partagées définies pour le site auquel vous êtes connecté.<br /><br /> Consultez les niveaux d'autorisation définis pour le site auquel vous êtes connecté.|Niveau d'autorisation Contrôle total pour le site SharePoint auquel vous êtes connecté.|  
+|Serveur de rapports en mode natif, connecté en tant qu'instance par défaut ou nommée, via le point de terminaison au service Web Report Server :<br /><br /> http://\<servername>/reportserver<br /><br /> La spécification de l'URL du serveur de rapports offre un autre moyen de se connecter au serveur de rapports.|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez les planifications partagées.<br /><br /> Créez, modifiez ou supprimez les définitions de rôles.|Assignées au rôle Administrateur système.|  
+|Serveur de rapports en mode intégré SharePoint, connecté via le site SharePoint :<br /><br /> http://\<webserver>/\<SharePointSite>|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.<br /><br /> Créez et gérez des planifications partagées définies pour le site auquel vous êtes connecté.<br /><br /> Consultez les niveaux d'autorisation définis pour le site auquel vous êtes connecté.|Niveau d'autorisation Contrôle total pour le site SharePoint auquel vous êtes connecté.|  
 |Serveur de rapports en mode intégré SharePoint, connecté via le nom de l'instance du serveur de rapports :<br /><br /> \<nom du serveur>\<_instance>|Consultez et définissez les propriétés du serveur, ainsi que les valeurs par défaut.<br /><br /> Consultez et annulez les travaux.|Niveau d'autorisation Contrôle total pour le site SharePoint intégré au serveur de rapports.<br /><br /> Notez que lorsque vous vous connectez au serveur de rapports plutôt qu'au site SharePoint, le nombre des tâches que vous pouvez effectuer est considérablement réduit. En effet, le serveur de rapports peut retourner uniquement les données d'application stockées ou gérées dans la base de données du serveur de rapports, et non dans les bases de données de contenu et de configuration SharePoint.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Reporting Services pour SQL Server Management Studio &#40;SSRS&#41;](reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

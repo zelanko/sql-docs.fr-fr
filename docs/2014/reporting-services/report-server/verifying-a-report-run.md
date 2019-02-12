@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e8bddd67dca8a97d0279b002784c74e9666e5a15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5a61ae676a0fb863d289532a4ce3e28c9751c8fa
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076519"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041360"
 ---
 # <a name="verifying-a-report-run"></a>Vérification de l'exécution d'un rapport
   Pour afficher des informations sur l'état du traitement d'un rapport, vous pouvez utiliser les fichiers journaux ou vous référer aux informations d'état qui s'affichent avec le rapport dans le Gestionnaire de rapports.  
@@ -47,7 +47,7 @@ ms.locfileid: "48076519"
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Définir les propriétés de traitement de rapport](set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d’un rapport](set-report-processing-properties.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)  
   
   

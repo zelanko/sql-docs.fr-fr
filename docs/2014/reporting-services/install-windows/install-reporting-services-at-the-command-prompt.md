@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 048169b3-512c-41e4-895a-0416eff41268
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dc7e6ee268694844f88f957f0aaf6d1addecd8f7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6ec398e41dd1851bc425749f1e71997706356e5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217419"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032500"
 ---
 # <a name="command-prompt-installation-of-reporting-services-sharepoint-mode-and-native-mode"></a>Installation d'invite de commandes en mode natif et en mode SharePoint de Reporting Services
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] prend en charge l’installation à partir de la ligne de commande du programme d’installation de SQL Server. Cette rubrique contient plusieurs exemples d'installations à partir de la ligne de commande spécifiques à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Pour obtenir une description complète des options de ligne de commande disponibles pour tous les composants de SQL Server, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md). Cette rubrique ne décrit pas les options de ligne de commande du complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Pour plus d’informations sur l’installation du complément à partir de la ligne de commande, consultez [Installer le complément à l’aide du fichier d’installation rsSharePoint.msi](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md#bkmk_install_rssharepoint).  
@@ -24,12 +24,12 @@ ms.locfileid: "48217419"
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint | [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif  
   
 ## <a name="rsinstallmode-native-mode"></a>RSINSTALLMODE (mode natif)  
- Le paramètre d’entrée principal pour installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est le paramètre d’entrée **/RSINSTALLMODE** . Le paramètre présente deux options : **DefaultNativeMode** et **FilesOnlyMode**.  
+ Le paramètre d’entrée principal pour installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est le paramètre d’entrée **/RSINSTALLMODE** . Le paramètre présente deux options : **DefaultNativeMode** et **FilesOnlyMode**  
   
  Si le programme d'installation inclut le moteur de base de données SQL Server, la valeur par défaut RSINSTALLMODE est DefaultNativeMode. Si l'installation n'inclut pas le moteur de base de données SQL Server, la valeur par défaut RSINSTALLMODE est FilesOnlyMode. Si vous choisissez DefaultNativeMode mais que l'installation n'inclut pas le moteur de base de données SQL Server, le programme d'installation modifie automatiquement RSINSTALLMODE en FilesOnlyMode. Pour plus d’informations sur les paramètres d’entrée, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
 ## <a name="rsshpinstallmode-sharepoint-mode"></a>RSSHPINSTALLMODE (mode SharePoint)  
- Le paramètre d’entrée pour installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint est **/RSSHPINSTALLMODE**. Le paramètre d'entrée a une option : SharePointFilesOnlyMode. L'option installe tous les fichiers nécessaires pour le mode SharePoint mais une configuration est requise après l'installation. Les étapes de configuration supplémentaires sont complétées à l'aide de l'Administration centrale de SharePoint. Pour plus d’informations, consultez [Install Reporting Services SharePoint Mode for SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
+ Le paramètre d’entrée pour installer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint est **/RSSHPINSTALLMODE**. Le paramètre d’entrée a une option : SharePointFilesOnlyMode. L'option installe tous les fichiers nécessaires pour le mode SharePoint mais une configuration est requise après l'installation. Les étapes de configuration supplémentaires sont complétées à l'aide de l'Administration centrale de SharePoint. Pour en savoir plus, consultez la section [Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../../sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md).  
   
 ## <a name="examples-of-sharepoint-mode-installation"></a>Exemples d'installation en mode SharePoint  
  L'exemple suivant installe SQL Server, le service moteur de base de données et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint ainsi que le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour SharePoint (RS_SHPWFE).  

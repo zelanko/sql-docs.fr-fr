@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: c4abf03a-7a0e-4087-8aa6-91e4277ab65c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0ffa426a907bc6011acabaf60375f5da8fba1dc2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 87f1a5fa6b7dd6d3d100665d0808f894b8224d9e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051749"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040860"
 ---
 # <a name="sendusingsmtpserver-property-wmi-msreportserverconfigurationsetting"></a>Propriété SendUsingSMTPServer (WMI MSReportServer_ConfigurationSetting)
   Spécifie si l'élément `SendUsing`dans la configuration de la messagerie pour le serveur de rapports a la valeur `true`.  
@@ -40,12 +40,12 @@ public Boolean SendUsingSMTPServer;
 ```  
   
 ## <a name="property-values"></a>Valeurs de la propriété  
- En lecture seule `Boolean` objet.  
+ Objet `Boolean` en lecture seule.  
   
 ## <a name="example-code"></a>Exemple de code  
  [Classe MSReportServer_ConfigurationSetting](msreportserver-configurationsetting-class.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

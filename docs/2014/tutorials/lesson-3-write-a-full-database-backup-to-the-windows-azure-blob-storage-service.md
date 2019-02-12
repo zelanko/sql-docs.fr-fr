@@ -1,24 +1,23 @@
 ---
-title: 'Leçon 3 : Écrire une sauvegarde de base de données complète dans le Service de stockage Windows Azure Blob | Microsoft Docs'
+title: 'Leçon 3 : Écrire une sauvegarde de base de données complète dans le Service de stockage Windows Azure Blob | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
-author: craigg-msft
-ms.author: craigg
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f0de77c43dc2a18bbbb4496f6c1d1c3aab21de96
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 242e32b08ec6346c39e149628e773b33554c95d4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172269"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029790"
 ---
-# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Leçon 3 : Écrire une sauvegarde de base de données complète dans le service de Stockage Blob Windows Azure
+# <a name="lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Leçon 3 : Écrire une sauvegarde de base de données complète dans le Service de stockage Windows Azure Blob
   Cette leçon illustre l'utilisation de l'instruction TSQL pour effectuer une sauvegarde de base de données complète dans le service de stockage d'objets blob Windows Azure.  
   
 ## <a name="perform-a-full-database-backup-to-the-windows-azure-blob-storage-service"></a>Effectuer une sauvegarde de base de données complète dans le service de stockage d'objets blob Windows Azure  
@@ -26,7 +25,7 @@ ms.locfileid: "48172269"
   
 1.  Se connecter à [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Dans le **Explorateur d’objets**, connectez-vous à l’instance de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
+2.  Dans l' **Explorateur d'objets**, connectez-vous à l'instance de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 3.  Dans la barre de menus standard, cliquez sur **Nouvelle requête**.  
   
@@ -45,6 +44,6 @@ ms.locfileid: "48172269"
 5.  Dans l'Explorateur d'objets, connectez-vous au stockage Azure. Recherchez le conteneur et les fichiers de sauvegarde récemment créés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Effectuer une restauration à partir d’une sauvegarde de base de données complète](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md).  
+ [Leçon 4 : Effectuer une restauration à partir d’une sauvegarde de base de données complète](../../2014/tutorials/lesson-4-perform-a-restore-from-a-full-database-backup.md).  
   
   

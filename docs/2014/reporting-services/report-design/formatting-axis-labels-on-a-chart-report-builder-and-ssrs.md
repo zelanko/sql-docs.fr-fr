@@ -27,13 +27,13 @@ helpviewer_keywords:
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 55f7b30650abdacc9a7fe85ec1e9de77d36cecd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185389"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56023580"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
   Les types de graphiques basés sur les coordonnées (histogramme, graphique à barres, graphique en aires, graphique à points, graphique en courbes et graphique d'étendue) comportent deux axes qui sont utilisés pour classer des données en catégories et afficher les relations de données. Des types de mises en forme différents seront appliqués à chaque axe.  
@@ -52,7 +52,7 @@ ms.locfileid: "48185389"
   
  Lorsque vous faites glisser un champ de votre dataset sur la surface du graphique, le graphique détermine si ce champ appartient à l'axe des abscisses ou à l'axe des ordonnées.  
   
- L'axe des ordonnées est généralement l'axe vertical, ou axe des Y, du graphique. Il est utilisé pour afficher les valeurs de données numériques qui sont représentées sur le graphique. Si vous faites glisser un champ dans la région de champs de données, ce champ sera tracé sur l'axe des ordonnées. L'axe des abscisses est généralement l'axe horizontal, ou axe des X, du graphique. Pour les graphiques à barres, ces axes sont inversés. Dans les types de graphiques en barres, l'axe des abscisses est l'axe vertical et l'axe des ordonnées est l'axe horizontal. Pour plus d’informations, consultez [graphiques à barres &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ L'axe des ordonnées est généralement l'axe vertical, ou axe des Y, du graphique. Il est utilisé pour afficher les valeurs de données numériques qui sont représentées sur le graphique. Si vous faites glisser un champ dans la région de champs de données, ce champ sera tracé sur l'axe des ordonnées. L'axe des abscisses est généralement l'axe horizontal, ou axe des X, du graphique. Pour les graphiques à barres, ces axes sont inversés. Dans les types de graphiques en barres, l'axe des abscisses est l'axe vertical et l'axe des ordonnées est l'axe horizontal. Pour plus d’informations, consultez [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
 ## <a name="how-the-chart-calculates-axis-label-intervals"></a>Mode de calcul des intervalles des étiquettes de l'axe par le graphique  
  Avant de mettre en forme les étiquettes des axes, vous devez comprendre la façon dont le graphique calcule les intervalles des étiquettes des axes. Cela vous permettra de définir les propriétés nécessaires pour obtenir le comportement d'étiquetage des axes souhaité.  
@@ -78,7 +78,7 @@ ms.locfileid: "48185389"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Exemple de calcul d'étiquettes d'axe par le graphique  
  Le tableau présenté ici contient des exemples de données de vente à tracer sur un histogramme. Le champ Name est ajouté à la zone Groupes d'abscisses et le champ Quantity est ajouté à la zone Valeurs.  
   
-|Nom   |Quantity|  
+|Créer une vue d’abonnement|Quantity|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  
@@ -92,13 +92,13 @@ ms.locfileid: "48185389"
  Le champ Nom est tracé le long de l'axe des abscisses. Le graphique calcule entre quatre et six étiquettes, ainsi que des paramètres d'ajustement automatique afin de déterminer la façon dont les étiquettes peuvent tenir sur l'axe des abscisses sans provoquer de collisions d'étiquettes. En conséquence, certaines étiquettes de catégories peuvent être omises. Vous pouvez remplacer les options d'ajustement automatique indépendamment pour chaque axe.  
   
 ## <a name="displaying-all-labels-on-the-category-axis"></a>Affichage de toutes les étiquettes sur l'axe des abscisses  
- Sur l'axe des ordonnées, les intervalles de l'axe fournissent une mesure cohérente des points de données sur le graphique. Toutefois, sur l'axe des abscisses, cette fonctionnalité peut entraîner l'affichage des catégories sans étiquettes d'axe. Vous voulez généralement que toutes les catégories portent une étiquette. Vous pouvez définir le nombre d'intervalles à 1 pour afficher toutes les catégories.  Pour plus d’informations, consultez [spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ Sur l'axe des ordonnées, les intervalles de l'axe fournissent une mesure cohérente des points de données sur le graphique. Toutefois, sur l'axe des abscisses, cette fonctionnalité peut entraîner l'affichage des catégories sans étiquettes d'axe. Vous voulez généralement que toutes les catégories portent une étiquette. Vous pouvez définir le nombre d'intervalles à 1 pour afficher toutes les catégories.  Pour plus d’informations, consultez [Spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
 >  Si vous remplacez les fonctionnalités d'étiquetage automatiques par un intervalle manuel sur un axe, le graphique doit redimensionner tous les autres éléments de manière appropriée. En conséquence, vous pouvez obtenir des résultats imprévisibles avec le dimensionnement et le positionnement des étiquettes, ou la taille des autres éléments sur le graphique.  
   
 ## <a name="variable-axis-intervals"></a>Intervalles d'axe variables  
- Le graphique calcule environ cinq intervalles d'étiquettes d'axe, quelle que soit la taille du graphique. Sur les graphiques larges ou hauts, si vous affichez uniquement cinq étiquettes sur un axe, de grands espaces peuvent apparaître entre chaque étiquette. Cela le rend plus difficile l'identification de la valeur de chaque point de données sur l'axe. Pour éviter ce comportement sur les graphiques larges ou hauts, vous pouvez définir un intervalle d'axe variable. Le graphique calculera le nombre optimal d'étiquettes qui peuvent apparaître sur l'axe en fonction de la largeur ou de la hauteur du graphique, suivant l'axe correspondant. Pour plus d’informations, consultez [spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
+ Le graphique calcule environ cinq intervalles d'étiquettes d'axe, quelle que soit la taille du graphique. Sur les graphiques larges ou hauts, si vous affichez uniquement cinq étiquettes sur un axe, de grands espaces peuvent apparaître entre chaque étiquette. Cela le rend plus difficile l'identification de la valeur de chaque point de données sur l'axe. Pour éviter ce comportement sur les graphiques larges ou hauts, vous pouvez définir un intervalle d'axe variable. Le graphique calculera le nombre optimal d'étiquettes qui peuvent apparaître sur l'axe en fonction de la largeur ou de la hauteur du graphique, suivant l'axe correspondant. Pour plus d’informations, consultez [Spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md).  
   
 ## <a name="sorting-axis-values"></a>Tri de valeurs d'axe  
  Les catégories s'affichent le long de l'axe des abscisses dans l'ordre dans lequel elles apparaissent dans le jeu de résultats. Vous pouvez modifier l'ordre de groupe en ajoutant une commande SORT à la requête ou en triant le dataset à l'aide d'une expression. Les régions des données graphiques sont triées de la même manière que toutes les autres régions de données. Pour plus d’informations sur le tri des données, consultez [Trier des données dans une région de données &#40;Générateur de rapports et SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md).  
@@ -113,14 +113,14 @@ ms.locfileid: "48185389"
 -   Sélectionnez un champ ou tapez une expression pour l’option **Champ de catégorie** de la boîte de dialogue **Propriétés de la série** . Le graphique ajoutera des intervalles d'axe pour toutes les valeurs du champ de catégorie que vous avez spécifié.  
   
 ## <a name="adding-or-removing-side-margins-from-the-category-axis"></a>Ajout ou suppression de marges latérales sur l'axe des abscisses  
- Dans les types de graphiques Barres, Histogrammes et Nuages de points, le graphique ajoute automatiquement des marges latérales aux extrémités de l'axe des abscisses. Vous ne pouvez pas modifier la taille de la marge. Dans tous les autres types de graphiques, aucune marge latérale n'est ajoutée. Pour plus d’informations, consultez [ajouter ou supprimer des marges dans un graphique &#40;Générateur de rapports et SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
+ Dans les types de graphiques Barres, Histogrammes et Nuages de points, le graphique ajoute automatiquement des marges latérales aux extrémités de l'axe des abscisses. Vous ne pouvez pas modifier la taille de la marge. Dans tous les autres types de graphiques, aucune marge latérale n'est ajoutée. Pour plus d’informations, consultez [Ajouter ou supprimer des marges dans un graphique &#40;Générateur de rapports et SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md).  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Mettre en forme des étiquettes d’axe en tant que Dates ou devises &#40;Générateur de rapports et SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
+ [Mettre en forme les étiquettes des axes en tant que dates ou devises &#40;Générateur de rapports et SSRS&#41;](format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)  
   
- [Positionner des étiquettes dans un graphique &#40;Générateur de rapports et SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
+ [Placer des étiquettes dans un graphique &#40;Générateur de rapports et SSRS&#41;](position-labels-in-a-chart-report-builder-and-ssrs.md)  
   
- [Spécifiez un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Spécifier un intervalle d’axe &#40;Générateur de rapports et SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
  [Ajouter ou supprimer des marges dans un graphique &#40;Générateur de rapports et SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   

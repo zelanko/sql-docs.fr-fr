@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cb70d0cd-707b-4de5-b39f-e4eb57d316aa
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 48e9673e31371f76f84a9e5d8d5841282b364425
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bfe582a3d3e6d07883235b3dc447e4d823e29d87
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221693"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56039611"
 ---
 # <a name="commonly-used-filters-report-builder-and-ssrs"></a>Filtres couramment utilisés (Générateur de rapports et SSRS)
   Pour créer un filtre, vous devez spécifier une ou plusieurs équations de filtre. Une équation de filtre comprend une expression, un type de données, un opérateur et une valeur. Cette rubrique donne des exemples de filtres couramment utilisés.  
@@ -32,7 +32,7 @@ ms.locfileid: "48221693"
 ## <a name="filter-examples"></a>Exemples de filtres  
  Le tableau ci-dessous donne des exemples d'équations de filtre qui utilisent différents types de données et différent opérateurs. L'étendue de la comparaison est déterminée par l'élément de rapport pour lequel un filtre est défini. Par exemple, pour un filtre défini sur un dataset, **10 principaux %** représente les 10 premiers pour cent des valeurs dans le dataset ; pour un filtre défini sur un groupe, **10 principaux %** représente les 10 premiers pour cent des valeurs dans le groupe.  
   
-|Expression simple|Type de données|Opérateur|Valeur|Description|  
+|Expression simple|Type de données|Opérateur|Value|Description|  
 |-----------------------|---------------|--------------|-----------|-----------------|  
 |`[SUM(Quantity)]`|`Integer`|`>`|`7`|Inclut des valeurs de données supérieures à 7.|  
 |`[SUM(Quantity)]`|`Integer`|`TOP N`|`10`|Inclut les 10 premières valeurs de données.|  
@@ -47,7 +47,7 @@ ms.locfileid: "48221693"
 ## <a name="examples-with-report-parameters"></a>Exemples avec des paramètres de rapport  
  Le tableau suivant fournit des exemples d'expressions de filtre comprenant une référence de paramètre à valeur unique ou à valeurs multiples.  
   
-|Type de paramètre|Expression (de filtre)|Opérateur|Valeur|Type de données|  
+|Type de paramètre|Expression (de filtre)|Opérateur|Value|Type de données|  
 |--------------------|---------------------------|--------------|-----------|---------------|  
 |Valeur unique|`[EmployeeID]`|=|`[@EmployeeID]`|Entier|  
 |Valeurs multiples|`[EmployeeID]`|IN|`[@EmployeeID]`|Entier|  
@@ -55,8 +55,8 @@ ms.locfileid: "48221693"
 ## <a name="see-also"></a>Voir aussi  
  [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes &#40;Générateur de rapports et SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Utilisation d’expressions dans les rapports &#40;Générateur de rapports et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Utilisation d’expressions dans les rapports &#40;Générateur de rapport et SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](expression-examples-report-builder-and-ssrs.md)   
- [Types de données dans les Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)  
+ [Types de données dans les expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)  
   
   

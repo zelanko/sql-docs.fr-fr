@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5b0ae98d40a6f5e1e2c830c2d5aca4cc1c99e230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181649"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032420"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Page Propriétés générales, Ressources (Gestionnaire de rapports)
   La page Propriétés générales des ressources vous permet de renommer, supprimer, déplacer ou remplacer une ressource. Des informations sur la personne qui a ajouté la ressource ou modifié les propriétés apparaissent en haut de la page.  
@@ -60,7 +60,7 @@ ms.locfileid: "48181649"
  Cliquez pour ouvrir la page Importer une ressource, qui permet de sélectionner un fichier de ressources à partir d'un partage de fichiers.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Page vue, ressources &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
  [Propriétés de sécurité, éléments de la page &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  

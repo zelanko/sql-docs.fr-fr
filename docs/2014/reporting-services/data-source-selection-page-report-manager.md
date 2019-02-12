@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7f7e8b19-0c0b-4b1f-9cc1-057099aa07eb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: db1e01a18d755076585c64ee3518492c8f5de561
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1bfcb23c4ed497d2705ece469e2949c332cdfcdf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091139"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032320"
 ---
 # <a name="data-source-selection-page-report-manager"></a>Page Sélection de la source de données (Gestionnaire de rapports)
   La page Sélection de la source de données vous permet de sélectionner un élément de source de données partagée existant à utiliser avec un rapport ou un modèle de rapport. Vous pouvez également utiliser cette page pour sélectionner une autre source de données. Pour afficher le type de source de données ou la chaîne de connexion, vous devez atteindre la source de données partagée et ouvrir les pages de propriétés.  
@@ -47,7 +47,7 @@ ms.locfileid: "48091139"
  Cliquez pour copier la sélection de la source de données vers la page des propriétés des sources de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les Sources de données de rapport](report-data/manage-report-data-sources.md)   
+ [Gérer des sources de données de rapports](report-data/manage-report-data-sources.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Page des propriétés des sources de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/data-sources-properties-page-report-manager.md)   
  [Page Nouvelle source de données &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/new-data-source-page-report-manager.md)   

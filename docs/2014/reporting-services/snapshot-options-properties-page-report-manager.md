@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6641f59-5267-4f57-8957-63b93d1a9679
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4342504d0d62f2c611c680c58fcdeae1f046f29b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 458a04b87bf8aedd0d772e18ceb9cbc669fe6ba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078099"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56042350"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Page de propriétés Options d'instantanés (Gestionnaire de rapports)
   La page de propriétés Options d'instantanés vous permet de planifier les instantanés de rapport qui doivent être ajoutés à l'historique de rapport et de définir la limite du nombre d'instantanés de rapport qui sont stockés dans l'historique.  
@@ -62,9 +62,9 @@ ms.locfileid: "48078099"
  Cliquez pour enregistrer vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter un instantané à l’historique de rapport &#40;le Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
- [Créer, modifier et supprimer des instantanés dans l’historique de rapport](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
+ [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Créer, modifier et supprimer des instantanés dans l'historique de rapport](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

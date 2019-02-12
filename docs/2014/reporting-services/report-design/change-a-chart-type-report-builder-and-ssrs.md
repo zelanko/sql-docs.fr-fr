@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: fff24978-e3bd-4fac-8cd7-d6aa81f3cc25
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 4c0128e6e7bb5ca0020d8dbcf34858d0f5d6bf2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d998c2f9ecc19167f34530e6fa2d0190f71287ce
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085705"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037180"
 ---
 # <a name="change-a-chart-type-report-builder-and-ssrs"></a>Modifier un type de graphique (Générateur de rapports version et SSRS)
   Lorsque vous commencez par insérer un graphique dans un rapport, le **sélectionner le Type de graphique** boîte de dialogue apparaît. Si vous annulez cette boîte de dialogue, un type d'histogramme est ajouté par défaut.  

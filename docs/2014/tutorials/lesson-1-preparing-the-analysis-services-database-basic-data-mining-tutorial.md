@@ -1,24 +1,23 @@
 ---
-title: 'Leçon 1 : Préparation de l’analyse des Services de base de données (didacticiel d’exploration de données de base) | Microsoft Docs'
+title: 'Leçon 1 : Préparation de l’analyse des Services de base de données (didacticiel d’exploration de données de base) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 0f7e417f786da7344ad43ebaab826a8d0e28f8e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173429"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036850"
 ---
-# <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Leçon 1 : préparation de la base de données Analysis Services (Didacticiel sur l'exploration de données de base)
+# <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Leçon 1 : Préparation de la base de données Analysis Services (Didacticiel sur l'exploration de données de base)
   Vous êtes un nouvel employé de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] qui a été demandé de concevoir une application décisionnelle dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] espère tirer parti de votre [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] expérience d’exploration de données pour découvrir des informations intéressantes et utilisables sur les personnes qui ont acheté des vélos. Vous devrez ensuite prédire quels prospects sont les plus susceptibles d'acheter un vélo à l'avenir.  
   
  Conception de cette application dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] commence par la création dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet basé sur le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] modèle de projet pour la modélisation multidimensionnelle et d’exploration de données. Après avoir créé un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous devez définir une ou plusieurs sources de données. Ensuite, vous définissez une vue de métadonnées, appelée un *vue de source de données*, à partir des tables sélectionnées et les vues de sources de données.  

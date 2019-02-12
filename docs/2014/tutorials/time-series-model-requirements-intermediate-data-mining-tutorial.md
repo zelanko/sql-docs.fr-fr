@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1ce2b3e3-108a-4f7e-985f-a20b816d0da7
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d40d378a7b8d9d491b53e4a12d5d64bca36848e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 5b3438e832f28329cb0fec764d3a4846bae18ede
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173389"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035150"
 ---
 # <a name="understanding-the-requirements-for-a-time-series-model-intermediate-data-mining-tutorial"></a>Spécifications pour un modèle de série chronologique (Didacticiel sur l'exploration de données intermédiaire)
   Lorsque vous préparez des données afin de les utiliser dans un modèle de prévision, vous devez veiller à ce qu'elles contiennent une colonne pouvant être utilisée pour identifier les étapes dans la série chronologique. Cette colonne sera désignée comme colonne `Key Time`. Puisqu'il s'agit d'une clé, la colonne doit contenir des valeurs numériques uniques.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: d49bda5b1616a2052542b6047c1291dd64763e1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401704"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040030"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Exploration du modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
   Maintenant que vous avez créé le modèle de prévision d’exploration de données, vous pouvez explorer les résultats à l’aide de la **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. La Visionneuse de l'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series) contient deux onglets : **Graphiques** et **modèle**.  
@@ -50,17 +49,17 @@ ms.locfileid: "52401704"
   
      Le graphique contient à présent uniquement les 6 lignes de série suivantes, afin que vous puissiez plus facilement comparer les tendances des vélos M200 et T1000.  
   
-    -   **M200 Europe : Quantité**  
+    -   **M200 Europe : Quantity**  
   
-    -   **M200 North America : Quantité**  
+    -   **M200 North America : Quantity**  
   
-    -   **M200 Pacific : Quantité**  
+    -   **M200 Pacific : Quantity**  
   
-    -   **T1000 Europe : Quantité**  
+    -   **T1000 Europe : Quantity**  
   
-    -   **T1000 North America : Quantité**  
+    -   **T1000 North America : Quantity**  
   
-    -   **T1000 Pacific : Quantité**  
+    -   **T1000 Pacific : Quantity**  
   
  ![Série de prédire la quantité M200 et T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "M200 et T1000 la quantité de prédiction de série")  
   

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: c3a102af211ccaa8fad3d7792cf868653ca4797d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176939"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036570"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Report Manager  (SSRS Native Mode)
   Le Gestionnaire de rapports est un outil permettant d'accéder aux rapports et de les gérer via une interface Web. Vous l'utilisez pour administrer à partir d'un emplacement distant une instance de serveur de rapports unique par le biais d'une connexion HTTP. Cet outil met également à votre disposition une visionneuse de rapports et des fonctionnalités de navigation. Dans cette rubrique :  
@@ -48,7 +48,7 @@ ms.locfileid: "48176939"
   
 -   configurer l'historique, les paramètres et les propriétés d'exécution des rapports,  
   
--   Créer des modèles de rapport qui se connectent à et récupérer des données à partir d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] source de données ou à partir d’un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] source de données relationnelle.  
+-   Créer des modèles d'état qui se connectent à des données et qui extraient des données à partir d'une source de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ou d'une source de données relationnelle [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
 -   Définir la sécurité de l'élément de modèle de façon à autoriser l'accès à des entités spécifiques dans le modèle ou mapper des entités à des rapports générés interactifs prédéfinis que vous créez par avance,  
   
@@ -67,11 +67,11 @@ ms.locfileid: "48176939"
   
  Le Gestionnaire de rapports est utilisé uniquement pour un serveur de rapports qui s'exécute en mode natif. Il n'est pas pris en charge sur un serveur de rapports que vous configurez en mode intégré SharePoint.  
   
- Certaines fonctionnalités du Gestionnaire de rapports sont uniquement disponibles dans les éditions spécifiées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ Certaines fonctionnalités du gestionnaire de rapports sont disponibles uniquement dans les éditions spécifiées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Dans le cas d'une nouvelle installation, seuls les administrateurs locaux possèdent les autorisations suffisantes pour travailler avec le contenu et les paramètres. Pour octroyer des autorisations à d'autres utilisateurs, un administrateur local doit créer des attributions de rôles permettant d'accéder au serveur de rapports. Les pages et les tâches auxquelles un utilisateur pourra ensuite accéder dépendent des attributions de rôles qui ont été définies pour cet utilisateur. Pour plus d’informations, consultez [Grant User Access to a Report Server &#40;Report Manager&#41;](security/grant-user-access-to-a-report-server.md).  
+ Dans le cas d'une nouvelle installation, seuls les administrateurs locaux possèdent les autorisations suffisantes pour travailler avec le contenu et les paramètres. Pour octroyer des autorisations à d'autres utilisateurs, un administrateur local doit créer des attributions de rôles permettant d'accéder au serveur de rapports. Les pages et les tâches auxquelles un utilisateur pourra ensuite accéder dépendent des attributions de rôles qui ont été définies pour cet utilisateur. Pour plus d’informations, consultez [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](security/grant-user-access-to-a-report-server.md).  
   
- Si vous utilisez [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] ou Windows Server 2008, vous devez configurer le Gestionnaire de rapports pour l'administration locale. Pour plus d’informations, consultez [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+ Si vous utilisez [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)] ou Windows Server 2008, vous devez configurer le Gestionnaire de rapports pour l'administration locale. Pour plus d’informations, consultez [Configurer un serveur de rapports en mode natif pour l’administration locale &#40;SSRS&#41;](report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 ##  <a name="bkmk_start_report_manager"></a> Démarrer et utiliser le Gestionnaire de rapports  
  Le Gestionnaire de rapports est une application Web que vous ouvrez en tapant l'URL du Gestionnaire de rapports dans la barre d'adresses d'une fenêtre de navigateur. Lorsque vous démarrez le Gestionnaire de rapports, les pages, liens et options que vous voyez varient en fonction des autorisations dont vous disposez pour le serveur de rapports. Pour effectuer une tâche, vous devez être titulaire d'un rôle qui inclut la tâche. Un utilisateur doté d'un rôle disposant d'autorisations complètes peut accéder à l'ensemble des menus et des pages de l'application qui sont disponibles pour gérer un serveur de rapports. Un utilisateur doté d'un rôle limité aux autorisations d'affichage et d'exécution des rapports ne peut voir que les menus et les pages concernées par ces activités. Chaque utilisateur peut disposer de rôles divers pour les différents serveurs de rapports qu'il utilise, voire pour les divers rapports et dossiers stockés sur un serveur de rapports unique.  
@@ -114,11 +114,11 @@ ms.locfileid: "48176939"
 |![Icône Page de propriétés](media/hlp-16prop.gif "icône Page de propriétés")|Page des propriétés|Cliquez sur l'icône d'une propriété pour accéder aux pages supplémentaires afin de pouvoir définir des propriétés et des niveaux de sécurité.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)   
  [Générateur de rapports &#40;SSRS&#41;](tools/report-builder-authoring-environment-ssrs.md)   
  [Outils de Reporting Services](tools/reporting-services-tools.md)   
- [Gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
+ [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](report-server/report-server-content-management-ssrs-native-mode.md)   
  [Afficher et Explorer des rapports en Mode natif à l’aide de composants WebPart SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   

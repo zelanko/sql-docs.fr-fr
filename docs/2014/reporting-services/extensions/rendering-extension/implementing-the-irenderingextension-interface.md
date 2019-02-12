@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 74b2f2b7-6796-42da-ab7d-b05891ad4001
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 458cca2d14d1dc012742286a04bd2ca90453277c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2f7e331f7b7617e85ec8b577ac8c922ba41e4075
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227269"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040040"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implémentation de l'interface IRenderingExtension 
   L'extension de rendu prend les résultats d'une définition de rapport qui est combinée aux données réelles et restitue les données résultantes dans un format utilisable. La transformation de la combinaison des données et de la mise en forme s'effectue par le biais d'une classe CLR (Common Language Runtime) qui implémente <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Cela transforme le modèle objet en un format de sortie qui est consommable par une visionneuse, une imprimante ou une autre cible de sortie.  
@@ -51,7 +51,7 @@ ms.locfileid: "48227269"
 -   La fonction *createAndRegisterStream* est une fonction de délégué à appeler pour obtenir un flux de données de rendu.  
   
 ### <a name="deviceinfo-parameter"></a>Paramètre deviceInfo  
- Le paramètre *deviceInfo* contient des paramètres de rendu, pas des paramètres de rapport. Ces paramètres de rendu sont passés à l'extension de rendu. Les valeurs *deviceInfo* sont converties en un objet <xref:System.Collections.Specialized.NameValueCollection> par le serveur de rapports. Les éléments dans le paramètre *deviceInfo* sont traités comme des valeurs non sensibles à la casse. Si la demande de rendu résulte d’un accès URL, les paramètres d’URL de type `rc:key=value` sont convertis en paires clé/valeur dans l’objet dictionnaire *deviceInfo*. Le code de détection du navigateur fournit également les éléments suivants dans le dictionnaire *clientCapabilities* : EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type et AcceptLanguage. Toute paire nom/valeur dans *deviceInfo* qui n’est pas interprétée par l’extension de rendu est ignorée. L'exemple de code suivant montre un exemple de méthode <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> qui extrait des icônes :  
+ Le paramètre *deviceInfo* contient des paramètres de rendu, pas des paramètres de rapport. Ces paramètres de rendu sont passés à l'extension de rendu. Les valeurs *deviceInfo* sont converties en un objet <xref:System.Collections.Specialized.NameValueCollection> par le serveur de rapports. Les éléments dans le paramètre *deviceInfo* sont traités comme des valeurs non sensibles à la casse. Si la demande de rendu résulte d’un accès URL, les paramètres d’URL de type `rc:key=value` sont convertis en paires clé/valeur dans l’objet dictionnaire *deviceInfo*. Le code de détection du navigateur fournit également les éléments suivants dans le *clientCapabilities* dictionnaire : EcmaScriptVersion, JavaScript, MajorVersion, MinorVersion, Win32, Type et AcceptLanguage. Toute paire nom/valeur dans *deviceInfo* qui n’est pas interprétée par l’extension de rendu est ignorée. L'exemple de code suivant montre un exemple de méthode <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension.GetRenderingResource%2A> qui extrait des icônes :  
   
 ```csharp  
 public void GetRenderingResource (CreateStream createStreamCallback, NameValueCollection deviceInfo)  

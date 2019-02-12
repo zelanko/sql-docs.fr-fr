@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 742fd00e-aa6c-4c8a-b58f-c03c489b1699
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 83818feb28dbcda5f7ae981f440fd850ea59af7b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 81ec8964de180ad4db9e4edd3e2c609d5ad56b63
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180869"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037300"
 ---
 # <a name="windows-application-log"></a>Journal des applications Windows
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] écrit des messages d’événements dans le journal des applications Windows. Vous pouvez vous servir des informations des messages écrits dans le journal des applications pour rechercher des événements générés par les applications du serveur de rapports s'exécutant sur le système local.  
   
 ## <a name="viewing-report-server-events"></a>Affichage des événements du serveur de rapports  
- Vous pouvez utiliser l'Observateur d'événements pour afficher le fichier journal et filtrer les messages qu'il contient. Pour plus d’informations sur les messages d’événements, consultez [erreurs et événements référence &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md). Pour plus d'informations sur le journal des applications Windows ou l'Observateur d'événements, voir la documentation du produit Windows.  
+ Vous pouvez utiliser l'Observateur d'événements pour afficher le fichier journal et filtrer les messages qu'il contient. Pour plus d’informations sur les messages d’événements, consultez [Références des erreurs et événements &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md). Pour plus d'informations sur le journal des applications Windows ou l'Observateur d'événements, voir la documentation du produit Windows.  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit trois sources d’événements :  
   
@@ -43,13 +43,13 @@ ms.locfileid: "48180869"
 |Type d'événement|Description|  
 |----------------|-----------------|  
 |Informations|Événement décrivant une opération réussie (par exemple, le démarrage des services du serveur de rapports).|  
-|Avertissement|Événement indiquant un problème potentiel (par exemple, un faible espace disque).|  
+|Warning|Événement indiquant un problème potentiel (par exemple, un faible espace disque).|  
 |Error|Événement décrivant un problème significatif (par exemple, le service n'a pas démarré).|  
 |Audit des succès|Événement de sécurité décrivant une ouverture de session réussie.|  
 |Audit des échecs|Événement consigné en journal en cas d'échec d'une tentative d'ouverture de session.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Fichiers journaux et sources de Reporting Services](../report-server/reporting-services-log-files-and-sources.md)   
- [Erreurs et événements référence &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
+ [Guide de référence des erreurs et des événements &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   
   

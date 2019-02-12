@@ -2,10 +2,8 @@
 title: sp_wait_for_database_copy_sync (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
-ms.prod: ''
-ms.prod_service: database-engine, sql-database
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sp_wait_for_database_copy_sync_TSQL
@@ -19,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78a77ce45d4ff148e42ab375341ee521eba982da
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6d3e667f743b153b965e788d9d7485b311aec5bc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662857"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56034543"
 ---
 # <a name="active-geo-replication---spwaitfordatabasecopysync"></a>Géo-réplication Active - sp_wait_for_database_copy_sync
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,10 +41,10 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @target_server =] 'nom_serveur'  
+ [ @target_server = ] 'server_name'  
  Nom du serveur SQL Database qui héberge la base de données secondaire active. server_name est de type sysname, sans valeur par défaut.  
   
- [ @target_database =] 'database_name'  
+ [ @target_database = ] 'database_name'  
  Nom de la base de données secondaire active. database_name est de type sysname, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -60,7 +58,7 @@ sp_wait_for_database_copy_sync [ @target_server = ] 'server_name'
   
 -   La connectivité de l'interlien est perdue. **sp_wait_for_database_copy_sync** retournera après expiration du délai de connexion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tout utilisateur dans la base de données primaire peut appeler cette procédure stockée système. La connexion doit être un utilisateur dans les bases de données primaire et secondaire active.  
   
 ## <a name="remarks"></a>Notes  

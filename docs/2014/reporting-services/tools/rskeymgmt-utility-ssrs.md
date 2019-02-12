@@ -21,13 +21,13 @@ helpviewer_keywords:
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2bd52ce353ff30a22aa1771c07359554e20f6e8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: cdd2e2bd7d668ca276cdc62d988f7334a6709e6b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541851"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038260"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>Utilitaire rskeymgmt (SSRS)
   Extrait, restaure, crée et supprime la clé symétrique utilisée pour protéger les données sensibles de serveur de rapports contre un accès non autorisé. Cet utilitaire sert également à joindre des instances de serveur de rapports dans un déploiement évolutif. Un *déploiement évolutif de serveurs de rapports* correspond à plusieurs instances de serveur de rapports qui partagent une base de données de serveur de rapports unique.  
@@ -79,14 +79,14 @@ ms.locfileid: "52541851"
  **-r**  *installationID*  
  Supprime les informations de clé symétrique pour une instance de serveur de rapports spécifique, supprimant de ce fait le serveur de rapports d'un déploiement évolutif. *installationID* est une valeur GUID se trouvant dans le fichier RSReportserver.config.  
   
- `-f`  *Fichier*  
+ `-f`  *file*  
  Définit un chemin d'accès complet au fichier qui stocke une copie de sauvegarde des clés symétriques.  
   
  Pour **rskeymgmt -e**, la clé symétrique est écrite dans le fichier que vous spécifiez.  
   
  Pour **rskeymgmt -a**, la valeur de clé symétrique stockée dans le fichier est appliquée à l’instance du serveur de rapports.  
   
- `-p`  *Mot de passe*  
+ `-p`  *password*  
  (Requis pour `-f`) Spécifie le mot de passe utilisé pour sauvegarder ou appliquer une clé symétrique. Cette valeur ne peut pas être vide.  
   
  `-i`  
@@ -101,7 +101,7 @@ ms.locfileid: "52541851"
  `-u`  *useraccount*  
  Spécifie le compte d'administrateur sur l'ordinateur distant que vous joignez au déploiement évolutif. Si un compte n'est pas spécifié, les informations d'identification de l'utilisateur actuel sont employées.  
   
- `-v`  *Mot de passe*  
+ `-v`  *password*  
  (Requis pour `-u`) Spécifie le mot de passe d'un compte d'administrateur sur l'ordinateur distant que vous souhaitez joindre au déploiement évolutif.  
   
  **-t**  *trace*  

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 8 : créer un filtre de données | Microsoft Docs'
+title: 'Leçon 8 : Créer un filtre de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5004ad7cb8283be11d7e89f96ee46bd29ccccd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 581da37baeead00355e6ada1b822731833e5adaf
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189919"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037063"
 ---
-# <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : créer un filtre de données
+# <a name="lesson-8-create-a-data-filter"></a>Leçon 8 : Créer un filtre de données
   Après avoir ajouté une action d'extraction dans le rapport parent, l'étape suivante consiste à créer un filtre de données pour la table de données que vous avez définie pour le rapport enfant.  
   
  Vous pouvez créer un filtre de table **ou** un filtre de requête pour le rapport d’extraction. Cette leçon contient des instructions pour ces deux options.  
@@ -44,7 +44,7 @@ ms.locfileid: "48189919"
   
 5.  Cliquez sur l’égalité (**=**) opérateur dans le **opérateur** liste déroulante.  
   
-6.  Cliquez sur le bouton expression en regard du **valeur** , cliquez sur **paramètres** dans le **catégorie** zone, puis double-cliquez sur `productid` dans le  **Valeurs** zone. Le champ **Définir l’expression pour : Valeur** doit maintenant contenir une expression semblable à **=Parameters!productid.Value**.  
+6.  Cliquez sur le bouton expression en regard du **valeur** , cliquez sur **paramètres** dans le **catégorie** zone, puis double-cliquez sur `productid` dans le  **Valeurs** zone. Le **définir l’expression pour : Valeur** champ doit maintenant contenir une expression semblable à **= paramètres ! productid. Valeur**.  
   
 7.  Cliquez sur **OK,** et **OK** à nouveau dans le **propriétés du tableau matriciel** boîte de dialogue.  
   
@@ -56,9 +56,9 @@ ms.locfileid: "48189919"
   
 2.  Créez une fonction qui accepte un paramètre, `productid`, de type entier et retourne un `datatable` de l’objet et effectue les opérations suivantes.  
   
-    1.  Crée une instance du jeu de données, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crée une instance du jeu de données, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : Définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Crée une connexion à la base de données SqlServer pour exécuter la requête définie dans la **Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant**.  
+    2.  Créer une connexion à la base de données SqlServer pour exécuter la requête définie dans **leçon 4 : Définir un données connexion et un objet DataTable pour le rapport enfant**.  
   
     3.  La requête retourne des données non filtrées.  
   
@@ -166,9 +166,9 @@ ms.locfileid: "48189919"
   
 2.  Créez une fonction qui accepte un paramètre, `productid`, de type entier et retourne un objet `datatable`, puis procédez comme suit.  
   
-    1.  Crée une instance du jeu de données, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
+    1.  Crée une instance du jeu de données, `DataSet2`, lequel a été créée à l’étape 2 de [leçon 4 : Définir une connexion de données et la Table de données pour le rapport enfant](lesson-4-define-a-data-connection-and-data-table-for-child-report.md).  
   
-    2.  Créez une connexion à la base de données SqlServer pour exécuter la requête définie dans la **Leçon 4 : Définir une connexion de données et une table de données pour le rapport enfant**.  
+    2.  Créer une connexion à la base de données SqlServer pour exécuter la requête définie **leçon 4 : Définir un données connexion et un objet DataTable pour le rapport enfant**.  
   
     3.  La requête inclut un paramètre, `productid`, pour vérifier que les données retournées sont filtrées en fonction de l'élément `ProductID` sélectionné dans le rapport parent.  
   

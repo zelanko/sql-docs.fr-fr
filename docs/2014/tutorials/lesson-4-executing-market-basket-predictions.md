@@ -1,25 +1,24 @@
 ---
-title: 'Leçon 4 : Exécution de prédictions Market Basket | Microsoft Docs'
+title: 'Leçon 4 : L’exécution de prédictions Market Basket | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 6db486a5d497ba6b6c5bfe312197d78a5656d388
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177493"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56041430"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>Leçon 4 : Exécution de prédictions Market Basket
-  Dans cette leçon, vous allez utiliser l’instruction DMX `SELECT` instruction pour créer des prédictions basées sur l’association des modèles que vous avez créé dans [leçon 2 : ajout de modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Une requête de prédiction est créée en utilisant l'instruction DMX `SELECT` et en ajoutant une clause `PREDICTION JOIN` Pour plus d’informations sur la syntaxe d’une jointure de prédiction, consultez [SELECT FROM &#60;modèle&#62; jointure de prédiction &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
+  Dans cette leçon, vous allez utiliser l’instruction DMX `SELECT` instruction pour créer des prédictions basées sur l’association des modèles que vous avez créé dans [leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Une requête de prédiction est créée en utilisant l'instruction DMX `SELECT` et en ajoutant une clause `PREDICTION JOIN` Pour plus d’informations sur la syntaxe d’une jointure de prédiction, consultez [SELECT FROM &#60;modèle&#62; jointure de prédiction &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  
   
  Le **SELECT FROM \<modèle > PREDICTION JOIN** formulaire de la `SELECT` instruction composé de trois parties :  
   
@@ -147,7 +146,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  Dans la barre d’outils, cliquez sur le **Execute** bouton.  
   
-     La requête retourne une table qui contient trois produits : HL Mountain Tire, Fender Set – Mountain et ML Mountain Tire. La table répertorie ces produits retournés par ordre de probabilité. Le produit retourné le plus susceptible d'être inclus dans le même panier d'achat que les trois produits spécifiés dans la requête apparaît en haut de la table. Les deux produits qui suivent sont les produits suivants les plus susceptibles d'être inclus dans le panier d'achat. La table renferme également des statistiques indiquant la précision de la prédiction.  
+     La requête retourne une table qui contient trois produits : HL Mountain Tire, Fender Set - Mountain et ML Mountain Tire. La table répertorie ces produits retournés par ordre de probabilité. Le produit retourné le plus susceptible d'être inclus dans le même panier d'achat que les trois produits spécifiés dans la requête apparaît en haut de la table. Les deux produits qui suivent sont les produits suivants les plus susceptibles d'être inclus dans le panier d'achat. La table renferme également des statistiques indiquant la précision de la prédiction.  
   
 ## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>Création d'une prédiction à l'aide d'un modèle avec un paramètre MINIMUM_PROBABILITY de 0.01  
   
@@ -219,7 +218,7 @@ SELECT <select list> FROM [<mining model>]
   
 8.  Dans la barre d’outils, cliquez sur le **Execute** bouton.  
   
-     La requête retourne une table qui contient trois produits : HL Mountain Tire, Water Bottle et Fender Set – Mountain. La table répertorie ces produits par ordre de probabilité. Le produit affiché en haut de la table est le produit le plus susceptible d'être inclus dans le même panier d'achat que les trois produits spécifiés dans la requête. Les produits restants sont les produits suivants les plus susceptibles d'être inclus dans le panier d'achat. La table renferme également des statistiques qui indiquent la précision de la prédiction.  
+     La requête retourne une table qui contient trois produits : HL Mountain Tire, Water Bottle et Fender Set - Mountain. La table répertorie ces produits par ordre de probabilité. Le produit affiché en haut de la table est le produit le plus susceptible d'être inclus dans le même panier d'achat que les trois produits spécifiés dans la requête. Les produits restants sont les produits suivants les plus susceptibles d'être inclus dans le panier d'achat. La table renferme également des statistiques qui indiquent la précision de la prédiction.  
   
      Vous pouvez le voir dans les résultats de cette requête que la valeur de la *MINIMUM_PROBABILITY* paramètre affecte les résultats retournés par la requête.  
   
@@ -228,7 +227,7 @@ SELECT <select list> FROM [<mining model>]
  Pour savoir comment utiliser DMX dans un autre scénario prédictif, consultez [Bike Buyer DMX Tutorial](../../2014/tutorials/bike-buyer-dmx-tutorial.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Exemples de requêtes de modèle association](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
+ [Exemples de requêtes de modèle d'association](../../2014/analysis-services/data-mining/association-model-query-examples.md)   
  [Interface de requête d’exploration de données](../../2014/analysis-services/data-mining/data-mining-query-tools.md)  
   
   

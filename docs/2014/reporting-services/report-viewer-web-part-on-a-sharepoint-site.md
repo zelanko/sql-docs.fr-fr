@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b6341a73-172f-4632-a9e9-cc79fed3f36b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 80baae6ca56757c8723934102341352f34cb0709
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+manager: kfile
+ms.openlocfilehash: c71070aa63716efd9773b00d304346935c635000
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905230"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028310"
 ---
 # <a name="report-viewer-web-part-on-a-sharepoint-site"></a>Composant WebPart Visionneuse de rapports sur un site SharePoint
   Le composant WebPart Visionneuse de rapports est un composant WebPart personnalisé qui est installé par le complément [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Vous pouvez utiliser le composant WebPart pour afficher les rapports, naviguer parmi ces derniers, les imprimer et les exporter sur un serveur de rapports configuré pour s'exécuter en mode intégré SharePoint. Le composant WebPart Visionneuse de rapports est associé aux fichiers de définition de rapport (.rdl) traités par un serveur de rapports [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Vous ne pouvez pas l'utiliser avec d'autres documents de rapport que vous créez dans d'autres produits logiciels.  

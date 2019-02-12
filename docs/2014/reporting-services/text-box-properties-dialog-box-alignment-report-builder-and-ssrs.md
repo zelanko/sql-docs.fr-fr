@@ -12,14 +12,14 @@ f1_keywords:
 - "10125"
 ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: b39bed7faeba38ff8275d61ae5bf3350a43bff28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: c87901e77de5ed975db5f9e05834f569f3923cc8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144665"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040530"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la zone de texte, Alignement (Générateur de rapports et SSRS)
   Sélectionnez **Alignement** dans la boîte de dialogue **Propriétés de la zone de texte** pour positionner les valeurs dans une cellule ou région de données sélectionnée.  
@@ -31,16 +31,16 @@ ms.locfileid: "48144665"
  **Vertical**  
  Spécifiez à quel endroit la valeur est positionnée verticalement dans une cellule ou région de données sélectionnée. L'option **Par défaut** est sélectionnée par défaut. La valeur de l'option Par défaut est **Haut**. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
- **Gauche**  
+ **Left**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord gauche d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
- **Oui**  
+ **Right**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord droit d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
  **Top**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord supérieur d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
- **en bas**  
+ **Bottom**  
  Spécifiez la marge intérieure, ou l'espacement, à insérer entre le bord inférieur d'une cellule et la valeur affichée dans celle-ci. La valeur par défaut est 2 points. Cliquez sur le bouton **Expression** (*fx*) pour modifier l’expression.  
   
 ## <a name="see-also"></a>Voir aussi  

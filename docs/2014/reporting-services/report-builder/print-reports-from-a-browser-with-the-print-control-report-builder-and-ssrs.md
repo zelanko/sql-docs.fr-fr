@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: 10054250-d915-4bcb-8a1d-26837db4e932
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: ea05556d69c40a18494d0b5600e05399a0da632b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d37179fe54d133268732065a51bbd299c2379418
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110729"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030390"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Imprimer des rapports à partir d'un navigateur à l'aide du contrôle d'impression (Générateur de rapports et SSRS)
   Bien qu'un navigateur soit l'application cliente la plus fréquemment utilisée pour afficher un rapport, la fonctionnalité d'impression du navigateur n'est pas le meilleur choix pour l'impression des rapports. La fonctionnalité d'impression d'un navigateur est conçue pour l'impression des pages Web. En règle générale, les pages que vous imprimez à partir d'un navigateur comprennent tous les éléments visuels présents sur une page Web, ainsi que des informations d'en-tête et de pied de page qui identifient la page ou le site Web. L'impression à partir d'un navigateur permet d'imprimer le contenu de la fenêtre actuelle. Pour un rapport de plusieurs pages, le navigateur imprime au mieux la première page et même moins encore, si la page de rapport dépasse les dimensions d'une page imprimée.  
   
  Pour améliorer la qualité d’impression des rapports affichés dans un navigateur et pour imprimer plusieurs pages, vous pouvez utiliser la fonctionnalité d’impression côté client de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. L’impression côté client permet d’accéder à une boîte de dialogue **Imprimer** standard dans laquelle vous pouvez sélectionner une imprimante, définir les propriétés des pages et des marges, et afficher l’aperçu du rapport avant son impression. L’impression côté client est destinée à être utilisée à la place de la commande **Imprimer** du menu **Fichier** du navigateur. Lorsque vous utilisez l'impression côté client, le rapport est imprimé tel qu'il a été créé, sans les éléments supplémentaires visibles lors de l'impression d'une page Web.  
   
- Pour utiliser l'impression côté client, vous devez installer un contrôle ActiveX [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour plus d’informations, consultez [activer et désactiver l’impression côté Client pour Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
+ Pour utiliser l'impression côté client, vous devez installer un contrôle ActiveX [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour plus d’informations, consultez [Activer et désactiver l’impression côté client pour Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

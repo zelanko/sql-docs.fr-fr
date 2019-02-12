@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 30e4be2e-e65d-462c-895a-5a0a636d042f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8984f0a1057bfa7eb3cb9cf2372de75e7da36852
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2905bdf64b33ee54e5eba474433c3d111eb34736
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153799"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56043100"
 ---
 # <a name="url-reservation-syntax--ssrs-configuration-manager"></a>Syntaxe de réservation d’URL (Gestionnaire de configuration de SSRS)
   Cette rubrique décrit les parties de la chaîne d'URL du service Web Report Server et du Gestionnaire de rapports. La chaîne d'URL stockée en interne possède une structure différente de celle d'une URL saisie dans la barre d'adresses d'une fenêtre de navigateur. La chaîne de réservation d'URL apparaît dans la fenêtre Résultats de l'outil de configuration de Reporting Services lorsque vous configurez une URL et dans le fichier RSReportServer.config. Il peut être utile de savoir comment la chaîne d'URL est définie si vous dépannez les problèmes de réservation d'URL ou interrogez HTTP.SYS pour afficher les réservations d'URL internes définies sur votre serveur.  
   
 ## <a name="url-syntax"></a>Syntaxe d'URL  
- Une URL de serveur de rapports est stockée dans l'élément `UrlString` et l'élément `VirtualDirectory`. La raison de séparer `UrlString` et `VirtualDirectory` en éléments distincts est que vous pouvez avoir plusieurs chaînes d’URL, mais un nom qu’un seul répertoire virtuel pour chaque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application.  
+ Une URL de serveur de rapports est stockée dans l'élément `UrlString` et l'élément `VirtualDirectory`. La raison de la séparation d'`UrlString` et de `VirtualDirectory` en éléments séparés est que vous pouvez avoir plusieurs chaînes d'URL, mais un seul nom de répertoire virtuel pour chaque application [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
  Dans HTTP.SYS, la réservation d'URL inclut les deux éléments `UrlString` et `VirtualDirectory`. La syntaxe d'une réservation d'URL comporte les parties suivantes :  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48153799"
 |VirtualDirectory|ReportServer *[_InstanceName]*<br /><br /> Reports *[_InstanceName]*<br /><br /> \<custom>|Spécifie le nom de l'application. La valeur est une chaîne. Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise ReportServer et Reports comme noms d'applications pour les applications service Web Report Server et Gestionnaire de rapports. Vous pouvez utiliser d'autres noms, si vous le souhaitez.<br /><br /> Cette valeur est requise. Elle identifie la publication.<br /><br /> Spécifiez un seul répertoire virtuel pour chaque instance d'application. Pour créer plusieurs URL pour la même application dans la même instance, créez plusieurs versions de l'élément `UrlString`. Pour créer des noms de répertoire virtuel uniques pour plusieurs instances d'application, pensez à ajouter le nom de l'instance dans le nom de répertoire virtuel à l'aide du trait de soulignement (_). La propriété *InstanceName* est facultative, mais recommandée si vous avez plusieurs instances sur le même ordinateur. Pour plus d’informations sur la définition des réservations d’URL pour les instances nommées, consultez [Réservations d’URL pour les déploiements de serveur de rapports multi-instance &#40;Gestionnaire de configuration de SSRS&#41;](url-reservations-for-multi-instance-report-server-deployments.md).<br /><br /> La valeur du répertoire virtuel ne respecte pas la casse. Vous pouvez utiliser n'importe quelle chaîne tant qu'elle n'inclut pas les caractères de séparation d'URL ou l'encodage d'URL.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurer des URL de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Configurer une URL &#40;Gestionnaire de Configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
+ [Configurer des URL de serveurs de rapports &#40;Gestionnaire de configuration de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
+ [Configurer une URL &#40;Gestionnaire de configuration de SSRS&#41;](configure-a-url-ssrs-configuration-manager.md)  
   
   

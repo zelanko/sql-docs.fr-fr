@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e83d32be1dbb93a75c1d46f3edf7f46d8a0f8a7d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209499"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035080"
 ---
 # <a name="preload-the-cache-report-manager"></a>préchargement du cache (Gestionnaire de rapports)
   Vous pouvez précharger le cache pour un dataset partagé en créant un plan d'actualisation du cache pour le dataset partagé.  
@@ -85,7 +85,7 @@ ms.locfileid: "48209499"
     data source=<servername>; initial catalog=Subscribers  
     ```  
   
-8.  Cliquez sur **Suivant**.  
+8.  Cliquer sur **Suivant**.  
   
 9. Spécifiez la requête ou la commande qui permet de récupérer les données des abonnés. Augmentez éventuellement le délai d'attente des requêtes dont le traitement est long. Exemple :  
   
@@ -121,10 +121,10 @@ ms.locfileid: "48209499"
 18. Cliquez sur **Appliquer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Abonnements pilotés par les données](../subscriptions/data-driven-subscriptions.md)   
+ [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
  [Créer un abonnement piloté par les données &#40;didacticiel SSRS&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Performances, instantanés, mise en cache &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
- [Définir les propriétés de traitement de rapport](set-report-processing-properties.md)   
- [La mise en cache des rapports &#40;SSRS&#41;](caching-reports-ssrs.md)  
+ [Définir les propriétés de traitement d’un rapport](set-report-processing-properties.md)   
+ [Mise en cache de rapports &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   
