@@ -1,7 +1,7 @@
 ---
 title: GetLevel (moteur de base de données) | Microsoft Docs
 ms.custom: ''
-ms.date: 7/22/2017
+ms.date: 07/22/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 381a1afb5b63ae04e49636a02e890b7ac3e5e112
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8f7c5e2cf81cd4b90a2667cb51e4110a8313802a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698527"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014751"
 ---
 # <a name="getlevel-database-engine"></a>GetLevel (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ OrgNode.GetLevel() AS EmpLevel, *
 FROM HumanResources.EmployeeDemo;  
 ```  
   
-### <a name="b-returning-all-members-of-a-hierarchy-level"></a>B. Retour de tous les membres d'un niveau hiérarchique  
+### <a name="b-returning-all-members-of-a-hierarchy-level"></a>b. Retour de tous les membres d'un niveau hiérarchique  
 L'exemple suivant retourne toutes les lignes de la table au niveau hiérarchique 2 :
   
 ```sql
