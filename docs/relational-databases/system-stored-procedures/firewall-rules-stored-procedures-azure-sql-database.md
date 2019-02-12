@@ -2,10 +2,8 @@
 title: Règles de pare-feu procédures (Azure SQL Database) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
-ms.prod: ''
-ms.prod_service: sql-database, sql-data-warehouse
+ms.service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 dev_langs:
 - TSQL
@@ -19,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2c5e717dc1754853614293dd8b9abb561ce0f21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1794f45c95095dbbfaac065eed40b4ef23cac725
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752297"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022320"
 ---
 # <a name="firewall-rules-stored-procedures-azure-sql-database"></a>Règles de pare-feu-procédures stockées (base de données SQL Azure)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -35,7 +33,7 @@ ms.locfileid: "47752297"
   
 |  |  |  
 | - | - |  
-|[sp_set_firewall_rule &#40;Base de données Azure SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|[sp_delete_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)|  
+|[sp_set_firewall_rule &#40;Base de données Azure SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)|[sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)|  
 |[sp_set_database_firewall_rule &#40;Base de données Azure SQL&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md)|[sp_delete_database_firewall_rule &#40;base de données SQL Azure&#41;](../../relational-databases/system-stored-procedures/sp-delete-database-firewall-rule-azure-sql-database.md)|  
   
 Pour [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], utilisez les règles de pare-feu de fenêtre. Pour plus d’informations, consultez [Configurer un pare-feu Windows pour accéder au moteur de base de données](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).   

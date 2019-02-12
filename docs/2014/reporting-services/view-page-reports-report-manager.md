@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4874ba29-429b-4dd4-a8cb-d4f087237dc2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8a2697af9ede2b6b72e7f08efd88822101c51d53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 057d2c4c75bbc0d7070992571a80907e811d354e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102799"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031630"
 ---
 # <a name="view-page-reports-report-manager"></a>Page Vue, Rapports (Gestionnaire de rapports)
   La page Afficher des rapports vous permet d'afficher un rapport. Lorsque vous ouvrez pour la première fois un rapport dans le Gestionnaire de rapports, il est au format HTML. Les rapports HTML incluent une barre d'outils Rapport qui s'affiche en haut du rapport et vous permet de parcourir les pages du rapport, d'effectuer une recherche dans un rapport et d'exporter le rapport dans un format différent. L'illustration suivante représente la barre d'outils Rapport :  
@@ -39,7 +39,7 @@ Barre d'outils Rapports
 >  Les instantanés d'exécution de rapport et certains formats d'exportation ne sont pas disponibles dans toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

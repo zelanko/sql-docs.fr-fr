@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: bf7824140a6072e58a9f84bc47943d7025aed7a8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: 15323e5ea5f2762e0cef9b4e275e8131d43c591a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505460"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017270"
 ---
 # <a name="reporting-services-data-alerts"></a>Alertes de données Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] sont une solution d'alerte pilotée par les données qui vous informe des données de rapport intéressantes ou importantes pour vous, à un moment donné. Grâce aux alertes de données, vous n'aurez plus besoin de chercher les informations, car elles viendront à vous.  

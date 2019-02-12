@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : déboguer des assemblys personnalisés | Microsoft Docs'
+title: 'Procédure : Déboguer des assemblys personnalisés | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 3a3215b3-548c-4474-81ba-3a98dd3912bf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d151641736523457e4c22ea94f50fb0652a73aa3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: da4171b624fd4caf4eabae5cec50c4b6c19578b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159729"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011491"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Procédure : déboguer des assemblys personnalisés
+# <a name="how-to-debug-custom-assemblies"></a>Procédure : Déboguer des assemblys personnalisés
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] propose différents outils de débogage qui peuvent vous aider à analyser le code de votre assembly personnalisé et à trouver les éventuelles erreurs qu’il contient. Vous devez choisir un outil en fonction de ce que vous essayez d'accomplir. Cet exemple utilise [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)].  
   
  La méthode recommandée pour concevoir, développer et tester des assemblys personnalisés pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] consiste à créer une solution contenant à la fois vos rapports de test et votre assembly personnalisé.  

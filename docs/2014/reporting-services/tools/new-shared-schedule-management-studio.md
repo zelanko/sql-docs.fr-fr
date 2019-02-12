@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d94043e338ddcaeffbfc87a1cfad74e6fd854be
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 61a3e4f7632c5251eb0404a2e4c8a4c0820c1f0b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355554"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017250"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Nouvelle planification partagée (Management Studio)
   Utilisez cette page pour créer une planification partagée pour exécuter les rapports publiés et les abonnements. Les planifications partagées peuvent être utilisées à la place des planifications spécifiques des rapports ou spécifiques des abonnements. Des informations de planification centralisées et la capacité de suspendre et de reprendre les opérations planifiées sont deux fonctionnalités clés qui distinguent les planifications partagées des planifications spécifiques aux éléments.  
@@ -36,7 +36,7 @@ ms.locfileid: "53355554"
  **Nom**  
  Tapez le nom de la planification partagée. Ce nom apparaît dans les listes déroulantes lorsque les utilisateurs sélectionnent une planification partagée pour les rapports et les abonnements. Veillez à fournir un nom descriptif qui s'ajuste facilement dans une liste et qui distingue aisément une planification partagée d'une autre. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères suivants dans le nom :  
   
- ; ? : \@ & = +, $ / * \< >  
+ ; ? : \@ & = + , $ / * \< >  
   
  " /  
   

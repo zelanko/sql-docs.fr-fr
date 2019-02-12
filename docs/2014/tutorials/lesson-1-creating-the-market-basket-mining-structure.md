@@ -1,24 +1,23 @@
 ---
-title: 'Leçon 1 : Création de la Structure d’exploration de données Market Basket | Microsoft Docs'
+title: 'Leçon 1 : Création de la Structure d’exploration de données de panier d’achat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: a817c8d1-aff4-42b4-b194-ad9cc1c60f35
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: be8768c5d638904240cc1499a594b0d2c8a97aa7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128879"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033630"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Leçon 1 : Création de la structure d'exploration de données Market Basket
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Leçon 1 : Création de la structure d'exploration de données Market Basket
   Dans cette leçon, vous allez créer une structure d'exploration de données à l'aide de laquelle vous pouvez prévoir quels produits [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] un client est susceptible d'acheter simultanément. Si vous n’êtes pas familiarisé avec les structures d’exploration de données et leur rôle dans l’exploration de données, consultez [les Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  La structure d’exploration de données association que vous allez créer dans cette leçon prend en charge l’ajout de modèles d’exploration de données selon le [algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). Au cours d'autres leçons, vous utiliserez les modèles d'exploration de données pour prévoir les types de produits qu'un client est susceptible d'acheter en même temps (on parle dans ce cas d'analyse de panier d'achat). Par exemple, vous découvrirez peut-être que des clients peuvent acheter en même temps des VTT, des pneus et des casques.  
@@ -97,9 +96,9 @@ CREATE MINING STRUCTURE [Mining Structure Name]
   
 #### <a name="to-create-a-new-dmx-query-in-sql-server-management-studio"></a>Pour créer une requête DMX dans SQL Server Management Studio  
   
-1.  Ouvrir [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+1.  Ouvrez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
-2.  Dans le **se connecter au serveur** boîte de dialogue pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, type `LocalHost`, ou le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous souhaitez vous connecter à pour cette leçon. Cliquez sur **Se connecter**.  
+2.  Dans le **se connecter au serveur** boîte de dialogue pour **type de serveur**, sélectionnez **Analysis Services**. Dans **nom du serveur**, type `LocalHost`, ou le nom de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que vous souhaitez vous connecter à pour cette leçon. Cliquer sur **Se connecter**.  
   
 3.  Dans **Explorateur d’objets**, avec le bouton droit de l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], pointez sur **nouvelle requête**, puis cliquez sur **DMX**.  
   
@@ -188,6 +187,6 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  Dans la leçon suivante, vous allez ajouter des modèles d'exploration de données à la structure Market Basket que vous venez de créer.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

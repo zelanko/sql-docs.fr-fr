@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 4bd25e15-9d9e-4528-b7bc-ccb856643aec
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 3d83e8034885d83056ea6258ede86072239f6e74
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224475"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031680"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Personnalisation et traitement du modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
   L'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)]) fournit des paramètres qui affectent la façon dont un modèle est créé et la façon dont les données chronologiques sont analysées. La modification de ces propriétés peuvent affecter de manière importante la manière dont le modèle d'exploration de données élabore des prédictions.  
@@ -25,7 +24,7 @@ ms.locfileid: "48224475"
   
 1.  Vous allez personnaliser la manière dont votre modèle gère les périodes de temps en ajoutant une nouvelle valeur pour le *PERIODICITY_HINT* paramètre.  
   
-2.  Vous découvrirez deux autres paramètres importants pour l'algorithme MTS : FORECAST_METHOD qui vous permet de contrôler la méthode utilisée pour les prédictions, et PREDICTION_SMOOTHING, qui vous permet de personnaliser le mélange des prédictions à long terme et à court terme.  
+2.  Vous allez découvrir deux autres paramètres importants pour l’algorithme Microsoft Time Series : FORECAST_METHOD, ce qui vous permet de contrôler la méthode utilisée pour la prévision, et PREDICTION_SMOOTHING, qui vous permet de personnaliser le mélange des prédictions à court terme et à long terme.  
   
 3.  Vous pouvez également dire à l'algorithme la manière dont vous souhaitez imputer les valeurs manquantes.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "48224475"
 ## <a name="handling-missing-data-optional"></a>Gestion des données manquantes (facultatif)  
  Dans de nombreux cas, vos données de ventes peuvent comporter des vides comblés par des valeurs NULL, ou un magasin peut ne pas avoir respecté la date limite du signalement des données, ce qui laisse une cellule vide à la fin d'une série. Dans de tels scénarios, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] déclenche l'erreur suivante et ne traite pas le modèle.  
   
- « Erreur (exploration de données) : horodatages non synchronisés en commençant par série \<nom de la série >, du modèle d’exploration de données, \<nom_modèle >. Toutes les séries chronologiques doivent se terminer à la même marque de temps et ne peuvent pas comporter des points de données arbitrairement absents. L'attribution de la valeur Previous ou de la valeur d'une constante numérique au paramètre MISSING_VALUE_SUBSTITUTION fournit automatiquement les points de données absents lorsque cela est possible. »  
+ « Erreur (exploration de données) : Horodatages non synchronisés en commençant par série \<nom de la série >, du modèle d’exploration de données, \<nom_modèle >. Toutes les séries chronologiques doivent se terminer à la même marque de temps et ne peuvent pas comporter des points de données arbitrairement absents. L'attribution de la valeur Previous ou de la valeur d'une constante numérique au paramètre MISSING_VALUE_SUBSTITUTION fournit automatiquement les points de données absents lorsque cela est possible. »  
   
  Pour éviter cette erreur, vous pouvez spécifier [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] doit automatiquement fournir de nouvelles valeurs pour remplir les écarts à l'aide d'une des méthodes suivantes :  
   
@@ -89,7 +88,7 @@ ms.locfileid: "48224475"
   
 #### <a name="to-process-the-forecasting-model"></a>Pour traiter le modèle de prévision  
   
-1.  Sur le **Mining Model** menu de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], sélectionnez **traiter la Structure d’exploration de données et tous les modèles**.  
+1.  Dans le menu **Modèle d'exploration de données** de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], sélectionnez **Traiter l'exploration de données et tous les modèles**.  
   
 2.  Cliquez sur **Oui**pour répondre à l'avertissement qui vous invite à indiquer si vous souhaitez générer et déployer le projet.  
   
@@ -105,8 +104,8 @@ ms.locfileid: "48224475"
  [Exploration du modèle de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/exploring-the-forecasting-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence technique de Microsoft Time Series algorithme](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Algorithme de série chronologique de Microsoft](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Traitement des exigences et considérations &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Références techniques relatives à l'algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
+ [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

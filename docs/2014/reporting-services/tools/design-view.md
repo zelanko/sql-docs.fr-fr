@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6fa378aa-442f-4d2f-beab-02a0fb5cd3ce
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 32578d4810140314964d3e7e2ceaa8d836aa99bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6d703bc03c6ad715efad06612b06210f8bad4bc1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137389"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010416"
 ---
 # <a name="design-view"></a>Vue Design
   Utilisez la vue Design pour organiser les éléments présents dans le rapport. Cette vue est parfois appelée aire de conception ou mode de conception.  
@@ -36,7 +36,7 @@ ms.locfileid: "48137389"
   
  Pour ajouter des données et des images à un rapport, faites glisser les éléments depuis le volet des données de rapportvers les régions de données et les zones de texte de l'aire de conception.  
   
- Pour plus d'informations, consultez [Report Data Pane](../report-data/report-data-pane.md).  
+ Pour plus d’informations, consultez [Données du rapport, volet](../report-data/report-data-pane.md).  
   
 ## <a name="grouping-pane"></a>Volet de regroupement  
  Les groupes sont utilisés pour hiérarchiser vos données de rapport de façon visuelle et pour calculer des totaux. Utilisez le volet Regroupement pour afficher les groupes définis pour une table, une matrice ou une région de données de type liste. Par défaut, le volet Regroupement affiche l’ensemble des groupes de la région de données sélectionnée sous forme de liste aplatie. Le volet Regroupement est désactivé pour les régions de données Graphique et Jauge.  
@@ -53,6 +53,6 @@ ms.locfileid: "48137389"
   
 ## <a name="see-also"></a>Voir aussi  
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
- [Conseils de conception de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
+ [Conseils de création de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 1de13a23edc8a248008dcdad415e58e108e9d0e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202029"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017280"
 ---
 # <a name="planning-a-report-report-builder"></a>Planification d'un rapport (Générateur de rapports)
   Le Générateur de rapports vous permet de créer de nombreux types de rapports. Par exemple, vous pouvez créer des rapports qui indiquent des données de ventes récapitulatives ou détaillées, des tendances de ventes et de marketing, ou bien des rapports opérationnels ou des tableaux de bord. Vous pouvez également créer des rapports qui tirent parti de texte enrichi, tels que des commandes clients, des catalogues de produits ou des lettres types. Tous ces rapports sont créés à l'aide de différentes combinaisons des mêmes blocs de construction dans le Générateur de rapports. Pour créer un rapport utile et facilement compréhensible, il est préférable de le planifier au préalable. Voici quelques éléments à prendre en considération avant de commencer :  
@@ -38,7 +38,7 @@ ms.locfileid: "48202029"
   
 -   **Quelles données souhaitez-vous présenter aux utilisateurs ? Les données ou le format doivent-ils être filtrés pour différents publics ?**  
   
-     Vous souhaiterez peut-être réduire l'étendue du rapport à des utilisateurs ou des emplacements spécifiques, ou à une période donnée. Pour filtrer les données du rapport, utilisez des paramètres permettant de récupérer et d'afficher uniquement les données souhaitées. Pour plus d’informations, consultez [Report Parameters &#40;Report Builder and Report Designer&#41;](report-parameters-report-builder-and-report-designer.md).  
+     Vous souhaiterez peut-être réduire l'étendue du rapport à des utilisateurs ou des emplacements spécifiques, ou à une période donnée. Pour filtrer les données du rapport, utilisez des paramètres permettant de récupérer et d'afficher uniquement les données souhaitées. Pour plus d'informations, consultez [Paramètres de rapport &#40;Générateur de rapports et Concepteur de rapports&#41;](report-parameters-report-builder-and-report-designer.md).  
   
 -   **Avez-vous besoin de créer vos propres calculs ?**  
   
@@ -50,11 +50,11 @@ ms.locfileid: "48202029"
   
 -   **Comment allez-vous délivrer le rapport ?**  
   
-     Vous pouvez enregistrer votre rapport sur votre ordinateur local et continuer à travailler dessus ou l'exécuter localement à des fins d'informations personnelles. Toutefois, pour partager votre rapport avec d'autres personnes, vous devez l'enregistrer sur un serveur de rapports configuré en mode natif, ou sur un serveur de rapports en mode intégré SharePoint. Le fait de l'enregistrer sur un serveur permet à d'autres personnes de l'exécuter lorsqu'elles le souhaitent. En guise d'alternative, l'administrateur du serveur de rapports peut configurer un abonnement au rapport ou la remise du rapport par messagerie électronique à d'autres utilisateurs. Vous pouvez faire remettre le rapport dans un format d'exportation spécifique si vous préférez. Pour plus d’informations, consultez [recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS &#41; ](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
+     Vous pouvez enregistrer votre rapport sur votre ordinateur local et continuer à travailler dessus ou l'exécuter localement à des fins d'informations personnelles. Toutefois, pour partager votre rapport avec d'autres personnes, vous devez l'enregistrer sur un serveur de rapports configuré en mode natif, ou sur un serveur de rapports en mode intégré SharePoint. Le fait de l'enregistrer sur un serveur permet à d'autres personnes de l'exécuter lorsqu'elles le souhaitent. En guise d'alternative, l'administrateur du serveur de rapports peut configurer un abonnement au rapport ou la remise du rapport par messagerie électronique à d'autres utilisateurs. Vous pouvez faire remettre le rapport dans un format d'exportation spécifique si vous préférez. Pour plus d’informations, consultez [Recherche, affichage et gestion des rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Générateur de rapports dans SQL Server 2014](../report-builder/report-builder-in-sql-server-2016.md)   
- [Concepts de création de rapports &#40;Générateur de rapports et SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
+ [Concepts de création de rapport &#40;Générateur de rapports et SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
  [Didacticiels &#40;Générateur de rapports&#41;](../report-builder-tutorials.md)  
   
   

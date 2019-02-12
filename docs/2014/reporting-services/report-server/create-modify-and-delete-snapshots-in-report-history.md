@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5aebbbfa-a8db-462d-8ab9-746fad9525f0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2d72c7991f1ebcf36a3408af344225967c1dc498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c607291cd2675e454861aa4c79da608d8bcaba1b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144699"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010961"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Créer, modifier et supprimer des instantanés dans l'historique de rapport
   L'historique de rapport est un ensemble d'instantanés de rapport. Vous pouvez gérer l'historique de rapport en ajoutant et en supprimant des instantanés, ou en modifiant les propriétés qui affectent le stockage de l'historique de rapport. Vous pouvez créer un historique de rapport manuellement ou de manière planifiée.  
@@ -61,10 +61,10 @@ ms.locfileid: "48144699"
  L'historique de rapport est également supprimé lorsque vous supprimez un rapport. Si, par exemple, vous supprimez un rapport de ventes mensuelles pour le remplacer par une version plus récente, l'ensemble de l'historique de rapport associé au rapport est également supprimé. Cependant, si vous déplacez un rapport, son historique l'accompagne.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un historique de rapport &#40;Reporting Services dans SharePoint Mode intégré&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
- [Le Gestionnaire de rapports &#40;SSRS en Mode natif&#41;](../report-manager-ssrs-native-mode.md)   
- [Gestion de contenu de serveur de rapports &#40;SSRS en Mode natif&#41;](report-server-content-management-ssrs-native-mode.md)   
- [Ajouter un instantané à l’historique de rapport &#40;le Gestionnaire de rapports&#41;](add-a-snapshot-to-report-history-report-manager.md)   
+ [Créer un historique de rapport &#40;Reporting Services en mode intégré SharePoint&#41;](create-report-history-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)   
+ [Gestion du contenu du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-content-management-ssrs-native-mode.md)   
+ [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](add-a-snapshot-to-report-history-report-manager.md)   
  [Limiter l’historique de rapport &#40;Gestionnaire de rapports&#41;](../reports/limit-report-history-report-manager.md)  
   
   

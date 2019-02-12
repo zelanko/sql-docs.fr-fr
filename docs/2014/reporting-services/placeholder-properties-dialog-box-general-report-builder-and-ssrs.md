@@ -12,20 +12,20 @@ f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: bceb733247e806f9e03803797c831561662229d2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: 9c52690de427ad741a340b5696b246694326ece1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171159"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56037710"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'espace réservé, Général (Générateur de rapports et SSRS)
   Utilisez la boîte de dialogue **Propriétés de l'espace réservé** pour modifier les options de valeur, d'info-bulle et de balise d'un espace réservé dans une zone de texte.  
   
 ## <a name="options"></a>Options  
- **Étiquette**  
+ **Label**  
  Tapez l'étiquette de l'espace réservé. L'étiquette s'affiche sur l'aire de conception uniquement.  
   
  **Valeur**  
@@ -45,9 +45,9 @@ ms.locfileid: "48171159"
  [Mettre en forme du texte dans une zone de texte &#40;Générateur de rapports et SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Ajouter du code HTML à un rapport &#40;Générateur de rapports et SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [Exemples d’expressions &#40;Générateur de rapports et SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Zones de texte &#40;Générateur de rapports et SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Zones de texte &#40;Générateur de rapport et SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
  [Mise en forme des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
- [Mise en forme de texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Importation de données HTML dans un rapport &#40;Générateur de rapports et SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   
   

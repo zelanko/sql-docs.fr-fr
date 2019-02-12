@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f0e1d1e31588945a12eed2d82ddf05ad2a7977e7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 4e7f3faff05a318c302f12ded3a6ec4c864b7054
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183129"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012370"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Mettre en cache les datasets partagés (SSRS)
   Les résultats de la requête pour un dataset partagé peuvent être copiés vers un cache afin de fournir des données cohérentes pour plusieurs rapports et améliorer le temps de réponse pour la requête de dataset. Comme pour les rapports, vous pouvez configurer un dataset partagé à mettre en cache lors de la première utilisation ou en spécifiant une planification.  
@@ -33,7 +33,7 @@ ms.locfileid: "48183129"
   
 -   La requête s'exécute comme le résultat d'une référence de dataset partagé dans un rapport remis via la messagerie électronique, où un grand nombre de personnes sont susceptibles de cliquer sur le lien dans une courte plage horaire.  
   
--   La liste suivante fournit des exemples de situations dans lesquelles il ne convient pas de mettre en cache un dataset partagé :  
+-   La liste suivante fournit des exemples de situations dans lesquelles il ne convient pas de mettre en cache un dataset partagé :  
   
 -   Les résultats de la requête doivent toujours inclure les données les plus récentes.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48183129"
  Vous pouvez spécifier la durée pendant laquelle conserver les données dans le cache avant leur expiration. Pour plus d’informations, consultez [Page Mise en cache, datasets partagés &#40;Gestionnaire de rapports&#41;](../caching-page-shared-datasets-report-manager.md).  
   
 ## <a name="preloading-the-cache"></a>Préchargement du cache  
- Vous pouvez précharger le cache en créant un plan d'actualisation du cache. Avec un plan d'actualisation, vous pouvez spécifier la fréquence d'actualisation du cache à l'aide d'une planification spécifique par élément ou d'une planification partagée. Pour éviter qu'il y ait plusieurs entrées du cache pour le même élément, la planification que vous spécifiez doit permettre suffisamment de temps pour le traitement des requêtes sur la source de données externe. Par exemple, si la requête prend 20 minutes pour s'exécuter, la planification d'actualisation doit être supérieure à 20 minutes. Pour plus d’informations, consultez [planifications](../subscriptions/schedules.md).  
+ Vous pouvez précharger le cache en créant un plan d'actualisation du cache. Avec un plan d'actualisation, vous pouvez spécifier la fréquence d'actualisation du cache à l'aide d'une planification spécifique par élément ou d'une planification partagée. Pour éviter qu'il y ait plusieurs entrées du cache pour le même élément, la planification que vous spécifiez doit permettre suffisamment de temps pour le traitement des requêtes sur la source de données externe. Par exemple, si la requête prend 20 minutes pour s'exécuter, la planification d'actualisation doit être supérieure à 20 minutes. Pour plus d'informations, consultez [Schedules](../subscriptions/schedules.md).  
   
  Pour créer un plan d'actualisation du cache pour un dataset partagé, les conditions suivantes s'appliquent.  
   

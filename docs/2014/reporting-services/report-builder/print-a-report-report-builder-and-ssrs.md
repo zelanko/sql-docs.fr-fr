@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: b96936c9-c387-41a9-8c19-6eb325769ffd
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 081f7b0c748b06a87e8497582ffc8dabbda3e57f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 312fdd9defc0cbc0f19c312e32e0eb8038cbc918
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095199"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013880"
 ---
 # <a name="print-a-report-report-builder-and-ssrs"></a>Imprimer un rapport (Générateur de rapports et SSRS)
   Après avoir enregistré un rapport sur un serveur de rapports, vous pouvez l'afficher et l'imprimer à partir d'un navigateur, du Gestionnaire de rapports ou de toute application permettant d'afficher un rapport exporté. Avant d'enregistrer un rapport, vous pouvez l'imprimer après avoir affiché son aperçu.  
   
- Lorsque vous imprimez un rapport, vous pouvez spécifier le format du papier à utiliser. Le format du papier détermine le nombre de pages dans un rapport et les données de rapport qui remplissent chaque page. Le format de papier affecte uniquement les rapports rendus avec des convertisseurs de saut de page manuel : PDF, Image et Impression. La définition du format de papier n'a aucun effet sur d'autres convertisseurs. Pour plus d’informations, consultez [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
+ Lorsque vous imprimez un rapport, vous pouvez spécifier le format du papier à utiliser. Le format du papier détermine le nombre de pages dans un rapport et les données de rapport qui remplissent chaque page. Format de papier affecte uniquement les rapports qui sont restitués avec les convertisseurs de saut de page manuel : PDF, Image et impression. La définition du format de papier n'a aucun effet sur d'autres convertisseurs. Pour plus d’informations, consultez [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md).  
   
  Dans la barre d'outils de la visionneuse de rapports dans le Gestionnaire de rapports ou en mode Aperçu dans le Générateur de rapports, vous pouvez exporter un rapport vers un convertisseur de saut de page manuel ou cliquer sur le bouton Imprimer pour imprimer une copie du rapport. Vous pouvez devoir définir le format de papier ou d'autres propriétés de mise en page. Utilisez la boîte de dialogue **Propriétés du rapport** pour modifier les propriétés de mise en page, y compris le format de papier.  
   
@@ -100,6 +100,6 @@ ms.locfileid: "48095199"
  [Imprimer des rapports &#40;Générateur de rapports et SSRS&#41;](print-reports-report-builder-and-ssrs.md)   
  [Exportation de rapports &#40;Générateur de rapports et SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Boîte de dialogue Propriétés du rapport, Mise en page &#40;Générateur de rapports&#41;](../report-properties-dialog-box-page-setup-report-builder.md)   
- [Mode Création de rapport &#40;Générateur de rapports&#41;](report-design-view-report-builder.md)  
+ [Mode Conception de rapport &#40;Générateur de rapports&#41;](report-design-view-report-builder.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 57381914-3106-4dc4-acd4-7ed5b565cca6
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 16ba4327d2ca82e2c85c104b1617fdea68849654
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: bb19d703480532c66ff06de8c6885779652f8385
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165319"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013610"
 ---
 # <a name="delete-an-item-management-studio"></a>Supprimer un élément (Management Studio)
   Quand vous êtes connecté à une instance de serveur de rapports dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], vous pouvez supprimer les définitions de rôles et les planifications partagées. Vous ne pouvez pas supprimer les rapports, modèles ou autres éléments d'un serveur de rapports. Pour supprimer le contenu d'un serveur de rapports, utilisez le Gestionnaire de rapports à la place. Si le serveur de rapports est configuré en mode intégré SharePoint, utilisez les fonctionnalités de gestion des éléments de la bibliothèque SharePoint où se trouve votre contenu.  

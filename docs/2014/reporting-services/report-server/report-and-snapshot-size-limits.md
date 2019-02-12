@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 73e2eae28d1c906e065b205e5964081e52da6ac9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 46b6a89d5ce643aa67f3f514052c19ea77e6e72e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374121"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035640"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de taille des instantanés et des rapports
   Les administrateurs qui gèrent un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent utiliser les informations figurant dans cette rubrique pour comprendre les limites de taille lorsque le rapport est publié sur un serveur de rapports, rendu lors de l'exécution et enregistré dans le système de fichiers. Cette rubrique fournit également des conseils pratiques expliquant comment mesurer la taille d'une base de données de serveur de rapports, et elle décrit l'incidence de la taille des instantanés sur les performances des serveurs.  

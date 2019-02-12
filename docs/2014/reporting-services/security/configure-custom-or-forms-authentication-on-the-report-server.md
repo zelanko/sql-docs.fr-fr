@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e8601a8f-e66d-4649-8e4d-a46ca20ec7d0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 591fc282f6e60f97d4b900e3b88f727d554535e9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e568d04a58ad13479f0e3a58254f8e409c46164d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366101"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010820"
 ---
 # <a name="configure-custom-or-forms-authentication-on-the-report-server"></a>Configurer l'authentification personnalisée ou par formulaire sur le serveur de rapports
   Reporting Services fournit une architecture extensible vous permettant d’incorporer des modules d'authentification personnalisés ou par formulaires. Vous pouvez envisager d'implémenter une extension d'authentification personnalisée si les spécifications de déploiement n'incluent pas la sécurité intégrée de Windows ou l’authentification de base. Le scénario d’utilisation de l'authentification personnalisée le plus courant est la prise en charge d’un accès Internet ou extranet à une application Web. Le remplacement de l’extension d’authentification Windows par défaut par une extension d'authentification personnalisée vous permet de mieux contrôler l'habilitation des utilisateurs externes à accéder au serveur de rapports.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - models [Master Data Services], changing name
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: douglaslms
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 752f31eee490cca61523e3a0bba512e687c0108b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bf8c70a3d1f97ce3be25833c8f0af93d693654d9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102959"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56021711"
 ---
 # <a name="change-a-model-name-master-data-services"></a>Modifier un nom de modèle (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d'un modèle.  
@@ -28,7 +28,7 @@ ms.locfileid: "48102959"
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
   
--   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrators &#40;Master Data Services&#41;](administrators-master-data-services.md).  
+-   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
 ### <a name="to-change-a-model-name"></a>Pour modifier un nom de modèle  
   
@@ -50,6 +50,6 @@ ms.locfileid: "48102959"
 ## <a name="see-also"></a>Voir aussi  
  [Créer un modèle &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)   
  [Supprimer un modèle &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)   
- [Modèles (Master Data Services)](../../2014/master-data-services/models-master-data-services.md)  
+ [Modèles &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
   

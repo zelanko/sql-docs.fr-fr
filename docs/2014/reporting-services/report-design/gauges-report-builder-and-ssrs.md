@@ -158,13 +158,13 @@ f1_keywords:
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5c643df1d6f8849cc610d9d94a12cfeecde2836d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6da8262cd94a4e685f2baf5f1adb1692cfb3df25
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154169"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016090"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
   La région de données de jauge est une région de données unidimensionnelle qui affiche une valeur unique dans votre dataset. Chaque jauge est toujours positionnée à l'intérieur d'un panneau de jauge, où vous pouvez ajouter des jauges enfants ou adjacentes. Vous pouvez créer au sein d'un panneau de jauge unique plusieurs jauges qui partagent des fonctions communes telles que le filtrage, le regroupement ou le tri.  
@@ -181,7 +181,7 @@ ms.locfileid: "48154169"
   
  ![Diagramme d’éléments de jauge](../media/gauge-elements-diagram.gif "Diagramme d’éléments de jauge")  
   
- Pour plus d’informations sur l’utilisation des jauges comme indicateurs de performance clés, consultez [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Pour plus d’informations sur l’utilisation de jauges comme indicateurs de performance clés, consultez [didacticiel : Ajout d’un indicateur de performance clé à votre rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des jauges hors d'un rapport en tant que parties du rapport. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
@@ -190,7 +190,7 @@ ms.locfileid: "48154169"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ##  <a name="GaugeTypes"></a> Types de jauges  
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fournit deux types de jauges : la jauge radiale et la jauge linéaire. La jauge radiale est en général utilisée lorsque vous souhaitez exprimer les données comme valeur de rapidité. La jauge linéaire est utilisée pour exprimer les données comme valeur de température ou d'échelle.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] fournit deux types de jauges : la jauge radiale et la jauge linéaire. La jauge radiale est en général utilisée lorsque vous souhaitez exprimer les données comme valeur de rapidité. La jauge linéaire est utilisée pour exprimer les données comme valeur de température ou d'échelle.  
   
  Les principales différences entre les deux types sont la forme globale de la jauge et les pointeurs de la jauge disponibles. Les jauges radiales sont circulaires, ou plus ou moins circulaires, et ressemblent à des indicateurs de vitesse. Les pointeurs de la jauge sont souvent des aiguilles, mais peuvent être des marqueurs ou des barres.  
   
@@ -204,13 +204,13 @@ ms.locfileid: "48154169"
   
  ![rs_RadialGauge](../media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Options de jauge radiale : Radial, Radial avec mini-jauge, Deux échelles, 90 degrés nord-est, 90 degrés nord-ouest, 90 degrés sud-ouest, 90 degrés sud-est, 180 degrés nord, 180 degrés sud, 180 degrés ouest, 180 degrés est et Métrique.  
+ Options de la jauge radiale : Radial, Radial avec mini-jauge, deux échelles, 90 degrés nord-est, 90 degrés nord-ouest, 90 degrés sud-ouest, 90 degrés sud-est, 180 degrés nord, 180 degrés Sud, 180 degrés West180 degrés est et métrique.  
   
  **Jauge linéaire**  
   
  ![rs_LinearGauge](../media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Options de jauge linéaire : Horizontal, Vertical, Pointeurs multiples en forme de barres, Deux échelles, Plage de trois couleurs, Logarithmique, Thermomètre, Thermomètre Fahrenheit/Celsius et Graphique à puces.  
+ Options de la jauge linéaire : À l’horizontale, verticale, barre de plusieurs pointeurs, deux échelles, plage de trois couleurs, logarithmique, thermomètre, thermomètre Fahrenheit/Celsius et graphique à puces.  
   
   
 ##  <a name="AddingData"></a> Ajout de données à une jauge  
@@ -244,14 +244,14 @@ ms.locfileid: "48154169"
 -   Cliquez avec le bouton droit sur le pointeur de la jauge et sélectionnez **Propriétés du pointeur**. Pour `Value`, sélectionnez un champ dans la liste déroulante ou définissez une expression de champ en cliquant sur le **Expression** (*fx*) bouton.  
   
 ### <a name="aggregating-fields-into-a-single-value"></a>Agrégation de champs en une seule valeur  
- Lorsqu’un champ est ajouté à une jauge, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcule un agrégat pour le champ par défaut. Les types de données numériques sont agrégés à l'aide de la fonction SUM. Les types de données non numériques sont agrégés à l'aide de la fonction COUNT, qui compte le nombre d'instances d'une valeur ou d'un champ particulier dans le dataset ou le groupe. Si le type de données du champ de valeur est String, la jauge ne peut pas afficher de valeur numérique, y compris en présence de chiffres dans les champs. Au lieu de cela, la jauge agrège les champs de type String à l'aide de la fonction COUNT. Pour éviter ce comportement, assurez-vous que les champs que vous utilisez sont des types de données numériques, par opposition aux chaînes qui contiennent des nombres mis en forme. Vous pouvez utiliser une expression Visual Basic pour convertir des valeurs de chaîne en type de données numérique à l'aide de la constante CDbl ou CInt. Par exemple, l'expression suivante convertit un champ de chaîne appelé MyField en valeurs numériques.  
+ Lorsqu'un champ est ajouté à une jauge, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] calcule par défaut un agrégat pour ce champ. Les types de données numériques sont agrégés à l'aide de la fonction SUM. Les types de données non numériques sont agrégés à l'aide de la fonction COUNT, qui compte le nombre d'instances d'une valeur ou d'un champ particulier dans le dataset ou le groupe. Si le type de données du champ de valeur est String, la jauge ne peut pas afficher de valeur numérique, y compris en présence de chiffres dans les champs. Au lieu de cela, la jauge agrège les champs de type String à l'aide de la fonction COUNT. Pour éviter ce comportement, assurez-vous que les champs que vous utilisez sont des types de données numériques, par opposition aux chaînes qui contiennent des nombres mis en forme. Vous pouvez utiliser une expression Visual Basic pour convertir des valeurs de chaîne en type de données numérique à l'aide de la constante CDbl ou CInt. Par exemple, l'expression suivante convertit un champ de chaîne appelé MyField en valeurs numériques.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
   
  Pour plus d’informations sur les expressions d’agrégation, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="defining-a-group-on-a-gauge"></a>Définition d'un groupe sur une jauge  
- Après avoir ajouté un champ à la jauge, vous pouvez ajouter un groupe de données. Le jauge diffère de toutes les autres régions de données dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] qui peut afficher plusieurs groupes dans une même région de données. Lorsque vous ajoutez un groupe en définissant une expression de groupe sur la jauge, cela revient à ajouter un groupe de lignes sur la région de données de tableau matriciel. Lorsque le groupe est ajouté, seule la valeur du dernier groupe est toutefois affichée en tant que valeur de pointeur sur la jauge. Par exemple, si vous ajoutez une expression de regroupement sur Year, le pointeur pointera sur la valeur qui représente la valeur des ventes agrégées pour la dernière année du dataset. Pour plus d’informations sur les groupes, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  
+ Après avoir ajouté un champ à la jauge, vous pouvez ajouter un groupe de données. Le jauge diffère de toutes les autres régions de données dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]qui peut afficher plusieurs groupes dans une même région de données. Lorsque vous ajoutez un groupe en définissant une expression de groupe sur la jauge, cela revient à ajouter un groupe de lignes sur la région de données de tableau matriciel. Lorsque le groupe est ajouté, seule la valeur du dernier groupe est toutefois affichée en tant que valeur de pointeur sur la jauge. Par exemple, si vous ajoutez une expression de regroupement sur Year, le pointeur pointera sur la valeur qui représente la valeur des ventes agrégées pour la dernière année du dataset. Pour plus d’informations sur les groupes, consultez [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](understanding-groups-report-builder-and-ssrs.md).  
   
  Vous pouvez ajouter un groupe à la jauge lorsque, par exemple, vous affichez plusieurs jauges dans une table ou une liste et que vous souhaitez afficher des données agrégées par groupe. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md).  
   
@@ -289,7 +289,7 @@ ms.locfileid: "48154169"
   
 -   [Ajouter une jauge à un rapport &#40;Générateur de rapports et SSRS&#41;](add-a-gauge-to-a-report-report-builder-and-ssrs.md)  
   
--   [Définir un Minimum ou un Maximum sur une jauge &#40;Générateur de rapports et SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
+-   [Définir un minimum ou un maximum sur une jauge &#40;Générateur de rapports et SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)  
   
 -   [Définir un intervalle d’alignement sur une jauge &#40;Générateur de rapports et SSRS&#41;](../set-a-snapping-interval-on-a-gauge-report-builder-and-ssrs.md)  
   

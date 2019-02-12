@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9c3a74c2-c7f4-44a7-a552-2e5f6e7cb941
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d03d6ebec2a3d2c40b8cd674e51dee56160bc26b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: f71ac2824a1cefe7d601bbc3e21168c02a285025
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205969"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015820"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>Propriété MachineAccountIdentity (WMI)
   Obtient l'identité du compte d'ordinateur de l'ordinateur sur lequel le serveur de rapports est installé.  
@@ -34,9 +34,9 @@ public string MachineAccountIdentity;
 ```  
   
 ## <a name="property-values"></a>Valeurs de la propriété  
- Un `String` valeur qui contient l’identité de compte d’ordinateur de l’ordinateur installé sur le serveur de rapports.  
+ Valeur `String` qui contient l'identité de compte d'ordinateur de l'ordinateur sur lequel le serveur de rapports est installé.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -14,19 +14,19 @@ helpviewer_keywords:
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f2f0c56138572873c51de852f282edcfbae1c104
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 302f00feeb5b240a80d6ce969343797202ebe484
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190879"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040050"
 ---
 # <a name="deploying-a-rendering-extension"></a>Déploiement d'une extension de rendu
-  Après avoir écrit et compilé votre extension de génération de rapport [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans une bibliothèque [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vous devez la rendre détectable par le serveur de rapports et par le Concepteur de rapports. Pour cela, copiez l'extension dans le répertoire approprié et ajoutez des entrées aux fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriés.  
+  Après avoir écrit et compilé votre extension de génération de rapport [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans une bibliothèque [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , vous devez la rendre détectable par le serveur de rapports et par le Générateur de rapports. Pour cela, copiez l'extension dans le répertoire approprié et ajoutez des entrées aux fichiers de configuration [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] appropriés.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Élément Extension de rendu de fichier de configuration  
- Une fois qu'une extension de rendu est compilée dans une .DLL, vous devez ajouter une entrée dans le fichier rsreportserver.config. Par défaut, celui-ci se trouve dans le dossier %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<nom_instance>\Reporting Services\ReportServer. L’élément parent est \<Render>. Sous l'élément Render se trouve un élément Extension pour chaque extension de rendu. Le `Extension` élément contient deux attributs, Name et Type.  
+ Une fois qu'une extension de rendu est compilée dans une .DLL, vous devez ajouter une entrée dans le fichier rsreportserver.config. Par défaut, celui-ci se trouve dans le dossier %ProgramFiles%\Microsoft SQL Server\MSRS10_50.\<nom_instance>\Reporting Services\ReportServer. L’élément parent est \<Render>. Sous l'élément Render se trouve un élément Extension pour chaque extension de rendu. L'élément `Extension` contient deux attributs, Name et Type.  
   
  Le tableau suivant décrit les attributs de la `Extension` , élément pour les extensions de rendu :  
   
@@ -34,8 +34,8 @@ ms.locfileid: "48190879"
 |---------------|-----------------|  
 |**Nom**|Nom unique de l'extension. La longueur maximale de l'attribut **Name** est de 255 caractères. Le nom doit être unique parmi toutes les entrées de l'élément **Extensions** d'un fichier de configuration. Si un nom existe en double, le serveur de rapports retourne une erreur.|  
 |**Type**|Liste séparée par des virgules qui inclut l'espace de noms complet, ainsi que le nom de l'assembly.|  
-|**Visible**|La valeur `false` indique que l'extension de rendu ne doit pas être visible dans les interfaces utilisateur. Si l’attribut n’est pas inclus, la valeur par défaut est `true`.|  
-|**LogAllExecutionRequests**|La valeur `false` indique qu'une entrée est enregistrée pour la première exécution de rapport uniquement dans une session. Si l’attribut n’est pas inclus, la valeur par défaut est `true`.<br /><br /> Par exemple, ce paramètre détermine s'il convient d'enregistrer une entrée pour la première page rendue dans un rapport uniquement (lorsque la valeur est `false`) ou une entrée pour chaque page rendue dans le rapport (lorsque la valeur est `true`).|  
+|**Visible**|La valeur `false` indique que l'extension de rendu ne doit pas être visible dans les interfaces utilisateur. Si cet attribut n'est pas défini, la valeur par défaut est `true`.|  
+|**LogAllExecutionRequests**|La valeur `false` indique qu'une entrée est enregistrée pour la première exécution de rapport uniquement dans une session. Si cet attribut n'est pas défini, la valeur par défaut est `true`.<br /><br /> Par exemple, ce paramètre détermine s'il convient d'enregistrer une entrée pour la première page rendue dans un rapport uniquement (lorsque la valeur est `false`) ou une entrée pour chaque page rendue dans le rapport (lorsque la valeur est `true`).|  
   
  Pour plus d'informations, consultez [RSReportServer Configuration File](../../report-server/rsreportserver-config-configuration-file.md).  
   

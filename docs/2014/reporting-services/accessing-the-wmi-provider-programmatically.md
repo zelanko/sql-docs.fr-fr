@@ -11,19 +11,19 @@ ms.topic: reference
 ms.assetid: 67bd266b-1484-4863-8152-060a993420a9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8eeb349c91dd87175f8baaabad75acccc8a622d6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b35b22e4eb80ba4b391cbac6c854248db3f9553c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094991"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009571"
 ---
 # <a name="accessing-the-wmi-provider-programmatically"></a>Accès au fournisseur WMI par programmation
   Cette rubrique est en cours d'élaboration.  
   
 ## <a name="wmi-provider-overview"></a>Vue d'ensemble du fournisseur WMI  
- L’espace de noms utilisé pour obtenir des informations sur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans les exemples de code contenus dans cette rubrique est **System.Management**, qui provient du [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. L’espace de noms **System.Management** fournit un ensemble de classes de code managé par le biais desquelles les applications [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] peuvent accéder à des informations de gestion et les manipuler. Pour plus d’informations sur l’utilisation des classes WMI de Reporting Services à l’aide de l’espace de noms **System.Management**, consultez « Accès aux informations de gestion avec System.Management » dans le SDK [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)].  
+ L'espace de noms utilisé pour obtenir des informations sur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] dans les exemples de code contenus dans cette rubrique est **System.Management** , qui est issu du [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]. L’espace de noms **System.Management** fournit un ensemble de classes de code managé par le biais desquelles les applications [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] peuvent accéder à des informations de gestion et les manipuler. Pour plus d'informations sur l'utilisation des classes WMI de Reporting Services à l'aide de l'espace de noms **System.Management** , consultez « Accès aux informations de gestion avec System.Management » dans le Kit de développement logiciel (SDK) [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] .  
   
 ## <a name="finding-a-report-server-instance"></a>Recherche d'une instance de serveur de rapports  
  La méthode privilégiée pour rechercher des informations sur vos installations de serveur de rapports consiste à énumérer la collection d'instances WMI. L'exemple suivant indique comment rechercher des propriétés sur chaque instance de serveur de rapports en créant une collection et en effectuant une boucle dans la collection pour afficher les propriétés.  

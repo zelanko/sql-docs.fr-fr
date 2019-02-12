@@ -16,16 +16,16 @@ helpviewer_keywords:
 - XDR schemas [SQLXML], XML Bulk Load
 - inserting data
 ms.assetid: 3708b493-322e-4f3c-9b27-441d0c0ee346
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 01761247a91f80a5a5b8d74aec32dd72ba02fdd6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f22b729aa34640f2e264fddcb79ce44de25e3e13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838557"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011130"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Exécution du chargement en masse de données XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47838557"
  [Enregistrer le processus de génération &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/record-generation-process-sqlxml-4-0.md)  
  Décrit le processus et les règles régissant la génération des enregistrements pour le chargement en masse XML.  
   
- [Interprétation des annotations &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
+ [Annotation Interpretation &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/annotation-interpretation-sqlxml-4-0.md)  
  Décrit la façon dont le chargement en masse XML interprète les annotations dans les schémas XSD et XDR.  
   
  [Modèle objet chargement en masse SQL Server XML &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  

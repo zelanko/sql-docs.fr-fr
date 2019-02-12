@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 27d5bf66-b0e7-489e-a830-ffe2ec8e5350
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 50df73e41d67b69479782385244031f85baf5652
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: df14375ad8ae54377f7dbbd599d0bcc7b50aa2d6
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138789"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010790"
 ---
 # <a name="new-model-page-report-manager"></a>Page Nouveau modèle (Gestionnaire de rapports)
   Utilisez cette page pour générer un modèle de rapport par défaut à partir d'une source de données partagée. Vous ne pouvez générer des modèles de rapport qu'à partir de sources de données multidimensionnelles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , de sources de données relationnelles [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et de sources de données relationnelles Oracle.  
@@ -42,7 +42,7 @@ ms.locfileid: "48138789"
  **Nom**  
  Spécifie le nom du modèle. Le nom doit contenir un caractère alphanumérique au minimum. Il peut également comporter des espaces et quelques symboles. N'utilisez pas les caractères suivants dans le nom :  
   
- ; ? : \@ & = +, $ / * \< > | " /  
+ ; ? : \@ & = + , $ / * \< > | " /  
   
  **Description**  
  Affiche une description du modèle. Les utilisateurs qui consultent cet élément par le biais du Gestionnaire de rapports affichent cette description en parcourant l'arborescence des dossiers.  

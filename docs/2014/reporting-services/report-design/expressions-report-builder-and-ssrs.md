@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76d3ac86-650c-46fe-8086-8b3edcea3882
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ec516a74d28ff868e8a20d1c3d5cd568d3420ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 9e3bae5d7a41d87cf07fab455b434b935636375f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352793"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016460"
 ---
 # <a name="expressions-report-builder-and-ssrs"></a>Expressions (Générateur de rapports et SSRS)
   Les expressions sont couramment utilisées dans un rapport pour récupérer, calculer, afficher, regrouper, trier, filtrer, paramétrer et mettre en forme les données d'un rapport. De nombreuses propriétés d'élément de rapport peuvent avoir la valeur d'une expression. Les expressions vous aident à contrôler le contenu, la conception et l'interactivité de votre rapport. Les expressions sont écrites dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], enregistrées dans la définition de rapport et évaluées par le processeur de rapports au moment où vous exécutez le rapport.  

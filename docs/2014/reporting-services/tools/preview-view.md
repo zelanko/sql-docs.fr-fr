@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 108255d1-5be8-47c1-80f3-1f2a055e4d02
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5ac2aa3d352de78fae6c3d9613bef2df390e46fa
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: e3644de6d5a11e801e2b41d7d7aa517bad771714
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354028"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033260"
 ---
 # <a name="preview-view"></a>Vue Aperçu
   Utilisez la vue **Aperçu** pour afficher le rapport rendu. Lors de l'aperçu d'un rapport, le Générateur de rapports exécute le rapport localement et l'affiche dans la vue Aperçu. Dans le mode Aperçu, le rapport est traité dans sa totalité. Si le rapport contient une requête complexe ou une grande quantité de données, l'aperçu peut prendre plusieurs minutes à apparaître la première fois que vous l'affichez. Pour les modifications ultérieures apportées exclusivement à la mise en forme du rapport, l'aperçu utilise les données mises en cache.  
@@ -64,7 +64,7 @@ ms.locfileid: "53354028"
  **Actualiser**  
  Choisissez cette option pour actualiser le cache des données et exécutez de nouveau le rapport.  
   
- **Impression**  
+ **Print**  
  Choisissez cette option pour imprimer le rapport.  
   
  **Mise en page**  
@@ -82,7 +82,7 @@ ms.locfileid: "53354028"
  **Texte de recherche**  
  Tapez un fragment de texte à rechercher dans le rapport. Vous ne pouvez pas utiliser d'opérateurs de recherche. Cliquez sur **Rechercher** pour rechercher la première instance.  
   
- **Rechercher**  
+ **Find**  
  Choisissez cette option pour commencer la recherche du texte dans le rapport.  
   
  **Suivant**  

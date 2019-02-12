@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 30068c028b497b00408ca87cf1e796df8ba34926
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081706"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014950"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Graphiques à base de formes (Générateur de rapports et SSRS)
   Un graphique à base de formes affiche des valeurs sous la forme de pourcentages par rapport à un total. Les graphiques à base de formes sont utilisés en général pour afficher des comparaisons proportionnelles entre des valeurs différentes d'un ensemble. Les catégories sont représentées par les segments individuels de la forme. La taille du segment varie en fonction de la valeur. Les graphiques à base de formes sont semblables aux graphiques en secteurs, sauf qu'ils classent les catégories de la plus grande à la plus petite.  
   
- Un graphique en entonnoir affiche les valeurs comme des proportions qui décroissent progressivement. La taille d'une zone est déterminée par la valeur de la série sous la forme d'un pourcentage du total de toutes les valeurs. Par exemple, vous pouvez utiliser un graphique en entonnoir pour afficher des tendances relatives à la visite d'un site Web. Il est probable que le graphique en entonnoir affichera une large zone en haut, indiquant le nombre de visites sur la page d'accueil et les autres zones seront proportionnellement plus petites. Pour plus d’informations sur comment ajouter des données à un graphique en entonnoir, consultez [graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
+ Un graphique en entonnoir affiche les valeurs comme des proportions qui décroissent progressivement. La taille d'une zone est déterminée par la valeur de la série sous la forme d'un pourcentage du total de toutes les valeurs. Par exemple, vous pouvez utiliser un graphique en entonnoir pour afficher des tendances relatives à la visite d'un site Web. Il est probable que le graphique en entonnoir affichera une large zone en haut, indiquant le nombre de visites sur la page d'accueil et les autres zones seront proportionnellement plus petites. Pour plus d’informations sur l’ajout de données à un graphique en entonnoir, consultez [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md).  
   
  L'illustration suivante montre un exemple de graphique en entonnoir.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "48081706"
   
 -   Les graphiques à base de formes affichent chaque groupe de données comme un segment séparé du graphique. Vous devez ajouter au moins un champ de données et un champ de catégorie. Si plusieurs champs de données sont ajoutés à un graphique à base de formes, le graphique à base de formes affichera les champs de données dans le même graphique.  
   
--   Les graphiques à base de formes sont idéaux pour représenter des pourcentages proportionnels en respectant un ordre de tri. Toutefois, par souci de cohérence, le graphique ne trie pas les valeurs de votre dataset par défaut. Pensez à organiser vos valeurs de la plus élevée à la plus basse pour représenter le plus correctement possible vos données sous la forme d'un graphique en entonnoir ou en pyramide. Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)  
+-   Les graphiques à base de formes sont idéaux pour représenter des pourcentages proportionnels en respectant un ordre de tri. Toutefois, par souci de cohérence, le graphique ne trie pas les valeurs de votre dataset par défaut. Pensez à organiser vos valeurs de la plus élevée à la plus basse pour représenter le plus correctement possible vos données sous la forme d'un graphique en entonnoir ou en pyramide. Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
 -   Les valeurs null, vides, négatives n'ont aucun effet lors du calcul de ratios C'est pourquoi, ces valeurs ne sont pas affichées sur un graphique à base de formes. Si vous souhaitez indiquer visuellement ces types de valeurs sur votre graphique, modifiez le type de graphique. Pour plus d’informations sur comment ajouter des points vides à un graphique non forme, consultez [ajouter des Points vides au graphique &#40;Générateur de rapports et SSRS&#41;](add-empty-points-to-a-chart-report-builder-and-ssrs.md).  
   
@@ -60,6 +60,6 @@ ms.locfileid: "48081706"
  [Graphiques &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Mise en forme d’un graphique &#40;Générateur de rapports et SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Points de données vides et Null dans les graphiques &#40;Générateur de rapports et SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
- [Graphiques en secteurs &#40;Générateur de rapports et SSRS&#41;](pie-charts-report-builder-and-ssrs.md)  
+ [Graphiques à secteurs (Générateur de rapports et SSRS)](pie-charts-report-builder-and-ssrs.md)  
   
   

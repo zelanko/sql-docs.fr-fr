@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 43135554b1340b92f4801a0f08e002142b443981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359861"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56040160"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
   Ce didacticiel est conçu pour vous aider à découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données de rapport sur un arrière-plan géographique.  
@@ -330,7 +330,7 @@ ms.locfileid: "53359861"
   
  Dans les étapes suivantes, spécifiez une règle de couleur pour associer des couleurs spécifiques à une plage de ventes des magasins pour chaque comté. Les couleurs rouge-jaune-vert indiquent des chiffres d'affaires relatifs élevés-moyens-bas. Mettez en forme l'échelle de couleurs pour afficher la devise. Affichez les plages de chiffres d'affaires annuels dans une nouvelle légende. Pour les comtés qui ne contiennent pas de magasins, utilisez la valeur Aucune couleur pour indiquer qu'il n'existe pas de données associées.  
   
-###  <a name="Relationship"></a> 6 a. Créer une relation entre des données spatiales et des données analytiques  
+###  <a name="Relationship"></a> 6a. Créer une relation entre des données spatiales et des données analytiques  
  Pour faire varier les formes de comté par couleur en fonction des données analytiques, vous devez tout d'abord associer des données analytiques aux données spatiales. Dans ce didacticiel, vous utiliserez une correspondance basée sur le nom du comté.  
   
 ##### <a name="to-build-a-relationship-between-spatial-data-and-analytical-data"></a>Pour générer une relation entre des données spatiales et des données analytiques  
@@ -359,7 +359,7 @@ ms.locfileid: "53359861"
   
  Chaque comté qui contient un magasin a une couleur basée sur la palette de couleurs du style que vous avez choisi dans l'Assistant.  
   
-###  <a name="ColorRules"></a> 6 b. Spécifier des règles de couleur pour les polygones  
+###  <a name="ColorRules"></a> 6b. Spécifier des règles de couleur pour les polygones  
  Pour créer une règle qui fait varier la couleur de chaque comté en fonction des ventes des magasins, vous devez spécifier les valeurs de plage, le nombre de divisions dans la plage que vous souhaitez afficher, ainsi que les couleurs à utiliser.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>Pour spécifier des règles de couleur pour tous les polygones ayant des données associées  
@@ -463,7 +463,7 @@ ms.locfileid: "53359861"
   
  Les comtés qui ont des magasins et des ventes associés s'affichent en fonction des règles de couleur. Les comtés qui n'ont pas de ventes n'ont aucune couleur.  
   
-###  <a name="NoData"></a> 6F. Modifier la couleur des comtés sans données  
+###  <a name="NoData"></a> 6f. Modifier la couleur des comtés sans données  
  Vous pouvez définir les options d'affichage par défaut pour tous les éléments cartographiques d'une couche. Les règles de couleur ont priorité sur ces options d'affichage.  
   
 ##### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>Pour définir les propriétés d'affichage de tous les éléments d'une couche  

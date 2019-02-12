@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cc57e9b4e38377769006738ed44427b4a52c06ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 7265c833b5fbfe4c2018de895d7a488501304486
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076489"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013100"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Page de propriétés Options de traitement (Gestionnaire de rapports)
   La page de propriétés Options de traitement vous permet de définir les propriétés d'exécution du rapport actuellement sélectionné. Ces options déterminent à quel moment se produit le traitement des données du rapport. Vous pouvez définir ces options pour récupérer les données du rapport aux heures creuses. Si un rapport est consulté fréquemment, vous pouvez mettre en cache de façon temporaire des copies de ce dernier pour éliminer les temps d'attente lorsque plusieurs utilisateurs y accèdent à quelques minutes d'intervalle.  
@@ -62,7 +62,7 @@ ms.locfileid: "48076489"
  Cette valeur s'applique au traitement du rapport sur le serveur de rapports. Elle ne définit aucun délai d'attente pour le traitement des données sur le serveur de base de données qui fournit les données pour le rapport. Toutefois, la valeur que vous spécifiez doit être suffisante pour terminer le traitement des données et du rapport. Le nombre pour le traitement du rapport commence lorsque le rapport est sélectionné et se termine lors de l'ouverture du rapport.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement de rapport](report-server/set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d'un rapport](report-server/set-report-processing-properties.md)   
  [Mise en cache de rapports &#40;SSRS&#41;](report-server/caching-reports-ssrs.md)   
  [Create, Modify, and Delete Schedules](subscriptions/create-modify-and-delete-schedules.md)   
  [Aide (F1) du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)  

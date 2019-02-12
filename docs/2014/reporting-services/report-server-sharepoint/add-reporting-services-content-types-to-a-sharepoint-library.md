@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: cac75345-2380-467d-a394-0a2140908a5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ea197ddd0c24a487d152c8c6aa9eb9e177605d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d98e8eafeb08ab8b0d37fd6a513d2fb6eb773828
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105889"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56030690"
 ---
 # <a name="add-the-report-viewer-web-part-to-a-web-page-reporting-services-in-sharepoint-integrated-mode"></a>Ajouter le composant WebPart Visionneuse de rapports à une page Web (Reporting Services en mode intégré SharePoint)
   Vous pouvez utiliser le composant WebPart Visionneuse de rapports pour afficher les rapports qui s'exécutent sur un serveur de rapports configuré en mode intégré SharePoint. Vous pouvez utiliser le composant WebPart pour afficher les fichiers de définition de rapport (.rdl) que vous avez créés dans le Générateur de rapports ou le Concepteur de rapports, et que vous avez téléchargés vers une bibliothèque.  
@@ -57,9 +57,9 @@ ms.locfileid: "48105889"
 9. Cliquez au bas du volet d’outils sur **Appliquer** , puis sur **OK** pour fermer le volet.  
   
 ## <a name="see-also"></a>Voir aussi  
- [WebPart Visionneuse de rapports sur un Site SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
+ [Composant WebPart Visionneuse de rapports sur un site SharePoint](../report-viewer-web-part-on-a-sharepoint-site.md)   
  [Personnaliser le composant WebPart Visionneuse de rapports](../customize-the-report-viewer-web-part.md)   
- [Octroi d’autorisations sur les éléments de serveur de rapports sur un Site SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](../security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Installer ou désinstaller le complément Services Reporting pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](../install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
   

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5f55cbf6-0db4-4cb4-a0f5-e27441873d4f
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4f762b6c561f96f8ced9f8fe977dceb3b9208d01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048519"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015250"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Création d'une structure et d'un modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
   Ensuite, vous utiliserez l'Assistant Exploration de données pour créer une nouvelle structure d'exploration de données et un nouveau modèle d'exploration de données basés sur la vue de source de données que vous venez de créer. Au cours de cette tâche, vous spécifierez que le modèle d'exploration de données doit utiliser l'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series).  
@@ -33,7 +32,7 @@ ms.locfileid: "48048519"
   
 5.  Sur le **sélectionner une vue de Source de données** page sous **vues de sources de données disponibles**, sélectionnez **SalesByRegion**.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Sur le **spécifier les Types de Table** page, vérifiez que la case à cocher dans la **cas** colonne pour la table vTimeSeries est sélectionné, puis cliquez sur **suivant**.  
   
@@ -49,7 +48,7 @@ ms.locfileid: "48048519"
   
      La colonne ModelRegion est désignée comme un **clé** colonne et la colonne ReportingDate est automatiquement désignée comme un **Key Time** colonne. Il ne peut y avoir qu'une seule occurrence de chaque type de clé.  
   
-11. Cliquez sur **Suivant**.  
+11. Cliquer sur **Suivant**.  
   
 12. Sur le **fin de l’Assistant** page, pour **nom de la structure d’exploration de données**, type `Forecasting`.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "48048519"
  [Modification de la Structure de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/modifying-the-forecasting-structure-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepteur d’exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
+ [Concepteur d'exploration de données](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)  
   
   

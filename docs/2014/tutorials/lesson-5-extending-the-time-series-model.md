@@ -1,24 +1,23 @@
 ---
-title: 'Leçon 5 : Extension de la série chronologique de modèle | Microsoft Docs'
+title: 'Leçon 5 : Extension de la série chronologique de modèle | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7aad4946-c903-4e25-88b9-b087c20cb67d
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 7b67d295f79188cf83994225125886142c961e3b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48138227"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028820"
 ---
-# <a name="lesson-5-extending-the-time-series-model"></a>Leçon 5 : Extension du modèle de série chronologique
+# <a name="lesson-5-extending-the-time-series-model"></a>Leçon 5 : Extension de la série chronologique de modèle
   Dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Enterprise, vous pouvez ajouter de nouvelles données à un modèle de série chronologique et les incorporer automatiquement au modèle. Vous ajoutez de nouvelles données à un modèle d'exploration de données de série chronologique de l'une des deux manières suivantes :  
   
 -   Utilisez une instruction PREDICTION JOIN pour joindre des données d'une source externe aux données d'apprentissage.  
@@ -231,7 +230,7 @@ WHERE [ModelRegion] = 'M200 Europe'
 |M200 Europe|25/12/2008 12:00:00|89|  
   
 ## <a name="making-predictions-with-replacemodelcases"></a>Exécution de prédictions avec REPLACE_MODEL_CASES  
- Le remplacement des cas de modèles s'avère utile lorsque vous souhaitez effectuer l'apprentissage d'un modèle sur un ensemble de cas, puis appliquer ce modèle à une série de données différente. Une description détaillée de ce scénario est présentée dans [leçon 2 : génération d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
+ Le remplacement des cas de modèles s'avère utile lorsque vous souhaitez effectuer l'apprentissage d'un modèle sur un ensemble de cas, puis appliquer ce modèle à une série de données différente. Une description détaillée de ce scénario est présentée dans [leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Exemples de requêtes de modèle de série chronologique](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   

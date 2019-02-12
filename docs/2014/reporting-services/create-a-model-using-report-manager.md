@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 8e5d2bd3-48ec-45f3-afee-6d86797c8f28
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 781a9f469692f26cc7742920935531f6cb0f2353
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: adbcaf8bdbae605941422a4e5b6d3df9ed7031f2
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48064849"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010440"
 ---
 # <a name="create-a-model-using-report-manager"></a>Créer un modèle à l'aide du Gestionnaire de rapports
   Vous pouvez générer des modèles à partir d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , d'une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou d'une base de données Oracle à l'aide du Gestionnaire de rapports. Les modèles de rapport sont générés à partir de sources de données partagées publiées sur le serveur de rapports. Si vous ne possédez pas déjà une source de données partagée, vous devez en créer une.  
@@ -41,15 +41,15 @@ ms.locfileid: "48064849"
   
 5.  Vérifiez que la case à cocher **Activer cette source de données** est activée.  
   
-6.  Dans la liste **Type de connexion** , sélectionnez le type de source de données auquel vous souhaitez vous connecter. Il doit s'agir de l'un des types de connexions suivants : **Oracle**, **Microsoft SQL Server** ou **Microsoft SQL Server Analysis Services**.  
+6.  Dans la liste **Type de connexion** , sélectionnez le type de source de données auquel vous souhaitez vous connecter. Le type de connexion doit être l'une des suivantes : **Oracle**, **Microsoft SQL Server** ou **Microsoft SQL Server Analysis Services**.  
   
 7.  Dans la zone **Chaîne de connexion** , entrez la chaîne de connexion qui pointe vers la base de données.  
   
 8.  Sélectionnez la méthode de connexion dont les utilisateurs du Générateur de rapports devront se servir pour se connecter à la base de données.  
   
-    -   Authentification Windows : sélectionnez cette option si vous souhaitez que le système d'exploitation authentifie les utilisateurs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Cette option permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d'utiliser les fonctionnalités de sécurité de Windows, telles que le chiffrement des mots de passe, pour authentifier les utilisateurs. Nous vous recommandons vivement de sélectionner cette option.  
+    -   Authentification Windows : sélectionnez cette option si vous souhaitez que le système d'exploitation authentifie les utilisateurs [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Cette option permet à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] d'utiliser les fonctionnalités de sécurité de Windows, telles que le chiffrement des mots de passe, pour authentifier les utilisateurs. Nous vous recommandons vivement de sélectionner cette option.  
   
-    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentification : Sélectionnez cette option lorsque vous souhaitez que les utilisateurs d’utiliser un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compte de connexion que vous avez créé. Les utilisateurs doivent fournir un nom et un mot de passe de connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] valides.  
+    -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Authentification : sélectionnez cette option si vous souhaitez que les utilisateurs recourent à un compte de connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que vous avez créé. Les utilisateurs doivent fournir un nom et un mot de passe de connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] valides.  
   
         > [!CAUTION]  
         >  Dans la mesure du possible, utilisez l’authentification Windows.  

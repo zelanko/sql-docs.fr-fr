@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 90c94a91-8fb2-42cb-b998-563691f30d2d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 146edd7519674ba83ac996a9b4aa1f7ec9a43ec2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 7debd6d28ef938a5bde777067824b39b9b55a914
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365981"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011261"
 ---
 # <a name="linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs"></a>Liaison de plusieurs régions de données à un même dataset (Générateur de rapports et SSRS)
   Vous pouvez ajouter plusieurs régions de données à un rapport pour proposer des vues différentes des données d'un même dataset de rapport. Par exemple, vous pouvez afficher des données dans une table et les représenter dans un graphique. Pour ce faire, vous devez utiliser des étendues et des expressions identiques pour les expressions de filtre, les expressions de tri et les expressions de groupe appropriées.  

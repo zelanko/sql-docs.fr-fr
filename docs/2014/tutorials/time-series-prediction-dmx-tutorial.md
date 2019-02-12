@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: 4a07f977a01c6107b345892f4ad623b3ca2cb941
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: 1623f824c062c270268323fd45ebf0e9533c8788
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53367501"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010800"
 ---
 # <a name="time-series-prediction-dmx-tutorial"></a>Didacticiel DMX sur la prédiction de série chronologique
   Dans ce didacticiel, vous allez apprendre à créer une structure d'exploration de données de série chronologique, à créer trois modèles d'exploration de données de série chronologique personnalisés, puis à élaborer des prédictions à l'aide de ces modèles.  
@@ -41,19 +40,19 @@ ms.locfileid: "53367501"
   
  Ce didacticiel contient les leçons suivantes :  
   
- [Leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)  
+ [Leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction `CREATE MINING MODEL` pour ajouter un nouveau modèle de prévision et un modèle d'exploration de données associé.  
   
  [Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données de série chronologique](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
  Dans cette leçon, vous allez apprendre à utiliser l'instruction ALTER MINING STRUCTURE pour ajouter de nouveaux modèles d'exploration de données à la structure de série chronologique. Vous apprendrez également comment personnaliser l'algorithme utilisé pour analyser une série chronologique.  
   
- [Leçon 3 : Traitement de la série chronologique Structure et modèles](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
+ [Leçon 3 : Traitement de la série chronologique Structure et modèles](../../2014/tutorials/lesson-3-processing-the-time-series-structure-and-models.md)  
  Dans cette leçon, vous allez apprendre à former les modèles en utilisant l'instruction `INSERT INTO` et en renseignant la structure avec des données provenant de la base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)].  
   
- [Leçon 4 : Création de prédictions de série chronologique à l’aide de DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
+ [Leçon 4 : Création de prédictions de série chronologique à l’aide de DMX](../../2014/tutorials/lesson-4-creating-time-series-predictions-using-dmx.md)  
  Dans cette leçon, vous apprendrez à créer des prédictions de séries chronologiques.  
   
- [Leçon 5 : Extension de la série chronologique de modèle](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
+ [Leçon 5 : Extension de la série chronologique de modèle](../../2014/tutorials/lesson-5-extending-the-time-series-model.md)  
  Dans cette leçon, vous apprendrez comment utiliser le paramètre `EXTEND_MODEL_CASES` pour mettre à jour le modèle à l'aide des nouvelles données lorsque vous élaborez des prédictions.  
   
 ## <a name="requirements"></a>Configuration requise  

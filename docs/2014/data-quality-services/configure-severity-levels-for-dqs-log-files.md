@@ -15,28 +15,28 @@ helpviewer_keywords:
 - logging,severity levels
 - configure severity levels
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3b4deba7e3aa788bf42be9fbd173a6b20844ac68
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c7b6476b9875b52f6961df20b750e68e5df0858c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202378"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010582"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurer les niveaux de gravité pour les fichiers journaux DQS
   Cette rubrique décrit comment configurer des niveaux de gravité pour différents modules et activités dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) à l'aide de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Les niveaux de gravité définissent l'intensité des événements qui se produisent dans DQS. Les événements DQS ont les niveaux de gravité suivants, dans l'ordre décroissant de gravité :  
   
--   **Irrécupérable**: Erreurs d’exécution critiques qui peuvent avoir des conséquences lourdes/inattendues.  
+-   **Irrécupérable** : erreurs d’exécution critiques qui peuvent avoir des conséquences lourdes/inattendues.  
   
--   **Erreur**: Autres erreurs d’exécution.  
+-   **Erreur** : autres erreurs d’exécution.  
   
--   **Avertir**: Avertissement concernant des événements qui peuvent entraîner une erreur.  
+-   **Avertir** : avertissement concernant des événements qui peuvent entraîner une erreur.  
   
--   **Informations**: Plus d’informations sur des événements généraux qui n’est pas une erreur ou un avertissement. Par exemple, un processus DQS a démarré.  
+-   **Informations** : information sur des événements généraux qui n’est pas une erreur ni un avertissement. Par exemple, un processus DQS a démarré.  
   
--   **Déboguer**: Informations détaillées (commentées) sur l’événement.  
+-   **Déboguer** : information détaillée (commentée) sur l’événement.  
   
  En configurant des niveaux de gravité pour différents modules et activités DQS, vous filtrez les informations qui doivent être enregistrées et écrites dans le fichier journal DQS pour l'activité ou le module DQS respectif. Par exemple, si vous affectez à une activité DQS le niveau de gravité **Avertir**, seuls les messages d'avertissement et de gravité supérieure (Erreur et Irrécupérable) associés à l'activité DQS sont enregistrés.  
   
@@ -54,9 +54,9 @@ ms.locfileid: "53202378"
   
 2.  Dans l'écran d'accueil de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , cliquez sur **Configuration**.  
   
-3.  Ensuite, cliquez sur l'onglet **Paramètres de journal** . Les activités DQS suivantes sont répertoriées pour lesquelles vous pouvez sélectionner un niveau de gravité : **Gestion des domaines**, **découverte des connaissances**, **projet (par exemple, de nettoyage RDS)**, **Stratégie de correspondance et Projet de correspondance** et **RDS**.  
+3.  Ensuite, cliquez sur l'onglet **Paramètres de journal** . Vous pouvez sélectionner un niveau de gravité pour les activités DQS suivantes : **Gestion de l’arborescence du domaine**, **Découverte des connaissances**, **Projet de nettoyage (par exemple, RDS)**, **Stratégie de correspondance et Projet de correspondance** et **RDS**.  
   
-4.  Pour une activité DQS, sélectionnez le niveau de gravité qui doit être enregistré. Vous pouvez sélectionner une valeur parmi les éléments suivants : **Irrécupérable**, **erreur**, **avertir**, **Info**, et **déboguer**. Par exemple, si vous voulez que seuls les messages d'erreur irrécupérable soient écrits dans les fichiers journaux DQS pour l'activité de découverte des connaissances, sélectionnez **Irrécupérable** dans la liste déroulante pour l'activité **Découverte des connaissances** .  
+4.  Pour une activité DQS, sélectionnez le niveau de gravité qui doit être enregistré. Vous pouvez sélectionner une valeur parmi les suivantes : **Irrécupérable**, **Erreur**, **Avertir**, **Informations** et **Déboguer**. Par exemple, si vous voulez que seuls les messages d'erreur irrécupérable soient écrits dans les fichiers journaux DQS pour l'activité de découverte des connaissances, sélectionnez **Irrécupérable** dans la liste déroulante pour l'activité **Découverte des connaissances** .  
   
     > [!NOTE]  
     >  Par défaut, le niveau **Erreur** est sélectionné pour chacune des activités. Cela implique que les messages d'erreur et les messages d'erreur irrécupérable seront écrits dans les fichiers journaux DQS pour chaque activité, par défaut.  
@@ -80,7 +80,7 @@ ms.locfileid: "53202378"
   
 2.  Dans la grille qui s'affiche, sélectionnez un nom de module dans la liste déroulante de la colonne **Module** .  
   
-3.  Sélectionnez ensuite un niveau de gravité pour le module dans la liste déroulante de la colonne **Gravité** . Vous pouvez sélectionner une valeur parmi les éléments suivants : **Irrécupérable**, **erreur**, **avertir**, **Info**, et **déboguer**.  
+3.  Sélectionnez ensuite un niveau de gravité pour le module dans la liste déroulante de la colonne **Gravité** . Vous pouvez sélectionner une valeur parmi les suivantes : **Irrécupérable**, **Erreur**, **Avertir**, **Informations** et **Déboguer**.  
   
      Par exemple, dans l'activité de gestion de l'arborescence du domaine, vous pouvez définir un niveau de granularité différent pour la fonction de définition de règle de domaine de l'activité de gestion de l'arborescence du domaine en sélectionnant le module **Microsoft.Ssdqs.DomainRules.Define** , puis en sélectionnant un niveau de gravité de journal différent. De même, vous pouvez définir un niveau de granularité différent pour la fonction de règle entre domaines en sélectionnant le module **Microsoft.Ssdqs.DomainRules.Condition.CrossDomain** , puis en sélectionnant un niveau de gravité de journal différent.  
   

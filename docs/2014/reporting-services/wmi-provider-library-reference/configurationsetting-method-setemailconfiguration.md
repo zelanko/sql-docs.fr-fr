@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: b40a2224-2c90-4d32-892f-1fe73a0591ca
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8365b0718f389e6417f8f7e1a76cf403e268b574
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e8ad4dbb79f67591abbd1853757cddc749bf225d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081821"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014720"
 ---
 # <a name="setemailconfiguration-method-wmi-msreportserverconfigurationsetting"></a>Méthode SetEmailConfiguration (WMI MSReportServer_ConfigurationSetting)
   Configure l'extension de remise par messagerie utilisée par le serveur de rapports pour envoyer des messages électroniques.  
@@ -64,7 +64,7 @@ public void SetEmailConfiguration (Boolean SendUsingSMTPServer,
   
  Avec cette méthode, les utilisateurs ne peuvent pas configurer l’entrée **SendUsing** dans le fichier de configuration du serveur de rapports à une autre valeur que 1. Pour configurer le serveur de rapports pour une fonctionnalité autre que le courrier SMTP, vous devez modifier le fichier de configuration manuellement.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

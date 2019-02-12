@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8eb7d648-4df2-491a-96cb-99e55629d617
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 5712b4a6d9d363f547bf47be519af8c402ee829d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 72b8eda95def001cbb97bc6a91401a7765a6b8cb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144599"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010602"
 ---
 # <a name="display-headers-and-footers-with-a-group-report-builder-and-ssrs"></a>Afficher des en-têtes et des pieds de page de groupe (Générateur de rapports et SSRS)
   Vous pouvez mieux contrôler si une ligne statique, telle qu'un en-tête ou un pied de page de groupe, est rendue avec des lignes dynamiques qui sont associées à un groupe dans une région de données de tableau matriciel.  

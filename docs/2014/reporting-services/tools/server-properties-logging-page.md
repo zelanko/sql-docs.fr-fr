@@ -12,18 +12,18 @@ f1_keywords:
 ms.assetid: b338deab-4868-4951-9f22-0605add2fc95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 29331f12c0eeb713f36999df239069e4e56c359e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: cf85b6fbc2bccab8061ef227b5d0fb10de825477
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082459"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56015465"
 ---
 # <a name="server-properties-logging-page"></a>Propriétés du serveur (page Enregistrement)
   Utilisez cette page pour définir des limites sur les données du rapport d'exécution qui sont recueillies par un serveur de rapports. Les données d'exécution sont stockées en interne dans la base de données du serveur de rapports. Vous pouvez effectuer le suivi de l'activité des rapports pour le serveur de rapports qui s'exécute en mode natif ou mode intégré SharePoint. Si le serveur de rapports fait partie d'un déploiement avec montée en puissance parallèle, le journal d'exécution des rapports gère un enregistrement de l'ensemble de l'activité des rapports pour tout le déploiement dans un seul fichier journal.  
   
- Pour ouvrir cette page, démarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], se connecter à un serveur de rapports, cliquez sur le nom de serveur de rapports et sélectionnez **propriétés**. Cliquez sur **Enregistrement** pour ouvrir cette page.  
+ Pour ouvrir cette page, démarrez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], connectez-vous à un serveur de rapports, cliquez avec le bouton droit sur le nom du serveur de rapports et sélectionnez **Propriétés**. Cliquez sur **Enregistrement** pour ouvrir cette page.  
   
 ## <a name="options"></a>Options  
  **Activer la journalisation de l’exécution des rapports**  

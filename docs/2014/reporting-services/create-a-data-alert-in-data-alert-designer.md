@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8464ab9d-afe1-4490-955f-9f3319bcbf8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5e70f08293132f570ddb0663db7944ecb4bba497
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: kfile
+ms.openlocfilehash: adabb736dd34b35ee98f4ed46b84fd9205d504b5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507973"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012130"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Créer une alerte de données dans le Concepteur d’alertes
   Vous pouvez créer les définitions d'alerte de données dans le Concepteur d'alertes de données. Après les avoir enregistrées, vous pouvez les rouvrir, les modifier, puis les enregistrer de nouveau dans le Concepteur d'alertes de données. Pour plus d’informations sur la modification des définitions d’alerte, consultez [Gérer mes alertes de données dans le Gestionnaire des alertes de données](manage-my-data-alerts-in-data-alert-manager.md) et [Modifier une alerte de données dans le Concepteur d’alertes](edit-a-data-alert-in-alert-designer.md).  

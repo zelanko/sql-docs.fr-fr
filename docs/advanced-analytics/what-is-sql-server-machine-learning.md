@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 59ec5bbacf23d0f86f88a17a68faaf27162ebdcb
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596790"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032950"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning Services (R, Python) dans SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ SQL Server 2017 Machine Learning Services est un module complémentaire à une i
 
 Si vous avez utilisé précédemment [SQL Server 2016 R Services](r/sql-server-r-services.md), Machine Learning Services dans SQL Server 2017 est la nouvelle génération de prise en charge de R, avec les versions mises à jour de base R, RevoScaleR, MicrosoftML, et autres bibliothèques introduites en 2016. 
 
-Dans la base de données SQL Azure, [Machine Learning Services (avec R)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-r) est actuellement en version préliminaire publique.
+Dans la base de données SQL Azure, [Machine Learning Services (avec R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) est actuellement en version préliminaire publique.
 
 La proposition de valeur de clé de Machine Learning Services est la puissance de son entreprise R et les packages Python pour fournir une analytique avancée à l’échelle et la possibilité de définir des calculs et traitement à l’emplacement des données, éliminant la nécessité pour extraire les données entre le réseau.
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e57ec746-05ae-4ff6-8e39-6cde87310daa
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7420b28bcdf12b0e173b097396972d3cc53ef973
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d6022c1fee61e16445f3ec81eff0f8113ce22ab1
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176589"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56031340"
 ---
 # <a name="create-report-history-reporting-services-in-sharepoint-integrated-mode"></a>Créer un historique de rapport (Reporting Services en mode intégré SharePoint)
   L'historique de rapport est un ensemble d'instantanés de rapport que vous créez au fil du temps. Chaque instantané est une copie du rapport tel qu'il existait lors de sa création. Il inclut la mise en page et les données en vigueur dans le rapport lors de la création de l'instantané. Les informations de rendu ne sont pas stockées avec l'instantané. Lorsque vous ouvrez un instantané dans l'historique de rapport, elle s'affiche au format HTML dans le composant WebPart Visionneuse de rapports. Une fois son rendu effectué, vous pouvez l'exporter vers d'autres formats d'application.  

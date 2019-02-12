@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 63b32f93-4bab-4b07-bd72-39a47aca1cda
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 77d98f92747741f80c8a0af613ecc93f7647c5af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ca393776d712eabea11eab07c08fa505105363c0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157530"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017170"
 ---
 # <a name="creating-a-delivery-extension-library"></a>Création d'une bibliothèque d'extensions de remise
   Chaque extension de remise [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que vous créez doit être assignée à un espace de noms unique et intégrée à une bibliothèque ou à un fichier d'assembly. Le nom exact de l'espace de noms n'est pas important, mais il doit être unique et ne pas être partagé avec une autre extension. Vous devez créer vos propres espaces de noms uniques pour les extensions de remise de votre société.  

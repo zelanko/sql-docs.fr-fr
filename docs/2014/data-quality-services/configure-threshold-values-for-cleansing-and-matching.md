@@ -13,15 +13,15 @@ helpviewer_keywords:
 - cleansing threshold values
 - matching,threshold value
 ms.assetid: d2305409-7115-45a4-8f60-1213c0a47368
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a76f3fc589e3be0ae6b35e2cc4fc577eeb284cb
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: b5eb95137efe56912502bae685eaf098fbe5044b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031776"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016860"
 ---
 # <a name="configure-threshold-values-for-cleansing-and-matching"></a>Configurer les valeurs de seuil pour le nettoyage et la correspondance
   Cette rubrique explique comment configurer les valeurs de seuil qui seront utilisées pendant les activités de nettoyage et de correspondance assistées par ordinateur dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
@@ -43,9 +43,9 @@ ms.locfileid: "51031776"
   
 4.  Pour spécifier des valeurs de seuil pour l'activité de nettoyage, spécifiez les valeurs appropriées dans les zones suivantes sous la zone **Nettoyage interactif** :  
   
-    -   **Score minimal pour les suggestions**: score ou niveau de confiance minimal qui sera utilisé par DQS pour suggérer des remplacements d'une valeur pendant le processus de nettoyage assisté par ordinateur. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, tapez 0,75 pou 75 %. Cette valeur doit être inférieure ou égale à la valeur spécifiée dans la zone **Score minimal pour les corrections automatiques** . La valeur par défaut est 0,7.  
+    -   **Score minimal pour les suggestions**: Le score minimal ou niveau de confiance qui sera utilisé par DQS pour suggérer des remplacements d’une valeur pendant le processus de nettoyage assisté par ordinateur. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, tapez 0,75 pou 75 %. Cette valeur doit être inférieure ou égale à la valeur spécifiée dans la zone **Score minimal pour les corrections automatiques** . La valeur par défaut est 0,7.  
   
-    -   **Score minimal pour les corrections automatiques**: score ou niveau de confiance minimal qui sera utilisé par DQS pour corriger automatiquement une valeur pendant le processus de nettoyage assisté par ordinateur. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %. La valeur par défaut est 0,8.  
+    -   **Score minimal pour les corrections automatiques**: Le score minimal ou niveau de confiance qui sera utilisé par DQS pour corriger automatiquement une valeur pendant le processus de nettoyage assisté par ordinateur. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %. La valeur par défaut est 0,8.  
   
 5.  Pour spécifier la valeur de seuil pour l'activité de correspondance, spécifiez une valeur dans la zone **Score d'enregistrement minimal** sous la zone **Correspondance** . Cette valeur représente le score minimal pour qu'un enregistrement soit considéré comme une correspondance d'un autre enregistrement. La valeur par défaut est 80 %.  
   

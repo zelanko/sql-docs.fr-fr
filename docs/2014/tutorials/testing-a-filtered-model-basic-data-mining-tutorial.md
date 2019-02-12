@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: f0d74f8c-600d-4df5-a742-695e6947a071
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e1264808911226150bc908e356e1b08ab90e72fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054999"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011140"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Test d'un modèle filtré (Didacticiel sur l'exploration de données de base)
   Maintenant que vous avez déterminé que le `TM_Decision_Tree` modèle est le plus précis, vous allez personnaliser le modèle pour mieux répondre aux besoins de le [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] campagne de publipostage ciblée. Plus précisément, le service marketing souhaite savoir s'il existe des différences entre les clients hommes et femmes. Les informations les aideront à décider quels magazines utiliser à des fins publicitaires et quels produits présenter dans leurs publipostages.  
@@ -88,7 +87,7 @@ ms.locfileid: "48054999"
   
  [Exploration du modèle Decision Tree &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [Test de la précision avec des graphiques de courbes d’élévation &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>Pour explorer les modèles filtrés  
   
@@ -130,14 +129,14 @@ ms.locfileid: "48054999"
  Pour obtenir un exemple montrant comment appliquer des filtres aux tables imbriquées, consultez [didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
 ## <a name="previous-task-in-lesson"></a>Tâche précédente de la leçon  
- [Test de la précision avec des graphiques de courbes d’élévation &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Test de la précision à l’aide de graphiques de courbes d’élévation &#40;Didacticiel sur l’exploration de données de base&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Didacticiel d’exploration de données intermédiaire &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
- [Tâches du modèle d’exploration de données et procédures](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Tâches du modèle d'exploration de données et procédures](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Supprimer un filtre d’un modèle d’exploration de données](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
  [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   

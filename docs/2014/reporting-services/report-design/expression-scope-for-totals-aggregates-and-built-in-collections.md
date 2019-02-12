@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 51f5315633939431bb6e8287773453e08de188a7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: d3e5c894c75002f95ed67c8383c5497db998dfa9
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412026"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011960"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Étendue des expressions pour les totaux, les agrégats et les collections intégrées (Générateur de rapports et SSRS)
   En écrivant des expressions, vous constaterez que le terme *étendue* est utilisé dans plusieurs contextes. L'étendue peut spécifier les données à utiliser pour l'évaluation d'une expression, le jeu de zones de texte dans une page rendue, le jeu des éléments de rapport qui peuvent être affichés ou masqués selon un élément de bascule. Vous verrez le terme *étendue* dans les rubriques relatives à une évaluation d'expression, une syntaxe de fonction d'agrégation, une visibilité conditionnelle et également dans les messages d'erreur liés à ces domaines. Utilisez les descriptions suivantes pour mieux différencier les significations du terme *étendue* qui s'appliquent :  

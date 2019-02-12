@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d62159a8-ec67-4e28-a9f1-05a9250065bb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 89b1476adadf6b409d68dbf524a9352d6b7cb6ab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 61f1decb93244bfd2b52718dd448ac3eb016499f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129336"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016611"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>création, suppression ou modification d'un dossier (Gestionnaire de rapports)
   Vous pouvez créer des dossiers pour organiser et gérer les éléments à publier sur un serveur de rapports. La création de dossiers peut permettre aux utilisateurs de rechercher les rapports qui les intéressent. Pour les gestionnaires de contenu, les dossiers fournissent l'infrastructure nécessaire à l'application d'autorisations. Vous pouvez créer des attributions de rôles pour des dossiers spécifiques afin de restreindre l'accès aux rapports en cours de développement ou dont la diffusion doit être restreinte.  
@@ -36,7 +36,7 @@ ms.locfileid: "48129336"
   
      La page **Nouveau dossier** s’affiche.  
   
-3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : \@ & = +, $ / * \< > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
+3.  Tapez le nom du dossier. Un nom de dossier peut contenir des espaces, mais aucun caractère réservé au codage d'URL, par exemple les caractères : ; ? : \@ & = + , $ / * \< > |. Vous ne pouvez pas taper une série de noms de dossiers pour créer plusieurs dossiers en même temps.  
   
 4.  Tapez éventuellement une description.  
   
@@ -75,8 +75,8 @@ ms.locfileid: "48129336"
 7.  Cliquez sur **Appliquer** pour enregistrer vos modifications.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Page nouveau dossier &#40;le Gestionnaire de rapports&#41;](../new-folder-page-report-manager.md)   
- [Contenu de la Page &#40;le Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
+ [Page Nouveau dossier &#40;Gestionnaire de rapports&#41;](../new-folder-page-report-manager.md)   
+ [Page Contenu &#40;Gestionnaire de rapports&#41;](../contents-page-report-manager.md)   
  [Recherche, affichage et gestion de rapports &#40;Générateur de rapports et SSRS&#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

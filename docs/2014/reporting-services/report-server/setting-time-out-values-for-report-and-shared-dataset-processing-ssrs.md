@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d1ab4d3e1a5b251bb4ff2b311dc344dfad03b3ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 790e512beed24295e7ca31dd471905ab814a7d1d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48166259"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028561"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Définition des valeurs de délai d'attente pour le traitement d'un rapport et d'un dataset partagé (SSRS)
   Vous pouvez spécifier des valeurs de délai d'attente pour fixer des limites à l'utilisation des ressources système. Le serveur de rapports accepte deux valeurs de délai d'attente :  
@@ -35,14 +35,14 @@ ms.locfileid: "48166259"
  La plupart des erreurs liées au délai d'attente se produisent pendant le traitement des requêtes. Si vous rencontrez des erreurs de ce type, essayez d'augmenter la valeur du délai d'attente de la requête. Veillez à ce que la valeur du délai d'attente pour l'exécution du rapport soit supérieure au délai d'attente de la requête. Le temps imparti doit être suffisamment long pour permettre aux traitements de la requête et du rapport de s'effectuer.  
   
 ## <a name="setting-a-query-time-out-for-an-embedded-dataset-in-a-report"></a>Définition d'un délai de requête pour un dataset incorporé dans un rapport  
- Les valeurs de délai d'attente de la requête sont spécifiées pendant la création du rapport, lors de la définition d'un dataset incorporé. La valeur de délai d’attente est conservée avec le rapport, dans le `Timeout` élément de la définition de rapport. Elle est par défaut de 30 secondes. Pour plus d’informations, consultez [Datasets incorporés dans les rapports et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
+ Les valeurs de délai d'attente de la requête sont spécifiées pendant la création du rapport, lors de la définition d'un dataset incorporé. La valeur du délai d'attente est conservée avec le rapport, dans l'élément `Timeout` de la définition de rapport. Elle est par défaut de 30 secondes. Pour plus d’informations, consultez [Datasets incorporés dans le rapport et datasets partagés &#40;Générateur de rapports et SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md).  
   
  Les utilisateurs autorisés à modifier les propriétés d'un rapport publié peuvent redéfinir cette valeur en modifiant le fichier de définition de rapport.  
   
  Vous pouvez également spécifier une valeur de délai d'attente de requête pour des abonnements pilotés par les données. Le délai d'attente de requête est spécifié dans les pages Abonnement piloté par les données. La valeur spécifiée détermine le temps pendant lequel le serveur de rapports attend la fin du traitement de la requête lors d'une opération de récupération de données à partir de la source de données des abonnés.  
   
 ## <a name="setting-a-query-time-out-for-a-shared-dataset"></a>Définition d'un délai de requête pour un dataset partagé  
- Les valeurs de délai de requête sont spécifiées en secondes sur le serveur de rapports lorsque vous créez ou gérez un dataset partagé. Par défaut, cette valeur est définie sur 0 seconde, ce qui équivaut à une valeur sans délai d'attente. Pour plus d’informations, consultez [gérer des Datasets partagés](../report-data/manage-shared-datasets.md).  
+ Les valeurs de délai de requête sont spécifiées en secondes sur le serveur de rapports lorsque vous créez ou gérez un dataset partagé. Par défaut, cette valeur est définie sur 0 seconde, ce qui équivaut à une valeur sans délai d'attente. Pour plus d’informations, consultez [Gérer des datasets partagés](../report-data/manage-shared-datasets.md).  
   
 ## <a name="setting-a-report-execution-time-out"></a>Définition d'un délai d'attente pour l'exécution de rapports  
  Vous pouvez définir un délai d'attente pour l'exécution de rapports de façon à limiter le temps que le serveur de rapports consacre au traitement d'un rapport. Les valeurs de délai d'attente peuvent être spécifiées dans le Gestionnaire de rapports. Vous pouvez définir une valeur par défaut pour tous les rapports dans la page des paramètres du site, puis remplacer cette valeur dans la page des propriétés d'exécution pour un rapport spécifique. Par défaut, la valeur est fixée à 1 800 secondes. Pour plus d’informations, consultez [Définir les propriétés de traitement d’un rapport](set-report-processing-properties.md).  
@@ -56,9 +56,9 @@ ms.locfileid: "48166259"
 >  Vous pouvez définir le paramètre `RunningRequestsDbCycle` du fichier RSReportServer.config pour changer la fréquence d'évaluation des travaux en cours d'exécution.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les Options de traitement &#40;Reporting Services dans SharePoint Mode intégré&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Définir les options de traitement &#40;Reporting Services en mode intégré SharePoint&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Serveur de rapports Reporting Services &#40;mode natif&#41;](reporting-services-report-server-native-mode.md)   
- [Gérer un processus en cours d’exécution](../subscriptions/manage-a-running-process.md)   
+ [Gérer un processus en cours d'exécution](../subscriptions/manage-a-running-process.md)   
  [Gestionnaire de rapports &#40;SSRS en mode natif&#41;](../report-manager-ssrs-native-mode.md)  
   
   

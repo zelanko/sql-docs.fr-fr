@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 76b9ed31-5aec-40fc-bb88-a1c1b0ab3fc3
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 27a94ac8af2a770d1e76c8e7c46966809c011f85
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e6f77a2ecf9ed5a985efa4a36f18b9f495c7091f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224669"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033930"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Utilisation d'expressions dans les rapports (Générateur de rapport et SSRS)
   Les expressions sont utilisées dans la définition de rapport pour spécifier ou calculer les valeurs des paramètres, requêtes, filtres, propriétés d'élément de rapport, définitions de groupe et de tri, propriétés de zone de texte, signets, explorateurs de documents, contenu d'en-tête et de pied de page dynamique, images et définitions de source de données dynamiques. Cette rubrique fournit des exemples des nombreux emplacements où vous pouvez utiliser des expressions pour varier le contenu ou l'apparence d'un rapport. Cette liste n'est pas exhaustive. Vous pouvez définir une expression pour toute propriété dans une boîte de dialogue qui affiche le bouton d’expression (**fx**) ou dans une liste déroulante qui affiche **\<Expression...>**.  
@@ -80,7 +80,7 @@ ms.locfileid: "48224669"
  [Exemples d’équations de filtre &#40;Générateur de rapports et SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)   
  [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [En-têtes et pieds de page &#40;Générateur de rapports et SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Mise en forme de texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
+ [Mise en forme du texte et des espaces réservés &#40;Générateur de rapports et SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Masquer un élément &#40;Générateur de rapports et SSRS&#41;](../report-builder/hide-an-item-report-builder-and-ssrs.md)  
   
   

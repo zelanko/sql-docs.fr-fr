@@ -3,6 +3,7 @@ title: Modification des mots de passe par programmation | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.reviewer: ''
+ms.prod: sql
 ms.technology: native-client
 ms.topic: reference
 helpviewer_keywords:
@@ -21,12 +22,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2d296eb992dc9683faee721e2b825105c82f362e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c42f8bf47d90bde4f6ffdaa3bb7e22b88c238bb7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675038"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010627"
 ---
 # <a name="changing-passwords-programmatically"></a>Modification des mots de passe par programme
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,15 +43,15 @@ ms.locfileid: "51675038"
   
 |Code d'erreur SQL Server|Message d'erreur|  
 |---------------------------|-------------------|  
-|15113|La connexion a échoué pour l'utilisateur '%.*ls' Motif : échec de la validation du mot de passe. Le compte est verrouillé.|  
-|18463|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Impossible d'utiliser le mot de passe pour l'instant.|  
-|18464|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop court.|  
-|18465|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop long.|  
-|18466|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il n'est pas assez complexe.|  
-|18467|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Le mot de passe ne répond pas aux exigences de la DLL de filtre de mots de passe.|  
-|18468|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : échec de changement de mot de passe. Une erreur inattendue s'est produite lors de la validation de mot de passe.|  
-|18487|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : le mot de passe associé à ce compte a expiré.|  
-|18488|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Raison : le mot de passe du compte doit être changé.|  
+|15113|Échec de la connexion pour l’utilisateur ' %. * motif %.*ls : Échec de la validation de mot de passe. Le compte est verrouillé.|  
+|18463|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Impossible d'utiliser le mot de passe pour l'instant.|  
+|18464|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop court.|  
+|18465|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il est trop long.|  
+|18466|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Ce mot de passe ne répond pas aux exigences de la stratégie, car il n'est pas assez complexe.|  
+|18467|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Le mot de passe ne répond pas aux exigences de la DLL de filtre de mots de passe.|  
+|18468|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Échec de la modification du mot de passe. Une erreur inattendue s'est produite lors de la validation de mot de passe.|  
+|18487|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Le mot de passe du compte a expiré.|  
+|18488|Échec de l'ouverture de session pour l'utilisateur '%.*ls'. Motif : Le mot de passe du compte doit être modifiée.|  
   
 ## <a name="sql-server-native-client-ole-db-provider"></a>Fournisseur OLE DB SQL Server Native Client  
  Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client fournisseur OLE DB natif prend en charge l’expiration du mot de passe via une interface utilisateur et par programme.  

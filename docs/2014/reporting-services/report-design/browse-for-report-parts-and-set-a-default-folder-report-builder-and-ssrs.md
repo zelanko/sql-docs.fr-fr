@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5cf38068-65d1-4fe8-81f3-a404d8fbc663
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0162c6e640c13e743d3ad816e7fcb3286758f635
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ae8fddf7e008c1c97c30c18deb2d8aec60b77415
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222249"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56009581"
 ---
 # <a name="browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs"></a>Rechercher des parties de rapports et définir un dossier par défaut (Générateur de rapports et SSRS)
   Pour créer un rapport, la façon la plus simple consiste à ajouter des parties de rapports existantes, telles que des tables et des graphiques, à votre rapport à partir de la bibliothèque de parties de rapports. Lorsque vous ajoutez une partie de rapport à votre rapport, vous ajoutez également tout ce qu'elle doit comporter pour fonctionner. Par exemple, toute partie de rapport qui affiche des données dépend d'un dataset, autrement dit, une requête et une connexion à une source de données. Après avoir ajouté la partie de rapport à votre rapport, vous pouvez la modifier comme vous le souhaitez.  
@@ -65,8 +65,8 @@ ms.locfileid: "48222249"
   
 ## <a name="see-also"></a>Voir aussi  
  [Recherchez les mises à jour ou désactiver les mises à jour &#40;Générateur de rapports et SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
- [Parties de rapport &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Parties de rapports et jeux de données dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Parties de rapports et datasets dans le Générateur de rapports](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Résoudre les problèmes de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Publier et republier des parties de rapports &#40;Générateur de rapports et SSRS&#41;](publish-and-republish-report-parts-report-builder-and-ssrs.md)  
   

@@ -10,15 +10,15 @@ f1_keywords:
 - sql12.dqs.browseforservers.f1
 - sql12.dqs.connecttoserver.f1
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0ea19b5b56902e3c8fb4fa664b4449c29af2ee41
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.openlocfilehash: 3b40e0243b8ab330a4c865514d6bc047f7b0b2d5
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032947"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56035700"
 ---
 # <a name="run-the-data-quality-client-application"></a>Exécuter l'application Data Quality Client
   Vous pouvez utiliser [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) en exécutant [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] et en ouvrant une session sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "51032947"
   
     2.  Si vous souhaitez chiffrer le transfert de données entre [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] et [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)], cliquez sur **Options**, puis cochez **Chiffrer la connexion**.  
   
-3.  Cliquez sur **Se connecter**.  
+3.  Cliquer sur **Se connecter**.  
   
  L’écran d’accueil [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] s’affiche. Pour plus d’informations, consultez [Écran d’accueil de Data Quality Client](../../2014/data-quality-services/data-quality-client-home-screen.md).  
   

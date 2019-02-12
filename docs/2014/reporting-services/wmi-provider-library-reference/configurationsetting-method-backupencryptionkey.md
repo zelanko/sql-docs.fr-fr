@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: da1d5dae-2517-448e-96fb-5379c93222ea
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 395e3dbb8eb2a48991e897129a91f7b4808fd110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 268d57207280689bb1c9b2df25013d6eca435f4a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200619"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016120"
 ---
 # <a name="backupencryptionkey-method-wmi-msreportserverconfigurationsetting"></a>Méthode BackupEncryptionKey (WMI MSReportServer_ConfigurationSetting)
   Sauvegarde la clé de chiffrement de l'instance du serveur de rapports spécifiée. Un chiffrement par mot de passe est utilisé pour le stockage de la clé de chiffrement.  
@@ -62,7 +62,7 @@ public void BackupEncryptionKey(string Password, out Byte[] KeyFile,
 ## <a name="return-value"></a>Valeur de retour  
  Retourne un paramètre *HRESULT* qui indique si l'appel de la méthode a réussi ou a échoué. Une valeur 0 indique que l'appel de méthode a réussi. Une valeur différente de zéro indique qu'une erreur s'est produite.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  **Espace de noms :** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Voir aussi  

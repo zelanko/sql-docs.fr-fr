@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 8c855194-4c20-4ecc-a328-5137d54b560c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 176c823af74d2b9842477d02c4e560984673dc21
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: b2bd9ad5f828072985817b6ee3eb78897bab0b97
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061669"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56014966"
 ---
 # <a name="reporting-services-properties"></a>Propriétés de Reporting Services
   Le serveur de rapports définit un jeu de propriétés système qui sont communes au serveur de rapports et un jeu de propriétés des éléments associées à un élément individuel stocké dans la base de données du serveur de rapports. Les propriétés définies par le serveur de rapports ne peuvent pas être supprimées, et sont dans certains cas en lecture seule. Une application peut étendre des propriétés système et des propriétés des éléments en ajoutant aux propriétés système et des éléments d'autres propriétés définies par l'utilisateur.  

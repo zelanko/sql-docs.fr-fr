@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
 author: maggiesmsft
-ms.author: douglasl
-manager: craigg
-ms.openlocfilehash: 1ec59d1259cfde65ca31e47c636109bd165c9e91
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.author: maghan
+manager: kfile
+ms.openlocfilehash: d9da0718a6eee5fda00d6418a5b6a624f8380c7d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109439"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033480"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Créer une source de données incorporée ou partagée (SSRS)
   Une source de données de rapport spécifie un nom et des informations de connexion. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend deux types de sources de données en charge : incorporée et partagée. Une source de données incorporée est définie dans une définition de rapport et utilisée uniquement par ce rapport. Une source de données partagée est définie sous la forme d'un élément distinct et peut être utilisée par plusieurs rapports. Pour plus d’informations, consultez [incorporé et connexions de données partagées ou les Sources de données &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
@@ -87,9 +87,9 @@ ms.locfileid: "48109439"
   
 ## <a name="see-also"></a>Voir aussi  
  [Stocker des informations d’identification dans une source de données Reporting Services](report-data/store-credentials-in-a-reporting-services-data-source.md)   
- [Incorporée et partagée des connexions de données ou Sources de données &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
+ [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
  [Convertir à partir d’une Source de données incorporée en source partagée &#40;Générateur de rapports et SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
- [Lier un rapport ou un modèle à une Source de données partagée &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
+ [Lier un rapport ou un modèle à une source de données partagée &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Configurer les propriétés de la source de données d’un rapport &#40;Gestionnaire de rapports&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   

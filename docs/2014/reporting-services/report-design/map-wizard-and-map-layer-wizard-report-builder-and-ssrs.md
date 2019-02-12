@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: a0f004a2d145356e38816b65fc2cd5c2a1972074
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362911"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011850"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
   L'Assistant Carte et l'Assistant Couche automatisent la tâche de création d'une carte, d'ajout d'une couche ou de modification des options de couche sur une couche existante.  
@@ -79,7 +79,7 @@ ms.locfileid: "53362911"
   
     -   [Quelle est la différence entre une carte simple, une carte à bulles et une carte analytique ?](#MapType)  
   
-    -   **Choisir la visualisation de la carte : Polygones**  
+    -   **Choisir la visualisation de la carte : Polygons**  
   
     -   **Choisir la visualisation de la carte : Lignes**  
   
@@ -271,7 +271,7 @@ ms.locfileid: "53362911"
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Dépanner les rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planifier un rapport cartographique &#40;Générateur de rapports et SSRS&#41;](plan-a-map-report-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](maps-report-builder-and-ssrs.md)  
   

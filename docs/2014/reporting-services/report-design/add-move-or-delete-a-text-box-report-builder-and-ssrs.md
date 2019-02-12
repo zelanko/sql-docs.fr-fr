@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f042cf81-d933-4ac7-9287-c074a46bde98
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 0ca387618f1b996f620a1697053196926ed9dfd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: d75b32b9b1e25c23855d35e0f8e77bbf78c24688
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123003"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56010173"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Ajouter, déplacer ou supprimer une zone de texte (Générateur de rapports et SSRS)
   Les zones de texte sont les éléments de rapport les plus couramment utilisés dans les rapports. Vous pouvez ajouter une zone de texte au corps du rapport pour afficher des informations telles que les titres, les choix de paramètres, les champs prédéfinis et les dates.  
@@ -74,7 +74,7 @@ ms.locfileid: "48123003"
     >  Si vous cliquez dans la zone de texte en mode édition, appuyez sur Échap pour sélectionner la zone de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Zones de texte &#40;Générateur de rapports et SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Zones de texte &#40;Générateur de rapport et SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [Expressions &#40;Générateur de rapports et SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Raccourcis clavier &#40;Générateur de rapports&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
   

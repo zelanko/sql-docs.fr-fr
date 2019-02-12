@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6b78c77a924c0c301eecddb6592b4339236dffde
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+manager: kfile
+ms.openlocfilehash: a4afc42162754c63d5280e7962960800e47b7059
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360841"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56012051"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-migrate-content-between-report-servers"></a>Exemple de script Reporting Services rs.exe pour migrer le contenu entre des serveurs de rapports
   Cette rubrique inclut et décrit un exemple de script RSS [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] qui copie les éléments de contenu et les paramètres d’un serveur de rapports [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vers un autre serveur de rapports au moyen de l’utilitaire **RS.exe** . RS.exe est installé avec [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], en mode natif et SharePoint. Le script copie les éléments de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , par exemple les rapports et les abonnements, de serveur à serveur. Il prend en charge le mode SharePoint et les serveurs de rapports en mode natif.  

@@ -3,8 +3,6 @@ title: Types de données de paramètre | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: connectivity
-ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,13 +13,14 @@ helpviewer_keywords:
 ms.assetid: fd7e99d8-d26a-408c-9733-6ffccde99f75
 author: MightyPen
 ms.author: genemi
+ms.reviewer: ''
 manager: craigg
-ms.openlocfilehash: e6c2a73aec119b7572cad93dedb2994235329cb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1f1097927f61355cf4a50f4287397d823fd3177
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826028"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020111"
 ---
 # <a name="parameter-data-types"></a>Types de données de paramètre
 Bien que chaque paramètre spécifié avec **SQLBindParameter** est définie à l’aide d’un type de données SQL, les paramètres dans une instruction SQL avoir aucun intrinsèques type de données. Par conséquent, les marqueurs de paramètres peuvent être inclus dans une instruction SQL uniquement si leurs types de données peuvent être déduits à partir d’un autre opérande dans l’instruction. Par exemple, dans une expression arithmétique, telle que ? + COLUMN1, le type de données du paramètre peut être déduit du type de données de la colonne nommée représenté par COLUMN1. Une application ne peut pas utiliser un marqueur de paramètre si le type de données ne peut pas être déterminé.  

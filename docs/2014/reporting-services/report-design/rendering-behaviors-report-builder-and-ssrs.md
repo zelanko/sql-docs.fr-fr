@@ -10,16 +10,16 @@ ms.topic: conceptual
 ms.assetid: 8f873ef9-27a3-40e5-b58b-6774f8027a58
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
-ms.openlocfilehash: 39fa21f9bb7af15885abdf1d8c78d2651e2fbdab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: effd50dc38610b4a3f059df8609cb9279e268b13
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079159"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017140"
 ---
 # <a name="rendering-behaviors-report-builder--and-ssrs"></a>Comportements de rendu (Générateur de rapports et SSRS)
-  En fonction du convertisseur que vous sélectionnez, certaines règles sont appliquées au corps du rapport et à son contenu lors du rendu d'un rapport. La combinaison de ces facteurs détermine la façon dont les éléments du rapport s'ajustent sur la page :  
+  En fonction du convertisseur que vous sélectionnez, certaines règles sont appliquées au corps du rapport et à son contenu lors du rendu d'un rapport. La combinaison de ces facteurs détermine la façon dont les éléments du rapport s'ajustent sur la page :  
   
 -   les règles de rendu ;  
   
@@ -129,7 +129,7 @@ ms.locfileid: "48079159"
 -   Les sauts de page logiques définis sur les éléments de cellules de tableau ou de matrice ne sont pas conservés. Cela ne s'applique pas aux éléments de listes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Fonctionnalité interactive des différentes Extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
+ [Fonctionnalité interactive des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](../report-builder/interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu au format HTML &#40;Générateur de rapports et SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)   
  [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
   

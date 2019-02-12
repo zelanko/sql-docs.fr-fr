@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8972427f2ba2529880715ca12d85a560a02eb31f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: kfile
+ms.openlocfilehash: 6e11a7d35550c881157ab4be6aa78048346653c8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405003"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011251"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Journal des exécutions du serveur de rapports et vue ExecutionLog3
   Le journal d'exécution du serveur de rapports contient des informations sur les rapports qui sont exécutés sur le serveur ou sur plusieurs serveurs en mode natif regroupés dans un déploiement évolutif ou une batterie de serveurs SharePoint. Vous pouvez l'utiliser pour connaître la fréquence de demande d'un rapport, les formats de sortie les plus utilisés et le nombre de millisecondes de traitement consacré à chaque phrase du traitement. Le journal contient des informations sur le temps passé pour l'exécution d'une requête de dataset dans un rapport et le temps passé pour le traitement des données. Si vous êtes administrateur de serveur de rapports, vous pouvez passer en revue les informations du journal, identifier les tâches longues et faire des suggestions aux auteurs de rapports pour améliorer des zones du rapport (dataset ou traitement).  
@@ -118,7 +118,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|Valeurs possibles :<br />**Interactive**<br />**Abonnement**<br /><br /> <br /><br /> L'analyse des données de journal filtrées par RequestType=Subscription et triées par TimeStart peut identifier des périodes d'utilisation importante des abonnements ; si vous le souhaitez, il est par la suite possible de modifier l'heure de certains abonnements aux rapports.|  
 |Format|Format de rendu.|  
 |Paramètres|Valeurs des paramètres utilisées pour une exécution de rapport.|  
-|ItemAction|Valeurs possibles :<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **FindString**<br /><br /> **Exécuter**<br /><br /> **RenderEdit**|  
+|ItemAction|Valeurs possibles :<br /><br /> **Render**<br /><br /> **Sort**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Exécuter**<br /><br /> **RenderEdit**|  
 |TimeStart|Heures de début et de fin qui indiquent la durée d'un traitement de rapport.|  
 |TimeEnd||  
 |TimeDataRetrieval|Nombre de millisecondes passées pour la récupération des données.|  
