@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: d9cd3624-1594-4707-8887-55437dd7e07c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4a55d34c86622ef837d9c7264a614ba59552c978
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: 1dbef5a6deb17a6b7cf570bbeb96d79a941b837f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089189"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018850"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Récupérer des données d'un modèle d'exploration de données (DMX) (SSRS)
   Pour utiliser les données d’un modèle d’exploration de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez définir une source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ainsi qu’un ou plusieurs datasets de rapport. Lorsque vous créez la définition de la source de données, vous devez spécifier une chaîne de connexion et des informations d'identification pour pouvoir accéder à la source de données à partir de l'ordinateur client.  
   
  Vous pouvez créer une définition de source de données incorporée à utiliser par un seul rapport ou une définition de source de données partagée utilisable par plusieurs rapports. Les procédures de cette rubrique décrivent la création d'une source de données incorporée. Pour plus d’informations sur les sources de données partagées, consultez [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) et [Créer, modifier, puis supprimer des sources de données partagées &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Après avoir créé un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] source de données, vous pouvez créer un ou plusieurs jeux de données. Pour chaque dataset, vous utilisez un concepteur de requêtes de prédiction de l'exploration de données (DMX) pour créer une requête DMX qui spécifie la collection de champs. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
+ Après avoir créé une source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , vous pouvez créer un ou plusieurs datasets. Pour chaque dataset, vous utilisez un concepteur de requêtes de prédiction de l'exploration de données (DMX) pour créer une requête DMX qui spécifie la collection de champs. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
   
  Le nom du dataset créé apparaît dans le volet des données de rapport sous la forme d'un nœud sous la source de données correspondante.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48089189"
   
 4.  Dans la liste déroulante **Type** , sélectionnez **Microsoft SQL Server Analysis Services**.  
   
-5.  Spécifiez une chaîne de connexion qui fonctionne avec votre source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
+5.  Spécifiez une chaîne de connexion qui fonctionne avec votre source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
      Contactez l'administrateur de votre base de données pour connaître les informations de connexion et d'identification à utiliser pour se connecter à la source de données. L’exemple de chaîne de connexion suivant spécifie l’exemple de base de données [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] sur le client local.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "48089189"
   
 6.  Cliquez sur **Informations d'identification**.  
   
-     Définissez les informations d'identification à utiliser pour se connecter à la source de données. Pour plus d’informations, consultez [spécifier les informations d’identification et les informations de connexion pour les Sources de données de rapport](../../integration-services/connection-manager/data-sources.md).  
+     Définissez les informations d'identification à utiliser pour se connecter à la source de données. Pour plus d’informations, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](../../integration-services/connection-manager/data-sources.md).  
   
     > [!NOTE]  
     >  Pour tester la connexion à la source de données, cliquez sur **Modifier**. Dans la boîte de dialogue **Propriétés de connexion** , cliquez sur **Tester la connexion**. Si le test a réussi, le message « Le test de la connexion a réussi. » s’affiche. Si le test échoue, un message d'avertissement apparaît avec d'autres informations sur la cause de l'échec.  
@@ -65,11 +65,11 @@ ms.locfileid: "48089189"
   
 ### <a name="to-create-a-dataset-for-a-microsoft-sql-server-analysis-services"></a>Pour créer un dataset pour Microsoft SQL Server Analysis Services  
   
-1.  Dans le **les données de rapport** volet, cliquez sur le nom de la source de données qui se connecte à un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] source de données, puis cliquez sur **ajouter un Dataset**.  
+1.  Dans le volet **Données du rapport** , cliquez avec le bouton droit sur le nom de la source de données qui se connecte à une source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , puis cliquez sur **Ajouter un dataset**.  
   
 2.  Dans la boîte de dialogue **Propriétés du dataset** , tapez un nom dans la zone de texte **Nom** .  
   
-3.  Dans le **boîte source de données**, vérifiez que le nom est le nom d’une source de données qui se connecte à un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] source de données.  
+3.  Dans la zone **Source de données**, vérifiez que le nom est celui d’une source de données qui se connecte à une source de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] .  
   
 4.  Cliquez sur **Concepteur de requêtes** pour ouvrir le concepteur de requêtes graphique afin de créer une requête de manière interactive. Si le concepteur de requêtes s’ouvre en mode MDX, cliquez sur **Type de commande DMX** (![Basculer vers la vue langage de requête DMX](../media/rsqdicon-commandtypedmx.gif "Basculer vers la vue langage de requête DMX")) dans la barre d’outils pour basculer vers le concepteur de requêtes d’exploration de données. Pour plus d’informations, consultez [Interface utilisateur du Concepteur de requêtes DMX Analysis Services](analysis-services-dmx-query-designer-user-interface.md).  
   

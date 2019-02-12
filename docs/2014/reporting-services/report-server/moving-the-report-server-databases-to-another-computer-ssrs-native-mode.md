@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 44a9854d-e333-44f6-bdc7-8837b9f34416
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b353e2034a7a21d963bed48e7ee7e670f677f70c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: e7cbe523d7edb8872814c3280c8e7c8a06cbf84a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078579"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56016621"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Déplacement des bases de données du serveur de rapports vers un autre ordinateur (en mode natif SSRS)
   Vous pouvez déplacer les bases de données du serveur de rapports qui sont utilisées dans une installation du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers une instance située sur un autre ordinateur. Les bases de données reportserver et reportservertempdb doivent être déplacées ou copiées ensemble. Ces deux bases de données sont requises dans une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ; la base de données reportservertempdb doit être liée par nom à la base de données reportserver primaire que vous déplacez.  
@@ -27,7 +27,7 @@ ms.locfileid: "48078579"
   
 -   Les planifications sont recréées la première fois que vous redémarrerez le service Report Server.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les travaux de l’Agent, qui sont utilisés pour déclencher une planification, sont recréés dans la nouvelle instance de base de données. Vous n'avez pas à déplacer les travaux vers le nouvel ordinateur ; toutefois, vous pouvez supprimer des travaux sur l'ordinateur qui ne sera plus utilisé.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les travaux de l’Agent, qui sont utilisés pour déclencher une planification, sont recréés dans la nouvelle instance de base de données. Vous n'avez pas à déplacer les travaux vers le nouvel ordinateur ; toutefois, vous pouvez supprimer des travaux sur l'ordinateur qui ne sera plus utilisé.  
   
 -   Les abonnements, les instantanés et les rapports mis en cache sont préservés dans la base de données déplacée. Si un instantané ne collecte pas des données actualisées après le déplacement de la base de données, désactivez les options d’instantané dans le Gestionnaire de rapports, cliquez sur **Appliquer** pour enregistrer les modifications apportées, recréez la planification, puis cliquez à nouveau sur **Appliquer** pour enregistrer les modifications apportées.  
   
@@ -202,29 +202,29 @@ GO
   
 1.  Démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puis établissez une connexion au serveur de rapports.  
   
-2.  Dans la page Base de données, cliquez sur **Modifier la base de données**. Cliquez sur **Suivant**.  
+2.  Dans la page Base de données, cliquez sur **Modifier la base de données**. Cliquer sur **Suivant**.  
   
-3.  Cliquez sur **Choisir une base de données de serveur de rapports existante**. Cliquez sur **Suivant**.  
+3.  Cliquez sur **Choisir une base de données de serveur de rapports existante**. Cliquer sur **Suivant**.  
   
-4.  Sélectionnez le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge désormais la base de données du serveur de rapports, puis cliquez sur **Tester la connexion**. Cliquez sur **Suivant**.  
+4.  Sélectionnez le serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge désormais la base de données du serveur de rapports, puis cliquez sur **Tester la connexion**. Cliquer sur **Suivant**.  
   
-5.  Dans Nom de la base de données, sélectionnez la base de données du serveur de rapports que vous voulez utiliser. Cliquez sur **Suivant**.  
+5.  Dans Nom de la base de données, sélectionnez la base de données du serveur de rapports que vous voulez utiliser. Cliquer sur **Suivant**.  
   
-6.  Dans Informations d'identification, spécifiez les informations d'identification que le serveur de rapports doit utiliser pour se connecter à la base de données du serveur de rapports. Cliquez sur **Suivant**.  
+6.  Dans Informations d'identification, spécifiez les informations d'identification que le serveur de rapports doit utiliser pour se connecter à la base de données du serveur de rapports. Cliquer sur **Suivant**.  
   
 7.  Cliquez sur **Suivant** , puis sur **Terminer**.  
   
 > [!NOTE]  
->  Un [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation requiert que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] instance inclut le `RSExecRole` rôle. La création de rôles, l’inscription d’une connexion et les attributions de rôles ont lieu quand vous définissez la connexion à la base de données du serveur de rapports par le biais de l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si vous utilisez d'autres approches (surtout si vous recourez à l'utilitaire d'invite de commandes rsconfig.exe) pour configurer la connexion, le serveur de rapports ne sera pas en état de fonctionner. Vous devrez peut-être écrire du code WMI pour rendre le serveur de rapports disponible. Pour plus d’informations, consultez [Accès au fournisseur WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
+>  Une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] requiert que l’instance du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] comporte le rôle `RSExecRole`. La création de rôles, l’inscription d’une connexion et les attributions de rôles ont lieu quand vous définissez la connexion à la base de données du serveur de rapports par le biais de l’outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Si vous utilisez d'autres approches (surtout si vous recourez à l'utilitaire d'invite de commandes rsconfig.exe) pour configurer la connexion, le serveur de rapports ne sera pas en état de fonctionner. Vous devrez peut-être écrire du code WMI pour rendre le serveur de rapports disponible. Pour plus d’informations, consultez [Accès au fournisseur WMI de Reporting Services](../tools/access-the-reporting-services-wmi-provider.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Créer le rôle RSExecRole](../security/create-the-rsexecrole.md)   
- [Démarrer et arrêter le Service Report Server](start-and-stop-the-report-server-service.md)   
- [Configurer une connexion de base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Gestionnaire de Configuration de Reporting Services &#40;en Mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+ [Démarrer et arrêter le service Report Server](start-and-stop-the-report-server-service.md)   
+ [Configurer une connexion à la base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
+ [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
+ [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Utilitaire rsconfig &#40;SSRS&#41;](../tools/rsconfig-utility-ssrs.md)   
- [Configurer et gérer les clés de chiffrement &#40;Gestionnaire de Configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Serveur de base de données rapports &#40;SSRS en Mode natif&#41;](report-server-database-ssrs-native-mode.md)  
+ [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-database-ssrs-native-mode.md)  
   
   

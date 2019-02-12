@@ -4,22 +4,21 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
-manager: craigg
-ms.openlocfilehash: e3c88894ee271e9b96e98e25dc14e62bfc0361ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+manager: kfile
+ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048329"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56018900"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Création d'un projet Analysis Services (Didacticiel sur l'exploration de données de base)
-  Chaque [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet définit les objets dans un seul [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données. Une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient plusieurs types d'objets.  
+  Chaque projet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] définit les objets présents dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unique. Une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient plusieurs types d'objets.  
   
 -   Modèles multidimensionnels (cubes)  
   
@@ -29,15 +28,15 @@ ms.locfileid: "48048329"
   
  Notez que vous **n'avez pas** besoin d'un cube pour effectuer l'exploration de données. Si vous devez effectuer l'exploration de données sur un cube existant, vous devez ajouter les modèles d'exploration de données au projet utilisé pour générer le cube. Cependant, dans la plupart des cas, vous créez vos modèles sur des sources de données relationnelles, par exemple un entrepôt de données, et vous obtenez de meilleures performances si un cube n'est pas impliqué.  
   
- Dans ce didacticiel, vous allez utiliser un data warehouse relationnel, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], comme la source de données. Vous allez déployer tous vos objets d’exploration de données sur un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de données nommée `BasicDataMining`, utilisée uniquement pour l’exploration de données.  
+ Dans ce didacticiel vous allez utiliser un entrepôt de données relationnelles, [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)], comme source de données. Vous allez déployer tous vos objets d'exploration de données sur une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nommée `BasicDataMining`, utilisée uniquement pour l'exploration de données.  
   
- Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise le **localhost** instance pour les nouveaux projets. Si vous utilisez une instance nommée ou un serveur différent, vous devez d'abord créer et ouvrir le projet, puis modifier le nom de l'instance.  
+ Par défaut, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] utilise l'instance **localhost** pour les nouveaux projets. Si vous utilisez une instance nommée ou un serveur différent, vous devez d'abord créer et ouvrir le projet, puis modifier le nom de l'instance.  
   
- Pour plus d’informations sur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projets, consultez [création d’un projet Analysis Services](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
+ Pour plus d'informations sur les projets [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
   
 ### <a name="to-create-an-analysis-services-project"></a>Pour créer un projet Analysis Services  
   
-1.  Ouvrir [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Ouvrez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Dans le menu **Fichier** , pointez sur **Nouveau**, puis sélectionnez **Projet**.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "48048329"
   
 ### <a name="to-change-the-instance-where-data-mining-objects-are-stored"></a>Pour modifier les instances de stockage des objets d'exploration de données  
   
-1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans le **projet** menu, sélectionnez **propriétés**.  
+1.  Dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans le menu **Projet** , sélectionnez **Propriétés**.  
   
 2.  Dans la partie gauche du volet **Pages de propriétés** , sous **Propriétés de configuration**, cliquez sur **Déploiement**.  
   
