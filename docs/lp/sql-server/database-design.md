@@ -4,20 +4,21 @@ hide_bc: true
 title: Conception de base de données SQL Server
 description: Découvrez les fonctionnalités de SQL Server qui vous aident à concevoir la base de données correspondant le mieux à vos besoins.
 ms.topic: hub-page
+ms.prod: sql
 featureFlags:
 - clicktale
-ms.openlocfilehash: e72ef40dcce199c962c67e2c8c517681664e5b11
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce9981d93ffa1d59b3966b42b0c9b63a1e1a6ba7
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702177"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079415"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="https://www.microsoft.com/sql-server/sql-server-downloads">
+                <a href="https://www.microsoft.com/evalcenter/evaluate-sql-server-2019-ctp">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -27,7 +28,7 @@ ms.locfileid: "51702177"
                                     </div>
                                 </div>
                                 <div class="cardText">
-                                    <span class="likeAnH3">Télécharger SQL Server</span>
+                                    <span class="likeAnH3">Essayer SQL Server 2019 (préversion)</span>
                                 </div>
                             </div>
                         </div>
@@ -73,7 +74,7 @@ ms.locfileid: "51702177"
         </ul>
     </div>
     <div class="container">
-        <h1>SQL Server : conception de base de données</h1>
+        <h1>SQL Server : Création de bases de données</h1>
         <ul class="pivots tabLess">
             <li class="pivotItem" style="display: list-item;" data-id="#products">
                 <a href="#products" data-linktype="self-bookmark"></a>

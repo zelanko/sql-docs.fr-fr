@@ -1,7 +1,7 @@
 ---
 title: Connexion à une base de données SQL Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c4caaa9ca14fd2f8eb396ef2c2869ba30bd48420
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d948e4a790933e6f703232e3f642241395bbb410
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602209"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736980"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Connexion à une base de données SQL Azure
 
@@ -37,7 +37,7 @@ Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vo
   
 ## <a name="connections-dropped"></a>Connexions supprimées
 
-Lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], les connexions inactives peuvent être arrêtées par un composant réseau (tel un pare-feu) après une période d'inactivité. Il existe deux types de connexions inactives dans ce contexte :  
+Lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], les connexions inactives peuvent être arrêtées par un composant réseau (comme un pare-feu) après une période d’inactivité. Il existe deux types de connexions inactives dans ce contexte :  
 
 - Les connexions inactives sur la couche TCP, lorsque les connexions peuvent être supprimées par n'importe quel dispositif réseau.  
 
@@ -78,15 +78,15 @@ shutdown /r /t 1
 ## <a name="appending-the-server-name-to-the-userid-in-the-connection-string"></a>Ajout du nom de serveur à l'ID d'utilisateur dans la chaîne de connexion  
 
 Avant la version 4.0 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], lors de la connexion à [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous deviez ajouter le nom du serveur à l’ID d’utilisateur dans la chaîne de connexion. Par exemple, user@servername. À compter de la version 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], il n’est plus nécessaire d’ajouter @servername à l’ID d’utilisateur dans la chaîne de connexion.  
-  
+
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Utilisation du chiffrement, nécessitant la définition d'un hostNameInCertificate
 
-Lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **chiffrer = true**. (Si le nom du serveur dans la chaîne de connexion est *shortName*. *domainName*, définissez le **hostNameInCertificate** propriété \*. *domainName*.)  
-  
-Exemple :  
+Avant la version 7.2 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **chiffrer = true** (si le nom de serveur dans la connexion la chaîne est *shortName*. *domainName*, définissez le **hostNameInCertificate** propriété \*. *domainName*.). Cette propriété est facultative à partir de la version 7.2 du pilote.
+
+Exemple :
 
 ```java
-jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
+jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
 ## <a name="see-also"></a> Voir aussi

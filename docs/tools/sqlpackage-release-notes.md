@@ -23,8 +23,8 @@ ms.locfileid: "56013000"
 
 ## <a name="sqlpackage-181"></a>sqlpackage 18.1
 
-Date de publication : 1er février 2019  
-Build 15.0.4316.1 
+Date de publication : 1 février 2019  
+Build 
 
 La version inclut les correctifs et les fonctionnalités suivantes :
 
@@ -47,7 +47,7 @@ Cette version inclut les versions d’évaluation d’inter-plateformes de sqlpa
 ## <a name="sqlpackage-180"></a>sqlpackage 18.0
 
 Date de publication : 24 octobre 2018  
-Build 15.0.4200.1 
+Build : 15.0.4200.1 
 
 La version inclut les correctifs et les fonctionnalités suivantes :
 
@@ -64,8 +64,8 @@ La version inclut les correctifs et les fonctionnalités suivantes :
 
 ## <a name="sqlpackage-178"></a>sqlpackage 17.8
 
-Date de publication : 22 juin 2018  
-Build 14.0.4079.2  
+Date de publication : 22 juin 2018  
+Build : 14.0.4079.2  
 
 La version inclut les correctifs suivants :
 
@@ -77,7 +77,7 @@ La version inclut les correctifs suivants :
 ## <a name="sqlpackage-1741"></a>sqlpackage 17.4.1
 
 Date de publication : 25 janvier 2018  
-Build 14.0.3917.1
+Build : 14.0.3917.1
 
 La version inclut les correctifs suivants :
 
@@ -89,8 +89,8 @@ La version inclut les correctifs suivants :
 
 ## <a name="sqlpackage-1740"></a>sqlpackage 17.4.0
 
-Date de publication : 12 décembre 2017  
-Build 14.0.3881.1
+Date de publication : 12 décembre 2017  
+Build : 14.0.3881.1
 
 La version inclut les correctifs suivants :
 
