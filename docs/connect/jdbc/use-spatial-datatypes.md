@@ -1,7 +1,7 @@
 ---
 title: À l’aide des types de données spatiales | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 01/21/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0a51d15875051fbe2a2a034526a95c16bed076db
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.openlocfilehash: 4d00692b0b5872b1020f900587a24a3116aee9be
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460544"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737010"
 ---
 # <a name="using-spatial-datatypes"></a>Utilisation des types de données spatiales
 
@@ -107,22 +107,22 @@ Il s’agit des nouvelle API publiques qui ont été introduites avec cet ajout,
 |Méthode|Description|
 |:------|:----------|
 |STGeomFromText Geometry (wkt String, int SRID)| Constructeur pour une instance Geometry à partir d’une représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text), à laquelle s’ajoutent les valeurs Z (élévation) et M (mesure) apportées par l’instance.
-|STGeomFromWKB Geometry (byte [] wkb)| Constructeur pour une instance Geometry à partir d’une représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary).
+|Geometry STGeomFromWKB(byte[] wkb)| Constructeur pour une instance Geometry à partir d’une représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary).
 |Géométries désérialiser (byte [] wkb)| Constructeur pour une instance Geometry à partir d’un format interne SQL Server pour les données spatiales.
 |Analyse de géométrie (chaîne wkt)| Constructeur pour une instance Geometry à partir d’une représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text). Identificateur de référence spatiale est défini par défaut sur 0.
 |Point géométrique (double x, y double int SRID)| Constructeur pour une instance Geometry qui représente une instance Point à partir de ses valeurs X et Y et un identificateur de référence spatiale.
-|Chaîne STAsText()| Retourne la représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) d’une instance Geometry. Ce texte ne contiendra aucune valeur Z (élévation) ou M (mesure) apportée par l'instance.
-|Byte [] STAsBinary()| Retourne la représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary) d’une instance Geometry. Cette valeur ne contiendra aucune valeur Z ou M apportée par l'instance.
-|Byte [] serialize()| Retourne les octets qui représentent un format interne SQL Server de type Geometry.
+|String STAsText()| Retourne la représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) d’une instance Geometry. Ce texte ne contiendra aucune valeur Z (élévation) ou M (mesure) apportée par l'instance.
+|byte[] STAsBinary()| Retourne la représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary) d’une instance Geometry. Cette valeur ne contiendra aucune valeur Z ou M apportée par l'instance.
+|byte[] serialize()| Retourne les octets qui représentent un format interne SQL Server de type Geometry.
 |hasM() booléenne| Retourne si l’objet contient une valeur M (mesure).
 |hasZ() booléenne| Retourne si l’objet contient une valeur Z (élévation).
 |GetX() double| Retourne la valeur de coordonnée X.
 |GetY() double| Retourne la valeur de coordonnée Y.
 |GetM() double| Retourne la valeur M (mesure) de l’objet.
-|GetZ() double| Retourne la valeur Z (élévation) de l’objet.
+|Double getZ()| Retourne la valeur Z (élévation) de l’objet.
 |int getSrid()| Retourne la valeur d’identificateur de référence spatiale (SRID).
 |isNull() booléenne| Retourne si l’objet Geometry est null.
-|int, STNumPoints()| Retourne le nombre de points dans l’objet Geometry.
+|int STNumPoints()| Retourne le nombre de points dans l’objet Geometry.
 |Chaîne STGeometryType()| Retourne le nom de type OGC (Open Geospatial Consortium) représenté par une instance géométrique.
 |Chaîne asTextZM()| Retourne la représentation sous forme de texte connues (WKT) de l’objet Geometry.
 |ToString() de la chaîne| Retourne la représentation de chaîne de l’objet Geometry.
@@ -132,22 +132,22 @@ Il s’agit des nouvelle API publiques qui ont été introduites avec cet ajout,
 |Méthode|Description|
 |:------|:----------|
 |STGeomFromText Geography (wkt String, int SRID)| Constructeur pour une instance Geography à partir d’une représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text), à laquelle s’ajoutent les valeurs Z (élévation) et M (mesure) apportées par l’instance.
-|STGeomFromWKB Geography (byte [] wkb)| Constructeur pour une instance Geography à partir d’une représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary).
-|Geography désérialiser (byte [] wkb)| Constructeur pour une instance Geography à partir d’un format interne SQL Server pour les données spatiales.
+|Geography STGeomFromWKB(byte[] wkb)| Constructeur pour une instance Geography à partir d’une représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary).
+|Geography deserialize(byte[] wkb)| Constructeur pour une instance Geography à partir d’un format interne SQL Server pour les données spatiales.
 |Analyse de géographie (chaîne wkt)| Constructeur pour une instance Geography à partir d’une représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text). Identificateur de référence spatiale est défini par défaut sur 0.
-|Point géographique (lat, lon double, int SRID en double)| Constructeur pour une instance Geography qui représente une instance Point à partir de ses valeurs de latitude et de longitude, et d’un ID de référence spatiale.
-|Chaîne STAsText()| Retourne la représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) d’une instance Geography. Ce texte ne contiendra aucune valeur Z (élévation) ou M (mesure) apportée par l'instance.
-|Byte [] STAsBinary())| Retourne la représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary) d’une instance Geography. Cette valeur ne contiendra aucune valeur Z ou M apportée par l'instance.
-|Byte [] serialize()| Retourne les octets qui représentent un format interne SQL Server de type Geography.
+|Point géographique (double lon, LAT. double, int SRID)| Constructeur pour une instance Geography qui représente une instance Point à partir de sa longitude et de sa latitude, et d’un ID de référence spatiale.
+|String STAsText()| Retourne la représentation OGC (Open Geospatial Consortium) WKT (Well-Known Text) d’une instance Geography. Ce texte ne contiendra aucune valeur Z (élévation) ou M (mesure) apportée par l'instance.
+|byte[] STAsBinary())| Retourne la représentation OGC (Open Geospatial Consortium) WKB (Well-Known Binary) d’une instance Geography. Cette valeur ne contiendra aucune valeur Z ou M apportée par l'instance.
+|byte[] serialize()| Retourne les octets qui représentent un format interne SQL Server de type Geography.
 |hasM() booléenne| Retourne si l’objet contient une valeur M (mesure).
 |hasZ() booléenne| Retourne si l’objet contient une valeur Z (élévation).
-|GetLatitude() double| Retourne la valeur de latitude.
-|GetLongitude() double| Retourne la valeur de longitude.
+|Double getLatitude()| Retourne la valeur de latitude.
+|Double getLongitude()| Retourne la valeur de longitude.
 |GetM() double| Retourne la valeur M (mesure) de l’objet.
-|GetZ() double| Retourne la valeur Z (élévation) de l’objet.
+|Double getZ()| Retourne la valeur Z (élévation) de l’objet.
 |int getSrid()| Retourne la valeur d’identificateur de référence spatiale (SRID).
 |isNull() booléenne| Retourne si l’objet Geography est null.
-|int, STNumPoints()| Retourne le nombre de points dans l’objet Geography.
+|int STNumPoints()| Retourne le nombre de points dans l’objet Geography.
 |Chaîne STGeographyType()| Retourne le nom de type OGC (Open Geospatial Consortium) représenté par une instance géographique.
 |Chaîne asTextZM()| Retourne la représentation sous forme de texte connues (WKT) de l’objet Geography.
 |ToString() de la chaîne| Retourne la représentation de chaîne de l’objet Geography.

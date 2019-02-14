@@ -1,7 +1,7 @@
 ---
 title: Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a7bd04090fd6c6a0cc7a0b8374930f3aba378113
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396153"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736990"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server
 
@@ -48,7 +48,7 @@ Antérieures à [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], applications 
 
 - Si vous spécifiez **authenticationScheme = Java Kerberos** mais ne spécifiez pas **integratedSecurity = true**, le pilote ignorera la **authenticationScheme** propriété de connexion et s’attendra à trouver des informations d’identification de nom et mot de passe utilisateur dans la chaîne de connexion.
 
-Quand vous utilisez une source de données pour créer des connexions, vous pouvez définir par programmation le schéma d’authentification à l’aide de setAuthenticationScheme et (éventuellement) de définir le SPN pour les connexions Kerberos à l’aide de **setServerSpn**.
+Quand vous utilisez une source de données pour créer des connexions, vous pouvez définir par programmation le schéma d’authentification à l’aide de **setAuthenticationScheme** et (éventuellement) définir le SPN pour les connexions Kerberos à l’aide de **setServerSpn**.
 
 Un nouvel enregistreur d'événements a été ajouté pour la prise en charge de l'authentification Kerberos : com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. Pour plus d’informations, consultez [Suivi du fonctionnement du pilote](../../connect/jdbc/tracing-driver-operation.md).
 
@@ -57,7 +57,7 @@ Les consignes suivantes vous aideront à configurer Kerberos :
 1. Définissez **AllowTgtSessionKey** sur 1 dans le Registre pour Windows. Pour plus d’informations, consultez [Entrées de Registre du protocole Kerberos et clés de configuration KDC dans Windows Server 2003](https://support.microsoft.com/kb/837361).
 2. Assurez-vous que la configuration Kerberos (krb5.conf dans les environnements UNIX) référence le bon domaine et le centre de distribution de clés (KDC) convenant à votre environnement.
 3. Initialisez le cache des tickets TGT à l'aide de l'outil kinit, en vous connectant au domaine.
-4. Quand une application utilisant **authenticationScheme=JavaKerberos** s’exécute sur les systèmes d’exploitation Windows Vista ou Windows 7, vous devez utiliser un compte d’utilisateur standard. Toutefois, si vous exécutez l'application à l'aide d'un compte d'administrateur, vous devrez l'exécuter à l'aide de privilèges administrateur.
+4. Quand une application utilisant **authenticationScheme=JavaKerberos** s’exécute sur les systèmes d’exploitation Windows Vista ou Windows 7, vous devez utiliser un compte d’utilisateur standard. Toutefois, si vous exécutez l’application à l’aide d’un compte d’administrateur, vous devrez l’exécuter à l’aide de privilèges d’administrateur.
 
 > [!NOTE]  
 > L’attribut de connexion serverSpn est uniquement pris en charge par Microsoft JDBC Driver 4.2 et versions ultérieures.
@@ -66,7 +66,7 @@ Les consignes suivantes vous aideront à configurer Kerberos :
 
 Le nom de principal du service (SPN) est le nom par lequel un client identifie de manière unique l'instance d'un service.
 
-Vous pouvez spécifier le SPN à l’aide de la propriété de connexion **serverSpn**, ou simplement laisser le pilote le créer pour vous (par défaut). Cette propriété a le format suivant : « MSSQLSvc/fqdn:port\@REALM », où fqdn désigne le nom de domaine complet, port désigne le numéro de port et REALM désigne le domaine Kerberos du serveur SQL Server en majuscules. La partie domaine de cette propriété est facultative si le domaine par défaut de votre configuration Kerberos est le même que celui du serveur et n'est pas inclus par défaut. Si vous voulez prendre en charge un scénario d'authentification entre domaines où le domaine par défaut dans la configuration Kerberos est différent de celui du serveur, vous devez définir le SPN avec la propriété serverSpn.
+Vous pouvez spécifier le SPN à l’aide de la propriété de connexion **serverSpn**, ou simplement laisser le pilote le créer pour vous (par défaut). Cette propriété a le format suivant : « MSSQLSvc/fqdn:port\@REALM », où fqdn désigne le nom de domaine complet, port désigne le numéro de port et REALM désigne le domaine Kerberos du serveur SQL Server en majuscules. La partie domaine (realm) de cette propriété est facultative si le domaine par défaut de votre configuration Kerberos est le même que celui du serveur et n’est pas inclus par défaut. Si vous voulez prendre en charge un scénario d'authentification entre domaines où le domaine par défaut dans la configuration Kerberos est différent de celui du serveur, vous devez définir le SPN avec la propriété serverSpn.
 
 Par exemple, votre SPN peut se présenter comme : « MSSQLSvc/some-server.zzz.corp.contoso.com:1433\@ZZZZ. CORP. CONTOSO.COM »
 
@@ -110,19 +110,19 @@ SQLJDBCDriver {
 
 Chaque entrée de fichier de configuration de module de connexion correspond à un nom suivi d'une ou de plusieurs entrées spécifiques à LoginModule, où chaque entrée spécifique à LoginModule est suivie d'un point-virgule et où la totalité des entrées spécifiques à LoginModule est comprise entre accolades. Chaque entrée du fichier de configuration se termine par un point-virgule.
 
-En plus de permettre au pilote d'acquérir les informations d'identification Kerberos à l'aide des paramètres spécifiés dans le fichier de configuration du module de connexion, le pilote peut utiliser les informations d'identification existantes. Cela peut se révéler utile si votre application doit créer des connexions utilisant les informations d'identification de plusieurs utilisateurs.
+En plus de permettre au pilote d'acquérir les informations d'identification Kerberos à l'aide des paramètres spécifiés dans le fichier de configuration du module de connexion, le pilote peut utiliser les informations d'identification existantes. Cela peut se révéler utile si votre application doit créer des connexions utilisant les informations d’identification de plusieurs utilisateurs.
 
-Le pilote tentera d'utiliser les informations d'identification existantes si disponibles, avant de tenter de se connecter au module de connexion spécifié. Par conséquent, lorsque vous utilisez la méthode Subject.doAs pour exécuter le code dans un contexte particulier, une connexion sera créée avec les informations d'identification transmises à l'appel Subject.doAs.
+Le pilote tentera d'utiliser les informations d'identification existantes si disponibles, avant de tenter de se connecter au module de connexion spécifié. Par conséquent, quand vous utilisez la méthode `Subject.doAs` pour exécuter le code dans un contexte spécifique, une connexion est créée avec les informations d’identification passées à l’appel `Subject.doAs`.
 
 Pour plus d’informations, consultez [JAAS Login Configuration File](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html) et [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
-À compter de Microsoft JDBC Driver 6.2, nom de fichier de configuration de module de connexion peut éventuellement être passé à l’aide de jaasConfigurationName de propriété de connexion, cela permet à chaque connexion à avoir sa propre configuration de connexion.
+À compter de Microsoft JDBC Driver 6.2, nom de fichier de configuration de module de connexion peut éventuellement être transmis à l’aide de la propriété de connexion `jaasConfigurationName`, cela permet à chaque connexion à avoir sa propre configuration de connexion.
 
 ## <a name="creating-a-kerberos-configuration-file"></a>Création d'un fichier de configuration Kerberos
 
 Pour plus d’informations sur les fichiers de configuration Kerberos, consultez [Kerberos Requirements](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html).
 
-Voici un exemple de fichier de configuration de domaine, où YYYY et ZZZZ correspondent aux noms de domaine de votre site.
+Voici un exemple de fichier de configuration de domaine, où YYYY et ZZZZ correspondent aux noms de domaine.
 
 ```ini
 [libdefaults]  
@@ -153,7 +153,7 @@ forwardable = yes
 
 Le fichier de configuration de domaine peut être activé à l'aide de -Djava.security.krb5.conf. Vous pouvez activer un fichier de configuration de module de connexion avec **-Djava.security.auth.login.config**.
 
-Par exemple, lorsque vous démarrez votre application, vous pouvez utiliser la ligne de commande suivante :
+Par exemple, la commande suivante peut être utilisée pour démarrer l’application :
 
 ```bash
 Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.krb5.conf=krb5.ini <APPLICATION_NAME>  
@@ -192,6 +192,33 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 ```
 
 La propriété de nom d’utilisateur ne nécessite pas de domaine si l’utilisateur appartient à la default_realm définie dans le fichier krb5.conf. Lorsque `userName` et `password` est défini avec `integratedSecurity=true;` et `authenticationScheme=JavaKerberos;` propriété, la connexion est établie avec la valeur du nom d’utilisateur en tant que le Principal Kerberos le long avec le mot de passe fourni.
+
+## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>À l’aide de l’authentification Kerberos à partir d’ordinateurs Unix sur le même domaine
+
+Ce guide suppose un travail de l’installation de Kerberos existe déjà. Exécutez le code suivant sur un ordinateur Windows avec l’utilisation de l’authentification Kerberos pour vérifier si la valeur est true. Le code imprimera « schéma d’authentification : KERBEROS » dans la console en cas de réussite. Aucun des indicateurs d’exécution supplémentaires, des dépendances ou paramètres du pilote ne sont nécessaires en dehors de celles fournies. Le même bloc de code peut être exécuté sur Linux pour vérifier les connexions réussies.
+
+```java
+SQLServerDataSource ds = new SQLServerDataSource();
+ds.setServerName("<server>");
+ds.setPortNumber(1433); // change if necessary
+ds.setIntegratedSecurity(true);
+ds.setAuthenticationScheme("JavaKerberos");
+ds.setDatabaseName("<database>");
+
+try (Connection c = ds.getConnection(); Statement s = c.createStatement();
+        ResultSet rs = s.executeQuery("select auth_scheme from sys.dm_exec_connections where session_id=@@spid")) {
+    while (rs.next()) {
+        System.out.println("Authentication Scheme: " + rs.getString(1));
+    }
+}
+```
+
+1. Joignez l’ordinateur client au même domaine que le serveur.
+2. (Facultatif) Définissez l’emplacement de ticket Kerberos par défaut. Cela est effectuée plus facilement en définissant le `KRB5CCNAME` variable d’environnement.
+3. Obtenir le ticket Kerberos, soit en générant un nouveau ou en plaçant un existant dans l’emplacement de ticket Kerberos par défaut. Pour générer un ticket, utiliser un terminal et initialiser le ticket via `kinit USER@DOMAIN.AD` où « Utilisateur » et « domaine. AD » est le principal et le domaine respectivement. Par exemple : `kinit SQL_SERVER_USER03@MICROSOFT.COM`. Le ticket est généré dans l’emplacement du ticket par défaut ou dans le `KRB5CCNAME` chemin d’accès si définie.
+4. Le terminal vous demandera un mot de passe, entrez le mot de passe.
+5. Vérifiez les informations d’identification dans le ticket via `klist` et confirmez les informations d’identification sont celles que vous souhaitez utiliser pour l’authentification.
+6. Exécutez l’exemple de code ci-dessus et confirmez la réussite de l’authentification Kerberos.
 
 ## <a name="see-also"></a> Voir aussi
 

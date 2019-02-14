@@ -1,7 +1,7 @@
 ---
 title: À l’aide des API de copie en bloc pour l’opération d’insertion de lot pour le pilote JDBC de MSSQL | Microsoft Docs
 ms.custom: ''
-ms.date: 07/27/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b205e27f24693a2dfaa6fcff2245cf45288a12b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3d3c7cc4d8dd7beeb620a211b2f41a1d1105a04
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696559"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55737100"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>Utilisation de l’API de copie en bloc pour l’opération d’insertion par lot
 
@@ -26,7 +26,7 @@ Microsoft JDBC Driver 7.0 pour prend en charge de SQL Server à l’aide des API
 
 Cette fonctionnalité s’applique uniquement aux PreparedStatement et de CallableStatement `executeBatch()`  &  `executeLargeBatch()` API.
 
-## <a name="pre-requisites"></a>Conditions préalables
+## <a name="pre-requisites"></a>Prérequis
 
 Il existe deux conditions préalables pour activer l’API de copie en bloc pour l’insertion de lot.
 
@@ -65,7 +65,7 @@ Il existe actuellement ces limitations s’appliquent à cette fonctionnalité.
 * Les requêtes qui contiennent des expressions de INSERT-SELECT Insert (par exemple, `INSERT INTO TABLE SELECT * FROM TABLE2`), ne sont pas pris en charge.
 * Insérer des requêtes qui contiennent plusieurs expressions de valeur (par exemple, `INSERT INTO TABLE VALUES (1, 2) (3, 4)`), ne sont pas pris en charge.
 * Requêtes INSERT qui sont suivies par la clause OPTION, jointe avec plusieurs tables ou suivies d’une autre requête, ne sont pas pris en charge.
-* En raison des limitations de l’API de copie en bloc, `DATETIME`, `SMALLDATETIME`,`GEOMETRY`, et `GEOGRAPHY` des types de données, ne sont pas pris en charge pour cette fonctionnalité.
+* En raison des limitations de l’API de copie en bloc, `MONEY`, `SMALLMONEY`, `DATE`, `DATETIME`, `DATETIMEOFFSET`, `SMALLDATETIME`, `TIME`, `GEOMETRY`, et `GEOGRAPHY` des types de données, ne sont actuellement pas pris en charge pour ce fonctionnalité.
 
 Si la requête échoue en raison de non erreurs concernant les « SQL server », le pilote enregistrera le message d’erreur et de secours à la logique d’origine pour l’insertion de lot.
 

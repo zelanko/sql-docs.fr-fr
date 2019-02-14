@@ -1,7 +1,7 @@
 ---
 title: Présentation des Transactions XA | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 01/21/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8231b574516c11995dc5f91e5cf59fcdcfb6dc04
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
+ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393833"
+ms.lasthandoff: 02/05/2019
+ms.locfileid: "55736940"
 ---
 # <a name="understanding-xa-transactions"></a>Présentation des transactions XA
 
@@ -45,9 +45,9 @@ Les recommandations supplémentaires suivantes s'appliquent aux transactions for
 
 - Lorsque vous utilisez des transactions XA avec Microsoft Distributed Transaction Coordinator (MS DTC), vous pouvez remarquer que la version actuelle de MS DTC ne prend pas en charge le comportement de branche XA fortement couplée. Par exemple, MS DTC a un mappage un-à-un entre un ID de transaction de branche XA (XID) et un ID de transaction MS DTC et le travail effectué par les branches XA couplées de manière lâche est isolé.  
   
-     Le correctif logiciel disponible sur la page web [MSDTC et transactions fortement couplées](https://support.microsoft.com/kb/938653) autorise la prise en charge des branches XA fortement couplées quand plusieurs branches XA avec le même ID de transaction globale (GTRID) sont mappées à un ID de transaction MS DTC unique. Cette prise en charge permet à plusieurs branches XA fortement couplées de voir les modifications apportées à chacune d’elles dans le gestionnaire de ressources, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+     Le correctif logiciel disponible sur la page web [MSDTC et transactions fortement couplées](https://support.microsoft.com/kb/938653) permet la prise en charge des branches XA fortement couplées quand plusieurs branches XA avec le même ID de transaction globale (GTRID) sont mappées à un ID de transaction MS DTC unique. Cette prise en charge permet à plusieurs branches XA fortement couplées de voir les changements apportés à chacune d’elles dans le gestionnaire de ressources, par exemple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-- Un indicateur [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permet aux applications d’utiliser les transactions XA fortement couplées, qui ont des ID de transaction de branche XA (BQUAL) différents mais le même ID de transaction global (GTRID) et ID de format (FormatID). Pour utiliser cette fonctionnalité, vous devez définir le [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sur le paramètre d’indicateurs de la méthode XAResource.start :  
+- Un indicateur [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) permet aux applications d’utiliser les transactions XA fortement couplées qui ont des ID de transaction de branche XA (BQUAL) différents mais le même ID de transaction global (GTRID) et ID de format (FormatID). Pour utiliser cette fonctionnalité, vous devez définir le [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) sur le paramètre d’indicateurs de la méthode XAResource.start :
   
     ```java
     xaRes.start(xid, SQLServerXAResource.SSTRANSTIGHTLYCPLD);  
@@ -61,11 +61,12 @@ Les étapes suivantes sont requises si vous souhaitez utiliser des sources de do
 > Les composants de transaction distribuée JDBC sont inclus dans le répertoire xa de l'installation du pilote JDBC. Ces composants incluent les fichiers xa_install.sql et sqljdbc_xa.dll.  
 
 > [!NOTE]  
-> À partir de SQL Server 2019 préliminaire CTP 2.0, le XA JDBC des composants de transaction distribuée sont inclus dans le moteur SQL Server qui peut être activé ou désactivé avec un système de procédure stockée. Pour activer les composants requis effectuer des transactions XA distribuées à l’aide du pilote JDBC, exécuter une procédure stockée.
+> À partir de SQL Server 2019 public preview CTP 2.0, le XA JDBC des composants de transaction distribuée sont inclus dans le moteur SQL Server et peuvent être activés ou désactivés avec un système de procédure stockée.
+> Pour activer les composants requis effectuer des transactions XA distribuées à l’aide du pilote JDBC, exécutez la procédure stockée suivante.
 >
 > EXEC sp_sqljdbc_xa_install
 >
-> Pour désactiver les composants installés précédemment, exécutez suivant la procédure stockée. 
+> Pour désactiver les composants installés précédemment, exécutez la procédure stockée suivante.
 >
 > EXEC sp_sqljdbc_xa_uninstall
 
@@ -83,7 +84,7 @@ Sur Windows Vista et versions ultérieures :
   
 4. Dans la boîte de dialogue **Propriétés du DTC local**, cliquez sur l’onglet **Sécurité**.  
   
-5. Cochez la case **Activer les transactions XA**, puis cliquez sur **OK**. Ceci entraînera le redémarrage du service MS DTC.  
+5. Cochez la case **Activer les transactions XA**, puis cliquez sur **OK**. Cela entraîne le redémarrage du service MS DTC.
   
 6. Cliquez à nouveau sur **OK** pour fermer la boîte de dialogue **Propriétés**, puis fermez **Services de composants**.  
   
@@ -102,13 +103,13 @@ Vous pouvez configurer les composants de transaction distribuée du pilote JDBC 
   
 3. Pour autoriser un utilisateur spécifique à participer à des transactions distribuées avec le pilote JDBC, ajoutez-le au rôle SqlJDBCXAUser.  
   
-Vous ne pouvez configurer qu'une seule version à la fois de l'assembly sqljdbc_xa.dll sur chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les applications devront peut-être utiliser des versions différentes du pilote JDBC pour se connecter à la même instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de la connexion XA. Dans ce cas, sqljdbc_xa.dll, qui est livré avec le pilote JDBC le plus récent, doit être installé sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Vous ne pouvez configurer qu’une seule version à la fois de l’assembly sqljdbc_xa.dll sur chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les applications devront peut-être utiliser des versions différentes du pilote JDBC pour se connecter à la même instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le biais de la connexion XA. Dans ce cas, sqljdbc_xa.dll, qui est livré avec le pilote JDBC le plus récent, doit être installé sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-Il existe trois façons de vérifier la version actuellement installée de sqljdbc_xa.dll sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
+Il existe trois façons de vérifier la version actuellement installée de sqljdbc_xa.dll sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :
   
 1. Ouvrez le répertoire LOG de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doit participer aux transactions distribuées. Sélectionnez et ouvrez le fichier ERRORLOG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Recherchez l'expression « Using 'SQLJDBC_XA.dll' version ... » dans le fichier ERRORLOG.  
   
-2. Ouvrez le répertoire Binn de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doit participer aux transactions distribuées. Sélectionnez l’assembly sqljdbc_xa.dll.  
+2. Ouvrez le répertoire Binn de l’ordinateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doit participer aux transactions distribuées. Sélectionnez l’assembly sqljdbc_xa.dll.
 
     - Sur Windows Vista et versions ultérieures : cliquez avec le bouton droit sur sqljdbc_xa.dll, puis sélectionnez Propriétés. Cliquez ensuite sur l’onglet **Détails**. Le champ **Version du fichier** indique la version de sqljdbc_xa.dll actuellement installée sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -128,11 +129,11 @@ Il existe deux paramètres du Registre (valeurs DWORD) pour contrôler le compor
 Ces paramètres sont spécifiques de l'instance SQL Server et doivent être créés sous la clé de Registre suivante :  
 
 ```bash
-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout  
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout  
 ```
 
 > [!NOTE]  
-> Pour un serveur SQL Server 32 bits exécuté sur des ordinateurs 64 bits, les paramètres de Registre doivent être créés sous la clé suivante : `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL\<version>.<instance_name>\XATimeout`
+> Pour un serveur SQL Server 32 bits exécuté sur des ordinateurs 64 bits, les paramètres de Registre doivent être créés sous la clé suivante : `HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Microsoft SQL Server\MSSQL<version>.<instance_name>\XATimeout`
   
 Une valeur de délai d'expiration est définie au démarrage de chaque transaction ; une fois ce délai écoulé, la transaction est restaurée par le serveur SQL Server. Le délai d'attente est déterminé en fonction de ces paramètres de Registre et de ce que l'utilisateur a spécifié via XAResource.setTransactionTimeout(). Voici quelques exemples d'interprétation des valeurs de délai d'attente :  
   
@@ -146,18 +147,18 @@ Une valeur de délai d'expiration est définie au démarrage de chaque transacti
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Signifie que toutes les transactions auront un délai d'attente de 30 secondes si le client n'en spécifie aucun. Si le client spécifie un délai d'attente, il sera utilisé s'il est inférieur à 60 secondes (valeur maximale).  
+     Signifie que toutes les transactions auront un délai d'attente de 30 secondes si le client n'en spécifie aucun. Si le client spécifie un délai d’attente, ce dernier sera utilisé s’il est inférieur à 60 secondes (valeur maximale).  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     Signifie que toutes les transactions auront un délai d'attente de 30 secondes (valeur maximale) si le client n'en spécifie aucun. Si le client spécifie un délai d'attente, il sera utilisé s'il est inférieur à 30 secondes (valeur maximale).  
+     Signifie que toutes les transactions auront un délai d'attente de 30 secondes (valeur maximale) si le client n'en spécifie aucun. Si le client spécifie un délai d’attente, ce dernier sera utilisé s’il est inférieur à 30 secondes (valeur maximale).  
   
 ### <a name="upgrading-sqljdbcxadll"></a>Mise à niveau du fichier sqljdbc_xa.dll
 
 Lorsque vous installez une nouvelle version du pilote JDBC, vous devez utiliser le fichier sqljdbc_xa.dll de la nouvelle version pour mettre à niveau le fichier sqljdbc_xa.dll sur le serveur.  
   
 > [!IMPORTANT]  
-> Vous devez mettre à niveau le fichier sqljdbc_xa.dll dans une fenêtre de maintenance ou lorsqu'aucune transaction MS DTC n'est en cours.  
+> Vous devez mettre à niveau le fichier sqljdbc_xa.dll dans une fenêtre de maintenance ou quand aucune transaction MS DTC n’est en cours.
   
 1. Décharger le fichier sqljdbc_xa.dll à l’aide de la [!INCLUDE[tsql](../../includes/tsql-md.md)] commande **DBCC sqljdbc_xa (FREE)**.  
   
@@ -167,7 +168,7 @@ Lorsque vous installez une nouvelle version du pilote JDBC, vous devez utiliser 
   
 ### <a name="configuring-the-user-defined-roles"></a>Configuration des rôles définis par l'utilisateur
 
-Pour autoriser un utilisateur spécifique à participer à des transactions distribuées avec le pilote JDBC, ajoutez-le au rôle SqlJDBCXAUser. Par exemple, utilisez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant pour ajouter un utilisateur appelé « shelby » (« shelby » est un nom d'utilisateur standard d'ouverture de session SQL) au rôle SqlJDBCXAUser :  
+Pour autoriser un utilisateur spécifique à participer à des transactions distribuées avec le pilote JDBC, ajoutez-le au rôle SqlJDBCXAUser. Par exemple, utilisez le code [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant pour ajouter un utilisateur appelé « shelby » (« shelby » est un nom d’utilisateur standard d’ouverture de session SQL) au rôle SqlJDBCXAUser :  
 
 ```sql
 USE master  
