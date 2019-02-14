@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3495d41028f72093b58f546d3da2139ff02b848d
-ms.sourcegitcommit: 299b63e04498eba22659970cd077f247c1657931
+ms.openlocfilehash: 6873ee04323ffbc813553237d79e523023a48618
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54898984"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231066"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -171,56 +171,7 @@ Une fois le script de déploiement, la sortie vous informe de réussite :
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-Le cluster de données volumineux de SQL Server est désormais déployé sur AKS. Vous pouvez maintenant utiliser Azure Data Studio pour vous connecter à l’instance principale de SQL Server et les points de terminaison HDFS/Spark à l’aide d’Azure Data Studio.
-
-### <a id="master"></a> Instance principale
-
-L’instance principale de SQL Server est une instance de SQL Server traditionnelle contenant les bases de données relationnelles SQL Server. Les étapes suivantes décrivent comment vous connecter à l’instance principale à l’aide d’Azure Data Studio.
-
-1. À partir de la ligne de commande, recherchez l’adresse IP de votre instance principale avec la commande suivante :
-
-   ```
-   kubectl get svc endpoint-master-pool -n <your-cluster-name>
-   ```
-
-1. Dans Azure Data Studio, appuyez sur **F1** > **nouvelle connexion**.
-
-1. Dans **type de connexion**, sélectionnez **Microsoft SQL Server**.
-
-1. Tapez l’adresse IP de l’instance principale de SQL Server dans **nom_serveur** (par exemple : **\<Adresse IP\>, 31433**).
-
-1. Entrez un nom de connexion SQL **nom d’utilisateur** (`SA`) et **mot de passe** (mot de passe que vous avez entré dans le script de déploiement).
-
-1. Modifier la cible **nom de la base de données** à un de vos bases de données relationnelles.
-
-   ![Se connecter à l’instance principale](./media/quickstart-big-data-cluster-deploy/connect-to-cluster.png)
-
-1. Appuyez sur **Connect**et le **tableau de bord Server** doit apparaître.
-
-### <a id="hdfs"></a> Passerelle HDFS/Spark
-
-Le **passerelle HDFS/Spark** vous permet de se connecter pour pouvoir fonctionner avec le pool de stockage HDFS et à exécuter des tâches Spark. Les étapes suivantes décrivent comment vous connecter avec Azure Data Studio.
-
-1. À partir de la ligne de commande, recherchez l’adresse IP de votre passerelle HDFS/Spark avec la commande suivante :
-
-   ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
- 
-1. Dans Azure Data Studio, appuyez sur **F1** > **nouvelle connexion**.
-
-1. Dans **type de connexion**, sélectionnez **cluster de données volumineux de SQL Server**.
-   
-   > [!TIP]
-   > Si vous ne voyez pas le **cluster de données volumineux de SQL Server** connexion type, assurez-vous que vous avez installé le [extension de SQL Server 2019](../azure-data-studio/sql-server-2019-extension.md) et que vous avez redémarré Azure Data Studio après l’extension terminée l’installation.
-
-1. Tapez l’adresse IP du cluster big data dans **nom_serveur** (ne spécifiez pas de port).
-
-1. Entrez `root` pour le **utilisateur** et spécifiez le **mot de passe** à votre cluster big data que vous avez entré dans le script de déploiement.
-
-   ![Se connecter à HDFS/Spark passerelle](./media/quickstart-big-data-cluster-deploy/connect-to-cluster-hdfs-spark.png)
-
-1. Appuyez sur **Connect**et le **tableau de bord Server** doit apparaître.
+Le cluster de données volumineux de SQL Server est désormais déployé sur AKS. Vous pouvez maintenant utiliser Azure Data Studio pour se connecter au cluster. Pour plus d’informations, consultez [se connecter à SQL Server cluster big data avec Azure Data Studio](connect-to-big-data-cluster.md).
 
 ## <a name="clean-up"></a>Nettoyer
 

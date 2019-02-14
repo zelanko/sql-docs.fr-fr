@@ -3,7 +3,7 @@ title: Extension de SQL Server 2019 (version préliminaire)
 titleSuffix: Azure Data Studio
 description: Extension de la version préliminaire de SQL Server 2019 pour Azure Data Studio
 ms.custom: seodec18
-ms.date: 01/10/2019
+ms.date: 02/13/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -12,16 +12,16 @@ author: yualan
 ms.author: alayu
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c41c2a08f0b8d608ef21cd44a60a2d63cdeb5fed
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: c90be7f91c4f3bb465e2cf29b8ee69e2f8d8b6e9
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143312"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231056"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extension de SQL Server 2019 (version préliminaire)
 
-L’extension de SQL Server 2019 (version préliminaire) fournit la prise en charge de la version préliminaire pour les nouvelles fonctionnalités et outils de livraison à l’appui de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Cela inclut la prise en charge de la version préliminaire de [clusters de données volumineuses de SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), intégré [expérience de bloc-notes](../big-data-cluster/notebooks-guidance.md), un PolyBase [Assistant de Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json)et [Azure Resource Explorer](azure-resource-explorer.md).
+L’extension de SQL Server 2019 (version préliminaire) fournit la prise en charge de la version préliminaire pour les nouvelles fonctionnalités et outils de livraison à l’appui de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Cela inclut la prise en charge de la version préliminaire de [clusters de données volumineuses de SQL Server 2019](../big-data-cluster/big-data-cluster-overview.md), intégré [expérience de bloc-notes](../big-data-cluster/notebooks-guidance.md)et un PolyBase [Assistant de Create External Table](../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json).
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>Installer l’extension de SQL Server 2019 (version préliminaire)
 
@@ -31,9 +31,9 @@ Pour installer l’extension de SQL Server 2019 (version préliminaire), téléc
 
    |Plateforme|Télécharger|Date de publication|Version
    |:---|:---|:---|:---|
-   |Windows|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2051167)|09 janvier 2019 |0.9.1
-   |macOS|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2051166)|09 janvier 2019 |0.9.1
-   |Linux|[.VSIX](https://go.microsoft.com/fwlink/?linkid=2051165)|09 janvier 2019 |0.9.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072794)|13 février 2019 |0.10.2
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072793)|13 février 2019 |0.10.2
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2072792)|13 février 2019 |0.10.2
 
 1. Dans Azure Data Studio choisissez **installer l’Extension à partir du Package VSIX** à partir de la **fichier** menu et sélectionnez le fichier .vsix téléchargé.
 
@@ -44,6 +44,37 @@ Pour installer l’extension de SQL Server 2019 (version préliminaire), téléc
 1. Après le rechargement, l’extension installera les dépendances. Vous pouvez voir la progression dans la fenêtre Sortie, et il peut prendre plusieurs minutes.
 
 1. Une fois les dépendances de terminer l’installation, fermez et rouvrez Studio de données Azure. Le **cluster de données volumineux de SQL Server** type de connexion n’est pas disponible tant que vous ne redémarrez Azure Data Studio.
+
+## <a name="release-notes-v0102"></a>Notes de publication (v0.10.2)
+### <a name="sql-server-2019-support"></a>Prise en charge de SQL Server 2019
+Prise en charge de SQL Server 2019 a été mis à jour. Sur la connexion à un Cluster de données volumineuses de SQL Server instance un nouveau _Data Services_ dossier s’affiche dans l’arborescence de l’Explorateur. Cela a des points de lancement pour les actions telles que l’ouverture d’un nouveau bloc-notes par rapport à la connexion, envoi de travaux Spark et l’utilisation de HDFS. Notez que, pour certaines actions comme _créer des données externes_ sur un fichier/dossier HDFS, le _SQL Server 2019 Preview_ extension doit être installée.
+
+### <a name="notebook-support"></a>Prise en charge du bloc-notes
+Nous avons apporté des mises à jour importantes à l’interface utilisateur de bloc-notes dans cette version. Notre objectif était de rend facile à lire des ordinateurs portables qui sont partagés avec vous. Cela signifiait suppression tous décrivent des zones autour des cellules, sauf si sélectionné ou Survolé, ajout de prise en charge de pointage pour les actions au niveau des cellules simples sans nécessiter sélectionner une cellule et à clarifier l’état d’exécution en ajoutant le nombre d’exécutions, animée _arrêt en cours d’exécution_ bouton et bien plus encore. Nous avons également ajouté des raccourcis clavier pour _nouveau bloc-notes_ (`Ctrl+Shift+N`), _cellule exécuter_ (`F5`), _nouvelle cellule de Code_ (`Ctrl+Shift+C`),  _Nouvelle cellule de texte_ (`Ctrl+Shift+T`). À l’avenir que nous cherchera à avoir toutes les actions clées accessible par raccourci faites-nous donc savoir ce que vous ratez !
+
+Autres correctifs et améliorations sont les suivantes :
+* Le _SQL Server 2019 Preview_ extension maintenant invites utilise pour choisir un répertoire d’installation pour les dépendances de Python. Il n’est plus inclut également Python dans le `.vsix file`, ce qui réduit la taille globale de l’extension. Les dépendances de Python sont nécessaires pour prendre en charge les noyaux Spark et Python3, installez cette extension n’est requis pour utiliser ces.
+* Prise en charge pour le lancement d’un nouveau bloc-notes à partir de la ligne de commande a été ajoutée. Avec les arguments de lancement `--command=notebook.command.new --server=myservername` doit s’ouvrir un nouveau bloc-notes et se connecter à ce serveur.
+* Correctifs des performances pour les blocs-notes avec une longueur de code volumineux dans les cellules. Si les cellules de code sont plus de 250 lignes qu'ont ajouté une barre de défilement.
+* Prise en charge des fichiers .ipynb améliorée. Version 3 ou version ultérieure est désormais prise en charge. Veuillez noter que lors de l’enregistrement de fichiers sera être mis à jour vers la version 4 ou version ultérieure.
+* Le `notebook.enabled` paramètre utilisateur a été supprimé maintenant intégrée dans le bloc-notes visionneuse est stable
+* Thème à contraste élevé est désormais pris en charge un nombre de correctifs à la disposition des objets dans ce cas.
+* Correction 3680 # où sorties présentait parfois un nombre de `,,,` caractères de manière incorrecte
+* Correction #3602 que disparaît de l’éditeur pour les cellules après avoir quitté studio de données azure
+* Prise en charge a été ajoutée à utiliser les vues de la grille pour la `application/vnd.dataresource+json` type MIME de la sortie. Cela signifie que de nombreux ordinateurs portables qui utilisent ce (par exemple en définissant `pd.options.display.html.table_schema` dans une instance Python notebook) aura mieux sorties sous forme de tableau fixe #3959 Azure Data Studio essaie d’arrêter le serveur de bloc-notes à deux reprises après la fermeture de bloc-notes
+
+#### <a name="known-issues"></a>Problèmes connus
+* Lors de l’ouverture d’un ordinateur portable, la boîte de dialogue Installation python s’affiche. L’annulation de cette installation entraîne les noyaux et joindre aux listes déroulantes s’affichent ne pas les valeurs attendues. La solution de contournement consiste à terminer l’installation de Python.
+* Lorsqu’un ordinateur portable est ouvert avec un noyau n’est pas pris en charge, les noyaux et _attacher à_ listes déroulantes provoque un Studio de données Azure ne répond plus. Vous devrez fermer Azure Data Studio et vérifiez que vous utilisez un noyau est prise en charge (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
+* Échec de la liaison de l’interface utilisateur Spark lorsque vous utilisez PySpark3 ou autres noyaux Spark sur le point de terminaison de SQL Server. Pour résoudre ce problème, veuillez cliquer sur l’interface utilisateur Spark à partir du tableau de bord, ou connectez-vous en utilisant le type de connexion de cluster SQL Server données volumineuses comme cela aura le lien hypertexte de l’interface utilisateur Spark correct
+
+### <a name="extensibility-improvements"></a>Améliorations de l’extensibilité
+Un certain nombre d’améliorations qui aident les extendeurs ont été ajouté dans cette version
+* Un nouveau `ObjectExplorerNodeProvider` API permet aux extensions de contribuer dossiers sous SQL Server ou d’autres nœuds de la connexion. Voici comment la `Data Services` nœud est ajouté sous les instances de SQL Server 2019 mais pouvait être utilisé pour ajouter facilement des dossiers de surveillance ou d’autres à l’interface utilisateur.
+* Deux nouvelles valeurs clés de contexte sont disponibles pour aider à afficher/masquer les contributions au tableau de bord.
+  * `mssql:iscluster` Indique s’il s’agit d’un Cluster SQL Server 2019 Big Data
+  * `mssql:servermajorversion` a la version du serveur (15 pour SQL Server 2019, 14 pour SQL Server 2017 et ainsi de suite). Cela peut être utile si les fonctionnalités doivent uniquement être affichées pour SQL Server 2017 ou supérieur, par exemple.
+
 
 ## <a name="release-notes-v080"></a>Notes de publication (v0.8.0)
 *Blocs-notes*:

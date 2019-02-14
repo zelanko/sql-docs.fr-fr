@@ -5,20 +5,28 @@ description: Découvrez comment vous connecter à l’instance principale de SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/10/2018
+ms.date: 02/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9129b436f33092054a19b858fa5bcdb8aebadec2
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241820"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231036"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Se connecter à un cluster SQL Server de données volumineux avec Azure Data Studio
 
-Cet article décrit comment se connecter à un cluster de données volumineuses de SQL Server 2019 (version préliminaire) à partir d’Azure Data Studio.
+Cet article décrit comment se connecter à un cluster de données volumineuses de SQL Server 2019 (version préliminaire) à partir d’Azure Data Studio. Il existe deux points de terminaison principales qui servent à interagir avec un cluster de données volumineuses :
+
+| Point de terminaison | Description |
+|---|---|
+| Instance de SQL Server Master | L’instance principale de SQL Server dans le cluster contenant les bases de données relationnelles SQL Server. |
+| Passerelle HDFS/Spark | Accès au stockage HDFS du cluster et la possibilité d’exécuter des tâches Spark. |
+
+> [!TIP]
+> Avec la version de février 2019 de Studio de données Azure, se connecter automatiquement à l’instance principale de SQL Server fournit l’accès de l’interface utilisateur à la passerelle HDFS/Spark.
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -28,13 +36,9 @@ Cet article décrit comment se connecter à un cluster de données volumineuses 
    - **Extension de SQL Server 2019**
    - **kubectl**
 
-## <a name="connect-to-the-cluster"></a>Connectez-vous au cluster
+## <a id="master"></a> Connectez-vous au cluster
 
-Lorsque vous vous connectez à un cluster de données volumineux, vous pouvez vous connecter à l’instance principale de SQL Server ou à la passerelle HDFS/Spark. Les sections suivantes montrent comment se connecter à chacun.
-
-## <a id="master"></a> Instance principale
-
-L’instance principale de SQL Server est une instance de SQL Server traditionnelle contenant les bases de données relationnelles SQL Server. Les étapes suivantes décrivent comment vous connecter à l’instance principale à l’aide d’Azure Data Studio.
+Pour vous connecter à un cluster de données volumineux avec Azure Data Studio, effectuez une nouvelle connexion à l’instance principale de SQL Server dans le cluster. Les étapes suivantes décrivent comment vous connecter à l’instance principale à l’aide d’Azure Data Studio.
 
 1. À partir de la ligne de commande, recherchez l’adresse IP de votre instance principale avec la commande suivante :
 
@@ -59,9 +63,20 @@ L’instance principale de SQL Server est une instance de SQL Server traditionne
 
 1. Appuyez sur **Connect**et le **tableau de bord Server** doit apparaître.
 
-## <a id="hdfs"></a> Passerelle HDFS/Spark
+Avec la version de février 2019 de Studio de données Azure, se connecter à l’instance principale de SQL Server vous permet également d’interagir avec la passerelle HDFS/Spark. Cela signifie que vous n’avez pas besoin d’utiliser une connexion distincte pour HDFS et Spark qui décrit la section suivante.
 
-Le **passerelle HDFS/Spark** vous permet de se connecter pour pouvoir fonctionner avec le pool de stockage HDFS et à exécuter des tâches Spark. Les étapes suivantes décrivent comment vous connecter avec Azure Data Studio.
+- L’Explorateur d’objets contient maintenant une nouvelle **Data Services** nœud avec prise en charge avec le bouton droit pour les tâches de cluster de données volumineuses, telles que la création de nouveaux ordinateurs portables ou en soumettant des travaux spark. 
+- Le **Data Services** nœud contient également un **HDFS** dossier pour l’exploration de HDFS et effectuer des actions telles que Create External Table ou d’analyser dans le bloc-notes.
+- Le **tableau de bord Server** pour la connexion contient également des onglets pour **Cluster Big Data de SQL Server** et **SQL Server 2019 (version préliminaire)** lorsque l’extension est installée.
+
+   ![Nœud des Services de données Azure Data Studio](./media/connect-to-big-data-cluster/connect-data-services-node.png)
+
+> [!IMPORTANT]
+> Si vous voyez **erreur inconnue** dans l’interface utilisateur, vous devrez peut-être [vous connecter directement à la passerelle HDFS/Spark](#hdfs). Une des causes de cette erreur sont des mots de passe différents pour l’instance principale de SQL Server et de la passerelle HDFS/Spark. Azure Data Studio part du principe que le mot de passe est utilisé pour les deux.
+  
+## <a id="hdfs"></a> Se connecter à la passerelle HDFS/Spark
+
+Dans la plupart des cas, connexion à l’instance principale de SQL Server vous permet d’accéder au HDFS et Spark également via le **Data Services** nœud. Toutefois, vous pouvez toujours de créer une connexion dédiée à la **passerelle HDFS/Spark** si nécessaire. Les étapes suivantes décrivent comment vous connecter avec Azure Data Studio.
 
 1. À partir de la ligne de commande, recherchez l’adresse IP de votre passerelle HDFS/Spark avec l’une des commandes suivantes.
    

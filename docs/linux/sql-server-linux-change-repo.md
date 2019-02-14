@@ -4,23 +4,34 @@ description: Vérifiez et configurez des référentiels de code source pour SQL 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/14/2018
+ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: 9b5d9e27db92ba048f0b6400c00313e81a1899f7
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+zone_pivot_groups: ld2-linux-distribution
+ms.openlocfilehash: 2cc95a36a83307667b3f3678ccd19f7712dc54b3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51269444"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230986"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurer des référentiels pour l’installation et la mise à niveau de SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article décrit comment configurer le référentiel approprié pour les mises à niveau et les installations de SQL Server 2017 et SQL Server 2019 sur Linux.
+::: zone pivot="ld2-rhel"
+Cet article décrit comment configurer le référentiel approprié pour les mises à niveau et les installations de SQL Server 2017 et SQL Server 2019 sur Linux. En haut, votre sélection actuelle est **avait Red (RHEL)**.
+::: zone-end
+
+::: zone pivot="ld2-sles"
+Cet article décrit comment configurer le référentiel approprié pour les mises à niveau et les installations de SQL Server 2017 et SQL Server 2019 sur Linux. En haut, votre sélection actuelle est **SUSE (SLES)**.
+::: zone-end
+
+::: zone pivot="ld2-ubuntu"
+Cet article décrit comment configurer le référentiel approprié pour les mises à niveau et les installations de SQL Server 2017 et SQL Server 2019 sur Linux. En haut, votre sélection actuelle est **Ubuntu**.
+::: zone-end
 
 > [!TIP]
 > SQL Server 2019 preview est désormais disponible ! Pour l’essayer, utilisez cet article pour configurer le nouveau **mssql-server-preview** référentiel. Puis installer en suivant les instructions dans le [guide d’installation](sql-server-linux-setup.md).
@@ -29,10 +40,10 @@ Cet article décrit comment configurer le référentiel approprié pour les mise
 
 Lorsque vous installez SQL Server sur Linux, vous devez configurer un référentiel Microsoft. Ce référentiel est utilisé pour acquérir le package de moteur de base de données, **mssql-server**et les packages SQL Server. Il existe actuellement trois référentiels principales :
 
-| Référentiel | Nom    | Description |
+| Référentiel | Créer une vue d’abonnement | Description |
 |---|---|---|
 | **Version préliminaire (2017)** | **mssql-server** | Référentiel SQL Server 2017 CTP et RC (supprimée). |
-| **Version préliminaire (2019)** | **MSSQL-server-preview** | Version préliminaire de SQL Server 2019 et référentiel RC. |
+| **Version préliminaire (2019)** | **mssql-server-preview** | Version préliminaire de SQL Server 2019 et référentiel RC. |
 | **CU** | **mssql-server-2017** | Référentiel de SQL Server 2017 Cumulative Update (CU). |
 | **GDR** | **mssql-server-2017-gdr** | Référentiel de SQL Server 2017 GDR pour les mises à jour critiques uniquement. |
 
@@ -40,27 +51,33 @@ Lorsque vous installez SQL Server sur Linux, vous devez configurer un référent
 
 Il est important de noter qu’il existe deux types principaux de référentiel pour chaque distribution :
 
-- **Mises à jour cumulative (CU)**: référentiel de la mise à jour Cumulative (CU) contient des packages pour la version de SQL Server de base et tous les correctifs de bogues ou améliorations depuis cette version. Mises à jour cumulatives sont spécifiques à une version release, telles que SQL Server 2017. Elles sont publiées régulièrement.
+- **Mises à jour cumulatives (CU)**: Le référentiel de mise à jour Cumulative (CU) contient des packages pour la version de SQL Server de base et tous les correctifs de bogues ou améliorations depuis cette version. Mises à jour cumulatives sont spécifiques à une version release, telles que SQL Server 2017. Elles sont publiées régulièrement.
 
-- **GDR**: référentiel du GDR contient les packages de mise en production de base SQL Server et uniquement les correctifs critiques et mises à jour de sécurité depuis cette version. Ces mises à jour sont également ajoutés à la prochaine version CU.
+- **GDR**: Le référentiel GDR contient les packages de mise en production de base SQL Server et uniquement les correctifs critiques et mises à jour de sécurité depuis cette version. Ces mises à jour sont également ajoutés à la prochaine version CU.
 
 Chaque version de l’unité de capacité et GDR contient le package complet de SQL Server et toutes les mises à jour précédentes pour ce référentiel. La mise à jour à partir d’une version de correctif logiciel grand public à une version CU est pris en charge en modifiant votre référentiel configuré pour SQL Server. Vous pouvez également [rétrograder](sql-server-linux-setup.md#rollback) à n’importe quelle version au sein de votre version principale (ex : 2017).
 
 > [!NOTE]
-> Vous pouvez mettre à jour à partir d’une version GDR CU release à tout moment en modifiant les référentiels. La mise à jour à partir d’une unité de capacité mise en production vers une version de correctif logiciel grand public n’est pas pris en charge. 
+> Vous pouvez mettre à jour à partir d’une version GDR CU release à tout moment en modifiant les référentiels. La mise à jour à partir d’une unité de capacité mise en production vers une version de correctif logiciel grand public n’est pas pris en charge.
 
-## <a id="configure"></a> Configurer un référentiel
+## <a name="configure-repositories"></a>Configurer les référentiels
 
-Les sections suivantes décrivent comment vérifier et configurer un référentiel pour les plateformes prises en charge suivantes :
+::: zone pivot="ld2-rhel"
+Procédez comme indiqué dans les sections suivantes pour configurer des référentiels sur Red Hat Enterprise Server (RHEL).
+::: zone-end
 
-- [Red Hat Enterprise Server](#rhel)
-- [Ubuntu](#ubuntu)
-- [SUSE Linux Enterprise Server](#sles)
+::: zone pivot="ld2-sles"
+Procédez comme indiqué dans les sections suivantes pour configurer des référentiels sur SUSE Linux Enterprise Server (SLES).
+::: zone-end
 
-## <a id="rhel"></a> Configurer des référentiels RHEL
-Utilisez les étapes suivantes pour configurer les référentiels sur Red Hat Enterprise Server (RHEL).
+::: zone pivot="ld2-ubuntu"
+Utilisez les étapes décrites dans les sections suivantes pour configurer des référentiels sur Ubuntu.
+::: zone-end
 
-### <a name="check-for-previously-configured-repositories-rhel"></a>Recherchez les référentiels configurées précédemment (RHEL)
+## <a name="check-for-previously-configured-repositories"></a>Recherchez des référentiels précédemment configurés
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
 Tout d’abord vérifier si vous avez déjà enregistré un référentiel SQL Server.
 
 1. Afficher les fichiers dans le **/etc/yum.repos.d** répertoire avec la commande suivante :
@@ -79,28 +96,10 @@ Tout d’abord vérifier si vous avez déjà enregistré un référentiel SQL Se
 
 4. La propriété **name** est le réertoire configuré. Vous pouvez l’identifier la table dans le [référentiels](#repositories) section de cet article.
 
-### <a name="remove-old-repository-rhel"></a>Supprimer l’ancien référentiel (RHEL)
-Si nécessaire, supprimez l’ancien référentiel avec la commande suivante.
+::: zone-end
 
-```bash
-sudo rm -rf /etc/yum.repos.d/mssql-server.repo
-```
-
-Cette commande suppose que le fichier identifié dans la section précédente a été nommé **mssql-server.repo**.
-
-### <a name="configure-new-repository-rhel"></a>Configurer le nouveau référentiel (RHEL)
-Configurer le nouveau référentiel à utiliser pour les mises à niveau et les installations de SQL Server. Utilisez une des commandes suivantes pour configurer le référentiel de votre choix.
-
-| Référentiel | Version | Command |
-|---|---|---|
-| **Version préliminaire (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
-
-## <a id="sles"></a> Configurer des référentiels SLES
-Utilisez les étapes suivantes pour configurer des référentiels sur SLES.
-
-### <a name="check-for-previously-configured-repositories-sles"></a>Recherchez les référentiels configurées précédemment (SLES)
+<!--SLES-->
+::: zone pivot="ld2-sles"
 Tout d’abord vérifier si vous avez déjà enregistré un référentiel SQL Server.
 
 1. Utilisez **zypper info** pour obtenir des informations sur n’importe quel référentiel précédemment configuré.
@@ -111,29 +110,10 @@ Tout d’abord vérifier si vous avez déjà enregistré un référentiel SQL Se
 
 2. Le **référentiel** propriété est le référentiel configuré. Vous pouvez l’identifier la table dans le [référentiels](#repositories) section de cet article.
 
-### <a name="remove-old-repository-sles"></a>Supprimer l’ancien référentiel (SLES)
-Si nécessaire, supprimez l’ancien référentiel. Utilisez une des commandes suivantes en fonction du type de référentiel précédemment configuré.
+::: zone-end
 
-| Référentiel | Commande à supprimer |
-|---|---|
-| **Version préliminaire (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
-| **Version préliminaire (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
-| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
-| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
-
-### <a name="configure-new-repository-sles"></a>Configurer le nouveau référentiel (SLES)
-Configurer le nouveau référentiel à utiliser pour les mises à niveau et les installations de SQL Server. Utilisez une des commandes suivantes pour configurer le référentiel de votre choix.
-
-| Référentiel | Version | Command |
-|---|---|---|
-| **Version préliminaire (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
-| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
-| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
-
-## <a id="ubuntu"></a> Configurer les référentiels d’Ubuntu
-Utilisez les étapes suivantes pour configurer des référentiels sur Ubuntu.
-
-### <a name="check-for-previously-configured-repositories-ubuntu"></a>Recherchez les référentiels configurées précédemment (Ubuntu)
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 Tout d’abord vérifier si vous avez déjà enregistré un référentiel SQL Server.
 
 1. Afficher le contenu de la **/etc/apt/sources.list** fichier.
@@ -144,7 +124,37 @@ Tout d’abord vérifier si vous avez déjà enregistré un référentiel SQL Se
 
 2. Examinez l’URL de package pour mssql-server. Vous pouvez l’identifier la table dans le [référentiels](#repositories) section de cet article.
 
-### <a name="remove-old-repository-ubuntu"></a>Supprimer l’ancien référentiel (Ubuntu)
+::: zone-end
+
+## <a name="remove-old-repository"></a>Supprimer l’ancien référentiel
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
+Si nécessaire, supprimez l’ancien référentiel avec la commande suivante.
+
+```bash
+sudo rm -rf /etc/yum.repos.d/mssql-server.repo
+```
+
+Cette commande suppose que le fichier identifié dans la section précédente a été nommé **mssql-server.repo**.
+
+::: zone-end
+
+<!--SLES-->
+::: zone pivot="ld2-sles"
+Si nécessaire, supprimez l’ancien référentiel. Utilisez une des commandes suivantes en fonction du type de référentiel précédemment configuré.
+
+| Référentiel | Commande à supprimer |
+|---|---|
+| **Version préliminaire (2017)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server'` |
+| **Version préliminaire (2019)** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-preview'` |
+| **CU** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017'` |
+| **GDR** | `sudo zypper removerepo 'packages-microsoft-com-mssql-server-2017-gdr'`|
+
+::: zone-end
+
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 Si nécessaire, supprimez l’ancien référentiel. Utilisez une des commandes suivantes en fonction du type de référentiel précédemment configuré.
 
 | Référentiel | Commande à supprimer |
@@ -154,7 +164,36 @@ Si nécessaire, supprimez l’ancien référentiel. Utilisez une des commandes s
 | **CU** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017 xenial main'` | 
 | **GDR** | `sudo add-apt-repository -r 'deb [arch=amd64] https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017-gdr xenial main'` |
 
-### <a name="configure-new-repository-ubuntu"></a>Configurer le nouveau référentiel (Ubuntu)
+::: zone-end
+
+## <a name="configure-new-repository"></a>Configurer le nouveau référentiel
+
+<!--RHEL-->
+::: zone pivot="ld2-rhel"
+Configurer le nouveau référentiel à utiliser pour les mises à niveau et les installations de SQL Server. Utilisez une des commandes suivantes pour configurer le référentiel de votre choix.
+
+| Référentiel | Version | Command |
+|---|---|---|
+| **Version préliminaire (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017-gdr.repo` |
+
+::: zone-end
+
+<!--SLES-->
+::: zone pivot="ld2-sles"
+Configurer le nouveau référentiel à utiliser pour les mises à niveau et les installations de SQL Server. Utilisez une des commandes suivantes pour configurer le référentiel de votre choix.
+
+| Référentiel | Version | Command |
+|---|---|---|
+| **Version préliminaire (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
+| **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
+| **GDR** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017-gdr.repo` |
+
+::: zone-end
+
+<!--Ubuntu-->
+::: zone pivot="ld2-ubuntu"
 Configurer le nouveau référentiel à utiliser pour les mises à niveau et les installations de SQL Server.
 
 1. Importez les clés publiques GPG de référentiel.
@@ -177,11 +216,25 @@ Configurer le nouveau référentiel à utiliser pour les mises à niveau et les 
    sudo apt-get update
    ```
 
+::: zone-end
+
 ## <a name="next-steps"></a>Étapes suivantes
 
 Une fois que vous avez configuré le référentiel approprié, vous pouvez passer à [installer](sql-server-linux-setup.md#platforms) ou [mettre à jour](sql-server-linux-setup.md#upgrade) SQL Server et tous liés packages à partir du référentiel de nouveau.
 
+::: zone pivot="ld2-rhel"
 > [!IMPORTANT]
-> À ce stade, si vous choisissez d’utiliser un des articles de l’installation, tels que le [Démarrages rapides](sql-server-linux-setup.md#platforms), n’oubliez pas que vous avez déjà configuré le référentiel cible. Ne répétez pas cette étape dans les didacticiels. Cela est particulièrement vrai si vous configurez le référentiel GDR, étant donné que les Démarrages rapides utilisent le référentiel CU.
+> À ce stade, si vous choisissez d’utiliser le [RHEL quickstart](quickstart-install-connect-red-hat.md), n’oubliez pas que vous avez déjà configuré le référentiel cible. Ne répétez pas cette étape dans les didacticiels. Cela est particulièrement vrai si vous configurez le référentiel GDR, étant donné que le démarrage rapide utilise le référentiel CU.
+::: zone-end
+
+::: zone pivot="ld2-sles"
+> [!IMPORTANT]
+> À ce stade, si vous choisissez d’utiliser le [SLES quickstart](quickstart-install-connect-suse.md), n’oubliez pas que vous avez déjà configuré le référentiel cible. Ne répétez pas cette étape dans les didacticiels. Cela est particulièrement vrai si vous configurez le référentiel GDR, étant donné que le démarrage rapide utilise le référentiel CU.
+::: zone-end
+
+::: zone pivot="ld2-ubuntu"
+> [!IMPORTANT]
+> À ce stade, si vous choisissez d’utiliser le [Guide de démarrage rapide Ubuntu](quickstart-install-connect-ubuntu.md), n’oubliez pas que vous avez déjà configuré le référentiel cible. Ne répétez pas cette étape dans les didacticiels. Cela est particulièrement vrai si vous configurez le référentiel GDR, étant donné que le démarrage rapide utilise le référentiel CU.
+::: zone-end
 
 Pour plus d’informations sur l’installation de SQL Server 2017 sur Linux, consultez [consignes d’Installation pour SQL Server sur Linux](sql-server-linux-setup.md).

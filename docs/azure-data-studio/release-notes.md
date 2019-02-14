@@ -3,7 +3,7 @@ title: Notes de publication et le journal des modifications
 titleSuffix: Azure Data Studio
 description: Notes de publication Azure Data Studio
 ms.custom: seodec18
-ms.date: 01/17/2019
+ms.date: 02/13/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,17 +11,34 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 163f5740626b0f4cb927272d46acddc79495e4c1
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bd3151ae475f96b3e4df227bb4d312940c10bed0
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361679"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231126"
 ---
 # <a name="azure-data-studio-latest-release-notes-and-changelog"></a>Azure dernières notes de Studio de données et journal des modifications
 
 **[Téléchargez et installez la dernière version !](download.md)**
 
+## <a name="february-2019-february-release"></a>Février 2019 (version de février)
+
+date de publication : 13 février 2019  
+Version : 1.4.5
+
+- Ajouté **pack d’administration pour SQL Server** pack d’extension pour le rendre plus facile d’installer les extensions dépendant de l’administrateur de SQL Server. Cela inclut :
+    - [SQL Server Agent](https://docs.microsoft.com/sql/azure-data-studio/sql-server-agent-extension?view=sql-server-2017)
+    - [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension?view=sql-server-2017)
+    - [SQL Server Import](https://docs.microsoft.com/sql/azure-data-studio/sql-server-import-extension?view=sql-server-2017)
+- Filtrage des événements étendus prise en charge dans l’extension de Profiler
+- Added enregistrer en tant que fonctionnalité XML qui peut enregistrer des résultats de T-SQL au format XML
+- Amélioration de l’Assistant Création d’applications de couche données
+    - Bouton Générer un script ajouté
+    - Vue ajouté afin de donner des avertissements de perte de données au cours du déploiement
+- Met à jour pour le [extension de la version préliminaire de SQL Server 2019](https://docs.microsoft.com/sql/azure-data-studio/sql-server-2019-extension?view=sql-server-ver15)
+- Activé par défaut pour le long de la diffusion en continu des résultats des requêtes en cours d’exécution
+- Résolu [bogues et problèmes](https://github.com/Microsoft/azuredatastudio/milestone/23?closed=1).
 
 ## <a name="january-hotfix-2019-january-hotfix-release"></a>Correctif logiciel de janvier 2019 (version de correctif logiciel de janvier)
 
