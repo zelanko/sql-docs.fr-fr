@@ -22,12 +22,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c72da307abd6de30cfb188128eeea52f64b074e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f5b04781959218d9044f1bf032156ce6ec65946
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841157"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420957"
 ---
 # <a name="x40x40version---transact-sql-configuration-functions"></a>&#x40;&#x40;Version - Fonctions de configuration Transact SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,7 +77,7 @@ ms.locfileid: "47841157"
 > [!NOTE]  
 > Nous savons que la version du produit signalée par @@VERSION pour Azure SQL Database est incorrecte. La version du moteur de base de données SQL Server exécutée par Azure SQL Database est toujours ultérieure à la version locale de SQL Server, et inclut les derniers correctifs de sécurité. Cela signifie que le niveau du correctif est toujours égal ou supérieur à celui de la version locale de SQL Server, et que les dernières fonctionnalités disponibles dans SQL Server sont disponibles dans Azure SQL Database.
 >
-> Pour déterminer l’édition du moteur par programmation, utilisez SELECT SERVERPROPERTY('EngineEdition'). Cette requête retourne « 5 » pour les bases de données autonomes et « 8 » pour les instances gérées dans Azure SQL Database. 
+> Pour déterminer l’édition du moteur par programmation, utilisez SELECT SERVERPROPERTY('EngineEdition'). Cette requête retourne « 5 » pour les bases de données uniques/pools élastiques et « 8 » pour les instances managées dans Azure SQL Database. 
 >
 > Nous mettrons à jour la documentation lorsque ce problème aura été résolu.
 
@@ -93,7 +93,7 @@ SELECT @@VERSION AS 'SQL Server Version';
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>B. Renvoi de la version actuelle de [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
+### <a name="b-return-the-current-version-of-includessdwincludesssdw-mdmd"></a>b. Renvoi de la version actuelle de [!INCLUDE[ssDW](../../includes/ssdw-md.md)]  
   
 ```  
 SELECT @@VERSION AS 'SQL Server PDW Version';  

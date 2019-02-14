@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8924de6099e947e02023ea92853ee84a94b0f48d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ee8626047df76aaf9186295c092623a7cee6d263
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804257"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570662"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
  **'** *input* **'**  
  Spécifie une expression qui correspond à une chaîne de type caractère ou binaire à hacher.  
   
- La sortie se conforme à l'algorithme standard : 128 bits (16 octets) pour MD2, MD4 et MD5 ; 160 bits (20 octets) pour SHA et SHA1 ; 256 bits (32 octets) pour SHA2_256 et 512 bits (64 octets) pour SHA2_512.  
+ La sortie est conforme à l’algorithme standard : 128 bits (16 octets) pour MD2, MD4 et MD5 ; 160 bits (20 octets) pour SHA et SHA1 ; 256 bits (32 octets) pour SHA2_256 et 512 bits (64 octets) pour SHA2_512.  
   
 **S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
@@ -60,43 +60,45 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## <a name="return-value"></a>Valeur retournée  
  **varbinary** (au maximum 8 000 octets)  
-  
+
+## <a name="remarks"></a>Notes   
+Envisagez d’utiliser `CHECKSUM` ou `BINARY_CHECKSUM` comme alternatives pour calculer une valeur de hachage.
+
+Les algorithmes MD2, MD4, MD5, SHA et SHA1 ne sont pas disponibles sous le niveau de compatibilité 130 et les versions ultérieures. Utilisez SHA2_256 ou SHA2_512 à la place.
+
 ## <a name="examples"></a>Exemples  
-  
-### <a name="a-return-the-hash-of-a-variable"></a>A : Renvoie le hachage d’une variable  
+### <a name="return-the-hash-of-a-variable"></a>Retourne le hachage d'une variable  
  L’exemple suivant renvoie le hachage `SHA1` des données **nvarchar** stockées dans la variable `@HashThis`.  
   
-```  
+```sql  
 DECLARE @HashThis nvarchar(4000);  
 SET @HashThis = CONVERT(nvarchar(4000),'dslfdkjLK85kldhnv$n000#knf');  
 SELECT HASHBYTES('SHA1', @HashThis);  
-  
 ```  
   
-### <a name="b-return-the-hash-of-a-table-column"></a>B : Renvoie le hachage d’une colonne de table  
+### <a name="return-the-hash-of-a-table-column"></a>Retourne le hachage d'une colonne de table  
  L'exemple suivant retourne le hachage SHA1 des valeurs de la colonne, `c1` dans la table `Test1`.  
   
-```  
+```sql  
 CREATE TABLE dbo.Test1 (c1 nvarchar(50));  
 INSERT dbo.Test1 VALUES ('This is a test.');  
 INSERT dbo.Test1 VALUES ('This is test 2.');  
 SELECT HASHBYTES('SHA1', c1) FROM dbo.Test1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-  
 -------------------------------------------  
 0x0E7AAB0B4FF0FD2DFB4F0233E2EE7A26CD08F173  
 0xF643A82F948DEFB922B12E50B950CEE130A934D6  
   
 (2 row(s) affected)  
-  
 ```  
   
 ## <a name="see-also"></a> Voir aussi  
- [Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
-  
+[Choisir un algorithme de chiffrement](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
+[CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
+[BINARY_CHECKSUM  &#40;Transact-SQL&#41;](../../t-sql/functions/binary-checksum-transact-sql.md)  
   

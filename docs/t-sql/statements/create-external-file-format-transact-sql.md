@@ -21,12 +21,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a25ec8508701f99602392176ef8210588e872b36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8a0d6bedfb15334850e3cf21eed6dadfd21abf1f
+ms.sourcegitcommit: 31c8f9eab00914e056e9219093dbed1b0b4542a6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517708"
+ms.lasthandoff: 01/31/2019
+ms.locfileid: "55484848"
 ---
 # <a name="create-external-file-format-transact-sql"></a>CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -104,7 +104,7 @@ WITH (
  *file_format_name*  
  Spécifie un nom pour le format de fichier externe.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET] Spécifie le format des données externes.
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT] Spécifie le format des données externes.
   
    -   PARQUET Spécifie un format Parquet.
   
@@ -171,7 +171,7 @@ PolyBase utilise uniquement le format de date personnalisé pour l’importation
   
 -   DateTimeOffset : 'yyyy-MM-dd HH:mm:ss'  
   
--   Time : 'HH:mm:ss'  
+-   une heure donnée : 'HH:mm:ss'  
   
 Des **exemples de formats de date** se trouvent dans le tableau suivant :
   
@@ -320,7 +320,7 @@ WITH (
 );  
 ```  
   
-### <a name="b-create-an-rcfile-external-file-format"></a>B. Créer un format de fichier externe RCFile  
+### <a name="b-create-an-rcfile-external-file-format"></a>b. Créer un format de fichier externe RCFile  
  Cet exemple crée un format de fichier externe pour un RCFile qui utilise la méthode de sérialisation/désérialisation org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. Il spécifie également l’utilisation du Codec par défaut pour la méthode de compression des données. Si DATA_COMPRESSION n’est pas spécifié, par défaut, les données ne sont pas compressées.
   
 ```  

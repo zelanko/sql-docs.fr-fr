@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f962d98bc60ea8fedc585add7617ddf938db6f4
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.openlocfilehash: 23f7329c6964f59cb0b7cb9f0d2db6d3b4b825ad
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960763"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55420946"
 ---
 # <a name="collate-transact-sql"></a>COLLATE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -54,16 +54,16 @@ COLLATE { <collation_name> | database_default }
  Oblige la clause COLLATE à hériter du classement de la base de données active.  
   
 ## <a name="remarks"></a>Notes   
-La clause COLLATE peut être spécifiée à plusieurs niveaux. Ces options en question sont les suivantes :  
+La clause COLLATE peut être spécifiée à plusieurs niveaux, Ces options en question sont les suivantes :  
   
-1.  Création ou modification d’une base de données.  
+1.  la création ou modification d'une base de données ;  
   
      Vous pouvez utiliser la clause COLLATE de l’instruction `CREATE DATABASE` ou `ALTER DATABASE` pour spécifier le classement par défaut de la base de données. Vous pouvez également spécifier un classement lorsque vous créez une base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si vous ne spécifiez pas de classement, le classement par défaut de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sera appliqué à la base de données.  
   
     > [!NOTE]  
     > Les classements Unicode Windows ne peuvent être utilisés qu’avec la clause COLLATE pour appliquer des classements aux types de données **nchar**, **nvarchar** et **ntext** au niveau des colonnes et au niveau des expressions. Ils ne peuvent pas être utilisés avec la clause COLLATE pour définir ou changer le classement d’une instance de base de données ou de serveur.
   
-2.  Création ou modification d’une colonne dans une table.  
+2.  la création ou modification d'une colonne dans une table ;  
   
      Vous pouvez spécifier des classements pour chaque colonne de chaîne de caractères à l’aide de la clause COLLATE de l’instruction `CREATE TABLE` ou `ALTER TABLE`. Vous pouvez également spécifier un classement lorsque vous créez une table à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Si vous ne spécifiez pas de classement, le classement par défaut de la base de données sera appliqué à la colonne.  
   
@@ -99,7 +99,7 @@ FROM fn_helpcollations();
 -   Lors de la restauration ou de l’attachement d’une base de données, le classement par défaut de cette dernière et le classement de colonnes ou paramètres **char**, **varchar** et **text** de la base de données doivent être pris en charge par le système d’exploitation.  
   
 > [!NOTE]
-> Le classement du serveur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance est **SQL_Latin1_General_CP1_CI_AS** et ne peut pas être modifié.
+> Le classement du serveur d’instance managée [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] est **SQL_Latin1_General_CP1_CI_AS** et ne peut pas être modifié.
 
 > [!NOTE]
 > Les traductions de pages de codes sont prises en charge pour les types de données **char** et **varchar**, mais pas pour **text**. La perte de données lors de la traduction d'une page de codes n'est pas mentionnée.  
@@ -153,7 +153,7 @@ Colima
 Chiapas
 ```  
   
-### <a name="b-additional-examples"></a>B. Autres exemples  
+### <a name="b-additional-examples"></a>b. Autres exemples  
  Pour voir d’autres exemples d’utilisation de **COLLATE**, consultez l’exemple **G. Créer une base de données et spécifier un nom et des options de classement** de la rubrique [CREATE DATABASE](../../t-sql/statements/create-database-transact-sql.md?&tabs=sqlserver#examples) et l’exemple **V. Modifier le classement des colonnes** de la rubrique [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#alter_column).  
   
 ## <a name="see-also"></a> Voir aussi  

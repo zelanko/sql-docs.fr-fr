@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca0c77ccf18d47f14c7f9eb286158bb8d4642ddf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617759"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513873"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -58,13 +58,13 @@ et les types définis par l’utilisateur CLR (Common Language Runtime) incompar
  **Int**
   
 ## <a name="remarks"></a>Notes   
-BINARY_CHECKSUM(*), calculé à partir de n'importe quelle ligne d'une table, retourne la même valeur tant que la ligne ne subit aucune modification. BINARY_CHECKSUM a les propriétés d’une fonction de hachage : quand BINARY_CHECKSUM est appliqué à deux listes d’expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type et ont une valeur égale lorsqu’ils sont comparés à l’aide de l’opérateur d’égalité (=). Pour cette définition, nous disons que les valeurs NULL d’un type spécifié apparaissent comme étant équivalentes. Si au moins l’une des valeurs de la liste d’expressions change, la somme de contrôle des expressions peut également changer. Toutefois, cela n’est pas garanti. Par conséquent, nous conseillons d’utiliser BINARY_CHECKSUM pour vérifier si des valeurs ont changé uniquement si votre application peut accepter une modification parfois manquée. Sinon, envisagez d’utiliser HashBytes à la place. Avec un algorithme de hachage MD5 spécifié, la probabilité que HashBytes retourne le même résultat pour deux entrées différentes est beaucoup plus faible par rapport à BINARY_CHECKSUM.
+`BINARY_CHECKSUM(*)`, calculé à partir de n'importe quelle ligne d'une table, retourne la même valeur tant que la ligne ne subit aucune modification. `BINARY_CHECKSUM` a les propriétés d'une fonction de hachage : lorsque c’est appliqué à deux listes d'expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type et ont une valeur égale lorsqu'ils sont comparés à l'aide de l'opérateur d'égalité (=). Pour cette définition, nous disons que les valeurs NULL d’un type spécifié apparaissent comme étant équivalentes. Si au moins l’une des valeurs de la liste d’expressions change, la somme de contrôle des expressions peut également changer. Toutefois, cela n’est pas garanti. Par conséquent, nous conseillons d’utiliser `BINARY_CHECKSUM` pour vérifier si des valeurs ont changé uniquement si votre application peut accepter une modification parfois manquée. Sinon, envisagez d’utiliser `HASHBYTES` à la place. Avec un algorithme de hachage MD5 spécifié, la probabilité que `HASHBYTES` retourne le même résultat pour deux entrées différentes est beaucoup plus faible par rapport à `BINARY_CHECKSUM`.
   
-BINARY_CHECKSUM peut opérer sur une liste d’expressions et retourne la même valeur pour une liste spécifiée. Lorsque la fonction BINARY_CHECKSUM porte sur deux listes d'expressions, elle retourne la même valeur si les éléments correspondants des deux listes sont de type et de représentation en octets identiques. Pour cette définition, les valeurs NULL d'un type spécifié sont considérées comme utilisant la même représentation en octets.
+`BINARY_CHECKSUM` peut opérer sur une liste d’expressions et retourne la même valeur pour une liste spécifiée. Lorsque la fonction `BINARY_CHECKSUM` porte sur deux listes d'expressions, elle retourne la même valeur si les éléments correspondants des deux listes sont de type et de représentation en octets identiques. Pour cette définition, les valeurs NULL d'un type spécifié sont considérées comme utilisant la même représentation en octets.
   
-Les fonctions BINARY_CHECKSUM et CHECKSUM sont similaires : elles peuvent être utilisées pour calculer une somme de contrôle dans une liste d'expressions, et l'ordre des expressions affecte la valeur résultante. L'ordre des colonnes utilisé pour BINARY_CHECKSUM(*) est celui spécifié dans la définition de la table ou de la vue, y compris les colonnes calculées.
+`BINARY_CHECKSUM` et `CHECKSUM` sont des fonctions similaires. elles peuvent être utilisées pour calculer une somme de contrôle dans une liste d'expressions, et l'ordre des expressions affecte la valeur résultante. L’ordre des colonnes utilisé pour `BINARY_CHECKSUM(*)` est celui spécifié dans la définition de la table ou de la vue, y compris les colonnes calculées.
   
-BINARY_CHECKSUM et CHECKSUM retournent des valeurs différentes pour les types de données de chaîne. Avec les paramètres régionaux, des chaînes dont la représentation est différente peuvent apparaître comme étant équivalentes. Les types de données de chaîne sont  
+`BINARY_CHECKSUM` et `CHECKSUM` retournent des valeurs différentes pour les types de données de chaîne. Avec les paramètres régionaux, des chaînes dont la représentation est différente peuvent apparaître comme étant équivalentes. Les types de données de chaîne sont  
 
 * **char**  
 * **nchar**  
@@ -75,9 +75,9 @@ ou Gestionnaire de configuration
 
 * **sql_variant** (si le type de base de **sql_variant** est un type de données de chaîne).  
   
-Par exemple, les valeurs BINARY_CHECKSUM des chaînes « McCavity » et « Mccavity » sont différentes. À l’inverse, CHECKSUM retourne les mêmes valeurs de somme de contrôle pour ces chaînes sur un serveur qui ne respecte pas la casse. Les valeurs de CHECKSUM ne doivent pas être comparées à celles de BINARY_CHECKSUM.
+Par exemple, les valeurs `BINARY_CHECKSUM` des chaînes « McCavity » et « Mccavity » sont différentes. À l’inverse, `CHECKSUM` retourne les mêmes valeurs de somme de contrôle pour ces chaînes sur un serveur qui ne respecte pas la casse. Vous devez éviter de comparer les valeurs de `CHECKSUM` avec les valeurs de `BINARY_CHECKSUM`.
  
-BINARY_CHECKSUM prend en charge n’importe quelle longueur de type **varbinary(max)** et jusqu’à 255 caractères de type **nvarchar(max)**.
+`BINARY_CHECKSUM` prend en charge n’importe quelle longueur de type **varbinary(max)** et jusqu’à 255 caractères de type **nvarchar(max)**.
   
 ## <a name="examples"></a>Exemples  
 Cet exemple utilise `BINARY_CHECKSUM` pour détecter des modifications dans une ligne d’une table.
@@ -99,7 +99,8 @@ GO
   
 ## <a name="see-also"></a>Voir aussi
 [Fonctions d’agrégation &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)  
+[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)  
 [CHECKSUM &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-transact-sql.md)  
-[CHECKSUM_AGG &#40;Transact-SQL&#41;](../../t-sql/functions/checksum-agg-transact-sql.md)
+[HASHBYTES &#40;Transact-SQL&#41;](../../t-sql/functions/hashbytes-transact-sql.md)  
   
   

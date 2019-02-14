@@ -2,7 +2,7 @@
 title: CREATE DATABASE (Transact-SQL) | Microsoft Docs
 description: Syntaxe de création de base de données pour SQL Server, Azure SQL Database, Azure SQL Data Warehouse et Parallel Data Warehouse.
 ms.custom: ''
-ms.date: 11/16/2018
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d0ba661f6cc2c19b00dd5c51be9b3dfeb1d47a6e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 76f0d24c3c8eb0c2cfa77b69d45d8f5d88517a4f
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327881"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570842"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -62,7 +62,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |**_\* SQL Server \*_** | [SQL Database<br />Logical Server](create-database-transact-sql.md?view=azuresqldb-current) | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |**_\* SQL Server \*_** | [Pool élastique/base de données unique<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current) | [Instance managée<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -893,15 +893,15 @@ GO
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* SQL Database<br />serveur logique \*_**  | [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| **_\* Pool élastique/base de données unique<br />SQL Database \*_**  | [Instance managée<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-logical-server"></a>Serveur logique Azure SQL Database
+## <a name="azure-sql-database-single-databaseelastic-pool"></a>Pool élastique/base de données unique Azure SQL Database
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Dans le serveur logique Azure SQL Database, cette instruction est utilisable avec un serveur SQL Azure pour créer une base de données unique ou une base de données dans un pool élastique. Elle implique de spécifier le nom, le classement, la taille maximale, l’édition, l’objectif de service et, le cas échéant, le pool élastique de la nouvelle base de données. Elle permet également créer la base de données dans un pool élastique et de créer une copie de la base de données sur un autre serveur logique.
+Dans le pool élastique/la base de données unique Azure SQL Database, cette instruction est utilisable avec un serveur SQL Azure pour créer une base de données unique ou une base de données dans un pool élastique. Elle implique de spécifier le nom, le classement, la taille maximale, l’édition, l’objectif de service et, le cas échéant, le pool élastique de la nouvelle base de données. Elle permet également créer la base de données dans un pool élastique et de créer une copie de la base de données sur un autre serveur SQL Database.
 
 ## <a name="syntax"></a>Syntaxe 
 
@@ -973,7 +973,7 @@ EDITION
  
 Spécifie la couche de service de la base de données. 
 
-Bases de données uniques et mises en pool sur un serveur logique. Les valeurs disponibles sont : 'basic', 'standard', 'premium', 'GeneralPurpose', 'BusinessCritical' et 'Hyperscale'. 
+Bases de données uniques et regroupées sur un pool élastique/une base de données unique. Les valeurs disponibles sont : 'basic', 'standard', 'premium', 'GeneralPurpose', 'BusinessCritical' et 'Hyperscale'. 
   
 Lorsque l’argument EDITION est spécifié mais que MAXSIZE ne l’est pas, MAXSIZE est défini sur la taille la plus restrictive prise en charge par l’édition.  
   
@@ -984,7 +984,7 @@ Spécifie la taille maximale de la base de données. MAXSIZE doit être valide p
 > [!NOTE]
 > L’argument **MAXSIZE** ne s’applique pas aux bases de données uniques dans le niveau de service Hyperscale. Les bases de données de niveau Hyperscale croissent en fonction des besoins, jusqu'à 100 To. Le service SQL Database ajoute automatiquement du stockage : vous n’avez pas besoin de définir une taille maximale.
 
-**Modèle DTU des bases de données uniques et mises en pool sur un serveur logique**
+**Modèle DTU des bases de données uniques et mises en pool sur un serveur SQL Database**
 
 |**MAXSIZE**|**De base**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
 |-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------| 
@@ -1014,7 +1014,7 @@ Spécifie la taille maximale de la base de données. MAXSIZE doit être valide p
 
 La valeur MAXSIZE pour le modèle basé sur DTU, si elle est spécifiée, doit être une valeur valide indiquée dans le tableau ci-dessus pour le niveau de service spécifié.
  
-**Modèle vCore des bases de données uniques et mises en pool sur un serveur logique**
+**Modèle vCore des bases de données uniques et mises en pool sur un serveur SQL Database**
 
 **Niveau de service Usage général - Plateforme de calcul de 4e génération**
 
@@ -1063,12 +1063,12 @@ Les règles suivantes s'appliquent aux arguments MAXSIZE et EDITION.
 
 SERVICE_OBJECTIVE
 
-- **Pour les bases de données uniques et mises en pool sur un serveur logique**
+- **Pour les bases de données uniques et mises en pool**
 
   - Spécifie le niveau de performances. Les valeurs disponibles pour l’objectif de service sont : `S0`, `S1`, `S2`, `S3`, `S4`, `S6`, `S7`, `S9`, `S12`, `P1`, `P2`, `P4`, `P6`, `P11`, `P15`, `GP_GEN4_1`, `GP_GEN4_2`, `GP_GEN4_4`, `GP_GEN4_8`, `GP_GEN4_16`, `GP_GEN4_24`, `BC_GEN4_1` `BC_GEN4_2` `BC_GEN4_4` `BC_GEN4_8` `BC_GEN4_16`, `BC_GEN4_24`, `GP_Gen5_2`, `GP_Gen5_4`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32`, `GP_Gen5_48`, `GP_Gen5_80`, `BC_Gen5_2`,  `BC_Gen5_4`, `BC_Gen5_8`, `BC_Gen5_16`, `BC_Gen5_24`, `BC_Gen5_32`, `BC_Gen5_48`, `BC_Gen5_80`. 
- - **Pour les bases de données uniques sur un serveur logique dans le niveau de service Hyperscale** Spécifie le niveau de performance. Les valeurs disponibles pour l’objectif de service sont :  `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,    `HS_Gen5_4`,    `HS_Gen5_8`,    `HS_Gen5_16`,   `HS_Gen5_24`,   `HS_Gen5_32`,   `HS_Gen5_48`,   `HS_Gen5_80`. 
+ - **Pour les bases de données uniques dans le niveau de service Hyperscale** Spécifie le niveau de performance. Les valeurs disponibles pour l’objectif de service sont :  `HS_GEN4_1` `HS_GEN4_2` `HS_GEN4_4` `HS_GEN4_8` `HS_GEN4_16`, `HS_GEN4_24`, `HS_Gen5_2`,    `HS_Gen5_4`,    `HS_Gen5_8`,    `HS_Gen5_16`,   `HS_Gen5_24`,   `HS_Gen5_32`,   `HS_Gen5_48`,   `HS_Gen5_80`. 
  
-- **Pour les bases de données dans une instance gérée**
+- **Pour les bases de données sur une instance managée**
 
   Spécifie le niveau de performances. Les valeurs disponibles pour l’objectif de service sont : `GP_GEN4_8`, `GP_GEN4_16`, `GP_Gen5_8`, `GP_Gen5_16`, `GP_Gen5_24`, `GP_Gen5_32` et `GP_Gen5_40`. 
 
@@ -1232,15 +1232,15 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140  (MAXSIZE = 100 MB, EDITION = 
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />Logical Server](create-database-transact-sql.md?view=azuresqldb-current)| **_\* SQL Database<br />Managed Instance \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Pool élastique/base de données unique<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)| **_\* Instance managée<br />SQL Database \*_**   | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Instance managée Azure SQL Database
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Dans Azure SQL Database Managed Instance, cette instruction permet de créer une base de données. La création d’une base de données sur une instance gérée implique de spécifier son nom et son classement. 
+Dans l’instance managée Azure SQL Database, cette instruction permet de créer une base de données. La création d’une base de données sur une instance managée implique de spécifier son nom et son classement. 
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -1249,7 +1249,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 [;]  
 ```
 > [!IMPORTANT]
-> Pour ajouter des fichiers ou définir l’autonomie d’une base de données dans une instance gérée, utilisez l’instruction [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi).
+> Pour ajouter des fichiers ou définir l’autonomie d’une base de données dans une instance managée, utilisez l’instruction [ALTER DATABASE](alter-database-transact-sql.md?view=sqlallproducts-allversions&tabs=sqldbmi).
   
 ## <a name="arguments"></a>Arguments  
   
@@ -1305,7 +1305,7 @@ Voir [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi).
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />Logical Server](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Pool élastique/base de données unique<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)| [Instance managée<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)| **_\* SQL Data<br />Warehouse \*_**    | [Parallel<br />Data Warehouse](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1313,7 +1313,7 @@ Voir [ALTER DATABASE](alter-database-transact-sql.md?&tabs=sqldbmi).
 
 ## <a name="overview"></a>Vue d'ensemble
 
-Dans Azure SQL Data Warehouse, cette instruction peut être utilisée avec un serveur logique SQL Azure pour créer une base de données SQL Data Warehouse. Cette instruction implique de spécifier le nom, le classement, la taille maximale, l’édition et l’objectif de service de la base de données.
+Dans Azure SQL Data Warehouse, cette instruction peut être utilisée avec un serveur Azure SQL Database pour créer une base de données SQL Data Warehouse. Cette instruction implique de spécifier le nom, le classement, la taille maximale, l’édition et l’objectif de service de la base de données.
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -1330,6 +1330,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
     SERVICE_OBJECTIVE = { 
          'DW100' | 'DW200' | 'DW300' | 'DW400' | 'DW500' | 'DW600' 
         | 'DW1000' | 'DW1200' | 'DW1500' | 'DW2000' | 'DW3000' | 'DW6000' 
+        |'DW100c' | 'DW200c' | 'DW300c' | 'DW400c' | 'DW500c'
         | 'DW1000c' | 'DW1500c' | 'DW2000c' | 'DW2500c' | 'DW3000c' | 'DW5000c' 
         | 'DW6000c' | 'DW7500c' | 'DW10000c' | 'DW15000c' | 'DW30000c'
     }  
@@ -1423,7 +1424,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 > [!div class="mx-tdCol2BreakAll"]
 > |||||
 > |-|-|-|-| 
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [SQL Database<br />Logical Server](create-database-transact-sql.md?view=azuresqldb-current)| [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2016)| [Pool élastique/base de données unique<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)| [Instance managée<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|  **_\* Parallel<br />Data Warehouse \*_** |
 
 &nbsp;
 

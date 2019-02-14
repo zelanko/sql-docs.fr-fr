@@ -1,7 +1,7 @@
 ---
 title: ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -27,14 +27,15 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c7f31849aa75d0102f1406a49faf0d1c8c6a8e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327540"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421226"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Change la propriété d'un élément sécurisable.    
@@ -196,6 +197,7 @@ ALTER AUTHORIZATION ON
 ### <a name="for-sql-server"></a>Pour SQL Server :  
 **Conditions requises pour le nouveau propriétaire :**   
 Le nouveau principal de propriétaire doit être l’un des éléments suivants :  
+
 -   Un compte de connexion d’authentification SQL Server.  
 -   Un compte de connexion d’authentification Windows représentant un utilisateur Windows (et non un groupe).  
 -   Un utilisateur Windows qui s’authentifie via un compte de connexion d’authentification Windows représentant un groupe Windows.  
@@ -206,6 +208,7 @@ Si vous n’êtes pas membre du rôle serveur fixe **sysadmin**, vous devez disp
 ### <a name="for-azure-sql-database"></a>Pour Azure SQL Database :  
 **Conditions requises pour le nouveau propriétaire :**   
 Le nouveau principal de propriétaire doit être l’un des éléments suivants :  
+
 -   Un compte de connexion d’authentification SQL Server.  
 -   Un utilisateur fédéré (et pas un groupe) présent dans Azure AD.  
 -   Un utilisateur géré (et pas un groupe) ou une application présents dans Azure AD.    
@@ -217,7 +220,8 @@ Le nouveau principal de propriétaire doit être l’un des éléments suivants�
 Vous devez vous connecter à la base de données cible pour changer le propriétaire de cette base de données.  
 
 Les types de comptes suivants peuvent changer le propriétaire d’une base de données. 
-* Le compte de connexion au principal au niveau du service. (L’administrateur SQL Azure provisionné au moment de la création du serveur logique.)  
+
+* Le compte de connexion au principal au niveau du service. (L’administrateur SQL Azure provisionné au moment de la création du serveur SQL Database.)  
 * L’administrateur Azure Active Directory pour Azure SQL Server.   
 * Le propriétaire actuel de la base de données.   
  

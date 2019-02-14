@@ -47,12 +47,12 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1237e85271949279a96ddd149536189b9940a919
-ms.sourcegitcommit: a94cf79160e22fa8b4bafe3e6e50bb54e20b1bca
+ms.openlocfilehash: a098756919cec261d9416149a508b311c48cd147
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805775"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421496"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -71,7 +71,7 @@ Dans la ligne suivante, cliquez sur le nom du produit qui vous intéresse. Le cl
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |**_\* SQL Server \*_** &nbsp;|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
@@ -940,13 +940,13 @@ WITH STATS = 5;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />Managed Instance \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* Instance managée<br />SQL Database \*_** &nbsp;|[Parallel<br />Data Warehouse](backup-transact-sql.md?view=aps-pdw-2016)|  
 
 &nbsp;
 
-## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database Managed Instance
+## <a name="azure-sql-database-managed-instance"></a>Instance managée Azure SQL Database
 
-Sauvegarde une base de données SQL placée/hébergée dans Azure SQL Database Managed Instance. SQL Database [Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) dispose de sauvegardes automatiques et permet aux utilisateurs de créer des sauvegardes `COPY_ONLY` de base de données complètes. Les sauvegardes différentielles, de journaux et d’instantanés de fichiers ne sont pas prises en charge.  
+Sauvegarde une base de données SQL placée/hébergée dans Azure SQL Database Managed Instance. [L’instance managée](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) SQL Database dispose de sauvegardes automatiques et permet aux utilisateurs de créer des sauvegardes `COPY_ONLY` de base de données complètes. Les sauvegardes différentielles, de journaux et d’instantanés de fichiers ne sont pas prises en charge.  
 
 ## <a name="syntax"></a>Syntaxe  
   
@@ -988,9 +988,9 @@ DATABASE
 Spécifie une sauvegarde complète de la base de données. Au cours d’une sauvegarde de base de données, l’instance gérée sauvegarde une portion suffisante du journal des transactions afin d’assurer la cohérence de la base de données lors de la restauration de la sauvegarde.  
 
 > [!IMPORTANT]
-> Une sauvegarde de base de données créée sur une instance gérée ne peut être restaurée que sur une autre instance gérée. Elle ne peut pas être restaurée sur une instance locale de SQL Server (de même qu’une sauvegarde d’une base de données SQL Server 2016 ne peut pas être restaurée sur une instance de SQL Server 2012).
+> Une sauvegarde de base de données créée sur une instance gérée ne peut être restaurée que sur une autre instance managée. Elle ne peut pas être restaurée sur une instance locale de SQL Server (de même qu’une sauvegarde d’une base de données SQL Server 2016 ne peut pas être restaurée sur une instance de SQL Server 2012).
   
-Lorsque vous restaurez une sauvegarde créée par BACKUP DATABASE (une *sauvegarde de données*), l’ensemble de la sauvegarde est restauré. Pour effectuer une restauration à partir de sauvegardes automatiques Azure SQL Database Managed Instance, consultez [Restauration de base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
+Lorsque vous restaurez une sauvegarde créée par BACKUP DATABASE (une *sauvegarde de données*), l’ensemble de la sauvegarde est restauré. Pour effectuer une restauration à partir de sauvegardes automatiques d’instance managée Azure SQL Database, consultez [Restauration de base de données SQL](https://docs.microsoft.com/azure/sql-database/sql-database-restore)  
   
 { *database_name* | **@**_database\_name\_var_ }   
 Correspond à la base de données à partir de laquelle la base de données complète est sauvegardée. S’il est fourni comme variable (**@**_database\_name\_var_), ce nom peut être spécifié comme constante de chaîne (**@**_database\_name\_var_**=**_database name_) ou comme variable de type de données chaîne de caractères, sauf pour les types de données **ntext** ou **text**.  
@@ -1118,7 +1118,7 @@ Affiche un message à chaque fois qu’un autre *pourcentage* se termine et sert
   
 L'option STATS signale le pourcentage terminé comme seuil de rapport de l'intervalle suivant. C'est-à-dire approximativement le pourcentage spécifié ; par exemple, si STATS=10, et si le pourcentage terminé est 40 pour cent, l'option peut afficher 43 pour cent. Pour les jeux de sauvegardes volumineux, cela n'est pas un problème car le pourcentage terminé varie très lentement entre les appels d'E/S terminés.  
   
-## <a name="limitations-for-sql-database-managed-instance"></a>Limitations pour SQL Database Managed Instance
+## <a name="limitations-for-sql-database-managed-instance"></a>Limitations pour l’instance managée SQL Database
 La taille maximale d’une bande de sauvegarde est de 195 Go (taille maximale de l’objet blob). Augmentez le nombre de bandes défini dans la commande de sauvegarde pour réduire la taille de chaque bande et ainsi ne pas dépasser cette limite.
 
 ## <a name="security"></a>Sécurité  
@@ -1148,7 +1148,7 @@ WITH STATS = 5, COPY_ONLY;
 > [!div class="mx-tdCol2BreakAll"]  
 > |||| 
 > |---|---|---| 
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />Managed Instance](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instance managée<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Parallel<br />Data Warehouse \*_** &nbsp;|  
 
 &nbsp;
 

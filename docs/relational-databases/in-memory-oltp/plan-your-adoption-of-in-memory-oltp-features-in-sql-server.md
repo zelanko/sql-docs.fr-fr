@@ -1,7 +1,7 @@
 ---
 title: Planifier votre adoption des fonctionnalités OLTP en mémoire dans SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2017
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4adfad731797d7c210787bdfaae3defa3e0a12ea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519563"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421186"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planifier votre adoption des fonctionnalités OLTP en mémoire dans SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Une table optimisée en mémoire qui contient 200 Go de données nécessite plus
 
 Dans le cas d’une base de données hébergée dans le service cloud Azure SQL Database, le niveau de service que vous choisissez a un impact sur la quantité de mémoire active que votre base de données est autorisée à consommer. Vous devez prévoir de surveiller l’utilisation de la mémoire de votre base de données à l’aide d’une alerte. Pour plus d’informations, consultez :
 
-- Passer en revue les limites de stockage OLTP en mémoire pour votre [niveau tarifaire](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Passer en revue les limites de stockage OLTP en mémoire pour votre [niveau tarifaire](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
 - [Surveiller le stockage OLTP en mémoire](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variables de table optimisées en mémoire
@@ -118,7 +118,7 @@ Pour savoir si les fonctionnalités OLTP en mémoire peuvent améliorer les perf
 
 
 
-## <a name="b-unsupported-features"></a>B. Fonctionnalités non prises en charge
+## <a name="b-unsupported-features"></a>b. Fonctionnalités non prises en charge
 
 Les fonctionnalités qui ne sont pas prises en charge dans certains scénarios OLTP en mémoire sont décrites dans :
 
@@ -284,7 +284,7 @@ Lorsque le plan de requête d’une procédure native nécessite une phase d’a
 
 
 
-## <a name="f-application-design-transactions-and-retry-logic"></a>F. Conception de l’application : transactions et logique des nouvelles tentatives
+## <a name="f-application-design-transactions-and-retry-logic"></a>F. Conception d'application : Transactions et logique de nouvelle tentative
 
 Une transaction impliquant une table optimisée en mémoire peut devenir dépendante d’une autre transaction qui implique la même table. Si le nombre de transactions dépendantes dépasse la valeur maximale autorisée, toutes les opérations dépendantes échouent.
 

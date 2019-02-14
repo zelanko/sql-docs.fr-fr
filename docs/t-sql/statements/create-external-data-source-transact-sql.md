@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51e75f21dbaa518e344ec8c43fc8c9a087cea959
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980005"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421196"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -167,7 +167,7 @@ Pour Azure Data Lake Store, l’emplacement spécifie l’URI pour la connexion 
 
 
 **SHARD_MAP_MANAGER**   
- Pour SHARD_MAP_MANAGER, spécifie le nom du serveur logique qui héberge le Gestionnaire de cartes de partitions dans Azure SQL Database ou une base de données SQL Server sur une machine virtuelle Azure.
+ Pour SHARD_MAP_MANAGER, spécifie le nom du serveur SQL Database qui héberge le Gestionnaire de cartes de partitions dans Azure SQL Database ou une base de données SQL Server sur une machine virtuelle Azure.
  
  ```
  CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -188,7 +188,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Pour un tutoriel détaillé, consultez [Bien démarrer avec les requêtes élastiques pour le partitionnement (partitionnement horizontal)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started/).
   
 **SGBDR**   
-Pour le SGBDR, spécifie le nom du serveur logique de la base de données distante dans Azure SQL Database.  
+Pour le SGBDR, spécifie le nom du serveur SQL Database de la base de données distante dans Azure SQL Database.  
 
 ```  
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';  
@@ -404,7 +404,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureStorage WITH (
 ## <a name="examples-azure-sql-database"></a>Exemples : Azure SQL Database
 
 ### <a name="e-create-a-shard-map-manager-external-data-source"></a>E. Créer une source de données externe de Gestionnaire de cartes de partitions
-Pour créer une source de données externe pour faire référence à SHARD_MAP_MANAGER, spécifiez le nom du serveur logique qui héberge le Gestionnaire de cartes de partitions dans Azure SQL Database ou une base de données SQL Server sur une machine virtuelle Azure.
+Pour créer une source de données externe pour faire référence à SHARD_MAP_MANAGER, spécifiez le nom du serveur SQL Database qui héberge le Gestionnaire de cartes de partitions dans Azure SQL Database ou une base de données SQL Server sur une machine virtuelle Azure.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';
@@ -424,7 +424,7 @@ WITH (
 ```
 
 ### <a name="f-create-an-rdbms-external-data-source"></a>F. Créer une source de données externe de SGBDR
-Pour créer une source de données externe pour faire référence à un SGBDR, spécifie le nom du serveur logique de la base de données distante dans Azure SQL Database.
+Pour créer une source de données externe pour faire référence à un SGBDR, spécifie le nom du serveur SQL Database de la base de données distante dans Azure SQL Database.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>';

@@ -2,7 +2,7 @@
 title: Prérequis, restrictions et recommandations pour les groupes de disponibilité
 description: Description des prérequis, des restrictions et des recommandations pour déployer un groupe de disponibilité Always On.
 ms.custom: seodec18
-ms.date: 06/05/2018
+ms.date: 01/31/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: high-availability
@@ -20,12 +20,12 @@ ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e4aa84ac344bc9ca6d698f1ae3aa26f2a11f8072
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 28d0e3c791fc838a292d1846613af34fdabd32a4
+ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202988"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55570802"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Prérequis, restrictions et recommandations pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -160,7 +160,7 @@ ms.locfileid: "53202988"
     -   Une instance de SQL Server utilise jusqu’à 100 threads de restauration par progression parallèle pour les réplicas secondaires. Chaque base de données utilise jusqu’à la moitié du nombre total de cœurs de processeur, mais pas plus de 16 threads par base de données. Si le nombre total de threads requis pour une seule instance est supérieur à 100, SQL Server utilise un thread redo unique pour chaque base de données restante. Les threads de restauration par progression en série sont libérés après environ 15 secondes d'inactivité. 
     
     > [!NOTE]
-    > Les bases de données sont choisies pour avoir un seul thread en fonction de leur ID de base de données dans l’ordre croissant. Par conséquent, l’ordre de création des bases de données doit être pris en compte pour les instances SQL Server qui hébergent plus de bases de données de groupes de disponibilité que de threads de travail disponibles. Par exemple, sur un système avec au moins 32 cœurs de processeur, toutes les bases de données en commençant par la 7e base de données ayant rejoint le groupe de disponibilité seront en mode de restauration par progression en série, quelle que soit la charge de travail de restauration par progression réelle pour chaque base de données. Les bases de données nécessitant une restauration par progression parallèle doivent être ajoutées au groupe de disponibilité en premier.    
+    > Les bases de données sont choisies pour avoir un seul thread en fonction de leur ID de base de données dans l’ordre croissant. Par conséquent, l’ordre de création des bases de données doit être pris en compte pour les instances SQL Server qui hébergent plus de bases de données de groupes de disponibilité que de threads de travail disponibles. Par exemple, sur un système avec au moins 32 cœurs de processeur, les six premières bases de données (classées par ID de base de données) dans un ou des groupes de disponibilité utilisent le mode de restauration par progression parallèle, et toutes les bases de données suivantes utilisent le mode de restauration par progression unique.
   
 -   En outre, les groupes de disponibilité utilisent des threads non partagés, comme suit :  
   

@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6febad4b4bbb9de2dcec7d0c7fc93adb0403947e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7feb3a0e82a1c3737f9d8723ecd26c741b334e17
+ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795577"
+ms.lasthandoff: 02/01/2019
+ms.locfileid: "55513909"
 ---
 # <a name="checksum-transact-sql"></a>CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,7 @@ La fonction `CHECKSUM` retourne la valeur de somme de contrôle calculée à par
   
 ## <a name="syntax"></a>Syntaxe  
   
-```sql
+```
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
@@ -60,13 +60,13 @@ Un autre type de données incomparable est **sql_variant** avec l’un des types
  **Int**  
   
 ## <a name="remarks"></a>Notes   
-CHECKSUM calcule une valeur de hachage, appelée somme de contrôle, sur sa liste d’arguments. Utilisez cette valeur de hachage pour générer des index de hachage. Un index de hachage est obtenu si la fonction `CHECKSUM` a des arguments de colonne et qu’un index est créé sur la valeur CHECKSUM calculée. qui peut être utilisé dans des recherches d'égalité sur les colonnes.
+`CHECKSUM` calcule une valeur de hachage, appelée somme de contrôle, sur sa liste d’arguments. Utilisez cette valeur de hachage pour générer des index de hachage. Un index de hachage est obtenu si la fonction `CHECKSUM` a des arguments de colonne et qu’un index est créé sur la valeur `CHECKSUM` calculée. qui peut être utilisé dans des recherches d'égalité sur les colonnes.
   
-La fonction `CHECKSUM` a les propriétés d’une fonction de hachage : quand `CHECKSUM` est appliqué à deux listes d’expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type de données et ont une valeur égale lorsqu’ils sont comparés à l’aide de l’opérateur d’égalité (=). Les valeurs NULL d’un type spécifié sont définies comme ayant une valeur de comparaison égale dans le cadre de la fonction `CHECKSUM`. Si au moins l’une des valeurs de la liste d’expressions change, la somme de contrôle de liste est susceptible de changer aussi. Toutefois, cela n’est pas garanti. Par conséquent, nous conseillons d’utiliser `CHECKSUM` pour vérifier si des valeurs ont changé uniquement si votre application peut accepter une modification parfois manquée. Sinon, envisagez d’utiliser [HashBytes](../../t-sql/functions/hashbytes-transact-sql.md) à la place. Avec un algorithme de hachage MD5 spécifié, la probabilité que HashBytes retourne le même résultat pour deux entrées différentes est beaucoup plus faible par rapport à CHECKSUM.
+La fonction `CHECKSUM` a les propriétés d’une fonction de hachage : quand `CHECKSUM` est appliqué à deux listes d’expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type de données et ont une valeur égale lorsqu’ils sont comparés à l’aide de l’opérateur d’égalité (=). Les valeurs NULL d’un type spécifié sont définies comme ayant une valeur de comparaison égale dans le cadre de la fonction `CHECKSUM`. Si au moins l’une des valeurs de la liste d’expressions change, la somme de contrôle de liste est susceptible de changer aussi. Toutefois, cela n’est pas garanti. Par conséquent, nous conseillons d’utiliser `CHECKSUM` pour vérifier si des valeurs ont changé uniquement si votre application peut accepter une modification parfois manquée. Sinon, envisagez d’utiliser `HASHBYTES` à la place. Avec un algorithme de hachage MD5 spécifié, la probabilité que `HASHBYTES` retourne le même résultat pour deux entrées différentes est beaucoup plus faible par rapport à `CHECKSUM`.
   
-L’ordre des expressions affecte la valeur `CHECKSUM` calculée. L’ordre des colonnes utilisé pour CHECKSUM(\*) est celui spécifié dans la définition de la table ou de la vue, y compris les colonnes calculées.
+L’ordre des expressions affecte la valeur `CHECKSUM` calculée. L’ordre des colonnes utilisé pour `CHECKSUM(*)` est celui spécifié dans la définition de la table ou de la vue, y compris les colonnes calculées.
   
-La valeur de CHECKSUM dépend du classement. La même valeur stockée avec un autre classement retourne une valeur CHECKSUM différente.
+La valeur de `CHECKSUM` dépend du classement. La même valeur stockée avec un autre classement retourne une valeur `CHECKSUM` différente.
   
 ## <a name="examples"></a>Exemples  
 Ces exemples illustrent l’utilisation de `CHECKSUM` pour générer des index de hachage.
@@ -75,6 +75,7 @@ Pour générer l’index de hachage, le premier exemple ajoute une colonne de so
   
 ```sql
 -- Create a checksum index.  
+
 SET ARITHABORT ON;  
 USE AdventureWorks2012;   
 GO  
@@ -91,6 +92,7 @@ Cet exemple illustre l’utilisation d’un index de somme de contrôle comme in
 /*Use the index in a SELECT query. Add a second search   
 condition to catch stray cases where checksums match,   
 but the values are not the same.*/  
+
 SELECT *   
 FROM Production.Product  
 WHERE CHECKSUM(N'Bearing Ball') = cs_Pname  

@@ -23,19 +23,19 @@ ms.assetid: d686f2f5-e03a-4ffe-a566-6036628f46f1
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 320c11c78f95f644e373b1cd410858a81e72edad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 112d46b26d8b4e03e8842aa17b8f1ad54976e19a
+ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804487"
+ms.lasthandoff: 02/02/2019
+ms.locfileid: "55652528"
 ---
 # <a name="drop-xml-schema-collection-transact-sql"></a>DROP XML SCHEMA COLLECTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Supprime toute la collection de schémas XML et tous ses composants.  
+Supprime toute la collection de schémas XML et tous ses composants.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -45,16 +45,16 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *relational_schema*  
- Identifie le nom du schéma relationnel. Si cet argument n'est pas spécifié, le schéma relationnel par défaut est utilisé.  
+*relational_schema*  
+Identifie le nom du schéma relationnel. Si cet argument n'est pas spécifié, le schéma relationnel par défaut est utilisé.  
   
- *sql_identifier*  
- Nom de la collection de schémas XML à supprimer.  
+*sql_identifier*  
+Nom de la collection de schémas XML à supprimer.  
   
 ## <a name="remarks"></a>Notes   
- La suppression d'une collection de schémas XML est une opération transactionnelle. Cela signifie que, lorsque vous supprimez une collection de schémas XML dans une transaction et que vous annulez cette transaction par la suite, la collection n'est pas supprimée.  
+La suppression d'une collection de schémas XML est une opération transactionnelle. Lorsque vous supprimez une collection de schémas XML dans une transaction et que vous annulez cette transaction par la suite, la collection n'est pas supprimée.  
   
- Vous ne pouvez pas supprimer une collection de schémas XML en cours d'utilisation. Cela signifie que la collection à supprimer ne peut pas être :  
+Vous ne pouvez pas supprimer une collection de schémas XML en cours d'utilisation. Donc, la collection à supprimer ne peut pas être :  
   
 -   associée à un paramètre ou à une colonne de type **xml** ;  
   
@@ -75,10 +75,10 @@ DROP XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier
     ```  
   
 ## <a name="permissions"></a>Permissions  
- La suppression d'une collection de schémas XML nécessite l'autorisation DROP sur la collection.  
+La suppression d'une collection de schémas XML nécessite l'autorisation DROP sur la collection.  
   
 ## <a name="examples"></a>Exemples  
- Le code exemple suivant montre comment supprimer une collection de schémas XML.  
+Le code exemple suivant montre comment supprimer une collection de schémas XML.  
   
 ```  
 DROP XML SCHEMA COLLECTION ManuInstructionsSchemaCollection;  

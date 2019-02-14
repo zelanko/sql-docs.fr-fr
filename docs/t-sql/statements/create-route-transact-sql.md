@@ -28,12 +28,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a24090fdcb1bd8b8576f545dfef11764f22a192f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595687"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421146"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -85,7 +85,7 @@ WHERE database_id = DB_ID()
  Spécifie la durée, en secondes, pendant laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] conserve l'itinéraire dans la table de routage. Lorsque la durée de vie expire, l'itinéraire expire et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'en tient plus compte lors de la sélection d'un itinéraire pour une nouvelle conversation. Si cette clause est omise, *route_lifetime* est NULL et l’itinéraire n’expire jamais.  
   
  ADDRESS **='**_next\_hop\_address_**'**  
-Pour SQL Database Managed Instance, `ADDRESS` doit être local. 
+Pour l’instance managée SQL Database, `ADDRESS` doit être local. 
 
 Spécifie l'adresse réseau pour cet itinéraire. *next_hop_address* spécifie une adresse TCP/IP au format suivant :  
   
@@ -153,7 +153,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://www.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>B. Création d'un itinéraire TCP/IP à l'aide d'un nom NetBIOS  
+### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>b. Création d'un itinéraire TCP/IP à l'aide d'un nom NetBIOS  
  L'exemple suivant crée un itinéraire vers le service `//Adventure-Works.com/Expenses`. L'itinéraire spécifie que les messages vers ce service utilisent le protocole TCP jusqu'au port `1234` de l'hôte identifié par le nom NetBIOS `SERVER02`. Au fur et à mesure de leur réception, le serveur cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] remet les messages à l'instance de base de données identifiée par l'identificateur unique `D8D4D268-00A3-4C62-8F91-634B89C1E315`.  
   
 ```  
