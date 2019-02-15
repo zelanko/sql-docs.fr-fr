@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 7a2e658020afaa9910c0bd988efc6f0c528e499e
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: ce425476f44e8e806a26e0fbe0201e088f7d12bf
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51697877"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55760012"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Rôles de base de données fixes de SQL Server Agent
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -51,39 +51,39 @@ Les autorisations des rôles de base de données de [!INCLUDE[ssNoVersion](../..
 **SQLAgentUserRole** est le moins privilégié des rôles de base de données fixes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Il dispose uniquement d'autorisations sur les opérateurs, les travaux locaux et les planifications de travaux. Les membres du rôle **SQLAgentUserRole** disposent uniquement d’autorisations sur les travaux locaux et les planifications des travaux qu’ils possèdent. Ils ne peuvent pas utiliser de travaux multiserveur (travaux de serveur maître et cible) et ne peuvent pas modifier l'appartenance des travaux pour accéder aux travaux qui ne leur appartiennent pas encore. Les membres de**SQLAgentUserRole** peuvent uniquement consulter la liste des proxys disponibles dans la boîte de dialogue **Propriétés de l’étape du travail** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Seul le nœud **Travaux** de l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est visible aux membres de **SQLAgentUserRole**.  
   
 > [!IMPORTANT]  
-> Avant d’accorder l’accès aux proxys aux membres **des**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**rôles de base de données de**Agent, pensez aux incidences que cela pourrait avoir sur la sécurité. Les rôles **SQLAgentReaderRole** et **SQLAgentOperatorRole** sont automatiquement membres du rôle **SQLAgentUserRole**. Ceci signifie que les membres de **SQLAgentReaderRole** et de **SQLAgentOperatorRole** ont accès à tous les proxys de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent auxquels **SQLAgentUserRole** peut accéder et qu’ils peuvent les utiliser.  
+> Avant d’accorder un accès proxy aux membres des rôles ****  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**, pensez aux incidences que cela pourrait avoir sur la sécurité. Les rôles **SQLAgentReaderRole** et **SQLAgentOperatorRole** sont automatiquement membres du rôle **SQLAgentUserRole**. Ceci signifie que les membres de **SQLAgentReaderRole** et de **SQLAgentOperatorRole** ont accès à tous les proxys de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent auxquels **SQLAgentUserRole** peut accéder et qu’ils peuvent les utiliser.  
   
 Le tableau suivant récapitule les autorisations de **SQLAgentUserRole** sur les objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 |Action|Opérateurs|Travaux locaux<br /><br />(travaux lui appartenant uniquement)|Calendriers de travaux<br /><br />(planifications lui appartenant uniquement)|Proxys|  
 |----------|-------------|-----------------------------------|-------------------------------------------|-----------|  
-|Créer/modifier/supprimer|non|Oui<br /><br />Ne peut pas modifier l’appartenance des travaux.|Oui|non|  
+|Créer/modifier/supprimer|Non|Oui<br /><br />Ne peut pas modifier l’appartenance des travaux.|Oui|Non|  
 |Afficher la liste (énumérer)|Oui<br /><br />Peut obtenir la liste des opérateurs disponibles à utiliser dans **sp_notify_operator** et dans la boîte de dialogue **Propriétés du travail** de Management Studio.|Oui|Oui|Oui<br /><br />Liste de proxys uniquement disponibles dans la boîte de dialogue **Propriétés de l’étape du travail** de Management Studio.|  
-|Activer/désactiver|non|Oui|Oui|Non applicable|  
-|Afficher les propriétés|non|Oui|Oui|non|  
+|Activer/désactiver|Non|Oui|Oui|Non applicable|  
+|Afficher les propriétés|Non|Oui|Oui|Non|  
 |Exécuter/arrêter/démarrer|Non applicable|Oui|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|non<br /><br />Pour supprimer l’historique des travaux qui leur appartiennent, les membres de **SQLAgentUserRole** doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory** . Ils ne peuvent supprimer l'historique d'aucun autre travail.|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|Non<br /><br />Pour supprimer l’historique des travaux qui leur appartiennent, les membres de **SQLAgentUserRole** doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory** . Ils ne peuvent supprimer l'historique d'aucun autre travail.|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Oui|Non applicable|  
   
 ### <a name="sqlagentreaderrole-permissions"></a>Autorisations du rôle SQLAgentReaderRole  
 **SQLAgentReaderRole** inclut toutes les autorisations de **SQLAgentUserRole** , ainsi que les autorisations permettant d’afficher la liste des travaux multiserveur disponibles, leurs propriétés et leur historique. Les membres de ce rôle peuvent également afficher la liste de tous les travaux et planifications de travaux disponibles et de leurs propriétés, pas uniquement la liste des travaux et des planifications de travaux dont ils sont propriétaires. Les membres de**SQLAgentReaderRole** ne peuvent pas modifier l’appartenance des travaux pour obtenir l’accès aux travaux qui ne leur appartiennent pas encore. Seul le nœud **Travaux** de l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est visible aux membres de **SQLAgentReaderRole**.  
   
 > [!IMPORTANT]  
-> Avant d’accorder l’accès aux proxys aux membres **des**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**rôles de base de données de**Agent, pensez aux incidences que cela pourrait avoir sur la sécurité. Les membres de **SQLAgentReaderRole** sont automatiquement membres de **SQLAgentUserRole**. Ceci signifie que les membres de **SQLAgentReaderRole** ont accès à tous les proxys de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent auxquels **SQLAgentUserRole** peut accéder et qu’ils peuvent les utiliser.  
+> Avant d’accorder un accès proxy aux membres des rôles ****  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**, pensez aux incidences que cela pourrait avoir sur la sécurité. Les membres de **SQLAgentReaderRole** sont automatiquement membres de **SQLAgentUserRole**. Ceci signifie que les membres de **SQLAgentReaderRole** ont accès à tous les proxys de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent auxquels **SQLAgentUserRole** peut accéder et qu’ils peuvent les utiliser.  
   
 Le tableau suivant récapitule les autorisations de **SQLAgentReaderRole** sur les objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 |Action|Opérateurs|Travaux locaux|Travaux multiserveur|Calendriers de travaux|Proxys|  
 |----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Créer/modifier/supprimer|non|Oui (travaux lui appartenant uniquement)<br /><br />Ne peut pas modifier l’appartenance des travaux.|non|Oui (planifications lui appartenant uniquement)|non|  
+|Créer/modifier/supprimer|Non|Oui (travaux lui appartenant uniquement)<br /><br />Ne peut pas modifier l’appartenance des travaux.|Non|Oui (planifications lui appartenant uniquement)|Non|  
 |Afficher la liste (énumérer)|Oui<br /><br />Peut obtenir la liste des opérateurs disponibles à utiliser dans **sp_notify_operator** et dans la boîte de dialogue **Propriétés du travail** de Management Studio.|Oui|Oui|Oui|Oui<br /><br />Liste de proxys uniquement disponibles dans la boîte de dialogue **Propriétés de l’étape du travail** de Management Studio.|  
-|Activer/désactiver|non|Oui (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|Non applicable|  
-|Afficher les propriétés|non|Oui|Oui|Oui|non|  
-|Modifier les propriétés|non|Oui (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|non|  
-|Exécuter/arrêter/démarrer|Non applicable|Oui (travaux lui appartenant uniquement)|non|Non applicable|Non applicable|  
+|Activer/désactiver|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non applicable|  
+|Afficher les propriétés|Non|Oui|Oui|Oui|Non|  
+|Modifier les propriétés|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non|  
+|Exécuter/arrêter/démarrer|Non applicable|Oui (travaux lui appartenant uniquement)|Non|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Oui|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|non<br /><br />Pour supprimer l’historique des travaux qui leur appartiennent, les membres de **SQLAgentReaderRole** doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory** . Ils ne peuvent supprimer l'historique d'aucun autre travail.|non|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|Non<br /><br />Pour supprimer l’historique des travaux qui leur appartiennent, les membres de **SQLAgentReaderRole** doivent disposer explicitement de l’autorisation EXECUTE sur **sp_purge_jobhistory** . Ils ne peuvent supprimer l'historique d'aucun autre travail.|Non|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Non applicable|Oui (planifications lui appartenant uniquement)|Non applicable|  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>Autorisations du rôle SQLAgentOperatorRole  
@@ -94,20 +94,20 @@ Les membres de**SQLAgentOperatorRole** disposent d’autorisations supplémentai
 Les nœuds **Travaux**, **Alertes**, **Opérateurs**et **Proxies** dans l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sont visibles aux membres de **SQLAgentOperatorRole**. Seul le nœud **Journaux d’erreur** n’est pas visible aux membres de ce rôle.  
   
 > [!IMPORTANT]  
-> Avant d’accorder l’accès aux proxys aux membres **des**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**rôles de base de données de**Agent, pensez aux incidences que cela pourrait avoir sur la sécurité. Les membres de **SQLAgentOperatorRole** sont automatiquement membres de **SQLAgentUserRole** et **SQLAgentReaderRole**. Ceci signifie que les membres de **SQLAgentOperatorRole** ont accès à tous les proxys de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent auxquels **SQLAgentUserRole** ou **SQLAgentReaderRole** peut accéder et qu’ils peuvent les utiliser.  
+> Avant d’accorder un accès proxy aux membres des rôles ****  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Agentdatabaseroles**, pensez aux incidences que cela pourrait avoir sur la sécurité. Les membres de **SQLAgentOperatorRole** sont automatiquement membres de **SQLAgentUserRole** et **SQLAgentReaderRole**. Ceci signifie que les membres de **SQLAgentOperatorRole** ont accès à tous les proxys de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent auxquels **SQLAgentUserRole** ou **SQLAgentReaderRole** peut accéder et qu’ils peuvent les utiliser.  
   
 Le tableau suivant récapitule les autorisations de **SQLAgentOperatorRole** sur les objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 |Action|Alertes|Opérateurs|Travaux locaux|Travaux multiserveur|Calendriers de travaux|Proxys|  
 |----------|----------|-------------|--------------|--------------------|-----------------|-----------|  
-|Créer/modifier/supprimer|non|non|Oui (travaux lui appartenant uniquement)<br /><br />Ne peut pas modifier l’appartenance des travaux.|non|Oui (planifications lui appartenant uniquement)|non|  
+|Créer/modifier/supprimer|Non|Non|Oui (travaux lui appartenant uniquement)<br /><br />Ne peut pas modifier l’appartenance des travaux.|Non|Oui (planifications lui appartenant uniquement)|Non|  
 |Afficher la liste (énumérer)|Oui|Oui<br /><br />Peut obtenir la liste des opérateurs disponibles à utiliser dans **sp_notify_operator** et dans la boîte de dialogue **Propriétés du travail** de Management Studio.|Oui|Oui|Oui|Oui|  
-|Activer/désactiver|non|non|Oui<br /><br />**SQLAgentOperatorRole** peuvent activer ou désactiver les travaux locaux qui ne leur appartiennent pas en utilisant la procédure stockée **sp_update_job** et en attribuant des valeurs aux paramètres **@enabled** et **@job_id** (ou **@job_name**). Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.|non|Oui<br /><br />**SQLAgentOperatorRole** peuvent activer ou désactiver les planifications qui ne leur appartiennent pas en utilisant la procédure stockée **sp_update_schedule** et en attribuant des valeurs aux paramètres **@enabled** et **@schedule_id** (ou **@name**). Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.|Non applicable|  
+|Activer/désactiver|Non|Non|Oui<br /><br />**SQLAgentOperatorRole** peuvent activer ou désactiver les travaux locaux qui ne leur appartiennent pas en utilisant la procédure stockée **sp_update_job** et en attribuant des valeurs aux paramètres **@enabled** et **@job_id** (ou **@job_name**). Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.|Non|Oui<br /><br />**SQLAgentOperatorRole** peuvent activer ou désactiver les planifications qui ne leur appartiennent pas en utilisant la procédure stockée **sp_update_schedule** et en attribuant des valeurs aux paramètres **@enabled** et **@schedule_id** (ou **@name**). Si un membre de ce rôle spécifie d'autres paramètres pour cette procédure stockée, l'exécution de cette dernière échoue.|Non applicable|  
 |Afficher les propriétés|Oui|Oui|Oui|Oui|Oui|Oui|  
-|Modifier les propriétés|non|non|Oui (travaux lui appartenant uniquement)|non|Oui (planifications lui appartenant uniquement)|non|  
-|Exécuter/arrêter/démarrer|Non applicable|Non applicable|Oui|non|Non applicable|Non applicable|  
+|Modifier les propriétés|Non|Non|Oui (travaux lui appartenant uniquement)|Non|Oui (planifications lui appartenant uniquement)|Non|  
+|Exécuter/arrêter/démarrer|Non applicable|Non applicable|Oui|Non|Non applicable|Non applicable|  
 |Afficher l’historique des travaux|Non applicable|Non applicable|Oui|Oui|Non applicable|Non applicable|  
-|Supprimer l'historique des travaux|Non applicable|Non applicable|Oui|non|Non applicable|Non applicable|  
+|Supprimer l'historique des travaux|Non applicable|Non applicable|Oui|Non|Non applicable|Non applicable|  
 |Attacher/détacher|Non applicable|Non applicable|Non applicable|Non applicable|Oui (planifications lui appartenant uniquement)|Non applicable|  
   
 ## <a name="assigning-users-multiple-roles"></a>Assignation de plusieurs rôles aux utilisateurs  
