@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/22/2019
+ms.date: 01/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: d7bb8abac5765265e93282ae88266ece24d8a8a5
-ms.sourcegitcommit: 3d50caa30681bf384f5628b1dd3e06e24fc910cd
+ms.openlocfilehash: d8d0a557640795462f4da21345f07df9db96be97
+ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54838119"
+ms.lasthandoff: 01/30/2019
+ms.locfileid: "55421316"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -216,8 +216,8 @@ GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
 
 Permet de définir la fonctionnalité de suppression automatique pour les [tables temporaires globales](create-table-transact-sql.md). La valeur par défaut est ON, ce qui signifie que les tables temporaires globales sont automatiquement supprimées lorsqu’elles ne sont pas utilisées dans une session. Lorsqu’elles sont définies sur OFF, les tables temporaires globales doivent être supprimées explicitement à l’aide d’une instruction DROP TABLE ou sont automatiquement supprimées au redémarrage du serveur.
 
-- Dans le serveur logique [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette option peut être définie dans les bases de données utilisateur du serveur logique.
-- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Managed Instance, cette option est définie dans `TempDB`, et le paramètre des différentes bases de données utilisateur n’a aucun effet.
+- Avec les bases de données uniques/pools élastiques [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette option peut être définie dans les bases de données utilisateur individuelles du serveur SQL Database.
+- Dans l’instance managée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette option est définie dans `TempDB`, et le paramètre des bases de données utilisateur individuelles n’a aucun effet.
 
 DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
 

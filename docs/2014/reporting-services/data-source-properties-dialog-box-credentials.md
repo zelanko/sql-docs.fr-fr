@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.datasourceproperties.credentials.f1
 - "10100"
 ms.assetid: 14c3eeb6-d37b-4fda-967b-43afcdb48119
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4fbee37fe2396c533c6cc16528d467f9862d46c3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7f54988b6cf780f9282a368237f7a79c35a17948
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032350"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284537"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>Boîte de dialogue Propriétés de la source de données, Informations d'identification
   Sélectionnez **Informations d’identification** dans la boîte de dialogue **Propriétés de la source de données** pour afficher et modifier les informations d’identification pour se connecter à une source de données dans le rapport. Les informations d'identification que vous fournissez sont utilisées pour accéder à la source de données et pour mettre en cache une copie des données pour afficher un aperçu des rapports. Pour plus d’informations sur la mise en cache de l’aperçu des données, consultez [Aperçu des rapports](reports/previewing-reports.md). Pour plus d’informations sur les informations d’identification, consultez [Spécifier des informations d’identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  

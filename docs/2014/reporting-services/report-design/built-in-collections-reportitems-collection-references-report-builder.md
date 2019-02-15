@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 684ee8c4738b2cc46cb847820a2408365c1a5cd1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 92872f29600bc380025e76933ef8a1aab2879e51
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042830"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285877"
 ---
 # <a name="reportitems-collection-references-report-builder-and-ssrs"></a>Références à la collection ReportItems (Générateur de rapports et SSRS)
   La collection intégrée `ReportItems` constitue l'ensemble des zones de texte des éléments de rapport, tels que les lignes d'une région de données ou les zones de texte de l'aire de conception du rapport. La collection `ReportItems` comprend les zones de texte situées dans l'étendue actuelle d'un en-tête de page, d'un pied de page ou du corps du rapport. Cette collection est déterminée au moment de l'exécution par le processeur de rapports et le convertisseur de rapports. L'étendue actuelle change à mesure que le processeur de rapports combine successivement les données du rapport et ses éléments de mise en page lorsque l'utilisateur visualise les pages du rapport. Vous pouvez utiliser la collection intégrée `ReportItems` pour produire des en-têtes de page de type dictionnaire, qui représentent le premier et le dernier éléments de chaque page.  

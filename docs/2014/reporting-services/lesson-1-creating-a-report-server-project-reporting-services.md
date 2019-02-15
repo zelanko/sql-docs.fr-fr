@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 52050b9513de2638cacc394309f7e87d6ba77709
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48ad3fd25dd842ca1f4979a6875887d6ad656508
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032360"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286467"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Leçon 1 : Création d’un projet de serveur de rapports (Reporting Services)
   Pour créer un rapport dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vous devez commencer par créer un projet Report Server dans lequel vous allez enregistrer votre fichier de définition de rapport (.rdl), ainsi que les autres fichiers de ressources dont vous avez besoin pour votre rapport. Puis, vous créez le fichier réel de définition du rapport, et définissez une source de données pour votre rapport, un dataset et la mise en page du rapport. Quand vous exécutez le rapport, les données réelles sont extraites et combinées avec la mise en page, puis restituées sur votre écran, à partir duquel vous pouvez les exporter, les imprimer ou les enregistrer.  

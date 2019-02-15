@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10127"
 ms.assetid: 0c030cab-6087-45a5-99f0-c7bd693f20a1
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 27b03c35d329f207805521a70e628a7dc2045a94
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a88f06bec5a488ffde925cdcb32e0e7078da165a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025810"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294437"
 ---
 # <a name="column-visibility-dialog-box-report-builder"></a>Boîte de dialogue Visibilité de la colonne (Générateur de rapports)
   Utilisez la boîte de dialogue **Visibilité de la colonne** pour afficher ou masquer la colonne sélectionnée lorsque le rapport est exécuté pour la première fois, ou pour utiliser un autre élément de rapport pour activer/désactiver la visibilité de la colonne.  

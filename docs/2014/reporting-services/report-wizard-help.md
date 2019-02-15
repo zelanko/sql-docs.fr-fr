@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Report Wizard
 - Report Designer [Reporting Services], wizards
 ms.assetid: 68287bcf-f91a-429f-bb7c-48c029b041fa
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5e08d75c67bf1f335279dd1dcf3885017342e4ad
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7f481692acf68d84916f11babf10562d0f1d0b9c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041330"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285537"
 ---
 # <a name="report-wizard-help"></a>Aide de l'Assistant Rapport
   Cette section décrit l'aide obtenue en appuyant sur F1 dans l'Assistant Rapport. L'Assistant Rapport automatise le processus de création de rapports tabulaires et de matrice. Le tableau suivant décrit les rubriques de cette section.  

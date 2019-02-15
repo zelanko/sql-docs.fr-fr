@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.axisproperties.axisoptions.f1
 - "10138"
 ms.assetid: b276e210-7a12-48ae-971b-7dabae51df11
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 690f092b98a76ddd9ccc18d15f4250e7e856efa0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: eb65c421d1e79a6bdd625ad627aca841dbc410bc
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030648"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286498"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'axe, Options de l'axe (Générateur de rapports et SSRS)
   Sélectionnez **Options de l’axe** sur le **Horizontal** ou **propriétés de l’axe vertical** boîte de dialogue pour définir l’apparence de l’axe spécifié du graphique. Dans les versions précédentes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], le graphique affichait par défaut toutes les étiquettes sur l'axe des abscisses. En revanche, dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008, le graphique ignore les étiquettes pour produire une image plus lisible et éviter les collisions d'étiquette. Pour plus d’informations, consultez [Mise en forme des points de données sur un graphique &#40;Générateur de rapports et SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  

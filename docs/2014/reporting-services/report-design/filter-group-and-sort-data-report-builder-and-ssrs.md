@@ -17,15 +17,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.categorygroupproperties.general.f1
 - "10412"
 ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 0d6f6fb32544cdd38d819dac35d0cf2ee35a372f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011860"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294687"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrer, regrouper et trier des données (Générateur de rapports et SSRS)
   Dans un rapport, les expressions sont utilisées pour aider à contrôler, organiser et trier les données de rapport. Par défaut, lorsque vous créez des datasets et concevez la mise en page de rapport, les propriétés des éléments de rapport prennent automatiquement la valeur d'expressions en fonction des champs, paramètres et autres éléments de dataset qui s'affichent dans le volet des données de rapport. Vous pouvez également ajouter un bouton de tri interactif à une cellule de tableau ou de matrice afin de permettre à un utilisateur de modifier interactivement l'ordre de tri des lignes pour des groupes ou pour des lignes situées dans des groupes.  

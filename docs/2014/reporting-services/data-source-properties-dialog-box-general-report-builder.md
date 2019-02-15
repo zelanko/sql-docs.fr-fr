@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10018"
 ms.assetid: b956f43a-8426-4679-acc1-00f405d5ff5b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e64f98f376e704716a40eedcda8351331280fb9e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 977a7dcb943b3479dd5649cfcf842aefcf469e90
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031850"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285717"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Boîte de dialogue Propriétés de la source de données, Général (Générateur de rapports)
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés de la source de données** pour sélectionner une source de données partagée à partir d'un serveur de rapports, ou pour créer ou modifier les informations de connexion d'une source de données incorporée au rapport.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.components.f1
 ms.assetid: 0c34311d-05d6-4bd2-b452-545fa95f8e7f
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 70a4cdef25a096f4ff0514f169839df482e9f4b3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9c8646e1fda1b36408276ec61272240b78bea74f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043340"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286327"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Parties de rapport dans le Concepteur de rapports (SSRS)
   Dans le Concepteur de rapports, une fois que vous avez créé des tables, graphiques et autres éléments de rapport dans un projet, vous pouvez les publier comme des *parties de rapport* sur un serveur de rapports ou sur le site SharePoint intégré avec un serveur de rapports afin que vous et d'autres personnes puissiez les réutiliser dans d'autres rapports.  

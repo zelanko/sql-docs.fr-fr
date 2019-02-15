@@ -12,15 +12,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - reports [Reporting Services], creating
 ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 83046be3fc713768d4dffd8dc2ef22f37496858e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022967"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286677"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Créer un rapport de tableau de base (didacticiel SSRS)
   Ce didacticiel est conçu pour vous aider à créer un rapport de tableau de base selon la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] de base de données à l’aide du Concepteur de rapports. Pour créer des rapports, vous pouvez également utiliser le Générateur de rapports et l'Assistant Rapport. Dans ce didacticiel, vous allez créer un projet de rapport, configurer des informations de connexion, définir une requête, ajouter une région de données de table, regrouper certains champs et calculer leurs totaux et afficher un aperçu du rapport.  

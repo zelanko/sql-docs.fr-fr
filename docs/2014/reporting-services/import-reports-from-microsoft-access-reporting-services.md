@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Access reports [Reporting Services]
 - importing reports
 ms.assetid: 4f29d5b8-b77d-4714-a84a-05523df55646
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 84f74f51879a777ea0b9874f1b124806c109e02f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7458de1c7424bf3c5b856c263e5180e33e207f76
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022190"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286347"
 ---
 # <a name="import-reports-from-microsoft-access-reporting-services"></a>Importer des rapports depuis Microsoft Access (Reporting Services)
   Dans le Concepteur de rapports, vous pouvez importer des rapports à partir d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] base de données Access ou un projet. Microsoft Access 2002 (ou version ultérieure) doit être installé sur le même ordinateur que le Concepteur de rapports.  

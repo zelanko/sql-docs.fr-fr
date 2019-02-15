@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a8d24287-8557-4b03-bea7-ca087f449b62
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d3e5c894c75002f95ed67c8383c5497db998dfa9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 03cd909df14920fffb7cb1c9e283946df0be7dd9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011960"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294587"
 ---
 # <a name="expression-scope-for-totals-aggregates-and-built-in-collections-report-builder-and-ssrs"></a>Étendue des expressions pour les totaux, les agrégats et les collections intégrées (Générateur de rapports et SSRS)
   En écrivant des expressions, vous constaterez que le terme *étendue* est utilisé dans plusieurs contextes. L'étendue peut spécifier les données à utiliser pour l'évaluation d'une expression, le jeu de zones de texte dans une page rendue, le jeu des éléments de rapport qui peuvent être affichés ou masqués selon un élément de bascule. Vous verrez le terme *étendue* dans les rubriques relatives à une évaluation d'expression, une syntaxe de fonction d'agrégation, une visibilité conditionnelle et également dans les messages d'erreur liés à ces domaines. Utilisez les descriptions suivantes pour mieux différencier les significations du terme *étendue* qui s'appliquent :  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: bb16e4ab-b13f-48f2-8cfe-1851656875ef
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 1ed7f6b31303a078da975850cd3cd3bf38554199
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0b902cfcb12a38ae15a175502884c1720a5a9c90
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022234"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285428"
 ---
 # <a name="expression-reference-report-builder-and-ssrs"></a>Référence d'expression (Générateur de rapports et SSRS)
   Les expressions de rapport prennent en charge diverses références aux fonctions et collections intégrées. La syntaxe des expressions doit être conforme à [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] avant qu'un rapport ne puisse être publié ou traité.  

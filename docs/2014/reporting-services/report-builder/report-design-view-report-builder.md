@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d1a9e3264ce3580ec5b1c6d110ce745236accff1
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012091"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287017"
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
   La fenêtre du Générateur de rapports vise à vous permettre d'organiser facilement vos ressources de rapport et à générer rapidement les rapports dont vous avez besoin. L'aire de conception se trouve au centre de la fenêtre, avec au-dessus le ruban, à gauche le volet Données du rapport, en dessous le volet Regroupement et à droite le volet Propriétés, ainsi que la bibliothèque de parties de rapports. L'aire de conception est l'espace où vous ajoutez et organisez vos éléments de rapport. Le ruban organise les éléments de menu traditionnels en catégories faciles à repérer et à utiliser. Les volets vous permettent d'ajouter, de sélectionner et d'organiser vos ressources de rapport et de modifier les propriétés des éléments de rapport.  
