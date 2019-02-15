@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 411dd5fdcd58b9f009ffe8fbdefa39e39c273435
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7d9d9ff8cf279ff9a88a4c46b2ddc4b97e834b49
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012880"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287158"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Boîte de dialogue Propriétés du point de vue de la carte, Optimisation
   Sélectionnez **Optimisation** dans la boîte de dialogue **Propriétés de la fenêtre d'affichage de la carte** pour contrôler la résolution appliquée lors de l'affichage d'une carte dans un rapport.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 2dae0498da8fe1387b6b082d7cc6ae37af27d464
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a40980ddd8ee29d05fe4278baf512790751ee7d8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010190"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293785"
 ---
 # <a name="add-a-hyperlink-to-a-url-report-builder-and-ssrs"></a>Ajouter un lien hypertexte à une URL (Générateur de rapports et SSRS)
   Vous pouvez ajouter un lien hypertexte à un élément de rapport lorsque vous souhaitez que les utilisateurs soient en mesure de cliquer sur un lien dans un rapport et d'ouvrir un navigateur vers l'URL que vous spécifiez. Un lien hypertexte peut être une URL statique ou une expression qui est évaluée en une URL. Si une base de données comprend un champ avec des URL, vous pouvez insérer ce champ dans l'expression de façon à produire une liste dynamique de liens hypertexte dans le rapport. Vous pouvez ajouter des liens hypertexte aux zones de texte, aux images, aux graphiques et aux jauges. Vous devez vous assurer que l'utilisateur a accès à l'URL que vous fournissez.  

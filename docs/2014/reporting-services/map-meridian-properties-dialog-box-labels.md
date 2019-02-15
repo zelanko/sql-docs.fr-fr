@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapmeridianproperties.labels.f1
 - "10518"
 ms.assetid: 47650a82-3b0c-4e32-8565-e9332bdcf4d6
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: b663f9cd95d055fe8736ee2232bbc273fe89798e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4ecaf5c0ad58dcb3fbc60d9c6417ac969f85ca40
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015013"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296108"
 ---
 # <a name="map-meridian-properties-dialog-box-labels"></a>Boîte de dialogue Propriétés des méridiens de la carte, Étiquettes
   Utilisez le **MapMeridian propriétés** la boîte de dialogue options d’étiquette pour le quadrillage vertical de la carte. Un méridien représente la valeur suivante en fonction du système de coordonnées spécifié pour la fenêtre d'affichage :  

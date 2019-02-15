@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c127f225efe1976c6607fbdc62ef90707a205584
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dc26141bc33a991116f8bdca1316b4efe529dcfa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038051"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293657"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Graphiques sparkline et barres de données (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques simples de petite taille qui communiquent beaucoup d'informations dans un petit espace, souvent intégré au texte. Ils sont souvent utilisés dans les tables et les matrices. Ils tirent leur impact de l'affichage d'un grand nombre d'entre eux en même temps et de la possibilité de les comparer rapidement par superposition, au lieu de les examiner séparément. Les valeurs hors norme, les lignes qui ne sont pas exécutées comme les autres, sont ainsi plus visibles. Malgré sa petite taille, chaque graphique sparkline représente fréquemment plusieurs points de données, souvent dans le temps. Les barres de données peuvent représenter plusieurs points de données, mais en général n'en illustrent qu'un seul. Chaque graphique sparkline présente en général une série unique. Vous ne pouvez pas ajouter de graphique sparkline à un groupe de détails dans une table. Étant donné que les graphiques sparkline affichent des données agrégées, ils doivent entrer dans une cellule associée à un groupe. Les graphiques sparkline et les barres de données ont les mêmes éléments de graphique de base de catégories, séries et valeurs, mais ils n'ont aucune légende, ligne d'axe, étiquette ni graduation.  

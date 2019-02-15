@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b8404c1-aa89-4350-8bd6-203bc0446ee4
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c547558f98d514b73c4613d4e11f8694a6a7a91b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f255edbf6d3da61032551144062247865409efaa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014950"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288677"
 ---
 # <a name="shape-charts-report-builder-and-ssrs"></a>Graphiques à base de formes (Générateur de rapports et SSRS)
   Un graphique à base de formes affiche des valeurs sous la forme de pourcentages par rapport à un total. Les graphiques à base de formes sont utilisés en général pour afficher des comparaisons proportionnelles entre des valeurs différentes d'un ensemble. Les catégories sont représentées par les segments individuels de la forme. La taille du segment varie en fonction de la valeur. Les graphiques à base de formes sont semblables aux graphiques en secteurs, sauf qu'ils classent les catégories de la plus grande à la plus petite.  

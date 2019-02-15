@@ -14,15 +14,15 @@ helpviewer_keywords:
 - deleting shared data sources
 - modifying shared data sources
 ms.assetid: cd7bace3-f8ec-4ee3-8a9f-2f217cdca9f2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 99e083439e49d522ddc84f1f32454b0c4777237b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 240799493cc113a0885b0b957849aea25f97593a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025870"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293737"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Créer, supprimer ou modifier une source de données partagée (Gestionnaire de rapports)
   Une source de données partagée spécifie les propriétés de connexion d'une source de données. Si une source de données est utilisée par un grand nombre de rapports, de modèles ou d'abonnements pilotés par les données, songez à créer une source de données partagée pour éliminer le temps de traitement nécessaire à la gestion des mêmes informations de connexion à plusieurs emplacements.  

@@ -16,15 +16,15 @@ helpviewer_keywords:
 - importing reports
 - modules [Reporting Services]
 ms.assetid: 7ffec331-6365-4c13-8e58-b77a48cffb44
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e33547643adf7345bbbc7c020dcbd11959bb6119
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2f50d98eaa44d3e323fb72097bc78e9969a30bad
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012026"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294267"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Fonctionnalités des états Access prises en charge (SSRS)
   Lorsque vous importez un rapport dans le Concepteur de rapports, le processus d'importation convertit le rapport d'Access [!INCLUDE[msCoName](../includes/msconame-md.md)] en un fichier RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge plusieurs fonctionnalités d'Access ; toutefois, puisqu'il existe des différences entre Access et [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], certains éléments sont légèrement modifiés ou ne sont pas pris en charge. Cette rubrique décrit comment les fonctionnalités des états Access sont converties en mode RDL.  

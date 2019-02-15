@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - Select Color dialog box
 ms.assetid: ac7089a3-5c7b-4f53-8348-180610e86da2
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 59f66df0022d81c3aa12015b265ccd8b7d735190
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 882f7ba5aed75aec20d656c5ca49da66625ec6e6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031447"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293107"
 ---
 # <a name="select-color-dialog-box-report-builder-and-ssrs"></a>Boîte de dialogue Sélectionner une couleur (Générateur de rapports et SSRS)
   Utilisez la boîte de dialogue **Sélectionner une couleur** pour spécifier les options de couleur d'un graphique ou de l'arrière-plan d'une cellule ou de plusieurs cellules dans une région de données ou une zone de texte.  

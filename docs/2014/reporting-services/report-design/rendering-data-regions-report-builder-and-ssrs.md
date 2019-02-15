@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4f3b2c7d-3669-457f-899b-b758d1db3426
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 33710b2ee804f299d5769c5e2443bdd68ce77be2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: adf3365f43e9898e6282a571901913e0400acd9e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020371"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293707"
 ---
 # <a name="rendering-data-regions-report-builder-and-ssrs"></a>Rendu des régions de données (Générateur de rapports et SSRS)
   En plus des comportements de rendu généraux qui s'appliquent à tous les éléments de rapport, les régions de données suivent des comportements de pagination et de rendu supplémentaires. Les règles de rendu spécifiques aux régions de données comprennent la croissance d'une région de données, le rendu de cellules spéciales, telles que la cellule d'angle ou les cellules d'en-tête, le rendu de la lecture de droite à gauche d'une région de données. Cette rubrique présente le rendu des différents composants d'une région de données.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Designer [Reporting Services], report creation
 ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 3216a1978378676ef74c0ec11a57d73a9ba528ab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1c2f2fcb146be8e90a8b279920ea70cdcdc04300
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037810"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292057"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Concevoir des rapports à l'aide du Concepteur de rapports (SSRS)
   Utilisez le Concepteur de rapports pour créer des rapports et des solutions de création de rapports complets de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Le Concepteur de rapports fournit une interface graphique dans laquelle vous pouvez définir les sources de données, les datasets et les requêtes, les positions de mise en page des rapports pour les régions de données et les champs, ainsi que des fonctionnalités interactives telles que les paramètres et les jeux de rapports qui fonctionnent ensemble.  

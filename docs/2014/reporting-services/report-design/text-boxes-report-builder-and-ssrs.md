@@ -13,15 +13,15 @@ f1_keywords:
 - "10120"
 - sql12.rtp.rptdesigner.textboxproperties.general.f1
 ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5136dd8086295135f72ee91dc50921adf1331c73
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029300"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296207"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Zones de texte (Générateur de rapport et SSRS)
   Lorsque vous pensez à une zone de texte, vous pensez probablement à une zone autonome qui contient le texte sur une surface comme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. Dans le Générateur de rapports, certaines zones de texte sont comme cela et elles peuvent afficher le texte littéral pour les titres, les descriptions et les étiquettes, ou du texte dynamique basé sur des expressions. Toutefois, chaque cellule d'une table ou matrice (région de données de tableau matriciel) contient également une zone de texte, qui peut être mise en forme de la même manière que les zones de texte autonomes de votre rapport.  

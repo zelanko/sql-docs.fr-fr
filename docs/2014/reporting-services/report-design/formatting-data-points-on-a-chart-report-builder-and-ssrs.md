@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.serieslabelproperties.general.f1
 - "10248"
 ms.assetid: 08ec3818-f63a-4e89-b52c-750e47f48b85
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: c85c464c6ebf32d81c08c319999aa2c6d8b1514c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c23a01244e75abe7df4bedc62ec3a19246474b45
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043400"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296877"
 ---
 # <a name="formatting-data-points-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des points de données sur un graphique (Générateur de rapports et SSRS)
   Un point de données est la plus petite entité individuelle sur un graphique. Sur les graphiques qui ne sont pas à base de formes, les points de données sont représentés selon le type de graphique. Par exemple, une série à base de lignes comprend un ou plusieurs points de données reliés. Sur les graphiques à base de formes, les points de données sont représentés par des coupes ou segments individuels qui s'ajoutent à l'ensemble du graphique. Par exemple, sur un graphique à secteurs, chaque secteur est un point de données. Pour plus d’informations, consultez [Types de graphiques &#40;Générateur de rapports et SSRS&#41;](chart-types-report-builder-and-ssrs.md).  

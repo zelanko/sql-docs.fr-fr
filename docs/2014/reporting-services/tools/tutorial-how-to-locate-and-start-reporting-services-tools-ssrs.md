@@ -19,15 +19,15 @@ helpviewer_keywords:
 - tutorials [Reporting Services]
 - Report Manager [Reporting Services]
 ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 60d8938b8fd74a5a62ac9b122c897dc0008d4f9f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036900"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290737"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Didacticiel : Comment localiser et démarrer les outils Reporting Services (SSRS)
   Ce didacticiel présente les outils permettant de configurer un serveur de rapports, de gérer le contenu et les opérations d'un serveur de rapports, et de créer et publier des rapports. Ce didacticiel a pour but d'aider les nouveaux utilisateurs à savoir rechercher et ouvrir chaque outil. Si vous connaissez déjà les différents outils, vous pouvez enchaîner sur les autres didacticiels qui peuvent vous aider à acquérir d'importantes compétences dans l'utilisation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Pour plus d’informations sur les autres didacticiels, consultez [didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

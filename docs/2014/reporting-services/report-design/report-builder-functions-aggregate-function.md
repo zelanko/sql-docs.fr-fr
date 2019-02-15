@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 16ce643f-bbb3-40a5-ba78-7aed73156f3e
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 50a96884a5b97e0e4a287b0c731143dfa2d6e81f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4de1651cb33413f6629a12ce409004b1372a2a5e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029510"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296317"
 ---
 # <a name="aggregate-function-report-builder-and-ssrs"></a>Fonction d'agrégation (Générateur de rapports et SSRS)
   Retourne un agrégat personnalisé de l'expression spécifiée, comme défini par le fournisseur de données.  

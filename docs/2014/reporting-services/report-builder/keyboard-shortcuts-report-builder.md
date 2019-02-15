@@ -11,15 +11,15 @@ helpviewer_keywords:
 - keyboard shortcuts
 - shortcuts
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: dd30631b5ecdcfb55fcb571bd8bf3c1eb39713dc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bfda9c489cfde4f134f1b223dc7fe8f1db7f5367
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031940"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297194"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Raccourcis clavier (Générateur de rapports)
   Lorsque vous travaillez dans le Générateur de rapports, vous avez accès à toutes les touches de raccourci de navigation fournies par l'environnement Windows. Vous pouvez sélectionner l'un des différents schémas de configuration du clavier standard.  

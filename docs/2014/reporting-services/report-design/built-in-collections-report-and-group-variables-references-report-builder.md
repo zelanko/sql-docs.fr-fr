@@ -17,15 +17,15 @@ f1_keywords:
 - "10292"
 - "10412"
 ms.assetid: 4be5b463-3ce2-483d-a3c6-dae752cb543e
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 4733ba204671ec3ed691e77626fb08861b7e6763
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e82dbeda2c76e77eb9d35fed39a679c57e09f24d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043390"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290877"
 ---
 # <a name="report-and-group-variables-collections-references-report-builder-and-ssrs"></a>Références à des collections de variables de rapport et de groupe (Générateur de rapports et SSRS)
   Lorsqu'un calcul complexe est utilisé plusieurs fois dans les expressions d'un rapport, vous pouvez créer une variable. Vous pouvez créer une variable de rapport ou une variable de groupe. Les noms de variable doivent être uniques dans un rapport.  

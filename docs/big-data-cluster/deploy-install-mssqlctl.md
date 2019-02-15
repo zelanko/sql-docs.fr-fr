@@ -5,16 +5,16 @@ description: Découvrez comment installer l’outil mssqlctl pour l’installati
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 01/15/2018
+ms.date: 02/14/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d3ee1a0d2b6f3ec2c395b2c318aaf4b151497562
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 54fef15869eb86c3694adfb793ed028e22aadf4d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087608"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287117"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>Installer mssqlctl pour gérer des clusters SQL Server 2019 big data
 
@@ -23,7 +23,7 @@ Cet article décrit comment installer le **mssqlctl** outil sur Windows ou Linux
 **mssqlctl** est un utilitaire de ligne de commande écrit dans Python que permet aux administrateurs de démarrer et de gérer le cluster de données volumineuses via les API REST de cluster. La version de Python minimale requise est v3.5. Vous devez également avoir `pip` qui est utilisé pour télécharger et installer **mssqlctl** outil. Les instructions ci-dessous fournissent des exemples pour Windows et Ubuntu. Pour l’installation de Python sur d’autres plateformes, consultez le [documentation Python](https://wiki.python.org/moin/BeginnersGuide/Download).
 
 > [!IMPORTANT]
-> Si vous avez installé une version antérieure de **mssqlctl**, vous devez supprimer le cluster *avant* la mise à niveau **mssqlctl** et l’installation de la nouvelle version. Pour plus d’informations, consultez [mise à niveau vers une nouvelle version](deployment-guidance.md#upgrade).
+> Si vous installez une version plus récente de clusters de données volumineuses, vous devez sauvegarder vos données et supprimer l’ancien cluster *avant* la mise à niveau **mssqlctl** et l’installation de la nouvelle version. Pour plus d’informations, consultez [mise à niveau vers une nouvelle version](deployment-guidance.md#upgrade).
 
 ## <a id="windows"></a> Installation de mssqlctl Windows
 

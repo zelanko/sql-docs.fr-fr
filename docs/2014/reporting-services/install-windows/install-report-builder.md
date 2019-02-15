@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 830854a26d3f9b05465ee37aac6a9b7584750fe2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fe09fad05cc445b99ded7a35dc1e6b04b07f6450
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012710"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296857"
 ---
 # <a name="install-the-stand-alone-version-of-report-builder-report-builder"></a>Installer la version autonome du Générateur de rapports (Générateur de rapports)
   Vous pouvez installer le Générateur de rapports à partir de la [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] feature pack via le [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkID=168472) ou un emplacement tel que les dossiers publics auxquels le ReportBuilder3_x86.msi, le Package du programme d’installation de Windows pour le Générateur de rapports, a été téléchargé.  

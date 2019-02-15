@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 593de30c-69f0-42a8-8467-16e78647b74c
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ee2dd2c9776402dd639858e2a330f31d02b04635
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 835580a8c08712035776eb37432d10730363d417
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017710"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288917"
 ---
 # <a name="sharepoint-list-query-designer"></a>Concepteur de requêtes de liste SharePoint
   Le Concepteur de rapports fournit un Concepteur de requêtes graphique et un Concepteur de requêtes textuel qui permettent de créer une requête spécifiant les données à récupérer à partir d'un site SharePoint pour un dataset de rapport. Utilisez le Concepteur de requêtes graphique pour explorer les métadonnées de liste SharePoint, créer une requête de manière interactive et afficher les résultats de votre requête. Utilisez le Concepteur de requêtes textuel pour afficher la requête créée par le Concepteur de requêtes graphique, modifier une requête ou taper les commandes d'une requête. Vous pouvez également importer une requête existante à partir d'un fichier ou d'un rapport.  

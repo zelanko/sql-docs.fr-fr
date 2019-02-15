@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Reporting Services], creating
 ms.assetid: b111a8d0-a60d-4c8b-b00a-51644b19c34b
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d9da0718a6eee5fda00d6418a5b6a624f8380c7d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ff7f9c94aded21d70ea4b6ef6b31d2f8094f2592
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033480"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289807"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Créer une source de données incorporée ou partagée (SSRS)
   Une source de données de rapport spécifie un nom et des informations de connexion. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend deux types de sources de données en charge : incorporée et partagée. Une source de données incorporée est définie dans une définition de rapport et utilisée uniquement par ce rapport. Une source de données partagée est définie sous la forme d'un élément distinct et peut être utilisée par plusieurs rapports. Pour plus d’informations, consultez [incorporé et connexions de données partagées ou les Sources de données &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  

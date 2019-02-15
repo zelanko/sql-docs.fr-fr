@@ -11,15 +11,15 @@ f1_keywords:
 - "10541"
 - sql12.rtp.rptdesigner.shared.mapcolorrulesgeneral.f1
 ms.assetid: 14ff5fc1-4cf8-4a45-9d98-47a1bf1c52c4
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 6c1d4289f9785d6975c6bba85e8215f208a3c537
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7c21f95a8ace66b502de7128711acc1d840c4147
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018251"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289667"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Boîte de dialogue Règles de couleur de la carte, Général
   Sélectionnez **Général** dans la boîte de dialogue **Propriétés des règles de couleur** pour définir des options de couleur pour les éléments cartographiques de cette couche. Les éléments cartographiques peuvent être des polygones, des lignes ou des points. Les règles de couleur peuvent être appliquées lorsque vous avez créé une relation entre des éléments cartographiques basés sur des données spatiales et des données analytiques provenant d'un champ de dataset ou d'un champ de source de données spatiales.  

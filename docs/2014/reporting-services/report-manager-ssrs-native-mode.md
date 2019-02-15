@@ -18,15 +18,15 @@ helpviewer_keywords:
 - Report Manager [Reporting Services]
 - components [Reporting Services], Report Manager
 ms.assetid: 80949f9d-58f5-48e3-9342-9e9bf4e57896
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e5d96e743587a0f4c00e7f5f7777b95667e1ea84
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a505bb3f4647fa98e7cc2bccfbd64b5c3545c0e7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036570"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289011"
 ---
 # <a name="report-manager--ssrs-native-mode"></a>Report Manager  (SSRS Native Mode)
   Le Gestionnaire de rapports est un outil permettant d'accéder aux rapports et de les gérer via une interface Web. Vous l'utilisez pour administrer à partir d'un emplacement distant une instance de serveur de rapports unique par le biais d'une connexion HTTP. Cet outil met également à votre disposition une visionneuse de rapports et des fonctionnalités de navigation. Dans cette rubrique :  

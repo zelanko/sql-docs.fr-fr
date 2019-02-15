@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10437"
 ms.assetid: a2bab8c1-505d-4da3-b1db-ea0ae13b2336
-author: maggiesMSFT
-ms.author: maggies
+author: markingmyname
+ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 91d702b8b5b3402783fb47819bdd18d552682931
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8ef4cfaec1b66c9840d0dcf08d788b66b7107190
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022850"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291891"
 ---
 # <a name="exporting-reports-report-builder-and-ssrs"></a>Exportation de rapports (Générateur de rapports et SSRS)
   Une fois que vous avez exécuté un rapport, vous pouvez l'exporter vers un autre format (Excel ou PDF, par exemple) ou l'exporter en générant un document de service Atom, en répertoriant les flux de données conformes à Atom disponibles dans le rapport.  

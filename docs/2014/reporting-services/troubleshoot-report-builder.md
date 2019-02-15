@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 3806fc48-56f8-44d1-a3c1-df8c33cce0a3
-author: maggiesmsft
+author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 22eb90e4fc162d2805f760e8f0b3152c3791111f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 78f9232b45be9c70a8a244ff97af7d401419d49a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017690"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297167"
 ---
 # <a name="troubleshoot-report-builder"></a>Résolution des problèmes liés au Générateur de rapports
   Le Générateur de rapports est un outil de création de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui permet de générer des rapports à partir de nombreux types différents de sources de données et de les publier sur un serveur de rapports ou un site SharePoint. Les rapports que vous créez sont consultables dans le Générateur de rapports, dans un navigateur Web, ou en tant que partie d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] application de Windows ou un site SharePoint.  
