@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dqs.kb.importselect.f1
 - sql13.dqs.kb.failingvalues.f1
 ms.assetid: 04cde693-2043-477f-8417-fcc463ca7195
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 394fbfd149e9631148ca495675d93bda0ed652f1
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: dc7272c9dbc60054509a37646a0d097bce0e8c31
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616889"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017220"
 ---
 # <a name="import-values-from-an-excel-file-into-a-domain"></a>Importer les valeurs d'un fichier Excel dans un domaine
 
@@ -74,7 +74,7 @@ ms.locfileid: "52616889"
   
 14. Cliquez **Terminer** pour ajouter les valeurs à la base de connaissances.  
   
-##  <a name="FollowUp"></a> Suivi : Après l'importation des valeurs d'un fichier Excel dans un domaine  
+##  <a name="FollowUp"></a> Suivi : après l’importation des valeurs d’un fichier Excel dans un domaine  
  Après avoir importé des valeurs dans un domaine, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine, vous pouvez exécuter la découverte de connaissances pour ajouter des connaissances au domaine ou vous pouvez ajouter une stratégie correspondante au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Synonyms"></a> Importation des synonymes  

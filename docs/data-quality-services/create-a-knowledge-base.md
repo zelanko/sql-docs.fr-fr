@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.selectkb.f1
 - sql13.dqs.kb.newkb.f1
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c4acd731faa13c10a0c32e8e99d2c557748b3d6
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: d247179577812aafbac84fd886f0a1ac0c9a1b67
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020117"
 ---
 # <a name="create-a-knowledge-base"></a>Créer une base de connaissances
 
@@ -63,7 +63,7 @@ ms.locfileid: "52616339"
   
 6.  Cliquez sur **Créer**.  
   
-##  <a name="FollowUp"></a> Suivi : Après la création d'une base de connaissances  
+##  <a name="FollowUp"></a> Suivi : après la création d’une base de connaissances  
  Après avoir créé une base de connaissances, vous voyez s'afficher un Assistant qui vous permet d'effectuer la découverte des connaissances, un Assistant qui vous permet de créer une stratégie de correspondance, ou des pages pour exécuter la gestion des domaines. Pour plus d’informations sur la découverte des connaissances, la gestion de domaine ou la stratégie de correspondance, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
   

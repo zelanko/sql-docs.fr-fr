@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e67136cc-f8c6-4cb3-ba0b-c966c636256c
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 2505215ccc58c9f85d256a5aa4a9de1d292cb5e8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 90189e37b486d712f0a1a93fccc42b101f90bdbb
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617609"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027480"
 ---
 # <a name="data-cleansing"></a>Data Cleansing
 
@@ -67,15 +67,15 @@ ms.locfileid: "52617609"
 ##  <a name="Interactive"></a> Nettoyage interactif  
  En s'appuyant sur le processus de nettoyage assisté par ordinateur, DQS fournit au gestionnaire de données les informations dont il a besoin pour prendre une décision à propos de la modification des données. DQS classe les données dans les cinq onglets suivants :  
   
--   **Suggérés**: valeurs pour lesquelles DQS a identifié des suggestions dont le niveau de confiance est supérieur à la valeur du *seuil de suggestion automatique* mais inférieur à la valeur du *seuil de correction automatique* . Vous devez examiner ces valeurs et les approuver ou les refuser, selon le cas.  
+-   **Suggérés** : valeurs pour lesquelles DQS a identifié des suggestions dont le niveau de confiance est supérieur à la valeur du *seuil de suggestion automatique* mais inférieur à la valeur du *seuil de correction automatique*. Vous devez examiner ces valeurs et les approuver ou les refuser, selon le cas.  
   
--   **Nouveau**: valeurs valides pour lesquelles DQS ne dispose pas de suffisamment d'informations (suggestion) et qui ne peuvent donc être mappées à aucun autre onglet. En outre, cet onglet contient également les valeurs dont le niveau de confiance est inférieur à la valeur du *seuil de suggestion automatique* , mais suffisamment élevé pour être considéré comme valide.  
+-   **Nouveau** : valeurs valides pour lesquelles DQS ne dispose pas de suffisamment d'informations (suggestions) et qui ne peuvent donc être mappées à aucun autre onglet. En outre, cet onglet contient également les valeurs dont le niveau de confiance est inférieur à la valeur du *seuil de suggestion automatique* , mais suffisamment élevé pour être considéré comme valide.  
   
--   **Non valide**: valeurs qui ont été marquées comme valides dans le domaine de la base de connaissances ou valeurs qui ne respectent pas une règle de domaine ou des données de référence. Cet onglet contient également les valeurs qui sont rejetées par l'utilisateur dans l'un des quatre autres onglets pendant le processus de nettoyage interactif.  
+-   **Non valide** : valeurs qui ont été marquées comme valides dans le domaine de la base de connaissances ou valeurs qui ne respectent pas une règle de domaine ou des données de référence. Cet onglet contient également les valeurs qui sont rejetées par l'utilisateur dans l'un des quatre autres onglets pendant le processus de nettoyage interactif.  
   
--   **Corrigé**: valeurs corrigées par DQS pendant le processus de nettoyage automatisé lorsque DQS a trouvé une correction pour la valeur dont le niveau de confiance est supérieur à la valeur du *seuil de correction automatique* . Cet onglet contient également les valeurs pour lesquelles l'utilisateur a spécifié une valeur correcte dans la colonne **Corriger vers** lors du nettoyage interactif, puis approuvé en cliquant sur la case d'option dans la colonne **Approuver** de l'un des quatre autres onglets.  
+-   **Corrigé** : valeurs corrigées par DQS pendant le processus de nettoyage automatisé lorsque DQS a trouvé une correction pour la valeur dont le niveau de confiance est supérieur à la valeur du *seuil de correction automatique*. Cet onglet contient également les valeurs pour lesquelles l'utilisateur a spécifié une valeur correcte dans la colonne **Corriger vers** lors du nettoyage interactif, puis approuvé en cliquant sur la case d'option dans la colonne **Approuver** de l'un des quatre autres onglets.  
   
--   **Correct**: valeurs considérées comme correctes. Par exemple, la valeur correspond à une valeur de domaine. Si nécessaire, vous pouvez remplacer le nettoyage DQS en refusant les valeurs affichées sous cet onglet, ou en spécifiant un autre mot dans la colonne **Corriger vers** , puis en cliquant sur la case d'option dans la colonne **Accepter** . Cet onglet contient également les valeurs qui ont été approuvées par l'utilisateur lors du nettoyage interactif en cliquant sur la case d'option dans la colonne **Approuver** sous l'onglet **Nouveau** ou **Non valide** .  
+-   **Correct** : valeurs considérées comme correctes. Par exemple, la valeur correspond à une valeur de domaine. Si nécessaire, vous pouvez remplacer le nettoyage DQS en refusant les valeurs affichées sous cet onglet, ou en spécifiant un autre mot dans la colonne **Corriger vers** , puis en cliquant sur la case d'option dans la colonne **Accepter** . Cet onglet contient également les valeurs qui ont été approuvées par l'utilisateur lors du nettoyage interactif en cliquant sur la case d'option dans la colonne **Approuver** sous l'onglet **Nouveau** ou **Non valide** .  
   
 > [!NOTE]  
 >  Sous les onglets **Suggérés**, **Corrigé**et **Correct** , DQS affiche la valeur de début d'un domaine, le cas échéant, dans la colonne **Corriger vers** en fonction de la valeur de domaine correspondante.  

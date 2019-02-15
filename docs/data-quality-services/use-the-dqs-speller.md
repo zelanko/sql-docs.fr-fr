@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 65e4e53e-2699-4cae-a9e0-fe78547755b5
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 20764d8e2d377ae22f72cb4212d24d76ab92b993
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c2d852accb33b1667e5f2d0981d6f351543ee72a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616690"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029996"
 ---
 # <a name="use-the-dqs-speller"></a>Utiliser le vérificateur d'orthographe DQS
 
@@ -68,7 +68,7 @@ ms.locfileid: "52616690"
   
 6.  Si vous souhaitez ajouter la valeur au dictionnaire, cliquez sur **Ajouter au dictionnaire**. Le trait de soulignement rouge disparaîtra de la valeur.  
   
-##  <a name="FollowUp"></a> Suivi : Après utilisation du vérificateur d'orthographe  
+##  <a name="FollowUp"></a> Suivi : Après utilisation du vérificateur d’orthographe  
  Après avoir exécuté le vérificateur d'orthographe, complétez l'activité dans laquelle le domaine est pour utiliser les corrections suggérées par le vérificateur d'orthographe. Si vous êtes dans l'activité de découverte des connaissances, de gestion des domaines ou de stratégie de correspondance, publiez la base de connaissances afin que les résultats de l'analyse du vérificateur d'orthographe soient utilisables dans la base de connaissances. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Fonctionnement du vérificateur d'orthographe  

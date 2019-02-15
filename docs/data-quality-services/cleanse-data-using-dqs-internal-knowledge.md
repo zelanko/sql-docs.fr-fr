@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dqs.dqproject.correction.f1
 - sql13.dqs.dqproject.export.f1
 ms.assetid: c96b13ad-02a6-4646-bcc7-b4a8d490f5cc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: af37e0dd65edebe2037d305d085e5c65872d03f8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 0f4cd86a9c93d07ccf25665f3aff2d11e437d3f8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617649"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011538"
 ---
 # <a name="cleanse-data-using-dqs-internal-knowledge"></a>Nettoyer des données à l'aide de la base de connaissances DQS (interne)
 
@@ -60,11 +60,11 @@ ms.locfileid: "52617649"
 ##  <a name="Mapping"></a> Étape de mappage  
  Au cours de l'étape de mappage, vous spécifiez la connexion aux données sources à nettoyer, et mappez les colonnes des données sources avec les domaines appropriés dans la base de connaissances sélectionnée.  
   
-1.  Dans la page **Mapper** de l'Assistant de qualité des données pour le nettoyage, sélectionnez vos données sources à nettoyer : **SQL Server** ou **Fichier Excel**:  
+1.  Dans la page **Mapper** de l’Assistant de qualité des données pour le nettoyage, sélectionnez vos données sources à nettoyer : **SQL Server** ou **Fichier Excel** :  
   
-    1.  **SQL Server**: sélectionnez **DQS_STAGING_DATA** comme base de données source si vous avez copié vos données sources dans cette base de données, puis sélectionnez la table/vue appropriée qui contient vos données sources. Sinon, sélectionnez votre base de données source et la table/vue appropriée. Pour être disponible dans la liste déroulante [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Base de données **, votre base de données source doit être présente dans la même instance de SQL Server que** .  
+    1.  **SQL Server** : sélectionnez **DQS_STAGING_DATA** comme base de données source si vous avez copié vos données sources dans cette base de données, puis sélectionnez la table/vue appropriée qui contient vos données sources. Sinon, sélectionnez votre base de données source et la table/vue appropriée. Pour être disponible dans la liste déroulante [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Base de données **, votre base de données source doit être présente dans la même instance de SQL Server que** .  
   
-    2.  **Fichier Excel**: cliquez sur **Parcourir**, puis sélectionnez le fichier Excel qui contient les données à nettoyer. Pour pouvoir sélectionner un fichier Excel, Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Dans le cas contraire, le bouton **Parcourir** n'est pas disponible, et un message sous cette zone de texte vous indique que Microsoft Excel n'est pas installé. De plus, laissez la case à cocher **Utiliser la première ligne comme en-tête** activée si la première ligne du fichier Excel contient des données d'en-tête.  
+    2.  **Fichier Excel** : cliquez sur **Parcourir**, puis sélectionnez le fichier Excel qui contient les données à nettoyer. Pour pouvoir sélectionner un fichier Excel, Microsoft Excel doit être installé sur l'ordinateur [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] . Dans le cas contraire, le bouton **Parcourir** n'est pas disponible, et un message sous cette zone de texte vous indique que Microsoft Excel n'est pas installé. De plus, laissez la case à cocher **Utiliser la première ligne comme en-tête** activée si la première ligne du fichier Excel contient des données d'en-tête.  
   
 2.  Sous **Mappages**, mappez les colonnes de données de vos données sources avec les domaines appropriés dans la base de connaissances en sélectionnant une colonne source dans la liste déroulante de la colonne **Colonne source** , puis en sélectionnant un domaine dans la liste déroulante de la colonne **Domaine** de la même ligne. Répétez cette étape pour mapper toutes les colonnes de vos données sources avec les domaines appropriés dans la base de connaissances. Si nécessaire, vous pouvez cliquer sur l'icône **Ajouter un mappage de colonnes** pour ajouter des lignes à la table de mappage.  
   
@@ -99,11 +99,11 @@ ms.locfileid: "52617649"
 ##  <a name="Interactive"></a> Étape de nettoyage interactif  
  Au cours de l'étape de nettoyage interactif, vous pouvez voir les modifications que DQS a proposées, et décider de les implémenter, ou non, en les approuvant ou en les refusant. Dans le volet gauche de la page **Gérer et afficher les résultats** , DQS affiche la liste de tous les domaines que vous avez mappés précédemment au cours de l'étape de mappage, avec le nombre de valeurs des données sources analysées dans chaque domaine pendant l'étape de nettoyage assistée par ordinateur. Dans le volet droit de la page **Gérer et afficher les résultats** , en fonction du respect des règles de domaine, les règles de syntaxe et les algorithmes avancés, DQS classe les données sous cinq onglets avec un *niveau de confiance*. Le niveau de confiance indique le degré de certitude de DQS quant à la correction ou à la suggestion, et est basé sur les valeurs de seuil suivantes :  
   
--   **Seuil de correction automatique**: toute valeur qui a un niveau de confiance au-dessus de ce seuil est automatiquement corrigée par DQS. Toutefois, le gestionnaire de données peut remplacer la modification au cours du nettoyage interactif. Vous pouvez spécifier la valeur de seuil de correction automatique sous l'onglet **Paramètres généraux** de l'écran **Configuration** . Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Seuil de correction automatique** : toute valeur dont le niveau de confiance est au-dessus de ce seuil est automatiquement corrigée par DQS. Toutefois, le gestionnaire de données peut remplacer la modification au cours du nettoyage interactif. Vous pouvez spécifier la valeur de seuil de correction automatique sous l'onglet **Paramètres généraux** de l'écran **Configuration** . Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Seuil de suggestion automatique**: toute valeur qui a un niveau de confiance au-dessus de ce seuil, mais en dessous du seuil de correction automatique, est suggérée en tant que valeur de remplacement. DQS apportera la modification uniquement si le gestionnaire de données l'approuve. Vous pouvez spécifier la valeur de seuil de suggestion automatique sous l'onglet **Paramètres généraux** de l'écran **Configuration** . Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
+-   **Seuil de suggestion automatique** :  toute valeur dont le niveau de confiance est au-dessus de ce seuil, mais en dessous du seuil de correction automatique, est suggérée comme valeur de remplacement. DQS apportera la modification uniquement si le gestionnaire de données l'approuve. Vous pouvez spécifier la valeur de seuil de suggestion automatique sous l'onglet **Paramètres généraux** de l'écran **Configuration** . Pour plus d’informations, consultez [Configurer les valeurs de seuil pour le nettoyage et la correspondance](../data-quality-services/configure-threshold-values-for-cleansing-and-matching.md).  
   
--   **Autre**: toute valeur en dessous de la valeur de seuil de suggestion automatique n'est pas modifiée par DQS.  
+-   **Autre** :  toute valeur en dessous de la valeur de seuil de suggestion automatique n’est pas modifiée par DQS.  
   
  En fonction du niveau de confiance, les valeurs sont affichée sous les cinq onglets suivants :  
   
@@ -142,24 +142,24 @@ ms.locfileid: "52617649"
 ##  <a name="Export"></a> Étape d'exportation  
  Au cours de l'étape d'exportation, vous spécifiez des paramètres d'exportation de vos données nettoyées : ce qui doit être exporté et où.  
   
-1.  Dans la page **Exporter** de l'Assistant de qualité des données pour le nettoyage, sélectionnez le type de destination pour l'exportation de vos données nettoyées : **SQL Server**, **Fichier CSV**ou **Fichier Excel**.  
+1.  Dans la page **Exporter** de l’Assistant de qualité des données pour le nettoyage, sélectionnez le type de destination pour l’exportation de vos données nettoyées : **SQL Server**, **Fichier CSV** ou **Fichier Excel**.  
   
     > [!IMPORTANT]  
     >  Si vous utilisez une version 64 bits d'Excel, vous ne pouvez pas exporter les données nettoyées vers un fichier Excel : vous ne pouvez exporter que vers une base de données SQL Server ou un fichier .csv.  
   
-    1.  **SQL Server**: sélectionnez **DQS_STAGING_DATA** comme base de données de destination si vous voulez exporter vos données ici, puis indiquez le nom de la table qui sera créée pour stocker vos données exportées. Sinon, sélectionnez une autre base de données si vous voulez exporter des données vers une base de données différente, puis spécifiez le nom de la table qui sera créée pour stocker vos données exportées. Pour être disponible dans la liste déroulante [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Base de données **, votre base de données de destination doit être présente dans la même instance de SQL Server que** .  
+    1.  **SQL Server** : sélectionnez **DQS_STAGING_DATA** comme base de données de destination si vous voulez exporter vos données ici, puis indiquez le nom de la table qui sera créée pour stocker vos données exportées. Sinon, sélectionnez une autre base de données si vous voulez exporter des données vers une base de données différente, puis spécifiez le nom de la table qui sera créée pour stocker vos données exportées. Pour être disponible dans la liste déroulante [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] Base de données **, votre base de données de destination doit être présente dans la même instance de SQL Server que** .  
   
-    2.  **Fichier CSV**: cliquez sur **Parcourir**, puis indiquez le nom et l'emplacement du fichier .csv où vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier .csv avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.csv ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
+    2.  **Fichier CSV** : cliquez sur **Parcourir**, puis indiquez le nom et l’emplacement du fichier .csv dans lequel vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier .csv avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.csv ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
   
-    3.  **Fichier Excel**: cliquez sur **Parcourir**, puis indiquez le nom et l'emplacement du fichier Excel où vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier Excel avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.xlsx ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
+    3.  **Fichier Excel** : cliquez sur **Parcourir**, puis indiquez le nom et l’emplacement du fichier Excel dans lequel vous voulez exporter les données nettoyées. Vous pouvez également taper le nom du fichier Excel avec le chemin d'accès complet où vous voulez exporter les données nettoyées. Par exemple, « c:\ExportedData.xlsx ». Le fichier est enregistré sur l'ordinateur où [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] est installé.  
   
 2.  Activez la case à cocher **Normaliser la sortie** pour normaliser la sortie en fonction du format de sortie sélectionné pour le domaine. Par exemple, mettez la valeur de chaîne en majuscules ou mettez une majuscule à la première lettre du mot. Pour plus d'informations sur la spécification du format de sortie d'un domaine, consultez la liste **Mettre en forme la sortie vers** de la rubrique [Définir les propriétés du domaine](../data-quality-services/set-domain-properties.md).  
   
 3.  Ensuite, sélectionnez la sortie de données : exportez uniquement les données nettoyées ou exportez les données nettoyées ainsi que les informations relatives au nettoyage.  
   
-    -   **Données seulement**: cliquez sur la case d'option pour exporter uniquement les données nettoyées.  
+    -   **Données seulement** : cliquez sur la case d’option pour exporter uniquement les données nettoyées.  
   
-    -   **Données et informations sur le nettoyage**: cliquez sur la case d'option pour exporter les données suivantes pour chaque domaine :  
+    -   **Informations sur les données et le nettoyage** : cliquez sur la case d’option pour exporter les données suivantes pour chaque domaine :  
   
         -   **\<Domaine>_Source** : valeur d’origine dans le domaine.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "52617649"
   
         -   **\<Domaine>_Raison** : raison spécifiée pour la correction de la valeur.  
   
-        -   **\<Domaine>_Confiance** : niveau de confiance pour tous les termes qui ont été corrigés. Il est affiché en tant que valeur décimale équivalente à la valeur en pourcentage correspondante. Par exemple, un niveau de confiance de 95 % est affiché sous la forme 0,9500000.  
+        -   **\<Domaine>_Confiance** : le niveau de confiance pour tous les termes qui ont été corrigés. Il est affiché en tant que valeur décimale équivalente à la valeur en pourcentage correspondante. Par exemple, un niveau de confiance de 95 % est affiché sous la forme 0,9500000.  
   
         -   **\<Domaine>_État** : état de la valeur de domaine après le nettoyage des données. Par exemple, **Suggérés**, **Nouveau**, **Non valide**, **Corrigés**ou **Correct**.  
   
@@ -191,29 +191,29 @@ ms.locfileid: "52617649"
   
  L'onglet **Générateur de profils** fournit les statistiques suivantes pour les données sources, par le champ et par domaine :  
   
--   **Enregistrements**: nombre d'enregistrements, dans l'exemple de données, qui ont été analysés pour l'activité de nettoyage des données  
+-   **Enregistrements** : nombre d’enregistrements dans l’exemple de données qui ont été analysés pour l’activité de nettoyage des données  
   
--   **Enregistrements corrects**: nombre d'enregistrements identifiés comme étant corrects  
+-   **Enregistrements corrects** : nombre d’enregistrements identifiés comme étant corrects  
   
--   **Enregistrements corrigés**: nombre d'enregistrements qui ont été corrigés  
+-   **Enregistrements corrigés** : nombre d’enregistrements qui ont été corrigés  
   
--   **Enregistrements suggérés**: nombre d'enregistrements qui ont été suggérés  
+-   **Enregistrements suggérés** : nombre d’enregistrements qui ont été suggérés  
   
--   **Enregistrements non valides**: nombre d'enregistrements qui étaient non valides  
+-   **Enregistrements non valides** : nombre d’enregistrements qui n’étaient pas valides  
   
  Les statistiques de champ sont les suivantes :  
   
--   **Champ**: nom du champ dans les données sources  
+-   **Champ** : nom du champ dans les données sources  
   
--   **Domaine**: nom du domaine mappé au champ  
+-   **Domaine** : nom du domaine mappé au champ  
   
--   **Valeurs corrigées**: nombre de valeurs de domaine qui ont été corrigées  
+-   **Valeurs corrigées** : nombre de valeurs de domaine qui ont été corrigées  
   
--   **Valeurs suggérées**: nombre de valeurs de domaine qui ont été suggérées  
+-   **Valeurs suggérées** : nombre de valeurs de domaine qui ont été suggérées  
   
--   **Exhaustivité**: exhaustivité de chaque champ source qui est mappé pour l'activité de nettoyage  
+-   **Exhaustivité** : exhaustivité de chaque champ source qui est mappé pour l’activité de nettoyage  
   
--   **Précision**: précision de chaque champ source qui est mappé pour l'activité de nettoyage  
+-   **Précision** : précision de chaque champ source qui est mappé pour l’activité de nettoyage  
   
  Le profilage DQS fournit deux dimensions de qualité des données : l' *exhaustivité* (dans quelle mesure des données sont présentes) et la *précision* (dans quelle mesure des données peuvent être utilisées pour l'usage prévu). Si le profilage vous informe qu'un champ est relativement incomplet, vous pouvez le supprimer de la base de connaissances d'un projet de qualité des données. Le profilage peut ne pas fournir des statistiques d'exhaustivité fiables pour les domaines composites. Si vous avez besoin des statistiques d'exhaustivité, utilisez des domaines simples plutôt que des domaines composites. Si vous souhaitez utiliser des domaines composites, vous pouvez créer une base de connaissances avec des domaines simples pour le profilage, afin de déterminer l'exhaustivité, et créer un autre domaine avec un domaine composite pour le processus de nettoyage. Par exemple, le profilage peut afficher une exhaustivité de 95 % pour les enregistrements d'adresse à l'aide d'un domaine composite, mais il peut y avoir un niveau bien supérieur de non-exhaustivité pour l'une des colonnes, par exemple, une colonne de code postal. Dans cet exemple, vous pouvez mesurer l'exhaustivité de la colonne de code postal avec un domaine unique. Le profilage fournira probablement des statistiques de précision fiables pour les domaines composites, car vous pouvez mesurer la précision de plusieurs colonnes ensemble. Comme la valeur de ces données se trouve dans l'agrégation composite, vous pouvez mesurer la précision avec un domaine composite.  
   

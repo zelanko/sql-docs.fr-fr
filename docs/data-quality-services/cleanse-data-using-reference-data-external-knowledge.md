@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 05fd04b48f878fc157e8f4c7bb8237e4f3c3f515
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: bec1e9c00c0c97bda29dd1deceac6ca152b6c085
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617189"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036020"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Nettoyer les données à l'aide de la connaissance des données de référence (externes)
 
@@ -42,7 +42,7 @@ ms.locfileid: "52617189"
     > [!NOTE]  
     >  Les valeurs de seuil que vous spécifiez pendant le mappage d'un domaine à un service de données de référence sont appliquées tout en nettoyant les données à l'aide de la connaissance du service des données de référence, et non celles spécifiées dans l'onglet **Paramètres généraux** de la section **Configuration** . Pour plus d’informations sur la spécification des valeurs de seuil pour le nettoyage des données de référence, consultez l’étape 9 dans [Attacher un domaine ou un domaine composite à des données de référence](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md).  
   
--   Les valeurs de domaine sont classées par catégorie comme suit : **Suggérées**, **Nouvelles**, **Non valides**, **Corrigées**et **Correctes**.  
+-   Les valeurs de domaine sont classées dans les catégories suivantes : **Suggérés**, **Nouveau**, **Non valide**, **Corrigés** et **Correct**.  
   
 -   Les informations supplémentaires sont ajoutées à la source, puis les informations sont disponibles avec les données nettoyées pour l'exportation.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "52617189"
   
 1.  Créez un projet de qualité des données, puis sélectionnez l'activité **Nettoyage** . Consultez [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   
-2.  Dans la page **Mapper** , mappez les 4 domaines suivants avec les colonnes appropriées de votre source de données : **Adresse**, **Ville**, **État**et **Code postal**. Cliquez sur **Suivant**.  
+2.  Dans la page **Mapper**, mappez les 4 domaines suivants avec les colonnes appropriées de vos données sources : **Ligne d’adresse**, **Ville**, **État** et **Code postal**. Cliquez sur **Suivant**.  
   
     > [!NOTE]  
     >  Lorsque vous avez mappé les 4 domaines du domaine composite de **Contrôle d'adresse** , le nettoyage des données sera effectué au niveau du domaine composite, et non au niveau du domaine individuel.  
@@ -71,7 +71,7 @@ ms.locfileid: "52617189"
     > [!NOTE]  
     >  Sur la page **Nettoyer** , DQS affiche les informations sur les domaines joints au service des données de référence de deux façons :  
     >   
-    >  -   Un message s’affiche sous le bouton **Démarrer** : « Les domaines \<Domaine1>, \<Domaine2>,… \<DomaineN> sont nettoyés à l’aide du fournisseur de services de données de référence ». Dans cet exemple, le message suivant s’affiche : « La vérification d’adresse de domaine est nettoyée à l’aide du fournisseur de services de données de référence. »  
+    >  -   Un message s’affiche sous le bouton **Démarrer** : « Les domaines \<Domaine1>, \<Domaine2>,... \<DomaineN> sont nettoyés à l’aide du fournisseur de services de données de référence ». Dans cet exemple, le message suivant s’affiche : « La vérification d’adresse de domaine est nettoyée à l’aide du fournisseur de services de données de référence ».  
     > -   Une icône, ![Le domaine est attaché à un fournisseur de services de données](../data-quality-services/media/dqs-rdsindicator.JPG "Le domaine est attaché à un fournisseur de services de données"), est affichée dans la zone **Générateur de profils** sur les domaines joints au fournisseur de services de données de référence. Dans cet exemple, l'icône sera affichée sur le domaine composite **Contrôle d'adresse** .  
   
 4.  Dans la page **Gérer et afficher les résultats** , vérifiez les valeurs de domaine. Le service de données de référence peut afficher plusieurs suggestions, si elles sont disponibles, pour une valeur en fonction du nombre maximal de suggestions spécifiées dans la zone **Candidats suggérés** lors du mappage du domaine au service des données de référence. Par exemple, deux suggestions s'affichent pour l'adresse américaine suivante :  

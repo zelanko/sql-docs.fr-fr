@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.kb.openkb.f1
 ms.assetid: a5f010a5-b762-41c9-881b-bf0c192dca83
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e724810a6626a15b9a2a81cfce9354c126680366
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 937e7258777e1ce4f3a147e099252d95de23997d
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617789"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027170"
 ---
 # <a name="open-a-knowledge-base"></a>Ouvrir une base de connaissances
 
@@ -72,7 +72,7 @@ ms.locfileid: "52617789"
   
 -   Pour ouvrir une base de connaissances dans la liste Récents qui a été verrouillée par une autre personne, contactez cette personne et demandez-lui de déverrouiller la base de connaissances.  
   
-##  <a name="FollowUp"></a> Suivi : Après l'ouverture d'une base de connaissances  
+##  <a name="FollowUp"></a> Suivi : après l’ouverture d’une base de connaissances  
  Après avoir ouvert une base de connaissances, la base de connaissances est placée dans l'état indiqué dans la colonne d'état de la table de base de connaissances. Pour les activités de découverte des connaissances et de stratégie de correspondance, la base de connaissances est ouverte dans une page de l'Assistant spécifique. Pour l'activité de gestion de l'arborescence du domaine, la base de connaissances est ouverte dans la page de gestion de l'arborescence du domaine. Pour plus d’informations sur les différents états, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Locked"></a> Si la base de connaissances est verrouillée  
@@ -81,20 +81,20 @@ ms.locfileid: "52617789"
 ##  <a name="State"></a> État d'une base de connaissances  
  Le champ État indique l'étape d'une activité à laquelle la base de connaissances se trouve. Si vous ouvrez la base de connaissances, elle s'ouvre à cette étape.  
   
--   **\<Vide>**  : le champ État est vide pour une base de connaissances qui a été publiée en cliquant sur **Publier** dans l’activité de gestion de l’arborescence du domaine, puis sur **Oui. Publier la base de connaissances et quitter**.  
+-   **\<Vide>**  : le champ État est vide pour une base de connaissances si celle-ci a été publiée en cliquant sur **Publier** dans l’activité Gestion de l’arborescence du domaine, puis sur **Oui - Publier la base de connaissances et quitter**.  
   
--   **En cours** : le travail effectué dans la base de connaissances a été enregistré en cliquant sur **Publier** dans l’activité de gestion de l’arborescence du domaine, puis sur **Non. Enregistrer le travail dans la base de connaissances et quitter**.  
+-   **En cours** : le travail effectué dans la base de connaissances a été enregistré en cliquant sur **Publier** dans l’activité Gestion de l’arborescence du domaine, puis sur **Non - Enregistrer le travail dans la base de connaissances et quitter**.  
   
--   **Gestion de l'arborescence du domaine**: des données ont été entrées pour un domaine dans la base de connaissances, mais la base de connaissances n'a pas été publiée et le travail reste dans l'activité de gestion de l'arborescence du domaine. L'activité de découverte des connaissances n'est pas disponible. Cela se produit lorsque vous cliquez sur **Fermer** dans l'écran **Gestion de l'arborescence du domaine** .  
+-   **Gestion de l’arborescence du domaine** : des données ont été entrées pour un domaine dans la base de connaissances, mais celle-ci n’a pas été publiée et le travail reste dans l’activité Gestion de l’arborescence du domaine. L'activité de découverte des connaissances n'est pas disponible. Cela se produit lorsque vous cliquez sur **Fermer** dans l'écran **Gestion de l'arborescence du domaine** .  
   
--   **Découverte - Mappage**: la base de connaissances a été fermée sur la page **Gestion de la base de connaissances : Mappage** . La base de connaissances est verrouillée, et les activités de gestion de l'arborescence du domaine et de correspondance ne sont pas disponibles.  
+-   **Découverte - Mappage** : la base de connaissances a été fermée dans la page **Gestion de la base de connaissances : Mappage**. La base de connaissances est verrouillée, et les activités de gestion de l'arborescence du domaine et de correspondance ne sont pas disponibles.  
   
--   **Découverte - Découvrir**: la base de connaissances a été fermée sur la page **Gestion de la base de connaissances : Analyse** . La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
+-   **Découverte - Découvrir** : la base de connaissances a été fermée dans la page **Gestion de la base de connaissances : Analyser**. La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
   
--   **Découverte - Gestion des valeurs** : la base de connaissances a été fermée sur la page **Gestion de la base de connaissances : Gestion des termes de domaine**. La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
+-   **Découverte - Gestion des valeurs** : la base de connaissances a été fermée dans la page **Gestion de la base de connaissances : Gérer les termes de domaine**. La base de connaissances est verrouillée et l'activité de gestion de l'arborescence du domaine n'est pas disponible.  
   
--   **Stratégie de correspondance - Stratégie de correspondance** : la base de connaissances a été fermée sur la page **Stratégie de correspondance - Stratégie de correspondance**. La base de connaissances est verrouillée, et les activités de découverte des connaissances et de gestion de l'arborescence du domaine ne sont pas disponibles.  
+-   **Stratégie de correspondance - Stratégie de correspondance** : la base de connaissances a été fermée dans la page **Stratégie de correspondance - Stratégie de correspondance**. La base de connaissances est verrouillée, et les activités de découverte des connaissances et de gestion de l'arborescence du domaine ne sont pas disponibles.  
   
--   **Stratégie de correspondance - Résultats de correspondance** : la base de connaissances a été fermée sur la page **Stratégie de correspondance - Résultats de correspondance**. La base de connaissances est verrouillée, et les activités de découverte des connaissances et de gestion de l'arborescence du domaine ne sont pas disponibles.  
+-   **Stratégie de correspondance - Résultats de correspondance** : la base de connaissances a été fermée dans la page **Stratégie de correspondance - Résultats de correspondance**. La base de connaissances est verrouillée, et les activités de découverte des connaissances et de gestion de l'arborescence du domaine ne sont pas disponibles.  
   
   

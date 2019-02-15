@@ -19,12 +19,12 @@ ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 63af3d34937b221a50f7c6217ae9c73c41d1cbb6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
+ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209298"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55832081"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Préparer une base de données secondaire pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -194,36 +194,36 @@ Cette rubrique explique comment préparer une base de données pour un groupe de
         GO  
         ```  
   
-5.  Après avoir restauré la sauvegarde complète, vous devez créer une sauvegarde du journal sur la base de données primaire. Par exemple, l’instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante sauvegarde le journal dans un fichier de sauvegarde nommé *E:\MyDB1_log.bak*:  
+5.  Après avoir restauré la sauvegarde complète, vous devez créer une sauvegarde du journal sur la base de données primaire. Par exemple, l’instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante sauvegarde le journal dans un fichier de sauvegarde nommé *E:\MyDB1_log.trn* :  
   
     ```  
     BACKUP LOG MyDB1   
-      TO DISK = 'E:\MyDB1_log.bak'   
+      TO DISK = 'E:\MyDB1_log.trn'   
     GO  
     ```  
   
 6.  Avant de pouvoir joindre la base de données au réplica secondaire, vous devez appliquer la sauvegarde du journal requise (et toutes les sauvegardes de journal ultérieures).  
   
-     Par exemple, l’instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante restaure le premier journal à partir de *C:\MyDB1.bak*:  
+     Par exemple, l’instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante restaure le premier journal à partir de *C:\MyDB1.trn* :  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=1, NORECOVERY  
     GO  
     ```  
   
 7.  Si des sauvegardes de journal supplémentaires se produisent avant la jointure de la base de données au réplica secondaire, vous devez également restaurer toutes ces sauvegardes de journal, dans l'ordre, dans l'instance de serveur qui héberge le réplica secondaire à l'aide de RESTORE WITH NORECOVERY.  
   
-     Par exemple, l’instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante restaure deux journaux supplémentaires à partir de *E:\MyDB1_log.bak*:  
+     Par exemple, l’instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivante restaure deux journaux supplémentaires à partir de *E:\MyDB1_log.trn* :  
   
     ```  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=2, NORECOVERY  
     GO  
     RESTORE LOG MyDB1   
-      FROM DISK = 'E:\MyDB1_log.bak'   
+      FROM DISK = 'E:\MyDB1_log.trn'   
         WITH FILE=3, NORECOVERY  
     GO  
     ```  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 273d0e9df4a5cd5a2649fcd8ada4fe9891393dcd
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 677432f74ac67ecdcc835520cf4cfc208cbc33de
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617939"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024720"
 ---
 # <a name="install-data-quality-services"></a>Installer Data Quality Services
 
@@ -26,7 +26,7 @@ ms.locfileid: "52617939"
   
 |Composant DQS|Description|  
 |-------------------|-----------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] est installé sur le moteur de base de données [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] et inclut trois bases de données : DQS_MAIN, DQS_PROJECTS et DQS_STAGING_DATA. DQS_MAIN contient des procédures stockées DQS, le moteur DQS et des bases de connaissances publiées. DQS_PROJECTS contient les informations du projet Data Quality. DQS_STAGING_DATA est la zone de transit où vous pouvez copier vos données sources pour effectuer des opérations DQS, puis exporter vos données traitées.|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] est installé sur le moteur de base de données [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] et comprend trois bases de données : DQS_MAIN, DQS_PROJECTS et DQS_STAGING_DATA. DQS_MAIN contient des procédures stockées DQS, le moteur DQS et des bases de connaissances publiées. DQS_PROJECTS contient les informations du projet Data Quality. DQS_STAGING_DATA est la zone de transit où vous pouvez copier vos données sources pour effectuer des opérations DQS, puis exporter vos données traitées.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] est une application autonome qui vous permet de vous connecter à [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]et vous fournit une interface utilisateur graphique hautement intuitive pour effectuer des opérations de contrôle qualité des données et d’autres tâches administratives associées à DQS.|  
   
 > [!IMPORTANT]  
@@ -38,11 +38,11 @@ ms.locfileid: "52617939"
   
  L'installation DQS est un processus en trois parties :  
   
--   [Tâches de préinstallation](#PreInstallationTasks): vérifiez la configuration requise avant d’installer DQS.  
+-   [Tâches de pré-installation](#PreInstallationTasks) : vérifiez la configuration requise avant d’installer DQS.  
   
--   [Tâches d'installation de Data Quality Services](#DQSInstallation): installent DQS à l'aide du programme d'installation de SQL Server.  
+-   [Tâches d’installation de Data Quality Services](#DQSInstallation) : installez DQS à l'aide du programme d’installation de SQL Server.  
   
--   [Tâches de post-installation](#PostInstallationTasks): exécutez ces tâches après avoir installé SQL Server pour finir d’installer DQS.  
+-   [Tâches de post-installation](#PostInstallationTasks) : effectuez ces tâches après avoir installé SQL Server pour terminer l’installation de DQS.  
   
 > [!NOTE]  
 >  Cette rubrique ne contient pas d'instructions relatives à l'exécution du programme d'installation à partir de la ligne de commande. Pour plus d’informations sur les options de ligne de commande pour l’installation de [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] et du client, consultez [Paramètres de fonctionnalités](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Feature) dans [Installer SQL Server à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "52617939"
   
 |Composant DQS|Configuration minimale requise|  
 |-------------------|---------------------------------|  
-|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Mémoire (RAM): 2 Go minimum ; mémoire recommandée : 4 Go ou plus<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] . Pour plus d’informations, consultez [Installer le moteur de base de données SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
+|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|Mémoire (RAM) : Minimum : 2 Go / Recommandation : 4 Go ou plus<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] . Pour plus d’informations, consultez [Installer le moteur de base de données SQL Server](../../database-engine/install-windows/install-sql-server-database-engine.md).|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|.NET Framework 4.0 (installé lors de l'installation du [!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] , si ce composant n'est pas déjà installé)<br /><br /> Internet Explorer 6.0 SP1 ou version ultérieure.|  
   
 > [!IMPORTANT]  
@@ -110,13 +110,13 @@ ms.locfileid: "52617939"
     > [!NOTE]  
     >  Les trois rôles DQS ne sont pas disponibles pour les bases de données DQS_PROJECTS et DQS_STAGING_DATA.  
   
-3.  Rendez vos données disponibles pour les opérations DQS. Assurez-vous que vous avez accès à vos données sources pour les opérations DQS et que vous pouvez exporter les données traitées vers une table dans une base de données.  
+3.  Rendez vos données disponibles pour les opérations DQS. Assurez-vous que vous avez accès à vos données sources pour les opérations DQS et que vous pouvez exporter les données traitées vers une table dans une base de données.  
   
      Pour plus d’informations, consultez  
                     [Accéder aux données pour les opérations DQS](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Vidéo : Installer et configurer DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
+ [Vidéo : Install and Configure DQS](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [Mettre à niveau des assemblys SQLCLR après une mise à jour de .NET Framework](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [Exporter et importer des bases de connaissances DQS à l’aide de DQSInstaller.exe](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   
  [Mettre à niveau Data Quality Services](../../database-engine/install-windows/upgrade-data-quality-services.md)   

@@ -28,17 +28,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ce3a973f84664769ced971eedb28a1c13faeae8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9262ca6e0f2dce018ae925b05e306cc43753a0b7
+ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519702"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55759972"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Définit le classement des parties de date mois, jour et année pour interpréter les chaînes de caractères **date**, **smalldatetime**, **datetime**, **datetime2** et **datetimeoffset**.  
+  Définit le classement des parties de date mois, jour et année pour interpréter les chaînes de caractères de date. Ces chaînes sont de type **date**, **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**.  
   
  Pour obtenir une vue d’ensemble de tous les types de données et fonctions de date et d’heure [!INCLUDE[tsql](../../includes/tsql-md.md)], consultez [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
@@ -57,7 +57,7 @@ SET DATEFORMAT { format | @format_var }
 ## <a name="remarks"></a>Notes   
  Le paramètre DATEFORMAT **ydm** n’est pas pris en charge pour les types de données **date**, **datetime2** et **datetimeoffset**.  
   
- L’effet du paramètre DATEFORMAT sur l’interprétation des chaînes de caractères peut être différent pour les valeurs **datetime** et **smalldatetime** et pour les valeurs **date**, **datetime2** et **datetimeoffset**, en fonction du format de chaîne. Ce paramètre affecte l'interprétation de chaînes de caractères lorsqu'elles sont converties en valeurs de date pour le stockage dans la base de données. Il n'affecte pas l'affichage des valeurs du type de données date qui sont stockées dans la base de données ni le format de stockage.  
+ Le paramètre DATEFORMAT peut interpréter des chaînes de caractères différemment pour les types de données de date, en fonction de leur format de chaîne. Par exemple, les interprétations **datetime** et **smalldatetime** peuvent ne pas correspondre à **date**, **datetime2** ou  **datetimeoffset**. Le paramètre DATEFORMAT affecte l’interprétation des chaînes de caractères quand elles sont converties en valeurs de date pour la base de données. Il n’affecte pas l’affichage des valeurs du type de données Date ni leur format de stockage dans la base de données.  
   
  Certains formats de chaînes de caractères, par exemple ISO 8601, sont interprétés indépendamment du paramètre DATEFORMAT.  
   
@@ -91,6 +91,4 @@ GO
   
 ## <a name="see-also"></a> Voir aussi  
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
-  
-  
 

@@ -18,19 +18,19 @@ ms.assetid: f04d2439-6fff-4e4c-801f-cc62faef510a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 933212da81784d7d186fc6ef7c0cdfaa4edab24b
-ms.sourcegitcommit: 7ead3a042d369315fc83a9ccc3d74f62e7b05bc0
+ms.openlocfilehash: 41cdf947d16cc5dc2366ae27c9008fe4d53c158f
+ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54012315"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56079325"
 ---
 # <a name="operator-precedence-transact-sql"></a>Priorités des opérateurs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Lorsqu'une expression complexe comporte plusieurs opérateurs, les priorités des opérateurs déterminent l'ordre d'exécution des opérations. Cet ordre peut affecter considérablement la valeur résultante.  
+  Quand une expression complexe comporte plusieurs opérateurs, la priorité des opérateurs détermine l’ordre des opérations. Cet ordre peut affecter considérablement la valeur résultante.  
   
- L'ordre de priorité des opérateurs est indiqué dans le tableau suivant. Un opérateur de haut niveau est évalué avant un opérateur de bas niveau (dans le tableau suivant, 1 est le niveau le plus élevé et 8 est le niveau le plus bas).
+ L'ordre de priorité des opérateurs est indiqué dans le tableau suivant. Un opérateur de priorité élevée est évalué avant un opérateur de priorité basse. Dans le tableau suivant, 1 est le niveau le plus élevé et 8 est le niveau le plus bas.
   
 |Level|Opérateurs|  
 |-----------|---------------|  
@@ -43,7 +43,7 @@ ms.locfileid: "54012315"
 |7|ALL, ANY, BETWEEN, IN, LIKE, OR, SOME|  
 |8|= (Affectation)|  
   
- Lorsque deux opérateurs dans une expression ont le même niveau de priorité, ils sont évalués de gauche à droite en fonction de leur position dans l'expression. Par exemple, dans l'expression utilisée dans l'instruction `SET`, l'opérateur de soustraction est évalué avant l'opérateur d'addition.  
+ Quand deux opérateurs dans une expression ont le même niveau de priorité, ils sont évalués de gauche à droite en fonction de leur position dans l’expression. Par exemple, dans l'expression utilisée dans l'instruction `SET`, l'opérateur de soustraction est évalué avant l'opérateur d'addition.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -52,9 +52,9 @@ SET @MyNumber = 4 - 2 + 27;
 SELECT @MyNumber;  
 ```  
   
- Utilisez des parenthèses pour modifier la priorité habituelle des opérateurs dans une expression. Tout ce qui se trouve entre parenthèses est évalué en premier pour produire une seule valeur, qui est ensuite utilisée par un opérateur en dehors des parenthèses.  
+ Utilisez des parenthèses pour modifier la priorité habituelle des opérateurs dans une expression. Tout ce qui se trouve entre parenthèses est évalué pour produire une seule valeur. Cette valeur peut être utilisée par un opérateur en dehors des parenthèses.  
   
- Par exemple, dans l'expression utilisée dans l'instruction `SET`, l'opérateur de multiplication est prioritaire par rapport à l'opérateur d'addition. Par conséquent, il est évalué en premier ; le résultat de l'expression est `13`.  
+ Par exemple, dans l'expression utilisée dans l'instruction `SET`, l'opérateur de multiplication est prioritaire par rapport à l'opérateur d'addition. L’opération de multiplication est évaluée en premier ; le résultat de l’expression est `13`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -63,7 +63,7 @@ SET @MyNumber = 2 * 4 + 5;
 SELECT @MyNumber;  
 ```  
   
- Dans l'expression utilisée dans l'instruction `SET` suivante, les parenthèses font que l'addition est effectuée en premier. Le résultat de l'expression est `18`.  
+ Dans l’expression utilisée dans l’instruction `SET` suivante, les parenthèses font que l’addition est évaluée en premier. Le résultat de l'expression est `18`.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -72,7 +72,7 @@ SET @MyNumber = 2 * (4 + 5);
 SELECT @MyNumber;  
 ```  
   
- Si une expression comporte des parenthèses imbriquées, c'est l'expression la plus imbriquée qui est évaluée en premier. L'exemple suivant contient des parenthèses imbriquées ; l'expression `5 - 3` se trouve dans les parenthèses les plus imbriquées. Le résultat de cette expression est `2`. Ensuite, l'opérateur d'addition (`+`) ajoute ce résultat à `4`. Le résultat est alors `6`. Enfin, la valeur `6` est multipliée par `2`, ce qui produit le résultat `12` pour l'expression.  
+ Si une expression comporte des parenthèses imbriquées, c'est l'expression la plus imbriquée qui est évaluée en premier. L'exemple suivant contient des parenthèses imbriquées ; l'expression `5 - 3` se trouve dans les parenthèses les plus imbriquées. Le résultat de cette expression est `2`. Ensuite, l’opérateur d’addition (`+`) ajoute ce résultat à `4`, ce qui produit la valeur `6`. Enfin, la valeur `6` est multipliée par `2`, ce qui produit le résultat `12` pour l'expression.  
   
 ```sql  
 DECLARE @MyNumber int;  
@@ -86,5 +86,4 @@ SELECT @MyNumber;
  [Opérateurs logiques &#40;Transact-SQL&#41;](../../t-sql/language-elements/logical-operators-transact-sql.md)   
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
  [Fonctions intégrées &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  
   

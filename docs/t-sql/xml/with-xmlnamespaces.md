@@ -3,7 +3,6 @@ title: WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -19,15 +18,15 @@ helpviewer_keywords:
 - WITH XMLNAMESPACES clause
 - declaring XML namespaces
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fbc0773b08ea682a9bc8e4803572b9ceae3d28d3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256174"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026600"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,11 +86,13 @@ DEFAULT <xml_namespace_uri>
 -   Le préfixe d'espace de noms XML `xml` ne peut pas être remplacé par un espace de nom autre que l'URI `'http://www.w3.org/XML/1998/namespace'`, et cet URI ne peut pas recevoir un préfixe différent.  
   
 -   Le préfixe d'espace de noms XML `xsi` ne peut pas être redéclaré lorsque la directive ELEMENTS XSINIL est utilisée sur la requête.  
-  
+
+-   Il n’est pas nécessaire de déclarer le 'http://www.w3.org/2001/XMLSchema-instance' pour utiliser l’espace de noms standard xsi. Il est implicitement ajouté par le processeur XML/XPATH en l’absence de spécification et les expressions xpath peuvent utiliser le préfixe xsi tant que le schéma 'http://www.w3.org/2001/XMLSchema-instance' est correctement déclaré dans le document xml.
+
 -   Les valeurs des chaînes URI sont encodées conformément à la page de codes de classement de la base de données actuelle et elles sont converties au format Unicode.  
   
 -   L’URI de l’espace de noms XML est soumis aux règles de réduction des blancs XSD utilisées pour **xs:anyURI**. Notez également que les valeurs des URI d'espace de noms ne subissent ni décomposition en entités, ni regroupement des entités.  
-  
+
 -   Une vérification de l'URI d'espace de noms XML permet de repérer les caractères XML 1.0 qui ne sont pas valides et de générer une erreur le cas échéant (par exemple, si le caractère U+0007 est détecté).  
   
 -   L'URI d'espace de noms XML (après réduction de tous les blancs) ne peut pas être une chaîne de longueur nulle car cela déclenche une erreur « invalid empty namespace URI ».  

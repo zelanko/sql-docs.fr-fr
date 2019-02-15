@@ -13,15 +13,15 @@ helpviewer_keywords:
 - create,data quality project
 - data quality project,create
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: c2b2adb2a1dc2c4c668bb094553f0961dc74439d
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: c63f6407548f3e46bb64a3b7dddffa741426d3a0
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616810"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56036460"
 ---
 # <a name="create-a-data-quality-project"></a>Créer un projet de qualité des données
 
@@ -55,13 +55,13 @@ ms.locfileid: "52616810"
   
     4.  Dans la zone **Sélectionner une activité** , cliquez sur l'activité que vous souhaitez exécuter à l'aide de ce projet de qualité des données :  
   
-        -   **Nettoyage**: sélectionnez cette activité pour nettoyer les données sources.  
+        -   **Nettoyage** : sélectionnez cette activité pour nettoyer les données sources.  
   
-        -   **Correspondance**: sélectionnez cette activité pour effectuer la correspondance. Cette activité est disponible uniquement si la base de connaissances sélectionnée pour le projet de qualité des données contient une stratégie correspondante.  
+        -   **Correspondance** : sélectionnez cette activité pour effectuer la correspondance. Cette activité est disponible uniquement si la base de connaissances sélectionnée pour le projet de qualité des données contient une stratégie correspondante.  
   
 4.  Cliquez sur **Créer** pour créer un projet de qualité des données.  
   
-##  <a name="FollowUp"></a> Suivi : Après la création d'un projet de qualité des données  
+##  <a name="FollowUp"></a> Suivi : Après la création d’un projet de qualité des données  
  Après avoir créé un projet de qualité des données, un Assistant vous est proposé pour effectuer l'activité sélectionnée : nettoyage ou correspondance. Pour plus d’informations sur les activités de nettoyage et de correspondance, consultez [Nettoyage des données](../data-quality-services/data-cleansing.md) et [Correspondance de données](../data-quality-services/data-matching.md).  
   
   

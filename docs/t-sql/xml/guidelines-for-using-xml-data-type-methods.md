@@ -3,7 +3,6 @@ title: Instructions pour l’utilisation des méthodes de type de données XML |
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
-ms.prod_service: sql-database
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -13,15 +12,15 @@ helpviewer_keywords:
 - xml data type [SQL Server], methods
 - methods [XML in SQL Server]
 ms.assetid: 1a483aa1-42de-4c88-a4b8-c518def3d496
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5639083c4e1491adeaa78ec090c660e2faaa6c39
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01e1471792a30cfccfe0e19f878929dc74bc8775
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643887"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56022873"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Instructions pour l'utilisation des méthodes de type de données XML
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 ## <a name="singleton-checks"></a>Vérifications des singletons  
  Les étapes d'emplacement, les paramètres de fonction et les opérateurs qui réclament des singletons renverront une erreur lorsque le compilateur n'arrive pas à savoir si la présence d'un singleton est garantie lors de l'exécution. Ce problème se produit souvent avec des données non typées. Par exemple, la recherche d'un attribut exige un élément parent unique. Un nombre ordinal qui sélectionne un nœud parent unique suffit. L’évaluation d’une combinaison **node()**-**value()** pour extraire des valeurs d’attribut ne nécessite pas de spécification ordinale. comme le montre l'exemple suivant.  
   
-### <a name="example-known-singleton"></a>Exemple : Singleton connu  
+### <a name="example-known-singleton"></a>Exemple : Singleton connu  
  Dans cet exemple, la méthode **nodes()** génère une ligne distincte pour chaque élément <`book`>. La méthode **value()**, évaluée sur un nœud <`book`>, extrait la valeur de \@genre qui, puisqu'il s'agit d'un attribut, est un singleton.  
   
 ```  
@@ -80,7 +79,7 @@ FROM   T CROSS APPLY xCol.nodes('//book') AS R(nref)
   
  Il faut toujours garder à l'esprit la différence qui existe entre //first-name[1] et (//first-name)[1] en cas de vérification du type. Le premier renvoie une séquence de nœuds \<first-name> où chaque nœud est le nœud \<first-name> le plus à gauche de ses frères. Le dernier renvoie le premier nœud \<first-name> singleton dans l’ordre du document de l’instance XML.  
   
-### <a name="example-using-value"></a>Exemple : Utilisation de value()  
+### <a name="example-using-value"></a>Exemple : Utilisation de value()  
  La requête suivante porte sur une colonne XML non typée et génère une erreur de compilation statique. En effet, **value()** attend un nœud singleton comme premier argument et le compilateur ne peut pas déterminer si un seul et unique nœud \<last-name> est rencontré au moment de l’exécution :  
   
 ```  

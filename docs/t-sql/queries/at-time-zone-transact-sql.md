@@ -16,17 +16,17 @@ ms.assetid: 311f682f-7f1b-43b6-9ea0-24e36b64f73a
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 663733493bba7e96d8bb55519013128fd62a2eaf
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: bc02cf0c9076f036bb2b199e4eb0627103e4c03b
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072233"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807449"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Convertit une valeur *inputdate* en valeur *datetimeoffset* correspondante dans le fuseau horaire cible. Si la valeur *inputdate* est fournie sans informations sur le décalage, la fonction applique le décalage du fuseau horaire en supposant que la valeur *inputdate* est fournie dans le fuseau horaire cible. Si la valeur *inputdate* est fournie en tant que valeur *datetimeoffset*, la clause **AT TIME ZONE** la convertit dans le fuseau horaire cible selon les règles de conversion de fuseau horaire.  
+  Convertit une valeur *inputdate* en valeur *datetimeoffset* correspondante dans le fuseau horaire cible. Quand la valeur *inputdate* est fournie sans informations sur le décalage, la fonction applique le décalage du fuseau horaire en supposant que la valeur *inputdate* figure dans le fuseau horaire cible. Si la valeur *inputdate* est fournie en tant que valeur *datetimeoffset*, la clause **AT TIME ZONE** la convertit dans le fuseau horaire cible selon les règles de conversion de fuseau horaire.  
   
  L’implémentation **AT TIME ZONE** utilise un mécanisme Windows pour convertir les valeurs **datetime** sur plusieurs fuseaux horaires.  
   
@@ -43,18 +43,18 @@ inputdate AT TIME ZONE timezone
  Expression qui peut être résolue en une valeur **smalldatetime**, **datetime**, **datetime2** ou **datetimeoffset**.  
   
  *timezone*  
- Nom du fuseau horaire de destination. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se base sur les fuseaux horaires qui sont stockés dans le Registre Windows. Tous les fuseaux horaires installés sur l’ordinateur sont stockés dans la ruche de Registre suivante : **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Vous pouvez également consulter une liste des fuseaux horaires installés dans [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
+ Nom du fuseau horaire de destination. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se base sur les fuseaux horaires qui sont stockés dans le Registre Windows. Les fuseaux horaires installés sur l’ordinateur sont stockés dans la ruche de Registre suivante : **KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones**. Vous pouvez également consulter une liste des fuseaux horaires installés dans [sys.time_zone_info &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-time-zone-info-transact-sql.md).  
   
 ## <a name="return-types"></a>Types de retour  
- Retourne le type de données de **datetimeoffset**  
+ Retourne le type de données de **datetimeoffset**.  
   
 ## <a name="return-value"></a>Valeur retournée  
  Valeur **datetimeoffset** dans le fuseau horaire cible.  
   
 ## <a name="remarks"></a>Notes   
- **AT TIME ZONE** applique des règles spécifiques pour la conversion des valeurs d’entrée de types **smalldatetime**, **datetime** et **datetime2** qui se trouvent dans un intervalle de temps impacté par le changement à l’heure d’été (DST) :  
+ **AT TIME ZONE** applique des règles spécifiques pour la conversion des valeurs d’entrée de types **smalldatetime**, **datetime** et **datetime2** qui se trouvent dans un intervalle de temps impacté par le passage à l’heure d’été (DST) :  
   
--   Quand l’horloge est avancée, il y a un écart avec l’heure locale dont la durée dépend de la durée de l’ajustement de l’horloge (l’écart est généralement d’une heure, mais il peut être de 30 ou 45 minutes selon le fuseau horaire). Dans ce cas, les heures comprises dans cet intervalle sont converties avec le décalage *après* le changement à l’heure d’été.  
+-   Quand l’horloge est avancée, il y a un écart avec l’heure locale égal à la durée de l’ajustement de l’horloge. Cette durée est généralement d’une heure, mais elle peut être de 30 ou 45 minutes selon le fuseau horaire. Les heures comprises dans cet intervalle sont converties avec le décalage *après* le passage à l’heure d’été.  
   
     ```  
     /*  
@@ -133,7 +133,7 @@ SELECT SalesOrderID, OrderDate,
 FROM Sales.SalesOrderHeader;  
 ```  
   
-### <a name="b-convert-values-between-different-time-zones"></a>B. Convertir des valeurs entre des fuseaux horaires différents  
+### <a name="b-convert-values-between-different-time-zones"></a>b. Convertir des valeurs entre des fuseaux horaires différents  
  L’exemple suivant convertit les valeurs entre des fuseaux horaires différents :  
   
 ```  
@@ -169,5 +169,4 @@ FOR SYSTEM_TIME AS OF @ASOF;
 ## <a name="see-also"></a> Voir aussi  
  [Types de date et d’heure](../../t-sql/data-types/date-and-time-types.md)   
  [Types de données et fonctions de date et d’heure &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md)  
-  
   

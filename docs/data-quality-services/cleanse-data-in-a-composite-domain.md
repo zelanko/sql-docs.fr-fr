@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 5c25c25223f660f4e5a71897bf599b986135bf7a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 006a32630fbc862a3cfcf711526cec052796e1a3
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617431"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013210"
 ---
 # <a name="cleanse-data-in-a-composite-domain"></a>Nettoyer les données dans un domaine composite
 
@@ -40,7 +40,7 @@ ms.locfileid: "52617431"
 ##  <a name="CDCorrection"></a> Correction des données à l'aide de règles entre domaines définitives  
  Les règles entre domaines dans le domaine composite vous permettent de créer des règles qui indiquent la relation entre différents domaines dans un domaine composite. Les règles entre domaines sont prises en considération lorsque vous exécutez l'activité de nettoyage sur vos données sources impliquant des domaines composites. Outre l'information concernant la validité d'une règle entre domaines, la règle entre domaines *Then* définitive, **La valeur est égale à**, corrige également les données pendant l'activité de nettoyage.  
   
- Prenons l'exemple suivant : il existe un domaine composite, Product, avec trois domaines individuels : ProductName, CompanyName et ProductVersion. Créez la règle entre domaines définitive suivante :  
+ Prenons l’exemple suivant : il existe un domaine composite, Product, avec trois domaines individuels : ProductName, CompanyName et ProductVersion. Créez la règle entre domaines définitive suivante :  
   
  SI la valeur « CompanyName » du domaine contient *Microsoft*, que la valeur « ProductName » du domaine est égale à *Office* et que la valeur « ProductVersion » est égale à *2010*, ALORS la valeur « ProductName » du domaine est égale à *Microsoft Office 2010*.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "52617431"
 |-----------------|-----------------|--------------------|  
 |Microsoft Office 2010|Microsoft Inc.|2010|  
   
- Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité de nettoyage des données, cette règle inter-domaines définitive modifie les données avec un niveau de confiance de 100 % et la colonne **Raison** affiche le message suivant : Corrigé par la règle « *\<Nom de la règle inter-domaines>*  ». Pour plus d'informations sur les règles entre domaines, consultez [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
+ Lorsque vous testez la règle entre domaines *Then* définitive, **La valeur est égale à**, la boîte de dialogue **Tester la règle de domaine composite** contient une nouvelle colonne, **Corriger vers**, qui affiche les données correctes. Dans un projet de qualité des données de nettoyage, cette règle entre domaines définitive modifie les données avec un niveau de confiance de 100 % et la colonne **Raison** affiche le message suivant : Corrigé par la règle « *\<nom de la règle entre domaines>*  ». Pour plus d'informations sur les règles entre domaines, consultez [Create a Cross-Domain Rule](../data-quality-services/create-a-cross-domain-rule.md).  
   
 > [!NOTE]  
 >  La règle entre domaines définitive ne fonctionne pas pour les domaines composites joints au service de données de référence.  

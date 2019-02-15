@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.values.f1
 ms.assetid: 8c90ab70-3aea-4eaf-a174-4159485c87d3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: e9a804f90b3e318c9cfd665502b8f3349bf16ce7
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 30624ce9283c9604af12497ffbd8d3e17979be8c
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617589"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56011900"
 ---
 # <a name="change-domain-values"></a>Modifier les valeurs de domaine
 
@@ -76,45 +76,45 @@ ms.locfileid: "52617589"
   
     -   **Définir les valeurs du domaine sélectionné en tant que valeurs non valides** : pour modifier l’état d’une valeur correcte ou erronée en non valide, sélectionnez la valeur, puis cliquez sur l’icône **Définir les valeurs du domaine sélectionné en tant que valeurs non valides** (triangle) à partir de la flèche vers le bas de la barre d’icônes ou de la liste déroulante Type. Vous pouvez entrer une correction dans la colonne **Corriger vers** , ou la laisser vide.  
   
-    -   **Corriger vers**: après avoir défini une valeur comme erronée ou non valide, entrez une nouvelle valeur dans la colonne **Corriger vers** . DQS ajoute une nouvelle ligne pour la valeur de remplacement, l'indique comme correcte, puis regroupe les deux valeurs. La nouvelle valeur sera affichée comme valeur de début, avec la valeur de début en gras et la valeur erronée ou non valide mise en retrait.  
+    -   **Corriger vers** : après avoir défini une valeur comme erronée ou non valide, entrez une nouvelle valeur dans la colonne **Corriger vers**. DQS ajoute une nouvelle ligne pour la valeur de remplacement, l'indique comme correcte, puis regroupe les deux valeurs. La nouvelle valeur sera affichée comme valeur de début, avec la valeur de début en gras et la valeur erronée ou non valide mise en retrait.  
   
 6.  Pour indiquer les valeurs en tant que groupe de synonymes, sélectionnez plusieurs valeurs correctes, puis procédez comme suit :  
   
-    -   **Définir les valeurs du domaine sélectionné en tant que synonymes**: pour définir les synonymes, sélectionnez plusieurs valeurs qui sont correctes, puis cliquez sur l'icône **Définir les valeurs du domaine sélectionné en tant que synonymes** . DQS regroupe les valeurs et désigne l'une des valeurs comme valeur de début par laquelle les autres seront remplacées. Notez que, si deux valeurs sont regroupées, mais que l'une du groupe est erronée ou non valide, les valeurs ne sont pas des synonymes.  
+    -   **Définir les valeurs du domaine sélectionné en tant que synonymes** : pour définir les synonymes, sélectionnez plusieurs valeurs correctes, puis cliquez sur l’icône **Définir les valeurs du domaine sélectionné en tant que synonymes**. DQS regroupe les valeurs et désigne l'une des valeurs comme valeur de début par laquelle les autres seront remplacées. Notez que, si deux valeurs sont regroupées, mais que l'une du groupe est erronée ou non valide, les valeurs ne sont pas des synonymes.  
   
         > [!NOTE]  
         >  Si vous sélectionnez deux valeurs ou plus dans un groupe et une autre valeur en dehors du groupe, puis les définissez comme synonymes, vous obtiendrez un message d'erreur. Après fermeture du message d'erreur, les valeurs seront définies correctement en tant que synonymes.  
   
-    -   **Supprimer la relation entre les synonymes sélectionnés**: pour annuler la désignation de synonyme de deux valeurs ou plus, sélectionnez les valeurs, puis cliquez sur l'icône **Supprimer la relation entre les synonymes sélectionnés** . Les valeurs doivent être regroupées et doivent toutes deux être correctes pour que le dégroupement des synonymes fonctionne.  
+    -   **Supprimer la relation entre les synonymes sélectionnés** : pour annuler la désignation de synonyme pour deux valeurs ou plus, sélectionnez les valeurs, puis cliquez sur l’icône **Supprimer la relation entre les synonymes sélectionnés**. Les valeurs doivent être regroupées et doivent toutes deux être correctes pour que le dégroupement des synonymes fonctionne.  
   
-    -   **Définir une valeur du domaine sélectionné en tant que valeur de début de son groupe**: pour modifier la valeur de début du groupe, sélectionnez une valeur dans le groupe qui n'est pas définie comme valeur de début, puis cliquez sur le bouton **Définir une valeur du domaine sélectionné en tant que valeur de début de son groupe** . La valeur de début est ainsi définie comme remplacement de l'autre valeur. Cette opération fonctionne uniquement si vous avez défini deux ou plusieurs valeurs qui sont un groupe et que vous souhaitez modifier la valeur désignée par DQS par la valeur de début. Notez que la valeur de début est indiquée par une ligne bleue avec la valeur en gras.  
+    -   **Définir une valeur du domaine sélectionné en tant que valeur de début de son groupe** : pour modifier la valeur de début du groupe, sélectionnez une valeur dans le groupe qui n’est pas définie comme valeur de début, puis cliquez sur le bouton **Définir une valeur du domaine sélectionné en tant que valeur de début de son groupe**. La valeur de début est ainsi définie comme remplacement de l'autre valeur. Cette opération fonctionne uniquement si vous avez défini deux ou plusieurs valeurs qui sont un groupe et que vous souhaitez modifier la valeur désignée par DQS par la valeur de début. Notez que la valeur de début est indiquée par une ligne bleue avec la valeur en gras.  
   
-7.  **Vérificateur d'orthographe**: si une valeur a un trait de soulignement ondulé rouge, le vérificateur d'orthographe suggère une correction de la valeur. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) erroné et la correction est ajoutée à la colonne **Corriger vers** . Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) et [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
+7.  **Vérificateur d’orthographe** : si une valeur a un trait de soulignement ondulé rouge, le vérificateur d’orthographe suggère une correction de la valeur. Cliquez avec le bouton droit sur la valeur avec un trait de soulignement, puis sélectionnez une correction, le cas échéant. Le type de valeur devient (ou demeure) erroné et la correction est ajoutée à la colonne **Corriger vers** . Cliquez sur la flèche bas pour afficher les corrections proposées supplémentaires. Entrez une correction manuellement pour l'ajouter au dictionnaire du vérificateur d'orthographe et pouvoir la sélectionner comme correction. Pour plus d'informations, consultez [Use the DQS Speller](../data-quality-services/use-the-dqs-speller.md) et [Set Domain Properties](../data-quality-services/set-domain-properties.md).  
   
     > [!NOTE]  
     >  Pour utiliser le vérificateur d'orthographe, vous pouvez l'activer dans la page **Propriétés du domaine** ou, s'il est désactivé, dans la page **Propriétés du domaine** , vous pouvez cliquer sur l'icône **Activer/désactiver le vérificateur d'orthographe** dans la page **Valeurs du domaine** pour l'activer sur cette page.  
   
-8.  **Ajouter une valeur de domaine**: cliquez pour ajouter une ligne à la fin de la table. Après avoir entré une valeur, la ligne sera replacée par ordre alphabétique et identifiée comme nouvelle entrée par un symbole précédent en étoile.  
+8.  **Ajouter une valeur de domaine** : cliquez pour ajouter une ligne à la fin de la table. Après avoir entré une valeur, la ligne sera replacée par ordre alphabétique et identifiée comme nouvelle entrée par un symbole précédent en étoile.  
   
-9. **Importer les valeurs du domaine à partir d'Excel**: pour ajouter les nouvelles valeurs d'une feuille de calcul Excel, cliquez sur la flèche bas de l'icône **Importer des valeurs** , puis sélectionnez **Importer les valeurs du domaine à partir d'Excel**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Pour plus d’informations, consultez [Importer des valeurs d’un fichier Excel dans un domaine](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
+9. **Importer les valeurs du domaine à partir d’Excel** : pour ajouter de nouvelles valeurs à partir d’une feuille de calcul Excel, cliquez sur la flèche vers le bas de l’icône **Importer des valeurs**, puis sélectionnez **Importer les valeurs du domaine à partir d’Excel**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Pour plus d’informations, consultez [Importer des valeurs d’un fichier Excel dans un domaine](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md).  
   
-10. **Importer des valeurs de projet**: ajoutez les nouvelles valeurs d'un projet de qualité des données en cliquant sur la flèche bas de l'icône **Importer des valeurs** et en sélectionnant **Importer des valeurs de projet**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Sélectionnez le projet à partir duquel vous voulez importer des valeurs, puis cliquez sur **OK**. Les valeurs importées seront affichées. Cliquez sur **Terminer**. Pour plus d'informations, consultez Importer les valeurs de projet dans un domaine.  
+10. **Importer des valeurs de projet** : ajoutez de nouvelles valeurs à partir d’un projet de qualité des données en cliquant sur la flèche vers le bas de l’icône **Importer des valeurs**, puis en sélectionnant **Importer des valeurs de projet**. Entrez le nom de fichier, sélectionnez **Utiliser la première ligne comme en-tête** le cas échéant, puis cliquez sur **OK**. Sélectionnez le projet à partir duquel vous voulez importer des valeurs, puis cliquez sur **OK**. Les valeurs importées seront affichées. Cliquez sur **Terminer**. Pour plus d'informations, consultez Importer les valeurs de projet dans un domaine.  
   
-11. **Supprimer les valeurs du domaine sélectionné**: pour supprimer une ou plusieurs valeurs existantes du domaine, sélectionnez les valeurs dans la table de valeurs, puis cliquez sur l'icône **Supprimer les valeurs du domaine sélectionné** . Comme une entrée DQS_NULL ne peut pas être supprimée, si vous choisissez plusieurs valeurs à supprimer et qu'une entrée DQS_NULL est l'une d'entre elles, l'opération échoue.  
+11. **Supprimer les valeurs du domaine sélectionné** : pour supprimer une ou plusieurs valeurs existantes du domaine, sélectionnez les valeurs dans la table de valeurs, puis cliquez sur l’icône **Supprimer les valeurs du domaine sélectionné**. Comme une entrée DQS_NULL ne peut pas être supprimée, si vous choisissez plusieurs valeurs à supprimer et qu'une entrée DQS_NULL est l'une d'entre elles, l'opération échoue.  
   
 12. Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir modifié les valeurs de domaine  
+##  <a name="FollowUp"></a> Suivi : après la modification des valeurs de domaine  
  Après avoir modifié les valeurs de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Meaning"></a> Signification des valeurs correctes, erronées et non valides  
  Chaque valeur de la table **Valeur** de la page **Valeurs du domaine** se voit affecter un paramètre **Type** égal à **Correcte**, **Erronée**ou **Non valide**. Le type de la valeur est généré initialement par l'activité de découverte des connaissances, et vous pouvez le modifier à votre convenance. Le type final, basé sur la découverte et les modifications interactives, est généré par l'activité de nettoyage. Ces valeurs ont les significations suivantes :  
   
--   **Correcte** : valeur qui appartient au domaine et ne comporte aucune erreur de syntaxe. Par exemple, « Chicago » dans le champ « Ville » est une valeur correcte.  
+-   **Correcte :** valeur qui appartient au domaine et ne comporte aucune erreur de syntaxe. Par exemple, « Chicago » dans le champ « Ville » est une valeur correcte.  
   
--   **Erreur** : valeur qui appartient au domaine, mais qui est incorrecte. Par exemple, « Shicago » au lieu de « Chicago » dans « Ville » est une erreur. DQS indique une valeur comme erronée s'il détecte une erreur de syntaxe et une correction associée dans le processus de découverte. Les erreurs de syntaxe incluent les fautes d'orthographe.  
+-   **Erreur :** valeur qui appartient au domaine, mais qui est incorrecte. Par exemple, « Shicago » au lieu de « Chicago » dans « Ville » est une erreur. DQS indique une valeur comme erronée s'il détecte une erreur de syntaxe et une correction associée dans le processus de découverte. Les erreurs de syntaxe incluent les fautes d'orthographe.  
   
--   **Non valide** : valeur qui n'appartient pas au domaine et qui n'a pas de correction. Par exemple, la valeur « 12345 » dans un champ « Ville » n’est pas valide. DQS indique une valeur comme non valide quand elle ne respecte pas une règle de domaine.  
+-   **Non valide :** valeur qui n’appartient pas au domaine et qui n’a pas de correction. Par exemple, la valeur « 12345 » dans un champ « Ville » n’est pas valide. DQS indique une valeur comme non valide quand elle ne respecte pas une règle de domaine.  
   
  Vous pouvez modifier manuellement le type d'une valeur en l'une des deux autres valeurs. DQS n'applique pas la sémantique de validation et d'erreur sur les opérations manuelles. Vous pouvez écrire une correction pour une valeur valide sans modifier son état. Vous pouvez désigner une valeur comme non valide même si elle respecte une règle de domaine. Vous pouvez désigner une valeur comme erronée même si le processus de découverte n'indique pas d'erreur de syntaxe. Vous pouvez également supprimer une correction d'une valeur erronée, marquée comme correcte, sans modifier son état.  
   

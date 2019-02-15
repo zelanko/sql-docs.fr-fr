@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dqs.kb.createcd.f1
 - sql13.dqs.dm.cdproperties.f1
 ms.assetid: c7f0bd84-a02e-4a81-885d-985e6415c499
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 81173982e9c44b135a3ba98312839ac799461988
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 6aae15d10385a3668a247db8482615d0510155b8
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616859"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56026210"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
 
@@ -87,13 +87,13 @@ ms.locfileid: "52616859"
   
     -   **Dans l’ordre** : analysez les valeurs du champ en fonction de l’ordre des domaines dans le domaine composite. La première valeur sera incluse dans le premier domaine, la deuxième valeur dans le deuxième domaine, et ainsi de suite.  
   
-    -   **Délimiteurs** : analysez les valeurs du champ en fonction du délimiteur sélectionné à partir des cases d’option affichées lorsque Délimiteurs est sélectionné. Il peut s'agir de **Tabulation**, **Point-virgule**, **Virgule**, **Espace**ou **Autre**. Si la valeur est **Autre**, entrez la valeur qui servira de délimiteur.  
+    -   **Délimiteurs** : analysez les valeurs du champ en fonction du délimiteur sélectionné à partir des cases d’option affichées quand Délimiteurs est sélectionné. Il peut s'agir de **Tabulation**, **Point-virgule**, **Virgule**, **Espace**ou **Autre**. Si la valeur est **Autre**, entrez la valeur qui servira de délimiteur.  
   
 5.  Si vous avez sélectionné **Délimiteurs** pour la méthode d'analyse, vous pouvez également sélectionner **Utiliser l'analyse de Base de connaissances**. Pour plus d’informations, consultez [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Suivi : Après la création d'un domaine composite  
+##  <a name="FollowUp"></a> Suivi : après la création d’un domaine composite  
  Après avoir créé un domaine composite, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 88dfb9ea-6321-4eaf-b9e4-45d36ef048f6
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 0f97176e1600ca741ddc20eed03aed639c945c76
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: b94f615ddcc2f1b3eb0c577130ee375cc0672848
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616429"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56024590"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Accéder aux données pour les opérations DQS
 
@@ -44,13 +44,13 @@ ms.locfileid: "52616429"
   
 4.  Dans la boîte de dialogue **Propriétés de la connexion** , cliquez sur la page de **Mappage de l'utilisateur** dans le volet gauche.  
   
-5.  Dans le volet droit, cochez la case sous la colonne **Mappage** de la base de données **DQS_STAGING_DATA** , puis sélectionnez les rôles suivants dans le volet **Appartenance au rôle de base de données : DQS_STAGING_DATA** :  
+5.  Dans le volet droit, cochez la case sous la colonne **Mapper** de la base de données **DQS_STAGING_DATA**, puis sélectionnez les rôles suivants dans le volet **Appartenance au rôle de base de données : DQS_STAGING_DATA** :  
   
-    -   **db_datareader**: lire des données depuis des tables/vues.  
+    -   **db_datareader** : lit les données des tables/vues.  
   
-    -   **db_datawriter**: ajouter, supprimer ou modifier des données dans des tables.  
+    -   **db_datawriter** : ajoute, supprime ou modifie les données dans les tables.  
   
-    -   **db_ddladmin**: créer, modifier ou supprimer des tables/vues.  
+    -   **db_ddladmin** : crée, modifie ou supprime des tables/vues.  
   
 6.  Dans la boîte de dialogue **Propriétés de la connexion** , cliquez sur **OK** pour appliquer les modifications.  
   

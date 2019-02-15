@@ -18,15 +18,15 @@ helpviewer_keywords:
 - last-inserted identity values
 - identity values [SQL Server], last-inserted
 ms.assetid: eef24670-059b-4f10-91d4-a67bc1ed12ab
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 7daf2ac60021e75b98403dc5b2b1ef4098507a5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83d1ad7e793e7072345ad0b4ada34162d039ed45
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746177"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033030"
 ---
 # <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ INSERT TZ
   
 SELECT * FROM TZ;  
 ```     
-Jeu de résultats : Voici à quoi ressemble la table TZ :  
+Jeu de résultats : Voici à quoi ressemble la table TZ.  
   
 ```  
 Z_id   Z_name  
@@ -133,7 +133,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>B. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY() avec la réplication  
+### <a name="b-using-identity-and-scopeidentity-with-replication"></a>b. Utilisation des fonctions @@IDENTITY et SCOPE_IDENTITY() avec la réplication  
  Les exemples suivants indiquent comment utiliser `@@IDENTITY` et `SCOPE_IDENTITY()` pour des insertions dans une base de données qui est publiée pour la réplication de fusion. Les deux tables mentionnées à titre d'exemple appartiennent à la base de données exemple [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] : `Person.ContactType` n'est pas publiée et `Sales.Customer` est publiée. La réplication de fusion ajoute des déclencheurs aux tables qui sont publiées. Par conséquent, `@@IDENTITY` peut retourner la valeur de l'insertion dans une table système de réplication au lieu de l'insertion dans une table utilisateur.  
   
  La table `Person.ContactType` a une valeur d’identité maximale de 20. Si vous insérez une ligne dans la table, `@@IDENTITY` et `SCOPE_IDENTITY()` retournent la même valeur.  

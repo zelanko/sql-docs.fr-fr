@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: ca8a9b258275c0e8b2368519d8af7ca18aad70aa
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 850af4e77b1fcaf8ffdaa0ede7bcaeba79695adc
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617459"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56013420"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>Exécuter DQSInstaller.exe pour terminer l'installation du serveur DQS
 
@@ -36,11 +36,11 @@ ms.locfileid: "52617459"
   
 1.  Sur l'ordinateur sur lequel vous avez choisi d'installer le [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)], exécutez le fichier DQSInstaller.exe d'une des manières suivantes, selon le cas :  
   
-    -   Écran**Démarrer**: dans l'écran **Démarrer** , cliquez sur **Data Quality Server Installer**.  
+    -   **Écran Démarrer** : dans l’écran **Démarrer**, cliquez sur **Data Quality Server Installer**.  
   
-    -   **Menu Démarrer**: dans la barre des tâches, cliquez sur **Démarrer**, pointez sur **Tous les programmes**, puis cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]. Sous [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], cliquez sur **Data Quality Services**, puis sur **Data Quality Server Installer**.  
+    -   **Menu Démarrer** : dans la barre des tâches, cliquez sur **Démarrer**, pointez sur **Tous les programmes**, puis cliquez sur [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]. Sous [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], cliquez sur **Data Quality Services**, puis sur **Data Quality Server Installer**.  
   
-    -   **Explorateur Windows**: recherchez le fichier DQSInstaller.exe. Si vous avez installé l’instance par défaut de SQL Server, le fichier DQSInstaller.exe sera disponible dans C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn. Double-cliquez sur le fichier DQSInstaller.exe.  
+    -   **Explorateur Windows** : Recherchez le fichier DQSInstaller.exe. Si vous avez installé l’instance par défaut de SQL Server, le fichier DQSInstaller.exe sera disponible dans C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Binn. Double-cliquez sur le fichier DQSInstaller.exe.  
   
 2.  Une fenêtre d'invite de commandes s'affiche qui indique l'état de l'installation. Vous remarquerez les trois événements suivants :  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52617459"
 3.  Vous êtes invité à taper un mot de passe pour la clé principale de base de données. La clé principale de base de données est requise pour chiffrer les clés du fournisseur de services de données de référence qui seront stockées dans la base de données DQS_MAIN lorsque vous installerez des fournisseurs de données de référence dans [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) ultérieurement.  
   
     > [!IMPORTANT]  
-    >  Le mot de passe doit comporter au moins 8 caractères et doit contenir des caractères appartenant à trois des quatre catégories suivantes : lettres majuscules (A, B, C,… Z), lettres minuscules (a, b, c,... z), chiffres (0, 1, 2,... 9) et les caractères non alphanumériques ou spéciaux (~!@#$%^&*()_-+=|\\{}[]:;"’<>,.?/). Par exemple : P@ssword. Le programme d'installation vous invite à entrer un autre mot de passe si le mot de passe actuel ne correspond pas aux conditions.  
+    >  Le mot de passe doit comporter au moins 8 caractères et doit contenir des caractères appartenant à trois des quatre catégories suivantes : lettres majuscules (A, B, C,... Z), lettres minuscules (a, b, c,... z), chiffres (0, 1, 2,... 9) et les caractères non alphanumériques ou spéciaux (~!@#$%^&*()_-+=|\\{}[]:;"’<>,.?/). Par exemple : P@ssword. Le programme d'installation vous invite à entrer un autre mot de passe si le mot de passe actuel ne correspond pas aux conditions.  
   
 4.  Fournissez un mot de passe, confirmez le mot de passe, puis appuyez sur ENTRÉE pour continuer l'installation.  
   
@@ -91,9 +91,9 @@ ms.locfileid: "52617459"
   
 3.  À l'invite de commandes, exécutez DQSInstaller.exe avec ou sans paramètres de ligne de commande :  
   
-    -   **Sans paramètre de ligne de commande**: tapez `dqsinstaller.exe`, puis appuyez sur Entrée.  
+    -   **Sans paramètre de ligne de commande** : Saisissez `dqsinstaller.exe`, puis appuyez sur ENTRÉE.  
   
-    -   **Avec paramètre de ligne de commande**: tapez la commande requise comme indiqué dans le tableau ci-dessus, puis appuyez sur Entrée.  
+    -   **Avec paramètre de ligne de commande** : saisissez la commande requise comme indiqué dans le tableau ci-dessus, puis appuyez sur ENTRÉE.  
   
 4.  Les actions requises sont exécutées selon la commande spécifiée. Si vous choisissez d’installer uniquement [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] sans aucun paramètre de ligne de commande, le reste des étapes est identique, comme décrit dans les étapes 2 à 6 dans la section précédente, [Exécuter DQSInstaller.exe à partir de l’écran Démarrer, du menu Démarrer ou de l’Explorateur Windows](../../data-quality-services/install-windows/run-dqsinstaller-exe-to-complete-data-quality-server-installation.md#WindowsExplorer).  
   

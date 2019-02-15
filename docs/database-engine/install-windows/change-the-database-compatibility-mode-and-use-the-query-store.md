@@ -1,7 +1,7 @@
 ---
 title: Modifier le niveau de compatibilité de la base de données et utiliser le magasin des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 07/21/2017
+ms.date: 02/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: adf5a2daee8231746a3ed364619f511f05d011f6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 995679ad24d1be79849b6b586964a206d4c70d7d
+ms.sourcegitcommit: f8ad5af0f05b6b175cd6d592e869b28edd3c8e2c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405224"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55807399"
 ---
 # <a name="change-the-database-compatibility-level-and-use-the-query-store"></a>Modifier le niveau de compatibilité de la base de données et utiliser le magasin des requêtes
 
@@ -47,10 +47,12 @@ Le processus de mise à niveau permettant d’activer la nouvelle fonctionnalit�
 Le flux de travail recommandé pour mettre à niveau le processeur de requêtes vers la dernière version du code est documenté dans la [section Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server de la rubrique Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade) et est illustré ci-dessous.  
   
 ![query-store-usage-5](../../relational-databases/performance/media/query-store-usage-5.png "query-store-usage-5") 
+
+Depuis [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, les utilisateurs peuvent être guidés tout au long du workflow recommandé en utilisant l’Assistant Paramétrage de requêtes. Pour plus d’informations, consultez [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requêtes](../../relational-databases/performance/upgrade-dbcompat-using-qta.md).
  
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
 [Afficher ou modifier le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)     
 [Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md)     
-[Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)
-    
+[Niveau de compatibilité ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)     
+[Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)        
   

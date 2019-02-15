@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Domains
 ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: b124775b451740c03a5c15fbb1ac281328cc7717
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: ccf8b81bb7393f8268584bc78115cf6051f0901f
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617339"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56038630"
 ---
 # <a name="introduction-to-data-quality-services"></a>Présentation de Data Quality Services
 
@@ -48,7 +48,7 @@ ms.locfileid: "52617339"
   
 -   **Analyse :** suivi et détermination de l'état des activités de qualité des données. L'analyse vous permet de vérifier que votre solution de qualité des données fait ce pour quoi elle a été conçue. Pour plus d’informations, consultez [DQS Administration](../data-quality-services/dqs-administration.md).  
   
--   **Base de connaissances :** Data Quality Services est une solution reposant sur des connaissances qui analyse les données en fonction des connaissances que vous générez avec DQS. Ainsi, vous pouvez créer des processus de qualité des données qui améliorent continuellement les connaissances, et par conséquent, la qualité des données.  
+-   **Base de connaissances :** Data Quality Services est une solution reposant sur des connaissances qui analyse les données en fonction des connaissances que vous établissez avec DQS. Ainsi, vous pouvez créer des processus de qualité des données qui améliorent continuellement les connaissances, et par conséquent, la qualité des données.  
   
  L'illustration ci-dessous montre le processus DQS :  
   

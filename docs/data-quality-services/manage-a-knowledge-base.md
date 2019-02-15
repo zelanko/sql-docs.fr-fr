@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 27f306f4-d67c-47f5-b35c-4260cc5d36e3
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 66a1ad8c326dc6fe221777136edcb01a9b9aa1af
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 00c70154e06cd5e16b687a7d6a9848216456a26b
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617489"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56028081"
 ---
 # <a name="manage-a-knowledge-base"></a>Gérer une base de connaissances
 
@@ -44,25 +44,25 @@ ms.locfileid: "52617489"
   
 4.  Dans le menu contextuel, vous pouvez effectuer les tâches suivantes :  
   
-    1.  **Ouvrir**: cliquez pour ouvrir la base de connaissances dans l'activité sélectionnée dans le volet **Sélectionner une activité** .  
+    1.  **Ouvrir** : cliquez pour ouvrir la base de connaissances dans l’activité sélectionnée dans le volet **Sélectionner une activité**.  
   
-    2.  **Déverrouiller**: vous pouvez déverrouiller la base de connaissances si vous êtes l'utilisateur qui travaillait sur la base de connaissances lors de l'une des étapes de la gestion des domaines, de la découverte des connaissances et de l'activité de la stratégie de correspondance, et l'avait fermée. Si vous déchargez la base de connaissances, une autre personne peut l'ouvrir et travailler dessus. Cette commande n'est pas disponible si la base de connaissances n'est pas dans un état d'une activité. Pour plus d'informations, consultez [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+    2.  **Déverrouiller** : vous pouvez déverrouiller la base de connaissances si vous êtes l'utilisateur qui travaillait sur la base de connaissances lors de l'une des étapes de la gestion des domaines, de la découverte des connaissances et de l'activité de la stratégie de correspondance, et qui l'avait fermée. Si vous déchargez la base de connaissances, une autre personne peut l'ouvrir et travailler dessus. Cette commande n'est pas disponible si la base de connaissances n'est pas dans un état d'une activité. Pour plus d'informations, consultez [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    3.  **Ignorer le travail**: cliquez sur cette option lorsque la base de connaissances est dans un état de travail, comme illustré avec une entrée dans le champ État de la table. Cette commande n'est pas disponible si la base de connaissances n'est pas dans un état d'une activité ou si la base de connaissances est verrouillée. Pour plus d'informations, consultez [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
+    3.  **Ignorer le travail** : cliquez sur cette option lorsque la base de connaissances est dans un état de travail, comme illustré avec une entrée dans le champ État de la table. Cette commande n'est pas disponible si la base de connaissances n'est pas dans un état d'une activité ou si la base de connaissances est verrouillée. Pour plus d'informations, consultez [Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md).  
   
-    4.  **Renommer**: cliquez sur cette option pour que le champ Base de connaissances de la table puisse être modifié pour la base de connaissances sur laquelle vous avez cliqué avec le bouton droit. Modifiez le nom, puis cliquez sur cette base de connaissances et sur une autre dans le champ pour accepter le changement de nom.  
+    4.  **Renommer** : cliquez sur cette option pour que le champ Base de connaissances de la table puisse être modifié pour la base de connaissances sur laquelle vous avez cliqué avec le bouton droit. Modifiez le nom, puis cliquez sur cette base de connaissances et sur une autre dans le champ pour accepter le changement de nom.  
   
-    5.  **Supprimer**: cliquez sur cette option pour supprimer la base de connaissances de la base de données DQS_MAIN sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
+    5.  **Supprimer** : cliquez sur cette option pour supprimer la base de connaissances de la base de données DQS_MAIN sur [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)].  
   
-    6.  **Propriétés**: cliquez sur cette option pour afficher les propriétés de la base de données en lecture seule.  
+    6.  **Propriétés** : cliquez sur cette option pour afficher les propriétés de la base de données en lecture seule.  
   
         1.  **Base de connaissances source**: base de connaissances sur laquelle cette base de données était fondée. Ce paramètre est facultatif.  
   
-        2.  **État**: indique si la base de connaissances est **En cours** et si elle est dans une activité spécifique de gestion des connaissances, comme déterminé lors de la dernière fermeture. L'état peut être **En cours**, à savoir que la base de connaissances est ouverte dans une session de gestion des connaissances, mais pas dans une activité spécifique, ou **En cours** plus une activité de gestion des connaissances, dans laquelle la base de connaissances est ouverte dans une session de gestion des connaissances, et dans une activité spécifique.  
+        2.  **État** : indique si la base de connaissances est **En cours** et si elle est dans une activité spécifique de gestion des connaissances, comme déterminé lors de la dernière fermeture. L'état peut être **En cours**, à savoir que la base de connaissances est ouverte dans une session de gestion des connaissances, mais pas dans une activité spécifique, ou **En cours** plus une activité de gestion des connaissances, dans laquelle la base de connaissances est ouverte dans une session de gestion des connaissances, et dans une activité spécifique.  
   
-        3.  **Est verrouillé**: **True** si la base de connaissances a été verrouillée, **FALSE** dans le cas contraire  
+        3.  **Est verrouillé** : **True** si la base de connaissances a été verrouillée, **False** dans le cas contraire  
   
-        4.  **Contenu non publié**: True si la base de connaissances contient un contenu qui n'a pas été enregistré par publication, False dans le cas contraire  
+        4.  **Contenu non publié** : True si la base de connaissances contient un contenu qui n'a pas été enregistré par publication, False dans le cas contraire  
   
         5.  **Verrouillé par**: nom de l'utilisateur qui a fermé la base de connaissances et l'a verrouillée  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52617489"
   
         8.  **Date de création**: date lors de la création  
   
-##  <a name="FollowUp"></a> Suivi : après la gestion d'une base de connaissances  
+##  <a name="FollowUp"></a> Suivi : après la gestion d'une base de connaissances  
  Après que vous avez géré une base de connaissances, l'étape suivante varie selon l'action effectuée sur la base de connaissances :  
   
 -   Si vous avez ouvert la base de connaissances, vous continuerez dans l'activité que vous avez sélectionnée.  

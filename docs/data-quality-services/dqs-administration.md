@@ -12,15 +12,15 @@ helpviewer_keywords:
 - administration
 - dqs,adminstration
 ms.assetid: 9940ef5d-f6f6-4dec-9414-1077a4d7f12b
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: db618785ace138f958f1b37713cf0c96f6ffb10b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 43316ba8dad76417e48d6fdb4fefece87131041a
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617859"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033140"
 ---
 # <a name="dqs-administration"></a>administration de dqs
 
@@ -53,11 +53,11 @@ ms.locfileid: "52617859"
 ### <a name="configuration"></a>Configuration  
  L'écran **Configuration** de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] permet à l'administrateur de DQS d'effectuer les opérations suivantes :  
   
--   **Données de référence**: configurez les fournisseurs de services de données de référence : Windows Azure Marketplace ou fournisseurs de services de données de référence directs. Après avoir installé les fournisseurs de services de données de référence, vous pouvez mapper un domaine/domaine composite aux données de référence pendant l'activité de gestion des domaines d'une base de connaissances, puis utiliser cette base de connaissances pour l'activité de nettoyage dans un projet de qualité des données. Elle vous permet également de spécifier les paramètres proxy de connexion à Internet pour l'utilisation de Windows Azure Marketplace.  
+-   **Données de référence** : configurez les fournisseurs de services de données de référence : Place de marché Microsoft Azure ou fournisseurs de services de données de référence directs. Après avoir installé les fournisseurs de services de données de référence, vous pouvez mapper un domaine/domaine composite aux données de référence pendant l'activité de gestion des domaines d'une base de connaissances, puis utiliser cette base de connaissances pour l'activité de nettoyage dans un projet de qualité des données. Elle vous permet également de spécifier les paramètres proxy de connexion à Internet pour l'utilisation de Windows Azure Marketplace.  
   
--   **Paramètres généraux**: spécifiez les valeurs de seuil pour le nettoyage et la mise en correspondance des données, et indiquez s'il faut activer les notifications pour le profilage dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Ces valeurs de seuil sont utilisées par DQS pendant les opérations de nettoyage et de mise en correspondance assistées par ordinateur dans un projet de qualité des données.  
+-   **Paramètres généraux** : spécifiez les valeurs de seuil pour le nettoyage et la mise en correspondance des données, et indiquez s’il faut activer les notifications pour le profilage dans [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. Ces valeurs de seuil sont utilisées par DQS pendant les opérations de nettoyage et de mise en correspondance assistées par ordinateur dans un projet de qualité des données.  
   
--   **Paramètres de journal**: les fichiers journaux de DQS enregistrent les activités effectuées dans DQS et sont utiles pour le suivi des problèmes opérationnels pendant la maintenance et le dépannage. Vous pouvez filtrer les messages que vous souhaitez consigner dans le journal pour les différentes fonctionnalités de DQS (gestion de domaines, découverte des connaissances, nettoyage, mise en correspondance et services de données de référence) et les différents modules de DQS selon le niveau de gravité des événements.  
+-   **Paramètres de journal** : les fichiers journaux dans DQS enregistrent les activités effectuées dans DQS ; ils s’avèrent utiles pour le suivi des problèmes opérationnels pendant la maintenance et le dépannage. Vous pouvez filtrer les messages que vous souhaitez consigner dans le journal pour les différentes fonctionnalités de DQS (gestion de domaines, découverte des connaissances, nettoyage, mise en correspondance et services de données de référence) et les différents modules de DQS selon le niveau de gravité des événements.  
   
 > [!NOTE]  
 >  L'écran **Configuration** est accessible uniquement aux utilisateurs disposant du rôle dqs_administrator sur la base de données DQS_MAIN.  
@@ -65,9 +65,9 @@ ms.locfileid: "52617859"
 ##  <a name="AdminOutsideClient"></a> Activités administratives effectuées en dehors de Data Quality Client  
  Ces opérations sont effectuées en dehors de Data Quality Client :  
   
--   **Sauvegarder et restaurer des bases de données DQS**: les opérations de sauvegarde et de restauration des bases de données DQS sont identiques à celles utilisées pour toute base de données SQL Server, à l'exception de quelques spécificités applicables à DQS.  
+-   **Sauvegarder et restaurer des bases de données DQS** : les opérations de sauvegarde et de restauration des bases de données DQS sont les mêmes que pour les bases de données SQL Server, à l’exception de quelques spécificités à prendre en considération pour DQS.  
   
--   **Détacher et attacher des bases de données DQS**: les étapes permettant d'attacher et de détacher des bases de données DQS sont identiques à celles utilisées pour toute base de données SQL Server, à l'exception de quelques spécificités applicables à DQS.  
+-   **Détacher et attacher des bases de données DQS** : les étapes à suivre pour attacher et détacher les bases de données DQS sont les mêmes que pour les bases de données SQL Server, à l’exception de quelques spécificités à prendre en considération pour DQS.  
   
  Pour plus d’informations, consultez [Manage DQS Databases](../data-quality-services/manage-dqs-databases.md).  
   

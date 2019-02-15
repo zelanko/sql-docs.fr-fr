@@ -3,7 +3,7 @@ title: Notes de publication de SQL Server 2012 Service Pack | Microsoft Docs
 ms.prod: sql
 ms.technology: install
 ms.custom: ''
-ms.date: 2/26/2018
+ms.date: 02/26/2018
 ms.reviewer: ''
 ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 49dea1b469a7e8e79810e4a0ab2da6c40b97d3cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503270"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56017060"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notes de publication de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -129,16 +129,16 @@ Utilisez le tableau suivant pour déterminer le fichier à télécharger et inst
 Pour obtenir la liste complète des bogues et problèmes connus corrigés dans ce Service Pack, consultez cet [article de la Base de connaissances](https://support.microsoft.com/kb/2674319).   
 
 ### <a name="reinstalling--instances-of-sql-server-failover-cluster-fails-if-you-use-the-same-ip-address"></a>Échec de la réinstallation des instances de cluster de basculement SQL Server si vous utilisez la même adresse IP  
-**Problème :** si vous spécifiez une adresse IP incorrecte lors de l’installation d’une instance de cluster de basculement SQL Server, l’installation échoue. Après avoir désinstallé l'instance en échec, si vous tentez de réinstaller l'instance de cluster de basculement SQL Server avec le même nom d'instance et une adresse IP correcte, l'installation échoue. Cet échec est dû au groupe de ressources dupliqué conservé par l'installation précédente.  
+**Problème :** si vous spécifiez une adresse IP incorrecte lors de l'installation d'une instance de cluster de basculement SQL Server, l'installation échoue. Après avoir désinstallé l'instance en échec, si vous tentez de réinstaller l'instance de cluster de basculement SQL Server avec le même nom d'instance et une adresse IP correcte, l'installation échoue. Cet échec est dû au groupe de ressources dupliqué conservé par l'installation précédente.  
   
-**Solution de contournement :** pour résoudre ce problème, utilisez un autre nom d'instance lors de la réinstallation, ou supprimez manuellement le groupe de ressources avant réinstallation. Pour plus d'informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
+**Solution de contournement :** pour résoudre ce problème, utilisez un autre nom d'instance lors de la réinstallation, ou supprimez manuellement le groupe de ressources avant la réinstallation. Pour plus d'informations, consultez [Ajouter ou supprimer des nœuds dans un cluster de basculement SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md). 
   
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services et PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>L’outil de configuration PowerPivot ne crée pas la Galerie PowerPivot  
-**Problème :** l'outil de configuration PowerPivot configure un site d'équipe, par conséquent la Galerie PowerPivot n'est pas créée.  
+**Problème :** l'outil de configuration PowerPivot configure un site d'équipe, et la Galerie PowerPivot n'est donc pas créée.  
   
-**Solution :** créez une application (bibliothèque).  
+**Solution de contournement :** créez une application (bibliothèque).  
   
 1.  Vérifiez que la fonctionnalité de collection de site **Fonctionnalité d'intégration PowerPivot pour les collections de sites** est active.  
   
@@ -147,14 +147,14 @@ Pour obtenir la liste complète des bogues et problèmes connus corrigés dans c
 3.  Cliquez sur **Galerie PowerPivot**.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Pour utiliser PowerPivot pour Excel avec Excel 2013, vous devez utiliser le complément installé avec Excel  
-**Problème :** avec Office 2010, PowerPivot pour Excel est un complément autonome qui peut être téléchargé à partir de [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Sinon, vous pouvez également le télécharger depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Notez qu'il existe deux versions du complément PowerPivot disponible en téléchargement : un qui est livré avec SQL Server 2008 R2 et un autre qui est fourni avec SQL Server 2012. Toutefois, pour Office 2013, PowerPivot pour Excel est fourni avec Office et s'installe en même temps qu'Excel. Bien que les versions SQL Server 2008 R2 et SQL Server 2012 de PowerPivot pour Excel 2010 ne soient pas compatibles avec Excel 2013, vous pouvez toujours installer PowerPivot pour Excel 2010 sur votre ordinateur client si vous souhaitez exécuter Excel 2010 en parallèle d'Excel 2013. En d'autres termes, les deux versions d'Excel peuvent coexister, de même que les compléments PowerPivot correspondants.  
+**Problème :** avec Office 2010, PowerPivot pour Excel est un complément autonome qui peut être téléchargé à partir de [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx). Sinon, vous pouvez également le télécharger depuis le [Centre de téléchargement Microsoft](https://www.microsoft.com/download/details.aspx?id=29074). Notez qu'il existe deux versions du complément PowerPivot disponibles en téléchargement : une qui est livrée avec SQL Server 2008 R2, et une autre qui est livrée avec SQL Server 2012. Toutefois, pour Office 2013, PowerPivot pour Excel est fourni avec Office et s'installe en même temps qu'Excel. Bien que les versions SQL Server 2008 R2 et SQL Server 2012 de PowerPivot pour Excel 2010 ne soient pas compatibles avec Excel 2013, vous pouvez toujours installer PowerPivot pour Excel 2010 sur votre ordinateur client si vous souhaitez exécuter Excel 2010 en parallèle d'Excel 2013. En d'autres termes, les deux versions d'Excel peuvent coexister, de même que les compléments PowerPivot correspondants.  
   
-**Solution :** pour utiliser PowerPivot pour Excel 2013, vous devez activer le complément COM. Dans Excel 2013, sélectionnez **Fichier** | **Options** | **Compléments**. Dans la liste déroulante **Gérer** , sélectionnez **Compléments COM** , puis cliquez sur **OK**. Dans **Compléments COM**, sélectionnez **Microsoft Office PowerPivot pour Excel 2013** , puis cliquez sur **OK**.  
+**Solution de contournement :** pour utiliser PowerPivot pour Excel 2013, vous devez activer le complément COM. Dans Excel 2013, sélectionnez **Fichier** | **Options** | **Compléments**. Dans la liste déroulante **Gérer** , sélectionnez **Compléments COM** , puis cliquez sur **OK**. Dans **Compléments COM**, sélectionnez **Microsoft Office PowerPivot pour Excel 2013** , puis cliquez sur **OK**.  
   
 ### <a name="reporting-services"></a>Reporting Services  
   
 #### <a name="install-and-configure-sharepoint-server-2013-prior-to-installing-reporting-services"></a>Installer et configurer SharePoint Server 2013 avant d’installer Reporting Services  
-**Problème :** terminez la configuration suivante **avant** d'installer SQL Server Reporting Services (SSRS).  
+**Problème :** effectuez les opérations suivantes **avant** d’installer SQL Server Reporting Services (SSRS).  
   
 1.  Exécutez l'Outil de préparation des produits SharePoint 2013.  
   
@@ -162,12 +162,12 @@ Pour obtenir la liste complète des bogues et problèmes connus corrigés dans c
   
 3.  Exécutez l'Assistant Configuration de produit SharePoint 2013 ou terminez un ensemble équivalent d'étapes de configuration pour configurer la batterie SharePoint.  
   
-**Solution de contournement :**  si vous avez installé le mode SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] avant de configurer la batterie SharePoint, la solution de contournement requise dépend des autres composants installés.  
+**Solution de contournement :**  si vous avez installé le mode SharePoint de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] avant de configurer la batterie de serveurs SharePoint, la solution de contournement dépend des autres composants installés.  
   
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>Power View dans SharePoint Server 2013 nécessite Microsoft.AnalysisServices.SPClient.dll  
-**Problème :** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n’installe pas un composant requis, **Microsoft.AnalysisServices.SPClient.dll**. Si vous installez SharePoint Server 2013 Preview et [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, mais que vous ne téléchargez pas et n’installez pas le package de programme d’installation de PowerPivot pour SharePoint 2013, **spPowerPivot.msi**, Power View ne fonctionne pas et montre les symptômes suivants.  
+**Problème :** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] n’installe pas un composant requis, **Microsoft.AnalysisServices.SPClient.dll**. Si vous installez SharePoint Server 2013 Preview et [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint, mais que vous ne téléchargez pas et n’installez pas le package de programme d’installation de PowerPivot pour SharePoint 2013, **spPowerPivot.msi** , Power View ne fonctionne pas et montre les symptômes suivants.  
   
-**Symptômes :** Un message d'erreur semblable au suivant s'affiche lorsque vous essayez de créer un rapport Power View :  
+**Symptômes :** quand vous voulez créer un rapport Power View, un message d'erreur semblable au suivant s'affiche :  
   
 -   « Impossible de créer une connexion à la source de données... »  
   
@@ -175,19 +175,19 @@ Les détails de l'erreur interne contiennent un message similaire au message sui
   
 -   « La valeur Principal SharePoint n'est pas prise en charge pour la propriété de chaîne de connexion Identité de l'utilisateur.  
   
-**Solution de contournement :** installez le package d'installation PowerPivot pour SharePoint 2013 (**spPowerPivot.msi**) sur le serveur SharePoint 2013. Le package d'installation est disponible dans le cadre du Feature Pack [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Le Feature Pack peut être téléchargé en accédant au centre de téléchargement [!INCLUDE[msCoName](../includes/msconame-md.md)] à l'adresse [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266).  
+**Solution de contournement :** installez le package d’installation PowerPivot pour SharePoint 2013 (**spPowerPivot.msi**) sur SharePoint Server 2013. Le package d'installation est disponible dans le cadre du Feature Pack [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] . Le Feature Pack peut être téléchargé en accédant au centre de téléchargement [!INCLUDE[msCoName](../includes/msconame-md.md)] à l'adresse [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268266).  
   
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>Les feuilles Power View dans un classeur PowerPivot sont supprimées après les actualisations des données planifiées  
-**Problème**: dans le complément PowerPivot pour SharePoint, les feuilles Power View seront supprimées avec l’utilisation de l’ **actualisation de données planifiée** .  
+**Problème** : dans le complément PowerPivot pour SharePoint, l’utilisation de l’**actualisation planifiée des données** sur un classeur avec Power View a pour effet de supprimer les feuilles Power View.  
   
-**Solution**: pour utiliser **Scheduled Data Refresh** avec classeurs Power View, créez un classeur PowerPivot qui est simplement le modèle de données. Créez un classeur distinct avec les feuilles Excel et Power View qui se lie au classeur PowerPivot avec le modèle de données. Seul le classeur PowerPivot avec le modèle de données doit être planifiée pour l'actualisation des données.  
+**Solution de contournement** : pour utiliser l’**actualisation planifiée des données** avec des classeurs Power View, créez un classeur PowerPivot qui est simplement le modèle de données. Créez un classeur distinct avec les feuilles Excel et Power View qui se lie au classeur PowerPivot avec le modèle de données. Seul le classeur PowerPivot avec le modèle de données doit être planifiée pour l'actualisation des données.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS disponible dans l’édition incorrecte de SQL Server 2012  
-**Problème :** dans la version commerciale de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] , la fonctionnalité Data Quality Services (DQS) est disponible dans les éditions de SQL Server autres que les éditions Enterprise, Business Intelligence et Developer. Après avoir installé SQL Server 2012 SP1, DQS ne sera disponible que dans les éditions Enterprise, Business Intelligence et Developer.  
+**Problème :** dans la version commerciale de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la fonctionnalité Data Quality Services (DQS) est disponible dans les éditions de SQL Server autres que les éditions Enterprise, Business Intelligence et Developer. Après avoir installé SQL Server 2012 SP1, DQS ne sera disponible que dans les éditions Enterprise, Business Intelligence et Developer.  
   
-**Pour contourner le problème** : si vous utilisez DQS dans une édition non prise en charge, effectuez une mise à niveau vers une édition prise en charge ou supprimez la dépendance à cette fonctionnalité dans vos applications.  
+**Solution de contournement** : si vous utilisez DQS dans une édition non prise en charge, effectuez une mise à niveau vers une édition prise en charge ou supprimez la dépendance à cette fonctionnalité dans vos applications.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -197,9 +197,9 @@ La version SQL Server 2012 Express Service Pack 1 (SP1) inclut la version compl�
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Change Data Capture Service et concepteur pour Oracle d’Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>Mise à niveau de CDC Service et du concepteur  
-**Problème :** si le concepteur de capture de données modifiées pour Oracle et le service de capture de données modifiées pour Oracle par Attunity sont installés sur votre ordinateur lorsque vous installez SQL Server 2012 SP1, ces composants ne sont pas mis à niveau lors de l'installation du SP1.  
+**Problème :** si le concepteur de capture de données modifiées pour Oracle et le service de capture de données modifiées pour Oracle par Attunity sont installés sur votre ordinateur quand vous installez SQL Server 2012 SP1, ces composants ne sont pas mis à niveau lors de l'installation du SP1.  
   
-**Solution :** pour mettre à niveau les composants CDC vers la version la plus récente :  
+**Solution de contournement :** pour mettre à niveau les composants CDC vers la version la plus récente :  
   
 1.  Téléchargez les fichiers .msi pour le service de capture de données modifiées pour Oracle par Attunity à partir de la [page de téléchargement du Feature Pack SQL Server 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=268266).  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: de96b2465dd1829e3104af3af7e506204969963b
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 8455bacf178bdc733312e172e1f8227a9485d008
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617112"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56033438"
 ---
 # <a name="data-quality-services-concepts"></a>Concepts Data Quality Services
 
@@ -52,9 +52,9 @@ ms.locfileid: "52617112"
   
  Le nettoyage de données dans DQS s'effectue sur la base des connaissances dans une base de connaissances DQS. Le nettoyage de données dans DQS est un processus en deux étapes :  
   
--   **Nettoyage assisté par ordinateur**: DQS utilise les connaissances d'une base de connaissances sélectionnée pour le projet de nettoyage afin de proposer des corrections/suggestions aux valeurs d'une source de données.  
+-   **Nettoyage assisté par ordinateur** : DQS utilise les connaissances de la base de connaissances sélectionnée pour le projet de nettoyage afin de proposer des corrections/suggestions aux valeurs d’une source de données.  
   
--   **Nettoyage interactif**: le gestionnaire de données ou un professionnel de l'informatique peut exécuter le processus de nettoyage interactif pour modifier ou augmenter les corrections aux données proposées par le processus de nettoyage de données assisté par ordinateur. Il utilise pour cela les niveaux de confiance et les statistiques identifiés par le processus de nettoyage de données, ou écrit manuellement ses propres modifications dans le projet.  
+-   **Nettoyage interactif** : le gestionnaire de données peut exécuter le processus de nettoyage interactif pour modifier ou augmenter les corrections de données proposées par le processus de nettoyage de données assisté par ordinateur. Il utilise pour cela les niveaux de confiance et les statistiques identifiés par le processus de nettoyage de données, ou écrit manuellement ses propres modifications dans le projet.  
   
  Après le nettoyage de données, le gestionnaire peut exporter les données traitées vers une base de données SQL Server, un fichier .csv ou un fichier Excel. Pour plus d’informations, consultez [Data Cleansing](../data-quality-services/data-cleansing.md).  
   

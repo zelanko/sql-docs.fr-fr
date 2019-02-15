@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dqs.dm.domainproperties.f1
 ms.assetid: 8a3c88ca-31d6-4f75-9aca-cf027c6d9845
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: bbc9e37e328e917b02177d99846806c883d74944
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 27e16c4c353aecb14e29e590bf42241078e0cf11
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617219"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56029980"
 ---
 # <a name="set-domain-properties"></a>Définir des propriétés de domaine
 
@@ -44,7 +44,7 @@ ms.locfileid: "52617219"
   
 3.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](https://msdn.microsoft.com/library/ab6505ad-3090-453b-bb01-58435e7fa7c0).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir défini les propriétés de domaine  
+##  <a name="FollowUp"></a> Suivi : Après la définition des propriétés de domaine  
  Après avoir défini les propriétés de domaine, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Properties"></a> Propriétés du domaine  
@@ -53,7 +53,7 @@ ms.locfileid: "52617219"
  Une fois qu'un domaine a été créé, le nom ou la description du domaine peut être modifié. Le nom de domaine doit être unique pour la base de connaissances. La description peut comporter jusqu'à 256 caractères.  
   
 ###  <a name="Type"></a> Type de données  
- Lorsque vous créez le domaine, sélectionnez l'un des types de données suivants pour les valeurs du domaine : **Chaîne** (valeur par défaut), **Date**, **Entier**, ou **Décimal**. Après avoir créé le domaine, vous pouvez afficher le type de données, mais vous ne pouvez pas le modifier. Le type de données sélectionné pour un domaine définit le type de données source qui peut être mappé au domaine. Pour plus d’informations sur les types de données pris en charge pour chacun des quatre types de données de domaine dans DQS, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
+ Lorsque vous créez le domaine, sélectionnez l'un des types de données suivants pour les valeurs du domaine : **String** (valeur par défaut), **Date**, **Integer** ou **Decimal**. Après avoir créé le domaine, vous pouvez afficher le type de données, mais vous ne pouvez pas le modifier. Le type de données sélectionné pour un domaine définit le type de données source qui peut être mappé au domaine. Pour plus d’informations sur les types de données pris en charge pour chacun des quatre types de données de domaine dans DQS, consultez [Types de données SQL Server et SSIS pris en charge pour les domaines DQS](../data-quality-services/supported-sql-server-and-ssis-data-types-for-dqs-domains.md).  
   
 ###  <a name="Leading"></a> Utiliser des valeurs de début  
  Activez cette case à cocher pour spécifier que la valeur de début dans un groupe de synonymes sera générée au lieu d'une valeur qui en est un synonyme. Désélectionnez **Utiliser des valeurs de début** pour spécifier que chaque valeur de synonyme est générée sous sa forme correcte ou corrigée, et n'est pas remplacée par la valeur de début de son groupe.  

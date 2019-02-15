@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: fabd88b0-22b3-4543-a993-6d5b202ded80
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7961facbec5f194c45c8677481af5b43bdfaa1e8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 4628ed370354ff1551892bf979b3627e00f119b7
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616399"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56020770"
 ---
 # <a name="import-a-domain-from-a-dqs-file"></a>Importer un domaine à partir d'un fichier .dqs
 
@@ -55,7 +55,7 @@ ms.locfileid: "52616399"
   
 6.  Vérifiez que le domaine que vous avez importé s'affiche dans la liste **Domaine** . Si vous avez importé un domaine composite, vérifiez que le domaine composite et les domaines uniques qu'il contient figurent tous dans la liste **Domaine** .  
   
-##  <a name="FollowUp"></a> Suivi : Après l'importation d'un domaine à partir d'un fichier .dqs  
+##  <a name="FollowUp"></a> Suivi : Après l’importation d’un domaine à partir d’un fichier .dqs  
  Après avoir importé un domaine à partir d'un fichier .dqs, vous pouvez ajouter des connaissances au domaine ou utiliser le domaine dans un projet de nettoyage ou de correspondance, en fonction du contenu du domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../data-quality-services/managing-a-domain.md), [Gestion d’un domaine composite](../data-quality-services/managing-a-composite-domain.md), [Créer une stratégie de correspondance](../data-quality-services/create-a-matching-policy.md), [Nettoyage des données](../data-quality-services/data-cleansing.md) ou [Correspondance de données](../data-quality-services/data-matching.md).  
   
   

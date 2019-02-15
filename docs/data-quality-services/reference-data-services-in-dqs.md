@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: a491ae673059d9373067428ef226d5819a7a34ad
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 92112b0211536bcb964d71e538a92311b2579117
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617699"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56027130"
 ---
 # <a name="reference-data-services-in-dqs"></a>Services de données de référence dans DQS
 
@@ -57,7 +57,7 @@ ms.locfileid: "52617699"
 ##  <a name="HowToCleanse"></a> Procédure : nettoyer des données à l'aide de données de référence  
  Le nettoyage de vos données dans DQS à l'aide de données de référence inclut les trois étapes suivantes :  
   
-1.  **Configuration des détails du fournisseur de données de référence dans DQS**: avant de pouvoir utiliser des données de référence dans DQS, vous devez configurer les détails du service de données de référence dans DQS.  
+1.  **Configuration des détails sur le fournisseur de données de référence dans DQS** : avant de pouvoir utiliser des données de référence dans DQS, vous devez configurer les détails du service de données de référence dans DQS.  
   
     1.  Si vous utilisez Marketplace, fournissez une clé de compte Marketplace valide, accédez à la catégorie de données [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) dans Marketplace, et abonnez-vous aux fournisseurs requis.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "52617699"
   
      La configuration des détails de fournisseur de données de référence dans DQS est une activité qui s'effectue une seule fois pour un fournisseur de données particulier. Seuls les administrateurs DQS peuvent configurer des paramètres de données de référence dans DQS.  
   
-2.  **Mappage d'un domaine/domaine composite dans une base de connaissances au service de données de référence**: mappez un domaine/domaine composite au service de données de référence approprié souscrit/ajouté à l'étape 1.  
+2.  **Mapper un domaine/domaine composite d’une base de connaissances au service de données de référence** : mappez un domaine/domaine composite au service de données de référence approprié souscrit/ajouté à l’étape 1.  
   
-3.  **Utilisation des domaines mappés pour l'activité de nettoyage dans un projet de qualité des données**: lors de la création d'un projet de qualité des données pour l'activité **Nettoyage** , sélectionnez la base de connaissances qui contient des domaines/domaines composites mappés avec des services de données de référence à l'étape 2, puis effectuez l'activité de nettoyage.  
+3.  **Utiliser les domaines mappés pour l’activité de nettoyage dans un projet de qualité des données** : au moment de créer un projet de qualité des données pour l’activité **Nettoyage**, sélectionnez la base de connaissances qui contient les domaines/domaines composites mappés avec des services de données de référence à l’étape 2, puis effectuez l’activité de nettoyage.  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a43fc9c0-19b6-414a-8661-4c7c55e0c03e
-author: douglaslMS
-ms.author: douglasl
+author: leolimsft
+ms.author: lle
 manager: craigg
-ms.openlocfilehash: 37ef3f8bb8f1a39a9d1af06a8ee71735bf0cccbf
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 1c08c3ccfb637f00fef08b63bf1afc3cae8a0d34
+ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617909"
+ms.lasthandoff: 02/11/2019
+ms.locfileid: "56032240"
 ---
 # <a name="data-quality-projects-dqs"></a>Projets de qualité des données (DQS)
 
@@ -32,7 +32,7 @@ ms.locfileid: "52617909"
   
 -   Il fournit un Assistant pour vous guider au cours des activités de nettoyage et de correspondance, et exporte les données selon votre sélection dans une base de données SQL Server ou un fichier .csv. Le gestionnaire de données peut utiliser le projet de qualité des données pour exécuter et contrôler les étapes de correspondance de données et de nettoyage interactives/assistées par ordinateur.  
   
-##  <a name="Cleansing"></a> Projet de qualité des données : activité de nettoyage  
+##  <a name="Cleansing"></a> Projet de qualité des données : activité de nettoyage  
  Un projet de qualité des données de nettoyage vous permet de nettoyer vos données sources selon une base de connaissances. L'activité de nettoyage des données dans DQS est un processus en deux étapes :  
   
 1.  Un processus de nettoyage des données *assisté par ordinateur* qui analyse les données sources par rapport à la connaissance dans la base de connaissances, et propose des modifications. Les données traitées sont classées (suggéré, nouveau, non valide, corrigé et correct) par DQS, puis affichées à l'intention de l'utilisateur pour un traitement ultérieur.  
@@ -41,7 +41,7 @@ ms.locfileid: "52617909"
   
  Pour plus d'informations sur l'activité de nettoyage dans un projet de qualité des données, consultez [Data Cleansing](../data-quality-services/data-cleansing.md).  
   
-##  <a name="Matching"></a> Projet de qualité des données : activité de correspondance  
+##  <a name="Matching"></a> Projet de qualité des données : activité de correspondance  
  Un projet de qualité des données de correspondance vous permet d'effectuer l'activité de correspondance en fonction de la stratégie de correspondance dans une base de connaissances pour éviter la duplication de données en identifiant les correspondances exactes et approximatives, et en vous permettant ainsi de supprimer des données en double. Il est recommandé de nettoyer vos données avant d'exécuter la correspondance sur celles-ci. Pour cela :  
   
 1.  Créez un projet de qualité des données, sélectionnez l'activité **Nettoyage** , effectuez l'activité de nettoyage de données sur vos données sources, puis exportez-les vers une table dans une base de données SQL Server.  
