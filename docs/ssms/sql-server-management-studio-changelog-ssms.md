@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8f7de9a4f6e99c60b0bbe560d57f6e7adf397c2e
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e3b3789b28a63d91dd11ce9238b9c3e4a35325be
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087908"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319380"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -557,7 +557,7 @@ Création de scripts :
     
 SMO :
 
-- Correction du problème qui provoquait l’échec de Table.Alter() en cas d’ajout d’une colonne avec contrainte par défaut à une table contenant déjà des données. Pour plus d’informations, consultez [Génération d’une contrainte par défaut en ligne par SQL Server SMO en cas d’ajout d’une colonne à une table contenant des données](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
+- Correction du problème qui provoquait l’échec de Table.Alter() en cas d’ajout d’une colonne avec contrainte par défaut à une table contenant déjà des données. Pour plus d’informations, voir [SQL Server SMO qui génère une contrainte par défaut inline en cas d’ajout d’une colonne à une table contenant des données](https://feedback.azure.com/forums/908035-sql-server/suggestions/32895625).
     
 Always Encrypted :
 
@@ -607,7 +607,7 @@ Azure SQL Data Warehouse :
 **SSMS général** 
 
 Plan de maintenance :   
-- Correction d’un problème où toute tentative de modification de la planification d’un plan de maintenance existant se traduisait par la levée d’une exception. Pour plus d’informations, consultez [SSMS 17.6 plante quand l’utilisateur clique sur une planification dans un plan de maintenance](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
+- Correction d’un problème où toute tentative de modification de la planification d’un plan de maintenance existant se traduisait par la levée d’une exception. Pour plus d’informations, consultez [SSMS 17.6 crashes when clicking on a schedule in a maintenance plan](https://feedback.azure.com/forums/908035-sql-server/suggestions/33712924).
 
 AlwaysOn : 
 - Correction d’un problème où le tableau de bord de latence AlwaysOn ne fonctionnait pas avec SQL Server 2012.
@@ -623,7 +623,7 @@ Azure SQL Database :
 - Correction d’un problème où l’utilisateur ne pouvait pas définir ou modifier le niveau de compatibilité (liste déroulante vide). Remarque : pour définir le niveau de compatibilité à 150, l’utilisateur doit toujours utiliser le bouton *Script* et modifier manuellement le script. 
  
 SMO : 
-- Paramètre Taille du journal des erreurs affiché dans SMO. Pour plus d’informations, consultez [Définir la taille maximale des journaux d’erreurs SQL Server](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
+- Paramètre Taille du journal des erreurs affiché dans SMO. Pour plus d’informations, consultez [Set the Maximum Size of the SQL Server Error Logs](https://feedback.azure.com/forums/908035-sql-server/suggestions/33624115).  
 - Correction de la création de scripts de sauts de ligne dans SMO sur Linux.
 - Diverses améliorations sur le plan des performances pendant la récupération de propriétés rarement utilisées.  
 
@@ -834,7 +834,7 @@ XE Profiler :
 - Ajout des actions database\_name et client\_hostname aux événements concernés dans les sessions XEvent Profiler. Pour que la modification prenne effet, vous devrez peut-être supprimer les instances de sessions QuickSessionStandard et QuickSessionTSQL sur les serveurs - [Connect 3142981](https://connect.microsoft.com/SQLServer/feedback/details/3142981).
 
 Ligne de commande :
-- Ajout d’une nouvelle option de ligne de commande («-G ») qui peut être utilisée pour faire en sorte que SSMS se connecte automatiquement à un serveur/une base de données avec l’authentification Active Directory (« Intégrée » ou « Mot de passe »). Pour plus d’informations, consultez [Utilitaire SSMS](ssms-utility.md).
+- Ajout d’une nouvelle option de ligne de commande («-G ») qui peut être utilisée pour faire en sorte que SSMS se connecte automatiquement à un serveur/une base de données avec l’authentification Active Directory (« Intégrée » ou « Mot de passe »). Pour plus d’informations, consultez la page [Utilitaire SSMS](ssms-utility.md).
 
 Assistant Importation de fichier plat :
 - Ajout de la possibilité de choisir un nom de schéma autre que le nom par défaut (« dbo ») lors de la création de la table.
@@ -893,7 +893,7 @@ Disponibilité générale | Numéro de build : 14.0.17199.0
 
 ### <a name="enhancements"></a>Améliorations
 
-- Ajout du nouvel Assistant d’importation de fichier plat pour simplifier l’importation des fichiers CSV avec une infrastructure intelligente, nécessitant une intervention de l’utilisateur ou des connaissances techniques minimes. Pour plus d’informations, consultez [Assistant Importation d’un fichier plat dans SQL](../relational-databases/import-export/import-flat-file-wizard.md).
+- Ajout du nouvel Assistant d’importation de fichier plat pour simplifier l’importation des fichiers CSV avec une infrastructure intelligente, nécessitant une intervention de l’utilisateur ou des connaissances techniques minimes. Pour plus d’informations, consultez [Assistant Importer un fichier plat dans SQL](../relational-databases/import-export/import-flat-file-wizard.md).
 - Ajout du nœud « XEvent Profiler » à l’Explorateur d’objets. Pour plus d’informations, consultez [Utiliser SSMS XEvent Profiler](../relational-databases/extended-events/use-the-ssms-xe-profiler.md).
 - Mise à jour du filtrage et de la catégorisation des attentes dans le rapport des attentes historiques du Tableau de bord Performances.
 - Ajout de la vérification syntaxique de la fonction « Predict ».
