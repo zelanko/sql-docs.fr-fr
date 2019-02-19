@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data regions
 ms.assetid: 3afb8874-b36c-4e44-a0d8-80d2f7135fb1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e0eb7f32dc0a377b8f0ddf9eda7dd43ee04fe4df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6065e26f36561b446257825f7f953c5eeccc3b25
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759557"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290897"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Cartes et régions de données (Générateur de rapports et SSRS)
   Une région de données est un objet d'un rapport, affichant des données à partir du dataset d'un rapport. Les données de rapport peuvent s'afficher sous forme de nombres et de texte dans une table, une matrice ou une liste ; graphiquement dans un graphique ou une jauge ; et par rapport à l'arrière-plan géographique d'un plan. Les tables, matrices et listes sont toutes basées sur la région de données du *tableau matriciel* , lequel peut se développer autant que nécessaire pour afficher toutes les données du dataset. Une région de données de tableau matriciel prend en charge plusieurs groupes de lignes et de colonnes statiques et dynamiques. Un graphique affiche plusieurs séries et catégories de groupes sous divers formats graphiques. Une jauge affiche une valeur unique ou une valeur agrégée pour un dataset. Une carte affiche les données spatiales en tant qu'éléments cartographiques dont l'apparence peut varier selon les données agrégées d'un dataset.  
@@ -53,7 +53,7 @@ ms.locfileid: "47759557"
  Vous pouvez lier plusieurs régions de données à un même dataset pour fournir différentes vues des mêmes données. Par exemple, vous pouvez afficher les mêmes données dans une table et dans un graphique. Vous pouvez créer un rapport avec des boutons de tri interactifs sur la table, de sorte que lorsque vous triez la table, le graphique est également trié automatiquement. Pour plus d’informations, consultez [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
 ## <a name="data-for-a-data-region"></a>Données d'une région de données  
- Chaque tableau matriciel, graphique et jauge est conçu pour afficher des données à partir d'un dataset unique. Une carte affiche des données spatiales et des données analytiques à partir d'un même dataset ou de datasets différents. Vous pouvez également inclure des valeurs provenant de datasets non liés à la région de données selon les méthodes suivantes :  
+ Chaque tableau matriciel, graphique et jauge est conçu pour afficher des données à partir d'un dataset unique. Une carte affiche des données spatiales et des données analytiques à partir d'un même dataset ou de datasets différents. Vous pouvez également inclure des valeurs provenant de datasets non liés à la région de données selon les méthodes suivantes :  
   
 -   Valeurs agrégées qui ne dépendent pas de l'ordre de tri ou du regroupement et étendues à un dataset différent.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "47759557"
  [Rapports, parties de rapports et définitions de rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Mise en page et rendu &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Didacticiels du Générateur de rapports](../../reporting-services/report-builder-tutorials.md)   
- [Didacticiels sur Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
+ [Reporting Services, didacticiels &#40;SSRS&#41;](../../reporting-services/reporting-services-tutorials-ssrs.md)  
   
   

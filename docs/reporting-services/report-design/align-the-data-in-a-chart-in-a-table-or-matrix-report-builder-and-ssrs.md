@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 75137575-d1bf-46d6-8527-5afc85eea5e1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ff5241c95a410eae0dc10e86341e8ae44248214b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 763091e27701524a40c686fc773a6e4e845992fb
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851027"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290417"
 ---
 # <a name="align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs"></a>Aligner les données d'un graphique dans une table ou une matrice (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques simples de petite taille qui communiquent beaucoup d'informations avec peu de détails superflus. Quand vous activez cette option dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les valeurs de vos graphiques sparkline et barres de données sont alignées dans les différentes cellules de la table ou de la matrice, même s’il manque des valeurs dans les données sur lesquelles ils sont basés.  

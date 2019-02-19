@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a13a171024aecbe39bc7c83f77f109914bc4250
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 0a8177492de46c92577eb98e79ece42e77ba947b
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53029753"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407609"
 ---
 # <a name="azure-data-studio-extensibility-apis"></a>API d’extensibilité Data Studio Azure
 
@@ -35,7 +35,7 @@ ms.locfileid: "53029753"
 
 ### `Connection`
 - `options: { [name: string]: string }` Le dictionnaire des options de connexion
-- `providerName: string` Le nom du fournisseur de connexion (par exemple) « MSSQL »)
+- `providerName: string` Le nom du fournisseur de connexion (par exemple) "MSSQL")
 - `connectionId: string` L’identificateur unique pour la connexion
 
 ### <a name="example-code"></a>Exemple de code
@@ -69,7 +69,7 @@ credentials: {
 
 - `getActiveConnectionNodes(): Thenable<sqlops.objectexplorer.ObjectExplorerNode>` Obtenir tous les nœuds de connexion de l’Explorateur d’objets actifs.
 
-- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Rechercher tous les nœuds de l’Explorateur d’objets qui correspondent aux métadonnées donnée. Le `schema`, `database`, et `parentObjectNames` arguments doivent être `undefined` lorsqu’ils ne sont pas applicables. `parentObjectNames` est une liste d’objets de base de données non parent, du plus élevé au niveau le plus bas dans l’Explorateur d’objets, qui est de l’objet souhaité sous. Par exemple, lors de la recherche pour une colonne « column1 » qui appartient à une table « schema1.table1 » et la base de données « database1 » avec l’ID de connexion `connectionId`, appelez `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Consultez également le [liste de types SQL Operations Studio prend en charge par défaut](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) pour cet appel d’API.
+- `findNodes(connectionId: string, type: string, schema: string, name: string, database: string, parentObjectNames: string[]): Thenable<sqlops.objectexplorer.ObjectExplorerNode[]>` Rechercher tous les nœuds de l’Explorateur d’objets qui correspondent aux métadonnées donnée. Le `schema`, `database`, et `parentObjectNames` arguments doivent être `undefined` lorsqu’ils ne sont pas applicables. `parentObjectNames` est une liste d’objets de base de données non parent, du plus élevé au niveau le plus bas dans l’Explorateur d’objets, qui est de l’objet souhaité sous. Par exemple, lors de la recherche pour une colonne « column1 » qui appartient à une table « schema1.table1 » et la base de données « database1 » avec l’ID de connexion `connectionId`, appelez `findNodes(connectionId, 'Column', undefined, 'column1', 'database1', ['schema1.table1'])`. Consultez également le [liste des types pris en charge par Azure Data Studio par défaut](https://github.com/Microsoft/azuredatastudio/wiki/Object-Explorer-types-supported-by-FindNodes-API) pour cet appel d’API.
 
 ### <a name="objectexplorernode"></a>ObjectExplorerNode
 - `connectionId: string` L’id de la connexion que le nœud existe sous

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- configmgr-client
+ms.technology: ''
 ms.topic: conceptual
 ms.assetid: a8204e68-c476-4fe0-8bfc-e6dd5c0da4cf
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 339acb09ad439585ebd58f83be3b43e54d2b1cf9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371731"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407501"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>À propos des termes du contrat de licence SQL Server (SSCM)
   Les termes de la Licence d'utilisation du logiciel [!INCLUDE[msCoName](../../includes/msconame-md.md)]sont copiés vers l'ordinateur local lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est installé. Lorsque plusieurs instances des mêmes édition et langue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont installées sur le même ordinateur, une seule copie du contrat de licence s'applique à toutes les instances de cette édition et de cette langue. Les fichiers sont écrits dans : %ProgramFiles%\Microsoft SQL Server\110\License Terms\ ou % ProgramFiles (x86) %\Microsoft SQL Server\110\License termes\\.  

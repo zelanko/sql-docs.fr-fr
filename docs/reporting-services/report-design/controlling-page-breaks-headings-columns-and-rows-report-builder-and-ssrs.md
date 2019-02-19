@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4b8fa41f-a727-4f23-8efb-fd9bb0d4cd1d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 79e2fa75e9e7ec45b86e597aabb7d5e002a23023
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 2cab3e56eeda23d10e7b8a5b909792ff136591d0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816977"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294321"
 ---
 # <a name="controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs"></a>Contrôle des sauts de page, des en-têtes, des colonnes et des lignes (Générateur de rapports et SSRS)
   Un saut de page divise un rapport en pages distinctes à des fins d'affichage et d'impression. Les sauts de page déterminent la façon dont le contenu est ajusté sur une page de rapport pour un affichage optimal lorsque affichez l'aperçu d'un rapport ou que vous l'exportez dans un format de fichier différent.  

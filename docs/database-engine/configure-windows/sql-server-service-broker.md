@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 599905aad2a6c6959f4e1e751640533c2d24011a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 70487916496caa4cb2fba5a472262d22c7c123bd
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601989"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154654"
 ---
 # <a name="sql-server-service-broker"></a>SQL Server Service Broker
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "51601989"
 ## <a name="where-is-the-documentation-for-service-broker"></a>Emplacement de la documentation de Service Broker  
  La documentation de référence pour [!INCLUDE[ssSB](../../includes/sssb-md.md)] est incluse dans la documentation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Cette documentation de référence comprend les sections suivantes :  
   
--   [Instructions DDL &#40;Data Definition Language &#41; &#40;Transact-SQL&#41;](~/mdx/mdx-data-definition-statements-mdx.md) pour les instructions CREATE, ALTER et DROP  
+-   [Instructions DDL &#40;Data Definition Language &#41; &#40;Transact-SQL&#41;](../../t-sql/statements/statements.md) pour les instructions CREATE, ALTER et DROP  
   
 -   [Instructions de Service Broker](../../t-sql/statements/service-broker-statements.md)  
   

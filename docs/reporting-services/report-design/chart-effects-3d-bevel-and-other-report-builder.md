@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10156"
 ms.assetid: 18ef2119-2931-43ae-9078-f39b460462dd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d40b8179e008312752e6b1a90f83627fdcf88eea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 8b1c5bc212be33c352110694b4bc9c12f715b33c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826977"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297417"
 ---
 # <a name="chart-effects---3d-bevel-and-other-report-builder"></a>Effets de graphique - 3D, biseau et autres (Générateur de rapports)
   Des effets 3D (en trois dimensions) peuvent être utilisés pour donner de la profondeur et augmenter l’impact visuel des graphiques de vos rapports paginés [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Par exemple, si vous voulez insister sur un secteur particulier d'un graphique à secteurs éclatés, vous pouvez faire pivoter le graphique et changer sa perspective pour que les lecteurs remarquent ce secteur en premier. Lorsque des effets 3D sont appliqués à votre graphique, les couleurs de dégradé et les styles de hachurage sont désactivés.  

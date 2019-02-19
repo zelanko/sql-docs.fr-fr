@@ -9,14 +9,14 @@ helpviewer_keywords:
 - getting started
 - report design
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 385d8cfa69e7407aec2f31ee99962b2a1200e4aa
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 48011d4f815df916236a60f2471c7ce45fe1f2f8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710850"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297327"
 ---
 # <a name="planning-a-report-report-builder"></a>Planification d'un rapport (Générateur de rapports)
   Le Générateur de rapports vous permet de créer divers types de rapports paginés. Par exemple, vous pouvez créer des rapports qui indiquent des données de ventes récapitulatives ou détaillées, des tendances de ventes et de marketing, ou bien des rapports opérationnels ou des tableaux de bord. Vous pouvez également créer des rapports qui tirent parti de texte enrichi, tels que des commandes clients, des catalogues de produits ou des lettres types. Tous ces rapports sont créés à l'aide de différentes combinaisons des mêmes blocs de construction dans le Générateur de rapports. Pour créer un rapport utile et facilement compréhensible, il est préférable de le planifier au préalable. Voici quelques éléments à prendre en considération avant de commencer :  

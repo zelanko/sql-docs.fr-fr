@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 76d019a5171b64c06e346b02d1c92d610b0fe13c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 16f4adc3b2aefa00ad02f8e39f8cd17f3366e9ee
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835637"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298197"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
   La mise en forme des éléments du rapport rend celui-ci plus attrayant et améliore sa lisibilité. Vous pouvez mettre en forme les zones de texte et des éléments individuels dans les zones de texte, les images, les expressions et les données en mode création de rapport.  
@@ -24,13 +24,13 @@ ms.locfileid: "47835637"
   
  A. Zone de texte avec une bordure à double trait et divers styles de mise en forme, incluant un lien.  
   
- B. Zone de texte avec une bordure en pointillés, un contenu HTML brut et un contenu HTML rendu.  
+ b. Zone de texte avec une bordure en pointillés, un contenu HTML brut et un contenu HTML rendu.  
   
  C. Zone de texte avec une étiquette de texte et un espace réservé.  
   
  Vous pouvez modifier les options de mise en forme en sélectionnant l'élément à mettre en forme, puis en ouvrant la boîte de dialogue Propriétés de l'élément. Par exemple, si vous souhaitez mettre en forme le contenu de l’intégralité d’une zone de texte ou un mot sélectionné dans la zone de texte, cliquez avec le bouton droit sur l’élément et sélectionnez **Propriétés de la zone de texte**. Vous pouvez ensuite appliquer les styles de mise en forme souhaités.  
   
- Pour une prise en main rapide, consultez [Didacticiel : mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
+ Pour démarrer rapidement, consultez [Tutoriel : Mettre en forme du texte &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-format-text-report-builder.md).  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  

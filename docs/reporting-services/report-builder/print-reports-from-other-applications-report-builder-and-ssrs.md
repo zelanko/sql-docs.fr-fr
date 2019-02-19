@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: a5560581-fd57-4a45-b7ea-43b21a8a7419
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 113735877c1618f65d9d1a87ce8cb6cc05c02daa
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: aa3ef63a6b281147f051e0e0255b8a61c641fed3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031701"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298578"
 ---
 # <a name="print-reports-from-other-applications-report-builder-and-ssrs"></a>Imprimer des rapports à partir d'autres applications (Générateur de rapport et SSRS)
   Le Générateur de rapports fournit une option d'exportation qui vous permet d'afficher facilement un rapport dans d'autres applications. La commande **Exporter** est disponible dans la barre d’outils de rapport qui s’affiche en haut d’un rapport quand vous ouvrez ce dernier dans un navigateur ou une application web. L'exportation d'un rapport permet son affichage dans une autre application (par exemple, l'exportation d'un rapport vers Excel permet d'ouvrir le rapport dans [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)]). Pour l'impression, l'exportation d'un rapport est recommandée uniquement si l'application dispose de fonctionnalités d'impression spécifiques que vous souhaitez utiliser.  

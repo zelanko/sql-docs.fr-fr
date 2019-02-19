@@ -23,14 +23,14 @@ f1_keywords:
 helpviewer_keywords:
 - "10140"
 ms.assetid: ddf50dd5-5314-42ff-97f4-c3a4a17cfcdd
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 263cd5cc24a293192c434c644c387f5678e120fe
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ad16182f372452cf8e5e2910a8f7306d3d9a1225
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031418"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296577"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
   Les types de graphiques basés sur les coordonnées (histogramme, graphique à barres, graphique en aires, graphique à points, graphique en courbes et graphique d'étendue) comportent deux axes qui sont utilisés pour classer des données en catégories et afficher les relations de données. Des types de mises en forme différents seront appliqués à chaque axe.  
@@ -75,7 +75,7 @@ ms.locfileid: "50031418"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Exemple de calcul d'étiquettes d'axe par le graphique  
  Le tableau présenté ici contient des exemples de données de vente à tracer sur un histogramme. Le champ Name est ajouté à la zone Groupes d'abscisses et le champ Quantity est ajouté à la zone Valeurs.  
   
-|Nom   |Quantity|  
+|Créer une vue d’abonnement|Quantity|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

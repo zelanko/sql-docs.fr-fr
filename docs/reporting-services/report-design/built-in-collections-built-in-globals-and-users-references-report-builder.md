@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a6ae1e843a2f4c829f5dd21f7795681bb962e025
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1bdfb2cfca82df57d76c321957bbcb565fb2b058
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031578"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298437"
 ---
 # <a name="built-in-collections---built-in-globals-and-users-references-report-builder"></a>Collections intégrées - Références à des champs Globals et Users prédéfinis (Générateur de rapports)
   La collection de champs prédéfinis, qui inclut à la fois les collections **Globals** et **User** , représente les valeurs globales fournies par Reporting Services pendant le traitement d’un rapport. La collection **Globals** fournit des valeurs, telles que le nom du rapport, l'heure de début du traitement du rapport et les numéros des pages actuelles pour l'en-tête ou le pied de page du rapport. La collection **User** fournit les paramètres d'identificateur d'utilisateur et de langue. Ces valeurs peuvent être utilisées dans les expressions pour filtrer les résultats dans un rapport.  
@@ -44,7 +44,7 @@ ms.locfileid: "50031578"
   
 |Membre|Type|Description|  
 |------------|----------|-----------------|  
-|Nom   |**String**|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
+|Créer une vue d’abonnement|**String**|Nom du convertisseur tel qu'il a été inscrit dans le fichier de configuration RSReportServer.<br /><br /> Disponible pendant des parties spécifiques du cycle de traitement/rendu des rapports.|  
 |IsInteractive|**Booléen**|Indique si la demande de rendu actuelle utilise un format de rendu interactif.|  
 |DeviceInfo|Collection nom/valeur en lecture seule|Paires clé/valeur pour les paramètres deviceinfo de la demande de rendu actuelle.<br /><br /> Les valeurs de chaîne peuvent être spécifiées en utilisant la clé ou un index dans la collection.|  
   
