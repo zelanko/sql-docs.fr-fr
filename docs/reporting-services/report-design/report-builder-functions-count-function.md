@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 7b50b101-daf8-4fb0-ae04-57384755779f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 76172811a5c6807b31c8c2b660a0620976fab1ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b0eba548573866c89dffe91df44c4ba78f1417c0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818817"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56285327"
 ---
 # <a name="report-builder-functions---count-function"></a>Fonctions du Générateur de rapports - Count
   Retourne le nombre de valeurs non Null spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.  
@@ -61,7 +61,7 @@ Count(expression, scope, recursive)
   Exemple  
   
 ## <a name="description"></a>Description  
- L'exemple de code suivant affiche une expression qui calcule le nombre de valeurs non Null de `Size` pour l'étendue par défaut et pour une étendue de groupe parent. L'expression est ajoutée à une cellule d'une ligne qui appartient au groupe enfant `GroupbySubcategory`. Le groupe parent est `GroupbyCategory`. L’expression affiche les résultats pour `GroupbySubcategory` (étendue par défaut) et pour `GroupbyCategory` (étendue de groupe parent).  
+ L'exemple de code suivant affiche une expression qui calcule le nombre de valeurs non Null de `Size` pour l'étendue par défaut et pour une étendue de groupe parent. L’expression est ajoutée à une cellule d’une ligne qui appartient au groupe enfant `GroupbySubcategory`. Le groupe parent est `GroupbyCategory`. L’expression affiche les résultats pour `GroupbySubcategory` (étendue par défaut) et pour `GroupbyCategory` (étendue de groupe parent).  
   
 > [!NOTE]  
 >  Les expressions ne doivent pas contenir de retours chariot ni de sauts de ligne réels ; ceux-ci sont inclus dans l'exemple pour prendre en charge des convertisseurs de documentation. Si vous copiez l'exemple suivant, supprimez les retours chariot de chaque ligne.  

@@ -1,7 +1,7 @@
 ---
 title: Présentation de prise en charge de Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: da575f8c0fecd03e21bc2d24800cde05105a5a3c
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736924"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154614"
 ---
 # <a name="understanding-java-ee-support"></a>Fonctionnement de la prise en charge Java EE
 
@@ -36,7 +36,7 @@ Pour JDBC Driver 6.4, le pilote est contenu dans **mssql-jdbc-6.4.0.jre7.jar**, 
 
 Pour 7.0 du pilote JDBC, le pilote est contenu dans **mssql-jdbc-7.0.0.jre8.jar**, ou **mssql-jdbc-7.0.0.jre10.jar**.
 
-Pour 7.2 du pilote JDBC, le pilote est contenu dans **mssql-jdbc-7.2.0.jre8.jar**, ou **mssql-jdbc-7.2.0.jre11.jar**.
+Pour 7.2 du pilote JDBC, le pilote est contenu dans **mssql-jdbc-7.2.1.jre8.jar**, ou **mssql-jdbc-7.2.1.jre11.jar**.
   
 Le nom de la classe est utilisé chaque fois que le pilote est chargé avec la classe DriverManager JDBC. Il sert également chaque fois que le nom de la classe du pilote doit être spécifié, quelle que soit la configuration du pilote. Par exemple, la configuration d'une source de données dans un serveur d'applications Java EE peut imposer d’entrer le nom de la classe du pilote.  
   

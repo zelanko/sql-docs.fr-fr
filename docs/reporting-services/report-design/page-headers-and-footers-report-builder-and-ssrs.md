@@ -19,14 +19,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.pagefooter.general.f1
 - "10124"
 ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 6ff5c2e66580eabb29908dcec99b3eaa429d1d04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b03f701a40c97d5958e5e8b2146844f335d64724
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759793"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298637"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>En-têtes et pieds de page (Générateur de rapports et SSRS)
   Un rapport peut contenir un en-tête et un pied de page. Ces informations sont situées respectivement le long des bords supérieur et inférieur de chaque page. Les en-têtes et pieds de page peuvent contenir du texte statique, des images, des rectangles, des bordures, une couleur d'arrière-plan, des images d'arrière-plan et des expressions. Les expressions contiennent des références de champs de dataset pour des rapports qui utilisent un seul dataset, ainsi que des appels de fonction d'agrégation qui intègrent le dataset sous forme d'étendue.  
@@ -55,9 +55,9 @@ ms.locfileid: "47759793"
   
 |Pris en charge par l'expression|Agrégats ReportItems|Agrégats du dataset (le nom du dataset doit correspondre à l'étendue)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
-|Zones de texte apparaissant dans le corps du rapport|Oui|non|  
-|&PageNumber|Oui|non|  
-|&TotalPages|Oui|non|  
+|Zones de texte apparaissant dans le corps du rapport|Oui|Non|  
+|&PageNumber|Oui|Non|  
+|&TotalPages|Oui|Non|  
 |Fonction d'agrégation|Oui. Par exemple,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Oui. Par exemple,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Collection de champs pour les éléments figurant sur les pages|Indirectement. Par exemple,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Oui. Par exemple,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Image liée aux données|Indirectement. Par exemple : `=ReportItems!TXT_Photo.Value`|Oui. Par exemple,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

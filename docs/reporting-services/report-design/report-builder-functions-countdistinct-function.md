@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 902c251e-e1e8-41d2-ac20-5bb6138ac410
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9b1cbc3721c90beae1203cb1f9391b7d86b071b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7fdf0446082a3cfde45f3093e2d6cd0b5077e3b8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816198"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287867"
 ---
 # <a name="report-builder-functions---countdistinct-function"></a>Fonctions du Générateur de rapports - CountDistinct
   Retourne le nombre de toutes les valeurs non Null distinctes spécifiées par l'expression, évaluée dans le contexte de l'étendue donnée.  
@@ -59,10 +59,10 @@ CountDistinct(expression, scope, recursive)
  Pour plus d’informations sur les agrégats récursifs, consultez [Création de groupes de hiérarchies récursives &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
 ## <a name="example"></a> Exemple  
- L’exemple de code suivant affiche une expression qui calcule le nombre de valeurs non Null uniques de `Size` pour l’étendue par défaut et pour une étendue de groupe parent. L'expression est ajoutée à une cellule d'une ligne qui appartient au groupe enfant `GroupbySubcategory`. Le groupe parent est `GroupbyCategory`. L’expression affiche les résultats pour `GroupbySubcategory` (étendue par défaut) et pour `GroupbyCategory` (étendue de groupe parent).  
+ L’exemple de code suivant affiche une expression qui calcule le nombre de valeurs non Null uniques de `Size` pour l’étendue par défaut et pour une étendue de groupe parent. L’expression est ajoutée à une cellule d’une ligne qui appartient au groupe enfant `GroupbySubcategory`. Le groupe parent est `GroupbyCategory`. L’expression affiche les résultats pour `GroupbySubcategory` (étendue par défaut) et pour `GroupbyCategory` (étendue de groupe parent).  
   
 > [!NOTE]  
->  Les expressions ne doivent pas contenir de retours chariot ni de sauts de ligne réels ; ceux-ci sont inclus dans l'exemple de code pour prendre en charge des convertisseurs de documentation. Si vous copiez l'exemple suivant, supprimez les retours chariot de chaque ligne.  
+>  Les expressions ne doivent pas contenir de retours chariot ni de sauts de ligne réels ; ceux-ci sont inclus dans l'exemple de code pour prendre en charge des convertisseurs de documentation. Si vous copiez l'exemple suivant, supprimez les retours chariot de chaque ligne.  
   
 ```  
 ="Distinct count (Subcategory): " & CountDistinct(Fields!Size.Value) &   

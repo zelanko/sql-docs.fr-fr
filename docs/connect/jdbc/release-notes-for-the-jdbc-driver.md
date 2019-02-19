@@ -1,7 +1,7 @@
 ---
 title: Notes de publication pour le pilote JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 02/06/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4b7f863c7534421fa6e091e793297b4be3f73542
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
-ms.translationtype: HT
+ms.openlocfilehash: b720f2b146273fb694ad0a55b013d20bd65a6a6a
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737060"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154867"
 ---
 # <a name="release-notes-for-the-jdbc-driver"></a>Notes de publication pour le pilote JDBC
 
@@ -24,7 +24,13 @@ ms.locfileid: "55737060"
 
 ## <a name="updates-in-microsoft-jdbc-driver-72-for-sql-server"></a>Mises à jour apportées à Microsoft JDBC Driver 7.2 pour SQL Server
 
-7.2 de pilote JDBC Microsoft pour SQL Server est entièrement conforme à la spécification de l’API JDBC 4.2. Les fichiers JAR dans le package 7.2 sont nommées en fonction de la compatibilité des versions de Java. Par exemple, le fichier mssql-jdbc-7.2.0.jre11.jar à partir du package 7.2 doit être utilisé avec Java 11.
+7.2 de pilote JDBC Microsoft pour SQL Server est entièrement conforme à la spécification de l’API JDBC 4.2. Les fichiers JAR dans le package 7.2 sont nommées en fonction de la compatibilité des versions de Java. Par exemple, le fichier mssql-jdbc-7.2.1.jre11.jar à partir du package 7.2 doit être utilisé avec Java 11.
+
+> [!NOTE]  
+> Un problème avec l’analyse des instructions SQL a été trouvé dans le pilote JDBC 7.2 RTW publié le 31 janvier 2019. La modification a été annulée, et les nouveaux fichiers JAR (version 7.2.1) ont été publiées le 11 février 2019. 
+>
+> Téléchargez les dernières mises à jour pour 7.2 du pilote JDBC à partir de [Microsoft Download Center](https://go.microsoft.com/fwlink/?linkid=2063159), [GitHub](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1), et [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver). Mettez à jour vos projets pour utiliser le 7.2.1 libérer les fichiers JAR. Pour plus d’informations, voir les notes de version pour [7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1).
+
 
 ### <a name="support-for-jdk-11"></a>Prise en charge du Kit JDK 11
 
@@ -34,7 +40,7 @@ ms.locfileid: "55737060"
 
 7.2 de pilote JDBC Microsoft pour SQL Server prend désormais en charge le mode d’authentification Active Directory Managed Service Identity (MSI). Ce mode d’authentification est applicable sur les ressources Azure avec prise en charge de la fonctionnalité « Identité » est activée. Les deux types d’identités système administré (MSI) sont pris en charge par le pilote d’acquérir **accessToken** pour établir une connexion sécurisée.
 
-Plus de détails et un exemple d’application pour utiliser ce mode d’authentification peuvent trouver ici : [Connexion avec l’authentification Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
+Plus de détails et un exemple d’application pour utiliser ce mode d’authentification sont accessibles ici : [connexion à l’aide de l’authentification Azure Active Directory](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)
 
 ### <a name="osgi-support"></a>Prise en charge OSGi
 
@@ -49,7 +55,7 @@ Plus de détails et un exemple d’application pour utiliser ce mode d’authent
 
 ### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>Mise à jour de la « bibliothèque d’authentification Microsoft Azure Active Directory (ADAL4J) pour Java » : version 1.6.3
 
-7.2 de pilote JDBC Microsoft pour SQL Server a mis à jour sa dépendance Maven sur « Microsoft Azure Active Directory Authentication Library (ADAL4J) pour Java » vers la version 1.6.3, ce qui introduit également « Exécution de Client Java pour AutoRest » en tant que dépendance Maven (Version : 1.6.5). Pour plus d’informations sur les dépendances, consultez [dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+7.2 de pilote JDBC Microsoft pour SQL Server a mis à jour sa dépendance Maven sur « Microsoft Azure Active Directory Authentication Library (ADAL4J) pour Java » vers la version 1.6.3, ce qui introduit également « Exécution de Client Java pour AutoRest » en tant que dépendance Maven (Version : 1.6.5).). Pour plus d’informations sur les dépendances, consultez [dépendances de fonctionnalité de Microsoft JDBC Driver pour SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Version de mise à jour « Microsoft Azure Key Vault SDK pour Java » : 1.2.0
 
@@ -131,7 +137,7 @@ Le pilote prend en charge la spécification de l’API Java Database Connectivit
 
 ### <a name="added-connection-property-sslprotocol"></a>Propriété de connexion est ajoutée : sslProtocol
 
-Une nouvelle propriété de connexion permet aux utilisateurs de spécifier le mot de clé du protocole TLS. Les valeurs possibles sont : « TLS », « TLSv1 », « TLSv1.1 » et « TLSv1.2 ». Pour plus d’informations, consultez [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
+Une nouvelle propriété de connexion permet aux utilisateurs de spécifier le mot de clé du protocole TLS. Les valeurs possibles sont : « TLS », « TLSv1 », « TLSv1.1 » et « TLSv1.2 ». Pour plus d’informations, consultez [SSLProtocol](https://github.com/Microsoft/mssql-jdbc/wiki/SSLProtocol).
 
 ### <a name="deprecated-connection-property-fipsprovider"></a>Propriété de connexion déconseillée : fipsProvider
 

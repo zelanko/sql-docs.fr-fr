@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4791a157-b028-4698-905d-f1dd0887aa0d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 20ef203c4fbb377c62eede7186cecf811aa942ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da900964e69bc36828726e8874222e5e1e3f0541
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845727"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291617"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions"></a>Extraction, exploration, sous-rapports et régions de données imbriquées
   Vous pouvez organiser les données de plusieurs façons pour montrer une relation du général au particulier.  Vous pouvez placer toutes les données dans le rapport et les masquer jusqu'à ce qu'un utilisateur clique pour afficher des détails ; il s'agit d'une action d' *exploration* . Vous pouvez afficher les données dans une région de données, telle qu'un tableau ou un graphique, *imbriquée* à l'intérieur d'une autre région de données, telle qu'un tableau ou une matrice. Vous pouvez afficher les données dans un *sous-rapport* intégralement contenu dans un rapport principal. Sinon, vous pouvez placer les données de détail dans des rapports d' *extraction* , des rapports distincts qui s'affichent lorsqu'un utilisateur clique sur un lien.  
@@ -22,7 +22,7 @@ ms.locfileid: "47845727"
   
  A. Rapport d'extraction  
   
- B. sous-rapport  
+ b. sous-rapport  
   
  C. Régions de données imbriquées  
   
@@ -42,7 +42,7 @@ ms.locfileid: "47845727"
 |Récupération des données|Données récupérées en même temps que le rapport principal|Données récupérées à chaque rapport d'extraction|Données toutes récupérées en même temps que le rapport principal|  
 |Traitement et rendu|Avec le rapport principal|Après avoir cliqué sur le lien|Avec le rapport principal.|  
 |Performances|S'exécute plus lentement (mais récupère toutes les données avec le rapport principal)|S'exécute plus vite (mais ne récupère pas toutes les données avec le rapport principal)|S'exécute plus vite (et récupère toutes les données avec le rapport principal)|  
-|Utilisation de paramètres|Oui|Oui|non|  
+|Utilisation de paramètres|Oui|Oui|Non|  
 |Réutilisation possible|En tant que rapport, sous-rapport ou rapport d'extraction dans d'autres rapports|En tant que rapport, sous-rapport ou rapport d'extraction dans d'autres rapports|Réutilisation impossible.|  
 |Emplacement|Hors du rapport principal, sur un serveur de rapports identique ou différent|Hors du rapport principal, sur un serveur de rapports identique|Dans le rapport principal|  
 |Affichage|Dans le rapport principal|Dans un autre rapport|Dans le rapport principal|  

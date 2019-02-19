@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: db6542ee-02d0-4073-90e6-cba8f9510fbb
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b707897d5be5d85dc3a7442a777decbd43801a52
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f51a83fca42e1f736a0e0295d2443193b17df5d3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790317"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296937"
 ---
 # <a name="report-builder-functions---aggregate-functions-reference"></a>Fonctions du Générateur de rapports - Référence aux fonctions d’agrégation
   Pour inclure des valeurs agrégées dans votre rapport, vous pouvez utiliser des fonctions d'agrégation intégrées dans des expressions. La fonction d'agrégation par défaut pour les champs de type numérique est SUM. Vous pouvez modifier l'expression et utiliser une fonction d'agrégation intégrée différente ou spécifier une étendue différente. L'étendue identifie le jeu de données à utiliser pour le calcul.  
@@ -72,18 +72,18 @@ ms.locfileid: "47790317"
 |Emplacement dans le rapport|Champs|Paramètres|ReportItems|PageNumber<br /><br /> TotalPages|DataSource<br /><br /> DataSet|Variables|RenderFormat|  
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |En-tête de page<br /><br /> Pied de page|Oui|Oui|Un au plus<br /><br /> Remarque 1|Oui|Oui|Oui|Oui|  
-|Corps|Oui<br /><br /> Remarque 2|Oui|Seuls les éléments dans l'étendue active ou une étendue contenante<br /><br /> Remarque 3|non|Oui|Oui|Oui|  
-|Paramètre de rapport|non|Seuls les premiers paramètres dans la liste<br /><br /> Remarque 4|non|non|non|non|non|  
-|Champ|Oui|Oui|non|non|non|non|non|  
-|Paramètre de requête|non|Oui|non|non|non|non|non|  
-|Expression de groupe|Oui|Oui|non|non|Oui|non|non|  
-|Expression de tri|Oui|Oui|non|non|Oui|Oui<br /><br /> Remarque 5|non|  
-|Expression de filtre|Oui|Oui|non|non|Oui|Oui<br /><br /> Remarque 6|non|  
-|Code|non|Oui<br /><br /> Remarque 7|non|non|non|non|non|  
-|Report.Language|non|Oui|non|non|non|non|non|  
-|Variables|Oui|Oui|non|non|Oui|Étendue active ou contenante|non|  
-|Agrégats|Oui|Oui|Uniquement dans l'en-tête de page/le pied de page|Uniquement dans les agrégats d'élément de rapport|Oui|non|non|  
-|Fonctions de recherche|Oui|Oui|Oui|non|Oui|non|non|  
+|Corps|Oui<br /><br /> Remarque 2|Oui|Seuls les éléments dans l'étendue active ou une étendue contenante<br /><br /> Remarque 3|Non|Oui|Oui|Oui|  
+|Paramètre de rapport|Non|Seuls les premiers paramètres dans la liste<br /><br /> Remarque 4|Non|Non|Non|Non|Non|  
+|Champ|Oui|Oui|Non|Non|Non|Non|Non|  
+|Paramètre de requête|Non|Oui|Non|Non|Non|Non|Non|  
+|Expression de groupe|Oui|Oui|Non|Non|Oui|Non|Non|  
+|Expression de tri|Oui|Oui|Non|Non|Oui|Oui<br /><br /> Remarque 5|Non|  
+|Expression de filtre|Oui|Oui|Non|Non|Oui|Oui<br /><br /> Remarque 6|Non|  
+|Code|Non|Oui<br /><br /> Remarque 7|Non|Non|Non|Non|Non|  
+|Report.Language|Non|Oui|Non|Non|Non|Non|Non|  
+|Variables|Oui|Oui|Non|Non|Oui|Étendue active ou contenante|Non|  
+|Agrégats|Oui|Oui|Uniquement dans l'en-tête de page/le pied de page|Uniquement dans les agrégats d'élément de rapport|Oui|Non|Non|  
+|Fonctions de recherche|Oui|Oui|Oui|Non|Oui|Non|Non|  
   
 -   **Remarque 1.** ReportItems doit exister dans la page de rapport rendue, sinon sa valeur est Null. Si la visibilité d'un élément de rapport dépend d'une expression qui prend la valeur False, l'élément de rapport n'existe pas dans la page.  
   
@@ -108,13 +108,13 @@ ms.locfileid: "47790317"
   
 |Contexte|RunningValue|RowNumber|Première<br /><br /> Dernière|Previous|Sum et autres fonctions Presort|Agrégats ReportItem|Fonctions de recherche|Fonction d'agrégation|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valeur d'exécution|non|non|non|non|Oui|non|Oui|non|  
-|Première<br /><br /> Dernière|non|non|non|non|Oui|non|non|non|  
-|Previous|Oui|Oui|Oui|non|Oui|non|Oui|non|  
-|Sum et autres fonctions Presort|non|non|non|non|Oui|non|Oui|non|  
-|Agrégats ReportItem|non|non|non|non|non|non|non|non|  
-|Fonctions de recherche|Oui|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|non|non|  
-|Fonction d'agrégation|non|non|non|non|non|non|non|non|  
+|Valeur d'exécution|Non|Non|Non|Non|Oui|Non|Oui|Non|  
+|Première<br /><br /> Dernière|Non|Non|Non|Non|Oui|Non|Non|Non|  
+|Previous|Oui|Oui|Oui|Non|Oui|Non|Oui|Non|  
+|Sum et autres fonctions Presort|Non|Non|Non|Non|Oui|Non|Oui|Non|  
+|Agrégats ReportItem|Non|Non|Non|Non|Non|Non|Non|Non|  
+|Fonctions de recherche|Oui|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Oui<br /><br /> Remarque 1|Non|Non|  
+|Fonction d'agrégation|Non|Non|Non|Non|Non|Non|Non|Non|  
   
 -   **Remarque 1.** Les fonctions d’agrégation sont autorisées uniquement à l’intérieur de l’expression *Source* d’une fonction Lookup si cette dernière n’est pas contenue dans un agrégat. Les fonctions d'agrégation ne sont pas autorisées à l'intérieur des expressions *Destination* ou *Result* d'une fonction Lookup.  
   

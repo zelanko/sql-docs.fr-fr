@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 1fec079e-33b3-4e4d-92b3-6b4d06a49a77
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 9235e945a9733767c2dbf9ca7c507f516b5b0dac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c0425be1f799a078a22965150e10525780e5b687
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850455"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287447"
 ---
 # <a name="report-builder-functions---multilookup-function"></a>Fonctions du Générateur de rapports - Multilookup
   Retourne le jeu de valeurs de première correspondance pour le jeu de noms spécifié d'un dataset contenant des paires nom/valeur.  
@@ -39,7 +39,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (**Variant**) Expression qui est évaluée pour la ligne du dataset où *source_expression* = *destination_expression*, et qui spécifie la valeur à récupérer. Par exemple, `=Fields!Name.Value`.  
   
  *dataset*  
- Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Couleurs ».  
+ Constante qui spécifie le nom d'un dataset dans le rapport. Par exemple, « Couleurs ».  
   
 ## <a name="return"></a>Return  
  Retourne une valeur **VariantArray**, ou **Nothing** si aucune correspondance n'est trouvée.  
@@ -88,7 +88,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Le dataset CategoryNames contient l'identificateur et le nom de catégorie, comme indiqué dans le tableau ci-dessous.  
   
-|ID|Nom   |  
+|ID|Créer une vue d’abonnement|  
 |--------|----------|  
 |1|Accessories|  
 |2|Bikes|  

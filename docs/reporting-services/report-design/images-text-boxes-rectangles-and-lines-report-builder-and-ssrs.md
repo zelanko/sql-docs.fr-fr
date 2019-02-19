@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: aa7ad08f-dd49-401e-9619-522e27055bb9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 88717ffe6cdb7711b1b9ca19a1f57edd5930b7e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 70a4aa215fa2ef743d260970cb44c4a7b144504b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664057"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288387"
 ---
 # <a name="images-text-boxes-rectangles-and-lines-report-builder-and-ssrs"></a>Images, zones de texte, rectangles et lignes (Générateur de rapports et SSRS)
   Outre les régions de données telles que les tableaux, les matrices et les graphiques, les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] utilisent d’autres éléments de rapport, comme des images, des zones de texte ou des rectangles, pour ajouter un attrait visuel, mettre en évidence des informations clés ou fournir des informations connexes. Vous pouvez modifier la mise en forme d'un élément de rapport. Par exemple, vous pouvez ajouter une bordure ou une marge intérieure, modifier la visibilité initiale ou la direction, ou encore spécifier la taille et l'emplacement exacts de l'élément.  
@@ -28,7 +28,7 @@ ms.locfileid: "47664057"
  Chaque cellule d'un tableau ou d'une matrice contient une zone de texte, que vous pouvez mettre en forme de la même manière que les zones de texte autonomes.  
   
  [Rectangles et lignes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/rectangles-and-lines-report-builder-and-ssrs.md)  
- Les **lignes** s’affichent à l’horizontale, à la verticale ou en diagonale. Une ligne se définit par un point de début et un point de fin, et peut être associée à divers styles (par exemple, une épaisseur et une couleur). Une ligne n'est associée à aucune donnée.  
+ Les**lignes** s’affichent à l’horizontale, à la verticale ou en diagonale. Une ligne se définit par un point de début et un point de fin, et peut être associée à divers styles (par exemple, une épaisseur et une couleur). Une ligne n'est associée à aucune donnée.  
   
  Les**rectangles** peuvent être utilisés comme éléments graphiques ou comme conteneurs pour d'autres éléments de rapport. Comme élément graphique, un rectangle a les mêmes propriétés qu'une ligne. Comme conteneur, un rectangle fait office de conteneur parent pour tous les éléments de rapport qui se trouvent à l'intérieur. Placer des éléments de rapport dans un conteneur parent permet d'en contrôler l'apparence sur chaque page du rapport.  
   

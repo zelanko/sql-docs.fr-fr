@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a939770ba7b362e2601ecb45b126066341c7c34e
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 54036ccf8d8b47eedede1d2ddfe5d85b6dbee351
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030514"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407519"
 ---
 # <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Étendre les fonctionnalités en créant des extensions d’Azure Data Studio
 
@@ -35,11 +35,11 @@ Si vous souhaitez étendre Azure Data Studio, vous pouvez créer votre propre ex
 
 Pour développer une extension, vous devez Node.js installé et disponible dans votre $PATH. Node.js inclut npm, le Gestionnaire de Package Node.js, qui sera utilisé pour installer le Générateur d’extension.
 
-Pour démarrer votre nouvelle extension, vous pouvez utiliser le Générateur d’Extension de Studio de données Azure. Le Yeoman [Générateur d’extension](https://www.npmjs.com/package/generator-sqlops) rend très facile de créer des projets d’extension simple. Pour lancer le générateur, tapez la commande suivante dans une invite de commandes :
+Pour démarrer votre nouvelle extension, vous pouvez utiliser le Générateur d’Extension de Studio de données Azure. Le Yeoman [Générateur d’extension](https://www.npmjs.com/package/generator-azuredatastudio) rend très facile de créer des projets d’extension simple. Pour lancer le générateur, tapez la commande suivante dans une invite de commandes :
 
-`npm install -g yo generator-sqlops`
+`npm install -g yo generator-azuredatastudio`
 
-`yo sqlops`
+`yo azuredatastudio`
 
 
 **Références d’extensibilité**
