@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 31e280cd389bdfd7985bfa995aecbf8ed020417d
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: f00d147c5b9a3e6a2ec6137d72940cae9e67158d
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420224"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265396"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Éditions et fonctionnalités prises en charge de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +178,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |gouverneur de ressources|Oui|Non|Non|Non|Non|  
 |Parallélisme de tables partitionnées|Oui|Non|Non|Non|Non|
 |Plusieurs conteneurs Filestream|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|
-|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non|Non|Non|Non|
+|Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non<sup>4</sup>|Non|Non|Non|
 |Buffer Pool Extension|Oui|Oui|Non|Non|Non|
 |Gouvernance des ressources d'E/S|Oui|Non|Non|Non|Non|  
 |Durabilité différée|Oui|Oui|Oui|Oui|Oui|
@@ -188,6 +188,8 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 <sup>2</sup> S’applique à [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. 
 
 <sup>3</sup> Cette fonctionnalité n’est pas incluse dans l’option d’installation LocalDB.
+
+<sup>4</sup> La licence Standard Edition et SQL Server + CAL peut limiter le nombre de processeurs utilisables par SQL Server Standard, mais SQL Server Standard est compatible NUMA. 
 ##  <a name="RDBMSS"></a> RDBMS Security  
   
 |Fonctionnalité|Enterprise|Standard|Web|Express|Express with Advanced Services|  
