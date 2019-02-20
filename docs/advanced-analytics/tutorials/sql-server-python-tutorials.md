@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 9101471c53ea1e253f7a6eb13e0c2cb2bc137ed3
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f5dab603a7295009bee5275b721e987d5de76710
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046459"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425784"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>Didacticiels de SQL Server 2017 Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Cet article décrit les didacticiels Python pour la base de données analytique 
 
 | Lien | Description |
 |------|-------------|
-| [Démarrage rapide : Script Python « Hello world » dans SQL Server](quickstart-r-run-using-tsql.md) | Découvrez les principes fondamentaux de l’appel de Python dans T-SQL. |
+| [Démarrage rapide : Script Python « Hello world » dans SQL Server](quickstart-python-run-using-t-sql.md) | Découvrez les principes fondamentaux de l’appel de Python dans T-SQL. |
 | [Démarrage rapide : Créer, former et utiliser un modèle Python avec des procédures stockées dans SQL Server](quickstart-python-train-score-in-tsql.md) | Explique les mécanismes d’incorporation de code Python dans une procédure stockée, en fournissant des entrées et l’exécution de procédure stockée. |
 | [Didacticiel : Créer un modèle à l’aide de revoscalepy](use-python-revoscalepy-to-create-model.md) | Montre comment exécuter du code à partir d’un terminal de Python à distance, à l’aide du contexte de calcul de SQL Server. Vous devez connaître un peu avec les environnements et outils de Python. Exemple de code est fourni qui crée un modèle à l’aide **rxLinMod**, à partir du nouveau **revoscalepy** bibliothèque. |
 | [Didacticiel : Découvrez l’analytique de Python dans base de données pour les développeurs SQL](sqldev-in-database-python-for-sql-developers.md) | Cette procédure pas à pas de bout en bout montre le processus de génération d’une solution complète de Python à l’aide de procédures stockées T-SQL. Tout le code Python est inclus.|

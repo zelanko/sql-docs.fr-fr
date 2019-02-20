@@ -1,7 +1,7 @@
 ---
-title: Sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
+title: sys.index_resumable_operations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/10/2017
+ms.date: 01/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,17 +20,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df53ab01ecd535de0f742129cae56c44cd2d6221
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821773"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425774"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 **Sys.index_resumable_operations** est une vue système qui surveille et vérifie l’état d’exécution actuel pour la reconstruction d’Index pouvant être reprise.  
-**S’applique à**: SQL Server 2017 et Azure SQL Database 
+**S’applique à** : SQL Server 2017 et Azure SQL Database
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -46,25 +47,31 @@ ms.locfileid: "47821773"
 |**last_pause_time**|**datatime**| Opération d’index dernier temps de pause (null). NULL si l’opération est en cours d’exécution et ne sont jamais mise en pause.|
 |**total_execution_time**|**Int**|Durée d’exécution totale à partir de l’heure de début en quelques minutes (qui n’autorise pas la valeur null)|
 |**percent_complete**|**real**|Index de fin progression de l’opération dans % (pas de valeur nulle).|
-|**page_count**|**bigint**|Nombre total de pages d’index allouées par l’opération de génération d’index pour le nouveau et les index de mappage (qui n’autorise pas la valeur null). 
+|**page_count**|**bigint**|Nombre total de pages d’index allouées par l’opération de génération d’index pour le nouveau et les index de mappage (qui n’autorise pas la valeur null).
 
-## <a name="permissions"></a>Permissions  
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
-   
-## <a name="example"></a>Exemple  
- Répertorier toutes les opérations de reconstruction d’index pouvant être reprise qui se trouvent dans l’état PAUSE. 
-  
-```  
+## <a name="permissions"></a>Autorisations
+
+[!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+
+## <a name="example"></a>Exemple
+
+ Répertorier toutes les opérations de reconstruction d’index pouvant être reprise qui se trouvent dans l’état PAUSE.
+
+```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
-```  
-  
-## <a name="see-also"></a>Voir aussi 
- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
- [Affichages catalogue &#40;Transact-SQL&#41; ](catalog-views-transact-sql.md) [affichages catalogue de l’objet &#40;Transact-SQL&#41; ](object-catalog-views-transact-sql.md) [sys.indexes &#40;Transact-SQL&#41; ](sys-xml-indexes-transact-sql.md) [sys.index_columns &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.xml_indexes &#40;Transact-SQL&#41;](sys-xml-indexes-transact-sql.md)   
- [sys.objects &#40;Transact-SQL&#41;](sys-index-columns-transact-sql.md)   
- [sys.key_constraints &#40;Transact-SQL&#41;](sys-key-constraints-transact-sql.md)   
- [sys.filegroups &#40;Transact-SQL&#41;](sys-filegroups-transact-sql.md)   
- [sys.partition_schemes &#40;Transact-SQL&#41;](sys-partition-schemes-transact-sql.md)   
- [Questions fréquentes (FAQ) sur l’interrogation des catalogues système SQL Server](querying-the-sql-server-system-catalog-faq.md)   
-  
+```
+
+## <a name="see-also"></a>Voir aussi
+
+- [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
+- [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+- [Affichages catalogue](catalog-views-transact-sql.md)
+- [Affichages catalogue d’objets](object-catalog-views-transact-sql.md)
+- [sys.indexes](sys-xml-indexes-transact-sql.md)
+- [sys.index_columns](sys-index-columns-transact-sql.md)
+- [sys.xml_indexes](sys-xml-indexes-transact-sql.md)
+- [sys.objects](sys-index-columns-transact-sql.md)
+- [sys.key_constraints](sys-key-constraints-transact-sql.md)
+- [sys.filegroups](sys-filegroups-transact-sql.md)
+- [sys.partition_schemes](sys-partition-schemes-transact-sql.md)
+- [Questions fréquentes (FAQ) sur l’interrogation des catalogues système SQL Server](querying-the-sql-server-system-catalog-faq.md)
