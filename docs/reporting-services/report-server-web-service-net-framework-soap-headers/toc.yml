@@ -1,8 +1,0 @@
-- name: Utilisation des en-têtes SOAP de Reporting Services
-  href: using-reporting-services-soap-headers.md
-- name: Méthodes de traitement par lot
-  href: batching-methods.md
-- name: Identification de l'état d'exécution
-  href: identifying-execution-state.md
-- name: Définition de l'espace de noms d'élément pour la méthode GetProperties
-  href: setting-the-item-namespace-for-the-getproperties-method.md

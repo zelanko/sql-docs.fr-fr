@@ -1,8 +1,0 @@
-- name: Détails de programmation de curseurs (ODBC)
-  href: cursor-programming-details-odbc.md
-- name: Curseurs avant uniquement rapides (ODBC)
-  href: fast-forward-only-cursors-odbc.md
-- name: Conversions de curseurs implicites (ODBC)
-  href: implicit-cursor-conversions-odbc.md
-- name: Utilisation de l'auto-extraction avec les curseurs ODBC
-  href: using-autofetch-with-odbc-cursors.md

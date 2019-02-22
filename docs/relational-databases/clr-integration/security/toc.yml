@@ -1,6 +1,0 @@
-- name: Sécurité d'accès du code de l'intégration du CLR
-  href: clr-integration-code-access-security.md
-- name: "Attributs de protection de l’hôte de sécurité\_+"
-  href: ../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md
-- name: Sécurité de l'intégration du CLR
-  href: clr-integration-security.md

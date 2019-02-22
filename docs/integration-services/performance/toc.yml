@@ -1,8 +1,0 @@
-- name: Surveiller les packages en cours d’exécution et autres opérations
-  href: monitor-running-packages-and-other-operations.md
-- name: Événements journalisés par un package Integration Services
-  href: events-logged-by-an-integration-services-package.md
-- name: Journalisation d'Integration Services (SSIS)
-  href: integration-services-ssis-logging.md
-- name: Compteurs de performances
-  href: performance-counters.md

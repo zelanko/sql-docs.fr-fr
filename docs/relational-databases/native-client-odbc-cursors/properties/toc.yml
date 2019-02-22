@@ -1,8 +1,0 @@
-- name: Propriétés de curseur
-  href: cursor-properties.md
-- name: Accès concurrentiel au curseur (ODBC)
-  href: cursor-concurrency-odbc.md
-- name: Taille de l'ensemble de lignes d'un curseur
-  href: cursor-rowset-size.md
-- name: Niveau d'isolation des transactions de curseur
-  href: cursor-transaction-isolation-level.md

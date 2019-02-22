@@ -1,8 +1,0 @@
-- name: Gestion des colonnes text et image
-  href: managing-text-and-image-columns.md
-- name: Colonnes de texte et d’image liées et non liées
-  href: bound-vs-unbound-text-and-image-columns.md
-- name: 'Données en cours d''exécution et colonnes text, ntext ou image'
-  href: data-at-execution-and-text-ntext-or-image-columns.md
-- name: Modifications enregistrées ou non enregistrées
-  href: logged-vs-unlogged-modifications.md

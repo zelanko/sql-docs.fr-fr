@@ -1,8 +1,0 @@
-- name: Spécification d'un chemin d'accès d'emplacement (SQLXML 4.0)
-  href: specifying-a-location-path-sqlxml-4-0.md
-- name: Spécification d'un test de nœud dans le chemin d'accès d'emplacement (SQLXML 4.0)
-  href: specifying-a-node-test-in-the-location-path-sqlxml-4-0.md
-- name: Spécification d'un axe (SQLXML 4.0)
-  href: specifying-an-axis-sqlxml-4-0.md
-- name: "Spécification de prédicats de sélection dans le chemin d'accès d'emplacement (SQLXML\_4.0)"
-  href: specifying-selection-predicates-in-the-location-path-sqlxml-4-0.md
