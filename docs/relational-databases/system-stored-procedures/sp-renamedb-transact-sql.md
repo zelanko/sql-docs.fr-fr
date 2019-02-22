@@ -18,15 +18,15 @@ ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ebe5cac5ad9dbff5d19fddcd67204f640f1c16b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f61002319606a199354022a3fc33ce13a170539d
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658887"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590244"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   Modifie le nom d'une base de données.  
   
@@ -43,16 +43,16 @@ sp_renamedb [ @dbname = ] 'old_name' , [ @newname = ] 'new_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname=**] **'***ancien_nom***'**  
+ [ **@dbname=**] **'***old_name***'**  
  Nom actuel de la base de données. *ancien_nom* est **sysname**, sans valeur par défaut.  
   
- [  **@newname=**] **'***nouveau_nom***'**  
+ [ **@newname=**] **'***new_name***'**  
  Est le nouveau nom de la base de données. *new_name* doit respecter les règles des identificateurs. *new_name* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** ou **dbcreator** rôles serveur fixes.  
   
 ## <a name="examples"></a>Exemples  

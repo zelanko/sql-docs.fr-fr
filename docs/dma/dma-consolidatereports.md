@@ -2,7 +2,7 @@
 title: Évaluer une entreprise et consolider les rapports d’évaluation (SQL Server) | Microsoft Docs
 description: Découvrez comment utiliser le DMA pour évaluer une entreprise et consolider les rapports d’évaluation avant la mise à niveau de SQL Server ou la migration vers Azure SQL Database.
 ms.custom: ''
-ms.date: 02/20/20198
+ms.date: 02/21/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: cd3951aaddc19a7b96cc7645084166f19d41422b
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464775"
+ms.locfileid: "56590344"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -186,7 +186,7 @@ Vous pouvez utiliser des signets pour basculer le contexte de création de rappo
 - Évaluations de cloud Azure SQL MI
 - Évaluations en local
 
-  ![Signets de vues de rapport DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
+![Signets de vues de rapport DMA](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)
 
 Pour masquer le panneau des filtres, CTRL-clic sur le bouton précédent :
 
