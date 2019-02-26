@@ -45,7 +45,7 @@ Pilotes ODBC peuvent être classés comme suit :
   
     -   Exporte uniquement des fonctions qui se trouvent dans ODBC 3.0 moins déconseillé de fonctions.  
   
-    -   Est capable de présentant ODBC 2. *x* comportement ou comportement ODBC 3.0 en ce qui concerne les changements de comportement, en fonction de l’attribut d’environnement SQL_ATTR_APP_ODBC_VERSION.  
+    -   Est capable de présentant ODBC 2.*x* comportement ou comportement ODBC 3.0 en ce qui concerne les changements de comportement, en fonction de l’attribut d’environnement SQL_ATTR_APP_ODBC_VERSION.  
   
 -   **Pilote de ANSI ODBC 3.5 (ou version ultérieure)** pilote de 32 bits qui :  
   
