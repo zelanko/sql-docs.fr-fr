@@ -28,18 +28,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26f1b65876d9d6c6e25cc4df27a588fe17cf9d0c
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: abccf047d58d03867f08ea9a0068c5acdbe49ea8
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889950"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802563"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Spécifie un jeu de résultats nommé temporaire, désigné par le terme d'expression de table commune (CTE, Common Table Expression). Cette clause est dérivée d’une requête simple et définie au sein de l’étendue d’exécution d’une seule instruction SELECT, INSERT, UPDATE, DELETE ou MERGE. Cette clause peut également être utilisée dans une instruction CREATE VIEW comme faisant partie de l'instruction SELECT qui la définit. Une expression de table commune peut inclure des références à elle-même. Dans ce cas, elle est désignée en tant qu'expression de table commune récursive.  
   

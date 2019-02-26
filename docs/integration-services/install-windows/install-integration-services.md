@@ -20,17 +20,14 @@ ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 8d1ef66f97683b24014661fb6a1e633ce6ce06ce
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 9183daa6e11e015bf484002fcf5857adab0ec087
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299916"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801973"
 ---
 # <a name="install-integration-services"></a>Installer Integration Services
-
-  > [!div class="nextstepaction"]
-  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un programme d'installation unique pour installer tout ou une partie de ses composants, y compris [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Utilisez-le pour installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec ou sans d’autres composants [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un seul ordinateur.    
     

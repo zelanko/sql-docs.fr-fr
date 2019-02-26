@@ -18,17 +18,14 @@ ms.assetid: 6a164349-dfcf-4995-80bc-d4e7aee52a83
 author: douglaslms
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 6fb2354720b334d69f7d5e05977c82c3807fd109
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 4adc96042090ee1cd184eebdb9f9ca5526312dd2
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300076"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56803084"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Mapper des paramètres de requête à des variables dans une tâche d'exécution SQL
-
-  > [!div class="nextstepaction"]
-  > [Partagez vos commentaires sur la Table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
   Cette rubrique décrit la façon d'utiliser une instruction SQL paramétrable dans la tâche d'exécution SQL et de créer des mappages entre des variables et les paramètres de l'instruction SQL.  
   

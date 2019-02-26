@@ -16,18 +16,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb85ebe35b50d143f4887cba91eda08a930666a0
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: b5e9346b2ea7a6e3f881d960462fbb56b4cd7000
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299006"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802683"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Référence Transact-SQL (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Cette rubrique présente les principes de base pour rechercher et utiliser les rubriques de référence Microsoft Transact-SQL (T-SQL). T-SQL est un élément essentiel de l’utilisation des produits et services Microsoft SQL. Tous les outils et applications qui communiquent avec une base de données SQL envoient des commandes T-SQL.  
 

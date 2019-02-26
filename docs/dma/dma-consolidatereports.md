@@ -2,7 +2,7 @@
 title: Évaluer une entreprise et consolider les rapports d’évaluation (SQL Server) | Microsoft Docs
 description: Découvrez comment utiliser le DMA pour évaluer une entreprise et consolider les rapports d’évaluation avant la mise à niveau de SQL Server ou la migration vers Azure SQL Database.
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 02/23/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 400876a2738c2ca791d3aee12da20c9af1db5b9f
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4df3197ad4bb607d564c223087da62f17c74fa32
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590344"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801373"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -45,7 +45,7 @@ Enregistrer les modules PowerShell dans le répertoire de modules PowerShell vou
 
 Pour charger les modules, procédez comme suit :
 1. Accédez à C:\Program Files\WindowsPowerShell\Modules, puis créez un dossier nommé **DataMigrationAssistant**.
-2. Ouvrez le [-Modules PowerShell](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules.zip), puis enregistrez-les dans le dossier que vous avez créé.
+2. Ouvrez le [-Modules PowerShell](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules1.zip), puis enregistrez-les dans le dossier que vous avez créé.
 
       ![Modules PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
