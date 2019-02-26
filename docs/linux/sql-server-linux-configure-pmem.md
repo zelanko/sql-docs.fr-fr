@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b11b3154162fafdfc717e9785fb65e59dc45799c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ba2ed69239313a7933840d7a99ccbf3ce0864bfd
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510825"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828419"
 ---
 # <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Comment configurer la mémoire persistante (PMEM) pour SQL Server sur Linux
 
@@ -80,7 +80,7 @@ ndctl list
 
   Une fois que l’appareil a été configuré avec ndctl, formaté et monté, vous pouvez placer les fichiers de base de données qu’il contient. Vous pouvez également créer une nouvelle base de données 
 
-1. Activer révération de fichier de base de données SQL Server à l’aide de l’indicateur de trace 3979. Cet indicateur de trace est un indicateur de trace de démarrage et doit être activé à l’aide de l’utilitaire mssql-conf.
+1. Étant donné que les appareils PMEM sont O_DIRECT sans échec, activez l’indicateur de trace 3979 pour désactiver le mécanisme de vidage forcé. Cet indicateur de trace est un indicateur de trace de démarrage et doit être activé à l’aide de l’utilitaire mssql-conf. Veuillez noter qu’il s’agit d’une modification de configuration de l’échelle du serveur, et vous ne devez pas utiliser cet indicateur de trace si vous avez tous les appareils non conformes O_DIRECT nécessitant le mécanisme de vidage forcé pour garantir l’intégrité des données. Pour plus d’informations, consultez https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux
 
 1. Redémarrez SQL Server.
 
