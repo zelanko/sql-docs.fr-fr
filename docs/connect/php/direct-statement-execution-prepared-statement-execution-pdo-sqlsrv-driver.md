@@ -11,12 +11,12 @@ ms.assetid: 05544ca6-1e07-486c-bf03-e8c2c25b3024
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8dba0e72f3575c0958ad142b6d27b7be410d6cec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 005a2c4b34c9aae2cfdfe4663cbfcbe06a68b81a
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658747"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676107"
 ---
 # <a name="direct-statement-execution-and-prepared-statement-execution-in-the-pdosqlsrv-driver"></a>Exécution d’instruction directe et exécution d’instruction préparée dans le pilote PDO_SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,8 +34,11 @@ Après avoir appelé [PDO::prepare](../../connect/php/pdo-prepare.md), la valeur
   
 Si une requête requiert le contexte qui a été défini dans une requête précédente, exécutez vos requêtes avec PDO::SQLSRV_ATTR_DIRECT_QUERY dont la valeur est True. Par exemple, si vous utilisez des tables temporaires dans vos requêtes, PDO::SQLSRV_ATTR_DIRECT_QUERY doit être défini sur True.  
   
-L’exemple suivant montre que lorsque le contexte à partir d’une instruction précédente est nécessaire, vous devez définir PDO::SQLSRV_ATTR_DIRECT_QUERY sur True.  Cet exemple utilise des tables temporaires, qui sont disponibles uniquement pour les instructions suivantes dans votre programme lorsque des requêtes sont exécutées directement.  
+L’exemple suivant montre que lorsque le contexte à partir d’une instruction précédente est nécessaire, vous devez définir PDO::SQLSRV_ATTR_DIRECT_QUERY sur True. Cet exemple utilise des tables temporaires, qui sont disponibles uniquement pour les instructions suivantes dans votre programme lorsque des requêtes sont exécutées directement.  
   
+> [!NOTE]
+> Si la requête consiste à appeler une procédure stockée et les tables temporaires sont utilisées dans cette procédure stockée, utilisez [PDO::exec](../../connect/php/pdo-exec.md) à la place.
+
 ```  
 <?php  
    $conn = new PDO('sqlsrv:Server=(local)', '', '');  

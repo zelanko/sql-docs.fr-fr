@@ -1,7 +1,7 @@
 ---
 title: Chargement de Microsoft Drivers for PHP for SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: e5c114c5-8204-49c2-94eb-62ca63f5d3ec
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3dd99ffa39de48dbf8839cbe06a8bb236fffbdf3
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: e62fc14eff52fa64e9e9f9dc041cc3c8601230e5
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606199"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744609"
 ---
 # <a name="loading-the-microsoft-drivers-for-php-for-sql-server"></a>Chargement des pilotes Microsoft SQL Server pour PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,6 +28,8 @@ Cette rubrique fournit des instructions pour le chargement de [!INCLUDE[ssDriver
 Vous pouvez télécharger les pilotes prédéfinis pour votre plateforme depuis le [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) page de projet Github. Chaque package d’installation contient les fichiers de pilote SQLSRV et PDO_SQLSRV dans des variantes et non-thread. Sur Windows, elles sont également disponibles dans des variantes 32 bits et 64 bits. Consultez [configuration système requise pour le Microsoft Drivers for PHP for SQL Server](../../connect/php/system-requirements-for-the-php-sql-driver.md) pour obtenir la liste des fichiers de pilote qui sont contenus dans chaque package. Le fichier de pilote doit correspondre à la version PHP, l’architecture et threadedness de votre environnement de PHP.
 
 Sur Linux et macOS, les pilotes peuvent également être installés à l’aide de PECL, tel que figurant dans le [didacticiel d’installation](../../connect/php/installation-tutorial-linux-mac.md).
+
+Vous pouvez également créer les pilotes à partir de la source lors de la génération de PHP ou à l’aide de `phpize`. Si vous choisissez de générer les pilotes à partir de la source, vous avez la possibilité de les créer statiquement dans PHP au lieu de les créer des extensions comme étant partagées en ajoutant `--enable-sqlsrv=static --with-pdo_sqlsrv=static` (sur Linux et macOS) ou `--enable-sqlsrv=static --with-pdo-sqlsrv=static` (sur Windows) pour le `./configure` commande quand Création de PHP. Pour plus d’informations sur le PHP le système de génération et `phpize`, consultez le [documentation PHP](http://php.net/manual/install.php).
   
 ## <a name="moving-the-driver-file-into-your-extension-directory"></a>Déplacement du fichier de pilote dans votre répertoire d’extension  
 Le fichier de pilote doit se trouver dans un répertoire où le runtime PHP peut le trouver. Il est plus facile de placer le fichier de pilote dans votre répertoire d’extensions PHP par défaut - pour trouver le répertoire par défaut, exécutez `php -i | sls extension_dir` sur Windows ou `php -i | grep extension_dir` sur Linux/Mac OS. Si vous n’utilisez pas le répertoire d’extension par défaut, spécifiez un répertoire dans le fichier de configuration PHP (php.ini), à l’aide de la **extension_dir** option. Par exemple, sur Windows, si vous avez placé le fichier de pilote dans votre `c:\php\ext` directory, ajoutez la ligne suivante au fichier php.ini :
