@@ -9,16 +9,16 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 1135074768a630e6d46844017b9c9aecbbccbf26
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 09fc0a9d9814a399d679b1391678fb5e11ad8a3f
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439501"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852924"
 ---
 # <a name="high-availability-and-scalability-in-analysis-services"></a>Haute disponibilité et extensibilité dans Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Cet article décrit les techniques couramment utilisées pour rendre les bases de données Analysis Services hautement disponibles et évolutives. Bien que ces deux objectifs pourraient être traités séparément, ils vont souvent de pair : un déploiement évolutif destiné à des charges de travail de requête ou de traitement volumineuses est généralement associé à certaines attentes en matière de haute disponibilité.  
+  Cet article décrit les techniques couramment utilisés pour rendre les bases de données Analysis Services hautement disponibles et évolutives. Bien que ces deux objectifs pourraient être traités séparément, ils vont souvent de pair : un déploiement évolutif destiné à des charges de travail de requête ou de traitement volumineuses est généralement associé à certaines attentes en matière de haute disponibilité.  
   
  L’inverse n’est cependant pas toujours vrai. La haute disponibilité, sans mise à l’échelle, peut être le seul objectif lorsque des contrats SLA stricts sont établis pour des charges de travail de requête critiques mais modérées.  
   
