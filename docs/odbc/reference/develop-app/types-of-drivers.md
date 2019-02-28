@@ -31,7 +31,7 @@ Pilotes ODBC peuvent être classés comme suit :
   
     -   Exporte uniquement les 2 d’ODBC *.x* fonctions.  
   
-    -   Expose le ODBC 2. *x* comportement pour les changements de comportement.  
+    -   Expose le ODBC 2.*x* comportement pour les changements de comportement.  
   
 -   **ISO et pilote compatible groupe Open** pilote de 32 bits qui :  
   
