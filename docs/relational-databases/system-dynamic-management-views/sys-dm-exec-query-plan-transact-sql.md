@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_plan (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -19,15 +19,15 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1167762e9d623aa3de04db38f67ee02f3551763d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fe063150263b5611c9920ee1a4fb3a3bd8c85b2f
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671195"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956010"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne le plan d'exécution de requêtes au format XML pour le traitement spécifié par le descripteur de plan. Le plan spécifié par le descripteur de plan peut être en cache ou en cours d'exécution.  
   
@@ -61,7 +61,7 @@ sys.dm_exec_query_plan ( plan_handle )
 |**dbid**|**smallint**|ID de la base de données de contexte qui était en fonction lorsque l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] correspondant à ce plan a été compilée. Pour les instructions SQL ad hoc et préparées, l'ID de la base de données où les instructions ont été compilées.<br /><br /> Colonne acceptant la valeur NULL.|  
 |**objectid**|**Int**|ID de l'objet (par exemple, procédure stockée ou fonction définie par l'utilisateur) pour ce plan de requête. Pour les traitements ad hoc et préparées, cette colonne est **null**.<br /><br /> Colonne acceptant la valeur NULL.|  
 |**nombre**|**smallint**|Entier servant à la numérotation des procédures stockées. Par exemple, un groupe de procédures pour le **commandes** application peut être nommée **orderproc ; 1**, **orderproc ; 2**, et ainsi de suite. Pour les traitements ad hoc et préparées, cette colonne est **null**.<br /><br /> Colonne acceptant la valeur NULL.|  
-|**Chiffré**|**bit**|Indique si la procédure stockée correspondante est chiffrée.<br /><br /> 0 = Non chiffrée.<br /><br /> 1 = Chiffrée.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
+|**encrypted**|**bit**|Indique si la procédure stockée correspondante est chiffrée.<br /><br /> 0 = Non chiffrée.<br /><br /> 1 = Chiffrée.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
 |**query_plan**|**xml**|Contient la représentation sous forme de plan d’exécution lors de la compilation du plan de requête d’exécution qui est spécifié avec *plan_handle*. Le plan d'exécution de requêtes est au format XML. Un plan est généré pour chaque traitement contenant par exemple des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] ad hoc, des appels de procédures stockées et des appels de fonctions définies par l'utilisateur.<br /><br /> Colonne acceptant la valeur NULL.|  
   
 ## <a name="remarks"></a>Notes  
@@ -77,7 +77,7 @@ sys.dm_exec_query_plan ( plan_handle )
   
  En raison d’une limitation du nombre de niveaux imbriqués autorisés dans les **xml** type de données, **sys.dm_exec_query_plan** ne peut pas retourner des plans de requête qui correspondent ou sont supérieurs à 128 niveaux d’éléments imbriqués. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette condition empêchait les retours par le plan de requête et générait l'erreur 6335. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, le **query_plan** colonne retourne NULL. Vous pouvez utiliser la [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) fonction de gestion dynamique pour retourner la sortie du plan de requête au format texte.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter **sys.dm_exec_query_plan**, un utilisateur doit être un membre de la **sysadmin** rôle serveur fixe ou avoir l’autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -121,7 +121,7 @@ SELECT * FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);
 GO  
 ```  
   
-### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>B. Récupérer chaque plan de requête du cache du plan  
+### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>b. Récupérer chaque plan de requête du cache du plan  
  Pour récupérer un instantané de tous les plans de requête résidant dans la mémoire cache des plans, procurez-vous les descripteurs de tous les plans de requête dans la mémoire cache via une requête dans la vue de gestion dynamique `sys.dm_exec_cached_plans`. Les descripteurs de plan sont stockés dans la colonne `plan_handle` de `sys.dm_exec_cached_plans`. Utilisez ensuite l'opérateur CROSS APPLY pour transmettre les descripteurs à `sys.dm_exec_query_plan` comme suit. La sortie du plan d'exécution de requêtes XML pour chaque plan actuellement dans la mémoire cache des plans se trouve dans la colonne `query_plan` de la table retournée.  
   
 ```  

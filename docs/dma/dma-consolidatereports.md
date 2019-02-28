@@ -2,7 +2,7 @@
 title: Évaluer une entreprise et consolider les rapports d’évaluation (SQL Server) | Microsoft Docs
 description: Découvrez comment utiliser le DMA pour évaluer une entreprise et consolider les rapports d’évaluation avant la mise à niveau de SQL Server ou la migration vers Azure SQL Database.
 ms.custom: ''
-ms.date: 02/23/2019
+ms.date: 02/27/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 4df3197ad4bb607d564c223087da62f17c74fa32
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: adfb1663d9ec1b86abf38c46c0056622105b80d5
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801373"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956030"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -37,15 +37,15 @@ La procédure détaillée ci-dessous vous aider à utiliser l’Assistant Migrat
     - [Power BI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
     - [Modules Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Téléchargez et extrayez :
-    - Le [modèle DMA rapports Power BI](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports1.zip).
-    - Le [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse.zip).
+    - Le [modèle DMA rapports Power BI](https://msdnshared.blob.core.windows.net/media/2019/02/PowerBI-Reports.zip).
+    - Le [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2019/02/LoadWarehouse1.zip).
 
 ## <a name="loading-the-powershell-modules"></a>Chargement des modules PowerShell
 Enregistrer les modules PowerShell dans le répertoire de modules PowerShell vous permet d’appeler les modules sans devoir les charger explicitement avant utilisation.
 
 Pour charger les modules, procédez comme suit :
 1. Accédez à C:\Program Files\WindowsPowerShell\Modules, puis créez un dossier nommé **DataMigrationAssistant**.
-2. Ouvrez le [-Modules PowerShell](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules1.zip), puis enregistrez-les dans le dossier que vous avez créé.
+2. Ouvrez le [-Modules PowerShell](https://msdnshared.blob.core.windows.net/media/2019/02/PowerShell-Modules2.zip), puis enregistrez-les dans le dossier que vous avez créé.
 
       ![Modules PowerShell](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
