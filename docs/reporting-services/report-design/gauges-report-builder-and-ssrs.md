@@ -154,14 +154,14 @@ f1_keywords:
 - "10190"
 - "10232"
 ms.assetid: 1f086882-4834-48e9-ab30-c214beee2040
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 083d03837cee77d02719d8053517f2f4541df1bd
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 57a871f330b3b3beae9ab371305b2d7887f955d8
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50031278"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287377"
 ---
 # <a name="gauges-report-builder-and-ssrs"></a>Jauges (Générateur de rapports et SSRS)
   Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , une région de données de jauge affiche une valeur unique tirée de votre dataset. Chaque jauge est toujours positionnée à l'intérieur d'un panneau de jauge, où vous pouvez ajouter des jauges enfants ou adjacentes. Dans un panneau de jauge, vous pouvez créer plusieurs jauges qui partagent des fonctions communes telles que le filtrage, le regroupement ou le tri.  
@@ -178,7 +178,7 @@ ms.locfileid: "50031278"
   
  ![Diagramme d’éléments de jauge](../../reporting-services/report-design/media/gauge-elements-diagram.gif "Diagramme d’éléments de jauge")  
   
- Pour plus d’informations sur l’utilisation des jauges comme indicateurs de performance clés, consultez [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Pour plus d'informations sur l'utilisation de jauges comme indicateurs de performance clés, consultez le [tutoriel : Ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des jauges hors d'un rapport en tant que parties du rapport. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -198,13 +198,13 @@ ms.locfileid: "50031278"
   
  ![rs_RadialGauge](../../reporting-services/report-design/media/rs-radialgauge.gif "rs_RadialGauge")  
   
- Options de jauge radiale : Radial, Radial avec mini-jauge, Deux échelles, 90 degrés nord-est, 90 degrés nord-ouest, 90 degrés sud-ouest, 90 degrés sud-est, 180 degrés nord, 180 degrés sud, 180 degrés ouest, 180 degrés est et Métrique.  
+ Options de jauge radiale : Radial, Radial avec mini-jauge, Deux échelles, 90 degrés nord-est, 90 degrés nord-ouest, 90 degrés sud-ouest, 90 degrés sud-est, 180 degrés nord, 180 degrés sud, 180 degrés ouest, 180 degrés est et Compteur.  
   
  **Jauge linéaire**  
   
  ![rs_LinearGauge](../../reporting-services/report-design/media/rs-lineargauge.gif "rs_LinearGauge")  
   
- Options de jauge linéaire : Horizontal, Vertical, Pointeurs multiples en forme de barres, Deux échelles, Plage de trois couleurs, Logarithmique, Thermomètre, Thermomètre Fahrenheit/Celsius et Graphique à puces.  
+ Options de jauge linéaire : Horizontal, Vertical, Pointeurs multiples en forme de barres, Deux échelles, Plage de trois couleurs, Logarithmique, Thermomètre, Thermomètre Fahrenheit/Celsius et Graphique à puces.  
   
 ##  <a name="AddingData"></a> Ajout de données à une jauge  
  Une fois que vous avez ajouté une jauge à l'aire de conception, il vous suffit de faire glisser un champ du dataset vers le volet des données de la jauge. Par défaut, la jauge agrège les valeurs du champ en une seule valeur qui est indiquée sur la jauge. Cette valeur est associée au pointeur via la propriété Value. Selon le type de données du champ, la jauge utilise l'agrégat SUM ou COUNT. Lorsque vous utilisez des données numériques qui peuvent être ajoutées, la jauge utilise la fonction SUM. Sinon, elle utilise l'agrégat COUNT. La valeur du pointeur peut utiliser un agrégat différent, ou aucun agrégat.  

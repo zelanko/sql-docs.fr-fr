@@ -13,14 +13,14 @@ f1_keywords:
 - sql13.rtp.rptdesigner.indicatorproperties.validateandstates.f1
 - sql13.rtp.rptdesigner.indicatorproperties.general.f1
 ms.assetid: 2edbd279-be39-4d97-b1b6-ddbc5b17c422
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d8bb40ecff48e048f38ce793203e70471f43f28e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bea364e4d2314f612ec102edbbab9f9e39e8940e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726347"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289267"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indicateurs (Générateur de rapports et SSRS)
   Dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , les indicateurs sont de petites jauges qui communiquent en un coup d’œil l’état d’une valeur de donnée unique. Les icônes qui représentent des indicateurs et leurs états sont simples et visuellement efficaces même lorsqu'elles sont utilisées dans les petites tailles.  
@@ -41,7 +41,7 @@ ms.locfileid: "47726347"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit des icônes d’indicateur et des jeux d’indicateurs intégrés à utiliser tels quels, et vous pouvez également personnaliser des icônes d’indicateur individuelles et des jeux d’indicateurs en fonction de vos besoins.  
   
- Pour plus d’informations sur l’utilisation des indicateurs comme indicateurs de performance clés, consultez [Didacticiel : ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
+ Pour plus d'informations sur l'utilisation d'indicateurs comme indicateurs de performance clés, consultez le [tutoriel : Ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des indicateurs hors d'un rapport en tant que parties du rapport. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -190,6 +190,6 @@ ms.locfileid: "47726347"
 ## <a name="see-also"></a> Voir aussi  
  [Jauges &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/gauges-report-builder-and-ssrs.md)   
  [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
- [Graphiques (Générateur de rapports et SSRS)](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
+ [Graphiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/charts-report-builder-and-ssrs.md)  
   
   

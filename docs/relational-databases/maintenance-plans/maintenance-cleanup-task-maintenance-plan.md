@@ -15,12 +15,12 @@ ms.assetid: 022b679c-6799-4c13-9185-814224a20412
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: cf6a87ac5c41a2bd28a528a7337d05cb8dcf8775
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5e54371d1877bbebfe566692aa02f7237593b43b
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532114"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154744"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Tâche de nettoyage de maintenance (Plan de maintenance)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52532114"
  Chemin d'accès et nom du dossier contenant les fichiers à supprimer.  
   
  **Extension de fichier**  
- Spécifiez l'extension de fichier des fichiers à supprimer.  
+ Spécifiez l'extension du fichier à supprimer. N’incluez pas d’autres caractères avant ou après l’extension (par exemple, n’incluez pas BAK ou TRN). 
   
  **Inclure les sous-dossiers de premier niveau**  
  Supprimez les fichiers portant l’extension spécifiée pour l’option **Extension de fichier** , des sous-dossiers de premier niveau situés dans le dossier défini dans l’option **Dossier**.  

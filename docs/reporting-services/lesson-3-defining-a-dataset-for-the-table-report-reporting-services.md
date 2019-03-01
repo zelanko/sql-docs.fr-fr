@@ -1,21 +1,21 @@
 ---
-title: 'Leçon 3 : définition d’un dataset destiné à un rapport de table (Reporting Services) | Microsoft Docs'
+title: 'Leçon 3 : définition d’un jeu de données destiné à un rapport de table (Reporting Services) | Microsoft Docs'
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: ee93dfcb-8f52-4d63-b4f6-0d38e00fd350
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 60f613e075c032faa9e81b30a48b9d6f630c0b5c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: bec3fb7737cd8621952dc71cbad80c0af5159151
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516984"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292921"
 ---
-# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Leçon 3 : définition d'un dataset destiné à un rapport de table (Reporting Services)
+# <a name="lesson-3-defining-a-dataset-for-the-table-report-reporting-services"></a>Leçon 3 : définition d'un jeu de données destiné à un rapport de table (Reporting Services)
 Après avoir défini une source de données, vous devez spécifier un dataset. Dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], les données utilisées par les rapports sont contenues dans des *datasets*. Les datasets contiennent un pointeur qui renvoient à la source des données, la requête que doit utiliser le rapport ainsi que des champs et variables calculées.  
   
 Utilisez le Concepteur de requêtes du Concepteur de rapports pour définir le dataset. Au cours de ce didacticiel, vous allez créer une requête qui extrait les informations sur les bons de commande depuis la base de données [!INCLUDE [ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] .  
@@ -68,12 +68,12 @@ Utilisez le Concepteur de requêtes du Concepteur de rapports pour définir le d
     ![ssrs_adventureworksdataset](../reporting-services/media/ssrs-adventureworksdataset.png)  
   
 ## <a name="next-task"></a>Tâche suivante  
-Vous venez de spécifier une requête qui permet d'extraire les données pour votre rapport. Vous allez ensuite créer la disposition du rapport. Consultez [Leçon 4 : ajout d’une table au rapport &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
+Vous venez de spécifier une requête qui permet d'extraire les données pour votre rapport. Vous allez ensuite créer la disposition du rapport. Consultez la [leçon 4 : Ajout d’une table au rapport &#40;Reporting Services&#41;](../reporting-services/lesson-4-adding-a-table-to-the-report-reporting-services.md).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Outils de création de requêtes &#40;SSRS&#41;](../reporting-services/report-data/query-design-tools-ssrs.md)  
 [Type de connexion SQL Server &#40;SSRS&#41;](../reporting-services/report-data/sql-server-connection-type-ssrs.md)  
-[Didacticiel : écriture d'instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
+[Didacticiel : Écriture d’instructions Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)  
   
   
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: edc0c75f-0530-4e6d-85aa-3385301bfd00
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4318aeeb2f80078a71fe5924dae0364cfa380150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: e1c6a8dcf60de0e1d67666788d0c026af545f90f
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804097"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289637"
 ---
 # <a name="built-in-collections---reportitems-collection-references-report-builder"></a>Collections intégrées - Informations de référence sur la collection ReportItems (Générateur de rapports)
   La collection intégrée **ReportItems** constitue l’ensemble des zones de texte des éléments de rapport, tels que les lignes d’une région de données ou les zones de texte de l’aire de conception du rapport. La collection **ReportItems** comprend les zones de texte situées dans l’étendue actuelle d’un en-tête de page, d’un pied de page ou du corps du rapport. Cette collection est déterminée au moment de l'exécution par le processeur de rapports et le convertisseur de rapports. L'étendue actuelle change à mesure que le processeur de rapports combine successivement les données du rapport et ses éléments de mise en page lorsque l'utilisateur visualise les pages du rapport. Vous pouvez utiliser la collection intégrée **ReportItems** pour produire des en-têtes de page de type dictionnaire, qui représentent le premier et le dernier éléments de chaque page.  
@@ -22,7 +22,7 @@ ms.locfileid: "47804097"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="using-the-reportitems-value-property"></a>Utilisation de la propriété Value de ReportItems  
- Les éléments de la collection **ReportItems** ont une seule propriété : Value. La valeur d’un élément **ReportItems** peut être utilisée pour afficher ou pour calculer des données provenant d’un autre champ du rapport. Pour accéder à la valeur de la zone de texte actuelle, vous pouvez utiliser l’entité [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] globale intégrée Me.Value ou simplement Value. Dans les fonctions de rapport telles que First et les fonctions d'agrégation, il convient toutefois d'utiliser la syntaxe complète.  
+ Les éléments de la collection **ReportItems** ont une seule propriété : Valeur : La valeur d’un élément **ReportItems** peut être utilisée pour afficher ou pour calculer des données provenant d’un autre champ du rapport. Pour accéder à la valeur de la zone de texte actuelle, vous pouvez utiliser l’entité [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] globale intégrée Me.Value ou simplement Value. Dans les fonctions de rapport telles que First et les fonctions d'agrégation, il convient toutefois d'utiliser la syntaxe complète.  
   
  Exemple :  
   

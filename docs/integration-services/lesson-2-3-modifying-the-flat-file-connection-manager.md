@@ -11,12 +11,12 @@ ms.assetid: 459e3995-2116-4f15-aaa2-32f26113869c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1de57ab14dc4dcfc07f838494ca48f8b12da6660
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 058f392079c466d34505fac57653d34d37401cc3
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143559"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265296"
 ---
 # <a name="lesson-2-3-modify-the-flat-file-connection-manager"></a>Leçon 2-3 : Modifier le gestionnaire de connexions de fichiers plats
 
@@ -27,20 +27,22 @@ En modifiant le gestionnaire de connexions de sorte à utiliser la valeur de la 
 ## <a name="configure-the-flat-file-connection-manager-to-use-a-variable"></a>Configurer le gestionnaire de connexions de fichiers plats pour utiliser une variable  
   
 1.  Dans le volet **Gestionnaires de connexions** , cliquez avec le bouton droit sur **Sample Flat File Source Data**, puis sélectionnez **Propriétés**.  
+
+2.  Dans la fenêtre **Propriétés**, vérifiez que le **PackagePath** commence par **\Package.Connections**. Si ce n’est pas le cas, dans le volet **Gestionnaires de connexions**, cliquez avec le bouton droit sur **Sample Flat File Source Data**, puis sélectionnez **Convertir en connexion de package**.
   
-2.  Dans la fenêtre **Propriétés**, pour **Expressions**, sélectionnez la cellule vide, puis le bouton **(...)**.  
+3.  Dans la fenêtre **Propriétés**, pour **Expressions**, sélectionnez la cellule vide, puis le bouton **(...)**.  
   
-3.  Dans la boîte de dialogue **Éditeur d’expressions de la propriété**, dans la colonne **Propriété**, sélectionnez **ConnectionString**.  
+4.  Dans la boîte de dialogue **Éditeur d’expressions de la propriété**, dans la colonne **Propriété**, sélectionnez **ConnectionString**.  
   
-4.  Dans la colonne **Expression**, sélectionnez le bouton **(...)** pour ouvrir la boîte de dialogue **Générateur d’expressions**.  
+5.  Dans la colonne **Expression**, sélectionnez le bouton **(...)** pour ouvrir la boîte de dialogue **Générateur d’expressions**.  
   
-5.  Dans la boîte de dialogue **Générateur d’expressions**, développez le nœud **Variables**.  
+6.  Dans la boîte de dialogue **Générateur d’expressions**, développez le nœud **Variables**.  
   
-6.  Faites glisser la variable **User::varFileName** dans la zone **Expression**.  
+7.  Faites glisser la variable **User::varFileName** dans la zone **Expression**.  
   
-7.  Sélectionnez **OK** pour fermer la boîte de dialogue **Générateur d’expressions**.  
+8.  Sélectionnez **OK** pour fermer la boîte de dialogue **Générateur d’expressions**.  
   
-8.  Resélectionnez **OK** pour fermer la boîte de dialogue **Éditeur d’expressions de la propriété**.  
+9.  Resélectionnez **OK** pour fermer la boîte de dialogue **Éditeur d’expressions de la propriété**.  
   
 ## <a name="go-to-next-task"></a>Passer à la tâche suivante  
 [Étape 4 : Tester le package du tutoriel de la leçon 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  

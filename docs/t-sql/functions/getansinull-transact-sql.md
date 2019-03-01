@@ -21,19 +21,19 @@ ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95e76ebfc1bca5aa310d8c4e377592ec1670721
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081425bf857be0a637159304facdcfb1aa625642
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753387"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287827"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Retourne la possibilité de valeur NULL par défaut de la base de données pour cette session.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -44,13 +44,13 @@ GETANSINULL ( [ 'database' ] )
   
 ## <a name="arguments"></a>Arguments  
  '*database*'  
- Nom de la base de données pour laquelle retourner des informations sur les possibilités de valeur NULL. *database* est de type **char** ou **nchar**. Si son type est **char**, *database* est implicitement converti en **nchar**.  
+ Nom de la base de données pour laquelle retourner des informations sur les possibilités de valeur NULL. *la base de données est de type **char** ou **ncha**. Si son type est **char**, *database* est implicitement converti en **nchar**.  
   
 ## <a name="return-types"></a>Types de retour  
  **Int**  
   
 ## <a name="remarks"></a>Notes   
- Lorsque la possibilité de valeur NULL de la base de données précisée autorise les valeurs NULL et que la possibilité de valeur NULL de la colonne et du type de données n'est pas définie explicitement, GETANSINULL retourne 1. Il s'agit de la valeur par défaut ANSI NULL.  
+GETANSINULL retourne 1 si la possibilité de valeur Null de la base de données autorise les valeurs Null. Cette valeur renvoyée nécessite également que la possibilité de valeur Null de la colonne ou du type données ne soit pas explicitement définie. La valeur ANSI NULL par défaut est 1. 
   
  Pour activer le comportement par défaut de ANSI NULL, l'une des conditions suivantes doit être définie :  
   

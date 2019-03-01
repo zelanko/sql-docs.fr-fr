@@ -1,21 +1,21 @@
 ---
-title: 'Résoudre les problèmes liés aux rapports : rapports cartographiques (Générateur de rapports et SSRS) | Microsoft Docs'
+title: 'Dépanner les rapports : Mapper les rapports (Générateur de rapports et SSRS) | Microsoft Docs'
 ms.date: 01/17/2018
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: a690aec2-056b-40bc-8cab-c694bd2d6d62
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8668a88ef7e2375c0500fed68b1ffbc4a0494ba9
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 7688e1c082c250933054a9c510c8f8ecf7be3423
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100390"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297278"
 ---
-# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Résoudre les problèmes liés aux rapports : rapports cartographiques (Générateur de rapports et SSRS)
+# <a name="troubleshoot-reports-map-reports-report-builder-and-ssrs"></a>Dépanner les rapports : Rapports cartographiques (Générateur de rapports et SSRS)
   Vous pouvez rencontrer des problèmes quand vous ajoutez une carte ou une couche à votre rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , quand vous personnalisez une carte ou une couche existante de votre rapport, quand vous affichez l’aperçu d’une carte dans un rapport ou quand vous publiez un rapport contenant une carte. Utilisez cette rubrique pour vous aider à résoudre ces problèmes.  
     
    ## <a name="need-more-help"></a>Besoin d’aide ?  

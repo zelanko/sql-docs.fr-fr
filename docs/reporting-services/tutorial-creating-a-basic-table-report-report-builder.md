@@ -1,27 +1,27 @@
 ---
-title: 'Didacticiel : création d’un rapport de tableau de base (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Création d’un rapport de tableau de base (Générateur de rapports) | Microsoft Docs'
 ms.date: 06/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712350"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298380"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : création d'un rapport de tableau de base (Générateur de rapports)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : Création d'un rapport de tableau de base (Générateur de rapports)
 Ce didacticiel vous apprend à créer un rapport de tableau de base à partir des exemples de données de ventes. L’illustration suivante montre le rapport que vous allez créer.  
   
 ![SSRS_Tutorial_Basic_Table_Report](../reporting-services/media/ssrs-tutorial-basic-table-report.png)  
   
 
-Durée estimée pour effectuer le didacticiel : 20 minutes.  
+Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -184,7 +184,7 @@ Après avoir créé des groupes, vous pouvez ajouter et mettre en forme les lign
   
 4.  Cliquez sur **Suivant** pour afficher un aperçu de la table, puis sur **Terminer**.  
   
-Le tableau est ajouté à l'aire de conception. Le tableau possède 5 colonnes et 5 lignes. Le volet Groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+Le tableau est ajouté à l'aire de conception. Le tableau possède 5 colonnes et 5 lignes. Le volet Groupes de lignes affiche trois groupes de lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 ## <a name="FormatCurrency"></a>2. Mettre en forme les données en tant que devises  
 Par défaut, les données de synthèse du champ Sales affichent un nombre général. Appliquez une mise en forme pour afficher ce nombre dans un format monétaire.   
@@ -293,7 +293,7 @@ Enregistrez le rapport sur un serveur de rapports ou sur votre ordinateur. Si vo
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
 4.  Dans **Nom**, remplacez **Sans titre** par **Product_Sales**.  
   

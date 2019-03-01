@@ -6,21 +6,21 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 0a95c339-c5aa-49ad-b1c8-72824b7a9c82
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 8d64ad789bd1061541528ad6ff5e07797b6f9a04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: f6d7b6081950e06af35852a2c9eeef1ca0827845
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759447"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287997"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tables (Générateur de rapports et SSRS)
  Dans [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)], vous pouvez utilisez une table pour afficher des données de détail ou groupées, ou une combinaison des deux dans un rapport paginé.   
    
  Vous pouvez grouper des données selon un champ unique, selon plusieurs champs ou en écrivant votre propre expression. Vous pouvez créer des groupes imbriqués ou des groupes indépendants, adjacents. Pour afficher des valeurs de synthèse pour les données groupées, ajoutez des totaux aux groupes. Formatez les lignes et les colonnes afin de mettre en surbrillance les données que vous souhaitez mettre en évidence. Vous pouvez au départ masquer les données groupées ou les données de détail et inclure des bascules d'extraction pour permettre à un utilisateur de choisir de manière interactive les données à afficher.  
   
- Pour rapidement commencer à utiliser les tables, consultez [Didacticiel : création d’un rapport de table de base &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) ou [Créer un rapport de table de base &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
+ Pour commencer à utiliser rapidement les tables, consultez le [Tutoriel : Création d’un rapport de table de base &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md) ou [Créer un rapport de table de base &#40;didacticiel SSRS&#41;](../../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  
   
 > [!NOTE]  
 >  Vous pouvez publier des tables hors d'un rapport en tant que parties du rapport. En savoir plus sur les [Parties de rapports](../../reporting-services/report-design/report-parts-report-builder-and-ssrs.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "47759447"
   
  ![Modèle de table sur l’aire de conception, sélectionné](../../reporting-services/report-design/media/rs-tabletemplatenewselected.gif "Modèle de table sur l’aire de conception, sélectionné")  
   
- Le handle de ligne de la ligne de données affiche le symbole de détails (![handle de ligne avec 3 traits parallèles pour la ligne de détails](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "handle de ligne avec 3 lignes parallèles pour la ligne de détails")). Pour afficher des données sur ces lignes, faites glisser les champs du volet des données de rapport vers la ligne d'en-tête ou de détails. Les deux lignes sont remplies simultanément. Pour ajouter des colonnes supplémentaires, faites glisser le champ vers la table jusqu'à ce que vous voyiez un point d'insertion. Après avoir ajouté des champs de dataset à la table, vous pouvez modifier le format par défaut pour les dates et devises afin de contrôler leur mode d'affichage dans le rapport. Le diagramme suivant représente une région de données d'une table comportant les champs suivants : Date, Order, Product, Qty et Line Total.  
+ Le handle de ligne de la ligne de données affiche le symbole de détails (![handle de ligne avec 3 traits parallèles pour la ligne de détails](../../reporting-services/report-design/media/rs-icontablix-detailsrow.gif "handle de ligne avec 3 lignes parallèles pour la ligne de détails")). Pour afficher des données sur ces lignes, faites glisser les champs du volet des données de rapport vers la ligne d'en-tête ou de détails. Les deux lignes sont remplies simultanément. Pour ajouter des colonnes supplémentaires, faites glisser le champ vers la table jusqu'à ce que vous voyiez un point d'insertion. Après avoir ajouté des champs de dataset à la table, vous pouvez modifier le format par défaut pour les dates et devises afin de contrôler leur mode d'affichage dans le rapport. Le diagramme suivant représente une région de données d'une table comportant les champs suivants : Date, Order, Product, Qty et Ligne Total.  
   
  ![Conception, table avec en-têtes de colonnes en gras](../../reporting-services/report-design/media/rs-basictabledetailsformatteddesign.gif "Conception, table avec en-têtes de colonnes en gras")  
   
