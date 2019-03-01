@@ -5,17 +5,17 @@ description: Découvrez comment déployer des clusters de données volumineuses 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 422c09654f214d067b7d1ad7fd8bcca1dfe8f7e8
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: e92ae469c03f6b2b5547acb1f31baac334926edf
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087858"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018005"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes
 
@@ -84,10 +84,10 @@ La configuration du cluster peut être personnalisée à l’aide d’un ensembl
 
 | Variable d'environnement | Requis | Valeur par défaut | Description |
 |---|---|---|---|
-| **ACCEPT_EULA** | Oui | N/A | Acceptez le contrat de licence de SQL Server (par exemple, « Y »).  |
+| **ACCEPT_EULA** | Oui | N/A | Acceptez le contrat de licence de SQL Server (par exemple, « Oui »).  |
 | **CLUSTER_NAME** | Oui | N/A | Le nom de l’espace de noms Kubernetes pour déployer SQLServer regrouper les données volumineuses en. |
 | **CLUSTER_PLATFORM** | Oui | N/A | La plateforme du cluster Kubernetes est déployée. Peut être `aks`, `minikube`, `kubernetes`|
-| **CLUSTER_COMPUTE_POOL_REPLICAS** | Non | 1 | Le nombre de réplicas de pool de calcul à créer. Dans CTP 2.2 uniquement à la valeur autorisée est 1. |
+| **CLUSTER_COMPUTE_POOL_REPLICAS** | Non | 1 | Le nombre de réplicas de pool de calcul à créer. Dans CTP 2.3 uniquement à la valeur autorisée est 1. |
 | **CLUSTER_DATA_POOL_REPLICAS** | Non | 2 | Le nombre de données du pool pour créer les réplicas. |
 | **CLUSTER_STORAGE_POOL_REPLICAS** | Non | 2 | Le nombre de réplicas de pool de stockage à créer. |
 | **DOCKER_REGISTRY** | Oui | TBD | Le Registre privé où sont stockées les images utilisées pour déployer le cluster. |
@@ -189,7 +189,7 @@ Si vous déployez avec kubeadm sur vos propres ordinateurs physiques ou virtuels
 L’API de création de cluster est utilisé pour initialiser l’espace de noms Kubernetes et de déployer tous les pods d’application dans l’espace de noms. Pour déployer un cluster de données volumineux de SQL Server sur votre cluster Kubernetes, exécutez la commande suivante :
 
 ```bash
-mssqlctl create cluster <your-cluster-name>
+mssqlctl cluster create --name <your-cluster-name>
 ```
 
 Pendant l’amorçage de cluster, la fenêtre de commande client affiche l’état du déploiement. Pendant le processus de déploiement, vous devez voir une série de messages où il attend que le pod de contrôleur :
@@ -202,7 +202,7 @@ Au bout de 10 à 20 minutes, vous devez averti que le pod de contrôleur est en 
 
 ```output
 2018-11-15 15:50:50.0300 UTC | INFO | Controller pod is running.
-2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.222.222.222:30080
+2018-11-15 15:50:50.0585 UTC | INFO | Controller Endpoint: https://111.111.111.111:30080
 ```
 
 > [!IMPORTANT]
@@ -215,21 +215,23 @@ Une fois le déploiement terminé, la sortie vous informe de réussite :
 2018-11-15 16:10:25.0583 UTC | INFO | Cluster deployed successfully.
 ```
 
-## <a id="masterip"></a> Obtenir l’instance de SQL Server Master et les adresses IP de cluster de données SQL Server
+## <a id="masterip"></a> Obtenir les points de terminaison de cluster big data
 
-Une fois le script de déploiement terminée, vous pouvez obtenir l’adresse IP de l’instance principale de SQL Server à l’aide de la procédure décrite ci-dessous. Vous utiliserez cette adresse IP et port numéro 31433 pour se connecter à l’instance principale de SQL Server (par exemple :  **\<ip-address\>, 31433**). De même, les données de SQL Server big IP du cluster. Tous les points de terminaison de cluster sont décrites dans l’onglet points de terminaison de Service dans le portail d’Administration du Cluster ainsi. Vous pouvez utiliser le portail d’Administration de Cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `service-proxy-lb` (par exemple : **https://\<ip-address\>: 30777/portail**). Informations d’identification pour accéder au portail d’administration est les valeurs de `CONTROLLER_USERNAME` et `CONTROLLER_PASSWORD` variables d’environnement fournis ci-dessus.
+Une fois le script de déploiement terminée, vous pouvez obtenir l’adresse IP de l’instance principale de SQL Server à l’aide de la procédure décrite ci-dessous. Vous utiliserez cette adresse IP et port numéro 31433 pour se connecter à l’instance principale de SQL Server (par exemple :  **\<ip-address-of-endpoint-master-pool\>, 31433**). De même, vous pouvez vous connecter à l’adresse IP de cluster (passerelle HDFS/Spark) de données volumineuses associée de SQL Server le **-security du point de terminaison** service.
 
-### <a name="aks"></a>AKS
-
-Si vous utilisez AKS, Azure fournit le service de l’équilibreur de charge Azure. Exécutez la commande suivante :
+Les commandes de kubectl suivantes récupèrent des points de terminaison communs pour le cluster de données volumineuses :
 
 ```bash
 kubectl get svc endpoint-master-pool -n <your-cluster-name>
-kubectl get svc service-security-lb -n <your-cluster-name>
-kubectl get svc service-proxy-lb -n <your-cluster-name>
+kubectl get svc endpoint-security -n <your-cluster-name>
+kubectl get svc endpoint-service-proxy -n <your-cluster-name>
 ```
 
-Recherchez le **External-IP** valeur affectée au service. Ensuite, connectez-vous à l’instance principale de SQL Server à l’aide de l’adresse IP sur le port 31433 (Ex :  **\<ip-address\>, 31433**) et au point de terminaison cluster de données SQL Server à l’aide de l’IP externe pour `service-security-lb` service. 
+Recherchez le **External-IP** valeur est assignée à chaque service.
+
+Tous les points de terminaison de cluster sont également présentées dans le **points de terminaison de Service** onglet dans le portail d’Administration de Cluster. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `endpoint-service-proxy` (par exemple : **https://\<ip-address-of-endpoint-service-proxy\>: 30777/portail**). Informations d’identification pour accéder au portail d’administration est les valeurs de `CONTROLLER_USERNAME` et `CONTROLLER_PASSWORD` variables d’environnement fournis ci-dessus. Vous pouvez également utiliser le portail d’Administration de Cluster pour surveiller le déploiement.
+
+Pour plus d’informations sur la façon de se connecter, consultez [se connecter à SQL Server cluster big data avec Azure Data Studio](connect-to-big-data-cluster.md).
 
 ### <a name="minikube"></a>Minikube
 
@@ -253,8 +255,11 @@ Actuellement, la seule façon de mettre à niveau un cluster de données volumin
 1. Supprimer l’ancien cluster avec le `mssqlctl delete cluster` commande.
 
    ```bash
-    mssqlctl delete cluster <old-cluster-name>
+    mssqlctl cluster delete --name <old-cluster-name>
    ```
+
+   > [!Important]
+   > Utilisez la version de **mssqlctl** qui correspond à votre cluster. Ne supprimez pas un cluster plus anciens avec la version la plus récente de **mssqlctl**.
 
 1. Désinstaller les anciennes versions de **mssqlctl**.
 
@@ -270,13 +275,13 @@ Actuellement, la seule façon de mettre à niveau un cluster de données volumin
    **Windows :**
 
    ```powershell
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
    ```
 
    **Linux :**
    
    ```bash
-   pip3 install --extra-index-url https://private-repo.microsoft.com/python/ctp-2.2 mssqlctl --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
    ```
 
    > [!IMPORTANT]
@@ -328,14 +333,11 @@ Pour surveiller et résoudre les problèmes d’un déploiement, utilisez **kube
    | Service | Description |
    |---|---|
    | **endpoint-master-pool** | Fournit l’accès à l’instance principale.<br/>(**EXTERNAL-IP, 31433** et **SA** utilisateur) |
-   | **service-mssql-controller-lb**<br/>**service-mssql-controller-nodeport** | Prend en charge des outils et les clients qui gèrent le cluster. |
-   | **service-proxy-lb**<br/>**service-proxy-nodeport** | Fournit l’accès à la [portail d’Administration de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777/portail)|
-   | **service-security-lb**<br/>**service-security-nodeport** | Fournit l’accès à la passerelle HDFS/Spark.<br/>(**EXTERNAL-IP** et **racine** utilisateur) |
+   | **endpoint-controller** | Prend en charge des outils et les clients qui gèrent le cluster. |
+   | **endpoint-service-proxy** | Fournit l’accès à la [portail d’Administration de Cluster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**: 30777/portail)|
+   | **endpoint-security** | Fournit l’accès à la passerelle HDFS/Spark.<br/>(**EXTERNAL-IP** et **racine** utilisateur) |
 
-   > [!NOTE]
-   > Les noms de service peuvent varier en fonction de votre environnement Kubernetes. Lorsque vous déployez sur Azure Kubernetes Service (AKS), les noms de service doit se terminent par **-lb**. Pour les déploiements minikube et kubeadm, les noms de service se terminent par **- nodeport**.
-
-1. Utilisez le [portail d’Administration de Cluster](cluster-admin-portal.md) pour surveiller le déploiement sur le **déploiement** onglet. Vous devez attendre la **proxy-service-lb** démarrage avant d’accéder à ce portail, donc il n’est pas disponible au début d’un déploiement du service.
+1. Utilisez le [portail d’Administration de Cluster](cluster-admin-portal.md) pour surveiller le déploiement sur le **déploiement** onglet. Vous devez attendre la **proxy de service de point de terminaison** démarrage avant d’accéder à ce portail, donc il n’est pas disponible au début d’un déploiement du service.
 
 > [!TIP]
 > Pour plus d’informations sur la résolution des problèmes de cluster, consultez [commandes Kubectl pour la surveillance et dépannage des clusters de données volumineuses de SQL Server](cluster-troubleshooting-commands.md).

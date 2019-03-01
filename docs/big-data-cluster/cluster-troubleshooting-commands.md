@@ -5,17 +5,17 @@ description: Cet article fournit des commandes kubectl utile pour surveiller et 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: f6556d271426157424bbc5f5dcbf1abbb4ffdc01
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 624c4ad4f53c0ad78cf5b972c976aadc57fd35d3
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242000"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017905"
 ---
 # <a name="kubectl-commands-for-monitoring-and-troubleshooting-sql-server-big-data-clusters"></a>Commandes Kubectl pour la surveillance et dépannage des clusters de données volumineuses de SQL Server
 
@@ -39,7 +39,7 @@ kubectl get pods --all-namespaces
 
 ### <a name="show-status-of-all-pods-in-the-sql-server-big-data-cluster"></a>Afficher l’état de tous les pods dans le cluster de données volumineux de SQL Server
 
-Utilisez le `-n` paramètre pour spécifier un espace de noms spécifique. Notez que SQL Server pods du cluster big data sont créés dans un nouvel espace de noms créé au moment du démarrage cluster basé sur le nom de cluster spécifié dans le `mssqlctl create cluster <cluster_name>` commande.
+Utilisez le `-n` paramètre pour spécifier un espace de noms spécifique. Notez que SQL Server pods du cluster big data sont créés dans un nouvel espace de noms créé au moment du démarrage cluster basé sur le nom de cluster spécifié dans le `mssqlctl cluster create --name <cluster_name>` commande.
 
 ```bash
 kubectl get pods -n <namespace_name>
@@ -67,7 +67,7 @@ kubectl describe pod  mssql-data-pool-master-0 -n big_data_cluster
 
 ## <a name="get-status-of-services"></a>Obtenir l’état des services
 
-Exécutez la commande suivante pour obtenir des détails pour les services de cluster de données volumineuses. Ces détails incluent leur type et les adresses IP associées avec les ports et services respectifs. Notez que les services de cluster de données volumineuses de SQL Server sont créés dans un nouvel espace de noms créé au moment du démarrage cluster basé sur le nom de cluster spécifié dans le `mssqlctl create cluster <cluster_name>` commande.
+Exécutez la commande suivante pour obtenir des détails pour les services de cluster de données volumineuses. Ces détails incluent leur type et les adresses IP associées avec les ports et services respectifs. Notez que les services de cluster de données volumineuses de SQL Server sont créés dans un nouvel espace de noms créé au moment du démarrage cluster basé sur le nom de cluster spécifié dans le `mssqlctl cluster create --name <cluster_name>` commande.
 
 ```bash
 kubectl get svc -n <namespace_name>

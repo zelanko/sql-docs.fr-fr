@@ -5,17 +5,17 @@ description: Cet article décrit le contrôleur d’un cluster de données volum
 author: mihaelablendea
 ms.author: mihaelab
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 84162981b68a309f4a21efc0c0610837be308ddb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241280"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017865"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>Qu’est le contrôleur sur un cluster de données volumineux de SQL Server 2019 ?
 
@@ -29,15 +29,15 @@ Le service de contrôleur fournit les fonctionnalités principales suivantes :
 - Exposer des outils de surveillance pour observer l’état du cluster
 - Exposer des outils de dépannage pour détecter et corriger les problèmes inattendus
 - Gérer la sécurité du cluster : Vérifiez les points de terminaison de cluster sécurisé, gérer les utilisateurs et les rôles, configurez les informations d’identification pour la communication intra-cluster
-- Gérer le flux de travail des mises à niveau afin qu’ils sont implémentés en toute sécurité (non disponible dans les CTP 2.2)
-- Gérer une haute disponibilité et récupération d’urgence pour les services avec état dans le cluster (non disponible dans les CTP 2.2)
+- Gérer le flux de travail des mises à niveau afin qu’ils sont implémentés en toute sécurité (non disponible dans les CTP 2.3)
+- Gérer une haute disponibilité et récupération d’urgence pour les services avec état dans le cluster (non disponible dans les CTP 2.3)
 
 ## <a name="deploying-the-controller-service"></a>Déploiement du service de contrôleur
 
 Le contrôleur est déployé et hébergé dans le même espace de noms Kubernetes où le client souhaite créer un cluster de données volumineux. Ce service est installé par un administrateur de Kubernetes au cours de bootstrap du cluster, à l’aide de l’utilitaire de ligne de commande mssqlctl :
 
 ```bash
-mssqlctl create cluster <name of your cluster>
+mssqlctl cluster create --name <name of your cluster>
 ```
 
 Le flux de travail buildout sera à disposition sur Kubernetes un cluster de données volumineuses de SQL Server entièrement fonctionnel qui inclut tous les composants décrits dans le [vue d’ensemble](big-data-cluster-overview.md) article. Le flux de travail d’amorçage crée tout d’abord le service de contrôleur et une fois que cela est déployé, le service de contrôleur coordonne l’installation et la configuration du reste de la partie de services de pools de master, de calcul, de données et de stockage.

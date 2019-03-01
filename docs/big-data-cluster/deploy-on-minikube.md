@@ -5,17 +5,17 @@ description: Découvrez comment configurer minikube pour les déploiements de cl
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/11/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 66a0e955c77d98e7c3a311047fa3b93dd299ce76
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: eb8cd26b903afff6c4ad7427a3d12f74c476205d
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241160"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017745"
 ---
 # <a name="configure-minikube-for-sql-server-2019-big-data-cluster-deployments"></a>Configurer minikube pour les déploiements de cluster SQL Server 2019 big data
 
@@ -23,10 +23,9 @@ Cet article décrit comment configurer **minikube** sur un ordinateur unique pou
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Pour exécuter un cluster Minikube pour SQL Server 2019 (version préliminaire) pour les clusters de données volumineuses, il est recommandé que votre ordinateur soit au moins 32 Go de RAM.
+- 32 Go de mémoire (64 Go recommandé).
 
-   > [!TIP] 
-   > Si l’ordinateur possède uniquement le minimum recommandé de mémoire, puis configurez le déploiement du cluster que 1 seule instance de pool de calcul, 1 instance de pool de données et instance de pool de stockage de 1. Cette configuration ne doit être utilisée pour les environnements d’évaluation où la durabilité et la disponibilité des données sont sans importance. Consultez le [documentation relative au déploiement](deployment-guidance.md#env) pour plus d’informations sur les variables d’environnement à définir pour configurer le nombre de réplicas pour les pools de données, de calcul, pools et les pools de stockage.
+- Si l’ordinateur possède uniquement le minimum recommandé de mémoire, puis configurez le déploiement du cluster que 1 seule instance de pool de calcul, 1 instance de pool de données et instance de pool de stockage de 1. Cette configuration ne doit être utilisée pour les environnements d’évaluation où la durabilité et la disponibilité des données sont sans importance. Consultez le [documentation relative au déploiement](deployment-guidance.md#env) pour plus d’informations sur les variables d’environnement à définir pour configurer le nombre de réplicas pour les pools de données, de calcul, pools et les pools de stockage.
 
 - La virtualisation x VT ou AMD-v doit être activée dans le BIOS de votre ordinateur.
 

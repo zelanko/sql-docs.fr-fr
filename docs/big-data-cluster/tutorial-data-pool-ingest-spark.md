@@ -5,17 +5,17 @@ description: Ce didacticiel montre comment recevoir des données dans le pool de
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1e6f75f21a02b30a6f75d79a9da5be0320485c5b
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241680"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017735"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Didacticiel : Recevoir des données dans un pool de données SQL Server avec des travaux Spark
 
@@ -64,7 +64,7 @@ Les étapes suivantes créent une table externe dans le pool de données nommé 
       );
    ```
   
-1. Dans CTP 2.2, la création du pool de données est asynchrone, mais il n’existe aucun moyen de déterminer quand il se termine encore. Veuillez patienter deux minutes pour vous assurer que le pool de données est créé avant de continuer.
+1. Dans CTP 2.3, la création du pool de données est asynchrone, mais il n’existe aucun moyen de déterminer quand il se termine encore. Veuillez patienter deux minutes pour vous assurer que le pool de données est créé avant de continuer.
 
 ## <a name="start-a-spark-streaming-job"></a>Démarrer un travail de diffusion en continu de Spark
 

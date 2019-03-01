@@ -3,18 +3,18 @@ title: Types de données Java pris en charge dans SQL Server 2019 - SQL Server M
 description: Mapper les types de données à partir de Java à SQL Server pour les structures de données d’entrée et de sortie et pour les paramètres d’entrée sur le sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6921a40efc9af3ef94c0a53f8409891fee16127e
-ms.sourcegitcommit: 85bfaa5bac737253a6740f1f402be87788d691ef
+ms.openlocfilehash: 4c0f691b8bb389c2da2001d19f0684b7f928f707
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/15/2018
-ms.locfileid: "53432532"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017815"
 ---
 # <a name="java-and-sql-server-supported-data-types"></a>Java et SQL Server pris en charge les types de données
 
@@ -24,25 +24,31 @@ Cet article mappe les types de données de SQL Server aux types de données Java
 
 Les types de données SQL et Java suivants sont actuellement pris en charge pour les jeux de données d’entrée et de sortie.
 
-| Type SQL        | Type de Java | | |
-| ------------- |-------------|-|-|
-| bit      | boolean | | |
-| Tinyint      | short      | | |
-| Smallint | short      | | |
-| Int | INT      | | |
-| Real | FLOAT      | | |
-| Bigint | long      | | |
-| FLOAT | double      | | |
-| nchar(n) | Chaîne (unicode)      | | |
-| nvarchar (n) | Chaîne (unicode)      | | |
-| binary(n) | byte[]      | | |
-| varbinary (n) | byte[]      | | |
+| Type de données SQL        | Type de données Java | Commentaire | |
+| ------------- |-------------|-|
+| bit      | boolean | |
+| Tinyint      | short      | |
+| Smallint | short      | |
+| Int | INT      | |
+| Real | FLOAT      | |
+| Bigint | long      | |
+| FLOAT | double      | |
+| nchar(n) | String      | |
+| nvarchar(n) | String  | |
+| binary(n) | byte[]      | |
+| varbinary(n) | byte[]      | |
+| nvarchar(max) | String | |
+| varbinary(max) | byte[] | |
+| UNIQUEIDENTIFIER | String | |
+| char(n) | String | Seules les chaînes UTF8 pris en charge |
+| varchar(n) | String | Seules les chaînes UTF8 pris en charge |
+| varchar(max) | String | Seules les chaînes UTF8 pris en charge |
 
 ## <a name="data-types-for-input-parameters"></a>Types de données pour les paramètres d’entrée
 
 Les types de données SQL et Java suivants sont actuellement pris en charge pour les paramètres d’entrée.
 
-| Type SQL        | Type de Java | | |
+| Type de données SQL        | Type de données Java | Commentaire | |
 | ------------- |-------------|-|-|
 | bit      | boolean | | |
 | Tinyint      | short      | | |
@@ -51,12 +57,16 @@ Les types de données SQL et Java suivants sont actuellement pris en charge pour
 | Real | FLOAT      | | |
 | Bigint | long      | | |
 | FLOAT | double      | | |
-| nchar(n) | Chaîne (unicode)      | | |
-| nvarchar (n) | Chaîne (unicode)      | | |
+| nchar(n) | String      | | |
+| nvarchar(n) | String      | | |
 | binary(n) | byte[]      | | |
-| varbinary (n) | byte[]      | | |
-| nvarchar(max) | Chaîne (unicode)      | | |
+| varbinary(n) | byte[]      | | |
+| nvarchar(max) | String      | | |
 | varbinary(max) | byte[]      | | |
+| UNIQUEIDENTIFIER | String | | |
+| char(n) | String | Seules les chaînes UTF8 pris en charge | |
+| varchar(n) | String | Seules les chaînes UTF8 pris en charge | |
+| varchar(max) | String | Seules les chaînes UTF8 pris en charge | |
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -2,17 +2,17 @@
 title: Problèmes connus pour le langage R et l’intégration de Python - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/13/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 6dc02c56bda3cdf904e0c53115d4fbbfcfafe9fc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fd6f67e3095af0f1a53ed533ea9b763d52547e39
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645521"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018065"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problèmes connus dans Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -83,7 +83,7 @@ Si vous essayez d’installer SQL Server 2016 R Services ou SQL Server 2017 Mach
 > 
 > *Impossible de trouver le groupe avec l’identité*
 > 
-> *Code d’erreur de composant : est 0 x 80131509*
+> *Code d’erreur de composant : 0x80131509*
 
 L’échec se produit parce que, sur un contrôleur de domaine, le service ne peut pas créer les comptes locaux 20 requis pour exécuter l’apprentissage. En règle générale, nous recommandons l’installation de SQL Server sur un contrôleur de domaine. Pour plus d’informations, consultez [bulletin de prise en charge 2032911](https://support.microsoft.com/help/2032911/you-may-encounter-problems-when-installing-sql-server-on-a-domain-cont).
 
@@ -425,7 +425,7 @@ Il existe plusieurs solutions possibles :
 
 Lorsque vous passer d’un modèle à une instance distante de SQL Server et que vous tentez de lire le modèle binaire à l’aide de la `rx_unserialize` fonctionner dans [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package), vous pouvez obtenir l’erreur : 
 
-> *NameError : rx_unserialize_model' nom' n’est pas défini.*
+> *NameError: name 'rx_unserialize_model' is not defined*
 
 Cette erreur est générée si vous avez enregistré le modèle à l’aide d’une version récente de la fonction de sérialisation, mais l’instance de SQL Server où vous désérialisez le modèle ne reconnaît pas la API de sérialisation.
 

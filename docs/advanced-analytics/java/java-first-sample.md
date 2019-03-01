@@ -3,18 +3,18 @@ title: Exemple de Java et didacticiel pour SQL Server 2019 - SQL Server Machine 
 description: Exécutez l’exemple de code Java sur SQL Server 2019 pour apprendre les étapes pour l’utilisation de l’extension du langage Java avec les données de SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/24/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 32c0792882020612c40a0c41b1c54aaeb51da91c
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 86a379191033f49ab6a5d06ceda2d1ed7a747c12
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069054"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018035"
 ---
 # <a name="sql-server-java-sample-walkthrough"></a>Exemple de procédure SQL Server Java
 
@@ -26,7 +26,7 @@ Cet exemple montre une classe Java qui reçoit les deux colonnes (ID et texte) �
 
 + SQL Server Management Studio ou un autre outil pour l’exécution de T-SQL.
 
-+ Java SE Development Kit (JDK) 1.10 sur Windows, ou un JDK 1.8 sur Linux.
++ Java SE Development Kit (JDK) 8 sur Windows ou Linux.
 
 À l’aide de la compilation de ligne de commande **javac** est suffisant pour ce didacticiel. 
 
@@ -240,7 +240,7 @@ Cet exemple transmet le paramètre CLASSPATH pour fournir le chemin d’accès a
 
 + Sur Linux, exécutez le code suivant dans SQL Server Management Studio ou un autre outil utilisé pour l’exécution de Transact-SQL. 
 
-+ Sur Windows, remplacez **@myClassPath** à N'C:\myJavaCode\' (en supposant qu’il s’agit du dossier parent de \pkg) avant d’exécuter la requête dans SQL Server Management Studio ou un autre outil.
++ Sur Windows, remplacez @myClassPath à N'C:\myJavaCode\' (en supposant qu’il s’agit du dossier parent de \pkg) avant d’exécuter la requête dans SQL Server Management Studio ou un autre outil.
 
 ```sql
 DECLARE @myClassPath nvarchar(50)

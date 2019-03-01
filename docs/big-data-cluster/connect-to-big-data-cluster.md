@@ -5,16 +5,16 @@ description: Découvrez comment vous connecter à l’instance principale de SQL
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/12/2019
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 103e02d456f1176c3bb49c1e67f84215399ab5cd
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231036"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017705"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Se connecter à un cluster SQL Server de données volumineux avec Azure Data Studio
 
@@ -79,17 +79,9 @@ Avec la version de février 2019 de Studio de données Azure, se connecter à l�
 Dans la plupart des cas, connexion à l’instance principale de SQL Server vous permet d’accéder au HDFS et Spark également via le **Data Services** nœud. Toutefois, vous pouvez toujours de créer une connexion dédiée à la **passerelle HDFS/Spark** si nécessaire. Les étapes suivantes décrivent comment vous connecter avec Azure Data Studio.
 
 1. À partir de la ligne de commande, recherchez l’adresse IP de votre passerelle HDFS/Spark avec l’une des commandes suivantes.
-   
-   **Déploiements de AKS :**
 
    ```
-   kubectl get svc service-security-lb -n <your-cluster-name>
-   ```
-
-   **Les déploiements non-AKS**:
-
-   ```
-   kubectl get svc service-security-nodeport -n <your-cluster-name>
+   kubectl get svc endpoint-security -n <your-cluster-name>
    ```
  
 1. Dans Azure Data Studio, appuyez sur **F1** > **nouvelle connexion**.

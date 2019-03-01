@@ -3,18 +3,18 @@ title: L’appel de Java à partir de SQL - SQL Server Machine Learning Services
 description: Découvrez comment appeler des classes Java à partir de procédures stockées SQL Server à l’aide de l’extension de langage dans SQL Server 2019 de programmation de Java.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 438c1096a933932e08c5cbf21722ba75874bb1dc
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 801ffe50ca83fbeda69a3172b5914d39373d643f
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644758"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017755"
 ---
 # <a name="how-to-call-java-from-sql-server-2019-preview"></a>L’appel de Java à partir de la version préliminaire de SQL Server 2019
 
@@ -22,7 +22,20 @@ Lorsque vous utilisez le [extension de langage Java](extension-java.md), le [sp_
 
 Cet article explique les détails d’implémentation des méthodes qui s’exécutent sur SQL Server et les classes Java. Une fois que vous êtes familiarisé avec ces détails, passez en revue la [exemple Java](java-first-sample.md) l’étape suivante.
 
-## <a name="basic-principles"></a>Principes de base
+Il existe deux méthodes pour appeler des classes Java dans SQL Server :
+
+1. Placez les fichiers .class ou .jar dans votre [classpath Java](#classpath). Il est disponible pour Windows et Linux.
+
+2. Charger des classes compilées dans un fichier .jar et d’autres dépendances dans la base de données à l’aide de la [bibliothèque externe](#external-library) DDL. Cette option est disponible pour Windows uniquement dans les CTP 2.3. Prise en charge de Linux sera ajoutée dans une version CTP ultérieure.
+
+> [!NOTE]
+> La recommandation générale, utiliser les fichiers .jar et .class pas les fichiers. Cela est courant dans Java et facilite l’expérience globale. Voir aussi : [Comment créer un fichier jar à partir de fichiers de classe](extension-java.md#create-jar).
+
+<a name="classpath"></a>
+
+## <a name="classpath"></a>Chemin de classe
+
+### <a name="basic-principles"></a>Principes de base
 
 * Des classes Java personnalisées compilées doivent exister dans les fichiers .class ou les fichiers .jar dans votre chemin de classe Java. Le [les paramètre CLASSPATH](#set-classpath) fournit le chemin d’accès aux fichiers Java compilés. 
 
@@ -35,11 +48,11 @@ Cet article explique les détails d’implémentation des méthodes qui s’exé
 > [!Note]
 > Cette note reformule prises en charge et non pris en charge des opérations spécifiques à Java dans CTP 2.x.
 > * Sur la procédure stockée, les paramètres d’entrée sont pris en charge. Paramètres de sortie ne sont pas.
-> * Diffusion en continu à l’aide du paramètre sp_execute_external_script **@r_rowsPerRead** n’est pas pris en charge.
-> * Partitionnement à l’aide de **@input_data_1_partition_by_columns** n’est pas pris en charge.
-> * Parallèle à l’aide de traitement  **@parallel= 1** est pris en charge.
+> * Diffusion en continu à l’aide du paramètre sp_execute_external_script @r_rowsPerRead n’est pas pris en charge.
+> * Partitionnement à l’aide de @input_data_1_partition_by_columns n’est pas pris en charge.
+> * Parallèle à l’aide de traitement @parallel= 1 est prise en charge.
 
-## <a name="call-spexecuteexternalscript"></a>Appel sp_execute_external_script
+### <a name="call-class"></a>Call, classe
 
 Applicable à Windows et Linux, le [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) système, procédure stockée est l’interface utilisée pour appeler le runtime Java. L’exemple suivant montre un sp_execute_external_script à l’aide de l’extension de Java et les paramètres pour spécifier le chemin d’accès, le script et votre code personnalisé.
 
@@ -53,7 +66,7 @@ SET @param1 = 3
 EXEC sp_execute_external_script
   @language = N'Java'
 , @script = N'<packageName>.<ClassName>.<methodName>'
-, @input_data_1 = N'<Input Query>
+, @input_data_1 = N'<Input Query>'
 , @params = N'@CLASSPATH nvarchar(30), @param1 INT'
 , @CLASSPATH = @myClassPath
 , @param1 = @param1
@@ -61,7 +74,7 @@ EXEC sp_execute_external_script
 
 <a name="set-classpath"></a>
 
-## <a name="set-classpath"></a>Définir le chemin de classe
+### <a name="set-classpath"></a>Définir le chemin de classe
 
 Une fois que vous avez compilé votre classe Java ou les classes et placé l’ou les fichiers .class ou les fichiers .jar dans votre chemin de classe Java, vous avez deux options pour fournir le chemin de classe pour l’extension de SQL Server Java :
 
@@ -76,6 +89,35 @@ Une approche permettant de spécifier un chemin d’accès au code compilé cons
 
 Tout comme vous avez créé une variable système pour les exécutables JDK, vous pouvez créer une variable système pour les chemins de code. Pour ce faire, créé une variable d’environnement appelée « CLASSPATH »
 
+<a name="external-library"></a>
+
+## <a name="external-library"></a>Bibliothèque externe
+
+Dans SQL Server 2019 CTP 2.3, vous pouvez utiliser des bibliothèques externes pour le langage Java sur Windows. Les mêmes fonctionnalités seront disponibles sur Linux dans une prochaine version CTP. Vous pouvez compiler vos classes dans un fichier .jar et chargez le fichier .jar et les autres dépendances dans la base de données à l’aide de la [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql) DDL.
+
+Exemple montrant comment charger un fichier .jar avec bibliothèque externe :
+
+```sql 
+CREATE EXTERNAL LIBRARY myJar
+FROM (CONTENT = '<local path to .jar file>') 
+WITH (LANGUAGE = 'Java'); 
+GO
+```
+
+En créant une bibliothèque externe, vous n’avez pas besoin de fournir un [classpath](#classpath) dans l’appel de sp_execute_external_script. SQL Server auront automatiquement accès aux classes Java et vous n’avez pas besoin de définir des autorisations spéciales à l’instruction classpath.
+
+Exemple d’appel d’une méthode dans une classe à partir d’un package téléchargé comme une bibliothèque externe :
+
+```sql
+EXEC sp_execute_external_script
+  @language = N'Java'
+, @script = N'MyPackage.MyCLass.myMethod'
+, @input_data_1 = N'SELECT * FROM MYTABLE'
+with result sets ((column1 int))
+```
+
+Pour plus d’informations, consultez [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql).
+
 ## <a name="class-requirements"></a>Spécifications de la classe
 
 Dans l’ordre pour SQL Server de communiquer avec le runtime Java, vous devez implémenter des variables statiques spécifiques dans votre classe. SQL Server peut alors exécuter une méthode dans les données de classe et d’exchange Java à l’aide de l’extension du langage Java.
@@ -84,7 +126,7 @@ Dans l’ordre pour SQL Server de communiquer avec le runtime Java, vous devez i
 > Prévoyez les détails d’implémentation pour modifier dans les CTP à venir que nous travaillons à améliorer l’expérience pour les développeurs.
 
 ## <a name="method-requirements"></a>Spécifications des méthodes
-Pour passer des arguments, utilisez le **@param** paramètre dans sp_execute_external_script. La méthode elle-même ne peut pas avoir d’arguments. Le type de retour doit être void.  
+Pour passer des arguments, utilisez le @param paramètre dans sp_execute_external_script. La méthode elle-même ne peut pas avoir d’arguments. Le type de retour doit être void.  
 
 ```java
 public static void test()  {}
@@ -120,7 +162,7 @@ L’utilisateur doit uniquement initialiser cette variable (et la taille du tabl
 public static boolean[][] inputNullMap = new boolean[1][1];
 ```
 
-## <a name="data-outputs"></a>Sorties de données 
+## <a name="data-outputs"></a>Sorties de données
 
 Cette section décrit **OutputDataSet**, les jeux de données de sortie retournées à partir de Java, que vous pouvez envoyer à et conserver dans SQL Server.
 
@@ -152,8 +194,6 @@ Cette NullMap doit être rempli avec le nombre attendu de colonnes et lignes que
 ```java
 public static boolean[][] outputNullMap
 ```
-<a name="create-external-library"></a>
-
 
 ## <a name="next-steps"></a>Étapes suivantes
 

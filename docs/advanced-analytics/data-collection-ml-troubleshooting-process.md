@@ -2,17 +2,17 @@
 title: Résoudre les problèmes de collecte de données pour machine learning - SQL Server Machine Learning Services
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 2723131e66cc149209e77884a3a9c160d4c27a0e
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: edfacb2e4d519d4f709d352f52645526cb341fad
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644988"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017935"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Résoudre les problèmes de collecte de données pour l’apprentissage
 
@@ -90,7 +90,7 @@ Pour obtenir la version de R et les versions de RevoScaleR, ouvrez une invite de
   
   `C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES\bin\x64\RGui.exe`
 
-La console R affiche les informations de version au démarrage. Par exemple, la version suivante représente la configuration par défaut pour SQL Server 2017 CTP 2.0 :
+La console R affiche les informations de version au démarrage. Par exemple, la version suivante représente la configuration par défaut de SQL Server 2017 :
 
     *Microsoft R Open 3.3.3*
 
@@ -220,7 +220,7 @@ Par exemple, les messages de journal suivantes sont associées à l’infrastruc
   
   Cela peut indiquer que les comptes de travail qui exécutent des scripts externes ne peuvent pas accéder à l’instance.
 
-* *InitializePhysicalUsersPool a échoué*
+* *InitializePhysicalUsersPool Failed*
   
   Ce message peut signifier que vos paramètres de sécurité empêchent le programme d’installation à partir de la création du pool de comptes de travail qui sont nécessaires pour exécuter des scripts externes.
 
@@ -280,9 +280,9 @@ Pour les comptes d’utilisateur individuels :
 3. Pour activer l’exécution du script, créer des rôles ou ajouter des utilisateurs aux rôles suivants, en fonction des besoins :
 
    - Tout sauf *db_owner*: Nécessitent exécuter n’importe quel SCRIPT externe.
-   - *db_datawriter*: Pour écrire les résultats à partir de R ou Python.
+   - *db_datawriter* : Pour écrire les résultats à partir de R ou Python.
    - *db_ddladmin*: Pour créer des objets.
-   - *db_datareader*: Pour lire les données qui sont utilisées par le code R ou Python.
+   - *db_datareader* : Pour lire les données qui sont utilisées par le code R ou Python.
 4. Notez que si vous avez modifié les comptes de démarrage par défaut lorsque vous avez installé SQL Server 2016.
 5. Si un utilisateur doit installer de nouveaux packages R ou utiliser des packages R qui ont été installées par d’autres utilisateurs, vous devrez peut-être activer la gestion de package sur l’instance et lui attribuer des autorisations supplémentaires. Pour plus d’informations, consultez [activer ou désactiver la gestion des packages R](r/r-package-how-to-enable-or-disable.md).
 

@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 24e93c91c916272f71f137dd10bf402d693bbcd8
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52615979"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007552"
 ---
 # <a name="configure-tls-12-in-aps"></a>Configurer TLS 1.2 dans APS
 
-Pour sécuriser les points d’accès pour utiliser uniquement TLS 1.2, vous devrez désactiver explicitement d’autres protocoles sur tous les hôtes physiques et virtuels. La désactivation des protocoles nécessitent des modifications de paramètre de Registre.
+Pour sécuriser les points d’accès pour utiliser uniquement TLS 1.2, vous devrez désactiver explicitement d’autres protocoles sur tous les hôtes physiques et virtuels. La désactivation des protocoles nécessitent des modifications de paramètre de Registre. Modifications du Registre nécessitent un redémarrage des hôtes physiques et virtuels.
 
 > [!WARNING]
 > Cette section, méthode ou tâche contient les étapes qui vous indiquent comment modifier le Registre. Toutefois, les problèmes graves peuvent survenir si vous modifiez le Registre incorrecte qui peut entraîner une perte de données et nécessiter la réinstallation du système d’exploitation. Nous recommandons vivement sauvegarder le Registre avant de le modifier. De cette manière, vous pourrez restaurer le Registre si un problème survient. Pour plus d’informations sur la façon de sauvegarder et restaurer le Registre, cliquez sur le numéro d’article suivant pour afficher l’article dans la Base de connaissances Microsoft :<br>

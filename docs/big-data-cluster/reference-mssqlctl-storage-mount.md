@@ -1,0 +1,118 @@
+---
+title: référence de montage du stockage mssqlctl
+titleSuffix: SQL Server 2019 big data clusters
+description: Article de référence pour les commandes de stockage mssqlctl.
+author: rothja
+ms.author: jroth
+manager: craigg
+ms.date: 02/28/2019
+ms.topic: reference
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: a8580c3c52cda484581f1c88ccfc039d8bd0bf78
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.translationtype: MT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57018455"
+---
+# <a name="mssqlctl-storage-mount"></a>montage du stockage mssqlctl
+
+L’article suivant fournit la référence pour le **montage du stockage** commandes dans le **mssqlctl** outil. Pour plus d’informations sur les autres **mssqlctl** commandes, consultez [mssqlctl référence](reference-mssqlctl.md).
+
+## <a id="commands"></a> Commandes
+
+|||
+|---|---|
+| [create](#create) | Créer des montages de magasins distants dans HDFS. |
+| [delete](#delete) | Supprimer les montages de magasins distants dans HDFS. |
+| [status](#status) | État de mount(s). |
+
+## <a id="create"></a> montage du stockage mssqlctl créer
+
+Créer des montages de magasins distants dans HDFS.
+
+```
+mssqlctl storage mount create
+   --mount-path
+   --remote-uri
+   [--credential-file]
+```
+
+### <a name="parameters"></a>Paramètres
+
+| Paramètres | Description |
+|---|---|
+| **--mount-path** | Chemin d’accès HDFS dans lequel le montage doit être créer (destination de montage). Obligatoire. |
+| **--remote-uri** | URI de la banque à distance qui doit être monté (source de montage). Obligatoire. |
+| **--credential-file** | Fichier qui contient les informations d’identification pour accéder au magasin distant. Les informations d’identification doivent être spécifiés en tant que clé de paires de valeur avec une clé = valeur par ligne. Tout est égale à dans les clés ou les valeurs ont être échappé. Aucune information d’identification n’est obligatoires par défaut. Les clés requises varient selon le type de magasin distant qui est monté et le type d’autorisation utilisé. |
+
+### <a name="examples"></a>Exemples
+
+Pour monter des « données » du conteneur dans le compte ADLS Gen 2 « adlsv2example » sur le chemin d’accès HDFS `/mounts/adlsv2/data` à l’aide de la clé partagée :
+
+```
+mssqlctl storage mount create --remote-uri abfs://data@adlsv2example.dfs.core.windows.net/ --mount-path /mounts/adlsv2/data --credentials credential_file
+```
+
+Pour monter un cluster HDFS à distance (`hdfs://namenode1:8080/`) sur le chemin d’accès local de HDFS `/mounts/hdfs/`:
+
+```
+mssqlctl storage mount create --remote-uri hdfs://namenode1:8080/ --mount-path /mounts/hdfs/
+```
+
+## <a id="delete"></a> mssqlctl storage mount delete
+
+Supprimer les montages de magasins distants dans HDFS.
+
+```
+mssqlctl storage mount delete
+   --mount-path
+```
+
+### <a name="parameters"></a>Paramètres
+
+| Paramètres | Description |
+|---|---|
+| **--mount-path** | Le chemin d’accès HDFS correspondant pour le montage qui doit être supprimé. Obligatoire. |
+
+### <a name="examples"></a>Exemples
+
+Supprimer le montage créé au /mounts/adlsv2/data pour un compte de stockage ADLS Gen 2.
+
+```
+mssqlctl storage mount delete --mount-path /mounts/adlsv2/data
+```
+
+## <a id="status"></a> état de montage du stockage mssqlctl
+
+État de mount(s).
+
+```
+mssqlctl storage mount status
+   --mount-path
+```
+
+### <a name="parameters"></a>Paramètres
+
+| Paramètres | Description |
+|---|---|
+| **--mount-path** | Chemin d’accès de montage. Obligatoire. |
+
+### <a name="examples"></a>Exemples
+
+Obtenir l’état de montage par chemin d’accès
+
+```
+mssqlctl storage mount status --mount-path /mounts/hdfs
+```
+
+Obtenir l’état de tous les montages.
+
+```
+mssqlctl storage mount status
+```
+
+## <a name="next-steps"></a>Étapes suivantes
+
+Pour plus d’informations sur les autres **mssqlctl** commandes, consultez [mssqlctl référence](reference-mssqlctl.md). Pour plus d’informations sur la façon d’installer le **mssqlctl** , consultez [installer mssqlctl pour gérer les clusters de données volumineuses de SQL Server 2019](deploy-install-mssqlctl.md).

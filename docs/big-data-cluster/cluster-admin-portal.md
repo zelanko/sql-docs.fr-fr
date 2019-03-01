@@ -5,17 +5,17 @@ description: Découvrez comment utiliser le portail d’administration de cluste
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.date: 12/07/2018
+ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b8f50b74f733647e8a24b58b04147937be58ba98
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 9048de9c5f1a1241a6d7049f8eeb15efef87cabb
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241570"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017855"
 ---
 # <a name="how-to-use-the-cluster-administration-portal-to-monitor-a-sql-server-big-data-cluster"></a>Comment utiliser le portail d’administration de cluster pour surveiller un cluster de données volumineux de SQL Server
 
@@ -32,10 +32,10 @@ Le portail d’administration de cluster vous permet de :
 
 Suivez le [Guide de démarrage rapide pour déployer votre cluster big data](quickstart-big-data-cluster-deploy.md) jusqu'à ce que vous arriviez à la **portail d’administration de cluster** section. Une fois que vous avez le cluster de données volumineux en cours d’exécution avec mssqlctl, suivez ces instructions :
 
-Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez utiliser le portail d’administration de cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `service-proxy-lb` (par exemple : **https://\<ip-address\>: 30777/portail**). Informations d’identification pour accéder au portail d’administration est les valeurs de `CONTROLLER_USERNAME` et `CONTROLLER_PASSWORD` variables d’environnement fournis ci-dessus.
+Une fois que le pod de contrôleur est en cours d’exécution, vous pouvez utiliser le portail d’administration de cluster pour surveiller le déploiement. Vous pouvez accéder au portail à l’aide de l’externe IP adresse et numéro de port pour le `endpoint-service-proxy` (par exemple : **https://\<ip-address\>: 30777/portail**). Informations d’identification pour accéder au portail d’administration est les valeurs de `CONTROLLER_USERNAME` et `CONTROLLER_PASSWORD` variables d’environnement fournis ci-dessus.
 
 > [!NOTE]
-> Pour CTP 2.2, il est un avertissement de sécurité lorsque vous accédez à la page web dans la mesure où il est à l’aide de certificats SSL générés automatiquement.
+> Pour CTP 2.3, il est un avertissement de sécurité lorsque vous accédez à la page web dans la mesure où il est à l’aide de certificats SSL générés automatiquement.
 
 ## <a name="overview"></a>Vue d'ensemble
 
@@ -90,7 +90,7 @@ Pour en savoir plus sur les journaux pour des pods avec des problèmes, vous pou
 
 Sur chaque page du pool (calcul, stockage et données), vous pouvez explorer chacune des pages de pod en cliquant sur **par défaut**
 
-![POD](./media/cluster-admin-portal/portal-data-default-pool.png)
+![pod](./media/cluster-admin-portal/portal-data-default-pool.png)
 
 Cela indique un fil d’Ariane en haut de l’exploration de chemin d’accès.
 
