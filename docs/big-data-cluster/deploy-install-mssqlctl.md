@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f8c15254a18558d96fd760e3b8f0dab179e623dc
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: c0805eabcdeefc8827a55e2469cb4d77b26347c5
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017648"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227291"
 ---
 # <a name="install-mssqlctl-to-manage-sql-server-2019-big-data-clusters"></a>Installer mssqlctl pour gérer des clusters SQL Server 2019 big data
 
@@ -43,7 +43,7 @@ Cet article décrit comment installer le **mssqlctl** outil sur Windows ou Linux
 1. Installer **mssqlctl** avec la commande suivante :
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt
    ```
 
 ## <a id="linux"></a> Installation de mssqlctl Linux
@@ -73,7 +73,7 @@ Sur Linux, vous devez installer Python 3.5 et ensuite mettre à niveau pip. L’
 1. Installer **mssqlctl** avec la commande suivante :
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --trusted-host https://private-repo.microsoft.com --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp-2.3/mssqlctl/requirements.txt --user
    ```
 
    > [!NOTE]

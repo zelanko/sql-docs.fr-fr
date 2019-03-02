@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a6f40d4f113942fe774665358d8f1202ba8c4632
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017945"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227211"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Notes de publication pour les clusters de données volumineuses de SQL Server 2019
 
@@ -41,6 +41,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 - [Extension de Code Visual Studio pour déployer des applications pour les clusters de données volumineuses de SQL Server](app-deployment-extension.md).
 - Nouveau paramètre de classement pour la **mssqlctl** outil.
 - [Utiliser Sparklyr dans un cluster de données SQL Server 2019 Big](sparklyr-from-RStudio.md).
+- Monter un stockage compatible HDFS externe dans le cluster de données volumineux avec [HDFS la hiérarchisation](hdfs-tiering.md).
 - Nouvelle expérience de connexion unifiée pour la [instance principale de SQL Server et de la passerelle HDFS/Spark](connect-to-big-data-cluster.md).
 - Suppression d’un cluster avec **mssqlctl cluster delete** maintenant supprime uniquement les objets dans l’espace de noms qui faisaient partie du cluster de données volumineuses, mais laisse de l’espace de noms. Cette commande supprimé auparavant, l’espace de noms entier.
 - Les noms de point de terminaison ont été modifiés et consolidés dans cette version :
@@ -74,14 +75,6 @@ Les sections suivantes fournissent des problèmes connus pour les clusters de do
 
 - En cas d’un déploiement de cluster de données volumineuses, l’espace de noms associé n’est pas supprimé. Cela peut entraîner un espace de noms orphelin sur le cluster. Une solution de contournement consiste à supprimer l’espace de noms manuellement avant de déployer un cluster avec le même nom.
 
-#### <a name="cluster-administration-portal"></a>Portail d’administration du cluster
-
-Le portail d’administration de cluster n’affiche pas le point de terminaison pour l’instance principale de SQL Server. Pour trouver l’adresse IP et le port de l’instance principale, utilisez la commande suivante **kubectl** commande :
-
-```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
-```
-
 #### <a name="external-tables"></a>Tables externes
 
 - Il est possible de créer une table externe de pool de données pour une table qui a des types de colonnes non pris en charge. Si vous interrogez la table externe, vous recevez un message similaire à ce qui suit :
@@ -91,6 +84,8 @@ kubectl get svc endpoint-master-pool -n <your-cluster-name>
 - Si vous interrogez une table externe de pool de stockage, vous pouvez obtenir une erreur si le fichier sous-jacent est copié dans HDFS en même temps.
 
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
+
+- Si vous créez une table externe à Oracle qui utilisent des types de données caractères, l’Assistant de virtualisation d’Azure Data Studio interprète ces colonnes comme VARCHAR dans la définition de table externe. Cela entraîne un échec dans la table externe DDL. Modifiez le schéma Oracle pour utiliser le type NVARCHAR2, ou créer manuellement les instructions de la TABLE externe et spécifiez NVARCHAR au lieu d’utiliser l’Assistant.
 
 #### <a name="spark-and-notebooks"></a>Spark et notebooks
 

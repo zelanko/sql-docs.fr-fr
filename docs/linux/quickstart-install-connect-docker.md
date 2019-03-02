@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 5cbd3fe2058b120a77772f2ac597f993ab3f508e
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: dc65bc84d7730ee37371dc92806af4cd6a1650aa
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231016"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227161"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Démarrage rapide : Exécuter des images de conteneur de SQL Server avec Docker
 
@@ -157,13 +157,13 @@ Pour identifier facilement le conteneur cible, définissez `-h` et `--name` sur 
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
@@ -180,7 +180,7 @@ Pour identifier facilement le conteneur cible, définissez `-h` et `--name` sur 
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
@@ -188,7 +188,7 @@ Pour identifier facilement le conteneur cible, définissez `-h` et `--name` sur 
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu
    ```
    ::: zone-end
 
@@ -206,7 +206,7 @@ Pour identifier facilement le conteneur cible, définissez `-h` et `--name` sur 
    | **-e ' SA_PASSWORD =\<YourStrong ! Passw0rd\>'** | Spécifiez votre propre mot de passe fort, qui doit avoir au moins 8 caractères et respecter les [exigences de mot de passe SQL Server](../relational-databases/security/password-policy.md). Paramètre obligatoire pour l’image de SQL Server. |
    | **-p 1433:1433** | Mappez un port TCP sur l’environnement hôte (première valeur) à un port TCP dans le conteneur (deuxième valeur). Dans cet exemple, SQL Server écoute sur TCP 1433 dans le conteneur et il est exposé au port, 1433, sur l’ordinateur hôte. |
    | **--name sql1** | Spécifiez un nom personnalisé pour le conteneur plutôt qu’un nom généré de manière aléatoire. Si vous exécutez plusieurs conteneurs, vous ne pouvez pas réutiliser le même nom. |
-   | **mcr.microsoft.com/mssql/server:2019-CTP2.2-ubuntu** | L’image de conteneur SQL Server 2019 CTP 2.2 Linux. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP2.3-ubuntu** | L’image de conteneur SQL Server 2019 CTP 2.3 Linux. |
 
 3. Pour afficher vos conteneurs Docker, utilisez la commande `docker ps`.
 

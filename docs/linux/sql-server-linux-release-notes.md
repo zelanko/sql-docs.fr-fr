@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 49c16a062977e13f8bf30de10811f48f24d380d3
-ms.sourcegitcommit: 9ea11d738503223b46d2be5db6fed6af6265aecc
+ms.openlocfilehash: cd5c39f230db8fc72388d006fc17302956424633
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069835"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227311"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 de SQL Server sur Linux
 
@@ -54,17 +54,17 @@ Le tableau suivant répertorie l’historique de publication pour [!INCLUDE[ssSQ
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
 | [CU9-GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
-| [CU9](#CU9)           | 14.0.3030.27  | 18-07-2018   |
-| [CU8](#CU8)           | 14.0.3029.16  | 21-06-2018   |
+| [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
+| [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
 | [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
 | [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
 | [CU5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
 | [CU4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
-| [CU3](#CU3)           | 14.0.3015.40  | 03-01-2018   |
-| [GDR1](#GDR1)         | 14.0.2000.63  | 03-01-2018   |
-| [CU2](#CU2)           | 14.0.3008.27  | 28 / 11 / 2017   |
+| [CU3](#CU3)           | 14.0.3015.40  | 2018-01-03   |
+| [GDR1](#GDR1)         | 14.0.2000.63  | 2018-01-03   |
+| [CU2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
 | [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
-| [DISPONIBILITÉ GÉNÉRALE](#GA)             | 14.0.1000.169 | 2017-10-02   |
+| [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
 
 ## <a id="cuinstall"></a> Comment installer des mises à jour
 
@@ -294,7 +294,7 @@ Pour les installations de package manuelles ou hors connexion, vous pouvez tél�
 | Package RPM de SLES | 14.0.3015.40-1 | [package de moteur RPM MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3015.40-1.x86_64.rpm)</br>[Package RPM de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3015.40-1.x86_64.rpm)</br>[Package RPM de recherche de texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3015.40-1.x86_64.rpm)</br>[Package RPM de l’Agent SQL Server](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.3015.40-1.x86_64.rpm) | 
 | Package Debian Ubuntu 16.04 | 14.0.3015.40-1 | [Package Debian moteur](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3015.40-1_amd64.deb)</br>[Package de Debian haute disponibilité](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3015.40-1_amd64.deb)</br>[Package Debian de recherche en texte intégral](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3015.40-1_amd64.deb)</br>[Package Debian de SQL Server Agent](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.3015.40-1_amd64.deb)<br/>[Package SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
-## <a id="CU2"></a> CU2 (novembre 2017)
+## <a id="CU2"></a> CU2 (Nov 2017)
 
 Ceci est la version à jour Cumulative 2 (CU2) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version pour cette version est 14.0.3008.27. Pour plus d’informations sur les correctifs et les améliorations apportées dans cette version, consultez [ https://support.microsoft.com/help/4052574 ](https://support.microsoft.com/help/4052574).
 
@@ -358,7 +358,7 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 | &nbsp; | Filetable, FILESTREAM |
 | &nbsp; | Définir des assemblys CLR avec l’autorisation EXTERNAL_ACCESS ou UNSAFE |
 | &nbsp; | Buffer Pool Extension |
-| **SQL Server Agent** |  Sous-systèmes : CmdExec, PowerShell, lecteur de file d’attente, SSIS, SSAS, SSRS |
+| **SQL Server Agent** |  Sous-systèmes : CmdExec, PowerShell, Queue Reader, SSIS, SSAS, SSRS |
 | &nbsp; | Alertes |
 | &nbsp; | l'Agent de lecture du journal ; |
 | &nbsp; | Capture de données modifiées (CDC) |
@@ -382,8 +382,6 @@ Les fonctionnalités et les services suivants ne sont pas disponibles sur Linux 
 Les sections suivantes décrivent les problèmes connus avec la version disponibilité générale de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] sur Linux.
 
 #### <a name="general"></a>Général
-
-- Version des mises à niveau vers la disponibilité générale de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] sont pris en charge uniquement à partir de CTP 2.1 ou version ultérieure. 
 
 - La longueur du nom d’hôte dans lequel [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installée doit être de 15 caractères ou moins. 
 
