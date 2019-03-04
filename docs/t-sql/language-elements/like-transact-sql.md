@@ -32,18 +32,15 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 796b54f85cb7f2bbcaade9d6c8948857b2be2ce7
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.openlocfilehash: 1f35aa25453bc0b5cc1efca66af04964c0be1229
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331549"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802893"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
   Détermine si une chaîne de caractères donnée correspond à un modèle spécifié. Une chaîne peut comprendre des caractères normaux ainsi que des caractères génériques. Au cours de l'analyse, les caractères normaux doivent correspondre exactement aux caractères spécifiés dans la chaîne de caractères. Toutefois, les caractères génériques peuvent être associés à des portions aléatoires de la chaîne de caractères. L'utilisation de caractères génériques rend l'opérateur LIKE plus flexible que lorsque les opérateurs de comparaison des chaînes = et != sont utilisés. Si l'un de ces arguments n'est pas du type de données chaîne de caractères, le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] essaie de le convertir, dans la mesure du possible.  
   

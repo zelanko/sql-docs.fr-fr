@@ -15,18 +15,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 21d9db627e55b9f4544fd52686dff9b76d55a76f
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265216"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802296"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Description des index cluster et non-cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-
-  > [!div class="nextstepaction"]
-  > [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
   Un index est une structure sur disque associée à une table ou une vue qui accélère l'extraction des lignes de la table ou de la vue. Il contient des clés créées à partir d'une ou plusieurs colonnes de la table ou de la vue. Ces clés sont stockées dans une structure (B-tree) qui permet à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de trouver rapidement et efficacement la ou les lignes associées aux valeurs de clé.  
   

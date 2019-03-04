@@ -24,18 +24,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5238c7dba330074f9802fa30b631edba09d3b552
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 37c2ec562f0207edcf67cb8ef9a59c2710c921b8
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56231046"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802017"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal et numeric (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Types de données numériques ayant une précision et une échelle fixes. Les types decimal et numeric sont synonymes et peuvent être utilisés indifféremment.
   
