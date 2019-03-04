@@ -1,21 +1,21 @@
 ---
-title: 'Leçon 6 : ajout d’un regroupement et de totaux (Reporting Services) | Microsoft Docs'
+title: 'Leçon 6 : Ajouter un regroupement et des totaux (Reporting Services) | Microsoft Docs'
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: d391061ce82c0516bbfc30e9d05cce7bdedd65ed
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 24d21ae735b44a7068ca929515b66e8a33aade8d
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813672"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290077"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : ajout d'un regroupement et de totaux (Reporting Services)
 Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des totaux à votre rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour organiser et synthétiser vos données.  
   
   
@@ -70,7 +70,7 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
 6.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Gris clair**, puis sur **OK**.  
   
-    ![Mode Création : table de base avec total des commandes](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Mode Création : table de base avec total des commandes")  
+    ![Mode Conception : Table de base avec total des commandes](../reporting-services/media/rs-basictablesumlinetotaldesign.gif "Mode Création : Table de base avec total des commandes")  
   
 ## <a name="bkmk_adddailytotal"></a>Pour ajouter un total quotidien à un rapport  
   
@@ -98,13 +98,13 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
 4.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Bleu clair**, puis sur **OK**.  
   
-    ![Mode Création : total général dans la table de base](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Mode Conception : total général dans la table de base")  
+    ![Mode Conception : Total général dans une table de base](../reporting-services/media/rs-basictablesumgrandtotaldesign.gif "Mode Création : Total général dans une table de base")  
   
 5.  Cliquez sur **Aperçu**.  
   
     La dernière page doit ressembler à l’image suivante. Dans la barre d’outils, cliquez sur le bouton Dernière page ![ssrs_ssdt_viewertoolbar_lastpage](../reporting-services/media/ssrs-ssdt-viewertoolbar-lastpage.png).   
   
-    ![Aperçu : table de base avec total général](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Aperçu : table de base avec total général")  
+    ![Aperçu : Table de base avec total général](../reporting-services/media/rs-basictablesumgrandtotalpreview.gif "Aperçu : Table de base avec total général")  
   
 ## <a name="bkmk_publishreport"></a>Pour publier le rapport sur le serveur de rapports (facultatif)  
   
@@ -125,15 +125,15 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
   
     Si vous voyez un message semblable à ce qui suit dans la fenêtre de sortie, c'est que le déploiement a été réalisé avec succès.  
   
-    > ------ Début de la génération : Projet : tutorial, Configuration : Débogage ------  
+    > ------ Création démarrée : Project: tutorial, Configuration: Debug ------  
     > 'Sales Orders.rdl' ignoré. L’élément est à jour.  
     > Fin de la génération -- 0 erreur, 0 avertissement  
-    > ------ Début du déploiement : Projet : tutorial, Configuration : Débogage ------  
+    > ------ Deploy started: Project: tutorial, Configuration: Debug ------  
     > Déploiement vers https://[nom serveur]/reportserver  
     > Déploiement du rapport '/tutorial/Sales Orders'.  
     > Fin du déploiement -- 0 erreur, 0 avertissement  
-    > ========== Génération : 1 a réussi ou est à jour, 0 a échoué, 0 a été ignoré ====================  
-    > ========== Déploiement : 1 a réussi, 0 a échoué, 0 a été ignoré ==========  
+    > ========== Génération : 1 succeeded or up-to-date, 0 failed, 0 skipped ==========  
+    > ========== Deploy: 1 réussi, 0 échoué, 0 ignoré ==========  
   
     Si un message d'erreur semblable au suivant s'affiche, vérifiez que vous disposez d'autorisations sur le serveur de rapports et que vous avez démarré [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] avec des privilèges d'administrateur.  
   
@@ -142,7 +142,7 @@ Dans cette leçon du didacticiel, vous allez ajouter un regroupement et des tota
 7.  Accédez au portail web avec des privilèges d’administrateur ; cliquez, par exemple, avec le bouton droit sur l’icône d’Internet Explorer et sélectionnez **Exécuter en tant qu’administrateur**.  
   
     Accédez à l’URL du portail web [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] .   
-    **Remarque :** L’URL du *portail* est « Reports », pas l’URL du *serveur* de rapports « Reportserver ».  Exemple :   
+    **Remarque :** l’URL du *portail* est « Reports », et non l’URL du *serveur* de rapports « Reportserver ».  Exemple :   
     `https://<server name>/reports`.  
     `https://localhost/reports` fonctionne si vous concevez le rapport sur le serveur de rapports.  
   

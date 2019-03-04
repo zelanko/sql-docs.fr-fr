@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703337"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298417"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Ajouter des visualisations aux rapports mobiles Reporting Services
 Les graphiques sont une partie essentielle de la visualisation des données. Découvrez les graphiques que vous pouvez utiliser dans les rapports mobiles [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pour couvrir un large éventail de scénarios. 
@@ -143,7 +143,7 @@ Les treemaps affichent des métriques en appliquant leurs valeurs à la taille e
 
      * Sous **La taille représente** , sélectionnez un champ numérique pour la taille des mosaïques.
      * Sous **La couleur représente** , sélectionnez un champ numérique pour la couleur des mosaïques. 
-     * [facultatif] **Valeur centrale personnalisée**: Vous ne pouvez utiliser **Valeur centrale personnalisée** que quand le type de visualisation est HeatMapWithCustomCenterValue.
+     * [facultatif] **Valeur centrale personnalisée** : **Valeur centrale personnalisée** n’est utilisable que si le type de visualisation est HeatMapWithCustomCenterValue.
      
          La valeur centrale détermine la couleur d’une zone. Plus la métrique se rapproche de la valeur centrale, plus la zone est verte. Plus elle s’en éloigne, plus la zone est rouge.
      

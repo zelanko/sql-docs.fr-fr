@@ -1,21 +1,21 @@
 ---
-title: 'Leçon 1 : création d’un projet Report Server (Reporting Services) | Microsoft Docs'
+title: 'Leçon 1 : Création d’un projet Report Server (Reporting Services) | Microsoft Docs'
 ms.date: 11/30/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 675671ca-e6c9-48a2-82e9-386778f3a49f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 741621c22d8abcc9420b40afa07f4707bc1418ae
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 72d337f441d3aabb5dc1ee8801a5cec200904d23
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383654"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292347"
 ---
-# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Leçon 1 : Création d'un projet Report Server (Reporting Services)
+# <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Leçon 1 : Création d'un projet Report Server (Reporting Services)
 
 Dans cette leçon, vous créez un *projet Report Server* et un fichier de *définition de rapport (.rdl)* dans [!INCLUDE[ssBIDevStudio_md](../includes/ssbidevstudio-md.md)] dans Visual Studio. 
 
@@ -39,7 +39,7 @@ Dans les leçons suivantes, vous définissez une source de données pour votre r
 
 5. Cliquez sur **Projet Report Server** ![ssrs_ssdt_report_server_project](../reporting-services/media/ssrs-ssdt-report-server-project.png). 
 
-   >**Remarque** : Si vous ne voyez pas les options **Business Intelligence** ou **Projet Report Server**, vous devez mettre à jour SSDT avec les modèles Business Intelligence. Voir [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).  
+   >**Remarque**: Si vous ne voyez pas les options **Business Intelligence** ou **Projet Report Server**, vous devez mettre à jour SSDT avec les modèles Business Intelligence. Voir [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md).  
   
 5.  Dans la zone **Nom**, tapez **Didacticiel**.  
 
@@ -55,7 +55,7 @@ Dans les leçons suivantes, vous définissez une source de données pour votre r
   
 1.  Dans le volet **Explorateur de solutions** , cliquez avec le bouton droit sur **Rapports** > **Ajouter** > **Nouvel élément**. 
 
-    >**Conseil**: Si vous ne voyez pas le volet **Explorateur de solutions** , dans le menu **Affichage** , cliquez sur **Explorateur de solutions**. 
+    >**Astuce** : Si vous ne voyez pas le volet **Explorateur de solutions** , dans le menu **Affichage** , cliquez sur **Explorateur de solutions**. 
 
     ![ssrs_ssdt_add_report](../reporting-services/media/ssrs-ssdt-add-report.png)
   
@@ -67,7 +67,7 @@ Dans les leçons suivantes, vous définissez une source de données pour votre r
     
     ![ssrs-ssdt-01-new-report-designer](../reporting-services/media/ssrs-ssdt-01-new-report-designer.png)
   
-     Le Concepteur de rapports est un composant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui s'exécute dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Il comporte deux vues : **Conception** et **Aperçu**. Cliquez sur chacun des onglets pour passer d'une vue à une autre.  
+     Le Concepteur de rapports est un composant [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui s'exécute dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Il dispose de deux vues : **Conception** et **Aperçu**. Cliquez sur chacun des onglets pour passer d'une vue à une autre.  
   
     Vous définissez vos données dans le volet **Données du rapport** . Vous définissez la mise en page de votre rapport en mode **Conception** . Vous pouvez exécuter le rapport et visualiser son aspect en mode **Aperçu** .  
   

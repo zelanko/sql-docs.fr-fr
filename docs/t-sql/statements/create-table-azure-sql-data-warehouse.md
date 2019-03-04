@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 372ebf82b2903c8e3f6b235978d39bb578508acd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 18b8bd5627207f13e5f6b1b9781ae5988f5a9d2c
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025509"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231076"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ Pour comprendre les tables et savoir comment les utiliser, consultez [Les tables
 
 REMARQUE : Sauf indication contraire, les informations relatives à SQL Data Warehouse contenues dans cet article s’appliquent à SQL Data Warehouse et à Parallel Data Warehouse. 
  
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
 <a name="Syntax"></a>   
 ## <a name="syntax"></a>Syntaxe  
@@ -116,20 +116,20 @@ CREATE TABLE [ database_name . [ schema_name ] . | schema_name. ] table_name
  | Argument | Explication |
  | -------- | ----------- |
  | *constraint_name* | Nom facultatif de la contrainte. Le nom de contrainte est unique dans la base de données. Le nom peut être réutilisé dans d’autres bases de données. |
- | *constant_expression* | Valeur par défaut de la colonne. L’expression doit être une valeur littérale ou une constante. Par exemple, ces expressions constantes sont autorisées : `'CA'`, `4`. Celles-ci ne sont pas autorisées : `2+3`, `CURRENT_TIMESTAMP`. |
+ | *constant_expression* | Valeur par défaut de la colonne. L’expression doit être une valeur littérale ou une constante. Par exemple, ces expressions constantes sont autorisées : `'CA'`, `4`. Ces expressions constantes sont autorisées : `2+3`, `CURRENT_TIMESTAMP`. |
   
 
 ### <a name="TableOptions"></a> Options de structure de table
 Pour obtenir des conseils sur le choix du type de table, consultez [Indexation de tables dans Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-tables-index/).
   
  `CLUSTERED COLUMNSTORE INDEX`  
-Stocke la table sous forme d’index cluster columnstore. L’index cluster columnstore s’applique à toutes les données de table. Il s’agit de l’option par défaut pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
+Stocke la table sous forme d’index cluster columnstore. L’index cluster columnstore s’applique à toutes les données de table. Il s'agit du comportement par défaut pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].   
  
  `HEAP`   
-  Stocke le tableau sous forme de segment de mémoire. Il s’agit de l’option par défaut pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
+  Stocke le tableau sous forme de segment de mémoire. Il s'agit du comportement par défaut pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   
  `CLUSTERED INDEX` ( *index_column_name* [ ,...*n* ] )  
- Stocke le tableau sous forme d’index cluster avec une ou plusieurs colonnes clés. Cette option stocke les données par ligne. Utilisez *index_column_name* pour spécifier le nom d’une ou plusieurs colonnes clés dans l’index.  Pour plus d’informations, consultez Tables Rowstore dans la section Remarques d’ordre général.
+ Stocke le tableau sous forme d’index cluster avec une ou plusieurs colonnes clés. Ce comportement stocke les données par ligne. Utilisez *index_column_name* pour spécifier le nom d’une ou plusieurs colonnes clés dans l’index.  Pour plus d’informations, consultez Tables Rowstore dans la section Remarques d’ordre général.
  
  `LOCATION = USER_DB`   
  Cette fonction est déconseillée. Bien qu’elle soit acceptée du point de vue de la syntaxe, elle n’est plus nécessaire et n’a plus d’effet sur le comportement.   
@@ -141,23 +141,23 @@ Pour savoir comment choisir la meilleure méthode de distribution et comment uti
 Affecte chaque ligne à une distribution en hachant la valeur stockée dans *distribution_column_name*. L’algorithme est déterministe, ce qui signifie qu’il hache toujours la même valeur pour la même distribution.  La colonne de distribution doit être définie comme étant une valeur NOT NULL, car toutes les lignes de valeur NULL sont affectées à la même distribution.
 
 `DISTRIBUTION = ROUND_ROBIN`   
-Distribue les lignes uniformément entre toutes les distributions selon le principe du tourniquet (round robin). Il s’agit de l’option par défaut pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
+Distribue les lignes uniformément entre toutes les distributions selon le principe du tourniquet (round robin). Il s'agit du comportement par défaut pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].
 
 `DISTRIBUTION = REPLICATE`    
-Stocke une copie de la table sur chaque nœud de calcul. Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], la table est stockée dans une base de données de distribution sur chaque nœud de calcul. Pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], la table est stockée dans un groupe de fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui englobe le nœud de calcul. Il s’agit de l’option par défaut pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
+Stocke une copie de la table sur chaque nœud de calcul. Pour [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], la table est stockée dans une base de données de distribution sur chaque nœud de calcul. Pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], la table est stockée dans un groupe de fichiers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui englobe le nœud de calcul. Il s'agit du comportement par défaut pour [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
 ### <a name="TablePartitionOptions"></a> Options de partitions de table
 Pour obtenir des conseils sur l’utilisation de partitions de table, consultez [Partitionnement des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/).
 
  `PARTITION` ( *partition_column_name* `RANGE` [ `LEFT` | `RIGHT` ] `FOR VALUES` ( [ *boundary_value* [,...*n*] ] ))   
-Crée une ou plusieurs partitions de table. Il s’agit de coupes de table horizontales qui vous permettent d’effectuer des opérations sur des sous-ensembles de lignes, que la table soit stockée sous forme de segment de mémoire, d’index cluster ou d’index cluster columnstore. Contrairement aux colonnes de distribution, les partitions de table ne déterminent dans quelle distribution chaque ligne est stockée. En revanche, elles déterminent la façon dont les lignes sont regroupées et stockées dans chaque distribution.  
+Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de table horizontales qui vous permettent d’effectuer des opérations sur des sous-ensembles de lignes, que la table soit stockée sous forme de segment de mémoire, d’index cluster ou d’index cluster columnstore. Contrairement aux colonnes de distribution, les partitions de table ne déterminent dans quelle distribution chaque ligne est stockée. En revanche, elles déterminent la façon dont les lignes sont regroupées et stockées dans chaque distribution.  
  
 | Argument | Explication |
 | -------- | ----------- |
-|*partition_column_name*| Indique la colonne que [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] utilisera pour partitionner les lignes. Cette colonne peut être de n’importe quel type de données. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] trie les valeurs de colonne de partition par ordre croissant. L’ordre croissant va de `LEFT` à `RIGHT` pour les besoins de la spécification `RANGE`. |  
+|*partition_column_name*| Indique la colonne que [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] utilisera pour partitionner les lignes. Cette colonne peut être de n’importe quel type de données. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] trie les valeurs de colonne de partition par ordre croissant. L’ordre croissant va de `LEFT` à `RIGHT` dans la spécification `RANGE`. |  
 | `RANGE LEFT` | Indique que la valeur limite fait partie de la partition de gauche (valeurs inférieures). La valeur par défaut est LEFT. |
 | `RANGE RIGHT` | Indique que la valeur limite fait partie de la partition de droite (valeurs supérieures). | 
-| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Spécifie les valeurs limites de la partition. *boundary_value* est une expression constante. Elle ne peut pas avoir la valeur NULL. Son type de données doit correspondre à celui de *partition_column_name* ou être implicitement convertible dans celui-ci. Elle ne peut pas être tronquée lors d’une conversion implicite de telle sorte que la taille et l’échelle de la valeur ne correspondent pas au type de données de *partition_column_name*<br></br><br></br>Si vous spécifiez la clause `PARTITION`, mais que vous ne spécifiez pas de valeur limite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] crée une table partitionnée à une partition. Le cas échéant, vous pouvez par la suite scinder la table en deux partitions.<br></br><br></br>Si vous spécifiez une valeur limite, la table obtenue comprend deux partitions : l’une contenant les valeurs inférieures à la valeur limite et l’autre contenant les valeurs supérieures à la valeur limite. Notez que si vous déplacez une partition dans une table non partitionnée, celle-ci reçoit les données, mais les limites de partition en figurent pas dans ses métadonnées.| 
+| `FOR VALUES` ( *boundary_value* [,...*n*] ) | Spécifie les valeurs limites de la partition. *boundary_value* est une expression constante. Ne peut pas être NULL. Son type de données doit correspondre à celui de *partition_column_name* ou être implicitement convertible dans celui-ci. Elle ne peut pas être tronquée lors d’une conversion implicite de telle sorte que la taille et l’échelle de la valeur ne correspondent pas au type de données de *partition_column_name*<br></br><br></br>Si vous spécifiez la clause `PARTITION`, mais que vous ne spécifiez pas de valeur limite, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] crée une table partitionnée à une partition. Le cas échéant, vous pouvez par la suite scinder la table en deux partitions.<br></br><br></br>Si vous spécifiez une valeur limite, la table obtenue comprend deux partitions : l’une contenant les valeurs inférieures à la valeur limite et l’autre contenant les valeurs supérieures à la valeur limite. Si vous déplacez une partition dans une table non partitionnée, celle-ci reçoit les données, mais les limites de partition en figurent pas dans ses métadonnées.| 
  
  Consultez [Créer une table partitionnée](#PartitionedTable) dans la section Exemples.
 
@@ -196,7 +196,7 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
  La valeur par défaut pour *n* est `7`.  
   
  `float` [ ( *n* ) ]  
- Type de données numériques approximatives à utiliser avec des données numériques à virgule flottante. Les données à virgule flottante sont approximatives, ce qui signifie que certaines valeurs de ce type de données ne peuvent pas être représentées de manière précise. *n* spécifie le nombre de bits utilisés pour stocker la mantisse de `float` en notation scientifique. Par conséquent, *n* détermine la précision et la taille du stockage. Si *n* est spécifié, sa valeur doit être comprise entre `1` et `53`. La valeur par défaut de *n* est `53`.  
+ Type de données numériques approximatives à utiliser avec des données numériques à virgule flottante. Les données à virgule flottante sont approximatives, ce qui signifie que certaines valeurs de ce type de données ne peuvent pas être représentées de manière précise. *n* spécifie le nombre de bits utilisés pour stocker la mantisse de `float` en notation scientifique. *n* détermine la précision et la taille du stockage. Si *n* est spécifié, sa valeur doit être comprise entre `1` et `53`. La valeur par défaut de *n* est `53`.  
   
 | Valeur *n* | Précision | Taille de stockage |  
 | --------: | --------: | -----------: |  
@@ -248,7 +248,7 @@ Identique à `datetime`, sauf que vous pouvez spécifier le nombre de fractions 
  Type de données entier qui peut prendre la valeur `1`, `0` ou NULL. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] optimise le stockage des colonnes de bits. Si une table contient 8 colonnes de bits ou moins, celles-ci sont stockées comme 1 octet. Si elle contient entre 9 et 16 colonnes de bits, celles-ci sont stockées comme 2 octets, etc.  
   
  `nvarchar` [ ( *n* | `max` ) ]  -- `max` s’applique uniquement à [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
- Données de type caractères Unicode de longueur variable. *n* peut être une valeur comprise entre 1 et 4000. `max` indique que la taille de stockage maximale occupée est de 2^31-1 octets (2 Go). La taille de stockage en octets correspond à deux fois le nombre de caractères entrés plus 2 octets. Les données saisies peuvent avoir une longueur de 0 caractère.  
+ Données de type caractères Unicode de longueur variable. *n* peut être une valeur comprise entre 1 et 4000. `max` indique que la taille de stockage maximale occupée est de 2^31-1 octets (2 Go). La taille de stockage en octets correspond à deux fois le nombre de caractères entrés plus 2 octets. Les données saisies peuvent avoir une longueur de zéro caractère.  
   
  `nchar` [ ( *n* ) ]  
  Données caractères Unicode d’une longueur fixe de *n* caractères. *n* doit être une valeur comprise entre `1` et `4000`. La taille de stockage est le double de *n* octets.  
@@ -290,11 +290,11 @@ Chaque table définie par l’utilisateur est divisée en plusieurs tables de pl
  
 Chaque distribution contient toutes les partitions de table. Par exemple, s’il existe 60 distributions et quatre partitions de table plus une partition vide, il y aura 300 partitions (5 x 60 = 300). Si la table est un index cluster columnstore, il n’y aura qu’un seul index columnstore par partition, ce qui signifie qu’il y aura 300 index columnstore.
 
-Nous vous recommandons d’utiliser moins de partitions de table de sorte que chaque index columnstore contienne suffisamment de lignes pour pouvoir profiter des avantages liés aux index columnstore. Pour obtenir des conseils supplémentaires, consultez [Partitionnement des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) et [Indexation des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
+Nous vous recommandons d’utiliser moins de partitions de table de sorte que chaque index columnstore contienne suffisamment de lignes pour pouvoir profiter des avantages liés aux index columnstore. Pour plus d’informations, consultez [Partitionnement des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-partition/) et [Indexation des tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-index/)  
 
   
  ### <a name="rowstore-table-heap-or-clustered-index"></a>Table rowstore (segment de mémoire ou index cluster)  
- Une table rowstore est une table stockée ligne par ligne. Il s’agit d’un segment de mémoire ou d’un index cluster. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] crée toutes les tables rowstore avec la compression de page ; ceci ne peut pas être configuré par l’utilisateur.   
+ Une table rowstore est une table stockée ligne par ligne. Il s’agit d’un segment de mémoire ou d’un index cluster. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] crée toutes les tables rowstore avec la compression de page ; ce comportement ne peut pas être configuré par l’utilisateur.   
  
  ### <a name="columnstore-table-columnstore-index"></a>Table columnstore (index columnstore)
 Une table columnstore est une table stockée colonne par colonne. L’index columnstore est la technologie qui gère les données stockées dans une table columnstore.  L’index cluster columnstore n’affecte pas la façon dont les données sont distribuées. En revanche, il affecte la façon dont les données sont stockées dans chaque distribution.
@@ -369,7 +369,7 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ## <a name="examples-for-temporary-tables"></a>Exemples de tables temporaires
 
 ### <a name="TemporaryTable"></a> C. Créer une table temporaire locale  
- Dans l’exemple ci-dessous, une table temporaire locale est créée sous le nom #myTable. La table est spécifiée avec un nom en 3 parties. Le nom de la table temporaire commence par #.   
+ Dans l’exemple ci-dessous, une table temporaire locale est créée sous le nom #myTable. La table est spécifiée avec un nom en trois parties, qui commence par #.   
   
 ```  
 CREATE TABLE AdventureWorks.dbo.#myTable   
@@ -443,7 +443,7 @@ WITH
 ```  
   
 ### <a name="Replicated"></a> G. Créer une table répliquée  
- L’exemple suivant crée une table répliquée semblable à celles des exemples précédents. Les tables répliquées sont copiées en totalité dans chaque nœud de calcul. De ce fait, le déplacement de données est réduit pour les requêtes. Cet exemple est créé avec un index cluster (CLUSTERED INDEX), qui offre une meilleure compression de données qu’un segment de mémoire et qui peut ne pas contenir suffisamment de lignes pour assurer une bonne compression CLUSTERED COLUMNSTORE INDEX.  
+ L’exemple suivant crée une table répliquée semblable à celles des exemples précédents. Les tables répliquées sont copiées en totalité dans chaque nœud de calcul. De ce fait, le déplacement de données est réduit pour les requêtes. Cet exemple est créé avec un CLUSTERED INDEX, qui offre une meilleure compression des données qu’un segment de mémoire. Un segment de mémoire peut ne pas contenir suffisamment de lignes pour obtenir une bonne compression CLUSTERED COLUMNSTORE INDEX.  
   
 ```  
 CREATE TABLE myTable   
@@ -557,5 +557,4 @@ WITH
  [CREATE TABLE AS SELECT &#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)   
  [DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)   
  [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)  
-  
   

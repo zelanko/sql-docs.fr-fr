@@ -29,12 +29,12 @@ ms.assetid: 2c00ee51-2062-4e47-8b19-d90f524c6427
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: de18602606fb380bc8b87eb7dcb18b84febf658e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6225fee2ece7ce1af163804c50def198c00a43d8
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636277"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154859"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -79,7 +79,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|La valeur d'identité courante n'est pas redéfinie. DBCC CHECKIDENT renvoie la valeur d'identité actuelle et la valeur maximale actuelle de la colonne d'identité. Si les deux valeurs diffèrent, vous devez redéfinir la valeur d'identité afin d'éviter les erreurs ou écarts potentiels dans la séquence de valeurs.|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> ou Gestionnaire de configuration<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Si la valeur d'identité actuelle pour une table est inférieure à la valeur d'identité maximale stockée dans la colonne d'identité, elle est redéfinie à l'aide de cette valeur maximale dans la colonne d'identité. Consultez la section Exceptions qui suit.|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|La valeur d’identité actuelle est définie sur *new_reseed_value*. Si aucune ligne n’a été insérée dans la table depuis sa création, ou si toutes les lignes ont été supprimées à l’aide de l’instruction TRUNCATE TABLE, la première ligne insérée après l’exécution de DBCC CHECKIDENT utilise *new_reseed_value* comme valeur d’identité.<br /><br /> Si des lignes sont présentes dans la table, la ligne suivante est insérée avec la valeur *new_reseed_value*. Dans la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et les versions antérieures, la ligne suivante insérée utilise *new_reseed_value* + la valeur de [l’incrément actuel](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Si la table n'est pas vide, le fait d'attribuer à la valeur d'identité un nombre inférieur à la valeur maximale dans la colonne d'identité peut aboutir à l'une des situations suivantes :<br /><br /> -Si une contrainte PRIMARY KEY ou UNIQUE existe sur la colonne d’identité, les opérations d’insertion ultérieures dans la table déclenchent le message d’erreur 2627, car la valeur d’identité générée entre en conflit avec les valeurs existantes.<br /><br /> -Si aucune contrainte PRIMARY KEY ou UNIQUE n’existe, les opérations d’insertion ultérieures aboutissent à des valeurs d’identité dupliquées.|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|La valeur d’identité actuelle est définie sur *new_reseed_value*. Si aucune ligne n’a été insérée dans la table depuis sa création, ou si toutes les lignes ont été supprimées à l’aide de l’instruction TRUNCATE TABLE, la première ligne insérée après l’exécution de DBCC CHECKIDENT utilise *new_reseed_value* comme valeur d’identité.<br /><br /> Si des lignes sont présentes dans la table, la ligne suivante est insérée avec la valeur *new_reseed_value* + la valeur de [l’incrément actuel](../../t-sql/functions/ident-incr-transact-sql.md). Dans la version [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et les versions antérieures, la ligne suivante insérée utilise *new_reseed_value* + la valeur de [l’incrément actuel](../../t-sql/functions/ident-incr-transact-sql.md).<br /><br /> Si la table n'est pas vide, le fait d'attribuer à la valeur d'identité un nombre inférieur à la valeur maximale dans la colonne d'identité peut aboutir à l'une des situations suivantes :<br /><br /> -Si une contrainte PRIMARY KEY ou UNIQUE existe sur la colonne d’identité, les opérations d’insertion ultérieures dans la table déclenchent le message d’erreur 2627, car la valeur d’identité générée entre en conflit avec les valeurs existantes.<br /><br /> -Si aucune contrainte PRIMARY KEY ou UNIQUE n’existe, les opérations d’insertion ultérieures aboutissent à des valeurs d’identité dupliquées.|  
   
 ## <a name="exceptions"></a>Exceptions  
  Le tableau suivant répertorie les conditions dans lesquelles DBCC CHECKIDENT ne redéfinit pas automatiquement la valeur d'identité actuelle et indique comment redéfinir celle-ci.  
@@ -124,7 +124,7 @@ DBCC CHECKIDENT ('Person.AddressType');
 GO  
 ```  
   
-### <a name="b-reporting-the-current-identity-value"></a>B. Présentation de la valeur d'identité courante  
+### <a name="b-reporting-the-current-identity-value"></a>b. Présentation de la valeur d'identité courante  
  L'exemple suivant signale la valeur d'identité actuelle de la table spécifiée dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] et ne corrige pas cette valeur si elle est incorrecte.  
   
 ```  

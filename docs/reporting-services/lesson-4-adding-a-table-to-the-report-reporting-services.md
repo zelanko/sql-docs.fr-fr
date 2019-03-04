@@ -1,21 +1,21 @@
 ---
-title: 'Leçon 4 : ajout d’une table au rapport (Reporting Services) | Microsoft Docs'
+title: 'Leçon 4 : Ajouter une table au rapport (Reporting Services) | Microsoft Docs'
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 5ddf2914-bcdd-427d-8cba-0ccb8342f819
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e956658d0a831835aa4c6067b17f3169de405da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a4df3f6c94ff4aee674721a47421e0696cc8e2c3
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772633"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287237"
 ---
-# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Leçon 4 : Ajout d'une table au rapport (Reporting Services)
+# <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Leçon 4 : Ajouter une table au rapport (Reporting Services)
 Une fois le dataset défini, vous pouvez commencer à concevoir le rapport. Pour créer une mise en page de rapport, faites glisser les régions de données, les zones de texte, les images et autres éléments que vous souhaitez inclure dans un rapport vers l'aire de conception.  
   
 Les éléments qui contiennent des lignes de données répétées de datasets sous-jacents sont appelés *régions de données*. Un rapport de base possède une seule région de données, mais vous pouvez en ajouter davantage (pour ajouter un graphique à un rapport tabulaire, par exemple). Une fois que vous avez ajouté une région de données, vous pouvez y ajouter des champs.  
@@ -43,7 +43,7 @@ Les éléments qui contiennent des lignes de données répétées de datasets so
 7.  Ajoutez le champ LineTotal de la même façon, en créant une cinquième colonne. L'en-tête de colonne est Line Total. Le Concepteur de rapports crée automatiquement un nom convivial pour la colonne en fractionnant LineTotal en deux mots.  
   
   
-Le diagramme suivant représente une région de données de table qui a été remplie avec les champs suivants : Date, Order, Product, Qty et Line Total.  
+Le diagramme suivant représente une région de données de table remplie avec les champs suivants : Date, Order, Product, Qty et Line Total.  
 ![rs_BasicTableDetailsDesign](../reporting-services/media/rs-basictabledetailsdesign.png)  
   
 ## <a name="preview-your-report"></a>Affichage d'un aperçu d'un rapport  
@@ -64,7 +64,7 @@ L'affichage d'un aperçu d'un rapport vous permet de visualiser le rapport rendu
 > Dans le menu **Fichier** , cliquez sur **Enregistrer tout** pour enregistrer le rapport.  
   
 ## <a name="next-steps"></a>Next Steps  
-Vous avez ajouté avec succès une région de données de table à votre rapport, ajouté des champs à la région de données et affiché un aperçu du rapport. Vous allez ensuite mettre en forme des en-têtes de colonnes et des valeurs de devise et de date. Consultez [Leçon 5 : mise en forme d’un rapport &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
+Vous avez ajouté avec succès une région de données de table à votre rapport, ajouté des champs à la région de données et affiché un aperçu du rapport. Vous allez ensuite mettre en forme des en-têtes de colonnes et des valeurs de devise et de date. Voir [Leçon 5 : Mettre en forme un rapport &#40;Reporting Services&#41;](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Tables &#40;Générateur de rapports et SSRS&#41;](../reporting-services/report-design/tables-report-builder-and-ssrs.md)  

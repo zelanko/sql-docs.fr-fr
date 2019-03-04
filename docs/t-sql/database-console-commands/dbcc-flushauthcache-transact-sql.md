@@ -19,19 +19,19 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 3f6d11a425da5daee9cb9caf0b64a2eefed117b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 16267d2af81e3338bb04f5f548e2f9d14d1d4186
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025280"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56231006"
 ---
 # <a name="dbcc-flushauthcache-transact-sql"></a>DBCC FLUSHAUTHCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Vide le cache d’authentification de la base de données contenant des informations sur les connexions et les règles de pare-feu, pour la base de données utilisateur actuelle dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Cette instruction ne s’applique pas à la base de données master logique, car la base de données master contient le stockage physique pour les informations sur les connexions et les règles de pare-feu. L’utilisateur qui exécute l’instruction et les autres utilisateurs actuellement connectés restent connectés. (DBCC FLUSHAUTHCACHE n’est pas pris en charge pour [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
+Vide le cache d’authentification de la base de données contenant des informations sur les connexions et les règles de pare-feu, pour la base de données utilisateur actuelle dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Cette instruction ne s’applique pas à la base de données MASTER logique, car la base de données MASTER contient le stockage physique des informations sur les connexions et les règles de pare-feu. L’utilisateur qui exécute l’instruction et les autres utilisateurs actuellement connectés restent connectés. (DBCC FLUSHAUTHCACHE n’est à l’heure actuelle pas pris en charge pour [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
  
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,8 +43,8 @@ DBCC FLUSHAUTHCACHE [ ; ]
 Aucun.
   
 ## <a name="remarks"></a>Notes   
-Le cache d’authentification effectue une copie des connexions et des règles de pare-feu de serveur qui sont stockées dans la base de données master et les place en mémoire dans la base de données utilisateur.  Comme les informations sur les utilisateurs de la base de données autonome sont déjà stockées dans la base de données utilisateur, ces utilisateurs ne font pas partie du cache d’authentification.
-Des connexions actives en permanence à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nécessitent une réautorisation (effectuée par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]) au moins toutes les 10 heures. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tente une réautorisation en utilisant le mot de passe envoyé à l’origine et aucune entrée utilisateur n’est nécessaire. Pour des raisons de performances, quand un mot de passe est réinitialisé dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], la connexion n’est pas authentifiée de nouveau, même si elle est réinitialisée suite à un regroupement de connexions. Cela est différent du comportement de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en local. Si le mot de passe a été modifié depuis que la connexion a été initialement autorisée, la connexion doit être interrompue et une nouvelle connexion établie à l’aide du nouveau mot de passe. Un utilisateur avec l’autorisation KILL DATABASE CONNECTION peut mettre fin explicitement à une connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] à l’aide de la commande [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).
+Le cache d’authentification effectue une copie des connexions et des règles de pare-feu de serveur stockées dans la base de données MASTER, puis les place en mémoire dans la base de données utilisateur.  Comme les informations sur les utilisateurs de la base de données autonome sont déjà stockées dans la base de données utilisateur, ces utilisateurs ne font pas partie du cache d’authentification.
+Des connexions actives en permanence à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] nécessitent une réautorisation (effectuée par le [!INCLUDE[ssDE](../../includes/ssde-md.md)]) au moins toutes les 10 heures. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] tente une réautorisation en utilisant le mot de passe envoyé à l’origine et aucune entrée utilisateur n’est nécessaire. Pour des raisons de performances, à la réinitialisation d’un mot de passe dans [!INCLUDE[ssSDS](../../includes/sssds-md.md)], la connexion n’est pas authentifiée de nouveau, même si elle est réinitialisée en raison d’un regroupement de connexions. Ce comportement est différent de celui de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en local. Si le mot de passe a été modifié depuis que la connexion a été initialement autorisée, celle-ci doit être interrompue et une nouvelle connexion établie avec le nouveau mot de passe. Un utilisateur avec l’autorisation KILL DATABASE CONNECTION peut mettre fin explicitement à une connexion à [!INCLUDE[ssSDS](../../includes/sssds-md.md)] à l’aide de la commande [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md).
   
 ## <a name="permissions"></a>Permissions  
 Nécessite le compte administrateur [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
@@ -58,5 +58,4 @@ DBCC FLUSHAUTHCACHE;
   
 ## <a name="see-also"></a> Voir aussi  
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)
-  
   

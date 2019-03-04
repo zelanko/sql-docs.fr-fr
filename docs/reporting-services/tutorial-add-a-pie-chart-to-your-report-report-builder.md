@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Ajouter un graphique à secteurs à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 10d17a596568fd706b696359ef43bc8f257afdf9
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52710730"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293638"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique à secteurs à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : Ajouter un graphique en secteurs à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous créez un graphique à secteurs dans un rapport paginé Reporting Services. Vous ajoutez des pourcentages et combinez de petits secteurs en un seul secteur.
 
 Les graphiques à secteurs et en anneau affichent des données sous la forme d’une proportion de la totalité. Ils n’ont pas d’axe. Quand vous ajoutez un champ numérique à un graphique à secteurs, le graphique calcule le pourcentage de chaque valeur par rapport au total.  
@@ -27,9 +27,9 @@ Cette illustration montre le graphique à secteurs que vous allez créer.
 Lorsqu'un graphique à secteurs comporte trop de points de données, vos étiquettes de points de données peuvent devenir illisibles. Dans ce cas, envisagez de combiner plusieurs petits secteurs en un secteur plus grand. Les graphiques à secteurs gagnent en lisibilité quand vos données sont agrégées en quelques points de données.  
  
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, l’ajout d’une source de données et l’ajout d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l'accès à un serveur de rapports, l'ajout d'une source de données et l'ajout d'un dataset, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer le didacticiel : 10 minutes.  
+Durée estimée pour effectuer ce didacticiel : 10 minutes  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

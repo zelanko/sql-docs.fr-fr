@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: c7d95245-4709-4d04-acb4-59bf71e60d97
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: a4f2e6792e4523dea81b7e7ba8ac8f6ce45b5cbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 576d2fc5ba8ea023e69fe9b6136a676b188366e4
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770307"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56296797"
 ---
 # <a name="display-page-numbers-or-other-report-properties-report-builder-and-ssrs"></a>Afficher les numéros de page ou d'autres propriétés de rapport (Générateur de rapports et SSRS)
   Vous pouvez facilement ajouter des numéros de page, un titre de rapport, un nom de fichier, et d'autres propriétés de rapport aux en-têtes ou pieds de page de votre rapport. Ces propriétés sont stockées en tant que champs dans le dossier Champs prédéfinis du volet Données du rapport.  
@@ -32,7 +32,7 @@ ms.locfileid: "47770307"
   
 -   ID d'utilisateur  
   
--   Langage  
+-   Langue  
   
  Pour un numéro de page, vous pouvez ajouter le mot « Page » avant le numéro. Vous pouvez également indiquer le nombre total de pages.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "47770307"
   
 1.  Cliquez avec le bouton droit sur la zone de texte qui contient [&PageNumber] et cliquez sur **Expressions**.  
   
-     La zone de texte **Définir l’expression pour : valeur** contient l’expression =Globals!PageNumber.  
+     La zone de texte **Définir l'expression pour : valeur** contient l’expression =Globals!PageNumber.  
   
 2.  Placez le curseur après le signe =, puis tapez **"Page " &**.  
   

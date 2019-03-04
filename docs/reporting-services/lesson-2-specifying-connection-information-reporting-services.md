@@ -1,21 +1,21 @@
 ---
-title: 'Leçon 2 : Spécification des informations de connexion (Reporting Services) | Microsoft Docs'
+title: 'Leçon 2 : Spécifier des informations de connexion (Reporting Services) | Microsoft Docs'
 ms.date: 05/23/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 381192f80128ca3bd2ebade55dc539137c4bc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: da47a0fd587d48dd9d932504d6a5cd45d0d54664
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805607"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294697"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécification des informations de connexion (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécifier des informations de connexion (Reporting Services)
 Après avoir ajouté un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] à votre projet de didacticiel dans la leçon 1, vous devez maintenant définir une *source de données*, qui constitue les informations de connexion que le rapport utilise pour accéder aux données à partir d’une base de données relationnelle, d’une base de données multidimensionnelle ou d’une autre source.  
   
 Dans cette leçon, vous utilisez l’exemple de base de données [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] comme source de données. Ce didacticiel suppose que cette base de données se trouve dans une instance par défaut de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] installée sur votre ordinateur local.  
@@ -54,7 +54,7 @@ Si le volet **Données du rapport** n’est pas visible, cliquez sur **Données 
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] La source de données **AdventureWorks2014** est ajoutée au volet **Données du rapport** .  
 ![ssrs_adventureworks_datasource](../reporting-services/media/ssrs-adventureworks-datasource.png)  
 ## <a name="next-task"></a>Tâche suivante  
-Vous avez défini avec succès une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . Vous allez ensuite créer un rapport. Consultez [Leçon 3 : Définition d’un dataset destiné à un rapport de table &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+Vous avez défini avec succès une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBAdventureworks2014_md](../includes/sssampledbadventureworks2014-md.md)] . Vous allez ensuite créer un rapport. Voir [Leçon 3 : Définir un jeu de données pour un rapport de table &#40;Reporting Services&#41;](../reporting-services/lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a> Voir aussi  
 [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  

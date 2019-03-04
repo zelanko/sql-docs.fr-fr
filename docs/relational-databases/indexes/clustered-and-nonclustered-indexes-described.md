@@ -1,7 +1,7 @@
 ---
 title: Description des index cluster et non-cluster | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2e8daf01c2676c72630beb80d7511e2fa84afe9c
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 0e05b2efa7be0bcd362de0ab4ed8f78b5033b149
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299266"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265216"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>Description des index cluster et non-cluster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,10 @@ ms.locfileid: "54299266"
  Pour connaître d’autres types d’index destinés à des usages spéciaux, consultez [Index](../../relational-databases/indexes/indexes.md) .  
   
 ## <a name="indexes-and-constraints"></a>Index et contraintes  
- Des index sont automatiquement créés lorsque les contraintes PRIMARY KEY et UNIQUE sont définies sur les colonnes de la table. Par exemple, lorsque vous créez une table et déterminez une colonne particulière qui sera la clé primaire, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée automatiquement une contrainte PRIMARY KEY et un index sur cette colonne. Pour plus d’informations, consultez [Supprimer des clés primaires](../../relational-databases/tables/create-primary-keys.md) et [Créer des clés primaires](../../relational-databases/tables/create-unique-constraints.md).  
+
+Des index sont automatiquement créés lorsque les contraintes PRIMARY KEY et UNIQUE sont définies sur les colonnes de la table. Par exemple, à la création d’une table avec une contrainte UNIQUE, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée automatiquement un index non cluster. Si vous configurez une contrainte PRIMARY KEY, [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée automatiquement un index cluster, sauf s’il en existe déjà un. Lorsqu’une contrainte PRIMARY KEY est appliquée à une table existante qui comporte déjà un index cluster, SQL Server utilise un index non cluster.
+
+Pour plus d’informations, consultez [Supprimer des clés primaires](../../relational-databases/tables/create-primary-keys.md) et [Créer des clés primaires](../../relational-databases/tables/create-unique-constraints.md).  
   
 ## <a name="how-indexes-are-used-by-the-query-optimizer"></a>Utilisation des index par l’optimiseur de requête  
  Les index bien conçus peuvent réduire les opérations d'E/S disque et consommer moins de ressources système, améliorant ainsi les performances des requêtes. Les index peuvent être utiles pour diverses requêtes qui contiennent les instructions SELECT, UPDATE, DELETE ou MERGE. Supposons la requête `SELECT Title, HireDate FROM HumanResources.Employee WHERE EmployeeID = 250` dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Lorsque cette requête est exécutée, l'optimiseur de requête évalue chaque méthode disponible d'extraction des données et opte pour la plus efficace d'entre elles. La méthode peut être une analyse de table ou l'analyse d'un ou plusieurs index s'ils existent.  

@@ -10,14 +10,14 @@ f1_keywords:
 - "10542"
 - MICROSOFT.REPORTDESIGNER.MAPLAYER.NAME
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 1353356a4fb0116e4eed34ef79a8d7a0997db0bb
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 6c624ba5df22bdd519b464677c154c1718beab3c
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813772"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294938"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Assistant Carte et Assistant Couche (Générateur de rapports et SSRS)
  Dans les rapports paginés [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , l’Assistant Carte et l’Assistant Couche automatisent la tâche de création d’une carte, d’ajout d’une couche ou de modification des options de couche sur une couche existante.  
@@ -70,13 +70,13 @@ ms.locfileid: "51813772"
   
     -   [Quelle est la différence entre une carte simple, une carte à bulles et une carte analytique ?](#MapType)  
   
-    -   Choisir la visualisation de la carte : Polygones  
+    -   Choisir la visualisation de la carte : Polygones  
   
-    -   Choisir la visualisation de la carte : Lignes  
+    -   Choisir la visualisation de la carte : Lignes  
   
-    -   Choisir la visualisation de la carte : Points  
+    -   Choisir la visualisation de la carte : Points  
   
-4.  Choisir une connexion à une source de données avec choix de la visualisation de la carte : points. Choisissez une connexion à une source de données ou créez-en une à une source de données externe qui contient des données analytiques à afficher sur la carte.  
+4.  Choisir une connexion à une source de données. Choisissez la visualisation de la carte : Points. Choisissez une connexion à une source de données ou créez-en une à une source de données externe qui contient des données analytiques à afficher sur la carte.  
   
 5.  Créer une requête. Générez une requête qui spécifie les données analytiques.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "51813772"
   
  Après avoir ajouté une carte ou une couche et affiché un aperçu du rapport, vous pouvez modifier les options de carte et de couche que vous avez définies dans les Assistants. Pour plus d’informations, consultez [Personnaliser des données et l’affichage d’une carte ou d’une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
- Pour plus d’informations sur les cartes, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Pour obtenir des instructions pas à pas pour ajouter une carte à un rapport, consultez [Didacticiel : Rapport cartographique &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
+ Pour plus d’informations sur les cartes, consultez [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md). Pour savoir pas à pas comment ajouter une carte à un rapport, voir [Tutoriel : Rapport cartographique &#40;Générateur de rapports&#41;](../../reporting-services/tutorial-map-report-report-builder.md).  
   
 ##  <a name="SpatialDataSource"></a> Choisir une source de données spatiales  
  Dans cette page, spécifiez la source de données spatiales et les données spatiales à inclure. Les données spatiales peuvent provenir de la bibliothèque de cartes, d'un fichier de forme ESRI ou d'une requête de dataset spécifiant des données spatiales [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] d'une base de données [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ou version ultérieure.  
@@ -185,7 +185,7 @@ ms.locfileid: "51813772"
   
  Pour plus d'informations sur les mosaïques, consultez le [système de mosaïques Bing](https://go.microsoft.com/fwlink/?LinkId=147315). Pour plus d'informations sur l'utilisation de mosaïques Bing dans votre rapport, consultez [Conditions supplémentaires d'utilisation](https://go.microsoft.com/fwlink/?LinkId=151371).  
   
- Pour afficher un arrière-plan de mosaïques en mode Création, vous devez disposer d'un accès Internet. Pour afficher l'arrière-plan de mosaïques dans l'aperçu d'un rapport sur un serveur de rapports, le serveur de rapports doit être configuré pour prendre en charge les mosaïques Bing. Pour plus d’informations, consultez [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) et [Planifier un rapport cartographique](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
+ Pour afficher un arrière-plan de mosaïques en mode Création, vous devez disposer d'un accès Internet. Pour afficher l'arrière-plan de mosaïques dans l'aperçu d'un rapport sur un serveur de rapports, le serveur de rapports doit être configuré pour prendre en charge les mosaïques Bing. Pour plus d’informations, voir [Résoudre les problèmes des rapports : Rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md) et [Planifier un rapport cartographique](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md).  
   
  Pour plus d’informations sur d’autres manières de personnaliser une couche de mosaïques, consultez [Ajouter, modifier ou supprimer une carte ou une couche &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
@@ -248,7 +248,7 @@ ms.locfileid: "51813772"
  Le processeur de rapports applique les règles que vous définissez et détermine automatiquement la liste d'éléments à afficher dans une légende. Par défaut, les résultats de toutes les règles pour toutes les couches sont affichés dans la première légende. Vous pouvez modifier ce paramètre après avoir terminé l'Assistant. Pour plus d’informations, consultez [Modifier l’affichage des polygones, des lignes et des points à l’aide de règles et de données analytiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md).  
   
 ## <a name="see-also"></a> Voir aussi  
- [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
+ [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)   
  [Planifier un rapport cartographique &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs.md)   
  [Cartes &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md)  
   

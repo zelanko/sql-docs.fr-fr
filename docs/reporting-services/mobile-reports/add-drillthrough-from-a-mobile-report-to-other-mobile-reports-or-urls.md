@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 9bf66cdaad2f0ad85ff0213bb0711723e6ed3d05
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49085415"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291949"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Ajouter l’extraction à partir d’un rapport mobile à d’autres rapports mobiles ou des URL
 Vous pouvez ajouter l’extraction à partir de n’importe quelle grille de données, graphique ou jauge dans un rapport mobile [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] vers un autre rapport mobile ou une URL personnalisée. 
@@ -26,7 +26,7 @@ Les éléments de rapport avec une extraction, vers une URL ou un autre rapport 
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**Conseil**: créez le rapport cible et enregistrez-le d’abord dans un portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Si vous envisagez de passer des paramètres à partir du rapport source, ajoutez aussi les paramètres au rapport cible. Vous pouvez ensuite configurer l’extraction du rapport source vers le rapport cible. [Ajoutez des paramètres à un rapport mobile](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Conseil** : créez le rapport cible et enregistrez-le d’abord sur un portail web [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Si vous envisagez de passer des paramètres à partir du rapport source, ajoutez aussi les paramètres au rapport cible. Vous pouvez ensuite configurer l’extraction du rapport source vers le rapport cible. [Ajoutez des paramètres à un rapport mobile](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Configurer l’extraction vers un rapport mobile  
 
@@ -37,7 +37,7 @@ Les éléments de rapport avec une extraction, vers une URL ou un autre rapport 
 2. Dans le volet **Propriétés visuelles** , sélectionnez **Cible d’extraction** > **Rapport mobile**.  
 3. Sélectionnez le serveur et le rapport mobile cible.  
 
-   >Remarque : Si le rapport mobile cible n’est pas sur le même serveur que le rapport mobile source, connectez-vous plutôt avec une URL personnalisée, comme expliqué dans la section suivante.  
+   >Remarque : si le rapport mobile cible n’est pas sur le même serveur que le rapport mobile source, connectez-vous plutôt avec une URL personnalisée (voir la section suivante).  
  
 4. Une fois que vous avez sélectionné un rapport mobile cible, ses paramètres d’entrée disponibles sont visibles, notamment les propriétés qui peuvent être liées à des contrôles de navigateur et les paramètres configurés sur des datasets du rapport mobile cible.  
 

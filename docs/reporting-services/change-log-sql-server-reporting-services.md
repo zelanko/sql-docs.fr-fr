@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 author: casualoak
-ms.author: edugonz
+ms.author: RhysSchmidtke
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0ec82a6808b7591603154b7831192598cac34243
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 0eec59b0d2618686f866e6b7799922d9c255b238
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030122"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230906"
 ---
 # <a name="change-log-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Journal des modifications pour SQL Server Reporting Services (SSRS) 2017 et versions ultérieures
 
@@ -23,15 +23,32 @@ Cet article décrit les modifications apportées dans [!INCLUDE[ssRSnoversion](.
 
 ## <a name="sql-server-2017-reporting-services"></a>SQL Server 2017 Reporting Services 
 
-### <a name="version-140600906-released-september-12-2018"></a>Version 14.0.600.906, Date de publication : 12 septembre 2018
+### <a name="version-1406001109-released-february-12-2019"></a>Version 14.0.600.1109, Date de publication : 12 février 2019
 
-Ce bogue a été résolu :
+Les problèmes suivants ont été résolus :
+
+ - Les planification des captures instantanées de rapport de cache devient « planification spécifique aux rapports » après modification de l’abonnement.
+ - rc:Toolbar=false ne fonctionne pas dans l’édition Express.
+ - Certains caractères thaïs sont mal restitués à l’exportation de rapports paginés au format PDF.
+ - Un blocage se produit lors de la notification de fin des abonnements pilotés par les données.
+ - Les images incorporées ne s’affichent pas dans certaines circonstances, lorsque le paramètre rc:Toolbar=False est utilisé.
+ - Il n’est pas possible de créer des abonnements pilotés par les données pour les rapports qui utilisent des paramètres en cascade.
+ - Il n’est pas possible de modifier les abonnements configurés avec un intervalle non valide.
+ - Mises à jour de sécurité
+ - L’interface utilisateur des rapports liés ne s’affiche pas.
+ - Certains rapports paginés comportant des contrôles de tableau matriciel imbriqué présentent des polices incorrectes.
+ - Un espace blanc est ajouté à tort à certains rapports paginés contenant des régions de données de tableau matriciel.
+ - Les lignes d’en-tête disparaissent en cas de développement des grilles de données simples de rapports mobiles.
+
+### <a name="version-140600906-released-september-12-2018"></a>Version 14.0.600.906, Date de publication : 12 septembre 2018
+
+Le problème suivant a été résolu :
 
 - L’authentification personnalisée ne renvoie pas les informations correctes relatives aux cookies
 
-### <a name="version-140600892-released-august-31-2018"></a>Version 14.0.600.892, Date de publication : 31 août 2018
+### <a name="version-140600892-released-august-31-2018"></a>Version 14.0.600.892, Date de publication : 31 août 2018
 
-Ces bogues ont été résolus :
+Les problèmes suivants ont été résolus :
 
 - À cause de la zone de texte dans le rectangle, celui-ci ne peut pas s’agrandir verticalement quand rc:Toolbar=False et que le texte est long 
 - La taille du texte n’est pas évolutive si pageHeight est inférieur à 0,5 po 
@@ -44,9 +61,9 @@ Ces bogues ont été résolus :
 - Barre de défilement verticale manquante dans la zone de message du paramètre 
 - Runtime de rapport mobile mis à jour 
 
-### <a name="version-140600744-released-april-25-2018"></a>Version 14.0.600.744, Date de publication : 25 avril 2018 
+### <a name="version-140600744-released-april-25-2018"></a>Version 14.0.600.744, Date de publication : 25 avril 2018 
 
-Ces bogues ont été résolus :
+Les problèmes suivants ont été résolus :
 
 - La page Abonnement contrôlé par les données n’affiche pas l’option de remise qui a été créée
 - La mise à niveau de SSRS 2012 avec SSRS 2017 dans RSManagement génère une exception toutes les deux ou trois secondes
@@ -55,7 +72,7 @@ Ces bogues ont été résolus :
 
 ### <a name="version-140600689-released-february-28-2018"></a>Version 14.0.600.689, Date de publication : 28 février 2018
 
-Ces bogues ont été résolus :
+Les problèmes suivants ont été résolus :
 
 - La visibilité de Paramètre de rapport dans un rapport lié est rétablie après la modification de ses propriétés
 - Le paramètre d’URL rc:Toolbar=false ne fonctionne pas dans les éditions Express
@@ -70,11 +87,11 @@ Mises à jour de sécurité
 
 ### <a name="version-140600490-released-november-1-2017"></a>Version 14.0.600.490, Date de publication : 1er novembre 2017
 
-Ce bogue a été résolu :
+Les problèmes suivants ont été résolus :
 
 - Problèmes résolus avec la mise à niveau de la référence (SKU)
 
-### <a name="version-140600451-released-september-30-2017"></a>Version 14.0.600.451, Date de publication : 30 septembre 2017 
+### <a name="version-140600451-released-september-30-2017"></a>Version 14.0.600.451, Date de publication : 30 septembre 2017 
 
 Version initiale
 

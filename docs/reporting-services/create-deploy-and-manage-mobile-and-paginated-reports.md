@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Reporting Services
 - SQL Server Reporting Services
 ms.assetid: b8d18d3d-9db0-43e7-8286-7b46cc3a37ed
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 2d69df56647cb378bee2627344a8db09df2bfa57
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 08a71374d72a70e9bba6863eb9f6b5ac548d28f7
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712550"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56297397"
 ---
 # <a name="what-is-sql-server-reporting-services-ssrs"></a>Qu’est-ce que SQL Server Reporting Services (SSRS) ?
 
@@ -63,7 +63,7 @@ Cette charge de travail BI principale existe toujours aujourd’hui, donc nous l
 * Nous avons mis à jour tous les styles et palettes de couleurs par défaut. Ainsi, par défaut vous créez des rapports avec un nouveau style moderne minimaliste.
 * Nous avons mis à jour le volet Paramètres pour que vous puissiez réorganiser les paramètres comme vous le souhaitez.
 * Vous pouvez exporter dans de nouveaux formats tels que PowerPoint. Les visualisations Reporting Services dans PowerPoint sont dynamiques et modifiables ; il ne s’agit pas simplement de captures d’écran.
-* Vous pouvez créer une expérience hybride Power BI/Reporting Services : plutôt que de recréer vos rapports Reporting Services locaux dans Power BI, vous pouvez épingler des visuels à partir de ces rapports dans vos tableaux de bord Power BI. Ensuite, vous pouvez surveiller tous les éléments dans un emplacement unique sur votre tableau de bord.
+* Vous pouvez créer une expérience Power BI/Reporting Services hybride :  Plutôt que de recréer vos rapports Reporting Services locaux dans Power BI, vous pouvez épingler des visuels à partir de ces rapports dans vos tableaux de bord Power BI. Ensuite, vous pouvez surveiller tous les éléments dans un emplacement unique sur votre tableau de bord.
 
 ## <a name="mobile-reports"></a>Rapports mobiles
 
@@ -83,9 +83,9 @@ Pour les utilisateurs finaux de Reporting Services en mode natif, la porte d’e
 
 Vous pouvez appliquer une personnalisation à votre portail web. Et vous pouvez créer des indicateurs de performance clés directement dans le portail web. Les indicateurs de performance clés peuvent exposer des métriques métier clés en un clin d’œil dans le navigateur, sans qu’il soit nécessaire d’ouvrir un rapport. 
 
-Le nouveau portail web est une réécriture complète du Gestionnaire de rapports. Désormais, il s’agit d’une application HTML5 monopage, basée sur les standards, pour laquelle les navigateurs modernes sont optimisés : Edge, Internet Explorer 10 et 11, Chrome, Firefox, Safari et tous les navigateurs les plus courants.
+Le nouveau portail web est une réécriture complète du Gestionnaire de rapports. Maintenant il s’agit d’une application HTML5 monopage et conforme aux normes, pour laquelle les navigateurs modernes sont optimisés : Edge, Internet Explorer 10 et 11, Chrome, Firefox, Safari et tous les navigateurs principaux.
 
-Le contenu du portail web est organisé par type : les indicateurs de performance clés et les rapports mobiles et paginés Reporting Services, les classeurs Excel, les datasets partagés et les sources de données partagées sont à utiliser comme des blocs de construction dans vos rapports. Vous pouvez les stocker et les gérer ici en toute sécurité, dans la hiérarchie de dossiers classique. Vous pouvez baliser vos favoris et gérer le contenu si vous avez ce rôle.
+Le contenu sur le portail web est organisé par type : Les indicateurs de performance clés et les rapports mobiles et paginés Reporting Services, les classeurs Excel, les datasets partagés et les sources de données partagées sont à utiliser comme des blocs de construction dans vos rapports. Vous pouvez les stocker et les gérer ici en toute sécurité, dans la hiérarchie de dossiers classique. Vous pouvez baliser vos favoris et gérer le contenu si vous avez ce rôle.
 
 Et vous pouvez toujours planifier le traitement des rapports, accéder aux rapports à la demande et vous abonner à des rapports publiés dans le nouveau portail web.
 

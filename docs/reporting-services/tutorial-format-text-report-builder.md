@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : mettre en forme du texte (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Mettre en forme du texte (Générateur de rapports) | Microsoft Docs'
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 68297156870ac3eefc5b532b7e15f253064e4608
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ddc7aefa65f87e5647186358e0f7ae0019964ff0
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711658"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56289635"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Didacticiel : mettre en forme du texte (Générateur de rapports)
+# <a name="tutorial-format-text-report-builder"></a>Didacticiel : Mettre en forme du texte (Générateur de rapports)
 
 Dans ce didacticiel, vous allez vous entraîner à mettre en forme le texte de plusieurs façons dans un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Vous pouvez expérimenter avec différents formats. 
 
@@ -25,7 +25,7 @@ Après avoir configuré le rapport vierge avec la source de données et le datas
   
 Dans une étape, vous allez sciemment générer une erreur afin de voir pourquoi il s'agit d'une erreur. Vous corrigerez ensuite l'erreur pour obtenir l'effet souhaité.  
     
-Durée estimée pour effectuer le didacticiel : 20 minutes.  
+Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -50,7 +50,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
 
     Si le volet **Données du rapport** n’est pas visible, cochez **Données du rapport** sous l’onglet **Affichage**.
   
-2.  Dans la zone **Nom** , tapez **TextDataSource**  
+2.  Dans la zone **Nom**, tapez : **TextDataSource**  
   
 3.  Cliquez sur **Utiliser une connexion incorporée dans mon rapport**.  
   
@@ -67,7 +67,7 @@ Pour plus d’informations sur les spécifications, consultez [Éléments requis
   
 2.  Vérifiez que la source de données est **TextDataSource**.  
   
-3.  Dans la zone **Nom** , tapez **TextDataset**.  
+3.  Dans la zone **Nom**, tapez : **TextDataset.**  
   
 4.  Vérifiez que le type de requête **Texte** est sélectionné, puis cliquez sur **Concepteur de requêtes**.  
   
@@ -335,7 +335,7 @@ Dans ce didacticiel, enregistrez le rapport sur un serveur de rapports. Si vous 
   
 3.  Sélectionnez ou tapez le nom du serveur de rapports sur lequel vous êtes autorisé à enregistrer des rapports.  
   
-    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
+    Le message « Connexion au serveur de rapports » s'affiche. Une fois la connexion établie, le contenu du dossier de rapports spécifié par l'administrateur du serveur de rapports s'affiche comme emplacement par défaut des rapports.  
   
 4.  Dans **Nom**, remplacez le nom par défaut par un nom de votre choix.
 
@@ -355,7 +355,7 @@ Le rapport est enregistré sur le serveur de rapports. Le nom du serveur de rapp
 
 ## <a name="next-steps"></a>Next Steps
 
-Il existe de nombreuses méthodes pour mettre en forme du texte dans le Générateur de rapports. Le [didacticiel : création d’un rapport de forme libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
+Il existe de nombreuses méthodes pour mettre en forme du texte dans le Générateur de rapports. [Didacticiel : Création d’un rapport de forme libre](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md) contient d’autres exemples.  
 
 [Didacticiels du Générateur de rapports ](../reporting-services/report-builder-tutorials.md) 
 [Mise en forme des éléments de rapport](../reporting-services/report-design/formatting-report-items-report-builder-and-ssrs.md)  

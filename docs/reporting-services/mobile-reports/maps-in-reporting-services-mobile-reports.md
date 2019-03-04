@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 50658295-a71c-441e-8eba-e1ef066629c0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 5b09c8aec100d877256f0d8d9b4b97530ecdf5c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c1fbb2ad5c2c652f5be04982ffaedb7eadea97be
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810988"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56294777"
 ---
 # <a name="maps-in-reporting-services-mobile-reports"></a>Maps in Reporting Services mobile reports
 Les cartes sont un excellent moyen de visualiser des données géographiques. [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)] offre trois types de visualisation de carte, et des cartes intégrées pour les continents ainsi qu’un certain nombre de pays. Vous pouvez également [télécharger et utiliser des cartes personnalisées](../../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md).   
@@ -32,7 +32,7 @@ Les**Cartes thermiques des arrêts de plage** indiquent une valeur par rapport �
   
 ## <a name="select-the-map-type-and-region"></a>Sélection du type de carte et de la région  
   
-1. Dans l’onglet **Disposition**, sélectionnez un type de carte, déplacez-le sur l’aire de conception et donnez-lui la taille de votre choix.  
+1. Dans l’onglet **Disposition** , sélectionnez un type de carte, déplacez-le sur l’aire de conception et donnez-lui la taille de votre choix.  
   
 2. Dans la vue **Disposition** > volet **Propriétés visuelles** > **Carte**, sélectionnez la région de mappage spécifique dont vous avez besoin.  
   
@@ -58,7 +58,7 @@ Pour afficher des données réelles sur votre carte, vous devez définir des val
   
 2. Sélectionnez **Ajouter des données**, puis **Excel local** ou **Serveur SSRS**.  
   
-   > **Conseil**: Vérifiez que les [données sont dans un format compatible pour les rapports mobiles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
+   > **Conseil** : vérifiez que les [données sont dans un format compatible avec les rapports mobiles](../../reporting-services/mobile-reports/prepare-data-for-reporting-services-mobile-reports.md).  
   
 3. Sélectionnez les feuilles de calcul souhaitées et sélectionnez **importer**.  
    Vos données s’affichent dans le [!INCLUDE[SS_MobileReptPub_Short](../../includes/ss-mobilereptpub-short.md)].  

@@ -1,7 +1,7 @@
 ---
 title: BULK INSERT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -27,14 +27,15 @@ ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8d0dd1d58614f24e33f8fd7afdda43db2114fec6
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 34ab5673d0e74de637f0de22153b9f90cd6a407d
+ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300376"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56407649"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 > [!div class="nextstepaction"]
@@ -46,8 +47,7 @@ Importe un fichier de données dans une table ou vue de base de données dans un
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
-  
+```
 BULK INSERT   
    [ database_name . [ schema_name ] . | schema_name . ] [ table_name | view_name ]   
       FROM 'data_file'   
@@ -84,6 +84,7 @@ BULK INSERT
 ```  
   
 ## <a name="arguments"></a>Arguments  
+
  *database_name*  
  Nom de la base de données qui contient la table ou la vue spécifiée. S'il n'est pas spécifié, la base de données actuelle est utilisée.  
   
@@ -146,7 +147,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 ```
 
 > [!IMPORTANT]
-> CODEPAGE n’est pas une option prise en charge sur Linux.
+> CODEPAGE n’est pas une option prise en charge sur Linux pour [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]. Avec [!INCLUDE[ssSQLv15_md](../../includes/sssqlv15-md.md)], seule l’option **« RAW »** est autorisée pour CODEPAGE.
 
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] vous recommande de spécifier un nom de classement pour chaque colonne dans un [fichier de format](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md).  
@@ -157,29 +158,33 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |OEM (valeur par défaut)|Les colonnes de type de données **char**, **varchar** ou **text** sont converties de la page de codes du système OEM à la page de codes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |RAW|Aucune conversion d'une page de codes vers une autre ne se produit ; ceci est l'option la plus rapide.|  
 |*code_page*|Numéro de la page de codes, par exemple 850.<br /><br /> **&#42;&#42; Important &#42;&#42;** Les versions antérieures à la version [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ne prennent pas en charge la page de codes 65001 (encodage UTF-8).|  
-  
- DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
- Spécifie que BULK INSERT réalise l'opération d'importation en utilisant la valeur définie pour le type de fichier de données.  
-  
+| &nbsp; | &nbsp; |
+
+DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
+Spécifie que BULK INSERT réalise l'opération d'importation en utilisant la valeur définie pour le type de fichier de données.  
+
+&nbsp;
+
 |Valeur DATAFILETYPE|Toutes les données représentées dans :|  
 |------------------------|------------------------------|  
 |**char** (par défaut)|Format caractères.<br /><br /> Pour plus d’informations, consultez [Utiliser le format caractère pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-character-format-to-import-or-export-data-sql-server.md).|  
 |**native**|Types de données (base de données) natif. Créer le fichier de données natif en important en bloc les données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’utilitaire **bcp**.<br /><br /> La valeur native offre de meilleures performances que la valeur char.<br /><br /> Pour plus d’informations, consultez [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-native-format-to-import-or-export-data-sql-server.md).|  
 |**widechar**|Caractères Unicode.<br /><br /> Pour plus d’informations, consultez [Utiliser le format caractère Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-character-format-to-import-or-export-data-sql-server.md).|  
 |**widenative**|Types de données (base de données) natif, à l’exception des colonnes de type **char**, **varchar** et **text** dans lesquelles les données sont stockées au format Unicode. Créez le fichier de données **widenative** en important en bloc les données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de l’utilitaire **bcp**.<br /><br /> La valeur **widenative** offre de meilleures performances que la valeur **widechar**. Si le fichier de données contient des caractères étendus [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)], sélectionnez **widenative**.<br /><br /> Pour plus d’informations, consultez [Utiliser le format natif Unicode pour importer ou exporter des données &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|  
-  
-  ERRORFILE **='**_file_name_**'**  
- Fichier utilisé pour collecter les lignes comportant des erreurs de mise en forme et impossibles à convertir en un ensemble de lignes OLE DB. Ces lignes sont copiées « en l'état » du fichier de données vers ce fichier d'erreur.  
-  
- Le fichier d'erreur est créé lors de l'exécution de la commande. Une erreur se produit si le fichier existe déjà. De plus, un fichier de contrôle portant l'extension .ERROR.txt est créé. Il fait référence à chacune des lignes du fichier d'erreur et propose un diagnostic. Dès que les erreurs ont été corrigées, les données peuvent être chargées.   
+| &nbsp; | &nbsp; |
+
+ERRORFILE **='**_file_name_**'**  
+Fichier utilisé pour collecter les lignes comportant des erreurs de mise en forme et impossibles à convertir en un ensemble de lignes OLE DB. Ces lignes sont copiées « en l'état » du fichier de données vers ce fichier d'erreur.
+
+Le fichier d'erreur est créé lors de l'exécution de la commande. Une erreur se produit si le fichier existe déjà. De plus, un fichier de contrôle portant l'extension .ERROR.txt est créé. Il fait référence à chacune des lignes du fichier d'erreur et propose un diagnostic. Dès que les erreurs ont été corrigées, les données peuvent être chargées.  
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)], `error_file_path` peut se trouver dans Stockage Blob Azure.
 
 'errorfile_data_source_name'   
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier d’erreur contenant les erreurs détectées lors de l’importation. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [Créer une source de données externes](../../t-sql/statements/create-external-data-source-transact-sql.md).
+Source de données externe nommée pointant vers l’emplacement de Stockage Blob Azure du fichier d’erreur contenant les erreurs détectées lors de l’importation. La source de données externe doit être créée à l’aide de l’option `TYPE = BLOB_STORAGE` ajoutée dans [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Pour plus d’informations, consultez [CRÉER UNE SOURCE DE DONNÉES EXTERNES](../../t-sql/statements/create-external-data-source-transact-sql.md).
  
- FIRSTROW **=**_first_row_  
+ FIRSTROW **=** _première_ligne_  
  Numéro de la première ligne à charger. La valeur par défaut est la première ligne du fichier de données spécifié. FIRSTROW commence à 1.  
   
 > [!NOTE]  
@@ -205,8 +210,8 @@ Source de données externe nommée pointant vers l’emplacement de Stockage Blo
  KILOBYTES_PER_BATCH **=** _kilobytes_per_batch_  
  Indique le nombre approximatif de kilo-octets (Ko) de données par lot sous la forme *kilobytes_per_batch*. Par défaut, KILOBYTES_PER_BATCH est inconnu. Pour plus d'informations sur les performances, consultez la section « Notes » plus loin dans cette rubrique.  
   
- LASTROW**=**_last_row_  
- Numéro de la dernière ligne à charger. La valeur par défaut est 0, c'est-à-dire la dernière ligne du fichier de données spécifié.  
+LASTROW **=** _dernière_ligne_
+Numéro de la dernière ligne à charger. La valeur par défaut est 0, c'est-à-dire la dernière ligne du fichier de données spécifié.  
   
  MAXERRORS **=** _max_errors_  
  Nombre maximal d'erreurs de syntaxe tolérées dans les données avant l'annulation de l'importation en bloc. Chaque ligne ne pouvant pas être importée par l'opération d'importation en bloc est ignorée et compte comme une erreur. Si *max_errors* n’est pas spécifié, la valeur par défaut est de 10.  
@@ -220,7 +225,7 @@ Source de données externe nommée pointant vers l’emplacement de Stockage Blo
  *n*  
  Espace réservé qui indique que plusieurs colonnes peuvent être spécifiées.  
   
- ROWS_PER_BATCH **=**_rows_per_batch_  
+ ROWS_PER_BATCH **=** _lignes_par_lot_  
  Nombre approximatif de lignes de données que compte le fichier de données.  
   
  Par défaut, toutes les données du fichier de données sont envoyées au serveur en une seule transaction, et le nombre de lignes du lot est inconnu de l'optimiseur de requête. Si vous spécifiez ROWS_PER_BATCH (valeur > 0), le serveur utilise cette valeur pour optimiser l'importation en bloc. La valeur spécifiée pour ROWS_PER_BATCH devrait correspondre à peu près au nombre réel de lignes. Pour plus d'informations sur les performances, consultez la section « Notes » plus loin dans cette rubrique.  
@@ -247,7 +252,7 @@ FIELDQUOTE **=** 'field_quote'
 **S’applique à :** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le fichier CSV. Si vous ne spécifiez pas cet argument, le caractère guillemet (") servira de caractère guillemet tel que défini dans la norme [RFC 4180](https://tools.ietf.org/html/rfc4180).
   
- FORMATFILE **='**_format_file_path_**'**  
+ FORMATFILE **=** '_chemin_fichier_format_'  
  Spécifie le chemin complet au fichier de format. Un fichier de format décrit le fichier de données qui contient les réponses stockées créées à l’aide de l’utilitaire **bcp** dans la même table ou vue. Le fichier de format doit être utilisé dans les contextes suivants :  
   
 -   Le fichier de données contient plus ou moins de colonnes que la table ou la vue.  
@@ -269,6 +274,7 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
 
   
 ## <a name="compatibility"></a>Compatibilité  
+
  BULK INSERT impose une validation et un contrôle stricts des données lues dans un fichier qui pourraient faire échouer les scripts existants si ces derniers s'exécutent sur des données non valides. Par exemple, BULK INSERT vérifie que :  
   
 -   Les représentations en mode natif des types de données **float** ou **real** sont valides.  
@@ -278,6 +284,7 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
 ## <a name="data-types"></a>Types de données  
   
 ### <a name="string-to-decimal-data-type-conversions"></a>Conversion du type de données String en type Decimal  
+
  Les conversions de type de données String (chaîne) en Decimal (décimal) utilisées dans BULK INSERT suivent les mêmes règles que la fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md), qui rejette les chaînes représentant des valeurs numériques qui utilisent la notation scientifique. BULK INSERT traite donc ce genre de chaînes comme des valeurs non valides et signale des erreurs de conversion.  
   
  Pour contourner ce problème, utilisez un fichier de format permettant d’importer en bloc des données de type **float** à notation scientifique dans une colonne décimale. Dans le fichier de format, décrivez explicitement la colonne comme étant de type **real** ou **float**. Pour plus d’informations sur ces types de données, consultez [float et real &#40;Transact-SQL&#41;](../../t-sql/data-types/float-and-real-transact-sql.md).  
@@ -286,9 +293,10 @@ Spécifie un caractère qui sera utilisé comme caractère de guillemet dans le 
 >  Les fichiers de format représentent des données **real** en tant que type de données **SQLFLT4**, et des données **float** en tant que type de données **SQLFLT8**. Pour plus d’informations sur les fichiers de format non-XML, consultez [Spécifier le type de stockage de fichiers à l’aide de bcp &#40;SQL Server&#41;](../../relational-databases/import-export/specify-file-storage-type-by-using-bcp-sql-server.md).  
   
 #### <a name="example-of-importing-a-numeric-value-that-uses-scientific-notation"></a>Exemple d'importation d'une valeur numérique qui utilise la notation scientifique  
+
  Cet exemple utilise la table suivante :  
   
-```  
+```sql
 CREATE TABLE t_float(c1 float, c2 decimal (5,4));  
 ```  
   
@@ -302,7 +310,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  Le fichier de format suivant utilise le type de données `SQLFLT8` pour établir la correspondance entre le deuxième champ de données et la deuxième colonne :  
   
- ```
+ ```xml
  <?xml version="1.0"?> 
  <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> 
  <RECORD> 
@@ -314,7 +322,7 @@ CREATE TABLE t_float(c1 float, c2 decimal (5,4));
   
  Si vous voulez opter pour ce fichier de format (avec le nom de fichier `C:\t_floatformat-c-xml.xml`) afin d'importer les données de test dans la table de test, exécutez l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante :  
   
-```  
+```sql
 BULK INSERT bulktest..t_float  
 FROM 'C:\t_float-c.dat' WITH (FORMATFILE='C:\t_floatformat-c-xml.xml');  
 GO  
@@ -325,6 +333,7 @@ GO
   
 
 ### <a name="data-types-for-bulk-exporting-or-importing-sqlxml-documents"></a>Types de données pour l'importation et l'exportation en bloc de documents SQLXML  
+
  Pour exporter ou importer en bloc des données SQLXML, utilisez l'un des types de données ci-dessous dans votre fichier de format :  
   
 |Type de données|Effet|  
@@ -332,8 +341,10 @@ GO
 |SQLCHAR ou SQLVARCHAR|Les données sont envoyées dans la page de codes du client ou dans la page de codes impliquée par le classement. Le résultat est le même que si vous définissiez la propriété DATAFILETYPE **='char'** sans spécifier de fichier de format.|  
 |SQLNCHAR ou SQLNVARCHAR|Les données sont envoyées au format Unicode. Le résultat est le même que si vous définissiez la propriété DATAFILETYPE **= 'widechar'** sans spécifier de fichier de format.|  
 |SQLBINARY ou SQLVARBIN|Les données sont envoyées sans être converties.|  
-  
+| &nbsp; | &nbsp; |
+
 ## <a name="general-remarks"></a>Remarques d'ordre général  
+
  Pour obtenir une comparaison de l'instruction BULK INSERT, de l'instruction INSERT ... SELECT \* FROM OPENROWSET(BULK...), et de la commande **bcp**, consultez [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  Pour plus d’informations sur la préparation des données en vue d’une importation en bloc, consultez [Préparer des données en vue d’une exportation ou d’une importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
@@ -343,16 +354,20 @@ GO
 ## <a name="interoperability"></a>Interopérabilité  
   
 ### <a name="importing-data-from-a-csv-file"></a>Importation des données d'un fichier CSV  
+
 À partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, BULK INSERT prend en charge le format CSV.  
 Avant [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fichiers CSV ne sont pas pris en charge par les opérations d’importation en bloc [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Toutefois, dans certains cas, un fichier CSV peut être utilisé comme fichier de données pour une importation en bloc de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur la configuration requise pour importer des données à partir d’un fichier de données CSV, consultez [Préparer des données en vue d’une exportation ou d’une importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
 ## <a name="logging-behavior"></a>Comportement de journalisation  
+
  Pour savoir à quel moment les opérations d’insertion de ligne effectuées par l’importation en bloc sont consignées dans le journal des transactions, consultez [Conditions requises pour une journalisation minimale dans l’importation en bloc](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).  
   
 ##  <a name="Limitations"></a> Restrictions  
+
  Lorsque vous utilisez un fichier de format avec BULK INSERT, vous pouvez spécifier jusqu'à 1 024 champs. Il s'agit du nombre maximal de colonnes autorisé dans une table. Si vous utilisez BULK INSERT avec un fichier de données qui contient plus de 1 024 champs, BULK INSERT génère l'erreur 4 822. L’[utilitaire bcp](../../tools/bcp-utility.md) ne présentant pas cette limitation, les fichiers de données qui contiennent plus de 1024 champs utilisent la commande **bcp**.  
   
 ## <a name="performance-considerations"></a>Considérations relatives aux performances  
+
  Si le nombre de pages à vider dans un lot unique dépasse un seuil interne, une analyse complète du pool de mémoires tampons peut s'effectuer afin d'identifier les pages à vider lors de la validation du lot. Cette analyse complète peut nuire aux performances de l'importation en bloc. Le dépassement du seuil interne se produit lorsqu'un pool de mémoires tampons de grande taille est associé à un sous-système d'E/S lent. Pour éviter tout dépassement de mémoire tampon sur les ordinateurs de grande capacité, évitez d'utiliser l'indication TABLOCK (qui entraîne la suppression des optimisations en bloc) ou utilisez une taille de lot plus petite (qui permet de conserver les optimisations en bloc).  
   
  En raison de la diversité des ordinateurs, nous vous recommandons de tester différentes tailles de lot avec votre charge de données pour trouver la solution la plus adaptée.  
@@ -360,6 +375,7 @@ Avant [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fichi
 ## <a name="security"></a>Sécurité  
   
 ### <a name="security-account-delegation-impersonation"></a>Délégation de compte de sécurité (emprunt d'identité)  
+
  Si un utilisateur a recours à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le profil de sécurité du compte du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est alors utilisé. Une connexion via l'authentification SQL Server ne peut pas être authentifiée en dehors du moteur de base de données. Par conséquence, lorsqu'une commande BULK INSERT est initiée par une connexion via l'authentification SQL Server, la connexion aux données s'effectue à l'aide du contexte de sécurité du compte du processus SQL Server (compte utilisé par le service de moteur de base de données SQL Server). Pour pouvoir lire les données sources, vous devez octroyer au compte utilisé par le moteur de base de données SQL Server l'accès aux données sources. Par opposition, si un utilisateur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'est connecté via l'authentification Windows, il peut lire uniquement les fichiers accessibles par le compte d'utilisateur, indépendamment du profil de sécurité du processus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Si vous exécutez l’instruction BULK INSERT à l’aide de **sqlcmd** ou **osql** à partir d’un ordinateur, en insérant les données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un deuxième ordinateur et en spécifiant un *data_file* sur un troisième ordinateur sous forme de chemin UNC, vous risquez de recevoir une erreur 4861.  
@@ -369,6 +385,7 @@ Avant [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fichi
  Pour plus d’informations sur les considérations relatives à l’utilisation de BULK INSERT, consultez [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="permissions"></a>Permissions  
+
  Requiert les autorisations INSERT et ADMINISTER BULK OPERATIONS. Dans Azure SQL Database, les opérations INSERT et ADMINISTER DATABASE BULK OPERATIONS sont nécessaires. De plus, l'autorisation ALTER TABLE est nécessaire si une ou plusieurs des conditions suivantes sont réunies :  
   
 -   Des contraintes existent et l'option CHECK_CONSTRAINTS n'est pas spécifiée.  
@@ -386,9 +403,10 @@ Avant [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, les fichi
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-pipes-to-import-data-from-a-file"></a>A. Importation des données d'un fichier à l'aide du caractère (|)  
+
  L'exemple suivant importe des informations détaillées de commande dans la table `AdventureWorks2012.Sales.SalesOrderDetail`, à partir du fichier de données spécifié en utilisant le caractère `|` comme marque de fin de champ et `|\n` comme marque de fin de ligne.  
   
-```  
+```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
    FROM 'f:\orders\lineitem.tbl'  
    WITH   
@@ -402,9 +420,10 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 > Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
   
 ### <a name="b-using-the-firetriggers-argument"></a>b. Utilisation de l'argument FIRE_TRIGGERS  
+
  L'exemple suivant spécifie l'argument `FIRE_TRIGGERS`.  
   
-```  
+```sql
 BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
    FROM 'f:\orders\lineitem.tbl'  
    WITH  
@@ -419,9 +438,10 @@ BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail
 > Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
   
 ### <a name="c-using-line-feed-as-a-row-terminator"></a>C. Utilisation du retour à la ligne comme délimiteur de ligne  
+
  L'exemple suivant importe un fichier qui utilise le retour à la ligne comme marque de fin de ligne, par exemple une sortie UNIX :  
   
-```  
+```sql
 DECLARE @bulk_cmd varchar(1000);  
 SET @bulk_cmd = 'BULK INSERT AdventureWorks2012.Sales.SalesOrderDetail  
 FROM ''<drive>:\<path>\<filename>''   
@@ -436,9 +456,10 @@ EXEC(@bulk_cmd);
 > Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
   
 ### <a name="d-specifying-a-code-page"></a>D. Spécification d’une page de codes  
+
  L’exemple suivant montre comment spécifier une page de codes.  
   
-```  
+```sql
 BULK INSERT MyTable  
 FROM 'D:\data.csv'  
 WITH  
@@ -452,7 +473,9 @@ WITH
 > Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
 
 ### <a name="e-importing-data-from-a-csv-file"></a>E. Importation de données d’un fichier CSV   
+
 L’exemple suivant montre comment spécifier un fichier CSV en ignorant l’en-tête (première ligne), à l’aide de `;` comme marque de fin de champ et `0x0a` comme marque de fin de ligne : 
+
 ```sql
 BULK INSERT Sales.Invoices
 FROM '\\share\invoices\inv-2016-07-25.csv'
@@ -468,6 +491,7 @@ WITH (FORMAT = 'CSV',
 
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Importation de données à partir d’un fichier dans Stockage Blob Azure   
+
 L’exemple suivant montre comment charger des données à partir d’un fichier CSV dans un emplacement Stockage Blob Azure qui a été configuré comme source de données externe. Cela nécessite des informations d’identification délimitées à la base de données avec une signature d’accès partagé.    
 
 ```sql
@@ -494,6 +518,7 @@ WITH (DATA_SOURCE = 'MyAzureBlobStorage');
 > Azure SQL Database ne prend pas en charge la lecture dans des fichiers Windows.
 
 ### <a name="g-importing-data-from-a-file-in-azure-blob-storage-and-specifying-an-error-file"></a>G. Importation de données à partir d’un fichier dans Stockage Blob Azure et spécification d’un fichier d’erreurs   
+
 L’exemple suivant montre comment charger des données à partir d’un fichier CSV dans un emplacement Stockage Blob Azure qui a été configuré comme source de données externe et spécifier un fichier d’erreurs. Cela nécessite des informations d’identification délimitées à la base de données avec une signature d’accès partagé. Notez qu’en cas d’exécution sur Azure SQL Database, l’option ERRORFILE doit être accompagnée d’ERRORFILE_DATA_SOURCE. Sinon, l’importation peut échouer avec une erreur d’autorisations. Le fichier spécifié dans ERRORFILE ne doit pas exister dans le conteneur.
 
 ```sql
@@ -508,6 +533,7 @@ WITH (DATA_SOURCE = 'MyAzureInvoices',
 Pour obtenir des exemples `BULK INSERT` complets, illustrant notamment la configuration des informations d’identification et de la source de données externe, consultez [Exemples d’accès en bloc à des données dans Stockage Blob Azure](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md).
   
 ### <a name="additional-examples"></a>Autres exemples  
+
  Les rubriques suivantes fournissent d’autres exemples de la commande `BULK INSERT` :  
   
 -   [Exemples d’importation et d’exportation en bloc de documents XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
@@ -533,6 +559,7 @@ Pour obtenir des exemples `BULK INSERT` complets, illustrant notamment la config
 -   [Utiliser un fichier de format pour mapper les colonnes d’une table sur les champs d’un fichier de données &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server.md)  
   
 ## <a name="see-also"></a> Voir aussi  
+
  [Importation et exportation en bloc de données &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [Utilitaire bcp](../../tools/bcp-utility.md)   
  [Fichiers de format pour l’importation ou l’exportation de données &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)   
@@ -540,5 +567,4 @@ Pour obtenir des exemples `BULK INSERT` complets, illustrant notamment la config
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Préparer des données en vue d’une exportation ou d’une importation en bloc &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md)   
  [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)  
-  
-  
+

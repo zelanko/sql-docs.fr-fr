@@ -14,12 +14,12 @@ ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2522a2efa2edfb899d2693e6f4746edd85f2d7fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c35aab2ebd2b31fbbe7067bc8049930f791543c3
+ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420400"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56230976"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Configurer l'option de configuration de serveur max worker threads
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52420400"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir configuré l'option max worker threads](#FollowUp)  
+-   **Suivi :**  [Après avoir configuré l'option Nombre maximum de threads de travail](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -73,7 +73,8 @@ ms.locfileid: "52420400"
     |Nombre d'unités centrales|ordinateur 32 bits|Ordinateur 64 bits|  
     |------------|------------|------------| 
     |\<= 4 processeurs|256|512|
-    |\>4 processeurs|256 + ((UC logiques - 4) * 8)|512 + ((UC logiques - 4) * 16)| 
+    |\> 4 processeurs et \< 64 processeurs|256 + ((UC logiques - 4) * 8)|512 + ((UC logiques - 4) * 16)|
+    |\> 64 processeurs|256 + ((UC logiques - 4) * 32)|512 + ((UC logiques - 4) * 32)|
   
     > [!NOTE]  
     > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut plus être installé sur un système d’exploitation 32 bits. Les valeurs d’ordinateur 32 bits sont répertoriées pour aider les clients exécutant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions antérieures.   Nous vous recommandons d'utiliser 1 024 comme nombre maximal de threads de travail pour une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécutée sur un ordinateur 32 bits.  
@@ -142,7 +143,7 @@ RECONFIGURE;
 GO  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option max worker threads  
+##  <a name="FollowUp"></a> Suivi : Après avoir configuré l'option Nombre maximum de threads de travail  
  Le changement prend effet immédiatement après l’exécution de [RECONFIGURE](../../t-sql/language-elements/reconfigure-transact-sql.md), sans nécessiter le redémarrage du [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="see-also"></a> Voir aussi  

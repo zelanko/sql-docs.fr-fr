@@ -8,14 +8,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Business Intelligence Development Studio, Reporting Services in
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ab97e64bacf15cf95c6594f45edceac05a24eef2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: b57f42345b487867b5362e24963790e5f525f973
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403004"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292327"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
 
@@ -43,7 +43,7 @@ ms.locfileid: "52403004"
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenêtres et volets du Concepteur de rapports  
- Le Concepteur de rapports prend en charge deux modes : le mode **Conception** définit les données et la mise en page du rapport et le mode **Aperçu** affiche un rendu du rapport. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
+ Le Concepteur de rapports prend en charge deux modes : le mode **Conception** définit les données et la mise en page du rapport et le mode **Aperçu** en affiche le rendu. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Données du rapport, volet  
  Le volet des données de rapport affiche des champs intégrés, des sources de données, des datasets, des collections de champs, des paramètres de rapport et des images.  
@@ -175,7 +175,7 @@ ms.locfileid: "52403004"
   
 -   **Propriétés du rapport** Sélectionnez cette option pour ouvrir la boîte de dialogue **Propriétés du rapport** . Dans cette boîte de dialogue, vous pouvez affecter les propriétés générales du rapport, telles que le nom de l'auteur et l'espacement de la grille, et définir des propriétés pour sa mise en page, notamment le nombre de colonnes et la taille de la page. Vous pouvez également inclure du code personnalisé, des références à des assemblys et à des classes, ainsi que les noms d'éléments de sortie des données, des transformations de données et des schémas de données.  
   
--   **Vue** Basculez entre les deux onglets du Concepteur de rapports : Conception et aperçu.  
+-   **Vue** Basculez entre les deux onglets du Concepteur de rapports : Conception et aperçu.  
   
 -   **En-tête de page** Ajoutez ou supprimez un en-tête de page dans le rapport. Lorsque vous supprimez un en-tête de page, tous les éléments qu'il contient sont supprimés.  
   

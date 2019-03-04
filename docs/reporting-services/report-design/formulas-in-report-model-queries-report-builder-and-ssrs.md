@@ -8,14 +8,14 @@ ms.topic: conceptual
 f1_keywords:
 - "10151"
 ms.assetid: fbf68c59-7afc-4afe-bfcd-40ce84629af0
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 911cbda433727f48fa564364cc672f43ca4b6f4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0e078205cf705c9ea96a8cccc3811e8162a643f6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607691"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298547"
 ---
 # <a name="formulas-in-report-model-queries-report-builder-and-ssrs"></a>Formules dans les requêtes de modèle de rapport (Générateur de rapports et SSRS)
   Les formules sont des calculs effectués sur les valeurs d'un rapport utilisant un modèle de rapport comme source de données. Vous définissez des formules dans la **boîte de dialogue Définir la formule** du concepteur de requêtes Modèle de rapport quand vous définissez une requête pour une source de données de modèle de rapport. Une formule peut contenir des fonctions, des opérateurs, des constantes et des références à des champs ou des entités. Les formules vous permettent de combiner, d'agréger, de filtrer et d'évaluer des données numériques et de texte. Vous pouvez créer des formules et les enregistrer en tant que nouveaux champs, ou vous pouvez modifier les formules des champs existants.  
@@ -39,7 +39,7 @@ ms.locfileid: "47607691"
  Lorsque vous utilisez des références, le processeur de rapports exécute la formule sur chaque valeur du champ. Par exemple, supposons qu'un champ contienne le total des ventes annuelles des cinq années passées. Ce champ contient cinq valeurs, chacune représentant le total des ventes d'une année donnée. Si la formule contient une référence à ce champ, elle calcule la nouvelle valeur à l'aide de chacune des valeurs.  
   
 ## <a name="operators"></a>Opérateurs  
- Les opérateurs spécifient le type de calcul à réaliser sur les valeurs d'une formule. Il existe trois différents types d'opérateurs de calcul : arithmétique, comparaison et texte. Les opérateurs sont indiqués à l'aide de symboles, tels que le signe plus (+).  
+ Les opérateurs spécifient le type de calcul à réaliser sur les valeurs d'une formule. Il existe trois différents types d'opérateurs de calcul : arithmétique, comparaison et texte. Les opérateurs sont indiqués à l'aide de symboles, tels que le signe plus (+).  
   
  **Opérateurs arithmétiques.** Les opérateurs arithmétiques réalisent des opérations mathématiques de base, telles que l'addition, la soustraction ou la multiplication, combinent des nombres et génèrent des résultats numériques.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "47607691"
  **Opérateur de concaténation de texte.** Utilisez l'esperluette (&) pour joindre ou concaténer une ou plusieurs chaînes de texte et générer un seul élément de texte.  
   
 ##  <a name="Constants"></a> Constantes  
- Une constante est une valeur qui n'est pas calculée et qui, par conséquent, ne change pas. Le Générateur de rapports utilise les constantes suivantes : **True**, **False**et **Empty**. Ces constantes permettent d'évaluer les champs booléens. Par exemple, supposons que vous possédez un champ appelé IsDiscontinued. Les seules valeurs valides pour ce champ sont True, False ou Empty (" ").  
+ Une constante est une valeur qui n'est pas calculée et qui, par conséquent, ne change pas. Le Générateur de rapports utilise les constantes suivantes : **True**, **False** et **Empty**. Ces constantes permettent d'évaluer les champs booléens. Par exemple, supposons que vous possédez un champ appelé IsDiscontinued. Les seules valeurs valides pour ce champ sont True, False ou Empty (" ").  
   
 ##  <a name="Functions"></a> Fonctions  
  Les fonctions sont des formules prédéfinies qui réalisent des calculs à l'aide de valeurs spécifiques, appelées *arguments*, indiquées dans un ordre précis. Les arguments peuvent être des valeurs littérales et/ou des champs. Lorsqu'un champ est utilisé dans une formule, le nom du champ représente chaque instance du champ. Si l'argument est une valeur littérale, vous pouvez être amené à indiquer sa nature à l'aide de caractères spécifiques.  

@@ -20,19 +20,19 @@ ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ac2a77f861330686d618fdd13764d11f27d12e16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4dc06419f478af56648e312d8ea7bac7481787fa
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770918"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290987"
 ---
 # <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Renvoie la valeur incrémentielle (sous la forme **numeric** (**@@** MAXPRECISION,0)) spécifiée lors de la création d’une colonne d’identité dans une table ou une vue ayant une colonne d’identité.  
+  Retourne la valeur d’incrément (sous la forme **numeric**(**@@** MAXPRECISION,0)) spécifiée lors de la création d’une colonne d’identité d’une table ou d’une vue.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -49,9 +49,9 @@ IDENT_INCR ( 'table_or_view' )
  **numeric**  
   
 ## <a name="exceptions"></a>Exceptions  
- Retourne la valeur NULL en cas d'erreur ou si un appelant n'est pas autorisé à afficher l'objet.  
+ Retourne NULL en cas d’erreur ou si l’appelant n’est pas autorisé à voir l’objet.  
   
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut voir uniquement les métadonnées des éléments sécurisables qui lui appartiennent ou pour lesquels il dispose d'un droit d'accès. Cela signifie que les fonctions intégrées générant des métadonnées, telles que IDENT_INCR, peuvent retourner la valeur NULL si l'utilisateur ne dispose d'aucune autorisation sur l'objet. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un utilisateur peut seulement voir les métadonnées des sécurisables dont il est propriétaire ou pour lesquels il dispose des autorisations nécessaires. Sans autorisation d’objet utilisateur, une fonction intégrée générant des métadonnées, comme IDENT_INCR, risque de retourner NULL. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  
   
@@ -65,7 +65,7 @@ SELECT IDENT_INCR('Person.Address') AS Identity_Increment;
 GO  
 ```  
   
-### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. Renvoi de la valeur incrémentielle de plusieurs tables  
+### <a name="b-returning-the-increment-value-from-multiple-tables"></a>b. Renvoi de la valeur incrémentielle de plusieurs tables  
  L'exemple suivant retourne les tables de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] qui contiennent une colonne d'identité avec une valeur d'incrément.  
   
 ```  

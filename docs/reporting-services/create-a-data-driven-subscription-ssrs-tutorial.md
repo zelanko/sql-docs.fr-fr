@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: e4d15a3762c94d8a4daa6bb1837a2fd89be8fb88
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 32e4ca675330278d69994faa81b7bb3e4a13b4b6
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791751"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56291417"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Créer un abonnement piloté par les données (didacticiel SSRS)
 Ce tutoriel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vous enseigne les concepts des abonnements pilotés par les données en décrivant un exemple simple qui crée un abonnement piloté par les données pour générer et enregistrer une sortie de rapport filtrée dans un partage de fichiers. 
@@ -29,24 +29,25 @@ Ce tutoriel [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] vous ense
 + Automatiser la génération de rapports dans une grande variété de formats, par exemple .xlsx et .pdf.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
- Ce didacticiel est divisé en trois leçons :  
- Leçon | Commentaires
- ------- | --------------
- [Leçon 1 : Créer un exemple de base de données d’abonnés](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | Au cours de cette leçon, vous allez créer une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale qui contient des informations sur les abonnés. les informations Order Numbers à utiliser pour le filtrage et les formats des fichiers de sortie.
-[Leçon 2 : Configurer les propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) |Dans cette leçon, vous allez configurer une source de données de rapport pour que le rapport puisse s’exécuter de manière planifiée et sans assistance. Les informations d'identification stockées sont nécessaires pour le traitement autonome. Vous allez également modifier le dataset du rapport afin d'inclure un paramètre fourni par les données d'abonné. Ce paramètre sert à filtrer les données de rapport en fonction du numéro de commande.
- [Leçon 3 : Définir un abonnement piloté par les données](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | Dans cette leçon, vous allez créer un abonnement piloté par les données. Cette leçon vous guide à travers chaque page de l'Assistant Abonnement piloté par les données.
+Ce didacticiel est divisé en trois leçons :  
 
- Le diagramme suivant illustre le flux de travail de base du didacticiel
+| Leçon | Commentaires |
+| ------ | -------- |
+| [Leçon 1 : Créer un exemple de base de données d’abonnés](../reporting-services/lesson-1-creating-a-sample-subscriber-database.md) | Au cours de cette leçon, vous allez créer une base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] locale qui contient des informations sur les abonnés. les informations Order Numbers à utiliser pour le filtrage et les formats des fichiers de sortie. |
+| [Leçon 2 : Configurer les propriétés d’une source de données de rapport](../reporting-services/lesson-2-modifying-the-report-data-source-properties.md) | Dans cette leçon, vous allez configurer une source de données de rapport pour que le rapport puisse s’exécuter de manière planifiée et sans assistance. Les informations d'identification stockées sont nécessaires pour le traitement autonome. Vous allez également modifier le dataset du rapport afin d'inclure un paramètre fourni par les données d'abonné. Ce paramètre sert à filtrer les données de rapport en fonction du numéro de commande. |
+| [Leçon 3 : Définir un abonnement piloté par les données](../reporting-services/lesson-3-defining-a-data-driven-subscription.md) | Dans cette leçon, vous allez créer un abonnement piloté par les données. Cette leçon vous guide à travers chaque page de l'Assistant Abonnement piloté par les données. |
 
-Étape  |Description 
----------|---------
-(1)     |  La configuration d’un abonnement note le rapport source, le calendrier et le mappage des champs avec la base de données d’abonnés.        
-(2)     | La table OrderInfo contient quatre numéros de commande à utiliser pour le filtrage, un par fichier. Elle contient également les formats de fichiers pour les rapports générés.
-(3)     | Les informations de la base de données Adventureworks sont filtrées et retournées dans le rapport. 
-(4)     | Les rapports sont créés dans les formats de fichiers spécifiés dans la table Orderinfo.
+Le diagramme suivant illustre le flux de travail de base du tutoriel :
 
- 
- 
+| Étape    | Description |
+| --------|------------ |
+| (1)     | La configuration d’un abonnement note le rapport source, le calendrier et le mappage des champs avec la base de données d’abonnés. |
+| (2)     | La table OrderInfo contient quatre numéros de commande à utiliser pour le filtrage, un par fichier. Elle contient également les formats de fichiers pour les rapports générés. |
+| (3)     | Les informations de la base de données Adventureworks sont filtrées et retournées dans le rapport. |
+| (4)     | Les rapports sont créés dans les formats de fichiers spécifiés dans la table Orderinfo. |
+
+
+
    ![ssrs_tutorial_datadriven_flow](../reporting-services/media/ssrs-tutorial-datadriven-flow.png) 
   
 ## <a name="requirements"></a>Spécifications  

@@ -22,19 +22,19 @@ ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 013c620609b5f8d3fc603df993eda1af377c1a26
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 26baf53b4c5c3bddd768b2382f82583eae477605
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686785"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331579"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (Non supérieur à) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Compare deux expressions (opérateur de comparaison). Lorsque vous comparez des expressions non NULL, le résultat est TRUE si la valeur de l'opérande de gauche n'est pas supérieure à celle de l'opérande de droite ; dans le cas contraire, le résultat est FALSE. Contrairement à l'opérateur de comparaison = (égalité), le résultat de la comparaison !> de deux valeurs NULL ne dépend pas du paramètre ANSI_NULLS.  
+  Compare deux expressions (opérateur de comparaison). Dans le cas d’une comparaison d’expressions non NULL, le résultat est TRUE si la valeur de l'opérande de gauche n'est pas supérieure à celle de l'opérande de droite. Sinon, le résultat est FALSE. Contrairement à l'opérateur de comparaison = (égalité), le résultat de la comparaison !> de deux valeurs NULL ne dépend pas du paramètre ANSI_NULLS.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -53,5 +53,4 @@ expression !> expression
 ## <a name="see-also"></a> Voir aussi  
  [Types de données &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Opérateurs &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  
-  
   

@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Ajouter un histogramme à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.date: 09/02/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 509bce618c902ea06b3e64498b3e7445e0eaae4e
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711482"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56290657"
 ---
-# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : ajouter un histogramme à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Didacticiel : Ajouter un histogramme à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous allez créer un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] avec un histogramme affichant une série sous la forme d’un ensemble de barres verticales regroupées par catégorie. 
 
 Les histogrammes sont utiles pour :  
@@ -28,9 +28,9 @@ L'illustration suivante montre l'histogramme que vous allez créer, avec une moy
   
 ![didacticiel-histogramme-générateur-de-rapports](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 15 minutes.  
+Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  

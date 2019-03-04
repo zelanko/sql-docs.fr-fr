@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4fe513da-f3c5-479c-9fec-8662b91a0d6d
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: ac18d2a20d6f7f791b14b3e174ce87bef694cd19
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: ce654cc4724a71be36e49be71bdaf64994812567
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812181"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56293477"
 ---
 # <a name="specifying-paths-to-external-items-report-builder-and-ssrs"></a>Spécification de chemins d'accès à des éléments externes (Générateur de rapports et SSRS)
   Vous pouvez spécifier des chemins d'accès dans les propriétés d'éléments de rapport pour faire référence à des éléments externes au fichier de définition de rapport et qui sont stockés sur un serveur de rapports. Il peut s'agir notamment de rapports d'extraction, de sous-rapports et de fichiers image.  
@@ -37,9 +37,9 @@ ms.locfileid: "51812181"
   
 -   **Un chemin d'accès complet à l'élément.**  
   
-    -   **Sur un serveur de rapports :** le chemin d’accès commence par **/**, le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
+    -   **Sur un serveur de rapports :** Le chemin d'accès démarre à partir de **/**, le dossier de base. Par exemple, /Reports/AllSubreports/Subreport1.  
   
-    -   **Sur un site SharePoint :** vous devez spécifier le nom de rapport dans une expression en incluant l'URL complète de l'élément et l'extension de fichier .rdl. Par exemple, `="https://server/site/library/folder/Report1.rdl"`.  
+    -   **Sur un site SharePoint :** Vous devez spécifier le nom de rapport dans une expression en incluant l'URL complète de l'élément et l'extension de fichier .rdl. Par exemple, `="https://server/site/library/folder/Report1.rdl"`.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Ajouter une image externe &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/add-an-external-image-report-builder-and-ssrs.md)   

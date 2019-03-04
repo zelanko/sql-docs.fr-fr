@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc046c9e6f033dc77c85401b2007321c94e803e8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 076c4927ee5f3811b9c3415c1db30cc7cfa2a6a2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018151"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56287178"
 ---
 # <a name="date-transact-sql"></a>date (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,8 +42,8 @@ Définit une date dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 |Syntaxe|**date**|  
 |Utilisation|DECLARE \@MyDate **date**<br /><br /> CREATE TABLE Table1 ( Column1 **date** )|  
 |Format de littéral de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|AAAA-MM-JJ<br /><br /> Pour plus d’informations, consultez la section « Compatibilité descendante pour les clients de bas niveau » ci-dessous.|  
-|Plage|0001-01-01 à 9999-12-31 (1582-10-15 à 9999-12-31 pour Informatica)<br /><br /> Du 1er janvier de l’an 1 au 31 décembre 9999 (du 15 octobre 1582 au 31 décembre 9999 pour Informatica)|  
-|Plages d'éléments|AAAA comprend quatre chiffres, entre 0001 et 9999, qui représentent une année. Pour Informatica, AAAA se limite à la plage 1582 à 9999.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l'année spécifiée.<br /><br /> DD comprend deux chiffres, entre 01 et 31 selon le mois, qui représentent un jour du mois spécifié.|  
+|Plage|0001-01-01 à 9999-12-31 (1582-10-15 à 9999-12-31 pour Informatica)<br /><br /> Du 1er janvier de l’an 1 (de notre ère) au 31 décembre 9999 (du 15 octobre 1582 au 31 décembre 9999 pour Informatica)|  
+|Plages d'éléments|AAAA comprend quatre chiffres, entre 0001 et 9999, qui représentent une année. Pour Informatica, AAAA se limite à la plage 1582 à 9999.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l'année spécifiée.<br /><br /> JJ correspond à deux chiffres compris entre 01 et 31, selon le mois, qui représentent un jour du mois spécifié.|  
 |Longueur de caractère|10 positions|  
 |Précision, échelle|10, 0|  
 |Taille de stockage|3 octets, fixe|  
@@ -60,15 +60,15 @@ Les tableaux suivants affichent les formats de littéraux de chaîne valides pou
   
 |Numérique|Description|  
 |-------------|-----------------|  
-|mja<br /><br /> [m]m/jj/[aa]aa<br /><br /> [m]m-jj-[aa]aa<br /><br /> [m]m.jj.[aa]aa<br /><br /> maj<br /><br /> mm/[aa]aa/jj<br /><br /> mm-[aa]aa/jj<br /><br /> [m]m.[aa]aa.jj<br /><br /> jma<br /><br /> jj/[m]m/[aa]aa<br /><br /> jj-[m]m-[aa]aa<br /><br /> jj.[m]m.[aa]aa<br /><br /> jam<br /><br /> jj/[aa]aa/[m]m<br /><br /> jj-[aa]aa-[m]m<br /><br /> jj.[aa]aa.[m]m<br /><br /> amj<br /><br /> [aa]aa/[m]m/jj<br /><br /> [aa]aa-[m]m-jj<br /><br /> [aa]aa-[m]m-jj|[m]m, jj et [aa]aa représentent le mois, le jour et l'année dans une chaîne qui utilise des barres obliques (/), des traits d'union (-) ou des points (.) comme séparateurs.<br /><br /> Seules les années à deux ou quatre chiffres sont prises en charge. Utilisez des années à quatre chiffres chaque fois que possible. Pour spécifier un entier compris entre 0001 et 9999 qui représente l’année de coupure permettant d’interpréter les années à deux chiffres comme des années à quatre chiffres, utilisez [Configurer l’option de configuration de serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).<br /><br /> **Remarque** Pour Informatica, AAAA se limite à la plage 1582 à 9999.<br /><br /> Une année à deux chiffres inférieure ou égale aux deux derniers chiffres de l'année de coupure appartient au même siècle que l'année de coupure. Une année à deux chiffres supérieure aux deux derniers chiffres de l'année de coupure appartient au siècle qui précède l'année de coupure. Par exemple, si l'année de coupure à deux chiffres est l'année par défaut 2049, l'année à deux chiffres 49 est interprétée comme étant 2049 et l'année 50 comme étant 1950<br /><br /> Le format de date par défaut est déterminé par le paramètre de langue actuel. Vous pouvez modifier le format de date à l’aide des instructions [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) et [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> Le format **ydm** n’est pas pris en charge pour **date**.|  
+|mja<br /><br /> [m]m/jj/[aa]aa<br /><br /> [m]m-jj-[aa]aa<br /><br /> [m]m.jj.[aa]aa<br /><br /> maj<br /><br /> mm/[aa]aa/jj<br /><br /> mm-[aa]aa/jj<br /><br /> [m]m.[aa]aa.jj<br /><br /> jma<br /><br /> jj/[m]m/[aa]aa<br /><br /> jj-[m]m-[aa]aa<br /><br /> jj.[m]m.[aa]aa<br /><br /> jam<br /><br /> jj/[aa]aa/[m]m<br /><br /> jj-[aa]aa-[m]m<br /><br /> jj.[aa]aa.[m]m<br /><br /> amj<br /><br /> [aa]aa/[m]m/jj<br /><br /> [aa]aa-[m]m-jj<br /><br /> [aa]aa-[m]m-jj|[m]m, jj et [aa]aa représentent le mois, le jour et l'année dans une chaîne qui utilise des barres obliques (/), des traits d'union (-) ou des points (.) comme séparateurs.<br /><br /> Seules les années à deux ou quatre chiffres sont prises en charge. Utilisez des années à quatre chiffres chaque fois que possible. Pour spécifier un entier compris entre 0001 et 9999 qui représente l’année de coupure permettant d’interpréter les années à deux chiffres comme des années à quatre chiffres, utilisez [Configurer l’option de configuration de serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md).<br /><br /> **Remarque** Pour Informatica, AAAA se limite à la plage 1582 à 9999.<br /><br /> Une année à deux chiffres inférieure ou égale aux deux derniers chiffres de l'année de coupure appartient au même siècle que l'année de coupure. Une année à deux chiffres supérieure aux deux derniers chiffres de l'année charnière appartient au siècle précédant cette année charnière. Par exemple, si l'année de coupure à deux chiffres est l'année par défaut 2049, l'année à deux chiffres 49 est interprétée comme étant 2049 et l'année 50 comme étant 1950<br /><br /> Le format de date par défaut est déterminé par le paramètre de langue actuel. Vous pouvez modifier le format de date à l’aide des instructions [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) et [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> Le format **ajm** n’est pas pris en charge pour **date**.|  
   
 |Alphabétique|Description|  
 |------------------|-----------------|  
-|mois [jj][,] aaaa<br /><br /> mois jj[,] [aa]aa<br /><br /> mois aaaa [jj]<br /><br /> [jj] mois[,] aaaa<br /><br /> jj mois[,][aa]aa<br /><br /> jj [aa]aa mois<br /><br /> [jj] aaaa mois<br /><br /> aaaa mois [jj]<br /><br /> aaaa [jj] mois|**mon** représente le nom complet du mois ou son abréviation dans le langage actuel. Les virgules sont facultatives et les majuscules sont ignorées.<br /><br /> Pour éviter toute ambiguïté, représentez les années à l'aide de quatre chiffres.<br /><br /> Si le jour n'est pas précisé, le premier jour du mois est rajouté.|  
+|mois [jj][,] aaaa<br /><br /> mois jj[,] [aa<br /><br /> mois aaaa [jj]<br /><br /> [jj] mois[,] aaaa<br /><br /> jj mois[,][aa]aa<br /><br /> jj [aa]aa mois<br /><br /> [jj] aaaa mois<br /><br /> aaaa mois [jj]<br /><br /> aaaa [jj] mois|**mon** représente le nom complet du mois ou son abréviation dans le langage actuel. Les virgules sont facultatives et les majuscules sont ignorées.<br /><br /> Pour éviter toute ambiguïté, représentez les années à l'aide de quatre chiffres.<br /><br /> Si le jour n'est pas précisé, le premier jour du mois est rajouté.|  
   
 |ISO 8601|Description|  
 |--------------|----------------|  
-|AAAA-MM-JJ<br /><br /> AAAAMMJJ|Identique à la norme SQL. Il s'agit du seul format qui est défini comme une norme internationale.|  
+|AAAA-MM-JJ<br /><br /> AAAAMMJJ|Identique à la norme SQL. C’est le seul format qui soit défini comme norme internationale.|  
   
 |Non séparé|Description|  
 |-----------------|-----------------|  
@@ -80,12 +80,12 @@ Les tableaux suivants affichent les formats de littéraux de chaîne valides pou
   
 |Format XML W3C|Description|  
 |--------------------|-----------------|  
-|aaaa-mm-jjTZD|Spécifiquement pris en charge pour une utilisation XML/SOAP.<br /><br /> TZD est l'indicateur de fuseau horaire (Z ou +hh:mm ou -hh:mm) :<br /><br /> -   hh:mm représente le décalage de fuseau horaire. hh comprend deux chiffres, entre 0 et 14, qui représentent le nombre d'heures dans le décalage de fuseau horaire.<br />-   MM comprend deux chiffres, entre 0 et 59, qui représentent le nombre de minutes supplémentaires dans le décalage de fuseau horaire.<br />-   + (plus) ou - (moins) est le signe obligatoire du décalage de fuseau horaire. Cela indique si le décalage de fuseau horaire est ajouté au temps universel coordonné ou soustrait de celui-ci pour obtenir l'heure locale. La plage valide du décalage de fuseau horaire se situe entre -14:00 et +14:00.|  
+|aaaa-mm-jjTZD|Pris en charge pour l’utilisation de XML/SOAP.<br /><br /> TZD est l'indicateur de fuseau horaire (Z ou +hh:mm ou -hh:mm) :<br /><br /> -   hh:mm représente le décalage de fuseau horaire. hh comprend deux chiffres, entre 0 et 14, qui représentent le nombre d'heures dans le décalage de fuseau horaire.<br />-   MM comprend deux chiffres, entre 0 et 59, qui représentent le nombre de minutes supplémentaires dans le décalage de fuseau horaire.<br />-   + (plus) ou - (moins) est le signe obligatoire du décalage de fuseau horaire. Ce signe indique si, pour obtenir l'heure locale, le décalage de fuseau horaire est ajouté au temps universel coordonné (UTC) ou en est soustrait. La plage valide du décalage de fuseau horaire se situe entre -14:00 et +14:00.|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformité ANSI et ISO 8601  
 **date** est conforme à la définition de la norme SQL ANSI pour le calendrier grégorien : « NOTE 85 - Les types de données Datetime autorisent le stockage des dates au format grégorien dans la plage 0001-01-01 CE à 9999–12–31 CE. »
   
-Le format de littéral de chaîne par défaut (utilisé pour les clients de bas niveau) s'alignera avec le format standard SQL qui est défini comme AAAA-MM-JJ. Ce format est le même que la définition ISO 8601 pour DATE.
+Le format de littéral de chaîne par défaut, utilisé pour les clients de bas niveau, respecte le format standard SQL, défini comme AAAA-MM-JJ. Ce format est le même que la définition ISO 8601 pour DATE.
   
 > [!NOTE]  
 >  Pour Informatica, la plage s’étend du 1582-10-15 (15 octobre 1582) au 9999-12-31 (31 décembre 9999).  
@@ -101,9 +101,10 @@ Certains clients de bas niveau ne prennent pas en charge les types de données *
 |**datetimeoffset**|AAAA-MM-JJ hh:mm:ss[.nnnnnnn] [+&#124;-]hh:mm|SQL_WVARCHAR ou SQL_VARCHAR|DBTYPE_WSTR ou DBTYPE_STR|Java.sql.String|String ou SqString|  
   
 ## <a name="converting-date-and-time-data"></a>Conversion de données date et time
-Lorsque vous effectuez une conversion vers des types de données date et heure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs qu'il ne peut identifier comme dates ou heures. Pour plus d’informations sur l’utilisation des fonctions CAST et CONVERT avec des données date et time, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
+En cas de conversion vers des types de données date et time, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs qu'il ne peut identifier comme date ou time. Pour plus d’informations sur l’utilisation des fonctions CAST et CONVERT avec des données date et time, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).  
   
 ### <a name="converting-date-to-other-date-and-time-types"></a>Conversion de date en d’autres types de données date et time
+
 Cette section décrit ce qui se produit quand un type de données **date** est converti en d’autres types de données date et time.
   
 Dans le cas d’une conversion en **time(n)**, la conversion échoue et le message d’erreur 206 est généré : « Conflit de types d’opérandes : date est incompatible avec time ».
@@ -124,7 +125,7 @@ SELECT @date AS '@date', @datetime AS '@datetime';
 --(1 row(s) affected)  
 ```  
   
-Dans le cas d’une conversion en **smalldatetime**, quand la valeur **date** est comprise dans la plage d’une valeur [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), le composant date est copié et le composant heure est défini sur 00:00:00.000. Quand la valeur **date** est en dehors de la plage d’une valeur **smalldatetime**, le message d’erreur 242 est généré : « La conversion d’un type de données date en type de données smalldatetime a créé une valeur hors limites », et la valeur **smalldatetime** est définie sur NULL. Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `smalldatetime`.
+Dans le cas d’une conversion en **smalldatetime**, quand la valeur **date** est comprise dans la plage d’une valeur [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md), le composant date est copié et le composant heure défini sur 00:00:00.000. Quand la valeur **date** est en dehors de la plage d’une valeur **smalldatetime**, le message d’erreur 242 est généré : « The conversion of a date data type to a smalldatetime data type resulted in an out-of-range value », et la valeur **smalldatetime** est définie sur NULL. Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `smalldatetime`.
   
 ```sql
 DECLARE @date date= '1912-10-25';  
@@ -173,11 +174,11 @@ SELECT @date AS '@date', @datetime2 AS '@datetime2(3)';
 ```  
   
 ### <a name="converting-string-literals-to-date"></a>Conversion de littéraux de chaîne en date
-Les conversions de littéraux de chaîne en types de date et d'heure sont autorisées si toutes les parties des chaînes sont dans des formats valides. Sinon, une erreur d'exécution est déclenchée. Les conversions implicites ou explicites qui ne spécifient pas de style à partir de types de date et d'heure en littéraux de chaîne seront au format par défaut de la session active. Le tableau suivant montre les règles de conversion d’un littéral de chaîne en type de données **date**.
+Les conversions de littéraux de chaîne en types date et time sont autorisées si toutes les parties des chaînes ont un format valide. Sinon, une erreur d'exécution est déclenchée. Les conversions implicites ou explicites de types date et time en littéraux de chaîne qui ne spécifient pas de style se font au format par défaut de la session active. Le tableau suivant montre les règles de conversion d’un littéral de chaîne en type de données **date**.
   
 |Littéral de chaîne d'entrée|**date**|  
 |---|---|
-|ODBC DATE|Les littéraux de chaîne ODBC sont mappés au type de données **datetime**. Toute opération d’affectation de littéraux ODBC DATETIME dans un type **date** provoque une conversion implicite entre **datetime** et ce type, comme défini par les règles de conversion.|  
+|ODBC DATE|Les littéraux de chaîne ODBC sont mappés au type de données **datetime**. Toute opération d’affectation de littéraux ODBC DATETIME en un type **date** provoque une conversion implicite entre **datetime** et le type défini par les règles de conversion.|  
 |ODBC TIME|Consultez la règle DATE ODBC précédente.|  
 |ODBC DATETIME|Consultez la règle DATE ODBC précédente.|  
 |DATE uniquement|Simple|  

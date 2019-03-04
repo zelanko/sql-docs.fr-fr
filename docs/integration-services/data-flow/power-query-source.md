@@ -1,12 +1,15 @@
 ---
 title: Source Power Query | Microsoft Docs
 description: Découvrez comment configurer la source Power Query dans le flux de données SQL Server Integration Services
-ms.date: 02/02/2019
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
+- sql13.ssis.designer.powerqueryconnmgr.f1
+- sql13.ssis.designer.powerquerysource.queries.f1
+- sql13.ssis.designer.powerquerysource.connmgrs.f1
 - sql14.ssis.designer.powerqueryconnmgr.f1
 - sql14.ssis.designer.powerquerysource.queries.f1
 - sql14.ssis.designer.powerquerysource.connmgrs.f1
@@ -14,12 +17,12 @@ author: swinarko
 ms.author: sawinark
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: 00b24bdc5da2c717f43ca30e9159aa845faf171b
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 072cf951eabd5d7d0ae2211427a66e63900cfb72
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570702"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319310"
 ---
 # <a name="power-query-source-preview"></a>Source Power Query (préversion)
 
@@ -68,9 +71,6 @@ Dans **l’éditeur du Gestionnaire de connexion Power Query**, vous devez spéc
 
 Certaines de ces sources (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) nécessitent l’installation de pilotes ADO.NET supplémentaires qui peuvent être obtenus à partir de l’article [Prérequis pour Power Query](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a). Vous pouvez utiliser l’interface de configuration personnalisée pour les installer sur votre runtime d’intégration Azure-SSIS, consultez l’article [Personnalisation du runtime d’intégration Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
-> [!NOTE]
-> Pour la source de données **Oracle**, le pilote Oracle ADO.NET ne peut pas être installé sur le runtime d’intégration Azure-SSIS pour le moment. Donc, installez le pilote Oracle ODBC à la place et utilisez la source de données **ODBC** pour vous connecter à Oracle pour l’instant. Consultez l’exemple **ORACLE STANDARD ODBC** dans l’article [Personnalisation du runtime d’intégration Azure-SSIS](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
-
 Pour le **Chemin d’accès à la source de données**, vous pouvez entrer des propriétés spécifiques à la source de données formant une chaîne de connexion sans les informations d’authentification. Par exemple, le chemin d’accès à la source de données **SQL** est `<Server>;<Database>`. Vous pouvez sélectionner le bouton **Modifier** pour attribuer des valeurs aux propriétés spécifiques à la source de données qui forment le chemin d’accès.
 
 ![Source PQ, Gestionnaires de connexions, Éditeur, Chemin d’accès](media/power-query-source/pq-source-connection-manager-editor-path.png)
@@ -78,6 +78,12 @@ Pour le **Chemin d’accès à la source de données**, vous pouvez entrer des p
 Enfin, pour le **Type d’authentification**, vous pouvez sélectionner **Anonyme**/**Authentification Windows**/**Mot de passe du nom d’utilisateur**/**Clé** dans le menu déroulant, entrez les informations d’identification d’accès appropriées, puis sélectionnez le bouton **Tester la connexion** pour vous assurer que la source Power Query a été configurée correctement.
 
 ![Source PQ, Gestionnaires de connexions, Éditeur, Authentification](media/power-query-source/pq-source-connection-manager-editor-authentication.png)
+
+### <a name="current-limitations"></a>Limites actuelles
+
+-   La source de données **Oracle** n’est pas utilisable à l’heure actuelle, car il n’est pas possible d’installer le pilote ADO.NET Oracle sur Azure-SSIS Integration Runtime. Pour l’instant, installez le pilote ODBC Oracle et utilisez la source de données **ODBC** pour vous connecter à Oracle. Voir l’exemple **ORACLE STANDARD ODBC** dans l’article [Personnaliser Azure-SSIS Integration Runtime](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+
+-   La source de données **Web** n’est pas utilisable sur Azure-SSIS Integration Runtime avec l’installation personnalisée. Pour l’instant, utilisez-la sur Azure-SSIS Integration Runtime sans l’installation personnalisé.
 
 ## <a name="next-steps"></a>Étapes suivantes
 Découvrez comment exécuter des packages SSIS dans le runtime d’intégration Azure-SSIS en tant qu’activités de première classe dans les pipelines ADF. Consultez l’article [Exécuter le runtime d’activité du package SSIS](https://docs.microsoft.com/azure/data-factory/how-to-invoke-ssis-package-ssis-activity).

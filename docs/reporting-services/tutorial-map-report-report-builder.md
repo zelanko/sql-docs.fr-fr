@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : rapport cartographique (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Rapport cartographique (Générateur de rapports) | Microsoft Docs'
 ms.date: 08/31/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712710"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298647"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
+# <a name="tutorial-map-report-report-builder"></a>Didacticiel : Rapport cartographique (Générateur de rapports)
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous allez découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données sur un arrière-plan géographique d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Les cartes sont basées sur des données spatiales qui comportent en général des points, des lignes et des polygones. Par exemple, un polygone peut représenter le contour d'un comté, une ligne peut représenter une route, et un point peut représenter l'emplacement d'une ville. Chaque type de données spatiales est affiché sur une couche séparée sous la forme d'un jeu d'éléments cartographiques.  
@@ -27,9 +27,9 @@ Pour faire varier l'apparence des éléments cartographiques, vous devez spécif
 Dans ce didacticiel, vous créez un rapport cartographique qui affiche les emplacements des magasins dans les comtés de l’État de New York.  
    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données, la création d’un dataset et l’exécution de l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données, créer un jeu de données et exécuter l’Assistant, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+Durée estimée pour effectuer ce didacticiel : 30 minutes  
   
 ## <a name="requirements"></a>Spécifications  
 Pour ce didacticiel, le serveur de rapports doit être configuré pour prendre en charge les cartes Bing comme arrière-plan. Pour plus d’informations, consultez [Planifier la prise en charge de rapport cartographique](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
@@ -79,7 +79,7 @@ Dans cette section, vous ajoutez une carte à votre rapport à partir de la bibl
   
     -   une légende contenant un titre et une liste d'éléments de 1 à 5 ;  
   
-    -   une échelle de couleurs contenant les valeurs de 0 à 160 et la valeur Aucune couleur ;  
+    -   une échelle de couleurs contenant les valeurs de 0 à 160 et la valeur Aucune couleur ;  
   
     -   une échelle des distances qui affiche les kilomètres (km) et les miles (mi).  
     
@@ -169,13 +169,13 @@ Dans cette section, vous utilisez l’Assistant Couche pour ajouter une couche d
 9. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**).  
   
     Le jeu de résultats contient sept colonnes représentant un ensemble de magasins dans l’état de New York qui vendent des biens de consommation. Voici une liste, avec des explications pour les éléments qui ne sont peut-être pas évidents : 
-    *   **StoreKey**: identificateur de magasin.  
+    *   **StoreKey** : identificateur de magasin.  
     *   **StoreName**.
-    *   **SellingArea**: zone disponible pour l’affichage des produits, comprise entre 455 pieds carrés et 1125 pieds carrés.
+    *   **SellingArea** : espace disponible pour la présentation des produits, compris entre 455 et 1 125 pieds carrés.
     *   **City**.
     *   **County**.
-    *   **Sales**: total des ventes. 
-    *   **SpatialLocation**: emplacement en longitude et latitude. 
+    *   **Sales** : total des ventes. 
+    *   **SpatialLocation** : emplacement en longitude et latitude. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
   

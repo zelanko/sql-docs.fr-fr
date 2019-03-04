@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : ajouter un paramètre à votre rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Didacticiel : Ajouter un paramètre à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52712360"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56286947"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : ajouter un paramètre à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : Ajouter un paramètre à un rapport (Générateur de rapports)
 Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] pour que les lecteurs de ce dernier puissent filtrer ses données en fonction d’une ou de plusieurs valeurs. 
   
 ![report-builder-parameter-tutorial](../reporting-services/media/report-builder-parameter-tutorial.png)
@@ -23,9 +23,9 @@ Dans ce didacticiel, vous ajoutez un paramètre à un rapport paginé [!INCLUDE[
 Les paramètres de rapport sont créés automatiquement pour chaque paramètre de requête que vous incluez dans une requête de dataset. Le type de données du paramètre détermine son apparence dans la barre d'outils de l'affichage du rapport. 
    
 > [!NOTE]  
-> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l’accès à un serveur de rapports, le choix d’une source de données et la création d’un dataset, consultez le premier didacticiel de cette série : [Didacticiel : création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
-Durée estimée pour effectuer le didacticiel : 25 minutes.  
+Durée estimée pour effectuer ce didacticiel : 25 minutes.  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -82,7 +82,7 @@ Créez un rapport de matrice, une source de données et un dataset.
   
 11. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**) pour voir les données.   
   
-    Le jeu de résultats comprend 11 lignes de données qui montrent le volume d’articles vendus pour chaque sous-catégorie dans quatre magasins, dans les colonnes suivantes : StoreID, Subcategory et Quantity. Le nom du magasin ne fait pas partie du jeu de résultats. Ultérieurement, dans ce didacticiel, vous rechercherez le nom du magasin qui correspond à l'identificateur de magasin d'un dataset distinct.  
+    Le jeu de résultats se compose de 11 lignes de données indiquant le volume d'articles vendus pour chaque sous-catégorie dans quatre magasins, dans les colonnes suivantes : StoreID, Subcategory et Quantity. Le nom du magasin ne fait pas partie du jeu de résultats. Ultérieurement, dans ce didacticiel, vous rechercherez le nom du magasin qui correspond à l'identificateur de magasin d'un dataset distinct.  
   
     Cette requête ne contient pas de paramètres de requête. Vous ajouterez ultérieurement des paramètres de requête dans ce didacticiel.   
   
@@ -308,7 +308,7 @@ Un dataset peut contenir à la fois l'identificateur et le champ Nom corresponda
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    L’en-tête de colonne de magasin contient le texte affiché pour une expression complexe : **Expr**.  
+    L'en-tête de colonne du magasin contient le texte d’affichage d’une expression complexe : **Expr**.  
   
 8.  Affichez l'aperçu du rapport.  
   

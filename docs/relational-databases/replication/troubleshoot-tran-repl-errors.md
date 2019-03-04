@@ -1,5 +1,5 @@
 ---
-title: 'Résolution des problèmes : Rechercher des erreurs dans la réplication transactionnelle SQL Server | Microsoft Docs'
+title: 'Outil de résolution des problèmes : Rechercher des erreurs dans la réplication transactionnelle SQL Server | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2018
 ms.prod: sql
@@ -11,14 +11,14 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 022c63e58d212c5b45f18fcfc60b169dae9be81d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675898"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154884"
 ---
-# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Résolution des problèmes : Rechercher des erreurs dans la réplication transactionnelle SQL Server 
+# <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Outil de résolution des problèmes : Rechercher des erreurs dans la réplication transactionnelle SQL Server 
 Le dépannage des erreurs de réplication peuvent être frustrant si vous n’avez pas une connaissance de base du fonctionnement de la réplication transactionnelle. La première étape de création d’une publication consiste à faire en sorte que l’Agent d’instantané crée l’instantané et l’enregistre dans le dossier des instantanés. Ensuite, l’Agent de distribution applique l’instantané à l’abonné. 
 
 Ce processus crée la publication et la place dans l’état *En cours de synchronisation*. La synchronisation fonctionne en trois phases :
@@ -45,7 +45,7 @@ Des erreurs peuvent se produire à chaque étape de ce processus. La recherche d
 1. Utilisez le moniteur de réplication pour identifier à quel point la réplication rencontre l’erreur (quel agent ?) :
    - Si les erreurs se produisent dans la section **Du serveur de publication vers le serveur de distribution**, c’est que le problème concerne l’Agent de lecture du journal. 
    - Si les erreurs se produisent dans la section **Du serveur de distribution vers l’Abonné**, c’est que le problème concerne l’Agent de distribution.  
-2. Examinez l’historique des travaux de cet agent dans le moniteur d’activité des travaux pour identifier les détails de l’erreur. Si l’historique des travaux ne montre pas suffisamment de détails, vous pouvez [activer la journalisation détaillée](#enable-verbose-logging) sur cet agent spécifique.
+2. Examinez l’historique des travaux de cet agent dans le moniteur d’activité des travaux pour identifier les détails de l’erreur. Si l’historique des travaux ne montre pas suffisamment de détails, vous pouvez [activer la journalisation détaillée](#enable-verbose-logging-on-any-agent) sur cet agent spécifique.
 3. Essayez de déterminer une solution pour l’erreur.
 
 
@@ -86,7 +86,7 @@ L’Agent de lecture du journal se connecte à votre base de données du serveur
 
     ![Commande « Lancer le moniteur de réplication » du menu contextuel](media/troubleshooting-tran-repl-errors/launch-repl-monitor.png)
   
-    Le moniteur de réplication s’ouvre : ![Moniteur de réplication](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
+    Le Moniteur de réplication s’ouvre : ![Moniteur de réplication](media/troubleshooting-tran-repl-errors/repl-monitor.png) 
    
 2. La croix (X) rouge indique que la publication ne se synchronise pas. Développez **Mes serveurs de publication** du côté gauche, puis développez le serveur de publication approprié.  
   

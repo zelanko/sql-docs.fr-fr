@@ -29,53 +29,53 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b85685dd15e6eb7dd2350bdeda5befb28959c281
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0580ed82ca6ab5d94b1411ba70ce1b0d2f3ff770
+ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202798"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56154714"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Conventions de la syntaxe Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Le tableau suivant répertorie et décrit les conventions utilisées dans les diagrammes de syntaxe du Guide de référence [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+Le tableau suivant répertorie et décrit les conventions utilisées dans les diagrammes de syntaxe du Guide de référence [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
 |Convention|Utilisé pour|  
 |----------------|--------------|  
 |MAJUSCULES|Mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
-|*italique*|Paramètres de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] fournis par l'utilisateur.|  
-|**gras**|Noms de bases de données, de tables, de colonnes, d'index, de procédures stockées, d'utilitaires, de types de données et de textes à taper tel qu'indiqués.|  
-|_underline_|Indique que l'instruction est omise par la valeur par défaut appliquée lorsque la clause contient la valeur soulignée.|  
+|_italique_|Paramètres de syntaxe [!INCLUDE[tsql](../../includes/tsql-md.md)] fournis par l'utilisateur.|  
+|**gras**|Entrez les noms de bases de données, de tables, de colonnes, d'index, de procédures stockées, d'utilitaires, de types de données et de textes exactement comme ils sont indiqués.|  
+|souligné|Indique que l'instruction est omise par la valeur par défaut appliquée lorsque la clause contient la valeur soulignée.|  
 |&#124; (barre verticale)|Sépare les éléments de syntaxe placés entre crochets ou entre accolades. Vous ne pouvez utiliser qu'un seul de ces éléments.|  
 |`[ ]` (crochets)|Éléments de syntaxe facultatifs. Ne tapez pas les crochets.|  
 |{} (accolades)|Éléments de syntaxe obligatoires. Ne tapez pas les accolades.|  
-|[**,**...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des virgules.|  
-|[...*n*]|Indique que l’élément précédent peut se répéter *n* fois. Les occurrences sont séparées par des espaces.|  
+|[**,**..._n_]|Indique que l’élément précédent peut se répéter _n_ fois. Les occurrences sont séparées par des virgules.|  
+|[..._n_]|Indique que l’élément précédent peut se répéter _n_ fois. Les occurrences sont séparées par des espaces.|  
 |;|Terminateur d'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)]. Bien que le point-virgule ne soit pas requis pour la plupart des instructions dans cette version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il sera requis dans une version à venir.|  
-|\<étiquette> ::=|Nom d'un bloc de syntaxe. Cette convention est utilisée pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe pouvant apparaître à plusieurs emplacements au sein d'une instruction. Tous les emplacements dans lesquels le bloc de syntaxe peut être utilisé sont signalés par une étiquette encadrée de chevrons : \<étiquette>.<br /><br /> Un jeu est une collection d’expressions, par exemple un \<jeu de regroupement>, et une liste est une collection de jeux, par exemple une \<liste d’éléments composites>.|  
+|\<étiquette> ::=|Nom d'un bloc de syntaxe. Utilisez cette convention pour regrouper et étiqueter des sections de syntaxe longue ou une unité de syntaxe que vous pouvez utiliser à plusieurs emplacements au sein d'une instruction. Tous les emplacements dans lesquels le bloc de syntaxe peut être utilisé sont signalés par une étiquette encadrée de chevrons : \<étiquette>.<br /><br /> Un jeu est une collection d’expressions, par exemple un \<jeu de regroupement>, et une liste est une collection de jeux, par exemple une \<liste d’éléments composites>.|  
   
 ## <a name="multipart-names"></a>Noms à plusieurs composantes  
- Sauf indication contraire, toutes les références [!INCLUDE[tsql](../../includes/tsql-md.md)] au nom d'un objet de base de données peuvent prendre la forme d'un nom à quatre composantes, comme suit :  
+Sauf indication contraire, toutes les références [!INCLUDE[tsql](../../includes/tsql-md.md)] au nom d'un objet de base de données peuvent prendre la forme d'un nom à quatre composantes, comme suit :  
   
-*server_name* **.**[*database_name*]**.**[*schema_name*]**.**_object\_name_  
+_server\_name_.[_database\_name_].[_schema\_name_]._object\_name_  
   
- | _database\_name_**.**[_schema\_name_]**.**_object\_name_  
+| _database\_name_.[_schema\_name_]._object\_name_  
+ 
+| _schema\_name_._object\_name_  
   
- | _schema\_name_**.**_object\_name_  
-  
- | _object\_name_  
+| _object\_name_  
   
 _server\_name_  
 Spécifie un nom de serveur lié ou un nom de serveur distant.  
   
-*database_name*  
+_database\_name_  
 Spécifie le nom d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsque l'objet réside dans une instance locale de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Quand l’objet se trouve dans un serveur lié, *database_name* spécifie un catalogue OLE DB.  
   
-*schema_name*  
+_schema\_name_  
 Spécifie le nom du schéma contenant l'objet si celui-ci réside dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Lorsque l’objet se trouve dans un serveur lié, *schema_name* spécifie un nom de schéma OLE DB.  
   
-*object_name*  
+_object\_name_  
 Fait référence au nom de l'objet.  
   
 Lorsque vous faites référence à un objet en particulier, il n'est pas toujours nécessaire de spécifier le serveur, la base de données et le schéma pour que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] l'identifie. Cependant, si l’objet est introuvable, un message d’erreur est retourné.  
@@ -87,14 +87,14 @@ Pour omettre des nœuds intermédiaires, utilisez des points pour indiquer ces e
   
 |Format de la référence d'objet|Description|  
 |-----------------------------|-----------------|  
-|*server* **.** *database* **.** *schema* **.** *object*|Nom à quatre composantes.|  
-|*server* **.** *database* **..** *object*|Le nom du schéma est omis.|  
-|*server* **..** *schema* **.** *object*|Le nom de la base de données est omis.|  
-|*server* **...** *object*|Les noms de la base de données et du schéma sont omis.|  
-|*database* **.** *schema* **.** *object*|Le nom du serveur est omis.|  
-|*database* **..** *object*|Les noms du serveur et du schéma sont omis.|  
-|*schema* **.** *object*|Les noms du serveur et de la base de données sont omis.|  
-|*object*|Les noms du serveur, de la base de données et du schéma sont omis.|  
+|_server_._database_._schema_._object_|Nom à quatre composantes.|  
+|_server_._database_.._object_|Le nom du schéma est omis.|  
+|_server_.._schema_._object_|Le nom de la base de données est omis.|  
+|_server_..._object_|Les noms de la base de données et du schéma sont omis.|  
+|_database_._schema_._object_|Le nom du serveur est omis.|  
+|_database_.._object_|Les noms du serveur et du schéma sont omis.|  
+|_schema_._object_|Les noms du serveur et de la base de données sont omis.|  
+|_object_|Les noms du serveur, de la base de données et du schéma sont omis.|  
   
 ## <a name="code-example-conventions"></a>Conventions des exemples de code  
 Sauf indication contraire, les exemples fournis dans le Guide de référence [!INCLUDE[tsql](../../includes/tsql-md.md)] ont été testés à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et de ses paramètres par défaut pour les options suivantes :  
@@ -111,11 +111,11 @@ La plupart des exemples de code figurant dans le Guide de référence [!INCLUDE[
 De nombreux exemples de code font précéder les constantes de chaînes de caractères Unicode de la lettre **N**. Sans le préfixe **N**, la chaîne est convertie en page de codes par défaut de la base de données. Cette page risque de ne pas reconnaître certains caractères.  
   
 ## <a name="applies-to-references"></a>Informations de référence de type « S'applique à »  
-Les informations de référence sur [!INCLUDE[tsql](../../includes/tsql-md.md)] comprennent des articles sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
+Les informations de référence sur [!INCLUDE[tsql](../../includes/tsql-md.md)] comprennent des articles sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (entre [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)].   
 
 En haut de chaque article se trouve une section indiquant les produits qui prennent en charge le sujet de l’article. Si un produit est omis, alors la fonctionnalité décrite par l’article n’est pas disponible dans ce produit. Par exemple, les groupes de disponibilité ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. L’article **CREATE AVAILABILITY GROUP** indique qu’il s’applique à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), car il ne s’applique pas à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-Dans certains cas, le sujet général de l’article peut être utilisé dans un produit, mais tous les arguments ne sont pas pris en charge. Par exemple, les utilisateurs de base de données autonome ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. L’instruction **CREATE USER** peut être utilisée dans tous les produits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais la syntaxe **WITH PASSWORD** ne peut pas être utilisée avec les versions plus anciennes. Dans ce cas, des sections **S’applique à** supplémentaires sont insérées dans les descriptions des arguments appropriés dans le corps de l’article.  
+Dans certains cas, le sujet général de l’article peut être utilisé dans un produit, mais tous les arguments ne sont pas pris en charge. Par exemple, les utilisateurs de base de données autonome ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Utilisez l’instruction **CREATE USER** dans tous les produits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais la syntaxe **WITH PASSWORD** ne peut pas être utilisée avec les versions plus anciennes. Des sections **S’applique à** supplémentaires sont insérées dans les descriptions des arguments appropriés dans le corps de l’article.  
   
 ## <a name="see-also"></a> Voir aussi  
 [Référence Transact-SQL &#40;moteur de base de données&#41;](../../t-sql/transact-sql-reference-database-engine.md)    

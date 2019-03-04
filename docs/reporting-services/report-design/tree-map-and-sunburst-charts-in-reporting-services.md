@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 12307c8f-bca7-4d21-8ad5-0c07d819865b
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c255369e8292aa2b7275a58d5e8375890153a5aa
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 012963436b26952cd730a82bbf407803ac600fe2
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814102"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295547"
 ---
 # <a name="treemap-and-sunburst-charts-in-reporting-services"></a>Graphiques de compartimentage et en rayons de soleil dans Reporting Services
 [!INCLUDE[feedback-stackoverflow-msdn-connect-md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
@@ -40,11 +40,11 @@ Par exemple, dans l’exemple de graphique de compartimentage suivant, le territ
   
 3.  Ajoutez les champs suivants à partir de l’échantillon de données :  
   
-    * **Values** (Valeurs) : LineTotal (Total de la ligne)
+    * **Valeurs** : LineTotal
     * **Category Groups** (Groupes de catégories) (dans l’ordre suivant) :
         1. CategoryName (Nom de catégorie)
         2. SubcategoryName (Nom de sous-catégorie)
-    * **Series Groups** (Groupes de séries) : TerritoryName (Nom de territoire)  
+    * **Groupes de séries** : TerritoryName  
 
     ![propriétés_exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "propriétés_exemple_graphique_compartimentage_ssrs")
   
@@ -85,12 +85,12 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
   
 3.  Ajoutez les champs suivants à partir de l’échantillon de données :  
 
-    * **Values** (Valeurs) : LineTotal (Total de la ligne)
+    * **Valeurs** : LineTotal
     * **Category Groups** (Groupes de catégories) (dans l’ordre suivant) :
         1. CategoryName (Nom de catégorie)
         2. SubcategoryName (Nom de sous-catégorie)
         3. SalesReasonName (Nom du motif de vente)
-    * **Series Groups** (Groupes de séries) : TerritoryName (Nom de territoire)  
+    * **Groupes de séries** : TerritoryName  
 
     ![propriétés_exemple_graphique_compartimentage_ssrs](../../reporting-services/report-design/media/ssrs-treemap-example-properties.png "propriétés_exemple_graphique_compartimentage_ssrs")
   
@@ -114,7 +114,7 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
   
 1.  **Obtenez les données**.  
   
-     La requête de cette section porte sur la base de données AdventureWorks disponible en téléchargement sur GitHub :[Adventure Works 2016 Full Database Backup](https://github.com/Microsoft/sql-server-samples/releases).  
+     La requête de cette section porte sur la base de données AdventureWorks disponible au téléchargement sur GitHub : [AdventureWorks 2016 full database backup](https://github.com/Microsoft/sql-server-samples/releases).  
   
   
 2.  **Créez une source de données**.  
@@ -176,8 +176,8 @@ Dans un graphique en rayons de soleil, la hiérarchie est représentée par une 
 ## <a name="see-also"></a>Voir aussi  
 * [Mode création de dataset partagé &#40;Générateur de rapports&#41;](../../reporting-services/report-builder/shared-dataset-design-view-report-builder.md)   
 * [Afficher des info-bulles dans une série &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-design/show-tooltips-on-a-series-report-builder-and-ssrs.md)
-* [Didacticiel : graphiques de compartimentage dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
-* [Graphique de compartimentage : applications de visualisation de données de Microsoft Research pour Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
+* [Didacticiel : Graphiques de compartimentage dans Power BI](https://support.powerbi.com/knowledgebase/articles/556200-tutorial-treemaps-in-power-bi)
+* [Graphique de compartimentage : Applications de visualisation des données de Microsoft Research pour Office](https://research.microsoft.com/projects/msrdatavis/treemap.aspx)  
 <br>  
 [!INCLUDE[feedback_stackoverflow_msdn_connect_md](../../includes/feedback-stackoverflow-msdn-connect-md.md)]
 

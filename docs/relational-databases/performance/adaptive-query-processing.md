@@ -2,7 +2,7 @@
 title: Traitement de requêtes adaptatif dans les bases de données Microsoft SQL | Microsoft Docs | Microsoft Docs
 description: Fonctionnalités de traitement de requêtes adaptatif pour améliorer les performances des requêtes dans SQL Server (2017 et versions ultérieures) et Azure SQL Database.
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,18 +14,19 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4097e4c4a56e34f95282a400fb07ac454a3660dd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: aba4aa388cb9ffac518b09077d535b618206ab71
+ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207309"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56319260"
 ---
 # <a name="adaptive-query-processing-in-sql-databases"></a>Traitement de requêtes adaptatif dans les bases de données SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Cet article décrit les fonctionnalités de traitement de requêtes adaptatif que vous pouvez utiliser pour améliorer les performances des requêtes dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (depuis [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDS](../../includes/sssds-md.md)] :
 - Retour d’allocation de mémoire en mode batch
+- Retour d’allocation de mémoire en mode ligne (préversion publique sous le niveau 150 de compatibilité de la base de données)
 - Jointure adaptative en mode batch
 - Exécution entrelacée
 
@@ -36,8 +37,6 @@ Au niveau général, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e
 Pour plus d’informations sur le traitement des requêtes et les modes d’exécution dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez le [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md).
 
 Parfois, le plan choisi par l’optimiseur de requête n’est pas optimal pour diverses raisons. Par exemple, le nombre estimé de lignes dans le flux du plan de requête peut être incorrect. Les coûts estimés permettent de déterminer le plan à utiliser dans l’exécution. Si les estimations de cardinalité sont incorrectes, le plan d’origine est quand même utilisé malgré les mauvaises hypothèses de départ.
-
-![Fonctionnalités de traitement de requêtes adaptatif](./media/1_AQPFeatures.png)
 
 ### <a name="how-to-enable-adaptive-query-processing"></a>Comment activer le traitement de requêtes adaptatif
 Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes adaptatif en activant le niveau de compatibilité 140 pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Exemple :  
@@ -368,6 +367,7 @@ OPTION (USE HINT('DISABLE_INTERLEAVED_EXECUTION_TVF'));
 Un indicateur de requête USE HINT est prioritaire par rapport à une configuration incluse dans l’étendue d’une base de données ou à un paramètre d’indicateur de trace.
 
 ## <a name="see-also"></a> Voir aussi
+[Traitement de requêtes intelligent dans les bases de données SQL](../../relational-databases/performance/intelligent-query-processing.md)   
 [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)    
 [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    

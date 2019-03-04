@@ -5,14 +5,14 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6b2291bb-1d20-4d08-81cb-a16dd8e01faf
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: c77e8fdb5c3c7f4e163472b5a2fc8325d8d3583a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 552a6883f1d17b54e5163368bdce6d426907e0ba
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396832"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56298477"
 ---
 # <a name="install-report-builder"></a>Install Report Builder
   [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] est une application autonome installée sur votre ordinateur par vos propres soins ou par un administrateur. Vous pouvez l’installer à partir du Centre de téléchargement Microsoft, d’un serveur de rapport [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] le serveur de rapports ou d’un site SharePoint intégré avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -67,7 +67,7 @@ ms.locfileid: "52396832"
   
 ## <a name="to-install-includessrbnoversionincludesssrbnoversionmd-from-the-command-line"></a>Pour installer l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir de la ligne de commande 
 
- Vous pouvez également effectuer une installation de l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir de la ligne de commande et spécifier des arguments afin de personnaliser l’installation. En plus des paramètres MSI standard intrinsèques, vous pouvez utiliser les paramètres personnalisés fournis par le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] : RBINSTALLDIR et REPORTSERVERURL. RBINSTALLDIR spécifie le dossier d’installation racine du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL spécifie le serveur de rapports par défaut utilisé par l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] pour enregistrer des rapports.  
+ Vous pouvez également effectuer une installation du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] à partir de la ligne de commande et spécifier des arguments afin de personnaliser l’installation. Outre les paramètres intrinsèques MSI standard, vous pouvez utiliser les paramètres personnalisés fournis par le [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] : RBINSTALLDIR et REPORTSERVERURL. RBINSTALLDIR spécifie le dossier d’installation racine du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)]. REPORTSERVERURL spécifie le serveur de rapports par défaut utilisé par l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] pour enregistrer des rapports.  
   
  Si vous souhaitez effectuer une installation totalement sans assistance, sans aucune interaction avec l’interface utilisateur, spécifiez l’option **/quiet** . Par défaut, l'indicateur d'option quiet supprime les erreurs d'installation. Il est par conséquent recommandé d’inclure l’option **/l** , qui spécifie l’enregistrement dans le journal, lorsque vous utilisez l’option quiet.   
   
@@ -85,7 +85,7 @@ ms.locfileid: "52396832"
   
      `msiexec/i ReportBuilder3.msi /option [value] [/option [value]]`  
   
-     Les deux options spécifiques à l’installation de l’ [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] sont : RBINSTALLDIR et REPORTSERVERURL. Il est inutile d’inclure ces arguments dans la ligne de commande. Voici la ligne de commande de base :  
+     Les deux options spécifiques de l’installation du [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] sont RBINSTALLDIR et REPORTSERVERURL. Il est inutile d’inclure ces arguments dans la ligne de commande. Voici la ligne de commande de base :  
   
      `msiexec /i ReportBuilder3_x86.msi /quiet`  
   
@@ -97,7 +97,7 @@ ms.locfileid: "52396832"
   
      Le plus utile est de définir le site SharePoint ou le portail web [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] par défaut. Pour plus d’informations, consultez [Set default options for Report Builder](../../reporting-services/report-builder/set-default-options-for-report-builder.md).  
   
--   Cliquez sur **Générateur de rapports**.  
+-   Cliquez sur **Générateur de rapports** .  
   
      Si le serveur de rapports ne figure pas dans la liste des serveurs existants, fermez la boîte de dialogue **Ouvrir un rapport**, puis cliquez sur **Se connecter** au bas de [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] pour vous connecter au serveur.  
   

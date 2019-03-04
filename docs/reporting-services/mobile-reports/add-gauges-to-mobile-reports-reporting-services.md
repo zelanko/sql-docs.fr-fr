@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 76d8fc8f-c37f-44d3-ab44-45fbeed4e064
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 90440119ec21cbfe97096b439e61074c7e515e00
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 1740846b348449cc1a2d4e072255a1339b96c478
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504561"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56288547"
 ---
 # <a name="add-gauges-to-mobile-reports--reporting-services"></a>Ajouter des jauges aux rapports mobiles | Reporting Services
 Les jauges sont les éléments visuels les plus simples et les plus utilisés dans les rapports mobiles. Elles affichent une seule valeur dans un dataset (la valeur seule ou la valeur comparée à un objectif).
@@ -42,7 +42,7 @@ Vous pouvez filtrer les valeurs de jauge en les connectant aux navigateurs du ra
 
 4. [facultatif] Pour modifier l’agrégation, sélectionnez **Options** et choisissez une autre agrégation.
    
-   >**Remarque**: si vous modifiez l’agrégation pour la valeur principale, il est probable que vous devrez aussi modifier celle de la valeur de comparaison même si dans certains cas, vous pouvez combiner les méthodes d’agrégation.  
+   >**Remarque**: si vous modifiez l’agrégation de la valeur principale, vous changerez probablement aussi celle de la valeur de comparaison, sauf si vous voulez mélanger les méthodes d’agrégation.  
 
 ## <a name="filter-a-gauge"></a>Filtrer une jauge
   
@@ -58,7 +58,7 @@ Si le rapport mobile comporte des navigateurs, vous pouvez lier une jauge à un 
   
 Outre les propriétés des données qui permettent de connecter les éléments de jauge à des champs de données, vous pouvez aussi personnaliser un certain nombre de propriétés fonctionnelles et visuelles. 
 
-### <a name="set-value-direction-high-or-low-is-better"></a>Définir le sens des valeurs : préférence aux valeurs hautes ou basses
+### <a name="set-value-direction-high-or-low-is-better"></a>Définir le sens des valeurs : Les valeurs hautes/basses sont préférables
 * Après avoir sélectionné une jauge, sous l’onglet **Disposition** du volet **Propriétés visuelles** , définissez le **Sens des valeurs** en choisissant **Les valeurs hautes sont préférables** ou **Les valeurs basses sont préférables**. 
 
 **Les valeurs hautes sont préférables** affiche les valeurs positives en vert, indiquant un changement favorable, et affiche les valeurs faibles en rouge, indiquant un changement défavorable. 

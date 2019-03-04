@@ -1,7 +1,7 @@
 ---
 title: Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête | Microsoft Docs
 ms.custom: ''
-ms.date: 11/21/2018
+ms.date: 02/13/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: f2df34057c02171701aefb878cfb79c56f97a699
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317799"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56295667"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Cette fonctionnalité de liaison fournie par le niveau de compatibilité de base
 
 Ce contrôle sur les mises à niveau a encore été amélioré avec [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], qui a introduit le [réglage automatique](../../relational-databases/automatic-tuning/automatic-tuning.md). Celui-ci autorise l’automatisation de la dernière étape du flux de travail recommandé ci-dessus.
 
-À compter de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, la nouvelle fonctionnalité **Assistant Paramétrage de requêtes** guide les utilisateurs tout le long du flux de travail recommandé pour maintenir la stabilité des performances pendant les mises à niveau vers des versions plus récentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme décrit dans la section *Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server* de [Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). 
+À compter de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, la nouvelle fonctionnalité **Assistant Paramétrage de requêtes** guide les utilisateurs tout le long du flux de travail recommandé pour maintenir la stabilité des performances pendant les mises à niveau vers des versions plus récentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme décrit dans la section *Maintenir la stabilité des performances lors de la mise à niveau vers une version plus récente de SQL Server* de [Scénarios d’utilisation du Magasin des requêtes](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). Cependant, l’Assistant Paramétrage de requêtes ne revient pas à un bon plan antérieur comme dans la dernière étape du workflow recommandé. Il repère les régressions trouvées dans l’affichage [**Requêtes en régression** Magasin des requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) et parcourt les permutations possibles des variations du modèle d’optimiseur applicable dans le but de produire un meilleur plan.
 
 > [!IMPORTANT]
 > L’Assistant Paramétrage de requêtes ne génère pas de charge de travail utilisateur. Si vous exécutez l’Assistant Paramétrage de requêtes dans un environnement qui n’est pas utilisé par vos applications, vérifiez que vous pouvez toujours exécuter des charges de travail de test représentatives sur le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ciblé par d’autres moyens. 
@@ -54,7 +54,7 @@ Le point de départ de l’Assistant Paramétrage de requêtes est la suppositio
 
 Pour plus d’informations sur l’attachement d’une base de données, consultez [Attacher et détacher une base de données](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb).
 
-Voir ci-dessous comment l’Assistant Paramétrage de requêtes ne fait essentiellement que changer les dernières étapes du workflow recommandé pour la mise à niveau du niveau de compatibilité à l’aide du Magasin des requêtes mentionné ci-dessus. Au lieu d’avoir la possibilité de choisir entre le plan d’exécution inefficace actuel et le dernier bon plan d’exécution connu, l’Assistant Paramétrage de requêtes présente des options de paramétrage qui sont propres aux requêtes régressées sélectionnés, afin de créer un nouvel état amélioré avec des plans d’exécution paramétrés.
+Voir ci-dessous comment l’Assistant Paramétrage de requêtes ne fait essentiellement que changer les dernières étapes du workflow recommandé pour la mise à niveau du niveau de compatibilité à l’aide du Magasin des requêtes mentionné ci-dessus. Au lieu d’offrir la possibilité de choisir entre le plan d’exécution inefficace actuel et le dernier bon plan d’exécution connu, l’Assistant Paramétrage de requêtes présente des options de paramétrage propres aux requêtes en régression sélectionnées, afin de créer un nouvel état amélioré avec des plans d’exécution paramétrés.
 
 ![Workflow de mise à niveau de base de données recommandé à l’aide de l’Assistant Paramétrage de requêtes](../../relational-databases/performance/media/qta-usage.png "Workflow de mise à niveau de base de données recommandé à l’aide de l’Assistant Paramétrage de requêtes")
 
@@ -92,7 +92,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
        ![Fenêtre de configuration Nouvelle session de mise à niveau de base de données](../../relational-databases/performance/media/qta-new-session-setup.png "Fenêtre de configuration Nouvelle session de mise à niveau de base de données")  
   
     2.  Dans la fenêtre **Paramètres**, deux colonnes indiquent l’état **Actuel** du Magasin des requêtes dans la base de données ciblée ainsi que les paramètres **Recommandés**. 
-        -  Les paramètres recommandés sont sélectionnés par défaut, mais un clic sur le bouton radio sur la colonne Actuel permet d’accepter les paramètres actuels et également d’affiner la configuration actuelle du Magasin des requêtes. 
+        -  Les paramètres recommandés sont sélectionnés par défaut, mais la case d’option présente sur la colonne Actuel permet d’accepter les paramètres actuels et également d’affiner la configuration actuelle du Magasin des requêtes. 
         -  Le paramètre *Durée de validité de la requête* proposé est le double de la durée attendue de la charge de travail (en jours). En effet, le Magasin des requêtes devra contenir des informations sur la charge de travail de base de référence et la charge de travail de post-mise à niveau de base de données.
         Une fois terminé, cliquez sur **Suivant**.
 
@@ -122,7 +122,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
     -  **ID de session**
     -  **Nom de la session** : nom généré par le système, composé du nom de la base de données, de la date et de l’heure de création de la session.
     -  **État** : état de la session (active ou fermée).
-    -  **Description** : générée par le système, elle comprend le niveau de compatibilité de base de données cible sélectionné par l’utilisateur et le nombre de jours pour la charge de travail du cycle des opérations.
+    -  **Description** : description générée par le système composée du niveau de compatibilité de la base de données cible sélectionné par l’utilisateur et du nombre de jours de la charge de travail du cycle des opérations.
     -  **Heure de début** : date et heure de création de la session.
 
     ![Page Gestion des sessions de l’Assistant Paramétrage de requêtes](../../relational-databases/performance/media/qta-session-management.png "Page Gestion des sessions de l’Assistant Paramétrage de requêtes")
@@ -155,7 +155,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
 
         ![Assistant Paramétrage de requêtes : Étape 2 Sous-étape 2](../../relational-databases/performance/media/qta-step2-substep2.png "Assistant Paramétrage de requêtes : Étape 2 Sous-étape 2")
 
-    3.  **Observé de collecte de données** invite l’utilisateur à réexécuter le cycle de charge de travail représentatif, afin que le Magasin des requêtes puisse collecter une base de référence comparative qui servira à rechercher les opportunités d’optimisation. Pendant l’exécution de la charge de travail, utilisez le bouton **Actualiser** pour continuer à mettre à jour la liste des requêtes régressées, si certaines ont été détectées. Modifier la valeur de **Requêtes à afficher** pour limiter le nombre de requêtes affichées. L’ordre de la liste est affecté par la **Métrique** (durée ou temps processeur) et l’**Agrégation** (Moyenne est la valeur par défaut). Sélectionnez également le nombre de **Requêtes à afficher**. Une fois cette charge de travail terminée, cochez la case **Exécution terminée de la charge de travail** et cliquez sur **Suivant**.
+    3.  La **Collecte des données observées** invite l’utilisateur à réexécuter le cycle de la charge de travail représentative, afin que le Magasin des requêtes puisse collecter une base de référence comparative qui servira à rechercher des pistes d’optimisation. Pendant l’exécution de la charge de travail, utilisez le bouton **Actualiser** pour continuer à mettre à jour la liste des requêtes régressées, si certaines ont été détectées. Modifier la valeur de **Requêtes à afficher** pour limiter le nombre de requêtes affichées. L’ordre de la liste est affecté par la **Métrique** (durée ou temps processeur) et l’**Agrégation** (Moyenne est la valeur par défaut). Sélectionnez également le nombre de **Requêtes à afficher**. Une fois cette charge de travail terminée, cochez la case **Exécution terminée de la charge de travail** et cliquez sur **Suivant**.
 
         ![Assistant Paramétrage de requêtes : Étape 2 Sous-étape 3](../../relational-databases/performance/media/qta-step2-substep3.png "Assistant Paramétrage de requêtes : Étape 2 Sous-étape 3")
 
@@ -197,7 +197,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
 
     ![Assistant Paramétrage de requêtes : Étape 5](../../relational-databases/performance/media/qta-step5.png "Assistant Paramétrage de requêtes : Étape 5")
 
-    Si à une date ultérieure il est nécessaire d’annuler une optimisation proposée, sélectionnez la requête en question et cliquez sur **Restaurer**. Ce repère de plan de requête est supprimé et la liste est mise à jour de façon à supprimer la requête restaurée. Dans l’image ci-dessous, notez que la requête 8 a été supprimée.
+    S’il se révèle par la suite nécessaire d’annuler une optimisation proposée, sélectionnez la requête en question et cliquez sur **Restaurer**. Ce repère de plan de requête est supprimé et la liste est mise à jour de façon à supprimer la requête restaurée. Dans l’image ci-dessous, notez que la requête 8 a été supprimée.
 
     ![Assistant Paramétrage de requêtes : Étape 5 - Restauration](../../relational-databases/performance/media/qta-step5-rollback.png "Assistant Paramétrage de requêtes : Étape 5 - Restauration") 
 

@@ -18,19 +18,19 @@ ms.assetid: e2a1a4f1-211b-4e82-abed-03fc7140a83c
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 0f14609b70d5984be8166e17a5388297fead4db0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cda6f09124127d04c8ded1773feab4e9ffbf2ba9
+ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800080"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56265226"
 ---
 # <a name="reorientobject-geography-data-type"></a>ReorientObject (type de données geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  Retourne une instance **geography** avec des régions intérieures et des régions extérieures interchangées.  
+Retourne une instance **geography** avec des régions intérieures et des régions extérieures interchangées.  
   
- Cette méthode de type de données **geography** prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
+Cette méthode de type de données **geography** prend en charge les instances **FullGlobe** ou les instances spatiales qui sont plus grandes qu’un hémisphère.  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -40,18 +40,18 @@ ms.locfileid: "47800080"
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *geography*  
- Autre instance **geography** sur laquelle `ReorientObject()` est appelé.  
+_geography_  
+Autre instance **geography** sur laquelle `ReorientObject()` est appelé.  
   
 ## <a name="return-value"></a>Valeur retournée  
- Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
+Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **geography**  
   
- Type de retour CLR : **SqlGeography**  
+Type de retour CLR : **SqlGeography**  
   
 ## <a name="remarks"></a>Notes   
- Cette méthode change l’orientation de l’anneau de tous les **Polygons** dans **GeometryCollection** mais ne supprime ou ne change aucun des **Points** ou **Linestrings** de la collection donnée.  
+Cette méthode change l’orientation de l’anneau de tous les **Polygon** dans **GeometryCollection** mais ne supprime ni ne change aucun des **Point** ou **LineString** de la collection.  
   
- Si **GeometryCollection** est passé à cette méthode, chaque instance de la collection est réorientée, mais la collection dans son ensemble n’est pas réorientée.  
+Si **GeometryCollection** est passé à cette méthode, chacune des instances de la collection est réorientée, mais pas la collection dans son ensemble.  
   
 ## <a name="examples"></a>Exemples  
   
@@ -62,6 +62,5 @@ SELECT @R.ReorientObject().STAsText();
 ```  
   
 ## <a name="see-also"></a> Voir aussi  
- [Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+[Méthodes étendues sur des instances geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

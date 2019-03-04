@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: b7f3fa31092f6406ffd3d49b227a2fa3deba8e82
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: 0132cfbd9a94ea8510c957c79f23b41e9c4f025b
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030668"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56284587"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
   Les données sont représentées par différents types de données permettant de les stocker et de les traiter de manière efficace. Les types de données typiques incluent du texte (également appelé chaînes), des numéros avec et sans décimales, des dates, des heures et des images. Les valeurs dans un rapport doivent être un type de données RDL (Report Definition Language). Vous pouvez mettre en forme une valeur selon votre préférence lorsque vous l'affichez dans un rapport. Par exemple, un champ qui représente une devise est stocké dans la définition de rapport sous la forme d'un nombre à virgule flottante, mais peut être affiché sous divers formats en fonction de la propriété de format choisie.  
@@ -29,10 +29,10 @@ ms.locfileid: "50030668"
 |Type RDL|Types CLR|  
 |--------------|---------------|  
 |String|Valeur par défaut : String<br /><br /> Chart, GUID, Timespan|  
-|Booléen|Valeur par défaut : Boolean|  
+|Booléen|Valeur par défaut : Booléen|  
 |Entier|Valeur par défaut : Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |DateTime|Valeur par défaut : DateTime<br /><br /> DateTimeOffset|  
-|Float|Valeur par défaut : Double<br /><br /> Single, Decimal|  
+|float|Valeur par défaut : Double<br /><br /> Single, Decimal|  
 |Binaire|Valeur par défaut : Byte[]|  
 |Variant|Une des valeurs ci-dessus à l'exception de Byte[]|  
 |VariantArray|Tableau de type Variant|  
@@ -66,7 +66,7 @@ ms.locfileid: "50030668"
 -   Vérifiez si l'extension de traitement des données que vous utilisez inclut les métadonnées permettant d'extraire des données préformatées. Par exemple, une requête MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut une propriété étendue FORMATTED_VALUE pour les valeurs de cube qui ont déjà été mises en forme pendant le traitement du cube. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Présentation des types de données des paramètres  
- Les cinq types de données possibles pour les paramètres de rapport sont les suivants : Boolean, DateTime, Integer, Float ou Text (également appelé String). Lorsqu'une requête de dataset comprend des paramètres de requête, des paramètres de rapport sont automatiquement créés et liés aux paramètres de requête. Le type de données par défaut d'un paramètre de rapport est String. Pour modifier le type de données par défaut d’un paramètre de rapport, sélectionnez la valeur correcte dans la liste déroulante **Type de données** de la page **Général** de la boîte de dialogue **Propriétés du paramètre de rapport** .  
+ Les paramètres de rapport doivent avoir l’un des cinq types de données : Boolean, DateTime, Integer, Float ou Text (également appelé String). Lorsqu'une requête de dataset comprend des paramètres de requête, des paramètres de rapport sont automatiquement créés et liés aux paramètres de requête. Le type de données par défaut d'un paramètre de rapport est String. Pour modifier le type de données par défaut d’un paramètre de rapport, sélectionnez la valeur correcte dans la liste déroulante **Type de données** de la page **Général** de la boîte de dialogue **Propriétés du paramètre de rapport** .  
   
 > [!NOTE]  
 >  Les paramètres de rapport utilisant le type de données DateTime ne prennent pas en charge les millisecondes. Même s'il est possible de créer un paramètre basé sur des valeurs incluant des millisecondes, vous ne pouvez pas sélectionner de valeur dans une liste déroulante de valeurs disponibles qui comprend des valeurs Date ou Time utilisant des millisecondes.  

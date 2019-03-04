@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-builder
 ms.topic: conceptual
 ms.assetid: 4bad1b6e-7d94-4b17-9502-ccd3dce0fdd9
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 38a5cddeb42bfca9296f45d7735ceb969e354a0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: c3b18a02c29be7221e70f1b4092cd9b212de3133
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690807"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292377"
 ---
 # <a name="print-reports---reporting-services-ssrs"></a>Imprimer des rapports - Reporting Services (SSRS)
   Après avoir enregistré un rapport sur un serveur de rapports, vous pouvez l’afficher et l’imprimer à partir du portail web ou de toute application permettant d’afficher un rapport exporté. Avant d'enregistrer un rapport, vous pouvez l'imprimer après avoir affiché son aperçu.  
@@ -44,7 +44,7 @@ ms.locfileid: "47690807"
  Explique comment imprimer des rapports exportés vers une autre application.  
   
  [Imprimer un rapport &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/print-a-report-report-builder-and-ssrs.md)  
- Fournit des instructions détaillées sur la façon d'imprimer un rapport, sur la façon de contrôler les marges dans une page et sur la façon de spécifier le format du papier pour les rapports qui seront affichés par les convertisseurs de saut de page manuel : PDF, image ou impression.  
+ Explique pas à pas comment imprimer un rapport, contrôler les marges sur une page et spécifier le format du papier des rapports qui seront affichés par les convertisseurs de saut de page manuel : PDF, image ou impression.  
   
 ## <a name="see-also"></a> Voir aussi  
  [Exporter des rapports &#40;Générateur de rapports et SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   

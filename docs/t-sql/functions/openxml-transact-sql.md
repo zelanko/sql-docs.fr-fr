@@ -20,19 +20,19 @@ ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8c9e4de5e7255c43460c9566f089f416a1e36782
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
+ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011786"
+ms.lasthandoff: 02/16/2019
+ms.locfileid: "56331589"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   OPENXML fournit une vue de l'ensemble des lignes d'un document XML. En tant que fournisseur d'ensembles de lignes, OPENXML peut être inclus dans les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] dans lesquelles certains fournisseurs d'ensembles de lignes peuvent apparaître (notamment une table, une vue ou la fonction OPENROWSET).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -47,17 +47,17 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  Descripteur de document utilisé pour la représentation interne d'un document XML. La représentation interne d’un document XML est créée en appelant **sp_xml_preparedocument**.  
   
  *rowpattern*  
- Modèle XPath utilisé pour identifier les nœuds (dans le document XML dont le descripteur est transmis dans le paramètre *idoc*) à traiter comme des lignes.  
+ Le modèle XPath doit-il être utilisé pour identifier les nœuds à traiter comme des lignes ? Les nœuds proviennent du document XML dont le descripteur est transmis au paramètre *idoc*.
   
  *flags*  
- Indique le mappage qui doit être utilisé entre les données XML et l'ensemble de lignes relationnel, ainsi que le mode de remplissage de la colonne de débordement. *flags* est un paramètre d’entrée facultatif qui peut prendre l’une des valeurs suivantes.  
+ Indique le mappage utilisé entre les données XML et l'ensemble de lignes relationnel, ainsi que le mode de remplissage de la colonne de débordement. *flags* est un paramètre d’entrée facultatif qui peut prendre l’une des valeurs suivantes.  
   
 |Valeur d'octet|Description|  
 |----------------|-----------------|  
 |**0**|Utilise par défaut le mappage **attribute-centric**.|  
-|**1**|Utilise le mappage **attribute-centric**. Peut être combiné avec XML_ELEMENTS. Dans ce cas, le mappage **attribute-centric** est d’abord appliqué, puis le mappage **element-centric** est appliqué pour toutes les colonnes qui n’ont pas encore été traitées.|  
-|**2**|Utilisez le mappage **element-centric**. Peut être combiné avec XML_ATTRIBUTES. Dans ce cas, le mappage **attribute-centric** est d’abord appliqué, puis le mappage **element-centric** est appliqué pour toutes les colonnes qui n’ont pas encore été traitées.|  
-|**8**|Peut être combiné (à l'aide de l'opérateur logique OR) avec XML_ATTRIBUTES ou XML_ELEMENTS. Dans le contexte d'une extraction, cet indicateur indique que les données consommées ne doivent pas être copiées sur la propriété de dépassement **\@mp:xmltext**.|  
+|**1**|Utilise le mappage **attribute-centric**. Peut être combiné avec XML_ELEMENTS. Dans ce cas, le mappage **centré sur l’attribut** est appliqué en premier, suivi du mappage **centré sur l’élément** pour toutes les colonnes restantes.|  
+|**2**|Utilisez le mappage **element-centric**. Peut être combiné avec XML_ATTRIBUTES. Dans ce cas, le mappage **centré sur l’attribut** est appliqué en premier, suivi du mappage **centré sur l’élément** pour toutes les colonnes restantes.|  
+|**8**|Peut être combiné (à l'aide de l'opérateur logique OR) avec XML_ATTRIBUTES ou XML_ELEMENTS. Dans un contexte d'extraction, cet indicateur spécifie que les données consommées ne doivent pas être copiées sur la propriété de dépassement **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
  Définition de schéma du formulaire : _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]...]  
@@ -69,43 +69,43 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
  Type de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la colonne dans l'ensemble de lignes. Si les types de colonnes diffèrent du type de données **xml** sous-jacent de l’attribut, un forçage de type se produit.  
   
  *ColPattern*  
- Modèle XPath général et optionnel, qui décrit les modalités de mappage des nœuds XML vers les colonnes. Si *ColPattern* n’est pas spécifié, le mappage par défaut (mappage **attribute-centric** ou **element-centric** tel que spécifié par *flags*) est appliqué.  
+ Modèle XPath général et optionnel, qui décrit les modalités de mappage des nœuds XML vers les colonnes. Si *ColPattern* n’est pas spécifié, le mappage par défaut (mappage **centré sur l’attribut** ou **centré sur l’élément**, indiqué par *flags*) s’applique.  
   
- Le modèle XPath spécifié dans *ColPattern* permet de préciser qu’il s’agit d’un type de mappage particulier (dans le cas d’un mappage **attribute-centric** ou **element-centric**) qui remplace ou améliore le mappage par défaut indiqué par *flags*.  
+ Le modèle XPath spécifié dans *ColPattern* permet de préciser qu’il s’agit d’un type de mappage particulier (pour le mappage **centré sur l’attribut** ou **centré sur l’élément**) qui remplace ou améliore le mappage par défaut indiqué par *flags*.  
   
  Le modèle XPath général spécifié comme *ColPattern* prend également en charge les métapropriétés.  
   
  *MetaProperty*  
- L'une des métapropriétés fournies par OPENXML. Si *MetaProperty* est spécifié, la colonne contient les informations fournies par cette métapropriété. Les métapropriétés vous permettent d'extraire des informations (telles que la position relative et les informations sur l'espace de noms) concernant les nœuds XML. Vous disposez ainsi de plus d'informations que n'en propose la représentation textuelle.  
+ L'une des métapropriétés fournies par OPENXML. Si *MetaProperty* est spécifié, la colonne contient les informations fournies par cette métapropriété. Les métapropriétés vous permettent d'extraire des informations (telles que la position relative et les informations sur l'espace de noms) concernant les nœuds XML. Ces métapropriétés donnent plus d’informations que la représentation textuelle.  
   
  *TableName*  
  Nom de la table qui peut être fourni (à la place de *SchemaDeclaration*) si une table comportant le schéma souhaité existe déjà et qu’aucun modèle de colonne n’est requis.  
   
 ## <a name="remarks"></a>Notes   
- La clause WITH fournit un format d’ensemble de lignes (et d’autres informations de mappage pertinentes) en utilisant *SchemaDeclaration* ou en spécifiant un *TableName* existant. Si la clause WITH facultative n’est pas spécifiée, les résultats sont retournés dans un format de table **edge**. Les tables edge représentent la structure à granularité fine des documents XML (par exemple, les noms d'élément/d'attribut, la hiérarchie du document, les espaces de noms, les instructions de traitement, etc.) dans une seule table.  
+ La clause WITH fournit un format d’ensemble de lignes (et d’autres informations de mappage pertinentes) en utilisant *SchemaDeclaration* ou en spécifiant un *TableName* existant. Si la clause WITH facultative n’est pas spécifiée, les résultats sont retournés au format de table **edge**. Les tables edge représentent la structure à granularité fine des documents XML (par exemple, les noms d'élément/d'attribut, la hiérarchie du document, les espaces de noms, les instructions de traitement, etc.) dans une seule table.  
   
  Le tableau suivant décrit la structure de la table **edge**.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|ID unique du nœud du document.<br /><br /> L’ID de l’élément racine a pour valeur 0. Les valeurs négatives d'ID sont réservées.|  
-|**parentid**|**bigint**|Identifie le parent du nœud. Le parent identifié par cet ID n'est pas nécessairement l'élément parent mais il dépend du type du nœud dont le parent est identifié par cet ID. Par exemple, si le nœud est un nœud texte, son parent peut être un nœud d'attribut.<br /><br /> Si le nœud se situe au niveau supérieur du document XML, son **ParentID** a pour valeur NULL.|  
+|**parentid**|**bigint**|Identifie le parent du nœud. Le parent identifié par cet ID n'est pas nécessairement l'élément parent ; il dépend du nodetype du nœud dont le parent est identifié par cet ID. Par exemple, si le nœud est un nœud texte, son parent peut être un nœud d'attribut.<br /><br /> Si le nœud se situe au niveau supérieur du document XML, son **ParentID** a pour valeur NULL.|  
 |**nodetype**|**Int**|Identifie le type de nœud. Il s'agit d'un entier qui correspond à la numérotation des types de nœud XML DOM.<br /><br /> Les types de nœuds sont :<br /><br /> 1 = Nœud d'élément<br /><br /> 2 = Nœud d'attribut<br /><br /> 3 = Nœud de texte|  
 |**localname**|**nvarchar**|Fournit le nom local de l'élément ou de l'attribut. A pour valeur NULL si l'objet DOM est dépourvu de nom.|  
 |**prefix**|**nvarchar**|Préfixe de l'espace de noms du nom de nœud.|  
 |**namespaceuri**|**nvarchar**|URI de l'espace de noms du nœud. Si la valeur est NULL, aucun espace de noms n'est présent.|  
 |**datatype**|**nvarchar**|Type de données réel de la ligne d'éléments ou d'attributs, sinon NULL. Le type de données est déduit de la DTD en ligne ou du schéma en ligne.|  
 |**prev**|**bigint**|ID XML de l'élément frère précédent. Vaut NULL en l'absence de frère précédent direct.|  
-|**texte**|**ntext**|Contient la valeur de l’attribut ou le contenu de l’élément sous forme de texte (ou NULL si l’entrée de table **edge** ne requiert pas de valeur).|  
+|**texte**|**ntext**|Contient la valeur de l’attribut ou le contenu de l’élément sous forme textuelle (ou NULL si l’entrée de table **edge** n’exige pas de valeur).|  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-using-a-simple-select-statement-with-openxml"></a>A. Utilisation d'une instruction SELECT simple avec OPENXML  
  Cet exemple crée une représentation interne de l'image XML à l'aide de `sp_xml_preparedocument`. Une instruction `SELECT` est alors exécutée sur la représentation interne du document XML, en utilisant un fournisseur d'ensembles de lignes `OPENXML`.  
   
- La valeur *flag* est définie sur `1`. Cela indique un mappage **attribute-centric**. Par conséquent, les attributs XML sont mappés sur les colonnes de l'ensemble de lignes. Le paramètre *rowpattern* spécifié en tant que `/ROOT/Customer` identifie les nœuds `<Customers>` à traiter.  
+ La valeur *flag* est définie sur `1`. Cette valeur indique un mappage **centré sur l’attribut**. Par conséquent, les attributs XML sont mappés sur les colonnes de l'ensemble de lignes. Le paramètre *rowpattern* spécifié en tant que `/ROOT/Customer` identifie les nœuds `<Customers>` à traiter.  
   
- Le paramètre (modèle de colonne) *ColPattern* facultatif n’est pas spécifié, car le nom de colonne correspond aux noms des attributs XML.  
+ Le paramètre *ColPattern* (modèle de colonne) facultatif n’est pas spécifié, car le nom de colonne correspond au nom des attributs XML.  
   
  Le fournisseur de l'ensemble de lignes `OPENXML` crée un ensemble de lignes sur deux colonnes (`CustomerID` et `ContactName`), à partir desquelles l'instruction `SELECT` extrait les colonnes nécessaires (toutes les colonnes dans le cas présent).  
   
@@ -144,7 +144,7 @@ VINET      Paul Henriot
 LILAS      Carlos Gonzlez  
 ```  
   
- Si la même instruction `SELECT` est exécutée lorsque la valeur de *flags* est `2` (mappage **element-centric**), les valeurs de `CustomerID` et `ContactName` pour les deux clients dans le document XML sont retournées en tant que valeurs NULL, puisqu’il n’existe pas d’éléments nommés `CustomerID` ou `ContactName` dans le document XML.  
+ Si la même instruction `SELECT` est exécutée avec *flags* égal à `2` (mappage **centré sur l’élément**), les valeurs retournées de `CustomerID` et `ContactName` sont NULL pour les deux clients du document XML, puisqu’il n’existe pas d’éléments nommés `CustomerID` ou `ContactName` dans le document XML.  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
@@ -156,9 +156,9 @@ NULL       NULL
 ```  
   
 ### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>b. Spécification de ColPattern pour le mappage des colonnes aux attributs XML  
- La requête suivante retourne l'identificateur du client, la date de commande, la référence du produit et les attributs de quantité à partir du document XML. *rowpattern* identifie les éléments `<OrderDetails>`. `ProductID` et `Quantity` sont les attributs de l'élément `<OrderDetails>`. Toutefois, `OrderID`, `CustomerID` et `OrderDate` sont les attributs de l'élément parent (`<Orders>`).  
+ La requête suivante retourne différents attributs à partir du document XML : ID client, date de commande, ID produit et quantité. *rowpattern* identifie les éléments `<OrderDetails>`. `ProductID` et `Quantity` sont les attributs de l'élément `<OrderDetails>`. Toutefois, `OrderID`, `CustomerID` et `OrderDate` sont les attributs de l'élément parent (`<Orders>`).  
   
- Le paramètre *ColPattern* facultatif est spécifié. Cela signifie que :  
+ Le paramètre facultatif *ColPattern* est spécifié pour les mappages suivants :  
   
 -   Dans l’ensemble de lignes, `OrderID`, `CustomerID` et `OrderDate` sont mappés sur les attributs du parent des nœuds identifiés par *rowpattern* dans le document XML.  
   
@@ -212,7 +212,7 @@ OrderID CustomerID           OrderDate                 ProdID    Qty
 ### <a name="c-obtaining-results-in-an-edge-table-format"></a>C. Obtention des résultats dans un format de table edge  
  Le document XML de cet exemple comporte les éléments `<Customers>`, `<Orders>` et `<Order_0020_Details>`. La procédure stockée **sp_xml_preparedocument** est d’abord appelée pour obtenir un descripteur de document. Ce descripteur de document est transmis à `OPENXML`.  
   
- Dans l’instruction `OPENXML`, *rowpattern* (`/ROOT/Customers`) identifie les nœuds `<Customers>` à traiter. La clause WITH n’est pas fournie. Par conséquent, `OPENXML` retourne l’ensemble de lignes dans un format de table **edge**.  
+ Dans l’instruction `OPENXML`, *rowpattern* (`/ROOT/Customers`) identifie les nœuds `<Customers>` à traiter. Comme la clause WITH n’est pas fournie, `OPENXML` retourne l’ensemble de lignes au format de table **edge**.  
   
  Enfin, l’instruction `SELECT` extrait toutes les colonnes dans la table **edge**.  
   
@@ -247,5 +247,4 @@ EXEC sp_xml_removedocument @idoc;
   
 ## <a name="see-also"></a> Voir aussi  
  [Exemples : utilisation de OPENXML](../../relational-databases/xml/examples-using-openxml.md)  
-  
   

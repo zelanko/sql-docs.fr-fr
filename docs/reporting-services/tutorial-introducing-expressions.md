@@ -1,21 +1,21 @@
 ---
-title: 'Didacticiel : introduction aux expressions | Microsoft Docs'
+title: 'Didacticiel : Introduction aux expressions | Microsoft Docs'
 ms.date: 09/16/2016
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: maggiesMSFT
-ms.author: maggies
-ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+author: markingmyname
+ms.author: maghan
+ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
+ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410706"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56292217"
 ---
-# <a name="tutorial-introducing-expressions"></a>Didacticiel : introduction aux expressions
+# <a name="tutorial-introducing-expressions"></a>Didacticiel : Introduction aux expressions
 Dans ce didacticiel [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , vous utilisez des expressions avec des opérateurs et des fonctions communes pour créer des rapports paginés [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] puissants et flexibles. 
 
 Vous allez écrire des expressions qui concatènent des valeurs de noms, qui recherchent des valeurs dans un autre dataset, qui affichent différentes couleurs en fonction des valeurs de champ, etc.  
@@ -26,7 +26,7 @@ Cette illustration montre un rapport similaire à celui que vous allez créer.
   
 ![report-builder-expression-tutorial-in-browser](../reporting-services/media/report-builder-expression-tutorial-in-browser.png) 
   
-Durée estimée pour effectuer ce didacticiel : 30 minutes.  
+Durée estimée pour effectuer ce didacticiel : 30 minutes  
   
 ## <a name="requirements"></a>Spécifications  
 Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
@@ -89,7 +89,7 @@ Dans cette section, vous allez créer un rapport de tableau, une source de donn�
     ```  
 
   
-10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 23 lignes de données dans les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurcharse et LastPurchase.  
+10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 23 lignes de données avec les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase et LastPurchase.  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -357,7 +357,7 @@ Dans cette section, vous allez créer le dataset CountryRegion et utiliser la fo
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Pour rechercher des valeurs dans le dataset CountryRegion  
   
-1.  Cliquez sur l’en-tête de colonne **Country Region ID** , puis supprimez **ID**pour que le nom de l’en-tête devienne **Country Region**.  
+1.  Cliquez sur l’en-tête de la colonne **Country Region ID** et supprimez le texte : **ID**, afin de lire **Country Region**.  
   
 2.  Cliquez avec le bouton droit sur la cellule de données pour la colonne **Country Region** et cliquez sur **Expression**.  
   
