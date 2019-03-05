@@ -1,21 +1,22 @@
 ---
 title: Afficher des en-têtes de ligne et de colonne sur plusieurs pages (Générateur de rapports et SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
-ms.assetid: 2422b1e2-822f-4379-9d7f-9afebb350e3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ad0da97b8b9837213a0abff73204a2287b02e011
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.date: 03/01/2017
+ms.openlocfilehash: 8bd2ab9ebfceeb8689dcaa5ce2afe912ecb4b1c6
+ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291987"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305317"
 ---
 # <a name="display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs"></a>Afficher des en-têtes de ligne et de colonne sur plusieurs pages (Générateur de rapports et SSRS)
+
   Vous pouvez décider de répéter les en-têtes de ligne et de colonne sur chaque page d’un rapport paginé [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] pour une région de données de tableau matriciel (une table, une matrice ou une liste) qui s’étend sur plusieurs pages.
   
  La façon dont vous contrôlez les lignes et les colonnes varie selon que la région de données de tableau matriciel possède ou non des en-têtes de groupes. Lorsque vous cliquez dans une région de données du tableau matriciel qui possède des en-têtes de groupes, une ligne pointillée indique les zones de tableau matriciel, comme illustré sur la figure suivante :  
@@ -28,37 +29,37 @@ ms.locfileid: "56291987"
   
 ## <a name="to-display-row-headers-on-multiple-pages"></a>Pour afficher les en-têtes de ligne sur plusieurs pages  
   
-1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel**.  
+1. Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel**.  
   
-2.  Dans **En-têtes de lignes**, sélectionnez **Répéter les lignes d'en-tête sur chaque page**.  
+2. Dans **En-têtes de lignes**, sélectionnez **Répéter les lignes d'en-tête sur chaque page**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-display-column-headers-on-multiple-pages"></a>Pour afficher les en-têtes de colonne sur plusieurs pages  
   
-1.  Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel**.  
+1. Cliquez avec le bouton droit sur la ligne, la colonne ou la poignée d’angle d’une région de données de tableau matriciel, puis sélectionnez **Propriétés du tableau matriciel**.  
   
-2.  Dans **En-têtes de colonnes**, sélectionnez **Répéter les colonnes d'en-tête sur chaque page**.  
+2. Dans **En-têtes de colonnes**, sélectionnez **Répéter les colonnes d'en-tête sur chaque page**.  
   
-3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+3. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 ## <a name="to-display-a-static-row-or-column-on-multiple-pages"></a>Pour afficher une liste ou une colonne sur plusieurs pages  
   
-1.  Dans l'aire de conception, cliquez sur la poignée de ligne ou de colonne de la région de données du tableau matriciel pour la sélectionner. Le volet Regroupement affiche les groupes de lignes et de colonnes.  
+1. Dans l'aire de conception, cliquez sur la poignée de ligne ou de colonne de la région de données du tableau matriciel pour la sélectionner. Le volet Regroupement affiche les groupes de lignes et de colonnes.  
   
-2.  Dans la partie droite du volet de regroupement, cliquez sur la flèche orientée vers le bas, puis sur **Mode avancé**. Le volet Groupes de lignes affiche les membres statiques et dynamiques hiérarchiques pour la hiérarchie de groupes de lignes et le volet Groupes de colonnes affiche une vue semblable pour la hiérarchie de groupes de colonnes.  
+2. Dans la partie droite du volet de regroupement, cliquez sur la flèche orientée vers le bas, puis sur **Mode avancé**. Le volet Groupes de lignes affiche les membres statiques et dynamiques hiérarchiques pour la hiérarchie de groupes de lignes et le volet Groupes de colonnes affiche une vue semblable pour la hiérarchie de groupes de colonnes.  
   
-3.  Cliquez sur le membre statique correspondant au membre statique (ligne ou colonne) qui doit rester visible pendant le défilement. Le volet Propriétés affiche les propriétés du **membre du tableau matriciel** .  
+3. Cliquez sur le membre statique correspondant au membre statique (ligne ou colonne) qui doit rester visible pendant le défilement. Le volet Propriétés affiche les propriétés du **membre du tableau matriciel** .  
   
      Si vous ne voyez pas le volet Propriétés, cliquez sur l’onglet **Affichage** en haut de la fenêtre du Générateur de rapports, puis cliquez sur **Propriétés**.  
   
-4.  Dans le volet Propriétés, affectez à **RepeatOnNewPage** la valeur True.  
+4. Dans le volet Propriétés, affectez à **RepeatOnNewPage** la valeur True.  
   
-5.  Définissez **KeepWithGroup** à Après.  
+5. Définissez **KeepWithGroup** à Après.  
   
-6.  Renouvelez cette opération pour tous les membres adjacents à répéter.  
+6. Renouvelez cette opération pour tous les membres adjacents à répéter.  
   
-7.  Affichez l'aperçu du rapport.  
+7. Affichez l'aperçu du rapport.  
   
  En consultant chacune des pages du rapport sur lesquelles la région de données du tableau matriciel s'étend, vous pouvez constater que les membres statiques du tableau matriciel se répètent sur chaque page.  
   

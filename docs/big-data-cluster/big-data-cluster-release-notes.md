@@ -5,17 +5,17 @@ description: Cet article décrit les dernières mises à jour et les problèmes 
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/04/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e7de0c9dafe7c5c8f8a4b2a2dc709105218fb2fc
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227211"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334746"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Notes de publication pour les clusters de données volumineuses de SQL Server 2019
 
@@ -39,7 +39,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 - [Envoyer des travaux Spark sur les Clusters Big Data SQL Server dans IntelliJ](spark-submit-job-intellij-tool-plugin.md).
 - [CLI courantes pour la gestion de cluster et de déploiement des applications](big-data-cluster-create-apps.md).
 - [Extension de Code Visual Studio pour déployer des applications pour les clusters de données volumineuses de SQL Server](app-deployment-extension.md).
-- Nouveau paramètre de classement pour la **mssqlctl** outil.
+- [Modifications apportées à la **mssqlctl** outil utilisation de la commande](#mssqlctlctp23).
 - [Utiliser Sparklyr dans un cluster de données SQL Server 2019 Big](sparklyr-from-RStudio.md).
 - Monter un stockage compatible HDFS externe dans le cluster de données volumineux avec [HDFS la hiérarchisation](hdfs-tiering.md).
 - Nouvelle expérience de connexion unifiée pour la [instance principale de SQL Server et de la passerelle HDFS/Spark](connect-to-big-data-cluster.md).
@@ -74,6 +74,18 @@ Les sections suivantes fournissent des problèmes connus pour les clusters de do
    `Warning  Unhealthy: Readiness probe failed: cat: /tmp/provisioner.done: No such file or directory`
 
 - En cas d’un déploiement de cluster de données volumineuses, l’espace de noms associé n’est pas supprimé. Cela peut entraîner un espace de noms orphelin sur le cluster. Une solution de contournement consiste à supprimer l’espace de noms manuellement avant de déployer un cluster avec le même nom.
+
+#### <a id="mssqlctlctp23"></a> mssqlctl
+
+- Le **mssqlctl** outil a été remplacée par une commande de type verbe-substantif classement selon un ordre de verbe-substantif. Par exemple, `mssqlctl create cluster` est désormais `mssqlctl cluster create`.
+
+- Le `--name` paramètre est désormais requis lors de la création d’un cluster avec `mssqlctl cluster create`.
+
+   ```bash
+   mssqlctl cluster create --name <cluster_name>
+   ```
+
+- Pour plus d’informations sur la mise à niveau vers la dernière version des clusters de données volumineuses et **mssqlctl**, consultez [mise à niveau vers une nouvelle version](deployment-guidance.md#upgrade).
 
 #### <a name="external-tables"></a>Tables externes
 

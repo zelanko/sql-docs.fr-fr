@@ -22,16 +22,16 @@ helpviewer_keywords:
 - row retrieval [SQL Server]
 - queries [SQL Server], results
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6eff1de488818894b39796430e23804066f266f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6b92d260901efdec91add2d785774bfd826c8b46
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417360"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334686"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -182,7 +182,7 @@ AND MaritalStatus = 'M'
 ORDER BY LastName;  
 ```  
   
-### <a name="b-using-select-with-column-headings-and-calculations"></a>B. Utilisation de SELECT avec des en-têtes de colonne et des calculs  
+### <a name="b-using-select-with-column-headings-and-calculations"></a>b. Utilisation de SELECT avec des en-têtes de colonne et des calculs  
  L’exemple suivant retourne toutes les lignes de la table `DimEmployee`, et calcule le salaire brut de chaque employé sur la base de la valeur `BaseRate` et d’une semaine de 40 heures de travail.  
   
 ```sql  
