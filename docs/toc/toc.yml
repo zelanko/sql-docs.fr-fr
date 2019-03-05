@@ -1,7 +1,8 @@
 items:
 - name: Bienvenue
-  href: ../sql-server/sql-server-technical-documentation.md
+  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: Vue d'ensemble
+  href: ../toc/redirectfrom-overview-10.md
   items:
   - name: Nouveautés
     items:
@@ -15,6 +16,8 @@ items:
       href: ../sql-server/what-s-new-in-sql-server-2016.md
     - name: Moteur de base de données dans SQL Server 2016
       href: ../database-engine/whats-new-in-sql-server-2016.md
+  - name: Moteur de base de données
+    href: ../database-engine/sql-server-database-engine-overview.md
   - name: Éditions et fonctionnalités de SQL Server 2017
     href: ../sql-server/editions-and-components-of-sql-server-2017.md
   - name: Éditions et fonctionnalités de SQL Server 2016
@@ -32,7 +35,7 @@ items:
   - name: SQL Server 2019
     href: ../sql-server/sql-server-ver15-release-notes.md
   - name: SQL Server 2017
-    href: ../sql-server/sql-server-2017-release-notes.md
+    href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
   - name: SQL Server 2016
     href: ../sql-server/sql-server-2016-release-notes.md
   - name: SQL Server 2014
@@ -44,14 +47,16 @@ items:
   - name: SQL Server 2008 R2 SP2
     href: ../sql-server/sql-server-2008-r2-sp2-release-notes.md
 - name: Continuité de l’activité
+  href: redirectfrom-business-continuity-10.md
   items:
   - name: Vue d'ensemble
     href: ../database-engine/sql-server-business-continuity-dr.md
   - name: Sauvegarde et restauration
+    href: ../toc/redirectfrom-backup-restore-10.md
     items:
     - name: Vue d'ensemble
       href: ../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md
-    - name: Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure
+    - name: Sauvegarde et restauration avec le Stockage Blob Azure
       href: ../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md
       items:
       - name: Se connecter à un abonnement Microsoft Azure
@@ -59,9 +64,9 @@ items:
       - name: Sauvegarde SQL Server vers une URL
         href: ../relational-databases/backup-restore/sql-server-backup-to-url.md
         items:
-        - name: Utiliser PowerShell pour sauvegarder plusieurs bases de données dans le service de Stockage Blob Microsoft Azure
+        - name: Sauvegarde sur le service Stockage Blob Azure avec PowerShell
           href: ../relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-        - name: Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
+        - name: Meilleures pratiques et dépannage de sauvegarde vers une URL
           href: ../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md
         - name: Suppression de fichiers de sauvegarde d'objets blob avec des baux actifs
           href: ../relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
@@ -92,14 +97,14 @@ items:
       items:
       - name: Planifier et exécuter des séquences de restauration (mode de récupération complète)
         href: ../relational-databases/backup-restore/plan-and-perform-restore-sequences-full-recovery-model.md
-      - name: Redémarrer une opération de restauration interrompue (Transact-SQL)
+      - name: Redémarrer une opération de restauration interrompue (T-SQL)
         href: ../relational-databases/backup-restore/restart-an-interrupted-restore-operation-transact-sql.md
     - name: Compression de sauvegardes
       href: ../relational-databases/backup-restore/backup-compression-sql-server.md
       items:
       - name: Configurer la compression de sauvegarde
         href: ../relational-databases/backup-restore/configure-backup-compression-sql-server.md
-      - name: Utiliser le gouverneur de ressources pour limiter l'utilisation de l'UC par compression de sauvegarde (Transact-SQL)
+      - name: Utiliser Resource Governor pour limiter l’utilisation de l’UC par la compression de sauvegarde (T-SQL)
         href: ../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md
     - name: Chiffrement de sauvegarde
       href: ../relational-databases/backup-restore/backup-encryption.md
@@ -181,7 +186,7 @@ items:
     - name: Jeux de supports de sauvegarde en miroir (SQL Server)
       href: ../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md
       items:
-      - name: Sauvegarder sur un support de sauvegarde miroir (Transact-SQL)
+      - name: Sauvegarder sur un support de sauvegarde miroir (T-SQL)
         href: ../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md
     - name: Historique de sauvegarde et informations d'en-tête (SQL Server)
       href: ../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md
@@ -198,7 +203,7 @@ items:
     - name: Restaurations complètes de bases de données (mode de récupération simple)
       href: ../relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md
       items:
-      - name: Restaurer une sauvegarde de base de données en mode de récupération simple (Transact-SQL)
+      - name: Restaurer une sauvegarde de base de données en mode de récupération simple (T-SQL)
         href: ../relational-databases/backup-restore/restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md
       - name: Restaurer une sauvegarde de base de données à l’aide de SSMS
         href: ../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md
@@ -220,7 +225,7 @@ items:
     - name: Restaurations complètes de bases de données (mode de récupération complète)
       href: ../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md
       items:
-      - name: Restaurer une base de données jusqu'au point d'échec en mode de récupération complète (Transact-SQL)
+      - name: Restaurer une base de données jusqu’au point d’échec en mode de récupération complète (T-SQL)
         href: ../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md
     - name: Restauration de fichiers (mode de récupération simple)
       href: ../relational-databases/backup-restore/file-restores-simple-recovery-model.md
@@ -281,12 +286,12 @@ items:
         href: ../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
       - name: 'Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement (mode de récupération simple)'
         href: ../relational-databases/backup-restore/example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
-    - name: Récupérer une base de données sans restaurer les données (Transact-SQL)
+    - name: Récupérer une base de données sans restaurer les données (T-SQL)
       href: ../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md
     - name: Sauvegarder et restaurer des bases de données système
       href: ../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md
       items:
-      - name: Restaurer la base de données MASTER (Transact-SQL)
+      - name: Restaurer la base de données MASTER (T-SQL)
         href: ../relational-databases/backup-restore/restore-the-master-database-transact-sql.md
     - name: 'Sauvegarde et restauration : Interopérabilité et coexistence'
       href: ../relational-databases/backup-restore/backup-and-restore-interoperability-and-coexistence-sql-server.md
@@ -301,6 +306,8 @@ items:
         href: ../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md
       - name: Prérequis, restrictions et recommandations
         href: ../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md
+      - name: Interopérabilité
+        href: ../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md
     - name: Démarrage rapide
       items:
       - name: Prise en main
@@ -312,7 +319,7 @@ items:
           href: ../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md
         - name: Boîte de dialogue
           href: ../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md
-        - name: Transact-SQL
+        - name: T-SQL
           href: ../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md
         - name: PowerShell
           href: ../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md
@@ -343,6 +350,8 @@ items:
           href: ../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md
         - name: Configurer le routage en lecture seule
           href: ../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md
+        - name: Créer un écouteur
+          href: ../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md
         - name: Supprimer un écouteur
           href: ../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md
         - name: Joindre une base de données secondaire
@@ -371,7 +380,7 @@ items:
       - name: Surveillance
         href: ../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md
         items:
-        - name: Transact-SQL
+        - name: T-SQL
           href: ../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md
         - name: SQL Server Management Studio
           href: ../database-engine/availability-groups/windows/use-object-explorer-details-to-monitor-availability-groups.md
@@ -445,6 +454,8 @@ items:
           href: ../database-engine/availability-groups/windows/flexible-automatic-failover-policy-availability-group.md
         - name: Échelle lecture uniquement
           href: ../database-engine/availability-groups/windows/read-scale-availability-groups.md
+        - name: Redirection de connexion en lecture/écriture
+          href: ../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md
       - name: Administration
         items:
         - name: Sauvegarde sur un réplica secondaire
@@ -507,7 +518,7 @@ items:
       items:
       - name: Applets de commande Powershell
         href: ../database-engine/availability-groups/windows/overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md
-      - name: Transact-SQL
+      - name: T-SQL
         href: ../database-engine/availability-groups/windows/transact-sql-statements-for-always-on-availability-groups.md
       - name: Boîtes de dialogue et Assistants
         items:
@@ -716,9 +727,9 @@ items:
           - name: Établir une session de mise en miroir de bases de données
             href: ../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md
             items:
-            - name: "Exemple : Configurer la mise en miroir d'une base de données à l'aide de l'authentification Windows (Transact-SQL)"
+            - name: 'Exemple : Configuration de la mise en miroir de bases de données à l’aide de l’authentification Windows (T-SQL)'
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md
-            - name: "Exemple : Configuration de la mise en miroir de bases de données à l'aide de certificats (Transact-SQL)"
+            - name: 'Exemple : Configuration de la mise en miroir de bases de données à l’aide de certificats (T-SQL)'
               href: ../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md
           - name: Mise à niveau des instances en miroir
             href: ../database-engine/database-mirroring/upgrading-mirrored-instances.md
@@ -867,6 +878,7 @@ items:
       - name: Mise à niveau de la copie des journaux de transaction vers SQL Server 2016
         href: ../database-engine/log-shipping/upgrading-log-shipping-to-sql-server-2016-transact-sql.md
 - name: Conception de la base de données
+  href: ../toc/redirectfrom-database-design.md
   items:
   - name: Données hiérarchiques
     href: ../relational-databases/hierarchical-data-sql-server.md
@@ -882,7 +894,7 @@ items:
       href: ../relational-databases/collations/set-or-change-the-column-collation.md
     - name: Afficher des informations de classement
       href: ../relational-databases/collations/view-collation-information.md
-    - name: Rédiger des instructions Transact-SQL internationales
+    - name: Rédiger des instructions T-SQL internationales
       href: ../relational-databases/collations/write-international-transact-sql-statements.md
     - name: Définir une langue de session
       href: ../relational-databases/collations/set-a-session-language.md
@@ -949,9 +961,9 @@ items:
     - name: Attacher et détacher une base de données
       href: ../relational-databases/databases/database-detach-and-attach-sql-server.md
       items:
-      - name: Déplacer une base de données à l'aide de la méthode de détachement et d'attachement (Transact-SQL)
+      - name: Déplacer une base de données à l’aide de la méthode de détachement et d’attachement (T-SQL)
         href: ../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md
-      - name: Mettre à niveau une base de données avec Detach et Attach (Transact-SQL)
+      - name: Mettre à niveau une base de données à l’aide de la méthode de détachement et d’attachement (T-SQL)
         href: ../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md
       - name: Détacher une base de données
         href: ../relational-databases/databases/detach-a-database.md
@@ -1027,15 +1039,15 @@ items:
     - name: Instantanés de base de données
       href: ../relational-databases/databases/database-snapshots-sql-server.md
       items:
-      - name: Afficher la taille du fichier partiellement alloué d'un instantané de base de données (Transact-SQL)
+      - name: Afficher la taille du fichier partiellement alloué d’un instantané de base de données (T-SQL)
         href: ../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
-      - name: Créer un instantané de base de données (Transact-SQL)
+      - name: Créer un instantané de base de données (T-SQL)
         href: ../relational-databases/databases/create-a-database-snapshot-transact-sql.md
       - name: Afficher un instantané de base de données (SQL Server)
         href: ../relational-databases/databases/view-a-database-snapshot-sql-server.md
       - name: Rétablir une base de données dans l'état d'un instantané de base de données
         href: ../relational-databases/databases/revert-a-database-to-a-database-snapshot.md
-      - name: supprimer un instantané de base de données (Transact-SQL)
+      - name: Supprimer un instantané de base de données (T-SQL)
         href: ../relational-databases/databases/drop-a-database-snapshot-transact-sql.md
     - name: Initialisation instantanée des fichiers de base de données
       href: ../relational-databases/databases/database-instant-file-initialization.md
@@ -1059,7 +1071,7 @@ items:
         href: ../relational-databases/blob/create-a-filestream-enabled-database.md
       - name: Créer une table pour le stockage de données FILESTREAM
         href: ../relational-databases/blob/create-a-table-for-storing-filestream-data.md
-      - name: Accéder aux données FILESTREAM avec Transact-SQL
+      - name: Accéder aux données FILESTREAM avec T-SQL
         href: ../relational-databases/blob/access-filestream-data-with-transact-sql.md
       - name: Créer des applications clientes pour les données FILESTREAM
         href: ../relational-databases/blob/create-client-applications-for-filestream-data.md
@@ -1089,7 +1101,7 @@ items:
         href: ../relational-databases/blob/load-files-into-filetables.md
       - name: Travailler avec des répertoires et des chemins d'accès dans FileTables
         href: ../relational-databases/blob/work-with-directories-and-paths-in-filetables.md
-      - name: Accéder aux FileTables avec Transact-SQL
+      - name: Accéder aux tables FileTable avec T-SQL
         href: ../relational-databases/blob/access-filetables-with-transact-sql.md
       - name: Accéder aux FileTables avec des API d’entrée-sortie de fichier
         href: ../relational-databases/blob/access-filetables-with-file-input-output-apis.md
@@ -1272,7 +1284,7 @@ items:
       href: ../relational-databases/stored-procedures/view-the-definition-of-a-stored-procedure.md
     - name: Afficher la dépendance
       href: ../relational-databases/stored-procedures/view-the-dependencies-of-a-stored-procedure.md
-    - name: Objets OLE Automation dans Transact-SQL
+    - name: Objets OLE Automation dans T-SQL
       href: ../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md
       items:
       - name: Codes de retour OLE Automation et informations sur les erreurs
@@ -1742,9 +1754,10 @@ items:
       - name: Utiliser les méthodes value() et nodes() avec OPENXML
         href: ../relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: Développement
+  href: redirectfrom-development-10.md
   items:
-  - name: Programmation pour interagir avec SQL Server +
-    href: ../connect/homepage-sql-connection-programming.md
+  - name: Programmation pour interagir avec SQL Server ++
+    href: ../connect/index.md
   - name: Applications de la couche Données
     items:
     - name: Vue d'ensemble
@@ -2090,6 +2103,8 @@ items:
         href: ../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md
       - name: En-tête et informations de version SQL Server Express LocalDB
         href: ../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md
+      - name: Exemple d’API de base de données locale (LocalDB)
+        href: ../relational-databases/sql-server-express-localdb-reference.md
       - name: Fonctions de base de données locale (LocalDB)
         items:
         - name: LocalDBCreateInstance
@@ -3124,6 +3139,12 @@ items:
         href: ../relational-databases/server-management-objects-smo/tasks/using-user-defined-tables.md
       - name: Utilisation de schémas XML
         href: ../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md
+  - name: Programmes d’assistance natifs Visual Studio
+    items:
+    - name: SqlToolsVSNativeHelpers
+      href: ../relational-databases/sqltoolsvsnativehelpers.md
+    - name: FrameWindowVisible
+      href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
   - name: SQLXML
     items:
     - name: Configuration requise pour l'exécution des exemples SQLXML
@@ -3797,8 +3818,10 @@ items:
   - name: Guide du verrouillage des transactions et du contrôle de version de ligne
     href: ../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md
 - name: Installation
+  href: redirectfrom-installation-10.md
   items:
   - name: Notes de publication
+    href: redirectfrom-release-notes-10.md
     items:
     - name: compatibilité descendante ;
       href: ../database-engine/sql-server-database-engine-backward-compatibility.md
@@ -3814,6 +3837,8 @@ items:
       href: ../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md
   - name: Planification
     items:
+    - name: Référence
+      href: ../sql-server/install/planning-a-sql-server-installation.md
     - name: Nouveautés liées à l'installation de SQL Server
       href: ../sql-server/install/what-s-new-in-sql-server-installation.md
     - name: Configurations matérielle et logicielle requises pour l'installation de SQL Server
@@ -3832,6 +3857,8 @@ items:
     items:
     - name: Vue d'ensemble
       href: ../database-engine/install-windows/install-sql-server.md
+    - name: Référence
+      href: ../database-engine/install-windows/installation-for-sql-server.md
     - name: Aide de l’assistant Installation
       href: ../sql-server/install/instance-configuration.md
     - name: Installer le moteur de base de données SQL Server
@@ -3878,13 +3905,15 @@ items:
       href: ../sql-server/install/install-sql-server-business-intelligence-features.md
   - name: Mettre à niveau SQL Server
     items:
+    - name: Référence
+      href: ../database-engine/install-windows/upgrade-sql-server.md
     - name: Mises à niveau des versions et des éditions prises en charge pour SQL Server 2017
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Mises à niveau des versions et des éditions prises en charge pour SQL Server 2016
       href: ../database-engine/install-windows/supported-version-and-edition-upgrades.md
     - name: Préparer la mise à niveau en exécutant l’Assistant Migration des données
       href: ../database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
-    - name: Mise à niveau à partir de SQL 2005, 2008 ou 2008 R2 ?
+    - name: Mise à niveau à partir de SQL 2005, 2008 ou 2008 R2
       href: ../database-engine/install-windows/are-you-upgrading-from-sql-server-2005.md
     - name: Mettre à niveau Analysis Services
       href: ../database-engine/install-windows/upgrade-analysis-services.md
@@ -3993,7 +4022,7 @@ items:
         href: ../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md
       - name: ft notify bandwidth (option de configuration de serveur)
         href: ../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md
-      - name: Configuration de la connectivité PolyBase (Transact-SQL)
+      - name: Configuration de la connectivité PolyBase (T-SQL)
         href: ../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
       - name: in-doubt xact resolution (option de configuration de serveur)
         href: ../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md
@@ -4209,6 +4238,8 @@ items:
       href: ../database-engine/configure-windows/buffer-pool-extension.md
   - name: Désinstaller SQL Server
     items:
+    - name: Vue d'ensemble
+      href: ../sql-server/install/uninstall-sql-server.md
     - name: Désinstaller une instance existante de SQL Server (programme d'installation)
       href: ../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md
     - name: Supprimer les objets serveur DQS
@@ -4221,8 +4252,8 @@ items:
       href: ../sql-server/install/uninstall-reporting-services.md
 - name: Charger et migrer les données
   items:
-  - name: SQL Server Integration Services +
-    href: ../integration-services/sql-server-integration-services.md
+  - name: SQL Server Integration Services (SSIS) ++
+    href: ../integration-services/index.md
   - name: REPLICATION
     items:
     - name: Vue d'ensemble
@@ -4244,6 +4275,8 @@ items:
         items:
         - name: Distribuer et publier des scripts d’information
           href: ../relational-databases/replication/administration/distributor-and-publisher-information-script.md
+        - name: Réplication de script
+          href: ../relational-databases/replication/scripting-replication.md
         - name: Comparer des tables répliquées
           href: ../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md
         - name: Configurer des alertes prédéfinies (SSMS)
@@ -4284,9 +4317,13 @@ items:
       - name: Moniteur
         href: ../relational-databases/replication/monitor/monitoring-replication.md
         items:
+        - name: Surveiller des agents de réplication
+          href: ../relational-databases/replication/monitor/monitor-replication-agents.md
         - name: Moniteur de réplication
           href: ../relational-databases/replication/monitor/overview-of-the-replication-monitor-interface.md
           items:
+          - name: Démarrer le moniteur de réplication
+            href: ../relational-databases/replication/monitor/start-the-replication-monitor.md
           - name: Gérer les autorisations
             href: ../relational-databases/replication/monitor/allow-non-administrators-to-use-replication-monitor.md
           - name: Ajouter ou supprimer des serveurs de publication
@@ -4351,6 +4388,12 @@ items:
             href: ../relational-databases/replication/publish/create-a-publication.md
           - name: Afficher et modifier des propriétés
             href: ../relational-databases/replication/publish/view-and-modify-publication-properties.md
+          - name: Configurer les propriétés de l’instantané
+            href: ../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md
+          - name: Gérer les publications
+            href: ../relational-databases/replication/publish/maintain-publications.md
+          - name: Remettre un instantané par FTP
+            href: ../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md
           - name: Supprimer une publication
             href: ../relational-databases/replication/publish/delete-a-publication.md
           - name: Définir une période d’expiration d’abonnement
@@ -4367,8 +4410,6 @@ items:
             href: ../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md
           - name: Optimiser les filtres de lignes paramétrables
             href: ../relational-databases/replication/publish/optimize-parameterized-row-filters.md
-          - name: Ajouter ou supprimer des articles
-            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
           - name: Changer les propriétés des publications et des articles
             href: ../relational-databases/replication/publish/change-publication-and-article-properties.md
         - name: Gérer les articles
@@ -4377,8 +4418,12 @@ items:
             href: ../relational-databases/replication/publish/define-an-article.md
           - name: Spécifier des types d’article
             href: ../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md
+          - name: Ajouter ou supprimer des articles
+            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md
           - name: Afficher et modifier des propriétés
             href: ../relational-databases/replication/publish/view-and-modify-article-properties.md
+          - name: Ajouter ou supprimer des articles dans une publication
+            href: ../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-a-publication.md
           - name: Supprimer un article
             href: ../relational-databases/replication/publish/delete-an-article.md
         - name: Gérer les abonnements
@@ -4392,6 +4437,12 @@ items:
             href: ../relational-databases/replication/view-and-modify-pull-subscription-properties.md
           - name: Afficher et modifier les propriétés d'un abonnement par émission (push)
             href: ../relational-databases/replication/view-and-modify-push-subscription-properties.md
+          - name: Réinitialiser un abonnement
+            href: ../relational-databases/replication/reinitialize-a-subscription.md
+          - name: Synchroniser un abonnement par extraction de données (pull)
+            href: ../relational-databases/replication/synchronize-a-pull-subscription.md
+          - name: Synchroniser un abonnement par émission de données (pull)
+            href: ../relational-databases/replication/synchronize-a-push-subscription.md
           - name: Supprimer un abonnement par extraction
             href: ../relational-databases/replication/delete-a-pull-subscription.md
           - name: Supprimer un abonnement par émission (push)
@@ -4409,6 +4460,8 @@ items:
           - name: Initialiser un abonnement
             href: ../relational-databases/replication/initialize-a-subscription.md
             items:
+            - name: Initialiser manuellement
+              href: ../relational-databases/replication/initialize-a-subscription-manually.md
             - name: Créer et appliquer la capture instantanée initiale
               href: ../relational-databases/replication/create-and-apply-the-initial-snapshot.md
             - name: Modifier les options d’instantané
@@ -4464,12 +4517,18 @@ items:
         items:
         - name: Configurer la méthode de propagation pour les changements de données
           href: ../relational-databases/replication/publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md
+        - name: Afficher les commandes répliquées
+          href: ../relational-databases/replication/monitor/view-replicated-commands-and-information-in-distribution-database.md
         - name: Activer des abonnements mis à jour
           href: ../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md
         - name: Créer un abonnement actualisable
           href: ../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md
         - name: Publier l’exécution d’un Service Pack
           href: ../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md
+        - name: Autoriser l’initialisation à partir de la sauvegarde
+          href: ../relational-databases/replication/enable-initialization-with-backup-for-transactional-publications.md
+        - name: Initialiser à partir de la sauvegarde
+          href: ../relational-databases/replication/initialize-a-transactional-subscription-from-a-backup.md
         - name: Afficher les conflits de données
           href: ../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md
         - name: Rechercher des erreurs avec la réplication transactionnelle
@@ -4496,6 +4555,8 @@ items:
           href: ../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md
         - name: Générer automatiquement des filtres de jointure entre des articles
           href: ../relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
+        - name: Définir une relation d’enregistrement logique
+          href: ../relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
         - name: Configurer la synchronisation web
           href: ../relational-databases/replication/configure-web-synchronization.md
         - name: Configurer IIS pour la synchronisation Web
@@ -4518,6 +4579,8 @@ items:
           href: ../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md
         - name: Filtrer des données publiées
           href: ../relational-databases/replication/merge/filter-published-data-for-merge-replication.md
+        - name: Afficher les informations de conflit
+          href: ../relational-databases/replication/view-conflict-information-for-merge-publications.md
         - name: Résolution de conflits
           items:
           - name: Choisir un outil de résolution
@@ -4602,8 +4665,10 @@ items:
         - name: Topologies pour la synchronisation web
           href: ../relational-databases/replication/topologies-for-web-synchronization.md
       - name: Agents de réplication
-        href: ../relational-databases/replication/agents/replication-agents-overview.md
+        href: ../relational-databases/replication/agents/replication-agent-administration.md
         items:
+        - name: Vue d'ensemble
+          href: ../relational-databases/replication/agents/replication-agents-overview.md
         - name: Agent de distribution
           href: ../relational-databases/replication/agents/replication-distribution-agent.md
         - name: l'Agent de lecture du journal ;
@@ -4614,6 +4679,8 @@ items:
           href: ../relational-databases/replication/agents/replication-queue-reader-agent.md
         - name: Agent d'instantané
           href: ../relational-databases/replication/agents/replication-snapshot-agent.md
+        - name: Profils de l’agent
+          href: ../relational-databases/replication/agents/replication-agent-profiles.md
       - name: Concepts de développeur
         href: ../relational-databases/replication/concepts/replication-developer-documentation.md
         items:
@@ -4648,6 +4715,8 @@ items:
           - name: Oracle
             href: ../relational-databases/replication/non-sql/oracle-publishing-overview.md
             items:
+            - name: Observations et limitations
+              href: ../relational-databases/replication/non-sql/design-considerations-and-limitations-for-oracle-publishers.md
             - name: Glossaire des termes
               href: ../relational-databases/replication/non-sql/glossary-of-terms-for-oracle-publishing.md
             - name: Considérations d'ordre administratif
@@ -4682,6 +4751,8 @@ items:
         href: ../relational-databases/replication/tutorial-replicating-data-with-mobile-clients.md
     - name: Référence
       items:
+      - name: Langage de réplication
+        href: ../relational-databases/replication/replication-language-reference.md
       - name: Propriétés des objets de réplication
         items:
         - name: Propriétés du serveur de distribution
@@ -4701,11 +4772,21 @@ items:
           href: ../relational-databases/replication/article-properties-article.md
         - name: Propriétés de l'abonnement
           href: ../relational-databases/replication/subscription-properties-subscriber.md
+        - name: Paramètres du filtre
+          href: ../relational-databases/replication/filter-settings.md
+        - name: Agent de lecture du journal
+          href: ../relational-databases/replication/log-reader-agent.md
+        - name: Agent d’instantané
+          href: ../relational-databases/replication/snapshot-agent.md
+        - name: Agent de lecture de la file d’attente
+          href: ../relational-databases/replication/queue-reader-agent.md
       - name: Références relatives aux outils
         items:
         - name: Moniteur de réplication
           href: ../relational-databases/replication/replication-monitor.md
           items:
+          - name: Page principale
+            href: ../relational-databases/replication/replication-monitor-main-page.md
           - name: Ajouter un serveur de publication
             href: ../relational-databases/replication/add-publisher.md
           - name: Paramètres du serveur de distribution
@@ -4716,25 +4797,30 @@ items:
             href: ../relational-databases/replication/publisher-settings.md
           - name: Informations sur le serveur de publication
             href: ../relational-databases/replication/publisher-information-publications.md
+          - name: Agents du serveur de publication
+            href: ../relational-databases/replication/publisher-information-agents.md
+          - name: Trier les colonnes
+            href: ../relational-databases/replication/sort-columns.md
+        - name: Informations sur la publication
+          items:
+          - name: Réplication transactionnelle
             items:
-            - name: Réplication transactionnelle
-              items:
-              - name: Liste de suivi des abonnements
-                href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
-              - name: Abonnements
-                href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
-              - name: Avertissements
-                href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
-              - name: Agents
-                href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
-              - name: Jetons de suivi
-                href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
-              - name: Commandes non distribuées
-                href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
-              - name: Historique du serveur de publication vers le serveur de distribution
-                href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
-              - name: Historique du serveur de distribution vers l'Abonné
-                href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
+            - name: Liste de suivi des abonnements
+              href: ../relational-databases/replication/publisher-information-subscription-watch-list-transactional.md
+            - name: Abonnements
+              href: ../relational-databases/replication/publication-information-all-subscriptions-transactional-publication.md
+            - name: Avertissements
+              href: ../relational-databases/replication/publication-information-warnings-transactional-publication.md
+            - name: Agents
+              href: ../relational-databases/replication/publication-information-agents-transactional-publication.md
+            - name: Jetons de suivi
+              href: ../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md
+            - name: Commandes non distribuées
+              href: ../relational-databases/replication/subscription-undistributed-commands-transactional-subscription.md
+            - name: Historique du serveur de publication vers le serveur de distribution
+              href: ../relational-databases/replication/subscription-publisher-to-distributor-history-transactional-subscription.md
+            - name: Historique du serveur de distribution vers l'Abonné
+              href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-transactional-subscription.md
             - name: Réplication de fusion
               items:
               - name: Liste de suivi des abonnements
@@ -5122,7 +5208,8 @@ items:
   - name: Utilitaire de copie en bloc (bcp)
     href: ../tools/bcp-utility.md
   - name: Azure Migration Services +
-    href: https://docs.microsoft.com/en-us/azure/dms/dms-overview
+    displayName: DMS, Data Migration Service
+    href: /azure/dms/dms-overview
   - name: Stretch Database
     items:
     - name: Vue d'ensemble
@@ -6378,11 +6465,11 @@ items:
           href: ../relational-databases/data-collection/view-or-change-collection-set-schedules-sql-server-management-studio.md
         - name: Afficher un rapport de jeu d'éléments de collecte (SQL Server Management Studio)
           href: ../relational-databases/data-collection/view-a-collection-set-report-sql-server-management-studio.md
-        - name: Configurer des paramètres de collecte de données (Transact-SQL)
+        - name: Configurer des paramètres de collecte de données (T-SQL)
           href: ../relational-databases/data-collection/configure-data-collection-parameters-transact-sql.md
-        - name: Créer un jeu d'éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique (Transact-SQL)
+        - name: Créer un jeu d’éléments de collecte personnalisé qui utilise le type de collecteur de requête T-SQL générique (T-SQL)
           href: ../relational-databases/data-collection/create-custom-collection-set-generic-t-sql-query-collector-type.md
-        - name: Ajouter un élément de collecte à un jeu d'éléments de collecte (Transact-SQL)
+        - name: Ajouter un élément de collecte dans un jeu d’éléments de collecte (T-SQL)
           href: ../relational-databases/data-collection/add-a-collection-item-to-a-collection-set-transact-sql.md
       - name: Rapports de jeux d'éléments de collecte de données système
         href: ../relational-databases/data-collection/system-data-collection-set-reports.md
@@ -6437,7 +6524,7 @@ items:
       items:
       - name: Vue d'ensemble
         href: ../relational-databases/sql-trace/sql-trace.md
-      - name: Créer et exécuter des traces à l'aide de procédures stockées Transact-SQL.
+      - name: Créer et exécuter des traces à l’aide de procédures stockées T-SQL
         href: ../relational-databases/sql-trace/create-and-run-traces-using-transact-sql-stored-procedures.md
       - name: Créer des traces manuelles à l'aide de procédures stockées
         href: ../relational-databases/sql-trace/create-manual-traces-using-stored-procedures.md
@@ -6445,17 +6532,17 @@ items:
         href: ../relational-databases/sql-trace/save-trace-results-to-a-file.md
       - name: Améliorer l'accès aux données de trace
         href: ../relational-databases/sql-trace/improve-access-to-trace-data.md
-      - name: Créer une trace (Transact-SQL)
+      - name: Créer une trace (T-SQL)
         href: ../relational-databases/sql-trace/create-a-trace-transact-sql.md
-      - name: Définir un filtre de trace (Transact-SQL)
+      - name: Définir un filtre de trace (T-SQL)
         href: ../relational-databases/sql-trace/set-a-trace-filter-transact-sql.md
-      - name: Modifier une trace existante (Transact-SQL)
+      - name: Modifier une trace existante (T-SQL)
         href: ../relational-databases/sql-trace/modify-an-existing-trace-transact-sql.md
-      - name: Afficher une trace enregistrée (Transact-SQL)
+      - name: Afficher une trace enregistrée (T-SQL)
         href: ../relational-databases/sql-trace/view-a-saved-trace-transact-sql.md
-      - name: Afficher des informations de filtrage (Transact-SQL)
+      - name: Afficher les informations de filtrage (T-SQL)
         href: ../relational-databases/sql-trace/view-filter-information-transact-sql.md
-      - name: Supprimer une trace (Transact-SQL)
+      - name: Supprimer une trace (T-SQL)
         href: ../relational-databases/sql-trace/delete-a-trace-transact-sql.md
       - name: Optimiser Trace SQL
         href: ../relational-databases/sql-trace/optimize-sql-trace.md
@@ -6682,7 +6769,7 @@ items:
       items:
       - name: Vue d'ensemble
         href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
-      - name: Inventaire des technologies OLTP en mémoire pour accélérer les performances de Transact-SQL
+      - name: Inventaire des technologies OLTP en mémoire pour accélérer les performances de T-SQL
         href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
       - name: Vue d’ensemble et scénarios d’utilisation
         href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
@@ -6798,18 +6885,18 @@ items:
           href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
         - name: Prise en charge de la haute disponibilité pour les bases de données OLTP en mémoire
           href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-        - name: Prise en charge d'OLTP en mémoire par Transact-SQL
+        - name: Prise en charge d’OLTP en mémoire par T-SQL
           href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
           items:
           - name: Types de données pris en charge pour l’OLTP en mémoire
             href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-          - name: Accès aux tables optimisées en mémoire à l’aide du Transact-SQL interprété
+          - name: Accès aux tables à mémoire optimisée à l’aide du T-SQL interprété
             href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
           - name: Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
             href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
           - name: DDL pris en charge pour les modules T-SQL compilés en mode natif
             href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-          - name: Constructions Transact-SQL non prises en charge par l’OLTP en mémoire
+          - name: Constructions T-SQL non prises en charge par l’OLTP en mémoire
             href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
       - name: Migration vers OLTP en mémoire
         href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
@@ -6975,14 +7062,15 @@ items:
       href: ../relational-databases/synonyms/create-synonyms.md
 - name: Création de rapports et analytique
   items:
-  - name: Analytique avancée et Machine Learning +
+  - name: Analytique avancée et Machine Learning ++
     href: ../advanced-analytics/index.md
-  - name: Analytics Platform System +
-    href: ../analytics-platform-system/whats-new-analytics-platform-system.md
-  - name: SQL Server Analysis Services (SSAS) +
-    href: ../analysis-services/analysis-services.md
-  - name: SQL Server Reporting Services (SSRS) +
-    href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
+  - name: Analytics Platform System ++
+    displayName: APS, PDW, Parallel Data Warehouse
+    href: ../analytics-platform-system/index.md
+  - name: SQL Server Analysis Services (SSAS) ++
+    href: ../analysis-services/index.md
+  - name: SQL Server Reporting Services (SSRS) ++
+    href: ../reporting-services/index.md
   - name: Cluster Big Data
     items:
     - name: Vue d'ensemble
@@ -7048,25 +7136,33 @@ items:
       - name: Virtualisation de données
         items:
         - name: Virtualiser les données relationnelles
-          href: ../big-data-cluster/../relational-databases/polybase/data-virtualization.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+          href: ../relational-databases/polybase/data-virtualization.md
         - name: Virtualiser les données CSV
-          href: ../big-data-cluster/../relational-databases/polybase/data-virtualization-csv.md?toc=%2fsql%2fbig-data-cluster%2ftoc.json
+          href: ../relational-databases/polybase/data-virtualization-csv.md
+        - name: Hiérarchisation HDFS
+          href: ../big-data-cluster/hdfs-tiering.md
       - name: Ingestion de données
         items:
         - name: Charger des données avec curl
           href: ../big-data-cluster/data-ingestion-curl.md
         - name: Restaurer une base de données
           href: ../big-data-cluster/data-ingestion-restore-database.md
+      - name: Déployer des applications
+        items:
+        - name: Utiliser mssqlctl
+          href: ../big-data-cluster/big-data-cluster-create-apps.md
+        - name: Utiliser VS Code
+          href: ../big-data-cluster/app-deployment-extension.md
       - name: Big Data/Machine Learning
         items:
         - name: Data wrangling avec l’accélérateur de code PROSE
           href: ../big-data-cluster/use-prose-for-big-data-automation.md
-        - name: Déployer des applications
-          href: ../big-data-cluster/big-data-cluster-create-apps.md
         - name: Entraînement et création de modèles Machine Learning avec Spark
           href: ../big-data-cluster/train-and-create-machinelearning-models-with-spark.md
         - name: Exportation de modèles ML avec Spark/Mleap
           href: ../big-data-cluster/export-model-with-spark-mleap.md
+        - name: Utiliser Sparklyr à partir de RStudio
+          href: ../big-data-cluster/sparklyr-from-RStudio.md
       - name: Gérer le cluster Big Data de SQL Server
         items:
         - name: Se connecter à un cluster de Big Data
@@ -7083,14 +7179,12 @@ items:
           href: ../big-data-cluster/notebooks-how-to-manage.md
       - name: Travaux Spark
         items:
-        - name: Soumettre des travaux Spark
+        - name: Envoyer des travaux Spark dans Azure Data Studio
           href: ../big-data-cluster/spark-submit-job.md
+        - name: Envoyer des travaux Spark dans IntelliJ
+          href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
         - name: Utiliser le serveur d’historique Spark
           href: ../big-data-cluster/spark-history-server.md
-    - name: Ressources
-      items:
-      - name: Demander l’accès à des clusters Big Data
-        href: https://aka.ms/eapsignup
   - name: Master Data Services
     items:
     - name: Introduction
@@ -7658,7 +7752,7 @@ items:
           href: ../relational-databases/polybase/polybase-faq.md
     - name: Référence
       items:
-      - name: Informations de référence sur Transact-SQL
+      - name: Référence T-SQL
         href: ../relational-databases/polybase/polybase-t-sql-objects.md
     - name: Ressources
       items:
@@ -7667,7 +7761,7 @@ items:
       - name: Stack Overflow +
         href: https://stackoverflow.com/questions/tagged/sql-server
       - name: Forums MSDN +
-        href: https://social.msdn.microsoft.com/Forums/en-us/home?category=sqlserver
+        href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
       - name: Envoyer des commentaires +
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit +
@@ -7757,11 +7851,11 @@ items:
         - name: Connecteur SQL Server avec chiffrement
           href: ../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
         - name: BYOK (Bring Your Own Key) +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
         - name: Effectuer la rotation des clés BYOK TDE +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
         - name: Supprimer le protecteur TDE +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
+          href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
         - name: EKM avec Azure Key Vault
           href: ../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
       - name: Audit
@@ -7837,10 +7931,10 @@ items:
         - name: Chiffrement transparent des données (TDE)
           href: ../relational-databases/security/encryption/transparent-data-encryption.md
         - name: TDE avec Azure SQL Database +
-          href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-azure-sql
+          href: /azure/sql-database/transparent-data-encryption-azure-sql
           items:
           - name: BYOK (Bring Your Own Key) +
-            href: https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql
+            href: /azure/sql-database/transparent-data-encryption-byok-azure-sql
         - name: Clés de chiffrement
           href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
           items:
@@ -8257,7 +8351,7 @@ items:
       href: ../ssms/scripting/sqlcmd-use-the-utility.md
     - name: Se connecter au moteur de base de données
       href: ../ssms/scripting/sqlcmd-connect-to-the-database-engine.md
-    - name: Exécuter des fichiers de script Transact-SQL
+    - name: Exécuter des fichiers de script T-SQL
       href: ../ssms/scripting/sqlcmd-run-transact-sql-script-files.md
     - name: Utiliser avec des variables de script
       href: ../ssms/scripting/sqlcmd-use-with-scripting-variables.md
@@ -8308,7 +8402,7 @@ items:
         href: ../ssdt/how-to-browse-objects-in-a-sql-server-database-project.md
       - name: Fenêtre Opérations des outils de données
         href: ../ssdt/data-tools-operations-window.md
-      - name: Options de l'Éditeur Transact-SQL
+      - name: Options de l’Éditeur T-SQL
         href: ../ssdt/transact-sql-editor-options.md
       - name: 'Procédure : Créer un projet de base de données'
         href: ../ssdt/how-to-create-a-new-database-project.md
@@ -8363,9 +8457,9 @@ items:
         href: ../ssdt/how-to-compare-and-synchronize-the-data-of-two-databases.md
       - name: 'Procédure : Afficher les différences entre les données'
         href: ../ssdt/how-to-view-data-differences.md
-      - name: Utiliser l'Éditeur Transact-SQL pour modifier et exécuter des scripts
+      - name: Utiliser l’Éditeur T-SQL pour modifier et exécuter des scripts
         href: ../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md
-      - name: 'Procédure : Structurer et ajouter des extraits de code à un script Transact-SQL'
+      - name: 'Procédure : Structurer et ajouter des extraits de code dans un script T-SQL'
         href: ../ssdt/how-to-outline-and-add-snippets-to-transact-sql-script.md
       - name: 'Procédure : Naviguer entre des scripts'
         href: ../ssdt/how-to-navigate-between-scripts.md
@@ -8398,7 +8492,7 @@ items:
           href: ../ssdt/sql-server-unit-test-files.md
         - name: Utilisation de conditions de test dans les tests unitaires SQL Server
           href: ../ssdt/using-test-conditions-in-sql-server-unit-tests.md
-        - name: Utilisation d'assertions Transact-SQL dans les tests unitaires SQL Server
+        - name: Utilisation d’assertions T-SQL dans les tests unitaires SQL Server
           href: ../ssdt/using-transact-sql-assertions-in-sql-server-unit-tests.md
         - name: 'Procédure : Créer un projet de test pour un test unitaire de base de données SQL Server'
           href: ../ssdt/how-to-create-a-test-project-for-sql-server-database-unit-testing.md
@@ -8601,7 +8695,7 @@ items:
           href: ../ssms/agent/create-a-sql-server-agent-master-job.md
         - name: Create a SQL Server Agent Proxy
           href: ../ssms/agent/create-a-sql-server-agent-proxy.md
-        - name: Create a Transact-SQL Job Step
+        - name: Créer une étape de travail T-SQL
           href: ../ssms/agent/create-a-transact-sql-job-step.md
         - name: Créer un événement défini par l'utilisateur
           href: ../ssms/agent/create-a-user-defined-event.md
@@ -8627,7 +8721,7 @@ items:
           href: ../ssms/agent/defect-multiple-target-servers-from-a-master-server.md
         - name: Définir la réponse à une alerte (SSMS)
           href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
-        - name: Définir les options d'une étape de travail Transact-SQL
+        - name: Définir les options d’une étape de travail T-SQL
           href: ../ssms/agent/define-transact-sql-job-step-options.md
         - name: Supprimer une catégorie de travaux
           href: ../ssms/agent/delete-a-job-category.md
@@ -8887,29 +8981,29 @@ items:
           href: ../ssms/scripting/automatic-matching-of-syntax-pairs.md
         - name: Résolution des problèmes IntelliSense (SSMS)
           href: ../ssms/scripting/troubleshooting-intellisense.md
-        - name: Syntaxe Transact-SQL prise en charge par IntelliSense
+        - name: Syntaxe T-SQL prise en charge par IntelliSense
           href: ../ssms/scripting/transact-sql-syntax-supported-by-intellisense.md
-      - name: Extraits de code Transact-SQL
+      - name: Extraits de code T-SQL
         href: ../ssms/scripting/transact-sql-code-snippets.md
         items:
-        - name: Insérer des extraits de code Transact-SQL
+        - name: Insérer des extraits de code T-SQL
           href: ../ssms/scripting/insert-transact-sql-snippets.md
-        - name: Insérer des extraits de code d'entourage (surround-with) Transact-SQL
+        - name: Insérer des extraits de code d’entourage (surround-with) T-SQL
           href: ../ssms/scripting/insert-surround-with-transact-sql-snippets.md
-        - name: Compléter des extraits de code Transact-SQL
+        - name: Compléter des extraits de code T-SQL
           href: ../ssms/scripting/complete-transact-sql-snippets.md
-        - name: Ajouter des extraits de code Transact-SQL
+        - name: Ajouter des extraits de code T-SQL
           href: ../ssms/scripting/add-transact-sql-snippets.md
-      - name: Débogueur Transact-SQL
+      - name: Débogueur T-SQL
         href: ../ssms/scripting/transact-sql-debugger.md
         items:
-        - name: Configurer des règles de pare-feu avant d’exécuter le débogueur TSQL
+        - name: Configurer des règles de pare-feu avant d’exécuter le débogueur T-SQL
           href: ../ssms/scripting/configure-firewall-rules-before-running-the-tsql-debugger.md
-        - name: Exécuter le débogueur Transact-SQL
+        - name: Exécuter le débogueur T-SQL
           href: ../ssms/scripting/run-the-transact-sql-debugger.md
-        - name: Exécuter pas à pas du code Transact-SQL
+        - name: Exécuter pas à pas le code T-SQL
           href: ../ssms/scripting/step-through-transact-sql-code.md
-        - name: Points d'arrêt Transact-SQL
+        - name: Points d’arrêt T-SQL
           href: ../ssms/scripting/transact-sql-breakpoints.md
           items:
           - name: Basculer un point d'arrêt
@@ -8926,26 +9020,26 @@ items:
             href: ../ssms/scripting/specify-a-breakpoint-action.md
           - name: Modifier un emplacement de point d'arrêt
             href: ../ssms/scripting/edit-a-breakpoint-location.md
-        - name: Débogueur Transact-SQL - Informations
+        - name: Débogueur T-SQL - Informations
           href: ../ssms/scripting/transact-sql-debugger-information.md
           items:
-          - name: Débogueur Transact-SQL - Fenêtre Liste d’erreurs
+          - name: Débogueur T-SQL - Fenêtre Liste d’erreurs
             href: ../ssms/scripting/transact-sql-debugger-error-list-window.md
-          - name: Débogueur Transact-SQL - Fenêtre Points d’arrêt
+          - name: Débogueur T-SQL - Fenêtre Points d’arrêt
             href: ../ssms/scripting/transact-sql-debugger-breakpoints-window.md
-          - name: Débogueur Transact-SQL - Fenêtre Pile des appels
+          - name: Débogueur T-SQL - Fenêtre Pile des appels
             href: ../ssms/scripting/transact-sql-debugger-call-stack-window.md
-          - name: Débogueur Transact-SQL - Fenêtre Variables locales
+          - name: Débogueur T-SQL - Fenêtre Variables locales
             href: ../ssms/scripting/transact-sql-debugger-locals-window.md
-          - name: Débogueur Transact-SQL - Fenêtre Threads
+          - name: Débogueur T-SQL - Fenêtre Theads
             href: ../ssms/scripting/transact-sql-debugger-threads-window.md
-          - name: Débogueur Transact-SQL - Fenêtre Commande
+          - name: Débogueur T-SQL - Fenêtre Commande
             href: ../ssms/scripting/transact-sql-debugger-command-window.md
-          - name: Débogueur Transact-SQL - Fenêtre Sortie
+          - name: Débogueur T-SQL - Fenêtre Sortie
             href: ../ssms/scripting/transact-sql-debugger-output-window.md
-          - name: Débogueur Transact-SQL - Fenêtre Espion
+          - name: Débogueur T-SQL - Fenêtre Espion
             href: ../ssms/scripting/transact-sql-debugger-watch-window.md
-          - name: Débogueur Transact-SQL - Boîte de dialogue Espion express
+          - name: Débogueur T-SQL - Boîte de dialogue Espion express
             href: ../ssms/scripting/transact-sql-debugger-quickwatch-dialog-box.md
         - name: Barre d'état (éditeur de requête du moteur de base de données)
           href: ../ssms/scripting/status-bar-database-engine-query-editor.md
@@ -9634,7 +9728,7 @@ items:
     - name: Créer une trace
       href: ../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md
       items:
-      - name: Créer un script Transact-SQL pour exécuter une trace
+      - name: Créer un script T-SQL pour exécuter une trace
         href: ../tools/sql-server-profiler/create-a-transact-sql-script-for-running-a-trace-sql-server-profiler.md
     - name: Démarrer une trace
       href: ../tools/sql-server-profiler/start-a-trace.md
@@ -9718,7 +9812,7 @@ items:
         href: ../tools/sql-server-profiler/replay-to-a-breakpoint-sql-server-profiler.md
       - name: Relire jusqu’à un curseur
         href: ../tools/sql-server-profiler/replay-to-a-cursor-sql-server-profiler.md
-      - name: Relire un script Transact-SQL
+      - name: Relire un script T-SQL
         href: ../tools/sql-server-profiler/replay-a-transact-sql-script-sql-server-profiler.md
       - name: Boîtes de dialogue SQL Server Profiler
         href: ../tools/sql-server-profiler/sql-server-profiler-f1-help.md
@@ -9989,7 +10083,7 @@ items:
     - name: Stack Overflow +
       href: https://stackoverflow.com/questions/tagged/sql-server
     - name: Forums MSDN +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home
+      href: https://social.msdn.microsoft.com/Forums/home
     - name: Envoyer des commentaires +
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Reddit +
@@ -9997,11 +10091,11 @@ items:
 - name: SQL sur Azure
   items:
   - name: Azure SQL Database +
-    href: https://docs.microsoft.com/en-us/azure/sql-database/
+    href: /azure/sql-database/
   - name: Azure SQL Data Warehouse +
-    href: https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+    href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
   - name: SQL Server sur une machine virtuelle Azure +
-    href: https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
+    href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Ressources
   items:
   - name: Blogs
@@ -10017,17 +10111,19 @@ items:
   - name: Découvrir
     items:
     - name: Microsoft Virtual Academy +
-      href: https://mva.microsoft.com/product-training/sql-server#!lang=1033
+      href: https://mva.microsoft.com/product-training/sql-server
     - name: SQL sur Channel 9 +
       href: https://channel9.msdn.com/Search
   - name: Commentaires et aide
     items:
     - name: Obtenir de l’aide
       href: ../sql-server/sql-server-get-help.md
-    - name: Fournir des commentaires sur SQL Docs
+    - name: Commentaires sur des documents SQL +
       href: https://aka.ms/sqldocsfeedback
-    - name: Fournir des commentaires sur SQL Server (UserVoice)
+    - name: Commentaires sur SQL Server (UserVoice) +
       href: https://feedback.azure.com/forums/908035-sql-server
+    - name: Enquête sur les documents SQL +
+      href: https://aka.ms/sqldocsurvey
     - name: Contribuez à la documentation SQL !
       href: ../sql-server/sql-server-docs-contribute.md
     - name: DBA Stack Exchange +
@@ -10035,7 +10131,7 @@ items:
     - name: Stack Overflow +
       href: https://stackoverflow.com/questions/tagged/sql-server
     - name: Forums MSDN +
-      href: https://social.msdn.microsoft.com/Forums/en-US/home
+      href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit +
       href: https://www.reddit.com/r/SQLServer
   - name: Partenaires
@@ -10051,7 +10147,51 @@ items:
   - name: Contenu local avec la visionneuse d’aide
     href: ../sql-server/sql-server-help-installation.md
 - name: Référence
+  href: ../toc/redirectfrom-reference-10.md
   items:
+  - name: Fichiers include de documents SQL
+    href: ../sql-server/applies-to-includes.md
+  - name: Contenu archivé (SQL 2005 - 2012) +
+    displayName: 2005, 2008, 2008 r2, 2012
+    href: https://docs.microsoft.com/previous-versions/sql/
+  - name: Exemples de base de données
+    href: ../toc/redirectfrom-database-samples.md
+    items:
+    - name: Vue d’ensemble des exemples
+      href: ../samples/sql-samples-where-are.md
+    - name: Tous les exemples GitHub +
+      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
+    - name: AdventureWorks
+      items:
+      - name: Installation et configuration
+        href: ../samples/adventureworks-install-configure.md
+    - name: Wide World Importers
+      href: ../toc/redirectfrom-wide-world-importers.md
+      items:
+      - name: Vue d'ensemble
+        href: ../samples/wide-world-importers-what-is.md
+      - name: OLTP
+        href: ../toc/redirectfrom-oltp-10.md
+        items:
+        - name: Catalogue de base de données
+          href: ../samples/wide-world-importers-oltp-database-catalog.md
+        - name: Installation et configuration
+          href: ../samples/wide-world-importers-oltp-install-configure.md
+        - name: fonctionnalités SQL Server
+          href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
+      - name: entrepôt de données
+        href: ../toc/redirectfrom-data-warehouse-10.md
+        items:
+        - name: Catalogue de base de données
+          href: ../samples/wide-world-importers-dw-database-catalog.md
+        - name: Installation et configuration
+          href: ../samples/wide-world-importers-dw-install-configure.md
+        - name: fonctionnalités SQL Server
+          href: ../samples/wide-world-importers-dw-use-of-sql-server-features.md
+      - name: Générer les données
+        href: ../samples/wide-world-importers-generate-data.md
+      - name: Flux de travail ETL
+        href: ../samples/wide-world-importers-perform-etl.md
   - name: Erreurs et événements
     items:
     - name: Vue d'ensemble
@@ -11015,35 +11155,6 @@ items:
       - name: SP:StmtStarting (classe d'événements)
         href: ../relational-databases/event-classes/sp-stmtstarting-event-class.md
     - name: Catégorie d'événements Transactions
-      href: ../relational-databases/event-classes/transactions-event-category.md
-      items:
-      - name: DTCTransaction (classe d'événements)
-        href: ../relational-databases/event-classes/dtctransaction-event-class.md
-      - name: SQLTransaction (classe d'événements)
-        href: ../relational-databases/event-classes/sqltransaction-event-class.md
-      - name: "Classe d'événements TM: TM: Begin Tran Completed"
-        href: ../relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Begin Tran Starting"
-        href: ../relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-      - name: "Classe d'événements TM: Commit Tran Completed"
-        href: ../relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Classe d'événements Commit Tran Starting"
-        href: ../relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-      - name: "Classe d'événements TM: Promote Tran Completed"
-        href: ../relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Promote Tran Starting"
-        href: ../relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-      - name: "Classe d'événements TM: Rollback Tran Completed"
-        href: ../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Classe d'événements Rollback Tran Starting"
-        href: ../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-      - name: "Classe d'événements TM: Save Tran Completed"
-        href: ../relational-databases/event-classes/tm-save-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Save Tran Starting (classe d'événements)"
-        href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
-      - name: TransactionLog (classe d'événements)
-        href: ../relational-databases/event-classes/transactionlog-event-class.md
-    - name: TSQL, catégorie d’événement
       href: ../relational-databases/event-classes/tsql-event-category.md
       items:
       - name: Exec Prepared SQL (classe d'événements)
@@ -11194,7 +11305,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md
       - name: sys.assembly_references
         href: ../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md
-      - name: sys.trusted_assemblies (Transact-SQL)
+      - name: sys.trusted_assemblies (T-SQL)
         href: ../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md
     - name: Collecteur de données
       href: ../relational-databases/system-catalog-views/data-collector-views-transact-sql.md
@@ -11254,7 +11365,7 @@ items:
         href: ../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md
       - name: sys.database_scoped_configurations
         href: ../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md
-      - name: sys.database_automatic_tuning_options (Transact-SQL)
+      - name: sys.database_automatic_tuning_options (T-SQL)
         href: ../relational-databases/system-catalog-views/sys-database-automatic-tuning-options-transact-sql.md
       - name: sys.master_files
         href: ../relational-databases/system-catalog-views/sys-master-files-transact-sql.md
@@ -14535,35 +14646,37 @@ items:
     items:
     - name: Vue d'ensemble
       href: ../relational-databases/system-views/replication-views-transact-sql.md
-    - name: IHextendedArticleView (Transact-SQL)
+    - name: IHextendedArticleView (T-SQL)
       href: ../relational-databases/system-views/ihextendedarticleview-transact-sql.md
-    - name: IHextendedSubscriptionView (Transact-SQL)
+    - name: IHextendedSubscriptionView (T-SQL)
       href: ../relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
-    - name: IHsyscolumns (Transact-SQL)
+    - name: IHsyscolumns (T-SQL)
       href: ../relational-databases/system-views/ihsyscolumns-transact-sql.md
-    - name: MSdatatype_mappings (Transact-SQL)
+    - name: MSdatatype_mappings (T-SQL)
       href: ../relational-databases/system-views/msdatatype-mappings-transact-sql.md
-    - name: MSdistribution_status (Transact-SQL)
+    - name: MSdistribution_status (T-SQL)
       href: ../relational-databases/system-views/msdistribution-status-transact-sql.md
-    - name: sysarticlecolumns (Vue système, Transact-SQL)
+    - name: sysarticlecolumns (vue système) (T-SQL)
       href: ../relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
-    - name: sysarticles (vue système) (Transact-SQL)
+    - name: sysarticles (vue système) (T-SQL)
       href: ../relational-databases/system-views/sysarticles-system-view-transact-sql.md
-    - name: sysdatatypemappings (Transact-SQL)
+    - name: sysdatatypemappings (T-SQL)
       href: ../relational-databases/system-views/sysdatatypemappings-transact-sql.md
-    - name: sysextendedarticlesview (Transact-SQL)
+    - name: sysextendedarticlesview (T-SQL)
       href: ../relational-databases/system-views/sysextendedarticlesview-transact-sql.md
-    - name: sysmergeextendedarticlesview (Transact-SQL)
+    - name: sysmergeextendedarticlesview (T-SQL)
       href: ../relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
-    - name: sysmergepartitioninfoview (Transact-SQL)
+    - name: sysmergepartitioninfoview (T-SQL)
       href: ../relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
-    - name: syspublications (vue système) (Transact-SQL)
+    - name: syspublications (vue système) (T-SQL)
       href: ../relational-databases/system-views/syspublications-system-view-transact-sql.md
-    - name: syssubscriptions (System View) (Transact-SQL)
+    - name: syssubscriptions (vue système) (T-SQL)
       href: ../relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
-    - name: systranschemas (Transact-SQL)
+    - name: systranschemas (T-SQL)
       href: ../relational-databases/system-views/systranschemas-transact-sql.md
   - name: Transact-SQL (T-SQL)
+    displayName: tsql
+    href: ../toc/redirectfrom-transact-sql-t-sql.md
     items:
     - name: Vue d'ensemble
       href: ../t-sql/language-reference.md
@@ -15059,85 +15172,87 @@ items:
         href: ../t-sql/xml/binding-relational-data-inside-xml-data.md
       - name: Instructions pour l'utilisation des méthodes de type de données XML
         href: ../t-sql/xml/guidelines-for-using-xml-data-type-methods.md
-    - name: Vue d'ensemble
+    - name: Vue d’ensemble de DBCC
+      displayName: database console commands
       href: ../t-sql/database-console-commands/database-console-commands.md
-    - name: Présentation de DBCC
-      href: ../t-sql/database-console-commands/dbcc-transact-sql.md
-    - name: DBCC CHECKALLOC
-      href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
-    - name: DBCC CHECKCATALOG
-      href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
-    - name: DBCC CHECKCONSTRAINTS
-      href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
-    - name: DBCC CHECKDB
-      href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
-    - name: DBCC CHECKFILEGROUP
-      href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
-    - name: DBCC CHECKIDENT
-      href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
-    - name: DBCC CHECKTABLE
-      href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
-    - name: DBCC CLEANTABLE
-      href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
-    - name: DBCC CLONEDATABASE
-      href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
-    - name: DBCC DBREINDEX
-      href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
-    - name: DBCC dllname (FREE)
-      href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
-    - name: DBCC DROPCLEANBUFFERS
-      href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
-    - name: DBCC FLUSHAUTHCACHE
-      href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
-    - name: DBCC FREEPROCCACHE
-      href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
-    - name: DBCC FREESESSIONCACHE
-      href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
-    - name: DBCC FREESYSTEMCACHE
-      href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
-    - name: DBCC HELP
-      href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
-    - name: DBCC INDEXDEFRAG
-      href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
-    - name: DBCC INPUTBUFFER
-      href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
-    - name: DBCC OPENTRAN
-      href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
-    - name: DBCC OUTPUTBUFFER
-      href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
-    - name: DBCC PDW_SHOWEXECUTIONPLAN
-      href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
-    - name: DBCC PDW_SHOWPARTITIONSTATS
-      href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
-    - name: DBCC PDW_SHOWSPACEUSED
-      href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
-    - name: DBCC PROCCACHE
-      href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
-    - name: DBCC SHOW_STATISTICS
-      href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
-    - name: DBCC SHOWCONTIG
-      href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
-    - name: DBCC SHRINKDATABASE
-      href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
-    - name: DBCC SHRINKFILE
-      href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
-    - name: DBCC SHRINKLOG
-      href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
-    - name: DBCC SQLPERF
-      href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
-    - name: DBCC TRACEOFF
-      href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
-    - name: DBCC TRACEON - Indicateurs de trace
-      href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
-    - name: DBCC TRACEON
-      href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
-    - name: DBCC TRACESTATUS
-      href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
-    - name: DBCC UPDATEUSAGE
-      href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
-    - name: DBCC USEROPTIONS
-      href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
-    - name: Vue d'ensemble
+      items:
+      - name: Présentation de DBCC
+        href: ../t-sql/database-console-commands/dbcc-transact-sql.md
+      - name: DBCC CHECKALLOC
+        href: ../t-sql/database-console-commands/dbcc-checkalloc-transact-sql.md
+      - name: DBCC CHECKCATALOG
+        href: ../t-sql/database-console-commands/dbcc-checkcatalog-transact-sql.md
+      - name: DBCC CHECKCONSTRAINTS
+        href: ../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md
+      - name: DBCC CHECKDB
+        href: ../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md
+      - name: DBCC CHECKFILEGROUP
+        href: ../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md
+      - name: DBCC CHECKIDENT
+        href: ../t-sql/database-console-commands/dbcc-checkident-transact-sql.md
+      - name: DBCC CHECKTABLE
+        href: ../t-sql/database-console-commands/dbcc-checktable-transact-sql.md
+      - name: DBCC CLEANTABLE
+        href: ../t-sql/database-console-commands/dbcc-cleantable-transact-sql.md
+      - name: DBCC CLONEDATABASE
+        href: ../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md
+      - name: DBCC DBREINDEX
+        href: ../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md
+      - name: DBCC dllname (FREE)
+        href: ../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md
+      - name: DBCC DROPCLEANBUFFERS
+        href: ../t-sql/database-console-commands/dbcc-dropcleanbuffers-transact-sql.md
+      - name: DBCC FLUSHAUTHCACHE
+        href: ../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md
+      - name: DBCC FREEPROCCACHE
+        href: ../t-sql/database-console-commands/dbcc-freeproccache-transact-sql.md
+      - name: DBCC FREESESSIONCACHE
+        href: ../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md
+      - name: DBCC FREESYSTEMCACHE
+        href: ../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md
+      - name: DBCC HELP
+        href: ../t-sql/database-console-commands/dbcc-help-transact-sql.md
+      - name: DBCC INDEXDEFRAG
+        href: ../t-sql/database-console-commands/dbcc-indexdefrag-transact-sql.md
+      - name: DBCC INPUTBUFFER
+        href: ../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md
+      - name: DBCC OPENTRAN
+        href: ../t-sql/database-console-commands/dbcc-opentran-transact-sql.md
+      - name: DBCC OUTPUTBUFFER
+        href: ../t-sql/database-console-commands/dbcc-outputbuffer-transact-sql.md
+      - name: DBCC PDW_SHOWEXECUTIONPLAN
+        href: ../t-sql/database-console-commands/dbcc-pdw-showexecutionplan-transact-sql.md
+      - name: DBCC PDW_SHOWPARTITIONSTATS
+        href: ../t-sql/database-console-commands/dbcc-pdw-showpartitionstats-transact-sql.md
+      - name: DBCC PDW_SHOWSPACEUSED
+        href: ../t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql.md
+      - name: DBCC PROCCACHE
+        href: ../t-sql/database-console-commands/dbcc-proccache-transact-sql.md
+      - name: DBCC SHOW_STATISTICS
+        href: ../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md
+      - name: DBCC SHOWCONTIG
+        href: ../t-sql/database-console-commands/dbcc-showcontig-transact-sql.md
+      - name: DBCC SHRINKDATABASE
+        href: ../t-sql/database-console-commands/dbcc-shrinkdatabase-transact-sql.md
+      - name: DBCC SHRINKFILE
+        href: ../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md
+      - name: DBCC SHRINKLOG
+        href: ../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md
+      - name: DBCC SQLPERF
+        href: ../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md
+      - name: DBCC TRACEOFF
+        href: ../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md
+      - name: DBCC TRACEON - Indicateurs de trace
+        href: ../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md
+      - name: DBCC TRACEON
+        href: ../t-sql/database-console-commands/dbcc-traceon-transact-sql.md
+      - name: DBCC TRACESTATUS
+        href: ../t-sql/database-console-commands/dbcc-tracestatus-transact-sql.md
+      - name: DBCC UPDATEUSAGE
+        href: ../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md
+      - name: DBCC USEROPTIONS
+        href: ../t-sql/database-console-commands/dbcc-useroptions-transact-sql.md
+    - name: Vue d’ensemble des fonctions T-SQL
       href: ../t-sql/functions/functions.md
     - name: Agrégat
       href: ../t-sql/functions/aggregate-functions-transact-sql.md
@@ -16805,7 +16920,7 @@ items:
       href: ../t-sql/statements/truncate-table-transact-sql.md
     - name: UPDATE STATISTICS
       href: ../t-sql/statements/update-statistics-transact-sql.md
-    - name: "Didacticiel : Écriture d'instructions Transact-SQL"
+    - name: 'Didacticiel : Écriture d’instructions T-SQL'
       href: ../t-sql/tutorial-writing-transact-sql-statements.md
       items:
       - name: 'Leçon 1 : Créer et interroger des objets de base de données'
@@ -16814,40 +16929,6 @@ items:
         href: ../t-sql/lesson-2-configuring-permissions-on-database-objects.md
       - name: 'Leçon 3 : Supprimer des objets de base de données'
         href: ../t-sql/lesson-3-deleting-database-objects.md
-  - name: Exemples de base de données
-    items:
-    - name: Vue d’ensemble des exemples
-      href: ../samples/sql-samples-where-are.md
-    - name: Tous les exemples GitHub +
-      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
-    - name: AdventureWorks
-      items:
-      - name: Installation et configuration
-        href: ../samples/adventureworks-install-configure.md
-    - name: Wide World Importers
-      items:
-      - name: Vue d'ensemble
-        href: ../samples/wide-world-importers-what-is.md
-      - name: OLTP
-        items:
-        - name: Catalogue de base de données
-          href: ../samples/wide-world-importers-oltp-database-catalog.md
-        - name: Installation et configuration
-          href: ../samples/wide-world-importers-oltp-install-configure.md
-        - name: fonctionnalités SQL Server
-          href: ../samples/wide-world-importers-oltp-use-of-sql-server-features.md
-      - name: entrepôt de données
-        items:
-        - name: Catalogue de base de données
-          href: ../samples/wide-world-importers-dw-database-catalog.md
-        - name: Installation et configuration
-          href: ../samples/wide-world-importers-dw-install-configure.md
-        - name: fonctionnalités SQL Server
-          href: ../samples/wide-world-importers-dw-use-of-sql-server-features.md
-      - name: Générer les données
-        href: ../samples/wide-world-importers-generate-data.md
-      - name: Flux de travail ETL
-        href: ../samples/wide-world-importers-perform-etl.md
   - name: xQuery
     items:
     - name: Vue d'ensemble
@@ -17004,9 +17085,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Gestion des espaces de noms dans XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 2eebc67fe856d02dc1d525b2f56ed68a697fca40
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: bb0c24429ffaf6609be6e34dbcfcb87f9a849d87
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676310"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227391"
