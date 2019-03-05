@@ -213,7 +213,7 @@ ms.date: 12/15/2018
                                                       </div>
                                                       <div class="cardText">
                                                           <h3>Gérer, surveiller et paramétrer</h3>
-                                                          <p><b>Plans de maintenance, SQL Profiler, Tunic automatique, OLTP en mémoire, partitions, statistiques, index, estimation de la cardinalité </b>  </p>
+                                                          <p><b>Plans de maintenance, SQL Profiler, optimisation automatique, OLTP en mémoire, partitions, statistiques, index, estimation de la cardinalité </b>  </p>
                                                       </div>
                                                   </div>
                                               </div>
