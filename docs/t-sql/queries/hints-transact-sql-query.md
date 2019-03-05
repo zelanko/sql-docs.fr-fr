@@ -1,8 +1,8 @@
 ---
 title: Indicateurs de requête (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/04/2019
-ms.prod: sqll
+ms.date: 02/21/2019
+ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: t-sql
@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1d5dc400cde1ded385d3050a6d6dc120cf430fbb
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 1f156c897d4205e87ce3ee8be3a339fbc2b5bf10
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265376"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662913"
 ---
 # <a name="hints-transact-sql---query"></a>Indicateurs (Transact-SQL) - Requête
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -289,6 +289,12 @@ Les noms d’indicateur suivants sont pris en charge :
    Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  'DISABLE_PARAMETER_SNIFFING'      
    Indique à l’optimiseur de requête d’utiliser la distribution moyenne des données lors de la compilation d’une requête comportant un ou plusieurs paramètres. Cette instruction rend le plan de requête indépendant de la valeur du paramètre utilisée initialement lors de la compilation de la requête. Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 ou au paramètre de [configuration de portée de base de données](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) PARAMETER_SNIFFING=OFF.
+* 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
+  Désactive la rétroaction d’allocation de mémoire en mode ligne. Pour plus d’informations, consultez [Rétroaction d’allocation de mémoire en mode ligne](../../relational-databases/performance/adaptive-query-processing.md#row-mode-memory-grant-feedback).
+* 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
+  Désactive l’incorporation des fonctions UDF scalaires. Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires](../../relational-databases/user-defined-functions/scalar-udf-inlining.md).
+* 'DISALLOW_BATCH_MODE'    
+  Désactive l’exécution en mode batch. Pour plus d’informations, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    Active automatiquement la génération de statistiques rapides (modification de l’histogramme) pour les colonnes d’index de début où l’estimation de la cardinalité est nécessaire. L’histogramme utilisé pour estimer la cardinalité est ajusté au moment de la compilation des requêtes pour prendre en compte la valeur minimale ou maximale réelle de chaque colonne. Ce nom d’indicateur est parallèle à [l’indicateur de trace](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
