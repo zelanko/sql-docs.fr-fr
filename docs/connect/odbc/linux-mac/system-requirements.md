@@ -15,12 +15,12 @@ ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 18016780c53575b0416d9a0aa7a8f4499c41de51
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 287e6d44e3d816952f5802edd739a0af1160e82b
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603709"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955792"
 ---
 # <a name="system-requirements"></a>Configuration système requise
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -37,17 +37,22 @@ Les pilotes Linux et macOS sont disponibles uniquement pour les versions 64 bits
 |Apple OS X 10.11 (El Capitan)|13, 13.1, 17|
 |Apple Mac OS 10.12 (Sierra)|13, 13.1, 17|
 |Apple Mac OS 10.13 (High Sierra)|17| 
+|Apple Mac OS 10.14 (Mojave)|17| 
 |Debian Linux 8|13, 13.1, 17|
 |Debian Linux 9|17|
 |Red Hat Enterprise Linux 6|13, 13.1, 17|
 |Red Hat Enterprise Linux 7|13, 13.1, 17|
 |SUSE Linux Enterprise Server 11|13, 13.1, 17 <br /><br /> **Remarque :** 17 du pilote ODBC prend uniquement en charge SuSE Linux Enterprise Server 11 SP4|
 |SUSE Linux Enterprise Server 12|13, 13.1, 17|
+|SUSE Linux Enterprise Server 15|17|
 |Ubuntu Linux 14.04|13, 13.1, 17|
 |Ubuntu Linux 15.10|13, 13.1|
 |Ubuntu Linux 16.04|13, 13.1, 17|
 |Ubuntu Linux 16.10|13, 13.1|
+|Ubuntu Linux 17.04|17| 
 |Ubuntu Linux 17.10|17|
+|Ubuntu Linux 18.04|17| 
+|Ubuntu Linux 18.10|17| 
 
 L’installation de packages pour le [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 13 et 17 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS, résoudre les dépendances du pilote automatiquement lorsqu’il est installé à l’aide du système de gestion de package de votre distribution, comme décrit dans [ Installation du pilote](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 

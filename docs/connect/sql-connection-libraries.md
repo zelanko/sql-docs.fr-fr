@@ -8,18 +8,18 @@ ms.custom: ''
 ms.topic: article
 ms.date: 06/18/2018
 ms.author: genemi
-ms.openlocfilehash: 4286a9a1fcc2eff3becd483d658b371bb6452032
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 7f759dbe9022cff557461d900a35b3ccc91d2c4b
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600369"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007572"
 ---
 # <a name="connection-modules-for-microsoft-sql-databases"></a>Modules de connexion pour les bases de données Microsoft SQL
 
 Cet article fournit des liens de téléchargement pour les modules de connexion ou *pilotes* que vos programmes clients peuvent utiliser pour interagir avec [Microsoft SQL Server](../relational-databases/database-features.md)et avec sa représentation dans le cloud [Azure Base de données SQL](https://docs.microsoft.com/azure/sql-database/). Pilotes sont disponibles pour un large éventail de langages de programmation, en cours d’exécution sur les systèmes d’exploitation suivants :
 
-- Linux (Ubuntu)
+- Linux
 - MacOS
 - Windows
 
