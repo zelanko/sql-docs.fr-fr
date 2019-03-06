@@ -10,15 +10,25 @@ ms.topic: conceptual
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 62270c3cce4b1a5f57874d6cd40c7c64ff409100
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d67b8bba1449cce473baa5313762c4933a72e250
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600299"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955860"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Notes de publication pour Microsoft ODBC Driver for SQL Server sur Linux et macOS
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
+
+## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Nouveautés de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.3 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS
+
+**Nouvelles distributions prises en charge**: 15 SuSE, Ubuntu 18.10, macOS 10.14
+
+**Fonctionnalités ajoutées**:
+
+- Azure Active Directory Managed Service Identity (système et affectée à l’utilisateur) mode d’authentification, pour plus d’informations, consultez [à l’aide de Azure Active Directory avec le pilote ODBC](../using-azure-active-directory.md)
+- Possibilité de diffuser en continu des paramètres d’entrée par rapport aux colonnes Always Encrypted, pour plus d’informations, consultez [Limitations du pilote ODBC lors de l’utilisation de Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted)
+- XA transactions distribuées, pour plus d’informations, consultez [à l’aide des Transactions XA](../use-xa-with-dtc.md)
 
 ## <a name="whats-new-in-the-includemsconameincludesmsconamemdmd-odbc-driver-172-for-includessnoversionincludesssnoversion-mdmd-on-linux-and-macos"></a>Nouveautés de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 17.2 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Linux et macOS
 
