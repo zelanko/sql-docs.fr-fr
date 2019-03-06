@@ -1,7 +1,7 @@
 ---
 title: Chaînes de connexion et la source de données des mots clés pour le pilote ODBC - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 12/11/2018
+ms.date: 02/04/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -10,12 +10,12 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 manager: craigg
-ms.openlocfilehash: 0dedb58cf0a9825625027e363db20a56f06839dd
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+ms.openlocfilehash: e2db3b8df9ea63c16e0e96af9df42b7c22adaf80
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306236"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662873"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Attributs et mots clés de chaîne de connexion et DSN
 
@@ -23,7 +23,7 @@ Cette page répertorie les mots clés des chaînes de connexion et les sources d
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Mots clés de chaîne de connexion/DSN et les attributs de connexion pris en charge
 
-Le tableau suivant répertorie les mots clés disponibles et les attributs de chaque plateforme (l : Linux ; LECTEUR M: Mac ; W : Windows : Cliquez sur le mot clé ou un attribut pour plus d’informations.
+Le tableau suivant répertorie les mots clés disponibles et les attributs de chaque plateforme (L: Linux ; M : Mac ; W : Windows). Cliquez sur le mot clé ou un attribut pour plus d’informations.
 
 | Mot clé de chaîne de connexion / DSN | Attribut de connexion | Plateforme |
 |-|-|-|
@@ -105,7 +105,7 @@ Le tableau suivant répertorie les mots clés disponibles et les attributs de ch
 | | [SQL_COPT_SS_CONCAT_NULL](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconcatnull) | DANS LA LMW |
 | | [SQL_COPT_SS_CONNECTION_DEAD](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssconnectiondead) | DANS LA LMW |
 | | [SQL_COPT_SS_ENLIST_IN_DTC](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistindtc) | W |
-| | [SQL_COPT_SS_ENLIST_IN_XA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssenlistinxa) | W |
+| | [SQL_COPT_SS_ENLIST_IN_XA](dsn-connection-string-attribute.md#sql_copt_ss_enlist_in_xa) | DANS LA LMW |
 | | [SQL_COPT_SS_FALLBACK_CONNECT](dsn-connection-string-attribute.md#sqlcoptssfallbackconnect) | DANS LA LMW |
 | | [SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | DANS LA LMW |
 | | [SQL_COPT_SS_MUTUALLY_AUTHENTICATED](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | DANS LA LMW |
@@ -156,6 +156,7 @@ Définit le mode d’authentification à utiliser lors de la connexion à SQL Se
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Authentification intégrée à Azure Active Directory.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Authentification par mot de passe Azure Active Directory.|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Authentification interactive Azure Active Directory.|
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Authentification Azure Active Directory Managed Service Identity. Pour l’identité affectée à l’utilisateur, UID est défini sur l’ID d’objet de l’identité de l’utilisateur. |
 | |SQL_AU_RESET|Annuler la définition. Remplace tout DSN ou un paramètre de chaîne de connexion.|
 
 > [!NOTE]
@@ -214,4 +215,21 @@ Charge une bibliothèque de fournisseur de magasin de clés pour Always Encrypte
 |-|-|
 | char * | Chemin d’accès à une bibliothèque de fournisseur de magasin de clés |
 
+### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
+Pour activer les transactions XA avec un processeur compatible XA Transaction (TP), l’application doit appeler **SQLSetConnectAttr** avec sql_copt_ss_enlist_in_xa ayant et un pointeur vers un `XACALLPARAM` objet. Cette option est prise en charge sur Windows, Linux (17.3 et versions ultérieures) et Mac.
+```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
+``` 
+ Pour associer une transaction XA avec une connexion ODBC uniquement, fournir TRUE ou FALSE sql_copt_ss_enlist_in_xa ayant au lieu du pointeur lors de l’appel **SQLSetConnectAttr**. Cela est uniquement valide sur Windows et ne peut pas être utilisé pour spécifier les opérations XA via une application cliente. 
+ ```
+SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
+``` 
+
+|Valeur|Description|Plateformes|  
+|-----------|-----------------|-----------------|  
+|Objet XACALLPARAM *|Le pointeur vers `XACALLPARAM` objet.|Windows, Linux et Mac|
+|TRUE|Associe la transaction XA à la connexion ODBC. Toutes les activités de base de données connexes seront effectuées sous la protection de la transaction XA.|Windows|  
+|FALSE|Dissocie la transaction avec la connexion ODBC.|Windows|
+
+ Consultez [à l’aide des Transactions XA](../../connect/odbc/use-xa-with-dtc.md) pour plus d’informations sur les transactions XA.

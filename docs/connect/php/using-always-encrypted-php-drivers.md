@@ -269,7 +269,7 @@ Microsoft Driver 5.3.0 for PHP for SQL Server, uniquement Windows Certificate St
 
 Le pilote ODBC pour SQL Server sur Windows inclut un fournisseur de magasin de clé principale de colonne intégré pour le Store de certificat Windows nommé `MSSQL_CERTIFICATE_STORE`. (Ce fournisseur n’est pas disponible sur Mac OS ou Linux). Avec ce fournisseur, la clé principale de colonne sont stockées localement sur l’ordinateur client et aucune configuration supplémentaire par l’application n’est nécessaire pour l’utiliser avec le pilote. Toutefois, l’application doit avoir accès au certificat et sa clé privée dans le magasin. Pour plus d’informations, consultez [Créer et stocker des clés principales de colonne (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
-### <a name="using-azure-key-vault"></a>EKM avec Azure Key Vault
+### <a name="using-azure-key-vault"></a>Utilisation d’Azure Key Vault
 
 Azure Key Vault vous permet de stocker les clés de chiffrement, les mots de passe et autres secrets à l’aide d’Azure et peut être utilisé pour stocker les clés pour Always Encrypted. Le pilote ODBC pour SQL Server (version 17 et versions ultérieures) inclut un fournisseur de magasin intégrés clé principale pour Azure Key Vault. Les options de connexion suivantes gérer la configuration d’Azure Key Vault : `KeyStoreAuthentication`, `KeyStorePrincipalId`, et `KeyStoreSecret`. 
  -   `KeyStoreAuthentication` peut prendre une des deux valeurs de chaîne possibles : `KeyVaultPassword` et `KeyVaultClientSecret`. Ces valeurs contrôlent quelles sont les informations d’authentification sont utilisés avec les autres deux mots clés.

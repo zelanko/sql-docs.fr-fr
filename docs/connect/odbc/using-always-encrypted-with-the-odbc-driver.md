@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: craigg
 author: MightyPen
-ms.openlocfilehash: 72ff999a4b88bff5d8b78f8e8b936da18b8a4e16
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: dd6037cbc40c9cf422c38827d5c96115db33db73
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044946"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956060"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Utilisation d’Always Encrypted avec ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -286,7 +286,7 @@ Cette section décrit les outils intégrés d’optimisation des performances da
 
 ### <a name="controlling-round-trips-to-retrieve-metadata-for-query-parameters"></a>Contrôle des allers-retours en vue de la récupération des métadonnées pour les paramètres de requête
 
-Si Always Encrypted est activé pour une connexion, le pilote appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête afin de déterminer si tous les paramètres doivent être chiffrés et si tel est le cas, retourne les informations relatives au chiffrement pour chaque paramètre permettre au pilote de les chiffrer. Ce comportement garantit un haut niveau de transparence à l’application cliente : L’application et le développeur d’applications n’ont pas besoin de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées au pilote dans les paramètres.
+Si Always Encrypted est activé pour une connexion, le pilote appelle par défaut [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) pour chaque requête paramétrable, en passant l’instruction de requête (sans valeurs de paramètre) à SQL Server. Cette procédure stockée analyse l’instruction de requête afin de déterminer si tous les paramètres doivent être chiffrés et si tel est le cas, retourne les informations relatives au chiffrement pour chaque paramètre permettre au pilote de les chiffrer. Ce comportement garantit un haut niveau de transparence à l’application cliente : l’application (et le développeur d’applications) sont inutile de connaître les requêtes qui accèdent à des colonnes chiffrées, tant que les valeurs ciblant des colonnes chiffrées sont passées à le pilote dans paramètres.
 
 ### <a name="per-statement-always-encrypted-behavior"></a>Par instruction Always Encrypted comportement
 
@@ -369,11 +369,13 @@ Le pilote prend en charge l’authentification auprès d’Azure Key Vault avec 
 
 - ID de client/Secret - avec cette méthode, les informations d’identification sont un ID de client d’application et un secret d’application.
 
+- Managed Service Identity - avec cette méthode, les informations d’identification sont identité attribué par le système ou affectée à l’utilisateur. Pour l’identité affectée à l’utilisateur, UID est défini sur l’ID d’objet de l’identité de l’utilisateur.
+
 Pour autoriser le pilote à utiliser des clés CMK stockée dans AKV pour le chiffrement de colonne, utilisez les mots clés de chaîne de connexion uniquement suivants :
 
 |Type d'informations d'identification| `KeyStoreAuthentication` |`KeyStorePrincipalId`| `KeyStoreSecret` |
 |-|-|-|-|
-|Nom d’utilisateur/mot de passe| `KeyVaultPassword`|Nom d’utilisateur principal|Mot de passe|
+|Nom d'utilisateur/mot de passe| `KeyVaultPassword`|Nom d’utilisateur principal|Mot de passe|
 |ID de client/secret| `KeyVaultClientSecret`|ID client|Secret|
 
 #### <a name="example-connection-strings"></a>Exemples de chaîne de connexion
@@ -386,7 +388,7 @@ Les chaînes de connexion suivantes montrent comment s’authentifier sur Azure 
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultClientSecret;KeyStorePrincipalId=<clientId>;KeyStoreSecret=<secret>
 ```
 
-**Nom d’utilisateur/mot de passe**
+**Nom d'utilisateur/Mot de passe** :
 
 ```
 DRIVER=ODBC Driver 13 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATABASE=myDB;ColumnEncryption=Enabled;KeyStoreAuthentication=KeyVaultPassword;KeyStorePrincipalId=<username>;KeyStoreSecret=<password>
@@ -536,7 +538,7 @@ Bien que le pilote ODBC autorise l’utilisation de [opérations asynchrones](..
 Avant la version 17 du pilote ODBC pour SQL Server, il n’est pas possible de récupérer une partie des colonnes binaires et des caractères chiffrés avec SQLGetData. Un seul appel de SQLGetData est possible, avec une mémoire tampon de taille suffisante pour contenir la totalité des données de la colonne.
 
 ### <a name="send-data-in-parts-with-sqlputdata"></a>Envoyer une partie des données avec SQLPutData
-Il n’est pas possible d’envoyer une partie des données à des fins de comparaison ou d’insertion avec SQLPutData. Un seul appel à SQLPutData est possible, avec une mémoire tampon contenant la totalité des données. Pour insérer des données de type long dans des colonnes chiffrées, utilisez l’API de copie en bloc, décrite dans la section suivante, avec un fichier de données d’entrée.
+Avant 17.3 de pilote ODBC pour SQL Server, les données pour l’insertion ou de comparaison ne peut pas être envoyées dans des parties avec SQLPutData. Un seul appel à SQLPutData est possible, avec une mémoire tampon contenant la totalité des données. Pour insérer des données de type long dans des colonnes chiffrées, utilisez l’API de copie en bloc, décrite dans la section suivante, avec un fichier de données d’entrée.
 
 ### <a name="encrypted-money-and-smallmoney"></a>Colonnes money et smallmoney chiffrées
 Les paramètres ne peuvent pas cibler les colonnes **money** et **smallmoney**, car il n’existe aucun type de données ODBC correspondant spécifiquement à ces types, ce qui provoque des erreurs de conflit de type opérande.
@@ -551,7 +553,7 @@ Les [fonctions de copie en bloc SQL](../../relational-databases/native-client-od
 
 - Pour insérer du texte chiffré au format varbinary(max) (tel qu’il a été récupéré ci-dessus, par exemple), donnez la valeur TRUE à l’option `BCPMODIFYENCRYPTED` et effectuez une opération BCP IN. Pour que les données résultantes soient déchiffrables, la clé CEK de la colonne de destination doit être la même que celle avec laquelle le texte chiffré a été obtenu à l’origine.
 
-Lorsque vous utilisez le **bcp** utilitaire : Pour contrôler la `ColumnEncryption` configuration, utilisez l’option -D et spécifier une source de données contenant la valeur souhaitée. Pour insérer du texte chiffré, vérifiez le `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` de l’utilisateur est activée.
+Lorsque vous utilisez le **bcp** utilitaire : pour contrôler la `ColumnEncryption` configuration, utilisez l’option -D et spécifier une source de données contenant la valeur souhaitée. Pour insérer du texte chiffré, vérifiez le `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` de l’utilisateur est activée.
 
 Le tableau suivant fournit un résumé des actions lorsqu’il fonctionne sur une colonne chiffrée :
 
@@ -577,7 +579,8 @@ Pour plus d’informations, consultez [Migrer des données sensibles protégées
 |`ColumnEncryption`|Valeurs acceptées sont `Enabled` / `Disabled`.<br>`Enabled` : active la fonctionnalité Always Encrypted pour la connexion.<br>`Disabled` : désactive la fonctionnalité Always Encrypted pour la connexion. <br><br>La valeur par défaut est `Disabled`.|  
 |`KeyStoreAuthentication` | Valeurs valides : `KeyVaultPassword`, `KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | Lorsque `KeyStoreAuthentication`  =  `KeyVaultPassword`, définissez cette valeur sur un nom Principal d’utilisateur Active Directory de Azure valide. <br>Lorsque `KeyStoreAuthetication`  =  `KeyVaultClientSecret` définir cette valeur sur un Azure Active Directory Application ID Client valide |
-|`KeyStoreSecret` | Lorsque `KeyStoreAuthentication`  =  `KeyVaultPassword` définir cette valeur au mot de passe pour le nom d’utilisateur correspondant. <br>Lorsque `KeyStoreAuthentication`  =  `KeyVaultClientSecret` définir cette valeur sur le Secret d’Application associé à un Azure Active Directory Application ID Client valide|
+|`KeyStoreSecret` | Lorsque `KeyStoreAuthentication`  =  `KeyVaultPassword` définir cette valeur au mot de passe pour le nom d’utilisateur correspondant. <br>Lorsque `KeyStoreAuthentication`  =  `KeyVaultClientSecret` définir cette valeur sur le Secret d’Application associé à un Azure Active Directory Application ID Client valide |
+
 
 ### <a name="connection-attributes"></a>Attributs de connexion
 

@@ -2,7 +2,7 @@
 title: OLE DB Driver pour SQL Server fonctionnalités | Microsoft Docs
 description: Fonctionnalités OLE DB Driver pour SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: fa0fcda394142cd8ac2b3df5b91f5f8c4ad25739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c8458d6293aec1180e547a80649c302015e9a521
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840907"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744459"
 ---
 # <a name="ole-db-driver-for-sql-server-features"></a>Fonctionnalités OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +35,10 @@ ms.locfileid: "47840907"
   
  [Exécution d’opérations asynchrones](../../oledb/features/performing-asynchronous-operations.md)  
  Explique comment OLE DB Driver pour SQL Server prend en charge les opérations asynchrones, à savoir la capacité d’un retour immédiat sans blocage sur le thread appelant.  
-  
+
+[Utilisation d’Azure Active Directory](using-azure-active-directory.md)  
+Décrit les nouvelles méthodes d’authentification introduites dans le pilote OLE DB 18.2.1 qui ont des paramètres par défaut plus sécurisées et autoriser la connexion à une instance de base de données SQL Azure à l’aide d’une identité fédérée.
+
  [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  Explique comment OLE DB Driver pour SQL Server prend en charge les jeux de résultats actifs multiples (MARS). MARS permet d'exécuter et de recevoir plusieurs jeux de résultats à l'aide d'une seule connexion de base de données.  
   
@@ -86,6 +89,9 @@ ms.locfileid: "47840907"
   
  [Prise en charge d’UTF-16 dans OLE DB Driver pour SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  Décrit un changement de comportement introduit dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Si vous fournissez une mémoire tampon de longueur fixe lors de la liaison d’un résultat de colonne ou d’un paramètre de sortie et que le caractère **wchar** écrit dans la mémoire tampon avant le caractère de fin est un point de code de substitut étendu d’une paire de substitution, et si le caractère **wchar** suivant est un point de code de substitut faible, OLE DB Driver pour SQL Server n’ajoutera pas le point de code de substitut étendu à la mémoire tampon.  
+ 
+ [Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ Décrit la prise en charge de UTF-8 server encodage et la configuration des précautions les utilisateurs doivent prendre lorsque vous travaillez avec des données UTF-8.
   
  [Prise en charge de la récupération d’urgence et de la haute disponibilité par OLE DB Driver pour SQL Server](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Explique comment votre application peut être configurée pour tirer parti des fonctionnalités de récupération d'urgence haute disponibilité, ajoutées dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  

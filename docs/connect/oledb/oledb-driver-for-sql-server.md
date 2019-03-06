@@ -2,7 +2,7 @@
 title: Microsoft OLE DB Driver for SQL Server | Microsoft Docs
 description: Microsoft OLE DB Driver pour SQL Server
 ms.custom: ''
-ms.date: 06/14/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: befcc84662b2273f81faaded76045d4d44b03e98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 00be1d87dbc8ba071403722b7e575e5ab1c7a215
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687867"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744569"
 ---
 # <a name="microsoft-ole-db-driver-for-sql-server"></a>Microsoft OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,14 +64,14 @@ Le nouveau fournisseur OLE DB est appelé le pilote Microsoft OLE DB pour SQL Se
 > [!NOTE]
 > Pour utiliser le nouveau Microsoft OLE DB Driver pour SQL Server dans les applications existantes, vous devez planifier convertir vos chaînes de connexion SQLOLEDB ou SQLNCLI, MSOLEDBSQL.
   
-## <a name="in-this-section"></a>Dans cette section  
+## <a name="in-this-section"></a>Contenu de cette section  
 [Quand utiliser OLE DB Driver pour SQL Server](../oledb/when-to-use-oledb-driver-for-sql-server.md)  
  Traite de la façon dont le pilote OLE DB pour SQL Server s’intègre aux technologies d’accès aux données de Microsoft, le compare à Windows DAC et ADO.NET et fournit des pointeurs pour vous aider à déterminer la technologie d’accès aux données à utiliser.  
   
- [Fonctionnalités OLE DB Driver pour SQL Server](../oledb/features/oledb-driver-for-sql-server-features.md )  
+ [Fonctionnalités OLE DB Driver pour SQL Server](../oledb/features/oledb-driver-for-sql-server-features.md )  
  Décrit les fonctionnalités prises en charge par OLE DB Driver pour SQL Server.  
   
- [Génération d’applications avec OLE DB Driver pour SQL Server](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Création d’applications avec OLE DB Driver pour SQL Server](../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
  Fournit une présentation du développement à l’aide du pilote OLE DB pour SQL Server, y compris la façon dont il diffère de Windows DAC, les composants qu’il utilise et la manière dont ADO peut être utilisé conjointement à lui.  
   
  Cette section décrit également le pilote OLE DB pour l’installation de SQL Server et de déploiement, y compris comment redistribuer le pilote OLE DB pour la bibliothèque de SQL Server.  
@@ -79,15 +79,15 @@ Le nouveau fournisseur OLE DB est appelé le pilote Microsoft OLE DB pour SQL Se
  [Configuration requise pour OLE DB Driver pour SQL Server](../oledb/system-requirements-for-oledb-driver-for-sql-server.md)  
  Discute des ressources système nécessaires à l’utilisation d’OLE DB Driver pour SQL Server.  
   
- [Programmation OLE DB Driver pour SQL Server](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
+ [OLE DB Driver pour la programmation de SQL Server](../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
  Fournit des informations sur l’utilisation d’OLE DB Driver pour SQL Server.  
   
  [Recherche d’informations supplémentaires sur OLE DB Driver pour SQL Server](../oledb/finding-more-oledb-driver-for-sql-server-information.md)  
  Fournit des ressources supplémentaires sur OLE DB Driver pour SQL Server, notamment des liens vers des ressources externes et permettant d’obtenir une assistance.  
   
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Mise à jour d’une application à partir de SQL Server 2005 Native Client](../oledb/applications/updating-an-application-from-sql-server-2005-native-client.md)    
- [Rubriques de procédures liées à OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
+ [Rubriques de procédures OLE DB](../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   
   

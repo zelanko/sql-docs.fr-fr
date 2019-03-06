@@ -1,7 +1,7 @@
 ---
 title: Notes de publication des pilotes Microsoft pour PHP pour SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,17 +13,34 @@ ms.assetid: 91cca3d2-ba99-4a6d-b0de-beb9699cb3f8
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a22e88aef13c86179dc4cea71ed1003eadfd8661
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0c2e7377b1072c30e5c5ef038b93a88f0c222260
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624057"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744349"
 ---
 # <a name="release-notes-for-the-microsoft-drivers-for-php-for-sql-server"></a>Notes de publication de Microsoft Drivers for PHP for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 Cette page explique ce qui a été ajouté dans chaque version de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].  
+
+## <a name="whats-new-in-version-56"></a>Nouveautés de la version 5.6
+
+- Prise en charge de PHP 7.3
+- Prise en charge pour Microsoft ODBC Driver 17.3 sur toutes les plateformes
+- Prise en charge de macOS Mojave (nécessite 17.3 du pilote ODBC ou version ultérieure)
+- Prise en charge de 18.10 d’Ubuntu et Suse Linux 15 (tous deux nécessitant 17.3 du pilote ODBC ou version ultérieure)
+- Prise en charge supprimée pour PHP 7.0
+- Prise en charge d’Ubuntu 17.10 de Linux et macOS El Capitan
+- Prise en charge pour le jeton d’accès Azure AD (dans Linux et macOS, nécessite pilote ODBC 17.2 + et unixODBC 2.3.6+)
+- Prise en charge pour l’authentification auprès d’Azure AD à l’aide de MSI pour les ressources Azure (nécessite le pilote ODBC 17.3 +)
+- Nouvelles fonctionnalités d’extraction :
+  - Nouvel indicateur PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE pour pdo_sqlsrv retourner la date/heure en tant qu’objets
+  - Ajouter l’option ReturnDatesAsStrings au niveau instruction pour sqlsrv
+  - Nouvelles options aux niveaux de connexion et d’instruction pour les deux pilotes pour mettre en forme de valeurs décimales dans les résultats d’extraction
+- Prise en charge pour une compilation statique des pilotes si les utilisateurs choisir de générer à partir de la source
+- Amélioration des performances avec la mise en cache des métadonnées sur les extractions et accélérer les conversions de chaînes Unicode
 
 ## <a name="whats-new-in-version-53"></a>Nouveautés de la version 5.3
 

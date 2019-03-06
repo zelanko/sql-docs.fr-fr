@@ -1,7 +1,7 @@
 ---
 title: Constantes (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 94be5540c0fedcf3449b8ac41398ab3f08abbd32
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 172b96b63f65b5ee8b576ba6ee9c18aad18e3531
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409526"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744449"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>Constantes (Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -68,6 +68,11 @@ Vous pouvez sélectionner l’exécution de requête directe ou l’exécution d
 ### <a name="handling-numeric-fetches"></a>Gestion des extractions numériques
 L’attribut PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE peut être utilisé pour gérer les extractions numériques à partir de colonnes ayant un type SQL numérique (bit, integer, smallint, tinyint, float et real). Lorsque PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE est définie sur true, les résultats à partir d’une colonne d’entiers sont représentés en tant qu’entiers, tandis que SQL flotte et réels sont représentées sous forme de valeurs en virgule flottante. Cet attribut peut être défini avec [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md). 
 
+Vous pouvez modifier le comportement de mise en forme décimale par défaut avec les attributs PDO::SQLSRV_ATTR_FORMAT_DECIMALS et PDO::SQLSRV_ATTR_DECIMAL_PLACES. Le comportement de ces attributs est identique pour les options correspondantes sur le côté SQLSRV (**FormatDecimals** et **DecimalPlaces**), sauf que les paramètres de sortie ne sont pas pris en charge pour la mise en forme. Ces attributs peuvent être définis au niveau de la connexion ou de l’instruction avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md) ou [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), mais remplace n’importe quel attribut d’instruction correspondant attribut de connexion. Pour plus d’informations, consultez [mise en forme les chaînes décimales et les valeurs de l’argent (pilote PDO_SQLSRV)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md).
+
+### <a name="handling-date-and-time-fetches"></a>Récupération (fetch) de la date et de l’heure de gestion
+
+Le PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE Spécifie s’il faut récupérer des types de date et heure en tant que [PHP DateTime](http://php.net/manual/en/class.datetime.php) objets. Si false, le comportement par défaut consiste à retourner en tant que chaînes. Cet attribut peut être défini au niveau de la connexion ou de l’instruction avec [PDO::setAttribute](../../connect/php/pdo-setattribute.md) ou [PDOStatement::setAttribute](../../connect/php/pdostatement-setattribute.md), mais remplace l’attribut d’instruction correspondant attribut de connexion. Pour plus d’informations, consultez [Comment : récupérer la Date et l’heure des Types comme PHP à des objets DateTime à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md).
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV  
 Les sections qui suivent répertorient les constantes utilisées par le pilote SQLSRV.  
@@ -175,7 +180,7 @@ Le tableau suivant répertorie les constantes utilisées pour décrire des types
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
 |SQLSRV_SQLTYPE_INT|INT|  
 |SQLSRV_SQLTYPE_MONEY|money| 
-|SQLSRV_SQLTYPE_NCHAR|NCHAR<sup>5</sup>|   
+|SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
 |SQLSRV_SQLTYPE_NUMERIC|numérique<sup>5</sup>|
 |SQLSRV_SQLTYPE_NUMERIC($precision, $scale)|NUMERIC|  
@@ -236,7 +241,7 @@ La clé **TransactionIsolation** , qui est utilisé avec [sqlsrv_connect](../../
 -   SQLSRV_TXN_SERIALIZABLE  
   
 ### <a name="cursor-and-scrolling-constants"></a>Constantes de défilement et curseur  
-Les constantes suivantes spécifient le type de curseur que vous pouvez utiliser dans un jeu de résultats :  
+Les constantes suivantes spécifient le type de curseur que vous pouvez utiliser dans un jeu de résultats :  
   
 -   SQLSRV_CURSOR_FORWARD  
   
@@ -248,7 +253,7 @@ Les constantes suivantes spécifient le type de curseur que vous pouvez utiliser
   
 -   SQLSRV_CURSOR_CLIENT_BUFFERED  
   
-Les constantes suivantes spécifient la ligne à sélectionner dans le jeu de résultats :  
+Les constantes suivantes spécifient la ligne à sélectionner dans le jeu de résultats :  
   
 -   SQLSRV_SCROLL_NEXT  
   

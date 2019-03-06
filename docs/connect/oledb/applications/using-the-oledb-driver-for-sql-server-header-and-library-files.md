@@ -2,7 +2,7 @@
 title: Utilisation des fichiers bibliothèques et d’en-tête OLE DB Driver pour SQL Server | Microsoft Docs
 description: Utilisation des fichiers bibliothèques et d’en-tête OLE DB Driver pour SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 9cd6a50bec611b7068b3f79f3867f9e2a6242a70
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 528f55ba4a95da2f7e68de47ad25f88eae3af668
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816037"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744419"
 ---
 # <a name="using-the-ole-db-driver-for-sql-server-header-and-library-files"></a>Utilisation des fichiers bibliothèques et d’en-tête OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,18 +37,18 @@ ms.locfileid: "47816037"
   
  Le pilote OLE DB pour l’en-tête de SQL Server et les fichiers de bibliothèque sont installés à l’emplacement suivant :  
   
- *%Program Files%* \Microsoft SQL Server\Client SDK\OLEDB\181\SDK  
+ *%Program Files%* \Microsoft SQL Server\Client SDK\OLEDB\182\SDK  
   
  Le pilote OLE DB pour le fichier d’en-tête SQL Server (msoledbsql.h) peut être utilisé pour ajouter le pilote OLE DB pour la fonctionnalité d’accès de données de SQL Server à vos applications personnalisées. Le fichier d’en-tête OLE DB Driver pour SQL Server contient l’ensemble des définitions, attributs, propriétés et interfaces nécessaires pour tirer parti des nouvelles fonctionnalités introduites dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
- Outre le pilote OLE DB pour le fichier d’en-tête SQL Server, il existe également un fichier de bibliothèque msoledbsql.lib qui est la bibliothèque d’exportation pour [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) fonctionnalité.  
+ Outre le pilote OLE DB pour le fichier d’en-tête SQL Server, il existe également un fichier de bibliothèque msoledbsql.lib, qui est la bibliothèque d’exportation pour [OpenSqlFilestream](../../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) fonctionnalité.  
   
  Le fichier d’en-tête OLE DB Driver pour SQL Server offre une compatibilité descendante avec le fichier d’en-tête sqloledb.h utilisé avec MDAC (Microsoft Data Access Components), mais ne contient pas les CLSID pour SQLOLEDB (le fournisseur OLE DB pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclus avec MDAC) ni les symboles pour la fonctionnalité XML (non prise en charge par OLE DB Driver pour SQL Server).    
   
  Les applications OLE DB qui utilisent le pilote OLE DB pour SQL Server doivent uniquement référencer msoledbsql.h. Si une application utilise MDAC (SQLOLEDB) et OLE DB Driver pour SQL Server, elle peut faire référence à sqloledb.h et msoledbsql.h, mais la référence à sqloledb.h doit être placée en premier.  
   
-## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>À l’aide de OLE DB Driver pour SQL Server-fichier d’en-tête  
- Pour utiliser le pilote OLE DB pour le fichier d’en-tête SQL Server, vous devez utiliser un **incluent** instruction au sein de votre code de programmation C/C++. Les sections suivantes décrivent comment effectuer cette applications OLE DB.  
+## <a name="using-the-ole-db-driver-for-sql-server-header-file"></a>À l’aide de OLE DB Driver pour le fichier d’en-tête SQL Server  
+ Pour utiliser le pilote OLE DB pour le fichier d’en-tête SQL Server, vous devez utiliser un **incluent** instruction au sein de votre code de programmation C/C++. Les sections suivantes décrivent comment le faire dans les applications OLE DB.  
   
 > [!NOTE]  
 >  Le pilote OLE DB pour les fichiers de bibliothèque et d’en-tête SQL Server peut uniquement être compilé à l’aide de Visual Studio C++ 2012 ou version ultérieure.  
@@ -66,7 +66,7 @@ include "msoledbsql.h";
  Lorsque vous créez une connexion à une source de données via OLE DB Driver pour SQL Server, utilisez « MSOLEDBSQL » comme chaîne de nom du fournisseur.  
 
   
-## <a name="component-names-and-properties-by-version"></a>Noms des composants et propriétés par version  
+## <a name="component-names-and-properties-by-version"></a>Noms et propriétés des composants par version  
 
 |Propriété|OLE DB Driver pour SQL Server|MDAC|  
 |--------|----------------------------|----|   

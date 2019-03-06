@@ -11,12 +11,12 @@ ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f6ac8e52e46108e88693a96d587e3af2b79e4ff4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833107"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676057"
 ---
 # <a name="retrieving-data"></a>Récupération de données
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,8 +74,11 @@ Vous pouvez voir le nombre de lignes dans un jeu de résultats si vous spécifie
 |---------|---------------|  
 |[Extraction de données sous la forme d’une chaîne](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)|Fournit une vue d’ensemble de la manière de diffuser en continu des données à partir du serveur et indique des liens vers des cas d’usage spécifiques.|  
 |[Utilisation de paramètres directionnels](../../connect/php/using-directional-parameters.md)|Décrit comment utiliser les paramètres directionnels lors de l’appel d’une procédure stockée.|  
-|[Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Montre comment créer un jeu de résultats avec des lignes auxquelles vous pouvez accéder dans n’importe quel ordre, quand vous utilisez le pilote SQLSRV.|  
-|[Procédure : récupérer des types de date et heure sous forme de chaînes à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Décrit comment récupérer des types de date et d’heure sous forme de chaînes.|  
+|[Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Montre comment créer un jeu de résultats avec les lignes auxquelles vous pouvez accéder dans n’importe quel ordre.|  
+|[Procédure : récupérer des types date et heure sous forme de chaînes à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Décrit comment récupérer des types date et heure sous forme de chaînes à l’aide du pilote SQLSRV.|  
+|[Procédure : récupérer des types date et heure sous forme d’objets DateHeure PHP à l’aide du pilote PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Décrit comment récupérer des types date et heure sous la forme d’objets à l’aide du pilote PDO_SQLSRV.|  
+|[Mise en forme de chaînes décimales avec le pilote SQLSRV](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Montre comment mettre en forme des valeurs décimales ou argent à l’aide du pilote SQLSRV.|  
+|[Mise en forme de chaînes décimales avec le pilote PDO_SQLSRV](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Montre comment mettre en forme les valeurs de décimale ou argent en utilisant le pilote PDO_SQLSRV.|  
   
 ## <a name="related-sections"></a>Sections connexes  
 [Procédure : spécifier des types de données PHP](../../connect/php/how-to-specify-php-data-types.md)  

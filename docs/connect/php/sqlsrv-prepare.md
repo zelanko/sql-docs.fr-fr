@@ -1,7 +1,7 @@
 ---
 title: sqlsrv_prepare | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2018
+ms.date: 02/11/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc82d2860bf5e927556103a6c508b1cd662e4b42
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: bae6521aa7348bcafca86a5efa54c605fc887a28
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602919"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676147"
 ---
 # <a name="sqlsrvprepare"></a>sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -62,17 +62,21 @@ sqlsrv_prepare(resource $conn, string $tsql [, array $params [, array $options]]
     |Élément|Description|  
     |-----------|---------------|  
     |*&$value*|Valeur littérale ou référence à une variable PHP.|  
-    |*$direction*[facultatif]|L’une des constantes **SQLSRV_PARAM_\*** utilisées pour indiquer la direction du paramètre : **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. La valeur par défaut est **SQLSRV_PARAM_IN**.<br /><br />Pour plus d’informations sur les constantes PHP, consultez [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
-    |*$phpType*[facultatif]|Constante **SQLSRV_PHPTYPE_\*** qui spécifie le type de données PHP de la valeur retournée.|  
-    |*$sqlType*[facultatif]|Constante **SQLSRV_SQLTYPE_\*** qui spécifie le type de données SQL Server de la valeur d’entrée.|  
+    |*$direction*[FACULTATIF]|L’une des constantes **SQLSRV_PARAM_\*** utilisées pour indiquer la direction du paramètre : **SQLSRV_PARAM_IN**, **SQLSRV_PARAM_OUT**, **SQLSRV_PARAM_INOUT**. La valeur par défaut est **SQLSRV_PARAM_IN**.<br /><br />Pour plus d’informations sur les constantes PHP, consultez [Constantes &#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md).|  
+    |*$phpType*[FACULTATIF]|Constante **SQLSRV_PHPTYPE_\*** qui spécifie le type de données PHP de la valeur retournée.|  
+    |*$sqlType*[FACULTATIF]|Constante **SQLSRV_SQLTYPE_\*** qui spécifie le type de données SQL Server de la valeur d’entrée.|  
   
 *$options* [FACULTATIF] : tableau associatif qui définit les propriétés de la requête. Le tableau suivant liste les clés prises en charge et les valeurs correspondantes :  
   
 |Key|Valeurs prises en charge|Description|  
 |-------|--------------------|---------------|  
-|QueryTimeout|Valeur d'entier positif.|Définit le délai d’expiration de la requête, en secondes. Par défaut, le pilote attend les résultats indéfiniment.|  
-|SendStreamParamsAtExec|**true** ou **false**<br /><br />La valeur par défaut est **true**.|Configure le pilote pour envoyer toutes les données de flux au moment de l’exécution (**true**), ou pour les envoyer par blocs (**false**). La valeur par défaut est **true**. Pour plus d’informations, consultez [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
+|ClientBufferMaxKBSize|Entier positif|Configure la taille de la mémoire tampon qui contient le jeu de résultats pour un curseur côté client.<br /><br />La valeur par défaut est 10 240 Ko. Pour plus d’informations, consultez [en spécifiant un Type de curseur et la sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|
+|DecimalPlaces|Un entier compris entre 0 et 4 (inclus)|Spécifie le nombre de décimales lors du formatage extraites des valeurs monétaires.<br /><br />N’importe quel entier négatif ou supérieur à 4 valeur sera ignorée.<br /><br />Cette option fonctionne uniquement lorsque FormatDecimals est **true**.|
+|FormatDecimals|**true** ou **false**<br /><br />La valeur par défaut est **false**.|Spécifie s’il faut ajouter pointe remet à zéro pour les chaînes décimales lorsque cela est approprié et permet la `DecimalPlaces` option pour mettre en forme des types de l’argent.<br /><br />Pour plus d’informations, consultez [mise en forme les chaînes décimales et les valeurs de l’argent (pilote SQLSRV)](../../connect/php/formatting-decimals-sqlsrv-driver.md).|
+|QueryTimeout|Entier positif|Définit le délai d’expiration de la requête, en secondes. Par défaut, le pilote attend les résultats indéfiniment.|  
+|ReturnDatesAsStrings|**true** ou **false**<br /><br />La valeur par défaut est **false**.|Configure l’instruction pour récupérer les types de date et d’heure sous forme de chaînes (**true**). Pour plus d’informations, lisez [Procédure : récupérer des types de date et heure sous forme de chaînes à l’aide du pilote SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md).
 |Défilement|SQLSRV_CURSOR_FORWARD<br /><br />SQLSRV_CURSOR_STATIC<br /><br />SQLSRV_CURSOR_DYNAMIC<br /><br />SQLSRV_CURSOR_KEYSET<br /><br />SQLSRV_CURSOR_CLIENT_BUFFERED|Pour plus d’informations sur ces valeurs, consultez [Spécification d’un type de curseur et sélection de lignes](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md).|  
+|SendStreamParamsAtExec|**true** ou **false**<br /><br />La valeur par défaut est **true**.|Configure le pilote pour envoyer toutes les données de flux au moment de l’exécution (**true**), ou pour les envoyer par blocs (**false**). La valeur par défaut est **true**. Pour plus d’informations, consultez [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md).|  
   
 ## <a name="return-value"></a>Valeur retournée  
 Ressource d’instruction. Si la ressource d’instruction ne peut pas être créée, la valeur **false** est retournée.  

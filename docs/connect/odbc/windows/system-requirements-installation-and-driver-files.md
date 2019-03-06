@@ -11,17 +11,17 @@ ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a38bcb91b0a074edbf80cea1245580ba16c237af
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: dd37c097873b104f3f53e9ca92e50b6f7c1acafe
+ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600959"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56464765"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Configuration système requise, installation et fichiers de pilote
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les connexions à SQL Server 2014, SQL Server 2012 R2, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)]et [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
+ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge les connexions à SQL Server 2014, SQL Server 2012, [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai_md.md)] et [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].  
   
 ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows peut être installé sur un ordinateur qui possède également une ou plusieurs versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client.  
   
@@ -64,7 +64,7 @@ Quand vous appelez `msodbcsql.msi`, seuls les composants clients sont installés
 msiexec /i msodbcsql.msi ADDLOCAL=ALL  
 ```  
   
- Spécifiez `IACCEPTMSODBCSQLLICENSETERMS=YES` pour accepter les termes du contrat de licence utilisateur final, si vous utilisez l’option `/passive`, `/qn`, `/qb` ou `/qr` pour l’installation. Cette option doit être spécifiée tout en majuscules. Exemple :  
+ Spécifiez `IACCEPTMSODBCSQLLICENSETERMS=YES` pour accepter les termes de la licence utilisateur final si vous utilisez l’option `/passive`, `/qn`, `/qb` ou `/qr` pour l’installation. Cette option doit être spécifiée tout en majuscules. Exemple :  
   
 ```  
 msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES ADDLOCAL=ALL  
@@ -97,7 +97,7 @@ Par exemple, lorsque vous compilez une application ODBC avec `msodbcsql11.lib` e
  
 |Composant|Description|  
 |---------------|-----------------|  
-|msodbcsql17.dll ou <br> msodbcsql13.dll ou <br> msodbcsql11.dll|Fichier DDL (Dynamic-Link Library) contenant l’ensemble des fonctionnalités du pilote. Ce fichier est installé dans % SYSTEMROOT%\System32.|  
+|msodbcsql17.dll or <br> msodbcsql13.dll ou <br> msodbcsql11.dll|Fichier DDL (Dynamic-Link Library) contenant l’ensemble des fonctionnalités du pilote. Ce fichier est installé dans % SYSTEMROOT%\System32.|  
 |msodbcdiag17.dll ou <br> msodbcdiag13.dll ou <br> msodbcdiag11.dll|Le fichier de bibliothèque de liens dynamiques (DLL) qui contient l’interface de diagnostics (suivi) du pilote. Ce fichier est installé dans % SYSTEMROOT%\System32.|
 |msodbcsqlr17.rll ou <br> msodbcsqlr13.rll ou <br> msodbcsqlr11.rll|Fichier de ressources qui accompagne la bibliothèque du pilote. Ce fichier est installé dans % SYSTEMROOT%\System32\1033.| 
 |s13ch_msodbcsql.chm ou <br> s11ch_msodbcsql.chm |Fichier d’aide de l’Assistant Source de données qui explique comment créer une source de données pour le pilote. Ce fichier est installé dans %SYSTEMROOT%\System32\1033 <br /> <br /> **Remarque :** aucun fichier chm pour 17 du pilote ODBC. |  

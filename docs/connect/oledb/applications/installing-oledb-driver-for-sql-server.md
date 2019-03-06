@@ -2,7 +2,7 @@
 title: Installer le pilote OLE DB pour SQL Server | Microsoft Docs
 description: Installation et la désinstallation du pilote OLE DB pour SQL Server
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 02/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -22,12 +22,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 7dc75f03ac806c50008f7b536e7a1f0ed037d496
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 288b81c508eed681be190749b5d9618f1f5511ce
+ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602219"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56744379"
 ---
 # <a name="installing-ole-db-driver-for-sql-server"></a>Installation d’OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ Le pilote OLE DB pour les fichiers de SQL Server (msoledbsql.dll, msoledbsqlr.rl
 > [!NOTE]  
 > Tous les paramètres du Registre appropriés pour le pilote OLE DB pour SQL Server sont effectuées dans le cadre du processus d’installation.  
 
-Le pilote OLE DB pour les fichiers d’en-tête et de la bibliothèque SQL Server (msoledbsql.h et msoledbsql.lib) sont installés dans `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`. En outre, le x64 msoledbsql.msi installe les mêmes fichiers dans `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\181\SDK`.  
+Le pilote OLE DB pour les fichiers d’en-tête et de la bibliothèque SQL Server (msoledbsql.h et msoledbsql.lib) sont installés dans `%PROGRAMFILES%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`. En outre, le x64 msoledbsql.msi installe les mêmes fichiers dans `%PROGRAMFILES(x86)%\Microsoft SQL Server\Client SDK\OLEDB\182\SDK`.  
 
 Vous pouvez distribuer OLE DB Driver pour SQL Server via msoledbsql.msi. Vous devrez peut-être installer le pilote OLE DB pour SQL Server lorsque vous déployez une application. Une façon d'installer plusieurs packages dans ce qui paraît à l'utilisateur être une installation unique consiste à utiliser la technologie des programmes de chaînage et d'amorçage. Pour plus d’informations, consultez [Création d’un package de programme d’amorçage personnalisé pour Visual Studio 2005](https://go.microsoft.com/fwlink/?LinkId=115667) et [Ajout de composants requis personnalisés](https://go.microsoft.com/fwlink/?LinkId=115668).  
   
@@ -55,7 +55,7 @@ Quand vous appelez msoledbsql.msi, seuls les composants clients sont installés 
 ## <a name="silent-install"></a>Installation sans assistance  
  Si vous utilisez l’option /passive, /qn, /qb ou /qr avec msiexec, vous devez également spécifier IACCEPTMSOLEDBSQLLICENSETERMS=YES pour indiquer explicitement que vous acceptez les termes de la licence utilisateur final. Cette option doit être spécifiée en majuscules.  
 
-## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>Installation du pilote OLE DB pour SQL Server en tant que dépendance  
+## <a name="installing-ole-db-driver-for-sql-server-as-a-dependency"></a>L’installation du pilote OLE DB pour SQL Server en tant que dépendance  
 Il est important de ne pas désinstaller le pilote OLE DB pour SQL Server jusqu'à ce que toutes les applications dépendantes sont désinstallées. Pour fournir aux utilisateurs un message d’avertissement que votre application repose sur OLE DB Driver pour SQL Server, utilisez l’option d’installation APPGUID dans votre fichier MSI, comme suit :  
 
  `msiexec /i msoledbsql.msi APPGUID={0CC618CE-F36A-415E-84B4-FB1BFF6967E1}`  

@@ -23,8 +23,8 @@ ms.locfileid: "56013000"
 
 ## <a name="sqlpackage-181"></a>sqlpackage 18.1
 
-Date de publication : 1 février 2019  
-Build 
+Date de publication : 1er février 2019  
+Build : 15.0.4316.1 
 
 La version inclut les correctifs et les fonctionnalités suivantes :
 
