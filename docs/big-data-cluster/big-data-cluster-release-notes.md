@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dced44806927f7b41957c2eb8374688e8be88f1f
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: ab05885243d09dcc2aece09b7b8931fc17a5921c
+ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334746"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57556231"
 ---
 # <a name="release-notes-for-sql-server-2019-big-data-clusters"></a>Notes de publication pour les clusters de données volumineuses de SQL Server 2019
 
@@ -98,6 +98,10 @@ Les sections suivantes fournissent des problèmes connus pour les clusters de do
    `Msg 7320, Level 16, State 110, Line 157 Cannot execute the query "Remote Query" against OLE DB provider "SQLNCLI11" for linked server "(null)". 110806;A distributed query failed: One or more errors occurred.`
 
 - Si vous créez une table externe à Oracle qui utilisent des types de données caractères, l’Assistant de virtualisation d’Azure Data Studio interprète ces colonnes comme VARCHAR dans la définition de table externe. Cela entraîne un échec dans la table externe DDL. Modifiez le schéma Oracle pour utiliser le type NVARCHAR2, ou créer manuellement les instructions de la TABLE externe et spécifiez NVARCHAR au lieu d’utiliser l’Assistant.
+
+#### <a name="application-deployment"></a>Déploiement d'applications
+
+- Lors de l’appel d’une application de R, Python ou MLeap à partir de l’API RESTful, l’appel expire dans 5 minutes.
 
 #### <a name="spark-and-notebooks"></a>Spark et notebooks
 
