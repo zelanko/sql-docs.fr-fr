@@ -18,12 +18,12 @@ ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b408b3f4d71f80bb2317a58ddd0ff0f578807946
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 3737c5dabc8b88970a24cbadcc9617457cf862eb
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202808"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828129"
 ---
 # <a name="connect-to-server-database-engine"></a>Se connecter au serveur (Moteur de base de données)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +43,9 @@ Sélectionnez l'instance de serveur à laquelle se connecter. La dernière insta
   
 > [!NOTE]  
 > Pour vous connecter à une instance utilisateur active de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)], utilisez le protocole des canaux nommés en spécifiant le nom du canal, par exemple `np:\\.\pipe\3C3DF6B1-2262-47\tsql\query`. Pour plus d’informations, consultez la documentation de [!INCLUDE[ssExpress](../../includes/ssexpress_md.md)].  
-  
+> [!NOTE]  
+> Les connexions sont généralement conservées dans l’historique « Utilisés le plus récemment » (MRU). Pour supprimer des entrées de la liste des fichiers récents, cliquez simplement sur la zone de liste déroulante **Nom du serveur**, sélectionnez le nom du serveur à supprimer, puis appuyez sur la touche **SUPPR**.  
+   
 **Authentification**  
 La version actuelle de SSMS propose cinq modes d’authentification lorsque vous vous connectez à une instance du [!INCLUDE[ssDE](../../includes/ssde_md.md)]. Si votre boîte de dialogue d’authentification ne correspond pas à la liste suivante, téléchargez la version la plus récente de SSMS à partir de [Télécharger SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md).  
 

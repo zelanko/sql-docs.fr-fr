@@ -5,7 +5,7 @@ keywords: SQL Server, SSMS, SQL Server Management Studio, scripts, génération 
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/13/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
@@ -20,14 +20,14 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: d2ebf81dcab52be193d1472f5f1dc4f4495aba50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711227"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662823"
 ---
-# <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutoriel : Générer des scripts d’objets dans SQL Server Management Studio
+# <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Didacticiel : Générer des scripts d’objet dans SQL Server Management Studio
 Ce tutoriel explique comment générer des scripts T-SQL (Transact-SQL) pour différents objets qui figurent dans SQL Server Management Studio (SSMS). Dans ce tutoriel, vous trouverez des exemples de génération de scripts pour les objets suivants :
 
 > [!div class="checklist"]
@@ -47,7 +47,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio, de l�
 - Installez [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Téléchargez les [exemples de bases de données AdventureWorks2016](https://github.com/Microsoft/sql-server-samples/releases).
 
-Les instructions de restauration des bases de données dans SSMS se trouvent ici : [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
+Les instructions de restauration de bases de données dans SSMS se trouvent ici : [Restaurer une base de données](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms). 
 
 
 ## <a name="script-queries-from-the-gui"></a>Générer des scripts pour des requêtes à partir de l’interface graphique utilisateur

@@ -25,19 +25,19 @@ ms.assetid: f7e107f8-0fcf-408b-b30f-da2323eeb714
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 281b2f8baeabb5d56ef953ba595103caadf23efb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: caa103139a47214615ec4bb4f78a7268acf45dda
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780048"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590284"
 ---
 # <a name="set-statements-transact-sql"></a>Instructions SET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Le langage de programmation [!INCLUDE[tsql](../../includes/tsql-md.md)] fournit plusieurs instructions SET qui modifient la façon dont la session en cours gère des informations spécifiques. Les instructions SET sont regroupées selon les catégories indiquées dans le tableau suivant :  
+Le langage de programmation [!INCLUDE[tsql](../../includes/tsql-md.md)] fournit plusieurs instructions SET qui modifient la façon dont la session en cours gère des informations spécifiques. Les instructions SET sont regroupées selon les catégories indiquées dans le tableau suivant :  
   
- Pour plus d’informations sur la définition de variables locales à l’aide de l’instruction SET, consultez [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
+Pour plus d’informations sur la définition de variables locales à l’aide de l’instruction SET, consultez [SET @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/set-local-variable-transact-sql.md).  
   
 |Catégorie|Instructions|  
 |--------------|----------------|  
@@ -51,39 +51,44 @@ ms.locfileid: "47780048"
   
 ## <a name="considerations-when-you-use-the-set-statements"></a>Remarques sur l'utilisation des instructions SET  
   
--   Toutes les instructions SET sont appliquées lors de l'exécution, à l'exception des instructions SET FIPS_FLAGGER, SET OFFSETS, SET PARSEONLY et SET QUOTED_IDENTIFIER. Ces instructions sont implémentées au moment de l'analyse.  
+- Toutes les instructions SET sont traitées pendant l’exécution, sauf ces instructions qui s’exécutent lors de l’analyse : 
+
+  - SET FIPS_FLAGGER
+  - SET OFFSETS
+  - SET PARSEONLY
+  - et SET QUOTED_IDENTIFIER  
   
--   Si une instruction SET est exécutée dans une procédure stockée ou un déclencheur, la valeur de l'option SET est rétablie une fois que le contrôle est renvoyé par la procédure stockée ou le déclencheur. De même, si une instruction SET est spécifiée dans une chaîne SQL dynamique exécutée à l’aide de **sp_executesql** ou de EXECUTE, la valeur de l’option SET est rétablie une fois que le contrôle est renvoyé du traitement spécifié dans la chaîne SQL dynamique.  
+- Si une instruction SET s’exécute dans une procédure stockée ou un déclencheur, sa valeur est rétablie dès que la procédure stockée ou le déclencheur rend le contrôle. De même, si une instruction SET est spécifiée dans une chaîne SQL dynamique exécutée à l’aide de **sp_executesql** ou d’EXECUTE, sa valeur est rétablie une fois que le traitement spécifié dans la chaîne SQL dynamique rend le contrôle.  
   
--   Les procédures stockées sont exécutées avec les valeurs SET spécifiées au moment de l'exécution, sauf dans le cas de SET ANSI_NULLS et SET QUOTED_IDENTIFIER. Les procédures stockées spécifiant SET ANSI_NULLS ou SET QUOTED_IDENTIFIER utilisent les valeurs spécifiées au moment de la création de ces procédures stockées. Toute option SET utilisée dans une procédure stockée est ignorée.  
+- Les procédures stockées sont exécutées avec les valeurs SET spécifiées au moment de l'exécution, sauf dans le cas de SET ANSI_NULLS et SET QUOTED_IDENTIFIER. Les procédures stockées spécifiant SET ANSI_NULLS ou SET QUOTED_IDENTIFIER utilisent les valeurs spécifiées au moment de la création de ces procédures stockées. Toute option SET utilisée dans une procédure stockée est ignorée.  
   
--   Le paramètre **user options** de la procédure **sp_configure** tient compte des paramètres définis à l’échelle du serveur et agit sur plusieurs bases de données à la fois. Son fonctionnement est identique à celui d'une instruction SET explicite, mais il prend effet lors de la connexion.  
+- Le paramètre **user options** de la procédure **sp_configure** tient compte des paramètres définis à l’échelle du serveur et agit sur plusieurs bases de données à la fois. Son fonctionnement est identique à celui d'une instruction SET explicite, mais il prend effet lors de la connexion.  
   
--   Les paramètres de base de données (définis à l'aide de ALTER DATABASE) sont valides uniquement au niveau de la base de données et prennent effet seulement s'ils sont explicitement définis. Les paramètres de base de données ont priorité sur les valeurs des options de l’instance définies à l’aide de **sp_configure**.  
+- Les paramètres de base de données (définis à l'aide de ALTER DATABASE) sont valides uniquement au niveau de la base de données et prennent effet seulement s'ils sont explicitement définis. Les paramètres de base de données ont priorité sur les valeurs des options de l’instance définies à l’aide de **sp_configure**.  
   
--   Pour toutes les instructions SET ayant des valeurs ON ou OFF, vous pouvez spécifier l'une ou l'autre de ces valeurs pour plusieurs options SET en même temps.  
+- Si une instruction SET utilise ON et OFF, vous pouvez spécifier l’une ou l’autre valeur pour plusieurs options SET.
   
     > [!NOTE]  
-    >  Ceci ne s'applique pas aux statistiques liées aux options SET.  
+    >  Ceci ne s’applique pas aux statistiques liées aux options SET.  
   
      Par exemple, `SET QUOTED_IDENTIFIER, ANSI_NULLS ON` affecte la valeur ON à QUOTED_IDENTIFIER et à ANSI_NULLS.  
   
--   Les paramètres de l'instruction SET sont prioritaires sur les paramètres des options de base de données équivalents et définis à l'aide de ALTER DATABASE. Ainsi, la valeur spécifiée dans une instruction SET ANSI_NULLS se substitue à celle du paramètre de base de données pour ANSI_NULLs. De plus, certains paramètres de connexion sont activés (ON) automatiquement quand un utilisateur se connecte à une base de données, sur la base des valeurs activées au préalable à l’aide de la procédure **sp_configure user options** ou sur la base des valeurs applicables à toutes les connexions ODBC et OLE DB.  
+- Les paramètres de l’instruction SET sont prioritaires sur les paramètres équivalents des options de base de données, qui sont définis à l’aide d’ALTER DATABASE. Ainsi, la valeur spécifiée dans une instruction SET ANSI_NULLS se substitue à celle du paramètre de base de données pour ANSI_NULLs. De plus, certains paramètres de connexion sont activés (ON) automatiquement quand un utilisateur se connecte à une base de données, sur la base de valeurs activées au préalable à l’aide de la procédure **sp_configure user options** ou sur la base de valeurs applicables à toutes les connexions ODBC et OLE DB.  
   
--   Les instructions ALTER, CREATE et DROP DATABASE ne tiennent pas compte du paramètre SET LOCK_TIMEOUT.  
+- Les instructions ALTER, CREATE et DROP DATABASE ne tiennent pas compte du paramètre SET LOCK_TIMEOUT.  
   
--   Lorsqu'une instruction SET globale ou contextuelle (par exemple, SET ANSI_DEFAULTS) définit plusieurs options, l'émission de l'instruction SET contextuelle rétablit les anciennes valeurs de toutes les options affectées par cette instruction SET contextuelle. Si une option SET particulière affectée par une instruction SET contextuelle est explicitement définie après l'émission de l'instruction SET contextuelle, ses paramètres remplacent les paramètres correspondants de l'instruction contextuelle.  
+- Lorsqu’une instruction SET globale ou contextuelle définit plusieurs paramètres, son exécution rétablit les anciens paramètres de toutes ces options affectées par l’instruction SET contextuelle. Si une option SET affectée par une instruction SET contextuelle est explicitement définie après l’émission de l’instruction SET contextuelle, ses paramètres remplacent les paramètres correspondants de l’instruction contextuelle. SET ANSI_DEFAULTS est un exemple d’instruction SET contextuelle.  
   
--   Lorsque vous utilisez des traitements d'instructions, le contexte de la base de données est déterminé par le traitement établi à l'aide de l'instruction USE. Les requêtes appropriées et toutes les instructions qui sont exécutées en dehors d'une procédure stockée et qui sont regroupées dans des traitements héritent des valeurs des options de la base de données et de la connexion établie à l'aide de l'instruction USE.  
+- Lorsque vous utilisez des traitements d’instructions, le contexte de la base de données est déterminé par le traitement défini à l’aide de l’instruction USE. Les requêtes non planifiées et toutes les instructions qui s’exécutent hors d’une procédure stockée et sont regroupées dans des traitements héritent des paramètres d’option de la base de données et de la connexion établie à l’aide de l’instruction USE.  
   
--   Les requêtes MARS (Multiple Active Result Set) partagent un état global contenant les paramètres des options SET de la session la plus récente. Chaque requête qui s'exécute peut modifier les options SET. Ces modifications sont spécifiques au contexte de la requête dans lequel elles sont définies et n'ont pas d'incidence sur les autres requêtes MARS simultanées. Une fois l'exécution de la requête terminée, les nouvelles options SET sont toutefois copiées dans l'état de session global. Ainsi, les nouvelles requêtes qui s'exécutent dans la même session après ces modifications utilisent les nouvelles valeurs des options SET.  
+- Les requêtes MARS (Multiple Active Result Set) partagent un état global contenant les paramètres des options SET de la session la plus récente. Chaque requête qui s’exécute peut modifier les options de l’instruction SET. Ces modifications sont limitées au contexte de la requête dans lequel elles sont définies, et n’ont pas d’incidence sur les autres requêtes MARS simultanées. Une fois l'exécution de la requête terminée, les nouvelles options SET sont toutefois copiées dans l'état de session global. Ainsi, les nouvelles requêtes qui s'exécutent dans la même session après ces modifications utilisent les nouvelles valeurs des options SET.  
   
--   Lorsqu'une procédure stockée est exécutée à partir d'un traitement ou d'une autre procédure stockée, elle est exécutée en fonction des valeurs des options actuellement en vigueur dans la base de données contenant la procédure stockée. Par exemple, si la procédure stockée **db1.dbo.sp1** appelle la procédure stockée **db2.dbo.sp2**, la procédure **sp1** est exécutée d’après le niveau de compatibilité actuellement défini dans la base de données **db1**, tandis que la procédure stockée **sp2** est exécutée d’après le niveau de compatibilité actuellement en vigueur dans la base de données **db2**.  
+- Lorsqu’une procédure stockée s’exécute dans un traitement ou une autre procédure stockée, elle est exécutée avec les valeurs d’option configurées dans la base de données contenant la procédure stockée. Par exemple, si la procédure stockée **db1.dbo.sp1** appelle la procédure stockée **db2.dbo.sp2**, la procédure **sp1** est exécutée sous le niveau de compatibilité défini dans la base de données **db1**, tandis que la procédure stockée **sp2** est exécutée sous le niveau de compatibilité défini dans la base de données **db2**.  
   
--   Quand une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] fait référence à des objets résidant dans plusieurs bases de données, le contexte de la base de données active et celui de la connexion actuelle s’appliquent à cette instruction. Dans ce cas, si l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] fait partie d'un traitement, le contexte de la connexion actuelle est la base de données définie par l'instruction USE ; si l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est dans une procédure stockée, le contexte de la connexion est la base de données contenant cette procédure stockée.  
+- Lorsqu’une instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] concerne des objets situés dans plusieurs bases de données, le contexte de la base de données active et celui de la connexion actuelle s’appliquent à cette instruction. Dans ce cas, si l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] fait partie d'un traitement, le contexte de la connexion actuelle est la base de données définie par l'instruction USE ; si l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] est dans une procédure stockée, le contexte de la connexion est la base de données contenant cette procédure stockée.  
   
--   Lorsque vous créez et que vous modifiez des index sur des colonnes calculées ou des vues indexées, les options SET ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING et ANSI_WARNINGS doivent être activées (valeur ON). L'option NUMERIC_ROUNDABORT doit être désactivée (OFF).  
+- Lorsque vous créez et modifiez des index sur des colonnes calculées ou des vues indexées, vous devez définir ces options SET sur ON : ARITHABORT, CONCAT_NULL_YIELDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING et ANSI_WARNINGS. Réglez l’option NUMERIC_ROUNDABORT sur OFF.  
   
-     Si l'une de ces options n'est pas définie avec les valeurs requises, les actions INSERT, UPDATE, DELETE, DBCC CHECKDB et DBCC CHECKTABLE sur les vues indexées ou les tables comportant des index sur des colonnes calculées échouent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déclenche une erreur et affiche la liste des options dont les valeurs sont incorrectes. Par ailleurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les instructions SELECT sur ces tables ou ces vues indexées comme si les index sur les colonnes calculées ou sur les vues n'existaient pas.  
+  Si l’une de ces options n’a pas la valeur requise, les actions INSERT, UPDATE, DELETE, DBCC CHECKDB et DBCC CHECKTABLE sur les vues indexées ou les tables comportant des index sur des colonnes calculées échouent. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] déclenche une erreur et affiche la liste des options dont les valeurs sont incorrectes. Par ailleurs, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] traite les instructions SELECT sur ces tables ou ces vues indexées comme si les index sur les colonnes calculées ou sur les vues n’existaient pas.  
   
   

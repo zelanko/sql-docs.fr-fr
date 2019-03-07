@@ -18,17 +18,17 @@ ms.assetid: fdea1248-29a4-4bab-a60d-a1b359b5e109
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 3f517a0a991d36fb0371a7f2eee5e3fb4a0dacc2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d093331425443a0879d5f59f5a2d03fdebcb2abd
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715949"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425754"
 ---
 # <a name="instanceof-geometry-data-type"></a>InstanceOf (type de données geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Méthode qui teste si l’instance **geometry** est du même type que l’instance spécifiée. Retourne 1 si le type d’une instance **geometry** est identique au type spécifié, ou si le type spécifié est un ancêtre du type d’instance ; sinon, retourne 0.
+Méthode qui teste si l’instance **geometry** est du même type que l’instance spécifiée. Retourne 1 si le type de l’instance **geometry** est identique au type spécifié. Cette méthode retourne également 1 si le type spécifié est un ancêtre du type d’instance. Sinon, elle retourne 0.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -38,8 +38,8 @@ Méthode qui teste si l’instance **geometry** est du même type que l’instan
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *geometry_type*  
- Chaîne **nvarchar(4000)** spécifiant l’un des 15 types exposés dans la hiérarchie de type **geometry**.  
+*geometry_type*  
+Chaîne **nvarchar(4000)** spécifiant l’un des 15 types exposés dans la hiérarchie de type **geometry**.  
   
 ## <a name="return-types"></a>Types de retour  
  Type de retour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : **bit**  
@@ -47,7 +47,7 @@ Méthode qui teste si l’instance **geometry** est du même type que l’instan
  Type de retour CLR : **SqlBoolean**  
   
 ## <a name="remarks"></a>Notes   
- L’entrée de la méthode doit correspondre à l’une des instances suivantes : **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** et **MultiPoint**. Cette méthode lève **ArgumentException** si d’autres chaînes sont utilisées en entrée.  
+ L’entrée de la méthode doit être l’un des types suivants : **Geometry**, **Point**, **Curve**, **LineString**, **CircularString**, **CompoundCurve**, **Surface**, **Polygon**, **CurvePolygon**, **GeometryCollection**, **MultiSurface**, **MultiPolygon**, **MultiCurve**, **MultiLineString** ou **MultiPoint**. Cette méthode lève **ArgumentException** si d’autres chaînes sont utilisées en entrée.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant crée une instance `MultiPoint` et utilise `InstanceOf()` pour voir si l'instance est un `GeometryCollection`.  

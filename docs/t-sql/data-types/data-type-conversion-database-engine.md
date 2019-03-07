@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 76db4e710c2bd3d6eac25383a1db66a3720280ca
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d2ddd236ee002015390336c25039158bba70a998
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014501"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590358"
 ---
 # <a name="data-type-conversion-database-engine"></a>Conversion de types de données (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -100,7 +100,7 @@ Le tableau suivant décrit la conversion des types de données [!INCLUDE[ssNoVer
 |**datetime**, **smalldatetime**|**Date**|  
 |Tout type qui prend la valeur NULL|**Variant** ayant la valeur Null|  
   
-Toutes les valeurs uniques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont converties en une valeur unique [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], à l’exception des valeurs **binary**, **varbinary** et **image**. Ces valeurs sont converties en tableau de type **Byte()** unidimensionnel dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Ce tableau possède une plage **Byte(** 0 à *length*1 **)** où *length* représente le nombre d’octets dans les valeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** ou **image**.
+Toutes les valeurs uniques [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont converties en une valeur unique [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], à l’exception des valeurs **binary**, **varbinary** et **image**. Ces valeurs sont converties en tableau de type **Byte()** unidimensionnel dans [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]. Ce tableau possède une plage **Byte(** 0 à _length_ 1 **)** où *length* représente le nombre d’octets dans les valeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binary**, **varbinary** ou **image**.
   
 Il s'agit des conversions des types de données [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] en types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

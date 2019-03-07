@@ -12,19 +12,19 @@ author: uc-msft
 ms.author: umajay
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 4417dcd94c3dd24e22805f713901c5ddfbf6b727
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 50f6d68034ce6575c765b80c6fb1a658baba6d0a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035020"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802963"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
 Affiche la taille et le nombre de lignes pour chaque partition d’une table dans une base de données [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
   
-![Icône Lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de rubrique") [Conventions de la syntaxe Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône de lien d’article](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien de rubrique") [Conventions syntaxiques Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -48,10 +48,10 @@ Voici les résultats de la commande DBCC PDW_SHOWPARTITIONSTATS.
 |-----------------|---------------|-----------------|  
 |partition_number|INT|Numéro de partition.|  
 |used_page_count|BIGINT|Nombre de pages utilisées pour les données.|  
-|reserved_page_count|BIGINT|Nombre de pages allouées à la partition.|  
+|reserved_page_count|BIGINT|Nombre de pages réservées pour la partition.|  
 |row_count|BIGINT|Nombre de lignes dans la partition.|  
 |pdw_node_id|INT|Nœud de calcul pour les données.|  
-|distribution_id|INT|ID de distribution pour les données.|  
+|distribution_id|INT|Identificateur de distribution des données.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 ### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>A. Exemples de syntaxe de base DBCC PDW_SHOWPARTITIONSTATS  
@@ -65,4 +65,4 @@ DBCC PDW_SHOWPARTITIONSTATS (FactInternetSales);
 ## <a name="see-also"></a>Voir aussi
 [DBCC PDW_SHOWEXECUTIONPLAN &#40;Transact-SQL&#41;](dbcc-pdw-showexecutionplan-transact-sql.md)  
 [DBCC PDW_SHOWSPACEUSED &#40;Transact-SQL&#41;](dbcc-pdw-showspaceused-transact-sql.md)  
-  
+ 

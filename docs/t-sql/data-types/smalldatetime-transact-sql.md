@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b2d89750c6ddac45af82824b2449c9e415561814
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030999"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802256"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,21 +47,21 @@ Définit une date qui est associée à une heure de la journée. L'heure est bas
 |Formats de littéraux de chaîne par défaut<br /><br /> (utilisé pour le client de bas niveau)|Non applicable|  
 |Plage de dates|1900-01-01 à 2079-06-06<br /><br /> Du 1er janvier 1900 au 6 juin 2079|  
 |Plage temporelle|00:00:00 à 23:59:59<br /><br /> 2007-05-09 23:59:59 sera arrondi à<br /><br /> 2007-05-10 00:00:00|  
-|Plages d'éléments|AAAA comprend quatre chiffres, entre 1900 et 2079, qui représentent une année.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l’année spécifiée.<br /><br /> DD comprend deux chiffres, entre 01 et 31 selon le mois, qui représentent un jour du mois spécifié.<br /><br /> hh comprend deux chiffres, entre 00 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 00 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 00 et 59, qui représentent la seconde. Les valeurs inférieures ou égales à 29,998 sont arrondies à la minute inférieure ; les valeurs supérieures ou égales à 29,999 sont arrondies à la minute supérieure.|  
+|Plages d'éléments|AAAA comprend quatre chiffres, entre 1900 et 2079, qui représentent une année.<br /><br /> MM comprend deux chiffres, entre 01 et 12, qui représentent un mois de l’année spécifiée.<br /><br /> DD comprend deux chiffres, entre 01 et 31 selon le mois, qui représentent un jour du mois spécifié.<br /><br /> hh comprend deux chiffres, entre 00 et 23, qui représentent l'heure.<br /><br /> mm comprend deux chiffres, entre 00 et 59, qui représentent la minute.<br /><br /> ss comprend deux chiffres, entre 00 et 59, qui représentent la seconde. Les valeurs inférieures ou égales à 29,998 secondes sont arrondies à la minute inférieure. Les valeurs supérieures ou égales à 29,999 secondes sont arrondies à la minute supérieure.|  
 |Longueur de caractère|19 positions au maximum|  
 |Taille de stockage|4 octets, fixe.|  
 |Précision|Une minute|  
 |Valeur par défaut|1900-01-01 00:00:00|  
-|Calendrier|Grégorien<br /><br /> (N'inclut pas la plage complète des années.)|  
+|Calendrier|Grégorien<br /><br /> (N’inclut pas la plage complète des années.)|  
 |Précision à la fraction de seconde définie par l'utilisateur|Non|  
 |Prise en charge et conservation du décalage de fuseau horaire|Non|  
 |Prise en charge de l'heure d'été|Non|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformité ANSI et ISO 8601  
-**smalldatetime** n’est pas conforme à ANSI ni ISO 8601.
+**smalldatetime** n’est pas conforme au format ANSI ou ISO 8601.
   
 ## <a name="converting-date-and-time-data"></a>Conversion de données date et time
-Lorsque vous effectuez une conversion vers des types de données date et heure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs qu'il ne peut identifier comme dates ou heures. Pour plus d’informations sur l’utilisation des fonctions CAST et CONVERT avec des données date et time, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+Lorsque vous effectuez une conversion vers des types de données date et heure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs qu’il ne reconnaît pas comme des dates ou des heures. Pour plus d’informations sur l’utilisation des fonctions CAST et CONVERT avec des données date et time, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-smalldatetime-to-other-date-and-time-types"></a>Conversion de smalldatetime en d’autres types de données date et time
 Cette section décrit ce qui se produit quand un type de données **smalldatetime** est converti en d’autres types de données date et time.
@@ -114,7 +114,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime AS 'datetime';
 --(1 row(s) affected)  
 ```  
   
-Dans le cas d’une conversion en **datetimeoffset(n)**, la valeur **smalldatetime** est copiée dans la valeur **datetimeoffset(n)**. Les fractions de seconde sont définies sur 0 et le décalage de fuseau horaire est défini sur +00:0. Le code suivant montre les résultats de la conversion d'une valeur `smalldatetime` en valeur `datetimeoffset(4)`.
+Pour une conversion en **datetimeoffset(n)**, la valeur **smalldatetime** est copiée dans la valeur **datetimeoffset(n)**. Les fractions de seconde sont définies sur 0 et le décalage de fuseau horaire est défini sur +00:0. Le code suivant montre les résultats de la conversion d'une valeur `smalldatetime` en valeur `datetimeoffset(4)`.
   
 ```sql
 DECLARE @smalldatetime smalldatetime = '1955-12-13 12:43:10';  
@@ -191,5 +191,4 @@ SELECT
   
 ## <a name="see-also"></a>Voir aussi
 [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
-  
   

@@ -27,19 +27,19 @@ ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 81fd7b18058430b3132471f67a8b94e4444873e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 17e717fd999109390c001bdab9aeee5629c1a119
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393042"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425794"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Crée un objet de métadonnées de clé principale de colonne dans une base de données. Une entrée de métadonnées de clé principale de colonne qui représente une clé, stockée dans un magasin de clés externe, qui sert à protéger (chiffrer) les clés de chiffrement de colonne quand vous utilisez la fonctionnalité [Always Encrypted &#40;moteur de base de données&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Le fait d’avoir plusieurs clés principales de colonne autorise la rotation de clé, c’est-à-dire le changement périodique de la clé afin d’améliorer la sécurité. Vous pouvez créer une clé principale de colonne dans un magasin de clés et son objet de métadonnées correspondant dans la base de données à l’aide de l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou PowerShell. Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
+Crée un objet de métadonnées de clé principale de colonne dans une base de données. Une entrée de métadonnées de clé principale de colonne représente une clé stockée dans un magasin de clés externes. Cette clé protège (chiffre) les clés de chiffrement de colonne lorsque vous utilisez la fonctionnalité [&#40;Moteur de base de données&#41; Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Plusieurs clés principales de colonne autorisent la rotation périodique de clés pour améliorer la sécurité. Créez une clé principale de colonne dans un magasin de clés et son objet de métadonnées associé dans la base de données en utilisant l’Explorateur d’objets de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou PowerShell. Pour plus d’informations, consultez [Vue d’ensemble de la gestion des clés pour Always Encrypted](../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md).  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
  
 
 > [!IMPORTANT]
@@ -58,51 +58,58 @@ CREATE COLUMN MASTER KEY key_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *key_name*  
- Nom sous lequel la clé principale de colonne sera connue dans la base de données.  
+*key_name*  
+Nom de la clé principale de colonne dans la base de données.  
   
- *key_store_provider_name*  
- Spécifie le nom d’un fournisseur de magasin de clés principales de colonne, qui est un composant logiciel côté client qui encapsule un magasin de clés contenant la clé principale de colonne. Un pilote client compatible avec Always Encrypted utilise un nom de fournisseur de magasin de clés pour rechercher un fournisseur de magasin de clés dans le Registre de fournisseurs de magasin de clés du pilote. Le pilote utilise le fournisseur pour déchiffrer les clés de chiffrement de colonne, protégées par une clé principale de colonne, stockée dans le magasin de clés sous-jacent. Une valeur en texte brut de la clé de chiffrement de colonne est ensuite utilisée pour chiffrer les paramètres de requête, correspondant aux colonnes de base de données chiffrées, ou pour déchiffrer les résultats de requête à partir des colonnes chiffrées.  
+*key_store_provider_name*  
+Spécifie le nom du fournisseur de magasin de clés. Un fournisseur de magasin de clés est un composant logiciel client qui encapsule un magasin de clés contenant la clé principale de colonne. 
+
+Un pilote client activé avec Always Encrypted :
+
+- Utilise le nom du fournisseur de magasin de clés 
+- Recherche le fournisseur de magasin de clés dans le registre du pilote des fournisseurs de magasin de clés 
+
+Ensuite, le pilote utilise le fournisseur pour déchiffrer les clés de chiffrement de colonne. Les clés de chiffrement de colonne sont protégées par une clé principale de colonne. La clé principale de colonne est stockée dans le magasin de clés sous-jacent. Une valeur en texte clair de la clé de chiffrement de colonne est ensuite utilisée pour chiffrer les paramètres de la requête qui correspondent aux colonnes de base de données chiffrées. Autre possibilité : la clé de chiffrement de colonne déchiffre les résultats de la requête à partir des colonnes chiffrées.  
   
- Les bibliothèques de pilotes clients compatibles avec Always Encrypted incluent des fournisseurs de magasin de clés pour les magasins de clés les plus populaires.   
+Les bibliothèques de pilotes clients compatibles avec Always Encrypted incluent des fournisseurs de magasin de clés pour les magasins de clés les plus populaires.   
   
-Un ensemble de fournisseurs disponibles varie en fonction du type et de la version du pilote client. Pour plus d’informations sur des pilotes spécifiques, consultez la documentation Always Encrypted :
+Un ensemble de fournisseurs disponibles dépend du type et de la version du pilote client. Pour plus d’informations sur certains pilotes, consultez la documentation d’Always Encrypted :
 
 [Développer à l’aide d’Always Encrypted avec le Fournisseur de données .NET Framework pour SQL Server](../../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md)
 
 
-Les tableaux ci-dessous capturent les noms des fournisseurs de système :  
+La table suivante affiche le nom des fournisseurs de système :  
   
 |Nom du fournisseur de magasin de clés|Magasin de clés sous-jacent|  
     |-----------------------------|--------------------------|
     |'MSSQL_CERTIFICATE_STORE'|Magasin de certificats Windows| 
     |'MSSQL_CSP_PROVIDER'|Un magasin, tel qu’un module de sécurité matériel (HSM), qui prend en charge Microsoft CryptoAPI.|
-    |'MSSQL_CNG_STORE'|Un magasin, tel qu’un module de sécurité matériel (HSM), qui prend en charge l’API CNG (Cryptography Next Generation).|  
+    |'MSSQL_CNG_STORE'|Un magasin, comme un module de sécurité matériel (HSM), qui prend en charge l’API Cryptography: Next Generation.|  
     |'Azure_Key_Vault'|Voir [Prise en main du coffre de clés Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/).|  
   
 
- Vous pouvez implémenter un fournisseur de magasins de clés personnalisé pour stocker les clés principales de colonne dans un magasin pour lequel il n’existe aucun fournisseur de magasin de clés intégré dans votre pilote client compatible avec Always Encrypted.  Notez que les noms des fournisseurs de magasins de clés personnalisés ne peuvent pas commencer par 'MSSQL_', qui est un préfixe réservé pour les fournisseurs de magasins de clés [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
+Dans votre pilote client compatible avec Always Encrypted, vous pouvez implémenter un fournisseur de magasin de clés personnalisé qui stocke les clés principales de colonne pour lesquelles il n’existe aucun fournisseur de magasin de clés intégré. Les noms des fournisseurs de magasin de clés personnalisé ne peuvent pas commencer par 'MSSQL_', qui est un préfixe réservé aux fournisseurs de magasin de clés [!INCLUDE[msCoName](../../includes/msconame-md.md)]. 
 
   
- key_path  
- Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de clé doit être valide dans le contexte de chaque application cliente qui est censée chiffrer ou déchiffrer des données stockées dans une colonne protégée (indirectement) par la clé principale de colonne référencée, et l’application cliente doit être autorisée à accéder à la clé. Le format du chemin de clé est propre au fournisseur de magasin de clés. La liste suivante décrit le format des chemins de clés pour des fournisseurs de magasins de clés de système Microsoft particuliers.  
+key_path  
+Chemin de la clé dans le magasin de clés principales de colonne. Le chemin de clé doit être valide pour chaque application cliente censée chiffrer ou déchiffrer des données. Les données sont stockées dans une colonne qui est protégée (indirectement) par la clé principale de colonne référencée. L’application cliente doit avoir accès à la clé. Le format du chemin de clé est propre au fournisseur de magasin de clés. La liste suivante décrit le format des chemins de clés pour des fournisseurs de magasins de clés de système Microsoft particuliers.  
   
--   **Nom du fournisseur :** MSSQL_CERTIFICATE_STORE  
+-   **Nom du fournisseur :** MSSQL_CERTIFICATE_STORE  
   
-     **Format du chemin de clé :** *nom_magasin_certificats*/*emplacement_magasin_certificats*/*empreinte_certificat*  
+    **Format du chemin de clé :** *CertificateStoreName*/*CertificateStoreLocation*/*CertificateThumbprint*  
   
      Où :  
   
-     *emplacement_magasin_certificats*  
-     Emplacement du magasin de certificats, qui doit être Current User ou Local Machine. Pour plus d’informations, consultez [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
+    *emplacement_magasin_certificats*  
+    Emplacement du magasin de certificats, qui doit être Current User ou Local Machine. Pour plus d’informations, consultez [Local Machine and Current User Certificate Stores](https://msdn.microsoft.com/library/windows/hardware/ff548653.aspx).  
   
-     *nom_magasin_certificats*  
-     Nom du magasin de certificats, par exemple 'My'.  
+    *nom_magasin_certificats*  
+    Nom du magasin de certificats, par exemple 'My'.  
   
-     *empreinte_certificat*  
-     Empreinte du certificat.  
+    *empreinte_certificat*  
+    Empreinte du certificat.  
   
-     **Exemples :**  
+    **Exemples :**  
   
     ```  
     N'CurrentUser/My/BBF037EC4A133ADCA89FFAEC16CA5BFA8878FB94'  
@@ -110,71 +117,71 @@ Les tableaux ci-dessous capturent les noms des fournisseurs de système :
     N'LocalMachine/My/CA5BFA8878FB94BBF037EC4A133ADCA89FFAEC16'  
     ```  
   
--   **Nom du fournisseur :** MSSQL_CSP_PROVIDER  
+-   **Nom du fournisseur :** MSSQL_CSP_PROVIDER  
   
-     **Format du chemin de clé :** *nom_fournisseur*/*identificateur_clé*  
+    **Format du chemin de clé :** *ProviderName*/*KeyIdentifier*  
   
-     Où :  
+    Où :  
   
-     *ProviderName*  
-     Nom d’un fournisseur de service de chiffrement, qui implémente CAPI, pour le magasin de clés principales de colonne. Si vous utilisez un module HSM comme magasin de clés, il doit s’agir du nom du fournisseur de service de chiffrement fourni par le fournisseur de votre module HSM. Le fournisseur doit être installé sur un ordinateur client.  
+    *ProviderName*  
+    Nom d’un fournisseur de service de chiffrement (CSP), qui implémente CAPI pour le magasin de clés principales de la colonne. Si vous utilisez un module HSM comme magasin de clés, le nom du fournisseur CSP doit être celui qui vous a fourni votre module HSM. Le fournisseur doit être installé sur un ordinateur client.  
   
-     *identificateur_clé*  
-     Identificateur de la clé, utilisé comme clé principale de colonne, dans le magasin de clés.  
+    *identificateur_clé*  
+    Identificateur de la clé, utilisé comme clé principale de colonne, dans le magasin de clés.  
   
-     **Exemples :**  
+    **Exemples :**  
   
     ```  
     N'My HSM CSP Provider/AlwaysEncryptedKey1'  
     ```  
   
--   **Nom du fournisseur :** MSSQL_CNG_STORE  
+-   **Nom du fournisseur :** MSSQL_CNG_STORE  
   
-     **Format du chemin de clé :** *nom_fournisseur*/*identificateur_clé*  
+    **Format du chemin de clé :** *ProviderName*/*KeyIdentifier*  
   
-     Où :  
+    Où :  
   
-     *ProviderName*  
-     Nom du fournisseur de stockage de clés (KSP), qui implémente l’API CNG (Cryptography Next Generation), pour le magasin de clés principales de colonne. Si vous utilisez un module HSM comme magasin de clés, il doit s’agir du nom du fournisseur de stockage de clés fourni par le fournisseur de votre module HSM. Le fournisseur doit être installé sur un ordinateur client.  
+    *ProviderName*  
+    Nom du fournisseur de stockage de clé (KSP), qui implémente l’API Cryptography: Next Generation (CNG) pour le magasin de clés principales de colonne. Si vous utilisez un module HSM comme magasin de clés, le nom du fournisseur doit être celui du fournisseur KSP qui vous a fourni votre module HSM. Le fournisseur doit être installé sur un ordinateur client.  
   
-     *identificateur_clé*  
-     Identificateur de la clé, utilisé comme clé principale de colonne, dans le magasin de clés.  
+    *identificateur_clé*  
+    Identificateur de la clé, utilisé comme clé principale de colonne, dans le magasin de clés.  
   
-     **Exemples :**  
+    **Exemples :**  
   
     ```  
     N'My HSM CNG Provider/AlwaysEncryptedKey1'  
     ```  
 
--   **Nom du fournisseur :** AZURE_KEY_STORE  
+-   **Nom du fournisseur :** AZURE_KEY_STORE  
   
-     **Format du chemin de clé :** *URL_clé*  
+    **Format du chemin de clé :** *URL_clé*  
   
-     Où :  
+    Où :  
   
-     *URL_clé*  
-     URL de la clé dans Azure Key Vault.
+    *URL_clé*  
+    URL de la clé dans Azure Key Vault.
 
 ENCLAVE_COMPUTATIONS  
-Spécifie que la clé principale de colonne prend en charge les enclaves, ce qui signifie que toutes les clés de chiffrement de colonne chiffrées avec cette clé principale de colonne peuvent être partagées avec une enclave sécurisée côté serveur et utilisées pour effectuer des calculs dans l’enclave. Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+Spécifie que la clé principale de colonne prend en charge les enclaves. Vous pouvez partager toutes les clés de chiffrement de colonne, chiffrées avec la clé principale de colonne avec une enclave sécurisée côté serveur, et les utiliser pour effectuer des calculs à l’intérieur de l’enclave. Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
 
- *signature*  
-Littéral binaire qui est le résultat de la signature numérique du *chemin de clé* et du paramètre ENCLAVE_COMPUTATIONS avec la clé principale de colonne (la signature reflète si ENCLAVE_COMPUTATIONS a été spécifié ou non). La signature empêche les valeurs signées d’être altérées par des utilisateurs non autorisés. Un pilote client compatible prenant en charge Always Encrypted peut vérifier la signature et retourner une erreur à l’application si la signature n’est pas valide. La signature doit être générée à l’aide d’outils côté client. Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
+*signature*  
+Un littéral binaire qui est un résultat du *chemin de clé* fournissant la signature numérique et du paramètre ENCLAVE_COMPUTATIONS avec la clé principale de colonne. La signature indique si ENCLAVE_COMPUTATIONS est spécifié ou non. La signature empêche les valeurs signées d’être altérées par des utilisateurs non autorisés. Un pilote client prenant en charge Always Encrypted vérifie la signature et renvoie une erreur à l’application si la signature n’est pas valide. La signature doit être générée à l’aide d’outils côté client. Pour plus d’informations, consultez [Always Encrypted avec enclaves sécurisées](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
   
   
 ## <a name="remarks"></a>Notes   
 
-La création d’une entrée de métadonnées de clé principale de colonne est obligatoire avant qu’une entrée de métadonnées de clé de chiffrement de colonne puisse être créée dans la base de données et avant que toute colonne dans la base de données puisse être chiffrée à l’aide d’Always Encrypted. Notez qu’une entrée de clé principale de colonne dans les métadonnées ne contient pas la clé principale de colonne proprement dite, qui doit être stockée dans un magasin de clés de colonne externe (en dehors de SQL Server). Le nom du fournisseur de magasin de clés et le chemin de la clé principale de colonne dans les métadonnées doivent être valides pour qu’une application cliente puisse utiliser la clé principale de colonne pour déchiffrer une clé de chiffrement de colonne chiffrée avec la clé principale de colonne et pour interroger des colonnes chiffrées.
+Créez une entrée de métadonnées de clé principale de colonne avant de créer une entrée de métadonnées de clé de chiffrement de colonne dans la base de données et avant que toute colonne dans la base de données puisse être chiffrée à l’aide d’Always Encrypted. Une entrée de clé principale de colonne dans les métadonnées ne contient pas la clé principale de colonne réelle. La clé principale de colonne doit être stockée dans un magasin de clés de colonne externe (en dehors de SQL Server). Le nom du fournisseur de magasin de clés et le chemin de clé principale de colonne dans les métadonnées doivent être valides pour une application cliente. L’application cliente doit utiliser la clé principale de colonne pour déchiffrer une clé de chiffrement de colonne. La clé de chiffrement de colonne est chiffrée avec la clé principale de colonne. L’application cliente doit également interroger les colonnes chiffrées.
 
 
   
 ## <a name="permissions"></a>Permissions  
- Nécessite l’autorisation **ALTER ANY COLUMN MASTER KEY**.  
+Nécessite l’autorisation **ALTER ANY COLUMN MASTER KEY**.  
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-creating-a-column-master-key"></a>A. Création d’une clé principale de colonne  
- Création d’une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne stockée dans le magasin de certificats, pour des applications clientes qui utilisent le fournisseur MSSQL_CERTIFICATE_STORE afin d’accéder à la clé principale de colonne :  
+L’exemple suivant crée une entrée de métadonnées de clé principale de colonne avec pour une clé principale de colonne. La clé principale de colonne est stockée dans le magasin de certificats des applications clientes qui utilisent le fournisseur MSSQL_CERTIFICATE_STORE pour accéder à la clé principale de colonne :  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -184,7 +191,7 @@ WITH (
    );  
 ```  
   
- Création d’une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne accessible par des applications clientes qui utilisent le fournisseur MSSQL_CNG_STORE :  
+Créez une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne. Les applications clientes qui utilisent le fournisseur MSSQL_CNG_STORE ont accès à la clé principale de colonne :  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -194,7 +201,7 @@ WITH (
 );  
 ```  
   
- Création d’une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne stockée dans le coffre de clés Azure, pour les applications clientes qui utilisent le fournisseur AZURE_KEY_VAULT afin d’accéder à la clé principale de colonne.  
+Créez une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne. La clé principale de colonne est stockée dans Azure Key Vault, pour les applications clientes qui utilisent le fournisseur AZURE_KEY_VAULT, afin d’accéder à la clé principale de colonne.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -204,7 +211,7 @@ WITH (
         MyCMK/4c05f1a41b12488f9cba2ea964b6a700');  
 ```  
   
- Création d’une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne stockée dans un magasin de clés principales de colonne personnalisé :  
+Créez une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne. La clé principale de colonne est stockée dans un magasin de clés principales de colonne personnalisé :  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -213,8 +220,8 @@ WITH (
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
 ```  
-### <a name="b-creating-an-enclave-enabled-column-master-key"></a>B. Création d’une clé principale de colonne prenant en charge les enclaves  
- Création d’une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne prenant en charge les enclaves stockée dans le magasin de certificats, pour des applications clientes qui utilisent le fournisseur MSSQL_CERTIFICATE_STORE afin d’accéder à la clé principale de colonne :  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>b. Création d’une clé principale de colonne prenant en charge les enclaves  
+L’exemple suivant crée une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne prenant en charge les enclaves. La clé principale de colonne prenant en charge les enclaves est stockée dans le magasin de certificats, pour les applications clientes qui utilisent le fournisseur MSSQL_CERTIFICATE_STORE afin d’accéder à la clé principale de colonne :  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  
@@ -225,7 +232,7 @@ WITH (
   );  
 ```  
   
- Création d’une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne prenant en charge les enclaves stockée dans le coffre de clés Azure, pour les applications clientes qui utilisent le fournisseur AZURE_KEY_VAULT afin d’accéder à la clé principale de colonne.  
+Créez une entrée de métadonnées de clé principale de colonne pour une clé principale de colonne prenant en charge les enclaves. La clé principale de colonne prenant en charge les enclaves est stockée dans Azure Key Vault, pour les applications clientes qui utilisent le fournisseur AZURE_KEY_VAULT, afin d’accéder à la clé principale de colonne.  
   
 ```  
 CREATE COLUMN MASTER KEY MyCMK  

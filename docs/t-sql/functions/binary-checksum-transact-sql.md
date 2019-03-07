@@ -20,19 +20,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef3f36df1c96d2909e401b83441ddeb7f3cc9d31
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.openlocfilehash: 492bd95f917d6973e4ff2797c170be58d16d0c40
+ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513873"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676087"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Retourne la valeur de total de contrôle binaire calculée à partir d'une ligne d'une table ou d'une liste d'expressions.
   
-![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -58,7 +58,7 @@ et les types définis par l’utilisateur CLR (Common Language Runtime) incompar
  **Int**
   
 ## <a name="remarks"></a>Notes   
-`BINARY_CHECKSUM(*)`, calculé à partir de n'importe quelle ligne d'une table, retourne la même valeur tant que la ligne ne subit aucune modification. `BINARY_CHECKSUM` a les propriétés d'une fonction de hachage : lorsque c’est appliqué à deux listes d'expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type et ont une valeur égale lorsqu'ils sont comparés à l'aide de l'opérateur d'égalité (=). Pour cette définition, nous disons que les valeurs NULL d’un type spécifié apparaissent comme étant équivalentes. Si au moins l’une des valeurs de la liste d’expressions change, la somme de contrôle des expressions peut également changer. Toutefois, cela n’est pas garanti. Par conséquent, nous conseillons d’utiliser `BINARY_CHECKSUM` pour vérifier si des valeurs ont changé uniquement si votre application peut accepter une modification parfois manquée. Sinon, envisagez d’utiliser `HASHBYTES` à la place. Avec un algorithme de hachage MD5 spécifié, la probabilité que `HASHBYTES` retourne le même résultat pour deux entrées différentes est beaucoup plus faible par rapport à `BINARY_CHECKSUM`.
+`BINARY_CHECKSUM(*)`, calculé sur n’importe quelle ligne d’une table, retourne la même valeur tant que la ligne n’est pas modifiée. `BINARY_CHECKSUM` a les propriétés d'une fonction de hachage : lorsque c’est appliqué à deux listes d'expressions, la même valeur est retournée si les éléments correspondants dans les deux listes sont du même type et ont une valeur égale lorsqu'ils sont comparés à l'aide de l'opérateur d'égalité (=). Pour cette définition, nous disons que les valeurs NULL d’un type spécifié apparaissent comme étant équivalentes. Si au moins l’une des valeurs de la liste d’expressions change, la somme de contrôle des expressions peut également changer. Cependant, cette modification n’est pas garantie. Nous conseillons donc d’utiliser `BINARY_CHECKSUM` pour vérifier si des valeurs ont changé, uniquement si votre application peut accepter une modification parfois manquée. Sinon, envisagez d’utiliser `HASHBYTES` à la place. Avec un algorithme de hachage MD5 spécifié, la probabilité que `HASHBYTES` retourne le même résultat pour deux entrées différentes est beaucoup plus faible qu’avec `BINARY_CHECKSUM`.
   
 `BINARY_CHECKSUM` peut opérer sur une liste d’expressions et retourne la même valeur pour une liste spécifiée. Lorsque la fonction `BINARY_CHECKSUM` porte sur deux listes d'expressions, elle retourne la même valeur si les éléments correspondants des deux listes sont de type et de représentation en octets identiques. Pour cette définition, les valeurs NULL d'un type spécifié sont considérées comme utilisant la même représentation en octets.
   

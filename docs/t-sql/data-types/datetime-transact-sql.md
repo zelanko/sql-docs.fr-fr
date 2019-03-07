@@ -23,18 +23,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0297c6aa82ff318d7e00ee022a5f9b25ad309358
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b4b6b8e386ee8391ab40bf6152d3c8c3cf6e315f
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012120"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801573"
 ---
 # <a name="datetime-transact-sql"></a>datetime (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Définit une date qui est associée à une heure de la journée avec des fractions de seconde qui se présente au format 24 heures.
   
@@ -56,25 +53,25 @@ Définit une date qui est associée à une heure de la journée avec des fractio
 |Taille de stockage|8 octets|  
 |Précision|Arrondi aux incréments de ,000, ,003 ou ,007 secondes|  
 |Valeur par défaut|1900-01-01 00:00:00|  
-|Calendrier|Grégorien (N'inclut pas la plage complète des années.)|  
+|Calendrier|Grégorien (n’inclut pas la plage complète des années.)|  
 |Précision à la fraction de seconde définie par l'utilisateur|Non|  
 |Prise en charge et conservation du décalage de fuseau horaire|Non|  
 |Prise en charge de l'heure d'été|Non|  
   
 ## <a name="supported-string-literal-formats-for-datetime"></a>Formats de littéraux de chaîne pris en charge pour datetime  
-Les tableaux suivants répertorient les formats de littéraux de chaîne pris en charge pour **datetime**. Sauf pour ODBC, les littéraux de chaîne **datetime** sont encadrés par des guillemets simples ('), par exemple 'string_literaL'. Si l’environnement n’est pas **us_english**, les littéraux de chaîne doivent se présenter au format N'string_literaL'.
+Les tableaux suivants répertorient les formats de littéraux de chaîne pris en charge pour **datetime**. Sauf pour ODBC, les littéraux de chaîne **datetime** sont encadrés par des guillemets simples ('), par exemple 'string_literaL'. Si l’environnement n’est pas **us_english**, les littéraux de type chaîne doivent être au format N'string_literaL'.
   
 |Numérique|Description|  
 |---|---|
-|Formats de date :<br /><br /> [0]4/15/[19]96 -- (mja)<br /><br /> [0]4-15-[19]96 -- (mja)<br /><br /> [0]4.15.[19]96 -- (mja)<br /><br /> [0]4/[19]96/15 -- (maj)<br /><br /> 15/[0]4/[19]96 -- (jma)<br /><br /> 15/[19]96/[0]4 -- (jam)<br /><br /> [19]96/15/[0]4 -- (ajm)<br /><br /> [19]96/[0]4/15 -- (amj)<br /><br /> Formats d'heure :<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 16:00|Vous pouvez spécifier les données de date à l'aide d'un mois spécifié sous forme numérique. Par exemple, 5/20/97 correspond au vingtième jour du mois de mai 1997. Lorsque vous utilisez un format de date numérique, spécifiez l'année, le mois et le jour dans une chaîne qui utilise des barres obliques (/), des traits d'union (-) ou des points (.) comme séparateurs. Cette chaîne doit apparaître sous la forme suivante :<br /><br /> *nombre séparateur nombre séparateur nombre [heure] [heure]*<br /><br /> <br /><br /> Quand la langue sélectionnée est **français**, l’ordre par défaut pour la date est jma. Vous pouvez modifier l’ordre de la date à l’aide de l’instruction [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> Le paramètre de SET DATEFORMAT détermine l'interprétation des valeurs de date. Si l'ordre ne correspond pas au paramètre, les valeurs ne sont pas interprétées comme des dates (car elles sont hors limites) ou elles sont mal interprétées. Par exemple, 12/10/08 peut être interprété comme 6 dates différentes, selon le paramétrage de DATEFORMAT. Une année en quatre parties est interprétée comme l'année.|  
+|Formats de date :<br /><br /> [0]4/15/[19]96 -- (mja)<br /><br /> [0]4-15-[19]96 -- (mja)<br /><br /> [0]4.15.[19]96 -- (mja)<br /><br /> [0]4/[19]96/15 -- (maj)<br /><br /> 15/[0]4/[19]96 -- (jma)<br /><br /> 15/[19]96/[0]4 -- (jam)<br /><br /> [19]96/15/[0]4 -- (ajm)<br /><br /> [19]96/[0]4/15 -- (amj)<br /><br /> Formats d'heure :<br /><br /> 14:30<br /><br /> 14:30[:20:999]<br /><br /> 14:30[:20.9]<br /><br /> 4am<br /><br /> 16:00|Vous pouvez spécifier les données de date à l'aide d'un mois spécifié sous forme numérique. Par exemple, 5/20/97 correspond au vingtième jour du mois de mai 1997. Lorsque vous utilisez un format de date numérique, spécifiez l'année, le mois et le jour dans une chaîne qui utilise des barres obliques (/), des traits d'union (-) ou des points (.) comme séparateurs. Cette chaîne doit apparaître sous la forme suivante :<br /><br /> *nombre séparateur nombre séparateur nombre [heure] [heure]*<br /><br /> <br /><br /> Quand la langue sélectionnée est **français**, l’ordre par défaut pour la date est jma. Vous pouvez modifier l’ordre de la date à l’aide de l’instruction [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md).<br /><br /> Le paramètre de SET DATEFORMAT détermine l'interprétation des valeurs de date. Si l’ordre ne correspond pas au paramètre, les valeurs ne sont pas interprétées comme des dates. Les dates en désordre peuvent être interprétées comme étant hors limites ou ayant des valeurs incorrectes. Par exemple, 12/10/08 peut être interprété comme 6 dates différentes, selon le paramétrage de DATEFORMAT. Une année en quatre parties est interprétée comme l'année.|  
   
 |Alphabétique|Description|  
 |---|---|
-|Avr[il] [15][,] 1996<br /><br /> Avr[il] 15[,] [19]96<br /><br /> Avr[il] 1996 [15]<br /><br /> [15] Avr[il][,] 1996<br /><br /> 15 Avr[il][,][19]96<br /><br /> 15 [19]96 avr[il]<br /><br /> [15] 1996 avr[il]<br /><br /> 1996 AvR[IL] [15]<br /><br /> 1996 [15] AVR[IL]|Vous pouvez spécifier des données de date avec un mois spécifié comme nom complet du mois. Par exemple, Avril ou l'abréviation Avr spécifiée dans la langue actuelle ; les virgules sont facultatives et la mise en majuscules est ignorée.<br /><br /> Instructions relatives à l'utilisation des formats de date alphabétiques :<br /><br /> 1) Placez la date et l’heure entre des guillemets simples ('). Pour les langues autres que l'anglais, utilisez N'<br /><br /> 2) Les caractères placés entre crochets sont facultatifs.<br /><br /> 3) Si vous spécifiez uniquement les deux derniers chiffres de l’année, les valeurs inférieures aux deux derniers chiffres de la valeur de l’option de configuration [Configurer l’option de configuration de serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) appartiennent au même siècle que l’année de coupure. Les valeurs supérieures ou égales à la valeur de cette option appartiennent au siècle qui précède l’année de coupure. Par exemple, si l’option **two digit year cutoff** a pour valeur 2050 (valeur par défaut), 25 est interprété comme 2025 et 50 comme 1950. Pour éviter toute ambiguïté, représentez les années à l'aide de quatre chiffres.<br /><br /> 4) Si le jour n’est pas précisé, le premier jour du mois est rajouté.<br /><br /> <br /><br /> Le paramètre de session SET DATEFORMAT n'est pas appliqué lorsque vous précisez le mois sous forme alphabétique.|  
+|Avr[il] [15][,] 1996<br /><br /> Avr[il] 15[,] [19]96<br /><br /> Avr[il] 1996 [15]<br /><br /> [15] Avr[il][,] 1996<br /><br /> 15 Avr[il][,][19]96<br /><br /> 15 [19]96 avr[il]<br /><br /> [15] 1996 avr[il]<br /><br /> 1996 AvR[IL] [15]<br /><br /> 1996 [15] AVR[IL]|Vous pouvez spécifier des données de date avec un mois spécifié comme nom complet du mois. Par exemple, Avril ou l'abréviation Avr spécifiée dans la langue actuelle ; les virgules sont facultatives et la mise en majuscules est ignorée.<br /><br /> Instructions relatives à l'utilisation des formats de date alphabétiques :<br /><br /> 1) Placez la date et l’heure entre des guillemets simples ('). Pour les langues autres que l'anglais, utilisez N'<br /><br /> 2) Les caractères placés entre crochets sont facultatifs.<br /><br /> 3) Si vous spécifiez uniquement les deux derniers chiffres de l’année, les valeurs inférieures aux deux derniers chiffres de la valeur de l’option de configuration [Configurer l’option de configuration de serveur two digit year cutoff](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) appartiennent au même siècle que l’année de coupure. Les valeurs supérieures ou égales à la valeur de cette option appartiennent au siècle qui précède l’année de coupure. Par exemple, si l’option **two digit year cutoff** a pour valeur 2050 (valeur par défaut), 25 est interprété comme 2025 et 50 comme 1950. Pour éviter toute ambiguïté, représentez les années à l'aide de quatre chiffres.<br /><br /> 4) Si le jour n’est pas précisé, le premier jour du mois est rajouté.<br /><br /> <br /><br /> Le paramètre de session SET DATEFORMAT n’est pas appliqué lorsque vous indiquez le mois sous forme alphabétique.|  
   
 |ISO 8601|Description|  
 |---|---|
-|AAAA-MM-JJThh:mm:ss[.mmm]<br /><br /> AAAAMMJJ[ hh:mm:ss [.mmm]]|Exemples :<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> Pour respecter le format ISO 8601, vous devez spécifier chaque élément dans ce format. Cela inclut également **T**, le signe deux-points (:) et le point (.) qui y figurent.<br /><br /> Les crochets indiquent que le composant fractions de seconde est facultatif. Le composant heure s'exprime au format 24 heures.<br /><br /> T indique le début de la partie heure de la valeur **datetime**.<br /><br /> Le format ISO 8601 présente un avantage de taille puisqu'il s'agit d'une norme internationale avec une spécification claire. Ce format n’est pas affecté par les paramètres SET DATEFORMAT ni [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).|  
+|AAAA-MM-JJThh:mm:ss[.mmm]<br /><br /> AAAAMMJJ[ hh:mm:ss [.mmm]]|Exemples :<br /><br /> 1) 2004-05-23T14:25:10<br /><br /> 2) 2004-05-23T14:25:10.487<br /><br /> <br /><br /> Pour utiliser le format ISO 8601, vous devez spécifier chaque élément au format indiqué ci-dessus, notamment le **T**, les deux-points (:) et le point (.).<br /><br /> Les crochets indiquent que le composant fractions de seconde est facultatif. Le composant heure s'exprime au format 24 heures.<br /><br /> T indique le début de la partie heure de la valeur **datetime**.<br /><br /> Le format ISO 8601 présente un avantage de taille puisqu'il s'agit d'une norme internationale avec une spécification claire. Ce format n’est pas affecté par le paramètre SET DATEFORMAT ou [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md).|  
   
 |Non séparé|Description|  
 |---|---|
@@ -95,15 +92,15 @@ Les valeurs **datetime** sont arrondies à des incréments de .000, .003 ou .007
 |01/01/98 23:59:59.990<br /><br /> 01/01/98 23:59:59.991|1998-01-01 23:59:59.990|  
   
 ## <a name="ansi-and-iso-8601-compliance"></a>Conformité ANSI et ISO 8601  
-**datetime** n’est pas conforme à ANSI ni ISO 8601.
+**datetime** n’est pas conforme au format ANSI ou ISO 8601.
   
 ##  <a name="_datetime"></a> Conversion de données date et time  
-Lorsque vous effectuez une conversion vers des types de données date et heure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs qu'il ne peut identifier comme dates ou heures. Pour plus d’informations sur l’utilisation des fonctions CAST et CONVERT avec des données date et time, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
+Lorsque vous effectuez une conversion vers des types de données date et heure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejette toutes les valeurs qu’il ne reconnaît pas comme des dates ou des heures. Pour plus d’informations sur l’utilisation des fonctions CAST et CONVERT avec des données date et time, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md).
   
 ### <a name="converting-other-date-and-time-types-to-the-datetime-data-type"></a>Conversion d’autres types date et time en type de données datetime 
 Cette section décrit ce qui se produit quand d’autres types de données date et time sont convertis en type de données **datetime**.  
   
-Dans le cas d’une conversion à partir de **date**, l’année, le mois et le jour sont copiés. Le composant heure est défini sur 00:00:00.000. Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `datetime`.  
+Lors d’une conversion à partir du format **date**, l’année, le mois et le jour sont copiés. Le composant heure est défini sur 00:00:00.000. Le code suivant montre les résultats de la conversion d'une valeur `date` en valeur `datetime`.  
   
 ```sql
 DECLARE @date date = '12-21-16';  

@@ -19,19 +19,19 @@ ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: d30c93cd56467c6137db647e52ea97f2cc7641ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a9598ccdb6ed8e38c5b7a44341dcf3e54732418a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509584"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802833"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Compare une valeur scalaire avec un ensemble de valeurs appartenant à une seule colonne.  
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -50,23 +50,23 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  *subquery*  
  Sous-requête dont le jeu de résultats est une colonne. Le type de données de la colonne retournée doit être le même que celui de *scalar_expression*.  
   
- Instruction SELECT limitée, dans laquelle les clauses ORDER BY et le mot clé INTO ne sont pas autorisés.  
+ Instruction SELECT limitée, dans laquelle la clause ORDER BY et le mot clé INTO ne sont pas autorisés.  
   
 ## <a name="result-types"></a>Types des résultats  
  **Booléen**  
   
 ## <a name="result-value"></a>Valeur des résultats  
- Retourne la valeur TRUE quand la comparaison spécifiée a la valeur TRUE pour toutes les paires (_scalar_expression_**,**_x)_, quand *x* est une valeur du jeu de valeurs de la colonne ; dans le cas contraire, la valeur FALSE est retournée.  
+ Retourne la valeur TRUE quand la comparaison spécifiée a la valeur TRUE pour toutes les paires (_scalar_expression_**,**_x)_, quand *x* est une valeur du jeu de la colonne. Sinon, retourne la valeur FALSE.  
   
 ## <a name="remarks"></a>Notes   
- ALL requiert que l’argument *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête. Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* < = ALL (sous-requête) a la valeur TRUE pour une *scalar_expression* égale à 2. Si la sous-requête retourne les valeurs 2 et 3, l’instruction *scalar_expression* = ALL (sous-requête) donne FALSE comme résultat étant donné que certaines des valeurs de la sous-requête (à savoir 3) ne répondent pas aux critères de l’expression.  
+ ALL requiert que l’argument *scalar_expression* corresponde à toutes les valeurs retournées par la sous-requête. Par exemple, si la sous-requête retourne les valeurs 2 et 3, *scalar_expression* < = ALL (sous-requête) a la valeur TRUE pour une *scalar_expression* égale à 2. Si la sous-requête retourne les valeurs 2 et 3, l’instruction *scalar_expression* = ALL (sous-requête) donne FALSE, étant donné que certaines des valeurs de la sous-requête (à savoir 3) ne répondent pas aux critères de l’expression.  
   
  Pour les instructions qui demandent que l’argument *scalar_expression* corresponde à seulement une des valeurs retournées par la sous-requête, consultez [SOME &#124; ANY &#40;Transact-SQL&#41;](../../t-sql/language-elements/some-any-transact-sql.md).  
   
- Cette rubrique fait référence à l'instruction ALL lorsqu'elle est utilisée avec une sous-requête. ALL peut aussi être utilisé avec [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) et [SELECT](../../t-sql/queries/select-transact-sql.md).  
+ Cet article fait référence à l’instruction ALL lorsqu’elle est utilisée avec une sous-requête. ALL peut aussi être utilisé avec [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md) et [SELECT](../../t-sql/queries/select-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  
- L’exemple suivant crée une procédure stockée qui détermine si tous les composants d’un `SalesOrderID` spécifié dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] peuvent être fabriqués dans le délai du nombre de jours spécifié. L'exemple utilise une sous-requête pour créer une liste du nombre de `DaysToManufacture` pour tous les composants du `SalesOrderID` spécifié, puis vérifie que toutes les valeurs `DaysToManufacture` sont inférieures ou égales au nombre de jours spécifié.  
+ L’exemple suivant crée une procédure stockée qui détermine si tous les composants d’un `SalesOrderID` spécifié dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] peuvent être fabriqués dans le délai du nombre de jours spécifié. L’exemple utilise une sous-requête pour créer une liste du nombre de valeurs `DaysToManufacture` pour tous les composants du `SalesOrderID` spécifié, puis vérifie que toutes les valeurs `DaysToManufacture` sont inférieures ou égales au nombre de jours spécifié.  
   
 ```  
 -- Uses AdventureWorks  
@@ -84,11 +84,11 @@ IF
    )  
 PRINT 'All items for this order can be manufactured in specified number of days or less.'  
 ELSE   
-PRINT 'Some items for this order cannot be manufactured in specified number of days or less.' ;  
+PRINT 'Some items for this order cann't be manufactured in specified number of days or less.' ;  
   
 ```  
   
- Pour tester la procédure, exécutez-la en utilisant le `SalesOrderID 49080` dont l'un des composants demande `2` jours de fabrication, tandis que les 2 autres en demandent 0. La première instruction ci-dessous remplit les critères, mais pas la deuxième.  
+ Pour tester la procédure, exécutez-la en utilisant le `SalesOrderID 49080` dont l'un des composants demande `2` jours de fabrication, tandis que les 2 autres en demandent 0. La première instruction ci-dessous remplit les critères, Ce n’est pas le cas de la deuxième requête.  
   
 ```  
 EXECUTE DaysToBuild 49080, 2 ;  
@@ -104,7 +104,7 @@ EXECUTE DaysToBuild 49080, 1 ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `Some items for this order cannot be manufactured in specified number of days or less.`  
+ `Some items for this order can't be manufactured in specified number of days or less.`  
   
 ## <a name="see-also"></a> Voir aussi  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
@@ -115,5 +115,4 @@ EXECUTE DaysToBuild 49080, 1 ;
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)   
  [IN &#40;Transact-SQL&#41;](../../t-sql/language-elements/in-transact-sql.md)  
-  
   

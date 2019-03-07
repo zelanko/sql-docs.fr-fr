@@ -14,12 +14,12 @@ ms.assetid: 7d8c4684-9eb1-4791-8c3b-0f0bb15d9634
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8c51d95fe74171fe9b90c439c34ea37700419b2
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 02f99b295f653719231ff19d4dae0df0e82218b8
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991872"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590484"
 ---
 # <a name="about-change-data-capture-sql-server"></a>À propos de la capture de données modifiées (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53991872"
 ## <a name="understanding-change-data-capture-and-the-capture-instance"></a>Fonctionnement de la capture de données modifiées et de l'instance de capture  
  Pour que les modifications apportées à une table d'une base de données puissent être suivies, la capture de données modifiées doit être activée explicitement pour la base de données. Pour cela, utilisez la procédure stockée [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md). Lorsque la base de données est activée, les tables sources peuvent être identifiées en tant que tables faisant l’objet d’un suivi à l’aide de la procédure stockée [sys.sp_cdc_enable_table](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md). Lorsqu'une table est activée pour la capture de données modifiées, une instance de capture associée est créée afin de prendre en charge la dissémination des données modifiées dans la table source. L'instance de capture se compose d'une table de modifications et de deux fonctions de requête maximum. Les métadonnées qui décrivent les détails de configuration de l’instance de capture sont conservées dans les tables de métadonnées de capture de données modifiées, **cdc.change_tables**, **cdc.index_columns**et **cdc.captured_columns**. Ces informations peuvent être extraites en utilisant la procédure stockée [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md).  
   
- Tous les objets associés à une instance de capture sont créés dans le schéma de capture de données modifiées de la base de données activée. Le nom d'instance de capture doit être un nom d'objet valide et doit être unique parmi les instances de capture de base de données. Par défaut, le nom est \<*nom schéma*_*nom table*> de la table source. Sa table de modifications associée est nommée en ajoutant **_CT** au nom d’instance de capture. La fonction utilisée pour vérifier la présence de modifications est nommée en ajoutant le préfixe **fn_cdc_get_all_changes_** au nom d’instance de capture. Si l’instance de capture est configurée pour prendre en charge **net changes**, la fonction de requête **net_changes** est également créée et nommée en ajoutant le préfixe **fn_cdc_get_net_changes\_** au nom d’instance de capture.  
+ Tous les objets associés à une instance de capture sont créés dans le schéma de capture de données modifiées de la base de données activée. Le nom d'instance de capture doit être un nom d'objet valide et doit être unique parmi les instances de capture de base de données. Par défaut, le nom est \<*nom schéma*\_*nom table*> de la table source. Sa table de modifications associée est nommée en ajoutant **_CT** au nom d’instance de capture. La fonction utilisée pour vérifier la présence de modifications est nommée en ajoutant le préfixe **fn_cdc_get_all_changes_** au nom d’instance de capture. Si l’instance de capture est configurée pour prendre en charge **net changes**, la fonction de requête **net_changes** est également créée et nommée en ajoutant le préfixe **fn_cdc_get_net_changes\_** au nom d’instance de capture.  
   
 ## <a name="change-table"></a>Table de modifications  
  Les cinq premières colonnes de la table de modifications de capture de données modifiées sont des colonnes de métadonnées. Elles fournissent des informations supplémentaires pertinentes à la modification enregistrée. Les autres colonnes reflètent les colonnes capturées de la table source, identifiées par nom et généralement par type. Ces colonnes contiennent les données de colonne capturées recueillies à partir de la table source.  

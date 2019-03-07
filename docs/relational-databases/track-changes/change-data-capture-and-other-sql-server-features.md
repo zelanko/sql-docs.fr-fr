@@ -12,12 +12,12 @@ ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: a293914cad908b8c4d7fc295bf1e0846446dc2ec
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: eddf09ca0ff3f07f058b439c49a69eea366add85
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991822"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590404"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Capture de données modifiées et autres fonctionnalités de SQL Server
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "53991822"
   
 2.  Créez le travail de capture et le travail de nettoyage sur la nouvelle base de données principale (base de données miroir initiale). Pour créer les travaux, utilisez la procédure stockée [sp_cdc_add_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md) .  
   
- Pour consulter la configuration actuelle d’un travail de capture ou de nettoyage, utilisez la procédure stockée [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) sur la nouvelle instance de serveur principal. Pour une base de données spécifique, le travail de capture est nommé cdc.*nom_base_de_données*_capture, tandis que le travail de nettoyage est nommé cdc.*nom_base_de_données*_cleanup, où *nom_base_de_données* est le nom de la base de données.  
+ Pour consulter la configuration actuelle d’un travail de capture ou de nettoyage, utilisez la procédure stockée [sys.sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md) sur la nouvelle instance de serveur principal. Pour une base de données spécifique, le travail de capture est nommé cdc.*nom\_base_de_données*\_capture, tandis que le travail de nettoyage est appelé cdc.*nom\_base_de_données*\_cleanup, où *nom_base_de_données* est le nom de la base de données.  
   
- Pour modifier la configuration d’un travail, utilisez la procédure stockée [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
+ Pour modifier la configuration d’un travail, utilisez la procédure stockée [sys.sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md) .  
   
  Pour plus d’informations sur la mise en miroir des bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   

@@ -1,7 +1,7 @@
 ---
 title: Évaluation de la cardinalité (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2017
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,17 +16,37 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4f827b1de0a9cba06a17fc2b84724277e9daab22
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
+ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328849"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56828019"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-Cet article explique comment évaluer et choisir la meilleure configuration d’estimation de la cardinalité pour votre système SQL. La plupart des systèmes bénéficient de la dernière version de l’estimation de la cardinalité, car il s’agit de la plus précise. L’estimation de la cardinalité prédit le nombre de lignes que votre requête est susceptible de renvoyer. La prédiction de la cardinalité est utilisée par l’optimiseur de requête pour générer un plan de requête optimal. Avec des estimations plus précises, l’optimiseur de requête est généralement en mesure de produire un plan de requête plus optimal.  
+L’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un optimiseur de requête basé sur les coûts. Cela signifie qu'il sélectionne des plans de requête dont l'exécution présente le plus faible coût de traitement estimé. L’optimiseur de requête détermine le coût d’exécution d’un plan de requête à partir de deux facteurs principaux :
+
+- Le nombre total de lignes traitées à chaque niveau d'un plan de requête, appelé « cardinalité du plan »
+- Le modèle de coût de l'algorithme imposé par les opérateurs utilisés dans la requête
+
+Le premier facteur, la cardinalité, est utilisé comme paramètre d'entrée du deuxième facteur, le modèle de coût. Par conséquent, une amélioration de la cardinalité aboutit à de meilleurs coûts estimés, ce qui permet d'obtenir des plans d'exécution plus rapides.
+
+L’estimation de la cardinalité (CE) dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est dérivée principalement d’histogrammes générés lors de la création manuelle ou automatique d’index ou de statistiques. Parfois, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise également des informations de contraintes et des réécritures logiques de requêtes pour déterminer la cardinalité.
+
+Dans les cas suivants, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne peut pas calculer les cardinalités avec précision. Il en résulte des calculs de coût imprécis pouvant aboutir à des plans de requête non optimisés. La non-utilisation de ces constructions dans les requêtes peut améliorer les performances de celles-ci. Parfois, d’autres formulations de requête ou d’autres mesures sont possibles, auquel cas elles sont soulignées :
+
+- Les requêtes avec prédicats qui utilisent des opérateurs de comparaison entre différentes colonnes de la même table.
+- Les requêtes avec prédicats qui utilisent des opérateurs, dans l'une des situations suivantes :
+  - Il n'existe pas de statistiques sur les colonnes utilisées de chaque côté des opérateurs.
+  - La répartition des valeurs dans les statistiques n'est pas uniforme, mais la requête recherche un ensemble de valeurs hautement sélectif. Cette situation se vérifie notamment si l'opérateur est tout opérateur autre que celui d'égalité (=).
+  - Le prédicat utilise l’opérateur de comparaison de non-égalité (!=) ou l’opérateur logique `NOT`.
+- Les requêtes qui utilisent n’importe quelle fonction SQL Server intégrée ou une fonction scalaire définie par l’utilisateur dont l’argument n’est pas une valeur constante.
+- Les requêtes qui impliquent la jointure de colonnes par le biais d'opérateurs de concaténation de chaînes ou arithmétiques.
+- Les requêtes qui comparent des variables dont les valeurs ne sont pas connues au moment de la compilation et de l'optimisation des requêtes.
+
+Cet article explique comment évaluer et choisir la meilleure configuration CE pour votre système. La plupart des systèmes bénéficient de la dernière version de l’estimation de la cardinalité, car il s’agit de la plus précise. L’estimation de la cardinalité prédit le nombre de lignes que votre requête est susceptible de renvoyer. La prédiction de la cardinalité est utilisée par l’optimiseur de requête pour générer un plan de requête optimal. Avec des estimations plus précises, l’optimiseur de requête est généralement en mesure de produire un plan de requête plus optimal.  
   
 Le système d’applications peut contenir une requête importante dont le plan est remplacé par un plan plus lent en raison de la nouvelle estimation de la cardinalité. Voici quelques exemples d’une telle requête :  
   

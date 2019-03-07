@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: d1b8dbf0-4462-402e-92dd-0e4835002b6e
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a5dd1e17cbef4dd716959c38d852b2a8def8853a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 35178456afe22fe89bd849b61a3e4e67166367be
+ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849467"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56444224"
 ---
 # <a name="role-definitions"></a>Définitions de rôles
-  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], une ***définition de rôle* est une collection nommée de tâches définissant les opérations disponibles sur un serveur de rapports. Elle fournit les règles de sécurité appliquées par le serveur de rapports. Lorsqu'un utilisateur tente d'effectuer une tâche, telle que la publication d'un rapport, le serveur de rapports vérifie l'attribution de rôle de l'utilisateur afin de déterminer si la tâche est incluse dans sa définition de rôle. Si la tâche est incluse dans la définition de rôle, la requête est soumise.  
+  Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], une *définition de rôle* est une collection nommée de tâches qui définissent les opérations disponibles sur un serveur de rapports. Elle fournit les règles de sécurité appliquées par le serveur de rapports. Lorsqu'un utilisateur tente d'effectuer une tâche, telle que la publication d'un rapport, le serveur de rapports vérifie l'attribution de rôle de l'utilisateur afin de déterminer si la tâche est incluse dans sa définition de rôle. Si la tâche est incluse dans la définition de rôle, la requête est soumise.  
   
 ## <a name="using-roles-to-authorize-access-to-a-report-server"></a>Utilisation de rôles pour autoriser l'accès à un serveur de rapports  
  Un rôle devient opérationnel lorsqu'il est utilisé dans le cadre d'une attribution de rôle. Pour plus d’informations sur la manière dont les rôles renforcent la sécurité, consultez [Attributions de rôles](../../reporting-services/security/role-assignments.md).  
@@ -39,7 +39,7 @@ ms.locfileid: "47849467"
  Pour plus d’informations, consultez [Rôles prédéfinis](../../reporting-services/security/role-definitions-predefined-roles.md).  
   
 ## <a name="creating-a-role-definition"></a>Création d'une définition de rôle  
- Pour créer un rôle, vous utilisez Management Studio pour spécifier le nom du rôle et les tâches qu'il contient. Vous devez créer des définitions de rôles distinctes pour les tâches au niveau élément et au niveau système. Les rôles comprennent des tâches au niveau élément ou au niveau système, mais pas aux deux en même temps. La création d'une définition de rôle consiste à fournir un nom et à choisir un ensemble de tâches pour la définition. Pour créer une définition de rôle, vous devez être autorisé à effectuer cette opération. La tâche « Définir la sécurité pour des éléments individuels » procure ces autorisations. Par défaut, les administrateurs et les utilisateurs ayant le rôle prédéfini **Gestionnaire de contenu** peuvent effectuer cette tâche.  
+ Pour créer un rôle, vous utilisez Management Studio pour spécifier le nom du rôle et les tâches qu'il contient. Vous devez créer des définitions de rôle distinctes pour les tâches au niveau élément et au niveau système. Les rôles comprennent des tâches au niveau élément ou au niveau système, mais pas aux deux en même temps. La création d'une définition de rôle consiste à fournir un nom et à choisir un ensemble de tâches pour la définition. Pour créer une définition de rôle, vous devez être autorisé à effectuer cette opération. La tâche « Définir la sécurité pour des éléments individuels » procure ces autorisations. Par défaut, les administrateurs et les utilisateurs ayant le rôle prédéfini **Gestionnaire de contenu** peuvent effectuer cette tâche.  
   
  Un rôle doit avoir un nom unique. Pour être valide, la définition de rôle doit contenir au moins une tâche. Pour plus d’informations, consultez [Tâches et autorisations](../../reporting-services/security/tasks-and-permissions.md).  
   
@@ -58,6 +58,6 @@ ms.locfileid: "47849467"
  [Créer, supprimer ou modifier un rôle &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)   
  [Accorder à un utilisateur l’accès à un serveur de rapports &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)   
  [Modifier ou supprimer une affectation de rôle &#40;Gestionnaire de rapports&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)   
- [Définir les autorisations sur les éléments de serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
+ [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](../../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)  
   
   

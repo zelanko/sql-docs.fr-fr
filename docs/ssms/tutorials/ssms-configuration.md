@@ -5,20 +5,20 @@ keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
 ms.date: 03/16/2018
-ms.topic: Tutorial
+ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: f37ea9b96748e660894aed98a4bc37c7fd710aac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661327"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662683"
 ---
-# <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutoriel : Composants et configuration de SQL Server Management Studio
+# <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Didacticiel : Composants et configuration de SQL Server Management Studio
 Ce tutoriel décrit les différents composants de fenêtre dans SQL Server Management Studio (SSMS) et certaines options de configuration de base pour votre espace de travail. Dans cet article, vous apprenez à : 
 
 > [!div class="checklist"]
@@ -42,10 +42,10 @@ Cette section décrit les différents composants de fenêtre disponibles dans l�
 
     ![Menu Affichage](media/ssms-configuration/viewmenu.png)
 
-- **Explorateur d’objets** (F8) : l’Explorateur d’objets est une arborescence qui présente tous les objets de base de données sur un serveur. Cette vue inclut les bases de données du moteur de base de données SQL Server, SQL Server Analysis Services, SQL Server Reporting Services et SQL Server Integration Services. L’Explorateur d’objets contient des informations pour tous les serveurs qui y sont connectés. 
+- **Explorateur d’objets** (F8) : L'Explorateur d'objets est une arborescence qui présente tous les objets de base de données sur un serveur. Cette vue inclut les bases de données du moteur de base de données SQL Server, SQL Server Analysis Services, SQL Server Reporting Services et SQL Server Integration Services. L’Explorateur d’objets contient des informations pour tous les serveurs qui y sont connectés. 
     
     ![Explorateur d’objets](media/ssms-configuration/objectexplorer.png)
-- **Fenêtre de requête** (Ctrl + N) : Après avoir sélectionné **Nouvelle requête**, entrez vos requêtes Transact-SQL (T-SQL) dans cette fenêtre. Les résultats de vos requêtes s’affichent également ici.
+- **Fenêtre de requête** (Ctrl+N) : Après avoir sélectionné **Nouvelle requête**, entrez vos requêtes Transact-SQL (T-SQL) dans cette fenêtre. Les résultats de vos requêtes s’affichent également ici.
     
     ![Fenêtre Nouvelle requête](media/ssms-configuration/newquery.png)
 
@@ -53,7 +53,7 @@ Cette section décrit les différents composants de fenêtre disponibles dans l�
 
     ![Propriétés](media/ssms-configuration/properties.png)
 
-- **Explorateur de modèles** (Ctrl + Alt + T) : L’Explorateur de modèles a divers modèles T-SQL prédéfinis. Vous pouvez utiliser ces modèles pour effectuer diverses fonctions, comme créer ou sauvegarder une base de données. 
+- **Explorateur de modèles** (Ctrl+Alt+T) : L’Explorateur de modèles a divers modèles T-SQL prédéfinis. Vous pouvez utiliser ces modèles pour effectuer diverses fonctions, comme créer ou sauvegarder une base de données. 
 
     ![Explorateur de modèles](media/ssms-configuration/templates.png)
 

@@ -18,17 +18,17 @@ ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6f96840516b160a7fef7fd97454250131695fc7f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
+ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033050"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56662783"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue (moteur de base de données)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Retourne un nœud dont le chemin depuis la racine est celui vers *newRoot*, suivi du chemin entre *oldRoot* et *this*.
+Retourne un nœud dont le chemin depuis la racine est celui qui pointe vers _newRoot_, suivi du chemin à partir de _oldRoot_.
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -43,11 +43,11 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 ```  
   
 ## <a name="arguments"></a>Arguments  
-*oldRoot*  
+_oldRoot_  
 **hierarchyid** qui est le nœud représentant le niveau de la hiérarchie à modifier.
   
-*newRoot*  
-**hierarchyid** représentant le nœud qui remplacera la section *oldRoot* du nœud actuel afin de le déplacer.
+_newRoot_  
+Type **hierarchyid** qui représente le nœud. Remplacez la section _oldRoot_ du nœud actuel pour déplacer le nœud.
   
 ## <a name="return-types"></a>Types de retour  
 **Type de retour SQL Server : hierarchyid**
@@ -55,12 +55,12 @@ SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newR
 **Type de retour CLR : SqlHierarchyId**
   
 ## <a name="remarks"></a>Notes   
-Peut être utilisé pour modifier l’arborescence en déplaçant des nœuds depuis *oldRoot* vers *newRoot*. GetReparentedValue peut être utilisé pour déplacer un nœud d'une hiérarchie vers un nouvel emplacement de la hiérarchie. Le type de données **hierarchyid** représente, mais n’applique pas la structure hiérarchique. Les utilisateurs doivent s'assurer que la structure hierarchyid convient au nouvel emplacement. Un index unique sur le type de données **hierarchyid** peut éviter la duplication des entrées. Pour obtenir un exemple de déplacement d’une sous-arborescence entière, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
+Utilisé pour modifier l’arborescence en déplaçant des nœuds de _oldRoot_ vers _newRoot_. GetReparentedValue est utilisé pour déplacer un nœud de hiérarchie vers un nouvel emplacement de la hiérarchie. Le type de données **hierarchyid** représente mais n’applique pas la structure hiérarchique. Les utilisateurs doivent s'assurer que la structure hierarchyid convient au nouvel emplacement. Un index unique sur le type de données **hierarchyid** peut éviter la duplication des entrées. Pour obtenir un exemple de déplacement d’une sous-arborescence entière, consultez [Données hiérarchiques &#40;SQL Server&#41;](../../relational-databases/hierarchical-data-sql-server.md).
   
 ## <a name="examples"></a>Exemples  
   
 ### <a name="a-comparing-two-node-locations"></a>A. Comparaison de deux emplacements de nœuds  
-L'exemple suivant montre le hierarchyid actuel d'un nœud. Il montre également ce que serait le **hierarchyid** du nœud si le nœud était déplacé pour devenir un descendant du nœud **@NewParent**. Il utilise la méthode `ToString()` pour afficher les relations hiérarchiques.
+L'exemple suivant montre le hierarchyid actuel d'un nœud. Il montre également ce que serait le type **hierarchyid** du nœud si vous déplaciez le nœud pour en faire un descendant du nœud **@NewParent**. Il utilise la méthode `ToString()` pour afficher les relations hiérarchiques.
   
 ```sql
 DECLARE @SubjectEmployee hierarchyid , @OldParent hierarchyid, @NewParent hierarchyid  

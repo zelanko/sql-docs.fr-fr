@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d79d404e72f13ade55f6bd64f261741d86b78347
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8637754097be0837f51ef3fda06375abcb084cae
+ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532548"
+ms.lasthandoff: 02/21/2019
+ms.locfileid: "56590434"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Améliorer les performances des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -83,8 +83,8 @@ Le fichier journal de l'analyse respecte le modèle de dénomination suivant :
 `SQLFT<DatabaseID\><FullTextCatalogID\>.LOG[<n\>]`
   
 Les parties variables du nom de fichier du journal d’analyse sont les suivantes.
--   <**DatabaseID**> - ID d’une base de données. <**dbid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
--   <**FullTextCatalogID**> - ID du catalogue de texte intégral. <**catid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
+-   \<**DatabaseID**> - ID d’une base de données. <**dbid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
+-   <**FullTextCatalogID**> - ID du catalogue de texte intégral. \<**catid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
 -   <**n**> - Entier qui indique qu’il existe un ou plusieurs journaux d’analyse du même catalogue de texte intégral.  
   
  Par exemple, `SQLFT0000500008.2` est le fichier journal d’analyse pour une base de données ayant un ID de base de données = 5 et un ID de catalogue de texte intégral = 8. Le 2 à la fin du nom de fichier indique qu'il existe deux fichiers journaux d'analyse pour cette combinaison base de données/catalogue.  
@@ -142,7 +142,7 @@ Pour obtenir des informations essentielles sur les formules suivantes, consultez
 2.  500 Mo est une estimation de la mémoire requise par les autres processus dans le système. Si le système effectue un travail supplémentaire, augmentez cette valeur en conséquence.  
 3.  .*ism_size* est censé être de 8 Mo pour les plateformes x64.  
   
- #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemple : estimation des besoins en mémoire de fdhost.exe  
+ #### <a name="example-estimate-the-memory-requirements-of-fdhostexe"></a>Exemple : estimation des besoins en mémoire de fdhost.exe  
   
  Cet exemple se rapporte à un ordinateur 64 bits avec 8 Go de mémoire vive (RAM) et 4 processeurs double cœur. Les premières estimations de calcul de la mémoire requise par fdhost.exe : *F*. Le nombre de plages d'analyse est `8`.  
   

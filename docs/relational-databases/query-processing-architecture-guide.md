@@ -1,7 +1,7 @@
 ---
 title: Guide d’architecture de traitement des requêtes | Microsoft Docs
 ms.custom: ''
-ms.date: 11/15/2018
+ms.date: 02/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 743c12fe1ec749c597655f249c1ba6fbfe1b0b4e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591883"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56802405"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,6 @@ Pour plus d’informations sur les index columnstore, consultez [Architecture de
 Le traitement d’une seule instruction [!INCLUDE[tsql](../includes/tsql-md.md)] est le cas le plus simple d’exécution des instructions SQL par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les étapes de traitement d’une instruction `SELECT` unique qui ne fait référence qu’à des tables de base locales (et non à des vues ou à des tables distantes) illustrent le processus de base.
 
 ### <a name="logical-operator-precedence"></a>Priorité des opérateurs logiques
-
 Quand une instruction contient plusieurs opérateurs logiques, `NOT` est traité en premier, ensuite `AND` et enfin `OR`. Les opérateurs arithmétiques, et au niveau du bit, sont traités avant les opérateurs logiques. Pour plus d’informations, consultez [Priorité des opérateurs](../t-sql/language-elements/operator-precedence-transact-sql.md).
 
 Dans l'exemple suivant, la condition de couleur est associée au modèle de produit 21 et non au modèle de produit 20, car `AND` est prioritaire sur `OR`.
@@ -88,7 +87,6 @@ GO
 ```
 
 ### <a name="optimizing-select-statements"></a>Optimisation des instructions SELECT
-
 Une instruction `SELECT` est non procédurale ; elle ne précise pas les étapes exactes à suivre par le serveur de base de données pour extraire les données demandées. Cela signifie que le serveur de base de données doit analyser l'instruction afin de déterminer la manière la plus efficace d'extraire les données demandées. Cette opération est nommée optimisation de l’instruction `SELECT` . Le composant qui s’en charge est l’optimiseur de requête. L’entrée de l’optimiseur de requête est composée de la requête, du schéma de base de données (définitions des tables et des index) et de ses statistiques de base de données. La sortie de l’optimiseur de requête est un plan d’exécution de la requête, parfois appelé plan de requête ou simplement plan. Le contenu d'un plan de requête est détaillé plus loin dans cette rubrique.
 
 Les entrées et les sorties de l’optimiseur de requête pendant l’optimisation d’une instruction `SELECT` unique sont illustrées dans le diagramme suivant :
@@ -126,7 +124,6 @@ L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est important, car il permet l’ajustement dynamique du serveur de base de données au fur et à mesure que la base de données évolue sans recourir à l’intervention d’un programmeur ou d’un administrateur de bases de données. Cela permet aux programmeurs de se concentrer sur la description du résultat final de la requête. Ils peuvent faire confiance à l’optimiseur de requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans son choix d’un plan d’exécution efficace pour l’état de la base de données à chaque exécution de l’instruction.
 
 ### <a name="processing-a-select-statement"></a>Traitement d'une instruction SELECT
-
 Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de traiter une instruction SELECT unique sont les suivantes : 
 
 1. L’analyseur examine l’instruction `SELECT` et la décompose en unités logiques telles que mots clé, expressions, opérateurs et identificateurs.
@@ -135,18 +132,97 @@ Les étapes permettant à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 4. Le moteur relationnel lance le plan d'exécution. Pendant le traitement des étapes qui requièrent des données issues des tables de base, le moteur relationnel demande que le moteur de stockage transmette les données des ensembles de lignes demandés à partir du moteur relationnel.
 5. Le moteur relationnel traite les données retournées du moteur de stockage dans le format défini pour le jeu de résultats et retourne ce jeu au client.
 
-### <a name="processing-other-statements"></a>Traitement des autres instructions
+### <a name="ConstantFolding"></a> Assemblage de constantes et évaluation d’expression 
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] évalue quelques expressions constantes à l'avance pour améliorer les performances des requêtes. On parle d'assemblage de constantes. Une constante est un littéral [!INCLUDE[tsql](../includes/tsql-md.md)], par exemple 3, 'ABC', '2005-12-31', 1.0e3 ou 0x12345678.
 
-Les étapes de base décrites pour le traitement d’une instruction `SELECT` s’appliquent également aux autres instructions SQL telles que `INSERT`, `UPDATE`et `DELETE`. Les instructions`UPDATE` et `DELETE` doivent toutes deux cibler l’ensemble de lignes à modifier ou à supprimer. Le processus d’identification de ces lignes est le même que celui utilisé pour identifier les lignes sources qui participent au jeu de résultats d’une instruction `SELECT` . Les instructions `UPDATE` et `INSERT` peuvent toutes deux contenir des instructions SELECT incorporées qui fournissent les valeurs de données à mettre à jour ou à insérer.
+#### <a name="foldable-expressions"></a>Expressions pouvant être assemblées
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilise l'assemblage de constantes avec les types d'expressions suivants :
+- Expressions arithmétiques telles que 1+1, 5/3*2, ne contenant que des constantes.
+- Expressions logiques telles que 1=1 et 1>2 AND 3>4, ne contenant que des constantes.
+- Fonctions intégrées considérées comme pouvant être assemblées par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], y compris `CAST` et `CONVERT`. En général, une fonction intrinsèque peut être assemblée si elle est fonction de ses données d'entrée uniquement, à l'exclusion de toute information contextuelle (options SET, paramètres de langue, options de base de données et clés de chiffrement). Les fonctions non déterministes ne peuvent pas être assemblées. Les fonctions intégrées déterministes peuvent être assemblées, à quelques exceptions près.
+
+> [!NOTE] 
+> Les objets volumineux constituent une exception. Si le type de résultat du processus d’assemblage est un type d’objet volumineux (text, image, nvarchar(max), varchar(max) ou varbinary(max)), [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n’assemble pas l’expression.
+
+#### <a name="nonfoldable-expressions"></a>Expressions ne pouvant pas être assemblées
+Aucun des autres types d'expressions ne peut être assemblé. C'est notamment le cas des types d'expressions suivants :
+- Expressions non constantes, par exemple une expression dont le résultat dépend de la valeur d'une colonne.
+- Expressions dont les résultats dépendent d'une variable locale ou d'un paramètre, par exemple @x.
+- Fonctions non déterministes.
+- Fonctions définies par l'utilisateur ([!INCLUDE[tsql](../includes/tsql-md.md)] et CLR).
+- Expressions dont les résultats dépendent de paramètres de langue.
+- Expressions dont les résultats dépendent d'options SET.
+- Expressions dont les résultats dépendent d'options de configuration du serveur.
+
+#### <a name="examples-of-foldable-and-nonfoldable-constant-expressions"></a>Exemples d'expressions constantes pouvant ou ne pouvant pas être assemblées
+Considérez la requête suivante :
+
+```sql
+SELECT *
+FROM Sales.SalesOrderHeader AS s 
+INNER JOIN Sales.SalesOrderDetail AS d 
+ON s.SalesOrderID = d.SalesOrderID
+WHERE TotalDue > 117.00 + 1000.00;
+```
+
+Si l’option de base de données `PARAMETERIZATION` n’a pas la valeur `FORCED` pour cette requête, l’expression `117.00 + 1000.00` est évaluée et remplacée par son résultat, à savoir `1117.00`, avant la compilation de la requête. Voici quelques avantages de l'assemblage des constantes :
+- L'expression n'a pas à être évaluée à chaque exécution.
+- L’optimiseur de requête calcule la valeur de l’expression, une fois celle-ci évaluée, pour estimer la taille du jeu de résultats de cette partie de la requête `TotalDue > 117.00 + 1000.00`.
+
+En revanche, si `dbo.f` est une fonction scalaire définie par l'utilisateur, l'expression `dbo.f(100)` n'est pas assemblée parce que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'assemble pas les expressions qui font intervenir des fonctions définies par l'utilisateur, même si elles sont déterministes. Pour plus d’informations sur le paramétrage, consultez [Paramétrage forcé](#ForcedParam) plus loin dans cet article.
+
+#### <a name="ExpressionEval"></a>Évaluation de l’expression 
+Certaines expressions qui ne sont pas assemblées, mais dont les arguments (qu'il s'agisse de paramètres ou de constantes) sont connus au moment de la compilation, sont évaluées pendant l'optimisation par l'estimateur de la taille de l'ensemble de résultats (cardinalité) inclus dans l'optimiseur.
+
+Par exemple, les fonctions intégrées et opérateurs spéciaux suivants sont évalués lors de la compilation si leurs données d’entrée sont connues : `UPPER`, `LOWER`, `RTRIM`, `DATEPART( YY only )`, `GETDATE`, `CAST` et `CONVERT`. Les opérateurs suivants sont également évalués au moment de la compilation si toutes leurs données d'entrée sont connues :
+- Opérateurs arithmétiques : +, -, \*, /, unaire -
+- Opérateurs logiques : `AND`, `OR`, `NOT`
+- Opérateurs de comparaison : <, >, <=, >=, <>, `LIKE`, `IS NULL`, `IS NOT NULL`
+
+L’optimiseur de requête n’évalue aucune autre fonction ni aucun autre opérateur pendant l’estimation de cardinalité.
+
+#### <a name="examples-of-compile-time-expression-evaluation"></a>Exemples d'évaluation d'expression au moment de la compilation
+Envisageons la procédure stockée suivante :
+
+```sql
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc( @d datetime )
+AS
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d+1;
+```
+
+Pendant l’optimisation de l’instruction `SELECT` de cette procédure, l’optimiseur de requête tente d’évaluer la cardinalité attendue du jeu de résultats pour la condition `OrderDate > @d+1`. L'expression `@d+1` n'est pas assemblée, puisque `@d` est un paramètre. Toutefois, la valeur de ce paramètre est connue au moment de l'optimisation. Cela permet à l’optimiseur de requête d’estimer précisément la taille du jeu de résultats, ce qui permet de sélectionner le plan de requête correct.
+
+Examinons à présent un exemple similaire, mais dans lequel l'expression `@d2` est remplacée par une variable locale `@d+1` qui est évaluée dans une instruction SET et non dans la requête.
+
+```sql 
+USE AdventureWorks2014;
+GO
+CREATE PROCEDURE MyProc2( @d datetime )
+AS
+BEGIN
+DECLARE @d2 datetime
+SET @d2 = @d+1
+SELECT COUNT(*)
+FROM Sales.SalesOrderHeader
+WHERE OrderDate > @d2
+END;
+```
+
+Lorsque l’instruction `SELECT` de la procédure *MyProc2* est optimisée dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la valeur de `@d2` n’est pas connue. Par conséquent, l’optimiseur de requête utilise une estimation par défaut pour la sélectivité de `OrderDate > @d2`, (en l’occurrence, 30 %).
+
+### <a name="processing-other-statements"></a>Traitement des autres instructions
+Les étapes de base décrites pour le traitement d’une instruction `SELECT` s’appliquent également aux autres instructions SQL telles que `INSERT`, `UPDATE`et `DELETE`. Les instructions`UPDATE` et `DELETE` doivent toutes deux cibler l’ensemble de lignes à modifier ou à supprimer. Le processus d’identification de ces lignes est le même que celui utilisé pour identifier les lignes sources qui participent au jeu de résultats d’une instruction `SELECT` . Les instructions `UPDATE` et `INSERT` peuvent toutes deux contenir des instructions `SELECT` incorporées qui fournissent les valeurs de données à mettre à jour ou à insérer.
 
 Même les instructions DDL telles que `CREATE PROCEDURE` ou `ALTER TABLE` sont finalement réduites à une série d’opérations relationnelles sur les tables du catalogue système, voire (comme dans le cas de `ALTER TABLE ADD COLUMN`) sur les tables de données.
 
 ### <a name="worktables"></a>Tables de travail
-
 Le moteur relationnel peut avoir besoin de créer une table de travail pour exécuter une opération logique spécifiée dans une instruction SQL. Les tables de travail sont des tables internes utilisées pour le stockage des résultats intermédiaires. Les tables de travail sont générées pour certaines requêtes `GROUP BY`, `ORDER BY`, ou `UNION` . Par exemple, si une clause `ORDER BY` fait référence à des colonnes qui ne sont couvertes par aucun index, le moteur relationnel peut être amené à générer une table de travail pour trier l’ensemble de résultats dans l’ordre demandé. En outre, les tables de travail sont parfois utilisées comme fichiers d'attente pour le stockage temporaire du résultat de l'exécution d'une partie d'un plan de requête. Les tables de travail sont générées dans tempdb et sont automatiquement supprimées lorsqu'elles ne sont plus requises.
 
 ### <a name="view-resolution"></a>Résolution de vues
-
 Le processeur de requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] traite différemment les vues indexées et les vues non indexées : 
 
 * Les lignes des vues indexées sont stockées dans la base de données dans le même format qu'une table. Si l'optimiseur de requête décide d'utiliser une vue indexée dans un plan de requête, celle-ci est traitée de la même façon qu'une table de base.
@@ -192,7 +268,6 @@ WHERE OrderDate > '20020531';
 La fonctionnalité Showplan de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio montre que le moteur relationnel crée le même plan d’exécution pour ces deux instructions `SELECT`.
 
 ### <a name="using-hints-with-views"></a>Utilisation d'indicateurs avec les vues
-
 Les indicateurs placés sur une vue dans une requête peuvent être en conflit avec d'autres indicateurs découverts lors du développement de la vue pour l'accès à ses tables de base. Lorsque cela se produit, la requête retourne une erreur. Imaginons par exemple la vue suivante, dont la définition contient un indicateur de table :
 
 ```sql
@@ -455,7 +530,7 @@ La seule différence entre les plans d’exécution de ces requêtes est la vale
 
 La séparation des constantes de l'instruction SQL à l'aide de paramètres permet au moteur relationnel de reconnaître plus facilement les plans en double. Vous pouvez utiliser les paramètres des manières suivantes : 
 
-* Dans Transact-SQL, utilisez `sp_executesql`: 
+* Dans [!INCLUDE[tsql](../includes/tsql-md.md)], utilisez `sp_executesql` : 
 
    ```sql
    DECLARE @MyIntParm INT
@@ -468,7 +543,7 @@ La séparation des constantes de l'instruction SQL à l'aide de paramètres perm
      @MyIntParm
    ```
 
-   Cette méthode est recommandée pour les scripts Transact-SQL, les procédures stockées ou les déclencheurs SQL qui génèrent dynamiquement des instructions SQL. 
+   Cette méthode est recommandée pour les scripts [!INCLUDE[tsql](../includes/tsql-md.md)], les procédures stockées ou les déclencheurs qui génèrent dynamiquement des instructions SQL. 
 
 * ADO, OLE DB et ODBC utilisent des marqueurs de paramètres. Les marqueurs de paramètres sont des points d'interrogation (?) qui remplacent une constante dans une instruction SQL et qui sont liés à une variable de programme. Dans une application ODBC, vous pourriez par exemple procéder comme suit : 
 

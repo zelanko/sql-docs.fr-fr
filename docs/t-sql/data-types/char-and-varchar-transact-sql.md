@@ -25,18 +25,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2f36af646ee1fb41279b8401c5e2bdf18ed6896
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 60bec45b4feacff0390bfb359010767dc3bcd2af
+ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299386"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56801403"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char et varchar (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Faites-nous part de vos commentaires sur la table des matières SQL Docs !](https://aka.ms/sqldocsurvey)
 
 Les types de données de caractères qui sont soit de longueur fixe, **char**, soit de longueur variable, **varchar**. À partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], quand un classement prenant en charge UTF-8 est utilisé, ces types de données stockent la plage complète des données caractères [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) et utilisent le codage de caractères [UTF-8](https://www.wikipedia.org/wiki/UTF-8). Si un classement non-UTF-8 est spécifié, ces types de données stockent uniquement un sous-ensemble de caractères pris en charge par la page de codes correspondante de ce classement.
   
@@ -46,7 +43,7 @@ Les types de données de caractères qui sont soit de longueur fixe, **char**, s
 **varchar** [ ( *n* | **max** ) ] Données de type chaîne de longueur variable. *n* définit la longueur de chaîne en octets et peut être une valeur comprise entre 1 et 8 000. **max** indique que la taille de stockage maximale est de 2^31-1 octets (2 Go). Pour l’encodage de jeux de caractères sur un octet, par exemple *Latin*, la taille de stockage est *n* octets + 2 octets et le nombre de caractères pouvant être stockés est également *n*. Pour les jeux de caractères codés sur plusieurs octets, la taille de stockage est toujours *n* octets + 2 octets, mais le nombre de caractères pouvant être stockés peut être inférieur à *n*. Les synonymes ISO de **varchar** sont **charvarying** ou **charactervarying**. Pour plus d’informations sur les jeux de caractères, consultez [Jeux de caractères codés sur un octet et multioctets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets).
 
 ## <a name="remarks"></a>Notes   
-Quand la valeur de *n* n’est spécifiée ni dans une définition de données ni dans une instruction de déclaration de variable, la longueur par défaut est 1. Quand la valeur de *n* n’est pas précisée avec les fonctions CAST et CONVERT, la longueur par défaut est 30.
+Quand la valeur de *n* n’est spécifiée ni dans une définition de données ni dans une instruction de déclaration de variable, la longueur par défaut est 1. Si la valeur de *n* n’est pas précisée avec les fonctions CAST et CONVERT, la longueur par défaut est 30.
   
 Les objets qui utilisent **char** ou **varchar** reçoivent le classement par défaut de la base de données, sauf si un classement spécifique est affecté à l’aide de la clause COLLATE. Le classement contrôle la page de codes utilisée pour stocker les données de caractères.
 
@@ -67,17 +64,17 @@ Si SET ANSI_PADDING a la valeur OFF lors de l’exécution de CREATE TABLE ou d�
   
 > [!WARNING]
 > Chaque colonne varchar(max) ou nvarchar(max) non Null demande 24 octets d’allocation fixe supplémentaire calculée par rapport à la limite de 8 060 octets par ligne pendant une opération de tri. Cela peut produire une limite implicite du nombre de colonnes varchar(max) ou nvarchar(max) non Null pouvant être créées dans une table.  
-Aucune erreur spéciale n'est fournie quand la table est créée (mis à part l’avertissement habituel indiquant que la taille maximale de ligne dépasse la taille maximale autorisée de 8 060 octets) ou quand les données sont insérées. Cette grande taille de ligne peut provoquer des erreurs (comme l’erreur 512) au cours des opérations normales, telles que la mise à jour de la clé d’index cluster ou le tri de l’intégralité des colonnes, que les utilisateurs ne peuvent pas anticiper tant qu’elles n’ont pas été effectuées.
+Aucune erreur spéciale n'est fournie quand la table est créée (mis à part l’avertissement habituel indiquant que la taille maximale de ligne dépasse la taille maximale autorisée de 8 060 octets) ou quand les données sont insérées. Cette grande taille de ligne peut provoquer des erreurs (comme l’erreur 512) au cours des opérations normales, telles que la mise à jour de la clé d’index cluster ou le tri de l’ensemble des colonnes, que les utilisateurs peuvent anticiper avant d’effectuer une opération.
   
 ##  <a name="_character"></a> Conversion de données caractères  
-Lorsque des expressions de caractères sont converties en type caractère de taille différente, les valeurs trop longues pour le nouveau type de données sont tronquées. Le type **uniqueidentifier** est considéré comme un type caractère pour les besoins de la conversion à partir d’une expression de caractères ; il est par conséquent soumis aux règles de troncation pour la conversion en un type caractère. Consultez la section Exemples qui suit.
+Lorsque des expressions de caractères sont converties en type caractère de taille différente, les valeurs trop longues pour le nouveau type de données sont tronquées. Le type **uniqueidentifier** est considéré comme un type caractères pour la conversion d’une expression de type caractères. Il est donc soumis aux règles de troncation pour la conversion en un type caractères. Consultez la section Exemples qui suit.
   
 Quand une expression de caractères est convertie en une expression de caractères de taille ou de type de données différent (par exemple, de **char(5)** en **varchar(5)**, ou **char(20)** en **char(15)**), le classement de la valeur d’entrée est affecté à la valeur convertie. Si une expression de type non caractère est convertie en un type de données caractère, le classement par défaut de la base de données active est affecté à la valeur convertie. Dans les deux cas, vous pouvez affecter un classement spécifique à l’aide de la clause [COLLATE](../../t-sql/statements/collations.md).
   
 > [!NOTE]  
-> Les traductions de pages de codes sont prises en charge pour les types de données **char** et **varchar**, mais pas pour **text**. De manière identique aux versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perte de données lors de l'interprétation d'une page de codes n'est pas mentionnée.  
+> Les traductions de pages de codes sont prises en charge pour les types de données **char** et **varchar**, mais pas pour **text**. Comme dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la perte de données lors de la traduction d’une page de codes n’est pas signalée.  
   
-Les expressions de caractères converties en un type de données **numeric** approximatif peuvent éventuellement inclure une indication exponentielle (un « e » majuscule ou minuscule éventuellement suivi d’un plus (+) ou d’un moins (-) et du nombre).
+Les expressions de type caractères qui sont converties en un type de données **numeric** approximatif peuvent inclure une notation exponentielle facultative. Cette notation est un e minuscule ou majuscule, suivi d’un signe facultatif plus (+) ou moins (-) et d’un nombre.
   
 Les expressions de caractères converties en un type de données **numeric** exact doivent être composées de chiffres, d’une virgule décimale et éventuellement d’un plus (+) ou d’un moins (-). Les espaces à gauche sont ignorés. Les séparateurs virgule (séparateurs de milliers en notation anglaise comme dans 123,456.00) ne sont pas autorisés dans la chaîne.
   

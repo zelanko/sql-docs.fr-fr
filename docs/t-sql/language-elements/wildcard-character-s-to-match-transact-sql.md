@@ -22,20 +22,20 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df735e98cb20643f9030c77f8e5dcc22ab126fef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4620f38c01f1bd7c4158387a607da12fbb95b865
+ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847457"
+ms.lasthandoff: 02/20/2019
+ms.locfileid: "56425814"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (Caractère générique - Caractères à rechercher) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  Recherche la correspondance de chaque caractère, dans la plage ou l’ensemble spécifié entre crochets `[ ]`. Ces caractères génériques peuvent être utilisés dans des comparaisons de chaînes qui impliquent des critères spéciaux tels que `LIKE` et `PATINDEX`.  
+Recherche la correspondance de chaque caractère, dans la plage ou l’ensemble spécifié entre crochets `[ ]`. Ces caractères génériques peuvent être utilisés dans des comparaisons de chaînes qui impliquent des critères spéciaux tels que `LIKE` et `PATINDEX`.  
   
 ## <a name="examples"></a>Exemples  
-### <a name="a-simple-example"></a>A. Exemple simple   
+### <a name="a-simple-example"></a>A : Exemple simple   
 L’exemple suivant retourne les noms qui commencent par la lettre `m`. `[n-z]` spécifie que la deuxième lettre doit être comprise dans la plage allant de `n` à `z`. Le caractère générique de pourcentage `%` autorise tout caractère ou aucun caractère à partir du troisième caractère. Les bases de données `model` et `msdb` répondent à ces critères. La base de données `master` n’y répond pas et est donc exclue du jeu de résultats.
  
 ```sql
@@ -53,7 +53,7 @@ msdb
  Vous avez peut-être d’autres bases de données installées qui satisfont ces critères.
 
 
-### <a name="b-more-complex-example"></a>B. Exemple plus complexe   
+### <a name="b-more-complex-example"></a>B : Exemple plus complexe   
  L'exemple suivant utilise l'opérateur [] pour rechercher l'ID et le nom de tous les employés de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] dont le code postal se compose de quatre chiffres.  
   
 ```sql  
@@ -67,7 +67,7 @@ INNER JOIN Person.Address AS a ON a.AddressID = ea.AddressID
 WHERE a.PostalCode LIKE '[0-9][0-9][0-9][0-9]';  
 ```  
   
- Voici l'ensemble de résultats obtenu :  
+ Le jeu de résultats est le suivant :  
   
 ```  
 EmployeeID      FirstName      LastName      PostalCode  
