@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3731f60047e22da7209b6c131ab93b28a20a99c2
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: cc64fdd430e64f7ad1b152234c2a203f453745c8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652588"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579411"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Quelles sont les nouveautés d’Analytique Platform System, un entrepôt de données MPP montée en puissance
 Consultez les nouveautés introduite dans les dernières mises à jour de matériel pour Microsoft Analytique Platform System (APS). APS est une appliance de montée en puissance en local qui héberge MPP SQL Server Parallel Data Warehouse. 
@@ -120,7 +120,7 @@ APS AU7 crée et met à jour les statistiques automatiquement, par défaut. Pour
 ### <a name="t-sql"></a>T-SQL
 Sélectionnez @var est désormais pris en charge. Pour plus d’informations, consultez [sélectionner la variable locale](/sql/t-sql/language-elements/select-local-variable-transact-sql) 
 
-Indicateurs de requête HASH et ordre de groupe sont désormais pris en charge. Pour plus d’informations, consultez [Hints(Transact-SQL) - requête ](/sql/t-sql/queries/hints-transact-sql-query)
+Indicateurs de requête HASH et ordre de groupe sont désormais pris en charge. Pour plus d’informations, consultez [Hints(Transact-SQL) - requête](/sql/t-sql/queries/hints-transact-sql-query)
 
 ### <a name="feature-switch"></a>Commutateur de fonctionnalité
 APS AU7 introduit le commutateur de fonctionnalité dans [Configuration Manager](launch-the-configuration-manager.md). AutoStatsEnabled et DmsProcessStopMessageTimeoutInSeconds sont désormais des options configurables qui peuvent être modifiées par les administrateurs.

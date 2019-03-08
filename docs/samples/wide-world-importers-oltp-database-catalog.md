@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d98e87d18d76162e5bf9dcb4779a8bc7fec74385
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617622"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579579"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catalogue de base de données WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Ces schémas sont utilisés pour les applications externes qui ne sont pas autor
 |-----------------------------|---------------------|
 |Site Web|Tous les accès à la base de données depuis le site Web d’entreprise consiste à utiliser de ce schéma.|
 |Rapports|Tous les accès à la base de données à partir de rapports Reporting Services sont à ce schéma.|
-|Power BI|Tous les accès à la base de données à partir de tableaux de bord Power BI via la passerelle d’entreprise consiste à utiliser de ce schéma.|
+|PowerBI|Tous les accès à la base de données à partir de tableaux de bord Power BI via la passerelle d’entreprise consiste à utiliser de ce schéma.|
 
 Notez que les rapports Power BI et les schémas ne sont pas utilisés dans la version initiale de la base de données. Toutefois, les exemples de tous les Reporting Services et Power BI reposant sur cette base de données sont encouragés à utiliser ces schémas.
 
@@ -202,7 +202,7 @@ Ces procédures sont utilisées pour configurer l’exemple. Ils sont utilisés 
 |Configuration_ApplyAuditing|Ajoute l’audit. L’audit du serveur est appliquée pour les bases de données standard edition ; l’audit de base de données supplémentaire est ajouté pour enterprise edition.|
 |Configuration_ApplyColumnstoreIndexing|S’applique à l’indexation pour columnstore `Sales.OrderLines` et `Sales.InvoiceLines` et réindexe en conséquence.|
 |Configuration_ApplyFullTextIndexing|S’applique à des index de texte intégral `Application.People`, `Sales.Customers`, `Purchasing.Suppliers`, et `Warehouse.StockItems`. Remplace `Website.SearchForPeople`, `Website.SearchForSuppliers`, `Website.SearchForCustomers`, `Website.SearchForStockItems`, `Website.SearchForStockItemsByTags` avec les procédures de remplacement qui utilisent l’indexation de texte intégral.|
-|Configuration_ApplyPartitioning|S’applique le partitionnement de table à `Sales.CustomerTransactions and `'Purchasing.SupplierTransactions et réorganise les index en fonction.|
+|Configuration_ApplyPartitioning|S’applique pour le partitionnement de table `Sales.CustomerTransactions` et `Purchasing.SupplierTransactions`et réorganise les index en fonction.|
 |Configuration_ApplyRowLevelSecurity|S’applique la sécurité au niveau ligne pour filtrer les clients par sales territory les rôles associés.|
 |Configuration_ConfigureForEnterpriseEdition|S’applique l’indexation columnstore, recherche en texte intégral, en mémoire, polybase et partitionnement.|
 |Configuration_EnableInMemory|Ajoute un groupe de fichiers mémoire optimisé (lorsque vous ne travaillez pas dans Azure), remplace `Warehouse.ColdRoomTemperatures`, `Warehouse.VehicleTemperatures` avec les équivalents en mémoire et la migration des données, recrée le `Website.OrderIDList`, `Website.OrderList`, `Website.OrderLineList`, `Website.SensorDataList` types avec des tables équivalents de mémoire optimisée, supprime et recrée les procédures `Website.InvoiceCustomerOrders`, `Website.InsertCustomerOrders`, et `Website.RecordColdRoomTemperatures` qui utilise ces types de table.|
