@@ -25,12 +25,12 @@ ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: uc-msft
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ce6ac47c2348f1acd082cb86e1d4756df6012a91
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: a00de2fba9416b4ec64dd218fe830ad7cb4212c5
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662803"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56955840"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,10 +51,10 @@ DBCC FREESYSTEMCACHE
 ## <a name="arguments"></a>Arguments  
 ( 'ALL' [,_nom\_pool_ ] )  
 ALL spécifie tous les caches pris en charge.  
-_nom\_pool_ spécifie un cache de pool Resource Governor. Seules les entrées associées à ce pool seront libérées.  
+_nom\_pool_ spécifie un cache de pool Resource Governor. Seules les entrées associées à ce pool sont libérées.  
   
 MARK_IN_USE_FOR_REMOVAL  
-Libère de manière asynchrone les entrées en cours d'utilisation de leurs caches respectifs une fois qu'elles ne sont plus utilisées. Les entrées créées dans le cache après l’exécution de l’instruction DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL ne sont pas affectées.  
+Libère de manière asynchrone les entrées en cours d'utilisation de leurs caches respectifs une fois qu'elles ne sont plus utilisées. Après l’exécution DBCC FREESYSTEMCACHE WITH MARK_IN_USE_FOR_REMOVAL, les nouvelles entrées créées dans le cache ne sont pas affectées.  
   
 NO_INFOMSGS  
 Supprime tous les messages d'information.  
