@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 794d241773addc5584869eaa2e05cfa316908ce1
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160477"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579239"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Démarrage rapide : Installer SQL Server et de créer une base de données sur Red Hat
 
@@ -44,7 +44,7 @@ Vous devez avoir un RHEL 7.3 ou 7.4 machine avec **au moins 2 Go** de mémoire.
 
 Pour installer Red Hat Enterprise Linux sur votre propre machine, accédez à [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Vous pouvez également créer des machines virtuelles RHEL dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)et utiliser `--image RHEL` dans l’appel à `az vm create`.
 
-Si vous avez déjà installé une version CTP ou la version RC de SQL Server 2017, vous devez d’abord supprimer l’ancien référentiel avant de suivre ces étapes. Pour plus d’informations, consultez [référentiels configurer Linux pour SQL Server 2017 et 2019 ](sql-server-linux-change-repo.md).
+Si vous avez déjà installé une version CTP ou la version RC de SQL Server 2017, vous devez d’abord supprimer l’ancien référentiel avant de suivre ces étapes. Pour plus d’informations, consultez [référentiels configurer Linux pour SQL Server 2017 et 2019](sql-server-linux-change-repo.md).
 
 Pour les autres exigences système, consultez [configuration système requise pour SQL Server sur Linux](sql-server-linux-setup.md#system).
 

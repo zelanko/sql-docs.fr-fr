@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c9bcc5ba99736a6bb65bde4aff20e220d70303d4
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 1ef8f66d220561407c0bcafedde8a402f871924a
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242020"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578109"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Former et créer des modèles d’apprentissage automatique avec Spark
 
@@ -88,7 +88,7 @@ data = data_all.select(select_cols)
 
 ## <a name="step-4---split-as-training-and-test-set"></a>Étape 4 : fractionner en tant que jeu d’apprentissage et de test
 
-Utiliser 75 % de lignes pour former le modèle et le reste de 25 % pour évaluer le modèle. En outre, conserver le train et tester des jeux de données pour le stockage HDFS. L’étape n’est pas nécessaire, mais il est affichée pour montrer l’enregistrement et le chargement avec le format ORC. Autres formats, par exemple, `Parquet `peut également être utilisé.
+Utiliser 75 % de lignes pour former le modèle et le reste de 25 % pour évaluer le modèle. En outre, conserver le train et tester des jeux de données pour le stockage HDFS. L’étape n’est pas nécessaire, mais il est affichée pour montrer l’enregistrement et le chargement avec le format ORC. Autres formats, par exemple, `Parquet` peut également être utilisé.
 
 Validez cette étape, que vous devez voir deux répertoires créés avec le nom AdultCensusIncomeTrain et AdultCensusIncomeTest
 

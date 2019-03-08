@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4bb0ee8ad06d217cd6441527a1505311dac8e926
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044396"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579179"
 ---
 # <a name="backup-and-restore"></a>Sauvegarde et restauration
 
@@ -120,7 +120,7 @@ Lors de la restauration des données, l’appliance détecte le nombre de nœuds
   
 5.  Chaque nœud de calcul restaure sa partie de la base de données utilisateur. Si un des restaurations ne se terminent pas correctement, toutes les bases de données sont supprimés et la restauration se termine sans succès.  
   
-## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restauration vers une Appliance dotée d’un plus grand nombre de nœuds de calcul  
+## <a name="restoring-to-an-appliance-with-a-larger-number-of-compute-nodes"></a>Restauration dans une appliance dotée d’un plus grand nombre de nœuds de calcul  
   
 Le fait de restaurer une sauvegarde dans une appliance dotée d’un plus grand nombre de nœuds de calcul a pour effet d’accroître la taille de la base de données allouée de façon proportionnelle au nombre de nœuds de calcul.  
   
@@ -132,7 +132,7 @@ Après la redistribution, chaque nœud de calcul contient moins de données rée
   
 |Sauvegarde et la tâche de restauration|Description|  
 |---------------------------|---------------|  
-|Préparer un serveur comme serveur de sauvegarde.|[Obtenir et configurer un serveur de sauvegarde ](acquire-and-configure-backup-server.md)|  
+|Préparer un serveur comme serveur de sauvegarde.|[Obtenir et configurer un serveur de sauvegarde](acquire-and-configure-backup-server.md)|  
 |Sauvegarde une base de données.|[BASE DE DONNÉES DE SAUVEGARDE](../t-sql/statements/backup-database-parallel-data-warehouse.md)|  
 |Restaurer une base de données.|[RESTORE DATABASE](../t-sql/statements/restore-database-parallel-data-warehouse.md)|    
 

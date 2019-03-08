@@ -16,12 +16,12 @@ ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f1e86eec76a94a3858ede48fc0fb1b0703de4508
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: bedea60c8bc356ff18b687123799977d83f308c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356256"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578749"
 ---
 # <a name="always-on-availability-groups-sql-server"></a>Groupes de disponibilité Always On (SQL Server)
   La fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est une solution de haute disponibilité et de récupération d'urgence qui fournit une alternative au niveau de l'entreprise à la mise en miroir de bases de données. Introduite dans [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] optimise la disponibilité d'un ensemble de bases de données utilisateur pour l'entreprise. Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent de concert. Un groupe de disponibilité prend en charge un ensemble de bases de données primaires en lecture-écriture et un à huit ensembles de bases de données secondaires correspondantes. Éventuellement, les bases de données secondaires peuvent être rendues disponibles pour l'accès en lecture seule et/ou certaines opérations de sauvegarde.  
@@ -43,15 +43,15 @@ ms.locfileid: "53356256"
   
     -   *Mode de validation synchrone*. Ce mode de disponibilité privilégie la haute disponibilité et la protection des données plutôt que les performances, au prix d'une latence accrue des transactions. Un groupe de disponibilité donné peut prendre en charge jusqu'à trois réplicas de disponibilité avec validation synchrone, y compris le réplica principal actuel.  
   
-     Pour plus d’informations, consultez [ Modes de disponibilité ; Toujours sur les groupes de disponibilité ; ](availability-modes-always-on-availability-groups.md).  
+     Pour plus d’informations, consultez [Modes de disponibilité ; Toujours sur les groupes de disponibilité ; ](availability-modes-always-on-availability-groups.md).  
   
 -   Prend en charge plusieurs formes de basculement de groupe de disponibilité : le basculement automatique, le basculement manuel planifié (généralement appelé simplement « basculement manuel ») et le basculement manuel forcé (généralement appelé simplement « basculement forcé »). Pour plus d’informations, consultez [basculement et Modes de basculement ; Toujours sur les groupes de disponibilité ; ](failover-and-failover-modes-always-on-availability-groups.md).  
   
 -   Vous permet de configurer un réplica de disponibilité donné pour prendre en charge l'une des deux fonctions secondaires actives suivantes :  
   
-    -   Accès à la connexion en lecture seule, permettant aux connexions en lecture seule au réplica d'accéder à et lire ses bases de données lorsqu'il s'exécute comme réplica secondaire. Pour plus d’informations, consultez [secondaires actifs : Réplicas secondaires lisibles ; Groupes de disponibilité Always On](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   Accès à la connexion en lecture seule, permettant aux connexions en lecture seule au réplica d'accéder à et lire ses bases de données lorsqu'il s'exécute comme réplica secondaire. Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires lisibles ; Groupes de disponibilité Always On](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
-    -   Exécution d'opérations de sauvegarde sur ses bases de données lorsqu'il s'exécute comme réplica secondaire. Pour plus d’informations, consultez [secondaires actifs : Sauvegarde sur les réplicas secondaires](https://msdn.microsoft.com/library/ff878253.aspx)).  
+    -   Exécution d'opérations de sauvegarde sur ses bases de données lorsqu'il s'exécute comme réplica secondaire. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur les réplicas secondaires](https://msdn.microsoft.com/library/ff878253.aspx)).  
   
      L'utilisation de fonctions secondaires actives améliore l'efficacité informatique et réduit les coûts grâce à une meilleure utilisation des ressources du matériel secondaire. En outre, le déchargement des applications de tentative de lecture et des travaux de sauvegarde vers des réplicas secondaires permet d'améliorer les performances au niveau du réplica principal.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "53356256"
 -   [Reporting Services](reporting-services-with-always-on-availability-groups-sql-server.md)  
   
 > [!WARNING]  
->  Pour plus d’informations sur les restrictions et limitations d’utilisation d’autres fonctionnalités avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [groupes de disponibilité AlwaysOn : Interopérabilité. SQL Server ; ](always-on-availability-groups-interoperability-sql-server.md).  
+>  Pour plus d’informations sur les restrictions et les limitations d’utilisation d’autres fonctionnalités avec les [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Groupes de disponibilité Always On : Interopérabilité. SQL Server ; ](always-on-availability-groups-interoperability-sql-server.md).  
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
   
@@ -151,15 +151,15 @@ ms.locfileid: "53356256"
   
 -   **Blogs :**  
   
-     [SQL Server Always On Blogs de l’équipe : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
+     [Blogs de l’équipe SQL Server Always On : Blog officiel de SQL Server AlwaysOn Team](https://blogs.msdn.com/b/sqlalwayson/)  
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vidéos :**  
   
-     [Microsoft SQL Server nom de code « Denali » Always On Series, Part 1 : Présentation de la Solution de haute disponibilité prochaine génération](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server, nom de code « Denali », série Always On, Partie 1 : Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (vidéo de présentation de la solution haute disponibilité de la génération suivante)  
   
-     [Microsoft SQL Server nom de code « Denali » Always On Series, Part 2 : Création d’une Solution de haute disponibilité critique à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server, nom de code « Denali », série Always On, Partie 2 : Création d’une Solution de haute disponibilité critique à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Livres blancs :**  
   

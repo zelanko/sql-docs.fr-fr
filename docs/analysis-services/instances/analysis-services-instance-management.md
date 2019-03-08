@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 10623ea2c0dcb413bad08e1d68dfd9d5c9a9984a
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 2a93a7ddb0af87ae15f8d793f21a008d9a4bc25c
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852884"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579069"
 ---
 # <a name="sql-server-analysis-services-server-management"></a>Gestion de serveur SQL Server Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,12 +47,12 @@ Pour Azure Analysis Services, consultez [gérer Azure Analysis Services](https:/
  En règle générale, la plupart des tâches d'administration que vous devez effectuer ne varient pas au niveau du mode. En tant qu'administrateur système d'Analysis Services, vous pouvez utiliser les mêmes procédures et scripts pour gérer une instance d'Analysis Services sur votre réseau, quelle que soit la manière dont elle a été installée.  
   
 > [!NOTE]  
->  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint constitue toutefois une exception. L’administration de serveur d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] s’effectue toujours dans le contexte d’une batterie de serveurs SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] diffère des autres modes serveur en ceci qu’il est toujours à instance unique et est toujours géré à l’aide de l’Administration centrale de SharePoint ou de l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Bien qu’il soit possible de se connecter à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint dans SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cette méthode est déconseillée. Une batterie de serveurs SharePoint inclut l'infrastructure qui synchronise l'état du serveur et surveille la disponibilité du serveur. L'utilisation d'autres outils peut interférer avec ces opérations. Pour plus d’informations sur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] administration de serveur, consultez [Power Pivot pour SharePoint ](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
+>  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint constitue toutefois une exception. L’administration de serveur d’un déploiement [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] s’effectue toujours dans le contexte d’une batterie de serveurs SharePoint. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] diffère des autres modes serveur en ceci qu’il est toujours à instance unique et est toujours géré à l’aide de l’Administration centrale de SharePoint ou de l’outil de configuration de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Bien qu’il soit possible de se connecter à [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint dans SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], cette méthode est déconseillée. Une batterie de serveurs SharePoint inclut l'infrastructure qui synchronise l'état du serveur et surveille la disponibilité du serveur. L'utilisation d'autres outils peut interférer avec ces opérations. Pour plus d’informations sur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] administration de serveur, consultez [Power Pivot pour SharePoint](../../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md).  
   
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Comparaison des Solutions tabulaires et multidimensionnelles ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
+ [Comparaison des Solutions tabulaires et multidimensionnelles](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)   
  [Déterminer le mode serveur d'une instance Analysis Services](../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

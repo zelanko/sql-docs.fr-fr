@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4c7c5bae386f142dff45be8a1b1371f104cfab3
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044545"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579349"
 ---
 # <a name="sql-graph-architecture"></a>Graphique de l’Architecture SQL  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ Découvrez le [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introdui
 
 |Tâche   |Article connexe  |Remarques
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` est désormais étendue pour prendre en charge la création d’une table en tant que nœud ou AS EDGE. Notez que le tableau de bord peut ou ne peut pas avoir tous les attributs définis par l’utilisateur.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` est désormais étendue pour prendre en charge la création d’une table en tant que nœud ou AS EDGE. Notez que le tableau de bord peut ou ne peut pas avoir tous les attributs définis par l’utilisateur.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Les tables de nœuds et d’arêtes peuvent être modifiées de la même façon qu’une table relationnelle, en utilisant le `ALTER TABLE`. Les utilisateurs peuvent ajouter ou modifier les colonnes définies par l’utilisateur, les index ou contraintes. Toutefois, comme la modification des colonnes graphiques internes, `$node_id` ou `$edge_id`, entraîne une erreur.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Les utilisateurs peuvent créer des index sur les pseudo colonnes et les colonnes définies par l’utilisateur dans les tables de nœuds et d’arêtes. Tous les types d’index sont pris en charge, y compris les index columnstore en cluster et non-cluster.  |
 |CRÉER DES CONTRAINTES D’ARÊTE    |[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Les utilisateurs peuvent maintenant créer les contraintes d’arête sur des tableaux de bord pour appliquer la sémantique spécifique et également de maintenir l’intégrité des données  |

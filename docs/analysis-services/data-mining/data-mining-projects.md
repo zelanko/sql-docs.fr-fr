@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 75e71b4a17aa74ecb33f0a0d8c195b2e60b0e5a1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3f2fd0817aeae714ca1e217b9dc2011df92c4b28
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506929"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579379"
 ---
 # <a name="data-mining-projects"></a>Projets d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -213,7 +213,7 @@ ms.locfileid: "52506929"
 |Fournit des liens vers des informations sur chacune des visionneuses de modèles d'exploration de données|[Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)|  
 |En savoir plus sur la création d'un graphique de courbes d'élévation, d'un graphique des bénéfices ou d'une matrice de classification, ou sur le test d'une structure d'exploration de données|[Test et validation &#40;Exploration des données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)|  
 |En savoir plus sur les options de traitement et les autorisations|[Traitement des objets d'exploration de données](../../analysis-services/data-mining/processing-data-mining-objects.md)|  
-|Fournit des informations supplémentaires sur Analysis Services|[Bases de données de modèle multidimensionnel ](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
+|Fournit des informations supplémentaires sur Analysis Services|[Bases de données de modèle multidimensionnel](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Mining Designer](../../analysis-services/data-mining/data-mining-designer.md)   

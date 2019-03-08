@@ -15,12 +15,12 @@ ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1b3bf1b9c7b43a2196f2bc2c09422feb43cbc7c4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134089"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579319"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Réplication, suivi des modifications, capture de données modifiées et groupes de disponibilité AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La réplication, la capture de données modifiées (CDC) et le suivi des modifications (CT) sont pris en charge sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aide à fournir des fonctionnalités haute disponibilité et de récupération de base de données supplémentaires.  
@@ -218,7 +218,7 @@ ms.locfileid: "54134089"
   
 ### <a name="considerations"></a>Observations  
   
--   La base de données de distribution n'est pas prise en charge en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de bases de données. La configuration de la réplication est couplée à l'instance de SQL Server sur laquelle le serveur de distribution est configuré ; par conséquent la base de données de distribution ne peut pas être mise en miroir ni répliquée. Pour fournir une haute disponibilité au serveur de distribution, utilisez un cluster de basculement SQL Server. Pour plus d’informations, consultez [ Instances de Cluster de basculement AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   La base de données de distribution n'est pas prise en charge en vue d'une utilisation avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ou la mise en miroir de bases de données. La configuration de la réplication est couplée à l'instance de SQL Server sur laquelle le serveur de distribution est configuré ; par conséquent la base de données de distribution ne peut pas être mise en miroir ni répliquée. Pour fournir une haute disponibilité au serveur de distribution, utilisez un cluster de basculement SQL Server. Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Le basculement d'abonné vers une base de données secondaire, s'il est pris en charge, est une procédure manuelle relativement complexe. La procédure est, pour l'essentiel, identique à la méthode utilisée pour le basculement vers une base de données de l'abonné en miroir. Les abonnés doivent exécuter [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] ou une version ultérieure pour pouvoir participer à un groupe de disponibilité.  
   
@@ -231,7 +231,7 @@ ms.locfileid: "54134089"
   
 -   [Maintenance d’une base de données de Publication AlwaysOn &#40;SQL Server&#41;](maintaining-an-always-on-publication-database-sql-server.md)  
   
--   [Administration de réplication Forum aux questions](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
+-   [FAQ sur l’administration de la réplication](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)  
   
  **Change data capture**  
   
@@ -253,7 +253,7 @@ ms.locfileid: "54134089"
  [Abonnés de réplication et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](replication-subscribers-and-always-on-availability-groups-sql-server.md)   
  [Conditions préalables, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Groupes de disponibilité AlwaysOn : Interopérabilité (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [ les Instances de Cluster de basculement AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
+ [Groupes de disponibilité AlwaysOn : Interopérabilité (SQL Server)](always-on-availability-groups-interoperability-sql-server.md) [les Instances de Cluster de basculement AlwaysOn (SQL Server)](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)   
  [À propos de la capture de données modifiées &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-data-capture-sql-server.md)   
  [À propos du suivi des modifications &#40;SQL Server&#41;](../../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Réplication SQL Server](../../../relational-databases/replication/sql-server-replication.md)   

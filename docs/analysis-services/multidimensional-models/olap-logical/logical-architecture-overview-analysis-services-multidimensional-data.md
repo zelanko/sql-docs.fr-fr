@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0567ab525c4c8d1c2a9efdbfc3011a925f70401c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397753"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579439"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services s'exécute en mode de déploiement du serveur qui détermine l'architecture de la mémoire et l'environnement d'exécution utilisés par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] pour SharePoint, utilisé pour le chargement et l’interrogation d’Excel ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] des modèles de données à l’intérieur d’un classeur.  
   
- Cette rubrique explique l'architecture de base d'Analysis Services lors de l'exploitation en mode multidimensionnel et d'exploration de données. Pour plus d’informations sur les autres modes, consultez [modélisation tabulaire ](../../../analysis-services/tabular-models/tabular-models-ssas.md) et [comparaison sous forme de tableau et les Solutions multidimensionnelles ](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ Cette rubrique explique l'architecture de base d'Analysis Services lors de l'exploitation en mode multidimensionnel et d'exploration de données. Pour plus d’informations sur les autres modes, consultez [modélisation tabulaire](../../../analysis-services/tabular-models/tabular-models-ssas.md) et [comparaison sous forme de tableau et les Solutions multidimensionnelles](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
 ## <a name="basic-architecture"></a>Architecture de base  
  Une instance d'[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] peut contenir plusieurs bases de données, et une base de données peut contenir en même temps des objets OLAP et des objets d'exploration de données. Les applications se connectent à une instance spécifiée de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] et à une base de données spécifiée. Un ordinateur serveur peut héberger plusieurs instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Instances de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sont nommées en tant que «\<nom_serveur >\\< nom_instance\>». L’illustration suivante montre toutes les relations mentionnées entre [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objets.  
@@ -78,13 +78,13 @@ ms.locfileid: "52397753"
 ||||.|||Dernière|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|DEC-29-99|DEC-22-99|DEC-29-99|  
+|All Time|||25110|6547|18563|Dec-29-99|Dec-22-99|Dec-29-99|  
 ||1st half||11173|2977|8196|Jun-28-99|Juin-20-99|Jun-28-99|  
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|Juin-20-99|Jun-28-99|  
-||2nd half||13937|3570|10367|DEC-29-99|DEC-22-99|DEC-29-99|  
+||2nd half||13937|3570|10367|Dec-29-99|Dec-22-99|Dec-29-99|  
 |||3rd quarter|6119|1444|4675|Sep-30-99|SEP-18-99|Sep-30-99|  
-|||4th quarter|7818|2126|5692|DEC-29-99|DEC-22-99|DEC-29-99|  
+|||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
  Après la création d'un cube, il est possible de définir de nouvelles agrégations ou de modifier les agrégations existantes pour définir des options qui déterminent si les agrégations sont précalculées durant le traitement ou calculées lors de l'exécution des requêtes. **Rubrique connexe :**[agrégations et conceptions d’agrégation](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
@@ -107,8 +107,8 @@ ms.locfileid: "52397753"
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|.|Dernière|  
-|3516987|1|6|1|15|Janvier-10-99|  
-|3554790|1|6|1|40|Janvier-19-99|  
+|3516987|1|6|1|15|Jan-10-99|  
+|3554790|1|6|1|40|Jan-19-99|  
 |3572673|1|6|1|34|Jan-27-99|  
 |3600974|1|6|1|45|Feb-02-99|  
 |3645541|1|6|1|20|Feb-09-99|  
@@ -121,6 +121,6 @@ ms.locfileid: "52397753"
  L'exemple présenté ici ne contient qu'une seule table de faits. Quand un cube a plusieurs tables de faits, les mesures de chaque table de faits sont organisées en groupes de mesures et un groupe de mesures est lié à un jeu de dimensions spécifique par des relations de dimension définies. Ces relations sont définies en spécifiant les tables participantes dans la vue de source de données et la granularité de la relation. **Rubrique connexe :**[relations de Dimension](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Bases de données de modèle multidimensionnel ](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Bases de données de modèle multidimensionnel](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

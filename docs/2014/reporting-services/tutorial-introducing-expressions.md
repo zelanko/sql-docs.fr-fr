@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Introduction aux Expressions | Microsoft Docs'
+title: 'Didacticiel : Introduction aux expressions | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: ca902670ae5947b88a306680855e92719fe44591
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295117"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579599"
 ---
-# <a name="tutorial-introducing-expressions"></a>Didacticiel : Introduction aux Expressions
+# <a name="tutorial-introducing-expressions"></a>Didacticiel : Introduction aux expressions
   Les expressions vous permettent de créer des rapports puissants et flexibles. Ce didacticiel vous apprend à créer et implémenter des expressions qui utilisent des fonctions et des opérateurs communs. Vous utiliserez le **Expression** boîte de dialogue pour écrire des expressions qui concatènent des valeurs de nom, recherchent des valeurs dans un dataset distinct, afficher des images différentes en fonction des valeurs de champ et ainsi de suite.  
   
  Le rapport est un rapport en barres avec des lignes en couleur alternées de lignes blanches. Le rapport inclut un paramètre de sélection de couleur pour les lignes non blanches.  
@@ -66,7 +66,7 @@ ms.locfileid: "56295117"
 >  Dans ce didacticiel, la requête contient les valeurs de données, afin qu'il ne soit pas nécessaire de disposer d'une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, choisissez une source de données et créer un jeu de données, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>Pour créer un nouveau rapport de tableau  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56295117"
   
      La requête spécifie les noms de colonne, notamment la date de naissance, le prénom, le nom, l'État ou la province, l'identifiant de pays/région, le sexe et les achats de l'année en cours jusqu'à ce jour.  
   
-10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 20 lignes de données et inclut les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, Ytdpurcharse et LastPurchase.  
+10. Dans la barre d’outils du Concepteur de requêtes, cliquez sur **Exécuter** (**!**). Le jeu de résultats affiche 20 lignes de données et inclut les colonnes suivantes : FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase et LastPurchase.  
   
 11. Cliquer sur **Suivant**.  
   
@@ -698,7 +698,7 @@ ms.locfileid: "56295117"
   
 1.  À partir du bouton **Générateur de rapports** , cliquez sur **Enregistrer sous**.  
   
-2.  Cliquez sur **Desktop`, `Mes Documents**, ou **mon ordinateur**, puis accédez au dossier où vous souhaitez enregistrer le rapport.  
+2.  Cliquez sur **Bureau**, **Mes documents**ou **Poste de travail**, puis naviguez jusqu'au dossier où vous souhaitez enregistrer le rapport.  
   
 3.  Dans **Nom**, remplacez le nom par défaut par **Synthèse de la comparaison des ventes**.  
   

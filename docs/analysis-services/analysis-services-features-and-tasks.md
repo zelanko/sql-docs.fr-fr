@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: db75799b3f26543f1e4a3ba9995fee99a909ee1d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6127a46d946da5746daa3cc01d837f5b41e7bbcb
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206940"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579329"
 ---
 # <a name="analysis-services-features-and-tasks"></a>Fonctionnalités et tâches Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53206940"
   La documentation d’Analysis Services est structurée en fonction du type de modèle et du mode serveur afin que vous puissiez vous concentrer sur les outils, les tâches et les fonctionnalités disponibles pour le mode que vous avez installé. Des tâches d’administration communes à plusieurs modes se trouvent dans Gestion des instances.  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Comparaison des Solutions tabulaires et multidimensionnelles ](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
+ [Comparaison des solutions tabulaires et multidimensionnelles](../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md)  
   
  [Outils et applications utilisés dans Analysis Services](../analysis-services/tools-and-applications-used-in-analysis-services.md)  
   
@@ -32,9 +32,9 @@ ms.locfileid: "53206940"
 
 [Modèles multidimensionnels](../analysis-services/multidimensional-models/multidimensional-models-ssas.md)
   
- [Exploration de données ](../analysis-services/data-mining/data-mining-ssas.md)  
+ [Exploration de données](../analysis-services/data-mining/data-mining-ssas.md)  
   
- [PowerPivot pour SharePoint ](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
+ [PowerPivot pour SharePoint](../analysis-services/power-pivot-sharepoint/power-pivot-for-sharepoint-ssas.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Analysis Services](../analysis-services/analysis-services.md)   

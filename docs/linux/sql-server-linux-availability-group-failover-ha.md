@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 891f86328042091bb1e7a67f725f13ee160dccf3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 79b55906477d091f4e61883a2f24d991f655054b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665828"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579459"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Basculement du groupe de disponibilité AlwaysOn sur Linux
 
@@ -38,7 +38,7 @@ Pour effectuer un basculement, le réplica secondaire qui deviendra le réplica 
 
 Basculer manuellement en deux étapes.
 
-   Tout d’abord,[ basculer manuellement en déplaçant des ressources de groupe de disponibilité](#manualMove) à partir du nœud de cluster qui possède les ressources vers un nouveau nœud.
+   Tout d’abord, [basculer manuellement en déplaçant des ressources de groupe de disponibilité](#manualMove) à partir du nœud de cluster qui possède les ressources vers un nouveau nœud.
 
    Le cluster bascule de la ressource de groupe de disponibilité et ajoute une contrainte d’emplacement. Cette contrainte configure la ressource à exécuter sur le nouveau nœud. Supprimer cette contrainte pour basculer correctement dans le futur.
 

@@ -16,12 +16,12 @@ ms.assetid: b2eda634-0f8e-4703-801b-7ba895544ff5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 15e75dd27ca447eaab326ff50cc67614d442e096
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43727e0c7795fbd1f2f0c6a56693c2f06fdf4536
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543593"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579039"
 ---
 # <a name="high-availability-solutions-sql-server"></a>Solutions haute disponibilité (SQL Server)
   Cette rubrique présente plusieurs solutions haute disponibilité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui améliorent la disponibilité des serveurs ou des bases de données. Une solution à haute disponibilité masque l'impact d'une défaillance matérielle ou logicielle et gère la disponibilité des applications pour réduire au maximum le temps mort que perçoit l'utilisateur.  
@@ -36,10 +36,10 @@ ms.locfileid: "52543593"
  Instances de cluster de basculement AlwaysOn  
  Dans le cadre de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] AlwaysOn offre, les Instances de Cluster de basculement AlwaysOn exploitent la fonctionnalité de Clustering de basculement Windows Server (WSFC) pour fournir une haute disponibilité locale grâce à la redondance à l’instance de serveur un niveau  *instance de cluster de basculement* (ICF). Une instance FCI est une instance unique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installée sur plusieurs nœuds WSFC (clustering de basculement Windows Server) et, éventuellement, sur plusieurs sous-réseaux. Sur le réseau, une instance de cluster de basculement FCI apparaît en tant qu'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécutant sur un ordinateur unique, mais elle permet le basculement d'un nœud WSFC vers un autre en cas d'indisponibilité du nœud actuel.  
   
- Pour plus d’informations, consultez [ Instances de Cluster de basculement AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
+ Pour plus d’informations, consultez [Instances de cluster de basculement AlwaysOn (SQL Server)](windows/always-on-failover-cluster-instances-sql-server.md).  
   
  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]  
- [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est une solution haute disponibilité et de récupération d’urgence au niveau de l’entreprise introduite dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] pour vous permettre d’optimiser la disponibilité d’une ou de plusieurs bases de données utilisateur. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] exige que les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] résident sur des nœuds de clustering de basculement Windows Server (WSFC). Pour plus d’informations, consultez [ groupes de disponibilité AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
+ [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] est une solution haute disponibilité et de récupération d’urgence au niveau de l’entreprise introduite dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] pour vous permettre d’optimiser la disponibilité d’une ou de plusieurs bases de données utilisateur. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] exige que les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] résident sur des nœuds de clustering de basculement Windows Server (WSFC). Pour plus d’informations, consultez [groupes de disponibilité AlwaysOn (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md).  
   
 > [!NOTE]  
 >  Une instance FCI peut tirer parti de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] pour permettre une récupération d'urgence à distance au niveau de la base de données. Pour plus d’informations, consultez [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "52543593"
   
 ## <a name="see-also"></a>Voir aussi  
  [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
- [Mise en miroir de base de données : Interopérabilité et Coexistence &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Mise en miroir de base de données : interopérabilité et coexistence &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Fonctionnalités dépréciées du moteur de base de données dans SQL Server 2014](../../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)  
   
   

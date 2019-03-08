@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 434996f53cefc3c30cc649411db7699ed2bd3f7e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b292e20880dcb77c4f448f7e141355edff67417f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401022"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578999"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Déterminer le mode serveur d'une instance Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Analysis Services peuvent être installés dans l'un des trois modes serveur : Multidimensionnel et exploration de données (par défaut), [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint et tabulaire. Le mode serveur d'une instance Analysis Services est déterminé au moment de l'installation lorsque vous choisissez les options d'installation du serveur.  
   
- Le mode serveur détermine le type de solution que vous créez et déployez. Si vous n'avez pas installé le logiciel serveur et que vous souhaitez savoir dans quel mode le serveur a été installé, vous pouvez utiliser les informations de cette rubrique pour déterminer le mode. Pour plus d’informations sur la disponibilité des fonctionnalités dans un mode spécifique, consultez [comparaison sous forme de tableau et les Solutions multidimensionnelles ](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ Le mode serveur détermine le type de solution que vous créez et déployez. Si vous n'avez pas installé le logiciel serveur et que vous souhaitez savoir dans quel mode le serveur a été installé, vous pouvez utiliser les informations de cette rubrique pour déterminer le mode. Pour plus d’informations sur la disponibilité des fonctionnalités dans un mode spécifique, consultez [comparaison sous forme de tableau et les Solutions multidimensionnelles](../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
   
  Si vous ne souhaitez pas utiliser le mode serveur que vous avez installé, vous devez désinstaller puis réinstaller le logiciel en choisissant le mode de votre choix. Vous pouvez également installer une autre instance d'Analysis Services sur le même ordinateur afin que les différentes instances s'exécutent dans différents modes.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "52401022"
  [Installation de Power Pivot pour SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
  [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)   
  [Solutions de modèles tabulaires](../../analysis-services/tabular-models/tabular-models-ssas.md)   
- [Solutions de modèles multidimensionnels ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Solutions de modèles multidimensionnels](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-models-analysis-services-data-mining.md)  
   
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 6b0c376c6ab8625d2f31e6ad6ea132842315b1e1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 988a091fa7d536386cadd2ed3412213a2e608564
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410775"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579429"
 ---
 # <a name="lesson-1-create-a-new-tabular-model-project"></a>Leçon 1 : Créer un projet de modèle tabulaire
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -46,7 +46,7 @@ Cette rubrique constitue la première leçon du didacticiel de conception de mod
       
 6.  Dans **Niveau de compatibilité**, vérifiez que **SQL Server 2016 (1200)** est sélectionné, puis cliquez sur **OK**.   
  
-    ![en tant que-tabulaire-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
+    ![as-tabular-lesson1-tmd](../analysis-services/media/as-tabular-lesson1-tmd.png)
       
     Si vous ne voyez pas SQL Server 2016 RTM (1200) dans la zone de liste de niveau de compatibilité, vous n’utilisez pas la dernière version de SQL Server Data Tools. Pour obtenir la version la plus récente, consultez [Installer les outils de données SQL Server](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
 
@@ -59,11 +59,11 @@ Maintenant que vous avez créé un nouveau projet de modèle tabulaire, prenons 
   
 Une fois votre projet est créé, il s’ouvre dans SSDT. Sur le côté droit, dans **Explorateur de modèles tabulaires**, vous verrez une arborescence des objets dans votre modèle. Étant donné que vous n’avez pas encore importé de données, les dossiers sera vides. Vous pouvez cliquer sur un dossier de l’objet pour effectuer des actions, similaires à la barre de menus. À mesure que vous parcourez ce didacticiel, vous allez utiliser l’Explorateur de modèles tabulaires pour naviguer parmi les différents objets dans votre projet de modèle.
 
-![en tant que-tabulaire-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
+![as-tabular-lesson1-tme](../analysis-services/media/as-tabular-lesson1-tme.png)
 
 Cliquez sur le **l’Explorateur de solutions** onglet. Ici, vous verrez votre **Model.bim** fichier. Si vous ne voyez pas la fenêtre du concepteur vers la gauche (la fenêtre vide avec l’onglet Model.bim), dans **l’Explorateur de solutions**, sous **projet AW Internet Sales**, double-cliquez sur le **Model.bim** fichier. Le fichier Model.bim contient toutes les métadonnées pour votre projet de modèle. 
 
-![en tant que-tabulaire-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
+![as-tabular-lesson1-se](../analysis-services/media/as-tabular-lesson1-se.png)
   
 Examinons les propriétés du modèle. Cliquez sur **Model.bim**. Dans le **propriétés** fenêtre, vous verrez la [des propriétés de modèle](../analysis-services/tabular-models/model-properties-ssas-tabular.md), la plus importante qui est la **DirectQuery Mode** propriété. Cette propriété indique si le modèle est déployé en mode In-Memory (désactivé) ou en mode DirectQuery (activé). Pour ce didacticiel, vous allez créer et déployer votre modèle en mode In-Memory.
 
@@ -83,7 +83,7 @@ Explorez les boîtes de dialogue et les emplacements des fonctionnalités spéci
 
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
-Pour en savoir plus sur les différents types de projets de modèles tabulaires, consultez [projets de modèles tabulaires](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Pour en savoir plus sur l’environnement de création de modèles tabulaires, consultez [Générateur de modèles tabulaires ](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
+Pour en savoir plus sur les différents types de projets de modèles tabulaires, consultez [projets de modèles tabulaires](../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md). Pour en savoir plus sur l’environnement de création de modèles tabulaires, consultez [Générateur de modèles tabulaires](../analysis-services/tabular-models/tabular-model-designer-ssas.md).  
   
 
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?

@@ -19,19 +19,19 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: eae4ddb70dceccaa4956322dbf74cd84df3a83cc
-ms.sourcegitcommit: e3f5b70bbb4c66294df8c7b2c70186bdf2365af9
+ms.openlocfilehash: 991cbedc74567688aaae8e196ef4fb3356406517
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397558"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578670"
 ---
 # <a name="books-online-for-sql-server-2014"></a>Documentation en ligne de SQL Server 2014
 
   Bienvenue dans [!INCLUDE[msCoName](../includes/msconame-md.md)]® la documentation en ligne pour [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]®. La documentation en ligne contient les descriptions et la documentation de référence des tâches qui explique comment réaliser la gestion des données et le travail de décisionnel à l'aide de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  **Essayez :**  
- ![Machine virtuelle Azure de petite taille](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Vous avez un compte Azure ?  Puis accédez **[ici](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** pour lancer une Machine virtuelle avec SQL Server 2014 Service Pack 1 (SP1) déjà installé. Pour plus d’informations sur SQL Server 2014 (SP1), consultez [les informations de version de SQL Server 2014 Service Pack 1 ](https://support.microsoft.com/en-us/kb/3058865). 
+ ![Machine virtuelle Azure de petite taille](../sql-server/media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Vous avez un compte Azure ?  Puis accédez **[ici](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** pour lancer une Machine virtuelle avec SQL Server 2014 Service Pack 1 (SP1) déjà installé. Pour plus d’informations sur SQL Server 2014 (SP1), consultez [les informations de version de SQL Server 2014 Service Pack 1](https://support.microsoft.com/en-us/kb/3058865). 
   
 ## <a name="sql-server-technologies"></a>Technologies SQL Server  
 

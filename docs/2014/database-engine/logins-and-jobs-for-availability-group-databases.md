@@ -14,12 +14,12 @@ ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: d8653161775a35e326a7ed85ed982f1cb75bee03
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361492"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579219"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Gestion des connexions et des travaux pour les bases de données d'un groupe de disponibilité (SQL Server)
   Vous devez maintenir régulièrement le même ensemble de connexions utilisateur et de travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur chaque base de données primaire d'un groupe de disponibilité AlwaysOn et les bases de données secondaires correspondantes. Les connexions et les travaux doivent être reproduits sur chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui héberge un réplica de disponibilité pour le groupe de disponibilité.  
@@ -30,7 +30,7 @@ ms.locfileid: "53361492"
   
      Les instances de serveur qui hébergent les réplicas de disponibilité d'un groupe de disponibilité peuvent être configurées différemment, avec des lettres de lecteurs de bande ou de lecteur différentes. Les travaux de chaque réplica de disponibilité doivent autoriser de telles différences.  
   
-     Notez que les travaux de sauvegarde peuvent utiliser la fonction [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) pour déterminer si le réplica local est celui qui est utilisé par défaut pour les sauvegardes, selon les préférences de sauvegarde du groupe de disponibilité. Les travaux de sauvegarde créés à l’aide de l’ [Assistant Plan de maintenance](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) utilisent cette fonction en mode natif. Pour d'autres travaux de sauvegarde, nous vous recommandons d'utiliser cette fonction comme condition dans vos travaux de sauvegarde, de façon à ce qu'ils s'exécutent uniquement sur le réplica par défaut. Pour plus d’informations, consultez [ secondaires actifs : Sauvegarde sur les réplicas secondaires (groupes de disponibilité AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Notez que les travaux de sauvegarde peuvent utiliser la fonction [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) pour déterminer si le réplica local est celui qui est utilisé par défaut pour les sauvegardes, selon les préférences de sauvegarde du groupe de disponibilité. Les travaux de sauvegarde créés à l’aide de l’ [Assistant Plan de maintenance](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) utilisent cette fonction en mode natif. Pour d'autres travaux de sauvegarde, nous vous recommandons d'utiliser cette fonction comme condition dans vos travaux de sauvegarde, de façon à ce qu'ils s'exécutent uniquement sur le réplica par défaut. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur les réplicas secondaires (groupes de disponibilité AlwaysOn)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Connexions**  
   

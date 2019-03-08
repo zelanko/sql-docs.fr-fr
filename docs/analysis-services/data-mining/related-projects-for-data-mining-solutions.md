@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 5e7a1934a207beebca88e3939a211667e94be976
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 103d0a724fa3abeae61441f64dd763424e9454e8
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52415606"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579629"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -201,7 +201,7 @@ ms.locfileid: "52415606"
 -   Les langues de texte intégral ne prennent pas toutes en charge l'indexation sémantique. Pour obtenir la liste des langues prises en charge, consultez [sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Solutions de modèles multidimensionnels ](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
+ [Solutions de modèles multidimensionnels](../../analysis-services/multidimensional-models/multidimensional-model-solutions-ssas.md)   
  [Solutions de modèles tabulaires](../../analysis-services/tabular-models/tabular-models-ssas.md)  
   
   

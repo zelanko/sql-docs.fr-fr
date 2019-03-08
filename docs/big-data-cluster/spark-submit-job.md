@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c7d37843aff49f27ec05cdcf7b89febd86c72fbf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: c1d439c13b06b305c814813eeca7cb9bf8aa53c5
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241581"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578239"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Envoyer des travaux Spark sur des clusters de données volumineuses de SQL Server dans Azure Data Studio
 
@@ -34,7 +34,7 @@ Il existe plusieurs manières d’ouvrir la boîte de dialogue envoi de travail 
 
 + Cliquez sur **nouveau travail Spark** dans le tableau de bord pour ouvrir la boîte de dialogue envoi de travail Spark.
 
-    ![Soumettre le menu en cliquant sur le tableau de bord ](./media/submit-spark-job/new-spark-job.png)
+    ![Soumettre le menu en cliquant sur le tableau de bord](./media/submit-spark-job/new-spark-job.png)
  
 + Avec le bouton droit sur le cluster dans l’Explorateur d’objets et sélectionnez **soumettre un travail Spark** dans le menu contextuel. Boîte de dialogue de soumission de travaux Spark se.  
  

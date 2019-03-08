@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 901ab45ea727ec03a439f07ac2b4a971c98060f2
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: fdfb322699045a46630b7aaed4b4811f20be945f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645438"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579079"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer PRÉFORMÉE modèles machine learning sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -52,13 +52,13 @@ Les chemins d’accès de l’installation pour les modèles R et Python sont le
 
 + Pour r : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Pour Python : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs `
++ Pour Python : `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
 Les noms de fichiers de modèle sont répertoriées ci-dessous :
 
 + AlexNet\_Updated.model
 + ImageNet1K\_mean.xml
-+ pretrained.Model
++ pretrained.model
 + ResNet\_101\_Updated.model
 + ResNet\_18\_Updated.model
 + ResNet\_50\_Updated.model
@@ -78,7 +78,7 @@ Cliquez sur [ https://aka.ms/mlm4sql ](https://aka.ms/mlm4sql) pour télécharge
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
    ```
 
-**Sortie**
+**Output**
 
 Sur une connecté à internet SQL Server 2017 Machine Learning instance par défaut avec R et Python, vous devez voir des messages semblables à ce qui suit.
 

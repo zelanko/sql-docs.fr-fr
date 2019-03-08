@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0421361cf1718d6ee280269f9da125c148aa3afd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518271"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579399"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Configurer des cartes réseau InfiniBand pour Analytique Platform System
 Décrit comment configurer les cartes réseau InfiniBand sur un serveur non-appliance client pour se connecter au nœud de contrôle sur Parallel Data Warehouse (PDW). Utilisez ces instructions pour la connectivité de base et pour la haute disponibilité, afin que les processus de chargement, sauvegarde et autres se connectent automatiquement au réseau InfiniBand actif.  
@@ -182,5 +182,5 @@ Pour répondre aux besoins de votre entreprise, vous pouvez également joindre l
     -   MyPDW-SQLCTL01  
   
 ## <a name="see-also"></a>Voir aussi  
-[Obtenir et configurer un serveur de chargement ](acquire-and-configure-loading-server.md)  
+[Obtenir et configurer un serveur de chargement](acquire-and-configure-loading-server.md)  
   

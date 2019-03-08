@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 37ca9200dc142f1a1bb2f673b3b772644385d8ba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 54be969446b9c1b234860ce2a68c1208634246ce
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537363"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572772"
 ---
 # <a name="deployment-script-files---specifying-processing-options"></a>Fichiers de Script de déploiement - spécification d’Options de traitement
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -26,12 +26,13 @@ ms.locfileid: "52537363"
   
 -   **Méthode de traitement** Ce paramètre contrôle si les objets déployés sont traités après le déploiement et le type de traitement à effectuer. Trois options de traitement sont possibles :  
   
-    -   Traitement par défaut (option par défaut)  
+    -   Traitement par défaut (valeur par défaut) détecte l’état de traitement des objets de base de données et effectue le traitement nécessaire pour faire des objets non traités ou traités partiellement dans un état complètement traité.
   
-    -   Traitement complet  
+    -   Traitement complet traite un objet et tous les objets qu’il contient. Lorsque la commande Traiter entièrement est sélectionnée pour un objet qui a déjà été traité, Analysis Services supprime toutes les données de l'objet, puis traite l'objet. 
   
-    -   None  
-  
+    -   Aucun signifie qu'aucun traitement n’est effectuée.
+
+
 -   **Options de table d'écriture différée** Si l'écriture différée est activée dans le projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , ce paramètre définit les modalités de l'écriture différée. Trois options de table d'écriture différée sont possibles :  
   
     -   Par défaut, s'il existe une table d'écriture différée, elle est utilisée. S'il n'existe pas de table d'écriture différée, une nouvelle table d'écriture différée est créée.  

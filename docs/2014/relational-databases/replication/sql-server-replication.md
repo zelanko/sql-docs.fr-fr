@@ -13,12 +13,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9c2e9c5b1a0bf136e6b21f5b3ad6f12107d1f9b9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126069"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578319"
 ---
 # <a name="sql-server-replication"></a>Réplication SQL Server
   La réplication repose sur un ensemble de technologies qui permettent de copier et de distribuer des données et des objets de base de données d'une base de données vers une autre, puis de synchroniser ces bases de données afin de préserver leur cohérence. Avec la réplication, vous pouvez distribuer des données en différents emplacements et à des utilisateurs distants ou mobiles sur des réseaux locaux et étendus, des connexions d'accès à distance, des connexions sans fil, et Internet.  
@@ -29,10 +29,10 @@ ms.locfileid: "54126069"
   
 
 ## <a name="whats-new"></a>Nouveautés 
-- SQL Server 2017 ne propose pas de nouvelles fonctionnalités importantes pour la réplication SQL Server. 
-- SQL Server 2016 n’a pas introduit plusieurs nouvelles fonctionnalités importantes pour la réplication SQL Server. 
+- SQL Server 2017 ne propose pas de nouvelles fonctionnalités importantes pour la réplication SQL Server. 
+- SQL Server 2016 ne propose pas de nouvelles fonctionnalités importantes pour la réplication SQL Server. 
 
-Pour la compatibilité descendante d’informations, consultez [compatibilité descendante de la réplication](replication-backward-compatibility.md) 
+Pour obtenir des informations sur la compatibilité descendante, consultez [Compatibilité descendante de la réplication](replication-backward-compatibility.md). 
 
 
  ## <a name="replication-security"></a>Sécurité de la réplication
@@ -40,13 +40,13 @@ Pour la compatibilité descendante d’informations, consultez [compatibilité d
 -   [Afficher et modifier les paramètres de sécurité de la réplication](security/view-and-modify-replication-security-settings.md)  
 -   [Gérer des connexions dans la liste d’accès à la publication](security/manage-logins-in-the-publication-access-list.md)  
   
-## <a name="publishing-and-distribution"></a>Publication et la Distribution  
+## <a name="publishing-and-distribution"></a>Publication et distribution  
   
 -   [Configurer la publication et la distribution](configure-publishing-and-distribution.md)   
 -   [Afficher et modifier les propriétés d’une publication](publish/view-and-modify-publication-properties.md)   
 -   [Désactiver la publication et la distribution](disable-publishing-and-distribution.md)  
   
-## <a name="publications-and-articles"></a>Publications et des Articles 
+## <a name="publications-and-articles"></a>Publications et articles 
   
 -   [Create a Publication](publish/create-a-publication.md)    
 -   [Définir un article](publish/define-an-article.md)   
@@ -82,7 +82,7 @@ Pour la compatibilité descendante d’informations, consultez [compatibilité d
 ### <a name="merge-replication-options"></a>Options de la réplication de fusion  
   
 -   [Définir une relation d’enregistrement logique entre des articles de table de fusion](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
--   [Spécifiez les propriétés de réplication de fusion](publish/specify-merge-replication-properties.md)    
+-   [Spécifier les propriétés de la réplication de fusion](publish/specify-merge-replication-properties.md)    
 -   [Spécifier un programme de résolution d’articles de fusion](publish/specify-a-merge-article-resolver.md)    
 
   
@@ -126,13 +126,13 @@ Pour la compatibilité descendante d’informations, consultez [compatibilité d
 -   [Administrer une topologie d’égal à égal](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [Suspendre une topologie de réplication](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [Configurer le travail du jeu de transactions pour un serveur de publication Oracle](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [Mettre à niveau les Scripts de réplication ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [Mettre à niveau les Scripts de réplication](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## <a name="monitor"></a>Moniteur
   
 -   [Autoriser des non-administrateurs à utiliser le moniteur de réplication](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Surveiller la réplication par programmation](monitor/programmatically-monitor-replication.md)    
--   [Afficher les commandes répliquées et autres informations dans la base de données de Distribution ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [Afficher les informations de conflit pour les Publications de fusion ](view-conflict-information-for-merge-publications.md) 
+-   [Afficher les commandes répliquées et autres informations dans la base de données de Distribution](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [Afficher les informations de conflit pour les Publications de fusion](view-conflict-information-for-merge-publications.md) 
 -   [Mesurer la latence et valider les connexions pour la réplication transactionnelle](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

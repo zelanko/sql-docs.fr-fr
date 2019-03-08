@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
-ms.openlocfilehash: d73a1a3b75bbdce6604677464b6947c789bedbac
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 66d4015f31c08d0d67069147effac15ff5edd8ea
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160557"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579469"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-suse-linux-enterprise-server"></a>Démarrage rapide : Installer SQL Server et de créer une base de données sur SUSE Linux Enterprise Server
 
@@ -44,7 +44,7 @@ Vous devez disposer d’un ordinateur SP2 SLES v12 avec **au moins 3,25 Go** de 
 
 Pour installer SUSE Linux Enterprise Server sur votre propre machine, accédez à [ https://www.suse.com/products/server ](https://www.suse.com/products/server). Vous pouvez également créer des machines virtuelles SLES dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)et utiliser `--image SLES` dans l’appel à `az vm create`.
 
-Si vous avez déjà installé une version CTP ou la version RC de SQL Server 2017, vous devez d’abord supprimer l’ancien référentiel avant de suivre ces étapes. Pour plus d’informations, consultez [référentiels configurer Linux pour SQL Server 2017 et 2019 ](sql-server-linux-change-repo.md).
+Si vous avez déjà installé une version CTP ou la version RC de SQL Server 2017, vous devez d’abord supprimer l’ancien référentiel avant de suivre ces étapes. Pour plus d’informations, consultez [référentiels configurer Linux pour SQL Server 2017 et 2019](sql-server-linux-change-repo.md).
 
 > [!NOTE]
 > À ce stade, le [sous-système Windows pour Linux](https://msdn.microsoft.com/commandline/wsl/about) pour Windows 10 n’est pas pris en charge comme cible d’installation.

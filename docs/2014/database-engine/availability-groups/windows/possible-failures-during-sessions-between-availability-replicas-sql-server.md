@@ -14,12 +14,12 @@ ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 28198abe0fe417ea29d5a10409e141a7a2ee2f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9583ae760a53e3d3ab68f69b21317b370df726b7
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150569"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579309"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Défaillances possibles pendant les sessions entre les réplicas de disponibilité (SQL Server)
   Des problèmes physiques, de système d'exploitation ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent provoquer un échec dans une session entre deux réplicas de disponibilité. Un réplica de disponibilité ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. Pour détecter les autres erreurs qui passeraient sinon inaperçues, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implémente son propre mécanisme de délai d'expiration de session. Spécifie le délai d'expiration de la session en secondes. Ce délai d'attente est la durée maximale pendant laquelle une instance de serveur attend de recevoir un message PING d'une autre instance avant de considérer que cette dernière est déconnectée. Quand un délai d’expiration de session se produit entre deux réplicas de disponibilité, les réplicas de disponibilité partent du principe qu’une erreur s’est produite et déclarent une *erreur logicielle*.  
@@ -57,7 +57,7 @@ ms.locfileid: "48150569"
   
 -   le DNS ne fonctionne pas ;  
   
--   les câbles sont débranchés ;  
+-   les câbles sont débranchés ;  
   
 -   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows comprend un pare-feu qui bloque un port spécifique ;  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48150569"
   
 -   un serveur Windows a été renommé ;  
   
--   un serveur Windows a été redémarré ;  
+-   un serveur Windows a été redémarré ;  
   
 > [!NOTE]  
 >  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] ne protège pas des problèmes spécifiques au client qui accède aux serveurs. Prenons l'exemple d'un cas dans lequel une carte réseau publique gère des connexions clientes au réplica principal, tandis qu'une carte d'interface réseau privée gère le trafic entre les instances de serveur qui hébergent les réplicas d'un groupe de disponibilité. Dans ce cas, l'échec de la carte réseau publique empêcherait les clients d'accéder aux bases de données.  
@@ -82,14 +82,14 @@ ms.locfileid: "48150569"
 -   des ressources informatiques insuffisantes, telles qu'une surcharge de l'unité centrale ou du disque, la taille limite atteinte par le journal de transactions ou l'absence de mémoire ou de threads disponibles. Dans de telles situations, vous devez augmenter le délai d'attente, réduire la charge de travail ou remplacer les matériels pour qu'ils supportent la charge de travail.  
   
 ### <a name="the-session-timeout-mechanism"></a>Mécanisme du délai d'expiration de session  
- Étant donné que les erreurs logicielles ne sont pas détectables directement par une instance de serveur, lorsqu'elles surviennent, un réplica de disponibilité peut attendre indéfiniment une réponse de l'autre réplica de disponibilité dans une session. Pour éviter cela, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implémente son propre mécanisme de délai d'expiration de session, selon lequel les réplicas de disponibilités connectés envoient une commande ping sur chaque connexion ouverte à un intervalle fixe. La réception d'un ping au cours du délai d'attente indique que la connexion est toujours ouverte et que les instances de serveur communiquent via celle-ci. À la réception du ping, un réplica réinitialise son compteur de délai d'expiration sur cette connexion. Pour plus d’informations sur la relation des délais d’expiration de session et le mode de disponibilité, consultez [ Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Étant donné que les erreurs logicielles ne sont pas détectables directement par une instance de serveur, lorsqu'elles surviennent, un réplica de disponibilité peut attendre indéfiniment une réponse de l'autre réplica de disponibilité dans une session. Pour éviter cela, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implémente son propre mécanisme de délai d'expiration de session, selon lequel les réplicas de disponibilités connectés envoient une commande ping sur chaque connexion ouverte à un intervalle fixe. La réception d'un ping au cours du délai d'attente indique que la connexion est toujours ouverte et que les instances de serveur communiquent via celle-ci. À la réception du ping, un réplica réinitialise son compteur de délai d'expiration sur cette connexion. Pour plus d’informations sur la relation des délais d’expiration de session et le mode de disponibilité, consultez [Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
  Les réplicas primaire et secondaire s'envoient réciproquement une commande ping pour signaler qu'ils sont toujours actifs, et la limite définie par le délai d'expiration de session empêche que l'un ou l'autre réplica attende indéfiniment de recevoir une commande ping de l'autre réplica. La limite définie par le délai d'expiration de session est une propriété de réplica configurable par l'utilisateur dont la valeur par défaut est de 10 secondes. La réception d'un ping au cours du délai d'attente indique que la connexion est toujours ouverte et que les instances de serveur communiquent via celle-ci. À la réception d'un ping, un réplica de disponibilité réinitialise son compteur de délai d'expiration de session sur cette connexion.  
   
  Si aucun ping n'est reçu de l'autre réplica au cours de la période d'expiration de session, la connexion expire. La connexion est fermée, et le réplica expiré passe à l'état DISCONNECTED. Même si un réplica déconnecté est configuré pour le mode de validation synchrone, les transactions n'attendront pas que ce réplica se reconnecte et se resynchronise.  
   
 ## <a name="responding-to-an-error"></a>Réponse à une erreur  
- Quel que soit le type d'erreur, une instance de serveur qui détecte une erreur réagit comme il se doit en fonction du rôle de l'instance, du mode de disponibilité de la session et de l'état des autres connexions de la session. Pour plus d’informations sur les conséquences de la perte d’un partenaire, consultez [ Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md).  
+ Quel que soit le type d'erreur, une instance de serveur qui détecte une erreur réagit comme il se doit en fonction du rôle de l'instance, du mode de disponibilité de la session et de l'état des autres connexions de la session. Pour plus d’informations sur les conséquences de la perte d’un partenaire, consultez [Modes de disponibilité (groupes de disponibilité AlwaysOn)](availability-modes-always-on-availability-groups.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
  **Pour modifier la valeur du délai d'expiration (mode de disponibilité avec validation synchrone uniquement)**  
