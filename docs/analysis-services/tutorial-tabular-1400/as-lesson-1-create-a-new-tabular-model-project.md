@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services leçon du didacticiel 1 : Créez un projet de modèle tabulaire | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9135df30afcec9bdae307d9b12aec6810baa98ec
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 42dbe017baa29bb241cb2fa56f4fad3f70f5e3bb
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417230"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685216"
 ---
 # <a name="create-a-tabular-model-project"></a>Créer un projet de modèle tabulaire
 
@@ -48,7 +49,7 @@ Cet article est la première leçon du didacticiel de conception de modèle tabu
       
 6.  Dans **niveau de compatibilité**, sélectionnez **SQL Server 2017 / Azure Analysis Services (1400)**.   
  
-    ![en tant que-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
+    ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       
     Si vous ne voyez pas SQL Server 2017 / Azure Analysis Services (1400) dans la zone de liste de niveau de compatibilité, vous n’utilisez pas la dernière version de SQL Server Data Tools. Pour obtenir la version la plus récente, consultez [Installer les outils de données SQL Server](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt).  
       
@@ -59,11 +60,11 @@ Maintenant que vous avez créé un nouveau projet de modèle tabulaire, prenons 
   
 Une fois votre projet est créé, il s’ouvre dans Visual Studio. Sur le côté droit, dans **Explorateur de modèles tabulaires**, vous afficher une arborescence des objets dans votre modèle. Étant donné que vous n’avez pas encore importé de données, les dossiers sont vides. Vous pouvez cliquer sur un dossier de l’objet pour effectuer des actions, similaires à la barre de menus. À mesure que vous parcourez ce didacticiel, vous utilisez l’Explorateur de modèles tabulaires pour naviguer parmi les différents objets dans votre projet de modèle.
 
-![en tant que-lesson1-tme](../tutorial-tabular-1400/media/as-lesson1-tme.png)
+![as-lesson1-tme](../tutorial-tabular-1400/media/as-lesson1-tme.png)
 
 Cliquez sur le **l’Explorateur de solutions** onglet. Ici, vous voyez votre **Model.bim** fichier. Si vous ne voyez pas la fenêtre du concepteur vers la gauche (la fenêtre vide avec l’onglet Model.bim), dans **l’Explorateur de solutions**, sous **projet AW Internet Sales**, double-cliquez sur le **Model.bim** fichier. Le fichier Model.bim contient les métadonnées pour votre projet de modèle. 
 
-![en tant que-lesson1-se](../tutorial-tabular-1400/media/as-lesson1-se.png)
+![as-lesson1-se](../tutorial-tabular-1400/media/as-lesson1-se.png)
   
 Cliquez sur **Model.bim**. Dans le **propriétés** , vous devez voir les propriétés du modèle, la plus importantes qui est la **DirectQuery Mode** propriété. Cette propriété spécifie si le modèle est déployé en mode In-Memory (désactivé) ou en mode DirectQuery (activé). Pour ce didacticiel, vous créez et déployez votre modèle en mode In-Memory.
 

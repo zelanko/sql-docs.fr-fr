@@ -1,6 +1,6 @@
 ---
-title: 'Leçon du didacticiel Analysis Services 3 : marquer en tant que Table de dates | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services leçon du didacticiel 3 : Marquer en tant que Table de dates | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 282103baa0283e46e31b9ffe6b837e90e4bfac3c
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43069396"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685566"
 ---
 # <a name="mark-as-date-table"></a>Marquer en tant que table de dates
 
@@ -28,11 +29,11 @@ Dans cette leçon, vous marquez le **DimDate** table en tant que le *table de da
 
 Avant de marquer la table de date et d’une colonne de date, il est judicieux de faire quelques modifications visant à faciliter la compréhension de votre modèle. Notez que, dans la table DimDate, une colonne nommée **FullDateAlternateKey**. Cette colonne contient une ligne pour chaque jour de chaque année civile incluse dans la table. Vous utilisez cette colonne beaucoup dans les formules de mesure et dans les rapports. Cependant, FullDateAlternateKey n’est pas vraiment un bon identificateur pour cette colonne. Renommez cette colonne **Date**, rendant ainsi plus faciles à identifier et à inclure dans les formules. Si possible, il est judicieux de renommer des objets tels que des tables et des colonnes pour les rendre plus facilement repérable dans SSDT et création de rapports des applications clientes. 
   
-Durée estimée pour effectuer cette leçon : **trois minutes**  
+Durée estimée pour effectuer cette leçon : **Trois minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 2 : obtenir des données](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 2 : Obtenir des données](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Pour renommer la colonne FullDateAlternateKey
 
@@ -49,10 +50,10 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 3.  Dans la boîte de dialogue **Marquer comme Table de Date** , dans la zone de liste **Date** , sélectionnez la colonne **Date** comme identificateur unique. Il est généralement sélectionné par défaut. Cliquez sur **OK**. 
 
-    ![en tant que-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
+    ![as-lesson3-date-table](../tutorial-tabular-1400/media/as-lesson3-date-table.png)
   
 
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
-[Leçon 4 : Créer des relations](../tutorial-tabular-1400/as-lesson-4-create-relationships.md).
+[Leçon 4 : Créer des relations](../tutorial-tabular-1400/as-lesson-4-create-relationships.md).
   

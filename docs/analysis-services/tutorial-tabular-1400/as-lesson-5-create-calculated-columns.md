@@ -1,6 +1,6 @@
 ---
-title: 'Analysis Services leçon 5 du didacticiel : créer des colonnes calculées | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services leçon 5 du didacticiel : Créer des colonnes calculées | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 58a7f38dbbe7a68668418db4d1bef16e08784a08
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d1e2c4df54313ecc66e5e49904bdc40393c410f7
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43063858"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685556"
 ---
 # <a name="create-calculated-columns"></a>Créer des colonnes calculées
 
@@ -26,11 +27,11 @@ Vous créez cinq colonnes calculées dans trois tables différentes. Les étapes
 
 Cette leçon est également où vous utilisez tout d’abord les Expressions DAX (Data Analysis). DAX est un langage spécial permettant de créer des expressions de formule hautement personnalisables pour les modèles tabulaires. Dans ce didacticiel, vous utilisez DAX pour créer des colonnes calculées, les mesures et les filtres de rôle. Pour plus d’informations, consultez [DAX dans les modèles tabulaires](../tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md). 
   
-Durée estimée pour effectuer cette leçon : **15 minutes**  
+Durée estimée pour effectuer cette leçon : **15 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 4 : créer des relations](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 4 : Créer des relations](../tutorial-tabular-1400/as-lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Créer des colonnes calculées  
   
@@ -46,7 +47,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
     Une nouvelle colonne nommée **Calculated Column 1** est insérée à gauche de la colonne **Calendar Quarter** .  
   
-4.  Dans la barre de formule au-dessus de la table, tapez la formule DAX suivante : la saisie semi-automatique vous aide à taper les noms qualifiés complets de colonnes et de tables et répertorie les fonctions qui sont disponibles.  
+4.  Dans la barre de formule au-dessus de la table, tapez la formule DAX suivante : La saisie semi-automatique vous aide à taper les noms complets de colonnes et de tables et répertorie les fonctions disponibles.  
   
     ```  
     =RIGHT(" " & FORMAT([MonthNumberOfYear],"#0"), 2) & " - " & [EnglishMonthName]  
@@ -56,7 +57,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 5.  Renommer cette colonne **MonthCalendar**. 
 
-    ![en tant que-lesson5-nouvelle colonne](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
+    ![as-lesson5-newcolumn](../tutorial-tabular-1400/media/as-lesson5-newcolumn.png) 
   
 La colonne calculée MonthCalendar fournit un nom triable pour le mois.  
   
@@ -124,13 +125,13 @@ La colonne calculée ProductCategoryName est utilisée pour créer une hiérarch
 
 4.  Renommez la colonne en **Margin**.  
  
-      ![en tant que newmargin de lesson5](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
+      ![as-lesson5-newmargin](../tutorial-tabular-1400/media/as-lesson5-newmargin.png)
       
     La colonne calculée Margin est utilisée pour analyser les marges pour chaque vente.  
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
-[Leçon 6 : Créer des mesures](../tutorial-tabular-1400/as-lesson-6-create-measures.md).
+[Leçon 6 : Créer des mesures](../tutorial-tabular-1400/as-lesson-6-create-measures.md).
   
   
   

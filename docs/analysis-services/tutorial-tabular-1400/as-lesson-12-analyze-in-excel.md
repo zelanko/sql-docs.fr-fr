@@ -1,6 +1,6 @@
 ---
-title: 'Leçon du didacticiel Analysis Services 12 : analyser dans Excel | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services leçon du didacticiel 12 : Analyser dans Excel | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 4b4531183c890e43158f2d9c0f9f4b18f5d303be
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084452"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685427"
 ---
 # <a name="analyze-in-excel"></a>Analyser dans Excel
 
@@ -24,11 +25,11 @@ Dans cette leçon, vous utilisez la fonctionnalité analyser dans Excel pour ouv
   
 Pour suivre cette leçon, Excel doit être installé sur le même ordinateur que Visual Studio.
   
-Durée estimée pour effectuer cette leçon : **5 minutes**  
+Durée estimée pour effectuer cette leçon : **5 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 11 : créer des rôles](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 11 : Créer des rôles](../tutorial-tabular-1400/as-lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Parcourir des données à l'aide des perspectives par défaut et Internet Sales  
 
@@ -52,11 +53,11 @@ Dans ces premières tâches, vous parcourez votre modèle à l’aide à la fois
   
 2.  Dans la boîte de dialogue **Analyser dans Excel** , laissez **Utilisateur Windows actuel** sélectionné, puis dans la zone de liste déroulante **Perspective** , sélectionnez **Internet Sales**, puis cliquez sur **OK**. 
     
-    ![en tant que-leçon 12-point de vue](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
+    ![as-lesson12-perspective](../tutorial-tabular-1400/media/as-lesson12-perspective.png)
     
 3.  Dans Excel, dans **PivotTable Fields**, notez que la table DimCustomer est exclue de la liste de champs.  
     
-    ![en tant que champs de leçon 12](../tutorial-tabular-1400/media/as-lesson12-fields.png)
+    ![as-lesson12-fields](../tutorial-tabular-1400/media/as-lesson12-fields.png)
     
 4.  Fermez Excel sans enregistrer le classeur.  
   
@@ -76,7 +77,7 @@ Les rôles sont une partie importante de n’importe quel modèle tabulaire. Au 
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
-Accédez à la leçon suivante : [leçon 13 : déployer](../tutorial-tabular-1400/as-lesson-13-deploy.md).
+Accédez à la leçon suivante : [Leçon 13 : Déployer](../tutorial-tabular-1400/as-lesson-13-deploy.md).
 
   
   

@@ -1,6 +1,6 @@
 ---
-title: 'Leçon du didacticiel Analysis Services 9 : créer des hiérarchies | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services leçon du didacticiel 9 : Créer des hiérarchies | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: 0261da590a30e077db8332aca35ed32dcc5656c6
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: cdb9f571e7bc1630ce12c0d0a4b7f57df8961907
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43071812"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685416"
 ---
 # <a name="create-hierarchies"></a>Créer des hiérarchies
 
@@ -24,11 +25,11 @@ Dans cette leçon, vous créez des hiérarchies. Les hiérarchies sont des group
   
 Pour créer des hiérarchies, utilisez le Générateur de modèles dans *vue de diagramme*. Création et la gestion des hiérarchies ne sont pas pris en charge dans la vue de données.  
   
-Durée estimée pour effectuer cette leçon : **20 minutes**  
+Durée estimée pour effectuer cette leçon : **20 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 8 : créer des perspectives](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 8 : Créer des perspectives](../tutorial-tabular-1400/as-lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Créer des hiérarchies  
   
@@ -49,7 +50,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
 
 6.  Enfin, ajoutez **EnglishProductName** à la hiérarchie de catégorie. Renommez-le **produit**.  
 
-    ![en tant que catégorie de lesson9](../tutorial-tabular-1400/media/as-lesson9-category.png)
+    ![as-lesson9-category](../tutorial-tabular-1400/media/as-lesson9-category.png)
   
 #### <a name="to-create-hierarchies-in-the-dimdate-table"></a>Pour créer des hiérarchies dans la table DimDate  
   

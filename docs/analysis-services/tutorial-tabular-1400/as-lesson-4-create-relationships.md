@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services leçon du didacticiel 4 : Créer des relations | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a39978dc461bd660d932e13561ed4d00c4041e0e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394517"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685607"
 ---
 # <a name="create-relationships"></a>Créer des relations
 
@@ -26,7 +27,7 @@ Durée estimée pour effectuer cette leçon : **10 minutes**
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 3 : Marquer en tant que Table de dates](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 3 : Marquer en tant que Table de dates](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examiner les relations existantes et ajouter de nouvelles relations  
 
@@ -71,11 +72,11 @@ Avant de poursuivre la création de votre modèle, vous devez vérifier ces rela
 
 Dans la vue de diagramme, notez une flèche, un astérisque et un nombre sur les lignes qui indiquent la relation entre les tables.
 
-![en tant que ligne de lesson4](../tutorial-tabular-1400/media/as-lesson4-line.png)
+![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 La flèche indique la direction du filtre. L’astérisque indique que cette table est la *nombreux* côté dans la cardinalité de la relation et celui qui contient cette table est la *un* côté de la relation. Si vous avez besoin modifier une relation ; par exemple, modifier la direction du filtrage de la relation ou sa cardinalité, double-cliquez sur la ligne de relation pour ouvrir la boîte de dialogue Modifier la relation.
 
-![en tant que lesson4-modification](../tutorial-tabular-1400/media/as-lesson4-edit.png)
+![as-lesson4-edit](../tutorial-tabular-1400/media/as-lesson4-edit.png)
 
 Ces fonctionnalités sont destinées au modélisation de données avancée et sortent du cadre de ce didacticiel. Pour plus d’informations, consultez [bidirectionnelle entre les filtres pour les modèles tabulaires dans Analysis Services](../tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -87,7 +88,7 @@ Dans certains cas, vous devrez peut-être créer des relations supplémentaires 
 
     Une ligne pleine apparaît et indique que vous avez créé une relation active entre la **OrderDate** colonne dans le **Internet Sales** table et le **Date** colonne dans la  **Date** table. 
   
-      ![en tant que-lesson4-nouveau](../tutorial-tabular-1400/media/as-lesson4-new.png) 
+      ![as-lesson4-new](../tutorial-tabular-1400/media/as-lesson4-new.png) 
   
     > [!NOTE]  
     > Lorsque vous créez des relations, la direction de la cardinalité et de filtre entre la table primaire et de la table de recherche associée est automatiquement sélectionnée.  
@@ -98,11 +99,11 @@ Dans certains cas, vous devrez peut-être créer des relations supplémentaires 
   
 3.  Enfin, créez une dernière relation. Dans le **FactInternetSales** table, cliquez et maintenez le **ShipDate** colonne, puis faites glisser le curseur vers le **Date** colonne dans le **DimDate** table, puis relâchez.  
     
-     ![en tant que newinactive de lesson4](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
+     ![as-lesson4-newinactive](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
-[Leçon 5 : Créer des colonnes calculées](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).
+[Leçon 5 : Créer des colonnes calculées](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).
   
   
   

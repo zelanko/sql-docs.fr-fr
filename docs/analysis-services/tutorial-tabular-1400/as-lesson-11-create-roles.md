@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services leçon 11 du didacticiel : Créer des rôles | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfiles"
-ms.openlocfilehash: ee28eb36fcd9e14210bc2a1411460100156f4a2f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: e75f1b9f838b09bbe4ab219aacd2616e04328238
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544354"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685456"
 ---
 # <a name="create-roles"></a>Créer les rôles
 
@@ -53,7 +54,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 4.  Dans la colonne **Autorisations** , cliquez sur la liste déroulante, puis sélectionnez l’autorisation **Lecture** . 
 
-    ![en tant que-lesson11-nouveau-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
+    ![as-lesson11-new-role](../tutorial-tabular-1400/media/as-lesson11-new-role.png) 
   
 5.  Facultatif : Cliquez sur le **membres** onglet, puis cliquez sur **ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle.  
   
@@ -72,7 +73,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
     ```
     
     Une formule de filtre de lignes doit être résolue en une valeur booléenne (TRUE/FALSE). Avec cette formule, vous spécifiez que seules les lignes avec la valeur Code pays / région « US » sont visibles par l’utilisateur.  
-    ![en tant que-lesson11-rôle-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
+    ![as-lesson11-role-filter](../tutorial-tabular-1400/media/as-lesson11-role-filter.png) 
   
 6.  Facultatif : Cliquez sur le **membres** onglet, puis cliquez sur **ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle.  
   

@@ -1,6 +1,6 @@
 ---
-title: 'Leçon du didacticiel Analysis Services 2 : obtenir des données | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services leçon du didacticiel 2 : Obtenir des données | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: ad1f5bc8fb59be05f10d476ccb3a66ea1c1747b9
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 01bf31c3d4f89b77ebdceae2e69d4054a578b03f
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43062210"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685316"
 ---
 # <a name="get-data"></a>Obtenir des données
 
@@ -27,11 +28,11 @@ Sous le capot, obtenir des données est Power Query, qui fournit un large évent
 > [!NOTE]
 > Tâches et des images dans ce didacticiel illustrent la connexion à une base de données AdventureWorksDW2014 sur un serveur local. Dans certains cas, une base de données AdventureWorksDW sur Azure SQL Data Warehouse peut afficher des objets différents ; Toutefois, ils sont fondamentalement les mêmes.
   
-Durée estimée pour effectuer cette leçon : **10 minutes**  
+Durée estimée pour effectuer cette leçon : **10 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 1 : créer un nouveau projet de modèle tabulaire](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 1 : Créez un projet de modèle tabulaire](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Créer une connexion  
   
@@ -49,16 +50,16 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
 
 4.  Lorsque vous êtes invité à entrer les informations d’identification, vous devez spécifier les informations d’identification Qu'analysis Services utilise pour se connecter à la source de données lors de l’importation et traitement des données. Dans **le Mode d’emprunt d’identité**, sélectionnez **emprunter l’identité de compte**, puis entrez les informations d’identification, puis cliquez sur **Connect**. Il est recommandé de qu'utiliser un compte dans lequel le mot de passe n’expire jamais.
 
-    ![Leçon 2-compte d’identification](../tutorial-tabular-1400/media/as-lesson2-account.png)
+    ![as-lesson2-account](../tutorial-tabular-1400/media/as-lesson2-account.png)
   
     > [!NOTE]  
     > L'utilisation d'un compte d'utilisateur et d'un mot de passe Windows est la méthode la plus sûre pour se connecter à une source de données.
   
 5.  Dans le navigateur, sélectionnez le **AdventureWorksDW** de base de données, puis cliquez sur **OK**. Cette opération crée la connexion à la base de données. 
   
-6.  Dans le navigateur, sélectionnez la case à cocher pour les tables suivantes : **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**,  **DimProductCategory**, **DimProductSubcategory**, et **FactInternetSales**.  
+6.  Dans le navigateur, sélectionnez la case à cocher pour les tables suivantes : **DimCustomer**, **DimDate**, **DimGeography**, **DimProduct**, **DimProductCategory**,  **DimProductSubcategory**, et **FactInternetSales**.  
 
-    ![en tant que-leçon 2-Sélectionnez-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
+    ![as-lesson2-select-tables](../tutorial-tabular-1400/media/as-lesson2-select-tables.png)
   
 Après avoir cliqué sur OK, l’éditeur de requête s’ouvre. Dans la section suivante, vous sélectionnez uniquement les données que vous souhaitez importer.
 
@@ -159,7 +160,7 @@ Il est important de sauvegarder fréquemment votre projet de modèle.
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
-[Leçon 3 : Marquer en tant que Table de dates](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md).
+[Leçon 3 : Marquer en tant que Table de dates](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md).
 
   
   

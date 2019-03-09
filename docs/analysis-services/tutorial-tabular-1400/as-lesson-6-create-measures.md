@@ -1,6 +1,6 @@
 ---
-title: 'Leçon du didacticiel Analysis Services 6 : créer des mesures | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services leçon du didacticiel 6 : Créer des mesures | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: f9b466a703dd04a53c6ebf7c6fac624476abcc52
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43093962"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685646"
 ---
 # <a name="create-measures"></a>Créer des mesures
 
@@ -28,11 +29,11 @@ Vous pouvez créer une mesure en cliquant sur une cellule vide dans la grille de
   
 Dans cette leçon, vous créez des mesures en entrant une formule DAX dans la barre de formule et à l’aide de la fonction Somme automatique.  
   
-Durée estimée pour effectuer cette leçon : **30 minutes**  
+Durée estimée pour effectuer cette leçon : **30 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
-Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 5 : créer des colonnes calculées](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
+Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit être effectué dans l’ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 5 : Créer des colonnes calculées](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Créer des mesures  
   
@@ -50,7 +51,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
     Notez que la cellule en haut à gauche contient maintenant une mesure nommée **DaysCurrentQuarterToDate**, suivie du résultat, **92**. Le résultat n’est pas pertinent à ce stade, car aucun filtre de l’utilisateur n’a été appliqué.
     
-      ![en tant que newmeasure de lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     Contrairement aux colonnes calculées, avec les formules de mesure, vous pouvez taper le nom de mesure, suivi par un signe deux-points, suivi par l’expression de formule.
 
@@ -77,7 +78,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
     La fonction de somme automatique crée automatiquement une mesure pour la colonne sélectionnée à l'aide de la formule de regroupement standard DistinctCount.  
     
-       ![en tant que newmeasure2 de lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
+       ![as-lesson6-newmeasure2](../tutorial-tabular-1400/media/as-lesson6-newmeasure2.png)
   
 4.  Dans la grille de mesures, cliquez sur la nouvelle mesure, puis, dans le **propriétés** fenêtre, dans **nom de la mesure**, renommez la mesure en **InternetDistinctCountSalesOrder**. 
  
@@ -89,13 +90,13 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
     |colonne|Nom de la mesure|Somme automatique (∑)|Formule|  
     |----------------|----------|-----------------|-----------|  
     |SalesOrderLineNumber|InternetOrderLinesCount|Compter|=COUNTA([SalesOrderLineNumber])|  
-    |OrderQuantity|InternetTotalUnits|SUM|=SUM([OrderQuantity])|  
-    |DiscountAmount|InternetTotalDiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |TotalProductCost|InternetTotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |SalesAmount|InternetTotalSales|SUM|=SUM([SalesAmount])|  
-    |Margin|InternetTotalMargin|SUM|=SUM([Margin])|  
-    |TaxAmt|InternetTotalTaxAmt|SUM|=SUM([TaxAmt])|  
-    |Freight|InternetTotalFreight|SUM|=SUM([Freight])|  
+    |OrderQuantity|InternetTotalUnits|Sum|=SUM([OrderQuantity])|  
+    |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |SalesAmount|InternetTotalSales|Sum|=SUM([SalesAmount])|  
+    |Margin|InternetTotalMargin|Sum|=SUM([Margin])|  
+    |TaxAmt|InternetTotalTaxAmt|Sum|=SUM([TaxAmt])|  
+    |Freight|InternetTotalFreight|Sum|=SUM([Freight])|  
   
 2.  En cliquant sur une cellule vide dans la grille de mesures et à l’aide de la barre de formule, créez, les mesures personnalisées suivantes dans l’ordre :  
   
@@ -127,6 +128,6 @@ Les mesures créées pour la table FactInternetSales peuvent être utilisées po
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
-[Leçon 7 : Créer des indicateurs de Performance clés](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md).  
+[Leçon 7 : Créer des indicateurs de Performance clés](../tutorial-tabular-1400/as-lesson-7-create-key-performance-indicators.md).  
 
   

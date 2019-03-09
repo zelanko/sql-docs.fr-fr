@@ -1,6 +1,6 @@
 ---
-title: 'Leçon supplémentaire du Analysis Services tutorial : lignes de détails | Microsoft Docs'
-ms.date: 08/27/2018
+title: 'Analysis Services leçon supplémentaire du didacticiel : Lignes de détails | Microsoft Docs'
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 28c5124508cedca026d262e34257bf48518580fb
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 20f5f32d4cca8b69d94410296e3653a92a1d6d46
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43078652"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685239"
 ---
 # <a name="supplemental-lesson---detail-rows"></a>Leçon supplémentaire - Lignes de détails
 
@@ -22,7 +23,7 @@ ms.locfileid: "43078652"
 
 Dans cette leçon supplémentaire, vous utilisez l’éditeur DAX pour définir une Expression de lignes de détail personnalisée. Une Expression de lignes de détail est une propriété sur une mesure, en fournissant aux utilisateurs finaux plus d’informations sur les résultats agrégés d’une mesure. 
   
-Durée estimée pour effectuer cette leçon : **10 minutes**  
+Durée estimée pour effectuer cette leçon : **10 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
 
@@ -36,11 +37,11 @@ Examinons les détails de la mesure InternetTotalSales avant d’ajouter une Exp
   
 2.  Dans **PivotTable Fields**, ajoutez le **InternetTotalSales** mesure à partir de la table FactInternetSales à **valeurs**, **CalendarYear** à partir de la table DimDate à **colonnes**, et **EnglishCountryRegionName** à **lignes**. Le tableau croisé dynamique permet à présent les résultats agrégés à partir de la mesure InternetTotalSales par région et par année. 
 
-    ![en tant que-leçon-détail-lignes-tableau croisé dynamique](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
+    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-pivottable.png)
 
 3. Dans le tableau croisé dynamique, double-cliquez sur une valeur agrégée pour une année et un nom de région. Ici, nous avons double-cliqué sur la valeur pour l’Australie et de l’année 2014. Une nouvelle feuille s’ouvre, contenant des données, mais pas l’utilité.
 
-    ![en tant que-leçon-détail-lignes-tableau croisé dynamique](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
+    ![as-lesson-detail-rows-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-rows-sheet.png)
   
 Nous voulons voir ici une table contenant des colonnes et lignes de données qui contribuent au résultat agrégé de la mesure InternetTotalSales. Pour ce faire, nous pouvons ajouter une Expression de lignes de détail en tant que propriété de la mesure.
 
@@ -52,7 +53,7 @@ Nous voulons voir ici une table contenant des colonnes et lignes de données qui
 
 2. Dans **propriétés** > **Expression de lignes de détail**, cliquez sur le bouton de l’éditeur pour ouvrir l’éditeur DAX.
 
-    ![en tant que-leçon-détail-lignes-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
+    ![as-lesson-detail-rows-ellipse](../tutorial-tabular-1400/media/as-lesson-detail-rows-ellipse.png)
 
 3. Dans l’éditeur DAX, entrez l’expression suivante :
 
@@ -73,7 +74,7 @@ Nous voulons voir ici une table contenant des colonnes et lignes de données qui
 
 4. De retour dans Excel, supprimez la feuille créée à l’étape 3, puis double-cliquez sur une valeur agrégée. Cette fois, avec une propriété d’Expression de lignes de détails définie pour la mesure, une nouvelle feuille s’ouvre contenant des données beaucoup plus utiles.
 
-    ![en tant que-leçon-détail-lignes-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
+    ![as-lesson-detail-rows-detailsheet](../tutorial-tabular-1400/media/as-lesson-detail-rows-detailsheet.png)
 
 5. Redéployez votre modèle.
 

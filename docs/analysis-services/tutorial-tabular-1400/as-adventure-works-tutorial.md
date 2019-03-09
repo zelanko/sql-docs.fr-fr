@@ -1,6 +1,6 @@
 ---
 title: Didacticiel de Analysis Services Adventure Works (1400) | Microsoft Docs
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 7abd968db3aacbb71ed238e3f6ae6b857c8b1d99
-ms.sourcegitcommit: 4183dc18999ad243c40c907ce736f0b7b7f98235
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: d4fae7f55543be52342692d344f250f8e08ba877
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/27/2018
-ms.locfileid: "43084712"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685486"
 ---
 # <a name="tabular-modeling-1400-compatibility-level"></a>Modélisation tabulaire (niveau de compatibilité 1400)
 
@@ -48,7 +49,7 @@ Pour suivre ce didacticiel, vous devez :
 
 -   Un [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/create-data-warehouse-portal) avec la **base de données exemple AdventureWorksDW**, ou un serveur local SQL Data Warehouse avec un [base de données exemple AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks). Lorsque vous installez une base de données AdventureWorksDW à un entrepôt de données locale SQL Server, utilisez la version de base de données d’exemple qui correspond avec votre version de serveur. 
 
-    **Important :** si vous installez la base de données à un entrepôt de données locale SQL Server et que vous déployez votre modèle sur un serveur Azure Analysis Services, un [passerelle de données locale](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) est requis.
+    **Important :** Si vous installez la base de données à un entrepôt de données locale SQL Server et que vous déployez votre modèle sur un serveur Azure Analysis Services, un [passerelle de données locale](https://docs.microsoft.com/azure/analysis-services/analysis-services-gateway) est requis.
 
 -   La dernière version de [SQL Server Data Tools (SSDT)](https://msdn.microsoft.com/library/mt204009.aspx). Ou, si vous disposez déjà de Visual Studio 2017, vous pouvez télécharger et installer [projets Microsoft Analysis Services](https://marketplace.visualstudio.com/items?itemName=ProBITools.MicrosoftAnalysisServicesModelingProjects) package (VSIX). Pour ce didacticiel, les références à SSDT et Visual Studio sont synonymes. 
 
@@ -100,7 +101,7 @@ Ces leçons ne sont pas nécessaires pour suivre ce didacticiel, mais il peuvent
   
 ## <a name="next-steps"></a>Étapes suivantes  
 
-Pour commencer, consultez [leçon 1 : créer un nouveau projet de modèle tabulaire](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
+Pour commencer, consultez [leçon 1 : Créez un projet de modèle tabulaire](../tutorial-tabular-1400/as-lesson-1-create-a-new-tabular-model-project.md).  
   
   
   

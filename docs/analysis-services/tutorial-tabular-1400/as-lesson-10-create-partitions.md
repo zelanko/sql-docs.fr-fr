@@ -1,6 +1,6 @@
 ---
 title: 'Analysis Services leçon du didacticiel 10 : Créer des partitions | Microsoft Docs'
-ms.date: 08/27/2018
+ms.date: 03/08/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,12 +9,13 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile"
-ms.openlocfilehash: f7b6e5bfd4c533028758f553e5d8c9b2ca21e6f2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
+ms.openlocfilehash: 705705410a69c4fa0eff507c97747f55b72b1250
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401142"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685696"
 ---
 # <a name="create-partitions"></a>Créer des partitions
 
@@ -42,11 +43,11 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
 
 5.  Dans l’aperçu, cliquez sur la flèche bas dans la **OrderDate** en-tête de colonne, puis cliquez sur **filtres de Date/heure** > **entre**.
 
-    ![en tant que-lesson10--éditeur de requête](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
+    ![as-lesson10-query-editor](../tutorial-tabular-1400/media/as-lesson10-query-editor.png)
 
 6.  Dans la boîte de dialogue Filtrer les lignes dans **afficher les lignes où : OrderDate**, laissez **est postérieur ou égal à**, puis dans le champ de date, entrez **1/1/2010**. Laissez le **et** opérateur sélectionné, puis sélectionnez **est avant**, puis dans le champ de date, entrez **1/1/2011**, puis cliquez sur **OK**.
 
-    ![en tant que-lesson10-filtre-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
+    ![as-lesson10-filter-rows](../tutorial-tabular-1400/media/as-lesson10-filter-rows.png)
     
     Notez que dans l’éditeur de requête, dans la section étapes appliquées, vous consultez une autre étape nommée lignes filtrées. Ce filtre consiste à sélectionner uniquement les dates de commande à partir de 2010.
 
@@ -54,7 +55,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
 
     Dans le Gestionnaire de Partition, notez que maintenant l’expression de requête a une clause lignes filtrées supplémentaire.
 
-    ![en tant que requête de lesson10](../tutorial-tabular-1400/media/as-lesson10-query.png)
+    ![as-lesson10-query](../tutorial-tabular-1400/media/as-lesson10-query.png)
   
     Cette instruction spécifie que cette partition doit inclure uniquement les données dans les lignes où OrderDate correspond à l’année 2010, comme spécifié dans la clause lignes filtrées.  
   
@@ -113,7 +114,7 @@ Dans le Gestionnaire de Partition, notez que le **dernier traitement** colonne p
   
     La boîte de dialogue **Traitement des données** apparaît et affiche les détails du traitement pour chaque partition. Notez qu'un nombre de lignes différent est transféré pour chaque partition. Chaque partition contient uniquement les lignes de l’année spécifiée dans la clause WHERE dans l’instruction SQL. Quand le traitement est terminé, continuez et fermez la boîte de dialogue Traitement des données.  
   
-    ![en tant que-lesson10-processus-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
+    ![as-lesson10-process-complete](../tutorial-tabular-1400/media/as-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 
