@@ -1,5 +1,5 @@
 ---
-title: Combiner le clustering de basculement et les groupes de disponibilité
+title: Combiner une instance de cluster de basculement avec des groupes de disponibilité
 description: Améliorez la haute disponibilité et la récupération d’urgence en combinant les fonctionnalités d’une instance de cluster de basculement SQL Server et un groupe de disponibilité Always On.
 ms.custom: seodec18
 ms.date: 07/02/2017
@@ -19,12 +19,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0db7b259158d9d7404230405c3e72bf78e93b822
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8257490dfae7e46cdca2a5ad4c0339da857a2e34
+ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213038"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56956080"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>Clustering de basculement et groupes de disponibilité Always On (SQL Server)
 
@@ -37,21 +37,21 @@ ms.locfileid: "53213038"
   
   
 ##  <a name="WSFC"></a> Clustering de basculement de serveur Windows et groupes de disponibilité  
- Le déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requiert un cluster WSFC (clustering de basculement Windows Server). Pour que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]soit activé, une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit résider sur un nœud WSFC, et le cluster et le nœud WSFC doivent être en ligne. De plus, chaque réplica de disponibilité d'un groupe de disponibilité donné doit résider sur un nœud différent du même cluster WSFC. La seule exception survient lors de la migration vers un autre cluster WSFC : un groupe de disponibilité peut temporairement chevaucher deux clusters.  
+ Le déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] exige un cluster de basculement Windows Server (cluster WSFC). Pour que [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] soit activé, une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit résider sur un nœud WSFC, et le cluster et le nœud WSFC doivent être en ligne. De plus, chaque réplica de disponibilité d’un groupe de disponibilité donné doit résider sur un nœud différent du même cluster WSFC. La seule exception survient lors de la migration vers un autre cluster WSFC : un groupe de disponibilité peut temporairement chevaucher deux clusters.  
   
- [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] s’appuie sur le cluster WSFC (clustering de basculement Windows Server) pour surveiller et gérer les rôles actuels des réplicas de disponibilité qui appartiennent à un groupe de disponibilité donné et pour déterminer de quelle manière un événement de basculement affecte les réplicas de disponibilité. Un groupe de ressources WSFC est créé pour chaque groupe de disponibilité que vous créez. Le cluster WSFC surveille ce groupe de ressources pour évaluer l'intégrité du réplica principal.  
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] s’appuie sur le cluster WSFC pour superviser et gérer les rôles actuels des réplicas de disponibilité qui appartiennent à un groupe de disponibilité donné et pour déterminer de quelle manière un événement de basculement affecte les réplicas de disponibilité. Un groupe de ressources WSFC est créé pour chaque groupe de disponibilité que vous créez. Le cluster WSFC supervise ce groupe de ressources pour évaluer l’intégrité du réplica principal.  
   
- Le quorum pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est basé sur tous les nœuds du cluster WSFC, indépendamment du fait qu'un nœud de cluster donné héberge des réplicas de disponibilité. Contrairement à la mise en miroir de bases de données, il n'existe aucun rôle de témoin dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+ Le quorum pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est basé sur tous les nœuds du cluster WSFC, indépendamment du fait qu’un nœud de cluster donné héberge des réplicas de disponibilité. Contrairement à la mise en miroir de bases de données, il n'existe aucun rôle de témoin dans [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
- L'intégrité globale d'un cluster WSFC est déterminée par les votes d'un quorum de nœuds du cluster. Si le cluster WSFC est mis hors connexion en raison d'un problème grave non planifié, ou en raison d'un problème de matériel ou de communication persistant, une intervention administrative manuelle est nécessaire. Un administrateur Windows Server ou de cluster WSFC doit forcer un quorum et remettre les nœuds de cluster survivants en ligne dans une configuration sans tolérance de panne.  
+ L’intégrité globale d’un cluster WSFC est déterminée par les votes d’un quorum de nœuds du cluster. Si le cluster WSFC est mis hors connexion en raison d’un problème grave non planifié, ou en raison d’un problème de matériel ou de communication persistant, une intervention administrative manuelle est nécessaire. Un administrateur Windows Server ou de cluster WSFC doit forcer un quorum et remettre les nœuds de cluster survivants en ligne dans une configuration sans tolérance de panne.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sont des sous-clés du cluster WSFC. Si vous supprimez et recréez un cluster WSFC, vous devez désactiver puis réactiver la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergeait un réplica de disponibilité sur le cluster WSFC d'origine.  
+>  Les clés de Registre [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sont des sous-clés du cluster WSFC. Si vous supprimez et recréez un cluster WSFC, vous devez désactiver puis réactiver la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] sur chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergeait un réplica de disponibilité sur le cluster WSFC d’origine.  
   
- Pour plus d’informations sur l’exécution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur nœuds de clustering de basculement Windows Server (WSFC) et sur le quorum WSFC, consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
+ Pour plus d’informations sur l’exécution de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur des nœuds WSFC et sur le quorum WSFC, consultez [Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md).  
   
 ##  <a name="SQLServerFC"></a> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instances de cluster de basculement et groupes de disponibilité  
- Vous pouvez configurer une deuxième couche de basculement au niveau de l'instance serveur en implémentant le clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le cluster WSFC. Un réplica de disponibilité peut être hébergé par une instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou par une instance de cluster de basculement. Un seul partenaire FCI peut héberger un réplica pour un groupe de disponibilité donné. Lorsqu'un réplica de disponibilité s'exécute sur une FCI, la liste des propriétaires possibles pour le groupe de disponibilité contiendra uniquement le nœud FCI actif.  
+ Vous pouvez configurer une deuxième couche de basculement au niveau de l’instance serveur en implémentant une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le cluster WSFC. Un réplica de disponibilité peut être hébergé par une instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou par une instance de cluster de basculement. Un seul partenaire FCI peut héberger un réplica pour un groupe de disponibilité donné. Lorsqu'un réplica de disponibilité s'exécute sur une FCI, la liste des propriétaires possibles pour le groupe de disponibilité contiendra uniquement le nœud FCI actif.  
   
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] ne dépend d'aucune forme de stockage partagé. Toutefois, si vous utilisez une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour héberger un ou plusieurs réplicas de disponibilité, chacune de ces instances de cluster de basculement requiert un stockage partagé conformément à l'installation standard de l'instance de cluster de basculement SQL Server.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53213038"
   
 ||Nœuds dans une instance de cluster de basculement|Réplicas dans un groupe de disponibilité|  
 |-|-------------------------|-------------------------------------------|  
-|**Utilise le cluster WSFC**|Oui|Oui|  
+|**Utilise WSFC**|Oui|Oui|  
 |**Niveau de protection**|Instance|Base de données|  
 |**Type de stockage**|Partagés|Non partagé<br /><br /> Même si les réplicas dans un groupe de disponibilité ne partagent pas le stockage, un réplica hébergé par une instance de cluster de basculement utilise une solution de stockage partagé conforme aux exigences de cette instance de cluster de basculement. La solution de stockage est partagée uniquement par les nœuds de l'instance de cluster de basculement et pas entre les réplicas du groupe de disponibilité.|  
 |**Solutions de stockage**|attachement direct, SAN, points de montage, SMB|Dépend du type de nœud|  
@@ -75,7 +75,7 @@ ms.locfileid: "53213038"
  **Les paramètres de stratégie de basculement du groupe de disponibilité s’appliquent à tous les réplicas, qu’il soit hébergé dans une instance autonome ou une instance de cluster de basculement.  
   
 > [!NOTE]  
->  Pour plus d’informations sur le **nombre de nœuds** dans le clustering de basculement et les **groupes de disponibilité Always On** pour les différentes éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Pour plus d’informations sur le **nombre de nœuds** dans les instances de cluster de basculement et les **groupes de disponibilité Always On** pour les différentes éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
   
 ### <a name="considerations-for-hosting-an-availability-replica-on-an-fci"></a>Considérations relatives à l'hébergement d'un réplica de disponibilité sur une instance de cluster de disponibilité  
   
@@ -84,7 +84,7 @@ ms.locfileid: "53213038"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Les instances de cluster de basculement ne prennent pas en charge le basculement automatique par les groupes de disponibilité. Par conséquent, tout réplica de disponibilité hébergé par une instance de cluster de basculement ne peut être configuré que pour un basculement manuel.  
   
- Vous devrez peut-être configurer un cluster WSFC (Clustering de basculement Windows Server) de manière à inclure les disques partagés qui ne sont pas disponibles sur tous les nœuds. Prenons par exemple un cluster WSFC réparti entre deux centres de données comportant trois nœuds. Deux des nœuds hébergent une instance de clustering de basculement SQL Server dans le centre de données principal et ont accès aux mêmes disques partagés. Le troisième nœud héberge une instance autonome de SQL Server dans un centre de données différent et n'a pas accès aux disques partagés du centre de données principal. Cette configuration de cluster WSFC prend en charge le déploiement d'un groupe de disponibilité si l'instance de cluster de basculement héberge le réplica principal et l'instance autonome héberge le réplica secondaire.  
+ Vous devrez peut-être configurer un cluster WSFC de sorte à inclure les disques partagés qui ne sont pas disponibles sur tous les nœuds. Prenons par exemple un cluster WSFC réparti entre deux centres de données comportant trois nœuds. Deux des nœuds hébergent une instance de cluster de basculement SQL Server dans le centre de données principal et ont accès aux mêmes disques partagés. Le troisième nœud héberge une instance autonome de SQL Server dans un centre de données différent et n'a pas accès aux disques partagés du centre de données principal. Cette configuration de cluster WSFC prend en charge le déploiement d’un groupe de disponibilité si l’instance de cluster de basculement héberge le réplica principal et l’instance autonome héberge le réplica secondaire.  
   
  Lorsque vous choisissez une instance de cluster de basculement pour l'hébergement d'un réplica de disponibilité pour un groupe de disponibilité donné, vérifiez qu'un basculement de l'instance de cluster de basculement ne peut pas provoquer de tentative d'hébergement, par un seul nœud WSFC, de deux réplicas de disponibilité pour le même groupe de disponibilité.  
   
@@ -93,10 +93,10 @@ ms.locfileid: "53213038"
  Marcel configure un cluster WSFC avec deux nœuds, `NODE01` et `NODE02`. Il installe une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , `fciInstance1`, sur `NODE01` et `NODE02` , où `NODE01` est le propriétaire actuel de `fciInstance1`.  
  Sur `NODE02`, Marcel installe une autre instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], `Instance3`, qui est une instance autonome.  
  Sur `NODE01`, Marcel active fciInstance1 pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Sur `NODE02`, il active `Instance3` pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Il configure ensuite un groupe de disponibilité pour lequel `fciInstance1` héberge le réplica principal et `Instance3` héberge le réplica secondaire.  
- À un certain stade, `fciInstance1` devient indisponible sur `NODE01`, et le cluster WSFC provoque un basculement de `fciInstance1` vers `NODE02`. Après le basculement, `fciInstance1` est une instance activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]qui s'exécute sous le rôle principal sur `NODE02`. Toutefois, `Instance3` réside maintenant sur le même nœud WSFC que `fciInstance1`. Cela viole la contrainte [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
- Pour résoudre le problème présenté par ce scénario, l'instance autonome, `Instance3`, doit résider sur un autre nœud dans le même cluster WSFC que `NODE01` et `NODE02`.  
+ À un certain stade, `fciInstance1` devient indisponible sur `NODE01` et le cluster WSFC provoque un basculement de `fciInstance1` vers `NODE02`. Après le basculement, `fciInstance1` est une instance activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]qui s'exécute sous le rôle principal sur `NODE02`. Toutefois, `Instance3` réside maintenant sur le même nœud WSFC que `fciInstance1`. Cela viole la contrainte [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
+ Pour résoudre le problème présenté par ce scénario, l’instance autonome, `Instance3`, doit résider sur un autre nœud dans le même cluster WSFC que `NODE01` et `NODE02`.  
   
- Pour plus d’informations sur le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+ Pour plus d’informations sur les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], consultez [Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 ##  <a name="FCMrestrictions"></a> Restrictions d'utilisation du Gestionnaire du cluster de basculement WSFC avec des groupes de disponibilité  
  N'utilisez pas le Gestionnaire du cluster de basculement pour manipuler des groupes de disponibilité, par exemple :  

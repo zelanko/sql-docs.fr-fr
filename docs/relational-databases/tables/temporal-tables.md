@@ -12,17 +12,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 967605ee7a4857347b4f1f7ca8ffc62ea0451d91
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403644"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017915"
 ---
 # <a name="temporal-tables"></a>Tables temporelles
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016 introduit la prise en charge des tables temporelles avec version contrôlée par le système en tant que fonctionnalité de base de données, qui offre une prise en charge intégrée de la fourniture d’informations sur les données stockées dans la table à tout moment, et non pas seulement les données correctes au moment présent. La fonctionnalité temporelle est une fonctionnalité de base de données introduite dans la norme ANSI SQL 2011.  
+  SQL Server 2016 introduit la prise en charge des tables temporelles (également appelées tables temporelles avec version gérée par le système) comme fonctionnalité de base de données, qui offre une prise en charge intégrée de la fourniture d’informations sur les données stockées dans la table à tout moment, et non pas seulement les données correctes au moment présent. La fonctionnalité temporelle est une fonctionnalité de base de données introduite dans la norme ANSI SQL 2011.  
   
  **Démarrage rapide**  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52403644"
   
     -   [Interrogation des données dans une table temporelle avec version gérée par le système](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)  
   
-    -   **Télécharger l’exemple de base de données Adventure Works :** pour commencer avec les tables temporelles, téléchargez la [base de données AdventureWorks pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) avec les exemples de script et suivez les instructions contenues dans le dossier « Temporel »  
+    -   **Télécharger l’exemple de base de données Adventure Works :** pour démarrer avec les tables temporelles, téléchargez la [base de données AdventureWorks pour SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502) avec les exemples de script, puis suivez les instructions contenues dans le dossier « Temporel »  
   
 -   **Syntaxe :**  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52403644"
   
     -   [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md)  
   
--   **Vidéo :** pour une discussion de 20 minutes sur la fonctionnalité temporelle, consultez [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
+-   **Vidéo :** pour regarder une présentation de 20 minutes de la fonctionnalité temporelle, consultez [Temporal in SQL Server 2016](https://channel9.msdn.com/Shows/Data-Exposed/Temporal-in-SQL-Server-2016).  
   
 ## <a name="what-is-a-system-versioned-temporal-table"></a>Qu’est-ce qu’une table temporelle avec version gérée par le système ?  
  Une table temporelle avec version contrôlée par le système est un type de table utilisateur conçu pour conserver un historique complet des modifications apportées aux données et permettre l’analyse à un point dans le temps. Ce type de table temporelle est appelée table temporelle avec version gérée par le système, car la période de validité de chaque ligne est gérée par le système (c’est-à-dire le moteur de base de données).  
@@ -81,9 +81,9 @@ ms.locfileid: "52403644"
 ## <a name="how-does-temporal-work"></a>Fonctionnement des tables temporelles  
  La gestion des versions d’une table est implémentée sous forme de paire de tables, une table actuelle et une table d’historique. Dans chacune de ces tables, les deux colonnes **datetime2** supplémentaires suivantes permettent de définir la période de validité de chaque ligne :  
   
--   Colonne de début de la période : le système enregistre l’heure de début associée à la ligne de cette colonne, généralement désignée comme colonne **SysStartTime** .  
+-   Colonne de début de la période : le système enregistre l’heure de début associée à la ligne de cette colonne, généralement désignée comme colonne **SysStartTime**.  
   
--   Colonne de fin de la période : le système enregistre l’heure de fin associée à la ligne de cette colonne, généralement désignée comme colonne **SysEndTime** .  
+-   Colonne de fin de la période : le système enregistre l’heure de fin associée à la ligne de cette colonne, généralement désignée comme colonne **SysEndTime**.  
   
  La table actuelle contient la valeur actuelle pour chaque ligne. La table d’historique contient la valeur précédente de chaque ligne, le cas échéant, ainsi que l’heure de début et l’heure de fin de la période pendant laquelle elle était valide.  
   
@@ -107,13 +107,13 @@ CREATE TABLE dbo.Employee
  WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.EmployeeHistory));  
 ```  
   
- **INSERTION :** lors d’une opération **INSERT**, le système définit la valeur de la colonne **SysStartTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système et attribue à la colonne **SysEndTime** la valeur maximale de 9999-12-31. La ligne est alors marquée comme ouverte.  
+ **Opérations INSERT :** lors d’une opération **INSERT**, le système définit la valeur de la colonne **SysStartTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système et il attribue à la colonne **SysEndTime** la valeur maximale de 9999-12-31. La ligne est alors marquée comme ouverte.  
   
- **MISE À JOUR :** lors d’une opération **UPDATE**, le système stocke la valeur précédente de la ligne dans la table d’historique et définit la valeur de la colonne **SysEndTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système. La ligne est alors marquée comme fermée, avec une période enregistrée pendant laquelle la ligne était valide. Dans la table actuelle, la ligne est mise à jour avec la nouvelle valeur et le système définit la valeur de la colonne **SysStartTime** sur l’heure de début de la transaction (dans le fuseau horaire UTC) d’après l’horloge du système. La valeur de la ligne mise à jour dans la table actuelle pour la colonne **SysEndTime** conserve la valeur maximale de 9999-12-31.  
+ **Opérations UPDATE :** lors d’une opération **UPDATE**, le système stocke la valeur précédente de la ligne dans la table d’historique et il définit la valeur de la colonne **SysEndTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système. La ligne est alors marquée comme fermée, avec une période enregistrée pendant laquelle la ligne était valide. Dans la table actuelle, la ligne est mise à jour avec la nouvelle valeur et le système définit la valeur de la colonne **SysStartTime** sur l’heure de début de la transaction (dans le fuseau horaire UTC) d’après l’horloge du système. La valeur de la ligne mise à jour dans la table actuelle pour la colonne **SysEndTime** conserve la valeur maximale de 9999-12-31.  
   
- **SUPPRESSION :** lors d’une opération **DELETE**, le système stocke la valeur précédente de la ligne dans la table d’historique et définit la valeur de la colonne **SysEndTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système. La ligne est alors marquée comme fermée et la période pendant laquelle la ligne précédente était valide est enregistrée. Dans la table actuelle, la ligne est supprimée. Les requêtes de la table actuelle ne renvoient pas cette ligne. Seules les requêtes qui traitent des données d’historique renvoient les données pour lesquelles une ligne est fermée.  
+ **Opérations DELETE :** lors d’une opération **DELETE**, le système stocke la valeur précédente de la ligne dans la table d’historique et il définit la valeur de la colonne **SysEndTime** sur l’heure de début de la transaction en cours (dans le fuseau horaire UTC) d’après l’horloge du système. La ligne est alors marquée comme fermée et la période pendant laquelle la ligne précédente était valide est enregistrée. Dans la table actuelle, la ligne est supprimée. Les requêtes de la table actuelle ne renvoient pas cette ligne. Seules les requêtes qui traitent des données d’historique renvoient les données pour lesquelles une ligne est fermée.  
   
- **FUSION :** lors d’une opération **MERGE**, l’opération se comporte exactement comme si un maximum de trois instructions (une instruction **INSERT**, une instruction **UPDATE**et/ou une instruction **DELETE**) s’exécutait, selon ce qui est spécifié en tant qu’actions dans l’instruction **MERGE** .  
+ **Opérations MERGE :** lors d’une opération **MERGE**, l’opération se comporte exactement comme si un maximum de trois instructions (une instruction **INSERT**, une instruction **UPDATE** et/ou une instruction **DELETE**) s’exécutait, selon ce qui est spécifié comme actions dans l’instruction **MERGE**.  
   
 > [!IMPORTANT]  
 >  Les heures enregistrées dans les colonnes datetime2 système sont basées sur l’heure de début de la transaction proprement dite. Par exemple, toutes les lignes insérées dans une seule transaction ont la même heure UTC enregistrée dans la colonne correspond au début de la période **SYSTEM_TIME** .  

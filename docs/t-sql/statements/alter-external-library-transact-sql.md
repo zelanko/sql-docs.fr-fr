@@ -1,7 +1,7 @@
 ---
 title: ALTER EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/05/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ''
@@ -13,16 +13,16 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - ALTER EXTERNAL LIBRARY
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6243f4b6fe34197e476c38dde9e2b4c717192944
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cc590bb618f9a95a0fbe7b0a9c173a64698cdf1e
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686757"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017965"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -30,7 +30,48 @@ ms.locfileid: "47686757"
 
 Modifie le contenu d’une bibliothèque de package externe existante.
 
-## <a name="syntax"></a>Syntaxe
+> [!NOTE]
+> Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur la plateforme Windows sont pris en charge dans SQL Server 2019 CTP 2.3. La prise en charge de Linux est prévue pour une version ultérieure.
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2019"></a>Syntaxe pour SQL Server 2019
+
+```text
+ALTER EXTERNAL LIBRARY library_name
+[ AUTHORIZATION owner_name ]
+SET <file_spec>
+WITH ( LANGUAGE = <language> )
+[ ; ]
+
+<file_spec> ::=
+{
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = WINDOWS )
+}
+
+<client_library_specifier> :: =
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
+
+<library_bits> :: =
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+
+<language> :: = 
+{
+      'R'
+    | 'Python'
+    | 'Java'
+}
+```
+::: moniker-end
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+## <a name="syntax-for-sql-server-2017"></a>Syntaxe pour SQL Server 2017
 
 ```text
 ALTER EXTERNAL LIBRARY library_name
@@ -41,18 +82,24 @@ WITH ( LANGUAGE = 'R' )
 
 <file_spec> ::=
 {
-(CONTENT = { <client_library_specifier> | <library_bits> | NONE}
-[, PLATFORM = WINDOWS )
+    (CONTENT = { <client_library_specifier> | <library_bits> | NONE}
+    [, PLATFORM = WINDOWS )
 }
 
 <client_library_specifier> :: =
-  '[\\computer_name\]share_name\[path\]manifest_file_name'
-| '[local_path\]manifest_file_name'
-| '<relative_path_in_external_data_source>'
+{
+      '[\\computer_name\]share_name\[path\]manifest_file_name'
+    | '[local_path\]manifest_file_name'
+    | '<relative_path_in_external_data_source>'
+}
 
 <library_bits> :: =
-{ varbinary_literal | varbinary_expression }
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
 ```
+::: moniker-end
 
 ### <a name="arguments"></a>Arguments
 
@@ -86,9 +133,19 @@ Au lieu de cela, vous pouvez passer le contenu du package en tant que variable a
 
 Spécifie la plateforme pour le contenu de la bibliothèque. Cette valeur est nécessaire lors de la modification d’une bibliothèque existante pour ajouter une autre plateforme. Windows est la seule plateforme prise en charge.
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**language**
+
+Spécifie le langage du package. La valeur peut être **R**, **Python** ou **Java**.
+::: moniker-end
+
 ## <a name="remarks"></a>Notes 
 
 Pour le langage R, les packages doivent être préparés sous la forme de fichiers d’archives compressés avec l’extension .ZIP pour Windows. Actuellement, seule la plateforme Windows est prise en charge.  
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Pour le langage Python, le package contenu dans un fichier .whl ou .zip doit être préparé sous la forme d’un fichier d’archive compressé. Si le package est déjà un fichier .zip, il doit être inclus dans un nouveau fichier .zip. Le chargement direct d’un package sous la forme de fichier .whl ou .zip n’est actuellement pas pris en charge.
+::: moniker-end
 
 L’instruction `ALTER EXTERNAL LIBRARY` charge uniquement les bits de la bibliothèque vers la base de données. La bibliothèque modifiée est installée quand un utilisateur exécute dans [sp_execute_external_script (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) du code qui appelle la bibliothèque.
 
@@ -120,7 +177,10 @@ EXEC sp_execute_external_script
 ;
 ```
 
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>B. Modifier une bibliothèque existante à l’aide d’un flux d’octets
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Pour le langage Python dans SQL Server 2019, l’exemple fonctionne également en remplaçant `'R'` par `'Python'`.
+::: moniker-end
+### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>b. Modifier une bibliothèque existante à l’aide d’un flux d’octets
 
 L’exemple suivant modifie la bibliothèque existante en passant les nouveaux bits sous forme de littéral hexadécimal.
 
@@ -128,6 +188,10 @@ L’exemple suivant modifie la bibliothèque existante en passant les nouveaux b
 ALTER EXTERNAL LIBRARY customLibrary 
 SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
 ```
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Pour le langage Python dans SQL Server 2019, l’exemple fonctionne également en remplaçant `'R'` par `'Python'`.
+::: moniker-end
 
 > [!NOTE]
 > Cet exemple de code montre uniquement la syntaxe ; la valeur binaire de `CONTENT =` a été tronquée pour des raisons de clarté et ne crée pas une bibliothèque fonctionnelle. Son véritable contenu serait beaucoup plus long.

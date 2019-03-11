@@ -2,7 +2,7 @@
 title: Incorporation des fonctions UDF scalaires dans les bases de données Microsoft SQL | Microsoft Docs
 description: Fonctionnalité d’incorporation (inlining) des fonctions UDF scalaires pour améliorer les performances des requêtes qui appellent des fonctions UDF scalaires dans SQL Server (version 2018 ou ultérieure) et Azure SQL Database.
 ms.custom: ''
-ms.date: 11/06/2018
+ms.date: 02/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 709f4a25ec4536c9ff1ba10cdaddd2ef8c104db2
-ms.sourcegitcommit: cb73d60db8df15bf929ca17c1576cf1c4dca1780
+ms.openlocfilehash: 0c2ed03ea43643aa8aaecd3e1600ee3e258929ed
+ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51222085"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57017925"
 ---
 # <a name="scalar-udf-inlining"></a>Incorporation des fonctions UDF scalaires
 
@@ -37,10 +37,10 @@ Les fonctions définies par l’utilisateur qui sont implémentées dans Transac
 
 Les fonctions UDF scalaires présentent généralement des performances médiocres pour les raisons suivantes.
 
-- **Appel itératif :** Les fonctions UDF sont appelées de façon itérative, une fois par tuple éligible. Cela implique des coûts supplémentaires de changements de contexte répétés en raison de l’appel de fonction. En particulier, les fonctions UDF qui exécutent des requêtes SQL dans leur définition sont gravement affectées.
-- **Absence d’évaluation des coûts :** Pendant l’optimisation, seuls les opérateurs relationnels sont estimés, tandis que les opérateurs scalaires ne le sont pas. Avant l’introduction des fonctions UDF scalaires, les autres opérateurs scalaires étaient généralement peu coûteux et n’exigeaient pas une évaluation des coûts. L’ajout d’un coût processeur réduit pour une opération scalaire suffisait. Il existe des scénarios où le coût réel est important et reste pourtant sous-représenté.
-- **Exécution interprétée :** Les fonctions UDF sont évaluées sous la forme d’un lot d’instructions, exécuté instruction par instruction. Chaque instruction proprement dite est compilée et le plan compilé est mis en cache. Cette stratégie de mise en cache permet d’économiser du temps, car elle évite les recompilations, mais chaque instruction s’exécute de manière isolée. Aucune optimisation entre les instructions n’est réalisée.
-- **Exécution en série :** SQL Server n’autorise pas le parallélisme intra-requête dans des requêtes qui appellent des fonctions UDF. 
+- **Appel itératif** : les fonctions UDF sont appelées de façon itérative, une fois par tuple éligible. Cela implique des coûts supplémentaires de changements de contexte répétés en raison de l’appel de fonction. En particulier, les fonctions UDF qui exécutent des requêtes SQL dans leur définition sont gravement affectées.
+- **Absence d’évaluation des coûts** : pendant l’optimisation, seuls les opérateurs relationnels sont estimés, tandis que les opérateurs scalaires ne le sont pas. Avant l’introduction des fonctions UDF scalaires, les autres opérateurs scalaires étaient généralement peu coûteux et n’exigeaient pas une évaluation des coûts. L’ajout d’un coût processeur réduit pour une opération scalaire suffisait. Il existe des scénarios où le coût réel est important et reste pourtant sous-représenté.
+- **Exécution interprétée** : les fonctions UDF sont évaluées sous la forme d’un lot d’instructions, exécuté instruction par instruction. Chaque instruction proprement dite est compilée et le plan compilé est mis en cache. Cette stratégie de mise en cache permet d’économiser du temps, car elle évite les recompilations, mais chaque instruction s’exécute de manière isolée. Aucune optimisation entre les instructions n’est réalisée.
+- **Exécution en série** : SQL Server n’autorise pas le parallélisme intra-requête dans des requêtes qui appellent des fonctions UDF. 
 
 ## <a name="automatic-inlining-of-scalar-udfs"></a>Incorporation automatique des fonctions UDF scalaires
 
@@ -141,16 +141,17 @@ Selon la complexité de la logique dans la fonction UDF, le plan de requête obt
 Une fonction UDF T-SQL scalaire peut être incorporée si toutes les conditions suivantes sont remplies :
 
 - La fonction UDF est écrite à l’aide des constructions suivantes :
-    - `DECLARE`, `SET` : Déclaration et affectations des variables.
-    - `SELECT` : Requête SQL avec une ou plusieurs affectations de variables<sup>1</sup>.
-    - `IF`/`ELSE` : Création de branches avec des niveaux d’imbrication arbitraires.
-    - `RETURN` : Une ou plusieurs instructions return.
-    - `UDF` : Appels de fonction imbriqués/récursifs<sup>2</sup>.
-    - Autres : Opérations relationnelles telles que `EXISTS`, `ISNULL`.
+    - `DECLARE`, `SET` : déclaration et affectations des variables.
+    - `SELECT`: requête SQL avec une ou plusieurs affectations de variables<sup>1</sup>.
+    - `IF`/`ELSE` : création de branches avec des niveaux d’imbrication arbitraires.
+    - `RETURN`: une ou plusieurs instructions return.
+    - `UDF`: appels de fonction imbriqués/récursifs<sup>2</sup>.
+    - Autres : opérations relationnelles telles que `EXISTS`, `ISNULL`.
 - La fonction UDF n’appelle pas de fonction intrinsèque dépendante du temps (telle que `GETDATE()`) ou ayant des effets secondaires<sup>3</sup> (telle que `NEWSEQUENTIALID()`).
 - La fonction UDF utilise la clause `EXECUTE AS CALLER` (comportement par défaut si la clause `EXECUTE AS` n’est pas spécifiée).
 - La fonction UDF ne référence pas de variables de table ni de paramètres table.
 - La requête qui appelle une fonction UDF scalaire ne référence pas un appel de fonction UDF scalaire dans sa clause `GROUP BY`.
+- La requête qui appelle une fonction UDF scalaire dans sa liste de sélection avec la clause `DISTINCT` ne référence pas un appel de fonction UDF scalaire dans sa clause `ORDER BY`.
 - La fonction UDF n’est pas compilée en mode natif (l’interopérabilité est prise en charge).
 - La fonction UDF n’est pas utilisée dans une colonne calculée ni une définition de contrainte de vérification.
 - La fonction UDF ne référence pas de types définis par l’utilisateur.

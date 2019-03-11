@@ -13,12 +13,12 @@ ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49e6357f4f108b05b0f28442d0e526445a5a5ad7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51659368"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007592"
 ---
 # <a name="database-properties-options-page"></a>Propriétés de la base de données (page Options)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51659368"
  Spécifiez le classement de la base de données en le sélectionnant dans la liste. Pour plus d’informations, voir [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md).  
   
  **Mode de récupération**  
- Spécifiez l’un des modèles suivants pour la récupération de la base de données : **Complet**, **Journalisé en bloc**ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
+ Spécifiez l’un des modèles suivants pour la récupération de la base de données : **Complet**, **Journalisé en bloc** ou **Simple**. Pour plus d’informations sur les modes de récupération, consultez [Modes de récupération &#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md).  
   
  **Niveau de compatibilité**  
  Spécifiez la version la plus récente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prise en charge par la base de données. Pour connaître les valeurs possibles, consultez [Niveau de compatibilité avec ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md). Quand une base de données SQL Server est mise à niveau, le niveau de compatibilité pour cette base de données est conservé si possible, ou remplacé par le niveau minimal pris en charge pour le nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
@@ -44,7 +44,7 @@ ms.locfileid: "51659368"
 ## <a name="automatic"></a>Automatic  
  **Fermeture automatique**  
  Spécifiez si la base de données doit être fermée proprement et doit libérer des ressources lorsque le dernier utilisateur ferme sa session. Les valeurs possibles sont **True** et **False**. Lorsque la valeur est **True**, la base de données est fermée proprement et ses ressources sont libérées à la fermeture de session du dernier utilisateur.  
-  
+
  **Création automatique des statistiques incrémentielles**  
  Spécifiez si utiliser l'option incrémentielle lorsque les statistiques par partition sont créées. Pour plus d’informations sur les statistiques incrémentielles, consultez [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md).  
   
@@ -63,6 +63,15 @@ ms.locfileid: "51659368"
  Quand la valeur est **False**, les requêtes à l’origine d’une mise à jour automatique des statistiques obsolètes attendent de pouvoir utiliser les statistiques mises à jour dans le plan d’optimisation des requêtes.  
   
  L'attribution de la valeur **True** à cette option n'a aucun effet, sauf si l'option **Mise à jour automatique des statistiques** a également la valeur **True**.  
+
+## <a name="azure"></a>Azure
+Quand une connexion à Azure SQL Database a été établie, cette section contient des paramètres permettant de contrôler l’objectif de niveau de service. Standard S2 est l’objectif de niveau de service utilisé par défaut pour une nouvelle base de données.
+
+  **Objectif de niveau de service actuel** : objectif de niveau de service spécifique à utiliser. Les valeurs disponibles dépendent de l’édition sélectionnée. Si l’objectif de niveau de service souhaité ne figure pas dans la liste, vous pouvez entrer manuellement une valeur.
+
+  **Édition** : édition Azure SQL Database à utiliser, par exemple, De base ou Premium. Si l’édition qu’il vous faut n’est pas dans la liste, vous pouvez entrer manuellement une valeur (celle-ci doit correspondre à la valeur utilisée dans les API REST Azure).
+  
+  **Taille max.**  : taille maximale de la base de données. Si la taille souhaitée ne figure pas dans la liste, vous pouvez entrer manuellement une valeur. Ne renseignez pas ce paramètre si vous souhaitez utiliser la taille par défaut pour l’édition et l’objectif de niveau de service choisis.
   
 ## <a name="containment"></a>Containment  
  Dans une base de données autonome, certains paramètres généralement configurés au niveau serveur peuvent l’être au niveau de la base de données.  
@@ -123,7 +132,7 @@ ms.locfileid: "51659368"
  Spécifiez le nom de répertoire pour les données FILESTREAM associées à la base de données sélectionnée.  
   
  **Accès FILESTREAM non transactionnel**  
- Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **OFF**, **READ_ONLY**ou **FULL**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
+ Spécifiez l’une des options suivantes pour l’accès non transactionnel via le système de fichiers aux données FILESTREAM stockées dans les FileTables : **OFF**, **READ_ONLY** ou **FULL**. Si FILESTREAM n'est pas activé sur le serveur, cette valeur est définie sur OFF et est désactivée. Pour plus d’informations, consultez [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md).  
   
 ## <a name="miscellaneous"></a>Divers  
 **Autoriser l’isolement d’instantané**  
@@ -196,7 +205,7 @@ Active cette fonctionnalité.
  Spécifiez l'option utilisée pour détecter et signaler les transactions d'E/S incomplètes à cause d'erreurs d'E/S de disque. Les valeurs possibles sont **None**, **TornPageDetection**et **Checksum**. Pour plus d’informations, consultez [Gérer la table suspect_pages &#40;SQL Server&#41;](../../relational-databases/backup-restore/manage-the-suspect-pages-table-sql-server.md).  
   
  **Temps de récupération cible (en secondes)**  
- Spécifie la durée maximale (en secondes) de la récupération de la base de données spécifiée en cas d'incident. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
+ Spécifie la durée maximale (en secondes) de la récupération de la base de données spécifiée en cas de plantage. Pour plus d’informations, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
 
 ## <a name="service-broker"></a>Service Broker  
 **Service Broker activé**  

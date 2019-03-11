@@ -45,12 +45,12 @@ ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39644282daad5df5986a703b1052e5fd0945e507
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 7e7b0f75274504ce035d46e0277fc939ef74adda
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802003"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334666"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Configurations matérielle et logicielle requises pour l'installation de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -212,6 +212,11 @@ La configuration requise suivante s’applique à toutes les installations :
  Les types de stockage pris en charge pour les fichiers de données sont :  
   
 -   Disque local  
+    > [!WARNING]  
+    > L'installation du cluster de basculement[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge uniquement le disque local pour l'installation des fichiers tempdb. Assurez-vous que le chemin d'accès spécifié pour les données tempdb et les fichiers journaux sont valides sur tous les nœuds du cluster. Pendant le basculement, si les répertoires tempdb ne sont pas disponibles sur le nœud de basculement cible, la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sera pas en ligne.
+
+    > [!IMPORTANT]
+    > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend actuellement en charge les lecteurs de disque dont les tailles de secteur natif standard s’élève à 512 octets et 4 Ko.  Les disques durs dont les tailles de secteur sont supérieures à 4 Ko peuvent provoquer des erreurs lorsque vous essayez de stocker des fichiers de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dessus.  Consultez [Limites des tailles de secteur de disque dur prises en charge dans SQL Server](https://support.microsoft.com/kb/926930) pour plus d’informations sur la prise en charge des tailles de secteur de disque dur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 -   Stockage partagé  
 
@@ -223,10 +228,9 @@ La configuration requise suivante s’applique à toutes les installations :
     > Le stockage de fichiers SMB n'est pas pris en charge pour les fichiers de données d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les installations autonomes ou en clusters. Utilisez un stockage attaché direct, un réseau de zone de stockage ou des espaces de stockage direct (S2D) à la place.  
   
     > [!IMPORTANT]  
-    > Le stockage SMB peut être hébergé par un serveur de fichiers Windows ou un dispositif de stockage SMB tiers. Si vous utilisez un serveur de fichiers Windows, il doit s'agir de la version 2008 ou ultérieure. Pour plus d'informations sur l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le partage de fichiers SMB comme option de stockage, consultez [Install SQL Server with SMB Fileshare as a Storage Option](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
+    > Le stockage SMB peut être hébergé par un serveur de fichiers Windows ou un dispositif de stockage SMB tiers. Si vous utilisez un serveur de fichiers Windows, il doit s'agir de la version 2008 ou ultérieure. Pour plus d'informations sur l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisant le partage de fichiers SMB comme option de stockage, consultez [Installer SQL Server avec le partage de fichiers SMB en tant qu'option de stockage](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
   
-    > [!WARNING]  
-    > L'installation du cluster de basculement[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge uniquement le disque local pour l'installation des fichiers tempdb. Assurez-vous que le chemin d'accès spécifié pour les données tempdb et les fichiers journaux sont valides sur tous les nœuds du cluster. Pendant le basculement, si les répertoires tempdb ne sont pas disponibles sur le nœud de basculement cible, la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne sera pas en ligne.  
+  
   
 ##  <a name="DC_support"></a> L’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine  
  Pour des raisons de sécurité, nous recommandons de ne pas installer [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] sur un contrôleur de domaine. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne bloquera pas l'installation sur un ordinateur qui est contrôleur de domaine, mais les limitations suivantes s'appliquent :  

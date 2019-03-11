@@ -18,24 +18,24 @@ ms.assetid: 300a67c4-d226-4653-9e9f-7ae4d53fcf33
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 233a560903676736350935729d8002021f802d65
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 37b88f07571029e39080f38c1406ab89ec73b0a3
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327740"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852874"
 ---
 # <a name="deny-schema-permissions-transact-sql"></a>DENY (Autorisations de schéma) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Refuse l'octroi d'autorisations sur un schéma.  
+Refuse l'octroi d'autorisations sur un schéma.  
   
 
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntaxe  
   
-```  
+```sql
 DENY permission  [ ,...n ] } ON SCHEMA :: schema_name  
     TO database_principal [ ,...n ]   
     [ CASCADE ]  
@@ -43,14 +43,14 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *permission*  
- Spécifie une autorisation qui peut être refusée sur un schéma. Pour obtenir la liste de ces autorisations, consultez la section Remarques plus loin dans cette rubrique.  
+*permission*  
+Spécifie une autorisation qui peut être refusée sur un schéma. Pour obtenir la liste de ces autorisations, consultez la section Remarques, plus loin dans cet article.  
   
- ON SCHEMA **::** schema *_name*  
- Spécifie le schéma sur lequel l'autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
+ON SCHEMA **::** schema *_name*  
+Spécifie le schéma sur lequel l’autorisation est refusée. Le qualificateur d’étendue **::** est obligatoire.  
   
- *database_principal*  
- Spécifie le principal auquel l'autorisation est refusée. *database_principal* peut être l’un des éléments suivants :  
+*database_principal*  
+Spécifie le principal pour lequel l'autorisation doit être refusée. *database_principal* peut être l’un des principaux suivants :  
   
 -   Utilisateur de base de données  
 -   Rôle de base de données  
@@ -62,10 +62,10 @@ DENY permission  [ ,...n ] } ON SCHEMA :: schema_name
 -   Utilisateur de base de données mappé à un principal de serveur  
   
 CASCADE  
- Indique que l'autorisation à refuser est également refusée pour les autres principaux auxquels elle a été accordée par ce principal.  
+Refuse l’autorisation à tout autre principal auquel le *database_principal* a octroyé l’autorisation.
   
 *denying_principal*  
- Spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l'autorisation. *denying_principal* peut être l’un des éléments suivants :  
+Spécifie un principal dont le principal qui exécute cette requête dérive son droit de refuser l'autorisation. *denying_principal* peut être l’un des principaux suivants :  
   
 -   Utilisateur de base de données  
 -   Rôle de base de données  
@@ -77,7 +77,7 @@ CASCADE
 -   Utilisateur de base de données mappé à un principal de serveur  
   
 ## <a name="remarks"></a>Notes   
- Un schéma est un élément sécurisable du niveau base de données, contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu'il est possible de refuser sur un schéma sont répertoriées dans le tableau ci-dessous, accompagnées des autorisations plus générales qui les incluent de manière implicite.  
+Un schéma est un sécurisable au niveau de la base de données. Il est contenu par la base de données qui est son parent dans la hiérarchie des autorisations. Les autorisations les plus spécifiques et limitées qu’il est possible de refuser sur un schéma sont listées dans le tableau suivant. Le tableau présente les autorisations plus générales qui les englobent de manière implicite.  
   
 |Autorisation de schéma|Déduite d'une autorisation de schéma|Impliquée par une autorisation de base de données|  
 |-----------------------|----------------------------------|------------------------------------|  
@@ -95,15 +95,15 @@ CASCADE
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
 ## <a name="permissions"></a>Permissions  
- Requiert l'autorisation CONTROL pour le schéma. Si vous utilisez l'option AS, le principal spécifié doit être propriétaire du schéma.  
+Requiert l'autorisation CONTROL pour le schéma. Si vous utilisez l’option AS, le principal spécifié doit être propriétaire du schéma.  
   
 ## <a name="see-also"></a> Voir aussi  
- [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
- [Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
- [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
+[CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+[DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   
+[Autorisations &#40;moteur de base de données&#41;](../../relational-databases/security/permissions-database-engine.md)   
+[Principaux &#40;moteur de base de données&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)   
+[sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+[sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+[HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

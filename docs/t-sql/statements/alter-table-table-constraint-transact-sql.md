@@ -1,7 +1,7 @@
 ---
 title: table_constraint (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/11/2018
+ms.date: 03/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ef0833709d409e7393d71a402b823375b895fb2a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: bcab3eb3b41cf0dbbcb46a48a612d35bde66de14
+ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327390"
+ms.lasthandoff: 03/02/2019
+ms.locfileid: "57227151"
 ---
 # <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54327390"
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
@@ -163,7 +163,7 @@ ms.locfileid: "54327390"
   
  Peut être indiqué aussi bien pour les contraintes FOREIGN KEY que CHECK. Si cette clause est spécifiée pour une contrainte, la contrainte n'est pas appliquée lorsque les agents de réplication effectuent des opérations d'insertion, de mise à jour ou de suppression.  
 
- CONNECTION spécifie la paire de tables de nœuds que la contrainte d’arête donnée est autorisée à connecter.  
+ CONNECTION spécifie la paire de tables de nœuds que la contrainte d’arête donnée est autorisée à connecter. ON DELETE spécifie ce qui arrive aux lignes de la table d’arêtes quand les nœuds qui ont été connectés par le biais de cette table d’arêtes sont supprimés. 
  
  DEFAULT  
  Spécifie la valeur par défaut de la colonne. Une définition DEFAULT peut servir à définir les valeurs d'une nouvelle colonne dans les lignes de données existantes. Elle ne peut pas être ajoutée à une colonne de type **timestamp**, à une propriété IDENTITY, à une définition DEFAULT existante ou à une valeur par défaut liée. Si la colonne a déjà une valeur par défaut, celle-ci doit être supprimée avant que la nouvelle valeur par défaut puisse être ajoutée. Si une valeur par défaut est spécifiée pour une colonne de type défini par l’utilisateur, le type doit prendre en charge une conversion implicite de *constant_expression* vers le type défini par l’utilisateur. Pour maintenir la compatibilité avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un nom de contrainte peut être affecté à une définition DEFAULT.  

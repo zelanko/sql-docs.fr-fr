@@ -26,16 +26,16 @@ helpviewer_keywords:
 - clauses [SQL Server], INTO
 - row additions [SQL Server], INTO clause
 ms.assetid: b48d69e8-5a00-48bf-b2f3-19278a72dd88
-author: douglaslMS
-ms.author: douglasl
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8d40fed1b2183bc82b85b5d82ac1895ca118f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
+ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509013"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57334536"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT - Clause INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -64,7 +64,7 @@ SELECT...INTO crée une table dans le groupe de fichiers par défaut et y insèr
  *groupe_fichiers*    
  Spécifie le nom du groupe de fichiers dans lequel créer la table. Si le groupe de fichiers spécifié n’existe pas dans la base de données, le moteur SQL Server lève une erreur.   
  
- **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Types de données  
  L'attribut FILESTREAM n'est pas transféré dans la nouvelle table. Les objets BLOB FILESTREAM sont copiés et stockés dans la nouvelle table en tant qu’objets BLOB **varbinary(max)**. Sans l’attribut FILESTREAM, le type de données **varbinary(max)** est limité à 2 Go. Si un objet BLOB FILESTREAM dépasse cette valeur, l'erreur 7119 se déclenche et l'instruction s'arrête.  
@@ -82,6 +82,9 @@ SELECT...INTO crée une table dans le groupe de fichiers par défaut et y insèr
 -   La colonne d'identité fait partie d'une source de données distante.  
   
 Si l'une de ces conditions est vérifiée, la colonne est créée avec l'attribut NOT NULL au lieu d'hériter de la propriété IDENTITY. Si une colonne d'identité est requise dans la nouvelle table et si ce type de colonne n'est pas disponible, ou si vous voulez une valeur initiale ou une valeur d'incrément différente de la colonne d'identité source, définissez la colonne dans la liste de sélection à l'aide de la fonction IDENTITY. Consultez « Création d'une colonne d'identité à l'aide de la fonction IDENTITY » dans la section Exemples ci-dessous.  
+
+## <a name="remarks"></a>Notes   
+L’instruction `SELECT...INTO` s’exécute en deux temps : la nouvelle table est créée, puis les lignes sont insérées.  Cela signifie que, si les insertions échouent, elles sont toutes annulées, mais la nouvelle table (vide) est conservée.  Si l’opération doit réussir ou échouer dans sa globalité, utilisez une [transaction explicite](../language-elements/begin-transaction-transact-sql.md).
   
 ## <a name="limitations-and-restrictions"></a>Limitations et restrictions  
  Vous ne pouvez pas spécifier une variable de table ou un paramètre table en tant que nouvelle table.  
@@ -123,7 +126,7 @@ FROM Person.Person AS c
 GO  
 ```  
   
-### <a name="b-inserting-rows-using-minimal-logging"></a>B. Insertion de lignes en utilisant une journalisation minimale  
+### <a name="b-inserting-rows-using-minimal-logging"></a>b. Insertion de lignes en utilisant une journalisation minimale  
  L'exemple suivant crée la table `dbo.NewProducts` et insère des lignes provenant de la table `Production.Product`. L'exemple suppose que le mode de récupération de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] a la valeur FULL. Pour garantir une journalisation minimale, le mode de récupération de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] a la valeur BULK_LOGGED avant l'insertion des lignes ; il reprend ensuite la valeur FULL après l'utilisation de l'instruction SELECT...INTO. Ce processus permet de garantir que l'instruction SELECT...INTO utilise un espace minimal dans le journal des transactions et qu'elle s'exécute de manière efficace.  
   
 ```sql  
@@ -229,7 +232,7 @@ ORDER BY YearlyIncome;
 ### <a name="f-creating-a-new-table-as-a-copy-of-another-table-and-loading-it-a-specified-filegroup"></a>F. Création d’une table en tant que copie d’une autre table et chargement de la table dans un groupe de fichiers spécifié
 L’exemple suivant illustre la création d’une table en tant que copie d’une autre table et son chargement dans un autre groupe de fichiers que le groupe de fichiers par défaut de l’utilisateur.
 
- **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ **S’applique à :** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 ```sql
 ALTER DATABASE [AdventureWorksDW2016] ADD FILEGROUP FG2;

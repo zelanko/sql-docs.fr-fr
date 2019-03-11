@@ -18,27 +18,27 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0a22547436f8a511a5a61db35ec99a919d84e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
+ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644027"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56852864"
 ---
 # <a name="insert-sql-graph"></a>INSERT (SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
-  Ajoute une ou plusieurs lignes à une table `node` ou `edge` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+Ajoute une ou plusieurs lignes à une table `node` ou `edge` dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]   
 >  Pour en savoir plus sur les instructions Transact-SQL standard, consultez [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md).
   
- ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Icône Lien de l’article](../../database-engine/configure-windows/media/topic-link.gif "Icône Lien de l’article") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="insert-into-node-table-syntax"></a>Syntaxe de l’instruction INSERT en vue d’une insertion dans une table de nœuds 
-La syntaxe permettant d’effectuer une insertion dans une table de nœuds est identique à celle prévue pour une table normale. 
+La syntaxe permettant d’effectuer une insertion dans une table de nœuds est la même que celle utilisée pour une table standard. 
 
-```  
+```sql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
@@ -102,19 +102,19 @@ INSERT
   
  
 ## <a name="arguments"></a>Arguments  
- Ce document décrit les arguments en rapport avec un graphique SQL. Pour obtenir une liste complète et une description des arguments pris en charge dans l’instruction INSERT, consultez [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
+Ce document décrit les arguments SQL Graph. Pour obtenir une liste complète et une description des arguments pris en charge dans l’instruction INSERT, consultez [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 
- INTO  
- Mot clé facultatif qui peut être utilisé entre `INSERT` et la table cible.  
+INTO  
+Mot clé facultatif qui peut être utilisé entre `INSERT` et la table cible.  
   
- *search_condition_with_match*   
- La clause `MATCH` peut être utilisée dans une sous-requête à l’occasion d’une opération d’insertion dans une table de nœuds ou d’arêtes. Pour en savoir plus sur la syntaxe de l’instruction `MATCH`, consultez [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
+*search_condition_with_match*   
+La clause `MATCH` peut être utilisée dans une sous-requête à l’occasion d’une opération d’insertion dans une table de nœuds ou d’arêtes. Pour en savoir plus sur la syntaxe de l’instruction `MATCH`, consultez [GRAPH MATCH (Transact-SQL)](../../t-sql/queries/match-sql-graph.md)
 
- *graph_search_pattern*   
- Modèle de recherche fourni à la clause `MATCH` comme partie intégrante du prédicat de graphique.
+*graph_search_pattern*   
+Modèle de recherche fourni à la clause `MATCH` comme partie intégrante du prédicat de graphique.
 
- *edge_table_column_list*   
- Les utilisateurs doivent fournir des valeurs pour `$from_id` et `$to_id` à l’occasion d’une opération d’insertion dans une arête. Une erreur est retournée si aucune valeur n’est fournie ou que des valeurs NULL sont insérées dans ces colonnes. 
+*edge_table_column_list*   
+Les utilisateurs doivent fournir des valeurs pour `$from_id` et `$to_id` à l’occasion d’une opération d’insertion dans une arête. Une erreur est retournée si aucune valeur n’est fournie ou que des valeurs NULL sont insérées dans ces colonnes. 
   
 
 ## <a name="remarks"></a>Notes   
@@ -122,48 +122,48 @@ Une insertion dans un nœud équivaut à une insertion dans une table relationne
 
 À l’occasion d’une insertion dans une table d’arêtes, les utilisateurs doivent fournir des valeurs pour les colonnes `$from_id` et `$to_id`.   
 
-Une insertion en bloc (BULK) pour la table de nœuds reste identique à celle d’une table relationnelle.
+Une insertion en bloc (BULK) dans une table de nœuds s’effectue de la même façon que dans une table relationnelle.
 
 Avant de procéder à une insertion en bloc dans une table d’arêtes, les tables de nœuds doivent être importées. Les valeurs pour `$from_id` et `$to_id` peuvent ensuite être extraites de la colonne `$node_id` de la table de nœuds, puis insérées comme arêtes. 
 
   
 ### <a name="permissions"></a>Permissions  
- L'autorisation INSERT est obligatoire sur la table cible.  
+L'autorisation INSERT est obligatoire sur la table cible.  
   
- Les autorisations INSERT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin** et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
+Les autorisations INSERT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin** et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
   
- Pour exécuter INSERT avec l’option BULK de la fonction OPENROWSET, vous devez être membre du rôle serveur fixe **sysadmin** ou **bulkadmin**.  
+Pour exécuter INSERT avec l’option BULK de la fonction OPENROWSET, vous devez être membre du rôle serveur fixe **sysadmin** ou **bulkadmin**.  
   
 
 ## <a name="examples"></a>Exemples  
   
 #### <a name="a--insert-into-node-table"></a>A.  Insertion dans une table de nœuds  
- L’exemple suivant crée une table de nœuds Person et y insère 2 lignes.
+L’exemple suivant crée une table de nœuds Person et y insère deux lignes.
 
- ```
- -- Create person node table
- CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
+```sql
+-- Create person node table
+CREATE TABLE dbo.Person (ID integer PRIMARY KEY, name varchar(50)) AS NODE;
  
- -- Insert records for Alice and John
- INSERT INTO dbo.Person VALUES (1, 'Alice');
- INSERT INTO dbo.Person VALUES (2,'John');
- ```
+-- Insert records for Alice and John
+INSERT INTO dbo.Person VALUES (1, 'Alice');
+INSERT INTO dbo.Person VALUES (2,'John');
+```
   
-#### <a name="b--insert-into-edge-table"></a>B.  Insertion dans une table d’arêtes  
- L’exemple suivant crée une table d’arêtes nommée friend et y insère une arête.
+#### <a name="b--insert-into-edge-table"></a>b.  Insertion dans une table d’arêtes  
+L’exemple suivant crée une table d’arêtes nommée friend et y insère une arête.
 
- ```
- -- Create friend edge table
- CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
+```sql
+-- Create friend edge table
+CREATE TABLE dbo.friend (start_date DATE) AS EDGE;
 
- -- Create a friend edge, that connect Alice and John
- INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
+-- Create a friend edge, that connect Alice and John
+INSERT INTO dbo.friend VALUES ((SELECT $node_id FROM dbo.Person WHERE name = 'Alice'),
         (SELECT $node_id FROM dbo.Person WHERE name = 'John'), '9/15/2011');
- ```
+```
 
   
 ## <a name="see-also"></a> Voir aussi  
- [INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
- [Traitement des graphiques avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
+[INSERT TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
+[Traitement des graphiques avec SQL Server 2017](../../relational-databases/graphs/sql-graph-overview.md)  
 
 

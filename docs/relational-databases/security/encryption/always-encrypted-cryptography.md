@@ -13,12 +13,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f7e80b878583932976c85f7fa390ed546a67587
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
+ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401122"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57007582"
 ---
 # <a name="always-encrypted-cryptography"></a>Chiffrement Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52401122"
   Ce document décrit les algorithmes et mécanismes de chiffrement permettant de dériver le matériel de chiffrement utilisé dans la fonctionnalité [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
 ## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Clés, magasins de clé et algorithmes de chiffrement par clé  
- Always Encrypted utilise deux types de clés : des clés principales de colonne et des clés de chiffrement de colonne.  
+ Always Encrypted utilise deux types de clés : des clés principales de colonne et des clés de chiffrement de colonne.  
   
  Une clé principale de colonne (CMK) est une clé de chiffrement de clé (par exemple, une clé utilisée pour chiffrer d’autres clés) qui est toujours contrôlée par le client et stockée dans un magasin de clés externe. Un pilote client avec Always Encrypted interagit avec le magasin de clés via un fournisseur de magasins CMK, qui peut faire partie de la bibliothèque de pilotes (un fournisseur [!INCLUDE[msCoName](../../../includes/msconame-md.md)]/système) ou de l’application cliente (un fournisseur personnalisé). Les bibliothèques de pilotes clients incluent actuellement des fournisseurs de magasins de clés [!INCLUDE[msCoName](../../../includes/msconame-md.md)] pour le [magasin de certificats Windows](/windows/desktop/SecCrypto/using-certificate-stores) et les modules de sécurité matériels (HSM).  (Pour obtenir la liste des fournisseurs, consultez [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md).) Un développeur d'applications peut proposer un fournisseur personnalisé pour un magasin arbitraire.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52401122"
   
  **AEAD_AES_256_CBC_HMAC_SHA_256** calcule une valeur de texte chiffré pour une valeur en texte clair donnée en procédant comme suit.  
   
-### <a name="step-1-generating-the-initialization-vector-iv"></a>Étape 1: création du vecteur d'initialisation (IV)  
+### <a name="step-1-generating-the-initialization-vector-iv"></a>Étape 1 : Génération du vecteur d’initialisation (IV)  
  Always Encrypted prend en charge deux variantes de **AEAD_AES_256_CBC_HMAC_SHA_256**:  
   
 -   Aléatoire  
@@ -73,7 +73,7 @@ Par conséquent, le chiffrement déterministe génère toujours le même texte c
   
  Le chiffrement déterministe est plus efficace pour dissimuler les modèles par rapport aux autres méthodes comme l'utilisation d'une valeur IV prédéfinie.  
   
-### <a name="step-2-computing-aes256cbc-ciphertext"></a>Étape 2 : calcul du texte chiffré AES_256_CBC  
+### <a name="step-2-computing-aes256cbc-ciphertext"></a>Étape 2 : Calcul du texte chiffré AES_256_CBC  
  Après le calcul du vecteur d’initialisation, le texte chiffré **AES_256_CBC** est généré :  
   
 ```  
@@ -86,7 +86,7 @@ aes_256_cbc_ciphertext = AES-CBC-256(enc_key, IV, cell_data) with PKCS7 padding.
 enc_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell encryption key" + algorithm + CEK_length )  
 ```  
   
-### <a name="step-3-computing-mac"></a>Étape 3 : calcul de la valeur MAC  
+### <a name="step-3-computing-mac"></a>Étape 3 : Calcul de la valeur MAC  
  Par la suite, la valeur MAC est calculée à l'aide de l'algorithme suivant :  
   
 ```  
@@ -100,7 +100,7 @@ versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
-### <a name="step-4-concatenation"></a>Étape 4 : concaténation  
+### <a name="step-4-concatenation"></a>Étape 4 : Concatenation  
  Enfin, la valeur chiffrée est générée en concaténant simplement l'octet de version de l’algorithme, la valeur MAC, le vecteur d'initialisation et le texte chiffré AES_256_CBC :  
   
 ```  
@@ -110,11 +110,11 @@ aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext
 ## <a name="ciphertext-length"></a>Longueur du texte chiffré  
  Les longueurs (en octets) des composants particuliers du texte chiffré **AEAD_AES_256_CBC_HMAC_SHA_256** sont les suivantes :  
   
--   versionbyte: 1  
+-   versionbyte : 1  
   
--   MAC: 32  
+-   MAC : 32  
   
--   IV: 16  
+-   Vecteur d’initialisation : 16  
   
 -   aes_256_cbc_ciphertext: `(FLOOR (DATALENGTH(cell_data)/ block_size) + 1)* block_size`, où :  
   
