@@ -156,6 +156,32 @@ items:
         href: ../big-data-cluster/spark-submit-job-intellij-tool-plugin.md
       - name: Utiliser le serveur d’historique Spark
         href: ../big-data-cluster/spark-history-server.md
+  - name: Référence
+    items:
+    - name: Référence mssqlctl
+      items:
+      - name: mssqlctl
+        href: ../big-data-cluster/reference-mssqlctl.md
+      - name: Déploiement d’applications
+        items:
+        - name: Application mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-app.md
+        - name: Modèle d’application mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-app-template.md
+      - name: Cluster
+        items:
+        - name: Cluster mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-cluster.md
+        - name: Configuration de cluster mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+        - name: Débogage de cluster mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
+      - name: Stockage
+        items:
+        - name: Stockage mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-storage.md
+        - name: Montage de stockage mssqlctl
+          href: ../big-data-cluster/reference-mssqlctl-storage-mount.md
 - name: Continuité de l’activité
   href: redirectfrom-business-continuity-10.md
   items:
@@ -189,7 +215,7 @@ items:
             href: ../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md
           - name: Configurer les options avancées
             href: ../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md
-          - name: Désactiver
+          - name: Disable
             href: ../relational-databases/backup-restore/disable-sql-server-managed-backup-to-microsoft-azure.md
           - name: Migrer des paramètres à partir de SQL Server 2014
             href: ../relational-databases/backup-restore/migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016.md
@@ -1431,7 +1457,7 @@ items:
       items:
       - name: Créer
         href: ../relational-databases/tables/create-tables-database-engine.md
-      - name: Supprimer
+      - name: DELETE
         href: ../relational-databases/tables/delete-tables-database-engine.md
       - name: Dupliquer
         href: ../relational-databases/tables/duplicate-tables.md
@@ -1676,9 +1702,9 @@ items:
       href: ../relational-databases/views/get-information-about-a-view.md
     - name: Renommer
       href: ../relational-databases/views/rename-views.md
-    - name: Supprimer
+    - name: DELETE
       href: ../relational-databases/views/delete-views.md
-  - name: Données XML
+  - name: données XML
     href: ../relational-databases/xml/xml-data-sql-server.md
     items:
     - name: Type et colonnes de données XML
@@ -1692,7 +1718,7 @@ items:
         href: ../relational-databases/xml/create-xml-data-type-variables-and-columns.md
       - name: Changer des colonnes existantes
         href: ../relational-databases/xml/change-existing-columns-to-xml-columns.md
-      - name: Charger
+      - name: Load
         href: ../relational-databases/xml/load-xml-data.md
       - name: Créer des vues sur les colonnes
         href: ../relational-databases/xml/create-views-over-xml-columns.md
@@ -2493,7 +2519,7 @@ items:
         href: ../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-getcolumns-and-isequentialstream.md
       - name: Récupération de données BLOB avec IRow::Open et ISequentialStream
         href: ../relational-databases/native-client-ole-db-rowsets/fetching-blob-data-using-irow-open-and-isequentialstream.md
-      - name: Récupération de lignes - Prochaine position de récupération
+      - name: Récupération de lignes - Prochaine position de récupération (fetch)
         href: ../relational-databases/native-client-ole-db-rowsets/fetching-rows-next-fetch-position.md
       - name: Extraction de lignes
         href: ../relational-databases/native-client-ole-db-rowsets/fetching-rows.md
@@ -3290,7 +3316,7 @@ items:
     items:
     - name: Vue d'ensemble
       items:
-      - name: Nouveautés
+      - name: What's New
         href: ../relational-databases/sqlxml/what-s-new-in-sqlxml-4-0-sp1.md
       - name: Spécifications
         href: ../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md
@@ -3813,7 +3839,7 @@ items:
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/clustered-property-sqlservice-class.md
         - name: Propriété Dependencies
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/dependencies-property-sqlservice-class.md
-        - name: Méthode Description
+        - name: Description, propriété
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/description-property-sqlservice-class.md
         - name: Propriété DisplayName
           href: ../relational-databases/wmi-provider-configuration-classes/sqlservice-class/displayname-property-sqlservice-class.md
@@ -3936,7 +3962,7 @@ items:
   items:
   - name: Vue d'ensemble
     items:
-    - name: Nouveautés
+    - name: What's New
       href: ../sql-server/install/what-s-new-in-sql-server-installation.md
     - name: Spécifications de capacité maximale
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
@@ -4114,7 +4140,7 @@ items:
       items:
       - name: access check cache
         href: ../database-engine/configure-windows/access-check-cache-server-configuration-options.md
-      - name: ad hoc distributed queries
+      - name: requêtes distribuées appropriées
         href: ../database-engine/configure-windows/ad-hoc-distributed-queries-server-configuration-option.md
       - name: affinity Input-Output mask
         href: ../database-engine/configure-windows/affinity-input-output-mask-server-configuration-option.md
@@ -4128,7 +4154,7 @@ items:
         href: ../database-engine/configure-windows/agent-xps-server-configuration-option.md
       - name: allow updates
         href: ../database-engine/configure-windows/allow-updates-server-configuration-option.md
-      - name: backup checksum default
+      - name: paramètre par défaut de la somme de contrôle de sauvegarde
         href: ../database-engine/configure-windows/backup-checksum-default.md
       - name: Afficher ou configurer backup compression default
         href: ../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md
@@ -4144,7 +4170,7 @@ items:
         href: ../database-engine/configure-windows/configure-column-encryption-enclave-type.md
       - name: common criteria compliance enabled
         href: ../database-engine/configure-windows/common-criteria-compliance-enabled-server-configuration-option.md
-      - name: contained database authentication
+      - name: authentification de la base de données autonome
         href: ../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md
       - name: Configurer cost threshold for parallelism
         href: ../database-engine/configure-windows/configure-the-cost-threshold-for-parallelism-server-configuration-option.md
@@ -4162,11 +4188,11 @@ items:
         href: ../database-engine/configure-windows/default-trace-enabled-server-configuration-option.md
       - name: disallow results from triggers
         href: ../database-engine/configure-windows/disallow-results-from-triggers-server-configuration-option.md
-      - name: EKM provider enabled
+      - name: Fournisseur EKM activé
         href: ../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md
       - name: external scripts enabled
         href: ../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md
-      - name: filestream access level
+      - name: niveau d'accès du flux de fichier
         href: ../database-engine/configure-windows/filestream-access-level-server-configuration-option.md
       - name: Configurer fill factor
         href: ../database-engine/configure-windows/configure-the-fill-factor-server-configuration-option.md
@@ -4174,13 +4200,13 @@ items:
         href: ../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md
       - name: ft notify bandwidth
         href: ../database-engine/configure-windows/ft-notify-bandwidth-server-configuration-option.md
-      - name: PolyBase Connectivity Configuration (T-SQL)
+      - name: Configuration de la connectivité PolyBase (T-SQL)
         href: ../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md
       - name: in-doubt xact resolution
         href: ../database-engine/configure-windows/in-doubt-xact-resolution-server-configuration-option.md
       - name: Configurer index create memory
         href: ../database-engine/configure-windows/configure-the-index-create-memory-server-configuration-option.md
-      - name: lightweight pooling
+      - name: regroupement léger
         href: ../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md
       - name: Configurer locks
         href: ../database-engine/configure-windows/configure-the-locks-server-configuration-option.md
@@ -4957,7 +4983,7 @@ items:
           href: ../relational-databases/replication/agents/replication-agents-overview.md
         - name: Agent de distribution
           href: ../relational-databases/replication/agents/replication-distribution-agent.md
-        - name: Agent de lecture du journal
+        - name: l'Agent de lecture du journal ;
           href: ../relational-databases/replication/agents/replication-log-reader-agent.md
         - name: Agent de fusion
           href: ../relational-databases/replication/agents/replication-merge-agent.md
@@ -5127,7 +5153,7 @@ items:
             href: ../relational-databases/replication/publication-information-agents-snapshot-publication.md
           - name: Historique du serveur de distribution vers l'Abonné
             href: ../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md
-      - name: Assistant Configuration de la distribution
+      - name: Configure Distribution Wizard
         href: ../relational-databases/replication/configure-distribution-wizard.md
         items:
         - name: Serveur de distribution
@@ -5140,7 +5166,7 @@ items:
           href: ../relational-databases/replication/publishers.md
         - name: Mot de passe du serveur de distribution
           href: ../relational-databases/replication/distributor-password.md
-      - name: Assistant Nouvelle publication
+      - name: New Publication Wizard
         href: ../relational-databases/replication/new-publication-wizard.md
         items:
         - name: Serveur de publication Oracle
@@ -5574,7 +5600,7 @@ items:
       href: ../dma/dma-migrateonpremsqltosqldb.md
     - name: Migrer des connexions SQL Server
       href: ../dma/dma-migrateserverlogins.md
-    - name: Bonnes pratiques
+    - name: Meilleures pratiques
       href: ../dma/dma-bestpractices.md
     - name: Consolider les rapports d’évaluation
       href: ../dma/dma-consolidatereports.md
@@ -5594,7 +5620,7 @@ items:
         href: ../ssma/access/installing-sql-server-migration-assistant-for-access-accesstosql.md
       - name: Prise en main
         href: ../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md
-      - name: Nouveautés
+      - name: What's New
         href: ../ssma/access/what-s-new-in-ssma-for-access-accesstosql.md
       - name: Préparation des bases de données Access
         href: ../ssma/access/preparing-access-databases-for-migration-accesstosql.md
@@ -5723,7 +5749,7 @@ items:
         href: ../ssma/db2/installing-ssma-for-db2-db2tosql.md
       - name: Mise en route
         href: ../ssma/db2/getting-started-with-ssma-for-db2-console-db2tosql.md
-      - name: Nouveautés
+      - name: What's New
         href: ../ssma/db2/what-s-new-in-ssma-for-db2-db2tosql.md
       - name: Nouvelles fonctionnalités de l’interface graphique utilisateur
         href: ../ssma/db2/new-gui-features-in-ssma-for-db2-db2tosql.md
@@ -6847,8 +6873,6 @@ items:
             href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: Optimiser
     items:
-    - name: Traitement de requêtes adaptatif
-      href: ../relational-databases/performance/adaptive-query-processing.md
     - name: Paramétrage automatique
       href: ../relational-databases/automatic-tuning/automatic-tuning.md
     - name: Estimation de la cardinalité
@@ -7091,7 +7115,7 @@ items:
         href: ../relational-databases/performance/apply-a-fixed-query-plan-to-a-plan-guide.md
       - name: Attacher des indicateurs de requête
         href: ../relational-databases/performance/attach-query-hints-to-a-plan-guide.md
-      - name: Supprimer
+      - name: DELETE
         href: ../relational-databases/performance/delete-a-plan-guide.md
       - name: Activer ou désactiver
         href: ../relational-databases/performance/enable-or-disable-a-plan-guide.md
@@ -7119,7 +7143,7 @@ items:
           href: ../relational-databases/resource-governor/create-a-resource-pool.md
         - name: Changer les paramètres
           href: ../relational-databases/resource-governor/change-resource-pool-settings.md
-        - name: Supprimer
+        - name: DELETE
           href: ../relational-databases/resource-governor/delete-a-resource-pool.md
       - name: Groupe de charges de travail
         href: ../relational-databases/resource-governor/resource-governor-workload-group.md
@@ -7130,7 +7154,7 @@ items:
           href: ../relational-databases/resource-governor/change-workload-group-settings.md
         - name: Déplacer
           href: ../relational-databases/resource-governor/move-a-workload-group.md
-        - name: Supprimer
+        - name: DELETE
           href: ../relational-databases/resource-governor/delete-a-workload-group.md
       - name: Fonction classifieur
         href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
@@ -7144,13 +7168,13 @@ items:
         href: ../relational-databases/statistics/create-statistics.md
       - name: Modifier
         href: ../relational-databases/statistics/modify-statistics.md
-      - name: Supprimer
+      - name: DELETE
         href: ../relational-databases/statistics/delete-statistics.md
       - name: Afficher les propriétés
         href: ../relational-databases/statistics/view-statistics-properties.md
       - name: Renommer
         href: ../relational-databases/statistics/rename-statistics.md
-      - name: Mettre à jour
+      - name: Update
         href: ../relational-databases/statistics/update-statistics.md
 - name: Interroger des données
   items:
@@ -7988,7 +8012,7 @@ items:
     - name: Install
       href: ../azure-data-studio/download.md
     - name: Notes de publication
-      href: ../azure-data-studio/release-notes.md
+      href: ../azure-data-studio/release-notes-azure-data-studio.md
     - name: Démarrages rapides
       items:
       - name: Connexion & interrogation de SQL Server
@@ -8111,7 +8135,7 @@ items:
           href: ../tools/dta/column-element-for-index-dta.md
         - name: Élément de configuration
           href: ../tools/dta/configuration-element-dta.md
-        - name: Create, élément
+        - name: Élément Create
           href: ../tools/dta/create-element-dta.md
         - name: Database, élément pour la configuration
           href: ../tools/dta/database-element-for-configuration-dta.md
@@ -8131,7 +8155,7 @@ items:
           href: ../tools/dta/eventstring-element-dta.md
         - name: FeatureSet, élément
           href: ../tools/dta/featureset-element-dta.md
-        - name: File, élément
+        - name: Élément File
           href: ../tools/dta/file-element-dta.md
         - name: Filegroup, élément pour les index
           href: ../tools/dta/filegroup-element-for-index-dta.md
@@ -8159,7 +8183,7 @@ items:
           href: ../tools/dta/recommendation-element-dta.md
         - name: Schema, élément pour les bases de données
           href: ../tools/dta/schema-element-for-database-dta.md
-        - name: Server, élément
+        - name: Élément Server
           href: ../tools/dta/server-element-dta.md
         - name: Server, élément pour les configurations
           href: ../tools/dta/server-element-for-configuration-dta.md
@@ -8779,7 +8803,7 @@ items:
           href: ../ssms/agent/create-an-operator.md
         - name: Créer des planifications et les attacher à des travaux
           href: ../ssms/agent/create-and-attach-schedules-to-jobs.md
-        - name: Travaux
+        - name: travaux
           href: ../ssms/agent/create-jobs.md
       - name: Désinscrire
         items:
@@ -8793,7 +8817,7 @@ items:
           href: ../ssms/agent/define-the-response-to-an-alert-sql-server-management-studio.md
         - name: les options d’une étape de travail T-SQL
           href: ../ssms/agent/define-transact-sql-job-step-options.md
-      - name: Supprimer
+      - name: DELETE
         items:
         - name: une catégorie de travail
           href: ../ssms/agent/delete-a-job-category.md
@@ -8817,7 +8841,7 @@ items:
           href: ../ssms/agent/designate-a-fail-safe-operator.md
         - name: un serveur de transfert d’événements (SSMS)
           href: ../ssms/agent/designate-an-events-forwarding-server-sql-server-management-studio.md
-      - name: Désactiver
+      - name: Disable
         items:
         - name: Activer ou désactiver un travail
           href: ../ssms/agent/disable-or-enable-a-job.md
@@ -8829,7 +8853,7 @@ items:
           href: ../ssms/agent/edit-an-alert.md
         - name: Modifier un opérateur
           href: ../ssms/agent/edit-an-operator.md
-      - name: Définir
+      - name: Définissez
         items:
         - name: un alias pour le service SQL Server Agent
           href: ../ssms/agent/set-sql-server-alias-for-sql-server-agent-service-ssms.md
@@ -10976,7 +11000,7 @@ items:
         href: ../relational-databases/event-classes/database-suspect-data-page-event-class.md
       - name: ErrorLog (classe d'événements)
         href: ../relational-databases/event-classes/errorlog-event-class.md
-      - name: EventLog (classe d'événements)
+      - name: Classe d'événements EventLog
         href: ../relational-databases/event-classes/eventlog-event-class.md
       - name: Exception (classe d'événements)
         href: ../relational-databases/event-classes/exception-event-class.md
@@ -16299,7 +16323,7 @@ items:
           href: ../t-sql/statements/add-sensitivity-classification-transact-sql.md
         - name: BULK INSERT
           href: ../t-sql/statements/bulk-insert-transact-sql.md
-        - name: DELETE
+        - name: Suppression
           href: ../t-sql/statements/delete-transact-sql.md
         - name: DISABLE TRIGGER
           href: ../t-sql/statements/disable-trigger-transact-sql.md
@@ -17159,9 +17183,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Gestion des espaces de noms dans XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 085652bdfcac1b7bea33c7e9307da37d749a65ea
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: c1bcf717605ff5c3cd1cf5722154fe518721c9e6
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401971"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579789"
