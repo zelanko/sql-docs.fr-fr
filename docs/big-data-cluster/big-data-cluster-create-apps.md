@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6d0f5fba93b74aa5751635c9a10f320c85036bbb
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8d784b82c56ca99027491bf257c90dddf4eb9b6b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017825"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756634"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Comment déployer une application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire)
 
 Cet article décrit comment déployer et gérer le script R et Python en tant qu’application à l’intérieur d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
- 
-## <a name="whats-new-and-improved"></a>What ' s nouvelles et améliorées 
+
+## <a name="whats-new-and-improved"></a>What ' s nouvelles et améliorées
 
 - Un utilitaire de ligne de commande unique pour gérer le cluster et application.
 - Déploiement d’applications simplifié tout en fournissant un contrôle granulaire par le biais des fichiers spec.
@@ -80,13 +80,12 @@ Si vous utilisez AKS, vous devez exécuter la commande suivante pour obtenir l�
 kubectl get svc endpoint-service-proxy -n <name of your cluster>
 ```
 
-
 ## <a name="kubeadm-or-minikube"></a>Kubeadm ou Minikube
 
 Si vous utilisez Kubeadm ou Minikube, exécutez la commande suivante pour obtenir l’adresse IP pour la connexion au cluster
 
 ```bash
-kubectl get node --selector='node-role.kubernetes.io/master' 
+kubectl get node --selector='node-role.kubernetes.io/master'
 ```
 
 ## <a name="create-an-app"></a>Créer une application
@@ -101,16 +100,17 @@ mssqlctl app create -n <app_name> -v <version_number> --spec <directory containi
 
 La commande suivante montre un exemple de ce que cette commande peut ressembler :
 
-Cela suppose que vous avez le fichier appelé `spec.yaml` au sein de la `addpy` dossier. Le `addpy` dossier contient le `add.py` et `spec.yaml` le `spec.yaml` est un fichier de spécification pour le `add.py` application.
+Cela suppose que vous avez le fichier appelé `spec.yaml` au sein de la `addpy` dossier.
+Le `addpy` dossier contient le `add.py` et `spec.yaml` le `spec.yaml` est un fichier de spécification pour le `add.py` application.
 
 
-`add.py` crée l’application python suivant : 
+`add.py` crée l’application python suivant :
 
 ```py
 #add.py
 def add(x,y):
         result = x+y
-        return result;
+        return result
 result=add(x,y)
 ```
 
@@ -119,9 +119,9 @@ Le script suivant est un exemple du contenu pour `spec.yaml`:
 ```yaml
 #spec.yaml
 name: add-app #name of your python script
-version: v1  #version of the app 
-runtime: Python #the languge this app uses (R or Python)
-src: ./add.py #full path to the loction of the app
+version: v1  #version of the app
+runtime: Python #the language this app uses (R or Python)
+src: ./add.py #full path to the location of the app
 entrypoint: add #the function that will be called upon execution
 replicas: 1  #number of replicas needed
 poolsize: 1  #the pool size that you need your app to scale
@@ -144,13 +144,13 @@ Vous pouvez vérifier si l’application est déployée à l’aide de la comman
 mssqlctl app list
 ```
 
-Si le déploiement n’est pas terminé, vous devez voir le `state` afficher `WaitingforCreate` comme dans l’exemple suivant : 
+Si le déploiement n’est pas terminé, vous devez voir le `state` afficher `WaitingforCreate` comme dans l’exemple suivant :
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: "WaitingforCreate",
+    "state": "WaitingforCreate",
     "version": "v1"
   }
 ]
@@ -158,11 +158,11 @@ Si le déploiement n’est pas terminé, vous devez voir le `state` afficher `Wa
 
 Une fois le déploiement réussi, vous devez voir le `state` modifier à `Ready` état :
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -192,11 +192,11 @@ mssqlctl app list --name add-app --version v1
 
 Vous devez voir une sortie similaire à l’exemple suivant :
 
-```
+```json
 [
   {
     "name": "add-app",
-    `state`: `Ready`,
+    "state": "Ready",
     "version": "v1"
   }
 ]
@@ -218,7 +218,7 @@ mssqlctl app run --name add-app --version v1 --inputs x=1,y=2
 
 Si l’exécution a réussi, vous devez voir votre sortie comme spécifié lors de la création de l’application. Voici un exemple.
 
-```
+```json
 {
   "changedFiles": [],
   "consoleOutput": "",
@@ -235,11 +235,11 @@ Si l’exécution a réussi, vous devez voir votre sortie comme spécifié lors 
 
 La commande init fournit une vue de structure avec les artefacts pertinentes qui est nécessaire pour déployer une application. L’exemple ci-dessous crée hello, vous pouvez le faire en exécutant la commande suivante.
 
-```
+```bash
 mssqlctl app init --name hello --version v1 --template python
 ```
 
-Cela créera un dossier appelé hello.  Vous pouvez le cd dans le répertoire et inspecter les fichiers générés dans le dossier. spec.yaml définit l’application, telles que nom, version et le code source. Vous pouvez modifier la spécification pour modifier le nom, version, entrées et sorties.
+Cela créera un dossier appelé hello.  Vous pouvez `cd` dans le répertoire et inspecter les fichiers générés dans le dossier. spec.yaml définit l’application, telles que nom, version et le code source. Vous pouvez modifier la spécification pour modifier le nom, version, entrées et sorties.
 
 Voici un exemple de sortie à partir de la commande init qui s’affiche dans le dossier
 
@@ -255,7 +255,7 @@ spec.yaml
 
 La commande describe fournit des informations détaillées sur l’application, y compris le point de terminaison dans votre cluster. Cela est généralement utilisé par un développeur d’application pour générer une application à l’aide du client de swagger et le service Web pour interagir avec l’application de manière RESTful.
 
-```
+```json
 {
   "input_param_defs": [
     {
@@ -278,10 +278,9 @@ La commande describe fournit des informations détaillées sur l’application, 
       "type": "int"
     }
   ],
-  `state`: `Ready`,
+  "state": "Ready",
   "version": "v1"
 }
-
 ```
 
 ## <a name="delete-an-app"></a>Supprimer une application

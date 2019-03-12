@@ -24,15 +24,15 @@ helpviewer_keywords:
 - deleting columns
 - dropping columns
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 01f03593dc5a72c260f44d58da282a67eaa4746b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 177ef5d128bc14ee112e2b0a19e05a10f174bbc9
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785483"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685656"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ WITH NO_INFOMSGS;
 GO  
 ```  
   
-### <a name="b-using-dbcc-cleantable-and-verifying-results"></a>B. Utilisation de DBCC CLEANTABLE et vérification des résultats  
+### <a name="b-using-dbcc-cleantable-and-verifying-results"></a>b. Utilisation de DBCC CLEANTABLE et vérification des résultats  
 L'exemple suivant crée une table puis la remplit avec plusieurs colonnes de longueur variable. Deux des colonnes sont ensuite supprimées et DBCC CLEANTABLE est exécuté pour récupérer l'espace inutilisé. Une requête est exécutée pour vérifier les valeurs du nombre de pages et d'espace utilisé avant et après l'exécution de la commande DBCC CLEANTABLE.
   
 ```sql  

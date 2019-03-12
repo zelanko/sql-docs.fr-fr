@@ -34,15 +34,15 @@ helpviewer_keywords:
 - progress reporting [DBCC statements]
 - informational statements [SQL Server]
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: 30b407b4cbfd10f6a5844978bbabbb9bf26e2784
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731347"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685716"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,8 +105,8 @@ La définition d'une unité de progression dépend de la phase en cours d'exécu
 |DBCC ALLOC REPAIR|Durant cette phase, les réparations de base de données sont exécutées si REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS est spécifié, et s'il existe des erreurs d'allocation à réparer.|La progression n'est pas indiquée.|  
 |DBCC SYS CHECK|Durant cette phase, les tables système de la base de données sont vérifiées.|La progression est indiquée au niveau de la page de base de données.<br /><br /> La valeur de progression est actualisée toutes les 1 000 pages de base de données vérifiées.|  
 |DBCC SYS REPAIR|Durant cette phase, les réparations de base de données sont exécutées si REPAIR_FAST, REPAIR_REBUILD ou REPAIR_ALLOW_DATA_LOSS est spécifié, et s'il existe des erreurs de tables système à réparer.|La progression est indiquée au niveau de la réparation.<br /><br /> Le compteur est mis à jour pour chaque réparation terminée.|  
-|DBCC SSB CHECK|Durant cette phase, les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker sont vérifiés.<br /><br /> Remarque : Cette phase n’est pas réalisée lors de l’exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
-|DBCC CHECKCATALOG|Durant cette phase, la cohérence des catalogues de la base de données est vérifiée.<br /><br /> Remarque : Cette phase n’est pas réalisée lors de l’exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
+|DBCC SSB CHECK|Durant cette phase, les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Broker sont vérifiés.<br /><br /> Remarque : Cette phase n'est pas réalisée lors de l'exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
+|DBCC CHECKCATALOG|Durant cette phase, la cohérence des catalogues de la base de données est vérifiée.<br /><br /> Remarque : Cette phase n'est pas réalisée lors de l'exécution de DBCC CHECKTABLE.|La progression n'est pas indiquée.|  
 |DBCC IVIEW CHECK|Durant cette phase, la cohérence logique des vues indexées présentes dans la base de données est vérifiée.|La progression est indiquée au niveau de chaque vue de base de données vérifiée.|  
   
 ## <a name="informational-statements"></a>Instructions d’information  
@@ -144,6 +144,6 @@ La définition d'une unité de progression dépend de la phase en cours d'exécu
 |[DBCC dllname (FREE)](../../t-sql/database-console-commands/dbcc-dllname-free-transact-sql.md)|[DBCC HELP](../../t-sql/database-console-commands/dbcc-help-transact-sql.md)|  
 |[DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md)|[DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md)|  
 |[DBCC FREESESSIONCACHE](../../t-sql/database-console-commands/dbcc-freesessioncache-transact-sql.md)|[DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)|  
-|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|[DBCC FREESYSTEMCACHE](../../t-sql/database-console-commands/dbcc-freesystemcache-transact-sql.md)|[DBCC CLONEDATABASE](../../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md) <br /><br /> **S’applique à** : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
   

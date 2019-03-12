@@ -15,12 +15,12 @@ ms.assetid: ''
 author: pochiraju
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 252e162b78f93b156adcea045bc869e618176331
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: 6c41910b17744a0ff0c86e41c321fae67d59d3a1
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305357"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756714"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -103,6 +103,7 @@ Les paramètres associés à la fonction dmaDataCollector sont décrits dans le 
 |Paramètre  |Description |
 |---------|---------|
 |**getServerListFrom** | Votre inventaire. Les valeurs possibles sont **SqlServer** et **CSV**.<br/>Pour plus d’informations, consultez [créer un inventaire des serveurs SQL](#create-inventory). |
+|**csvPath** | Le chemin d’accès à votre fichier d’inventaire de volume partagé de cluster.  Utilisé uniquement lorsque **getServerListFrom** a la valeur **CSV**. |
 |**serverName** | Le nom de l’instance SQL Server de l’inventaire lors de l’utilisation **SqlServer** dans le **getServerListFrom** paramètre. |
 |**databaseName** | La base de données qui héberge la table d’inventaire. |
 |**AssessmentName** | Le nom de l’évaluation DMA. |

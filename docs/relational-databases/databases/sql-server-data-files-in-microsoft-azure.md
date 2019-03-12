@@ -11,12 +11,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 402cbe79a85b1c7e9cd926922fd8f2c3abca04b6
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744489"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579503"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Fichiers de données SQL Server dans Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "56744489"
   
  Cette rubrique présente les concepts et les considérations essentiels au stockage des fichiers de données SQL Server dans le service de Stockage Microsoft Azure.  
   
- Pour une présentation pratique de l’utilisation de cette nouvelle fonctionnalité, consultez [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
+ Pour une présentation pratique de l’utilisation de cette nouvelle fonctionnalité, consultez [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>Pourquoi utiliser des fichiers de données SQL Server dans Microsoft Azure ? 
   
@@ -151,7 +151,7 @@ ON
     Résolution : Cette erreur peut s’afficher lorsque vous tentez de supprimer des informations d’identification utilisées par un fichier de base de données actif dans le Stockage Azure. Pour supprimer les informations d'identification, vous devez d'abord supprimer l'objet blob associé qui comporte ce fichier de base de données. Pour supprimer un objet blob dont le bail est actif, vous devez d'abord résilier le bail.  
   
 -   *La signature d'accès partagé n'a pas été créée correctement sur le conteneur.*   
-     Résolution : vérifiez que vous avez créé correctement une signature d'accès partagé sur le conteneur. Consultez les instructions fournies dans la leçon 2 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
+     Résolution : vérifiez que vous avez créé correctement une signature d'accès partagé sur le conteneur. Consultez les instructions fournies dans la leçon 2 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
   
 -   *Les informations d'identification de SQL Server n'ont pas été créées correctement.*   
     Résolution : Vérifiez que vous avez utilisé une « signature d’accès partagé » pour le champ **Identité** et que vous avez créé un secret correctement. Consultez les instructions données dans la leçon 3 du [Didacticiel : Utiliser le service Stockage Microsoft Azure Blob avec SQL Server 2016](../lesson-3-database-backup-to-url.md).  

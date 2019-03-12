@@ -15,12 +15,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df69488ebf433257ba4b1af7c13ec1c299afa831
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 04681d455fe4589135cd0b112c310e2dd0a027b3
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256374"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579099"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Utiliser un fichier de format pour mapper les colonnes d'une table aux champs d'un fichier de données (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -102,10 +102,10 @@ Comparez les modifications :
 
 ```
 Le fichier de format modifié reflète à présent les éléments suivants :
-* Le premier champ de données figurant dans `myRemap.bcp` est mappé à la première colonne ; ` myRemap.. PersonID`
+* Le premier champ de données figurant dans `myRemap.bcp` est mappé à la première colonne ; `myRemap.. PersonID`
 * Le second champ de données figurant dans `myRemap.bcp` est mappé à la troisième colonne ; `myRemap.. LastName`
 * Le troisième champ de données figurant dans `myRemap.bcp` est mappé à la deuxième colonne ; `myRemap.. FirstName`
-* Le quatrième champ de données figurant dans `myRemap.bcp` est mappé à la quatrième colonne ; ` myRemap.. Gender`
+* Le quatrième champ de données figurant dans `myRemap.bcp` est mappé à la quatrième colonne ; `myRemap.. Gender`
 
 ### Création d’un fichier de format XML <a name="xml_format_file"></a>  
 Veuillez consulter [Fichiers de format XML (SQL Server)](../../relational-databases/import-export/xml-format-files-sql-server.md) pour obtenir des informations détaillées.  La commande suivante utilise l’ [utilitaire bcp](../../tools/bcp-utility.md) pour créer un fichier de format xml `myRemap.xml`basé sur le schéma de `myRemap`.  En outre, le qualificateur `c` est utilisé pour sépcifier les données de caractère, `t,` est utilisé pour spécifier une virgule comme délimiteur de champ, et `T` est utilisé pour spécifier une connexion approuvée à l’aide de la sécurité intégrée.  Le qualificateur `x` doit être utilisé pour générer un fichier de format XML.  À partir d'une invite de commandes, entrez la commande suivante :

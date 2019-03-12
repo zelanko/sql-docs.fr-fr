@@ -21,12 +21,12 @@ ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 02cc6ae014dc52df01e08c13b9610be5ffa50c6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a252e56d7e625632fdb2d8cb929056daa14815
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720317"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736765"
 ---
 # <a name="columnsupdated-transact-sql"></a>COLUMNS_UPDATED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ COLUMNS_UPDATED ( )
   
 `COLUMNS_UPDATED` retourne un ou plusieurs octets classés de gauche à droite. Le bit le plus à droite dans chaque octet est le bit le moins significatif. Le bit le plus à droite de l’octet le plus à gauche représente la première colonne de la table, le suivant à gauche représente la deuxième colonne, etc. `COLUMNS_UPDATED` retourne plusieurs octets si la table sur laquelle le déclencheur est créé contient plus de huit colonnes, l’octet le moins significatif étant celui le plus à gauche. `COLUMNS_UPDATED` retourne TRUE pour toutes les colonnes des actions INSERT, car les valeurs insérées dans ces colonnes sont explicites ou implicites (NULL).
   
-Pour tester l’existence de mises à jour ou d’insertions dans des colonnes spécifiques, utilisez dans la syntaxe un opérateur au niveau du bit et un masque de bits d’entier des colonnes testées. Par exemple, la table **t1** contient les colonnes **C1**, **C2**, **C3**, **C4** et **C5**. Pour vérifier que les colonnes **C2**, **C3** et **C4** ont toutes été mises à jour avec succès (en supposant que la table **t1** ait un déclencheur UPDATE), indiquez dans la syntaxe **& 14**. Pour vérifier si seule la colonne **C2** est mise à jour, spécifiez **& 2**. Consultez [Exemple A](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) et [Exemple B](https://github.com/MicrosoftDocs/sql-docs/blob/live/docs/t-sql/functions/columns-updated-transact-sql.md#b-using-columns_updated-to-test-more-than-eight-columns) pour obtenir des exemples réels.
+Pour tester l’existence de mises à jour ou d’insertions dans des colonnes spécifiques, utilisez dans la syntaxe un opérateur au niveau du bit et un masque de bits d’entier des colonnes testées. Par exemple, la table **t1** contient les colonnes **C1**, **C2**, **C3**, **C4** et **C5**. Pour vérifier que les colonnes **C2**, **C3** et **C4** ont toutes été mises à jour avec succès (en supposant que la table **t1** ait un déclencheur UPDATE), indiquez dans la syntaxe **& 14**. Pour vérifier si seule la colonne **C2** est mise à jour, spécifiez **& 2**. Consultez [Exemple A](#a-using-columns_updated-to-test-the-first-eight-columns-of-a-table) et [Exemple B](#b-using-columns_updated-to-test-more-than-eight-columns) pour obtenir des exemples réels.
   
 Utilisez `COLUMNS_UPDATED` n’importe où dans un déclencheur [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT ou UPDATE.
   
@@ -181,7 +181,7 @@ SELECT * FROM dbo.auditEmployeeData;
 GO  
 ```  
   
-### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>B. Utilisation de COLUMNS_UPDATED pour tester plus de huit colonnes  
+### <a name="b-using-columnsupdated-to-test-more-than-eight-columns"></a>b. Utilisation de COLUMNS_UPDATED pour tester plus de huit colonnes  
 Pour tester l’existence de mises à jour affectant des colonnes autres que les huit premières colonnes d’une table, utilisez la fonction `SUBSTRING` afin de tester le bit adéquat retourné par `COLUMNS_UPDATED`. Cet exemple teste l’existence de mises à jour affectant les colonnes `3`, `5` et `9` de la table `AdventureWorks2012.Person.Person`.
   
 ```sql
