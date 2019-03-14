@@ -104,7 +104,7 @@ ms.locfileid: "56031260"
 ### <a name="setting-domain-values"></a>Définition de valeurs de domaine  
  Après avoir généré une base de connaissances, vous pouvez renseigner et afficher les valeurs de données dans chaque domaine de la base de connaissances. Après la découverte des connaissances, DQS affiche le nombre d'occurrences de chaque terme, l'état de chaque terme et toutes les corrections proposées. Vous pouvez gérer ces connaissances comme suit :  
   
--   Modifier l'état d'une valeur de sorte qu'elle soit correcte, erronée ou non valide.  
+-   Modifier l'état d'une valeur de sorte qu'elle soit correcte, erronée ou non valide  
   
 -   Ajouter une valeur spécifique à ou supprimer une valeur spécifique de la base de connaissances  
   
@@ -126,7 +126,7 @@ ms.locfileid: "56031260"
   
 -   L'analyse des différents domaines uniques qui constituent un domaine composite peut permettre d'évaluer plus efficacement la qualité des données.  
   
--   Lorsque vous utilisez un domaine composite, vous pouvez également créer des règles inter-domaines qui vous permettent de vérifier que la relation entre les données de plusieurs champs est appropriée. Par exemple, vous pouvez vérifier que la chaîne « Londres » dans un champ de ville correspond à la chaîne « Angleterre » dans un champ de pays. Notez que les règles de domaine prévalent sur les règles inter-domaines.  
+-   Lorsque vous utilisez un domaine composite, vous pouvez également créer des règles inter-domaines qui vous permettent de vérifier que la relation entre les données de plusieurs champs est appropriée. Par exemple, vous pouvez vérifier que la chaîne « Londres » dans un champ de ville correspond à la chaîne « Grande-Bretagne » dans un champ de pays. Notez que les règles de domaine prévalent sur les règles inter-domaines.  
   
 -   Les données des champs composites peuvent être jointes à une source de données de référence, auquel cas le domaine composite sera envoyé au fournisseur de données de référence. Cela se produit souvent avec les données d'adresse.  
   

@@ -103,13 +103,13 @@ Table mémoire optimisée, comportant des index et des lignes.
   
  Par conséquent, les chaînes de l'index de hachage sur le nom sont les suivantes :  
   
--   Premier compartiment : (John, Pékin) ; (John, Paris) ; (Jane, Prague)  
+-   Premier compartiment : (John, Beijing) ; (John, Paris) ; (Jane, Prague)  
   
 -   Deuxième compartiment : (Susan, Bogota)  
   
  Les chaînes de l'index de la ville sont les suivantes :  
   
--   Premier compartiment : (John, Pékin), (Susan, Bogota)  
+-   Premier compartiment : (John, Beijing), (Susan, Bogota)  
   
 -   Deuxième compartiment : (John, Paris), (Jane, Prague)  
   
