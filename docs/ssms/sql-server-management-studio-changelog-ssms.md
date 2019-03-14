@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8d953127249bb6f82626dfff647b15dc40aba859
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 048e3b88ff45147e30121c3b754527b71d30ea7b
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334836"
+ms.locfileid: "57401931"
 ---
 # <a name="sql-server-management-studio---changelog-ssms"></a>SQL Server Management Studio - Journal des modifications (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -115,7 +115,7 @@ L’absence d’étiquette *préversion 5*, *préversion 6* ou *préversion 7
   - Taille de téléchargement inférieure
     - Actuellement, le bundle représente en taille moins de la moitié de SSMS 17.x (environ 400 Mo). Sa taille augmentera un peu à terme, une fois les composants IS rajoutés à SSMS, mais elle ne devrait pas être aussi grande qu’auparavant.
   - SSMS est basé sur le nouveau Shell isolé VS 2017
-    - Il s’agit d’un interpréteur de commandes moderne (nous avons choisi VS 2107 15.6.4). Il permet d’exploiter tous les correctifs d’accessibilité qui ont été intégrés à SSMS et Visual Studio.
+    - Il s’agit d’un shell moderne (nous avons choisi VS 2017 15.6.4). Il permet d’exploiter tous les correctifs d’accessibilité qui ont été intégrés à SSMS et Visual Studio.
   - Améliorations apportées à l’accessibilité de SSMS
     - Un travail important a été réalisé pour faire face aux problèmes d’accessibilité dans tous les outils (SSMS, DTA et Profiler)
   - SSMS peut être installé dans un dossier personnalisé
@@ -261,7 +261,7 @@ L’absence d’étiquette *préversion 5*, *préversion 6* ou *préversion 7
 ### <a name="bug-fixes"></a>Correctifs de bogues
 
 - **Plantages/blocages**
-  - Correction d’une source courante de plantages SSMS liés aux objets GDI.
+  - Correction d’une source courante d’incidents SSMS liés aux objets GDI.
   - Correction d’une source courante de blocages et de performances médiocres quand « Générer un script en tant que Créer/Mettre à jour/Supprimer » est sélectionné (les objets SMO ne sont plus récupérés inutilement).
   - Correction d’un blocage qui se produisait pendant la connexion à une base de données Azure SQL DB avec MFA quand les traces ADAL étaient activées.
   - Correction d’un blocage (ou perçu comme tel) qui se produisait pendant l’appel aux Statistiques des requêtes en direct à partir du Moniteur d’activité (le problème se manifestait quand l’authentification SQL Server était utilisée sans que « Persist Security Info » soit défini).
@@ -638,7 +638,7 @@ Always Encrypted :
 **Analysis Services (AS)**
 
 - Correction d’un problème qui se produisait lors de la modification d’une source de données OAuth dans un modèle de compatibilité de niveau 1400 Analysis Services tabulaire et empêchait la mise à jour des jetons OAuth dans la source de données.
-- Correction d’un plantage dans SSMS qui a pu se produire en cas d’utilisation d’identifiants de source de données non valides ou de modification de sources de données ne prenant pas en charge la migration Changer la source de données dans Power Query (par exemple, Oracle) dans les modèles de compatibilité de niveau 1400 tabulaires Analysis Services.
+- Correction d’un incident dans SSMS qui a pu se produire en cas d’utilisation d’identifiants de source de données non valides ou de modification de sources de données ne prenant pas en charge la migration Changer la source de données dans Power Query (par exemple, Oracle) dans les modèles de compatibilité de niveau 1400 tabulaires Analysis Services.
 
 
 ### <a name="known-issues"></a>Problèmes connus

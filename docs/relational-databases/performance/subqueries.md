@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2ac6f2a1692d72eecbcd97dbc3536dcebd6f2ec
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356028"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579389"
 ---
 # <a name="subqueries-sql-server"></a>Sous-requêtes (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -490,7 +490,7 @@ GO
 Cette instruction ne peut pas être convertie en jointure. La jointure analogue « non égal à » revêt une autre signification : elle trouve les noms des produits qui se trouvent dans une sous-catégorie différente de « produits finis ».      
 
 ### <a name="upsert"></a> Sous-requêtes dans les instructions UPDATE, DELETE et INSERT
-Les sous-requêtes peuvent être imbriquées dans les instructions de manipulation de données (DML, Data Manipulation Language) `UPDATE`, `DELETE`, `INSERT` et `SELECT `.    
+Les sous-requêtes peuvent être imbriquées dans les instructions de manipulation de données (DML, Data Manipulation Language) `UPDATE`, `DELETE`, `INSERT` et `SELECT`.    
 
 L’exemple suivant double la valeur de la colonne *ListPrice* dans la table *Production.Product*. La sous-requête contenue dans la clause `WHERE` fait référence à la table *Purchasing.ProductVendor* pour limiter les lignes mises à jour dans la table *Product* à celles fournies par *BusinessEntity* 1540 uniquement.
 

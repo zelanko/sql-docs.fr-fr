@@ -11,14 +11,14 @@ ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 678f9da12655cc733dcdf95aca5f61e5aa1cd45e
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52158620"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579527"
 ---
-# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Leçon 1 : Créer et appliquer une stratégie Désactivé par défaut
+# <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>Leçon 1 : Créer et appliquer une stratégie Désactivé par défaut
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 À l'aide des stratégies de la Gestion basée sur des stratégies, vous pouvez administrer une ou plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un ou plusieurs objets d'instance, une ou plusieurs instances de serveur, une ou plusieurs bases de données, de même qu'un ou plusieurs objets de base de données. En tant qu'administrateur de base de données, vous souhaitez vous assurer que la Messagerie de base de données n'est pas activée sur certains serveurs. Dans cette leçon, vous allez créer une condition et une stratégie qui définissent cette option de serveur. Vous allez tester le serveur pour vérifier s'il est conforme à la stratégie. Ensuite, vous utiliserez la stratégie pour reconfigurer le serveur afin de le rendre conforme.  
 
@@ -79,7 +79,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
   
 6.  Dans la zone **Détails sur les cibles** , des informations supplémentaires apparaîtront dans la colonne **Message** si une erreur se produit. Dans la colonne **Message** , cliquez sur **Afficher** pour voir un rapport contenant les résultats de la vérification de chaque propriété de facette. 
 
-    ![Voir les résultats de l’évaluation de la stratégie ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![Voir les résultats de l’évaluation de la stratégie](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  La description de stratégie est affichée en bas de la page et la section **Aide supplémentaire** affiche le lien hypertexte que vous avez configuré pour la stratégie. Cliquez sur le lien hypertexte pour ouvrir la page Web que vous avez spécifiée lors de la création de la stratégie.   
 
@@ -91,7 +91,7 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
 
    
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Créer et appliquer une stratégie de normes d'affectation de noms](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
+[Leçon 2 : Créer et appliquer une stratégie de standards de nommage](../../relational-databases/policy-based-management/lesson-2-create-and-apply-a-naming-standards-policy.md)  
   
   
   

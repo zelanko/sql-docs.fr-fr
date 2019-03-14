@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: d9e89edc1deb8e16dc69c58a7f959db74c1e6024
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1d74f0569e2add7d9c8b72a86871540bef146f5e
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017060"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579639"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notes de publication de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -180,14 +180,14 @@ Les détails de l'erreur interne contiennent un message similaire au message sui
 #### <a name="power-view-sheets-in-a-powerpivot-workbook-are-deleted-after-a-scheduled-data-refresh"></a>Les feuilles Power View dans un classeur PowerPivot sont supprimées après les actualisations des données planifiées  
 **Problème** : dans le complément PowerPivot pour SharePoint, l’utilisation de l’**actualisation planifiée des données** sur un classeur avec Power View a pour effet de supprimer les feuilles Power View.  
   
-**Solution de contournement** : pour utiliser l’**actualisation planifiée des données** avec des classeurs Power View, créez un classeur PowerPivot qui est simplement le modèle de données. Créez un classeur distinct avec les feuilles Excel et Power View qui se lie au classeur PowerPivot avec le modèle de données. Seul le classeur PowerPivot avec le modèle de données doit être planifiée pour l'actualisation des données.  
+**Solution de contournement**: pour utiliser l’**actualisation planifiée des données** avec des classeurs Power View, créez un classeur PowerPivot qui est simplement le modèle de données. Créez un classeur distinct avec les feuilles Excel et Power View qui se lie au classeur PowerPivot avec le modèle de données. Seul le classeur PowerPivot avec le modèle de données doit être planifiée pour l'actualisation des données.  
   
 ### <a name="data-quality-services"></a>Data Quality Services  
   
 #### <a name="dqs-available-in-the-incorrect-edition-of-sql-server-2012"></a>DQS disponible dans l’édition incorrecte de SQL Server 2012  
 **Problème :** dans la version commerciale de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], la fonctionnalité Data Quality Services (DQS) est disponible dans les éditions de SQL Server autres que les éditions Enterprise, Business Intelligence et Developer. Après avoir installé SQL Server 2012 SP1, DQS ne sera disponible que dans les éditions Enterprise, Business Intelligence et Developer.  
   
-**Solution de contournement** : si vous utilisez DQS dans une édition non prise en charge, effectuez une mise à niveau vers une édition prise en charge ou supprimez la dépendance à cette fonctionnalité dans vos applications.  
+**Solution de contournement**: si vous utilisez DQS dans une édition non prise en charge, effectuez une mise à niveau vers une édition prise en charge ou supprimez la dépendance à cette fonctionnalité dans vos applications.  
   
 ### <a name="sql-server-express"></a>SQL Server Express  
   
@@ -246,7 +246,7 @@ Cette version introduit plusieurs scénarios de compatibilité ascendante des pa
 - [Installer des mises à jour de maintenance de SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
 - [Comment identifier la version et l'édition de votre SQL Server](https://support.microsoft.com/help/321185)
 - [Installer des mises à jour de maintenance de SQL Server 2012](https://msdn.microsoft.com/library/hh479746(v=sql.110).aspx)
-- [Comment identifier la version et l’édition de SQL Server](https://support.microsoft.com/help/321185) 
+- [Comment identifier la version et l'édition de votre SQL Server](https://support.microsoft.com/help/321185) 
 - [Comment déterminer la version et l'édition de SQL Server](https://support.microsoft.com/kb/321185)  
 - [Fonctionnalités prises en charge par les éditions de SQL Server 2014](https://msdn.microsoft.com/5da61ff5-12b9-48e6-b3c8-0dacca1751c4)  
 

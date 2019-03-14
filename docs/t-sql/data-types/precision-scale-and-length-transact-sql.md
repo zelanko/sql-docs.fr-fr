@@ -22,12 +22,12 @@ ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4a5023afdfe6b1ebe4267c0bff9741f6651e4bde
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a27c434bb10b863459b138f98b9974b4d25794c3
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020420"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401791"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>Précision, échelle et longueur (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ Le tableau suivant montre le calcul de la précision et de l’échelle quand le
 -   Les deux expressions sont de type **decimal**.  
 -   Une expression est de type **decimal** et l’autre est d’un type de données avec une priorité moins élevée que **decimal**.  
   
-Les expressions des opérandes sont notées e1 et e2, avec respectivement les précisions p1 et p2 et les échelles s1 et s2. La précision et l’échelle d’une expression d’un type autre que **decimal** sont celles du type de données de l’expression.
+Les expressions des opérandes sont notées e1 et e2, avec respectivement les précisions p1 et p2 et les échelles s1 et s2. La précision et l’échelle d’une expression d’un type autre que **decimal** sont celles définies pour le type de données de l’expression. La fonction max(a,b) signifie ceci : prendre la valeur la plus grande entre « a » et « b ». De même, min(a,b) indique de prendre la valeur la plus petite entre « a » et « b ».
   
 |Opération|Précision du résultat|Échelle du résultat *|  
 |---|---|---|

@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 71e394c613f40b56fee354101410aa422d918e86
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 52628b3742574bc4e3079750526a5424d65012fe
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464785"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579664"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -162,7 +162,7 @@ Crée une ou plusieurs partitions de table. Ces partitions sont des coupes de ta
  Consultez [Créer une table partitionnée](#PartitionedTable) dans la section Exemples.
 
 ### <a name="DataTypes"></a> Types de données
-[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] prend en charge les types de données les plus couramment utilisés. Vous trouverez ci-dessous la liste des types de données pris en charge, les détails les concernant, ainsi que leur taille de stockage (en octets). Pour mieux comprendre les types de données et pour savoir comment les utiliser, consultez [Types de données pour les tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
+[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] prend en charge les types de données les plus couramment utilisés. Vous trouverez ci-dessous la liste des types de données pris en charge, les détails les concernant, ainsi que leur taille de stockage (en octets). Pour mieux comprendre les types de données et comment les utiliser, consultez [Types de données pour les tables dans SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-tables-data-types).
 
 Pour obtenir un tableau des conversions des types de données, consultez la section Conversions implicites de la rubrique [CAST et CONVERT (Transact-SQL)](https://msdn.microsoft.com/library/ms187928/).
 

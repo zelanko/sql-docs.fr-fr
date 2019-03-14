@@ -1,7 +1,7 @@
 ---
 title: Nom de classement Windows (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 03/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1b871541215597d82d1ccda81cebe1b9cbe3a433
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827989"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572842"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nom de classement Windows (Transact-SQL)
 
@@ -42,7 +42,7 @@ Spécifie le nom de classement Windows dans la clause COLLATE dans [!INCLUDE[ssN
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
 }
 | { _BIN | _BIN2 }
 ```
@@ -51,41 +51,53 @@ CollationDesignator_<ComparisonStyle>
 
 *CollationDesignator* Spécifie les règles de classement de base utilisées par le classement Windows. Les règles de classement de base incluent les éléments suivants :
 
-- les règles de tri appliquées lorsque le tri de dictionnaire est spécifié. Les règles de tri sont basées sur l'alphabet ou la langue ;
-- la page de codes utilisée pour stocker les données caractères non-Unicode.
+- Les règles de tri et de comparaison appliquées quand le tri de dictionnaire est spécifié. Les règles de tri sont basées sur l'alphabet ou la langue ;
+- La page de codes utilisée pour stocker les données **varchar**.
 
 Exemples :
 
-- Latin1_General ou French : ces deux ensembles de caractères s'appuient sur la page de codes 1252.
+- Latin1\_General ou Français : les deux utilisent la page de codes 1252.
 - Turkish : utilise la page de code 1254.
 
-*CaseSensitivity*
+*CaseSensitivity*  
 **CI** ne respecte pas la casse, contrairement à **CS**.
 
-*AccentSensitivity*
+*AccentSensitivity*  
 **AI** ne respecte pas les accents, contrairement à **AS**.
 
-*KanatypeSensitive*
-**Omitted** ne respecte pas les caractères Kana, contrairement à **KS**.
+*KanatypeSensitive*  
+**Omitted** ne respecte pas les caractères Kana alors que **KS** les respecte.
 
-*WidthSensitivity*
-**Omitted** ne respecte pas les largeurs, contrairement à **WS**.
+*WidthSensitivity*  
+**Omitted** ne tient pas compte des largeurs, contrairement à **WS**.
 
-**BIN** indique l’ordre de tri binaire et assurant la compatibilité descendante à utiliser.
+*VariationSelectorSensitivity*  
+**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**BIN2** indique l’ordre de tri binaire utilisant la sémantique de comparaison des points de code.
+**Omitted** spécifie le non-respect du sélecteur de variation, **VSS** spécifie le respect du sélecteur de variation.
+
+**BIN**  
+Indique l'ordre de tri binaire et assurant la compatibilité descendante à utiliser.
+
+**BIN2**  
+Indique l'ordre de tri binaire utilisant la sémantique de comparaison des points de code.
 
 ## <a name="remarks"></a>Notes 
 
- Selon la version des classements, certains points de code peuvent être non définis. Par exemple, comparez :
+Selon la version du classement, certains points de code peuvent ne pas avoir de pondérations de tri et/ou de mappages majuscules/minuscules définis. Par exemple, comparez la sortie de la fonction `LOWER` quand elle reçoit le même caractère, mais dans différentes versions du même classement :
 
 ```sql
-SELECT LOWER(nchar(504) COLLATE Latin1_General_CI_AS);
-SELECT LOWER (nchar(504) COLLATE Latin1_General_100_CI_AS);
-GO
+SELECT NCHAR(504) COLLATE Latin1_General_CI_AS AS [Uppercase],
+       NCHAR(505) COLLATE Latin1_General_CI_AS AS [Lowercase];
+-- Ǹ    ǹ
+
+
+SELECT LOWER(NCHAR(504) COLLATE Latin1_General_CI_AS) AS [Version80Collation],
+       LOWER(NCHAR(504) COLLATE Latin1_General_100_CI_AS) AS [Version100Collation];
+-- Ǹ    ǹ
 ```
 
-La première ligne retourne un caractère majuscule lorsque le classement est Latin1_General_CI_AS, car ce point de code est non défini dans ce classement.
+La première instruction montre la forme majuscule et la forme minuscule de ce caractère dans le classement plus ancien (le classement n’affecte pas la disponibilité des caractères lors de l’utilisation de données Unicode). Cependant, la deuxième instruction montre qu’un caractère majuscule est retourné quand le classement est Latin1\_General\_CI\_AS, car il n’y a pas de mappage aux minuscules défini pour ce point de code dans ce classement.
 
 Lors de l'utilisation de certaines langues, il peut être essentiel d'éviter les classements anciens. C'est par exemple le cas pour le télougou.
 
@@ -95,24 +107,24 @@ Dans certains cas, les classements Windows et les classements [!INCLUDE[ssNoVers
 
 Voici quelques exemples de noms de classements Windows :
 
-- **Latin1_General_100_**
+- **Latin1\_General\_100\_CI\_AS**
 
-  Le classement utilise les règles de tri du dictionnaire général Latin1 et établit un mappage à la page de codes 1252. Non-respect de la casse (CI) et respect des accents (AS). Le classement utilise les mappages et les règles de tri du dictionnaire général Latin1 et établit un mappage à la page de codes 1252. Affiche le numéro de version du classement s'il s'agit d'un classement Windows : _90 ou _100. Non-respect de la casse (CI) et respect des accents (AS).
+  Le classement utilise les mappages et les règles de tri du dictionnaire général Latin1 et établit un mappage à la page de codes 1252. Il s’agit d’un classement de la version \_100, qui ne respecte pas la casse (CI) et respecte les accents (AS).
 
-- **Estonian_CS_AS**
+- **Estonian\_CS\_AS**
 
-  Ce classement utilise les règles de tri du dictionnaire estonien, page de codes 1257. Respect de la casse et des accents.
+  Ce classement utilise les règles de tri du dictionnaire estonien et il est mappé à la page de codes 1257. Il s’agit d’un classement de la version \_80 (découlant de l’absence de numéro de version dans le nom), qui est sensible à la casse (CS) et qui respecte les accents (AS).
 
-- **Latin1_General_BIN**
+- **Japanese\_Bushu\_Kakusu\_140\_BIN2**
 
-  Ce classement utilise la page de codes 1252 et les règles de tri binaire. Les règles de tri du dictionnaire général Latin1 sont ignorées.
+  Le classement utilise les règles de tri du point de code binaire et il est mappé à la page de codes 932. Il s’agit d’un classement de la version \_140 et les règles de tri du dictionnaire du japonais Bushu Kakusu sont ignorées.
 
 ## <a name="windows-collations"></a>Classements Windows
 
 Pour énumérer les classements Windows pris en charge par votre d'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], exécutez la requête suivante.
 
 ```sql
-SELECT * FROM sys.fn_helpcollations() WHERE name NOT LIKE 'SQL%';
+SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 ```
 
 Le tableau suivant répertorie tous les classements Windows pris en charge dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].

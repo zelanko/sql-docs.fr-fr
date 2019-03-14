@@ -16,12 +16,12 @@ ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8c1be5887e4d3b6ff4af02e12e8af26a456987e2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
+ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125423"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57527122"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Activer ou désactiver la fonctionnalité de groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "54125423"
 ###  <a name="SQLCM2Procedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
  **Pour activer les groupes de disponibilité Always On**  
   
-1.  Connectez-vous au nœud de clustering de basculement Windows Server (WSFC) qui héberge l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous voulez activer les groupes de disponibilité Always On.  
+1.  Connectez-vous au nœud du cluster de basculement Windows Server qui héberge l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] où vous voulez activer les groupes de disponibilité Always On.  
   
 2.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
@@ -194,7 +194,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ###  <a name="SQLCM3Procedure"></a> Utilisation du Gestionnaire de configuration SQL Server  
  **Pour désactiver Always On**  
   
-1.  Connectez-vous au nœud de clustering de basculement Windows Server (WSFC) qui héberge l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur laquelle vous voulez désactiver les groupes de disponibilité Always On.  
+1.  Connectez-vous au nœud du cluster de basculement Windows Server qui héberge l’instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] où vous voulez désactiver les groupes de disponibilité Always On.  
   
 2.  Dans le menu **Démarrer** , pointez sur **Tous les programmes**, sur [!INCLUDE[ssCurrentUI](../../../includes/sscurrentui-md.md)]et sur **Outils de configuration**, puis cliquez sur **Gestionnaire de configuration SQL Server**.  
   
@@ -243,7 +243,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 1.  Si vous ne supprimez pas les réplicas de disponibilité locaux avant de désactiver Always On, supprimez (avec l’instruction Drop) chaque groupe de disponibilité pour lequel l’instance de serveur héberge un réplica de disponibilité. Pour plus d’informations sur la suppression d’un groupe de disponibilité, consultez [Supprimer un groupe de disponibilité &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-sql-server.md).  
   
-2.  Pour supprimer les métadonnées restantes, supprimez (avec l'instruction Drop) chaque groupe de disponibilité affecté sur une instance de serveur qui fait partie du cluster WSFC d'origine.  
+2.  Pour supprimer les métadonnées restantes, supprimez chaque groupe de disponibilité affecté sur une instance de serveur qui fait partie du cluster de basculement Windows Server d’origine.  
   
 3.  Toutes les bases de données primaires restent accessibles à toutes les connexions, mais la synchronisation des données entre les bases de données primaires et secondaires est arrêtée.  
   

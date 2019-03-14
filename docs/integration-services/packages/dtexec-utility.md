@@ -11,12 +11,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 7e213eb323de92abf048bdd94e8e2463f42f5cb3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cf64e248d8fb9cb727114521cac9b6444fc1f710
+ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591423"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57401881"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
   L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -38,6 +38,8 @@ ms.locfileid: "53591423"
 -   [Règles de la syntaxe](#syntaxRules)  
   
 -   [Utilisation de dtexec à partir de l'invite xp_cmdshell](#cmdshell)  
+
+-   [Utilisation de dtexec à partir de Bash](#bash)
   
 -   [Syntaxe](#syntax)  
   
@@ -139,7 +141,15 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > **IMPORTANT** Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’option **xp_cmdshell** est désactivée par défaut sur les nouvelles installations. Elle peut être activée en exécutant la procédure stockée système **sp_configure** . Pour plus d’informations, consultez [xp_cmdshell (option de configuration de serveur)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
-  
+
+##  <a name="bash"></a> Utilisation de dtexec à partir de Bash
+
+Le shell **Bash** est un interpréteur de commandes pour Linux répandu. Il peut également être utilisé sur Windows. Vous pouvez exécuter dtexec à partir de l’invite Bash. Notez que le point-virgule (`;`) est un opérateur de délimiteur de commande dans Bash. C’est particulièrement important lors du passage de valeurs au package avec les options `/Conn[ection]`, `/Par[arameter]` ou `/Set`, car elles utilisent le point-virgule pour séparer le nom et la valeur de l’élément fourni. L’exemple suivant montre comment placer correctement en échappement le point-virgule et d’autres éléments lors de l’utilisation de Bash et du passage de valeurs à un package :
+
+```bash
+dtexec /F MyPackage.dtsx /CONN "MyConnection"\;"\"MyConnectionString\""
+```
+
 ##  <a name="syntax"></a> Syntaxe  
   
 ```  

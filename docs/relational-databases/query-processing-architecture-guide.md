@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: ee8109bc7d6499352b2d1caf47381faa3df9cf3a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 881949902c2c198db4f03b2741a822d9c2b2e13e
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802405"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57579729"
 ---
 # <a name="query-processing-architecture-guide"></a>Guide d’architecture de traitement des requêtes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -1192,7 +1192,7 @@ GO
  [Événements étendus](../relational-databases/extended-events/extended-events.md)  
  [Bonnes pratiques relatives au Magasin des requêtes](../relational-databases/performance/best-practice-with-the-query-store.md)  
  [Estimation de la cardinalité](../relational-databases/performance/cardinality-estimation-sql-server.md)  
- [Traitement des requêtes adaptatives](../relational-databases/performance/adaptive-query-processing.md)   
+ [Traitement de requêtes intelligent](../relational-databases/performance/intelligent-query-processing.md)   
  [Priorité des opérateurs](../t-sql/language-elements/operator-precedence-transact-sql.md)    
  [Plans d’exécution](../relational-databases/performance/execution-plans.md)    
  [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)

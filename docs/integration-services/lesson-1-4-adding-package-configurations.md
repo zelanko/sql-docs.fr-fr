@@ -1,5 +1,5 @@
 ---
-title: 'Étape 4 : Ajout de configurations au package | Microsoft Docs'
+title: 'Étape 4 : Ajout de configurations au package | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -11,12 +11,12 @@ ms.assetid: e04a5321-63d5-4ec5-85b9-cb4eaf6c87f6
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c9ed2d231414ca36bef186a8d2e70d491a469fb4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 51ca1188b8954564fc929dd0cdc34715466aee8b
+ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605687"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57756674"
 ---
 # <a name="lesson-1-4---adding-package-configurations"></a>Leçon 1-4 : Ajout de configurations au package
 Au cours de cette tâche, vous allez ajouter une configuration à chaque package. Les configurations mettent à jour les valeurs des propriétés de package et des objets de package au moment de l'exécution.  
@@ -32,6 +32,8 @@ Vous allez créer deux fichiers de configuration, DataTransferConfig.dtsConfig e
 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] reconnaît que DataTransferConfig.dtsConfig et LoadXMLData.dtsConfig sont des dépendances des packages DataTransfer et LoadXMLData, et inclut automatiquement les fichiers de configuration lorsque vous créez l'application de déploiement dans la leçon suivante.  
   
 ### <a name="to-create-indirect-configuration-for-the-datatransfer-package"></a>Pour créer des configurations indirectes pour le package DataTransfer  
+
+Vérifiez le modèle de déploiement actuel du projet et définissez-le si nécessaire sur **Modèle de déploiement de package**. Dans le menu **Projet**, cliquez sur **Convertir en modèle de déploiement de package**.
   
 1.  Dans l'Explorateur de solutions, double-cliquez sur DataTransfer.dtsx.  
   
@@ -130,7 +132,7 @@ Vous allez créer deux fichiers de configuration, DataTransferConfig.dtsConfig e
 12. Dans la boîte de dialogue **Bibliothèque des configurations du package** , vérifiez que LoadXMLData EV Configuration est en haut de la liste et que LoadXMLData Configuration est second, puis cliquez sur **Fermer**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
+[Étape 5 : Test des packages mis à jour](../integration-services/lesson-1-5-testing-the-updated-packages.md)  
   
 ## <a name="see-also"></a> Voir aussi  
 [Configurations du package](../integration-services/packages/package-configurations.md)  

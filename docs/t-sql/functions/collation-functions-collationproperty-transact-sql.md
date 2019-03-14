@@ -20,17 +20,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 01459443d4fbcfeb770f24fad61adabc0bc1dc91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 66a53dcece274df879242ac8a7d3315882bad84f
+ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785917"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57572792"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Fonctions de classement - COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-Cette fonction retourne la propriété d’un classement spécifié dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+Cette fonction retourne la propriété demandée d’un classement spécifié.
   
 ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -49,10 +49,10 @@ Propriété du classement. L’argument *property* a un type de données **varch
   
 |Nom de la propriété|Description|  
 |---|---|
-|**CodePage**|Page de codes non-Unicode du classement. Consultez [Annexe G – Tables de mappage DBCS/Unicode](https://msdn.microsoft.com/library/cc194886.aspx) et [Annexe H – Pages de code](https://msdn.microsoft.com/library/cc195051.aspx) pour convertir ces valeurs et voir leurs mappages de caractères.|  
-|**LCID**|Indicateur LCID Windows du classement. Consultez [Structure LCID](https://msdn.microsoft.com/library/cc233968.aspx) pour convertir ces valeurs (vous devrez commencer par les convertir en **varbinary**).|  
-|**ComparisonStyle**|Style de comparaison Windows du classement. Retourne 0 pour tous les classements binaires, à la fois (\_BIN) et (\_BIN2), ainsi que quand toutes les propriétés respectent la casse. Valeurs de masque de bits :<br /><br /> Ignorer la casse : 1<br /><br /> Ignorer les accents : 2<br /><br /> Ignorer le type de caractères Kana : 65536<br /><br /> Ignorer la largeur : 131072<br /><br /> Remarque : L’option de sélecteur de variante (\_VSS) n’est pas représentée dans cette valeur, même si elle affecte le comportement de la comparaison.|  
-|**Version**|Version du classement, dérivée du champ de version de l’ID du classement. Retourne un nombre entier compris entre 0 et 3.<br /><br /> Les classements dont le nom contient « 140 » retournent 3.<br /><br /> Les classements dont le nom contient « 100 » retournent 2.<br /><br /> Les classements dont le nom contient « 90 » retournent 1.<br /><br /> Tous les autres classements retournent 0.|  
+|**CodePage**|Page de codes non-Unicode du classement. Il s’agit du jeu de caractères utilisé pour les données **varchar**. Consultez [Annexe G – Tables de mappage DBCS/Unicode](https://msdn.microsoft.com/library/cc194886.aspx) et [Annexe H – Pages de code](https://msdn.microsoft.com/library/cc195051.aspx) pour convertir ces valeurs et voir leurs mappages de caractères.<br /><br />Type de données de base : **int**|  
+|**LCID**|ID des paramètres régionaux Windows. Il s’agit de la culture utilisée pour les règles de tri et de comparaison. Consultez [Structure LCID](https://msdn.microsoft.com/library/cc233968.aspx) pour convertir ces valeurs (vous devrez commencer par les convertir en **varbinary**).<br /><br />Type de données de base : **int**|  
+|**ComparisonStyle**|Style de comparaison Windows du classement. Retourne 0 pour les classements binaires - à la fois (\_BIN) et (\_BIN2) - ainsi que quand toutes les propriétés respectent les caractères (\_CS\_AS\_KS\_WS) et (\_CS\_AS\_KS\_WS\_SC) et (\_CS\_AS\_KS\_WS\_VSS). Valeurs de masque de bits :<br /><br /> Ignorer la casse : 1<br /><br /> Ignorer les accents : 2<br /><br /> Ignorer le type de caractères Kana : 65536<br /><br /> Ignorer la largeur : 131072<br /><br /> Remarque : L’option de sélecteur de variante (\_VSS) n’est pas représentée dans cette valeur, même si elle affecte le comportement de la comparaison.<br /><br />Type de données de base : **int**|  
+|**Version**|Version du classement. Retourne une valeur comprise entre 0 et 3.<br /><br /> Les classements dont le nom contient « 140 » retournent 3.<br /><br /> Les classements dont le nom contient « 100 » retournent 2.<br /><br /> Les classements dont le nom contient « 90 » retournent 1.<br /><br /> Tous les autres classements retournent 0.<br /><br />Type de données de base : **tinyint**|  
   
 ## <a name="return-types"></a>Types de retour
 **sql_variant**

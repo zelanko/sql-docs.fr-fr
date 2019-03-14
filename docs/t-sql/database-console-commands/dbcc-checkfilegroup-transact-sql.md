@@ -23,15 +23,15 @@ helpviewer_keywords:
 - table integrity checks [SQL Server]
 - checking database objects
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-author: uc-msft
+author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: f40aa64f4406c8847870f26cf25d3a059bcbc6e4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 3c4afaa25ad5f9b722e47541d546e040f7ebbac1
+ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698217"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57685836"
 ---
 # <a name="dbcc-checkfilegroup-transact-sql"></a>DBCC CHECKFILEGROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ DBCC CHECKFILEGROUP
 >  En raison de la spécification de PHYSICAL_ONLY, DBCC CHECKFILEGROUP ignore toutes les vérifications des données FILESTREAM.  
   
  MAXDOP  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 jusqu’à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 SP2 à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658).  
   
  Remplace l’option de configuration **max degree of parallelism** de **sp_configure** pour l’instruction. MAXDOP peut dépasser la valeur configurée avec sp_configure. Si MAXDOP dépasse la valeur configurée avec Resource Governor, le moteur de base de données utilise la valeur MAXDOP de Resource Governor, décrite dans ALTER WORKLOAD GROUP (Transact-SQL). Toutes les règles sémantiques utilisées avec l'option de configuration max degree of parallelism sont applicables lorsque vous utilisez l'indicateur de requête MAXDOP. Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).  
   
@@ -206,7 +206,7 @@ DBCC CHECKFILEGROUP;
 GO  
 ```  
   
-### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>B. Vérification du groupe de fichiers PRIMARY de la base de données AdventureWorks sans index non cluster  
+### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>b. Vérification du groupe de fichiers PRIMARY de la base de données AdventureWorks sans index non cluster  
 L’exemple suivant vérifie le groupe de fichiers principal de la base de données `AdventureWorks2012` (à l’exception des index non-cluster) en spécifiant le numéro d’identification du groupe de fichiers principal et `NOINDEX`.
   
 ```sql  

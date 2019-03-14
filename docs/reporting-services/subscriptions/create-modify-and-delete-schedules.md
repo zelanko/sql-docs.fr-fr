@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 05da5f3d-9222-43a9-893b-aa10f0f690f8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 346b348f2df1ccb6cd6373dad130b10c71ea1bcb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: 4ecb639dd907367a033ef48e15c86828fc908a6b
+ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679787"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57578139"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
   Cette rubrique est consacrée à la création, la modification et la suppression des planifications partagées [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] .  Pour gérer des planifications partagées en mode natif, utilisez la page Planifications dans le portail web ou le dossier Planifications partagées dans [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Pour le mode SharePoint, utilisez les pages de gestion pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -34,7 +34,7 @@ ms.locfileid: "47679787"
   
 -   **Portail web :** Dans la page Planifications partagées, passez en revue les valeurs des champs Date de la dernière exécution, Date de la prochaine exécution et États. Si une planification ne s'exécute plus parce qu'elle est arrivée à expiration, la date d'expiration apparaît dans le champ État. Pour plus d’informations, consultez [Web portal (SSRS Native Mode)](../../reporting-services/web-portal-ssrs-native-mode.md).
   
--   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** Consultez la page Rapports d’une planification partagée donnée. Cette page répertorie tous les rapports et datasets partagés qui utilisent la planification partagée. Pour plus d’information, consultez [Reporting Services pour SQL Server Management Studio ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
+-   **[!INCLUDE[ssManStudioFull_md](../../includes/ssmanstudiofull-md.md)]:** Consultez la page Rapports d’une planification partagée donnée. Cette page répertorie tous les rapports et datasets partagés qui utilisent la planification partagée. Pour plus d’informations, consultez [Reporting Services pour SQL Server Management Studio ](../../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md).
   
 -  **Journaux :** Affichez les journaux des traces ou les fichiers journaux des exécutions des rapports afin de déterminer si ces derniers ont été exécutés aux heures spécifiées par la planification. Pour plus d’informations, consultez [Fichiers journaux et sources de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
@@ -138,7 +138,7 @@ Cliquez sur **Annuler**.
   
 ## <a name="see-also"></a> Voir aussi  
  [Schedules](../../reporting-services/subscriptions/schedules.md)   
- [Suspendre et reprendre des planifications partagées](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
+ [Pause and Resume Shared Schedules](../../reporting-services/subscriptions/pause-and-resume-shared-schedules.md)   
  [Mettre en cache un rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/cache-a-report-report-manager.md)   
  [Ajouter un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)  
   

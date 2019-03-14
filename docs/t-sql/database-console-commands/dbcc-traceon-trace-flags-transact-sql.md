@@ -1,7 +1,7 @@
 ---
 title: Indicateurs de trace (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/15/2019
+ms.date: 03/10/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: d4d3d7488e60c95766c64d2b9d0ec3646b978c63
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: e75de200f8a55b57ba417e2f08bf875eda88a88e
+ms.sourcegitcommit: 0510e1eb5bcb994125cbc8b60f8a38ff0d2e2781
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652598"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57736834"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - Indicateurs de trace (Transact-SQL)
 
@@ -136,7 +136,7 @@ Le tableau ci-dessous répertorie et décrit les indicateurs de trace disponible
 |**9347**|Désactive le mode batch pour l’opérateur de tri. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contient un nouvel opérateur de tri en mode batch qui améliore les performances pour de nombreuses requêtes analytiques. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/3172787).<br /><br />**Étendue** : globale, de session ou de requête|
 |**9349**|Désactive le mode batch pour l’opérateur de tri des N premiers. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] contient un nouvel opérateur de tri en mode batch des premiers qui améliore les performances pour de nombreuses requêtes analytiques.<br /><br />**Étendue** : globale, de session ou de requête|
 |**9389**|Permet une allocation de mémoire dynamique supplémentaire pour les opérateurs en mode batch. Si une requête n’obtient pas toute la mémoire dont elle a besoin, elle répand des données sur tempdb, ce qui occasionne des E/S supplémentaires et affecte potentiellement les performances des requêtes. Si l’indicateur de trace d’allocation de mémoire dynamique est activé, un opérateur en mode batch peut demander plus de mémoire et éviter le débordement sur tempdb si de la mémoire supplémentaire est disponible. Pour plus d’informations, consultez la section *Effets de min memory per query* du [Guide d’architecture de gestion de la mémoire](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-memory-per-query).<br /><br />**Étendue** : globale ou de session| 
-|**9398**|Désactive l’opérateur de [jointure adaptative](../../relational-databases/performance/adaptive-query-processing.md#batch-mode-adaptive-joins) qui permet de différer une méthode de [jointure hachée ou de jointure de boucles imbriquées](../../relational-databases/performance/joins.md) tant que la première entrée n’a pas été analysée. Il s’agit là d’une nouvelle fonctionnalité de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/4099126).<br /><br />**Remarque :** Veillez à tester soigneusement cette option avant de la déployer dans un environnement de production.<br /><br />**Étendue** : globale, de session et de requête|
+|**9398**|Désactive l’opérateur de [jointure adaptative](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins) qui permet de différer une méthode de [jointure hachée ou de jointure de boucles imbriquées](../../relational-databases/performance/joins.md) tant que la première entrée n’a pas été analysée. Il s’agit là d’une nouvelle fonctionnalité de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/4099126).<br /><br />**Remarque :** Veillez à tester soigneusement cette option avant de la déployer dans un environnement de production.<br /><br />**Étendue** : globale, de session et de requête|
 |**9453**|Désactive l’exécution en mode batch. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/help/4016902).<br /><br />**Remarque :** Veillez à tester soigneusement cette option avant de la déployer dans un environnement de production.<br /><br />**Étendue** : globale, de session et de requête|
 |**9471**|Amène [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à générer un plan qui utilise la sélectivité minimale pour les filtres de table unique sous le modèle d’estimation de la cardinalité de l’optimiseur de requête des versions [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, pour effectuer cette opération au niveau de la requête, ajoutez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' au lieu d’utiliser cet indicateur de trace.<br /><br />**Remarque :** Veillez à tester soigneusement cette option avant de la déployer dans un environnement de production.<br /><br />**Remarque :** Cet indicateur de trace ne s’applique pas à CE version 70. Utilisez l’indicateur de trace 4137 à la place.<br /><br />**Étendue** : globale, de session ou de requête| 
 |**9476**|Amène [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à générer un plan qui utilise l’hypothèse de relation contenant-contenu simple au lieu de l’hypothèse par défaut de relation contenant-contenu de base, sous le modèle d’estimation de la cardinalité de l’optimiseur de requête des versions [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations, consultez cet [article du support technique Microsoft](https://support.microsoft.com/kb/3189675).<br /><br />À compter de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, pour effectuer cette opération au niveau de la requête, ajoutez [l’indicateur de requête](../../t-sql/queries/hints-transact-sql-query.md) USE HINT 'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' au lieu d’utiliser cet indicateur de trace.<br /><br />**Remarque :** Veillez à tester soigneusement cette option avant de la déployer dans un environnement de production.<br /><br />**Étendue** : globale, de session ou de requête| 
@@ -167,7 +167,7 @@ Les indicateurs de trace s'activent ou se désactivent de l'une des façons suiv
      Par exemple, pour activer l’indicateur de trace 2528 globalement, utilisez [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) avec l’argument -1 : `DBCC TRACEON (2528, -1)`. L’effet de l’activation d’un indicateur de trace global avec DBCC TRACEON est perdu lors du redémarrage du serveur. Pour désactiver un indicateur de trace global, utilisez [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) avec l’argument -1.  
 -   Utilisation de l’option de démarrage **-T** pour signaler que l’indicateur de trace doit être défini au démarrage.  
      L’option de démarrage **-T** active un indicateur de trace de façon globale. Vous ne pouvez pas activer un indicateur de trace de niveau session à l'aide d'une option de démarrage. Cela garantit que l’indicateur de trace reste actif après le redémarrage d’un serveur. Pour plus d’informations sur les options de démarrage, consultez [Options de démarrage du service moteur de base de données](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   Au niveau de la requête, utilisation de [l’indicateur de requête](https://support.microsoft.com/kb/2801413) QUERYTRACEON.
+-   Au niveau de la requête, utilisation de [l’indicateur de requête](https://support.microsoft.com/kb/2801413) QUERYTRACEON. L’option QUERYTRACEON est prise en charge seulement pour les indicateurs de trace de l’optimiseur de requête décrits dans le tableau ci-dessus.
   
 Utilisez la commande `DBCC TRACESTATUS` afin de déterminer quels indicateurs de trace sont actuellement actifs.
   
