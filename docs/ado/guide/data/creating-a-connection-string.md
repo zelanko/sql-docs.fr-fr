@@ -4,7 +4,7 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,17 +14,17 @@ ms.assetid: 14eae122-2d1e-40c8-b88e-b7cb8dfbc93b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41732b25c7b2c02f5b6b8a319e057d204a3a3384
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611383"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57972768"
 ---
 # <a name="creating-a-connection-string"></a>Création d’une chaîne de connexion
 Une chaîne de connexion se compose d’une liste de paires de valeur d’argument (autrement dit, les paramètres), séparée par des points-virgules. Exemple :  
   
-```  
+```syntax
 "arg1=val1; arg2=val2; ... argN=valN;"  
 ```  
   
@@ -42,9 +42,9 @@ Une chaîne de connexion se compose d’une liste de paires de valeur d’argume
   
  Autres arguments sont passés au fournisseur nommé dans le *fournisseur* argument, sans aucun traitement par ADO.  
   
- L’application HelloData dans [HelloData : une Application ADO Simple](../../../ado/guide/data/hellodata-a-simple-ado-application.md) utilisé la chaîne de connexion suivante :  
+ L’application HelloData dans [HelloData : Une Application ADO Simple](../../../ado/guide/data/hellodata-a-simple-ado-application.md) utilisé la chaîne de connexion suivante :  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  
              "Initial Catalog=Northwind;Integrated Security='SSPI';"  
 ```  
@@ -53,7 +53,7 @@ m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _
   
  Selon le fournisseur OLE DB pour la documentation de SQL Server, vous pouvez remplacer « Server » pour le *Source de données* paramètre et « Database » pour le *Initial Catalog* paramètre. Par conséquent, la chaîne de connexion suivante produirait des résultats identiques à celui illustré ci-dessus :  
   
-```  
+```vb
 m_sConnStr = "Provider=SQLOLEDB;Server=MySqlServer;" & _  
              "Database=Northwind;Integrated Security='SSPI';"  
 ```

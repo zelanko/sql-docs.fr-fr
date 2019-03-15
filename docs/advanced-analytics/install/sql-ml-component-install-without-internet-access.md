@@ -3,17 +3,17 @@ title: Installer les composants de Python sans accès à internet - SQL Server M
 description: En mode hors connexion ou déconnecté Machine Learning R et Python le programme d’installation sur isolé instance de SQL Server derrière un pare-feu réseau.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 01f871b6f6a96c053daca13060cac1223415eb20
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 37cd555ec099b11c6dbf792ff5f4e0ac869a0792
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596990"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976319"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-on-computers-with-no-internet-access"></a>Installer SQL Server d’apprentissage R et Python sur des ordinateurs sans accès à internet
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,8 +22,8 @@ Par défaut, les programmes d’installation de se connecter à des sites de té
 
 Dans la base de données analytique se composent d’instance du moteur de base de données, ainsi que des composants supplémentaires pour l’intégration de R et Python, selon la version de SQL Server. 
 
-+ SQL Server 2017 inclut R et Python. 
-+ SQL Server 2016 est R uniquement. 
++ SQL Server 2017 inclut R et Python 
++ SQL Server 2016 est R uniquement.
 
 Sur un serveur isolé, apprentissage automatique et des fonctionnalités de langage spécifiques R/Python sont ajoutées par le biais des fichiers CAB. 
 
@@ -55,7 +55,7 @@ Serveur Microsoft Python    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fw
 
 ## <a name="sql-server-2016-offline-install"></a>Installation hors connexion SQL Server 2016
 
-Analytique en base de données de SQL Server 2016 est R uniquement, avec deux fichiers CAB pour les packages de produit et de distribution Microsoft de R open source, respectivement. Démarrez en installant l’une de ces versions : RTM, SERVICE PACK 1, SERVICE PACK 2. Une fois qu’une installation de base est en place, les mises à jour cumulatives peuvent être appliquées comme prochaine étape.
+Analytique en base de données de SQL Server 2016 est R uniquement, avec deux fichiers CAB pour les packages de produit et de distribution Microsoft de R open source, respectivement. Démarrez en installant l’une de ces versions : RTM, SP 1, SP 2. Une fois qu’une installation de base est en place, les mises à jour cumulatives peuvent être appliquées comme prochaine étape.
 
 Sur un ordinateur ayant une connexion internet, téléchargez les fichiers CAB utilisés par le programme d’installation pour installer la base de données analytique sur SQL Server 2016. 
 
@@ -65,7 +65,7 @@ Version  | Microsoft R Open | Microsoft R Server |
 ---------|-----------------|---------------------|
 **SQL Server 2016 RTM**     | [SRO_3.2.2.803_1033.cab](https://go.microsoft.com/fwlink/?LinkId=761266) |[SRS_8.0.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=735051) |
 **SQL Server 2016 SP 1**     | [SRO_3.2.2.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824879) |[SRS_8.0.3.15000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=824881) | 
-**SQL Server 2016 Service Pack 2**  |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038) |
+**SQL Server 2016 SP 2**  |[SRO_3.2.2.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866039) |[SRS_8.0.3.20000_1033.cab](https://go.microsoft.com/fwlink/?LinkId=866038) |
 
 ### <a name="2---get-sql-server-2016-installation-media"></a>2 - obtenir le support d’installation de SQL Server 2016
 
@@ -75,7 +75,9 @@ Vous pouvez notamment créer un fichier .iso contenant le support d’installati
 
 ## <a name="transfer-files"></a>Transférer des fichiers
 
-Copiez les fichiers de la base de données analytique CAB et le support d’installation de SQL Server (fichier .iso ou .cab) sur l’ordinateur cible. Placer les fichiers CAB et le fichier de média d’installation dans le même dossier sur l’ordinateur cible, tel que **télécharge** ou le dossier temp * % de l’utilisateur le programme d’installation.
+Copiez les fichiers de la base de données analytique CAB et le support d’installation de SQL Server (fichier .iso ou .cab) sur l’ordinateur cible. Placez les fichiers CAB et le fichier de média d’installation dans le même dossier sur l’ordinateur cible, tels que dossier TEMP * % de l’utilisateur le programme d’installation.
+
+Le dossier % Temp% est requis pour les fichiers CAB de Python. Pour R, vous pouvez utiliser %TEMP% ou définissez le paramètre de myrcachedirectory sur le chemin d’accès du fichier CAB.
 
 La capture d’écran suivante montre les fichiers CAB de SQL Server 2017 et ISO. Téléchargements de SQL Server 2016 ont une apparence différentes : nom de fichier moins de fichiers (aucune Python) et le support d’installation est pour 2016.
 

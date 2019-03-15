@@ -3,17 +3,17 @@ title: Invite de commandes, installation des composants R et Python - SQL Server
 description: Exécutez le programme d’installation de SQL Server ligne de commande pour ajouter le langage R et l’intégration de Python pour une instance du moteur de base de données SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/21/2018
+ms.date: 03/13/2019
 ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 8e3c101eae8e02446a9e47b17255e2ca2b501774
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 3f78447054d96f1552ae09c62f3b8a2f18bc58bf
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645519"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976349"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>Installer les composants R et Python à partir de la ligne de commande d’apprentissage SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -51,13 +51,13 @@ En cas d’installation à partir de l’invite de commandes, [!INCLUDE[ssNoVers
 | / FONCTIONNALITÉS = AdvancedAnalytics | Installe la version de la base de données : SQL Server 2017 Machine Learning Services (en base de données) ou SQL Server 2016 R Services (en base de données).  |
 | / FONCTIONNALITÉS = SQL_INST_MR | S’applique à SQL Server 2017 uniquement. Coupler avec AdvancedAnalytics. Installe la fonctionnalité (en base de données) R, y compris Microsoft R Open et les packages R propriétaires. La fonctionnalité de SQL Server 2016 R Services est R uniquement, donc il n’existe aucun paramètre pour cette version.|
 | / FONCTIONNALITÉS = SQL_INST_MPY | S’applique à SQL Server 2017 uniquement. Coupler avec AdvancedAnalytics. Installe la fonctionnalité (en base de données) Python, y compris Anaconda et les packages Python propriétaires. |
-| / FONCTIONNALITÉS = SQL_SHARED_MR | Installe la fonctionnalité R pour la version autonome : SQL Server 2017 Machine Learning Server (autonome) ou SQL Server 2016 R Server (autonome). Un serveur autonome est une « fonctionnalité partagée » ne pas liée à une instance du moteur de base de données.|
-| / FONCTIONNALITÉS = SQL_SHARED_MPY | S’applique à SQL Server 2017 uniquement. Installe la fonctionnalité de Python pour la version autonome : SQL Server 2017 Machine Learning Server (autonome). Un serveur autonome est une « fonctionnalité partagée » ne pas liée à une instance du moteur de base de données.|
+| /FEATURES = SQL_SHARED_MR | Installe la fonctionnalité R pour la version autonome : SQL Server 2017 Machine Learning Server (autonome) ou SQL Server 2016 R Server (autonome). Un serveur autonome est une « fonctionnalité partagée » ne pas liée à une instance du moteur de base de données.|
+| /FEATURES = SQL_SHARED_MPY | S’applique à SQL Server 2017 uniquement. Installe la fonctionnalité de Python pour la version autonome : SQL Server 2017 Machine Learning Server (autonome). Un serveur autonome est une « fonctionnalité partagée » ne pas liée à une instance du moteur de base de données.|
 | /IACCEPTROPENLICENSETERMS  | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation des composants R open source. |
 | /IACCEPTPYTHONLICENSETERMS | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation des composants Python. |
 | /IACCEPTSQLSERVERLICENSETERMS | Indique que vous avez accepté les termes du contrat de licence pour l’utilisation de SQL Server.|
 | /MRCACHEDIRECTORY | Pour une installation hors connexion, définit le dossier contenant les fichiers CAB des composants R. |
-| / MPYCACHEDIRECTORY | Pour une installation hors connexion, définit le dossier contenant les fichiers CAB des composants Python. |
+| / MPYCACHEDIRECTORY | Réservé pour un usage ultérieur. Utilisez %Temp% pour stocker les fichiers CAB des composants Python pour l’installation sur les ordinateurs qui n’ont pas d’une connexion internet. |
 
 
 ## <a name="indb"></a> Dans la base de données installations d’instance
@@ -132,13 +132,13 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER
 
 ## <a name="silent"></a> Installation en mode silencieux
 
-Une installation sans assistance supprime la vérification des emplacements de fichier .cab. Pour cette raison, vous devez spécifier l’emplacement où les fichiers .cab doivent être décompressés. Vous pouvez le répertoire temp pour cela.
+Une installation sans assistance supprime la vérification des emplacements de fichier .cab. Pour cette raison, vous devez spécifier l’emplacement où les fichiers .cab doivent être décompressés. Pour Python, les fichiers CAB doivent être situés dans % temp% *. Pour R, vous pouvez définir le dossier chemin d’accès à l’aide vous pouvez le répertoire temp pour cela.
  
 ```cmd  
 Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,SQL_INST_MPY 
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS 
-/MRCACHEDIRECTORY=%temp% /MPYCACHEDIRECTORY=%temp%
+/MRCACHEDIRECTORY=%temp% 
 ```
 
 ## <a name="shared-feature"></a> Installations serveur autonome

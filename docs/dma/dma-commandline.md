@@ -2,7 +2,7 @@
 title: Exécutez l’Assistant Migration des données à partir de la ligne de commande (SQL Server) | Microsoft Docs
 description: Découvrez comment exécuter l’Assistant Migration des données à partir de la ligne de commande pour évaluer les bases de données SQL Server pour la migration
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Command Line
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 505ea8d199ee2fe666d65c474e7f11dfaadcf18f
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+ms.openlocfilehash: 575c456736242bebfe23544c430efe414d5097d2
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464725"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974178"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Exécutez l’Assistant Migration des données à partir de la ligne de commande
 Avec la version 2.1 et versions ultérieures, lorsque vous installez Data Migration Assistant, il installe également dmacmd.exe dans *% ProgramFiles%\\Microsoft Data Migration Assistant\\*. Utilisez dmacmd.exe pour évaluer vos bases de données en mode sans assistance et renvoyer le résultat au fichier JSON ou CSV. Cette méthode est particulièrement utile lors de l’évaluation de plusieurs bases de données ou des bases de données énormes. 
@@ -34,6 +34,7 @@ Avec la version 2.1 et versions ultérieures, lorsque vous installez Data Migrat
 ```
 DmaCmd.exe /AssessmentName="string"
 /AssessmentDatabases="connectionString1" \["connectionString2"\]
+\[/AssessmentSourcePlatform="SourcePlatform"]
 \[/AssessmentTargetPlatform="TargetPlatform"\]
 /AssessmentEvaluateRecommendations|/AssessmentEvaluateCompatibilityIssues
 \[/AssessmentOverwriteResult\]
@@ -45,8 +46,9 @@ DmaCmd.exe /AssessmentName="string"
 | `/help or /?`     | Comment utiliser le texte d’aide dmacmd.exe        | N
 |`/AssessmentName`     |   Nom du projet d’évaluation   | O
 |`/AssessmentDatabases`     | Liste délimitée par des chaînes de connexion. Nom de la base de données (catalogue Initial) respecte la casse. | O
-|`/AssessmentTargetPlatform`     | Plateforme cible pour l’évaluation, les valeurs prises en charge : AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 et SqlServerWindows2017. Valeur par défaut est SqlServerWindows2017   | N
-|`/AssessmentEvaluateFeatureParity`  | Exécuter des règles de parité de fonctionnalité  | N
+|`/AssessmentSourcePlatform`     | Plateforme de la source pour l’évaluation, les valeurs prises en charge : SqlOnPrem, RdsSqlServer. Cible Readiness Assessment prennent également en charge Cassandra en tant que plateforme de la source. Valeur par défaut est SqlOnPrem   | N
+|`/AssessmentTargetPlatform`     | Plateforme cible pour l’évaluation, les valeurs prises en charge : AzureSqlDatabase, ManagedSqlServer, SqlServer2012, SqlServer2014, SqlServer2016, SqlServerLinux2017 et SqlServerWindows2017. Cible Readiness Assessment prennent également en charge CosmosDB en tant que plateforme cible. Valeur par défaut est SqlServerWindows2017   | N
+|`/AssessmentEvaluateFeatureParity`  | Exécuter des règles de parité de fonctionnalité. Si la plateforme de la source est RdsSqlServer, évaluation de parité de fonctionnalité n’est pas pris en charge pour la plateforme cible AzureSqlDatabase  | N
 |`/AssessmentEvaluateCompatibilityIssues`     | Exécuter les règles de compatibilité  | O <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendations est requises.)
 |`/AssessmentEvaluateRecommendations`     | Exécuter les recommandations de fonctionnalité        | O <br> (AssessmentEvaluateCompatibilityIssues ou AssessmentEvaluateRecommendationsis requis)
 |`/AssessmentOverwriteResult`     | Remplacer le fichier de résultat    | N
@@ -146,15 +148,33 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
+**Évaluation de la base de données unique pour la plateforme cible de base de données SQL Azure, enregistrez les résultats dans un fichier .json et .csv**
+
+```
+DmaCmd.exe /AssessmentName="TestAssessment" 
+/AssessmentDatabases="Server=SQLServerInstanceName;Initial
+Catalog=DatabaseName;Integrated Security=true"
+/AssessmentSourcePlatform="SqlOnPrem"
+/AssessmentTargetPlatform="AzureSqlDatabase"
+/AssessmentEvaluateCompatibilityIssues /AssessmentEvaluateFeatureParity
+/AssessmentOverwriteResult 
+/AssessmentResultCsv="C:\\temp\\AssessmentReport.csv" 
+/AssessmentResultJson="C:\\temp\\AssessmentReport.json"
+
+```
+
 **Plusieurs bases de données cible Readiness assessment**
 
 ```
 DmaCmd.exe /Action=AssessTargetReadiness 
 /AssessmentName="TestAssessment" 
+/AssessmentSourcePlatform=SourcePlatform
+/AssessmentTargetPlatform=TargetPlatform
 /SourceConnections="Server=SQLServerInstanceName1;Initial Catalog=DatabaseName1;Integrated Security=true" "Server=SQLServerInstanceName1;Initial Catalog=DatabaseName2;Integrated Security=true" "Server=SQLServerInstanceName2;Initial Catalog=DatabaseName3;Integrated Security=true" 
 /AssessmentOverwriteResult  
 /AssessmentResultJson="C:\Results\test2016.json"
 
+(/AssessmentSourcePlatform and /AssessmentTargetPlatform are optional.)
 ```
 
 **Cible Readiness assessment pour toutes les bases de données sur un serveur à l’aide de l’authentification Windows**
@@ -191,6 +211,8 @@ Connexions de source de contenu du fichier de configuration lorsque vous utilise
 <?xml version="1.0" encoding="utf-8" ?>
 <TargetReadinessConfiguration xmlns="http://microsoft.com/schemas/SqlServer/Advisor/TargetReadinessConfiguration">
   <AssessmentName>name</AssessmentName>
+  <SourcePlatform>Source Platform</SourcePlatform> <!-- Optional. The default is SqlOnPrem -->
+  <TargetPlatform>TargetPlatform</TargetPlatform> <!-- Optional. The default is ManagedSqlServer -->
   <SourceConnections>
     <SourceConnection>connection string 1</SourceConnection>
     <SourceConnection>connection string 2</SourceConnection>

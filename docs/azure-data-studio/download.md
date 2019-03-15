@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f148c4cee111febc5d1e0203cc5eb484ec556d4f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 16f3ffbbd1435e9006bcbc26c86fb53dfca9bf65
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801344"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973129"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Téléchargez et installez Azure Data Studio
 
@@ -38,11 +38,12 @@ Pour plus d’informations sur la dernière version, consultez le [notes de vers
 
 ## <a name="get-azure-data-studio-for-windows"></a>Obtenir des données Azure Studio pour Windows
 
-Cette version de [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclut une expérience de programme d’installation Windows standard et un fichier zip :
+Cette version de [!INCLUDE[name-sos](../includes/name-sos-short.md)] inclut une expérience de programme d’installation Windows standard et un fichier .zip.
+
+Le *programme d’installation de l’utilisateur* est recommandée, car il ne nécessite pas des privilèges d’administrateur, ce qui simplifie les installations et mises à niveau. Le programme d’installation de l’utilisateur ne nécessite pas de privilèges d’administrateur que l’emplacement est sous votre dossier AppData Local (LOCALAPPDATA) de l’utilisateur. Le programme d’installation de l’utilisateur fournit également une meilleure expérience de mise à jour en arrière-plan. Pour plus d’informations, consultez [le paramétrage utilisateur pour Windows](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows).
+
 
 **Programme d’installation de l’utilisateur** (recommandé)
-
-Le programme d’installation de l’utilisateur est recommandée, car il ne nécessite pas des privilèges d’administrateur, ce qui simplifie les installations et mises à niveau.
 
 1. Téléchargez et exécutez le [ [!INCLUDE[name-sos](../includes/name-sos-short.md)] *utilisateur* programme d’installation pour Windows](https://go.microsoft.com/fwlink/?linkid=2072725).
 2. Démarrer le [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] application.

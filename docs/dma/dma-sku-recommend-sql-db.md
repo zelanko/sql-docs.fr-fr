@@ -2,7 +2,7 @@
 title: Identifier la référence SKU à base de données SQL Azure appropriée pour votre base de données locale (Data Migration Assistant) | Microsoft Docs
 description: Découvrez comment utiliser l’Assistant de Migration de données pour identifier le droit SKU de base de données SQL Azure pour votre base de données locale
 ms.custom: ''
-ms.date: 01/11/2019
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Assess
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 002a9fc587d742c235aedb0f773864296bdf645b
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 578e6ac47e84ad764cb050112eae768ff21444f3
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226496"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973820"
 ---
 # <a name="identify-the-right-azure-sql-database-sku-for-your-on-premises-database"></a>Identifier la référence SKU à base de données SQL Azure appropriée pour votre base de données locale
 
@@ -76,21 +76,21 @@ Utiliser le fichier de sortie des compteurs de performances à partir de l’ét
 Exécutez le dmacmd.exe avec les arguments suivants :
 
 - **/ Action = SkuRecommendation**: Entrez cet argument pour exécuter des évaluations de la référence (SKU).
-- **/ SkuRecommendationInputDataFilePath**: Le chemin d’accès au fichier de compteur sont collectées dans la section précédente.
-- **/ SkuRecommendationTsvOutputResultsFilePath**: Le chemin d’accès pour écrire les résultats de sortie au format TSV.
-- **/ SkuRecommendationJsonOutputResultsFilePath**: Le chemin d’accès pour écrire les résultats de sortie au format JSON.
-- **/ SkuRecommendationHtmlResultsFilePath**: Chemin d’accès pour écrire les résultats de sortie au format HTML.
+- **/SkuRecommendationInputDataFilePath**: Le chemin d’accès au fichier de compteur sont collectées dans la section précédente.
+- **/SkuRecommendationTsvOutputResultsFilePath**: Le chemin d’accès pour écrire les résultats de sortie au format TSV.
+- **/SkuRecommendationJsonOutputResultsFilePath**: Le chemin d’accès pour écrire les résultats de sortie au format JSON.
+- **/SkuRecommendationHtmlResultsFilePath**: Chemin d’accès pour écrire les résultats de sortie au format HTML.
 
 En outre, vous devez choisir l’un des arguments suivants :
 - Empêcher l’actualisation de prix
-    - **/ SkuRecommendationPreventPriceRefresh**: Empêche l’actualisation de prix. Utilisez si en cours d’exécution en mode hors connexion.
+    - **/SkuRecommendationPreventPriceRefresh**: Empêche l’actualisation de prix. Utilisez si en cours d’exécution en mode hors connexion.
 - Obtenir les derniers cours 
-    - **/ SkuRecommendationCurrencyCode**: La devise dans laquelle afficher les prix (par exemple) « USD »).
-    - **/ SkuRecommendationOfferName**: Nom de l’offre (par exemple) « MS-AZR - 0003P »). Pour plus d’informations, consultez le [détails de l’offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) page.
-    - **/ SkuRecommendationRegionName**: Nom de la région (par exemple) « WestUS »).
-    - **/ SkuRecommendationSubscriptionId**: L'ID de l'abonnement.
-    - **/ AzureAuthenticationTenantId**: Le client d’authentification.
-    - **/ AzureAuthenticationClientId**: L’ID client de l’application AAD utilisée pour l’authentification.
+    - **/SkuRecommendationCurrencyCode**: La devise dans laquelle afficher les prix (par exemple) « USD »).
+    - **/SkuRecommendationOfferName**: Nom de l’offre (par exemple) "MS-AZR-0003P"). Pour plus d’informations, consultez le [détails de l’offre Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) page.
+    - **/SkuRecommendationRegionName**: Nom de la région (par exemple) « WestUS »).
+    - **/SkuRecommendationSubscriptionId**: L'ID de l'abonnement.
+    - **/AzureAuthenticationTenantId**: Le client d’authentification.
+    - **/AzureAuthenticationClientId**: L’ID client de l’application AAD utilisée pour l’authentification.
     - L’une des options d’authentification suivantes :
         - Interactif
             - **AzureAuthenticationInteractiveAuthentication**: La valeur true pour une fenêtre contextuelle d’authentification.

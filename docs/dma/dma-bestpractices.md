@@ -2,7 +2,7 @@
 title: Meilleures pratiques pour Data Migration Assistant (SQL Server) | Microsoft Docs
 description: Découvrez les meilleures pratiques pour la migration des bases de données de SQL Server avec Data Migration Assistant
 ms.custom: ''
-ms.date: 10/20/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -12,15 +12,15 @@ keywords: ''
 helpviewer_keywords:
 - Data Migration Assistant, Best Practices
 ms.assetid: ''
-author: pochiraju
+author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 79eade425e87da3784221686b7ccdc99e85b96bc
-ms.sourcegitcommit: 38f35b2f7a226ded447edc6a36665eaa0376e06e
+ms.openlocfilehash: cb355cbe1e32c97e59d61eb55ca70023b03acd6b
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49643827"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57973668"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Meilleures pratiques pour l’exécution de Data Migration Assistant
 Cet article fournit certaines des recommandations pour l’installation, évaluation et la migration.
@@ -41,4 +41,4 @@ Ne pas installer et exécuter l’Assistant Migration des données directement s
 
 - Activer chiffrer la connexion lors de la connexion aux serveurs source et cible. À l’aide de SSL chiffrement augmente la sécurité des données transmises sur les réseaux entre Data Migration Assistant et l’instance de SQL Server, ce qui est utile surtout lors de la migration des comptes de connexion SQL. Si le chiffrement SSL n’est pas utilisé et le réseau est compromis par un attaquant, les connexions SQL en cours de migration pourraient intercepter et/ou modifiés à la volée par l’attaquant.
 
-    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances, car la surcharge supplémentaire qui est nécessaire pour chiffrer et déchiffrer des paquets. Pour plus d’informations, reportez-vous à [chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Toutefois, si tous les accès impliquent une configuration intranet sécurisée, le chiffrement peut s'avérer superflu. L’activation du chiffrement ralentit les performances, car la surcharge supplémentaire qui est nécessaire pour chiffrer et déchiffrer des paquets. Pour plus d’informations, reportez-vous à [chiffrement des connexions à SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).

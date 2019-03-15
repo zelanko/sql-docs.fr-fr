@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: c61275d1a52a3e248e2c1f551d30ece20c92b7fb
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 6642a91e61900847b2eeb8875d731634cc03b38e
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579558"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57976309"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurer un client de science des données pour le développement de Python sur SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +29,7 @@ Dans cet article, découvrez comment configurer une station de travail de dével
 Pour valider l’installation, vous pouvez utiliser Jupyter Notebooks intégrés comme décrit dans cet article, ou [lier les bibliothèques](#install-ide) PyCharm ou n’importe quel IDE d’un autre que vous utilisez normalement.
 
 > [!Tip]
-> Pour une démonstration vidéo de ces exercices, consultez [exécuter de R et Python à distance dans SQL Server à partir des blocs-notes Jupyter](https://blogs.msdn.microsoft.com/mlserver/2018/07/10/run-r-and-python-remotely-in-sql-server-from-jupyter-notebooks-or-any-ide/).
+> Pour une démonstration vidéo de ces exercices, consultez [exécuter de R et Python à distance dans SQL Server à partir des blocs-notes Jupyter](https://youtu.be/D5erljpJDjE).
 
 > [!Note]
 > Une alternative à l’installation de la bibliothèque cliente utilise un [serveur autonome](../install/sql-machine-learning-standalone-windows-install.md) comme client riche, certains clients préfèrent pour le travail de scénario plus approfondie. Un serveur autonome est entièrement dissocié de SQL Server, mais, car il possède les mêmes bibliothèques Python, vous pouvez l’utiliser en tant que client pour l’analytique en base de données de SQL Server. Vous pouvez également l’utiliser pour le travail non liés à SQL, y compris la possibilité d’importer et de modéliser des données à partir d’autres plateformes de données. Si vous installez un serveur autonome, vous pouvez trouver l’exécutable de Python à cet emplacement : `C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`. Pour valider votre installation, [ouvrez un bloc-notes Jupyter](#python-tools) pour exécuter des commandes à l’aide de la Python.exe à cet emplacement.
