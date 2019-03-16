@@ -1,6 +1,6 @@
 ---
 title: Propriétés de mémoire Analysis Services | Microsoft Docs
-ms.date: 01/15/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 055b46ab1464f360cfb89f9bf4d42c0b8997f841
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b33bf47f77d65679bc079b526d480841af71c0c4
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327860"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072293"
 ---
 # <a name="memory-properties"></a>Propriétés de mémoire
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -58,14 +58,12 @@ Sauf indication contraire, les propriétés suivantes s’appliquent à la fois 
  Spécifie un seuil de mémoire après lequel l'instance ferme de façon intensive les sessions utilisateur actives pour réduire l'utilisation de la mémoire. Toutes les sessions terminées recevront une erreur indiquant l’annulation par sollicitation de la mémoire. La valeur par défaut, zéro (0), signifie que **HardMemoryLimit** aura une valeur intermédiaire entre **TotalMemoryLimit** et la mémoire physique totale du système ; si la mémoire physique du système est supérieure à l’espace d’adressage virtuel du processus, l’espace d’adressage virtuel est utilisé à la place pour calculer **HardMemoryLimit**.  
 
 **QueryMemoryLimit**   
-Azure Analysis Services. Une propriété avancée pour contrôler la quantité de mémoire utilisable par les résultats temporaires au cours d’une requête. S’applique uniquement aux requêtes et les mesures DAX. Il ne tient pas compte des allocations de mémoire générale utilisées par la requête. Spécifié sous forme de pourcentage, la valeur par défaut est déterminée par votre plan. 
+Azure Analysis Services. Une propriété avancée pour contrôler la quantité de mémoire utilisable par les résultats temporaires au cours d’une requête. S’applique uniquement aux requêtes et les mesures DAX. Il ne tient pas compte des allocations de mémoire générale utilisées par la requête. Spécifié sous forme de pourcentage jusqu'à 100. En outre, elle est exprimée en octets. Ne définition d’une valeur de 0 signifie aucune limite n’est spécifié. Pour l’analyse Azure, la valeur par défaut est déterminée par votre plan. 
 
 |Plan  |Par défaut  |
 |---------|---------|
 |D1     |   80      |
-|Tous les autres plans     |    20     |
-
-Cette propriété peut être modifiée. Ne définition d’une valeur de 0 signifie aucune limite n’est spécifié.
+|Tous les autres plans     |    20     | 
 
  **VirtualMemoryLimit**  
   Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  

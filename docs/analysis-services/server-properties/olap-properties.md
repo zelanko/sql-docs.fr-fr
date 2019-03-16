@@ -1,6 +1,6 @@
 ---
 title: Les propriétés OLAP Analysis Services | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 03/15/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,15 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 936b05f8d54d3a5e67e7e03a02cc7907c56eab02
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 8e2643488710548b3a773730e9b9898125783dc3
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072516"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072343"
 ---
 # <a name="olap-properties"></a>Propriétés OLAP
-[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur OLAP répertoriées dans les tableaux suivants. Pour plus d’informations sur les autres propriétés de serveur et sur la façon de les configurer, consultez [Propriétés du serveur dans Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md).  
   
@@ -266,7 +266,10 @@ Approche pour estimer la configuration requise du cache de dimension :
   
  **MaxRolapOrConditions**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
-  
+ 
+ **RowsetSerializationLimit**   
+ S’applique à Azure Analysis Services. Limite le nombre de lignes retournées dans un ensemble de lignes pour les clients. Valeur par défaut est -1, ce qui signifie qu’aucune limite n’est appliqué. S’applique aux requêtes DAX et MDX. Il peut être utilisé pour protéger les ressources de serveur à partir de l’exportation de données complètes. Les requêtes envoyées au serveur qui dépassent la limite sont annulées et une erreur est retournée.  
+
  **UseCalculationCacheRegistry**  
  Propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   

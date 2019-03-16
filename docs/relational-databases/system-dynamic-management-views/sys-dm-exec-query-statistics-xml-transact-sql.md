@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 8bb66c5bb9b4f69b32efd7761ae08677ee243fee
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044625"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072303"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -58,23 +58,7 @@ sys.dm_exec_query_statistics_xml(session_id)
 ## <a name="remarks"></a>Notes
 Cette fonction système est disponible à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1. Consultez la base de connaissances [3190871](https://support.microsoft.com/en-us/help/3190871)
 
-Cette fonction système fonctionne dans les répertoires **standard** et **léger** infrastructure de profilage des statistiques d’exécution de requête.  
-  
-**Standard** infrastructure de profilage des statistiques peuvent être activées à l’aide de :
-  -  [SET STATISTICS XML SUR](../../t-sql/statements/set-statistics-xml-transact-sql.md)
-  -  [SET STATISTICS PROFILE SUR](../../t-sql/statements/set-statistics-profile-transact-sql.md)
-  -  le `query_post_execution_showplan` événements étendus.  
-  
-**Lightweight** infrastructure de profilage des statistiques est disponible dans [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 et peuvent être activées :
-  -  Dans le monde entier à l’aide de trace indicateur 7412.
-  -  À l’aide de la [ *query_thread_profile* ](https://support.microsoft.com/kb/3170113) événements étendus.
-  
-> [!NOTE]
-> Une fois activé par l’indicateur de trace 7412, profilage léger être activé à tout consommateur des statistiques d’exécution de requête infrastructure au lieu de Profiler standard, telles que la vue de gestion dynamique de profilage [sys.dm_exec_query_profiles](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-profiles-transact-sql.md).
-> Toutefois, le profilage standard est toujours utilisé pour SET STATISTICS XML, *inclure le Plan réel* action dans [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], et `query_post_execution_showplan` xEvent.
-
-> [!IMPORTANT]
-> Dans TPC-C comme tests de charge de travail, l’activation de l’infrastructure de profilage légère de statistiques ajoute une surcharge de 1,5 à 2 %. En revanche, l’infrastructure de profilage de statistiques standard peut ajouter jusqu'à 90 % de surcharge pour le même scénario de charge de travail.
+Cette fonction système fonctionne dans les répertoires **standard** et **léger** infrastructure de profilage des statistiques d’exécution de requête. Pour plus d’informations, consultez [Infrastructure du profilage de requête](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md).  
 
 ## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation `VIEW SERVER STATE` sur le serveur.  

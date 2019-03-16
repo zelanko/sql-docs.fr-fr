@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/18/2018
 ms.prod: sql
@@ -21,17 +21,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8df3c13b42df1b842d784fedd1720d2e9bfc258
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626388"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072353"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Retourne les statistiques sur les performances des agrégats pour les plans de requête mis en cache dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vue contient une ligne par instruction de requête dans le plan en cache et la durée de vie des lignes est liée au plan lui-même. Lorsqu'un plan est supprimé du cache, les lignes correspondantes sont éliminées de cette vue.  
+Retourne les statistiques sur les performances des agrégats pour les plans de requête mis en cache dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La vue contient une ligne par instruction de requête dans le plan en cache et la durée de vie des lignes est liée au plan lui-même. Lorsqu'un plan est supprimé du cache, les lignes correspondantes sont éliminées de cette vue.  
   
 > [!NOTE]
 > Une requête initiale de **sys.dm_exec_query_stats** peut produire des résultats inexacts s’il existe une charge de travail en cours d’exécution sur le serveur. Des résultats plus précis peuvent être déterminés en réexécutant la requête.  
@@ -41,11 +41,11 @@ ms.locfileid: "53626388"
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**sql_handle**|**varbinary(64)**  |Jeton qui fait référence au traitement ou à la procédure stockée dont fait partie la requête.<br /><br /> **sql_handle**, avec **statement_start_offset** et **statement_end_offset**, peut être utilisé pour récupérer le texte SQL de la requête en appelant le **sys.dm_exec_sql_ texte** fonction de gestion dynamique.|  
+|**sql_handle**|**varbinary(64)**  |Est un jeton qui identifie de façon unique le lot ou une procédure stockée qui fait partie de la requête.<br /><br /> **sql_handle**, avec **statement_start_offset** et **statement_end_offset**, peut être utilisé pour récupérer le texte SQL de la requête en appelant le **sys.dm_exec_sql_ texte** fonction de gestion dynamique.|  
 |**statement_start_offset**|**Int**|Indique, en octets, la position de début (à partir de 0) de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant.|  
 |**statement_end_offset**|**Int**|Indique, en octets, la position de fin (à partir de 0) de la requête que la ligne décrit dans le texte de son traitement ou de son objet persistant. Pour les versions antérieures [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], la valeur -1 indique la fin du lot. Les commentaires de fin sont n’incluent plus.|  
 |**plan_generation_num**|**bigint**|Numéro de séquence permettant de distinguer les instances de plans après une recompilation.|  
-|**plan_handle**|**varbinary(64)**|Jeton qui fait référence au plan compilé dont fait partie la requête. Cette valeur peut être passée à la [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) fonction de gestion dynamique pour obtenir le plan de requête.<br /><br /> Sa valeur est toujours 0x000 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
+|**plan_handle**|**varbinary(64)**|Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot qui a été exécutée et son plan réside dans le cache du plan, ou est en cours d’exécution. Cette valeur peut être passée à la [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md) fonction de gestion dynamique pour obtenir le plan de requête.<br /><br /> Sa valeur est toujours 0x000 lorsqu'une procédure stockée compilée en mode natif interroge une table optimisée en mémoire.|  
 |**creation_time**|**datetime**|Heure de compilation du plan.|  
 |**last_execution_time**|**datetime**|Heure de début de la dernière exécution du plan.|  
 |**execution_count**|**bigint**|Nombre d'exécutions du plan depuis sa dernière compilation.|  
@@ -176,7 +176,7 @@ ORDER BY qs.execution_count DESC;
 [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)    
 [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)    
 [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[Sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
+[sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)     
 [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)     
 [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_cached_plan_dependent_objects (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_cached_plan_dependent_objects (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1efc815873a3018f8f8350e2bf24440ca0204fa9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1312312718a082aaf5b7f6a1e798d29db83a8bb8
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733781"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072183"
 ---
 # <a name="sysdmexeccachedplandependentobjects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,19 +36,24 @@ ms.locfileid: "47733781"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-dm_exec_cached_plan_dependent_objects(plan_handle)  
+sys.dm_exec_cached_plan_dependent_objects(plan_handle)  
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *plan_handle*  
- Identifie de façon univoque un plan d'exécution de requête pour un traitement exécuté ; ce plan réside dans la mémoire cache des plans. *plan_handle* est **varbinary (64)**. Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique suivants :  
+*plan_handle*  
+Identifie de façon univoque un plan d'exécution de requête pour un traitement exécuté ; ce plan réside dans la mémoire cache des plans. *plan_handle* est **varbinary (64)**.   
+
+Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique suivants :  
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
 -   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
 -   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)  
   
 ## <a name="table-returned"></a>Table retournée  
   
@@ -58,7 +63,7 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
 |**memory_object_address**|**varbinary(8)**|Adresse mémoire du curseur ou contexte d'utilisation.<br /><br /> Colonne n'acceptant pas la valeur NULL.|  
 |**cacheobjtype**|**nvarchar(50)**|Type d’objet de cache de Plan. Colonne n'acceptant pas la valeur NULL. Les valeurs possibles sont<br /><br /> Plan exécutable<br /><br /> Fonction compilée par le CLR<br /><br /> Procédure compilée par le CLR<br /><br /> Curseur|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="physical-joins"></a>Jointures physiques  
@@ -66,7 +71,7 @@ dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="relationship-cardinalities"></a>Cardinalités de la relation  
   
-|From|Pour|Le|Relation|  
+|From|Pour|Actif|Relation|  
 |----------|--------|--------|------------------|  
 |**dm_exec_cached_plan_dependent_objects**|**dm_os_memory_objects**|**memory_object_address**|Un à un|  
   

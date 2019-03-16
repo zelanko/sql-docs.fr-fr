@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_cached_plans (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_cached_plans (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f366e091cccad7dbc317093f090bf2547f95b1df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411526"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072333"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52411526"
 |size_in_bytes|**Int**|Nombre d'octets mobilisés par l'objet dans le cache.|  
 |memory_object_address|**varbinary(8)**|Adresse mémoire de l'entrée en cache. Cette valeur peut être utilisée avec [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) pour obtenir la répartition mémoire du plan mis en cache et avec [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)entrées pour obtenir le coût de mise en cache de l’entrée.|  
 |cacheobjtype|**nvarchar(34)**|Type d'objet dans le cache. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> Compiled Plan (plan compilé)<br /><br /> Compiled Plan Stub (stub du plan compilé)<br /><br /> Parse Tree (arborescence d'analyse)<br /><br /> Extended Proc (procédure étendue)<br /><br /> CLR Compiled Func (fonction compilée CLR)<br /><br /> CLR Compiled Proc (procédure compilée CLR)|  
-|objtype|**nvarchar(16)**|Type d'objet. Voici les valeurs possibles et leurs descriptions correspondantes.<br /><br /> Procédure : Procédure stockée<br />Préparé : Instruction préparée<br />Ad hoc : Requête ad hoc. Fait référence à [!INCLUDE[tsql](../../includes/tsql-md.md)] soumis en tant qu’événements de langage à l’aide de **osql** ou **sqlcmd** au lieu d’en tant qu’appels de procédure distante.<br />ReplProc : Procédure de réplication et de filtrage<br />Déclencheur : Déclencheur<br />Vue : Affichage<br />Valeur par défaut : Par défaut<br />UsrTab : Table utilisateur<br />SysTab : Table système<br />Vérification : Contrainte CHECK<br />Règle : Règle|  
+|objtype|**nvarchar(16)**|Type d'objet. Voici les valeurs possibles et leurs descriptions correspondantes.<br /><br /> Procédure : Procédure stockée<br />Préparé : Instruction préparée<br />Ad hoc : Requête ad hoc. Fait référence à [!INCLUDE[tsql](../../includes/tsql-md.md)] soumis en tant qu’événements de langage à l’aide de **osql** ou **sqlcmd** au lieu d’en tant qu’appels de procédure distante.<br />ReplProc: Procédure de réplication et de filtrage<br />Déclencheur : Déclencheur<br />Vue : Affichage<br />Valeur par défaut : Par défaut<br />UsrTab : Table utilisateur<br />SysTab: Table système<br />Vérification : Contrainte CHECK<br />Règle : Règle|  
 |plan_handle|**varbinary(64)**|Identificateur du plan en mémoire. Cet identificateur est temporaire et il reste constant uniquement tant que le plan est dans le cache. Cette valeur peut être utilisée avec les fonctions de gestion dynamique suivantes :<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**Int**|ID du pool de ressources par rapport auquel cette utilisation de la mémoire de plan est prise en compte.|  
 |pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
@@ -63,7 +63,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 ### <a name="a-returning-the-batch-text-of-cached-entries-that-are-reused"></a>A. Retour du texte du traitement des entrées mises en cache qui sont réutilisées  
  L'exemple suivant retourne le texte SQL de toutes les entrées en cache ayant été utilisées plusieurs fois.  
   
-```  
+```sql  
 SELECT usecounts, cacheobjtype, objtype, text   
 FROM sys.dm_exec_cached_plans   
 CROSS APPLY sys.dm_exec_sql_text(plan_handle)   
@@ -75,7 +75,7 @@ GO
 ### <a name="b-returning-query-plans-for-all-cached-triggers"></a>b. Retour des plans de requête pour tous les déclencheurs en cache  
  L'exemple suivant retourne les plans de requête de tous les déclencheurs en cache.  
   
-```  
+```sql  
 SELECT plan_handle, query_plan, objtype   
 FROM sys.dm_exec_cached_plans   
 CROSS APPLY sys.dm_exec_query_plan(plan_handle)   
@@ -86,7 +86,7 @@ GO
 ### <a name="c-returning-the-set-options-with-which-the-plan-was-compiled"></a>C. Retour des options SET ayant servi à compiler le plan  
  L'exemple suivant retourne les options SET ayant servi à compiler le plan. Le `sql_handle` pour le plan est également retourné. L’opérateur PIVOT sert à la sortie le `set_options` et `sql_handle` attributs sous forme de colonnes plutôt que sous forme de lignes. Pour plus d’informations sur la valeur retournée dans `set_options`, consultez [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md).  
   
-```  
+```sql  
 SELECT plan_handle, pvt.set_options, pvt.sql_handle  
 FROM (  
       SELECT plan_handle, epa.attribute, epa.value   
@@ -101,7 +101,7 @@ GO
 ### <a name="d-returning-the-memory-breakdown-of-all-cached-compiled-plans"></a>D. Retour de la répartition mémoire de tous les plans compilés en cache  
  L'exemple suivant retourne une répartition de la mémoire utilisée par tous les plans compilés du cache.  
   
-```  
+```sql  
 SELECT plan_handle, ecp.memory_object_address AS CompiledPlan_MemoryObject,   
     omo.memory_object_address, type, page_size_in_bytes   
 FROM sys.dm_exec_cached_plans AS ecp   
@@ -116,7 +116,7 @@ GO
  [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Fonctions et vues de gestion dynamique liées à l’exécution &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
- [Sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
+ [sys.dm_exec_plan_attributes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md)   
  [sys.dm_os_memory_cache_entries &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md)   

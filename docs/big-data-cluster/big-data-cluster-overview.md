@@ -5,23 +5,23 @@ description: En savoir plus sur les clusters de données volumineuses de SQL Ser
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 12/06/2018
+ms.date: 12/07/2018
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4e5f45d51e80753bb65e5fa1d620ca105af28344
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241990"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072124"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Quelles sont les clusters SQL Server 2019 big data ?
 
 En commençant par [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], clusters de données volumineuses de SQL Server que vous puissiez déployer des clusters SCALABLES de SQL Server, Spark et HDFS conteneurs s’exécutant sur Kubernetes. Ces composants sont en cours d’exécution côte à côte pour vous permettre de lire, écrire et traiter le big data à partir de Transact-SQL ou Spark, qui vous permet de facilement combiner et analyser vos données relationnelles de valeur élevée avec d’importants volumes de données volumineuses.
 
-Pour plus d’informations sur les nouvelles fonctionnalités et les problèmes connus pour la version la plus récente, consultez le [notes de version](big-data-cluster-release-notes.md).
+Pour plus d’informations sur les nouvelles fonctionnalités et les problèmes connus pour la version la plus récente, consultez le [notes de version](release-notes-big-data-cluster.md).
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -75,10 +75,11 @@ Un cluster de données volumineux de SQL Server est un cluster de conteneurs Lin
 Kubernetes est un orchestrateur de conteneur open source, ce qui peut mettre à l’échelle des déploiements de conteneurs en fonction de besoins. Le tableau suivant définit certains termes Kubernetes important :
 
 |||
-|--|--|
+|:--|:--|
 | **Cluster** | Un cluster Kubernetes est un ensemble d’ordinateurs, appelés nœuds. Un nœud de contrôle du cluster et il est le nœud principal ; les nœuds restants sont des nœuds de travail. Le maître de Kubernetes est chargé de distribuer le travail entre les workers et pour surveiller l’intégrité du cluster. |
 | **Nœud** | Un nœud exécute des applications en conteneur. Il peut être un ordinateur physique ou une machine virtuelle. Un cluster Kubernetes peut contenir un mélange de nœuds de machine virtuelle et de la machine physiques. |
-| **POD** | Un pod est l’unité atomique de déploiement de Kubernetes. Un pod est un groupe logique d’un ou plusieurs conteneurs- et associé les ressources nécessaires pour exécuter une application. Chaque pod s’exécute sur un nœud ; un nœud peut exécuter une ou plusieurs pods. Le maître de Kubernetes affecte automatiquement des pods aux nœuds du cluster. |
+| **Pod** | Un pod est l’unité atomique de déploiement de Kubernetes. Un pod est un groupe logique d’un ou plusieurs conteneurs- et associé les ressources nécessaires pour exécuter une application. Chaque pod s’exécute sur un nœud ; un nœud peut exécuter une ou plusieurs pods. Le maître de Kubernetes affecte automatiquement des pods aux nœuds du cluster. |
+| &nbsp; ||
 
 Dans les clusters de données volumineuses de SQL Server, Kubernetes est responsable de l’état des clusters de données volumineuses de SQL Server ; Kubernetes génère et configure les nœuds de cluster, affecte des pods à nœuds et surveille l’intégrité du cluster.
 

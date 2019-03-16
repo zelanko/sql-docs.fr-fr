@@ -7,12 +7,12 @@ ms.topic: tutorial
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 936bc010838b3869c567117a9e87cdc2c4ce6d52
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1c98f6110aa6cc0bbb86f04a685211d7dc58447a
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596123"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072153"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scénarios de science des données et des modèles de solution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +56,7 @@ Chaque solution inclut des exemples de données, le code R ou Python code et pro
 
 ## <a name="customer-churn"></a>ATTRITION
 
-[Modèle de prédiction d’évolution du client (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/Introduction.md)
+[Modèle de prédiction d’évolution du client (SQL Server R Services)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/Churn/README.md)
 
 **Ce que :** Analyse et prédiction d’ATTRITION sont importantes dans tout secteur où la perte de clients à la concurrence doit être gérée et a empêché : bancaire, télécommunications et vente au détail, pour citer que quelques-uns. L’objectif de l’analyse de l’attrition consiste à identifier les clients susceptibles de passer à la concurrence, puis d’effectuer les actions appropriées pour conserver ces clients.
 
@@ -64,7 +64,7 @@ Chaque solution inclut des exemples de données, le code R ou Python code et pro
   
 ## <a name="predictive-maintenance"></a>Maintenance prédictive
 
-[Modèle de maintenance prédictive (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/Introduction.md)
+[Modèle de maintenance prédictive (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **Ce que :** Maintenance prédictive vise à augmenter l’efficacité des tâches de maintenance en capturant les défaillances passées et à l’aide de ces informations pour prédire quand et où un appareil peut échouer. La capacité à prédire l’obsolescence d’appareil est particulièrement utile pour les applications qui s’appuient sur des capteurs ou des données distribuées. Cette méthode peut également être appliquée pour surveiller et de prédire l’erreur dans les appareils IoT (Internet of Things).
 

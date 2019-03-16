@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 12/17/2018
 ms.prod: sql
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6320c20a9f27df7170caaba3e9749069f2365d7a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 87be8cba02cac7f0ff6b1cd0fa966241745e5483
+ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590113"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58072233"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -41,10 +41,10 @@ Retourne des informations sur chaque demande qui s'exécute dans [!INCLUDE[ssNoV
 |start_time|**datetime**|Horodateur lors la réception de la demande. N'accepte pas la valeur NULL.|  
 |status|**nvarchar(30)**|Statut de la demande. Il peut s'agir de l'un des états suivants :<br /><br /> Arrière-plan<br />Exécution en cours<br />Exécutable<br />En état de veille<br />Suspendu<br /><br /> N'accepte pas la valeur NULL.|  
 |commande|**nvarchar(32)**|Identifie le type de commande en cours de traitement. Les types de commandes courants comprennent notamment :<br /><br /> SELECT<br />INSERT<br />UPDATE<br />Suppression<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> Le texte de la demande peut être extrait à l'aide de sys.dm_exec_sql_text avec le paramètre sql_handle correspondant pour la demande. Des processus système internes définissent la commande en fonction du type de tâche à exécuter. Il peut s'agir des tâches suivantes :<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> N'accepte pas la valeur NULL.|  
-|sql_handle|**varbinary(64)**|Table de hachage du texte SQL de la demande. Autorise la valeur NULL.|  
+|sql_handle|**varbinary(64)**|Est un jeton qui identifie de façon unique le lot ou une procédure stockée qui fait partie de la requête. Autorise la valeur NULL.|  
 |statement_start_offset|**Int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution commencent. Cette valeur peut être utilisée avec les fonctions de gestion dynamique sql_handle, statement_end_offset et sys.dm_exec_sql_text pour extraire l'instruction en cours d'exécution de la demande. Autorise la valeur NULL.|  
 |statement_end_offset|**Int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution se terminent. Cette valeur peut être utilisée avec les fonctions de gestion dynamique sql_handle, statement_end_offset et sys.dm_exec_sql_text pour extraire l'instruction en cours d'exécution de la demande. Autorise la valeur NULL.|  
-|plan_handle|**varbinary(64)**|Table de hachage du plan pour l'exécution SQL. Autorise la valeur NULL.|  
+|plan_handle|**varbinary(64)**|Est un jeton qui identifie de façon unique un plan d’exécution de requête pour un lot en cours d’exécution. Autorise la valeur NULL.|  
 |database_id|**smallint**|ID de la base de données dans laquelle la requête s'exécute. N'accepte pas la valeur NULL.|  
 |user_id|**Int**|ID de l'utilisateur qui a envoyé la demande. N'accepte pas la valeur NULL.|  
 |connection_id|**uniqueidentifier**|ID de la connexion à laquelle la demande est parvenue. Autorise la valeur NULL.|  
@@ -190,4 +190,4 @@ GO
 - [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
 - [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
 - [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [Sys.dm_exec_sql_text & #40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+- [sys.dm_exec_sql_text &#40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
