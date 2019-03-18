@@ -3,7 +3,7 @@ items:
   href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
 - name: Qu’est-ce que SQL Server Reporting Services (SSRS) ?
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-- name: Vue d'ensemble
+- name: Vue d’ensemble
   items:
   - name: Nouveautés de Reporting Services
     href: ../reporting-services/what-s-new-in-sql-server-reporting-services-ssrs.md
@@ -158,7 +158,7 @@ items:
     href: ../reporting-services/working-with-kpis-in-reporting-services.md
   - name: Mes paramètres pour l’intégration de Power BI
     href: ../reporting-services/my-settings-for-power-bi-integration-web-portal.md
-- name: Vue d'ensemble
+- name: Vue d’ensemble du mode natif du serveur de rapports Reporting Services
   href: ../reporting-services/report-server/reporting-services-report-server-native-mode.md
 - name: Configurer et administrer un serveur de rapports (SSRS en mode natif)
   href: ../reporting-services/report-server/configure-and-administer-a-report-server-ssrs-native-mode.md
@@ -280,7 +280,7 @@ items:
     href: ../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md
   - name: Créer un historique de rapport
     href: ../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md
-- name: Vue d'ensemble
+- name: Vue d’ensemble du serveur de rapports Reporting Services
   href: ../reporting-services/report-server-sharepoint/reporting-services-report-server.md
 - name: Serveur de rapports (SharePoint)
   href: ../reporting-services/report-server-sharepoint/reporting-services-report-server-sharepoint-mode.md
@@ -334,7 +334,7 @@ items:
   href: ../reporting-services/report-server-sharepoint/configure-reporting-services-to-use-a-subject-alternative-name.md
 - name: Épingler à Power BI
   href: ../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md
-- name: Vue d'ensemble
+- name: Vue d’ensemble du générateur de rapports dans SQL Server
   href: ../reporting-services/report-builder/report-builder-in-sql-server-2016.md
 - name: Démarrer le Générateur de rapports
   href: ../reporting-services/report-builder/start-report-builder.md
@@ -900,7 +900,7 @@ items:
   href: ../reporting-services/report-design/report-parts-in-report-designer-ssrs.md
 - name: Gestion de parties de rapport
   href: ../reporting-services/report-design/managing-report-parts.md
-- name: Vue d'ensemble
+- name: Vue d’ensemble des rapports Reporting Services
   href: ../reporting-services/reports/reporting-services-reports-ssrs.md
 - name: Publication des sources de données et des rapports
   href: ../reporting-services/reports/publishing-data-sources-and-reports.md
@@ -933,7 +933,7 @@ items:
   href: ../reporting-services/reports/clickthrough-reports-ssrs.md
 - name: Afficher et explorer des rapports en mode natif à l’aide de composants WebPart SharePoint (SSRS)
   href: ../reporting-services/reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
-- name: Vue d'ensemble
+- name: Vue d’ensemble des données des rapports dans SSRS
   href: ../reporting-services/report-data/report-data-ssrs.md
 - name: Sources de données prises en charge par Reporting Services
   href: ../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md
@@ -1122,7 +1122,7 @@ items:
     href: ../reporting-services/mobile-reports/custom-maps-in-reporting-services-mobile-reports.md
   - name: Ajouter une carte personnalisée à un rapport mobile Reporting Services
     href: ../reporting-services/mobile-reports/add-a-custom-map-to-a-reporting-services-mobile-report.md
-- name: Vue d'ensemble
+- name: Vue d’ensemble de la sécurité et de la protection de Reporting Services
   href: ../reporting-services/security/reporting-services-security-and-protection.md
 - name: Protection étendue de l'authentification avec Reporting Services
   href: ../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md
@@ -1192,7 +1192,7 @@ items:
       href: ../reporting-services/security/set-permissions-for-report-server-items-on-a-sharepoint-site.md
 - name: Configurer des connexions SSL sur un serveur de rapports en mode natif
   href: ../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md
-- name: Vue d'ensemble
+- name: Vue d’ensemble des planifications SSRS
   href: ../reporting-services/subscriptions/schedules.md
 - name: Create, Modify, and Delete Schedules
   href: ../reporting-services/subscriptions/create-modify-and-delete-schedules.md
@@ -1234,7 +1234,7 @@ items:
     href: ../reporting-services/subscriptions/change-the-default-reporting-services-delivery-extension.md
   - name: Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement
     href: ../reporting-services/subscriptions/manage-subscription-owners-and-run-subscription-powershell.md
-- name: Vue d'ensemble
+- name: Vue d’ensemble des outils Reporting Services
   href: ../reporting-services/tools/reporting-services-tools.md
 - name: Reporting Services dans les outils de données SQL Server
   href: ../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md
@@ -1338,7 +1338,7 @@ items:
     href: ../reporting-services/tools/rsconfig-utility-ssrs.md
   - name: Utilitaire RS.exe (SSRS)
     href: ../reporting-services/tools/rs-exe-utility-ssrs.md
-- name: 'Didacticiel : Comment localiser et démarrer les outils Reporting Services'
+- name: Comment localiser et démarrer les outils Reporting Services
   href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
 - name: Alertes de données (SharePoint)
   href: ../reporting-services/reporting-services-data-alerts.md
@@ -1385,7 +1385,31 @@ items:
     href: ../reporting-services/search-a-report-using-url-access.md
   - name: Rendre un instantané d'historique de rapport à l'aide de l'accès URL
     href: ../reporting-services/render-a-report-history-snapshot-using-url-access.md
-- name: Vue d'ensemble
+- name: Bases de données relationnelles
+  items:
+  - name: Guide pratique pour gérer les connexions, les utilisateurs et les schémas
+    href: ../relational-databases/security/authentication-access/managing-logins-users-and-schemas-how-to-topics.md
+  - name: Masquage dynamique des données
+    href: ../relational-databases/security/dynamic-data-masking.md
+  - name: Référence SQL Server Express LocalDB
+    href: ../relational-databases/sql-server-express-localdb-reference.md
+  - name: SqlToolsVSNativeHelpers
+    href: ../relational-databases/sqltoolsvsnativehelpers.md
+  - name: SqlToolsVSNativeHelpers - FrameWindowVisible
+    href: ../relational-databases/sqltoolsvsnativehelpers-framewindowvisible.md
+  - name: sp_enum_sqlagent_subsystems
+    href: ../relational-databases/system-catalog-views/sys-edge-constraint-clauses-transact-sql.md
+  - name: sysmail_delete_principalprofile_sp
+    href: ../relational-databases/system-catalog-views/sys-edge-constraints-transact-sql.md
+  - name: Recommandations pour l’optimisation
+    href: ../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md
+  - name: Énumérer les sous-systèmes de l’Agent SQL
+    href: ../relational-databases/system-stored-procedures/sp-enum-sqlagent-subsystems-transact-sql.md
+  - name: Supprimer le profil principal
+    href: ../relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql.md
+  - name: Erreur du fournisseur WMI 0x8007052f
+    href: ../relational-databases/wmi-provider-error-0x8007052f.md
+- name: Vue d’ensemble des informations de référence sur la bibliothèque du fournisseur WMI
   href: ../reporting-services/wmi-provider-library-reference/reporting-services-wmi-provider-library-reference-ssrs.md
 - name: classe MSReportServer_Instance
   href: ../reporting-services/wmi-provider-library-reference/msreportserver-instance-class.md
@@ -1541,7 +1565,7 @@ items:
       href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setwindowsserviceidentity.md
     - name: Méthode ConfigurationSetting - SetExtendedProtectionSettings
       href: ../reporting-services/wmi-provider-library-reference/configurationsetting-method-setextendedprotectionsettings.md
-- name: Vue d'ensemble
+- name: Dépannage de Reporting Services
   href: ../reporting-services/troubleshooting/troubleshoot-reporting-services.md
 - name: Guide de référence des erreurs et des événements
   href: ../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md
@@ -1900,7 +1924,7 @@ items:
     - name: "Leçon 9 : Générer et exécuter l'application"
       href: ../reporting-services/lesson-9-build-and-run-the-application.md
   - name: Didacticiels du Générateur de rapports
-    href: ../reporting-services/report-builder-tutorials.md
+    href: ../reporting-services/tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md
     items:
     - name: Éléments requis pour les didacticiels
       href: ../reporting-services/prerequisites-for-tutorials-report-builder.md
@@ -1932,9 +1956,9 @@ items:
       href: ../reporting-services/tutorial-creating-drillthrough-and-main-reports-report-builder.md
     - name: 'Didacticiel : Introduction aux expressions'
       href: ../reporting-services/tutorial-introducing-expressions.md
-ms.openlocfilehash: 07d625881bacee05f8fdf6e3034857cc91d6739a
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: 0557511d395eaac697bcf609582dc69a8ee5cfd4
+ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401891"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57974528"
