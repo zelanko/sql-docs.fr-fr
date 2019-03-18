@@ -33,12 +33,12 @@ ms.assetid: e5186f02-dd91-47d0-8fa4-de3f41c76903
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 78a5b1462316f859339f5922a0fa9aa098c6e854
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a5c0b2714637068f72aa9e8caf7f7213c865131f
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803284"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974478"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2016"></a>Éditions et fonctionnalités prises en charge de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,9 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Plusieurs conteneurs Filestream|Oui|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|Oui <sup>2</sup>|
 |Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non<sup>4</sup>|Non|Non|Non|
 |Buffer Pool Extension|Oui|Oui|Non|Non|Non|
-|Gouvernance des ressources d'E/S|Oui|Non|Non|Non|Non|  
+|Gouvernance des ressources d'E/S|Oui|Non|Non|Non|Non|
+|Lecture anticipée|Oui|Non|Non|Non|Non|
+|Analyse avancée|Oui|Non|Non|Non|Non|
 |Durabilité différée|Oui|Oui|Oui|Oui|Oui|
 
 <sup>1</sup> La taille des données OLTP en mémoire et le cache de segments columnstore sont limités à la quantité de mémoire spécifiée par l’édition dans la section Limites d’échelle. Le Nombre maximal de degrés de parallélisme est limité. Le nombre de degrés de parallélisme maximal pour la création d’un index est limité à 2 pour l’Édition Standard et à 1 pour les éditions Web et Express. Ceci fait référence aux index columnstore créés sur des tables basées sur des disques et des tables à mémoire optimisée.
@@ -270,7 +272,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Intégration de Microsoft Visual Studio|Oui|Oui|Oui|Oui|Oui| 
 |Intellisense (Transact-SQL et MDX)|Oui|Oui|Oui|Oui|Oui| 
-|Outils de données SQL Server (SSDT)|Oui|Oui|Oui|Oui|Non|    
+|SQL Server Data Tools (SSDT)|Oui|Oui|Oui|Oui|Non|    
 |Outils de conception, de modification et de débogage MDX|Oui|Oui|Non|Non|Non|   
   
 ##  <a name="Programmability"></a> Programmability  
@@ -283,7 +285,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Nœud de calcul PolyBase|Oui|Oui <sup>1</sup>|Oui <sup>1</sup>, <sup>2</sup>|Oui <sup>1</sup>, <sup>2</sup>|Oui <sup>1</sup>, <sup>2</sup>| 
 |Nœud principal PolyBase|Oui|Non|Non|Non|Non| 
 |JSON|Oui|Oui|Oui|Oui|Oui|   
-|Magasin de requêtes|Oui|Oui|Oui|Oui|Oui|   
+|Magasin des requêtes|Oui|Oui|Oui|Oui|Oui|   
 |Temporal|Oui|Oui|Oui|Oui|Oui|   
 |Intégration du CLR (Common Language Runtime)|Oui|Oui|Oui|Oui|Oui|   
 |Prise en charge XML native|Oui|Oui|Oui|Oui|Oui| 

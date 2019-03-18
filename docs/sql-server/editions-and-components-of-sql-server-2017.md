@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 79280cd1e9499cf9a76f50c6aad255dbd3db81ef
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556171"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974498"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -195,6 +195,8 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Mémoire de pages de grande taille compatible NUMA et allocation de tableau de tampons|Oui|Non|Non|Non|Non|
 |Buffer Pool Extension|Oui|Oui|Non|Non|Non|
 |Gouvernance des ressources d'E/S|Oui|Non|Non|Non|Non|  
+|Lecture anticipée|Oui|Non|Non|Non|Non|
+|Analyse avancée|Oui|Non|Non|Non|Non|
 |Durabilité différée|Oui|Oui|Oui|Oui|Oui|
 |Paramétrage automatique|Oui|Non|Non|Non|Non|
 |Jointures adaptatives en mode batch|Oui|Non|Non|Non|Non|
@@ -288,7 +290,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |-------------|----------------|--------------|---------|------------------------------------|------------------------| 
 |Intégration de Microsoft Visual Studio|Oui|Oui|Oui|Oui|Oui| 
 |Intellisense (Transact-SQL et MDX)|Oui|Oui|Oui|Oui|Oui| 
-|Outils de données SQL Server (SSDT)|Oui|Oui|Oui|Oui|Non|    
+|SQL Server Data Tools (SSDT)|Oui|Oui|Oui|Oui|Non|    
 |Outils de conception, de modification et de débogage MDX|Oui|Oui|Non|Non|Non|   
   
 ##  <a name="Programmability"></a> Programmability  
@@ -303,7 +305,7 @@ L’édition Developer continue à prendre en charge seulement 1 client pour [S
 |Nœud de calcul PolyBase|Oui|Oui <sup>3</sup>|Oui <sup>3</sup>|Oui <sup>3</sup>|Oui <sup>3</sup> | 
 |Nœud principal PolyBase|Oui|Non|Non|Non|Non| 
 |JSON|Oui|Oui|Oui|Oui|Oui|   
-|Magasin de requêtes|Oui|Oui|Oui|Oui|Oui|   
+|Magasin des requêtes|Oui|Oui|Oui|Oui|Oui|   
 |Temporal|Oui|Oui|Oui|Oui|Oui|   
 |Intégration du CLR (Common Language Runtime)|Oui|Oui|Oui|Oui|Oui|   
 |Prise en charge XML native|Oui|Oui|Oui|Oui|Oui| 
@@ -407,7 +409,3 @@ Pour plus d’informations sur les fonctionnalités de client Business Intellige
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]
-
-
-
-ceci est un test
