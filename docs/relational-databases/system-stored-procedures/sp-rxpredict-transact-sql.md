@@ -1,6 +1,5 @@
 ---
 title: sp_rxPredict | Microsoft Docs
-ms.custom: ''
 ms.date: 08/20/2018
 ms.prod: sql
 ms.prod_service: database-engine
@@ -16,13 +15,13 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: HeidiSteen
 ms.author: heidist
-manager: cgronlun
-ms.openlocfilehash: addca46cd1ebf05212b0e8721d1799eefbad3bb0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: craigg
+ms.openlocfilehash: 50e25162f88c42c0728f951702d304975fb7091b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842927"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161596"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,6 @@ Génère une valeur prédite pour une entrée donnée consistant en un modèle s
 Fournit des modèles R et Python machine learning dans quasiment en temps réel de notation. `sp_rxPredict` est une procédure stockée fournie comme un wrapper pour le `rxPredict` fonction R au [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler) et [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)et le [rx_predict](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) fonction Python dans [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) et [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package). Il est écrit en C++ et est spécialement optimisée pour les opérations de calcul de score.
 
 Bien que le modèle doit être créé à l’aide de R ou Python, une fois qu’il est sérialisé et stocké dans un format binaire sur une instance du moteur de base de données cible, il peut être consommé à partir de cette instance du moteur de base de données même lors de l’intégration de R ou Python n’est pas installée. Pour plus d’informations, consultez [notation en temps réel avec sp_rxPredict](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring).
-
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,13 +62,11 @@ Pour activer l’utilisation de la procédure stockée, SQLCLR doit être activ�
 
 L’utilisateur doit avoir `EXECUTE` autorisation sur la base de données.
 
-
 ### <a name="supported-algorithms"></a>Algorithmes pris en charge
 
 Pour créer et former le modèle, utilisez un des algorithmes pris en charge pour R ou Python, fourni par [SQL Server 2016 R Services](https://docs.microsoft.com/sql/advanced-analytics/r/sql-server-r-services?view=sql-server-2017), [SQL Server 2016 R Server (autonome)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2016), [Machine SQL Server 2017 Learning Services (R ou Python)](https://docs.microsoft.com//sql/advanced-analytics/what-is-sql-server-machine-learning?view=sql-server-2017), ou [SQL Server 2017 Server (autonome) (R ou Python)](https://docs.microsoft.com/sql/advanced-analytics/r/r-server-standalone?view=sql-server-2017).
 
-
-#### <a name="r-revoscaler-models"></a>R : RevoScaleR modèles
+#### <a name="r-revoscaler-models"></a>R : Modèles de RevoScaleR
 
   + [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)
   + [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)
@@ -78,7 +74,7 @@ Pour créer et former le modèle, utilisez un des algorithmes pris en charge pou
   + [rxDtree](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdtree)
   + [rxdForest](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdforest)
 
-#### <a name="r-microsoftml-models"></a>R : MicrosoftML modèles
+#### <a name="r-microsoftml-models"></a>R : Modèles de MicrosoftML
 
   + [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest)
@@ -87,7 +83,7 @@ Pour créer et former le modèle, utilisez un des algorithmes pris en charge pou
   + [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)
   + [rxFastLinear](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastlinear)
 
-#### <a name="r-transformations-supplied-by-microsoftml"></a>R : les transformations fournies par MicrosoftML
+#### <a name="r-transformations-supplied-by-microsoftml"></a>R : Transformations fournies par MicrosoftML
 
   + [featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees)
   + [concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat)

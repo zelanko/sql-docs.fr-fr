@@ -13,12 +13,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0489d3d1486cb447a16b9658a17c0e6f4d9f41f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b91e4f912de3eff2d64e7cbbf35aad56cbccbcd
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825187"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072223"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurer un serveur de publication Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,6 +37,7 @@ ms.locfileid: "47825187"
 -   Publication de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers des Abonnés non[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
 
 -   La publication de données sur et depuis Oracle présente les restrictions suivantes :  
+
   | |Version 2016 ou antérieure |Version 2017 ou ultérieure |
   |-------|-------|--------|
   |Réplication depuis Oracle |Prise en charge d’Oracle 10g ou version antérieure uniquement |Prise en charge d’Oracle 10g ou version antérieure uniquement |
@@ -100,7 +101,7 @@ ms.locfileid: "47825187"
 |Action|Description|  
 |------------|-----------------|  
 |Identifier la base de données|Il existe deux méthodes pour identifier la base de données. La première méthode utilise le SID (Oracle System Identifier) et est disponible dans chaque version d'Oracle. La seconde méthode utilise le nom de service, disponible à partir d'Oracle release 8.0 et versions ultérieures. Ces deux méthodes utilisent une valeur qui est configurée lors de la création de la base de données, et il est essentiel que la configuration réseau du client utilise la méthode de nommage déjà utilisée par l'administrateur lorsqu'il a configuré l'écouteur pour la base de données.|  
-|Identifier un alias réseau pour la base de données|Vous devez spécifier un alias réseau, utilisé pour accéder à la base de données Oracle. Fournissez également cet alias lorsque vous identifiez la base de données Oracle en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'alias réseau est essentiellement un pointeur vers le SID distant ou le nom de service qui a été configuré lors de la création de la base de données ; il a reçu divers noms dans les différentes versions et produits d'Oracle, notamment Net Service Name et TNS Alias. SQL*Plus vous demande cet alias comme paramètre « Host String » lors de votre connexion.|  
+|Identifier un alias réseau pour la base de données|Vous devez spécifier un alias réseau, utilisé pour accéder à la base de données Oracle. Fournissez également cet alias lorsque vous identifiez la base de données Oracle en tant que serveur de publication sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'alias réseau est essentiellement un pointeur vers le SID distant ou le nom de service qui a été configuré lors de la création de la base de données ; il a reçu divers noms dans les différentes versions et produits d'Oracle, notamment Net Service Name et TNS Alias. SQL*Plus vous demande cet alias comme paramètre « Host String » lors de votre connexion.|  
 |Sélectionner le protocole réseau|Sélectionnez les protocoles que vous souhaitez prendre en charge. La plupart des applications utilisent TCP.|  
 |Spécifier les informations d'hôte pour identifier l'écouteur de la base de données|L'hôte est le nom ou l'alias DNS de l'ordinateur sur lequel s'exécute l'écouteur d'Oracle ; cet ordinateur est en général celui sur lequel réside la base de données. Pour certains protocoles, vous devez fournir des informations supplémentaires. Par exemple, si vous sélectionnez TCP, vous devez fournir le port sur lequel l'écouteur est à l'écoute des demandes de connexion sur la base de données cible. La configuration TCP par défaut utilise le port 1521.|  
   
@@ -137,7 +138,7 @@ ms.locfileid: "47825187"
 > [!NOTE]  
 >  Un serveur de publication Oracle ne peut pas porter le même nom que son serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou que les serveurs de publication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilisant le même serveur de distribution.  
   
- Lorsque vous identifiez la base de données Oracle en tant que serveur de publication, vous devez choisir une option de publication Oracle : Complète (Complete) ou Oracle Gateway. Une fois qu'un serveur de publication est identifié, vous ne pouvez pas modifier cette option sans supprimer et reconfigurer ce serveur. L'option Complète fournit aux publications d'instantané et aux publications transactionnelles l'ensemble complet des fonctionnalités prises en charge pour la publication Oracle. L'option Oracle Gateway fournit des optimisations de conception spécifiques, destinées à améliorer les performances lorsque la réplication sert de passerelle entre des systèmes.  
+ Lorsque vous identifiez la base de données Oracle en tant que serveur de publication, vous devez choisir une option de publication Oracle : Complète (Complete) ou Oracle Gateway. Une fois qu'un serveur de publication est identifié, vous ne pouvez pas modifier cette option sans supprimer et reconfigurer ce serveur. L'option Complète fournit aux publications d'instantané et aux publications transactionnelles l'ensemble complet des fonctionnalités prises en charge pour la publication Oracle. L'option Oracle Gateway fournit des optimisations de conception spécifiques, destinées à améliorer les performances lorsque la réplication sert de passerelle entre des systèmes.  
   
  Lorsque le serveur de publication Oracle a été identifié sur le serveur de distribution [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , la réplication crée un serveur lié portant le même nom que le service TNS de la base de données Oracle. Ce serveur lié ne peut être utilisé que par la réplication. Si vous devez vous connecter au serveur de publication Oracle par l’intermédiaire d’une connexion de serveur lié, créez un autre nom de service TNS puis utilisez ce nom lors de l’appel de [sp_addlinkedserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md).  
   

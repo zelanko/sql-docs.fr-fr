@@ -11,12 +11,12 @@ ms.topic: overview
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ca279b9bbc945cbd9aad5be0bce3165820598fe1
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: f7369893be3cd42dab0e0c0cd870a52c639083b5
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030773"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161606"
 ---
 # <a name="what-is-azure-data-studio"></a>Qu’est Azure Data Studio ?
 
@@ -27,15 +27,15 @@ Précédemment publiées sous le nom de la version préliminaire de SQL Operatio
 **[Téléchargez et installez [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 
 
-## <a name="transact-sql-t-sql-code-editor-with-intellisense"></a>Éditeur de code Transact-SQL (T-SQL) avec IntelliSense
+## <a name="sql-code-editor-with-intellisense"></a>Éditeur de code SQL avec IntelliSense
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]offre une expérience moderne du codage de T-SQL centré sur le clavier, qui facilite vos tâches quotidiennes avec des fonctionnalités intégrées, comme des fenêtres à plusieurs onglets, un éditeur T-SQL avec de nombreuses fonctionnalités, IntelliSense, la complétion de mot clé, les extraits de code, la navigation dans le code et l'intégration du contrôle du code source (Git). Exécutez des requêtes T-SQL à la demande, affichez et enregistrez les résultats en tant que texte, JSON ou Excel. Modifiez les données, organisez vos connexions de base de données préférées et parcourez les objets de celles-ci dans une expérience de navigation familière. Pour savoir comment utiliser l’éditeur T-SQL, consultez [utiliser l’éditeur T-SQL pour créer des objets de base de données](tutorial-sql-editor.md).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] offre une SQL moderne, axée sur le clavier expérience qui facilite vos tâches quotidiennes avec des fonctionnalités intégrées, telles que les fenêtres à plusieurs onglets, un éditeur SQL riche, IntelliSense, l’achèvement de mot clé, des extraits de code, navigation dans le code et contrôle de code source de codage intégration (Git). Exécuter des requêtes SQL à la demande, afficher et enregistrer les résultats en tant que texte, JSON ou Excel. Modifiez les données, organisez vos connexions de base de données préférées et parcourez les objets de celles-ci dans une expérience de navigation familière. Pour savoir comment utiliser l’éditeur SQL, consultez [utilisez l’éditeur SQL pour créer des objets de base de données](tutorial-sql-editor.md).
 
-## <a name="smart-t-sql-code-snippets"></a>Extraits de code smart T-SQL
+## <a name="smart-sql-code-snippets"></a>Extraits de code SQL actives
 
-Les extraits de code T-SQL génèrent la syntaxe T-SQL pour créer des bases de données, des tables, des vues, des procédures stockées, des utilisateurs, des connexions, des rôles, etc. et pour mettre à jour des objets de base de données existants. Utilisez les extraits de code intelligent pour créer rapidement des copies de votre base de données de développement ou à des fins de tests et pour générer et exécuter des scripts CREATE et INSERT.
+Extraits de code SQL génèrent la syntaxe SQL appropriée pour créer des bases de données, tables, vues, procédures stockées, les utilisateurs, connexions, rôles, etc. et mettre à jour les objets de base de données existants. Utilisez les extraits de code intelligent pour créer rapidement des copies de votre base de données de développement ou à des fins de tests et pour générer et exécuter des scripts CREATE et INSERT.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit également des fonctionnalités permettant de créer des extraits de code T-SQL personnalisées. Pour plus d’informations, consultez [créer et utiliser des extraits de code](code-snippets.md).
+[!INCLUDE[name-sos](../includes/name-sos-short.md)] fournit également des fonctionnalités permettant de créer des extraits de code SQL personnalisés. Pour plus d’informations, consultez [créer et utiliser des extraits de code](code-snippets.md).
 
 
 ## <a name="customizable-server-and-database-dashboards"></a>Serveur personnalisable et tableaux de bord de base de données
@@ -57,6 +57,108 @@ Améliorer la [!INCLUDE[name-sos](../includes/name-sos-short.md)] expérience en
 Pour en savoir plus sur l’extensibilité dans [!INCLUDE[name-sos](../includes/name-sos-short.md)], consultez [extensibilité](extensibility.md).
 Pour en savoir plus sur la création d’extensions, consultez [création d’extensions](extension-authoring.md).
 
+## <a name="feature-comparison-with-sql-server-management-studio-ssms"></a>Comparaison des fonctionnalités avec SQL Server Management Studio (SSMS)
+
+**Utiliser Azure Data Studio si vous :**
+- Doivent s’exécuter sur Mac OS ou Linux
+- Vous connectez à un cluster de données volumineux de SQL Server 2019
+- La plupart de votre temps de modification ou de l’exécution de requêtes
+- Ont besoin de pouvoir rapidement du graphique et visualiser des jeux de résultats
+- Peuvent exécuter la plupart des tâches d’administration via le terminal intégré à l’aide de sqlcmd ou Powershell
+- Avez besoin minimal pour les expériences de l’Assistant
+- N’avez pas besoin d’effectuer une configuration approfondie d’administration
+
+**Utilisez SQL Server Management Studio si vous :**
+- Passez la majeure partie de votre temps sur les tâches d’administration de base de données
+- Font configuration approfondie d’administration
+- Effectuez la gestion de la sécurité, y compris la gestion des utilisateurs, évaluation des vulnérabilités et configuration des fonctionnalités de sécurité
+- Utiliser les rapports pour SQL Server Query Store
+- Avez besoin rendre l’utilisation des conseillers de réglage de performances et des tableaux de bord
+- Font d’importation/exportation d’un dacpac
+- Besoin d’accéder à des serveurs inscrits et souhaitez contrôler SQL Server des services sur Windows
+
+### <a name="shell"></a>Shell
+
+|Fonctionnalité|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Authentification dans Azure|Oui|Oui|
+|Tableau de bord|Oui||
+|Extensions|Oui||
+|Terminal intégré|Oui||
+|Explorateur d’objets|Oui|Oui|
+|Scripts d’objets|Oui|Oui|
+|Système de projet|Oui||
+|Sélectionnez à partir de la Table|Oui|Oui|
+|Contrôle de Code source|Oui||
+|Volet de tâches|Oui||
+|Thèmes|Oui||
+|Mode foncé|Oui||
+|Explorateur de ressources Azure|Preview||
+|Assistant Générer des scripts||Oui|
+|Importation/exportation DACPAC||Oui|
+|Propriétés des objets||Oui|
+|Concepteur de tables||Oui|
+
+
+### <a name="query-editor"></a>Éditeur de requête
+
+|Fonctionnalité|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Visionneuse de graphique|Oui||
+|Exporter les résultats vers CSV, JSON, XLSX|Oui||
+|IntelliSense|Oui|Oui|
+|Extraits de code|Oui|Oui|
+|Afficher le Plan|Preview|Oui|
+|Statistiques du client||Oui|
+|Statistiques des requêtes actives||Oui|
+|Options de requête||Oui|
+|Résultats dans un fichier||Oui|
+|Résultats dans du texte||Oui|
+|Visionneuse spatial||Oui|
+|SQLCMD||Oui|
+
+### <a name="operating-system-support"></a>Prise en charge du système d'exploitation
+
+|Fonctionnalité|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Linux|Oui||
+|macOS|Oui||
+|Windows|Oui|Oui|
+
+### <a name="data-engineering"></a>Ingénierie des données
+
+|Fonctionnalité|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Créer l’Assistant de Table externe|Preview||
+|Intégration de HDFS|Preview||
+|Notebooks|Preview||
+
+### <a name="database-administration"></a>Administration de bases de données
+
+|Fonctionnalité|Azure Data Studio|SSMS|
+|:---|:---|:---|
+|Sauvegarde / restauration|Oui|Oui|
+|Importation de fichier plat|Preview|Oui|
+|Agent SQL|Preview|Oui|
+|SQL Profiler|Preview|Oui|
+|Always On||Oui|
+|Always Encrypted||Oui|
+|Assistant Copier des données||Oui|
+|Assistant Paramétrage de données||Oui|
+|Visionneuse de journal d’erreur||Oui|
+|Plans de maintenance||Oui|
+|Requête de plusieurs serveur||Oui|
+|Gestion basée sur des stratégies||Oui|
+|PolyBase||Oui|
+|Magasin des requêtes||Oui|
+|Serveurs inscrits||Oui|
+|REPLICATION||Oui|
+|Gestion de la sécurité||Oui|
+|Service Broker||Oui|
+|SQL Mail||Oui|
+|Explorateur de modèles||Oui|
+|Évaluation des vulnérabilités||Oui|
+|Gestion de XEvent||Oui|
 
 
 

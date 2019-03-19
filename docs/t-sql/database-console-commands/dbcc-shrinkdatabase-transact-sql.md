@@ -28,15 +28,16 @@ ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: e21ffeed024cb6afaa8d1057b1f6819dbe6516d4
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
+ms.openlocfilehash: cb2b339314154526af1980edc97c1fdda37aac76
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685608"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161586"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Réduit la taille des fichiers de données et journaux dans la base de données spécifiée.
   
@@ -151,7 +152,7 @@ Pour résoudre ce problème, vous pouvez effectuer l'une des tâches suivantes :
 -   Mettez fin à l'opération de réduction. Tout travail achevé sera conservé.  
 -   Laissez simplement l'opération de réduction attendre que la transaction bloquante s'achève.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’appartenance au rôle de serveur fixe **sysadmin** ou au rôle de base de données fixe **db_owner** .  
   
 ## <a name="examples"></a>Exemples  

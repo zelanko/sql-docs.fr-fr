@@ -1,10 +1,8 @@
 ---
 title: Exécuter une requête avec une recherche en texte intégral | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +13,17 @@ helpviewer_keywords:
 - full-text queries [SQL Server]
 - queries [full-text search], functions
 ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4b597fffe92f7cfc8a0000ccdf2d34005c8f7164
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5712de8eb79039213aa82383653c1ee99cc2b32d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660578"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974188"
 ---
 # <a name="query-with-full-text-search"></a>Exécuter une requête avec une recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -327,7 +326,7 @@ GO
   
 -   **Respect de la casse**. Les requêtes de recherche en texte intégral ne respectent pas la casse. Néanmoins, en ce qui concerne le Japonais, il existe plusieurs orthographes phonétiques pour lesquelles le concept de normalisation orthographique est apparenté au respect de la casse (par exemple kana = non respect). Ce genre de normalisation orthographique n'est pas pris en charge.  
 
--   **Mots vides**. Lorsqu'une requête de texte intégral est définie, le Moteur d'indexation et de recherche en texte intégral supprime les mots vides (également appelés mots parasites) des critères de recherche. Les mots vides sont des mots tels que « un », « et », « est » ou « le » dont les occurrences sont fréquentes mais qui ne sont pas utiles pour une recherche de texte spécifique. Les mots vides sont répertoriés dans une liste de mots vides. Chaque index de recherche en texte intégral est associé à une liste de mots vides spécifique, qui détermine les mots vides à omettre de la requête ou de l'index au moment de l'indexation. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
+-   **Mots vides**. Lorsqu'une requête de texte intégral est définie, le Moteur d'indexation et de recherche en texte intégral supprime les mots vides (également appelés mots parasites) des critères de recherche. Les mots vides sont des mots tels que « un », « et », « est » ou « le » dont les occurrences sont fréquentes mais qui ne sont pas utiles pour une recherche de texte spécifique. Les mots vides sont répertoriés dans une liste de mots vides. Chaque index de recherche en texte intégral est associé à une liste de mots vides spécifique, qui détermine les mots vides à omettre de la requête ou de l'index au moment de l'indexation. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
 
 -   **Langue**, avec l’option **LANGUAGE**. De nombreux termes de requête dépendent fortement du comportement de l'analyseur lexical. Pour être certain d'utiliser l'analyseur lexical (et le générateur de formes dérivées) et le dictionnaire des synonymes appropriés, nous vous recommandons de spécifier l'option LANGUAGE. Pour plus d’informations, consultez [Choisir une langue lors de la création d’un index de recherche en texte intégral](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md).  
   

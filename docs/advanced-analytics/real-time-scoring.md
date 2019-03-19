@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: def60a6de7d5a6f3641a6de88410543e9e592ba4
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: ed1fbe8be63cd184fd49b1e76f94583bd50cf380
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645158"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161516"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Notation avec sp_rxPredict dans l’apprentissage de SQL Server en temps réel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +22,7 @@ Notation utilise en temps réel la [sp_rxPredict](https://docs.microsoft.com//sq
 
 ## <a name="how-real-time-scoring-works"></a>La notation en temps réel fonctionne
 
-Calcul de score en temps réel est pris en charge dans SQL Server 2017 et SQL Server 2016, [pris en charge les types de modèles](#bkmk_py_supported_algos) pour la modélisation arborescence de la régression et de décision linéaire et logistique. Il utilise les bibliothèques C++ natives pour générer des scores, basées sur l’entrée d’utilisateur fournie à un modèle stocké dans un format binaire spécial d’apprentissage.
+Calcul de score en temps réel est prise en charge dans SQL Server 2017 et SQL Server 2016, sur les types de modèle spécifique basées sur les fonctions RevoScaleR ou MicrosoftML tels que [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). Il utilise les bibliothèques C++ natives pour générer des scores, basées sur l’entrée d’utilisateur fournie à un modèle stocké dans un format binaire spécial d’apprentissage.
 
 Car un modèle formé peut être utilisé pour calculer les scores sans avoir à appeler un runtime de langage externe, la surcharge de plusieurs processus est réduite. Cela prend en charge les performances de prédiction beaucoup plus rapides pour la notation des scénarios de production. Étant donné que les données ne quittent jamais SQL Server, résultats peuvent être générés et insérés dans une table sans aucune traduction de données entre R et SQL.
 

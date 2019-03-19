@@ -1,5 +1,5 @@
 ---
-title: Sys.security_predicates (Transact-SQL) | Microsoft Docs
+title: sys.security_predicates (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,16 +21,16 @@ ms.assetid: c7a2f28c-98da-463d-8b8a-8e5619e2c6a6
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a3c0ee5cffc362f1442315c50ff738bee99b0cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 48505a7e33d8d691314216846ee054d6625b7cf4
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670807"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161796"
 ---
-# <a name="syssecuritypredicates-transact-sql"></a>Sys.security_predicates (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+# <a name="syssecuritypredicates-transact-sql"></a>sys.security_predicates (Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retourne une ligne pour chaque prédicat de sécurité dans la base de données.  
   
@@ -39,13 +39,13 @@ ms.locfileid: "47670807"
 |object_id|**Int**|ID de la stratégie de sécurité qui contient ce prédicat.|  
 |security_predicate_id|**Int**|ID de prédicat dans cette stratégie de sécurité.|  
 |target_object_id|**Int**|ID de l'objet sur lequel le prédicat de la sécurité est lié.|  
-|predicate_definition|**nvarchar(max)**|Nom qualifié complet de la fonction qui sera utilisée comme prédicat de sécurité, y compris les arguments. Notez que le `schema.function` nom peut être normalisé (autrement dit, avec séquence d’échappement), ainsi que tout autre élément dans le texte par souci de cohérence. Exemple :<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
+|predicate_definition|**nvarchar(max)**|Nom qualifié complet de la fonction qui sera utilisée comme prédicat de sécurité, y compris les arguments. Notez que le nom `schema.function` peut être normalisé (autrement dit, placé dans une séquence d'échappement), ainsi que tout autre élément dans le texte à des fins de cohérence. Exemple :<br /><br /> `[dbo].[fn_securitypredicate]([wing], [startTime], [endTime])`|  
 |predicate_type|**Int**|Type de prédicat utilisé par la stratégie de sécurité :<br /><br /> 0 = LE PRÉDICAT DE FILTRE<br /><br /> 1 = LE PRÉDICAT BLOCK|  
 |predicate_type_desc|**nvarchar(60)**|Type de prédicat utilisé par la stratégie de sécurité :<br /><br /> FILTER<br /><br /> BLOC|  
 |opération|**Int**|Le type d’opération spécifié pour le prédicat :<br /><br /> NULL = toutes les opérations applicables<br /><br /> 1 = APRÈS INSERTION<br /><br /> 2 = APRÈS MISE À JOUR<br /><br /> 3 = AVANT MISE À JOUR<br /><br /> 4 = AVANT LA SUPPRESSION|  
 |operation_desc|**nvarchar(60)**|Le type d’opération spécifié pour le prédicat :<br /><br /> NULL<br /><br /> APRÈS INSERTION<br /><br /> AFTER UPDATE<br /><br /> AVANT LA MISE À JOUR<br /><br /> AVANT LA SUPPRESSION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les principaux avec le **ALTER ANY SECURITY POLICY** autorisation ont accès à tous les objets dans cette vue de catalogue, ainsi que toute personne ayant **VIEW DEFINITION** sur l’objet.  
   
 ## <a name="see-also"></a>Voir aussi  

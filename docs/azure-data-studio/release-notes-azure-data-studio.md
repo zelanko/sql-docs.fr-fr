@@ -11,16 +11,47 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b481151636db4f54212c96b0ea21f989afb917d3
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57581670"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161626"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="march-2019"></a>Mars 2019
+
+Le 18 mars 2019 &nbsp;  /  &nbsp; version : 1.5.1
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Ajouté [extension PostgreSQL pour Azure Data Studio](postgres-extension.md) | Fonctionnalités prises en charge : <br/>&bull; &nbsp; Boîte de dialogue Connexion <br/>&bull; &nbsp; Explorateur d’objets <br/>&bull; &nbsp; Éditeur de requête <br/>&bull; &nbsp; Création de graphiques <br/>&bull; &nbsp; Tableaux de bord <br/>&bull; &nbsp; Extraits de code <br/>&bull; &nbsp; Modifier des données <br/>&bull; &nbsp; Ordinateurs portables |
+| Blocs-notes SQL ajouté | Noyau de SQL prise en charge à la visionneuse de bloc-notes intégrée : <br/>&bull; &nbsp; Prend en charge T-SQL <br/>&bull; &nbsp; Prise en charge PGSQL |
+| Ajout d’Extension PowerShell  | Permet d’afficher le [extension PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) à partir de VS Code.  |
+| Ajout d’extension dacpac SQL Server  | Supprime l’Assistant Création d’applications de couche données à partir de l’extension de SQL Server Import dans une nouvelle extension.  |
+| Ajout d’extension Communauté QueryPlan.show | Ajoute la prise en charge de l’intégration pour visualiser les plans de requête  |
+| Extension de SQL Server 2019 Preview mis à jour | &bull; &nbsp; Prise en charge de Jupyter Notebook, en particulier les noyaux Python3 et Spark, ont déplacés dans l’outil d’Azure Data Studio core. <br/>&bull; &nbsp; Correctifs de bogues pour l’Assistant de données externes  |
+| Bogues résolus et les problèmes. | Consultez [bogues et des problèmes, sur GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problèmes connus
+- [#4427](https://github.com/Microsoft/azuredatastudio/issues/4427): En cliquant sur Exécuter sur la cellule avant de noyau est prêt pour Spark entraîne une erreur irrécupérable **solution de contournement :** Attendez que les noyaux sont chargés jusqu'à ce que toutes les cellules en cours d’exécution
+- [#4493](https://github.com/Microsoft/azuredatastudio/issues/4493): ANNONCES lancés à partir de SSMS via l’authentification SQL - invite l’utilisateur pour le mot de passe **solution de contournement :** Utiliser l’authentification de Windows pour l’instant. 
+- [#4494](https://github.com/Microsoft/azuredatastudio/issues/4494): Impossible d’installer la fonctionnalité de bloc-notes SQL <br/>
+**Solution de contournement :** Suivez les étapes de la solution de contournement [ici](https://github.com/Microsoft/azuredatastudio/issues/4494#issuecomment-473043832). 
+- [#4503](https://github.com/Microsoft/azuredatastudio/issues/4503): Azure Data Studio ne peut pas être ouvert directement à partir du dossier Téléchargements (Mac) <br />
+**Solution de contournement :** Redémarrez l’ordinateur après avoir décompressé l’application. Seront examinés. 
+- [#4539](https://github.com/Microsoft/azuredatastudio/issues/4539):  Enregistrer comme bloc-notes perd le contexte de connexion <br />
+**Solution de contournement :** Sera résolu dans une prochaine version. 
+- [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): Extraction de dacpac tombe en panne SqlToolsService si une version non valide est utilisée. <br/>
+**Solution de contournement :** Redémarrez Azure Data Studio et vérifiez la version appropriée est utilisée.
+- Nouvelles icônes de bloc-notes et ouvrir le bloc-notes sont perdues <br/> 
+**Solution de contournement :** Le type de connexion héritée est déconseillé. Nous vous recommandons de se connecter au point de terminaison SQL Server et vous obtiendrez toutes les actions (nouveau bloc-notes, travail Spark) comme prévu. 
 
 ## <a name="february-2019"></a>Février 2019
 

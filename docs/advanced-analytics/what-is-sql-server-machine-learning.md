@@ -8,12 +8,12 @@ ms.topic: overview
 author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
-ms.openlocfilehash: 283f39efa34721aea7613ac1a9cba115dc3311a8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fb98f2dad8f16ac7f9e06920d56bd225962dca7b
+ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032950"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58161846"
 ---
 # <a name="machine-learning-services-r-python-in-sql-server-2017"></a>Machine Learning Services (R, Python) dans SQL Server 2017
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +24,16 @@ Si vous avez utilisé précédemment [SQL Server 2016 R Services](r/sql-server-r
 
 Dans la base de données SQL Azure, [Machine Learning Services (avec R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview) est actuellement en version préliminaire publique.
 
-La proposition de valeur de clé de Machine Learning Services est la puissance de son entreprise R et les packages Python pour fournir une analytique avancée à l’échelle et la possibilité de définir des calculs et traitement à l’emplacement des données, éliminant la nécessité pour extraire les données entre le réseau.
+## <a name="bring-compute-power-to-the-data"></a>Apportez la puissance de calcul aux données
+
+La proposition de valeur de clé de Machine Learning Services est la puissance de son entreprise R et les packages Python pour fournir une analytique avancée à l’échelle et la possibilité de définir des calculs et traitement à l’emplacement des données, éliminant la nécessité pour extraire les données entre le réseau. Cela présente plusieurs avantages :
+
++ Sécurité des données. En associant les R et Python l’exécution de plus près à la source de données permet d’éviter le déplacement des données superflues ou non sécurisé.
++ Vitesse. Les bases de données sont optimisées pour les opérations basées sur un jeu. Les innovations récentes dans les bases de données telles que des tables en mémoire rendent des résumés et les agrégations comme l’éclair et sont un parfait complément de science des données.
++ Facilité d’intégration et de déploiement. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est le point central d’opérations pour de nombreuses autres tâches de gestion de données et applications. À l’aide de données qui résident dans la base de données ou d’un entrepôt de création de rapports, vous assurer que les données utilisées par les solutions d’apprentissage sont cohérent et à jour. 
++ Efficacité d’entre cloud et locales. Au lieu de traiter les données dans les sessions R ou Python, vous pouvez vous appuyer sur les pipelines de données d’entreprise, y compris [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et Azure Data Factory. La création de rapports de résultats ou d’analyses est simple dans Power BI ou [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].
+
+En utilisant le bonne combinaison entre SQL et R pour différentes tâches de traitement et d’analyse des données, tant les scientifiques des données que les développeurs peuvent gagner en productivité.
 
 <a name="components"></a>
 
