@@ -13,12 +13,12 @@ ms.assetid: 87516551-a3b6-4b29-928b-ddd25672a98c
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: c38c1ee94399023fd3ac529a1f7d9cf914f5130f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.openlocfilehash: 6c32d4cf8fe16ec52d8af3ade01cea82badd40cd
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809441"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305837"
 ---
 # <a name="learn-sql-server-master-data-services"></a>Découvrez SQL Server Master Data Services
 
@@ -27,8 +27,8 @@ ms.locfileid: "52809441"
   
   
 ## <a name="training"></a>Formation  
-* Pour explorer les nouvelles fonctionnalités introduites dans [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], essayez ce [**laboratoire virtuel TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23113&lod=true) (en vous connectant avec votre compte Microsoft).  
-* Développez une solution [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] pour stocker et gérer des listes de données géographiques de référence à l’aide du complément pour Excel et du [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)]. Essayez ce [**laboratoire virtuel TechNet**](https://vlabs.holsystems.com/vlabs/technet?eng=VLabs&auth=none&src=vlabs&altadd=true&labid=23112&lod=true). Vous allez créer des entités et des hiérarchies, et utiliser [!INCLUDE[ssIS_md](../includes/ssis-md.md)] pour remplir une table de dimension.  
+* Pour Explorer les nouvelles fonctionnalités et les fonctionnalités introduites dans [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], essayez une [Self-Paced Lab](https://www.microsoft.com/handsonlabs/selfpacedlabs) (connectez-vous avec votre compte Microsoft est requis).  
+* Pour développer un [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] solution pour stocker et gérer des listes de référence de données géographiques, à l’aide du complément pour Excel et le [!INCLUDE[ssMDSmdm_md](../includes/ssmdsmdm-md.md)], essayez une [Self-Paced Lab](https://www.microsoft.com/handsonlabs/selfpacedlabs). Vous allez créer des entités et des hiérarchies, et utiliser [!INCLUDE[ssIS_md](../includes/ssis-md.md)] pour remplir une table de dimension.  
   
 ## <a name="videos"></a>Vidéos  
 * Pour en savoir plus sur les nouvelles fonctionnalités de la version [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] de [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)], [**visionnez cette vidéo**](https://www.youtube.com/watch?v=cKA72FpOVxI).  

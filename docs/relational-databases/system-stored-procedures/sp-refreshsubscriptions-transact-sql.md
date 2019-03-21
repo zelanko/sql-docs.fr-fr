@@ -16,17 +16,17 @@ ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 318ae27808eee1b91debc8ec5d5e3ed0e33088c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9b7f489bf0ee637463fa9c7b2552563c09f3faad
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809141"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306257"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Ajoute des abonnements aux nouveaux articles d'un abonnement par extraction de données (pull) pour tous les Abonnés existants de la publication. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
+  Ajouter des abonnements aux nouveaux articles pour tous les abonnés existants à une publication de la mise à jour immédiate. Cette procédure stockée est exécutée sur le serveur de publication dans la base de données de publication.  
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,7 +38,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publication** =] **'***publication***'**  
+ [ **@publication** = ] **'***publication***'**  
  Publication dont les abonnements doivent être actualisés. *publication* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

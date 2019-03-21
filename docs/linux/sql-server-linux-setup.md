@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: 4e4de2fbb87fb7716ccde8de52924cd2402424fc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e400d73137750bda913003aed1717793634cfd41
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675458"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280623"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Consignes d’installation pour SQL Server sur Linux
 
@@ -38,7 +38,7 @@ SQL Server 2017 est pris en charge sur Red Hat Enterprise Linux (RHEL), SUSE Lin
 
 | Plateforme | Version (s) pris en charge | Obtenir
 |-----|-----|-----
-| **Red Hat Enterprise Linux** | 7.3 ou 7.4 | [Obtenir RHEL 7.4](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
+| **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Obtenir RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
 | **SUSE Linux Enterprise Server** | v12 SP2 | [Télécharger le SP2 de v12 SLES](https://www.suse.com/products/server)
 | **Ubuntu** | 16.04 | [Obtenir Ubuntu 16.04](https://www.ubuntu.com/download/server)
 | **Moteur docker** | 1.8+ | [Obtenir Docker](https://www.docker.com/products/overview)
@@ -193,7 +193,7 @@ Si l’ordinateur Linux n’a pas accès aux référentiels en ligne utilisés d
     > [!NOTE]
     > Vous pouvez également installer les packages RPM (RHEL et SLES) avec la commande `rpm -ivh` commande, mais les commandes du tableau précédent  installent automatiquement les dépendances si elles sont disponibles à partir de référentiels approuvés.
 
-1. **Résoudre les dépendances manquantes** : vous pouvez avoir des dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Sur Ubuntu, si vous avez accès à des référentiels approuvés contenant ces dépendances, la solution la plus simple consiste à utiliser la commande `apt-get -f install`. Cette commande termine également l’installation de SQL Server. Pour examiner les dépendances manuellement, utilisez les commandes suivantes :
+1. **Résoudre les dépendances manquantes**: Vous pouvez avoir de dépendances manquantes à ce stade. Si ce n’est pas le cas, vous pouvez ignorer cette étape. Sur Ubuntu, si vous avez accès à des référentiels approuvés contenant ces dépendances, la solution la plus simple consiste à utiliser la commande `apt-get -f install`. Cette commande termine également l’installation de SQL Server. Pour examiner les dépendances manuellement, utilisez les commandes suivantes :
 
    | Plateforme | Commande de dépendances de liste |
    |-----|-----|

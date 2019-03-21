@@ -5,18 +5,18 @@ description: En savoir plus sur les clusters de groupe de disponibilité lors de
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 06/14/2017
+ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: c498a9ef5422f82671000d6c0e82756df85947cb
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 44d39a44597a789c031ee10b862bffa2af6da883
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160596"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305628"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configurer un Cluster RHEL pour le groupe de disponibilité de SQL Server
 
@@ -89,7 +89,7 @@ Chaque nœud du cluster doit avoir un abonnement approprié pour RHEL et l’ajo
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
    ```
 
-Pour plus d’informations, consultez [clusters Pacemaker - Open Source pour la haute disponibilité](https://www.opensourcerers.org/pacemaker-the-open-source-high-availability-cluster/). 
+Pour plus d’informations, consultez [clusters Pacemaker - Open Source pour la haute disponibilité](https://clusterlabs.org/pacemaker/). 
 
 Une fois que vous avez configuré l’abonnement, procédez comme suit pour configurer Pacemaker :
 
@@ -111,7 +111,7 @@ Délimitation de niveau de nœud garantit qu’un nœud ne s’exécute pas tout
 
 Pour plus d’informations sur STONITH et délimitation, consultez les articles suivants :
 
-* [Clusters pacemaker à partir de zéro](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html)
+* [Clusters pacemaker à partir de zéro](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/index.html)
 * [La délimitation et STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Module complémentaire de Red Hat haute disponibilité avec Pacemaker : Délimitation](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
@@ -143,10 +143,10 @@ Pour mettre à jour la valeur de propriété à `true` exécuter :
 sudo pcs property set start-failure-is-fatal=true
 ```
 
-Pour mettre à jour le `ag1` propriété de ressource `failure-timeout` à `60s` exécuter :
+Pour mettre à jour le `ag_cluster` propriété de ressource `failure-timeout` à `60s` exécuter :
 
 ```bash
-pcs resource update ag1 meta failure-timeout=60s
+pcs resource update ag_cluster meta failure-timeout=60s
 ```
 
 

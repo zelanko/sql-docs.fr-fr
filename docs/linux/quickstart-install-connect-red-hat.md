@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: linux
 ms.custom: sql-linux, seodec18
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 03e3b5d578c8fee68098674e9b82501a290bafda
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce4418dee10ff356d5c922350cd2fda29b44795
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579239"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277305"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Démarrage rapide : Installer SQL Server et de créer une base de données sur Red Hat
 
@@ -25,7 +25,7 @@ ms.locfileid: "57579239"
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-Dans ce démarrage rapide, vous installez SQL Server 2017 ou SQL Server 2019 sur Red Hat Enterprise Linux (RHEL) 7.3 +. Vous vous connectez ensuite avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
+Dans ce démarrage rapide, vous installez SQL Server 2017 ou SQL Server 2019 sur Red Hat Enterprise Linux (RHEL). Vous vous connectez ensuite avec **sqlcmd** pour créer votre première base de données et exécuter des requêtes.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -40,7 +40,7 @@ Ce démarrage rapide, vous installez SQL Server 2019 aperçu sur Red Hat Enterpr
 
 ## <a name="prerequisites"></a>Prérequis
 
-Vous devez avoir un RHEL 7.3 ou 7.4 machine avec **au moins 2 Go** de mémoire.
+Vous devez disposer d’une machine RHEL 7.3, 7.4, 7.5 ou 7.6 avec **au moins 2 Go** de mémoire.
 
 Pour installer Red Hat Enterprise Linux sur votre propre machine, accédez à [ https://access.redhat.com/products/red-hat-enterprise-linux/evaluation ](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Vous pouvez également créer des machines virtuelles RHEL dans Azure. Consultez [créer et gérer des machines virtuelles Linux avec Azure CLI](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)et utiliser `--image RHEL` dans l’appel à `az vm create`.
 
