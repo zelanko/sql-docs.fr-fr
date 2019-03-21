@@ -1,10 +1,8 @@
 ---
 title: Limiter les résultats de la recherche avec RANK | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,16 +14,17 @@ helpviewer_keywords:
 - rankings [full-text search]
 - per-row rank values [full-text search]
 ms.assetid: 06a776e6-296c-4ec7-9fa5-0794709ccb17
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b6d92770fd91231bb2f491f38b6c3dc4563d08a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bb7d238a3ff475fe47dbe652adab3cc49ca3a3b2
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521003"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973688"
 ---
 # <a name="limit-search-results-with-rank"></a>Limiter les résultats de la recherche avec RANK
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "52521003"
   
 ##  <a name="examples"></a> Exemples d'utilisation de RANK pour limiter les résultats de la recherche  
   
-### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple A : recherche des trois premières correspondances uniquement  
+### <a name="example-a-searching-for-only-the-top-three-matches"></a>Exemple A : Recherche des trois premières correspondances uniquement  
  L'exemple suivant utilise CONTAINSTABLE pour retourner uniquement les trois premières correspondances.  
   
 ```  
@@ -71,7 +70,7 @@ RANK        Address                          City
 ```  
   
   
-### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemple B : recherche des dix premières correspondances  
+### <a name="example-b-searching-for-the-top-ten-matches"></a>Exemple B : Recherche des dix premières correspondances  
  L'exemple suivant utilise CONTAINSTABLE pour retourner la description des 5 premiers produits dont la colonne `Description` contient les mots « aluminum » à proximité du mot « light » ou « lightweight ».  
   
 ```  

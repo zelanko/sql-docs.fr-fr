@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 03/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 5ac0dbfdc3a4acd94a7892372ddb336a3bb70642
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 13ad41189f1d8d1b9a7401502dec4d24e6e37c1d
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579677"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974388"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -45,7 +45,9 @@ Cette instruction active plusieurs paramètres de configuration de base de donn�
 - Activer ou désactiver la collecte de statistiques d’exécution pour les modules T-SQL compilés en mode natif.
 - Activer ou désactiver les options par défaut « online » pour les instructions DDL qui prennent en charge la syntaxe ONLINE=.
 - Activer ou désactiver les options par défaut « resumable » pour les instructions DDL qui prennent en charge la syntaxe RESUMABLE=.
-- Activer ou désactiver la fonctionnalité de suppression automatique des tables temporaires globales
+- Activer ou désactiver la fonctionnalité de suppression automatique des tables temporaires globales. 
+- Activer ou désactiver les fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
+- Activer ou désactiver l’[infrastructure de profilage de requête léger](../../relational-databases/performance/query-profiling-infrastructure.md).
 
 ![Icône de lien](../../database-engine/configure-windows/media/topic-link.gif "Icône de lien") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
@@ -67,18 +69,20 @@ ALTER DATABASE SCOPED CONFIGURATION
     | PARAMETER_SNIFFING = { ON | OFF | PRIMARY}
     | QUERY_OPTIMIZER_HOTFIXES = { ON | OFF | PRIMARY}
     | IDENTITY_CACHE = { ON | OFF }
+    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
+    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
+    | TSQL_SCALAR_UDF_INLINING = { ON | OFF }
+    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
     | OPTIMIZE_FOR_AD_HOC_WORKLOADS = { ON | OFF }
     | XTP_PROCEDURE_EXECUTION_STATISTICS = { ON | OFF }
     | XTP_QUERY_EXECUTION_STATISTICS = { ON | OFF }
-    | ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | ELEVATE_RESUMABLE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
-    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
-    | BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-    | BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF  }
+    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
-    | INTERLEAVED_EXECUTION_TVF = {  ON | OFF }
-    | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
+    | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+    | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
 }
 ```
 
@@ -87,6 +91,10 @@ ALTER DATABASE SCOPED CONFIGURATION
 FOR SECONDARY
 
 Spécifie les paramètres des bases de données secondaires (toutes les bases de données secondaires doivent avoir des valeurs identiques).
+
+CLEAR PROCEDURE_CACHE    
+
+Efface le cache (du plan) de procédure pour la base de données et peut être exécuté sur les bases de données primaires et secondaires.  
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
@@ -139,10 +147,6 @@ PRIMARY
 
 Cette valeur est valide uniquement pour les bases de données secondaires lorsque la base de données est définie sur PRIMARY, et indique que, sur toutes les bases de données secondaires, ce paramètre est défini sur la valeur de la base de données primaire. Si la configuration de la base de données primaire est modifiée, la valeur des bases de données secondaires est modifiée en conséquence, sans que vous ayez à la définir explicitement. PRIMARY est le paramètre par défaut des bases de données secondaires.
 
-CLEAR PROCEDURE_CACHE
-
-Efface le cache (du plan) de procédure pour la base de données et peut être exécuté sur les bases de données primaires et secondaires.
-
 IDENTITY_CACHE **=** { **ON** | OFF }
 
 **S’applique à :** [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -151,6 +155,76 @@ Active ou désactive le cache d’identité au niveau de la base de données. La
 
 > [!NOTE]
 > Cette option peut uniquement être définie sur la valeur PRIMARY. Pour plus d’informations, consultez [Colonnes d’identité](create-table-transact-sql-identity-property.md).
+
+INTERLEAVED_EXECUTION_TVF **=** { **ON** | OFF }
+
+**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+
+Vous permet d’activer ou de désactiver l’exécution entrelacée pour les fonctions table à instructions multiples dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de base de données 140 et au-delà. L’exécution entrelacée est une fonctionnalité qui fait partie du traitement de requêtes adaptatif dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Pour plus d’informations, consultez [Traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE]
+> Pour le niveau de compatibilité de la base de données inférieur ou égal à 130, cette configuration étendue à la base de données n’a aucun effet.
+
+BATCH_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
+
+**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Vous permet d’activer ou de désactiver la rétroaction d’allocation de mémoire en mode batch dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 140. La rétroaction d’allocation de mémoire en mode batch est une fonctionnalité qui fait partie du [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+
+> [!NOTE]
+> Pour le niveau de compatibilité de la base de données inférieur ou égal à 130, cette configuration étendue à la base de données n’a aucun effet.
+
+BATCH_MODE_ADAPTIVE_JOINS **=** { **ON** | OFF}
+
+**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
+
+Vous permet d’activer ou de désactiver les jointures adaptatives en mode batch dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 140. Les jointures adaptatives en mode batch sont une fonctionnalité qui fait partie du [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
+
+> [!NOTE]
+> Pour le niveau de compatibilité de la base de données inférieur ou égal à 130, cette configuration étendue à la base de données n’a aucun effet.
+
+TSQL_SCALAR_UDF_INLINING **=** { **ON** | OFF }
+
+**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+
+Vous permet d’activer ou de désactiver l’incorporation (inlining) des fonctions UDF scalaires T-SQL dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. L’incorporation (inlining) des fonctions UDF scalaires T-SQL est une fonctionnalité qui fait partie de la famille de fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE] 
+> Pour le niveau de compatibilité de la base de données inférieur ou égal à 140, cette configuration étendue à la base de données n’a aucun effet.
+
+ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**S’applique à** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (fonctionnalité en préversion publique)
+
+Permet de sélectionner les options destinées à forcer le moteur à élever automatiquement les opérations prises en charge pour une exécution en ligne. La valeur par défaut est OFF, ce qui signifie que les opérations ne sont pas élevées pour une exécution en ligne, sauf si cela est spécifié dans l’instruction. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflète la valeur actuelle de ELEVATE_ONLINE. Ces options s’appliquent uniquement aux opérations prises en charge pour une exécution en ligne.
+
+FAIL_UNSUPPORTED
+
+Cette valeur élève toutes les opérations DDL prises en charge pour une exécution en ligne (option ONLINE). Les opérations qui ne prennent pas en charge l’exécution en ligne échouent et génèrent un avertissement.
+
+WHEN_SUPPORTED
+
+Cette valeur élève les opérations qui prennent en charge l’option ONLINE. Les opérations qui ne prennent pas en charge une exécution en ligne sont exécutées en mode hors connexion.
+
+> [!NOTE]
+> Vous pouvez remplacer le paramètre par défaut en envoyant une instruction avec l’option ONLINE spécifiée.
+
+ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+
+**S’applique à** : [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+
+Permet de sélectionner des options pour forcer le moteur à élever automatiquement les opérations prises en charge pour une exécution pouvant être reprise. La valeur par défaut est OFF, ce qui signifie que les opérations ne sont pas élevées pour une exécution pouvant être reprise, sauf si cela est spécifié dans l’instruction. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflète la valeur actuelle de ELEVATE_RESUMABLE. Ces options s’appliquent uniquement aux opérations prises en charge pour une exécution pouvant être reprise.
+
+FAIL_UNSUPPORTED
+
+Cette valeur élève toutes les opérations DDL prises en charge pour une exécution pouvant être reprise (option RESUMABLE). Les opérations qui ne prennent pas en charge l’exécution pouvant être reprise échouent et génèrent un avertissement.
+
+WHEN_SUPPORTED
+
+Cette valeur élève les opérations qui prennent en charge l’option RESUMABLE. Les opérations qui ne prennent pas en charge l’exécution pouvant être reprise sont exécutées en tant que telles.
+
+> [!NOTE]
+> Vous pouvez remplacer le paramètre par défaut en envoyant une instruction avec l’option RESUMABLE spécifiée.
 
 OPTIMIZE_FOR_AD_HOC_WORKLOADS **=** { ON | **OFF** }
 
@@ -176,41 +250,34 @@ Les statistiques d’exécution au niveau de l’instruction pour les modules T-
 
 Pour plus d’informations sur la supervision des performances des modules [!INCLUDE[tsql](../../includes/tsql-md.md)] compilés en mode natif, consultez [Surveillance des performances des procédures stockées compilées en mode natif](../../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md).
 
-ELEVATE_ONLINE = { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+ROW_MODE_MEMORY_GRANT_FEEDBACK **=** { **ON** | OFF}
 
-**S’applique à** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (fonctionnalité en préversion publique)
+**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
 
-Permet de sélectionner les options destinées à forcer le moteur à élever automatiquement les opérations prises en charge pour une exécution en ligne. La valeur par défaut est OFF, ce qui signifie que les opérations ne sont pas élevées pour une exécution en ligne, sauf si cela est spécifié dans l’instruction. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflète la valeur actuelle de ELEVATE_ONLINE. Ces options s’appliquent uniquement aux opérations prises en charge pour une exécution en ligne.
-
-FAIL_UNSUPPORTED
-
-Cette valeur élève toutes les opérations DDL prises en charge pour une exécution en ligne (option ONLINE). Les opérations qui ne prennent pas en charge l’exécution en ligne échouent et génèrent un avertissement.
-
-WHEN_SUPPORTED
-
-Cette valeur élève les opérations qui prennent en charge l’option ONLINE. Les opérations qui ne prennent pas en charge une exécution en ligne sont exécutées en mode hors connexion.
+Vous permet d’activer ou de désactiver la rétroaction d’allocation de mémoire en mode ligne dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. La rétroaction d’allocation de mémoire en mode ligne est une fonctionnalité qui fait partie du [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] (le mode ligne est pris en charge dans [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).
 
 > [!NOTE]
-> Vous pouvez remplacer le paramètre par défaut en envoyant une instruction avec l’option ONLINE spécifiée.
+> Pour le niveau de compatibilité de la base de données inférieur ou égal à 140, cette configuration étendue à la base de données n’a aucun effet.
 
-ELEVATE_RESUMABLE= { OFF | WHEN_SUPPORTED | FAIL_UNSUPPORTED }
+BATCH_MODE_ON_ROWSTORE **=** { **ON** | OFF}
 
-**S’applique à** : [!INCLUDE[ssSDS](../../includes/sssds-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (fonctionnalité d’évaluation publique)
+**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
 
-Permet de sélectionner des options pour forcer le moteur à élever automatiquement les opérations prises en charge pour une exécution pouvant être reprise. La valeur par défaut est OFF, ce qui signifie que les opérations ne sont pas élevées pour une exécution pouvant être reprise, sauf si cela est spécifié dans l’instruction. [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) reflète la valeur actuelle de ELEVATE_RESUMABLE. Ces options s’appliquent uniquement aux opérations prises en charge pour une exécution pouvant être reprise.
-
-FAIL_UNSUPPORTED
-
-Cette valeur élève toutes les opérations DDL prises en charge pour une exécution pouvant être reprise (option RESUMABLE). Les opérations qui ne prennent pas en charge l’exécution pouvant être reprise échouent et génèrent un avertissement.
-
-WHEN_SUPPORTED
-
-Cette valeur élève les opérations qui prennent en charge l’option RESUMABLE. Les opérations qui ne prennent pas en charge l’exécution pouvant être reprise sont exécutées en tant que telles.
+Vous permet d’activer ou de désactiver le mode batch sur rowstore dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. Le mode batch sur rowstore est une fonctionnalité qui fait partie de la famille de fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
 
 > [!NOTE]
-> Vous pouvez remplacer le paramètre par défaut en envoyant une instruction avec l’option RESUMABLE spécifiée.
+> Pour le niveau de compatibilité de la base de données inférieur ou égal à 140, cette configuration étendue à la base de données n’a aucun effet.
 
-GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
+DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
+
+**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
+
+Vous permet d’activer ou de désactiver la compilation différée de variables de table dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. La compilation différée de variables de table est une fonctionnalité qui fait partie de la famille de fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
+
+> [!NOTE]
+> Pour le niveau de compatibilité de la base de données inférieur ou égal à 140, cette configuration étendue à la base de données n’a aucun effet.
+
+GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **S’applique à** : [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (fonctionnalité en préversion publique)
 
@@ -219,47 +286,11 @@ Permet de définir la fonctionnalité de suppression automatique pour les [table
 - Avec les bases de données uniques/pools élastiques [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette option peut être définie dans les bases de données utilisateur individuelles du serveur SQL Database.
 - Dans l’instance managée [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], cette option est définie dans `TempDB`, et le paramètre des bases de données utilisateur individuelles n’a aucun effet.
 
-DISABLE_INTERLEAVED_EXECUTION_TVF = { ON | OFF }
+LIGHTWEIGHT_QUERY_PROFILING **=** { **ON** | OFF}
 
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 
 
-Vous permet d’activer ou de désactiver l’exécution entrelacée pour les fonctions table à instructions multiples dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de base de données 140 et au-delà. L’exécution entrelacée est une fonctionnalité qui fait partie du traitement de requêtes adaptatif dans [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Pour plus d’informations, consultez [Traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md)
-
-DISABLE_BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-
-**S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (à compter de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
-
-Vous permet d’activer ou de désactiver les jointures adaptatives dans l’étendue de la base de données ou de l’instruction tout en maintenant le niveau de compatibilité de base de données 140 et au-delà. Les jointures adaptatives sont une fonctionnalité qui fait partie du [Traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
-
-ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF}
-
-**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
-
-Vous permet d’activer ou de désactiver la rétroaction d’allocation de mémoire en mode ligne dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. La rétroaction d’allocation de mémoire en mode ligne est une fonctionnalité qui fait partie du [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans SQL Server 2017. (Le mode ligne est pris en charge dans SQL Server 2019 et Azure SQL Database.)
-
-BATCH_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
-
-**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-Vous permet d’activer ou de désactiver la rétroaction d’allocation de mémoire en mode batch dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 140. La rétroaction d’allocation de mémoire en mode batch est une fonctionnalité qui fait partie du [Traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans SQL Server 2017.
-
-BATCH_MODE_ADAPTIVE_JOINS = { ON | OFF }
-
-**S’applique à :** [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] 
-
-Vous permet d’activer ou de désactiver les jointures adaptatives en mode batch dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 140. Les jointures adaptatives en mode batch sont une fonctionnalité qui fait partie du [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md) introduit dans SQL Server 2017.
-
-BATCH_MODE_ON_ROWSTORE = { ON | OFF}
-
-**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
-
-Vous permet d’activer ou de désactiver le mode batch sur rowstore dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. Le mode batch sur rowstore est une fonctionnalité qui fait partie de la famille de fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
-
-DEFERRED_COMPILATION_TV = { ON | OFF}
-
-**S’applique à** : [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (fonctionnalité en préversion publique)
-
-Vous permet d’activer ou de désactiver la compilation différée de variables de table dans l’étendue de la base de données tout en maintenant le niveau de compatibilité de la base de données à au moins 150. La compilation différée de variables de table est une fonctionnalité qui fait partie de la famille de fonctionnalités de [traitement de requêtes intelligent](../../relational-databases/performance/intelligent-query-processing.md).
+Vous permet d’activer ou de désactiver l’[infrastructure de profilage de requête léger](../../relational-databases/performance/query-profiling-infrastructure.md). L’infrastructure de profilage de requête léger (LWP) fournit les données de performances de requête plus efficacement que les mécanismes de profilage standard et est activée par défaut.
 
 ## <a name="Permissions"></a> Permissions
 

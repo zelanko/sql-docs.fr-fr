@@ -1,24 +1,23 @@
 ---
 title: Rechercher des expressions clés dans les documents avec la recherche sémantique | Microsoft Docs
-ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
 - semantic search [SQL Server], key phrase queries
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: 5a6a3fd55b29c0366b0a8cdf6308c2d42f9dd8cc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 851ba91f833edb76227945a4b84fd5eed9f8ab51
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412566"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973928"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Rechercher des expressions clés dans les documents avec la recherche sémantique
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52412566"
 > [!IMPORTANT]  
 >  L'indexation sémantique et de texte intégral doit être activée pour les colonnes que vous ciblez.  
   
-###  <a name="HowToTopPhrases"></a> Exemple 1 : rechercher les expressions clés de niveau supérieur dans un document spécifique  
+###  <a name="HowToTopPhrases"></a> Exemple 1 : Rechercher les principales expressions clés dans un document spécifique  
  L’exemple suivant extrait les 10 expressions clés de niveau supérieur du document spécifié par la variable @DocumentId dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks. La variable @DocumentId représente une valeur de la colonne clé de l’index de recherche en texte intégral.  
   
 ```sql  
@@ -54,7 +53,7 @@ GO
   
  La fonction **SEMANTICKEYPHRASETABLE** récupère efficacement ces résultats en utilisant une recherche d'index au lieu d'une analyse de table.  
   
-###  <a name="HowToTopDocuments"></a> Example 2: Find the top documents that contain a specific key phrase  
+###  <a name="HowToTopDocuments"></a> Exemple 2 : Rechercher les principaux documents qui contiennent une expression clé spécifique  
  L’exemple suivant récupère les 25 premiers documents qui contiennent l’expression clé « bracket » dans la colonne Document de la table Production.Document de l’exemple de base de données AdventureWorks.  
   
 ```sql  

@@ -11,12 +11,12 @@ ms.assetid: 5270689a-46d4-4847-b41f-3bed1899e955
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 1f2b44f49f7fb439472028a220392723529f68b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e937a9fa9d3eba7c766192c83d69a514054f762a
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819787"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973018"
 ---
 # <a name="catalogvalidateproject-ssisdb-database"></a>catalog.validate_project (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ catalog.validate_project [ @folder_name = ] folder_name
     , [ @validate_type = ] validate_type  
     , [ @validation_id = ] validation_id OUTPUT  
  [  , [ @use32bitruntime = ] use32bitruntime ]  
- [  , [ @target_environment = ] target_environment ]  
+ [  , [ @environment_scope = ] environment_scope ]  
  [  , [ @reference_id = ] reference_id ]  
 ```  
   
@@ -43,7 +43,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Nom du projet. *project_name* est de type **nvarchar(128)**.  
   
  [ @validate_type = ] *validate_type*  
- Indique le type de validation à réaliser. Utilisez le caractère `F` pour effectuer une validation complète. *validate_type* est de type **char(1)**.  
+ Indique le type de validation à réaliser. Utilisez le caractère `F` pour effectuer une validation complète. Ce paramètre est facultatif, le caractère `F` sera utilisé par défaut. *validate_type* est de type **char(1)**.  
   
  [ @validation_id = ] *validation_id*  
  Retourne l'identificateur unique (ID) de la validation. *validation_id* est de type **bigint**.  
@@ -52,7 +52,7 @@ catalog.validate_project [ @folder_name = ] folder_name
  Indique si l'exécution 32 bits doit être utilisée pour exécuter le package sur un système d'exploitation 64 bits. Utilisez la valeur `1` pour exécuter le package avec l’exécution 32 bits quand un système d’exploitation 64 bits est exécuté. Utilisez la valeur `0` pour exécuter le package avec l'exécution 64 bits lorsqu'un système d'exploitation 64 bits est exécuté. Ce paramètre est facultatif. *use32bitruntime* est de type **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation. Ce paramètre est facultatif, le caractère `D` sera utilisé par défaut. *environment_scope* est de type **Char(1)**.  
+ Indique les références environnementales considérées par la validation. Lorsque la valeur est `A`, toutes les références environnementales associées au projet sont incluses dans la validation. Lorsque la valeur est `S`, seule une référence environnementale unique est incluse. Lorsque la valeur est `D`, aucune référence environnementale n'est incluse et chaque paramètre doit avoir une valeur par défaut littérale pour passer la validation. Ce paramètre est facultatif, le caractère `D` sera utilisé par défaut. *environment_scope* est de type **char(1)**.  
   
  [ @reference_id = ] *reference_id*  
  ID unique de la référence environnementale. Ce paramètre est obligatoire uniquement quand une référence environnementale unique est incluse dans la validation, quand *environment_scope* est `S`. *reference_id* est de type **bigint**.  
@@ -63,7 +63,7 @@ catalog.validate_project [ @folder_name = ] folder_name
 ## <a name="result-sets"></a>Jeux de résultats  
  La sortie des étapes de validation est retournée sous la forme de sections différentes du jeu de résultats.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ sur le projet et, si applicable, autorisations READ sur les environnements référencés  

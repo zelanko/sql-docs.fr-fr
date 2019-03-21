@@ -21,12 +21,12 @@ ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6cb5b9ecbcc187a059747e9d3121ac50611a0418
-ms.sourcegitcommit: 769b71f01052ec9b4fc5eb02d9da9a1a58118029
+ms.openlocfilehash: b92410945bd9d123b103272943a663b87b8adec8
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56319400"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973808"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Spécifications des capacités maximales pour SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "56319400"
 |Octets par clé d’index pour les tables optimisées en mémoire||2500 octets pour un index non cluster. Aucune limite pour un index de hachage, tant que toutes les clés d’index s’ajustent sur la ligne.|Sur une table optimisée en mémoire, un index non cluster ne peut pas avoir de colonnes clés dont la taille maximale déclarée dépasse 2500 octets. Peu importe que la taille des données réelles dans les colonnes clés soit inférieure aux tailles maximales déclarées.<br /><br /> Pour une clé d’index de hachage, il n’existe aucune limite de taille.<br /><br /> Pour les index sur les tables optimisées en mémoire, il n’existe pas de concept de colonnes incluses, puisque tous les index couvrent, par nature, toutes les colonnes.<br /><br /> Pour une table optimisée en mémoire, même si la taille de ligne est de 8060 octets, certaines colonnes de longueur variable peuvent être physiquement stockées en dehors de ces 8060 octets. Toutefois, les tailles maximales déclarés de toutes les colonnes clés pour tous les index sur une table, plus les éventuelles colonnes de longueur fixe supplémentaires dans la table, doivent tenir dans les 8060 octets.|  
 |Octets par clé étrangère||900||  
 |Octets par clé primaire||900||  
-|Octets par ligne||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge le stockage avec dépassement de ligne, qui permet d’envoyer hors ligne les colonnes de longueur variable. Seule une racine de 24 octets est stockée dans l'enregistrement principal des colonnes de longueur variable envoyées hors ligne ; par conséquent, la limite effective par ligne est supérieure dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d'informations, consultez la rubrique « Données de dépassement de ligne de plus de 8 Ko » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .|  
+|Octets par ligne||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend en charge le stockage avec dépassement de ligne, qui permet d’envoyer hors ligne les colonnes de longueur variable. Seule une racine de 24 octets est stockée dans l'enregistrement principal des colonnes de longueur variable envoyées hors ligne ; par conséquent, la limite effective par ligne est supérieure dans les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Prise en charge des lignes de grande taille](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support).|  
 |Octets par ligne dans les tables optimisées en mémoire||8,060|À compter de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] , les tables optimisées en mémoire prennent en charge le stockage hors ligne. Les colonnes de longueur variable sont envoyées hors ligne si la taille maximale de toutes les colonnes dans la table dépasse 8060 octets. Cette décision est prise au moment de la compilation. Seule une référence de huit octets est stockée dans la ligne pour les colonnes stockées hors ligne. Pour plus d’informations, consultez [Taille de la table et des lignes dans les tables optimisées en mémoire](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md).|  
 |Octets dans le texte source d'une procédure stockée||Taille de lot inférieure ou 250 Mo||  
 |Octets par colonne **varchar(max)**, **varbinary(max)**, **xml**, **text**ou **image**||2^31-1||  

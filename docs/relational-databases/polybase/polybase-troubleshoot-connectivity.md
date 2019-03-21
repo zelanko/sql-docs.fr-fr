@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.date: 09/24/2018
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
-ms.openlocfilehash: 26b11ac46da7239f2fef98ef838e2e7c6f775aef
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 980bbb179c92e95d0386e672ed0b62d7ac8cc968
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803154"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57976329"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Résoudre les problèmes de connectivité de PolyBase Kerberos
 
@@ -38,7 +38,7 @@ Vous devez tout d’abord avoir quelques notions élémentaires du protocole Ker
 1. Ressource sécurisée (HDFS, MR2, YARN, historique des travaux, etc.)
 1. Centre de distribution de clés (également appelé contrôleur de domaine dans Active Directory)
 
-Chaque ressource sécurisée de Hadoop est inscrite dans le  **centre de distribution de clés (KDC)** avec un nom de principal du service (SPN) **unique** lors de la configuration de Kerberos sur le cluster Hadoop. L’objectif est que le client obtienne un ticket d’utilisateur temporaire, appelé  **TGT (Ticket Granting Ticket)**, afin de demander un autre ticket temporaire, appelé  **ticket de service**, auprès du centre KDC, pour le nom de principal du service auquel il veut accéder.  
+Chaque ressource sécurisée de Hadoop est inscrite dans le **centre de distribution de clés (KDC)** avec un **nom de principal du service (SPN)** unique lors de la configuration de Kerberos sur le cluster Hadoop. L’objectif est que le client obtienne un ticket d’utilisateur temporaire, appelé **TGT (Ticket Granting Ticket)**, afin de demander un autre ticket temporaire, appelé **ticket de service**, auprès du centre KDC pour le nom de principal du service spécifique auquel il veut accéder.  
 
 Dans PolyBase, quand une authentification est demandée pour une ressource sécurisée par Kerberos, la négociation suivante, qui implique quatre allers-retours, se produit :
 
@@ -102,7 +102,7 @@ Comme l’outil s’exécute indépendamment de SQL Server, il n’a pas à êtr
 | *Name Node Port* | Port du nœud de nom. Fait référence à l’argument « LOCATION » dans votre instruction T-SQL CREATE EXTERNAL DATA SOURCE. Par exemple, 8020. |
 | *Service Principal* | Principal du service d’administration pour votre centre KDC. Correspond à l’argument « IDENTITY » dans votre instruction T-SQL `CREATE DATABASE SCOPED CREDENTIAL`.|
 | *Service Password* | Au lieu de taper votre mot de passe sur la console, stockez-le dans un fichier et indiquez le chemin du fichier ici. Le contenu du fichier doit correspondre à ce que vous utilisez comme argument « SECRET » dans votre instruction T-SQL `CREATE DATABASE SCOPED CREDENTIAL`. |
-| *Remote HDFS file path (facultatif) * | Chemin d’un fichier existant auquel accéder. S’il n’est pas spécifié, la racine « / » est utilisée. |
+| *Remote HDFS file path (facultatif) * | Chemin d’un fichier existant auquel accéder. S’il n’est pas spécifié, la racine « / » est utilisée. |
 
 ## <a name="example"></a> Exemple
 
@@ -210,11 +210,12 @@ Si l’outil a été exécuté et que les propriétés de fichier du chemin cibl
 
 ## <a name="debugging-tips"></a>Conseils de débogage
 
-### <a name="mit-kdc"></a>Centre KDC MIT  
+### <a name="mit-kdc"></a>Centre KDC MIT  
 
-Tous les noms de principal du service inscrits auprès du centre KDC, dont les administrateurs, peuvent être affichés en exécutant  **kadmin.local** > (connexion admin) > **listprincs**  sur l’hôte KDC ou tout client KDC configuré. Si Kerberos est correctement configuré sur le cluster Hadoop, il doit exister un nom de principal du service pour chacun des services disponibles dans le cluster (par exemple : `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.) Leurs fichiers keytab correspondants (substituts de mots de passe) peuvent être affichés sous  **/etc/security/keytabs**, par défaut. Ils sont chiffrés à l’aide de la clé privée KDC.  
+Tous les noms de principal du service inscrits auprès du centre KDC, dont les administrateurs, peuvent être affichés en exécutant **kadmin.local** > (connexion admin) > **listprincs** sur l’hôte KDC ou tout client KDC configuré. Si Kerberos est correctement configuré sur le cluster Hadoop, il doit exister un nom de principal du service pour chacun des services disponibles dans le cluster (par exemple : `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.) Leurs fichiers keytab correspondants (substituts de mots de passe) sont affichés par défaut sous **/etc/security/keytabs**. Ils sont chiffrés à l’aide de la clé privée KDC.  
 
-Vous pouvez également utiliser [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) pour vérifier les informations d’identification de l’administrateur localement sur le centre KDC. Voici un exemple d’utilisation : `kinit identity@MYREALM.COM`. Une invite à entrer un mot de passe indique que l’identité existe.  Les journaux du centre KDC sont disponibles dans  **/var/log/krb5kdc.log**, par défaut, ce qui inclut toutes les demandes de tickets, dont l’adresse IP du client qui a effectué la demande. Deux demandes doivent avoir été émises à partir de l’adresse IP de l’ordinateur SQL Server où l’outil a été exécuté : la première pour obtenir le ticket TGT auprès du serveur d’authentification comme  **AS\_REQ**, suivie d’une demande  **TGS\_REQ**  pour obtenir le ticket de service auprès du serveur d’accord de tickets.
+Vous pouvez également utiliser [`kinit`](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) pour vérifier les informations d’identification de l’administrateur localement sur le centre KDC. Voici un exemple d’utilisation : `kinit identity@MYREALM.COM`. Une invite à entrer un mot de passe indique que l’identité existe.  
+Les journaux du centre KDC sont disponibles dans **/var/log/krb5kdc.log**, par défaut, ce qui inclut toutes les demandes de tickets, dont l’adresse IP du client qui a effectué la demande. Deux demandes doivent avoir été émises à partir de l’adresse IP de l’ordinateur SQL Server où l’outil a été exécuté : la première pour obtenir le ticket TGT auprès du serveur d’authentification comme **AS\_REQ**, suivie d’une demande **TGS\_REQ** pour obtenir le ticket de service auprès du serveur d’accord de tickets.
 
 ```bash
  [root@MY-KDC log]# tail -2 /var/log/krb5kdc.log 
@@ -224,7 +225,7 @@ Vous pouvez également utiliser [`kinit`](https://web.mit.edu/kerberos/krb5-1.12
 
 ### <a name="active-directory"></a>Active Directory 
 
-Dans Active Directory, les noms de principal du service peuvent être affichés en accédant au Panneau de configuration > Utilisateurs et ordinateurs Active Directory > *MonDomaine* > *MonUnitéOrganisation*. Si Kerberos est correctement configuré sur le cluster Hadoop, il existe un nom de principal du service pour chacun des services disponibles (par exemple : `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
+Dans Active Directory, les noms de principal du service peuvent être affichés en accédant au Panneau de configuration > Utilisateurs et ordinateurs Active Directory > *MonDomaine* > *MonUnitéOrganisation*. Si Kerberos est correctement configuré sur le cluster Hadoop, il existe un nom de principal du service pour chacun des services disponibles (par exemple : `nn`, `dn`, `rm`, `yarn`, `spnego`, etc.)
 
 ### <a name="general-debugging-tips"></a>Conseils généraux relatifs au débogage
 

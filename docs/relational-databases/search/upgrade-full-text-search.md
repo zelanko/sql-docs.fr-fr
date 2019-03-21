@@ -1,10 +1,8 @@
 ---
 title: Mise à niveau de la fonction de recherche en texte intégral | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,16 +12,17 @@ helpviewer_keywords:
 - installing Full-Text Search
 - full-text search [SQL Server], upgrading
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c73ac14c951e1db5c7e7c96fc88f6d9cb1818fe
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d83049bccf49fda6b4ca8d0ea6f0578415374eb1
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665528"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974298"
 ---
 # <a name="upgrade-full-text-search"></a>Mise à niveau de la fonction de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "51665528"
  Lors de la mise à niveau d'une instance de serveur vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], l'interface utilisateur vous permet de choisir l'une des options de mise à niveau de texte intégral suivantes.  
   
 **Importer**  
- Les catalogues de texte intégral sont importés. En général, l'importation est considérablement plus rapide que lors d'une reconstruction (rebuild). Par exemple, lorsque vous utilisez un seul processeur, l'importation s'exécute approximativement 10 fois plus vite que lors de la reconstruction. Toutefois, un catalogue de texte intégral importé n'utilise pas les nouveaux analyseurs lexicaux installés avec la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour garantir la cohérence dans les résultats de la requête, les catalogues de texte intégral doivent être reconstruits.  
+ Les catalogues de texte intégral sont importés. En général, l'importation est considérablement plus rapide que lors d'une reconstruction (rebuild). Par exemple, lorsque vous utilisez un seul processeur, l'importation s'exécute approximativement 10 fois plus vite que lors de la reconstruction. Toutefois, un catalogue de texte intégral importé n'utilise pas les nouveaux analyseurs lexicaux installés avec la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour garantir la cohérence dans les résultats de la requête, les catalogues de texte intégral doivent être reconstruits.  
   
 > [!NOTE]  
 >  Le processus de reconstruction peut s'exécuter en mode multithread, et si plus de 10 processeurs sont disponibles, la reconstruction peut s'effectuer plus vite que l'importation si vous la laissez utiliser tous les processeurs.  
@@ -123,9 +122,9 @@ Lorsqu'une base de données est mise à niveau vers [!INCLUDE[ssCurrent](../../i
   
  **Pour modifier le comportement de mise à niveau de texte intégral sur une instance de serveur**  
   
--   [!INCLUDE[tsql](../../includes/tsql-md.md)] : Utiliser l’action **upgrade\_option** de [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Utilisez l’action **upgrade\_option** de [sp\_fulltext\_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** utilisez **l’option de mise à niveau de texte intégral** de la boîte de dialogue **Propriétés du serveur** . Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]   **:** Utilisez l’**Option de mise à niveau du catalogue de texte intégral** de la boîte de dialogue **Propriétés du serveur**. Pour plus d’informations, consultez [Gérer et surveiller la recherche en texte intégral pour une instance de serveur](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
 ##  <a name="Considerations_for_Restore"></a> Considérations relatives à la restauration d’un catalogue de texte intégral [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Une méthode de mise à niveau de données de texte intégral d'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est de restaurer une sauvegarde de la base de données complète vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

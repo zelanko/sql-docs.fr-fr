@@ -1,10 +1,8 @@
 ---
 title: Utiliser l’Assistant Indexation de texte intégral | Microsoft Docs
-ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 f1_keywords:
@@ -21,16 +19,17 @@ helpviewer_keywords:
 - Full-Text Indexing Wizard
 - full-text search [SQL Server], Full-Text Indexing Wizard
 ms.assetid: 3e9d9605-6525-4781-9168-fdaa06db3459
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fcbe86b8a0deb419854e3ec364317872507a20e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731757"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973848"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Utiliser l'Assistant Indexation de texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47731757"
 4. **Langue pour l’analyseur lexical.** Sélectionnez une langue dans la liste déroulante. Cette option sera utilisée pour identifier les analyseurs lexicaux appropriés pour l’index. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilise des analyseurs lexicaux pour identifier les limites des mots dans les données indexées en texte intégral.  
   
 5.  **Colonne de type.** Sélectionnez le nom de la colonne qui contient le type de document de la colonne indexée en texte intégral.  
-> **REMARQUE :** L’option  **Colonne de type** est activée uniquement quand la colonne nommée dans la colonne **Colonnes disponibles** est de type **varbinary(max)** ou **image**.  
+> **REMARQUE :** L’option **Colonne de type** est activée uniquement quand la colonne nommée dans la colonne **Colonnes disponibles** est de type **varbinary(max)** ou **image**.  
   
 6. **Sémantique statistique.** Sélectionnez s'il faut activer l'indexation sémantique pour la colonne sélectionnée. Pour plus d’informations, consultez [Recherche sémantique &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  
   
@@ -79,7 +78,7 @@ ms.locfileid: "47731757"
   
 9.  **Sélectionner un catalogue de recherche en texte intégral**  
 
-     **Sélectionner un catalogue :** Sélectionnez un catalogue de texte intégral dans la liste. Le catalogue par défaut pour la base de données devient l'élément sélectionné par défaut dans la liste. Si aucun catalogue n’est disponible, cette dernière est désactivée, et la case **Créer un nouveau catalogue** est cochée, mais désactivée.  
+     **Sélectionner un catalogue :** Sélectionnez un catalogue de texte intégral dans la liste. Le catalogue par défaut pour la base de données devient l'élément sélectionné par défaut dans la liste. Si aucun catalogue n’est disponible, cette dernière est désactivée, et la case **Créer un nouveau catalogue** est cochée, mais désactivée.  
   
   - ou -
   

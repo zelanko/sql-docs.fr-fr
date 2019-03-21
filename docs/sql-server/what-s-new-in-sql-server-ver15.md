@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8f7302384bbf264061c73b79a919855aa762994f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: a69835d1952a860bebe36aaf6793c548e09a5743
+ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579769"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974448"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -209,13 +209,15 @@ Prise en charge complète du codage de caractères UTF-8 courant en tant qu’en
 
 Par exemple,`LATIN1_GENERAL_100_CI_AS_SC` en `LATIN1_GENERAL_100_CI_AS_SC_UTF8`. UTF-8 est uniquement disponible pour les classements Windows qui prennent en charge les caractères supplémentaires, comme introduit dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. `NCHAR` et `NVARCHAR` autorisent uniquement l’encodage UTF-16 et restent inchangés.
 
-Cette fonctionnalité peut engendrer des économies de stockage importantes, selon le jeu de caractères utilisé. Par exemple, le fait de changer un type de données de colonne comportant des chaînes Latin de `NCHAR(10)` en `CHAR(10)` avec un classement compatible UTF-8 se traduit par une réduction de 50 % des besoins en stockage. En effet, `NCHAR(10)` nécessite 20 octets pour le stockage, tandis que `CHAR(10)` nécessite 10 octets pour la même chaîne Unicode.
+Cette fonctionnalité peut engendrer des économies de stockage importantes, selon le jeu de caractères utilisé. Par exemple, le fait de changer un type de données de colonne existant comportant des chaînes ASCII (Latin) de `NCHAR(10)` en `CHAR(10)` avec un classement prenant en charge UTF-8 se traduit par une réduction de 50 % des besoins en stockage. En effet, `NCHAR(10)` nécessite 20 octets pour le stockage, tandis que `CHAR(10)` nécessite 10 octets pour la même chaîne Unicode.
 
 Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md).
 
-Avec CTP 2.1, il est maintenant possible de sélectionner par défaut le classement UTF-8 à l’installation de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
+Avec **CTP 2.1**, il est maintenant possible de sélectionner le classement UTF-8 par défaut lors de à l’installation de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
-Avec CTP 2.2, il est maintenant possible d’utiliser l’encodage UTF-8 avec la réplication SQL Server.
+Avec **CTP 2.2**, il est maintenant possible d’utiliser l’encodage de caractères UTF-8 avec la réplication SQL Server.
+
+Avec **CTP 2.3**, il est maintenant possible d’utiliser l’encodage de caractères UTF-8 avec le classement BIN2 (UTF8_BIN2).
 
 ### <a name="resumable-online-index-create-ctp-20"></a>Création d’index en ligne pouvant être reprise (CTP 2.0)
 
@@ -383,6 +385,8 @@ Pour des informations détaillées, consultez [Nouveautés de SQL Server Machine
 L’infrastructure du profilage de requête léger fournit les données de performances de requête plus efficacement que les mécanismes de profilage standard. Le profilage léger est maintenant activé par défaut. Il a été introduit dans [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SP1. Le profilage léger offre un mécanisme de collecte des statistiques d’exécution des requêtes avec une surcharge attendue de 2 % pour l’UC, par rapport à une surcharge pouvant atteindre 75 % pour l’UC dans le cadre du mécanisme de profilage de requête standard. Sur les versions précédentes, il était désactivé (OFF) par défaut. Les administrateurs de base de données peuvent l’activer avec [l’indicateur de trace 7412](../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). 
 
 Pour plus d’informations sur le profilage léger, consultez [Infrastructure du profilage de requête](../relational-databases/performance/query-profiling-infrastructure.md).
+
+Avec **CTP 2.3**, une nouvelle configuration étendue à la base de données `LIGHTWEIGHT_QUERY_PROFILING` est introduite pour activer ou désactiver l’infrastructure de profilage de requête légère.
 
 ### <a id="polybase"></a>Nouveaux connecteurs PolyBase
 

@@ -1,23 +1,22 @@
 ---
 title: Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b5251c082e2a31493110fe63f2bfb044c6a3a2f2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5714b90b0d3222c947afc3988fa88e6d478691ef
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674999"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974398"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -215,8 +214,8 @@ ms.locfileid: "51674999"
 |---------------|------------------|-------------|  
 |CLSID précédent|7EFD3C7E-9E4B-4a93-9503-DECD74C0AC6D|483B0283-25DB-4c92-9C15-A65925CB95CE|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actuel|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|Aucun|  
-|Nom de fichier actuel|MSWB7.dll|Aucun|  
+|CLSID actuel|04b37e30-c9a9-4a7d-8f20-792fc87ddf71|None|  
+|Nom de fichier actuel|MSWB7.dll|None|  
   
  **Allemand (deu), LCID 1031**  
   
@@ -225,7 +224,7 @@ ms.locfileid: "51674999"
 |CLSID précédent|45EACA36-DBE9-4e4a-A26D-5C201902346D|65170AE4-0AD2-4fa5-B3BA-7CD73E2DA825|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actuel|dfa00c33-bf19-482e-a791-3c785b0149b4|8a474d89-6e2f-419c-8dd5-9b50edc8c787|  
-|Nom de fichier actuel|MsWb7.dll|MSWB7.dll|  
+|Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
   
  **Japonais (jpn), LCID 1041**  
   
@@ -233,8 +232,8 @@ ms.locfileid: "51674999"
 |---------------|------------------|-------------|  
 |CLSID précédent|E1E8F15E-8BEC-45df-83BF-50FF84D0CAB5|3D5DF14F-649F-4cbc-853D-F18FEDE9CF5D|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
-|CLSID actuel|04096682-6ece-4e9e-90c1-52d81f0422ed|Aucun|  
-|Nom de fichier actuel|MsWb70011.dll|Aucun|  
+|CLSID actuel|04096682-6ece-4e9e-90c1-52d81f0422ed|None|  
+|Nom de fichier actuel|MsWb70011.dll|None|  
   
  **Néerlandais (nld), LCID 1043**  
   
@@ -243,7 +242,7 @@ ms.locfileid: "51674999"
 |CLSID précédent|2C9F6BEB-C5B0-42b6-A5EE-84C24DC0D8EF|F7A465EE-13FB-409a-B878-195B420433AF|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actuel|69483c30-a9af-4552-8f84-a0796ad5285b|CF923CB5-1187-43ab-B053-3E44BED65FFA|  
-|Nom de fichier actuel|MsWb7.dll|MSWB7.dll|  
+|Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
   
  **Russe (rus), LCID 1049**  
   
@@ -252,7 +251,7 @@ ms.locfileid: "51674999"
 |CLSID précédent|2CB6CDA4-1C14-4392-A8EC-81EEF1F2E079|E06A0DDD-E81A-4e93-8A8D-F386C3A1B670|  
 |Nom de fichier précédent|NaturalLanguage6.dll|NaturalLanguage6.dll|  
 |CLSID actuel|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
-|Nom de fichier actuel|MsWb7.dll|MSWB7.dll|  
+|Nom de fichier actuel|MSWB7.dll|MSWB7.dll|  
   
 ##  <a name="newnew"></a> Langues pour lesquelles ni le nom de fichier précédent ni le nom de fichier actuel n'est NaturalLanguage6.dll  
  Pour les langues dans le tableau suivant, les noms de fichier des analyseurs lexicaux et des générateurs de formes dérivées précédents sont différents des noms de fichier des nouvelles versions. Ni le nom de fichier précédent ni le nom de fichier actuel n'est NaturalLanguage6.dll. Vous n'êtes pas obligé de remplacer des fichiers, et ce car le programme d'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] copie la version actuelle et la version précédente des composants dans le dossier Binn. Toutefois, vous devez modifier un ensemble d'entrées de Registre pour spécifier la version précédente ou la version actuelle des composants.  
@@ -349,8 +348,8 @@ ms.locfileid: "51674999"
 |---------------|------------------|-------------|  
 |CLSID précédent|CCA22CF4-59FE-11D1-BBFF-00C04FB97FDA|CEDC01C7-59FE-11D1-BBFF-00C04FB97FDA|  
 |Nom de fichier précédent|Thawbrkr.dll|Thawbrkr.dll|  
-|CLSID actuel|F70C0935-6E9F-4ef1-9F06-7876536DB900|Aucun|  
-|Nom de fichier actuel|MsWb7001e.dll|Aucun|  
+|CLSID actuel|F70C0935-6E9F-4ef1-9F06-7876536DB900|None|  
+|Nom de fichier actuel|MsWb7001e.dll|None|  
   
  **Chinois traditionnel (zh-hk), LCID 3076**  
   

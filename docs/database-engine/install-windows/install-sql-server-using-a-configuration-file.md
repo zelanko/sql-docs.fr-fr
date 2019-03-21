@@ -1,6 +1,5 @@
 ---
 title: Installer SQL Server à l’aide d’un fichier de configuration | Microsoft Docs
-ms.custom: ''
 ms.date: 09/07/2017
 ms.prod: sql
 ms.reviewer: ''
@@ -11,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 1c52536b52fa63b61b24247f9df3854b712d86c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c5127fd5aec582db4f8e574f29cab5cec3809252
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672257"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58072210"
 ---
 # <a name="install-sql-server-using-a-configuration-file"></a>Installer SQL Server à l’aide d’un fichier de configuration
 
@@ -24,9 +23,9 @@ ms.locfileid: "47672257"
  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation permet de générer un fichier de configuration basé sur les entrées système par défaut et celles effectuées au moment de l’exécution. Vous pouvez utiliser le fichier de configuration pour déployer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la totalité de l'entreprise avec la même configuration. Vous pouvez également standardiser les installations manuelles dans l'ensemble de l'entreprise, en créant un fichier de commandes qui lance Setup.exe. 
  
-Cet article a été spécifiquement mis à jour pour SQL Server 2016 et SQL Server 2017. Si vous utilisez une version antérieure de SQL Server, consultez [Installer SQL Server 2014 à l’aide d’un fichier de configuration](install-sql-server-2016-using-a-configuration-file.md).
+Cet article est conservé pour SQL Server 2016 et les versions ultérieures. Si vous utilisez une version antérieure de SQL Server, consultez [Installer SQL Server 2014 à l’aide d’un fichier de configuration](/../../2014/database-engine/install-windows/install-sql-server-using-a-configuration-file.md).
  
-Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
+Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
   
 -  Le fichier de configuration remplace les valeurs par défaut d'un package.  
   

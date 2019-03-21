@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 49f84b9e41116dd235f219a0487b48770ef4f81f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572842"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974348"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nom de classement Windows (Transact-SQL)
 
@@ -42,8 +42,9 @@ Spécifie le nom de classement Windows dans la clause COLLATE dans [!INCLUDE[ssN
 CollationDesignator_<ComparisonStyle>
 
 <ComparisonStyle> :: =
-{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ]
+{ CaseSensitivity_AccentSensitivity [ _KanatypeSensitive ] [ _WidthSensitive ] [ _VariationSelectorSensitive ] 
 }
+| { _UTF8 }
 | { _BIN | _BIN2 }
 ```
 
@@ -72,9 +73,14 @@ Exemples :
 **Omitted** ne tient pas compte des largeurs, contrairement à **WS**.
 
 *VariationSelectorSensitivity*  
-**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+**S’applique à** : À compter de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
 **Omitted** spécifie le non-respect du sélecteur de variation, **VSS** spécifie le respect du sélecteur de variation.
+
+**UTF8**  
+**S’applique à** : À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+
+Spécifie l’encodage UTF-8 à utiliser pour les types de données éligibles. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Indique l'ordre de tri binaire et assurant la compatibilité descendante à utiliser.
@@ -83,7 +89,6 @@ Indique l'ordre de tri binaire et assurant la compatibilité descendante à util
 Indique l'ordre de tri binaire utilisant la sémantique de comparaison des points de code.
 
 ## <a name="remarks"></a>Notes 
-
 Selon la version du classement, certains points de code peuvent ne pas avoir de pondérations de tri et/ou de mappages majuscules/minuscules définis. Par exemple, comparez la sortie de la fonction `LOWER` quand elle reçoit le même caractère, mais dans différentes versions du même classement :
 
 ```sql

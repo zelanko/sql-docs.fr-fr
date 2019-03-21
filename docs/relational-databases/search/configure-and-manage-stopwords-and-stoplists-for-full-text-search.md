@@ -1,10 +1,8 @@
 ---
 title: Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral | Microsoft Docs
-ms.custom: ''
 ms.date: 02/02/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,16 +13,17 @@ helpviewer_keywords:
 - full-text search [SQL Server], stopwords
 - stopwords [full-text search]
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 328f313630286f3ef2a67fc7c27455e411d3d294
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 717eee6067ae024465b68fd2e4a0d8a174e77d10
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658908"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973699"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ Utilisez [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](../../t-sql/statements
   
 5.  Dans la boîte de dialogue [Propriétés de la liste de mots vides de texte intégral](https://msdn.microsoft.com/library/2e907f5b-0cf9-484a-afcf-a4e7f1e2f87f) :  
   
-    1.  Dans la zone de liste **Action** , sélectionnez l’une des actions suivantes : **Ajouter un mot vide**, **Supprimer le mot vide**, **Supprimer tous les mots vides**ou **Effacer la liste de mots vides**.  
+    1.  Dans la zone de liste **Action**, sélectionnez l’une des actions suivantes : **Ajouter un mot vide**, **Supprimer le mot vide**, **Supprimer tous les mots vides** ou **Effacer la liste de mots vides**.  
   
     2.  Si la zone de texte **Mot vide** est activée pour l’action sélectionnée, entrez un mot vide unique. Ce nouveau mot vide doit être unique ; autrement dit, il ne doit pas déjà figurer dans la liste de mots vides correspondant à la langue sélectionnée.  
   

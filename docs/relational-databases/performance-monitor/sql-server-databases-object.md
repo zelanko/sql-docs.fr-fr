@@ -16,12 +16,12 @@ ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 668fe6a825be365aa605febaaea7aafdd71ddf7d
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997571"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57973428"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, objet Databases
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "53997571"
 |**Taille du journal actif total du pool du journal**|Journal actif total actuel stocké dans le gestionnaire de mémoire tampon du cache partagé, en octets.|
 |**Taille totale du pool partagé du pool du journal**|Utilisation actuelle totale de la mémoire du gestionnaire de mémoire tampon du cache partagé, en octets.|
 |**Compactages de journal**|Nombre total de compactages de journal pour cette base de données.|  
-|**Troncatures de journal**|Nombre de fois où le journal des transactions a été réduit.|  
+|**Troncatures de journal**|Nombre de fois où le journal des transactions a été tronqué (en mode de récupération simple).|  
 |**Pourcentage utilisé du journal**|Pourcentage de l'espace en cours d'utilisation dans le journal.|  
 |**Transactions de réplication en attente**|Nombre de transactions dans le journal des transactions de la base de données de publication, marquées pour la réplication, mais non encore remises à la base de données de distribution.|  
 |**Répl. Trans. Fréquence**|Nombre de transactions extraites par seconde du journal des transactions de la base de données de publication et remises à la base de données de distribution.|  

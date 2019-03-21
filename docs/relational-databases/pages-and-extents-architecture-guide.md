@@ -1,7 +1,7 @@
 ---
 title: Guide d’architecture des pages et des étendues | Microsoft Docs
 ms.custom: ''
-ms.date: 09/23/2018
+ms.date: 03/12/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f5dcb8899b64a7dc21367b5deda5aa6bd473a65
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748481"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974368"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guide d’architecture des pages et des étendues
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,6 +64,18 @@ Les lignes ne peuvent pas couvrir plusieurs pages, mais des parties d'une ligne 
 Cette restriction est assouplie pour les tables qui contiennent des colonnes varchar, nvarchar, varbinary ou sql_variant. Lorsque la taille totale de ligne de toutes les colonnes de longueur fixe et variable d'une table dépasse la limite des 8 060 octets, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] déplace de manière dynamique une ou plusieurs colonnes de longueur variable dans les pages de l'unité d'allocation ROW_OVERFLOW_DATA, en commençant par la colonne dont la largeur est la plus grande. 
 
 Cette opération est réalisée chaque fois qu'une opération d'insertion ou de mise à jour augmente la taille totale de la ligne au-delà de la limite de 8 060 octets. Lorsqu'une colonne est déplacée dans une page de l'unité d'allocation ROW_OVERFLOW_DATA, un pointeur de 24 octets est conservé sur la page d'origine dans l'unité d'allocation IN_ROW_DATA. Si une opération ultérieure réduit la taille de la ligne, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] redéplace de manière dynamique les colonnes dans la page de données d'origine. 
+
+##### <a name="row-overflow-considerations"></a>Observations relatives au dépassement de ligne 
+
+Quand vous combinez des colonnes de type varchar, nvarchar, varbinary, sql_variant ou CLR défini par l’utilisateur qui dépassent 8 060 octets par ligne, tenez compte des points suivants : 
+-  Les enregistrements volumineux sont automatiquement déplacés vers une autre page dès lors que les enregistrements s'allongent suite à une opération de mise à jour. Les opérations de mise à jour qui raccourcissent les enregistrements peuvent provoquer le rapatriement d'enregistrements vers la page initiale dans l'unité d'allocation IN_ROW_DATA. L’interrogation et d’autres opérations de sélection, telles que les tris ou les jointures portant sur des enregistrements volumineux qui contiennent des données de dépassement de ligne, augmentent le temps de traitement car ces enregistrements sont traités de façon synchrone, et non de manière asynchrone.   
+   Par conséquent, quand vous concevez une table comportant plusieurs colonnes de type varchar, nvarchar, varbinary, sql_variant ou CLR défini par l’utilisateur, évaluez le pourcentage de lignes susceptibles de dépasser et la fréquence à laquelle ces données de dépassement sont susceptibles d’être interrogées. S'il est probable qu'il y ait de fréquentes requêtes sur de nombreuses lignes de données de dépassement de ligne, pensez à normaliser la table de manière à ce que certaines colonnes soient déplacées vers une autre table. Celle-ci peut ensuite être interrogée lors d'une opération JOIN asynchrone. 
+-  La longueur des différentes colonnes ne doit pas dépasser la limite de 8 000 octets par colonne de type varchar, nvarchar, varbinary, sql_variant et CLR défini par l’utilisateur. Seule la combinaison de leurs longueurs peut dépasser la limite de 8 060 octets par ligne d'une table.
+-  La somme des longueurs des colonnes d’autres types de données, notamment char et nchar, ne doit pas dépasser la limite de 8 060 octets par ligne. En outre, les données d'objet volumineux ne sont pas soumises à la limite de 8 060 octets par ligne. 
+-  La clé d’un index cluster ne peut pas contenir de colonnes varchar qui possèdent des données dans l’unité d’allocation ROW_OVERFLOW_DATA. Si un index cluster est créé sur une colonne varchar et que les données existantes se trouvent dans l’unité d’allocation IN_ROW_DATA, les actions d’insertion ou de mise à jour réalisées ultérieurement sur la colonne et susceptibles d’envoyer les données hors ligne sont vouées à l’échec. Pour plus d’informations sur les unités d’allocation, consultez Organisation des tables et des index.
+-  Vous pouvez inclure des colonnes qui contiennent des données de dépassement de ligne en tant que colonnes clés ou non clés d'un index non-cluster.
+-  La limite de taille d'enregistrement pour les tables qui utilisent des colonnes éparses est de 8 018 octets. Quand les données converties plus les données de l’enregistrement existant dépassent 8 018 octets, [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md) est retourné. Quand des colonnes sont converties entre les types éparse et non éparse, le moteur de base de données garde une copie des données de l’enregistrement actif. Cela double temporairement le stockage requis pour l'enregistrement.
+-  Pour obtenir des informations sur les tables ou les index pouvant contenir des données de dépassement de ligne, utilisez la fonction de gestion dynamique [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md).
 
 ### <a name="extents"></a>Étendues 
 
@@ -177,4 +189,6 @@ L'intervalle entre les pages DCM et les pages BCM est le même que l'intervalle 
 
 ## <a name="see-also"></a> Voir aussi
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[Segments &#40;tables sans index cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[Segments &#40;tables sans index cluster&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[Lecture de pages](../relational-databases/reading-pages.md)   
+[Écriture de pages](../relational-databases/writing-pages.md)   

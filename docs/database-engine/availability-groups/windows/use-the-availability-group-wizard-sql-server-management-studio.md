@@ -17,12 +17,12 @@ ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 05588d322703daa3d5f9e5f1d78efdd12b322853
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 9274cd7423df9dea1dad8febee2a49871c24f296
+ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603099"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57974308"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Groupe de disponibilité (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,12 +92,12 @@ Dans la plupart des cas, vous pouvez utiliser l'Assistant Nouveau groupe de disp
   
      Si la base de données contient une clé principale de base de données, entrez le mot de passe de la clé principale de base de données dans la colonne **Mot de passe** .  
   
-7.  Sur la page **Spécifier les réplicas** , spécifiez et configurez un ou plusieurs réplicas pour le nouveau groupe de disponibilité. Cette page contient quatre onglets. Le tableau suivant présente ces onglets. Pour plus d’informations, consultez la rubrique [Page Spécifier les réplicas &#40;Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
+7.  Sur la page **Spécifier les réplicas** , spécifiez et configurez un ou plusieurs réplicas pour le nouveau groupe de disponibilité. Cette page contient quatre onglets. Le tableau suivant présente ces onglets. Pour plus d’informations, consultez la rubrique [Page Spécifier les réplicas &#40;Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica&#41;](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Onglet|Brève description|  
     |---------|-----------------------|  
     |**Réplicas**|Cet onglet vous permet de spécifier chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergera un réplica secondaire. Notez que l'instance de serveur à laquelle vous êtes actuellement connecté doit héberger le réplica principal.|  
-    |**Points de terminaison**|Utilisez cet onglet pour vérifier tous les points de terminaison de mise en miroir de bases de données existants et également, si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, pour créer le point de terminaison automatiquement.<br /><br /> Remarque : si une instance de serveur s’exécute sous un compte d’utilisateur qui n’appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l’Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
+    |**Points de terminaison**|Utilisez cet onglet pour vérifier tous les points de terminaison de mise en miroir de bases de données existants et également, si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, pour créer le point de terminaison automatiquement.<br /><br /> Remarque : Si une instance de serveur s'exécute sous un compte d'utilisateur qui n'appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l'Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#Prerequisites), plus haut dans cette rubrique.|  
     |**Préférences de sauvegarde**|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, ainsi que les priorités de sauvegarde pour les différents réplicas de disponibilité.|  
     |**Port d'écoute**|Utilisez cet onglet pour créer un écouteur de groupe de disponibilité. Par défaut, l'assistant ne crée pas d'écouteur.|  
   
@@ -183,15 +183,15 @@ Dans la plupart des cas, vous pouvez utiliser l'Assistant Nouveau groupe de disp
   
      [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
   
-     [Blogs de l’équipe de SQL Server Always On : Blog officiel de l’équipe de SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+     [Blogs de l’équipe SQL Server Always On : Blog officiel de l’équipe SQL Server Always On](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
      [Blogs des ingénieurs du Service clientèle et du Support technique de SQL Server](https://blogs.msdn.com/b/psssql/)  
   
 -   **Vidéos :**  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution (Présentation de la solution haute disponibilité de nouvelle génération)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server, nom de code « Denali », série Always On, Partie 1 : Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (vidéo de présentation de la solution haute disponibilité de la génération suivante)  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using Always On (Génération d’une solution haute disponibilité critique à l’aide d’Always On)](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server, nom de code « Denali », série Always On, Partie 2 : Génération d’une solution haute disponibilité critique à l’aide d’AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Livres blancs :**  
   
@@ -199,7 +199,7 @@ Dans la plupart des cas, vous pouvez utiliser l'Assistant Nouveau groupe de disp
   
      [Livres blancs de Microsoft pour SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Livres blancs de l'équipe de consultants clients de SQL Server](https://sqlcat.com/)  
+     [Livres blancs de l'équipe de consultants clients de SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="alternate-ways-to-create-availability-groups"></a>Autres méthodes de création de groupes de disponibilité
 
