@@ -9,12 +9,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f45817510cb63937544fa4f0f7af5bb42a0c883
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
+ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018465"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58222023"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Comment utiliser VS Code pour déployer des applications sur les clusters de données volumineuses de SQL Server
 
@@ -105,7 +105,7 @@ Vous pouvez déployer instantanément de cette application à travers l’object
 
 ![Déployer le bouton de l’application](media/vs-extension/deploy_app_lightning.png)
 
-![Déployer l’application Codelens](media/vs-extension/deploy_app_codelens.png)
+![Déployer l’application CodeLens](media/vs-extension/deploy_app_codelens.png)
 
 Vous serez averti lorsque l’application est prête pour la consommation en fonction de l’état de l’application dans la barre latérale :
 
@@ -127,9 +127,11 @@ Vous pouvez afficher toutes les applications que vous avez déployé dans la bar
   - swagger
   - détails
 
-Si vous cliquez sur `Links`, vous verrez que vous pouvez accéder à la `swagger.json` de votre application déployée, donc qui écrire vos propres clients qui appellent votre application :
+Si vous cliquez sur `Links`, vous verrez que vous pouvez accéder à la `swagger.json` de votre application déployée, afin que vous puissiez écrire vos propres clients qui appellent votre application :
 
-![Swagger](media/vs-extension/swagger.png)
+![swagger](media/vs-extension/swagger.png)
+
+Consultez [consommer des applications sur des clusters de données volumineuses](big-data-cluster-consume-apps.md) pour plus d’informations.
 
 ### <a name="app-run"></a>Exécution de l’application
 
@@ -173,7 +175,7 @@ Pour supprimer une application, cliquez simplement sur la Corbeille peut bouton 
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous pouvez également faire référence aux exemples supplémentaires au [exemples de déploiement d’applications](https://aka.ms/sql-app-deploy) à essayer avec l’extension.
+Découvrez comment intégrer des applications déployées sur SQL Server clusters de données volumineuses dans vos propres applications à [consommer des applications sur des clusters de données volumineuses](big-data-cluster-consume-apps.md) pour plus d’informations. Vous pouvez également faire référence aux exemples supplémentaires au [exemples de déploiement d’applications](https://aka.ms/sql-app-deploy) à essayer avec l’extension.
 
 Pour plus d’informations sur les clusters de données volumineuses de SQL Server, consultez [que sont les clusters de données volumineuses de SQL Server 2019 ?](big-data-cluster-overview.md).
 
