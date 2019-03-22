@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 3ebebd290788511682098f2300d41dc0e9908517
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: bc55e90ad8aced555858008bc77715299a064b2a
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58222226"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342838"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Utiliser une application déployée sur un cluster de données volumineux de SQL Server à l’aide d’un service web RESTful
 
@@ -67,8 +67,8 @@ mssqlctl app describe --name addpy --version v1
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30777/api/app/addpy/v1",
+    "swagger": "https://10.1.1.3:30777/api/app/addpy/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -86,7 +86,7 @@ Notez l’adresse IP (`10.1.1.3` dans cet exemple) et le numéro de port (`30777
 
 ## <a name="generate-a-jwt-access-token"></a>Générer un jeton d’accès JWT
 
-Pour accéder au service web RESTful pour l’application que vous avez déployé, ouvrez l’URL suivante dans votre navigateur : `https://[IP]:[PORT]/api/docs/swagger.json` à l’aide de l’adresse IP et le port que vous avez récupéré en cours d’exécution le `describe` commande ci-dessus. Vous devrez vous connecter avec les mêmes informations d’identification que vous avez utilisé pour `mssqlctl login`.
+Pour accéder au service web RESTful pour l’application, vous avez déployé vous tout d’abord pour générer un jeton d’accès JWT. Ouvrez l’URL suivante dans votre navigateur : `https://[IP]:[PORT]/api/docs/swagger.json` à l’aide de l’adresse IP et le port que vous avez récupéré en cours d’exécution le `describe` commande ci-dessus. Vous devrez vous connecter avec les mêmes informations d’identification que vous avez utilisé pour `mssqlctl login`.
 
 Collez le contenu de la `swagger.json` dans le [Swagger Editor](https://editor.swagger.io) de comprendre quelles méthodes sont disponibles :
 
@@ -101,9 +101,9 @@ Le résultat de cette demande vous donnera un JWT `access_token`, que vous devez
 ## <a name="execute-the-app-using-the-restful-web-service"></a>Exécutez l’application à l’aide du service web RESTful
 
 > [!NOTE]
-> Si vous le souhaitez, vous pouvez ouvrir l’URL pour le `swagger` qui a été retourné lors de l’exécution `mssqlctl app describe --name addpy --version [version]` dans votre navigateur. Vous devrez vous connecter avec les mêmes informations d’identification que vous avez utilisé pour `mssqlctl login`. Le contenu de la `swagger.json` vous pouvez coller dans [Swagger Editor](https://editor.swagger.io). Vous verrez que le service web expose le `run` (méthode).
+> Si vous le souhaitez, vous pouvez ouvrir l’URL pour le `swagger` qui a été retourné lors de l’exécution `mssqlctl app describe --name [appname] --version [version]` dans votre navigateur, qui doit être similaire à `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Vous devrez vous connecter avec les mêmes informations d’identification que vous avez utilisé pour `mssqlctl login`. Le contenu de la `swagger.json` vous pouvez coller dans [Swagger Editor](https://editor.swagger.io). Vous verrez que le service web expose le `run` (méthode).
 
-Vous pouvez utiliser votre outil préféré pour appeler le `run` (méthode) (`https://[IP]:[PORT]/api/app/addpy/[version]/run`), en passant les paramètres dans le corps de votre demande POST en tant que json. Dans cet exemple, nous utiliserons [Postman](https://www.getpostman.com/). Avant d’effectuer l’appel, vous devez définir le `Authorization` à `Bearer Token` et collez dans le jeton que vous avez récupéré précédemment. Ceci définit un en-tête de votre demande. Consultez la capture d'écran ci-dessous.
+Vous pouvez utiliser votre outil préféré pour appeler le `run` (méthode) (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`), en passant les paramètres dans le corps de votre demande POST en tant que json. Dans cet exemple, nous utiliserons [Postman](https://www.getpostman.com/). Avant d’effectuer l’appel, vous devez définir le `Authorization` à `Bearer Token` et collez dans le jeton que vous avez récupéré précédemment. Ceci définit un en-tête de votre demande. Consultez la capture d'écran ci-dessous.
 
 ![Postman exécuter en-têtes](media/big-data-cluster-consume-apps/postman_run_1.png)
 
