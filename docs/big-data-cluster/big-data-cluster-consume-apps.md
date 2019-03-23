@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.reviewer: rothja
-ms.openlocfilehash: 40ce93e9232d0492bd693e7920b62dc9805aa7ac
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
-ms.translationtype: HT
+ms.openlocfilehash: a9ef02cae7899a1deb5ce6d84b10dac2297b9d2f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356402"
+ms.locfileid: "58389957"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Utiliser une application déployée sur un cluster de données volumineux de SQL Server à l’aide d’un service web RESTful
 
@@ -101,9 +101,9 @@ Le résultat de cette demande vous donnera un JWT `access_token`, que vous devez
 ## <a name="execute-the-app-using-the-restful-web-service"></a>Exécutez l’application à l’aide du service web RESTful
 
 > [!NOTE]
-> Si vous le souhaitez, vous pouvez ouvrir l’URL pour le `swagger` qui a été retourné lors de l’exécution `mssqlctl app describe --name [appname] --version [version]` dans votre navigateur, qui doit être similaire à `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Vous devrez vous connecter avec les mêmes informations d’identification que vous avez utilisé pour `mssqlctl login`. Le contenu de la `swagger.json` vous pouvez coller dans [Swagger Editor](https://editor.swagger.io). Vous verrez que le service web expose le `run` (méthode).
+> Si vous le souhaitez, vous pouvez ouvrir l’URL pour le `swagger` qui a été retourné lors de l’exécution `mssqlctl app describe --name [appname] --version [version]` dans votre navigateur, qui doit être similaire à `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Vous devrez vous connecter avec les mêmes informations d’identification que vous avez utilisé pour `mssqlctl login`. Le contenu de la `swagger.json` vous pouvez coller dans [Swagger Editor](https://editor.swagger.io). Vous verrez que le service web expose le `run` (méthode). Notez également l’URL de Base affichée en haut.
 
-Vous pouvez utiliser votre outil préféré pour appeler le `run` (méthode) (`https://[IP]:[PORT]/api/app/[appname]/[version]/run`), en passant les paramètres dans le corps de votre demande POST en tant que json. Dans cet exemple, nous utiliserons [Postman](https://www.getpostman.com/). Avant d’effectuer l’appel, vous devez définir le `Authorization` à `Bearer Token` et collez dans le jeton que vous avez récupéré précédemment. Ceci définit un en-tête de votre demande. Consultez la capture d'écran ci-dessous.
+Vous pouvez utiliser votre outil préféré pour appeler le `run` (méthode) (`https://[IP]:30778/api/app/[appname]/[version]/run`), en passant les paramètres dans le corps de votre demande POST en tant que json. Dans cet exemple, nous utiliserons [Postman](https://www.getpostman.com/). Avant d’effectuer l’appel, vous devez définir le `Authorization` à `Bearer Token` et collez dans le jeton que vous avez récupéré précédemment. Ceci définit un en-tête de votre demande. Consultez la capture d'écran ci-dessous.
 
 ![Postman exécuter en-têtes](media/big-data-cluster-consume-apps/postman_run_1.png)
 

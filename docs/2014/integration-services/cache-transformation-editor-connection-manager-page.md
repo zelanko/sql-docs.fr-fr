@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cachetranscon.f1
 ms.assetid: cec4f3d8-a767-41cb-af67-166d5cdde783
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 91c6b0b4e81f9535ad3aa8313dd9202da388b172
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7e023624402d965aed6629d42ef97204413432e5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183241"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392747"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Éditeur de transformation du cache (Page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de transformation du cache** pour sélectionner un gestionnaire de connexions du cache existant ou en créer un.  
@@ -38,6 +38,6 @@ ms.locfileid: "48183241"
  Modifiez une connexion existante.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Transformation du cache &#40;Page mappages&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+ [Éditeur de transformation du cache &#40;page Mappages&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

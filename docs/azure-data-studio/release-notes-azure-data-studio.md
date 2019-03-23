@@ -3,7 +3,7 @@ title: Notes de publication
 titleSuffix: Azure Data Studio
 description: Notes de publication Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/06/2019
+ms.date: 03/22/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,27 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 746f3d97ed0157f6b97128dbfdf1b88a5276062c
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161626"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381587"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="march-2019-hotfix"></a>Mars 2019 (correctif)
+
+Le 22 mars 2019 &nbsp;  /  &nbsp; version : 1.5.2 &nbsp;  /  &nbsp; version de correctif logiciel
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Correction de quelques problèmes découverts dans 1.5.1. | Consultez [mars de version de correctif logiciel, sur GitHub](https://github.com/Microsoft/azuredatastudio/milestone/28).<br/> <br/>&bull; &nbsp; Résolution du problème où utilisateur Impossible de fermer le bloc-notes ouvert à partir de la tâche « Ouvrir le bloc-notes » dans le tableau de bord <br/>&bull; &nbsp; Problème résolu où bloc-notes JSON a très} après l’enregistrement <br/>&bull; &nbsp; Résolution du problème où des grilles de notebook ne répondent pas aux modifications de thème <br/>&bull; &nbsp; Résolution du problème où le chemin d’accès du carnet de notes complète a été affichée dans l’en-tête de l’onglet. Maintenant seulement le nom de fichier s’affiche. |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019"></a>Mars 2019
 
@@ -53,7 +64,7 @@ Le 18 mars 2019 &nbsp;  /  &nbsp; version : 1.5.1
 - Nouvelles icônes de bloc-notes et ouvrir le bloc-notes sont perdues <br/> 
 **Solution de contournement :** Le type de connexion héritée est déconseillé. Nous vous recommandons de se connecter au point de terminaison SQL Server et vous obtiendrez toutes les actions (nouveau bloc-notes, travail Spark) comme prévu. 
 
-## <a name="february-2019"></a>Février 2019
+## <a name="february-2019"></a>Février 2019
 
 Le 13 février 2019 &nbsp;  /  &nbsp; version : 1.4.5
 

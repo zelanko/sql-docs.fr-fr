@@ -13,25 +13,25 @@ helpviewer_keywords:
 - default precedence constraints
 - containers [Integration Services], precedence constraints
 ms.assetid: 8f31f15f-98ff-4c35-b41f-8b8cfd148d75
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0c61c5db632121f99f8c22c8dd474d5597cb547
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48221539"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58389237"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Connecter des tâches et des conteneurs à l'aide d'une contrainte de précédence par défaut
   Les contraintes de précédence connectent deux exécutables. Un exécutable peut être une tâche quelconque ou encore un conteneur de boucles For, de boucles Foreach ou un conteneur Sequence. Cette procédure décrit comment définir le comportement par défaut des contraintes de précédence et comment connecter des exécutables à l'aide de contraintes de précédence par défaut.  
   
 ## <a name="creating-default-precedence-constraints"></a>Création de contraintes de précédence par défaut  
- Lorsque vous utilisez [!INCLUDE[ssIS](../includes/ssis-md.md)] concepteur, la valeur par défaut d’une contrainte de précédence est `Success`. Suivez les étapes ci-dessous pour configurer le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] de sorte qu'il utilise une valeur par défaut différente pour les contraintes de précédence.  
+ Lors de la première utilisation du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)], la valeur par défaut d'une contrainte de précédence est `Success`. Suivez les étapes ci-dessous pour configurer le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] de sorte qu'il utilise une valeur par défaut différente pour les contraintes de précédence.  
   
 #### <a name="to-set-the-default-value-for-precedence-constraints"></a>Pour définir la valeur par défaut des contraintes de précédence  
   
-1.  Ouvrir [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+1.  Ouvrez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 2.  Dans le menu **Outils** , cliquez sur **Options**.  
   

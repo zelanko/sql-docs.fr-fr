@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.foreachloopcontainer.general.f1
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47350cc4d809110d0bc3d0543b53e147dbd9be4d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8cbf36108db7eed47f9ef3a63bece8b03a727956
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047489"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383069"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Éditeur de boucle Foreach (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de boucle Foreach** pour décrire et attribuer un nom à un conteneur de boucle Foreach qui utilise un énumérateur précis afin de répéter un flux de travail pour chaque membre d'une collection.  
@@ -36,10 +36,10 @@ ms.locfileid: "48047489"
  Tapez la description du conteneur de boucle Foreach.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Éditeur de boucle foreach &#40;Page de Collection&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Éditeur de boucle foreach &#40;Page mappage de variables&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Page expressions](expressions/expressions-page.md)   
+ [Page Expressions](expressions/expressions-page.md)   
  [Conteneur de boucles Foreach](control-flow/foreach-loop-container.md)   
  [Conteneur de boucles For](control-flow/for-loop-container.md)  
   

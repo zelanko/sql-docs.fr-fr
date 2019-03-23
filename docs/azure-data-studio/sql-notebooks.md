@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: ceaf172fc36ee92d15be326d4356061ea1674df1
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58162115"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392717"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Comment utiliser des blocs-notes dans Azure Data Studio
 
@@ -85,7 +85,7 @@ Une fois l’installation terminée, vous trouverez une notification dans l’hi
 
 |Noyau|Description
 |:-----|:-----
-| Noyau SQL | Écrire du Code SQL par rapport à votre serveur SQL Server.
+| Noyau SQL | Écrire du Code SQL ciblé sur votre base de données relationnelle.
 |PySpark3 et le noyau PySpark| Écrire du code Python à l’aide de calcul Spark à partir du cluster.
 |Noyau Spark|Écrire du code Scala et R à l’aide de calcul Spark à partir du cluster.
 |Python Kernel|Écrire du code Python pour un développement local.

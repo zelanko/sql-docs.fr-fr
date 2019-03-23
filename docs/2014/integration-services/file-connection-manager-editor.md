@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Connection Manager Editor
 ms.assetid: 051c48e5-3d86-49af-b554-ff62e3de3622
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe362603d36c1ae9115ca201838b68a936ae5077
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 24793c3edc681ac40ca37c36a1540f3c404b7191
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140279"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374827"
 ---
 # <a name="file-connection-manager-editor"></a>Éditeur du gestionnaire de connexions de fichiers
   Utilisez la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers** pour spécifier les propriétés à utiliser pour se connecter à un fichier ou à un dossier.  
@@ -34,7 +34,7 @@ ms.locfileid: "48140279"
  **Type d'utilisation**  
  Indiquez si le **Gestionnaire de connexions de fichiers** se connecte à un fichier ou dossier existant ou s’il crée un nouveau fichier ou dossier.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Créer un fichier|Crée un nouveau fichier au moment de l'exécution.|  
 |Fichier existant|Utilise un fichier existant.|  

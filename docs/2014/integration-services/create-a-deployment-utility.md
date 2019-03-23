@@ -11,15 +11,15 @@ helpviewer_keywords:
 - deploying packages [Integration Services], deployment utility
 - deployment utility [Integration Services]
 ms.assetid: 354322a4-ae8c-4d92-8e71-42d29dbd0614
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe7bd725bc7fc9be7289c4834a3df8f44e36c41b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102199"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392859"
 ---
 # <a name="create-a-deployment-utility"></a>Créer un utilitaire de déploiement
   La première étape de déploiement des packages consiste à créer un utilitaire de déploiement pour un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. L'utilitaire de déploiement est un dossier qui contient les fichiers dont vous avez besoin pour déployer les packages dans un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un serveur différent. L'utilitaire de déploiement est créé sur l'ordinateur sur lequel le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est stocké.  
@@ -34,7 +34,7 @@ ms.locfileid: "48102199"
 |--------------|-----------------|  
 |AllowConfigurationChange|Une valeur qui spécifie si les configurations peuvent être mises à jour lors du déploiement.|  
 |CreateDeploymentUtility|Une valeur qui spécifie si un utilitaire de déploiement de packages est créé lorsque le projet est généré. Cette propriété doit être définie à `True` pour créer un utilitaire de déploiement.|  
-|DeploymentOutputPath|L'emplacement, relatif au projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], de l'utilitaire de déploiement.|  
+|DeploymentOutputPath|L'emplacement, relatif au projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , de l'utilitaire de déploiement.|  
   
  Quand vous générez un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], un fichier manifeste, \<nom_projet>.SSISDeploymentManifest.xml et des copies des packages du projet et des dépendances de package sont créés et ajoutés dans le dossier bin\Deployment au sein du projet ou à l’emplacement spécifié dans la propriété DeploymentOutputPath. Le fichier manifeste répertorie les packages, les configurations de package et tous les divers autres fichiers du projet.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "48102199"
   
 4.  Pour mettre à jour les configurations de package lors du déploiement de packages, définir **AllowConfigurationChanges** à `True`.  
   
-5.  Définissez `CreateDeploymentUtility` à `True`.  
+5.  Définissez `CreateDeploymentUtility` sur `True`.  
   
 6.  Vous pouvez au besoin mettre à jour l'emplacement de l'utilitaire de déploiement en modifiant la propriété `DeploymentOutputPath`.  
   
@@ -61,9 +61,9 @@ ms.locfileid: "48102199"
 9. Affichez la progression de la build et les erreurs de build dans la fenêtre **Sortie** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurations de package](../../2014/integration-services/package-configurations.md)   
- [Créer des Configurations de Package](../../2014/integration-services/create-package-configurations.md)   
- [Déployer des Packages à l’aide de l’utilitaire de déploiement](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
+ [Configurations du package](../../2014/integration-services/package-configurations.md)   
+ [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)   
+ [Déployer des packages à l'aide de l'utilitaire de déploiement](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md)   
  [Déploiement du package &#40;SSIS&#41;](packages/legacy-package-deployment-ssis.md)  
   
   

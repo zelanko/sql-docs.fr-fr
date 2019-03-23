@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Integration Services service, configuring
 - services [Integration Services], configuring
 ms.assetid: 45554117-a0df-4830-b41c-5ebb33b764a5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d6b8ea946def4811332e6783e881e968c5a91f4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f6251ac85fe76d775fd84b6463d20532615d28c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193399"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375127"
 ---
 # <a name="manage-the-integration-services-service"></a>Gérer le service Integration Services
     
@@ -29,13 +29,13 @@ ms.locfileid: "48193399"
  Lorsque vous installez le composant [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est également installé. Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est démarré et le type de démarrage du service est défini comme étant automatique. Toutefois, vous devez également installer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour utiliser le service afin de gérer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stockés et en cours d'exécution.  
   
 > [!NOTE]  
->  Vous ne pouvez pas vous connecter à une instance de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service à partir de la [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] version de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Autrement dit, dans la boîte de dialogue **Se connecter au serveur** , vous ne pouvez pas entrer le nom d'un serveur sur lequel seule la version [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'exécute. Toutefois, vous pouvez modifier le fichier de configuration pour le service et gérer ainsi les packages stockés dans une instance de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] à partir de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
+>  Vous ne pouvez pas vous connecter à une instance de la [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service à partir de la [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] version de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Autrement dit, dans la boîte de dialogue **Se connecter au serveur** , vous ne pouvez pas entrer le nom d'un serveur sur lequel seule la version [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] s'exécute. Toutefois, vous pouvez modifier le fichier de configuration pour le service et gérer ainsi les packages stockés dans une instance de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] à partir de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] de [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
  Vous ne pouvez installer qu'une seule instance du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un ordinateur. Le service n'est pas spécifique à une instance particulière du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Vous vous connectez au service en utilisant le nom de l'ordinateur sur lequel il s'exécute.  
   
- Vous pouvez gérer le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à l’aide de l’un des composants logiciels enfichables MMC (Microsoft Management Console) suivants : Gestionnaire de configuration SQL Server ou Services. Avant de pouvoir gérer des packages dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], vous devez vérifier que le service a démarré.  
+ Vous pouvez gérer le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] à l’aide de l’un des composants logiciels enfichables Microsoft Management Console (MMC) suivants : Gestionnaire de configuration ou Services SQL Server. Avant de pouvoir gérer des packages dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], vous devez vérifier que le service a démarré.  
   
- Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] qui est installée au même moment que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] n’est pas installée au même moment, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance locale par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Pour gérer des packages stockés dans une instance nommée ou une instance distante du [!INCLUDE[ssDE](../includes/ssde-md.md)]ou dans plusieurs instances du [!INCLUDE[ssDE](../includes/ssde-md.md)], vous devez modifier le fichier de configuration du service. Pour plus d’informations, consultez [Configuring the Integration Services Service &#40;SSIS Service&#41;](service/integration-services-service-ssis-service.md).  
+ Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] qui est installée au même moment que [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Si une instance du [!INCLUDE[ssDE](../includes/ssde-md.md)] n’est pas installée au même moment, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour gérer les packages dans la base de données msdb de l’instance locale par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)]. Pour gérer des packages stockés dans une instance nommée ou une instance distante du [!INCLUDE[ssDE](../includes/ssde-md.md)]ou dans plusieurs instances du [!INCLUDE[ssDE](../includes/ssde-md.md)], vous devez modifier le fichier de configuration du service. Pour plus d’informations, consultez [Configuration du service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md).  
   
  Par défaut, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est configuré pour arrêter l'exécution des packages à l'arrêt du service. Toutefois, le service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] n'attend pas l'arrêt des packages et certains packages peuvent continuer à être exécutés après l'arrêt du service [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
   
@@ -51,12 +51,12 @@ ms.locfileid: "48193399"
   
 ### <a name="to-view-service-events-for-integration-services-service"></a>Pour afficher les événements du service Integration Services  
   
--   [Afficher les événements du service Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
+-   [afficher les événements du service Integration Services](../../2014/integration-services/view-events-for-the-integration-services-service.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Service Integration Services &#40;Service SSIS&#41;](service/integration-services-service-ssis-service.md)   
- [Configuration de l’intégration des Services Service &#40;Service SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
- [SQL Server Assistant Importation et exportation](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
+ [Configuration du service Integration Services &#40;Service SSIS&#41;](configuring-the-integration-services-service-ssis-service.md)   
+ [Assistant Importation et Exportation SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md)   
  [Utilitaire dtexec](packages/dtexec-utility.md)   
  [Exécution de projets et de packages](packages/run-integration-services-ssis-packages.md)  
   

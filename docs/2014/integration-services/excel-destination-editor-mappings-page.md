@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff6e51c15678d50b6ebb39614441419dd13ad3f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 39c766acdd171db17c2b3f5ba0623b57a36ca145
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48047570"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387797"
 ---
 # <a name="excel-destination-editor-mappings-page"></a>Éditeur de destination Excel (page Mappages)
   Utilisez la page **Mappages** de la boîte de dialogue **Éditeur de destination Excel** pour mapper des colonnes d'entrée à des colonnes de destination.  
@@ -41,9 +41,9 @@ ms.locfileid: "48047570"
  Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Destination Excel &#40;Page Gestionnaire de connexions&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Éditeur de Destination Excel &#40;Page sortie d’erreur&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de destination Excel &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Éditeur de destination Excel &#40;page Sortie d’erreur&#41;](../../2014/integration-services/excel-destination-editor-error-output-page.md)   
  [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](control-flow/foreach-loop-container.md)  
   
   

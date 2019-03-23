@@ -12,15 +12,15 @@ helpviewer_keywords:
 - mapping result sets to variables [Integration Services]
 - variables [Integration Services], mapping result sets to
 ms.assetid: f76738b6-dc75-4ff9-a3dd-8b083d8e410e
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a166c760ecb3dafabbfaa8e131f1a8948429dc61
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4c6114fac83862198b37647f6350d657df878ca5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069655"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379631"
 ---
 # <a name="map-result-sets-to-variables-in-an-execute-sql-task"></a>Mapper des ensembles de résultats à des variables dans une tâche d’exécution SQL
   Cette rubrique décrit comment créer un mappage entre un jeu de résultats et une variable dans une tâche d'exécution SQL. Le mappage d'un jeu de résultats à une variable rend le jeu de résultats disponible aux autres éléments du package. Par exemple, un script dans une tâche de script peut lire la variable, puis utiliser les valeurs du jeu de résultats ou une source XML pour consommer le jeu de résultats stocké dans une variable. Si le jeu de résultats est généré par un package parent, il est possible de le rendre disponible à un package enfant appelé par une tâche d'exécution de package en mappant le jeu de résultats à une variable dans le package parent, puis en créant une configuration de variable de package parent dans le package enfant pour stocker la valeur de la variable parent.  
@@ -64,9 +64,9 @@ ms.locfileid: "48069655"
  [Exécution de requêtes SQL, tâche](control-flow/execute-sql-task.md)   
  [Ensembles de résultats dans la tâche d’exécution SQL](result-sets-in-the-execute-sql-task.md)   
  [Tâche Exécuter Package](control-flow/execute-package-task.md)   
- [Configurations de package](../../2014/integration-services/package-configurations.md)   
- [Créer des Configurations de Package](../../2014/integration-services/create-package-configurations.md)   
+ [Configurations du package](../../2014/integration-services/package-configurations.md)   
+ [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)   
  [Utiliser les valeurs des Variables et des paramètres dans un Package enfant](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)   
- [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)  
+ [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)  
   
   

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: edcc54e1915e0fe78ace560c0d7db7d52509e2c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372521"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394587"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -358,7 +358,7 @@ ms.locfileid: "53372521"
 |0xC001F206|-1073614330|DTS_E_DTSNAME_BEGINSWITHALPHA|Le nom d'objet « %1 » n'est pas valide. Le nom doit commencer par un caractère alphabétique.|  
 |0xC001F207|-1073614329|DTS_E_DTSNAME_BEGINSWITHALPHAUNDERBAR|Le nom d'objet « %1 » n'est pas valide. Le nom doit commencer par un caractère alphabétique ou par le trait de soulignement « _ ».|  
 |0xC001F208|-1073614328|DTS_E_DTSNAME_ALPHADIGITUNDERBAR|Le nom d'objet « %1 » n'est pas valide. Le nom ne peut comporter que des caractères alphanumériques ou des traits de soulignement « _ ».|  
-|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Le nom d'objet « %1 » n'est pas valide. Le nom ne peut pas contenir les caractères suivants : / \ : ? « \< >&#124;|  
+|0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Le nom d'objet « %1 » n'est pas valide. Le nom ne peut pas contenir les caractères suivants : / \ : ? " \< > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Impossible de charger la propriété de valeur « %1 » à l'aide de la persistance par défaut.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|Le gestionnaire de connexions « %1 » n'est pas de type « %2 »|  
 |0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|« %1 » est vide|  

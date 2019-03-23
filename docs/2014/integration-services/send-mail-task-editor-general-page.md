@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Send Mail Task Editor
 ms.assetid: 5e60ebbf-8f2d-4d77-a859-e47e0f605cb2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4d02fd2507ac4fc4774a41d5e0f813d37233f61d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 35b138d6d66d8f6c0b7edc78c9dd497622cd3214
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072509"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379037"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Éditeur de tâche Envoyer un message (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche Envoyer un message** pour définir le nom de la tâche d'envoi d'un message et décrire la tâche.  
@@ -37,8 +37,8 @@ ms.locfileid: "48072509"
  Entrez une description de la tâche d'envoi d'un message.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tache envoyer &#40;Page de messagerie&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche Envoyer un message &#40;page Courrier&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7c10a7febfcb5df1f2702498fe30148f1794095b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096049"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393887"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Éditeur de source XML (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de source XML** pour spécifier un fichier XML et le schéma XSD qui transforme les données XML.  
@@ -31,7 +31,7 @@ ms.locfileid: "48096049"
  **Mode d'accès aux données**  
  Spécifiez la méthode de sélection des données dans la source.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Emplacement du fichier XML|Récupère des données dans un fichier XML.|  
 |Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes**: [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
@@ -67,9 +67,9 @@ ms.locfileid: "48096049"
  Sélectionnez la variable qui contient les données XML.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Source XML &#40;Page colonnes&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
- [Éditeur de Source XML &#40;Page sortie d’erreur&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
- [Extraire des données à l’aide de la source XML](data-flow/extract-data-by-using-the-xml-source.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de source XML &#40;page Colonnes&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
+ [Éditeur de source XML &#40;page Sortie d’erreur&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Extraire des données à l'aide de la source XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

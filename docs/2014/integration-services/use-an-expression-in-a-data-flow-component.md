@@ -11,15 +11,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - expressions [Integration Services], data flow components
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8a6510294daf15eac25c335ee84a73f136a57f5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083460"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378068"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Utiliser une expression dans un composant de flux de données
   Cette procédure permet d'ajouter une expression à la transformation de fractionnement conditionnel ou à la transformation de colonne dérivée. La transformation de fractionnement conditionnel utilise des expressions pour définir les conditions qui dirigent les lignes de données vers une sortie de transformation et la transformation de colonne dérivée utilise des expressions pour définir les valeurs affectées aux colonnes.  
@@ -67,8 +67,8 @@ ms.locfileid: "48083460"
   
 ## <a name="see-also"></a>Voir aussi  
  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Transformation de fractionnement conditionnel](data-flow/transformations/conditional-split-transformation.md)   
- [Transformation de colonne dérivée](data-flow/transformations/derived-column-transformation.md)   
+ [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
+ [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
  [Tâche de flux de données](control-flow/data-flow-task.md)   
  [Flux de données](data-flow/data-flow.md)  
   

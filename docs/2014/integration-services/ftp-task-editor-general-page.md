@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - File Transfer Protocol Task Editor
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1309a746aa60ee1a7c49a0d6569b51d0a57b3a39
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1b64b1f8511c9d079118881a9862eee11fdb636d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054199"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388737"
 ---
 # <a name="ftp-task-editor-general-page"></a>Éditeur de tâche FTP (page Général)
   La page **Général** de la boîte de dialogue **Éditeur de tâche FTP** permet de spécifier le gestionnaire de connexions FTP qui se connecte au serveur FTP avec lequel la tâche communique. Vous pouvez également nommer et décrire cette tâche FTP.  
@@ -34,7 +34,7 @@ ms.locfileid: "48054199"
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions FTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
   
- **Rubriques connexes :** [Gestionnaires de connexion FTP](connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaires de connexions FTP](connection-manager/ftp-connection-manager.md), [Éditeur du gestionnaire de connexions FTP](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
  **Arrêt en cas d'échec de l'opération**  
  Indique si la tâche FTP se termine en cas d'échec de l'opération.  
@@ -49,8 +49,8 @@ ms.locfileid: "48054199"
  Tapez une description de la tâche FTP.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche FTP &#40;Page de transfert de fichiers&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche FTP &#40;page Transfert de fichiers&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

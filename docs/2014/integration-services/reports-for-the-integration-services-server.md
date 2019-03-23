@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 224345a2dc32f12e925a6f97299c91a5e2f7e9b4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096169"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394087"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Rapports du serveur Integration Services
-  Dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], deux rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projets qui ont été déployées sur le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. Ces rapports vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs d'exécution du package.  
+  Dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], les rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller les projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Ces rapports vous aident à consulter l'état et l'historique du package et, si nécessaire, à identifier la cause des erreurs d'exécution du package.  
   
  En haut de chaque page de rapport, l'icône de retour permet de revenir à la page précédente, l'icône de rafraîchissement actualise les informations affichées dans la page et l'icône d'impression vous permet d'imprimer la page en cours.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48096169"
   
 |Section|Description|  
 |-------------|-----------------|  
-|Filtre|Indique le filtre actif appliqué au rapport, tel que la plage d'heures de début.|  
+|Filtrer|Indique le filtre actif appliqué au rapport, tel que la plage d'heures de début.|  
 |Informations sur l'exécution|Indique l'heure de début, l'heure de fin, la durée d'exécution de chaque package. Vous pouvez afficher la liste des valeurs de paramètre utilisées avec une exécution de package, telles que les valeurs qui ont été passées à un package enfant à l'aide de la tâche d'exécution de package. Pour afficher la liste des paramètres, cliquez sur Vue d'ensemble.|  
   
  Pour plus d’informations sur l’utilisation de la tâche d’exécution de package afin de rendre des valeurs disponibles dans un package enfant, consultez [Tâche d’exécution de package](control-flow/execute-package-task.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "48096169"
  Pour obtenir des instructions sur la manière de créer et d’ajouter un rapport personnalisé, consultez [Ajouter un rapport personnalisé à Management Studio](../ssms/object/add-a-custom-report-to-management-studio.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Afficher les rapports pour le serveur Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
+ [Afficher les rapports du serveur Integration Services](../../2014/integration-services/view-reports-for-the-integration-services-server.md)  
   
 ## <a name="related-content"></a>Contenu associé  
  [Surveillance des exécutions de packages et d’autres opérations](performance/monitor-running-packages-and-other-operations.md)  

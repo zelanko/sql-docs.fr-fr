@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Conversion Transformation Editor
 ms.assetid: 7b4e4873-e8fe-4549-a965-65bebdb270bc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73360a385cfe4c9f44dd2be5296c7d2144b3439d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ad50b2ecf95daa7abb4c9aaef420b4dbfd14c8e7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129799"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376138"
 ---
 # <a name="data-conversion-transformation-editor"></a>Éditeur de transformation de conversion de données
   Utilisez la boîte de dialogue **Éditeur de transformation de conversion de données** pour sélectionner les colonnes à convertir, sélectionner le type de données de conversion des colonnes et définir les attributs de conversion.  
@@ -38,7 +38,7 @@ ms.locfileid: "48129799"
  Sélectionnez les colonnes à convertir dans la liste des colonnes d'entrée disponibles. Vos sélections sont reflétées dans les sélections de cases à cocher ci-dessus.  
   
  **Alias de sortie**  
- Tapez un alias pour chaque nouvelle colonne. La valeur par défaut est `Copy of` suivie du nom de colonne d’entrée ; Toutefois, vous pouvez choisir n’importe quel nom unique et descriptif.  
+ Tapez un alias pour chaque nouvelle colonne. La valeur par défaut est `Copy of`, suivi du nom de la colonne d’entrée. Toutefois, vous pouvez choisir n’importe quel nom descriptif unique.  
   
  **Type de données**  
  Sélectionnez un type de données dans la liste. Pour plus d’informations, consultez [Types de données Integration Services](data-flow/integration-services-data-types.md).  
@@ -59,7 +59,7 @@ ms.locfileid: "48129799"
  Indiquez la façon dont les erreurs au niveau des lignes sont gérées via la boîte de dialogue [Configurer la sortie d’erreur](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Convertir des données en un type différent à l'aide de la transformation de conversion de données](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

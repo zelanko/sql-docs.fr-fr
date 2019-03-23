@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB Destination Editor
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35627cefd3bbdf4bec280baaa9dcdb1b43391e05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a24a8b6eb8c0f6cde72a6760270873c05c5de44a
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176839"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390077"
 ---
 # <a name="ole-db-destination-editor-error-output-page"></a>Éditeur de destination OLE DB (page Sortie d'erreur)
   Utilisez la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de destination OLE DB** pour définir les options de gestion des erreurs.  
@@ -37,7 +37,7 @@ ms.locfileid: "48176839"
  **Erreur**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Non utilisé.  
@@ -52,9 +52,9 @@ ms.locfileid: "48176839"
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Destination OLE DB &#40;Page Gestionnaire de connexions&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
- [Éditeur de Destination OLE DB &#40;Page mappages&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de destination OLE DB &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/ole-db-destination-editor-connection-manager-page.md)   
+ [Éditeur de destination OLE DB &#40;page Mappages&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [Charger des données à l’aide de la destination OLE DB](data-flow/load-data-by-using-the-ole-db-destination.md)  
   
   

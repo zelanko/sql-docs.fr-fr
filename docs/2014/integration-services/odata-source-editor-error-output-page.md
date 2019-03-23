@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.erroroutput.f1
 ms.assetid: 9a81e2ce-aee6-4c4c-8495-6501d715aca2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 998124711ec5bfe4a9da8b4737c357cb07bcbde2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 76a14639eb57645849deab4a11ef13a80cad2648
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075613"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390990"
 ---
 # <a name="odata-source-editor-error-output-page"></a>Éditeur de source OData (page Sortie d'erreur)
   La page **Sortie d'erreur** de la boîte de dialogue **Éditeur de source OData** vous permet de sélectionner les options de gestion des erreurs et de définir les propriétés sur les colonnes de sortie d'erreur.  
@@ -33,7 +33,7 @@ ms.locfileid: "48075613"
  **Erreur**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
@@ -48,8 +48,8 @@ ms.locfileid: "48075613"
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Source OData &#40;Page de connexion&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
- [Éditeur de Source OData &#40;Page colonnes&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Éditeur de source OData &#40;page Connexion&#41;](../../2014/integration-services/odata-source-editor-connection-page.md)   
+ [Éditeur de source OData &#40;page Colonnes&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
  [Source OData](data-flow/odata-source.md)   
  [Gestionnaire de connexions OData](connection-manager/odata-connection-manager.md)  
   

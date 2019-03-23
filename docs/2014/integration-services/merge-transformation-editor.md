@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Merge Transformation Editor
 ms.assetid: 7f5c0b26-9c68-4955-aa95-eb1a8fb7f87f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bb2d0f8b08b605c192f1069a20f8e02919c2c229
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3c8de19a7497a1caa8322f25632e22b875e4cbad
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185849"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377987"
 ---
 # <a name="merge-transformation-editor"></a>Éditeur de transformation de fusion
   Utilisez **l’Éditeur de transformation de fusion** pour définir des colonnes dans deux datasets triés à fusionner.  
@@ -41,8 +41,8 @@ ms.locfileid: "48185849"
  Sélectionnez la colonne à fusionner sous la forme Entrée de fusion 2.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Trier des données pour la fusion et de Transformations de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
  [Transformation de jointure de fusion](data-flow/transformations/merge-join-transformation.md)   
  [Transformation d'union totale](data-flow/transformations/union-all-transformation.md)  
   

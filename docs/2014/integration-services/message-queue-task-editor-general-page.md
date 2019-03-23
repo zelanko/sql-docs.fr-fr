@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Message Queue Task Editor
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea436e349a19d10eeb86a62b74f154b56b60ef7a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7668cf38f01f049b95423547430e1027a4ab6090
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48204009"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375857"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Éditeur de tâche MSMQ (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche MSMQ** pour nommer et décrire la tâche MSMQ, pour spécifier le format du message et indiquer si la tâche envoie ou reçoit des messages.  
@@ -43,15 +43,15 @@ ms.locfileid: "48204009"
  **MSMQConnection**  
  Sélectionnez un gestionnaire de connexions MSMQ existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes** : [Gestionnaire de connexions MSMQ](connection-manager/msmq-connection-manager.md), [Éditeur du gestionnaire de connexions MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions MSMQ](connection-manager/msmq-connection-manager.md), [Éditeur du Gestionnaire de connexions MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
   
  **Message**  
  Spécifiez si la tâche MSMQ envoie ou reçoit des messages. Si vous sélectionnez l’option **Envoyer un message**, la page Envoyer est répertoriée dans le volet gauche de la boîte de dialogue ; si vous sélectionnez l’option **Recevoir un message**, la page Recevoir est répertoriée. Par défaut, cette valeur est définie sur **Envoyer un message**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche MSMQ &#40;Page recevoir&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
- [Éditeur de tâche MSMQ &#40;envoyer la Page&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche MSMQ &#40;page Recevoir&#41;](../../2014/integration-services/message-queue-task-editor-receive-page.md)   
+ [Éditeur de tâche MSMQ &#40;page Envoyer&#41;](../../2014/integration-services/message-queue-task-editor-send-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

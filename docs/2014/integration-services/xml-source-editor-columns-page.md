@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - XML Source Editor
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b22b2c8690e7c680c0087c3a44766cde16f96878
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c0d986d9093b85b701660bf1fd262c412a28cb3e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063689"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382027"
 ---
 # <a name="xml-source-editor-columns-page"></a>Éditeur de source XML (page Colonnes)
   Le nœud **Colonnes** de la boîte de dialogue **Éditeur de source XML** vous permet de mapper une colonne de sortie à une colonne externe (source).  
@@ -38,9 +38,9 @@ ms.locfileid: "48063689"
  Spécifiez un nom unique pour chaque colonne de sortie. Le nom par défaut est celui de la colonne externe (source) sélectionnée ; vous pouvez néanmoins choisir n'importe quel nom unique et significatif. Le nom fourni sera affiché dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Source XML &#40;Page Gestionnaire de connexions&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
- [Éditeur de Source XML &#40;Page sortie d’erreur&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
- [Extraire des données à l’aide de la source XML](data-flow/extract-data-by-using-the-xml-source.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de source XML &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
+ [Éditeur de source XML &#40;page Sortie d’erreur&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
+ [Extraire des données à l'aide de la source XML](data-flow/extract-data-by-using-the-xml-source.md)  
   
   

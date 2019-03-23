@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - SMTP Connection Manager Editor
 ms.assetid: 2693de0d-b04d-4325-a856-ce667d2b8aa1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 03e02d95d9f4ba358c85b0c90f4c5ab1b2029e63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c4895a0fb7f3b64ff7db52aea9ab9319aeb8b9c0
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118575"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391507"
 ---
 # <a name="smtp-connection-manager-editor"></a>Éditeur du gestionnaire de connexions SMTP
   Utilisez la boîte de dialogue **Éditeur du gestionnaire de connexions SMTP** pour spécifier un serveur SMTP (Simple Mail Transfer Protocol).  

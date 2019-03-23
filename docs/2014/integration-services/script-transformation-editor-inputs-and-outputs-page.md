@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Script Transformation Editor
 ms.assetid: 9659d2d2-5d73-4470-9768-e07b77142fc9
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d015b637a2823b0551fec82fbe761e586cf1ccd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0d15b3979209e4dba6983a845ae1752d3e136fb7
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084519"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392087"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Éditeur de transformation de script (page Entrées et sorties)
   Utilisez la page **Entrées et sorties** de la boîte de dialogue **Éditeur de transformation de script** pour ajouter, supprimer et configurer les entrées et les sorties destinées à la transformation de script.  
@@ -51,11 +51,11 @@ ms.locfileid: "48084519"
  Sélectionnez une colonne, puis cliquez sur le bouton **Supprimer une colonne**pour la supprimer.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Sélectionner le Type de composant de Script](../../2014/integration-services/select-script-component-type.md)   
- [Éditeur de Transformation de script &#40;Page de colonnes d’entrée&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
- [Éditeur de Transformation de script &#40;Page Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
- [Éditeur de Transformation de script &#40;Page gestionnaires de connexions&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Sélectionner le type de composant de script](../../2014/integration-services/select-script-component-type.md)   
+ [Éditeur de transformation de script &#40;page Colonnes d’entrée&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
+ [Éditeur de transformation de script &#40;page Script&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   
+ [Éditeur de transformation de script &#40;page Gestionnaires de connexions&#41;](../../2014/integration-services/script-transformation-editor-connection-managers-page.md)   
  [Exemples supplémentaires du composant Script](extending-packages-scripting-data-flow-script-component-examples/additional-script-component-examples.md)  
   
   

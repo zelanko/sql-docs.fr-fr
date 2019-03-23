@@ -13,15 +13,15 @@ helpviewer_keywords:
 - packages [Integration Services], configurations
 - variables [Integration Services], adding
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99194829b63bfbc41caa4ef1e400eb37cf6de64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c1e942df4681595be19f31aa6a9d7c6fd3a6dd12
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055632"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374958"
 ---
 # <a name="use-the-values-of-variables-and-parameters-in-a-child-package"></a>Utiliser les valeurs des variables et des paramètres dans un package enfant
   Cette procédure explique comment créer une configuration de package qui utilise le type de configuration de variable parent. Ce type de configuration active un package enfant exécuté à partir d'un package parent pour accéder à une variable dans le parent.  
@@ -90,11 +90,11 @@ ms.locfileid: "48055632"
   
     -   Sélectionnez **L’emplacement de la configuration est stocké dans une variable d’environnement** , puis dans la **liste Variable d’environnement**, sélectionnez la variable d’environnement qui contient le nom de la variable.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Dans la page Sélectionner la propriété cible, développez le nœud **Variable** , puis développez le nœud **Propriétés** de la variable à configurer, puis cliquez sur la propriété devant être définie par la configuration.  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 10. Dans la page Fin de l'Assistant, modifiez facultativement le nom par défaut de la configuration, puis vérifiez les informations de configuration.  
   
@@ -105,9 +105,9 @@ ms.locfileid: "48055632"
 13. Cliquez sur **Fermer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Configurations de package](../../2014/integration-services/package-configurations.md)   
- [Créer des Configurations de Package](../../2014/integration-services/create-package-configurations.md)   
- [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md)   
+ [Configurations du package](../../2014/integration-services/package-configurations.md)   
+ [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)   
+ [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md)   
  [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)  
   
   

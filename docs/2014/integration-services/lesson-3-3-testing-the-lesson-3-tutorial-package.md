@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1096a476-93cf-4474-86f5-27d6357eb380
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac6cb097990c33564c29dad6918c0b8cc883530d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ac1aa0c45e8201d50ead862dd1631bbb3324c8e3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751301"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392047"
 ---
 # <a name="step-3-testing-the-lesson-3-tutorial-package"></a>Étape 3 : Test de la leçon 3 du package du didacticiel
   Dans cette tâche, vous allez exécuter le package Lesson 3.dtsx. Lors de l'exécution du package, la fenêtre Journaux d'événements répertorie les entrées inscrites dans le fichier journal. Une fois l'exécution du package terminée, vous allez vérifier le contenu du fichier journal qui a été généré par le fournisseur d'informations.  
@@ -46,6 +46,6 @@ ms.locfileid: "52751301"
 -   Bien que la sémantique des informations générées pour le `PipelineExecutionPlan` et `PipelineExecutionTrees` événements sont dépasse le cadre de ce didacticiel, vous pouvez voir que la première ligne mentionne les champs d’informations spécifiés dans le **détails** onglet de le **configurer les journaux SSIS** boîte de dialogue. De plus, vous pouvez vérifier que les deux événements sélectionnés, PipelineExecutionPlan et PipelineExecutionTrees, ont été enregistrés pour chaque itération de la boucle Foreach.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 4 : Ajout de Redirection de flux d’erreurs](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+ [Leçon 4 : Ajout de Redirection de flux d’erreurs](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
   
   

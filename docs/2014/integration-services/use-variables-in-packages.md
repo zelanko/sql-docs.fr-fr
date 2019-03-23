@@ -12,25 +12,25 @@ helpviewer_keywords:
 - variables [Integration Services], use scenarios
 - system variables [Integration Services]
 ms.assetid: 7742e92d-46c5-4cc4-b9a3-45b688ddb787
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e309a50dcc47ff4e05335222f9bac6532658ffdd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 910d1699c8cd88f9f29d22b7f08a80337a25473d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145599"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388377"
 ---
 # <a name="use-variables-in-packages"></a>Utiliser des variables dans des packages
   Les variables constituent un ajout souple et utile aux packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Elles permettent une communication entre les objets du package et entre les packages parents et enfants. Les variables peuvent également être utilisées dans les expressions et les scripts.  
   
 ## <a name="user-defined-variables-and-system-variables"></a>Variables définies par l'utilisateur et variables système  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit les variables système et prend en charge les variables définies par l’utilisateur. Quand vous créez un nouveau package, quand vous ajoutez un conteneur ou une tâche à un package ou quand vous créez un gestionnaire d'événements, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut un ensemble de variables système pour le conteneur. Les variables système contiennent des informations utiles sur un package, conteneur, tâche ou gestionnaire d'événements. Par exemple, au moment de l’exécution, la variable système **MachineName** contient le nom de l’ordinateur sur lequel le package est exécuté et **StartTime** contient l’heure à laquelle le package a démarré son exécution. Les variables système sont en lecture seule. Pour plus d’informations, consultez [Variables système](system-variables.md).  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit les variables système et prend en charge les variables définies par l'utilisateur. Quand vous créez un nouveau package, quand vous ajoutez un conteneur ou une tâche à un package ou quand vous créez un gestionnaire d'événements, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut un ensemble de variables système pour le conteneur. Les variables système contiennent des informations utiles sur un package, conteneur, tâche ou gestionnaire d'événements. Par exemple, au moment de l’exécution, la variable système **MachineName** contient le nom de l’ordinateur sur lequel le package est exécuté et **StartTime** contient l’heure à laquelle le package a démarré son exécution. Les variables système sont en lecture seule. Pour plus d’informations, consultez [Variables système](system-variables.md).  
   
  Vous pouvez créer des variables définies par l'utilisateur et les utiliser ensuite dans des packages. Les variables définies par l’utilisateur peuvent être utilisées de diverses façons dans [!INCLUDE[ssIS](../includes/ssis-md.md)]: dans les scripts, les expressions utilisées par des contraintes de précédence, le conteneur de boucles For, la transformation de colonne dérivée, la transformation de fractionnement conditionnel et les expressions de propriété qui mettent à jour des valeurs de propriété.  
   
- Par exemple, vous pouvez utiliser une variable définie par l'utilisateur dans la condition d'évaluation pour le conteneur de boucles For. Vous pouvez également mapper la valeur de la collection de l'énumérateur dans un conteneur de boucles Foreach à une variable, et si une tâche d'exécution SQL utilise une instruction SQL paramétrable, vous pouvez mapper les paramètres de l'instruction à des variables. Pour plus d’informations, consultez [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md).  
+ Par exemple, vous pouvez utiliser une variable définie par l'utilisateur dans la condition d'évaluation pour le conteneur de boucles For. Vous pouvez également mapper la valeur de la collection de l'énumérateur dans un conteneur de boucles Foreach à une variable, et si une tâche d'exécution SQL utilise une instruction SQL paramétrable, vous pouvez mapper les paramètres de l'instruction à des variables. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
 ## <a name="variables-usage-scenarios"></a>Scénarios d'utilisation de variables  
  Les variables sont utilisées de nombreuses manières différentes dans les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Vous constaterez sans doute que le développement de package est limité tant que vous n'avez pas ajouté une variable définie par l'utilisateur à votre package pour mettre en œuvre la flexibilité et la gestion nécessaires à votre solution. En fonction du scénario, les variables système sont aussi couramment utilisées.  

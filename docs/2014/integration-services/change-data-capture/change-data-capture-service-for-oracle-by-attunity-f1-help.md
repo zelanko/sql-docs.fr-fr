@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6cdd755fa9a999905d1afe10dfffad51c4be5bb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a2d9e58d622efd5951f95d3e3b9907a4289df9e5
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779721"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377287"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Aide sur le service de capture de données modifiées pour Oracle par Attunity via la touche F1
   Vous utilisez la console de configuration du service de capture de données modifiées pour définir un service de capture de données modifiées Oracle local, le mettre à jour et le supprimer.  

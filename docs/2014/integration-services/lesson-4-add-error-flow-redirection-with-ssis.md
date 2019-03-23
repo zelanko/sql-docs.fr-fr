@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 0c8dbda2-75e3-4278-9b4e-dcd220c92522
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f80a20d2775a7f3a2c3218f178e6f80e126a755b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358371"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391827"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>Leçon 4 : Ajout de redirection de flux d'erreurs
   Pour traiter les erreurs qui risquent de se produire dans le processus de transformation, [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] vous permet de décider par composant et par colonne comment traiter les données qui ne peuvent pas être transformées. Vous pouvez choisir d'ignorer une erreur dans certaines colonnes, de rediriger dans sa totalité la ligne qui a échoué ou simplement de faire échouer le composant. Par défaut, tous les composants de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sont configurés pour échouer lorsque des erreurs se produisent. Le fait de faire échouer un composant entraîne l'échec du package et l'arrêt de tous les traitements ultérieurs.  
@@ -36,13 +36,13 @@ ms.locfileid: "53358371"
   
 -   [Étape 1 : Copie du Package de la leçon 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
--   [Étape 2 : Création d’un fichier endommagé](lesson-4-2-creating-a-corrupted-file.md)  
+-   [Étape 2 : Création d’un fichier endommagé](lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Étape 3 : Ajout de Redirection de flux d’erreurs](lesson-4-3-adding-error-flow-redirection.md)  
+-   [Étape 3 : Ajout de Redirection de flux d’erreurs](lesson-4-3-adding-error-flow-redirection.md)  
   
--   [Étape 4 : Ajout d’une Destination de fichier plat](lesson-4-4-adding-a-flat-file-destination.md)  
+-   [Étape 4 : Ajout d’une Destination de fichier plat](lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Étape 5 : Test de la leçon 4 du Package du didacticiel](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Étape 5 : Test de la leçon 4 du Package du didacticiel](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
  [Étape 1 : Copie du Package de la leçon 3](lesson-4-1-copying-the-lesson-3-package.md)  

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Model Training Editor
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 635e98ed9ad3f365f30f96653ad77a906ca0d81a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b88616b096557f0c27255669d4f5fab1f646f5f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201290"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390197"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Éditeur d'apprentissage du modèle d'exploration de données (onglet Connexion)
   Utilisez la page **Connexion** de la boîte de dialogue **Éditeur d'apprentissage du modèle d'exploration de données** pour sélectionner un modèle d'exploration de données pour l'apprentissage.  
@@ -44,7 +44,7 @@ ms.locfileid: "48201290"
  Affiche la liste des modèles d'exploration de données associés à la structure d'exploration de données sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur d’apprentissage du modèle d’exploration de données données &#40;onglet colonnes&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur d’apprentissage du modèle d’exploration de données &#40;onglet Colonnes&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

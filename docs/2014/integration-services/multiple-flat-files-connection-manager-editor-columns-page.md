@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8c349dc8c445d2ac117533fde3b1c47c6761d58b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 241bd91cf05f3a7317dcdbfe6684b7266fee947c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058179"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58373939"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Éditeur du gestionnaire de connexions de fichiers plats multiples (page Colonnes)
   Utilisez le nœud **Colonnes** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats multiples** pour spécifier les informations de ligne et de colonne et afficher un aperçu du premier fichier sélectionné.  
@@ -40,7 +40,7 @@ ms.locfileid: "48058179"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des séparateurs de lignes disponibles ou entrez le texte du séparateur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
 |**{CR}**|Les lignes sont séparées par un retour chariot.|  
@@ -54,7 +54,7 @@ ms.locfileid: "48058179"
  **Délimiteur de colonne**  
  Effectuez une sélection dans la liste des séparateurs de colonnes disponibles ou entrez le texte du séparateur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.|  
 |**{CR}**|Les colonnes sont séparées par un retour chariot.|  
@@ -95,7 +95,7 @@ ms.locfileid: "48058179"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des séparateurs de lignes disponibles ou entrez le texte du séparateur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
 |**{CR}**|Les lignes sont séparées par un retour chariot.|  
@@ -110,9 +110,9 @@ ms.locfileid: "48058179"
  Cliquez sur **Réinitialiser les colonnes**pour supprimer toutes les colonnes à l’exception de celles d’origine.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;Page avancé&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;afficher un aperçu de la Page&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
+ [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Aperçu&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

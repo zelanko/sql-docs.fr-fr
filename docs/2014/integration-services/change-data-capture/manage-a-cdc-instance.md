@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - manIns
 ms.assetid: cfed22c8-c666-40ca-9e73-24d93e85ba92
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e4a563a47500a329a79513afb83aff4f93ebda7e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3215f28615511f3c35fcc6cc3ea80209c7c44d41
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748261"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378817"
 ---
 # <a name="manage-a-cdc-instance"></a>Gérer une instance de capture de données modifiées
   Vous pouvez utiliser la console du concepteur CDC pour afficher des informations sur les instances que vous créez et gérer le fonctionnement des instances.  
@@ -65,13 +65,13 @@ ms.locfileid: "52748261"
  **État**  
  Cet onglet fournit des informations et des statistiques sur l'état actuel de l'instance CDC. Il contient les informations suivantes :  
   
--   **état**: Une icône qui indique l’état actuel de l’instance de capture de données modifiées. La section suivante décrit les états.  
+-   **État** : Une icône qui indique l’état actuel de l’instance de capture de données modifiées. La section suivante décrit les états.  
   
     |||  
     |-|-|  
     |![Erreur](../media/error.gif "Erreur")|**Erreur**. L'instance Oracle CDC n'est pas en cours d'exécution, car une erreur non renouvelable s'est produite. Les sous-états suivants sont disponibles :<br /><br /> **Mal configuré**: Une erreur de configuration s’est produite qui nécessite une intervention manuelle.<br /><br /> **Mot de passe requis**: Aucun mot de passe a été défini pour l’Instance Oracle CDC ou le mot de passe n’est pas valide.<br /><br /> **Unexpected**. Toutes les autres erreurs non récupérables.|  
-    |![OK](../media/okay.gif "OK")|**En cours d’exécution**: L’Instance de capture de données modifiées s’exécute et traite les enregistrements de modification. Les sous-états suivants sont disponibles.<br /><br /> **Inactivité**: Tous les enregistrements de modification ont été traitées et stockées dans les tables de modifications cible. Il n'y a plus de transactions actives.<br /><br /> **Traitement**: Il existe des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de modifications.|  
-    |![Arrêter](../media/stop.gif "Arrêter")|**Arrêté**: L'instance CDC n'est pas en cours d'exécution. L'état Stopped indique que l'instance de capture de données modifiées a été arrêtée de manière régulière.|  
+    |![OK](../media/okay.gif "OK")|**En cours d’exécution** : L’Instance de capture de données modifiées s’exécute et traite les enregistrements de modification. Les sous-états suivants sont disponibles.<br /><br /> **Inactivité**: Tous les enregistrements de modification ont été traitées et stockées dans les tables de modifications cible. Il n'y a plus de transactions actives.<br /><br /> **Traitement**: Il existe des enregistrements de modification en cours de traitement qui ne sont pas encore écrits dans les tables de modifications.|  
+    |![Arrêter](../media/stop.gif "Arrêter")|**Arrêté** : L'instance CDC n'est pas en cours d'exécution. L'état Stopped indique que l'instance de capture de données modifiées a été arrêtée de manière régulière.|  
     |![Paused](../media/paused.gif "Paused")|**Suspendu**: L’instance de capture de données modifiées s’exécute mais le traitement est interrompu en raison d’une erreur renouvelable. Les sous-états suivants sont disponibles :<br /><br /> **Déconnecté**: Impossible d’établir la connexion à la base de données Oracle source. Le traitement reprend lorsque la connexion est restaurée.<br /><br /> **Stockage**: Le stockage est saturé. Le traitement reprend lorsque le stockage supplémentaire est disponible.<br /><br /> **Enregistreur d’événements**: Le journal est connecté à Oracle mais ne peut pas lire les journaux des transactions Oracle en raison d’un problème temporaire, par exemple, un journal des transactions n’est pas disponible.|  
   
 -   **État détaillé**: Le sous-statut actuel.  

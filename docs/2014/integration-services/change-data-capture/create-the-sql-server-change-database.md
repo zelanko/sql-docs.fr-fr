@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e95a47f2a2fc7444822c19b67bf2d95626fa62c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770971"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58391177"
 ---
 # <a name="create-the-sql-server-change-database"></a>Créer la base de données de modification SQL Server
   Lorsque vous démarrez l'Assistant Nouvelle instance, la page Créer une base de données CDC s'ouvre. Cette page permet de fournir des informations sur la nouvelle instance de capture de données modifiées et de créer une nouvelle base de données de modification.  
@@ -37,7 +37,7 @@ ms.locfileid: "52770971"
   
 -   **Nom**: Tapez un nom pour le nouveau service. Ce sera également le nom de la nouvelle base de données modifiée.  
   
--   **Description**: Tapez une description pour la nouvelle instance pour vous aider à identifier. Ce paramètre est facultatif.  
+-   **Description** : Tapez une description pour la nouvelle instance pour vous aider à identifier. Ce paramètre est facultatif.  
   
  **Base de données modifiée SQL Server**  
  Cette section est utilisée pour créer la base de données.  

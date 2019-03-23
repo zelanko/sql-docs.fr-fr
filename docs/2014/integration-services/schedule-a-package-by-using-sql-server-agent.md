@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 3d389cce-05af-4e1d-b684-7bbff413c806
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cb49a9bcda16472f06611f320436b9bd918d126b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: f2e9e395ec0c8703edaf7c398e22b352251302c4
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374021"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388097"
 ---
 # <a name="schedule-a-package-by-using-sql-server-agent"></a>Planifier un package à l'aide de SQL Server Agent
   La procédure suivante fournit les étapes pour automatiser l'exécution d'un package en utilisant une étape de travail de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent pour exécuter le package.  
@@ -64,7 +64,7 @@ ms.locfileid: "53374021"
     > [!IMPORTANT]  
     >  Si le package est protégé par mot de passe, lorsque vous cliquez sur l'un des onglets de la page **Général** de la boîte de dialogue **Nouvelle étape de travail** , à l'exception de l'onglet **Package** , vous devez entrer le mot de passe dans la boîte de dialogue **Mot de passe du package** qui s'affiche. Sinon, le travail de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent n'exécute pas le package.  
   
-     **Source du package**: Catalogue SSIS  
+     **Source du package** : Catalogue SSIS  
   
     |Onglet|Options|  
     |---------|-------------|  
@@ -77,7 +77,7 @@ ms.locfileid: "53374021"
     ||**Vider en cas d’erreurs**: Déterminez si des fichiers de vidage du débogage sont générés lorsqu'une erreur se produit pendant l'exécution du package.<br /><br /> Les fichiers contiennent des informations sur l'exécution du package qui peuvent vous aider à résoudre les problèmes d'exécution.<br /><br /> Quand vous sélectionnez cette option et qu’une erreur se produit pendant l’exécution, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crée un fichier .mdmp (fichier binaire) et un fichier .tmp (fichier texte). Par défaut, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stocke ces fichiers dans le dossier *\<lecteur>:* \Program Files\Microsoft SQL Server\110\Shared\ErrorDumps.|  
     ||**Runtime 32 bits** Indiquez si le package est exécuté à l'aide de la version 32 bits de l'utilitaire dtexec sur un ordinateur 64 bits contenant une version 64 bits de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent.<br /><br /> Il peut être nécessaire d'exécuter le package à l'aide de la version 32 bits de dtexec si, par exemple, le package utilise un fournisseur OLE DB natif qui n'est pas disponible en version 64 bits. Pour plus d'informations, consultez [Considérations 64 bits pour Integration Services](https://msdn.microsoft.com/library/ms141766\(SQL.105\).aspx).<br /><br /> Par défaut, lorsque vous sélectionnez le type d'étape de travail **Package SQL Server Integration Services** , [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent exécute le package à l'aide de la version de l'utilitaire dtexec qui est appelée automatiquement par le système. Le système appelle la version 32 bits ou 64 bits de l'utilitaire selon le processeur de l'ordinateur, et de la version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent qui s'exécute sur l'ordinateur.|  
   
-     **Source du package**:  SQL Server, Magasin de packages SSIS ou Système de fichiers  
+     **Source du package** :  SQL Server, Magasin de packages SSIS ou Système de fichiers  
   
      Plusieurs options que vous pouvez définir pour les packages stockées dans SQL Server, le magasin de packages SSIS ou le système de fichiers, correspondent aux options de ligne de commande de l'utilitaire d'invite de commandes `dtexec`. Pour plus d’informations sur l’utilitaire et les options de la ligne de commande, consultez [Utilitaire dtexec](packages/dtexec-utility.md).  
   

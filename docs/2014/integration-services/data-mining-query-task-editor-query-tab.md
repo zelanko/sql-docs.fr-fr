@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 72b1755d-d226-46c5-b862-0c9333196a10
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ac3a7fd31f13ec513c1590d265b1984969ae8e12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 361c1c06afb8c599e983751ea7d7deef656631e6
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193059"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377227"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Requête)
   Utilisez l’onglet **Requête** de la boîte de dialogue **Tâche de requête d’exploration de données** pour créer des requêtes de prédiction basées sur un modèle d’exploration de données. Dans cette boîte de dialogue, vous pouvez également lier des paramètres et des ensembles de résultats à des variables.  
@@ -41,12 +41,12 @@ ms.locfileid: "48193059"
  **Requête d'exploration de données**  
  Tapez une requête d'exploration de données.  
   
- **Rubriques connexes :** [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **Rubriques connexes :**  [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **Générer une nouvelle requête**  
  Créez la requête d'exploration de données en utilisant un outil graphique.  
   
- **Rubriques connexes :** [Data Mining Query](control-flow/data-mining-query.md)  
+ **Rubriques connexes :** [Requête d’exploration de données](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Options de l'onglet Mappage de paramètre  
  **Nom du paramètre**  
@@ -80,9 +80,9 @@ ms.locfileid: "48193059"
  Sélectionnez un résultat et cliquez sur **Supprimer**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de requête d’exploration de données données &#40;onglet modèle d’exploration de données&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
- [Éditeur de tâche de requête d’exploration de données données &#40;onglet sortie&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Concepteur d’exploration de données](../analysis-services/data-mining/data-mining-designer.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche de requête d’exploration de données &#40;onglet Modèle d’exploration de données&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
+ [Éditeur de tâche de requête d’exploration de données &#40;onglet Sortie&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Concepteur d'exploration de données](../analysis-services/data-mining/data-mining-designer.md)  
   
   

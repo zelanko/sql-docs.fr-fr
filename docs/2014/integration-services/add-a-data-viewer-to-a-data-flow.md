@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data flow [Integration Services], data viewers
 - adding data viewers
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab1e8476a7ddb05ff129417ba0493aae90a12852
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059929"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382715"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Ajouter une visionneuse de données à un flux de données
   Cette rubrique explique comment ajouter et configurer une visionneuse de données dans un flux de données. Une visionneuse de données affiche des données déplacées entre deux composants de flux de données Par exemple, une visionneuse de données peut afficher les données extraites d'une source de données avant qu'une transformation dans le flux de données modifie les données.  
@@ -58,6 +58,6 @@ ms.locfileid: "48059929"
  [Transformations Integration Services](data-flow/transformations/integration-services-transformations.md)   
  [Chemins Integration Services](data-flow/integration-services-paths.md)   
  [Flux de données](data-flow/data-flow.md)   
- [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
+ [Débogage d'un flux de données](troubleshooting/debugging-data-flow.md)  
   
   

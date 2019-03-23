@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.designer.odbcsource.errorhandling.f1
 ms.assetid: b2f6866c-db07-4cb3-9f38-889f8d2b03e6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bf6d22a2cbe6111f9cce1a3be446c507969ca82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 804431fea189d0dbe8e236591453571a5546cd5c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158419"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58394497"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Éditeur de source ODBC (page Sortie d'erreur)
   Utilisez la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de source ODBC** pour sélectionner les options de gestion des erreurs.  
@@ -70,7 +70,7 @@ ms.locfileid: "48158419"
  La ligne qui provoque l'erreur ou la troncation est dirigée vers la sortie d'erreur de la source ODBC. Pour plus d'informations, consultez [ODBC Source](data-flow/odbc-source.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Source ODBC &#40;Page Gestionnaire de connexions&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
- [Éditeur de Source ODBC &#40;Page colonnes&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
+ [Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Éditeur de source ODBC &#40;page Colonnes&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

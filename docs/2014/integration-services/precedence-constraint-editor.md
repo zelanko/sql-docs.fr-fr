@@ -12,25 +12,25 @@ f1_keywords:
 helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 ms.assetid: b10d4330-6e35-4037-b309-ef56efcd60c5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c321d7a3850cf91b996262265492b88a6773f446
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 639436ec39301189ae172ce9cb7f58ea96c9cc11
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48217299"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388307"
 ---
 # <a name="precedence-constraint-editor"></a>Éditeur de contrainte de précédence
   Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour configurer les contraintes de précédence.  
   
 ## <a name="options"></a>Options  
  **Opération d’évaluation**  
- Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Les opérations disponibles sont : **Contrainte**, **Expression**, **Expression et contrainte**et **Expression ou contrainte**.  
+ Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Ces opérations sont : **Contrainte**, **Expression**, **Expression et contrainte**, et **Expression ou contrainte**.  
   
  **Valeur**  
- Spécifiez la valeur de contrainte : **Réussite**, **Échec**ou **À l’achèvement**.  
+ Spécifiez la valeur de contrainte : **Réussite**, **échec**, ou **achèvement**.  
   
 > [!NOTE]  
 >  La ligne de contrainte de précédence est verte pour **Réussite**, mise en surbrillance pour **Échec**et bleue pour **À l’achèvement**.  
@@ -42,13 +42,13 @@ ms.locfileid: "48217299"
  Validez l'expression.  
   
  **ET logique**  
- Sélectionnez cette option pour spécifier que plusieurs contraintes de précédence sur le même exécutable doivent être évaluées ensemble. Toutes les contraintes doivent avoir `True`.  
+ Sélectionnez cette option pour spécifier que plusieurs contraintes de précédence sur le même exécutable doivent être évaluées ensemble. Toutes les contraintes doivent prendre la valeur `True`.  
   
 > [!NOTE]  
 >  Ce type de contrainte de précédence s'affiche sous forme de ligne pleine verte, mise en surbrillance ou bleue.  
   
  **OU logique**  
- Sélectionnez cette option pour spécifier que plusieurs contraintes de précédence sur le même exécutable doivent être évaluées ensemble. Au moins une contrainte doit correspondre à `True`.  
+ Sélectionnez cette option pour spécifier que plusieurs contraintes de précédence sur le même exécutable doivent être évaluées ensemble. Une contrainte au moins doit prendre la valeur `True`.  
   
 > [!NOTE]  
 >  Ce type de contrainte de précédence s'affiche sous forme de ligne pointillée verte, mise en surbrillance ou bleue.  

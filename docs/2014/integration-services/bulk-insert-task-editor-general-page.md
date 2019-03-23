@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1eff4034dfb3f7bf7120ec5976a398427d0cd207
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 12f4cd15127d1b4adef4439d7d6081d8bcd15a97
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152769"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392648"
 ---
 # <a name="bulk-insert-task-editor-general-page"></a>Éditeur de tâche d'insertion en bloc (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin d'attribuer un nom et décrire la tâche d'insertion en bloc.  
@@ -38,10 +38,10 @@ ms.locfileid: "48152769"
  Permet de fournir une description à la tâche d'insertion en bloc.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche d’insertion en bloc des &#40;Page de connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Éditeur de tâche d’insertion en bloc des &#40;Page Options&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
- [Page expressions](expressions/expressions-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche d’insertion en bloc &#40;page Connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Éditeur de tâche d’insertion en bloc &#40;page Options&#41;](../../2014/integration-services/bulk-insert-task-editor-options-page.md)   
+ [Page Expressions](expressions/expressions-page.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Flux de contrôle](control-flow/control-flow.md)  
   

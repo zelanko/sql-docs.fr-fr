@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Configure Data Viewer dialog box
 ms.assetid: 960c351a-ccb9-4e52-acd4-442246a3a328
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5369cadb43cd49bc8dfa045282e5716d0dd04744
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 208280aa29edc8671f960ad689cdcaffa8175260
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189019"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58393107"
 ---
 # <a name="configure-data-viewer-scatter-plot-tab"></a>Configurer la Visionneuse de données (onglet Nuage de points)
   Utilisez l’onglet **Nuage de points (x,y)** de la boîte de dialogue **Configurer la Visionneuse de données** pour spécifier deux colonnes à tracer l’une par rapport à l’autre. Un graphique à nuage de points trace les valeurs des données provenant de deux colonnes numériques les unes par rapport aux autres. Chaque enregistrement de données devient un point sur le tracé. Le graphique représente le contenu d'une seule mémoire tampon.  
@@ -38,6 +38,6 @@ ms.locfileid: "48189019"
  [Configurer la visionneuse de données &#40;onglet grille&#41;](../../2014/integration-services/configure-data-viewer-grid-tab.md)   
  [Configurer la visionneuse de données &#40;onglet Histogramme&#41;](../../2014/integration-services/configure-data-viewer-histogram-tab.md)   
  [Flux de données](data-flow/data-flow.md)   
- [Débogage d’un flux de données](troubleshooting/debugging-data-flow.md)  
+ [Débogage d'un flux de données](troubleshooting/debugging-data-flow.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - WMI Connection Manager Editor
 ms.assetid: 0ef2c913-0779-4a07-989e-3361cd83170b
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3714264bceaf4ac334df96a054e933d6814904cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4851e8b989a161cef6cbb673a9c76a32f8afdeb8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121769"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378607"
 ---
 # <a name="wmi-connection-manager-editor"></a>Éditeur du gestionnaire de connexions WMI
   Utilisez la boîte de dialogue **Gestionnaire de connexions WMI** pour spécifier une connexion Microsoft Windows Management Instrumentation (WMI) à un serveur.  
@@ -53,8 +53,8 @@ ms.locfileid: "48121769"
  Testez les paramètres du gestionnaire de connexions.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Fournisseur WMI pour les Concepts de gestion de Configuration](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fournisseur WMI pour les concepts de gestion de configuration](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Fournisseur WMI pour les concepts des événements de serveur](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

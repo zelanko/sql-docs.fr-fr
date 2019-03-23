@@ -10,15 +10,15 @@ helpviewer_keywords:
 - components [Integration Services], connections
 - connections [Integration Services], data flow components
 ms.assetid: 70616a58-8921-4218-85bf-f3e90c5a9dbf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 14bbe37b0b13c9325c56bd0892a4b660c202c313
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796001"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390237"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Connecter des composants dans un flux de données
   Cette procédure décrit comment connecter la sortie de composants d'un flux de données à d'autres composants du même flux de données.  

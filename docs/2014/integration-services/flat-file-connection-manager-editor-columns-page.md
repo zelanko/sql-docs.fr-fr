@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Flat File Connection Manager Editor
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7aed741e639fe76fe1565c10e203e0871929863
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3dec5abe4cee6165b0bf9cecb99e26552b5854b3
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123879"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58374646"
 ---
 # <a name="flat-file-connection-manager-editor-columns-page"></a>Éditeur du gestionnaire de connexions de fichiers plats (page Colonnes)
   La page **Colonnes** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** vous permet de spécifier les informations de ligne et de colonne, ainsi que d'afficher un aperçu du fichier.  
@@ -40,7 +40,7 @@ ms.locfileid: "48123879"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des séparateurs de lignes disponibles ou entrez le texte du séparateur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
 |**{CR}**|Les lignes sont séparées par un retour chariot.|  
@@ -54,7 +54,7 @@ ms.locfileid: "48123879"
  **Délimiteur de colonne**  
  Effectuez une sélection dans la liste des séparateurs de colonnes disponibles ou entrez le texte du séparateur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les colonnes sont délimitées par une combinaison retour chariot-saut de ligne.|  
 |**{CR}**|Les colonnes sont séparées par un retour chariot.|  
@@ -101,7 +101,7 @@ ms.locfileid: "48123879"
  **Séparateur de lignes**  
  Effectuez une sélection dans la liste des séparateurs de lignes disponibles ou entrez le texte du séparateur.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**{CR}{LF}**|Les lignes sont séparées par une combinaison de retour chariot/saut de ligne.|  
 |**{CR}**|Les lignes sont séparées par un retour chariot.|  
@@ -116,9 +116,9 @@ ms.locfileid: "48123879"
  Cliquez sur **Réinitialiser les colonnes**pour supprimer toutes les colonnes à l’exception de celles d’origine.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur du Gestionnaire de connexions de fichiers plats &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur du Gestionnaire de connexions de fichiers plats &#40;Page avancé&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Avancé&#41;](../../2014/integration-services/flat-file-connection-manager-editor-advanced-page.md)   
  [Éditeur du gestionnaire de connexions de fichiers plats &#40;page Aperçu&#41;](../../2014/integration-services/flat-file-connection-manager-editor-preview-page.md)  
   
   

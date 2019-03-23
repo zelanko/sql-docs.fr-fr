@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - Sql12.dts.designer.odatasource.connection.f1
 ms.assetid: 20bcd347-4547-4fad-b182-9571030101df
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 98ec9c8960696a2a933d9c2358d35df32c716999
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 85ac46b918918f7e9dac715e11909ffeb9c46a29
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203969"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58390463"
 ---
 # <a name="odata-source-editor-connection-page"></a>Éditeur de source OData (page Connexion)
   La page **Connexion** de la boîte de dialogue **Éditeur de source OData** vous permet de sélectionner le gestionnaire de connexions OData pour la source OData. Cette page vous permet également de spécifier une collection ou un chemin d'accès de ressources et toutes les options de requête permettant de spécifier quelles données doivent être récupérées à partir de la source OData. Pour en savoir plus sur la source OData, consultez [Source OData](data-flow/odata-source.md).  
@@ -55,11 +55,11 @@ ms.locfileid: "48203969"
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Utilisez une collection ou un chemin d'accès de ressource = Resource Path.  
  **Resource path**  
- Type de chemin d'accès de ressource. Par exemple : Employees  
+ Type de chemin d'accès de ressource. Exemple : Employees  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Source OData &#40;Page colonnes&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
- [Éditeur de Source OData &#40;Page sortie d’erreur&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
- [Gestionnaire de connexions OData](connection-manager/odata-connection-manager.md)  
+ [Éditeur de source OData &#40;page Colonnes&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   
+ [Éditeur de source OData &#40;page Sortie d’erreur&#41;](../../2014/integration-services/odata-source-editor-error-output-page.md)   
+ [OData Connection Manager](connection-manager/odata-connection-manager.md)  
   
   
