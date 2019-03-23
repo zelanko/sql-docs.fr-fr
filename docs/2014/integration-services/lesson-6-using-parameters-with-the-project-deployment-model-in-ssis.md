@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9216f18c-1762-4f2d-8c22-bd0ab7107555
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 01bcc625a02814b0c6181cad1954eb11d961f023
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d559defe1dd08f26077738cdd0aea219e8f7554b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355371"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58384957"
 ---
 # <a name="lesson-6-using-parameters-with-the-project-deployment-model"></a>Leçon 6 : Utilisation des paramètres dans le modèle de déploiement de projet
   SQL Server 2012 introduit un nouveau modèle de déploiement qui permet de déployer vos projets sur le serveur Integration Services. Le serveur Integration Services vous permet de gérer et d'exécuter les packages, et de configurer leurs valeurs d'exécution.  
@@ -34,11 +34,11 @@ ms.locfileid: "53355371"
   
 1.  [Étape 1 : Copie du Package de la leçon 5](lesson-6-1-copying-the-lesson-5-package.md)  
   
-2.  [Étape 2 : Convertir le projet dans le modèle de déploiement de projet](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+2.  [Étape 2 : Convertir le projet dans le modèle de déploiement de projet](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
-3.  [Étape 3 : Test du Package de la leçon 6](lesson-6-3-testing-the-lesson-6-package.md)  
+3.  [Étape 3 : Test du Package de la leçon 6](lesson-6-3-testing-the-lesson-6-package.md)  
   
-4.  [Étape 4 : Déploiement du Package de la leçon 6](lesson-6-4-deploying-the-lesson-6-package.md)  
+4.  [Étape 4 : Déploiement du Package de la leçon 6](lesson-6-4-deploying-the-lesson-6-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
  [Étape 1 : Copie du Package de la leçon 5](lesson-6-1-copying-the-lesson-5-package.md)  

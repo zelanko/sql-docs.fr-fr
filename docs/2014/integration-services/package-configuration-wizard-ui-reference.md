@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.dts.configwizard.finishdtsconfiguration.f1
 - sql12.dts.configwizard.welcome.f1
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f984034b21680842bdb4813f4f8d9489edb0913b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 042f1146295d0a8358a7f89a38929a77e6f761a1
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160379"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376187"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Référence de l'interface utilisateur de l'Assistant Configuration de package
   **L’Assistant Configuration de package** vous permet de créer des configurations chargées de mettre à jour les propriétés d’un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ainsi que les objets qui s’y rattachent au moment de l’exécution. Cet Assistant s’exécute quand vous ajoutez une nouvelle configuration ou modifiez une configuration existante dans la boîte de dialogue **Bibliothèque des configurations du package** . Pour ouvrir la boîte de dialogue **Bibliothèque des configurations du package**, sélectionnez **Configurations du package** dans le menu **SSIS** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations, consultez [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48160379"
  **Type de configuration**  
  Sélectionnez le type de source dans lequel stocker la configuration, à l'aide des options suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Fichier de configuration XML**|Stocke la configuration sous forme de fichier XML. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Type de configuration**.|  
 |**Variable d'environnement**|Stocke la configuration dans une des variables d'environnement. Si cette valeur est sélectionnée, les options dynamiques s’affichent dans la section **Type de configuration**.|  
@@ -67,7 +67,7 @@ ms.locfileid: "48160379"
  **Spécifier directement les paramètres de configuration**  
  Permet de spécifier directement les paramètres.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Nom du fichier de configuration**|Tapez le chemin d'accès du fichier de configuration généré par l'Assistant.|  
 |**Parcourir**|La boîte de dialogue **Sélectionner l’emplacement du fichier de configuration** permet de spécifier le chemin d’accès au fichier de configuration généré par l’Assistant. Si le fichier n'existe pas, l'Assistant le crée.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48160379"
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d’environnement dans laquelle stocker la configuration.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable d'environnement**|Permet de sélectionner une variable d'environnement dans la liste.|  
   
@@ -87,14 +87,14 @@ ms.locfileid: "48160379"
  **Spécifier directement les paramètres de configuration**  
  Permet de spécifier directement les paramètres.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Entrée de Registre**|Tapez la clé de Registre qui contient les informations de configuration. Le format est \<clé de Registre>.<br /><br /> La clé de Registre doit déjà exister dans HKEY_CURRENT_USER et porter une valeur nommée Value. Cette valeur peut être de type DWORD ou une chaîne.<br /><br /> Si vous souhaitez utiliser une clé de Registre qui n’est pas à la racine de HKEY_CURRENT_USER, utilisez le format \<Clé de Registre\clé de Registre\\...> pour identifier la clé.|  
   
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d’environnement dans laquelle stocker la configuration.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable d'environnement**|Permet de sélectionner une variable d'environnement dans la liste.|  
   
@@ -102,14 +102,14 @@ ms.locfileid: "48160379"
  **Spécifier directement les paramètres de configuration**  
  Permet de spécifier directement les paramètres.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable parent**|Permet de spécifier la variable dans le package parent qui contient les informations de configuration.|  
   
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d’environnement dans laquelle stocker la configuration.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable d'environnement**|Permet de sélectionner une variable d'environnement dans la liste.|  
   
@@ -117,7 +117,7 @@ ms.locfileid: "48160379"
  **Spécifier directement les paramètres de configuration**  
  Permet de spécifier directement les paramètres.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Connexion**|Permet de sélectionner une connexion dans la liste ou de cliquer sur **Nouvelle** pour créer une connexion.|  
 |**Table de configuration**|Permet de sélectionner une table existante ou de cliquer sur **Nouvelle** pour écrire une instruction SQL qui crée une table.|  
@@ -126,7 +126,7 @@ ms.locfileid: "48160379"
  **L'emplacement de la configuration est stocké dans une variable d'environnement**  
  Permet de spécifier la variable d'environnement dans laquelle stocker la configuration.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variable d'environnement**|Permet de sélectionner une variable d'environnement dans la liste.|  
   

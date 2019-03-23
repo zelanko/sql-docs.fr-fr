@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.connectionstray.f1
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c2d2845c7414787d53fddced21de1abc3d9da51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6b336e2e1388457c1fbb6e845bc25eb67bd02c69
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203649"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58382177"
 ---
 # <a name="connection-managers-area"></a>Zone Gestionnaires de connexion
   Les packages utilisent des gestionnaires de connexion pour se connecter aux sources de données telles que les fichiers, les bases de données relationnelles et les serveurs.  

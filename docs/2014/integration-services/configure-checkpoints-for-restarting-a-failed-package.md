@@ -12,15 +12,15 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 9afffa5a-d803-4653-8afc-386453fc163f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9204220c7ea32c59f75785ad0b50fa050a47840f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 220440313f0a06efb4ad55156a41fee18c61ab62
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123399"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376677"
 ---
 # <a name="configure-checkpoints-for-restarting-a-failed-package"></a>Configurer des points de contrôle pour redémarrer un package ayant échoué
   Vous pouvez configurer les packages [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de sorte qu'ils redémarrent à partir d'un point d'arrêt au lieu de réexécuter l'ensemble du package. Pour ce faire, vous devez définir les propriétés des points de contrôle.  
@@ -46,7 +46,7 @@ ms.locfileid: "48123399"
         > [!IMPORTANT]  
         >  Une erreur se produit si le fichier de point d'arrêt n'est pas disponible.  
   
-    -   Sélectionnez `IfExists` pour redémarrer le package uniquement si le fichier de point de contrôle est disponible.  
+    -   Sélectionnez `IfExists` pour redémarrer le package uniquement si le fichier de point d'arrêt est disponible.  
   
 8.  Configurez les tâches et les conteneurs à partir desquels le package peut redémarrer.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "48123399"
     -   Affectez à la propriété FailPackageOnFailure `True` pour chaque tâche et conteneur sélectionnés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Redémarrer des packages à l’aide de points de contrôle](packages/restart-packages-by-using-checkpoints.md)  
+ [Redémarrer des packages à l'aide de points de contrôle](packages/restart-packages-by-using-checkpoints.md)  
   
   

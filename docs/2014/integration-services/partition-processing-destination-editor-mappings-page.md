@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Partition Processing Destination Editor
 ms.assetid: e75b766c-85ba-453e-9576-4a1a34f91ecc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b17a415b2ba28237453ac94f12f8706f6b4d7d20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: edcb36cc38ea1ca89ded11dd0ef4dadd3116c6a2
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212594"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379022"
 ---
 # <a name="partition-processing-destination-editor-mappings-page"></a>Éditeur de destination de traitement de partition (page Mappages)
   Utilisez la page **Mappages** de la boîte de dialogue **Éditeur de destination de traitement de partition** pour mapper des colonnes d'entrée sur des colonnes de partition.  
@@ -44,8 +44,8 @@ ms.locfileid: "48212594"
  Affiche chaque colonne de destination disponible, qu'elle soit mappée ou non.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Destination de traitement de partition &#40;Page Gestionnaire de connexions&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
- [Éditeur de Destination de traitement de partition &#40;Page avancé&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de destination de traitement de partition &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/partition-processing-destination-editor-connection-manager-page.md)   
+ [Éditeur de destination de traitement de partition &#40;page Avancé&#41;](../../2014/integration-services/partition-processing-destination-editor-advanced-page.md)  
   
   

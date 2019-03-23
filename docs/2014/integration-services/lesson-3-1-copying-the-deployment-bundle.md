@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cacb3c9e14e49ef4f755d9c19f3782aa62c69c9d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1d28a85e4dccaa6165d96046848513879998136f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375441"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58376497"
 ---
 # <a name="step-1-copying-the-deployment-bundle"></a>Étape 1 : Copie de l'application de déploiement
   Au cours de cette tâche, vous allez copier l'application de déploiement sur l'ordinateur de destination.  
@@ -33,7 +33,7 @@ ms.locfileid: "53375441"
 3.  Accédez au partage public sur lequel vous souhaitez copier le dossier sur l'ordinateur cible et cliquez sur **Coller**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Exécuter l’Assistant Installation de Package](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+ [Étape 2 : Exécuter l’Assistant Installation de Package](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
 ![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - scheduling packages [Integration Services]
 - SQL Server Agent [Integration Services]
 ms.assetid: ecf7a5f9-b8a7-47f1-9ac0-bac07cb89e31
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fe378671c1cb9b93ae8262869742c0b01a6d9cac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 7a4b9cd5eaad7b51f7cc3d2a0c73bea3f23fd542
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369931"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58383888"
 ---
 # <a name="sql-server-agent-jobs-for-packages"></a>Travaux de l'Agent SQL Server pour les packages
   Automatisez et planifiez l’exécution des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] à l’aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Vous pouvez planifier les packages qui sont déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et sont stockés dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  
@@ -54,14 +54,14 @@ ms.locfileid: "53369931"
   
  Pour plus d’informations, consultez [Planifier un package à l’aide de SQL Server Agent](../schedule-a-package-by-using-sql-server-agent.md).  
   
- Pour obtenir une vidéo qui montre comment utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent pour exécuter un package, consultez la page d’accueil vidéo [Comment : Automatiser l’exécution du Package à l’aide de l’Agent SQL Server (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), dans MSDN Library.  
+ Pour obtenir une vidéo qui montre comment utiliser l’agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter un package, consultez la page d’accueil vidéo [Guide pratique pour automatiser l’exécution du package à l’aide de SQL Server Agent (vidéo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) dans MSDN Library.  
   
 ##  <a name="trouble"></a> Dépannage  
  Une étape de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent peut ne pas démarrer un package même si le package est exécuté correctement dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et à partir de la ligne de commande. Ce problème est connu et plusieurs solutions sont recommandées. Pour plus d'informations, consultez les ressources ci-dessous.  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Article de la Base de connaissances intitulé [Un package SSIS n’est pas exécuté quand vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760)  
   
--   Vidéo, [résolution des problèmes : À l’aide de SQL Server Agent (vidéo liée à SQL Server) de l’exécution du package](https://go.microsoft.com/fwlink/?LinkId=141772), dans MSDN Library.  
+-   Vidéo, [Résolution des problèmes : exécution du package à l’aide de SQL Server Agent (vidéo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) dans MSDN Library.  
   
  Lorsqu'une étape de travail de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent démarre un package, l'exécution du package peut échouer ou le package peut s'exécuter correctement mais avec des résultats inattendus. Vous pouvez utiliser les outils suivants pour résoudre ces problèmes.  
   
@@ -95,9 +95,9 @@ ms.locfileid: "53369931"
   
 -   Article de la Base de connaissances intitulé [Un package SSIS n’est pas exécuté lorsque vous appelez le package SSIS à partir d’une étape de travail de SQL Server Agent](https://support.microsoft.com/kb/918760)sur le site web [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
--   Vidéo, [résolution des problèmes : À l’aide de SQL Server Agent (vidéo liée à SQL Server) de l’exécution du package](https://go.microsoft.com/fwlink/?LinkId=141772), dans la bibliothèque MSDN  
+-   Vidéo, [Résolution des problèmes : exécution du package à l’aide de SQL Server Agent (vidéo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141772) dans MSDN Library  
   
--   Vidéo, [Comment : Automatiser l’exécution du Package à l’aide de l’Agent SQL Server (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771), dans la bibliothèque MSDN  
+-   Vidéo, [Guide pratique pour automatiser l’exécution du package à l’aide de SQL Server Agent (vidéo de SQL Server)](https://go.microsoft.com/fwlink/?LinkId=141771) dans MSDN Library  
   
 -   Article technique intitulé [Checking SQL Server Agent jobs using Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=165675)sur mssqltips.com  
   

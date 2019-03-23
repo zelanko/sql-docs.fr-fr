@@ -8,15 +8,15 @@ ms.technology:
 - integration-services
 ms.topic: conceptual
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9b1bc021ba009ffe00805c0479a6fa9d91416d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: da763e2385c64a09279c9dd6ff537993c2cd6a30
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361791"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379071"
 ---
 # <a name="lesson-3-installing-packages"></a>Leçon 3 : Installation des packages
   Dans [leçon 2 : Création de l’application de déploiement](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md), vous avez créé un utilitaire de déploiement et créé l’application de déploiement qui contient les éléments que vous devez installer les packages sur un autre ordinateur. Vous avez vérifié également la liste de fichiers dans l'application de déploiement et examiné le contenu du fichier de manifeste créé lorsque vous avez créé l'utilitaire de déploiement.  
@@ -30,9 +30,9 @@ ms.locfileid: "53361791"
   
 -   [Étape 1 : Copie du Bundle de déploiement](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  
   
--   [Étape 2 : Exécuter l’Assistant Installation de Package](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+-   [Étape 2 : Exécuter l’Assistant Installation de Package](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
--   [Étape 3 : Test des Packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+-   [Étape 3 : Test des Packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
  [Étape 1 : Copie du Bundle de déploiement](../integration-services/lesson-3-1-copying-the-deployment-bundle.md)  

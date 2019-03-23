@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e362438b12c103dd6210766da888086da79df126
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1b59ebbf4bb56d23009351f4a8fb7f193a59fa66
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785461"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379372"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Créer et modifier un service de capture de données modifiées Oracle
   Vous créez et modifiez un service Windows de capture de données modifiées Oracle dans la console de configuration du service de capture de données modifiées.  
@@ -61,7 +61,7 @@ ms.locfileid: "52785461"
  **Authentification**  
  Sélectionnez l'une des options suivantes :  
   
--   **L’authentification Windows**: Si vous sélectionnez cette option, le service de capture de données modifiées Oracle se connecte à la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à l’aide de l’identité de compte de service. Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur un autre ordinateur, l'authentification Windows doit être utilisée avec les comptes de domaine.  
+-   **Authentification Windows** : Si vous sélectionnez cette option, le service de capture de données modifiées Oracle se connecte à la cible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance à l’aide de l’identité de compte de service. Si l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute sur un autre ordinateur, l'authentification Windows doit être utilisée avec les comptes de domaine.  
   
 -   **L’authentification SQL Server**: Si vous sélectionnez cette option, vous devez taper le **nom d’utilisateur** et **mot de passe** pour la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion que vous souhaitez utiliser. Le service de capture de données modifiées Oracle utilise ces informations d'identification lors de la connexion à l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible.  
   
