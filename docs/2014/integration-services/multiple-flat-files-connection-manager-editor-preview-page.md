@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multiple Flat Files Connection Manager Editor
 ms.assetid: 52ed1a97-2dbb-4ad8-89b5-4748103e89fa
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 397ba8b585b595878d4323e7a3523721c74b8163
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 410846777858b8c0923c544d33656e76b1199301
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083549"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58392057"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-preview-page"></a>Éditeur du gestionnaire de connexions de fichiers plats multiples (page Aperçu)
   La page **Aperçu** de la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats multiples** vous permet d’afficher le contenu du premier fichier source sélectionné, divisé en colonnes, telles que vous les avez définies.  
@@ -41,9 +41,9 @@ ms.locfileid: "48083549"
  Permet d'afficher les données d'exemple dans le premier fichier plat sélectionné, divisées en colonnes et en lignes à l'aide des options sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;Page colonnes&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
- [Éditeur du Gestionnaire de connexions de fichiers plats multiples &#40;Page avancé&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Colonnes&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-columns-page.md)   
+ [Éditeur du gestionnaire de connexions de fichiers plats multiples &#40;page Avancé&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)  
   
   

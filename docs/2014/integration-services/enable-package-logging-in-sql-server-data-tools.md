@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - logs [Integration Services], enabling
 ms.assetid: b69a8593-5bb0-4f04-87d2-f8e7bd7eb4fc
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2a93245b97bf7c6c382f533c6d6e317b399f9e54
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172499"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387017"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Activer la journalisation des packages dans les outils de données SQL Server
   Cette procédure décrit comment ajouter des journaux à un package, configurer la journalisation au niveau du package et enregistrer la configuration dans un fichier XML. Vous ne pouvez ajouter des journaux qu'au niveau du package, mais le package n'a pas besoin d'effectuer une journalisation pour activer la journalisation dans les conteneurs inclus dans ce package.  
@@ -48,7 +48,7 @@ ms.locfileid: "48172499"
   
     -   Pour les fichiers XML, utilisez un gestionnaire de connexions de fichiers.  
   
-5.  Répétez les étapes 3 et 4 pour chaque journal à utiliser dans le package.  
+5.  Répétez les étapes 3 et 4 pour chaque journal à utiliser dans le package.  
   
     > [!NOTE]  
     >  Un package peut utiliser plusieurs journaux du même type.  
@@ -69,7 +69,7 @@ ms.locfileid: "48172499"
 11. Pour enregistrer le package mis à jour, cliquez sur **Enregistrer les éléments sélectionnés** dans le menu **Fichier** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services &#40;SSIS&#41; journalisation](performance/integration-services-ssis-logging.md)   
+ [Journalisation Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)   
  [Journalisation Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
   
   

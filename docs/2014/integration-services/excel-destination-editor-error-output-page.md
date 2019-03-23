@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Excel Destination Editor
 ms.assetid: 72ae01cc-1774-4a36-9674-a0f2b2bf8c42
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7807d702a09fabce5c1aba6c6782e7379d540b8c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 32b587a81fbafd583e82a8f4af98f4b58077807d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125029"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387367"
 ---
 # <a name="excel-destination-editor-error-output-page"></a>Éditeur de destination Excel (page Sortie d'erreur)
   La page **Avancé** de la boîte de dialogue **Éditeur de destination Excel** vous permet de spécifier les options de gestion des erreurs.  
@@ -37,7 +37,7 @@ ms.locfileid: "48125029"
  **Erreur**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
@@ -52,9 +52,9 @@ ms.locfileid: "48125029"
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Destination Excel &#40;Page Gestionnaire de connexions&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
- [Éditeur de Destination Excel &#40;Page mappages&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de destination Excel &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/excel-destination-editor-connection-manager-page.md)   
+ [Éditeur de destination Excel &#40;page Mappages&#41;](../../2014/integration-services/excel-destination-editor-mappings-page.md)   
  [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](control-flow/foreach-loop-container.md)  
   
   

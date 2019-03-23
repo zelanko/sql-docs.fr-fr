@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Bulk Insert Task Editor
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 105c9b66e82c4c5dee12bbe8f54d60b960032a70
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8ef0cc4c24383abe3554b71cda7c462d54a924d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146319"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381048"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Éditeur de tâche d'insertion en bloc (page Options)
   Utilisez la page **Options** de la boîte de dialogue **Éditeur de tâche d'insertion en bloc** afin de définir les propriétés de l'opération d'insertion en bloc. La tâche d'insertion en bloc copie des volumes importants de données dans une table ou une vue [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -62,10 +62,10 @@ ms.locfileid: "48146319"
 >  Chaque ligne ne pouvant pas être importée par l'opération de chargement en masse est comptée comme une erreur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche d’insertion en bloc des &#40;Page Général&#41;](general-page-of-integration-services-designers-options.md)   
- [Éditeur de tâche d’insertion en bloc des &#40;Page de connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Page expressions](expressions/expressions-page.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche d’insertion en bloc &#40;page Général&#41;](general-page-of-integration-services-designers-options.md)   
+ [Éditeur de tâche d’insertion en bloc &#40;page Connexion&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
+ [Page Expressions](expressions/expressions-page.md)   
  [Flux de contrôle](control-flow/control-flow.md)  
   
   

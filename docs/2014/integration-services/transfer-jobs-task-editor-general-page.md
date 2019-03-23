@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs Task Editor
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7836d55463e653dcb6c1c3da2f26d969ca46bfe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 80a2f9703085019bdbc955f30a9f59b927d61217
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158399"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377827"
 ---
 # <a name="transfer-jobs-task-editor-general-page"></a>Éditeur de tâche de transfert de travaux (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert de travaux** pour donner un nom et une description à la tâche de transfert de travaux. Pour plus d'informations sur la tâche de transfert de travaux, consultez [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  
@@ -39,9 +39,9 @@ ms.locfileid: "48158399"
  Entrez une description de la tâche de transfert de travaux.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Tâches Integration Services](control-flow/integration-services-tasks.md)   
- [Éditeur de tâche de tâches de transfert &#40;Page des travaux&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
+ [Éditeur de tâche de transfert de travaux &#40;page Travaux&#41;](../../2014/integration-services/transfer-jobs-task-editor-jobs-page.md)   
  [Page Expressions](expressions/expressions-page.md)  
   
   

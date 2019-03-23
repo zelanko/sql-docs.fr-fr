@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: 186a9736-2554-40a0-9cb2-877a8db5fde8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2b0acde35830734d5b5cf344b36357dc766958dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 605a92e00b21d64679076fabcb41068b94921779
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112249"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386147"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Éditeur de transformation d'agrégation (onglet Avancé)
   L’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation d’agrégation** permet de définir les propriétés des composants, de spécifier des agrégations et de définir les propriétés des colonnes d’entrée et de sortie.  
@@ -36,7 +36,7 @@ ms.locfileid: "48112249"
  **Échelle de clé**  
  Permet de spécifier le nombre approximatif de clés attendu par l'agrégation (facultatif). La transformation utilise ces informations afin d'optimiser la taille initiale de son cache. Par défaut, la valeur de cette option est **Non spécifié**. Si les deux options **Échelle de clé** et **Nombre de clés** sont spécifiées, **Nombre de clés** est prioritaire.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Non spécifié|La propriété **KeyScale** n’est pas utilisée.|  
 |Faible|L’agrégation peut écrire environ 500 000 clés.|  
@@ -49,7 +49,7 @@ ms.locfileid: "48112249"
  **Échelle de nombre des valeurs distinctes**  
  Permet éventuellement de spécifier le nombre approximatif de valeurs distinctes que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si les deux options **Échelle de nombre des valeurs distinctes** et **Nombre de clés distinctes** sont spécifiées, **Nombre de clés distinctes** est prioritaire.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Non spécifié|La propriété CountDistinctScale n'est pas utilisée.|  
 |Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
@@ -63,8 +63,8 @@ ms.locfileid: "48112249"
  Utilisez une valeur comprise entre 1 et 100 afin de spécifier le pourcentage selon lequel la mémoire peut être étendue pendant l'agrégation. Par défaut, la valeur de cette option est **25 %**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Transformation d’agrégation &#40;onglet agrégations&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de transformation d’agrégation &#40;onglet Agrégations&#41;](../../2014/integration-services/aggregate-transformation-editor-aggregations-tab.md)   
  [Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

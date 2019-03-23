@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7f1616c2-2b4e-4010-be50-27d7b897403a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 87b0564ddd3fada522b70858341da4ab08c5092e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376064"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386087"
 ---
 # <a name="step-1-copying-the-lesson-1-package"></a>Étape 1 : Copie du Package de la leçon 1
   Dans cette tâche, vous allez créer une copie du package Lesson 1.dtsx que vous avez créé à la leçon 1. Si vous n’avez pas terminé la leçon 1, vous pouvez ajouter au projet le package final de la leçon 1 inclus avec le didacticiel, puis le copier à la place. Vous allez utiliser cette nouvelle copie tout au long de la leçon 2.  
@@ -61,6 +61,6 @@ ms.locfileid: "53376064"
 5.  Copiez et collez le package de la leçon 1 comme décrit aux étapes 3 à 8 de la procédure précédente.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Ajout et configuration du conteneur de boucles Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+ [Étape 2 : Ajout et configuration du conteneur de boucles Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
   

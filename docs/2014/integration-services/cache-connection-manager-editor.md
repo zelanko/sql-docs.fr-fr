@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.cacheconnection.f1
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b9ede014f68d06f84132664ee3f4e1413f715e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130829"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385047"
 ---
 # <a name="cache-connection-manager-editor"></a>Éditeur du gestionnaire de connexions du cache
   Le gestionnaire de connexions du cache lit un dataset de référence à partir de la transformation de cache ou d'un fichier cache (.caw) et peut enregistrer les données dans un fichier cache. Les données sont toujours stockées en mémoire.  
@@ -88,18 +88,18 @@ ms.locfileid: "48130829"
  Spécifiez le type de données de la colonne.  
   
  `Length`  
- Indique le type de données de la colonne. Si le type de données, vous pouvez mettre à jour `Length`.  
+ Indique le type de données de la colonne. Si le type de données le permet, vous pouvez mettre à jour `Length`.  
   
  `Precision`  
- Spécifie la précision pour certains types de données de colonne. La précision est le nombre de chiffres qui composent un nombre. Si le type de données, vous pouvez mettre à jour `Precision`.  
+ Spécifie la précision pour certains types de données de colonne. La précision est le nombre de chiffres qui composent un nombre. Si le type de données le permet, vous pouvez mettre à jour `Precision`.  
   
  `Scale`  
- Spécifie l'échelle pour certains types de données de colonne. L'échelle est le nombre de chiffres à droite du séparateur décimal dans un nombre. Si le type de données, vous pouvez mettre à jour `Scale`.  
+ Spécifie l'échelle pour certains types de données de colonne. L'échelle est le nombre de chiffres à droite du séparateur décimal dans un nombre. Si le type de données le permet, vous pouvez mettre à jour `Scale`.  
   
  `Code Page`  
- Spécifie la page de codes pour le type de colonne. Si le type de données, vous pouvez mettre à jour `Code Page`.  
+ Spécifie la page de codes pour le type de colonne. Si le type de données le permet, vous pouvez mettre à jour `Code Page`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Transformation de recherche](data-flow/transformations/lookup-transformation.md)  
+ [Lookup Transformation](data-flow/transformations/lookup-transformation.md)  
   
   

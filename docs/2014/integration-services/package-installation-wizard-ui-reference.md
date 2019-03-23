@@ -19,20 +19,20 @@ f1_keywords:
 helpviewer_keywords:
 - Package Installer Wizard
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 000207f277cd0c54428cdc81b16027b7efa3aa3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129629"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380187"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Référence de l'interface utilisateur de l'Assistant Installation de package
   **L’Assistant Installation de package** permet de déployer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], dont les packages et les divers fichiers qu’il contient, ainsi que les dépendances de package éventuelles.  
   
- Avant de déployer des packages, vous pouvez créer des configurations, puis déployer ces dernières avec les packages. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise les configurations pour mettre à jour dynamiquement les propriétés des packages et les objets de package au moment de l'exécution. Par exemple, il est possible de définir dynamiquement à l'exécution la chaîne de connexion d'une connexion OLE DB en fournissant une configuration qui mappe une valeur avec la propriété contenant la chaîne de connexion.  
+ Avant de déployer des packages, vous pouvez créer des configurations, puis déployer ces dernières avec les packages. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] utilise les configurations pour mettre à jour dynamiquement les propriétés des packages et les objets de package au moment de l’exécution. Par exemple, il est possible de définir dynamiquement à l'exécution la chaîne de connexion d'une connexion OLE DB en fournissant une configuration qui mappe une valeur avec la propriété contenant la chaîne de connexion.  
   
  Vous ne pouvez pas exécuter l'Assistant Installation de package tant que vous n'avez pas généré un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et créé un utilitaire de déploiement. Pour plus d’informations, consultez [Déployer des packages à l’aide de l’utilitaire de déploiement](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48129629"
  **Fichier de configuration**  
  Modifie le contenu d'un fichier de configuration sélectionné dans la liste.  
   
- **Rubriques connexes :** [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)  
+ **Rubriques connexes :** [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md)  
   
  **Chemin d'accès**  
  Affiche le chemin d'accès de la propriété à configurer.  
@@ -152,7 +152,7 @@ ms.locfileid: "48129629"
  Pour sélectionner le dossier dans la boîte de dialogue **Package SSIS** , cliquez sur Parcourir (...). La boîte de dialogue ne fournit toutefois pas de moyen de sélectionner le dossier par défaut. Si vous souhaitez utiliser le dossier par défaut, vous devez entrer « / » dans la zone de texte.  
   
 > [!NOTE]  
->  Si vous n'entrez pas de chemin d'accès de package valide, le message d'erreur suivant apparaît : « Un ou plusieurs arguments ne sont pas valides ».  
+>  Si vous n’entrez pas de chemin de package valide, le message d’erreur suivant apparaît : « Un ou plusieurs arguments ne sont pas valides ».  
   
  **Se fier au serveur pour le chiffrement**  
  Permet d’utiliser les fonctionnalités de sécurité du [!INCLUDE[ssDE](../includes/ssde-md.md)] pour sécuriser les packages.  

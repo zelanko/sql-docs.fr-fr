@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Aggregate Transformation Editor
 ms.assetid: a01cb124-ec79-4673-b1a1-bf4d60ee1b45
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aaf14095eab05110845178f4115fc87ea19947a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: db633e9afa480d03b31cf02a84db2813b1e30516
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224459"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378032"
 ---
 # <a name="aggregate-transformation-editor-aggregations-tab"></a>Éditeur de transformation d'agrégation (onglet Agrégations)
   Utilisez l’onglet **Agrégations** de la boîte de dialogue **Éditeur de transformation d’agrégation** pour spécifier les colonnes destinées à l’agrégation et les propriétés de cette agrégation. Vous pouvez appliquer plusieurs agrégations. Ce type de transformation ne génère pas d'erreur de sortie.  
@@ -45,7 +45,7 @@ ms.locfileid: "48224459"
  **Échelle de clé**  
  Dans l'écran Avancé, permet de spécifier aussi éventuellement le nombre de clés adéquat que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si la valeur des propriétés **Échelle de clé** et **Clés** sont toutes deux définies, c’est celle de la propriété **Clés** qui prévaut.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Non spécifié|La propriété Échelle de clé n'est pas utilisée.|  
 |Faible|L’agrégation peut écrire environ 500 000 clés.|  
@@ -72,7 +72,7 @@ ms.locfileid: "48224459"
 |**GroupBy**|Divise les datasets en groupes. Les colonnes incluant tout type de données peuvent être utilisées pour le regroupement. Pour plus d'informations, consultez GROUP BY.|  
 |**Sum**|Additionne les valeurs dans une colonne. Seules les colonnes dont les données sont numériques peuvent être additionnées. Pour plus d'informations, consultez SUM.|  
 |**Moyenne**|Retourne la moyenne des valeurs d'une colonne. La moyenne ne peut être calculée que sur les colonnes dont les données sont numériques. Pour plus d'informations, consultez AVG.|  
-|**Count**|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d'informations, consultez COUNT.|  
+|**Compter**|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d'informations, consultez COUNT.|  
 |**CountDistinct**|Retourne le nombre de valeurs non NULL uniques d'un groupe. Pour plus d'informations, consultez COUNT et Distinct.|  
 |**Minimum**|Renvoie la valeur minimale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
 |**Maximum**|Renvoie la valeur maximale figurant dans un groupe. Cette opération se restreint aux données numériques.|  
@@ -83,9 +83,9 @@ ms.locfileid: "48224459"
  **Count Distinct Scale**  
  Permet éventuellement de spécifier le nombre approximatif de valeurs distinctes que l'agrégation peut écrire. Par défaut, la valeur de cette option est **Non spécifié**. Si les deux `CountDistinctScale` et **CountDistinctKeys** sont spécifiés, **CountDistinctKeys** est prioritaire.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|Non spécifié|Le `CountDistinctScale` propriété n’est pas utilisée.|  
+|Non spécifié|La propriété `CountDistinctScale` n'est pas utilisée.|  
 |Faible|L'agrégation peut écrire environ 500 000 valeurs distinctes.|  
 |Moyenne|L’agrégation peut écrire environ 5 000 000 de valeurs distinctes.|  
 |Élevée|L'agrégation peut écrire plus de 25 000 000 valeurs distinctes.|  
@@ -94,8 +94,8 @@ ms.locfileid: "48224459"
  Permet de spécifier éventuellement le nombre exact de valeurs distinctes que l'agrégation peut écrire. Si les deux `CountDistinctScale` et **CountDistinctKeys** sont spécifiés, **CountDistinctKeys** est prioritaire.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Transformation d’agrégation &#40;onglet Avancé&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de transformation d’agrégation &#40;onglet Avancé&#41;](../../2014/integration-services/aggregate-transformation-editor-advanced-tab.md)   
  [Agréger les valeurs dans un dataset à l'aide de la transformation d'agrégation](data-flow/transformations/aggregate-values-in-a-dataset-by-using-the-aggregate-transformation.md)  
   
   

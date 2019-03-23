@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Derived Column Transformation Editor
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cfeb30098a0c82f1e494575db04de639cc8401c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 947933540c992b063e88db01c6f84663483dd113
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075319"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58386677"
 ---
 # <a name="derived-column-transformation-editor"></a>Éditeur de transformation de colonne dérivée
   Utilisez la boîte de dialogue **Éditeur de transformation de colonne dérivée** pour créer des expressions qui remplissent de nouvelles colonnes ou des colonnes de remplacement.  
@@ -45,7 +45,7 @@ ms.locfileid: "48075319"
   
  Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.  
   
- **Rubriques connexes :** [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;expression SSIS&#41;](expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](expressions/functions-ssis-expression.md)  
+ **Rubriques connexes**: [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [opérateurs &#40;SSIS Expression&#41;](expressions/operators-ssis-expression.md), et [fonctions &#40;SSIS Expression&#41;](expressions/functions-ssis-expression.md)  
   
  **Type de données**  
  Si vous ajoutez des données à une nouvelle colonne, la boîte de dialogue **Éditeur de transformation de colonne dérivée** évalue automatiquement l’expression et définit correctement le type de données. La valeur de cette colonne est en lecture seule. Pour plus d’informations, consultez [Types de données Integration Services](data-flow/integration-services-data-types.md).  
@@ -66,7 +66,7 @@ ms.locfileid: "48075319"
  Spécifiez comment gérer les erreurs dans la boîte de dialogue [Configurer la sortie d’erreur](../../2014/integration-services/configure-error-output.md) .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Dériver les valeurs de colonnes à l’aide de la transformation de colonne dérivée](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Dériver les valeurs de colonnes à l'aide de la transformation de colonne dérivée](data-flow/transformations/derive-column-values-by-using-the-derived-column-transformation.md)  
   
   

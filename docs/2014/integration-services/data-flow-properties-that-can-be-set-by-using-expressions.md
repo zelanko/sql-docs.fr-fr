@@ -17,22 +17,22 @@ helpviewer_keywords:
 - SSIS packages, property expressions
 - property expressions [Integration Services]
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d561840bfe2c10d7b269bb952b934d22dd957d32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2fd6b938d13e880f7ec8d48d3e4ca9665ee9cd65
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135199"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58378597"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Propriétés du flux de données pouvant être définies à l’aide d’expressions
   Les valeurs de certaines propriétés d'objets de flux de données peuvent être spécifiées à l'aide d'expressions de propriété disponibles sur le conteneur de tâche de flux de données.  
   
  Pour plus d’informations sur l’utilisation d’expressions de propriété, consultez [Expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md).  
   
- Vous pouvez utiliser des expressions de propriété pour personnaliser les configurations de chaque instance déployée d'un package. Vous pouvez également utiliser des expressions de propriété pour spécifier des contraintes d’exécution pour un package à l’aide de l’option **/set** avec l’utilitaire d’invite de commandes **dtexec** . Par exemple, vous pouvez contraindre le `MaximumThreads` utilisé par la transformation de tri ou la `MaxMemoryUsage` des transformations de regroupement probable et de recherche floue. Si elles sont libres, ces transformations peuvent mettre en cache de grandes quantités de données en mémoire.  
+ Vous pouvez utiliser des expressions de propriété pour personnaliser les configurations de chaque instance déployée d'un package. Vous pouvez également utiliser des expressions de propriété pour spécifier des contraintes d’exécution pour un package à l’aide de l’option **/set** avec l’utilitaire d’invite de commandes **dtexec** . Par exemple, vous pouvez limiter le nombre maximal de threads (`MaximumThreads`) utilisés par la transformation de tri ou l'utilisation `MaxMemoryUsage` des transformations de regroupement probable et de recherche floue. Si elles sont libres, ces transformations peuvent mettre en cache de grandes quantités de données en mémoire.  
   
  Pour spécifier une expression de propriété pour une des propriétés d’objets de flux de données répertoriées dans cette rubrique, affichez la fenêtre **Propriétés** pour la tâche de flux de données en la sélectionnant sur l’aire **Flux de contrôle** du concepteur ou en sélectionnant l’onglet **Flux de données** du concepteur sans sélectionner de composant ou de chemin individuel. Sélectionnez la propriété **Expressions** , puis cliquez sur les points de suspension (...) pour afficher la boîte de dialogue de **l’Éditeur d’expressions de la propriété** . Déroulez la liste **Propriété** pour sélectionner une propriété, puis entrez une expression dans la zone de texte **Expression** ou cliquez sur les points de suspension (...) pour afficher la boîte de dialogue **Générateur d’expressions** .  
   
@@ -82,7 +82,7 @@ ms.locfileid: "48135199"
  Article technique, [SSIS Expression Cheat Sheet](http://pragmaticworks.com/cheatsheet/), sur pragmaticworks.com  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utiliser des Expressions de propriété dans des Packages](expressions/use-property-expressions-in-packages.md)   
+ [Expressions de propriété dans des packages](expressions/use-property-expressions-in-packages.md)   
  [Propriétés communes](../../2014/integration-services/common-properties.md)   
  [Propriétés personnalisées de transformation](data-flow/transformations/transformation-custom-properties.md)   
  [Propriétés du chemin](../../2014/integration-services/path-properties.md)  

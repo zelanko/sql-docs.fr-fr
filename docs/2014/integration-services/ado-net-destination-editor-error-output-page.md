@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.adonetdest.erroroutput.f1
 ms.assetid: 1a56c3cf-fb6a-416d-a62c-bb19fe441ae5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ebae86f0973da25b47c86f1be66181bc7b26ff2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e8939bd266085dc34222184c624d3115d02c320d
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213439"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58380057"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>Éditeur de destination ADO NET (page Sortie d'erreur)
   Utilisez la page **Sortie d'erreur** de la boîte de dialogue **Éditeur de destination ADO NET** pour spécifier les options de gestion des erreurs.  
@@ -43,7 +43,7 @@ ms.locfileid: "48213439"
  **Erreur**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Non utilisé.  
@@ -58,7 +58,7 @@ ms.locfileid: "48213439"
  Appliquez l'option de gestion des erreurs aux cellules sélectionnées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Éditeur de Destination ADO NET &#40;Page Gestionnaire de connexions&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Éditeur de Destination ADO NET &#40;Page mappages&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [Éditeur de destination ADO NET &#40;page Gestionnaire de connexions&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
+ [Éditeur de destination ADO NET &#40;page Mappages&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

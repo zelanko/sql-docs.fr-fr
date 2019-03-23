@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Data Profile Viewer [Integration Services]
 - Data Profiling task [Integration Services], viewer
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b91e91d726123a057ba6aa8850633d4d3656354
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4806d8117e2c28a18fe1ba3252334fd5fa495849
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065139"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58377517"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Aide F1 de la Visionneuse du profil des données
   Utilisez la Visionneuse du profil des données pour afficher la sortie de la tâche de profilage des données.  
@@ -55,10 +55,10 @@ ms.locfileid: "48065139"
  Affiche la longueur maximale des valeurs de cette colonne.  
   
  **Ignorer les espaces de début**  
- Indique si ce profil a été calculé avec une `IgnoreLeadingSpaces` valeur True ou False. Cette propriété a été définie dans la page **Demandes de profil** de l’éditeur de tâche de profilage de données.  
+ Indique si ce profil a été calculé avec une valeur `IgnoreLeadingSpaces` True ou False. Cette propriété a été définie dans la page **Demandes de profil** de l’éditeur de tâche de profilage de données.  
   
  **Ignorez les espaces de fin**  
- Indique si ce profil a été calculé avec une `IgnoreTrailingSpaces` valeur True ou False. Cette propriété a été définie dans la page **Demandes de profil** de l’éditeur de tâche de profilage de données.  
+ Indique si ce profil a été calculé avec une valeur `IgnoreTrailingSpaces` True ou False. Cette propriété a été définie dans la page **Demandes de profil** de l’éditeur de tâche de profilage de données.  
   
  **Nombre de lignes**  
  Affiche le nombre de lignes présentes dans la table ou la vue.  
@@ -126,7 +126,7 @@ ms.locfileid: "48065139"
  **Valeur**  
  Affiche les valeurs distinctes trouvées dans la colonne profilée.  
   
- **Count**  
+ **Compter**  
  Affiche le nombre de lignes dans lesquelles la colonne profilée a la valeur affichée dans la colonne **Valeur** .  
   
  **Pourcentage**  
@@ -145,7 +145,7 @@ ms.locfileid: "48065139"
  **\<colonne1>, \<colonne2>, etc.**  
  Affiche les valeurs dupliquées qui ont été détectées dans la colonne profilée.  
   
- **Count**  
+ **Compter**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   
 ### <a name="profile-type--functional-dependency-profile"></a>Type de profil = Profil de dépendance fonctionnelle  
@@ -196,7 +196,7 @@ ms.locfileid: "48065139"
  **\<colonne1>, \<colonne2>, etc.**  
  Affiche les valeurs de la colonne ou des colonnes du sous-ensemble qui étaient introuvables dans la colonne ou les colonnes du sur-ensemble.  
   
- **Count**  
+ **Compter**  
  Affiche le nombre de lignes dans lesquelles la colonne spécifiée possède la valeur affichée dans la première colonne.  
   
 ## <a name="see-also"></a>Voir aussi  

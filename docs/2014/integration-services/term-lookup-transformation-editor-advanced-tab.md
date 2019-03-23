@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Term Lookup Transformation Editor
 ms.assetid: be3575dc-e79c-49f6-8243-ad270bce77d5
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0138c9b016b89f2e524ecffc025203e705f1f0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c8f5dd315e7a6a7122768d4ebc893d8d7ad5ec90
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189779"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387187"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Éditeur de transformation de recherche de terme (onglet Avancé).
   Utilisez l’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation de recherche de terme** pour spécifier si la recherche doit respecter la casse.  
@@ -35,9 +35,9 @@ ms.locfileid: "48189779"
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](../../2014/integration-services/configure-error-output.md) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de Transformation de recherche de terme &#40;onglet Table de référence&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
- [Éditeur de Transformation de recherche de terme &#40;onglet recherche de terme&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de transformation de recherche de terme &#40;onglet Table de référence&#41;](../../2014/integration-services/term-lookup-transformation-editor-reference-table-tab.md)   
+ [Éditeur de transformation de recherche de terme &#40;onglet Recherche de terme&#41;](../../2014/integration-services/term-lookup-transformation-editor-term-lookup-tab.md)   
  [Transformation d'extraction de terme](data-flow/transformations/term-extraction-transformation.md)  
   
   

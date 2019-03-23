@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9a77dd32-d8c2-4961-ad37-2a971f9d6043
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88ee64782479e0ffed967485372dea8eae775430
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362661"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385266"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Étape 2 : Ajout et configuration d'un Gestionnaire de connexions de fichiers plats
   Dans cette tâche, vous ajoutez un gestionnaire de connexions de fichiers plats au package que vous venez de créer. Un gestionnaire de connexions de fichiers plats permet à un package d'extraire des données d'un fichier plat. Grâce à ce Gestionnaire, vous pouvez spécifier le nom et l'emplacement du fichier, les paramètres régionaux et la page de codes et enfin, le format du fichier, y compris les séparateurs de colonnes, à appliquer lorsque le package extrait les données du fichier plat. Par ailleurs, vous pouvez spécifier manuellement le type de données pour les colonnes individuelles ou utiliser la boîte de dialogue **Suggérer les types de colonnes** pour mapper automatiquement les colonnes de données extraites aux types de données [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  
@@ -24,9 +24,9 @@ ms.locfileid: "53362661"
   
  Pour les besoins de ce didacticiel, vous allez configurer les propriétés suivantes dans votre gestionnaire de connexions de fichiers plats :  
   
--   **Noms de colonnes :** Car le fichier plat ne dispose pas de noms de colonnes, le Gestionnaire de connexions de fichiers plats crée des noms de colonnes par défaut. Ces noms par défaut ne servent pas à identifier ce que représente chaque colonne. Pour que ces noms par défaut soient plus significatifs, vous devez les remplacer par ceux qui correspondent à la table de faits dans laquelle les données du fichier plat doivent être chargées.  
+-   **Noms des colonnes :** Car le fichier plat ne dispose pas de noms de colonnes, le Gestionnaire de connexions de fichiers plats crée des noms de colonnes par défaut. Ces noms par défaut ne servent pas à identifier ce que représente chaque colonne. Pour que ces noms par défaut soient plus significatifs, vous devez les remplacer par ceux qui correspondent à la table de faits dans laquelle les données du fichier plat doivent être chargées.  
   
--   **Mappages de données :** Les mappages de types de données que vous spécifiez pour le Gestionnaire de connexions de fichiers plats seront utilisés par tous les composants de source de données fichier plat qui référencent le Gestionnaire de connexions. Vous pouvez choisir de mapper les types de données manuellement en utilisant le gestionnaire de connexions de fichiers plats ou bien d’utiliser la boîte de dialogue **Suggérer les types de colonnes** . Dans ce didacticiel, vous visualisez les mappages suggérés dans la boîte de dialogue **Suggérer les types de colonnes** , puis vous créez manuellement les mappages nécessaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
+-   **Mappages des données :** Les mappages de types de données que vous spécifiez pour le Gestionnaire de connexions de fichiers plats seront utilisés par tous les composants de source de données fichier plat qui référencent le Gestionnaire de connexions. Vous pouvez choisir de mapper les types de données manuellement en utilisant le gestionnaire de connexions de fichiers plats ou bien d’utiliser la boîte de dialogue **Suggérer les types de colonnes** . Dans ce didacticiel, vous visualisez les mappages suggérés dans la boîte de dialogue **Suggérer les types de colonnes** , puis vous créez manuellement les mappages nécessaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
   
  Le gestionnaire de connexions de fichiers plats fournit des informations de paramètres régionaux sur le fichier de données. Si votre ordinateur n’est pas configuré pour l’utilisation des paramètres régionaux Anglais (États-Unis), vous devez définir des propriétés supplémentaires dans la boîte de dialogue **Éditeur du gestionnaire de connexions de fichiers plats** .  
   
@@ -99,7 +99,7 @@ ms.locfileid: "53362661"
 4.  Cliquez sur **OK**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+ [Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flat File Connection Manager](connection-manager/file-connection-manager.md)   

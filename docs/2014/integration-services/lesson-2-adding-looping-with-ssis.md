@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 01f2ed61-1e5a-4ec6-b6a6-2bd070c64077
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1bb292712111a478260edc31a562ed7db4c0ac95
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361761"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385297"
 ---
 # <a name="lesson-2-adding-looping"></a>Leçon 2 : Ajout d'un bouclage
-  Dans [leçon 1 : Création du projet et le Package de base](lesson-1-create-a-project-and-basic-package-with-ssis.md), que vous avez créé un package qui extrait des données d’une source de fichier plat unique, transformé les données à l’aide de transformations de recherche et enfin de charger les données dans le **FactCurrency** table de faits de la **AdventureWorksDW2012** base de données exemple.  
+  Dans [Leçon 1 : Création du projet et le Package de base](lesson-1-create-a-project-and-basic-package-with-ssis.md), que vous avez créé un package qui extrait des données d’une source de fichier plat unique, transformé les données à l’aide de transformations de recherche et enfin de charger les données dans le **FactCurrency** table de faits de la **AdventureWorksDW2012** base de données exemple.  
   
  Toutefois, il est rare qu'un processus d'extraction, de transformation et de chargement (ETL, extract, transform, and load) utilise un seul fichier plat. Un processus ETL classique extrait généralement les données de plusieurs sources de fichiers plats. L'extraction des données à partir de plusieurs sources nécessite un flux de contrôle répétitif. L'une des fonctions les plus appréciées de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est la facilité avec laquelle vous pouvez ajouter une itération ou un bouclage aux packages.  
   
@@ -54,11 +54,11 @@ ms.locfileid: "53361761"
   
 -   [Étape 1 : Copie du Package de la leçon 1](lesson-2-1-copying-the-lesson-1-package.md)  
   
--   [Étape 2 : Ajout et configuration du conteneur de boucles Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
+-   [Étape 2 : Ajout et configuration du conteneur de boucles Foreach](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
--   [Étape 3 : Modification du Gestionnaire de connexions de fichiers plats](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
+-   [Étape 3 : Modification du Gestionnaire de connexions de fichiers plats](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Étape 4 : Test de la leçon 2 du Package du didacticiel](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Étape 4 : Test de la leçon 2 du Package du didacticiel](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
  [Étape 1 : Copie du Package de la leçon 1](lesson-2-1-copying-the-lesson-1-package.md)  

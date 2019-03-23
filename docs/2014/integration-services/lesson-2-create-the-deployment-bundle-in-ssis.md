@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ab17289d-c3d4-4a5e-b7f5-4fea8ae21707
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0824811762ff693a55fa67750be5a654f27ea5e7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375551"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58385399"
 ---
 # <a name="lesson-2-creating-the-deployment-bundle"></a>Leçon 2 : Création de l'application de déploiement
-  Dans [leçon 1 : Préparation à la création de l’application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), que vous avez créé le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projet intitulé didacticiel de déploiement, ajouté les packages et les fichiers de prise en charge pour le projet et implémenté les configurations dans des packages.  
+  Dans [Leçon 1 : Préparation à la création de l’application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), que vous avez créé le [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projet intitulé didacticiel de déploiement, ajouté les packages et les fichiers de prise en charge pour le projet et implémenté les configurations dans des packages.  
   
  Au cours de cette leçon, vous allez créer l'application de déploiement, celle-ci correspond à un dossier contenant les éléments nécessaires pour installer des packages sur un autre ordinateur. Cette application inclut un manifeste de déploiement, des copies des packages et des copies des fichiers de prise en charge issus du projet de de didacticiel de déploiement. Le manifeste de déploiement répertorie les packages, les fichiers divers et les configurations dans l'application de déploiement.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "53375551"
   
 -   [Étape 1 : Génération de l’utilitaire de déploiement](../integration-services/lesson-2-1-building-the-deployment-utility.md)  
   
--   [Étape 2 : Vérification du Bundle de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+-   [Étape 2 : Vérification du Bundle de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
  [Étape 1 : Génération de l’utilitaire de déploiement](../integration-services/lesson-2-1-building-the-deployment-utility.md)  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4bd91402-4e37-41de-ab78-8ca5a1948a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2bcc6c331908f33df3b324ff7061b38065e36981
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: b4458f8fe198ba3d052bcb21bef38975738b2c23
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360884"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381227"
 ---
 # <a name="step-1-copying-the-lesson-2-package"></a>Étape 1 : Copie de la leçon 2 du Package
   Dans cette tâche, vous allez créer une copie du package Lesson 2.dtsx que vous avez créé à la leçon 2. Vous pouvez également ajouter au projet le package final de la leçon 2 fourni avec le didacticiel, puis le copier à la place. Vous utiliserez cette nouvelle copie tout au long de la leçon 3.  
@@ -61,6 +61,6 @@ ms.locfileid: "53360884"
 5.  Copiez et collez le package de la leçon 3 selon les étapes 3 à 8 décrites dans la procédure précédente.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Ajout et configuration de journalisation](lesson-3-2-adding-and-configuring-logging.md)  
+ [Étape 2 : Ajout et configuration de journalisation](lesson-3-2-adding-and-configuring-logging.md)  
   
   

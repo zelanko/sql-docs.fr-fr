@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Multicast Transformation Editor
 ms.assetid: 96155ed9-6597-4fe1-8f9f-b741b18ba2c1
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 67f2c28710f44fc3e23958706c521065b7e1f0f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c6d104be53fa742494a3f7dca759df4105e32874
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207759"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58379087"
 ---
 # <a name="multicast-transformation-editor"></a>Éditeur de transformation de multidiffusion
   Utilisez la boîte de dialogue **Éditeur de transformation de multidiffusion** pour afficher et définir les propriétés de la transformation propre à chaque sortie.  
@@ -35,7 +35,7 @@ ms.locfileid: "48207759"
  Toutes les propriétés de sortie répertoriées sont en lecture seule à l’exception des propriétés **Nom** et **Description**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformation de fractionnement conditionnel](data-flow/transformations/conditional-split-transformation.md)  
   
   

@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Mining Query Task Editor
 ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cb49325f8ead610840b8d14213ccbf630813daf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 722f7990076882f5f9c3db29fdeb165728f5fc48
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114389"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58387337"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>Éditeur de tâche de requête d'exploration de données (onglet Modèle d'exploration de données)
   Utilisez l’onglet **Modèle d’exploration de données** de la boîte de dialogue **Tâche de requête d’exploration de données** pour spécifier la structure et le modèle d’exploration de données à utiliser.  
@@ -41,12 +41,12 @@ ms.locfileid: "48114389"
  **Connexion**  
  Choisissez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans la liste ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :**  [Gestionnaire de connexions Analysis Services](connection-manager/analysis-services-connection-manager.md)  
+ **Rubriques connexes :**  [Gestionnaire de connexions Analysis Services](connection-manager/analysis-services-connection-manager.md)  
   
  **Nouveau**  
  Créez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- **Rubriques connexes :** [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Rubriques connexes :** [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Structure d'exploration de données**  
  Sélectionnez une structure d'exploration de données dans la liste.  
@@ -55,9 +55,9 @@ ms.locfileid: "48114389"
  Sélectionnez un modèle d'exploration de données qui repose sur la structure sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Integration Services Error and Message Reference](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Éditeur de tâche de requête d’exploration de données données &#40;onglet requête&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [Éditeur de tâche de requête d’exploration de données données &#40;onglet sortie&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [Concepteur d’exploration de données](../analysis-services/data-mining/data-mining-designer.md)  
+ [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Éditeur de tâche de requête d’exploration de données &#40;onglet Requête&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
+ [Éditeur de tâche de requête d’exploration de données &#40;onglet Sortie&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
+ [Concepteur d'exploration de données](../analysis-services/data-mining/data-mining-designer.md)  
   
   
