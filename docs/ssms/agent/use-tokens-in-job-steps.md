@@ -18,12 +18,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 0efaf8bd3fb62aa673adbb91281e365882d283bd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 05e88dd8ce75875b44248916cd7bdb238f621e13
+ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205388"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58342880"
 ---
 # <a name="use-tokens-in-job-steps"></a>Utiliser des jetons dans les étapes d'un travail
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -33,10 +33,6 @@ ms.locfileid: "53205388"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent vous permet d’utiliser des jetons dans des scripts d’étape de travail [!INCLUDE[tsql](../../includes/tsql-md.md)] . Ces jetons avec lesquels vous rédigez des étapes de travail vous offrent la même flexibilité que les variables lors de l'écriture de programmes logiciels. Après que vous avez inséré un jeton dans un script d'étape de travail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent le remplace au moment de l'exécution avant que le sous-système [!INCLUDE[tsql](../../includes/tsql-md.md)] n'exécute l'étape de travail.  
   
-> [!IMPORTANT]
-> Depuis le Service Pack 1 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] , la syntaxe des jetons d'étape de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent a changé. Une macro d'échappement doit désormais accompagner tous les jetons employés dans les étapes de travail, sans quoi ces dernières échoueront. L’emploi de macros d’échappement et la mise à jour de vos étapes de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilisant des jetons sont abordés dans les sections « Utilisation de jetons », « Jetons et macros [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent » et « Mise à jour des étapes de travail pour l’utilisation de macros » ci-après. De plus, la syntaxe [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] qui faisait usage de crochets pour identifier des jetons d'étape de travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent (par exemple, «`[DATE]`») a également changé. Vous devez désormais mettre les noms de jeton entre parenthèses et placer un signe dollar (`$`) au début de la syntaxe du jeton. Exemple :  
-> 
-> `$(ESCAPE_`*macro name*`(DATE))`  
   
 ## <a name="understanding-using-tokens"></a>Utilisation de jetons  
   
@@ -101,10 +97,6 @@ Les tableaux suivants répertorient et décrivent les jetons et les macros pris 
 |**$(ESCAPE_NONE(**_nom\_jeton_**))**|Remplace le jeton sans interpréter de caractères comme caractères d'échappement dans la chaîne. La macro est fournie pour des raisons de prise en charge de la compatibilité descendante dans des environnements où l'usage de chaînes de remplacement de jetons est généralement réservé à des utilisateurs approuvés. Pour plus d'informations, consultez la section « Mise à jour des étapes de travail pour l'utilisation de macros » plus loin dans cette rubrique.|  
   
 ## <a name="updating-job-steps-to-use-macros"></a>Mise à jour des étapes de travail pour l'utilisation de macros  
-Depuis [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 1, les étapes de travail munies de jetons sans macros d'échappement échouent et retournent un message d'erreur indiquant que l'étape de travail contenant un ou plusieurs jetons doit être mise à jour à l'aide d'une macro avant l'exécution du travail.  
-  
-Un script est fourni avec l’article 915845 de la Base de connaissances [!INCLUDE[msCoName](../../includes/msconame_md.md)] : [Les étapes de travail de SQL Server Agent qui utilisent des jetons échouent dans SQL Server 2005 Service Pack 1](https://support.microsoft.com/kb/915845). Vous pouvez utiliser ce script pour mettre à jour toutes vos étapes de travail utilisant des jetons avec la macro **ESCAPE_NONE**. Après avoir appliqué ce script, nous vous recommandons de passer en revue vos étapes de travail qui utilisent des jetons le plus tôt possible, puis de remplacer la macro **ESCAPE_NONE** par une macro d’échappement adaptée au contexte de vos étapes de travail.  
-  
 La table suivante décrit comment le remplacement des jetons est contrôlé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. Pour activer/désactiver le remplacement des jetons, cliquez avec le bouton droit sur **SQL Server Agent** dans l’Explorateur d’objets, sélectionnez **Propriétés**, puis dans la page **Système d’alerte** , cochez ou décochez la case **Remplacer les jetons pour toutes les réponses de travaux aux alertes** .  
   
 |Syntaxe des jetons|Remplacement de jetons d'alerte activé|Remplacement de jetons d'alerte désactivé|  

@@ -11,12 +11,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1d74f0569e2add7d9c8b72a86871540bef146f5e
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: cc09ccfbf23e200f8771b84d40fb5a1dd3d1dc9c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579639"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306107"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>Notes de publication de SQL Server 2012 Service Pack
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ Utilisez le tableau suivant pour identifier l'emplacement et le nom du fichier �
 
 ### <a name="download-pages"></a>Pages de téléchargement  
 - [SQL Server 2012 SP1 Feature Pack](https://go.microsoft.com/fwlink/p/?LinkID=268158)
-- [SQL Server Express 2012 SP1](https://go.microsoft.com/fwlink/p/?LinkID=26815)
+- [SQL Server Express 2012 SP1](https://www.microsoft.com/download/details.aspx?id=35579)
 
 
 Utilisez le tableau suivant pour déterminer le fichier à télécharger et installer. Vérifiez que vous disposez de la configuration requise avant d'installer le Service Pack. La configuration requise est disponible sur les pages de téléchargement liées dans le tableau.  
