@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Precedence Constraint Editor dialog box
 - precedence constraints [Integration Services], properties
 ms.assetid: d990f600-5c09-4cd5-8528-0a58d79dc9f2
-author: douglaslms
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82d10d177de353736336d8cebd0a9a171ae4e9c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8b0c8d2eec40078e58b80170b37c4885b72ad2b8
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140650"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58388117"
 ---
 # <a name="set-the-properties-of-a-precedence-constraint"></a>Définir les propriétés d'une contrainte de précédence
   Pour définir des propriétés sur des contraintes de précédence, vous pouvez utiliser l'un des outils suivants :  
@@ -73,9 +73,9 @@ ms.locfileid: "48140650"
     |EvalOp|Sélectionnez une opération d'évaluation. Si le `Expression`, **ExpressionAndConstant**, ou **ExpressionOrConstant** opération est sélectionnée, vous pouvez spécifier une expression.|  
     |Expression|Si l'opération d'évaluation inclut une expression, fournissez une expression. L'expression doit prendre une valeur de type Boolean. Pour plus d’informations sur le langage des expressions, consultez [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Définir `LogicalAnd` pour spécifier si la contrainte de précédence est évaluée en accord avec les autres contraintes de précédence, lorsque plusieurs exécutables précèdent et sont liés à l’exécutable contraint|  
-    |Nom   |Mettez à jour le nom de la contrainte de précédence.|  
+    |Créer une vue d’abonnement|Mettez à jour le nom de la contrainte de précédence.|  
     |ShowAnnotation|Spécifiez le type d'annotation à utiliser. Sélectionnez **Never** pour désactiver les annotations, **AsNeeded** pour activer l’annotation à la demande, **ConstraintName** pour annoter automatiquement en utilisant la valeur de la propriété Name, **ConstraintDescription** pour annoter automatiquement en utilisant la valeur de la propriété Description et **ConstraintOptions** pour annoter automatiquement en utilisant les valeurs des propriétés Value et Expression.|  
-    |Valeur|Si l’opération d’évaluation spécifiée dans la propriété EvalOP inclut une contrainte, sélectionnez le résultat d’exécution de l’exécutable de contrainte.|  
+    |Value|Si l’opération d’évaluation spécifiée dans la propriété EvalOP inclut une contrainte, sélectionnez le résultat d’exécution de l’exécutable de contrainte.|  
   
 5.  Fermez la fenêtre Propriétés.  
   

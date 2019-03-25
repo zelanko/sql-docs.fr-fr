@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.dts.designer.toolbox.F1
 - sql12.dts.designer.toolboxfavorites.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dec02ad946483f74b25a3b1ae514a20e1abc4523
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372011"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58381847"
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
   Tous les composants installés sur l’ordinateur local, y compris les composants tiers générés pour SQL Server 2008 et 2008 R2, apparaissent maintenant automatiquement dans la nouvelle **boîte à outils SSIS**. Lorsque vous installez des composants additionnels, cliquez avec le bouton droit dans la boîte à outils, puis cliquez sur **Boîte à outils Actualiser** pour ajouter les composants.  
@@ -31,7 +31,7 @@ ms.locfileid: "53372011"
   
  Dans la **boîte à outils SSIS**, le flux de contrôle et les composants de flux de données sont organisés en catégories.  Vous pouvez développer et réduire des catégories pour afficher et vous pouvez modifier l'organisation des composants en fonction de vos préférences.  Vous pouvez restaurer l’organisation par défaut en cliquant avec le bouton droit dans la boîte à outils, puis en cliquant sur **Restaurer les valeurs par défaut de la boîte à outils**.  
   
- Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories Autres transformations, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
+ Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories **Autres transformations**, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
   
  Lorsque vous créez un projet SSIS ou ouvrez un projet existant, la **boîte à outils SSIS** est automatiquement affichée. Vous pouvez également ouvrir la boîte à outils en cliquant sur le bouton de la boîte à outils situé dans l'angle supérieur droit de l'aire de conception du package.  
   
