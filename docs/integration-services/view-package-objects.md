@@ -17,15 +17,15 @@ helpviewer_keywords:
 - viewing package objects
 - SQL Server Integration Services packages, properties
 ms.assetid: a85c0245-0a68-4eb0-83b1-9b11df80bd10
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d25f5360e2582cb752dfdc5c92be928da437e06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 582d0a4475ba6e6c20198ffdf50dd2e776cad480
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664487"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283093"
 ---
 # <a name="view-package-objects"></a>Afficher des objets de packages
   Dans le concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] , l'onglet **Explorateur de package** fournit un aperçu du package. Cet affichage reflète la hiérarchie de conteneur de l'architecture [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Le conteneur de packages est situé en haut de la hiérarchie et vous pouvez développer le package pour afficher les connexions, les exécutables, les gestionnaires d'événements, les fournisseurs d'informations, les contraintes de précédence et les variables du package.  
@@ -63,7 +63,7 @@ ms.locfileid: "47664487"
  [Conteneurs Integration Services](../integration-services/control-flow/integration-services-containers.md)   
  [Contraintes de précédence](../integration-services/control-flow/precedence-constraints.md)   
  [Variables Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-variables.md)   
- [Gestionnaires d’événements Integration Services &#40;SSIS&#41](../integration-services/integration-services-ssis-event-handlers.md)   
+ [Gestionnaires d’événements Integration Services &#40;SSIS&#41;](../integration-services/integration-services-ssis-event-handlers.md)   
  [Journalisation Integration Services &#40;SSIS&#41;](../integration-services/performance/integration-services-ssis-logging.md)  
   
   

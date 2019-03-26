@@ -12,15 +12,15 @@ helpviewer_keywords:
 - sources [Integration Services], OLE DB
 - OLE DB source [Integration Services]
 ms.assetid: 4ca6eeb5-b60e-4b81-86dd-0674be8ae8d8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 25c9ff0ea58e4c6f2b8baf99516ed66f5186062d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd0adbfc5f2e7ea27a39758e81c0afaed0186123
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676727"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277169"
 ---
 # <a name="extract-data-by-using-the-ole-db-source"></a>Extraire des données à l'aide de la source OLE DB
   Pour pouvoir ajouter et configurer une source OLE DB, le package doit inclure au moins une tâche de flux de données.  
@@ -68,7 +68,7 @@ ms.locfileid: "47676727"
 ## <a name="see-also"></a> Voir aussi  
  [Source OLE DB](../../integration-services/data-flow/ole-db-source.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [Chemins d'accès d'Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
  [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
   
   

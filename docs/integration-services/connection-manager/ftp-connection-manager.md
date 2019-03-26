@@ -14,15 +14,15 @@ helpviewer_keywords:
 - connections [Integration Services], FTP
 - connection managers [Integration Services], FTP
 ms.assetid: c4f43455-29ca-44ba-ac7f-ea729b1daf93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7749ca5009a0334fe555a66dc2e06afa3278f922
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 20461216a802bde79005d7539ce2d09cd032c771
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653079"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290645"
 ---
 # <a name="ftp-connection-manager"></a>Gestionnaires de connexion FTP
   Un gestionnaire de connexions FTP permet à un package de se connecter à un serveur FTP (File Transfer Protocol). La tâche FTP incluse dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise ce gestionnaire de connexions.  

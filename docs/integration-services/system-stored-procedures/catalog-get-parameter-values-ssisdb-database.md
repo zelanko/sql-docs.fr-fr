@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f0307086f5dc8faa33801843cc20c2c375dc75c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca4dd356bb1cf9b4a5d9687a8758bfa8898bfa5f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765967"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282613"
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,14 +58,14 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
 |parameter_data_type|**nvarchar(128)**|Type de données du paramètre.|  
 |parameter_name|**sysname**|Nom du paramètre.|  
 |parameter_value|**sql_variant**|Valeur du paramètre.|  
-|sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
+| sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
 |required|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est obligatoire pour démarrer l'exécution. Lorsque la valeur est `0`, la valeur de paramètre n'est pas obligatoire pour démarrer l'exécution.|  
 |value_set|**bit**|Lorsque la valeur est `1`, la valeur de paramètre a été affectée. Lorsque la valeur est `0`, la valeur de paramètre n'a pas été affectée.|  
   
 > [!NOTE]  
 >  Les valeurs littérales sont affichées en texte en clair. **NULL** est affiché au lieu des valeurs sensibles.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ sur le projet et, si applicable, autorisations READ sur les environnements référencés  

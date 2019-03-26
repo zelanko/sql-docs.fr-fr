@@ -21,15 +21,15 @@ helpviewer_keywords:
 - custom data flow components [Integration Services], external metadata
 - external metadata [Integration Services]
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab4fa98f652b7e3bda9b29553cf5c7589d851a41
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce6b5ea32630a5dca08657150c2819d61c499813
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840317"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290355"
 ---
 # <a name="implementing-external-metadata"></a>Implémentation des métadonnées externes
   Lorsqu'un composant est déconnecté de sa source de données, vous pouvez valider les colonnes comprises dans les collections de colonnes d'entrée et de sortie par rapport aux colonnes de sa source de données externe en utilisant l'interface <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSExternalMetadataColumnCollection100>. Cette interface vous permet de conserver un instantané des colonnes à la source de données externe et de les mapper aux colonnes de la collection de colonnes d'entrée et de sortie du composant.  

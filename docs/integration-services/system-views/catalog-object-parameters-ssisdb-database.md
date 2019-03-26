@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: d7b04903-2d61-4159-9456-475942d1f732
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0afd8f494474c54eaf911f6cd7b8f74c9ec1a287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0488d886afdeaac9fe43da22d8a3e9d3c85ff8fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729557"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274748"
 ---
 # <a name="catalogobjectparameters-ssisdb-database"></a>catalog.object_parameters (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47729557"
 |parameter_name|**sysname(nvarchar(128))**|Nom du paramètre.|  
 |data_type|**nvarchar(128)**|Type de données du paramètre.|  
 |required|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est obligatoire pour démarrer l'exécution. Lorsque la valeur est `0`, la valeur de paramètre n'est pas obligatoire pour démarrer l'exécution.|  
-|sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
+| sensible|**bit**|Lorsque la valeur est `1`, la valeur de paramètre est sensible. Lorsque la valeur est `0`, la valeur de paramètre n'est pas sensible.|  
 |description|**nvarchar(1024)**|Description facultative du package.|  
 |design_default_value|**sql_variant**|Valeur par défaut du paramètre qui a été affecté pendant la conception du projet ou du package.|  
 |default_value|**sql_variant**|Valeur par défaut utilisée actuellement sur le serveur.|  
@@ -42,7 +42,7 @@ ms.locfileid: "47729557"
 |validation_status|**char(1)**|Identifié à titre d'information uniquement. Inutilisé dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |last_validation_time|**datetimeoffset(7)**|Identifié à titre d'information uniquement. Inutilisé dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour consulter des lignes dans cette vue, vous devez avoir l'une des autorisations suivantes :  
   
 -   Autorisation READ sur le projet  

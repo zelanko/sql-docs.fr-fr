@@ -22,15 +22,15 @@ helpviewer_keywords:
 - SSIS events, runtime
 - IDTSEvents interface
 ms.assetid: e0898aa1-e90c-4c4e-99d4-708a76efddfd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f454417b4def127a21888a42f1670cb3606a852a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 5241480a1c572085a2f931b22eb76eca9f207178
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640537"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281933"
 ---
 # <a name="raising-and-defining-events-in-a-custom-task"></a>Déclenchement et définition d'événements dans une tâche personnalisée
   Le moteur d’exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] propose une collection d’événements qui fournissent l’état d’avancement d’une tâche lors de sa validation et de son exécution. L'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> définit ces événements et elle est fournie aux tâches en tant que paramètre pour les méthodes <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> et <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A>.  

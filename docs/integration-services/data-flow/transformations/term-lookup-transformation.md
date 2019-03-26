@@ -21,15 +21,15 @@ helpviewer_keywords:
 - counting extracted items
 - Term Lookup transformation
 ms.assetid: 3c0fa2f8-cb6a-4371-b184-7447be001de1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9d3d52a5a1f63933bc383601a650bf8e044d22dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fc197ee015ac6ca35613bbb54dd48bbca67b2faa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522716"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290305"
 ---
 # <a name="term-lookup-transformation"></a>transformation de recherche de terme
   La transformation de recherche de terme met en correspondance des termes extraits de texte d'une colonne d'entrée de transformation avec les termes d'une table de référence. Elle compte ensuite le nombre de fois où un terme de la table de recherche apparaît dans le dataset d'entrée, puis écrit ce nombre et le terme de la table de référence dans les colonnes de la sortie de la transformation. Cette transformation est utile pour créer une liste personnalisée de termes reposant sur le texte d'entrée et complétée de statistiques de fréquence.  

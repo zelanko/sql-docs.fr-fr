@@ -14,15 +14,15 @@ helpviewer_keywords:
 - expressions [Integration Services], packages
 - SSIS packages, expressions
 ms.assetid: 26d2e242-7f60-4fa9-a70d-548a80eee667
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 315ce164146e7d08096b6e927400dc3507ea74e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d6bf32e59bd433ec0916568e8eb873724beac13b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523019"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290345"
 ---
 # <a name="integration-services-ssis-expressions"></a>Expressions Integration Services (SSIS)
   Une expression est une combinaison de symboles (identificateurs, littéraux, fonctions et opérateurs) qui génère une seule valeur de données. Les expressions simples peuvent être une constante unique, une variable ou une fonction. Généralement, les expressions sont complexes, car elles utilisent plusieurs opérateurs et fonctions, et référencent plusieurs colonnes et variables. Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez utiliser des expressions pour définir des conditions dans les instructions CASE, créer et mettre à jour des valeurs dans des colonnes de données, mettre à jour ou remplir des propriétés au moment de l’exécution, définir des contraintes dans des contraintes de précédence et fournir les expressions utilisées par le conteneur de boucles For.  

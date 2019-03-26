@@ -12,15 +12,15 @@ helpviewer_keywords:
 - evaluation order [Integration Services]
 - parentheses operator ()
 ms.assetid: 931e10eb-1707-4121-b2f1-43565561119f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 705dbabc07308d4e6112489d3d22a0354075fcad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99ab67a88006579d61ba4d084d37b60d5b80bd45
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595437"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276918"
 ---
 # <a name="-parentheses-ssis-expression"></a>() (Parenthèses) (expression SSIS)
   Identifie l'ordre d'évaluation des expressions. Les expressions entre parenthèses ont la priorité d'évaluation la plus élevée. L'évaluation des expressions imbriquées placées entre parenthèses commence par celle située le plus à l'intérieur, puis se poursuit jusqu'à celle située le plus à l'extérieur.  
@@ -40,7 +40,7 @@ ms.locfileid: "47595437"
  Toute expression valide.  
   
 ## <a name="result-types"></a>Types des résultats  
- Le type de données *expression*. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Le type de données *expression*. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
  Cet exemple illustre la façon dont l'utilisation des parenthèses modifie la priorité des opérateurs. La première expression totalise 100 tandis que la seconde cumule à 31.  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 45f5aacd-505a-443b-8fc2-c7929e78cff8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7b6a4442371e59ee3324b345bee644b377119d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ec7fbb111e1c5cbc8e98117d3cb3be5d2bebab30
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775387"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277878"
 ---
 # <a name="catalogenvironmentvariables-ssisdb-database"></a>catalog.environment_variables (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +30,13 @@ ms.locfileid: "47775387"
 |NAME|**sysname**|Nom de la variable d'environnement.|  
 |description|**nvarchar(1024)**|Description de la variable d'environnement.|  
 |Type|**nvarchar(128)**|Type de données de la variable d'environnement.|  
-|sensible|**bit**|Lorsque la valeur est `1`, la variable est sensible et est chiffrée lorsqu'elle est stockée. Lorsque la valeur est `0`, la variable n'est pas sensible et la valeur est stockée dans en texte en clair.|  
+| sensible|**bit**|Lorsque la valeur est `1`, la variable est sensible et est chiffrée lorsqu'elle est stockée. Lorsque la valeur est `0`, la variable n'est pas sensible et la valeur est stockée dans en texte en clair.|  
 |valeur|**sql_variant**|Valeur de la variable d'environnement. Quand sensitive est `0`, la valeur en texte en clair est indiquée. Quand sensitive est `1`, la valeur **NULL** s’affiche.|  
   
 ## <a name="remarks"></a>Notes   
  Cette vue affiche une ligne pour chaque variable d'environnement dans le catalogue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Autorisation READ sur l'environnement correspondant  

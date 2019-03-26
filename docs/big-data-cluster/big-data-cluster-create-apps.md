@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8f661acacf17a8977f437abdcefcd3763305229b
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 83dc07ed6336c637aaf17fdcfc1075854fe542b7
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222056"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434430"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Comment déployer une application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire)
 
@@ -137,6 +137,9 @@ Pour tester cela, copiez les lignes de code ci-dessus dans deux fichiers dans le
 ```bash
 mssqlctl app create --spec ./addpy
 ```
+
+> [!NOTE]
+> Le `spec.yaml` fichier spécifie à la fois un `poolsize` et un nombre de `replicas`. Le nombre de `replicas` Spécifie le nombre de copies du service doit être déployées. Le `poolsize` Spécifie le nombre de pools à créer par réplica. Ces paramètres ont un impact sur le nombre de demandes que le déploiement peut gérer en parallèle. Le nombre maximal de demandes à un moment donné est égal à `replicas` fois `poolsize`, c'est-à-dire Si vous avez 5 réplicas et 2 pools par réplica le déploiement peut gérer 10 requêtes en parallèle. Voir l’image ci-dessous pour obtenir une représentation graphique de `replicas` et `poolsize`: ![Taiile_pool et réplicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
 
 Vous pouvez vérifier si l’application est déployée à l’aide de la commande list :
 

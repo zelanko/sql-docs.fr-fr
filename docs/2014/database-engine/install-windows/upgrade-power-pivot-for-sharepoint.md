@@ -1,7 +1,7 @@
 ---
 title: Mettre à niveau PowerPivot pour SharePoint | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
+ms.date: 03/25/2019
 ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: ''
@@ -10,12 +10,12 @@ ms.assetid: 80ba9e43-f3f0-4730-9fb1-2afd2dd3e6fc
 author: Minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7e1459462b057dee39502805cc7746d7e0afa618
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
+ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366121"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58434500"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Mettre à niveau PowerPivot pour SharePoint
   Cette rubrique résume les étapes nécessaires pour mettre à niveau un déploiement de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vers [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Les étapes spécifiques dépendent de la version de SharePoint exécutée par votre environnement et incluent le complément PowerPivot pour SharePoint (**spPowerPivot.msi**).  
@@ -74,7 +74,7 @@ ms.locfileid: "53366121"
   
 2.  Redémarrez le serveur.  
   
-3.  Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) sur chaque serveur de la batterie SharePoint 2013 pour installer les fournisseurs de données. Les serveurs sur lesquels vous avez exécuté l'Assistant Installation de SQL Server, qui permet également la mise à niveau des fournisseurs de données, font exception. Pour plus d’informations, consultez [télécharger Microsoft SQL Server 2014 PowerPivot pour Microsoft SharePoint 2013,](https://www.microsoft.com/download/details.aspx?id=40737) et [installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41; ](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
+3.  Exécutez le complément [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour SharePoint (**spPowerPivot.msi**) sur chaque serveur de la batterie SharePoint 2013 pour installer les fournisseurs de données. Les serveurs sur lesquels vous avez exécuté l'Assistant Installation de SQL Server, qui permet également la mise à niveau des fournisseurs de données, font exception. Pour plus d’informations, consultez [installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
 4.  **Exécutez l'outil de configuration de PowerPivot pour SharePoint 2013** sur un des serveurs d'applications SharePoint pour configurer la batterie de serveurs SharePoint avec les fichiers de solution mis à jour installés par le complément. Vous ne pouvez pas utiliser l'Administration centrale SharePoint pour cette étape. Pour plus d'informations, consultez les documents suivants :  
   
@@ -103,7 +103,7 @@ ms.locfileid: "53366121"
         > [!IMPORTANT]  
         >  La première action, **Mettre à niveau une solution de batterie de serveurs**, doit toujours être traitée en premier. Elle inscrit les applets de commande PowerShell qui sont utilisées pour configurer le serveur. Si vous obtenez une erreur sur cette action, ne continuez pas. À la place, utilisez les informations fournies par l'erreur pour diagnostiquer et résoudre le problème avant de traiter des actions supplémentaires dans la liste des tâches.  
   
-    7.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **exécuter**, l’avertissement suivant s’affiche, vous rappelant que les actions sont traitées en mode batch : «**Tous les paramètres de configuration qui sont marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ?**  ».  
+    7.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Quand vous cliquez sur **Exécuter**, l’avertissement suivant s’affiche, vous rappelant que les actions sont traitées en mode batch : « **Tous les paramètres de configuration marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ?**  ».  
   
     8.  Cliquez sur **OK** pour continuer.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "53366121"
         > [!IMPORTANT]  
         >  La première action, **Mettre à niveau une solution de batterie de serveurs**, doit toujours être traitée en premier. Elle inscrit les applets de commande PowerShell qui sont utilisées pour configurer le serveur. Si vous obtenez une erreur sur cette action, ne continuez pas. À la place, utilisez les informations fournies par l'erreur pour diagnostiquer et résoudre le problème avant de traiter des actions supplémentaires dans la liste des tâches.  
   
-    8.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Lorsque vous cliquez sur **exécuter**, l’avertissement suivant s’affiche, vous rappelant que les actions sont traitées en mode batch : « Tous les paramètres de configuration qui sont marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ? ».  
+    8.  Cliquez sur **Exécuter** pour exécuter toutes les actions qui sont valides pour cette tâche. **Exécuter** est disponible uniquement lorsque le contrôle de validation a réussi. Quand vous cliquez sur **Exécuter**, l’avertissement suivant s’affiche, vous rappelant que les actions sont traitées en mode batch : « Tous les paramètres de configuration marqués comme étant valides dans l’outil seront appliqués à la batterie de serveurs SharePoint. Voulez-vous continuer ? ».  
   
     9. Cliquez sur **OK** pour continuer.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "53366121"
         Stsadm -o enumdeployments  
         ```  
   
-    2.  Passez en revue les déploiements existants pour les informations suivantes : **Type** est déploiement ou rétraction **fichier** correspond à powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
+    2.  Passez en revue les déploiements existants pour les informations suivantes : **Type** indique une rétraction ou un déploiement, **Fichier** correspond à powerpivotwebapp.wsp ou powerpivotfarm.wsp.  
   
     3.  Pour les déploiements ou les rétractions liées aux solutions PowerPivot, copiez la valeur GUID de **JobId** et collez-la dans la commande suivante (utilisez les commandes marquer, copier et coller dans le menu Edition du Shell afin de copier le GUID) :  
   

@@ -13,12 +13,12 @@ ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3e9905a251ae9ebe858cc3a100de357011826b6a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: d688f3e23d0ecb9ecd00364c783b90e770ef4205
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605999"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306147"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Ressources de support pour les pilotes Microsoft pour PHP pour SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,9 +47,9 @@ Pour obtenir une aide de la communauté, accédez aux [Forums IIS](https://forum
 ## <a name="php-support-resources"></a>Ressources de support PHP  
 [Documentation de PHP pour Windows](https://windows.php.net/)  
   
-Pour obtenir les informations les plus récentes sur PHP, visitez [ https://www.php.net/ ](https://www.php.net).  
+Pour obtenir les informations les plus récentes sur PHP, visitez [ http://www.php.net/ ](http://www.php.net).  
   
-Pour obtenir une documentation PHP, visitez [ https://www.php.net/docs.php ](https://www.php.net/docs.php).  
+Pour obtenir une documentation PHP, visitez [ http://www.php.net/docs.php ](http://www.php.net/docs.php).  
   
 ## <a name="microsoft-customer-support"></a>Support technique Microsoft  
 Pour les questions de support correspondant à la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], vous pouvez contacter [Support Microsoft](https://support.microsoft.com/contactus/), ou posez sur le [page de projet Github](https://github.com/Microsoft/msphpsql/issues).  

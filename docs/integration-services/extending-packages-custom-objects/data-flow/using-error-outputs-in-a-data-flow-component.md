@@ -21,15 +21,15 @@ helpviewer_keywords:
 - error outputs [Integration Services]
 - asynchronous error outputs [Integration Services]
 ms.assetid: a2a3e7c8-1de2-45b3-97fb-60415d3b0934
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f81faab9a9ef4e9ecfeb1438dc45e27bf963e8f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 53a05f64b2d6051c30cfde9972f5347418a76361
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671477"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279343"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Utilisation de sorties d'erreur dans un composant de flux de données
   Il est possible d'ajouter des objets <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100> spéciaux appelés sorties d'erreur à des composants afin de permettre à un composant de rediriger les lignes qu'il ne parvient pas à traiter pendant l'exécution. Les problèmes qu'un composant peut rencontrer sont en général classés en tant qu'erreurs ou troncations et sont propres à chaque composant. Les composants qui fournissent des sorties d'erreur offrent à leurs utilisateurs la flexibilité de gérer les conditions d'erreur en filtrant les lignes d'erreur du jeu de résultats, en provoquant l'échec du composant lorsqu'un problème se produit ou en ignorant des erreurs afin de continuer.  

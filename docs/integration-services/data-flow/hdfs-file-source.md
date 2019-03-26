@@ -10,18 +10,18 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hdfsfilesrc.f1
 ms.assetid: f8cda200-c389-4a2e-8ee9-5d59b326aac1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9cb4cf4a297a362ada965c3135f7e03fc8304ac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 400f3158e6196ff42c702ce675b28125167bd861
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720517"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276848"
 ---
 # <a name="hdfs-file-source"></a>HDFS File Source
-  Le composant HDFS File Source permet à un package SSIS de lire les données provenant d’un fichier HDFS. Les formats de fichier pris en charge sont le format texte et Avro. (Les sources ORC ne sont pas prises en charge.)  
+  Le composant HDFS File Source permet à un package SSIS de lire les données provenant d’un fichier HDFS. Les formats de fichier pris en charge sont le format texte et Avro. (Les sources ORC ne sont pas prises en charge.)  
   
  Pour configurer HDFS File Source, opérez un glisser-déplacer de HDFS File Source vers le concepteur de flux de données, puis double-cliquez sur le composant pour ouvrir l’éditeur.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "47720517"
   
 ## <a name="see-also"></a> Voir aussi  
  [Gestionnaire de connexions Hadoop](../../integration-services/connection-manager/hadoop-connection-manager.md)   
- [Destination de fichier HDFS](../../integration-services/data-flow/hdfs-file-destination.md)  
+ [HDFS File Destination](../../integration-services/data-flow/hdfs-file-destination.md)  
   
   

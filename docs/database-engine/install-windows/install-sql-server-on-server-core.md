@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 932f2384b24b55a6516fe84cd16f608a1a8e2d0e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c8cc018a1c9fddd35c80f73ce4f141b0b526ad4f
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533341"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306217"
 ---
 # <a name="install-sql-server-on-server-core"></a>Installer SQL Server sur Server Core
 
@@ -47,21 +47,21 @@ L’option d’installation Server Core offre l’environnement minimal requis p
 |Recherche en texte intégral|Oui||  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Oui||  
 |[!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)]|Oui||  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|non||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|non||  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|Non||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Data Tools (SSDT)|Non||  
 |Connectivité des outils clients|Oui||  
 |Integration Services, serveur|Oui||  
-|Compatibilité descendante des outils clients|non||  
-|Kit de développement logiciel (SDK) des outils clients|non||  
-|Documentation en ligne[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |non||  
+|Compatibilité descendante des outils clients|Non||  
+|Kit de développement logiciel (SDK) des outils clients|Non||  
+|Documentation en ligne[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Non||  
 |Outils de gestion - Base|À distance uniquement|L’installation de ces fonctionnalités sur Server Core n’est pas prise en charge. Ces composants peuvent être installés sur un serveur autre que Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.|  
 |Outils de gestion - Complet|À distance uniquement|L’installation de ces fonctionnalités sur Server Core n’est pas prise en charge. Ces composants peuvent être installés sur un serveur autre que Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.|  
-|Distributed Replay Controller|non||  
+|Distributed Replay Controller|Non||  
 |Distributed Replay Client|À distance uniquement|L’installation de ces fonctionnalités sur Server Core n’est pas prise en charge. Ces composants peuvent être installés sur un serveur autre que Server Core et être connectés aux services de [!INCLUDE[ssDE](../../includes/ssde-md.md)] installés sur Server Core.|  
 |Kit de développement logiciel (SDK) de l'option Connectivité client de SQL|Oui||  
 |Microsoft Sync Framework|Oui|Microsoft Sync Framework n’est pas inclus dans le package d’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Vous pouvez télécharger la version appropriée de Sync Framework à partir du [Centre de téléchargement Microsoft](https://go.microsoft.com/fwlink/?LinkId=221788) (page https://go.microsoft.com/fwlink/?LinkId=221788)) et l’installer sur un ordinateur exécutant Server Core.|  
-|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|non||  
-|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|non||  
+|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Non||  
+|[!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)]|Non||  
   
 ## <a name="supported-scenarios"></a>Scénarios pris en charge  
  Le tableau suivant indique la matrice de scénario prise en charge pour l’installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sur Server Core.  
@@ -69,11 +69,11 @@ L’option d’installation Server Core offre l’environnement minimal requis p
 |||  
 |-|-|  
 |Éditions de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Tous les éditions 64 bits de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] |  
-|Langue de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Tous les langages|  
+|Langue de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |Toutes les langues|  
 |Langage[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur le langage du système d'exploitation/paramètres régionaux (combinaison)|ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows JPN (japonais)<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows GER (allemand)<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows CHS (chinois-Chine)<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows ARA (Arabe (Arabie-Saoudite))<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows THA (thaïlandais)<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows TRK (turque)<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows pt-PT (portugais Portugal)<br /><br /> ENG [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur Windows ENG (anglais)|  
 |Édition Windows|[!INCLUDE[winserver2016_datacenter_md](../../includes/winserver2016-datacenter-md.md)]<br/><br/>[!INCLUDE[winserver2016_standard_md](../../includes/winserver2016-standard-md.md)]<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2 Foundation<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Datacenter<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Standard<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Essentials<br/><br/>[!INCLUDE[win8srv](../../includes/win8srv-md.md)] Foundation|  
   
-## <a name="upgrade"></a>UPGRADE 
+## <a name="upgrade"></a>Mettre à niveau 
  Sur les installations Server Core, la mise à niveau depuis [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] vers [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] n'est pas prise en charge.  
   
 ## <a name="install"></a>Install  
@@ -333,7 +333,7 @@ Si vous fermez accidentellement l'invite de commandes, vous pouvez démarrer une
  [Éditions et fonctionnalités prises en charge de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md)   
  [Installer Server Core](https://technet.microsoft.com/windows-server-docs/get-started/getting-started-with-server-core)   
  [Configurer une installation Server Core de Windows Server 2016 avec Sconfig.cmd](https://technet.microsoft.com/windows-server-docs/get-started/sconfig-on-ws2016)   
- [Applets de commande de cluster de basculement dans Windows PowerShell](https://technet.microsoft.com/itpro/powershell/windows/failover-clusters/index)   
+ [Applets de commande de cluster de basculement dans Windows PowerShell](/powershell/module/failoverclusters/)
 
   
   

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - .NET Framework [Integration Services]
 - DataReader source
 ms.assetid: 2a2f1750-2cda-4dda-9dca-623a96a6b3c0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 125caa4360df6b789bd9f8f61b12d85552b4983e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 327585d0cdf0644a7beaddc83aba3d7451c812bd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638766"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290575"
 ---
 # <a name="ado-net-source"></a>Source ADO NET
   La source ADO .NET exploite des données issues d'un fournisseur .NET et les met à la disposition du flux de données.  
@@ -185,7 +185,7 @@ ms.locfileid: "51638766"
  **Erreur**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  

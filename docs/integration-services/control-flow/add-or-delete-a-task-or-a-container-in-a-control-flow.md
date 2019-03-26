@@ -13,15 +13,15 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6f0362ef230cfb620603c874a76e0614f89ab460
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5d5fcc04cf865753de2a8c2483f13bf9d8619ae2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523107"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281403"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>Ajouter ou supprimer une tâche ou un conteneur dans un flux de contrôle
   Quand vous travaillez dans le concepteur de flux de contrôle, la boîte à outils du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] énumère les tâches proposées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour créer le flux de contrôle d’un package. Pour plus d’informations sur la boîte à outils, consultez [Boîte à outils SSIS](../../integration-services/ssis-toolbox.md).  

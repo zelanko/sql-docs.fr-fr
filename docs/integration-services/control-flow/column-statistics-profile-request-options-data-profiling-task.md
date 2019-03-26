@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 70d5eaca5c8c249c098f5e984866c4c8f03a40ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2e681ca4cfaf58e3cddc77ce51c34f9b25916a4a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595158"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290722"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>Options Demande de profil de statistiques de colonnes (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de statistiques de colonnes** sélectionnée dans le volet Demandes. Un profil de statistiques de colonnes répertorie des statistiques, telles que l’écart minimal, maximal, moyen et type pour les colonnes numériques et l’écart minimal et maximal pour les colonnes **datetime** . Ce profil peut vous aider à identifier des problèmes dans vos données, tels que des dates non valides. Par exemple, vous profilez une colonne de dates historiques et découvrez une date maximum dont l'échéance est à venir.  

@@ -3,20 +3,19 @@ title: Étapes de l’Assistant Importation et Exportation SQL Server | Microsof
 ms.custom: ''
 ms.date: 02/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 816fb1bd-7bb9-450d-ad65-e4c2d02eaff8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 73b43cd2f14f8c7afd531a295d9eaf118d5e91d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e75ab1dd193cd8691166eff42fe30d11c89503dc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694157"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290515"
 ---
 # <a name="steps-in-the-sql-server-import-and-export-wizard"></a>Étapes de l’Assistant Importation et Exportation SQL Server
 Cette rubrique décrit la série d’étapes permettant d’importer et d’exporter des données avec l’Assistant Importation et Exportation SQL Server. Elle contient également des liens vers les différentes pages de documentation qui décrivent chaque page ou boîte de dialogue s’affichant dans l’Assistant.

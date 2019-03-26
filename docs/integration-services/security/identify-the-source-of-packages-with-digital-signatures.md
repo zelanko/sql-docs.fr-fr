@@ -16,15 +16,15 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6c0139abead73541a39f9207e94ae7d0a4d1a8f2
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4073c16f5918b6e9e92431233f2ae7daec475193
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639493"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289285"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifier la source de packages à l'aide de signatures numériques
   Il est possible de signer un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] avec un certificat numérique pour identifier sa source. Après avoir signé un package avec un certificat numérique, vous pouvez utiliser [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour vérifier la signature numérique avant de charger le package. Pour vérifier la signature à l’aide d’ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , vous devez définir une option dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou dans l’utilitaire **dtexec** (dtexec.exe), ou définir une valeur de Registre facultative.  
@@ -42,7 +42,7 @@ ms.locfileid: "51639493"
 ## <a name="set-a-registry-value-to-check-package-signature"></a>Définir une valeur du Registre pour vérifier la signature d’un package  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] prend également en charge une valeur de Registre facultative, **BlockedSignatureStates**, que vous pouvez utiliser pour gérer la stratégie de chargement des packages signés et non signés d’une organisation. La valeur de Registre peut empêcher le chargement de packages si les packages ne sont pas signés ou s'ils possèdent des signatures non valides ou non approuvées. Pour plus d’informations sur la définition de cette valeur de Registre, consultez [Implémenter une stratégie de signature en définissant une valeur du Registre](#registry).  
   
-> **REMARQUE :** la valeur de Registre **BlockedSignatureStates** facultative peut spécifier un paramètre qui est plus restrictif que l’option de signature numérique définie dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou à la ligne de commande **dtexec** . Dans cette situation, le paramètre du Registre plus restrictif a priorité sur les autres paramètres.  
+> **REMARQUE :** La valeur de Registre **BlockedSignatureStates** facultative peut spécifier un paramètre plus restrictif que l’option de signature numérique définie dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou au niveau de la ligne de commande **dtexec** . Dans cette situation, le paramètre du Registre plus restrictif a priorité sur les autres paramètres.  
 
 ## <a name="registry"></a> Implémenter une stratégie de signature en définissant une valeur du Registre
   Vous pouvez utiliser une valeur du Registre facultative pour gérer la stratégie d'une organisation pour charger des packages signés ou non signés. Si vous utilisez cette valeur du Registre, vous devez créer cette valeur du Registre sur tous les ordinateurs sur lesquels les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] s'exécuteront et sur lesquels vous souhaitez appliquer la stratégie. Une fois la valeur du Registre définie, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vérifiera les signatures avant de charger les packages.  

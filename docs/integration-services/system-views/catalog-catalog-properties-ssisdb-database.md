@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: e604a382-95c8-4764-b268-742eb5c6d4cf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0fa4d428ad10adf53118e901befcb10cede7f421
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 6f64820f77d5e50b9a004e38f1d1573217938f0c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328919"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274891"
 ---
 # <a name="catalogcatalogproperties-ssisdb-database"></a>catalog.catalog_properties (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53328919"
 |**VERSION_CLEANUP_ENABLED**|Quand la valeur est `TRUE`, seul le nombre de versions de projet **MAX_PROJECT_VERSIONS** est stocké dans le catalogue et toutes les autres versions de projet seront supprimées. Quand la valeur est **FALSE**, toutes les versions du projet sont stockées dans le catalogue. Remarque : un travail [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue le nettoyage de l'opération.|
 |||
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Appartenance au rôle de base de données **ssis_admin**  

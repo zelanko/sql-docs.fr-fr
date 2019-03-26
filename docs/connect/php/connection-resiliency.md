@@ -9,17 +9,17 @@ ms.topic: conceptual
 author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
-ms.openlocfilehash: 6afbf85f5e141736ac4a78dc381205228bd5ddaa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527099"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305917"
 ---
 # <a name="idle-connection-resiliency"></a>Résilience des connexions inactives
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Résilience des connexions](https://msdn.microsoft.com/library/dn632678.aspx) est le principe qu’une connexion inactive interrompue peut être rétablie, dans certaines contraintes. Si une connexion à Microsoft SQL Server échoue, la résilience des connexions permet au client tente automatiquement de rétablir la connexion. Résilience des connexions est une propriété de la source de données ; seul SQL Server 2014 et versions ultérieur et Azure SQL Database prend en charge la résilience des connexions.
+[Résilience des connexions](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md) est le principe qu’une connexion inactive interrompue peut être rétablie, dans certaines contraintes. Si une connexion à Microsoft SQL Server échoue, la résilience des connexions permet au client tente automatiquement de rétablir la connexion. Résilience des connexions est une propriété de la source de données ; seul SQL Server 2014 et versions ultérieur et Azure SQL Database prend en charge la résilience des connexions.
 
 Résilience des connexions est implémentée avec les deux mots clés de connexion qui peuvent être ajoutées aux chaînes de connexion : **ConnectRetryCount** et **ConnectRetryInterval**.
 
@@ -131,4 +131,4 @@ Statement 2 successful.
 ```
 
 ## <a name="see-also"></a> Voir aussi
-[Résilience de connexion du pilote ODBC Windows](https://docs.microsoft.com/sql/connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver)
+[Résilience de connexion du pilote ODBC Windows](../odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)

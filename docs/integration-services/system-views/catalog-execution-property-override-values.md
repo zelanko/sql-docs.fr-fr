@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 83cbdd6f-ddde-47bf-abde-36bd24272621
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fc61ad3dee4b77454ff4ae5008d4061dc4b0a995
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 245073c8bef9fa62acce86ecfb742524bc821443
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658646"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277498"
 ---
 # <a name="catalogexecutionpropertyoverridevalues"></a>catalog.execution_property_override_values
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -29,12 +29,12 @@ ms.locfileid: "47658646"
 |execution_id|**bigint**|ID unique de l'instance d'exécution.|  
 |property_path|**nvarchar(4000)**|Chemin d'accès à la propriété dans le package.|  
 |property_value|**nvarchar(max)**|Valeur de remplacement de la propriété.|  
-|sensible|**bit**|Lorsque la valeur est 1, la propriété est sensible et est chiffrée lorsqu'elle est stockée. Lorsque la valeur est 0, la propriété n'est pas sensible et la valeur est stockée dans en texte en clair.|  
+| sensible|**bit**|Lorsque la valeur est 1, la propriété est sensible et est chiffrée lorsqu'elle est stockée. Lorsque la valeur est 0, la propriété n'est pas sensible et la valeur est stockée dans en texte en clair.|  
   
 ## <a name="remarks"></a>Notes   
  Cette vue affiche une ligne pour chaque exécution dans laquelle les valeurs des propriétés ont été remplacées à l’aide de la section **Substitutions de propriété** sous l’onglet **Avancé** de la boîte de dialogue **Exécuter le package**. Le chemin d’accès de la propriété est dérivé de la propriété **Chemin d’accès au package** de la tâche du package.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette vue requiert l'une des autorisations suivantes :  
   
 -   Autorisation READ sur l'instance d'exécution  
