@@ -11,15 +11,15 @@ helpviewer_keywords:
 - SQUARE
 - square values
 ms.assetid: cecf1bb2-3d55-40a6-9688-ed67bcc150b4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 835b6cb97bc23b1d7c4fb9c38a7b98050695cf06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fa4de2afec8893f9101a973f18e5176490d5c32
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599457"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277318"
 ---
 # <a name="square-ssis-expression"></a>SQUARE (expression SSIS)
   Renvoie le carré d'une expression numérique.  
@@ -33,7 +33,7 @@ SQUARE(numeric_expression)
   
 ## <a name="arguments"></a>Arguments  
  *expression_numérique*  
- Expression numérique d'un type de données numérique. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Expression numérique d'un type de données numérique. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  DT_R8  

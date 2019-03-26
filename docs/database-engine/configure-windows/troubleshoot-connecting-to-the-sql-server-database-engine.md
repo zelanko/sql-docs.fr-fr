@@ -14,12 +14,12 @@ ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fd08989eb41f5b5a2b1c3f677f8dcff64b25b6ea
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 34f57edd8b58476a7077f601692086c80c89d0c0
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802753"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305997"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>Résoudre les problèmes de connexion au moteur de base de données SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +105,7 @@ Avant de résoudre un problème de connexion à partir d’un autre ordinateur, 
 Si vous recevez une erreur à ce stade, vous devez la résoudre avant de continuer. Il existe de nombreuses sources de problèmes possibles. Votre connexion peut être refusée. Votre base de données par défaut peut-être absente.
 
 > [!NOTE]
->    Certains messages d’erreur transmis au client intentionnellement ne donnent pas suffisamment d’informations pour résoudre le problème. Il s’agit d’une fonctionnalité de sécurité pour éviter de fournir à un attaquant des informations sur SQL Server. Pour afficher les informations complètes sur l’erreur, consultez le journal des erreurs SQL Server. Les détails y sont fournis. Si vous recevez l’erreur **18456 Échec de la connexion pour l’utilisateur**, la rubrique de la documentation en ligne [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contient des informations supplémentaires sur les codes d’erreur. En outre, le blog d’Aaron Bertrand comprend une liste très complète des codes d’erreur à la page [Troubleshooting Error 18456](https://www2.sqlblog.com/blogs/aaron_bertrand/archive/2011/01/14/sql-server-v-next-denali-additional-states-for-error-18456.aspx). Vous pouvez afficher le journal des erreurs avec SSMS (si vous pouvez vous connecter), dans la section Gestion de l’Explorateur d’objets. Sinon, vous pouvez afficher le journal des erreurs avec le programme Bloc-notes de Windows. L’emplacement par défaut varie en fonction de votre version et peut être modifié pendant l’installation. L’emplacement par défaut pour [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] est `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
+>    Certains messages d’erreur transmis au client intentionnellement ne donnent pas suffisamment d’informations pour résoudre le problème. Il s’agit d’une fonctionnalité de sécurité pour éviter de fournir à un attaquant des informations sur SQL Server. Pour afficher les informations complètes sur l’erreur, consultez le journal des erreurs SQL Server. Les détails y sont fournis. Si vous recevez l’erreur **18456 Échec de la connexion pour l’utilisateur**, la rubrique de la documentation en ligne [MSSQLSERVER_18456](../../relational-databases/errors-events/mssqlserver-18456-database-engine-error.md) contient des informations supplémentaires sur les codes d’erreur. En outre, le blog d’Aaron Bertrand comprend une liste très complète des codes d’erreur à la page [Troubleshooting Error 18456](https://sqlblog.org/2011/01/14/troubleshooting-error-18456). Vous pouvez afficher le journal des erreurs avec SSMS (si vous pouvez vous connecter), dans la section Gestion de l’Explorateur d’objets. Sinon, vous pouvez afficher le journal des erreurs avec le programme Bloc-notes de Windows. L’emplacement par défaut varie en fonction de votre version et peut être modifié pendant l’installation. L’emplacement par défaut pour [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] est `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Log\ERRORLOG`.  
 
 4.   Si vous pouvez vous connecter à l’aide de la mémoire partagée, testez la connexion à l’aide de TCP. Vous pouvez forcer une connexion TCP en spécifiant **tcp:** avant le nom. Exemple :
 

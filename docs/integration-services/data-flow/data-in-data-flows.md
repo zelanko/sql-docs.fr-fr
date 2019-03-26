@@ -15,21 +15,21 @@ helpviewer_keywords:
 - string comparisons
 - data flow [Integration Services], data options
 ms.assetid: 8a9d6186-eb52-48e3-997e-021f24d458a3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dcc79e1bcb8e871b5424e9e4995db58e1f97a513
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 07917304412c77e7cd58dd771d9ef97199270f4e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692869"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281183"
 ---
 # <a name="data-in-data-flows"></a>Données dans des flux de données
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose un ensemble de types de données qui sont utilisés dans les flux de données.  
   
 ## <a name="data-type-conversion"></a>Conversion de type de données  
- La source que vous ajoutez à un flux de données convertit les données sources en types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les transformations effectuées par la suite peuvent convertir les données en types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] différents et selon le type de banque de données dans lequel les données sont chargées, les destinations peuvent convertir le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] final dans le type requis par la banque de données de destination. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ La source que vous ajoutez à un flux de données convertit les données sources en types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les transformations effectuées par la suite peuvent convertir les données en types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] différents et selon le type de banque de données dans lequel les données sont chargées, les destinations peuvent convertir le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] final dans le type requis par la banque de données de destination. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Pour convertir les données en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un composant de flux de données analyse les données. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose deux types d’analyses des données : l’analyse rapide et l’analyse standard. La plupart des composants de flux de données ne peuvent utiliser que l'analyse standard. Cependant la source de fichier plat et la transformation de conversion de données peuvent utiliser l'analyse rapide ou l'analyse standard. Pour plus d’informations, consultez [Analyse des données](../../integration-services/data-flow/parsing-data.md).  
   

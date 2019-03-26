@@ -19,15 +19,15 @@ helpviewer_keywords:
 - inserting data
 - truncate options [Integration Services]
 ms.assetid: 678d2dfc-e40c-4fbb-b2cc-42fffc44478a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0505215ab152f9941870f5ee5d2d884750288a04
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0d0b7124909a7759f61d97fc748a527c31237e33
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639596"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289795"
 ---
 # <a name="export-column-transformation"></a>Transformation d'exportation de colonne
   La transformation d'exportation de colonne lit des données dans un flux de données puis les insère dans un fichier. Par exemple, si le flux de données contient des informations sur les produits, telles qu'une image de chaque produit, vous pouvez utiliser la transformation d'exportation de colonne pour enregistrer les images dans des fichiers.  
@@ -37,10 +37,10 @@ ms.locfileid: "51639596"
   
 |Ajouter|Tronqué|Le fichier existe|Résultats|  
 |------------|--------------|-----------------|-------------|  
-|False|False|non|La transformation crée un nouveau fichier et y écrit les données.|  
-|True|False|non|La transformation crée un nouveau fichier et y écrit les données.|  
-|False|True|non|La transformation crée un nouveau fichier et y écrit les données.|  
-|True|True|non|La validation de la transformation au moment de la conception a échoué. Vous ne pouvez pas attribuer aux deux propriétés la valeur **true**.|  
+|False|False|Non|La transformation crée un nouveau fichier et y écrit les données.|  
+|True|False|Non|La transformation crée un nouveau fichier et y écrit les données.|  
+|False|True|Non|La transformation crée un nouveau fichier et y écrit les données.|  
+|True|True|Non|La validation de la transformation au moment de la conception a échoué. Vous ne pouvez pas attribuer aux deux propriétés la valeur **true**.|  
 |False|False|Oui|Une erreur d'exécution se produit. Le fichier existe, mais la transformation ne peut pas y écrire.|  
 |False|True|Oui|La transformation supprime et recrée le fichier, puis y écrit les données.|  
 |True|False|Oui|La transformation ouvre le fichier, à la fin duquel elle ajoute les données.|  
@@ -58,7 +58,7 @@ ms.locfileid: "51639596"
     > [!NOTE]  
     >  Une marque d'ordre d'octet n'est écrite que lorsque les données ne sont pas ajoutées à un fichier existant et qu'elles sont du type de données DT_NTEXT.  
   
- La transformation utilise des paires de colonnes d'entrée : une colonne contient un nom de fichier, l'autre comporte des données. Chaque ligne du jeu de données peut spécifier un fichier différent. À mesure que la transformation traite des lignes, les données sont insérées dans le fichier spécifié. Au moment de l'exécution, la transformation crée les fichiers, s'ils n'existent pas déjà, puis y écrit les données. Les données à écrire doivent être du type de données DT_TEXT, DT_NTEXT ou DT_IMAGE. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
+ La transformation utilise des paires de colonnes d'entrée : une colonne contient un nom de fichier, l'autre comporte des données. Chaque ligne du jeu de données peut spécifier un fichier différent. À mesure que la transformation traite des lignes, les données sont insérées dans le fichier spécifié. Au moment de l'exécution, la transformation crée les fichiers, s'ils n'existent pas déjà, puis y écrit les données. Les données à écrire doivent être du type de données DT_TEXT, DT_NTEXT ou DT_IMAGE. Pour plus d’informations, consultez [Types de données Integration Services](../../../integration-services/data-flow/integration-services-data-types.md).  
   
  Cette transformation a une entrée, une sortie et une sortie d'erreur.  
   

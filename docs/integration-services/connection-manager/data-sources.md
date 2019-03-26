@@ -10,22 +10,22 @@ ms.topic: conceptual
 helpviewer_keywords:
 - data sources [Integration Services], about data sources
 ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 273f26e789c4743695051e7ec6bbe660751dad5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0fe7839e08e38096b4b942dc3119d3a560c0a0fa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710257"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277628"
 ---
 # <a name="data-sources"></a>Sources de données
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] inclut un objet au moment de la conception que vous pouvez utiliser dans les packages [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] : la source de données.  
   
  Un objet de source de données est une référence à une connexion et comprend au minimum une chaîne de connexion et un identificateur de source de données. Il peut également inclure des métadonnées supplémentaires comme une description, un nom, un nom d'utilisateur et un mot de passe.  
   
-> **REMARQUE :** vous pouvez ajouter des sources de données uniquement aux projets qui sont configurés pour utiliser le modèle de déploiement de package. Si un projet est configuré pour utiliser le modèle de déploiement de projet, vous utilisez les gestionnaires de connexions créés au niveau du projet pour partager les connexions, au lieu d'utiliser les sources de données.  
+> **REMARQUE :** Vous pouvez ajouter des sources de données uniquement aux projets qui sont configurés pour utiliser le modèle de déploiement de package. Si un projet est configuré pour utiliser le modèle de déploiement de projet, vous utilisez les gestionnaires de connexions créés au niveau du projet pour partager les connexions, au lieu d'utiliser les sources de données.  
 >   
 >  Pour plus d'informations sur les modèles de déploiement, consultez [Deployment of Projects and Packages](../packages/deploy-integration-services-ssis-projects-and-packages.md). Pour plus d’informations sur la conversion d’un projet en modèle de déploiement de projet, consultez [Déployer des projets sur le serveur Integration Services](https://msdn.microsoft.com/library/hh231102.aspx).  
   

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SIGN function
 - negative values
 ms.assetid: 1547db08-4329-4781-91c2-36898ed71b15
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 33be3361e58398005196b479c23ec47e755a386c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4d10f76b319ac4190b80c394a2f77d8035641339
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857214"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279063"
 ---
 # <a name="sign-ssis-expression"></a>SIGN (expression SSIS)
   Renvoie le nombre positif (+1), le nombre négatif (-1) ou zéro (0) selon le signe d'une expression numérique.  
@@ -34,7 +34,7 @@ SIGN(numeric_expression)
   
 ## <a name="arguments"></a>Arguments  
  *numeric_expression*  
- Expression numérique signée valide. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Expression numérique signée valide. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  DT_I4  

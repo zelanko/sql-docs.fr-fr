@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: f0a70216-fdac-44ae-af29-35f65626217c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c792827f8016fdf211b378df80fb94c7ca143e57
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ccf961ef43f1c1ca5ffc116c4e816fd2edc82ccc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641417"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277418"
 ---
 # <a name="data-mining-model-training-destination-custom-properties"></a>Propriétés personnalisées de la destination d'apprentissage du modèle d'exploration de données
   La destination d'apprentissage du modèle d'exploration de données comporte à la fois des propriétés personnalisées et les propriétés communes à l'ensemble des composants de flux de données.  
@@ -27,7 +27,7 @@ ms.locfileid: "51641417"
 |--------------|---------------|-----------------|  
 |ASConnectionId|String|Identificateur unique du gestionnaire de connexions.|  
 |ASConnectionString|String|Chaîne de connexion d'une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|ObjectRef|String|Balise XML qui identifie la structure d'exploration de données utilisée par la transformation.|  
+|ObjectRef|String|Balise XML qui identifie la structure d'exploration de données utilisée par la transformation.|  
   
  L'entrée et les colonnes d'entrée de la destination d'apprentissage du modèle d'exploration de données ne disposent pas de propriétés personnalisées.  
   

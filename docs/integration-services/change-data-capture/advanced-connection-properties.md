@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 4edfab68-7e68-45e8-a3f3-a0049ff7eb9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ad7666ea6647d370d4f40b961cbd7e2aec643697
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f131956e913e210c529921e7ed6655c91f890e77
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677877"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282693"
 ---
 # <a name="advanced-connection-properties"></a>Propriétés avancées de connexion
   Pour ajouter des paramètres de connexion à la chaîne de connexion, utilisez la boîte de dialogue **Propriétés avancées de connexion** .  
@@ -34,6 +34,6 @@ ms.locfileid: "47677877"
   
 ## <a name="see-also"></a> Voir aussi  
  [Accéder à la console du concepteur CDC](../../integration-services/change-data-capture/access-the-cdc-designer-console.md)   
- [Connexion SQL Server pour la création d’une instance](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
+ [Connexion SQL Server pour la création d'une instance](../../integration-services/change-data-capture/sql-server-connection-for-instance-creation.md)  
   
   
