@@ -3,22 +3,21 @@ title: Choisir une destination (Assistant Importation et Exportation SQL Server)
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.chooseadestination.f1
 ms.assetid: 1898be15-3e69-42d3-8ecb-3733c9f6c8e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 59dcb8932e2c1b4f2dcbe93d879a240743322bde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3df75759684eb094113096b636288e9e1db6f6b
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856950"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221886"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Choisir une destination (Assistant Importation et Exportation SQL Server)
  Une fois que vous avez fourni les informations relatives à la source de vos données et indiqué comment s’y connecter, l’Assistant Importation et Exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affiche **Choisir une destination**. Dans cette page, vous fournissez les informations relatives à la destination de vos données et à la façon de s’y connecter.

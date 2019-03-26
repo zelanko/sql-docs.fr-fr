@@ -14,15 +14,15 @@ helpviewer_keywords:
 - converting string data
 - string comparisons
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4b63ddac2aa39095703b1428deab61232837ed9e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 8de2ce3e407de132869138a54d5a17559b6308bc
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638396"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270700"
 ---
 # <a name="comparing-string-data"></a>comparaison de données de chaînes
   Les comparaisons de chaînes représentent une partie importante des transformations réalisées par [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]et peuvent également être utilisées pour l'évaluation d'expressions dans des variables et des expressions de propriétés. Ainsi, la transformation de tri peut comparer les valeurs d'un dataset afin de trier les données dans l'ordre croissant ou décroissant.  
@@ -41,7 +41,7 @@ ms.locfileid: "51638396"
 ## <a name="processing-during-string-comparison"></a>Traitement pendant la comparaison de chaînes  
  En fonction des données et de la configuration de la transformation, le traitement suivant peut être réalisé au cours de la comparaison de données chaînes :  
   
--   conversion des données au format Unicode. Si les données sources ne sont pas au format Unicode, elles sont automatiquement converties dans ce format avant la comparaison ;  
+-   conversion des données au format Unicode. Si les données sources ne sont pas au format Unicode, elles sont automatiquement converties dans ce format avant la comparaison ;  
   
 -   utilisation de paramètres régionaux afin d'appliquer des règles spécifiques à un pays pour interpréter la date, l'heure, les données décimales et l'ordre de tri ;  
   

@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom objects [Integration Services]
 ms.assetid: b03685bc-5398-4c3f-901a-1219c1098fbe
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 424fb19d14d1851cd647f0fa21a4d3271c8dd2b6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7ed254b6dd9b9bca5216962f769a55db99823dff
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502883"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271329"
 ---
 # <a name="building-deploying-and-debugging-custom-objects"></a>Génération, déploiement et débogage d'objets personnalisés
   Après avoir écrit le code d’un objet personnalisé pour [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous devez générer l’assembly, le déployer, l’intégrer dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] afin qu’il puisse être utilisé dans des packages, puis le tester et le déboguer.  

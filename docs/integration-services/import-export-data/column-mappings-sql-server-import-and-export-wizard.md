@@ -3,22 +3,21 @@ title: Mappage de colonnes (Assistant Importation et Exportation SQL Server) | M
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.columnmapandtransform.f1
 ms.assetid: eadc54a6-f936-4ffc-91d7-fbfd2bdcab93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 790542daa3cf69f5d1cd149a3356545fe69b03e2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 852e150955371d78fe8170a2f4fc3be037d35ccd
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733867"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222093"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Mappage de colonnes (Assistant Importation et exportation SQL Server)
   Une fois que vous avez sélectionné les tables et vues existantes pour copier ou vérifier la requête que vous avez fournie, l’Assistant Importation et Exportation **affiche la boîte de dialogue**Mappage de colonnes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si vous cliquez sur **Modifier les mappages** . Dans cette page, vous spécifiez et configurez des colonnes de destination pour recevoir les données copiées à partir des colonnes sources. Souvent, il n’y a pas de modification à apporter à cette page.

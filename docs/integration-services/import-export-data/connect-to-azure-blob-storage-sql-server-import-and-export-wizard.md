@@ -3,20 +3,19 @@ title: Se connecter à Stockage Blob Azure (Assistant Importation et Exportation
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: e2e482b8-5f90-48c5-93fb-b412ed52659f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8ad5132b4fe6750c2e2dd66786b5a4dceb4577e5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cf57a0b6dd76e95d0fada08aa2f5049341884a72
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211768"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221903"
 ---
 # <a name="connect-to-azure-blob-storage-sql-server-import-and-export-wizard"></a>Se connecter à Stockage Blob Azure (Assistant Importation et Exportation SQL Server)
 Cette rubrique vous montre comment se connecter à une source de données **Stockage Blob Azure** à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server.

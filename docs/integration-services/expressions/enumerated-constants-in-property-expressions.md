@@ -15,15 +15,15 @@ helpviewer_keywords:
 - enumerated constants [Integration Services]
 - property expressions [Integration Services]
 ms.assetid: a4418315-38e2-4ad3-8784-576163b25d6f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 706ea141faa1e83c915e8ee01ff12f2d20dc10d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a3a0cee0f7aeb5df60c80e23c0ae90af5a066db3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529710"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279131"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Constantes énumérées dans des expressions de propriété
   Si des expressions de propriété incluent des valeurs d'une liste de membres d'énumérateur, l'expression doit utiliser la valeur numérique du membre énumérateur et non le nom convivial du membre. Par exemple, si une expression définit la propriété **LoggingMode** , vous devez utiliser la valeur numérique 2 à la place du nom convivial Disabled.  
@@ -51,7 +51,7 @@ ms.locfileid: "52529710"
   
 |Nom convivial dans DTSPackageType|Valeur numérique|  
 |-------------------------------------|-------------------|  
-|Par défaut|0|  
+|Valeur par défaut|0|  
 |DTSWizard|1|  
 |DTSDesigner|2|  
 |SQLReplication|3|  
@@ -70,7 +70,7 @@ ms.locfileid: "52529710"
   
 |Nom convivial dans DTSPriorityClass|Valeur numérique|  
 |---------------------------------------|-------------------|  
-|Par défaut|0|  
+|Valeur par défaut|0|  
 |AboveNormal|1|  
 |Normale|2|  
 |BelowNormal|3|  
@@ -458,7 +458,7 @@ ms.locfileid: "52529710"
   
 |Nom convivial dans DTSXMLDiffOptions|Valeur numérique|  
 |----------------------------------------|-------------------|  
-|Aucun|0|  
+|None|0|  
 |IgnoreChildOrder|1|  
 |IgnoreComments|2|  
 |IgnorePI|4|  
@@ -488,7 +488,7 @@ ms.locfileid: "52529710"
   
 |Nom convivial dans DatabaseSelection|Valeur numérique|  
 |----------------------------------------|-------------------|  
-|Aucun|0|  
+|None|0|  
 |All|1|  
 |Système|2|  
 |Utilisateur|3|  
@@ -498,7 +498,7 @@ ms.locfileid: "52529710"
   
 |Nom convivial dans TableSelection|Valeur numérique|  
 |-------------------------------------|-------------------|  
-|Aucun|0|  
+|None|0|  
 |All|1|  
 |Specific|2|  
   
@@ -576,7 +576,7 @@ ms.locfileid: "52529710"
   
 |Nom convivial dans DTSForcedExecResult|Valeur numérique|  
 |------------------------------------------|-------------------|  
-|Aucun|-1|  
+|None|-1|  
 |Réussi|0|  
 |Failure|1|  
 |Completion|2|  

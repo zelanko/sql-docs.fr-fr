@@ -13,15 +13,15 @@ helpviewer_keywords:
 - errors [Integration Services]
 - Integration Services, errors
 ms.assetid: cf4f0f14-8087-42d7-9b67-e4929228abd6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d621833e1c05787d6e9ef52f33b8bccfcdb793ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f9e6845c7bcaaffc85621338a169cdaa2c10dc5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599523"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271271"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Guide de référence des erreurs et des événements (Integration Services)
   Cette section de la documentation contient des informations sur plusieurs erreurs et événements liés à [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Les informations sur les causes et les solutions sont incluses pour les messages d'erreur.  

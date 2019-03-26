@@ -11,15 +11,15 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 978ec0b00cbb4954a7aa6e50e6d182857ac8338a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 72c03667c768f19569dbcce37079f24dc85ef2db
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639846"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273447"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Types de données Integration Services dans les expressions
   L'évaluateur d'expression utilise des types de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Lorsque des données entrent dans un flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , le moteur de flux de données convertit toutes les données de colonne vers un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et les données de colonne utilisées par une expression ont déjà un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les expressions utilisées dans les transformations de fractionnement conditionnel et de colonne dérivée peuvent référencer des colonnes car elles font partie d'un flux de données qui comprend des données de colonne.  
@@ -122,7 +122,7 @@ ms.locfileid: "51639846"
   
 -   Les arguments transmis aux fonctions mathématiques doivent s'évaluer à un type de données numérique. Selon la fonction ou l'opération, un type de données numérique spécifique peut être requis. Par exemple, la fonction HEX requiert un entier signé ou non signé.  
   
--   Les arguments passés aux fonctions de chaîne doivent produire un type de données caractère : DT_STR ou DT_WSTR. Par exemple, UPPER("fleur"). Certaines fonctions de chaîne, telles que la fonction SUBSTRING, requièrent des arguments entiers supplémentaires pour définir la position de début et la longueur de la chaîne.  
+-   Les arguments transmis aux fonctions de chaîne doivent produire un type de données caractère : DT_STR ou DT_WSTR. Par exemple, UPPER("fleur"). Certaines fonctions de chaîne, telles que la fonction SUBSTRING, requièrent des arguments entiers supplémentaires pour définir la position de début et la longueur de la chaîne.  
   
 -   Les arguments transmis aux fonctions de date et d'heure doivent s'évaluer à une date valide. Par exemple, DAY(GETDATE()). Certaines fonctions, telles que la fonction DATEADD, requièrent un argument entier supplémentaire pour définir le nombre de jours qu'elles ajoutent à une date.  
   

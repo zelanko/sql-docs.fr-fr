@@ -21,15 +21,15 @@ helpviewer_keywords:
 - PrimeOutput method
 - data flow components [Integration Services], transformation components
 ms.assetid: 1c3e92c7-a4fa-4fdd-b9ca-ac3069536274
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b64d9d1410e7a5020689b4f057eb2f08051268e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bffb4abd200c1a67c6115f3c890192d5ee375e75
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836478"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273531"
 ---
 # <a name="developing-a-custom-transformation-component-with-asynchronous-outputs"></a>Développement d'un composant de transformation personnalisé à sorties asynchrones
   Vous utilisez un composant à sorties asynchrones lorsqu'une transformation ne peut pas extraire de lignes tant que le composant n'a pas reçu toutes ses lignes d'entrée, ou lorsqu'une transformation ne génère pas exactement une ligne de sortie pour chaque ligne reçue en tant qu'entrée. La transformation d'agrégation, par exemple, ne peut pas calculer une somme de lignes tant qu'elle n'a pas lu toutes les lignes. Par opposition, vous pouvez utiliser un composant à sorties synchrones lorsque vous modifiez chaque ligne de données au moment de leur transfert. Vous pouvez modifier les données de chaque ligne en place ou créer une ou plusieurs colonnes, chacune contenant une valeur pour chaque ligne d'entrée. Pour plus d’informations sur la différence entre les composants synchrones et asynchrones, consultez [Présentation des transformations synchrones et asynchrones](../../integration-services/understanding-synchronous-and-asynchronous-transformations.md).  

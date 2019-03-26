@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1adcb5703b2f05282d564bca3eba43012d14e3a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 74bfa46a09968549ef8b11dd21230f8da2e7714f
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599820"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274120"
 ---
 # <a name="single-table-quick-profile-form-data-profiling-task"></a>Formulaire de profil rapide de table simple (tâche de profilage des données)
   Utilisez le **Formulaire de profil rapide de table simple** pour configurer rapidement la tâche de profilage des données afin de profiler une table ou une vue unique à l'aide des paramètres par défaut.  
@@ -47,7 +47,7 @@ ms.locfileid: "47599820"
 |**Profil de clé candidate**|Calculez un profil de clé candidate pour les combinaisons de colonnes qui incluent jusqu'au nombre de colonnes spécifié dans **pour au plus N clés de colonne**.<br /><br /> Ce profil signale si une colonne ou un ensemble de colonnes est adapté en tant que clé pour la table sélectionnée. Ce profil peut également vous aider à identifier des problèmes dans vos données, tels que des valeurs dupliquées dans une colonne clé potentielle. Pour plus d’informations sur les paramètres de ce profil, consultez [Options Demande de profil de clé candidate &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/candidate-key-profile-request-options-data-profiling-task.md).|  
 |**pour au plus N clés de colonne**|Sélectionnez le nombre maximal de colonnes à tester dans les combinaisons possibles comme clé de la table ou de la vue. La valeur par défaut est 1. La valeur maximale est 1000. Par exemple, la valeur 3 teste les combinaisons de clé d'une colonne, de deux colonnes et de trois colonnes.|  
 |**Profil de dépendance fonctionnelle**|Calculez un profil de dépendance fonctionnelle pour les combinaisons de colonnes déterminantes qui incluent jusqu'au nombre de colonnes spécifié dans **pour au moins N colonnes comme colonnes déterminantes**.<br /><br /> Ce profil indique le degré de dépendance entre les valeurs d'une colonne (colonne dépendante) et celles d'une autre colonne ou d'un ensemble de colonnes (colonne déterminante). Ce profil peut également vous aider à identifier des problèmes dans vos données, tels que des valeurs non valides. Pour plus d’informations sur les paramètres de ce profil, consultez [Options Demande de profil de dépendance fonctionnelle &#40;tâche de profilage des données&#41;](../../integration-services/control-flow/functional-dependency-profile-request-options-data-profiling-task.md).|  
-|**pour au moins N colonnes comme colonnes déterminantes**|Sélectionnez le nombre maximal de colonnes à tester dans les combinaisons possibles comme colonnes déterminantes. La valeur par défaut est 1. La valeur maximale est 1000. Par exemple, la valeur 2 teste les combinaisons dans lesquelles les combinaisons d'une colonne ou de deux colonnes sont les colonnes déterminantes d'une autre colonne (dépendante).|  
+|**pour au moins N colonnes comme colonnes déterminantes**|Sélectionnez le nombre maximal de colonnes à tester dans les combinaisons possibles comme colonnes déterminantes. La valeur par défaut est 1. La valeur maximale est 1000. Par exemple, la valeur 2 teste les combinaisons dans lesquelles les combinaisons d'une colonne ou de deux colonnes sont les colonnes déterminantes d'une autre colonne (dépendante).|  
   
 > [!NOTE]  
 >  Le type de profil d’inclusion de valeur n’est pas disponible à partir du **formulaire de profil rapide de table simple**.  

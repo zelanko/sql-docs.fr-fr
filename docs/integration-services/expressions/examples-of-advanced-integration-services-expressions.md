@@ -13,15 +13,15 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5c7a5538b4856fc64eb42acc0496690fc7733d8b
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 919692adf35cbf78b11073905294925fef8e23b5
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639517"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271341"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>Exemples d'expressions Integration Services avancées
   Cette section donne des exemples d'expressions avancées qui combinent plusieurs opérateurs et fonctions. Si une expression est utilisée dans une contrainte de priorité ou dans la transformation de fractionnement conditionnel, elle doit renvoyer une valeur booléenne. Toutefois, cette restriction ne s'applique pas aux expressions utilisées dans les expressions de propriété, les variables, la transformation de colonne dérivée ou le conteneur de boucles For.  

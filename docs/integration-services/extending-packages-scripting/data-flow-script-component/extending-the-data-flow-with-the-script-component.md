@@ -22,15 +22,15 @@ helpviewer_keywords:
 - Script component [Integration Services]
 - data flow [Integration Services], components
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3f0098f11db902f7df5099a545d390513873dc19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4cfe49773c7f9f481a7c26579c91283495220443
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599487"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271410"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>Extension du flux de données avec le composant Script
   Le composant Script étend les fonctionnalités du flux de données des packages [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] à l’aide du code personnalisé écrit dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic ou [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C#, compilé et exécuté au moment de l’exécution des packages. Le composant Script simplifie le développement d'une source, transformation ou destination de flux de données personnalisée, lorsque les sources, les transformations et les destinations incluses dans [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] ne répondent que partiellement à vos besoins. Une fois que vous avez configuré le composant avec les entrées et sorties attendues, celui-ci écrit tout le code d'infrastructure requis, ce qui vous permet de vous concentrer exclusivement sur le code nécessaire au traitement personnalisé.  

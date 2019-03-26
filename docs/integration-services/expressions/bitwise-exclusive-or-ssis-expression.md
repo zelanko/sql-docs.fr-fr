@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ^ (bitwise exclusive OR operator)
 - bitwise exclusive OR (^)
 ms.assetid: 6ac53cab-29c4-4835-9f87-371b058b2f38
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5f33998489a3912693c15a4c756fa355bbf84b7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8aa8033e8af22fa518ce8b5e27dde817395f7eaf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610700"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271148"
 ---
 # <a name="-bitwise-exclusive-or-ssis-expression"></a>^ (OR exclusif au niveau du bit) (expression SSIS)
   Effectue une opération OR exclusive au niveau du bit avec deux valeurs entières. Cette fonction compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si un bit a pour valeur 0 et que l'autre a pour valeur 1, le bit obtenu correspondant a pour valeur 1. Si les deux bits ont pour valeur 0 ou 1, le bit obtenu correspondant a pour valeur 0.  
@@ -36,7 +36,7 @@ integer_expression1 ^ integer_expression2
   
 ## <a name="arguments"></a>Arguments  
  *integer_expression1, integer_expression2*  
- Toute expression valide de type de données signed integer ou unsigned integer. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Toute expression valide de type de données signed integer ou unsigned integer. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - expressions [Integration Services], string padding
 - string padding
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8f41a1601ef6fe416eb1f429343bea32451f7716
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: a42f92cf83e75755f079d28e1547135653cdbbd0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638377"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272528"
 ---
 # <a name="string-padding-ssis"></a>Remplissage des chaînes (SSIS)
   L'évaluateur d'expression ne vérifie pas si une chaîne contient des espaces de début et de fin et ne complète pas les chaînes pour qu'elles aient la même longueur avant de les comparer. Pour compléter une chaîne dans une expression, vous pouvez concaténer des valeurs de colonne et des chaînes vides à l'aide de l'opérateur « + ». Pour plus d’informations, consultez [+ &#40;Concaténer&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/concatenate-ssis-expression.md).  

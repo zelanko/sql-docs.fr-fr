@@ -18,15 +18,15 @@ helpviewer_keywords:
 - events [Integration Services], raising
 - predefined events [Integration Services]
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f05d4527b0df0d93a40068aa9a35e977189349dd
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 0cae6df88dc290631f8f9b76a503e7a31d971428
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858584"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270824"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>Déclenchement et définition d'événements dans un composant de flux de données
   Les développeurs de composants peuvent déclencher un sous-ensemble des événements définis dans l'interface <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> en appelant les méthodes exposées sur la propriété <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ComponentMetaData%2A>. Vous pouvez également définir des événements personnalisés à l'aide de la collection <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.EventInfos%2A>, puis les déclencher pendant l'exécution en utilisant la méthode <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.FireCustomEvent%2A>. Cette section décrit comment créer et déclencher un événement. Elle fournit également des conseils sur l'opportunité de déclencher des événements au moment de la conception.  

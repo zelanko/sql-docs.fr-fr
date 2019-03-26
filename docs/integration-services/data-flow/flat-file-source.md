@@ -18,15 +18,15 @@ helpviewer_keywords:
 - flat files
 - Flat File source
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea4388b453043cb380e7247d6688597300d51366
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b1a7e2f0320790959df4f29bfd586f70acec9de7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639686"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271046"
 ---
 # <a name="flat-file-source"></a>Source de fichier plat
   La source de fichier plat lit des données figurant dans un fichier texte. Le fichier texte peut être d'un format délimité, à largeur fixe ou mixte.  
@@ -117,7 +117,7 @@ ms.locfileid: "51639686"
  **Erreur**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  

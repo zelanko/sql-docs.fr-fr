@@ -1,7 +1,7 @@
 ---
 title: Consulter les événements étendus équivalents aux classes d’événements Trace SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 03/04/2017
+ms.date: 03/05/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,46 +16,48 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3dca735754367f7ca69fb36f6e5437e421c55a30
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 85482d1df6e27d103b97ce3e00b02baeea3a9a5f
+ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537602"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417181"
 ---
 # <a name="view-the-extended-events-equivalents-to-sql-trace-event-classes"></a>Consulter les Événements étendus équivalents aux classes d’événements Trace SQL
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   Si vous souhaitez utiliser Événements étendus pour recueillir des données d'événement qui sont équivalentes aux classes et colonnes d'événements Trace SQL, il est utile de comprendre comment les événements Trace SQL sont mappés aux événements et actions Événements étendus.  
   
  Vous pouvez utiliser la procédure suivante pour consulter les événements et actions Événements étendus équivalents à chaque événement Trace SQL et à ses colonnes associées.  
   
-## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>Pour afficher les événements étendus équivalents aux événements Trace SQL à l'aide de l'éditeur de requête  
-  
--   Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], exécutez la requête suivante :  
-  
-    ```sql  
-    USE MASTER;  
-    GO  
-    SELECT DISTINCT  
-       tb.trace_event_id,  
-       te.name AS 'Event Class',  
-       em.package_name AS 'Package',  
-       em.xe_event_name AS 'XEvent Name',  
-       tb.trace_column_id,  
-       tc.name AS 'SQL Trace Column',  
-       am.xe_action_name as 'Extended Events action'  
-    FROM (sys.trace_events te LEFT OUTER JOIN sys.trace_xe_event_map em  
-       ON te.trace_event_id = em.trace_event_id) LEFT OUTER JOIN sys.trace_event_bindings tb  
-       ON em.trace_event_id = tb.trace_event_id LEFT OUTER JOIN sys.trace_columns tc  
-       ON tb.trace_column_id = tc.trace_column_id LEFT OUTER JOIN sys.trace_xe_action_map am  
-       ON tc.trace_column_id = am.trace_column_id  
-    ORDER BY te.name, tc.name  
-    ```  
-  
- Lorsque vous affichez les résultats, gardez présentes à l'esprit les considérations suivantes :  
-  
--   Si toutes les colonnes retournent NULL à l’exception de la colonne Event Class, cela indique que la classe d’événements n’a pas été migrée à partir de Trace SQL.  
+## <a name="to-view-the-extended-events-equivalents-to-sql-trace-events-using-query-editor"></a>Pour afficher les événements étendus équivalents aux événements Trace SQL à l'aide de l'éditeur de requête
+
+- Dans l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], exécutez la requête suivante :
+
+   ```sql
+   USE MASTER;
+   GO
+   SELECT DISTINCT
+      tb.trace_event_id,
+      te.name            AS 'Event Class',
+      em.package_name    AS 'Package',
+      em.xe_event_name   AS 'XEvent Name',
+      tb.trace_column_id,
+      tc.name            AS 'SQL Trace Column',
+      am.xe_action_name  AS 'Extended Events action'
+   FROM
+                sys.trace_events         te
+      LEFT JOIN sys.trace_xe_event_map   em ON te.trace_event_id  = em.trace_event_id
+      LEFT JOIN sys.trace_event_bindings tb ON em.trace_event_id  = tb.trace_event_id
+      LEFT JOIN sys.trace_columns        tc ON tb.trace_column_id = tc.trace_column_id
+      LEFT JOIN sys.trace_xe_action_map  am ON tc.trace_column_id = am.trace_column_id
+   ORDER BY te.name, tc.name
+   ```
+
+Lorsque vous affichez les résultats, gardez présentes à l'esprit les considérations suivantes :  
+
+- Si toutes les colonnes retournent NULL à l’exception de la colonne Event Class, cela indique que la classe d’événements n’a pas été migrée à partir de Trace SQL.  
   
 -   Si seule la valeur de la colonne Extended Events est NULL, cela indique que l’une des conditions suivantes est vraie :  
   

@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Jobs task [Integration Services]
 ms.assetid: 1bf33885-9c5b-47e4-a549-f5920b66a1de
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d247df4047b95456fb5ccdf1fe8bc1940909388e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8dd39c8803b5b03a3595191d58bf4bd3f6a54812
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502743"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271871"
 ---
 # <a name="transfer-jobs-task"></a>Tâche de transfert de travaux
   La tâche de transfert de travaux transfère un ou plusieurs travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -108,7 +108,7 @@ ms.locfileid: "52502743"
  **TransferAllJobs**  
  Déterminez si la tâche doit copier du serveur source au serveur de destination tous les travaux de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou seulement ceux spécifiés.  
   
- Cette propriété dispose des options répertoriées dans le tableau suivant :  
+ Cette propriété dispose des options répertoriées dans le tableau suivant :  
   
 |Valeur|Description|  
 |-----------|-----------------|  

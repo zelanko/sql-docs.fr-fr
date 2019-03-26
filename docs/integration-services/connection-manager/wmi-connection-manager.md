@@ -14,15 +14,15 @@ helpviewer_keywords:
 - connection managers [Integration Services], WMI
 - WMI connection manager [Integration Services]
 ms.assetid: fbfa4ba7-3d0d-4d6b-94ad-50741a88d03d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 426faaf74fce61361f07ee6936c7a6a140753950
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 659eb7ee0c6e75c4df778d04b50b30efc35c3f97
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119594"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270615"
 ---
 # <a name="wmi-connection-manager"></a>Gestionnaire de connexions WMI
   Un gestionnaire de connexions WMI permet à un package d'utiliser WMI (Windows Management Instrumentation) pour gérer des informations dans un environnement d'entreprise. La tâche de service web incluse dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise un gestionnaire de connexions WMI.  

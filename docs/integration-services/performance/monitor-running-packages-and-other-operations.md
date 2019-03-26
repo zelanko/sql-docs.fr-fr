@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ac0343ffe46613e85fc1985a836dd3f05f3d46e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 291dc0fb1be05a9818d7f351867c5c6d25276ee2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623677"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271209"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>Surveiller les packages en cours d’exécution et autres opérations
   Vous pouvez surveiller les exécutions des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , les validations de projet et d’autres opérations en utilisant un ou plusieurs des outils suivants. Certains outils tels que les drainages de données ne sont disponibles que pour les projets déployés sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -152,7 +152,7 @@ ms.locfileid: "47623677"
   
 |Section|Description|  
 |-------------|-----------------|  
-|Filtre|Indique le filtre actif appliqué au rapport, tel que la plage d'heures de début.|  
+|Filtrer|Indique le filtre actif appliqué au rapport, tel que la plage d'heures de début.|  
 |Informations sur l'exécution|Indique l'heure de début, l'heure de fin, la durée d'exécution de chaque package. Vous pouvez afficher la liste des valeurs de paramètre utilisées avec une exécution de package, telles que les valeurs qui ont été passées à un package enfant à l'aide de la tâche d'exécution de package. Pour afficher la liste des paramètres, cliquez sur Vue d'ensemble.|  
   
  Pour plus d’informations sur l’utilisation de la tâche d’exécution de package afin de rendre des valeurs disponibles dans un package enfant, consultez [Tâche d’exécution de package](../../integration-services/control-flow/execute-package-task.md).  
@@ -206,4 +206,4 @@ ms.locfileid: "47623677"
 
 ## <a name="see-also"></a> Voir aussi  
  [Exécution de projets et de packages](../packages/deploy-integration-services-ssis-projects-and-packages.md)   
- [Rapports de dépannage pour l’exécution des packages](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
+ [Dépannage des rapports pour l'exécution des packages](../troubleshooting/troubleshooting-reports-for-package-execution.md)  
