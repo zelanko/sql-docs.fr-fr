@@ -20,14 +20,14 @@ helpviewer_keywords:
 - data flow [Integration Services], components
 ms.assetid: b53b110a-dcf4-4464-ae98-81e892ab74c3
 author: douglaslMS
-ms.author: douglasl
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f277acbaa9713e5fcb0906551ba902fba05a390b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d16caca028889b5b9fa6f122c3590208b5c5a793
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788607"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282883"
 ---
 # <a name="selecting-input-columns-programmatically"></a>Sélection de colonnes d'entrée par programme
   Après avoir connecté des composants par programme, sélectionnez les colonnes des composants en amont que vous transformerez ou passerez aux composants en aval. Si vous ne sélectionnez pas de colonnes d'entrée pour votre composant, le composant ne reçoit pas de lignes de la part de la tâche de flux de données.  

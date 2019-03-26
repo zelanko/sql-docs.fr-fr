@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bcbba7f4-6e5d-46e6-a73a-3f17d3ff376a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bbfb753b0c2674e3345286b5a2ee2f038228c5d2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4835193453b1f58f7aa6dec5c81cd3c349bc6a04
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517845"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275429"
 ---
 # <a name="provide-an-odata-source-query-at-runtime"></a>Fournir une requête de source OData au moment de l’exécution
  Vous pouvez modifier la requête de source OData au moment de l’exécution en ajoutant une *expression* à la propriété **[OData Source].[Query]** de la tâche de flux de données.  

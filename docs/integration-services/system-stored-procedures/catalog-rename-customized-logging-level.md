@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: b1a57d5e-3f03-4901-8b2b-bb8b371b595b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c4f7b74e7b496cd16f73e7976a1d108b26372bb3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 972cc532916a135562fbd0e860ad2d003cdc9ee7
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665317"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275310"
 ---
 # <a name="catalogrenamecustomizedlogginglevel"></a>catalog.rename_customized_logging_level
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ catalog.rename_customized_logging_level [ @old_name = ] old_name
 ## <a name="result-set"></a>Jeu de résultats  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   L’appartenance au rôle de base de données **ssis_admin**  

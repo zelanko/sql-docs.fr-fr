@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - FTP task [Integration Services]
 ms.assetid: 41c3f2c4-ee04-460a-9822-bb9ae4036c2e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab81a9e76ea17a683062431da678fa679ceffdee
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: b183ff23efd18a19e08033e64691b723d4b4f323
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226636"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276031"
 ---
 # <a name="ftp-task"></a>Tâche FTP
   La tâche FTP télécharge des fichiers de données et gère des répertoires sur les serveurs. Par exemple, un package peut télécharger des fichiers de données à partir d’un serveur distant ou d’un emplacement Internet dans le cadre d’un flux de travail de package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Vous pouvez utiliser la tâche FTP aux fins suivantes :  

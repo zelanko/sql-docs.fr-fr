@@ -26,15 +26,15 @@ helpviewer_keywords:
 - data cleaning [Integration Services]
 - duplicate data [Integration Services]
 ms.assetid: e43f17bd-9d13-4a8f-9f29-cce44cac1025
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 48b6e5a48822401f543a494b8fd59638c4ea9609
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a30e2b2ff3ee716f48b3ba91bf0bbea6b4cf571d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540885"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274479"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation de regroupement approximatif
   La transformation de regroupement probable effectue des tâches de nettoyage des données en identifiant les lignes de données susceptibles d'être des doublons et en sélectionnant une ligne canonique de données à utiliser pour standardiser les données.  
@@ -60,7 +60,7 @@ ms.locfileid: "52540885"
   
  La transformation de regroupement probable comprend deux fonctionnalités de personnalisation du regroupement qu'elle effectue : les séparateurs de jetons et les seuils de similarité. La transformation fournit un ensemble par défaut de délimiteurs utilisés pour marquer des données, mais vous pouvez ajouter de nouveaux délimiteurs pour améliorer la création de jetons pour vos données.  
   
- Le seuil de similarité indique le degré de précision avec lequel la transformation identifie les doublons. Les seuils de similarité peuvent être définis au niveau du composant et de la colonne. Le seuil de similarité n'est disponible que pour les colonnes participant à une correspondance approximative. La plage de similarité va de 0 à 1. Plus le seuil s'approche de 1, plus les lignes et les colonnes doivent être similaires pour être répertoriées comme doublons. Vous spécifiez le seuil de similarité en définissant la propriété MinSimilarity au niveau du composant et de la colonne. Pour obtenir la similarité spécifiée au niveau du composant, toutes les lignes doivent montrer une similarité à travers toutes les colonnes qui est supérieure ou égale au seuil de similarité spécifié au niveau du composant.  
+ Le seuil de similarité indique le degré de précision avec lequel la transformation identifie les doublons. Les seuils de similarité peuvent être définis au niveau du composant et de la colonne. Le seuil de similarité n'est disponible que pour les colonnes participant à une correspondance approximative. La plage de similarité va de 0 à 1. Plus le seuil s'approche de 1, plus les lignes et les colonnes doivent être similaires pour être répertoriées comme doublons. Vous spécifiez le seuil de similarité en définissant la propriété MinSimilarity au niveau du composant et de la colonne. Pour obtenir la similarité spécifiée au niveau du composant, toutes les lignes doivent montrer une similarité à travers toutes les colonnes qui est supérieure ou égale au seuil de similarité spécifié au niveau du composant.  
   
  La transformation de regroupement probable calcule les mesures internes de similarité ; les lignes moins similaires à la valeur spécifiée dans MinSimilarity ne sont pas regroupées.  
   

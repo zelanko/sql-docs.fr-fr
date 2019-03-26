@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 055d86c9-befd-4e63-acb1-6dfe833549d2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c89486bb4d33ba52d1e0516d51eede715ddd9987
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 58bd2e2dfa541dd4d4200f3b7518b1f6c2d4ad0b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405647"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277648"
 ---
 # <a name="catalogsetexecutionparametervalue-ssisdb-database"></a>catalog.set_execution_parameter_value (base de données SSISDB)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ catalog.set_execution_parameter_value [ @execution_id = execution_id
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|0|Aucun<br /><br /> La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
+|0|None<br /><br /> La journalisation est désactivée. Seul l'état d'exécution du package est enregistré.|  
 |1|Simple<br /><br /> Tous les événements sont enregistrés, sauf les événements personnalisés et de diagnostic. Il s'agit de la valeur par défaut.|  
 |2|Performances<br /><br /> Seules les statistiques de performances, et les événements OnError et OnWarning, sont enregistrés.|  
 |3|Commentaires<br /><br /> Tous les événements sont enregistrés, y compris les événements personnalisés et de diagnostic. <br />Les événements personnalisés sont notamment ces événements consignés par les tâches Integration Services. Pour plus d’informations, consultez [Messages personnalisés pour la journalisation](../../integration-services/performance/integration-services-ssis-logging.md#custom_messages).|  
@@ -134,9 +134,9 @@ exec catalog.set_execution_parameter_value  @execution_id, 50, 'DUMP_EVENT_CODE'
  0 (succès)  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Aucun  
+ None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et MODIFY sur l'instance d'exécution  

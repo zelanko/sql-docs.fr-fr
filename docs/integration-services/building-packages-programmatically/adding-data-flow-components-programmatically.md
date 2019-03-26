@@ -15,15 +15,15 @@ helpviewer_keywords:
 - components [Integration Services], data flow
 - data flow [Integration Services], components
 ms.assetid: c06065cf-43e5-4b6b-9824-7309d7f5e35e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa96f8071ba6331dbfab8b708cd023f40f8a52cb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 399a5b83aff03813418f3c32e00dd11f518a1b51
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506181"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280133"
 ---
 # <a name="adding-data-flow-components-programmatically"></a>Ajout de composants de flux de données par programme
   Lorsque vous générez un flux de données, vous commencez par ajouter des composants. Puis vous configurez ces composants et vous les connectez ensemble pour établir le flux de données au moment de l'exécution. Cette section décrit l'ajout d'un composant à la tâche de flux de données, lequel permet de créer l'instance du moment de la conception du composant, puis de configurer ce composant. Pour plus d’informations sur la connexion de composants, consultez [Connexion de composants de flux de données par programmation](../../integration-services/building-packages-programmatically/connecting-data-flow-components-programmatically.md).  

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d75e66a4641ae5624a99b6c4bea88d14f93bbc1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7e28a0043cef8fc26dc5b98c255d516c5dd523b0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528209"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270450"
 ---
 # <a name="select-variables-page"></a>Page Sélectionner des variables
   Utilisez la boîte de dialogue **Sélectionner des variables** pour sélectionner une ou plusieurs variables pour les propriétés **ReadOnlyVariables** et **ReadWriteVariables** quand vous configurez une tâche de script ou un composant Script.  

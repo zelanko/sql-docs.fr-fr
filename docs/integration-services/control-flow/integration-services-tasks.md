@@ -24,15 +24,15 @@ helpviewer_keywords:
 - data preparation tasks [Integration Services]
 - directory operations [Integration Services]
 ms.assetid: 75c8901d-6966-4af3-abe5-10af6dd9313b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 656a25127299bedc122a38aafa4534adbe181ccf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 90726ed8ff3b8180e8c65c35d055dcb985001f92
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545271"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276129"
 ---
 # <a name="integration-services-tasks"></a>Tâches Integration Services
   Les tâches sont des éléments de flux de contrôle qui définissent des unités de travail qui sont exécutées dans un flux de contrôle de package. Un package [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est composé d’une ou plusieurs tâches. Si le package contient plusieurs tâches, elles sont connectées et organisées dans le flux de contrôle par des contraintes de priorité.  
@@ -44,7 +44,7 @@ ms.locfileid: "52545271"
 ## <a name="types-of-tasks"></a>Types de tâches  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend les types de tâches suivants.  
   
- Tâche de flux de données  
+ tâche de flux de données  
  Tâche qui exécute les flux de données pour extraire les données, pour appliquer les transformations au niveau des colonnes et pour charger des données.  
   
  Tâches de préparation des données  

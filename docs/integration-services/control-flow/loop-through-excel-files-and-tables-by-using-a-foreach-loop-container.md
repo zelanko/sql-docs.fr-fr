@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Excel [Integration Services]
 - connection managers [Integration Services], Excel
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b79ca6af9b0ccea0dfb1fe66b73f33cc8b9cd062
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3046b281141649746c8d93496a0ddbb8ad3607c6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639246"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282843"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach
   Les procédures de cette rubrique expliquent comment effectuer une boucle dans les classeurs Excel d'un dossier, ou dans les tableaux d'un classeur Excel, à l'aide du conteneur de boucles Foreach et de l'énumérateur approprié.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 8632dbc4-4394-4dc7-b19c-f9adeb21ba52
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd0b38936ce66b1047b225bd87f4c80ebd43f18b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db7471411d629dfb55de9f074a31e68d34e52bd3
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47599208"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58276183"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Options Demande de profil de clé candidate (tâche de profilage des données)
   Utilisez le volet **Propriétés de la demande** de la page **Demandes de profil** pour définir les options de la **Demande de profil de clé candidate** sélectionnée dans le volet Demandes. Un profil de clé candidate signale si une colonne ou un ensemble de colonnes est une clé, ou une clé approximative, pour la table sélectionnée. Ce profil peut également vous aider à identifier des problèmes dans vos données tels que des valeurs en double dans une colonne clé potentielle.  

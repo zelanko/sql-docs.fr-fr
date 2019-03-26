@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 76559f2d4a8c96a64792e4ecf095094c3cb1229e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: b3c641f9ade72d1a821739f84e20e04305951a25
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641756"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274422"
 ---
 # <a name="integration-services-data-types"></a>Types de données d'Integration Services
   Quand des données entrent dans un flux de données dans un package, la source qui extrait les données les convertit en type [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Les données numériques se voient attribuer le type de données numeric, les données chaînes le type de données character et les dates le type de données date. Le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] approprié est également affecté aux autres données, comme les GUID et les BLOB (Binary Large Object Blocks). Si le type des données ne peut pas être converti en un type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , une erreur se produit.  
@@ -68,7 +68,7 @@ ms.locfileid: "51641756"
 ## <a name="conversion-of-data-types"></a>Conversion de types de données  
  Si les données d'une colonne n'ont pas besoin de toute la largeur qui leur est allouée par le type de données source, vous voudrez peut-être changer le type de données de la colonne. La réduction de la longueur de chaque ligne de données permet d'optimiser les performances lors du transfert de données car plus la ligne est courte, plus les données sont transférées rapidement de la source vers la destination.  
   
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose un jeu complet de types de données numeric afin que vous puissiez faire correspondre le type de données et la taille des données. Par exemple, si les valeurs d'une colonne dont le type de données est DT_UI8 sont toujours des entiers compris entre 0 et 3000, vous pouvez opter pour le type de données DT_UI2. De même, si une colonne dont le type de données est DT_CY pourrait se satisfaire d'un type de données integer aux vues des données du package, vous pouvez opter pour le type de données DT_I4.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] propose un jeu complet de types de données numeric afin que vous puissiez faire correspondre le type de données et la taille des données. Par exemple, si les valeurs d'une colonne dont le type de données est DT_UI8 sont toujours des entiers compris entre 0 et 3000, vous pouvez opter pour le type de données DT_UI2. De même, si une colonne dont le type de données est DT_CY pourrait se satisfaire d'un type de données integer aux vues des données du package, vous pouvez opter pour le type de données DT_I4.  
   
  Vous pouvez modifier les types de données d'une colonne de l'une des manières suivantes :  
   
@@ -237,10 +237,10 @@ ms.locfileid: "51641756"
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
 |DT_I4|INT|INT|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||BIGINT|bigint|  
+|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Décimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|REAL|REAL|Unique||real|real|  
-|DT_R8|float|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
+|DT_R8|FLOAT|FLOAT|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  
 |DT_STR|char, varchar||varchar||char, varchar|char, varchar|  
 |DT_UI1|TINYINT|TINYINT|Byte||||  
 |DT_UI2|||||||  

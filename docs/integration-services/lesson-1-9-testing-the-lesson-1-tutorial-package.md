@@ -8,25 +8,25 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 9aee7acf-797b-46f2-830d-80ab64a9f0b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dde0ffe53ab5763230cafa752d687ab42d3a60c5
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: a16deda0b17a15d6eae3c1e2b22e35b3fa8a9a7a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143219"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289765"
 ---
 # <a name="lesson-1-9-test-the-lesson-1-package"></a>Leçon 1-9 : Tester le package de la leçon 1
 
 Dans ce tutoriel, vous avez effectué les tâches suivantes :  
   
--   Création d'un nouveau projet [!INCLUDE[ssIS](../includes/ssis-md.md)].  
+-   création d'un nouveau projet [!INCLUDE[ssIS](../includes/ssis-md.md)] ;  
   
 -   Configuration des gestionnaires de connexions pour que le package se connecte aux données sources et de destination.  
   
--   Ajout d'un flux de données qui récupère les données à partir d'une source de fichier plat, effectue les transformations de recherche nécessaires sur les données et configure les données pour la destination.  
+-   ajout d'un flux de données qui récupère les données à partir d'une source de fichier plat, effectue les transformations de recherche nécessaires sur les données et configure les données pour la destination.  
   
 Votre package est maintenant terminé et prêt à être testé !
   
