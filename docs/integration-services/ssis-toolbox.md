@@ -12,15 +12,15 @@ f1_keywords:
 - sql13.dts.designer.toolbox.F1
 - sql13.dts.designer.toolboxcommon.F1
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 96ad709b12fc8bcbdb588fc1abb511b4b4ee081e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f1ae0a9f644234a7e887758cf56ebcbc89593ee4
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640826"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289635"
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
   Tous les composants installés sur l’ordinateur local apparaissent automatiquement dans la **Boîte à outils SSIS**. Lorsque vous installez des composants additionnels, cliquez avec le bouton droit dans la boîte à outils, puis cliquez sur **Boîte à outils Actualiser** pour ajouter les composants.  
@@ -38,7 +38,7 @@ Vous pouvez obtenir des informations supplémentaires sur un composant de la bo�
 ## <a name="toolbox-categories"></a>Catégories de la boîte à outils
  Dans la **boîte à outils SSIS**, le flux de contrôle et les composants de flux de données sont organisés en catégories.  Vous pouvez développer et réduire des catégories, et réorganiser des composants.  Restaurez l’organisation par défaut en cliquant avec le bouton droit dans la boîte à outils, puis en cliquant sur **Restaurer les valeurs par défaut de la boîte à outils**.  
   
- Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories Autres transformations, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
+ Les catégories **Favoris** et **Commun** apparaissent dans la boîte à outils lorsque vous sélectionnez les onglets **Flux de contrôle**, **Flux de données**et **Gestionnaires d'événements** . La catégorie **Autres tâches** apparaît dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de contrôle** ou l'onglet **Gestionnaires d'événements** . Les catégories **Autres transformations**, **Autres sources**et **Autres destinations** apparaissent dans la boîte à outils lorsque vous sélectionnez l'onglet **Flux de données** .  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Ajouter des composants Azure à la boîte à outils  
  Le Feature Pack Azure pour Integration Services contient les gestionnaires de connexions permettant de se connecter aux sources de données Azure, ainsi que les tâches permettant d’effectuer les opérations Azure courantes. Installez le Feature Pack pour ajouter ces éléments à la boîte à outils. Pour plus d’informations, consultez [Feature Pack Azure pour Integration Services &#40;SSIS&#41;](../integration-services/azure-feature-pack-for-integration-services-ssis.md).  

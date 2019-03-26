@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf64e248d8fb9cb727114521cac9b6444fc1f710
-ms.sourcegitcommit: 5285fe5402d4ecb5788a1a89e200cc31b9006c31
+ms.openlocfilehash: 13978fee9b5dca8c7e946d4b7b01f52db37612e0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57401881"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282983"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
   L’utilitaire d’invite de commandes **dtexec** permet de configurer et d’exécuter des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’utilitaire **dtexec** donne accès à toutes les fonctions de configuration et d’exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. L’utilitaire **dtexec** vous permet de charger des packages à partir des sources suivantes : le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un fichier projet .ispac, une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le Magasin de packages [!INCLUDE[ssIS](../../includes/ssis-md.md)] et le système de fichiers.  

@@ -13,12 +13,12 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b5ffb878e0d30ce7f905ce74647e8db8c2983501
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605819"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305807"
 ---
 # <a name="installing-the-driver-manager"></a>Installation du Gestionnaire de pilotes
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -52,7 +52,7 @@ Pour installer le Gestionnaire de pilotes
   
 5.  Quand vous êtes prêt pour l’installation et si votre ordinateur peut accéder à un site externe par le biais de FTP, exécutez la commande suivante : **./build_dm.sh**.
 
-Si votre ordinateur ne peut pas accéder à un site externe par le biais de FTP, obtenez `unixODBC-2.3.0.tar.gz`. Vous pouvez obtenir `unixODBC-2.3.0.tar.gz` de [ https://www.unixodbc.org ](https://www.unixodbc.org/). Cliquez sur le lien Télécharger** sur le côté gauche de la page pour accéder à la page de téléchargement. Cliquez ensuite sur le lien approprié pour télécharger unixODBC-2.3.0 (et non unixODBC-2.3.1). unixODBC-2.3.1 n’est pas pris en charge avec cette version de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Exécutez la commande suivante pour commencer l’installation du Gestionnaire de pilotes unixODBC : **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
+Si votre ordinateur ne peut pas accéder à un site externe par le biais de FTP, obtenez `unixODBC-2.3.0.tar.gz`. Vous pouvez obtenir `unixODBC-2.3.0.tar.gz` de [ http://www.unixodbc.org ](http://www.unixodbc.org/). Cliquez sur le lien **Télécharger** sur le côté gauche de la page pour accéder à la page de téléchargement. Cliquez ensuite sur le lien approprié pour télécharger unixODBC-2.3.0 (et non unixODBC-2.3.1). unixODBC-2.3.1 n’est pas pris en charge avec cette version de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Exécutez la commande suivante pour commencer l’installation du Gestionnaire de pilotes unixODBC : **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Tapez **OUI** pour poursuivre la décompression des fichiers. Cette partie du processus peut prendre jusqu’à cinq minutes.  
 
@@ -66,7 +66,7 @@ Si le script d’installation ne peut pas se terminer, configurez et générez l
 
 1.  Supprimez toute version antérieure installée d’unixODBC (par exemple unixODBC 2.2.11). Sur Red Hat Enterprise Linux 5 ou 6, exécutez la commande suivante : **yum remove unixODBC**. Sur SUSE Linux Enterprise, **zypper supprimer unixODBC**.  
   
-2.  Accédez à [https://www.unixodbc.org](https://www.unixodbc.org/). Cliquez sur le lien **Télécharger** sur le côté gauche de la page pour accéder à la page de téléchargement. Cliquez ensuite sur le lien approprié pour enregistrer le fichier unixODBC-2.3.0.tar.gz sur votre ordinateur. UnixODBC-2.3.1 n’est pas pris en charge avec cette version de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+2.  Accédez à [http://www.unixodbc.org](http://www.unixodbc.org/). Cliquez sur le lien **Télécharger** sur le côté gauche de la page pour accéder à la page de téléchargement. Cliquez ensuite sur le lien approprié pour enregistrer le fichier unixODBC-2.3.0.tar.gz sur votre ordinateur. UnixODBC-2.3.1 n’est pas pris en charge avec cette version de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 3.  Sur votre ordinateur Linux, exécutez la commande : **tar xvzf unixODBC-2.3.0.tar.gz**.  
   

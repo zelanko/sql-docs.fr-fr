@@ -14,20 +14,20 @@ helpviewer_keywords:
 - counters [Integration Services]
 - data flow engine [Integration Services]
 ms.assetid: 11e17f4e-72ed-44d7-a71d-a68937a78e4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 488043cb3ffb4288d8f3b240d4dd78a7c08f6b83
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 374e977eafce0dcb679997e85655302aa7de0b4d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641156"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271009"
 ---
 # <a name="performance-counters"></a>Compteurs de performances
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installe un ensemble de compteurs de performances qui vous permettent d’analyser les performances du moteur de flux de données. Par exemple, le compteur Mémoires tampon spoulées permet de déterminer si des tampons de données sont écrits temporairement sur le disque lors de l'exécution d'un package. Cette permutation diminue les performances et indique que la mémoire de l'ordinateur est insuffisante.  
   
-> **REMARQUE :** Si vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un ordinateur qui exécute [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], puis que vous mettez à niveau cet ordinateur vers [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], le processus de mise à niveau supprime les compteurs de performances de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de l’ordinateur. Pour restaurer les compteurs de performances de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur l’ordinateur, exécutez l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode réparation.  
+> **REMARQUE :** Si vous installez [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur un ordinateur qui exécute [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], puis que vous mettez à niveau cet ordinateur vers [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)], le processus de mise à niveau supprime les compteurs de performances de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] de l’ordinateur. Pour restaurer les compteurs de performances de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur l’ordinateur, exécutez l’installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode réparation.  
   
  Le tableau suivant décrit les compteurs de performance.  
   
