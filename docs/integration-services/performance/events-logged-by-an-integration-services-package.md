@@ -11,15 +11,15 @@ helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c37ad0c1486edfcd5e2defd10bf0e9b94c1de3ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a3c679aa51da959d0b24af2247f563446ac283a0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812349"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281533"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>Événements journalisés par un package Integration Services
   Un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] consigne différents messages d'événements dans le journal des événements des applications Windows. Un package enregistre ces messages lorsqu'il démarre, lorsqu'il s'arrête et lorsque certains problèmes se produisent.  

@@ -12,20 +12,20 @@ helpviewer_keywords:
 - restarting packages
 - starting packages
 ms.assetid: 48f2fbb7-8964-484a-8311-5126cf594bfb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: efe373af865e815a71bb9377e2e7f35527f208b4
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 0ad7a0d2d994b71527cede05a25935771646ce9b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51637736"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58289495"
 ---
 # <a name="restart-packages-by-using-checkpoints"></a>Redémarrer des packages à l'aide de points de contrôle
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut redémarrer les packages ayant échoué à partir du point d'échec, au lieu de reprendre l'exécution du package tout entier. Si un package est configuré pour utiliser des points de contrôle, des informations sur l'exécution du package sont écrites dans un fichier de point de contrôle. Lorsque le package ayant échoué est relancé, le fichier de point de contrôle est utilisé pour redémarrer le package à partir du point d'échec. Si le package est exécuté avec succès, le fichier de point de contrôle est supprimé, puis recréé à l’exécution suivante du package.  
   
- L'utilisation des points de contrôle dans un package offre les avantages suivants :  
+ L'utilisation des points de contrôle dans un package offre les avantages suivants :  
   
 -   Éviter de répéter le téléchargement ascendant et descendant de gros fichiers. Par exemple, un package qui télécharge plusieurs gros fichiers à l'aide d'une tâche FTP pour chaque téléchargement peut être redémarré après l'échec du téléchargement d'un seul fichier, puis ne reprendre le téléchargement que pour ce fichier.  
   
