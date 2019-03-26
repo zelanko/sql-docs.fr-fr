@@ -20,15 +20,15 @@ helpviewer_keywords:
 - Script component [Integration Services], about Script component
 - Script component [Integration Services]
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 3e46ec694b130ca684f5437e04159436a36afd44
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 6e9c75fdd486c88e2f4cd0d58d7e310b44ea140a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641176"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280643"
 ---
 # <a name="script-component"></a>Composant Script
   Le composant Script héberge le script et permet à un package d'inclure du code de script personnalisé et de l'exécuter. Vous pouvez utiliser le composant Script dans des packages pour :  
@@ -208,8 +208,8 @@ ms.locfileid: "51641176"
 |**LocaleID**|Définissez les paramètres régionaux pour fournir des informations spécifiques à la région relatives au tri et à la conversion de date et d'heure.|  
 |**Nom**|Entrez un nom descriptif pour le composant.|  
 |**ValidateExternalMetadata**|Indiquez si la transformation de script valide les métadonnées de colonne par rapport aux sources de données externes lors de la conception. La valeur **false** diffère la validation jusqu'à l'exécution.|  
-|**ReadOnlyVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture seule par la transformation de script.<br /><br /> Remarque : les noms des variables respectent la casse.|  
-|**ReadWriteVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture/écriture par la transformation de script.<br /><br /> Remarque : les noms des variables respectent la casse.|  
+|**ReadOnlyVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture seule par la transformation de script.<br /><br /> Remarque : Les noms de variable respectent la casse.|  
+|**ReadWriteVariables**|Tapez une liste de variables séparées par une virgule pour l'accès en lecture/écriture par la transformation de script.<br /><br /> Remarque : Les noms de variable respectent la casse.|  
 |**ScriptLanguage**|Sélectionnez le langage de script que le composant de script doit utiliser.<br /><br /> Pour définir le langage de script par défaut pour les composants et les tâches de script, utilisez l'option **Langage de script** dans la page **Général** de la boîte de dialogue **Options** .|  
 |**UserComponentTypeName**|Spécifie la classe <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> et l’assembly **Microsoft.SqlServer.TxScript** qui prennent en charge l’infrastructure [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
   

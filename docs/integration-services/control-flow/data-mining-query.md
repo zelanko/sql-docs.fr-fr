@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.dataminingquery.f1
 ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0d4295ba75c18ea6b3331317bb38a6fadf26256
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7fcbe3d830374136b3414e8c9c35e9557d2f285
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811667"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290175"
 ---
 # <a name="data-mining-query"></a>Requête d'exploration de données
   Le volet de conception contient le Générateur de requêtes de prévisions d'exploration de données, qui peut servir à créer des requêtes de prévisions d'exploration de données. Vous pouvez concevoir des requêtes de prévisions basées sur des tables d'entrée ou des requêtes de prévisions singleton. Passez à la vue de résultat pour exécuter la requête et afficher les résultats. La vue de la requête affiche la requête DMX (Data Mining Extensions) créée par le Générateur de requêtes de prévisions d'exploration de données.  

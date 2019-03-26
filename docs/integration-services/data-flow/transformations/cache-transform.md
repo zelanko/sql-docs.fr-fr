@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Cache transform
 ms.assetid: a5683fc8-9c32-4634-819e-e9815627e4f1
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1b53839079c2a5cfc1e09788d44b955f5da3da7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a65a8be5dd71b6c1400dc325b34016e9df7f8192
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857277"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275534"
 ---
 # <a name="cache-transform"></a>Transformation du cache
   La transformation du cache génère un dataset de référence pour la transformation de recherche en entrant des données depuis une source de données connectée dans le flux de données dans un gestionnaire de connexions du cache. La transformation de recherche effectue des recherches en joignant les données des colonnes d'entrée d'une source de données connectée aux colonnes de la base de données de référence.  
@@ -56,7 +56,7 @@ ms.locfileid: "47857277"
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] . Pour plus d'informations sur les propriétés que vous pouvez définir dans la boîte de dialogue **Éditeur avancé** , consultez [Transformation Custom Properties](../../../integration-services/data-flow/transformations/transformation-custom-properties.md).  
   
- Pour plus d’informations sur la définition des propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
+ Pour plus d’informations sur la façon de définir les propriétés, consultez [Définir les propriétés d’un composant de flux de données](../../../integration-services/data-flow/set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="cache-transformation-editor-connection-manager-page"></a>Éditeur de transformation du cache (Page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de transformation du cache** pour sélectionner un gestionnaire de connexions du cache existant ou en créer un.  

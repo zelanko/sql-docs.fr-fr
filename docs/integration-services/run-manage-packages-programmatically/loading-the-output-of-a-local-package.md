@@ -14,15 +14,15 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4ec5e67b6a2f593f2869cf72fa2983305e084f8d
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: cf9107bb5a6e514e84fb17ae143491c9c3637991
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414154"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272931"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Chargement de la sortie d'un package local
   Les applications clientes peuvent lire la sortie des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] quand la sortie est enregistrée dans les destinations [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via [!INCLUDE[vstecado](../../includes/vstecado-md.md)], ou quand la sortie est enregistrée dans une destination de fichier plat à l’aide des classes présentes dans l’espace de noms **System.IO**. Toutefois, une application cliente peut également lire directement la sortie d'un package dans la mémoire, sans avoir besoin d'étape intermédiaire pour rendre les données persistantes. La clé de cette solution est l’espace de noms **Microsoft.SqlServer.Dts.DtsClient**, qui contient des implémentations spécialisées des interfaces **IDbConnection**, **IDbCommand** et **IDbDataParameter** à partir de l’espace de noms **System.Data**. L’assembly Microsoft.SqlServer.Dts.DtsClient.dll est installé par défaut dans **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  

@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom log providers [Integration Services], coding
 ms.assetid: 979a29ca-956e-4fdd-ab47-f06e84cead7a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9ab6a6670a2ccb10054108b49724291eed899a1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 140fcb93c3259a1a7c4c43c710f52a387f3f2956
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742477"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282273"
 ---
 # <a name="coding-a-custom-log-provider"></a>Codage d'un module fournisseur d'informations personnalisé
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.LogProviderBase>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsLogProviderAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  

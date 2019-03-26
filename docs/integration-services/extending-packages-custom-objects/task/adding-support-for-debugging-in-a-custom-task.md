@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SSIS custom tasks, debugging
 - debugging [Integration Services], custom tasks
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9470fdf09376f26945aae0462813921018dcb9a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eea4ee60abf1f3bda30a464f506c5ffed23f4091
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820797"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282383"
 ---
 # <a name="adding-support-for-debugging-in-a-custom-task"></a>Ajout de la prise en charge du débogage dans une tâche personnalisée
   Le moteur d'exécution [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] permet aux packages, tâches et autres types de conteneurs d'être suspendus pendant l'exécution à l'aide de points d'arrêt. L'utilisation de points d'arrêt vous permet d'examiner et de corriger les erreurs qui empêchent votre application ou vos tâches de s'exécuter correctement. L'architecture de point d'arrêt permet au client d'évaluer la valeur d'exécution des objets contenus dans le package aux points d'exécution définis pendant la suspension du traitement de la tâche.  

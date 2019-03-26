@@ -19,15 +19,15 @@ helpviewer_keywords:
 - Script task [Integration Services], logs
 - packages [Integration Services], logs
 ms.assetid: 2e11fc15-df18-4309-bd2d-fc58aa4b9b7a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: baa0e4e5cc4134b4efbd84ffbba8a422af7f4e8a
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: ac9506695640938df31fd71bd1f82f634deda580
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640027"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274473"
 ---
 # <a name="logging-in-the-script-task"></a>Journalisation dans la tâche de script
   L’utilisation de la journalisation dans les packages [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] vous permet d’enregistrer des informations détaillées sur l’avancement, les résultats et les problèmes d’exécution en enregistrant des événements prédéfinis ou des messages définis par l’utilisateur en vue d’une analyse ultérieure. La tâche de script peut utiliser la méthode <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> de l’objet **Dts** pour enregistrer des données définies par l’utilisateur. Si la journalisation est activée et que l’événement **ScriptTaskLogEntry** est sélectionné pour la journalisation sous l’onglet **Détails** de la boîte de dialogue **Configurer les journaux SSIS**, un seul appel à la méthode <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Log%2A> stocke les informations sur l’événement dans tous les modules fournisseurs d’informations configurés pour la tâche.  

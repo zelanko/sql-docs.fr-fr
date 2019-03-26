@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - custom connection managers [Integration Services], coding
 ms.assetid: b12b6778-1f01-4a7d-984d-73f2f7630aa5
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 21212d035c8f2c047d6d3bef48900d2b3c66a58d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d18edc37d5073ab4346ec58cbb6a341d8870fe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597258"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282413"
 ---
 # <a name="coding-a-custom-connection-manager"></a>Codage d'un gestionnaire de connexions personnalisé
   Après avoir créé une classe qui hérite de la classe de base <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManagerBase>, puis appliqué l'attribut <xref:Microsoft.SqlServer.Dts.Runtime.DtsConnectionAttribute> à cette classe, vous devez substituer l'implémentation des propriétés et des méthodes de la classe de base afin de fournir vos fonctionnalités personnalisées.  

@@ -14,15 +14,15 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer SQL Server Objects task [Integration Services]
 ms.assetid: fe86d6e5-e415-406c-88f3-dc3ef71bd5f0
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a7e699eb44ac381fa6cfe5c7dbca857010806753
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 911aa8f873f43245e92b4524c1633a4e55e82a72
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640786"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277288"
 ---
 # <a name="transfer-sql-server-objects-task"></a>Tâche de transfert d'objets SQL Server
   La tâche de transfert d’objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] transfère un ou plusieurs types d’objets d’une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Par exemple, la tâche peut copier des tables et des procédures stockées. Selon la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée comme source, différents types d’objets sont disponibles pour la copie. Par exemple, seule une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut des schémas et des agrégats définis par l’utilisateur.  

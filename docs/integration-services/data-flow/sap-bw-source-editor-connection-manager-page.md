@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12401782775be3a4bb180fc49f8d3df4db06ba5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 01cb2819982a452e365bcf13e0a949e1006f2c97
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47775137"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280573"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>Éditeur de source SAP BW (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de **l’Éditeur de source SAP BW** pour sélectionner le gestionnaire de connexions SAP BW pour la source SAP BW. Sur cette page, sélectionnez également le mode d'exécution et les paramètres pour extraire les données du système SAP Netweaver BW.  
@@ -79,7 +79,7 @@ ms.locfileid: "47775137"
   
 ### <a name="execution-mode--p---trigger-process-chain"></a>Mode d'exécution = P - Déclencher une chaîne de processus  
   
-#### <a name="rfc-destination-options"></a>Options de la destination RFC  
+#### <a name="rfc-destination-options"></a>Options de la destination RFC  
  Vous n'avez pas à connaître ni à entrer ces valeurs à l'avance. Utilisez le bouton **Rechercher** pour rechercher et sélectionner la destination RFC appropriée. Après avoir sélectionné une destination RFC, le composant entre les valeurs appropriées pour ces options.  
   
  **Hôte de passerelle**  

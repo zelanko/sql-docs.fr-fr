@@ -11,15 +11,15 @@ helpviewer_keywords:
 - base-10 logarithms
 - LOG function
 ms.assetid: f7fccace-c178-4e13-bde9-7dc4ef1d98fa
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6d73dc9a08caea470837ef23c419f03567bcbfde
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59d1ecc0f250d19196a356f77ecae00b097fdd9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612097"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282743"
 ---
 # <a name="log-ssis-expression"></a>LOG (expression SSIS)
   Renvoie le logarithme de base 10 d'une expression numérique.  
@@ -39,7 +39,7 @@ LOG(numeric_expression)
  DT_R8  
   
 ## <a name="remarks"></a>Notes   
- *L’expression numérique* est convertie vers le type de données DT_R8 avant le calcul du logarithme. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ *L’expression numérique* est convertie vers le type de données DT_R8 avant le calcul du logarithme. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
  Si l’argument *numeric_expression* donne une valeur inférieure ou égale à zéro, le résultat obtenu est NULL.  
   

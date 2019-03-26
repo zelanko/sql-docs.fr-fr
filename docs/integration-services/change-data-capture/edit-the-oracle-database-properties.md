@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraProp
 ms.assetid: 58dc99f1-ee6b-4508-bb66-2bc589611ff7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5aa23c62ecf5a171a7b440ef73a61f60d620b301
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fd8979186639a840c3fa7721d8f94ed98b35ca39
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727247"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280113"
 ---
 # <a name="edit-the-oracle-database-properties"></a>Modifier les propriétés d'une base de données Oracle
   Utilisez l'onglet Oracle de l'éditeur de propriétés pour apporter des modifications à la description que vous avez fournie dans la page Créer une base de données CDC de l'Assistant Nouvelle instance et pour apporter des modifications aux informations de connexion à la base de données d'exploration de données de journaux Oracle.  
@@ -37,15 +37,15 @@ ms.locfileid: "47727247"
  **Authentification pour l'exploration de données de journaux Oracle**  
  Pour entrer les informations d’identification pour la base de données Oracle qui contient l’outil Log Miner, sélectionnez une des options suivantes sous **Authentification**:  
   
--   **Authentification Windows**: sélectionnez cette option pour utiliser les informations d'identification actuelles de domaine Windows. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.  
+-   **Authentification Windows** : sélectionnez cette option pour utiliser les informations d’identification actuelles de domaine Windows. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.  
   
--   **Authentification Oracle**: si vous sélectionnez cette option, vous devez taper le **Nom d'utilisateur** et le **Mot de passe** de l'utilisateur dans la base de données Oracle à laquelle vous êtes connecté.  
+-   **Authentification Oracle** : si vous sélectionnez cette option, vous devez taper le **Nom d’utilisateur** et le **Mot de passe** de l’utilisateur dans la base de données Oracle à laquelle vous vous connectez.  
   
  Vous pouvez afficher les propriétés de base de données Oracle dans la visionneuse. Lorsque vous utilisez la visionneuse, les informations sont en lecture seule. La visionneuse inclut également la liste des colonnes capturées dans la table. Pour plus d'informations sur l'accès à la visionneuse, consultez [How to Manage a CDC Instance](../../integration-services/change-data-capture/how-to-manage-a-cdc-instance.md).  
   
 ## <a name="see-also"></a> Voir aussi  
  [Procédure : gérer un service de capture de données modifiées à partir de la console du concepteur CDC](../../integration-services/change-data-capture/how-to-manage-a-cdc-service-from-the-cdc-designer-console.md)   
- [Se connecter à une base de données source Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
- [Se connecter à Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
+ [Connexion à une base de données source Oracle](../../integration-services/change-data-capture/connect-to-an-oracle-source-database.md)   
+ [Connexion à Oracle](../../integration-services/change-data-capture/connect-to-oracle.md)  
   
   

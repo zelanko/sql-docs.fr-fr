@@ -12,15 +12,15 @@ helpviewer_keywords:
 - '& (bitwise AND)'
 - bitwise AND (&)
 ms.assetid: 06d2958e-66a5-44d8-8bc4-56209ebe1ff2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 12db68600b9f96de2eb4728bef47720c1b02756d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14fa3688df20ba9989c321fad30e89370a1f5d2b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727803"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290275"
 ---
 # <a name="amp-bitwise-and-ssis-expression"></a>&amp; (AND au niveau du bit) (expression SSIS)
   Effectue une opération AND au niveau du bit avec deux valeurs entières. Cette fonction compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si les deux bits ont pour valeur 1, le bit obtenu correspondant a pour valeur 1. Sinon, il a pour valeur 0.  
@@ -37,7 +37,7 @@ integer_expression1 & integer_expression2
   
 ## <a name="arguments"></a>Arguments  
  *integer_expression1, integer_expression2*  
- Toute expression valide de type de données signed integer ou unsigned integer. Pour plus d'informations, consultez [Integration Services Data Types](../../integration-services/data-flow/integration-services-data-types.md).  
+ Toute expression valide de type de données signed integer ou unsigned integer. Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).  
   
 ## <a name="result-types"></a>Types des résultats  
  Déterminés par les types de données des deux arguments. Pour plus d’informations, consultez [Types de données Integration Services dans les expressions](../../integration-services/expressions/integration-services-data-types-in-expressions.md).  
