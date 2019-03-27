@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8ad12de9456fef0d4803ae83479e615bffa0edcc
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241420"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477984"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Concepts de sécurité pour les clusters de données volumineuses de SQL Server
 
@@ -59,10 +59,10 @@ Mot de passe de contrôleur :
  + CONTROLLER_PASSWORD = < controller_password >
 
 Mot de passe administrateur système Master de SQL : 
- + MSSQL_SA_PASSWORD = < controller_sa_password >
+ + MSSQL_SA_PASSWORD=<controller_sa_password>
 
 Mot de passe pour le point de terminaison HDFS/Spark de l’accès à :
- + KNOX_PASSWORD = < knox_password >
+ + KNOX_PASSWORD=<knox_password>
 
 ### <a name="intra-cluster-authentication"></a>Authentification de l’intérieur du cluster
 
@@ -81,7 +81,7 @@ Communication avec les services non-SQL au sein du cluster de données volumineu
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les articles suivants :
+Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les ressources suivantes :
 
 - [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
-- [Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Kubernetes](quickstart-big-data-cluster-deploy.md)
+- [Atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

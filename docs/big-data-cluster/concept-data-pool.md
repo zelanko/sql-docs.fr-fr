@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c3df07da100bf0bbfc0b2238cb4154b4c3a363e3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 906b27c186668518702c7ab3a757e6eeb4e5b278
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241610"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478224"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-2019-big-data-cluster"></a>Quelles sont les pools de données dans un cluster de données volumineux de SQL Server 2019 ?
 
@@ -33,6 +33,7 @@ Les pools de données permettent la création de montée en puissance datamarts,
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez la présentation suivante :
+Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les ressources suivantes :
 
 - [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
+- [Atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

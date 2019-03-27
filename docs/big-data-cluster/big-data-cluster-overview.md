@@ -10,12 +10,12 @@ ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 996913979669aa85088d6d640436b5610293eb35
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 20ee32b445a7509967b18c51a8e661527585f291
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072124"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477644"
 ---
 # <a name="what-are-sql-server-2019-big-data-clusters"></a>Quelles sont les clusters SQL Server 2019 big data ?
 
@@ -100,6 +100,9 @@ Le plan de calcul fournit des ressources de calcul au cluster. Il contient des n
 ### <a id="dataplane"></a> Plan de données
 
 Le plan de données est utilisé pour la persistance des données et la mise en cache. Il contient le pool de données SQL et le pool de stockage.  Le pool de données SQL se compose d’un ou plusieurs pods exécutant SQL Server sur Linux. Il est utilisé pour recevoir les données à partir de requêtes SQL ou de travaux Spark. Données volumineuses de SQL Server cluster mini-Data Warehouses sont conservés dans le pool de données des données. Le pool de stockage se compose de pods de pool de stockage constitués de SQL Server sur Linux, Spark et HDFS. Tous les nœuds de stockage dans un cluster de données volumineux de SQL Server sont membres d’un cluster HDFS.
+
+> [!TIP]
+> Pour obtenir une présentation détaillée dans l’architecture de cluster big data et l’installation, consultez [atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
 
 ## <a name="next-steps"></a>Étapes suivantes
 

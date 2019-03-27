@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c89ddc5d155af4542b5101e9a6e394effc5d9fd3
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 7dfb89103bb83fc77c590e5c5b5984cbd96b197d
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241520"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477924"
 ---
 # <a name="what-is-the-storage-pool-sql-server-2019-big-data-clusters"></a>Qu’est le pool de stockage (données volumineuses des clusters SQL Server 2019) ?
 
@@ -37,6 +37,7 @@ Nœuds de stockage sont responsables :
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez la présentation suivante :
+Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les ressources suivantes :
 
 - [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
+- [Atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

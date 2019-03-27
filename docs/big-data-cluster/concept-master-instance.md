@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 24b5799b71f9102785bdcb6103324d8bf8b1ad96
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227301"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58477945"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>Qu’est l’instance principale dans un cluster de données volumineux de SQL Server 2019 ?
 
@@ -66,6 +66,7 @@ Avec SQL Server 2019 des clusters de données volumineuses, vous pouvez en faire
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez la présentation suivante :
+Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les ressources suivantes :
 
 - [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
+- [Atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

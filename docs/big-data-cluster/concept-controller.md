@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e9fc73e9e95e2a69871d55e6ce00d14b8f29f0e6
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 8f9a8a82315f98f6013f70a7bc7aa38443849edc
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017865"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478050"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-2019-big-data-cluster"></a>Qu’est le contrôleur sur un cluster de données volumineux de SQL Server 2019 ?
 
@@ -67,6 +67,7 @@ Authentification pour le point de terminaison de service de contrôleur est bas�
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez la présentation suivante :
+Pour en savoir plus sur les clusters de données volumineuses de SQL Server, consultez les ressources suivantes :
 
 - [Quelles sont les clusters SQL Server 2019 big data ?](big-data-cluster-overview.md)
+- [Atelier : Architecture de clusters de données volumineuses de Microsoft SQL Server](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
