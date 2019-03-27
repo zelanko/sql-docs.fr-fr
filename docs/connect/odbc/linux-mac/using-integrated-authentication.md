@@ -13,12 +13,12 @@ ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 24fce778851f514d680a2701cc9c4dcc9ccb277c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2ffaf0e89e1fdbd0a1722ad038ad9e360decf237
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419070"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305887"
 ---
 # <a name="using-integrated-authentication"></a>Utilisation de l’authentification intégrée
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -51,7 +51,7 @@ Vérifiez que vous utilisez `kinit` ou PAM (Pluggable Authentication Module) pou
   
 -   Exécutez `kinit`, en passant un nom et un mot de passe de principal.  
   
--   Exécutez `kinit`, en passant un nom de principal et l’emplacement d’un fichier keytab qui contient la clé du principal créée par `ktutil`.  
+-   Exécutez `kinit`, en passant un nom de principal et l’emplacement du fichier keytab contenant la clé du principal créée par `ktutil`.  
   
 -   Vérifiez que la connexion au système a été effectuée à l’aide du module PAM Kerberos.
 
@@ -67,7 +67,7 @@ La connexion à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] uti
   
 Pour auditer les activités dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour le compte d’utilisateurs autres que le compte système, l’application doit utiliser [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE AS**.  
   
-Pour améliorer ses performances, une application peut utiliser le regroupement de connexions avec l’authentification intégrée et l’audit. Toutefois, le fait de combiner le regroupement de connexions, l’authentification intégrée et l’audit crée un risque de sécurité, car le Gestionnaire de pilotes unixODBC permet à différents utilisateurs de réutiliser les connexions regroupées. Pour plus d’informations, consultez [ODBC Connection Pooling](https://www.unixodbc.org/doc/conn_pool.html).  
+Pour améliorer ses performances, une application peut utiliser le regroupement de connexions avec l’authentification intégrée et l’audit. Toutefois, le fait de combiner le regroupement de connexions, l’authentification intégrée et l’audit crée un risque de sécurité, car le Gestionnaire de pilotes unixODBC permet à différents utilisateurs de réutiliser les connexions regroupées. Pour plus d’informations, consultez [ODBC Connection Pooling](http://www.unixodbc.org/doc/conn_pool.html).  
 
 Avant d’être réutilisée, une application doit réinitialiser les connexions regroupées en exécutant `sp_reset_connection`.  
 
@@ -83,7 +83,7 @@ Les développeurs peuvent déployer une application qui utilise un serveur lié 
   
 -   Le serveur d’applications s’authentifie en tant qu’autre base de données et se connecte à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’authentifie en tant qu’utilisateur de base de données à une autre base de données ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’authentifie en tant qu’utilisateur de base de données pour une autre base de données ([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]).  
   
 Une fois l’authentification intégrée configurée, les informations d’identification sont transmises au serveur lié.  
   

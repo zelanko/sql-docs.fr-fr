@@ -25,12 +25,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 2a6762f20c05a66c597474d33bd98e9bb8f2c5f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
+ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589993"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356462"
 ---
 # <a name="osql-utility"></a>Utilitaire osql
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -262,7 +262,7 @@ osql -E -i titles.qry -o titles.res
 >  Quand **osql**est utilisé, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] traite le délimiteur de lot « GO » comme une erreur de syntaxe s’il apparaît dans un fichier de script SQL.  
   
 ## <a name="inserting-comments"></a>Insertion de commentaires  
- Vous pouvez inclure des commentaires dans une instruction Transact-SQL soumise à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par **osql**. Il existe deux syntaxes de commentaires : -- et /*...\*/.  
+ Vous pouvez inclure des commentaires dans une instruction Transact-SQL soumise à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] par **osql**. Deux styles de commentaires sont autorisés : `--` et `/*...*/`.  
   
 ## <a name="using-exit-to-return-results-in-osql"></a>Utilisation d'EXIT pour retourner des résultats dans osql  
  Vous pouvez utiliser le résultat d'une instruction SELECT comme valeur retournée par **osql**. S'il est numérique, la dernière colonne de la dernière ligne de résultats est convertie en entier de 4 octets (entier long). MS-DOS transmet l'octet de poids faible au processus parent ou au niveau erreur du système d'exploitation. Windows transmet la totalité de l'entier de 4 octets. La syntaxe de cette commande est la suivante :  
