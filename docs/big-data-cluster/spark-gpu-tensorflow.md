@@ -1,21 +1,21 @@
 ---
-title: Prise en charge GPU et TensorFlow
+title: Prise en charge de GPU et TensorFlow
 titleSuffix: SQL Server 2019 big data clusters
 description: Déployer un cluster de données volumineuses avec prise en charge GPU et utiliser TensorFlow dans Azure Data Studio Notebooks.
 author: lgongmsft
 ms.author: shivprashant
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/14/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9f766c343152fa601cc22e59e3385c454ec23879
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: f89568860fa656efbb93eb9b72eb647f88ce6089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161953"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494111"
 ---
 # <a name="deploy-a-big-data-cluster-with-gpu-support-and-run-tensorflow"></a>Déployer un cluster de données volumineuses avec prise en charge GPU et exécuter TensorFlow
 
@@ -196,7 +196,7 @@ Les blocs-notes deux exemples suivants montrent deux image classification modèl
 Placez le fichier de bloc-notes approprié sur votre ordinateur local, puis ouvrir et exécuter dans Azure Data Studio, l’utilisation du noyau PySpark3. Sauf si vous avez un besoin spécifique pour une version antérieure de CUDA ou TensorFlow, choisissez CUDA 9/CUDNN 7/TensorFlow 1.12.0. Pour plus d’informations sur l’utilisation des blocs-notes avec les clusters de données volumineuses, consultez [comment utiliser des blocs-notes en version préliminaire de SQL Server 2019](notebooks-guidance.md).
 
 > [!NOTE]
-> Notez que les blocs-notes installer des logiciels dans les emplacements du système. Cela est possible, car les ordinateurs portables exécutent actuellement avec des privilèges root dans CTP 2.3.
+> Notez que les blocs-notes installer des logiciels dans les emplacements du système. Cela est possible, car les ordinateurs portables exécutent actuellement avec des privilèges root dans CTP 2.4.
 
 Après avoir installé les bibliothèques de GPU NVIDIA et TensorFlow pour le GPU, les blocs-notes liste périphériques GPU disponibles. Ensuite, ils ajusteront et évaluent un modèle TensorFlow afin qu’il reconnaisse les chiffres manuscrits à l’aide de l’ensemble de données MNIST. Après avoir vérifié l’espace disque disponible, ils téléchargent et exécuter l’exemple de classification d’images CIFAR 10 à partir de [ https://github.com/tensorflow/models.git ](https://github.com/tensorflow/models.git). En exécutant l’exemple CIFAR 10 sur des clusters ayant différents GPU, vous pouvez observer l’augmentation de vitesse offertes par chaque génération de GPU disponible dans Azure.
 

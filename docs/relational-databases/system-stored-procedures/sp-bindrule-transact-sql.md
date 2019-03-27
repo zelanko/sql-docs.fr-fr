@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d08f754022ae28cfce074978bfdd8c3f79ba71a6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128409"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493761"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@rulename=**] **'**_règle_**'**  
- Nom d'une règle créée par l'instruction CREATE RULE. *règle* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @rulename = ] 'rule'` Est le nom d’une règle créée par l’instruction CREATE RULE. *règle* est **nvarchar(776)**, sans valeur par défaut.  
   
- [  **@objname=**] **'**_object_name_**'**  
- Table ou colonne, ou bien type de données d'alias auquel la règle doit être liée. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
+`[ @objname = ] 'object_name'` Est la table et colonne ou le type de données alias auquel la règle doit être lié. Une règle ne peut pas être liée à un type **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, à un type CLR défini par l’utilisateur, ou à une colonne **timestamp**. Enfin, une règle ne peut pas être liée à une colonne calculée.  
   
  *object_name* est **nvarchar(776)** sans valeur par défaut. Si *object_name* est un nom d’une seule partie, il est résolu comme un type de données alias. S'il s'agit d'un nom en deux ou trois parties, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *règle* , sauf si une règle a été liée directement à la colonne.  
   
@@ -60,8 +58,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 > [!NOTE]  
 >  Les règles créées sur des expressions utilisant des types de données d'alias peuvent être liées à des colonnes ou des types de données d'alias, mais ne peuvent pas être compilées lorsqu'elles sont référencées. Évitez d'utiliser des règles créées sur des types de données d'alias.  
   
- [  **@futureonly=** ] **'**_futureonly_flag_**'**  
- S'utilise seulement pour lier une règle à un type de données d'alias. *indicateur_à_venir* est **varchar(15)** avec NULL comme valeur par défaut. Ce paramètre lorsque la valeur **futureonly** empêche les colonnes existantes d’un type de données d’alias d’hériter de la nouvelle règle. Si *futureonly_flag* est NULL, la nouvelle règle est liée à toute colonne du type de données alias qui n’a aucune règle ou qui sont à l’aide de la règle existante du type de données alias.  
+`[ @futureonly = ] 'futureonly_flag'` Est utilisé uniquement lors de la liaison d’une règle à un type de données alias. *indicateur_à_venir* est **varchar(15)** avec NULL comme valeur par défaut. Ce paramètre lorsque la valeur **futureonly** empêche les colonnes existantes d’un type de données d’alias d’hériter de la nouvelle règle. Si *futureonly_flag* est NULL, la nouvelle règle est liée à toute colonne du type de données alias qui n’a aucune règle ou qui sont à l’aide de la règle existante du type de données alias.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

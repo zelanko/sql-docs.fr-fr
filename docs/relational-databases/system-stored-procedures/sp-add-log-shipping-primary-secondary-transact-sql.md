@@ -18,12 +18,12 @@ ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07719bb41e0a83160a0f2e081c15d82a3455e9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0aac9866026949b278e9a8eba4310f158254a521
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666553"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494051"
 ---
 # <a name="spaddlogshippingprimarysecondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@primary_database** =] '*primary_database*'  
- Nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'` Est le nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
   
- [ **@secondary_server** =] '*secondary_server*»,  
- Nom du serveur secondaire. *secondary_server* est **sysname**, sans valeur par défaut.  
+`[ @secondary_server = ] 'secondary_server',` Est le nom du serveur secondaire. *secondary_server* est **sysname**, sans valeur par défaut.  
   
- [ **@secondary_database** =] '*secondary_database*'  
- Nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
+`[ @secondary_database = ] 'secondary_database'` Est le nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -61,7 +58,7 @@ sp_add_log_shipping_primary_secondary
 ## <a name="remarks"></a>Notes  
  **sp_add_log_shipping_primary_secondary** doit être exécuté à partir de la **master** base de données sur le serveur principal.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

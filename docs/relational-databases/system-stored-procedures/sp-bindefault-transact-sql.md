@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f14b269b65b6a6c30e7ac8de25aebafa7b7c38be
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835667"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494251"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,19 +46,16 @@ sp_bindefault [ @defname = ] 'default' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@defname=** ] **'***par défaut***'**  
- Nom de la valeur par défaut créée par l'instruction CREATE DÉFAUT. *par défaut* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @defname = ] 'default'` Est le nom de la valeur par défaut qui est créé par défaut de créer. *par défaut* est **nvarchar(776)**, sans valeur par défaut.  
   
- [  **@objname=** ] **'***object_name***'**  
- Nom de la table et de la colonne ou type de données d'alias, auquel est liée la valeur par défaut. *object_name* est **nvarchar(776)** sans valeur par défaut. *object_name* ne peut pas être défini avec la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, ou CLR types définis par l’utilisateur.  
+`[ @objname = ] 'object_name'` Est le nom de table et de colonne ou le type de données alias auquel la valeur par défaut doit être lié. *object_name* est **nvarchar(776)** sans valeur par défaut. *object_name* ne peut pas être défini avec la **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, ou CLR types définis par l’utilisateur.  
   
  Si *object_name* est un nom d’une seule partie, il est résolu comme un type de données alias. S'il s'agit d'un nom à deux ou trois composantes, il est d'abord résolu en tant que table et colonne. Si la résolution échoue, il est résolu en tant que type de données d'alias. Par défaut, les colonnes existantes du type de données alias héritent *par défaut*, sauf si une valeur par défaut a été liée directement à la colonne. Une valeur par défaut ne peut pas être lié à un **texte**, **ntext**, **image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **timestamp**, CLR colonne de type défini par l’utilisateur, une colonne avec la propriété IDENTITY, une colonne calculée ou une colonne qui a déjà une contrainte par défaut.  
   
 > [!NOTE]  
 >  *object_name* peut contenir des crochets **[]** en tant qu’identificateurs délimités. Pour plus d'informations, consultez [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- [  **@futureonly=** ] **'***futureonly_flag***'**  
- S'utilise seulement pour lier une valeur par défaut à un type de données d'alias. *l’argument futureonly_flag* est **varchar(15)** avec NULL comme valeur par défaut. Lorsque ce paramètre est défini sur **futureonly**, les colonnes existantes de ce type de données ne peut pas hériter de la nouvelle valeur par défaut. Il ne s'emploie jamais lors de la liaison d'une valeur par défaut à une colonne. Si *futureonly_flag* est NULL, la nouvelle valeur par défaut est liée à toute colonne du type de données alias qui n’a aucune valeur par défaut ou qui sont à l’aide de la valeur par défaut existant du type de données alias.  
+`[ @futureonly = ] 'futureonly_flag'` Est utilisé uniquement lors de la liaison par défaut à un type de données alias. *l’argument futureonly_flag* est **varchar(15)** avec NULL comme valeur par défaut. Lorsque ce paramètre est défini sur **futureonly**, les colonnes existantes de ce type de données ne peut pas hériter de la nouvelle valeur par défaut. Il ne s'emploie jamais lors de la liaison d'une valeur par défaut à une colonne. Si *futureonly_flag* est NULL, la nouvelle valeur par défaut est liée à toute colonne du type de données alias qui n’a aucune valeur par défaut ou qui sont à l’aide de la valeur par défaut existant du type de données alias.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -70,7 +67,7 @@ sp_bindefault [ @defname = ] 'default' ,
   
  Lorsque vous liez une valeur par défaut à une colonne, l’information correspondante est ajoutée à la **sys.columns** vue de catalogue. Lorsque vous liez une valeur par défaut à un type de données alias, l’information correspondante est ajoutée à la **sys.types** vue de catalogue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Utilisateur propriétaire de la table ou être membre du **sysadmin** rôle serveur fixe ou le **db_owner** et **db_ddladmin** des rôles de base de données fixes.  
   
 ## <a name="examples"></a>Exemples  
@@ -84,7 +81,7 @@ GO
 EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Liaison d'une valeur par défaut à un type de données d'alias  
+### <a name="b-binding-a-default-to-an-alias-data-type"></a>b. Liaison d'une valeur par défaut à un type de données d'alias  
  Une valeur par défaut nommée `def_ssn` et un type de données d'alias nommé `ssn` existent déjà. L'exemple suivant lie la valeur par défaut `def_ssn` à `ssn`. Lors de la création d'une table, toutes les colonnes affectées au type de données d'alias `ssn` héritent la valeur par défaut. Les colonnes existantes de type **ssn** héritent également la valeur par défaut **def_ssn**, sauf si **futureonly** est spécifiée pour *futureonly_flag* valeur, ou, à moins que la colonne a une valeur par défaut directement liée. Les valeurs par défaut liées aux colonnes ont toujours priorité sur celles liées à des types de données.  
   
 ```  

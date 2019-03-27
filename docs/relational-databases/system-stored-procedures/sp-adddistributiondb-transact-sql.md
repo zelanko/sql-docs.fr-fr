@@ -16,12 +16,12 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 6c55e0f8d7c2e102b18f7c17fb263c8f76658ede
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61425d2af597299e3f34186c4555d324278d8cbf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765801"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492552"
 ---
 # <a name="spadddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,47 +54,33 @@ sp_adddistributiondb [ @database= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@database=**] *base de données »*  
- Nom de la base de données de distribution à créer. *base de données* est **sysname**, sans valeur par défaut. Si la base de données spécifiée existe déjà et n'est pas déjà marquée comme base de données de distribution, les objets nécessaires à l'activation de la distribution sont installés ; la base de données est également marquée comme base de données de distribution. Si la base de données spécifiée est déjà activée comme base de données de distribution, une erreur est renvoyée.  
+`[ @database = ] database'` Est le nom de la base de données de distribution doit être créé. *base de données* est **sysname**, sans valeur par défaut. Si la base de données spécifiée existe déjà et n'est pas déjà marquée comme base de données de distribution, les objets nécessaires à l'activation de la distribution sont installés ; la base de données est également marquée comme base de données de distribution. Si la base de données spécifiée est déjà activée comme base de données de distribution, une erreur est renvoyée.  
   
- [  **@data_folder=**] **'**_argument dossier_de_données '_  
- Nom du répertoire utilisé pour stocker le fichier de données de la base de données de distribution. *argument dossier_de_données* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
+`[ @data_folder = ] 'data_folder'_` Est le nom du répertoire utilisé pour stocker le fichier de données de base de données de distribution. *argument dossier_de_données* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
- [  **@data_file=**] **'**_data_file_**'**  
- Nom du fichier de base de données. *data_file* est **nvarchar (255)**, avec une valeur par défaut **base de données**. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
+`[ @data_file = ] 'data_file'` Est le nom du fichier de base de données. *data_file* est **nvarchar (255)**, avec une valeur par défaut **base de données**. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
   
- [  **@data_file_size=**] *taille_du_fichier_de_données*  
- Taille initiale du fichier de données en mégaoctets (MB). *taille_du_fichier_de_données je*s **int**, avec une valeur par défaut de 5 Mo.  
+`[ @data_file_size = ] data_file_size` Est la taille de fichier initiale des données en mégaoctets (Mo). *taille_du_fichier_de_données je*s **int**, avec une valeur par défaut de 5 Mo.  
   
- [  **@log_folder=**] **'**_dossier_journal_**'**  
- Est le nom du répertoire du fichier journal de base de données. *dossier_journal* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
+`[ @log_folder = ] 'log_folder'` Est le nom du répertoire du fichier journal de base de données. *dossier_journal* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si sa valeur est NULL, le répertoire de données de cette instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé, par exemple `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Data`.  
   
- [  **@log_file=**] **'**_fichier_journal_**'**  
- Est le nom du fichier journal. *fichier_journal* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
+`[ @log_file = ] 'log_file'` Est le nom du fichier journal. *fichier_journal* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si la valeur est NULL, la procédure stockée crée un nom de fichier en utilisant le nom de la base de données.  
   
- [  **@log_file_size=**] *log_file_size*  
- Taille initiale du fichier journal en mégaoctets (MB). *log_file_size* est **int**, avec une valeur par défaut 0 Mo, ce qui signifie que la taille du fichier est créée en utilisant le journaux de plus petite taille de fichier autorisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+`[ @log_file_size = ] log_file_size` Est la taille du fichier journal initiale en mégaoctets (Mo). *log_file_size* est **int**, avec une valeur par défaut 0 Mo, ce qui signifie que la taille du fichier est créée en utilisant le journaux de plus petite taille de fichier autorisée par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [  **@min_distretention=**] *rétention_de_distribution_minimale*  
- Période de rétention minimale, en heures, avant que les transactions soient supprimées de la base de données de distribution. *rétention_de_distribution_minimale* est **int**, avec la valeur par défaut est 0.  
+`[ @min_distretention = ] min_distretention` Est la période de rétention minimale, en heures, avant la suppression des transactions à partir de la base de données de distribution. *rétention_de_distribution_minimale* est **int**, avec la valeur par défaut est 0.  
   
- [  **@max_distretention=**] *max_distretention*  
- Est la période de rétention maximale, en heures, avant la suppression des transactions. *max_distretention* est **int**, avec une valeur par défaut de 72 heures. Les abonnements qui n'ont pas reçu de commandes répliquées plus anciennes que la période de rétention maximale de la distribution sont marqués comme inactifs et doivent être réinitialisés. Une instruction RAISERROR 21011 est émise pour chaque abonnement inactif. La valeur **0** signifie que les transactions répliquées n’est pas stockées dans la base de données de distribution.  
+`[ @max_distretention = ] max_distretention` Est la période de rétention maximale, en heures, avant la suppression des transactions. *max_distretention* est **int**, avec une valeur par défaut de 72 heures. Les abonnements qui n'ont pas reçu de commandes répliquées plus anciennes que la période de rétention maximale de la distribution sont marqués comme inactifs et doivent être réinitialisés. Une instruction RAISERROR 21011 est émise pour chaque abonnement inactif. La valeur **0** signifie que les transactions répliquées n’est pas stockées dans la base de données de distribution.  
   
- [  **@history_retention=**] *history_retention*  
- Nombre d'heures de rétention de l'historique. *history_retention* est **int**, avec une valeur par défaut de 48 heures.  
+`[ @history_retention = ] history_retention` Est le nombre d’heures de rétention de l’historique. *history_retention* est **int**, avec une valeur par défaut de 48 heures.  
   
- [  **@security_mode=**] *security_mode*  
- Mode de sécurité à utiliser lors de la connexion à un serveur de distribution. *security_mode* est **int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification ; **1** Spécifie l’authentification intégrée Windows.  
+`[ @security_mode = ] security_mode` Est le mode de sécurité à utiliser lors de la connexion au serveur de distribution. *security_mode* est **int**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification ; **1** Spécifie l’authentification intégrée Windows.  
   
- [  **@login=**] **'**_connexion_**'**  
- Nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
+`[ @login = ] 'login'` Est le nom de connexion utilisé lors de la connexion au serveur de distribution pour créer la base de données de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@password=**] **'**_mot de passe_**'**  
- Mot de passe utilisé lors de la connexion au serveur de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *mot de passe* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @password = ] 'password'` Est le mot de passe utilisé lors de la connexion au serveur de distribution. Cela est nécessaire si *security_mode* a la valeur **0**. *mot de passe* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@createmode=**] *createmode*  
- *createmode* est **int**, avec une valeur par défaut 1, et peut prendre l’une des valeurs suivantes.  
+`[ @createmode = ] createmode` *createmode* est **int**, avec une valeur par défaut 1, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -102,14 +88,11 @@ sp_adddistributiondb [ @database= ] 'database'
 |**1** (par défaut)|CRÉER une base de données ou utiliser l’existant de base de données, puis appliquer **instdist.sql** fichier à créer des objets de réplication dans la base de données de distribution.|  
 |**2**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- [  **@from_scripting =** ] *from_scripting*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_scripting = ] from_scripting` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
  
- [  **@deletebatchsize_xact=**] *deletebatchsize_xact*  
- Spécifie la taille de lot à utiliser pendant le nettoyage de transactions expirées à partir des tables MSRepl_Transactions. *deletebatchsize_xact* est **int**, avec une valeur par défaut de 5000. Ce paramètre a été introduit dans SQL Server 2017, suivie des versions dans SQL Server 2012 SP4 et SQL Server 2016 SP2.  
+`[ @deletebatchsize_xact = ] deletebatchsize_xact` Spécifie la taille de lot à utiliser pendant le nettoyage de transactions expirées à partir des tables MSRepl_Transactions. *deletebatchsize_xact* est **int**, avec une valeur par défaut de 5000. Ce paramètre a été introduit dans SQL Server 2017, suivie des versions dans SQL Server 2012 SP4 et SQL Server 2016 SP2.  
 
- [  **@deletebatchsize_cmd=**] *deletebatchsize_cmd*  
- Spécifie la taille de lot à utiliser pendant le nettoyage des commandes expirées à partir des tables MSRepl_Commands. *deletebatchsize_cmd* est **int**, avec la valeur par défaut est 2000. Ce paramètre a été introduit dans SQL Server 2017, suivie des versions dans SQL Server 2012 SP4 et SQL Server 2016 SP2. 
+`[ @deletebatchsize_cmd = ] deletebatchsize_cmd` Spécifie la taille de lot à utiliser pendant le nettoyage des commandes expirées à partir des tables MSRepl_Commands. *deletebatchsize_cmd* est **int**, avec la valeur par défaut est 2000. Ce paramètre a été introduit dans SQL Server 2017, suivie des versions dans SQL Server 2012 SP4 et SQL Server 2016 SP2. 
  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

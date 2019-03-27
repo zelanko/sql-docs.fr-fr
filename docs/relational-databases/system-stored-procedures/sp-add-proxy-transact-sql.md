@@ -19,12 +19,12 @@ ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e9353e797f5ff84101726b0cfe7d12020f14fca3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811447"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494271"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,23 +47,17 @@ sp_add_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@proxy_name**=] **'***proxy_name***'**  
- Nom du proxy à créer. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut. Lorsque le *proxy_name* est NULL ou une chaîne vide, le nom du proxy par défaut, la *user_name* fourni.  
+`[ @proxy_name = ] 'proxy_name'` Le nom du proxy à créer. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut. Lorsque le *proxy_name* est NULL ou une chaîne vide, le nom du proxy par défaut, la *user_name* fourni.  
   
- [ **@enabled** =] *is_enabled*  
- Indique si le proxy est activé. Le *is_enabled* indicateur est **tinyint**, avec 1 comme valeur par défaut. Lorsque *is_enabled* est **0**, le proxy n’est pas activé et ne peut pas être utilisé par une étape de travail.  
+`[ @enabled = ] is_enabled` Spécifie si le proxy est activé. Le *is_enabled* indicateur est **tinyint**, avec 1 comme valeur par défaut. Lorsque *is_enabled* est **0**, le proxy n’est pas activé et ne peut pas être utilisé par une étape de travail.  
   
- [ **@description**=] **'***description***'**  
- Description du proxy. La description est **nvarchar (512)**, avec NULL comme valeur par défaut. La description vous permet de documenter le proxy, mais elle n'est pas utilisée à d'autres fins par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet argument est donc facultatif.  
+`[ @description = ] 'description'` Description du proxy. La description est **nvarchar (512)**, avec NULL comme valeur par défaut. La description vous permet de documenter le proxy, mais elle n'est pas utilisée à d'autres fins par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cet argument est donc facultatif.  
   
- [ **@credential_name** =] **'***credential_name***'**  
- Nom relatif aux informations d'identification du proxy. Le *credential_name* est **sysname**, avec NULL comme valeur par défaut. Soit *credential_name* ou *credential_id* doit être spécifié.  
+`[ @credential_name = ] 'credential_name'` Le nom de l’information d’identification pour le proxy. Le *credential_name* est **sysname**, avec NULL comme valeur par défaut. Soit *credential_name* ou *credential_id* doit être spécifié.  
   
- [ **@credential_id** =] *credential_id*  
- Numéro d'identification relatif aux informations d'identification du proxy. Le *credential_id* est **int**, avec NULL comme valeur par défaut. Soit *credential_name* ou *credential_id* doit être spécifié.  
+`[ @credential_id = ] credential_id` Numéro d’identification de l’information d’identification pour le proxy. Le *credential_id* est **int**, avec NULL comme valeur par défaut. Soit *credential_name* ou *credential_id* doit être spécifié.  
   
- [ **@proxy_id**=] *id* sortie  
- Numéro d'identification attribué au proxy en cas de création réussie.  
+`[ @proxy_id = ] id OUTPUT` Le numéro d’identification attribué au proxy si créé avec succès.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -76,7 +70,7 @@ sp_add_proxy
   
  Un proxy de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère la sécurité des étapes de travail qui impliquent des sous-systèmes autres que le sous-système [!INCLUDE[tsql](../../includes/tsql-md.md)]. Chaque proxy correspond à des informations d'identification de sécurité. Un proxy peut avoir accès à plusieurs sous-systèmes.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle de sécurité fixe peut exécuter cette procédure.  
   
  Membres de la **sysadmin** rôle de sécurité fixe peut créer des étapes de travail qui utilisent n’importe quel proxy. Utilisez la procédure stockée [sp_grant_login_to_proxy &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md) accorder d’autres connexions à accéder au proxy.  

@@ -16,12 +16,12 @@ ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30b9216b2c33998b45a07c0b16d58f1b9c1139be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 16de7ceaae80a2aebcf2ed40d2b06b9a6ccf0dc4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819113"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493461"
 ---
 # <a name="spchangeagentparameter-transact-sql"></a>sp_change_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +38,9 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@profile_id=**] *profile_id*,  
- ID du profil. *profile_id* est **int**, sans valeur par défaut.  
+`[ @profile_id = ] profile_id,` Est l’ID du profil. *profile_id* est **int**, sans valeur par défaut.  
   
- [  **@parameter_name=**] **'***nom_paramètre***'**  
- Est le nom du paramètre. *parameter_name* est **sysname**, sans valeur par défaut. Pour les profils système, les paramètres modifiables dépendent du type d'Agent. Pour savoir de quel type d’agent *profile_id* représente, localisez le *profile_id* colonne dans le **Msagent_profiles** table et notez le *agent_type*  valeur.  
+`[ @parameter_name = ] 'parameter_name'` Est le nom du paramètre. *parameter_name* est **sysname**, sans valeur par défaut. Pour les profils système, les paramètres modifiables dépendent du type d'Agent. Pour savoir de quel type d’agent *profile_id* représente, localisez le *profile_id* colonne dans le **Msagent_profiles** table et notez le *agent_type*  valeur.  
   
 > [!NOTE]  
 >  Si un paramètre est pris en charge pour une donnée *agent_type*, mais n’a ne pas été défini dans le profil d’agent, une erreur est retournée. Pour ajouter un paramètre à un profil d’agent que vous devez exécuter [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
@@ -61,7 +59,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MaxNetworkOptimization**  
   
--   **Sortie**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -81,7 +79,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Sortie**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -117,7 +115,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **MessageInterval**  
   
--   **Sortie**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -135,7 +133,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  Pour un Agent de fusion (*agent_type*=**4**), s’il est défini dans le profil, les propriétés suivantes peuvent être modifiées :  
   
--   **AltSnapshotFolder au maximum**  
+-   **AltSnapshotFolder**  
   
 -   **BcpBatchSize**  
   
@@ -181,7 +179,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **NumDeadlockRetries**  
   
--   **Sortie**  
+-   **Output**  
   
 -   **OutputMessageFile**  
   
@@ -229,7 +227,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
 -   **LoginTimeout**  
   
--   **Sortie**  
+-   **Output**  
   
 -   **OutputVerboseLevel**  
   
@@ -243,8 +241,7 @@ sp_change_agent_parameter [ @profile_id= ] profile_id, [ @parameter_name= ] 'par
   
  Pour voir quels paramètres ont été définies pour un profil donné, exécutez **sp_help_agent_profile** et notez le *profile_name* associé à la *profile_id*. Avec le bon *profile_id*, prochaine exécution **sp_help_agent_parameters** à l’aide qui *profile_id* pour afficher les paramètres associés au profil. Paramètres peuvent être ajoutés à un profil en exécutant [sp_add_agent_parameter](../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md).  
   
- [  **@parameter_value=**] **'***parameter_value***'**  
- Est la nouvelle valeur du paramètre. *parameter_value* est **nvarchar (255)**, sans valeur par défaut.  
+`[ @parameter_value = ] 'parameter_value'` Est la nouvelle valeur du paramètre. *parameter_value* est **nvarchar (255)**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

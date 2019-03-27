@@ -18,12 +18,12 @@ ms.assetid: 5bcb4df7-6df3-4f2b-9207-b97b5addf2a6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: df800e141a922250cea37eee1aeee5af6f373f7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a84ed0105558772752f4d9871ad28a5bffde6bec
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650227"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493071"
 ---
 # <a name="spchangelogshippingsecondaryprimary-transact-sql"></a>sp_change_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,33 +48,25 @@ sp_change_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@primary_server** =] '*primary_server*'  
- Le nom de l’instance principale de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux. *primary_server* est **sysname** et ne peut pas être NULL.  
+`[ @primary_server = ] 'primary_server'` Le nom de l’instance principale de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux. *primary_server* est **sysname** et ne peut pas être NULL.  
   
- [ **@primary_database** =] '*primary_database*'  
- Nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'` Est le nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
   
- [ **@backup_source_directory** =] '*backup_source_directory*'  
- Répertoire où les fichiers de sauvegarde des journaux de transactions du serveur principal sont stockés. *backup_source_directory* est **nvarchar (500)** et ne peut pas être NULL.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Le répertoire où sont stockés les fichiers de sauvegarde du journal des transactions à partir du serveur principal. *backup_source_directory* est **nvarchar (500)** et ne peut pas être NULL.  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- Répertoire sur le serveur secondaire où sont copiés les fichiers de sauvegarde. *backup_destination_directory* est **nvarchar (500)** et ne peut pas être NULL.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Le répertoire sur le serveur secondaire où sont copiés les fichiers de sauvegarde. *backup_destination_directory* est **nvarchar (500)** et ne peut pas être NULL.  
   
- [ **@file_retention_period** =] '*file_retention_period*'  
- Période de rétention, en minutes, de l'historique. *history_retention_period* est **int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
+`[ @file_retention_period = ] 'file_retention_period'` Est la durée en minutes pendant laquelle l’historique doit être conservé. *history_retention_period* est **int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
- Mode de sécurité utilisé pour la connexion au serveur moniteur.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Le mode de sécurité utilisé pour se connecter au serveur moniteur.  
   
  1 = Authentification Windows ;  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. *monitor_server_security_mode* est **bits** et ne peut pas être NULL.  
   
- [ **@monitor_server_login** =] '*monitor_server_login*'  
- Nom d'utilisateur du compte utilisé pour accéder au serveur moniteur.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Est le nom d’utilisateur du compte utilisé pour accéder au serveur moniteur.  
   
- [ **@monitor_server_password** =] '*monitor_server_password*'  
- Mot de passe du compte qui permet d'accéder au serveur moniteur.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Est le mot de passe du compte utilisé pour accéder au serveur moniteur.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -89,7 +81,7 @@ sp_change_log_shipping_secondary_primary
   
 2.  Si le serveur moniteur est différent du serveur secondaire, modifications enregistrement de moniteur dans **log_shipping_monitor_secondary** sur le moniteur de serveur à l’aide des arguments fournis, si nécessaire.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -18,12 +18,12 @@ ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 37171709c977e55197ac2b7075442b9bf8323cbb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647427"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492891"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,11 +47,9 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname=** ] **'***dbname***'**  
- Nom de la base de données à attacher au serveur. Le nom doit être unique. *dbname* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @dbname = ] 'dbname'` Est le nom de la base de données à attacher au serveur. Le nom doit être unique. *dbname* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@physname=** ] **'***physical_name***'**  
- Nom physique, y compris le chemin d'accès, du fichier de base de données. *physical_name* est **nvarchar (260)**, avec NULL comme valeur par défaut.  
+`[ @physname = ] 'physical_name'` Est le nom physique, chemin d’accès compris, du fichier de base de données. *physical_name* est **nvarchar (260)**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Cet argument crée un mappage vers le paramètre FILENAME de l'instruction CREATE DATABASE. Pour plus d’informations, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
@@ -74,7 +72,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
   
  N'utilisez pas cette procédure sur une base de données répliquée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour plus d’informations sur la gestion des autorisations lorsqu’une base de données est attaché, consultez [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
 ## <a name="examples"></a>Exemples  

@@ -18,12 +18,12 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: be80ed76713788f81704609c4828e0a871ffdc7d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b4ff861015fc669defee69fece5c26ee45d66eaa
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590103"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493908"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,31 +45,24 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@server=** ] **'**_server_**'**  
- Nom du serveur lié à créer. *server* est de type **sysname**et n'a pas de valeur par défaut.  
+`[ @server = ] 'server'` Est le nom du serveur lié à créer. *server* est de type **sysname**et n'a pas de valeur par défaut.  
   
- [  **@srvproduct=** ] **'**_product_name_**'**  
- Nom de produit de la source de données OLE DB à ajouter comme serveur lié. *product_name* est **nvarchar (** 128 **)**, avec NULL comme valeur par défaut. Si **SQL Server**, *provider_name*, *data_source*, *emplacement*, *provider_string*, et *catalogue* ne doivent pas être spécifiés.  
+`[ @srvproduct = ] 'product_name'` Est le nom de produit de la source de données OLE DB à ajouter comme serveur lié. *product_name* est **nvarchar (** 128 **)**, avec NULL comme valeur par défaut. Si **SQL Server**, *provider_name*, *data_source*, *emplacement*, *provider_string*, et *catalogue* ne doivent pas être spécifiés.  
   
- [  **@provider=** ] **'**_provider_name_**'**  
- ID de programme unique (PROGID) du fournisseur OLE DB correspondant à la source de données. *provider_name* doit être unique pour le fournisseur OLE DB spécifié installé sur l’ordinateur actuel. *provider_name* est **nvarchar (** 128 **)**, avec une valeur par défaut NULL ; Toutefois, si *provider_name* est omis, SQLNCLI est utilisé. (L'utilisation de SQLNCLI et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous redirigera vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.) Le fournisseur OLE DB doit être inscrit dans le Registre avec le PROGID spécifié.  
+`[ @provider = ] 'provider_name'` Est l’unique identificateur programmatique (PROGID) du fournisseur OLE DB qui correspond à cette source de données. *provider_name* doit être unique pour le fournisseur OLE DB spécifié installé sur l’ordinateur actuel. *provider_name* est **nvarchar (** 128 **)**, avec une valeur par défaut NULL ; Toutefois, si *provider_name* est omis, SQLNCLI est utilisé. (L'utilisation de SQLNCLI et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vous redirigera vers la version la plus récente du fournisseur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB.) Le fournisseur OLE DB doit être inscrit dans le Registre avec le PROGID spécifié.  
   
- [  **@datasrc=** ] **'**_data_source_**'**  
- Nom de la source de données, tel qu'il est interprété par le fournisseur OLE DB. *data_source* est **nvarchar (** 4000 **)**. *data_source* est transmis comme propriété DBPROP_INIT_DATASOURCE pour initialiser le fournisseur OLE DB.  
+`[ @datasrc = ] 'data_source'` Est le nom de la source de données interprété par le fournisseur OLE DB. *data_source* est **nvarchar (** 4000 **)**. *data_source* est transmis comme propriété DBPROP_INIT_DATASOURCE pour initialiser le fournisseur OLE DB.  
   
- [  **@location=** ] **'**_emplacement_**'**  
- Emplacement de la base de données, tel qu'il est interprété par le fournisseur OLE DB. *emplacement* est **nvarchar (** 4000 **)**, avec NULL comme valeur par défaut. *emplacement* est transmis comme propriété DBPROP_INIT_LOCATION pour initialiser le fournisseur OLE DB.  
+`[ @location = ] 'location'` Est l’emplacement de la base de données interprété par le fournisseur OLE DB. *emplacement* est **nvarchar (** 4000 **)**, avec NULL comme valeur par défaut. *emplacement* est transmis comme propriété DBPROP_INIT_LOCATION pour initialiser le fournisseur OLE DB.  
   
- [  **@provstr=** ] **'**_provider_string_**'**  
- Chaîne de connexion spécifique au fournisseur OLE DB identifiant une source de données unique. *provider_string* est **nvarchar (** 4000 **)**, avec NULL comme valeur par défaut. *l’argument provstr* est transmise à IDataInitialize ou défini comme propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB.  
+`[ @provstr = ] 'provider_string'` Est la chaîne de connexion spécifique au fournisseur OLE DB qui identifie une source de données unique. *provider_string* est **nvarchar (** 4000 **)**, avec NULL comme valeur par défaut. *l’argument provstr* est transmise à IDataInitialize ou défini comme propriété DBPROP_INIT_PROVIDERSTRING pour initialiser le fournisseur OLE DB.  
   
  Lorsque le serveur lié est créé par rapport à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournisseur OLE DB Native Client, l’instance peut être spécifiée en utilisant le mot clé SERVER en tant que serveur =*nom_serveur*\\*instancename*pour spécifier une instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *nom_serveur* est le nom de l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution, et *instancename* est le nom de l’instance spécifique de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle l’utilisateur est connecté.  
   
 > [!NOTE]
 >  Pour accéder à une base de données miroir, une chaîne de connexion doit contenir le nom de la base de données. Ce nom est nécessaire pour permettre au fournisseur d'accès aux données d'effectuer des tentatives de basculement. La base de données peut être spécifié dans le **@provstr** ou **@catalog** paramètre. Le cas échéant, la chaîne de connexion peut également fournir un nom de partenaire de basculement.  
   
- [  **@catalog=** ] **'**_catalogue_**'**  
- Catalogue à utiliser lors de l'établissement d'une connexion au fournisseur OLE DB. *catalogue* est **sysname**, avec NULL comme valeur par défaut. *catalogue* est transmis comme propriété DBPROP_INIT_CATALOG pour initialiser le fournisseur OLE DB. Lorsque le serveur lié est défini sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le catalogue fait référence à la base de données par défaut sur laquelle le serveur lié est mappé.  
+`[ @catalog = ] 'catalog'` Est le catalogue à utiliser lorsqu’une connexion est établie au fournisseur OLE DB. *catalogue* est **sysname**, avec NULL comme valeur par défaut. *catalogue* est transmis comme propriété DBPROP_INIT_CATALOG pour initialiser le fournisseur OLE DB. Lorsque le serveur lié est défini sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], le catalogue fait référence à la base de données par défaut sur laquelle le serveur lié est mappé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

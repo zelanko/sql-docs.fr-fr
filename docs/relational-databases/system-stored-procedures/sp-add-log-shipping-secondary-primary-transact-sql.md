@@ -18,12 +18,12 @@ ms.assetid: bfbbbee2-c255-4a59-a963-47d6e980a8e2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc2bf117e78f897102f85a7cab43295b079db12b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dcd5257aa80ca431faf3725fe20a444f1339004
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824737"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494331"
 ---
 # <a name="spaddlogshippingsecondaryprimary-transact-sql"></a>sp_add_log_shipping_secondary_primary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,32 +54,23 @@ sp_add_log_shipping_secondary_primary
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@primary_server** =] '*primary_server*'  
- Le nom de l’instance principale de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux. *primary_server* est **sysname** et ne peut pas être NULL.  
+`[ @primary_server = ] 'primary_server'` Le nom de l’instance principale de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux. *primary_server* est **sysname** et ne peut pas être NULL.  
   
- [ **@primary_database** =] '*primary_database*'  
- Nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'` Est le nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
   
- [ **@backup_source_directory** =] '*backup_source_directory*'  
- Répertoire où les fichiers de sauvegarde des journaux de transactions du serveur principal sont stockés. *backup_source_directory* est **nvarchar (500)** et ne peut pas être NULL.  
+`[ @backup_source_directory = ] 'backup_source_directory'` Le répertoire où sont stockés les fichiers de sauvegarde du journal des transactions à partir du serveur principal. *backup_source_directory* est **nvarchar (500)** et ne peut pas être NULL.  
   
- [ **@backup_destination_directory** =] '*backup_destination_directory*'  
- Répertoire sur le serveur secondaire où sont copiés les fichiers de sauvegarde. *backup_destination_directory* est **nvarchar (500)** et ne peut pas être NULL.  
+`[ @backup_destination_directory = ] 'backup_destination_directory'` Le répertoire sur le serveur secondaire où sont copiés les fichiers de sauvegarde. *backup_destination_directory* est **nvarchar (500)** et ne peut pas être NULL.  
   
- [ **@copy_job_name** =] '*copy_job_name*'  
- Nom à utiliser pour le travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] créé pour copier les sauvegardes du journal de transactions vers le serveur secondaire. *copy_job_name* est **sysname** et ne peut pas être NULL.  
+`[ @copy_job_name = ] 'copy_job_name'` Le nom à utiliser pour la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’Agent créé pour copier les sauvegardes du journal des transactions sur le serveur secondaire. *copy_job_name* est **sysname** et ne peut pas être NULL.  
   
- [ **@restore_job_name** =] '*restore_job_name*'  
- Est le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’Agent sur le serveur secondaire qui restaure les sauvegardes à la base de données secondaire. *restore_job_name* est **sysname** et ne peut pas être NULL.  
+`[ @restore_job_name = ] 'restore_job_name'` Est le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] travail de l’Agent sur le serveur secondaire qui restaure les sauvegardes à la base de données secondaire. *restore_job_name* est **sysname** et ne peut pas être NULL.  
   
- [ **@file_retention_period** =] '*file_retention_period*'  
- La longueur de la durée, en minutes, pendant laquelle un fichier de sauvegarde est conservé sur le serveur secondaire dans le chemin d’accès spécifié par le @backup_destination_directory paramètre avant d’être supprimé. *history_retention_period* est **int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
+`[ @file_retention_period = ] 'file_retention_period'` La longueur de la durée, en minutes, pendant laquelle un fichier de sauvegarde est conservé sur le serveur secondaire dans le chemin d’accès spécifié par le @backup_destination_directory paramètre avant d’être supprimé. *history_retention_period* est **int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
   
- [ **@monitor_server** =] '*monitor_server*'  
- Nom du serveur moniteur. *Monitor_server* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @monitor_server = ] 'monitor_server'` Est le nom du serveur moniteur. *Monitor_server* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
- [ **@monitor_server_security_mode** =] '*monitor_server_security_mode*'  
- Mode de sécurité utilisé pour la connexion au serveur moniteur.  
+`[ @monitor_server_security_mode = ] 'monitor_server_security_mode'` Le mode de sécurité utilisé pour se connecter au serveur moniteur.  
   
  1 = Authentification Windows.  
   
@@ -87,20 +78,15 @@ sp_add_log_shipping_secondary_primary
   
  *monitor_server_security_mode* est **bits** et ne peut pas être NULL.  
   
- [ **@monitor_server_login** =] '*monitor_server_login*'  
- Nom d'utilisateur du compte utilisé pour accéder au serveur moniteur.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Est le nom d’utilisateur du compte utilisé pour accéder au serveur moniteur.  
   
- [ **@monitor_server_password** =] '*monitor_server_password*'  
- Mot de passe du compte qui permet d'accéder au serveur moniteur.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Est le mot de passe du compte utilisé pour accéder au serveur moniteur.  
   
- [ **@copy_job_id** =] '*copy_job_id*' sortie  
- ID associé au travail de copie sur le serveur secondaire. *copy_job_id* est **uniqueidentifier** et ne peut pas être NULL.  
+`[ @copy_job_id = ] 'copy_job_id' OUTPUT` L’ID associé à la tâche de copie sur le serveur secondaire. *copy_job_id* est **uniqueidentifier** et ne peut pas être NULL.  
   
- [ **@restore_job_id** =] '*restore_job_id*' sortie  
- ID associé au travail de restauration sur le serveur secondaire. *restore_job_id* est **uniqueidentifier** et ne peut pas être NULL.  
+`[ @restore_job_id = ] 'restore_job_id' OUTPUT` L’ID associé au travail de restauration sur le serveur secondaire. *restore_job_id* est **uniqueidentifier** et ne peut pas être NULL.  
   
- [ **@secondary_id** =] '*secondary_id*' sortie  
- ID du serveur secondaire dans la configuration d'envoi de journaux. *secondary_id* est **uniqueidentifier** et ne peut pas être NULL.  
+`[ @secondary_id = ] 'secondary_id' OUTPUT` L’ID pour le serveur secondaire dans la configuration d’envoi de journaux. *secondary_id* est **uniqueidentifier** et ne peut pas être NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -125,7 +111,7 @@ sp_add_log_shipping_secondary_primary
   
     5.  Définir l’ID de travail de restauration dans le **log_shipping_secondary** entrée à l’ID du travail de la tâche de restauration.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

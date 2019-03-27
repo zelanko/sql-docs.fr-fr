@@ -18,12 +18,12 @@ ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 40e397bd63d8018d2043a1aced4824f48e4ddc9a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 11d0115c1f8bea82385d7c69365489a93351a5c5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135869"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493131"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +43,11 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@rolename =** ] **'**_rôle_**'**  
- Nom du nouveau rôle d'application. *rôle* est **sysname**, sans valeur par défaut. *rôle* doit être un identificateur valid et ne peut pas déjà exister dans la base de données actuelle.  
+`[ @rolename = ] 'role'` Est le nom du nouveau rôle d’application. *rôle* est **sysname**, sans valeur par défaut. *rôle* doit être un identificateur valid et ne peut pas déjà exister dans la base de données actuelle.  
   
  Les rôles d'application peuvent contenir de 1 à 128 caractères, y compris les lettres, les symboles et les nombres. Les noms de rôle ne peut pas contenir une barre oblique inverse (\\) ni être NULL ou une chaîne vide («).  
   
- [  **@password =** ] **'**_mot de passe_**'**  
- Mot de passe nécessaire pour activer le rôle d'application. *mot de passe* est **sysname**, sans valeur par défaut. *mot de passe* ne peut pas être NULL.  
+`[ @password = ] 'password'` Est le mot de passe nécessaire pour activer le rôle d’application. *mot de passe* est **sysname**, sans valeur par défaut. *mot de passe* ne peut pas être NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

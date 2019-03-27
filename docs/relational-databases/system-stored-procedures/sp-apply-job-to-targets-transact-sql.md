@@ -18,12 +18,12 @@ ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1583f6de4938451b03eabfb7c9425120fa37f2fc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537833"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494091"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id =**] *job_id*  
- Numéro d'identification du travail à appliquer aux serveurs ou groupes de serveurs cibles spécifiés. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail à appliquer aux serveurs ou groupes de serveurs cibles spécifiés. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'**_nom_travail_**'**  
- Nom du travail à appliquer aux serveurs ou groupes de serveurs cibles associés spécifiés. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Le nom du travail à s’appliquent à spécifié de serveurs cibles ou groupes de serveurs cibles. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@target_server_groups =**] **'**_groupes_serveurs_cibles_**'**  
- Liste référençant, entre virgules, les groupes de serveurs cibles auxquels le travail spécifié est appliqué. *groupes_serveurs_cibles* est **nvarchar (2048)**, avec NULL comme valeur par défaut.  
+`[ @target_server_groups = ] 'target_server_groups'` Une liste séparée par des virgules de groupes de serveurs cibles auxquels le travail spécifié est à appliquer. *groupes_serveurs_cibles* est **nvarchar (2048)**, avec NULL comme valeur par défaut.  
   
- [  **@target_servers=** ] **'**_serveurs_cibles_**'**  
- Liste référençant, entre virgules, les serveurs cibles auxquels le travail spécifié est appliqué. *serveurs_cibles*est **nvarchar (2048)**, avec NULL comme valeur par défaut.  
+`[ @target_servers = ] 'target_servers'` Une liste séparée par des virgules de serveurs cibles auxquels le travail spécifié est à appliquer. *serveurs_cibles*est **nvarchar (2048)**, avec NULL comme valeur par défaut.  
   
- [  **@operation=** ] **'**_opération_**'**  
- Indique si le travail spécifié doit être appliqué ou supprimé des serveurs ou groupes de serveurs cibles indiqués. *opération*est **varchar(7)**, avec une valeur par défaut de l’appliquer. Les opérations valides sont **appliquer** et **supprimer**.  
+`[ @operation = ] 'operation'` Est si le travail spécifié doit être appliqué ou supprimé à partir des serveurs cibles ou des groupes de serveurs cibles spécifiés. *opération*est **varchar(7)**, avec une valeur par défaut de l’appliquer. Les opérations valides sont **appliquer** et **supprimer**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

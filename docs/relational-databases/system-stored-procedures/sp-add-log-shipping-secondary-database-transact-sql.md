@@ -18,12 +18,12 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 35bd51c2c2d1d9e3ed82cd06cd4a4524b9f7e422
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c7dab148af9d8c3db8a9b1503ad33975c790120
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635907"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493221"
 ---
 # <a name="spaddlogshippingsecondarydatabase-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +54,17 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@secondary_database** =] '*secondary_database*'  
- Nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
+`[ @secondary_database = ] 'secondary_database'` Est le nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
   
- [ **@primary_server** =] '*primary_server*'  
- Le nom de l’instance principale de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux. *primary_server* est **sysname** et ne peut pas être NULL.  
+`[ @primary_server = ] 'primary_server'` Le nom de l’instance principale de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] dans la configuration d’envoi de journaux. *primary_server* est **sysname** et ne peut pas être NULL.  
   
- [ **@primary_database** =] '*primary_database*'  
- Nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'` Est le nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
   
- [ **@restore_delay** =] '*restore_delay*'  
- Durée, en minutes, de l'attente du serveur secondaire avant de restaurer un fichier de sauvegarde donné. *restore_delay* est **int** et ne peut pas être NULL. La valeur par défaut est 0 :  
+`[ @restore_delay = ] 'restore_delay'` La durée, en minutes, pendant laquelle le serveur secondaire attend avant de restaurer un fichier de sauvegarde donné. *restore_delay* est **int** et ne peut pas être NULL. La valeur par défaut est 0.  
   
- [ **@restore_all** =] '*restore_all*'  
- Si la valeur est définie à 1, le serveur secondaire restaure toutes les sauvegardes du journal des transactions disponibles au moment de la restauration. Dans le cas contraire, le serveur s'arrête une fois qu'un fichier est restauré. *restore_all* est **bits** et ne peut pas être NULL.  
+`[ @restore_all = ] 'restore_all'` Si défini sur 1, le serveur secondaire restaure toutes les sauvegardes de journaux de transactions disponibles lors de l’exécution de la tâche de restauration. Dans le cas contraire, le serveur s'arrête une fois qu'un fichier est restauré. *restore_all* est **bits** et ne peut pas être NULL.  
   
- [ **@restore_mode** =] '*restore_mode*'  
- Mode de restauration pour la base de données secondaire.  
+`[ @restore_mode = ] 'restore_mode'` Le mode de restauration pour la base de données secondaire.  
   
  0 = Restauration du journal avec l'option NORECOVERY.  
   
@@ -78,29 +72,21 @@ sp_add_log_shipping_secondary_database
   
  *restaurer* est **bits** et ne peut pas être NULL.  
   
- [ **@disconnect_users** =] '*disconnect_users*'  
- Si la valeur est définie à 1, les utilisateurs sont déconnectés de la base de données secondaire au moment de la restauration. Par défaut = 0. *Déconnecter* utilisateurs est **bits** et ne peut pas être NULL.  
+`[ @disconnect_users = ] 'disconnect_users'` Si défini sur 1, les utilisateurs sont déconnectés de la base de données secondaire lorsqu’une opération de restauration est effectuée. Par défaut = 0. *Déconnecter* utilisateurs est **bits** et ne peut pas être NULL.  
   
- [ **@block_size** =] '*block_size*'  
- Taille, en octets, qui définit la taille des blocs pour l'unité de sauvegarde. *block_size* est **int** avec une valeur par défaut de -1.  
+`[ @block_size = ] 'block_size'` La taille, en octets, qui est utilisée comme la taille de bloc pour l’unité de sauvegarde. *block_size* est **int** avec une valeur par défaut de -1.  
   
- [ **@buffer_count** =] '*buffer_count*'  
- Nombre total de mémoires tampons utilisées par l'opération de sauvegarde ou de restauration. *buffer_count* est **int** avec une valeur par défaut de -1.  
+`[ @buffer_count = ] 'buffer_count'` Le nombre total de mémoires tampons utilisées par l’opération de sauvegarde ou de restauration. *buffer_count* est **int** avec une valeur par défaut de -1.  
   
- [ **@max_transfer_size** =] '*max_transfer_size*'  
- Taille, en octets, de la demande d'entrée ou de sortie maximale émise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'unité de sauvegarde. *max_transfersize* est **int** et peut être NULL.  
+`[ @max_transfer_size = ] 'max_transfer_size'` La taille, en octets, de l’entrée maximale ou de la demande de sortie qui est émise par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’unité de sauvegarde. *max_transfersize* est **int** et peut être NULL.  
   
- [ **@restore_threshold** =] '*restore_threshold*'  
- Nombre de minutes pouvant s'écouler entre les opérations de restauration avant qu'une alerte ne soit générée. *restore_threshold* est **int** et ne peut pas être NULL.  
+`[ @restore_threshold = ] 'restore_threshold'` Le nombre de minutes pouvant s’écouler entre les opérations de restauration avant qu’une alerte est générée. *restore_threshold* est **int** et ne peut pas être NULL.  
   
- [ **@threshold_alert** =] '*threshold_alert ne*'  
- Est l’alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert ne* est **int**, avec 14 420 comme valeur par défaut.  
+`[ @threshold_alert = ] 'threshold_alert'` Est l’alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert ne* est **int**, avec 14 420 comme valeur par défaut.  
   
- [ **@threshold_alert_enabled** =] '*threshold_alert_enabled*'  
- Indique si une alerte est générée lorsque *backup_threshold* est dépassé. La valeur 1 par défaut indique que l'alerte sera générée. *threshold_alert_enabled* est **bits**.  
+`[ @threshold_alert_enabled = ] 'threshold_alert_enabled'` Indique si une alerte est générée lorsque *backup_threshold* est dépassé. La valeur 1 par défaut indique que l'alerte sera générée. *threshold_alert_enabled* est **bits**.  
   
- [ **@history_retention_period** =] '*history_retention_period*'  
- Est la durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est **int**, avec NULL comme valeur par défaut. La valeur 14 420 est utilisée si aucune autre valeur n'est spécifiée.  
+`[ @history_retention_period = ] 'history_retention_period'` Est la durée en minutes pendant laquelle l’historique est conservé. *history_retention_period* est **int**, avec NULL comme valeur par défaut. La valeur 14 420 est utilisée si aucune autre valeur n'est spécifiée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -119,7 +105,7 @@ sp_add_log_shipping_secondary_database
   
 4.  Si le serveur moniteur est différent du serveur secondaire, ajoute un enregistrement moniteur dans **log_shipping_monitor_secondary** sur le moniteur de serveur à l’aide des arguments fournis.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

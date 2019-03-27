@@ -16,12 +16,12 @@ ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 636a0a23c70170ce625b9e462e2715c1c884bda7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210118"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493151"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,47 +48,37 @@ sp_articlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'**_publication_**'**  
- Nom de la publication qui contient cet article. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication qui contient cet article. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article=**] **'**_article_**'**  
- Nom de l'article. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, sans valeur par défaut.  
   
- [  **@column=**] **'**_colonne_**'**  
- Nom de la colonne à ajouter ou supprimer. *colonne* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, toutes les colonnes sont publiées.  
+`[ @column = ] 'column'` Est le nom de la colonne à ajouter ou à supprimer. *colonne* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, toutes les colonnes sont publiées.  
   
- [  **@operation=**] **'**_opération_**'**  
- Spécifie s'il faut ajouter ou supprimer des colonnes dans un article. *opération* est **nvarchar (5)**, avec une valeur par défaut de l’ajouter. **ajouter** marque la colonne pour la réplication. **DROP** annule la désignation de la colonne.  
+`[ @operation = ] 'operation'` Spécifie s’il faut ajouter ou supprimer des colonnes dans un article. *opération* est **nvarchar (5)**, avec une valeur par défaut de l’ajouter. **ajouter** marque la colonne pour la réplication. **DROP** annule la désignation de la colonne.  
   
- [  **@refresh_synctran_procs=**] *refresh_synctran_procs*  
- Indique si les procédures stockées qui prennent en charge les abonnements de mise à jour immédiate sont actualisées pour qu'il y ait correspondance avec le nombre de colonnes répliquées. *refresh_synctran_procs* est **bits**, avec une valeur par défaut **1**. Si **1**, les procédures stockées sont régénérées.  
+`[ @refresh_synctran_procs = ] refresh_synctran_procs` Spécifie si les procédures stockées prenant en charge les abonnements avec mise à jour immédiate sont régénérées pour correspondre au nombre de colonnes répliquées. *refresh_synctran_procs* est **bits**, avec une valeur par défaut **1**. Si **1**, les procédures stockées sont régénérées.  
   
- [  **@ignore_distributor =**] *ignore_distributor*  
- Indique si cette procédure stockée s'exécute sans connexion au serveur de distribution. *ignore_distributor* est **bits**, avec une valeur par défaut **0**. Si **0**, la base de données doit être activée pour la publication et le cache des articles doit être actualisé pour refléter les nouvelles colonnes répliquées par l’article. Si **1**, les colonnes des articles qui se trouvent dans une base de données non publiée ; doivent être utilisées uniquement dans les situations de récupération peuvent être supprimées.  
+`[ @ignore_distributor = ] ignore_distributor` Indique si cette procédure stockée s’exécute sans connexion au serveur de distribution. *ignore_distributor* est **bits**, avec une valeur par défaut **0**. Si **0**, la base de données doit être activée pour la publication et le cache des articles doit être actualisé pour refléter les nouvelles colonnes répliquées par l’article. Si **1**, les colonnes des articles qui se trouvent dans une base de données non publiée ; doivent être utilisées uniquement dans les situations de récupération peuvent être supprimées.  
   
- [  **@change_active =** ] *change_active*  
- Autorise la modification des colonnes dans les publications possédant des abonnements. *change_active* est un **int** avec une valeur par défaut **0**. Si **0**, les colonnes ne sont pas modifiés. Si **1**, colonnes peuvent être ajoutés ou supprimés à partir d’articles actifs possédant des abonnements.  
+`[ @change_active = ] change_active` Autorise la modification des colonnes dans les publications possédant des abonnements. *change_active* est un **int** avec une valeur par défaut **0**. Si **0**, les colonnes ne sont pas modifiés. Si **1**, colonnes peuvent être ajoutés ou supprimés à partir d’articles actifs possédant des abonnements.  
   
- [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
- Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications de l’article n’invalident pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
   
  **1** Spécifie que les modifications apportées à l’article peuvent invalider l’instantané n’est pas valide et il existe des abonnements qui nécessitent un nouvel instantané, autorise l’instantané existant soit marqué comme obsolète et de générer un nouvel instantané.  
   
- [ **@force_reinit_subscription =** ] *àce_reinit_subscription*  
+ [**@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications de l’article n’invalident pas l’abonnement à réinitialiser. Si la procédure stockée détecte que la modification requiert la réinitialisation des abonnements, une erreur se produit et aucune modification n'est effectuée. **1** indique que les modifications apportées à l’article entraînent la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  
   
- [  **@publisher=** ] **'**_publisher_**'**  
- Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé avec un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
   
- [  **@internal=** ] **'**_interne_**'**  
- À usage interne uniquement  
+`[ @internal = ] 'internal'` Usage interne uniquement.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

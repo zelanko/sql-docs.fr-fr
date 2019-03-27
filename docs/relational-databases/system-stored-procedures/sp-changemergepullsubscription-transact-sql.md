@@ -16,12 +16,12 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9b7c8e0bd544815b7a26afaccd308d6898e3bc95
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136129"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493111"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,26 +42,21 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'**_publication_**'**  
- Nom de la publication. *publication* est **sysname**, avec % comme valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec % comme valeur par défaut.  
   
- [  **@publisher=**] **'**_publisher_**'**  
- Nom du serveur de publication. *serveur de publication*est **sysname**, avec % comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication*est **sysname**, avec % comme valeur par défaut.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Nom de la base de données du serveur de publication. *publisher_db*est **sysname**, avec % comme valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db*est **sysname**, avec % comme valeur par défaut.  
   
- [  **@property=**] **'**_propriété_**'**  
- Est le nom de la propriété à modifier. *propriété* est **sysname**, et peut prendre l’une des valeurs dans la table.  
+`[ @property = ] 'property'` Est le nom de la propriété à modifier. *propriété* est **sysname**, et peut prendre l’une des valeurs dans la table.  
   
- [  **@value=**] **'**_valeur_**'**  
- Est la nouvelle valeur pour la propriété spécifiée. *valeur*est **nvarchar (255)**, et peut prendre l’une des valeurs dans la table.  
+`[ @value = ] 'value'` Est la nouvelle valeur pour la propriété spécifiée. *valeur*est **nvarchar (255)**, et peut prendre l’une des valeurs dans la table.  
   
 |Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Emplacement de stockage du dossier d'instantanés, si cet emplacement est différent ou en complément de l'emplacement par défaut.|  
 |**description**||Description de cet abonnement extrait.|  
-|**serveur de distribution**||Nom du serveur de distribution.|  
+|**distributor**||Nom du serveur de distribution.|  
 |**distributor_login**||ID de connexion utilisé sur le serveur de distribution pour l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**distributor_password**||Mot de passe (chiffré) sur le serveur de distribution pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
 |**distributor_security_mode**|**1**|Utilise l'authentification Windows pour la connexion au serveur de distribution.|  
@@ -71,7 +66,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Disponible pour compatibilité descendante uniquement. Le nom d’utilisateur est utilisé pour se connecter au service FTP.|  
 |**ftp_password**||Disponible pour compatibilité descendante uniquement. Mot de passe de l'utilisateur utilisé pour la connexion au service FTP.|  
 |**ftp_port**||Disponible pour compatibilité descendante uniquement. Numéro de port du service FTP du serveur de distribution.|  
-|**Nom d’hôte**||Spécifie la valeur de la fonction HOST_NAME() lorsqu'elle est utilisée dans la clause WHERE d'un filtre de jointure ou d'une relation logique.|  
+|**hostname**||Spécifie la valeur de la fonction HOST_NAME() lorsqu'elle est utilisée dans la clause WHERE d'un filtre de jointure ou d'une relation logique.|  
 |**internet_login**||Connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_password**||Mot de passe de la connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_security_mode**|**1**|Utilise l'authentification Windows pour se connecter au serveur Web qui héberge la synchronisation Web.|  
@@ -86,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**publisher_security_mode**|**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de publication.|  
 ||**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication.|  
 ||**2**|Déclencheurs de synchronisation utilisent statique **sysservers** entrée pour l’appel de procédure distante (RPC) et le serveur de publication doit être définie dans le **sysservers** table en tant que serveur distant ou serveur lié.|  
-|**sync_type**|**Automatique**|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
+|**sync_type**|**automatic**|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
 ||**None**|L'Abonné dispose déjà du schéma et des données initiales pour les tables publiées ; les données et les tables système sont toujours transférées.|  
 |**use_ftp**|**true**|Utilise FTP au lieu du protocole usuel pour extraire les instantanés.|  
 ||**false**|Utilise le protocole usuel pour extraire les instantanés.|  

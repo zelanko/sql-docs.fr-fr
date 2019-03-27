@@ -18,12 +18,12 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4193e073f4ad4c52d6b2c7f6b82c6246107e85a1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127069"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493801"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,23 +54,18 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name =** ] **'**_nom_**'**  
- Le nom de l'alerte. Ce nom apparaît dans le message envoyé par courrier électronique ou par radiomessagerie en réponse à l'alerte. Il doit être unique et peut contenir le pourcentage (**%**) caractères. *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Le nom de l’alerte. Ce nom apparaît dans le message envoyé par courrier électronique ou par radiomessagerie en réponse à l'alerte. Il doit être unique et peut contenir le pourcentage (**%**) caractères. *nom* est **sysname**, sans valeur par défaut.  
   
- [  **@message_id =** ] *message_id*  
- Numéro du message d'erreur définissant l'alerte. (Il correspond normalement à un numéro d’erreur dans le **sysmessages** table.) *message_id* est **int**, avec une valeur par défaut **0**. Si *gravité* est utilisé pour définir l’alerte, *message_id* doit être **0** ou NULL.  
+`[ @message_id = ] message_id` Le numéro d’erreur de message qui définit l’alerte. (Il correspond normalement à un numéro d’erreur dans le **sysmessages** table.) *message_id* est **int**, avec une valeur par défaut **0**. Si *gravité* est utilisé pour définir l’alerte, *message_id* doit être **0** ou NULL.  
   
 > [!NOTE]  
 >  Uniquement **sysmessages** erreurs écrites dans le journal des applications Microsoft Windows peuvent provoquer une alerte doit être envoyé.  
   
- [  **@severity =** ] *gravité*  
- Le niveau de gravité (à partir de **1** via **25**) qui définit l’alerte. N’importe quel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message stocké dans le **sysmessages** table envoyé à la [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows avec le niveau de gravité indiqué provoque l’envoi de l’alerte. *gravité* est **int**, avec 0 comme valeur par défaut. Si *message_id* est utilisé pour définir l’alerte, *gravité* doit être **0**.  
+`[ @severity = ] severity` Le niveau de gravité (à partir de **1** via **25**) qui définit l’alerte. N’importe quel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] message stocké dans le **sysmessages** table envoyé à la [!INCLUDE[msCoName](../../includes/msconame-md.md)] journal des applications Windows avec le niveau de gravité indiqué provoque l’envoi de l’alerte. *gravité* est **int**, avec 0 comme valeur par défaut. Si *message_id* est utilisé pour définir l’alerte, *gravité* doit être **0**.  
   
- [  **@enabled =** ] *activé*  
- Indique l'état actuel de l'alerte. *activé* est **tinyint**, avec une valeur par défaut de 1 (activé). Si **0**, l’alerte n’est pas activé et ne se déclenche pas.  
+`[ @enabled = ] enabled` Indique l’état actuel de l’alerte. *activé* est **tinyint**, avec une valeur par défaut de 1 (activé). Si **0**, l’alerte n’est pas activé et ne se déclenche pas.  
   
- [  **@delay_between_responses =** ] *délai_entre_réponses*  
- Le délai d’attente, en secondes, entre les réponses à l’alerte. *délai_entre_réponses*est **int**, avec une valeur par défaut **0**, ce qui signifie qu’il n’existe aucun délai d’attente entre les réponses (chaque occurrence de l’alerte génère une réponse). La réponse peut prendre l'une des formes suivantes, ou les deux :  
+`[ @delay_between_responses = ] delay_between_responses` Le délai d’attente, en secondes, entre les réponses à l’alerte. *délai_entre_réponses*est **int**, avec une valeur par défaut **0**, ce qui signifie qu’il n’existe aucun délai d’attente entre les réponses (chaque occurrence de l’alerte génère une réponse). La réponse peut prendre l'une des formes suivantes, ou les deux :  
   
 -   Une ou plusieurs notifications envoyées par courrier électronique ou par radiomessagerie  
   
@@ -78,11 +73,9 @@ sp_add_alert [ @name = ] 'name'
   
  En définissant cette valeur, il est possible d'éviter, par exemple, l'envoi d'un flot de messages par courrier électronique lorsqu'une alerte se produit à plusieurs reprises en peu de temps.  
   
- [  **@notification_message =** ] **'**_message_notification_**'**  
- Est un message supplémentaire facultatif envoyé à l’opérateur en tant que partie du message électronique, **envoi réseau**, ou par radiomessagerie. *message_notification* est **nvarchar (512)**, avec NULL comme valeur par défaut. Spécification *message_notification* est utile pour l’ajout de remarques particulières telles que des procédures correctives.  
+`[ @notification_message = ] 'notification_message'` Est un message supplémentaire facultatif envoyé à l’opérateur en tant que partie du message électronique, **envoi réseau**, ou par radiomessagerie. *message_notification* est **nvarchar (512)**, avec NULL comme valeur par défaut. Spécification *message_notification* est utile pour l’ajout de remarques particulières telles que des procédures correctives.  
   
- [  **@include_event_description_in =** ] *inclure_description_événement_dans*  
- Argument à utiliser si la description de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être incluse dans le message de notification. *inclure_description_événement_dans*est **tinyint**, avec une valeur par défaut **5** (courrier électronique et **net send**) et peut avoir une ou plusieurs de ces valeurs combinées avec un **Ou** opérateur logique.  
+`[ @include_event_description_in = ] include_event_description_in` Est si la description de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erreur doit être incluse dans le message de notification. *inclure_description_événement_dans*est **tinyint**, avec une valeur par défaut **5** (courrier électronique et **net send**) et peut avoir une ou plusieurs de ces valeurs combinées avec un **Ou** opérateur logique.  
   
 > [!IMPORTANT]
 >  Les options du récepteur de radiomessagerie et **net send** seront supprimées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une version future de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans une nouvelle tâche de développement et prévoyez de modifier les applications qui les utilisent actuellement.  
@@ -94,26 +87,20 @@ sp_add_alert [ @name = ] 'name'
 |**2**|Radiomessagerie|  
 |**4**|**net send**|  
   
- [  **@database_name =** ] **'**_base de données_**'**  
- Base de données dans laquelle l'erreur doit survenir pour que l'alerte soit déclenchée. Si *base de données*n’est pas fourni, l’alerte se déclenche, quel que soit l’endroit où l’erreur s’est produite. *base de données* est **sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
+`[ @database_name = ] 'database'` La base de données dans laquelle l’erreur doit se produire pour déclencher l’alerte. Si *base de données*n’est pas fourni, l’alerte se déclenche, quel que soit l’endroit où l’erreur s’est produite. *base de données* est **sysname**. Les noms placés entre crochets ([ ]) ne sont pas autorisés. La valeur par défaut est NULL.  
   
- [  **@event_description_keyword =** ] **'**_modèle_mots_clés_description_événement_**'**  
- Séquence de caractères à laquelle la description de l'erreur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être conforme. Les caractères correspondant au modèle d'expression [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE sont admis. *modèle_mots_clés_description_événement* est **nvarchar (100)**, avec NULL comme valeur par défaut. Ce paramètre est utile pour filtrer les noms d’objets (par exemple, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` La séquence de caractères que la description de le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erreur doit être identique. Les caractères correspondant au modèle d'expression [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE sont admis. *modèle_mots_clés_description_événement* est **nvarchar (100)**, avec NULL comme valeur par défaut. Ce paramètre est utile pour filtrer les noms d’objets (par exemple, **% customer_table %**).  
   
- [  **@job_id =** ] *job_id*  
- Numéro d'identification du travail à exécuter en réponse à l'alerte. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification du travail à exécuter en réponse à cette alerte. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =** ] **'**_nom_travail_**'**  
- Nom du travail à exécuter en réponse à cette alerte. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Le nom du travail à exécuter en réponse à cette alerte. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@raise_snmp_trap =** ] *raise_snmp_trap*  
- Non implémenté dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0. *raise_snmp_trap* est **tinyint**, avec 0 comme valeur par défaut.  
+`[ @raise_snmp_trap = ] raise_snmp_trap` Non implémenté dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0. *raise_snmp_trap* est **tinyint**, avec 0 comme valeur par défaut.  
   
- [  **@performance_condition =** ] **'**_l’argument condition_performances_**'**  
- Est une valeur exprimée dans le format '*itemcomparatorvalue*». *l’argument condition_performances* est **nvarchar (512)** avec une valeur par défaut NULL et se compose de ces éléments.  
+`[ @performance_condition = ] 'performance_condition'` Est une valeur exprimée dans le format '*itemcomparatorvalue*». *l’argument condition_performances* est **nvarchar (512)** avec une valeur par défaut NULL et se compose de ces éléments.  
   
 |Élément de format|Description|  
 |--------------------|-----------------|  
@@ -121,14 +108,11 @@ sp_add_alert [ @name = ] 'name'
 |*Comparateur*|Un des opérateurs suivants : >, < ou =|  
 |*Valeur*|Valeur numérique du compteur.|  
   
- [  **@category_name =** ] **'**_catégorie_**'**  
- Nom de la catégorie d'alerte. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @category_name = ] 'category'` Le nom de la catégorie d’alerte. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@wmi_namespace**=] **'**_wmi_namespace_**'**  
- Espace de noms WMI permettant de rechercher des événements via des requêtes. *wmi_namespace* est **sysname**, avec NULL comme valeur par défaut. Seuls les espaces de noms situés sur le serveur local sont pris en charge.  
+`[ @wmi_namespace = ] 'wmi_namespace'` L’espace de noms WMI pour rechercher des événements. *wmi_namespace* est **sysname**, avec NULL comme valeur par défaut. Seuls les espaces de noms situés sur le serveur local sont pris en charge.  
   
- [ **@wmi_query**=] **'**_wmi_query_**'**  
- Requête spécifiant l'événement WMI pour l'alerte. *wmi_query* est **nvarchar (512)**, avec NULL comme valeur par défaut.  
+`[ @wmi_query = ] 'wmi_query'` La requête qui spécifie l’événement WMI pour l’alerte. *wmi_query* est **nvarchar (512)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

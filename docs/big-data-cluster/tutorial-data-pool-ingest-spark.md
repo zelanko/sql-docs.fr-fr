@@ -5,17 +5,17 @@ description: Ce didacticiel montre comment recevoir des données dans le pool de
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 28a151f00683455b582bb29a5d141a76f237caf1
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1611a8b0513e8f1a9e50d3cc612b114c88698df5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017735"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58491902"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Didacticiel : Recevoir des données dans un pool de données SQL Server avec des travaux Spark
 
@@ -49,7 +49,15 @@ Les étapes suivantes créent une table externe dans le pool de données nommé 
 
    ![Requête d’instance principale de SQL Server](./media/tutorial-data-pool-ingest-spark/sql-server-master-instance-query.png)
 
-1. Créer une table externe nommée **web_clickstreams_spark_results** dans le pool de données. Le `SqlDataPool` source de données est un type de source de données spécial qui peut être utilisé à partir de l’instance principale de n’importe quel cluster big data.
+1. Créer une source de données externe au pool de données si elle n’existe pas déjà.
+
+   ```sql
+   IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
+     CREATE EXTERNAL DATA SOURCE SqlDataPool
+     WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
+   ```
+
+1. Créer une table externe nommée **web_clickstreams_spark_results** dans le pool de données.
 
    ```sql
    USE Sales
@@ -64,7 +72,7 @@ Les étapes suivantes créent une table externe dans le pool de données nommé 
       );
    ```
   
-1. Dans CTP 2.3, la création du pool de données est asynchrone, mais il n’existe aucun moyen de déterminer quand il se termine encore. Veuillez patienter deux minutes pour vous assurer que le pool de données est créé avant de continuer.
+1. Dans CTP 2.4, la création du pool de données est asynchrone, mais il n’existe aucun moyen de déterminer quand il se termine encore. Veuillez patienter deux minutes pour vous assurer que le pool de données est créé avant de continuer.
 
 ## <a name="start-a-spark-streaming-job"></a>Démarrer un travail de diffusion en continu de Spark
 

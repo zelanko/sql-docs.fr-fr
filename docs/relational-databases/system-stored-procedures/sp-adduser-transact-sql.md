@@ -18,12 +18,12 @@ ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 73859064fc8a56a53fd5ea6cb1295d81ed0e4150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766527"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492937"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_adduser [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame =** ] **'***connexion***'**  
- Nom de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows. *connexion* est un **sysname**, sans valeur par défaut. *connexion* doit être un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou connexion de Windows.  
+`[ @loginame = ] 'login'` Est le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou connexion de Windows. *connexion* est un **sysname**, sans valeur par défaut. *connexion* doit être un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou connexion de Windows.  
   
- [  **@name_in_db =** ] **'***utilisateur***'**  
- Nom du nouvel utilisateur de base de données. *utilisateur* est un **sysname**, avec NULL comme valeur par défaut. Si *utilisateur* n’est pas spécifié, le nom du nouvel utilisateur de base de données par défaut est le *connexion* nom. Spécification *utilisateur* donne au nouvel utilisateur un nom dans la base de données différent du nom de connexion au niveau du serveur.  
+`[ @name_in_db = ] 'user'` Est le nom du nouvel utilisateur de base de données. *utilisateur* est un **sysname**, avec NULL comme valeur par défaut. Si *utilisateur* n’est pas spécifié, le nom du nouvel utilisateur de base de données par défaut est le *connexion* nom. Spécification *utilisateur* donne au nouvel utilisateur un nom dans la base de données différent du nom de connexion au niveau du serveur.  
   
- [  **@grpname =** ] **'***rôle***'**  
- Rôle de base de données dont le nouvel utilisateur devient membre. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit être un rôle de base de données valide dans la base de données actuelle.  
+`[ @grpname = ] 'role'` Est le rôle de base de données dont le nouvel utilisateur devient membre. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit être un rôle de base de données valide dans la base de données actuelle.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -77,7 +74,7 @@ GRANT CONNECT TO guest;
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Il faut être propriétaire de la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -89,7 +86,7 @@ GO
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>B. Ajout d'un utilisateur de base de données avec le même ID de connexion  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>b. Ajout d'un utilisateur de base de données avec le même ID de connexion  
  L'exemple suivant ajoute l'utilisateur `Arvind` à la base de données active pour la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Arvind`. Cet utilisateur appartient à la valeur par défaut **public** rôle.  
   
 ```  

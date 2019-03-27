@@ -16,12 +16,12 @@ ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 26ced1d422c1f47ebd88404b7cf3996df8b9c649
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126050"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494381"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,37 +45,29 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=**] **'***publisher***'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- Nom de la base de données du serveur de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut. *publisher_db* est ignoré par les serveurs de publication Oracle.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut. *publisher_db* est ignoré par les serveurs de publication Oracle.  
   
- [  **@publication=**] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@independent_agent=**] **'***independent_agent***'**  
- Spécifie s'il existe une version autonome de l'Agent de distribution pour cette publication *independent_agent* est **nvarchar (5)**, avec TRUE comme valeur par défaut. Si **true**, il existe un Agent de Distribution autonome pour cette publication. Si **false**, il existe un Agent de Distribution pour chaque paire de base de données de serveur de publication/abonné de base de données. *independent_agent* est une propriété de la publication et doit avoir la même valeur ici que sur le serveur de publication.  
+`[ @independent_agent = ] 'independent_agent'` Spécifie s’il existe un Agent de Distribution autonome pour cette publication. *independent_agent* est **nvarchar (5)**, avec TRUE comme valeur par défaut. Si **true**, il existe un Agent de Distribution autonome pour cette publication. Si **false**, il existe un Agent de Distribution pour chaque paire de base de données de serveur de publication/abonné de base de données. *independent_agent* est une propriété de la publication et doit avoir la même valeur ici que sur le serveur de publication.  
   
- [  **@subscription_type=**] **'***subscription_type***'**  
- Est le type d’abonnement. *subscription_type* est **nvarchar(9)**, avec une valeur par défaut **anonyme**. Vous devez spécifier une valeur de **extraction** pour *subscription_type*, sauf si vous souhaitez créer un abonnement sans l’enregistrer sur le serveur de publication. Dans ce cas, vous devez spécifier une valeur de **anonyme**. Cela s'avère nécessaire lorsque vous ne pouvez pas établir de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le serveur de publication pendant la configuration de l'abonnement.  
+`[ @subscription_type = ] 'subscription_type'` Est le type d’abonnement. *subscription_type* est **nvarchar(9)**, avec une valeur par défaut **anonyme**. Vous devez spécifier une valeur de **extraction** pour *subscription_type*, sauf si vous souhaitez créer un abonnement sans l’enregistrer sur le serveur de publication. Dans ce cas, vous devez spécifier une valeur de **anonyme**. Cela s'avère nécessaire lorsque vous ne pouvez pas établir de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le serveur de publication pendant la configuration de l'abonnement.  
   
- [  **@description=**] **'***description***'**  
- Est la description de la publication. *Description* est **nvarchar (100)**, avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'` Est la description de la publication. *Description* est **nvarchar (100)**, avec NULL comme valeur par défaut.  
   
- [  **@update_mode=**] **'***update_mode***'**  
- Est le type de mise à jour. *update_mode* est **nvarchar (30)**, et peut prendre l’une des valeurs suivantes.  
+`[ @update_mode = ] 'update_mode'` Est le type de mise à jour. *update_mode* est **nvarchar (30)**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**en lecture seule** (valeur par défaut)|L'abonnement est en lecture seule. Aucune modification effectuée sur l'Abonné ne sera retournée au serveur de publication. Cette valeur doit être utilisée si aucune mise à jour ne doit être effectuée sur le serveur de publication.|  
 |**synctran**|Active la prise en charge des abonnements de mise à jour immédiate.|  
 |**tran en file d’attente**|Active l'abonnement pour la mise à jour en attente. Les modifications de données peuvent être effectuées chez l'abonné, stockées dans une file d'attente, puis propagées vers le serveur de publication.|  
-|**basculement**|Active l'abonnement pour la mise à jour immédiate avec mise à jour en attente sous forme de basculement. Les modifications de données peuvent être effectuées chez l'abonné, puis propagées immédiatement vers le serveur de publication. Si le serveur de publication et l'Abonné ne sont pas connectés, les modifications de données effectuées chez l'Abonné peuvent être stockées dans une file d'attente jusqu'à ce que l'Abonné et le serveur de publication soient reconnectés.|  
+|**failover**|Active l'abonnement pour la mise à jour immédiate avec mise à jour en attente sous forme de basculement. Les modifications de données peuvent être effectuées chez l'abonné, puis propagées immédiatement vers le serveur de publication. Si le serveur de publication et l'Abonné ne sont pas connectés, les modifications de données effectuées chez l'Abonné peuvent être stockées dans une file d'attente jusqu'à ce que l'Abonné et le serveur de publication soient reconnectés.|  
 |**basculement en file d’attente**|Active l'abonnement en tant qu'abonnement de mise à jour en attente, avec possibilité de passer au mode de mise à jour immédiate. Les modifications de données peuvent être effectuées chez l'abonné et stockées dans une file d'attente, jusqu'à ce qu'une connexion soit établie entre l'abonné et le serveur de publication. Lorsqu'une connexion permanente est établie, il est possible de passer au mode de mise à jour immédiate. *Non pris en charge pour les serveurs de publication Oracle*.|  
   
- [  **@immediate_sync =**] *immediate_sync*  
- Est si les fichiers de synchronisation sont créés ou recréés chaque fois que l’Agent d’instantané s’exécute. *immediate_sync* est **bits** avec une valeur par défaut 1 et doit être définie sur la même valeur que *immediate_sync* dans **sp_addpublication**. *immediate_sync* est une propriété de la publication et doit avoir la même valeur ici que sur le serveur de publication.  
+`[ @immediate_sync = ] immediate_sync` Est si les fichiers de synchronisation sont créés ou recréés chaque fois que l’Agent d’instantané s’exécute. *immediate_sync* est **bits** avec une valeur par défaut 1 et doit être définie sur la même valeur que *immediate_sync* dans **sp_addpublication**. *immediate_sync* est une propriété de la publication et doit avoir la même valeur ici que sur le serveur de publication.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -95,7 +87,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
  Seuls les membres de la **sysadmin** rôle serveur fixe ou **db_owner** rôle de base de données fixe peuvent exécuter **sp_addpullsubscription**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Créer un abonnement par extraction de données ](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Create an Updatable Subscription à une Publication transactionnelle](../../relational-databases/replication/publish/create-an-updatable-subscription-to-a-transactional-publication.md) [s’abonner aux Publications](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)   
  [sp_change_subscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   

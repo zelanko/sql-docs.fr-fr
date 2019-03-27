@@ -18,12 +18,12 @@ ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 69eac8b023c1db489f3407ade244dc605df23cf7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eeb5e013eb10d79300720899ec297b54474627f1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821620"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492761"
 ---
 # <a name="spaddtargetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name=**] **'***nom***'**  
- Nom du groupe de serveurs à créer. *nom* est **sysname**, sans valeur par défaut. *nom* ne peut pas contenir de virgules.  
+`[ @name = ] 'name'` Le nom du groupe de serveurs à créer. *nom* est **sysname**, sans valeur par défaut. *nom* ne peut pas contenir de virgules.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -52,7 +51,7 @@ sp_add_targetservergroup [ @name = ] 'name'
 ## <a name="remarks"></a>Notes  
  Les groupes de serveurs cibles facilitent le ciblage d'un travail dans une collection de serveurs cibles. Pour plus d’informations, consultez [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

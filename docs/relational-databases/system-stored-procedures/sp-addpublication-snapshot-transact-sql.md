@@ -16,12 +16,12 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc55175177aec3db50df14bc27ec425c5eedf97f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 35b18161e9d0022e0f7df29498a94c40646a5055
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128069"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493973"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -58,11 +58,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'**_publication_**'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@frequency_type=**] *frequency_type*  
- Fréquence à laquelle l'Agent d'instantané est exécuté. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_type = ] frequency_type` Est la fréquence d’exécution de l’Agent d’instantané. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -74,8 +72,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|Au démarrage de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**128**|Exécution pendant une période d'inactivité de l'ordinateur.|  
   
- [  **@frequency_interval=**] *frequency_interval*  
- Est la valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_interval = ] frequency_interval` Est la valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Valeur de frequency_type|Effet sur frequency_interval|  
 |------------------------------|-----------------------------------|  
@@ -87,8 +84,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|*frequency_interval* n’est pas utilisé.|  
 |**128**|*frequency_interval* n’est pas utilisé.|  
   
- [  **@frequency_subday=**] *frequency_subday*  
- Unité de *freq_subday_interval*. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_subday = ] frequency_subday` Unité de *freq_subday_interval*. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -97,56 +93,42 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**4** (valeur par défaut)|Minute|  
 |**8**|Heure|  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec une valeur 5 par défaut, ce qui signifie que toutes les 5 minutes.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec une valeur 5 par défaut, ce qui signifie que toutes les 5 minutes.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Date d'exécution de l'Agent d'instantané. *frequency_relative_interval* est **int**, avec 1 comme valeur par défaut.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Est la date de que l’Agent d’instantané s’exécute. *frequency_relative_interval* est **int**, avec 1 comme valeur par défaut.  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec 0 comme valeur par défaut.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec 0 comme valeur par défaut.  
   
- [  **@active_start_date=**] *active_start_date*  
- Date à laquelle l’Agent d'instantané est planifié pour la première fois, au format AAAAMMJJ. *active_start_date* est **int**, avec 0 comme valeur par défaut.  
+`[ @active_start_date = ] active_start_date` Est la date à laquelle l’Agent d’instantané est premier planifiée, au format AAAAMMJJ. *active_start_date* est **int**, avec 0 comme valeur par défaut.  
   
- [  **@active_end_date=**] *active_end_date*  
- Date à laquelle l’Agent d'instantané cesse d'être planifié, au format AAAAMMJJ. *active_end_date* est **int**, avec 99991231 par défaut, ce qui signifie que le 31 décembre 9999.  
+`[ @active_end_date = ] active_end_date` Date à laquelle l’Agent d’instantané cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec 99991231 par défaut, ce qui signifie que le 31 décembre 9999.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Heure à laquelle l’Agent d'instantané est planifié pour la première fois, au format HHMMSS. *active_start_time_of_day* est **int**, avec 0 comme valeur par défaut.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Est l’heure de la journée à laquelle l’Agent d’instantané est la première planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec 0 comme valeur par défaut.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Heure à laquelle l’Agent d'instantané cesse d'être planifié, au format HHMMSS. *active_end_time_of_day* est **int**, avec 235959 par défaut, qui correspond à 11:59:59 P.M. comme sur une horloge de 24 heures.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` L’heure de la journée à laquelle l’Agent d’instantané cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day* est **int**, avec 235959 par défaut, qui correspond à 11:59:59 P.M. comme sur une horloge de 24 heures.  
   
- [  **@snapshot_job_name =** ] **'**_snapshot_agent_name_**'**  
- Nom d'un travail existant de l'Agent d'instantané si un travail existant est en cours d'utilisation. *snapshot_agent_name* est **nvarchar (100)** avec une valeur par défaut NULL. Ce paramètre est réservé à un usage interne et ne doit pas être spécifié lors de la création d'une nouvelle publication. Si *snapshot_agent_name* est spécifié, puis *job_login* et *job_password* doit être NULL.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'` Est le nom d’un nom de travail d’Agent d’instantané existant si un travail existant est utilisé. *snapshot_agent_name* est **nvarchar (100)** avec une valeur par défaut NULL. Ce paramètre est réservé à un usage interne et ne doit pas être spécifié lors de la création d'une nouvelle publication. Si *snapshot_agent_name* est spécifié, puis *job_login* et *job_password* doit être NULL.  
   
- [ **@publisher_security_mode**=] *publisher_security_mode*  
- Mode de sécurité utilisé par l'agent lors de la connexion au serveur de publication. *publisher_security_mode* est **smallint**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, et **1** Spécifie l’authentification Windows. La valeur **0** doit être spécifié pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode` Le mode de sécurité utilisé par l’agent lors de la connexion au serveur de publication. *publisher_security_mode* est **smallint**, avec 1 comme valeur par défaut. **0** spécifie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification, et **1** Spécifie l’authentification Windows. La valeur **0** doit être spécifié pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- [ **@publisher_login**=] **'**_publisher_login_**'**  
- Connexion au serveur de publication. *publisher_login* est **sysname**, avec NULL comme valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* est **0**. Si *publisher_login* a la valeur NULL et *publisher_security_mode* est **1**, le compte spécifié dans *job_login* sera utilisé lorsque connexion au serveur de publication.  
+`[ @publisher_login = ] 'publisher_login'` Est le nom de connexion utilisé lors de la connexion au serveur de publication. *publisher_login* est **sysname**, avec NULL comme valeur par défaut. *publisher_login* doit être spécifié lorsque *publisher_security_mode* est **0**. Si *publisher_login* a la valeur NULL et *publisher_security_mode* est **1**, le compte spécifié dans *job_login* sera utilisé lorsque connexion au serveur de publication.  
   
- [ **@publisher_password**=] **'**_publisher_password_**'**  
- Mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher_password = ] 'publisher_password'` Est le mot de passe utilisé lors de la connexion au serveur de publication. *publisher_password* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
- [ **@job_login**=] **'**_job_login_**'**  
- Est la connexion pour le compte sous lequel l’agent s’exécute. Sur Azure SQL Database Managed Instance, utilisez un compte SQL Server. *job_login* est **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte est toujours utilisé pour les connexions d’agent au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
+`[ @job_login = ] 'job_login'` Est la connexion pour le compte sous lequel l’agent s’exécute. Sur Azure SQL Database Managed Instance, utilisez un compte SQL Server. *job_login* est **nvarchar (257)**, avec NULL comme valeur par défaut. Ce compte est toujours utilisé pour les connexions d’agent au serveur de distribution. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
   
 > [!NOTE]
 >  Pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication, il doit être la même connexion que celui spécifiée dans [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  
   
- [ **@job_password**=] **'**_job_password_**'**  
- Mot de passe du compte Windows sous lequel l'Agent s'exécute. *job_password* est **sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
+`[ @job_password = ] 'job_password'` Est le mot de passe pour le compte Windows sous lequel l’agent s’exécute. *job_password* est **sysname**, sans valeur par défaut. Vous devez fournir ce paramètre lorsque vous créez un nouveau travail d'Agent d'instantané.  
   
 > [!IMPORTANT]  
 >  Ne stockez pas les informations d'authentification dans des fichiers de script. Pour améliorer la sécurité, nous vous recommandons de fournir les noms de connexion et les mots de passe au moment de l'exécution.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la création d’un Agent d’instantané à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  

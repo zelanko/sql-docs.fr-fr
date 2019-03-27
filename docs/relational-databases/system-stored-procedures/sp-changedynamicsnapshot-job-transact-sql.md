@@ -16,12 +16,12 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f699a4f7dcf333301889211a0db45248935acdce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130199"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493141"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,17 +52,13 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =** ] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@dynamic_snapshot_jobname =** ] **'***dynamic_snapshot_jobname***'**  
- Nom du travail d'instantané en cours de modification. *dynamic_snapshot_jobname*est **sysname**, avec la valeur par défaut de N '%'. Si *dynamic_snapshot_jobid* est spécifié, vous devez utiliser la valeur par défaut *dynamic_snapshot_jobname*.  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` Est le nom de la tâche d’instantané en cours de modification. *dynamic_snapshot_jobname*est **sysname**, avec la valeur par défaut de N '%'. Si *dynamic_snapshot_jobid* est spécifié, vous devez utiliser la valeur par défaut *dynamic_snapshot_jobname*.  
   
- [  **@dynamic_snapshot_jobid =** ] **'***dynamic_snapshot_jobid***'**  
- ID du travail d'instantané en cours de modification. *dynamic_snapshot_jobid* est **uniqueidentifier**, avec NULL comme valeur par défaut. Si *dynamic_snapshot_jobname*est spécifié, vous devez utiliser la valeur par défaut *dynamic_snapshot_jobid*.  
+`[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` Est l’ID de la tâche d’instantané en cours de modification. *dynamic_snapshot_jobid* est **uniqueidentifier**, avec NULL comme valeur par défaut. Si *dynamic_snapshot_jobname*est spécifié, vous devez utiliser la valeur par défaut *dynamic_snapshot_jobid*.  
   
- [  **@frequency_type =** ] *frequency_type*  
- Fréquence de planification de l'Agent. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_type = ] frequency_type` Est la fréquence de planification de l’agent. *frequency_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -76,8 +72,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**128**|Périodique|  
 |NULL (par défaut)||  
   
- [  **@frequency_interval =** ] *frequency_interval*  
- Jours où l'Agent est exécuté. *frequency_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_interval = ] frequency_interval` Jours où l’agent s’exécute. *frequency_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -93,8 +88,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**10**|Jours de week-end|  
 |NULL (par défaut)||  
   
- [  **@frequency_subday =** ] *frequency_subday*  
- Fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_subday = ] frequency_subday` Est la fréquence de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -104,11 +98,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**8**|Heure|  
 |NULL (par défaut)||  
   
- [  **@frequency_subday_interval =** ] *frequency_subday_interval*  
- Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec NULL comme valeur par défaut.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@frequency_relative_interval =** ] *frequency_relative_interval*  
- Date d'exécution de l'Agent de fusion. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Est la date à laquelle l’Agent de fusion s’exécute. Ce paramètre est utilisé lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -119,26 +111,19 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**16**|Dernière|  
 |NULL (par défaut)||  
   
- [  **@frequency_recurrence_factor =** ] *frequency_recurrence_factor*  
- Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec NULL comme valeur par défaut.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@active_start_date =** ] *active_start_date*  
- Est la date à laquelle l’Agent de fusion est premier planifiée, au format AAAAMMJJ. *active_start_date* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_start_date = ] active_start_date` Est la date à laquelle l’Agent de fusion est premier planifiée, au format AAAAMMJJ. *active_start_date* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@active_end_date =** ] *active_end_date*  
- Date à laquelle l’Agent de fusion cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_end_date = ] active_end_date` Date à laquelle l’Agent de fusion cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@active_start_time_of_day =** ] *active_start_time_of_day*  
- Est l’heure de la journée à laquelle l’Agent de fusion est premier planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Est l’heure de la journée à laquelle l’Agent de fusion est premier planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@active_end_time_of_day =** ] *active_end_time_of_day*  
- Heure à laquelle l’Agent de fusion cesse d'être planifié, au format HHMMSS. *active_end_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` L’heure de la journée à laquelle l’Agent de fusion cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@job_login=** ] **'***job_login***'**  
- Compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l'Agent d'instantané s'exécute lors de la création d'un instantané d'un abonnement qui utilise un filtre de lignes paramétrable. *job_login* est **nvarchar (257)**, avec NULL comme valeur par défaut.  
+`[ @job_login = ] 'job_login'` Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte Windows sous lequel s’exécute l’Agent d’instantané lors de la génération de l’instantané pour un abonnement à l’aide d’un filtre de lignes paramétrable. *job_login* est **nvarchar (257)**, avec NULL comme valeur par défaut.  
   
- [  **@job_password=** ] **'***job_password***'**  
- Mot de passe du compte Windows sous lequel l'Agent d'instantané s'exécute lors de la création d'un instantané d'un abonnement qui utilise un filtre de lignes paramétrable. *job_password* est **nvarchar (257)**, avec NULL comme valeur par défaut.  
+`[ @job_password = ] 'job_password'` Est-ce que le mot de passe pour le compte Windows sous lequel s’exécute l’Agent d’instantané lors de la génération de la capture instantanée pour un abonnement à l’aide un filtre de lignes paramétrable. *job_password* est **nvarchar (257)**, avec NULL comme valeur par défaut.  
   
 > [!IMPORTANT]  
 >  Lorsque c'est possible, demande aux utilisateurs de fournir les informations d'identification au moment de l'exécution. Si vous devez enregistrer les informations d'identification dans un fichier de script, vous devez sécuriser le fichier pour empêcher un accès non autorisé.  

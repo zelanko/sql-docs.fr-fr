@@ -16,12 +16,12 @@ ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9eb6d52d72dec4efab7e744fd4eafd2d9a5eb612
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788481"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493262"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changemergepublication [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@property=**] **'***propriété***'**  
- Propriété à modifier pour la publication donnée. *propriété* est **sysname**, et peut être une des valeurs répertoriée dans le tableau suivant.  
+`[ @property = ] 'property'` La propriété à modifier pour la publication concernée. *propriété* est **sysname**, et peut être une des valeurs répertoriée dans le tableau suivant.  
   
- [  **@value=**] **'***valeur***'**  
- Nouvelle valeur de la propriété spécifiée. *valeur* est **nvarchar (255)**, et peut être une des valeurs répertoriée dans le tableau suivant.  
+`[ @value = ] 'value'` La nouvelle valeur pour la propriété spécifiée. *valeur* est **nvarchar (255)**, et peut être une des valeurs répertoriée dans le tableau suivant.  
   
  Le tableau ci-dessous décrit les propriétés modifiables de la publication ainsi que les limites liées aux valeurs de ces propriétés.  
   
@@ -105,7 +102,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Supprime les informations de publication d'Active Directory.|  
 |**replicate_ddl**|**1**|Instructions DDL (Definition Language) de données qui sont exécutées sur le serveur de publication sont répliquées.|  
 ||**0**|Les instructions DDL ne sont pas répliquées.|  
-|**retention**||Il s’agit d’un **int** qui représente le nombre de *retention_period_unit* unités pour lequel enregistrer les modifications pour la publication concernée. L'abonnement expire et doit être réinitialisé s'il n'est pas synchronisé pendant la période de rétention et que les modifications en attente qu'il aurait dû recevoir ont été supprimées par une opération de nettoyage sur le serveur de distribution. La période de rétention maximale autorisée correspond au nombre de jours entre la date actuelle et le 31 décembre 9999.<br /><br /> Remarque : La période de rétention des publications de fusion dispose d'un délai de grâce de 24 heures pour prendre en charge les Abonnés situés dans différents fuseaux horaires.|  
+|**retention**||Il s’agit d’un **int** qui représente le nombre de *retention_period_unit* unités pour lequel enregistrer les modifications pour la publication concernée. L'abonnement expire et doit être réinitialisé s'il n'est pas synchronisé pendant la période de rétention et que les modifications en attente qu'il aurait dû recevoir ont été supprimées par une opération de nettoyage sur le serveur de distribution. La période de rétention maximale autorisée correspond au nombre de jours entre la date actuelle et le 31 décembre 9999.<br /><br /> Remarque : La période de rétention des publications de fusion dispose d'un délai de grâce de 24 heures pour prendre en charge les Abonnés situés dans différents fuseaux horaires.|  
 |**retention_period_unit**|**day**|La période de rétention est spécifiée en jours.|  
 ||**week**|La période de rétention est spécifiée en semaines.|  
 ||**month**|La période de rétention est spécifiée en mois.|  
@@ -114,18 +111,17 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|Fichiers d’instantané sont stockés dans l’autre emplacement spécifié par *alt_snapshot_folder*. Cette combinaison indique que les fichiers d'instantané sont stockés dans les emplacements par défaut et de remplacement.|  
 |**snapshot_ready**|**true**|L'instantané de la publication est disponible.|  
 ||**false**|L'instantané de la publication n'est pas disponible.|  
-|**status**|**Active**|La publication est dans un état actif.|  
-||**inactif**|La publication est dans un état inactif.|  
+|**status**|**active**|La publication est dans un état actif.|  
+||**inactive**|La publication est dans un état inactif.|  
 |**sync_mode**|**natif** ou<br /><br /> **bcp natif**|La sortie programme de la copie en bloc en mode natif de toutes les tables est utilisée pour l'instantané initial.|  
 ||**character**<br /><br /> ou **bcp caractère**|La sortie programme de la copie en bloc en mode caractère de toutes les tables est utilisée pour l'instantané initial, ce qui est requis pour tous les Abonnés non [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**use_partition_groups**<br /><br /> Remarque : Après avoir utilisé partition_groups, si vous revenez à l’utilisation **« setupbelongs »** et définissez **use_partition_groups = false** dans **changemergearticle**, cela est peut-être pas correctement reflétées après qu’un instantané est créé. Les déclencheurs générés par l'instantané sont conformes avec les groupes de partition.<br /><br /> La solution de contournement pour ce scénario consiste à définir l’état inactif, modifiez le **use_partition_groups**, puis définissez le statut actif.|**true**|La publication utilise des partitions précalculées.|  
+|**use_partition_groups**<br /><br /> Remarque : Après avoir utilisé partition_groups, si vous revenez à l’utilisation **« setupbelongs »** et définissez **use_partition_groups = false** dans **changemergearticle**, cela est peut-être pas correctement reflétées après qu’un instantané est créé. Les déclencheurs générés par l'instantané sont conformes avec les groupes de partition.<br /><br /> La solution de contournement pour ce scénario consiste à définir l’état inactif, modifiez le **use_partition_groups**, puis définissez le statut actif.|**true**|La publication utilise des partitions précalculées.|  
 ||**false**|La publication n'utilise pas de partitions précalculées.|  
 |**validate_subscriber_info**||Répertorie les fonctions utilisées pour extraire des informations d'Abonné. Puis, valide les critères de filtrage dynamiques utilisés pour l'Abonné pour vérifier que les informations sont partitionnées régulièrement.|  
 |**web_synchronization_url**||Valeur par défaut de l'URL Internet utilisée pour la synchronisation Web.|  
 |NULL (par défaut)||Retourne la liste des valeurs prises en charge pour *propriété*.|  
   
- [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
- Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que la modification de la publication n’invalide pas l’instantané. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
   
@@ -133,8 +129,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  Consultez la section Notes pour les propriétés qui, si modifiées, nécessitent un nouvel instantané doit être généré.  
   
- [  **@force_reinit_subscription =** ] *àce_reinit_subscription*  
- Confirme que l'action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits** avec une valeur par défaut **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits** avec une valeur par défaut **0**.  
   
  **0** Spécifie que la publication de modification ne nécessite pas que les abonnements soient réinitialisés. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
   

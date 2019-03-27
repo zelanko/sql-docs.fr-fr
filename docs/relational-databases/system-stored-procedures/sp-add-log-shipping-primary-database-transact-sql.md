@@ -18,12 +18,12 @@ ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: aa737688a974170ece1817503b4b02de440e679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604878"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494101"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,63 +56,47 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@database=** ] '*base de données*'  
- Nom de la base de données primaire pour la copie des journaux de transaction. *base de données* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @database = ] 'database'` Est le nom du journal de transaction base de données primaire. *base de données* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
- [  **@backup_directory=** ] '*backup_directory*'  
- Chemin d'accès au dossier de sauvegarde sur le serveur principal. *backup_directory* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @backup_directory = ] 'backup_directory'` Est le chemin d’accès au dossier de sauvegarde sur le serveur principal. *backup_directory* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
   
- [  **@backup_share=** ] '*backup_share*'  
- Chemin d'accès réseau au répertoire de sauvegarde sur le serveur principal. *backup_share* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @backup_share = ] 'backup_share'` Est le chemin d’accès réseau au répertoire de sauvegarde sur le serveur principal. *backup_share* est **nvarchar (500)**, sans valeur par défaut, et ne peut pas être NULL.  
   
- [  **@backup_job_name=** ] '*backup_job_name*'  
- Nom du travail de SQL Server Agent sur le serveur principal qui copie la sauvegarde dans le dossier de sauvegarde. *backup_job_name* est **sysname** et ne peut pas être NULL.  
+`[ @backup_job_name = ] 'backup_job_name'` Est le nom de la tâche de l’Agent SQL Server sur le serveur principal qui copie la sauvegarde dans le dossier de sauvegarde. *backup_job_name* est **sysname** et ne peut pas être NULL.  
   
- [  **@backup_retention_period=** ] *backup_retention_period*  
- Durée, en minutes, de conservation du fichier de sauvegarde de fichier journal dans le répertoire de sauvegarde sur le serveur principal. *backup_retention_period* est **int**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @backup_retention_period = ] backup_retention_period` Est la longueur de la durée, en minutes, de conserver le fichier de sauvegarde de journal dans le répertoire de sauvegarde sur le serveur principal. *backup_retention_period* est **int**, sans valeur par défaut, et ne peut pas être NULL.  
   
- [  **@monitor_server=** ] '*monitor_server*'  
- Nom du serveur moniteur. *Monitor_server* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @monitor_server = ] 'monitor_server'` Est le nom du serveur moniteur. *Monitor_server* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
- [ **@monitor_server_security_mode=** ] *monitor_server_security_mode*  
- Mode de sécurité utilisé pour la connexion au serveur moniteur.  
+`[ @monitor_server_security_mode = ] monitor_server_security_mode` Le mode de sécurité utilisé pour se connecter au serveur moniteur.  
   
  1 = Authentification Windows.  
   
  0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification. *monitor_server_security_mode* est **bits** et ne peut pas être NULL.  
   
- [  **@monitor_server_login=** ] '*monitor_server_login*'  
- Nom d'utilisateur du compte utilisé pour accéder au serveur moniteur.  
+`[ @monitor_server_login = ] 'monitor_server_login'` Est le nom d’utilisateur du compte utilisé pour accéder au serveur moniteur.  
   
- [  **@monitor_server_password=** ] '*monitor_server_password*'  
- Mot de passe du compte qui permet d'accéder au serveur moniteur.  
+`[ @monitor_server_password = ] 'monitor_server_password'` Est le mot de passe du compte utilisé pour accéder au serveur moniteur.  
   
- [  **@backup_threshold=** ] *backup_threshold*  
- Est la longueur de la durée, en minutes, après la dernière sauvegarde avant qu’un *threshold_alert ne* erreur est générée. *backup_threshold* est **int**, avec une valeur par défaut de 60 minutes.  
+`[ @backup_threshold = ] backup_threshold` Est la longueur de la durée, en minutes, après la dernière sauvegarde avant qu’un *threshold_alert ne* erreur est générée. *backup_threshold* est **int**, avec une valeur par défaut de 60 minutes.  
   
- [  **@threshold_alert=** ] *threshold_alert ne*  
- Est l’alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert ne* est **int**, avec 14 420 comme valeur par défaut.  
+`[ @threshold_alert = ] threshold_alert` Est l’alerte à déclencher lorsque le seuil de sauvegarde est dépassé. *threshold_alert ne* est **int**, avec 14 420 comme valeur par défaut.  
   
- [  **@threshold_alert_enabled=** ] *threshold_alert_enabled*  
- Spécifie si une alerte est déclenchée quand *backup_threshold* est dépassé. La valeur par défaut zéro (0) indique que l'alerte est désactivée et ne sera pas déclenchée. *threshold_alert_enabled* est **bits**.  
+`[ @threshold_alert_enabled = ] threshold_alert_enabled` Spécifie si une alerte est déclenchée quand *backup_threshold* est dépassé. La valeur par défaut zéro (0) indique que l'alerte est désactivée et ne sera pas déclenchée. *threshold_alert_enabled* est **bits**.  
   
- [  **@history_retention_period=** ] *history_retention_period*  
- Période de rétention, en minutes, de l'historique. *history_retention_period* est **int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
+`[ @history_retention_period = ] history_retention_period` Est la durée en minutes pendant laquelle l’historique doit être conservé. *history_retention_period* est **int**, avec NULL comme valeur par défaut. Une valeur de 14420 sera utilisée en l'absence de toute autre spécification.  
   
- [  **@backup_job_id=** ] *backup_job_id* sortie  
- ID de travail de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] associé au travail de sauvegarde sur le serveur principal. *backup_job_id* est **uniqueidentifier** et ne peut pas être NULL.  
+`[ @backup_job_id = ] backup_job_id OUTPUT` Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de tâche de l’Agent associé à la tâche de sauvegarde sur le serveur principal. *backup_job_id* est **uniqueidentifier** et ne peut pas être NULL.  
   
- [  **@primary_id=** ] *primary_id* sortie  
- ID de la base de données primaire pour la configuration de la copie des journaux de transaction. *primary_id* est **uniqueidentifier** et ne peut pas être NULL.  
+`[ @primary_id = ] primary_id OUTPUT` ID de la base de données primaire pour la configuration d’envoi de journaux. *primary_id* est **uniqueidentifier** et ne peut pas être NULL.  
   
- [ **@backup_compression**=] *backup_compression_option*  
- Spécifie si une configuration de copie des journaux utilise [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ce paramètre est pris en charge uniquement dans le [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou une version ultérieure).  
+`[ @backup_compression = ] backup_compression_option` Spécifie si une configuration de copie des journaux utilise [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Ce paramètre est pris en charge uniquement dans le [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou une version ultérieure).  
   
  0 = Désactivées. Ne jamais compresser des sauvegardes de journal.  
   
  1 = Activé. Toujours compresser des sauvegardes de journal.  
   
- 2 = utiliser le paramètre de la [afficher ou configurer l’Option de Configuration de serveur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Il s'agit de la valeur par défaut.  
+ 2 = utiliser le paramètre de la [afficher ou configurer l’Option de Configuration de serveur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -133,7 +117,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
   
 5.  Si le serveur moniteur est différent du serveur principal, ajoute un enregistrement moniteur dans **log_shipping_monitor_primary** sur le moniteur de serveur à l’aide des arguments fournis.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

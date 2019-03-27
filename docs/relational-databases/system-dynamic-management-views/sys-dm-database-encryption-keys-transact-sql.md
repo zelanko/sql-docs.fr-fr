@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs
+title: sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/20/2017
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3a6624182bdaafac45a01c90c4aba39dd6d64a5a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c041ea8aff23a3b601695236681fda3081def1fa
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669568"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494074"
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,18 +37,22 @@ ms.locfileid: "51669568"
 |-----------------|---------------|-----------------|  
 |database_id|**Int**|ID de la base de données.|  
 |encryption_state|**Int**|Indique si la base de données est chiffrée ou non chiffrée.<br /><br /> 0 = aucune clé de chiffrement de base de données présente, pas de chiffrement<br /><br /> 1 = non chiffré<br /><br /> 2 = chiffrement en cours<br /><br /> 3 = chiffrée.<br /><br /> 4 = modification de clé en cours<br /><br /> 5 = déchiffrement en cours<br /><br /> 6 = modification de la protection en cours (Le certificat ou la clé asymétrique qui chiffre la clé de chiffrement de base de données est en cours de modification.)|  
-|create_date|**datetime**|Affiche la date de création de la clé de chiffrement.|  
-|regenerate_date|**datetime**|Affiche la date de régénération de la clé de chiffrement.|  
-|modify_date|**datetime**|Affiche la date de modification de la clé de chiffrement.|  
-|set_date|**datetime**|Affiche la date à laquelle la clé de chiffrement a été appliquée à la base de données.|  
-|opened_date|**datetime**|Indique à quel moment la clé de base de données a été ouverte pour la dernière fois.|  
+|create_date|**datetime**|Affiche la date (au format UTC) la clé de chiffrement a été créée.|  
+|regenerate_date|**datetime**|Affiche la date (au format UTC) la clé de chiffrement a été régénérée.|  
+|modify_date|**datetime**|Affiche la date (au format UTC) la clé de chiffrement a été modifiée.|  
+|set_date|**datetime**|Affiche la date (au format UTC), la clé de chiffrement a été appliquée à la base de données.|  
+|opened_date|**datetime**|Indique le moment de la dernière ouverture (au format UTC) la clé de la base de données.|  
 |key_algorithm|**nvarchar(32)**|Affiche l'algorithme utilisé pour la clé.|  
 |key_length|**Int**|Affiche la longueur de la clé.|  
 |encryptor_thumbprint|**varbinary(20)**|Affiche l'empreinte numérique du chiffreur.|  
 |encryptor_type|**nvarchar(32)**|**S'applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Décrit le chiffreur.|  
-|percent_complete|**real**|Pourcentage accompli de la modification de l'état de chiffrement de la base de données. La valeur 0 indique aucune modification d'état.|  
+|percent_complete|**real**|Pourcentage accompli de la modification de l'état de chiffrement de la base de données. La valeur 0 indique aucune modification d'état.|
+|encryption_state_desc|**nvarchar(32)**|**S’applique aux**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br> Chaîne qui indique si la base de données est chiffré ou non.<br><br>Aucune<br><br>NON CHIFFRÉ<br><br>CHIFFRÉ<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**Int**|**S’applique aux**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br>Indique l’état actuel de l’analyse du chiffrement. <br><br>0 = aucune analyse a été lancée, le chiffrement transparent des données ne sont pas activée.<br><br>1 = analyse est en cours.<br><br>2 = analyse est en cours, mais a été interrompue, l’utilisateur peut reprendre.<br><br>3 = analyse a été effectuée avec succès, TDE est activé et le chiffrement est terminé.<br><br>4 = analyse a été abandonnée pour une raison quelconque, une intervention manuelle est nécessaire. Contactez le Support Microsoft pour obtenir une assistance.|
+|encryption_scan_state_desc|**nvarchar(32)**|**S’applique aux**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br>Chaîne qui indique l’état actuel de l’analyse du chiffrement.<br><br> Aucune<br><br>RUNNING<br><br>SUSPENDED<br><br>TERMINER<br><br>ABORTED|
+|encryption_scan_modify_date|**datetime**|**S’applique aux**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et versions ultérieures.<br><br> Affiche la date de dernière modification (au format UTC) l’état d’analyse de chiffrement.|
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

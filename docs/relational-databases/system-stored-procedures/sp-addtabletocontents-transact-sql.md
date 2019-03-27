@@ -16,12 +16,12 @@ ms.assetid: 2ea27001-74f4-463e-bf1b-b6b5a86b9219
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ad6e8fe499e3ffe57a745cfb924bdc792938dd9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810941"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493511"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_name=**] **'**_table_name_**'**  
- Est le nom de la table. *table_name* est **sysname**, sans valeur par défaut.  
+`[ @table_name = ] 'table_name'` Est le nom de la table. *table_name* est **sysname**, sans valeur par défaut.  
   
- [  **@owner_name=**] **'**_owner_name_**'**  
- Est le nom du propriétaire de la table. *owner_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @owner_name = ] 'owner_name'` Est le nom du propriétaire de la table. *owner_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@filter_clause=** ] **'**_filter_clause_**'**  
- Spécifie une clause de filtre qui contrôle les lignes des données récemment chargées à ajouter aux tables de suivi de fusion. *filter_clause* est **nvarchar (4000)**, avec NULL comme valeur par défaut. Si *filter_clause* est **null**, en bloc toutes les lignes chargées sont ajoutés.  
+`[ @filter_clause = ] 'filter_clause'` Spécifie une clause de filtre qui contrôle quelles lignes des données qui vient d’être chargées doivent être ajoutés aux tables de suivi de fusion. *filter_clause* est **nvarchar (4000)**, avec NULL comme valeur par défaut. Si *filter_clause* est **null**, en bloc toutes les lignes chargées sont ajoutés.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

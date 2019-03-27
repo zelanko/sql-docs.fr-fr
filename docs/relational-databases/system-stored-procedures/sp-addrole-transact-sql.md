@@ -18,12 +18,12 @@ ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: f51d462e46a86a3c824a7e37aeb1f30ba28d987b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: a1cc9a65d1d4b6baba4d457d28ee36f0ac6156a1
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212918"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492191"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@rolename =** ] **'***rôle***'**  
- Nom du nouveau rôle de base de données. *rôle* est un **sysname**, sans valeur par défaut. *rôle* doit être un identificateur valid (ID) et ne doit pas déjà exister dans la base de données actuelle.  
+`[ @rolename = ] 'role'` Est le nom du nouveau rôle de base de données. *rôle* est un **sysname**, sans valeur par défaut. *rôle* doit être un identificateur valid (ID) et ne doit pas déjà exister dans la base de données actuelle.  
   
- [  **@ownername =**] **'***propriétaire***'**  
- Propriétaire du nouveau rôle de base de données. *propriétaire* est un **sysname**, avec une valeur par défaut de l’utilisateur en cours d’exécution actuel. *propriétaire* doit être un utilisateur de base de données ou un rôle de base de données dans la base de données actuelle.  
+`[ @ownername = ] 'owner'` Est le propriétaire du nouveau rôle de base de données. *propriétaire* est un **sysname**, avec une valeur par défaut de l’utilisateur en cours d’exécution actuel. *propriétaire* doit être un utilisateur de base de données ou un rôle de base de données dans la base de données actuelle.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

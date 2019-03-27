@@ -16,12 +16,12 @@ ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c87a0968f2541507c59384bfad82780377301dc7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128219"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493061"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=**] **'**_publisher_**'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publication=**] **'**_publication_**'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@property=**] **'**_propriété_**'**  
- Nom de la propriété à modifier. *propriété* est **sysname**.  
+`[ @property = ] 'property'` Est la propriété à modifier. *propriété* est **sysname**.  
   
- [  **@value=**] **'**_valeur_**'**  
- Est la nouvelle valeur de la propriété. *valeur* est **nvarchar (1000)**, sans valeur par défaut.  
+`[ @value = ] 'value'` Est la nouvelle valeur de la propriété. *valeur* est **nvarchar (1000)**, sans valeur par défaut.  
   
- [  **@publication_type =** ] *publication_type*  
- Indique le type de réplication de la publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @publication_type = ] publication_type` Spécifie le type de réplication de la publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Type de publication|  
 |-----------|----------------------|  
@@ -79,19 +73,19 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**distributor_password**||Mot de passe du serveur de distribution.|  
 |**distributor_security_mode**|**1**|Utilise l'authentification Windows pour la connexion au serveur de distribution.|  
 ||**0**|Utilise l'authentification  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de distribution.|  
-|**argument dts_package_name**||Définit le nom du package DTS (Data Transformation Services) SQL Server 2000. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
-|**dts_package_password**||Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.<br /><br /> Remarque : Un package DTS doit avoir un mot de passe.<br /><br /> Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
+|**dts_package_name**||Définit le nom du package DTS (Data Transformation Services) SQL Server 2000. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
+|**dts_package_password**||Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.<br /><br /> Remarque : Un package DTS doit avoir un mot de passe.<br /><br /> Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
 |**dts_package_location**||Emplacement où le package DTS est stocké. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication transactionnelle ou d'instantané.|  
 |**dynamic_snapshot_location**||Spécifie le chemin d'accès au dossier où les fichiers d'instantané sont enregistrés. Cette valeur peut être spécifiée seulement s'il s'agit d'une publication de fusion.|  
 |**ftp_address**||Pour compatibilité descendante uniquement.|  
 |**ftp_login**||Pour compatibilité descendante uniquement.|  
 |**ftp_password**||Pour compatibilité descendante uniquement.|  
 |**ftp_port**||Pour compatibilité descendante uniquement.|  
-|**Nom d’hôte**||Nom d’hôte utilisé lors de la connexion au serveur de publication.|  
+|**hostname**||Nom d’hôte utilisé lors de la connexion au serveur de publication.|  
 |**internet_login**||Connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_password**||Mot de passe qu'utilise l'Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web avec l'authentification de base.|  
 |**internet_security_mode**|**1**|Utilise l'authentification intégrée Windows pour la synchronisation Web. Il est recommandé d'utiliser l'authentification de base pour la synchronisation Web. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Utiliser l'authentification de base pour la synchronisation Web.<br /><br /> Remarque : La synchronisation Web nécessite une connexion SSL au serveur Web.|  
+||**0**|Utiliser l'authentification de base pour la synchronisation Web.<br /><br /> Remarque : La synchronisation Web nécessite une connexion SSL au serveur Web.|  
 |**internet_timeout**||Délai en secondes avant l'expiration d'une demande de synchronisation Web.|  
 |**internet_url**||URL qui représente l'emplacement de l'écouteur de réplication pour la synchronisation Web.|  
 |**merge_job_login**||Nom de connexion pour le compte Windows sous lequel l’agent s’exécute.|  

@@ -3,18 +3,18 @@ title: Extension de langage Java dans SQL Server 2019 - SQL Server Machine Learn
 description: Installer, configurer et valider l’extension du langage Java sur SQL Server 2019 pour les systèmes Linux et Windows.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a18886ea4daff3fb87853a556b67ad0562c2efd3
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 9b5d5fe9a3bf3b775c9d7afb1035e09120157aac
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017835"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494261"
 ---
 # <a name="java-language-extension-in-sql-server-2019"></a>Extension de langage Java dans SQL Server 2019 
 
@@ -39,7 +39,7 @@ Vous pouvez utiliser la distribution de votre choix Java 8. Voici deux distribut
 | [Oracle Java SE](https://www.oracle.com/technetwork/java/javase/downloads/index.html) | 8 | Windows et Linux | Oui | Oui |
 | [Zulu OpenJDK](https://www.azul.com/downloads/zulu/) | 8 | Windows et Linux | Oui | Non |
 
-Sur Linux, le **mssql-server-extensibilité-java** package installe automatiquement JRE 8 s’il n’est pas déjà installé. Scripts d’installation a également ajouter le chemin d’accès de la machine virtuelle Java pour une variable d’environnement appelée JAVA_HOME.
+Sur Linux, le **mssql-server-extensibilité-java** package installe automatiquement JRE 8 s’il n’est pas déjà installé. Scripts d’installation a également ajouter le chemin d’accès de la machine virtuelle Java pour une variable d’environnement appelée variable.
 
 Sur Windows, nous vous recommandons d’installer le JDK sous la valeur par défaut `/Program Files/` dossier si possible. Sinon, une configuration supplémentaire est nécessaire pour accorder des autorisations aux exécutables. Pour plus d’informations, consultez le [accorder des autorisations (Windows)](#perms-nonwindows) section dans ce document.
 
@@ -72,22 +72,18 @@ Après avoir terminé l’installation, l’étape suivante consiste [configurer
 
 ### <a name="grant-permissions-on-linux"></a>Accorder des autorisations sur Linux
 
-Pour fournir à SQL Server avec les autorisations d’exécution des classes Java, vous devez définir des autorisations.
+Vous n’avez pas besoin d’effectuer cette étape si vous utilisez des bibliothèques externes. La méthode recommandée de l’utilisation est à l’aide de bibliothèques externes. Pour faciliter la création d’une bibliothèque externe à partir de votre fichier jar, consultez [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)
 
-Pour accorder en lecture et à l’exécution pour jar des fichiers ou des fichiers de classe, exécutez la commande suivante **chmod** commande sur chaque fichier de classe ou un fichier jar. Nous vous recommandons de placer vos fichiers de classe dans un fichier jar lorsque vous travaillez avec SQL Server. Pour créer un fichier jar, consultez [la création d’un fichier jar](#create-jar).
+Si vous n’utilisez pas les bibliothèques externes, vous devez fournir à SQL Server avec les autorisations d’exécution des classes Java dans votre fichier jar.
+
+Pour accorder en lecture et à l’exécution pour le fichier jar, exécutez la commande suivante **chmod** commande sur le fichier jar. Nous vous recommandons de toujours placer vos fichiers de classe dans un fichier jar, lorsque vous travaillez avec SQL Server. Pour créer un fichier jar, consultez [la création d’un fichier jar](#create-jar).
 
 ```cmd
 chmod ug+rx <MyJarFile.jar>
 ```
-Vous devez également accorder des autorisations de mssql_satellite sur le fichier du répertoire ou fichier jar à lecture/exécution.
+Vous devez également accorder les autorisations de mssql_satellite le fichier jar à lecture/exécution.
 
-* Si vous appelez des fichiers de classe à partir de SQL Server, mssql_satellite sera nécessaire en lecture / d’exécuter les autorisations sur *chaque* répertoire dans l’arborescence des dossiers, à partir de la racine vers le parent direct.
 
-* Si vous appelez un fichier jar à partir de SQL Server, il suffit d’exécuter la commande sur le fichier jar lui-même.
-
-```cmd
-chown mssql_satellite:mssql_satellite <directory>
-```
 
 ```cmd
 chown mssql_satellite:mssql_satellite <MyJarFile.jar>
@@ -107,19 +103,21 @@ chown mssql_satellite:mssql_satellite <MyJarFile.jar>
 
 4. Terminez l’Assistant installation et poursuivez avec les deux tâches.
 
-### <a name="add-the-javahome-variable"></a>Ajoutez la variable JAVA_HOME
+### <a name="add-the-jrehome-variable"></a>Ajoutez la variable variable
 
-JAVA_HOME est une variable d’environnement qui spécifie l’emplacement de l’interpréteur Java. Dans cette étape, créez une variable d’environnement système pour elle sur Windows.
+Variable est une variable d’environnement qui spécifie l’emplacement de l’interpréteur Java. Dans cette étape, créez une variable d’environnement système pour elle sur Windows.
 
-1. Recherchez et copiez le chemin d’accès/JRE JDK (par exemple, `C:\Program Files\Java\jdk1.8.0_201`).
+1. Recherchez et copiez le chemin d’accès de base de JRE (par exemple, `C:\Program Files\Zulu\zulu-8\jre\`).
 
-    En fonction de votre distribution Java par défaut, votre emplacement du JDK ou JRE peut être différente de celle de l’exemple de chemin ci-dessus.
+    En fonction de votre distribution Java par défaut, votre emplacement du JDK ou JRE peut être différente de celle de l’exemple de chemin ci-dessus. 
+    Même si vous avez un JDK installé, vous souvent heures obtiendra un sous-dossier JRE dans le cadre de cette installation. 
+    L’extension Java essaye de charger le jvm.dll à partir du chemin d’accès % JRE_HOME%\bin\server.
 
 2. Dans le panneau de configuration, ouvrez **système et sécurité**, ouvrez **système**, puis cliquez sur **propriétés système avancées**.
 
 3. Cliquez sur **Variables d’environnement**.
 
-4. Créer une nouvelle variable système pour `JAVA_HOME` avec la valeur du chemin d’accès du JDK/JRE (trouvé à l’étape 1).
+4. Créer une nouvelle variable système pour `JRE_HOME` avec la valeur du chemin d’accès du JDK/JRE (trouvé à l’étape 1).
 
 5. Redémarrez [Launchpad](../concepts/extensibility-framework.md#launchpad).
 
@@ -129,24 +127,24 @@ JAVA_HOME est une variable d’environnement qui spécifie l’emplacement de l�
 
 <a name="perms-nonwindows"></a>
 
-### <a name="grant-access-to-non-default-jdk-folder-windows-only"></a>Accorder l’accès au dossier JDK non définis par défaut (Windows uniquement)
+### <a name="grant-access-to-non-default-jre-folder-windows-only"></a>Accorder l’accès au dossier JRE non définis par défaut (Windows uniquement)
 
-Vous pouvez ignorer cette étape si vous avez installé le JDK/JRE dans le dossier par défaut. 
-
-Pour une installation de l’autre dossier, exécutez la **icacls** commandes à partir d’un *avec élévation de privilèges* ligne pour accorder l’accès à la **SQLRUsergroup** et comptes de service SQL Server (dans  **ALL_APPLICATION_PACKAGES**) pour accéder à la machine virtuelle Java et l’instruction classpath Java. Les commandes seront de manière récursive accorder l’accès à tous les fichiers et dossiers situés sous le chemin d’accès du répertoire donné.
+Exécuter le **icacls** commandes à partir d’un *avec élévation de privilèges* ligne pour accorder l’accès à la **SQLRUsergroup** et comptes de service SQL Server (dans **ALL_APPLICATION_ PACKAGES**) pour accéder à l’environnement JRE. Les commandes seront de manière récursive accorder l’accès à tous les fichiers et dossiers situés sous le chemin d’accès du répertoire donné.
 
 #### <a name="sqlrusergroup-permissions"></a>Autorisations SQLRUserGroup
 
 Pour une instance nommée, ajoutez le nom de l’instance à SQLRUsergroup (par exemple, `SQLRUsergroupINSTANCENAME`).
 
 ```cmd
-icacls "<PATH TO CLASS or JAR FILES>" /grant "SQLRUsergroup":(OI)(CI)RX /T
+icacls "<PATH to JRE>" /grant "SQLRUsergroup":(OI)(CI)RX /T
 ```
+
+Vous pouvez ignorer cette étape si vous avez installé le JDK/JRE dans le dossier par défaut sous program files sur Windows.
 
 #### <a name="appcontainer-permissions"></a>Autorisations AppContainer
 
 ```cmd
-icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
+icacls "PATH to JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 ```
 
 <a name="configure-script-execution"></a>
@@ -165,11 +163,11 @@ icacls "PATH to JDK/JRE" /grant "ALL APPLICATION PACKAGES":(OI)(CI)RX /T
 
 Pour vérifier l’installation est opérationnelle, créer et exécuter un [exemple d’application](java-first-sample.md) à l’aide du JDK que vous venez d’installer, en plaçant les fichiers dans le chemin de classe que vous avez configuré précédemment.
 
-## <a name="differences-in-ctp-23"></a>Différences dans les CTP 2.3
+## <a name="differences-in-ctp-24"></a>Différences dans les CTP 2.4
 
 Si vous êtes déjà familiarisé avec les Services Machine Learning, le modèle d’autorisation et d’isolation pour les extensions a changé dans cette version. Pour plus d’informations, consultez [différences dans une installation de Services de SQL Server Machine Learning 2019](../install/sql-machine-learning-services-ver15.md).
 
-## <a name="limitations-in-ctp-23"></a>Limitations dans CTP 2.3
+## <a name="limitations-in-ctp-24"></a>Limitations dans les CTP 2.4
 
 * Le nombre de valeurs dans les tampons d’entrée et de sortie ne peut pas dépasser `MAX_INT (2^31-1)` puisque c’est le nombre maximal d’éléments qui peuvent être alloués dans un tableau en Java.
 
@@ -183,7 +181,8 @@ Si vous êtes déjà familiarisé avec les Services Machine Learning, le modèle
 
 ## <a name="how-to-create-a-jar-file-from-class-files"></a>Comment créer un fichier jar à partir de fichiers de classe
 
-Accédez au dossier contenant votre fichier de classe et exécutez la commande suivante :
+Nous vous recommandons de toujours empaquetage vos fichiers de classe dans un fichier jar lors de l’exécution à partir de SQL Server.
+Pour créer un fichier jar à partir de fichiers de classe, accédez au dossier contenant votre fichier de classe et exécutez la commande suivante :
 
 ```cmd
 jar -cf <MyJar.jar> *.class

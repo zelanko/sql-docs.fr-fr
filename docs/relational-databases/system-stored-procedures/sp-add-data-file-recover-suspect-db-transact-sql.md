@@ -18,12 +18,12 @@ ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: adc6a2c927c885e42afaf177a2e5a2703bf207c0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ee4b0fd37a3174f6e1c4a981cece8587ef48e1d5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520315"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493903"
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,28 +46,21 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbName=** ] **'**_base de données_ **'**  
- Nom de la base de données. *base de données* est **sysname**, sans valeur par défaut.  
+`[ @dbName = ] 'database_ '` Est le nom de la base de données. *base de données* est **sysname**, sans valeur par défaut.  
   
- [  **@filegroup=** ] **'**_filegroup_name_ **'**  
- Groupe de fichiers auquel le fichier doit être ajouté. *FILEGROUP_NAME* est **nvarchar (260)**, avec NULL comme valeur par défaut, ce qui indique le fichier primaire.  
+`[ @filegroup = ] 'filegroup_name_ '` Est le groupe de fichiers à laquelle ajouter le fichier. *FILEGROUP_NAME* est **nvarchar (260)**, avec NULL comme valeur par défaut, ce qui indique le fichier primaire.  
   
- [  **@name=** ] **'**_nom_fichier_logique_ **'**  
- Nom utilisé dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour faire référence au fichier. Il doit être unique dans le serveur. *nom_fichier_logique* est **nvarchar (260)**, sans valeur par défaut.  
+`[ @name = ] 'logical_file_name_ '` Est le nom utilisé dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour référencer le fichier. Il doit être unique dans le serveur. *nom_fichier_logique* est **nvarchar (260)**, sans valeur par défaut.  
   
- [  **@filename=** ] **'**_os_file_name_ **'**  
- Chemin et nom de fichier utilisé par le système d'exploitation pour le fichier. Le fichier doit résider sur une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* est **nvarchar (260)**, sans valeur par défaut.  
+`[ @filename = ] 'os_file_name_ '` Le chemin d’accès et nom de fichier est utilisé par le système d’exploitation pour le fichier. Le fichier doit résider sur une instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. *os_file_name* est **nvarchar (260)**, sans valeur par défaut.  
   
- [  **@size=** ] **'**_taille_ **'**  
- Taille initiale du fichier. *taille* est **nvarchar (20)**, avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo. La valeur minimale est 512 Ko. Si *taille* n’est pas spécifié, la valeur par défaut est 1 Mo.  
+`[ @size = ] 'size_ '` Est la taille initiale du fichier. *taille* est **nvarchar (20)**, avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo. La valeur minimale est 512 Ko. Si *taille* n’est pas spécifié, la valeur par défaut est 1 Mo.  
   
- [  **@maxsize=** ] **'**_max_size_ **'**  
- Est la taille maximale que peut atteindre le fichier. *max_size* est **nvarchar (20)**, avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo.  
+`[ @maxsize = ] 'max_size_ '` Est la taille maximale que peut atteindre le fichier. *max_size* est **nvarchar (20)**, avec NULL comme valeur par défaut. Indiquez un nombre entier sans aucune décimale. Les indications Mo et Ko peuvent être utilisées pour indiquer qu'il s'agit de mégaoctets ou de kilo-octets. La valeur par défaut est Mo.  
   
  Si *max_size* n’est pas spécifié, le fichier croît jusqu'à ce que le disque est plein. Le journal des applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows avertit l'administrateur lorsqu'un disque est sur le point d'être saturé.  
   
- [  **@filegrowth=** ] **'**_growth_increment_ **'**  
- Quantité d'espace ajoutée au fichier chaque fois qu'un espace supplémentaire s'avère nécessaire. *growth_increment* est **nvarchar (20)**, avec NULL comme valeur par défaut. La valeur 0 indique qu'aucun accroissement n'est autorisé. Indiquez un nombre entier sans aucune décimale. La valeur peut être exprimée en Mo, en Ko ou en pourcentage (%). Lorsque % est spécifié, la taille de l'incrément de croissance est le pourcentage spécifié de la taille du fichier au moment où l'incrémentation a lieu. Si un nombre est mentionné sans spécifier Mo, Ko ou %, la valeur par défaut est Mo.  
+`[ @filegrowth = ] 'growth_increment_ '` Est la quantité d’espace ajoutée au fichier chaque fois nouvel espace est nécessaire. *growth_increment* est **nvarchar (20)**, avec NULL comme valeur par défaut. La valeur 0 indique qu'aucun accroissement n'est autorisé. Indiquez un nombre entier sans aucune décimale. La valeur peut être exprimée en Mo, en Ko ou en pourcentage (%). Lorsque % est spécifié, la taille de l'incrément de croissance est le pourcentage spécifié de la taille du fichier au moment où l'incrémentation a lieu. Si un nombre est mentionné sans spécifier Mo, Ko ou %, la valeur par défaut est Mo.  
   
  Si *growth_increment* a la valeur NULL, la valeur par défaut est 10 %, et la valeur minimale est de 64 Ko. La taille spécifiée est arrondie à la valeur multiple de 64 Ko la plus proche.  
   

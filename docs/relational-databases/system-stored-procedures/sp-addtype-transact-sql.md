@@ -18,12 +18,12 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eefd9b73f4e249df57aa03ef0453a864eab2fd77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ead23c8feb428772fcde5bcdb59f19e1a23b6cd9
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838847"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492841"
 ---
 # <a name="spaddtype-transact-sql"></a>sp_addtype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +45,9 @@ sp_addtype [ @typename = ] type,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@typename=** ] *type*  
- Nom du type de données alias. Alias des noms de type de données doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md) et doivent être uniques dans chaque base de données. *type* est **sysname**, sans valeur par défaut.  
+`[ @typename = ] type` Est le nom du type de données alias. Alias des noms de type de données doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md) et doivent être uniques dans chaque base de données. *type* est **sysname**, sans valeur par défaut.  
   
- [  **@phystype=**] *type_données_système*  
- Physique ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fourni, le type de données sur lequel est basé le type de données alias. *type_données_système* est **sysname**, sans valeur par défaut et peut prendre l’une des valeurs suivantes :  
+`[ @phystype = ] system_data_type` Physique ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fourni, le type de données sur lequel est basé le type de données alias. *type_données_système* est **sysname**, sans valeur par défaut et peut prendre l’une des valeurs suivantes :  
   
 ||||  
 |-|-|-|  
@@ -70,11 +68,10 @@ sp_addtype [ @typename = ] type,
  *P*  
  Entier non négatif qui indique le nombre total maximal de chiffres d'un nombre décimal pouvant figurer à gauche et à droite de la virgule décimale. Pour plus d’informations, consultez [decimal et numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- *S*  
+ *s*  
  Entier non négatif qui indique le nombre maximal de décimales qui peuvent figurer à droite d'une virgule décimale ; il doit être inférieur ou égal à la précision. Pour plus d’informations, consultez [decimal et numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
- [  **@nulltype =** ] **'***type_null***'**  
- Indique la manière dont le type de données alias gère les valeurs NULL. *type_null* est **varchar (** 8 **)**, avec NULL comme valeur par défaut et doit être placé entre guillemets simples ('NULL', 'NOT NULL' ou 'NONULL'). Si *type_null* n’est pas défini explicitement par **sp_addtype**, il est défini sur la possibilité de valeur par défaut actuelle. Utilisez la fonction système GETANSINULL pour déterminer la possibilité de valeurs NULL actuellement définie. Il est possible d'ajuster cette valeur au moyen de l'instruction SET ou ALTER DATABASE. La possibilité de valeurs NULL doit être définie explicitement. Si **@phystype** est **bits**, et **@nulltype** n’est pas spécifié, la valeur par défaut n’est pas NULL.  
+`[ @nulltype = ] 'null_type'` Indique la manière dont le type de données alias gère les valeurs null. *type_null* est **varchar (** 8 **)**, avec NULL comme valeur par défaut et doit être placé entre guillemets simples ('NULL', 'NOT NULL' ou 'NONULL'). Si *type_null* n’est pas défini explicitement par **sp_addtype**, il est défini sur la possibilité de valeur par défaut actuelle. Utilisez la fonction système GETANSINULL pour déterminer la possibilité de valeurs NULL actuellement définie. Il est possible d'ajuster cette valeur au moyen de l'instruction SET ou ALTER DATABASE. La possibilité de valeurs NULL doit être définie explicitement. Si **@phystype** est **bits**, et **@nulltype** n’est pas spécifié, la valeur par défaut n’est pas NULL.  
   
 > [!NOTE]  
 >  Le *type_null* paramètre définit uniquement la possibilité de valeur NULL par défaut pour ce type de données. Si la possibilité d'utiliser des valeurs NULL est explicitement définie quand le type de données alias est utilisé lors de la création de la table, elle est prioritaire sur la possibilité de valeurs NULL actuellement définie. Pour plus d’informations, consultez [ALTER TABLE &#40;Transact-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md) et [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).  
@@ -97,7 +94,7 @@ sp_addtype [ @typename = ] type,
   
  Types de données alias ne peut pas être définies à l’aide de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp**, **table**, **xml**, **varchar (max)**, **nvarchar (max)** ou **varbinary (max)** des types de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **db_owner** ou **db_ddladmin** rôle de base de données fixe.  
   
 ## <a name="examples"></a>Exemples  
@@ -114,7 +111,7 @@ EXEC sp_addtype ssn, 'varchar(11)', 'NOT NULL';
 GO  
 ```  
   
-### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>B. Création d'un type de données alias qui autorise les valeurs NULL  
+### <a name="b-creating-an-alias-data-type-that-allows-for-null-values"></a>b. Création d'un type de données alias qui autorise les valeurs NULL  
  L'exemple suivant crée un type de données alias (basé sur `datetime`) appelé `birthday`, qui autorise les valeurs NULL.  
   
 ```  

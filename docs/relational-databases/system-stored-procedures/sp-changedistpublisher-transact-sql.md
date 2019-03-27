@@ -16,12 +16,12 @@ ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81f6b1ca0ea65068851756dc2a1b91cb84c52227
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128230"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494022"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=** ] **'**_publisher_**'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@property=** ] **'**_propriété_**'**  
- Propriété à modifier pour le serveur de publication donné. *propriété* est **sysname** et peut prendre l’une des valeurs suivantes.  
+`[ @property = ] 'property'` Est une propriété à modifier pour le serveur de publication donné. *propriété* est **sysname** et peut prendre l’une des valeurs suivantes.  
   
- [ **@value=** ] **'**_valeur_**'**  
- Valeur de la propriété considérée. *valeur* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @value = ] 'value'` Est la valeur pour la propriété donnée. *valeur* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
- [  **@storage_connection_string =**] **'**_storage_connection_string_**'**  
- Est requis pour l’instance managée de base de données SQL, doit correspondre à la clé d’accès pour le volume de stockage de base de données SQL Azure. 
+`[ @storage_connection_string = ] 'storage_connection_string'` Est requis pour l’instance managée de base de données SQL, doit correspondre à la clé d’accès pour le volume de stockage de base de données SQL Azure. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -60,10 +56,10 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |Propriété|Valeurs|Description|  
 |--------------|------------|-----------------|  
-|**Active**|**true**|Active le serveur de publication.|  
+|**active**|**true**|Active le serveur de publication.|  
 ||**false**|Désactive le serveur de publication.|  
 |**distribution_db**||Nom de la base de données de distribution.|  
-|**connexion**||Nom de connexion.|  
+|**login**||Nom de connexion.|  
 |**password**||Mot de passe fort pour le nom de connexion fourni.|  
 |**security_mode**|**1**|Utiliser l'authentification Windows pour la connexion au serveur de publication. *Cela ne peut pas être modifié pour non -* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *serveur de publication.*|  
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion au serveur de publication. *Cela ne peut pas être modifié pour non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *serveur de publication.*|  

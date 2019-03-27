@@ -16,12 +16,12 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 849564fcda37c022413d9e0758abe50279497a0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: be3ccf8b0c85b61f536c381e4a42d1b5e37fbacf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125109"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493265"
 ---
 # <a name="sparticlevalidation-transact-sql"></a>sp_article_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_article_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'**_publication_**'**  
- Nom de la publication dans laquelle existe l'article. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication dans laquelle existe l’article. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article=**] **'**_article_**'**  
- Nom de l'article à valider. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'` Est le nom de l’article à valider. *article* est **sysname**, sans valeur par défaut.  
   
- [  **@rowcount_only=**] *type_of_check_requested*  
- Spécifie si seul le décompte de lignes est retourné pour la table. *type_of_check_requested* est **smallint**, avec une valeur par défaut **1**.  
+`[ @rowcount_only = ] type_of_check_requested` Spécifie si seul le nombre de lignes pour la table est retourné. *type_of_check_requested* est **smallint**, avec une valeur par défaut **1**.  
   
  Si **0**, effectuer un décompte de lignes et un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 somme de contrôle compatible.  
   
@@ -60,8 +57,7 @@ sp_article_validation [ @publication = ] 'publication'
   
  Si **2**, effectuer une somme de contrôle du nombre de lignes et binaires.  
   
- [  **@full_or_fast=**] *full_or_fast*  
- Méthode utilisée pour calculer le nombre de lignes. *full_or_fast* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
+`[ @full_or_fast = ] full_or_fast` La méthode est utilisée pour calculer le nombre de lignes. *full_or_fast* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
 |**Valeur**|**Description**|  
 |---------------|---------------------|  
@@ -69,17 +65,13 @@ sp_article_validation [ @publication = ] 'publication'
 |**1**|Effectue un comptage rapide à partir de **sysindexes.rows**. Le décompte de lignes **sysindexes** est plus rapide que le décompte de lignes dans la table réelle. Toutefois, **sysindexes** est mis à jour de manière différée, et le nombre de lignes peut être inexact.|  
 |**2** (par défaut)|Exécute un comptage rapide conditionnel en essayant d'abord la méthode rapide. Si la méthode rapide affiche des différences, revient à la méthode totale. Si *expected_rowcount* a la valeur NULL et la procédure stockée est en cours d’utilisation pour obtenir la valeur, un Count (\*) complète est toujours utilisée.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- Spécifie si l'Agent de distribution doit être fermé immédiatement après l'achèvement de la validation. *shutdown_agent* est **bits**, avec une valeur par défaut **0**. Si **0**, l’Agent de Distribution ne s’arrête pas. Si **1**, l’Agent de Distribution s’arrête après la validation de l’article.  
+`[ @shutdown_agent = ] shutdown_agent` Spécifie si l’agent de Distribution doit être fermé immédiatement à l’achèvement de la validation. *shutdown_agent* est **bits**, avec une valeur par défaut **0**. Si **0**, l’Agent de Distribution ne s’arrête pas. Si **1**, l’Agent de Distribution s’arrête après la validation de l’article.  
   
- [  **@subscription_level=**] *subscription_level*  
- Spécifie si la validation est récupérée par un ensemble d'abonnés. *subscription_level* est **bits**, avec une valeur par défaut **0**. Si **0**, validation est appliquée à tous les abonnés. Si **1**, la validation est appliquée uniquement à un sous-ensemble des abonnés spécifiés par les appels à **sp_marksubscriptionvalidation** dans la transaction actuellement ouverte.  
+`[ @subscription_level = ] subscription_level` Spécifie si la validation est récupérée par un ensemble d’abonnés. *subscription_level* est **bits**, avec une valeur par défaut **0**. Si **0**, validation est appliquée à tous les abonnés. Si **1**, la validation est appliquée uniquement à un sous-ensemble des abonnés spécifiés par les appels à **sp_marksubscriptionvalidation** dans la transaction actuellement ouverte.  
   
- [  **@reserved=**] *réservé*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la demande de validation sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  

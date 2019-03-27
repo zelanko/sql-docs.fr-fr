@@ -18,12 +18,12 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6ac15a78e8689e76fc9687a6cd8784eb1fc4dd2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537870"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493231"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,29 +55,21 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_name =** ] **'**_nom_travail_**'**  
- Nom du travail. Le nom doit être unique et ne peut pas contenir le pourcentage (**%**) caractères. *job_name*est **nvarchar (128)**, sans valeur par défaut.  
+`[ @job_name = ] 'job_name'` Le nom de la tâche. Le nom doit être unique et ne peut pas contenir le pourcentage (**%**) caractères. *job_name*est **nvarchar (128)**, sans valeur par défaut.  
   
- [  **@enabled =** ] *activé*  
- Indique l'état du travail ajouté. *activé*est **tinyint**, avec une valeur par défaut de 1 (activé). Si **0**, le travail n’est pas activé et n’est pas exécuté conformément à sa planification ; Toutefois, il peut être exécuté manuellement.  
+`[ @enabled = ] enabled` Indique l’état du travail ajouté. *activé*est **tinyint**, avec une valeur par défaut de 1 (activé). Si **0**, le travail n’est pas activé et n’est pas exécuté conformément à sa planification ; Toutefois, il peut être exécuté manuellement.  
   
- [  **@description =** ] **'**_description_**'**  
- Description du travail. *Description* est **nvarchar (512)**, avec NULL comme valeur par défaut. Si *description* est n’omis, « Aucune description disponible » est utilisée.  
+`[ @description = ] 'description'` Description du travail. *Description* est **nvarchar (512)**, avec NULL comme valeur par défaut. Si *description* est n’omis, « Aucune description disponible » est utilisée.  
   
- [  **@start_step_id =** ] *id_de_l*  
- Numéro d'identification de la première étape à exécuter pour le travail. *l’argument id_étape*est **int**, avec 1 comme valeur par défaut.  
+`[ @start_step_id = ] step_id` Le numéro d’identification de la première étape à exécuter pour la tâche. *l’argument id_étape*est **int**, avec 1 comme valeur par défaut.  
   
- [  **@category_name =** ] **'**_catégorie_**'**  
- Catégorie du travail. *catégorie*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @category_name = ] 'category'` La catégorie du travail. *catégorie*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@category_id =** ] *code catégorie*  
- Mécanisme qui ne tient pas compte de la langue définie et qui permet de spécifier une catégorie de travail. *code catégorie*est **int**, avec NULL comme valeur par défaut.  
+`[ @category_id = ] category_id` Un mécanisme indépendant du langage pour la spécification d’une catégorie de travaux. *code catégorie*est **int**, avec NULL comme valeur par défaut.  
   
- [  **@owner_login_name =** ] **'**_connexion_**'**  
- Nom du compte de connexion propriétaire du travail. *connexion*est **sysname**, avec NULL comme valeur par défaut, qui est interprétée comme le nom de connexion actuel. Seuls les membres de la **sysadmin** rôle serveur fixe peut définir ou modifier la valeur de **@owner_login_name**. Si les utilisateurs qui ne sont pas membres de la **sysadmin** rôle définir ou modifier la valeur de **@owner_login_name**, l’exécution de cette procédure stockée échoue et une erreur est retournée.  
+`[ @owner_login_name = ] 'login'` Le nom de la connexion propriétaire du travail. *connexion*est **sysname**, avec NULL comme valeur par défaut, qui est interprétée comme le nom de connexion actuel. Seuls les membres de la **sysadmin** rôle serveur fixe peut définir ou modifier la valeur de **@owner_login_name**. Si les utilisateurs qui ne sont pas membres de la **sysadmin** rôle définir ou modifier la valeur de **@owner_login_name**, l’exécution de cette procédure stockée échoue et une erreur est retournée.  
   
- [  **@notify_level_eventlog =** ] *niveau_journal_événements*  
- Valeur indiquant le moment auquel une entrée doit être ajoutée pour ce travail dans le journal des applications Microsoft Windows. *niveau_journal_événements*est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @notify_level_eventlog = ] eventlog_level` Une valeur indiquant le moment auquel une entrée dans le journal des applications Microsoft Windows pour ce travail. *niveau_journal_événements*est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -86,32 +78,24 @@ sp_add_job [ @job_name = ] 'job_name'
 |**2** (par défaut)|Si échec|  
 |**3**|Always|  
   
- [  **@notify_level_email =** ] *niveau_courrier_électronique*  
- Valeur indiquant à quel moment envoyer un message électronique une fois ce travail achevé. *niveau_courrier_électronique*est **int**, avec une valeur par défaut **0**, qui indique jamais. *niveau_courrier_électronique*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @notify_level_email = ] email_level` Une valeur indiquant à quel moment envoyer un message électronique à l’achèvement de ce travail. *niveau_courrier_électronique*est **int**, avec une valeur par défaut **0**, qui indique jamais. *niveau_courrier_électronique*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
- [  **@notify_level_netsend =** ] *niveau_message_réseau*  
- Valeur indiquant à quel moment envoyer un message réseau une fois ce travail achevé. *niveau_message_réseau*est **int**, avec une valeur par défaut **0**, qui indique jamais. *niveau_message_réseau* utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @notify_level_netsend = ] netsend_level` Une valeur qui indique à quel moment envoyer un message réseau une fois la fin de ce travail. *niveau_message_réseau*est **int**, avec une valeur par défaut **0**, qui indique jamais. *niveau_message_réseau* utilise les mêmes valeurs que *niveau_journal_événements*.  
   
- [  **@notify_level_page =** ] *niveau_page*  
- Valeur indiquant à quel moment envoyer une page une fois ce travail achevé. *niveau_page*est **int**, avec une valeur par défaut **0**, qui indique jamais. *niveau_page*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @notify_level_page = ] page_level` Une valeur indiquant à quel moment envoyer une page à la fin de ce travail. *niveau_page*est **int**, avec une valeur par défaut **0**, qui indique jamais. *niveau_page*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
- [  **@notify_email_operator_name =** ] **'**_nom_adresse_**'**  
- Le nom de la messagerie de la personne à envoyer des messages électroniques lorsque *niveau_courrier_électronique* est atteinte. *nom_adresse* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @notify_email_operator_name = ] 'email_name'` Le nom de la messagerie de la personne à envoyer des messages électroniques lorsque *niveau_courrier_électronique* est atteinte. *nom_adresse* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@notify_netsend_operator_name =** ] **'**_l’argument adresse_envoi_réseau_**'**  
- Nom de l'opérateur à qui le message réseau est envoyé une fois ce travail exécuté. *l’argument adresse_envoi_réseau*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @notify_netsend_operator_name = ] 'netsend_name'` Le nom de l’opérateur à qui le message réseau est envoyé à l’achèvement de ce travail. *l’argument adresse_envoi_réseau*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@notify_page_operator_name =** ] **'**_nom_page_**'**  
- Nom de la personne à qui envoyer un message par radiomessagerie une fois ce travail exécuté. *nom_page*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @notify_page_operator_name = ] 'page_name'` Le nom de la personne à la page à l’achèvement de ce travail. *nom_page*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@delete_level =** ] *niveau_suppression*  
- Valeur indiquant à quel moment supprimer le travail. *delete_leve*est **int**, avec une valeur par défaut 0, ce qui signifie jamais. *niveau_suppression*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @delete_level = ] delete_level` Une valeur qui indique à quel moment supprimer le travail. *delete_leve*est **int**, avec une valeur par défaut 0, ce qui signifie jamais. *niveau_suppression*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
 > [!NOTE]  
 >  Lorsque *niveau_suppression* est **3**, la tâche est exécutée une seule fois, indépendamment de toute planification définie pour le travail. De plus, si un travail est supprimé, son historique est également supprimé.  
   
- [  **@job_id =** ] _job_id_**sortie**  
- Numéro d'identification du travail affecté si le travail est correctement créé. *job_id*est une variable output de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] _job_idOUTPUT` Le numéro d’identification affecté à la tâche si créé avec succès. *job_id*est une variable output de type **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

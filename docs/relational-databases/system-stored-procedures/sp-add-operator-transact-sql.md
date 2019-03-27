@@ -18,12 +18,12 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 147269759746e143897757aab5518b784e705915
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751577"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494075"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +53,11 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name=** ] **'***nom***'**  
- Nom de l'opérateur (destinataire de la notification). Ce nom doit être unique et ne peut pas contenir le pourcentage (**%**) caractères. *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Le nom d’un opérateur (destinataire de notification). Ce nom doit être unique et ne peut pas contenir le pourcentage (**%**) caractères. *nom* est **sysname**, sans valeur par défaut.  
   
- [  **@enabled=** ] *activé*  
- Indique l'état actuel de l'opérateur. *activé* est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, l’opérateur n’est pas activé et ne reçoit pas de notifications.  
+`[ @enabled = ] enabled` Indique l’état actuel de l’opérateur. *activé* est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, l’opérateur n’est pas activé et ne reçoit pas de notifications.  
   
- [  **@email_address=** ] **'***email_address***'**  
- Adresse de courrier électronique de l'opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *email_address* est **nvarchar (100)**, avec NULL comme valeur par défaut.  
+`[ @email_address = ] 'email_address'` L’adresse de messagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *email_address* est **nvarchar (100)**, avec NULL comme valeur par défaut.  
   
  Vous pouvez spécifier une adresse électronique physique ou un alias pour *email_address*. Exemple :  
   
@@ -69,31 +66,23 @@ sp_add_operator [ @name = ] 'name'
 > [!NOTE]  
 >  Vous devez utiliser l'adresse de messagerie pour Messagerie de base de données.  
   
- [  **@pager_address=** ] **'***adresse_radiomessagerie***'**  
- L’adresse de radiomessagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *adresse_radiomessagerie* est **narchar(100)**, avec NULL comme valeur par défaut.  
+`[ @pager_address = ] 'pager_address'` L’adresse de radiomessagerie de l’opérateur. Cette chaîne est transmise directement au système de messagerie électronique. *adresse_radiomessagerie* est **narchar(100)**, avec NULL comme valeur par défaut.  
   
- [  **@weekday_pager_start_time=** ] *weekday_pager_start_time*  
- Heure après laquelle l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] envoie la notification de radiomessagerie à l'opérateur spécifié. Cette opération a lieu durant les jours de la semaine, du lundi au vendredi. *weekday_pager_start_time*est **int**, avec une valeur par défaut **090000**, ce qui indique 9 heures du matin. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @weekday_pager_start_time = ] weekday_pager_start_time` Heure après laquelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent envoie la notification par radiomessagerie à l’opérateur spécifié de la semaine, du lundi au vendredi. *weekday_pager_start_time*est **int**, avec une valeur par défaut **090000**, ce qui indique 9 heures du matin. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [  **@weekday_pager_end_time=** ] *au vendredi*  
- Heure après laquelle **SQLServerAgent** service n’envoie plus de notification par radiomessagerie à l’opérateur spécifié de la semaine, du lundi au vendredi. *au vendredi*est **int**, avec une valeur 180000 par défaut, ce qui indique 18 h 00. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @weekday_pager_end_time = ] weekday_pager_end_time` Heure après laquelle **SQLServerAgent** service n’envoie plus de notification par radiomessagerie à l’opérateur spécifié de la semaine, du lundi au vendredi. *au vendredi*est **int**, avec une valeur 180000 par défaut, ce qui indique 18 h 00. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [  **@saturday_pager_start_time =**] *heure_début_radiomessagerie_samedi*  
- Heure après laquelle **SQLServerAgent** service envoie la notification par radiomessagerie à l’opérateur spécifié sur son récepteur de radiomessagerie. *heure_début_radiomessagerie_samedi* est **int**, avec 090000 comme valeur par défaut, ce qui indique 9 heures du matin. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @saturday_pager_start_time = ] saturday_pager_start_time` Heure après laquelle **SQLServerAgent** service envoie la notification par radiomessagerie à l’opérateur spécifié sur son récepteur de radiomessagerie. *heure_début_radiomessagerie_samedi* est **int**, avec 090000 comme valeur par défaut, ce qui indique 9 heures du matin. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [  **@saturday_pager_end_time=** ] *heure_fin_radiomessagerie_samedi*  
- Heure après laquelle **SQLServerAgent** service n’envoie plus de notification par radiomessagerie à l’opérateur spécifié sur son récepteur de radiomessagerie. *heure_fin_radiomessagerie_samedi*est **int**, avec une valeur par défaut **180000**, ce qui indique 18 h 00. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @saturday_pager_end_time = ] saturday_pager_end_time` Heure après laquelle **SQLServerAgent** service n’envoie plus de notification par radiomessagerie à l’opérateur spécifié sur son récepteur de radiomessagerie. *heure_fin_radiomessagerie_samedi*est **int**, avec une valeur par défaut **180000**, ce qui indique 18 h 00. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [  **@sunday_pager_start_time=** ] *heure_début_radiomessagerie_dimanche*  
- Heure après laquelle **SQLServerAgent** service envoie la notification par radiomessagerie à l’opérateur spécifié sur son récepteur de radiomessagerie. *heure_début_radiomessagerie_dimanche*est **int**, avec une valeur par défaut **090000**, ce qui indique 9 heures du matin. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @sunday_pager_start_time = ] sunday_pager_start_time` Heure après laquelle **SQLServerAgent** service envoie la notification par radiomessagerie à l’opérateur spécifié sur son récepteur de radiomessagerie. *heure_début_radiomessagerie_dimanche*est **int**, avec une valeur par défaut **090000**, ce qui indique 9 heures du matin. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [  **@sunday_pager_end_time =**] *sunday_pager_end_time*  
- Heure après laquelle **SQLServerAgent** service n’envoie plus de notification par radiomessagerie à l’opérateur spécifié sur son récepteur de radiomessagerie. *heure_fin_radiomessagerie_dimanche*est **int**, avec une valeur par défaut **180000**, ce qui indique 18 h 00. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @sunday_pager_end_time = ] sunday_pager_end_time` Heure après laquelle **SQLServerAgent** service n’envoie plus de notification par radiomessagerie à l’opérateur spécifié sur son récepteur de radiomessagerie. *heure_fin_radiomessagerie_dimanche*est **int**, avec une valeur par défaut **180000**, ce qui indique 18 h 00. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [  **@pager_days=** ] *jours_radiomessagerie*  
- Nombre qui indique les jours pendant lesquels l'opérateur peut recevoir des notifications par radiomessagerie (argument utilisé avec un argument définissant les heures de début et de fin). *jours_radiomessagerie*est **tinyint**, avec une valeur par défaut **0** indique que l’opérateur n’est jamais disponible pour recevoir une page. Les valeurs valides sont comprises entre **0** via **127**. *jours_radiomessagerie*est calculée en ajoutant les valeurs représentant les jours voulus. Par exemple, du lundi au vendredi est **2**+**4**+**8**+**16** + **32** = **62**. Le tableau ci-après indique la valeur correspondant à chaque jour de la semaine.  
+`[ @pager_days = ] pager_days` Est un nombre qui indique les jours où l’opérateur est disponible pour les pages (selon les heures de début et de fin). *jours_radiomessagerie*est **tinyint**, avec une valeur par défaut **0** indique que l’opérateur n’est jamais disponible pour recevoir une page. Les valeurs valides sont comprises entre **0** via **127**. *jours_radiomessagerie*est calculée en ajoutant les valeurs représentant les jours voulus. Par exemple, du lundi au vendredi est **2**+**4**+**8**+**16** + **32** = **62**. Le tableau ci-après indique la valeur correspondant à chaque jour de la semaine.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Dimanche|  
 |**2**|Lundi|  
@@ -103,11 +92,9 @@ sp_add_operator [ @name = ] 'name'
 |**32**|Vendredi|  
 |**64**|Samedi|  
   
- [  **@netsend_address=** ] **'***adresse_envoiréseau***'**  
- Adresse réseau de l'opérateur à qui est envoyé le message réseau. *adresse_envoiréseau*est **nvarchar (100)**, avec NULL comme valeur par défaut.  
+`[ @netsend_address = ] 'netsend_address'` L’adresse réseau de l’opérateur auquel le message réseau est envoyé. *adresse_envoiréseau*est **nvarchar (100)**, avec NULL comme valeur par défaut.  
   
- [  **@category_name=** ] **'***catégorie***'**  
- Nom de la catégorie pour cet opérateur. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @category_name = ] 'category'` Le nom de la catégorie pour cet opérateur. *catégorie* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -122,7 +109,7 @@ sp_add_operator [ @name = ] 'name'
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un outil dont l'interface graphique permet de gérer facilement les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_operator**.  
   
 ## <a name="examples"></a>Exemples  

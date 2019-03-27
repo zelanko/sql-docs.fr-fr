@@ -18,12 +18,12 @@ ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bb19049185ab79178213b1dc042a1c23f8978374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7c6e4531597faf9cacb883cf3ea3432b6e8ff9f
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704597"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492519"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@alert_name=** ] **'***alerte***'**  
- Alerte pour cette notification. *alerte* est **sysname**, sans valeur par défaut.  
+`[ @alert_name = ] 'alert'` L’alerte pour cette notification. *alerte* est **sysname**, sans valeur par défaut.  
   
- [  **@operator_name=** ] **'***opérateur***'**  
- Opérateur à prévenir lorsque l'alerte se déclenche. *opérateur* est **sysname**, sans valeur par défaut.  
+`[ @operator_name = ] 'operator'` L’opérateur à notifier lorsque l’alerte se produit. *opérateur* est **sysname**, sans valeur par défaut.  
   
- [  **@notification_method=** ] *méthode_de_notification*  
- Méthode utilisée pour avertir l'opérateur. *méthode_de_notification* est **tinyint**, sans valeur par défaut. *méthode_de_notification* peut être une ou plusieurs des valeurs suivantes associées à un **OR** opérateur logique.  
+`[ @notification_method = ] notification_method` La méthode utilisée pour avertir l’opérateur. *méthode_de_notification* est **tinyint**, sans valeur par défaut. *méthode_de_notification* peut être une ou plusieurs des valeurs suivantes associées à un **OR** opérateur logique.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Messagerie électronique|  
 |**2**|Radiomessagerie|  
@@ -71,13 +68,13 @@ sp_add_notification [ @alert_name = ] 'alert' ,
   
  En cas d’échec au moment de l’envoi d’un message par e-mail ou d’une notification par radiomessagerie, l’échec est consigné dans le journal des erreurs du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_add_notification**.  
   
 ## <a name="examples"></a>Exemples  
  Cet exemple ajoute une notification envoyée par courrier électronique pour l'alerte spécifiée (`Test Alert`).  
   
-> **Remarque :** cet exemple suppose que `Test Alert` existe déjà et que `François Ajenstat` est un nom d’opérateur valide.  
+> **REMARQUE :** Cet exemple suppose que `Test Alert` existe déjà et que `François Ajenstat` est un nom d'opérateur valide.  
   
 ```  
 USE msdb ;  

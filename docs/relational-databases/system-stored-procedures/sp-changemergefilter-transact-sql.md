@@ -16,12 +16,12 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c199af62d7cd5cb95c382b412182bb24c957bf89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127079"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493081"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_changemergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'**_publication_**'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article=** ] **'**_article_**'**  
- Nom de l'article. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, sans valeur par défaut.  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- Nom actuel du filtre. *FilterName* est **sysname**, sans valeur par défaut.  
+`[ @filtername = ] 'filtername'` Est le nom actuel du filtre. *FilterName* est **sysname**, sans valeur par défaut.  
   
- [  **@property=** ] **'**_propriété_**'**  
- Est le nom de la propriété à modifier. *propriété* est **sysname**, sans valeur par défaut.  
+`[ @property = ] 'property'` Est le nom de la propriété à modifier. *propriété* est **sysname**, sans valeur par défaut.  
   
- [  **@value=**] **'**_valeur_**'**  
- Est la nouvelle valeur pour la propriété spécifiée. *valeur*est **nvarchar (1000)**, sans valeur par défaut.  
+`[ @value = ] 'value'` Est la nouvelle valeur pour la propriété spécifiée. *valeur*est **nvarchar (1000)**, sans valeur par défaut.  
   
  Le tableau ci-dessous décrit les propriétés des articles et les valeurs de ces propriétés.  
   
@@ -66,21 +61,19 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**filter_type**|**1**|Filtre de jointure.<br /><br /> Cette option est nécessaire pour la prise en charge d'Abonnés [!INCLUDE[ssEW](../../includes/ssew-md.md)].|  
 ||**2**|Relation d'enregistrement logique.|  
 ||**3**|Un filtre de jointure est également une relation d'enregistrement logique.|  
-|**nom de filtre**||Nom du filtre.|  
+|**filtername**||Nom du filtre.|  
 |**join_articlename**||Nom de l'article de jointure.|  
 |**join_filterclause**||Clause Filtre.|  
 |**join_unique_key**|**true**|La jointure se fait sur une clé unique.|  
 ||**false**|La jointure ne se fait pas sur une clé unique.|  
   
- [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
- Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’invalident pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
   
  **1** signifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide, et s’il existe des abonnements existants qui nécessitent un nouvel instantané, autorise l’instantané existant soit marqué comme obsolète et de générer un nouvel instantané.  
   
- [  **@force_reinit_subscription =** ] *àce_reinit_subscription*  
- Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits** avec une valeur par défaut **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits** avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion ne provoquent pas la réinitialisation de l’abonnement. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
   

@@ -16,12 +16,12 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 31ada2bfb184e24011ee91dde82fc9abfb319320
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777911"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493694"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,43 +46,34 @@ sp_addmergefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'**_publication_**'**  
- Nom de la publication dans laquelle le filtre de fusion est ajouté. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication dans laquelle le filtre de fusion est ajouté. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article=** ] **'**_article_**'**  
- Nom de l'article dans lequel le filtre de fusion est ajouté. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'` Est le nom de l’article dans lequel le filtre de fusion est ajouté. *article* est **sysname**, sans valeur par défaut.  
   
- [  **@filtername=** ] **'**_filtername_**'**  
- Nom du filtre. *FilterName* est un paramètre obligatoire. *FilterName*est **sysname**, sans valeur par défaut.  
+`[ @filtername = ] 'filtername'` Est le nom du filtre. *FilterName* est un paramètre obligatoire. *FilterName*est **sysname**, sans valeur par défaut.  
   
- [  **@join_articlename=** ] **'**_join_articlename_**'**  
- Nom de l’article parent auquel l’article enfant, spécifié par *article*, doit être joint à l’aide de la clause de jointure spécifiée par *join_filterclause*, afin de déterminer les lignes dans l’article enfant qui répondent aux le critère de filtre du filtre de fusion. *join_articlename* est **sysname**, sans valeur par défaut. L’article doit figurer dans la publication donnée par *publication*.  
+`[ @join_articlename = ] 'join_articlename'` Nom de l’article parent auquel l’article enfant, spécifié par *article*, doit être joint à l’aide de la clause de jointure spécifiée par *join_filterclause*, afin de déterminer les lignes dans l’article enfant qui répondent aux le critère de filtre du filtre de fusion. *join_articlename* est **sysname**, sans valeur par défaut. L’article doit figurer dans la publication donnée par *publication*.  
   
- [  **@join_filterclause=** ] *join_filterclause*  
- Clause de jointure qui doit être utilisée pour joindre l’article enfant spécifié par *article*et l’article parent spécifié par *join_article*, afin de déterminer les lignes qualifiant le filtre de fusion. *join_filterclause* est **nvarchar (1000)**.  
+`[ @join_filterclause = ] join_filterclause` Clause de jointure qui doit être utilisée pour joindre l’article enfant spécifié par *article*et l’article parent spécifié par *join_article*, afin de déterminer les lignes qualifiant le filtre de fusion. *join_filterclause* est **nvarchar (1000)**.  
   
- [  **@join_unique_key=** ] *join_unique_key*  
- Spécifie si la jointure entre l’article enfant *article*et l’article parent *join_article*est un-à-plusieurs, un à un, plusieurs-à-un ou plusieurs-à-plusieurs. *join_unique_key* est **int**, avec 0 comme valeur par défaut. **0** indique une jointure plusieurs-à-un ou plusieurs-à-plusieurs. **1** indique une jointure un-à-un ou un-à-plusieurs. Cette valeur est **1** quand les colonnes de jointure forment une clé unique dans *join_article*, ou si *join_filterclause* est entre une clé étrangère dans *article* et une clé primaire dans *join_article*.  
+`[ @join_unique_key = ] join_unique_key` Spécifie si la jointure entre l’article enfant *article*et l’article parent *join_article*est un-à-plusieurs, un à un, plusieurs-à-un ou plusieurs-à-plusieurs. *join_unique_key* est **int**, avec 0 comme valeur par défaut. **0** indique une jointure plusieurs-à-un ou plusieurs-à-plusieurs. **1** indique une jointure un-à-un ou un-à-plusieurs. Cette valeur est **1** quand les colonnes de jointure forment une clé unique dans *join_article*, ou si *join_filterclause* est entre une clé étrangère dans *article* et une clé primaire dans *join_article*.  
   
 > [!CAUTION]  
 >  Définissez uniquement ce paramètre sur **1** si vous avez une contrainte sur la colonne de jointure dans la table sous-jacente pour l’article parent qui garantit l’unicité. Si *join_unique_key* a la valeur **1** incorrectement, une non-convergence des données peut se produire.  
   
- [  **@force_invalidate_snapshot=** ] *àce_invalidate_snapshot*  
- Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’entraînent pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur est générée et aucune modification n'est effectuée.  
   
  **1** Spécifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide et s’il existe des abonnements existants qui nécessitent un nouvel instantané, autorise l’instantané existant soit marqué comme obsolète et un nouvel instantané généré.  
   
- [  **@force_reinit_subscription=** ] *àce_reinit_subscription*  
- Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits**, avec 0 comme valeur par défaut.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits**, avec 0 comme valeur par défaut.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’entraînent pas la réinitialisation de l’abonnement. Si la procédure stockée détecte que la modification requiert la réinitialisation des abonnements, une erreur est générée et aucune modification n'est effectuée.  
   
  **1** indique que les modifications apportées à l’article de fusion entraînent la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  
   
- [  **@filter_type=** ] *filter_type*  
- Spécifie le type de filtre à ajouter. *filter_type* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
+`[ @filter_type = ] filter_type` Spécifie le type de filtre à ajouter. *filter_type* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  

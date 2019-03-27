@@ -18,12 +18,12 @@ ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a759490fdd2306d7fecfd34484708e5c24970217
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126839"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492811"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@tsqlbatch =**] **'**_tsqlbatch_**'**  
- Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou un lot pour le paramètre informations sont que vous souhaitez. *tsqlbatch* est **nvarchar (max)** ou implicitement convertible en **nvarchar (max)**.  
+`[ @tsqlbatch = ] 'tsqlbatch'` Est une chaîne Unicode contenant un [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou un lot pour le paramètre informations sont que vous souhaitez. *tsqlbatch* est **nvarchar (max)** ou implicitement convertible en **nvarchar (max)**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  

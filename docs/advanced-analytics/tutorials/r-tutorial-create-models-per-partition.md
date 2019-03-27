@@ -4,18 +4,18 @@ description: Apprenez à modéliser, former et utiliser des données partitionn�
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: tutorial
 ms.author: heidist
 author: HeidiSteen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 550e31e0b064051cb75f0e8922c346c4e8a5e3e2
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: abe7dbe193cc4e5f90095e7764f35aa1dc0cd9bf
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017895"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493331"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Didacticiel : Créer des modèles basés sur une partition dans R sur SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -46,7 +46,7 @@ Pour suivre ce didacticiel, vous devez disposer des éléments suivants :
 
 + SQL Server 2019 preview de base de données instance du moteur, avec l’intégration de Machine Learning Services et R.
 
-Vérifier la version en exécutant **`SELECT @@Version`** comme une requête T-SQL dans un outil de requête. Sortie doit être « Microsoft SQL Server 2019 (CTP 2.3) - 15.0.x ».
+Vérifier la version en exécutant **`SELECT @@Version`** comme une requête T-SQL dans un outil de requête. Sortie doit être « Microsoft SQL Server 2019 (CTP 2.4) - 15.0.x ».
 
 Vérifiez la disponibilité de packages R en renvoyant une liste correctement mise en forme de tous les packages R sont actuellement installés avec votre instance du moteur de base de données :
 

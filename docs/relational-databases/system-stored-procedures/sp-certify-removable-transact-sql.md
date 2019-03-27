@@ -18,12 +18,12 @@ ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1d2586f1ad5f7be9b5916caea7699ca9c90f22db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691407"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493252"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname=**] **'***dbname***'**  
- Spécifie la base de données à vérifier. *dbname* est **sysname**.  
+`[ @dbname = ] 'dbname'` Spécifie la base de données à vérifier. *dbname* est **sysname**.  
   
- [  **@autofix=**] **'auto'**  
- Donne la propriété de la base de données et de tous les objets de base de données à l'administrateur système, et supprime les utilisateurs de base de données créés par l'utilisateur et les autorisations autres que celles par défaut. *Auto* est **nvarchar (4)**, avec NULL comme valeur par défaut.  
+`[ @autofix = ] 'auto'` Donne la propriété de la base de données et tous les objets de base de données à l’administrateur système et supprime les utilisateurs de base de données créés par l’utilisateur et les autorisations de non défini par défaut. *Auto* est **nvarchar (4)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -82,7 +80,7 @@ sp_certify_removable [ @dbname= ] 'dbname'
   
  Remarquez que cette procédure stockée ne recherche que les utilisateurs et les autorisations des utilisateurs. Vous pouvez ajouter des groupes à la base de données et leur accorder des autorisations. Pour plus d’informations, consultez [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Exécuter autorisations sont limitent aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

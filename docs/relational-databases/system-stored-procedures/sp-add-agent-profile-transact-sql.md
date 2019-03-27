@@ -16,12 +16,12 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: edb5fc6c24ce8e59c82b35ac10e6dddb67adeaf4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ab2d928770a8e10c04e03aa2ccb5f36374fe1227
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752151"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493602"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@profile_id=** ] *profile_id*  
- Numéro d'identification associé au profil nouvellement inséré. *profile_id* est **int** et est un paramètre OUTPUT facultatif. Si vous l'indiquez, la valeur définie est égale au numéro d'identification du nouveau profil.  
+`[ @profile_id = ] profile_id` L’ID associé au profil nouvellement inséré. *profile_id* est **int** et est un paramètre OUTPUT facultatif. Si vous l'indiquez, la valeur définie est égale au numéro d'identification du nouveau profil.  
   
- [  **@profile_name=** ] **'**_profile_name_**'**  
- Nom du profil. *nom_profil* est **sysname**, sans valeur par défaut.  
+`[ @profile_name = ] 'profile_name'` Est le nom du profil. *nom_profil* est **sysname**, sans valeur par défaut.  
   
- [  **@agent_type=** ] **'**_agent_type_**'**  
- Type d'agent de réplication. *agent_type* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @agent_type = ] 'agent_type'` Est le type d’agent de réplication. *agent_type* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -60,16 +57,13 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 |**4**|Agent de fusion|  
 |**9**|Agent de lecture de la file d'attente|  
   
- [  **@profile_type=** ] *type_profil*  
- Est le type de profil. *profile_type* est **int**, avec une valeur par défaut **1**.  
+`[ @profile_type = ] profile_type` Est le type de profil. *profile_type* est **int**, avec une valeur par défaut **1**.  
   
  **0** indique un profil de système. **1** indique un profil personnalisé. Seuls les profils personnalisés peuvent être créés à l’aide de cette procédure stockée ; Par conséquent, la seule valeur valide est **1**. Uniquement [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée des profils de système.  
   
- [  **@description=** ] **'**_description_**'**  
- Est une description du profil. *Description* est **nvarchar (3000)**, sans valeur par défaut.  
+`[ @description = ] 'description'` Est une description du profil. *Description* est **nvarchar (3000)**, sans valeur par défaut.  
   
- [  **@default=** ] *par défaut*  
- Indique si le profil est la valeur par défaut pour *agent_type **.* *par défaut* est **bits**, avec une valeur par défaut **0**. **1** indique que le profil ajouté deviendra le nouveau profil par défaut de l’agent spécifié par *agent_type*.  
+`[ @default = ] default` Indique si le profil est la valeur par défaut pour *agent_type **.* *par défaut* est **bits**, avec une valeur par défaut **0**. **1** indique que le profil ajouté deviendra le nouveau profil par défaut de l’agent spécifié par *agent_type*.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

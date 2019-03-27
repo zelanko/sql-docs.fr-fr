@@ -16,12 +16,12 @@ ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 00c5b4b94bc0a4347991944ccaa7898e75f244f0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130689"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492947"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,21 +41,17 @@ sp_addscriptexec [ @publication = ] publication
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'**_publication_**'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@scriptfile=** ] **'**_scriptfile_**'**  
- Chemin d'accès complet au fichier de script SQL. *ScriptFile* est **nvarchar (4000)**, sans valeur par défaut.  
+`[ @scriptfile = ] 'scriptfile'` Est le chemin d’accès complet au fichier de script SQL. *ScriptFile* est **nvarchar (4000)**, sans valeur par défaut.  
   
- [  **@skiperror=** ] **'**_skiperror_**'**  
- Indique si l'Agent de distribution ou de fusion doit s'arrêter lorsqu'une erreur se produit au cours du traitement du script. *SkipError* est **bits**, avec 0 comme valeur par défaut.  
+`[ @skiperror = ] 'skiperror'` Indique si l’Agent de Distribution ou l’Agent de fusion doit s’arrêter lorsqu’une erreur s’est produite lors du traitement du script. *SkipError* est **bits**, avec 0 comme valeur par défaut.  
   
  **0** = l’agent s’arrête.  
   
  **1** = l’agent continue le script et ignore l’erreur.  
   
- [  **@publisher=** ] **'**_publisher_**'**  
- Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la publication à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  

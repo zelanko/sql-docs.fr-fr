@@ -16,12 +16,12 @@ ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 65044543163df928df4041f87112a54319477d67
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6f24f7ca51f4836c8b1e446283eabb858eb8d387
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126459"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493891"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,29 +69,23 @@ sp_addarticle [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =** ] **'**_publication_**'**  
- Nom de la publication contenant l'article. Le nom doit être unique dans la base de données. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication contenant l’article. Le nom doit être unique dans la base de données. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article =** ] **'**_article_**'**  
- Nom de l'article. Le nom doit être unique dans la publication. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'` Est le nom de l’article. Le nom doit être unique dans la publication. *article* est **sysname**, sans valeur par défaut.  
   
- [  **@source_table =** ] **'**_source_table_**'**  
- Ce paramètre est déconseillé ; Utilisez *source_object* à la place.  
+`[ @source_table = ] 'source_table'` Ce paramètre est déconseillé ; Utilisez *source_object* à la place.  
   
  *Ce paramètre n’est pas pris en charge pour les serveurs de publication Oracle.*  
   
- [  **@destination_table =** ] **'**_destination_table_**'**  
- Est le nom de la table de destination (abonnement), s’il diffère *source_table*ou la procédure stockée. *destination_table* est **sysname**, avec NULL comme valeur par défaut, ce qui signifie que *source_table* est égal à *destination_table **.*  
+`[ @destination_table = ] 'destination_table'` Est le nom de la table de destination (abonnement), s’il diffère *source_table*ou la procédure stockée. *destination_table* est **sysname**, avec NULL comme valeur par défaut, ce qui signifie que *source_table* est égal à *destination_table **.*  
   
- [  **@vertical_partition =** ] **'**_partition_verticale_**'**  
- Active ou désactive le filtrage de colonne sur un article de table. *partition_verticale* est **nchar(5)**, avec FALSE comme valeur par défaut.  
+`[ @vertical_partition = ] 'vertical_partition'` Active et désactive le filtrage de colonne sur un article de table. *partition_verticale* est **nchar(5)**, avec FALSE comme valeur par défaut.  
   
  **false** indique l’absence de filtrage vertical et publie toutes les colonnes.  
   
  **true** efface toutes les colonnes à l’exception de la clé primaire déclarée, sans valeur par défaut des colonnes de type nullable et les colonnes de clé uniques. Les colonnes sont ajoutées à l’aide de [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md).  
   
- [  **@type =** ] **'**_type_**'**  
- Est le type de l'article. *type* est **sysname**, et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Est le type d’article. *type* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -111,58 +105,50 @@ sp_addarticle [ @publication = ] 'publication'
 |**serializable proc exec**|Réplique l'exécution de la procédure stockée uniquement si l'exécution se fait dans le contexte d'une transaction compatible avec la mise en série. Non pris en charge pour les serveurs de publication Oracle.<br /><br /> La procédure doit également être exécutée dans une transaction explicite pour l’exécution de la procédure de réplication.|  
 |**afficher le schéma uniquement**|Vue avec schéma uniquement. Non pris en charge pour les serveurs de publication Oracle. Lorsque vous utilisez cette option, vous devez aussi publier la table de base.|  
   
- [  **@filter =** ] **'**_filtre_**'**  
- Procédure stockée (créée avec FOR REPLICATION) utilisée pour filtrer la table horizontalement. *filtre* est **nvarchar (386)**, avec NULL comme valeur par défaut. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) et [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) doit être exécutée manuellement pour créer la vue et la procédure stockée de filtre. Si la valeur par défaut n'est pas NULL, la procédure de filtre n'est pas créée (cela suppose que la procédure stockée est créée manuellement).  
+`[ @filter = ] 'filter'` La procédure stockée (créée avec FOR REPLICATION) permet de filtrer la table horizontalement. *filtre* est **nvarchar (386)**, avec NULL comme valeur par défaut. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) et [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) doit être exécutée manuellement pour créer la vue et la procédure stockée de filtre. Si la valeur par défaut n'est pas NULL, la procédure de filtre n'est pas créée (cela suppose que la procédure stockée est créée manuellement).  
   
- [  **@sync_object =** ] **'**_sync_object_**'**  
- Nom de la table ou de la vue utilisée pour produire le fichier de données représentant l'instantané de cet article. *sync_object* est **nvarchar (386)**, avec NULL comme valeur par défaut. Si NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) est appelée pour créer automatiquement la vue utilisée pour générer le fichier de sortie. Cela se produit après l’ajout de toutes les colonnes avec [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Si la valeur par défaut n'est pas NULL, aucune vue n'est créée (cela suppose que la vue est créée manuellement).  
+`[ @sync_object = ] 'sync_object'` Est le nom de la table ou la vue utilisée pour produire le fichier de données utilisé pour représenter la capture instantanée de cet article. *sync_object* est **nvarchar (386)**, avec NULL comme valeur par défaut. Si NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) est appelée pour créer automatiquement la vue utilisée pour générer le fichier de sortie. Cela se produit après l’ajout de toutes les colonnes avec [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Si la valeur par défaut n'est pas NULL, aucune vue n'est créée (cela suppose que la vue est créée manuellement).  
   
- [  **@ins_cmd =** ] **'**_ins_cmd_**'**  
- Type de commande de réplication utilisé pour répliquer des insertions pour cet article. *ins_cmd* est **nvarchar (255)**, et peut prendre l’une des valeurs suivantes.  
+`[ @ins_cmd = ] 'ins_cmd'` Est le type de commande de réplication utilisé pour répliquer des insertions pour cet article. *ins_cmd* est **nvarchar (255)**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**NONE**|Aucune action n'est effectuée.|  
-|**CALL sp_MSins_**<br /> **_table_**  (valeur par défaut)<br /><br /> -ou-<br /><br /> **APPEL custom_stored_procedure_name**|Appelle l'exécution d'une procédure stockée sur l'Abonné. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msins_*table*</strong>  contient le nom de la table de destination à la place de la *_table* dans le cadre du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté devant le nom de table de destination. Par exemple, pour le **ProductCategory** table détenue par le **Production** schéma sur l’abonné, le paramètre serait `CALL sp_MSins_ProductionProductCategory`. Pour un article dans une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur GUID. Spécification *custom_stored_procedure* n’est pas pris en charge pour la mise à jour des abonnés.|  
+|**CALL sp_MSins_**<br /> **_table_**  (default)<br /><br /> -ou-<br /><br /> **APPEL custom_stored_procedure_name**|Appelle l'exécution d'une procédure stockée sur l'Abonné. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msins_*table*</strong>  contient le nom de la table de destination à la place de la *_table* dans le cadre du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté devant le nom de table de destination. Par exemple, pour le **ProductCategory** table détenue par le **Production** schéma sur l’abonné, le paramètre serait `CALL sp_MSins_ProductionProductCategory`. Pour un article dans une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur GUID. Spécification *custom_stored_procedure* n’est pas pris en charge pour la mise à jour des abonnés.|  
 |**SQL** ou NULL|Réplique une instruction INSERT. Des valeurs sont fournies pour l'instruction INSERT pour l'ensemble des colonnes publiées dans l'article. La commande suivante est répliquée lors des insertions :<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [  **@del_cmd =**] **'**_del_cmd_**'**  
- Type de commande de réplication utilisé pour répliquer des suppressions pour cet article. *del_cmd* est **nvarchar (255)**, et peut prendre l’une des valeurs suivantes.  
+`[ @del_cmd = ] 'del_cmd'` Est le type de commande de réplication utilisé pour répliquer des suppressions pour cet article. *del_cmd* est **nvarchar (255)**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**NONE**|Aucune action n'est effectuée.|  
-|**CALLsp_MSdel_**<br /> **_table_**  (valeur par défaut)<br /><br /> -ou-<br /><br /> **APPEL custom_stored_procedure_name**|Appelle l'exécution d'une procédure stockée sur l'Abonné. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msdel_*table*</strong>  contient le nom de la table de destination à la place de la *_table* dans le cadre du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté devant le nom de table de destination. Par exemple, pour le **ProductCategory** table détenue par le **Production** schéma sur l’abonné, le paramètre serait `CALL sp_MSdel_ProductionProductCategory`. Pour un article dans une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur GUID. Spécification *custom_stored_procedure* n’est pas pris en charge pour la mise à jour des abonnés.|  
-|**XCALL sp_MSdel_**<br /> **_Table_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type XCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
+|**CALLsp_MSdel_**<br /> **_table_**  (default)<br /><br /> -ou-<br /><br /> **APPEL custom_stored_procedure_name**|Appelle l'exécution d'une procédure stockée sur l'Abonné. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msdel_*table*</strong>  contient le nom de la table de destination à la place de la *_table* dans le cadre du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté devant le nom de table de destination. Par exemple, pour le **ProductCategory** table détenue par le **Production** schéma sur l’abonné, le paramètre serait `CALL sp_MSdel_ProductionProductCategory`. Pour un article dans une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur GUID. Spécification *custom_stored_procedure* n’est pas pris en charge pour la mise à jour des abonnés.|  
+|**XCALL sp_MSdel_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type XCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
 |**SQL** ou NULL|Réplique une instruction DELETE. Toutes les valeurs de colonnes clés primaire sont fournies pour l'instruction DELETE. La commande suivante est répliquée lors des suppressions :<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
  Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [  **@upd_cmd =**] **'**_upd_cmd_**'**  
- Type de commande de réplication utilisé pour répliquer des mises à jour pour cet article. *upd_cmd* est **nvarchar (255)**, et peut prendre l’une des valeurs suivantes.  
+`[ @upd_cmd = ] 'upd_cmd'` Est le type de commande de réplication utilisé lors de la réplication des mises à jour pour cet article. *upd_cmd* est **nvarchar (255)**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**NONE**|Aucune action n'est effectuée.|  
-|**CALL sp_MSupd_**<br /> **_Table_**<br /><br /> -ou-<br /><br /> **APPEL custom_stored_procedure_name**|Appelle l'exécution d'une procédure stockée sur l'Abonné. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article.|  
-|**MCALL sp_MSupd_**<br /> **_Table_**<br /><br /> -ou-<br /><br /> **MCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type MCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msupd_*table*</strong>  contient le nom de la table de destination à la place de la *_table* dans le cadre du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté devant le nom de table de destination. Par exemple, pour le **ProductCategory** table détenue par le **Production** schéma sur l’abonné, le paramètre serait `MCALL sp_MSupd_ProductionProductCategory`. Pour un article dans une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur GUID. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
-|**SCALL sp_MSupd_**<br /> **_table_**  (valeur par défaut)<br /><br /> -ou-<br /><br /> **SCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type SCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msupd_*table*</strong>  contient le nom de la table de destination à la place de la *_table* dans le cadre du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté devant le nom de table de destination. Par exemple, pour le **ProductCategory** table détenue par le **Production** schéma sur l’abonné, le paramètre serait `SCALL sp_MSupd_ProductionProductCategory`. Pour un article dans une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur GUID. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
-|**XCALL sp_MSupd_**<br /> **_Table_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type XCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
+|**CALL sp_MSupd_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **APPEL custom_stored_procedure_name**|Appelle l'exécution d'une procédure stockée sur l'Abonné. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article.|  
+|**MCALL sp_MSupd_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **MCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type MCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msupd_*table*</strong>  contient le nom de la table de destination à la place de la *_table* dans le cadre du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté devant le nom de table de destination. Par exemple, pour le **ProductCategory** table détenue par le **Production** schéma sur l’abonné, le paramètre serait `MCALL sp_MSupd_ProductionProductCategory`. Pour un article dans une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur GUID. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
+|**SCALL sp_MSupd_**<br /> **_table_**  (default)<br /><br /> -ou-<br /><br /> **SCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type SCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. *custom_stored_procedure* est le nom d’une procédure stockée créée par l’utilisateur. <strong>sp_Msupd_*table*</strong>  contient le nom de la table de destination à la place de la *_table* dans le cadre du paramètre. Lorsque *destination_owner* est spécifié, il est ajouté devant le nom de table de destination. Par exemple, pour le **ProductCategory** table détenue par le **Production** schéma sur l’abonné, le paramètre serait `SCALL sp_MSupd_ProductionProductCategory`. Pour un article dans une topologie de réplication d’égal à égal, *_table* est ajouté avec une valeur GUID. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
+|**XCALL sp_MSupd_**<br /> **_table_**<br /><br /> -ou-<br /><br /> **XCALL custom_stored_procedure_name**|Appelle une procédure stockée utilisant des paramètres de type XCALL. Pour utiliser cette méthode de réplication, utilisez *schema_option* pour spécifier la création automatique de la procédure stockée, ou créer la procédure stockée spécifiée dans la base de données de destination de chaque abonné de l’article. La spécification d'une procédure stockée créée par l'utilisateur n'est pas autorisée pour mettre à jour les Abonnés.|  
 |**SQL** ou NULL|Réplique une instruction UPDATE. L'instruction UPDATE est fournie pour toutes les valeurs des colonnes et toutes les valeurs de colonne clé primaire. La commande ci-dessous est répliquée lors des mises à jour :<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
 > [!NOTE]  
 >  Les syntaxes CALL, MCALL, SCALL et XCALL déterminent la quantité de données diffusée à l'abonné. La syntaxe CALL transmet toutes les valeurs de toutes les colonnes insérées et supprimées. La syntaxe SCALL transmet uniquement les valeurs des colonnes affectées. La syntaxe XCALL transmet les valeurs de toutes les colonnes, modifiées ou non, y compris leurs valeurs précédentes. Pour plus d’informations, consultez [Spécifier le mode de propagation des modifications des articles transactionnels](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
- [  **@creation_script =**] **'**_creation_script_**'**  
- Est le chemin d'accès et le nom d'un script de schéma d'article facultatif utilisé pour créer l'article dans la base de données d'abonnement. *creation_script* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @creation_script = ] 'creation_script'` Est le chemin d’accès et le nom d’un script de schéma d’article facultatif utilisé pour créer l’article dans la base de données d’abonnement. *creation_script* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
- [  **@description =**] **'**_description_**'**  
- Entrée descriptive de l'article. *Description* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'` Est une entrée descriptive de l’article. *Description* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
- [  **@pre_creation_cmd =**] **'**_pre_creation_cmd_**'**  
- Indique l'action que doit entreprendre le système s'il détecte un objet existant de même nom sur l'abonné lors de l'application de l'instantané pour cet article. *pre_creation_cmd* est **nvarchar (10)**, et peut prendre l’une des valeurs suivantes.  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Spécifie que le système doit faire s’il détecte un objet existant du même nom sur l’abonné lors de l’application de la capture instantanée de cet article. *pre_creation_cmd* est **nvarchar (10)**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -171,61 +157,59 @@ sp_addarticle [ @publication = ] 'publication'
 |**DROP** (valeur par défaut)|Supprime la table de destination.|  
 |**truncate**|Tronque la table de destination. N'est pas valide pour les abonnés ODBC ou OLE DB.|  
   
- [  **@filter_clause=**] **'**_filter_clause_**'**  
- Clause de restriction (WHERE) qui définit un filtre horizontal. Lorsque vous entrez la clause de restriction, omettez le mot clé où. *filter_clause* est **ntext**, avec NULL comme valeur par défaut. Pour plus d’informations, consultez [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md).  
+`[ @filter_clause = ] 'filter_clause'` Est une restriction clause (WHERE) qui définit un filtre horizontal. Lorsque vous entrez la clause de restriction, omettez le mot clé où. *filter_clause* est **ntext**, avec NULL comme valeur par défaut. Pour plus d’informations, consultez [Filtrer des données publiées](../../relational-databases/replication/publish/filter-published-data.md).  
   
- [  **@schema_option =**] *schema_option*  
- Masque de bits de l'option de génération de schéma pour l'article donné. *schema_option* est **Binary (8)** et peut être le [| (OR au niveau du bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes :  
+`[ @schema_option = ] schema_option` Est un masque de bits de l’option de génération de schéma pour l’article donné. *schema_option* est **Binary (8)** et peut être le [| (OR au niveau du bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes :  
   
 > [!NOTE]  
 >  Si la valeur est NULL, le système génère automatiquement une option de schéma valide pour l'article en fonction des autres propriétés de l'article. Le **par défaut des Options de schéma** table donné la section Notes montre la valeur qui sera choisie en fonction de la combinaison de type d’article et le type de réplication.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**0 x 00**|Désactive la génération de scripts par l’Agent d’instantané et utilise *creation_script*.|  
-|**0 x 01**|Génère le script de création d'objet (CREATE TABLE, CREATE PROCEDURE, etc.). Cette valeur est la valeur par défaut pour les articles de procédure stockée.|  
-|**0 x 02**|Génère les procédures stockées qui propagent les modifications pour l'article, si elles sont définies.|  
-|**0 x 04**|Les colonnes d'identité font l'objet d'un script utilisant la propriété IDENTITY.|  
-|**0 x 08**|Répliquer **timestamp** colonnes. Si ce n’est pas définie, **timestamp** les colonnes sont répliquées en tant que **binaire**.|  
-|**0 x 10**|Génère un index cluster correspondant. Même si cette option n'est pas activée, les index relatifs aux clés primaires et aux contraintes uniques sont générés s'ils sont déjà définis sur une table publiée.|  
-|**0 x 20**|Convertit les types de données définis par l'utilisateur (UDT) en types de données de base auprès de l'Abonné. Vous ne pouvez pas utiliser cette option lorsqu'il existe une contrainte CHECK ou DEFAULT sur une colonne de type défini par l'utilisateur (UDT), si une colonne UDT fait partie de la clé primaire, ou si une colonne calculée désigne une colonne UDT. *Non pris en charge pour les serveurs de publication Oracle*.|  
-|**0 x 40**|Génère les index non-cluster correspondants. Même si cette option n'est pas activée, les index relatifs aux clés primaires et aux contraintes uniques sont générés s'ils sont déjà définis sur une table publiée.|  
-|**0 x 80**|Réplique les contraintes de clé primaire. Tous les index relatifs à la contrainte sont également répliqués, même si options **0 x 10** et **0 x 40** ne sont pas activés.|  
-|**0 x 100**|Réplique les déclencheurs utilisateur, si ceux-ci sont définis, sur un article de table. *Non pris en charge pour les serveurs de publication Oracle*.|  
-|**0 x 200**|Réplique les contraintes de clés étrangères. Si la table référencée ne fait pas partie d'une publication, aucune contrainte de clé étrangère appliquée à une table publiée n'est répliquée. *Non pris en charge pour les serveurs de publication Oracle*.|  
-|**0 x 400**|Réplique les contraintes de vérification. *Non pris en charge pour les serveurs de publication Oracle*.|  
-|**0 x 800**|Réplique les valeurs par défaut. *Non pris en charge pour les serveurs de publication Oracle*.|  
-|**0 x 1000**|Réplique le classement au niveau des colonnes.<br /><br /> **Remarque :** Cette option doit être définie pour les serveurs de publication Oracle afin d'activer les comparaisons qui respectent la casse.|  
-|**0 x 2000**|Réplique les propriétés étendues associées à l'objet source de l'article publié. *Non pris en charge pour les serveurs de publication Oracle*.|  
-|**0 x 4000**|Réplique les contraintes UNIQUE. Tous les index relatifs à la contrainte sont également répliqués, même si options **0 x 10** et **0 x 40** ne sont pas activés.|  
-|**0 x 8000**|Cette option n'est pas valide pour les serveurs de publication [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-|**0 x 10000**|Réplique les contraintes CHECK en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
-|**0 x 20000**|Réplique les contraintes FOREIGN KEY en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
-|**0 x 40000**|Réplique les groupes de fichiers associés à une table ou un index partitionné.|  
-|**0 x 80000**|Réplique le schéma de partition d'une table partitionnée.|  
-|**0 x 100000**|Réplique le schéma de partition d'un index partitionné.|  
+|**0x00**|Désactive la génération de scripts par l’Agent d’instantané et utilise *creation_script*.|  
+|**0x01**|Génère le script de création d'objet (CREATE TABLE, CREATE PROCEDURE, etc.). Cette valeur est la valeur par défaut pour les articles de procédure stockée.|  
+|**0x02**|Génère les procédures stockées qui propagent les modifications pour l'article, si elles sont définies.|  
+|**0x04**|Les colonnes d'identité font l'objet d'un script utilisant la propriété IDENTITY.|  
+|**0x08**|Répliquer **timestamp** colonnes. Si ce n’est pas définie, **timestamp** les colonnes sont répliquées en tant que **binaire**.|  
+|**0x10**|Génère un index cluster correspondant. Même si cette option n'est pas activée, les index relatifs aux clés primaires et aux contraintes uniques sont générés s'ils sont déjà définis sur une table publiée.|  
+|**0x20**|Convertit les types de données définis par l'utilisateur (UDT) en types de données de base auprès de l'Abonné. Vous ne pouvez pas utiliser cette option lorsqu'il existe une contrainte CHECK ou DEFAULT sur une colonne de type défini par l'utilisateur (UDT), si une colonne UDT fait partie de la clé primaire, ou si une colonne calculée désigne une colonne UDT. *Non pris en charge pour les serveurs de publication Oracle*.|  
+|**0x40**|Génère les index non-cluster correspondants. Même si cette option n'est pas activée, les index relatifs aux clés primaires et aux contraintes uniques sont générés s'ils sont déjà définis sur une table publiée.|  
+|**0x80**|Réplique les contraintes de clé primaire. Tous les index relatifs à la contrainte sont également répliqués, même si options **0 x 10** et **0 x 40** ne sont pas activés.|  
+|**0x100**|Réplique les déclencheurs utilisateur, si ceux-ci sont définis, sur un article de table. *Non pris en charge pour les serveurs de publication Oracle*.|  
+|**0x200**|Réplique les contraintes de clés étrangères. Si la table référencée ne fait pas partie d'une publication, aucune contrainte de clé étrangère appliquée à une table publiée n'est répliquée. *Non pris en charge pour les serveurs de publication Oracle*.|  
+|**0x400**|Réplique les contraintes de vérification. *Non pris en charge pour les serveurs de publication Oracle*.|  
+|**0x800**|Réplique les valeurs par défaut. *Non pris en charge pour les serveurs de publication Oracle*.|  
+|**0x1000**|Réplique le classement au niveau des colonnes.<br /><br /> **Remarque :** Cette option doit être définie pour les serveurs de publication Oracle afin d'activer les comparaisons qui respectent la casse.|  
+|**0x2000**|Réplique les propriétés étendues associées à l'objet source de l'article publié. *Non pris en charge pour les serveurs de publication Oracle*.|  
+|**0x4000**|Réplique les contraintes UNIQUE. Tous les index relatifs à la contrainte sont également répliqués, même si options **0 x 10** et **0 x 40** ne sont pas activés.|  
+|**0x8000**|Cette option n'est pas valide pour les serveurs de publication [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
+|**0x10000**|Réplique les contraintes CHECK en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
+|**0x20000**|Réplique les contraintes FOREIGN KEY en tant que NOT FOR REPLICATION afin que les contraintes ne soient pas appliquées durant la synchronisation.|  
+|**0x40000**|Réplique les groupes de fichiers associés à une table ou un index partitionné.|  
+|**0x80000**|Réplique le schéma de partition d'une table partitionnée.|  
+|**0x100000**|Réplique le schéma de partition d'un index partitionné.|  
 |**0x200000**|Réplique les statistiques d'une table.|  
-|**0 x 400000**|Liaisons par défaut|  
+|**0x400000**|Liaisons par défaut|  
 |**0x800000**|Liaisons de règle|  
 |**0x1000000**|Index de recherche en texte intégral|  
 |**0x2000000**|Collections de schéma XML liées aux **xml** colonnes ne sont pas répliquées.|  
 |**0x4000000**|Réplique les index sur **xml** colonnes.|  
-|**0 x 8000000**|Crée tout schéma non encore présent chez l'abonné.|  
-|**0 x 10000000**|Convertit **xml** colonnes à **ntext** sur l’abonné.|  
-|**0 x 20000000**|Types de données de l’objet convertit volumineux (**nvarchar (max)**, **varchar (max)**, et **varbinary (max)**) introduite dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] aux types de données qui sont prises en charge sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
-|**0 x 40000000**|Réplique les autorisations.|  
-|**0 x 80000000**|Tente de supprimer les dépendances envers tous les objets qui ne font pas partie de la publication.|  
-|**0 x 100000000**|Utilisez cette option pour répliquer l’attribut FILESTREAM s’il est spécifié sur **varbinary (max)** colonnes. Ne spécifiez pas cette option si vous répliquez des tables sur des Abonnés [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des colonnes FILESTREAM sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] abonnés n'est pas pris en charge, quelle que soit la façon dont cette option de schéma est définie.<br /><br /> Consultez l’option connexe **0 x 800000000**.|  
+|**0x8000000**|Crée tout schéma non encore présent chez l'abonné.|  
+|**0x10000000**|Convertit **xml** colonnes à **ntext** sur l’abonné.|  
+|**0x20000000**|Types de données de l’objet convertit volumineux (**nvarchar (max)**, **varchar (max)**, et **varbinary (max)**) introduite dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] aux types de données qui sont prises en charge sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+|**0x40000000**|Réplique les autorisations.|  
+|**0x80000000**|Tente de supprimer les dépendances envers tous les objets qui ne font pas partie de la publication.|  
+|**0x100000000**|Utilisez cette option pour répliquer l’attribut FILESTREAM s’il est spécifié sur **varbinary (max)** colonnes. Ne spécifiez pas cette option si vous répliquez des tables sur des Abonnés [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. La réplication de tables qui possèdent des colonnes FILESTREAM sur [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] abonnés n'est pas pris en charge, quelle que soit la façon dont cette option de schéma est définie.<br /><br /> Consultez l’option connexe **0 x 800000000**.|  
 |**0x200000000**|Convertit les types de données de date et heure (**date**, **temps**, **datetimeoffset**, et **datetime2**) introduite dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] aux données les types qui sont pris en charge sur les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**0x400000000**|Réplique l'option de compression pour les données et les index. Pour plus d’informations, consultez [Compression de données](../../relational-databases/data-compression/data-compression.md).|  
-|**0 x 800000000**|Définissez cette option pour stocker les données FILESTREAM dans leur propre groupe de fichiers sur l'Abonné. Si cette option n'est pas définie, les données FILESTREAM sont stockées dans le groupe de fichiers par défaut. La réplication ne crée pas de groupes de fichiers ; par conséquent, si vous définissez cette option, vous devez créer le groupe de fichiers avant d'appliquer l'instantané à l'Abonné. Pour plus d’informations sur la création d’objets avant d’appliquer l’instantané, consultez [exécuter des Scripts avant et après l’instantané est appliqué](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Consultez l’option connexe **0 x 100000000**.|  
+|**0x800000000**|Définissez cette option pour stocker les données FILESTREAM dans leur propre groupe de fichiers sur l'Abonné. Si cette option n'est pas définie, les données FILESTREAM sont stockées dans le groupe de fichiers par défaut. La réplication ne crée pas de groupes de fichiers ; par conséquent, si vous définissez cette option, vous devez créer le groupe de fichiers avant d'appliquer l'instantané à l'Abonné. Pour plus d’informations sur la création d’objets avant d’appliquer l’instantané, consultez [exécuter des Scripts avant et après l’instantané est appliqué](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied).<br /><br /> Consultez l’option connexe **0 x 100000000**.|  
 |**0x1000000000**|Convertit les types common language runtime (CLR) défini par l’utilisateur (UDT) supérieurs à 8 000 octets pour **varbinary (max)** afin que les colonnes de type UDT puissent être répliquées sur les abonnés qui sont en cours d’exécution [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
-|**0 x 2000000000**|Convertit le **hierarchyid** type de données à **varbinary (max)** afin que les colonnes de type **hierarchyid** peuvent être répliquées sur les abonnés qui sont en cours d’exécution [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations sur l’utilisation **hierarchyid** colonnes dans les tables répliquées, consultez [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
+|**0x2000000000**|Convertit le **hierarchyid** type de données à **varbinary (max)** afin que les colonnes de type **hierarchyid** peuvent être répliquées sur les abonnés qui sont en cours d’exécution [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations sur l’utilisation **hierarchyid** colonnes dans les tables répliquées, consultez [hierarchyid &#40;Transact-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|Réplique tous les index filtrés sur la table. Pour plus d’informations sur les index filtrés, consultez [créer des index filtrés](../../relational-databases/indexes/create-filtered-indexes.md).|  
 |**0x8000000000**|Convertit le **geography** et **geometry** types de données **varbinary (max)** afin que les colonnes de ces types peuvent être répliquées sur les abonnés qui sont en cours d’exécution [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
 |**0x10000000000**|Réplique les index sur des colonnes de type **geography** et **geometry**.|  
 |**0x20000000000**|Réplique l'attribut SPARSE pour les colonnes. Pour plus d’informations sur cet attribut, consultez [utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).|  
-|**0 x 40000000000**|Activer la génération de scripts par l’agent d’instantané pour créer la table optimisée en mémoire sur l’abonné.|  
+|**0x40000000000**|Activer la génération de scripts par l’agent d’instantané pour créer la table optimisée en mémoire sur l’abonné.|  
 |**0x80000000000**|Convertit un index cluster en index non cluster pour les articles optimisés en mémoire.|  
 |**0x400000000000**|Réplique tous les index columnstore non cluster sur l’ou les tables|  
 |**0x800000000000**|Réplique tous flitered les index columnstore non cluster sur l’ou les tables.|  
@@ -233,8 +217,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Pas tous *schema_option* valeurs sont valides pour chaque type de réplication et le type d’article. Le **les Options de schéma valides** table dans la section Notes montre les options de schéma valides qui peuvent être sélectionnées en fonction de la combinaison de type d’article et le type de réplication.  
   
- [  **@destination_owner =**] **'**_destination_owner_**'**  
- Nom du propriétaire de l'objet de destination. *destination_owner* est **sysname**, avec NULL comme valeur par défaut. Lorsque *destination_owner* n’est pas spécifié, le propriétaire est spécifié automatiquement selon les règles suivantes :  
+`[ @destination_owner = ] 'destination_owner'` Est le nom du propriétaire de l’objet de destination. *destination_owner* est **sysname**, avec NULL comme valeur par défaut. Lorsque *destination_owner* n’est pas spécifié, le propriétaire est spécifié automatiquement selon les règles suivantes :  
   
 |Condition|Propriétaire de l'objet de destination|  
 |---------------|------------------------------|  
@@ -244,8 +227,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Pour prendre en charge non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonnés, *destination_owner* doit être NULL.  
   
- [  **@status=**] *état*  
- Spécifie si l'article est actif et fournit des options supplémentaires pour définir la façon dont les modifications sont propagées. *état* est **tinyint**et peut être le [| (OR au niveau du bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes.  
+`[ @status = ] status` Spécifie si l’article est actives et des options supplémentaires pour propager les modifications. *état* est **tinyint**et peut être le [| (OR au niveau du bit) ](../../t-sql/language-elements/bitwise-or-transact-sql.md) produit d’une ou plusieurs des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -257,23 +239,17 @@ sp_addarticle [ @publication = ] 'publication'
   
  Par exemple, un article actif utilisant des instructions paramétrables posséderait la valeur 17 dans cette colonne. La valeur **0** signifie que l’article est inactif et qu’aucune propriété supplémentaire est définie.  
   
- [  **@source_owner =**] **'**_lui_**'**  
- Nom du propriétaire de l'objet source. *lui* est **sysname**, avec NULL comme valeur par défaut. *lui* doit être spécifié pour les serveurs de publication Oracle.  
+`[ @source_owner = ] 'source_owner'` Est le propriétaire de l’objet source. *lui* est **sysname**, avec NULL comme valeur par défaut. *lui* doit être spécifié pour les serveurs de publication Oracle.  
   
- [  **@sync_object_owner =**] **'**_lui_**'**  
- Est le propriétaire de la vue qui définit l’article publié. *lui* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @sync_object_owner = ] 'sync_object_owner'` Est le propriétaire de la vue qui définit l’article publié. *lui* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@filter_owner =**] **'**_lui_**'**  
- Propriétaire du filtre. *lui* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @filter_owner = ] 'filter_owner'` Est le propriétaire du filtre. *lui* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@source_object =**] **'**_source_object_**'**  
- Est l'objet de base de données à publier. *source_object* est **sysname**, avec NULL comme valeur par défaut. Si *source_table* est NULL, *source_object* ne peut pas être NULL. *source_object* doit être utilisé au lieu de *source_table*. Pour plus d’informations sur les types d’objets qui peuvent être publiés à l’aide de la réplication d’instantané ou transactionnelle, consultez [publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
+`[ @source_object = ] 'source_object'` Est l’objet de base de données à publier. *source_object* est **sysname**, avec NULL comme valeur par défaut. Si *source_table* est NULL, *source_object* ne peut pas être NULL. *source_object* doit être utilisé au lieu de *source_table*. Pour plus d’informations sur les types d’objets qui peuvent être publiés à l’aide de la réplication d’instantané ou transactionnelle, consultez [publier des données et des objets de base de données](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
- [  **@artid =** ] _article_ID_ **sortie**  
- ID d'article du nouvel article. *article_id* est **int** avec la valeur par défaut est NULL et il est un paramètre de sortie.  
+`[ @artid = ] _article_ID_ OUTPUT` Est l’ID de l’article du nouvel article. *article_id* est **int** avec la valeur par défaut est NULL et il est un paramètre de sortie.  
   
- [  **@auto_identity_range =** ] **'**_auto_identity_range_**'**  
- Active et désactive la gestion automatique des plages d'identité sur une publication lorsqu'elle est créée. *auto_identity_range* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes :  
+`[ @auto_identity_range = ] 'auto_identity_range'` Active et désactive la gestion sur une publication lors de la création de plages d’identité automatique. *auto_identity_range* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -284,24 +260,19 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *auto_identity_range* a été déconseillée et est fourni pour la compatibilité descendante uniquement. Vous devez utiliser *identityrangemanagementoption* pour spécifier les options de gestion de plage identité. Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [  **@pub_identity_range =** ] *pub_identity_range*  
- Contrôle la taille de plage sur le serveur de publication si l’article a *identityrangemanagementoption* définie sur **automatique** ou *auto_identity_range* la valeur **true** . *pub_identity_range* est **bigint**, avec NULL comme valeur par défaut. *Non pris en charge pour les serveurs de publication Oracle*.  
+`[ @pub_identity_range = ] pub_identity_range` Contrôle la taille de plage sur le serveur de publication si l’article a *identityrangemanagementoption* définie sur **automatique** ou *auto_identity_range* la valeur **true** . *pub_identity_range* est **bigint**, avec NULL comme valeur par défaut. *Non pris en charge pour les serveurs de publication Oracle*.  
   
- [  **@identity_range =** ] *identity_range*  
- Contrôle la taille de plage sur l’abonné si l’article a *identityrangemanagementoption* définie sur **automatique** ou *auto_identity_range* la valeur **true** . *identity_range* est **bigint**, avec NULL comme valeur par défaut. Utilisé lorsque *auto_identity_range* a la valeur **true**. *Non pris en charge pour les serveurs de publication Oracle*.  
+`[ @identity_range = ] identity_range` Contrôle la taille de plage sur l’abonné si l’article a *identityrangemanagementoption* définie sur **automatique** ou *auto_identity_range* la valeur **true** . *identity_range* est **bigint**, avec NULL comme valeur par défaut. Utilisé lorsque *auto_identity_range* a la valeur **true**. *Non pris en charge pour les serveurs de publication Oracle*.  
   
- [  **@threshold =** ] *seuil*  
- Est la valeur de pourcentage qui contrôle le moment où l’Agent de Distribution affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans *seuil* est utilisé, l’Agent de Distribution crée une nouvelle plage d’identité. *seuil* est **bigint**, avec NULL comme valeur par défaut. Utilisé lorsque *identityrangemanagementoption* a la valeur **automatique** ou *auto_identity_range* a la valeur **true**. *Non pris en charge pour les serveurs de publication Oracle*.  
+`[ @threshold = ] threshold` Est la valeur de pourcentage qui contrôle le moment où l’Agent de Distribution affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans *seuil* est utilisé, l’Agent de Distribution crée une nouvelle plage d’identité. *seuil* est **bigint**, avec NULL comme valeur par défaut. Utilisé lorsque *identityrangemanagementoption* a la valeur **automatique** ou *auto_identity_range* a la valeur **true**. *Non pris en charge pour les serveurs de publication Oracle*.  
   
- [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
- Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec 0 comme valeur par défaut.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec 0 comme valeur par défaut.  
   
  **0** indique que l’ajout d’un article n’entraîne pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, un message d'erreur est généré et aucune modification n'est effectuée.  
   
  **1** Spécifie qu’Ajout d’un article peut-être invalider l’instantané n’est pas valide, et si des abonnements existent qui nécessiterait un nouvel instantané, donne l’autorisation de l’instantané existant soit marqué comme obsolète et un nouvel instantané doit être généré.  
   
- [  **@use_default_datatypes =** ] *use_default_datatypes*  
- Indique si les mappages de type de données de colonne par défaut sont utilisés lors de la publication d'un article à partir d'un serveur de publication Oracle. *use_default_datatypes* est de type bit, avec 1 comme valeur par défaut.  
+`[ @use_default_datatypes = ] use_default_datatypes` Est si les mappages de type de données de colonne par défaut sont utilisées lors de la publication d’un article à partir d’un serveur de publication Oracle. *use_default_datatypes* est de type bit, avec 1 comme valeur par défaut.  
   
  **1** = la colonne d’article par défaut mappages sont utilisés. Les mappages de type de données par défaut peuvent être affichées en exécutant [sp_getdefaultdatatypemapping](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md).  
   
@@ -312,28 +283,25 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Ce paramètre ne doit être utilisé que pour les serveurs de publication Oracle. Paramètre *use_default_datatypes* à **0** pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher génère une erreur.  
   
- [  **@identityrangemanagementoption =** ] *identityrangemanagementoption*  
- Spécifie la façon dont la gestion des plages d'identité est gérée pour l'article. *identityrangemanagementoption* est **nvarchar (10)**, et peut prendre l’une des valeurs suivantes.  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` Spécifie les modalités de gestion de plage d’identité pour l’article. *identityrangemanagementoption* est **nvarchar (10)**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**None**|La réplication n'explicite pas la gestion des plages d'identité. Cette option est recommandée uniquement pour la compatibilité ascendante avec des versions antérieures de SQL Server. Non autorisé pour la réplication d'homologue.|  
-|**Manuelle**|Marque la colonne d'identité en utilisant NOT FOR REPLICATION pour activer la gestion manuelle des plages d'identité.|  
-|**Auto**|Spécifie la gestion automatique des plages d'identité.|  
+|**manual**|Marque la colonne d'identité en utilisant NOT FOR REPLICATION pour activer la gestion manuelle des plages d'identité.|  
+|**auto**|Spécifie la gestion automatique des plages d'identité.|  
 |NULL(Default)|Valeur par défaut est **aucun** lorsque la valeur de *auto_identity_range* n’est pas **true**. Valeur par défaut est **manuelle** dans une valeur par défaut de la topologie d’égal à égal (*auto_identity_range* est ignoré).|  
   
  Pour la compatibilité descendante, lorsque la valeur de *identityrangemanagementoption* est NULL, la valeur de *auto_identity_range* est activée. Toutefois, lorsque la valeur de *identityrangemanagementoption* n’est pas NULL, alors la valeur de *auto_identity_range* est ignoré.  
   
  Pour plus d’informations, consultez [ Répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).  
   
- [  **@publisher =** ] **'**_publisher_**'**  
- Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de l’ajout d’un article à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
   
- [  **@fire_triggers_on_snapshot =** ] **'**_fire_triggers_on_snapshot_**'**  
- Indique si les déclencheurs de l'utilisateur répliqués sont exécutés lorsque l'instantané initial est appliqué. *fire_triggers_on_snapshot* est **nvarchar (5)**, avec FALSE comme valeur par défaut. **true** signifie que les déclencheurs utilisateur sur une table répliquée sont exécutés lorsque l’instantané est appliqué. Dans l’ordre des déclencheurs de réplication, la valeur de masque de bits de *schema_option* doit inclure la valeur **0 x 100**.  
+`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` Est si répliquées déclencheurs de l’utilisateur sont exécutés lorsque l’instantané initial est appliqué. *fire_triggers_on_snapshot* est **nvarchar (5)**, avec FALSE comme valeur par défaut. **true** signifie que les déclencheurs utilisateur sur une table répliquée sont exécutés lorsque l’instantané est appliqué. Dans l’ordre des déclencheurs de réplication, la valeur de masque de bits de *schema_option* doit inclure la valeur **0 x 100**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -377,9 +345,9 @@ sp_addarticle [ @publication = ] 'publication'
 |Type de l'article|Type de réplication||  
 |------------------|----------------------|------|  
 ||Transactionnelle|Snapshot|  
-|**schéma d’agrégation uniquement**|**0 x 01**|**0 x 01**|  
-|**schéma de Func uniquement**|**0 x 01**|**0 x 01**|  
-|**schéma de vue indexée uniquement**|**0 x 01**|**0 x 01**|  
+|**schéma d’agrégation uniquement**|**0x01**|**0x01**|  
+|**schéma de Func uniquement**|**0x01**|**0x01**|  
+|**schéma de vue indexée uniquement**|**0x01**|**0x01**|  
 |**logbased de vue indexée**|**0x30F3**|**0x3071**|  
 |**la vue indexée base logarithmique manualboth**|**0x30F3**|**0x3071**|  
 |**la vue indexée logbased manualfilter**|**0x30F3**|**0x3071**|  
@@ -387,10 +355,10 @@ sp_addarticle [ @publication = ] 'publication'
 |**logbased**|**0x30F3**|**0x3071**|  
 |**logbased manualfilter**|**0x30F3**|**0x3071**|  
 |**logbased manualview**|**0x30F3**|**0x3071**|  
-|**proc exec**|**0 x 01**|**0 x 01**|  
-|**proc schéma uniquement**|**0 x 01**|**0 x 01**|  
-|**serializable proc exec**|**0 x 01**|**0 x 01**|  
-|**afficher le schéma uniquement**|**0 x 01**|**0 x 01**|  
+|**proc exec**|**0x01**|**0x01**|  
+|**proc schéma uniquement**|**0x01**|**0x01**|  
+|**serializable proc exec**|**0x01**|**0x01**|  
+|**afficher le schéma uniquement**|**0x01**|**0x01**|  
   
 > [!NOTE]
 >  Si une publication est activée en file d’attente de la mise à jour, un *schema_option* valeur **0 x 80** est ajouté à la valeur par défaut indiquée dans le tableau. La valeur par défaut *schema_option* pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publication est **0x050D3**.  

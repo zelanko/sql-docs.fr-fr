@@ -5,17 +5,17 @@ description: En savoir plus sur le fonctionne de la persistance des données dan
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: bcb5ee903ab2e5c24cdc2bc705d9b29a4299ba1b
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 1dcf390fe87239cde45e8c7fda1bc5cebd10f0ed
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017955"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58494161"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Persistance des données avec un cluster volumineux de données SQL Server sur Kubernetes
 
@@ -26,7 +26,7 @@ ms.locfileid: "57017955"
 Le cluster de données volumineux de SQL Server consomme ces volumes persistants consiste à l’aide de [Classes de stockage](https://kubernetes.io/docs/concepts/storage/storage-classes/). Vous pouvez créer des classes de stockage différents pour différents types de stockage et les spécifier au moment du déploiement de cluster big data. Vous pouvez configurer la classe de stockage à utiliser dans quel but (pool). Cluster de données volumineux de SQL Server crée [les revendications de volume persistant](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims) avec le nom de classe de stockage spécifié pour chaque pod qui nécessite des volumes persistants. Ensuite, elle monte l’ou les volumes persistant correspondant dans le pod.
 
 > [!NOTE]
-> Pour CTP 2.3, uniquement `ReadWriteOnce` mode d’accès pour l’ensemble du cluster est prise en charge.
+> Pour CTP 2.4, uniquement `ReadWriteOnce` mode d’accès pour l’ensemble du cluster est prise en charge.
 
 ## <a name="deployment-settings"></a>Paramètres de déploiement
 
