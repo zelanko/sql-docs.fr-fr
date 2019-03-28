@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : spécification de la directive XMLTEXT | Microsoft Docs'
+title: 'Exemple : Spécification de la Directive XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fc9d79c82df85e680ccf298f3d7f7997be87610b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075819"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537351"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Exemple : spécification de la directive XMLTEXT
-  Cet exemple illustre comment les données de la colonne de dépassement de capacité sont adressées à l’aide de la `XMLTEXT` directive dans une `SELECT` instruction à l’aide du mode EXPLICIT.  
+# <a name="example-specifying-the-xmltext-directive"></a>Exemple : Spécification de la directive XMLTEXT
+  Cet exemple illustre l'adressage des informations contenues dans la colonne de dépassement de capacité à l'aide de la directive `XMLTEXT` dans une instruction `SELECT` utilisant le mode EXPLICIT.  
   
  Soit la table `Person` . Cette table possède une colonne nommée `Overflow` , qui stocke les données non consommées du document XML.  
   
@@ -52,7 +52,7 @@ FOR XML EXPLICIT;
   
 -   En raison du conflit entre l’attribut `PersonID` de l’élément <`xmltext`> et l’attribut `PersonID` extrait du même niveau d’éléments, l’attribut de l’élément <`xmltext`> est ignoré, même si `PersonID` a la valeur NULL. En général, un attribut remplace un attribut de même nom dans les données en excès.  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -86,7 +86,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Parent PersonID="P1" PersonName="Joe" attr1="data">content</Parent>`  
   
@@ -112,7 +112,7 @@ FROM Person
 FOR XML EXPLICIT  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Parent PersonID="P1" PersonName="Joe">`  
   
@@ -147,7 +147,7 @@ FROM Person
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
  `<Parent PersonID="P1" attr1="data">content<PersonName>Joe</PersonName>`  
   

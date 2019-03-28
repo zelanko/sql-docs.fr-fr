@@ -10,17 +10,17 @@ ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f5d3a9786f2971abebd96624c5214f7717c450a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e70ab55fedcc5053cf82a78c040c850a23824eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154719"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536671"
 ---
 # <a name="native-compilation-of-tables-and-stored-procedures"></a>Compilation en mode natif de tables et de procédures stockées
   L'OLTP en mémoire introduit le concept de compilation native. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut compiler en mode natif des procédures stockées qui accèdent aux tables optimisées en mémoire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut également compiler en mode natif des tables optimisées en mémoire. La compilation native permet un accès aux données plus rapide et une exécution des requêtes plus efficace que le [!INCLUDE[tsql](../../includes/tsql-md.md)](traditionnel) interprété. La compilation en mode natif de tables et de procédures stockées produit des DLL.  
   
- La compilation en mode natif des types de table optimisée en mémoire est également prise en charge. Pour plus d’informations, consultez [les Variables de Table à mémoire optimisée](../../database-engine/memory-optimized-table-variables.md).  
+ La compilation en mode natif des types de table optimisée en mémoire est également prise en charge. Pour plus d'informations, consultez [Memory-Optimized Table Variables](../../database-engine/memory-optimized-table-variables.md).  
   
  La compilation native fait référence au processus de conversion des constructions de programmation en code natif, constitué d'instructions de processeur, sans recourir à une compilation ou une interprétation supplémentaire.  
   
@@ -30,9 +30,9 @@ ms.locfileid: "48154719"
 >  Les tables optimisées en mémoire sont recompilées lors d'un redémarrage du serveur. Pour accélérer la récupération de la base de données, les procédures stockées compilées en mode natif ne sont pas recompilées lors d'un redémarrage du serveur. Elles sont compilées au moment de la première exécution. En conséquence de cette compilation différée, les procédures stockées compilées en mode natif n’apparaissent que lors de l’appel de [sys.dm_os_loaded_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-loaded-modules-transact-sql) après la première exécution.  
   
 ## <a name="maintenance-of-in-memory-oltp-dlls"></a>Maintenance des DLL de l'OLTP en mémoire  
- La requête suivante affiche toutes les DLL de tables et de procédures stockées ayant été chargées en mémoire sur le serveur :  
+ La requête suivante affiche toutes les DLL de tables et de procédures stockées ayant été chargées en mémoire sur le serveur :  
   
-```tsql  
+```sql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
 where description = 'XTP Native DLL'  
 ```  
@@ -50,7 +50,7 @@ where description = 'XTP Native DLL'
   
  Consultez l'exemple de script suivant, qui crée une base de données et une table optimisée en mémoire :  
   
-```tsql  
+```sql  
 use master  
 go  
 create database db1  
@@ -84,7 +84,7 @@ go
   
  Prenons l'exemple de procédure stockée suivant, qui insère des lignes dans la table t1 de l'exemple précédent :  
   
-```tsql  
+```sql  
 create procedure dbo.native_sp  
 with native_compilation, schemabinding, execute as owner  
 as  
@@ -134,6 +134,6 @@ go
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables optimisées en mémoire](memory-optimized-tables.md)   
- [Procédures stockées compilées en mode natif](natively-compiled-stored-procedures.md)  
+ [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md)  
   
   

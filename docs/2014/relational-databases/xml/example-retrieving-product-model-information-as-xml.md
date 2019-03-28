@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : récupération des informations de modèle de produit au format XML | Microsoft Docs'
+title: 'Exemple : Récupération des informations de modèle de produit au format XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 4ec7ed358ab8c6c5f42e378a23dd4ba911800ae3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b48b333a5619aaad7f7f6af1c6e8cf908ba35bb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219879"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537761"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>Exemple : récupération des informations de modèle de produit au format XML
+# <a name="example-retrieving-product-model-information-as-xml"></a>Exemple : Récupération des informations de modèle de produit au format XML
   La requête suivante retourne des informations sur le modèle d'un produit. `RAW` Le mode est spécifié dans la clause `FOR XML` .  
   
 ## <a name="example"></a>Exemple  
@@ -52,7 +52,7 @@ FOR XML RAW, ELEMENTS;
 GO  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <row>  
@@ -65,7 +65,7 @@ GO
 </row>  
 ```  
   
- Vous pouvez éventuellement spécifier le `TYPE` directive pour récupérer les résultats en tant que `xml` type. La directive `TYPE` ne modifie pas le contenu des résultats. Seul le type de données des résultats est affecté.  
+ Vous pouvez éventuellement spécifier la directive `TYPE` pour récupérer les résultats en tant que type `xml`. La directive `TYPE` ne modifie pas le contenu des résultats. Seul le type de données des résultats est affecté.  
   
 ```  
 USE AdventureWorks2012;  

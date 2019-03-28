@@ -18,12 +18,12 @@ ms.assetid: e94b37a1-70ad-46a5-86c0-721892156f7c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fb2db3e60d416324a413bf9d6eb69f6125bc00b5
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 6c6c183034b93f06f7c8bc62b73f97316a204005
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588455"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537722"
 ---
 # <a name="sysmaildeletelogsp-transact-sql"></a>sysmail_delete_log_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sysmail_delete_log_sp  [ [ @logged_before = ] 'logged_before' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@logged_before** =] **'**_logged_before_**'**  
- Supprime les entrées antérieures à la date et l’heure spécifiée par le *logged_before* argument. *logged_before* est **datetime** avec NULL comme valeur par défaut. La valeur NULL correspond à toutes les dates.  
+`[ @logged_before = ] 'logged_before'` Supprime les entrées antérieures à la date et l’heure spécifiée par le *logged_before* argument. *logged_before* est **datetime** avec NULL comme valeur par défaut. La valeur NULL correspond à toutes les dates.  
   
- [ **@event_type** =] **'**_event_type_**'**  
- Supprime les entrées du type spécifié en tant que journal le *event_type*. *event_type* est **varchar(15)** sans valeur par défaut. Les entrées valides sont **réussite**, **avertissement**, **erreur**, et **d’information**. La valeur NULL correspond à tous les types d'événements.  
+`[ @event_type = ] 'event_type'` Supprime les entrées du type spécifié en tant que journal le *event_type*. *event_type* est **varchar(15)** sans valeur par défaut. Les entrées valides sont **réussite**, **avertissement**, **erreur**, et **d’information**. La valeur NULL correspond à tous les types d'événements.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -69,7 +67,7 @@ EXECUTE msdb.dbo.sysmail_delete_log_sp ;
 GO  
 ```  
   
-### <a name="b-deleting-the-oldest-events"></a>b. Suppression des événements les plus anciens  
+### <a name="b-deleting-the-oldest-events"></a>B. Suppression des événements les plus anciens  
  L'exemple suivant supprime les événements du journal de la messagerie de base de données qui sont antérieurs au 9 octobre 2005.  
   
 ```  

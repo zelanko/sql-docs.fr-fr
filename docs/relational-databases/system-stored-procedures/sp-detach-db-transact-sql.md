@@ -19,12 +19,12 @@ ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bf38282332f1cf8c3a5d3dd7716f9adc21e7bd8f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201908"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538221"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,16 +46,13 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname =** ] **'***database_name***'**  
- Nom de la base de données à détacher. *database_name* est un **sysname** valeur, avec NULL comme valeur par défaut.  
+`[ @dbname = ] 'database_name'` Est le nom de la base de données à détacher. *database_name* est un **sysname** valeur, avec NULL comme valeur par défaut.  
   
- [  **@skipchecks =** ] **'***skipchecks***'**  
- Indique si UPDATE STATISTIC doit être ignoré ou exécuté. *option skipchecks* est un **nvarchar (10)** valeur, avec NULL comme valeur par défaut. Pour ignorer UPDATE STATISTICS, spécifiez **true**. Pour exécuter explicitement UPDATE STATISTICS, spécifiez **false**.  
+`[ @skipchecks = ] 'skipchecks'` Spécifie s’il faut ignorer ou exécuter des statistiques de mise à jour. *option skipchecks* est un **nvarchar (10)** valeur, avec NULL comme valeur par défaut. Pour ignorer UPDATE STATISTICS, spécifiez **true**. Pour exécuter explicitement UPDATE STATISTICS, spécifiez **false**.  
   
  Par défaut, UPDATE STATISTICS est exécuté pour mettre à jour les informations relatives aux données des tables et des index. L'exécution de UPDATE STATISTICS est utile pour les bases de données qui doivent être placées sur des supports en lecture seule.  
   
- [  **@keepfulltextindexfile=** ] **'***KeepFulltextIndexFile***'**  
- Spécifie que le fichier d'index de texte intégral associé à la base de données à détacher ne sera pas supprimé pendant l'opération de détachement de la base de données. *KeepFulltextIndexFile* est un **nvarchar (10)** valeur par défaut de **true**. Si *KeepFulltextIndexFile* est **false**, tous les fichiers d’index de recherche en texte intégral associé à la base de données et les métadonnées de l’index de recherche en texte intégral sont supprimés, sauf si la base de données est en lecture seule. Si NULL ou **true**, liée au texte intégral métadonnées sont conservées.  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Spécifie que le fichier d’index de recherche en texte intégral associé à la base de données à détacher ne sera pas supprimé lors de la base de données opération de détachement. *KeepFulltextIndexFile* est un **nvarchar (10)** valeur par défaut de **true**. Si *KeepFulltextIndexFile* est **false**, tous les fichiers d’index de recherche en texte intégral associé à la base de données et les métadonnées de l’index de recherche en texte intégral sont supprimés, sauf si la base de données est en lecture seule. Si NULL ou **true**, liée au texte intégral métadonnées sont conservées.  
   
 > [!IMPORTANT]
 >  Le**@keepfulltextindexfile** paramètre sera supprimé dans une future version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser ce paramètre dans de nouveaux travaux de développement, et modifiez dès que possible les applications qui utilisent actuellement ce paramètre.  

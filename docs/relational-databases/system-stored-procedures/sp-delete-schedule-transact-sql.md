@@ -18,12 +18,12 @@ ms.assetid: 18b2c985-47b8-49c8-82d1-8a4af3d7d33a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ec2fe4ba5ad90d044a9407be04acc850ae16b73
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 257e91babf98fcbd7a2a54e8b9d14134a7446d6b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591493"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537835"
 ---
 # <a name="spdeleteschedule-transact-sql"></a>sp_delete_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,18 +41,15 @@ sp_delete_schedule { [ @schedule_id = ] schedule_id | [ @schedule_name = ] 'sche
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@schedule_id=** ] *id_de_la_planification*  
- Numéro d'identification de la planification à supprimer. *id_de_la_planification* est **int**, avec NULL comme valeur par défaut.  
+`[ @schedule_id = ] schedule_id` Le numéro d’identification de planification de la planification à supprimer. *id_de_la_planification* est **int**, avec NULL comme valeur par défaut.  
   
 > **REMARQUE :** Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@schedule_name=** ] **'**_nom_de_la_planification_**'**  
- Nom de la planification à supprimer. *nom_de_la_planification* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @schedule_name = ] 'schedule_name'` Le nom de la planification à supprimer. *nom_de_la_planification* est **sysname**, avec NULL comme valeur par défaut.  
   
 > **REMARQUE :** Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [ **@force_delete** =] *force_delete*  
- Spécifie si la procédure doit échouer lorsque la planification est attachée à un travail. *Force_delete* est de type bit, avec une valeur par défaut **0**. Lorsque *force_delete* est **0**, la procédure stockée échoue si la planification est attachée à un travail. Lorsque *force_delete* est **1**, la planification est supprimée indépendamment de si la planification est attachée à un travail.  
+`[ @force_delete = ] force_delete` Spécifie si la procédure doit échouer si la planification est attachée à un travail. *Force_delete* est de type bit, avec une valeur par défaut **0**. Lorsque *force_delete* est **0**, la procédure stockée échoue si la planification est attachée à un travail. Lorsque *force_delete* est **1**, la planification est supprimée indépendamment de si la planification est attachée à un travail.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -92,7 +89,7 @@ EXEC dbo.sp_delete_schedule
 GO  
 ```  
   
-### <a name="b-deleting-a-schedule-attached-to-a-job"></a>b. Suppression d'une planification attachée à un travail  
+### <a name="b-deleting-a-schedule-attached-to-a-job"></a>B. Suppression d'une planification attachée à un travail  
  L'exemple suivant supprime la planification `RunOnce`, qu'elle soit ou non attachée à un travail.  
   
 ```  

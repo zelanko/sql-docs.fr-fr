@@ -16,12 +16,12 @@ ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c713b4efcfd37c245f340769a4725b0792d7528b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210051"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537834"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,32 +50,25 @@ sp_link_publication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publisher**=] **'***publisher***'**  
- Nom du serveur de publication auquel se connecter. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication à lier. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [ **@publisher_db**=] **'***publisher_db***'**  
- Nom de la base de données du serveur de publication à laquelle se connecter. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication à lier. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [ **@publication**=] **'***publication***'**  
- Nom de la publication à laquelle se connecter. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication à lier. *publication* est **sysname**, sans valeur par défaut.  
   
- [ **@security_mode**=] *security_mode*  
- Mode de sécurité utilisé par l'Abonné pour se connecter à un serveur de publication distant pour la mise à jour immédiate. *security_mode* est **int**, et peut prendre l’une des valeurs suivantes. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @security_mode = ] security_mode` Le mode de sécurité utilisé par l’abonné pour se connecter à un serveur de publication distant pour la mise à jour immédiate. *security_mode* est **int**, et peut prendre l’une des valeurs suivantes. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**0**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification avec la connexion spécifiée dans cette procédure stockée en tant que *connexion* et *mot de passe*.<br /><br /> Remarque : Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette option était utilisée pour spécifier un appel de procédure distante dynamique (RPC).|  
-|**1**|Utilise le contexte de sécurité (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows) de l'utilisateur apportant la modification sur l'Abonné.<br /><br /> Remarque : Ce compte doit également exister sur le serveur de publication et bénéficier de privilèges suffisants. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.|  
+|**0**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification avec la connexion spécifiée dans cette procédure stockée en tant que *connexion* et *mot de passe*.<br /><br /> Remarque : Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette option était utilisée pour spécifier un appel de procédure distante dynamique (RPC).|  
+|**1**|Utilise le contexte de sécurité (authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou Windows) de l'utilisateur apportant la modification sur l'Abonné.<br /><br /> Remarque : Ce compte doit également exister sur le serveur de publication et bénéficier de privilèges suffisants. Lorsque vous utilisez l'authentification Windows, la délégation de compte de sécurité doit être prise en charge.|  
 |**2**|Utilise une connexion de serveur lié existante, définie par l’utilisateur créée à l’aide **sp_link_publication**.|  
   
- [ **@login**=] **'***connexion***'**  
- Connexion d'accès. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* est **0**.  
+`[ @login = ] 'login'` Est le nom de connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* est **0**.  
   
- [ **@password**=] **'***mot de passe***'**  
- Est le mot de passe. *mot de passe* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* est **0**.  
+`[ @password = ] 'password'` Est le mot de passe. *mot de passe* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre doit être spécifié lorsque *security_mode* est **0**.  
   
- [  **@distributor=** ] **'***distributeur***'**  
- Est le nom du serveur de distribution. *serveur de distribution* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @distributor = ] 'distributor'` Est le nom du serveur de distribution. *serveur de distribution* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

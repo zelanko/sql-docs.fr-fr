@@ -10,12 +10,12 @@ ms.assetid: c626dcac-0474-432d-acc0-cfa643345372
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4238e512975d2f333ac066e6b0183c60ead7d97d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118169"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536531"
 ---
 # <a name="collations-and-code-pages"></a>Classements et pages de codes
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] est limité au niveau des pages de codes prises en charge pour les colonnes (var)char dans les tables mémoire optimisées et les classements pris en charge utilisés dans des index et des procédures stockées compilées en mode natif.  
@@ -31,7 +31,7 @@ ms.locfileid: "48118169"
 > [!IMPORTANT]  
 >  Vous ne pouvez pas utiliser « order by » ou « group by » sur les colonnes de chaîne d'index qui n'utilisent pas le classement BIN2.  
   
-```tsql  
+```sql  
 CREATE DATABASE IMOLTP  
   
 ALTER DATABASE IMOLTP ADD FILEGROUP IMOLTP_mod CONTAINS MEMORY_OPTIMIZED_DATA  
@@ -60,7 +60,7 @@ GO
   
 -   Les colonnes (var)char dans les tables mémoire optimisées doivent utiliser le classement de la page de codes 1252. Cette restriction ne concerne pas les colonnes n(var)char. Le code suivant récupère tous les classements 1252 :  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for (var)char columns in memory-optimized tables  
     select * from sys.fn_helpcollations()  
     where collationproperty(name, 'codepage') = 1252;  
@@ -70,7 +70,7 @@ GO
   
 -   Les index sur des colonnes (n)(var)char peuvent être spécifiés avec les classements BIN2 (voir le premier exemple). La requête suivante récupère tous les classements BIN2 pris en charge :  
   
-    ```tsql  
+    ```sql  
     -- all supported collations for indexes on memory-optimized tables and   
     -- comparison/sorting in natively compiled stored procedures  
     select * from sys.fn_helpcollations() where name like '%BIN2'  
@@ -84,7 +84,7 @@ GO
   
 -   La troncation des données UTF-16 n'est pas prise en charge dans les procédures stockées compilées en mode natif. Cela signifie que char n (var) (*n*) valeurs ne peut pas être convertis en type n (var) char (*je*), si *je* < *n*, si le classement possède la propriété _SC. Par exemple, ce qui suit n'est pas pris en charge :  
   
-    ```tsql  
+    ```sql  
     -- column definition using an _SC collation  
      c2 nvarchar(200) collate Latin1_General_100_CS_AS_SC not null   
     -- assignment to a smaller variable, requiring truncation  
@@ -98,7 +98,7 @@ GO
   
  L'exemple suivant indique quelques-unes des conséquences et les solutions de contournement concernant les limitations de classement dans OLTP en mémoire. L'exemple utilise la table Employees spécifiée ci-dessus. Cet exemple répertorie tous les employés. Notez que pour LastName, en raison du classement binaire, les noms en majuscules sont triés en minuscules. Par conséquent, « Thomas » précède « nolan » car les caractères en majuscules ont des points de code inférieurs. FirstName a un classement non sensible à la casse. Par conséquent, il est préférable de trier par lettre de l'alphabet, et non par point de code des caractères.  
   
-```tsql  
+```sql  
 -- insert a number of values  
 INSERT Employees VALUES (1,'thomas', 'john')  
 INSERT Employees VALUES (2,'Thomas', 'rupert')  

@@ -18,12 +18,12 @@ ms.assetid: 9c70b41d-ef4c-43df-92da-bd534c287ca1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 258a9e6002fccd27b4980140c49679b26c78f64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb4dc6bce6ae10c040123b4a00c29e5ad0f57506
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791997"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535961"
 ---
 # <a name="sphelpuser-transact-sql"></a>sp_helpuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name_in_db =** ] **'***auxquels celui-ci a***'**  
- Nom de l'utilisateur de base de données ou du rôle de base de données dans la base de données en cours. *celui-ci* doit exister dans la base de données actuelle. *celui-ci* est **sysname**, avec NULL comme valeur par défaut. Si *auxquels celui-ci a* n’est pas spécifié, **sp_helpuser** retourne des informations sur tous les principaux de base de données.  
+`[ @name_in_db = ] 'security_account'` Est le nom d’utilisateur de base de données ou rôle de base de données dans la base de données actuelle. *celui-ci* doit exister dans la base de données actuelle. *celui-ci* est **sysname**, avec NULL comme valeur par défaut. Si *auxquels celui-ci a* n’est pas spécifié, **sp_helpuser** retourne des informations sur tous les principaux de base de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -81,7 +80,7 @@ sp_helpuser [ [ @name_in_db = ] 'security_account' ]
 ## <a name="remarks"></a>Notes  
  Pour afficher des informations sur l’appartenance des rôles de base de données, utilisez [sys.database_role_members](../../relational-databases/system-catalog-views/sys-database-role-members-transact-sql.md). Pour afficher des informations sur les membres du rôle serveur, utilisez [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)et pour afficher des informations sur les principaux de niveau serveur, utilisez [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
  Les informations retournées sont sujettes à des restrictions d'accès aux métadonnées. Les entités sur lesquelles le principal ne possède pas d'autorisation n'apparaissent pas. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

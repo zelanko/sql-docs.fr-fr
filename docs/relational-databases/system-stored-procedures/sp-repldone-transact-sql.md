@@ -16,12 +16,12 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aaeebd1aa2d6fe4ea443c7ed18ac157135ae4d64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8aa102f134d262eb2342e3774c1960f33f8adffc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747745"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538231"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@xactid=**] *xactid*  
- Est le numéro de séquence de journal (LSN) du premier enregistrement de la dernière transaction distribuée du serveur. *xactid* est **Binary (10)**, sans valeur par défaut.  
+`[ @xactid = ] xactid` Est le numéro de séquence de journal (LSN) du premier enregistrement de la dernière transaction distribuée du serveur. *xactid* est **Binary (10)**, sans valeur par défaut.  
   
- [  **@xact_seqno=**] *xact_seqno*  
- Est le LSN du dernier enregistrement de la dernière transaction distribuée du serveur. *xact_seqno* est **Binary (10)**, sans valeur par défaut.  
+`[ @xact_seqno = ] xact_seqno` Est le LSN du dernier enregistrement de la dernière transaction distribuée du serveur. *xact_seqno* est **Binary (10)**, sans valeur par défaut.  
   
- [  **@numtrans=**] *numtrans*  
- Est le nombre de transactions distribuées. *numtrans* est **int**, sans valeur par défaut.  
+`[ @numtrans = ] numtrans` Est le nombre de transactions distribuées. *numtrans* est **int**, sans valeur par défaut.  
   
- [  **@time=**] *temps*  
- Nombre de millisecondes, le cas échéant, nécessaires pour distribuer la dernière série de transactions. *temps* est **int**, sans valeur par défaut.  
+`[ @time = ] time` Est le nombre de millisecondes, s’il est fourni, nécessaire pour distribuer le dernier lot de transactions. *temps* est **int**, sans valeur par défaut.  
   
- [  **@reset=**] *réinitialiser*  
- État de la réinitialisation. *réinitialiser* est **int**, sans valeur par défaut. Si **1**et répliqué toutes les transactions dans le journal sont marquées comme distribuées. Si **0**, le journal des transactions est réinitialisé à la première transaction répliquée et aucune transaction répliquée n’est marquée comme distribuée. *réinitialiser* est valide uniquement lorsque les deux *xactid* et *xact_seqno* ont la valeur NULL.  
+`[ @reset = ] reset` Est l’état de réinitialisation. *réinitialiser* est **int**, sans valeur par défaut. Si **1**et répliqué toutes les transactions dans le journal sont marquées comme distribuées. Si **0**, le journal des transactions est réinitialisé à la première transaction répliquée et aucune transaction répliquée n’est marquée comme distribuée. *réinitialiser* est valide uniquement lorsque les deux *xactid* et *xact_seqno* ont la valeur NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

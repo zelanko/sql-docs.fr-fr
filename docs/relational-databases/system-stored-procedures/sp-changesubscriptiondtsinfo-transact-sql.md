@@ -16,12 +16,12 @@ ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e691c78e0ef0ddf775b5a23baa7dde1d96f72a9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129243"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536061"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,20 +41,16 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id=**] *job_id*  
- ID du travail de l'Agent de distribution pour l'abonnement par envoi de données (push). *job_id* est **varbinary (16)**, sans valeur par défaut. Pour rechercher l’ID de tâche de Distribution, exécutez **sp_helpsubscription** ou **sp_helppullsubscription**.  
+`[ @job_id = ] job_id` Est l’ID de travail de l’Agent de Distribution pour l’abonnement envoyé. *job_id* est **varbinary (16)**, sans valeur par défaut. Pour rechercher l’ID de tâche de Distribution, exécutez **sp_helpsubscription** ou **sp_helppullsubscription**.  
   
- [ **@dts_package_name**=] **'**_l’argument dts_package_name_**'**  
- Spécifie le nom du package DTS. *l’argument dts_package_name* est un **sysname**, avec NULL comme valeur par défaut. Par exemple, pour spécifier un package nommé **DTSPub_Package**, vous devez spécifier `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'` Spécifie le nom du package DTS. *l’argument dts_package_name* est un **sysname**, avec NULL comme valeur par défaut. Par exemple, pour spécifier un package nommé **DTSPub_Package**, vous devez spécifier `@dts_package_name = N'DTSPub_Package'`.  
   
- [ **@dts_package_password**=] **'**_dts_package_password_**'**  
- Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.  
+`[ @dts_package_password = ] 'dts_package_password'` Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.  
   
 > [!NOTE]  
 >  Un package DTS doit avoir un mot de passe.  
   
- [ **@dts_package_location**=] **'**_dts_package_location_**'**  
- Spécifie l'emplacement du package. *dts_package_location* est un **nvarchar (12)**, avec NULL comme valeur par défaut qui spécifie que l’emplacement du package doit demeurer inchangé. L’emplacement du package peut être modifié à **distributeur** ou **abonné**.  
+`[ @dts_package_location = ] 'dts_package_location'` Spécifie l’emplacement du package. *dts_package_location* est un **nvarchar (12)**, avec NULL comme valeur par défaut qui spécifie que l’emplacement du package doit demeurer inchangé. L’emplacement du package peut être modifié à **distributeur** ou **abonné**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

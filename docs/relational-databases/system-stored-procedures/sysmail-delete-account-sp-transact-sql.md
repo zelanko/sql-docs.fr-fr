@@ -18,12 +18,12 @@ ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb4ffde27fb1b0362debfc4809a79de05e4e966d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96fb6d88431e0740f17db8c00c0e3e490220561c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815809"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537093"
 ---
 # <a name="sysmaildeleteaccountsp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@account_id** =] *account_id*  
- Numéro d'identification du compte à supprimer. *account_id* est **int**, sans valeur par défaut. Soit *account_id* ou *account_name* doit être spécifié.  
+`[ @account_id = ] account_id` Numéro d’identification du compte à supprimer. *account_id* est **int**, sans valeur par défaut. Soit *account_id* ou *account_name* doit être spécifié.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nom du compte à supprimer. *nom_compte* est **sysname**, sans valeur par défaut. Soit *account_id* ou *account_name* doit être spécifié.  
+`[ @account_name = ] 'account_name'` Le nom du compte à supprimer. *nom_compte* est **sysname**, sans valeur par défaut. Soit *account_id* ou *account_name* doit être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -57,7 +55,7 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
   
  La procédure stockée **sysmail_delete_account_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

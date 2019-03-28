@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_change_job (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: cfbf93fc858f52cd35401bd80fe5ede7dee86a3d
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591743"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536101"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,21 +48,17 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_type=** ] **'**_type_du_travail_**'**  
- Type de travail à modifier. *type_du_travail* est **nvarchar (20)** avec une valeur par défaut 'capture'. Les entrées valides sont 'capture' et 'cleanup'.  
+`[ @job_type = ] 'job_type'` Type de travail à modifier. *type_du_travail* est **nvarchar (20)** avec une valeur par défaut 'capture'. Les entrées valides sont 'capture' et 'cleanup'.  
   
- [ **@maxtrans** ] **=** _max_trans_  
- Nombre maximal de transactions à traiter dans chaque cycle d'analyse. *max_trans* est **int** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. Si elle est spécifiée, la valeur doit être un entier positif.  
+`[ @maxtrans ] = max_trans_` Nombre maximal de transactions à traiter dans chaque cycle d’analyse. *max_trans* est **int** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. Si elle est spécifiée, la valeur doit être un entier positif.  
   
  *max_trans* est valide uniquement pour les travaux de capture.  
   
- [ **@maxscans** ] **=** _max_scans_  
- Nombre maximal de cycles d'analyse à exécuter afin d'extraire toutes les lignes du journal. *max_scans* est **int** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
+`[ @maxscans ] = max_scans_` Nombre maximal de cycles d’analyse à exécuter afin d’extraire toutes les lignes du journal. *max_scans* est **int** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
   
  *max_scan* est valide uniquement pour les travaux de capture.  
   
- [ **@continuous** ] **=** _continue_  
- Indique si le travail de capture doit être exécuté en continu (1) ou une seule fois (0). *continue* est **bits** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
+`[ @continuous ] = continuous_` Indique si le travail de capture doit être exécuté en continu (1), ou une seule fois (0). *continue* est **bits** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
   
  Lorsque *continue* = 1, le [sp_cdc_scan](../../relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql.md) tâche analyse le journal et traite jusqu'à (*max_trans* \* *max_scans*) transactions. Il attend alors pendant le nombre de secondes spécifié dans *polling_interval* avant de commencer l’analyse du journal suivante.  
   
@@ -74,18 +70,15 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  *continue* est valide uniquement pour les travaux de capture.  
   
- [ **@pollinginterval** ] **=** _polling_interval_  
- Nombre de secondes entre les cycles d’analyse de journal. *polling_interval* est **bigint** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
+`[ @pollinginterval ] = polling_interval_` Nombre de secondes entre les cycles d’analyse de journal. *polling_interval* est **bigint** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre.  
   
  *polling_interval* est valide uniquement pour la capture des travaux lorsque *continue* est défini sur 1.  
   
- [ **@retention** ] **=** _rétention_  
- Nombre de minutes pendant lesquelles les lignes modifiées doivent être conservées dans les tables de modifications. *rétention* est **bigint** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. La valeur maximale est égale à 52494800 (100 ans). Si elle est spécifiée, la valeur doit être un entier positif.  
+`[ @retention ] = retention_` Nombre de minutes pendant lesquelles les lignes modifiées doivent être conservées dans les tables de modifications. *rétention* est **bigint** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. La valeur maximale est égale à 52494800 (100 ans). Si elle est spécifiée, la valeur doit être un entier positif.  
   
  *rétention* est valide uniquement pour les travaux de nettoyage.  
   
- [  **@threshold=** ] **'**_supprimer seuil_**'**  
- Nombre maximal d’entrées qui peuvent être supprimées à l’aide d’une instruction unique lors du nettoyage. *supprimer le seuil* est **bigint** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. *supprimer le seuil* est valide uniquement pour les travaux de nettoyage.  
+`[ @threshold = ] 'delete threshold'` Nombre maximal d’entrées qui peuvent être supprimées à l’aide d’une instruction unique lors du nettoyage. *supprimer le seuil* est **bigint** avec NULL comme valeur par défaut, qui n’indique aucune modification pour ce paramètre. *supprimer le seuil* est valide uniquement pour les travaux de nettoyage.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -118,7 +111,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>b. Modification d'un travail de nettoyage  
+### <a name="b-changing-a-cleanup-job"></a>B. Modification d'un travail de nettoyage  
  L'exemple suivant met à jour un travail de nettoyage dans la base de données `AdventureWorks2012`. Tous les paramètres valides pour ce type de travail, à l’exception **@threshold**, sont spécifiés. La valeur de **@threshold** n’est pas modifié.  
   
 ```  
@@ -132,7 +125,7 @@ GO
   
 ## <a name="see-also"></a>Voir aussi  
  [dbo.cdc_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
- [Sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
+ [sys.sp_cdc_enable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  
   
   

@@ -22,12 +22,12 @@ ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0d7f088d85a5a56a6440266bd9851cbd90c9c0f9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8ae16af1017d37afba6325d335ef24fd3b99a603
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590453"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537151"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,7 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table=** ] **'**_table_**'**  
- Nom en trois parties de la table dont le format de stockage doit être modifié. *table* est **nvarchar(776)**.  
+`[ @table = ] 'table'` Est le nom en trois parties de la table pour laquelle le format de stockage doit être modifié. *table* est **nvarchar(776)**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -58,8 +57,8 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**avg_rowlen_fixed_format**|**Decimal (12, 2)**|Représente la longueur de la ligne au format de stockage décimal fixe.|  
-|**avg_rowlen_vardecimal_format**|**Decimal (12, 2)**|Représente la taille de ligne moyenne lorsque le format de stockage vardecimal est utilisé.|  
+|**avg_rowlen_fixed_format**|**decimal (12, 2)**|Représente la longueur de la ligne au format de stockage décimal fixe.|  
+|**avg_rowlen_vardecimal_format**|**decimal (12, 2)**|Représente la taille de ligne moyenne lorsque le format de stockage vardecimal est utilisé.|  
 |**row_count**|**Int**|Nombre de lignes dans la table.|  
   
 ## <a name="remarks"></a>Notes  

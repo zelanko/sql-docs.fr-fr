@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 56999c5e74648ecd36adea3ee941627c1e2e607b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377899"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536691"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Déterminer le nombre de compartiments correct pour les index de hachage
   Vous devez spécifier une valeur pour le paramètre `BUCKET_COUNT` lorsque vous créez la table mémoire optimisée. Cette rubrique fournit des recommandations pour déterminer la valeur appropriée du paramètre `BUCKET_COUNT`. Si vous ne pouvez pas déterminer le nombre de compartiments correct, utilisez un index non cluster à la place.  Une valeur `BUCKET_COUNT` incorrecte, en particulier une valeur trop basse, peut avoir un impact important sur les performances de la charge de travail, ainsi que sur le temps de récupération de la base de données. Il vaut mieux surestimer le nombre de compartiments.  
@@ -38,7 +38,7 @@ ms.locfileid: "53377899"
 ### <a name="primary-key-and-unique-indexes"></a>Clé primaire et index uniques  
  Étant donné que l'index de clé primaire est unique, le nombre de valeurs distinctes dans la clé correspond au nombre de lignes dans la table. Pour obtenir un exemple de clé primaire sur (SalesOrderID, SalesOrderDetailID) dans la table Sales.SalesOrderDetail dans la base de données AdventureWorks, exécutez la requête suivante pour calculer le nombre de valeurs de clé primaire distinctes, qui correspond au nombre de lignes dans la table :  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [row count]   
 FROM Sales.SalesOrderDetail  
 ```  
@@ -48,7 +48,7 @@ FROM Sales.SalesOrderDetail
 ### <a name="non-unique-indexes"></a>Index non uniques  
  Pour les autres index, par exemple un index à plusieurs colonnes sur (SpecialOfferID, ProductID), exécutez la requête suivante pour déterminer le nombre de valeurs de clé d'index uniques :  
   
-```tsql  
+```sql  
 SELECT COUNT(*) AS [SpecialOfferID_ProductID index key count]  
 FROM   
    (SELECT DISTINCT SpecialOfferID, ProductID   
@@ -65,7 +65,7 @@ FROM
 ## <a name="troubleshooting-the-bucket-count"></a>Résolution des problèmes liés au nombre de compartiments  
  Pour résoudre les problèmes de nombre de compartiments dans les tables optimisées en mémoire, utilisez [sys.dm_db_xtp_hash_index_stats &#40;Transact-SQL&#41; ](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-hash-index-stats-transact-sql) pour obtenir les statistiques sur les compartiments vides et la longueur des chaînes de ligne. La requête suivante peut être utilisée pour obtenir les statistiques sur tous les index de hachage dans la base de données active. Son exécution peut prendre plusieurs minutes s'il existe de grandes tables dans la base de données.  
   
-```tsql  
+```sql  
 SELECT   
    object_name(hs.object_id) AS 'object name',   
    i.name as 'index name',   
@@ -99,7 +99,7 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
   
  En guise d'exemple, examinez le tableau suivant et le script pour insérer des lignes d'exemple dans la table :  
   
-```tsql  
+```sql  
 CREATE TABLE [Sales].[SalesOrderHeader_test]  
 (  
    [SalesOrderID] [uniqueidentifier] NOT NULL DEFAULT (newid()),  
@@ -139,7 +139,7 @@ GO
   
 -   IX_Status : 50 pour cent des compartiments sont vides, ce qui est correct. Cependant, la longueur de chaîne moyenne est très élevée (65 536). Cela indique un grand nombre de valeurs dupliquées. Par conséquent, l'utilisation d'un index de hachage non cluster n'est pas appropriée dans ce cas. Il convient d'utiliser un index non cluster.  
   
--   IX_OrderSequence : 0 pour cent des compartiments sont vides, ce qui est trop faible. En outre, la longueur de chaîne moyenne est de 8. En tant donné que les valeurs dans cet index sont uniques, cela signifie que 8 valeurs en moyenne sont mappées à chaque compartiment. Le nombre de compartiments doit être augmenté. Étant donné que la clé d'index a 262 144 valeurs uniques, le nombre de compartiments doit être égal ou supérieur à 262 144. Si une croissance future est attendue, le nombre doit être supérieur.  
+-   IX_OrderSequence: 0 pour cent des compartiments sont vides, ce qui est trop faible. En outre, la longueur de chaîne moyenne est de 8. En tant donné que les valeurs dans cet index sont uniques, cela signifie que 8 valeurs en moyenne sont mappées à chaque compartiment. Le nombre de compartiments doit être augmenté. Étant donné que la clé d'index a 262 144 valeurs uniques, le nombre de compartiments doit être égal ou supérieur à 262 144. Si une croissance future est attendue, le nombre doit être supérieur.  
   
 -   Index de clé primaire (PK__SalesOrder …) : 36 pour cent des compartiments sont vides, ce qui est correct. En outre, la longueur de chaîne moyenne est de 1, ce qui est également correct. Aucun changement n'est requis.  
   

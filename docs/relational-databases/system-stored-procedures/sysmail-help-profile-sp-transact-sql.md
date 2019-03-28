@@ -18,12 +18,12 @@ ms.assetid: d7169a8e-92b1-49eb-9124-3b2f69755ddb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b953f619ab422eba81a925375d9ae8b0cd60e82
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2bd1919210f08dc0323400ceddeb47f74d21cc9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836457"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536451"
 ---
 # <a name="sysmailhelpprofilesp-transact-sql"></a>sysmail_help_profile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@profile_id** =] *profile_id*  
- Identificateur du profil pour lequel des informations doivent être renvoyées. *profile_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @profile_id = ] profile_id` Identificateur du profil pour retourner des informations pour. *profile_id* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nom du profil pour lequel des informations doivent être renvoyées. *nom_profil* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @profile_name = ] 'profile_name'` Le nom du profil pour retourner des informations pour. *nom_profil* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -64,7 +62,7 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
   
  La procédure stockée **sysmail_help_profile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

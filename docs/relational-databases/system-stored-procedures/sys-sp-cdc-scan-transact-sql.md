@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_scan (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_scan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 7eaa167c46937d48bd760d29bd17828a2d555538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1e7651c6df4a277d72a71c0cdb8a5910ae19ba76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763073"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536781"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,13 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@maxtrans=** ] *max_trans*  
- Nombre maximal de transactions à traiter dans chaque cycle d'analyse. *max_trans* est **int** avec la valeur par défaut est 500.  
+`[ @maxtrans = ] max_trans` Nombre maximal de transactions à traiter dans chaque cycle d’analyse. *max_trans* est **int** avec la valeur par défaut est 500.  
   
- [  **@maxscans=** ] *max_scans*  
- Nombre maximal de cycles d'analyse à exécuter afin d'extraire toutes les lignes du journal. *max_scans* est **int** avec une valeur par défaut de 10.  
+`[ @maxscans = ] max_scans` Nombre maximal de cycles d’analyse à exécuter afin d’extraire toutes les lignes du journal. *max_scans* est **int** avec une valeur par défaut de 10.  
   
- [  **@continuous=** ] *continue*  
- Indique si la procédure stockée doit se terminer après l’exécution d’un cycle d’analyse unique (0) ou s’exécuter en continu, une interruption de l’heure spécifiée par *polling_interval* avant de réexécuter le cycle d’analyse (1). *continue* est **tinyint** avec une valeur par défaut 0.  
+`[ @continuous = ] continuous` Indique si la procédure stockée doit se terminer après l’exécution d’un cycle d’analyse unique (0) ou s’exécuter en continu, une interruption de l’heure spécifiée par *polling_interval* avant de réexécuter le cycle d’analyse (1). *continue* est **tinyint** avec une valeur par défaut 0.  
   
- [  **@pollinginterval=** ] *polling_interval*  
- Nombre de secondes entre les cycles d’analyse de journal. *polling_interval* est **bigint** avec une valeur par défaut 0.  
+`[ @pollinginterval = ] polling_interval` Nombre de secondes entre les cycles d’analyse de journal. *polling_interval* est **bigint** avec une valeur par défaut 0.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -66,7 +62,7 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ## <a name="remarks"></a>Notes  
  sys.sp_cdc_scan est appelé en interne par sys.sp_MScdc_capture_job si le travail de capture de l'agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisé par la capture de données modifiées. La procédure ne peut pas être exécutée de manière explicite lorsqu'une opération d'analyse du journal de capture de données modifiées est déjà active ou lorsque la base de données est activée pour la réplication transactionnelle. Cette procédure stockée doit être utilisée par les administrateurs qui souhaitent personnaliser le comportement du travail de capture configuré automatiquement.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -18,12 +18,12 @@ ms.assetid: e4546c13-9fba-4bab-8b42-d6f18b33ec25
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c136a58e8d23f67a5c703d6f840858757661686b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b5fdea72621ef18cc032fbf806ec0cb7faad4739
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769557"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537871"
 ---
 # <a name="sprevokeloginfromproxy-transact-sql"></a>sp_revoke_login_from_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_revoke_login_from_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name=** ] **'***nom***'**  
- Le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, un rôle serveur ou **msdb** rôle de base de données pour supprimer l’accès pour. *nom* est **nvarchar (256)** sans valeur par défaut.  
+`[ @name = ] 'name'` Le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion, un rôle serveur ou **msdb** rôle de base de données pour supprimer l’accès pour. *nom* est **nvarchar (256)** sans valeur par défaut.  
   
- [  **@proxy_id=** ] *id*  
- ID du proxy pour lequel la connexion doit être supprimée. Soit *id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés. Le *id* est **int**, avec NULL comme valeur par défaut.  
+`[ @proxy_id = ] id` L’id du proxy à supprimer l’accès pour. Soit *id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés. Le *id* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@proxy_name=** ] **'***proxy_name***'**  
- Nom du proxy pour lequel la connexion doit être supprimée. Soit *id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @proxy_name = ] 'proxy_name'` Le nom du proxy à supprimer l’accès pour. Soit *id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -58,7 +55,7 @@ sp_revoke_login_from_proxy
 ## <a name="remarks"></a>Notes  
  Les travaux appartenant à la connexion qui fait référence à ce proxy ne pourront pas s'exécuter.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

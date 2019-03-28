@@ -16,12 +16,12 @@ ms.assetid: ff837209-e2b3-481a-a48f-8530bfe53d97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 811a6c78400e0030d89067d2998ed8cc0ad32be2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e6a3c403fde55213e093b70ced1cb6a59d15fd28
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789677"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537191"
 ---
 # <a name="sphelplogreaderagent-transact-sql"></a>sp_helplogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publisher**=] **'***publisher***'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -49,7 +48,7 @@ sp_helplogreader_agent [ [ @publisher = ] 'publisher' ]
 |**nom**|**nvarchar(100)**|Nom de l'Agent.|  
 |**publisher_security_mode**|**smallint**|Mode de sécurité utilisé par l'Agent lors de la connexion au serveur de publication. Il peut prendre l'une des valeurs suivantes :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification<br /><br /> **1** = l’authentification Windows.|  
 |**publisher_login**|**sysname**|Nom de connexion utilisé lors de la connexion au serveur de publication.|  
-|**publisher_password**|**nvarchar (524)**|Pour des raisons de sécurité, la valeur **\* \* \* \* \* \* \* \* \* \*** est toujours retourné.|  
+|**publisher_password**|**nvarchar(524)**|Pour des raisons de sécurité, la valeur **\* \* \* \* \* \* \* \* \* \*** est toujours retourné.|  
 |**job_id**|**uniqueidentifier**|ID unique du travail de l'Agent.|  
 |**job_login**|**nvarchar(512)**|Est le compte Windows sous lequel l’Agent de lecture du journal s’exécute, ce qui est retourné sous la forme *domaine*\\*nom d’utilisateur*.|  
 |**job_password**|**sysname**|Pour des raisons de sécurité, la valeur **\* \* \* \* \* \* \* \* \* \*** est toujours retourné.|  

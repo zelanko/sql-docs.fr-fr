@@ -17,12 +17,12 @@ ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8ed56b0d2c3ce14888f7856cadbcf1f1dc67a5ef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760691"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536791"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>Supprimer ou désactiver les déclencheurs DML
   Cette rubrique explique comment supprimer ou désactiver un déclencheur DML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "52760691"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  La suppression d'un déclencheur DML nécessite une autorisation ALTER sur la table ou la vue sur laquelle le déclencheur est défini.  
   
  Pour désactiver ou activer un déclencheur DML, un utilisateur doit avoir au minimum l'autorisation ALTER pour la table ou la vue sur laquelle le déclencheur a été créé.  
@@ -90,7 +90,7 @@ ms.locfileid: "52760691"
   
 3.  Copiez et collez les exemples suivants dans la fenêtre de requête. Exécutez l'instruction [CREATE TRIGGER](/sql/t-sql/statements/create-trigger-transact-sql) pour créer le déclencheur `Sales.bonus_reminder` . Pour supprimer le déclencheur, exécutez l'instruction [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) .  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -106,7 +106,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -124,7 +124,7 @@ GO
   
 3.  Copiez et collez les exemples suivants dans la fenêtre de requête. Exécutez l'instruction [CREATE TRIGGER](/sql/t-sql/statements/create-trigger-transact-sql) pour créer le déclencheur `Sales.bonus_reminder` . Pour désactiver et activer le déclencheur, exécutez les instructions [DISABLE TRIGGER](/sql/t-sql/statements/disable-trigger-transact-sql) et [ENABLE TRIGGER](/sql/t-sql/statements/enable-trigger-transact-sql) , respectivement.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -140,7 +140,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -149,7 +149,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  

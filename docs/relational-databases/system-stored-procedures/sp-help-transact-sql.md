@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c41449a9d8c1a85e283598a350f4372d8b3b0780
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146044"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537111"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,8 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@objname=**] **'***nom***'**  
- Est le nom de n’importe quel objet, dans **sysobjects** ou type de toutes les données définies par l’utilisateur dans le **systypes** table. *nom* est **nvarchar (** 776 **)**, avec NULL comme valeur par défaut. Vous ne pouvez pas spécifier un nom de base de données.  Les noms en deux ou trois parties doivent être délimités, comme 'Personne.TypeAdresse' ou [Personne.TypeAdresse].   
+`[ @objname = ] 'name'` Est le nom de n’importe quel objet, dans **sysobjects** ou type de toutes les données définies par l’utilisateur dans le **systypes** table. *nom* est **nvarchar (** 776 **)**, avec NULL comme valeur par défaut. Vous ne pouvez pas spécifier un nom de base de données.  Les noms en deux ou trois parties doivent être délimités, comme 'Personne.TypeAdresse' ou [Personne.TypeAdresse].   
    
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -58,7 +57,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nom**|**nvarchar(** 128 **)**|Nom de l'objet|  
     |**Propriétaire**|**nvarchar(** 128 **)**|Propriétaire de l'objet (il s'agit du principal de la base de données propriétaire de l'objet. Est accordé par défaut au propriétaire du schéma qui contient l'objet.)|  
-    |**Object_type**|**nvarchar (** 31 **)**|Type d'objet|  
+    |**Object_type**|**nvarchar(** 31 **)**|Type d'objet|  
   
 2.  Si *nom* est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données ou le type de données défini par l’utilisateur, **sp_help** retourne ce jeu de résultats.  
   
@@ -69,7 +68,7 @@ sp_help [ [ @objname = ] 'name' ]
     |**Longueur**|**smallint**|Longueur physique du type de données (en octets).|  
     |**PREC**|**Int**|Précision (nombre total de chiffres).|  
     |**Échelle**|**Int**|Nombre de chiffres à droite du séparateur décimal.|  
-    |**Nullable**|**varchar (** 35 **)**|Indique si les valeurs NULL sont autorisées : Oui ou Non.|  
+    |**Nullable**|**varchar(** 35 **)**|Indique si les valeurs NULL sont autorisées : Oui ou Non.|  
     |**Default_name**|**nvarchar(** 128 **)**|Nom par défaut de ce type de données.<br /><br /> NULL = aucune valeur par défaut n'est liée.|  
     |**Nom_règle**|**nvarchar(** 128 **)**|Nom d'une règle associée à ce type.<br /><br /> NULL = aucune valeur par défaut n'est liée.|  
     |**Classement**|**sysname**|Classement du type de données. NULL pour les types de données non caractère.|  
@@ -80,7 +79,7 @@ sp_help [ [ @objname = ] 'name' ]
     |-----------------|---------------|-----------------|  
     |**Nom**|**nvarchar(** 128 **)**|Nom de la table|  
     |**Propriétaire**|**nvarchar(** 128 **)**|Propriétaire de la table|  
-    |**Type**|**nvarchar (** 31 **)**|Type de la table|  
+    |**Type**|**nvarchar(** 31 **)**|Type de la table|  
     |**Created_datetime**|**datetime**|Date de création de la table|  
   
      En fonction de l’objet de base de données spécifié, **sp_help** retourne des jeux de résultats supplémentaires.  
@@ -93,13 +92,13 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|Nom de colonne.|  
         |**Type**|**nvarchar(** 128 **)**|Type de données de la colonne.|  
-        |**Calculée**|**varchar (** 35 **)**|Indique si les valeurs de la colonne sont calculées : Oui ou Non.|  
+        |**Calculée**|**varchar(** 35 **)**|Indique si les valeurs de la colonne sont calculées : Oui ou Non.|  
         |**Longueur**|**Int**|Longueur de colonne en octets.<br /><br /> Remarque : Si le type de données de colonne est un type de valeur élevée (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**), la valeur sera afficher en tant que -1.|  
-        |**PREC**|**char (** 5 **)**|Précision de la colonne|  
-        |**Échelle**|**char (** 5 **)**|Échelle de la colonne|  
-        |**Nullable**|**varchar (** 35 **)**|Indique si les valeurs NULL sont autorisées dans cette colonne : Oui ou Non.|  
-        |**TrimTrailingBlanks**|**varchar (** 35 **)**|Élimine les vides. Retourne Oui ou Non.|  
-        |**FixedLenNullInSource**|**varchar (** 35 **)**|Pour compatibilité descendante uniquement.|  
+        |**PREC**|**char(** 5 **)**|Précision de la colonne|  
+        |**Échelle**|**char(** 5 **)**|Échelle de la colonne|  
+        |**Nullable**|**varchar(** 35 **)**|Indique si les valeurs NULL sont autorisées dans la colonne : Oui ou Non.|  
+        |**TrimTrailingBlanks**|**varchar(** 35 **)**|Élimine les vides. Retourne Oui ou Non.|  
+        |**FixedLenNullInSource**|**varchar(** 35 **)**|Pour compatibilité descendante uniquement.|  
         |**Classement**|**sysname**|Classement de la colonne. NULL pour les types de données non caractères.|  
   
     -   Jeu de résultats supplémentaire retourné sur des colonnes d'identité :  
@@ -128,26 +127,26 @@ sp_help [ [ @objname = ] 'name' ]
         |Nom de colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|Nom de l’index.|  
-        |**Index_description**|**varchar (** 210 **)**|Description de l'index.|  
-        |**index_keys**|**nvarchar (** 2078 **)**|Noms des colonnes servant de base à l'index. Retourne NULL pour les index columnstores optimisés en mémoire xVelocity.|  
+        |**Index_description**|**varchar(** 210 **)**|Description de l'index.|  
+        |**index_keys**|**nvarchar(** 2078 **)**|Noms des colonnes servant de base à l'index. Retourne NULL pour les index columnstores optimisés en mémoire xVelocity.|  
   
     -   Jeu de résultats supplémentaire retourné sur des contraintes :  
   
         |Nom de colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
-        |**type_contrainte**|**nvarchar (** 146 **)**|Type de contrainte.|  
+        |**constraint_type**|**nvarchar(** 146 **)**|Type de contrainte.|  
         |**constraint_name**|**nvarchar(** 128 **)**|Nom de la contrainte.|  
-        |**delete_action**|**nvarchar (** 9 **)**|Indique si l'action DELETE est : NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT ou N/A.<br /><br /> Uniquement applicable aux contraintes FOREIGN KEY.|  
-        |**update_action**|**nvarchar (** 9 **)**|Indique si l'action UPDATE est : NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT ou N/A.<br /><br /> Uniquement applicable aux contraintes FOREIGN KEY.|  
-        |**status_enabled**|**varchar (** 8 **)**|Indique si la contrainte est activée : Enabled, Disabled ou N/A.<br /><br /> Uniquement applicable aux contraintes CHECK et FOREIGN KEY.|  
-        |**status_for_replication**|**varchar (** 19 **)**|Indique si la contrainte concerne la réplication.<br /><br /> Uniquement applicable aux contraintes CHECK et FOREIGN KEY.|  
-        |**constraint_keys**|**nvarchar (** 2078 **)**|Nom des colonnes qui constituent la contrainte ou, pour les valeurs par défaut ou les règles, le texte qui définit la valeur par défaut ou la règle.|  
+        |**delete_action**|**nvarchar(** 9 **)**|Indique si l'action DELETE est : NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT, ou N/A.<br /><br /> Uniquement applicable aux contraintes FOREIGN KEY.|  
+        |**update_action**|**nvarchar(** 9 **)**|Indique si l'action UPDATE est : NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT, ou N/A.<br /><br /> Uniquement applicable aux contraintes FOREIGN KEY.|  
+        |**status_enabled**|**varchar(** 8 **)**|Indique si la contrainte est activée : Enabled, Disabled, ou N/A.<br /><br /> Uniquement applicable aux contraintes CHECK et FOREIGN KEY.|  
+        |**status_for_replication**|**varchar(** 19 **)**|Indique si la contrainte concerne la réplication.<br /><br /> Uniquement applicable aux contraintes CHECK et FOREIGN KEY.|  
+        |**constraint_keys**|**nvarchar(** 2078 **)**|Nom des colonnes qui constituent la contrainte ou, pour les valeurs par défaut ou les règles, le texte qui définit la valeur par défaut ou la règle.|  
   
     -   Jeu de résultats supplémentaire retourné sur des objets de référence :  
   
         |Nom de colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
-        |**Table est référencée par**|**nvarchar (** 516 **)**|Identifie les autres objets de base de données qui font référence à la table.|  
+        |**Table est référencée par**|**nvarchar(** 516 **)**|Identifie les autres objets de base de données qui font référence à la table.|  
   
     -   Jeu de résultats supplémentaire retourné sur les procédures stockées, les fonctions ou les procédures stockées étendues.  
   
@@ -167,7 +166,7 @@ sp_help [ [ @objname = ] 'name' ]
   
  **sp_help** expose uniquement les colonnes d’index pouvant être ordonnées ; par conséquent, elle n’expose pas d’informations sur les index XML ou spatiaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** . L’utilisateur doit avoir au moins une autorisation *objname*. Pour consulter des clés de contrainte, des valeurs par défaut ou des règles de colonne, vous devez disposer de l'autorisation VIEW DEFINITION sur la table.  
   
 ## <a name="examples"></a>Exemples  
@@ -200,6 +199,6 @@ GO
  [sp_helptrigger &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptrigger-transact-sql.md)   
  [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Sys.sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
+ [sys.sysobjects &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysobjects-transact-sql.md)  
   
   

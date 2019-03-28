@@ -16,12 +16,12 @@ ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08e25ee6f2de589c3d7367c140bd0ea63d4cec1e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 30640cac3b2d8d39ec06d5a05f49c38665b39683
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812966"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537141"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'**_publication_**'**  
- Nom de la publication associée. *publication* est **sysname**, avec NULL comme valeur par défaut. Si **tous les**, tous les abonnements pour toutes les publications de l’abonné spécifié seront annulés. *publication* est un paramètre obligatoire.  
+`[ @publication = ] 'publication'` Est le nom de la publication associée. *publication* est **sysname**, avec NULL comme valeur par défaut. Si **tous les**, tous les abonnements pour toutes les publications de l’abonné spécifié seront annulés. *publication* est un paramètre obligatoire.  
   
- [  **@article=** ] **'**_article_**'**  
- Nom de l'article. *article* est **sysname**, avec NULL comme valeur par défaut. Si **tous les**, spécifié d’abonnements à tous les articles pour chaque publication et abonné sont supprimés. Utilisez **tous les** pour les publications qui autorisent immédiates mis à jour.  
+`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, avec NULL comme valeur par défaut. Si **tous les**, spécifié d’abonnements à tous les articles pour chaque publication et abonné sont supprimés. Utilisez **tous les** pour les publications qui autorisent immédiates mis à jour.  
   
- [  **@subscriber=** ] **'**_subscribe_r **'**  
- Nom de l'Abonné dont les abonnements seront supprimés. *abonné* est **sysname**, sans valeur par défaut. Si **tous les**, tous les abonnements pour tous les abonnés sont supprimés.  
+`[ @subscriber = ] 'subscribe_r'` Est le nom de l’abonné dont ses abonnements supprimés. *abonné* est **sysname**, sans valeur par défaut. Si **tous les**, tous les abonnements pour tous les abonnés sont supprimés.  
   
- [  **@destination_db=** ] **'**_destination_db_**'**  
- Nom de la base de données de destination. *destination_db* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, tous les abonnements de cet Abonné seront supprimés.  
+`[ @destination_db = ] 'destination_db'` Est le nom de la base de données de destination. *destination_db* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, tous les abonnements de cet Abonné seront supprimés.  
   
- [  **@ignore_distributor =** ] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@reserved=** ] **'**_réservé_**'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

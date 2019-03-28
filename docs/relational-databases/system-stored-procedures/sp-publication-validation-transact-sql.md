@@ -16,12 +16,12 @@ ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8612b3713113435461ca59845710b9f7284f1a78
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591403"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537171"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [**@publication=**] **'**_publication »_  
+ [**@publication=**] **'**_publication'_  
  Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
  [**@rowcount_only=**] *rowcount_only*  
@@ -50,9 +50,9 @@ sp_publication_validation [ @publication = ] 'publication'
   
 |Value|Description|  
 |-----------|-----------------|  
-|**0**|Effectue une somme de contrôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Remarque : Lorsqu'un article est filtré horizontalement, l'opération de comptage de ligne est effectuée à la place de l'opération de somme de contrôle.|  
+|**0**|Effectue une somme de contrôle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0.<br /><br /> Remarque : Lorsqu'un article est filtré horizontalement, l'opération de comptage de ligne est effectuée à la place de l'opération de somme de contrôle.|  
 |**1** (par défaut)|Effectue un contrôle du nombre de lignes uniquement.|  
-|**2**|Effectue un comptage du nombre de lignes et une somme de contrôle binaire.<br /><br /> Remarque : Pour les Abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0, seule la validation du nombre de lignes est effectuée.|  
+|**2**|Effectue un comptage du nombre de lignes et une somme de contrôle binaire.<br /><br /> Remarque : Pour les Abonnés [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0, seule la validation du nombre de lignes est effectuée.|  
   
  [**@full_or_fast=**] *full_or_fast*  
  Méthode utilisée pour calculer le nombre de lignes. *full_or_fast* est **tinyint** et peut prendre l’une des valeurs suivantes.  
@@ -63,11 +63,9 @@ sp_publication_validation [ @publication = ] 'publication'
 |**1**|Effectue un comptage de rapide **sysindexes.rows**. Le décompte de lignes [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) est beaucoup plus rapide que le décompte de lignes dans la table réelle. Toutefois, étant donné que [sys.sysindexes](../../relational-databases/system-compatibility-views/sys-sysindexes-transact-sql.md) est tardivement mis à jour, le nombre de lignes peut être inexact.|  
 |**2** (par défaut)|Exécute un décompte rapide conditionnel en essayant d'abord la méthode rapide. Si la méthode rapide affiche des différences, revient à la méthode totale. Si *expected_rowcount* a la valeur NULL et la procédure stockée est en cours d’utilisation pour obtenir la valeur, un Count (\*) complète est toujours utilisée.|  
   
- [  **@shutdown_agent=**] *shutdown_agent*  
- Indique si l'Agent de distribution doit se fermer immédiatement à la fin de la validation. *shutdown_agent* est **bits**, avec une valeur par défaut **0**. Si **0**, l’agent de réplication ne s’arrête pas. Si **1**, l’agent de réplication s’arrête après le dernier article est validé.  
+`[ @shutdown_agent = ] shutdown_agent` Est indique si l’Agent de Distribution doit se fermer immédiatement à l’achèvement de la validation. *shutdown_agent* est **bits**, avec une valeur par défaut **0**. Si **0**, l’agent de réplication ne s’arrête pas. Si **1**, l’agent de réplication s’arrête après le dernier article est validé.  
   
- [ **@publisher** =] **'**_publisher_**'**  
- Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la demande de validation sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  

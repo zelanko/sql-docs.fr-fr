@@ -18,12 +18,12 @@ ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 06e0e3f1f75c95924ec5d2adb52f19c7dae65735
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650427"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536301"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@filename =** ] **'***nom***'**  
- Nom logique des fichiers de la base de données active. *nom* est **sysname**, avec NULL comme valeur par défaut. Si *nom* est ne pas spécifié, les attributs de tous les fichiers dans la base de données en cours sont retournées.  
+`[ @filename = ] 'name'` Est le nom logique des fichiers de la base de données actuelle. *nom* est **sysname**, avec NULL comme valeur par défaut. Si *nom* est ne pas spécifié, les attributs de tous les fichiers dans la base de données en cours sont retournées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -52,14 +51,14 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom de fichier logique.|  
 |**fileid**|**smallint**|Identificateur numérique du fichier. N’est pas renvoyée si *nom* est spécifié *.*|  
-|**filename**|**NCHAR(260)**|Nom de fichier physique.|  
+|**filename**|**nchar(260)**|Nom de fichier physique.|  
 |**filegroup**|**sysname**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Le fichier est un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
 |**size**|**nvarchar(15)**|Taille du fichier en kilo-octets.|  
-|**MaxSize**|**nvarchar(15)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
-|**Croissance**|**nvarchar(15)**|Incrément de croissance du fichier. Cela indique la quantité d’espace ajoutée au fichier chaque fois que ce nouvel espace est nécessaire.<br /><br /> 0 = La taille du fichier est fixe et n'augmente pas.|  
-|**Utilisation**|**varchar (9)**|Pour le fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
+|**maxsize**|**nvarchar(15)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
+|**growth**|**nvarchar(15)**|Incrément de croissance du fichier. Cela indique la quantité d’espace ajoutée au fichier chaque fois que ce nouvel espace est nécessaire.<br /><br /> 0 = La taille du fichier est fixe et n'augmente pas.|  
+|**usage**|**varchar(9)**|Pour le fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

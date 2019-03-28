@@ -18,12 +18,12 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ccc926844f6d3c054a69cb51f3156dc8e186a98
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833577"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538631"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,33 +45,28 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@object_type =**] **'***object_type***'**  
- Type d'informations à retourner. *object_type*est **char (9)**, sans valeur par défaut. *object_type* peuvent être des alertes, qui répertorie les alertes affectées au nom d’opérateur fourni *,* ou OPERATORS, qui répertorie les opérateurs responsables du nom d’alerte fourni *.*  
+`[ @object_type = ] 'object_type'` Le type d’informations à retourner. *object_type*est **char (9)**, sans valeur par défaut. *object_type* peuvent être des alertes, qui répertorie les alertes affectées au nom d’opérateur fourni *,* ou OPERATORS, qui répertorie les opérateurs responsables du nom d’alerte fourni *.*  
   
- [  **@name =**] **'***nom***'**  
- Nom d’opérateur (si *object_type* est OPERATORS) ou un nom de l’alerte (si *object_type* est ALERTS). *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Nom d’opérateur (si *object_type* est OPERATORS) ou un nom de l’alerte (si *object_type* est ALERTS). *nom* est **sysname**, sans valeur par défaut.  
   
- [  **@enum_type =**] **'***type_de_liste***'**  
- Le *object_type*informations qui sont retournées. *type_de_liste* prend la valeur ACTUAL dans la plupart des cas. *type_de_liste*est **char (10)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @enum_type = ] 'enum_type'` Le *object_type*informations qui sont retournées. *type_de_liste* prend la valeur ACTUAL dans la plupart des cas. *type_de_liste*est **char (10)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ACTUAL|Répertorie uniquement les *object_types* associés *nom*.|  
 |ALL|Répertorie tous les*object_types* y compris ceux qui ne sont pas associés *nom*.|  
 |TARGET|Répertorie uniquement les *object_types* correspondant fourni *target_name*, quelle que soit l’association avec*nom*.|  
   
- [  **@notification_method =**] *méthode_de_notification*  
- Valeur numérique qui détermine les colonnes de méthode de notification à retourner. *méthode_de_notification* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
+`[ @notification_method = ] notification_method` Une valeur numérique qui détermine les colonnes de méthode de notification à retourner. *méthode_de_notification* est **tinyint**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Messagerie électronique : retourne uniquement le **use_email** colonne.|  
 |**2**|Radiomessagerie : retourne uniquement le **use_pager** colonne.|  
 |**4**|NetSend : retourne uniquement le **use_netsend** colonne.|  
 |**7**|Tout : retourne toutes les colonnes.|  
   
- [  **@target_name =**] **'***target_name***'**  
- Nom d’alerte à rechercher (si *object_type* est ALERTS) ou un nom d’opérateur à rechercher (si *object_type* est OPERATORS). *target_name* est nécessaire uniquement si *type_de_liste* est la cible. *target_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @target_name = ] 'target_name'` Nom d’alerte à rechercher (si *object_type* est ALERTS) ou un nom d’opérateur à rechercher (si *object_type* est OPERATORS). *target_name* est nécessaire uniquement si *type_de_liste* est la cible. *target_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-valves"></a>Valeur des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -106,7 +101,7 @@ sp_help_notification
 ## <a name="remarks"></a>Notes  
  Cette procédure stockée doit être exécutée à partir de la **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

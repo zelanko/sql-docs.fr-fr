@@ -15,15 +15,15 @@ ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 59e94ef56028c80da3fd04432a2b23997c91a8e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ea08ef15d62f2897fdba5a966d43a639a3fc1efe
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48215649"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538531"
 ---
 # <a name="semantic-search-sql-server"></a>Recherche sémantique (SQL Server)
-  La recherche sémantique statistique donne un éclairage sur des documents non structurés stockés dans des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en extrayant et en indexant des *expressions clés*statistiquement pertinentes. Elle utilise également ces expressions clés pour identifier et indexer des *documents similaires ou connexes*.  
+  La recherche sémantique statistique donne un éclairage sur des documents non structurés stockés dans des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en extrayant et en indexant des *expressions clés* statistiquement pertinentes. Elle utilise également ces expressions clés pour identifier et indexer des *documents similaires ou connexes*.  
   
  Vous pouvez interroger ces index sémantiques à l'aide de trois fonctions d'ensemble de lignes Transact-SQL pour récupérer les résultats sous forme de données structurées.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "48215649"
 ###  <a name="find1"></a> Rechercher des expressions clés dans un Document  
  La requête suivante obtient les expressions clés qui ont été identifiées dans le document témoin. Elle présente les résultats par ordre décroissant du score qui indique l'importance statistique de chaque expression clé. Cette requête appelle la fonction [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql).  
   
-```tsql  
+```sql  
 SET @Title = 'Sample Document.docx'  
   
 SELECT @DocID = DocumentID  
@@ -73,7 +73,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
 ###  <a name="find3"></a> Rechercher des expressions clés qui rendent des Documents similaires ou connexes  
  La requête suivante obtient les expressions clés qui rendent les deux documents témoin similaires ou en rapport avec un autre. Elle présente les résultats par ordre décroissant du score qui indique le poids de chaque expression clé. Cette requête appelle la fonction [semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql).  
   
-```tsql  
+```sql  
 SET @SourceTitle = 'first.docx'  
 SET @MatchedTitle = 'second.docx'  
   
@@ -114,7 +114,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Gérer et surveiller la recherche sémantique](manage-and-monitor-semantic-search.md)  
  Décrit le processus d'indexation sémantique et les tâches associées à l'analyse et à la gestion des index.  
   
-##  <a name="relcontent"></a> Contenu connexe  
+##  <a name="relcontent"></a> Contenu associé  
  [DDL, fonctions, procédures stockées et vues de recherche sémantique](../views/views.md)  
  Répertorie les instructions Transact-SQL et les objets de base de données SQL Server ajoutés ou modifiés pour prendre en charge la recherche sémantique statistique.  
   

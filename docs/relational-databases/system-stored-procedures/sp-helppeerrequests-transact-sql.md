@@ -16,12 +16,12 @@ ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fde5daf72455af7c4c46c9ef19e4975a3f87a2dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802231"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537161"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publication**=] **'***publication***'**  
- om de la publication dans une topologie d'égal à égal pour laquelle des demandes d'état ont été envoyées. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication dans une topologie de peer-to-peer pour laquelle les demandes d’état ont été envoyés. *publication* est **sysname**, sans valeur par défaut.  
   
- [ **@description**=] **'***description***'**  
- Valeur qui peut être utilisé pour identifier les demandes d’état individuelles, ce qui permet vous permettent de filtrer les réponses retournées en fonction de l’utilisateur défini par les informations fournies lors de l’appel [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Description* est **nvarchar (4000)**, avec une valeur par défaut **%**. Toutes les demandes d'état sont par défaut retournées pour la publication. Ce paramètre est utilisé pour retourner uniquement les demandes d’état avec la description correspond à la valeur fournie dans *description*, où les chaînes de caractères sont mises en correspondance avec un [comme &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)clause.  
+`[ @description = ] 'description'` Valeur qui peut être utilisé pour identifier les demandes d’état individuelles, ce qui permet vous permettent de filtrer les réponses retournées en fonction de l’utilisateur défini par les informations fournies lors de l’appel [sp_requestpeerresponse &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md). *Description* est **nvarchar (4000)**, avec une valeur par défaut **%**. Toutes les demandes d'état sont par défaut retournées pour la publication. Ce paramètre est utilisé pour retourner uniquement les demandes d’état avec la description correspond à la valeur fournie dans *description*, où les chaînes de caractères sont mises en correspondance avec un [comme &#40;Transact-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)clause.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   

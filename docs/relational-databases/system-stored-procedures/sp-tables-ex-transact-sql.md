@@ -18,12 +18,12 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f034b1247f9865b83077ed11f644d6fdbbc4cecd
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 5d135b3b4b0f9d63ccd89db04be259f3c7031b7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589384"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538491"
 ---
 # <a name="sptablesex-transact-sql"></a>sp_tables_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,15 @@ sp_tables_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_server=** ] **'**_serveur_de_la_table_**'**  
- Nom du serveur lié pour lequel sont retournées les informations de table. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
+`[ @table_server = ] 'table_server'` Est le nom du serveur lié pour lequel retourner des informations sur la table. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
- [ **,** [  **@table_name=** ] **'**_table_name_**'**]  
- Nom de la table dans laquelle sont retournées les informations de type de données. *table_name*est **sysname**, avec NULL comme valeur par défaut.  
+``[ , [ @table_name = ] 'table_name']`` Est le nom de la table pour laquelle retourner des informations de type de données. *table_name*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_schema=** ] **'**_table_schema_**'**]  
- Schéma de la table. *table_schema*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_schema = ] 'table_schema']` Est le schéma de table. *table_schema*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_catalog=** ] **'**_table_catalog_**'**  
- Est le nom de la base de données dans laquelle le texte spécifié *table_name* réside. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_catalog = ] 'table_catalog'` Est le nom de la base de données dans laquelle le texte spécifié *table_name* réside. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_type=** ] **'**_table_type_**'**  
- Type de la table à retourner. *TABLE_TYPE* est **sysname**, avec NULL comme valeur par défaut et peut avoir l’une des valeurs suivantes.  
+`[ @table_type = ] 'table_type'` Est le type de la table à retourner. *TABLE_TYPE* est **sysname**, avec NULL comme valeur par défaut et peut avoir l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -71,8 +66,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE**|Nom d'une table utilisateur.|  
 |**VIEW**|Nom d'une vue.|  
   
- [  **@fUsePattern=** ] **'**_fUsePattern_**'**  
- Détermine si les caractères **_**, **%**, **[**, et **]** sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
+`[ @fUsePattern = ] 'fUsePattern'` Détermine si les caractères **_**, **%**, **[**, et **]** sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  

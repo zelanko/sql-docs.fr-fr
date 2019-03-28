@@ -9,12 +9,12 @@ ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 435786ca85904cc2164ae2a3983163265465d9d1
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 21b3e52c39cb2e1412a7bba468ffc1017a2438ed
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350560"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536711"
 ---
 # <a name="curvepolygon"></a>CurvePolygon
   Un `CurvePolygon` est une surface topologiquement fermée définie par un anneau englobant extérieur et zéro ou plusieurs anneaux intérieurs.  
@@ -125,29 +125,29 @@ SELECT @g.STIsValid();
 ### <a name="a-instantiating-a-geometry-instance-with-an-empty-curvepolygon"></a>A. Instanciation d'une instance geometry avec un CurvePolygon Vide  
  Cet exemple indique comment créer une instance `CurvePolygon` vide :  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON EMPTY');  
 ```  
   
-### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>b. Déclaration et instanciation d'une instance geometry avec un CurvePolygon dans la même instruction  
+### <a name="b-declaring-and-instantiating-a-geometry-instance-with-a-curvepolygon-in-the-same-statement"></a>B. Déclaration et instanciation d'une instance geometry avec un CurvePolygon dans la même instruction  
  Cet extrait de code indique comment déclarer et initialiser une instance geometry avec un `CurvePolygon` dans la même instruction :  
   
-```tsql  
+```sql  
 DECLARE @g geometry = 'CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))'  
 ```  
   
 ### <a name="c-instantiating-a-geography-instance-with-a-curvepolygon"></a>C. Instanciation d'une instance geography avec un CurvePolygon  
  Cet extrait de code indique comment déclarer et initialiser une instance `geography` avec un `CurvePolygon` :  
   
-```tsql  
+```sql  
 DECLARE @g geography = 'CURVEPOLYGON(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';  
 ```  
   
 ### <a name="d-storing-a-curvepolygon-with-only-an-exterior-bounding-ring"></a>D. Stockage d'un CurvePolygon uniquement avec un anneau englobant extérieur  
  Cet exemple indique comment stocker un cercle simple dans une instance `CurvePolygon` (seul un anneau englobant extérieur est utilisé pour définir le cercle) :  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -156,7 +156,7 @@ SELECT @g.STArea() AS Area;
 ### <a name="e-storing-a-curvepolygon-containing-interior-rings"></a>E. Stockage d'un CurvePolygon contenant des anneaux intérieurs  
  Cet exemple crée une bouée dans une instance `CurvePolygon` (à la fois un anneau englobant extérieur et un anneau intérieur sont utilisés pour définir la bouée) :  
   
-```tsql  
+```sql  
 DECLARE @g geometry;  
 SET @g = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 4, 4 0, 8 4, 4 8, 0 4), CIRCULARSTRING(2 4, 4 2, 6 4, 4 6, 2 4))');  
 SELECT @g.STArea() AS Area;  
@@ -164,7 +164,7 @@ SELECT @g.STArea() AS Area;
   
  Cet exemple montre à la fois une instance `CurvePolygon` valide et une instance non valide lors de l'utilisation d'anneaux intérieurs :  
   
-```tsql  
+```sql  
 DECLARE @g1 geometry, @g2 geometry;  
 SET @g1 = geometry::Parse('CURVEPOLYGON(CIRCULARSTRING(0 5, 5 0, 0 -5, -5 0, 0 5), (-2 2, 2 2, 2 -2, -2 -2, -2 2))');  
 IF @g1.STIsValid() = 1  

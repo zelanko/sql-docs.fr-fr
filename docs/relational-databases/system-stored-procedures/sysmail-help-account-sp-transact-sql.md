@@ -18,12 +18,12 @@ ms.assetid: 87c7c39c-8e05-4e68-9272-45f908809c3b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0798359bedc959e792f56b3d81507329b618f217
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd164f25848d4c6b4f913ca2ddc746d7801fb78
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781327"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536611"
 ---
 # <a name="sysmailhelpaccountsp-transact-sql"></a>sysmail_help_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@account_id** =] *account_id*  
- ID du compte pour lequel les informations seront répertoriées. *account_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @account_id = ] account_id` L’ID de compte du compte à répertorier des informations. *account_id* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nom du compte pour lequel les informations seront répertoriées. *nom_compte* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @account_name = ] 'account_name'` Le nom du compte à répertorier des informations. *nom_compte* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -64,7 +62,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 |**servertype**|**sysname**|Type de serveur de messagerie pour le compte.|  
 |**servername**|**sysname**|Nom du serveur de messagerie pour le compte.|  
 |**port**|**Int**|Numéro de port utilisé par le serveur de messagerie.|  
-|**Nom d’utilisateur**|**nvarchar(128)**|Nom d'utilisateur à utiliser pour se connecter au serveur de messagerie, si ce serveur utilise l'authentification. Lorsque **nom d’utilisateur** est NULL, la messagerie de base de données n’utilise pas l’authentification pour ce compte.|  
+|**username**|**nvarchar(128)**|Nom d'utilisateur à utiliser pour se connecter au serveur de messagerie, si ce serveur utilise l'authentification. Lorsque **nom d’utilisateur** est NULL, la messagerie de base de données n’utilise pas l’authentification pour ce compte.|  
 |**use_default_credentials**|**bit**|Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de type bit, sans valeur par défaut. Lorsque ce paramètre est 1, la messagerie de base de données utilise les informations d’identification de le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. Lorsque ce paramètre est 0, la messagerie de base de données utilise le **@username** et **@password** pour l’authentification sur le serveur SMTP. Si **@username** et **@password** ont la valeur NULL, alors que la messagerie de base de données utilise l’authentification anonyme. Consultez administrateur SMTP avant de spécifier ce paramètre.|  
 |**enable_ssl**|**bit**|Spécifie si la messagerie de base de données chiffre les communications à l'aide de la technologie SSL (Secure Sockets Layer). Utilisez cette option si SSL est obligatoire sur votre serveur SMTP. **enable_ssl** est de type bit, sans valeur par défaut. 1 indique que la messagerie de base de données chiffre les communications au moyen de SSL tandis que la valeur 0 indique qu'elle envoie le courrier sans le chiffrement SSL.|  
   
@@ -73,7 +71,7 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
   
  La procédure stockée **sysmail_help_account_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

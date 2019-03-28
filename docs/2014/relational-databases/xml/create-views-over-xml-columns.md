@@ -9,18 +9,18 @@ ms.topic: conceptual
 helpviewer_keywords:
 - views [XML in SQL Server]
 ms.assetid: eb5f0439-1f69-49c2-8759-e59bda1633b7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 767844d7b195ece286b8f19cc34855bf50185a0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2d1e37f341c0606947b37eb10e8e3123ad410204
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049829"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538364"
 ---
 # <a name="create-views-over-xml-columns"></a>Créer des vues sur les colonnes XML
-  Vous pouvez utiliser un `xml` colonne de type pour créer des vues. L’exemple suivant crée une vue dans laquelle la valeur à partir d’un `xml` colonne de type est récupéré à l’aide de la `value()` méthode de la `xml` type de données.  
+  Vous pouvez utiliser une colonne de type `xml` pour créer des vues. L'exemple suivant crée une vue dans laquelle la valeur d'une colonne de type `xml` est extraite à l'aide de la méthode `value()` du type de données `xml`.  
   
 ```  
 -- Create the table.  
@@ -40,14 +40,14 @@ CREATE VIEW MyView AS
 GO   
 ```  
   
- Exécutez la requête suivante sur la vue :  
+ Exécutez la requête suivante sur la vue :  
   
 ```  
 SELECT *   
 FROM   MyView  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 ProductID   PName        
@@ -55,11 +55,11 @@ ProductID   PName
 1           SomeName   
 ```  
   
- Notez les points suivants sur l’utilisation de la `xml` type de données pour créer des vues :  
+ Notez les points suivants à propos de l'utilisation du type de données `xml` pour créer des vues :  
   
--   Le type de données XML peut être créé dans une vue matérialisée. Il ne peut pas être basé sur une méthode du type de données xml. En revanche, il peut être converti en une collection de schémas XML différente de la colonne de type xml de la table de base.  
+-   Le type de données XML peut être créé dans une vue matérialisée. Il ne peut pas être basé sur une méthode du type de données xml. En revanche, il peut être converti en une collection de schémas XML différente de la colonne de type xml de la table de base.  
   
--   Le `xml` type de données ne peut pas être utilisé dans les vues partitionnées distribuées.  
+-   Le type de données `xml` ne peut pas être utilisé dans les vues partitionnées distribuées.  
   
 -   Les prédicats SQL exécutés contre la vue ne seront pas poussés dans le XQuery de la définition de vue.  
   

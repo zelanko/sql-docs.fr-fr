@@ -18,12 +18,12 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0cf6feb850bbc898d69b01c897d1be295c378566
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d223267bbc181b325343014609525cbb2777881b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763257"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538512"
 ---
 # <a name="sphelpjobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,14 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id =**] *job_id*  
- Numéro d’identification. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'***nom_travail***'**  
- Nom du travail. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Le nom de la tâche. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [ **@session_id** =] *session_id*  
- Identificateur de la session pour laquelle des informations doivent être rapportées. *session_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @session_id = ] session_id` L’id de session à des informations de rapport. *session_id* est **int**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -88,7 +85,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
  En cas de non *nom_travail* ou *job_id* est fourni, répertorie des informations pour tous les travaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres de la **sysadmin** rôle serveur fixe permettre exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

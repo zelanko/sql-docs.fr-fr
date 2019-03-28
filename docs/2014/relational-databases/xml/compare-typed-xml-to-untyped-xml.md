@@ -22,18 +22,18 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a318e2729c6d03770b5d7c8e41412cef182f641a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98cbaa59ea78e0033e9a534915987576347db604
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163059"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538435"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparer du XML typé et du XML non typé
-  Vous pouvez créer des variables, des paramètres et des colonnes du type `xml`. Vous pouvez éventuellement associer une collection de schémas XML avec une variable, un paramètre ou une colonne de `xml` type. Dans ce cas, le `xml` instance de type de données est appelée *typé*. Dans le cas contraire, l'instance XML est dite *non typée*.  
+  Vous pouvez créer des variables, des paramètres et des colonnes du type `xml`. Vous pouvez éventuellement associer une collection de schémas XML à une variable, un paramètre ou une colonne de type `xml`. Dans ce cas, le `xml` instance de type de données est appelée *typé*. Dans le cas contraire, l'instance XML est dite *non typée*.  
   
 ## <a name="well-formed-xml-and-the-xml-data-type"></a>Code XML bien formé et le type de données xml  
  Le type de données `xml` implémente le type de données `xml` de norme ISO. Par conséquent, il peut stocker des documents bien formés en conformité avec XML version 1.0, ainsi que des fragments de contenu XML avec des nœuds de texte et un nombre arbitraire d'éléments de premier niveau dans une colonne XML non typée. Le système vérifie que les données sont bien formées, n'exige pas l'association de schémas XML avec la colonne, puis rejette les données mal formées au sens large. Il peut aussi s'agir de variables et de paramètres XML non typés.  
@@ -46,7 +46,7 @@ ms.locfileid: "48163059"
 -   **Informations sur le type de donnes.** Les schémas fournissent des informations sur les types des attributs et des éléments de l'instance de type de données `xml`. Les informations de type fournissent une sémantique opérationnelle plus précise aux valeurs contenues dans l'instance qu'il n'est possible avec `xml` non typé. Par exemple, des opérations arithmétiques décimales peuvent être effectuées sur une valeur décimale, mais pas sur une chaîne. Grâce à cela, le stockage des données typées XML est considérablement plus compact qu'en cas de code XML non typé.  
   
 ## <a name="choosing-typed-or-untyped-xml"></a>Choix de XML typé ou non typé  
- Utilisation non typée `xml` type de données dans les situations suivantes :  
+ Utilisez le type de données `xml` non typé dans les cas suivants :  
   
 -   Vous n'avez pas de schéma pour vos données XML.  
   
@@ -63,19 +63,19 @@ ms.locfileid: "48163059"
  Des colonnes, paramètres et variables en XML typé peuvent stocker des documents ou du contenu XML. Toutefois, vous devez utiliser un indicateur pour spécifier qu'il s'agit d'un document ou d'un contenu au moment de la déclaration. De plus, vous devez fournir la collection de schémas XML. Spécifiez DOCUMENT si chaque instance XML a un seul et unique élément de premier niveau. Sinon, utilisez CONTENT. Le compilateur de requête utilise l'indicateur DOCUMENT dans les vérifications de type lors de la compilation de la requête pour déduire les éléments singletons de premier niveau.  
   
 ## <a name="creating-typed-xml"></a>Création de XML typé  
- Avant de pouvoir créer typé `xml` variables, paramètres ou colonnes, vous devez tout d’abord inscrire la collection de schémas XML à l’aide de [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Vous pouvez ensuite associer la collection de schémas XML aux variables, paramètres ou colonnes de la `xml` type de données.  
+ Avant de pouvoir créer typé `xml` variables, paramètres ou colonnes, vous devez tout d’abord inscrire la collection de schémas XML à l’aide de [CREATE XML SCHEMA COLLECTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-xml-schema-collection-transact-sql). Vous pouvez ensuite associer la collection de schémas XML aux variables, paramètres ou colonnes typés `xml`.  
   
- Dans les exemples suivants, une convention d'affectation des noms en deux parties est utilisée pour spécifier le nom de la collection de schémas XML. La première partie est le nom du schéma et la deuxième est le nom de la collection de schémas XML.  
+ Dans les exemples suivants, une convention d'affectation des noms en deux parties est utilisée pour spécifier le nom de la collection de schémas XML. La première partie est le nom du schéma et la deuxième est le nom de la collection de schémas XML.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemple : association d'une collection de schémas à une variable de type xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemple : Association d’une Collection de schémas à une Variable de Type xml  
  L’exemple suivant crée un`xml` variable de type et lui associe une collection de schémas. La collection de schémas spécifiée dans l'exemple est déjà importée dans la base de données **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemple: spécification d'un schéma pour une colonne de type xml  
- L’exemple suivant crée une table avec un `xml` colonne de type et spécifie un schéma pour la colonne :  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemple : Spécification d’un schéma pour une colonne de Type xml  
+ L'exemple suivant crée une table avec une colonne de type `xml` et spécifie le schéma correspondant :  
   
 ```  
 CREATE TABLE T1(  
@@ -83,8 +83,8 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Exemple : transmission d'un paramètre de type xml vers une procédure stockée  
- L’exemple suivant passe un `xml` paramètre à une procédure stockée de type et spécifie un schéma pour la variable :  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Exemple : En passant un paramètre de Type xml à une procédure stockée  
+ L'exemple suivant passe un paramètre de type `xml` à une procédure stockée et spécifie un schéma pour la variable :  
   
 ```  
 CREATE PROCEDURE SampleProc   
@@ -97,16 +97,16 @@ AS
   
 -   Une collection de schémas XML est disponible seulement dans la base de données où elle a été inscrite à l'aide de [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql).  
   
--   Si vous transformez une chaîne typées `xml` type de données, l’analyse charge de validation et en tapant, basé sur les espaces de noms du schéma XML dans la collection spécifiée.  
+-   Si vous transformez une chaîne en données typées `xml`, l'analyse se charge de la validation et de l'attribution du type en fonction des espaces de noms du schéma XML de la collection spécifiée.  
   
 -   Vous pouvez convertir des données de `xml` typé en `xml` non typé, et inversement.  
   
- Pour plus d’informations sur d’autres façons de générer du code XML dans SQL Server, consultez [Créer des instances de données XML](create-instances-of-xml-data.md). Une fois que le code XML généré, il peut être affecté à un `xml` type de données variable ou stocké dans `xml` colonnes pour un traitement supplémentaire de type.  
+ Pour plus d’informations sur d’autres façons de générer du code XML dans SQL Server, consultez [Créer des instances de données XML](create-instances-of-xml-data.md). Une fois le code XML généré, il peut être affecté à une variable de type `xml` ou stocké dans des colonnes de type `xml` en vue d'un traitement supplémentaire.  
   
- Dans la hiérarchie de type de données, le `xml` type de données apparaît sous `sql_variant` et les types définis par l’utilisateur, mais avant tout des types intégrés.  
+ Dans la hiérarchie des types de données, le type de données `xml` apparaît après `sql_variant` et les types définis par l'utilisateur, mais avant tout autre type intégré.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemple : définition de facettes pour imposer des contraintes sur une colonne typée xml  
- Pour typées `xml` colonnes, vous pouvez limiter la colonne afin de permettre des éléments uniquement uniques de premier niveau pour chaque instance stockées qu’il contient. Pour cela, vous devez spécifier la facette facultative `DOCUMENT` lors de la création de la table, comme le montre l'exemple suivant :  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemple : Définition de facettes pour contraindre une colonne typée xml  
+ Vous pouvez définir des contraintes sur des colonnes typées `xml` de façon à n'autoriser que des éléments uniques de premier niveau pour chaque instance qui y est stockée. Pour cela, vous devez spécifier la facette facultative `DOCUMENT` lors de la création de la table, comme le montre l'exemple suivant :  
   
 ```  
 CREATE TABLE T(Col1 xml   
@@ -116,7 +116,7 @@ DROP TABLE T;
 GO  
 ```  
   
- Par défaut, les instances stockées dans le texte typé `xml` colonne sont stockés en tant que contenu XML et non comme des documents XML. de façon à autoriser :  
+ Par défaut, les instances stockées dans la colonne typée `xml` sont considérées comme du contenu XML et non comme des documents XML de façon à autoriser :  
   
 -   zéro ou plusieurs éléments de premier niveau ;  
   
@@ -129,7 +129,7 @@ CREATE TABLE T(Col1 xml(CONTENT Production.ProductDescriptionSchemaCollection));
 GO -- Default  
 ```  
   
- Remarquez que vous pouvez spécifier les facettes facultatives DOCUMENT/CONTENT chaque fois que vous définissez le type `xml` (xml typé). Par exemple, lorsque vous créez un typé `xml` variable, vous pouvez ajouter la facette DOCUMENT/CONTENT, comme indiqué dans l’exemple suivant :  
+ Remarquez que vous pouvez spécifier les facettes facultatives DOCUMENT/CONTENT chaque fois que vous définissez le type `xml` (xml typé). Par exemple, lorsque vous créez une variable typée `xml`, vous pouvez ajouter la facette DOCUMENT/CONTENT, comme le montre l'exemple suivant :  
   
 ```  
 declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);  

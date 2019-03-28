@@ -10,17 +10,17 @@ ms.assetid: a8b0bacc-4d2c-42e4-84bf-1a97e0bd385b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1f5febee69483b5f1a2e8aa5b7b48fdde0a7ada2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 61a9b1697b705e56c73a0b610ae426deb288901e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075279"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537711"
 ---
 # <a name="monitoring-and-troubleshooting-merge-for-data-and-delta-file-pairs"></a>Surveiller et dépanner la fusion de paires de fichiers de données et de fichiers delta
   L'OLTP en mémoire utilise une stratégie de fusion pour fusionner des paires de fichiers de données et delta automatiquement. Vous ne pouvez pas désactiver l'activité de fusion.  
   
- Surveillez les paires de fichiers de données et delta, comme suit :  
+ Surveillez les paires de fichiers de données et delta, comme suit :  
   
 -   Comparez la taille du stockage en mémoire à la taille globale du stockage. Si le stockage a une taille disproportionnée, il est possible que la fusion ne se déclenche pas. Pour plus d'informations  
   
@@ -31,7 +31,7 @@ ms.locfileid: "48075279"
   
  Utilisez la requête suivante pour récupérer les informations sur les fichiers de données et delta :  
   
-```tsql  
+```sql  
 select checkpoint_file_id, file_type_desc, internal_storage_slot, file_size_in_bytes, file_size_used_in_bytes,   
 inserted_row_count, deleted_row_count, lower_bound_tsn, upper_bound_tsn   
 from sys.dm_db_xtp_checkpoint_files  
@@ -41,7 +41,7 @@ order by file_type_desc, upper_bound_tsn
   
  Partons du principe que vous avez trouvé trois fichiers de données qui n’ont pas été fusionnés. Utilisez la valeur `lower_bound_tsn` du premier fichier de données et la valeur `upper_bound_tsn` du dernier fichier de données pour émettre la commande suivante :  
   
-```tsql  
+```sql  
 exec sys.sp_xtp_merge_checkpoint_files 'H_DB',  12345, 67890  
 ```  
   

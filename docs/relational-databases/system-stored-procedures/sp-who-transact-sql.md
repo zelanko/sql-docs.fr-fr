@@ -18,12 +18,12 @@ ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d748f06a592283c49d85624c97f4db7afdc188e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dbed86af1415f89a59b7de85061a6db1db324307
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628957"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536342"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame =** ] **'***connexion***'** | *ID de session* | **'ACTIVE'**  
- Permet de filtrer l'ensemble de résultats.  
+`[ @loginame = ] 'login' | session ID | 'ACTIVE'` Permet de filtrer le jeu de résultats.  
   
  *connexion* est **sysname** qui identifie les processus appartenant à une connexion particulière.  
   
@@ -60,11 +59,11 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |colonne|Data type|Description|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|ID de la session.|  
-|**ECID**|**smallint**|ID du contexte d'exécution d'un thread donné associé à un ID de session spécifique.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, où 0 représente toujours la main ou thread parent et {1, 2, 3,... *n*} les sous-threads.|  
+|**ecid**|**smallint**|ID du contexte d'exécution d'un thread donné associé à un ID de session spécifique.<br /><br /> ECID = {0, 1, 2, 3,... *n*}, où 0 représente toujours la main ou thread parent et {1, 2, 3,... *n*} les sous-threads.|  
 |**status**|**nchar(30)**|État du processus Les valeurs possibles sont les suivantes :<br /><br /> **dormant**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] réinitialise la session.<br /><br /> **en cours d’exécution**. La session exécute un ou plusieurs traitements. Lorsque la fonctionnalité MARS (Multiple Active Result Sets) est activée, une session peut exécuter plusieurs traitements. Pour plus d’informations, consultez [Utilisation de MARS &#40;Multiple Active Result Sets&#41;](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).<br /><br /> **arrière-plan**. La session exécute une tâche en arrière-plan, telle qu'une détection de blocage.<br /><br /> **restauration**. Un processus d'annulation est en cours dans la session.<br /><br /> **en attente**. La session attend qu'un thread de travail soit disponible.<br /><br /> **exécutable**. La tâche de la session figure dans la file d'attente exécutable d'un planificateur lors de l'attente de l'obtention d'un quantum.<br /><br /> **spinloop**. La tâche de la session attend qu'un verrouillage total de l'UC se libère.<br /><br /> **suspendu**. La session attend la fin d'un événement, tel qu'une E/S.|  
-|**nom de connexion**|**nchar(128)**|Nom de connexion associé à ce processus particulier|  
-|**Nom d’hôte**|**nchar(128)**|Nom de l'hôte ou de l'ordinateur pour chaque processus|  
-|**blk**|**char (5)**|ID de session du processus bloquant, s'il en existe un. Dans les autres cas, cette colonne a la valeur NULL.<br /><br /> Lorsqu'une transaction associée à un ID de session spécifié est bloquée par une transaction distribuée orpheline, cette colonne renvoie la valeur « -2 » pour la transaction orpheline qui bloque.|  
+|**loginame**|**nchar(128)**|Nom de connexion associé à ce processus particulier|  
+|**hostname**|**nchar(128)**|Nom de l'hôte ou de l'ordinateur pour chaque processus|  
+|**blk**|**char(5)**|ID de session du processus bloquant, s'il en existe un. Dans les autres cas, cette colonne a la valeur NULL.<br /><br /> Lorsqu'une transaction associée à un ID de session spécifié est bloquée par une transaction distribuée orpheline, cette colonne renvoie la valeur « -2 » pour la transaction orpheline qui bloque.|  
 |**dbname**|**nchar(128)**|Base de données dont se sert le processus|  
 |**cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] commande ([!INCLUDE[tsql](../../includes/tsql-md.md)] instruction, interne [!INCLUDE[ssDE](../../includes/ssde-md.md)] processus et ainsi de suite) l’exécution pour le processus.|  
 |**request_id**|**Int**|ID des demandes s'exécutant dans une session spécifique|  
@@ -78,7 +77,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  Requête la **is_user_process** colonne de sys.dm_exec_sessions pour séparer les processus système des processus utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW SERVER STATE sur le serveur pour voir toutes les sessions en cours d'exécution dans l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Dans le cas contraire, l'utilisateur ne voit que la session en cours.  
   
 ## <a name="examples"></a>Exemples  

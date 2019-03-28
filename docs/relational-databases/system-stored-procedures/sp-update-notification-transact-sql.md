@@ -18,12 +18,12 @@ ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6a612506b4efa34e9f47511789d792e3116f8b91
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea326db0d0e093e4d6371d0dda10a4b9faccc572
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817541"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536030"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,13 @@ sp_update_notification
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@alert_name =**] **'***alerte***'**  
- Nom de l'alerte associée à cette notification. *alerte* est **sysname**, sans valeur par défaut.  
+`[ @alert_name = ] 'alert'` Le nom de l’alerte associée à cette notification. *alerte* est **sysname**, sans valeur par défaut.  
   
- [  **@operator_name =**] **'***opérateur***'**  
- Opérateur qui sera notifié au déclenchement de l'alerte. *opérateur* est **sysname**, sans valeur par défaut.  
+`[ @operator_name = ] 'operator'` L’opérateur qui sera notifié lorsque l’alerte se produit. *opérateur* est **sysname**, sans valeur par défaut.  
   
- [  **@notification_method =**] *notification*  
- Méthode utilisée pour avertir l'opérateur. *notification*est **tinyint**, sans valeur par défaut et peut prendre une ou plusieurs des valeurs suivantes.  
+`[ @notification_method = ] notification` La méthode utilisée pour avertir l’opérateur. *notification*est **tinyint**, sans valeur par défaut et peut prendre une ou plusieurs des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1**|Messagerie électronique|  
 |**2**|Radiomessagerie|  
@@ -68,7 +65,7 @@ sp_update_notification
   
  Vous pouvez mettre à jour une notification pour un opérateur qui ne dispose pas d’informations d’adresse nécessaires à l’aide de la *méthode_de_notification*. En cas d'échec de l'envoi d'une notification par courrier électronique ou par radiomessagerie, l'échec est consigné dans le journal des erreurs de l'Agent Microsoft SQL Server.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, les utilisateurs doivent avoir le **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

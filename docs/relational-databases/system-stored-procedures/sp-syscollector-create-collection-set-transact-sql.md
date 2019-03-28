@@ -19,12 +19,12 @@ ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3fc1e3d8db223173fcd5d9ac55f608ddeffa3aa3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be818ed92a3c5a7f9522a6142f5acc815077bd10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688247"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536911"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,16 +56,13 @@ sp_syscollector_create_collection_set
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name =** ] '*nom*'  
- Est le nom de l’ensemble de la collection. *nom* est **sysname** et ne peut pas être une chaîne vide ou NULL.  
+`[ @name = ] 'name'` Est le nom de l’ensemble de la collection. *nom* est **sysname** et ne peut pas être une chaîne vide ou NULL.  
   
  *nom* doit être unique. Pour obtenir une liste de noms de jeux d'éléments de collecte actuels, interrogez la vue système syscollector_collection_sets.  
   
- [  **@target =** ] '*cible*'  
- Réservé pour un usage ultérieur. *nom* est **nvarchar (128)** avec une valeur par défaut NULL.  
+`[ @target = ] 'target'` Réservé pour une utilisation ultérieure. *nom* est **nvarchar (128)** avec une valeur par défaut NULL.  
   
- [  **@collection_mode =** ] *collection_mode*  
- Spécifie la manière dont les données sont recueillies et stockées. *collection_mode* est **smallint** et peut avoir l’une des valeurs suivantes :  
+`[ @collection_mode = ] collection_mode` Spécifie le mode dans lequel les données sont collectées et stockées. *collection_mode* est **smallint** et peut avoir l’une des valeurs suivantes :  
   
  0 - Mode mis en cache. La collecte et le téléchargement de données sont sur des planifications séparées. Spécifiez le mode mis en cache pour la collecte continue.  
   
@@ -73,25 +70,19 @@ sp_syscollector_create_collection_set
   
  La valeur par défaut *collection_mode* est 0. Lorsque *collection_mode* est 0, *schedule_uid* ou *nom_de_la_planification* doit être spécifié.  
   
- [  **@days_until_expiration =** ] *days_until_expiration*  
- Est le nombre de jours pendant lesquels les données collectées sont enregistrées dans l’entrepôt de données de gestion. *days_until_expiration* est **smallint** avec une valeur par défaut de 730 (deux ans). *days_until_expiration* doit être 0 ou un entier positif.  
+`[ @days_until_expiration = ] days_until_expiration` Est le nombre de jours pendant lesquels les données collectées sont enregistrées dans l’entrepôt de données de gestion. *days_until_expiration* est **smallint** avec une valeur par défaut de 730 (deux ans). *days_until_expiration* doit être 0 ou un entier positif.  
   
- [  **@proxy_id =** ] *proxy_id*  
- Identificateur unique pour un compte d'Agent proxy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *proxy_id* est **int** avec une valeur par défaut NULL. Si spécifié, *proxy_name* doit être NULL. Pour obtenir *proxy_id*, interrogez la table système sysproxies. Le rôle de base de données fixe dc_admin doit avoir l'autorisation d'accéder au proxy. Pour plus d’informations, consultez [créer un Proxy de l’Agent SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
+`[ @proxy_id = ] proxy_id` Est l’identificateur unique pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte d’Agent proxy. *proxy_id* est **int** avec une valeur par défaut NULL. Si spécifié, *proxy_name* doit être NULL. Pour obtenir *proxy_id*, interrogez la table système sysproxies. Le rôle de base de données fixe dc_admin doit avoir l'autorisation d'accéder au proxy. Pour plus d’informations, consultez [créer un Proxy de l’Agent SQL Server](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
   
- [  **@proxy_name =** ] '*proxy_name*'  
- Nom du compte proxy. *proxy_name* est **sysname** avec une valeur par défaut NULL. Si spécifié, *proxy_id* doit être NULL. Pour obtenir *proxy_name*, interrogez la table système sysproxies.  
+`[ @proxy_name = ] 'proxy_name'` Est le nom du compte proxy. *proxy_name* est **sysname** avec une valeur par défaut NULL. Si spécifié, *proxy_id* doit être NULL. Pour obtenir *proxy_name*, interrogez la table système sysproxies.  
   
- [  **@schedule_uid =** ] '*schedule_uid*'  
- GUID qui pointe vers une planification. *schedule_uid* est **uniqueidentifier** avec une valeur par défaut NULL. Si spécifié, *nom_de_la_planification* doit être NULL. Pour obtenir *schedule_uid*, interrogez la table système sysschedules.  
+`[ @schedule_uid = ] 'schedule_uid'` Est le GUID qui pointe vers une planification. *schedule_uid* est **uniqueidentifier** avec une valeur par défaut NULL. Si spécifié, *nom_de_la_planification* doit être NULL. Pour obtenir *schedule_uid*, interrogez la table système sysschedules.  
   
  Lorsque *collection_mode* est définie sur 0, *schedule_uid* ou *nom_de_la_planification* doit être spécifié. Lorsque *collection_mode* est défini sur 1, *schedule_uid* ou *nom_de_la_planification* est ignoré si spécifié.  
   
- [  **@schedule_name =** ] '*nom_de_la_planification*'  
- Est le nom de la planification. *nom_de_la_planification* est **sysname** avec une valeur par défaut NULL. Si spécifié, *schedule_uid* doit être NULL. Pour obtenir *nom_de_la_planification*, interrogez la table système sysschedules.  
+`[ @schedule_name = ] 'schedule_name'` Est le nom de la planification. *nom_de_la_planification* est **sysname** avec une valeur par défaut NULL. Si spécifié, *schedule_uid* doit être NULL. Pour obtenir *nom_de_la_planification*, interrogez la table système sysschedules.  
   
- [  **@logging_level =** ] *logging_level*  
- Niveau de journalisation. *logging_level* est **smallint** avec l’une des valeurs suivantes :  
+`[ @logging_level = ] logging_level` Est le niveau de journalisation. *logging_level* est **smallint** avec l’une des valeurs suivantes :  
   
  0 - informations de l'exécution du journal et événements [!INCLUDE[ssIS](../../includes/ssis-md.md)] qui effectuent le suivi des éléments suivants :  
   
@@ -113,14 +104,11 @@ sp_syscollector_create_collection_set
   
  La valeur par défaut *logging_level* est 1.  
   
- [  **@description =** ] '*description*'  
- Description du jeu d'éléments de collecte. *Description* est **nvarchar (4000)** avec une valeur par défaut NULL.  
+`[ @description = ] 'description'` Est la description de l’ensemble de la collection. *Description* est **nvarchar (4000)** avec une valeur par défaut NULL.  
   
- [ **@collection_set_id =** ] *collection_set_id*  
- Identificateur local unique pour le jeu d'éléments de collecte. *collection_set_id* est **int** avec une sortie et est obligatoire.  
+`[ @collection_set_id = ] collection_set_id` Est l’identificateur local unique pour l’ensemble de la collection. *collection_set_id* est **int** avec une sortie et est obligatoire.  
   
- [  **@collection_set_uid =** ] '*collection_set_uid*'  
- GUID pour le jeu d'éléments de collecte. *collection_set_uid* est **uniqueidentifier** avec une sortie avec une valeur par défaut NULL.  
+`[ @collection_set_uid = ] 'collection_set_uid'` Est le GUID pour l’ensemble de la collection. *collection_set_uid* est **uniqueidentifier** avec une sortie avec une valeur par défaut NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -128,7 +116,7 @@ sp_syscollector_create_collection_set
 ## <a name="remarks"></a>Notes  
  sp_syscollector_create_collection_set doit être exécuté dans le contexte de la base de données système msdb.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

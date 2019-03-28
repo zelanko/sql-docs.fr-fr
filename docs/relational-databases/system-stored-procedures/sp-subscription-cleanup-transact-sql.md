@@ -16,12 +16,12 @@ ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 74154300cd85e18d17c3f8c6499acb2f331bcdbf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e59a60279f4efa74ef21863212f75761eee99b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759781"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537861"
 ---
 # <a name="spsubscriptioncleanup-transact-sql"></a>sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_subscription_cleanup [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=**] **'***publisher***'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- Nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publication=**] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, les abonnements utilisant une publication d'Agent partagé dans la base de données de publication sont supprimés.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, les abonnements utilisant une publication d'Agent partagé dans la base de données de publication sont supprimés.  
   
- [  **@reserved=**] **'***réservé***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

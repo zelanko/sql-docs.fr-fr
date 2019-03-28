@@ -10,12 +10,12 @@ ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 2abd6a00944e862644b1d62019c24677e6c95d51
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b7df393f26523991abafded74ded242390cb0e3b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124469"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538392"
 ---
 # <a name="migrating-triggers"></a>Migration de déclencheurs
   Cette rubrique présente les déclencheurs DDL et DML et les tables mémoire optimisées.  
@@ -40,7 +40,7 @@ ms.locfileid: "48124469"
   
  La base de données contient les objets suivants, définis dans un script en tant qu'instructions CREATE TABLE, CREATE TRIGGER et CREATE PROCEDURE :  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null primary key,  
@@ -98,7 +98,7 @@ GO
   
  Les objets suivants sont fonctionnellement équivalents à l'état de prémigration :  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 1048576),  

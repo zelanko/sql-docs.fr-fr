@@ -18,12 +18,12 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: eeff4b38e3736241e0dd56729e42c5e7207f310f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b7bf2a2e589a7e3dc69ee805f1958dad4cbecb8c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591803"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538561"
 ---
 # <a name="spupdateschedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,20 +56,15 @@ sp_update_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@schedule_id =** ] *id_de_la_planification*  
- Identificateur de la planification à modifier. *id_de_la_planification* est **int**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié.  
+`[ @schedule_id = ] schedule_id` Identificateur de la planification à modifier. *id_de_la_planification* est **int**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié.  
   
- [  **@name =** ] **'**_nom_de_la_planification_**'**  
- Nom de la planification à modifier. *nom_de_la_planification*est **sysname**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié.  
+`[ @name = ] 'schedule_name'` Le nom de la planification à modifier. *nom_de_la_planification*est **sysname**, sans valeur par défaut. Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié.  
   
- [ **@new_name**=] *nouveau_nom*  
- Nouveau nom de la planification. *new_name* est **sysname**, avec NULL comme valeur par défaut. Lorsque *nouveau_nom* est NULL, le nom de la planification reste inchangé.  
+`[ @new_name = ] new_name` Le nouveau nom pour la planification. *new_name* est **sysname**, avec NULL comme valeur par défaut. Lorsque *nouveau_nom* est NULL, le nom de la planification reste inchangé.  
   
- [  **@enabled =** ] *activé*  
- Indique l'état actuel de la planification. *activé*est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, la planification n’est pas activée. Si la planification n'est pas activée, aucun travail n'est exécuté dans cette dernière.  
+`[ @enabled = ] enabled` Indique l’état actuel de la planification. *activé*est **tinyint**, avec une valeur par défaut **1** (activé). Si **0**, la planification n’est pas activée. Si la planification n'est pas activée, aucun travail n'est exécuté dans cette dernière.  
   
- [ **@freq_type =** ] *freq_type*  
- Valeur indiquant à quel moment un travail doit être exécuté. *freq_type*est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
+`[ @freq_type = ] freq_type` Une valeur qui indique quand un travail doit être exécuté. *freq_type*est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -81,12 +76,11 @@ sp_update_schedule
 |**64**|Lancé au démarrage du service SQLServerAgent|  
 |**128**|Exécution pendant une période d'inactivité de l'ordinateur.|  
   
- [  **@freq_interval =** ] *freq_interval*  
- Les jours d’exécution du travail. *freq_interval* est **int**, avec une valeur par défaut **0**et dépend de la valeur de *freq_type*.  
+`[ @freq_interval = ] freq_interval` Les jours d’exécution du travail. *freq_interval* est **int**, avec une valeur par défaut **0**et dépend de la valeur de *freq_type*.  
   
 |Valeur de *freq_type*|Effet sur *freq_interval*|  
 |---------------------------|--------------------------------|  
-|**1** (une fois)|*freq_interval* n’est pas utilisé.|  
+|**1** (once)|*freq_interval* n’est pas utilisé.|  
 |**4** (quotidienne)|Chaque *freq_interval* jours.|  
 |**8** (hebdomadaire)|*freq_interval* prend une ou plusieurs des opérations suivantes (combinées avec un **OR** opérateur logique) :<br /><br /> **1** = dimanche<br /><br /> **2** = lundi<br /><br /> **4** = mardi<br /><br /> **8** = mercredi<br /><br /> **16** = jeudi<br /><br /> **32** = vendredi<br /><br /> **64** = samedi|  
 |**16** (mensuellement)|Sur le *freq_interval* jour du mois.|  
@@ -94,8 +88,7 @@ sp_update_schedule
 |**64** (démarrage de service SQLServerAgent)|*freq_interval* n’est pas utilisé.|  
 |**128**|*freq_interval* n’est pas utilisé.|  
   
- [ **@freq_subday_type =** ] *freq_subday_type*  
- Spécifie les unités pour *freq_subday_interval **.* *freq_subday_type*est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
+`[ @freq_subday_type = ] freq_subday_type` Spécifie les unités pour *freq_subday_interval **.* *freq_subday_type*est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description (unité)|  
 |-----------|--------------------------|  
@@ -104,11 +97,9 @@ sp_update_schedule
 |**0x4**|Minutes|  
 |**0x8**|Heures|  
   
- [  **@freq_subday_interval =** ] *freq_subday_interval*  
- Le nombre de *freq_subday_type* périodes entre chaque exécution d’un travail. *freq_subday_interval*est **int**, avec une valeur par défaut **0**.  
+`[ @freq_subday_interval = ] freq_subday_interval` Le nombre de *freq_subday_type* périodes entre chaque exécution d’un travail. *freq_subday_interval*est **int**, avec une valeur par défaut **0**.  
   
- [ **@freq_relative_interval =** ] *freq_relative_interval*  
- Occurrence d’un travail de *freq_interval* chaque mois, si *freq_interval* est **32** (fréquence mensuelle relative). *freq_relative_interval*est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
+`[ @freq_relative_interval = ] freq_relative_interval` Occurrence d’un travail de *freq_interval* chaque mois, si *freq_interval* est **32** (fréquence mensuelle relative). *freq_relative_interval*est **int**, avec une valeur par défaut **0**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description (unité)|  
 |-----------|--------------------------|  
@@ -118,28 +109,21 @@ sp_update_schedule
 |**8**|Quatrième|  
 |**16**|Dernière|  
   
- [ **@freq_recurrence_factor =** ] *freq_recurrence_factor*  
- Nombre de semaines ou de mois devant s'écouler entre chaque exécution planifiée d'un travail. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**, ou **32**. *freq_recurrence_factor*est **int**, avec une valeur par défaut **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor` Le nombre de semaines ou de mois entre chaque exécution d’une tâche planifiée. *freq_recurrence_factor* est utilisé uniquement si *freq_type* est **8**, **16**, ou **32**. *freq_recurrence_factor*est **int**, avec une valeur par défaut **0**.  
   
- [ **@active_start_date =** ]  *active_start_date*  
- La date à laquelle l’exécution d’un travail peut commencer. *active_start_date*est **int**, avec NULL comme valeur par défaut, ce qui indique la date d’aujourd'hui. La date est au format AAAAMMJJ. Si *active_start_date* n’est pas NULL, la date doit être supérieure ou égale à 19900101.  
+`[ @active_start_date = ] active_start_date` La date à laquelle l’exécution d’un travail peut commencer. *active_start_date*est **int**, avec NULL comme valeur par défaut, ce qui indique la date d’aujourd'hui. La date est au format AAAAMMJJ. Si *active_start_date* n’est pas NULL, la date doit être supérieure ou égale à 19900101.  
   
  Après avoir créé la planification, examinez la date de début et assurez-vous qu'elle est correcte. Pour plus d’informations, consultez la section « Planification des Date de début » dans [créer et attacher les planifications de travaux](../../ssms/agent/create-and-attach-schedules-to-jobs.md).  
   
- [  **@active_end_date =** ] *active_end_date*  
- Date à laquelle l'exécution d'un travail peut s'arrêter. *active_end_date*est **int**, avec une valeur par défaut **99991231**, ce qui indique le 31 décembre 9999. La mise en forme est la suivante : AAAAMMJJ.  
+`[ @active_end_date = ] active_end_date` La date à laquelle l’exécution d’un travail peut s’arrêter. *active_end_date*est **int**, avec une valeur par défaut **99991231**, ce qui indique le 31 décembre 9999. La mise en forme est la suivante : AAAAMMJJ.  
   
- [  **@active_start_time =** ] *heure_de_début_active*  
- L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution d’un travail. *heure_de_début_active*est **int**, avec une valeur par défaut 000000, ce qui indique 12:00:00 a.m. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @active_start_time = ] active_start_time` L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour commencer l’exécution d’un travail. *heure_de_début_active*est **int**, avec une valeur par défaut 000000, ce qui indique 12:00:00 a.m. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [  **@active_end_time =** ] *heure_fin_active*  
- L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour arrêter l’exécution d’un travail. *heure_fin_active*est **int**, avec une valeur par défaut **235959**, ce qui indique à 11:59:59 P.M. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
+`[ @active_end_time = ] active_end_time` L’heure sur n’importe quel jour entre *active_start_date* et *active_end_date* pour arrêter l’exécution d’un travail. *heure_fin_active*est **int**, avec une valeur par défaut **235959**, ce qui indique à 11:59:59 P.M. sur une horloge de 24 heures. Elle doit être au format HHMMSS.  
   
- [ **@owner_login_name**=] **'**_owner_login_name_**'**]  
- Nom du principal de serveur qui détient la planification. *owner_login_name* est **sysname**, avec NULL comme valeur par défaut, ce qui indique que la planification est détenue par le créateur.  
+`[ @owner_login_name = ] 'owner_login_name']` Le nom du principal de serveur qui détient la planification. *owner_login_name* est **sysname**, avec NULL comme valeur par défaut, ce qui indique que la planification est détenue par le créateur.  
   
- [  **@automatic_post =**] *envoi_automatique*  
- Réservé.  
+`[ @automatic_post = ] automatic_post` Réservé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

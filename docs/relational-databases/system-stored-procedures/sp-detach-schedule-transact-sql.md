@@ -18,12 +18,12 @@ ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409dec92a6dbfe9c4dd2c8cef1d81b2aa7f21d91
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a66591f5cc2eefcf60a9ea9b0a584a61c215df85
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52536381"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537571"
 ---
 # <a name="spdetachschedule-transact-sql"></a>sp_detach_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,26 +43,21 @@ sp_detach_schedule
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id=** ] *job_id*  
- Numéro d'identification du travail à partir duquel supprimer la planification. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Le numéro d’identification du travail à supprimer de la planification. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'**_nom_travail_**'**  
- Nom du travail à partir duquel supprimer la planification. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Le nom du travail à supprimer de la planification. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@schedule_id=** ] *id_de_la_planification*  
- Numéro d'identification de la planification à supprimer du travail. *id_de_la_planification* est **int**, avec NULL comme valeur par défaut.  
+`[ @schedule_id = ] schedule_id` Le numéro d’identification de planification de la planification à supprimer du travail. *id_de_la_planification* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@schedule_name=** ] **'**_nom_de_la_planification_**'**  
- Nom de la planification à supprimer du travail. *nom_de_la_planification* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @schedule_name = ] 'schedule_name'` Le nom de la planification à supprimer du travail. *nom_de_la_planification* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *id_de_la_planification* ou *nom_de_la_planification* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
- Spécifie si les planifications de travail inutilisées doivent être supprimées. *delete_unused_schedule* est **bits**, avec une valeur par défaut **0**, ce qui signifie que toutes les planifications sont conservées, même si aucun travail ne référencez-les. Si la valeur **1**, les planifications de travail inutilisées sont supprimées si aucun travail n’y fait référence.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Spécifie s’il faut supprimer les planifications de travail inutilisées. *delete_unused_schedule* est **bits**, avec une valeur par défaut **0**, ce qui signifie que toutes les planifications sont conservées, même si aucun travail ne référencez-les. Si la valeur **1**, les planifications de travail inutilisées sont supprimées si aucun travail n’y fait référence.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

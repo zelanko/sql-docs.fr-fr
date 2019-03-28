@@ -16,12 +16,12 @@ ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 087bb377be29db42f4e58ede6cfb0a823459501b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 63a3ff2cdb075dc8ce48aaa6c6951458d12710b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747551"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538151"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,23 +44,17 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publisher** =] **'***publisher***'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL est valide si la procédure stockée est exécutée sur le serveur de publication. Si la procédure stockée est exécutée sur l'Abonné, un serveur de publication doit être spécifié.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL est valide si la procédure stockée est exécutée sur le serveur de publication. Si la procédure stockée est exécutée sur l'Abonné, un serveur de publication doit être spécifié.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Nom de la base de données de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL est valide si la procédure stockée est exécutée dans la base de données de publication du serveur de publication. Si la procédure stockée est exécutée sur l'Abonné, un serveur de publication doit être spécifié.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL est valide si la procédure stockée est exécutée dans la base de données de publication du serveur de publication. Si la procédure stockée est exécutée sur l'Abonné, un serveur de publication doit être spécifié.  
   
- [ **@publication** =] **'***publication***'**  
- Nom de la publication. *publication*est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication*est **sysname**, sans valeur par défaut.  
   
- [ **@subscriber** =] **'***abonné***'**  
- Nom de l'Abonné. *abonné* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL est valide si la procédure stockée est exécutée sur l'Abonné. Si la procédure stockée est exécutée sur le serveur de publication, un Abonné doit être spécifié.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL est valide si la procédure stockée est exécutée sur l'Abonné. Si la procédure stockée est exécutée sur le serveur de publication, un Abonné doit être spécifié.  
   
- [ **@subscriber_db** =] **'***bd_abonné***'**  
- Est le nom de la base de données d’abonnement. *l’argument subscription_db* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL est valide si la procédure stockée est exécutée dans la base de données d'abonnement de l'Abonné. Si la procédure stockée est exécutée sur le serveur de publication, un Abonné doit être spécifié.  
+`[ @subscriber_db = ] 'subscriber_db'` Est le nom de la base de données d’abonnement. *l’argument subscription_db* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL est valide si la procédure stockée est exécutée dans la base de données d'abonnement de l'Abonné. Si la procédure stockée est exécutée sur le serveur de publication, un Abonné doit être spécifié.  
   
- [ **@resync_type** =] *resync_type*  
- Indique quand la resynchronisation doit démarrer. *resync_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @resync_type = ] resync_type` Définit quand la resynchronisation doit démarrer. *resync_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -68,8 +62,7 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|La synchronisation démarre à partir de la dernière validation réussie. Toutes les générations nouvelles ou incomplètes effectuées depuis la dernière validation réussie sont réappliquées à l'Abonné.|  
 |**2**|La synchronisation démarre à partir de la date définie *resync_date_str*. Toutes les générations nouvelles ou incomplètes effectuées depuis la date sont réappliquées à l'Abonné.|  
   
- [  **@resync_date_str=**] *resync_date_string*  
- Définit la date de début de la resynchronisation. *resync_date_string* est **nvarchar (30)**, avec NULL comme valeur par défaut. Ce paramètre est utilisé lorsque le *resync_type* est une valeur de **2**. La date définie est convertie en son équivalent **datetime** valeur.  
+`[ @resync_date_str = ] resync_date_string` Définit la date lorsque la resynchronisation doit démarrer. *resync_date_string* est **nvarchar (30)**, avec NULL comme valeur par défaut. Ce paramètre est utilisé lorsque le *resync_type* est une valeur de **2**. La date définie est convertie en son équivalent **datetime** valeur.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

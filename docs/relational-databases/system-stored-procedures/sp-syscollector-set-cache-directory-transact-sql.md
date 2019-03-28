@@ -19,12 +19,12 @@ ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 825291445c0d31df8230793c3a5d6a1b7f272082
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 300a59bb09fa28a626b117f51cfa6509b5ca883e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726767"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538641"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@cache_directory =** ] **'***cache_directory***'**  
- Répertoire du système de fichiers où les données collectées sont stockées temporairement. *cache_directory* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si aucune valeur n'est spécifiée, le répertoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] temporaire par défaut est utilisé.  
+`[ @cache_directory = ] 'cache_directory'` Le répertoire du système de fichiers où les données collectées sont stockées temporairement. *cache_directory* est **nvarchar (255)**, avec NULL comme valeur par défaut. Si aucune valeur n'est spécifiée, le répertoire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] temporaire par défaut est utilisé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -52,7 +51,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
   
  Le répertoire spécifié n'a pas besoin d'exister au moment où le sp_syscollector_set_cache_directory est exécuté ; toutefois, les données ne peuvent pas être correctement mises en cache et téléchargées tant que le répertoire n'a pas été créé. Nous vous recommandons de créer le répertoire avant d'exécuter cette procédure stockée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

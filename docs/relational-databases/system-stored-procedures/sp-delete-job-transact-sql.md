@@ -18,12 +18,12 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e56bfe08d9279408cc7bdbc4b57a9719a04946fb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b5ccd47f2b702c998a9e9268db523da1bfceaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857053"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536681"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,25 +43,20 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id=** ] *job_id*  
- Numéro d'identification du travail à supprimer. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Est le numéro d’identification du travail à supprimer. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***nom_travail***'**  
- Nom du travail à supprimer. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Est le nom du travail à supprimer. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail*doit être spécifié ; ne peut pas être spécifiés.  
   
- [  **@originating_server=** ] **'***server***»**  
- À usage interne uniquement.  
+`[ @originating_server = ] 'server'` Pour un usage interne.  
   
- [  **@delete_history=** ] *delete_history*  
- Spécifie s'il faut supprimer l'historique du travail. *delete_history* est **bits**, avec une valeur par défaut **1**. Lorsque *delete_history* est **1**, l’historique des travaux pour le travail sont supprimé. Lorsque *delete_history* est **0**, l’historique des travaux ne sont pas supprimé.  
+`[ @delete_history = ] delete_history` Spécifie s’il faut supprimer l’historique du travail. *delete_history* est **bits**, avec une valeur par défaut **1**. Lorsque *delete_history* est **1**, l’historique des travaux pour le travail sont supprimé. Lorsque *delete_history* est **0**, l’historique des travaux ne sont pas supprimé.  
   
  Notez que lorsqu’un travail est supprimé et l’historique n’est pas supprimé, les informations d’historique pour le travail ne seront pas visibles dans le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent utilisateur graphique historique de l’interface, mais les informations seront trouvent toujours dans le **sysjobhistory**de table dans le **msdb** base de données.  
   
- [ **@delete_unused_schedule=** ] *delete_unused_schedule*  
- Indique s'il faut supprimer les planifications associées à ce travail si aucun autre travail n'y fait référence. *delete_unused_schedule* est **bits**, avec une valeur par défaut **1**. Lorsque *delete_unused_schedule* est **1**, les planifications associées à ce travail sont supprimées si aucun autre travail fait référence à la planification. Lorsque *delete_unused_schedule* est **0**, les planifications ne sont pas supprimées.  
+`[ @delete_unused_schedule = ] delete_unused_schedule` Spécifie si supprimer les planifications associées à ce travail si elles ne sont pas attachées à aucun autre travail. *delete_unused_schedule* est **bits**, avec une valeur par défaut **1**. Lorsque *delete_unused_schedule* est **1**, les planifications associées à ce travail sont supprimées si aucun autre travail fait référence à la planification. Lorsque *delete_unused_schedule* est **0**, les planifications ne sont pas supprimées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -78,7 +73,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Cette procédure stockée ne peut pas supprimer les plans de maintenance ni les travaux relevant de plans de maintenance. Pour supprimer les plans de maintenance, vous devez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

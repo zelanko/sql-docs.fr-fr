@@ -16,12 +16,12 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 29fcbe7f5e7b2b7e72c88390df9d5fe20c0f7352
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812031"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536701"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,20 +40,17 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname=**] **'***dbname***'**  
- Nom de la base de données. *dbname* est **sysname**, avec une valeur par défaut **%**. Si **%**, puis le jeu de résultats contient toutes les bases de données sur le serveur de publication, sinon seules les informations sur la base de données spécifiée sont retournées. Aucune information n'est retournée sur les bases de données pour lesquelles l'utilisateur ne possède pas les autorisations appropriées, comme décrit ci-dessous.  
+`[ @dbname = ] 'dbname'` Est le nom de la base de données. *dbname* est **sysname**, avec une valeur par défaut **%**. Si **%**, puis le jeu de résultats contient toutes les bases de données sur le serveur de publication, sinon seules les informations sur la base de données spécifiée sont retournées. Aucune information n'est retournée sur les bases de données pour lesquelles l'utilisateur ne possède pas les autorisations appropriées, comme décrit ci-dessous.  
   
- [  **@type=**] **'***type***'**  
- Restreint le jeu de résultats aux seules les bases de données sur lequel l’option de réplication spécifié *type* valeur a été activée. *type* est **sysname**, et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Restreint le jeu de résultats aux seules les bases de données sur lequel l’option de réplication spécifié *type* valeur a été activée. *type* est **sysname**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**publier**|Réplication transactionnelle autorisée.|  
+|**publish**|Réplication transactionnelle autorisée.|  
 |**publication de fusion**|Réplication de fusion autorisée.|  
 |**réplication autorisée** (valeur par défaut)|Réplication autorisée, qu'elle soit transactionnelle ou de fusion.|  
   
- [  **@reserved=** ] *réservé*  
- Spécifie si des informations sur les publications et les abonnements existants sont retournées. *réservé* est **bits**, valeur par défaut est 0. Si **1**, le jeu de résultats inclut des informations selon que la base de données spécifié dispose des publications ou abonnements existants.  
+`[ @reserved = ] reserved` Spécifie si les informations sur les abonnements et les publications existantes sont retournées. *réservé* est **bits**, valeur par défaut est 0. Si **1**, le jeu de résultats inclut des informations selon que la base de données spécifié dispose des publications ou abonnements existants.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -63,8 +60,8 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |**id**|**Int**|Identificateur de la base de données.|  
 |**transpublish**|**bit**|Si la base de données a été activée pour la publication transactionnelle ou d’instantané sachant que la valeur **1** signifie que la publication transactionnelle ou instantané est activée.|  
 |**mergepublish**|**bit**|Si la base de données a été activée pour la fusion de publication ; sachant que la valeur **1** signifie que la publication de fusion est activée.|  
-|**DBOwner**|**bit**|Si l’utilisateur est membre de la **db_owner** fixe le rôle de base de données ; où la valeur **1** indique que l’utilisateur est un membre de ce rôle.|  
-|**peut entraîner**|**bit**|Est si la base de données est marquée comme étant en lecture seule ; sachant que la valeur **1** signifie que la base de données est en lecture seule.|  
+|**dbowner**|**bit**|Si l’utilisateur est membre de la **db_owner** fixe le rôle de base de données ; où la valeur **1** indique que l’utilisateur est un membre de ce rôle.|  
+|**dbreadonly**|**bit**|Est si la base de données est marquée comme étant en lecture seule ; sachant que la valeur **1** signifie que la base de données est en lecture seule.|  
 |**haspublications**|**bit**|Indique si la base de données présente toutes les publications existantes ; sachant que la valeur **1** signifie qu’il existe des publications existantes.|  
 |**haspullsubscriptions**|**bit**|Indique si la base de données présente des abonnements par extraction existants ; sachant que la valeur **1** signifie qu’il existe des abonnements par extraction.|  
   

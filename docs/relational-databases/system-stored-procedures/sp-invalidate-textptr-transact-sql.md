@@ -18,12 +18,12 @@ ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9075b653b6cdb9baec70a182b560201efcb6c965
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724267"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538191"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@TextPtrValue=** ] *textptr_value*  
- Indique le pointeur de texte dans la ligne à invalider. *textptr_value* est **varbinary (** 16 **)**, avec NULL comme valeur par défaut. Si NULL, **sp_invalidate_textptr** invalide tous les pointeurs de texte dans la ligne de la transaction.  
+`[ @TextPtrValue = ] textptr_value` Est le pointeur de texte dans la ligne à invalider. *textptr_value* est **varbinary (** 16 **)**, avec NULL comme valeur par défaut. Si NULL, **sp_invalidate_textptr** invalide tous les pointeurs de texte dans la ligne de la transaction.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -51,7 +50,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
   
  Pour plus d’informations sur l’option text in row, consultez [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="see-also"></a>Voir aussi  

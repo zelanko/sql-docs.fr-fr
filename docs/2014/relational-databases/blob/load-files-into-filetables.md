@@ -14,12 +14,12 @@ ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 560fab599098d1f9e5fae76d42c274ad9a5fb144
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 04f32e1f1d0bc67e567a2a4d30779f13af6c68a6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507800"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536023"
 ---
 # <a name="load-files-into-filetables"></a>Charger des fichiers dans FileTables
   Explique comment charger ou migrer des fichiers dans FileTables.  
@@ -30,7 +30,7 @@ ms.locfileid: "52507800"
 |Emplacement actuel des fichiers|Options de migration|  
 |-------------------------------|---------------------------|  
 |Les fichiers sont actuellement stockés dans le système de fichiers.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'a aucune connaissance des fichiers.|Étant donné qu'un FileTable s'affiche en tant que dossier dans le système de fichiers Windows, vous pouvez charger facilement des fichiers dans un nouveau FileTable en faisant appel à l'une des méthodes disponibles pour le déplacement ou la copie de fichiers. Ces méthodes incluent l'Explorateur Windows, les options de ligne de commande, notamment xcopy et robocopy, ainsi que les applications ou les scripts personnalisés.<br /><br /> Il est impossible de convertir un dossier existant en FileTable.|  
-|Les fichiers sont actuellement stockés dans le système de fichiers.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une table de métadonnées qui contient des pointeurs sur les fichiers.|La première étape consiste à déplacer ou à copier les fichiers à l'aide de l'une des méthodes indiquées ci-dessus.<br /><br /> La deuxième étape consiste à mettre à jour la table de métadonnées existante de sorte qu'elle pointe sur le nouvel emplacement des fichiers.<br /><br /> Pour plus d’informations, consultez [exemple : Migration de fichiers du système de fichiers dans un FileTable](#HowToMigrateFiles) dans cette rubrique.|  
+|Les fichiers sont actuellement stockés dans le système de fichiers.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contient une table de métadonnées qui contient des pointeurs sur les fichiers.|La première étape consiste à déplacer ou à copier les fichiers à l'aide de l'une des méthodes indiquées ci-dessus.<br /><br /> La deuxième étape consiste à mettre à jour la table de métadonnées existante de sorte qu'elle pointe sur le nouvel emplacement des fichiers.<br /><br /> Pour plus d’informations, consultez [Exemple : Migration de fichiers du système de fichiers dans un FileTable](#HowToMigrateFiles) dans cette rubrique.|  
   
 ###  <a name="HowToLoadNew"></a> Comment : Charger des fichiers dans un FileTable  
  Voici quelques-unes des méthodes que vous pouvez appliquer pour charger des fichiers dans un FileTable :  
@@ -54,7 +54,7 @@ ms.locfileid: "52507800"
   
 3.  Corrigez les métadonnées dans la table `PhotoMetadata`, en utilisant un code similaire à ce qui suit :  
   
-```tsql  
+```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  
   

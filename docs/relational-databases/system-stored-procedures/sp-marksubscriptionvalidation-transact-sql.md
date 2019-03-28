@@ -16,12 +16,12 @@ ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e49099c2bf0ecd7974531c9f1b840e77805cf218
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: aad2574457285208b47af26d0729c725a22c05b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131349"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536891"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publication**=] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [ **@subscriber**=] **'***abonné***'**  
- Nom de l'Abonné. *abonné* est de type sysname, sans valeur par défaut.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est de type sysname, sans valeur par défaut.  
   
- [  **@destination_db=**] **'***destination_db***'**  
- Nom de la base de données de destination. *destination_db* est **sysname**, sans valeur par défaut.  
+`[ @destination_db = ] 'destination_db'` Est le nom de la base de données de destination. *destination_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé pour une publication qui appartienne à un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  

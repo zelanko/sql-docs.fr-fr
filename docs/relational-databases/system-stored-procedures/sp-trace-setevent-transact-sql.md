@@ -18,12 +18,12 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cae733bf78928ccd83550adc8a4b525f6a996189
-ms.sourcegitcommit: 1e7ec3b11f25d469163bdc9096a475411eacf79a
+ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53266100"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538581"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_trace_setevent [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@traceid=** ] *trace_id*  
- ID de la trace à modifier. *trace_id* est **int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur à identifier, modifier et contrôler la trace.  
+`[ @traceid = ] trace_id` Est l’ID de la trace à modifier. *trace_id* est **int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur à identifier, modifier et contrôler la trace.  
   
- [  **@eventid=** ] *event_id*  
- ID de l'événement à activer. *event_id* est **int**, sans valeur par défaut.  
+`[ @eventid = ] event_id` Est l’ID de l’événement à activer. *event_id* est **int**, sans valeur par défaut.  
   
  Ce tableau répertorie les événements qui peuvent être ajoutés ou supprimés d'une trace.  
   
@@ -239,8 +237,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |218|Plan Guide Unsuccessful|Indique que SQL Server n'a pas pu produire un plan d'exécution pour une requête ou un lot qui contenait un repère de plan. SQL Server a tenté de générer un plan d'exécution pour cette requête ou ce lot sans appliquer le repère de plan. Un repère de plan non valide peut être à l'origine de ce problème. Vous pouvez valider le repère de plan à l'aide de la fonction système sys.fn_validate_plan_guide.|  
 |235|Audit Fulltext||  
   
- [  **@columnid=** ] *column_id*  
- ID de la colonne à ajouter pour l'événement. *column_id* est **int**, sans valeur par défaut.  
+`[ @columnid = ] column_id` Est l’ID de la colonne à ajouter pour l’événement. *column_id* est **int**, sans valeur par défaut.  
   
  Le tableau suivant répertorie les colonnes qui peuvent être ajoutées pour un événement.  
   
@@ -274,7 +271,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|**ServerName**|Nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], soit *nom_serveur* ou *servername\instancename*, tracée.|  
 |27|**EventClass**|Type de classe d'événement actuellement enregistrée.|  
 |28|**ObjectType**|Type d'objet : table, fonction ou procédure stockée, par exemple.|  
-|29|**NestLevel**|Niveau d'imbrication où s'exécute la procédure stockée. Consultez [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|Niveau d'imbrication où s'exécute la procédure stockée. See [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**État**|État du serveur, en cas d'erreur.|  
 |31|**Erreur**|Numéro d’erreur.|  
 |32|**Mode**|Mode de verrouillage du verrou acquis. Cette colonne n’est pas remplie par le **verrou : publié** événement.|  
@@ -311,7 +308,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|Hachage 64 bits basé sur le texte d'une requête ad hoc ou sur l'ID de base de données et d'objet d'un objet SQL. Cette valeur peut être transmise à **sys.dm_exec_sql_text()** pour récupérer le texte SQL associé.|  
 |64|**SessionLoginName**|Nom de connexion de l'utilisateur à l'origine de la session. Par exemple, si vous vous connectez à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de **Login1** et que vous exécutez une instruction en tant que **Login2**, **SessionLoginName** affiche **Login1**, tandis que **LoginName** affiche **Login2**. Cette colonne de données affiche les noms de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et Windows.|  
   
- **[ @on=]** *sur*  
+ **[ @on=]** *on*  
  Indique si l'événement doit être activé, ON (1) ou désactivé, OFF (0). *sur* est **bits**, sans valeur par défaut.  
   
  Si *sur* a la valeur **1**, et *column_id* est NULL, puis l’événement est défini sur ON et toutes les colonnes sont effacées. Si *column_id* n’est pas null, la colonne est définie sur ON pour cet événement.  

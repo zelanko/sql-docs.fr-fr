@@ -16,12 +16,12 @@ ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5cdd5f3b4c4c1dd8ddac0df34423834c3b09b839
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 45c61b33a7cc1669ae34f7888fda1450524b079b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131239"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58536820"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =** ] **'**_publication_**'**  
- Nom de la publication. *publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@property =** ] **'**_propriété_**'**  
- Propriété de publication à modifier. *propriété* est **nvarchar (255)**.  
+`[ @property = ] 'property'` Est la propriété de publication à modifier. *propriété* est **nvarchar (255)**.  
   
- [  **@value =** ] **'**_valeur_**'**  
- Nouvelle valeur de la propriété. *valeur* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @value = ] 'value'` Est la nouvelle valeur de propriété. *valeur* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
  Le tableau ci-dessous décrit les propriétés modifiables de la publication et les limites liées aux valeurs de ces propriétés.  
   
@@ -81,7 +78,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|La publication ne prend pas en charge les Abonnés non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**enabled_for_internet**|**true**|La publication est activée pour Internet, et le protocole FTP peut être utilisé pour le transfert des fichiers d'instantané vers un abonné. Les fichiers de synchronisation de la publication sont placés dans le répertoire suivant : C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp. *ftp_address* ne peut pas être NULL. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**false**|La publication n'est pas activée pour Internet. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**enabled_for_p2p**|**true**|La publication prend en charge la réplication d'égal à égal. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /> Pour définir **enabled_for_p2p** à **true**, les restrictions suivantes s’appliquent :<br /> - **allow_anonymous** doit être **false**<br /> - **allow_dts** doit être **false**.<br /> - **allow_initialize_from_backup** doit être **true**<br /> - **allow_queued_tran** doit être **false**.<br /> - **allow_sync_tran** doit être **false**.<br /> - **enabled_for_het_sub** doit être **false**.<br /> - **independent_agent** doit être **true**.<br /> - **repl_freq** doit être **continue**.<br /> - **replicate_ddl** doit être **1**.|  
+|**enabled_for_p2p**|**true**|La publication prend en charge la réplication d'égal à égal. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /> Pour définir **enabled_for_p2p** à **true**, les restrictions suivantes s’appliquent :<br /> - **allow_anonymous** doit être **false**<br /> - **allow_dts** doit être **false**.<br /> - **allow_initialize_from_backup** doit être **true**<br /> - **allow_queued_tran** doit être **false**.<br /> - **allow_sync_tran** doit être **false**.<br /> - **enabled_for_het_sub** doit être **false**.<br /> - **independent_agent** must be **true**.<br /> - **repl_freq** doit être **continue**.<br /> - **replicate_ddl** doit être **1**.|  
 ||**false**|La publication ne prend pas en charge la réplication d'égal à égal. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ftp_address**||Emplacement accessible par FTP des fichiers d'instantané de la publication. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ftp_login**||Nom d'utilisateur permettant la connexion au service FTP ; la valeur ANONYMOUS est autorisée. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -98,9 +95,9 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**pre_snapshot_script**||Spécifie l'emplacement d'un fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] que l'Agent de distribution exécute avant l'application de tous les autres scripts et données d'objet répliqués au cours d'une synchronisation initiale.|  
 |**publish_to_ActiveDirectory**|**true**|Ce paramètre est déconseillé et il n'est pris en charge que pour la compatibilité descendante des scripts. Vous ne pouvez plus ajouter d'informations de publication à [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory.|  
 ||**false**|Supprime les informations de publication d'Active Directory.|  
-|**queue_type**|**sql**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions. Cette propriété ne peut être modifiée qu'en l'absence d'abonnements actifs.<br /><br /> Remarque : La prise en charge de l'utilisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing a été arrêtée. La valeur **msmq** pour *valeur* entraîne une erreur.|  
-|**repl_freq**|**continue**|Publie la sortie de toutes les transactions enregistrées dans le journal.|  
-||**Capture instantanée**|Publie uniquement les événements de synchronisation planifiés.|  
+|**queue_type**|**sql**|Utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions. Cette propriété ne peut être modifiée qu'en l'absence d'abonnements actifs.<br /><br /> Remarque : La prise en charge de l'utilisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing a été arrêtée. La valeur **msmq** pour *valeur* entraîne une erreur.|  
+|**repl_freq**|**continuous**|Publie la sortie de toutes les transactions enregistrées dans le journal.|  
+||**snapshot**|Publie uniquement les événements de synchronisation planifiés.|  
 |**replicate_ddl**|**1**|Les instructions DDL (Data Definition Language) exécutées sur le serveur de publication sont répliquées. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 ||**0**|Les instructions DDL ne sont pas répliquées. Cette propriété ne peut pas être modifiée pour les publications non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La réplication des modifications de schéma ne peut pas être désactivée lorsque la réplication d'égal à égal est utilisée.|  
 |**replicate_partition_switch**|**true**|ALTER TABLE... Instructions SWITCH qui sont exécutées sur la base de données publiée doivent être répliquées aux abonnés. Cette option est valide uniquement si *allow_partition_switch* est définie sur TRUE. Pour plus d’informations, consultez [Répliquer des tables et des index partitionnés](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md).|  
@@ -108,30 +105,28 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**retention**||**int** représentant la période de rétention, en heures, pour l’activité d’abonnement. Si un abonnement n'est pas actif durant la période de rétention, il est supprimé.|  
 |**snapshot_in_defaultfolder**|**true**|Les fichiers d'instantané sont stockés dans le dossier d'instantané par défaut. Si *alt_snapshot_folder*est également spécifié, les fichiers d’instantanés sont stockés dans le par défaut et les autres emplacements.|  
 ||**false**|Fichiers d’instantané sont stockés dans l’emplacement secondaire spécifié par *alt_snapshot_folder*.|  
-|**status**|**Active**|Les données de publication sont disponibles immédiatement pour les Abonnés lors de la création de la publication. Non pris en charge pour les serveurs de publication Oracle.|  
-||**inactif**|Les données de publication ne sont pas disponibles pour les Abonnés lors de la création de la publication. Non pris en charge pour les serveurs de publication Oracle.|  
+|**status**|**active**|Les données de publication sont disponibles immédiatement pour les Abonnés lors de la création de la publication. Non pris en charge pour les serveurs de publication Oracle.|  
+||**inactive**|Les données de publication ne sont pas disponibles pour les Abonnés lors de la création de la publication. Non pris en charge pour les serveurs de publication Oracle.|  
 |**sync_method**|**native**|Utilise la copie en bloc en mode natif de toutes les tables lors de la synchronisation des abonnements.|  
 ||**character**|Utilise la copie en bloc en mode caractère de toutes les tables lors de la synchronisation des abonnements.|  
-||**simultanées**|Utilise la copie en bloc en mode natif de toutes les tables, mais ne verrouille pas les tables au cours de l'instantané. Non valide pour la réplication d'instantané.|  
+||**concurrent**|Utilise la copie en bloc en mode natif de toutes les tables, mais ne verrouille pas les tables au cours de l'instantané. Non valide pour la réplication d'instantané.|  
 ||**concurrent_c**|Utilise la copie en bloc en mode caractère de toutes les tables, mais ne verrouille pas les tables au cours du processus de génération de l'instantané. Non valide pour la réplication d'instantané.|  
-|**ID de tâche**||Cette propriété est déconseillée et n'est plus prise en charge.|  
+|**taskid**||Cette propriété est déconseillée et n'est plus prise en charge.|  
 |**allow_drop**|**true**|Permet de `DROP TABLE` DLL prennent en charge pour les articles qui font partie de la réplication transactionnelle. Version prise en charge minimale : [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 ou version ultérieure et [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] Service Pack 1 ou version ultérieure. Référence supplémentaire : [KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
 ||**false**|Désactive `DROP TABLE` DLL prennent en charge pour les articles qui font partie de la réplication transactionnelle. Il s’agit du **par défaut** valeur de cette propriété.|
 |**NULL** (valeur par défaut)||Retourne la liste des valeurs prises en charge pour *propriété*.|  
   
-[ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
- Signale que l'action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirme que l’action entreprise par cette procédure stockée peut invalider un instantané existant. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   - **0** Spécifie que les modifications de l’article n’invalident pas l’instantané n’est pas valide. Si la procédure stockée détecte que la modification requiert un nouvel instantané, une erreur se produit et aucune modification n'est effectuée.  
   - **1** Spécifie que les modifications apportées à l’article peuvent invalider l’instantané n’est pas valide. Si certains abonnements existants nécessitent un nouvel instantané, cette valeur autorise le marquage de l'instantané existant comme obsolète, et la génération d'un nouvel instantané.   
 Consultez la section Remarques pour connaître les propriétés dont la modification nécessite la génération d'un nouvel instantané.  
   
-[ **@force_reinit_subscription =** ] *àce_reinit_subscription*  
+[**@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirme que l’action entreprise par cette procédure stockée peut nécessiter la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits** avec une valeur par défaut **0**.  
   - **0** Spécifie que les modifications de l’article n’invalident pas l’abonnement à réinitialiser. Si la procédure stockée détecte que la modification nécessite la réinitialisation des abonnements existants, une erreur se produit et aucune modification n'est effectuée.  
   - **1** indique que les modifications de l’article entraînent l’abonnement existant d’être réinitialisés et autorise la réinitialisation des abonnements se produise.  
   
-[ **@publisher** =] **'**_publisher_**'**  
- Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
   > [!NOTE]  
   >  *serveur de publication* ne doit pas être utilisé lors de la modification des propriétés de l’article sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  

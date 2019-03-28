@@ -18,12 +18,12 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14702941897ebfec4b8646f8015a659f370e31ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c02660752e2b461a24eed6df8aa31416b5c4bfd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856977"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538171"
 ---
 # <a name="spresynctargetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@server_name =**] **'***server***»**  
- Nom du serveur à resynchroniser. *server* est de type **sysname**et n'a pas de valeur par défaut. Si **tous les** est spécifié, tous les serveurs cibles sont resynchronisés.  
+`[ @server_name = ] 'server'` Le nom du serveur à resynchroniser. *server* est de type **sysname**et n'a pas de valeur par défaut. Si **tous les** est spécifié, tous les serveurs cibles sont resynchronisés.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -53,7 +52,7 @@ sp_resync_targetserver
 ## <a name="remarks"></a>Notes  
  **sp_resync_targetserver** supprime l’ensemble actuel des instructions pour le serveur cible et publie un nouveau jeu pour le serveur cible à télécharger. Le nouveau jeu se compose d'une instruction de suppression de tous les travaux multiserveur, suivie d'une instruction d'insertion de chaque travail visant actuellement le serveur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution de cette procédure sont accordées par défaut aux membres du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

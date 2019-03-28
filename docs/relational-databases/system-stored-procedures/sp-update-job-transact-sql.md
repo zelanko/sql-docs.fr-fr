@@ -18,12 +18,12 @@ ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5fd6986a245d960a96592c8c63c9744b741fa5ff
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119686"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537851"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,65 +57,48 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id =**] *job_id*  
- Numéro d'identification du travail à mettre à jour. *job_id*est **uniqueidentifier**.  
+`[ @job_id = ] job_id` Le numéro d’identification du travail à mettre à jour. *job_id*est **uniqueidentifier**.  
   
- [  **@job_name =**] **'***nom_travail***'**  
- Nom du travail. *job_name* est **nvarchar (128)**.  
+`[ @job_name = ] 'job_name'` Le nom de la tâche. *job_name* est **nvarchar (128)**.  
   
-> **Remarque :** soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+> **REMARQUE :** Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [  **@new_name =**] **'***nouveau_nom***'**  
- Nouveau nom du travail. *new_name* est **nvarchar (128)**.  
+`[ @new_name = ] 'new_name'` Le nouveau nom pour le travail. *new_name* est **nvarchar (128)**.  
   
- [  **@enabled =**] *activé*  
- Spécifie si le travail est activé (**1**) ou désactivée (**0**). *activé* est **tinyint**.  
+`[ @enabled = ] enabled` Spécifie si le travail est activé (**1**) ou désactivée (**0**). *activé* est **tinyint**.  
   
- [  **@description =**] **'***description***'**  
- Description du travail. *Description* est **nvarchar (512)**.  
+`[ @description = ] 'description'` Description du travail. *description* is **nvarchar(512)**.  
   
- [ **@start_step_id =**] *step_id*  
- Numéro d'identification de la première étape à exécuter pour le travail. *l’argument id_étape* est **int**.  
+`[ @start_step_id = ] step_id` Le numéro d’identification de la première étape à exécuter pour la tâche. *l’argument id_étape* est **int**.  
   
- [  **@category_name =**] **'***catégorie***'**  
- La catégorie du travail. *catégorie* est **nvarchar (128)**.  
+`[ @category_name = ] 'category'` La catégorie du travail. *catégorie* est **nvarchar (128)**.  
   
- [  **@owner_login_name =**] **'***connexion***'**  
- Nom du compte de connexion propriétaire du travail. *connexion* est **nvarchar (128)** seuls les membres de la **sysadmin** rôle serveur fixe peut modifier l’appartenance des travaux.  
+`[ @owner_login_name = ] 'login'` Le nom de la connexion propriétaire du travail. *connexion* est **nvarchar (128)** seuls les membres de la **sysadmin** rôle serveur fixe peut modifier l’appartenance des travaux.  
   
- [  **@notify_level_eventlog =**] *niveau_journal_événements*  
- Indique le moment auquel une entrée doit être ajoutée pour ce travail dans le journal des applications Microsoft Windows. *niveau_journal_événements*est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @notify_level_eventlog = ] eventlog_level` Spécifie le moment auquel une entrée dans le journal des applications Microsoft Windows pour ce travail. *niveau_journal_événements*est **int**, et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description (action)|  
+|Value|Description (action)|  
 |-----------|----------------------------|  
 |**0**|Never|  
 |**1**|Si succès|  
 |**2**|Si échec|  
 |**3**|Always|  
   
- [  **@notify_level_email =**] *niveau_courrier_électronique*  
- Indique le moment où un message électronique doit être envoyé à la fin de ce travail. *niveau_courrier_électronique*est **int**. *niveau_courrier_électronique*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @notify_level_email = ] email_level` Spécifie à quel moment envoyer un message électronique à l’achèvement de ce travail. *niveau_courrier_électronique*est **int**. *niveau_courrier_électronique*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
- [  **@notify_level_netsend =**] *niveau_message_réseau*  
- Indique le moment où un message doit être envoyé sur le réseau à la fin de ce travail. *niveau_message_réseau*est **int**. *niveau_message_réseau*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @notify_level_netsend = ] netsend_level` Spécifie à quel moment envoyer un message réseau une fois la fin de ce travail. *niveau_message_réseau*est **int**. *niveau_message_réseau*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
- [  **@notify_level_page =**] *niveau_page*  
- Indique le moment où un message par radiomessagerie doit être envoyé à la fin de ce travail. *niveau_page* est **int**. *niveau_page*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @notify_level_page = ] page_level` Spécifie à quel moment envoyer une page à la fin de ce travail. *niveau_page* est **int**. *niveau_page*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
- [  **@notify_email_operator_name =**] **'***nom_opérateur***'**  
- Le nom de l’opérateur auquel le message électronique est envoyé une fois *niveau_courrier_électronique* est atteinte. *nom_adresse* est **nvarchar (128)**.  
+`[ @notify_email_operator_name = ] 'operator_name'` Le nom de l’opérateur auquel le message électronique est envoyé une fois *niveau_courrier_électronique* est atteinte. *nom_adresse* est **nvarchar (128)**.  
   
- [ **@notify_netsend_operator_name =**] **'***netsend_operator***'**  
- Nom de l'opérateur auquel le message est envoyé par réseau. *opérateur_message_réseau* est **nvarchar (128)**.  
+`[ @notify_netsend_operator_name = ] 'netsend_operator'` Le nom de l’opérateur auquel le message réseau est envoyé. *netsend_operator* is **nvarchar(128)**.  
   
- [  **@notify_page_operator_name =**] **'***opérateur_page***'**  
- Nom de l'opérateur auquel un message par radiomessagerie est envoyé. *opérateur_page* est **nvarchar (128)**.  
+`[ @notify_page_operator_name = ] 'page_operator'` Le nom de l’opérateur auquel une page est envoyée. *opérateur_page* est **nvarchar (128)**.  
   
- [ **@delete_level =**] *delete_level*  
- Indique le moment où le travail doit être supprimé. *delete_leve*est **int**. *niveau_suppression*utilise les mêmes valeurs que *niveau_journal_événements*.  
+`[ @delete_level = ] delete_level` Spécifie à quel moment supprimer le travail. *delete_leve*est **int**. *niveau_suppression*utilise les mêmes valeurs que *niveau_journal_événements*.  
   
- [  **@automatic_post =**] *envoi_automatique*  
- Réservé.  
+`[ @automatic_post = ] automatic_post` Réservé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -125,7 +108,7 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
  **sp_update_job** modifie uniquement les paramètres pour le paramètre auquel les valeurs sont fournies. Si un paramètre est manquant, la valeur actuelle est retenue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

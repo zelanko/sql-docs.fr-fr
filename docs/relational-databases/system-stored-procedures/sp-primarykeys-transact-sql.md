@@ -18,12 +18,12 @@ ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 484890cfe30ace1c65ea45fe2d9e447a6396b52e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 91b3956f37830d66d6680452b452f2d928551beb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591453"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537121"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,17 +43,13 @@ sp_primarykeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_server =** ] **'**_serveur_table '_  
- Nom du serveur lié à partir duquel sont retournées les informations de clé primaire. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
+`[ @table_server = ] 'table_server'_` Est le nom du serveur lié à partir duquel retourner les informations de clé primaire. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
- [  **@table_name =** ] **'**_table_name_**'**  
- Nom de la table pour laquelle les informations de clé primaire sont demandées. *table_name*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_name = ] 'table_name'` Est le nom de la table pour laquelle les informations de clé primaire. *table_name*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_schema =** ] **'**_table_schema_**'**  
- Schéma de la table. *table_schema* est **sysname**, avec NULL comme valeur par défaut. Dans l'environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ceci correspond au propriétaire de la table.  
+`[ @table_schema = ] 'table_schema'` Est le schéma de table. *table_schema* est **sysname**, avec NULL comme valeur par défaut. Dans l'environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ceci correspond au propriétaire de la table.  
   
- [  **@table_catalog =** ] **'**_table_catalog_**'**  
- Est le nom du catalogue dans lequel spécifié *table_name* réside. Dans l'environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cet argument correspond au nom de la base de données. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_catalog = ] 'table_catalog'` Est le nom du catalogue dans lequel spécifié *table_name* réside. Dans l'environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cet argument correspond au nom de la base de données. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  

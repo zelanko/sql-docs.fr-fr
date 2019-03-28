@@ -19,12 +19,12 @@ ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 909f85ee78348ac81822b5ebbd09a98b121bb76d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e7f36eb20b4a5f72ce980f8e35cb39580f4f5142
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738317"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58537181"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@collector_type_uid =** ] **'***collector_type_uid***'**  
- Est le GUID pour le type de collecteur. *collector_type_uid* est **uniqueidentifier** et doit avoir une valeur si *nom* est NULL.  
+`[ @collector_type_uid = ] 'collector_type_uid'` Est le GUID pour le type de collecteur. *collector_type_uid* est **uniqueidentifier** et doit avoir une valeur si *nom* est NULL.  
   
- [  **@name =** ] **'***nom***'**  
- Nom du type de collecteur. *nom* est **sysname** et doit avoir une valeur si *collector_type_uid* a la valeur NULL.  
+`[ @name = ] 'name'` Est le nom du type de collecteur. *nom* est **sysname** et doit avoir une valeur si *collector_type_uid* a la valeur NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -56,7 +54,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
   
  Cette procédure lèvera une erreur si les éléments de ce type de collection existent.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **dc_admin** (avec autorisation EXECUTE) rôle fixe de base de données pour exécuter cette procédure.  
   
 ## <a name="example"></a>Exemple  
