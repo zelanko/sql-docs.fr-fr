@@ -18,12 +18,12 @@ ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d6df698f13298bf290ad1a0cb9e94ccac0bfce3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596417"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538571"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,21 +47,18 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@IndexNamePattern=**] **'***table_or_index_name***'**  
- Spécifie le nom qualifié ou non qualifié d'une table ou d'un index défini par l'utilisateur. *table_or_index_name* est **nvarchar(1035)**, sans valeur par défaut. Les guillemets ne sont nécessaires que si l'on spécifie un nom qualifié de table ou d'index. Si un nom de table complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données en cours. Si un nom de table est spécifié sans index, la valeur d'option spécifiée est définie pour tous les index de cette table et, si aucun index cluster n'existe, pour la table elle-même.  
+`[ @IndexNamePattern = ] 'table_or_index_name'` Est le nom qualifié ou non d’une table définie par l’utilisateur ou un index. *table_or_index_name* est **nvarchar(1035)**, sans valeur par défaut. Les guillemets ne sont nécessaires que si l'on spécifie un nom qualifié de table ou d'index. Si un nom de table complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données en cours. Si un nom de table est spécifié sans index, la valeur d'option spécifiée est définie pour tous les index de cette table et, si aucun index cluster n'existe, pour la table elle-même.  
   
- [  **@OptionName =**] **'***option_name***'**  
- Nom d'option d'index. *option_name* est **varchar (35)**, sans valeur par défaut. *option_name* peut avoir l’une des valeurs suivantes.  
+`[ @OptionName = ] 'option_name'` Est le nom d’une option d’index. *option_name* est **varchar (35)**, sans valeur par défaut. *option_name* peut avoir l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**AllowRowLocks**|Si la valeur est TRUE, les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés. Si la valeur est FALSE, les verrous de ligne ne sont pas utilisés. La valeur par défaut est TRUE.|  
 |**AllowPageLocks**|Si la valeur est TRUE, les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés. Si la valeur est FALSE, les verrous de page ne sont pas utilisés. La valeur par défaut est TRUE.|  
 |**DisAllowRowLocks**|Si la valeur est TRUE, les verrous de ligne ne sont pas utilisés. Si la valeur est FALSE, les verrous de ligne sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de ligne sont utilisés.|  
 |**DisAllowPageLocks**|Si la valeur est TRUE, les verrous de page ne sont pas utilisés. Si la valeur est FALSE, les verrous de page sont autorisés lors de l'accès à l'index. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] détermine le moment où les verrous de page sont utilisés.|  
   
- [  **@OptionValue =**] **'***valeur***'**  
- Spécifie si le *option_name* paramètre est activé (TRUE, ON, yes ou 1) ou désactivé (FALSE, OFF, no ou 0). *valeur* est **varchar(12)**, sans valeur par défaut.  
+`[ @OptionValue = ] 'value'` Spécifie si le *option_name* paramètre est activé (TRUE, ON, yes ou 1) ou désactivé (FALSE, OFF, no ou 0). *valeur* est **varchar(12)**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou supérieur à 0 (échec)  
@@ -83,7 +80,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 -   Lorsque **AllowPageLocks** option a la valeur FALSE ou **DisAllowPageLocks** est définie sur TRUE, le paramètre est appliqué totalement aux index non cluster. En d'autres termes, tous les verrous de page sont interdits sur les index non-cluster. Sur le segment de mémoire, seuls les verrous partagés (S), de mise à jour (U) et exclusifs (X) de la page sont interdits. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] peut toujours acquérir un verrou de page intentionnel (IS, IU ou IX) à des fins internes.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
 ## <a name="examples"></a>Exemples  

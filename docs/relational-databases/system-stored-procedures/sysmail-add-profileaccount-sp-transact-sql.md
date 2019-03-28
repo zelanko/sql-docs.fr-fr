@@ -18,12 +18,12 @@ ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d5f307fca906d138428fe9852752d3f718633181
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44dc2d5341e536179fe0bf6ef152ef7d39afe966
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729857"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532101"
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@profile_id** =] *profile_id*  
- Identificateur du profil auquel le compte est ajouté. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_id = ] profile_id` Identificateur du profil auquel le compte est ajouté. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nom du profil auquel le compte est ajouté. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_name = ] 'profile_name'` Le nom du profil auquel le compte est ajouté. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit le *profile_id* ou *profile_name* doit être spécifié.  
   
- [ **@account_id** =] *account_id*  
- Identificateur du compte à ajouter au profil. *account_id* est **int**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
+`[ @account_id = ] account_id` Id de compte à ajouter au profil. *account_id* est **int**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nom du compte à ajouter au profil. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
+`[ @account_name = ] 'account_name'` Le nom du compte à ajouter au profil. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Soit le *account_id* ou *account_name* doit être spécifié.  
   
- [ **@sequence_number** =] *sequence_number*  
- Numéro de séquence du compte dans le profil. *sequence_number* est **int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
+`[ @sequence_number = ] sequence_number` Le numéro de séquence du compte au sein du profil. *sequence_number* est **int**, sans valeur par défaut. Le numéro de séquence détermine l'ordre dans lequel les comptes sont utilisés dans le profil.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -71,7 +66,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
   
  La procédure stockée **sysmail_add_profileaccount_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

@@ -1708,7 +1708,7 @@ items:
       href: ../relational-databases/views/rename-views.md
     - name: DELETE
       href: ../relational-databases/views/delete-views.md
-  - name: Données XML
+  - name: données XML
     href: ../relational-databases/xml/xml-data-sql-server.md
     items:
     - name: Type et colonnes de données XML
@@ -6894,6 +6894,7 @@ items:
     - name: Observations relatives à l'utilisation de serveurs de test
       href: ../relational-databases/performance/considerations-for-using-test-servers.md
     - name: Traitement de requêtes intelligent
+      displayName: adaptive
       href: ../relational-databases/performance/intelligent-query-processing.md
     - name: Centre de performances
       href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
@@ -9791,12 +9792,12 @@ items:
         href: ../ssms/user-assistance-in-sql-server-management-studio.md
       - name: Données d’utilisation anonymes
         href: ../ssms/sql-server-management-studio-telemetry-ssms.md
-  - name: Sqlpackage
+  - name: SqlPackage.exe
     items:
     - name: Installer sqlpackage
       href: ../tools/sqlpackage-download.md
     - name: Notes de publication
-      href: ../tools/sqlpackage-release-notes.md
+      href: ../tools/release-notes-sqlpackage.md
     - name: Informations de référence sur sqlpackage
       href: ../tools/sqlpackage.md
   - name: SQL Server Profiler
@@ -12726,9 +12727,9 @@ items:
         href: ../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md
       - name: sys.fn_cdc_map_time_to_lsn
         href: ../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md
-      - name: sys.fn_all_changes_<instance_capture>
+      - name: sys.fn_all_changes_<capture_instance>
         href: ../relational-databases/system-functions/sys-fn-all-changes-capture-instance-transact-sql.md
-      - name: sys.fn_net_changes_<instance_capture>
+      - name: sys.fn_net_changes_<capture_instance>
         href: ../relational-databases/system-functions/sys-fn-net-changes-capture-instance-transact-sql.md
     - name: Suivi des modifications
       href: ../relational-databases/system-functions/change-tracking-functions-transact-sql.md
@@ -16161,7 +16162,7 @@ items:
         - name: Au niveau du bit
           href: ../t-sql/language-elements/bitwise-operators-transact-sql.md
           items:
-          - name: '& (Opérateur AND au niveau du bit)'
+          - name: '& (AND au niveau du bit)'
             href: ../t-sql/language-elements/bitwise-and-transact-sql.md
           - name: '&= (Affectation après AND au niveau du bit)'
             href: ../t-sql/language-elements/bitwise-and-equals-transact-sql.md
@@ -17226,9 +17227,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Gestion des espaces de noms dans XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 8efef6d8d30133dff4c5ca71d37a753e0168a4e5
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: 31c97681d909e7179c9376e187cabea94afe20d3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417231"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538681"

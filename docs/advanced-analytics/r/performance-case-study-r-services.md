@@ -4,15 +4,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 3ee5a1d2c656ef420c410c75333546ab8fbf539c
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 4b71afb8f373eed4f49bc2cf0ea1c6086b6f121d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645468"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510756"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Performances pour R Services : résultats et des ressources
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -112,7 +112,7 @@ Ce test comparé les avantages de la compression de ligne, la compression de pag
 | *airlineWithPageComp* | PageCompression | 1        | 6,7875       |
 |                       | PageCompression - parallèle | 4        | 5,3225       |
 | *airlineWithRowComp*  | RowCompression  | 1        | 6,1325       |
-|                       | RowCompression - parallèle  | 4        | 5,2375       |
+|                       | RowCompression - parallel  | 4        | 5,2375       |
 
 **Conclusions**
 
@@ -180,7 +180,7 @@ Ce test évalué l’impact de la modification du code R pour éviter un problè
 
 | Nom de la table          | Nom du test   | Temps moyen |
 |---------------------|-------------|--------------|
-| *Compagnie aérienne*           | *FactorCol* | 10,72        |
+| *Airline*           | *FactorCol* | 10,72        |
 | *airlineWithIntCol* | *IntCol*    | 3,4475       |
 
 **Conclusions**
@@ -369,7 +369,7 @@ Voici des liens vers plus d’informations, les outils et les scripts utilisés 
 
 + [Introduction aux tables optimisées en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables)
 
-+ [Démonstration : Amélioration des performances de l’OLTP en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
++ La [Démonstration : Amélioration des performances de l’OLTP en mémoire](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp)
 
 + [Compression de données](../../relational-databases/data-compression/data-compression.md)
 

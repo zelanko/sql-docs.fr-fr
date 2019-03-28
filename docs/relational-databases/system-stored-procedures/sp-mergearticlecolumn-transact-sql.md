@@ -16,12 +16,12 @@ ms.assetid: b4f2b888-e094-4759-a472-d893638995eb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28c8da014a3922a9dbd1cba533b4cbf1d7a9215
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590073"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538611"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,33 +44,26 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =**] **'**_publication_**'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article =**] **'**_article_**'**  
- Nom de l'article dans la publication. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'` Est le nom de l’article dans la publication. *article* est **sysname**, sans valeur par défaut.  
   
- [  **@column =**] **'**_colonne_**'**  
- Identifie les colonnes sur lesquelles la partition verticale doit être créée. *colonne* est **sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est spécifiée et que `@operation = N'add'`, toutes les colonnes de la table source sont ajoutées à l'article par défaut. *colonne* ne peut pas être NULL lorsque *opération* a la valeur **drop**. Pour exclure des colonnes à partir d’un article, exécutez **sp_mergearticlecolumn** et spécifiez *colonne* et `@operation = N'drop'` pour chaque colonne à supprimer à partir du spécifié *article*.  
+`[ @column = ] 'column'` Identifie les colonnes sur lequel créer la partition verticale. *colonne* est **sysname**, avec NULL comme valeur par défaut. Si la valeur NULL est spécifiée et que `@operation = N'add'`, toutes les colonnes de la table source sont ajoutées à l'article par défaut. *colonne* ne peut pas être NULL lorsque *opération* a la valeur **drop**. Pour exclure des colonnes à partir d’un article, exécutez **sp_mergearticlecolumn** et spécifiez *colonne* et `@operation = N'drop'` pour chaque colonne à supprimer à partir du spécifié *article*.  
   
- [  **@operation =**] **'**_opération_**'**  
- État de la réplication. *opération* est **nvarchar (4)**, avec une valeur par défaut de l’ajouter. **ajouter** marque la colonne pour la réplication. **DROP** supprime la colonne.  
+`[ @operation = ] 'operation'` Est l’état de réplication. *opération* est **nvarchar (4)**, avec une valeur par défaut de l’ajouter. **ajouter** marque la colonne pour la réplication. **DROP** supprime la colonne.  
   
- [  **@schema_replication=**] **'**_schema_replication_**'**  
- Indique qu'une modification du schéma sera propagée lors de l'exécution de l'Agent de fusion. *schema_replication* est **nvarchar (5)**, avec FALSE comme valeur par défaut.  
+`[ @schema_replication = ] 'schema_replication'` Spécifie qu’une modification de schéma sera propagée lors de l’Agent de fusion s’exécute. *schema_replication* est **nvarchar (5)**, avec FALSE comme valeur par défaut.  
   
 > [!NOTE]  
 >  Uniquement **FALSE** est pris en charge pour *schema_replication*.  
   
- [ **@force_invalidate_snapshot =** ] *àce_invalidate_snapshot*  
- Active ou désactive la possibilité d'invalider un instantané. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Active ou désactive la possibilité d’invalider un instantané. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’entraînent pas l’instantané n’est pas valide.  
   
  **1** Spécifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide, et si c’est le cas, la valeur **1** autorise le nouvel instantané de se produire.  
   
- [  **@force_reinit_subscription =]**_àce_reinit_subscription_  
- Active ou désactive la possibilité de réinitialiser l'abonnement. *àce_reinit_subscription* est un peu avec une valeur par défaut **0**.  
+`[ @force_reinit_subscription = ]force_reinit_subscription_` Active ou désactive la possibilité de réinitialiser l’abonnement. *àce_reinit_subscription* est un peu avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’entraînent pas la réinitialisation de l’abonnement.  
   

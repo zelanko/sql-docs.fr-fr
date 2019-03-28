@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/30/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 897f83e7272a47428d696802adf79ff816805486
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: da28d6f0ae423ce9cca0c6d571af944a2d7acd3d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645448"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512036"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Mettre à niveau machine learning (R et Python) des composants dans les instances SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,11 +54,11 @@ Notez que liaison ne garantit pas la version récente de R ou Anaconda. Lorsque 
 Composant |Version initiale | [R Server 9.0.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows) | [MLS 9.2.1](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) | [MLS 9.3](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install) |
 ----------|----------------|----------------|--------------|---------|-------|
 Microsoft R Open (MRO) sur R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3.4.1  | R 3.4.3 |
-[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | version 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| (pays-bas) | version 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[modèles préformés](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| (pays-bas) | version 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| (pays-bas) | 1.0 |  1.0 |  1.0 |  1.0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | (pays-bas) | 1.0 |  1.0 |  1.0 |  1.0 |
+[RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[modèles préformés](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
 
 
 [**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
@@ -227,8 +227,8 @@ Une fois que vous exécutez Microsoft Machine Learning Server, un utilitaire de 
 Vous pouvez restaurer une instance liée à une installation initiale des composants R et Python, établie par le programme d’installation de SQL Server. Il existe trois parties pour le retour à la maintenance de SQL Server.
 
 + [Étape 1 : Annuler la liaison à partir de Microsoft Machine Learning Server](#step-1-unbind)
-+ [Étape 2 : Restauration de l’instance de l’état d’origine](#step-2-restore)
-+ [Étape 3 : Réinstaller les packages que vous avez ajouté à l’installation](#step-3-reinstall-packages)
++ [Étape 2 : Restauration de l’instance de l’état d’origine](#step-2-restore)
++ [Étape 3 : Réinstaller les packages que vous avez ajouté à l’installation](#step-3-reinstall-packages)
 
 <a name="step-1-unbind"></a> 
 
@@ -277,7 +277,7 @@ Vous avez peut-être ajouté des autres packages tiers ou open source à votre b
 
 ### <a name="parameters"></a>Paramètres
 
-|Créer une vue d’abonnement|Description|
+|Nom|Description|
 |------|------|
 |*list*| Affiche une liste de tous les ID d’instances de bases de données SQL sur l’ordinateur actuel|
 |*bind*| Met à niveau l’instance de base de données SQL spécifiée vers la version la plus récente de R Server, et garantit que l’instance obtient automatiquement les mises à niveau ultérieures de R Server|
