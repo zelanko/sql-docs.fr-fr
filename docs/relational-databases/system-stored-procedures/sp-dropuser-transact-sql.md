@@ -18,12 +18,12 @@ ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f4e2a7537de3e33ffccd6bf0a9ebb7f4b6e33ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d96004357962ee822df7458a30d740fc836de658
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854022"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532951"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name_in_db =**] **'***utilisateur***'**  
- Nom de l'utilisateur à supprimer. *utilisateur* est un **sysname**, sans valeur par défaut. *utilisateur* doit exister dans la base de données actuelle. Lorsque vous spécifiez une connexion Windows, utilisez le nom sous lequel la base de données connaît cette connexion.  
+`[ @name_in_db = ] 'user'` Est le nom de l’utilisateur à supprimer. *utilisateur* est un **sysname**, sans valeur par défaut. *utilisateur* doit exister dans la base de données actuelle. Lorsque vous spécifiez une connexion Windows, utilisez le nom sous lequel la base de données connaît cette connexion.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -60,7 +59,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  **sp_dropuser** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY USER sur la base de données.  
   
 ## <a name="examples"></a>Exemples  

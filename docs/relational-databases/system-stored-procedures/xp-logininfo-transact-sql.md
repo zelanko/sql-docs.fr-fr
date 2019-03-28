@@ -18,12 +18,12 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c9ed0ee742d1562d8b573b71e5d62b7d10bc7d02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c214c8b061e2530c4dcf4b178b6028cbdca01fa
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843827"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530021"
 ---
 # <a name="xplogininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@acctname =** ] **'***account_name***'**  
- Nom d'un utilisateur ou groupe Windows autorisé à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Si *account_name* n’est pas spécifié, tous les groupes de Windows et les utilisateurs Windows qui ont été explicitement accordé l’autorisation de se connecter sont signalés. *nom_compte* doivent être qualifiés complets. Par exemple, « ADVWKS4\macraes » ou « BUILTIN\Administrators ».  
+`[ @acctname = ] 'account_name'` Est le nom d’un utilisateur de Windows ou d’un groupe accordé l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Si *account_name* n’est pas spécifié, tous les groupes de Windows et les utilisateurs Windows qui ont été explicitement accordé l’autorisation de se connecter sont signalés. *nom_compte* doivent être qualifiés complets. Par exemple, « ADVWKS4\macraes » ou « BUILTIN\Administrators ».  
   
- **'all'** | **« members »**  
+ **'all'** | **'members'**  
  Spécifie s'il faut rapporter les informations sur tous les chemins d'autorisation du compte ou sur les membres du groupe Windows. **@option** est **varchar (10)**, avec NULL comme valeur par défaut. À moins que **tous les** est spécifié, seul le chemin de la première autorisation s’affiche.  
   
- [  **@privilege =** ] *nom_variable*  
- Paramètre de sortie qui retourne le niveau de privilège du compte Windows spécifié. *nom_variable* est **varchar (10)**, avec une valeur par défaut « Not wanted ». Le niveau de privilège renvoyé est **utilisateur**, **administrateur**, ou **null**.  
+`[ @privilege = ] variable_name` Est un paramètre de sortie qui retourne le niveau de privilège du compte Windows spécifié. *nom_variable* est **varchar (10)**, avec une valeur par défaut « Not wanted ». Le niveau de privilège renvoyé est **utilisateur**, **administrateur**, ou **null**.  
   
  OUTPUT  
  Lorsqu’elle est spécifiée, place *nom_variable* dans le paramètre de sortie.  
@@ -62,8 +60,8 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Nom du compte**|**sysname**|Nom de compte Windows complet.|  
-|**type**|**char (8)**|Type de compte Windows. Les valeurs valides sont **utilisateur** ou **groupe**.|  
-|**privilège**|**char(9)**|Privilège d'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les valeurs valides sont **administrateur**, **utilisateur**, ou **null**.|  
+|**type**|**char(8)**|Type de compte Windows. Les valeurs valides sont **utilisateur** ou **groupe**.|  
+|**privilege**|**char(9)**|Privilège d'accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les valeurs valides sont **administrateur**, **utilisateur**, ou **null**.|  
 |**nom de connexion mappé**|**sysname**|Comptes d’utilisateurs avec privilège utilisateur, **mappé le nom de connexion** affiche le nom de connexion mappée qui [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente d’utiliser lors de l’ajout de journalisation avec ce compte en utilisant les règles de mappage avec le nom de domaine avant qu’elle.|  
 |**chemin d’accès de l’autorisation**|**sysname**|Membre du groupe qui autorise l'accès au compte|  
   
@@ -78,7 +76,7 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
   
  **xp_logininfo** retourne uniquement des informations à partir de groupes globaux Active Directory, les groupes universels pas.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance au **sysadmin** rôle serveur fixe ou l’appartenance à la **public** rôle de base de données fixe dans le **master** base de données avec l’autorisation EXECUTE accordée.  
   
 ## <a name="examples"></a>Exemples  

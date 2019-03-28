@@ -18,12 +18,12 @@ ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9e8ada6daf4fc7e545856b52b163a2ff8f9e40db
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168659"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526071"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,15 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@class =**] **'**_classe_**'**  
- Classe de la catégorie. *classe* est **varchar(8)**, sans valeur par défaut et doit avoir une des valeurs suivantes.  
+`[ @class = ] 'class'` La classe de la catégorie. *classe* est **varchar(8)**, sans valeur par défaut et doit avoir une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**JOB**|Supprime une catégorie de travaux.|  
 |**ALERTE**|Supprime une catégorie d'alertes.|  
 |**OPÉRATEUR**|Supprime une catégorie d'opérateurs.|  
   
- [  **@name =**] **'**_nom_**'**  
- Nom de la catégorie à supprimer. *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Le nom de la catégorie à supprimer. *nom* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -64,7 +62,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
   
  Lorsque vous supprimez une catégorie, tous ses travaux, alertes et opérateurs sont réaffectés à la catégorie par défaut de la classe.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

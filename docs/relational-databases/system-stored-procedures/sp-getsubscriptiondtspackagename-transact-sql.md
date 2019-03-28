@@ -16,12 +16,12 @@ ms.assetid: 606c40aa-2593-43af-9762-0f260bbb51f2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df214182e992bf9616ddcb77a4f305ea4f47a4c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: df023ebc9e464026f3cf1ef7dbedced45ba78eca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818831"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530561"
 ---
 # <a name="spgetsubscriptiondtspackagename-transact-sql"></a>sp_getsubscriptiondtspackagename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_getsubscriptiondtspackagename [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publication**=] **'***publication***'**  
- Nom de la publication. **«***publication***'** est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. **«***publication***'** est **sysname**, sans valeur par défaut.  
   
- [  **@subscriber=**] **'***abonné***'**  
- Nom de l'Abonné. *abonné* est de type sysname, avec NULL comme valeur par défaut.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est de type sysname, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

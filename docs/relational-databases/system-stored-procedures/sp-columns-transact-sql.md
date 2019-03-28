@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71b5b57625a8feb5d268898ff4865c2039bd358c
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 1155937c8634fe9859b13b84f2e42be6ceb825d0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100504"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530421"
 ---
 # <a name="spcolumns-transact-sql"></a>MSdbms (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,22 +46,17 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **\@table_name =**] *objet*  
- Nom de l'objet utilisé pour retourner des informations de catalogue. *objet* peut être une table, vue ou autre objet qui a des colonnes telles que des fonctions table. *objet* est **nvarchar (384)**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ \@table_name = ] object` Est le nom de l’objet qui est utilisé pour retourner des informations de catalogue. *objet* peut être une table, vue ou autre objet qui a des colonnes telles que des fonctions table. *objet* est **nvarchar (384)**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
- [  **\@table_owner =**] *propriétaire*  
- Nom du propriétaire de l'objet utilisé pour retourner des informations de catalogue. *propriétaire* est **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité d’objet par défaut du SGBD sous-jacent s’appliquent.  
+`[ \@table_owner = ] owner` Nom du propriétaire de l’objet de l’objet qui est utilisé pour retourner des informations de catalogue. *propriétaire* est **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité d’objet par défaut du SGBD sous-jacent s’appliquent.  
   
  Si l'utilisateur actuel est propriétaire d'un objet portant le nom spécifié, les colonnes de cet objet sont retournées. Si *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’un objet avec la valeur *objet*, **sp_columns** recherche un objet avec la valeur  *objet* appartenant au propriétaire de la base de données. S'il en existe un, les colonnes de cet objet sont retournées.  
   
- [  **\@table_qualifier =**] *qualificateur*  
- Nom du qualificateur de l'objet. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les objets (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
+`[ \@table_qualifier = ] qualifier` Est le nom du qualificateur d’objet. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les objets (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de l'objet.  
   
- [  **\@column_name =**] *colonne*  
- Colonne unique utilisée lorsqu'une seule colonne d'informations de catalogue est demandée. *colonne* est **nvarchar (384)**, avec NULL comme valeur par défaut. Si *colonne* est ne pas spécifié, toutes les colonnes sont retournées. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonne* représente le nom de colonne indiqué dans le **syscolumns** table. La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard de SQL-92 (caractères génériques % et _).  
+`[ \@column_name = ] column` Est une colonne unique et est utilisé lors de la seule colonne d’informations de catalogue est demandée. *colonne* est **nvarchar (384)**, avec NULL comme valeur par défaut. Si *colonne* est ne pas spécifié, toutes les colonnes sont retournées. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *colonne* représente le nom de colonne indiqué dans le **syscolumns** table. La recherche de correspondance avec des caractères génériques est prise en charge. Pour assurer une interopérabilité maximale, le client de la passerelle ne doit utiliser que les modèles de comparaison standard de SQL-92 (caractères génériques % et _).  
   
- [  **\@ODBCVer =**] *ODBCVer*  
- Version d'ODBC actuellement utilisée. *ODBCVer* est **int**, avec une valeur par défaut 2. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Pour les différences de comportement entre les versions 2 et 3, consultez ODBC **SQLColumns** spécification.  
+`[ \@ODBCVer = ] ODBCVer` Est la version d’ODBC utilisée. *ODBCVer* est **int**, avec une valeur par défaut 2. Cela indique ODBC version 2. Les valeurs valides sont 2 ou 3. Pour les différences de comportement entre les versions 2 et 3, consultez ODBC **SQLColumns** spécification.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  

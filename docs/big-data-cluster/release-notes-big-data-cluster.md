@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2adf081f68ec0941b287102f515da2cabbfbbe18
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2502396dba4b88a9750aa3bfc62c4153711e1426
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494181"
+ms.locfileid: "58510336"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notes de publication pour les clusters de données volumineuses sur SQL Server
 
@@ -29,7 +29,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 ### <a name="whats-new"></a>What's New
 
-| Nouvelle fonctionnalité/mise à jour | Détails |
+| Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
 | Obtenir des conseils sur le GPU prend en charge pour l’exécution de deep learning avec TensorFlow dans Spark. | [Déployer un cluster de données volumineuses avec prise en charge GPU et exécuter TensorFlow](spark-gpu-tensorflow.md) |
 | **SqlDataPool** et **SqlStoragePool** des sources de données ne sont plus créés par défaut. | Créer manuellement en fonction des besoins. Consultez le [problèmes connus](#externaltablesctp24). |
@@ -80,19 +80,44 @@ Si vous utilisez kubeadm déploiement Kubernetes sur plusieurs ordinateurs, le p
       KubeDNS is running at https://172.30.243.91:6443/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
       ```
 
+#### <a name="delete-cluster-fails"></a>Supprimer le cluster tombe en panne
+
+Lorsque vous tentez de supprimer un cluster avec **mssqlctl**, elle échoue avec l’erreur suivante :
+
+```
+2019-03-26 20:38:11.0614 UTC | INFO | Deleting cluster ...
+Error processing command: "TypeError"
+delete_namespaced_service() takes 3 positional arguments but 4 were given
+Makefile:61: recipe for target 'delete-cluster' failed
+make[2]: *** [delete-cluster] Error 1
+Makefile:223: recipe for target 'deploy-clean' failed
+make[1]: *** [deploy-clean] Error 2
+Makefile:203: recipe for target 'deploy-clean' failed
+make: *** [deploy-clean] Error 2
+```
+
+Un nouveau client Kubernetes de Python (version 9.0.0) modifié delete espaces de noms API, ce qui interrompt actuellement **mssqlctl**. Cela se produit uniquement si vous avez un client plus récent de python Kubernetes installé. Vous pouvez contourner ce problème en supprimant directement le cluster à l’aide **kubectl** (`kubectl delete ns <ClusterName>`), ou vous pouvez installer la version antérieure à l’aide `sudo pip install kubernetes==8.0.1`.
+
 #### <a id="externaltablesctp24"></a> Tables externes
 
 - Déploiement de cluster de données volumineuses ne crée plus la **SqlDataPool** et **SqlStoragePool** sources de données externes. Vous pouvez créer ces sources de données manuellement pour prendre en charge de la virtualisation des données pour le pool de données et le pool de stockage.
 
    ```sql
-   -- Create data sources for SQL Big Data Cluster
+   -- Create the SqlDataPool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
      WITH (LOCATION = 'sqldatapool://service-mssql-controller:8080/datapools/default');
 
+   -- Create the SqlStoragePool data source:
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
-     CREATE EXTERNAL DATA SOURCE SqlStoragePool
-     WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+   BEGIN
+     IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+     ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+       CREATE EXTERNAL DATA SOURCE SqlStoragePool
+       WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+   END
    ```
 
 - Il est possible de créer une table externe de pool de données pour une table qui a des types de colonnes non pris en charge. Si vous interrogez la table externe, vous recevez un message similaire à ce qui suit :
@@ -137,9 +162,9 @@ Si vous utilisez kubeadm déploiement Kubernetes sur plusieurs ordinateurs, le p
 
 Les sections suivantes décrivent les nouvelles fonctionnalités et les problèmes connus pour les clusters de données volumineuses dans SQL Server 2019 CTP 2.3.
 
-### <a name="new-features"></a>Nouvelles fonctionnalités
+### <a name="whats-new"></a>What's New
 
-| Nouvelle fonctionnalité | Détails |
+| Nouvelle fonctionnalité ou mise à jour | Détails |
 | :---------- | :------ |
 | Envoyez des travaux Spark sur des clusters de données volumineuses dans IntelliJ. | [Envoyer des travaux Spark sur des clusters de données volumineuses de SQL Server dans IntelliJ](spark-submit-job-intellij-tool-plugin.md) |
 | CLI courantes pour la gestion de cluster et de déploiement des applications. | [Comment déployer une application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire)](big-data-cluster-create-apps.md) |

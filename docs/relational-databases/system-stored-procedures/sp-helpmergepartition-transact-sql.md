@@ -16,12 +16,12 @@ ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 673baf1b41e3ffcceaa635191352af376008313e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ddf87e08b113d3512a8d824ff4abdf1359476e32
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779351"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530154"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,14 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@suser_sname=** ] **'***suser_sname***'**  
- Valeur SUSER_SNAME utilisée pour définir une partition. *SUSER_SNAME* est **sysname**, avec NULL comme valeur par défaut. Précisez ce paramètre pour limiter le jeu de résultats aux seules partitions dans lesquelles SUSER_SNAME correspond à la valeur fournie.  
+`[ @suser_sname = ] 'suser_sname'` Valeur SUSER_SNAME permet de définir une partition. *SUSER_SNAME* est **sysname**, avec NULL comme valeur par défaut. Précisez ce paramètre pour limiter le jeu de résultats aux seules partitions dans lesquelles SUSER_SNAME correspond à la valeur fournie.  
   
 > [!NOTE]  
 >  Lorsque *suser_sname* est fourni, *host_name* doit être NULL  
   
- [  **@host_name=** ] **'***host_name***'**  
- Valeur HOST_SNAME utilisée pour définir une partition. *HOST_NAME* est **sysname**, avec NULL comme valeur par défaut. Précisez ce paramètre pour limiter le jeu de résultats aux seules partitions dans lesquelles HOST_NAME correspond à la valeur fournie.  
+`[ @host_name = ] 'host_name'` La valeur HOST_NAME est utilisée pour définir une partition. *HOST_NAME* est **sysname**, avec NULL comme valeur par défaut. Précisez ce paramètre pour limiter le jeu de résultats aux seules partitions dans lesquelles HOST_NAME correspond à la valeur fournie.  
   
 > [!NOTE]  
 >  Lorsque *suser_sname* est fourni, *host_name* doit être NULL  
@@ -60,8 +57,8 @@ sp_helpmergepartition [ @publication= ] 'publication'
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**partition**|**Int**|Identifie la partition de l'Abonné.|  
-|**HOST_NAME**|**sysname**|Valeur utilisée lors de la création de la partition pour un abonnement qui est filtré par la valeur de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) fonction sur l’abonné.|  
-|**SUSER_SNAME**|**sysname**|Valeur utilisée lors de la création de la partition pour un abonnement qui est filtré par la valeur de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) fonction sur l’abonné.|  
+|**host_name**|**sysname**|Valeur utilisée lors de la création de la partition pour un abonnement qui est filtré par la valeur de la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) fonction sur l’abonné.|  
+|**suser_sname**|**sysname**|Valeur utilisée lors de la création de la partition pour un abonnement qui est filtré par la valeur de la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) fonction sur l’abonné.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Emplacement de l'instantané des données filtrées pour la partition de l'Abonné.|  
 |**date_refreshed**|**datetime**|Date de la dernière exécution du travail d'instantané visant à générer l'instantané de données filtrées pour la partition.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifie le travail qui crée l'instantané de données filtrées pour une partition.|  
@@ -77,6 +74,6 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Voir aussi  
  [sp_addmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
- [sp_dropmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
+ [sp_dropmergepartition &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   
   

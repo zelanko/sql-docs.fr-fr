@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 064018cdc595935ce3987fc44bc7be7da74bbd02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1d4191a53db7c4921f026e4b6e6f8406b2ce5c24
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727697"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534021"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@objname=** ] **'***nom***'**  
- Spécifie le nom qualifié ou non d'une table ou d'une vue définie par l'utilisateur. Les guillemets ne sont nécessaires que si un nom qualifié de table ou de vue est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *nom* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @objname = ] 'name'` Est le nom qualifié ou non d’une table définie par l’utilisateur ou une vue. Les guillemets ne sont nécessaires que si un nom qualifié de table ou de vue est spécifié. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *nom* est **nvarchar(776)**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -53,7 +52,7 @@ sp_helpindex [ @objname = ] 'name'
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|Nom de l’index.|  
 |**index_description**|**varchar(210)**|Description d'index incluant le groupe de fichiers sur lequel il est situé.|  
-|**index_keys**|**nvarchar (2078)**|Colonnes de table ou de vue sur lesquelles est construit l'index.|  
+|**index_keys**|**nvarchar(2078)**|Colonnes de table ou de vue sur lesquelles est construit l'index.|  
   
  Le nom d'une colonne indexée décroissante apparaît dans l'ensemble de résultats, suivi du signe moins (-) ; une colonne indexée croissante (l'ordre de tri par défaut) apparaît sous son seul nom.  
   
@@ -62,7 +61,7 @@ sp_helpindex [ @objname = ] 'name'
   
  **sp_helpindex** expose uniquement les colonnes d’index pouvant être ordonnées ; par conséquent, elle n’expose pas d’informations sur les index XML ou spatiaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

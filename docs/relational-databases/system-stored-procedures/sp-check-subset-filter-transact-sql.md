@@ -21,12 +21,12 @@ ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3d3e6ad6a0cf8ed5c84279b621badc939b1e97a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791711"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527451"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@filtered_table**=] **'***filtered_table***'**  
- Nom d'une table filtrée. *filtered_table* est **nvarchar (400)**, sans valeur par défaut.  
+`[ @filtered_table = ] 'filtered_table'` Est le nom d’une table filtrée. *filtered_table* est **nvarchar (400)**, sans valeur par défaut.  
   
- [ **@subset_filterclause** =] **'***subset_filterclause***'**  
- Clause de filtre testée. *subset_filterclause* est **nvarchar (1000)**, sans valeur par défaut.  
+`[ @subset_filterclause = ] 'subset_filterclause'` La clause de filtre testée. *subset_filterclause* est **nvarchar (1000)**, sans valeur par défaut.  
   
- [ **@has_dynamic_filters**=] *has_dynamic_filters*  
- Indique si la clause de filtre correspond à un filtre de lignes paramétrable. *has_dynamic_filters* est **bits**, avec NULL comme valeur par défaut et est un paramètre de sortie. Retourne une valeur de **1** lorsque la clause de filtre est un filtre de lignes paramétrable.  
+`[ @has_dynamic_filters = ] has_dynamic_filters` Indique si la clause de filtre est un filtre de lignes paramétrable. *has_dynamic_filters* est **bits**, avec NULL comme valeur par défaut et est un paramètre de sortie. Retourne une valeur de **1** lorsque la clause de filtre est un filtre de lignes paramétrable.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   

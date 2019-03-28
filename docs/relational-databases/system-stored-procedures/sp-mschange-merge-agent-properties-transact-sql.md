@@ -16,12 +16,12 @@ ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3ad4b46cbf4c19b637bdc836e5c311321273de63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769781"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535642"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,26 +44,19 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publisher** =] **'***publisher***'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- Nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publication =** ] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@subscriber=** ] **'***abonné***'**  
- Nom de l'Abonné. *abonné* est **sysname**, sans valeur par défaut.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, sans valeur par défaut.  
   
- [  **@subscriber_db=** ] **'***bd_abonné***'**  
- Est le nom de la base de données d’abonnement. *bd_abonné* est **sysname**, sans valeur par défaut.  
+`[ @subscriber_db = ] 'subscriber_db'` Est le nom de la base de données d’abonnement. *bd_abonné* est **sysname**, sans valeur par défaut.  
   
- [  **@property =** ] **'***propriété***'**  
- Propriété de publication à modifier. *propriété* est **sysname**, sans valeur par défaut.  
+`[ @property = ] 'property'` Est la propriété de publication à modifier. *propriété* est **sysname**, sans valeur par défaut.  
   
- [  **@value =** ] **'***valeur***'**  
- Nouvelle valeur de la propriété. *valeur* est **nvarchar (524)**, avec NULL comme valeur par défaut.  
+`[ @value = ] 'value'` Est la nouvelle valeur de propriété. *valeur* est **nvarchar (524)**, avec NULL comme valeur par défaut.  
   
  Le tableau ci-dessous décrit les propriétés modifiables de l'Agent de fusion et les limites applicables aux valeurs de ces propriétés.  
   

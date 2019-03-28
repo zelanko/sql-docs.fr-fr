@@ -18,12 +18,12 @@ ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ab6ac64b027c953317db23e19784cc2ef5b2022
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c249564821f40bcd70bcfe367c4970727a5a01a0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780287"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531531"
 ---
 # <a name="sphelplogshippingprimarysecondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@primary_database =** ] '*primary_database*'  
- Nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
+`[ @primary_database = ] 'primary_database'` Est le nom de la base de données sur le serveur principal. *primary_database* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -57,7 +56,7 @@ sp_help_log_shipping_primary_secondary
 ## <a name="remarks"></a>Notes  
  **sp_help_log_shipping_primary_secondary** doit être exécuté à partir de la **master** base de données sur le serveur principal.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

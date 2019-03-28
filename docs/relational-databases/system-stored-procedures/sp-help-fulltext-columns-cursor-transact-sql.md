@@ -18,12 +18,12 @@ ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: bb380be46723ce605a3021e1796a42bcb824ef36
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fcaf967abcce0cdce2ed232446016c57138fd56d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755983"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531781"
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +45,11 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@cursor_return =**] *@cursor_variable* SORTIE  
- Variable de sortie de type **curseur**. Le curseur résultant est en lecture seule, dynamique et autorise les défilements.  
+`[ @cursor_return = ] @cursor_variable OUTPUT` Variable de sortie de type **curseur**. Le curseur résultant est en lecture seule, dynamique et autorise les défilements.  
   
- [  **@table_name =**] **'***table_name***'**  
- Nom de la table en une ou deux parties pour laquelle les informations sur l'indexation de texte intégral sont nécessaires. *table_name* est **nvarchar (517)**, avec NULL comme valeur par défaut. Si *table_name* est omis, informations de colonne d’index de recherche en texte intégral sont récupérées pour chaque table indexée en texte intégral.  
+`[ @table_name = ] 'table_name'` Est le nom de table d’une ou deux parties pour laquelle les informations sur les index de recherche en texte intégral sont demandées. *table_name* est **nvarchar (517)**, avec NULL comme valeur par défaut. Si *table_name* est omis, informations de colonne d’index de recherche en texte intégral sont récupérées pour chaque table indexée en texte intégral.  
   
- [  **@column_name =**] **'***column_name***'**  
- Nom de la colonne dont vous souhaitez obtenir les métadonnées d'index de texte intégral. *column_name* est **sysname** avec une valeur par défaut NULL. Si *column_name* est omis ou a la valeur NULL, les informations de colonne de recherche en texte intégral sont retournées pour chaque colonne indexée en texte intégral de *table_name*. Si *table_name* est également omis ou a la valeur NULL, informations de colonne d’index de recherche en texte intégral sont retournées pour chaque colonne indexée en texte intégral pour toutes les tables dans la base de données.  
+`[ @column_name = ] 'column_name'` Est le nom de la colonne pour laquelle les métadonnées de l’index de recherche en texte intégral sont souhaitée. *column_name* est **sysname** avec une valeur par défaut NULL. Si *column_name* est omis ou a la valeur NULL, les informations de colonne de recherche en texte intégral sont retournées pour chaque colonne indexée en texte intégral de *table_name*. Si *table_name* est également omis ou a la valeur NULL, informations de colonne d’index de recherche en texte intégral sont retournées pour chaque colonne indexée en texte intégral pour toutes les tables dans la base de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou 1 (échec)  
@@ -70,7 +67,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 |**FULLTEXT_BLOBTP_COLID**|**Int**|Identification de la colonne du type de document. Cette valeur s’applique uniquement lorsque la colonne indexée en texte intégral est un **varbinary (max)** ou **image** colonne.|  
 |**FULLTEXT_LANGUAGE**|**sysname**|Langue utilisée pour la recherche en texte intégral sur la colonne.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution reviennent par défaut aux membres du rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

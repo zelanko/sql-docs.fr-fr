@@ -18,12 +18,12 @@ ms.assetid: d0714913-8d6b-4de3-b042-3ae9934f839d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa5df082287f0ddf3e37bc246d53bd31fac2a510
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 618ec7d83ab8abce8cf201cb0b59033b808178c0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723767"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533491"
 ---
 # <a name="sphelpsrvrolemember-transact-sql"></a>sp_helpsrvrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@srvrolename =** ] **'***rôle***'**  
- Nom d'un rôle serveur fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si *rôle*n’est pas spécifié, le jeu de résultats inclut des informations sur tous les rôles serveur fixes.  
+`[ @srvrolename = ] 'role'` Est le nom d’un rôle de serveur fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si *rôle*n’est pas spécifié, le jeu de résultats inclut des informations sur tous les rôles serveur fixes.  
   
  *rôle* peut être une des valeurs suivantes.  
   
@@ -76,7 +75,7 @@ sp_helpsrvrolemember [ [ @srvrolename = ] 'role' ]
   
  sp_helpsrvrolemember n’accepte pas un rôle de serveur défini par l’utilisateur en tant qu’argument. Pour déterminer les membres d’un rôle de serveur défini par l’utilisateur, consultez les exemples de [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  

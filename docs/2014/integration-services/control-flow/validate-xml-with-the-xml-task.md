@@ -13,12 +13,12 @@ ms.assetid: 224fc025-c21f-4d43-aa9d-5ffac337f9b0
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b18834a7ac8c4eb45ba76001a45a7f5bbaa020c6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 76d84c3ea8da6d564db01fba3d02ac15a72fffc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386217"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526331"
 ---
 # <a name="validate-xml-with-the-xml-task"></a>Validate XML with the XML Task
   Validez des documents XML et obtenez une sortie d’erreur détaillée en activant la propriété `ValidationDetails` de la tâche XML.  
@@ -80,7 +80,7 @@ ms.locfileid: "58386217"
 ## <a name="analyze-xml-validation-output-with-a-transact-sql-query"></a>Analyser la sortie de validation XML avec une requête Transact-SQL  
  Si le résultat de la validation XML contient un grand nombre d’erreurs, vous pouvez utiliser une requête [!INCLUDE[tsql](../../../includes/tsql-md.md)] pour charger la sortie dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez ensuite analyser la liste d’erreurs avec toutes les fonctionnalités du langage T-SQL, notamment WHERE, GROUP BY, ORDER BY, JOIN, et ainsi de suite.  
   
-```tsql  
+```sql  
 DECLARE @xml XML;  
   
 SELECT @xml = XmlDoc     

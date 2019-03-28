@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a5bc2b11f8f724be2f53777db3d87be99bbdbf23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d0130fb0c01f69b5bb7c7f6de73e7aad2054a67
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652087"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531691"
 ---
 # <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,18 +46,16 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@query_id =** ] *query_id*  
- Est l’id de la requête. *query_id* est un **bigint**, sans valeur par défaut.  
+`[ @query_id = ] query_id` Est l’id de la requête. *query_id* est un **bigint**, sans valeur par défaut.  
   
- [  **@plan_id =** ] *plan_id*  
- Est l’id du plan de requête à être forcé. *plan_id* est un **bigint**, sans valeur par défaut.  
+`[ @plan_id = ] plan_id` Est l’id du plan de requête à être forcé. *plan_id* est un **bigint**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
   
 ## <a name="remarks"></a>Notes  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite le **EXECUTE** autorisation sur la base de données, et **insérer**, **mise à jour**, et **supprimer** autorisation sur le catalogue de magasin de requête Affichage.  
   
 ## <a name="examples"></a>Exemples  

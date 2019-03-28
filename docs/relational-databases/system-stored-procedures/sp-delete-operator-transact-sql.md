@@ -18,12 +18,12 @@ ms.assetid: ff6c2c4b-e9fe-4d0c-bbc2-a2ddcc1acb95
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2b55d44a837cc721761ebe77352962d1dea88f55
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca9780759c6d35d6006a0ba2a9af2540c6a4e208
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704657"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531192"
 ---
 # <a name="spdeleteoperator-transact-sql"></a>sp_delete_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_delete_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name=** ] **'***nom***'**  
- Nom de l'opérateur à supprimer. *nom* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'name'` Le nom de l’opérateur à supprimer. *nom* est **sysname**, sans valeur par défaut.  
   
- [  **@reassign_to_operator=** ] **'***nouvel_opérateur***'**  
- Nom de l'opérateur auquel les alertes de l'opérateur à supprimer peuvent être réaffectées. *nouvel_opérateur* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @reassign_to_operator = ] 'reassign_operator'` Le nom de l’opérateur auquel les alertes de l’opérateur spécifié peuvent être réaffectées. *nouvel_opérateur* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -56,7 +54,7 @@ sp_delete_operator [ @name = ] 'name'
 ## <a name="remarks"></a>Notes  
  Si vous supprimez un opérateur, toutes les notifications qui lui sont associées le sont également.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_operator**.  
   
 ## <a name="examples"></a>Exemples  

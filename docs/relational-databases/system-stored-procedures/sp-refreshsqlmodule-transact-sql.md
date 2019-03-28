@@ -27,12 +27,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f6527d3b3ee6a0198796688bd4028bf9159406b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: da2dacf6fcb34d5a5caba14ccb60cbb9eec43467
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649027"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529216"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -57,11 +57,9 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name=** ] **'**_module\_nom_**'**  
- Nom de la procédure stockée, fonction définie par l'utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *nom_module* ne peut pas être un common language runtime (CLR) procédure stockée ou une fonction CLR. *nom_module* ne peut pas être liée au schéma. *nom_module* est **nvarchar**, sans valeur par défaut. *nom_module* peut être un identificateur multipartie, mais ne peut faire référence aux objets dans la base de données actuelle.  
+`[ @name = ] 'module\_name'` Est le nom de la procédure stockée, fonction définie par l’utilisateur, vue, déclencheur DML, déclencheur DDL au niveau de la base de données ou déclencheur DDL au niveau du serveur. *nom_module* ne peut pas être un common language runtime (CLR) procédure stockée ou une fonction CLR. *nom_module* ne peut pas être liée au schéma. *nom_module* est **nvarchar**, sans valeur par défaut. *nom_module* peut être un identificateur multipartie, mais ne peut faire référence aux objets dans la base de données actuelle.  
   
- [ **,** @**espace de noms** =] **'** \<classe > **'**  
- Classe du module spécifié. Lorsque *nom_module* est un déclencheur DDL, \<classe > est requise. *\<classe >* est **nvarchar**(20). Les entrées valides sont :  
+`[ , @namespace = ] ' \<class> '` Est la classe du module spécifié. Lorsque *nom_module* est un déclencheur DDL, \<classe > est requise. *\<classe >* est **nvarchar**(20). Les entrées valides sont :  
   
 |||  
 |-|-|  
@@ -81,7 +79,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 > [!NOTE]  
 >  Les signatures qui sont associés à l’objet sont supprimées lorsque vous exécutez **sp_refreshsqlmodule**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER sur le module ainsi que l'autorisation REFERENCES sur les types CLR (Common Language Runtime) définis par l'utilisateur et sur les collections de schémas XML référencés par l'objet. Requiert l'autorisation ALTER ANY DATABASE DDL TRIGGER dans la base de données actuelle lorsque le module spécifié est un déclencheur DDL au niveau de la base de données. Requiert l'autorisation CONTROL SERVER lorsque le module spécifié est un déclencheur DDL au niveau du serveur.  
   
  De plus, pour les modules définis à l'aide de la clause EXECUTE AS, l'autorisation IMPERSONATE est nécessaire sur le principal spécifié. Généralement, l'actualisation d'un objet ne modifie pas son principal EXECUTE AS sauf si le module est défini avec EXECUTE AS USER et que le nom d'utilisateur du principal correspond désormais à un autre utilisateur que celui lors de la création du module.  

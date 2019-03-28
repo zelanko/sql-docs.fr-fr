@@ -18,12 +18,12 @@ ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e707eb96cd07f784e1089a5131a44eb0ce248b7f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e41bcab4680d1e3bbaf08e2fbab112799fd5976
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640823"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533151"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@viewname=** ] **'***viewname***'**  
- Nom de la vue. *ViewName* est **nvarchar**, sans valeur par défaut. *ViewName* peut être un identificateur multipartie, mais ne peut faire référence à des vues de la base de données actuelle.  
+`[ @viewname = ] 'viewname'` Est le nom de la vue. *ViewName* est **nvarchar**, sans valeur par défaut. *ViewName* peut être un identificateur multipartie, mais ne peut faire référence à des vues de la base de données actuelle.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou un nombre différent de zéro (échec)  
@@ -49,7 +48,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="remarks"></a>Notes  
  Si aucune vue n’est pas créée avec schemabinding, **sp_refreshview** doit être exécutée lorsque des modifications sont apportées aux objets sous-jacents de la vue qui affectent la définition de la vue. Autrement, la vue risque de produire des résultats imprévisibles en cas d'interrogation.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation ALTER sur la vue ainsi que l'autorisation REFERENCES sur les types CLR (Common Language Runtime) définis par l'utilisateur et sur les collections de schémas XML référencés par les colonnes de la vue.  
   
 ## <a name="examples"></a>Exemples  

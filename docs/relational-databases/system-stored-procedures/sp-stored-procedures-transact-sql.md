@@ -18,12 +18,12 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ca437ccef3a986d4db7bf72d6017e0e2f515d3
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588462"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535191"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@sp_name =** ] **'**_nom_**'**  
- Nom de la procédure utilisée pour renvoyer des informations de catalogue. *nom* est **390**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ @sp_name = ] 'name'` Est le nom de la procédure utilisée pour retourner des informations de catalogue. *nom* est **390**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
- [  **@sp_owner =** ] **'**_schéma_**'**  
- Nom du schéma auquel appartient la procédure. *schéma* est **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de procédure par défaut du SGBD sous-jacent s’appliquent.  
+`[ @sp_owner = ] 'schema'` Est le nom du schéma auquel appartient la procédure. *schéma* est **nvarchar (384)**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de procédure par défaut du SGBD sous-jacent s’appliquent.  
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si le schéma actif contient une procédure avec le nom spécifié, celle-ci est renvoyée. Si une procédure stockée non qualifiée est spécifiée, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] la recherche dans l'ordre suivant :  
   
@@ -57,11 +55,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Schéma **dbo** dans la base de données active.  
   
- [  **@qualifier =** ] **'**_qualificateur_**'**  
- Nom du qualificateur de la procédure. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables dans le formulaire (_qualificateur_**.** _schéma_**.** _nom_. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+`[ @qualifier = ] 'qualifier'` Est le nom du qualificateur de procédure. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables dans le formulaire (_qualificateur_**.** _schéma_**.** _nom_. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualificateur* représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [  **@fUsePattern =** ] **'**_fUsePattern_**'**  
- Détermine si les caractères de trait de soulignement (_), de pourcentage (%) ou les crochets [ ]) sont interprétés comme des caractères génériques. *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
+`[ @fUsePattern = ] 'fUsePattern'` Détermine si le trait de soulignement (_), pourcentage (%) ou crochets []) sont interprétés comme des caractères génériques. *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
   
  **0** = la recherche de correspondance est désactivée.  
   
@@ -76,7 +72,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|Nom du qualificateur de procédure. Cette colonne peut être NULL.|  
 |**PROCEDURE_OWNER**|**sysname**|Nom du propriétaire de la procédure. Cette colonne renvoie toujours une valeur.|  
-|**NOM_PROCÉDURE**|**nvarchar(134)**|Nom de la procédure. Cette colonne renvoie toujours une valeur.|  
+|**PROCEDURE_NAME**|**nvarchar(134)**|Nom de la procédure. Cette colonne renvoie toujours une valeur.|  
 |**NUM_INPUT_PARAMS**|**Int**|Réservé pour un usage ultérieur.|  
 |**NUM_OUTPUT_PARAMS**|**Int**|Réservé pour un usage ultérieur.|  
 |**NUM_RESULT_SETS**|**Int**|Réservé pour un usage ultérieur.|  
@@ -104,7 +100,7 @@ GO
 EXEC sp_stored_procedures;  
 ```  
   
-### <a name="b-returning-a-single-stored-procedure"></a>b. Renvoi d'une procédure stockée unique  
+### <a name="b-returning-a-single-stored-procedure"></a>B. Renvoi d'une procédure stockée unique  
  L'exemple suivant retourne un jeu de résultats pour la procédure stockée `uspLogError`.  
   
 ```  

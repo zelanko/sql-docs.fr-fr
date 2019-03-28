@@ -18,12 +18,12 @@ ms.assetid: 0ecbec81-e637-44a9-a61e-11bf060ef084
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0bef77291c0a719b9cdc96106d3c173dff652da1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c1904b1549613e53c685d784628696e84b134a03
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644677"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534711"
 ---
 # <a name="sppassword-transact-sql"></a>sp_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,17 +45,14 @@ sp_password [ [ @old = ] 'old_password' , ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@old=** ] **'***old_password***'**  
- Ancien mot de passe. *old_password* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @old = ] 'old_password'` Est l’ancien mot de passe. *old_password* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@new=** ] **'***new_password***'**  
- Est le nouveau mot de passe. *new_password* est **sysname**, sans valeur par défaut. *old_password* doit être spécifié si les paramètres nommés ne sont pas utilisés.  
+`[ @new = ] 'new_password'` Est le nouveau mot de passe. *new_password* est **sysname**, sans valeur par défaut. *old_password* doit être spécifié si les paramètres nommés ne sont pas utilisés.  
   
 > [!IMPORTANT]  
 >  N'utilisez pas de mot de passe NULL, Utilisez un mot de passe fort. Pour plus d’informations, consultez [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
   
- [  **@loginame=** ] **'***connexion***'**  
- Nom de la connexion affectée par la modification du mot de passe. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit déjà exister et peut être spécifié uniquement par les membres de la **sysadmin** ou **securityadmin** rôles serveur fixes.  
+`[ @loginame = ] 'login'` Est le nom de la connexion affectée par la modification de mot de passe. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit déjà exister et peut être spécifié uniquement par les membres de la **sysadmin** ou **securityadmin** rôles serveur fixes.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -65,7 +62,7 @@ sp_password [ [ @old = ] 'old_password' , ]
   
  **sp_password** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN. Nécessite également l'autorisation CONTROL SERVER pour réinitialiser un mot de passe sans fournir l'ancien mot de passe ou si la connexion en cours de modification détient l'autorisation CONTROL SERVER.  
   
  Un principal peut modifier son propre mot de passe.  

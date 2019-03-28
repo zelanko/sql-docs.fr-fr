@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 43086b8d3898e4d9096e82289ce6e6f196542997
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 32f762de13a844f12144e89f4742409c3afcbab0
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645398"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511966"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Leçon 2 : Créer des caractéristiques de données à l’aide de R et T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,8 +123,8 @@ Pour ajouter les valeurs calculées dans une table qui peut être utilisée pour
 
 ## <a name="next-lesson"></a>Leçon suivante
 
-[Leçon 3 : Former et enregistrer un modèle à l’aide de T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[Leçon 3 : Former et enregistrer un modèle à l’aide de T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Leçon 1 : Explorer et visualiser les données à l’aide de R et des procédures stockées](sqldev-explore-and-visualize-the-data.md)
+[Leçon 1 : Explorer et visualiser les données à l’aide de R et des procédures stockées](sqldev-explore-and-visualize-the-data.md)

@@ -19,12 +19,12 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0228a3f0719bd6a56142e571323fdf809e534337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61301b0c6916ba11cb54cc0c8d8ab961cc3ae659
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635687"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534321"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -46,21 +46,19 @@ sp_help_fulltext_system_components
  'all'  
  Retourne des informations pour tous les composants de recherche en texte intégral.  
   
- [  **@component_type=** ] *component_type*  
- Spécifie le type de composant. *component_type* peut prendre l’une des opérations suivantes :  
+`[ @component_type = ] component_type` Spécifie le type de composant. *component_type* peut prendre l’une des opérations suivantes :  
   
 -   **wordbreaker**  
   
--   **Filter**  
+-   **filter**  
   
 -   **Gestionnaire de protocole**  
   
--   **FullPath**  
+-   **fullpath**  
   
  Si vous spécifiez un chemin d'accès complet, *param* doit également être spécifié avec le chemin d'accès complet à la bibliothèque de liens dynamiques (DLL) du composant, sans quoi un message d'erreur est retourné.  
   
- [  **@param=** ] *param*  
- Selon le type de composant, il peut s'agir d'un des éléments suivants : un identificateur local (LCID), l'extension de fichier précédée d'un « . », le nom de composant complet du gestionnaire de protocole ou le chemin d'accès complet à la bibliothèque de liens dynamiques (DLL) du composant.  
+`[ @param = ] param` Selon le type de composant, c’est une des opérations suivantes : un identificateur de paramètres régionaux (LCID), l’extension de fichier «. » du préfixe, le nom du composant complet du Gestionnaire de protocole ou le chemin d’accès complet à la DLL de composant.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou 1 (échec)  
@@ -71,11 +69,11 @@ sp_help_fulltext_system_components
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Type de composant. Il peut s'agir :<br /><br /> Filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
-|**NomComposant**|**sysname**|Nom du composant.|  
+|**componentname**|**sysname**|Nom du composant.|  
 |**clsid**|**uniqueidentifier**|Identificateur de classe du composant.|  
-|**FullPath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre **serveradmin** rôle serveur fixe.|  
+|**fullpath**|**nvarchar (256)**|Chemin d'accès de l'emplacement du composant.<br /><br /> NULL = l’appelant n’est pas membre **serveradmin** rôle serveur fixe.|  
 |**version**|**nvarchar(30)**|Numéro de version du composant.|  
-|**Fabricant**|**sysname**|Nom du fabricant du composant.|  
+|**manufacturer**|**sysname**|Nom du fabricant du composant.|  
   
  Le jeu de résultats suivant est retourné uniquement si un ou plusieurs catalogues de texte intégral existent et utilisent *component_type*.  
   
@@ -84,7 +82,7 @@ sp_help_fulltext_system_components
 |**dbid**|**Int**|ID de la base de données.|  
 |**ftcatid**|**Int**|Identificateur du catalogue de texte intégral.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **public** rôle ; Toutefois, les utilisateurs peuvent voir uniquement les informations sur les catalogues de texte intégral pour lequel ils ont l’autorisation VIEW DEFINITION. Seuls les membres du rôle de serveur fixe **serveradmin** peuvent voir les valeurs de la colonne **fullpath** .  
   
 ## <a name="remarks"></a>Notes  

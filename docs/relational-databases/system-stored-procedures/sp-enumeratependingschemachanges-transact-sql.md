@@ -16,12 +16,12 @@ ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 027e2f2f423024a374533decd6f35bb9bf7ccb3e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a3f0fa918d0247f5fd6dbe11c4a91a2376c52dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760221"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530811"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,22 +39,20 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@starting_schemaversion=** ] *starting_schemaversion*  
- Plus petit numéro de modification de schéma à inclure dans l'ensemble de résultats.  
+`[ @starting_schemaversion = ] starting_schemaversion` Est le changement de schéma numérique la plus basse à inclure dans le jeu de résultats.  
   
 ## <a name="result-set"></a>Jeu de résultats  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**nom_article**|**sysname**|Nom de l’article auquel la modification de schéma s’applique, ou **à l’échelle de la Publication** pour les modifications de schéma qui s’appliquent à la publication entière.|  
-|**version de schéma**|**Int**|Numéro de la modification de schéma en attente.|  
-|**SchemaType**|**sysname**|Valeur de texte représentant le type de modification de schéma.|  
+|**article_name**|**sysname**|Nom de l’article auquel la modification de schéma s’applique, ou **à l’échelle de la Publication** pour les modifications de schéma qui s’appliquent à la publication entière.|  
+|**schemaversion**|**Int**|Numéro de la modification de schéma en attente.|  
+|**schematype**|**sysname**|Valeur de texte représentant le type de modification de schéma.|  
 |**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] qui décrit la modification de schéma.|  
 |**schemastatus**|**nvarchar(10)**|Indique si une modification de schéma est en attente pour l'article. Peut avoir l'une des valeurs suivantes :<br /><br /> **Active** = modification de schéma est en attente<br /><br /> **inactif** = modification de schéma est inactive<br /><br /> **Ignorer** = modification de schéma n’est pas répliquée.|  
-|**SchemaGuid**|**uniqueidentifier**|Identifie la modification de schéma.|  
+|**schemaguid**|**uniqueidentifier**|Identifie la modification de schéma.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

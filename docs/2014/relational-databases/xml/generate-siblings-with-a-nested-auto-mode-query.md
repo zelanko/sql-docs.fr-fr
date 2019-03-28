@@ -10,21 +10,21 @@ helpviewer_keywords:
 - queries [XML in SQL Server], nested AUTO mode
 - nested AUTO mode query
 ms.assetid: 748d9899-589d-4420-8048-1258e9e67c20
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 883d66d07c776a7391b28f59c6f091c3f42ca3e0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b0db2a84b4be80fffec0f05aed11f39a3bcea7db
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164969"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534471"
 ---
 # <a name="generate-siblings-with-a-nested-auto-mode-query"></a>Générer des frères à l'aide d'une requête imbriquée en mode AUTO
   L'exemple suivant indique comment générer des frères à l'aide d'une requête imbriquée en mode AUTO. La seule autre façon de générer ce type de document XML consiste à utiliser le mode EXPLICIT. Toutefois, cette méthode peut s'avérer lourde.  
   
 ## <a name="example"></a>Exemple  
- Cette requête construit le document XML qui fournit les informations sur les commandes. Notamment :  
+ Cette requête construit le document XML qui fournit les informations sur les commandes. Notamment :  
   
 -   Les informations sur les en-têtes des commandes, `SalesOrderID`, `SalesPersonID`et `OrderDate`. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] stocke ces informations dans la table `SalesOrderHeader` .  
   
@@ -124,7 +124,7 @@ WHERE SalesOrderID=43659 or SalesOrderID=43660
 FOR XML AUTO, TYPE  
 ```  
   
- Voici le résultat obtenu :  
+ Voici le résultat obtenu :  
   
 ```  
 <Sales.SalesOrderHeader SalesOrderID="43659" SalesPersonID="279" CustomerID="676">  
@@ -144,7 +144,7 @@ FOR XML AUTO, TYPE
   
 -   La requête précédente est ajoutée à la clause `FROM` . Les résultats de la requête sont renvoyés sous la forme d'une table. Notez l'ajout de l'alias `XmlCol` .  
   
--   La clause `SELECT` définit une requête XQuery par rapport à l'alias `XmlCol` renvoyé dans la clause `FROM` . Le `query()` méthode de la `xml` type de données est utilisé lors de la spécification de la requête XQuery. Pour plus d’informations, consultez [Méthode query&#40;&#41; &#40;type de données xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
+-   La clause `SELECT` définit une requête XQuery par rapport à l'alias `XmlCol` renvoyé dans la clause `FROM` . La méthode `query()` du type de données `xml` est utilisée dans la spécification de la requête XQuery. Pour plus d’informations, consultez [Méthode query&#40;&#41; &#40;type de données xml&#41;](/sql/t-sql/xml/query-method-xml-data-type).  
   
     ```  
     SELECT XmlCol.query('<Root> { /* } </Root>')  

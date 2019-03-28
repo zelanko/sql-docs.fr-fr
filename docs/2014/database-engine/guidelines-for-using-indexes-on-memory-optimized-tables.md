@@ -12,17 +12,17 @@ ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 514b6c8fedb50417b8c4060cb45e73bfa88fdddb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094361"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527951"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Instructions pour utiliser les index sur les tables optimisées en mémoire
   Les index sont utilisés pour accéder efficacement aux données dans les tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifier les index appropriés peut améliorer considérablement les performances des requêtes. Par exemple, considérez la requête :  
   
-```tsql  
+```sql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
@@ -72,8 +72,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |Analyse d'index, récupère toutes les lignes de la table.|Oui|Oui|Oui|  
 |Recherche d'index sur les prédicats d'égalité (=).|Oui<br /><br /> (Clé complète requise.)|Oui <sup>1</sup>|Oui|  
 |Recherche d’index sur les prédicats d’inégalité (>, <, \<=, > =, BETWEEN).|Non (résulte dans une analyse d'index)|Oui <sup>1</sup>|Oui|  
-|Récupérez les lignes selon un ordre de tri qui correspond à la définition de l'index.|non|Oui|Oui|  
-|Récupérez les lignes selon un ordre de tri inverse par rapport à la définition de l'index.|non|non|Oui|  
+|Récupérez les lignes selon un ordre de tri qui correspond à la définition de l'index.|Non|Oui|Oui|  
+|Récupérez les lignes selon un ordre de tri inverse par rapport à la définition de l'index.|Non|Non|Oui|  
   
  Dans la table, Oui signifie que l'index peut traiter la demande et Non signifie que l'index ne peut pas être utilisé pour répondre à cette demande.  
   
@@ -90,10 +90,10 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      Le nettoyage de la mémoire fonctionne mieux si tous les index de la table sont utilisés fréquemment. Les index rarement utilisés peuvent entraîner un fonctionnement non optimal du système de nettoyage de la mémoire pour les anciennes versions de ligne.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>Création d'un index mémoire optimisé : exemples de code  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>Création d'une table optimisée en mémoire : Exemples de code  
  Index de hachage au niveau des colonnes :  
   
-```tsql  
+```sql  
 CREATE TABLE t1   
    (c1 INT NOT NULL INDEX idx HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -101,7 +101,7 @@ CREATE TABLE t1
   
  Index de hachage au niveau des tables :  
   
-```tsql  
+```sql  
 CREATE TABLE t1_1   
    (c1 INT NOT NULL,   
    INDEX IDX HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -110,7 +110,7 @@ CREATE TABLE t1_1
   
  Index de hachage de clé primaire au niveau des colonnes :  
   
-```tsql  
+```sql  
 CREATE TABLE t2   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -118,7 +118,7 @@ CREATE TABLE t2
   
  Index de hachage de clé primaire au niveau des tables :  
   
-```tsql  
+```sql  
 CREATE TABLE t2_2   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -127,7 +127,7 @@ CREATE TABLE t2_2
   
  Index non cluster au niveau de la colonne :  
   
-```tsql  
+```sql  
 CREATE TABLE t3   
    (c1 INT NOT NULL INDEX ID)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -135,7 +135,7 @@ CREATE TABLE t3
   
  Index non cluster au niveau de la table :  
   
-```tsql  
+```sql  
 CREATE TABLE t3_3   
    (c1 INT NOT NULL,   
    INDEX IDX NONCLUSTERED (c1))   
@@ -144,7 +144,7 @@ CREATE TABLE t3_3
   
  Index non cluster de clé primaire au niveau de la colonne :  
   
-```tsql  
+```sql  
 CREATE TABLE t4   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -152,7 +152,7 @@ CREATE TABLE t4
   
  Index non cluster de clé primaire de niveau table :  
   
-```tsql  
+```sql  
 CREATE TABLE t4_4   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED (c1))   
@@ -161,7 +161,7 @@ CREATE TABLE t4_4
   
  Index multicolonne défini après la définition des colonnes :  
   
-```tsql  
+```sql  
 create table t (  
        a int not null constraint ta primary key nonclustered,  
        b int not null,  

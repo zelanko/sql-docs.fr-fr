@@ -19,12 +19,12 @@ ms.assetid: a0b1337d-2059-4872-8c62-3f967d8b170f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 528881f91b39e2dd25ce76c63c5cbead33392265
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48057486"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532891"
 ---
 # <a name="execute-a-stored-procedure"></a>Exécuter une procédure stockée
   Cette rubrique explique comment exécuter une procédure stockée dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -53,7 +53,7 @@ ms.locfileid: "48057486"
   
 -   Le classement de la base de données d'appel est utilisé pour mettre en correspondance les noms des procédures système. Par conséquent, utilisez systématiquement la casse exacte des noms des procédures système dans vos appels de procédure. Par exemple, le code suivant ne fonctionnera pas s'il est exécuté dans le contexte d'une base de données dotée d'un classement qui respecte la casse :  
   
-    ```tsql  
+    ```sql  
     EXEC SP_heLP; -- Will fail to resolve because SP_heLP does not equal sp_help  
     ```  
   
@@ -67,7 +67,7 @@ ms.locfileid: "48057486"
   
      Les procédures système commencent par le préfixe **sp_**. Étant donné qu'elles figurent logiquement dans toutes les bases de données d'utilisateur et les bases de données définies par le système, elles peuvent être exécutés à partir de n'importe quelle base de données sans devoir qualifier entièrement le nom de la procédure. Cependant, nous vous conseillons de qualifier tous les noms de procédures système à l’aide du nom de schéma **sys** pour éviter les conflits de nom. L'exemple suivant illustre la méthode recommandée pour l'appel d'une procédure système.  
   
-    ```tsql  
+    ```sql  
     EXEC sys.sp_who;  
     ```  
   
@@ -77,7 +77,7 @@ ms.locfileid: "48057486"
   
      L'exemple suivant illustre la méthode recommandée pour l'exécution d'une procédure définie par l'utilisateur. Notez que la procédure accepte un paramètre d'entrée. Pour plus d’informations sur la spécification des paramètres d’entrée et de sortie, consultez [Spécifier les paramètres](specify-parameters.md).  
   
-    ```tsql  
+    ```sql  
     USE AdventureWorks2012;  
     GO  
     EXEC dbo.uspGetEmployeeManagers @BusinessEntityID = 50;  
@@ -85,7 +85,7 @@ ms.locfileid: "48057486"
   
      - Ou -  
   
-    ```tsql  
+    ```sql  
     EXEC AdventureWorks2012.dbo.uspGetEmployeeManagers 50;  
     GO  
     ```  
@@ -122,7 +122,7 @@ ms.locfileid: "48057486"
 ###  <a name="Security"></a> Sécurité  
  Pour plus d’informations, consultez [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql) et [Clause EXECUTE AS &#40;Transact-SQL& #41;](/sql/t-sql/statements/execute-as-clause-transact-sql).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour plus d’informations, consultez la section « Autorisations » dans [EXECUTE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/execute-transact-sql).  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -164,7 +164,7 @@ ms.locfileid: "48057486"
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment exécuter une procédure stockée qui attend un seul paramètre. L'exemple exécute la procédure stockée `uspGetEmployeeManagers` avec la valeur  `6` spécifiée pour le paramètre `@EmployeeID` .  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC dbo.uspGetEmployeeManagers 6;  
@@ -179,7 +179,7 @@ GO
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) pour définir l’exécution automatique d’une procédure.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   
@@ -195,7 +195,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 3.  Copiez et collez l'exemple suivant dans la fenêtre de requête, puis cliquez sur **Exécuter**. Cet exemple montre comment utiliser [sp_procoption](/sql/relational-databases/system-stored-procedures/sp-procoption-transact-sql) pour arrêter l’exécution automatique d’une procédure.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_procoption @ProcName = '<procedure name>'   

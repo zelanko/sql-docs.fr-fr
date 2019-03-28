@@ -16,12 +16,12 @@ ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec9d53433d0b06cfc017fde9d312e943a6a3c6d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3056c5c298fc1987e7c6f25e4a28220d3e033115
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816152"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535201"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@source_object =**] **'***source_object***'**  
- Est le nom de l’objet source. *source_object* est **nvarchar (386)**, sans valeur par défaut.  
+`[ @source_object = ] 'source_object'` Est le nom de l’objet source. *source_object* est **nvarchar (386)**, sans valeur par défaut.  
   
- [  **@rowguid=**] **'***rowguid***'**  
- Identificateur de ligne pour le type de suppression. *ROWGUID* est **uniqueidentifier**, sans valeur par défaut.  
+`[ @rowguid = ] 'rowguid'` Est l’identificateur de ligne pour le type de suppression. *ROWGUID* est **uniqueidentifier**, sans valeur par défaut.  
   
- [  **@delete_type=**] *type_de_suppression* **sortie**  
- Code indiquant le type de suppression. *type_de_suppression* est **int**, sans valeur par défaut. *type_de_suppression* est également un paramètre de sortie, et peut prendre l’une des valeurs suivantes.  
+`[ @delete_type = ] delete_type OUTPUT` Code indiquant le type de suppression. *type_de_suppression* est **int**, sans valeur par défaut. *type_de_suppression* est également un paramètre de sortie, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  

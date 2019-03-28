@@ -18,12 +18,12 @@ ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c1e161a678b6834123aabf1eb5126445927a7fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650774"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531761"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@sent_before=** ] **'***sent_before***'**  
- Supprime les messages électroniques antérieurs à la date et l’heure spécifiées par le *sent_before* argument. *sent_before* est **datetime** avec NULL comme valeur par défaut. La valeur NULL correspond à toutes les dates.  
+`[ @sent_before = ] 'sent_before'` Supprime les messages électroniques antérieurs à la date et l’heure spécifiées par le *sent_before* argument. *sent_before* est **datetime** avec NULL comme valeur par défaut. La valeur NULL correspond à toutes les dates.  
   
- [  **@sent_status=** ] **'***sent_status***'**  
- Supprime les messages électroniques du type spécifié par *sent_status*. *sent_status* est **varchar(8)** sans valeur par défaut. Les entrées valides sont **envoyé**, **unsent**, **une nouvelle tentative**, et **échec**. La valeur NULL correspond à tous les états.  
+`[ @sent_status = ] 'sent_status'` Supprime les messages électroniques du type spécifié par *sent_status*. *sent_status* est **varchar(8)** sans valeur par défaut. Les entrées valides sont **envoyé**, **unsent**, **une nouvelle tentative**, et **échec**. La valeur NULL correspond à tous les états.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -55,7 +53,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
   
  La suppression d'un message entraîne également la suppression des pièces jointes qui sont associées à ce message. Suppression du courrier électronique ne supprime pas les entrées correspondantes dans **sysmail_event_log**. Utilisez [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) pour supprimer des éléments à partir du journal.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, cette procédure stockée est accordée pour l’exécution aux membres hors tension le **sysadmin** rôle serveur fixe et **DatabaseMailUserRole**. Membres de la **sysadmin** du rôle serveur fixe peuvent exécuter cette procédure pour supprimer les messages envoyés par tous les utilisateurs. Membres de **DatabaseMailUserRole** peuvent supprimer uniquement les messages envoyés par cet utilisateur.  
   
 ## <a name="examples"></a>Exemples  

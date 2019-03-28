@@ -10,15 +10,15 @@ ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dc60d3491e4203db8f548dcbafd7c3b5373d266c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f3296d0162136a441d141d32089a674a67e7b5b0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123909"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526561"
 ---
 # <a name="application-pattern-for-partitioning-memory-optimized-tables"></a>Modèle d'application pour partitionner des tables mémoire optimisées
-  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle selon lequel une quantité limitée de données actives est conservée dans une table optimisée en mémoire, tandis que les données auxquelles on accède moins fréquemment sont traitées sur le disque. En règle générale, il s’agirait un scénario où sont stockées les données selon un `datetime` clé.  
+  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] prend en charge un modèle selon lequel une quantité limitée de données actives est conservée dans une table optimisée en mémoire, tandis que les données auxquelles on accède moins fréquemment sont traitées sur le disque. En général, c'est un scénario où les données sont stockées en fonction d'une clé `datetime`.  
   
  Pour émuler les tables partitionnées avec les tables mémoire optimisées, conservez une table partitionnée et une table mémoire optimisée avec un schéma commun. Les données actives sont insérées et mises à jour dans la table mémoire optimisée, alors que les données les moins fréquemment sollicitées sont conservées dans la table partitionnée traditionnelle.  
   
@@ -46,7 +46,7 @@ Maintenance de données actives
   
  La première partie de cet exemple permet de créer la base de données et les objets nécessaires. La deuxième partie de l'exemple montre comment déplacer des données d'une table mémoire optimisée dans une table partitionnée.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

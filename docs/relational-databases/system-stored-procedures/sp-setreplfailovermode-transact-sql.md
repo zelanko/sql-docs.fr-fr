@@ -16,12 +16,12 @@ ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a480dbccb955875d9e4835ac0d6acadd26e6e06c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773951"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535221"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=**] **'***publisher***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut. La publication doit déjà exister.  
+`[ @publisher = ] 'publisher'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut. La publication doit déjà exister.  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- Nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publication=**] **'***publication***'**  
- Nom de la publication. *publication*est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication*est **sysname**, sans valeur par défaut.  
   
  [**@failover_mode=**] **'***failover_mode***'**  
  Mode de basculement pour l'abonnement. *failover_mode* est **nvarchar (10)** et peut prendre l’une des valeurs suivantes.  
@@ -57,13 +54,12 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 |Value|Description|  
 |-----------|-----------------|  
 |**immédiate** ou **sync**|Les modifications de données effectuées sur l'Abonné sont instantanément copiées en bloc sur le serveur de publication.|  
-|**En file d’attente**|Modifications de données sont stockées dans un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file d’attente.|  
+|**queued**|Modifications de données sont stockées dans un [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] file d’attente.|  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing a été déconseillée et n’est plus pris en charge.  
   
- [ **@override**=] *remplacer*  
- À usage interne uniquement  
+`[ @override = ] override` Usage interne uniquement.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

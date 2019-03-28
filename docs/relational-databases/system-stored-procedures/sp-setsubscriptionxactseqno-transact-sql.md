@@ -16,12 +16,12 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 409f79007479fabe82b1c904f3bc0db943e3c116
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817861"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534651"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,23 +44,19 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=** ] **'***publisher***'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=** ] **'***publisher_db***'**  
- Nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut. Pour un serveur non-SQL, *publisher_db* est le nom de la base de données de distribution.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut. Pour un serveur non-SQL, *publisher_db* est le nom de la base de données de distribution.  
   
- [  **@publication=** ] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut. Lorsque l’Agent de Distribution est partagé par plusieurs publications, vous devez spécifier une valeur All pour *publication*.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut. Lorsque l’Agent de Distribution est partagé par plusieurs publications, vous devez spécifier une valeur All pour *publication*.  
   
- [  **@xact_seqno=** ] *xact_seqno*  
- Numéro séquentiel d'enregistrement de la transaction suivante sur le serveur de distribution à appliquer à l'Abonné. *xact_seqno* est **varbinary (16)**, sans valeur par défaut.  
+`[ @xact_seqno = ] xact_seqno` Est le LSN de la transaction suivante sur le serveur de distribution à appliquer sur l’abonné. *xact_seqno* est **varbinary (16)**, sans valeur par défaut.  
   
 ## <a name="result-set"></a>Jeu de résultats  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**XACT_SEQNO D’ORIGINE**|**varbinary(16)**|Numéro séquentiel d'enregistrement d'origine de la transaction suivante à appliquer à l'Abonné.|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|Numéro séquentiel d'enregistrement d'origine de la transaction suivante à appliquer à l'Abonné.|  
 |**XACT_SEQNO MIS À JOUR**|**varbinary(16)**|Numéro séquentiel d'enregistrement mis à jour de la transaction suivante à appliquer à l'Abonné.|  
 |**NOMBRE DE FLUX DE DONNÉES D’ABONNEMENT**|**Int**|Nombre de flux d'abonnements utilisés au cours de la dernière synchronisation.|  
   

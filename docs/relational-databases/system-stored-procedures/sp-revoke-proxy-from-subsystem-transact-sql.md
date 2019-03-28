@@ -18,12 +18,12 @@ ms.assetid: b87bc8ba-3ea8-4aed-b54b-32c3d82d9d2a
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: a8b2444785cf5b640614ee57192832151e3bc9e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4079a6afda1f303369a2d8b9defc8bbeb3c4608d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812422"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527231"
 ---
 # <a name="sprevokeproxyfromsubsystem-transact-sql"></a>sp_revoke_proxy_from_subsystem (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,13 @@ sp_revoke_proxy_from_subsystem
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@proxy_id** =] *id*  
- Numéro d'identification du proxy auquel le droit d'accès est refusé. Le *proxy_id* est **int**, avec NULL comme valeur par défaut. Soit *proxy_id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés.  
+`[ @proxy_id = ] id` Le numéro d’identification du proxy à révoquer l’accès à partir de. Le *proxy_id* est **int**, avec NULL comme valeur par défaut. Soit *proxy_id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- Nom du proxy auquel le droit d'accès est refusé. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut. Soit *proxy_id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés.  
+`[ @proxy_name = ] 'proxy_name'` Le nom du proxy à révoquer l’accès à partir de. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut. Soit *proxy_id* ou *proxy_name* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [ **@subsystem_id** =] *id*  
- Numéro d'identification du sous-système auquel il est interdit d'accéder. Le *subsystem_id* est **int**, avec NULL comme valeur par défaut. Soit *subsystem_id* ou *subsystem_name* doit être spécifié, mais ne peut pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
+`[ @subsystem_id = ] id` Numéro d’identification du sous-système auquel révoquer l’accès à. Le *subsystem_id* est **int**, avec NULL comme valeur par défaut. Soit *subsystem_id* ou *subsystem_name* doit être spécifié, mais ne peut pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**2**|Script ActiveX<br /><br /> **\*\* Important \* \***  sous-système de la création de scripts ActiveX sera supprimé à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans une future version de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
 |**3**|Système d'exploitation (CmdExec)|  
@@ -67,10 +64,9 @@ sp_revoke_proxy_from_subsystem
 |**11**|[!INCLUDE[ssIS](../../includes/ssis-md.md)] Exécution du package|  
 |**12**|script PowerShell|  
   
- [ **@subsystem_name**=] **'***subsystem_name***'**  
- Nom du sous-système auquel il est interdit d'accéder. Le *subsystem_name* est **sysname**, avec NULL comme valeur par défaut. Soit *subsystem_id* ou *subsystem_name* doit être spécifié, mais ne peut pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
+`[ @subsystem_name = ] 'subsystem_name'` Le nom du sous-système auquel révoquer l’accès à. Le *subsystem_name* est **sysname**, avec NULL comme valeur par défaut. Soit *subsystem_id* ou *subsystem_name* doit être spécifié, mais ne peut pas être spécifiés. Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Système d'exploitation (CmdExec)|  
@@ -90,7 +86,7 @@ sp_revoke_proxy_from_subsystem
 > [!NOTE]  
 >  Pour déterminer les étapes de travail référencent un proxy, cliquez sur le **proxys** nœud sous **Agent SQL Server** dans Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puis cliquez sur **propriétés**. Dans le **propriétés du compte Proxy** boîte de dialogue, sélectionnez le **références** page pour afficher toutes les étapes de travail qui font référence à ce proxy.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_revoke_proxy_from_subsystem**.  
   
 ## <a name="examples"></a>Exemples  

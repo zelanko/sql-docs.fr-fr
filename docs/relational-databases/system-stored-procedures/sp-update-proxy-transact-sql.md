@@ -19,12 +19,12 @@ ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 06520164758a50d604b2effbdae23f73dde7128c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763517"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534461"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,26 +48,19 @@ sp_update_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@proxy_id**=] *id*  
- Numéro d'identification du proxy à modifier. Le *proxy_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @proxy_id = ] id` Le numéro d’identification du proxy à modifier. Le *proxy_id* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@proxy_name**=] **'***proxy_name***'**  
- Nom du proxy à modifier. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @proxy_name = ] 'proxy_name'` Le nom de proxy à modifier. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@credential_name** =] **'***credential_name***'**  
- Nom relatif aux nouvelles informations d'identification du proxy. Le *credential_name* est **sysname**, avec NULL comme valeur par défaut. Soit *credential_name* ou *credential_id* peut être spécifié.  
+`[ @credential_name = ] 'credential_name'` Le nom des nouvelles informations d’identification pour le proxy. Le *credential_name* est **sysname**, avec NULL comme valeur par défaut. Soit *credential_name* ou *credential_id* peut être spécifié.  
   
- [ **@credential_id** =] *credential_id*  
- Numéro d'identification des nouvelles informations d'identification du proxy. Le *credential_id* est **int**, avec NULL comme valeur par défaut. Soit *credential_name* ou *credential_id* peut être spécifié.  
+`[ @credential_id = ] credential_id` Numéro d’identification des nouvelles informations d’identification pour le proxy. Le *credential_id* est **int**, avec NULL comme valeur par défaut. Soit *credential_name* ou *credential_id* peut être spécifié.  
   
- [ **@new_name**=] **'***nouveau_nom***'**  
- Le nouveau nom du proxy. Le *nouveau_nom* est **sysname**, avec NULL comme valeur par défaut. Lorsque fourni, la procédure modifie le nom du proxy à *nouveau_nom*. Si cet argument est NULL, le nom du proxy reste inchangé.  
+`[ @new_name = ] 'new_name'` Le nouveau nom du proxy. Le *nouveau_nom* est **sysname**, avec NULL comme valeur par défaut. Lorsque fourni, la procédure modifie le nom du proxy à *nouveau_nom*. Si cet argument est NULL, le nom du proxy reste inchangé.  
   
- [ **@enabled** =] *is_enabled*  
- Indique si le proxy est activé. Le *is_enabled* indicateur est **tinyint**, avec NULL comme valeur par défaut. Lorsque *is_enabled* est **0**, le proxy n’est pas activé et ne peut pas être utilisé par une étape de travail. Si cet argument est NULL, l'état du proxy reste inchangé.  
+`[ @enabled = ] is_enabled` Indique si le proxy est activé. Le *is_enabled* indicateur est **tinyint**, avec NULL comme valeur par défaut. Lorsque *is_enabled* est **0**, le proxy n’est pas activé et ne peut pas être utilisé par une étape de travail. Si cet argument est NULL, l'état du proxy reste inchangé.  
   
- [ **@description**=] **'***description***'**  
- Nouvelle description du proxy. Le *description* est **nvarchar (512)**, avec NULL comme valeur par défaut. Si cet argument est NULL, la description du proxy reste inchangé.  
+`[ @description = ] 'description'` Nouvelle description du proxy. Le *description* est **nvarchar (512)**, avec NULL comme valeur par défaut. Si cet argument est NULL, la description du proxy reste inchangé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -79,7 +72,7 @@ sp_update_proxy
   
  Cette procédure modifie le proxy sans modifier son accès. Pour modifier l’accès à un proxy, utilisez **sp_grant_login_to_proxy** et **sp_revoke_login_from_proxy**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle de sécurité fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

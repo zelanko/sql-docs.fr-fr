@@ -10,15 +10,15 @@ ms.assetid: bd102e95-53e2-4da6-9b8b-0e4f02d286d3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3c2035a5fba0d5ab37f0a545701551d5e7dfe80d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065789"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530741"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de table mémoire optimisée
-  En outre, pour les tables mémoire optimisées (pour un accès efficace aux données) et en mode natif des procédures stockées (pour le traitement des requêtes efficaces et l’exécution de logique métier) compilées [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduit un troisième type d’objet : le type de table mémoire optimisée. Une variable de table créée avec un type de table mémoire optimisée est une variable de table mémoire optimisée.  
+  En plus des tables mémoire optimisées (pour un accès efficace aux données) et des procédures stockées compilées en mode natif (pour une exécution efficace des requêtes et de la logique métier), [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduit un troisième type d'objet : le type de table mémoire optimisée. Une variable de table créée avec un type de table mémoire optimisée est une variable de table mémoire optimisée.  
   
  Les variables de table mémoire optimisée offrent les avantages suivants par rapport aux variables de table sur disque :  
   
@@ -36,11 +36,11 @@ ms.locfileid: "48065789"
   
 -   Les variables de table peuvent être utilisées pour simuler des curseurs dans les procédures stockées compilées en mode natif, ce qui peut vous aider à contourner les limitations concernant la surface d'exposition dans ces procédures.  
   
- Comme les tables optimisées en mémoire, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] génère une DLL pour chaque type de table mémoire optimisée. (La compilation est appelée lorsque le type de table mémoire optimisée est créé et non lorsqu'il est utilisé pour créer des variables de table mémoire optimisée). Cette DLL contient les fonctions pour accéder aux index et récupérer des données des variables de table. Lorsqu'une variable de table mémoire optimisée est déclarée en fonction du type de table, une instance de la table et des structures d'index correspondant au type de table est créée dans la session utilisateur. La variable de table peut ensuite être utilisée de la même manière que les variables de table sur disque. Vous pouvez insérer, mettre à jour, et supprimer des lignes dans la variable de table, et utiliser des variables dans les requêtes [!INCLUDE[tsql](../includes/tsql-md.md)]. Vous pouvez également passer les variables dans les procédures stockées compilées en mode natif et interprétées, comme paramètres de table (TVP).  
+ Comme les tables mémoire optimisées, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] génère une DLL pour chaque type de table mémoire optimisée. (La compilation est appelée lorsque le type de table mémoire optimisée est créé et non lorsqu'il est utilisé pour créer des variables de table mémoire optimisée). Cette DLL contient les fonctions pour accéder aux index et récupérer des données des variables de table. Lorsqu'une variable de table mémoire optimisée est déclarée en fonction du type de table, une instance de la table et des structures d'index correspondant au type de table est créée dans la session utilisateur. La variable de table peut ensuite être utilisée de la même manière que les variables de table sur disque. Vous pouvez insérer, mettre à jour, et supprimer des lignes dans la variable de table, et utiliser des variables dans les requêtes [!INCLUDE[tsql](../includes/tsql-md.md)] . Vous pouvez également passer les variables dans les procédures stockées compilées en mode natif et interprétées, comme paramètres de table (TVP).  
   
  L'exemple suivant illustre un type de table mémoire optimisée tiré de l'exemple basé sur AdventureWorks de l'OLTP en mémoire ([Exemple d'OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   
-```tsql
+```sql
 CREATE TYPE Sales.SalesOrderDetailType_inmem
    AS TABLE
 (
@@ -64,9 +64,9 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
 -   Le type doit avoir au moins un index. Comme pour les tables mémoire optimisées, vous pouvez utiliser des index de hachage et non cluster.  
   
-     Pour un index de hachage, le nombre de compartiments doit être égal à une à deux fois le nombre de clés d'index uniques attendu. Pour plus d’informations, consultez [déterminer le nombre de compartiments Correct pour les index de hachage](../relational-databases/indexes/indexes.md).  
+     Pour un index de hachage, le nombre de compartiments doit être égal à une à deux fois le nombre de clés d'index uniques attendu. Pour plus d'informations, consultez [Determining the Correct Bucket Count for Hash Indexes](../relational-databases/indexes/indexes.md).  
   
--   Les restrictions de type de données et de contrainte sur les tables mémoire optimisées s'appliquent également aux types de table mémoire optimisée. Par exemple, dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], les contraintes par défaut sont prises en charge, mais les contraintes de validation ne le sont pas.  
+-   Les restrictions de type de données et de contrainte sur les tables mémoire optimisées s'appliquent également aux types de table mémoire optimisée. Par exemple, dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] , les contraintes par défaut sont prises en charge, mais les contraintes de validation ne le sont pas.  
   
  Comme les tables mémoire optimisées, les variables de table mémoire optimisée :  
   
@@ -81,7 +81,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
 ## <a name="table-valued-parameters"></a>Paramètres table  
  L'exemple de script suivant illustre la déclaration d'une variable de table comme type de table mémoire optimisée `Sales.SalesOrderDetailType_inmem`, l'insertion de trois lignes dans la variable, et le passage des variables comme TVP dans `Sales.usp_InsertSalesOrder_inmem`.  
   
-```tsql  
+```sql  
 DECLARE @od Sales.SalesOrderDetailType_inmem,  
   @SalesOrderID uniqueidentifier,  
   @DueDate datetime2 = SYSDATETIME()  
@@ -103,7 +103,7 @@ EXEC Sales.usp_InsertSalesOrder_inmem
 ## <a name="temp-table-replacement"></a>Remplacement de la table #temp  
  L'exemple suivant illustre les types de table et les variables de table mémoire optimisée remplaçant les tables #temp locales sur une procédure stockée.  
   
-```tsql  
+```sql  
 -- Using SQL procedure and temp table  
 CREATE TABLE #tempTable (c INT NOT NULL PRIMARY KEY NONCLUSTERED)  
   
@@ -139,7 +139,7 @@ GO
 ## <a name="creating-a-single-result-set"></a>Création d'un seul ensemble de résultats  
  L'exemple suivant explique comment stocker des résultats intermédiaires et créer des ensembles de résultats uniques en fonction de plusieurs requêtes dans les procédures stockées compilées en mode natif. L'exemple calcule l'union `SELECT c1 FROM dbo.t1 UNION SELECT c1 FROM dbo.t2`.  
   
-```tsql  
+```sql  
 CREATE DATABASE hk  
 GO  
 ALTER DATABASE hk ADD FILEGROUP hk_mod CONTAINS MEMORY_OPTIMIZED_DATA  

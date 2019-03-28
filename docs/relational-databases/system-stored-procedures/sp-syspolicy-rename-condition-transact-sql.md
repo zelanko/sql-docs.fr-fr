@@ -18,12 +18,12 @@ ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 6b625a1992411946703afb2583109f9e74518d5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0305e7bc2daa087483fce0472d32df0887271ba3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850448"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534601"
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name=** ] **'***nom***'**  
- Nom de la condition que vous voulez renommer. *nom* est **sysname**et doit être spécifié si *condition_id* a la valeur NULL.  
+`[ @name = ] 'name'` Est le nom de la condition que vous souhaitez renommer. *nom* est **sysname**et doit être spécifié si *condition_id* a la valeur NULL.  
   
- [  **@condition_id=** ] *condition_id*  
- Est l’identificateur pour la condition que vous souhaitez renommer. *condition_id* est **int**et doit être spécifié si *nom* est NULL.  
+`[ @condition_id = ] condition_id` Est l’identificateur pour la condition que vous souhaitez renommer. *condition_id* est **int**et doit être spécifié si *nom* est NULL.  
   
- [  **@new_name=** ] **'***nouveau_nom***'**  
- Est le nouveau nom de la condition. *new_name* est **sysname**et est requis. Ne peut pas avoir la valeur NULL ou être une chaîne vide.  
+`[ @new_name = ] 'new_name'` Est le nouveau nom de la condition. *new_name* est **sysname**et est requis. Ne peut pas avoir la valeur NULL ou être une chaîne vide.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -58,11 +55,11 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
   
  Vous devez spécifier une valeur pour *nom* ou *condition_id*. Les deux ne peuvent pas être NULL. Pour obtenir ces valeurs, interrogez la vue msdb.dbo.syspolicy_conditions.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe PolicyAdministratorRole.  
   
 > [!IMPORTANT]  
->  Élévation possible des informations d’identification : les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la plupart des objets d’être créées dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Étant donné cette possible élévation des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs qui sont approuvés avec contrôle de la configuration de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+>  Élévation possible des informations d'identification : Les utilisateurs du rôle PolicyAdministratorRole peuvent créer des déclencheurs de serveur et planifier des exécutions de stratégie qui peuvent affecter le fonctionnement de l’instance de la [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Par exemple, les utilisateurs du rôle PolicyAdministratorRole peuvent créer une stratégie qui peut empêcher la plupart des objets d’être créées dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Étant donné cette possible élévation des informations d’identification, le rôle PolicyAdministratorRole doit être accordé uniquement aux utilisateurs qui sont approuvés avec contrôle de la configuration de la [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 ## <a name="examples"></a>Exemples  
  L'exemple suivant renomme une condition nommée « Change Tracking Enabled ».  

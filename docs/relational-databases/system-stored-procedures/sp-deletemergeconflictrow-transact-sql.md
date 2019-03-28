@@ -16,12 +16,12 @@ ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1b11096a9f1ac9f8c5f5c04f3afc36f2776e988e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5bef3e4902562edde0adb2a4f495c51e6a82b091
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782951"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535281"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@conflict_table=**] **'**_conflict_table_**'**  
- Nom de la table de conflits. *conflict_table* est **sysname**, avec une valeur par défaut **%**. Si le *conflict_table* est spécifié comme NULL ou **%**, le conflit est considéré comme un conflit de suppression et la ligne correspondant *rowguid* et *origin_datasource* et *source_object* est supprimé de la [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) table.  
+`[ @conflict_table = ] 'conflict_table'` Est le nom de la table de conflits. *conflict_table* est **sysname**, avec une valeur par défaut **%**. Si le *conflict_table* est spécifié comme NULL ou **%**, le conflit est considéré comme un conflit de suppression et la ligne correspondant *rowguid* et *origin_datasource* et *source_object* est supprimé de la [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) table.  
   
- [  **@source_object=**] **'**_source_object_**'**  
- Est le nom de la table source. *source_object* est **nvarchar (386)**, avec NULL comme valeur par défaut.  
+`[ @source_object = ] 'source_object'` Est le nom de la table source. *source_object* est **nvarchar (386)**, avec NULL comme valeur par défaut.  
   
- [  **@rowguid =**] **'**_rowguid_**'**  
- Identificateur de ligne pour le conflit de suppression. *ROWGUID* est **uniqueidentifier**, sans valeur par défaut.  
+`[ @rowguid = ] 'rowguid'` Est l’identificateur de ligne pour le conflit de suppression. *ROWGUID* est **uniqueidentifier**, sans valeur par défaut.  
   
- [  **@origin_datasource=**] **'**_origin_datasource_**'**  
- Est l’origine du conflit. *origin_datasource* est **varchar (255)**, sans valeur par défaut.  
+`[ @origin_datasource = ] 'origin_datasource'` Est l’origine du conflit. *origin_datasource* est **varchar (255)**, sans valeur par défaut.  
   
- [  **@drop_table_if_empty=**] **'**_suppr_table_si_vide_**'**  
- Est un indicateur qui spécifie si le *conflict_table* doit être supprimée lorsqu’elle est vide. *suppr_table_si_vide* est **varchar (10)**, avec FALSE comme valeur par défaut.  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` Est un indicateur qui spécifie si le *conflict_table* doit être supprimée lorsqu’elle est vide. *suppr_table_si_vide* est **varchar (10)**, avec FALSE comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

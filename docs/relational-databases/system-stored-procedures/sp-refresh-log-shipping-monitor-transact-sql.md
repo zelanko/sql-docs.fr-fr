@@ -18,12 +18,12 @@ ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4382dc4de4010944e60cb37640759e91a0fc2727
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be900d6b8295aae5871e9162c5e07ae5bed6516c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851557"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528974"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_refresh_log_shipping_monitor
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@agent_id=** ] **'***agent_id***'**  
- ID principal pour la sauvegarde ou ID secondaire pour la copie ou la restauration. *éléments agent_id* est **uniqueidentifier** et ne peut pas être NULL.  
+`[ @agent_id = ] 'agent_id'` ID principal pour la sauvegarde ou ID secondaire pour la copie ou de restauration. *éléments agent_id* est **uniqueidentifier** et ne peut pas être NULL.  
   
- [  **@agent_type=** ] **'***agent_type***'**  
- Type d'opération de copie des journaux de transaction.  
+`[ @agent_type = ] 'agent_type'` Le type de travail d’envoi de journaux.  
   
  0 = Sauvegarde.  
   
@@ -58,11 +56,9 @@ sp_refresh_log_shipping_monitor
   
  *agent_type* est **tinyint** et ne peut pas être NULL.  
   
- [  **@database=** ] **'***base de données***'**  
- Base de données primaire ou secondaire utilisée pour la connexion par des agents de sauvegarde ou de restauration.  
+`[ @database = ] 'database'` Le principal ou secondaire base de données utilisée par la journalisation par les agents de sauvegarde ou de restauration.  
   
- [ **@mode** ] *n*  
- Spécifie s'il faut actualiser les données du moniteur ou les effacer. Le type de données de *m* est de type tinyint et les valeurs prises en charge sont :  
+`[ @mode ] n` Spécifie s’il faut actualiser les données du moniteur ou les effacer. Le type de données de *m* est de type tinyint et les valeurs prises en charge sont :  
   
  1 = actualisation (Il s'agit de la valeur par défaut.)  
   
@@ -79,7 +75,7 @@ sp_refresh_log_shipping_monitor
   
  **sp_refresh_log_shipping_monitor** doit être exécuté à partir de la **master** base de données sur le serveur principal ou secondaire.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -18,12 +18,12 @@ ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 17fe4fd7edad9df6bccace9d301516ae7683edf3
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c6a6e31b4dc36e0f280dfb03d8eadf09a7d4ff7c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255664"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534861"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@loginame =** ] **'**_login_**'**  
- Nom de l'utilisateur ou du groupe Windows à ajouter. L’utilisateur de Windows ou le groupe doit être qualifié avec un nom de domaine Windows sous la forme *domaine*\\*utilisateur*. *connexion* est **sysname**, sans valeur par défaut.  
+`[ @loginame = ] 'login'` Est le nom de l’utilisateur de Windows ou le groupe à ajouter. L’utilisateur de Windows ou le groupe doit être qualifié avec un nom de domaine Windows sous la forme *domaine*\\*utilisateur*. *connexion* est **sysname**, sans valeur par défaut.  
   
- [ **@logintype =** ] **'**_logintype_**'**  
- Niveau de sécurité du nom de connexion auquel l'accès est accordé. *le LoginType* est **varchar (5)**, avec NULL comme valeur par défaut. Uniquement **administrateur** peut être spécifié. Si **administrateur** est spécifié, *connexion* a accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et ajouté en tant que membre de la **sysadmin** rôle serveur fixe.  
+`[ @logintype = ] 'logintype'` Le niveau de sécurité de la connexion en cours a accès. *le LoginType* est **varchar (5)**, avec NULL comme valeur par défaut. Uniquement **administrateur** peut être spécifié. Si **administrateur** est spécifié, *connexion* a accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et ajouté en tant que membre de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

@@ -18,12 +18,12 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 05e5ef298e9365b63b4e66b93c0f2aa637be8312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706997"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534141"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,29 +43,25 @@ sp_help_category [ [ @class = ] 'class' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@class=**] **'***classe***'**  
- Classe faisant l'objet d'une demande d'informations. *classe* est **varchar(8)**, avec une valeur par défaut **travail**. *classe* peut prendre l’une des valeurs suivantes.  
+`[ @class = ] 'class'` La classe sur laquelle les informations sont demandées. *classe* est **varchar(8)**, avec une valeur par défaut **travail**. *classe* peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**JOB**|Fournit des informations sur une catégorie de travaux.|  
 |**ALERTE**|Fournit des informations sur une catégorie d'alertes.|  
 |**OPÉRATEUR**|Fournit des informations sur une catégorie d'opérateurs.|  
   
- [  **@type=** ] **'***type***'**  
- Type de catégorie faisant l'objet d'une demande d'informations. *type* est **varchar(12)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Le type de catégorie pour laquelle les informations sont demandées. *type* est **varchar(12)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**LOCAL**|Catégorie de travaux locale.|  
-|**MULTI-SERVEUR**|Catégorie de travaux multiserveur.|  
+|**MULTI -SERVER**|Catégorie de travaux multiserveur.|  
 |**NONE**|Catégorie d’une classe autre que **travail**.|  
   
- [  **@name=** ] **'***nom***'**  
- Nom de la catégorie faisant l'objet d'une demande d'informations. *nom* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @name = ] 'name'` Le nom de la catégorie pour laquelle les informations sont demandées. *nom* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@suffix=** ] *suffixe*  
- Spécifie si le **category_type** colonne du jeu de résultats est un ID ou un nom. *suffixe* est **bits**, avec une valeur par défaut **0**. **1** montre le **category_type** en tant que nom, et **0** indique qu’il a un ID.  
+`[ @suffix = ] suffix` Spécifie si le **category_type** colonne du jeu de résultats est un ID ou un nom. *suffixe* est **bits**, avec une valeur par défaut **0**. **1** montre le **category_type** en tant que nom, et **0** indique qu’il a un ID.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -76,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**Int**|ID de la catégorie|  
-|**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = local<br /><br /> **2** = multiserveur<br /><br /> **3** = none|  
+|**category_type**|**tinyint**|Type de catégorie :<br /><br /> **1** = Local<br /><br /> **2** = Multiserver<br /><br /> **3** = none|  
 |**nom**|**sysname**|Nom de la catégorie|  
   
  Lorsque **@suffix** est **1**, **sp_help_category** retourne le jeu de résultats suivant :  
@@ -92,7 +88,7 @@ sp_help_category [ [ @class = ] 'class' ]
   
  Si aucun paramètre n'est spécifié, le jeu de résultats fournit des informations sur toutes les catégories de travaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

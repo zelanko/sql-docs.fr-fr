@@ -18,12 +18,12 @@ ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: e7996e3f5d91c78a83266c6d5b23ce8b3d381064
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0785e7b7d394177efee3ae12cb6d0e2f7d8cb5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767937"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528962"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame =** ] **'***connexion***'**  
- Nom de l'utilisateur ou du groupe Windows dont l'accès doit être révoqué. *connexion* doit inclure le nom de domaine, par exemple **[ADVWKS\sylvester1]**. *connexion* est **sysname**, sans valeur par défaut.  
+`[ @loginame = ] 'login'` Est le nom de l’utilisateur de Windows ou d’un groupe à partir de laquelle révoquer l’accès. *connexion* doit inclure le nom de domaine, par exemple **[ADVWKS\sylvester1]**. *connexion* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -52,7 +51,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ## <a name="remarks"></a>Notes  
  Utilisez à la place DROP LOGIN.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

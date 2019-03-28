@@ -10,12 +10,12 @@ ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2c84ecb4076fc7aff20383b56a81b6df56d28ea3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049099"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529291"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migration des contraintes de validation et de clé étrangère
   Les contraintes de validation et de clés étrangères ne sont pas prises en charge dans [!INCLUDE[hek_2](../includes/hek-2-md.md)] dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ces constructions sont généralement utilisées pour appliquer l'intégrité logique des données au schéma et peuvent être importantes pour conserver la précision fonctionnelle des applications.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049099"
 ## <a name="table-definition-for-the-workarounds"></a>Définition de table pour les solutions de contournement  
  Avant la conversion en table mémoire optimisée, la définition de [Sales].[SalesOrderDetail] se présente comme suit :  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -101,7 +101,7 @@ GO
   
  Notez que rowguid n'est plus un ROWGUIDCOL, car il n'est pas pris en charge dans [!INCLUDE[hek_2](../includes/hek-2-md.md)]. La colonne a été supprimée. En outre, LineTotal est une colonne calculée et n'est pas abordé dans cet article ; il a donc également été supprimé.  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -127,7 +127,7 @@ GO
   
 ## <a name="checking-constraints-after-an-insert-update-or-delete-operation"></a>Vérification des contraintes après une opération d'insertion, de mise à jour ou de suppression  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -185,7 +185,7 @@ END
   
 ## <a name="enforcing-constraints-before-an-insert-update-or-delete-operation"></a>Application des contraintes avant une opération d'insertion, de mise à jour ou de suppression  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

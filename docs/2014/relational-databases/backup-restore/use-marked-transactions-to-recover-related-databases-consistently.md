@@ -20,12 +20,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 345584f406830689c4f0bec2a563314d798595a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37b4a53461b2ebd485941ecad89e3672e7c31b62
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48073129"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532581"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently-full-recovery-model"></a>Utiliser les transactions marquées pour récupérer des bases de données associées uniformément (mode de récupération complète)
   Cette rubrique s'applique uniquement aux bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] employant le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -89,7 +89,7 @@ ms.locfileid: "48073129"
 ### <a name="examples"></a>Exemples  
  L'exemple suivant restaure le journal des transactions jusqu'à la marque dans la transaction marquée nommée `ListPriceUpdate`.  
   
-```tsql  
+```sql  
 USE AdventureWorks  
 GO  
 BEGIN TRANSACTION ListPriceUpdate  
@@ -127,7 +127,7 @@ RESTORE LOG AdventureWorks
   
  Supposons, par exemple, qu'une base de données partitionnée existe sur plusieurs instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sur chaque instance se trouve une base de données nommée `coyote`. Créez d’abord une procédure stockée, par exemple `sp_SetMark`, dans chaque base de données.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_SetMark  
 @name nvarchar (128)  
 AS  
@@ -139,7 +139,7 @@ GO
   
  Ensuite, créez une procédure stockée `sp_MarkAll` contenant une transaction qui place une marque dans chaque base de données. `sp_MarkAll` peut être exécutée à partir de n’importe quelle instance.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE sp_MarkAll  
 @name nvarchar (128)  
 AS  

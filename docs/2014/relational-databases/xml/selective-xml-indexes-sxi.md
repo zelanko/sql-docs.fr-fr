@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 598ecdcd-084b-4032-81b2-eed6ae9f5d44
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 758eadb1d5b3724bd829c556ca93ce8ae4a3bfa0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206239"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534581"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Index XML sélectifs (SXI)
   Les index XML sélectifs sont un autre type d'index XML disponible en plus des index XML ordinaires. Les objectifs de la fonctionnalité d'index XML sélectif sont les suivants :  
@@ -78,7 +78,7 @@ ms.locfileid: "48206239"
   
  Si vous devez uniquement interroger ces données sur le chemin d'accès `/book/title` et le chemin d'accès `/book/subjects` , créez l'index XML sélectif suivant :  
   
-```tsql  
+```sql  
 CREATE SELECTIVE XML INDEX SXI_index  
 ON Tbl(xmlcol)  
 FOR   
@@ -123,7 +123,7 @@ FOR
   
 -   Indexation des nœuds avec des types de données binaires XS : par exemple, base64Binary et hexBinary.  
   
--   Spécification des nœuds à indexer avec des expressions Xpath qui contiennent le caractère générique `*` à la fin : par exemple,  `/a/b/c/*`, `/a//b/*`ou `/a/b/*:c`.  
+-   Spécification des nœuds à indexer avec des expressions XPath qui contiennent le caractère générique `*` à la fin : Par exemple, `/a/b/c/*`, `/a//b/*`, ou `/a/b/*:c`.  
   
 -   Indexation d'un axe autre que l'enfant, l'attribut ou le descendant. `//<step>` est autorisé comme un cas particulier.  
   

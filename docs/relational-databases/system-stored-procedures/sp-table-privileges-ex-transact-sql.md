@@ -18,12 +18,12 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0993299edffce3139b468bf3ca27d49f88e8638b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: a11fb3f879336f5217abe138c91755154df868b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591333"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534271"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,20 +44,15 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_server =** ] **'**_serveur_de_la_table_**'**  
- Nom du serveur lié pour lequel renvoyer les informations. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
+`[ @table_server = ] 'table_server'` Est le nom du serveur lié pour lequel retourner les informations. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
- [  **@table_name =** ] **'**_table_name_**'**]  
- Nom de la table pour laquelle les informations de privilège de table sont demandées. *table_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_name = ] 'table_name']` Est le nom de la table pour laquelle les informations de privilège de table. *table_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_schema =** ] **'**_table_schema_**'**  
- Schéma de la table. Propriétaire de la table dans certains environnements SGBD. *table_schema* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_schema = ] 'table_schema'` Est le schéma de table. Propriétaire de la table dans certains environnements SGBD. *table_schema* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@table_catalog =** ] **'**_table_catalog_**'**  
- Est le nom de la base de données dans laquelle le texte spécifié *table_name* réside. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @table_catalog = ] 'table_catalog'` Est le nom de la base de données dans laquelle le texte spécifié *table_name* réside. *table_catalog* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@fUsePattern =**] **'**_fUsePattern_**'**  
- Détermine si les caractères « _ », « % », « [ » et « ] » doivent être interprétés en tant que caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
+`[ @fUsePattern = ] 'fUsePattern'` Détermine si les caractères '_', '%', ' [', et ']' sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  
@@ -72,7 +67,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
 |**FOURNISSEUR D’AUTORISATIONS**|**sysname**|Nom d’utilisateur de base de données qui a accordé des autorisations sur **TABLE_NAME** à la liste **bénéficiaire**. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne est toujours le même que le **TABLE_OWNER**. Ce champ retourne toujours une valeur. En outre, la colonne GRANTOR peut être soit le propriétaire de la base de données (**TABLE_OWNER**) ou un utilisateur auquel le propriétaire de la base de données a accordé l’autorisation à l’aide de la clause WITH GRANT OPTION de l’instruction GRANT.|  
 |**BÉNÉFICIAIRE**|**sysname**|Nom d’utilisateur de base de données qui a été accordé des autorisations sur **TABLE_NAME** par le **GRANTOR**. Ce champ retourne toujours une valeur.|  
 |**PRIVILÈGE**|**varchar(** 32 **)**|L'une des autorisations disponibles sur la table. Les autorisations sur les tables peuvent prendre l'une des valeurs suivantes (ou d'autres valeurs prises en charge par la source des données si leur implémentation est définie) :<br /><br /> Sélectionnez = **bénéficiaire** peut récupérer des données pour un ou plusieurs des colonnes.<br /><br /> INSERT = **bénéficiaire** peut fournir des données pour les nouvelles lignes pour un ou plusieurs des colonnes.<br /><br /> Mise à jour = **bénéficiaire** peut modifier des données existantes pour un ou plusieurs des colonnes.<br /><br /> DELETE = **bénéficiaire** peut supprimer des lignes de la table.<br /><br /> RÉFÉRENCES = **bénéficiaire** peut référencer une colonne d’une table dans une relation clé primaire/étrangère clé étrangère. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les relations clé primaire/clé étrangère sont définies grâce à des contraintes de table.<br /><br /> Le rayon d’action pour le **bénéficiaire** par une table spécifique privilège est dépend de la source de données. Par exemple, l’autorisation de mise à jour pourrait permettre le **bénéficiaire** pour mettre à jour toutes les colonnes d’une table pour une source de données et uniquement les colonnes pour lesquelles le **GRANTOR** a l’autorisation de mise à jour sur une autre source de données.|  
-|**IS_GRANTABLE**|**varchar (** 3 **)**|Indique si le **bénéficiaire** est autorisé à accorder des autorisations à d’autres utilisateurs. On appelle habituellement ce mécanisme « transmission des droits ». Les valeurs possibles sont YES, NO ou NULL. Une valeur inconnue (ou NULL) fait référence à une source de données où la « transmission des droits » ne s'applique pas.|  
+|**IS_GRANTABLE**|**varchar(** 3 **)**|Indique si le **bénéficiaire** est autorisé à accorder des autorisations à d’autres utilisateurs. On appelle habituellement ce mécanisme « transmission des droits ». Les valeurs possibles sont YES, NO ou NULL. Une valeur inconnue (ou NULL) fait référence à une source de données où la « transmission des droits » ne s'applique pas.|  
   
 ## <a name="remarks"></a>Notes  
  Les résultats obtenus sont triés par **TABLE_QUALIFIER**, **TABLE_OWNER**, **TABLE_NAME**, et **privilège**.  

@@ -11,12 +11,12 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 12a6d8fdaf0bf1c09c5de706d7dad811c09def2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056659"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532561"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Leçon 8. Restaurer une base de données dans le Stockage Microsoft Azure
   Dans cette leçon, vous allez apprendre comment créer un fichier de sauvegarde localement, puis le restaurer dans le Stockage Microsoft Azure. Notez que vous votre base de données peut être locale ou dans une machine virtuelle Windows Azure. Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5, 6 et 7.  
@@ -39,7 +39,7 @@ ms.locfileid: "48056659"
   
 2.  Lorsque vous êtes connecté à la base de données nouvellement créée, ouvrez la fenêtre de requête. Exécutez l'instruction suivante :  
   
-    ```tsql  
+    ```sql  
   
     USE TestDB3Restore;   
     GO   
@@ -53,7 +53,7 @@ ms.locfileid: "48056659"
   
 3.  Ensuite, copiez et exécutez les instructions suivantes dans la fenêtre de requête :  
   
-    ```tsql  
+    ```sql  
   
     USE master;   
     GO   

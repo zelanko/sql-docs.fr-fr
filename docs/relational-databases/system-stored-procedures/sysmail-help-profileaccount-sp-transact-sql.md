@@ -18,12 +18,12 @@ ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 779519ef5ba3098e205a70d8c5923adc993f44f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff6dbe9abcd1378370a17a053b69ea59c01fee75
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700748"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527201"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +44,13 @@ sysmail_help_profileaccount_sp
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@profile_id** =] *profile_id*  
- ID du profil à répertorier. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_id = ] profile_id` Est l’ID de profil du profil à la liste. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nom du profil à répertorier. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_name = ] 'profile_name'` Est le nom du profil de profil à répertorier. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
- [ **@account_id** =] *account_id*  
- ID du compte à répertorier. *account_id* est **int**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* sont les deux NULL, répertorie tous les comptes dans le profil.  
+`[ @account_id = ] account_id` Est l’ID de compte à la liste. *account_id* est **int**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* sont les deux NULL, répertorie tous les comptes dans le profil.  
   
- [ **@account_name** =] **'***account_name***'**  
- Nom du compte à répertorier. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* sont les deux NULL, répertorie tous les comptes dans le profil.  
+`[ @account_name = ] 'account_name'` Est le nom du compte à la liste. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Lorsque *account_id* et *account_name* sont les deux NULL, répertorie tous les comptes dans le profil.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -66,7 +62,7 @@ sysmail_help_profileaccount_sp
 |-|-|-|  
 |Nom de colonne|Type de données|Description|  
 |**profile_id**|**Int**|Identificateur du profil du profil.|  
-|**nom_profil**|**sysname**|Nom du profil|  
+|**profile_name**|**sysname**|Nom du profil|  
 |**account_id**|**Int**|ID du compte.|  
 |**account_name**|**sysname**|Nom du compte|  
 |**sequence_number**|**Int**|Numéro de séquence du compte dans le profil.|  
@@ -76,7 +72,7 @@ sysmail_help_profileaccount_sp
   
  La procédure stockée **sysmail_help_profileaccount_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

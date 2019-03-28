@@ -18,12 +18,12 @@ ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c4daab0b36ff21fea956c1c5b0db27588cc5acee
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: decba4eca9eb858bae8543ce5f5ed66ad723acca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168699"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533791"
 ---
 # <a name="spdeletemaintenanceplanjob-transact-sql"></a>sp_delete_maintenance_plan_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +46,9 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@plan_id =**] **'**_plan\_id_**'**  
- Spécifie l'identificateur du plan de maintenance. *plan_id* est **uniqueidentifier**, et doit être un ID valide.  
+`[ @plan_id = ] 'plan\_id'` Spécifie l’ID du plan de maintenance. *plan_id* est **uniqueidentifier**, et doit être un ID valide.  
   
- [  **@job_id =**] **'**_travail\_id_**'**  
- Spécifie l'ID du travail auquel le plan de maintenance est associé. *job_id* est **uniqueidentifier**, et doit être un ID valide.  
+`[ @job_id = ] 'job\_id'` Spécifie l’ID du travail auquel le plan de maintenance est associé. *job_id* est **uniqueidentifier**, et doit être un ID valide.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -60,7 +58,7 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
   
  Lorsque tous les travaux ont été supprimés du plan de maintenance, nous recommandons que les utilisateurs exécuter **sp_delete_maintenance_plan_db** pour supprimer les bases de données à partir du plan.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_maintenance_plan_job**.  
   
 ## <a name="examples"></a>Exemples  

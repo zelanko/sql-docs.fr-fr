@@ -16,12 +16,12 @@ ms.assetid: b6e9e0d2-9144-434d-88af-4874f2582399
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d28ff96d07aa1b7e65097fbf7946b40dfb56adea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3d9af0e5eff8aff2715ff2be6caa1757702fb8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808741"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529561"
 ---
 # <a name="spunregistercustomscripting-transact-sql"></a>sp_unregister_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,21 +40,18 @@ sp_unregister_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@type** =] **'***type***'**  
- Type de la procédure stockée personnalisée ou du script personnalisé à supprimer. *type* est **varchar (16)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Est le type de procédure stockée personnalisée ou du script en cours de suppression. *type* est **varchar (16)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**insert**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction INSERT.|  
-|**Mise à jour**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction UPDATE.|  
+|**update**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction UPDATE.|  
 |**delete**|Procédure stockée ou script personnalisé enregistré, exécuté lors de la réplication d'une instruction DELETE.|  
 |**custom_script**|Procédure stockée ou script personnalisé enregistré, exécuté à la fin du déclencheur du langage de définition de données (DDL, Data Definition Language).|  
   
- [ **@publication** =] **'***publication***'**  
- Nom de la publication pour laquelle il faut supprimer la procédure stockée personnalisée ou le script personnalisé. *publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication pour laquelle la procédure stockée personnalisée ou un script est en cours de suppression. *publication* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@article** =] **'***article***'**  
- Nom de l'article pour lequel il faut supprimer la procédure stockée personnalisée ou le script personnalisé. *article* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @article = ] 'article'` Nom de l’article pour lequel la procédure stockée personnalisée ou un script est en cours de suppression. *article* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

@@ -18,12 +18,12 @@ ms.assetid: 832ec15a-6e92-4eb5-8c4a-af4dba79fbaa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dc6538cbc62be98414b180d44725d987e660ff99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e0cd3573c108cdd5a57bbb2cf6d542415710f24c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742437"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530261"
 ---
 # <a name="spmanagejobsbylogin-transact-sql"></a>sp_manage_jobs_by_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +43,11 @@ sp_manage_jobs_by_login
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@action=** ] **'***action***'**  
- Action à entreprendre pour la connexion spécifiée. *action* est **varchar (10)**, sans valeur par défaut. Lorsque *action*est **supprimer**, **sp_manage_jobs_by_login** supprime tous les travaux détenus par *nom_connexion_propriétaire_actuel*. Lorsque *action* est **RÉAFFECTER**, tous les travaux sont affectés à *nom_connexion_nouveau_propriétaire*.  
+`[ @action = ] 'action'` L’action à entreprendre pour la connexion spécifiée. *action* est **varchar (10)**, sans valeur par défaut. Lorsque *action*est **supprimer**, **sp_manage_jobs_by_login** supprime tous les travaux détenus par *nom_connexion_propriétaire_actuel*. Lorsque *action* est **RÉAFFECTER**, tous les travaux sont affectés à *nom_connexion_nouveau_propriétaire*.  
   
- [  **@current_owner_login_name=** ] **'***nom_connexion_propriétaire_actuel***'**  
- Nom de connexion du propriétaire du travail actuel. *nom_connexion_propriétaire_actuel* est **sysname**, sans valeur par défaut.  
+`[ @current_owner_login_name = ] 'current_owner_login_name'` Le nom de connexion du propriétaire du travail en cours. *nom_connexion_propriétaire_actuel* est **sysname**, sans valeur par défaut.  
   
- [  **@new_owner_login_name=** ] **'***nom_connexion_nouveau_propriétaire***'**  
- Nom de connexion du nouveau propriétaire du travail. Utilisez ce paramètre uniquement si *action* est **RÉAFFECTER**. *nom_connexion_nouveau_propriétaire* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @new_owner_login_name = ] 'new_owner_login_name'` Le nom de connexion du nouveau propriétaire du travail. Utilisez ce paramètre uniquement si *action* est **RÉAFFECTER**. *nom_connexion_nouveau_propriétaire* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -58,7 +55,7 @@ sp_manage_jobs_by_login
 ## <a name="result-sets"></a>Jeux de résultats  
  None  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, les utilisateurs doivent avoir le **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

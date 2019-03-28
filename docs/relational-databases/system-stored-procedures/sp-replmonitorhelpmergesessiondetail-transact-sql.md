@@ -16,12 +16,12 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8e661ed27a586b45bbcfd812e6e47d169daa70b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813051"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534632"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@session_id** =] *session_id*  
- Spécifie une session d'agent. *session_id* est **int** sans valeur par défaut.  
+`[ @session_id = ] session_id` Spécifie une session d’agent. *session_id* est **int** sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -54,10 +53,10 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |**Mises à jour**|**Int**|Nombre de mises à jour dans une session.|  
 |**Suppressions**|**Int**|Nombre de suppressions dans une session.|  
 |**Conflits**|**Int**|Nombre de conflits qui se sont produits dans une session.|  
-|**ID d’erreur**|**Int**|ID d'une erreur de session.|  
+|**ErrorID**|**Int**|ID d'une erreur de session.|  
 |**SeqNo**|**Int**|Ordre des sessions dans le jeu de résultats.|  
 |**RowType**|**Int**|Indique le type d'informations que représente chaque ligne du jeu de résultats.<br /><br /> **0** = initialisation<br /><br /> **1** = résumé du téléchargement<br /><br /> **2** = détails de chargement de l’article<br /><br /> **3** = résumé du téléchargement<br /><br /> **4** = détails de téléchargement de l’article|  
-|**Modifications de schéma**|**Int**|Nombre de modifications de schéma dans une session.|  
+|**SchemaChanges**|**Int**|Nombre de modifications de schéma dans une session.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

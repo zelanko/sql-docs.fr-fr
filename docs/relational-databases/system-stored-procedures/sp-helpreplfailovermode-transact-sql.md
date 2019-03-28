@@ -16,12 +16,12 @@ ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 19fafb4b3ef3737018aaae21992f0b6a859c7ef3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796428"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529531"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,25 +42,21 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=**] **'***publisher***'**  
- Nom du serveur de publication qui participe à la mise à jour de l'Abonné. *serveur de publication* est **sysname**, sans valeur par défaut. Le serveur de publication doit déjà être configuré pour la publication.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication qui participe à la mise à jour de l’abonné. *serveur de publication* est **sysname**, sans valeur par défaut. Le serveur de publication doit déjà être configuré pour la publication.  
   
- [  **@publisher_db =**] **'***publisher_db***'**  
- Nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publication=**] **'***publication***'**  
- Nom de la publication qui participe à la mise à jour de l'Abonné. *publication*est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication qui participe à la mise à jour de l’abonné. *publication*est **sysname**, sans valeur par défaut.  
   
- [  **@failover_mode_id=**] **'***failover_mode_id***' sortie**  
- Retourne la valeur entière du mode de basculement et est un **sortie** paramètre. *failover_mode_id* est un **tinyint** avec une valeur par défaut **0**. Elle retourne **0** pour la mise à jour immédiate et **1** en file d’attente de la mise à jour.  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Retourne la valeur entière du mode de basculement et est un **sortie** paramètre. *failover_mode_id* est un **tinyint** avec une valeur par défaut **0**. Elle retourne **0** pour la mise à jour immédiate et **1** en file d’attente de la mise à jour.  
   
- [**@failover_mode=**] **'***failover_mode***' sortie**  
+ [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
  Renvoie le mode dans lequel les modifications sont effectuées au niveau de l'Abonné. *failover_mode* est un **nvarchar (10)** avec NULL comme valeur par défaut. Est un **sortie** paramètre.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Immédiate**|Mise à jour immédiate : les mises à jour réalisées sur l'Abonné sont immédiatement propagées au serveur de publication à l'aide du protocole de validation à deux phases (2PC).|  
-|**En file d’attente**|Mise à jour en attente : les mises à jour effectuées sur l'Abonné sont stockées dans une file d'attente.|  
+|**immediate**|Mise à jour immédiate : les mises à jour réalisées sur l'Abonné sont immédiatement propagées au serveur de publication à l'aide du protocole de validation à deux phases (2PC).|  
+|**queued**|Mise à jour en attente : les mises à jour effectuées sur l'Abonné sont stockées dans une file d'attente.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

@@ -15,12 +15,12 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ccd9e2be26c8d514e17a4aa03af422cd648fe426
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666598"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528811"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Index spatial procédures stockées - Arguments et propriétés
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,16 +41,13 @@ ms.locfileid: "51666598"
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>Arguments  
- [  **@tabname =**] **'***tabname***'**  
- Spécifie le nom qualifié ou non qualifié de la table pour laquelle l'index spatial a été défini.  
+`[ @tabname = ] 'tabname'` Est le nom qualifié ou non de la table pour laquelle l’index spatial a été spécifié.  
   
  Les guillemets ne sont nécessaires que si une une table qualifiée est spécifiée. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *tabname* est **nvarchar**(776), sans valeur par défaut.  
   
- [  **@indexname =** ] **'***indexname***'**  
- Nom de l'index spatial spécifié. *IndexName* est **sysname** sans valeur par défaut.  
+`[ @indexname = ] 'indexname'` Est le nom de l’index spatial spécifié. *IndexName* est **sysname** sans valeur par défaut.  
   
- [  **@verboseoutput =** ] **'***verboseoutput***'**  
- Spécifie la plage des noms de propriétés et les valeurs à retourner.  
+`[ @verboseoutput = ] 'verboseoutput'` Est la plage de noms de propriétés et valeurs à retourner.  
   
  0 = propriétés principales  
   
@@ -58,11 +55,9 @@ ms.locfileid: "51666598"
   
  *verboseoutput* est **tinyint** sans valeur par défaut.  
   
- [  **@query_sample =** ] **'***query_sample***'**  
- Spécifie un exemple de requête représentatif qui peut être utilisé pour tester l'utilité de l'index. Il peut s'agir d'un objet représentatif ou d'une fenêtre de requête. *query_sample* est **geometry** sans valeur par défaut.  
+`[ @query_sample = ] 'query_sample'` Est un exemple de requête représentatif qui peut être utilisé pour tester l’utilité de l’index. Il peut s'agir d'un objet représentatif ou d'une fenêtre de requête. *query_sample* est **geometry** sans valeur par défaut.  
   
- [  **@xml_output =** ] **'***xml_output***'**  
- Spécifie un paramètre de sortie qui retourne le jeu de résultats dans un fragment XML. *xml_output* est **xml** sans valeur par défaut.  
+`[ @xml_output = ] 'xml_output'` Un paramètre de sortie qui retourne le résultat est défini dans un fragment XML. *xml_output* est **xml** sans valeur par défaut.  
   
 ## <a name="properties"></a>Properties  
  Définissez **@verboseoutput** = 0 pour retourner des propriétés principales comme indiqué dans le tableau ci-dessous ; **@verboseoutput** > 0 pour retourner toutes les propriétés de l’index spatial.  
@@ -70,7 +65,7 @@ ms.locfileid: "51666598"
  **Base_Table_Rows**  
  Nombre de lignes dans la table de base. La valeur est **bigint**.  
   
- **Colonnes Bounding_Box_xmin**  
+ **Bounding_Box_xmin**  
  Délimitation des propriétés de la zone de l’index spatial pour X-minimum **geometry** type. Cette valeur de propriété a la valeur NULL pour **geography**type. La valeur est **float**.  
   
  **Bounding_Box_ymin**  
@@ -303,7 +298,7 @@ ms.locfileid: "51666598"
  **Primary_Filter_Efficiency**  
  Si les lignes P sont sélectionnées par le filtre principal et O est le nombre de lignes de sortie, ce returnsO/P comme pourcentage. Plus le rendement du filtre principal est principal, moins il y a de faux positifs que le filtre secondaire doit traiter. Il s'agit d'une propriété principale. La valeur est **float.**  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Utilisateur doit être un membre de la **public** rôle. Nécessite une autorisation READ ACCESS sur le serveur et l'objet. Cela s'applique à toutes les procédures stockées de l'index spatial.  
   
 ## <a name="remarks"></a>Notes  
@@ -320,7 +315,7 @@ ms.locfileid: "51666598"
   
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédures stockées d’Index spatial &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

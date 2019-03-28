@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bc4acac420f31735a446f3cdff3e687fa5f3efef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740527"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530575"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,18 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id =**] **'***job_id***'**  
- Numéro d’identification pour lequel retourner des informations sur les travaux. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] 'job_id'` Numéro d’identification pour lequel retourner des informations sur les travaux. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name =**] **'***nom_travail***'**  
- Nom du travail. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Le nom de la tâche. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
   
- [ **@step_id =**] *step_id*  
- Numéro d'identification de l'étape du travail. S'il n'est pas inclus, toutes les étapes du travail sont englobées. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
+`[ @step_id = ] step_id` Le numéro d’identification de l’étape du travail. S'il n'est pas inclus, toutes les étapes du travail sont englobées. *l’argument id_étape* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@step_name =**] **'***nom_de_l***'**  
- Nom de l'étape du travail. *nom_de_l* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @step_name = ] 'step_name'` Le nom de l’étape du travail. *nom_de_l* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@suffix =**] *suffixe*  
- Un indicateur qui spécifie si une description de texte est ajoutée à la **indicateurs** colonne de sortie. *suffixe*est **bits**, avec la valeur par défaut de **0**. Si *suffixe* est **1**, une description est appliquée.  
+`[ @suffix = ] suffix` Un indicateur qui spécifie si une description de texte est ajoutée à la **indicateurs** colonne de sortie. *suffixe*est **bits**, avec la valeur par défaut de **0**. Si *suffixe* est **1**, une description est appliquée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -85,7 +80,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_interval**|**Int**|Intervalle (en minutes) entre les tentatives.|  
 |**os_run_priority**|**Int**|Réservé.|  
 |**output_file_name**|**nvarchar(200)**|Fichier de commande de sortie doit être écrite ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, et **PowerShell** étapes uniquement).|  
-|**last_run_outcome**|**Int**|Résultat de l'étape lors de sa dernière exécution.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = nouvelle tentative<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
+|**last_run_outcome**|**Int**|Résultat de l'étape lors de sa dernière exécution.<br /><br /> **0** = Échec<br /><br /> **1** = a réussi<br /><br /> **2** = Retry<br /><br /> **3** = annulée<br /><br /> **5** = inconnu|  
 |**last_run_duration**|**Int**|Durée (en secondes) de l'étape lors de sa dernière exécution.|  
 |**last_run_retries**|**Int**|Nombre de tentatives de la commande lors de la dernière exécution de l'étape.|  
 |**last_run_date**|**Int**|Date de début de la dernière exécution de l'étape.|  
@@ -95,7 +90,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="remarks"></a>Notes  
  **sp_help_jobstep** est dans le **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

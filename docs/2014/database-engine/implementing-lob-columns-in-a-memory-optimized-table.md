@@ -10,12 +10,12 @@ ms.assetid: bd8df0a5-12b9-4f4c-887c-2fb78dd79f4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c2adbcc07134b80e78dbc73691e275d56b6f90c6
-ms.sourcegitcommit: 35e4c71bfbf2c330a9688f95de784ce9ca5d7547
+ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49356570"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527801"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implémentation de colonnes LOB dans une table mémoire optimisée
   Tables optimisées en mémoire n’ont pas de stockage d’objets hors ligne ou de grande taille (LOB) (cette limitation a été supprimée dans SQL Server 2016 et ultérieur - voir [pris en charge les Types de données pour OLTP en mémoire](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), et la limite de taille de ligne est de 8 060 octets. Le stockage de valeurs de chaîne de caractères ou LOB peut être effectué de deux manières différentes :  
@@ -80,7 +80,7 @@ go</code></pre>
   
  Définissez également une table sur disque pour les colonnes LOB. Chaque ligne de la table mémoire optimisée possède une ligne correspondante dans la table sur disque avec toutes les valeurs LOB de cette ligne. Dans l'exemple suivant, des données sur les employés sont stockées dans une table mémoire optimisée, alors que leur photo est stockée dans une table sur disque.  
   
-```tsql  
+```sql  
 CREATE TABLE EmployeePhoto (  
 EmployeeId int NOT NULL PRIMARY KEY CLUSTERED,  
 Photo varbinary(max))  

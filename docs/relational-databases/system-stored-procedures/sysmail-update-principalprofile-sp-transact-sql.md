@@ -18,12 +18,12 @@ ms.assetid: 9fe96e9a-4758-4e4a-baee-3e1217c4426c
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 04a3fe5351b3c7fc3a6dd711e6e2d638b079c136
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a2af55b8c5354dd90e80a0a2a9d149f56abdef27
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601817"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533862"
 ---
 # <a name="sysmailupdateprincipalprofilesp-transact-sql"></a>sysmail_update_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@principal_id** =] *principal_id*  
- L’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à modifier. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié.  
+`[ @principal_id = ] principal_id` L’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à modifier. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié.  
   
- [ **@principal_name** =] **'***principal_name***'**  
- Le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à mettre à jour. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* peut être spécifié.  
+`[ @principal_name = ] 'principal_name'` Le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association à mettre à jour. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* peut être spécifié.  
   
- [ **@profile_id** =] *profile_id*  
- Identificateur du profil pour l'association à modifier. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_id = ] profile_id` L’id du profil pour l’association à modifier. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nom du profil pour l'association à modifier. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_name = ] 'profile_name'` Le nom du profil pour l’association à modifier. *nom_profil* est **sysname**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
- [ **@is_default** =] **'***is_default***'**  
- Indique si ce profil représente le profil par défaut pour l'utilisateur de la base de données. Un utilisateur de base de données ne peut avoir plus d'un seul profil par défaut. *is_default* est **bits**, sans valeur par défaut.  
+`[ @is_default = ] 'is_default'` Indique si ce profil est le profil par défaut pour l’utilisateur de base de données. Un utilisateur de base de données ne peut avoir plus d'un seul profil par défaut. *is_default* est **bits**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -72,7 +67,7 @@ sysmail_update_principalprofile_sp { @principal_id = principal_id | @principal_n
   
  La procédure stockée **sysmail_update_principalprofile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

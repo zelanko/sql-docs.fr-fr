@@ -16,12 +16,12 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 14ab67bb9d69272960bbce3e1a7cfa059c609e3f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 18a1de1e3b7dc1f312094a9023e0af9df014214b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589803"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526371"
 ---
 # <a name="sphelpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@subscriber =** ] **'**_abonné_**'**  
- Nom de l'Abonné. *abonné* est **sysname**, avec une valeur par défaut **%**, qui retourne toutes les informations.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, avec une valeur par défaut **%**, qui retourne toutes les informations.  
   
- [  **@publisher =** ] **'**_publisher_**'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**et la valeur par défaut est le nom du serveur actuel.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**et la valeur par défaut est le nom du serveur actuel.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être spécifié, sauf si elle est un serveur de publication Oracle.  
@@ -55,12 +53,12 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**publisher** (serveur de publication)|**sysname**|Nom du serveur de publication.|  
 |**subscriber** (Abonné)|**sysname**|Nom de l'Abonné.|  
 |**type**|**tinyint**|Type d'Abonné :<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données **1** = source de données ODBC|  
-|**connexion**|**sysname**|ID de connexion pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
+|**login**|**sysname**|ID de connexion pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
 |**password**|**sysname**|Mot de passe pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
-|**taille_lot_validé**|**Int**|Non pris en charge.|  
-|**taille_lot_état**|**Int**|Non pris en charge.|  
-|**fréquence_vidage**|**Int**|Non pris en charge.|  
-|**frequency_type**|**Int**|Fréquence d'exécution de l’Agent de distribution :<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = fréquence mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
+|**commit_batch_size**|**Int**|Non pris en charge.|  
+|**status_batch_size**|**Int**|Non pris en charge.|  
+|**flush_frequency**|**Int**|Non pris en charge.|  
+|**frequency_type**|**Int**|Fréquence d'exécution de l’Agent de distribution :<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = Monthly<br /><br /> **32** = fréquence mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
 |**frequency_interval**|**Int**|Valeur appliquée à la fréquence définie par *frequency_type*.|  
 |**frequency_relative_interval**|**Int**|Date de l’Agent de Distribution utilisée lorsque *frequency_type* a la valeur **32** (fréquence mensuelle relative) :<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
 |**frequency_recurrence_factor**|**Int**|Facteur de récurrence utilisé par *frequency_type*.|  
@@ -74,7 +72,7 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**retrydelay**|**Int**|Non pris en charge.|  
 |**description**|**nvarchar(255)**|Texte de description de l'Abonné.|  
 |**security_mode**|**Int**|Mode de sécurité implémenté :<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] l’authentification Windows|  
-|**frequency_type2**|**Int**|Fréquence d'exécution de l’Agent de fusion :<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = fréquence mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
+|**frequency_type2**|**Int**|Fréquence d'exécution de l’Agent de fusion :<br /><br /> **1** = une fois<br /><br /> **2** = à la demande<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = Monthly<br /><br /> **32** = fréquence mensuelle relative<br /><br /> **64** = démarrage automatique<br /><br /> **128** = périodique|  
 |**frequency_interval2**|**Int**|Valeur appliquée à la fréquence définie par *frequency_type*.|  
 |**frequency_relative_interval2**|**Int**|Date de l’Agent de fusion utilisée lorsque *frequency_type* a la valeur 32 (fréquence mensuelle relative) :<br /><br /> **1** = premier<br /><br /> **2** = seconde<br /><br /> **4** = troisième<br /><br /> **8** = quatrième<br /><br /> **16** = dernier|  
 |**frequency_recurrence_factor2**|**Int**|Facteur de récurrence utilisé par *frequency_type **.*|  

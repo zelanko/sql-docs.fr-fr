@@ -18,12 +18,12 @@ ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 46b99e16505cf6f7a08503a98f37ced7bedcdb12
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9fa56614c65dfc14982c62fb71ce117f8872805c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520814"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527991"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame =** ] **'**_connexion_**'**  
- Est le nom de connexion. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur de Windows ou un groupe.  
+`[ @loginame = ] 'login'` Est le nom de connexion. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un utilisateur de Windows ou un groupe.  
   
- [  **@language =** ] **'**_langage_**'**  
- Est la langue par défaut du compte de connexion. *langage* est **sysname**, avec NULL comme valeur par défaut. *langage* doit être une langue valide sur le serveur. Si *langage* n’est pas spécifié, *langage* est définie sur la langue par défaut du serveur ; langue par défaut est définie par le **sp_configure** variable de configuration **langue par défaut**. Le changement de la langue par défaut du serveur n'affecte pas la langue par défaut des connexions existantes.  
+`[ @language = ] 'language'` Est la langue par défaut de la connexion. *langage* est **sysname**, avec NULL comme valeur par défaut. *langage* doit être une langue valide sur le serveur. Si *langage* n’est pas spécifié, *langage* est définie sur la langue par défaut du serveur ; langue par défaut est définie par le **sp_configure** variable de configuration **langue par défaut**. Le changement de la langue par défaut du serveur n'affecte pas la langue par défaut des connexions existantes.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -78,7 +76,7 @@ GO
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
  [Instructions SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
- [Sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
+ [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

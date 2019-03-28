@@ -18,12 +18,12 @@ ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bbecf5d57ae6e11f3a29aca64b7ce8c52a6f6b76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 48d70126d071879754011fed7342d03dd72185a5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733829"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534381"
 ---
 # <a name="sphelpoperator-transact-sql"></a>sp_help_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_help_operator
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@operator_name=** ] **'***nom_opérateur***'**  
- Le nom de l’opérateur. *nom_opérateur* est **sysname**. Si *nom_opérateur* est ne pas spécifié, les informations sur tous les opérateurs sont renvoyées.  
+`[ @operator_name = ] 'operator_name'` Le nom de l’opérateur. *nom_opérateur* est **sysname**. Si *nom_opérateur* est ne pas spécifié, les informations sur tous les opérateurs sont renvoyées.  
   
- [  **@operator_id=** ] *operator_id*  
- Numéro d'identification de l'opérateur dont il faut obtenir des informations. *operator_id*est **int**, avec NULL comme valeur par défaut.  
+`[ @operator_id = ] operator_id` Le numéro d’identification de l’opérateur pour lequel les informations sont demandées. *operator_id*est **int**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Soit *operator_id* ou *nom_opérateur* doit être spécifié, mais ne peut pas être spécifiés.  
@@ -74,7 +72,7 @@ sp_help_operator
 |**saturday_pager_end_time**|**Int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le samedi.|  
 |**sunday_pager_start_time**|**Int**|Début de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
 |**sunday_pager_end_time**|**Int**|Fin de la période pendant laquelle l'opérateur peut recevoir des notifications par radiomessagerie le dimanche.|  
-|**jours_radiomessagerie**|**tinyint**|Un masque de bits (**1** = dimanche, **64** = samedi) de jours de la semaine qui indique quand l’opérateur est disponible pour recevoir des notifications par radiomessagerie.|  
+|**pager_days**|**tinyint**|Un masque de bits (**1** = dimanche, **64** = samedi) de jours de la semaine qui indique quand l’opérateur est disponible pour recevoir des notifications par radiomessagerie.|  
 |**netsend_address**|**nvarchar(100)**|Adresse de l'opérateur pour les notifications envoyées par le réseau|  
 |**last_netsend_date**|**Int**|Date de la dernière notification envoyée à l'opérateur via le réseau.|  
 |**last_netsend_time**|**Int**|Heure de la dernière notification envoyée à l'opérateur via le réseau.|  
@@ -83,7 +81,7 @@ sp_help_operator
 ## <a name="remarks"></a>Notes  
  **sp_help_operator** doit être exécuté à partir de la **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

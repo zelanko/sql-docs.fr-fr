@@ -18,12 +18,12 @@ ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b0fc8552157e9864ed45306ec268fefb4eec87bf
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589943"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533821"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,26 +46,19 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_server =** ] **'**_serveur_de_la_table_**'**  
- Nom du serveur lié pour lequel sont retournées les informations de table. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
+`[ @table_server = ] 'table_server'` Est le nom du serveur lié pour lequel retourner des informations sur la table. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
- [  **@pktab_name =** ] **'**_l’argument nom_table_pk_**'**  
- Nom de la table contenant une clé primaire. *l’argument nom_table_pk* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @pktab_name = ] 'pktab_name'` Est le nom de la table avec une clé primaire. *l’argument nom_table_pk* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@pktab_schema =** ] **'**_schéma_table_pk_**'**  
- Nom du schéma contenant une clé primaire. *schéma_table_pk*est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom du propriétaire.  
+`[ @pktab_schema = ] 'pktab_schema'` Est le nom du schéma contenant une clé primaire. *schéma_table_pk*est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom du propriétaire.  
   
- [  **@pktab_catalog =** ] **'**_l’argument catalogue_table_pk_**'**  
- Nom du catalogue contenant une clé primaire. *l’argument catalogue_table_pk*est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom de la base de données.  
+`[ @pktab_catalog = ] 'pktab_catalog'` Est le nom du catalogue contenant une clé primaire. *l’argument catalogue_table_pk*est **sysname**, avec NULL comme valeur par défaut. Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il contient le nom de la base de données.  
   
- [  **@fktab_name =** ] **'**_l’argument nom_table_fk_**'**  
- Nom de la table contenant une clé étrangère. *l’argument nom_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @fktab_name = ] 'fktab_name'` Est le nom de la table avec une clé étrangère. *l’argument nom_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@fktab_schema =** ] **'**_l’argument schema_table_fk_**'**  
- Nom du schéma contenant une clé étrangère. *l’argument schema_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @fktab_schema = ] 'fktab_schema'` Est le nom du schéma contenant une clé étrangère. *l’argument schema_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@fktab_catalog =** ] **'**_l’argument catalogue_table_fk_**'**  
- Nom du catalogue contenant une clé étrangère. *l’argument catalogue_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @fktab_catalog = ] 'fktab_catalog'` Est le nom du catalogue contenant une clé étrangère. *l’argument catalogue_table_fk*est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  
@@ -77,7 +70,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|Catalogue de la table contenant la clé primaire.|  
 |**PKTABLE_SCHEM**|**sysname**|Schéma de la table contenant la clé primaire.|  
-|**NOM_DE_LA_PKTABLE**|**sysname**|Nom de la table (contenant la clé primaire). Ce champ retourne toujours une valeur.|  
+|**PKTABLE_NAME**|**sysname**|Nom de la table (contenant la clé primaire). Ce champ retourne toujours une valeur.|  
 |**PKCOLUMN_NAME**|**sysname**|Nom de la colonne de clé primaire ou de colonnes, pour chaque colonne de la **TABLE_NAME** retourné. Ce champ retourne toujours une valeur.|  
 |**FKTABLE_CAT**|**sysname**|Catalogue de la table contenant la clé étrangère.|  
 |**FKTABLE_SCHEM**|**sysname**|Schéma de la table contenant la clé étrangère.|  

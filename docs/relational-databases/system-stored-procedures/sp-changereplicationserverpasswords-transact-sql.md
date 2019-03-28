@@ -16,12 +16,12 @@ ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: bfe5d9f7bc5c95055af06b0582f2ddcf88ae7cdf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125709"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531811"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,28 +41,24 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@login_type** =] *login_type*  
- Type d'authentification des informations d'identification fournies. *LOGIN_TYPE* est **tinyint**, sans valeur par défaut.  
+`[ @login_type = ] login_type` Est le type d’authentification pour les informations d’identification fournies. *LOGIN_TYPE* est **tinyint**, sans valeur par défaut.  
   
  **1** = authentification intégrée de Windows  
   
  **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification  
   
- [ **@login** =] **'**_connexion_**'**  
- Nom du compte Windows ou de la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en cours de modification. *connexion* est **nvarchar (257)**, sans valeur par défaut  
+`[ @login = ] 'login'` Est le nom du compte Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion en cours de modification. *connexion* est **nvarchar (257)**, sans valeur par défaut  
   
- [ **@password** =] **'**_mot de passe_**'**  
- Nouveau mot de passe à stocker pour spécifié *connexion*. *mot de passe* est **sysname**, sans valeur par défaut.  
+`[ @password = ] 'password'` Nouveau mot de passe à stocker pour spécifié *connexion*. *mot de passe* est **sysname**, sans valeur par défaut.  
   
 > [!NOTE]  
 >  Après avoir modifié un mot de passe de réplication, vous devez arrêter puis redémarrer chaque Agent qui utilise ce mot de passe afin que les modifications apportées prennent effet.  
   
- [ **@server** =] **'**_server_**'**  
- Connexion serveur pour laquelle le mot de passe stocké est en cours de changement. *serveur* est **sysname**, et peut prendre l’une des valeurs suivantes :  
+`[ @server = ] 'server'` Est la connexion au serveur pour lequel le mot de passe stocké est en cours de modification. *serveur* est **sysname**, et peut prendre l’une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**serveur de distribution**|Toutes les connexions d'Agent au serveur de distribution.|  
+|**distributor**|Toutes les connexions d'Agent au serveur de distribution.|  
 |**publisher** (serveur de publication)|Toutes les connexions d'Agent au serveur de publication.|  
 |**subscriber** (Abonné)|Toutes les connexions d'Agent à l'Abonné.|  
 |**%** (valeur par défaut)|Toutes les connexions d'Agent à tous les serveurs d'une topologie de réplication.|  

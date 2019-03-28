@@ -18,12 +18,12 @@ ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d38c9727995b20cd23087a0f944ccbfa28bf019d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57642ccd61a13379495b934f5b52cce7f7f77404
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788087"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535561"
 ---
 # <a name="spupdatetargetservergroup-transact-sql"></a>sp_update_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,14 @@ sp_update_targetservergroup
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name =**] **'***nom_actuel***'**  
- Nom du groupe de serveurs cibles. *nom_actuel* est **sysname**, sans valeur par défaut.  
+`[ @name = ] 'current_name'` Le nom du groupe de serveurs cible. *nom_actuel* est **sysname**, sans valeur par défaut.  
   
- [  **@new_name =**] **'***nouveau_nom***'**  
- Nouveau nom du groupe de serveurs cibles. *new_name* est **sysname**, sans valeur par défaut.  
+`[ @new_name = ] 'new_name'` Le nouveau nom pour le groupe de serveurs cibles. *new_name* est **sysname**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, les utilisateurs doivent avoir le **sysadmin** rôle serveur fixe.  
   
 ## <a name="remarks"></a>Notes  

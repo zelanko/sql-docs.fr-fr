@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 4ce2eea1638c301f85741dc22f7541af0cf7e5d6
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596620"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511726"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>Didacticiel : Utiliser les fonctions RevoScaleR R avec des données de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ Basculement des contextes de calcul est basée sur la même version **RevoScaleR
 Si vous avez besoin de placer le client et le serveur sur le même ordinateur, veillez à installer un deuxième ensemble de bibliothèques Microsoft R pour l’envoi de script R à partir d’un client « distant ». N’utilisez pas les bibliothèques R qui sont installés dans les fichiers de programme de l’instance de SQL Server. Plus précisément, si vous utilisez un seul ordinateur, vous devez le **RevoScaleR** bibliothèque dans ces deux emplacements pour prendre en charge les opérations de client et serveur.
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
-+ C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\R_SERVICES\library\RevoScaleR
++ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
 
 Pour obtenir des instructions sur la configuration du client, consultez [configurer un client de science des données pour le développement R](../r/set-up-a-data-science-client.md).
 
@@ -70,4 +70,4 @@ N’oubliez pas que **RevoScaleR** est requis sur les ordinateurs locaux et dist
 ## <a name="next-steps"></a>Étapes suivantes
 
 > [!div class="nextstepaction"]
-> [Leçon 1 : Créer une base de données et les autorisations](deepdive-work-with-sql-server-data-using-r.md)
+> [Leçon 1 : Créer une base de données et les autorisations](deepdive-work-with-sql-server-data-using-r.md)

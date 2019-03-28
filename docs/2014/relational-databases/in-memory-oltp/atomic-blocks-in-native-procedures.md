@@ -10,12 +10,12 @@ ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 4bad6da6de694d9b835a6d3fe23fbc68d8642f50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83ec721d214633df7daf9ace5ae45c3cdb51ca97
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124099"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532846"
 ---
 # <a name="atomic-blocks"></a>Blocs Atomic
   `BEGIN ATOMIC` fait partie de la norme SQL ANSI. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge les blocs Atomic au niveau supérieur des procédures stockées compilées en mode natif.  
@@ -29,13 +29,13 @@ ms.locfileid: "48124099"
 ## <a name="transactions-and-error-handling"></a>Transactions et gestion des erreurs  
  Si une transaction existe déjà dans une session (parce qu'un lot a exécuté une instruction `BEGIN TRANSACTION` et la transaction reste active), le démarrage d'un bloc Atomic crée un point de sauvegarde dans la transaction. Si le bloc se termine sans exception, le point de sauvegarde créé pour le bloc est validé, mais la transaction ne sera pas validée avant la validation de la transaction au niveau de la session. Si le bloc lève une exception, les effets du bloc sont restaurés, mais la transaction au niveau de la session se poursuit, à moins que l'exception ne condamne la transaction. Par exemple, un conflit d'écriture condamne la transaction, mais pas une erreur de conversion de type.  
   
- S'il n'y a pas de transactions actives dans une session, `BEGIN ATOMIC` démarre une nouvelle transaction. Si aucune exception n'est levée en dehors de l'étendue du bloc, la transaction est validée à la fin du bloc. Si le bloc lève une exception (autrement dit, l'exception n'est pas interceptée et n'est pas gérée dans le bloc), la transaction est restaurée. Pour les transactions couvrant un bloc atomic (une seule les procédure stockée compilée en mode natif), il est inutile d’écrire explicite `BEGIN TRANSACTION` et `COMMIT` ou `ROLLBACK` instructions.  
+ S'il n'y a pas de transactions actives dans une session, `BEGIN ATOMIC` démarre une nouvelle transaction. Si aucune exception n'est levée en dehors de l'étendue du bloc, la transaction est validée à la fin du bloc. Si le bloc lève une exception (autrement dit, l'exception n'est pas interceptée et n'est pas gérée dans le bloc), la transaction est restaurée. Pour les transactions couvrant un bloc Atomic (une procédure stockée compilée en mode natif), vous n'avez pas besoin d'écrire d'instructions `BEGIN TRANSACTION` et `COMMIT` ou `ROLLBACK` explicites.  
   
- Compilées en mode natif de prise en charge des procédures stockées du `TRY`, `CATCH`, et `THROW` construit pour la gestion des erreurs. `RAISERROR` n’est pas pris en charge.  
+ Les procédures stockées compilées en mode natif prennent en charge les constructions `TRY`, `CATCH` et `THROW` pour la gestion des erreurs. La fonction `RAISERROR` n'est pas prise en charge.  
   
  L'exemple suivant illustre le comportement de gestion des erreurs avec les blocs Atomic et les procédures stockées compilées en mode natif :  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  
@@ -123,23 +123,23 @@ ORDER BY c1
 GO  
 ```  
   
- Les messages d'erreur suivants propres aux tables optimisées en mémoire condamnent les transactions. S'ils apparaissent dans l'étendue d'un bloc Atomic, ils entraînent l'abandon de la transaction : 10772, 41301, 41302, 41305, 41325, 41332 et 41333.  
+ Les messages d'erreur suivants propres aux tables optimisées en mémoire condamnent les transactions. S'ils se produisent dans l'étendue d'un bloc atomique, la transaction sera abandonnée : 10772, 41301, 41302, 41305, 41325, 41332 et 41333.  
   
 ## <a name="session-settings"></a>Paramètres de session  
- Les paramètres de session dans les blocs Atomic sont fixes lorsque la procédure stockée est compilée. Certains paramètres peuvent être spécifiés avec `BEGIN ATOMIC` tandis que les autres paramètres sont fixes toujours la même valeur.  
+ Les paramètres de session dans les blocs Atomic sont fixes lorsque la procédure stockée est compilée. Certains paramètres peuvent être spécifiés avec `BEGIN ATOMIC` tandis que les autres paramètres sont toujours fixes avec la même valeur.  
   
  Les options suivantes sont requises avec `BEGIN ATOMIC` :  
   
 |Paramètre obligatoire|Description|  
 |----------------------|-----------------|  
-|`TRANSACTION ISOLATION LEVEL`|Valeurs prises en charge sont `SNAPSHOT`, `REPEATABLEREAD`, et `SERIALIZABLE`.|  
+|`TRANSACTION ISOLATION LEVEL`|Les valeurs prises en charge sont `SNAPSHOT`, `REPEATABLEREAD` et `SERIALIZABLE`.|  
 |`LANGUAGE`|Détermine les formats de date et d'heure, et les messages système. Tous les langages et les alias dans [sys.syslanguages &#40;Transact-SQL&#41;](/sql/relational-databases/system-compatibility-views/sys-syslanguages-transact-sql) sont pris en charge.|  
   
  Les paramètres suivants sont facultatifs :  
   
 |Paramètre facultatif|Description|  
 |----------------------|-----------------|  
-|`DATEFORMAT`|Tous les formats de date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge. Si spécifié, `DATEFORMAT` remplace le format de date par défaut associé `LANGUAGE`.|  
+|`DATEFORMAT`|Tous les formats de date [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont pris en charge. Lorsqu'il est spécifié, `DATEFORMAT` remplace le format de date par défaut associé à `LANGUAGE`.|  
 |`DATEFIRST`|Lorsqu'il est spécifié, `DATEFIRST` remplace la valeur par défaut associée à `LANGUAGE`.|  
 |`DELAYED_DURABILITY`|Valeurs prises en charge sont `OFF` et `ON`.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Les validations de transactions peuvent avoir une durabilité complète, la durabilité par défaut ou une durabilité retardée. Pour plus d’informations, consultez [Contrôler la durabilité d’une transaction](../logs/control-transaction-durability.md).|  
   

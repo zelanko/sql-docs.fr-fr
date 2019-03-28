@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 37f52a5ac891ab1d52a9b6335a62fdf2789df9b1
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645308"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512256"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (bibliothèque R dans SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +77,7 @@ Cette section répertorie les fonctions par catégorie pour vous donner une idé
 |[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | Produit un ensemble de nombres de séquences de mots consécutifs, appelés n-grammes, à partir d’un corpus de donnée de texte. Il offre la détection de la langue, création de jetons, suppression de mots vides, une normalisation de reconnaissance et génération de fonctionnalités.  |
 |[getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | Scores de texte en langage naturel et crée une colonne qui contient les probabilités que les sentiments dans le texte sont positives.|
 |[ngram](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/ngram) | permet de définir des arguments pour l’extraction des caractéristiques basées sur le hachage et count.|
-|[Sélectionner les colonnes](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | Sélectionne un ensemble de colonnes pour reformer, suppression de tous les autres. |
+|[selectColumns](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | Sélectionne un ensemble de colonnes pour reformer, suppression de tous les autres. |
 |[selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectfeatures) | Sélectionne les fonctionnalités dans les variables spécifiées à l’aide d’un mode spécifié.|
 |[loadImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loadimage) | Charges de données d’image.|
 |[resizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/resizeimage) | Redimensionne une image à une dimension spécifiée à l’aide d’une méthode de redimensionnement spécifiée.|
@@ -126,7 +126,7 @@ Cette section répertorie les fonctions par catégorie pour vous donner une idé
 
 | Nom de la fonction | Description |
 |---------------|-------------|
-|[optimiseur](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Spécifie les algorithmes d’optimisation pour le [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algorithme d’apprentissage automatique.|
+|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | Spécifie les algorithmes d’optimisation pour le [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet) algorithme d’apprentissage automatique.|
 
 
 ## <a name="8-package-state-functions"></a>Fonctions de l’état de 8-package

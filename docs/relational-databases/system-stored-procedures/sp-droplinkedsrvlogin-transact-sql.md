@@ -18,12 +18,12 @@ ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6d5d2dbded8a1dff8a0445dbafd64b017640357f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 505e75dfab9ea4e2ba44d8ef12f0ba5c7eecbde2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843177"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533511"
 ---
 # <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@rmtsrvname =** ] **'***nom_du_serveur_distant***'**  
- Est le nom d’un serveur lié qui le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’applique le mappage de connexion. *nom_du_serveur_distant* est **sysname**, sans valeur par défaut. *nom_du_serveur_distant* doit déjà exister.  
+`[ @rmtsrvname = ] 'rmtsrvname'` Est le nom d’un serveur lié qui le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’applique le mappage de connexion. *nom_du_serveur_distant* est **sysname**, sans valeur par défaut. *nom_du_serveur_distant* doit déjà exister.  
   
- [  **@locallogin =** ] **'***locallogin***'**  
- Est le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion sur le serveur local qui possède un mappage au serveur lié *nom_du_serveur_distant*. *LocalLogin* est **sysname**, sans valeur par défaut. Un mappage pour *locallogin* à *nom_du_serveur_distant* doit déjà exister. Si NULL, le mappage par défaut créé par **sp_addlinkedserver**, qui mappe toutes les connexions sur le serveur local aux connexions sur le serveur lié, est supprimé.  
+`[ @locallogin = ] 'locallogin'` Est le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion sur le serveur local qui possède un mappage au serveur lié *nom_du_serveur_distant*. *LocalLogin* est **sysname**, sans valeur par défaut. Un mappage pour *locallogin* à *nom_du_serveur_distant* doit déjà exister. Si NULL, le mappage par défaut créé par **sp_addlinkedserver**, qui mappe toutes les connexions sur le serveur local aux connexions sur le serveur lié, est supprimé.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -57,7 +55,7 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
   
  **sp_droplinkedsrvlogin** ne peut pas être exécutée à partir d’une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN sur le serveur.  
   
 ## <a name="examples"></a>Exemples  

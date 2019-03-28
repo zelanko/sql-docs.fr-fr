@@ -10,31 +10,18 @@ ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9534be5b6a8f33910201be38969cd9133922b967
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d93743c90cafd83509ba4bbbd6c0f38369355be3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360261"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535951"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] utilise la mémoire selon des modèles différents pour les tables sur disque. Analysez la quantité de mémoire allouée et utilisée par les tables et les index optimisés en mémoire dans votre base de données à l'aide des DMV ou des compteurs de performance fournis pour la mémoire et le sous-système de garbage collection.  Vous aurez ainsi la visibilité au niveau du système et de la base de données, et vous pourrez prévenir les problèmes liés à l'insuffisance de mémoire.  
   
  Cette rubrique traite de la surveillance de votre utilisation de la mémoire [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  
   
-## <a name="sections-in-this-topic"></a>Sections de cette rubrique  
-  
--   [Créez une base de données d'exemple avec des tables optimisées en mémoire.](monitor-and-troubleshoot-memory-usage.md#bkmk_CreateDB)  
-  
--   [Surveillance de l'utilisation de la mémoire](monitor-and-troubleshoot-memory-usage.md#bkmk_Monitoring)  
-  
-    -   [Utilisation de SQL Server Management Studio](monitor-and-troubleshoot-memory-usage.md#bkmk_UsingSSMS)  
-  
-    -   [Utilisation d'DMVs](monitor-and-troubleshoot-memory-usage.md#bkmk_UsingDMVs)  
-  
--   [Gérer la mémoire consommée par les objets optimisés en mémoire](monitor-and-troubleshoot-memory-usage.md#bkmk_MemOptObjects)  
-  
--   [Dépannage des problèmes de mémoire](monitor-and-troubleshoot-memory-usage.md#bkmk_Troubleshooting)  
   
 ##  <a name="bkmk_CreateDB"></a> Créez une base de données d'exemple avec des tables optimisées en mémoire.  
  Ignorez cette section si vous avez déjà une base de données avec des tables optimisées en mémoire.  
@@ -123,9 +110,9 @@ ms.locfileid: "53360261"
     GO  
     ```  
   
-##  <a name="bkmk_Monitoring"></a> Surveillance de l'utilisation de la mémoire  
+##  <a name="monitoring-memory-usage"></a>Surveillance de l'utilisation de la mémoire  
   
-###  <a name="bkmk_UsingSSMS"></a> Utilisant [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
+###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Utilisation de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclut des rapports standard intégrés pour surveiller la mémoire consommée par les tables en mémoire. Accédez à ces rapports à l'aide de l'Explorateur d'objets comme décrit [ici](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Vous pouvez également utiliser l'Explorateur d'objets pour surveiller la mémoire consommée par les tables optimisées en mémoire individuelles.  
   
 #### <a name="consumption-at-the-database-level"></a>Consommation au niveau de la base de données  
@@ -143,13 +130,13 @@ ms.locfileid: "53360261"
   
  ![HK_MM_SSMS](../../database-engine/media/hk-mm-ssms-stdrpt-memuserpt.gif "HK_MM_SSMS")  
   
-###  <a name="bkmk_UsingDMVs"></a> Utilisation d'DMVs  
+###  <a name="using-dmvs"></a>Utilisation d'DMVs  
  Il existe un certain nombre de DMV disponibles pour surveiller la mémoire consommée par les tables, index, objets système optimisés en mémoire et par les structures d'exécution.  
   
 #### <a name="memory-consumption-by-memory-optimized-tables-and-indexes"></a>Consommation de mémoire par les tables et les index optimisés en mémoire  
  Déterminez la quantité de mémoire pour toutes les tables utilisateur, index et objets système en interrogeant `sys.dm_db_xtp_table_memory_stats` comme indiqué ici.  
   
-```tsql  
+```sql  
 SELECT object_name(object_id) AS Name  
      , *  
    FROM sys.dm_db_xtp_table_memory_stats  
@@ -175,7 +162,7 @@ NULL       -2          192                           25                      16 
 #### <a name="memory-consumption-by-internal-system-structures"></a>Consommation de mémoire par les structures internes du système  
  La mémoire est également consommée par les objets système, notamment, les structures transactionnelles, les tampons pour les fichiers de données et delta, les structures de garbage collection, etc. Déterminez la mémoire utilisée pour ces objets système en interrogeant `sys.dm_xtp_system_memory_consumers` comme indiqué ici.  
   
-```tsql  
+```sql  
 SELECT memory_consumer_desc  
      , allocated_bytes/1024 AS allocated_bytes_kb  
      , used_bytes/1024 AS used_bytes_kb  
@@ -214,7 +201,7 @@ PGPOOL:  4K               0                    0                    0
 #### <a name="memory-consumption-at-run-time-when-accessing-memory-optimized-tables"></a>Consommation de mémoire à l'exécution lors de l'accès aux tables optimisées en mémoire  
  Déterminez la mémoire consommée par les structures au moment de l'exécution, notamment le cache de procédures, avec la requête suivante. Exécutez cette requête pour obtenir la mémoire utilisée par les structures d'exécution comme le cache de procédures. Toutes les structures d'exécution ont des balises XTP.  
   
-```tsql  
+```sql  
 SELECT memory_object_address  
      , pages_in_bytes  
      , bytes_used  
@@ -247,7 +234,7 @@ memory_object_address pages_ in_bytes bytes_used type
 #### <a name="memory-consumed-by-includehek2includeshek-2-mdmd-engine-across-the-instance"></a>Mémoire consommée par le moteur [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] sur l'instance  
  La mémoire allouée au moteur [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] et aux objets optimisés en mémoire est gérée de la même façon que pour tout autre consommateur de mémoire dans l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les régisseurs de mémoire de type MEMORYCLERK_XTP tiennent compte de toute la mémoire allouée au moteur [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] . Utilisez la requête suivante pour rechercher toute la mémoire utilisée par le moteur [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] .  
   
-```tsql  
+```sql  
 -- this DMV accounts for all memory used by the hek_2 engine  
 SELECT type  
      , name  
@@ -270,10 +257,10 @@ MEMORYCLERK_XTP      Default    64             0
   
  Pour plus d’informations, consultez [sys.dm_os_memory_clerks (Transact-SQL)](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql).  
   
-##  <a name="bkmk_MemOptObjects"></a> Gérer la mémoire consommée par les objets optimisés en mémoire  
+##   <a name="managing-memory-consumed-by-memory-optimized-objects"></a>Gérer la mémoire consommée par les objets optimisés en mémoire  
  Vous pouvez contrôler la mémoire totale consommée par les tables optimisées en mémoire en la liant à un pool de ressources nommé comme décrit dans la rubrique [Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md).  
   
-##  <a name="bkmk_Troubleshooting"></a> Dépannage des problèmes de mémoire  
+##  <a name="troubleshooting-memory-issues"></a>Dépannage des problèmes de mémoire  
  La résolution des problèmes de mémoire comporte trois étapes :  
   
 1.  Identifiez la quantité de mémoire consommée par les objets dans votre base de données ou dans votre instance. Utilisez les nombreux outils d'analyse disponibles pour les tables optimisées en mémoire décrits précédemment.  Par exemple, les DVM `sys.dm_db_xtp_table_memory_stats` ou `sys.dm_os_memory_clerks`.  
@@ -284,6 +271,6 @@ MEMORYCLERK_XTP      Default    64             0
   
 ## <a name="see-also"></a>Voir aussi  
  [Lier une base de données avec des tables optimisées en mémoire à un pool de ressources](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Modifier MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_ChangeAllocation)  
+ [Modifier MIN_MEMORY_PERCENT et MAX_MEMORY_PERCENT sur un pool existant](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)
   
   

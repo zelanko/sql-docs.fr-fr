@@ -16,12 +16,12 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 772dc410690a4a29811e2a1bd84ec1ac6d12b3fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779651"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529341"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@frompublisher=** ] *frompublisher*  
- Indique si la procédure stockée est appelée sur le serveur de publication ou sur le serveur de distribution. *frompublisher* est de type bit, avec 0 comme valeur par défaut. **1** signifie que la procédure stockée est appelée depuis le serveur de publication, et **0** signifie que la procédure stockée est appelée depuis le serveur de distribution.  
+`[ @frompublisher = ] frompublisher` Indique si la procédure stockée est appelée sur le serveur de publication ou sur le serveur de distribution. *frompublisher* est de type bit, avec 0 comme valeur par défaut. **1** signifie que la procédure stockée est appelée depuis le serveur de publication, et **0** signifie que la procédure stockée est appelée depuis le serveur de distribution.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   

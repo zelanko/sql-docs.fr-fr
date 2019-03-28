@@ -10,12 +10,12 @@ ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 37931bd25b0a2024e555a7881397fd558d2f260a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15b3b27f859b2ea2ed3008d33f19a682aeef833b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509228"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533470"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>Estimer les besoins en mémoire des tables mémoire optimisées
   Si vous créez un nouveau [!INCLUDE[hek_2](../../includes/hek-2-md.md)] table mémoire optimisée ou migrez une table existante basée sur disque à une table optimisée en mémoire, il est important d’estimer avec justesse les besoins en mémoire de chaque table, vous pouvez configurer le serveur avec suffisamment de façon mémoire. Cette section explique comment estimer la quantité de mémoire nécessaire pour accueillir les données d'une table mémoire optimisée.  
@@ -39,7 +39,7 @@ ms.locfileid: "52509228"
 ##  <a name="bkmk_ExampleTable"></a> Exemple de table optimisée en mémoire  
  Prenons le schéma de table mémoire optimisée suivant :  
   
-```tsql  
+```sql  
   
 CREATE TABLE t_hk (  
 col1 int NOT NULL PRIMARY KEY NONCLUSTERED,  
@@ -86,7 +86,7 @@ GO
   
  Les index de hachage exécutent des recherches d'égalité rapides, notamment :  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 = 3  
@@ -95,7 +95,7 @@ SELECT * FROM t_hk
   
  Les index non cluster sont plus rapides pour les recherches de plage suivantes :  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE Col2 >= 3  
@@ -104,7 +104,7 @@ SELECT * FROM t_hk
   
  Si vous migrez une table basée sur disque, utilisez les éléments suivants pour déterminer le nombre de valeurs uniques de l'index t1c2_index.  
   
-```tsql  
+```sql  
   
 SELECT COUNT(DISTINCT [Col2])  
   FROM t_hk  
@@ -144,7 +144,7 @@ SELECT COUNT(DISTINCT [Col2])
   
  Les index non en cluster sont préférables lorsqu'ils sont utilisés pour les recherches de plage, comme l'illustre la requête suivante :  
   
-```tsql  
+```sql  
   
 SELECT * FROM t_hk  
    WHERE c2 > 5  

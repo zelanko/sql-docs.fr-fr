@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Spécification de la Directive HIDE | Microsoft Docs'
+title: 'Exemple : spécification de la directive HIDE | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,17 +9,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - HIDE directive
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 26c71a7012cb69a50bf7d3d7223b35aedcfcc570
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 901fa0d72798862f54ebc23131870b704538cb8a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357094"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531801"
 ---
-# <a name="example-specifying-the-hide-directive"></a>Exemple : Spécification de la Directive HIDE
+# <a name="example-specifying-the-hide-directive"></a>Exemple : spécification de la directive HIDE
   Cet exemple illustre l'utilisation de la directive **HIDE** . Cette directive est utile quand vous souhaitez que la requête renvoie un attribut pour classer les lignes de la table universelle renvoyée par la requête, sans que cet attribut figure dans le document XML obtenu au final.  
   
  Cette requête construit le document XML suivant :  

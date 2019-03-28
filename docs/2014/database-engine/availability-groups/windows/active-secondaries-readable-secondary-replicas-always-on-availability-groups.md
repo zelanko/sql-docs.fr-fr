@@ -17,12 +17,12 @@ ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2ac104808f5d4e0b2b612c8f3ebbd17f34fc6493
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358581"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533241"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secondaires actifs : Réplicas secondaires lisibles (groupes de disponibilité) Always On
   Les fonctions secondaires actives de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] incluent la prise en charge de l’accès en lecture seule à un ou plusieurs réplicas secondaires (*réplicas secondaires accessibles en lecture*). Un réplica secondaire accessible en lecture autorise l'accès en lecture seule à toutes ses bases de données secondaires. Toutefois, les bases de données secondaires accessibles en lecture ne sont pas définies en lecture seule. Elles sont dynamiques. Chaque base de données secondaire change à mesure que les modifications apportées à la base de données primaire sont répercutées sur elle. Pour un réplica secondaire classique, les données des bases de données secondaires, y compris les tables optimisées en mémoire durables, sont quasiment synchronisées en temps réel. De plus, les index de recherche en texte intégral sont synchronisés avec les bases de données secondaires. En général, la latence des données entre une base de données primaire et la base de données secondaire correspondante n'est que de quelques secondes.  
@@ -210,7 +210,7 @@ GO
   
 -   Pour les requêtes s'exécutant uniquement sur des tables mémoire optimisées, les seuls niveaux d'isolation pris en charge sont SNAPSHOT, REPEATABLE READ et SERIALIZABLE. Les requêtes avec le niveau d'isolation READ UNCOMMITTED ou READ COMMITTED retournent une erreur, sauf si vous avez activé l'option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT au niveau de la base de données.  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -228,7 +228,7 @@ GO
   
 -   Les indicateurs de verrouillage ne sont pas pris en charge sur les tables mémoire optimisées. Par exemple, toutes les requêtes suivantes se soldent par une erreur. Seul l'indicateur NOLOCK est autorisé ; il correspond à une opération NOOP lorsqu'il est utilisé avec les tables mémoire optimisées.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -240,7 +240,7 @@ GO
   
 -   Pour les transactions entre conteneurs, les transactions avec niveau d’isolation de session « snapshot » que tables mémoire optimisées n’est pas prise en charge l’accès. Par exemple,  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  

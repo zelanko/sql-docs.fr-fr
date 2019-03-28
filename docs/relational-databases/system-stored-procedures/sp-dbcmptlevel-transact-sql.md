@@ -18,12 +18,12 @@ ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 094235cd508f4265a68861de60e9e4c2d35ee4b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96bd1aa87dba90963588db74935294c0dcdd8f0b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841788"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527423"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname=** ] *nom*  
- Nom de la base de données dont le niveau de compatibilité doit être modifié. Les noms de base de données doivent être conformes aux règles relatives aux identificateurs. *nom* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @dbname = ] name` Est le nom de la base de données pour laquelle le niveau de compatibilité doit être modifié. Les noms de base de données doivent être conformes aux règles relatives aux identificateurs. *nom* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@new_cmptlevel=** ] *version*  
- Version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec laquelle la base de données doit être compatible. *version* est **tinyint**, avec NULL comme valeur par défaut. La valeur doit être l'une des suivantes :  
+`[ @new_cmptlevel = ] version` Est la version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec laquelle la base de données doit être compatible. *version* est **tinyint**, avec NULL comme valeur par défaut. La valeur doit être l'une des suivantes :  
   
  **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]  
   
@@ -71,7 +69,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
 ## <a name="remarks"></a>Notes  
  Pour obtenir une description des niveaux de compatibilité, consultez [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls le propriétaire de la base de données, les membres de la **sysadmin** rôle serveur fixe et le **db_owner** rôle de base de données fixe (si vous modifiez la base de données actuel) peut exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  

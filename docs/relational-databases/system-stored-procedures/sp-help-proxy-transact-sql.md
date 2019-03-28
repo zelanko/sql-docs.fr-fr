@@ -18,12 +18,12 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b678182b4580cfac23d6e777c492d22b8f458fba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617997"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527691"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,18 +44,15 @@ sp_help_proxy
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@proxy_id** =] *id*  
- Numéro d'identification du serveur proxy pour lequel énumérer les informations. Le *proxy_id* est **int**, avec NULL comme valeur par défaut. Soit le *id* ou *proxy_name* peut être spécifié.  
+`[ @proxy_id = ] id` Le numéro d’identification du proxy à répertorier des informations. Le *proxy_id* est **int**, avec NULL comme valeur par défaut. Soit le *id* ou *proxy_name* peut être spécifié.  
   
- [ **@proxy_name** =] **'***proxy_name***'**  
- Nom du serveur proxy pour lequel énumérer les informations. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut. Soit le *id* ou *proxy_name* peut être spécifié.  
+`[ @proxy_name = ] 'proxy_name'` Le nom du proxy à répertorier des informations. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut. Soit le *id* ou *proxy_name* peut être spécifié.  
   
- [ **@subsystem_name** =] '*subsystem_name*'  
- Nom du sous-système pour lequel énumérer les serveurs proxy. Le *subsystem_name* est **sysname**, avec NULL comme valeur par défaut. Lorsque *subsystem_name* est spécifié, *nom* doit également être spécifié.  
+`[ @subsystem_name = ] 'subsystem_name'` Nom du sous-système pour lequel énumérer les serveurs proxy. Le *subsystem_name* est **sysname**, avec NULL comme valeur par défaut. Lorsque *subsystem_name* est spécifié, *nom* doit également être spécifié.  
   
  Le tableau suivant répertorie les valeurs possibles pour chaque sous-système.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |ActiveScripting|Script ActiveX|  
 |CmdExec|Système d'exploitation (CmdExec)|  
@@ -69,8 +66,7 @@ sp_help_proxy
 |Dts|Exécution de package SSIS|  
 |PowerShell|script PowerShell|  
   
- [ **@name** =] '*nom*'  
- Nom d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour laquelle énumérer les serveurs proxy. Le nom est **nvarchar (256)**, avec NULL comme valeur par défaut. Lorsque *nom* est spécifié, *subsystem_name* doit également être spécifié.  
+`[ @name = ] 'name'` Le nom d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion pour énumérer les serveurs proxy. Le nom est **nvarchar (256)**, avec NULL comme valeur par défaut. Lorsque *nom* est spécifié, *subsystem_name* doit également être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -93,7 +89,7 @@ sp_help_proxy
   
  Pour déterminer quels serveurs proxy qu’une connexion peuvent utiliser pour un sous-système donné, spécifiez *nom* et *subsystem_name*. Lorsque ces arguments sont fournis, **sp_help_proxy** répertorie les proxys auxquels la connexion spécifiée peut accéder et qui peuvent être utilisés pour le sous-système spécifié.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer du rôle de base de données fixe **SQLAgentOperatorRole** dans la base de données **msdb** .  
   
  Pour plus d’informations sur **SQLAgentOperatorRole**, consultez [SQL Server Agent Fixed Database Roles](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  

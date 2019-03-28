@@ -16,12 +16,12 @@ ms.assetid: b8401de1-f135-41d0-ba79-ce8fe1f48c00
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2559c69e5857bbc5796d68d19b7d760476594b87
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 31755bb0ca1ba00d8d9b6f61b6091ce2e997f58e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589193"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528351"
 ---
 # <a name="spgetdefaultdatatypemapping-transact-sql"></a>sp_getdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +52,7 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@source_dbms**=] **'**_source_dbms_**'**  
- Nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes :  
+`[ @source_dbms = ] 'source_dbms'` Est le nom du SGBD à partir duquel les types de données sont mappés. *source_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -62,26 +61,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Ce paramètre est obligatoire.  
   
- [  **@source_version=** ] **'**_source_version_**'**  
- Numéro de version du SGBD source. *source_version* est **varchar (10)**, avec NULL comme valeur par défaut.  
+`[ @source_version = ] 'source_version'` Est le numéro de version du SGBD source. *source_version* est **varchar (10)**, avec NULL comme valeur par défaut.  
   
- [ **@source_type**=] **'**_source_type_**'**  
- Type de données répertorié dans le SGBD source. *source_type* est **sysname**, sans valeur par défaut.  
+`[ @source_type = ] 'source_type'` Est le type de données dans le SGBD source. *source_type* est **sysname**, sans valeur par défaut.  
   
- [  **@source_length=** ] *source_length*  
- Longueur du type de données du SGBD source. *source_length* est **bigint**, avec NULL comme valeur par défaut.  
+`[ @source_length = ] source_length` Est la longueur du type de données dans le SGBD source. *source_length* est **bigint**, avec NULL comme valeur par défaut.  
   
- [  **@source_precision=** ] *source_precision*  
- Précision du type de données du SGBD source. *source_precision* est **bigint**, avec NULL comme valeur par défaut.  
+`[ @source_precision = ] source_precision` Est la précision du type de données dans le SGBD source. *source_precision* est **bigint**, avec NULL comme valeur par défaut.  
   
- [  **@source_scale=** ] *source_scale*  
- Échelle du type de données du SGBD source. *source_scale* est **int**, avec NULL comme valeur par défaut.  
+`[ @source_scale = ] source_scale` Correspond à l’échelle du type de données dans le SGBD source. *source_scale* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@source_nullable=** ] *source_nullable*  
- Indique si le type de données du SGBD source prend en charge la valeur NULL. *source_nullable* est **bits**, avec une valeur par défaut **1**, ce qui signifie que les valeurs NULL sont prises en charge.  
+`[ @source_nullable = ] source_nullable` Est si le type de données dans le SGBD source prend en charge une valeur NULL. *source_nullable* est **bits**, avec une valeur par défaut **1**, ce qui signifie que les valeurs NULL sont prises en charge.  
   
- [ **@destination_dbms** =] **'**_destination_dbms_**'**  
- Nom du SGBD de destination. *destination_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes :  
+`[ @destination_dbms = ] 'destination_dbms'` Est le nom de la destination du SGBD. *destination_dbms* est **sysname**, et peut prendre l’une des valeurs suivantes :  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -92,26 +84,19 @@ sp_getdefaultdatatypemapping [ @source_dbms = ] 'source_dbms'
   
  Ce paramètre est obligatoire.  
   
- [ **@destination_version**=] **'**_destination_version_**'**  
- Est la version de produit du SGBD de destination. *destination_version* est **varchar (10)**, avec NULL comme valeur par défaut.  
+`[ @destination_version = ] 'destination_version'` Est la version de produit du SGBD de destination. *destination_version* est **varchar (10)**, avec NULL comme valeur par défaut.  
   
- [ **@destination_type**=] **'**_destination_type_**'** sortie  
- Le type de données est répertorié dans le SGBD de destination. *destination_type* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @destination_type = ] 'destination_type' OUTPUT` Le type de données est répertorié dans le SGBD de destination. *destination_type* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@destination_length=** ] *destination_length* sortie  
- Longueur du type de données du SGBD de destination. *destination_length* est **bigint**, avec NULL comme valeur par défaut.  
+`[ @destination_length = ] destination_length OUTPUT` Est la longueur du type de données du SGBD de destination. *destination_length* est **bigint**, avec NULL comme valeur par défaut.  
   
- [  **@destination_precision=** ] *destination_precision* sortie  
- Est la précision du type de données du SGBD de destination. *destination_precision* est **bigint**, avec NULL comme valeur par défaut.  
+`[ @destination_precision = ] destination_precision OUTPUT` Est la précision du type de données du SGBD de destination. *destination_precision* est **bigint**, avec NULL comme valeur par défaut.  
   
- [  **@destination_scale=** ] _destination_scale_**sortie**  
- Correspond à l’échelle du type de données du SGBD de destination. *destination_scale* est **int**, avec NULL comme valeur par défaut.  
+`[ @destination_scale = ] _destination_scaleOUTPUT` Correspond à l’échelle du type de données du SGBD de destination. *destination_scale* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@destination_nullable=** ] _destination_nullable_**sortie**  
- Indique si le type de données du SGBD de destination prend en charge la valeur NULL. *destination_nullable* est **bits**, avec NULL comme valeur par défaut. **1** signifie que les valeurs NULL sont prises en charge.  
+`[ @destination_nullable = ] _destination_nullableOUTPUT` Est si le type de données du SGBD de destination prend en charge une valeur NULL. *destination_nullable* est **bits**, avec NULL comme valeur par défaut. **1** signifie que les valeurs NULL sont prises en charge.  
   
- [  **@dataloss=** ] _perte de données_**sortie**  
- Indique si le mappage présente un risque de perte de données. *perte de données* est **bits**, avec NULL comme valeur par défaut. **1** signifie qu’il existe un risque potentiel de perte de données.  
+`[ @dataloss = ] _datalossOUTPUT` Indique si le mappage présente le risque de perte de données. *perte de données* est **bits**, avec NULL comme valeur par défaut. **1** signifie qu’il existe un risque potentiel de perte de données.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

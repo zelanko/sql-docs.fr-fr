@@ -10,12 +10,12 @@ ms.assetid: f2a35c37-4449-49ee-8bba-928028f1de66
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4f4c4244b2d4c9bd785202805312f64194c73b5b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531667"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530131"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Instructions pour la logique de nouvelle tentative des transactions sur des tables mémoire optimisées
   Certaines conditions d'erreur peuvent se produire lors de l'accès des transactions aux tables mémoire optimisées.  
@@ -75,7 +75,7 @@ ms.locfileid: "52531667"
   
  L'exemple suivant illustre la logique de nouvelle tentative dans une procédure stockée en [!INCLUDE[tsql](../includes/tsql-md.md)] interprété qui contient un appel à une procédure stockée compilée en mode natif ou à une transaction entre conteneurs.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE usp_my_procedure @param1 type1, @param2 type2, ...  
 AS  
 BEGIN  

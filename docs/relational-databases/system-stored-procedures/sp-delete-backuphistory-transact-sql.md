@@ -18,12 +18,12 @@ ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2252fe0339a13a6d75c43a09351b95b17b7abd7b
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 44db86eef5231fde337a9521cb76ca5e03f28db9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168759"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527501"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@oldest_date=** ] **'**_plus ancien\_date_**'**  
- Date la plus ancienne conservée dans les tables d'historique de sauvegarde et de restauration. *oldest_date* est **datetime**, sans valeur par défaut.  
+`[ @oldest_date = ] 'oldest\_date'` Date la plus ancienne est conservée dans les tables d’historique de sauvegarde et de restauration. *oldest_date* est **datetime**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -73,7 +72,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
   
  Les fichiers de sauvegarde physiques sont conservés, même si tout l'historique est supprimé.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe, mais les autorisations peuvent être accordées à d’autres utilisateurs.  
   
 ## <a name="examples"></a>Exemples  

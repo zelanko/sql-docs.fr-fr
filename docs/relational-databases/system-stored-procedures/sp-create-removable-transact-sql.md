@@ -18,12 +18,12 @@ ms.assetid: 06e36ae5-f70d-4a26-9a7f-ee4b9360b355
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a17ec458ffe1094691932fee6661e38551012b54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749448"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534671"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,37 +56,27 @@ sp_create_removable
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname=** ] **'***dbname***'**  
- Nom de la base de données à créer pour une utilisation sur un support amovible. *dbname* est **sysname**.  
+`[ @dbname = ] 'dbname'` Est le nom de la base de données à créer pour une utilisation sur un support amovible. *dbname* est **sysname**.  
   
- [  **@syslogical=** ] **'***syslogical***'**  
- Nom logique du fichier qui contient les tables du catalogue système. *syslogical* est **sysname**.  
+`[ @syslogical = ] 'syslogical'` Est le nom logique du fichier qui contient les tables du catalogue système. *syslogical* est **sysname**.  
   
- [  **@sysphysical=** ] **'***sysphysical***'**  
- Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables du catalogue système. *sysphysical* est **nvarchar (260)**.  
+`[ @sysphysical = ] 'sysphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables du catalogue système. *sysphysical* est **nvarchar (260)**.  
   
- [  **@syssize=** ] *syssize*  
- Taille, en Mo, du fichier contenant les tables du catalogue système. *syssize* est **int**. La valeur minimale *syssize* est 1.  
+`[ @syssize = ] syssize` Est la taille, en mégaoctets, du fichier qui contient le système de tables du catalogue. *syssize* est **int**. La valeur minimale *syssize* est 1.  
   
- [  **@loglogical=** ] **'***loglogical***'**  
- Nom logique du fichier contenant le journal des transactions. *loglogical* est **sysname**.  
+`[ @loglogical = ] 'loglogical'` Est le nom logique du fichier qui contient le journal des transactions. *loglogical* est **sysname**.  
   
- [  **@logphysical=** ] **'***logphysical***'**  
- Nom physique. Il comprend un chemin d'accès complet du fichier contenant le journal des transactions. *logphysical* est **nvarchar (260)**.  
+`[ @logphysical = ] 'logphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant le journal des transactions. *logphysical* est **nvarchar (260)**.  
   
- [  **@logsize=** ] *logsize*  
- Taille, en Mo, du fichier contenant le journal des transactions. *LogSize* est **int**. La valeur minimale *logsize* est 1.  
+`[ @logsize = ] logsize` Est la taille, en mégaoctets, du fichier qui contient le journal des transactions. *LogSize* est **int**. La valeur minimale *logsize* est 1.  
   
- [  **@datalogical1=** ] **'***datalogique***'**  
- Nom logique d'un fichier contenant les tables de données. *datalogique* est **sysname**.  
+`[ @datalogical1 = ] 'datalogical'` Est le nom logique d’un fichier qui contient les tables de données. *datalogique* est **sysname**.  
   
  Il doit exister entre 1 et 16 fichiers de données. Habituellement, plusieurs fichiers de données sont créés lorsqu'il est prévu que la base de données soit volumineuse et qu'elle doive être distribuée sur plusieurs disques.  
   
- [  **@dataphysical1=** ] **'***dataphysique***'**  
- Nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables de données. *dataphysique* est **nvarchar (260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Est le nom physique. Il comprend un chemin d'accès complet du fichier contenant les tables de données. *dataphysique* est **nvarchar (260)**.  
   
- [  **@datasize1=** ] **'***datasize***'**  
- Taille, en Mo, du fichier contenant les tables de données. *DataSize* est **int**. La valeur minimale *datasize* est 1.  
+`[ @datasize1 = ] 'datasize'` Est la taille, en mégaoctets, d’un fichier qui contient les tables de données. *DataSize* est **int**. La valeur minimale *datasize* est 1.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -97,7 +87,7 @@ sp_create_removable
 ## <a name="remarks"></a>Notes  
  Si vous souhaitez faire une copie de votre base de données sur un support amovible (par exemple un CD-ROM) pour la distribuer à d'autres utilisateurs, utilisez cette procédure stockée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'autorisation CREATE DATABASE, CREATE ANY DATABASE ou ALTER ANY DATABASE est obligatoire.  
   
  Pour garder le contrôle de l'utilisation du disque sur une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'autorisation de création de bases de données est généralement limitée à quelques comptes de connexion.  

@@ -16,12 +16,12 @@ ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 4c04df4cb844faf42506c781607a220e98a7db17
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5458d7a7693c742768a9a8a5e0c2f8583f1ca9ba
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779111"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535611"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,11 @@ sp_redirect_publisher
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@original_publisher** =] **'***original_publisher***'**  
- Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a publié la base de données à l'origine. *original_publisher* est **sysname**, sans valeur par défaut.  
+`[ @original_publisher = ] 'original_publisher'` Le nom de l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a publié la base de données. *original_publisher* est **sysname**, sans valeur par défaut.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Nom de la base de données publiée. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Le nom de la base de données en cours de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [ **@redirected_publisher** =] **'***redirected_publisher***'**  
- Nom d'écouteur associé au groupe de disponibilité qui sera le nouveau serveur de publication. *redirected_publisher* est **sysname**, sans valeur par défaut. Lorsque l'écouteur du groupe de disponibilité est configuré sur un port non défini par défaut, spécifiez le numéro de port avec le nom d'écouteur, par exemple `'Listenername,51433'`  
+`[ @redirected_publisher = ] 'redirected_publisher'` Nom d’écouteur de groupe disponibilité associé au groupe de disponibilité qui sera le nouveau serveur de publication. *redirected_publisher* est **sysname**, sans valeur par défaut. Lorsque l'écouteur du groupe de disponibilité est configuré sur un port non défini par défaut, spécifiez le numéro de port avec le nom d'écouteur, par exemple `'Listenername,51433'`  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

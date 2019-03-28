@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b22d971764be99c5542c7cd8615c11ebb3e6cba
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 4e74f587177c31f55c952eb06ccb8a7e8960c93a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53644779"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511586"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Leçon 4 : Exécuter des prédictions à l’aide de R incorporé dans une procédure stockée
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -194,4 +194,4 @@ Cela conclut le didacticiel. Maintenant que vous avez appris à incorporer le co
 
 ## <a name="previous-lesson"></a>Leçon précédente
 
-[Leçon 3 : Former et enregistrer un modèle R à l’aide de T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[Leçon 3 : Former et enregistrer un modèle R à l’aide de T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)

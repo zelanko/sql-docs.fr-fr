@@ -16,12 +16,12 @@ ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3785eb45e8ecca7a573f499d8c48b184a22e6efc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779361"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534701"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,21 +40,18 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article=**] **'***article***'**  
- Nom de l'article. *article* est **sysname**, avec une valeur par défaut **%**, qui renvoie le nom de tous les articles.  
+`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, avec une valeur par défaut **%**, qui renvoie le nom de tous les articles.  
   
- [  **@filtername=**] **'***filtername***'**  
- Nom du filtre pour lequel il faut renvoyer des informations. *FilterName* est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les filtres définis sur l’article ou la publication.  
+`[ @filtername = ] 'filtername'` Est le nom du filtre pour lequel retourner les informations. *FilterName* est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les filtres définis sur l’article ou la publication.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**Int**|Identificateur du filtre de jointure.|  
-|**nom de filtre**|**sysname**|Nom du filtre.|  
+|**filtername**|**sysname**|Nom du filtre.|  
 |**nom de l’article**|**sysname**|Nom de l'article de jointure.|  
 |**join_filterclause**|**nvarchar(2000)**|Clause FILTER qualifiant la jointure.|  
 |**join_unique_key**|**Int**|Indique si la jointure porte sur une clé unique.|  
@@ -63,7 +60,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**propriétaire de table de jointure**|**sysname**|Nom du propriétaire de la table jointe à la table de base.|  
 |**nom de table de jointure**|**sysname**|Nom de la table jointe à la table de base.|  
 |**nom de l’article**|**sysname**|Nom de l'article de la table jointe à la table de base.|  
-|**filter_type**|**tinyint**|Type de filtre de fusion parmi les types suivants :<br /><br /> **1** = filtre de jointure uniquement<br /><br /> **2** = relation d’enregistrements logiques<br /><br /> **3** = les deux|  
+|**filter_type**|**tinyint**|Type de filtre de fusion parmi les types suivants :<br /><br /> **1** = filtre de jointure uniquement<br /><br /> **2** = relation d’enregistrements logiques<br /><br /> **3** = both|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

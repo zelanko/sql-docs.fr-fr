@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - xsd:simpleType declarations
 ms.assetid: 557b972d-3af9-40bf-8382-72b05c9de1c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: bd9d3d1660f549c93ae77106712364c15a41aa3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f0b24a9c02e38ba8165e015cdf8d1b107e64cbaf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159139"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534061"
 ---
 # <a name="values-for-ltxsdsimpletypegt-declarations"></a>Valeurs pour les déclarations &lt;xsd:simpleType&gt;
   Le tableau suivant décrit les restrictions appliquées, sur la base de toutes les énumérations de types simples XSD reconnus.  
@@ -34,7 +34,7 @@ ms.locfileid: "48159139"
 |`gMonthDay`|La partie mois doit figurer dans la plage comprise entre 1 et 12. La partie jour doit figurer dans la plage comprise entre 1 et 31.|  
 |`gDay`|La partie jour doit figurer dans la plage comprise entre 1 et 31.|  
 |`gMonth`|La partie mois doit figurer dans la plage comprise entre 1 et 12.|  
-|`decimal`|Les valeurs de ce type doivent être conformes au format du type numérique SQL. Ce type représente en interne la prise en charge des nombres jusqu'à un total de 38 chiffres, 10 de ces positions étant réservées à la précision fractionnelle.|  
+|`decimal`|Les valeurs de ce type doivent être conformes au format du type numérique SQL. Ce type représente en interne la prise en charge des nombres jusqu'à un total de 38 chiffres, 10 de ces positions étant réservées à la précision fractionnelle.|  
 |`float`|Les valeurs de ce type doivent être conformes au format du type `real` SQL.|  
 |**double**|Les valeurs de ce type doivent être conformes au format du type `float` SQL.|  
 |`string`|Les valeurs de ce type doivent être conformes au format du type `nvarchar(max)` SQL.|  

@@ -5,15 +5,15 @@ ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/10/2018
 ms.topic: overview
-author: HeidiSteen
-ms.author: heidist
+author: dphansen
+ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: f3575d91122badac6fcba2e1ca7463114a08c26b
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596510"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510526"
 ---
 # <a name="r-services-in-sql-server-2016"></a>R Services dans SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,12 +58,12 @@ Démarrer avec le programme d’installation, attacher les fichiers binaires à 
 
 + [Installer SQL Server 2016 R Services (en base de données)](../install/sql-r-services-windows-install.md)
 
-**Étape 2 :** Acquérez une expérience pratique en utilisant l’un de ces didacticiels :
+**Étape 2 :** Acquérez une expérience pratique en utilisant l’un de ces didacticiels :
 
 + [Didacticiel : Découvrez l’analytique en base de données à l’aide de R](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 + [Didacticiel : Procédure pas à pas de bout en bout avec R](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
 
-**Étape 3 :** Ajouter vos packages R favoris et les utiliser avec des packages fournis par Microsoft
+**Étape 3 :** Ajouter vos packages R favoris et les utiliser avec des packages fournis par Microsoft
 
 + [Gestion des packages R pour SQL Server](install-additional-r-packages-on-sql-server.md)
 

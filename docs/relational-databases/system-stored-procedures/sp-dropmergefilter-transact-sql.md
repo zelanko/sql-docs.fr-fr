@@ -16,12 +16,12 @@ ms.assetid: 798586d7-05f3-4a5e-bea8-a34b7b52d0fd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7de6c03b133746156f414687fd661f70b40e842e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 76d83e2d36307280249ccd886c464e8cd484c296
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128116"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533221"
 ---
 # <a name="spdropmergefilter-transact-sql"></a>sp_dropmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,24 +40,19 @@ sp_dropmergefilter [ @publication= ] 'publication', [ @article= ] 'article'     
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'**_publication_**'**  
- Nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article=**] **'**_article_**'**  
- Nom de l'article. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, sans valeur par défaut.  
   
- [  **@filtername=**] **'**_filtername_**'**  
- Nom du filtre à supprimer. *FilterName* est **sysname**, sans valeur par défaut.  
+`[ @filtername = ] 'filtername'` Est le nom du filtre à supprimer. *FilterName* est **sysname**, sans valeur par défaut.  
   
- [  **@force_invalidate_snapshot=** ] *àce_invalidate_snapshot*  
- Active ou désactive la possibilité d'invalider un instantané. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Active ou désactive la possibilité d’invalider un instantané. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’invalident pas l’instantané n’est pas valide.  
   
  **1** signifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide. Si qui est le cas, la valeur **1** autorise le nouvel instantané de se produire.  
   
- [ **@force_reinit_subscription**=] *àce_reinit_subscription*  
- Active ou désactive la possibilité de marquer un abonnement comme non valide. *àce_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Active ou désactive la possibilité de marquer un abonnement comme non valide. *àce_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées au filtre d’article de fusion n’invalident pas les abonnements n’est pas valide.  
   

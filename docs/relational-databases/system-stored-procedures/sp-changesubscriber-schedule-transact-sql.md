@@ -16,12 +16,12 @@ ms.assetid: ff84e8e2-d496-482c-b23e-38a6626596e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 83edeb0c94276e10528b05bc5a1cd8d9474d07aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 54098c536fa368c4a2b58d387911e646db15a4d4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127909"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526801"
 ---
 # <a name="spchangesubscriberschedule-transact-sql"></a>sp_changesubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,44 +49,31 @@ sp_changesubscriber_schedule [ @subscriber = ] 'subscriber', [ @agent_type = ] t
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@subscriber=**] **'**_abonné_**'**  
- Nom de l'Abonné. *abonné* est **sysname**. Le nom de l'Abonné doit être unique dans la base de données, ne doit pas déjà exister et ne peut pas avoir la valeur NULL.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**. Le nom de l'Abonné doit être unique dans la base de données, ne doit pas déjà exister et ne peut pas avoir la valeur NULL.  
   
- [  **@agent_type=**] *type*  
- Type de l'Agent. *type* est **smallint**, avec une valeur par défaut **0**. **0** indique un Agent de Distribution. **1** indique un Agent de fusion.  
+`[ @agent_type = ] type` Est le type d’agent. *type* est **smallint**, avec une valeur par défaut **0**. **0** indique un Agent de Distribution. **1** indique un Agent de fusion.  
   
- [  **@frequency_type=**] *frequency_type*  
- Fréquence de planification de la tâche de distribution. *frequency_type* est **int**, avec une valeur par défaut **64**. Il y a 10 colonnes de planification.  
+`[ @frequency_type = ] frequency_type` Est la fréquence de planification de la tâche de distribution. *frequency_type* est **int**, avec une valeur par défaut **64**. Il y a 10 colonnes de planification.  
   
- [  **@frequency_interval=**] *frequency_interval*  
- Valeur appliquée à la fréquence définie *frequency_type*. *frequency_interval* est **int**, avec une valeur par défaut **1**.  
+`[ @frequency_interval = ] frequency_interval` Valeur appliquée à la fréquence définie *frequency_type*. *frequency_interval* est **int**, avec une valeur par défaut **1**.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Date de la tâche de distribution. *frequency_relative_interval* est **int**, avec une valeur par défaut **1**.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Est la date de la tâche de distribution. *frequency_relative_interval* est **int**, avec une valeur par défaut **1**.  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec une valeur par défaut **0**.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec une valeur par défaut **0**.  
   
- [  **@frequency_subday=**] *frequency_subday*  
- Indique, en minutes, la fréquence de replanification pendant la période définie. *frequency_subday* est **int**, avec une valeur par défaut **4**.  
+`[ @frequency_subday = ] frequency_subday` Est la fréquence, en minutes, de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, avec une valeur par défaut **4**.  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec une valeur par défaut **5**.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec une valeur par défaut **5**.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Heure de première planification de la tâche de distribution. *active_start_time_of_day* est **int**, avec une valeur par défaut **0**.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Est l’heure de la journée lorsque la tâche de distribution est planifiée pour la première. *active_start_time_of_day* est **int**, avec une valeur par défaut **0**.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Heure à laquelle la tâche de distribution cesse d'être planifiée. *active_end_time_of_day* est **int**, avec une valeur par défaut **235959**, ce qui signifie que 11:59:59 P.M. avec un affichage horaire au format 24 heures).  
+`[ @active_end_time_of_day = ] active_end_time_of_day` Est l’heure de la journée à laquelle la tâche de distribution cesse d’être planifié. *active_end_time_of_day* est **int**, avec une valeur par défaut **235959**, ce qui signifie que 11:59:59 P.M. avec un affichage horaire au format 24 heures).  
   
- [  **@active_start_date=**] *active_start_date*  
- Date de première planification de la tâche de distribution, au format AAAAMMJJ. *active_start_date* est **int**, avec une valeur par défaut **0**.  
+`[ @active_start_date = ] active_start_date` Est la date à laquelle la tâche de distribution est premier planifiée, au format AAAAMMJJ. *active_start_date* est **int**, avec une valeur par défaut **0**.  
   
- [  **@active_end_date=**] *active_end_date*  
- Date à laquelle la tâche de distribution cesse d'être planifiée, exprimée au format AAAAMMJJ. *active_end_date* est **int**, avec une valeur par défaut **99991231**, qui correspond au 31 décembre 9999.  
+`[ @active_end_date = ] active_end_date` Date à laquelle la tâche de distribution cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec une valeur par défaut **99991231**, qui correspond au 31 décembre 9999.  
   
- [ **@publisher**=] **'**_publisher_**'**  
- Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la modification des propriétés de l’article sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  

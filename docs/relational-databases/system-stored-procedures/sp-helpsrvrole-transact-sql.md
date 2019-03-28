@@ -18,12 +18,12 @@ ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 651bab70f71726beeb9f3b28026e8ee4683c404f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c0cd34d0a10fc8809280be0abcc0761cebd72ae
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731967"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526231"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@srvrolename=** ] **'***rôle***'**  
- Nom du rôle serveur fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* peut prendre l’une des valeurs suivantes.  
+`[ @srvrolename = ] 'role'` Est le nom du rôle serveur fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* peut prendre l’une des valeurs suivantes.  
   
 |Rôle serveur fixe|Description|  
 |-----------------------|-----------------|  
@@ -73,7 +72,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
  sp_helpsrvrole n’accepte pas un rôle de serveur défini par l’utilisateur en tant qu’argument. Pour répertorier les rôles de serveur définis par l’utilisateur, consultez les exemples dans [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  

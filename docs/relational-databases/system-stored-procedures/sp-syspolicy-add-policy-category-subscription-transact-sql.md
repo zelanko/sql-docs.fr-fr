@@ -18,12 +18,12 @@ ms.assetid: 4284f550-9a3f-4726-8181-15e407fbf08f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8299578d8becf6ef0f1572596795454ff9d98fc9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dca1196f986da94ed17b1efb6f4284362e68b84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595337"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530251"
 ---
 # <a name="spsyspolicyaddpolicycategorysubscription-transact-sql"></a>sp_syspolicy_add_policy_category_subscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +43,15 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@target_type=** ] **'***target_type***'**  
- Type de cible de l'abonnement aux catégories. *target_type* est **sysname**, est requis et doit être définie sur 'DATABASE'.  
+`[ @target_type = ] 'target_type'` Est le type de cible de l’abonnement aux catégories. *target_type* est **sysname**, est requis et doit être définie sur 'DATABASE'.  
   
- [ **@target_object=** ] **'***target_object***'**  
- Est le nom de la base de données qui peuvent s’abonner à la catégorie. *target_object* est **sysname**et est requis.  
+`[ @target_object = ] 'target_object'` Est le nom de la base de données qui peuvent s’abonner à la catégorie. *target_object* est **sysname**et est requis.  
   
- [  **@policy_category=** ] **'***policy_category***'**  
- Est le nom de la catégorie de stratégie pour vous abonner à. *policy_category* est **sysname**et est requis.  
+`[ @policy_category = ] 'policy_category'` Est le nom de la catégorie de stratégie pour vous abonner à. *policy_category* est **sysname**et est requis.  
   
  Pour obtenir les valeurs de *policy_category*, interrogez la vue système msdb.dbo.syspolicy_policy_categories.  
   
- [  **@policy_category_subscription_id=** ] *policy_category_subscription_id*  
- Identificateur de l'abonnement aux catégories. *policy_category_subscription_id* est **int**et est retourné en tant que sortie.  
+`[ @policy_category_subscription_id = ] policy_category_subscription_id` Est l’identificateur pour l’abonnement aux catégories. *policy_category_subscription_id* est **int**et est retourné en tant que sortie.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -65,7 +61,7 @@ sp_syspolicy_add_policy_category_subscription [ @target_type = ] 'target_type'
   
  Si vous spécifiez une catégorie de stratégie qui n'existe pas, une nouvelle catégorie de stratégie est créée et l'abonnement est autorisé pour toutes les bases de données lorsque vous exécutez la procédure stockée. Si vous supprimez l’abonnement autorisé pour la nouvelle catégorie, il ne s’appliquera qu’à la base de données que vous avez spécifiée en tant que *target_object*. Pour plus d’informations sur la modification d’un paramètre d’abonnement autorisé, consultez [sp_syspolicy_update_policy_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syspolicy-update-policy-category-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée est exécutée dans le contexte du propriétaire actuel de la procédure stockée.  
   
 ## <a name="examples"></a>Exemples  

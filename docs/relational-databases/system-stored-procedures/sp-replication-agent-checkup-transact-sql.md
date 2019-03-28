@@ -16,12 +16,12 @@ ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c35b08bf98079af5f72c48c3912613cca6ec7db0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 73335322d9e4c8602e299255ebcd3b3b183aaaec
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52789241"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529871"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@heartbeat_interval** =] **'***heartbeat_interval***'**  
- Est le nombre maximal de minutes pendant lesquelles un agent peut fonctionner sans enregistrer un message de progression. *heartbeat_interval* est **int**, avec une valeur par défaut de 10 minutes.  
+`[ @heartbeat_interval = ] 'heartbeat_interval'` Est le nombre maximal de minutes pendant lesquelles un agent peut fonctionner sans enregistrer un message de progression. *heartbeat_interval* est **int**, avec une valeur par défaut de 10 minutes.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **sp_replication_agent_checkup** déclenche l’erreur 14151 pour chaque agent détecté est suspect. Elle enregistre également un message d'historique d'échec au sujet des Agents.  

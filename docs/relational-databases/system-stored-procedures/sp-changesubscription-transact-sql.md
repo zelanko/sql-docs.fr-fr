@@ -18,12 +18,12 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a293be4b745f30f4ee4a9bff6226e4e2ef80676f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209838"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534041"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,23 +49,17 @@ sp_changesubscription [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publication**=] **'**_publication_**'**  
- Nom de la publication à modifier. *publication*est **sysname**, sans valeur par défaut  
+`[ @publication = ] 'publication'` Est le nom de la publication à modifier. *publication*est **sysname**, sans valeur par défaut  
   
- [ **@article** =] **'**_article_**'**  
- Nom de l'article à modifier. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'` Est le nom de l’article à modifier. *article* est **sysname**, sans valeur par défaut.  
   
- [ **@subscriber** =] **'**_abonné_**'**  
- Nom de l'Abonné. *abonné* est **sysname**, sans valeur par défaut.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, sans valeur par défaut.  
   
- [ **@destination_db** =] **'**_destination_db_**'**  
- Est le nom de la base de données d’abonnement. *destination_db* est **sysname**, sans valeur par défaut.  
+`[ @destination_db = ] 'destination_db'` Est le nom de la base de données d’abonnement. *destination_db* est **sysname**, sans valeur par défaut.  
   
- [  **@property=**] **'**_propriété_**'**  
- Propriété à modifier pour l'abonnement donné. *propriété* est **nvarchar (30)**, et peut prendre l’une des valeurs dans la table.  
+`[ @property = ] 'property'` Est la propriété à modifier pour l’abonnement donné. *propriété* est **nvarchar (30)**, et peut prendre l’une des valeurs dans la table.  
   
- [  **@value=**] **'**_valeur_**'**  
- Nouvelle valeur pour le texte spécifié *propriété*. *valeur* est **nvarchar (4000)**, et peut prendre l’une des valeurs dans la table.  
+`[ @value = ] 'value'` Nouvelle valeur pour le texte spécifié *propriété*. *valeur* est **nvarchar (4000)**, et peut prendre l’une des valeurs dans la table.  
   
 |Propriété|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -80,13 +74,12 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|Utiliser l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la connexion à l'Abonné.|  
 |**subscriber_provider**||Identificateur de programme unique (PROGID) avec lequel le fournisseur OLE DB de la source de données non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est inscrit. *Cette propriété est uniquement valide pour les non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *abonnés.*|  
 |**subscriber_providerstring**||Chaîne de connexion propre au fournisseur OLE DB qui identifie la source de données. *Cette propriété est uniquement valide pour les non -* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *abonnés.*|  
-|**flux d’abonnements**||Nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. Une plage de valeurs à partir de **1** à **64** est pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. Cette propriété doit être **0** pour non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés, les serveurs de publication Oracle ou les abonnements d’égal à égal.|  
+|**subscriptionstreams**||Nombre de connexions autorisées par Agent de distribution pour appliquer en parallèle des traitements de modifications à un Abonné. Une plage de valeurs à partir de **1** à **64** est pris en charge pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les serveurs de publication. Cette propriété doit être **0** pour non -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés, les serveurs de publication Oracle ou les abonnements d’égal à égal.|  
 |**subscriber_type**|**1**|Serveur de la source de données ODBC.|  
 ||**3**|Fournisseur OLE DB|  
 |**memory_optimized**|**bit**|Indique que l’abonnement prend en charge les tables optimisées en mémoire. *memory_optimized* est **bits**, où 1 est égale à true (l’abonnement prend en charge les tables optimisées en mémoire).|  
   
- [  **@publisher =** ] **'**_publisher_**'**  
- Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être spécifié pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  

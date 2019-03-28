@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d548353668aadbf67f2c0bc39c7e69eea756c041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: ca0953b9ac191dfb765992f79988f3cc1502dfa4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078494"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529121"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Ajouter la logique métier aux données XML
   Votre logique métier peut être ajoutée aux données XML de plusieurs manières :  
@@ -30,7 +30,7 @@ ms.locfileid: "48078494"
   
 -   Vous pouvez écrire des procédures stockées et des fonctions Transact-SQL pour lancer le traitement sur la colonne XML en fonction de vos besoins.  
   
-## <a name="example-applying-xsl-transformation"></a>Exemple : application XSLT  
+## <a name="example-applying-xsl-transformation"></a>Exemple : Appliquer la Transformation XSL  
  Considérez une fonction CLR **TransformXml()** qui accepte un `xml` type instance et une transformation XSL stockée dans un fichier de données, applique la transformation aux données XML et puis retourne les données XML transformées dans le résultat. Le code suivant est un squelette de fonction écrit en C# :  
   
 ```  

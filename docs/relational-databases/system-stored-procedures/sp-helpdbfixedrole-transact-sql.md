@@ -18,12 +18,12 @@ ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f36cac8a1a21f5e742c9fe7925684a6002f4a2b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1f3b4416ac9c297af84240e630730b0bad855780
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777647"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527961"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@rolename =** ] **'***rôle***'**  
- Nom d'un rôle de base de données fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si *rôle* est spécifié, uniquement les informations sur ce rôle sont retournées ; sinon, une liste et une description de tous les rôles de base de données fixe est retournée.  
+`[ @rolename = ] 'role'` Est le nom d’un rôle de base de données fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si *rôle* est spécifié, uniquement les informations sur ce rôle sont retournées ; sinon, une liste et une description de tous les rôles de base de données fixe est retournée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -51,7 +50,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|nom du rôle de base de données fixe.|  
-|**Description**|**nvarchar (70)**|Description de **DbFixedRole.**|  
+|**Description**|**nvarchar(70)**|Description de **DbFixedRole.**|  
   
 ## <a name="remarks"></a>Notes  
  Les rôles de base de données fixes, tels que répertoriés dans le tableau ci-dessous, sont définis au niveau de la base de données et possèdent les autorisations leur permettant d'effectuer des opérations d'administration spécifiques au niveau de la base de données. Il est impossible d'ajouter ou de supprimer des rôles de base de données fixes. Les autorisations accordées à un rôle de base de données fixe ne peuvent pas être modifiées.  
@@ -76,7 +75,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 |**sp_helprole**|Affiche la liste des membres d'un rôle fixe de base de données.|  
 |**sp_droprolemember**|Supprime un membre d'un rôle fixe de base de données|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
  Les informations retournées sont sujettes à des restrictions d'accès aux métadonnées. Les entités sur lesquelles le principal ne possède pas d'autorisation n'apparaissent pas. Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -12,12 +12,12 @@ ms.assetid: dd4d270d-9283-431a-aa6b-e571fced1893
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: 98887ac98ef0dc2e77a1a2ead02fbd773a8ae701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 1e0638477dd826f2023c3728bedb2a6f846ef305
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100669"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529801"
 ---
 # <a name="move-a-filestream-enabled-database"></a>Déplacer une base de données compatible FILESTREAM
   Cette rubrique montre comment déplacer une base de données compatible FILESTREAM.  
@@ -31,7 +31,7 @@ ms.locfileid: "48100669"
   
 2.  Copiez le script [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant dans l’Éditeur de requête, puis cliquez sur **Exécuter**. Ce script affiche l'emplacement des fichiers de base de données physiques utilisés par la base de données FILESTREAM.  
   
-    ```tsql  
+    ```sql  
     USE Archive  
     GO  
     SELECT type_desc, name, physical_name from sys.database_files  
@@ -39,7 +39,7 @@ ms.locfileid: "48100669"
   
 3.  Copiez le script [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant dans l’Éditeur de requête, puis cliquez sur **Exécuter**. Ce code met la base de données `Archive` hors connexion.  
   
-    ```tsql  
+    ```sql  
     USE master  
     EXEC sp_detach_db Archive  
     GO  
@@ -49,7 +49,7 @@ ms.locfileid: "48100669"
   
 5.  Copiez le script [!INCLUDE[tsql](../../includes/tsql-md.md)] suivant dans l’Éditeur de requête, puis cliquez sur **Exécuter**. Ce script met la base de données `Archive` en ligne.  
   
-    ```tsql  
+    ```sql  
     CREATE DATABASE Archive ON  
     PRIMARY ( NAME = Arch1,  
         FILENAME = 'c:\moved_location\archdat1.mdf'),  

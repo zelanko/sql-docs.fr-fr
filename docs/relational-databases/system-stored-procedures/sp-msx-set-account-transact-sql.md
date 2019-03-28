@@ -18,12 +18,12 @@ ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 358918d91a13cf879d56ff5afd23d9aea0c8d81f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16d5c1815e42e419940223b7f25a565e04ab0508
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627933"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533251"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +40,9 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@credential_name=** ] **'***credential_name***'**  
- Nom des informations d'identification à utiliser pour la connexion au serveur maître. Ce nom doit être celui d'informations d'identification existantes. Soit *credential_name* ou *credential_id* doit être spécifié.  
+`[ @credential_name = ] 'credential_name'` Le nom de l’information d’identification à utiliser pour vous connecter au serveur maître. Ce nom doit être celui d'informations d'identification existantes. Soit *credential_name* ou *credential_id* doit être spécifié.  
   
- [  **@credential_id=** ] *credential_id*  
- Identificateur des informations d'identification à utiliser pour la connexion au serveur maître. Il doit désigner des informations d'identification existantes. Soit *credential_name* ou *credential_id* doit être spécifié.  
+`[ @credential_id = ] credential_id` L’identificateur pour les informations d’identification à utiliser pour vous connecter au serveur maître. Il doit désigner des informations d'identification existantes. Soit *credential_name* ou *credential_id* doit être spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -57,7 +55,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
   
  Il doit s'agir d'informations d'identification existantes. Pour plus d’informations sur la création d’une information d’identification, consultez [CREATE CREDENTIAL &#40;Transact-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d’exécution **sp_msx_set_account** par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

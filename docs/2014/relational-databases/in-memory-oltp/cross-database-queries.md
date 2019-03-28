@@ -10,12 +10,12 @@ ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0ccf8ea4fc15be567d0e95a66b2e5320fae7dbbc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8739a95f0676adfdbc890512aeb5246565bacdb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205159"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528521"
 ---
 # <a name="cross-database-queries"></a>Requêtes de bases de données croisées
   Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les tables mémoire optimisées ne prennent pas en charge les transactions entre bases de données. Vous ne pouvez pas accéder à une autre base de données à partir de la même transaction ou de la même requête qui accède également à une table mémoire optimisée. Vous ne pouvez pas facilement copier les données d'une table d'une base de données, à une table mémoire optimisée d'une autre base de données.  
@@ -24,7 +24,7 @@ ms.locfileid: "48205159"
   
  Par exemple, pour copier la ligne à partir de la table t1 dans la base de données db1 vers la table t2 dans db2, à l’aide de la variable @v1 de type dbo.tt1, vous pouvez utiliser quelque chose comme :  
   
-```tsql  
+```sql  
 USE db2   
 GO   
 DECLARE @v1 dbo.tt1   

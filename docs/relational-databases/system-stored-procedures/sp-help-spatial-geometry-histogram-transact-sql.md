@@ -18,12 +18,12 @@ ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c29562bbdaeff69084547c3505fc84def3a0c668
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663231"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534291"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,31 +45,23 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@tabname =**] **'***tabname***'**  
- Spécifie le nom qualifié ou non qualifié de la table pour laquelle l'index spatial a été défini.  
+`[ @tabname = ] 'tabname'` Est le nom qualifié ou non de la table pour laquelle l’index spatial a été spécifié.  
   
  Les guillemets ne sont nécessaires que si une une table qualifiée est spécifiée. Si un nom qualifié complet (incluant un nom de base de données) est fourni, le nom de base de données doit être celui de la base de données active. *tabname* est **sysname**, sans valeur par défaut.  
   
- [  **@colname =** ] **'***colname***'**  
- Nom de la colonne spatiale spécifiée. *colname* est un **sysname**, sans valeur par défaut.  
+`[ @colname = ] 'colname'` Est le nom de la colonne spatiale spécifiée. *colname* est un **sysname**, sans valeur par défaut.  
   
- [  **@resolution =** ] **'***résolution***'**  
- Résolution du rectangle englobant. Les valeurs possibles sont comprises entre 10 et 5000. *résolution* est un **tinyint**, sans valeur par défaut.  
+`[ @resolution = ] 'resolution'` Est la résolution du rectangle englobant. Les valeurs possibles sont comprises entre 10 et 5000. *résolution* est un **tinyint**, sans valeur par défaut.  
   
- [  **@xmin =** ] **'***xmin***'**  
- Propriété de rectangle englobant X-minimum. *XMIN* est un **float**, sans valeur par défaut.  
+`[ @xmin = ] 'xmin'` Est la propriété de rectangle englobant X-minimum. *XMIN* est un **float**, sans valeur par défaut.  
   
- [  **@ymin =** ] **'***ymin***'**  
- Propriété de rectangle englobant Y-minimum. *YMIN* est un **float**, sans valeur par défaut.  
+`[ @ymin = ] 'ymin'` Est la propriété de rectangle englobant Y-minimum. *YMIN* est un **float**, sans valeur par défaut.  
   
- [  **@xmax =** ] **'***xmax***'**  
- Propriété de rectangle englobant X-maximum. *XMAX* est un **float**, sans valeur par défaut.  
+`[ @xmax = ] 'xmax'` Est la propriété de rectangle englobant X-maximum. *XMAX* est un **float**, sans valeur par défaut.  
   
- [  **@ymax =** ] **'***ymax***'**  
- Propriété de rectangle englobant Y-maximum. *YMAX* est un **float**, sans valeur par défaut.  
+`[ @ymax = ] 'ymax'` Est la propriété de rectangle englobant Y-maximum. *YMAX* est un **float**, sans valeur par défaut.  
   
- [  **@sample =** ] **'***exemple***'**  
- Pourcentage de la table utilisée. Les valeurs valides sont compris entre 0 et 100. *exemple* est un **float**. Valeur par défaut est 100.  
+`[ @sample = ] 'sample'` Est le pourcentage de la table qui est utilisé. Les valeurs valides sont compris entre 0 et 100. *exemple* est un **float**. Valeur par défaut est 100.  
   
 ## <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour  
  Une valeur de table est retournée. La grille suivante décrit le contenu de colonne de la table.  
@@ -77,10 +69,10 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**Int**|Représente l'ID unique de chaque cellule ; le comptage démarre à 1.|  
-|**Cellule**|**geometry**|Polygone rectangulaire qui représente chaque cellule. La forme de cellule est identique à la forme de cellule utilisée pour l'indexation spatiale.|  
+|**cell**|**geometry**|Polygone rectangulaire qui représente chaque cellule. La forme de cellule est identique à la forme de cellule utilisée pour l'indexation spatiale.|  
 |**row_count**|**bigint**|Indique le nombre d'objets spatiaux qui touchent ou contiennent la cellule.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Utilisateur doit être un membre de la **public** rôle. Nécessite une autorisation READ ACCESS sur le serveur et l'objet.  
   
 ## <a name="remarks"></a>Notes  

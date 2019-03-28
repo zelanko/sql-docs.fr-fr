@@ -10,15 +10,15 @@ helpviewer_keywords:
 - xml columns [full-text search]
 - indexes [full-text search]
 ms.assetid: 8096cfc6-1836-4ed5-a769-a5d63b137171
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 345b7324b66e10a8117e24d4a573c2011c47abda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 897002d437dcee8a6c64750f964c957c18a077f3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190939"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530901"
 ---
 # <a name="use-full-text-search-with-xml-columns"></a>Utiliser la recherche en texte intégral avec des colonnes XML
   Vous pouvez créer un index de texte intégral sur des colonnes XML de façon à indexer le contenu des valeurs XML tout en ignorant le balisage XML. Des balises d'éléments sont utilisées comme limites de jeton. Les éléments suivants sont indexés :  
@@ -33,7 +33,7 @@ ms.locfileid: "48190939"
   
 2.  Ensuite, interrogez les valeurs XML pour lesquelles il existe un index XML sur la colonne XML.  
   
-## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemple : association d'une recherche en texte intégral avec une requête XML  
+## <a name="example-combining-full-text-search-with-xml-querying"></a>Exemple : Combinaison de recherche en texte intégral avec une requête XML  
  Une fois l'index de texte intégral créé sur la colonne XML, la requête suivante recherche une valeur XML contenant le mot « custom » dans le titre d'un livre :  
   
 ```  
@@ -49,7 +49,7 @@ AND    xCol.exist('/book/title/text()[contains(.,"custom")]') =1
   
  De plus, la recherche en texte intégral se sert de l’extraction de radical tandis que la fonction XQuery **contains()** attend une correspondance littérale. Cette différence est expliquée dans l'exemple suivant.  
   
-## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Exemple : recherche en texte intégral sur des valeurs XML à l'aide de l'extraction de radical  
+## <a name="example-full-text-search-on-xml-values-using-stemming"></a>Exemple : Recherche en texte intégral sur les valeurs XML à l’aide de la recherche de radical  
  La vérification XQuery **contains()** exécutée dans l’exemple précédent ne peut généralement pas être éliminée. Prenons par exemple la requête suivante :  
   
 ```  

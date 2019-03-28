@@ -18,12 +18,12 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 43d9180ace10e61bbb9a9e65f48e718b8b426ea8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fc6f82a6f39755b6810a3a1043833fcc13213a0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763877"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529131"
 ---
 # <a name="sphelpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@funcname =**] **'***procédure***'**  
- Nom de la procédure stockée étendue dont les informations sont signalées. *procédure* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @funcname = ] 'procedure'` Est le nom de la procédure stockée étendue pour laquelle les informations sont signalées. *procédure* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -54,12 +53,12 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom de la procédure stockée étendue.|  
-|**DLL**|**nvarchar(255)**|Nom de la DLL.|  
+|**dll**|**nvarchar(255)**|Nom de la DLL.|  
   
 ## <a name="remarks"></a>Notes  
  Lorsque *procédure* est spécifié, **sp_helpextendedproc** procédure stockée étendue de rapports sur le texte spécifié. Lorsque ce paramètre n’est pas fourni, **sp_helpextendedproc** retourne toutes les étendues des noms de procédures stockées et les noms de DLL à laquelle chaque procédure stockée étendue appartient.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisation d’exécuter **sp_helpextendedproc** est accordée aux **public**.  
   
 ## <a name="examples"></a>Exemples  

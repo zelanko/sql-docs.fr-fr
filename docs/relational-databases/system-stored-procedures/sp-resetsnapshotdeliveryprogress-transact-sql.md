@@ -16,12 +16,12 @@ ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ec8d4086d1733d91692565d4d6ff112b8f264d35
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c791fedcd483024c2bc6d564ce3f774fa2fded77
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773711"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530191"
 ---
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@verbose_level**=] *verbose_level*  
- Spécifie la quantité d'informations renvoyées. *verbose_level*est **int**, avec une valeur par défaut **1**. La valeur **1** signifie qu’une erreur est renvoyée si les verrous nécessaires ne peuvent pas être obtenues sur le **MSsnapshotdeliveryprogress** table, et **0** signifie qu’aucune erreur n’est retournée.  
+`[ @verbose_level = ] verbose_level` Spécifie la quantité d’informations renvoyées. *verbose_level*est **int**, avec une valeur par défaut **1**. La valeur **1** signifie qu’une erreur est renvoyée si les verrous nécessaires ne peuvent pas être obtenues sur le **MSsnapshotdeliveryprogress** table, et **0** signifie qu’aucune erreur n’est retournée.  
   
- [ **@drop_table**=] **'***drop_table***'**  
- S’il faut supprimer ou tronquer les table contenant des informations sur la progression de la capture instantanée est. *drop_table* est **nvarchar (5)**, avec une valeur par défaut **FALSE**. FALSE signifie que la table est tronquée tandis que TRUE indique que la table est supprimée.  
+`[ @drop_table = ] 'drop_table'` S’il faut supprimer ou tronquer les table contenant des informations sur la progression de la capture instantanée est. *drop_table* est **nvarchar (5)**, avec une valeur par défaut **FALSE**. FALSE signifie que la table est tronquée tandis que TRUE indique que la table est supprimée.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

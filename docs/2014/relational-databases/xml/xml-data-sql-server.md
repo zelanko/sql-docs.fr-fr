@@ -10,20 +10,20 @@ helpviewer_keywords:
 - XML [SQL Server]
 - XML [SQL Server], about XML
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a9c07abd9f7c9ce9ed03bb571a4dc25a77b3c497
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: da462979ee21e09a55015f9c9d30d72edd1ce67d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226402"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530231"
 ---
 # <a name="xml-data-sql-server"></a>Données XML (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] constitue une puissante plateforme de développement d’applications d’une grande richesse pour la gestion des données semi-structurées. La prise en charge de XML est intégrée à tous les composants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sous-entend :  
   
--   Le `xml` type de données. Les valeurs XML peuvent être stockées de façon native dans une colonne de type de données `xml` qui peut être typée en fonction d'une collection de schémas XML ou rester non typée. Vous pouvez indexer la colonne XML.  
+-   Type de données `xml`. Les valeurs XML peuvent être stockées de façon native dans une colonne de type de données `xml` qui peut être typée en fonction d'une collection de schémas XML ou rester non typée. Vous pouvez indexer la colonne XML.  
   
 -   Possibilité de spécifier une requête XQuery sur des données XML stockées dans des colonnes et des variables de type `xml`.  
   

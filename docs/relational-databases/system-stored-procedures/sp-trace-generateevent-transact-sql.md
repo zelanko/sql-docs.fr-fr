@@ -18,19 +18,19 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cce91def9566105550788a8a46ea6c2b6bb959aa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826547"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529351"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crée un événement défini par l'utilisateur dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
->**Remarque :** cette procédure stockée est **pas** déconseillée. Toutes les autres procédures stockées liées à la trace sont déconseillées.  
+>**REMARQUE :**  Cette procédure stockée est **pas** déconseillée. Toutes les autres procédures stockées liées à la trace sont déconseillées.  
   
   
  ![Icône de lien de rubrique](../../database-engine/configure-windows/media/topic-link.gif "Icône lien de rubrique") [Conventions de la syntaxe Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -45,14 +45,11 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@eventid=**] *event_id*  
- ID de l'événement à activer. *event_id* est **int**, sans valeur par défaut. L’ID doit être un des numéros d’événements de 82 à 91, qui représentent les événements définis par l’utilisateur en tant que jeu avec [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
+`[ @eventid = ] event_id` Est l’ID de l’événement à activer. *event_id* est **int**, sans valeur par défaut. L’ID doit être un des numéros d’événements de 82 à 91, qui représentent les événements définis par l’utilisateur en tant que jeu avec [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- [ **@userinfo**=] **'***user_info***'**  
- Chaîne facultative, définie par l'utilisateur, qui identifie le motif de l'événement. *user_info* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
+`[ @userinfo = ] 'user_info'` Chaîne facultative définie par l’utilisateur consiste à identifier la raison de l’événement. *user_info* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
- [ **@userdata**=] *user_data*  
- Données facultatives spécifiées par l'utilisateur et se rapportant à l'événement. *user_data* est **varbinary (8000)**, avec NULL comme valeur par défaut.  
+`[ @userdata = ] user_data` Correspond aux données spécifié par l’utilisateur facultatives pour l’événement. *user_data* est **varbinary (8000)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Le tableau suivant décrit les valeurs de code que les utilisateurs peuvent recevoir à la fin de l'exécution de la procédure stockée.  
@@ -71,7 +68,7 @@ sp_trace_generateevent [ @eventid = ] event_id
   
  Paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés avec des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée renvoie une erreur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="examples"></a>Exemples  

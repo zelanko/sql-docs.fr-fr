@@ -10,23 +10,23 @@ ms.assetid: 162d1392-39d2-4436-a4d9-ee5c47864c5a
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 95b67c3db68d1641f6025ddacc1fd1370f26738b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 3b1bc12baf31a0e1d5edb344c538341cf2ad1be0
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129829"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529616"
 ---
 # <a name="application-level-partitioning"></a>Partitionnement au niveau de l'application
   Cet exemple illustre le partitionnement au niveau de l'application, où les données sont stockées dans une table à mémoire optimisée ou une table sur disque, selon que la commande se situe avant ou après une date spécifique. Toutes les commandes postérieures ou égales à *hotDate* sont dans la table à mémoire optimisée et toutes celles antérieures à *hotDate* sont dans la table sur disque. Supposez une charge de travail OLTP extrême avec de nombreuses transactions simultanées. Cette règle métier (commandes récentes dans une table mémoire optimisée) doit être appliquée même si plusieurs transactions simultanées tentent de modifier *hotDate*.  
   
- Cet exemple n’utilise pas [Tables partitionnées](../partitions/partitioned-tables-and-indexes.md) pour la table sur disque, mais suit un explicit point de fractionnement entre les deux tables à l’aide d’une troisième table. Le point de fractionnement peut être utilisé pour vous assurer que les données récemment insérées sont toujours insérées dans la table appropriées en fonction de la date. Il peut également être utilisé pour déterminer l'emplacement de recherche des données. Les données qui arrivent en retard sont insérées dans la table appropriée.  
+ Cet exemple n'utilise pas de [tables partitionnées](../partitions/partitioned-tables-and-indexes.md) pour la table sur disque, mais suit un point de fractionnement explicite entre les deux tables, à l'aide d'une troisième table. Le point de fractionnement peut être utilisé pour vous assurer que les données récemment insérées sont toujours insérées dans la table appropriées en fonction de la date. Il peut également être utilisé pour déterminer l'emplacement de recherche des données. Les données qui arrivent en retard sont insérées dans la table appropriée.  
   
- Pour obtenir un exemple qui utilise des tables partitionnées, consultez [modèle d’Application pour partitionner des Tables](memory-optimized-tables.md).  
+ Pour obtenir un exemple utilisant les tables partitionnées, consultez [Application Pattern for Partitioning Memory-Optimized Tables](memory-optimized-tables.md).  
   
 ## <a name="code-listing"></a>Intégralité du code  
   
-```tsql  
+```sql  
 USE MASTER  
 GO  
   

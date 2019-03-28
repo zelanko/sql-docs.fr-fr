@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 374fab9dca601e7cc933143643bcc5055f47bda7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803917"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534006"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,17 +49,13 @@ sp_createstats
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@indexonly=** ] **'indexonly'**  
- Crée des statistiques uniquement sur les colonnes qui se trouvent dans un index existant et qui ne constituent pas la première colonne d'une définition d'index. **indexonly** est **char (9)**. La valeur par défaut est NO.  
+`[ @indexonly = ] 'indexonly'` Crée des statistiques uniquement sur les colonnes qui sont dans un index existant et ne sont pas la première colonne dans une définition d’index. **indexonly** est **char (9)**. La valeur par défaut est NO.  
   
- [  **@fullscan=** ] **« fullscan »**  
- Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **FULLSCAN** option. **FULLSCAN** est **char (9)**.  La valeur par défaut est NO.  
+`[ @fullscan = ] 'fullscan'` Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **FULLSCAN** option. **FULLSCAN** est **char (9)**.  La valeur par défaut est NO.  
   
- [  **@norecompute=** ] **« norecompute »**  
- Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **NORECOMPUTE** option. **NORECOMPUTE** est **char(12)**.  La valeur par défaut est NO.  
+`[ @norecompute = ] 'norecompute'` Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **NORECOMPUTE** option. **NORECOMPUTE** est **char(12)**.  La valeur par défaut est NO.  
   
- [  **@incremental=** ] **'incremental'**  
- Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **INCREMENTAL = ON** option. **Incrémentielle** est **char(12)**.  La valeur par défaut est NO.  
+`[ @incremental = ] 'incremental'` Utilise le [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instruction avec le **INCREMENTAL = ON** option. **Incrémentielle** est **char(12)**.  La valeur par défaut est NO.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -72,7 +68,7 @@ sp_createstats
   
  Lorsque la table contient un jeu de colonnes, sp_createstats ne crée pas de statistiques sur les colonnes éparses. Pour plus d’informations sur les jeux de colonnes et les colonnes éparses, consultez [utiliser des jeux de colonnes](../../relational-databases/tables/use-column-sets.md) et [utiliser des colonnes éparses](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ## <a name="examples"></a>Exemples  

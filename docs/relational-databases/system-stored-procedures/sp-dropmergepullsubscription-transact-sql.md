@@ -16,12 +16,12 @@ ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 151e990e6a6f353b6b35eb669300f305fd562f2b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f15e5104c03e271b72f6b61dc40077aabdea4e76
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812991"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526501"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire. Spécifiez la valeur **tous les** pour supprimer les abonnements à toutes les publications  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire. Spécifiez la valeur **tous les** pour supprimer les abonnements à toutes les publications  
   
- [  **@publisher=**] **'***publisher***'**  
- Nom du serveur de publication. *serveur de publication*est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication*est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- Nom de la base de données du serveur de publication. *publisher_db*est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db*est **sysname**, avec NULL comme valeur par défaut. Ce paramètre est obligatoire.  
   
- [  **@reserved=**] **'***réservé***'**  
- Elle est réservée pour un usage futur. *réservé* est **bits**, avec une valeur par défaut **0**.  
+`[ @reserved = ] 'reserved'` est réservé pour une utilisation ultérieure. *réservé* est **bits**, avec une valeur par défaut **0**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

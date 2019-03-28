@@ -18,12 +18,12 @@ ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23b0ba70ee6141ab8453aa3e6949ceff2d537b2c
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591183"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534501"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +48,15 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@name =** ] **'**_object_statement_**'**  
- Nom de l'objet dans la base de données active, ou instruction, disposant des autorisations à signaler. *object_statement* est **nvarchar(776)**, avec NULL comme valeur par défaut, qui retourne toutes les autorisations d’objet et d’instruction. Si sa valeur est un objet (table, vue, procédure stockée ou procédure stockée étendue), ce doit être un objet valide dans la base de données en cours. Le nom d’objet peut inclure un identificateur de propriétaire sous la forme _propriétaire_**.** _objet_.  
+`[ @name = ] 'object_statement'` Est le nom de l’objet dans la base de données actuelle ou une instruction, qui dispose des autorisations pour le rapport. *object_statement* est **nvarchar(776)**, avec NULL comme valeur par défaut, qui retourne toutes les autorisations d’objet et d’instruction. Si sa valeur est un objet (table, vue, procédure stockée ou procédure stockée étendue), ce doit être un objet valide dans la base de données en cours. Le nom d’objet peut inclure un identificateur de propriétaire sous la forme _propriétaire_**.** _objet_.  
   
  Si *object_statement* est une instruction, il peut être une instruction CREATE.  
   
- [  **@username =** ] **'**_auxquels celui-ci a_**'**  
- Nom du principal pour lequel des autorisations sont retournées. *celui-ci* est **sysname**, avec NULL comme valeur par défaut, qui retourne tous les principaux dans la base de données actuelle. *celui-ci* doit exister dans la base de données actuelle.  
+`[ @username = ] 'security_account'` Est le nom du principal pour lequel les autorisations sont retournées. *celui-ci* est **sysname**, avec NULL comme valeur par défaut, qui retourne tous les principaux dans la base de données actuelle. *celui-ci* doit exister dans la base de données actuelle.  
   
- [  **@grantorname =** ] **'**_grantor_**'**  
- Nom du principal qui a accordé les autorisations. *fournisseur d’autorisations* est **sysname**, avec NULL comme valeur par défaut, qui retourne toutes les informations sur les autorisations accordées par un principal dans la base de données.  
+`[ @grantorname = ] 'grantor'` Est le nom de principal ayant accordé les autorisations. *fournisseur d’autorisations* est **sysname**, avec NULL comme valeur par défaut, qui retourne toutes les informations sur les autorisations accordées par un principal dans la base de données.  
   
- [  **@permissionarea =** ] **'**_type_**'**  
- Est une chaîne de caractères qui indique s’il faut afficher les autorisations d’objet (chaîne de caractères **o**), les autorisations d’instruction (chaîne de caractères **s**), ou les deux (**système d’exploitation**). *type* est **varchar (10)**, avec une valeur par défaut **système d’exploitation**. *type* peut être n’importe quelle combinaison de **o** et **s**, avec ou sans virgule ou espace entre **o** et **s**.  
+`[ @permissionarea = ] 'type'` Est une chaîne de caractères qui indique s’il faut afficher les autorisations d’objet (chaîne de caractères **o**), les autorisations d’instruction (chaîne de caractères **s**), ou les deux (**système d’exploitation**). *type* est **varchar (10)**, avec une valeur par défaut **système d’exploitation**. *type* peut être n’importe quelle combinaison de **o** et **s**, avec ou sans virgule ou espace entre **o** et **s**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -108,7 +104,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
 EXEC sp_helprotect 'titles';  
 ```  
   
-### <a name="b-listing-the-permissions-for-a-user"></a>b. Répertorier les autorisations pour un utilisateur  
+### <a name="b-listing-the-permissions-for-a-user"></a>B. Répertorier les autorisations pour un utilisateur  
  Dans l'exemple ci-dessous, toutes les autorisations que l'utilisateur `Judy` possède dans la base de données active sont répertoriées.  
   
 ```  

@@ -18,12 +18,12 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 436b4d5b9a4c0a539ccc4ff9ac7e62572883dfad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758617"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535751"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,31 +47,26 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@traceid=** ] *trace_id*  
- ID de la trace sur laquelle le filtre est défini. *trace_id* est **int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur à identifier, modifier et contrôler la trace.  
+`[ @traceid = ] trace_id` Est l’ID de la trace à laquelle le filtre est défini. *trace_id* est **int**, sans valeur par défaut. L’utilisateur emploie cette *trace_id* valeur à identifier, modifier et contrôler la trace.  
   
- [  **@columnid=** ] *column_id*  
- ID de la colonne sur laquelle le filtre est appliqué *column_id* est **int**, sans valeur par défaut. Si *column_id* est NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efface tous les filtres de la trace spécifiée.  
+`[ @columnid = ] column_id` Est l’ID de la colonne sur laquelle le filtre est appliqué. *column_id* est **int**, sans valeur par défaut. Si *column_id* est NULL, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] efface tous les filtres de la trace spécifiée.  
   
- [ **@logical_operator** =] *logical_operator*  
- Spécifie si l’opération AND (**0**) ou OR (**1**) opérateur est appliqué. *logical_operator* est **int**, sans valeur par défaut.  
+`[ @logical_operator = ] logical_operator` Spécifie si l’opération AND (**0**) ou OR (**1**) opérateur est appliqué. *logical_operator* est **int**, sans valeur par défaut.  
   
- [  **@comparison_operator=** ] *comparison_operator*  
- Spécifie le type de comparaison à effectuer. *comparison_operator* est **int**, sans valeur par défaut. Le tableau contient les opérateurs de comparaison et leurs valeurs.  
+`[ @comparison_operator = ] comparison_operator` Spécifie le type de comparaison à effectuer. *comparison_operator* est **int**, sans valeur par défaut. Le tableau contient les opérateurs de comparaison et leurs valeurs.  
   
-|Valeur|Opérateur de comparaison|  
+|Value|Opérateur de comparaison|  
 |-----------|-------------------------|  
 |**0**|= (Égal)|  
 |**1**|<> (Différent de)|  
 |**2**|> (Supérieur à)|  
 |**3**|< (Inférieur à)|  
-|**4**|>= (Supérieur ou égal à)|  
+|**4**|> = (supérieur ou égal)|  
 |**5**|< = (inférieur ou égal à)|  
 |**6**|LIKE|  
 |**7**|Ne correspond pas à|  
   
- [  **@value=** ] *valeur*  
- Indique la valeur sur laquelle appliquer le filtre. Le type de données de *valeur* doit correspondre au type de données de la colonne à filtrer. Par exemple, si le filtre est défini sur une colonne d’ID d’objet qui est un **int** type de données, *valeur* doit être **int**. Si *valeur* est **nvarchar** ou **varbinary**, il peut avoir une longueur maximale de 8 000.  
+`[ @value = ] value` Spécifie la valeur sur laquelle filtrer. Le type de données de *valeur* doit correspondre au type de données de la colonne à filtrer. Par exemple, si le filtre est défini sur une colonne d’ID d’objet qui est un **int** type de données, *valeur* doit être **int**. Si *valeur* est **nvarchar** ou **varbinary**, il peut avoir une longueur maximale de 8 000.  
   
  Lorsque l'opérateur de comparaison est LIKE ou NOT LIKE, l'opérateur logique peut inclure « % » ou tout autre filtre approprié pour l'opération LIKE.  
   
@@ -104,7 +99,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
  Paramètres de Trace de SQL toutes les procédures stockées (**sp_trace_xx**) sont strictement typés. Si ces paramètres ne sont pas appelés à l'aide des types de données appropriés pour les paramètres d'entrée tels qu'ils sont spécifiés dans la description de l'argument, la procédure stockée retourne une erreur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="examples"></a>Exemples  

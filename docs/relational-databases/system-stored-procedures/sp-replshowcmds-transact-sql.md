@@ -16,12 +16,12 @@ ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 18ccbda41c5b7683c33bc0258a05738ab227ec69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813314"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526611"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,8 +38,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@maxtrans** =] *maxtrans*  
- Nombre de transactions à propos desquelles retourner des informations. *maxtrans* est **int**, avec une valeur par défaut **1**, qui spécifie le nombre maximal de transactions en attente de réplication pour lequel **sp_replshowcmds** Retourne des informations.  
+`[ @maxtrans = ] maxtrans` Est le nombre de transactions à propos desquelles retourner des informations. *maxtrans* est **int**, avec une valeur par défaut **1**, qui spécifie le nombre maximal de transactions en attente de réplication pour lequel **sp_replshowcmds** Retourne des informations.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_replshowcmds** est une procédure de diagnostic qui retourne des informations sur la base de données de publication à partir de laquelle elle est exécutée.  

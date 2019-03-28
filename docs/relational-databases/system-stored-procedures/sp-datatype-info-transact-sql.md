@@ -18,12 +18,12 @@ ms.assetid: 045f3b5d-6bb7-4748-8b4c-8deb4bc44147
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 3b8d56f7989d3f0c76c3eaa46309ab029fc3d42d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eadc5efc471f44998abddc596f1acc5c6e378ca
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601127"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527931"
 ---
 # <a name="spdatatypeinfo-transact-sql"></a>sp_datatype_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@data_type=** ] *data_type*  
- Numéro de code du type de données spécifié. Pour obtenir une liste de tous les types de données, omettez ce paramètre. *data_type* est **int**, avec 0 comme valeur par défaut.  
+`[ @data_type = ] data_type` Est le numéro de code pour le type de données spécifié. Pour obtenir une liste de tous les types de données, omettez ce paramètre. *data_type* est **int**, avec 0 comme valeur par défaut.  
   
- [  **@ODBCVer=** ] *le paramètre odbc_version*  
- Version d'ODBC utilisée. *le paramètre version_odbc* est **tinyint**, avec une valeur par défaut 2.  
+`[ @ODBCVer = ] odbc_version` Est la version d’ODBC utilisée. *le paramètre version_odbc* est **tinyint**, avec une valeur par défaut 2.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  
@@ -78,7 +76,7 @@ sp_datatype_info [ [ @data_type = ] data_type ]
 ## <a name="remarks"></a>Notes  
  sp_datatype_info est équivalent à SQLGetTypeInfo dans ODBC. Les résultats retournés sont triés par DATA_TYPE, puis en fonction du niveau de précision de la concordance entre le type de données et le type de données ODBC SQL correspondant.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle public.  
   
 ## <a name="examples"></a>Exemples  

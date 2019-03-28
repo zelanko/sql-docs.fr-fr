@@ -16,12 +16,12 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a0e823731ff80c714bc31a54210dbcd0e0fea18
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205208"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532971"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =** ] **'***publication***'**  
- Nom de la publication à afficher. *publication* est de type sysname, avec une valeur par défaut **%**, qui retourne des informations sur toutes les publications.  
+`[ @publication = ] 'publication'` Est le nom de la publication à afficher. *publication* est de type sysname, avec une valeur par défaut **%**, qui retourne des informations sur toutes les publications.  
   
- [  **@found =** ] **'***trouvé***'** sortie  
- Indicateur désignant les lignes retournées. *trouvé*est **int** d’un paramètre OUTPUT, avec une valeur par défaut **23456**. **1** indique la publication a été trouvée. **0** indique que la publication est introuvable.  
+`[ @found = ] 'found' OUTPUT` Est un indicateur pour indiquer les lignes renvoyées. *trouvé*est **int** d’un paramètre OUTPUT, avec une valeur par défaut **23456**. **1** indique la publication a été trouvée. **0** indique que la publication est introuvable.  
   
- [ **@publisher** =] **'***publisher***'**  
- Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est de type sysname, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est de type sysname, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être spécifié lors de la demande d’informations sur la publication à partir d’un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -61,7 +58,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |restricted|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|État actuel de la publication.<br /><br /> **0** = inactif.<br /><br /> **1** = actif.|  
 |tâche||Utilisé pour la compatibilité descendante.|  
-|replication frequency|**tinyint**|Type de fréquence de réplication :<br /><br /> **0** = transactionnelle<br /><br /> **1** = instantané|  
+|replication frequency|**tinyint**|Type de fréquence de réplication :<br /><br /> **0** = Transactional<br /><br /> **1** = instantané|  
 |synchronization method|**tinyint**|Mode de synchronisation :<br /><br /> **0** = programme de copie en bloc natif (**bcp** utilitaire)<br /><br /> **1** = copie en bloc de caractères<br /><br /> **3** = simultanées, ce qui signifie que cette copie en bloc natif (**bcp**utilitaire) est utilisé mais les tables ne sont pas verrouillées lors de l’instantané<br /><br /> **4** = Concurrent_c : copie en bloc de caractères est utilisée mais les tables ne sont pas verrouillées lors de l’instantané|  
 |description|**nvarchar(255)**|Description facultative pour la publication.|  
 |immediate_sync|**bit**|Indique si les fichiers de synchronisation sont créés ou recréés à chaque exécution de l’Agent d'instantané.|  
@@ -73,7 +70,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|Indique si l'Agent d'instantané a généré un instantané utilisable par les nouveaux abonnements. Ce paramètre est défini seulement si la publication est configurée de telle sorte qu'un instantané soit toujours disponible pour les abonnements nouveaux ou réinitialisés.|  
 |allow_sync_tran|**bit**|Indique si des abonnements mis à jour immédiatement sont autorisés pour la publication.|  
 |autogen_sync_procs|**bit**|Indique s'il faut générer automatiquement les procédures stockées pour la prise en charge des abonnements mis à jour immédiatement.|  
-|snapshot_jobid|**binary (16)**|ID de tâche planifiée|  
+|snapshot_jobid|**binary(16)**|ID de tâche planifiée|  
 |retention|**Int**|Volume des modifications, en heures, à enregistrer pour la publication donnée.|  
 |has subscription|**bit**|Indique si la publication a des abonnements actifs. **1** signifie que la publication a des abonnements actifs, et **0** signifie que la publication n’a aucun abonnement.|  
 |allow_queued_tran|**bit**|Spécifie si le désactive la file d’attente des modifications sur l’abonné jusqu'à ce qu’elles peuvent être appliquées sur le serveur de publication a été activée. Si **0**, modifications sur l’abonné ne sont pas mises en attente.|  
@@ -91,7 +88,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|Spécifie si les enregistrements en conflit sont stockés sur le serveur de publication :<br /><br /> **0** = les enregistrements en conflit sont stockés sur le serveur de publication et sur l’abonné qui a provoqué le conflit.<br /><br /> **1** = les enregistrements en conflit sont stockés sur le serveur de publication.|  
 |conflict_retention|**Int**|Spécifie la durée de rétention des conflits en jours.|  
 |conflict_policy|**Int**|Spécifie la stratégie de résolution de conflits à suivre lorsque l'option d'abonné avec mise à jour en attente est utilisée. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = serveur de publication gagne le conflit.<br /><br /> **2** = l’abonné gagne le conflit.<br /><br /> **3** = abonnement est réinitialisé.|  
-|queue_type||Spécifie le type de file d'attente utilisé. Peut prendre l'une des valeurs suivantes :<br /><br /> **MSMQ** = utilisez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing pour stocker les transactions.<br /><br /> **SQL** = utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.<br /><br /> Remarque : La prise en charge de Message Queuing a été arrêtée.|  
+|queue_type||Spécifie le type de file d'attente utilisé. Peut prendre l'une des valeurs suivantes :<br /><br /> **MSMQ** = utilisez [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing pour stocker les transactions.<br /><br /> **SQL** = utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.<br /><br /> Remarque : La prise en charge de Message Queuing a été arrêtée.|  
 |backward_comp_level||Niveau de compatibilité de la base de données. Il peut avoir une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Spécifie si la publication est publiée dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory ???. La valeur **1** indique qu’elle est publiée et la valeur **0** indique qu’elle n’est pas publiée.|  
 |allow_initialize_from_backup|**bit**|Indique si les Abonnés peuvent initialiser un abonnement à cette publication à partir d'une sauvegarde plutôt qu'à partir de son instantané initial. **1** signifie que les abonnements peuvent être initialisés à partir d’une sauvegarde, et **0** signifie qu’ils ne peuvent pas. Pour plus d’informations, consultez [initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) un abonné transactionnel sans instantané.|  

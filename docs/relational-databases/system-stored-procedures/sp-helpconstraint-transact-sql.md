@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fb4742d65ca25ecf656e442d03e1925cbe1bb518
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591780"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535251"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_helpconstraint [ @objname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@objname=** ] **'**_table_**'**  
- Table sur laquelle sont renvoyées les informations concernant les contraintes. La table spécifiée doit être locale par rapport à la base de données active. *table* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @objname = ] 'table'` Est la table sur les contraintes les informations sont retournées. La table spécifiée doit être locale par rapport à la base de données active. *table* est **nvarchar(776)**, sans valeur par défaut.  
   
- [  **@nomsg=**] **'**_pas_de_message_**'**  
- Paramètre facultatif qui permet l'impression du nom de la table. *pas_de_message* est **varchar (5)**, avec une valeur par défaut **msg**. **nomsg** supprime l’impression.  
+`[ @nomsg = ] 'no_message'` Est un paramètre optionnel qui imprime le nom de table. *pas_de_message* est **varchar (5)**, avec une valeur par défaut **msg**. **nomsg** supprime l’impression.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -76,7 +74,7 @@ EXEC sp_helpconstraint 'Production.Product';
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.key_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-key-constraints-transact-sql.md)   
- [Sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
- [Sys.default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
+ [sys.check_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-check-constraints-transact-sql.md)   
+ [sys.default_constraints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-default-constraints-transact-sql.md)  
   
   

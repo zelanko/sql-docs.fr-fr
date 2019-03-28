@@ -18,12 +18,12 @@ ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c6d514adfed27693456338ece6fa58638e319475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629807"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533431"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dbname=** ] **'***nom***'**  
- Nom de la base de données à propos de laquelle des informations sont transmises. *nom* est **sysname**, sans valeur par défaut. Si *nom* n’est pas spécifié, **sp_helpdb** des rapports sur toutes les bases de données dans le **sys.databases** vue de catalogue.  
+`[ @dbname = ] 'name'` Est le nom de la base de données pour lequel les informations sont signalées. *nom* est **sysname**, sans valeur par défaut. Si *nom* n’est pas spécifié, **sp_helpdb** des rapports sur toutes les bases de données dans le **sys.databases** vue de catalogue.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -51,12 +50,12 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Nom de la base de données.|  
-|**DB_SIZE**|**nvarchar(13)**|Taille totale de la base de données.|  
+|**db_size**|**nvarchar(13)**|Taille totale de la base de données.|  
 |**Propriétaire**|**sysname**|Base de données propriétaire, tel que **sa**.|  
 |**dbid**|**smallint**|ID de la base de données.|  
 |**created**|**nvarchar(11)**|Date de création de la base de données.|  
 |**status**|**nvarchar(600)**|Liste de valeurs, séparées par des virgules, d'options de base de données actuellement définies pour la base de données.<br /><br /> Les options définies par des valeurs booléennes ne sont affichées que si elles sont activées. Les options non booléennes sont répertoriées avec leurs valeurs correspondantes sous la forme de *option_name*=*valeur*.<br /><br /> Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).|  
-|**compatibility_level**|**tinyint**|Niveau de compatibilité de la base de données : 60, 65, 70, 80 ou 90.|  
+|**compatibility_level**|**tinyint**|Niveau de compatibilité de la base de données : 60, 65, 70, 80 ou 90.|  
   
  Si *nom* est spécifié, il est un jeu de résultats supplémentaire qui indique l’allocation de fichier pour la base de données spécifié.  
   
@@ -64,17 +63,17 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 |-----------------|---------------|-----------------|  
 |**nom**|**nchar(128)**|Nom de fichier logique.|  
 |**fileid**|**smallint**|ID de fichier.|  
-|**filename**|**NCHAR(260)**|Nom de fichier du système d'exploitation (nom de fichier physique).|  
+|**filename**|**nchar(260)**|Nom de fichier du système d'exploitation (nom de fichier physique).|  
 |**filegroup**|**nvarchar(128)**|Groupe de fichiers auquel le fichier appartient.<br /><br /> NULL = Il s'agit d'un fichier journal. Ils ne font jamais partie d'un groupe de fichiers.|  
 |**size**|**nvarchar(18)**|Taille du fichier exprimée en mégaoctets.|  
-|**MaxSize**|**nvarchar(18)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
-|**Croissance**|**nvarchar(18)**|Incrément de croissance du fichier. Ce compteur indique la quantité d’espace ajoutée au fichier que chaque nouvel espace de temps est nécessaire.|  
-|**Utilisation**|**varchar (9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
+|**maxsize**|**nvarchar(18)**|Taille maximale du fichier. La valeur UNLIMITED indique que le fichier peut augmenter jusqu'à ce que le disque soit plein.|  
+|**growth**|**nvarchar(18)**|Incrément de croissance du fichier. Ce compteur indique la quantité d’espace ajoutée au fichier que chaque nouvel espace de temps est nécessaire.|  
+|**usage**|**varchar(9)**|Utilisation du fichier. Pour un fichier de données, la valeur est **'données uniquement'** et pour le fichier journal est la valeur **journal uniquement**.|  
   
 ## <a name="remarks"></a>Notes  
  Le **état** rapports quelles options ont été définies à ON dans la base de données du jeu de colonnes dans le résultat. Toutes les options de base de données ne sont pas signalées par le **état** colonne. Pour afficher une liste complète des paramètres d’option de base de données actuelle, utilisez la **sys.databases** vue de catalogue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Lorsqu’une base de données est spécifié, l’appartenance à la **public** rôle dans la base de données est nécessaire. Lorsque aucune base de données n’est spécifié, l’appartenance à la **public** rôle dans le **master** base de données est requis.  
   
  Si une base de données n’est pas accessible, **sp_helpdb** affiche l’erreur message 15622 et autant d’informations sur la base de données que possible.  

@@ -16,12 +16,12 @@ ms.assetid: 34648615-814b-42bc-95a3-50e86b42ec4d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: f2836db0eef25c21861ec7b2d766f1195d250f20
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817731"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527426"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@dsn =**] **'***dsn***'**  
- Nom du serveur lié ODBC DSN ou OLE DB. *DSN* est **varchar (128)**, sans valeur par défaut.  
+`[ @dsn = ] 'dsn'` Est le nom du serveur lié ODBC DSN ou OLE DB. *DSN* est **varchar (128)**, sans valeur par défaut.  
   
- [  **@infotype =**] **'***type_info***'**  
- Est le type d’informations à retourner. Si *type_info* n’est pas spécifié ou si NULL est spécifié, tous les types d’informations sont retournées. *type_info* est **varchar (128)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @infotype = ] 'info_type'` Est le type d’informations à retourner. Si *type_info* n’est pas spécifié ou si NULL est spécifié, tous les types d’informations sont retournées. *type_info* est **varchar (128)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -55,14 +53,11 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|Spécifie le nom de la base de données.|  
 |**SQL_SUBSCRIBER**|Spécifie que la source de données peut être un Abonné.|  
   
- [  **@login =**] **'***connexion***'**  
- Connexion de la source de données. Si la source de données comporte une connexion, spécifiez NULL ou omettez le paramètre. *connexion*est **varchar (128)**, avec NULL comme valeur par défaut.  
+`[ @login = ] 'login'` Est le nom de connexion pour la source de données. Si la source de données comporte une connexion, spécifiez NULL ou omettez le paramètre. *connexion*est **varchar (128)**, avec NULL comme valeur par défaut.  
   
- [  **@password =**] **'***mot de passe***'**  
- Mot de passe utilisé avec la connexion. Si la source de données comporte une connexion, spécifiez NULL ou omettez le paramètre. *mot de passe*est **varchar (128)**, avec NULL comme valeur par défaut.  
+`[ @password = ] 'password'` Est le mot de passe pour la connexion. Si la source de données comporte une connexion, spécifiez NULL ou omettez le paramètre. *mot de passe*est **varchar (128)**, avec NULL comme valeur par défaut.  
   
- [  **@dso_type=**] *type_dso*  
- Est le type de source de données. *type_dso* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @dso_type = ] dso_type` Est le type de source de données. *type_dso* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  

@@ -16,12 +16,12 @@ ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 63441a20a5ac4f6faed366c06fc55638073b09f4
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591393"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533261"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,53 +50,40 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@distributor=**] **'**_distributeur_**'** sortie  
- Est le nom du serveur de distribution. Serveur de distribution est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distributor = ] 'distributor' OUTPUT` Est le nom du serveur de distribution. Serveur de distribution est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
- [  **@distribdb=**] **'**_base_de_données_de_distribution_**'** sortie  
- Est le nom de la base de données de distribution. *base_de_données_de_distribution* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distribdb = ] 'distribdb' OUTPUT` Est le nom de la base de données de distribution. *base_de_données_de_distribution* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
- [  **@directory=**] **'**_directory_**'** sortie  
- Est le répertoire de travail. *répertoire* est **nvarchar (255)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @directory = ] 'directory' OUTPUT` Est le répertoire de travail. *répertoire* est **nvarchar (255)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
- [  **@account=**] **'**_compte_**' sortie**  
- Compte d'utilisateur Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)]. *compte*est **nvarchar (255)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @account = ] 'account' OUTPUT` Est le [!INCLUDE[msCoName](../../includes/msconame-md.md)] compte d’utilisateur Windows. *compte*est **nvarchar (255)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
- [  **@min_distretention=**] _rétention_de_distribution_minimale_**sortie**  
- Période de rétention minimale de la distribution, en heures. *rétention_de_distribution_minimale* est **int**, avec une valeur par défaut **-1**.  
+`[ @min_distretention = ] _min_distretentionOUTPUT` Est la période de rétention de distribution minimale, en heures. *rétention_de_distribution_minimale* est **int**, avec une valeur par défaut **-1**.  
   
- [  **@max_distretention=**] _max_distretention_**sortie**  
- Période de rétention maximale de la distribution, en heures. *max_distretention* est **int**, avec une valeur par défaut **-1**.  
+`[ @max_distretention = ] _max_distretentionOUTPUT` Est la période de rétention de distribution maximale, en heures. *max_distretention* est **int**, avec une valeur par défaut **-1**.  
   
- [  **@history_retention=**] _history_retention_**sortie**  
- Période de conservation de l'historique, en heures. *history_retention* est **int**, avec une valeur par défaut **-1**.  
+`[ @history_retention = ] _history_retentionOUTPUT` Est la période de rétention de l’historique, en heures. *history_retention* est **int**, avec une valeur par défaut **-1**.  
   
- [  **@history_cleanupagent=**] **'**_history_cleanupagent_**' sortie**  
- Nom de l'Agent de nettoyage de l'historique. *history_cleanupagent* est **nvarchar (100)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Est le nom de l’agent de nettoyage d’historique. *history_cleanupagent* est **nvarchar (100)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
- [  **@distrib_cleanupagent =**] **'**_agent_de_nettoyage_de_distribution_**' sortie**  
- Est le nom de l’agent de nettoyage de distribution. *agent_de_nettoyage_de_distribution* est **nvarchar (100)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Est le nom de l’agent de nettoyage de distribution. *agent_de_nettoyage_de_distribution* est **nvarchar (100)**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
- [  **@publisher=**] **'**_publisher_**'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@local=**] **'**_local_**'**  
- Indique si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit récupérer des valeurs sur le serveur local. *local* est **nvarchar (5)**, avec NULL comme valeur par défaut.  
+`[ @local = ] 'local'` Est si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit obtenir les valeurs de serveur local. *local* est **nvarchar (5)**, avec NULL comme valeur par défaut.  
   
- [  **@rpcsrvname=**] **'**_nom_rpcsrv_**' sortie**  
- Nom du serveur qui émet des appels de procédure à distance. *nom_rpcsrv* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` Est le nom du serveur qui émet des appels de procédure distante. *nom_rpcsrv* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
- [ **@publisher_type**=] **'**_publisher_type_**' sortie**  
- Type du serveur de publication. *publisher_type* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` Est le type de serveur de publication du serveur de publication. *publisher_type* est **sysname**, avec une valeur par défaut **%**, qui est la seule valeur qui retourne un jeu de résultats.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**serveur de distribution**|**sysname**|Nom du serveur de distribution.|  
+|**distributor**|**sysname**|Nom du serveur de distribution.|  
 |**base de données de distribution**|**sysname**|Nom de la base de données de distribution.|  
-|**Répertoire**|**nvarchar(255)**|Nom du répertoire de travail.|  
-|**compte**|**nvarchar(255)**|Nom du compte d'utilisateur Windows.|  
+|**directory**|**nvarchar(255)**|Nom du répertoire de travail.|  
+|**account**|**nvarchar(255)**|Nom du compte d'utilisateur Windows.|  
 |**rétention de distrib min**|**Int**|Période de rétention de distribution minimale.|  
 |**rétention de distrib max**|**Int**|Période maximale de rétention de distribution.|  
 |**rétention de l’historique**|**Int**|Période de rétention de l'historique.|  

@@ -15,12 +15,12 @@ ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: be3f9c61d3c035959def4a46f91eff605e475569
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c9d0deb3567daa64afb46c96a4e93c9da9c0972a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808801"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528251"
 ---
 # <a name="manage-change-tracking-sql-server"></a>Gérer le suivi des modifications (SQL Server)
   Cette rubrique décrit comment gérer le suivi des modifications. Elle explique également comment configurer la sécurité et déterminer l'impact de l'utilisation du suivi des modifications sur le stockage et les performances.  
@@ -96,7 +96,7 @@ ms.locfileid: "52808801"
   
  Comme avec d’autres tables internes, vous pouvez déterminer l’espace utilisé pour les tables de suivi des modifications en utilisant la procédure stockée [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) . Vous pouvez obtenir les noms des tables internes en utilisant l’affichage catalogue [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) , comme l’illustre l’exemple suivant.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

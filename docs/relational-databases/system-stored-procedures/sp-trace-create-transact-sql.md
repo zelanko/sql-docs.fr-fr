@@ -18,12 +18,12 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9d4ee1eb7770f9d2c9fe3ab8ed58f59c7d05302a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3344ad65a2445a8d39451f6a048f057b7158d135
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833713"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533401"
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,11 +48,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@traceid=** ] *trace_id*  
- Est le numéro attribué par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à la nouvelle trace. Toute entrée fournie par l'utilisateur est ignorée. *trace_id* est **int**, avec NULL comme valeur par défaut. L’utilisateur emploie le *trace_id* valeur à identifier, modifier et contrôler la trace définie par cette procédure stockée.  
+`[ @traceid = ] trace_id` Est le numéro attribué par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à la nouvelle trace. Toute entrée fournie par l'utilisateur est ignorée. *trace_id* est **int**, avec NULL comme valeur par défaut. L’utilisateur emploie le *trace_id* valeur à identifier, modifier et contrôler la trace définie par cette procédure stockée.  
   
- [  **@options=** ] *argument option_value*  
- Spécifie les options définies pour la trace. *l’argument option_value* est **int**, sans valeur par défaut. Les utilisateurs peuvent choisir une combinaison de ces options en spécifiant la valeur totale des options choisies. Par exemple, pour activer les deux options TRACE_FILE_ROLLOVER et SHUTDOWN_ON_ERROR, spécifier **6** pour *argument option_value*.  
+`[ @options = ] option_value` Spécifie les options définies pour la trace. *l’argument option_value* est **int**, sans valeur par défaut. Les utilisateurs peuvent choisir une combinaison de ces options en spécifiant la valeur totale des options choisies. Par exemple, pour activer les deux options TRACE_FILE_ROLLOVER et SHUTDOWN_ON_ERROR, spécifier **6** pour *argument option_value*.  
   
  Le tableau suivant répertorie les options, leur description et leurs valeurs.  
   
@@ -62,8 +60,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |SHUTDOWN_ON_ERROR|**4**|Indique que si la trace ne peut pas être écrite dans le fichier pour une raison quelconque, SQL Server doit s'arrêter. Cette option est utile lors de l'exécution de traces d'audit de sécurité.|  
 |TRACE_PRODUCE_BLACKBOX|**8**|Indique que le serveur doit enregistrer les derniers 5 Mo d'informations de trace qu'il génère. TRACE_PRODUCE_BLACKBOX est incompatible avec toutes les autres options.|  
   
- [  **@tracefile=** ] *'**trace_file**'*  
- Indique l'emplacement et le nom du fichier dans lequel la trace doit être écrite. *trace_file* est **nvarchar(245)** sans valeur par défaut. *trace_file* peut être un répertoire local (par exemple, N 'C:\MSSQL\Trace\trace.trc') ou un chemin UNC vers un partage ou un chemin d’accès (N'\\\\*nom_serveur*\\*nom_partage* \\ *Directory*\trace.trc').  
+`[ @tracefile = ] 'trace_file'` Spécifie l’emplacement et le nom de fichier dans lequel la trace doit être écrite. *trace_file* est **nvarchar(245)** sans valeur par défaut. *trace_file* peut être un répertoire local (par exemple, N 'C:\MSSQL\Trace\trace.trc') ou un chemin UNC vers un partage ou un chemin d’accès (N'\\\\*nom_serveur*\\*nom_partage* \\ *Directory*\trace.trc').  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Permet d’ajouter un **.trc** extension à tous les noms de fichier de trace. Si l’option TRACE_FILE_ROLLOVER et un *max_file_size* sont spécifiés, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un nouveau fichier de trace lorsque le fichier de trace d’origine a atteint sa taille maximale. Le nouveau fichier porte le même nom que le fichier d’origine, mais _*n* est ajouté pour indiquer son rang, en commençant par **1**. Par exemple, si le premier fichier de trace est nommé **filename.trc**, le deuxième fichier de trace est nommé **filename_1.trc**.  
   
@@ -78,18 +75,15 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  *trace_file* ne peut pas être spécifié lorsque l’option TRACE_PRODUCE_BLACKBOX est utilisée.  
   
- [  **@maxfilesize=** ] *max_file_size*  
- Indique la taille maximale en mégaoctets (Mo) d'un fichier de trace. *max_file_size* est **bigint**, avec une valeur par défaut **5**.  
+`[ @maxfilesize = ] max_file_size` Spécifie que la taille maximale en mégaoctets (Mo), un fichier de trace peut atteindre. *max_file_size* est **bigint**, avec une valeur par défaut **5**.  
   
  Si ce paramètre est spécifié sans l’option TRACE_FILE_ROLLOVER, la trace arrête l’enregistrement dans le fichier lorsque l’espace disque utilisé dépasse la quantité spécifiée par *max_file_size*.  
   
- [  **@stoptime=** ] **'***heure_fin***'**  
- Indique la date et l'heure d'arrêt de la trace. *heure_fin* est **datetime**, avec NULL comme valeur par défaut. Si la valeur est NULL, la trace continue de s'exécuter jusqu'à ce qu'elle soit arrêtée manuellement ou que le serveur s'arrête.  
+`[ @stoptime = ] 'stop_time'` Spécifie la date et l’heure de qu'arrêt de la trace. *heure_fin* est **datetime**, avec NULL comme valeur par défaut. Si la valeur est NULL, la trace continue de s'exécuter jusqu'à ce qu'elle soit arrêtée manuellement ou que le serveur s'arrête.  
   
  Si les deux *heure_fin* et *max_file_size* sont spécifiés, et TRACE_FILE_ROLLOVER n’est pas spécifié, la trace s’arrête lorsque l’heure d’arrêt ou une taille de fichier maximale est atteinte. Si *heure_fin*, *max_file_size*et TRACE_FILE_ROLLOVER sont spécifiées, la trace s’arrête à l’heure d’arrêt spécifié, en supposant que le lecteur ne remplit pas la trace.  
   
- [  **@filecount=** ] **'***max_rollover_files***'**  
- Spécifie le nombre maximal de fichiers de trace à conserver avec le même nom de fichier de base. *MAX_ROLLOVER_FILES* est **int**, supérieure à un. Ce paramètre est valide uniquement si l'option TRACE_FILE_ROLLOVER est spécifiée. Lorsque *max_rollover_files* est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de limiter plus de *max_rollover_files* fichiers de trace en supprimant le fichier de trace le plus ancien avant d’ouvrir un nouveau fichier de trace. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure le suivi de l'ancienneté des fichiers de trace en ajoutant un numéro au nom de fichier de base.  
+`[ @filecount = ] 'max_rollover_files'` Spécifie le nombre maximal de fichiers nombre ou de trace à conserver avec le même nom de fichier. *MAX_ROLLOVER_FILES* est **int**, supérieure à un. Ce paramètre est valide uniquement si l'option TRACE_FILE_ROLLOVER est spécifiée. Lorsque *max_rollover_files* est spécifié, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tente de limiter plus de *max_rollover_files* fichiers de trace en supprimant le fichier de trace le plus ancien avant d’ouvrir un nouveau fichier de trace. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure le suivi de l'ancienneté des fichiers de trace en ajoutant un numéro au nom de fichier de base.  
   
  Par exemple, lorsque le *trace_file* paramètre est spécifié en tant que « c:\mytrace », un fichier portant le nom « c:\mytrace_123.trc » est antérieur à un fichier portant le nom « c:\mytrace_124.trc ». Si *max_rollover_files* est définie sur 2, SQL Server supprime le fichier « c:\mytrace_123.trc » avant de créer le fichier de trace « c:\mytrace_125.trc ».  
   
@@ -150,7 +144,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 -   Il n'est pas possible de spécifier des filtres pour cette trace.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  L'utilisateur doit disposer de l'autorisation ALTER TRACE.  
   
 ## <a name="see-also"></a>Voir aussi  

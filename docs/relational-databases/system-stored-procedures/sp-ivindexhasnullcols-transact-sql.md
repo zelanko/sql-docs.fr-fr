@@ -16,12 +16,12 @@ ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5e9ab98dc5beb4f2e07ac7fa62386f9fd44703ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823326"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531574"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@viewname**=] **'***nom_vue***'**  
- Nom de la vue à vérifier. *view_name* est **sysname**, sans valeur par défaut.  
+`[ @viewname = ] 'view_name'` Est le nom de la vue à vérifier. *view_name* est **sysname**, sans valeur par défaut.  
   
- [ **@fhasnullcols**=] *field_has_null_columns* sortie  
- Indicateur qui précise si l'index de la vue a des colonnes acceptant des valeurs NULL. *view_name* est **sysname**, sans valeur par défaut. Retourne une valeur de **1** si l’index de la vue a des colonnes acceptant des valeurs NULL. Retourne une valeur de **0** si la vue ne contient-elle pas les colonnes qui acceptent les valeurs NULL.  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT` Indicateur précisant si l’index de la vue a des colonnes acceptant des valeurs NULL. *view_name* est **sysname**, sans valeur par défaut. Retourne une valeur de **1** si l’index de la vue a des colonnes acceptant des valeurs NULL. Retourne une valeur de **0** si la vue ne contient-elle pas les colonnes qui acceptent les valeurs NULL.  
   
 > [!NOTE]  
 >  Si la procédure stockée elle-même renvoie un code de retour **1**, ce qui signifie que l’exécution de la procédure stockée a connu une défaillance, cette valeur est **0** et doit être ignorée.  

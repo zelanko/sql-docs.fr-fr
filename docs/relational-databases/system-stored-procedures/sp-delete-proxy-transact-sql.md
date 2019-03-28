@@ -19,12 +19,12 @@ ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1db08d96a36112d686ab34db0b7989e910a01960
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dfd44237699c000447bbdfb2638d0d66550414dd
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844057"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528871"
 ---
 # <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@proxy_id**=] *id*  
- Numéro d'identification du proxy à supprimer. Le *proxy_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @proxy_id = ] id` Le numéro d’identification du proxy à supprimer. Le *proxy_id* est **int**, avec NULL comme valeur par défaut.  
   
- [ **@proxy_name**=] **'***proxy_name***'**  
- Nom du proxy à supprimer. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @proxy_name = ] 'proxy_name'` Le nom du proxy à supprimer. Le *proxy_name* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -58,7 +56,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
   
  Si une étape d'un travail fait référence au proxy spécifié, ce dernier ne peut pas être supprimé et la procédure stockée échoue.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_proxy**.  
   
 ## <a name="examples"></a>Exemples  

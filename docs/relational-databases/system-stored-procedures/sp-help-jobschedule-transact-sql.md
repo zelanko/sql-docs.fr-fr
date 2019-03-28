@@ -18,12 +18,12 @@ ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 36e00cf0e5d39722fee1c60fc86f0e6f81fd7e43
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 982596981c6c363abcad57b94427fcb4178c2c65
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100354"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532881"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,22 +44,18 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id=** ] *job_id*  
- Numéro d’identification. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Numéro d’identification. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'**_nom_travail_**'**  
- Nom du travail. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Le nom de la tâche. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
-> **REMARQUE :** Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.  
+> [!NOTE]
+> Soit *job_id* ou *nom_travail* doit être spécifié, mais ne peut pas être spécifiés.
+
+`[ @schedule_name = ] 'schedule_name'` Le nom de la planification du travail. *nom_de_la_planification*est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@schedule_name=** ] **'**_nom_de_la_planification_**'**  
- Nom de l'élément de planification pour le travail. *nom_de_la_planification*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @schedule_id = ] schedule_id` Le numéro d’identification de la planification du travail. *id_de_la_planification*est **int**, avec NULL comme valeur par défaut.  
   
- [  **@schedule_id=** ] *id_de_la_planification*  
- Numéro d'identification de l'élément de planification pour le travail. *id_de_la_planification*est **int**, avec NULL comme valeur par défaut.  
-  
- [  **@include_description=** ] *include_description*  
- Spécifie s'il faut inclure la description de la planification dans le jeu de résultats. *include_description* est **bits**, avec une valeur par défaut **0**. Lorsque *include_description* est **0**, la description de la planification n’est pas incluse dans le jeu de résultats. Lorsque *include_description* est **1**, la description de la planification est incluse dans le jeu de résultats.  
+`[ @include_description = ] include_description` Spécifie s’il faut inclure la description de la planification du jeu de résultats. *include_description* est **bits**, avec une valeur par défaut **0**. Lorsque *include_description* est **0**, la description de la planification n’est pas incluse dans le jeu de résultats. Lorsque *include_description* est **1**, la description de la planification est incluse dans le jeu de résultats.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -71,7 +67,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**schedule_id**|**Int**|Numéro d'identificateur de la planification.|  
 |**schedule_name**|**sysname**|Nom de la planification.|  
 |**enabled**|**Int**|Si la planification est activée (**1**) ou désactivée (**0**).|  
-|**freq_type**|**Int**|Valeur indiquant quand le travail doit être exécuté.<br /><br /> **1** = une fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = mensuelle<br /><br /> **32** = mensuellement, relatif à la **freq_interval**<br /><br /> **64** = exécuter lorsque **SQLServerAgent** démarrage du service.|  
+|**freq_type**|**Int**|Valeur indiquant quand le travail doit être exécuté.<br /><br /> **1** = une fois<br /><br /> **4** = quotidienne<br /><br /> **8** = hebdomadaire<br /><br /> **16** = Monthly<br /><br /> **32** = mensuellement, relatif à la **freq_interval**<br /><br /> **64** = exécuter lorsque **SQLServerAgent** démarrage du service.|  
 |**freq_interval**|**Int**|Jours lorsque la tâche est exécutée. La valeur dépend de la valeur de **freq_type**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_type**|**Int**|Unités pour **freq_subday_interval**. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
 |**freq_subday_interval**|**Int**|Nombre de **freq_subday_type** périodes entre chaque exécution du travail. Pour plus d’informations, consultez [sp_add_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md).|  
@@ -120,7 +116,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>b. Retour de la planification d'un travail pour une planification spécifique  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>B. Retour de la planification d'un travail pour une planification spécifique  
  Cet exemple retourne les informations de planification `NightlyJobs` et du travail `RunReports`.  
   
 ```  
@@ -152,5 +148,3 @@ GO
  [sp_delete_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_update_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [Procédures stockées système &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
-  
-  

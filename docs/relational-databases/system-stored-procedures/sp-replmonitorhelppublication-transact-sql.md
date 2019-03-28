@@ -16,12 +16,12 @@ ms.assetid: 7928c50c-617f-41c5-9e0f-4e42e8be55dc
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 84fa72ff11ffb97d736dcd5ed194064367c3a5ba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 812ddd803d2a41695429902d6d8fc470ccef9576
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748332"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529213"
 ---
 # <a name="spreplmonitorhelppublication-transact-sql"></a>sp_replmonitorhelppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +42,13 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publisher** =] **'***publisher***'**  
- Nom du serveur de publication dont l'état fait l'objet d'une surveillance. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut. Si **null**, des informations sont retournées pour tous les éditeurs qui utilisent le serveur de distribution.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication dont l’état est en cours d’analyse. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut. Si **null**, des informations sont retournées pour tous les éditeurs qui utilisent le serveur de distribution.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
- Nom de la base de données publiée. *publisher_db* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, les informations retournées concernent toutes les bases de données publiées situées sur le serveur de publication.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données publiée. *publisher_db* est **sysname**, avec NULL comme valeur par défaut. Si la valeur est NULL, les informations retournées concernent toutes les bases de données publiées situées sur le serveur de publication.  
   
- [ **@publication** =] **'***publication***'**  
- Nom de la publication en cours d'analyse. *publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publication = ] 'publication'` Le nom de la publication en cours d’analyse. *publication* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@publication_type** =] *publication_type*  
- Type de publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @publication_type = ] publication_type` Si le type de publication. *publication_type* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -61,8 +57,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**2**|Publication de fusion.|  
 |NULL (par défaut)|La réplication essaie de déterminer le type de publication.|  
   
- [  **@refreshpolicy=** ] *refreshpolicy*  
- À usage interne uniquement  
+`[ @refreshpolicy = ] refreshpolicy` Usage interne uniquement.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -72,13 +67,13 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**publication**|**sysname**|Nom d'une publication.|  
 |**publication_type**|**Int**|Type de publication, qui peut prendre l'une des valeurs suivantes.<br /><br /> **0** = publication transactionnelle<br /><br /> **1** = publication d’instantané<br /><br /> **2** = publication de fusion|  
 |**status**|**Int**|État maximal de tous les agents de réplication associés à la publication ; cet état peut prendre l'une des valeurs suivantes.<br /><br /> **1** = démarré<br /><br /> **2** = a réussi<br /><br /> **3** = en cours<br /><br /> **4** = inactif<br /><br /> **5** = reprise<br /><br /> **6** = Échec|  
-|**avertissement**|**Int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration - un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de période de rétention.<br /><br /> **2** = latency - le temps nécessaire pour répliquer des données à partir d’un serveur de publication transactionnelle à l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration – un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de période de rétention.<br /><br /> **8** = mergefastrunduration - le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration - le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau lente ou accès à distance.<br /><br /> **32** = mergefastrunspeed - la vitesse de transmission de lignes pendant la synchronisation d’un abonnement de fusion a échoué à maintenir le taux du seuil, en lignes par seconde, via une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed - la vitesse de transmission de lignes pendant la synchronisation d’un abonnement de fusion a échoué à maintenir le taux du seuil, en lignes par seconde, via une connexion réseau lente ou accès à distance.|  
+|**warning**|**Int**|Avertissement de seuil maximal généré par un abonnement appartenant à la publication, qui peut être le résultat OR logique d'au moins l'une des valeurs suivantes.<br /><br /> **1** = expiration - un abonnement à une publication transactionnelle n’a pas été synchronisé dans le seuil de période de rétention.<br /><br /> **2** = latency - le temps nécessaire pour répliquer des données à partir d’un serveur de publication transactionnelle à l’abonné dépasse le seuil, en secondes.<br /><br /> **4** = mergeexpiration – un abonnement à une publication de fusion n’a pas été synchronisé dans le seuil de période de rétention.<br /><br /> **8** = mergefastrunduration - le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau rapide.<br /><br /> **16** = mergeslowrunduration - le temps nécessaire pour effectuer la synchronisation d’un abonnement de fusion dépasse le seuil, en secondes, via une connexion réseau lente ou accès à distance.<br /><br /> **32** = mergefastrunspeed - la vitesse de transmission de lignes pendant la synchronisation d’un abonnement de fusion a échoué à maintenir le taux du seuil, en lignes par seconde, via une connexion réseau rapide.<br /><br /> **64** = mergeslowrunspeed - la vitesse de transmission de lignes pendant la synchronisation d’un abonnement de fusion a échoué à maintenir le taux du seuil, en lignes par seconde, via une connexion réseau lente ou accès à distance.|  
 |**worst_latency**|**Int**|Latence maximale, en secondes, des modifications de données propagées par l'Agent de lecture du journal ou l'Agent de distribution pour une publication transactionnelle.|  
 |**best_latency**|**Int**|Latence minimale, en secondes, des modifications de données propagées par l'Agent de lecture du journal ou l'Agent de distribution pour une publication transactionnelle.|  
 |**average_latency**|**Int**|Latence moyenne, en secondes, des modifications de données propagées par l'Agent de lecture du journal ou l'Agent de distribution pour une publication transactionnelle.|  
 |**last_distsync**|**datetime**|Date et heure de la dernière exécution de l'Agent de distribution.|  
 |**retention**|**Int**|Période de rétention de la publication.|  
-|**LatencyThreshold**|**Int**|Seuil de latence défini pour la publication transactionnelle.|  
+|**latencythreshold**|**Int**|Seuil de latence défini pour la publication transactionnelle.|  
 |**expirationthreshold**|**Int**|Seuil d'expiration défini pour la publication s'il s'agit d'une publication de fusion.|  
 |**agentnotrunningthreshold**|**Int**|Seuil définissant la durée maximale d'inexécution d'un Agent.|  
 |**subscriptioncount**|**Int**|Nombre d'abonnements à une publication.|  

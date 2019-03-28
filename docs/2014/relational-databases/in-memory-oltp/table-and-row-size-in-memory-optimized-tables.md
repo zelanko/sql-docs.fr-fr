@@ -10,12 +10,12 @@ ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7d89fefdf575cdb7961df0ceae811184ca31fc51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822533"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530341"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables optimisées en mémoire
   Une table mémoire optimisée se compose d'une collection de lignes et d'index qui contiennent des pointeurs vers les lignes. Dans une table mémoire optimisée, les lignes ne peuvent pas dépasser 8 060 octets. La compréhension de la taille d'une table mémoire optimisée vous aidera à comprendre si votre ordinateur dispose de suffisamment de mémoire.  
@@ -72,7 +72,7 @@ Table mémoire optimisée, comportant des index et des lignes.
   
 |Section|Size|Commentaires|  
 |-------------|----------|--------------|  
-|Colonnes de type superficiel|SUM ([taille des types superficiels])<br /><br /> **Taille des types individuels est comme suit :**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numérique (précision < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> NUMERIC(Precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
+|Colonnes de type superficiel|SUM ([taille des types superficiels])<br /><br /> **Taille des types individuels est comme suit :**<br /><br /> Bit &#124; 1<br /><br /> Tinyint &#124; 1<br /><br /> Smallint &#124; 2<br /><br /> Int &#124; 4<br /><br /> Real &#124; 4<br /><br /> Smalldatetime &#124; 4<br /><br /> Smallmoney &#124; 4<br /><br /> Bigint &#124; 8<br /><br /> Datetime &#124; 8<br /><br /> Datetime2 &#124; 8<br /><br /> Float 8<br /><br /> Money 8<br /><br /> Numérique (précision < = 18) &#124; 8<br /><br /> Time &#124; 8<br /><br /> Numeric(precision>18) &#124; 16<br /><br /> Uniqueidentifier &#124; 16||  
 |Remplissage de colonne superficielle|Les valeurs possibles sont :<br /><br /> 1 s'il y a des colonnes de type profond et la taille de données totale des colonnes superficielles est un nombre impair.<br /><br /> 0 dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Tableau « offset » pour les colonnes de type profond|Les valeurs possibles sont :<br /><br /> 0 s'il n'y a aucune colonne de type profond<br /><br /> 2 + 2 * [nombre de colonnes de type profond] dans les autres cas|Les types profonds sont les types (var)binary et (n)(var)char.|  
 |Tableau NULL|[nombre de colonnes qui acceptent les valeurs NULL] / 8, arrondi à des octets entiers.|La table comporte un bit pour chaque colonne pouvant avoir la valeur NULL. Cela est arrondi à des octets entiers.|  
@@ -103,13 +103,13 @@ Table mémoire optimisée, comportant des index et des lignes.
   
  Par conséquent, les chaînes de l'index de hachage sur le nom sont les suivantes :  
   
--   Premier compartiment : (John, Beijing) ; (John, Paris) ; (Jane, Prague)  
+-   Premier compartiment : (John, Beijing); (John, Paris); (Jane, Prague)  
   
 -   Deuxième compartiment : (Susan, Bogota)  
   
  Les chaînes de l'index de la ville sont les suivantes :  
   
--   Premier compartiment : (John, Beijing), (Susan, Bogota)  
+-   Premier compartiment : (John, Pékin), (Susan, Bogota)  
   
 -   Deuxième compartiment : (John, Paris), (Jane, Prague)  
   
@@ -117,14 +117,14 @@ Table mémoire optimisée, comportant des index et des lignes.
   
  Pour un temps supérieur à 200, la table contient les lignes suivantes :  
   
-|Créer une vue d’abonnement|Ville|  
+|Nom|Ville|  
 |----------|----------|  
 |John|Beijing|  
 |Jane|Prague|  
   
  Toutefois, toutes les transactions actives avec une heure de début 100 verront la version de la table suivante :  
   
-|Créer une vue d’abonnement|Ville|  
+|Nom|Ville|  
 |----------|----------|  
 |John|Paris|  
 |Jane|Prague|  
@@ -135,7 +135,7 @@ Table mémoire optimisée, comportant des index et des lignes.
   
  Prenons l'exemple d'une table Orders avec la définition suivante :  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -217,7 +217,7 @@ GO
   
  La mémoire réelle allouée et utilisée par cette table et ses index peut être obtenue via la requête suivante :  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

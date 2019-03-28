@@ -18,12 +18,12 @@ ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 794a7c9013fff188500c26232a597a7dd4c6283d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756270"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528501"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@principal_id** =] *principal_id*  
- L’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié. Un *principal_id* de **0** cela, le profil est public, accordant l’accès à tous les principaux dans la base de données.  
+`[ @principal_id = ] principal_id` L’ID de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association. *principal_id* est **int**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié. Un *principal_id* de **0** cela, le profil est public, accordant l’accès à tous les principaux dans la base de données.  
   
- [ **@principal_name** =] **'***principal_name***'**  
- Le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié. Un *principal_name* de **'public'** cela, le profil est public, accordant l’accès à tous les principaux dans la base de données.  
+`[ @principal_name = ] 'principal_name'` Le nom de l’utilisateur de base de données ou d’un rôle dans le **msdb** base de données pour l’association. *principal_name* est **sysname**, avec NULL comme valeur par défaut. Soit *principal_id* ou *principal_name* doit être spécifié. Un *principal_name* de **'public'** cela, le profil est public, accordant l’accès à tous les principaux dans la base de données.  
   
- [ **@profile_id** =] *profile_id*  
- Identificateur du profil pour l'association. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_id = ] profile_id` L’id du profil pour l’association. *profile_id* est **int**, avec NULL comme valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
- [ **@profile_name** =] **'***profile_name***'**  
- Nom du profil pour l'association. *nom_profil* est **sysname**, sans valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
+`[ @profile_name = ] 'profile_name'` Le nom du profil pour l’association. *nom_profil* est **sysname**, sans valeur par défaut. Soit *profile_id* ou *profile_name* doit être spécifié.  
   
- [ **@is_default** =] *is_default*  
- Indique si ce profil représente le profil par défaut pour le principal. Un principal ne peut avoir qu'un seul profil par défaut. *is_default* est **bits**, sans valeur par défaut.  
+`[ @is_default = ] is_default` Spécifie si ce profil est le profil par défaut pour le principal. Un principal ne peut avoir qu'un seul profil par défaut. *is_default* est **bits**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -69,7 +64,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
   
  La procédure stockée **sysmail_add_principalprofile_sp** est dans le **msdb** de base de données et est détenue par le **dbo** schéma. La procédure doit être exécutée avec un nom en trois parties si la base de données actuelle n’est pas **msdb**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Autorisations d’exécution de cette procédure reviennent par défaut aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

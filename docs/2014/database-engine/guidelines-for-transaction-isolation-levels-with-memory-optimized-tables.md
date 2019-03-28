@@ -10,12 +10,12 @@ ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aced288e62fefe46777993fd46130b8dd65e8d1b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510024"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527791"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instructions pour les niveaux d'isolement des transactions sur les tables mémoire optimisées
   Dans de nombreux scénarios, vous devez spécifier le niveau d'isolation de la transaction. L'isolation des transactions pour les tables mémoire optimisées est différente de celle des tables sur disque.  
@@ -62,7 +62,7 @@ ms.locfileid: "52510024"
   
  L'exemple de transaction avec validation automatique suivant montre une jointure entre la table mémoire optimisée Customers et une table standard [Order History], dans le cadre d'un traitement ad hoc :  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -73,7 +73,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  L'exemple de transactions, explicites ou implicites, suivant utilise la même jointure, mais cette fois, dans une transaction utilisateur explicite. La table mémoire optimisée Customers est accessible avec l'isolation d'instantané, comme défini par l'indicateur de table WITH (SNAPSHOT), et la table normale [Order History] est accessible avec l'isolation READ COMMITTED :  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -105,7 +105,7 @@ COMMIT
   
  Notez que la logique d'interrogation doit être en dehors de l'étendue de la transaction, car elle utilise l'isolation d'instantané pour accéder à la table t1. L'utilisation de la logique d'interrogation au sein de l'étendue d'une transaction créerait une transaction longue, ce qui est une mauvaise pratique.  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

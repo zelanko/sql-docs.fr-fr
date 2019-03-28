@@ -18,12 +18,12 @@ ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 86de9f970713d84fec0722a4cc3c29b0b307098f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589944"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528431"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,47 +53,33 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@account_id** =] *account_id*  
- ID du compte à mettre à jour. *account_id* est **int**, avec NULL comme valeur par défaut. Au moins une des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
+`[ @account_id = ] account_id` L’ID de compte pour mettre à jour. *account_id* est **int**, avec NULL comme valeur par défaut. Au moins une des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
   
- [ **@account_name** =] **'**_account_name_**'**  
- Nom du compte à mettre à jour. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Au moins une des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
+`[ @account_name = ] 'account_name'` Le nom du compte à mettre à jour. *nom_compte* est **sysname**, avec NULL comme valeur par défaut. Au moins une des *account_id* ou *account_name* doit être spécifié. Si les deux arguments sont précisés, la procédure modifie le nom du compte.  
   
- [ **@email_address** =] **'**_email_address_**'**  
- Nouvelle adresse de messagerie d'où le message est envoyé. Cette adresse doit être une adresse de messagerie Internet. Le nom de serveur figurant dans l'adresse identifie le serveur qu'utilise la messagerie de base de données pour envoyer le courrier à partir de ce compte. *email_address* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
+`[ @email_address = ] 'email_address'` La nouvelle adresse de messagerie pour envoyer le message à partir de. Cette adresse doit être une adresse de messagerie Internet. Le nom de serveur figurant dans l'adresse identifie le serveur qu'utilise la messagerie de base de données pour envoyer le courrier à partir de ce compte. *email_address* est **nvarchar (128)**, avec NULL comme valeur par défaut.  
   
- [ **@display_name** =] **'**_display_name_**'**  
- Nouveau nom complet à utiliser sur des messages électroniques à partir de ce compte. *display_name* est **nvarchar (128)**, sans valeur par défaut.  
+`[ @display_name = ] 'display_name'` Le nouveau nom d’affichage à utiliser sur les messages électroniques à partir de ce compte. *display_name* est **nvarchar (128)**, sans valeur par défaut.  
   
- [ **@replyto_address** =] **'**_replyto_address_**'**  
- Nouvelle adresse à utiliser dans le champ « Répondre à » des messages électroniques envoyés à partir de ce compte. *replyto_address* est **nvarchar (128)**, sans valeur par défaut.  
+`[ @replyto_address = ] 'replyto_address'` La nouvelle adresse à utiliser dans l’en-tête de réponse de messages électroniques à partir de ce compte. *replyto_address* est **nvarchar (128)**, sans valeur par défaut.  
   
- [ **@description** =] **'**_description_**'**  
- Nouvelle description du compte. *Description* est **nvarchar (256)**, avec NULL comme valeur par défaut.  
+`[ @description = ] 'description'` Nouvelle description pour le compte. *Description* est **nvarchar (256)**, avec NULL comme valeur par défaut.  
   
- [ **@mailserver_name** =] **'**_nom_serveur_**'**  
- Nouveau nom de serveur de messagerie SMTP à utiliser pour ce compte. L’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de résoudre le *nom_serveur* à une adresse IP. *nom_serveur* est **sysname**, sans valeur par défaut.  
+`[ @mailserver_name = ] 'server_name'` Le nouveau nom du serveur de messagerie SMTP à utiliser pour ce compte. L’ordinateur qui exécute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit être en mesure de résoudre le *nom_serveur* à une adresse IP. *nom_serveur* est **sysname**, sans valeur par défaut.  
   
- [ **@mailserver_type** =] **'**_server_type_**'**  
- Nouveau type du serveur de messagerie. *server_type* est **sysname**, sans valeur par défaut. Seule la valeur **'SMTP'** est pris en charge.  
+`[ @mailserver_type = ] 'server_type'` Le nouveau type du serveur de messagerie. *server_type* est **sysname**, sans valeur par défaut. Seule la valeur **'SMTP'** est pris en charge.  
   
- [ **@port** =] *numéro_port*  
- Nouveau numéro de port du serveur de messagerie. *numéro_port* est **int**, sans valeur par défaut.  
+`[ @port = ] port_number` Le nouveau numéro de port du serveur de messagerie. *numéro_port* est **int**, sans valeur par défaut.  
   
- [ **@timeout** =] **'**_délai d’attente_**'**  
- Paramètre Timeout pour SmtpClient.Send d'un message e-mail. *Délai d’attente* est **int** en quelques secondes, sans valeur par défaut.  
+`[ @timeout = ] 'timeout'` Paramètre Timeout pour SmtpClient.Send d’un seul message électronique. *Délai d’attente* est **int** en quelques secondes, sans valeur par défaut.  
   
- [ **@username** =] **'**_nom d’utilisateur_**'**  
- Nouveau nom d'utilisateur servant lors de la connexion au serveur de messagerie. *Nom d’utilisateur* est **sysname**, sans valeur par défaut.  
+`[ @username = ] 'username'` Le nouveau nom d’utilisateur à utiliser pour se connecter au serveur de messagerie. *Nom d’utilisateur* est **sysname**, sans valeur par défaut.  
   
- [ **@password** =] **'**_mot de passe_**'**  
- Nouveau mot de passe servant lors de la connexion au serveur de messagerie. *mot de passe* est **sysname**, sans valeur par défaut.  
+`[ @password = ] 'password'` Le nouveau mot de passe à utiliser pour se connecter au serveur de messagerie. *mot de passe* est **sysname**, sans valeur par défaut.  
   
- [ **@use_default_credentials** =] use_default_credentials  
- Spécifie si le courrier électronique doit être envoyé au serveur SMTP en utilisant les informations d'identification du service [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. **use_default_credentials** est de type bit, sans valeur par défaut. Lorsque la valeur de ce paramètre est définie sur 1, la messagerie de base de données utilise les informations d'identification du moteur de base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Lorsque ce paramètre est 0, la messagerie de base de données utilise le **@username** et **@password** pour l’authentification sur le serveur SMTP. Si **@username** et **@password** ont la valeur NULL, puis il utilise l’authentification anonyme. Contactez votre administrateur SMTP avant de définir ce paramètre.  
+`[ @use_default_credentials = ] use_default_credentials` Spécifie s’il faut envoyer le message au serveur SMTP avec les informations d’identification de le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service. **use_default_credentials** est de type bit, sans valeur par défaut. Lorsque la valeur de ce paramètre est définie sur 1, la messagerie de base de données utilise les informations d'identification du moteur de base de données [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Lorsque ce paramètre est 0, la messagerie de base de données utilise le **@username** et **@password** pour l’authentification sur le serveur SMTP. Si **@username** et **@password** ont la valeur NULL, puis il utilise l’authentification anonyme. Contactez votre administrateur SMTP avant de définir ce paramètre.  
   
- [ **@enable_ssl** =] enable_ssl  
- Spécifie si la messagerie de base de données chiffre les communications à l'aide de la technologie SSL (Secure Sockets Layer). Utilisez cette option si SSL est obligatoire sur votre serveur SMTP. **enable_ssl** est de type bit, sans valeur par défaut.  
+`[ @enable_ssl = ] enable_ssl` Spécifie si la messagerie de base de données chiffre les communications à l’aide de Secure Sockets Layer (SSL). Utilisez cette option si SSL est obligatoire sur votre serveur SMTP. **enable_ssl** est de type bit, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -128,7 +114,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>b. Modification du nom d'un compte et des informations qui s'y rapportent  
+### <a name="b-changing-the-name-of-an-account-and-the-information-for-an-account"></a>B. Modification du nom d'un compte et des informations qui s'y rapportent  
  L'exemple suivant modifie le nom du compte et le met à jour avec l'ID de compte `125`. Le nouveau nom du compte est `Backup Mail Server`.  
   
 ```  

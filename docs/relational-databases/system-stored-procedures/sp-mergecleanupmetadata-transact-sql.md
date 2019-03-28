@@ -16,12 +16,12 @@ ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3ae8edeff1792cf3a1c70d4e80dea638402e30d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210958"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529001"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =** ] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**, qui nettoie les métadonnées pour toutes les publications. La publication doit déjà exister si elle est spécifiée de manière explicite.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**, qui nettoie les métadonnées pour toutes les publications. La publication doit déjà exister si elle est spécifiée de manière explicite.  
   
- [  **@reinitialize_subscriber =** ] **'***abonné***'**  
- Spécifie si réinitialiser l'abonné. *abonné* est **nvarchar (5)**, peut être **TRUE** ou **FALSE**, avec une valeur par défaut **TRUE**. Si **TRUE**, les abonnements sont marqués pour réinitialisation. Si **FALSE**, les abonnements ne sont pas marqués pour réinitialisation.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Spécifie s’il faut réinitialiser l’abonné. *abonné* est **nvarchar (5)**, peut être **TRUE** ou **FALSE**, avec une valeur par défaut **TRUE**. Si **TRUE**, les abonnements sont marqués pour réinitialisation. Si **FALSE**, les abonnements ne sont pas marqués pour réinitialisation.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

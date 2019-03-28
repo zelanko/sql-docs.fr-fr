@@ -9,15 +9,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - PATH FOR XML mode, examples
 ms.assetid: 3564e13b-9b97-49ef-8cf9-6a78677b09a3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1384c2cd84505df59bc458274d0b33071e926f18
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: c5a566d9684341b7aa20342147aab950ebd4047c
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365731"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526662"
 ---
 # <a name="examples-using-path-mode"></a>Exemples : Utilisation du mode PATH
   Les exemples suivants montrent comment utiliser le mode PATH pour générer un document XML à partir d'une requête SELECT. Nombre de ces requêtes sont spécifiées par rapport aux documents XML des instructions de fabrication de bicyclettes stockés dans la colonne Instructions de la table ProductModel.  
@@ -200,7 +200,7 @@ FOR XML PATH ('ProductModelData'), root ('Root');
 GO  
 ```  
   
- Le résultat partiel est le suivant. Étant donné que la requête spécifie ManuInstr comme nom de colonne, le document XML renvoyé par la méthode `query()` est inclus dans une balise <`ManuInstr`>, comme le montre la syntaxe suivante :  
+ Le résultat partiel est le suivant. Étant donné que la requête spécifie ManuInstr comme nom de colonne, le document XML renvoyé par le `query()` méthode est encapsulée dans un <`ManuInstr`> balise comme indiqué dans l’exemple suivant :  
   
  `<Root>`  
   

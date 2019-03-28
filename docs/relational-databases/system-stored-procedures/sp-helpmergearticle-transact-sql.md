@@ -16,12 +16,12 @@ ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7a103f309067b5e78024a1687c24bb37bf5c3a8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779751"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533441"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
- Nom de la publication sur laquelle extraire des informations. *publication*est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les articles de fusion contenus dans toutes les publications dans la base de données actuelle.  
+`[ @publication = ] 'publication'` Est le nom de la publication sur laquelle extraire des informations. *publication*est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les articles de fusion contenus dans toutes les publications dans la base de données actuelle.  
   
- [  **@article=**] **'***article***'**  
- Nom de l'article pour lequel des informations doivent être retournées. *article*est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les articles de fusion de la publication donnée.  
+`[ @article = ] 'article'` Est le nom de l’article pour lequel retourner les informations. *article*est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur tous les articles de fusion de la publication donnée.  
   
 ## <a name="result-set"></a>Jeu de résultats  
   
@@ -53,10 +51,10 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**nom**|**sysname**|Nom de l'article.|  
 |**source_owner**|**sysname**|Nom du propriétaire de l'objet source|  
 |**source_object**|**sysname**|Nom de l'objet source à partir duquel l'article doit être ajouté.|  
-|**lui**|**sysname**|Nom du propriétaire de la vue qui définit l'article publié.|  
+|**sync_object_owner**|**sysname**|Nom du propriétaire de la vue qui définit l'article publié.|  
 |**sync_object**|**sysname**|Nom de l'objet personnalisé utilisé pour établir les données initiales pour la partition.|  
 |**description**|**nvarchar(255)**|Description de l'article|  
-|**status**|**tinyint**|État de l'article, qui peut être l'un des suivants :<br /><br /> **1** = inactif<br /><br /> **2** = active<br /><br /> **5** = opération data definition language (DDL) en attente<br /><br /> **6** = opération DDL avec un instantané nouvellement généré<br /><br /> Remarque : Lorsqu’un article est réinitialisé, les valeurs de **5** et **6** sont modifiés en **2**.|  
+|**status**|**tinyint**|État de l'article, qui peut être l'un des suivants :<br /><br /> **1** = inactive<br /><br /> **2** = active<br /><br /> **5** = opération data definition language (DDL) en attente<br /><br /> **6** = opération DDL avec un instantané nouvellement généré<br /><br /> Remarque : Lorsqu’un article est réinitialisé, les valeurs de **5** et **6** sont modifiés en **2**.|  
 |**creation_script**|**nvarchar(255)**|Chemin d'accès et nom d'un script de schéma d'article facultatif utilisé pour créer l'article dans la base de données d'abonnement.|  
 |**conflict_table**|**nvarchar(270)**|Nom de la table stockant les conflits d'insertion ou de mise à jour.|  
 |**article_resolver**|**nvarchar(255)**|Outil de résolution personnalisé pour l'article|  
@@ -71,7 +69,7 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**identity_support**|**Int**|Si la gestion de plages d’identité automatique est activée ; où **1** est activé et **0** est désactivé.|  
 |**pub_identity_range**|**bigint**|Taille de plage à utiliser lors de l'affectation de nouvelles valeurs d'identité. Pour plus d’informations, consultez la section « Réplication de fusion » de [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identity_range**|**bigint**|Taille de plage à utiliser lors de l'affectation de nouvelles valeurs d'identité. Pour plus d’informations, consultez la section « Réplication de fusion » de [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
-|**seuil**|**Int**|Pourcentage de valeur utilisé pour les abonnés exécutant [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **seuil** contrôle le moment où l’Agent de fusion affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans le seuil est utilisé, l'Agent de fusion crée une nouvelle plage d'identité. Pour plus d’informations, consultez la section « Réplication de fusion » de [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
+|**threshold**|**Int**|Pourcentage de valeur utilisé pour les abonnés exécutant [!INCLUDE[ssEW](../../includes/ssew-md.md)] ou des versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. **seuil** contrôle le moment où l’Agent de fusion affecte une nouvelle plage d’identité. Lorsque le pourcentage de valeurs spécifié dans le seuil est utilisé, l'Agent de fusion crée une nouvelle plage d'identité. Pour plus d’informations, consultez la section « Réplication de fusion » de [répliquer des colonnes d’identité](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**verify_resolver_signature**|**Int**|Si une signature numérique est vérifiée avant d’utiliser un résolveur dans la réplication de fusion ; où **0** signifie que la signature n’est pas vérifiée, et **1** signifie que la signature est vérifiée pour voir si elle provient d’une source approuvée.|  
 |**destination_object**|**sysname**|Nom de l'objet de destination. Applicable uniquement aux articles de schémas de fonctions utilisateur, aux vues et aux procédures stockées de fusion.|  
 |**allow_interactive_resolver**|**Int**|Si le résolveur interactif est utilisé sur un article ; où **1** signifie que ce programme de résolution est utilisé, et **0** signifie qu’il n’est pas utilisé.|  

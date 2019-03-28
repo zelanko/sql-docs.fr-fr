@@ -16,12 +16,12 @@ ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7ff0ca57ba2e6e77854bab011fa83dc2001337a3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205927"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527051"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =**] **'***publication***'**  
- Nom de la publication contenant l'article. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication contenant l’article. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@article=**] **'***article***'**  
- Nom de l'article dont la colonne est retournée. *article* est **sysname**, sans valeur par défaut.  
+`[ @article = ] 'article'` Est le nom de l’article dont les colonnes retournées. *article* est **sysname**, sans valeur par défaut.  
   
- [ **@publisher**=] **'***publisher***'**  
- Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être spécifié lorsque l’article demandé est publié par un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  
@@ -59,9 +56,9 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**id de colonne**|**Int**|Identificateur de la colonne.|  
+|**column id**|**Int**|Identificateur de la colonne.|  
 |**column**|**sysname**|Nom de la colonne.|  
-|**Publié**|**bit**|Indique si la colonne est publiée :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
+|**published**|**bit**|Indique si la colonne est publiée :<br /><br /> **0** = Non<br /><br /> **1** = Oui|  
 |**type de serveur de publication**|**sysname**|Type de données de la colonne sur le serveur de publication.|  
 |**type d’abonné**|**sysname**|Type de données de la colonne sur l'Abonné.|  
   

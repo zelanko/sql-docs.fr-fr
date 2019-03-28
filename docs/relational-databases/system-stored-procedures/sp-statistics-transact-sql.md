@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4bed4614f3d38ca7700d40b73347430f27e9d82b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591703"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527681"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,25 +47,19 @@ sp_statistics [ @table_name = ] 'table_name'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@table_name=** ] **'**_table_name_**'**  
- Spécifie la table utilisée pour retourner les informations de catalogue. *table_name* est **sysname**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge.  
+`[ @table_name = ] 'table_name'` Spécifie la table utilisée pour retourner des informations de catalogue. *table_name* est **sysname**, sans valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge.  
   
- [  **@table_owner=** ] **'**_propriétaire_**'**  
- Nom du propriétaire de la table utilisée pour renvoyer des informations de catalogue. *TABLE_OWNER* est **sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
+`[ @table_owner = ] 'owner'` Est le nom du propriétaire de la table de la table utilisée pour retourner des informations de catalogue. *TABLE_OWNER* est **sysname**, avec NULL comme valeur par défaut. La recherche de correspondance avec des caractères génériques n'est pas prise en charge. Si *propriétaire* n’est pas spécifié, les règles de visibilité de table par défaut du SGBD sous-jacent s’appliquent.  
   
  Si, dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les index de la table sont retournés. Si *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table avec la valeur *nom*, cette procédure recherche une table avec la valeur *nom* détenus par le propriétaire de la base de données. Si cette table existe, ses index sont retournés.  
   
- [  **@table_qualifier=** ] **'**_qualificateur_**'**  
- Nom du qualificateur de la table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
+`[ @table_qualifier = ] 'qualifier'` Est le nom du qualificateur de table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (_qualificateur_**.** _propriétaire_**.** _nom_). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ce paramètre représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [  **@index_name=** ] **'**_index_name_**'**  
- Est le nom d’index. *index_name* est **sysname**, avec % comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
+`[ @index_name = ] 'index_name'` Est le nom d’index. *index_name* est **sysname**, avec % comme valeur par défaut. La recherche de correspondance avec des caractères génériques est prise en charge.  
   
- [  **@is_unique=** ] **'**_is_unique_**'**  
- Est si seuls les index uniques (si **Y**) doivent être retournées. *is_unique* est **char (1)**, avec une valeur par défaut **N**.  
+`[ @is_unique = ] 'is_unique'` Est si seuls les index uniques (si **Y**) doivent être retournées. *is_unique* est **char (1)**, avec une valeur par défaut **N**.  
   
- [  **@accuracy=** ] **'**_précision_**'**  
- Niveau de précision de la cardinalité et des pages pour les statistiques. *précision* est **char (1)**, avec une valeur par défaut **Q**. Spécifiez **E** pour vous assurer que les statistiques sont mises à jour afin que la cardinalité et des pages sont exactes.  
+`[ @accuracy = ] 'accuracy'` Est le niveau de la cardinalité et la précision de page pour les statistiques. *précision* est **char (1)**, avec une valeur par défaut **Q**. Spécifiez **E** pour vous assurer que les statistiques sont mises à jour afin que la cardinalité et des pages sont exactes.  
   
  La valeur **E** (sql_ensure) indique le pilote pour extraire des statistiques de manière inconditionnelle.  
   

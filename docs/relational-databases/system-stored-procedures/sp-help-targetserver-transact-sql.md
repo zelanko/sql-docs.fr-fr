@@ -18,12 +18,12 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aacb30e4c809f965635b9d8640d8fcd690cd340f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747427"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529691"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@server_name=** ] **'***nom_serveur***'**  
- Nom du serveur pour lequel renvoyer des informations. *nom_serveur* est **nvarchar (30)**, avec NULL comme valeur par défaut.  
+`[ @server_name = ] 'server_name'` Le nom du serveur pour lequel retourner les informations. *nom_serveur* est **nvarchar (30)**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -54,8 +53,8 @@ sp_help_targetserver
 |-----------------|---------------|-----------------|  
 |**server_id**|**Int**|Numéro d’identification du serveur.|  
 |**server_name**|**nvarchar(30)**|Nom du serveur.|  
-|**Emplacement**|**nvarchar(200)**|Emplacement du serveur spécifié.|  
-|**TIME_ZONE_ADJUSTMENT**|**Int**|Définition du fuseau horaire, en heures, par rapport à l'heure de Greenwich (GMT).|  
+|**location**|**nvarchar(200)**|Emplacement du serveur spécifié.|  
+|**time_zone_adjustment**|**Int**|Définition du fuseau horaire, en heures, par rapport à l'heure de Greenwich (GMT).|  
 |**enlist_date**|**datetime**|Date d'inscription du serveur spécifié.|  
 |**last_poll_date**|**datetime**|Date à laquelle le serveur a été interrogé pour la dernière fois pour des travaux.|  
 |**status**|**Int**|État du serveur spécifié.|  
@@ -64,7 +63,7 @@ sp_help_targetserver
 |**enlisted_by_nt_user**|**nvarchar(100)**|Utilisateur Microsoft Windows ayant inscrit le serveur cible.|  
 |**poll_interval**|**Int**|Fréquence (en secondes) à laquelle le serveur cible interroge le service SQLServerAgent principal afin de télécharger des travaux et charger des états de travaux.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="examples"></a>Exemples  

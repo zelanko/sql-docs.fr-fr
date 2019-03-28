@@ -18,12 +18,12 @@ ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ee0f3e2f7858959b04394e4e809df3ab71dcc83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 034c4ab2c8ce57ac072e9711fb4e6d621584f273
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846637"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529301"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@attribute_id =** ] **'***attribute_id***'**  
- ID entier de l'attribut. *attribute_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @attribute_id = ] 'attribute_id'` Est l’ID entier de l’attribut. *attribute_id* est **int**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  
@@ -51,8 +50,8 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**ATTRIBUTE_ID**|**Int**|Numéro d'identification de l'attribut.|  
-|**ATTRIBUTE_NAME**|**varchar (** 60 **)**|Nom de l'attribut.|  
-|**ATTRIBUTE_VALUE**|**varchar (** 255 **)**|Valeur actuelle de l'attribut.|  
+|**ATTRIBUTE_NAME**|**varchar(** 60 **)**|Nom de l'attribut.|  
+|**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|Valeur actuelle de l'attribut.|  
   
  Le tableau suivant décrit ces attributs. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bibliothèques clientes ODBC utilisent actuellement les attributs **1**, **2**, **18**, **22**, et **500** lors de la connexion heure.  
   
@@ -91,7 +90,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ## <a name="remarks"></a>Notes  
  **sp_server_info** retourne un sous-ensemble des informations fournies par **SQLGetInfo** dans ODBC.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -18,12 +18,12 @@ ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85d45de0ec858766bea51e983e80087d93d94ec2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 109e031e95b7535733bd9cb71baa4d20128ceb5e
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826627"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534491"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,9 @@ sp_help_log_shipping_primary_database
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@database =** ] '*base de données*'  
- Nom de la base de données primaire pour la copie des journaux de transaction. *base de données* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
+`[ @database = ] 'database'` Est le nom du journal de transaction base de données primaire. *base de données* est **sysname**, sans valeur par défaut, et ne peut pas être NULL.  
   
- [  **@primary_id =** ] '*primary_id*'  
- ID de la base de données primaire pour la configuration de la copie des journaux de transaction. *primary_id* est **uniqueidentifier** et ne peut pas être NULL.  
+`[ @primary_id = ] 'primary_id'` ID de la base de données primaire pour la configuration d’envoi de journaux. *primary_id* est **uniqueidentifier** et ne peut pas être NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -60,7 +58,7 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|Répertoire où les fichiers de sauvegarde des journaux de transactions du serveur principal sont stockés.|  
 |**backup_share**|Réseau ou chemin d'accès UNC au répertoire de sauvegarde.|  
 |**backup_retention_period**|Durée de conservation (en minutes) avant la suppression d'un fichier de sauvegarde de journal dans le répertoire de sauvegarde.|  
-|**backup_compression**|Indique si la configuration de copie des journaux utilise [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = désactivé. Ne jamais compresser des sauvegardes de journal.<br /><br /> **1** = activé. Toujours compresser des sauvegardes de journal.<br /><br /> **2** = utiliser le paramètre de la [afficher ou configurer l’Option de Configuration de serveur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Il s'agit de la valeur par défaut.<br /><br /> La compression de la sauvegarde est prise en charge uniquement dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou les versions ultérieures). Dans les autres éditions, la valeur est toujours 2.|  
+|**backup_compression**|Indique si la configuration de copie des journaux utilise [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md).<br /><br /> **0** = désactivé. Ne jamais compresser des sauvegardes de journal.<br /><br /> **1** = activé. Toujours compresser des sauvegardes de journal.<br /><br /> **2** = utiliser le paramètre de la [afficher ou configurer l’Option de Configuration de serveur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md). Valeur par défaut.<br /><br /> La compression de la sauvegarde est prise en charge uniquement dans [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (ou les versions ultérieures). Dans les autres éditions, la valeur est toujours 2.|  
 |**backup_job_id**|Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ID de tâche de l’Agent associé à la tâche de sauvegarde sur le serveur principal.|  
 |**monitor_server**|Le nom de l’instance de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] utilisé en tant que serveur moniteur dans la configuration d’envoi de journaux.|  
 |**monitor_server_security_mode**|Mode de sécurité utilisé pour la connexion au serveur moniteur.<br /><br /> 1 = Authentification [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.<br /><br /> 0 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] l’authentification.|  
@@ -75,7 +73,7 @@ sp_help_log_shipping_primary_database
 ## <a name="remarks"></a>Notes  
  **sp_help_log_shipping_primary_database** doit être exécuté à partir de la **master** base de données sur le serveur principal.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

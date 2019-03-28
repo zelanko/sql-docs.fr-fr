@@ -16,12 +16,12 @@ ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9ac0fe99f835dae638cb65b24e569857fb77b098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759956"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526421"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,10 +40,10 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@tabid =** ] '*tabid*'  
+ [**@tabid =** ] '*tabid*'  
  ID d'objet de la table dans laquelle les déclencheurs de mise à jour immédiate sont recherchés. *tabid* est **int** sans valeur par défaut.  
   
- [ **@trigger_op =** ] '*trigger_output_parameters*' sortie  
+ [**@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
  Spécifie si le paramètre de sortie doit renvoyer le type du déclencheur à partir duquel il est appelé. *trigger_output_parameters* est **char (10)** et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
@@ -53,8 +53,7 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 |**DEL**|Déclencheur DELETE.|  
 |NULL (par défaut)||  
   
- [  **@fonpublisher =** ] *fonpublisher*  
- Spécifie l'emplacement où la procédure stockée est exécutée. *fonpublisher* est **bits**, valeur par défaut est 0. Si la valeur est 0, l'exécution s'effectue sur l'Abonné et, si la valeur est 1, l'exécution s'effectue sur le serveur de publication.  
+`[ @fonpublisher = ] fonpublisher` Spécifie l’emplacement où la procédure stockée est exécutée. *fonpublisher* est **bits**, valeur par défaut est 0. Si la valeur est 0, l'exécution s'effectue sur l'Abonné et, si la valeur est 1, l'exécution s'effectue sur le serveur de publication.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 indique que la procédure stockée n'est pas appelée dans le contexte d'un déclencheur de mise à jour immédiate. 1 indique qu’elle est appelée dans le contexte d’un déclencheur de mise à jour immédiate et le type de déclencheur retourné dans *@trigger_op*.  

@@ -16,12 +16,12 @@ ms.assetid: 63a4ec6e-ce79-4bf1-9d37-5ac88f8d6beb
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7f5bb18d06fd8ab9545825174cba0723f0d553ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e3c4797478b114918ce2bd79abb9e4671a0dd022
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791521"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529931"
 ---
 # <a name="spdeletepeerrequesthistory-transact-sql"></a>sp_deletepeerrequesthistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_deletepeerrequesthistory [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=** ] **'***publication***'**  
- Nom de la publication ayant fait l'objet d'une requête d'état. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Nom de la publication pour laquelle la demande d’état a été effectuée. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@request_id=** ] *request_id*  
- Spécifie une requête d'état individuelle de telle sorte que toutes les réponses soient supprimées. *request_id* est **int**, avec NULL comme valeur par défaut.  
+`[ @request_id = ] request_id` Spécifie une requête d’état individuelles afin que toutes les réponses à cette demande seront supprimés. *request_id* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@cutoff_date=** ] *cutoff_date*  
- Spécifie une date de coupure, avant laquelle tous les enregistrements de réponse antérieurs sont supprimés. *cutoff_date* est **datetime**, avec NULL comme valeur par défaut.  
+`[ @cutoff_date = ] cutoff_date` Spécifie une date de coupure, avant laquelle tous les enregistrements de réponse antérieurs sont supprimés. *cutoff_date* est **datetime**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

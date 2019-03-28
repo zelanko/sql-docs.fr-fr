@@ -10,15 +10,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 365a47a47abd0e74c1716971998f145501a3cae4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e009f0fe22156f9a652dd19fceddf02bbc48c247
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48150956"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530181"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Accorder des autorisations sur une collection de schémas XML
   Vous pouvez attribuer des autorisations de création d'une collection de schémas XML et accorder des autorisations sur un objet collection de schémas XML.  
@@ -57,11 +57,11 @@ ms.locfileid: "48150956"
   
 -   L'autorisation TAKE OWNERSHIP est nécessaire pour transmettre la propriété de la collection de schémas XML d'un principal à un autre.  
   
--   L’autorisation REFERENCES permet au principal d’utiliser la collection de schémas XML pour typer ou contraindre `xml` colonnes de tables, des vues et des paramètres de type. L'autorisation REFERENCES est également nécessaire si une collection de schémas XML fait référence à une autre.  
+-   L'autorisation REFERENCES permet au principal d'utiliser la collection de schémas XML pour typer ou contraindre les colonnes de type `xml` des tables, des vues et des paramètres. L'autorisation REFERENCES est également nécessaire si une collection de schémas XML fait référence à une autre.  
   
 -   L'autorisation VIEW DEFINITION permet au principal d'interroger le contenu de la collection de schémas XML par le biais de XML_SCHEMA_NAMESPACE ou des affichages catalogue, à condition que ce principal dispose également de l'une des autorisations ALTER, REFERENCES ou CONTROL sur la collection.  
   
--   L’autorisation EXECUTE est nécessaire pour valider les valeurs insérées ou mises à jour par le principal par rapport à la collection de schémas XML qui type ou contraint les `xml` colonnes, variables et paramètres de type. Vous devez également disposer de cette autorisation pour interroger le contenu XML stocké dans ces colonnes et ces variables.  
+-   L'autorisation EXECUTE est nécessaire pour valider les valeurs insérées ou mises à jour par le principal par rapport à la collection de schémas XML qui type ou contraint les colonnes, les variables et les paramètres de type `xml`. Vous devez également disposer de cette autorisation pour interroger le contenu XML stocké dans ces colonnes et ces variables.  
   
 ## <a name="examples"></a>Exemples  
  Les scénarios proposés dans les exemples suivants illustrent le fonctionnement des autorisations sur les schémas XML. Chaque exemple crée la base de données de test, les schémas relationnels et les connexions nécessaires. Ces connexions reçoivent les autorisations nécessaires sur la collection de schémas XML. Chaque exemple effectue le nettoyage nécessaire à la fin.  

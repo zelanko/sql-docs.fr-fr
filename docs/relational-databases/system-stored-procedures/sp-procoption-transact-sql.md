@@ -18,12 +18,12 @@ ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aee8c496db092787720ea8f778697b5a7b3fdd22
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: 218371ab6d8133dbaf1865eeffc11f92883b4305
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973918"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533671"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@ProcName =** ] **'**_procédure_**'**  
- Est le nom de la procédure pour laquelle définir une option. *procédure* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @ProcName = ] 'procedure'` Est le nom de la procédure pour laquelle définir une option. *procédure* est **nvarchar(776)**, sans valeur par défaut.  
   
- [ **@OptionName =** ] **'**_option_**'**  
- Nom de l'option que vous voulez paramétrer. La seule valeur pour *option* est **démarrage**.  
+`[ @OptionName = ] 'option'` Est le nom de l’option à définir. La seule valeur pour *option* est **démarrage**.  
   
- [  **@OptionValue =** ] **'**_valeur_**'**  
- Indique si l’option sur (**true** ou **sur**) ou désactivé (**false** ou **hors**). *valeur* est **varchar(12)**, sans valeur par défaut.  
+`[ @OptionValue = ] 'value'` Indique si l’option sur (**true** ou **sur**) ou désactivé (**false** ou **hors**). *valeur* est **varchar(12)**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (succès) ou numéro d'erreur (échec)  

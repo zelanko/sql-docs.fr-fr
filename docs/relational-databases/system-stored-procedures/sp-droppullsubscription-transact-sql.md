@@ -16,12 +16,12 @@ ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0343855bbc3d82e58a0a0252109dee6255ee766f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2afa58b9fe8844aa4bb74187ef77393f0bc5681f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134049"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527532"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=** ] **'**_publisher_**'**  
- Nom du serveur distant. *serveur de publication* est **sysname**, sans valeur par défaut. Si **tous les**, l’abonnement est supprimé sur tous les serveurs de publication.  
+`[ @publisher = ] 'publisher'` Est le nom de serveur distant. *serveur de publication* est **sysname**, sans valeur par défaut. Si **tous les**, l’abonnement est supprimé sur tous les serveurs de publication.  
   
- [  **@publisher_db=** ] **'**_publisher_db_**'**  
- Nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut. **tous les** signifie que toutes les bases de données de serveur de publication.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, sans valeur par défaut. **tous les** signifie que toutes les bases de données de serveur de publication.  
   
- [  **@publication=** ] **'**_publication_**'**  
- Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut. Si **tous les**, l’abonnement est supprimé dans toutes les publications.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut. Si **tous les**, l’abonnement est supprimé dans toutes les publications.  
   
- [  **@reserved=** ] *réservé*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @reserved = ] reserved` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

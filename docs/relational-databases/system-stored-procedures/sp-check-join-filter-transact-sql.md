@@ -22,12 +22,12 @@ ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: c86699a87a04762162ce527d9f66c9fda55a1bb1
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 02c46d74a1e68af322aa50c7b0ac1c3d4f96ee49
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129329"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531751"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,11 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@filtered_table**=] **'**_filtered_table_**'**  
- Nom d'une table filtrée. *filtered_table* est **nvarchar (400)**, sans valeur par défaut.  
+`[ @filtered_table = ] 'filtered_table'` Est le nom d’une table filtrée. *filtered_table* est **nvarchar (400)**, sans valeur par défaut.  
   
- [ **@join_table**=] **'**_join_table_**'**  
- Est le nom d’une table jointe à *filtered_table*. *join_table* est **nvarchar (400)**, sans valeur par défaut.  
+`[ @join_table = ] 'join_table'` Est le nom d’une table jointe à *filtered_table*. *join_table* est **nvarchar (400)**, sans valeur par défaut.  
   
- [ **@join_filterclause** =] **'**_join_filterclause_**'**  
- Clause du filtre de jointure à tester. *join_filterclause* est **nvarchar (1000)**, sans valeur par défaut.  
+`[ @join_filterclause = ] 'join_filterclause'` La clause de filtre de jointure testée. *join_filterclause* est **nvarchar (1000)**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   

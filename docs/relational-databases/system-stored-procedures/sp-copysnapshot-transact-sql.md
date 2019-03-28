@@ -16,12 +16,12 @@ ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d3c8037bdccc0b04e2c11399f09e5a99c109df65
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 429a0c439f5257989e6fb7e85d34a8ea576ad41a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134109"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526991"
 ---
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,17 +40,13 @@ sp_copysnapshot [ @publication = ] 'publication', [ @destination_folder = ] 'des
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'**_publication_**'**  
- Nom de la publication dont le contenu de l'instantané doit être copié. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication dont le contenu instantané doivent être copiés. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@destination_folder=**] **'**_destination_folder_**'**  
- Est le nom du dossier dans lequel le contenu de l’instantané de publication doivent être copiés. *destination_folder*est **nvarchar (255)**, sans valeur par défaut. Le *destination_folder* peut être un autre emplacement comme sur un autre serveur, sur un lecteur réseau ou sur un support amovible (CD-ROM ou disque).  
+`[ @destination_folder = ] 'destination_folder'` Est le nom du dossier dans lequel le contenu de l’instantané de publication doivent être copiés. *destination_folder*est **nvarchar (255)**, sans valeur par défaut. Le *destination_folder* peut être un autre emplacement comme sur un autre serveur, sur un lecteur réseau ou sur un support amovible (CD-ROM ou disque).  
   
- [  **@subscriber=**] **'**_abonné_**'**  
- Nom de l'Abonné. *abonné* est de type sysname, avec NULL comme valeur par défaut.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est de type sysname, avec NULL comme valeur par défaut.  
   
- [  **@subscriber_db=**] **'**_bd_abonné_**'**  
- Est le nom de la base de données d’abonnement. *bd_abonné* est de type sysname, avec NULL comme valeur par défaut.  
+`[ @subscriber_db = ] 'subscriber_db'` Est le nom de la base de données d’abonnement. *bd_abonné* est de type sysname, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

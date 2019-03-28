@@ -16,12 +16,12 @@ ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: af247734b941a0d9fd7010d4699f9ddb296c890e
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589163"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528791"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +42,15 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'**_publication_**'**  
- Nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**. Si la publication est spécifiée, tous les conflits qualifiés par la publication sont renvoyés. Par exemple, si le **MSmerge_conflict_Customers** table a des lignes de conflits pour les **WA** et le **autorité de certification** publications, en passant un nom de publication **autorité de certification**  récupère les conflits qui se rapportent à la **autorité de certification** publication.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**. Si la publication est spécifiée, tous les conflits qualifiés par la publication sont renvoyés. Par exemple, si le **MSmerge_conflict_Customers** table a des lignes de conflits pour les **WA** et le **autorité de certification** publications, en passant un nom de publication **autorité de certification**  récupère les conflits qui se rapportent à la **autorité de certification** publication.  
   
- [  **@conflict_table=**] **'**_conflict_table_**'**  
- Nom de la table de conflits. *conflict_table* est **sysname**, sans valeur par défaut. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les tables de conflits sont nommés en utilisant les noms de format avec **MSmerge_conflict\__publication\_article_**, avec une table pour chaque article publié.  
+`[ @conflict_table = ] 'conflict_table'` Est le nom de la table de conflits. *conflict_table* est **sysname**, sans valeur par défaut. Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, les tables de conflits sont nommés en utilisant les noms de format avec **MSmerge_conflict\__publication\_article_**, avec une table pour chaque article publié.  
   
- [  **@publisher=**] **'**_publisher_**'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@publisher_db=**] **'**_publisher_db_**'**  
- Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données du serveur de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@logical_record_conflicts=** ] *logical_record_conflicts*  
- Indique si le jeu de résultats contient des informations sur les conflits au niveau des enregistrements logiques. *logical_record_conflicts* est **int**, valeur par défaut est 0. **1** signifie que les informations de conflit d’enregistrement logique sont retournées.  
+`[ @logical_record_conflicts = ] logical_record_conflicts` Indique si le jeu de résultats contient des informations sur les conflits d’enregistrement logique. *logical_record_conflicts* est **int**, valeur par défaut est 0. **1** signifie que les informations de conflit d’enregistrement logique sont retournées.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
  **sp_helpmergeconflictrows** renvoie un jeu de résultats composé de la structure de table de base et de ces colonnes supplémentaires.  

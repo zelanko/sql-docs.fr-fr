@@ -16,12 +16,12 @@ ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2fddf00f340fa4e8ea47402c4da9a67955b4ba68
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1188bb26c8c63267f30110bf890589d1670fdf8b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808671"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531441"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication =** ] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, avec une valeur par défaut **tous les**.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **tous les**.  
   
- [  **@subscriber =** ] **'***abonné***'**  
- Nom de l'Abonné. *abonné* est **sysname**, avec une valeur par défaut **tous les**.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné. *abonné* est **sysname**, avec une valeur par défaut **tous les**.  
   
- [  **@subscriber_db =** ] **'***bd_abonné***'**  
- Nom de la base de données de l'Abonné. *bd_abonné* est **sysname**, avec une valeur par défaut **tous les**.  
+`[ @subscriber_db = ] 'subscriber_db'` Est le nom de la base de données de l’abonné. *bd_abonné* est **sysname**, avec une valeur par défaut **tous les**.  
   
- [  **@upload_first =** ] **'***upload_first***'**  
- Indique si les modifications effectuées sur l'Abonné sont chargées avant la réinitialisation de l'abonnement. *upload_first* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **true**, les modifications sont téléchargées avant la réinitialisation de l’abonnement. Si **false**, modifications ne sont pas téléchargées.  
+`[ @upload_first = ] 'upload_first'` Est que les modifications sur l’abonné sont téléchargées avant la réinitialisation de l’abonnement. *upload_first* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si **true**, les modifications sont téléchargées avant la réinitialisation de l’abonnement. Si **false**, modifications ne sont pas téléchargées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

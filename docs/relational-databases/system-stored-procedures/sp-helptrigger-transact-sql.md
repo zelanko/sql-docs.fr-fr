@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dfb494c7b25d3a580059e4d1ad3250abbe91ee54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828977"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528591"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,13 +42,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@tabname=** ] **'***table***'**  
- Nom de la table de la base de données active pour laquelle il faut renvoyer des informations sur les déclencheurs. *table* est **nvarchar(776)**, sans valeur par défaut.  
+`[ @tabname = ] 'table'` Est le nom de la table dans la base de données en cours pour lequel retourner des informations sur le déclencheur. *table* est **nvarchar(776)**, sans valeur par défaut.  
   
- [  **@triggertype=** ] **'***type***'**  
- Type du déclencheur DML pour lequel des informations doivent être renvoyées. *type* est **char (6)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @triggertype = ] 'type'` Est le type de déclencheur DML pour retourner des informations. *type* est **char (6)**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**DELETE**|Renvoie des informations sur le déclencheur DELETE.|  
 |**INSERT**|Renvoie des informations sur le déclencheur INSERT.|  
@@ -66,12 +64,12 @@ sp_helptrigger [ @tabname = ] 'table'
 |**trigger_owner**|**sysname**|Nom du propriétaire de la table pour laquelle le déclencheur est défini.|  
 |**isupdate**|**Int**|1 = déclencheur UPDATE<br /><br /> 0 = n'est pas un déclencheur UPDATE|  
 |**isdelete**|**Int**|1 = déclencheur DELETE<br /><br /> 0 = n'est pas un déclencheur DELETE|  
-|**propriété EstInsertion**|**Int**|1 = déclencheur INSERT<br /><br /> 0 = n'est pas un déclencheur INSERT|  
+|**isinsert**|**Int**|1 = déclencheur INSERT<br /><br /> 0 = n'est pas un déclencheur INSERT|  
 |**isafter**|**Int**|1 = déclencheur AFTER<br /><br /> 0 = n'est pas un déclencheur AFTER|  
 |**isinsteadof**|**Int**|1 = déclencheur INSTEAD OF<br /><br /> 0 = n'est pas un déclencheur INSTEAD OF|  
 |**trigger_schema**|**sysname**|Nom du schéma auquel le déclencheur appartient.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md) autorisation sur la table.  
   
 ## <a name="examples"></a>Exemples  

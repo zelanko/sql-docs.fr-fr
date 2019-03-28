@@ -18,12 +18,12 @@ ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b811fd8b1bb6be9c63794006888db253a8c341e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 16e523bc26b8469f3ee7306f3e6fd2902ef727bb
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843347"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528531"
 ---
 # <a name="spmsxdefect-transact-sql"></a>sp_msx_defect (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_msx_defect [@forced_defection =] forced_defection
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@forced_defection =**] *défection_forcée*  
- Spécifie s’il faut forcer la désinscription de se produire si le SQLServerAgent principal a été définitivement perdu en raison d’une détérioration irréversible endommagé **msdb** base de données, ou sur non **msdb** sauvegarde de base de données. *défection_forcée*est **bits**, avec une valeur par défaut **0**, ce qui indique qu’aucun forcer la désinscription. La valeur **1** force la désinscription.  
+`[ @forced_defection = ] forced_defection` Spécifie s’il faut forcer la désinscription de se produire si le SQLServerAgent principal a été définitivement perdu en raison d’une détérioration irréversible endommagé **msdb** base de données, ou sur non **msdb** sauvegarde de base de données. *défection_forcée*est **bits**, avec une valeur par défaut **0**, ce qui indique qu’aucun forcer la désinscription. La valeur **1** force la désinscription.  
   
  Après avoir forcé une désinscription par l’exécution de **sp_msx_defect**, un membre de la **sysadmin** rôle serveur fixe sur le SQLServerAgent principal doit exécuter la commande suivante pour terminer l’opération :  
   
@@ -61,7 +60,7 @@ EXECUTE msdb.dbo.sp_delete_targetserver @server_name = 'tsx-server', @post_defec
 ## <a name="remarks"></a>Notes  
  Lorsque **sp_msx_defect** se termine correctement, un message est retourné.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Pour exécuter cette procédure stockée, l'utilisateur doit être membre du rôle de serveur fixe **sysadmin** .  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df5d06478e5e48de00efcbdb7b872a7a1907eec0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 755685601bb97f7e0b8980024df07e27967f3cd3
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370001"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58530821"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Type et colonnes de données XML (SQL Server)
   Cette rubrique présente les avantages et les limitations de la `xml` type de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]et vous aide à choisir comment stocker des données XML.  
@@ -113,12 +113,12 @@ ms.locfileid: "53370001"
   
  Le stockage XML natif est utile lorsque les documents XML présentent des structures différentes ou suivent des schémas différents ou complexes beaucoup trop difficiles à mapper à des structures relationnelles.  
   
-#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Exemple : Modélisation des données XML à l’aide de Type de données xml  
+#### <a name="example-modeling-xml-data-using-the-xml-data-type"></a>Exemple : modélisation de données XML à l’aide du type de données xml  
  Prenons l'exemple d'un manuel de produit au format XML. Chaque rubrique fait l'objet d'un chapitre distinct, lui-même composé de plusieurs sections. Une section peut contenir des sous-sections. L’élément \<section> est donc un élément récursif. Les manuels de produit regroupent un gros volume de données diverses : contenu, diagrammes, explications techniques ; les données sont semi-structurées. Les utilisateurs veulent pouvoir lancer une recherche contextuelle sur les rubriques qui les intéressent, par exemple rechercher la section consacrée aux « index cluster » dans le chapitre sur l'« indexation », et s'informer des quantités techniques.  
   
  Une colonne de type de données `xml` constitue un modèle de stockage approprié pour vos documents XML. Vous conservez ainsi le contenu InfoSet de vos données XML. L'indexation de la colonne XML permet d'optimiser les performances des requêtes.  
   
-#### <a name="example-retaining-exact-copies-of-xml-data"></a>Exemple : En conservant des Copies exactes des données XML  
+#### <a name="example-retaining-exact-copies-of-xml-data"></a>Exemple : conservation de copies conformes des données XML  
  Supposons, par exemple, que la législation en vigueur vous oblige à conserver des copies textuelles conformes de vos documents XML. Il pourrait s'agir notamment de documents signés, de documents juridiques ou d'ordres boursiers. Vous pouvez stocker vos documents dans une colonne `[n]varchar(max)`.  
   
  Pour ce qui est des requêtes, convertissez les données en données de type `xml` lors de l'exécution et appliquez-leur une requête Xquery. La conversion lors de l'exécution peut s'avérer onéreuse, surtout si le document est volumineux. Si vous exécutez fréquemment des requêtes, vous pouvez stocker les documents de façon redondante dans une colonne de type de données `xml`, puis indexer cette dernière lorsque vous retournez des copies conformes à partir de la colonne `[n]varchar(max)`.  
@@ -142,7 +142,7 @@ ms.locfileid: "53370001"
   
  Il pourrait s'agir de données relationnelles exposées au format XML pour l'échange des données et les services Web, et de données XML avec un schéma fixe. Pour plus d'informations, consultez [MSDN Online Library](https://go.microsoft.com/fwlink/?linkid=31174)(éventuellement en anglais).  
   
-#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemple : Modélisation des données à l’aide d’un schéma XML annoté (AXSD)  
+#### <a name="example-modeling-data-using-an-annotated-xml-schema-axsd"></a>Exemple : modélisation des données à l’aide d’un schéma XML annoté (AXSD)  
  Partons du principe que vous disposez de données relationnelles (clients, commandes et articles) et que vous voulez les gérer sous forme XML. Définissez une vue XML en utilisant AXSD sur les données relationnelles. La vue XML vous permet de charger en masse les données XML dans vos tables, puis d'interroger et de mettre à jour les données relationnelles à l'aide de la vue XML. Ce modèle s'avère très utile si vous avez à échanger des données contenant des balises XML avec d'autres applications alors que les applications SQL fonctionnent sans interruption.  
   
 ### <a name="hybrid-model"></a>Modèle hybride  

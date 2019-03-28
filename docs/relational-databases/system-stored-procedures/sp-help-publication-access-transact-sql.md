@@ -16,12 +16,12 @@ ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d9c6a12ae648ab11fbdf28f04e6c29733fad8ce0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786365"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531871"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,17 +41,13 @@ sp_help_publication_access [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
- Nom de la publication à laquelle accéder. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication à laquelle accéder. *publication* est **sysname**, sans valeur par défaut.  
   
- [  **@return_granted=**] **'***return_granted***'**  
- ID de la connexion. *return_granted* est **bits**, avec 1 comme valeur par défaut. Si **0** est spécifié et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisée, les connexions disponibles qui apparaissent sur le serveur de publication mais pas sur le serveur de distribution sont retournées. Si **0** est spécifié et l’authentification Windows est utilisée, les connexions ne sont pas spécifiquement d’interdiction d’accès à l’éditeur ou serveur de distribution sont retournées.  
+`[ @return_granted = ] 'return_granted'` ID de connexion. *return_granted* est **bits**, avec 1 comme valeur par défaut. Si **0** est spécifié et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est utilisée, les connexions disponibles qui apparaissent sur le serveur de publication mais pas sur le serveur de distribution sont retournées. Si **0** est spécifié et l’authentification Windows est utilisée, les connexions ne sont pas spécifiquement d’interdiction d’accès à l’éditeur ou serveur de distribution sont retournées.  
   
- [  **@login=**] **'***connexion***'**  
- ID de connexion de sécurité standard. *connexion* est **sysname**, avec une valeur par défaut **%**.  
+`[ @login = ] 'login'` L’ID de connexion de sécurité standard. *connexion* est **sysname**, avec une valeur par défaut **%**.  
   
- [  **@initial_list =**] *initial_list*  
- Indique s'il faut retourner tous les membres bénéficiant d'un accès à la publication ou uniquement ceux qui y avaient accès avant l'ajout de nouveaux membres à la liste. *initial_list* est de type bit, avec une valeur par défaut **0**.  
+`[ @initial_list = ] initial_list` Spécifie s’il faut retourner tous les membres avec accès à une publication ou uniquement ceux qui y avaient accès avant de nouveaux membres ont été ajoutés à la liste. *initial_list* est de type bit, avec une valeur par défaut **0**.  
   
  **1** retourne des informations pour tous les membres de la **sysadmin** rôle serveur fixe avec des connexions valides sur le serveur de distribution qui existait lors de la publication a été créée, ainsi que la connexion actuelle.  
   
@@ -62,8 +58,8 @@ sp_help_publication_access [ @publication = ] 'publication'
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar (256)**|Nom de connexion réel.|  
-|**isntname**|**Int**|**0** = connexion n’est pas un utilisateur de Windows.<br /><br /> **1** = connexion est un utilisateur Windows.|  
-|**isntgroup**|**Int**|**0** = connexion n’est pas un groupe Windows.<br /><br /> **1** = connexion est un groupe Windows.|  
+|**Isntname**|**Int**|**0** = connexion n’est pas un utilisateur de Windows.<br /><br /> **1** = connexion est un utilisateur Windows.|  
+|**Isntgroup**|**Int**|**0** = connexion n’est pas un groupe Windows.<br /><br /> **1** = connexion est un groupe Windows.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

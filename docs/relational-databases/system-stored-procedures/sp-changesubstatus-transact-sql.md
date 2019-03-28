@@ -16,12 +16,12 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: aa9452d7dc2e611b1b581c12cf33e88950eacc2a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212338"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529613"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,38 +65,29 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**. Si *publication* n’est pas spécifiée, toutes les publications sont affectées.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec une valeur par défaut **%**. Si *publication* n’est pas spécifiée, toutes les publications sont affectées.  
   
- [  **@article=**] **'***article***'**  
- Nom de l'article. Doit être unique et propre à la publication. *article* est **sysname**, avec une valeur par défaut **%**. Si *article* n’est pas spécifiée, tous les articles sont affectées.  
+`[ @article = ] 'article'` Est le nom de l’article. Doit être unique et propre à la publication. *article* est **sysname**, avec une valeur par défaut **%**. Si *article* n’est pas spécifiée, tous les articles sont affectées.  
   
- [  **@subscriber=**] **'***abonné***'**  
- Nom de l'Abonné pour lequel changer l'état. *abonné* est **sysname**, avec une valeur par défaut **%**. Si *abonné* n’est pas spécifié, état est modifié pour tous les abonnés à l’article spécifié.  
+`[ @subscriber = ] 'subscriber'` Est le nom de l’abonné pour modifier l’état de. *abonné* est **sysname**, avec une valeur par défaut **%**. Si *abonné* n’est pas spécifié, état est modifié pour tous les abonnés à l’article spécifié.  
   
- [  **@status =**] **'***état***'**  
- L’état de l’abonnement dans le **syssubscriptions** table. *état* est **sysname**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @status = ] 'status'` L’état de l’abonnement dans le **syssubscriptions** table. *état* est **sysname**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
-|**Active**|L'abonné est synchronisé et reçoit des données.|  
-|**inactif**|L'entrée de l'abonné existe, sans abonnement.|  
+|**active**|L'abonné est synchronisé et reçoit des données.|  
+|**inactive**|L'entrée de l'abonné existe, sans abonnement.|  
 |**abonné**|L'abonné demande des données mais n'est pas encore synchronisé.|  
   
- [  **@previous_status=**] **'***previous_status***'**  
- État antérieur de l'abonnement. *previous_status* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre vous permet de modifier les abonnements ayant actuellement cet état, permettant ainsi des fonctions de groupe sur un ensemble spécifique d’abonnements (par exemple, la définition active tous les abonnements retour au **abonné**).  
+`[ @previous_status = ] 'previous_status'` Est l’état précédent de l’abonnement. *previous_status* est **sysname**, avec NULL comme valeur par défaut. Ce paramètre vous permet de modifier les abonnements ayant actuellement cet état, permettant ainsi des fonctions de groupe sur un ensemble spécifique d’abonnements (par exemple, la définition active tous les abonnements retour au **abonné**).  
   
- [  **@destination_db=**] **'***destination_db***'**  
- Nom de la base de données de destination. *destination_db* est **sysname**, avec une valeur par défaut **%**.  
+`[ @destination_db = ] 'destination_db'` Est le nom de la base de données de destination. *destination_db* est **sysname**, avec une valeur par défaut **%**.  
   
- [  **@frequency_type=**] *frequency_type*  
- Fréquence de planification de la tâche de distribution. *frequency_type* est **int**, avec NULL comme valeur par défaut.  
+`[ @frequency_type = ] frequency_type` Est la fréquence de planification de la tâche de distribution. *frequency_type* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@frequency_interval=**] *frequency_interval*  
- Est la valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, avec NULL comme valeur par défaut.  
+`[ @frequency_interval = ] frequency_interval` Est la valeur à appliquer à la fréquence définie par *frequency_type*. *frequency_interval* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@frequency_relative_interval=**] *frequency_relative_interval*  
- Date de la tâche de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur 32 (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_relative_interval = ] frequency_relative_interval` Est la date de la tâche de distribution. Ce paramètre est utilisé lorsque *frequency_type* a la valeur 32 (fréquence mensuelle relative). *frequency_relative_interval* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -107,11 +98,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**16**|Dernière|  
 |NULL (par défaut)||  
   
- [  **@frequency_recurrence_factor=**] *frequency_recurrence_factor*  
- Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec NULL comme valeur par défaut.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` Facteur de récurrence utilisé par *frequency_type*. *frequency_recurrence_factor* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@frequency_subday=**] *frequency_subday*  
- Indique, en minutes, la fréquence de replanification pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
+`[ @frequency_subday = ] frequency_subday` Est la fréquence, en minutes, de replanification nécessaire pendant la période définie. *frequency_subday* est **int**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
@@ -121,61 +110,46 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |**8**|Heure|  
 |NULL (par défaut)||  
   
- [  **@frequency_subday_interval=**] *frequency_subday_interval*  
- Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec NULL comme valeur par défaut.  
+`[ @frequency_subday_interval = ] frequency_subday_interval` Intervalle de *frequency_subday*. *frequency_subday_interval* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@active_start_time_of_day=**] *active_start_time_of_day*  
- Heure du jour de la première planification de la tâche de distribution, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_start_time_of_day = ] active_start_time_of_day` Est l’heure de la journée à laquelle la tâche de distribution est la première planifié, au format HHMMSS. *active_start_time_of_day* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@active_end_time_of_day=**] *active_end_time_of_day*  
- Heure à laquelle la tâche de distribution cesse d'être planifiée, exprimée au format HHMMSS. *active_end_time_of_day* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_end_time_of_day = ] active_end_time_of_day` L’heure de la journée à laquelle la tâche de distribution cesse d’être planifié, représentée au format HHMMSS. *active_end_time_of_day* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@active_start_date=**] *active_start_date*  
- Date de première planification de la tâche de distribution, au format AAAAMMJJ. *active_start_date* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_start_date = ] active_start_date` Est la date à laquelle la tâche de distribution est premier planifiée, au format AAAAMMJJ. *active_start_date* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@active_end_date=**] *active_end_date*  
- Date à laquelle la tâche de distribution cesse d'être planifiée, exprimée au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
+`[ @active_end_date = ] active_end_date` Date à laquelle la tâche de distribution cesse d’être planifié, représentée au format AAAAMMJJ. *active_end_date* est **int**, avec NULL comme valeur par défaut.  
   
- [  **@optional_command_line=**] **'***optional_command_line***'**  
- Invite de commandes facultative. *optional_command_line* est **nvarchar (4000)**, avec NULL comme valeur par défaut.  
+`[ @optional_command_line = ] 'optional_command_line'` Est une invite de commandes facultative. *optional_command_line* est **nvarchar (4000)**, avec NULL comme valeur par défaut.  
   
- [  **@distribution_jobid=**] *id_tâche_distribution*  
- ID du travail de l'Agent de distribution auprès du serveur de distribution de l'abonnement lorsque l'abonnement passe de l'état inactif à actif. Dans les autres cas, il n'est pas défini. Si plus d'un Agent de distribution est impliqué dans un seul appel à cette procédure stockée, le résultat n'est pas défini. *id_tâche_distribution* est **Binary (16)**, avec NULL comme valeur par défaut.  
+`[ @distribution_jobid = ] distribution_jobid` Est l’ID de travail de l’Agent de Distribution sur le serveur de distribution pour l’abonnement lors du changement de l’état de l’abonnement d’inactif à actif. Dans les autres cas, il n'est pas défini. Si plus d'un Agent de distribution est impliqué dans un seul appel à cette procédure stockée, le résultat n'est pas défini. *id_tâche_distribution* est **Binary (16)**, avec NULL comme valeur par défaut.  
   
- [  **@from_auto_sync=**] *from_auto_sync*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @ignore_distributor = ] ignore_distributor` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@offloadagent=** ] *remote_agent_activation*  
+`[ @offloadagent = ] remote_agent_activation`
  > [!NOTE]  
 >  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Paramètre *remote_agent_activation* à une valeur autre que **0** génère une erreur.  
   
- [  **@offloadserver=** ] **'***remote_agent_server_name***'**  
+`[ @offloadserver = ] 'remote_agent_server_name'`
  > [!NOTE]  
 >  L'activation d'agent distant est déconseillée et n'est plus prise en charge. Ce paramètre est uniquement pris en charge pour assurer la compatibilité descendante des scripts. Paramètre *remote_agent_server_name* vers n’importe quelle valeur non NULL génère une erreur.  
   
- [ **@dts_package_name**=] **'***l’argument dts_package_name***'**  
- Spécifie le nom du package DTS (Data Transformation Services). *l’argument dts_package_name* est un **sysname**, avec NULL comme valeur par défaut. Par exemple, pour un package nommé **DTSPub_Package** vous spécifieriez `@dts_package_name = N'DTSPub_Package'`.  
+`[ @dts_package_name = ] 'dts_package_name'` Spécifie le nom du package Data Transformation Services (DTS). *l’argument dts_package_name* est un **sysname**, avec NULL comme valeur par défaut. Par exemple, pour un package nommé **DTSPub_Package** vous spécifieriez `@dts_package_name = N'DTSPub_Package'`.  
   
- [ **@dts_package_password**=] **'***dts_package_password***'**  
- Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.  
+`[ @dts_package_password = ] 'dts_package_password'` Spécifie le mot de passe du package. *dts_package_password* est **sysname** avec une valeur par défaut NULL, qui indique que la propriété de mot de passe ne doit être modifiée.  
   
 > [!NOTE]  
 >  Un package DTS doit avoir un mot de passe.  
   
- [ **@dts_package_location**=] *dts_package_location*  
- Spécifie l'emplacement du package. *dts_package_location* est un **int**, avec une valeur par défaut **0**. Si **0**, l’emplacement du package est sur le serveur de distribution. Si **1**, l’emplacement du package est sur l’abonné. L’emplacement du package peut être **distributeur** ou **abonné**.  
+`[ @dts_package_location = ] dts_package_location` Spécifie l’emplacement du package. *dts_package_location* est un **int**, avec une valeur par défaut **0**. Si **0**, l’emplacement du package est sur le serveur de distribution. Si **1**, l’emplacement du package est sur l’abonné. L’emplacement du package peut être **distributeur** ou **abonné**.  
   
- [ **@skipobjectactivation**=] *skipobjectactivation*  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @skipobjectactivation = ] skipobjectactivation` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [  **@distribution_job_name=** ] **'***distribution_job_name***'**  
- Nom du travail de distribution. *distribution_job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @distribution_job_name = ] 'distribution_job_name'` Est le nom de la tâche de distribution. *distribution_job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ **@publisher**=] **'***publisher***'**  
- Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @publisher = ] 'publisher'` Spécifie un non - [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  *serveur de publication* ne doit pas être utilisé lors de la modification des propriétés de l’article sur un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] serveur de publication.  

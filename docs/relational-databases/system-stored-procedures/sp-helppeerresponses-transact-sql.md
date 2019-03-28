@@ -16,12 +16,12 @@ ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a3cce9577f609a0216b5d96e82eeacbdc295b26d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 4e29ebcc2ecb1811a9465c63464219cb93f427a5
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802201"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534411"
 ---
 # <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,15 +38,14 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@request_id**=] *request_id*  
- ID d'une demande d'état spécifique. *request_id* est **int**, sans valeur par défaut.  
+`[ @request_id = ] request_id` Est l’ID de demande d’un état spécifique. *request_id* est **int**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**Int**|ID de la demande d'état.|  
-|**homologue**|**sysname**|Nom de l'homologue qui a généré la réponse.|  
+|**peer**|**sysname**|Nom de l'homologue qui a généré la réponse.|  
 |**peer_db**|**sysname**|Nom de la base de données sur l'homologue qui a généré la réponse.|  
 |**received_date**|**datetime**|Date et heure auxquelles le demandeur a reçu la réponse de l'homologue expéditeur.|  
   

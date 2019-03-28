@@ -16,12 +16,12 @@ ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 88cf393ac488f6e6f4c078b9bd346a3e6cb53204
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 0576f180809a4432af022d278867d847c8087dd4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823053"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526211"
 ---
 # <a name="sprestoremergeidentityrange-transact-sql"></a>sp_restoremergeidentityrange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,11 +39,9 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@publication** =] **'***publication***'**  
- Nom de la publication. *publication* est **sysname**, avec la valeur par défaut de **tous les**. Lorsque cet argument est spécifié, seules les plages d'identité de la publication correspondante sont restaurées.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, avec la valeur par défaut de **tous les**. Lorsque cet argument est spécifié, seules les plages d'identité de la publication correspondante sont restaurées.  
   
- [ **@article** =] **'***article***'**  
- Nom de l'article. *article* est **sysname**, avec une valeur par défaut **tous les**. Lorsque cet argument est spécifié, seules les plages d'identité de l'article correspondant sont restaurées.  
+`[ @article = ] 'article'` Est le nom de l’article. *article* est **sysname**, avec une valeur par défaut **tous les**. Lorsque cet argument est spécifié, seules les plages d'identité de l'article correspondant sont restaurées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

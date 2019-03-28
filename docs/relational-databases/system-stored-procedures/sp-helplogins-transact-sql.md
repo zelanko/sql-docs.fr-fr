@@ -18,12 +18,12 @@ ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b043b71ca3f0349ce8ed7ac7accf136f4b7eff60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595227"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529741"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@LoginNamePattern =** ] **'***connexion***'**  
- Est un nom de connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit exister s’il est spécifié. Si *connexion* est ne pas spécifié, les informations sur toutes les connexions sont renvoyées.  
+`[ @LoginNamePattern = ] 'login'` Est un nom de connexion. *login* est de type **sysname**, avec NULL comme valeur par défaut. *connexion* doit exister s’il est spécifié. Si *connexion* est ne pas spécifié, les informations sur toutes les connexions sont renvoyées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -55,8 +54,8 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**SID**|**varbinary(85)**|ID de sécurité de la connexion (SID).|  
 |**DefDBName**|**sysname**|Par défaut de base de données qui **LoginName** utilise pour se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**DefLangName**|**sysname**|Langue par défaut utilisée par **LoginName**.|  
-|**Auser**|**char (5)**|Oui = **LoginName** a un nom d’utilisateur associé dans une base de données.<br /><br /> Non = **LoginName** n’a pas de nom d’utilisateur associé.|  
-|**À distance**|**car (7)**|Oui = **LoginName** a une connexion distante associée.<br /><br /> Non = **LoginName** n’a pas de connexion associée.|  
+|**Auser**|**char(5)**|Oui = **LoginName** a un nom d’utilisateur associé dans une base de données.<br /><br /> Non = **LoginName** n’a pas de nom d’utilisateur associé.|  
+|**ARemote**|**char(7)**|Oui = **LoginName** a une connexion distante associée.<br /><br /> Non = **LoginName** n’a pas de connexion associée.|  
   
  Le deuxième rapport contient des informations à propos des utilisateurs mappés à chaque connexion et des appartenances aux rôles de la connexion, comme illustré dans le tableau suivant.  
   
@@ -65,12 +64,12 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**LoginName**|**sysname**|Nom de connexion.|  
 |**DBName**|**sysname**|Par défaut de base de données qui **LoginName** utilise pour se connecter à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**UserName**|**sysname**|Compte d’utilisateur **LoginName** est mappé dans **DBName**et les rôles qui **LoginName** est un membre dans **DBName**.|  
-|**UserOrAlias**|**char (8)**|MemberOf = **nom d’utilisateur** est un rôle.<br /><br /> Utilisateur = **nom d’utilisateur** est un compte d’utilisateur.|  
+|**UserOrAlias**|**char(8)**|MemberOf = **nom d’utilisateur** est un rôle.<br /><br /> Utilisateur = **nom d’utilisateur** est un compte d’utilisateur.|  
   
 ## <a name="remarks"></a>Notes  
  Avant de supprimer un compte de connexion, utilisez **sp_helplogins** pour identifier les comptes d’utilisateur qui sont mappées à la connexion.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **securityadmin** rôle serveur fixe.  
   
  Pour identifier tous les comptes d’utilisateur mappés à une connexion donnée, **sp_helplogins** doit vérifier toutes les bases de données au sein du serveur. Par conséquent, chaque base de données du serveur doit remplir une des conditions suivantes :  

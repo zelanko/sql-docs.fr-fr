@@ -18,12 +18,12 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7e7305e73d1f2f35d5cb4666e68114c9ee8f58e7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 41c84c97027c8bfae82d3ac457c454f6a4d497e6
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126209"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533361"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@rolename =** ] **'**_rôle_**'**  
- Nom d'un rôle de base de données fixe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valide. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si *rôle* n’est pas spécifié, les autorisations pour tous les rôles de base de données fixes sont affichées.  
+`[ @rolename = ] 'role'` Est le nom du valide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rôle de base de données fixe. *rôle* est **sysname**, avec NULL comme valeur par défaut. Si *rôle* n’est pas spécifié, les autorisations pour tous les rôles de base de données fixes sont affichées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -54,7 +53,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|Nom du rôle de base de données fixe|  
-|**Autorisation**|**nvarchar (70)**|Autorisations associées **DbFixedRole**|  
+|**Autorisation**|**nvarchar(70)**|Autorisations associées **DbFixedRole**|  
   
 ## <a name="remarks"></a>Notes  
  Pour afficher une liste des rôles de base de données fixe, exécutez **sp_helpdbfixedrole**. Le tableau suivant présente les rôles de base de données fixes.  

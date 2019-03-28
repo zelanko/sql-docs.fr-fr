@@ -21,12 +21,12 @@ ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 81631efabd541ace5dd7296b54d806ec3750d327
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 8a260e68064b0a9218da07a8a65cf6b584382b4b
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169060"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528641"
 ---
 # <a name="spdeletemaintenanceplandb-transact-sql"></a>sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,11 +49,9 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@plan_id =**] **'**_plan\_id_**'**  
- ID du plan de maintenance. *plan_id* est **uniqueidentifier**.  
+`[ @plan_id = ] 'plan\_id'` Spécifie l’ID de plan de maintenance. *plan_id* est **uniqueidentifier**.  
   
- [  **@db_name =**] **'**_base de données\_nom_**'**  
- Nom de la base de données à supprimer du plan de maintenance. *database_name* est de type **sysname**.  
+`[ @db_name = ] 'database\_name'` Spécifie le nom de la base de données doit être supprimé du plan de maintenance. *database_name* est de type **sysname**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -65,7 +63,7 @@ sp_delete_maintenance_plan_db [ @plan_id = ] 'plan_id' ,
   
  Lorsque **sp_delete_maintenance_plan_db** supprime la dernière base de données à partir du plan de maintenance, la procédure stockée supprime également le plan de maintenance.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_delete_maintenance_plan_db**.  
   
 ## <a name="examples"></a>Exemples  

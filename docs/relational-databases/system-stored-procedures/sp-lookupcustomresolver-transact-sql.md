@@ -16,12 +16,12 @@ ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 128efbfb754508cf3ad395c89b2085f7f8b6297e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: b7f1bfc868b34ac16e1c38aedc9193002d35d5b8
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783031"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58532728"
 ---
 # <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,23 +43,17 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@article_resolver =** ] **'***article_resolver***'**  
- Spécifie le nom de la logique métier personnalisée en cours de désinscription. *article_resolver* est **nvarchar (255)**, sans valeur par défaut. Si la logique d'entreprise en cours de suppression est un composant COM, ce paramètre est le nom convivial qui lui est octroyé. Si la logique d'entreprise est un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ce paramètre est le nom de cet assembly.  
+`[ @article_resolver = ] 'article_resolver'` Spécifie le nom de la logique métier personnalisée en cours de désinscription. *article_resolver* est **nvarchar (255)**, sans valeur par défaut. Si la logique d'entreprise en cours de suppression est un composant COM, ce paramètre est le nom convivial qui lui est octroyé. Si la logique d'entreprise est un assembly [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework, ce paramètre est le nom de cet assembly.  
   
- [ **@resolver_clsid**=] **'***resolver_clsid***'** sortie  
- Valeur CLSID de l’objet COM associé au nom de la logique métier personnalisée spécifiée dans le *article_resolver* paramètre. *resolver_clsid* est **nvarchar (50)**, avec NULL comme valeur par défaut.  
+`[ @resolver_clsid = ] 'resolver_clsid' OUTPUT` Valeur CLSID de l’objet COM associé au nom de la logique métier personnalisée spécifiée dans le *article_resolver* paramètre. *resolver_clsid* est **nvarchar (50)**, avec NULL comme valeur par défaut.  
   
- [  **@is_dotnet_assembly=** ] **'***is_dotnet_assembly***'** sortie  
- Spécifie le type de la logique métier personnalisée en cours d'enregistrement. *is_dotnet_assembly* est **bits**, avec 0 comme valeur par défaut. **1** indique que la logique métier personnalisée en cours d’inscription est un gestionnaire de logique métier Assembly ; **0** indique qu’il s’agit d’un composant COM.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly' OUTPUT` Spécifie le type de logique métier personnalisée en cours d’inscription. *is_dotnet_assembly* est **bits**, avec 0 comme valeur par défaut. **1** indique que la logique métier personnalisée en cours d’inscription est un gestionnaire de logique métier Assembly ; **0** indique qu’il s’agit d’un composant COM.  
   
- [  **@dotnet_assembly_name=** ] **'***dotnet_assembly_name***'** sortie  
- Nom de l'assembly qui implémente le gestionnaire de logique métier. *dotnet_assembly_name* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` Est le nom de l’assembly qui implémente le Gestionnaire de logique métier. *dotnet_assembly_name* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
- [  **@dotnet_class_name=** ] **'***dotnet_class_name***'** sortie  
- Nom de la classe qui remplace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> pour implémenter le gestionnaire de logique métier. *dotnet_class_name* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` Est le nom de la classe qui remplace <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> pour implémenter le Gestionnaire de logique métier. *dotnet_class_name* est **nvarchar (255)**, avec NULL comme valeur par défaut.  
   
- [  **@publisher=** ] **'***publisher***'**  
- Nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut. Utilisez ce paramètre lorsque la procédure stockée n'est pas appelée depuis le serveur de publication. Si le serveur local n'est pas spécifié, on suppose qu'il s'agit du serveur de publication.  
+`[ @publisher = ] 'publisher'` Est le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut. Utilisez ce paramètre lorsque la procédure stockée n'est pas appelée depuis le serveur de publication. Si le serveur local n'est pas spécifié, on suppose qu'il s'agit du serveur de publication.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

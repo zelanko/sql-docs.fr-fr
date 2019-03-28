@@ -18,12 +18,12 @@ ms.assetid: 42797510-aa5d-4564-85ac-27418419af9c
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a821d6b114b1975dd9700b5f59d1cf66ebadb76a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 547ac1bce010e1f25eb2fce178844ff2b3f77bd1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745267"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526941"
 ---
 # <a name="sphelprolemember-transact-sql"></a>sp_helprolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +40,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@rolename =** ] **'** *rôle* **'**  
- Nom d'un rôle dans la base de données active. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit exister dans la base de données actuelle. Si *rôle* n’est pas spécifié, tous les rôles qui contiennent au moins un membre à partir de la base de données en cours sont retournées.  
+`[ @rolename = ] ' role '` Est le nom d’un rôle dans la base de données actuelle. *rôle* est **sysname**, avec NULL comme valeur par défaut. *rôle* doit exister dans la base de données actuelle. Si *rôle* n’est pas spécifié, tous les rôles qui contiennent au moins un membre à partir de la base de données en cours sont retournées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -51,7 +50,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**DbRole**|**sysname**|Nom du rôle dans la base de données en cours.|  
-|**Nom de membre**|**sysname**|Nom d’un membre de **DbRole.**|  
+|**MemberName**|**sysname**|Nom d’un membre de **DbRole.**|  
 |**MemberSID**|**varbinary(85)**|Identificateur de sécurité de **MemberName.**|  
   
 ## <a name="remarks"></a>Notes  
@@ -61,7 +60,7 @@ sp_helprolemember [ [ @rolename = ] 'role' ]
   
  Utilisez [IS_ROLEMEMBER &#40;Transact-SQL&#41; ](../../t-sql/functions/is-rolemember-transact-sql.md) pour vérifier l’appartenance au rôle d’un utilisateur spécifié.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle **public** .  
   
 ## <a name="examples"></a>Exemples  

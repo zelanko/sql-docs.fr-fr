@@ -16,12 +16,12 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 57866bdc46e88587d0d8b3db27a416c8153b6003
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773901"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535916"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,29 +41,25 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ **@type** =] **'***type***'**  
- Type de la procédure stockée ou du script personnalisé en cours d'inscription. *type* est **varchar (16)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
+`[ @type = ] 'type'` Le type de procédure stockée personnalisée ou du script en cours d’inscription. *type* est **varchar (16)**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
 |-----------|-----------------|  
 |**insert**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction INSERT est répliquée.|  
-|**Mise à jour**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction UPDATE est répliquée.|  
+|**update**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction UPDATE est répliquée.|  
 |**delete**|La procédure stockée personnalisée inscrite est exécutée lorsqu'une instruction DELETE est répliquée.|  
 |**custom_script**|Le script est exécuté à la fin du déclencheur DDL (Data Definition Language).|  
   
- [ **@value**=] **'***valeur***'**  
- Nom d'une procédure stockée ou nom et chemin d'accès complet du fichier de script [!INCLUDE[tsql](../../includes/tsql-md.md)] en cours d'inscription. *valeur* est **nvarchar (1024)**, sans valeur par défaut.  
+`[ @value = ] 'value'` Nom d’une procédure stockée ou le nom et le chemin complet vers le [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script qui est en cours d’inscription. *valeur* est **nvarchar (1024)**, sans valeur par défaut.  
   
 > [!NOTE]  
 >  En spécifiant NULL pour *valeur*paramètre annule un script précédemment enregistré, ce qui est le même que l’exécution [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  
   
  Lorsque la valeur de *type* est **custom_script**, le nom et le chemin d’accès complet d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] fichier de script est attendu. Sinon, *valeur* doit être le nom d’une procédure stockée inscrit.  
   
- [ **@publication**=] **'***publication***'**  
- Nom de la publication dont la procédure stockée ou le script personnalisé est en cours d'inscription. *publication* est **sysname**, avec une valeur par défaut **NULL**.  
+`[ @publication = ] 'publication'` Nom de la publication pour laquelle la procédure stockée personnalisée ou un script est en cours d’inscription. *publication* est **sysname**, avec une valeur par défaut **NULL**.  
   
- [ **@article**=] **'***article***'**  
- Nom de l'article dont la procédure stockée ou le script personnalisé est en cours d'inscription. *article* est **sysname**, avec une valeur par défaut **NULL**.  
+`[ @article = ] 'article'` Nom de l’article pour lequel la procédure stockée personnalisée ou un script est enregistré. *article* est **sysname**, avec une valeur par défaut **NULL**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  

@@ -16,12 +16,12 @@ ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 30e0828c7d116c2c48c398ecdee78899ad8913db
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818881"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535411"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,11 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@tablename =**] **'***tablename***'**  
- Est le nom de la table. *TableName* est **sysname**, sans valeur par défaut. La table doit faire partie d'un abonnement en file d'attente.  
+`[ @tablename = ] 'tablename'` Est le nom de la table. *TableName* est **sysname**, sans valeur par défaut. La table doit faire partie d'un abonnement en file d'attente.  
   
- [  **@owner =**] **'***propriétaire***'**  
- Est le propriétaire de l’abonnement. *propriétaire* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @owner = ] 'owner'` Est le propriétaire de l’abonnement. *propriétaire* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@tranid =** ] **'***transaction_id***'**  
- Permet de filtrer les données de sortie par ID de transaction. *transaction_id* est **nvarchar (70)**, avec NULL comme valeur par défaut. Si cet argument est défini, l'identificateur de transaction associé à la commande placée en file d'attente est affiché. Si la valeur est NULL, toutes les commandes figurant dans la file d'attente sont affichées.  
+`[ @tranid = ] 'transaction_id'` Permet à la sortie à filtrer par ID de transaction. *transaction_id* est **nvarchar (70)**, avec NULL comme valeur par défaut. Si cet argument est défini, l'identificateur de transaction associé à la commande placée en file d'attente est affiché. Si la valeur est NULL, toutes les commandes figurant dans la file d'attente sont affichées.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -58,9 +55,9 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**Action**|**nvarchar(10)**|Type d'action à appliquer au moment de la synchronisation.<br /><br /> INS= insertion <br /><br /> DEL = suppression<br /><br /> UPD = mise à jour|  
-|**tranid**|**nvarchar (70)**|Identificateur de transaction sous lequel la commande a été exécutée.|  
+|**Tranid**|**nvarchar(70)**|Identificateur de transaction sous lequel la commande a été exécutée.|  
 |**Colonne1 table... n**||La valeur pour chaque colonne de la table spécifiée dans *tablename*.|  
-|**MSrepl_tran_version**|**uniqueidentifier**|Cette colonne permet d'assurer le suivi des modifications apportées aux données répliquées et de détecter les conflits sur le serveur de publication. Cette colonne est automatiquement ajoutée à la table.|  
+|**msrepl_tran_version**|**uniqueidentifier**|Cette colonne permet d'assurer le suivi des modifications apportées aux données répliquées et de détecter les conflits sur le serveur de publication. Cette colonne est automatiquement ajoutée à la table.|  
   
 ## <a name="remarks"></a>Notes  
  **sp_getqueuedrows** est utilisé sur les abonnés concernés dans la mise à jour en file d’attente.  

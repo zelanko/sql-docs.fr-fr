@@ -18,12 +18,12 @@ ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9408fe7939b5a34a18ecde2b1a98f68ac19e49a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84b1e2840240d0d02a3193ecc592a13331719c7a
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628538"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527821"
 ---
 # <a name="spdeletejobstep-transact-sql"></a>sp_delete_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +42,13 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_id=** ] *job_id*  
- Numéro d'identification du travail duquel il faut supprimer l'étape. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Le numéro d’identification du travail à partir de laquelle supprimer l’étape. *job_id*est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@job_name=** ] **'***nom_travail***'**  
- Nom du travail duquel il faut supprimer l'étape. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Le nom du travail à partir de laquelle supprimer l’étape. *job_name*est **sysname**, avec NULL comme valeur par défaut.  
   
-> **Remarque :** soit *job_id* ou *nom_travail* doit être spécifié ; ne peut pas être spécifiés.  
+> **REMARQUE :** Soit *job_id* ou *nom_travail* doit être spécifié ; ne peut pas être spécifiés.  
   
- [  **@step_id=** ] *id_de_l*  
- Numéro d'identification de l'étape supprimée. *l’argument id_étape*est **int**, sans valeur par défaut.  
+`[ @step_id = ] step_id` Le numéro d’identification de l’étape en cours de suppression. *l’argument id_étape*est **int**, sans valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -64,11 +61,11 @@ sp_delete_jobstep { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Pour plus d’informations sur les étapes associées à un travail particulier, exécutez **sp_help_jobstep**.  
   
-> **Remarque :** appelant **sp_delete_jobstep** avec un *id_de_l* la valeur zéro supprime toutes les étapes de travail pour le travail.  
+> **REMARQUE :** Appel **sp_delete_jobstep** avec un *id_de_l* la valeur zéro supprime toutes les étapes de travail pour le travail.  
   
  Microsoft SQL Server Management Studio est un outil simple, basé sur une interface graphique, qui permet de gérer les travaux. Son utilisation est recommandée pour créer et gérer l'infrastructure des travaux.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

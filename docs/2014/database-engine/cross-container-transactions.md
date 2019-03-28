@@ -10,12 +10,12 @@ ms.assetid: 5d84b51a-ec17-4c5c-b80e-9e994fc8ae80
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 40420db76ee8ce5b1fcf1d085a78d7b17690105d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538594"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528295"
 ---
 # <a name="cross-container-transactions"></a>Transactions entre conteneurs
   Les transactions entre conteneurs sont des transactions utilisateur implicites ou explicites qui incluent des appels aux procédures stockées compilées en mode natif ou des opérations sur des tables mémoire optimisées.  
@@ -32,7 +32,7 @@ ms.locfileid: "52538594"
 ### <a name="specifying-the-isolation-level-of-individual-operations"></a>Spécifier le niveau d'isolation d'opérations individuelles  
  Pour définir un niveau d'isolation différent pour un ensemble d'instructions dans une transaction, vous pouvez utiliser `SET TRANSACTION ISOLATION LEVEL`. L'exemple de transaction suivant utilise le niveau d'isolation SERIALIZABLE comme valeur par défaut. Les opérations d'insertion et de sélection sur t3, t2 et t1 sont exécutées avec l'isolation REPEATABLE READ.  
   
-```tsql  
+```sql  
 set transaction isolation level serializable  
 go  
   
@@ -49,7 +49,7 @@ commit
   
  Pour définir un niveau d'isolation pour certaines opérations de lecture différent de la valeur par défaut de la transaction, vous pouvez utiliser un indicateur de table (par exemple, SERIALIZABLE). Chaque sélection correspond à une opération de lecture, et chaque mise à jour et chaque suppression correspondent à une lecture, car la ligne doit toujours être lue avant de pouvoir être mise à jour ou supprimée. Les opérations d'insertion n'ont pas de niveau d'isolation, car les écritures sont toujours isolées dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Dans l'exemple suivant, le niveau d'isolation de la transaction est READ COMMITTED, mais la table t1 est accessible avec l'isolation SERIALIZABLE, et t2 avec l'isolation SNAPSHOT.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -103,7 +103,7 @@ commit
   
  Prenons l'exemple de transaction suivante :  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   
@@ -149,7 +149,7 @@ commit
   
  Le côté mémoire optimisé de la transaction peut atteindre l'un des deux niveaux d'isolation suivants : si la condition 1 est « True », il atteint le niveau SERIALIZABLE, tandis que si elle est « False », il n'atteint que le niveau SNAPSHOT.  
   
-```tsql  
+```sql  
 set transaction isolation level read committed  
 go  
   

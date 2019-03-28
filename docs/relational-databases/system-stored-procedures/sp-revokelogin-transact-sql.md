@@ -18,12 +18,12 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 57c7ef9242b6c974c8043f8f6ab237b0fbe07941
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2763b573eff741575c1d496efb0e861472714823
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706651"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58533001"
 ---
 # <a name="sprevokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,8 +43,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame=**] **'***connexion***'**  
- Nom de l'utilisateur ou du groupe Windows. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être n’importe quel nom d’utilisateur Windows existant ou un groupe sous la forme *nom de l’ordinateur*\\*utilisateur ou un domaine*\\*utilisateur*.  
+`[ @loginame = ] 'login'` Est le nom de l’utilisateur de Windows ou d’un groupe. *connexion* est **sysname**, sans valeur par défaut. *connexion* peut être n’importe quel nom d’utilisateur Windows existant ou un groupe sous la forme *nom de l’ordinateur*\\*utilisateur ou un domaine*\\*utilisateur*.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -64,7 +63,7 @@ sp_revokelogin [ADVWORKS\john]
   
  **sp_revokelogin** ne peut pas être exécutée dans une transaction définie par l’utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN sur le serveur.  
   
 ## <a name="examples"></a>Exemples  

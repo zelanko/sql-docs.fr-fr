@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: b35e2baef80dbacf039b9c767f7798ddba0d90a9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: cb77f5d8bda6b05794499faa6e6e04d1fafa53ea
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591553"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58534881"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +43,9 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@loginame =** ] **'**_connexion_ **'**  
- Nom du groupe Windows, de la connexion d'accès Windows ou de la connexion d'accès [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à associer au nouvel utilisateur de la base de données. Noms des groupes de Windows et des connexions de Windows doivent être qualifiés avec un nom de domaine Windows sous la forme *domaine*\\*connexion*; par exemple, **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *connexion* est un **sysname**, sans valeur par défaut.  
+`[ @loginame = ] 'login_ '` Est le nom du groupe Windows, connexion de Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion à mapper au nouvel utilisateur de base de données. Noms des groupes de Windows et des connexions de Windows doivent être qualifiés avec un nom de domaine Windows sous la forme *domaine*\\*connexion*; par exemple, **LONDON\Joeb**. La connexion ne peut pas être déjà associée à un utilisateur de la base de données. *connexion* est un **sysname**, sans valeur par défaut.  
   
- [  **@name_in_db=**] **'**_nom_dans_la_base_de_données_**'** [ **sortie**]  
- Nom du nouvel utilisateur de base de données. *nom_dans_la_base_de_données* est une variable de sortie avec un type de données **sysname**et une valeur par défaut NULL. Si non spécifié, *connexion* est utilisé. S’il est spécifié en tant que variable OUTPUT avec une valeur NULL, **@name_in_db** a la valeur *connexion*. *nom_dans_la_base_de_données* ne doit pas déjà exister dans la base de données actuelle.  
+``[ @name_in_db = ] 'name_in_db' [ OUTPUT]`` Est le nom du nouvel utilisateur de base de données. *nom_dans_la_base_de_données* est une variable de sortie avec un type de données **sysname**et une valeur par défaut NULL. Si non spécifié, *connexion* est utilisé. S’il est spécifié en tant que variable OUTPUT avec une valeur NULL, **@name_in_db** a la valeur *connexion*. *nom_dans_la_base_de_données* ne doit pas déjà exister dans la base de données actuelle.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  

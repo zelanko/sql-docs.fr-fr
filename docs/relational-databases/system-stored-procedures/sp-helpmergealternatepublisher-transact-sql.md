@@ -16,12 +16,12 @@ ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a0ff0acfc4e3eff25b4281637d1f707ce925a7df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c00e7c26a429836f0d350e60530d2dc1db8c2a61
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802251"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58526411"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +38,11 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publisher=**] **'***publisher***'**  
- Est le nom de l’autre serveur de publication. *publisher* est **sysname**, sans valeur par défaut.  
+`[ @publisher = ] 'publisher'` Est le nom de l’autre serveur de publication. *publisher* est **sysname**, sans valeur par défaut.  
   
- [  **@publisher_db=**] **'***publisher_db***'**  
- Est le nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
+`[ @publisher_db = ] 'publisher_db'` Est le nom de la base de données de publication. *publisher_db* est **sysname**, sans valeur par défaut.  
   
- [  **@publication=**] **'***publication***'**  
- Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication. *publication* est **sysname**, sans valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
   
@@ -55,7 +52,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publisher_db**|**sysname**|Nom de la base de données de publication.|  
 |**alternate_publication**|**sysname**|Nom de la publication.|  
 |**alternate_distributor**|**sysname**|Nom du serveur de distribution.|  
-|**nom_convivial**|**nvarchar(255)**|Description de l'autre serveur de publication.|  
+|**friendly_name**|**nvarchar(255)**|Description de l'autre serveur de publication.|  
 |**enabled**|**bit**|Indique si le serveur est un autre serveur de publication. **1** Spécifie que le serveur de publication est activée en tant qu’un autre serveur de publication. **0** Spécifie qu’il n’est pas activé.|  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  

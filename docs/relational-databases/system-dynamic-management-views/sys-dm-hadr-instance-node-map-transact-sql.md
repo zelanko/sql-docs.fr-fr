@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_hadr_instance_node_map (Transact-SQL) | Microsoft Docs
+title: sys.dm_hadr_instance_node_map (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -15,23 +15,23 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - Availability Groups [SQL Server], monitoring
-- Availability Groups [SQL Server], WSFC clusters
+- Availability Groups [SQL Server], WSFC
 - sys.sys.dm_hadr_instance_node_map dynamic management view
 ms.assetid: ccfaf62c-9f87-43cf-a5e7-8942e91dd041
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: e857682f5bb03256b129521840f8969e797e1a5f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c3e0b022996ab5b0f6de91773871fc7357c29e7f
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535735"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511386"
 ---
 # <a name="sysdmhadrinstancenodemap-transact-sql"></a>sys.dm_hadr_instance_node_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Pour chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge un réplica de disponibilité qui est joint à son groupe de disponibilité Always On, retourne le nom du nœud de Clustering de basculement Windows Server (WSFC) qui héberge l’instance de serveur. Cette vue de gestion dynamique permet les utilisations suivantes :  
+  Pour chaque instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui héberge un réplica de disponibilité qui est joint à son groupe de disponibilité Always On, retourne le nom du nœud de Cluster de basculement Windows Server (WSFC) qui héberge l’instance de serveur. Cette vue de gestion dynamique permet les utilisations suivantes :  
   
 -   Cette vue de gestion dynamique est utile pour détecter un groupe de disponibilité avec plusieurs réplicas de disponibilité hébergés sur le même nœud WSFC, ce qui correspond à une configuration non prise en charge qui peut se produire après un basculement FCI si le groupe de disponibilité n'est pas correctement configuré. Pour plus d’informations, consultez [Clustering de basculement et groupes de disponibilité Always On &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "52535735"
 |-----------------|---------------|-----------------|  
 |**ag_resource_id**|**nvarchar (256)**|ID unique du groupe de disponibilité en tant que ressource dans le cluster WSFC.|  
 |**instance_name**|**nvarchar (256)**|Nom -*server*/*instance*-d’une instance de serveur qui héberge un réplica du groupe de disponibilité.|  
-|**nom_nœud**|**nvarchar (256)**|Nom du nœud de cluster WSFC.|  
+|**node_name**|**nvarchar (256)**|Nom du nœud WSFC.|  
   
 ## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  

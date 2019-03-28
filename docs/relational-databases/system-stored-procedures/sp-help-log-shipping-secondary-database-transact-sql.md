@@ -18,12 +18,12 @@ ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 19bac76afeb56bf196b7f717596777435d813f04
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ce38780d40347f237f3a09a6dea5376fb1cf47d9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846427"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527031"
 ---
 # <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +44,9 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@secondary_database =** ] '*secondary_database*'  
- Nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
+`[ @secondary_database = ] 'secondary_database'` Est le nom de la base de données secondaire. *secondary_database* est **sysname**, sans valeur par défaut.  
   
- [  **@secondary_id =** ] '*secondary_id*'  
- ID du serveur secondaire dans la configuration d'envoi de journaux. *secondary_id* est **uniqueidentifier** et ne peut pas être NULL.  
+`[ @secondary_id = ] 'secondary_id'` L’ID pour le serveur secondaire dans la configuration d’envoi de journaux. *secondary_id* est **uniqueidentifier** et ne peut pas être NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -92,7 +90,7 @@ sp_help_log_shipping_secondary_database
   
  **sp_help_log_shipping_secondary_database** doit être exécuté à partir de la **master** base de données sur le serveur secondaire.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  

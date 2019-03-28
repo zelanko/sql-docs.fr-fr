@@ -18,19 +18,19 @@ ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 9fac8fd56139b340df2a2c4cdcfc7376de02dcab
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49168849"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535631"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Renvoie des informations sur le plan de maintenance spécifié. Si aucun plan n'est spécifié, cette procédure stockée renvoie des informations sur tous les plans de maintenance.  
   
-> **Remarque :** cette procédure stockée est utilisée avec les plans de maintenance de base de données. Cette fonctionnalité a été remplacée par des plans de maintenance qui n'utilisent pas cette procédure stockée. Utilisez cette procédure pour gérer des plans de maintenance de base de données sur des installations qui ont été mises à niveau à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+> **REMARQUE :** Cette procédure stockée s'utilise avec des plans de maintenance de base de données. Cette fonctionnalité a été remplacée par des plans de maintenance qui n'utilisent pas cette procédure stockée. Utilisez cette procédure pour gérer des plans de maintenance de base de données sur des installations qui ont été mises à niveau à partir d'une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
@@ -45,14 +45,13 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@plan_id =**] **'**_plan\_id_**'**  
- Spécifie l’ID de plan du plan de maintenance. *plan_id* est **UNIQUEIDENTIFIER**. La valeur par défaut est NULL.  
+`[ @plan_id = ] 'plan\_id'` Spécifie l’ID de plan du plan de maintenance. *plan_id* is **UNIQUEIDENTIFIER**. La valeur par défaut est NULL.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Si *plan_id* est spécifié, **sp_help_maintenance_plan** renvoie trois tables : Plan, base de données et le travail.  
+ Si *plan_id* est spécifié, **sp_help_maintenance_plan** renvoie trois tables : Plan, Database et Job.  
   
 ### <a name="plan-table"></a>Table Plan  
   
@@ -85,7 +84,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
 ## <a name="remarks"></a>Notes  
  **sp_help_maintenance_plan** est dans le **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** du rôle serveur fixe peuvent exécuter **sp_help_maintenance_plan**.  
   
 ## <a name="examples"></a>Exemples  

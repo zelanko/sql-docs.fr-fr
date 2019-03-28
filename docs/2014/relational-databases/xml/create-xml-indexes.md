@@ -10,15 +10,15 @@ helpviewer_keywords:
 - indexes [XML in SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: 6ecac598-355d-4408-baf7-1b2e8d4cf7c1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 3685674df21d909d88779d1aa82030b8ee3cc283
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142719"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527514"
 ---
 # <a name="create-xml-indexes"></a>Créer des index XML
   Cette rubrique décrit comment créer des index XML primaires et secondaires.  
@@ -46,7 +46,7 @@ ms.locfileid: "48142719"
   
  Vous ne pouvez pas créer un index XML sur un `xml` type de colonne dans une vue, sur un **table** variable table avec `xml` colonnes de type ou `xml` variables de type.  
   
--   Pour modifier un `xml` colonne de type de non typé à du code XML typé ou vice versa, à l’aide de l’option ALTER TABLE ALTER COLUMN, aucun index XML portant sur la colonne ne doit exister. Si c'est le cas, il doit être supprimé avant de pouvoir tenter de modifier le type de colonne.  
+-   Pour modifier une colonne de type `xml` non typé en XML typé ou vice versa par le biais de l'option ALTER TABLE ALTER COLUMN, assurez-vous qu'aucun index XML portant sur la colonne n'existe. Si c'est le cas, il doit être supprimé avant de pouvoir tenter de modifier le type de colonne.  
   
 -   L'option ARITHABORT doit être activée (c'est-à-dire définie sur ON) lors de la création d'un index XML. Pour pouvoir interroger, insérer, supprimer ou mettre à jour des valeurs de la colonne XML par le biais des méthodes portant sur des données de type XML, cette même option doit être définie sur la connexion aux données. Dans le cas contraire, les méthodes portant sur les données de type XML échouent.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "48142719"
   
  Lors de la création ou de la recréation d’un index XML primaire sur une colonne de type de données XML qui contient des valeurs des types de schémas XML **xs:date** ou **xs:dateTime** (ou tout sous-type de ces types) dont l’année est inférieure à 1, la création de l’index échoue dans [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] et les versions ultérieures. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Ces valeurs étaient autorisées, ce problème peut donc se produire lors de la création d’index dans une base de données générée dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Pour plus d’informations, consultez [Comparer du XML typé et du XML non typé](../xml/compare-typed-xml-to-untyped-xml.md).  
   
-### <a name="example-creating-a-primary-xml-index"></a>Exemple : création d'un index XML primaire  
+### <a name="example-creating-a-primary-xml-index"></a>Exemple : Création d'un index XML primaire  
  La table T (pk INT PRIMARY KEY, xCol XML) avec une colonne XML non typée est utilisée dans la plupart des exemples. Cette syntaxe peut très aisément s'adapter à du code XML typé. Par souci de clarté, les requêtes sont décrites pour des instances de données XML, comme le montre l'exemple qui suit :  
   
 ```  
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  Les valeurs retournées dans la colonne **secondary_type_desc** peuvent être NULL, PATH, VALUE ou PROPERTY. Pour l'index XML primaire, la valeur renvoyée correspond à NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Exemple: création d'index XML secondaires  
+### <a name="example-creating-secondary-xml-indexes"></a>Exemple : Création d’index XML secondaire  
  L'exemple suivant illustre le mode de création d'index XML secondaires. Il montre également les informations relatives aux index XML que vous avez créés.  
   
 ```  

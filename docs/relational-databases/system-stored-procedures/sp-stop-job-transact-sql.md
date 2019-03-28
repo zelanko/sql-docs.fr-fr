@@ -18,12 +18,12 @@ ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 8c5f625b2fa697a305cf6ea96b3ace59f9f5ee0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843914"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58529511"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,20 +45,16 @@ sp_stop_job
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@job_name =**] **'***nom_travail***'**  
- Nom du travail à arrêter. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
+`[ @job_name = ] 'job_name'` Le nom du travail à arrêter. *job_name* est **sysname**, avec NULL comme valeur par défaut.  
   
- [  **@job_id =**] *job_id*  
- Numéro d'identification du travail à arrêter. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
+`[ @job_id = ] job_id` Le numéro d’identification du travail à arrêter. *job_id* est **uniqueidentifier**, avec NULL comme valeur par défaut.  
   
- [  **@originating_server =**] **'***master_server***'**  
- Nom du serveur maître. Si ce nom est spécifié, tous les travaux multiserveurs sont arrêtés. *serveur_maître* est **nvarchar (128)**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement lorsque vous appelez **sp_stop_job** vers un serveur cible.  
+`[ @originating_server = ] 'master_server'` Le nom du serveur maître. Si ce nom est spécifié, tous les travaux multiserveurs sont arrêtés. *serveur_maître* est **nvarchar (128)**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement lorsque vous appelez **sp_stop_job** vers un serveur cible.  
   
 > [!NOTE]  
 >  Seul un des trois premiers paramètres peut être précisé.  
   
- [ **@server_name =**] **'***target_server***'**  
- Nom du serveur cible spécifique sur lequel sera arrêté un travail multiserveur. *serveur_cible* est **nvarchar (128)**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement lorsque vous appelez **sp_stop_job** sur un serveur maître pour un travail multiserveur.  
+`[ @server_name = ] 'target_server'` Le nom du serveur cible spécifique sur lequel sera arrêté un travail multiserveur. *serveur_cible* est **nvarchar (128)**, avec NULL comme valeur par défaut. Spécifiez ce paramètre uniquement lorsque vous appelez **sp_stop_job** sur un serveur maître pour un travail multiserveur.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
@@ -71,7 +67,7 @@ sp_stop_job
   
  Si un travail exécute actuellement une étape de type **CmdExec** ou **PowerShell**, le processus en cours d’exécution (par exemple, MyProgram.exe) est obligé de s’arrêter prématurément. La fin prématurée peut aboutir à un comportement imprévisible ; les fichiers que le processus utilise risquant, par exemple, d'être bloqués alors qu'ils sont ouverts. Par conséquent, **sp_stop_job** doit être utilisée uniquement dans des circonstances extrêmes si le travail contient des étapes de type **CmdExec** ou **PowerShell**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Par défaut, les membres du rôle serveur fixe **sysadmin** peuvent exécuter cette procédure stockée. Les autres utilisateurs doivent disposer de l'un des rôles de base de données fixes suivants de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent dans la base de données **msdb** :  
   
 -   **SQLAgentUserRole**  

@@ -16,12 +16,12 @@ ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 78328463828b3c4a93b72ddc8790df13677dee81
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125369"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58531891"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,34 +44,27 @@ sp_dropmergearticle [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [  **@publication=**] **'**_publication_**'**  
- Nom de la publication dans laquelle il faut supprimer un article. *publication*est **sysname**, sans valeur par défaut.  
+`[ @publication = ] 'publication'` Est le nom de la publication à partir de laquelle supprimer un article. *publication*est **sysname**, sans valeur par défaut.  
   
- [  **@article=**] **'**_article_**'**  
- Nom de l'article à supprimer dans la publication spécifiée. *article*est **sysname**, sans valeur par défaut. Si **tous les**, tous les articles existants dans la publication de fusion spécifiée sont supprimés. Même si *article* est **tous les**, la publication doit toujours être supprimée séparément à partir de l’article.  
+`[ @article = ] 'article'` Est le nom de l’article à supprimer de la publication donnée. *article*est **sysname**, sans valeur par défaut. Si **tous les**, tous les articles existants dans la publication de fusion spécifiée sont supprimés. Même si *article* est **tous les**, la publication doit toujours être supprimée séparément à partir de l’article.  
   
- [  **@ignore_distributor=**] *ignore_distributor*  
- Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est **bits**, avec une valeur par défaut **0**.  
+`[ @ignore_distributor = ] ignore_distributor` Indique si cette procédure stockée est exécutée sans se connecter au serveur de distribution. *ignore_distributor* est **bits**, avec une valeur par défaut **0**.  
   
- [  **@reserved=**] *réservé*  
- Elle est réservée pour un usage futur. *réservé* est **nvarchar (20)**, avec NULL comme valeur par défaut.  
+`[ @reserved = ] reserved` est réservé pour une utilisation ultérieure. *réservé* est **nvarchar (20)**, avec NULL comme valeur par défaut.  
   
- [  **@force_invalidate_snapshot=**] *àce_invalidate_snapshot*  
- Active ou désactive la possibilité d'invalider un instantané. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Active ou désactive la possibilité d’invalider un instantané. *àce_invalidate_snapshot* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** Spécifie que les modifications apportées à l’article de fusion n’invalident pas l’instantané n’est pas valide.  
   
  **1** signifie que les modifications apportées à l’article de fusion peuvent invalider l’instantané n’est pas valide, et si c’est le cas, la valeur **1** autorise le nouvel instantané de se produire.  
   
- [  **@force_reinit_subscription =** ] *àce_reinit_subscription*  
- Confirme que la suppression de l'article nécessite la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
+`[ @force_reinit_subscription = ] force_reinit_subscription` Confirme que la suppression de l’article nécessite la réinitialisation des abonnements existants. *àce_reinit_subscription* est un **bits**, avec une valeur par défaut **0**.  
   
  **0** indique que la suppression de l’article n’entraîne pas la réinitialisation de l’abonnement.  
   
  **1** signifie que la suppression de l’article entraîne la réinitialisation des abonnements existants et autorise la réinitialisation des abonnements se produise.  
   
- [  **@ignore_merge_metadata=** ] *ignore_merge_metadata*  
- À usage interne uniquement  
+`[ @ignore_merge_metadata = ] ignore_merge_metadata` Usage interne uniquement.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  **0** (réussite) ou **1** (échec)  
