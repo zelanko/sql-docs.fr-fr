@@ -9,15 +9,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: dcfbd1c5-c001-4fb7-b9ae-916e49ab6a96
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0eb8532c10069f50283e13ab997560330dfa5a1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bea5d30cb17920584c4d4eafdf888eeedbc014e6
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715367"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282943"
 ---
 # <a name="integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out
 SSIS (SQL Server [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]) Scale Out constitue un moyen très performant d’exécuter des packages SSIS en distribuant les exécutions sur plusieurs ordinateurs. Après avoir configuré Scale Out, vous pouvez effectuer plusieurs exécutions de packages en parallèle, en mode Scale Out, à partir de SSMS (SQL Server Management Studio).
@@ -46,4 +46,4 @@ Après avoir configuré Scale Out, vous pouvez effectuer les opérations suivant
 ## <a name="next-steps"></a>Étapes suivantes
 -   [Bien démarrer avec SSIS (SQL Server Integration Services) Scale Out sur un seul ordinateur](get-started-with-ssis-scale-out-onebox.md)
 
--   [Procédure pas à pas : Configurer Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)
+-   [Procédure pas à pas : Configurer Integration Services Scale Out](walkthrough-set-up-integration-services-scale-out.md)

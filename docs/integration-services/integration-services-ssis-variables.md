@@ -16,15 +16,15 @@ helpviewer_keywords:
 - variables [Integration Services], about variables
 - values [Integration Services]
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 35b990e553116d88764f4fa995935bc4ba90b22d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 06924024dca7eef1b6d1ff7f2ada916a84143628
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512901"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281873"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables Integration Services (SSIS)
   Les variables stockent des valeurs qu'un package [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et ses conteneurs, tâches et gestionnaires d'événements peuvent utiliser au moment de l'exécution. Les scripts de la tâche de script et du composant Script peuvent également utiliser des variables. Les contraintes de précédence qui séquencent les tâches et les conteneurs dans un flux de travail peuvent utiliser des variables lorsque leurs définitions de contraintes incluent des expressions.  
@@ -248,7 +248,7 @@ Utilisez la boîte de dialogue **Ajouter une variable** pour spécifier les prop
   
 -   Fenêtre Variables.  
   
--   Fenêtre Propriétés. La fenêtre **Propriétés** répertorie les propriétés pour la configuration des variables qui ne sont pas disponibles dans la fenêtre **Variables** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType et IncludeInDebugDump.  
+-   Fenêtre Propriétés. La fenêtre **Propriétés** répertorie les propriétés destinées à la configuration des variables qui ne sont pas disponibles dans la fenêtre **Variables** : Description, EvaluateAsExpression, Expression, ReadOnly, ValueType, et IncludeInDebugDump.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit également un ensemble de variables système dont les propriétés ne peuvent pas être mises à jour, à l’exception de la propriété RaiseChangedEvent.  

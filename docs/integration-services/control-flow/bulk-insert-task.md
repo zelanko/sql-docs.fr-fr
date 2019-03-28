@@ -16,15 +16,15 @@ helpviewer_keywords:
 - Bulk Insert task
 - copying data [Integration Services]
 ms.assetid: c5166156-6b4c-4369-81ed-27c4ce7040ae
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bd16052afcb3acf9b0d5a45f6f57ab896fcdc1c1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 42e26d257b915aad5ffa457605fbb68c1b66fab9
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531826"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290705"
 ---
 # <a name="bulk-insert-task"></a>tâche d'insertion en bloc
   La tâche d'insertion en bloc est un moyen efficace pour copier de gros volumes de données dans une table ou une vue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, supposons que votre entreprise stocke la liste de ses produits d’un million de lignes sur un mainframe, mais que son système d’e-commerce utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour fournir des données à des pages web. Vous devez mettre à jour la table des produits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les nuits, à l'aide de la liste principale des produits depuis le gros ordinateur. Pour mettre à jour la table, vous enregistrez la liste des produits dans un fichier au format délimité par des tabulations, puis vous utilisez la tâche d'insertion en bloc pour copier les données directement dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

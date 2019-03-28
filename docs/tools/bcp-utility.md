@@ -29,12 +29,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5b1c1112e886c7874471c82b442e7583a8232dc8
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 90a5d458bcb7b1e90993a51ccfb4ebe217622f34
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955990"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538651"
 ---
 # <a name="bcp-utility"></a>Utilitaire bcp
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -492,7 +492,7 @@ L’utilitaire bcp peut également être téléchargé séparément depuis le [M
 |SQLNCHAR ou SQLNVARCHAR|Les données sont envoyées au format Unicode. L’effet est le même que si vous définissiez le commutateur **-w** sans spécifier de fichier de format.|  
 |SQLBINARY ou SQLVARYBIN|Les données sont envoyées sans être converties.|  
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
  Une opération **bcp out** nécessite l’autorisation SELECT sur la table source.  
   
@@ -529,7 +529,7 @@ L’utilitaire bcp peut également être téléchargé séparément depuis le [M
  
 -   A. Identifier la version de l’utilitaire **bcp**
   
--   b. Copie de lignes de table dans un fichier de données (avec une connexion approuvée)  
+-   B. Copie de lignes de table dans un fichier de données (avec une connexion approuvée)  
   
 -   [C.](#c-copying-table-rows-into-a-data-file-with-mixed-mode-authentication) Copie de lignes de table dans un fichier de données (avec l'authentification en mode mixte)  
   
@@ -552,7 +552,7 @@ Les exemples ci-dessous utilisent l’exemple de base de données `WideWorldImpo
 
 Le script ci-dessous crée une copie vide de la table `WideWorldImporters.Warehouse.StockItemTransactions`, puis ajoute une contrainte de clé primaire.  Exécuter le script T-SQL suivant dans SQL Server Management Studio (SSMS)
 
-```tsql  
+```sql  
 USE WideWorldImporters;  
 GO  
 
@@ -581,7 +581,7 @@ END
 bcp -v
 ```
   
-### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>b. Copie de lignes de table dans un fichier de données (avec une connexion approuvée)  
+### <a name="b-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>B. Copie de lignes de table dans un fichier de données (avec une connexion approuvée)  
 Les exemples suivants illustrent l’option **out** sur la table `WideWorldImporters.Warehouse.StockItemTransactions` .
 
 - **De base**  

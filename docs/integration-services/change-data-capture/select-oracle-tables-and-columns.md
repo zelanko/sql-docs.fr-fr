@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - selTabCol
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 830118141e849c2bde507686c1339f8cc73c1e8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33ac9a5d6804e98685a0c16b5572848d5a575b00
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727627"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279223"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Sélectionner des tables et des colonnes Oracle
   Utilisez la page Sélectionner des tables et des colonnes Oracle pour sélectionner les tables de la base de données source Oracle dans laquelle les modifications sont capturées. Cette page contient les éléments suivants :  
@@ -27,15 +27,15 @@ ms.locfileid: "47727627"
  **Liste de tables**  
  La liste de tables comporte trois colonnes :  
   
--   **Nom de la table Oracle**: nom de la table, y compris du schéma de la table.  
+-   **Nom de la table Oracle** : Nom de la table, y compris du schéma de la table.  
   
--   **Instance de capture**: nom de l’instance de capture utilisée pour nommer les objets de capture de données modifiées spécifiques à l’instance. L'instance de capture ne peut pas être NULL.  
+-   **Instance de capture** : Nom de l’instance de capture utilisée pour nommer les objets de capture de données modifiées spécifiques à l’instance. L'instance de capture ne peut pas être NULL.  
   
      S'il n'est pas spécifié, le nom est dérivé du nom du schéma d'origine plus le nom de la table source au format `<schema-name>_<table-name>`. Le nom de l'instance de capture ne peut pas dépasser 100 caractères et doit être unique dans la base de données.  
   
      Vous pouvez cliquer dans n’importe quelle cellule de cette colonne pour modifier manuellement **capture_instance**.  
   
--   **Rôle de sécurité**: nom du rôle de régulation de base de données utilisé pour contrôler l'accès aux données modifiées.  
+-   **Rôle de sécurité** : Nom du rôle de régulation de base de données utilisé pour contrôler l'accès aux données modifiées.  
   
      Vous pouvez cliquer dans n’importe quelle cellule de cette colonne pour modifier manuellement **security_role**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "47727627"
 ## <a name="see-also"></a> Voir aussi  
  [Procédure : créer l'instance SQL Server de base de données de modifications](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
  [Modifier des tables](../../integration-services/change-data-capture/edit-tables.md)   
- [Ajouter des tables à une instance CDC](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   
- [Modifier les propriétés d’une table](../../integration-services/change-data-capture/edit-the-table-properties.md)  
+ [Ajouter des tables à une instance de capture de données modifiées](../../integration-services/change-data-capture/add-tables-to-a-cdc-instance.md)   
+ [Modifier les propriétés d'une table](../../integration-services/change-data-capture/edit-the-table-properties.md)  
   
   

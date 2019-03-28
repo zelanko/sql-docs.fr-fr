@@ -12,15 +12,15 @@ helpviewer_keywords:
 - data profiling
 - profiling data
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c91b162bfd64b8fb7a2408c796c384981cea917e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6a340ece64bc69b012919bb57afd1b80690f3a59
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517209"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273050"
 ---
 # <a name="data-profiling-task-and-viewer"></a>Tâche de profilage des données et visionneuse
   La tâche de profilage des données fournit des fonctionnalités de profilage de données à l'intérieur du processus d'extraction, de transformation et de chargement de données. Grâce à la tâche de profilage des données, vous pouvez bénéficier des avantages suivants :  
@@ -59,12 +59,12 @@ ms.locfileid: "52517209"
  **Étape 1 : Configuration de la tâche de profilage des données**  
  La tâche de profilage des données vous permet de configurer les profils à calculer. Vous exécutez ensuite le package qui contient la tâche de profilage des données pour calculer les profils. La tâche enregistre la sortie du profil au format XML dans un fichier ou une variable de package.  
   
- **Pour plus d’informations :** [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
+ **Pour plus d'informations, consultez :** [Configuration de la tâche de profilage des données](../../integration-services/control-flow/setup-of-the-data-profiling-task.md)  
   
- **Étape 2 : Vérification des profils calculés par la tâche de profilage des données**  
+ **Étape 2 : Vérification des profils calculés par la tâche de profilage des données**  
  Pour examiner les profils de données calculés par la tâche de profilage des données, vous envoyez la sortie à un fichier, puis vous utilisez la visionneuse du profil des données. Cette visionneuse est un utilitaire autonome qui affiche la sortie du profil, sous forme d'informations résumées et détaillées, avec en option une fonction d'exploration vers le bas.  
   
- **Pour plus d’informations :** [Visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer.md)  
+ **Pour plus d'informations, consultez :** [Visionneuse du profil des données](../../integration-services/control-flow/data-profile-viewer.md)  
   
 ### <a name="addition-of-conditional-logic-to-the-data-profiling-workflow"></a>Ajout de la logique conditionnelle au flux de travail de profilage des données  
  La tâche de profilage des données n'inclut pas de fonctionnalités intégrées vous permettant d'utiliser la logique conditionnelle pour connecter cette tâche aux tâches en aval basées sur la sortie du profil. Toutefois, vous pouvez ajouter facilement cette logique, avec un minimum de programmation, dans une tâche de script. Par exemple, vous pouvez définir une tâche de script qui effectue une requête XPath sur le fichier de sortie de la tâche de profilage des données. La requête peut déterminer si le pourcentage de valeurs NULL dans une colonne particulière dépasse un certain seuil. Si tel est le cas, vous pouvez interrompre le package et résoudre le problème dans les données sources avant de continuer. Pour plus d’informations, consultez [Incorporer une tâche de profilage des données dans le flux de travail du package](../../integration-services/control-flow/incorporate-a-data-profiling-task-in-package-workflow.md).  

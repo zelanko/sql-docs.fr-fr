@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.dts.designer.odatasource.columns.f1
 - sql13.dts.designer.odatasource.erroroutput.f1
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 820541da1699e2e74a9ec0b9a5f00f094a14f38c
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: f5ba8afdf4acadd114363280501f29e1616349ae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638657"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290615"
 ---
 # <a name="odata-source"></a>Source OData
 Utilisez le composant source OData dans un package SSIS pour consommer les données provenant d’un service OData (Open Data Protocol).
@@ -59,7 +59,7 @@ Pour découvrir les types de données des colonnes dans votre source de données
   
 ## <a name="related-topics-in-this-section"></a>Rubriques connexes de cette section  
   
--   [Didacticiel : Utiliser la source OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
+-   [Didacticiel : Utiliser la source OData](../../integration-services/data-flow/tutorial-using-the-odata-source.md)  
   
 -   [Modifier la requête de la source OData à l’exécution](../../integration-services/data-flow/modify-odata-source-query-at-runtime.md)  
   
@@ -102,7 +102,7 @@ Pour découvrir les types de données des colonnes dans votre source de données
   
 #### <a name="use-collection-or-resource-path--resource-path"></a>Utilisez une collection ou un chemin d'accès de ressource = Resource Path.  
  **Resource path**  
- Type de chemin d'accès de ressource. Par exemple : Employees  
+ Type de chemin d'accès de ressource. Exemple : Employees  
   
 ## <a name="odata-source-editor-columns-page"></a>Éditeur de source OData (page Colonnes)
   Utilisez la page **Colonnes** de la boîte de dialogue **Éditeur de source OData** pour sélectionner des colonnes externes (source) à inclure dans la sortie et pour les mapper aux colonnes de la sortie.  
@@ -130,7 +130,7 @@ Pour découvrir les types de données des colonnes dans votre source de données
  **Erreur**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  

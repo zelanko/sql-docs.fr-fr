@@ -17,15 +17,15 @@ helpviewer_keywords:
 - sequence execution options [Integration Services]
 - containers [Integration Services], precedence constraints
 ms.assetid: c5ce5435-fd89-4156-a11f-68470a69aa9f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 23753d15f1113b5a11a00e768c836f8860db96ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6df83cd3a7609097a6e27bd92c59daf24458548
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733657"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283057"
 ---
 # <a name="precedence-constraints"></a>Contraintes de précédence
   Les contraintes de précédence lient les exécutables, les conteneurs et les tâches des packages dans un flux de contrôle et spécifient les conditions qui déterminent si les exécutables s'exécutent. Un exécutable peut être une boucle For, une boucle Foreach, un conteneur de séquence, une tâche ou un gestionnaire d'événement. Les gestionnaires d'événements utilisent également les contraintes de précédence pour lier leurs exécutables dans un flux de contrôle.  
@@ -111,10 +111,10 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
   
 ### <a name="options"></a>Options  
  **Opération d’évaluation**  
- Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Les opérations disponibles sont : **Contrainte**, **Expression**, **Expression et contrainte**et **Expression ou contrainte**.  
+ Spécifiez l'opération d'évaluation utilisée par la contrainte de précédence. Ces opérations sont : **Contrainte**, **Expression**, **Expression et contrainte** et **Expression ou contrainte**.  
   
  **Value**  
- Spécifiez la valeur de contrainte : **Réussite**, **Échec**ou **À l’achèvement**.  
+ Spécifiez la valeur de contrainte : **Réussite**, **Échec** ou **À l'achèvement**.  
   
 > [!NOTE]  
 >  La ligne de contrainte de précédence est verte pour **Réussite**, mise en surbrillance pour **Échec**et bleue pour **À l’achèvement**.  
@@ -153,7 +153,7 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
     |EvalOp|Sélectionnez une opération d'évaluation. Si l’opération **Expression**, **ExpressionAndConstant**ou **ExpressionOrConstant** est sélectionnée, vous pouvez spécifier une expression.|  
     |Expression|Si l'opération d'évaluation inclut une expression, fournissez une expression. L'expression doit prendre une valeur de type Boolean. Pour plus d’informations sur le langage des expressions, consultez [Expressions Integration Services &#40;SSIS&#41;](../../integration-services/expressions/integration-services-ssis-expressions.md).|  
     |LogicalAnd|Définissez **LogicalAnd** pour spécifier si la contrainte de précédence est évaluée en accord avec d’autres contraintes de précédence quand plusieurs exécutables précèdent l’exécutable contraint et lui sont liés|  
-    |Nom   |Mettez à jour le nom de la contrainte de précédence.|  
+    |Créer une vue d’abonnement|Mettez à jour le nom de la contrainte de précédence.|  
     |ShowAnnotation|Spécifiez le type d'annotation à utiliser. Sélectionnez **Never** pour désactiver les annotations, **AsNeeded** pour activer l’annotation à la demande, **ConstraintName** pour annoter automatiquement en utilisant la valeur de la propriété Name, **ConstraintDescription** pour annoter automatiquement en utilisant la valeur de la propriété Description et **ConstraintOptions** pour annoter automatiquement en utilisant les valeurs des propriétés Value et Expression.|  
     |Valeur|Si l’opération d’évaluation spécifiée dans la propriété EvalOP inclut une contrainte, sélectionnez le résultat d’exécution de l’exécutable de contrainte.|  
   
@@ -186,7 +186,7 @@ Utilisez la boîte de dialogue **Éditeur de contrainte de précédence** pour c
   
  ![Expressions sur les contraintes de précédence](../../integration-services/control-flow/media/mw-dts-04.gif "Expressions sur les contraintes de précédence")  
   
- Vous pouvez ajouter ou modifier une expression à l’aide de **l’Éditeur de contrainte de précédence** dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] et la fenêtre Propriétés fournie par [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Cependant, la fenêtre Propriétés ne propose aucune vérification de la syntaxe de l'expression.  
+ Vous pouvez ajouter ou modifier une expression à l’aide de **l’Éditeur de contrainte de précédence** dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] et la fenêtre Propriétés fournie par [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] . Cependant, la fenêtre Propriétés ne propose aucune vérification de la syntaxe de l'expression.  
   
  Si une contrainte de précédence inclut une expression, une icône s’affiche sur la surface de dessin de l’onglet **Flux de contrôle** , en regard de la contrainte de précédence et l’info-bulle de l’icône affiche l’expression.  
 
@@ -237,7 +237,7 @@ Une contrainte de précédence connecte deux exécutables : deux tâches, deux c
 ### <a name="logicaland-property"></a>Propriété LogicalAnd  
  Si une tâche ou un conteneur comporte plusieurs contraintes, la propriété **LogicalAnd** indique si une contrainte de précédence est évaluée seule ou de concert avec les autres contraintes.  
   
- Vous pouvez définir la propriété **LogicalAnd** à l’aide de **l’Éditeur de contrainte de précédence** dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou dans la fenêtre Propriétés fournie par [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
+ Vous pouvez définir la propriété **LogicalAnd** à l’aide de **l’Éditeur de contrainte de précédence** dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou dans la fenêtre Propriétés fournie par [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] .  
 
 ## <a name="set-the-default-value-for-precedence-constraints"></a>Définir la valeur par défaut des contraintes de précédence  
 Pendant la première utilisation du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , la valeur par défaut d’une contrainte de précédence est **Success**. Suivez les étapes ci-dessous pour configurer le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] de sorte qu'il utilise une valeur par défaut différente pour les contraintes de précédence.

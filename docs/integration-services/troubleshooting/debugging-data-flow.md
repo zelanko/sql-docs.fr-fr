@@ -14,15 +14,15 @@ helpviewer_keywords:
 - debugging [Integration Services], data flow
 - counting rows
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 38152544ed3f0684cc13db7c2f429b46ed9ef5b1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 65d62759cff20cb0c41acd7a9955ccea52a5968c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521543"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272228"
 ---
 # <a name="debugging-data-flow"></a>Débogage d'un flux de données
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes des flux de données d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] .  
@@ -62,7 +62,7 @@ ms.locfileid: "52521543"
   
  Le tableau suivant décrit les codes de couleur.  
   
-|Color|Description|  
+|Couleur|Description|  
 |-----------|-----------------|  
 |Aucune couleur|En attente d'être appelé par le moteur de flux de données.|  
 |Jaune|Exécution d'une transformation, extraction de données ou chargement de données en cours.|  

@@ -17,15 +17,15 @@ helpviewer_keywords:
 - expressions [Integration Services], property expressions
 - property expressions [Integration Services]
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b55b675cf28bd0e61dd74b011aad9c50cd8325fa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 273199612b1cf358ff82192c126b33c3fd2a94fd
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531613"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277658"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
   Une expression de propriété est une expression affectée à une propriété pour permettre la mise à jour dynamique de la propriété au moment de l'exécution. Par exemple, une expression de propriété peut mettre à jour la ligne À utilisée par une tâche Envoyer un message en insérant une adresse électronique qui est stockée dans une variable.  
@@ -126,7 +126,7 @@ ms.locfileid: "52531613"
   
  Si le nom du package est EmailRowCountPP, s'il a été exécuté le 03/04/2005 et que la durée de l'exécution était de 9 secondes, l'expression s'évalue à la chaîne.  
   
- PExpression-->Package: (EmailRowCountPP) Started:3/4/2005 11:06:18 AM Duration:9 seconds.  
+ PExpression-->Package : (EmailRowCountPP) Début : 3/4/2005 11:06:18 AM Durée : 9 secondes.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expression de propriété pour le message d'un message électronique  
  L’expression de propriété suivante peut être utilisée pour définir la propriété MessageSource d’une tâche d’envoi de message. L'expression utilise une combinaison de littéraux de chaîne, de variables définies par l'utilisateur et l'opérateur de concaténation (+). Les variables définies par l’utilisateur sont appelées `nasdaqrawrows`, `nyserawrows`et `amexrawrows`. La chaîne "\n" indique un retour chariot.  

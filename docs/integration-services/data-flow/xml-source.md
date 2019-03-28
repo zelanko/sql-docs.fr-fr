@@ -17,15 +17,15 @@ helpviewer_keywords:
 - XML source [Integration Services]
 - XML Source Editor
 ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88c92298743eb9eec610b472f498186938d6b651
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 50775777118d9f276e744f2c8fd8aff06bf0f0fe
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640456"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290625"
 ---
 # <a name="xml-source"></a>Source XML
   La source XML lit un fichier de données XML et remplit les colonnes de la sortie source avec les données.  
@@ -97,7 +97,7 @@ ms.locfileid: "51640456"
 |Valeur|Description|  
 |-----------|-----------------|  
 |Emplacement du fichier XML|Récupère des données dans un fichier XML.|  
-|Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes**: [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes** : [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Données XML à partir d'une variable|Récupère des données XML à partir d'une variable.|  
   
  **Utiliser le schéma inclus**  
@@ -155,7 +155,7 @@ ms.locfileid: "51640456"
  **Erreur**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Indiquez ce qui doit se produire lorsqu'une troncation se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  

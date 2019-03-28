@@ -1,5 +1,5 @@
 ---
-title: 'Étape 3 : Ajout de packages et autres fichiers | Microsoft Docs'
+title: 'Étape 3 : Ajout de packages et autres fichiers | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b9cca20997ed2bfe8b32d09376186691253d6e90
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2eb654217e05004dab02c97941171e0725af5715
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528601"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58288775"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>Leçon 1-3 : Ajout de packages et autres fichiers
 Au cours de cette tâche, vous allez ajouter des packages existants, des fichiers annexes qui prennent en charge des packages individuels et un fichier Lisezmoi pour le projet Didacticiel de déploiement que vous avez créé dans la tâche précédente. Par exemple, vous allez ajouter un fichier de données XML qui contient les données destinées à un package et un fichier texte qui fournit des informations de fichier Lisez-moi relatives à tous les packages du projet.  
@@ -69,7 +69,7 @@ Au cours de la tâche suivante, vous allez ajouter des configurations aux packag
 4.  Dans le menu Fichier, cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 4 : Ajout de configurations au package](../integration-services/lesson-1-4-adding-package-configurations.md)  
+[Étape 4 : Ajout de configurations au package](../integration-services/lesson-1-4-adding-package-configurations.md)  
   
   
   

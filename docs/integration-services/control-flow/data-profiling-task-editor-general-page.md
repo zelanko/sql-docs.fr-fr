@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: eec15906-d757-4079-b2f6-aca4e52b3b4c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae626cfb67bbc2041a150940f2a03bb73dfb9b51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e8f03d8978056ecd0faefd247163d2806dc7988
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764458"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290485"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Éditeur de tâche de profilage de données (page Général)
   Utilisez la page **Général** de l' **Éditeur de tâche de profilage de données** pour configurer les options suivantes :  
@@ -53,8 +53,8 @@ ms.locfileid: "47764458"
   
 |Valeur|Description|  
 |-----------|-----------------|  
-|**FileConnection**|Enregistrez la sortie du profil dans un fichier à l'emplacement spécifié dans un gestionnaire de connexions de fichiers.<br /><br /> Remarque : vous devez spécifier le gestionnaire de connexions de fichiers à utiliser dans l’option **Destination** .|  
-|**Variable**|Enregistrez la sortie du profil dans une variable de package.<br /><br /> Remarque : vous devez spécifier la variable de package à utiliser dans l’option **Destination** .|  
+|**FileConnection**|Enregistrez la sortie du profil dans un fichier à l'emplacement spécifié dans un gestionnaire de connexions de fichiers.<br /><br /> Remarque : Vous devez spécifier le gestionnaire de connexions de fichiers à utiliser dans l'option **Destination**.|  
+|**Variable**|Enregistrez la sortie du profil dans une variable de package.<br /><br /> Remarque : Vous devez spécifier la variable de package à utiliser dans l'option **Destination**.|  
   
  **Destination**  
  Spécifiez le gestionnaire de connexions de fichiers ou la variable de package qui contient la sortie du profil des données :  

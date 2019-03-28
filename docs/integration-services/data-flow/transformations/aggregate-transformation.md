@@ -17,15 +17,15 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 42ed9609e1c2b9337e0c7f98b27c533144f8213d
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9a45b20ac413c04ca641674020e8d98ed39a01e8
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638926"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290555"
 ---
 # <a name="aggregate-transformation"></a>Transformation d'agrégation
   La transformation d’agrégation applique des fonctions d’agrégation, comme Average, aux valeurs des colonnes et copie les résultats dans la sortie de la transformation. Outre les fonctions d'agrégation, cette transformation propose la clause GROUP BY qui permet de spécifier des groupes auxquels appliquer l'agrégation.  
@@ -103,7 +103,7 @@ ms.locfileid: "51638926"
   
  La transformation d'agrégation est asynchrone, ce qui signifie qu'elle ne consomme pas les données et ne les publie pas ligne par ligne. Au lieu de cela, elle consomme tout l'ensemble de lignes, effectue les regroupements et les agrégations, puis publie les résultats.  
   
- Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, l’entrée d’une transformation d’agrégation peut contenir trois colonnes : **PaysRegion**, **Ville**et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
+ Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, l'entrée d'une transformation d'agrégation peut contenir trois colonnes : **PaysRégion**, **Ville** et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
   
  Vous pouvez également ajouter plusieurs sorties à la transformation d'agrégation et diriger chaque agrégation vers une sortie différente. Par exemple, si la transformation d’agrégation applique les fonctions Sum et Average, chaque agrégation peut être dirigée vers une sortie différente.  
   

@@ -18,15 +18,15 @@ helpviewer_keywords:
 - batches [Integration Services]
 - Execute SQL task [Integration Services]
 ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 674dd31df5acbe93fd48ad9b0b3ab504cebbc98a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ff217e16fb9d153872d00074ff2f5d672be056d0
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504073"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273912"
 ---
 # <a name="execute-sql-task"></a>Tâche d’exécution de requêtes SQL
   La tâche d'exécution SQL exécute des instructions ou des procédures stockées SQL à partir d'un package. La tâche peut contenir une seule ou plusieurs instructions SQL s'exécutant de façon séquentielle. Vous pouvez utiliser la tâche d'exécution SQL aux fins suivantes :  
@@ -142,7 +142,7 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
  **ConnectionType**  
  Choisissez le type de gestionnaire de connexions à utiliser pour vous connecter à la source de données. Les types de connexions disponibles sont **OLE DB**, **ODBC**, **ADO**, **ADO.NET** et **SQLMOBILE**.  
   
- **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Gestionnaire de connexions ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Gestionnaire de connexions de SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Gestionnaire de connexions ODBC](../../integration-services/connection-manager/odbc-connection-manager.md), [Gestionnaire de connexions ADO](../../integration-services/connection-manager/ado-connection-manager.md), [Gestionnaire de connexions ADO.NET](../../integration-services/connection-manager/ado-net-connection-manager.md), [Gestionnaire de connexions de SQL Server Compact Edition](../../integration-services/connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Connexion**  
  Choisissez la connexion dans la liste des gestionnaires de connexions définis. Pour créer une connexion, sélectionnez \<**Nouvelle connexion...**>.  
@@ -166,7 +166,7 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
  **BypassPrepare**  
  Indiquez si l'instruction SQL est préparée.  **true** ignore la préparation ; **false** prépare l'instruction SQL avant de l'exécuter. Cette option est disponible uniquement avec les connexions OLE DB qui prennent en charge la préparation.  
   
- **Rubriques connexes :**  [Exécution préparée](../../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **Rubriques connexes :**  [Exécution préparée](../../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **Parcourir**  
  Utilisez la boîte de dialogue **Ouvrir** pour rechercher un fichier qui contient une instruction SQL. Sélectionnez un fichier dont vous voulez copier le contenu en tant qu'instruction SQL dans la propriété **SQLStatement** .  
@@ -183,19 +183,19 @@ Pour plus d’informations sur le langage Transact-SQL, consultez [Référence T
  **SQLStatement**  
  Dans la zone des options, tapez l’instruction SQL à exécuter ou cliquez sur le bouton d’exploration (...) pour taper l’instruction SQL dans la boîte de dialogue **Entrer une requête SQL**. Vous pouvez également cliquer sur **Générer la requête** pour composer l’instruction à l’aide de la boîte de dialogue **Générateur de requêtes**.  
   
- **Rubriques connexes :** [Générateur de requêtes](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
+ **Rubriques connexes :** [Générateur de requêtes](https://msdn.microsoft.com/library/780752c9-6e3c-4f44-aaff-4f4d5e5a45c5)  
   
 #### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Connexion de fichiers  
  **FileConnection**  
  Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
  Sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
  
 ## <a name="parameter-mapping-page---execute-sql-task-editor"></a>Page Mappage de paramètre - Éditeur de tâche d’exécution de requêtes SQL
 Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur de tâche d’exécution de requêtes SQL** pour associer des variables à des paramètres dans une instruction SQL.  
@@ -204,7 +204,7 @@ Utilisez la page **Mappage de paramètre** de la boîte de dialogue **Éditeur d
  **Nom de la variable**  
  Après avoir ajouté un mappage de paramètre en cliquant sur **Ajouter**, sélectionnez une variable système ou une variable définie par l’utilisateur dans la liste, ou cliquez sur \<**Nouvelle variable...**> pour ajouter une nouvelle variable via la boîte de dialogue **Ajouter une variable**.  
   
- **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md)  
   
  **Sens**  
  Sélectionnez le sens du paramètre. Associez chaque variable à un paramètre d'entrée, un paramètre de sortie ou un code de retour.  
@@ -286,7 +286,7 @@ Les instructions et les procédures stockées SQL utilisent fréquemment des par
 #### <a name="use-parameters-with-adonet-and-ado-connection-managers"></a>Utiliser des paramètres avec les gestionnaires de connexions ADO.NET et ADO  
  Les gestionnaires de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] et ADO ont des spécifications particulières pour les commandes SQL qui utilisent des paramètres :  
   
--   Les gestionnaires de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] imposent que la commande SQL utilise des noms de paramètres comme marqueurs de paramètres. Cela signifie que des variables peuvent être mappées directement à des paramètres. Par exemple, la variable `@varName` est mappée au paramètre nommé `@parName` et fournit une valeur au paramètre `@parName`.  
+-   Les gestionnaires de connexions [!INCLUDE[vstecado](../../includes/vstecado-md.md)] exigent que la commande SQL utilise des noms de paramètres comme marqueurs de paramètres. Cela signifie que des variables peuvent être mappées directement à des paramètres. Par exemple, la variable `@varName` est mappée au paramètre nommé `@parName` et fournit une valeur au paramètre `@parName`.  
   
 -   Les gestionnaires de connexions ADO.NET imposent que la commande SQL utilise des points d'interrogation (?) comme marqueurs de paramètres. Toutefois, vous pouvez utiliser les noms définis par l'utilisateur, à l'exception des valeurs entières, comme noms de paramètres.  
   

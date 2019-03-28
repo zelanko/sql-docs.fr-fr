@@ -11,15 +11,15 @@ helpviewer_keywords:
 - <= (less than or equal to operator)
 - less than or equal to operator (<=)
 ms.assetid: 946c5630-dccf-4dae-9cfd-6ea823641ab2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 514d9e976fc74d99aea555cc681f1dfc1fab4016
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 54e4796f4a4c97dad255dd2e047f184fb8b0b879
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847837"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279293"
 ---
 # <a name="lt-less-than-or-equal-to-ssis-expression"></a>&lt;= (Inférieur ou égal à) (expression SSIS)
   Effectue une comparaison pour déterminer si la première expression est inférieure ou égale à la deuxième. L'évaluateur d'expression convertit automatiquement de nombreux types de données avant de réaliser la comparaison.  
@@ -59,7 +59,7 @@ expression1 <= expression2
     > [!NOTE]  
     >  Les comparaisons de chaîne respectent la casse, les accents, le jeu de caractères Kana et la largeur.  
   
--   **Date, Heure ou Date/Heure** : *expression1* et *expression2* doivent toutes deux s’évaluer à un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
+-   **Date, Heure ou Date/Heure** *expression1* et *expression2* doivent correspondre à l’un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, ou DT_FILETIME.  
   
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  
@@ -106,7 +106,7 @@ ListPrice <= 500
 ## <a name="see-also"></a> Voir aussi  
  [&#62; &#40;Supérieur à&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/greater-than-ssis-expression.md)   
  [&#60; &#40;Inférieur à&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/less-than-ssis-expression.md)   
- [&#62;= &#40;Supérieur ou égal à&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
+ [&#62; &#40;Supérieur ou égal à&#41; &#40;expression SSIS&#41;](../../integration-services/expressions/greater-than-or-equal-to-ssis-expression.md)   
  [Priorités et associativité des opérateurs](../../integration-services/expressions/operator-precedence-and-associativity.md)   
  [Opérateurs &#40;expression SSIS&#41;](../../integration-services/expressions/operators-ssis-expression.md)  
   

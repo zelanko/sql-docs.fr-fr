@@ -11,15 +11,15 @@ f1_keywords:
 - sql13.dts.designer.afphivetask.f1
 - sql14.dts.designer.afphivetask.f1
 ms.assetid: e1896c73-128a-4128-9814-3e01f7dfe19b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1956ba0bf3c676ff1ab549cc7b9d0dbce9c59dce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f5401195dd0f4bbc32eee4d7a813c4293bfa5553
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856187"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279783"
 ---
 # <a name="azure-hdinsight-hive-task"></a>Tâche Hive Azure HDInsight
 Utilisez la **tâche Hive Azure HDInsight** pour exécuter un script Hive sur un cluster Azure HDInsight.
@@ -40,8 +40,8 @@ La **tâche Hive Azure HDInsight** est un composant de [SQL Server Integration S
   
 5.  Deux méthodes permettent de spécifier le script Hive à exécuter :
   
-    1.  **Script en ligne** : renseignez le champ **Script** en tapant en ligne le script à exécuter dans la boîte de dialogue **Entrer le script**.
+    1.  **Script en ligne** : Renseignez le champ **Script** en tapant en ligne le script à exécuter dans la boîte de dialogue **Entrer le script**.
   
-    2.  **Fichier de script** : téléchargez le fichier de script dans Stockage Blob Azure et renseignez le champ **BlobName**. Si l’objet blob ne se trouve pas dans le compte ou le conteneur de stockage par défaut associé au cluster HDInsight, vous devez renseigner les champs **ExternalStorageAccountName** et **ExternalBlobContainer**. Dans le cas d’un objet blob externe, assurez-vous qu’il est configuré comme étant accessible au public.  
+    2.  **Fichier de script** : Chargez le fichier de script dans Stockage Blob Azure et renseignez le champ **BlobName**. Si l’objet blob ne se trouve pas dans le compte ou le conteneur de stockage par défaut associé au cluster HDInsight, vous devez renseigner les champs **ExternalStorageAccountName** et **ExternalBlobContainer**. Dans le cas d’un objet blob externe, assurez-vous qu’il est configuré comme étant accessible au public.  
   
      Si les deux sont spécifiés, le fichier de script est utilisé et le script en ligne est ignoré.

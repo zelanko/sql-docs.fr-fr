@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Lookup transformation [Integration Services]
 ms.assetid: 58bc7611-5fb5-4113-9742-10959e06b94c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b44eaab3266d75663458572af238f5a15bd35b5e
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: c30fcacb779a9656b70edad79e976bde575537de
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642286"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290595"
 ---
 # <a name="lookup-transformation-full-cache-mode---cache-connection-manager"></a>Transformation de recherche en mode Cache complet - Gestionnaire de connexions du cache
   Vous pouvez configurer la transformation de recherche afin qu'elle utilise le mode Cache complet et un gestionnaire de connexions du cache. En mode Cache complet, le dataset de référence est chargé dans le cache avant l'exécution de la transformation de recherche.  
@@ -62,7 +62,7 @@ ms.locfileid: "51642286"
   
 -   [Conteneur de séquences](../../integration-services/control-flow/sequence-container.md)  
   
- Pour savoir comment implémenter la transformation de recherche en mode Cache complet à l’aide du gestionnaire de connexions du cache, consultez la vidéo [Procédure : implémenter une transformation de recherche en mode Cache complet (Vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=131031).  
+ Pour obtenir une vidéo qui montre comment utiliser le gestionnaire de connexions du cache pour implémenter une transformation de recherche en mode Cache complet, consultez [How to: Implement a Lookup Transformation in Full Cache Mode (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkId=131031) (en anglais).  
   
 ### <a name="to-implement-a-lookup-transformation-in-full-cache-mode-in-one-package-by-using-cache-connection-manager-and-a-data-source-in-the-data-flow"></a>Pour implémenter une transformation de recherche en mode Cache complet dans un seul package en utilisant le gestionnaire de connexions du cache et une source de données dans le flux de données  
   

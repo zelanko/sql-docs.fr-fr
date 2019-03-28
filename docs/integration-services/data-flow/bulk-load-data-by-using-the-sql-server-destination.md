@@ -14,15 +14,15 @@ helpviewer_keywords:
 - inserting data
 - bulk load [Integration Services]
 ms.assetid: 8f982f85-a82e-4e2d-9cd8-cd2f85402d8e
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7e6535428eefaf4e0f2a84d1de40c5d8c7f4989
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68902b0249fc40e8aa48a0bd6fc6f6eef47d4caa
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669497"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274364"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Charger des données en masse à l'aide de la destination SQL Server
   Pour pouvoir ajouter et configurer une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le package doit inclure au moins une tâche de flux de données et une source de données.  
@@ -55,7 +55,7 @@ ms.locfileid: "47669497"
     > [!NOTE]  
     >  La destination mappe automatiquement les colonnes portant le même nom.  
   
-9. Cliquez sur **Avancé** et définissez les options de chargement en masse : **Conserver l’identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Vérifier les contraintes**et **Exécuter les déclencheurs**.  
+9. Cliquez sur **Avancé** et définissez les options de chargement en masse : **Conserver l'identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Vérifier les contraintes** et **Exécuter les déclencheurs**.  
   
      Si vous le souhaitez, indiquez la première et la dernière ligne d'entrée à insérer, le nombre maximal d'erreurs avant arrêt de l'opération d'insertion et les colonnes sur lesquelles l'insertion est triée.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "47669497"
 ## <a name="see-also"></a> Voir aussi  
  [SQL Server Destination](../../integration-services/data-flow/sql-server-destination.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [Chemins d'accès d'Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
  [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
   
   

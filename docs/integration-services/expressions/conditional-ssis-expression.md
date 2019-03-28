@@ -11,15 +11,15 @@ helpviewer_keywords:
 - conditional operator (?:)
 - '?: (conditional operator)'
 ms.assetid: d38e6890-7338-4ce0-a837-2dbb41823a37
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cd01f26f7c57ebe5b2c17b342b77ffc5add7e150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43ba631d4b93e3f748afa0c64ff95d42609bd545
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626017"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58272100"
 ---
 # <a name="--conditional-ssis-expression"></a>? : (Conditionnel) (expression SSIS)
   Renvoie une des deux expressions selon l'évaluation d'une expression booléenne. Si l'expression booléenne donne la valeur TRUE, la première expression est évaluée et le résultat est le résultat de l'expression. Si l'expression booléenne donne la valeur FALSE, la deuxième expression est évaluée et son résultat est le résultat de l'expression.  
@@ -60,7 +60,7 @@ boolean_expression?expression1:expression2
   
 -   **Chaîne** : *expression1* et *expression2* doivent toutes deux être d’un type de données chaîne : DT_STR ou DT_WSTR. Les deux expressions peuvent avoir une valeur de types de données chaîne différents. Le résultat a le type de données DT_WSTR et une longueur équivalente à celle de l'argument le plus long.  
   
--   **Date, Heure ou Date/Heure** : *expression1* et *expression2* doivent toutes deux correspondre à un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET ou DT_FILETIME.  
+-   **Date, Heure ou Date/Heure** *expression1* et *expression2* doivent correspondre à l’un des types de données suivants : DT_DBDATE, DT_DATE, DT_DBTIME, DT_DBTIME2, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAPMOFFSET, ou DT_FILETIME.  
   
     > [!NOTE]  
     >  Le système ne prend pas en charge les comparaisons entre une expression qui correspond à un type de données heure et une expression qui correspond à un type de données date ou date/heure. Le système génère alors une erreur.  

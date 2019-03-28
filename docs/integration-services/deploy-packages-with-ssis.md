@@ -18,15 +18,15 @@ helpviewer_keywords:
 - deployment utility [Integration Services]
 - deploying packages [Integration Services], configurations
 ms.assetid: de18468c-cff3-48f4-99ec-6863610e5886
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2c92d803dd38015950123501743d6a0e0cdfa8fd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e6238c07e4da7aa9b19a5264282a1c7c2733ecad
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739607"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277278"
 ---
 # <a name="deploy-packages-with-ssis"></a>Déployer des packages avec SSIS
 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] propose des outils qui simplifient le déploiement des packages vers un autre ordinateur. Ces outils de déploiement gèrent aussi les dépendances, telles que les configurations et les fichiers dont les packages ont besoin. Dans ce didacticiel, vous allez apprendre à utiliser ces outils pour installer des packages et leurs dépendances sur un ordinateur cible.    
@@ -43,13 +43,13 @@ Enfin, vous allez exécuter les packages dans [!INCLUDE[ssManStudioFull](../incl
     
 L'objectif de ce didacticiel est de simuler la complexité de problèmes de déploiement réels que vous pouvez rencontrer. Cependant, si vous ne pouvez pas déployer les packages sur un autre ordinateur, vous pouvez toujours effectuer ce didacticiel en installant les packages dans la base de données msdb d'une instance locale de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puis en exécutant les packages à partir de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sur la même instance.    
 
-**Durée estimée pour effectuer ce didacticiel :** 2 heures.
+**Durée estimée pour effectuer ce tutoriel :** 2 heures
 
 ## <a name="what-you-learn"></a>Contenu du didacticiel    
 Le meilleur moyen de se familiariser avec les nouveaux outils et les nouvelles commandes et fonctionnalités de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est de les utiliser. Ce didacticiel vous guide dans les étapes de création d'un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] puis d'ajout des packages et autres fichiers nécessaires au projet. Une fois le projet terminé, vous allez créer une application de déploiement, copier cette application sur l'ordinateur de destination, puis installer les packages sur l'ordinateur de destination.    
     
 ## <a name="prerequisites"></a>Conditions préalables requises    
-Ce didacticiel s’adresse aux utilisateurs qui ont une connaissance des notions fondamentales liées aux opérations effectuées sur les systèmes de fichiers, mais une maîtrise limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour mieux comprendre les concepts [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de base que vous allez mettre en œuvre dans ce didacticiel, il est peut-être intéressant de terminer d’abord le didacticiel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suivant : [SSIS : comment créer un package ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
+Ce didacticiel s’adresse aux utilisateurs qui ont une connaissance des notions fondamentales liées aux opérations effectuées sur les systèmes de fichiers, mais une maîtrise limitée des nouvelles fonctionnalités disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Pour mieux comprendre les concepts [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] de base que vous allez mettre en œuvre dans ce tutoriel, il est peut-être intéressant d'achever d'abord le tutoriel [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] suivant : [SSIS : comment créer un package ETL](../integration-services/ssis-how-to-create-an-etl-package.md).    
     
 ### <a name="on-the-source-computer"></a>Sur l’ordinateur source
 
@@ -86,13 +86,13 @@ Les composants suivants **doivent être installés**sur l’ordinateur vers lequ
 Si vous envisagez de déployer les packages sur le même ordinateur que celui où vous créez l'application de déploiement, ce dernier doit avoir la configuration requise pour les ordinateurs source et de destination.    
         
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel    
-[Leçon 1 : Préparation à la création de l’application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
+[Leçon 1 : Préparation à la création de l'application de déploiement](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)    
 Au cours de cette leçon, vous allez vous préparer à déployer une solution ETL en créant un nouveau projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] et en ajoutant au projet les packages et les autres fichiers requis.    
     
-[Leçon 2 : Créer l’application de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
+[Leçon 2 : Créer l’application de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)    
 Au cours de cette leçon, vous allez élaborer un utilitaire de déploiement et vérifier que l'application de déploiement inclut les fichiers nécessaires.    
     
-[Leçon 3 : Installer des packages SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
+[Leçon 3 : Installer des packages SSIS](../integration-services/lesson-3-install-ssis-packages.md)    
 Vous allez aussi copier l'application de déploiement sur l'ordinateur cible, installer les packages, puis les exécuter.    
     
 

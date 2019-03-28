@@ -13,15 +13,15 @@ f1_keywords:
 - sql13.ssis.designer.odbcdest.columns.f1
 - sql13.ssis.designer.odbcdest.errorhandling.f1
 ms.assetid: bffa63e0-c737-4b54-b4ea-495a400ffcf8
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: faa30c32aea774d51a901402ff57975f14207e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9594567f4412ddf72943a397c7fa3d425f8fb27
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808287"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273433"
 ---
 # <a name="odbc-destination"></a>Destination ODBC
   La destination ODBC charge en masse les données dans les tables de base de données compatibles ODBC. La destination ODBC utilise un gestionnaire de connexions ODBC pour se connecter à la source de données.  
@@ -31,18 +31,18 @@ ms.locfileid: "47808287"
  La destination ODBC comporte une sortie standard et une sortie d'erreur.  
   
 ##  <a name="BKMK_odbcdestination_loadoptions"></a> Options de chargement  
- La destination ODBC peut utiliser l'un des deux modules de charge d'accès. Vous définissez le mode dans l’[Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Les deux modes sont :  
+ La destination ODBC peut utiliser l'un des deux modules de charge d'accès. Vous définissez le mode dans l’[Éditeur de source ODBC &#40;page Gestionnaire de connexions&#41;](../../integration-services/data-flow/odbc-source-editor-connection-manager-page.md). Les deux modes sont :  
   
--   **Lot**: dans ce mode, la destination ODBC tente d’utiliser la méthode d’insertion la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs modernes ODBC, cela implique de préparer une instruction INSERT avec des paramètres, puis d’utiliser une liaison de paramètre de table selon les lignes (où la taille de la table est contrôlée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
+-   **Lot** : Dans ce mode, la destination ODBC tente d’utiliser la méthode d’insertion la plus efficace en fonction des capacités perçues du fournisseur ODBC. Pour la plupart des fournisseurs modernes ODBC, cela implique de préparer une instruction INSERT avec des paramètres, puis d’utiliser une liaison de paramètre de table selon les lignes (où la taille de la table est contrôlée par la propriété **BatchSize** ). Si vous sélectionnez **Lot** et que le fournisseur ne prend pas en charge cette méthode, la destination ODBC bascule automatiquement en mode **Ligne par ligne** .  
   
--   **Ligne par ligne**: dans ce mode, la destination ODBC prépare une instruction INSERT avec des paramètres et utilise **SQL Execute** pour insérer les lignes une par une.  
+-   **Ligne par ligne** : Dans ce mode, la destination ODBC prépare une instruction INSERT avec des paramètres et utilise **SQL Execute** pour insérer les lignes une par une.  
   
 ## <a name="error-handling"></a>Gestion des erreurs  
  La destination ODBC a une sortie d'erreur. La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d’erreur**: numéro qui correspond à l’erreur actuelle. Consultez la documentation de votre base de données source pour obtenir la liste des erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
+-   **Code d'erreur** : Numéro qui correspond à l’erreur actuelle. Consultez la documentation de votre base de données source pour obtenir la liste des erreurs. Pour obtenir la liste des codes d'erreur SSIS, consultez le Guide de référence des erreurs et des événements SSIS.  
   
--   **Colonne d’erreur**: colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur** : Colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
 -   Colonnes de données de sortie standard.  
   
@@ -110,9 +110,9 @@ ms.locfileid: "47808287"
 |Option|Description|  
 |------------|-----------------|  
 |Nom de la table - Lot|Sélectionnez cette option pour configurer la destination ODBC en mode par lot. Lorsque vous sélectionnez cette option, les options suivantes sont disponibles :|  
-||**Nom de la table ou de la vue**: sélectionnez une table ou une vue disponible dans la liste.<br /><br /> Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1000 tables, vous pouvez taper le début du nom d’une table ou utiliser le caractère générique (\*) pour entrer une partie du nom afin d’afficher la table ou les tables que vous souhaitez utiliser.<br /><br /> **Taille du lot**: entrez la taille du lot pour le chargement en bloc. Il s'agit du nombre de lignes chargées dans un même lot.|  
+||**Nom de la table ou de la vue** : Sélectionnez une table ou une vue disponible dans la liste.<br /><br /> Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1000 tables, vous pouvez taper le début du nom d’une table ou utiliser le caractère générique (\*) pour entrer une partie du nom afin d’afficher la table ou les tables que vous souhaitez utiliser.<br /><br /> **Taille du lot** : Tapez la taille du lot pour le chargement en bloc. Il s'agit du nombre de lignes chargées dans un même lot.|  
 |Nom de la table - Ligne par ligne|Sélectionnez cette option pour configurer la destination ODBC de manière à insérer les lignes dans la table de destination une par une. Lorsque vous sélectionnez cette option, l'option suivante est disponible :|  
-||**Nom de la table ou de la vue**: sélectionnez dans la liste une table ou une vue disponible dans la base de données.<br /><br /> Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1 000 tables, vous pouvez taper le début du nom d'une table ou utiliser le caractère générique (*) pour entrer une partie du nom afin d'afficher la table ou les tables que vous souhaitez utiliser.|  
+||**Nom de la table ou de la vue** : Sélectionnez dans la liste une table ou une vue disponible dans la base de données.<br /><br /> Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1 000 tables, vous pouvez taper le début du nom d'une table ou utiliser le caractère générique (*) pour entrer une partie du nom afin d'afficher la table ou les tables que vous souhaitez utiliser.|  
   
 #### <a name="preview"></a>Aperçu  
  Cliquez sur **Aperçu** pour afficher jusqu'à 200 lignes de données pour la table sélectionnée.  

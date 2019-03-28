@@ -21,15 +21,15 @@ helpviewer_keywords:
 - fast load data access mode [Integration Services]
 - inserting data
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e9eccb240bbce57f16442092996698dc619f5fab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d2fceae5ca3eacd9d84faf86e034353cbc84368a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525318"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58283083"
 ---
 # <a name="ole-db-destination"></a>Destination OLE DB
   La destination OLE DB charge des données dans différentes bases de données compatibles OLE DB à l'aide d'une table ou d'une vue de base de données ou d'une commande SQL. Par exemple, la source OLE DB peut charger des données dans des tables de bases de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -52,7 +52,7 @@ ms.locfileid: "52525318"
 > [!NOTE]  
 >  La destination OLE DB ne prend pas en charge les paramètres. Si vous devez exécuter une instruction INSERT paramétrable, envisagez d'utiliser la transformation de commande OLE DB. Pour plus d’informations, consultez [OLE DB Command Transformation](../../integration-services/data-flow/transformations/ole-db-command-transformation.md).  
   
- Lorsque la destination OLE DB charge des données qui utilisent un jeu de caractères codés sur deux octets (DBCS), les données risquent d'être endommagées si le mode d'accès aux données n'utilise pas l'option de chargement rapide et si le gestionnaire de connexions OLE DB utilise le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Pour garantir l’intégrité des données DBCS, vous devez configurer le gestionnaire de connexions OLE DB pour utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou l’un des modes d’accès avec chargement rapide : **Table ou vue - chargement rapide** ou **Variable de nom de table ou de vue - chargement rapide**. Ces deux options sont disponibles dans la boîte de dialogue **Éditeur de destination OLE DB** . Quand vous programmez le modèle d’objet [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vous devez définir la propriété AccessMode sur **OpenRowset à l’aide de FastLoad**ou **OpenRowset à l’aide de FastLoad à partir de Variable**.  
+ Lorsque la destination OLE DB charge des données qui utilisent un jeu de caractères codés sur deux octets (DBCS), les données risquent d'être endommagées si le mode d'accès aux données n'utilise pas l'option de chargement rapide et si le gestionnaire de connexions OLE DB utilise le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour SQL Server [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLOLEDB). Pour garantir l'intégrité des données DBCS, vous devez configurer le gestionnaire de connexions OLE DB pour utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ou l'un des modes d'accès avec chargement rapide : **Table ou vue - chargement rapide** ou **Variable de nom de table ou de vue - chargement rapide**. Ces deux options sont disponibles dans la boîte de dialogue **Éditeur de destination OLE DB** . Quand vous programmez le modèle d’objet [!INCLUDE[ssIS](../../includes/ssis-md.md)] , vous devez définir la propriété AccessMode sur **OpenRowset à l’aide de FastLoad**ou **OpenRowset à l’aide de FastLoad à partir de Variable**.  
   
 > [!NOTE]  
 >  Si vous utilisez la boîte de dialogue **Éditeur de destination OLE DB** dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] pour créer la table de destination dans laquelle la destination OLE DB insère des données, vous devrez peut-être sélectionner la table que vous venez de créer manuellement. La sélection manuelle est nécessaire lorsqu'un fournisseur OLE DB tel que le fournisseur OLE DB pour DB2, ajoute manuellement des identificateurs de schéma au nom de la table.  
@@ -94,7 +94,7 @@ ms.locfileid: "52525318"
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Indique la taille à insérer en kilo-octets. L’option a la forme **KILOBYTES_PER_BATCH** = \<valeur entière positive**>**.|  
 |FIRE_TRIGGERS|Spécifie si des déclencheurs sont activés sur la table d'insertion. L’option a la forme **FIRE_TRIGGERS**. La présence de l'option indique que des déclencheurs sont activés.|  
-|ORDER|Spécifie comment les données d'entrée sont triées. L’option a la forme ORDER \<nom de colonne> ASC&#124;DESC. Il n'y a pas de limite quant au nombre de colonnes indiquées et la spécification de l'ordre de tri est facultative. Si l'ordre de tri est omis, l'opération d'insertion part du principe que les données ne sont pas triées.<br /><br /> Remarque : les performances peuvent être améliorées si vous utilisez l’option ORDER pour trier les données d’entrée selon l’index cluster de la table.|  
+|ORDER|Spécifie comment les données d'entrée sont triées. L’option a la forme ORDER \<nom de colonne> ASC&#124;DESC. Il n'y a pas de limite quant au nombre de colonnes indiquées et la spécification de l'ordre de tri est facultative. Si l'ordre de tri est omis, l'opération d'insertion part du principe que les données ne sont pas triées.<br /><br /> Remarque : Les performances peuvent être améliorées si vous utilisez l'option ORDER pour trier des données d'entrée selon l'index cluster de la table.|  
   
  Les mots clés [!INCLUDE[tsql](../../includes/tsql-md.md)] sont traditionnellement tapés en majuscules, mais ils ne tiennent pas compte de la casse.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "52525318"
 |------------|-----------------|  
 |Table ou vue|Chargez les données dans une table ou une vue de la destination OLE DB.|  
 |Table ou vue - chargement rapide|Chargez les données dans une table ou une vue de la destination OLE DB et utilisez l'option de chargement rapide. Pour plus d’informations sur les modes d’accès aux données à chargement rapide, qui sont optimisés pour les insertions en bloc, consultez [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md).|  
-|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes**: [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
+|Variable de nom de table ou de vue|Spécifiez le nom de la table ou de la vue dans une variable.<br /><br /> **Informations connexes** : [Utiliser des variables dans des packages](https://msdn.microsoft.com/library/7742e92d-46c5-4cc4-b9a3-45b688ddb787)|  
 |Variable de nom de table ou de vue - chargement rapide|Spécifiez le nom de la table ou de la vue dans une variable et chargez les données à l'aide de l'option de chargement rapide. Pour plus d’informations sur les modes d’accès aux données à chargement rapide, qui sont optimisés pour les insertions en bloc, consultez [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md).|  
 |Commande SQL|Chargez les données dans la destination OLE DB à l'aide d'une requête SQL.|  
   
@@ -283,7 +283,7 @@ ms.locfileid: "52525318"
  **Erreur**  
  Indiquez ce qui doit se produire lorsqu'une erreur se produit : ignorer l'échec, rediriger la ligne ou faire échouer le composant.  
   
- **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
+ **Rubriques connexes :** [Gestion des erreurs dans les données](../../integration-services/data-flow/error-handling-in-data.md)  
   
  **Troncation**  
  Non utilisé.  

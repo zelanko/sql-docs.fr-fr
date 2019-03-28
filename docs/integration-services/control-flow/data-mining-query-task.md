@@ -16,15 +16,15 @@ helpviewer_keywords:
 - prediction queries [Integration Services]
 - Data Mining Query task [Integration Services]
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 184f3337f706d2a19210a8304d6b351b352ea309
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3e2e77caa45d704c1ecaccb1bb85b6bf6845dd47
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639896"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281963"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
   La tâche de requête d'exploration de données exécute des requêtes de prédiction basées sur les modèles d'exploration de données intégrés à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La requête de prédiction crée une prédiction de nouvelles données à l'aide de modèles d'exploration de données. Par exemple, une requête de prédiction peut prédire le nombre de voiliers susceptibles d'être vendus pendant les mois d'été ou générer la liste des prospects susceptibles d'acheter un voilier.  
@@ -84,12 +84,12 @@ ms.locfileid: "51639896"
  **Connexion**  
  Choisissez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans la liste ou cliquez sur **Nouveau** pour créer un gestionnaire de connexions.  
   
- **Rubriques connexes :**  [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
+ **Rubriques connexes :**  [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md)  
   
  **Nouveau**  
  Créez un gestionnaire de connexions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
- **Rubriques connexes :** [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Rubriques connexes :** [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Structure d'exploration de données**  
  Sélectionnez une structure d'exploration de données dans la liste.  
@@ -116,12 +116,12 @@ ms.locfileid: "51639896"
  **Requête d'exploration de données**  
  Tapez une requête d'exploration de données.  
   
- **Rubriques connexes :** [Guide de référence du langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
+ **Rubriques connexes :**  [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
  **Générer une nouvelle requête**  
  Créez la requête d'exploration de données en utilisant un outil graphique.  
   
- **Rubriques connexes :** [Data Mining Query](../../integration-services/control-flow/data-mining-query.md)  
+ **Rubriques connexes :** [Requête d'exploration de données](../../integration-services/control-flow/data-mining-query.md)  
   
 ### <a name="parameter-mapping-tab-options"></a>Options de l'onglet Mappage de paramètre  
  **Nom du paramètre**  

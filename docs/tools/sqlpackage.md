@@ -2,41 +2,41 @@
 title: SqlPackage.exe | Microsoft Docs
 ms.prod: sql
 ms.technology: ssdt
-ms.date: 06/27/2018
+ms.date: 06/28/2018
 ms.reviewer: alayu; sstein
 ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: d9a3dc9088c833b3448927c1455052c40f185ec7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033601"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58527591"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
 **SqlPackage.exe** est un utilitaire en ligne de commande qui automatise les tâches de développement de base de données suivantes :  
   
-- [Extraire](#help-for-the-extract-action) : crée un fichier de capture instantanée de base de données (.dacpac) à partir d’une base de données SQL Server ou Azure SQL Database active.  
+- [Extraire](#help-for-the-extract-action) : crée un fichier d'instantané de base de données (.dacpac) à partir d’une base de données SQL Server ou Azure SQL Database active.  
   
-- [Publier](#publish-parameters-properties-and-sqlcmd-variables) : met à jour de manière incrémentielle un schéma de base de données pour qu’il corresponde au schéma d’un fichier .dacpac source. Si la base de données n'existe pas sur le serveur, elle est créée par l'opération de publication. Sinon, une base de données existante est mise à jour.  
+- [Publier](#publish-parameters-properties-and-sqlcmd-variables) : met à jour de manière incrémentielle un schéma de base de données pour qu'il corresponde au schéma d'un fichier .dacpac source. Si la base de données n'existe pas sur le serveur, elle est créée par l'opération de publication. Sinon, une base de données existante est mise à jour.  
   
-- [Exporter](#export-parameters-and-properties) : exporte une base de données active, y compris son schéma et les données utilisateur, dans un package BACPAC (fichier .bacpac) à partir de SQL Server ou d’Azure SQL Database.  
+- [Exporter](#export-parameters-and-properties) : exporte une base de données active, y compris le schéma de base de données et les données utilisateur, à partir de SQL Server ou d’Azure SQL Database vers un package BACPAC (fichier .bacpac).  
   
-- [Importer](#import-parameters-and-properties) : importe le schéma et les données de table à partir d'un package BACPAC dans une nouvelle base de données utilisateur dans une instance de SQL Server ou d’Azure SQL Database.  
+- [Importer](#import-parameters-and-properties) : importe le schéma et les données de table à partir d'un package BACPAC dans une nouvelle base de données utilisateur dans une instance de SQL Server ou d’Azure SQL Database.  
   
 - [DeployReport](#deployreport-parameters-and-properties) (déployer un rapport) : crée un rapport XML sur les modifications devant être apportées par une action de publication.  
   
-- [DriftReport](#driftreport-parameters) (dériver un rapport) : crée un rapport XML sur les modifications apportées à une base de données inscrite depuis sa dernière inscription.  
+- [DriftReport](#driftreport-parameters) (dériver un rapport) : crée un rapport XML sur les modifications ayant été apportées à une base de données inscrite, depuis la dernière inscription de celle-ci.  
   
 - [Script](#script-parameters-and-properties) : crée un script de mise à jour incrémentielle Transact-SQL qui met à jour le schéma d'une cible afin qu'il corresponde au schéma d'une source.  
   
 La ligne de commande de **SqlPackage.exe** vous permet de spécifier ces actions à l’aide de paramètres et de propriétés spécifiques aux actions.  
 
-**[Téléchargez la version la plus récente](sqlpackage-download.md)**. Pour plus d’informations sur la dernière version, consultez le [notes de version](sqlpackage-release-notes.md).
+**[Téléchargez la version la plus récente](sqlpackage-download.md)**. Pour plus d’informations sur la dernière version, consultez le [notes de version](release-notes-sqlpackage.md).
   
 ## <a name="command-line-syntax"></a>Syntaxe de ligne de commande
 
@@ -141,7 +141,7 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Spécifie des collaborateurs de déploiement supplémentaires qui doivent être en cours d’exécution quand le fichier dacpac est déployé. Il doit s'agir d'une liste d'ID ou de noms de collaborateurs de build complets délimitée par des points-virgules.|
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|Cette propriété est utilisée par le déploiement SqlClr afin de supprimer les assemblys bloquants dans le cadre du plan de déploiement. Par défaut, les assemblys bloquants/de référence bloquent la mise à jour d'assembly si l'assembly de référence doit être supprimé.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Spécifie s'il faut tenter l'action, en dépit de la possibilité d'une incompatibilité avec les plateformes SQL Server.|
-|**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Ne pas bloquer le déplacement des données sur une table qui a une sécurité au niveau des lignes si cette propriété a la valeur true. La valeur par défaut est False.|
+|**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Ne pas bloquer le déplacement des données sur une table qui a une sécurité au niveau des lignes si cette propriété a la valeur true. La valeur par défaut est false.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Sauvegarde la base de données avant le déploiement des modifications.|
 |**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|Spécifie que l'épisode de publication doit prendre fin s'il y a une possibilité de perte de données suite à l'opération de publication.|
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Spécifie s'il faut bloquer la mise à jour d'une base de données dont le schéma ne correspond plus à son inscription ou qui est désinscrite.|
@@ -162,7 +162,7 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|Spécifie si les déclencheurs DML qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication vers une base de données.|
 |**/p:**|DropExtendedPropertiesNotInSource=(BOOLEAN 'True')|Spécifie si les propriétés étendues qui sont absentes du fichier d'instantané de base de données (.dacpac) doivent être supprimées de la base de données cible lors de la publication dans une base de données.|
 |**/p:**|DropIndexesNotInSource=(BOOLEAN 'True')|Spécifie si les index qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication vers une base de données.|
-|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Spécifie si les objets qui n’existent pas dans le fichier d’instantané de base de données (.dacpac) sont supprimés de la base de données cible au moment de la publication dans une base de données. Cette valeur est prioritaire sur DropExtendedProperties.|
+|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Spécifie si les objets qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) sont supprimés de la base de données cible au moment de la publication dans une base de données. Cette valeur est prioritaire sur DropExtendedProperties.|
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|Spécifie si les autorisations qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication de mises à jour vers une base de données.|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|Spécifie si les membres de rôle qui ne sont pas définis dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication de mises à jour vers une base de données.|
 |**/p:**|DropStatisticsNotInSource=(BOOLEAN 'True')|Spécifie si les statistiques qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) sont supprimées de la base de données cible quand vous publiez dans une base de données.|
@@ -211,7 +211,7 @@ Une opération de publication SqlPackage.exe procède à une mise à jour incré
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Spécifie que la publication doit toujours supprimer, puis recréer un assembly en cas de différence, au lieu d'insérer une instruction ALTER ASSEMBLY.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Spécifie si un nouveau fichier est créé quand un FileGroup est créé dans la base de données cible.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Spécifie si le schéma est inscrit avec le serveur de la base de données.|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Indique si les contributeurs DeploymentPlanExecutor doivent être exécutés lors de l’exécution d’autres opérations.|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Spécifie si les collaborateurs DeploymentPlanExecutor doivent être exécutés quand d'autres opérations sont exécutées.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Spécifie si les différences dans le classement de base de données doivent être ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Spécifie si les différences en matière de compatibilité de base de données doivent être ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|Spécifie si les propriétés de la base de données cible doivent être définies ou mises à jour dans le cadre de l'action de publication.|
@@ -358,7 +358,7 @@ Une action de rapport **SqlPackage.exe** crée un rapport XML sur les modificat
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Spécifie des collaborateurs de déploiement supplémentaires qui doivent être en cours d’exécution quand le fichier dacpac est déployé. Il doit s'agir d'une liste d'ID ou de noms de collaborateurs de build complets délimitée par des points-virgules.|
 |**/p:**|AllowDropBlocking Assemblies=(BOOLEAN)|Cette propriété est utilisée par le déploiement SqlClr afin de supprimer les assemblys bloquants dans le cadre du plan de déploiement. Par défaut, les assemblys bloquants/de référence bloquent la mise à jour d'assembly si l'assembly de référence doit être supprimé.|
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Spécifie s'il faut tenter l'action, en dépit de la possibilité d'une incompatibilité avec les plateformes SQL Server.|
-|**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Ne pas bloquer le déplacement des données sur une table qui a une sécurité au niveau des lignes si cette propriété a la valeur true. La valeur par défaut est False.|
+|**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Ne pas bloquer le déplacement des données sur une table qui a une sécurité au niveau des lignes si cette propriété a la valeur true. La valeur par défaut est false.|
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Sauvegarde la base de données avant le déploiement des modifications.|
 |**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|Spécifie que l'épisode de publication doit prendre fin s'il y a une possibilité de perte de données suite à l'opération de publication.|
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Spécifie s'il faut bloquer la mise à jour d'une base de données dont le schéma ne correspond plus à son inscription ou qui est désinscrite. |
@@ -379,7 +379,7 @@ Une action de rapport **SqlPackage.exe** crée un rapport XML sur les modificat
 |**/p:**|DropDmlTriggersNotInSource=(BOOLEAN 'True')|Spécifie si les déclencheurs DML qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication vers une base de données.|
 |**/p:**|DropExtendedPropertiesNotInSource=(BOOLEAN 'True')|Spécifie si les propriétés étendues qui sont absentes du fichier d'instantané de base de données (.dacpac) doivent être supprimées de la base de données cible lors de la publication dans une base de données.|
 |**/p:**|DropIndexesNotInSource=(BOOLEAN 'True')|Spécifie si les index qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication vers une base de données.|
-|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Spécifie si les objets qui n’existent pas dans le fichier d’instantané de base de données (.dacpac) sont supprimés de la base de données cible au moment de la publication dans une base de données. Cette valeur est prioritaire sur DropExtendedProperties.|
+|**/p:**|DropObjectsNotInSource=(BOOLEAN)|Spécifie si les objets qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) sont supprimés de la base de données cible au moment de la publication dans une base de données. Cette valeur est prioritaire sur DropExtendedProperties.|
 |**/p:**|DropPermissionsNotInSource=(BOOLEAN)|Spécifie si les autorisations qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication de mises à jour vers une base de données.|
 |**/p:**|DropRoleMembersNotInSource=(BOOLEAN)|Spécifie si les membres de rôle qui ne sont pas définis dans le fichier d'instantané de base de données (.dacpac) seront supprimés de la base de données cible au moment de la publication de mises à jour vers une base de données.|
 |**/p:**|DropStatisticsNotInSource=(BOOLEAN 'True')|Spécifie si les statistiques qui n'existent pas dans le fichier d'instantané de base de données (.dacpac) sont supprimées de la base de données cible quand vous publiez dans une base de données.|
@@ -428,7 +428,7 @@ Une action de rapport **SqlPackage.exe** crée un rapport XML sur les modificat
  |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Spécifie que la publication doit toujours supprimer, puis recréer un assembly en cas de différence, au lieu d'insérer une instruction ALTER ASSEMBLY. |
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Spécifie si un nouveau fichier est créé quand un FileGroup est créé dans la base de données cible. |
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Spécifie si le schéma est inscrit avec le serveur de la base de données. 
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Indique si les contributeurs DeploymentPlanExecutor doivent être exécutés lors de l’exécution d’autres opérations.|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Spécifie si les collaborateurs DeploymentPlanExecutor doivent être exécutés quand d'autres opérations sont exécutées.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Spécifie si les différences dans le classement de base de données doivent être ignorées ou mises à jour lors de la publication dans une base de données. |
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Spécifie si les différences en matière de compatibilité de base de données doivent être ignorées ou mises à jour lors de la publication dans une base de données. |
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|Spécifie si les propriétés de la base de données cible doivent être définies ou mises à jour dans le cadre de l'action de publication. |
@@ -519,7 +519,7 @@ Une action de script **SqlPackage.exe** crée un script de mise à jour incréme
 |**/p:**|AdditionalDeploymentContributors=(STRING)|Spécifie des collaborateurs de déploiement supplémentaires qui doivent être en cours d’exécution quand le fichier dacpac est déployé. Il doit s'agir d'une liste d'ID ou de noms de collaborateurs de build complets délimitée par des points-virgules.
 |**/p:**|AllowDropBlockingAssemblies=(BOOLEAN)|Cette propriété est utilisée par le déploiement SqlClr afin de supprimer les assemblys bloquants dans le cadre du plan de déploiement. Par défaut, les assemblys bloquants/de référence bloquent la mise à jour d'assembly si l'assembly de référence doit être supprimé.
 |**/p:**|AllowIncompatiblePlatform=(BOOLEAN)|Spécifie s'il faut tenter l'action, en dépit de la possibilité d'une incompatibilité avec les plateformes SQL Server.
-|**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Ne pas bloquer le déplacement des données sur une table qui a une sécurité au niveau des lignes si cette propriété a la valeur true. La valeur par défaut est False.
+|**/p:**|AllowUnsafeRowLevelSecurityDataMovement=(BOOLEAN)|Ne pas bloquer le déplacement des données sur une table qui a une sécurité au niveau des lignes si cette propriété a la valeur true. La valeur par défaut est false.
 |**/p:**|BackupDatabaseBeforeChanges=(BOOLEAN)|Sauvegarde la base de données avant le déploiement des modifications.
 |**/p:**|BlockOnPossibleDataLoss=(BOOLEAN 'True')|Spécifie que l'épisode de publication doit prendre fin s'il y a une possibilité de perte de données suite à l'opération de publication.
 |**/p:**|BlockWhenDriftDetected=(BOOLEAN 'True')|Spécifie s'il faut bloquer la mise à jour d'une base de données dont le schéma ne correspond plus à son inscription ou qui est désinscrite.
@@ -589,7 +589,7 @@ Une action de script **SqlPackage.exe** crée un script de mise à jour incréme
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|Spécifie que la publication doit toujours supprimer, puis recréer un assembly en cas de différence, au lieu d'insérer une instruction ALTER ASSEMBLY.|
 |**/p:**|PopulateFilesOnFileGroups=(BOOLEAN 'True')|Spécifie si un nouveau fichier est créé quand un FileGroup est créé dans la base de données cible.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|Spécifie si le schéma est inscrit avec le serveur de la base de données.|
-|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Indique si les contributeurs DeploymentPlanExecutor doivent être exécutés lors de l’exécution d’autres opérations.|
+|**/p:**|RunDeploymentPlanExecutors=(BOOLEAN)|Spécifie si les collaborateurs DeploymentPlanExecutor doivent être exécutés quand d'autres opérations sont exécutées.|
 |**/p:**|ScriptDatabaseCollation=(BOOLEAN)|Spécifie si les différences dans le classement de base de données doivent être ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|ScriptDatabaseCompatibility=(BOOLEAN)|Spécifie si les différences en matière de compatibilité de base de données doivent être ignorées ou mises à jour lors de la publication dans une base de données.|
 |**/p:**|ScriptDatabaseOptions=(BOOLEAN 'True')|Spécifie si les propriétés de la base de données cible doivent être définies ou mises à jour dans le cadre de l'action de publication.|

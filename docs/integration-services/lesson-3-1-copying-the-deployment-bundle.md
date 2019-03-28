@@ -1,5 +1,5 @@
 ---
-title: 'Étape 1 : Copie du bundle de déploiement | Microsoft Docs'
+title: 'Étape 1 : Copie du bundle de déploiement | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: b6ef1e56-d278-4a24-afd3-68d8e0595cbb
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5ef5f5304d9af3459c55e020cb0ca3a5fc8256e9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9fbe3f30d37bab783424deeefb5517cd6fa553a2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611077"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279463"
 ---
 # <a name="lesson-3-1---copying-the-deployment-bundle"></a>Leçon 3-1 : Copie du bundle de déploiement
 Au cours de cette tâche, vous allez copier l'application de déploiement sur l'ordinateur de destination.  
@@ -34,7 +34,7 @@ La méthode la plus simple pour copier l'application de déploiement sur l'ordin
 3.  Accédez au partage public sur lequel vous souhaitez copier le dossier sur l'ordinateur cible et cliquez sur **Coller**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 2 : exécution de l'Assistant Installation de package](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
+[Étape 2 : Exécution de l'Assistant Installation de package](../integration-services/lesson-3-2-running-the-package-installation-wizard.md)  
   
   
   

@@ -14,15 +14,15 @@ helpviewer_keywords:
 - errors [Integration Services], troubleshooting
 - packages [Integration Services], troubleshooting
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4aca92b322d3eb0a3b987300d88a877d29cf3cda
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: e0ee84933cf0644ac4759639c5ce6e2b3f183f04
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639026"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290125"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>Outils de dépannage pour l'exécution des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] intègre des fonctionnalités et des outils que vous pouvez utiliser pour résoudre des problèmes liés aux packages que vous exécutez après les avoir menés à terme et les avoir déployés.  
@@ -82,7 +82,7 @@ ms.locfileid: "51639026"
   
     3.  **Si possible, capturez les données sur le nombre de lignes**. Si possible, créez une table séparée pour les informations concernant le nombre de lignes dans laquelle chaque instance d'exécution de package est identifiée par son ExecutionID. Utilisez la transformation de calcul du nombre de lignes pour enregistrer le nombre de lignes dans une série de variables à des étapes critiques du flux de données. À la fin du flux de données, utilisez une tâche d'exécution SQL pour insérer la série de valeurs dans une ligne de la table en vue d'une analyse et d'un rapport ultérieurs.  
   
-     Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602)(en anglais).  
+     Pour plus d'informations sur cette approche, consultez la section « ETL Auditing and Logging » dans le livre blanc [!INCLUDE[msCoName](../../includes/msconame-md.md)] [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (en anglais).  
   
 ## <a name="troubleshoot-package-execution-by-using-debug-dump-files"></a>Résoudre les problèmes liés à l'exécution des packages à l'aide de fichiers de vidage du débogage  
  Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fourniront des informations sur l'exécution d'un package. Pour plus d’informations, voir [Generating Dump Files for Package Execution](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md).  

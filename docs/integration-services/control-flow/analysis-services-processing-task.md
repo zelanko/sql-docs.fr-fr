@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Analysis Services Processing task
 - processing objects [Integration Services]
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: babc48270415cdd4485dd75b43b052904824ebe5
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 2f1c260b97c60fd6b60a9a8c0ecf6e8fbd696fee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51641776"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271060"
 ---
 # <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services
   La tâche de traitement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite les objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tels que les modèles tabulaires, les cubes, les dimensions et les modèles d'exploration de données.  
@@ -113,14 +113,14 @@ ms.locfileid: "51641776"
  **Nouveau**  
  Créez un nouveau gestionnaire de connexions Analysis Services.  
   
- **Rubriques connexes :** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Référence de l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Informations de référence sur l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Liste d'objets**  
  |Propriété|Description|  
 |--------------|-----------------|  
 |**Nom de l'objet**|Affiche la liste des noms d'objets définis.|  
 |**Type**|Affiche la liste des types des objets définis.|  
-|**Options de traitement**|Sélectionnez une option de traitement dans la liste.<br /><br /> **Rubriques connexes** : [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Options de traitement**|Sélectionnez une option de traitement dans la liste.<br /><br /> **Rubriques connexes :** [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
 |**Paramètres**|Affiche la liste des paramètres de traitement des objets définis.|  
   
  **Ajouter**  
@@ -132,7 +132,7 @@ ms.locfileid: "51641776"
  **Analyse d'impact**  
  Analyse l'impact sur l'objet sélectionné.  
   
- **Rubriques connexes :** [Boîte de dialogue Analyse d’impact &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
+ **Rubriques connexes :** [Boîte de dialogue Analyse d'impact &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Résumé des paramètres du traitement**  
  |Propriété|Description|  
@@ -146,5 +146,5 @@ ms.locfileid: "51641776"
  **Modifier les paramètres**  
  Change les options de traitement et la gestion des erreurs dans les clés de dimension.  
   
- **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
+ **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
   

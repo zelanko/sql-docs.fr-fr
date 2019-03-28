@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Conditional Split transformation
 - route rows to different outputs [Integration Services]
 ms.assetid: 3f8b5825-226f-413c-ba8f-0bb931ca3770
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b6d56b9d109935db3adeafd4a3c11139109af8f7
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 3150d6a8c42a9e4cb0c4cb0cf17b581be61fd418
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640466"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280875"
 ---
 # <a name="conditional-split-transformation"></a>transformation de fractionnement conditionnel
   La transformation de fractionnement conditionnel peut aiguiller les lignes de données vers différentes sorties, suivant le contenu des données. La mise en œuvre de la transformation de fractionnement conditionnel s'apparente à une structure de décision CASE dans un langage de programmation. La transformation évalue les expressions puis, sur la base des résultats, dirige la ligne de données vers la sortie spécifiée. Cette transformation offre également une sortie par défaut, vers laquelle sont dirigées les lignes qui ne correspondent à aucune expression.  
@@ -87,7 +87,7 @@ ms.locfileid: "51640466"
   
  Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.  
   
- **Rubriques connexes :**  [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;Expression SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md), et [Fonctions &#40;Expression SSIS&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
+ **Rubriques connexes :**  [Expressions Integration Services &#40;SSIS&#41;](../../../integration-services/expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;expression SSIS&#41;](../../../integration-services/expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](../../../integration-services/expressions/functions-ssis-expression.md)  
   
  **Nom de sortie par défaut**  
  Tapez un nom pour la sortie par défaut ou utilisez le nom par défaut.  

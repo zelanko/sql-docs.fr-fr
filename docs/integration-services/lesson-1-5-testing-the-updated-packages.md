@@ -1,5 +1,5 @@
 ---
-title: 'Étape 5 : Test des packages mis à jour | Microsoft Docs'
+title: 'Étape 5 : Test des packages mis à jour | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 499036e541c213255c1c942ccde741dbd9f5d1f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea0050beae23d2178d08037b026a3d9ad8676b26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767767"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277548"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>Leçon 1-5 : Test des packages mis à jour
 Avant d'aborder la leçon suivante où vous allez créer l'application de déploiement qui sert à installer les packages sur l'ordinateur de destination, vous devez tester les packages. A cours de cette tâche, vous allez exécuter les packages DataTransfer.dtsx et LoadXMLData que vous avez ajoutés au projet Didacticiel de déploiement puis étendus avec des configurations.  
@@ -42,7 +42,7 @@ Si les packages ne s'exécutent pas correctement, vous devez les corriger avant 
 3.  Une fois l'exécution du package terminée, dans le menu **Déboguer** , cliquez sur **Arrêter le débogage**.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 2 : Créer l’application de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+[Leçon 2 : Créer le bundle de déploiement dans SSIS](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
   
   
   
