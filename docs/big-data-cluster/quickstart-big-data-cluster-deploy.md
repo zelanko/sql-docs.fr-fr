@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: b89ec7cd24ed61f08cf44f934066a9b0fc619434
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 00810eb3f57fdaf8f87fc0db16744ab9e3334f70
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493552"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618146"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Démarrage rapide : Déployer le cluster de données volumineux de SQL Server sur Azure Kubernetes Service (AKS)
 
@@ -78,14 +78,14 @@ Utilisez les étapes suivantes pour exécuter le script de déploiement. Ce scri
    | **Nom d’utilisateur docker** | Le nom d’utilisateur Docker fourni dans le cadre de la version préliminaire publique limitée. |
    | **Mot de passe docker** | Le mot de passe Docker fourni dans le cadre de la version préliminaire publique limitée. |
    | **Région Azure** | La région Azure pour le nouveau cluster AKS (par défaut **westus**). |
-   | **Taille de machine** | Le [taille de la machine](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) à utiliser pour les nœuds du cluster AKS (par défaut **Standard_L4s**). |
-   | **Nœuds de travail** | Le nombre de nœuds de travail dans le cluster AKS (par défaut **3**). |
+   | **Taille de machine** | Le [taille de la machine](https://docs.microsoft.com/azure/virtual-machines/windows/sizes) à utiliser pour les nœuds du cluster AKS (par défaut **Standard_L8s**). |
+   | **Nœuds de travail** | Le nombre de nœuds de travail dans le cluster AKS (par défaut **1**). |
    | **Nom du cluster** | Le nom de cluster AKS et le cluster de données volumineux. Le nom de votre cluster doit être uniquement des caractères alphanumériques minuscules et sans espaces. (par défaut **sqlbigdata**). |
    | **Mot de passe** | Mot de passe pour le contrôleur, une passerelle HDFS/Spark et une instance principale (par défaut **MySQLBigData2019**). |
    | **Utilisateur du contrôleur** | Nom d’utilisateur pour l’utilisateur du contrôleur (par défaut : **administrateur**). |
 
    > [!IMPORTANT]
-   > La valeur par défaut **Standard_L4s** taille de machine ne peut pas être disponible dans chaque région Azure. Si vous sélectionnez une taille de l’autre ordinateur, assurez-vous que le nombre total de disques pouvant être connectés entre les nœuds du cluster est supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, cluster big data requiert des revendications de volume persistant 24. Par exemple, le [Standard_L4s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) taille de l’ordinateur prend en charge 16 disques attachés, trois nœuds signifie que les 48 disques peuvent être attachés.
+   > La valeur par défaut **Standard_L8s** taille de machine ne peut pas être disponible dans chaque région Azure. Si vous sélectionnez une taille de l’autre ordinateur, assurez-vous que le nombre total de disques pouvant être connectés entre les nœuds du cluster est supérieur ou égal à 24. Chaque revendication de volume persistant dans le cluster nécessite un disque attaché. Actuellement, cluster big data requiert des revendications de volume persistant 24. Par exemple, le [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) taille de l’ordinateur prend en charge 32 disques attachés, vous êtes en mesure d’évaluer les clusters de données volumineuses avec un seul nœud de cette taille de machine.
 
    > [!NOTE]
    > Le `sa` compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Après avoir créé le déploiement, la `MSSQL_SA_PASSWORD` variable d’environnement est détectable en exécutant `echo $MSSQL_SA_PASSWORD` dans le conteneur de l’instance principale. Pour des raisons de sécurité, vous devez modifier votre `sa` mot de passe sur l’instance principale après le déploiement. Pour plus d’informations, consultez [modifier le mot de passe SA](../linux/quickstart-install-connect-docker.md#sapassword).

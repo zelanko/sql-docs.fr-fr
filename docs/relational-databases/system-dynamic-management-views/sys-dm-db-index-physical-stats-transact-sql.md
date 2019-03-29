@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_index_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d093983408502d391c4025e03ba0a590e8f77a
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617873"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618296"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,26 +56,26 @@ sys.dm_db_index_physical_stats (
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *database_id* | NULL | 0 | PAR DÉFAUT  
+ *database_id* | NULL | 0 | DEFAULT  
  Est l’ID de la base de données. *database_id* est **smallint**. Les entrées autorisées sont l'ID d'une base de données ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez NULL pour retourner des informations concernant toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous spécifiez NULL pour *database_id*, vous devez également spécifier NULL pour *object_id*, *index_id*, et *partition_number*.  
   
  La fonction intégrée [DB_ID](../../t-sql/functions/db-id-transact-sql.md) peut être spécifiée. Si vous utilisez DB_ID sans spécifier de nom de base de données, le niveau de compatibilité de la base de données active doit être égal à 90 ou plus.  
   
- *object_id* | NULL | 0 | PAR DÉFAUT  
+ *object_id* | NULL | 0 | DEFAULT  
  ID d’objet de la table ou vue de l’index se trouve sur. *l’object_id* est **int**.  
   
  Les entrées autorisées sont l'ID d'une table et d'une vue ou la valeur NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte. En tant que de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], les entrées valides incluent également le nom de file d’attente service broker ou le nom de table interne de file d’attente. Lorsque les paramètres par défaut sont appliquées (par exemple, tous les objets, tous les index, etc.), les informations de fragmentation pour toutes les files d’attente sont inclus dans le jeu de résultats.  
   
  Spécifiez la valeur NULL pour retourner des informations sur toutes les tables et les vues de la base de données spécifiée. Si vous spécifiez NULL pour *object_id*, vous devez également spécifier NULL pour *index_id* et *partition_number*.  
   
- *index_id* | 0 | NULL | -1 | PAR DÉFAUT  
+ *index_id* | 0 | NULL | -1 | DEFAULT  
  Identificateur de l’index. *index_id* est **int**. Les entrées autorisées sont l’ID d’un index, 0 si *object_id* est un segment, NULL, -1 ou DEFAULT. La valeur par défaut est -1. NULL, -1 et par défaut sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez la valeur NULL pour retourner des informations sur tous les index d'une table de base ou d'une vue. Si vous spécifiez NULL pour *index_id*, vous devez également spécifier NULL pour *partition_number*.  
   
- *partition_number* | NULL | 0 | PAR DÉFAUT  
+ *partition_number* | NULL | 0 | DEFAULT  
  Numéro de partition dans l'objet. *partition_number* est **int**. Les entrées valides sont les *partion_number* d’un index ou le segment, NULL, 0 ou DEFAULT. La valeur par défaut est 0. Les valeurs NULL, 0 et DEFAULT sont des valeurs équivalentes dans ce contexte.  
   
  Spécifiez NULL pour retourner des informations sur toutes les partitions de l'objet propriétaire.  
@@ -197,7 +197,7 @@ GO
   
 -   Utilisez l'instruction ALTER INDEX REBUILD, qui remplace DBCC DBREINDEX, pour reconstruire l'index en ligne ou hors ligne. Pour plus d’informations, consultez [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   
- La fragmentation seule n'est pas une raison suffisante pour réorganiser ou reconstruire un index. Le principal effet de la fragmentation est le ralentissement de la lecture anticipée lors de l'analyse d'un index. Les temps de réponse sont donc plus longs. Si la charge de travail d'une requête sur une table ou un index fragmenté n'implique pas d'analyses car elle concerne essentiellement des recherches de singletons, la suppression de la fragmentation peut n'avoir aucun effet. Pour plus d’informations, consultez ce [site Web de Microsoft](https://go.microsoft.com/fwlink/?linkid=31012).  
+ La fragmentation seule n'est pas une raison suffisante pour réorganiser ou reconstruire un index. Le principal effet de la fragmentation est le ralentissement de la lecture anticipée lors de l'analyse d'un index. Les temps de réponse sont donc plus longs. Si la charge de travail d'une requête sur une table ou un index fragmenté n'implique pas d'analyses car elle concerne essentiellement des recherches de singletons, la suppression de la fragmentation peut n'avoir aucun effet.
   
 > [!NOTE]  
 >  Exécution de DBCC SHRINKFILE ou DBCC SHRINKDATABASE peut fragmenter si un index est partiellement ou totalement déplacé pendant l’opération de réduction. Par conséquent, si une opération de compactage doit être effectuée, vous devez l'exécuter avant la suppression de la fragmentation.  
@@ -265,7 +265,7 @@ GO
   
 ```  
   
-### <a name="b-returning-information-about-a-heap"></a>b. Retour d'informations sur un segment de mémoire  
+### <a name="b-returning-information-about-a-heap"></a>B. Retour d'informations sur un segment de mémoire  
  Le code exemple suivant retourne toutes les statistiques sur le segment de mémoire `dbo.DatabaseLog` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Comme la table contient des données LOB, une ligne est retournée pour l'unité d'allocation `LOB_DATA`, en plus de la ligne retournée pour l'unité d'allocation `IN_ROW_ALLOCATION_UNIT` qui stocke les pages de données du segment de mémoire. L'exécution de cette requête nécessite, au minimum, l'autorisation CONTROL sur la table `dbo.DatabaseLog`.  
   
 ```  
@@ -431,7 +431,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [Vues système &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

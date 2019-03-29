@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 35b90cec967f60f0adfc4d9720f3aec809006f8c
-ms.sourcegitcommit: f8fced37f3fe5c45b2b97219d378137afd68cf76
+ms.openlocfilehash: fac9636b336c2571e159c72c79d482768bf2fbe6
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58198198"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618176"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Évaluer une entreprise et consolider les rapports d’évaluation avec le DMA
 
@@ -72,7 +72,11 @@ Cet inventaire peut prendre l’une des deux formes :
 
 ### <a name="if-using-a-csv-file"></a>Si vous utilisez un fichier CSV
 > [!IMPORTANT]
+>
 > Vérifiez que le fichier d’inventaire est enregistré dans un fichier (CSV) séparés par des virgules.
+>
+> Pour les instances par défaut, la valeur est le nom d’instance MSSQLServer.
+>
 
 Lorsque vous utilisez un fichier csv pour importer les données, n'assurez-vous que deux colonnes de données - **nom de l’Instance** et **nom de la base de données**, et que vous n’aient pas les lignes d’en-tête pour les colonnes.
  
