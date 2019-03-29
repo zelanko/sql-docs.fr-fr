@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: 5189d997e0408ead627556f5dc3a2b8f0c975fa3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9aad778475649280e5472f80ad96973d09803375
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392717"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566378"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Comment utiliser des blocs-notes dans Azure Data Studio
 
@@ -45,9 +45,9 @@ Il existe plusieurs façons de lancer un nouveau bloc-notes.
 
 ## <a name="supported-kernels-and-attach-to-context"></a>Prise en charge les noyaux et d’attachement au contexte
 
-L’Installation du bloc-notes dans Azure Data Studio en mode natif prend en charge que le noyau de SQL. Si vous êtes un développeur SQL et que vous souhaitez utiliser des blocs-notes, il s’agirait choisi noyau. 
+L’Installation du bloc-notes dans Azure Data Studio en mode natif prend en charge que le noyau de SQL. Si vous êtes un développeur SQL et que vous souhaitez utiliser des blocs-notes, puis il s’agirait choisi noyau. 
 
-Le noyau de SQL peut également servir à se connecter aux instances de serveur PostgreSQL. Si vous êtes un développeur de PostgreSQL et que vous souhaitez vous connecter à votre serveur PostgreSQL puis télécharger le [ **PostgreSQL extension** ](postgres-extension.md) dans la place de marché Azure Data Studio extension.
+Le noyau de SQL peut également servir à se connecter aux instances de serveur PostgreSQL. Si vous êtes un développeur de PostgreSQL et que vous souhaitez vous connecter à votre serveur PostgreSQL, puis téléchargez le [ **PostgreSQL extension** ](postgres-extension.md) dans la place de marché Azure Data Studio extension.
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
@@ -90,7 +90,7 @@ Une fois l’installation terminée, vous trouverez une notification dans l’hi
 |Noyau Spark|Écrire du code Scala et R à l’aide de calcul Spark à partir du cluster.
 |Python Kernel|Écrire du code Python pour un développement local.
 
-`Attach to` fournit le contexte pour le noyau à attacher. Si vous utilisez SQL noyau, vous pouvez `Attach to` un de vos instances de SQL Server.
+`Attach to` fournit le contexte pour le noyau à attacher. Si vous utilisez le noyau de SQL, vous pouvez `Attach to` un de vos instances de SQL Server.
 
 Si vous utilisez le noyau de Python3 le `Attach to` est `localhost`. Vous pouvez utiliser ce noyau pour votre développement Python local.
 

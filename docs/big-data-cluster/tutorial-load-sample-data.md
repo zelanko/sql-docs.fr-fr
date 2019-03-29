@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 68fe779dbdc99bd3eca1870a4e8ff1ee0fa7d95f
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: f8e5cc5b3da7bf8c571a1f4b3febd9ef45e44d9e
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017845"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566518"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-2019-big-data-cluster"></a>Didacticiel : Charger des exemples de données dans un cluster de données volumineux de SQL Server 2019
 
@@ -115,4 +115,18 @@ Les étapes suivantes décrivent comment utiliser un client Linux pour charger l
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Une fois le script de démarrage s’exécute, votre cluster de données volumineux a les bases de données et les données HDFS. Pour commencer à Explorer ces données et les clusters de données volumineuses, consultez le [didacticiels](tutorial-query-hdfs-storage-pool.md) dans cette section.
+Une fois le script de démarrage s’exécute, votre cluster de données volumineux a les bases de données et les données HDFS. Les didacticiels suivants utilisent les exemples de données pour illustrer les fonctionnalités de cluster big data :
+
+Virtualisation des données :
+
+- [Didacticiel : Requête HDFS dans un cluster de données volumineux de SQL Server](tutorial-query-hdfs-storage-pool.md)
+- [Didacticiel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server](tutorial-query-oracle.md)
+
+Ingestion de données :
+
+- [Didacticiel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md)
+- [Didacticiel : Recevoir des données dans un pool de données SQL Server avec des travaux Spark](tutorial-data-pool-ingest-spark.md)
+
+Ordinateurs portables :
+
+- [Didacticiel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server 2019](tutorial-notebook-spark.md)
