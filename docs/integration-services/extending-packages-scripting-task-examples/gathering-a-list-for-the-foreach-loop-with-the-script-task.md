@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Script task [Integration Services], examples
 - SSIS Script task, Foreach loops
 ms.assetid: 694f0462-d0c5-4191-b64e-821b1bdef055
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: be748729eeb9a50a5e206a5778e20420f4137177
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 82856b272e4799fc06929fe4f2d153320f879f0e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640046"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58270777"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Création d'une liste pour la boucle Foreach à l'aide de la tâche de script
   L'énumérateur Foreach à partir d'une variable énumère les éléments d'une liste qui lui est transmise via une variable et effectue les mêmes tâches sur chaque élément. Vous pouvez utiliser le code personnalisé dans une tâche de script pour remplir une liste à cet effet. Pour plus d’informations sur l’énumérateur, consultez [Conteneur de boucles Foreach](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -33,7 +33,7 @@ ms.locfileid: "51640046"
  L’exemple suivant utilise des méthodes de l’espace de noms **System.IO** pour établir une liste de classeurs Excel sur l’ordinateur qui sont antérieurs ou postérieurs à un nombre de jours spécifié par l’utilisateur dans une variable. Il effectue une recherche récursive dans les répertoires du lecteur C pour trouver des fichiers dotés de l'extension .xls et examine la date de dernière modification de chaque fichier pour déterminer s'il appartient à la liste. Il ajoute les fichiers répondant aux critères à un objet **ArrayList** et enregistre cet objet dans une variable pour une utilisation ultérieure dans un conteneur de boucles Foreach. Le conteneur de boucles Foreach est configuré pour utiliser l'énumérateur Foreach à partir d'une variable.  
   
 > [!NOTE]  
->  La variable utilisée avec l’énumérateur Foreach From variable doit être de type **Object**. L’objet que vous placez dans la variable doit implémenter l’une des interfaces suivantes : **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** ou **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Un objet **Array** ou **ArrayList** est couramment utilisé. L’objet **ArrayList** nécessite une référence et une instruction **Imports** pour l’espace de noms **System.Collections**.  
+>  La variable utilisée avec l’énumérateur Foreach From variable doit être de type **Object**. L'objet que vous placez dans la variable doit implémenter l'une des interfaces suivantes : **System.Collections.IEnumerable**, **System.Runtime.InteropServices.ComTypes.IEnumVARIANT**, **System.ComponentModel IListSource** ou **Microsoft.SqlServer.Dts.Runtime.Wrapper.ForEachEnumeratorHost**. Un objet **Array** ou **ArrayList** est couramment utilisé. L’objet **ArrayList** nécessite une référence et une instruction **Imports** pour l’espace de noms **System.Collections**.  
   
  Vous pouvez apprendre à manipuler cette tâche en attribuant différentes valeurs, positives et négatives, à la variable de package `FileAge`. Par exemple, vous pouvez entrer 5 pour rechercher les fichiers créés au cours des cinq derniers jours ou entrer -3 pour rechercher les fichiers créés il y a plus de trois jours. Cette tâche peut prendre une minute ou deux sur un lecteur contenant de nombreux dossiers à rechercher.  
   
