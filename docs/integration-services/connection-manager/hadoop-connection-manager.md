@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0d7544f30f065b9acbef3efc55ac7165b58da2e6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 2aa8b928d9bfc7c8c76672b4de5387cad96c6b19
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417915"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281433"
 ---
 # <a name="hadoop-connection-manager"></a>Gestionnaire de connexions Hadoop
   Le Gestionnaire de connexions Hadoop permet à un package SSIS (SQL Server Integration Services) de se connecter à un cluster Hadoop en utilisant les valeurs que vous spécifiez pour les propriétés.  
@@ -63,10 +63,10 @@ ms.locfileid: "52417915"
 
 ## <a name="connect-with-kerberos-authentication"></a>Se connecter avec l’authentification Kerberos
 Il existe deux options permettant de configurer l’environnement local pour pouvoir utiliser l’authentification Kerberos avec le Gestionnaire de connexions Hadoop. Vous pouvez choisir l’option qui correspond le mieux à votre situation.
--   Option 1 : [joindre l’ordinateur SSIS au domaine Kerberos](#kerberos-join-realm)
--   Option 2 : [Activer l’approbation mutuelle entre le domaine Windows et le domaine Kerberos](#kerberos-mutual-trust)
+-   Option n°1 : [Joindre l’ordinateur SSIS au domaine Kerberos](#kerberos-join-realm)
+-   Option 2 : [Activer l’approbation mutuelle entre le domaine Windows et le domaine Kerberos](#kerberos-mutual-trust)
 
-### <a name="kerberos-join-realm"></a>Option 1 : Joindre l’ordinateur SSIS au domaine Kerberos
+### <a name="kerberos-join-realm"></a>Option 1 : Joindre l’ordinateur SSIS au domaine Kerberos
 
 #### <a name="requirements"></a>Conditions requises :
 
@@ -96,7 +96,7 @@ Sur l’ordinateur SSIS :
         kdc = <your_kdc_server_address>
     ```
 
-### <a name="kerberos-mutual-trust"></a>Option 2 : activer l’approbation mutuelle entre le domaine Windows et le domaine Kerberos
+### <a name="kerberos-mutual-trust"></a>Option 2 : Activer l’approbation mutuelle entre le domaine Windows et le domaine Kerberos
 
 #### <a name="requirements"></a>Conditions requises :
 -   L’ordinateur servant de passerelle doit se joindre à un domaine Windows.
