@@ -12,21 +12,21 @@ helpviewer_keywords:
 - packages [Integration Services], running
 - remote packages [Integration Services]
 ms.assetid: 9f6ef376-3408-46bf-b5fa-fc7b18c689c9
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0b1954044626059e8a637aa41292839062269250
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 922a9abd267bec8b0400bc7d2c43d945d011d938
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51640014"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58274673"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Chargement et exécution d'un package distant par programme
   Pour exécuter des packages distants à partir d'un ordinateur local sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas installé, démarrez les packages afin qu'ils s'exécutent sur l'ordinateur distant sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est installé. Pour cela, vous faites utiliser par l'ordinateur local l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un service Web ou un composant distant pour démarrer les packages sur l'ordinateur distant. Si vous essayez de démarrer directement les packages distants à partir de l'ordinateur local, les packages se chargeront sur l'ordinateur local et essayeront de s'exécuter à partir de ce dernier. Si [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas installé sur l'ordinateur local, les packages ne s'exécuteront pas.  
   
 > [!NOTE]  
->  Vous ne pouvez pas exécuter de packages en dehors de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sur un ordinateur client sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n'est pas installé, et les termes de votre licence [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent ne pas vous permettre d'installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur d'autres ordinateurs. ([!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est un composant serveur et n'est pas redistribuable aux ordinateurs clients.)  
+>  Vous ne pouvez pas exécuter de packages en dehors de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] sur un ordinateur client sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] n’est pas installé, et les termes de votre licence [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne vous permettent peut-être pas d’installer [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur d’autres ordinateurs. ([!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est un composant serveur et n'est pas redistribuable aux ordinateurs clients.)  
   
  Alternativement, vous pouvez exécuter un package distant à partir d'un ordinateur local sur lequel [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est installé. Pour plus d’informations, consultez [Chargement et exécution d’un package local par programmation](../../integration-services/run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
   
@@ -151,7 +151,7 @@ namespace LaunchSSISPackageAgent_CS
 >  Avec ses paramètres par défaut pour l'authentification et l'autorisation, un service Web ne dispose généralement pas des autorisations suffisantes pour accéder à SQL Server ou au système de fichiers afin de charger et d'exécuter des packages. Vous risquez de devoir attribuer les autorisations appropriées au service web en configurant ses paramètres d’authentification et d’autorisation dans le fichier **web.config** et en attribuant les autorisations d’accès appropriées à la base de données et au système de fichiers. La description complète des autorisations Web, de base de données et de système de fichiers sort de la portée de cette rubrique.  
   
 > [!IMPORTANT]  
->  Les méthodes de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> qui permettent d'utiliser le magasin de packages SSIS prennent uniquement en charge « . », localhost ou le nom du serveur local. Vous ne pouvez pas utiliser « (local) ».  
+>  Les méthodes de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Application> qui permettent d’utiliser le magasin de packages SSIS prennent uniquement en charge « . », localhost ou le nom du serveur local. Vous ne pouvez pas utiliser « (local) ».  
   
 ### <a name="sample-code"></a>Exemple de code  
  Les exemples de code suivants indiquent comment créer et tester le service Web.  
@@ -417,7 +417,7 @@ namespace LaunchSSISPackageSvcTestCS
   
 ## <a name="external-resources"></a>Ressources externes  
   
--   Vidéo, [Procédure : automatiser l’exécution du package SSIS à l’aide de SQL Server Agent (vidéo de SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), sur technet.microsoft.com  
+-   Vidéo, [Guide pratique pour automatiser l’exécution des packages SSIS avec SQL Server Agent (vidéo de SQL Server)](https://technet.microsoft.com/sqlserver/ff686764.aspx), sur technet.microsoft.com  
   
 ## <a name="see-also"></a> Voir aussi  
  [Présentation des différences entre l’exécution locale et l’exécution distante](../../integration-services/run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: ec611374-16bf-4a56-8fd9-45d3ddd7befc
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 49252f4743f3235275c93f504b44f4419941029d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 67005532329ebdda27f0c86985604fb8a63babe1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797467"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273553"
 ---
 # <a name="support-multi-targeting-in-your-custom-components"></a>Prendre en charge le multi-ciblage dans les composants personnalisés
  Vous pouvez désormais utiliser le concepteur SSIS dans SQL Server Data Tools (SSDT) pour créer, gérer et exécuter des packages qui ciblent SQL Server 2016, SQL Server 2014 ou SQL Server 2012. Pour obtenir SSDT pour Visual Studio 2015, consultez [Télécharger la dernière version de SQL Server Data Tools](../../ssdt/download-sql-server-data-tools-ssdt.md). 
@@ -94,7 +94,7 @@ public override void PerformDowngrade(int pipelineVersion, DTSTargetServerVersio
 
 ### <a name="invalidcastexception"></a>InvalidCastException
 
-**Message d’erreur.** Impossible d’effectuer un cast d’un objet COM de type ’System.__ComObject’ en type d’interface ’Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100’. Cette opération a échoué car l’appel QueryInterface sur le composant COM pour l’interface avec l’IID ’{BE8C48A3-155B-4810-BA5C-BDF68A659E9E}’ a échoué en raison de l’erreur suivante : interface non prise en charge (Exception de HRESULT : 0 x 80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
+**Message d’erreur.** Impossible d’effectuer un cast d’un objet COM de type ’System.__ComObject’ en type d’interface ’Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100’. Cette opération a échoué, car l’appel QueryInterface sur le composant COM de l’interface portant l’IID « {BE8C48A3-155B-4810-BA5C-BDF68A659E9E} » a échoué en raison de l’erreur suivante : Interface non prise en charge (Exception de HRESULT : 0x80004002 (E_NOINTERFACE)). (Microsoft.SqlServer.DTSPipelineWrap).
 
 **Solution.** Si votre extension personnalisée fait référence à des assemblys d’interopérabilité SSIS comme Microsoft.SqlServer.DTSPipelineWrap ou Microsoft.SqlServer.DTSRuntimeWrap, définissez la valeur de la propriété **Incorporer les types d’interopérabilité** sur **False**.
 

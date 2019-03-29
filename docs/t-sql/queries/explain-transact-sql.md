@@ -11,12 +11,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b364a92732be8e12233faf51b03d92154c2a6d28
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 99edc393a8d831373fd3b7175af545f00655980c
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979495"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305907"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -37,7 +37,7 @@ EXPLAIN SQL_statement
  *SQL_statement*  
  Instruction [!INCLUDE[DWsql](../../includes/dwsql-md.md)] sur laquelle **EXPLAIN** s’exécutera. *SQL_statement* peut être l’une de ces commandes : **SELECT**, **INSERT**, **UPDATE**, **DELETE**, **CREATE TABLE AS SELECT**, **CREATE REMOTE TABLE**.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation **SHOWPLAN** et l’autorisation d’exécuter *SQL_statement*. Voir [Autorisations : GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, Parallel Data Warehouse&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Valeur retournée  
@@ -67,7 +67,7 @@ EXPLAIN SQL_statement
 |\<sql>|Répercute *SQL_statement*.|  
 |\<params>|Cette balise n’est pas utilisée pour l’instant.|  
 |\<dsql_operations>|Récapitule et contient les étapes de la requête, et inclut des informations sur le coût de la requête. Contient également tous les blocs `<dsql_operation>`. Cette balise contient des informations d’inventaire pour l’intégralité de la requête :<br /><br /> `<dsql_operations total_cost=total_cost total_number_operations=total_number_operations>`<br /><br /> *total_cost* est la durée totale estimée de l’exécution de la requête, en millisecondes.<br /><br /> *total_number_operations* est le nombre total d’opérations de la requête. Une opération qui va être exécutée en parallèle sur plusieurs nœuds est comptée comme une seule opération.|  
-|\<dsql_operation>|Décrit une opération unique dans le plan de requête. La balise \<dsql_operation> spécifie le type d’opération comme attribut :<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* est une des valeurs répertoriées dans [Querying Data (SQL Server PDW)](https://msdn.microsoft.com/3f4f5643-012a-4c36-b5ec-691c4bbe668c).<br /><br /> Le contenu du bloc `\<dsql_operation>` varie en fonction du type d’opération.<br /><br /> Consultez le tableau ci-dessous.|  
+|\<dsql_operation>|Décrit une opération unique dans le plan de requête. La balise \<dsql_operation> spécifie le type d’opération comme attribut :<br /><br /> `<dsql_operation operation_type=operation_type>`<br /><br /> *operation_type* est l’une des valeurs trouvées dans [sys.dm_pdw_request_steps (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).<br /><br /> Le contenu du bloc `\<dsql_operation>` varie en fonction du type d’opération.<br /><br /> Consultez le tableau ci-dessous.|  
   
 |Type d’opération|Contenu| Exemple|  
 |--------------------|-------------|-------------|  

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a79f1006-54e8-4cbf-96f8-5ed143ebb830
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ff408f0fd410e330f0ab5e3dfcdeee965a72a051
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 80177e1ba1a16d6f4cb88cf2ce972d8028540057
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545233"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58277568"
 ---
 # <a name="catalogcleanupserverexecutionkeys"></a>catalog.cleanup_server_execution_keys
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
 ## <a name="result-sets"></a>Jeux de résultats  
  Aucun.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Cette procédure stockée requiert l'une des autorisations suivantes :  
   
 -   Autorisations READ et EXECUTE sur le projet et, si applicable, autorisations READ sur les environnements référencés.  
@@ -84,7 +84,7 @@ catalog.cleanup_server_execution_keys [ @cleanup_flag = ] cleanup_flag ,
   
      Vous pouvez spécifier l’étendue ou le niveau (exécution ou projet) et le nombre de clés à supprimer. La taille de lot par défaut pour la suppression est 1000. Quand vous définissez le niveau sur 2, les clés et les certificats ne sont supprimés que si les projets associés ont été supprimés.  
   
- Pour plus d’informations, consultez l’article suivant de la Base de connaissances : [CORRECTIF : problèmes de performance quand vous utilisez SSISDB comme magasin de déploiement dans SQL Server 2012](https://support.microsoft.com/kb/2972285)  
+ Pour plus d’informations, consultez l’article suivant de la Base de connaissances : [CORRECTIF : problèmes de performance lorsque SSISDB sert de magasin de déploiement dans SQL Server 2012](https://support.microsoft.com/kb/2972285)  
   
 ## <a name="example"></a> Exemple  
  L’exemple suivant appelle la procédure stockée cleanup_server_execution_keys.  

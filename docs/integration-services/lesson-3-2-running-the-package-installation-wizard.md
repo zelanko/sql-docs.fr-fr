@@ -1,5 +1,5 @@
 ---
-title: 'Étape 2 : Exécution de l’Assistant Installation de package | Microsoft Docs'
+title: 'Étape 2 : Exécution de l’Assistant Installation de package | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: f91fbb89-4626-4c47-b96d-56052dc45861
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a346d55b84b115a7a128d02fdedd1ff7f6b800d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 740b85a52908437d2cdbca5e47e0797c1e0ba08b
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527144"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290285"
 ---
 # <a name="lesson-3-2---running-the-package-installation-wizard"></a>Leçon 3-2 : Exécution de l’Assistant Installation de package
 Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  
@@ -82,11 +82,11 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
   
     Étant donné que les valeurs des variables d'environnement sur l'ordinateur de destination sont différentes des valeurs des variables d'environnement sur l'ordinateur de développement, plusieurs avertissements s'affichent dans la page Validation des packages. Attendez-vous à quatre avertissements :  
   
-    -   Le fichier de configuration : « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le nom de fichier de configuration « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   
-    -   Le fichier de configuration : « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le nom de fichier de configuration « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   
@@ -100,7 +100,7 @@ Dans une leçon précédente, vous avez modifié les packages dans le didacticie
     > Un fichier journal temporaire est créé pour être utilisé dans la validation de package. Ce fichier n'est pas utilisé lorsque le package s'exécute.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 3 : Test des packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+[Étape 3 : Test des packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ## <a name="see-also"></a> Voir aussi  
 [Service Integration Services &#40;Service SSIS&#41;](../integration-services/service/integration-services-service-ssis-service.md)  

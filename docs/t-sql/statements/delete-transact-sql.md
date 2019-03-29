@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e9090e92baba8f67ee7ad0303103f41c66ace9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532168"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58306227"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -177,7 +177,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  L'instruction DELETE peut échouer si elle viole un déclencheur ou si elle essaie de supprimer une ligne référencée par des données dans une autre table avec une contrainte FOREIGN KEY. Si l'instruction DELETE supprime plusieurs lignes et qu'une de ces lignes viole un déclencheur ou une contrainte, une erreur est retournée et aucune ligne n'est supprimée.  
   
- Quand une instruction DELETE rencontre une erreur arithmétique (erreur de dépassement de capacité, de division par zéro ou de domaine) lors de l'évaluation de l'expression, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] gère ces erreurs comme si SET ARITHABORT avait la valeur ON. Le reste du lot est annulé et un message d'erreur est retourné.  
+ Quand une instruction DELETE rencontre une erreur arithmétique (erreur de dépassement, de division par zéro ou de domaine) qui se produit lors de l’évaluation de l’expression, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] gère ces erreurs comme si SET ARITHABORT avait la valeur ON. Le reste du lot est annulé et un message d'erreur est retourné.  
   
 ## <a name="interoperability"></a>Interopérabilité  
  DELETE peut s'utiliser dans le corps d'une fonction définie par l'utilisateur si l'objet modifié est une variable de table.  
@@ -212,7 +212,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
 ## <a name="security"></a>Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Les autorisations DELETE sont requises sur la table cible. Des autorisations SELECT sont également requises si l'instruction comporte une clause WHERE.  
   
  Les autorisations DELETE sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin** et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
@@ -240,7 +240,7 @@ GO
 ###  <a name="LimitRows"></a> Limitation des lignes supprimées  
  Les exemples de cette section montrent comment limiter le nombre de lignes qui seront supprimées.  
   
-#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Utilisation de la clause WHERE pour supprimer un jeu de lignes  
+#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>b. Utilisation de la clause WHERE pour supprimer un jeu de lignes  
  L'exemple suivant supprime toutes les lignes de la table `ProductCostHistory` , dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] , dans lesquelles la valeur de la colonne `StandardCost` est supérieure à `1000.00`.  
   
 ```sql
@@ -404,7 +404,7 @@ GO
 ```  
   
 #### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Utilisation de la clause OUTPUT avec <from_table_name> dans une instruction DELETE  
- L'exemple suivant supprime des lignes dans la table `ProductProductPhoto` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en fonction de critères de recherche définis dans la clause `FROM` de l'instruction `DELETE`. La clause `OUTPUT` retourne les colonnes `DELETED.ProductID`, `DELETED.ProductPhotoID`de la table en cours de suppression et les colonnes de la table `Product` . Cette méthode s'utilise dans la clause `FROM` pour spécifier les lignes à supprimer.  
+ L’exemple suivant supprime des lignes de la table `ProductProductPhoto` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en fonction de critères de recherche définis dans la clause `FROM` de l’instruction `DELETE`. La clause `OUTPUT` retourne les colonnes `DELETED.ProductID`, `DELETED.ProductPhotoID`de la table en cours de suppression et les colonnes de la table `Product` . Cette méthode s'utilise dans la clause `FROM` pour spécifier les lignes à supprimer.  
   
 ```sql
 DECLARE @MyTableVar table (  
@@ -458,7 +458,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 ### <a name="n-using-a-label-and-a-query-hint-with-the-delete-statement"></a>N. Utilisation d’une étiquette et d’un indicateur de requête avec l’instruction DELETE  
- Cette requête présente la syntaxe de base pour utiliser un indicateur de jointure de requête avec l’instruction DELETE. Pour plus d’informations sur les indicateurs de jointure et sur l’utilisation de la clause OPTION, consultez [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Cette requête présente la syntaxe de base pour utiliser un indicateur de jointure de requête avec l’instruction DELETE. Pour plus d’informations sur les indicateurs de jointure et la clause OPTION, voir [Clause OPTION (Transact-SQL)](../queries/option-clause-transact-sql.md).
   
 ```sql
 -- Uses AdventureWorks  

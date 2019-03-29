@@ -11,15 +11,15 @@ f1_keywords:
 - SQL13.SSIS.AZURE.F1
 - SQL14.SSIS.AZURE.F1
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f4e5bf1999ef81b20d5ae318523891c9ef92326f
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 458df1921c4d5327f06528d356790ed6795ac613
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642156"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280833"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Le Feature Pack SQL Server Integration Services (SSIS) pour Azure
 Le Feature Pack SQL Server Integration Services (SSIS) pour Azure est une extension qui fournit les composants répertoriés dans cette page afin de permettre à SSIS de se connecter aux services Azure, de transférer des données entre des sources de données Azure et locales, et de traiter des données stockées dans Azure.
@@ -80,8 +80,8 @@ Les pages de téléchargement incluent également des informations sur les prér
 
 -   Énumérateur de fichiers Azure Data Lake Store et d’objets blob Azure. Voir [Conteneur de boucles Foreach](https://msdn.microsoft.com/library/95a19dde-61ca-4d9b-aa3d-131fa4264296).
 
-## <a name="scenario-processing-big-data"></a>Scénario : traitement du Big Data
- Utilisez le connecteur Azure pour accomplir le travail suivant de traitement de données volumineuses :
+## <a name="scenario-processing-big-data"></a>Scénario : traitement du Big Data
+ Utilisez le connecteur Azure pour accomplir le travail suivant de traitement de données volumineuses :
 
 1.  Utilisez la tâche de téléchargement d'objet blob Azure pour charger des données d'entrée dans le stockage d'objets blob Azure.
 
@@ -95,7 +95,7 @@ Les pages de téléchargement incluent également des informations sur les prér
 
 ![SSIS-AzureConnector-BigDataScenario](../integration-services/media/ssis-azureconnector-bigdatascenario.png)
  
-## <a name="scenario-managing-data-in-the-cloud"></a>Scénario : gestion des données dans le cloud
+## <a name="scenario-managing-data-in-the-cloud"></a>Scénario : gestion des données dans le cloud
  Utilisez la destination d’objets blob Azure dans un package SSIS pour écrire des données de sortie dans un Azure Blob Storage, ou la source d’objets blob Azure pour lire des données à partir d’un stockage Azure Blob Storage.
 
 ![SSIS-AzureConnector-CloudArchive-1](../integration-services/media/ssis-azureconnector-cloudarchive-1.png)

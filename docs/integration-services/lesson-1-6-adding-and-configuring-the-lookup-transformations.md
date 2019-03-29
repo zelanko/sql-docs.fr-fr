@@ -1,22 +1,21 @@
 ---
 title: 'Étape 6 : Ajouter et configurer les transformations de recherche | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/03/2019
+ms.date: 03/19/2019
 ms.prod: sql
-ms.prod_service: integration-services
-ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 82db40d3b3fd61129823b3e745d097b47bd6973b
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.reviewer: ''
+ms.openlocfilehash: b64cddbe6c786e488c1ba9b9d289e9e48f786cf3
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143375"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221956"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>Leçon 1-6 : Ajouter et configurer les transformations de recherche
 
@@ -98,7 +97,7 @@ Dans les deux cas, la transformation de recherche utilise le gestionnaire de con
   
 8.  Dans la page **Colonnes** , effectuez les sélections suivantes :  
   
-    1.  Dans le volet **Colonnes d'entrée disponibles** , faites glisser **CurrencyDate** vers le volet **Colonnes de recherche disponibles** et déposez cet élément sur **FullDateAlternateKey**.  
+    1.  Dans le volet **Colonnes d'entrée disponibles** , faites glisser **CurrencyDate** vers le volet **Colonnes de recherche disponibles** et déposez cet élément sur **FullDateAlternateKey**.  Si vous voyez un message indiquant une incompatibilité de type de données, changez le type de données de CurrencyDate en [DT_DBDATE].
   
     2.  Dans la liste **Colonnes de recherche disponibles** , activez la case à cocher située à gauche de **DateKey**.  
   
@@ -115,6 +114,3 @@ Dans les deux cas, la transformation de recherche utilise le gestionnaire de con
   
 ## <a name="see-also"></a>Voir aussi  
 [Transformation de recherche](../integration-services/data-flow/transformations/lookup-transformation.md)  
-  
-  
-  

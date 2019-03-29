@@ -10,22 +10,22 @@ ms.topic: conceptual
 f1_keywords:
 - editTabProps
 ms.assetid: 95ea72ba-8e40-4177-a963-0fb4d10c56e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 4499ba0bc52e7c0d5cd052a8999737bf53337a50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9899756eb86e3f56ca90b6dc567146408a6588ee
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686967"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278078"
 ---
 # <a name="edit-the-table-properties"></a>Modifier les propriétés d'une table
   Cette boîte de dialogue permet de modifier des colonnes spécifiques de la table sélectionnée où les modifications sont capturées. Vous pouvez également modifier les informations du **Rôle de sécurité** et de l' **Instance de capture** .  
   
 ### <a name="to-edit-the-columns-to-include-in-the-cdc-instance"></a>Pour modifier les colonnes à inclure dans l'instance CDC.  
   
-1.  Effectuez une des actions suivantes ou les deux :  
+1.  Effectuez une des actions suivantes ou les deux :  
   
     -   Activez la case à cocher en regard des colonnes supplémentaires à inclure.  
   
@@ -41,13 +41,13 @@ ms.locfileid: "47686967"
   
 2.  Enregistrez l'instance de capture comme un des éléments suivants :  
   
-    -   **Nouvelle instance de capture**: dans ce cas, une nouvelle instance de capture est enregistrée et l'ancienne instance de capture n'est pas supprimée.  
+    -   **Nouvelle instance de capture** : dans ce cas, une nouvelle instance de capture est enregistrée et l’ancienne n’est pas supprimée.  
   
-         **Remarque**: vous ne pouvez pas avoir plus de deux instances de capture par table. S'il existe déjà deux instances de capture, cette option n'est pas disponible.  
+         **Remarque**: il n’est pas possible d’avoir plus de deux instances de capture par table. S'il existe déjà deux instances de capture, cette option n'est pas disponible.  
   
-    -   **Remplacer l'instance de capture existante**: dans ce cas, l'instance de capture actuelle est supprimée et remplacée par l'instance de capture que vous avez créée. Si deux instances de capture sont définies pour cette table, vous devez en sélectionner une à remplacer.  
+    -   **Remplacer l’instance de capture existante** : dans ce cas, l’instance de capture actuelle est supprimée et remplacée par celle que vous avez créée. Si deux instances de capture sont définies pour cette table, vous devez en sélectionner une à remplacer.  
   
- **Remarque**: vous pouvez supprimer une instance de capture de la liste des tables sous l'onglet **Table** .  
+ **Remarque**: vous pouvez supprimer une instance de capture de la liste des tables dans l’onglet **Table** .  
   
  Une fois les informations entrées dans cette boîte de dialogue, cliquez sur **OK** pour accepter les modifications.  
   

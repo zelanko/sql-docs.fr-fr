@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7500d510e08aae85b89d7ad83f97a85ed51cd88a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a1111aa084ee4d5c9ee34b74dbc689195dee5ba
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619397"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273648"
 ---
 # <a name="cdc-splitter"></a>Séparateur de capture de données modifiées
   Le séparateur de capture de données modifiées fractionne un flux de lignes de modification d'un flux de données de source CDC en flux de données distincts pour les opérations d'insertion, de mise à jour et de suppression. Le flux de données est fractionné en fonction de la colonne requise `__$operation` et de ses valeurs standard dans les tables de modification de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -41,11 +41,11 @@ ms.locfileid: "47619397"
   
  La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d'erreur**: la valeur est 1.  
+-   **Code d'erreur** : défini sur 1.  
   
--   **Colonne d’erreur**: colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur** : colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
--   **Colonnes de ligne d'erreur**: colonnes d'entrée de la ligne à l'origine de l'erreur.  
+-   **Colonnes de ligne d’erreur** : colonnes d'entrée de la ligne à l'origine de l'erreur.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configuration du séparateur de capture de données modifiées  
  Le séparateur de capture de données modifiées ne comporte aucune propriété configurable.  

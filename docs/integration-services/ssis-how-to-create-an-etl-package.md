@@ -15,15 +15,15 @@ helpviewer_keywords:
 - logs [Integration Services], tutorials
 - walkthroughs [Integration Services]
 ms.assetid: d6d5bb1f-4cb1-4605-9cd6-f60b858382c4
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: bc033012e2bf0799902e1bd5bcc1a5f31471c5c2
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: a603dc915f05f55db4eac3c3ed0347dc2d5eaf32
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383304"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271127"
 ---
 # <a name="ssis-how-to-create-an-etl-package"></a>SSIS : comment créer un package ETL
 
@@ -53,22 +53,22 @@ Pour exécuter ce tutoriel, les composants suivants doivent être installés :
     - Les exemples de packages supposent que les fichiers de données se trouvent dans le dossier `C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Creating a Simple ETL Package`. Si vous le décompressez le fichier téléchargé vers un autre emplacement, vous devrez peut-être mettre à jour le chemin d’accès du fichier à plusieurs endroits dans les exemples de packages.
 
 ## <a name="lessons-in-this-tutorial"></a>Leçons du didacticiel  
-[Leçon 1 : Créer un projet et un package de base avec SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
+[Leçon 1 : Créer un projet et un package de base avec SSIS](../integration-services/lesson-1-create-a-project-and-basic-package-with-ssis.md)  
 Dans cette leçon, vous allez créer un package ETL simple qui extrait des données d’un fichier plat, transforme ces données en utilisant des transformations de recherche et charge le résultat dans une destination de table de faits.  
   
-[Leçon 2 : Ajout d’un bouclage avec SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
+[Leçon 2 : Ajout d’un bouclage avec SSIS](../integration-services/lesson-2-adding-looping-with-ssis.md)  
 Dans cette leçon, vous développez le package créé au cours de la leçon 1 pour utiliser les nouvelles fonctionnalités de bouclage et extraire des données de plusieurs fichiers plats dans un même processus de flux de données.  
   
-[Leçon 3 : Ajouter la journalisation avec SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
+[Leçon 3 : Ajouter la journalisation avec SSIS](../integration-services/lesson-3-add-logging-with-ssis.md)  
 Dans cette leçon, vous développez le package que vous avez créé au cours de la leçon 2 pour utiliser les nouvelles fonctions de journalisation.  
   
-[Leçon 4 : Ajouter une redirection de flux d’erreurs avec SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
+[Leçon 4 : Ajouter une redirection de flux d’erreurs avec SSIS](../integration-services/lesson-4-add-error-flow-redirection-with-ssis.md)  
 Dans cette leçon, vous développez le package que vous avez créé au cours de la leçon 3 pour utiliser les nouvelles configurations de sortie d’erreur.  
   
-[Leçon 5 : Ajouter des configurations de package SSIS pour le modèle de déploiement de package](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
+[Leçon 5 : Ajouter des configurations de package SSIS pour le modèle de déploiement de package](../integration-services/lesson-5-add-ssis-package-configurations-for-the-package-deployment-model.md)  
 Dans cette leçon, vous développez le package que vous avez créé au cours de la leçon 4 pour utiliser de nouvelles options de configuration de package.  
   
-[Leçon 6 : Utilisation des paramètres avec le modèle de déploiement de projet dans SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
+[Leçon 6 : Utilisation de paramètres avec le modèle de déploiement de projet dans SSIS](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  
 Dans cette leçon, vous développez le package que vous avez créé au cours de la leçon 5 pour tirer parti des nouveaux paramètres dans le modèle de déploiement de projet.  
   
   

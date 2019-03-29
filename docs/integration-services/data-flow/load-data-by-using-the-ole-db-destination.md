@@ -12,15 +12,15 @@ helpviewer_keywords:
 - OLE DB destination [Integration Services]
 - destinations [Integration Services], OLE DB
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 74f6cb8c09525b998d5e864124eff0e5bb0aa509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd23184f25ff8083bdfffbb46ef8c5b5f5f91eae
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807377"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58281233"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>Charger des données à l'aide de la destination OLE DB
   Pour pouvoir ajouter et configurer une destination OLE DB, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -43,7 +43,7 @@ ms.locfileid: "47807377"
   
     -   **Table ou vue** : sélectionnez une table ou une vue dans la base de données qui contient les données.  
   
-    -   **Table ou vue - chargement rapide** : sélectionnez une table ou une vue dans la base de données qui contient les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Contrainte de validation**, **Lignes par lot**ou **Taille de validation d’insertion maximale**.  
+    -   **Table ou vue – chargement rapide** : sélectionnez une table ou une vue dans la base de données contenant les données, puis définissez les options de chargement rapide : **Conserver l’identité**, **Conserver les valeurs Null**, **Verrou de table**, **Vérifier les contraintes**, **Lignes par lot** ou **Taille maximale de validation d’insertion**.  
   
     -   **Variable de nom de table ou de vue** : sélectionnez la variable définie par l’utilisateur qui contient le nom d’une table ou d’une vue dans la base de données.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47807377"
 ## <a name="see-also"></a> Voir aussi  
  [Destination OLE DB](../../integration-services/data-flow/ole-db-destination.md)   
  [Transformations Integration Services](../../integration-services/data-flow/transformations/integration-services-transformations.md)   
- [Chemins Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
+ [Chemins d'accès d'Integration Services](../../integration-services/data-flow/integration-services-paths.md)   
  [tâche de flux de données](../../integration-services/control-flow/data-flow-task.md)  
   
   

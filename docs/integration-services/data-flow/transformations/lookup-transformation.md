@@ -21,15 +21,15 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: de1cc8de-e7af-4727-b5a5-a1f0a739aa09
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b7f269e0cbbc3e5f98667e49b7db6987c692c881
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 4e3de21943f0bdd50e05cb30a1d9b1774f41ab37
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639656"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273288"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
@@ -131,11 +131,11 @@ ms.locfileid: "51639656"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Vidéo, [Procédure : implémenter une transformation de recherche en mode Cache complet](https://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
+-   Vidéo, [Guide pratique pour Implémenter une transformation de recherche en mode Cache complet](https://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
   
 -   Billet de blog, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bonnes pratiques pour l’utilisation des modes de cache de transformation de recherche), sur blogs.msdn.com  
   
--   Billet de blog, [Lookup Pattern: Case Insensitive](https://go.microsoft.com/fwlink/?LinkId=157782)(Modèle de recherche : non-respect de la casse), sur blogs.msdn.com  
+-   Billet de blog, [Modèle de recherche : respect de la casse](https://go.microsoft.com/fwlink/?LinkId=157782), sur blogs.msdn.com  
   
 -   Exemple, [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)(Transformation de recherche), sur msftisprodsamples.codeplex.com.  
   

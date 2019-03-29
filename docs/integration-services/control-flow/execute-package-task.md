@@ -17,15 +17,15 @@ helpviewer_keywords:
 - child packages
 - parent packages [Integration Services]
 ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2148cf2e25e6cdddab20a29751cea82238159668
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 8cda7bf1c07cbba3233a94c05d14c5620fa784ce
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535696"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280123"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
   La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -40,7 +40,7 @@ ms.locfileid: "52535696"
   
 -   Contrôle de la sécurité des packages. Les auteurs de package ont besoin d'accéder à une seule partie d'une solution multipackage. En séparant un package en plusieurs packages, vous pouvez fournir un niveau de sécurité plus élevé ; en effet, vous pouvez permettre à un auteur d'accéder aux seuls packages appropriés.  
   
- Un package qui exécute d'autres packages est généralement appelé « package parent », tandis que les packages exécutés par un flux de travail parent sont appelés « packages enfants ».  
+ Un package qui exécute d'autres packages est généralement appelé « package parent », tandis que les packages exécutés par un flux de travail parent sont appelés « packages enfants ».  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des tâches qui effectuent des opérations de flux de travail, telles que l'exécution de fichiers de commandes, d'exécutables et de packages. Pour plus d'informations, consultez [Execute Process Task](../../integration-services/control-flow/execute-process-task.md).  
   
@@ -199,7 +199,7 @@ ms.locfileid: "52535696"
  **Connexion**  
  Sélectionnez un gestionnaire de connexions de fichiers dans la liste ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md)  
   
  **PackageNameReadOnly**  
  Permet d'afficher le nom du package.  

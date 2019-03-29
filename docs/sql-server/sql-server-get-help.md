@@ -9,12 +9,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: fca6676b5cb7532faf7bf88cf04159c28b0fa36b
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: 3187c312683713253ec60431f8892fdf0185c933
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570692"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58221957"
 ---
 # <a name="sql-server-help-and-feedback"></a>Aide et commentaires pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -70,6 +70,7 @@ Il existe quelques blogs SQL Server qui vous apportent les dernières informatio
 - [Blog SQL Server](https://cloudblogs.microsoft.com/sqlserver/)
 - [SQL Repl Talk](https://blogs.msdn.microsoft.com/repltalk/)
 - [SQL Tiger Team](https://blogs.msdn.microsoft.com/sql_server_team/)
+- [Équipe de support technique SQL](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
 
 
 ### <a name="msdn-forums"></a>Forums MSDN

@@ -25,15 +25,15 @@ helpviewer_keywords:
 - Integration Services service, package management
 - services [Integration Services], package management
 ms.assetid: 0261ed9e-3b01-4e37-a9d4-d039c41029b6
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 141810965960031cf004f9c9999943760bc6c810
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 00ed915265b9b3c19e7bafdcf7d6c41208e8319a
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532083"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280463"
 ---
 # <a name="package-management-ssis-service"></a>Gestion de packages (Service SSIS)
   La gestion de packages inclut la surveillance, la gestion, l’importation et l’exportation de packages.  
@@ -55,7 +55,7 @@ ms.locfileid: "52532083"
   
  Le dossier **Exécution des packages** ne contient aucun sous-dossier et n'est pas extensible.  
   
- Par défaut, le dossier **Packages stockés** contient deux dossiers : **File System** et **MSDB**. Le dossier **File System** répertorie les packages enregistrés dans le système de fichiers. Le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] indique l'emplacement de ces fichiers. Le dossier par défaut est le dossier Packages, situé dans %Program Files%\Microsoft SQL Server\100\DTS. Le dossier **MSDB** répertorie les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enregistrés dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb sur le serveur. La table sysssispackages contient les packages enregistrés dans la base de données msdb.  
+ Par défaut, le dossier **Packages stockés** contient deux dossiers : **Système de fichiers** et **MSDB**. Le dossier **File System** répertorie les packages enregistrés dans le système de fichiers. Le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] indique l'emplacement de ces fichiers. Le dossier par défaut est le dossier Packages, situé dans %Program Files%\Microsoft SQL Server\100\DTS. Le dossier **MSDB** répertorie les packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enregistrés dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb sur le serveur. La table sysssispackages contient les packages enregistrés dans la base de données msdb.  
   
  Pour visualiser la liste des packages stockés dans le magasin de packages, vous devez ouvrir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et vous connecter à [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
   

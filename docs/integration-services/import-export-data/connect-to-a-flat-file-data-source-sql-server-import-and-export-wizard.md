@@ -3,20 +3,19 @@ title: Se connecter à une source de données de fichier plat (Assistant Importa
 ms.custom: ''
 ms.date: 02/17/2017
 ms.prod: sql
-ms.prod_service: integration-services
 ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d7e7067b-f5a5-482f-b97e-9d82fe8e9f76
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ffb879aa1b3fdbb5c89690de5cb4c61c5e9eab2d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a071c773077832c15d41f73764b56c3bac9e5cf0
+ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393713"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58222133"
 ---
 # <a name="connect-to-a-flat-file-data-source-sql-server-import-and-export-wizard"></a>Se connecter à une source de données de fichier plat (Assistant Importation et Exportation SQL Server)
 Cette rubrique vous montre comment se connecter à une source de données de **fichier plat** (fichier texte) à partir de la page **Choisir une source de données** ou **Choisir une destination** de l’Assistant Importation et Exportation SQL Server. Ces deux pages de l’Assistant présentent des jeux d’options différents pour les fichiers plats, ainsi cette rubrique décrit la source de fichier plat et la destination de fichier plat séparément.
@@ -212,7 +211,7 @@ Dans la capture d’écran, remarquez que les données de la colonne **id**, qui
 |**DataScale**|Spécifiez l'échelle des données numériques. L'échelle est le nombre de décimales.|
 |**DataType**|Sélectionnez un type de données dans la liste des types de données disponibles.<br/>Pour plus d’informations, consultez [Types de données Integration Services](../../integration-services/data-flow/integration-services-data-types.md).|
 |**OutputColumnWidth**|Indiquez une valeur spécifiant la largeur de colonne en nombre d'octets. Pour les fichiers Unicode, cette valeur correspond à un nombre de caractères. Dans la tâche de flux de données, cette valeur permet de définir la largeur de la colonne de sortie pour les fichiers plats sources. Dans le modèle objet, le nom de la propriété est MaximumWidth.|  
-|**TextQualified**|Indique si les données de texte sont entourées par des caractères identificateurs de texte, tels que des caractères de guillemets.<br /><br /> True : les données texte du fichier plat sont qualifiées. False : les données texte du fichier plat ne sont pas qualifiées.|  
+|**TextQualified**|Indique si les données de texte sont entourées par des caractères identificateurs de texte, tels que des caractères de guillemets.<br /><br /> True : Les données texte du fichier plat sont qualifiées. False : les données texte du fichier plat ne sont PAS qualifiées.|  
   
 **Nouveau**  
  Ajoutez une nouvelle colonne en cliquant sur **Nouveau**. Par défaut, ce **nouveau** bouton ajoute une nouvelle colonne à la fin de la liste. Le bouton possède également les options ci-dessous, disponibles dans la liste déroulante.  

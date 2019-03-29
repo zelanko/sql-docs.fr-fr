@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7276644fefc9aa4adcd7ea796c3266c8135a97d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bbf24f97146e98fc074870410f8e68a83672f72
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670897"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282323"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>Charger des données à l'aide de la destination ODBC
   Cette procédure montre comment charger des données à l'aide de la destination ODBC. Pour pouvoir ajouter et configurer une destination ODBC, le package doit inclure au moins une tâche de flux de données et une source.  
@@ -35,9 +35,9 @@ ms.locfileid: "47670897"
   
 6.  Sélectionnez la méthode d'accès aux données.  
   
-    -   **Nom de la table - Lot**: sélectionnez cette option pour configurer la destination ODBC de manière à utiliser le mode de traitement par lots. Lorsque vous sélectionnez cette option, vous pouvez définir **Taille du lot**.  
+    -   **Nom de la table – Lot** : Sélectionnez cette option pour configurer la destination ODBC en mode par lot. Lorsque vous sélectionnez cette option, vous pouvez définir **Taille du lot**.  
   
-    -   **Nom de la table - Ligne par ligne**: sélectionnez cette option pour configurer la destination ODBC de manière à insérer les lignes de la table de destination une par une. Lorsque vous sélectionnez cette option, les données sont chargées dans la table une ligne à la fois.  
+    -   **Nom de la table – Ligne par ligne** : Sélectionnez cette option pour configurer la destination ODBC de manière à insérer les lignes dans la table de destination une par une. Lorsque vous sélectionnez cette option, les données sont chargées dans la table une ligne à la fois.  
   
 7.  Dans le champ **Nom de la table ou de la vue** , sélectionnez une table ou une vue disponible de la base de données dans la liste ou tapez une expression régulière pour identifier la table. Cette liste contient les 1 000 premières tables uniquement. Si votre base de données contient plus de 1 000 tables, vous pouvez taper le début du nom d'une table ou utiliser le caractère générique (*) pour entrer une partie du nom afin d'afficher la table ou les tables que vous souhaitez utiliser.  
   

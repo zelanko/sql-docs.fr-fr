@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - MERGE statement [SQL Server]
 ms.assetid: 7e44a5c2-e6d6-4fe2-a079-4f95ccdb147b
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e8a7300f2b3a006ade820831f682eb379e9e200
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 95a771a7eb5f8f77f7ee7e869c0a434b1b604d26
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393972"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282393"
 ---
 # <a name="merge-in-integration-services-packages"></a>MERGE in Integration Services Packages
   Dans la version actuelle de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], l’instruction SQL d’une tâche d’exécution SQL peut contenir une instruction MERGE. Cette instruction MERGE vous permet d'accomplir plusieurs opérations INSERT, UPDATE et DELETE dans une même instruction.  
@@ -51,12 +51,12 @@ ms.locfileid: "52393972"
  La table FactBuyingHabits incluse dans l'entrepôt de données indique la dernière date à laquelle un client a acheté un produit donné. La table se compose des colonnes ProductID, CustomerID et PurchaseDate. Chaque semaine, la base de données transactionnelle génère une table PurchaseRecords qui inclut les achats effectués pendant la semaine. L'objectif est d'utiliser une instruction MERGE unique pour fusionner les informations de la table PurchaseRecords dans la table FactBuyingHabits. Pour les paires client–produit qui n'existent pas, l'instruction MERGE insère de nouvelles lignes. Pour les paires client–produit qui existent, l'instruction MERGE met à jour la date d'achat la plus récente.  
   
 ###### <a name="track-price-history"></a>Assurer le suivi de l'historique des prix  
- La table DimBook représente la liste des livres dans l'inventaire d'un libraire et identifie l'historique des prix de chaque ouvrage. Cette table inclut les colonnes : ISBN, ProductID, Price, Shelf et IsCurrent. Cette table possède également une ligne pour chaque prix que le livre a eu. L'une de ces lignes contient le prix actuel. Pour indiquer la ligne qui contient le prix actuel, la valeur de la colonne IsCurrent est égale à 1 pour cette ligne.  
+ La table DimBook représente la liste des livres dans l'inventaire d'un libraire et identifie l'historique des prix de chaque ouvrage. Cette table comporte les colonnes suivantes : ISBN, ProductID, Price, Shelf et IsCurrent. Cette table possède également une ligne pour chaque prix que le livre a eu. L'une de ces lignes contient le prix actuel. Pour indiquer la ligne qui contient le prix actuel, la valeur de la colonne IsCurrent est égale à 1 pour cette ligne.  
   
  Chaque semaine, la base de données génère une table WeeklyChanges qui contient les modifications des prix pour la semaine et les nouveaux livres qui ont été ajoutés pendant la semaine. En utilisant une instruction MERGE unique, vous pouvez appliquer les modifications présentes dans la table WeeklyChanges à la table DimBook. L'instruction MERGE insère de nouvelles lignes pour les nouveaux livres ajoutés et met à jour la colonne IsCurrent en spécifiant 0 pour les lignes des livres existants dont le prix a changé. L'instruction MERGE insère également de nouvelles lignes pour les livres dont le prix a changé et, pour ces nouvelles lignes, elle affecte la valeur 1 à la colonne IsCurrent.  
   
 ### <a name="merge-a-table-with-new-data-against-the-old-table"></a>Fusionner une table avec des données nouvelles par rapport à l'ancienne table  
- La base de données modélise les propriétés d’un objet en utilisant un « schéma ouvert », ce qui signifie qu’une table contient des paires nom–valeur pour chaque propriété. La table Properties a trois colonnes : EntityID, PropertyID et Value. Une table NewProperties qui est une version plus récente de la table doit être synchronisée avec la table Properties. Pour synchroniser ces deux tables, vous pouvez utiliser une instruction MERGE unique pour effectuer les opérations suivantes :  
+ La base de données modélise les propriétés d’un objet en utilisant un « schéma ouvert », ce qui signifie qu’une table contient des paires nom–valeur pour chaque propriété. La table Properties comporte trois colonnes : EntityID, PropertyID et Value. Une table NewProperties qui est une version plus récente de la table doit être synchronisée avec la table Properties. Pour synchroniser ces deux tables, vous pouvez utiliser une instruction MERGE unique pour effectuer les opérations suivantes :  
   
 -   supprimer des propriétés de la table Properties si elles ne figurent pas dans la table NewProperties ;  
   

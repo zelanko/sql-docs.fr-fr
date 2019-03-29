@@ -18,12 +18,12 @@ ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b6ce28ed249565e051a987ddffbb04d683f9e43
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b5c910872b342d8d1bd9dc15ed2796eea76edfc8
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974238"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305527"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Configurer le routage en lecture seule pour un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,6 +66,8 @@ Le routage en lecture seule est disponible dans [!INCLUDE[sssql15](../../../incl
 -   Un ou plusieurs réplicas de disponibilité doivent être configurés pour recevoir la lecture seule dans le rôle secondaire (autrement dit, pour être des [réplicas secondaires lisibles](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)). Pour plus d’informations, consultez [Configure Read-Only Access on an Availability Replica &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md).  
   
 -   Vous devez être connecté à l'instance de serveur qui héberge le réplica principal actuel.  
+
+-   Si vous utilisez une connexion SQL, vérifiez que le compte est correctement configuré. Pour plus d’informations, voir [Gestion des connexions et des tâches des bases de données d’un groupe de disponibilité (SQL Server)](logins-and-jobs-for-availability-group-databases.md).
   
 ###  <a name="RORReplicaProperties"></a> Quelles sont les propriétés du réplica que vous avez besoin de configurer pour prendre en charge le routage en lecture seule ?  
   

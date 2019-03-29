@@ -12,15 +12,15 @@ helpviewer_keywords:
 - hresults [Integration Services]
 - errors [Integration Services], listed
 ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b95d209a033f30c13ea1bd21d99e845733fa9857
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: 9f1e05ab7d98bdbcfdb33a3feb82e84498bb4eaf
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51642406"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58290885"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Guide de référence des erreurs et des messages propres à Integration Services
   Les tableaux suivants répertorient les erreurs, les avertissements et les messages d'information prédéfinis de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , par ordre croissant en fonction de leur numéro pour chaque catégorie, avec leurs codes numériques et noms symboliques. Chacune de ces erreurs est définie comme un champ de la classe <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> dans l’espace de noms <xref:Microsoft.SqlServer.Dts.Runtime> .  
@@ -64,7 +64,7 @@ ms.locfileid: "51642406"
 |0xC0010003|-1073676285|DTS_E_VARIABLEREADONLY|Erreur lors de la tentative d'écriture vers une variable en lecture seule, « %1 ».|  
 |0xC0010004|-1073676284|DTS_E_MANAGEDCOMPONENTSTORENOTFOUND|Impossible de trouver les répertoires contenant les composants Tasks et Data Flow Task. Vérifiez l'intégrité de votre installation.|  
 |0xC0010006|-1073676282|DTS_E_PACKAGENAMETOOLONG|Le nom du package est trop long. La limite est 128 caractères. Raccourcissez le nom du package.|  
-|0xC0010007|-1073676281|DTS_E_PACKAGEDESCRIPTIONTOOLONG|La description du package est trop longue. La limite est 1 024 caractères. Raccourcissez la description du package.|  
+|0xC0010007|-1073676281|DTS_E_PACKAGEDESCRIPTIONTOOLONG|La description du package est trop longue. La limite est 1 024 caractères. Raccourcissez la description du package.|  
 |0xC0010008|-1073676280|DTS_E_VERCOMMENTSTOOLONG|La propriété VersionComments est trop longue. La limite est 1 024 caractères. Essayez de raccourcir la propriété VersionComments.|  
 |0xC0010009|-1073676279|DTS_E_ELEMENTNOTFOUND|L'élément est introuvable dans une collection. Cette erreur se produit lorsque vous essayez d'extraire un élément d'une collection sur un conteneur au cours de l'exécution du package et que l'élément est absent.|  
 |0xC001000A|-1073676278|DTS_E_PACKAGENOTFOUND|Le package spécifié n'a pas pu être chargé de la base de données SQL Server.|  
@@ -79,14 +79,14 @@ ms.locfileid: "51642406"
 |0xC0010016|-1073676266|DTS_E_INVALIDARRAYVALUE|Erreur lors de l'obtention ou de la définition d'une valeur de tableau. Le type « % 1 » n'est pas autorisé. Ceci se produit lors du chargement d'un tableau dans une variable.|  
 |0xC0010017|-1073676265|DTS_E_UNSUPPORTEDARRAYTYPE|Type non pris en charge dans le tableau. Ceci se produit lors de l'enregistrement d'un tableau de types non pris en charge dans une variable.|  
 |0xC0010018|-1073676264|DTS_E_PERSISTENCEERROR|Erreur lors du chargement de la valeur « %1 » du nœud « %2 ».|  
-|0xC0010019|-1073676263|DTS_E_INVALIDNODE|Le nœud « %1 » n'est pas valide. Ceci se produit lors de l'échec de l'enregistrement.|  
+|0xC0010019|-1073676263|DTS_E_INVALIDNODE|Le nœud « %1 » n'est pas valide. Ceci se produit lors de l'échec de l'enregistrement.|  
 |0xC0010020|-1073676256|DTS_E_ERRORLOADINGTASK|Échec du chargement de la tâche « %1 », type « %2 ». Les informations de contact de cette tâche sont « %3 ».|  
 |0xC0010021|-1073676255|DTS_E_ERRORELEMENTNOTINCOLL|L'élément « %1 » n'existe pas dans la collection « %2 ».|  
 |0xC0010022|-1073676254|DTS_E_MISSINGOBJECTDATA|L'élément ObjectData est absent du bloc XML d'un objet hébergé. Ceci se produit lorsque l'analyseur XML tente de chercher l'élément de données d'un objet, sans succès.|  
 |0xC0010023|-1073676253|DTS_E_VARIABLENOTFOUNDINCOLL|La variable « %1 » est introuvable. Cette erreur se produit lors de la tentative d'extraction d'une variable d'une collection de variables sur un conteneur au cours de l'exécution du package et que la variable est absente.  Un nom de variable a peut-être changé ou la variable n'est pas créée.|  
 |0xC0010025|-1073676251|DTS_E_HASEMPTYTASKHOSTS|Le package ne peut pas s'exécuter, car il contient des tâches qui n'ont pas pu se charger.|  
 |0xC0010026|-1073676250|DTS_E_TASKISEMPTY|Échec de chargement de la tâche. Les informations de contact de cette tâche sont « %1 ».|  
-|0xC0010027|-1073676249|DTS_E_ERRORLOADINGTASKNOCONTACT|Erreur lors du chargement de la tâche « %1 ».|  
+|0xC0010027|-1073676249|DTS_E_ERRORLOADINGTASKNOCONTACT|Erreur lors du chargement de la tâche « %1 ».|  
 |0xC0010028|-1073676248|DTS_E_ERRORATLOADTASK|Erreur lors du chargement de la tâche. Ceci se produit lorsque le chargement d'une tâche à partir de XML échoue.|  
 |0xC0010200|-1073675776|DTS_E_MULTIPLECACHEWRITES|Le %1 ne peut pas écrire dans le cache parce que le %2 y a déjà effectué une opération d'écriture.|  
 |0xC0010201|-1073675775|DTS_E_SETCACHEFORINSERTFAILED|Échec de préparation du cache pour les nouvelles données.|  
@@ -115,7 +115,7 @@ ms.locfileid: "51642406"
 |0xC0012022|-1073668062|DTS_E_DTRXMLSAVEFAILURE|Impossible d'enregistrer le fichier de configuration. Le fichier est peut-être en lecture seule.|  
 |0xC0012023|-1073668061|DTS_E_FAILPACKAGEONFAILURENA|La propriété FailPackageOnFailure n'est pas applicable au conteneur de package.|  
 |0xC0012024|-1073668060|DTS_E_TASKPRODUCTLEVEL|La tâche « %1 » ne peut pas s'exécuter sur la version installée d'Integration Services %2. La version %3 ou une version ultérieure est requise.|  
-|0xC0012029|-1073668055|DTS_E_UNABLETOSAVETOFILE|Impossible d'enregistrer xml dans « %1 ». Le fichier est peut-être en lecture seule.|  
+|0xC0012029|-1073668055|DTS_E_UNABLETOSAVETOFILE|Impossible d'enregistrer xml dans « %1 ». Le fichier est peut-être en lecture seule.|  
 |0xC0012037|-1073668041|DTS_E_CONFIGTYPECONVERSIONFAILED|Impossible de convertir un type dans la configuration « %1 » pour le chemin d'accès au package « %2 ».  Ceci se produit lorsqu'une valeur de configuration ne peut être convertie d'une chaîne dans le type de destination approprié. Vérifiez la valeur de la configuration pour vous assurer qu'elle peut être convertie dans le type de propriété ou de variable de destination.|  
 |0xC0012049|-1073668023|DTS_E_CONFIGFAILED|Échec de la configuration. Ceci est un avertissement générique pour tous les types de configuration. D'autres avertissements doivent précéder celui-ci avec plus d'informations.|  
 |0xC0012050|-1073668016|DTS_E_REMOTEPACKAGEVALIDATION|Le package n'a pas pu être validé par la tâche ExecutePackage. Le package ne peut pas s'exécuter.|  
@@ -164,7 +164,7 @@ ms.locfileid: "51642406"
 |0xC0014029|-1073659863|DTS_E_INVALIDCERTHASHFORMAT|La valeur de hachage n'est pas un tableau unidimensionnel d'octets (erreur : %1). Ceci se produit dans CPackage::LoadUserCertificateByHash.|  
 |0xC001402A|-1073659862|DTS_E_CANTACCESSARRAYDATA|Les données du tableau sont inaccessibles (erreur : %1). Cette erreur peut se produire partout où GetDataFromSafeArray est appelé.|  
 |0xC001402B|-1073659861|DTS_E_CREATEMANAGEDHELPERFAILED|L'objet ManagedHelper de SSIS a échoué en cours de création avec l'erreur 0x%1!8.8X! « %2 ». Ceci se produit partout où CoCreateInstance CLSID_DTSManagedHelper échoue.|  
-|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|Le Runtime SSIS a échoué l'inscription de la connexion OLE DB dans une transaction distribuée avec l'erreur 0x%1!8.8X! « %2 ».|  
+|0xC001402C|-1073659860|DTS_E_OLEDBTRANSACTIONENLIST|Le Runtime SSIS a échoué l'inscription de la connexion OLE DB dans une transaction distribuée avec l'erreur 0x%1!8.8X! « %2 ».|  
 |0xC001402D|-1073659859|DTS_E_SIGNPACKAGEFAILED|La signature du package a échoué avec l'erreur 0x%1!8.8X! « %2 ». Ceci se produit lorsque la méthode ManagedHelper.SignDocument échoue.|  
 |0xC001402E|-1073659858|DTS_E_CHECKENVELOPEFAILED|Échec de la recherche d'enveloppe de signature XML dans le XML du package avec l'erreur 0x%1!8.8X! « %2 ». Ceci se produit dans CPackage::LoadFromXML.|  
 |0xC001402F|-1073659857|DTS_E_GETXMLSOURCEFAILED|Échec de l'obtention de la source XML à partir de l'objet XML DOM avec l'erreur 0x%1!8.8X! « %2 ». Cela se produit lorsque IXMLDOMDocument::get_xml échoue.|  
@@ -194,7 +194,7 @@ ms.locfileid: "51642406"
 |0xC0014048|-1073659832|DTS_E_INVALIDPATHTOPACKAGE|Le chemin d'accès du package spécifié ne contient pas de nom de package. Ceci se produit lorsque le chemin d'accès ne contient pas au moins une barre oblique inverse ou une barre oblique.|  
 |0xC0014049|-1073659831|DTS_E_FOLDERNOTFOUND|Le dossier « %1 » est introuvable.|  
 |0xC001404A|-1073659830|DTS_E_FINDFOLDERONSQLSERVER_OLEDB|En essayant de rechercher un dossier sur SQL, une erreur OLE DB s'est produite avec le code d'erreur 0x%1!8.8X! (%2).|  
-|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|Le module fournisseur d'informations SSIS n'a pas réussi à ouvrir le journal. Code d'erreur : 0x%1!8.8X!.|  
+|0xC001404B|-1073659829|DTS_E_OPENLOGFAILED|Le module fournisseur d'informations SSIS n'a pas réussi à ouvrir le journal. Code d’erreur : 0x%1!8.8X!.|  
 |0xC001404C|-1073659828|DTS_E_GETCONNECTIONINFOS|Échec de l'obtention de la collection ConnectionInfos avec l'erreur 0x%1!8.8X! « %2 ». Cette erreur se produit lorsque l'appel à IDTSApplication100::get_ConnectionInfos échoue.|  
 |0xC001404D|-1073659827|DTS_E_VARIABLEDEADLOCK|Blocage détecté lors de la tentative de verrouillage de variables. Les verrous ne peuvent être obtenus à l'issue de 16 tentatives. Le délai d'attente des verrous a expiré.|  
 |0xC001404E|-1073659826|DTS_E_NOTDISPENSED|La collection Variables n'a pas été retournée de VariableDispenser. L'opération qui a été tentée n'est autorisée que sur les collections distribuées.|  
@@ -210,7 +210,7 @@ ms.locfileid: "51642406"
 |0xC0014059|-1073659815|DTS_E_UNSAFEVARIABLESALREADYSET|VariableDispenser a reçu une collection Variables non fiable. Cette opération ne peut pas être répétée.|  
 |0xC001405A|-1073659814|DTS_E_INVALIDPARENTPACKAGEPATH|GetPackagePath a été appelé sur ForEachEnumerator, mais aucun chemin d'accès du package ForEachLoop n'a été spécifié.|  
 |0xC001405B|-1073659813|DTS_E_VARIABLEDEADLOCK_READ|Un blocage a été détecté lors de la tentative de verrouillage de la variable « %1 » pour l'accès en lecture. Un verrou n'a pas pu être obtenu à l'issue de 16 tentatives et son délai d'attente a expiré.|  
-|0xC001405C|-1073659812|DTS_E_VARIABLEDEADLOCK_READWRITE|Un blocage a été détecté lors de la tentative de verrouillage des variables « %1 » pour l’accès en lecture/écriture. Un verrou ne peut pas être obtenu à l’issue de 16 tentatives. Le délai d'attente des verrous a expiré.|  
+|0xC001405C|-1073659812|DTS_E_VARIABLEDEADLOCK_READWRITE|Un blocage a été détecté lors de la tentative de verrouillage des variables « %1 » pour l’accès en lecture/écriture. Un verrou ne peut pas être obtenu à l’issue de 16 tentatives. Le délai d'attente des verrous a expiré.|  
 |0xC001405D|-1073659811|DTS_E_VARIABLEDEADLOCK_BOTH|Un blocage a été détecté lors de la tentative de verrouillage des variables « %1 » pour l'accès en lecture, et des variables « %2 » pour l'accès en lecture/écriture. Un verrou ne peut pas être obtenu à l’issue de 16 tentatives. Le délai d'attente des verrous a expiré.|  
 |0xC001405E|-1073659810|DTS_E_PACKAGEPASSWORDEMPTY|Le niveau de protection du package nécessite un mot de passe, mais la propriété PackagePassword est vide.|  
 |0xC001405F|-1073659809|DTS_E_DECRYPTXML_PASSWORD|Impossible de déchiffrer un nœud XML chiffré, car le mot de passe n'a pas été spécifié ou est incorrect. Le chargement du package tentera de poursuivre l'opération sans les informations chiffrées.|  
@@ -327,7 +327,7 @@ ms.locfileid: "51642406"
 |0xC001F028|-1073614808|DTS_E_NODISPATCH|L'objet n'implémente pas IDispatch. Cette erreur se produit lorsqu'un objet Property ou une collection Properties tente d'accéder à une interface IDispatch sur un objet.|  
 |0xC001F029|-1073614807|DTS_E_NOCONTAININGTYPELIB|Impossible d'extraire la bibliothèque de types de l'objet. Cette erreur se produit lorsque la collection Properties tente d'extraire la bibliothèque de types d'un objet par le biais de son interface IDispatch.|  
 |0xC001F02A|-1073614806|DTS_E_INVALIDTASKMONIKER|Impossible de créer une tâche à partir de XML pour la tâche « %1!s! », type « %2!s! » en raison de l’erreur « 0x%3!8.8X! « %4!s! ».|  
-|0xC001F02C|-1073614804|DTS_E_FAILEDCREATEXMLDOCUMENT|Impossible de créer un document XML « %1 ».|  
+|0xC001F02C|-1073614804|DTS_E_FAILEDCREATEXMLDOCUMENT|Impossible de créer un document XML « %1 ».|  
 |0xC001F02D|-1073614803|DTS_E_PMVARPROPTYPESDIFFERENT|Une erreur s'est produite, car il y a un mappage de propriété d'une variable vers une propriété dont le type est différent. Le type de la propriété et le type de la variable doivent être identiques.|  
 |0xC001F02E|-1073614802|DTS_E_PMINVALIDPROPMAPTARGET|Une tentative a été effectuée pour définir un mappage de propriété de sorte à cibler un type d'objet non pris en charge. Cette erreur se produit lors du passage d'un type d'objet non pris en charge à un mappage de propriété.|  
 |0xC001F02F|-1073614801|DTS_E_COULDNOTRESOLVEPACKAGEPATH|Impossible de résoudre un chemin de package vers un objet dans le package « %1 ».  Vérifiez que le chemin d'accès du package est valide.|  
@@ -362,7 +362,7 @@ ms.locfileid: "51642406"
 |0xC001F209|-1073614327|DTS_E_DTSNAME_VALIDFILENAME|Le nom d'objet « %1 » n'est pas valide. Le nom ne peut pas contenir les caractères suivants : / \ : ? " < > &#124;|  
 |0xC001F420|-1073613792|DTS_E_FAILLOADINGPROPERTY|Impossible de charger la propriété de valeur « %1 » à l'aide de la persistance par défaut.|  
 |0xC001F422|-1073613790|DTS_E_NODELISTENUM_INVALIDCONNMGRTYPE|Le gestionnaire de connexions « %1 » n'est pas de type « %2 »|  
-|0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|« %1 » est vide|  
+|0xC001F423|-1073613789|DTS_E_NODELISTENUM_XPATHISEMPTY|« %1 » est vide|  
 |0xC001F424|-1073613788|DTS_E_NODELISTENUM_INVALIDDATANODE|Nœud de données non valide dans la section de l'énumérateur de la liste de nœuds|  
 |0xC001F425|-1073613787|DTS_E_NODELISTENUM_NOENUMERATORCREATED|Aucun énumérateur ne peut être créé|  
 |0xC001F427|-1073613785|DTS_E_OPERATIONFAILCACHEINUSE|L'opération a échoué car le cache est en cours d'utilisation.|  
@@ -376,7 +376,7 @@ ms.locfileid: "51642406"
 |0xC00220E4|-1073602332|DTS_E_TKEXECPACKAGE_UNABLETOLOAD|Erreur 0x%1!8.8X! lors de la préparation du chargement du package. %2.|  
 |0xC0024102|-1073594110|DTS_E_TASKVALIDATIONFAILED|La méthode Validate a échoué sur la tâche et a retourné le code d'erreur 0x%1!8.8X! (%2). La méthode Validate doit réussir et indiquer le résultat à l'aide d'un paramètre de sortie.|  
 |0xC0024104|-1073594108|DTS_E_TASKEXECUTEFAILED|La méthode Execute sur la tâche a retourné le code d'erreur 0x%1!8.8X! (%2). La méthode Execute doit réussir et indiquer le résultat à l'aide d'un paramètre de sortie.|  
-|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Une erreur s'est produite sur la tâche « %1 » : 0x%2!8.8X! lors de l'extraction des dépendances. Le runtime extrayait les dépendances de la collection de dépendances de la tâche, lorsque l'erreur s'est produite. La tâche a peut-être implémenté de manière incorrecte une des interfaces de dépendance.|  
+|0xC0024105|-1073594107|DTS_E_RETRIEVINGDEPENDENCIES|Une erreur s'est produite sur la tâche « %1 » : 0x%2!8.8X! lors de l'extraction des dépendances. Le runtime extrayait les dépendances de la collection de dépendances de la tâche, lorsque l'erreur s'est produite. La tâche a peut-être implémenté de manière incorrecte une des interfaces de dépendance.|  
 |0xC0024107|-1073594105|DTS_E_TASKVALIDATIONERROR|Des erreurs se sont produites au cours de la validation de la tâche.|  
 |0xC0024108|-1073594104|DTS_E_CONNECTIONSTRINGFORMAT|Le format de la chaîne de connexion n'est pas valide. Il doit consister en un ou plusieurs composants de la forme X=Y, séparés par des points-virgules. Cette erreur se produit lorsqu'une chaîne de connexion avec zéro composant est définie sur le gestionnaire de connexions de la base de données.|  
 |0xC0024109|-1073594103|DTS_E_UNQUOTEDSEMICOLON|Les composants de la chaîne de connexion ne peuvent pas contenir des points-virgules sans guillemets. Si la valeur doit contenir un point-virgule, ajoutez des guillemets de chaque côté de la valeur. Cette erreur se produit lorsque les valeurs de la chaîne de connexion contiennent des points-virgules sans guillemets, telle que la propriété InitialCatalog.|  
@@ -429,7 +429,7 @@ ms.locfileid: "51642406"
 |0xC002912C|-1073573588|DTS_E_DTSPROCTASK_CANNOTWRITEINAREADONLYVARIABLE|Le résultat d'exécution ne peut pas être enregistré dans une variable en lecture seule.|  
 |0xC002912D|-1073573587|DTS_E_DTSPROCTASK_INVALIDVARIABLE|La variable « %1 » n'est pas définie.|  
 |0xC002912E|-1073573586|DTS_E_DTSPROCTASK_CONNECTIONNOTFOUND|Le gestionnaire de connexions « %1 » n'est pas défini.|  
-|0xC002912F|-1073573585|DTS_E_DTSPROCTASK_INVALIDCONNECTION|Le gestionnaire de connexions « %1 » n'est pas un gestionnaire de connexions FILE.|  
+|0xC002912F|-1073573585|DTS_E_DTSPROCTASK_INVALIDCONNECTION|Le gestionnaire de connexions « %1 » n'est pas un gestionnaire de connexions FILE.|  
 |0xC0029130|-1073573584|DTS_E_DTSPROCTASK_NONEXISTENTATTRIBUTE|« %1 » n'a pas été trouvé au cours de la désérialisation.|  
 |0xC0029131|-1073573583|DTS_E_DTSPROCTASK_TRACEHASBEENSTOPPED|La trace a été arrêtée en raison d'une exception.|  
 |0xC0029132|-1073573582|DTS_E_DTSPROCTASK_DDLEXECUTIONFAILED|L'exécution du DDL a échoué.|  
@@ -455,7 +455,7 @@ ms.locfileid: "51642406"
 |0xC0029146|-1073573562|DTS_E_EXEC2000PKGTASK_CONVERT_FAILED|Impossible de convertir « %1 » en « %2 ».|  
 |0xC0029147|-1073573561|DTS_E_EXEC2000PKGTASK_ERROR_IN_VALIDATE|Impossible de valider « %1 » par rapport à « %2 ».|  
 |0xC0029148|-1073573560|DTS_E_EXEC2000PKGTASK_ERROR_IN_LOAD_FROM_XML|Une erreur s'est produite dans LoadFromXML au niveau de la balise « %1 ».|  
-|0xC0029149|-1073573559|DTS_E_EXEC2000PKGTASK_ERROR_IN_SAVE_TO_XML|Une erreur s'est produite dans SaveToXML au niveau de la balise « %1 ».|  
+|0xC0029149|-1073573559|DTS_E_EXEC2000PKGTASK_ERROR_IN_SAVE_TO_XML|Une erreur s'est produite dans SaveToXML au niveau de la balise « %1 ».|  
 |0xC002914A|-1073573558|DTS_E_EXECPROCTASK_INVALIDTIMEOUT|La valeur de délai d'expiration indiquée n'est pas valide. Spécifiez le nombre de secondes pendant lesquelles la tâche autorise le processus à s'exécuter. La valeur minimale du délai d'expiration est 0, ce qui indique qu'aucun délai d'expiration n'est utilisé et que le processus s'exécute jusqu'au bout ou jusqu'à ce qu'une erreur se produise. La valeur maximale de délai d'expiration est 2147483 (((2^31) - 1)/1000).|  
 |0xC002914B|-1073573557|DTS_E_EXECPROCTASK_CANTREDIRECTIO|Impossible de rediriger les flux si le processus peut continuer de s'exécuter au-delà de la durée de vie de la tâche.|  
 |0xC002914C|-1073573556|DTS_E_EXECPROCTASK_PROCESSHASTIMEDOUT|Le délai d'attente du processus a expiré.|  
@@ -475,10 +475,10 @@ ms.locfileid: "51642406"
 |0xC002915B|-1073573541|DTS_E_FSTASK_PATHNOTVALID|« %1 » n'est pas valide sur le type d'opération « %2 ».|  
 |0xC002915C|-1073573540|DTS_E_FSTASK_DESTINATIONNOTSET|La propriété de destination de l'opération « %1 » n'est pas définie.|  
 |0xC002915D|-1073573539|DTS_E_FSTASK_SOURCENOTSET|La propriété source de l'opération « %1 » n'est pas définie.|  
-|0xC002915E|-1073573538|DTS_E_FSTASK_CONNECTIONTYPENOTFILE|Le type de connexion « %1 » n'est pas un fichier.|  
-|0xC002915F|-1073573537|DTS_E_FSTASK_VARIABLEDOESNTEXIST|La variable « %1 » n'existe pas.|  
+|0xC002915E|-1073573538|DTS_E_FSTASK_CONNECTIONTYPENOTFILE|Le type de connexion « %1 » n'est pas un fichier.|  
+|0xC002915F|-1073573537|DTS_E_FSTASK_VARIABLEDOESNTEXIST|La variable « %1 » n'existe pas.|  
 |0xC0029160|-1073573536|DTS_E_FSTASK_VARIABLENOTASTRING|La variable « %1 » n'est pas une chaîne.|  
-|0xC0029163|-1073573533|DTS_E_FSTASK_FILEDOESNOTEXIST|Le fichier ou le répertoire « %1 » représenté par la connexion « %2 » n'existe pas.|  
+|0xC0029163|-1073573533|DTS_E_FSTASK_FILEDOESNOTEXIST|Le fichier ou le répertoire « %1 » représenté par la connexion « %2 » n'existe pas.|  
 |0xC0029165|-1073573531|DTS_E_FSTASK_DESTCONNUSAGETYPEINVALID|Le gestionnaire de connexions de fichiers de destination « %1 » a un type d'utilisation non valide : « %2 ».|  
 |0xC0029166|-1073573530|DTS_E_FSTASK_SRCCONNUSAGETYPEINVALID|Le gestionnaire de connexions de fichiers sources « %1 » a un type d'utilisation non valide « %2 ».|  
 |0xC0029167|-1073573529|DTS_E_FSTASK_LOGENTRYGETTINGFILEOPERATION|FileSystemOperation|  
@@ -499,7 +499,7 @@ ms.locfileid: "51642406"
 |0xC0029177|-1073573513|DTS_E_FTPTASK_ERROR_IN_LOAD_FROM_XML|Une erreur s'est produite dans LoadFromXML au niveau de la balise « %1 ».|  
 |0xC0029178|-1073573512|DTS_E_FTPTASK_NOFILESATLOCATION|Il n'y a aucun fichier dans « %1 ».|  
 |0xC0029179|-1073573511|DTS_E_FTPTASK_LOCALVARIABLEISEMPTY|La variable « %1 » est vide.|  
-|0xC002917A|-1073573510|DTS_E_FTPTASK_REMOTEVARIABLEISEMPTY|La variable « %1 » est vide.|  
+|0xC002917A|-1073573510|DTS_E_FTPTASK_REMOTEVARIABLEISEMPTY|La variable « %1 » est vide.|  
 |0xC002917B|-1073573509|DTS_E_FTPTASK_NOFILESINCONNMGR|Le fichier « %1 » ne contient pas de chemin d'accès au fichier.|  
 |0xC002917C|-1073573508|DTS_E_FTPTASK_NOFILEPATHSINLOCALVAR|La variable « %1 » ne contient pas de chemin d'accès au fichier.|  
 |0xC002917D|-1073573507|DTS_E_FTPTASK_VARIABLENOTASTRING|La variable « %1 » n'est pas une chaîne.|  
@@ -509,16 +509,16 @@ ms.locfileid: "51642406"
 |0xC0029182|-1073573502|DTS_E_FTPTASK_CONNECTIONTYPENOTFILE|Le type de connexion « %1 » n'est pas un fichier.|  
 |0xC0029183|-1073573501|DTS_E_FTPTASK_FILEDOESNOTEXIST|Le fichier représenté par « %1 » n'existe pas.|  
 |0xC0029184|-1073573500|DTS_E_FTPTASK_INVALIDDIRECTORY|Le répertoire n'est pas spécifié dans la variable « %1 ».|  
-|0xC0029185|-1073573499|DTS_E_FTPTASK_NOFILESFOUND|Aucun fichier trouvé dans « %1 ».|  
+|0xC0029185|-1073573499|DTS_E_FTPTASK_NOFILESFOUND|Aucun fichier trouvé dans « %1 ».|  
 |0xC0029186|-1073573498|DTS_E_FTPTASK_NODIRECTORYPATHINCONMGR|Le répertoire n'est pas spécifié dans le gestionnaire de connexions de fichiers « %1 ».|  
 |0xC0029187|-1073573497|DTS_E_FTPTASK_UNABLETODELETELOCALEFILE|Impossible de supprimer le fichier local « %1 ».|  
-|0xC0029188|-1073573496|DTS_E_FTPTASK_UNABLETOREMOVELOCALDIRECTORY|Impossible de supprimer le répertoire local « %1 ».|  
+|0xC0029188|-1073573496|DTS_E_FTPTASK_UNABLETOREMOVELOCALDIRECTORY|Impossible de supprimer le répertoire local « %1 ».|  
 |0xC0029189|-1073573495|DTS_E_FTPTASK_UNABLETOCREATELOCALDIRECTORY|Impossible de créer le répertoire local « %1 ».|  
-|0xC002918A|-1073573494|DTS_E_FTPTASK_UNABLETORECEIVEFILES|Impossible de recevoir des fichiers en utilisant « %1 ».|  
+|0xC002918A|-1073573494|DTS_E_FTPTASK_UNABLETORECEIVEFILES|Impossible de recevoir des fichiers en utilisant « %1 ».|  
 |0xC002918B|-1073573493|DTS_E_FTPTASK_UNABLETOSENDFILES|Impossible d'envoyer des fichiers en utilisant « %1 ».|  
-|0xC002918C|-1073573492|DTS_E_FTPTASK_UNABLETOMAKEDIRREMOTE|Impossible de créer un répertoire distant en utilisant « %1 ».|  
+|0xC002918C|-1073573492|DTS_E_FTPTASK_UNABLETOMAKEDIRREMOTE|Impossible de créer un répertoire distant en utilisant « %1 ».|  
 |0xC002918D|-1073573491|DTS_E_FTPTASK_UNABLETOREMOVEDIRREMOTE|Impossible de supprimer le répertoire distant en utilisant « %1 ».|  
-|0xC002918E|-1073573490|DTS_E_FTPTASK_UNABLETODELETEREMOTEFILES|Impossible de supprimer des fichiers distants en utilisant « %1 ».|  
+|0xC002918E|-1073573490|DTS_E_FTPTASK_UNABLETODELETEREMOTEFILES|Impossible de supprimer des fichiers distants en utilisant « %1 ».|  
 |0xC002918F|-1073573489|DTS_E_FTPTASK_UNABLETOCONNECTTOSERVER|Impossible de se connecter au serveur FTP en utilisant « %1 ».|  
 |0xC0029190|-1073573488|DTS_E_FTPTASK_INVALIDVARIABLEVALUE|La variable « %1 » ne commence pas par « / ».|  
 |0xC0029191|-1073573487|DTS_E_FTPTASK_INVALIDREMOTEPATH|Le chemin d'accès distant « %1 » ne commence pas par « / ».|  
@@ -543,7 +543,7 @@ ms.locfileid: "51642406"
 |0xC00291A4|-1073573468|DTS_E_MSMQTASK_INVALID_ENCRYPTION_ALGO_WRAPPER|Vous essayez de définir la valeur de l'algorithme de chiffrement avec un objet non valide.|  
 |0xC00291A5|-1073573467|DTS_E_MSMQTASK_VARIABLE_TO_RECEIVE_STRING_MSG_EMPTY|La variable pour recevoir le message de chaîne est vide.|  
 |0xC00291A6|-1073573466|DTS_E_MSMQTASK_RECEIVE_VARIABLE_EMPTY|La variable pour recevoir le message de variable est vide.|  
-|0xC00291A7|-1073573465|DTS_E_MSMQTASK_CONNECTIONTYPENOTMSMQ|La connexion « %1 » n'est pas de type MSMQ.|  
+|0xC00291A7|-1073573465|DTS_E_MSMQTASK_CONNECTIONTYPENOTMSMQ|La connexion « %1 » n'est pas de type MSMQ.|  
 |0xC00291A8|-1073573464|DTS_E_MSMQTASK_DATAFILE_ALREADY_EXISTS|Le fichier de données « %1 » existe déjà à l'emplacement spécifié. Impossible de remplacer le fichier puisque l'option Remplacer a la valeur FALSE.|  
 |0xC00291A9|-1073573463|DTS_E_MSMQTASK_STRING_MSG_TO_VARIABLE_NOT_FOUND|La variable spécifiée « %1 » qui recevra le message de chaîne est introuvable dans la collection de variables du package.|  
 |0xC00291AA|-1073573462|DTS_E_MSMQTASK_CONNMNGRNULL|Le gestionnaire de connexions « %1 » est vide.|  
@@ -553,11 +553,11 @@ ms.locfileid: "51642406"
 |0xC00291AE|-1073573458|DTS_E_SCRIPTTASK_COMPILEERRORMSG3|Erreur « %1 » : « %2 »\r\nLigne « %3 » Colonnes « %4 » - « %5 »\r\nTexte sur plusieurs lignes : « %6 ».|  
 |0xC00291AF|-1073573457|DTS_E_SCRIPTTASK_SCRIPTREPORTEDFAILURE|Le script utilisateur a retourné un résultat d'erreur.|  
 |0xC00291B0|-1073573456|DTS_E_SCRIPTTASK_SCRIPTFILESFAILEDTOLOAD|Échec du chargement des fichiers du script utilisateur.|  
-|0xC00291B1|-1073573455|DTS_E_SCRIPTTASK_SCRIPTTHREWEXCEPTION|Le script utilisateur a renvoyé une exception : « %1 ».|  
+|0xC00291B1|-1073573455|DTS_E_SCRIPTTASK_SCRIPTTHREWEXCEPTION|Le script utilisateur a renvoyé une exception : « %1 ».|  
 |0xC00291B2|-1073573454|DTS_E_SCRIPTTASK_COULDNOTCREATEENTRYPOINTCLASS|Impossible de créer une instance de la classe entrypoint « %1 ».|  
 |0xC00291B3|-1073573453|DTS_E_SCRIPTTASK_LOADFROMXMLEXCEPTION|Une exception s'est produite lors du chargement de la tâche de script de XML : « %1 ».|  
 |0xC00291B4|-1073573452|DTS_E_SCRIPTTASK_SOURCEITEMNOTFOUNDEXCEPTION|L'élément source « %1 » est introuvable dans le package.|  
-|0xC00291B5|-1073573451|DTS_E_SCRIPTTASK_BINARYITEMNOTFOUNDEXCEPTION|L'élément binaire « %1 » est introuvable dans le package.|  
+|0xC00291B5|-1073573451|DTS_E_SCRIPTTASK_BINARYITEMNOTFOUNDEXCEPTION|L'élément binaire « %1 » est introuvable dans le package.|  
 |0xC00291B6|-1073573450|DTS_E_SCRIPTTASK_UNRECOGNIZEDSCRIPTLANGUAGEEXCEPTION|« %1 » n'a pas été reconnu comme langage de script valide.|  
 |0xC00291B7|-1073573449|DTS_E_SCRIPTTASK_ILLEGALSCRIPTNAME|Le nom de script n'est pas valide. Il ne peut pas contenir des espaces, des barres obliques, des caractères spéciaux ni commencer par un numéro.|  
 |0xC00291B8|-1073573448|DTS_E_SCRIPTTASK_INVALIDSCRIPTLANGUAGE|Le langage de script spécifié n'est pas valide.|  
@@ -569,7 +569,7 @@ ms.locfileid: "51642406"
 |0xC00291BE|-1073573442|DTS_E_SCRIPTTASK_INVALID_SCRIPT_LANGUAGE|Le langage de script spécifié n'est pas valide.|  
 |0xC00291BF|-1073573441|DTS_E_SCRIPTTASK_INVALID_ENTRY_POINT|Le point d'entrée est introuvable.|  
 |0xC00291C0|-1073573440|DTS_E_SCRIPTTASK_LANGUAGE_EMPTY|Le langage de script n'est pas spécifié. Vérifiez qu'un langage de script valide est spécifié.|  
-|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Initialisation de l'interface utilisateur : la tâche a la valeur NULL.|  
+|0xC00291C1|-1073573439|DTS_E_SCRIPTTASK_INITIALIZATION_WITH_NULL_TASK|Initialisation de l'interface utilisateur : la tâche est Null.|  
 |0xC00291C2|-1073573438|DTS_E_SCRIPTTASK_UI_INITIALIZATION_WITH_WRONG_TASK|L'interface utilisateur de la tâche de script est initialisée avec une tâche incorrecte.|  
 |0xC00291C3|-1073573437|DTS_E_SENDMAILTASK_RECIPIENT_EMPTY|Aucun destinataire n'est spécifié.|  
 |0xC00291C4|-1073573436|DTS_E_SENDMAILTASK_SMTP_SERVER_NOT_SPECIFIED|Le serveur SMTP (Simple Mail Transfer Protocol) n'est pas spécifié. Indiquez un nom ou une adresse IP valide pour le serveur SMTP.|  
@@ -601,10 +601,10 @@ ms.locfileid: "51642406"
 |0xC00291E4|-1073573404|DTS_E_SQLTASK_INVALIDEPARAMDIRECTIONFALG|L'indicateur de direction du paramètre n'est pas valide.|  
 |0xC00291E5|-1073573403|DTS_E_SQLTASK_NOSQLTASKDATAINXMLFRAGMENT|Le fragment XML ne contient aucune donnée de tâche SQL.|  
 |0xC00291E6|-1073573402|DTS_E_SQLTASK_MULTIPLERETURNVALUEPARAM|Le premier paramètre n'est pas un paramètre avec une valeur de retour de type ou il existe plusieurs paramètres de valeur de retour de type.|  
-|0xC00291E7|-1073573401|DTS_E_SQLTASK_CONNECTIONTYPENOTFILE|La connexion « %1 » n'est pas un gestionnaire de connexions de fichiers.|  
+|0xC00291E7|-1073573401|DTS_E_SQLTASK_CONNECTIONTYPENOTFILE|La connexion « %1 » n'est pas un gestionnaire de connexions de fichiers.|  
 |0xC00291E8|-1073573400|DTS_E_SQLTASK_FILEDOESNOTEXIST|Le fichier représenté par « %1 » n'existe pas.|  
 |0xC00291E9|-1073573399|DTS_E_SQLTASK_VARIABLETYPEISNOTSTRING|La variable « %1 » n'est pas de type String.|  
-|0xC00291EA|-1073573398|DTS_E_SQLTASK_VARIABLENOTFOUND|La variable « %1 » n'existe pas ou n'a pas pu être verrouillée.|  
+|0xC00291EA|-1073573398|DTS_E_SQLTASK_VARIABLENOTFOUND|La variable « %1 » n'existe pas ou n'a pas pu être verrouillée.|  
 |0xC00291EB|-1073573397|DTS_E_SQLTASK_CANNOTLOCATECONNMANAGER|Le gestionnaire de connexions « %1 » n'existe pas.|  
 |0xC00291EC|-1073573396|DTS_E_SQLTASK_FAILEDTOACQUIRECONNECTION|Échec de l'acquisition de la connexion « %1 ». La connexion n'est peut-être pas configurée correctement ou vous ne disposez pas des autorisations appropriées pour cette connexion.|  
 |0xC00291ED|-1073573395|DTS_E_SQLTASK_RESULTBYNAMENOTSUPPORTED|La liaison de résultats par nom « %1 » n'est pas prise en charge pour ce type de connexion.|  
@@ -685,11 +685,11 @@ ms.locfileid: "51642406"
 |0xC0029239|-1073573319|DTS_E_WEBSERVICETASK_NULL_VALUE|Impossible de valider une valeur NULL dans un type de données.|  
 |0xC002923A|-1073573318|DTS_E_WEBSERVICETASK_ENUM_VALUE_NOT_FOUND|La valeur de l'énumération est incorrecte.|  
 |0xC002923B|-1073573317|DTS_E_WEBSERVICETASK_PROP_NOT_EXISTS|La classe spécifiée ne contient aucune propriété publique du nom « %1 ».|  
-|0xC002923C|-1073573316|DTS_E_WEBSERVICETASK_CONVERT_FAILED|Impossible de convertir « %1 » en « %2 ».|  
+|0xC002923C|-1073573316|DTS_E_WEBSERVICETASK_CONVERT_FAILED|Impossible de convertir « %1 » en « %2 ».|  
 |0xC002923D|-1073573315|DTS_E_WEBSERVICETASK_CLEANUP_FAILED|Échec du nettoyage. Le proxy créé pour le service Web n'a peut-être pas été supprimé.|  
 |0xC002923E|-1073573314|DTS_E_WEBSERVICETASK_CREATE_INSTANCE_FAILED|Impossible de créer un objet de type « %1 ». Vérifiez si le constructeur par défaut existe.|  
 |0xC002923F|-1073573313|DTS_E_WEBSERVICETASK_NOT_PRIMITIVE_TYPE|« %1 » n'est pas un type de valeur.|  
-|0xC0029240|-1073573312|DTS_E_WEBSERVICETASK_ERROR_IN_VALIDATE|Impossible de valider « %1 » par rapport à « %1 ».|  
+|0xC0029240|-1073573312|DTS_E_WEBSERVICETASK_ERROR_IN_VALIDATE|Impossible de valider « %1 » par rapport à « %1 ».|  
 |0xC0029241|-1073573311|DTS_E_WEBSERVICETASK_DATATYPE_NULL|Le type de données ne peut être NULL. Spécifiez la valeur du type de données à valider.|  
 |0xC0029242|-1073573310|DTS_E_WEBSERVICETASK_INDEX_OUT_OF_BOUNDS|Impossible d'insérer ParamValue à cette position. L'index spécifié est peut-être inférieur à zéro ou supérieur à la longueur.|  
 |0xC0029243|-1073573309|DTS_E_WEBSERVICETASK_WRONG_WSDL|Le fichier WSDL d'entrée n'est pas valide.|  
@@ -700,14 +700,14 @@ ms.locfileid: "51642406"
 |0xC0029248|-1073573304|DTS_E_WMIDRTASK_INVALIDDATANODE|La tâche Lecteur de données WMI a reçu un nœud de données de tâche incorrect.|  
 |0xC0029249|-1073573303|DTS_E_WMIDRTASK_FAILEDVALIDATION|Échec de la validation de la tâche.|  
 |0xC002924A|-1073573302|DTS_E_WMIDRTASK_FILEDOESNOTEXIST|Le fichier « %1 » n'existe pas.|  
-|0xC002924B|-1073573301|DTS_E_WMIDRTASK_CONNECTIONMNGRDOESNTEXIST|Le gestionnaire de connexions « %1 » n'existe pas.|  
+|0xC002924B|-1073573301|DTS_E_WMIDRTASK_CONNECTIONMNGRDOESNTEXIST|Le gestionnaire de connexions « %1 » n'existe pas.|  
 |0xC002924C|-1073573300|DTS_E_WMIDRTASK_VARIABLETYPEISNOTSTRINGOROBJECT|La variable « %1 » n'est pas de type String ou Object.|  
 |0xC002924D|-1073573299|DTS_E_WMIDRTASK_CONNECTIONTYPENOTFILE|La connexion « %1 » n'est pas de type « FILE ».|  
 |0xC002924E|-1073573298|DTS_E_WMIDRTASK_CONNECTIONTYPENOTWMI|La connexion « %1 » n'est pas de type « WMI ».|  
 |0xC002924F|-1073573297|DTS_E_WMIDRTASK_FILEALREADYEXISTS|Le fichier « %1 » existe déjà.|  
 |0xC0029250|-1073573296|DTS_E_WMIDRTASK_CONNECTIONMANAGEREMPTY|Le gestionnaire de connexions « %1 » est vide.|  
 |0xC0029251|-1073573295|DTS_E_WMIDRTASK_VARNOTOBJECT|La variable « %1 » doit être un objet de type à affecter à une table de données.|  
-|0xC0029252|-1073573294|DTS_E_WMIDRTASK_TASKFAILURE|Échec de la tâche en raison d'une requête WMI non valide : « %1 ».|  
+|0xC0029252|-1073573294|DTS_E_WMIDRTASK_TASKFAILURE|Échec de la tâche en raison d'une requête WMI non valide : « %1 ».|  
 |0xC0029253|-1073573293|DTS_E_WMIDRTASK_CANTWRITETOVAR|Impossible d'écrire dans la variable « %1 » car elle est définie pour conserver sa valeur d'origine.|  
 |0xC0029254|-1073573292|DTS_E_WMIEWTASK_SYNCOBJECTFAILED|Échec de l'objet de synchronisation.|  
 |0xC0029255|-1073573291|DTS_E_WMIEWTASK_MISSINGWQLQUERY|La requête WQL est manquante.|  
@@ -716,8 +716,8 @@ ms.locfileid: "51642406"
 |0xC0029258|-1073573288|DTS_E_WMIEWTASK_INVALIDDATANODE|La tâche Observateur d'événement WMI a reçu un nœud de données de tâche non valide.|  
 |0xC0029259|-1073573287|DTS_E_WMIEWTASK_CONNECTIONMNGRDOESNTEXIST|Le gestionnaire de connexions « %1 » n'existe pas.|  
 |0xC002925A|-1073573286|DTS_E_WMIEWTASK_FILEDOESNOTEXIST|Le fichier « %1 » n'existe pas.|  
-|0xC002925B|-1073573285|DTS_E_WMIEWTASK_VARIABLETYPEISNOTSTRING|La variable « %1 » n'est pas de type String.|  
-|0xC002925C|-1073573284|DTS_E_WMIEWTASK_CONNECTIONTYPENOTFILE|La connexion « %1 » n'est pas de type « FILE ».|  
+|0xC002925B|-1073573285|DTS_E_WMIEWTASK_VARIABLETYPEISNOTSTRING|La variable « %1 » n'est pas de type String.|  
+|0xC002925C|-1073573284|DTS_E_WMIEWTASK_CONNECTIONTYPENOTFILE|La connexion « %1 » n'est pas de type « FILE ».|  
 |0xC002925D|-1073573283|DTS_E_WMIEWTASK_CONNECTIONTYPENOTWMI|La connexion « %1 » n'est pas de type « WMI ».|  
 |0xC002925E|-1073573282|DTS_E_WMIEWTASK_FILEALREADYEXISTS|Le fichier « %1 » existe déjà.|  
 |0xC002925F|-1073573281|DTS_E_WMIEWTASK_CONNECTIONMANAGEREMPTY|Le gestionnaire de connexions « %1 » est vide.|  
@@ -757,7 +757,7 @@ ms.locfileid: "51642406"
 |0xC0029283|-1073573245|DTS_E_XMLTASK_MISSINGOPTIONSATTRIBUTE|DiffGram XDL non valide. L'attribut options de l'élément xd:xmldiff est manquant.|  
 |0xC0029284|-1073573244|DTS_E_XMLTASK_INVALIDSRCDOCATTRIBUTE|DiffGram XDL non valide. La valeur de l'attribut srcDocHash n'est pas valide.|  
 |0xC0029285|-1073573243|DTS_E_XMLTASK_INVALIDOPTIONSATTRIBUTE|DiffGram XDL non valide. L'attribut des options a une valeur non valide.|  
-|0xC0029286|-1073573242|DTS_E_XMLTASK_SRCDOCMISMATCH|DiffGram XDL ne s'applique pas à ce document XML. La valeur rcDocHash ne correspond pas.|  
+|0xC0029286|-1073573242|DTS_E_XMLTASK_SRCDOCMISMATCH|DiffGram XDL ne s'applique pas à ce document XML. La valeur rcDocHash ne correspond pas.|  
 |0xC0029287|-1073573241|DTS_E_XMLTASK_MORETHANONENODEMATCHED|DiffGram XDL non valide. Plusieurs nœuds correspondent au descripteur de chemin d'accès « %1 » dans l'élément xd:node ou xd:change.|  
 |0xC0029288|-1073573240|DTS_E_XMLTASK_XMLDECLMISMATCH|DiffGram XDL ne s'applique pas à ce document XML. Impossible d'ajouter une nouvelle déclaration XML.|  
 |0xC0029289|-1073573239|DTS_E_XMLTASK_INTERNALERRORMORETHANONENODEINLIST|Erreur interne. XmlDiffPathSingleNodeList ne peut contenir qu'un seul nœud.|  
@@ -790,11 +790,11 @@ ms.locfileid: "51642406"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|Au moins un fichier source doit être indiqué.|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|Impossible de trouver le fichier « %1 » dans la base de données source « %2 ».|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|L'opération demandée n'est pas autorisée sur les systèmes conformes à la norme U.S. FIPS 140-2.|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|L'exécution de la requête « %1 » a échoué avec l'erreur suivante : « %2 ». Causes possibles de cet échec : problèmes liés à la requête, propriété « ResultSet » non définie correctement, paramètres non définis correctement ou connexion non établie correctement.|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|L'exécution de la requête « %1 » a échoué avec l'erreur suivante : « %2 ». Causes possibles de l’échec : problèmes liés à la requête, propriété « ResultSet » mal définie, paramètres mal définis ou connexion mal établie.|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|Erreur lors de la lecture des noms des procédures stockées dans le fichier XML.|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|Nœud de données non valide pour la tâche de transfert de procédures stockées.|  
-|0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|La connexion « %1 » n'est pas de type « SMOServer ».|  
-|0xC002F303|-1073548541|DTS_E_TRANSFERSPTASK_EXECUTIONFAILED|L'exécution a échoué avec l'erreur suivante : « %1 ».|  
+|0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|La connexion « %1 » n'est pas de type « SMOServer ».|  
+|0xC002F303|-1073548541|DTS_E_TRANSFERSPTASK_EXECUTIONFAILED|L'exécution a échoué avec l'erreur suivante : « %1 ».|  
 |0xC002F304|-1073548540|DTS_E_ERROROCCURREDWITHFOLLOWINGMESSAGE|Une erreur s'est produite avec le message d'erreur suivant : « %1 ».|  
 |0xC002F305|-1073548539|DTS_E_BITASK_EXECUTION_FAILED|Échec d'exécution de l'insertion en bloc.|  
 |0xC002F306|-1073548538|DTS_E_FSTASK_INVALIDDESTPATH|Chemin de destination non valide.|  
@@ -804,7 +804,7 @@ ms.locfileid: "51642406"
 |0xC002F30A|-1073548534|DTS_E_FSTASK_SOURCEISEMPTY|La source est vide.|  
 |0xC002F30B|-1073548533|DTS_E_FSTASK_DESTINATIONISEMPTY|La destination est vide.|  
 |0xC002F30C|-1073548532|DTS_E_FSTASK_FILEDIRNOTFOUND|Le fichier ou le répertoire « %1 » n'existe pas.|  
-|0xC002F30D|-1073548531|DTS_E_FSTASK_VARSRCORDESTISEMPTY|La variable « %1 » est utilisée comme source ou destination et est vide.|  
+|0xC002F30D|-1073548531|DTS_E_FSTASK_VARSRCORDESTISEMPTY|La variable « %1 » est utilisée comme source ou destination et est vide.|  
 |0xC002F30E|-1073548530|DTS_E_FSTASK_FILEDELETED|Le fichier ou le répertoire « %1 » a été supprimé.|  
 |0xC002F30F|-1073548529|DTS_E_FSTASK_DIRECTORYDELETED|Le répertoire « %1 » a été supprimé.|  
 |0xC002F310|-1073548528|DTS_E_WMIDRTASK_VARIABLETYPEISNOTOBJECT|La variable « %1 » doit être un objet de type à affecter à une table de données.|  
@@ -826,7 +826,7 @@ ms.locfileid: "51642406"
 |0xC002F331|-1073548495|DTS_E_JOBSTASK_JOBEXISTSATDEST|Le travail « %1 » existe déjà sur le serveur de destination.|  
 |0xC002F334|-1073548492|DTS_E_JOBSTASK_JOBCANTBEFOUND|Le travail « %1 » est introuvable sur le serveur source.|  
 |0xC002F337|-1073548489|DTS_E_LOGINSTASK_EMPTYLIST|La liste des « noms d'accès » à transférer est vide.|  
-|0xC002F338|-1073548488|DTS_E_LOGINSTASK_CANTGETLOGINSNAMELIST|Impossible d'obtenir la liste des « noms d'accès » à partir du serveur source.|  
+|0xC002F338|-1073548488|DTS_E_LOGINSTASK_CANTGETLOGINSNAMELIST|Impossible d'obtenir la liste des « noms d'accès » à partir du serveur source.|  
 |0xC002F340|-1073548480|DTS_E_LOGINSTASK_ERRORLOGINEXISTS|Le nom d'accès « %1 » existe déjà sur le serveur de destination.|  
 |0xC002F342|-1073548478|DTS_E_LOGINSTASK_LOGINNOTFOUND|Le nom d'accès « %1 » n'existe pas à la source.|  
 |0xC002F344|-1073548476|DTS_E_LOGINSTASK_FAILEDTOTRANSFERLOGINS|Échec du transfert d'une partie ou de la totalité des noms d'accès.|  
@@ -839,23 +839,23 @@ ms.locfileid: "51642406"
 |0xC002F355|-1073548459|DTS_E_TRANSOBJECTSTASK_NOSPATSOURCE|La procédure stockée « %1 » n'existe pas à la source.|  
 |0xC002F356|-1073548458|DTS_E_TRANSOBJECTSTASK_SPALREADYATDEST|La procédure stockée « %1 » existe déjà à la destination.|  
 |0xC002F357|-1073548457|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGSPS|Une erreur s'est produite lors de la tentative de définition de la liste des procédures stockées à transférer : « %1 ».|  
-|0xC002F359|-1073548455|DTS_E_TRANSOBJECTSTASK_NORULEATSOURCE|La règle « %1 » n'existe pas à la source.|  
+|0xC002F359|-1073548455|DTS_E_TRANSOBJECTSTASK_NORULEATSOURCE|La règle « %1 » n'existe pas à la source.|  
 |0xC002F360|-1073548448|DTS_E_TRANSOBJECTSTASK_RULEALREADYATDEST|La règle « %1 » existe déjà à la destination.|  
 |0xC002F361|-1073548447|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGRULES|Une erreur s'est produite lors de la tentative de définition de la liste des règles à transférer : « %1 ».|  
-|0xC002F363|-1073548445|DTS_E_TRANSOBJECTSTASK_NOTABLEATSOURCE|La table « %1 » n'existe pas à la source.|  
-|0xC002F364|-1073548444|DTS_E_TRANSOBJECTSTASK_TABLEALREADYATDEST|La table « %1 » existe déjà à la destination.|  
+|0xC002F363|-1073548445|DTS_E_TRANSOBJECTSTASK_NOTABLEATSOURCE|La table « %1 » n'existe pas à la source.|  
+|0xC002F364|-1073548444|DTS_E_TRANSOBJECTSTASK_TABLEALREADYATDEST|La table « %1 » existe déjà à la destination.|  
 |0xC002F365|-1073548443|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGTABLES|Une erreur s'est produite lors de la tentative de définition de la liste des tables à transférer : « %1 ».|  
-|0xC002F367|-1073548441|DTS_E_TRANSOBJECTSTASK_NOVIEWATSOURCE|La vue « %1 » n'existe pas à la source.|  
+|0xC002F367|-1073548441|DTS_E_TRANSOBJECTSTASK_NOVIEWATSOURCE|La vue « %1 » n'existe pas à la source.|  
 |0xC002F368|-1073548440|DTS_E_TRANSOBJECTSTASK_VIEWALREADYATDEST|La vue « %1 » existe déjà à la destination.|  
 |0xC002F369|-1073548439|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGVIEWS|Une erreur s'est produite lors de la tentative de définition de la liste des vues à transférer : « %1 ».|  
 |0xC002F371|-1073548431|DTS_E_TRANSOBJECTSTASK_NOUDFATSOURCE|La fonction définie par l'utilisateur « %1 » n'existe pas à la source.|  
-|0xC002F372|-1073548430|DTS_E_TRANSOBJECTSTASK_UDFALREADYATDEST|La fonction définie par l'utilisateur « %1 » existe déjà à la destination.|  
+|0xC002F372|-1073548430|DTS_E_TRANSOBJECTSTASK_UDFALREADYATDEST|La fonction définie par l'utilisateur « %1 » existe déjà à la destination.|  
 |0xC002F373|-1073548429|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGUDFS|Une erreur s'est produite lors de la tentative de définition de la liste des fonctions définies par l'utilisateur à transférer : « %1 ».|  
 |0xC002F375|-1073548427|DTS_E_TRANSOBJECTSTASK_NODEFAULTATSOURCE|La valeur par défaut « %1 » n'existe pas à la source.|  
-|0xC002F376|-1073548426|DTS_E_TRANSOBJECTSTASK_DEFAULTALREADYATDEST|La valeur par défaut « %1 » existe déjà à la destination.|  
+|0xC002F376|-1073548426|DTS_E_TRANSOBJECTSTASK_DEFAULTALREADYATDEST|La valeur par défaut « %1 » existe déjà à la destination.|  
 |0xC002F377|-1073548425|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGDEFAULTS|Une erreur s'est produite lors de la tentative de définition de la liste des valeurs par défaut à transférer : « %1 ».|  
 |0xC002F379|-1073548423|DTS_E_TRANSOBJECTSTASK_NOUDDTATSOURCE|Le type de données défini par l'utilisateur « %1 » n'existe pas à la source.|  
-|0xC002F380|-1073548416|DTS_E_TRANSOBJECTSTASK_UDDTALREADYATDEST|Le type de données défini par l'utilisateur « %1 » existe déjà à la destination.|  
+|0xC002F380|-1073548416|DTS_E_TRANSOBJECTSTASK_UDDTALREADYATDEST|Le type de données défini par l'utilisateur « %1 » existe déjà à la destination.|  
 |0xC002F381|-1073548415|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGUDDTS|Une erreur s'est produite lors de la tentative de définition de la liste des types de données définis par l'utilisateur à transférer : « %1 ».|  
 |0xC002F383|-1073548413|DTS_E_TRANSOBJECTSTASK_NOPFATSOURCE|La fonction de partition « %1 » n'existe pas à la source.|  
 |0xC002F384|-1073548412|DTS_E_TRANSOBJECTSTASK_PFALREADYATDEST|La fonction de partition « %1 » existe déjà à la destination.|  
@@ -864,15 +864,15 @@ ms.locfileid: "51642406"
 |0xC002F388|-1073548408|DTS_E_TRANSOBJECTSTASK_PSALREADYATDEST|Le schéma de partition « %1 » existe déjà à la destination.|  
 |0xC002F389|-1073548407|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGPSS|Une erreur s'est produite lors de la tentative de définition de la liste des schémas de partition à transférer : « %1 ».|  
 |0xC002F391|-1073548399|DTS_E_TRANSOBJECTSTASK_NOSCHEMAATSOURCE|Le schéma « %1 » n'existe pas à la source.|  
-|0xC002F392|-1073548398|DTS_E_TRANSOBJECTSTASK_SCHEMAALREADYATDEST|Le schéma « %1 » existe déjà à la destination.|  
+|0xC002F392|-1073548398|DTS_E_TRANSOBJECTSTASK_SCHEMAALREADYATDEST|Le schéma « %1 » existe déjà à la destination.|  
 |0xC002F393|-1073548397|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGSCHEMAS|Une erreur s'est produite lors de la tentative de définition de la liste des schémas à transférer : « %1 ».|  
 |0xC002F395|-1073548395|DTS_E_TRANSOBJECTSTASK_NOSQLASSEMBLYATSOURCE|SqlAssembly « %1 » n'existe pas à la source.|  
 |0xC002F396|-1073548394|DTS_E_TRANSOBJECTSTASK_SQLASSEMBLYALREADYATDEST|SqlAssembly « %1 » existe déjà à la destination.|  
 |0xC002F397|-1073548393|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGSQLASSEMBLIES|Une erreur s'est produite lors de la tentative de définition de la liste de SqlAssembly à transférer : « %1 ».|  
 |0xC002F399|-1073548391|DTS_E_TRANSOBJECTSTASK_NOAGGREGATEATSOURCE|La fonction d'agrégation définie par l'utilisateur « %1 » n'existe pas à la source.|  
-|0xC002F400|-1073548288|DTS_E_TRANSOBJECTSTASK_AGGREGATEALREADYATDEST|La fonction d'agrégation définie par l'utilisateur « %1 » existe déjà à la destination.|  
+|0xC002F400|-1073548288|DTS_E_TRANSOBJECTSTASK_AGGREGATEALREADYATDEST|La fonction d'agrégation définie par l'utilisateur « %1 » existe déjà à la destination.|  
 |0xC002F401|-1073548287|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGAGGREGATES|Une erreur s'est produite lors de la tentative de définition de la liste des fonctions d'agrégation définies par l'utilisateur à transférer : « %1 ».|  
-|0xC002F403|-1073548285|DTS_E_TRANSOBJECTSTASK_NOTYPEATSOURCE|Le type défini par l'utilisateur « %1 » n'existe pas à la source.|  
+|0xC002F403|-1073548285|DTS_E_TRANSOBJECTSTASK_NOTYPEATSOURCE|Le type défini par l'utilisateur « %1 » n'existe pas à la source.|  
 |0xC002F404|-1073548284|DTS_E_TRANSOBJECTSTASK_TYPEALREADYATDEST|Le type défini par l'utilisateur « %1 » existe déjà à la destination.|  
 |0xC002F405|-1073548283|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGTYPES|Une erreur s'est produite lors de la tentative de définition de la liste de types définis par l'utilisateur à transférer : « %1 ».|  
 |0xC002F407|-1073548281|DTS_E_TRANSOBJECTSTASK_NOXMLSCHEMACOLLECTIONATSOURCE|XmlSchemaCollection « %1 » n'existe pas à la source.|  
@@ -881,14 +881,14 @@ ms.locfileid: "51642406"
 |0xC002F411|-1073548271|DTS_E_TRANSOBJECTSTASK_SUPPORTEDONYUKONONLY|Les objets de type « %1 » sont uniquement pris en charge entre des serveurs SQL Server 2005 ou plus récents.|  
 |0xC002F413|-1073548269|DTS_E_LOGINSTASK_EMPTYDATABASELIST|La liste des bases de données est vide.|  
 |0xC002F414|-1073548268|DTS_E_TRANSOBJECTSTASK_NOLOGINATSOURCE|Le nom d'accès « %1 » n'existe pas à la source.|  
-|0xC002F416|-1073548266|DTS_E_TRANSOBJECTSTASK_LOGINALREADYATDEST|Le nom d'accès « %1 » existe déjà à la destination.|  
+|0xC002F416|-1073548266|DTS_E_TRANSOBJECTSTASK_LOGINALREADYATDEST|Le nom d'accès « %1 » existe déjà à la destination.|  
 |0xC002F417|-1073548265|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGLOGINS|Une erreur s'est produite lors de la tentative de définition de la liste de noms d'accès à transférer : « %1 ».|  
-|0xC002F419|-1073548263|DTS_E_TRANSOBJECTSTASK_NOUSERATSOURCE|Le nom d'accès « %1 » n'existe pas à la source.|  
+|0xC002F419|-1073548263|DTS_E_TRANSOBJECTSTASK_NOUSERATSOURCE|Le nom d'accès « %1 » n'existe pas à la source.|  
 |0xC002F41B|-1073548261|DTS_E_TRANSOBJECTSTASK_USERALREADYATDEST|L'utilisateur « %1 » existe déjà à la destination.|  
 |0xC002F41C|-1073548260|DTS_E_TRANSOBJECTSTASK_ERRORHANDLINGUSERS|Une erreur s'est produite lors de la tentative de définition de la liste d'utilisateurs à transférer : « %1 ».|  
 |0xC002F41F|-1073548257|DTS_E_BITASK_CANNOTRETAINCONNINTRANSACTION|Impossible de conserver un gestionnaire de connexions pour la tâche dans une transaction.|  
 |0xC002F421|-1073548255|DTS_E_SQLTASKOUTPUTENCODINGNOTSUPPORTED|Impossible d'obtenir des données XML de SQL Server au format Unicode, car le fournisseur ne prend pas en charge la propriété OUTPUTENCODING.|  
-|0xC002F426|-1073548250|DTS_E_FTPTASK_FILECONNECTIONNOTFOUND|Pour l'opération FTP « %1 », le gestionnaire de connexions FILE « %2 » est introuvable.|  
+|0xC002F426|-1073548250|DTS_E_FTPTASK_FILECONNECTIONNOTFOUND|Pour l'opération FTP « %1 », le gestionnaire de connexions FILE « %2 » est introuvable.|  
 |0xC002F428|-1073548248|DTS_E_TRANSOBJECTSTASK_CANNOTDROPOBJECTS|Les « noms d'accès » sont des objets de niveau serveur qui ne peuvent pas être supprimés en premier, car la source et la destination se trouvent sur le même serveur. La suppression des objets en premier supprimera les noms d'accès de la source également.|  
 |0xC002F429|-1073548247|DTS_E_SQLTASK_PARAMSIZEERROR|Le paramètre « %1 » ne peut pas être négatif. (-1) est utilisé pour la valeur par défaut.|  
 |0xC0040019|-1073479655|DTS_E_UNREGISTEREDPIPELINEXML_LOAD|Impossible de charger les objets de flux de données. Vérifiez que l'inscription de Microsoft.SqlServer.PipelineXml.dll est correcte.|  
@@ -917,7 +917,7 @@ ms.locfileid: "51642406"
 |0xC004700E|-1073450994|DTS_E_THREADSTARTUPFAILED|Le moteur de la tâche de flux de données n'a pas pu démarré car il n'a pas pu créer un ou plusieurs threads requis.|  
 |0xC004700F|-1073450993|DTS_E_CANTGETMUTEX|Un thread n'a pas pu créer une exclusion mutuelle lors de l'initialisation.|  
 |0xC0047010|-1073450992|DTS_E_CANTGETSEMAPHORE|Un thread n'a pas pu créer un sémaphore lors de l'initialisation.|  
-|0xC0047011|-1073450991|DTS_E_BUFFERFAILUREDETAILS|Le système rapporte %1!d! % de mémoire. Il y a %2 octets de mémoire physique et %3 octets libres. Il y a %4 octets de mémoire virtuelle et %5 octets libres. Le fichier d'échange a %6 octets et %7 octets libres.|  
+|0xC0047011|-1073450991|DTS_E_BUFFERFAILUREDETAILS|Le système rapporte %1!d! % de mémoire. Il y a %2 octets de mémoire physique et %3 octets libres. Il y a %4 octets de mémoire virtuelle et %5 octets libres. Le fichier d'échange a %6 octets et %7 octets libres.|  
 |0xC0047012|-1073450990|DTS_E_BUFFERALLOCFAILED|Échec d'un tampon lors de l'allocation de %1!d! octets.|  
 |0xC0047013|-1073450989|DTS_E_CANTCREATEBUFFERMANAGER|Impossible de créer le gestionnaire de tampons.|  
 |0xC0047015|-1073450987|DTS_E_BUFFERBADSIZE|La taille du type de tampon %1!d! est de %2!I64d! octets.|  
@@ -989,7 +989,7 @@ ms.locfileid: "51642406"
 |0xC0047068|-1073450904|DTS_E_SORTEDOUTPUTHASINVALIDSORTKEYPOSITION|La valeur SortKeyPosition de « %1 » n'est pas NULL, mais trop grande (%2!ld!). Elle doit être inférieure ou égale au nombre de colonnes.|  
 |0xC004706A|-1073450902|DTS_E_SORTEDOUTPUTHASINVALIDSORTKEYPOSITIONS|La propriété IsSorted de %1 a la valeur TRUE, mais les valeurs absolues de la colonne de sortie non NULL SortKeyPositions ne forment pas une séquence à croissance monolithique partant de 1.|  
 |0xC004706B|-1073450901|DTS_E_INDIVIDUALVALIDATIONSTATUSFAILED|Échec de la validation de « %1 ». État de validation retourné : « %2 ».|  
-|0xC004706C|-1073450900|DTS_E_CANTCREATECOMPONENT|Impossible de créer le composant « %1!s! ». Code d’erreur retourné : 0x%2!8.8X! « %3!s! ». Vérifiez que le composant est correctement inscrit dans le Registre.|  
+|0xC004706C|-1073450900|DTS_E_CANTCREATECOMPONENT|Impossible de créer le composant « %1!s! ». Code d’erreur retourné : 0x%2!8.8X! « %3!s! ». Vérifiez que le composant est correctement inscrit dans le Registre.|  
 |0xC004706D|-1073450899|DTS_E_COMPONENTNOTREGISTERED|Le module contenant « %1 » n'est pas inscrit ou n'est pas installé correctement.|  
 |0xC004706E|-1073450898|DTS_E_COMPONENTNOTFOUND|Le module contenant « %1 » est introuvable, bien qu'il soit inscrit.|  
 |0xC004706F|-1073450897|DTS_E_BINARYCODENOTFOUND|Le composant de script est configuré pour précompiler le script, mais le code binaire est introuvable. Visitez l'IDE dans l'éditeur de composant de script en cliquant sur le bouton Créer un script afin de générer le code binaire.|  
@@ -1036,7 +1036,7 @@ ms.locfileid: "51642406"
 |0xC004709A|-1073450854|DTS_E_EXPREVALEXPRESSIONEMPTY|Aucune expression à calculer. Tentative de calcul ou d'obtention de la chaîne d'une expression vide.|  
 |0xC004709B|-1073450853|DTS_E_EXPREVALCOMPUTEFAILED|Échec du calcul de l'expression « %1 ». Code d'erreur : 0x%2!8.8X!.|  
 |0xC004709C|-1073450852|DTS_E_EXPREVALBUILDSTRINGFAILED|Échec de la génération d'une représentation de chaîne de l'expression. Code d'erreur : 0x%2!8.8X!. Échec lors de la création d'une chaîne qui peut être affichée représentant l'expression.|  
-|0xC004709D|-1073450851|DTS_E_EXPREVALCANNOTCONVERTRESULT|Impossible de convertir le type de données du résultat de l'expression « % » en type de données de colonne « %2 ». Le résultat de l'expression doit être écrit dans une colonne d'entrée/sortie, mais le type de données de l'expression ne peut pas être converti en type de données de la colonne.|  
+|0xC004709D|-1073450851|DTS_E_EXPREVALCANNOTCONVERTRESULT|Impossible de convertir le type de données du résultat de l'expression « % » en type de données de colonne « %2 ». Le résultat de l'expression doit être écrit dans une colonne d'entrée/sortie, mais le type de données de l'expression ne peut pas être converti en type de données de la colonne.|  
 |0xC004709E|-1073450850|DTS_E_EXPREVALCONDITIONALOPINVALIDCONDITIONTYPE|L'expression conditionnelle « %1 » de l'opérateur conditionnel possède un type de données non valide de « %2 ». L'expression conditionnelle de l'opérateur conditionnel doit retourner une valeur booléenne de type DT_BOOL.|  
 |0xC004709F|-1073450849|DTS_E_EXPREVALCONDITIONALOPTYPEMISMATCH|Les types de données « %1 » et « %2 » sont incompatibles pour l'opérateur conditionnel. Impossible d'effectuer une conversion implicite des types d'opérandes en types compatibles pour l'opération conditionnelle. Pour effectuer cette opération, une conversion explicite de l'un des opérandes ou des deux doit être effectuée à l'aide d'un opérateur de conversion.|  
 |0xC00470A0|-1073450848|DTS_E_EXPREVALCONDITIONALOPSETTYPEFAILED|Échec de la définition du type de résultat de l'opération conditionnelle « %1 ». Code d'erreur : 0x%2!8.8X!.|  
@@ -1070,7 +1070,7 @@ ms.locfileid: "51642406"
 |0xC00470BE|-1073450818|DTS_E_EXPREVALUNSUPPORTEDTYPE|Le type de données « %1 » n'est pas pris en charge dans une expression. Le type spécifié n'est pas pris en charge ou n'est pas valide.|  
 |0xC00470BF|-1073450817|DTS_E_PRIMEOUTPUTNOEOR|La méthode PrimeOutput a été correctement appliquée sur « %1 », mais elle n'a pas signalé la fin de l'ensemble de lignes. Il existe une erreur dans le composant, Il existe une erreur dans le composant, car une fin de ligne aurait dû être rapportée. Le pipeline arrêtera l'exécution afin d'éviter des résultats imprévisibles.|  
 |0xC00470C0|-1073450816|DTS_E_EXPREVALDATACONVERSIONOVERFLOW|Un dépassement s'est produit lors de la conversion du type de données « %1 » en « %2 ». Le type de source est trop grand pour le type de destination.|  
-|0xC00470C1|-1073450815|DTS_E_EXPREVALDATACONVERSIONNOTSUPPORTED|La conversion du type de données « %1 » en « %2 » n'est pas prise en charge. Impossible de convertir le type de source en type de destination.|  
+|0xC00470C1|-1073450815|DTS_E_EXPREVALDATACONVERSIONNOTSUPPORTED|La conversion du type de données « %1 » en « %2 » n'est pas prise en charge. Impossible de convertir le type de source en type de destination.|  
 |0xC00470C2|-1073450814|DTS_E_EXPREVALDATACONVERSIONFAILED|L'erreur 0x%1!8.8X! s'est produite lors de la conversion du type de données %2 en %3.|  
 |0xC00470C3|-1073450813|DTS_E_EXPREVALCONDITIONALOPERATIONFAILED|Échec de l'opération conditionnelle « %1 ». Code d'erreur : 0x%2!8.8X!. Une erreur interne ou de mémoire insuffisante s'est produite.|  
 |0xC00470C4|-1073450812|DTS_E_EXPREVALCASTFAILED|Échec de la conversion de l'expression « %1 » du type de données « %2 » en type de données « %3 ».|  
@@ -1114,14 +1114,14 @@ ms.locfileid: "51642406"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|La valeur %1!d! spécifiée pour le paramètre d'échelle de la fonction NULL avec le type de données %2 est hors limites. L'échelle doit être comprise entre %3!d! et %4!d!. L'échelle ne doit pas dépasser la précision et ne doit pas être négative.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|La valeur %1!d! spécifiée pour le paramètre de longueur de la fonction « NULL » avec le type de données %2 est négative et n'est pas valide. La longueur doit être positive.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|Impossible d'affecter une valeur négative à %1.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossible d'affecter la valeur TRUE à la propriété personnalisée « %1 » de « %2 ».  Le type de données de la colonne doit être l'un des suivants : DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Impossible d'affecter la valeur TRUE à la propriété personnalisée « %1 » de « %2 ».  Le type de données de la colonne doit être l'un des suivants :  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 ou DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|Impossible de rattacher « %1 ». Supprimez le chemin d'accès, ajoutez-en un nouveau, puis attachez-le.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|La fonction « %1!s! » nécessite %2!d! paramètres et non pas %3!d! paramètre. Le nom de la fonction est reconnu, mais le nombre de paramètres n'est pas valide.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|La fonction « %1!s! » nécessite %2!d! paramètre, et non pas %3!d! paramètres. Le nom de la fonction est reconnu, mais le nombre de paramètres n'est pas valide.|  
 |0xC00470FB|-1073450757|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALPLURAL|La fonction « %1!s! » nécessite %2!d! paramètres et non pas %3!d! paramètres. Le nom de la fonction est reconnu, mais le nombre de paramètres n'est pas valide.|  
 |0xC00470FC|-1073450756|DTS_E_EXPREVALFAILEDTOPARSEEXPRESSIONOUTOFMEMORY|La tentative d'analyse de l'expression « %1 » a échoué à cause d'une erreur de mémoire disponible insuffisante.|  
 |0xC00470FD|-1073450755|DTS_E_INDIVIDUALCHECKPRODUCTLEVELFAILED|Le %1 n'a pas pu effectuer son contrôle de niveau de produit requis et a retourné le code d'erreur 0x%2!8.8X!.|  
-|0xC00470FE|-1073450754|DTS_E_PRODUCTLEVELTOLOW|Code d'erreur SSIS DTS_E_PRODUCTLEVELTOLOW.  Le « %1 » ne peut pas s'exécuter sur la version installée d'Integration Services %2. La version %3 ou une version ultérieure est requise.|  
+|0xC00470FE|-1073450754|DTS_E_PRODUCTLEVELTOLOW|Code d'erreur SSIS DTS_E_PRODUCTLEVELTOLOW.  Le « %1 » ne peut pas s'exécuter sur la version installée d'Integration Services %2. La version %3 ou une version ultérieure est requise.|  
 |0xC00470FF|-1073450753|DTS_E_EXPREVALSTRINGLITERALTOOLONG|Un littéral de chaîne dans l'expression dépasse la longueur maximale autorisée de %1!d! caractères.|  
 |0xC0047100|-1073450752|DTS_E_EXPREVALSTRINGVARIABLETOOLONG|La variable %1 contient une chaîne qui dépasse la longueur maximale autorisée de %2!d! caractères.|  
 |0xC0047101|-1073450751|DTS_E_COMPONENT_NOINTERFACE|Le %1 a été trouvé, mais il ne prend pas en charge une interface Integration Services requise (IDTSRuntimeComponent100).  Obtenez une version mise à jour de ce composant auprès du fournisseur de composant.|  
@@ -1237,18 +1237,18 @@ ms.locfileid: "51642406"
 |0xC00490F5|-1073442571|DTS_E_TXLOOKUP_CANCEL_REQUESTED|La transformation de recherche a reçu une demande d'annulation de l'utilisateur.|  
 |0xC00490F6|-1073442570|DTS_E_LOBLENGTHLIMITEXCEEDED|Le traitement de données de type caractère ou de données d'objets BLOB (Binary Large Object) a été interrompu parce que la limite de 4 Go a été atteinte.|  
 |0xC00490F7|-1073442569|DTS_E_CANNOTLOADCOMPONENT|Impossible de charger le composant de pipeline managé « %1 ».  L'exception était : %2.|  
-|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Code d'erreur SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED : le Gestionnaire de connexions Excel n'est pas pris en charge dans la version 64 bits de SSIS, car aucun fournisseur OLE DB n'est disponible.|  
+|0xC00F9304|-1072721148|DTS_E_OLEDB_EXCEL_NOT_SUPPORTED|Code d'erreur SSIS DTS_E_OLEDB_EXCEL_NOT_SUPPORTED : le Gestionnaire de connexions Excel n'est pas pris en charge dans la version 64 bits de SSIS, car aucun fournisseur OLE DB n'est disponible.|  
 |0xC00F9310|-1072721136|DTS_E_CACHEBADHEADER|Le fichier cache est endommagé ou n'a pas été créé à l'aide du gestionnaire de connexions du cache.  Fournissez un fichier cache valide.|  
 |0xC0202001|-1071636479|DTS_E_MISSINGSQLCOMMAND|La commande SQL n'a pas été définie correctement. Vérifiez la propriété SQLCommand.|  
-|0xC0202002|-1071636478|DTS_E_COMERROR|Des informations sur l'objet de l'erreur sont disponibles.  Source : « %1 » Code d'erreur : 0x%2!8.8X!  Description : « %3 ».|  
+|0xC0202002|-1071636478|DTS_E_COMERROR|Des informations sur l'objet de l'erreur sont disponibles.  Source : « %1 » code d'erreur : 0x%2!8.8X!  Description : « %3 ».|  
 |0xC0202003|-1071636477|DTS_E_ACQUIREDCONNECTIONUNAVAILABLE|Impossible d'accéder aux connexions acquises.|  
 |0xC0202004|-1071636476|DTS_E_INCORRECTCOLUMNCOUNT|Le nombre de colonnes est incorrect.|  
-|0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|La colonne « %1 » est introuvable dans la source de données.|  
-|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Un enregistrement OLE DB est disponible.  Source : « %1 » Hresult : 0x%2!8.8X!  Description : « %3 ».|  
-|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Code d'erreur SSIS DTS_E_OLEDBERROR.  Une erreur OLE DB s'est produite. Code d'erreur : 0x%1!8.8X!.|  
+|0xC0202005|-1071636475|DTS_E_COLUMNNOTFOUND|La colonne « %1 » est introuvable dans la source de données.|  
+|0xC0202007|-1071636473|DTS_E_OLEDBRECORD|Un enregistrement OLE DB est disponible.  Source : « %1 » Hresult : 0x%2!8.8X!  Description : « %3 ».|  
+|0xC0202009|-1071636471|DTS_E_OLEDBERROR|Code d'erreur SSIS DTS_E_OLEDBERROR.  Une erreur OLE DB s'est produite. Code d’erreur : 0x%1!8.8X!.|  
 |0xC020200A|-1071636470|DTS_E_ALREADYCONNECTED|Le composant est déjà connecté. Déconnectez-le avant d'essayer de le connecter.|  
 |0xC020200B|-1071636469|DTS_E_INCORRECTSTOCKPROPERTYVALUE|La valeur de la propriété « %1 » est incorrecte.|  
-|0xC020200E|-1071636466|DTS_E_CANNOTOPENDATAFILE|Impossible d'ouvrir le fichier de données « %1 ».|  
+|0xC020200E|-1071636466|DTS_E_CANNOTOPENDATAFILE|Impossible d'ouvrir le fichier de données « %1 ».|  
 |0xC0202010|-1071636464|DTS_E_DESTINATIONFLATFILEREQUIRED|Aucun nom de fichier plat de destination n'est spécifié. Vérifiez que le gestionnaire de connexions de fichiers plats est configuré avec une chaîne de connexion. Si ce gestionnaire est utilisé par plusieurs composants, vérifiez que la chaîne de connexion contient suffisamment de noms de fichiers.|  
 |0xC0202011|-1071636463|DTS_E_TEXTQUALIFIERNOTFOUND|L'identificateur de texte de la colonne « %1 » est introuvable.|  
 |0xC0202014|-1071636460|DTS_E_CANNOTCONVERTTYPES|La conversion de « %1 » en « %2 » n'est pas prise en charge.|  
@@ -1308,7 +1308,7 @@ ms.locfileid: "51642406"
 |0xC0202065|-1071636379|DTS_E_RAWMETADATACOUNTMISMATCH|Impossible d'ajouter le fichier de sortie car le nombre de colonnes dans ce fichier ne correspond pas au nombre de colonnes dans la destination. L'ancien fichier ne correspond pas au niveau des métadonnées.|  
 |0xC0202067|-1071636377|DTS_E_ERRORRETRIEVINGCOLUMNCODEPAGE|Une erreur s'est produite lors de la récupération des informations de la page de codes de la colonne.|  
 |0xC0202068|-1071636376|DTS_E_RAWCANTREAD|Impossible de lire %1!d! octets dans le fichier « %2 ». L'origine de cette erreur a dû être signalée précédemment.|  
-|0xC0202069|-1071636375|DTS_E_RAWUNEXPECTEDEOF|Fin de fichier inattendue lors de la lecture de %1!d! octets dans le fichier « %2 ». Le fichier s'est terminé prématurément en raison d'un format de fichier non valide.|  
+|0xC0202069|-1071636375|DTS_E_RAWUNEXPECTEDEOF|Fin de fichier inattendue lors de la lecture de %1!d! octets dans le fichier « %2 ». Le fichier s'est terminé prématurément en raison d'un format de fichier non valide.|  
 |0xC020206A|-1071636374|DTS_E_RAWNOLONGTYPES|La colonne %1 ne peut pas être utilisée. Les adaptateurs bruts ne prennent pas en charge les images, le texte ou les données ntext.|  
 |0xC020206B|-1071636373|DTS_E_RAWUNEXPECTEDTYPE|L'adaptateur a rencontré un type de données non reconnu de %1!d!. Cela peut être dû à un fichier d'entrée endommagé (source) ou à un type de tampon non valide (destination).|  
 |0xC020206C|-1071636372|DTS_E_RAWSTRINGTOOLONG|Chaîne trop longue. L'adaptateur lit une chaîne de %1!d! or une chaîne de %2!d! octets maximum est attendue au décalage %3!d!. Cela peut indiquer un fichier d'entrée endommagé. Le fichier comporte une longueur de chaîne trop importante pour la colonne tampon.|  
@@ -1360,14 +1360,14 @@ ms.locfileid: "51642406"
 |0xC020209D|-1071636323|DTS_E_DISKIOFAILED|Une erreur d'E/S disque inattendue s'est produite lors de la lecture du fichier.|  
 |0xC020209E|-1071636322|DTS_E_DISKIOTIMEDOUT|Un délai d'expiration d'E/S disque s'est produit lors de la lecture du fichier.|  
 |0xC020209F|-1071636321|DTS_E_INPUTSNOTREADONLY|Le type d'utilisation des colonnes d'entrée pour cette transformation ne peut être en lecture/écriture. Modifiez ce type d'utilisation pour qu'il soit en lecture seule.|  
-|0xC02020A0|-1071636320|DTS_E_CANNOTCOPYORCONVERTFLATFILEDATA|Impossible de copier ou de convertir les données de fichier plat pour la colonne « %1 ».|  
+|0xC02020A0|-1071636320|DTS_E_CANNOTCOPYORCONVERTFLATFILEDATA|Impossible de copier ou de convertir les données de fichier plat pour la colonne « %1 ».|  
 |0xC02020A1|-1071636319|DTS_E_FAILEDCOLUMNDATACONVERSIONSTATUS|Échec de la conversion de données. La conversion de données de la colonne « %1 » a retourné la valeur d'état %2!d! et le texte d'état « %3 ».|  
 |0xC02020A2|-1071636318|DTS_E_VARIABLESCOLLECTIONUNAVAILABLE|La collection Variables n'est pas disponible.|  
 |0xC02020A3|-1071636317|DTS_E_TXUNPIVOTDUPLICATEPIVOTKEYVALUE|Valeur PivotKeyValue dupliquée. La colonne d'entrée « %1 » (%2!d!) est mappée à une colonne de sortie avec une valeur croisée dynamique et elle possède une valeur PivotKeyValue non unique.|  
 |0xC02020A4|-1071636316|DTS_E_TXUNPIVOTNOUNPIVOTDESTINATION|Destination Unpivot introuvable. Au moins une colonne d'entrée doit être mappée avec une PivotKeyValue vers une DestinationColumn dans la sortie.|  
 |0xC02020A5|-1071636315|DTS_E_TXUNPIVOTBADKEYLIST|PivotKeyValue non valide. Dans une transformation UnPivot avec plus d'une DestinationColumn non croisée dynamique, l'ensemble des valeurs PivotKeyValues par destination doit correspondre exactement.|  
 |0xC02020A6|-1071636314|DTS_E_TXUNPIVOTBADUNPIVOTMETADATA|Métadonnées UnPivot incorrectes. Dans une transformation UnPivot, toutes les colonnes d'entrée avec PivotKeyValue défini et pointant vers la même DestinationColumn doivent posséder des métadonnées qui correspondent exactement à DestinationColumn.|  
-|0xC02020A7|-1071636313|DTS_E_TXPIVOTBADPIVOTKEYCONVERT|Impossible de convertir la valeur de clé du tableau croisé dynamique « %1 » selon le type de données de la colonne clé de tableau croisé dynamique.|  
+|0xC02020A7|-1071636313|DTS_E_TXPIVOTBADPIVOTKEYCONVERT|Impossible de convertir la valeur de clé du tableau croisé dynamique « %1 » selon le type de données de la colonne clé de tableau croisé dynamique.|  
 |0xC02020A8|-1071636312|DTS_E_TXUNPIVOTTOOMANYPIVOTKEYS|Trop de clés de tableau croisé dynamique spécifiées. Une seule colonne de sortie peut être utilisée en tant que clé de tableau croisé dynamique.|  
 |0xC02020A9|-1071636311|DTS_E_TXUNPIVOTUNMAPPEDOUTPUT|La colonne de sortie « %1 » (%2!d!) n'est mappée à aucune propriété DestinationColumn de la colonne d'entrée.|  
 |0xC02020AA|-1071636310|DTS_E_TXUNPIVOTNOPIVOT|Aucune colonne de sortie n'est indiquée comme PivotKey.|  
@@ -1442,7 +1442,7 @@ ms.locfileid: "51642406"
 |0xC02020FE|-1071636226|DTS_E_NOSCHEMAINFOFOUND|La commande SQL n'a retourné aucune information sur les colonnes.|  
 |0xC02020FF|-1071636225|DTS_E_GETSCHEMATABLEFAILED|%1 n'a pas pu récupérer d'informations sur les colonnes pour la commande SQL. L'erreur suivante s'est produite : %2|  
 |0xC0202100|-1071636224|DTS_E_SOURCETABLENAMENOTPROVIDED|Aucun nom de table source n'a été spécifié.|  
-|0xC0203110|-1071632112|DTS_E_CACHE_INVALID_INDEXPOS|La position d'index du cache, %1!d!, n'est pas valide. Pour les colonnes autres que les colonnes d'index, la position d'index doit être égale à 0. Pour les colonnes d'index, la position d'index doit être un nombre séquentiel positif.|  
+|0xC0203110|-1071632112|DTS_E_CACHE_INVALID_INDEXPOS|La position d'index du cache, %1!d!, n'est pas valide. Pour les colonnes autres que les colonnes d'index, la position d'index doit être égale à 0. Pour les colonnes d'index, la position d'index doit être un nombre séquentiel positif.|  
 |0xC0203111|-1071632111|DTS_E_CACHE_DUPLICATE_INDEXPOS|La position d'index, %1!d!, est un doublon. Pour les colonnes autres que les colonnes d'index, la position d'index doit être égale à 0. Pour les colonnes d'index, la position d'index doit être un nombre séquentiel positif.|  
 |0xC0203112|-1071632110|DTS_E_CACHE_TOO_FEW_INDEX_COLUMNS|Au moins une colonne d'index doit être spécifiée pour le gestionnaire de connexions du cache. Pour spécifier une colonne d'index, définissez la propriété Index Position de la colonne du cache.|  
 |0xC0203113|-1071632109|DTS_E_CACHE_INDEXPOS_NOT_CONTINUOUS|Les positions d'index du cache doivent être contiguës. Pour les colonnes autres que les colonnes d'index, la position d'index doit être égale à 0. Pour les colonnes d'index, la position d'index doit être un nombre séquentiel positif.|  
@@ -1465,7 +1465,7 @@ ms.locfileid: "51642406"
 |0xC0204015|-1071628267|DTS_E_CODEPAGEREQUIRED|« %1 » nécessite la définition d'une page de codes mais la valeur transmise était zéro.|  
 |0xC0204016|-1071628266|DTS_E_INVALIDSTRINGLENGTH|La longueur de « %1 » n'est pas valide. Cette longueur doit être comprise entre %2!ld! et %3!ld!.|  
 |0xC0204017|-1071628265|DTS_E_INVALIDSCALE|L'échelle de « %1 » n'est pas valide. Cette échelle doit être comprise entre %2!ld! et %3!ld!.|  
-|0xC0204018|-1071628264|DTS_E_INVALIDPRECISION|La précision de « %1 » n'est pas valide. Cette précision doit être comprise entre %2!ld! et %3!ld!.|  
+|0xC0204018|-1071628264|DTS_E_INVALIDPRECISION|La précision de « %1 » n'est pas valide. Cette précision doit être comprise entre %2!ld! et %3!ld!.|  
 |0xC0204019|-1071628263|DTS_E_PROPVALUEIGNORED|« %1 » possède une valeur définie pour la longueur, la précision, l'échelle ou la page de codes différente de zéro, mais le type de données requiert une valeur zéro.|  
 |0xC020401A|-1071628262|DTS_E_CANTSETOUTPUTCOLUMNDATATYPEPROPERTIES|%1 ne permet pas de définir les propriétés de type de données de la colonne de sortie.|  
 |0xC020401B|-1071628261|DTS_E_INVALIDDATATYPEFORERRORCOLUMNS|« %1 » contient un type de données non valide. « %1 » est une colonne d'erreur spéciale et le seul type de données valide est DT_I4.|  
@@ -1488,7 +1488,7 @@ ms.locfileid: "51642406"
 |0xC0207002|-1071615998|DTS_E_ILLEGALCUSTOMOUTPUTPROPERTY|La sortie %1 ne peut pas posséder la propriété « %2 », mais cette propriété lui est affectée actuellement.|  
 |0xC0207003|-1071615997|DTS_E_INVALIDOUTPUTEXCLUSIONGROUP|%1 doit être dans le groupe d'exclusions %2!d!. Toutes les sorties doivent se trouver dans le groupe d'exclusions spécifié.|  
 |0xC0207004|-1071615996|DTS_E_PROPERTYISEMPTY|La propriété « %1 » est vide. Cette propriété ne peut pas être vide.|  
-|0xC0207005|-1071615995|DTS_E_CREATEEXPRESSIONOBJECTFAILED|Impossible d'allouer de la mémoire à l'expression « %1 ». Une erreur de mémoire insuffisante s'est produite lors de la création d'un objet interne pour contenir l'expression.|  
+|0xC0207005|-1071615995|DTS_E_CREATEEXPRESSIONOBJECTFAILED|Impossible d'allouer de la mémoire à l'expression « %1 ». Une erreur de mémoire insuffisante s'est produite lors de la création d'un objet interne pour contenir l'expression.|  
 |0xC0207006|-1071615994|DTS_E_EXPRESSIONPARSEFAILED|Impossible d'analyser l'expression « %1 ». Cette expression n'était pas valide, ou une erreur de mémoire insuffisante est survenue.|  
 |0xC0207007|-1071615993|DTS_E_EXPRESSIONCOMPUTEFAILED|Échec du calcul de l'expression « %1 » : code d'erreur 0x%2!8.8X!. Cette expression risque de comporter des erreurs, telles que la division par zéro, indétectables au cours de l'analyse, ou une erreur de mémoire insuffisante s'est produite.|  
 |0xC0207008|-1071615992|DTS_E_FAILEDTOCREATEEXPRESSIONARRAY|Impossible d'allouer de la mémoire aux objets Expression. Une erreur de mémoire insuffisante s'est produite au cours de la création d'un tableau de pointeurs d'objet Expression.|  
@@ -1544,7 +1544,7 @@ ms.locfileid: "51642406"
 |0xC020802E|-1071611858|DTS_E_NTEXTDATATYPENOTSUPPORTEDWITHANSIFILES|Le type de données de « %1 » est DT_NTEXT. Ce dernier n'est pas pris en charge par les fichiers ANSI. Utilisez DT_TEXT à la place et convertissez les données au type DT_NTEXT à l'aide du composant de conversion de données.|  
 |0xC020802F|-1071611857|DTS_E_TEXTDATATYPENOTSUPPORTEDWITHUNICODEFILES|Le type de données de « %1 » est DT_TEXT. Ce dernier n'est pas pris en charge par les fichiers Unicode. Utilisez DT_NTEXT à la place et convertissez les données au type DT_TEXT à l'aide du composant de conversion de données.|  
 |0xC0208030|-1071611856|DTS_E_IMAGEDATATYPENOTSUPPORTED|Le type de données de « %1 » est DT_IMAGE. Ce dernier n'est pas pris en charge. Utilisez les types DT_TEXT ou DT_NTEXT à la place et convertissez les données depuis ou vers le type DT_IMAGE à l'aide du composant de conversion de données.|  
-|0xC0208031|-1071611855|DTS_E_FLATFILEFORMATNOTSUPPORTED|Le format « %1 » n'est pas pris en charge par le gestionnaire de connexions de fichiers plats. Les formats pris en charge sont Delimited, FixedWidth, RaggedRight et Mixed.|  
+|0xC0208031|-1071611855|DTS_E_FLATFILEFORMATNOTSUPPORTED|Le format « %1 » n'est pas pris en charge par le gestionnaire de connexions de fichiers plats. Les formats pris en charge sont Delimited, FixedWidth, RaggedRight et Mixed.|  
 |0xC0208032|-1071611854|DTS_E_EXTRACTORFILENAMECOLUMNNOTSTRING|« %1 » doit contenir un nom de fichier, mais il n'est pas de type String.|  
 |0xC0208033|-1071611853|DTS_E_EXTRACTORCANTAPPENDTRUNCATE|Erreur causée par des paramètres de propriété conflictuels. « %1 » possède les deux propriétés AllowAppend et ForceTruncate avec la valeur TRUE. Ces deux propriétés ne peuvent posséder cette valeur TRUE. Attribuez la valeur FALSE à l'une des deux propriétés.|  
 |0xC0208034|-1071611852|DTS_E_EXTRACTORCOLUMNALREADYREFERENCED|%1 fait référence à l'ID de colonne %2!d!, mais cette colonne est déjà référencée par %3. Supprimez l'une des deux références à cette colonne.|  
@@ -1682,12 +1682,12 @@ ms.locfileid: "51642406"
 |0xC02082FC|-1071611140|DTS_E_TXCHARMAP_CANTCHINAJAPAN|La colonne « %1 » associe les opérations sur les caractères japonais aux opérations pour les caractères chinois.|  
 |0xC02082FD|-1071611139|DTS_E_TXCHARMAP_CANTCASECHINESE|La colonne « %1 » associe les opérations sur les caractères chinois aux opérations en majuscules et en minuscules.|  
 |0xC02082FE|-1071611138|DTS_E_TXCHARMAP_CANTCASEJAPANESE|La colonne « %1 » associe les opérations sur des caractères japonais aux opérations en caractères majuscules et en minuscules.|  
-|0xC02082FF|-1071611137|DTS_E_TXCHARMAP_CANTBOTHCASE|La colonne « %1 » mappe la colonne aux caractères majuscules et minuscules.|  
+|0xC02082FF|-1071611137|DTS_E_TXCHARMAP_CANTBOTHCASE|La colonne « %1 » mappe la colonne aux caractères majuscules et minuscules.|  
 |0xC0208300|-1071611136|DTS_E_TXCHARMAP_CANTLINGUISTIC|La colonne « %1 » associe les indicateurs autres que les majuscules et les minuscules à l'opération de casse linguistique.|  
 |0xC0208301|-1071611135|DTS_E_TXCHARMAP_INVALIDMAPFLAGANDDATATYPE|Le type de données de la colonne « %1 » ne peut pas être mappé comme spécifié.|  
 |0xC0208302|-1071611134|DTS_E_TXFUZZYLOOKUP_UNSUPPORTED_MATCH_INDEX_VERSION|La version (%1) de l'index de correspondance déjà existant « %2 » n'est pas prise en charge. La version attendue est « %3 ». Cette erreur se produit si la version qui a persisté dans les métadonnées de l'index ne correspond pas à la version pour laquelle le code actuel a été conçu. Résolvez cette erreur en recréant l'index à l'aide de la version actuelle du code.|  
 |0xC0208303|-1071611133|DTS_E_TXFUZZYLOOKUP_INVALID_MATCH_INDEX|La table « %1 » ne semble pas constituer un index valide de correspondance avant génération. Cette erreur se produit lorsque l'enregistrement des métadonnées ne peut pas être chargé à partir de l'index avant génération spécifié.|  
-|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|Impossible de lire l'index de correspondance avant génération « %1 ».  Code d'erreur OLEDB : 0x%2!8.8X!.|  
+|0xC0208304|-1071611132|DTS_E_TXFUZZYLOOKUP_UNABLE_TO_READ_MATCH_INDEX|Impossible de lire l'index de correspondance avant génération « %1 ».  Code d'erreur OLEDB : 0x%2!8.8X!.|  
 |0xC0208305|-1071611131|DTS_E_TXFUZZYLOOKUP_NO_JOIN_COLUMNS|Aucune colonne d'entrée ne comporte une jointure valide vers une colonne de table de référence.  Vérifiez qu'il existe au moins une jointure définie à l'aide des propriétés de la colonne d'entrée JoinToReferenceColumn et JoinType.|  
 |0xC0208306|-1071611130|DTS_E_TXFUZZYLOOKUP_INDEX_DOES_NOT_CONTAIN_COLUMN|L'index de correspondance déjà existant « %1 » n'a pas été créé à l'origine avec des informations de correspondance approximative pour la colonne « %2 ».  Il doit être recréé pour inclure ces informations. Cette erreur se produit lorsque l'index a été créé avec une colonne qui n'est pas une colonne de jonction approximative.|  
 |0xC0208307|-1071611129|DTS_E_TXFUZZYLOOKUP_IDENTIFIER_PROPERTY|Le nom « %1 » attribué à la propriété « %2 » n'est pas un nom d'identificateur SQL valide. Cette erreur se produit si le nom de la propriété n'est pas conforme aux spécifications d'un nom d'identificateur SQL valide.|  
@@ -1697,7 +1697,7 @@ ms.locfileid: "51642406"
 |0xC020830C|-1071611124|DTS_E_TXFUZZYLOOKUP_INCOMPATIBLE_EXACT_JOIN_DATATYPES|Les colonnes de recherche exacte « %1 » et « %2 » ne possèdent pas de types de données égaux ou ne constituent pas des types de chaîne comparables. Les jonctions exactes sont prises en charge entre les colonnes qui comportent des types de données égaux ou une combinaison DT_STR et DT_WSTR.|  
 |0xC020830D|-1071611123|DTS_E_TXFUZZYLOOKUP_INCOMPATIBLE_COPYCOLUMN_DATATYPES|Les colonnes de copie « %1 » et « %2 » ne possèdent pas de types de données égaux ou ne constituent pas des types de chaîne convertibles de façon triviale. Cela se produit car la copie depuis une référence vers une sortie entre des colonnes de types de données égaux ou une combinaison DT_STR et DT_WSTR est prise en charge, mais les autres types ne le sont pas.|  
 |0xC020830E|-1071611122|DTS_E_TXFUZZYLOOKUP_INCOMPATIBLE_PASSTHRUCOLUMN_DATATYPES|Les colonnes de relais « %1 » et « %2 » ne possèdent pas de types de données égaux. Seules les colonnes comportant des types de données égaux sont prises en charge en tant que colonnes de relais depuis l'entrée vers la sortie.|  
-|0xC020830F|-1071611121|DTS_E_TXFUZZYLOOKUP_UNABLETOLOCATEREFCOLUMN|Colonne de référence « %1 » introuvable.|  
+|0xC020830F|-1071611121|DTS_E_TXFUZZYLOOKUP_UNABLETOLOCATEREFCOLUMN|Colonne de référence « %1 » introuvable.|  
 |0xC0208311|-1071611119|DTS_E_TXFUZZYLOOKUP_OUTPUT_COLUMN_MUST_BE_PASSTHRU_COLUMN_OR_A_COPY_COLUMN|Une colonne de sortie doit exactement posséder une propriété CopyColumn ou PassThruColumn spécifiée. Cette erreur se produit lorsque les propriétés CopyColumn ou PassThruColumn, ou les deux ensemble sont définies en tant que valeurs non vides.|  
 |0xC0208312|-1071611118|DTS_E_TXFUZZYLOOKUP_PASSTHRU_COLUMN_NOT_FOUND|L’ID de lignage source « %1!d! » spécifié pour la propriété « %2 » sur la colonne de sortie « %3 » est introuvable dans la collection de colonnes d’entrée. Cela se produit lorsque l'ID de la colonne d'entrée spécifié sur une colonne de sortie en tant que colonne de relais est introuvable dans l'ensemble des entrées.|  
 |0xC0208313|-1071611117|DTS_E_TXFUZZYLOOKUP_INDEXED_COLUMN_NOT_FOUND_IN_REF_TABLE|La colonne « %1 » dans l'index avant génération « %2 » est introuvable dans la table/requête de référence. Cela se produit si le schéma/la requête de la table de référence a été modifié depuis la création de l'index de correspondance déjà existant.|  
@@ -1765,7 +1765,7 @@ ms.locfileid: "51642406"
 |0xC020835C|-1071611044|DTS_E_FUZZYLOOKUP_REFERENCECACHEFULL|La recherche floue n'a pas pu charger la totalité de la table de référence dans la mémoire principale, comme requis lorsque la propriété Exhaustive est activée.  Soit la mémoire système était insuffisante, soit une limite a été spécifiée pour la propriété MaxMemoryUsage, qui était insuffisante pour le chargement de la table de référence.  Définissez la propriété MaxMemoryUsage à la valeur 0 ou augmentez significativement sa valeur.  Une autre solution consiste à désactiver la propriété Exhaustive.|  
 |0xC020835D|-1071611043|DTS_E_TERMLOOKUP_INITIALIZE|Une erreur s'est produite lors de l'initialisation du moteur de recherche de termes. Code d'erreur retourné : 0x%1!8.8X!.|  
 |0xC020835E|-1071611042|DTS_E_TERMLOOKUP_PROCESSSENTENCE|Une erreur s'est produite lors du traitement des phrases. Code d'erreur retourné : 0x%1!8.8X!.|  
-|0xC020835F|-1071611041|DTS_E_TEXTMININGBASE_APPENDTOTEMPBUFFER|Une erreur s'est produite lors de l'ajout de chaînes à un tampon interne. Code d'erreur retourné : 0x%1!8.8X!.|  
+|0xC020835F|-1071611041|DTS_E_TEXTMININGBASE_APPENDTOTEMPBUFFER|Une erreur s'est produite lors de l'ajout de chaînes à un tampon interne. Code d'erreur retourné : 0x%1!8.8X!.|  
 |0xC0208360|-1071611040|DTS_E_TERMEXTRACTION_SAVEPOSTAG|Une erreur s'est produite au cours de l'enregistrement de balises morphosyntaxiques à partir d'un tampon interne. Code d'erreur retourné : 0x%1!8.8X!.|  
 |0xC0208361|-1071611039|DTS_E_TERMEXTRACTION_COUNTTERM|Une erreur s'est produite lors du comptage des termes candidats. Code d'erreur retourné : 0x%1!8.8X!.|  
 |0xC0208362|-1071611038|DTS_E_TERMEXTRACTION_INITPOSPROCESSOR|Une erreur s'est produite au cours de l'initialisation du processeur morphosyntaxique. Code d'erreur retourné : 0x%1!8.8X!.|  
@@ -1804,18 +1804,18 @@ ms.locfileid: "51642406"
 |0xC0208386|-1071611002|DTS_E_DATAREADERDESTREADERISCLOSED|Le IDataReader SSIS est fermé.|  
 |0xC0208387|-1071611001|DTS_E_DATAREADERDESTREADERISATEND|SSIS IDataReader se trouve au-delà de la fin du jeu de résultats.|  
 |0xC0208388|-1071611000|DTS_E_DATAREADERDESTINVALIDCOLUMNORDINAL|La position ordinale de la colonne n'est pas valide.|  
-|0xC0208389|-1071610999|DTS_E_DATAREADERDESTCANNOTCONVERT|Impossible de convertir le %1 à partir du type de données « %2 » vers le type de données « %3 ».|  
+|0xC0208389|-1071610999|DTS_E_DATAREADERDESTCANNOTCONVERT|Impossible de convertir le %1 à partir du type de données « %2 » vers le type de données « %3 ».|  
 |0xC020838A|-1071610998|DTS_E_DATAREADERDESTINVALIDCODEPAGE|Le %1 comporte une page de codes non prise en charge %2!d!.|  
 |0xC020838B|-1071610997|DTS_E_XMLSRCEXTERNALMETADATACOLUMNNOTINSCHEMA|Le %1 ne comporte pas de mappage au schéma XML.|  
 |0xC020838D|-1071610995|DTS_E_TXTERMLOOKUP_MISMATCHED_COLUMN_METADATA|Les colonnes avec les ID de lignage %1!d! et %2!d! comportent des métadonnées non concordantes. La colonne d’entrée qui est mappée à une colonne de sortie ne comporte pas les mêmes métadonnées (type de données, précision, échelle, longueur ou page de codes).|  
 |0xC020838E|-1071610994|DTS_E_DATAREADERDESTREADERTIMEOUT|Le IDataReader SSIS est fermé. Le délai d'attente de lecture a expiré.|  
 |0xC020838F|-1071610993|DTS_E_ADOSRCINVALIDSQLCOMMAND|Une erreur s'est produite lors de l'exécution de la commande SQL fournie : « %1 ». %2|  
 |0xC0208390|-1071610992|DTS_E_JOINTYPEDOESNTMATCHETI|La propriété JoinType spécifiée pour la colonne d'entrée « %1 » est différente de celle spécifiée pour la colonne de la table de référence correspondante lorsque l'index de correspondance a été initialement créé.  Vous devez reconstruire l'index de correspondances avec la propriété JoinType donnée ou modifier la propriété JoinType afin qu'elle corresponde au type utilisé lors de la création de l'index de correspondances.|  
-|0xC0208392|-1071610990|DTS_E_SQLCEDESTDATATYPENOTSUPPORTED|Le type de données « %1! » rencontré sur la colonne « %2! » n'est pas pris en charge pour %3.|  
+|0xC0208392|-1071610990|DTS_E_SQLCEDESTDATATYPENOTSUPPORTED|Le type de données « %1! » rencontré sur la colonne « %2! » n'est pas pris en charge pour %3.|  
 |0xC0208393|-1071610989|DTS_E_DATAREADERDESTDATATYPENOTSUPPORTED|Le type de données « %1! » rencontré sur %2 n'est pas pris en charge pour %3.|  
 |0xC0208394|-1071610988|DTS_E_RECORDSETDESTDATATYPENOTSUPPORTED|Le type de données de %1 n'est pas pris en charge pour %2.|  
 |0xC0208446|-1071610810|DTS_E_TXSCRIPTMIGRATIONCOULDNOTADDREFERENCE|Impossible d'ajouter la référence de projet « %1 » lors de la migration de %2. Celle-ci devra peut-être être terminée manuellement.|  
-|0xC0208447|-1071610809|DTS_E_TXSCRIPTMIGRATIONMULTIPLEENTRYPOINTSFOUND|Plusieurs points d'entrée nommés « %1 » ont été trouvés lors de la migration de %2. Celle-ci devra peut-être être terminée manuellement.|  
+|0xC0208447|-1071610809|DTS_E_TXSCRIPTMIGRATIONMULTIPLEENTRYPOINTSFOUND|Plusieurs points d'entrée nommés « %1 » ont été trouvés lors de la migration de %2. Celle-ci devra peut-être être terminée manuellement.|  
 |0xC0208448|-1071610808|DTS_E_TXSCRIPTMIGRATIONNOENTRYPOINTFOUND|Aucun point d'entrée n'a été trouvé lors de la migration de %1. Celle-ci devra peut-être être terminée manuellement.|  
 |0xC020844B|-1071610805|DTS_E_ADODESTINSERTIONFAILURE|Une exception s'est produite lors de l'insertion des données ; le message retourné par le fournisseur est : %1|  
 |0xC020844C|-1071610804|DTS_E_ADODESTCONNECTIONTYPENOTSUPPORTED|Échec de la récupération du nom invariant de fournisseur à partir de %1. Il n'est pas pris en charge actuellement par le composant de destination ADO NET.|  
@@ -1954,7 +1954,7 @@ ms.locfileid: "51642406"
 |0xC02090F7|-1071607561|DTS_E_XMLSRCINVALIDOUTPUTNAME|Échec de la tentative de création d'une sortie nommée « %1 » pour la table XML avec le chemin d'accès « %2 », car ce nom n'est pas valide.|  
 |0xC02090F8|-1071607560|DTS_E_MGDSRC_OVERFLOW|La valeur était trop grande pour tenir dans le %1.|  
 |0xC02090F9|-1071607559|DTS_E_DATAREADERDESTUNABLETOPROCESSDATA|%1 n'a pu traiter les données.|  
-|0xC02090FA|-1071607558|DTS_E_XMLSRC_INDUCEDTRANSFORMFAILUREONTRUNCATION|Échec de « %1 » en raison d'une troncation. En outre, la disposition de la ligne de troncation sur « %2 » au niveau de « %3 » indique une erreur au niveau de la troncation. Une erreur de troncation s'est produite sur l'objet spécifié du composant spécifié.|  
+|0xC02090FA|-1071607558|DTS_E_XMLSRC_INDUCEDTRANSFORMFAILUREONTRUNCATION|Échec de « %1 » en raison d'une troncation. En outre, la disposition de la ligne de troncation sur « %2 » au niveau de « %3 » indique une erreur au niveau de la troncation. Une erreur de troncation s'est produite sur l'objet spécifié du composant spécifié.|  
 |0xC02090FB|-1071607557|DTS_E_XMLSRC_INDUCEDTRANSFORMFAILUREONERROR|Échec de l'objet « %1 » en raison du code d'erreur 0x%2!8.8X!. En outre, la disposition de la ligne d'erreur sur « %3 » au niveau de « %4 » spécifie un échec sur l'erreur. Une erreur s'est produite sur l'objet spécifié du composant spécifié.|  
 |0xC0209291|-1071607151|DTS_E_SQLCEDESTSTATIC_FAILEDTOSETVALUES|La destination SQLCE n'a pas pu définir les valeurs des colonnes pour la ligne.|  
 |0xC0209292|-1071607150|DTS_E_SQLCEDESTSTATIC_FAILEDTOINSERT|La destination SQLCE n'a pu insérer la ligne.|  
@@ -1965,7 +1965,7 @@ ms.locfileid: "51642406"
 |0xC0209297|-1071607145|DTS_E_TXSCD_MALLOCERR_REFERENCECOLUMNINFO|Impossible d'allouer de la mémoire.|  
 |0xC0209298|-1071607144|DTS_E_TXSCD_MALLOCERR_BUFFCOL|Impossible d'allouer de la mémoire.|  
 |0xC0209299|-1071607143|DTS_E_TXSCD_MAINWORKSPACE_CREATEERR|Impossible de créer le tampon d'espace de travail.|  
-|0xC020929A|-1071607142|DTS_E_DTPXMLDOMCREATEERROR|Impossible d'instancier le document DOM XML. Vérifiez que les binaires MSXML sont correctement installés et inscrits.|  
+|0xC020929A|-1071607142|DTS_E_DTPXMLDOMCREATEERROR|Impossible d'instancier le document DOM XML. Vérifiez que les binaires MSXML sont correctement installés et inscrits.|  
 |0xC020929B|-1071607141|DTS_E_DTPXMLDOMLOADERROR|Impossible de charger des données XML dans un DOM local pour le traitement.|  
 |0xC020929C|-1071607140|DTS_E_RSTDESTBADVARIABLETYPE|Le type de la variable d'exécution « %1 » est incorrect. La variable d'exécution doit posséder le type Object.|  
 |0xC020929E|-1071607138|DTS_E_XMLDATAREADERMULTIPLEINLINEXMLSCHEMASNOTSUPPORTED|L'adaptateur de source XML n'a pas pu traiter les données XML. Plusieurs schémas inclus ne sont pas pris en charge.|  
@@ -1992,8 +1992,8 @@ ms.locfileid: "51642406"
 |0xC02092B5|-1071607115|DTS_E_COMMITFAILED|Échec d'une validation.|  
 |0xC02092B6|-1071607114|DTS_E_USEBINARYFORMATREQUIRESANSIFILE|La propriété personnalisée « %1 » de %2 ne peut être utilisée qu'avec des fichiers ANSI.|  
 |0xC02092B7|-1071607113|DTS_E_USEBINARYFORMATREQUIRESBYTES|La propriété personnalisée « %1 » de %2 ne peut être utilisée qu'avec DT_BYTES.|  
-|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit. Code d'erreur : 0x%1!8.8X!.|  
-|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit ; il est possible qu'aucun fournisseur 64 bits ne soit disponible.  Code d'erreur : 0x%1!8.8X!.|  
+|0xC0209302|-1071607038|DTS_E_OLEDB_NOPROVIDER_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit. Code d’erreur : 0x%1!8.8X!.|  
+|0xC0209303|-1071607037|DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR|Code d'erreur SSIS DTS_E_OLEDB_NOPROVIDER_64BIT_ERROR.  Le fournisseur OLE DB demandé %2 n'est pas inscrit ; il est possible qu'aucun fournisseur 64 bits ne soit disponible.  Code d’erreur : 0x%1!8.8X!.|  
 |0xC0209306|-1071607034|DTS_E_MULTICACHECOLMAPPINGS|La colonne de cache, « %1 », est mappée à plusieurs colonnes. Supprimez les mappages de colonne dupliqués.|  
 |0xC0209307|-1071607033|DTS_E_COLNOTMAPPEDTOCACHECOL|Le %1 n'est pas mappé à une colonne de cache valide.|  
 |0xC0209308|-1071607032|DTS_E_CACHECOLDATATYPEINCOMPAT|Impossible de mapper la colonne d'entrée « %1 » et la colonne de cache « %2 », car les types de données ne correspondent pas.|  
@@ -2010,11 +2010,11 @@ ms.locfileid: "51642406"
 |0xC0209314|-1071607020|DTS_E_CACHERELOADEDDIFFERENTFILES|Le %1 ne peut pas charger le cache à partir du fichier « %2 » parce que le cache a déjà été chargé à partir du fichier « %3 ».|  
 |0xC0209316|-1071607018|DTS_E_OUTPUTNOTUSED|La sortie portant l'ID %1!d! du composant d'agrégation n'est utilisée par aucun composant. Supprimez-la ou associez-la à une entrée d'un composant.|  
 |0xC0209317|-1071607017|DTS_E_CACHEFILEWRITEFAILED|%1 n'a pas pu écrire le cache dans le fichier « %2 ». Le hresult est 0x%3!8.8X!.|  
-|0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|Les informations de type de données de schéma XML de « %1 » sur l'élément « %2 » ont été modifiées.  Réinitialisez les métadonnées de ce composant et passez en revue le mappage de colonnes.|  
+|0xC0209318|-1071607016|DTS_E_XMLDATATYPECHANGED|Les informations de type de données de schéma XML de « %1 » sur l'élément « %2 » ont été modifiées.  Réinitialisez les métadonnées de ce composant et passez en revue le mappage de colonnes.|  
 |0xC0209319|-1071607015|DTS_E_TXLOOKUP_UNUSEDINPUTCOLUMN|%1 n'est pas utilisée dans la jointure ou la copie. Supprimez la colonne inutile de la liste des colonnes d'entrée.|  
 |0xC020931A|-1071607014|DTS_E_SORTSTACKOVERFLOW|Le tri a échoué en raison d'un dépassement de capacité de la pile en triant une mémoire tampon entrante.  Veuillez réduire la propriété DefaultBufferMaxRows sur la tâche de flux de données.|  
 |0xC020F42A|-1071582166|DTS_E_OLEDB_OLDPROVIDER_ERROR|Envisagez de changer le FOURNISSEUR dans la chaîne de connexion à %1, ou accédez à https://www.microsoft.com/downloads pour rechercher et installer la prise en charge de %2.|  
-|||DTS_E_INITTASKOBJECTFAILED|Échec de l’initialisation de l’objet de tâche pour la tâche « %1!s! », type « %2!s! » en raison de l’erreur « 0x%3!8.8X! « %4!s! ».|  
+|||DTS_E_INITTASKOBJECTFAILED|Échec de l’initialisation de l’objet de tâche pour la tâche « %1!s! », type « %2!s! » en raison de l’erreur « 0x%3!8.8X! « %4!s! ».|  
 |||DTS_E_GETCATMANAGERFAILED|Impossible de créer un gestionnaire de catégories de composants COM en raison de l’erreur 0x%1!8.8X! « %2!s! ».|  
 |||DTS_E_COMPONENTINITFAILED|Échec de l'initialisation du composant %1!s! en raison de l’erreur 0x%2!8.8X! « %3!s! ».|  
   
@@ -2037,7 +2037,7 @@ ms.locfileid: "51642406"
 |0x80012019|-2147409895|DTS_W_CONFIGFORMATINVALID|Le format de l'entrée de configuration « %1 » est incorrect. Ceci peut se produire en raison d'un séparateur absent ou d'erreurs de format, comme un séparateur de tableaux non valide.|  
 |0x8001201A|-2147409894|DTS_W_NOPARENTVARIABLES|La configuration à partir d'une variable parente « %1 » ne s'est pas produite, car il n'y avait pas de collection de variables parentes.|  
 |0x8001201B|-2147409893|DTS_W_CONFIGFILEFAILEDIMPORT|Échec de l'importation du fichier de configuration : « %1 ».|  
-|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|La configuration à partir d'une variable parente « %1 » ne s'est pas produite, car il n'y avait pas de variable parente. Code d'erreur : 0x%2!8.8X!.|  
+|0x8001201C|-2147409892|DTS_W_PARENTVARIABLENOTFOUND|La configuration à partir d'une variable parente « %1 » ne s'est pas produite, car il n'y avait pas de variable parente. Code d’erreur : 0x%2!8.8X!.|  
 |0x8001201D|-2147409891|DTS_W_CONFIGFILEEMPTY|Le fichier de configuration était vide et ne contenait aucune entrée de configuration.|  
 |0x80012023|-2147409885|DTS_W_INVALIDCONFIGURATIONTYPE|Le type de configuration de la configuration « %1 » n'est pas valide. Ceci peut se produire lorsqu'une tentative est effectuée pour définir la propriété du type d'un objet de configuration sur un type de configuration non valide.|  
 |0x80012025|-2147409883|DTS_W_REGISTRYCONFIGURATIONTYPENOTFOUND|Le type de configuration de la configuration du Registre est introuvable dans la clé « %1 ». Ajoutez une valeur appelée ConfigType à la clé de Registre et donnez-lui une valeur de chaîne de « Variable », « Property », « ConnectionManager », « LoggingProvider » ou « ForEachEnumerator ».|  
@@ -2047,7 +2047,7 @@ ms.locfileid: "51642406"
 |0x80012033|-2147409869|DTS_W_CONFIGUREDTYPESECTIONEMPTY|Impossible d'extraire la valeur du fichier .ini. La section ConfiguredType est vide ou n'existe pas : « %1 ».|  
 |0x80012034|-2147409868|DTS_W_PACKAGEPATHSECTIONEMPTY|Impossible d'extraire la valeur du fichier .ini. La section PackagePath est vide ou n'existe pas : « %1 ».|  
 |0x80012035|-2147409867|DTS_W_CONFIGUREDVALUETYPE|Impossible d'extraire la valeur du fichier .ini. La section ConfiguredValueType est vide ou n'existe pas : « %1 ».|  
-|0x80012051|-2147409839|DTS_W_SQLSERVERFAILEDIMPORT|L'importation de la configuration de SQL Server a échoué : « %1 ».|  
+|0x80012051|-2147409839|DTS_W_SQLSERVERFAILEDIMPORT|L'importation de la configuration de SQL Server a échoué : « %1 ».|  
 |0x80012052|-2147409838|DTS_W_INICONFIGURATIONPROBLEM|Le fichier de configuration .ini n'est pas valide en raison de champs absents ou vides.|  
 |0x80012054|-2147409836|DTS_W_NORECORDSFOUNDINTABLE|La table « %1 » ne comporte pas d'enregistrement de configuration. Ceci se produit lors de la configuration à partir d'une table SQL Server qui ne comporte pas d'enregistrement de configuration.|  
 |0x80012055|-2147409835|DTS_W_DUPLICATECUSTOMEVENT|Erreur lors de l'utilisation d'un même nom pour différents événements personnalisés. L'événement personnalisé « %1 » a été défini différemment par différents enfants de ce conteneur. Une erreur peut apparaître lors de l'exécution du gestionnaire d'événements.|  
@@ -2059,11 +2059,11 @@ ms.locfileid: "51642406"
 |0x80017101|-2147389183|DTS_W_EMPTYPATH|Le chemin d'accès est vide.|  
 |0x80019002|-2147381246|DTS_W_MAXIMUMERRORCOUNTREACHED|Code d'avertissement SSIS DTS_W_MAXIMUMERRORCOUNTREACHED.  La méthode Execution a réussi, mais le nombre d'erreurs détectées (%1!d!) a atteint le maximum autorisé (%2!d!) ; aboutissant à un échec. Ceci se produit lorsque le nombre d'erreurs atteint le nombre spécifié dans MaximumErrorCount. Modifiez la valeur de MaximumErrorCount ou résolvez les erreurs.|  
 |0x80019003|-2147381245|DTS_W_CONFIGENVVARNOTFOUND|La variable d'environnement de configuration est introuvable.  La variable d'environnement est : « %1 ». Ceci se produit lorsqu'un package spécifie une variable d'environnement pour un paramètre de configuration, mais qu'elle est introuvable. Vérifiez dans la collection de configurations du package si la variable d'environnement spécifiée est disponible est valide.|  
-|0x80019316|-2147380458|DTS_W_CONNECTIONPROVIDERCHANGE|Le nom de fournisseur « %2 » du gestionnaire de connexions « %1 » a été remplacé par « %3 ».|  
+|0x80019316|-2147380458|DTS_W_CONNECTIONPROVIDERCHANGE|Le nom de fournisseur « %2 » du gestionnaire de connexions « %1 » a été remplacé par « %3 ».|  
 |0x80019317|-2147380457|DTS_W_READEXTMAPFAILED|Une exception s'est produite lors de la lecture des fichiers de mappage de mise à niveau. L'exception est « %1 ».|  
-|0x80019318|-2147380456|DTS_W_DUPLICATEMAPPINGKEY|Le fichier « %1 » contient un mappage en double. La balise est « %2 » et la clé est « %3 ».|  
+|0x80019318|-2147380456|DTS_W_DUPLICATEMAPPINGKEY|Le fichier « %1 » contient un mappage en double. La balise est « %2 » et la clé est « %3 ».|  
 |0x80019319|-2147380455|DTS_W_IMPLICITUPGRADEMAPPING|L'extension « %1 » a été implicitement mise à niveau vers « %2 ». Ajoutez un mappage pour cette extension au répertoire UpgradeMappings.|  
-|0x8001931A|-2147380454|DTS_W_INVALIDEXTENSIONMAPPING|Le fichier « %1 » contient un mappage non valide. Les valeurs ne peuvent pas être Null ou vides. La balise est « %2 », la clé est « %3 » et la valeur est « %4 ».|  
+|0x8001931A|-2147380454|DTS_W_INVALIDEXTENSIONMAPPING|Le fichier « %1 » contient un mappage non valide. Les valeurs ne peuvent pas être Null ou vides. La balise est « %2 », la clé est « %3 » et la valeur est « %4 ».|  
 |0x8001931C|-2147380452|DTS_W_ADOCONNECTIONDATATYPECOMPATCHANGE|La propriété DataTypeCompatibility du gestionnaire de connexions de type ADO « %1 » a été définie sur 80 pour des raisons de compatibilité descendante.|  
 |0x8001C004|-2147368956|DTS_W_FILEENUMEMPTY|L'énumérateur For Each File est vide. Il n'a trouvé aucun fichier qui correspondait au modèle de fichier, ou le répertoire spécifié est vide.|  
 |0x8001F02F|-2147356625|DTS_W_COULDNOTRESOLVEPACKAGEPATH|Impossible de résoudre un chemin de package vers un objet dans le package « %1 ». Vérifiez que le chemin d'accès du package est valide.|  
@@ -2072,9 +2072,9 @@ ms.locfileid: "51642406"
 |0x8001F205|-2147356155|DTS_W_LOGPROVIDERNOTDEFINED|L'exécutable « %1 » a été correctement collé. Toutefois, un module fournisseur d'informations auparavant associé à l'exécutable est introuvable dans la collection « LogProviders ».  L'exécutable a été collé sans informations du module fournisseur d'informations.|  
 |0x8001F300|-2147355904|DTS_W_PACKAGEUPGRADED|La mise à niveau du package a réussi.|  
 |0x8001F42B|-2147355605|DTS_W_LEGACYPROGID|Le ProgID « %1 » est déconseillé. Le nouveau ProgID pour ce composant « %2 » doit être utilisé à la place.|  
-|0x80020918|-2147350248|DTS_W_FTPTASK_OPERATIONFAILURE|Échec de l'opération « %1 ».|  
+|0x80020918|-2147350248|DTS_W_FTPTASK_OPERATIONFAILURE|Échec de l'opération « %1 ».|  
 |0x800283A5|-2147318875|DTS_W_MSMQTASK_USE_WEAK_ENCRYPTION|L'algorithme de chiffrement « %1 » utilise un chiffrement faible.|  
-|0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|La tâche n'a pas réussi à exécuter l'opération « %1 ».|  
+|0x80029164|-2147315356|DTS_W_FSTASK_OPERATIONFAILURE|La tâche n'a pas réussi à exécuter l'opération « %1 ».|  
 |0x80029185|-2147315323|DTS_W_EXECPROCTASK_FILENOTINPATH|Le fichier/processus « %1 » n'est pas dans le chemin d'accès.|  
 |0x800291C6|-2147315258|DTS_W_SENDMAILTASK_SUBJECT_MISSING|Le sujet est vide.|  
 |0x800291C7|-2147315257|DTS_W_SENDMAILTASK_ERROR_IN_TO_LINE|L'adresse dans la ligne « À » est mal formée. Le symbole « \@ » est manquant ou elle n’est pas valide.|  
@@ -2086,7 +2086,7 @@ ms.locfileid: "51642406"
 |0x80029292|-2147315054|DTS_W_TRANSFERDBTASK_METHODSETTOONLINE|La valeur de la méthode de transfert n'était pas valide.  Elle va être définie à un transfert en ligne.|  
 |0x8002F304|-2147290364|DTS_W_PROBLEMOCCURREDWITHFOLLOWINGMESSAGE|Un problème est survenu avec les messages suivants : « %1 ».|  
 |0x8002F322|-2147290334|DTS_W_ERRMSGTASK_ERRORMESSAGEALREADYEXISTS|Le message d'erreur « %1 » existe déjà sur le serveur de destination.|  
-|0x8002F331|-2147290319|DTS_W_JOBSTASK_JOBEXISTSATDEST|Le travail « %1 » existe déjà sur le serveur de destination.|  
+|0x8002F331|-2147290319|DTS_W_JOBSTASK_JOBEXISTSATDEST|Le travail « %1 » existe déjà sur le serveur de destination.|  
 |0x8002F332|-2147290318|DTS_W_JOBSTASK_SKIPPINGJOBEXISTSATDEST|Le transfert du travail « %1 » est ignoré car ce travail existe déjà à la destination.|  
 |0x8002F333|-2147290317|DTS_W_JOBSTASK_OVERWRITINGJOB|Remplacement du travail « %1 » sur le serveur de destination.|  
 |0x8002F339|-2147290311|DTS_W_LOGINSTASK_ENUMVALUEINCORRECT|La valeur d'énumération permanente de la propriété « FailIfExists » a été modifiée et a été rendue non valide. Réinitialisation à la valeur par défaut.|  
@@ -2098,7 +2098,7 @@ ms.locfileid: "51642406"
 |0x8002F372|-2147290254|DTS_W_TRANSOBJECTSTASK_UDFALREADYATDEST|La fonction définie par l'utilisateur « %1 » existe déjà à la destination.|  
 |0x8002F376|-2147290250|DTS_W_TRANSOBJECTSTASK_DEFAULTALREADYATDEST|La valeur par défaut « %1 » existe déjà à la destination.|  
 |0x8002F380|-2147290240|DTS_W_TRANSOBJECTSTASK_UDDTALREADYATDEST|Le type de données défini par l'utilisateur « %1 » existe déjà à la destination.|  
-|0x8002F384|-2147290236|DTS_W_TRANSOBJECTSTASK_PFALREADYATDEST|La fonction de partition « %1 » existe déjà à la destination.|  
+|0x8002F384|-2147290236|DTS_W_TRANSOBJECTSTASK_PFALREADYATDEST|La fonction de partition « %1 » existe déjà à la destination.|  
 |0x8002F388|-2147290232|DTS_W_TRANSOBJECTSTASK_PSALREADYATDEST|Le schéma de partition « %1 » existe déjà à la destination.|  
 |0x8002F391|-2147290223|DTS_W_TRANSOBJECTSTASK_SCHEMAALREADYATDEST|Le schéma « %1 » existe déjà à la destination.|  
 |0x8002F396|-2147290218|DTS_W_TRANSOBJECTSTASK_SQLASSEMBLYALREADYATDEST|SqlAssembly « %1 » existe déjà à la destination.|  
@@ -2125,7 +2125,7 @@ ms.locfileid: "51642406"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|La valeur « %1 » du composant %2 est introuvable. Impossible de trouver la valeur CurrentVersion du composant. Cette erreur se produit si le composant n'a pas défini ses informations de Registre pour contenir une valeur CurrentVersion dans la section DTSInfo. Ce message apparaît au cours du développement du composant ou lorsque le composant est utilisé dans un package, si le composant n'est pas correctement enregistré.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|Le gestionnaire de tampons n'a pas pu obtenir un nom de fichier temporaire.|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|Le gestionnaire de tampons n'a pas pu créer un fichier temporaire dans le chemin d'accès « %1 ». Ce chemin ne sera plus utilisé pour le stockage temporaire.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Avertissement : impossible d'ouvrir la mémoire partagée globale pour communiquer avec la DLL de performance ; les compteurs de performance du flux de données ne sont pas disponibles  Pour résoudre le problème, exécutez ce package en tant qu'administrateur ou sur la console du système.|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Warning: impossible d'ouvrir la mémoire partagée globale pour communiquer avec la DLL de performance ; les compteurs de performance du flux de données ne sont pas disponibles.  Pour résoudre le problème, exécutez ce package en tant qu'administrateur ou sur la console du système.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|Une ligne partielle a été trouvée à la fin du fichier.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|La fin du fichier de données a été atteinte au cours de la lecture des lignes d'en-tête. Assurez-vous que le séparateur de lignes d'en-tête et que le nombre de lignes d'en-tête à ignorer sont corrects.|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Impossible de récupérer les infos de la page de codes de la colonne à partir du fournisseur OLE DB.  Si le composant prend en charge la propriété « %1 », la page de codes de cette propriété sera utilisée.  Modifiez la valeur de la propriété si les valeurs de la page de codes de la chaîne actuelle sont incorrectes.  Si le composant ne prend pas en charge la propriété, la page de codes provenant de l'ID des paramètres régionaux du composant sera utilisée.|  
@@ -2155,14 +2155,14 @@ ms.locfileid: "51642406"
 |0x802092A8|-2145348952|DTS_W_POTENTIALTRUNCATIONFROMDATARETRIEVAL|Une troncation peut se produire suite à la récupération de données issues de la colonne de base de données « %1 » avec une longueur de %2!d! dans la colonne de flux de données « %3 » avec une longueur de %4!d!.|  
 |0x802092AA|-2145348950|DTS_W_ADODESTBATCHNOTSUPPORTEDFORERRORDISPOSITION|Le mode batch n'est pas pris en charge actuellement lorsque la disposition de ligne d'erreur est utilisée. La propriété BatchSize aura la valeur 1.|  
 |0x802092AB|-2145348949|DTS_W_ADODESTNOROWSINSERTED|Aucune ligne n'a été correctement insérée dans la destination. Ceci est peut-être dû à une non-correspondance des types de données entre les colonnes, ou à l'utilisation d'un type de données non pris en charge par votre fournisseur ADO.NET. Dans la mesure où la disposition d'erreur pour ce composant n'est pas « Composant défaillant », les messages d'erreur ne sont pas affichés ici ; pour les afficher, affectez la valeur « Composant défaillant » à la disposition d'erreur.|  
-|0x802092AC|-2145348948|DTS_W_ADODESTPOTENTIALDATALOSS|Une perte de données éventuelle peut se produire suite à l'insertion de données de la colonne d'entrée « %1 » avec le type de données « %2 » dans la colonne externe « %3 » avec le type de données « %4 ». Si cela est intentionnel, une autre façon d'effectuer la conversion consiste à utiliser un composant de conversion de données avant le composant de destination ADO NET.|  
+|0x802092AC|-2145348948|DTS_W_ADODESTPOTENTIALDATALOSS|Une perte de données éventuelle peut se produire suite à l'insertion de données de la colonne d'entrée « %1 » avec le type de données « %2 » dans la colonne externe « %3 » avec le type de données « %4 ». Si cela est intentionnel, une autre façon d'effectuer la conversion consiste à utiliser un composant de conversion de données avant le composant de destination ADO NET.|  
 |0x802092AD|-2145348947|DTS_W_ADODESTEXTERNALCOLNOTMATCHSCHEMACOL|Le %1 et la colonne de base de données sont désynchronisés.  La colonne la plus récente a %2. Utilisez l’éditeur avancé pour actualiser les colonnes de destination disponibles si nécessaire.|  
 |0x802092AE|-2145348946|DTS_W_ADODESTEXTERNALCOLNOTEXIST|Le %1 n'existe pas dans la base de données. Il a peut-être été supprimé ou renommé. Utilisez l'éditeur avancé pour actualiser les colonnes de destination disponibles si nécessaire.|  
 |0x802092AF|-2145348945|DTS_W_ADODESTNEWEXTCOL|Une nouvelle colonne portant le nom %1 a été ajoutée à la table de base de données externe. Utilisez l'éditeur avancé pour actualiser les colonnes de destination disponibles si nécessaire.|  
 |0x8020930C|-2145348852|DTS_W_NOMATCHOUTPUTGETSNOROWS|Aucune ligne ne sera envoyée à la sortie sans correspondance. Configurez la transformation pour rediriger les lignes sans entrées correspondantes vers la sortie sans correspondance, ou supprimez les transformations du flux de données ou les destinations attachées à la sortie sans correspondance.|  
 |0x8020931B|-2145348837|DTS_W_ADODESTINVARIANTEXCEPTION|Exception reçue lors de l'énumération des fournisseurs ADO.NET. Le nom invariant était « %1 ». Le message d'exception est : « %2 »|  
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|%1 ne possède pas de colonne mappée.|  
-|0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|La table « %1 » a été modifiée. Il se peut que de nouvelles colonnes y aient été ajoutées.|  
+|0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|La table « %1 » a été modifiée. Il se peut que de nouvelles colonnes y aient été ajoutées.|  
   
 ##  <a name="msgInfo"></a> Messages d'information  
  Les noms symboliques des messages d’information de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] commencent par **DTS_I_**.  
@@ -2182,9 +2182,9 @@ ms.locfileid: "51642406"
 |0x40015106|1073828102|DTS_I_FINISH_DUMP|Les fichiers de vidage du débogage ont été correctement créés.|  
 |0x40016019|1073831961|DTS_I_PACKAGEMIGRATED|Le format de package a été migré de la version %1!d! à la version %2!d!. Le package doit être enregistré pour conserver les modifications de migration.|  
 |0x4001601A|1073831962|DTS_I_SCRIPTSMIGRATED|Les scripts du package ont été migrés. Pour que les modifications de la migration soient conservées, le package doit être enregistré.|  
-|0x40016025|1073831973|DTS_I_FTPRECEIVEFILE|Réception du fichier « %1 » en cours.|  
+|0x40016025|1073831973|DTS_I_FTPRECEIVEFILE|Réception du fichier « %1 » en cours.|  
 |0x40016026|1073831974|DTS_I_FTPSENDFILE|Envoi du fichier « %1 » en cours.|  
-|0x40016027|1073831975|DTS_I_FTPFILEEXISTS|Le fichier « %1 » existe déjà.|  
+|0x40016027|1073831975|DTS_I_FTPFILEEXISTS|Le fichier « %1 » existe déjà.|  
 |0x40016028|1073831976|DTS_I_FTPERRORLOADINGMSG|Impossible d'obtenir des informations complémentaires sur l'erreur, en raison d'une erreur interne.|  
 |0x40016036|1073831990|DTS_I_FTPDELETEFILE|Échec de la tentative de suppression du fichier « %1 ». Cela peut se produire lorsque le fichier n'existe pas, que le nom du fichier comporte une erreur orthographique, ou que vous ne disposez pas des autorisations nécessaires à la suppression du fichier.|  
 |0x40016037|1073831991|DTS_I_CONFIGFROMREG|Le package tente d'effectuer une configuration à partir d'une entrée du Registre à l'aide de la clé de Registre « %1 ».|  
@@ -2197,7 +2197,7 @@ ms.locfileid: "51642406"
 |0x40016044|1073832004|DTS_I_ATTEMPTINGUPGRADEOFANEXTOBJ|Tentative de mise à niveau de « %1 ». Ce package tente de mettre à niveau un objet extensible.|  
 |0x40016045|1073832005|DTS_I_SAVECHECKPOINTSTOFILE|Le package enregistrera des points de contrôle dans le fichier « %1 » au cours de l'exécution. Ce package est configuré de manière à enregistrer les points de contrôle.|  
 |0x40016046|1073832006|DTS_I_RESTARTFROMCHECKPOINTFILE|Le package a redémarré à partir du fichier de point de contrôle « %1 ». Ce package a été configuré de manière à redémarrer à partir du point de contrôle.|  
-|0x40016047|1073832007|DTS_I_CHECKPOINTSAVEDTOFILE|Le fichier de point de contrôle « %1 » a été mis à jour pour enregistrer l'achèvement de ce conteneur.|  
+|0x40016047|1073832007|DTS_I_CHECKPOINTSAVEDTOFILE|Le fichier de point de contrôle « %1 » a été mis à jour pour enregistrer l'achèvement de ce conteneur.|  
 |0x40016048|1073832008|DTS_I_CHECKPOINTFILEDELETED|Le fichier de point de contrôle « %1 » a été supprimé après l'achèvement réussi du package.|  
 |0x40016049|1073832009|DTS_I_CHECKPOINTSAVINGTOFILE|Démarrage de la mise à jour du fichier de point de contrôle « %1 ».|  
 |0x40016051|1073832017|DTS_I_CHOSENMAXEXECUTABLES|En fonction de la configuration du système, le nombre maximum de fichiers exécutables concurrents est de %1!d!.|  
@@ -2243,7 +2243,7 @@ ms.locfileid: "51642406"
 |0x400490F5|1074041077|DTS_I_TXLOOKUP_CACHE_FINAL|%1 a mis en cache un total de %2!d! lignes.|  
 |0x4020206D|1075847277|DTS_I_RAWSOURCENOCOLUMNS|L'adaptateur de source brute a ouvert un fichier, mais ce dernier ne contient aucune colonne. L'adaptateur ne produira pas de données. Cela peut indiquer un fichier endommagé, ou qu'il n'existe aucune colonne et, par conséquent, aucune donnée.|  
 |0x402020DA|1075847386|DTS_I_OLEDBINFORMATIONALMESSAGE|Un message d'information OLE DB est disponible.|  
-|0x40208327|1075872551|DTS_I_TXFUZZYLOOKUP_EXACT_MATCH_PERF_COLLATIONS_DONT_MATCH|Les performances de la correspondance approximative peuvent être améliorées si les propriétés FuzzyComparisonFlags des jointures exactes sur la colonne d'entrée « %1 » sont définies pour correspondre à l'assemblage SQL de la colonne de la table de référence « %2 ».  Il est aussi nécessaire qu'aucun indicateur de changement de casse ne soit défini dans FuzzyComparisonFlagsEx.|  
+|0x40208327|1075872551|DTS_I_TXFUZZYLOOKUP_EXACT_MATCH_PERF_COLLATIONS_DONT_MATCH|Les performances de la correspondance approximative peuvent être améliorées si les propriétés FuzzyComparisonFlags des jointures exactes sur la colonne d'entrée « %1 » sont définies pour correspondre à l'assemblage SQL de la colonne de la table de référence « %2 ».  Il est aussi nécessaire qu'aucun indicateur de changement de casse ne soit défini dans FuzzyComparisonFlagsEx.|  
 |0x40208328|1075872552|DTS_I_TXFUZZYLOOKUP_EXACT_MATCH_PERF_INDEX_MISSING|Les performances de la correspondance approximative peuvent être améliorées si un index est créé sur la table de référence pour toutes les colonnes de correspondance exacte spécifiées.|  
 |0x40208387|1075872647|DTS_I_DISPSNOTREVIEWED|Les dispositions des erreurs et des troncations n'ont pas été revues. Assurez-vous que ce composant est configuré pour rediriger les lignes vers les sorties d'erreur si vous souhaitez transformer ces lignes.|  
 |0x402090DA|1075876058|DTS_I_TXAGG_WORKSPACE_REHASH|La transformation d'agrégation a rencontré %1!d! combinaison de touches. Un rehachage des données est nécessaire, car le nombre de combinaisons de clés est supérieur à celui attendu. Ce composant peut être configuré afin d'éviter le rehachage des données, à l'aide des propriétés Keys, KeyScale et AutoExtendFactor.|  
@@ -2252,7 +2252,7 @@ ms.locfileid: "51642406"
 |0x402090DD|1075876061|DTS_I_FINISHPROCESSINGFILE|Le traitement du fichier « %1 » est terminé.|  
 |0x402090DE|1075876062|DTS_I_TOTALDATAROWSPROCESSEDFORFILE|Le nombre total de lignes de données traitées pour le fichier « %1 » est %2!I64d!.|  
 |0x402090DF|1075876063|DTS_I_FINALCOMMITSTARTED|La validation finale de l'insertion de données dans « %1 » a commencé.|  
-|0x402090E0|1075876064|DTS_I_FINALCOMMITENDED|La validation finale de l'insertion de données dans « %1 » s'est terminée.|  
+|0x402090E0|1075876064|DTS_I_FINALCOMMITENDED|La validation finale de l'insertion de données dans « %1 » s'est terminée.|  
 |0x402090E1|1075876065|DTS_I_BEGINHASHINGCACHE|%1!u! lignes sont ajoutées au cache. Le système est en train de traiter les lignes.|  
 |0x402090E2|1075876066|DTS_I_SUCCEEDEDHASHINGCACHE|%1 a traité %2!u! lignes du cache. Le temps de traitement a été de %3 secondes. Le cache a utilisé %4!I64u! octets de mémoire.|  
 |0x402090E3|1075876067|DTS_I_FAILEDHASHINGCACHE|%1 n'a pas pu traiter les lignes du cache.  Le temps de traitement a été de %2 seconde(s).|  
@@ -2274,7 +2274,7 @@ ms.locfileid: "51642406"
 |0x101|257|DTS_MSG_SERVER_STARTED|Service SSIS Microsoft démarré.<br /><br /> Serveur version %1|  
 |0x102|258|DTS_MSG_SERVER_STOPPING|Expiration du délai d'attente de l'opération d'attente.|  
 |0x103|259|DTS_MSG_SERVER_STOPPED|Aucune donnée n'est disponible.|  
-|0x104|260|DTS_MSG_SERVER_START_FAILED|Échec du démarrage du service SSIS Microsoft.<br /><br /> Erreur : %1|  
+|0x104|260|DTS_MSG_SERVER_START_FAILED|Échec du démarrage du service SSIS Microsoft.<br /><br /> Erreur : %1|  
 |0x105|261|DTS_MSG_SERVER_STOP_ERROR|Erreur lors de l'arrêt du service SSIS.<br /><br /> Erreur : %1|  
 |0x110|272|DTS_MSG_SERVER_MISSING_CONFIG|Fichier de configuration du service SSIS Microsoft inexistant.<br /><br /> Chargement avec les paramètres par défaut.|  
 |0x111|273|DTS_MSG_SERVER_BAD_CONFIG|Fichier de configuration du service SSIS Microsoft incorrect.<br /><br /> Erreur lors de la lecture du fichier de configuration : %1<br /><br /> Chargement du serveur avec les paramètres par défaut.|  

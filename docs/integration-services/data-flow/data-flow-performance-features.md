@@ -21,15 +21,15 @@ helpviewer_keywords:
 - sorting data [Integration Services]
 - aggregations [Integration Services]
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8b172eb0635c54bf6b9e0289ac220676eb08fd9c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411986"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58275504"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -77,7 +77,7 @@ ms.locfileid: "52411986"
  N'augmentez pas la taille du tampon au point de déclencher la pagination sur le disque. Cela aurait des effets plus néfastes sur les performances que la non-optimisation de la taille du tampon. Pour déterminer si la pagination est en cours, surveillez le compteur de performances « Mémoires tampon spoulées » dans le composant logiciel enfichable Performance de la console MMC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console).  
   
 ### <a name="configure-the-package-for-parallel-execution"></a>Configurer le package pour une exécution parallèle  
- L'exécution parallèle améliore les performances sur les ordinateurs dotés de plusieurs processeurs physiques ou logiques. Pour prendre en charge l’exécution parallèle de différentes tâches dans le package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise deux propriétés : **MaxConcurrentExecutables** et **EngineThreads**.  
+ L'exécution parallèle améliore les performances sur les ordinateurs dotés de plusieurs processeurs physiques ou logiques. Pour prendre en charge l'exécution parallèle de tâches différentes dans le package, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise deux propriétés : **MaxConcurrentExecutables** et **EngineThreads**.  
   
 #### <a name="the-maxconcurrentexcecutables-property"></a>La propriété MaxConcurrentExcecutables  
  La propriété **MaxConcurrentExecutables** est une propriété du package lui-même. Cette propriété définit le nombre de tâches pouvant s'exécuter simultanément. La valeur par défaut est -1, ce qui correspond au nombre de processeurs physiques ou logiques plus 2.  
@@ -148,7 +148,7 @@ ms.locfileid: "52411986"
   
  En général, les composants les plus lents de la transformation de dimension à variation lente sont les transformations de commande OLE DB qui effectuent des mises à jour sur une ligne à la fois. Par conséquent, le moyen le plus efficace pour améliorer les performances de la transformation de dimension à variation lente consiste à remplacer les transformations de commande OLE DB. Vous pouvez remplacer ces transformations par des composants de destination qui enregistrent toutes les lignes à mettre à jour dans une table de transit. Ensuite, vous pouvez ajouter une tâche d'exécution SQL qui effectue une opération UPDATE Transact-SQL basée sur un jeu unique sur toutes les lignes en même temps.  
   
- Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et obtenir un exemple de cette approche, consultez la section « Scénario de dimension Unique » dans le livre blanc [Projet REAL: Pratiques de conception ETL Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Les utilisateurs expérimentés peuvent concevoir un flux de données personnalisé pour le traitement des dimensions à variation lente qui est optimisé pour les grandes dimensions. Pour en savoir plus et obtenir un exemple de cette approche, consultez la section « Unique dimension scenario » (scénario à dimension unique) dans le livre blanc [Project REAL : Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602) (en anglais).  
   
 ### <a name="destinations"></a>Destinations  
  Pour obtenir de meilleures performances avec les destinations, songez à utiliser une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et à tester les performances de la destination.  
@@ -171,9 +171,9 @@ ms.locfileid: "52411986"
 ## <a name="related-content"></a>Contenu associé  
  **Articles et publications de blog**  
   
--   Article technique, [SQL Server 2005 Integration Services : une stratégie pour de meilleures performances](https://go.microsoft.com/fwlink/?LinkId=98899), sur le site technet.microsoft.com  
+-   Article technique, [SQL Server 2005 Integration Services : stratégie pour de meilleures performances](https://go.microsoft.com/fwlink/?LinkId=98899) sur technet.microsoft.com  
   
--   Article technique, [Integration Services : techniques de réglage des performances](https://go.microsoft.com/fwlink/?LinkId=98900), sur le site technet.microsoft.com  
+-   Technical article, [Integration Services : techniques de réglage du niveau de performance](https://go.microsoft.com/fwlink/?LinkId=98900) on technet.microsoft.com  
   
 -   Article technique, [Augmentation du débit de pipelines en fractionnant les transformations synchrones en plusieurs tâches](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), sur le site sqlcat.com  
   

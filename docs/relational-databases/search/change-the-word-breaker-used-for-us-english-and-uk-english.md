@@ -1,27 +1,26 @@
 ---
 title: Modifier l’analyseur lexical utilisé pour l’anglais des États-Unis et l’anglais (R.U.) | Microsoft Docs
-ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: search, sql-database
-ms.reviewer: ''
 ms.technology: search
 ms.topic: conceptual
 ms.assetid: 6b5d2177-db98-47f5-b32e-4b80a2f74ffe
-author: douglaslMS
-ms.author: douglasl
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e6d1ec3aff285b91e1099187f53b904cad7368c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f26af2d630270428aec6affa0d633eeac86194b
+ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670869"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58305457"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>Modifier l'analyseur lexical utilisé pour l'anglais des États-Unis et l'anglais (R.U.)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe une nouvelle version (version 14.0.4999.1038) de l’analyseur lexical et du générateur de formes dérivées pour la langue anglaise, en remplaçant la version précédente de ces composants (version 12.0.6828.0). Pour plus d’informations sur la modification du comportement des nouveaux composants, consultez [Changements de comportement pour la recherche en texte intégral](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f). Cette rubrique décrit comment passer de la nouvelle version de ces composants à la version précédente, ou de la version précédente à la nouvelle version. Pour les installations de cluster, ces modifications doivent être apportées sur tous les nœuds principaux et passifs.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installe une nouvelle version (version 14.0.4999.1038) de l’analyseur lexical et du générateur de formes dérivées pour la langue anglaise, en remplaçant la version précédente de ces composants (version 12.0.6828.0). Pour plus d’informations sur la modification du comportement des nouveaux composants, consultez [Changements de comportement pour la recherche en texte intégral](/sql/database-engine/behavior-changes-to-full-text-search). Cette rubrique décrit comment passer de la nouvelle version de ces composants à la version précédente, ou de la version précédente à la nouvelle version. Pour les installations de cluster, ces modifications doivent être apportées sur tous les nœuds principaux et passifs.  
   
  Les versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisaient des analyseurs lexicaux différents représentés par des CLSID différents pour l'anglais des États-Unis (LCID 1033) et l'anglais du Royaume-Uni (LCID 2057). Dans cette version, les deux LCID utilisent les mêmes composants avec le même CLSID, comme indiqué dans le tableau suivant :  
   
@@ -38,7 +37,7 @@ ms.locfileid: "51670869"
   
 #### <a name="to-switch-from-the-current-version-of-the-us-english-word-breaker-to-the-previous-version"></a>Pour basculer de la version actuelle de l'analyseur lexical anglais des États-Unis vers la version précédente  
   
-1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
+1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Procédez comme suit pour ajouter de nouvelles clés pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées anglais des États-Unis pour LCID 1033 :  
   
@@ -50,7 +49,7 @@ ms.locfileid: "51670869"
   
     4.  Mettez à jour les données (valeurs par défaut) de cette valeur de clé en la définissant sur **infosoft.dll**.  
   
-3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<RacineInstance\>\MSSearch\Language\enu**.  
+3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\enu**.  
   
 4.  Mettez à jour la valeur de clé **WBreakerClass** en la remplaçant par **{188D6CC5-CB03-4C01-912E-47D21295D77E}**.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "51670869"
   
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>Pour basculer de la version actuelle de l'analyseur lexical anglais (R.U.) vers la version précédente  
   
-1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
+1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Procédez comme suit pour ajouter une nouvelle clé pour les COM ClassID des interfaces précédentes de l'analyseur lexical et du générateur de formes dérivées anglais (R.U.) pour LCID 2057 :  
   
@@ -72,7 +71,7 @@ ms.locfileid: "51670869"
   
     4.  Mettez à jour les données (valeurs par défaut) de cette valeur de clé en la définissant sur **infosoft.dll**.  
   
-3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\Language\eng**.  
+3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Mettez à jour la valeur de clé **WBreakerClass** en la remplaçant par **{173C97E2-AEBE-437C-9445-01B237ABF2F6}**.  
   
@@ -84,7 +83,7 @@ ms.locfileid: "51670869"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-us-english-word-breaker-to-the-current-version"></a>Pour rebasculer de la version précédente de l'analyseur lexical anglais des États-Unis vers la version actuelle  
   
-1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
+1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter une nouvelle clé pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées anglais des États-Unis pour LCID 1033 :  
   
@@ -96,7 +95,7 @@ ms.locfileid: "51670869"
   
     4.  Mettez à jour les données (valeurs par défaut) de cette valeur de clé en la définissant sur **MsWb7.dll**.  
   
-3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\Language\eng**.  
+3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Mettez à jour la valeur de clé **WBreakerClass** en la définissant sur **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   
@@ -106,7 +105,7 @@ ms.locfileid: "51670869"
   
 #### <a name="to-switch-back-from-the-previous-version-of-the-uk-english-word-breaker-to-the-current-version"></a>Pour rebasculer de la version précédente de l'analyseur lexical anglais (R.U.) vers la version actuelle  
   
-1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\CLSID**.  
+1.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID**.  
   
 2.  Si les clés suivantes n'existent pas, procédez comme suit pour ajouter une nouvelle clé pour les COM ClassID des interfaces actuelles de l'analyseur lexical et du générateur de formes dérivées anglais (R.U.) pour LCID 2057 :  
   
@@ -118,7 +117,7 @@ ms.locfileid: "51670869"
   
     4.  Mettez à jour les données (valeurs par défaut) de cette valeur de clé en la définissant sur **MsWb7.dll**.  
   
-3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<racine_instance\>\MSSearch\Language\eng**.  
+3.  Dans le Registre, accédez au nœud suivant : **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\eng**.  
   
 4.  Mettez à jour la valeur de clé **WBreakerClass** en la définissant sur **{9faed859-0b30-4434-ae65-412e14a16fb8}**.  
   
@@ -128,6 +127,6 @@ ms.locfileid: "51670869"
   
 ## <a name="see-also"></a> Voir aussi  
  [Rétablir la version précédente des analyseurs lexicaux utilisés par la recherche](../../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)   
- [Changements de comportement pour la recherche en texte intégral](https://msdn.microsoft.com/library/573444e8-51bc-4f3d-9813-0037d2e13b8f)  
+ [Changements de comportement pour la recherche en texte intégral](/sql/database-engine/behavior-changes-to-full-text-search)  
   
   

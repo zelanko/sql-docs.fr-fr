@@ -1,5 +1,5 @@
 ---
-title: 'Étape 1 : Génération de l’utilitaire de déploiement | Microsoft Docs'
+title: 'Étape 1 : Génération de l’utilitaire de déploiement | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24aeaa696a55feb7ad4e60889e2853a71f81f08b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6655e4fcf33b66e4bef4025f69c91ec3c13bc79e
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677657"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280893"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>Leçon 2-1 : Génération de l’utilitaire de déploiement
 Au cours de cette tâche, vous allez configurer et générer un utilitaire de déploiement pour le projet Didacticiel de déploiement.  
@@ -49,7 +49,7 @@ Avant de générer l'utilitaire de déploiement, vous devez modifier les propri�
   
 4.  Dans la fenêtre de sortie, vérifiez les informations suivantes :  
   
-    Génération démarrée : projet SQL Integration Services : incrémentiel ...  
+    Création démarrée : projet SQL Integration Services : incrémentiel ...  
   
     Création de l'utilitaire de déploiement...  
   
@@ -57,12 +57,12 @@ Avant de générer l'utilitaire de déploiement, vous devez modifier les propri�
   
     Fin de la génération -- 0 erreur, 0 avertissement  
   
-    ========== Génération : 0 a réussi, 0 a échoué, 1 est à jour, 0 a été ignoré ==========  
+    ========== Génération : 0 réussi, 0 échoué, 1 mis à jour, 0 ignoré ==========  
   
 5.  Dans le menu **Fichier** , cliquez sur **Quitter**. Si vous êtes invité à enregistrer les modifications apportées aux éléments du didacticiel de déploiement, cliquez sur **Oui**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Étape 2 : Vérification du bundle de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+[Étape 2 : Vérification de l'application de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ## <a name="see-also"></a> Voir aussi  
 [Créer un utilitaire de déploiement](../integration-services/packages/create-a-deployment-utility.md)  

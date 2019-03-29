@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: c72acb3d-380e-436e-8041-ed364eddfabd
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1f056b10aea5144c3d8bda96d7fe049377bc6532
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e3f98e88428c25c3ecf2af415c942c30a18e9cf1
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641726"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58273381"
 ---
 # <a name="data-profiling-task-editor-profile-requests-page"></a>Éditeur de tâche de profilage de données (page Demandes de profil)
   Utilisez la page **Demandes de profil** de **l’Éditeur de tâche de profilage de données** pour sélectionner et configurer les profils que vous souhaitez calculer. Dans une même tâche de profilage des données, vous pouvez calculer plusieurs profils pour plusieurs colonnes ou des combinaisons de colonnes dans plusieurs tables ou vues.  
@@ -49,15 +49,15 @@ ms.locfileid: "47641726"
 ### <a name="requests-pane-columns"></a>Colonnes du volet Demandes  
  Les colonnes qui s'affichent dans le volet Demandes dépendent de la **vue** que vous avez sélectionnée :  
   
--   Si vous choisissez d'afficher **Toutes les demandes**, le volet Demandes dévoile deux colonnes : **Type de profil** et **ID de demande**.  
+-   Si vous choisissez d’afficher **Toutes les demandes**, le volet Demandes comporte deux colonnes : **Type de profil** et **ID de demande**.  
   
--   Si vous choisissez d'afficher l'un des cinq profils de colonne, le volet Demandes fait apparaître quatre colonnes : **Type de profil**, **Table ou vue**, **Colonne**et **ID de demande**.  
+-   Si vous choisissez d’afficher l’un des cinq profils de colonne, le volet Demandes comporte quatre colonnes : **Type de profil**, **Table ou vue**, **Colonne**et **ID de demande**.  
   
--   Si vous optez pour l’affichage d’un profil de clé candidate, le volet Demandes comprend quatre colonnes : **Type de profil**, **Table ou vue**, **Colonnes clés**et **ID de demande**.  
+-   Si vous choisissez d’afficher un profil Clé candidate, le volet Demandes comporte quatre colonnes : **Type de profil**, **Table ou vue**, **Colonnes clés**et **ID de demande**.  
   
--   Si vous souhaitez afficher un profil de dépendance fonctionnelle, le volet Demandes propose cinq colonnes : **Type de profil**, **Table ou vue**, **Colonnes déterminantes**, **Colonne dépendante**et **ID de demande**.  
+-   Si vous choisissez d’afficher un profil Dépendance fonctionnelle, le volet Demandes comporte cinq colonnes : **Type de profil**, **Table ou vue**, **Colonnes déterminantes**, **Colonne dépendante** et **ID de demande**.  
   
--   Dans le cas d'un profil d'inclusion de valeur, le volet Demandes affiche six colonnes : **Type de profil**, **Table ou vue côté sous-ensemble**, **Table ou vue côté sur-ensemble**, **Colonnes côté sous-ensemble**, **Colonnes côté sur-ensemble**et **ID de demande**.  
+-   Si vous choisissez d’afficher un profil Inclusion de valeur, le volet Demandes comporte six colonnes : **Type de profil**, **Table ou vue côté sous-ensemble**, **Table ou vue côté sur-ensemble**, **Colonnes côté sous-ensemble**, **Colonnes côté sur-ensemble** et **ID de demande**.  
   
  Les sections suivantes décrivent chacune de ces colonnes.  
   

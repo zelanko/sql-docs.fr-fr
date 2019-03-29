@@ -15,15 +15,15 @@ helpviewer_keywords:
 - literals [Integration Services]
 - mapping literals [Integration Services]
 ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d8ece192518501869f9d4d8d11934fc4dbaaaf78
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d4b6dec2cd9698d347ca247e26f4b931cb6ab56d
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728167"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58279163"
 ---
 # <a name="numeric-string-and-boolean-literals"></a>Littéraux numériques, booléens et de chaîne
  Les expressions peuvent contenir des littéraux numériques, booléens et de chaîne. L'évaluateur d'expression prend en charge divers littéraux numériques tels que les entiers, les décimaux et les constantes en virgule flottante. L'évaluateur d'expression prend également en charge les suffixes longs et flottants, qui spécifient comment il doit gérer les valeurs, ainsi que la notation scientifique dans les littéraux numériques.  
@@ -57,10 +57,10 @@ ms.locfileid: "47728167"
 |------------------------|-----------------|  
 |{D}+{IS}|Littéral numérique intégral avec au moins un chiffre (D) et éventuellement le suffixe long et/ou le suffixe non signé (IS).  Exemples : 457, 785u, 986L et 7945ul.|  
 |{D}+{E}{FS}|Littéral numérique non intégral avec au moins un chiffre (D), la notation scientifique et le suffixe long ou flottant.  Exemples : 4E8l, 13e-2f et 5E+L.|  
-|{D}*"."{D}+{E}?{FS}|Littéral numérique non intégral avec une décimale, une fraction décimale d'au moins un chiffre (D), un exposant facultatif (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 6.45E3f, .89E-2l et 1.05E+7F.|  
-|{D}+"."{D}*{E}?{FS}|Littéral numérique non intégral avec au moins un chiffre significatif (D), une décimale, un exposant (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 1.E-4f, 4.6E6L et 8.365E+2f.|  
+|{D}*"."{D}+{E}?{FS}|Littéral numérique non intégral avec une décimale, une fraction décimale d'au moins un chiffre (D), un exposant facultatif (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 6,45E3f, ,89E-2l et 1,05E+7F.|  
+|{D}+"."{D}*{E}?{FS}|Littéral numérique non intégral avec au moins un chiffre significatif (D), une décimale, un exposant (E) et un identificateur flottant ou long (FS). Ce littéral numérique est du type de données DT_R4 ou DT_R8.  Exemples : 1,E-4f, 4,6E6L et 8,365E+2f.|  
 |{D}*.{D}+|Littéral numérique non intégral avec précision et échelle. Il a une décimale et une fraction décimale d'au moins un chiffre (D). Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 0,9, 5,8 et 0,346.|  
-|{D}+.{D}*|Littéral numérique non intégral avec précision et échelle. Il a au moins un chiffre significatif (D) et une décimale. Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 6,0, 0,2 et 8,0.|  
+|{D}+.{D}*|Littéral numérique non intégral avec précision et échelle. Il a au moins un chiffre significatif (D) et une décimale. Ce littéral numérique est du type de données DT_NUMERIC.  Exemples : 6,, 0,2 et 8,0.|  
 |#{D}+|Identificateur de lignage. Il est composé du signe dièse ( # ) et d'au moins un chiffre (D). Exemples : #123.|  
 |0[xX]{H}+{uU}|Littéral numérique en notation hexadécimale. Il comprend un zéro, un « x » majuscule ou minuscule, au moins un « H » majuscule et, éventuellement, le suffixe non signé. Exemples : 0xFF0A et 0X000010000U.|  
   
@@ -111,8 +111,8 @@ ms.locfileid: "47728167"
 |\xhhhh|Caractère Unicode en notation hexadécimale|  
   
 ## <a name="boolean-literals"></a>Littéraux booléens  
- L’évaluateur d’expression prend en charge les littéraux booléens habituels : **True** et **False**. L'évaluateur d'expression ne respecte pas la casse ; toute combinaison de lettres majuscules et minuscules y est autorisée. Par exemple, « TRUE » fonctionne de la même façon que « True ».  
+ L'évaluateur d'expression prend en charge les littéraux booléens habituels : **True** et **False**. L'évaluateur d'expression ne respecte pas la casse ; toute combinaison de lettres majuscules et minuscules y est autorisée. Par exemple, « TRUE » fonctionne de la même façon que « True ».  
   
-> **REMARQUE :** Dans une expression, un littéral booléen doit être délimité par des espaces.  
+> **REMARQUE :** Dans une expression, un littéral booléen doit être délimité par des espaces.  
   
   

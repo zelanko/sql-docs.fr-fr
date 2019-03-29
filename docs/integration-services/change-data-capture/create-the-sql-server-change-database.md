@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 32a56380f94cb03c4c871855edc56629f6334d42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0281dfb4471fd28eb08c0900f2a087b731139d2
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651597"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58280696"
 ---
 # <a name="create-the-sql-server-change-database"></a>Créer la base de données de modification SQL Server
   Lorsque vous démarrez l'Assistant Nouvelle instance, la page Créer une base de données CDC s'ouvre. Cette page permet de fournir des informations sur la nouvelle instance de capture de données modifiées et de créer une nouvelle base de données de modification.  
@@ -36,16 +36,16 @@ ms.locfileid: "47651597"
  **Instance Oracle CDC**  
  Entrez les informations suivantes sur l'instance CDC que vous créez.  
   
--   **Nom**: tapez le nom du nouveau service. Ce sera également le nom de la nouvelle base de données modifiée.  
+-   **Nom**: nom du nouveau service. Ce sera également le nom de la nouvelle base de données modifiée.  
   
--   **Description**: tapez une description de la nouvelle instance pour vous aider à l'identifier. Ce paramètre est facultatif.  
+-   **Description** : description de la nouvelle instance permettant de l’identifier plus facilement. Ce paramètre est facultatif.  
   
  **Base de données modifiée SQL Server**  
  Cette section est utilisée pour créer la base de données.  
   
-1.  **Modifier la base de données**: nom de la nouvelle base de données modifiée. Le nom de la base de données est identique au nom donné à l'instance. Ce champ en lecture seule affiche le chemin d'accès complet à la base de données.  
+1.  **Modifier la base de données** : nom de la nouvelle base de données modifiée. Le nom de la base de données est identique au nom donné à l'instance. Ce champ en lecture seule affiche le chemin d'accès complet à la base de données.  
   
-2.  **Créer une base de données**: cliquez sur **Créer une base de données** pour créer la base de données.  
+2.  **Créer une base de données** : cliquez sur **Créer une base de données** pour créer la base de données.  
   
      Pour créer la base de données, la connexion doit posséder le rôle serveur `sysasmin` . Pour plus d'informations, consultez la remarque sur la sécurité ci-dessus.  
   
@@ -53,6 +53,6 @@ ms.locfileid: "47651597"
   
 ## <a name="see-also"></a> Voir aussi  
  [Procédure : créer l'instance SQL Server de base de données de modifications](../../integration-services/change-data-capture/how-to-create-the-sql-server-change-database-instance.md)   
- [Le service CDC Oracle](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
+ [Service de capture de données modifiées Oracle](../../integration-services/change-data-capture/the-oracle-cdc-service.md)  
   
   

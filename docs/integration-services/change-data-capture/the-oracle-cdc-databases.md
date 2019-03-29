@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a96486e9-f79b-4b24-bfaf-56203dd0e435
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 2dc364cc2665d800e311625d754716e4582b6b65
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1f41ef937dd3045be524eeb71274ce3f46f85653
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392862"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282674"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
   Une instance Oracle CDC est associée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le même nom sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données est appelée base de données de capture de données modifiées Oracle (ou base de données CDC).  
@@ -99,7 +99,7 @@ ms.locfileid: "52392862"
 |----------|-----------------|  
 |version|Effectue le suivi de la version de la configuration de l'instance CDC. Elle est mise à jour chaque fois que la table est mise à jour et chaque fois qu'une nouvelle instance de capture est ajoutée ou qu'une instance de capture existante est supprimée.|  
 |connect_string|Chaîne de connexion Oracle. Voici un exemple de base :<br /><br /> `<server>:<port>/<instance>` (par exemple, `erp.contoso.com:1521/orcl`).<br /><br /> La chaîne de connexion peut également spécifier un descripteur de connexion Oracle Net, par exemple, `(DESCRIPTION=(ADDRESS=(PROTOCOL=tcp) (HOST=erp.contoso.com) (PORT=1521)) (CONNECT_DATA=(SERVICE_NAME=orcl)))`.<br /><br /> Si vous utilisez un serveur d'annuaire ou des noms TNS, la chaîne de connexion peut être le nom de la connexion.<br /><br /> Pour plus d’informations sur les chaînes de connexion Oracle, consultez [https://go.microsoft.com/fwlink/?LinkId=231153](https://go.microsoft.com/fwlink/?LinkId=231153) pour obtenir des informations détaillées sur les chaînes de connexion de base de données Oracle pour le client Oracle Instant qui est utilisée par le service de capture des changements de données Oracle.|  
-|use_windows_authentication|Valeur booléenne qui peut être :<br /><br /> **0**: un nom d’utilisateur et un mot de passe Oracle sont fournis pour l’authentification (valeur par défaut) ;<br /><br /> **1**: l’authentification Windows est utilisée pour la connexion à la base de données Oracle. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.|  
+|use_windows_authentication|Valeur booléenne qui peut être :<br /><br /> **0**: un nom d’utilisateur et un mot de passe Oracle sont fournis pour l’authentification (valeur par défaut)<br /><br /> **1**: l’authentification Windows est utilisée pour la connexion à la base de données Oracle. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.|  
 |username|Nom de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
 |password|Mot de passe de l'utilisateur de la base de données Oracle d'exploration de données de journaux. Requis uniquement si **use_windows_authentication = 0**.|  
 |transaction_staging_timeout|Durée, en secondes, pendant laquelle une transaction Oracle non enregistrée est gardée en mémoire avant d’être écrite dans la table **cdc.xdbcdc_staged_transactions** . La valeur par défaut est 120 secondes.|  
@@ -108,7 +108,7 @@ ms.locfileid: "52392862"
   
  Le tableau suivant décrit les options disponibles.  
   
-|Nom   |Valeur par défaut|Min|Max|Statique|Description|  
+|Créer une vue d’abonnement|Valeur par défaut|Min|Max|Statique|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |trace|False|-|-|False|Les valeurs disponibles sont :<br /><br /> True<br /><br /> False<br /><br /> actif<br /><br /> inactif|  
 |cdc_update_state_interval|10|1|120|False|Taille (en kilo-octets) des segments de mémoire alloués pour une transaction (une transaction peut allouer plusieurs segments). Consultez la colonne memory_limit dans la table [cdc.xdbcdc_config](../../integration-services/change-data-capture/the-oracle-cdc-databases.md#BKMK_cdcxdbcdc_config) .|  

@@ -19,15 +19,15 @@ helpviewer_keywords:
 - messages [Integration Services]
 - sending messages
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d100819807cd669803ef698d4614373b0b997905
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2c7ac89c705c8825a87cfeee381190a6becfa90
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503990"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58282363"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
   La tâche MSMQ vous permet d’utiliser Message Queuing (MSMQ) pour envoyer et recevoir des messages entre des packages [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ou pour envoyer des messages à une file d’attente d’application traitée par une application personnalisée. Ces messages peuvent être composés de texte brut, de fichiers ou de variables et leurs valeurs.  
@@ -119,7 +119,7 @@ ms.locfileid: "52503990"
  **MSMQConnection**  
  Sélectionnez un gestionnaire de connexions MSMQ existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes**: [Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager.md), [Éditeur du gestionnaire de connexions MSMQ](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
  **Message**  
  Spécifiez si la tâche MSMQ envoie ou reçoit des messages. Si vous sélectionnez l’option **Envoyer un message**, la page Envoyer est répertoriée dans le volet gauche de la boîte de dialogue ; si vous sélectionnez l’option **Recevoir un message**, la page Recevoir est répertoriée. Par défaut, cette valeur est définie sur **Envoyer un message**.  
@@ -159,7 +159,7 @@ ms.locfileid: "52503990"
  **VariableMessage**  
  Tapez les noms de variables ou cliquez sur les points de suspension **(...)** et sélectionnez les variables. Les variables sont séparées par des virgules.  
   
- **Rubriques connexes :** Sélectionner des variables  
+ **Rubriques connexes :** Sélectionner des variables  
   
 #### <a name="messagetype--string-message"></a>MessageType = Message de type chaîne  
  **StringMessage**  
@@ -215,7 +215,7 @@ ms.locfileid: "52503990"
  **Identificateur**  
  Si vous choisissez d’appliquer un filtre, tapez l’identificateur unique du package à partir duquel les messages peuvent être reçus, ou cliquez sur le bouton de sélection **(...)** et spécifiez le package.  
   
- **Rubriques connexes :** [Sélectionner un package](../../integration-services/control-flow/select-a-package.md)  
+ **Rubriques connexes :** [Sélectionner un package](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--variable-message"></a>MessageType = Message de type variable  
  **Filter**  
@@ -229,7 +229,7 @@ ms.locfileid: "52503990"
  **Variable**  
  Tapez le nom de la variable ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
   
- **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="filter-dynamic-options"></a>Options dynamiques de filtrage  
   
@@ -241,7 +241,7 @@ ms.locfileid: "52503990"
  **Identificateur**  
  Si vous choisissez d’appliquer un filtre, tapez l’identificateur unique du package à partir duquel les messages peuvent être reçus, ou cliquez sur le bouton de sélection **(...)** et spécifiez le package.  
   
- **Rubriques connexes :** [Sélectionner un package](../../integration-services/control-flow/select-a-package.md)  
+ **Rubriques connexes :** [Sélectionner un package](../../integration-services/control-flow/select-a-package.md)  
   
 #### <a name="messagetype--string-message"></a>MessageType = Message de type chaîne  
  **Comparer**  
@@ -274,7 +274,7 @@ ms.locfileid: "52503990"
  **Variable**  
  Tapez le nom de la variable qui doit contenir le message reçu ou cliquez sur \<**Nouvelle variable...**>, puis configurez une nouvelle variable.  
   
- **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="select-variables"></a>Sélectionner des variables
   Utilisez la boîte de dialogue **Sélectionner des variables** pour spécifier les variables à utiliser dans une opération d'envoi de message de la tâche MSMQ. La liste **Variables disponibles** contient les variables système et définies par l’utilisateur exploitables par la tâche MSMQ ou son conteneur parent. La tâche utilise des variables de la liste **Variables sélectionnées** .  
@@ -295,7 +295,7 @@ ms.locfileid: "52503990"
  **Nouvelle variable**  
  Créez une nouvelle variable.  
   
- **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
+ **Rubriques connexes :** [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
 ## <a name="see-also"></a> Voir aussi  
  [Tâches Integration Services](../../integration-services/control-flow/integration-services-tasks.md)   
  [Flux de contrôle](../../integration-services/control-flow/control-flow.md)  

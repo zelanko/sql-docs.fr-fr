@@ -1,7 +1,7 @@
 ---
 title: Collections de schémas XML (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -22,12 +22,12 @@ ms.assetid: 659d41aa-ccec-4554-804a-722a96ef25c2
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.openlocfilehash: c8a69b903fefb85b30ee6cd0a0019466c279fd0e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d1b1110877d4735dee8606805f78a891c4a4b950
+ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255714"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58375287"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Collections de schémas XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "54255714"
   
  Imaginons, par exemple, le schéma suivant :  
   
-```  
+```xml
 <?xml version="1.0"?>  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             targetNamespace="uri:Cust_Orders2"  
@@ -130,6 +130,7 @@ ms.locfileid: "54255714"
 |**blockDefault**|L'attribut **block** est appliqué à toutes les déclarations d'éléments et définitions de types où il n'est pas déjà présent et la valeur est définie à la valeur de l'attribut **blockDefault** .|  
 |**finalDefault**|L'attribut **final** est appliqué à toutes les déclarations d'éléments et définitions de types où il n'est pas déjà présent et la valeur est définie à la valeur de l'attribut **finalDefault** .|  
 |**targetNamespace**|Les informations relatives aux composants qui appartiennent à l'espace de noms cible sont stockées dans les métadonnées.|  
+| &nbsp; | &nbsp; |
   
 ##  <a name="perms"></a> Autorisations sur une collection de schémas XML  
  Vous devez disposer des autorisations nécessaires pour effectuer les opérations suivantes :  
@@ -163,7 +164,7 @@ ms.locfileid: "54255714"
 ##  <a name="info"></a> Obtention d'informations sur les schémas XML et les collections de schémas  
  Les collections de schémas XML sont répertoriées dans l'affichage catalogue sys.xml_schema_collections. La collection de schémas XML « sys » est définie par le système. Elle contient les espaces de noms prédéfinis qu'il est possible d'utiliser dans toutes les collections de schémas XML définies par l'utilisateur sans avoir à les charger explicitement. Cette liste contient les espaces de noms pour xml, xs, xsi, fn et xdt. Il existe deux autres affichages catalogue : sys.xml_schema_namespaces, qui répertorie tous les espaces de noms de chaque collection de schémas XML, et sys.xml_components, qui répertorie tous les composants de schéma XML de chaque schéma XML.  
   
- La fonction intégrée **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, produit une instance de type de données **xml** . Cette instance contient des fragments de schéma XML pour les schémas qui sont contenus dans une collection de schémas XML, à l'exception des schémas XML prédéfinis.  
+ La fonction intégrée **XML_SCHEMA_NAMESPACE**, *schemaName, XmlSchemacollectionName, namespace-uri*, produit une instance de type de données **xml**. Cette instance contient des fragments de schéma XML pour les schémas qui sont contenus dans une collection de schémas XML, à l'exception des schémas XML prédéfinis.  
   
  Pour répertorier le contenu d'une collection de schémas XML, vous pouvez au choix :  
   
@@ -176,7 +177,7 @@ ms.locfileid: "54255714"
 ### <a name="example-enumerate-the-xml-namespaces-in-an-xml-schema-collection"></a>Exemple : Énumération des espaces de noms XML dans une collection de schémas XML  
  Utilisez la requête suivante pour la collection de schémas XML « myCollection » :  
   
-```  
+```sql
 SELECT XSN.name  
 FROM    sys.xml_schema_collections XSC JOIN sys.xml_schema_namespaces XSN  
     ON (XSC.xml_collection_id = XSN.xml_collection_id)  
@@ -186,18 +187,18 @@ WHERE    XSC.name = 'myCollection'
 ### <a name="example-enumerate-the-contents-of-an-xml-schema-collection"></a>Exemple : Énumération du contenu d’une collection de schémas XML  
  L'instruction suivante énumère le contenu de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
  Les schémas XML individuels de la collection peuvent être obtenus sous forme d’instances de type **xml** en spécifiant l’espace de noms cible comme troisième argument de **XML_SCHEMA_NAMESPACE()**. Cela est illustré par l'exemple suivant.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Exemple : Extraction d’un schéma spécifique d’une collection de schémas XML  
- L’instruction suivante extrait le schéma XML dont l’espace de noms cible est « <https://www.microsoft.com/books> » de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
+ L’instruction suivante retourne le schéma XML dont l’espace de noms cible _prétendu_ est https/\/www.microsoft.com/was-books de la collection de schémas XML « myCollection » dans le schéma relationnel, dbo.  
   
-```  
+```sql
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection',   
-N'https://www.microsoft.com/books')  
+N'https://www.microsoft.com/was-books')  
 ```  
   
 ### <a name="querying-xml-schemas"></a>Interrogation des schémas XML  

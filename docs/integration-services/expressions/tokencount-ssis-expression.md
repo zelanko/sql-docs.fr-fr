@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 1c0efed1-c2b3-4f20-a3a1-ad91283b7c0a
-author: douglaslMS
-ms.author: douglasl
+author: janinezhang
+ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 24f5bb65aa7c9545bbe1842f97e8f43546c14848
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3c1ee4bf54117a9b2b29aa2e892186d61b44683c
+ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411486"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58271219"
 ---
 # <a name="tokencount-ssis-expression"></a>TOKENCOUNT (expression SSIS)
   Retourne le nombre de jetons d'une chaîne qui contient des jetons séparés par les délimiteurs spécifiés.  
@@ -51,7 +51,7 @@ TOKENCOUNT(character_expression, delimiter_string)
 -   Vous pouvez utiliser des variables et des colonnes en tant qu'arguments pour cette expression.  
   
 ## <a name="expression-examples"></a>Exemples d'expressions  
- Dans l’exemple suivant, la fonction TOKENCOUNT retourne 3, car la chaîne contient trois jetons : « 01 », « 12 », « 2011 ».  
+ Dans l’exemple suivant, la fonction TOKENCOUNT retourne 3, car la chaîne contient trois jetons : « 01 », « 12 » et « 2011 ».  
   
 ```  
 TOKENCOUNT("01/12/2011", "/")  
