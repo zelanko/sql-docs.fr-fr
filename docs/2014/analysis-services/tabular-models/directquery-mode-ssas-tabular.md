@@ -13,12 +13,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e092962430895f5398560cdd8f758e24477c2388
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9226a15351e8c6fcc938543d04fc95b0237f702b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511522"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657973"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Mode DirectQuery (SSAS Tabulaire)
   Analysis Services vous permet de récupérer des données et de créer des rapports à partir d'un modèle tabulaire en récupérant des données et des agrégats directement à partir d'un système de base de données relationnelle, à l'aide du *mode DirectQuery*. Cette rubrique présente les différences entre les modèles tabulaires standard qui résident uniquement en mémoire et les modèles tabulaires qui peuvent interroger une source de données relationnelle, et explique comment créer et déployer un modèle utilisable en mode DirectQuery.  
@@ -29,7 +29,7 @@ ms.locfileid: "52511522"
   
 -   [Création de modèles pour une utilisation avec le Mode DirectQuery](#bkmk_Design)  
   
-    -   [Sources de données pour les modèles DirectQuery](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [Sources de données pour les modèles DirectQuery](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [Restrictions de validation et conception pour le Mode DirectQuery](#bkmk_Validation)  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52511522"
   
  Lorsque vous effectuez cette opération, le concepteur de modèles configure automatiquement la base de données de l'espace de travail pour qu'elle s'exécute en mode hybride, ce qui vous permet de continuer à utiliser les données en mémoire cache. Le concepteur de modèles vous informera également de toutes les fonctionnalités de votre modèle qui ne sont pas compatibles avec le mode DirectQuery. La liste suivante résume les principales conditions requises à garder à l'esprit :  
   
--   **Sources de données :** les modèles DirectQuery peuvent uniquement utiliser les données d'une source de données SQL Server. Lorsque le mode DirectQuery a été activé pour un modèle, vous ne pouvez utiliser aucun autre type de données dans le concepteur de modèles, y compris les tables ajoutées par les opérations de copier-coller. Toutes les autres options d'importation sont désactivées. Toute table incluse dans une requête doit faire partie de la source de données SQL Server. Pour plus d'informations, consultez [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources).  
+-   **Sources de données :** les modèles DirectQuery peuvent uniquement utiliser les données d'une source de données SQL Server. Lorsque le mode DirectQuery a été activé pour un modèle, vous ne pouvez utiliser aucun autre type de données dans le concepteur de modèles, y compris les tables ajoutées par les opérations de copier-coller. Toutes les autres options d'importation sont désactivées. Toute table incluse dans une requête doit faire partie de la source de données SQL Server. Pour plus d'informations, consultez [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources).  
   
 -   **Prise en charge pour les colonnes calculées :** Les colonnes calculées ne sont pas prises en charge pour les modèles DirectQuery. Toutefois, vous pouvez créer des mesures et des indicateurs de performance clés, qui s'exécutent sur des ensembles de données. Pour plus d'informations, consultez la section relative à la [validation](#bkmk_Validation) .  
   
@@ -182,5 +182,3 @@ ms.locfileid: "52511522"
  [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md)   
  [Projets de modèles tabulaires &#40;SSAS Tabulaire&#41;](tabular-model-projects-ssas-tabular.md)   
  [Analyser dans Excel &#40;SSAS Tabulaire&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

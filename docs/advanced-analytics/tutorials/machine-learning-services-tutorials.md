@@ -3,17 +3,17 @@ title: Didacticiels SQL Server R et Python - SQL Server Machine Learning
 description: Exemples et didacticiels pour R et Python dans SQL Server Machine Learning Services de script.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b30daadd23cbea244576c461ec783e67b2189cf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511046"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645401"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>Didacticiels de SQL Server Machine Learning dans R et Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -72,7 +72,6 @@ Ces exemples et les démonstrations fournies par l’équipe de développement S
 | [Exécuter le client clustering à l’aide de Python et SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Découvrez comment utiliser l’algorithme de Kmeans pour effectuer la mise en cluster non supervisé des clients. Cet exemple utilise le langage Python-database.| SQL Server 2017 |
 | [Créer un modèle prédictif à l’aide de R et SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Découvrez comment une entreprise de location de skis peut utiliser machine learning pour prédire les locations à venir, qui permet du plan d’activités et du personnel pour répondre à la demande future. Cet exemple utilise les algorithmes Microsoft pour générer des modèles d’arbres de décision et de régression logistique. | 
 | [Créer un modèle prédictif à l’aide de Python et SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Générez l’application d’analyse de location ski à l’aide de Python, pour faciliter la planification de la demande future. Cet exemple utilise la nouvelle bibliothèque Python, **revoscalepy**, pour créer un modèle de régression linéaire. | 
-| [Comment utiliser un Tableau avec SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/mlserver/2017/12/14/how-to-use-tableau-with-sql-server-machine-learning-services-with-r-and-python/) | Analyser les médias sociaux et créer des graphiques de Tableau, à l’aide de SQL Server et R. | 
 
 <a name="bkmk_solutions"></a>
 
@@ -86,6 +85,4 @@ Tout le code est fourni, ainsi que d’obtenir des instructions sur comment form
 + [Prédiction d’évolution personnalisée](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
 + [Maintenance prédictive](https://gallery.cortanaanalytics.com/Tutorial/Predictive-Maintenance-Template-with-SQL-Server-R-Services-1)
 + [Prédire la durée hôpital du séjour](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
-
-Pour plus d’informations, consultez [Machine Learning Templates with SQL Server 2016 R Services](https://blogs.technet.microsoft.com/machinelearning/2016/03/23/machine-learning-templates-with-sql-server-2016-r-services/) (Modèles d’apprentissage automatique avec SQL Server 2016 R Services).
 

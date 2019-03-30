@@ -3,22 +3,22 @@ title: Installer PRÉFORMÉE modèles machine learning - SQL Server Machine Lear
 description: Ajouter des modèles préentraînés pour une caractérisation sentiment analysis et l’image à SQL Server 2017 Machine Learning Services (R ou Python) ou SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/18/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 168898c08fb24af655ff5429e2a7fa028ea37405
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: fe0cfc855f1a231654c3e31ec3924d9754ef4970
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512296"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645571"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>Installer PRÉFORMÉE modèles machine learning sur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Cet article explique comment utiliser Powershell pour ajouter gratuit pour les modèles d’apprentissage préformé *analyse des sentiments* et *image caractérisation* à une instance du moteur de base de données SQL Server avec R ou Python intégration. Les modèles préentraînés sont générés par Microsoft et prêt à l’emploi, ajouté à une instance du moteur de base de données comme une tâche de post-installation. Pour plus d’informations sur ces modèles, consultez le [ressources](#bkmk_resources) section de cet article.
+Cet article explique comment utiliser Powershell pour ajouter gratuit pour les modèles d’apprentissage préformé *analyse des sentiments* et *image caractérisation* à une instance de SQL Server avec l’intégration de R ou Python. Les modèles préentraînés sont générés par Microsoft et prêt à l’emploi, ajoutées à une instance comme une tâche de post-installation. Pour plus d’informations sur ces modèles, consultez le [ressources](#bkmk_resources) section de cet article.
 
 Une fois installé, les modèles préentraînés sont considérés comme un détail d’implémentation qui alimentent des fonctions spécifiques de MicrosoftML (R) et de bibliothèques de microsoftml (Python). Vous ne doivent pas (et ne peut pas) permet d’afficher, personnaliser ou reformer les modèles, ni pourrez vous les traiter comme une ressource indépendante dans du code personnalisé ou associés d’autres fonctions. 
 
@@ -26,8 +26,8 @@ Pour utiliser les modèles préformés, appelez les fonctions répertoriées dan
 
 | Fonction R (MicrosoftML) | Fonction Python (microsoftml) | Utilisation |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Génère le score de sentiment de positif en négatif sur les entrées de texte. [En savoir plus](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/).|
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrait les informations de texte à partir des entrées de fichier image. [En savoir plus](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/). |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | Génère le score de sentiment de positif en négatif sur les entrées de texte. |
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | Extrait les informations de texte à partir des entrées de fichier image. |
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -182,13 +182,7 @@ Vérifiez tout d’abord, pour les nouveaux fichiers dans le [mxlibs dossier](#f
 
 ## <a name="examples-using-pre-trained-models"></a>Exemples d’utilisation de modèles préentraînés
 
-Les liens suivants comportent des procédures pas à pas et des exemples de code appelant des modèles préformés.
-
-+ [Analyse des sentiments avec Python dans SQL Server Machine Learning Services](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2017/11/01/sentiment-analysis-with-python-in-sql-server-machine-learning-services/)
-
-+ [Personnalisation d’image avec un modèle de réseau de neurones profond préformé](https://blogs.msdn.microsoft.com/mlserver/2017/04/12/image-featurization-with-a-pre-trained-deep-neural-network-model/)
-
-  Le modèle préformé pour les images prend en charge la personnalisation d’images que vous fournissez. Pour utiliser le modèle, vous appelez le **featurizeImage** transformer. L’image est chargée, redimensionné et caractérisées par le modèle formé. La sortie de la préapprentissage de réseau de neurones profond est ensuite utilisée pour former un modèle linéaire pour la classification d’images. Pour utiliser ce modèle, toutes les images doivent être redimensionnés pour répondre aux exigences du modèle formé. Par exemple, si vous utilisez un modèle AlexNet, l’image doit être redimensionnée à 227 x 227 px.
+Le lien suivant incluent un exemple de code appelant des modèles préformés.
 
 + [Exemple de code : Analyse des sentiments à l’aide de texte Préapprentissage](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 

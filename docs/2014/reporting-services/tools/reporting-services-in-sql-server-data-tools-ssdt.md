@@ -13,12 +13,12 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: d3411efb39bf6d944c1646704185ef9038aba1db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: dab79e4efec442a24eb9bb5d944cb52e5c9b5640
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289327"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658337"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services dans les outils de données SQL Server (SSDT)
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] environnement avec les fonctions améliorées conçues spécifiquement pour les solutions décisionnelles. [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] est inclus dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -31,9 +31,7 @@ ms.locfileid: "56289327"
   
 ##  <a name="bkmk_SolutionsandProjects"></a> Solutions et projets  
  Un projet de rapport fonctionne comme un conteneur de définitions de rapports et de ressources. Tous les fichiers du projet de rapport sont publiés sur le serveur de rapports lors du déploiement du projet. Lorsque vous créez un projet pour la première fois, une solution est également créée comme conteneur pour le projet. Vous pouvez ajouter plusieurs projets dans une solution unique.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_Configurations"></a> Configurations  
  Pour créer plusieurs jeux de propriétés du projet pour diverses opérations de déploiement (par exemple, des tests en entreprise ou des serveurs de rapports de production), utilisez le Gestionnaire de configuration. Pour plus d’informations, consultez [Déploiement et prise en charge des versions dans les outils de données SQL Server &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md).  
   
@@ -45,11 +43,9 @@ ms.locfileid: "56289327"
 -   **Assistant Projet Report Server.** Lorsque vous sélectionnez l'Assistant Projet Report Server, un projet de serveur de rapports est automatiquement créé et l'Assistant Rapport s'ouvre. Dans l'Assistant, pour créer un rapport, suivez les instructions de chaque page pour créer une chaîne de connexion dans une source de données, définir les informations d'identification de la source de données, créer une requête, ajouter une région de données de table ou de matrice, spécifier des données de rapport et des groupes, choisir une police et un style de couleur, publier le rapport sur un serveur de rapports et afficher un aperçu local du rapport. Après avoir créé un rapport au moyen de l'Assistant, vous pouvez modifier les données du rapport et le Concepteur de rapports à l'aide de l'outil Concepteur de rapports dans le projet Report Server.  
   
  ![Modèles Nouveau projet dans SSDT](../../analysis-services/media/ssdt-biprojects.png "Modèles Nouveau projet dans SSDT")  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> Fenêtres et volets du Concepteur de rapports  
- Le Concepteur de rapports prend en charge deux modes : **Conception** pour définir les données de rapport et la disposition du rapport, et **aperçu** affiche un rendu du rapport. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
+ Le Concepteur de rapports prend en charge deux modes : le mode **Conception** définit les données et la mise en page du rapport et le mode **Aperçu** en affiche le rendu. Chaque mode vous permet d'afficher plusieurs fenêtres pour vous aider à concevoir un rapport ou générer son rendu.  
   
 ###  <a name="bkmk_ReportDataPane"></a> Données du rapport, volet  
  Le volet des données de rapport affiche des champs intégrés, des sources de données, des datasets, des collections de champs, des paramètres de rapport et des images.  
@@ -72,9 +68,7 @@ ms.locfileid: "56289327"
   
 > [!NOTE]  
 >  Si le volet des données de rapport n'est pas visible, cliquez sur **Données du rapport** dans le menu **Affichage**. Si le volet des données de rapport est flottant, vous pouvez l'ancrer. Pour plus d’informations, consultez [Ancrer le volet des données de rapport dans le Concepteur de rapports &#40;SSRS&#41;](dock-the-report-data-pane-in-report-designer-ssrs.md).  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_GroupingPane"></a> Volet de regroupement  
  Utilisez le volet de regroupement pour définir les groupes d'une région de données de tableau matriciel. Vous pouvez définir des groupes de lignes et de détails pour les tables et des groupes de lignes et de colonnes pour les matrices. Vous ne pouvez pas utiliser le volet de regroupement pour définir des groupes pour les graphiques ou d'autres régions de données. Pour plus d’informations, consultez [Fonctionnement des groupes&#40;Générateur de rapports et SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   
@@ -90,9 +84,7 @@ ms.locfileid: "56289327"
 >  Pour basculer entre le mode **Par défaut** et le mode **Avancé** , cliquez avec le bouton droit sur la flèche vers le bas à droite de l’icône **Groupes de colonnes** .  
   
  Pour plus d'informations, consultez [Grouping Pane](grouping-pane.md).  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_Toolbox"></a> Boîte à outils  
  La boîte à outils contient des éléments de rapport que vous pouvez faire glisser vers l'aire de conception. Les régions de données sont des éléments de rapport qui vous permettent d'organiser des données dans le rapport. Table, Matrice, Liste, Graphique, Jauge, Barre de données, Graphique sparkline et Indicateur sont des régions de données. Carte, Zone de texte, Rectangle, Graphique en courbe, Image et Sous-rapport sont également des éléments de rapport. Des éléments de rapport personnalisés peuvent également figurer dans cette liste s'ils ont été installés et enregistrés par votre administrateur système.  
   
@@ -108,9 +100,7 @@ ms.locfileid: "56289327"
 -   Dans le volet de regroupement, définissez les propriétés pour le membre du groupe sélectionné actuellement. Les propriétés de membre de groupe aident à contrôler la répétition des lignes statiques d'en-tête de groupe et de pied de page pour chaque instance de groupe. Pour plus d’informations, consultez [Afficher des en-têtes et des pieds de page avec un groupe &#40;Générateur de rapports et SSRS&#41;](../report-design/display-headers-and-footers-with-a-group-report-builder-and-ssrs.md).  
   
  Pour afficher le volet Propriétés, dans le menu **Affichage** , cliquez sur **Fenêtre Propriétés**. Vous pouvez détacher ce volet et le déplacer vers une autre zone de la fenêtre [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]ou bien l'afficher sous forme de fenêtre à onglets dans l'aire de conception.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_SolutionExplorer"></a> Explorateur de solutions  
  L'Explorateur de solutions est un composant [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] standard qui affiche tous les éléments de votre projet. Pour un projet Report Server, cela inclut des dossiers pour organiser des sources de données partagées, des datasets partagés, des rapports et des ressources. Lorsque vous ouvrez le fichier des solutions, les dossiers sont automatiquement classés par ordre alphabétique. Pour afficher les propriétés d'un élément dans le volet propriétés, sélectionnez l'élément.  
   
@@ -118,9 +108,7 @@ ms.locfileid: "56289327"
  La fenêtre Sortie affiche les erreurs de traitement lorsque vous visualisez un rapport, ainsi que les erreurs de publication lors du déploiement d'un rapport ou d'une source de données partagée.  
   
  Pour déboguer des erreurs dans les expressions, utilisez la sortie et les fenêtres Structure du document.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ###  <a name="bkmk_DocumentOutline"></a> Structure du document  
  La fenêtre Structure du document affiche une liste hiérarchique de tous les éléments de rapport dans la définition du rapport. Pour l'ouvrir, dans le menu **Affichage** , pointez sur **Autres fenêtres** , puis cliquez sur **Structure du document**.  
   
@@ -128,9 +116,7 @@ ms.locfileid: "56289327"
   
 ###  <a name="bkmk_TaskList"></a> Liste des tâches  
  La fenêtre Liste des tâches affiche les erreurs de build pour les fonctionnalités non prises en charge lorsque vous importez un rapport depuis une autre application, telle que [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Access.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerDesignView"></a> Mode conception du Concepteur de rapports  
  Par défaut, lorsque vous créez un projet Report Server, le Concepteur de rapports s'ouvre en mode création et affiche l'aire de conception. Par défaut, l'aire de conception affiche le corps du rapport et son arrière-plan.  
   
@@ -139,9 +125,7 @@ ms.locfileid: "56289327"
  Utilisez le contrôle de zoom pour augmenter ou diminuer l'agrandissement du rapport.  
   
  Pour concevoir un rapport, faites glisser les éléments de la boîte à outils vers l'aire de conception, puis configurez leurs propriétés et modifiez leur agencement au sein du rapport.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerPreview"></a> Aperçu du Concepteur de rapports  
  Utilisez le mode Aperçu pour exécuter le rapport et afficher un rendu du rapport dans la visionneuse de rapports. Le mode Aperçu permet de mettre en cache localement les données du rapport. Vous pouvez également définir les propriétés de configuration pour exécuter le rapport en mode débogage à l'aide d'un navigateur.  
   
@@ -154,9 +138,7 @@ ms.locfileid: "56289327"
 -   **Aperçu du rapport via le Gestionnaire de configuration et l'outil de débogage.** Dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], les propriétés du projet définissent la manière dont vous souhaitez déployer et déboguer vos rapports. Ces propriétés s'appliquent à tous les rapports et à toutes les sources de données partagées au sein du projet . Pour définir les propriétés du projet, dans le menu **Projet** , cliquez sur **Propriétés**. Testez vos rapports au moyen de ces paramètres et publiez-les sur le serveur de rapports.  
   
 -   **Contrôle des messages d'erreur dans le volet Sortie.** Lorsque vous affichez l'aperçu d'un rapport et que le processeur de rapports détecte un problème, il génère des messages d'erreur dans le volet Sortie.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerMenus"></a> Menus du Concepteur de rapports  
  Quand un projet du Concepteur de rapports est actif dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], les barres d'outils suivantes apparaissent dans la barre d'outils principale. Les menus du Concepteur de rapports sont visibles uniquement en mode Conception.  
   
@@ -188,7 +170,7 @@ ms.locfileid: "56289327"
   
 -   **Propriétés du rapport** Sélectionnez cette option pour ouvrir la boîte de dialogue **Propriétés du rapport** . Dans cette boîte de dialogue, vous pouvez affecter les propriétés générales du rapport, telles que le nom de l'auteur et l'espacement de la grille, et définir des propriétés pour sa mise en page, notamment le nombre de colonnes et la taille de la page. Vous pouvez également inclure du code personnalisé, des références à des assemblys et à des classes, ainsi que les noms d'éléments de sortie des données, des transformations de données et des schémas de données.  
   
--   **Vue** basculer entre les deux onglets du Concepteur de rapports : Conception et aperçu.  
+-   **Vue** Basculez entre les deux onglets du Concepteur de rapports : Conception et aperçu.  
   
 -   **En-tête de page** Ajoutez ou supprimez un en-tête de page dans le rapport. Lorsque vous supprimez un en-tête de page, tous les éléments qu'il contient sont supprimés.  
   
@@ -231,9 +213,7 @@ ms.locfileid: "56289327"
 -   **Actualiser les éléments de boîte à outils du projet** Actualisez le cache de boîte à outils lorsque vous installez de nouveaux éléments de rapport personnalisés dans votre projet.  
   
 -   **Propriétés** Ouvrez la boîte de dialogue **Pages de propriétés** du projet concerné. Pour plus d’informations, consultez [Pages de propriétés du projet, boîte de dialogue](project-property-pages-dialog-box.md).  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_ReportDesignerToolbars"></a> Barres d'outils du Concepteur de rapports  
  Le Concepteur de rapports propose les barres d'outils spécialisées suivantes pour la création de rapports :  
   
@@ -248,9 +228,7 @@ ms.locfileid: "56289327"
 -   **Standard** Ouvrez ou enregistrez des projets et des fenêtres d'affichage et sélectionnez la configuration du débogage.  
   
  Utilisez le menu **Affichage** pour choisir ou non d'afficher ces barres d'outils. D'autres barres d'outils de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] peuvent être désactivées si leurs fonctionnalités ne s'appliquent pas à celles du Concepteur de rapports.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_SourceControl"></a> contrôle de code source ;  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] peut intégrer des plug-ins de source. Utilisez les pages Projets et Solutions de la boîte de dialogue **Options** pour spécifier le plug-in et configurer les paramètres.  
   
@@ -258,9 +236,7 @@ ms.locfileid: "56289327"
  Pour utiliser des rapports personnalisés comme modèles pour de nouveaux rapports, il suffit de les copier dans le dossier ReportProject sur l'ordinateur sur lequel [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est installé. Par défaut, ce dossier se trouve dans \<lecteur > : \Program Files\Microsoft Visual Studio 10.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject. Lorsque vous ajoutez un nouvel élément au projet de rapport, votre rapport personnalisé s'affiche dans le volet Modèles.  
   
  Vous pouvez également ajouter des styles personnalisés à l'Assistant de rapport.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_CommandLineSupportForssdt"></a> Prise en charge de la ligne de commandes pour les outils de données SQL Server  
  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] est basé sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 10.0 et sur l’application devenv.exe sous-jacente. Pour pouvoir utiliser ces options, vous devez définir des valeurs valides pour les deux éléments suivants :  
   
@@ -289,9 +265,7 @@ ms.locfileid: "56289327"
     ```  
     devenv.exe "C:\Users\MyUser\Documents\Visual Studio 2010\Projects\Reports\Reports.sln" /build "Debug" /out mybuildlog.txt  
     ```  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ##  <a name="bkmk_KeyboardShortcuts"></a> Raccourcis clavier dans Reporting Services  
  Utilisez les raccourcis clavier pour :  
   
@@ -320,9 +294,7 @@ ms.locfileid: "56289327"
     |Dans une zone de texte, sélectionner le texte à partir de la position actuelle du curseur jusqu'au début de l'expression|CTRL+MAJ+ORIGINE|  
     |Dans une zone de texte, sélectionner le texte à partir de la position actuelle du curseur jusqu'à la fin de l'expression|Ctrl+Maj+Fin|  
     |Ouvrir le menu contextuel de l'élément de rapport sélectionné|MAJ+F10+Clé de propriété sur les claviers récents|  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#bkmk_Top)  
-  
+
 ## <a name="see-also"></a>Voir aussi  
  [Explorateur de solutions](../../ssms/solution/solution-explorer.md)   
  [Rapports Reporting Services &#40;SSRS&#41;](../reports/reporting-services-reports-ssrs.md)   

@@ -20,12 +20,12 @@ ms.assetid: 4dda2a7f-3f31-47e9-a88b-28d770ebd65e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 776b240f17d40c64c63648175b2c5c15a532fb48
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 8cce8a0acf2104689c1862518f9e78703a9d02f8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294687"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658353"
 ---
 # <a name="filter-group-and-sort-data-report-builder-and-ssrs"></a>Filtrer, regrouper et trier des données (Générateur de rapports et SSRS)
   Dans un rapport, les expressions sont utilisées pour aider à contrôler, organiser et trier les données de rapport. Par défaut, lorsque vous créez des datasets et concevez la mise en page de rapport, les propriétés des éléments de rapport prennent automatiquement la valeur d'expressions en fonction des champs, paramètres et autres éléments de dataset qui s'affichent dans le volet des données de rapport. Vous pouvez également ajouter un bouton de tri interactif à une cellule de tableau ou de matrice afin de permettre à un utilisateur de modifier interactivement l'ordre de tri des lignes pour des groupes ou pour des lignes situées dans des groupes.  
@@ -66,10 +66,8 @@ ms.locfileid: "56294687"
   
  Pour permettre à vos utilisateurs de contrôler les données d'un rapport, vous pouvez inclure des paramètres dans les expressions de filtre. Pour plus d’informations, consultez [Informations de référence sur la collection de paramètres &#40;Générateur de rapports et SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md).  
   
- Pour personnaliser une vue pour chaque utilisateur, vous pouvez inclure une référence à un champ UserID dans un filtre. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
+ Pour personnaliser une vue pour chaque utilisateur, vous pouvez inclure une référence à un champ UserID dans un filtre. Pour plus d’informations, consultez [Références à des champs Globals et Users prédéfinis &#40;Générateur de rapports et SSRS&#41;](built-in-collections-built-in-globals-and-users-references-report-builder.md).
+
 ##  <a name="Grouping"></a> Regroupement des données dans le rapport  
  Les groupes permettent d'organiser les données dans un rapport afin de les afficher ou de calculer des valeurs d'agrégat. En comprenant comment définir des groupes et utiliser leurs fonctionnalités, vous parviendrez à concevoir des rapports plus concis.  
   
@@ -104,15 +102,13 @@ ms.locfileid: "56294687"
  Pour fournir plusieurs vues de données à partir du même dataset, vous pouvez spécifier les mêmes expressions de groupe pour chaque région de données. Par exemple, vous pouvez afficher des données par catégories dans un tableau afin d'afficher toutes les données de détail, et faire de même dans un graphique à secteurs afin d'afficher des agrégats, ce qui facilite la visualisation de chaque catégorie par rapport à l'ensemble du dataset. Pour plus d’informations, consultez [Liaison de plusieurs régions de données à un même dataset &#40;Générateur de rapports et SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
  Lorsque vous imbriquez une région de données dans une cellule de tableau, de matrice ou de liste, vous limitez automatiquement l'étendue des données aux appartenances aux groupes les plus profondes de la cellule. Par exemple, supposons que vous ajoutiez un graphique à une cellule située à la fois dans un groupe de lignes et dans un groupe de colonnes. Les données disponibles dans ce graphique sont limitées à l'instance de groupe de lignes la plus profonde et à l'instance de groupe de colonnes la plus profonde au moment de l'exécution. Pour plus d’informations, consultez [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
+
 ##  <a name="Sorting"></a> Tri des données dans le rapport  
  Pour maîtriser l'ordre de tri des données dans votre rapport, vous pouvez trier les données dans une requête de dataset ou définir une expression de tri pour un groupe ou une région de données. Vous pouvez également ajouter des boutons de tri interactif aux tableaux et aux matrices pour permettre à un utilisateur de modifier l'ordre de tri des lignes.  
   
  Les trois types de tri peuvent être associés dans un même rapport. Par défaut, l'ordre de tri est déterminé par l'ordre dans lequel les données sont retournées par la requête de dataset. Les expressions de tri sont appliquées dans la région de données et le groupe de régions de données. Les tris interactifs sont appliqués après les expressions de tri.  
   
- Pour les expressions qui contiennent des fonctions d'agrégation, la plupart des résultats ne sont pas affectés par l'ordre de tri. Valeurs de retour des fonctions d’agrégation suivantes sont affectées par l’ordre de tri :: Premier, dernier et le précédent. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
+ Pour les expressions qui contiennent des fonctions d'agrégation, la plupart des résultats ne sont pas affectés par l'ordre de tri. Les valeurs de retour des fonctions d'agrégation suivantes sont affectées par l'ordre de tri : Premier, Dernier et Précédent. Pour plus d’informations, consultez [Informations de référence sur les fonctions d’agrégation &#40;Générateur de rapports et SSRS&#41;](report-builder-functions-aggregate-functions-reference.md).  
   
 ### <a name="sorting-data-in-a-dataset-query"></a>Tri des données dans une requête de dataset  
  Incluez l'ordre de tri dans la requête de dataset afin de pré-trier les données avant leur extraction pour un rapport. Le tri des données dans la requête est effectué par la source de données et non pas par le processeur de rapports.  
@@ -168,9 +164,7 @@ FROM Production.Product
  Pour permettre à un utilisateur de modifier l'ordre de tri des données de rapport dans un tableau ou une matrice, vous pouvez ajouter des boutons de tri interactif aux en-têtes de colonnes ou aux en-têtes de groupes. Les utilisateurs peuvent cliquer sur le bouton pour basculer l'ordre de tri. Le tri interactif est pris en charge dans les formats de rendu qui permettent l'intervention de l'utilisateur, tels que le format HTML.  
   
  Vous ajoutez des boutons de tri interactif à une zone de texte dans une cellule de région de données de tableau matriciel. Par défaut, chaque cellule contient une zone de texte. Dans les propriétés de la zone de texte, spécifiez quelle partie d'une région de données de table ou de matrice doit être triée (les valeurs du groupe parent, les valeurs du groupe enfant ou les lignes de détails), les éléments d'après lesquels effectuer le tri et si l'expression de tri doit être appliquée à d'autres éléments de rapport qui ont une relation d'égal à égal. Par exemple, si une table et un graphique qui fournissent des vues sur le même dataset sont contenus dans un rectangle, ils constituent des régions de données homologues. Lorsqu'un utilisateur bascule l'ordre de tri de la table, l'ordre de tri du graphique bascule également. Pour plus d’informations, consultez [Tri interactif &#40;Générateur de rapports et SSRS&#41;](interactive-sort-report-builder-and-ssrs.md).  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
+
 ##  <a name="HowTo"></a> Rubriques de procédures  
  [Laisser les en-têtes visibles lors du défilement d’un rapport &#40;Générateur de rapports et SSRS&#41;](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md)  
   
@@ -218,5 +212,3 @@ FROM Production.Product
  [Graphiques sparkline et barres de données &#40;Générateur de rapports et SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Indicateurs &#40;Générateur de rapports et SSRS&#41;](indicators-report-builder-and-ssrs.md)  
-  
-  

@@ -13,12 +13,12 @@ ms.assetid: 957f664c-8a7a-4532-b5a6-5f859c5840bd
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: fa0d4ebee67de0f6665196839b099c840bf310b1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 771c43f8100dd5e9dc45172f6173e8fa32d2d74e
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286697"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657773"
 ---
 # <a name="report-parts-report-builder-and-ssrs"></a>Publication de parties de rapports (Générateur de rapports et SSRS)
   Les éléments de rapport tels que les tableaux, matrices, graphiques et images peuvent être publiés en tant que *parties de rapports*. Parties et éléments de rapport qui ont été publiés séparément sur un serveur de rapports et qui peuvent être réutilisés dans d'autres rapports. Les parties de rapports ont l'extension de fichier .rsc.  
@@ -45,9 +45,7 @@ ms.locfileid: "56286697"
 5.  La personne C a les autorisations de remplacer le graphique sur le serveur et le fait, en le republiant sur le serveur. La copie publiée du graphique sur le serveur est ainsi mise à jour. La personne C ne choisissant pas non plus de partager le dataset, celui-ci reste incorporé dans le graphique.  
   
 6.  La personne B accepte le graphique mis à jour du serveur. Les modifications que la personne B avait apportées au graphique dans son rapport sont ainsi remplacées.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
+
 ##  <a name="PublishingComponents"></a> Publication de parties de rapport  
  Lorsque vous publiez une partie de rapport, le Générateur de rapports lui affecte un ID unique, qui est distinct du nom de partie de rapport. Le Générateur de rapports gère cet ID, quelles que soient les autres modifications que vous avez apportées à la partie de rapport. L'ID lie l'élément de rapport d'origine dans votre rapport à la partie de rapport. Lorsque d'autres auteurs de rapports réutilisent la partie de rapport, l'ID lie également la partie de rapport dans leur rapport à celle sur le serveur de rapports.  
   
@@ -85,9 +83,7 @@ ms.locfileid: "56286697"
  Pensez également à enregistrer les sources de données partagées, les datasets partagés et les parties de rapport qui en dépendent dans le même dossier.  
   
  Vous pouvez également modifier la description dans le volet Propriétés.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
+
 ##  <a name="ReusingComponents"></a> Réutilisation de parties de rapport  
  La façon la plus facile de créer un rapport est d'ajouter une partie de rapport existante, comme une table ou un graphique, à votre rapport à partir de la bibliothèque de parties de rapport. Après l'avoir ajoutée à votre rapport, vous pouvez la modifier comme vous le souhaitez ou accepter les mises à jour du serveur. La modification de l'élément de rapport dans votre rapport n'affectera pas l'instance de la partie de rapport publiée sur le site ou serveur et ne rompra pas non plus la relation entre l'instance dans le rapport et sur le site ou serveur. Si vous avez des autorisations suffisantes, vous pouvez enregistrer à nouveau la copie mise à jour sur le site ou serveur. Si quelqu'un d'autre modifie la copie sur le site ou serveur, vous pouvez décider de garder votre copie telle quelle ou la mettre à jour pour qu'elle soit identique à celle du site ou serveur.  
   
@@ -108,9 +104,7 @@ ms.locfileid: "56286697"
  Vous pouvez ajouter un nombre infini de parties de rapport à votre rapport. Toutefois, vous ne pouvez ajouter qu'une seule partie de rapport à la fois. Vous pouvez même ajouter plusieurs instances d'une partie de rapport au même rapport. Elles auront toutes des noms uniques, mais seront toutes des instances de la même partie de rapport sur le serveur et auront le même ID unique.  
   
  Lorsque vous ajoutez une autre partie de rapport qui utilise un dataset identique à un dataset déjà dans votre rapport, l'Assistant n'ajoute pas une autre version de ce dataset à votre rapport ; il redirige les références dans la partie de rapport vers le dataset existant. Pour plus d’informations, consultez [Parties de rapports et datasets dans le Générateur de rapports](report-data/report-parts-and-datasets-in-report-builder.md).  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
+
 ##  <a name="UpdatingComponents"></a> Mise à jour de parties de rapport avec les modifications du serveur  
  Chaque fois que vous ouvrez un rapport, le Générateur de rapports vérifie si les instances de serveur des parties de rapport de ce rapport ont été mises à jour sur le serveur. Il recherche également des modifications dans les éléments dépendants des parties de rapport, tels que le dataset et les paramètres. Si des parties de rapport publiées ou leurs dépendances ont été mises à jour sur le serveur, une barre d'informations dans votre rapport affiche le nombre d'éléments mis à jour. Vous pouvez choisir d'afficher et d'accepter ou de rejeter les mises à jour ou de faire disparaître la barre d'informations. Si vous choisissez d'afficher les mises à jour, une miniature de la partie de rapport, de la personne qui l'a modifié en dernier et du moment de cette modification apparaît. Vous pouvez alors accepter certains ou l'ensemble des éléments mis à jour.  
   
@@ -126,18 +120,14 @@ ms.locfileid: "56286697"
  Si vous avez modifié une version d’une partie de rapport dans votre rapport et décidez de la remplacer par la version qui se trouve sur le serveur, vous ne pouvez pas pour cela utiliser la boîte de dialogue **Mise à jour** . La mise à jour concerne uniquement les parties de rapport qui ont changé sur le serveur depuis que vous les avez téléchargées.  
   
  Pour rétablir la version sur le serveur, il vous suffit de supprimer la version que vous avez dans votre rapport et de la rajouter.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
+
 ##  <a name="RepublishingComponents"></a> Mise à jour de parties de rapport déjà sur le serveur  
  Vous pouvez choisir de mettre à jour une partie de rapport existante sur le serveur ou de la publier comme une nouvelle partie de rapport sans remplacer la partie existante. Lorsque vous mettez à jour la partie de rapport sur le serveur, les copies de la partie de rapport dans d'autres rapports ne sont pas modifiées automatiquement. Si d'autres auteurs de rapports ont ajouté cette partie de rapport à un rapport, ils sont informés de la modification la prochaine fois qu'ils ouvrent ce rapport. Ils peuvent choisir d'accepter ou non vos modifications.  
   
  Si vous choisissez de la publier comme une nouvelle partie de rapport, le Générateur de rapports lui donne un nouvel ID unique et elle n'est plus liée à la partie de rapport d'origine.  
   
  Si le dataset est incorporé dans la partie de rapport, chaque fois que vous publiez cette dernière, le dataset figure dans la boîte de dialogue **Publier les parties de rapports** . Les datasets partagés ne sont pas affichés dans la boîte de dialogue **Publier les parties de rapports** .  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
+
 ##  <a name="RptPartsRptDesigner"></a> Utilisation de parties de rapports dans le Concepteur de rapports  
  Les parties de rapports fonctionnent un peu différemment dans le Concepteur de rapports de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Dans le Concepteur de rapports, la publication est unidirectionnelle : vous pouvez publier une partie de rapport à partir du Concepteur de rapports, mais vous ne pouvez pas réutiliser une partie de rapport existante à partir de ce même Concepteur. Pour plus d’informations, consultez [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md).  
   

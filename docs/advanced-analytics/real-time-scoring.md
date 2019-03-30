@@ -3,17 +3,17 @@ title: Notation à l’aide de la procédure sp_rxPredict stockée - Services de
 description: Générer des prédictions à l’aide de sp_rxPredict, score des entrées de données par rapport à un modèle préentraîné écrites en R sur SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2018
+ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a7e55ac47fdb28a18c8a41b3535e67fc8886cfea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509626"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645471"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>Notation avec sp_rxPredict dans l’apprentissage de SQL Server en temps réel
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -32,9 +32,6 @@ Calcul de score en temps réel est un processus en plusieurs étapes :
 2. Vous chargez le modèle préformé au format binaire.
 3. Vous fournir de nouvelles données d’entrée à noter, lignes tabulaires ou uniques, en tant qu’entrée dans le modèle.
 4. Pour générer des scores, appelez le [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) procédure stockée.
-
-> [!TIP]
-> Pour obtenir un exemple de calcul de score en temps réel en action, consultez [fin à la fin prêt pertes sèches sur prédiction créé à l’aide de Azure HDInsight Clusters Spark et SQL Server 2016 R services](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/)
 
 ## <a name="prerequisites"></a>Prérequis
 
@@ -201,7 +198,5 @@ EXEC sp_rxPredict
 Pour désactiver les fonctionnalités de calcul de score en temps réel, ouvrez une invite de commandes avec élévation de privilèges et exécutez la commande suivante : `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## <a name="next-steps"></a>Étapes suivantes
-
-Pour obtenir un exemple de comment rxPredict peut être utilisé pour calculer les scores, consultez [fin à la fin prêt pertes sèches sur prédiction créé à l’aide de Azure HDInsight Clusters Spark et SQL Server 2016 R services](https://blogs.msdn.microsoft.com/rserver/2017/06/29/end-to-end-loan-chargeoff-prediction-built-using-azure-hdinsight-spark-clusters-and-sql-server-2016-r-service/).
 
 Pour plus d’informations sur la notation dans SQL Server, consultez [comment générer des prédictions dans l’apprentissage de SQL Server](r/how-to-do-realtime-scoring.md).

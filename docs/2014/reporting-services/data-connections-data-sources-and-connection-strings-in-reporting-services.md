@@ -20,12 +20,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: da5fb3c4c5dec240a9148772c95bb357f981db1e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3323683075b99ce2ab8cbcb456240bc24323762f
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291768"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658117"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Connexions de données, sources de données et chaînes de connexion dans Reporting Services
   Pour inclure les données dans un rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , vous devez tout d'abord créer des *sources de données* et des *datasets*. Cette rubrique explique le type des sources de données, comment créer les sources de données et les informations importantes liées aux informations d'identification de source de données. Une source de données inclut le type de source de données, les informations de connexion et le type d'informations d'identification à utiliser. Il existe deux types de sources de données : incorporée et partagée. Une source de données incorporée est définie dans le rapport et utilisée uniquement par ce rapport. Une source de données partagée est définie indépendamment d'un rapport et peut être utilisée par plusieurs rapports. Pour plus d’informations, consultez [Connexions de données ou sources de données incorporées et partagées &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) et [Datasets incorporés et partagés &#40;Générateur de rapports et SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md).  
@@ -86,7 +86,7 @@ ms.locfileid: "56291768"
   
 -   **Type de source de données** Type spécifique de source de données ( [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Choisissez cette valeur dans la liste déroulante des types de connexion.  
   
--   **Informations sur la connexion** Les informations de connexion comportent le nom et l'emplacement de la source de données, ainsi que les propriétés de connexion spécifiques à chaque fournisseur de données. La *chaîne de connexion* est la représentation textuelle des informations de connexion. Par exemple, si la source de données est une base de données SQL Server, vous pouvez spécifier le nom de cette base de données. Pour les sources de données incorporées, vous pouvez également écrire des chaînes de connexion basées sur des expressions qui sont évaluées au moment de l'exécution. Pour plus d'informations, consultez [Chaînes de connexion basées sur des expressions](#Expressions) plus loin dans cette rubrique.  
+-   **Informations sur la connexion** Les informations de connexion comportent le nom et l'emplacement de la source de données, ainsi que les propriétés de connexion spécifiques à chaque fournisseur de données. La *chaîne de connexion* est la représentation textuelle des informations de connexion. Par exemple, si la source de données est une base de données SQL Server, vous pouvez spécifier le nom de cette base de données. Pour les sources de données incorporées, vous pouvez également écrire des chaînes de connexion basées sur des expressions qui sont évaluées au moment de l'exécution. Pour plus d'informations, consultez [Chaînes de connexion basées sur des expressions](#bkmk_Expressions_in_connection_strings) plus loin dans cette rubrique.  
   
 -   **Informations d'identification** Vous fournissez les informations d'identification nécessaires pour accéder aux données. Le propriétaire de la source de données doit vous avoir accordé les autorisations appropriées pour accéder à la fois à la source de données et aux données spécifiques de la source de données. Par exemple, pour vous connecter à l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] installée sur un serveur réseau, vous devez être autorisé non seulement à vous connecter à ce serveur, mais aussi à accéder en lecture seule à cette base de données.  
   
@@ -185,5 +185,3 @@ ms.locfileid: "56291768"
  [Définir des propriétés de déploiement &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md)   
  [Spécifier des informations d'identification et de connexion pour les sources de données de rapport](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Ajouter et vérifier une connexion de données ou d’une Source de données &#40;Générateur de rapports et SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
-  

@@ -10,12 +10,12 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8ba3763c9ccf28286c61e87f4105c3d3293351dd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371051"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658336"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installation de SQL Server 2014 à l'aide de SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep sont accessibles via le Centre d'installation. La Page **Avancé** du **Centre d’installation** a deux options : **Préparation de l’image d’une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** et **Finalisation d’image d’une instance autonome préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Les sections [Préparer](#prepare) et [Finaliser](#complete) décrivent la procédure d'installation en détail. Pour plus d'informations, consultez [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -48,9 +48,9 @@ ms.locfileid: "53371051"
   
 -   [Supprimer des fonctionnalités d'une instance préparée de SQL Server](#RemoveFeatures)  
   
--   [Désinstallation d'une instance préparée](install-sql-server-using-sysprep.md#uninstall)  
+-   [Désinstallation d'une instance préparée](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [Modification ou désinstallation d'une instance finalisée de SQL Server.](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [Modification ou désinstallation d'une instance finalisée de SQL Server.](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep  
  À compter de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep prend en charge les instances cluster de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans les installations via la ligne de commande. Pour plus d'informations, consultez [Qu'est-ce que Sysprep ?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
@@ -325,5 +325,3 @@ ms.locfileid: "53371051"
 ## <a name="see-also"></a>Voir aussi  
  [Qu'est-ce que Sysprep ?](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Fonctionnement de Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

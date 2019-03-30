@@ -19,12 +19,12 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 manager: craigg
-ms.openlocfilehash: 62ef99767be3f228702a06d89ba52f5c3a9821fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acb05f10772ebdf77355b78e1f4ce998cc6c8056
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664818"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657013"
 ---
 # <a name="migration-wizard-accesstosql"></a>Assistant de migration (AccessToSQL)
 L’Assistant Migration vous guide à travers la migration d’une ou plusieurs bases de données à partir de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. À l’aide de l’Assistant, vous serez créer un projet, ajouter des bases de données au projet, sélectionnez les objets à migrer et vous connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous serez également convertir, charger et migrer des données et des schémas d’accès. Si vous le souhaitez, vous pouvez lier les tables de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les tables ou de SQL Azure.  
@@ -44,7 +44,7 @@ Par défaut, SSMA démarre l’Assistant de Migration lorsque vous démarrez SSM
 La page Créer un nouveau projet est où vous entrez le nom, l’emplacement et migration projet type de fichier projet (la version de SQL Server utilisé pour la migration de cible). Pour plus d’informations, consultez [nouveau projet (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)  
   
 ## <a name="add-access-databases-page"></a>Ajouter la Page d’accès aux bases de données  
-La page Ajouter des bases de données Access est où vous ajoutez une ou plusieurs bases de données Access au projet. Vous pouvez ajouter des bases de données individuelles en cliquant sur **ajouter les bases de données**, puis en sélectionnant les bases de données à partir de la **Open** fenêtre. Ou, vous pouvez trouver des bases de données à l’aide de la **trouver les bases de données** bouton. Pour plus d'informations, consultez les rubriques suivantes :  
+La page Ajouter des bases de données Access est où vous ajoutez une ou plusieurs bases de données Access au projet. Vous pouvez ajouter des bases de données individuelles en cliquant sur **ajouter les bases de données**, puis en sélectionnant les bases de données à partir de la **Open** fenêtre. Ou, vous pouvez trouver des bases de données à l’aide de la **trouver les bases de données** bouton. Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [Ajout et suppression de fichiers de base de données Access](adding-and-removing-access-database-files-accesstosql.md)  
   
@@ -76,7 +76,7 @@ Si vous avez de nombreux objets, vous souhaiterez utiliser les **sélection avan
 Pour plus d’informations sur le filtrage, consultez la section Options de [objet sélection avancée (SSMA courant)](https://msdn.microsoft.com/f53b0c79-5473-410a-a0dc-d8f544f7a63c).  
   
 ## <a name="connect-to-sql-server-page"></a>Se connecter à la Page SQL Server  
-Sur la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page, vous spécifiez les propriétés de connexion, puis connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [se connecter à SQL Server](https://msdn.microsoft.com/00e0432e-ec26-4ab4-af64-c9ca760e3541)  
+Sur la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page, vous spécifiez les propriétés de connexion, puis connectez-vous à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [se connecter à SQL Server](connect-to-sql-server-accesstosql.md).
   
 > [!IMPORTANT]  
 > Dès que la connexion réussit, vous rencontrerez **lier les Tables** page où vous avez la possibilité de lier les tables. Cliquez sur **suivant** et démarre la migration.  

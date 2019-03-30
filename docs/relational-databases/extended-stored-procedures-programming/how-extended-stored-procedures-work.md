@@ -1,7 +1,7 @@
 ---
 title: Fonctionnement des procédures stockées étendues | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,14 +13,15 @@ ms.assetid: 6e946d8c-3268-4b59-8a1c-1637909cd701
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 118603088f1cad1ee612f7e4035dc69ba66bc860
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab0864e8eb320c63bd757d4c6edab384c6c821b8
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838317"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645461"
 ---
 # <a name="how-extended-stored-procedures-work"></a>Fonctionnement des procédures stockées étendues
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -35,8 +36,3 @@ ms.locfileid: "47838317"
 3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle la procédure stockée étendue demandée (implémentée comme fonction à l'intérieur de la DLL).  
   
 4.  La procédure stockée étendue transmet les jeux de résultats et retourne les paramètres au serveur via l'API de la procédure stockée étendue.  
-  
-## <a name="see-also"></a>Voir aussi  
- [Programmation de procédure stockée étendue de moteur de base de données](../../relational-databases/database-engine-extended-stored-procedure-programming.md)  
-  
-  

@@ -2,17 +2,17 @@
 title: Scénarios de science des données et des modèles de solution - SQL Server Machine Learning
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c40d5d60d43739ccfa6fa326ba0ca1c2688543a6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509845"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645491"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Scénarios de science des données et des modèles de solution
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,8 +24,6 @@ Chaque solution inclut des exemples de données, le code R ou Python code et pro
 > [!TIP]
 > 
 > La plupart des modèles sont fournis dans plusieurs versions prenant en charge à la fois en local et plateformes pour l’apprentissage de cloud computing. Par exemple, vous pouvez générer la solution à l’aide uniquement de SQL Server, ou vous pouvez générer la solution dans Microsoft R Server ou dans Azure Machine Learning.
-
-+ Pour plus d’informations et les mises à jour, consultez cette annonce : [Nouveaux modèles dans Azure ML](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 + Pour le téléchargement et les instructions d’installation, consultez [comment utiliser les modèles](#bkmk_HowTo).
 
@@ -67,8 +65,6 @@ Chaque solution inclut des exemples de données, le code R ou Python code et pro
 [Modèle de maintenance prédictive (SQL Server 2016)](https://github.com/Microsoft/SQL-Server-R-Services-Samples/blob/master/PredictiveMaintenance/README.md)
 
 **Ce que :** Maintenance prédictive vise à augmenter l’efficacité des tâches de maintenance en capturant les défaillances passées et à l’aide de ces informations pour prédire quand et où un appareil peut échouer. La capacité à prédire l’obsolescence d’appareil est particulièrement utile pour les applications qui s’appuient sur des capteurs ou des données distribuées. Cette méthode peut également être appliquée pour surveiller et de prédire l’erreur dans les appareils IoT (Internet of Things).
-
-Consultez cette annonce pour plus d’informations : [Nouveau modèle de maintenance prédictive](https://blogs.technet.microsoft.com/machinelearning/2015/04/09/exciting-new-templates-in-azure-ml/)
 
 **Comment :** Cette solution est axée sur la réponse à la question « Quand échoue une machine en service ? » Les données d’entrée représentent des mesures de capteurs simulées pour des moteurs d’avion. Données obtenues à partir de la surveillance opération conditions actuelles du moteur, telles que le cycle de travail actuel, les paramètres et les mesures de capteurs, sont utilisées pour créer trois types de modèles prédictifs :
 

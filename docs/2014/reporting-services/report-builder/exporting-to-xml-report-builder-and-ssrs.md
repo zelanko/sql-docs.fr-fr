@@ -11,12 +11,12 @@ ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a1e9e221816a4b720695a4031850f08fd17a71e1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b32bf178677b564d31182a5d23d5abda1f024cf
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295890"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658033"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
   L'extension de rendu XML rend un rapport au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.  
@@ -54,8 +54,6 @@ ms.locfileid: "56295890"
   
 -   `Images, lines, and custom report items` sont ignorés.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
 ##  <a name="DataTypes"></a> Types de données  
  L'élément zone de texte ou attribut se voit affecter un type de données XSD sur la base des valeurs affichées par la zone de texte.  
   
@@ -71,8 +69,6 @@ ms.locfileid: "56295890"
 |`String`, `Char`|**xsd:string**|  
 |Autres|**xsd:string**|  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
 ##  <a name="XMLSpecificRenderingRules"></a> Règles de rendu spécifiques à XML  
  Les sections suivantes décrivent comment les extensions de rendu XML interprètent les éléments dans le rapport.  
   
@@ -85,7 +81,7 @@ ms.locfileid: "56295890"
   
  Les valeurs des variables sont les suivantes :  
   
-|Créer une vue d’abonnement|Value|  
+|Nom|Value|  
 |----------|-----------|  
 |Rapport|Report.DataElementName|  
 |ReportURL|URL absolue URLEncoded d'accès au rapport sur le serveur.|  
@@ -115,8 +111,6 @@ ms.locfileid: "56295890"
   
 ### <a name="lines"></a>Lignes  
  Les lignes ne sont pas rendues.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
 ### <a name="tables-matrices-and-lists"></a>Tables, matrices et listes  
  Les tables, matrices et listes sont rendues sous la forme d'un élément. Le nom de l’élément provient de la propriété RDL DataElementName de tableau matriciel.  
@@ -155,17 +149,11 @@ ms.locfileid: "56295890"
   
  Si la valeur de la propriété DataElementOutput est égale à Output, l’en-tête d’un élément répétitif est rendu sous la forme d’un enfant de l’élément de détail.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
 ##  <a name="CustomFormatsXSLTransformations"></a> Formats personnalisés et XSLT  
  Les fichiers XML générés par l'extension de rendu XML peuvent être convertis dans n'importe quel format à l'aide de XSL Transformations (XSLT). Cette fonctionnalité permet de générer des données dans des formats qui ne sont pas déjà pris en charge par des extensions de rendu existantes. Pensez à utiliser l'extension de rendu XML et XSLT avant de tenter de créer votre propre extension de rendu.  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
 ##  <a name="DuplicateName"></a> Noms en double  
  S'il existe des noms d'élément de données en double dans la même étendue, le convertisseur affiche un message d'erreur.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
 ##  <a name="XSLTTransformations"></a> Transformations XSLT  
  Le convertisseur XML peut appliquer une transformation XSLT côté serveur aux données XML d'origine. Lorsqu'une transformation XSLT est appliquée, le convertisseur génère en sortie le contenu transformé au lieu des données XML d'origine. La transformation a lieu sur le serveur, et non sur le client.  
@@ -173,8 +161,6 @@ ms.locfileid: "56295890"
  La transformation XSLT à appliquer à la sortie est définie dans le fichier de définition de rapport avec la propriété DataTransform du rapport ou avec le paramètre XSLT *DeviceInfo* . Si l'une de ces valeurs est définie, la transformation se produit chaque fois que le convertisseur XML est utilisé. Lors de l’utilisation d’abonnements, la transformation XSLT doit être définie dans la propriété RDL DataTransform.  
   
  Si un fichier XSLT est spécifié, à la fois par la propriété de définition DataTransform et par le paramètre d’informations de périphérique, la transformation XSLT spécifiée dans DataTransform a lieu en premier, suivie de celle définie par les paramètres d’informations de périphérique.  
-  
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
   
 ###  <a name="DeviceInfo"></a> Paramètres d'informations de périphérique  
  Vous pouvez modifier certains paramètres par défaut de ce convertisseur en modifiant les paramètres d'informations de périphérique, y compris ceux ci-dessous :  
@@ -195,13 +181,9 @@ ms.locfileid: "56295890"
   
  Pour plus d'informations, consultez [XML Device Information Settings](../xml-device-information-settings.md).  
   
- ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "Icône de flèche utilisée avec le lien Retour au début") [Retour au début](#BackToTop)  
-  
 ## <a name="see-also"></a>Voir aussi  
  [Pagination dans Reporting Services &#40;Générateur de rapports et SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
  [Comportements de rendu &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Fonctionnalités interactives des différentes extensions de rendu de rapport &#40;Générateur de rapports et SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
  [Rendu des éléments de rapport &#40;Générateur de rapports et SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tables, matrices et listes &#40;Générateur de rapports et SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
-  
-  

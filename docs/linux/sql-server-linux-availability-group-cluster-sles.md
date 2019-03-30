@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: cab40f66976677fee78e79de2f2996653aee9446
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: 72ca07a14495261d61601c4acd503790697ce6a4
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160627"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658093"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configurer un Cluster SLES pour le groupe de disponibilité de SQL Server
 
@@ -221,7 +221,7 @@ Délimitation de niveau ressource garantit principalement qu’il n’existe auc
 
 Délimitation de niveau de nœud garantit qu’un nœud ne s’exécute pas toutes les ressources. Cela est effectué en réinitialisant le nœud et l’implémentation de Pacemaker de celui-ci est appelée STONITH (ce qui signifie « dépanner l’autre nœud dans la tête »). Pacemaker prend en charge une grande variété de périphériques, tels que d’un onduleur approvisionnement ou gestion des cartes d’interface pour les serveurs de clôture.
 
-Pour plus d’informations, consultez [Clusters Pacemaker à partir de zéro](https://clusterlabs.org/doc/en-US/Pacemaker/1.1-plugin/html/Clusters_from_Scratch/ch05.html), [délimitation et Stonith](https://clusterlabs.org/doc/crm_fencing.html) et [haute disponibilité SUSE documentation : La délimitation et STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
+Pour plus d’informations, consultez [Clusters Pacemaker à partir de zéro](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [délimitation et Stonith](https://clusterlabs.org/doc/crm_fencing.html) et [haute disponibilité SUSE documentation : La délimitation et STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html).
 
 Au moment de l’initialisation du cluster, STONITH est désactivé si aucune configuration n’est détectée. Il peut être activé ultérieurement en exécutant la commande suivante :
 

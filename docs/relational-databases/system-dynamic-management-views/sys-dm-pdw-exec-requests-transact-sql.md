@@ -13,12 +13,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: ca750b483aee088a6997f9f0b1beac6d15b0d9df
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d049833897685b7998fc1168ec09398860df233b
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509866"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657744"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -43,7 +43,7 @@ ms.locfileid: "58509866"
 |resource_class|**nvarchar(20)**|La classe de ressources pour cette demande. Consultez lié **concurrency_slots_used** dans [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Pour plus d’informations sur les classes de ressources, consultez [gestion des ressources de classes et de la charge de travail](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Classes de ressources statiques</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de ressources dynamiques</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
 |importance (version préliminaire pour SQL Data Warehouse Gen2)|**nvarchar(32)**|L’importance de définition de la demande a été envoyée. Requêtes avec une importance inférieure reste en file d’attente dans un état suspendu, si les demandes d’importance plus élevées sont envoyés.  Requêtes avec une importance plus élevée s’exécutent avant les demandes importance inférieure qui ont été envoyées précédemment.  Pour plus d’informations sur l’importance, consultez [Importance de la charge de travail](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normal (valeur par défaut)</br>above_normal</br>high|
   
- Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section de métadonnées dans le [limites de capacité](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) rubrique.   
+ Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section de métadonnées dans le [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) rubrique.   
   
 ## <a name="permissions"></a>Autorisations
 

@@ -12,12 +12,12 @@ ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: debec2f4cf7e62552d82ee7a0f87a2a359f4aa34
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542933"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658363"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modes de fonctionnement de la mise en miroir de bases de données
   Cette rubrique décrit les modes d'opération synchrones et asynchrones des sessions de mise en miroir de bases de données.  
@@ -80,7 +80,7 @@ ms.locfileid: "52542933"
 -   Si le serveur principal est perdu, forcer le service sur le serveur miroir exige que le serveur miroir soit connecté au témoin.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les types de quorums, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+>  Pour plus d’informations sur les types de quorums, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="WhenPrincipalFails"></a> Réponse à la défaillance du principal  
  Si le principal se bloque, le propriétaire de la base de données dispose des options suivantes :  
@@ -146,7 +146,7 @@ ms.locfileid: "52542933"
   
  Contrairement aux deux autres, le témoin ne dessert pas la base de données. Le témoin prend simplement en charge le basculement automatique en vérifiant que le serveur principal est activé et qu'il fonctionne. Le serveur miroir lance le basculement automatique uniquement si le miroir et le témoin restent connectés l'un à l'autre après que tous les deux aient été déconnectés du serveur principal.  
   
- Lorsque vous définissez un témoin, la session nécessite un *quorum*, c’est-à-dire une relation entre au moins deux instances de serveur qui permet de rendre disponible la base de données. Pour plus d’informations, consultez [témoin de mise en miroir de base de données](database-mirroring-witness.md) et [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Lorsque vous définissez un témoin, la session nécessite un *quorum*, c’est-à-dire une relation entre au moins deux instances de serveur qui permet de rendre disponible la base de données. Pour plus d’informations, consultez [témoin de mise en miroir de base de données](database-mirroring-witness.md) et [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  Le basculement automatique nécessite les conditions suivantes :  
   
@@ -193,7 +193,7 @@ ms.locfileid: "52542933"
   
 -   SAFETY OFF  
   
-     Désactiver la sécurité des transactions entraîne le mode d'opération asynchrone de la session, en mode hautes performances. Si la propriété SAFETY est définie à OFF, la propriété WITNESS doit également être définie sur cette valeur (valeur par défaut). Pour obtenir des informations sur l’impact du témoin en mode hautes performances, consultez la section [État du témoin](#WitnessState), plus loin dans cette rubrique. Pour plus d’informations sur le fonctionnement avec la sécurité des transactions désactivée, consultez [Mise en miroir de bases de données asynchrone (mode Hautes performances)](#Async), plus haut dans cette rubrique.  
+     Désactiver la sécurité des transactions entraîne le mode d'opération asynchrone de la session, en mode hautes performances. Si la propriété SAFETY est définie à OFF, la propriété WITNESS doit également être définie sur cette valeur (valeur par défaut). Pour obtenir des informations sur l’impact du témoin en mode hautes performances, consultez la section [État du témoin](#WitnessState), plus loin dans cette rubrique. Pour plus d’informations sur le fonctionnement avec la sécurité des transactions désactivée, consultez [Mise en miroir de bases de données asynchrone (mode Hautes performances)](#VisualElement), plus haut dans cette rubrique.  
   
  Le paramètre de sécurité des transactions de la base de données est enregistré pour chaque serveur partenaire dans la vue de catalogue **sys.database_mirroring** des colonnes **mirroring_safety_level** et **mirroring_safety_level_desc**. Pour plus d’informations, consultez [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -208,7 +208,7 @@ ms.locfileid: "52542933"
   
 -   Lorsque le témoin existe mais n'est pas connecté à un partenaire, il apparaît à l'état UNKNOWN (inconnu) ou DISCONNECTED (déconnecté) par rapport au partenaire. Dans ce cas, le témoin ne dispose d'aucun quorum avec ce partenaire et la base de données devient indisponible si les partenaires ne sont pas connectés entre eux.  
   
- Pour plus d’informations sur le quorum, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Pour plus d’informations sur le quorum, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  L’état de chaque témoin d’une instance de serveur est enregistré dans la vue de catalogue **sys.database_mirroring** au niveau des colonnes **mirroring_witness_state** et **mirroring_witness_state_desc**. Pour plus d’informations, consultez [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -222,7 +222,7 @@ ms.locfileid: "52542933"
   
  <sup>1</sup> si le témoin est déconnecté, nous vous recommandons de définir WITNESS à OFF jusqu'à ce que l’instance de serveur témoin devienne disponible.  
   
- <sup>2</sup> si un témoin est présent en mode hautes performances, le témoin ne participe pas la session. Cependant, pour rendre la base de données disponible, deux au moins des instances du serveur doivent rester connectées. Par conséquent, nous vous recommandons de conserver la propriété WITNESS défini à OFF dans les sessions en mode hautes performances. Pour plus d’informations, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ <sup>2</sup> si un témoin est présent en mode hautes performances, le témoin ne participe pas la session. Cependant, pour rendre la base de données disponible, deux au moins des instances du serveur doivent rester connectées. Par conséquent, nous vous recommandons de conserver la propriété WITNESS défini à OFF dans les sessions en mode hautes performances. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Affichage du paramètre de sécurité et de l'état du témoin  
  Pour afficher le paramètre de sécurité et l’état du témoin d’une base de données, utilisez la vue de catalogue **sys.database_mirroring** . Les colonnes les plus pertinentes sont les suivantes :  
@@ -266,5 +266,3 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## <a name="see-also"></a>Voir aussi  
  [Surveillance de la mise en miroir de bases de données &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   
  [Témoin de mise en miroir de base de données](database-mirroring-witness.md)  
-  
-  
