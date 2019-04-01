@@ -31,7 +31,7 @@ La recherche sémantique statistique donne un éclairage sur des documents non s
   
  Les exemples qui suivent illustrent les fonctions de la recherche sémantique. En même temps, ces exemples illustrent les trois fonctions d’ensemble de lignes Transact-SQL que vous utilisez pour interroger l’index sémantiques et récupérer les résultats sous forme de données structurées.  
   
-###  <a name="find1"></a> Find the key phrases in a document  
+###  <a name="find1"></a> Rechercher des expressions clés dans un document  
  La requête suivante obtient les expressions clés qui ont été identifiées dans le document témoin. Elle présente les résultats par ordre décroissant du score qui indique l'importance statistique de chaque expression clé.
  
  Cette requête appelle la fonction [semantickeyphrasetable](../../relational-databases/system-functions/semantickeyphrasetable-transact-sql.md).  
@@ -69,7 +69,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
 ```  
   
-###  <a name="find3"></a> Find the key phrases that make documents similar or related  
+###  <a name="find3"></a> Rechercher des expressions clés qui rendent des documents similaires ou connexes  
  La requête suivante obtient les expressions clés qui rendent les deux exemples de documents similaires ou liés l’un à l’autre. Elle présente les résultats par ordre décroissant du score qui indique le poids de chaque expression clé.
  
  Cette requête appelle la fonction [semanticsimilaritydetailstable](../../relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql.md).  

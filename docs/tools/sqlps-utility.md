@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe27d4c05978e39c6d8558fc273fc294a256b09f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666968"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657893"
 ---
 # <a name="sqlps-utility"></a>sqlps (utilitaire)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ sqlps
  **-**  
  **-Command-** spécifie que l’utilitaire **sqlps** doit lire l’entrée à partir de l’entrée standard.  
   
- *script_block* [ **- args**_argument\_tableau_ ]  
+ *script_block* [ **-args**_argument\_array_ ]  
  Spécifie un bloc de commandes PowerShell à exécuter ; le bloc doit être placé entre des accolades : {}. *Script_block* peut uniquement être spécifié quand l’utilitaire **sqlps** est appelé depuis **PowerShell** ou une autre session de l’utilitaire **sqlps** . *argument_array* est un tableau de variables PowerShell contenant les arguments pour les commandes PowerShell de *script_block*.  
   
  *string* [ *command_parameters* ]  
@@ -98,7 +98,7 @@ sqlps
   
 -   utiliser les chemins d'accès du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour naviguer dans la hiérarchie des objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ;  
   
- Par défaut, l’utilitaire **sqlps** s’exécute avec le niveau de stratégie d’exécution de scripts défini sur **Restreint**. Cela empêche l'exécution de scripts PowerShell. Vous pouvez utiliser l’applet de commande **Set-ExecutionPolicy** pour activer l’exécution de scripts signés ou de tout type de script. Exécutez uniquement des scripts provenant de sources fiables et sécurisez tous les fichiers d'entrée et de sortie en utilisant les autorisations NTFS appropriées. Pour plus d'informations sur l'activation de scripts PowerShell, consultez [Exécution de scripts Windows PowerShell](https://go.microsoft.com/fwlink/?LinkId=103166).  
+ Par défaut, l’utilitaire **sqlps** s’exécute avec le niveau de stratégie d’exécution de scripts défini sur **Restreint**. Cela empêche l'exécution de scripts PowerShell. Vous pouvez utiliser l’applet de commande **Set-ExecutionPolicy** pour activer l’exécution de scripts signés ou de tout type de script. Exécutez uniquement des scripts provenant de sources fiables et sécurisez tous les fichiers d'entrée et de sortie en utilisant les autorisations NTFS appropriées. Pour plus d'informations sur l'activation de scripts PowerShell, consultez [Exécution de scripts Windows PowerShell](/previous-versions/system-center/virtual-machine-manager-2008-r2/cc917925(v=technet.10)).  
   
  La version de l’utilitaire **sqlps** dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] a été implémentée en tant que mini-shell Windows PowerShell 1.0. Les mini-shells comportent certaines restrictions, comme le fait de ne pas autoriser les utilisateurs à charger des composants logiciels enfichables autres que ceux chargés par le mini-shell. Ces restrictions ne s'appliquent pas à la version [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et aux versions ultérieures de l'utilitaire, qui ont été modifiées pour utiliser le module **sqlps** .  
   

@@ -11,12 +11,12 @@ ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6b7a27d9358d6f7f5719aaf1fea1fb292b2db1af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a038d146b21660e629c7ba7e44332aa6d2133a2c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545288"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658163"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Résilience de connexion du pilote ODBC Windows
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -26,13 +26,13 @@ ms.locfileid: "52545288"
 > [!IMPORTANT]  
 >  La fonctionnalité de résilience de connexion est prise en charge sur les versions de serveur SQL Server 2014 (et versions ultérieures) et les bases de données Microsoft Azure SQL Database.  
   
- Pour plus d’informations sur la résilience des connexions inactives, consultez [Article technique, Résilience des connexions inactives](https://go.microsoft.com/fwlink/?LinkId=393996).  
+ Pour plus d’informations sur la résilience des connexions inactives, consultez [Article technique, Résilience des connexions inactives](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/Idle%20Connection%20Resiliency.docx).
   
  Pour contrôler le comportement de reconnexion, ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur Windows propose deux options :  
   
 -   Nombre de tentatives de connexion.  
   
-     Contrôle le nombre de nouvelles tentatives de connexion en cas d’échec de connexion. Les valeurs valides sont comprises entre 0 et 255. Zéro (0) signifie qu’il ne faut pas essayer de se reconnecter. La valeur par défaut est une (1) nouvelle tentative de connexion.  
+     Contrôle le nombre de nouvelles tentatives de connexion en cas d’échec de connexion. Les valeurs valides sont comprises entre 0 et 255. Zéro (0) signifie qu’il ne faut pas essayer de se reconnecter. La valeur par défaut est une (1) nouvelle tentative de connexion.  
   
      Vous pouvez modifier le nombre de tentatives de connexion quand vous :  
   
@@ -44,7 +44,7 @@ ms.locfileid: "52545288"
   
 -   Intervalle avant nouvelle tentative de connexion.  
   
-     L’intervalle avant nouvelle tentative de connexion spécifie le nombre de secondes entre chaque nouvelle tentative de connexion. Les valeurs valides sont : La durée totale de reconnexion ne peut pas dépasser le délai de maintien de la connexion (SQL_ATTR_QUERY_TIMEOUT dans SQLSetStmtAttr). La valeur par défaut est 10 secondes.  
+     L’intervalle avant nouvelle tentative de connexion spécifie le nombre de secondes entre chaque nouvelle tentative de connexion. Les valeurs valides sont comprises entre 1 et 60. La durée totale de reconnexion ne peut pas dépasser le délai de maintien de la connexion (SQL_ATTR_QUERY_TIMEOUT dans SQLSetStmtAttr). La valeur par défaut est 10 secondes.  
   
      Vous pouvez modifier l’intervalle de nouvelle tentative de connexion quand vous :  
   
