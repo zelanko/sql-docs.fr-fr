@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7745fd3b583a1044e670487570bdf97f3a85673f
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434453"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657953"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Créer et stocker des clés principales de colonne (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Plusieurs méthodes permettent de créer un certificat qui soit une clé princip
 
 ### <a name="create-a-self-signed-certificate-using-powershell"></a>Créer un certificat auto-signé à l’aide de PowerShell
 
-Utilisez l’applet de commande [New-SelfSignedCertificate](https://technet.microsoft.com/library/hh848633.aspx) pour créer un certificat auto-signé. L’exemple suivant montre comment générer un certificat pouvant être utilisé comme clé principale de colonne pour Always Encrypted.
+Utilisez l’applet de commande [New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate) pour créer un certificat auto-signé. L’exemple suivant montre comment générer un certificat pouvant être utilisé comme clé principale de colonne pour Always Encrypted.
 
 ```
 # New-SelfSignedCertificate is a Windows PowerShell cmdlet that creates a self-signed certificate. The below examples show how to generate a certificate that can be used as a column master key for Always Encrypted.
@@ -94,7 +94,7 @@ Si votre clé principale de colonne est un certificat stocké dans l’emplaceme
 Si votre clé principale de colonne est un certificat stocké dans l’emplacement de magasin de certificats *utilisateur actuel* , vous devez exporter le certificat et la clé privée, et les importer dans l’emplacement de magasin de certificats « utilisateur actuel » de tous les comptes d’utilisateurs qui exécutent les applications censées chiffrer ou déchiffrer des données stockées dans les colonnes chiffrées, ou sur les outils de configuration d’Always Encrypted et de gestion des clés Always Encrypted (sur tous les ordinateurs disposant de ces applications et de ces outils). Aucune configuration d’autorisation n’est nécessaire. Une fois connecté à l’ordinateur, l’utilisateur peut accéder à tous les certificats qui se trouvent dans son emplacement de magasin de certificats « utilisateur actuel ».
 
 #### <a name="using-powershell"></a>Utilisation de PowerShell
-Utilisez les applets de commande [Import-PfxCertificate](https://msdn.microsoft.com/library/hh848625.aspx) et [Export-PfxCertificate](https://msdn.microsoft.com/library/hh848635.aspx) pour importer et exporter un certificat.
+Utilisez les applets de commande [Import-PfxCertificate](/powershell/module/pkiclient/import-pfxcertificate) et [Export-PfxCertificate](/powershell/module/pkiclient/export-pfxcertificate) pour importer et exporter un certificat.
 
 #### <a name="using-microsoft-management-console"></a>Utilisation de Microsoft Management Console 
 
@@ -207,7 +207,7 @@ Consultez la documentation relative au module de sécurité matériel et au four
 
 Vous pouvez stocker une clé principale de colonne Always Encrypted dans un magasin de clés qui implémente l’API Cryptography (CAPI). En général, ce type de magasin est un module de sécurité matériel, c’est-à-dire un périphérique physique qui protège et gère les clés numériques et fournit un traitement du chiffrement. Les modules de sécurité matériels se présentent généralement sous la forme d’une carte enfichable ou d’un périphérique externe qui se connecte directement à un ordinateur (modules de sécurité matériels locaux) ou à un serveur réseau.
 
-Pour rendre un module de sécurité matériel disponible pour les applications d’un ordinateur donné, un fournisseur de services de chiffrement (CSP) implémentant CAPI doit être installé et configuré sur l’ordinateur. Un pilote client avec Always Encrypted (fournisseur de clés principales de colonne intégré au pilote) utilise le CSP pour chiffrer et déchiffrer les clés de chiffrement de colonne, protégées par la clé principale de colonne stockée dans le magasin de clés. Remarque : CAPI est une API héritée obsolète. Si un fournisseur de stockage de clés est disponible pour votre module de sécurité matériel, vous devez l’utiliser plutôt que le fournisseur de services de chiffrement avec CAPI.
+Pour rendre un module de sécurité matériel disponible pour les applications d’un ordinateur donné, un fournisseur de services de chiffrement (CSP) implémentant CAPI doit être installé et configuré sur l’ordinateur. Un pilote client avec Always Encrypted (fournisseur de clés principales de colonne intégré au pilote) utilise le CSP pour chiffrer et déchiffrer les clés de chiffrement de colonne, protégées par la clé principale de colonne stockée dans le magasin de clés. Remarque : CAPI est une API héritée obsolète. Si un fournisseur de stockage de clés est disponible pour votre module de sécurité matériel, vous devez l’utiliser plutôt que le fournisseur de services de chiffrement avec CAPI.
 
 Un fournisseur de services de chiffrement doit prendre en charge l’algorithme RSA à utiliser avec Always Encrypted.
 

@@ -1,7 +1,7 @@
 ---
 title: Mode FIPS sur JDBC | Microsoft Docs
 ms.custom: ''
-ms.date: 07/12/2018
+ms.date: 03/26/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: craigg
@@ -10,48 +10,39 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daveng
 manager: kenvh
-ms.openlocfilehash: b99aa6be170402b0e8f18dddd578c1fb6c615dd6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
+ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601869"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58618276"
 ---
 # <a name="fips-mode"></a>Mode FIPS
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-Microsoft JDBC Driver for SQL Server prend en charge *Mode conforme à FIPS 140*. Pour Oracle / JVM de Sun, reportez-vous à la [Mode conforme à FIPS 140 pour SunJSSE](https://docs.oracle.com/javase/7/docs/technotes/guides/security/jsse/FIPS.html) section fournie par Oracle pour configurer la conformité FIPS activé JVM. 
+Microsoft JDBC Driver for SQL Server prend en charge en cours d’exécution dans les machines virtuelles Java configuré pour être *FIPS 140 conformes*.
 
 #### <a name="prerequisites"></a>Conditions préalables requises
 
 - FIPS configuré JVM
-- Certificat SSL approprié.
-- Fichiers de stratégie appropriée. 
-- Paramètres de Configuration approprié. 
-
+- Certificat SSL approprié
+- Fichiers de stratégie appropriée
+- Paramètres de Configuration approprié
 
 ## <a name="fips-configured-jvm"></a>FIPS configuré JVM
 
-Pour afficher les modules approuvés pour la Configuration de la norme FIPS, reportez-vous à la [validés FIPS 140-1 et les Modules cryptographiques FIPS 140-2](https://csrc.nist.gov/groups/STM/cmvp/documents/140-1/1401val2016.htm). 
+En règle générale, les applications peuvent configurer le `java.security` fichier à utiliser des fournisseurs de services de chiffrement compatible FIPS. Consultez la documentation spécifique à votre machine virtuelle Java pour savoir comment configurer la conformité aux normes FIPS 140.
 
-Les fournisseurs peuvent avoir des étapes supplémentaires pour configurer JVM avec FIPS.
+Pour afficher les modules approuvés pour la Configuration de la norme FIPS, reportez-vous à [validé des Modules dans le programme de Validation de Module de chiffrement](https://csrc.nist.gov/Projects/cryptographic-module-validation-program/Validated-Modules).
 
-### <a name="ensure-your-jvm-is-in-fips-mode"></a>Vérifiez que votre machine virtuelle Java est en Mode FIPS
-Pour vérifier que votre machine virtuelle Java est FIPS est activés, exécutez l’extrait de code suivant : 
-
-```java
-public boolean isFIPS() throws Exception {
-    Provider jsse = Security.getProvider("SunJSSE");
-    return jsse != null && jsse.getInfo().contains("FIPS");
-}
-```
+Les fournisseurs peuvent avoir des étapes supplémentaires pour configurer une machine virtuelle Java à la norme FIPS.
 
 ## <a name="appropriate-ssl-certificate"></a>Certificat SSL approprié
-Pour vous connecter à SQL Server en mode FIPS, un certificat SSL valide est requis. Installer ou importez-le dans le Store de clé Java sur l’ordinateur client (JVM) où FIPS est activé.
+Pour vous connecter à SQL Server en mode FIPS, un certificat SSL valide est requis. Installer ou l’importer dans le Store de clé Java sur l’ordinateur client (JVM) où FIPS est activé.
 
 ### <a name="importing-ssl-certificate-in-java-keystore"></a>L’importation de certificat SSL dans le magasin de clés de Java
-Pour FIPS, très probablement vous devez importer le certificat (.cert) soit PKCS ou dans un format spécifique au fournisseur. Utilisez l’extrait de code suivant pour importer le certificat SSL et stockez-le dans un répertoire de travail avec le format de magasin de clés approprié. _APPROBATION\_STORE\_mot de passe_ concerne votre mot de passe KeyStore Java. 
-
+Pour FIPS, très probablement vous devez importer le certificat (.cert) dans un format spécifique au fournisseur ou PKCS.
+Utilisez l’extrait de code suivant pour importer le certificat SSL et stockez-le dans un répertoire de travail avec le format de magasin de clés approprié. _APPROBATION\_STORE\_mot de passe_ concerne votre mot de passe KeyStore Java.
 
 ```java
 public void saveGenericKeyStore(
@@ -81,8 +72,7 @@ private Certificate getCertificate(String pathName)
 }
 ```
 
-
-L’exemple suivant importe un certificat SSL de Azure au format PKCS12 avec BouncyCastle fournisseur. Le certificat est importé dans le répertoire de travail nommé _MyTrustStore\_PKCS12_ à l’aide de l’extrait de code suivant :
+L’exemple suivant importe un certificat SSL de Azure au format PKCS12 avec le fournisseur BouncyCastle. Le certificat est importé dans le répertoire de travail nommé _MyTrustStore\_PKCS12_ à l’aide de l’extrait de code suivant :
 
 `saveGenericKeyStore(BCFIPS, PKCS12, "SQLAzure SSL Certificate Name", "SQLAzure.cer");`
 
@@ -104,4 +94,3 @@ Pour exécuter le pilote JDBC en mode compatible FIPS, configurez les propriét�
 |fipsProvider|String|Null|Fournisseur FIPS configuré dans la machine virtuelle Java. Par exemple, BCFIPS ou SunPKCS11-NSS |Ajouté dans 6.1.2 (Stable mise en production 6.2.2), déconseillée dans 6.4.0 - consultez les détails [ici](https://github.com/Microsoft/mssql-jdbc/pull/460).|
 |trustStoreType|String|JKS|Type de magasin de confiance FIPS mode jeu PKCS12 ou type défini par le fournisseur FIPS |Ajouté dans 6.1.2 (Stable mise en production 6.2.2)||
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
-

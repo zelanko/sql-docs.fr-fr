@@ -33,12 +33,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71e72818b9ab5269d898f00a4110936478da35af
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: e3a4da06849b245ba72d3ac87d5db04309f10823
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802365"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658383"
 ---
 # <a name="insert-transact-sql"></a>INSERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -406,7 +406,7 @@ Dans Parallel Data Warehouse, la clause ORDER BY n'est pas valide dans VIEWS, CR
   
  Quand vous utilisez OPENROWSET(BULK…), il est important de bien comprendre comment [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gère l’emprunt d’identité. Pour plus d’informations, consultez « Considérations relatives à la sécurité » dans [Importer des données en bloc à l’aide de BULK INSERT ou OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  L'autorisation INSERT est obligatoire sur la table cible.  
   
  Les autorisations INSERT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin**, aux rôles de base de données fixes **db_owner** et **db_datawriter**, ainsi qu’au propriétaire de la table. Les membres des rôles **sysadmin**, **db_owner** et **db_securityadmin** et le propriétaire de la table peuvent transférer des autorisations à d’autres utilisateurs.  
@@ -437,7 +437,7 @@ INSERT INTO Production.UnitMeasure
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
   
-#### <a name="b-inserting-multiple-rows-of-data"></a>b. Insertion de plusieurs lignes de données  
+#### <a name="b-inserting-multiple-rows-of-data"></a>B. Insertion de plusieurs lignes de données  
  L’exemple suivant utilise le [constructeur de valeurs de table](../../t-sql/queries/table-value-constructor-transact-sql.md) pour insérer trois lignes dans la table `Production.UnitMeasure` de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en une seule instruction INSERT. Étant donné que les valeurs de toutes les colonnes sont fournies et qu'elles sont répertoriées dans le même ordre que les colonnes de la table, il n'est pas nécessaire de spécifier les noms de colonnes dans la liste de colonnes.  
   
 ```sql
@@ -999,7 +999,7 @@ OPTION ( LABEL = N'label1' );
 ```  
   
 #### <a name="y-using-a-label-and-a-query-hint-with-the-insert-statement"></a>Y. Utilisation d’une étiquette et d’un indicateur de requête avec l’instruction INSERT  
- Cette requête présente la syntaxe de base pour utiliser une étiquette et un indicateur de jointure de requête avec l’instruction INSERT. Une fois la requête soumise au nœud de contrôle, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en cours d’exécution sur les nœuds de calcul, applique la stratégie de jointure hachée quand il génère le plan de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les indicateurs de jointure et sur l’utilisation de la clause OPTION, consultez [OPTION (SQL Server PDW)](https://msdn.microsoft.com/72bbce98-305b-42fa-a19f-d89620621ecc).  
+ Cette requête présente la syntaxe de base pour utiliser une étiquette et un indicateur de jointure de requête avec l’instruction INSERT. Une fois la requête soumise au nœud de contrôle, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en cours d’exécution sur les nœuds de calcul, applique la stratégie de jointure hachée quand il génère le plan de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations sur les indicateurs de jointure et sur l’utilisation de la clause OPTION, consultez [OPTION (SQL Server PDW)](../../t-sql/queries/option-clause-transact-sql.md).  
   
 ```sql
 -- Uses AdventureWorks  

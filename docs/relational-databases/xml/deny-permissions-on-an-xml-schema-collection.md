@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - denying permissions [SQL Server], XML server collections
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b615f54cc13f432500710a616e995cdffc0c85c8
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: baa1f607e9bdce0dfedc989125e5d29111d44f93
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256504"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511606"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>Refuser des autorisations sur une collection de schémas XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -111,7 +111,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>b. Refus d'autorisations sur une collection de schémas XML  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>B. Refus d'autorisations sur une collection de schémas XML  
  L'exemple suivant montre comment une autorisation spécifique sur une collection de schémas XML existante peut être refusée à une connexion. Dans cet exemple, une connexion de test se voit refuser l'autorisation REFERENCES sur une collection de schémas XML existante.  
   
  Cet exemple crée un utilisateur `TestLogin1`et une base de données. Il crée également un schéma relationnel, en plus du schéma `dbo` , dans la base de données. L'autorisation `CREATE XML SCHEMA` de départ permet à l'utilisateur de créer une collection de schémas n'importe où dans la base de données.  

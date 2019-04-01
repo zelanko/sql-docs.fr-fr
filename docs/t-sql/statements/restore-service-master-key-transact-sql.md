@@ -24,12 +24,12 @@ ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: ee122adb459586f370f2b115f161c56468f4ce7a
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: ccc802650dd4ba57074d760d2e9b7af176121e8e
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327660"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645421"
 ---
 # <a name="restore-service-master-key-transact-sql"></a>RESTORE SERVICE MASTER KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ RESTORE SERVICE MASTER KEY FROM FILE = 'path_to_file'
   
  La régénération de la hiérarchie de chiffrement est une opération qui consomme beaucoup de ressources. Par conséquent, vous devez planifier cette opération au cours d'une période de faible demande.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation CONTROL SERVER sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
@@ -83,6 +83,4 @@ GO
  [Clé principale du service](../../relational-databases/security/encryption/service-master-key.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
- [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+ [Hiérarchie de chiffrement](../../relational-databases/security/encryption/encryption-hierarchy.md)

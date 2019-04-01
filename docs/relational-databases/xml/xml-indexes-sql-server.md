@@ -31,15 +31,15 @@ helpviewer_keywords:
 - PROPERTY index
 - XML indexes [SQL Server], creating
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dac012727df032d45674add5016782de3ca6ad6a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9ed342b2176d7803092d389b88e95a11f34752ac
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669908"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512376"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51669908"
   
 -   Index XML secondaires  
   
- Le premier index portant sur la colonne de type **xml** est obligatoirement l'index XML primaire. Par le biais de l'index XML primaire, les trois types d'index secondaires suivants sont pris en charge : PATH, VALUE, and PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
+ Le premier index portant sur la colonne de type **xml** est obligatoirement l'index XML primaire. Par le biais de l'index XML primaire, les trois types d'index secondaires suivants sont pris en charge : PATH, VALUE et PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas créer ou modifier d'index XML à moins que les options de base de données ne soient définies correctement pour utiliser le type de données **xml** . Pour plus d’informations, consultez [Utiliser la recherche en texte intégral avec des colonnes XML](../../relational-databases/xml/use-full-text-search-with-xml-columns.md).  
@@ -95,7 +95,7 @@ WHERE CatalogDescription.exist ('/PD:ProductDescription/@ProductModelID[.="19"]'
   
 -   La clé primaire de la table de base. Cette clé est copiée dans l'index XML primaire afin de pouvoir effectuer une jointure en retour avec la table de base et le nombre maximal de colonnes dans la clé primaire de la table de base est limité à 15.  
   
- Les informations de ce nœud sont utilisées afin d'évaluer et d'élaborer les résultats sous forme de données XML découlant d'une requête donnée. Pour des raisons d'optimisation, les informations relatives au nom de la balise et au type de nœud sont encodées sous forme de valeurs entières et la colonne Path s'appuie sur ce même encodage. En outre, les chemins d'accès sont stockés dans l'ordre inverse afin de pouvoir faire correspondre les chemins d'accès où seul le suffixe est connu. Exemple :  
+ Les informations de ce nœud sont utilisées afin d'évaluer et d'élaborer les résultats sous forme de données XML découlant d'une requête donnée. Pour des raisons d'optimisation, les informations relatives au nom de la balise et au type de nœud sont encodées sous forme de valeurs entières et la colonne Path s'appuie sur ce même encodage. En outre, les chemins d'accès sont stockés dans l'ordre inverse afin de pouvoir faire correspondre les chemins d'accès où seul le suffixe est connu. Par exemple :  
   
 -   `//ContactRecord/PhoneNumber` , où seuls les deux derniers niveaux sont connus ;  
   

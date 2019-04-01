@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 78e818a535c31e60e1b73b4a48f301e8d90b7430
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 57d96068af7120ef4ccf4da8882093fa26908089
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579739"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493977"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
@@ -28,7 +28,7 @@ La famille des fonctionnalités de traitement de requêtes intelligent inclut de
 
 ![Traitement de requêtes intelligent](./media/3_iqpfeaturefamily.png)
 
-Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes intelligent en activant le niveau de compatibilité applicable pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Exemple :  
+Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes intelligent en activant le niveau de compatibilité applicable pour la base de données.  Vous pouvez définir cette option à l’aide de Transact-SQL. Par exemple :  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -147,7 +147,7 @@ Pour réactiver les jointures adaptatives pour toutes les exécutions de requêt
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
 ```
 
-Vous pouvez aussi désactiver les jointures adaptatives pour une requête spécifique en désignant `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` en tant qu’indicateur de requête [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Exemple :
+Vous pouvez aussi désactiver les jointures adaptatives pour une requête spécifique en désignant `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` en tant qu’indicateur de requête [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Par exemple :
 
 ```sql
 SELECT s.CustomerID,
@@ -213,7 +213,7 @@ Pour réactiver la rétroaction d’allocation de mémoire en mode batch pour to
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
-Vous pouvez aussi désactiver la rétroaction d’allocation de mémoire en mode batch pour une requête spécifique en désignant `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Exemple :
+Vous pouvez aussi désactiver la rétroaction d’allocation de mémoire en mode batch pour une requête spécifique en désignant `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Par exemple :
 
 ```sql
 SELECT * FROM Person.Address  
@@ -263,7 +263,7 @@ Pour réactiver le retour d’allocation de mémoire en mode ligne pour toutes l
 ALTER DATABASE SCOPED CONFIGURATION SET ROW_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
-Vous pouvez aussi désactiver la rétroaction d’allocation de mémoire en mode ligne pour une requête spécifique en désignant `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Exemple :
+Vous pouvez aussi désactiver la rétroaction d’allocation de mémoire en mode ligne pour une requête spécifique en désignant `DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Par exemple :
 
 ```sql
 SELECT * FROM Person.Address  
@@ -353,7 +353,7 @@ Pour réactiver l’exécution entrelacée pour toutes les exécutions de requê
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
-Vous pouvez aussi désactiver l’exécution entrelacée pour une requête spécifique en désignant `DISABLE_INTERLEAVED_EXECUTION_TVF` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Exemple :
+Vous pouvez aussi désactiver l’exécution entrelacée pour une requête spécifique en désignant `DISABLE_INTERLEAVED_EXECUTION_TVF` en tant qu’[indicateur de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint). Par exemple :
 
 ```sql
 SELECT [fo].[Order Key], [fo].[Quantity], [foo].[OutlierEventQuantity]
@@ -505,4 +505,4 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Jointures](../../relational-databases/performance/joins.md)    
 [Illustration du traitement de requêtes adaptatif](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Illustration du traitement de requêtes (QP) intelligent](https://github.com/joesackmsft/Conferences/blob/master/IQPDemos/IQP_Demo_ReadMe.md)   
+[Illustration du traitement de requêtes (QP) intelligent](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

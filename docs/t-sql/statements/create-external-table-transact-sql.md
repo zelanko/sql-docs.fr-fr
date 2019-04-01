@@ -22,12 +22,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06fc940fad53ee37f4e97a6883a99666722a05bf
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 99f23b651bad438154f1c38117ea1a3f9f3d9a5c
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852914"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658373"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -239,7 +239,7 @@ La clause OBJECT_NAME offre la possibilité de mapper la définition de table ex
 DISTRIBUTION  
 Facultatif. Cet argument est obligatoire uniquement pour les bases de données de type SHARD_MAP_MANAGER. Cet argument contrôle si une table est traitée comme une table shardée ou une table répliquée. Avec les tables **SHARDED** (*nom de colonne*), les données des différentes tables ne se chevauchent pas. **REPLICATED** spécifie que les tables contiennent les mêmes données sur chaque partition. **ROUND_ROBIN** indique qu’une méthode spécifique à l’application est utilisée pour distribuer les données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite les autorisations utilisateur suivantes :  
   
 -   **CREATE TABLE**  
@@ -283,7 +283,7 @@ Seules les instructions DDL suivantes sont autorisées avec les tables externes 
 -   CREATE TABLE et DROP TABLE  
   
 -   CREATE STATISTICS et DROP STATISTICS  
-Remarque : L’utilisation de CREATE STATISTICS et de DROP STATISTICS sur les tables externes n’est pas prise en charge dans Azure SQL Database. 
+Remarque : L’utilisation de CREATE STATISTICS et de DROP STATISTICS sur les tables externes n’est pas prise en charge dans Azure SQL Database. 
   
 -   CREATE VIEW et DROP VIEW  
   
@@ -343,7 +343,7 @@ WITH (
   
 ```  
   
-### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>b. Créer une table externe avec des données au format RCFile  
+### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>B. Créer une table externe avec des données au format RCFile  
 Cet exemple montre toutes les étapes nécessaires à la création d’une table externe contenant des données au format RCFile. Il définit la source de données externe *mydatasource_rc* et le format de fichier externe *myfileformat_rc*. Ces objets de niveau base de données sont ensuite référencés dans l’instruction CREATE EXTERNAL TABLE. Pour plus d’informations, consultez [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md) et [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md).  
   
 ```sql
@@ -555,7 +555,6 @@ FROM ClickStream
 ```  
   
 ## <a name="see-also"></a> Voir aussi  
-[Exemples de requêtes de métadonnées courantes (SQL Server PDW)](https://msdn.microsoft.com/733fc99b-b9f6-4a29-b085-a1bd4f09f2ed)   
 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   
 [CREATE EXTERNAL FILE FORMAT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)   
 [CREATE EXTERNAL TABLE AS SELECT &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-as-select-transact-sql.md)   

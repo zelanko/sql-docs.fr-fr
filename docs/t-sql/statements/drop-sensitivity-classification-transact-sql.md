@@ -1,6 +1,6 @@
 ---
 title: DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.technology: t-sql
@@ -25,15 +25,15 @@ helpviewer_keywords:
 - information types
 - data classification
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 82bd6847bd50d8ba43795f56deab4a6f08cc29cc
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 871822e57e9109455614e1391a28d87a6d9e6b90
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980105"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493091"
 ---
 # <a name="drop-sensitivity-classification-transact-sql"></a>DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Supprime les métadonnées de classification de sensibilité d’une ou de plusieurs colonnes de base de données.
 
@@ -62,7 +62,7 @@ Nom de la colonne de base de données contenant la classification à supprimer. 
 
 - Plusieurs classifications d’objet peuvent être supprimées avec une seule instruction « DROP SENSITIVITY CLASSIFICATION ».
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Requiert une autorisation ALTER ANY SENSITIVITY CLASSIFICATION. La classification ALTER ANY SENSITIVITY CLASSIFICATION est impliquée par l’autorisation de base de données ALTER, ou par l’autorisation de serveur CONTROL SERVER.
 
@@ -79,7 +79,7 @@ DROP SENSITIVITY CLASSIFICATION FROM
     dbo.sales.price
 ```
 
-### <a name="b-dropping-classification-from-multiple-columns"></a>b. Suppression de la classification de plusieurs colonnes
+### <a name="b-dropping-classification-from-multiple-columns"></a>B. Suppression de la classification de plusieurs colonnes
 
 L'exemple de code suivant supprime la classification des colonnes `dbo.sales.price`, `dbo.sales.discount` et `SalesLT.Customer.Phone`.  
 

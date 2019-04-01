@@ -11,15 +11,15 @@ helpviewer_keywords:
 - granting permissions [SQL Server], XML schema collections
 - ALTER permission
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5acba25c4a393723c4311cc0070b6dee165757c2
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 556c4cb0a5b51adcd87f4308e296459650eeadc1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256654"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510426"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>Accorder des autorisations sur une collection de schémas XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>b. Attribution d'autorisations pour utiliser une collection de schémas XML existante  
+### <a name="b-granting-permission-to-use-an-existing-xml-schema-collection"></a>B. Attribution d'autorisations pour utiliser une collection de schémas XML existante  
  L'exemple suivant montre plus en détail le modèle d'autorisations pour la collection de schémas XML. Il montre les différentes autorisations nécessaires à la création et à l'utilisation de la collection de schémas XML.  
   
  Cet exemple crée une base de données de test et un utilisateur, `TestLogin1`. `TestLogin1` crée une collection de schémas XML dans la base de données. La connexion crée ensuite une table et utilise la collection de schémas XML pour créer une colonne xml typée. L'utilisateur insère ensuite les données et les interroge. Toutes ces étapes nécessitent les autorisations de schéma nécessaires, comme illustré dans le code.  
