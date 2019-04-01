@@ -2,7 +2,7 @@
 title: Prise en charge d’UTF-8 dans le pilote OLE DB pour SQL Server | Microsoft Docs
 description: Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server
 ms.custom: ''
-ms.date: 02/11/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: f410ddf4e3843936da6f93f488f379feea863e59
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.openlocfilehash: b7f138438d522c9da1b7ef74acbaf963e17d6144
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744820"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492601"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>Prise en charge d’UTF-8 dans OLE DB Driver pour SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "56744820"
 
 Pilote Microsoft OLE DB pour SQL Server (version 18.2.1) prend en charge l’encodage UTF-8 du serveur. Pour plus d’informations sur la prise en charge de SQL Server UTF-8, consultez :
 - [Prise en charge d'Unicode et du classement](../../../relational-databases/collations/collation-and-unicode-support.md)
-- [Prise en charge d’UTF-8 (CTP 2.2)](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-22)
+- [Prise en charge d’UTF-8](../../../sql-server/what-s-new-in-sql-server-ver15.md#utf-8-support-ctp-23)
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>Insertion de données dans un format UTF-8 codé colonne CHAR ou VARCHAR
 Lorsque vous créez une mémoire tampon de paramètre d’entrée pour l’insertion, la mémoire tampon est décrite à l’aide d’un tableau de [structures DBBINDING](https://go.microsoft.com/fwlink/?linkid=2071182). Chaque structure DBBINDING associe un seul paramètre à la mémoire tampon du consommateur et contient des informations telles que la longueur et le type de la valeur de données. Pour une mémoire tampon d’entrée de paramètre de type CHAR, le *wType* du DBBINDING structure doit être définie sur DBTYPE_STR. Pour une mémoire tampon d’entrée de paramètre de type WCHAR, le *wType* du DBBINDING structure doit être définie sur DBTYPE_WSTR.

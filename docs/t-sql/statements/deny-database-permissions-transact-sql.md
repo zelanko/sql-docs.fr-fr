@@ -72,7 +72,7 @@ AS \<database_principal> spécifie un principal dont le principal qui exécute c
 *Database_role* spécifie un rôle de base de données.
 
 *Application_role*
-** s’applique à ** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+**s’applique à** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 Spécifie un rôle d'application.
 

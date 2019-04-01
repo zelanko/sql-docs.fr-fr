@@ -2523,6 +2523,8 @@ items:
         href: ../connect/jdbc/using-parameter-metadata.md
       - name: Utilisation des types de données de base
         href: ../connect/jdbc/using-basic-data-types.md
+      - name: Utilisation du type de données SQL_variant
+        href: ../connect/jdbc/using-sql-variant-datatype.md
       - name: Utilisation des types de données spatiales
         href: ../connect/jdbc/use-spatial-datatypes.md
       - name: Présentation des transactions
@@ -2557,7 +2559,7 @@ items:
         href: ../connect/jdbc/using-connection-pooling.md
       - name: Informations de référence sur l’API Always Encrypted pour le pilote JDBC
         href: ../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md
-      - name: Utilisation de l’authentification intégrée Kerberos pour se connecter à SQL Server
+      - name: Utilisation de l'authentification intégrée Kerberos pour se connecter à SQL Server
         href: ../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md
       - name: Utilisation d'une procédure stockée avec un nombre de mises à jour
         href: ../connect/jdbc/using-a-stored-procedure-with-an-update-count.md
@@ -2607,7 +2609,7 @@ items:
         href: ../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md
       - name: Utilisation d'une procédure stockée avec des paramètres de sortie
         href: ../connect/jdbc/using-a-stored-procedure-with-output-parameters.md
-      - name: Exécution d'opérations de traitement par lot
+      - name: Exécution d'opérations par lot
         href: ../connect/jdbc/performing-batch-operations.md
       - name: Types définis par l’utilisateur
         href: ../connect/jdbc/user-defined-types.md
@@ -2617,10 +2619,13 @@ items:
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Utilisation d'instructions avec des procédures stockées
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
-      - name: Exemple de version Azure Key Vault 6.0.0
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
-      - name: Exemple de version Azure Key Vault 6.2.2
-        href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+      - name: Exemples Azure Key Vault, pour 7.0 et autres
+        href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
+        items:
+        - name: Exemple de version Azure Key Vault 6.2.2
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.2.2.md
+        - name: Exemple de version Azure Key Vault 6.0.0
+          href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 - name: Node.js
   items:
   - name: Pilote Node.js pour SQL Server
@@ -7644,9 +7649,9 @@ items:
     href: ../ado/reference/ado-programmer-s-reference.md
   - name: Glossaire ADO
     href: ../ado/ado-glossary.md
-ms.openlocfilehash: 67cfc70b3bdd5744c91ace414dc04d4b9090f4d7
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: f55c9266746f452d2592d7d0ded5993ebb4fab80
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478304"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566638"
