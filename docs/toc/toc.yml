@@ -3982,6 +3982,8 @@ items:
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
     - name: Customer Experience Improvement Program (CEIP)
       href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
+    - name: Supplément de confidentialité
+      href: ../sql-server/sql-server-privacy.md
     - name: Configurer SQL Server pour envoyer des commentaires à Microsoft
       href: ../sql-server/sql-server-customer-feedback.md
   - name: Notes de publication
@@ -6898,42 +6900,51 @@ items:
               href: ../relational-databases/performance-monitor/sql-server-workload-group-stats-object.md
   - name: Paramétrer
     items:
-    - name: Paramétrage automatique
-      href: ../relational-databases/automatic-tuning/automatic-tuning.md
-    - name: Estimation de la cardinalité
-      href: ../relational-databases/performance/cardinality-estimation-sql-server.md
-    - name: Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N
-      href: ../relational-databases/performance/configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
-    - name: Observations relatives à l'utilisation de serveurs de test
-      href: ../relational-databases/performance/considerations-for-using-test-servers.md
-    - name: Traitement de requêtes intelligent
-      displayName: adaptive
-      href: ../relational-databases/performance/intelligent-query-processing.md
-    - name: Centre de performances
-      href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
-    - name: Réduire la charge de paramétrage du serveur de production
-      href: ../relational-databases/performance/reduce-the-production-server-tuning-load.md
-    - name: Opérateurs de plan d’exécution de requêtes
-      href: ../relational-databases/showplan-logical-and-physical-operators-reference.md
+    - name: Concepts
+      items:
+      - name: Paramétrage automatique
+        href: ../relational-databases/automatic-tuning/automatic-tuning.md
+      - name: Estimation de la cardinalité
+        href: ../relational-databases/performance/cardinality-estimation-sql-server.md
+      - name: Observations relatives à l'utilisation de serveurs de test
+        href: ../relational-databases/performance/considerations-for-using-test-servers.md
+      - name: Traitement de requêtes intelligent
+        href: ../relational-databases/performance/intelligent-query-processing.md
+      - name: Centre de performances
+        href: ../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md
+    - name: Procédures
+      items:
+      - name: Configuration des espaces de stockage avec un cache en écriture différée NVDIMM-N
+        href: ../relational-databases/performance/configuring-storage-spaces-with-a-nvdimm-n-write-back-cache.md
     - name: Assistant Paramétrage de base de données
       href: ../relational-databases/performance/database-engine-tuning-advisor.md
       items:
-      - name: Démarrer
-        href: ../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md
-      - name: Utiliser la sortie
-        href: ../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
-      - name: Recommandations relatives aux index ColumnStore
-        href: ../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
-      - name: Paramétrage d’une base de données avec une charge de travail du Magasin des requêtes
-        href: ../relational-databases/performance/tuning-database-using-workload-from-query-store.md
-      - name: Recommandations relatives aux améliorations de performances
-        href: ../relational-databases/performance/performance-improvements-using-dta-recommendations.md
+      - name: Concepts
+        items:
+        - name: Réduire la charge de paramétrage du serveur de production
+          href: ../relational-databases/performance/reduce-the-production-server-tuning-load.md
+        - name: Recommandations relatives aux améliorations de performances
+          href: ../relational-databases/performance/performance-improvements-using-dta-recommendations.md
+      - name: Procédures
+        items:
+        - name: Démarrer
+          href: ../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md
+        - name: Utiliser la sortie
+          href: ../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md
+        - name: Recommandations relatives aux index ColumnStore
+          href: ../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md
+        - name: Paramétrage d’une base de données avec une charge de travail du Magasin des requêtes
+          href: ../relational-databases/performance/tuning-database-using-workload-from-query-store.md
     - name: Plans d'exécution
       href: ../relational-databases/performance/execution-plans.md
       items:
-      - name: Infrastructure du profilage de requête
-        href: ../relational-databases/performance/query-profiling-infrastructure.md
-      - name: Plans d'exécution
+      - name: Concepts
+        items:
+        - name: Infrastructure du profilage de requête
+          href: ../relational-databases/performance/query-profiling-infrastructure.md
+        - name: Opérateurs de plan d’exécution de requêtes
+          href: ../relational-databases/showplan-logical-and-physical-operators-reference.md
+      - name: Procédures
         items:
         - name: Afficher et enregistrer
           href: ../relational-databases/performance/display-and-save-execution-plans.md
@@ -6943,182 +6954,188 @@ items:
           href: ../relational-databases/performance/display-an-actual-execution-plan.md
         - name: Enregistrer au format XML
           href: ../relational-databases/performance/save-an-execution-plan-in-xml-format.md
-      - name: Comparer et analyser des plans d’exécution
-        href: ../relational-databases/performance/compare-and-analyze-execution-plans.md
-        items:
-        - name: Comparer des plans d’exécution
-          href: ../relational-databases/performance/compare-execution-plans.md
-        - name: Analyser un plan d’exécution réel
-          href: ../relational-databases/performance/analyze-an-actual-execution-plan.md
+        - name: Comparer et analyser des plans d’exécution
+          href: ../relational-databases/performance/compare-and-analyze-execution-plans.md
+          items:
+          - name: Comparer des plans d’exécution
+            href: ../relational-databases/performance/compare-execution-plans.md
+          - name: Analyser un plan d’exécution réel
+            href: ../relational-databases/performance/analyze-an-actual-execution-plan.md
     - name: OLTP en mémoire
       href: ../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md
       items:
-      - name: Inventaire des technologies pour accélérer les performances
-        href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
-      - name: Scénarios d’utilisation
-        href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
-      - name: Internals for SQL Server 2016 - Livre blanc
-        href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
-      - name: Planifier votre adoption des fonctionnalités
-        href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
-      - name: Spécifications
-        href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
-      - name: Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire
-        href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
-      - name: Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire
-        href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
-      - name: Index
-        href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
-      - name: Résolution des problèmes liés aux index de hachage
-        href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
-      - name: Exemples de code OLTP en mémoire
-        href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
+      - name: Exemples
         items:
-        - name: "Démonstration : optimisation des performances de l'OLTP en mémoire"
-          href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
-        - name: Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif
-          href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
-        - name: Partitionnement au niveau de l'application
-          href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
-        - name: Exemple de base de données pour OLTP en mémoire
-          href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
-        - name: Matériel pour l’OLTP en mémoire
-          href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
-      - name: Tables optimisées en mémoire
-        href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
-        items:
-        - name: Introduction
-          href: ../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
-        - name: Compilation native
-          href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
-        - name: Modification des tables
-          href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
-        - name: Transactions
-          href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
-        - name: Modèle d’application pour le partitionnement
-          href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
-        - name: Statistiques
-          href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
-        - name: Taille de ligne et de table
-          href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
-        - name: Guide relatif au traitement des requêtes
-          href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
-      - name: procédures stockées compilées en mode natif
-        href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
-        items:
-        - name: Création de procédures stockées compilées en mode natif
-          href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
-        - name: Altering Natively Compiled T-SQL Modules
-          href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
-        - name: Blocs Atomic
-          href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
-        - name: Procédures stockées compilées en mode natif et options SET d’exécution
-          href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
-        - name: Meilleures pratiques pour appeler des procédures stockées compilées en mode natif
-          href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
-        - name: Surveillance des performances des procédures stockées compilées en mode natif
-          href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
-        - name: Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
-          href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
-      - name: Estimer les besoins en mémoire
-        href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
-        items:
-        - name: Lier une base de données à un pool de ressources
-          href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
-        - name: Superviser l’utilisation de la mémoire et résoudre les problèmes associés
-          href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
-        - name: Résoudre les problèmes de mémoire insuffisante
-          href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
-        - name: Restaurer une base de données et la lier à un pool de ressources
-          href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
-        - name: Garbage collection
-          href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
-      - name: Création et gestion du stockage
-        href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
-        items:
-        - name: Configuration du stockage
-          href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
-        - name: Groupe de fichiers mémoire optimisé
-          href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
-        - name: Durabilité
-          href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
-        - name: Opération de point de contrôle
-          href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
-        - name: Définition de la durabilité
-          href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
-        - name: Comparaison du stockage des tables sur disque et du stockage des tables à mémoire optimisée
-          href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
-        - name: Extensibilité
-          href: ../relational-databases/in-memory-oltp/scalability.md
-      - name: Sauvegarde d’une base de données
-        href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
-        items:
-        - name: Restauration fragmentaire
-          href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
-        - name: Restauration et récupération
-          href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
-      - name: Prise en charge de SQL Server
-        href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
-        items:
-        - name: Fonctions non prises en charge
-          href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
-        - name: Objets de gestion
-          href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
-        - name: SQL Server Integration Services
-          href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
-        - name: SQL Server Management Studio
-          href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
-        - name: Haute disponibilité
-          href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
-        - name: Prise en charge T-SQL
-          href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
+        - name: Exemples de code OLTP en mémoire
+          href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
           items:
-          - name: Types de données
-            href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
-          - name: Accès aux tables à mémoire optimisée à l’aide du T-SQL interprété
-            href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
-          - name: Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
-            href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
-          - name: DDL pris en charge pour les modules T-SQL compilés en mode natif
-            href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
-          - name: Constructions T-SQL non prises en charge par l’OLTP en mémoire
-            href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
-      - name: Migration vers OLTP en mémoire
-        href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
+          - name: "Démonstration : optimisation des performances de l'OLTP en mémoire"
+            href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
+          - name: Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif
+            href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
+          - name: Partitionnement au niveau de l'application
+            href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
+          - name: Exemple de base de données pour OLTP en mémoire
+            href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+      - name: Concepts
         items:
-        - name: Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
-          href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
-        - name: Conseiller d'optimisation de la mémoire
-          href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
-        - name: Conseiller de compilation native
-          href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
-        - name: Applet de commande PowerShell pour l’évaluation de la migration
-          href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
-        - name: Implémentation de SQL_VARIANT dans une table optimisée en mémoire
-          href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
-        - name: Migration de colonnes calculées
-          href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
-        - name: Migration de déclencheurs
-          href: ../relational-databases/in-memory-oltp/migrating-triggers.md
-        - name: Requêtes de bases de données croisées
-          href: ../relational-databases/in-memory-oltp/cross-database-queries.md
-        - name: Implémentation d'IDENTITY dans une table optimisée en mémoire
-          href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
-        - name: Problèmes de migration pour les procédures stockées compilées en mode natif
-          href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
+        - name: Scénarios d’utilisation
+          href: ../relational-databases/in-memory-oltp/overview-and-usage-scenarios.md
+        - name: Planifier votre adoption des fonctionnalités
+          href: ../relational-databases/in-memory-oltp/plan-your-adoption-of-in-memory-oltp-features-in-sql-server.md
+        - name: Spécifications
+          href: ../relational-databases/in-memory-oltp/requirements-for-using-memory-optimized-tables.md
+        - name: Fonctions scalaires définies par l’utilisateur pour l’OLTP en mémoire
+          href: ../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md
+        - name: Index
+          href: ../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md
+        - name: Tables optimisées en mémoire
+          href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
           items:
-          - name: Création de tables et accès dans TempDB à partir de procédures stockées compilées en mode natif
-            href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
-          - name: Simulation d’une instruction IF-WHILE EXISTS dans un module compilé en mode natif
-            href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
-          - name: Implémentation de la fonctionnalité MERGE dans une procédure stockée compilée en mode natif
-            href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
-          - name: Implémentation d’une expression CASE dans une procédure stockée compilée en mode natif
-            href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
-          - name: Implémentation d’UPDATE avec FROM ou des sous-requêtes
-            href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
-          - name: Implémentation d'une jointure externe
-            href: ../relational-databases/in-memory-oltp/implementing-an-outer-join.md
+          - name: Vue d’ensemble
+            href: ../relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables.md
+          - name: Compilation native
+            href: ../relational-databases/in-memory-oltp/native-compilation-of-tables-and-stored-procedures.md
+          - name: Modification des tables
+            href: ../relational-databases/in-memory-oltp/altering-memory-optimized-tables.md
+          - name: Transactions
+            href: ../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md
+          - name: Modèle d’application pour le partitionnement
+            href: ../relational-databases/in-memory-oltp/application-pattern-for-partitioning-memory-optimized-tables.md
+          - name: Statistiques
+            href: ../relational-databases/in-memory-oltp/statistics-for-memory-optimized-tables.md
+          - name: Taille de ligne et de table
+            href: ../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md
+          - name: Guide relatif au traitement des requêtes
+            href: ../relational-databases/in-memory-oltp/a-guide-to-query-processing-for-memory-optimized-tables.md
+          - name: procédures stockées compilées en mode natif
+            href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md
+            items:
+            - name: Création de procédures stockées compilées en mode natif
+              href: ../relational-databases/in-memory-oltp/creating-natively-compiled-stored-procedures.md
+            - name: Altering Natively Compiled T-SQL Modules
+              href: ../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md
+            - name: Blocs Atomic
+              href: ../relational-databases/in-memory-oltp/atomic-blocks-in-native-procedures.md
+            - name: Procédures stockées compilées en mode natif et options SET d’exécution
+              href: ../relational-databases/in-memory-oltp/natively-compiled-stored-procedures-and-execution-set-options.md
+            - name: Meilleures pratiques pour appeler des procédures stockées compilées en mode natif
+              href: ../relational-databases/in-memory-oltp/best-practices-for-calling-natively-compiled-stored-procedures.md
+            - name: Surveillance des performances des procédures stockées compilées en mode natif
+              href: ../relational-databases/in-memory-oltp/monitoring-performance-of-natively-compiled-stored-procedures.md
+            - name: Appeler des procédures stockées compilées en mode natif à partir d'applications d'accès aux données
+              href: ../relational-databases/in-memory-oltp/calling-natively-compiled-stored-procedures-from-data-access-applications.md
+          - name: Estimer les besoins en mémoire
+            href: ../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md
+            items:
+            - name: Lier une base de données à un pool de ressources
+              href: ../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md
+            - name: Superviser l’utilisation de la mémoire et résoudre les problèmes associés
+              href: ../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md
+            - name: Résoudre les problèmes de mémoire insuffisante
+              href: ../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md
+            - name: Restaurer une base de données et la lier à un pool de ressources
+              href: ../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md
+            - name: Garbage collection
+              href: ../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md
+          - name: Création et gestion du stockage
+            href: ../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md
+            items:
+            - name: Configuration du stockage
+              href: ../relational-databases/in-memory-oltp/configuring-storage-for-memory-optimized-tables.md
+            - name: Groupe de fichiers mémoire optimisé
+              href: ../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md
+            - name: Durabilité
+              href: ../relational-databases/in-memory-oltp/durability-for-memory-optimized-tables.md
+            - name: Opération de point de contrôle
+              href: ../relational-databases/in-memory-oltp/checkpoint-operation-for-memory-optimized-tables.md
+            - name: Définition de la durabilité
+              href: ../relational-databases/in-memory-oltp/defining-durability-for-memory-optimized-objects.md
+            - name: Comparaison du stockage des tables sur disque et du stockage des tables à mémoire optimisée
+              href: ../relational-databases/in-memory-oltp/comparing-disk-based-table-storage-to-memory-optimized-table-storage.md
+            - name: Extensibilité
+              href: ../relational-databases/in-memory-oltp/scalability.md
+          - name: Sauvegarde d’une base de données
+            href: ../relational-databases/in-memory-oltp/backing-up-a-database-with-memory-optimized-tables.md
+            items:
+            - name: Restauration fragmentaire
+              href: ../relational-databases/in-memory-oltp/piecemeal-restore-of-databases-with-memory-optimized-tables.md
+            - name: Restauration et récupération
+              href: ../relational-databases/in-memory-oltp/restore-and-recovery-of-memory-optimized-tables.md
+          - name: Prise en charge de SQL Server
+            href: ../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md
+            items:
+            - name: Fonctions non prises en charge
+              href: ../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md
+            - name: Objets de gestion
+              href: ../relational-databases/in-memory-oltp/sql-server-management-objects-support-for-in-memory-oltp.md
+            - name: SQL Server Integration Services
+              href: ../relational-databases/in-memory-oltp/sql-server-integration-services-support-for-in-memory-oltp.md
+            - name: SQL Server Management Studio
+              href: ../relational-databases/in-memory-oltp/sql-server-management-studio-support-for-in-memory-oltp.md
+            - name: Haute disponibilité
+              href: ../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md
+            - name: Prise en charge T-SQL
+              href: ../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md
+              items:
+              - name: Types de données
+                href: ../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md
+              - name: Accès aux tables à mémoire optimisée à l’aide du T-SQL interprété
+                href: ../relational-databases/in-memory-oltp/accessing-memory-optimized-tables-using-interpreted-transact-sql.md
+              - name: Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif
+                href: ../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md
+              - name: DDL pris en charge pour les modules T-SQL compilés en mode natif
+                href: ../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md
+              - name: Constructions T-SQL non prises en charge par l’OLTP en mémoire
+                href: ../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md
+          - name: Migration vers OLTP en mémoire
+            href: ../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md
+            items:
+            - name: Déterminer si un tableau ou une procédure stockée doit être déplacée vers l'OLTP en mémoire
+              href: ../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md
+            - name: Conseiller d'optimisation de la mémoire
+              href: ../relational-databases/in-memory-oltp/memory-optimization-advisor.md
+            - name: Conseiller de compilation native
+              href: ../relational-databases/in-memory-oltp/native-compilation-advisor.md
+            - name: Applet de commande PowerShell pour l’évaluation de la migration
+              href: ../relational-databases/in-memory-oltp/powershell-cmdlet-for-migration-evaluation.md
+            - name: Implémentation de SQL_VARIANT dans une table optimisée en mémoire
+              href: ../relational-databases/in-memory-oltp/implementing-sql-variant-in-a-memory-optimized-table.md
+            - name: Migration de colonnes calculées
+              href: ../relational-databases/in-memory-oltp/migrating-computed-columns.md
+            - name: Migration de déclencheurs
+              href: ../relational-databases/in-memory-oltp/migrating-triggers.md
+            - name: Requêtes de bases de données croisées
+              href: ../relational-databases/in-memory-oltp/cross-database-queries.md
+            - name: Implémentation d'IDENTITY dans une table optimisée en mémoire
+              href: ../relational-databases/in-memory-oltp/implementing-identity-in-a-memory-optimized-table.md
+            - name: Problèmes de migration pour les procédures stockées compilées en mode natif
+              href: ../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md
+              items:
+              - name: Création de tables et accès dans TempDB à partir de procédures stockées compilées en mode natif
+                href: ../relational-databases/in-memory-oltp/create-and-access-tables-in-tempdb-from-stored-procedures.md
+              - name: Simulation d’une instruction IF-WHILE EXISTS dans un module compilé en mode natif
+                href: ../relational-databases/in-memory-oltp/simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md
+              - name: Implémentation de la fonctionnalité MERGE dans une procédure stockée compilée en mode natif
+                href: ../relational-databases/in-memory-oltp/implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md
+              - name: Implémentation d’une expression CASE dans une procédure stockée compilée en mode natif
+                href: ../relational-databases/in-memory-oltp/implementing-a-case-expression-in-a-natively-compiled-stored-procedure.md
+              - name: Implémentation d’UPDATE avec FROM ou des sous-requêtes
+                href: ../relational-databases/in-memory-oltp/implementing-update-with-from-or-subqueries.md
+              - name: Implémentation d'une jointure externe
+                href: ../relational-databases/in-memory-oltp/implementing-an-outer-join.md
+      - name: Procédures
+        items:
+        - name: Inventaire des technologies pour accélérer les performances
+          href: ../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md
+        - name: Table temporaire et variable de table plus rapides à l’aide de l’optimisation en mémoire
+          href: ../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md
+        - name: Résolution des problèmes liés aux index de hachage
+          href: ../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md
+      - name: References
+        items:
+        - name: Internals for SQL Server 2016 - Livre blanc
+          href: ../relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016.md
     - name: Partitions
       href: ../relational-databases/partitions/partitioned-tables-and-indexes.md
       items:
@@ -7154,44 +7171,41 @@ items:
       - name: Valider des repères de plan après la mise à niveau
         href: ../relational-databases/performance/validate-plan-guides-after-upgrade.md
     - name: Gouverneur de ressources
+      href: ../relational-databases/resource-governor/resource-governor.md
       items:
-      - name: Vue d’ensemble
-        href: ../relational-databases/resource-governor/resource-governor.md
-      - name: Procédures
+      - name: Activer
+        href: ../relational-databases/resource-governor/enable-resource-governor.md
+      - name: Disable
+        href: ../relational-databases/resource-governor/disable-resource-governor.md
+      - name: Configurer Resource Governor à l'aide d'un modèle
+        href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
+      - name: Afficher les propriétés du gouverneur de ressources
+        href: ../relational-databases/resource-governor/view-resource-governor-properties.md
+      - name: Pool de ressources
+        href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
         items:
-        - name: Activer
-          href: ../relational-databases/resource-governor/enable-resource-governor.md
-        - name: Disable
-          href: ../relational-databases/resource-governor/disable-resource-governor.md
-        - name: Configurer Resource Governor à l'aide d'un modèle
-          href: ../relational-databases/resource-governor/configure-resource-governor-using-a-template.md
-        - name: Afficher les propriétés du gouverneur de ressources
-          href: ../relational-databases/resource-governor/view-resource-governor-properties.md
-        - name: Pool de ressources
-          href: ../relational-databases/resource-governor/resource-governor-resource-pool.md
-          items:
-          - name: Créer
-            href: ../relational-databases/resource-governor/create-a-resource-pool.md
-          - name: Changer les paramètres
-            href: ../relational-databases/resource-governor/change-resource-pool-settings.md
-          - name: DELETE
-            href: ../relational-databases/resource-governor/delete-a-resource-pool.md
-        - name: Groupe de charges de travail
-          href: ../relational-databases/resource-governor/resource-governor-workload-group.md
-          items:
-          - name: Créer
-            href: ../relational-databases/resource-governor/create-a-workload-group.md
-          - name: Changer les paramètres
-            href: ../relational-databases/resource-governor/change-workload-group-settings.md
-          - name: Déplacer
-            href: ../relational-databases/resource-governor/move-a-workload-group.md
-          - name: DELETE
-            href: ../relational-databases/resource-governor/delete-a-workload-group.md
-        - name: Fonction classifieur
-          href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
-          items:
-          - name: Créer et tester une fonction classifieur définie par l’utilisateur
-            href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
+        - name: Créer
+          href: ../relational-databases/resource-governor/create-a-resource-pool.md
+        - name: Changer les paramètres
+          href: ../relational-databases/resource-governor/change-resource-pool-settings.md
+        - name: DELETE
+          href: ../relational-databases/resource-governor/delete-a-resource-pool.md
+      - name: Groupe de charges de travail
+        href: ../relational-databases/resource-governor/resource-governor-workload-group.md
+        items:
+        - name: Créer
+          href: ../relational-databases/resource-governor/create-a-workload-group.md
+        - name: Changer les paramètres
+          href: ../relational-databases/resource-governor/change-workload-group-settings.md
+        - name: Déplacer
+          href: ../relational-databases/resource-governor/move-a-workload-group.md
+        - name: DELETE
+          href: ../relational-databases/resource-governor/delete-a-workload-group.md
+      - name: Fonction classifieur
+        href: ../relational-databases/resource-governor/resource-governor-classifier-function.md
+        items:
+        - name: Créer et tester une fonction classifieur définie par l’utilisateur
+          href: ../relational-databases/resource-governor/create-and-test-a-classifier-user-defined-function.md
     - name: Statistiques
       href: ../relational-databases/statistics/statistics.md
       items:
@@ -17257,9 +17271,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Gestion des espaces de noms dans XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: 0683d445dc2cdfd5df37354a7922774433bab8b0
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: f2691a64da3ac891be319d82d427c7ed9b5db222
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658493"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788156"
