@@ -905,6 +905,8 @@ items:
           href: ../database-engine/database-mirroring/view-the-state-of-a-mirrored-database-sql-server-management-studio.md
         - name: Suspendre ou reprendre
           href: ../database-engine/database-mirroring/pause-or-resume-a-database-mirroring-session-sql-server.md
+        - name: Établir une session
+          href: ../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md
         - name: Connecter des clients
           href: ../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md
         - name: Seuils d’avertissement des performances
@@ -4123,6 +4125,8 @@ items:
       href: ../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md
     - name: Activer l’option Verrouiller les pages en mémoire
       href: ../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md
+    - name: Pool de mémoires tampons hybride
+      href: ../database-engine/configure-windows/hybrid-buffer-pool.md
     - name: Changer le mode d'authentification du serveur
       href: ../database-engine/configure-windows/change-server-authentication-mode.md
     - name: Service SQL Writer
@@ -6978,6 +6982,8 @@ items:
           href: ../relational-databases/in-memory-oltp/application-level-partitioning.md
         - name: Exemple de base de données pour OLTP en mémoire
           href: ../relational-databases/in-memory-oltp/sample-database-for-in-memory-oltp.md
+        - name: Matériel pour l’OLTP en mémoire
+          href: ../relational-databases/in-memory-oltp/blog-hardware-in-memory-oltp.md
       - name: Tables optimisées en mémoire
         href: ../relational-databases/in-memory-oltp/memory-optimized-tables.md
         items:
@@ -7950,6 +7956,8 @@ items:
         href: ../relational-databases/security/strong-passwords.md
       - name: Sécurité au niveau des lignes
         href: ../relational-databases/security/row-level-security.md
+      - name: Masquage dynamique des données
+        href: ../relational-databases/security/dynamic-data-masking.md
       - name: Masquage statique des données
         href: ../relational-databases/security/static-data-masking.md
       - name: Certificats et clés asymétriques
@@ -10972,7 +10980,7 @@ items:
         href: ../relational-databases/event-classes/cursorclose-event-class.md
       - name: Classe d'événements CursorExecute
         href: ../relational-databases/event-classes/cursorexecute-event-class.md
-      - name: CursorImplicitConversion (classe d'événements)
+      - name: Classe d'événements CursorImplicitConversion
         href: ../relational-databases/event-classes/cursorimplicitconversion-event-class.md
       - name: Classe d'événements CursorOpen
         href: ../relational-databases/event-classes/cursoropen-event-class.md
@@ -15281,6 +15289,8 @@ items:
         href: ../t-sql/data-types/constants-transact-sql.md
       - name: Conversion
         href: ../t-sql/data-types/data-type-conversion-database-engine.md
+      - name: Conversion non déterministe
+        href: ../t-sql/data-types/nondeterministic-convert-date-literals.md
       - name: Priorité
         href: ../t-sql/data-types/data-type-precedence-transact-sql.md
       - name: Synonymes
@@ -16555,6 +16565,8 @@ items:
           href: ../t-sql/statements/restore-statements-labelonly-transact-sql.md
         - name: RESTORE MASTER KEY
           href: ../t-sql/statements/restore-master-key-transact-sql.md
+        - name: RESTORE SERVICE MASTER KEY
+          href: ../t-sql/statements/restore-service-master-key-transact-sql.md
         - name: RESTORE REWINDONLY
           href: ../t-sql/statements/restore-statements-rewindonly-transact-sql.md
         - name: RESTORE VERIFYONLY
@@ -17245,9 +17257,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Gestion des espaces de noms dans XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: a94ce2e407a2a01759189d0a1892847477961d94
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: 0683d445dc2cdfd5df37354a7922774433bab8b0
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618326"
+ms.locfileid: "58658493"
