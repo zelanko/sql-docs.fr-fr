@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_buffer_pool_extension_configuration (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/08/2017
+ms.date: 09/09/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,29 +19,31 @@ ms.assetid: d52cc481-4d29-4f33-b63d-231ec35d092f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ef0eea139b491c565b8635daf69cefff61492688
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6d647fc2a1a4d5f88a85ec5917125527004570c
+ms.sourcegitcommit: 00e0fa2c0b49a1ce94c17b74b4bd5210098f8367
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755837"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58788056"
 ---
 # <a name="sysdmosbufferpoolextensionconfiguration-transact-sql"></a>sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   Retourne les informations de configuration de l'extension du pool de mémoires tampons dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Retourne une ligne pour chaque fichier d'extension du pool de mémoires tampons.  
   
 
   
-|Nom de colonne|Type de données|Description|  
-|-----------------|---------------|-----------------|  
+| Nom de colonne | Type de données | Description |
+| :---------- | :-------- | :---------- |
 |path|**nvarchar**(256)|Chemin d'accès et nom de fichier du cache d'extension du pool de mémoires tampons. Autorise la valeur Null.|  
 |file_id|**Int**|ID du fichier d'extension du pool de mémoires tampons. N'accepte pas la valeur NULL.|  
 |state|**Int**|État de la fonctionnalité d'extension du pool de mémoires tampons. N'accepte pas la valeur NULL.<br /><br /> 0 : Extension du pool de mémoires tampons désactivée<br /><br /> 1 : Désactivation de l'extension du pool de mémoires tampons<br /><br /> 2 : réservé pour un usage ultérieur<br /><br /> 3 : Activation de l'extension du pool de mémoires tampons<br /><br /> 4 : Réservé pour un usage ultérieur<br /><br /> 5 : Extension du pool de mémoires tampons activée|  
-|state_description|**nvarchar**(60)|Décrit l'état de la fonctionnalité d'extension du pool de mémoires tampons. Autorise la valeur NULL.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 1 = BUFFER POOL EXTENSION ENABLED|  
-|current_size_in_kb|**bigint**|Taille actuelle du fichier d'extension du pool de mémoires tampons. N'accepte pas la valeur NULL.|  
-  
-## <a name="permissions"></a>Permissions  
+|state_description|**nvarchar**(60)|Décrit l'état de la fonctionnalité d'extension du pool de mémoires tampons. Autorise la valeur NULL.<br /><br /> 0 = BUFFER POOL EXTENSION DISABLED<br /><br /> 5 = EXTENSION DU POOL DE MÉMOIRES TAMPONS ACTIVÉE|
+|current_size_in_kb|**bigint**|Taille actuelle du fichier d'extension du pool de mémoires tampons. N'accepte pas la valeur NULL.|
+| &nbsp; | &nbsp; | &nbsp; |
+
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="examples"></a>Exemples  
