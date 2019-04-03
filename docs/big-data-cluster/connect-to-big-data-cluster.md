@@ -1,6 +1,6 @@
 ---
 title: Se connecter au maître et HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Découvrez comment vous connecter à l’instance principale de SQL Server et de la passerelle HDFS/Spark pour un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb205f387fb326b1717ec65512a911b2ae244495
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: ed563fe6d0bfd69ce5dfb7484d4213bc9a47dd54
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017705"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860170"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Se connecter à un cluster SQL Server de données volumineux avec Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article décrit comment se connecter à un cluster de données volumineuses de SQL Server 2019 (version préliminaire) à partir d’Azure Data Studio. Il existe deux points de terminaison principales qui servent à interagir avec un cluster de données volumineuses :
 
@@ -67,7 +69,7 @@ Avec la version de février 2019 de Studio de données Azure, se connecter à l�
 
 - L’Explorateur d’objets contient maintenant une nouvelle **Data Services** nœud avec prise en charge avec le bouton droit pour les tâches de cluster de données volumineuses, telles que la création de nouveaux ordinateurs portables ou en soumettant des travaux spark. 
 - Le **Data Services** nœud contient également un **HDFS** dossier pour l’exploration de HDFS et effectuer des actions telles que Create External Table ou d’analyser dans le bloc-notes.
-- Le **tableau de bord Server** pour la connexion contient également des onglets pour **Cluster Big Data de SQL Server** et **SQL Server 2019 (version préliminaire)** lorsque l’extension est installée.
+- Le **tableau de bord Server** pour la connexion contient également des onglets pour **cluster de données volumineux de SQL Server** et **SQL Server 2019 (version préliminaire)** lorsque l’extension est installée.
 
    ![Nœud des Services de données Azure Data Studio](./media/connect-to-big-data-cluster/connect-data-services-node.png)
 

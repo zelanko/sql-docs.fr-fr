@@ -1,23 +1,26 @@
 ---
 title: Déployer des applications à l’aide de mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Déployer un script Python ou R en tant qu’application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: acd7bef7219827eb7a4666d33d6e8477a522e268
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492801"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58871999"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-2019-big-data-cluster-preview"></a>Comment déployer une application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire)
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Comment déployer une application sur un cluster de données volumineux de SQL Server (version préliminaire)
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article décrit comment déployer et gérer le script R et Python en tant qu’application à l’intérieur d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 
@@ -38,7 +41,7 @@ Les types d’applications suivants sont pris en charge :
 ## <a name="prerequisites"></a>Prérequis
 
 - [Cluster de données volumineux de SQL Server 2019](deployment-guidance.md)
-- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
+- [utilitaire de ligne de commande mssqlctl](deploy-install-mssqlctl.md)
 
 ## <a name="capabilities"></a>Fonctions
 
@@ -63,9 +66,9 @@ mssqlctl app create --help
 
 Les sections suivantes décrivent ces commandes plus en détail.
 
-## <a name="log-in"></a>Connectez-vous
+## <a name="sign-in"></a>Connexion
 
-Avant de déployer ou d’interagir avec les applications, vous connecter à votre serveur SQL Server en cluster big data avec le `mssqlctl login` commande. Spécifiez l’adresse IP externe de la `endpoint-service-proxy` service (par exemple : `https://ip-address:30777`), ainsi que le nom d’utilisateur et le mot de passe pour le cluster.
+Avant de déployer ou d’interagir avec les applications, tout d’abord vous connecter à votre serveur SQL Server en cluster big data avec le `mssqlctl login` commande. Spécifiez l’adresse IP externe de la `endpoint-service-proxy` service (par exemple : `https://ip-address:30777`), ainsi que le nom d’utilisateur et le mot de passe pour le cluster.
 
 ```bash
 mssqlctl login -e https://<ip-address-of-endpoint-service-proxy>:30777 -u <user-name> -p <password>
@@ -95,51 +98,49 @@ Pour créer une application, vous utilisez `mssqlctl` avec la `app create` comma
 Pour créer une nouvelle application dans le cluster de données volumineux, utilisez la syntaxe suivante :
 
 ```bash
-mssqlctl app create -n <app_name> -v <version_number> --spec <directory containing spec file>
+mssqlctl app create --spec <directory containing spec file>
 ```
 
 La commande suivante montre un exemple de ce que cette commande peut ressembler :
-
-Cela suppose que vous avez le fichier appelé `spec.yaml` au sein de la `addpy` dossier.
-Le `addpy` dossier contient le `add.py` et `spec.yaml` le `spec.yaml` est un fichier de spécification pour le `add.py` application.
-
-
-`add.py` crée l’application python suivant :
-
-```py
-#add.py
-def add(x,y):
-        result = x+y
-        return result
-result=add(x,y)
-```
-
-Le script suivant est un exemple du contenu pour `spec.yaml`:
-
-```yaml
-#spec.yaml
-name: add-app #name of your python script
-version: v1  #version of the app
-runtime: Python #the language this app uses (R or Python)
-src: ./add.py #full path to the location of the app
-entrypoint: add #the function that will be called upon execution
-replicas: 1  #number of replicas needed
-poolsize: 1  #the pool size that you need your app to scale
-inputs:  #input parameters that the app expects and the type
-  x: int
-  y: int
-output: #output parameter the app expects and the type
-  result: int
-```
-
-Pour tester cela, copiez les lignes de code ci-dessus dans deux fichiers dans le répertoire `addpy` comme `add.py` et `spec.yaml` et exécutez la commande suivante :
 
 ```bash
 mssqlctl app create --spec ./addpy
 ```
 
-> [!NOTE]
-> Le `spec.yaml` fichier spécifie à la fois un `poolsize` et un nombre de `replicas`. Le nombre de `replicas` Spécifie le nombre de copies du service doit être déployées. Le `poolsize` Spécifie le nombre de pools à créer par réplica. Ces paramètres ont un impact sur le nombre de demandes que le déploiement peut gérer en parallèle. Le nombre maximal de demandes à un moment donné est égal à `replicas` fois `poolsize`, c'est-à-dire Si vous avez 5 réplicas et 2 pools par réplica le déploiement peut gérer 10 requêtes en parallèle. Voir l’image ci-dessous pour obtenir une représentation graphique de `replicas` et `poolsize`: ![Taiile_pool et réplicas](media/big-data-cluster-create-apps/poolsize-vs-replicas.png)
+Cela suppose que vous disposez de votre application stockée dans le `addpy` dossier. Ce dossier doit également contenir un fichier de spécification de l’application, appelé appelée `spec.yaml`. Consultez [la page de déploiement d’applications](concept-application-deployment.md) pour plus d’informations sur la `spec.yaml` fichier.
+
+Pour déployer cet exemple d’application, créer les fichiers suivants dans un répertoire appelé `addpy`:
+
+- `add.py`. Copiez le code Python suivant dans ce fichier :
+   ```py
+   #add.py
+   def add(x,y):
+        result = x+y
+        return result
+    result=add(x,y)
+   ```
+- `spec.yaml`. Copiez le code suivant dans ce fichier :
+   ```yaml
+   #spec.yaml
+   name: add-app #name of your python script
+   version: v1  #version of the app
+   runtime: Python #the language this app uses (R or Python)
+   src: ./add.py #full path to the location of the app
+   entrypoint: add #the function that will be called upon execution
+   replicas: 1  #number of replicas needed
+   poolsize: 1  #the pool size that you need your app to scale
+   inputs:  #input parameters that the app expects and the type
+     x: int
+     y: int
+   output: #output parameter the app expects and the type
+     result: int
+   ```
+
+Ensuite, exécutez la commande suivante :
+
+```bash
+mssqlctl app create --spec ./addpy
+```
 
 Vous pouvez vérifier si l’application est déployée à l’aide de la commande list :
 

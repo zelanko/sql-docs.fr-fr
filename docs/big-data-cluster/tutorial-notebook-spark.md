@@ -1,6 +1,6 @@
 ---
 title: Exécuter un exemple de notebook | Microsoft Docs
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Ce didacticiel montre comment vous pouvez charger une exécution d’un exemple de notebook Spark sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 45845efe34c94f0c8f21c7e154dde673b0bfb889
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 274f33590282f36454e6cdb6041dac3484b9bcc4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241841"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860180"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-2019-big-data-cluster"></a>Didacticiel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server 2019
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Didacticiel : Exécuter un exemple de notebook sur un cluster de données volumineuses de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Ce didacticiel montre comment charger et exécuter un notebook dans Azure Data Studio sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Ainsi, les scientifiques des données et les ingénieurs de données exécuter du code Python, R ou Scala sur le cluster.
 

@@ -1,22 +1,25 @@
 ---
 title: Extension de déploiement d’application
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Déployer un script Python ou R en tant qu’application sur un cluster de données volumineux de SQL Server 2019 (version préliminaire).
-author: TheBharath
-ms.author: bharaths
+author: jeroenterheerdt
+ms.author: jterh
+ms.reviewer: jroth
 manager: craigg
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 761818cd83df5db38b3877184b03b7e5d634aa63
-ms.sourcegitcommit: 1c1ed8d6aa2fb9fceb6a00c39597578442f7f4e9
+ms.openlocfilehash: 10fcc71c69ecc138f78cd19c4661f917067ead7e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58222023"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860410"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Comment utiliser VS Code pour déployer des applications sur les clusters de données volumineuses de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article décrit comment déployer des applications sur un cluster de données volumineuses de SQL Server à l’aide de Visual Studio Code avec l’extension de déploiement de l’application. Cette fonctionnalité a été introduite dans CTP 2.3. 
 
@@ -29,11 +32,11 @@ Cet article décrit comment déployer des applications sur un cluster de donnée
 
 Cette extension prend en charge les tâches suivantes dans Visual Studio Code :
 
-- S’authentifier avec un Cluster SQL Server Big Data.
+- S’authentifier avec un cluster de données volumineux de SQL Server.
 - Récupérer un modèle d’application à partir du référentiel GitHub pour le déploiement des runtimes pris en charge.
 - Gérer les modèles d’application en cours dans l’espace de travail de l’utilisateur.
 - Déployer une application via une spécification de format YAML.
-- Gérer les applications déployées au sein du Cluster de SQL Server Big Data.
+- Gérer les applications déployées au sein du cluster de données volumineux de SQL Server.
 - Afficher toutes les applications que vous avez déployées dans la barre latérale avec des informations supplémentaires.
 - Générer une spécification d’exécution pour utiliser l’application ou de supprimer l’application à partir du cluster.
 - Consommer des applications déployées via une spécification d’exécution YAML.
@@ -90,7 +93,7 @@ Le modèle est une simple `Hello World` application est disposée comme suit :
    - Indique le cluster comment déployer votre application
 - **run-spec.yaml**
    - Indique le cluster Comment voulez-vous appeler votre application
-- **handler.py**
+- **Handler.py**
    - Il s’agit votre fichier de code source tel que spécifié par `src` dans `spec.yaml`
    - Il a une fonction appelée `handler` qui est considéré comme le `entrypoint` de l’application, comme indiqué dans `spec.yaml`. Il prend une entrée de chaîne appelée `msg` et retourne une sortie de chaîne appelée `out`. Elles sont spécifiées dans `inputs` et `outputs` de la `spec.yaml`.
 

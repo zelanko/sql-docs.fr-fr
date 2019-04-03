@@ -1,45 +1,49 @@
 ---
-title: Exécuter les travaux Spark dans le Kit de ressources Azure pour IntelliJ sur le Cluster de SQL Server Big Data
-titleSuffix: SQL Server Big Data Clusters
-description: Envoyer des travaux Spark sur les Clusters Big Data SQL Server dans le Kit de ressources Azure pour IntelliJ.
+title: Exécuter les travaux Spark dans le Kit de ressources Azure pour IntelliJ sur le cluster de données volumineux de SQL Server
+titleSuffix: SQL Server big data clusters
+description: Envoyer des travaux Spark sur des clusters de données volumineuses de SQL Server dans le Kit de ressources Azure pour IntelliJ.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
-ms.openlocfilehash: 672898e93331fdcf65b1fe978a5ebb47956fdb5b
-ms.sourcegitcommit: 3c4bb35163286da70c2d669a3f84fb6a8145022c
+ms.prod: sql
+ms.technology: big-data-cluster
+ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57683619"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860321"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Envoyer des travaux Spark sur les Clusters Big Data SQL Server dans IntelliJ
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Envoyer des travaux Spark sur des clusters de données volumineuses de SQL Server dans IntelliJ
 
-Un des scénarios clés pour les Clusters de données volumineuses de SQL Server est la possibilité d’envoyer des travaux Spark. La fonctionnalité de soumission de travaux Spark vous permet de soumettre des fichiers Jar ou Py locaux avec des références à des Clusters de données volumineuses de SQL Server. Il vous permet également d’exécuter des fichiers Jar ou Py, ce qui sont trouvent déjà dans le système de fichiers HDFS. 
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+
+Un des scénarios clés pour les clusters de données volumineuses de SQL Server est la possibilité d’envoyer des travaux Spark. La fonctionnalité de soumission de travaux Spark vous permet de soumettre des fichiers Jar ou Py locaux avec des références à des clusters de données volumineuses de SQL Server. Il vous permet également d’exécuter des fichiers Jar ou Py, ce qui sont trouvent déjà dans le système de fichiers HDFS. 
 
 ## <a name="prerequisites"></a>Prérequis
 
-- Cluster Big Data SQL Server.
+- Cluster de données volumineux de SQL Server.
 - Oracle Java Development Kit. Vous pouvez l’installer à partir de la [site Web d’Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 - IntelliJ IDEA. Vous pouvez l’installer à partir de la [site Web de JetBrains](https://www.jetbrains.com/idea/download/).
 - Kit de ressources Azure pour IntelliJ extension. Pour obtenir des instructions d’installation, consultez [installer le Kit de ressources pour IntelliJ](https://docs.microsoft.com/azure/azure-toolkit-for-intellij-installation).
 
-## <a name="link-sql-server-big-data-cluster"></a>Cluster Big Data de lien SQL Server
+## <a name="link-sql-server-big-data-cluster"></a>Cluster de données volumineux de SQL Server de lien
 1. Ouvrez l’outil d’IntelliJ IDEA.
 
 2. Si vous utilisez un certificat auto-signé, désactiver la validation du certificat SSL à partir de **outils** menu, sélectionnez **Azure**, **valider le certificat de SSL de Cluster Spark**, puis  **Désactiver**.
 
-    ![lier le Cluster de SQL Server Big Data - désactiver le protocole SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![lier le cluster de données volumineux de SQL Server - désactiver le protocole SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Ouvrez l’Explorateur Azure à partir de **vue** menu, sélectionnez **Windows de l’outil**, puis sélectionnez **Azure Explorer**.
-4. Cliquez avec le bouton droit sur **Cluster Big Data de SQL Server**, sélectionnez **lien SQL Server Cluster Big Data**. Entrez le **Server**, **nom d’utilisateur**, et **mot de passe**, puis cliquez sur **OK**.
+4. Cliquez avec le bouton droit sur **cluster de données volumineux de SQL Server**, sélectionnez **cluster de données volumineux de lien de SQL Server**. Entrez le **Server**, **nom d’utilisateur**, et **mot de passe**, puis cliquez sur **OK**.
 
     ![lier un cluster Big Data - boîte de dialogue](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-dialog.png)
 
 5. Lors de la boîte de dialogue de certificat de serveur non autorisé s’affiche, cliquez sur **Accept**. Vous pouvez gérer le certificat ultérieurement, consultez [certificats de serveur](https://www.jetbrains.com/help/idea/settings-tools-server-certificates.html).
 
-6. Le cluster lié répertorie sous **Cluster Big Data de SQL Server**. Vous pouvez analyser la tâche spark en ouvrant l’interface utilisateur de l’historique spark et l’interface utilisateur Yarn, vous pouvez également dissocier, par le bouton droit sur le cluster.
+6. Le cluster lié répertorie sous **cluster de données volumineux de SQL Server**. Vous pouvez analyser la tâche spark en ouvrant l’interface utilisateur de l’historique spark et l’interface utilisateur Yarn, vous pouvez également dissocier, par le bouton droit sur le cluster.
 
     ![lien cluster Big Data - menu contextuel](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-contextmenu.png)
 
@@ -87,8 +91,8 @@ Un des scénarios clés pour les Clusters de données volumineuses de SQL Server
       ![Informations sur l’artefact dans la boîte de dialogue](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
 
-## <a name="submit-application-to-sql-server-big-data-cluster"></a>Soumettre l’application au Cluster de SQL Server Big Data
-Après le lien d’un Cluster de données volumineuses de SQL Server, vous pouvez soumettre application vers celle-ci.
+## <a name="submit-application-to-sql-server-big-data-cluster"></a>Soumettre l’application à un cluster de données volumineux de SQL Server
+Après le lien d’un cluster de données volumineux de SQL Server, vous pouvez soumettre application vers celle-ci.
 
 1. Définissez la configuration dans **exécuter/déboguer des Configurations** fenêtre, cliquez sur + ->**Apache Spark sur SQL Server**, sélectionnez onglet **exécuter à distance dans le Cluster**, définissez les paramètres en tant que suivant, puis cliquez sur OK.
 
@@ -129,7 +133,7 @@ Vérifiez que vous avez respecté la WINUTILS. Condition préalable EXE.
 
 1. À partir de la barre de menus, accédez à **exécuter** > **modifier les Configurations...** .
 
-2. À partir de la **exécuter/déboguer des Configurations** fenêtre, dans le volet gauche, accédez à **Apache Spark sur un Cluster de SQL Server Big Data** > **[Spark sur SQL] myApp**.
+2. À partir de la **exécuter/déboguer des Configurations** fenêtre, dans le volet gauche, accédez à **Apache Spark sur un cluster de données volumineux de SQL Server** > **[Spark sur SQL] myApp**.
 
 3. Dans la fenêtre principale, sélectionnez le **exécuter localement** onglet.
 
@@ -163,7 +167,7 @@ Le Console(Scala) de Session Interactive Spark Livy est uniquement pris en charg
 
 1. À partir de la barre de menus, accédez à **exécuter** > **modifier les Configurations...** .
 
-2. À partir de la **exécuter/déboguer des Configurations** fenêtre, dans le volet gauche, accédez à **Apache Spark sur un Cluster de SQL Server Big Data** > **[Spark sur SQL] myApp**.
+2. À partir de la **exécuter/déboguer des Configurations** fenêtre, dans le volet gauche, accédez à **Apache Spark sur un cluster de données volumineux de SQL Server** > **[Spark sur SQL] myApp**.
 
 3. Dans la fenêtre principale, sélectionnez le **exécuter à distance dans le Cluster** onglet.
 
@@ -191,4 +195,4 @@ Pour plus de commodité, vous pouvez voir le résultat du script en envoyant du 
    ![Envoyer la sélection à la Console de Spark](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>Étapes suivantes
-Pour plus d’informations sur le Cluster de SQL Server Big Data et les scénarios associés, consultez [que sont les clusters de données volumineuses de SQL Server 2019](big-data-cluster-overview.md)?
+Pour plus d’informations sur le cluster de données volumineux de SQL Server et les scénarios associés, consultez [que sont les clusters de données volumineuses de SQL Server 2019](big-data-cluster-overview.md)?

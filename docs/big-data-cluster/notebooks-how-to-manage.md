@@ -1,6 +1,6 @@
 ---
 title: Gérer les ordinateurs portables dans Azure Data Studio
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Découvrez comment gérer des ordinateurs portables dans Azure Data Studio. Cela inclut l’ouverture des blocs-notes, leur enregistrement et la modification de votre connexion au cluster big data.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 107a567da4727fa5786b0b913f1c75706a23a9b7
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: ab731e3f657a629dbb1b4058bd94b32677c2def0
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241920"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860510"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Comment gérer des ordinateurs portables dans Azure Data Studio
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article vous montre comment ouvrir et enregistrer des fichiers de bloc-notes dans Azure Data Studio avec la version préliminaire de SQL Server 2019. Il montre également comment modifier votre connexion à votre cluster de données volumineuses de SQL Server.
 

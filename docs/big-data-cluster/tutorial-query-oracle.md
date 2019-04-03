@@ -1,6 +1,6 @@
 ---
 title: Interroger des données externes dans Oracle
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Ce didacticiel montre comment interroger des données Oracle à partir d’un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Vous créez une table externe sur les données dans Oracle et puis exécutez une requête.
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 27956603d3627f1d4a78e62fbf9c7aeaa1e55974
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241910"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859980"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Didacticiel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Ce didacticiel montre comment interroger des données Oracle à partir d’un cluster de données volumineux de SQL Server 2019. Pour exécuter ce didacticiel, vous devez avoir accès à un serveur Oracle. Si vous n’avez pas accès, ce didacticiel peut vous donner une idée du fonctionne de la virtualisation des données pour les sources de données externes dans un cluster de données volumineux de SQL Server.
 

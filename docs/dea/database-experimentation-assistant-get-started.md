@@ -13,12 +13,12 @@ author: HJToland3
 ms.author: ajaykar
 ms.reviewer: douglasl
 manager: craigg
-ms.openlocfilehash: f0ea70ded49d37d553f5de188a4a0735f521ee66
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
+ms.openlocfilehash: 7630aee7ab39f98f372af7c33f277e7272042f43
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "56987695"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872239"
 ---
 # <a name="get-started-with-database-experimentation-assistant"></a>Bien démarrer avec l’Assistant expérimentation de base de données
 
@@ -81,7 +81,7 @@ Pour relire le fichier de trace :
 
    - **Nom de la relecture**: Le nom de fichier pour la relecture de trace.
    - **Nom de l’ordinateur contrôleur**: Le nom de l’ordinateur du contrôleur Distributed Replay.
-   - **Chemin d’accès au fichier de trace source sur le contrôleur**: Le chemin d’accès de fichier pour le fichier de trace source à partir de [capturer](#Capture).
+   - **Chemin d’accès au fichier de trace source sur le contrôleur**: Le chemin d’accès de fichier pour le fichier de trace source à partir de [capturer](#capture).
    - **Nom de l’instance SQL Server**: Le nom de l’instance de SQL Server sur laquelle relire la trace de la source.
    - **Chemin d’accès pour stocker le fichier de trace de cible sur l’ordinateur SQL Server**: Le chemin d’accès de dossier pour le fichier de trace de relecture résultant.
 

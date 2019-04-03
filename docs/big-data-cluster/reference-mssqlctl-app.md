@@ -1,6 +1,6 @@
 ---
 title: référence d’application mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de l’application mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fa2b43c352fbab39cd00112b9646a87a2b752f5b
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: b418f1ded8d9911143b431ae9793c467c4e26eb4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860650"
 ---
-# <a name="mssqlctl-app"></a>mssqlctl app
+# <a name="mssqlctl-app"></a>Application mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 L’article suivant fournit la référence pour le **application** commandes dans le **mssqlctl** outil. Pour plus d’informations sur les autres **mssqlctl** commandes, consultez [mssqlctl référence](reference-mssqlctl.md).
 
@@ -28,10 +30,10 @@ L’article suivant fournit la référence pour le **application** commandes dan
 | [delete](#delete) | Supprimer l’application. |
 | [describe](#describe) | Décrire l’application. |
 | [init](#init) | Kickstart nouveau squelette d’application. |
-| [list](#list) | Liste des applications. |
+| [Liste](#list) | Liste des applications. |
 | [run](#run) | Exécuter l’application. |
 | [update](#update) | Mettre à jour d’application. |
-| [template](reference-mssqlctl-app-template.md) | Commandes du modèle. |
+| [modèle](reference-mssqlctl-app-template.md) | Commandes du modèle. |
 
 ## <a id="create"></a> mssqlctl app create
 
@@ -56,17 +58,17 @@ mssqlctl app create
 
 | Paramètres | Description |
 |---|---|
-| **--assets -a** | Liste des composants de fichier d’application supplémentaires à inclure. |
+| **--actifs - un** | Liste des composants de fichier d’application supplémentaires à inclure. |
 | **--code -c** | Chemin d’accès au fichier de code R ou Python. |
 | **--description -d** | Description de l'application. |
 | **--entrypoint** |  |
-| **--inputs** | Schéma de paramètre d’entrée. |
-| **--name -n** | Nom de l'application. |
-| **--outputs** | Schéma du paramètre de sortie. |
-| **--runtime -r** | Exécution de l’application.  Valeurs autorisées : Mleap, Python, R, SSIS. |
+| **--entrées** | Schéma de paramètre d’entrée. |
+| **--nom - n** | Nom de l'application. |
+| **--sorties** | Schéma du paramètre de sortie. |
+| **--runtime - r** | Exécution de l’application.  Valeurs autorisées : Mleap, Python, R, SSIS. |
 | **--spec -s** | Chemin d’accès à un répertoire avec un fichier spec YAML décrivant l’application. |
 | **--version -v** | Version de l’application. |
-| **--yes -y** | Ne pas demander confirmation lors de la création d’une application à partir du fichier de spec.yaml du répertoire de travail actuel. |
+| **--Oui -y** | Ne pas demander confirmation lors de la création d’une application à partir du fichier de spec.yaml du répertoire de travail actuel. |
 
 ### <a name="examples"></a>Exemples
 
@@ -108,7 +110,7 @@ mssqlctl app delete
 
 | Paramètres | Description |
 |---|---|
-| **--name -n** | Nom de l'application. |
+| **--nom - n** | Nom de l'application. |
 | **--version -v** | Version de l’application. |
 
 ### <a name="examples"></a>Exemples
@@ -134,7 +136,7 @@ mssqlctl app describe
 
 | Paramètres | Description |
 |---|---|
-| **--name -n** | Nom de l'application. |
+| **--nom - n** | Nom de l'application. |
 | **--spec -s** | Chemin d’accès à un répertoire avec un fichier spec YAML décrivant l’application. |
 | **--version -v** | Version de l’application. |
 
@@ -165,7 +167,7 @@ mssqlctl app init
 | Paramètres | Description |
 |---|---|
 | **--destination -d** | Où placer la structure de l’application. Par défaut : répertoire de travail actuel. |
-| **--name -n** | Nom de l'application. |
+| **--nom - n** | Nom de l'application. |
 | **--spec -s** | Générer uniquement un spec.yaml de l’application. |
 | **--template -t** | Nom du modèle. Pour obtenir la liste complète désactiver les noms de modèle pris en charge, exécutez `mssqlctl app template list`. |
 | **--url -u** | Spécifiez un emplacement de dépôt de modèle différent. Par défaut : https://github.com/Microsoft/sql-server-samples.git. |
@@ -211,7 +213,7 @@ mssqlctl app list
 
 | Paramètres | Description |
 |---|---|
-| **--name -n** | Nom de l'application. |
+| **--nom - n** | Nom de l'application. |
 | **--version -v** | Version de l’application. |
 
 ### <a name="examples"></a>Exemples
@@ -249,9 +251,9 @@ mssqlctl app run
 
 | Paramètres | Description |
 |---|---|
-| **--name -n** | Nom de l'application. |
+| **--nom - n** | Nom de l'application. |
 | **--version -v** | Version de l’application. |
-| **--inputs** | Application des paramètres d’un fichier CSV d’entrée `name=value` format. |
+| **--entrées** | Application des paramètres d’un fichier CSV d’entrée `name=value` format. |
 
 ### <a name="examples"></a>Exemples
 
@@ -288,7 +290,7 @@ mssqlctl app update
 | Paramètres | Description |
 |---|---|
 | **--spec -s** | Chemin d’accès à un répertoire avec un fichier spec YAML décrivant l’application. |
-| **--yes -y** | Ne pas demander confirmation lors de la mise à jour une application à partir du fichier de spec.yaml du répertoire de travail actuel. |
+| **--Oui -y** | Ne pas demander confirmation lors de la mise à jour une application à partir du fichier de spec.yaml du répertoire de travail actuel. |
 
 ## <a name="next-steps"></a>Étapes suivantes
 

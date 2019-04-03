@@ -1,6 +1,6 @@
 ---
 title: référence de cluster mssqlctl
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Article de référence pour les commandes de cluster mssqlctl.
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 02/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 130d3019d49deb7851696f6a1db2f77040734b31
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527212"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860470"
 ---
-# <a name="mssqlctl-cluster"></a>mssqlctl cluster
+# <a name="mssqlctl-cluster"></a>Cluster mssqlctl
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 L’article suivant fournit la référence pour le **cluster** commandes dans le **mssqlctl** outil. Pour plus d’informations sur les autres **mssqlctl** commandes, consultez [mssqlctl référence](reference-mssqlctl.md).
 
@@ -43,7 +45,7 @@ mssqlctl cluster create
 
 | Paramètres | Description |
 |---|---|
-| **--name -n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. |
+| **--nom - n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. |
 | **--accept-eula -e** | Acceptez-vous les termes du contrat de licence ? \[Oui/non\].  Valeurs autorisées : non, Oui. Obligatoire. |
 
 ## <a id="delete"></a> mssqlctl cluster delete
@@ -60,7 +62,7 @@ mssqlctl cluster delete
 
 | Paramètres | Description |
 |---|---|
-| **--name -n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. Obligatoire. |
+| **--nom - n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. Obligatoire. |
 | **--force -f** | Cluster de suppression de force. |
 
 ## <a name="next-steps"></a>Étapes suivantes

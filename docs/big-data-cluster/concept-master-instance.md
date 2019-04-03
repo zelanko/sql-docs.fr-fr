@@ -1,6 +1,6 @@
 ---
 title: Quel est l’instance principale ?
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Cet article décrit l’instance principale de SQL Server dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: rothja
 ms.author: jroth
@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 9c3809e481e00c94f01c1968a82638df3e37f80f
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 68d412e3d4b8147a2e451ff2932aa79e6dbeca5e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477945"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860680"
 ---
-# <a name="what-is-the-master-instance-in-a-sql-server-2019-big-data-cluster"></a>Qu’est l’instance principale dans un cluster de données volumineux de SQL Server 2019 ?
+# <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>Qu’est l’instance principale dans un cluster de données volumineux de SQL Server ?
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article décrit le rôle de la *instance principale de SQL Server* dans un cluster de données volumineux de SQL Server 2019. L’instance principale est une instance de SQL Server en cours d’exécution dans un cluster de données volumineux de SQL Server [plan de contrôle](big-data-cluster-overview.md#controlplane).
 

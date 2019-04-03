@@ -1,6 +1,6 @@
 ---
 title: Configurer la hiérarchisation HDFS
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Cet article explique comment configurer HDFS la hiérarchisation pour monter un système de fichiers externe Azure Data Lake Storage dans HDFS sur un cluster de données volumineuses de SQL Server 2019 (version préliminaire).
 author: nelgson
 ms.author: negust
@@ -10,14 +10,16 @@ ms.date: 03/27/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1199d8d522df83c626f04f30c8937b57a5359f5c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2542c7c05b222517ae9f4a4c05152f21a5ba293b
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493772"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58859641"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-2019-big-data-clusters"></a>Configurer HDFS hiérarchisation sur des clusters SQL Server 2019 big data
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>Configurer HDFS hiérarchisation sur les clusters de données volumineuses de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 La hiérarchisation HDFS fournit la capacité à monter externe, le système de fichiers compatible HDFS dans HDFS. Cet article explique comment configurer HDFS réduits pour les clusters de données volumineuses de SQL Server 2019 (version préliminaire). À ce stade, CTP 2.4 prend en charge uniquement se connecter à Azure Data Lake Storage Gen2, qui est l’objectif de cet article.
 

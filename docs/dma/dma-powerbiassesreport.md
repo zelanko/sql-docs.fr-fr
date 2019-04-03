@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: craigg
-ms.openlocfilehash: 786e86fb6f0326e2f8ea568f4c069828ff1ff4c6
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c00196468b846174bb73c8d82c691f482aa8b21e
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57974118"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872070"
 ---
 # <a name="analyze-consolidated-assessment-reports-created-by-data-migration-assistant-with-power-bi"></a>Analyser les rapports d’évaluation consolidée créés par l’Assistant Migration des données avec Power BI
 
@@ -34,23 +34,23 @@ Vous pouvez télécharger des exemples de rapports Power BI pour les évaluation
 
 Les rapports suivants sont inclus : 
 
-- [Tableau de bord](#dashboard--details)
+- [Tableau de bord](#dashboard-report)
 
   Inclut des statistiques d’instantané et un rapport détaillé.
 
-- [Locale mise à niveau de disponibilité](#on-premises-upgrade-readiness--details)
+- [Locale mise à niveau de disponibilité](#on-premises-upgrade-readiness-report)
 
   La source de données est la vue UpgradeSuccessRanking dans la base de données DMAReporting.  Ce rapport affiche le pourcentage de mise à niveau réussie pour vos bases de données évaluées.
 
-- [Parité des fonctionnalités sur site](#on-premise-feature-parity--details)
+- [Parité des fonctionnalités sur site](#on-premises-feature-parity-report)
 
   Présente les recommandations de fonctionnalité pour la version de SQL Server cible.
 
-- [Préparation de mise à niveau de la base de données SQL Azure](#azure-sql-db-upgrade-readiness--details)
+- [Préparation de mise à niveau de la base de données SQL Azure](#azure-sql-db-upgrade-readiness-report)
 
   La source de données est la vue UpgradeSuccessRanking dans la base de données DMAReporting.  Ce rapport affiche le pourcentage de mise à niveau réussie pour les bases de données évalué pour les migrations de base de données SQL Azure.
 
-- [Fonctionnalités de base de données SQL non pris en charge Azure](#azure-sql-db-unsupported-features--details)
+- [Fonctionnalités de base de données SQL non pris en charge Azure](#azure-sql-db-unsupported-features-report)
 
   Affiche les fonctionnalités dans vos bases de données existants qui ne sont pas pris en charge dans Azure SQL Database (V12).
 

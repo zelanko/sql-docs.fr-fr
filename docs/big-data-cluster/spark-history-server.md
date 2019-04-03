@@ -1,6 +1,6 @@
 ---
 title: Débogage/diagnostiquer des Applications Spark
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Utiliser le serveur d’historique Spark pour déboguer et diagnostiquer des applications Spark en cours d’exécution sur des clusters SQL Server 2019 big data.
 author: jejiang
 ms.author: jejiang
@@ -11,14 +11,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6b3cac808386d2341e1c22b18999009f7d72a43f
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: e7444a9f5bcdc480425ba02c8a068831c081b47a
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241785"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860331"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Débogage et diagnostiquer des Applications Spark sur des clusters de données volumineuses de SQL Server dans le serveur d’historique Spark
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article fournit des conseils sur l’utilisation du serveur d’historique Spark étendu pour déboguer et diagnostiquer des applications Spark dans un cluster de données volumineuses de SQL Server 2019 (version préliminaire). Ces fonctionnalités de débogage et de diagnostic sont intégrées à un serveur d’historique Spark et alimentées par Microsoft. L’extension inclut les onglets de données et onglet graphique et diagnostic. Dans l’onglet données, les utilisateurs peuvent vérifier les données d’entrée et de sortie du travail Spark. Sous l’onglet graphique, les utilisateurs peuvent vérifier le flux de données et relire le graphique du travail. Dans l’onglet de diagnostic, peut faire référence à un décalage des données, décalage horaire et l’analyse d’utilisation de l’exécuteur.
 

@@ -11,12 +11,12 @@ ms.prod: sql
 ms.custom: sql-linux, seodec18
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 9f88178450fb5ca19e52703ad02e29d107ca562a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 95e9ae2bd77bc3042a44b0322ac9a607be3725e8
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201958"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872199"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurer SQL Server groupe de disponibilité AlwaysOn pour la haute disponibilité sur Linux
 
@@ -132,6 +132,7 @@ Exécutez **qu’une seule** des scripts suivants :
    >[!IMPORTANT]
    >Après avoir exécuté le script précédent pour créer un groupe de disponibilité avec trois réplicas synchrones, ne pas exécuter le script suivant :
 
+<a name="configOnly"></a>
 - Créer un groupe de disponibilité avec deux réplicas synchrones et un réplica de la configuration :
 
    >[!IMPORTANT]

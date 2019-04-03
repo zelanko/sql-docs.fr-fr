@@ -1,6 +1,6 @@
 ---
 title: Bien démarrer
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Découvrez les étapes et les ressources pour le déploiement des clusters de données volumineuses de SQL Server 2019 (version préliminaire).
 author: rothja
 ms.author: jroth
@@ -9,14 +9,16 @@ ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 05ba81fd45bc44db9c23530fb594c5d2e291e05d
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 69b5d9b69536243d371cb45c1c46620f5194657d
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567645"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860430"
 ---
-# <a name="get-started-with-sql-server-2019-big-data-clusters"></a>Prise en main des clusters SQL Server 2019 big data
+# <a name="get-started-with-sql-server-big-data-clusters"></a>Bien démarrer avec les clusters de données volumineuses de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article fournit une vue d’ensemble de la façon de déployer un [cluster de données volumineux de SQL Server 2019 (version préliminaire)](big-data-cluster-overview.md). Il est destiné à vous orienter vers les concepts et de fournir une infrastructure permettant de comprendre les autres articles sur les déploiement dans cette section. Vos étapes de déploiement spécifiques varient en fonction de vos choix de la plateforme pour le client et le serveur.
 
@@ -49,7 +51,7 @@ Scripts de déploiement peuvent aider à déployer Kubernetes et les clusters de
 
 Vous pouvez personnaliser n’importe quel script de déploiement en créant votre propre version qui configure les variables d’environnement de cluster big data différemment.
 
-## <a name="deploy-a-big-data-cluster"></a>Déployer un cluster de données volumineuses
+## <a name="deploy-a-big-data-cluster"></a>Déployer un cluster Big Data
 
 Pour déployer Kubernetes et un cluster de données volumineux à AKS avec un seul script, consultez l’exemple suivant :
 

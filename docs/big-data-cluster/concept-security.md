@@ -1,23 +1,26 @@
 ---
 title: Concepts de sécurité
-titleSuffix: SQL Server 2019 big data clusters
+titleSuffix: SQL Server big data clusters
 description: Cet article décrit les concepts de sécurité pour SQL Server 2019 cluster de données volumineux (version préliminaire). Cela inclut les décrivant les points de terminaison de cluster et l’authentification du cluster.
 author: nelgson
 ms.author: negust
+ms.reviewer: jroth
 manager: craigg
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 5e440a3502e5062013ac5e3b716036f107a13c6a
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: ebe1ef0a9a0337af29a09018bcc2e0150d676879
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477984"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860110"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Concepts de sécurité pour les clusters de données volumineuses de SQL Server
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Un cluster de sécuriser les données big implique la prise en charge uniforme et cohérent pour les scénarios d’authentification et d’autorisation, sur SQL Server et HDFS/Spark. L’authentification est le processus de vérification de l’identité d’un utilisateur ou d’un service et garantir qu’ils sont qui ils sont prétendant être. Autorisation fait référence à l’octroi ou de refus d’accès à des ressources spécifiques en fonction de l’identité de l’utilisateur demandeur. Cette étape est effectuée une fois que l’utilisateur est identifié via l’authentification.
 
