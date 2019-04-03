@@ -10,14 +10,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 4d13d200bf331771b0f2f8735bf2c76c1f227979
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241650"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860080"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Wrangling de données à l’aide de la PROSE Code accélérateur
+
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 PROSE Code accélérateur génère le code Python lisible pour vos tâches de retraitement des données. Vous pouvez combiner le code généré avec votre code écrit manuellement de manière transparente tout en travaillant dans un bloc-notes dans Azure Data Studio. Cet article fournit une vue d’ensemble de la façon dont vous pouvez utiliser l’accélérateur de Code.
 
@@ -112,7 +114,7 @@ Pour plus d’informations, consultez le [documentation](https://aka.ms/prose-co
 Un autre scénario courant consiste à détecter les modèles dans une colonne de chaîne à des fins de nettoyage ou de regroupement. Par exemple, peut avoir une colonne de date avec des dates dans plusieurs formats différents. Afin de normaliser les valeurs, vous souhaiterez peut-être écrire des instructions conditionnelles à l’aide d’expressions régulières.
 
 
-|   |Créer une vue d’abonnement                      |BirthDate      |
+|   |Nom                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
