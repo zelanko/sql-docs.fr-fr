@@ -11,19 +11,19 @@ helpviewer_keywords:
 - XML data [SQL Server], loading
 - loading XML data
 ms.assetid: d1741e8d-f44e-49ec-9f14-10208b5468a7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1ca351da87aaead7fb4a7829b0cc28d16babb373
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eaf25e09c5f7c8706c685875ebc7eb39bce95fcf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538369"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511036"
 ---
 # <a name="load-xml-data"></a>Charger des données XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  Vous pouvez transférer des données XML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de plusieurs manières. Exemple :  
+  Vous pouvez transférer des données XML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] de plusieurs manières. Par exemple :  
   
 -   Si vos données figurent dans une colonne de type [n]text ou image, dans une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez importer la table par le biais de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Modifiez ensuite le type de colonne en XML à l'aide de l'instruction ALTER TABLE.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "52538369"
 ## <a name="bulk-loading-xml-data"></a>Chargement en masse de données XML  
  Vous pouvez charger en masse des données XML sur le serveur en utilisant les fonctions de chargement en masse de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], comme bcp. OPENROWSET vous permet de charger des données dans une colonne XML à partir de fichiers. L'exemple suivant illustre ce comportement :  
   
-##### <a name="example-loading-xml-from-files"></a>Exemple : chargement de données XML à partir de fichiers  
+##### <a name="example-loading-xml-from-files"></a>Exemple : Chargement de données XML à partir de fichiers  
  Cet exemple montre comment insérer une ligne dans la table T. La valeur de la colonne XML est chargée à partir du fichier C:\MyFile\xmlfile.xml en tant que CLOB, et la colonne integer prend la valeur 10.  
   
 ```  
@@ -46,7 +46,7 @@ FROM    (SELECT *
 ```  
   
 ## <a name="text-encoding"></a>Encodage de texte  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données XML au format Unicode (UTF-16). Les données XML extraites du serveur se présentent au format UTF-16. Si vous souhaitez un encodage différent, vous devez convertir les données extraites au format voulu. Il arrive que les données XML soient encodées différemment. Si tel est le cas, vous devez prêter une attention particulière au chargement des données. Exemple :  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stocke les données XML au format Unicode (UTF-16). Les données XML extraites du serveur se présentent au format UTF-16. Si vous souhaitez un encodage différent, vous devez convertir les données extraites au format voulu. Il arrive que les données XML soient encodées différemment. Si tel est le cas, vous devez prêter une attention particulière au chargement des données. Par exemple :  
   
 -   Si votre texte XML est en Unicode (UCS-2, UTF-16), vous pouvez l'affecter à une colonne, une variable ou un paramètre XML sans aucun problème.  
   
@@ -54,7 +54,7 @@ FROM    (SELECT *
   
 -   Pour utiliser un encodage explicite, utilisez le type **varbinary()** , qui n’a aucune interaction avec les pages de codes, ou utilisez un type chaîne de la page de codes appropriée. Ensuite, assignez les données à une colonne, une variable ou un paramètre XML.  
   
-### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : mention explicite d'un encodage  
+### <a name="example-explicitly-specifying-an-encoding"></a>Exemple : Spécification implicite d’un encodage  
  Supposez que vous avez un document XML, vcdoc, stocké au format **varchar(max)** , qui ne comporte aucune déclaration XML explicite. L’instruction ci-dessous permet d’ajouter une déclaration XML mentionnant l’encodage « iso8859-1 », de concaténer le document XML, de convertir le résultat au format **varbinary(max)** de façon à conserver la représentation en octets, puis enfin de le convertir au format XML. Ainsi, le processeur XML peut analyser les données conformément à l'encodage spécifié « iso8859-1 » et générer la représentation UTF-16 correspondante pour les valeurs de chaîne.  
   
 ```  
@@ -64,14 +64,14 @@ CAST (('<?xml version="1.0" encoding="iso8859-1"?>'+ vcdoc) AS VARBINARY (MAX))
 ```  
   
 ### <a name="string-encoding-incompatibilities"></a>Incompatibilités d'encodage de chaîne  
- Si vous copiez et collez du code XML sous forme de littéral chaîne dans la fenêtre d'éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous risquez de rencontrer des incompatibilités d'encodage de la chaîne [N]VARCHAR. Tout dépendra de l'encodage de votre instance XML. Dans bien des cas, vous serez amené à supprimer la déclaration XML. Exemple :  
+ Si vous copiez et collez du code XML sous forme de littéral chaîne dans la fenêtre d'éditeur de requête de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], vous risquez de rencontrer des incompatibilités d'encodage de la chaîne [N]VARCHAR. Tout dépendra de l'encodage de votre instance XML. Dans bien des cas, vous serez amené à supprimer la déclaration XML. Par exemple :  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
   <xsd:schema ...  
 ```  
   
- Vous devez ensuite inclure un N pour transformer l'instance XML en une instance Unicode. Exemple :  
+ Vous devez ensuite inclure un N pour transformer l'instance XML en une instance Unicode. Par exemple :  
   
 ```  
 -- Assign XML instance to a variable.  

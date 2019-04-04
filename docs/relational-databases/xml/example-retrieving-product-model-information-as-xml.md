@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : récupération des informations de modèle de produit au format XML | Microsoft Docs'
+title: 'Exemple : Récupération des informations de modèle de produit au format XML | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving XML information example
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 583a38873f5895f88484ccdec7cb6ce46f94b7ac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b05d07ee1698048f478f2ffce042bbf0c715e7ad
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854777"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509656"
 ---
-# <a name="example-retrieving-product-model-information-as-xml"></a>Exemple : récupération des informations de modèle de produit au format XML
+# <a name="example-retrieving-product-model-information-as-xml"></a>Exemple : Récupération des informations de modèle de produit au format XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   La requête suivante retourne des informations sur le modèle d'un produit. `RAW` Le mode est spécifié dans la clause `FOR XML` .  
   

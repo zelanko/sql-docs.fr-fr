@@ -6,20 +6,21 @@ ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xevents
-ms.topic: conceptual
+ms.topic: tutorial
 ms.assetid: b2e839d7-1872-46d9-b7b7-6dcb3984829f
 author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9ce1619d4ad2d61a784ace4ea16dc4064569e09
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
+ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658878"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58478164"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Affichage avancé des données cibles d’événements étendus dans SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 
@@ -36,7 +37,7 @@ Cet article explique comment vous pouvez utiliser les fonctionnalités avancées
 
 Cet article considère que vous savez déjà créer et démarrer une session d’événements. Des instructions sur la façon de créer une session d’événements sont fournies au début de l’article suivant :
 
-[Quick Start: Extended Events in SQL Server (Démarrage rapide : Événements étendus dans SQL Server)](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
+[Démarrage rapide : Événements étendus dans SQL Server](../../relational-databases/extended-events/quick-start-extended-events-in-sql-server.md)
 
 
 Cet article considère aussi que vous avez installé une version mensuelle très récente de SSMS. Vous trouverez une aide à l’installation à la page suivante :
@@ -91,7 +92,7 @@ Il existe différentes façons d’importer des données cibles event_file dans 
 
 
 - Chaque fois que la session d’événements est lancée, le système incorpore un entier long dans un nouveau nom de fichier de telle sorte que le nom de fichier soit unique et différent de la dernière fois où la session a démarré.
-  - *Example :* Checkpoint_Begins_ES_0_131103935140400000.xel
+  - *Exemple :* Checkpoint_Begins_ES_0_131103935140400000.xel
 
 
 - Le contenu à l’intérieur d’un fichier . XEL n’est pas du texte brut qui peut être affiché dans Notepad.exe.
@@ -101,17 +102,17 @@ Il existe différentes façons d’importer des données cibles event_file dans 
 
 SSMS peut afficher les données de n’importe quelle cible. Cependant, leur affichage varie en fonction de la cible :
 
-- *event_file :* les données issues d’une cible event_file s’affichent très bien, avec des fonctionnalités élaborées.
+- *event_file* : les données issues d’une cible event_file s’affichent très bien, avec des fonctionnalités complètes.
 
 
-- *ring_buffer :* les données issues d’une cible de mémoire tampon en anneau s’affichent sous forme de XML brut.
+- *ring_buffer* : les données issues d’une cible de mémoire tampon en anneau s’affichent sous forme de données XML brutes.
 
 
 - Pour les autres cibles, les possibilités en termes d’affichage se situent entre event_file et ring_buffer.
   - Il s’agit notamment des cibles event_counter, histogram et pair_matching.
 
 
-- *etw_classic_sync_target :* SSMS ne peut pas afficher les données issues du type de cible etw_classic_sync_target.
+- *etw_classic_sync_target* : SSMS ne peut pas afficher les données issues du type de cible etw_classic_sync_target.
 
 
 
@@ -258,9 +259,9 @@ La boîte de dialogue **Choisir les colonnes** comporte une section consacrée �
 
 Dans le domaine des événements étendus, vous pouvez spécifier deux types de filtres principaux :
 
-- *Filtre de préciblage :* filtres qui réduisent la quantité de données envoyées par le moteur d’événements à votre cible.
+- *Filtres de préciblage* : filtres qui réduisent la quantité de données envoyées par le moteur d’événements à votre cible.
 
-- *Filtres de post-ciblage :* filtres que vous pouvez sélectionner dans l’interface utilisateur de SSMS pour exclure certains enregistrements cibles de l’affichage.
+- *Filtres de post-ciblage* : filtres que vous pouvez sélectionner dans l’interface utilisateur de SSMS pour exclure certains enregistrements cibles de l’affichage.
 
 
 Les filtres de l’affichage SSMS sont les suivants :

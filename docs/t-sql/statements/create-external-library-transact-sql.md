@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -19,12 +19,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d75671550d6e935216fd4d265777b31c81af7675
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 49e0704f80105ef0f24cacef43dfdcfb52b053dc
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017885"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493286"
 ---
 # <a name="create-external-library-transact-sql"></a>CREATE EXTERNAL LIBRARY (Transact-SQL)  
 
@@ -33,7 +33,7 @@ ms.locfileid: "57017885"
 Charge des fichiers de package R, Python ou Java vers une base de données à partir du chemin de fichier ou du flux d’octets spécifié. Cette instruction sert de mécanisme générique permettant à l’administrateur de base de données de charger des artefacts nécessaires pour tout nouveau runtime de langage externe et toute nouvelle plateforme de système d’exploitation pris en charge par [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur la plateforme Windows sont pris en charge dans SQL Server 2019 CTP 2.3. La prise en charge de Linux est prévue pour une version ultérieure.
+> Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur les plateformes Windows et Linux sont pris en charge dans SQL Server 2019 CTP 2.4.
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>Syntaxe pour SQL Server 2019
@@ -48,7 +48,7 @@ WITH ( LANGUAGE = <language> )
 <file_spec> ::=  
 {  
     (CONTENT = { <client_library_specifier> | <library_bits> }  
-    [, PLATFORM = WINDOWS ])  
+    [, PLATFORM = <platform> ])  
 }  
 
 <client_library_specifier> :: = 
@@ -64,12 +64,19 @@ WITH ( LANGUAGE = <language> )
     | varbinary_expression 
 }
 
+<platform> :: = 
+{
+      WINDOWS
+    | LINUX
+}
+
 <language> :: = 
 {
       'R'
     | 'Python'
     | 'Java'
 }
+
 ```
 ::: moniker-end
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
@@ -133,13 +140,20 @@ Spécifie le contenu du package en tant que littéral hexadécimal, similaire au
 
 Cette option est utile si vous devez créer une bibliothèque ou modifier une bibliothèque existante (et que vous disposez des autorisations nécessaires), mais que le système de fichiers sur le serveur est restreint et vous ne pouvez pas copier les fichiers de bibliothèque vers un emplacement accessible au serveur.
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
 Spécifie la plateforme pour le contenu de la bibliothèque. La valeur par défaut est la plateforme hôte sur laquelle SQL Server est en cours d’exécution. Par conséquent, l’utilisateur n’a pas à spécifier la valeur. Elle est obligatoire dans le cas où plusieurs plateformes sont prises en charge, ou quand l’utilisateur a besoin de spécifier une autre plateforme. 
 
-Actuellement, Windows est la seule plateforme prise en charge.
-
+Dans SQL Server 2017, Windows est la seule plateforme prise en charge.
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+**PLATFORM**
+
+Spécifie la plateforme pour le contenu de la bibliothèque. La valeur par défaut est la plateforme hôte sur laquelle SQL Server est en cours d’exécution. Par conséquent, l’utilisateur n’a pas à spécifier la valeur. Elle est obligatoire dans le cas où plusieurs plateformes sont prises en charge, ou quand l’utilisateur a besoin de spécifier une autre plateforme.
+
+Dans SQL Server 2019, les plateformes Windows et Linux sont prises en charge.
+
 **language**
 
 Spécifie le langage du package. La valeur peut être `R`, `Python` ou `Java`.
@@ -147,9 +161,12 @@ Spécifie le langage du package. La valeur peut être `R`, `Python` ou `Java`.
 
 ## <a name="remarks"></a>Notes 
 
-Pour le langage R, lors de l’utilisation d’un fichier, les packages doivent être préparés sous la forme de fichiers d’archives compressés avec l’extension .ZIP pour Windows. Actuellement, seule la plateforme Windows est prise en charge. 
-
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+Pour le langage R, lors de l’utilisation d’un fichier, les packages doivent être préparés sous la forme de fichiers d’archives compressés avec l’extension .ZIP pour Windows. Dans SQL Server 2017, seule la plateforme Windows est pris en charge. 
+::: moniker-end
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+Pour le langage R, lors de l’utilisation d’un fichier, les packages doivent être préparés sous la forme de fichiers d’archive compressés avec l’extension .ZIP.  
+
 Pour le langage Python, le package contenu dans un fichier .whl ou .zip doit être préparé sous la forme d’un fichier d’archive compressé. Si le package est déjà un fichier .zip, il doit être inclus dans un nouveau fichier .zip. Le chargement direct d’un package sous la forme de fichier .whl ou .zip n’est actuellement pas pris en charge.
 ::: moniker-end
 
@@ -157,11 +174,13 @@ L’instruction `CREATE EXTERNAL LIBRARY` charge les bits de la bibliothèque ve
 
 Les bibliothèques chargées vers l’instance peuvent être publiques ou privées. Si la bibliothèque est créée par un membre de `dbo`, elle est publique et peut être partagée avec tous les utilisateurs. Dans le cas contraire, la bibliothèque est privée pour cet utilisateur uniquement.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Nécessite l’autorisation `CREATE EXTERNAL LIBRARY`. Par défaut, les utilisateurs qui possèdent **dbo**, membre du rôle **db_owner**, disposent des autorisations nécessaires pour créer une bibliothèque externe. En ce qui concerne les autres utilisateurs, vous devez leur en donner l’autorisation explicitement à l’aide une instruction [GRANT](https://docs.microsoft.com/sql/t-sql/statements/grant-database-permissions-transact-sql), en spécifiant le privilège CREATE EXTERNAL LIBRARY.
 
 La modification d’une bibliothèque nécessite l’autorisation distincte `ALTER ANY EXTERNAL LIBRARY`.
+
+Pour créer une bibliothèque externe en utilisant un chemin de fichier, l’utilisateur doit avoir établi une connexion Windows authentifiée ou être membre du rôle serveur fixe sysadmin.
 
 ## <a name="examples"></a>Exemples
 
@@ -186,7 +205,7 @@ EXEC sp_execute_external_script
 Pour le langage Python dans SQL Server 2019, l’exemple fonctionne également en remplaçant `'R'` par `'Python'`.
 ::: moniker-end
 
-### <a name="b-installing-packages-with-dependencies"></a>b. Installation de packages avec des dépendances
+### <a name="b-installing-packages-with-dependencies"></a>B. Installation de packages avec des dépendances
 
 Si le package que vous souhaitez installer a des dépendances, vous devez impérativement analyser les dépendances de premier niveau et de deuxième niveau, et vérifier que tous les packages nécessaires sont disponibles _avant_ d’essayer d’installer le package cible.
 
@@ -279,6 +298,26 @@ EXEC sp_execute_external_script
     , @script = N'customJar.MyCLass.myMethod'
     , @input_data_1 = N'SELECT * FROM dbo.MyTable'
 WITH RESULT SETS ((column1 int))
+```
+
+### <a name="f-add-an-external-package-for-both-windows-and-linux"></a>F. Ajouter un package externe pour Windows et Linux
+
+Vous pouvez spécifier jusqu’à deux `<file_spec>`, un pour Windows et l’autre pour Linux.
+
+```sql
+CREATE EXTERNAL LIBRARY lazyeval 
+FROM (CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.zip', PLATFORM = WINDOWS),
+(CONTENT = 'C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\packageA.tar.gz', PLATFORM = LINUX)
+WITH (LANGUAGE = 'R')
+```
+
+Quand vous utilisez `sp_execute_external_script` pour installer le package, le contenu de la bibliothèque utilisé est celui correspondant à la plateforme sur laquelle s’exécute l’instance SQL Server.
+
+```sql
+EXECUTE sp_execute_external_script 
+    @LANGUAGE = N'R',
+    @SCRIPT = N'
+library(packageA)
 ```
 ::: moniker-end
 

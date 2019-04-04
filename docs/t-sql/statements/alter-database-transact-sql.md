@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a9d870d766d7c2080b177270156cfa2428c21fc7
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: d0818f5ffbc75a296996e1cf3b5683dacbc0efa2
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417241"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58538661"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -233,7 +233,7 @@ Modify Name = Northwind ;
 GO
 ```
 
-### <a name="b-changing-the-collation-of-a-database"></a>b. Modification du classement d'une base de données
+### <a name="b-changing-the-collation-of-a-database"></a>B. Modification du classement d'une base de données
 
 L'exemple suivant crée une base de données nommée `testdb` qui utilise le classement `SQL_Latin1_General_CP1_CI_A`S, puis modifie le classement de la base de données `testdb` en `COLLATE French_CI_AI`.
 
@@ -414,8 +414,8 @@ Spécifie la taille maximale de la base de données. La taille maximale doit êt
 |10 GB|Néant|√|√|√|√|
 |20 Go|Néant|√|√|√|√|
 |30 Go|Néant|√|√|√|√|
-|40 Go|Néant|√|√|√|√|
-|50 Go|Néant|√|√|√|√|
+|40 Go|Néant|√|√|√|√|
+|50 Go|Néant|√|√|√|√|
 |100 Go|Néant|√|√|√|√|
 |150 Go|Néant|√|√|√|√|
 |200 Go|Néant|√|√|√|√|
@@ -592,7 +592,7 @@ SELECT Edition = DATABASEPROPERTYEX('db1', 'EDITION'),
 ALTER DATABASE [db1] MODIFY (EDITION = 'Premium', MAXSIZE = 1024 GB, SERVICE_OBJECTIVE = 'P15');
 ```
 
-### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>b. Déplacer une base de données vers un autre pool élastique
+### <a name="b-moving-a-database-to-a-different-elastic-pool"></a>B. Déplacer une base de données vers un autre pool élastique
 Déplace une base de données existante dans un pool nommé pool1 :
 
 ```sql
@@ -624,7 +624,15 @@ Promeut la base de données secondaire db1 sur le serveur `secondaryserver` pour
 ALTER DATABASE db1 FAILOVER
 ```
 
-### <a name="f-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>F. Mettre à jour une base de données unique au niveau de service S0 (Édition standard, niveau de performance 0)
+### <a name="e-force-failover-to-a-geo-replication-secondary-with-data-loss"></a>E. Forcer le basculement vers une base de données secondaire de géoréplication avec perte de données
+
+Force une base de données secondaire db1 sur le serveur `secondaryserver` à devenir la nouvelle base de données primaire quand elle est exécutée sur le serveur `secondaryserver`, dans le cas où le serveur principal ne soit plus disponible. Cette option peut entraîner une perte de données. 
+
+```sql
+ALTER DATABASE db1 FORCE_FAILOVER_ALLOW_DATA_LOSS
+```
+
+### <a name="g-update-a-single-database-to-service-tier-s0-standard-edition-performance-level-0"></a>G. Mettre à jour une base de données unique au niveau de service S0 (Édition standard, niveau de performance 0)
 Met à jour une base de données unique vers l’édition standard (niveau de service) avec un niveau de performance de S0 et une taille maximale de 250 Go.
 
 ```sql
@@ -863,7 +871,7 @@ ALTER DATABASE AdventureWorks2012
 MODIFY NAME = Northwind;
 ```
 
-### <a name="b-change-max-size-for-the-database"></a>b. Changer la taille maximale de la base de données
+### <a name="b-change-max-size-for-the-database"></a>B. Changer la taille maximale de la base de données
 
 ```sql
 ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB );
@@ -1045,7 +1053,7 @@ ALTER DATABASE CustomerSales
     SET ( AUTOGROW = ON );
 ```
 
-### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>b. Modification du stockage maximal pour les tables répliquées
+### <a name="b-altering-the-maximum-storage-for-replicated-tables"></a>B. Modification du stockage maximal pour les tables répliquées
 
 L’exemple suivant définit la limite de stockage des tables répliquées sur 1 Go pour la base de données `CustomerSales`. Il s’agit de la limite de stockage par nœud de calcul.
 

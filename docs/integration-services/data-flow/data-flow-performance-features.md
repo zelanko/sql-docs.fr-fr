@@ -24,12 +24,12 @@ ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b20f9d2d48452d95ff0c219f7c291a2a5b1cd887
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 045053757464667c4455a652e1eb2081ab63d7b8
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58275504"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58657883"
 ---
 # <a name="data-flow-performance-features"></a>Fonctionnalités de performances de flux de données
   Cette rubrique offre des suggestions pour éviter les problèmes de performances les plus fréquents lors de la conception de packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Cette rubrique fournit également des informations sur les fonctionnalités et les outils que vous pouvez utiliser pour résoudre des problèmes liés aux performances des packages.  
@@ -175,7 +175,7 @@ ms.locfileid: "58275504"
   
 -   Technical article, [Integration Services : techniques de réglage du niveau de performance](https://go.microsoft.com/fwlink/?LinkId=98900) on technet.microsoft.com  
   
--   Article technique, [Augmentation du débit de pipelines en fractionnant les transformations synchrones en plusieurs tâches](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), sur le site sqlcat.com  
+-   Article technique [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf) dans _SQLCAT's Guide to BI and Analytics_
   
 -   Article technique, [Guide des performances de chargement des données](https://go.microsoft.com/fwlink/?LinkId=220816), sur le site msdn.microsoft.com.  
   

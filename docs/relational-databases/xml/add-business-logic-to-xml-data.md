@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - business logic [XML]
 ms.assetid: 0877fb38-f1a2-43d8-86cf-4754be224dc1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c7198701d6a31f657be1a79f78f03a0641642ace
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bd30df2ef65fcbdfa2118321b5e7c723b56316e7
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656807"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511556"
 ---
 # <a name="add-business-logic-to-xml-data"></a>Ajouter la logique métier aux données XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47656807"
   
 -   Vous pouvez écrire des procédures stockées et des fonctions Transact-SQL pour lancer le traitement sur la colonne XML en fonction de vos besoins.  
   
-## <a name="example-applying-xsl-transformation"></a>Exemple : application XSLT  
+## <a name="example-applying-xsl-transformation"></a>Exemple : Application d’une transformation XSL  
  Prenez l’exemple d’une fonction CLR **TransformXml()** qui accepte une instance de type de données **xml** et une transformation XSL stockée dans un fichier, applique la transformation aux données XML, puis retourne les données XML transformées dans le résultat. Le code suivant est un squelette de fonction écrit en C# :  
   
 ```  

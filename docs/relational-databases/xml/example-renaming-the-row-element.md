@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : attribution d’un nouveau nom à l’élément &lt;row&gt; | Microsoft Docs'
+title: 'Exemple : Renommage de l’élément &lt;row&gt; | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, renaming <row> example
 ms.assetid: b042292a-0b6e-40a3-b254-71c06e626706
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fce745e3b18caf53284d3f231a8528c478a16ee1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6c7d9e578badd12f1b6eb4eb794846431c8c4b0e
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799947"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512106"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Exemple : attribution d’un nouveau nom à l’élément &lt;row&gt;
+# <a name="example-renaming-the-ltrowgt-element"></a>Exemple : Renommage de l’élément &lt;row&gt;
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Pour chaque ligne du jeu de résultats, le mode RAW génère un élément `<row>`. Vous pouvez éventuellement spécifier un autre nom pour cet élément en spécifiant un argument facultatif pour le mode RAW, comme illustré dans cette requête. La requête retourne un élément <`ProductModel`> pour chaque ligne de l'ensemble de lignes.  
   

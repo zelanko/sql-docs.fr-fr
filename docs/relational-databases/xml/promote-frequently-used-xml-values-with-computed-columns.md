@@ -11,15 +11,15 @@ helpviewer_keywords:
 - promoting properties [XML in SQL Server]
 - property promotion [XML in SQL Server]
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: d9be4170345ea7aab0d7d1a7dc848291e776e27d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665568"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510546"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promouvoir les valeurs XML les plus fréquentes à l'aide de colonnes calculées
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "51665568"
 ## <a name="computed-column-based-on-the-xml-data-type"></a>Colonne calculée basée sur le type de données xml  
  Une colonne calculée peut être créée à l’aide d’une fonction définie par l’utilisateur qui appelle des méthodes du type de données **xml** . Le type de la colonne calculée peut être n'importe quel type SQL, y compris XML. L'exemple suivant illustre ce concept.  
   
-### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemple : colonne calculée basée sur la méthode du type de données xml  
+### <a name="example-computed-column-based-on-the-xml-data-type-method"></a>Exemple : Colonne calculée basée sur la méthode du type de données xml  
  Créez la fonction définie par l'utilisateur pour extraire le numéro ISBN d'un livre :  
   
 ```  
@@ -52,7 +52,7 @@ ADD   ISBN AS dbo.udf_get_book_ISBN(xCol)
   
  La colonne calculée peut être indexée de manière habituelle.  
   
-### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>exemple: requêtes sur une colonne calculée basée sur les méthodes du type de données xml  
+### <a name="example-queries-on-a-computed-column-based-on-xml-data-type-methods"></a>Exemple : Requêtes sur une colonne calculée basée sur les méthodes du type de données xml  
  Pour obtenir l'élément <`book`> portant le numéro ISBN 0-7356-1588-2 :  
   
 ```  
@@ -86,14 +86,14 @@ WHERE  ISBN = '0-7356-1588-2'
   
     -   Écrivez des requêtes qui accèdent par SQL aux tables de propriétés et par XML à la colonne XML de la table de base, et prévoyez des jointures entre les tables à l'aide de leur clé primaire.  
   
-### <a name="example-create-a-property-table"></a>Exemple : création d'une table de propriétés  
+### <a name="example-create-a-property-table"></a>Exemple : Création d’une table de propriétés  
  Supposons, dans cet exemple, que vous voulez promouvoir le prénom des auteurs. Dans la mesure où les livres peuvent avoir un ou plusieurs auteurs, le prénom est une propriété à valeurs multiples. Chaque prénom est stocké dans une ligne distincte d'une table de propriétés. La clé primaire de la table de base est dupliquée dans la table de propriétés pour la jointure en retour avec la table de base.  
   
 ```  
 create table tblPropAuthor (propPK int, propAuthor varchar(max))  
 ```  
   
-### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>exemple : création d'une fonction définie par l'utilisateur pour générer un ensemble de lignes à partir d'une instance XML  
+### <a name="example-create-a-user-defined-function-to-generate-a-rowset-from-an-xml-instance"></a>Exemple : Création d’une fonction définie par l’utilisateur pour générer un ensemble de lignes à partir d’une instance XML  
  La fonction table suivante, udf_XML2Table, accepte une valeur de clé primaire et une instance XML. Elle récupère le prénom de tous les auteurs des éléments <`book`> et renvoie un ensemble de lignes pour les paires clé primaire/prénom.  
   
 ```  
@@ -109,7 +109,7 @@ begin
 end  
 ```  
   
-### <a name="example-create-triggers-to-populate-a-property-table"></a>exemple : création de déclencheurs pour remplir une table de propriétés  
+### <a name="example-create-triggers-to-populate-a-property-table"></a>Exemple : Création de déclencheurs pour remplir une table de propriétés  
  Le déclencheur insert insère des lignes dans la table de propriétés :  
   
 ```  
@@ -156,8 +156,8 @@ begin
 end  
 ```  
   
-### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemple : recherche des instances XML dont les auteurs portent le même prénom  
- La requête peut être formée sur la colonne XML. Une autre possibilité consiste à rechercher le prénom « David » dans la table de propriétés et à faire une jointure en retour avec la table de base pour renvoyer l'instance XML. Exemple :  
+### <a name="example-find-xml-instances-whose-authors-have-the-same-first-name"></a>Exemple : Recherche des instances XML dont les auteurs portent le même prénom  
+ La requête peut être formée sur la colonne XML. Une autre possibilité consiste à rechercher le prénom « David » dans la table de propriétés et à faire une jointure en retour avec la table de base pour renvoyer l'instance XML. Par exemple :  
   
 ```  
 SELECT xCol   
@@ -165,7 +165,7 @@ FROM     T JOIN tblPropAuthor ON T.pk = tblPropAuthor.propPK
 WHERE    tblPropAuthor.propAuthor = 'David'  
 ```  
   
-### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemple : solution utilisant la fonction table multidiffusion CLR  
+### <a name="example-solution-using-the-clr-streaming-table-valued-function"></a>Exemple : Solution utilisant la fonction table de streaming CLR  
  La solution se compose des étapes suivantes :  
   
 1.  Définissez une classe CLR, SqlReaderBase, qui met en œuvre ISqlReader et génère une sortie table multidiffusion par application d'une expression de chemin sur une instance XML.  
@@ -238,7 +238,7 @@ begin
 end  
 ```  
   
- Pour finir, définissez les déclencheurs en suivant l'exemple « Création de déclencheurs pour remplir une table de propriétés », mais remplacez udf_XML2Table par la fonction CLR_udf_XML2Table. Le déclencheur insert est présenté dans l'exemple suivant :  
+ Pour finir, définissez les déclencheurs en suivant l'exemple « Création de déclencheurs pour remplir une table de propriétés », mais remplacez udf_XML2Table par la fonction CLR_udf_XML2Table. Le déclencheur insert est présenté dans l'exemple suivant :  
   
 ```  
 create trigger CLR_trg_docs_INS on T for insert  

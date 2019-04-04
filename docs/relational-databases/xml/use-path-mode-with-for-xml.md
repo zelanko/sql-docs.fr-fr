@@ -16,15 +16,15 @@ helpviewer_keywords:
 - column names [SQL Server]
 - XPath queries [SQL Server]
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 45af4f2fa8cccb9aed005700f62ed2df299cccf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 886eabf4ea67ebc8e4b850d7871d16a6ca5eab0c
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696347"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510986"
 ---
 # <a name="use-path-mode-with-for-xml"></a>Utiliser le mode PATH avec FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47696347"
   
 -   [Prise en charge d'espace de noms en mode PATH](../../relational-databases/xml/namespace-support-in-path-mode.md)  
   
--   [Exemples : utilisation du mode PATH](../../relational-databases/xml/examples-using-path-mode.md)  
+-   [Exemples : Utilisation du mode PATH](../../relational-databases/xml/examples-using-path-mode.md)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Ajouter des espaces de noms aux requêtes avec WITH XMLNAMESPACES](../../relational-databases/xml/add-namespaces-to-queries-with-with-xmlnamespaces.md)   

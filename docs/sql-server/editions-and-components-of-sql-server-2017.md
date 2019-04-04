@@ -1,7 +1,7 @@
 ---
 title: Éditions et fonctionnalités prises en charge de SQL Server 2017 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/11/2017
+ms.date: 03/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: db8b22746702fa0df86478dadee700938cd63c40
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: d43593a5c95a77ef6cbd692a07305a46c77e7e07
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974498"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566498"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Éditions et fonctionnalités prises en charge de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +74,14 @@ Pour obtenir les notes de publication les plus récentes et des informations sur
   
 |Édition de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] |Définition|  
 |---------------------------------------|----------------|  
-|Enterprise|Offre Premium, l’édition [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise fournit des fonctions Datacenter avancées et complètes avec des performances ultrarapides, une virtualisation illimitée et des fonctions Business Intelligence de bout en bout qui autorisent un haut niveau de service pour les charges de travail critiques et l’accès de l’utilisateur aux insights de données.|  
+|Enterprise|Offre Premium, l’édition [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Enterprise fournit des fonctions Datacenter avancées et complètes avec des performances ultrarapides, une virtualisation illimitée<sup>1</sup> et des fonctions Business Intelligence de bout en bout qui autorisent un haut niveau de service pour les charges de travail critiques et l’accès de l’utilisateur aux insights de données.|  
 |Standard|L’édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Standard permet la gestion des données de base et inclut une base de données Business Intelligence destinée aux services des grandes entreprises comme aux PME, leur permettant d’exécuter les applications et prenant en charge des outils de développement communs locaux et dans le cloud, pour une gestion efficace des bases de données avec des ressources informatiques minimales.|  
 |Web|L'édition Web[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] est une option offrant un coût total de possession faible destinée aux hébergeurs Web et aux VAP Web, fournissant des fonctions évolutives, rentables et gérables aux propriétés Web à petite ou grande échelle.|  
 |Développeur|L'édition[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] Developer permet aux développeurs de créer des applications basées sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Il inclut toutes les fonctionnalités de l'édition Enterprise, mais sa licence permet uniquement de l'utiliser comme un système de développement et de test, et non comme un serveur de production. L'édition [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer est la solution idéale pour le développement et le test d'applications.|  
 |Éditions Express|L’édition Express est une édition de base comprenant une base de données gratuite, idéale pour découvrir et créer des applications bureautiques et de petites applications serveur pilotées par les données. C'est la solution idéale pour les éditeurs de logiciels, les développeurs et les amateurs de création d'applications clientes. Si vous avez besoin de fonctionnalités de base de données plus évoluées, vous pouvez mettre à niveau de manière transparente [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express vers des versions plus sophistiquées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express LocalDB, une version allégée d’Express qui conserve toutes les fonctions de programmabilité de ce dernier, s’exécute en mode utilisateur, s’installe rapidement sans aucune configuration et ne comporte qu’une courte liste de prérequis.|  
-  
+
+<sup>1</sup> La virtualisation illimitée est disponible sur Enterprise Edition pour les clients d’entreprise disposant de la [Software Assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default). Les déploiements doivent être conformes à la [stratégie de licences](https://www.microsoft.com/sql-server/sql-server-2017-pricing).  
+
 ## <a name="using-includessnoversionincludesssnoversion-mdmd-with-an-internet-server"></a>Utilisation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] avec un serveur Internet  
  Sur un serveur Internet, comme un serveur exécutant les services Internet (IIS), vous installez généralement les outils clients [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les outils clients comprennent les composants de connectivité clients utilisés par une application qui se connecte à une instance [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   

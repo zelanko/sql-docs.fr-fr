@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 03/27/2018
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -17,12 +17,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlund
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 129aafce2e270f85506d056d5d083d34176aa8a0
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 86609c0cb3e66397c4c8c8f3a09fba64b14089e4
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57018015"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58492821"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY (Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "57018015"
 Supprime une bibliothèque de package existante. Des bibliothèques de packages sont utilisées par les runtimes externes pris en charge, comme R, Python ou Java.
 
 > [!NOTE]
-> Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur la plateforme Windows sont pris en charge dans SQL Server 2019 CTP 2.3. La prise en charge de Linux est prévue pour une version ultérieure.
+> Dans SQL Server 2017, le langage R et la plateforme Windows sont pris en charge. R, Python et Java sur les plateformes Windows et Linux sont pris en charge dans SQL Server 2019 CTP 2.4. 
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -53,7 +53,7 @@ Spécifie le nom de l’utilisateur ou du rôle propriétaire de la bibliothèqu
 
 Les propriétaires de base de données peuvent supprimer les bibliothèques créées par les autres utilisateurs.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Supprimer une bibliothèque réclame le privilège ALTER ANY EXTERNAL LIBRARY. Par défaut, le propriétaire de la base de données ou de l’objet peut également supprimer une bibliothèque externe.
 

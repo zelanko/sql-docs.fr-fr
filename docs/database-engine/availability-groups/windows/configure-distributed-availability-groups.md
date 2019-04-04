@@ -11,25 +11,25 @@ ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bc8dc35b72a5544bc6b52934a4e2e517a047a621
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4b311802506ac8d0517026a9258a340e927a10f9
+ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215365"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566558"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>Configurer un groupe de disponibilité distribué Always On  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Pour créer un groupe de disponibilité distribué, vous devez créer un groupe de disponibilité et un écouteur sur chaque cluster de basculement Windows Server. Vous combinez ensuite ces groupes de disponibilité dans un groupe de disponibilité distribué. Les étapes suivantes fournissent un exemple de base dans Transact-SQL. Cet exemple ne couvre pas tous les détails de la création des groupes de disponibilité et des écouteurs. Son but est de mettre en évidence les exigences principales. 
+Pour créer un groupe de disponibilité distribué, vous devez créer deux groupes de disponibilité ayant chacun son propre écouteur. Vous combinez ensuite ces groupes de disponibilité dans un groupe de disponibilité distribué. Les étapes suivantes fournissent un exemple de base dans Transact-SQL. Cet exemple ne couvre pas tous les détails de la création des groupes de disponibilité et des écouteurs. Son but est de mettre en évidence les exigences principales.
 
-Pour obtenir une présentation technique des groupes de disponibilité distribués, consultez [Groupes de disponibilité distribués](distributed-availability-groups.md).   
+Pour obtenir une présentation technique des groupes de disponibilité distribués, consultez [Groupes de disponibilité distribués](distributed-availability-groups.md).
 
 ## <a name="prerequisites"></a>Conditions préalables requises
 
 ### <a name="set-the-endpoint-listeners-to-listen-to-all-ip-addresses"></a>Définir les écouteurs de point de terminaison pour écouter toutes les adresses IP
 
-Vérifiez que les points de terminaison peuvent communiquer entre les différents groupes de disponibilité du groupe de disponibilité distribué. Si un groupe de disponibilité est défini sur un réseau spécifique sur le point de terminaison, le groupe de disponibilité distribué ne fonctionne pas correctement. Sur chaque serveur qui héberge un réplica dans le groupe de disponibilité distribué, configurez l’écouteur sur `LISTENER_IP = ALL`. 
+Vérifiez que les points de terminaison peuvent communiquer entre les différents groupes de disponibilité du groupe de disponibilité distribué. Si un groupe de disponibilité est défini sur un réseau spécifique sur le point de terminaison, le groupe de disponibilité distribué ne fonctionne pas correctement. Sur chaque serveur qui héberge un réplica dans le groupe de disponibilité distribué, définissez l’écouteur pour qu’il écoute sur toutes les adresses IP (`LISTENER_IP = ALL`).
 
 #### <a name="create-a-listener-to-listen-to-all-ip-addresses"></a>Créer un écouteur pour écouter toutes les adresses IP
 
@@ -60,7 +60,7 @@ GO
 ## <a name="create-first-availability-group"></a>Créer un premier groupe de disponibilité
 
 ### <a name="create-the-primary-availability-group-on-the-first-cluster"></a>Créer le groupe de disponibilité principal sur le premier cluster  
-Créez un groupe de disponibilité sur le premier cluster WSFC.   Dans cet exemple, le groupe de disponibilité est nommé `ag1` pour la base de données `db1`. Le réplica principal du groupe de disponibilité principal est appelé **principal global** dans un groupe de disponibilité distribué. Dans cet exemple, Server1 est le principal global.        
+Créer un groupe de disponibilité sur le premier cluster de basculement Windows Server (WSFC).   Dans cet exemple, le groupe de disponibilité est nommé `ag1` pour la base de données `db1`. Le réplica principal du groupe de disponibilité principal est appelé **principal global** dans un groupe de disponibilité distribué. Dans cet exemple, Server1 est le principal global.        
   
 ```sql  
 CREATE AVAILABILITY GROUP [ag1]   
@@ -209,11 +209,19 @@ Quand la base de données qui se trouve sur le réplica secondaire du deuxième 
 
 ```sql  
 ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];   
-```  
+```
   
 ## <a name="failover"></a> Basculer vers un groupe de disponibilité secondaire  
-Seul le basculement manuel est pris en charge pour l’instant. L’instruction Transact-SQL suivante bascule le groupe de disponibilité distribué nommé `distributedag` :  
 
+Seul le basculement manuel est pris en charge pour l’instant. Pour basculer manuellement un groupe de disponibilité distribué :
+
+1. Pour empêcher toute perte de données, définissez le groupe de disponibilité distribué sur la validation synchrone.
+1. Attendez la fin de la synchronisation du groupe de disponibilité distribué.
+1. Sur le réplica principal global, définissez le rôle du groupe de disponibilité distribué sur `SECONDARY`.
+1. Testez la disponibilité du basculement.
+1. Basculez le groupe de disponibilité principal.
+
+Les exemples Transact-SQL suivants détaillent les étapes à effectuer pour basculer le groupe de disponibilité distribué nommé `distributedag` :
 
 1. Définissez le groupe de disponibilité distribué sur la validation synchrone en exécutant le code suivant sur *à la fois* le principal global et le redirecteur.   
     
@@ -242,8 +250,7 @@ Seul le basculement manuel est pris en charge pour l’instant. L’instruction 
 
       ```  
    >[!NOTE]
-   >De même que pour les groupes de disponibilité normaux, l’état de synchronisation entre deux réplicas de groupe de disponibilité faisant partie d’un groupe de disponibilité distribué dépend du mode de disponibilité des deux réplicas. Par exemple, pour obtenir une validation synchrone, le groupe de disponibilité principal et le groupe de disponibilité secondaire doivent tous deux être configurés avec le mode de disponibilité synchronous_commit.  
-
+   >Dans un groupe de disponibilité distribué, l’état de synchronisation entre les deux groupes de disponibilité dépend du mode de disponibilité des deux réplicas. Pour le mode de validation synchrone, le groupe de disponibilité principal et le groupe de disponibilité secondaire doivent tous deux présenter le mode de disponibilité `SYNCHRONOUS_COMMIT`. Pour cette raison, vous devez exécuter le script ci-dessus à la fois sur le réplica principal global et sur le redirecteur.
 
 1. Attendez que l’état du groupe de disponibilité distribuée soit défini sur `SYNCHRONIZED`. Exécutez la requête suivante sur le principal global, qui héberge le réplica principal du groupe de disponibilité principal. 
     

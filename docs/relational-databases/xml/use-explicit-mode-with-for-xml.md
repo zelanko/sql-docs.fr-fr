@@ -12,15 +12,15 @@ helpviewer_keywords:
 - FOR XML clause, EXPLICIT mode
 - FOR XML EXPLICIT mode
 ms.assetid: 8b26e8ce-5465-4e7a-b237-98d0f4578ab1
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 23c2911c656087fe3d4c0f5a81ea037ff02d6706
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36a775666da4905d4ccc9f11083470872b714804
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650327"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511596"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Utiliser le mode EXPLICIT avec FOR XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -149,25 +149,25 @@ ElementName!TagNumber!AttributeName!Directive
 ## <a name="in-this-section"></a>Dans cette section  
  Les exemples suivants illustrent l'utilisation du mode EXPLICIT.  
   
--   [Exemple : extraction d'informations sur les employés](../../relational-databases/xml/example-retrieving-employee-information.md)  
+-   [Exemple : Récupération d’informations sur les employés](../../relational-databases/xml/example-retrieving-employee-information.md)  
   
--   [Exemple : spécification de la directive ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
+-   [Exemple : Spécification de la directive ELEMENT](../../relational-databases/xml/example-specifying-the-element-directive.md)  
   
--   [Exemple : spécification de la directive ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
+-   [Exemple : Spécification de la directive ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md)  
   
--   [Exemple : construction de frères à l'aide du mode EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
+-   [Exemple : Construction de frères à l’aide du mode EXPLICIT](../../relational-databases/xml/example-constructing-siblings-with-explicit-mode.md)  
   
--   [Exemple : spécification des directives ID et IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
+-   [Exemple : Spécification des directives ID et IDREF](../../relational-databases/xml/example-specifying-the-id-and-idref-directives.md)  
   
--   [Exemple : spécification des directives ID et IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
+-   [Exemple : Spécification des directives ID et IDREFS](../../relational-databases/xml/example-specifying-the-id-and-idrefs-directives.md)  
   
--   [Exemple : spécification de la directive HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
+-   [Exemple : Spécification de la directive HIDE](../../relational-databases/xml/example-specifying-the-hide-directive.md)  
   
--   [Exemple : spécification de la directive ELEMENT et de l'encodage d'entité](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
+-   [Exemple : Spécification de la directive ELEMENT et de l’encodage d’entité](../../relational-databases/xml/example-specifying-the-element-directive-and-entity-encoding.md)  
   
--   [Exemple : spécification de la directive CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
+-   [Exemple : Spécification de la directive CDATA](../../relational-databases/xml/example-specifying-the-cdata-directive.md)  
   
--   [Exemple : spécification de la directive XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
+-   [Exemple : Spécification de la directive XMLTEXT](../../relational-databases/xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode RAW avec FOR XML](../../relational-databases/xml/use-raw-mode-with-for-xml.md)   

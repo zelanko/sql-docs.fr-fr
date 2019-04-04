@@ -17,12 +17,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 481a2fe18c99621b8331ab204a99e1d7efd37f24
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.openlocfilehash: 221021641787564bb064f1f825da43cff4b27a32
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55889980"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645561"
 ---
 # <a name="query-profiling-infrastructure"></a>Infrastructure du profilage de requête
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -123,6 +123,27 @@ WITH (MAX_MEMORY=4096 KB,
 
 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] inclut une version nouvellement révisée du profilage léger qui collecte des informations sur le nombre de lignes pour toutes les exécutions. Le profilage léger est activé par défaut sur [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] et l’indicateur de trace 7412 n’a aucun effet.
 
+Une nouvelle DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) est introduite pour retourner l’équivalent du dernier plan d’exécution réel connu pour la plupart des requêtes. Un nouvel événement étendu *query_post_execution_plan_profile* collecte l’équivalent d’un plan d’exécution réel basé sur le profilage léger, contrairement à *query_post_execution_showplan* qui utilise le profilage standard. 
+
+Un exemple de session avec l’événement étendu *query_post_execution_plan_profile* peut être configuré comme dans l’exemple ci-dessous :
+
+```sql
+CREATE EVENT SESSION [PerfStats_LWP_All_Plans] ON SERVER
+ADD EVENT sqlserver.query_post_execution_plan_profile(
+  ACTION(sqlos.scheduler_id,sqlserver.database_id,sqlserver.is_system,
+    sqlserver.plan_handle,sqlserver.query_hash_signed,sqlserver.query_plan_hash_signed,
+    sqlserver.server_instance_name,sqlserver.session_id,sqlserver.session_nt_username,
+    sqlserver.sql_text))
+ADD TARGET package0.ring_buffer(SET max_memory=(25600))
+WITH (MAX_MEMORY=4096 KB,
+  EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,
+  MAX_DISPATCH_LATENCY=30 SECONDS,
+  MAX_EVENT_SIZE=0 KB,
+  MEMORY_PARTITION_MODE=NONE,
+  TRACK_CAUSALITY=OFF,
+  STARTUP_STATE=OFF);
+```
+
 ## <a name="remarks"></a>Notes 
 
 > [!IMPORTANT]
@@ -130,7 +151,10 @@ WITH (MAX_MEMORY=4096 KB,
 
 À compter du profilage léger v2 et de sa faible surcharge, tout serveur qui n’est pas encore lié à l’UC peut exécuter le profilage léger **de manière continue**, ce qui permet aux spécialistes des bases de données d’explorer toute exécution en cours à tout moment, par exemple à l’aide du Moniteur d’activité ou en interrogeant directement `sys.dm_exec_query_profiles`, et d’obtenir le plan de requête avec les statistiques d’exécution.
 
-Pour plus d’informations sur la surcharge de performances liée au profilage de requête, consultez le billet de blog [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/). 
+Pour plus d’informations sur la surcharge de performances liée au profilage de requête, consultez le billet de blog [Developers Choice: Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004). 
+
+> [!NOTE]
+> Les événements étendus avec profilage léger utilisent les informations du profilage standard quand l’infrastructure de celui-ci est déjà activée. Par exemple, une session d’événements étendus utilisant `query_post_execution_showplan` est exécutée, et une autre session utilisant `query_post_execution_plan_profile` est démarrée. La deuxième session continuera d’utiliser les informations du profilage standard.
 
 ## <a name="see-also"></a> Voir aussi  
  [Surveiller et optimiser les performances](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
@@ -145,4 +169,4 @@ Pour plus d’informations sur la surcharge de performances liée au profilage d
  [Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
  [Plan d’exécution réel](../../relational-databases/performance/display-an-actual-execution-plan.md)    
  [Statistiques des requêtes dynamiques](../../relational-databases/performance/live-query-statistics.md)      
- [Developers Choice: Query progress - anytime, anywhere](https://blogs.msdn.microsoft.com/sql_server_team/query-progress-anytime-anywhere/)
+ [Developers Choice: Query progress - anytime, anywhere](https://techcommunity.microsoft.com/t5/SQL-Server/Developers-Choice-Query-progress-anytime-anywhere/ba-p/385004)

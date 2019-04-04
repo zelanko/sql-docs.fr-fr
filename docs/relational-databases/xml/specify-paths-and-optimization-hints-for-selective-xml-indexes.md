@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 289fd23355fabab6ddbbbde34b2bbdfaeb57753f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9d32ec82d15e8d66295a715fe62f98960fd7ad26
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505883"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510706"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Spécifier les chemins d'accès et les indicateurs d'optimisation des index XML sélectifs
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52505883"
  Pour plus d’informations sur les index XML sélectifs, consultez [Index XML sélectifs &#40;SXI&#41;](../../relational-databases/xml/selective-xml-indexes-sxi.md).  
   
 ##  <a name="untyped"></a> Présentation des types XQuery et SQL Server en XML non typé  
- Les index XML sélectifs prennent en charge deux systèmes de types : les types XQuery et les types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le chemin d'accès indexé peut être utilisé pour correspondre à une expression XQuery, ou pour correspondre au type de retour de la méthode value() de type de données XML.  
+ Les index XML sélectifs prennent en charge deux systèmes de types : les types XQuery et les types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le chemin d'accès indexé peut être utilisé pour correspondre à une expression XQuery, ou pour correspondre au type de retour de la méthode value() de type de données XML.  
   
 -   Lorsqu'un chemin d'accès à indexer n'est pas annoté, ou est annoté avec le mot clé XQUERY, il correspond à une expression XQuery. Il existe deux variantes des chemins d'accès de nœud annotés XQUERY :  
   
@@ -112,7 +112,7 @@ pathY = '/a/b/d' as XQUERY 'xs:string' MAXLENGTH(200) SINGLETON
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les types correspondent à la valeur de retour de la méthode value().  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les types prennent en charge l’indicateur d’optimisation suivant : SINGLETON.  
+-   Les types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge cet indicateur d’optimisation : SINGLETON.  
   
  Spécifier un type est obligatoire pour les chemins d'accès qui retournent des types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Utilisez le même type [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous utiliseriez dans la méthode value().  
   
@@ -216,7 +216,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
 ### <a name="choosing-the-nodes-to-index"></a>Sélection des nœuds à indexer  
  Vous pouvez utiliser les deux principes simples suivants pour identifier le sous-ensemble correct de nœuds à ajouter à un index XML sélectif.  
   
-1.  **Principe 1**: pour évaluer une expression XQuery donnée, indexez tous les nœuds que vous devez examiner.  
+1.  **Principe 1** : pour évaluer une expression XQuery donnée, indexez tous les nœuds que vous devez examiner.  
   
     -   Indexez tous les nœuds dont l'existence ou la valeur est utilisée dans l'expression XQuery.  
   
@@ -235,7 +235,7 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
   
     -   Le nœud `b`, car un prédicat est appliqué sur le nœud`b` dans l'expression XQuery.  
   
-2.  **Principe 2**: pour obtenir de meilleures performances, indexez tous les nœuds requis pour évaluer une expression XQuery donnée. Si vous indexez uniquement certains nœuds, l'index XML sélectif améliore l'évaluation des sous-expressions qui incluent uniquement les nœuds indexés.  
+2.  **Principe 2** : pour obtenir de meilleures performances, indexez tous les nœuds nécessaires pour évaluer une expression XQuery donnée. Si vous indexez uniquement certains nœuds, l'index XML sélectif améliore l'évaluation des sous-expressions qui incluent uniquement les nœuds indexés.  
   
  Pour améliorer les performances de l'instruction SELECT ci-dessus, créez l'index XML sélectif suivant :  
   
@@ -358,8 +358,8 @@ WHERE T.xmldata.exist('
   
 |indicateur d'optimisation|Stockage plus efficace|Performances améliorées|  
 |-----------------------|----------------------------|--------------------------|  
-|**node()**|Oui|non|  
-|**SINGLETON**|non|Oui|  
+|**node()**|Oui|Non|  
+|**SINGLETON**|Non|Oui|  
 |**DATA TYPE**|Oui|Oui|  
 |**MAXLENGTH**|Oui|Oui|  
   
@@ -368,13 +368,13 @@ WHERE T.xmldata.exist('
   
 |indicateur d'optimisation|Types de données XQuery|Types de données SQL|  
 |-----------------------|-----------------------|--------------------|  
-|**node()**|Oui|non|  
+|**node()**|Oui|Non|  
 |**SINGLETON**|Oui|Oui|  
-|**DATA TYPE**|Oui|non|  
-|**MAXLENGTH**|Oui|non|  
+|**DATA TYPE**|Oui|Non|  
+|**MAXLENGTH**|Oui|Non|  
   
 ### <a name="node-optimization-hint"></a>Indicateur d'optimisation node()  
- S'applique à : types de données XQuery  
+ S'applique à : Types de données XQuery  
   
  Vous pouvez utiliser l'optimisation node() pour spécifier un nœud dont la valeur n'est pas requise pour évaluer la requête classique. Cet indicateur réduit les besoins de stockage lorsque la requête classique doit uniquement évaluer l'existence du nœud. (Par défaut, un index XML sélectif stocke la valeur de tous les nœuds promus, à l'exception des types de nœuds complexes.)  
   
@@ -392,7 +392,7 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Si une requête requiert la valeur d'un nœud qui a été indexé avec l'indicateur node(), l'index XML sélectif ne peut pas être utilisé.  
   
 ### <a name="singleton-optimization-hint"></a>Indicateur d'optimisation SINGLETON  
- S'applique à : types de données XQuery ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ S'applique à : Types de données XQuery ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
  L'indicateur d'optimisation SINGLETON spécifie la cardinalité d'un nœud. Cet indicateur améliore les performances des requêtes, car il sait à l'avance qu'un nœud apparaît au plus une fois dans son parent ou ancêtre.  
   
@@ -403,14 +403,14 @@ WHERE T.xmldata.exist('/a/b[./c=5]') = 1
  Si l'indicateur SINGLETON a été spécifié, mais un nœud apparaît plusieurs fois dans son parent ou ancêtre, une erreur est générée lorsque vous créez l'index (pour les données existantes) ou lorsque vous exécutez une requête (pour les nouvelles données).  
   
 ### <a name="data-type-optimization-hint"></a>Indicateur d'optimisation DATA TYPE  
- S'applique à : types de données XQuery  
+ S'applique à : Types de données XQuery  
   
  L'indicateur d'optimisation DATA TYPE vous permet de spécifier un type de données XQuery ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du nœud indexé. Le type de données est utilisé pour la colonne dans la table de données de l'index XML sélectif qui correspond au nœud indexé.  
   
  Lors de la conversion d'une valeur existante dans le type de données spécifié échoue, l'opération d'insertion (dans l'index) réussit ; toutefois, une valeur NULL est insérée dans la table de données de l'index.  
   
 ### <a name="maxlength-optimization-hint"></a>Indicateur d'optimisation MAXLENGTH  
- S'applique à : types de données XQuery  
+ S'applique à : Types de données XQuery  
   
  L'indicateur d'optimisation MAXLENGTH vous permet de limiter la longueur de données xs:string. MAXLENGTH n'est pas pertinente pour les types de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] étant donné que vous spécifiez la longueur lorsque vous spécifiez les types de dates VARCHAR ou NVARCHAR.  
   

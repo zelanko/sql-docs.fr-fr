@@ -23,15 +23,15 @@ helpviewer_keywords:
 - XML [SQL Server], untyped
 - xml data type [SQL Server], parameters
 ms.assetid: 4bc50af9-2f7d-49df-bb01-854d080c72c7
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f1a8113ba4f9df20fcf11a7f4662abb1f2a24b5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8e4679cb4627f5366327c02f6b30db32d3b2610
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841279"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510916"
 ---
 # <a name="compare-typed-xml-to-untyped-xml"></a>Comparer du XML typé et du XML non typé
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -69,14 +69,14 @@ ms.locfileid: "47841279"
   
  Dans les exemples suivants, une convention d'affectation des noms en deux parties est utilisée pour spécifier le nom de la collection de schémas XML. La première partie est le nom du schéma et la deuxième est le nom de la collection de schémas XML.  
   
-### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemple : association d'une collection de schémas à une variable de type xml  
+### <a name="example-associating-a-schema-collection-with-an-xml-type-variable"></a>Exemple : Association d’une collection de schémas à une variable de type xml  
  L’exemple suivant crée une variable de type **xml** et lui associe une collection de schémas. La collection de schémas spécifiée dans l'exemple est déjà importée dans la base de données **AdventureWorks** .  
   
 ```  
 DECLARE @x xml (Production.ProductDescriptionSchemaCollection);   
 ```  
   
-### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemple: spécification d'un schéma pour une colonne de type xml  
+### <a name="example-specifying-a-schema-for-an-xml-type-column"></a>Exemple : Spécification d’un schéma pour une colonne de type xml  
  L'exemple suivant crée une table avec une colonne de type **xml** et spécifie le schéma correspondant :  
   
 ```  
@@ -85,7 +85,7 @@ CREATE TABLE T1(
  Col2 xml (Production.ProductDescriptionSchemaCollection)) ;  
 ```  
   
-### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Exemple : transmission d'un paramètre de type xml vers une procédure stockée  
+### <a name="example-passing-an-xml-type-parameter-to-a-stored-procedure"></a>Exemple : Passage d’un paramètre de type xml à une procédure stockée  
  L'exemple suivant passe un paramètre de type **xml** à une procédure stockée et spécifie un schéma pour la variable :  
   
 ```  
@@ -107,7 +107,7 @@ AS
   
  Dans la hiérarchie des types de données, le type de données **xml** apparaît après **sql_variant** et les types définis par l’utilisateur, mais avant tout type intégré.  
   
-### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemple : définition de facettes pour imposer des contraintes sur une colonne typée xml  
+### <a name="example-specifying-facets-to-constrain-a-typed-xml-column"></a>Exemple : Spécification de facettes pour imposer des contraintes sur une colonne typée xml  
  Vous pouvez définir des contraintes sur des colonnes **xml** typées de façon à n’autoriser que des éléments uniques de premier niveau pour chaque instance qui y est stockée. Pour cela, vous devez spécifier la facette facultative `DOCUMENT` lors de la création de la table, comme le montre l'exemple suivant :  
   
 ```  
@@ -159,7 +159,7 @@ declare @x xml (DOCUMENT Production.ProductDescriptionSchemaCollection);
   
 ## <a name="see-also"></a> Voir aussi  
  [Créer des instances de données XML](../../relational-databases/xml/create-instances-of-xml-data.md)   
- [méthodes de type de données xml](../../t-sql/xml/xml-data-type-methods.md)   
+ [Méthodes des types de données xml](../../t-sql/xml/xml-data-type-methods.md)   
  [Langage de modification de données XML &#40;XML DML&#41;](../../t-sql/xml/xml-data-modification-language-xml-dml.md)   
  [Données XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-data-sql-server.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : spécification de la directive XMLTEXT | Microsoft Docs'
+title: 'Exemple : Spécification de la directive XMLTEXT | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/05/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - XMLTEXT directive
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 7c20ecd2ea4df8ea3e3a22138473ec1de48fc7a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e22a94fef64ac6b31d4a7609c01a50f11d5020bf
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806804"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511936"
 ---
-# <a name="example-specifying-the-xmltext-directive"></a>Exemple : spécification de la directive XMLTEXT
+# <a name="example-specifying-the-xmltext-directive"></a>Exemple : Spécification de la directive XMLTEXT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cet exemple illustre l’adressage des informations contenues dans la colonne de dépassement de capacité à l’aide de la directive **XMLTEXT** dans une instruction `SELECT` utilisant le mode EXPLICIT.  
   
@@ -153,7 +153,7 @@ FOR XML EXPLICIT;
  </Parent>
  ```  
   
- Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Exemple :  
+ Si les données de la colonne `XMLTEXT` contiennent des attributs sur l'élément racine, ces attributs ne sont pas montrés dans le schéma de données XML et l'analyseur MSXML ne valide pas le fragment de document XML obtenu. Par exemple :  
   
 ```  
 SELECT 1 AS Tag,  

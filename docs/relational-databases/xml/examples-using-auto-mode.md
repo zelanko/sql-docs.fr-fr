@@ -1,5 +1,5 @@
 ---
-title: 'Exemples : utilisation du mode AUTO | Microsoft Docs'
+title: 'Exemples : Utilisation du mode AUTO | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,21 +10,21 @@ ms.topic: conceptual
 helpviewer_keywords:
 - AUTO FOR XML mode, examples
 ms.assetid: 11e8d0e4-df8a-46f8-aa21-9602d4f26cad
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6e246624301cdc20fab58f8a59d72a2f8416bae1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91a2e3a44ba68d280f52b35c3d62026455d4e615
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698487"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510615"
 ---
-# <a name="examples-using-auto-mode"></a>Exemples : utilisation du mode AUTO
+# <a name="examples-using-auto-mode"></a>Exemples : Utilisation du mode AUTO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Les exemples suivants illustrent l'utilisation du mode AUTO. Un grand nombre de ces requêtes sont spécifiées sur les documents XML d'instructions de fabrication de bicyclettes, stockés dans la colonne Instructions de la table ProductModel dans l'exemple de base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemple : extraction des informations sur les clients, les commandes et les détails des commandes  
+## <a name="example-retrieving-customer-order-and-order-detail-information"></a>Exemple : Récupération d’informations sur les clients, les commandes et les détails des commandes  
  Cette requête extrait les informations de client, de commande et de détail de commande relatives à un client spécifique.  
   
 ```  
@@ -95,7 +95,7 @@ FOR XML AUTO;
   
  `</Cust>`  
   
-## <a name="example-specifying-group-by-and-aggregate-functions"></a>Exemple : spécification de la clause GROUP BY et de fonctions d'agrégation  
+## <a name="example-specifying-group-by-and-aggregate-functions"></a>Exemple : Spécification de la clause GROUP BY et de fonctions d’agrégation  
  La requête suivante renvoie des ID de client spécifiques et le nombre de commandes passées par chaque client.  
   
 ```  
@@ -115,7 +115,7 @@ FOR XML AUTO;This is the partial result:
   
  `...`  
   
-## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemple : spécification de colonnes calculées en mode AUTO  
+## <a name="example-specifying-computed-columns-in-auto-mode"></a>Exemple : Spécification de colonnes calculées en mode AUTO  
  Cette requête renvoie des noms concaténés de clients spécifiques et les informations de commande. Étant donné que la colonne calculée est affectée au niveau le plus profond rencontré à ce stade, l'élément <`SOH`> est utilisé dans cet exemple. Les noms concaténés des clients sont ajoutés comme attributs de l'élément <`SOH`> dans le résultat.  
   
 ```  
@@ -168,7 +168,7 @@ ORDER BY IndividualCustomer.CustomerID, SOH.CustomerIDFOR XML AUTO;
   
  `...`  
   
-## <a name="example-returning-binary-data"></a>Exemple : renvoi de données binaires  
+## <a name="example-returning-binary-data"></a>Exemple : Retour de données binaires  
  Cette requête retourne une photo du produit de la table `ProductPhoto` . `ThumbNailPhoto` est une colonne **varbinary (max)** dans la table `ProductPhoto` . Par défaut, le mode `AUTO` renvoie vers les données binaires une référence, en l'occurrence une URL relative pointant vers la racine virtuelle de la base de données dans laquelle la requête est exécutée. L'attribut de clé `ProductPhotoID` doit être spécifié pour identifier l'image. Lors de l'extraction d'une référence d'image telle qu'elle apparaît dans cet exemple, la clé primaire de la table doit aussi être spécifiée dans la clause `SELECT` pour identifier une ligne de façon univoque.  
   
 ```  
@@ -224,7 +224,7 @@ FOR XML AUTO;
   
  Cela peut poser un problème, notamment lorsque des requêtes dbobject sont exécutées sur une base de données respectant la casse. Pour l'éviter, la casse du nom de table ou de colonne spécifié dans les requêtes doit correspondre à celle du nom de table ou de colonne défini dans la base de données.  
   
-## <a name="example-understanding-the-encoding"></a>Exemple : présentation de l'encodage  
+## <a name="example-understanding-the-encoding"></a>Exemple : Fonctionnement de l’encodage  
  Cet exemple montre les différents encodages qui se produisent dans les résultats.  
   
  Créez cette table :  

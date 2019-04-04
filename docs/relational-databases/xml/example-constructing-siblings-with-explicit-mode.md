@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : construction de frères à l’aide du mode EXPLICIT | Microsoft Docs'
+title: 'Exemple : Construction de frères à l’aide du mode EXPLICIT | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT FOR XML mode
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 960c90c9744eb69d651695cf1a5f78e760c3ea3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b0a4753ba8b7f83dd1d166f31195e4c0a85f951a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778067"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512566"
 ---
-# <a name="example-constructing-siblings-with-explicit-mode"></a>Exemple : construction de frères à l'aide du mode EXPLICIT
+# <a name="example-constructing-siblings-with-explicit-mode"></a>Exemple : Construction de frères à l’aide du mode EXPLICIT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Supposons que vous souhaitiez construire un document XML qui fournit des informations sur les commandes. Les éléments <`SalesPerson`> et <`OrderDetail`> sont frères. Chaque commande possède un élément <`OrderHeader`>, un élément <`SalesPerson`> ainsi qu'un ou plusieurs éléments <`OrderDetail`>.  
   
@@ -85,31 +85,21 @@ FOR XML EXPLICIT;
   
  Voici le résultat partiel :  
   
- `<OrderHeader SalesOrderID="43659" OrderDate="2005-07-01T00:00:00" CustomerID="676">`  
-  
- `<SalesPerson SalesPersonID="279" />`  
-  
- `<OrderDetail SalesOrderID="43659" LineTotal="10.373000" ProductID="712" OrderQty="2" />`  
-  
- `<OrderDetail SalesOrderID="43659" LineTotal="28.840400" ProductID="716" OrderQty="1" />`  
-  
- `<OrderDetail SalesOrderID="43659" LineTotal="34.200000" ProductID="709" OrderQty="6" />`  
-  
- `...`  
-  
- `</OrderHeader>`  
-  
- `<OrderHeader SalesOrderID="43661" OrderDate="2005-07-01T00:00:00" CustomerID="442">`  
-  
- `<SalesPerson SalesPersonID="282" />`  
-  
- `<OrderDetail SalesOrderID="43661" LineTotal="20.746000" ProductID="712" OrderQty="4" />`  
-  
- `<OrderDetail SalesOrderID="43661" LineTotal="40.373000" ProductID="711" OrderQty="2" />`  
-  
- `...`  
-  
- `</OrderHeader>`  
+```
+<OrderHeader SalesOrderID="43659" OrderDate="2005-07-01T00:00:00" CustomerID="676">
+  <SalesPerson SalesPersonID="279" />
+  <OrderDetail SalesOrderID="43659" LineTotal="10.373000" ProductID="712" OrderQty="2" />
+  <OrderDetail SalesOrderID="43659" LineTotal="28.840400" ProductID="716" OrderQty="1" />
+  <OrderDetail SalesOrderID="43659" LineTotal="34.200000" ProductID="709" OrderQty="6" />
+    ...
+</OrderHeader>
+<OrderHeader SalesOrderID="43661" OrderDate="2005-07-01T00:00:00" CustomerID="442">
+  <SalesPerson SalesPersonID="282" />
+  <OrderDetail SalesOrderID="43661" LineTotal="20.746000" ProductID="712" OrderQty="4" />
+  <OrderDetail SalesOrderID="43661" LineTotal="40.373000" ProductID="711" OrderQty="2" />
+  ...
+</OrderHeader>
+```
   
 ## <a name="see-also"></a> Voir aussi  
  [Utiliser le mode EXPLICIT avec FOR XML](../../relational-databases/xml/use-explicit-mode-with-for-xml.md)  

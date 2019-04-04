@@ -10,12 +10,12 @@ ms.assetid: f670af56-dbcc-4309-9119-f919dcad8a65
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 27e2a4939ebe376408aad64414503a8c9edd46ce
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 6c7b3874277b1046233e4f728a19d3eee60aa851
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771345"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58535851"
 ---
 # <a name="upgrading-always-on-availability-group-replica-instances"></a>Mise à niveau d’instances de réplica d’un groupe de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,17 +80,23 @@ Consultez les instructions suivantes pour effectuer la mise à niveau/mise à jo
   
 1.  Supprimer le basculement automatique sur tous les réplicas avec validation synchrone  
   
-2.  Mettre à niveau toutes les instances de réplica secondaire distant exécutant les réplicas secondaires avec validation asynchrone  
+2.  Mettre à niveau toutes les instances de réplica secondaire avec validation asynchrone. 
   
-3.  Mettre à niveau instances de réplica secondaire local qui n'exécutent pas le réplica principal  
+3.  Mettre à niveau toutes les instances de réplica secondaire distant avec validation synchrone. 
+
+4.  Mettre à niveau toutes les instances de réplica secondaire local avec validation synchrone. 
   
-4.  Basculer manuellement le groupe de disponibilité sur un réplica secondaire local avec validation synchrone  
+4.  Basculer manuellement le groupe de disponibilité (qui vient d’être mis à niveau) sur un réplica secondaire local avec validation synchrone.  
   
-5.  Mettre à niveau ou mettre à jour l'instance de réplica local qui hébergeait précédemment le réplica principal  
+5.  Mettre à niveau ou mettre à jour l’instance de réplica local qui hébergeait précédemment le réplica principal.  
   
-6.  Configurer le basculement automatique des partenaires de basculement selon les besoins  
+6.  Configurer le basculement automatique des partenaires de basculement selon les besoins.
   
  Si nécessaire, effectuez un basculement manuel supplémentaire pour rétablir la configuration d’origine du groupe de disponibilité.  
+ 
+   > [!NOTE]
+   > - La mise à niveau d’un réplica avec validation synchrone et sa mise hors connexion ne retardent pas les transactions sur le réplica principal. Une fois que le réplica secondaire est déconnecté, les transactions sont validées sur le réplica principal sans attendre les journaux pour renforcer la sécurité sur le réplica secondaire. 
+   > - Si `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` est défini sur `1` ou `2`, le réplica principal peut ne pas être disponible pour les opérations en lecture/écriture quand il n’y a pas le nombre correspondant de réplicas secondaires de synchronisation disponibles pendant le processus de mise à jour. 
   
 ## <a name="ag-with-one-remote-secondary-replica"></a>Groupe de disponibilité avec un réplica secondaire distant  
  Si vous avez déployé un groupe de disponibilité uniquement pour la récupération d’urgence, vous devez peut-être le basculer sur un réplica secondaire avec validation asynchrone. Cette configuration est illustrée dans la figure ci-dessous :  

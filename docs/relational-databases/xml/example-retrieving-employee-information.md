@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : extraction d’informations sur les employés | Microsoft Docs'
+title: 'Exemple : Récupération d’informations sur les employés | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EXPLICIT mode
 ms.assetid: 63cd6569-2600-485b-92b4-1f6ba09db219
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dedcea064cf71695764e1892b1fb6b7dd96bed21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1984c3c378f4408b8e1126f427a5e06560adef91
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699083"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58510326"
 ---
-# <a name="example-retrieving-employee-information"></a>Exemple : extraction d'informations sur les employés
+# <a name="example-retrieving-employee-information"></a>Exemple : Extraction d’informations sur les employés
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cet exemple extrait un ID et un nom pour chaque employé. Dans la base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] , les ID des employés se trouvent dans la colonne BusinessEntityID de la table Employee. Les noms des employés figurent dans la table Person. La colonne BusinessEntityID peut être utilisée pour joindre les tables.  
   
@@ -85,43 +85,31 @@ ORDER BY [Employee!1!EmpID],[Name!2!FName]
 FOR XML EXPLICIT;  
 ```  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
- `<Employee EmpID="1">`  
-  
- `<Name FName="Ken" LName="Sánchez" />`  
-  
- `</Employee>`  
-  
- `<Employee EmpID="2">`  
-  
- `<Name FName="Terri" LName="Duffy" />`  
-  
- `</Employee>`  
-  
- `...`  
+```
+<Employee EmpID="1">
+  <Name FName="Ken" LName="Sánchez" />
+</Employee>
+<Employee EmpID="2">
+  <Name FName="Terri" LName="Duffy" />
+</Employee>
+...
+```
   
  La première instruction `SELECT` spécifie les noms des colonnes dans l'ensemble de lignes obtenu. Ces noms forment deux groupes de colonnes. Le groupe qui possède la valeur `Tag` `1` dans le nom de colonne identifie `Employee` en tant qu'élément et `EmpID` en tant qu'attribut. L'autre groupe de colonnes possède la valeur `Tag` `2` dans la colonne et identifie <`Name`> en tant qu'élément et `FName` et `LName` en tant qu'attributs.  
   
- Le tableau suivant montre l'ensemble de lignes partiel généré par la requête :  
+ Le tableau suivant montre l'ensemble de lignes partiel généré par la requête :  
   
- `Tag Parent  Employee!1!EmpID Name!2!FName Name!2!LName`  
-  
- `--- ------  ---------------- ------------ ------------`  
-  
- `1   NULL    1                NULL         NULL`  
-  
- `2   1       1                Ken          Sánchez`  
-  
- `1   NULL    2                NULL         NULL`  
-  
- `2   1       2                Terri        Duffy`  
-  
- `1   NULL    3                NULL         NULL`  
-  
- `2   1       3                Roberto      Tamburello`  
-  
- `...`  
+Balise | Parent | Employee!1!EmpID | Name!2!FName | Name!2!LName
+-|-|-|-|-
+1 | NULL | 1 | NULL | NULL 
+2 | 1 | 1 | Ken | Sánchez 
+1 | NULL | 2 | NULL | NULL 
+2 | 1 | 2 | Terri | Duffy 
+1 | NULL | 3 | NULL | NULL 
+2 | 1 | 3 | Roberto | Tamburello 
+... | ... | ... | ... | ...
   
  Les lignes de la table universelle sont traitées comme suit pour générer l'arborescence XML obtenue :  
   

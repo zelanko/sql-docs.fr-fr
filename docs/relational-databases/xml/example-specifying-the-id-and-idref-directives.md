@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : spécification des directives ID et IDREF | Microsoft Docs'
+title: 'Exemple : Spécification des directives ID et IDREF | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - IDREF directive
 - ID directive
 ms.assetid: 7ff1ea73-71ca-4786-bd42-564f1b5de2d9
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 20f5301d07d054800775b6cf624e30447950867d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9b69385e2481d772da2777dfffde4907c8d18d3b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726087"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58511166"
 ---
-# <a name="example-specifying-the-id-and-idref-directives"></a>Exemple : spécification des directives ID et IDREF
+# <a name="example-specifying-the-id-and-idref-directives"></a>Exemple : Spécification des directives ID et IDREF
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cet exemple est presque identique à l'exemple [Spécification de la directive ELEMENTXSINIL](../../relational-databases/xml/example-specifying-the-elementxsinil-directive.md) . La seule différence est que la requête spécifie les directives **ID** et **IDREF** . Ces directives remplacent les types de l’attribut **SalesPersonID** des éléments <`OrderHeader`> et <`OrderDetail`>. Il en résulte des liens à l'intérieur du document. Vous avez besoin du schéma pour visualiser les types remplacés. Par conséquent, la requête spécifie l'option **XMLDATA** dans la clause FOR XML pour extraire le schéma.  
   

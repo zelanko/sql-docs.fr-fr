@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : extraction de données binaires | Microsoft Docs'
+title: 'Exemple : Récupération de données binaires | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - RAW mode, retrieving binary data example
 ms.assetid: 5cea5d49-58ac-403a-a933-c4fd91de400b
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9b2031a25b80e69a77a2e07dcab23bb03d1fc3fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1479883b1e311ad625e4a169d2c7e82d00125d57
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601547"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512406"
 ---
-# <a name="example-retrieving-binary-data"></a>Exemple : extraction de données binaires
+# <a name="example-retrieving-binary-data"></a>Exemple : Extraction de données binaires
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   La requête ci-dessous retourne la photo du produit stockée dans une colonne de type **varbinary(max)** . L'option `BINARY BASE64` est spécifiée dans la requête pour retourner les données binaires au format encodé en base64.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : spécification de la directive ELEMENT | Microsoft Docs'
+title: 'Exemple : Spécification de la directive ELEMENT | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -10,17 +10,17 @@ ms.topic: conceptual
 helpviewer_keywords:
 - ELEMENT directive
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 6f52cf1dc13c2c3fecc4a578cac5e210a0c97ea0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 49876feb2078c2913ab07184a61312807f8a168a
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845687"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58509946"
 ---
-# <a name="example-specifying-the-element-directive"></a>Exemple : spécification de la directive ELEMENT
+# <a name="example-specifying-the-element-directive"></a>Exemple : Spécification de la directive ELEMENT
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Cette directive extrait des informations sur les employés et génère des données XML centrées sur l'élément, comme illustré par le code suivant :  
   

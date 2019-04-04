@@ -3,22 +3,39 @@ title: Virtualiser des données externes dans SQL Server 2019 CTP 2.0 | Microsof
 description: Cette page détaille les étapes d’utilisation de l’Assistant Création d’une table externe pour un fichier CSV
 author: Abiola
 ms.author: aboke
+ms.reviewer: jroth
 manager: craigg
-ms.date: 12/13/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4529d31ab27f06b6a44b396dd6b20bd6e438dbef
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: dae0692bafd8c4de295a914c9da0ead5c6e3980b
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405672"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512956"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Utiliser l’Assistant Table externe avec des fichiers CSV
 
 SQL Server 2019 permet également de virtualiser les données d’un fichier CSV dans HDFS.  Ce processus permet aux données de rester à leur emplacement d’origine et de les **virtualiser** dans une instance SQL Server, ce qui vous permet de les interroger comme n’importe quelle autre table dans SQL Server. Cette fonctionnalité évite ainsi de recourir à des processus ETL. Ceci est possible via l’utilisation de connecteurs PolyBase. Pour plus d’informations sur la virtualisation des données, consultez notre document [Bien démarrer avec PolyBase](polybase-guide.md).
+
+## <a name="prerequisite"></a>Condition préalable
+
+À compter de CTP 2.4, le pool de données et les sources de données externes du pool de stockage ne sont plus créés par défaut dans votre cluster de Big Data. Avant d’utiliser l’Assistant, créez la source de données externe **SqlStoragePool** par défaut dans votre base de données cible à l’aide de la requête Transact-SQL suivante. N’oubliez pas de changer d’abord le contexte de la requête à votre base de données cible.
+
+```sql
+IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
+  BEGIN
+    IF SERVERPROPERTY('ProductLevel') = 'CTP2.3'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-mssql-controller:8080');
+    ELSE IF SERVERPROPERTY('ProductLevel') = 'CTP2.4'
+      CREATE EXTERNAL DATA SOURCE SqlStoragePool
+      WITH (LOCATION = 'sqlhdfs://service-master-pool:50070');
+  END
+```
 
 ## <a name="launch-the-external-table-wizard"></a>Lancer l’Assistant Table externe
 

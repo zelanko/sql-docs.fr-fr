@@ -11,15 +11,15 @@ helpviewer_keywords:
 - XML indexes [SQL Server], modifying
 - modifying indexes
 ms.assetid: 24d50fe1-c6ec-49e6-91a3-9791851ba53d
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9341694ac0a7ed377598c1ebb72774c954861ddb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1cbd78870aee49d86511a0e4731009374a3b379
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726517"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58512426"
 ---
 # <a name="modify-xml-indexes"></a>Modifier les index XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47726517"
   
 -   Si l'option ALTER INDEX ALL est précisée, elle s'applique aussi bien aux index non XML qu'aux index XML. Il se peut que les options d'indexation soient indiquées comme n'étant pas valides pour ces deux types d'index. Dans ce cas, l'instruction entière est ignorée.  
   
-## <a name="example-modifying-an-xml-index"></a>Exemple : modification d'un index XML  
+## <a name="example-modifying-an-xml-index"></a>Exemple : Modification d’un index XML  
  Dans l'exemple suivant, un index XML est créé puis modifié en affectant la valeur `ALLOW_ROW_LOCKS` à l'option `OFF`. Lorsque l'option `ALLOW_ROW_LOCKS` est ainsi définie sur `OFF`, les lignes ne sont pas verrouillées et l'accès aux index spécifiés est obtenu au moyen de verrous de niveau page et table.  
   
 ```  
@@ -52,7 +52,7 @@ ALTER INDEX PIdx_T_XmlCol on T
 SET (ALLOW_ROW_LOCKS = OFF)  
 ```  
   
-## <a name="example-disabling-and-enabling-an-xml-index"></a>Exemple: désactivation et activation d'un index XML  
+## <a name="example-disabling-and-enabling-an-xml-index"></a>Exemple : Désactivation et activation d’un index XML  
  Par défaut, un index XML est activé. S'il est désactivé par la suite, les requêtes sur la colonne XML n'utilisent alors pas l'index XML. Pour réactiver un index XML, passez par l'instruction `ALTER INDEX` avec l'option `REBUILD` .  
   
 ```  

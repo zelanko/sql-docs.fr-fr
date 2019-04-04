@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5cac151a3c3192c03f915c95eb0ac228ad2d8c05
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: add30d400db0a4ce73313ac5b7c4637bff8adfd9
+ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414174"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58658293"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,6 +133,6 @@ Ainsi, l’optimiseur de requête peut traiter la jointure plus rapidement car l
 -   [Chargement en masse dans une table partitionnée](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Projet REAL : Cycle de vie de données -- Partitionnement](https://technet.microsoft.com/library/cc966424.aspx)    
 -   [Améliorations du traitement des requêtes sur les tables et les index partitionnés](https://msdn.microsoft.com/library/ms345599.aspx)    
--   [10 meilleures pratiques pour générer un entrepôt de données relationnelles à grande échelle](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) dans _SQLCAT's Guide to: Relational Engineering_
   
   

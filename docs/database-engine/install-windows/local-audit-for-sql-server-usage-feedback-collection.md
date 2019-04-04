@@ -1,7 +1,7 @@
 ---
 title: Audit local pour la collecte de commentaires d’utilisation de SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2017
+ms.date: 03/27/2018
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -14,12 +14,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: a094030a35acf997186061b752f9b61d8f7b8200
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: fb5810e787456673d67322823a28df4d79208d1e
+ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601677"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58493881"
 ---
 # <a name="local-audit-for-sql-server-usage-feedback-collection"></a>Audit local pour la collecte de commentaires d’utilisation de SQL Server
 
@@ -66,7 +66,7 @@ Procédez comme suit pour obtenir le compte de connexion de service de télémé
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Configurer un nouveau dossier pour les fichiers d’audit local.    
 
-Créez un dossier (répertoire d’audit local) où l’audit local écrit les journaux. Par exemple, le chemin d’accès complet au répertoire d’audit local pour une instance par défaut du moteur de base de données serait : *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Créez un dossier (répertoire d’audit local) où l’audit local écrit les journaux. Par exemple, le chemin complet du répertoire d’audit local pour une instance par défaut du moteur de base de données serait : *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
  
   >[!NOTE] 
   >Configurez le chemin du répertoire pour l’audit local en dehors du chemin d’installation de SQL Server pour éviter que la fonctionnalité d’audit et la correction entraînent des problèmes éventuels avec SQL Server.
@@ -190,7 +190,7 @@ L’audit local va générer un fichier journal par jour. Les fichiers journaux 
 
 Les colonnes répertoriées ci-dessous représentent l’ordre de la sortie du fichier d’audit local. Un hachage à sens unique avec SHA 256 est utilisé pour rendre anonyme les valeurs pour certaines colonnes ci-dessous.  
 
-| Nom    | Description | Exemples de valeurs
+| Créer une vue d’abonnement | Description | Exemples de valeurs
 |-------|--------| ----------|
 |instanceUniqueID| Identificateur d’instance rendu anonyme | 888770C4D5A8C6729F76F33D472B28883AE518C92E1999888B171A085059FD 
 |schemaVersion| Version du schéma de SQLCEIP |  3 
@@ -201,11 +201,11 @@ Les colonnes répertoriées ci-dessous représentent l’ordre de la sortie du f
 |clientVersion | Version d’instance SQL Server | 13.0.2161.3 ((SQL16_RTM_QFE-CU).160907-1223) 
 |operatingSystem | La version du système d’exploitation sur lequel l’instance SQL Server est installée | Microsoft Windows Server 2012 R2 Datacenter 
 |querySetVersion | Version d’un groupe de définitions de requête | 1.0.0.0 
-|traceName | Catégories de traces : (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
+|traceName | Catégories de traces : (SQLServerXeQueries, SQLServerPeriodicQueries, SQLServerOneSettingsException) | SQLServerPeriodicQueries 
 |queryIdentifier | Un identificateur de la requête | SQLServerProperties.002 
-|données   | La sortie des informations collectées sur queryIdentifier en tant que sortie de requête T-SQL, de session XE ou de l’application |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tÉdition Standard (64 bits) sur Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
+|données   | La sortie des informations collectées sur queryIdentifier en tant que sortie de requête T-SQL, de session XE ou de l’application |  [{"Collation": "SQL_Latin1_General_CP1_CI_AS","SqlFTinstalled": "0" "SqlIntSec": "1","IsSingleUser": "0","SqlFilestreamMode": "0","SqlPbInstalled": "0","SqlPbNodeRole": "","SqlVersionMajor": "13","SqlVersionMinor": "0","SqlVersionBuild": "2161","ProductBuildType": "","ProductLevel": "RTM","ProductUpdateLevel": "CU2","ProductUpdateReference": "KB3182270","ProductRevision": "3","SQLEditionId": "-1534726760","IsClustered": "0","IsHadrEnabled": "0","SqlAdvAInstalled": "0","PacketReceived": "1210","Version": "Microsoft SQL Server 2016 (RTM-CU2) (KB3182270) - 13.0.2161.3 (X64) \n\tSep  7 2016 14:24:16 \n\tCopyright (c) Microsoft Corporation\n\tStandard Edition (64-bit) on Windows Server 2012 R2 Datacenter 6.3 \u003cX64\u003e (Build 9600: ) (Hypervisor)\n"}],
 |Requête| Le cas échéant, la définition de requêtes T-SQL liée au queryIdentifier qui génère des données.        Ce composant n’est pas téléchargé par le service SQL Server CEIP. Il est inclus dans l’audit local en tant que référence pour les clients uniquement.| SELECT\n      SERVERPROPERTY(\u0027Collation\u0027) AS [Collation],\n      SERVERPROPERTY(\u0027IsFullTextInstalled\u0027) AS [SqlFTinstalled],\n      SERVERPROPERTY(\u0027IsIntegratedSecurityOnly\u0027) AS [SqlIntSec],\n      SERVERPROPERTY(\u0027IsSingleUser\u0027) AS [IsSingleUser],\n      SERVERPROPERTY (\u0027FileStreamEffectiveLevel\u0027) AS [SqlFilestreamMode],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbInstalled],\n      SERVERPROPERTY(\u0027IsPolyBaseInstalled\u0027) AS [SqlPbNodeRole],\n      SERVERPROPERTY(\u0027ProductMajorVersion\u0027) AS [SqlVersionMajor],\n      SERVERPROPERTY(\u0027ProductMinorVersion\u0027) AS [SqlVersionMinor],\n      SERVERPROPERTY(\u0027ProductBuild\u0027) AS [SqlVersionBuild],\n      SERVERPROPERTY(\u0027ProductBuildType\u0027) AS ProductBuildType,\n      SERVERPROPERTY(\u0027ProductLevel\u0027) AS ProductLevel,\n      SERVERPROPERTY(\u0027ProductUpdateLevel\u0027) AS ProductUpdateLevel,\n      SERVERPROPERTY(\u0027ProductUpdateReference\u0027) AS ProductUpdateReference,\n      RIGHT(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)),CHARINDEX(\u0027.\u0027, REVERSE(CAST(SERVERPROPERTY(\u0027ProductVersion\u0027) AS NVARCHAR(30)))) - 1) AS ProductRevision,\n      SERVERPROPERTY(\u0027EditionID\u0027) AS SQLEditionId,\n      SERVERPROPERTY(\u0027IsClustered\u0027) AS IsClustered,\n      SERVERPROPERTY(\u0027IsHadrEnabled\u0027) AS IsHadrEnabled,\n      SERVERPROPERTY(\u0027IsAdvancedAnalyticsInstalled\u0027) AS [SqlAdvAInstalled],\n      @@PACK_RECEIVED AS PacketReceived,\n      @@VERSION AS Version
-|queryTimeInTicks | La durée nécessaire à l’exécution de la requête avec la catégorie de trace suivante : (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
+|queryTimeInTicks | Durée nécessaire à l’exécution de la requête avec la catégorie de trace suivante : (SQLServerXeQueries, SQLServerPeriodicQueries) |  0 
  
 ### <a name="trace-categories"></a>Catégories de trace 
 Actuellement, nous collectons les catégories de trace suivantes : 

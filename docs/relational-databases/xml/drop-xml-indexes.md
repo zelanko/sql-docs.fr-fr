@@ -12,15 +12,15 @@ helpviewer_keywords:
 - dropping indexes
 - XML indexes [SQL Server], dropping
 ms.assetid: 7591ebea-34af-4925-8553-b2adb5b487c2
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c178b093da4fb3fb4c157a56136558ab18de894
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7fc2c328a58b0fa7bdb69123d1e0b07cd59888b1
+ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639915"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58513156"
 ---
 # <a name="drop-xml-indexes"></a>Supprimer des index XML
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47639915"
   
  La syntaxe DROP avec *TableName.IndexName* est cependant en cours de retrait des fonctionnalités et n’est pas prise en charge pour les index XML.  
   
-## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Exemple : création puis suppression d'un index XML primaire  
+## <a name="example-creating-and-dropping-a-primary-xml-index"></a>Exemple : Création puis suppression d’un index XML primaire  
  L’exemple suivant propose la création d’un index XML portant sur une colonne de type **xml** .  
   
 ```  
@@ -70,7 +70,7 @@ ON TestTable(Col2)
 GO  
 ```  
   
-## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Exemple : création d'un index XML par le biais de l'option d'index DROP_EXISTING  
+## <a name="example-creating-an-xml-index-by-using-the-dropexisting-index-option"></a>Exemple : Création d’un index XML à l’aide de l’option d’index DROP_EXISTING  
  Dans cet exemple, un index XML est créé sur une colonne nommée`XmlColx`. Ensuite, un autre index XML portant le même nom est créé sur une autre colonne nommée`XmlColy`. L'option `DROP_EXISTING` étant spécifiée, l'index XML existant sur (`XmlColx)` est supprimé et un nouvel index sur (`XmlColy`) est créé.  
   
 ```  

@@ -1,7 +1,7 @@
 ---
 title: Matériel pour l’OLTP en mémoire SQL | Microsoft Docs
 ms.custom: ''
-ms.date: 11/30/2018
+ms.date: 03/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,20 +11,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: 9efb08ec81de552581fd2d1d0c34bbf731dac7d7
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.openlocfilehash: 8990a7c8024ae19fa77f2635cf3134b02ea52bf6
+ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087589"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58645441"
 ---
-# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server-2014"></a>Considérations matérielles pour l’OLTP en mémoire dans SQL Server 2014
+# <a name="hardware-considerations-for-in-memory-oltp-in-sql-server"></a>Considérations matérielles pour l’OLTP en mémoire dans SQL Server
 
 L’OLTP en mémoire n’utilise pas la mémoire et le disque de la même façon que les tables basées sur des disques classiques. L’amélioration des performances que vous verrez avec l’OLTP en mémoire dépend du matériel utilisé. Dans ce billet de blog, nous abordons un certain nombre de considérations matérielles d’ordre général et fournissons des instructions génériques relatives au matériel à utiliser avec l’OLTP en mémoire.
 
 > [!NOTE]
-> Cet article était un blog publié le 1er août 2013 par l’équipe Microsoft SQL Server 2014. La page web de blog est supprimée et cet article est une capture approximative du texte du blog. Les articles de la documentation qui étaient associés au blog sont maintenant liés à cet article. Cet article n’est pas conservé. Cet article peut être exclu de la table des matières.
-> 
+> Cet article était un blog publié le 1er août 2013 par l’équipe Microsoft SQL Server 2014. La page web du blog est supprimée.
+>
 > [OLTP en mémoire SQL Server](index.md)
 
 <!--
@@ -32,7 +32,7 @@ L’OLTP en mémoire n’utilise pas la mémoire et le disque de la même façon
     https://cloudblogs.microsoft.com/sqlserver/2013/08/01/hardware-considerations-for-in-memory-oltp-in-sql-server-2014/
     At least one pre-existing article that contained the obsolete blog link was:
         relational-databases\in-memory-oltp\sample-database-for-in-memory-oltp.md
- -->
+-->
 
 ## <a name="cpu"></a>Unité centrale
 
@@ -47,7 +47,7 @@ Toutes les tables à mémoire optimisée résident entièrement en mémoire. Par
 Pour déterminer la quantité de mémoire utilisée par une table à mémoire optimisée donnée, exécutez la requête suivante :
 
 ```sql
-select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats
+select object_name(object_id), * from sys.dm_db_xtp_table_memory_stats;
 ```
 
 Les résultats affichent la mémoire utilisée pour les tables à mémoire optimisée et leurs index. Les données de table incluent les données utilisateur ainsi que toutes les anciennes versions de ligne qui sont toujours requises par les transactions en cours d’exécution ou qui n’ont pas encore été nettoyées par le système. La mémoire utilisée par les index de hachage est constante et ne repose pas sur le nombre de lignes dans la table.
@@ -74,3 +74,6 @@ Pour répondre aux exigences strictes de l’objectif RTO, nous vous recommandon
 
 En termes de capacité de disque, nous vous recommandons de disposer de 2 à 3 fois la taille des tables à mémoire optimisée.
 
+## <a name="see-also"></a>Voir aussi
+
+[Exemple de base de données pour l’OLTP en mémoire](sample-database-for-in-memory-oltp.md)

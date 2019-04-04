@@ -13,20 +13,20 @@ ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fd75ed198aa454c25a1be027c9bbb68f15142730
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: be3b29da5db98d63426f790986c21a54b85159bf
+ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407716"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58528191"
 ---
 # <a name="view-cluster-quorum-nodeweight-settings"></a>Afficher les paramètres NodeWeight pour le quorum de cluster
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Cette rubrique explique comment afficher les paramètres NodeWeight pour chaque nœud membre dans un cluster de clustering de basculement Windows Server (WSFC). Les paramètres NodeWeight sont utilisés pendant le vote du quorum pour prendre en charge les scénarios de récupération d'urgence et de sous-réseaux multiples pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et les instances de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
--   **Avant de commencer :**  [Conditions préalables](#Prerequisites), [Sécurité](#Security)  
+-   **Avant de commencer :**  [Prérequis](#Prerequisites), [Sécurité](#Security)  
   
--   **Pour afficher les paramètres NodeWeight du quorum avec :** [Utilisation de Transact-SQL](#TsqlProcedure), [Utilisation de PowerShell](#PowerShellProcedure), [Utilisation de Cluster.exe](#CommandPromptProcedure)  
+-   **Pour afficher les paramètres NodeWeight du quorum avec :** [Utilisation de Transact-SQL](#TsqlProcedure), [Utilisation de PowerShell](#PowerShellProcedure), [Utilisation de Cluster.exe](#CommandPromptProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52407716"
 > [!IMPORTANT]  
 >  Pour utiliser les paramètres NodeWeight, le correctif logiciel suivant doit être appliqué à tous les serveurs dans le cluster WSFC :  
 >   
->  [KB2494036](https://support.microsoft.com/kb/2494036): un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
+>  [KB2494036](https://support.microsoft.com/kb/2494036) : un correctif est disponible pour vous permettre de configurer un nœud de cluster qui n'a pas de votes de quorum dans [!INCLUDE[firstref_longhorn](../../../includes/firstref-longhorn-md.md)] et dans [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)]  
   
 > [!TIP]  
 >  Si ce correctif logiciel n'est pas installé, les exemples de cette rubrique retournent des valeurs vides ou NULL pour NodeWeight.  
@@ -55,7 +55,7 @@ ms.locfileid: "52407716"
 ### <a name="example-transact-sql"></a>Exemple (Transact-SQL)  
  L’exemple suivant interroge une vue système pour retourner les valeurs de tous les nœuds du cluster de cette instance.  
   
-```tsql  
+```sql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
  FROM   sys.dm_hadr_cluster_members;  
 ```  
