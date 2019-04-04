@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,39 +20,34 @@ author: ''
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 37c334f5c5107b2716601916517e888d90164226
-ms.sourcegitcommit: 0bb306da5374d726b1e681cd4b5459cb50d4a87a
+ms.openlocfilehash: 2246abe2343622f2aece785a31e1e31f7166822b
+ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53732076"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58899715"
 ---
-# <a name="sysdmdbpageinfo-transact-sql"></a>Sys.dm_db_page_info (Transact-SQL)
+# <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Retourne des informations sur une page dans une base de données.  La fonction retourne une ligne qui contient les informations d’en-tête à partir de la page, y compris le `object_id`, `index_id`, et `partition_id`.  Cette fonction rend superflue l’utilisation de `DBCC PAGE` dans la plupart des cas.
 
-## <a name="syntax"></a>Syntaxe  
-  
+## <a name="syntax"></a>Syntaxe   
 ```  
 sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )  
 ``` 
 
 ## <a name="arguments"></a>Arguments  
- *DatabaseId* | NULL | PAR DÉFAUT  
-
- Est l’ID de la base de données. *DatabaseId* est **smallint**. Une entrée valide est le numéro d’ID d’une base de données. La valeur par défaut est NULL, toutefois envoyer qu'une valeur NULL pour ce paramètre entraîne une erreur.
+*DatabaseId* | NULL | PAR DÉFAUT     
+Est l’ID de la base de données. *DatabaseId* est **smallint**. Une entrée valide est le numéro d’ID d’une base de données. La valeur par défaut est NULL, toutefois envoyer qu'une valeur NULL pour ce paramètre entraîne une erreur.
  
-*FileId* | NULL | PAR DÉFAUT
-
+*FileId* | NULL | DEFAULT   
 Identificateur du fichier. *FileId* est **int**.  Une entrée valide est le numéro d’ID d’un fichier dans la base de données spécifiée par *DatabaseId*. La valeur par défaut est NULL, toutefois envoyer qu'une valeur NULL pour ce paramètre entraîne une erreur.
 
-*PageId* | NULL | PAR DÉFAUT
-
+*PageId* | NULL | DEFAULT   
 Est l’ID de la page.  *PageId* est **int**.  Une entrée valide est le numéro d’ID d’une page dans le fichier spécifié par *FileId*. La valeur par défaut est NULL, toutefois envoyer qu'une valeur NULL pour ce paramètre entraîne une erreur.
 
-*mode* | NULL | PAR DÉFAUT
-
+*mode* | NULL | PAR DÉFAUT   
 Détermine le niveau de détail dans la sortie de la fonction. « LIMITÉ » retourne des valeurs NULL pour toutes les colonnes de description, « Détaillé » remplir les colonnes de description.  Valeur par défaut est « Limité ».
 
 ## <a name="table-returned"></a>Table retournée  
@@ -63,11 +58,11 @@ Détermine le niveau de détail dans la sortie de la fonction. « LIMITÉ » r
 |file_id |INT |ID de fichier |
 |page_id |INT |ID de page |
 |page_type |INT |Type de page |
-|page_type_desc |Nvarchar (64) |Description du type de page |
-|page_flag_bits |Nvarchar (64) |Bits d’indicateur dans l’en-tête de page |
+|page_type_desc |nvarchar(64) |Description du type de page |
+|page_flag_bits |nvarchar(64) |Bits d’indicateur dans l’en-tête de page |
 |page_flag_bits_desc |nvarchar (256) |Description du service bits indicateur dans l’en-tête de page |
-|page_type_flag_bits |Nvarchar (64) |Bits d’indicateur de type dans l’en-tête de page |
-|page_type_flag_bits_desc |Nvarchar (64) |Description du service bits indicateur type dans l’en-tête de page |
+|page_type_flag_bits |nvarchar(64) |Bits d’indicateur de type dans l’en-tête de page |
+|page_type_flag_bits_desc |nvarchar(64) |Description du service bits indicateur type dans l’en-tête de page |
 |object_id |INT |ID de l’objet propriétaire de la page |
 |index_id |INT |ID de l’index (0 pour les pages de données de segment de mémoire) |
 |partition_id |BIGINT |ID de la partition |
@@ -81,35 +76,35 @@ Détermine le niveau de détail dans la sortie de la fonction. « LIMITÉ » r
 |pfs_file_id |SMALLINT |ID de fichier de page PFS correspondante |
 |pfs_page_id |INT |ID de page de la page PFS correspondante |
 |pfs_alloc_percent |INT |Comme indiqué par l’octet PFS pour cent d’allocation |
-|pfs_status |Nvarchar (64) |Octet PFS |
-|pfs_status_desc |Nvarchar (64) |Description de l’octet PFS |
+|pfs_status |nvarchar(64) |Octet PFS |
+|pfs_status_desc |nvarchar(64) |Description de l’octet PFS |
 |gam_file_id |SMALLINT |ID de fichier de la page GAM correspondante |
 |gam_page_id |INT |ID de page de la page GAM correspondante |
 |gam_status |bit |Bit pour indiquer si allouée dans GAM |
-|gam_status_desc |Nvarchar (64) |Description de l’état le bit GAM |
+|gam_status_desc |nvarchar(64) |Description de l’état le bit GAM |
 |sgam_file_id |SMALLINT |ID de fichier de la page SGAM correspondante |
 |sgam_page_id |INT |ID de page de la page SGAM correspondante |
 |sgam_status |bit |Bit pour indiquer si allouée dans SGAM |
-|sgam_status_desc |Nvarchar (64) |Description du bit SGAM état |
+|sgam_status_desc |nvarchar(64) |Description du bit SGAM état |
 |diff_map_file_id |SMALLINT |ID de fichier de la page correspondante de la bitmap différentielle |
 |diff_map_page_id |INT |ID de page de la page correspondante de la bitmap différentielle |
 |diff_status |bit |Bits pour indiquer si l’état de la comparaison est modifiée |
-|diff_status_desc |Nvarchar (64) |Description du bit état diff |
+|diff_status_desc |nvarchar(64) |Description du bit état diff |
 |ml_file_id |SMALLINT |ID de fichier de la page de bitmap d’une journalisation minimale correspondante |
 |ml_page_id |INT |ID de page de la page de bitmap d’une journalisation minimale correspondante |
 |ml_status |bit |Bits pour indiquer si la page est minimale |
-|ml_status_desc |Nvarchar (64) |Description de l’état de la journalisation minimale de bits |
+|ml_status_desc |nvarchar(64) |Description de l’état de la journalisation minimale de bits |
 |free_bytes |SMALLINT |Nombre d’octets libres sur la page |
 |free_data_offset |INT |Décalage d’espace libre à la fin de la zone de données |
 |reserved_bytes |SMALLINT |Nombre d’octets libres réservées par toutes les transactions (si tas) <br> Nombre de lignes fantômes (si la feuille de l’index) |
 |reserved_xdes_id |SMALLINT |Espace fourni par m_xdesID à m_reservedCnt <br> Uniquement à des fins de débogage |
-|xdes_id |Nvarchar (64) |Transaction la plus récente par le m_reserved <br> Uniquement à des fins de débogage |
+|xdes_id |nvarchar(64) |Transaction la plus récente par le m_reserved <br> Uniquement à des fins de débogage |
 |prev_page_file_id |SMALLINT |ID de fichier de page précédente |
 |prev_page_page_id |INT |ID de page de page précédente |
 |next_page_file_id |SMALLINT |ID de fichier de page suivante |
 |next_page_page_id |INT |ID de page de page suivante |
 |LONG_MIN du fichier répertoire |SMALLINT |Longueur de lignes de taille fixe |
-|lsn |Nvarchar (64) |Numéro de séquence de journal / horodatage |
+|lsn |nvarchar(64) |Numéro de séquence de journal / horodatage |
 |header_version |INT |Version d’en-tête de page |
 
 ## <a name="remarks"></a>Notes
@@ -135,7 +130,7 @@ SELECT *
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>b. À l’aide de sys.dm_db_page_info avec d’autres vues de gestion dynamique 
+### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>B. À l’aide de sys.dm_db_page_info avec d’autres vues de gestion dynamique 
 
 La requête suivante renvoie une ligne par `wait_resource` exposées par `sys.dm_exec_requests` lorsque la ligne contient une valeur non null `page_resource`
 
@@ -149,6 +144,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 ## <a name="see-also"></a>Voir aussi  
 [Fonctions et vues de gestion dynamique &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Vues de gestion dynamique liées à la base de données &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
-[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+[sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
+[sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 
 
