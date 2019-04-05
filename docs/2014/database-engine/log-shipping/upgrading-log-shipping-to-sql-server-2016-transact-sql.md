@@ -12,12 +12,12 @@ ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f4d346379cf0aeb945187b18f7eb1fd7a868b33e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518100"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042428"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Mettre à niveau la copie des journaux de transaction vers SQL Server 2014 (Transact-SQL)
   Il est possible de conserver les configurations de copie des journaux de transaction lors d'une mise à niveau de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], ou [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cette rubrique décrit les scénarios et les méthodes conseillées pour la mise à niveau d'une configuration de la copie des journaux de transaction.  
@@ -79,7 +79,7 @@ ms.locfileid: "52518100"
   
  Une fois que le serveur est mis à niveau, la base de données est automatiquement remise en ligne, ce qui entraîne sa mise à niveau. Après que la base de données a été mise à niveau, les travaux de la copie des journaux de transaction reprennent.  
   
-#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>Scénario 2 : Mise à niveau d’Instance de serveur principal avec basculement  
+#### <a name="scenario-2-upgrade-primary-server-instance-with-failover"></a>Scénario 2 : Mise à niveau d’Instance de serveur principal avec basculement  
  Ce scénario optimise la disponibilité et réduit le temps mort. Il utilise un basculement contrôlé vers l'instance de serveur secondaire, ce qui maintient la base de données disponible pendant que vous mettez à niveau l'instance de serveur principal d'origine. Le temps mort est limité à la période de temps relativement courte nécessaire au basculement, et non à la durée requise pour mettre à niveau l'instance de serveur principal.  
   
  La mise à niveau de l'instance de serveur principal avec le basculement implique trois procédures générales : exécuter un basculement contrôlé sur le serveur secondaire, mettre à niveau l'instance de serveur principal d'origine vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]et installer la copie des journaux de transaction sur une instance de serveur principal [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Ces procédures sont décrites dans la présente section.  
@@ -130,7 +130,7 @@ ms.locfileid: "52518100"
   
     5.  Veillez à ce que le journal des transactions de la base de données secondaire ne se remplisse pas pendant que la base de données est en ligne. Pour empêcher le journal des transactions de se remplir, vous pouvez avoir besoin de le sauvegarder. Si tel est le cas, nous vous recommandons de le sauvegarder dans un emplacement partagé, un *partage de sauvegarde*, pour que les sauvegardes soient disponibles pour être restaurées sur l'autre instance de serveur.  
   
-#####  <a name="Procedure2 "></a> Procédure 2 : Mettre à niveau l’Instance de serveur principal d’origine vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+#####  <a name="Procedure2"></a> Procédure 2 : Mettre à niveau l’Instance de serveur principal d’origine vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Après avoir mis à niveau l'instance du serveur principal d'origine vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la base de données demeure hors connexion et dans le format.  
   
 #####  <a name="Procedure3"></a> Procédure 3 : Configurer les journaux de transaction sur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
@@ -193,7 +193,7 @@ ms.locfileid: "52518100"
 > [!IMPORTANT]  
 >  Mettez toujours à niveau toutes les instances de serveur secondaires avant de mettre à niveau le serveur principal.  
   
- **Pour mettre à niveau à l’aide d’un basculement et retourner au serveur principal d’origine**  
+ **Pour effectuer une mise à niveau avec basculement et retourner au serveur principal d'origine**  
   
 1.  Mettez à niveau toutes les instances de serveur secondaire (serveur B et serveur C).  
   
@@ -223,7 +223,5 @@ ms.locfileid: "52518100"
   
 ## <a name="see-also"></a>Voir aussi  
  [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Tables et procédures stockées liées à la copie des journaux de transaction](log-shipping-tables-and-stored-procedures.md)  
-  
-  
+ [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
+ [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  

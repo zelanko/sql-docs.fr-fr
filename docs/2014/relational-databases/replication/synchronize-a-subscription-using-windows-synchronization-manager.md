@@ -13,17 +13,17 @@ ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8907d3a3644c0795608495c259a93fb64d648332
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8ecac95d4cad190133d54e73862d607a719ac9c1
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125909"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042198"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>synchroniser un abonnement à l'aide du Gestionnaire de synchronisation Windows (Windows Synchronization Manager)
-  Le Gestionnaire de synchronisation[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ne peut être utilisé que pour synchroniser des abonnements à des publications Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est exécuté sur le même ordinateur que le Gestionnaire de synchronisation (il peut également servir à synchroniser des fichiers hors connexion et des pages Web). Pour utiliser le Gestionnaire de synchronisation :  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ne peut être utilisé que pour synchroniser des abonnements à des publications Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est exécuté sur le même ordinateur que le Gestionnaire de synchronisation (il peut également servir à synchroniser des fichiers hors connexion et des pages Web). Pour utiliser le Gestionnaire de synchronisation :  
   
-1.  Activez la synchronisation des abonnements par extraction avec le Gestionnaire de synchronisation Windows dans le **Subscription Properties - \<abonné > : \<Base_de_données_abonnement >** boîte de dialogue. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md).  
+1.  Activez la synchronisation des abonnements par extraction avec le Gestionnaire de synchronisation Windows dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement**. Pour plus d’informations sur l’accès à cette boîte de dialogue, consultez [Afficher et modifier les propriétés d’un abonnement par extraction (pull)](view-and-modify-pull-subscription-properties.md).  
   
 2.  Accédez au Gestionnaire de synchronisation par le menu **Démarrer** de Windows.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "54125909"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Pour activer la synchronisation des abonnements par extraction de données (pull) avec le Gestionnaire de synchronisation Windows  
   
-1.  Sur le **général** page de la **Subscription Properties - \<abonné > : \<Base_de_données_abonnement >** boîte de dialogue, sélectionnez la valeur **activer** pour le **utilisez le Gestionnaire de synchronisation Windows** option.  
+1.  Dans la page **Général **de la boîte de dialogue** Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_d’abonnement>**, sélectionnez la valeur **Activer** pour l’option **Utiliser le Gestionnaire de synchronisation Windows**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -97,7 +97,7 @@ ms.locfileid: "54125909"
   
 ### <a name="to-use-the-interactive-resolver"></a>Pour utiliser l'outil de résolution interactive  
   
-1.  Activez l'article et l'abonnement pour la résolution interactive. Pour plus d’informations, consultez [Spécifier la résolution interactive des conflits pour les articles de fusion](/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+1.  Activez l'article et l'abonnement pour la résolution interactive. Pour plus d’informations, consultez [Spécifier la résolution interactive des conflits pour les articles de fusion](../../relational-databases/replication/publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 2.  Une fois que l'abonnement commence la synchronisation dans le Gestionnaire de synchronisation, l'outil de résolution interactive est lancé automatiquement si la résolution interactive de conflits est activée et qu'il existe des conflits pour un ou plusieurs articles. L'outil de résolution interactive affiche les conflits un à la fois, avec une suggestion de résolution pour chaque conflit (basée sur l'outil de résolution spécifié lors de la création de la publication et de l'abonnement).  
   
@@ -117,6 +117,4 @@ ms.locfileid: "54125909"
 >  Les modifications ne sont appliquées que si elles font partie de la ligne choisie pour la résolution. Par exemple, si vous effectuez des modifications sous le **Serveur de publication**, puis cliquez sur **Accepter l'Abonné**, les modifications sont ignorées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Résolution interactive des conflits](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
-  
-  
+ [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  

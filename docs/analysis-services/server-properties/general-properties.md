@@ -1,6 +1,6 @@
 ---
 title: Les propriétés générales Analysis Services | Microsoft Docs
-ms.date: 06/07/2018
+ms.date: 04/04/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 883df6b2562e7fa3b80fac6a0063bd6483d1119d
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072386"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042388"
 ---
 # <a name="general-properties"></a>Propriétés générales
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -34,6 +34,11 @@ ms.locfileid: "53072386"
   
  **BackupDir**  
  Une propriété de chaîne qui définit le nom du répertoire où les fichiers de sauvegarde sont stockés par défaut, lorsqu’un chemin d’accès n’est pas spécifié dans le cadre de la commande Backup.  
+ 
+**ClientCacheRefreshPolicy** s’applique à Azure Analysis Services uniquement. Remplace le **actualisation du cache planifiée** configuration pour tous les jeux de données Power BI. Tous les rapports de Live Connect observera le paramètre au niveau du serveur, quel que soit le paramètre de niveau de jeu de données, ou quel espace de travail qu’elles se trouvent sur.
+
+La valeur par défaut de cette propriété est -1, ce qui permet à que tout le cache en arrière-plan actualise tel que spécifié dans l’actualisation du cache planifiée définition pour le jeu de données. Pour empêcher tout le cache en arrière-plan actualise, spécifiez zéro (0).
+
   
  **CollationName**  
  Propriété de type chaîne qui identifie le classement du serveur. Pour plus d’informations, consultez [Langues et classements &#40;Analysis Services&#41;](../../analysis-services/languages-and-collations-analysis-services.md).  
@@ -58,7 +63,7 @@ ms.locfileid: "53072386"
  Propriété dont la valeur est un entier 32 bits signé qui spécifie le nombre maximal de threads par segment de partition durant la résolution des requêtes. Moins il y a d'utilisateurs simultanés, plus cette valeur peut être élevée, au prix d'une plus grande consommation de mémoire. Inversement, il peut s'avérer nécessaire de diminuer cette valeur s'il y a un grand nombre d'utilisateurs simultanés.  
   
  **CoordinatorShutdownMode**  
- Propriété booléenne qui définit le mode d'arrêt du coordinateur. Il s'agit d'une propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
+ Propriété booléenne qui définit le mode d'arrêt du coordinateur. Il s'agit d'une propriété avancée que vous ne devez pas modifier, sauf si vous bénéficiez de l'assistance du support technique [!INCLUDE[msCoName](../../includes/msconame-md.md)].  
   
  **DataDir**  
  Propriété de type chaîne qui spécifie le nom du répertoire où les données sont stockées.  
@@ -113,7 +118,7 @@ ms.locfileid: "53072386"
  **InstanceVisible**  
  Propriété booléenne qui indique si l'instance de serveur est visible pour découvrir des demandes d'instance de service SQL Server Browser. La valeur par défaut est True. Si vous affectez la valeur False, l'instance n'est pas visible pour SQL Server Browser.  
   
- **Langage**  
+ **Langue**  
  Propriété de type chaîne qui définit la langue, notamment pour les messages d'erreur et la mise en forme des nombres. Cette propriété a priorité sur la propriété CollationName.  
   
  La valeur par défaut de cette propriété est vide, ce qui indique que la langue est définie par la propriété CollationName.  
@@ -127,7 +132,7 @@ ms.locfileid: "53072386"
  **MinIdleSessionTimeout**  
  Propriété dont la valeur est un entier qui définit le délai d'attente minimal des sessions inactives, exprimé en secondes. La valeur par défaut est 2700 secondes. Une fois ce délai expiré, le serveur est autorisé à mettre fin à la session inactive, mais il ne le fera que si de la mémoire est requise.  
   
- **Port**  
+ **d’**  
  Propriété dont la valeur est un entier qui définit le numéro de port sur lequel le serveur sera à l'écoute des connexions clientes. Si cette propriété n'est pas définie, le serveur recherche dynamiquement le premier port inutilisé.  
   
  La valeur par défaut de cette propriété, zéro (0), correspond au port 2383. Pour plus d'informations sur la configuration du port, consultez [Configurer le pare-feu Windows pour autoriser l'accès à Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  

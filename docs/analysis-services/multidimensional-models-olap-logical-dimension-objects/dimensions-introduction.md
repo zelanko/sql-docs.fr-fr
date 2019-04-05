@@ -1,5 +1,5 @@
 ---
-title: Présentation des Dimensions (Analysis Services - données multidimensionnelles) | Documents Microsoft
+title: Présentation des Dimensions (Analysis Services - données multidimensionnelles) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,37 +9,37 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 97353e1662d9dbddee72cfee288299c222ab7992
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: b5f47146f02559e9b546d7e5ec164462ad2fdba1
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022988"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042398"
 ---
-# <a name="dimensions---introduction"></a>Dimensions : Introduction
+# <a name="dimensions---introduction"></a>Dimensions - Introduction
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Tous les Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] les dimensions sont des groupes d’attributs basés sur des colonnes de tables ou vues dans une vue de source de données. Les dimensions existent indépendamment d'un cube, elles peuvent être utilisées dans plusieurs cubes et plusieurs fois dans un même cube, ainsi que liées entre les instances d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Une dimension qui existe indépendamment d'un cube est appelée dimension de base de données et une instance de dimension de base de données dans un cube est appelée dimension de cube.  
+  Tous les Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dimensions sont des groupes d’attributs basés sur des colonnes de tables ou vues dans une vue de source de données. Dimensions existent indépendamment d’un cube, peuvent être utilisées dans plusieurs cubes, peut être utilisées plusieurs fois dans un cube unique et peuvent être liées entre [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances. Une dimension qui existe indépendamment d'un cube est appelée dimension de base de données et une instance de dimension de base de données dans un cube est appelée dimension de cube.  
   
 ## <a name="dimension-based-on-a-star-schema-design"></a>Dimension basée sur un schéma en étoile  
  La structure d'une dimension repose principalement sur la structure de la table ou des tables de dimension sous-jacentes. La structure la plus simple est appelée schéma en étoile, où chaque dimension est basée sur une seule table de dimension qui est directement liée à la table de faits par une relation clé primaire - clé étrangère.  
   
- Le diagramme suivant montre une sous-section de le [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] base de données exemple, dans lequel le **FactResellerSales** table de faits est associée à deux tables de dimension, **DimReseller** et **DimPromotion**. Le **ResellerKey** colonne dans la **FactResellerSales** table de faits définit une relation de clé étrangère avec la **ResellerKey** colonne clé primaire de la **DimReseller** table de dimension. De même, la **PromotionKey** colonne dans la **FactResellerSales** table de faits définit une relation de clé étrangère avec la **PromotionKey** colonne clé primaire de la **DimPromotion** table de dimension.  
+ Le diagramme suivant montre une sous-section de le [!INCLUDE[ssSampleDBDWobject](../../includes/sssampledbdwobject-md.md)] base de données exemple dans lequel le **FactResellerSales** table de faits est associée à deux tables de dimension, **DimReseller** et **DimPromotion**. Le **ResellerKey** colonne dans le **FactResellerSales** table de faits définit une relation de clé étrangère avec la **ResellerKey** une colonne de clé primaire dans le  **DimReseller** table de dimension. De même, le **Promotionrkey** colonne dans le **FactResellerSales** table de faits définit une relation de clé étrangère avec la **Promotionrkey** une colonne de clé primaire dans le  **DimPromotion** table de dimension.  
   
- ![Schéma logique pour la relation de dimension](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/media/dimfactrelationship.gif "schéma logique pour la relation de dimension")  
+ ![Schéma logique pour la relation de dimension de faits](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/media/dimfactrelationship.gif "schéma logique pour la relation de dimension")  
   
 ## <a name="dimension-based-on-a-snowflake-schema-design"></a>Dimension basée sur un schéma en flocon  
- Une structure plus complexe est fréquemment requise parce que des informations provenant de plusieurs tables sont nécessaires pour définir la dimension. Dans cette structure, appelée un schéma en flocon, chaque dimension est basée sur les attributs de plusieurs tables liées les unes aux autres ainsi qu'à la table de faits par des relations clé primaire - clé étrangère. Par exemple, le diagramme suivant illustre les tables nécessaires pour décrire complètement la dimension Product dans la **AdventureWorksDW** exemple de projet :  
+ Une structure plus complexe est fréquemment requise parce que des informations provenant de plusieurs tables sont nécessaires pour définir la dimension. Dans cette structure, appelée un schéma en flocon, chaque dimension est basée sur les attributs de plusieurs tables liées les unes aux autres ainsi qu'à la table de faits par des relations clé primaire - clé étrangère. Par exemple, le diagramme suivant illustre les tables nécessaires pour décrire complètement la dimension Product dans le **AdventureWorksDW** exemple de projet :  
   
- ![Tables de dimension Product d’AdventureWorksAS](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/media/dimproduct.gif "Tables de dimension Product d’AdventureWorksAS")  
+ ![Tables de dimension Product d’AdventureWorksAS](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/media/dimproduct.gif "Tables pour la dimension Product d’AdventureWorksAS")  
   
- Pour décrire complètement un produit, la catégorie et la sous-catégorie du produit doivent être incluses dans la dimension Product. Toutefois, ces informations ne résident pas directement dans la table principale pour la **DimProduct** dimension. Une relation de clé étrangère à partir de **DimProduct** à **DimProductSubcategory**, qui a à son tour une relation de clé étrangère avec la **DimProductCategory** table, permet d’inclure les informations de catégories de produits et de sous-catégories dans la dimension Product.  
+ Pour décrire complètement un produit, la catégorie et la sous-catégorie du produit doivent être incluses dans la dimension Product. Toutefois, ces informations ne résident pas directement dans la table principale pour le **DimProduct** dimension. Une relation de clé étrangère à partir de **DimProduct** à **DimProductSubcategory**, qui possède une relation de clé étrangère avec la **DimProductCategory** table, rend possible d’inclure les informations de catégories de produits et de sous-catégories dans la dimension Product.  
   
 ## <a name="snowflake-schema-versus-reference-relationship"></a>Schéma en flocon et relation de référence  
  Parfois, vous pouvez être amené à choisir entre l'utilisation d'un schéma en flocons pour définir les attributs d'une dimension à partir de plusieurs tables ou la définition de deux dimensions distinctes avec l'établissement d'une relation de dimensions de référence entre celles-ci. Le diagramme suivant montre ce scénario.  
   
- ![Schéma logique pour un exemple de dimension référencée](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/media/dimindirect.gif "schéma logique pour un exemple de dimension référencée")  
+ ![Schéma logique pour la dimension référencée exemple](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/media/dimindirect.gif "schéma logique pour un exemple de dimension référencée")  
   
- Dans le diagramme précédent, le **FactResellerSales** table de faits n’a pas d’une relation de clé étrangère avec la **DimGeography** table de dimension. Toutefois, le **FactResellerSales** table de faits a une relation de clé étrangère avec la **DimReseller** table de dimension, qui à son tour a une relation de clé étrangère avec la **DimGeography** table de dimension. Pour définir une dimension Reseller qui contient des informations géographiques sur chaque revendeur, vous devez extraire les attributs à partir de la **DimGeography** et **DimReseller** tables de dimension. Cependant, dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez obtenir le même résultat en créant deux dimensions distinctes et en les liant avec un groupe de mesures en définissant une relation de dimensions de référence entre les deux dimensions. Pour plus d’informations sur les relations de dimension de référence, consultez [relations de Dimension](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Dans le diagramme précédent, le **FactResellerSales** table de faits n’a pas d’une relation de clé étrangère avec la **DimGeography** table de dimension. Toutefois, le **FactResellerSales** table de faits a une relation de clé étrangère avec la **DimReseller** table de dimension, qui à son tour a une relation de clé étrangère avec la  **DimGeography** table de dimension. Pour définir une dimension Reseller qui contient des informations de zone géographique sur chaque revendeur, vous devrez récupérer ces attributs à partir de la **DimGeography** et **DimReseller** tables de dimension. Cependant, dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez obtenir le même résultat en créant deux dimensions distinctes et en les liant avec un groupe de mesures en définissant une relation de dimensions de référence entre les deux dimensions. Pour plus d’informations sur les relations de dimension de référence, consultez [relations de Dimension](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
  Un avantage des relations de dimensions de référence dans ce scénario est que vous pouvez créer une seule dimension Geography, puis créer plusieurs dimensions de cube basés sur cette dimension, sans qu'un espace de stockage supplémentaire soit nécessaire. Par exemple, vous pouvez lier une des dimensions de cube Geography à une dimension Reseller, et une autre dimension de cube Geography à une dimension Customer. **Rubriques connexes :**[relations de Dimension](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [définir une relation référencée et des propriétés de relation référencée](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   

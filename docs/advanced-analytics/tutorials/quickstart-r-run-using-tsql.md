@@ -3,17 +3,17 @@ title: Guide de démarrage rapide pour une exécution de code « Hello World �
 description: Guide de démarrage rapide pour le script R dans SQL Server. Découvrez les principes fondamentaux de l’appel de script R à l’aide de la procédure stockée système sp_execute_external_script dans un exercice hello-world.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 7517b9ab18c7448014e8c9113430b2c21047f972
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 1ec9580a533e51b7e99ea0ac34c1d322a27da452
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046813"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042275"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Démarrage rapide : Script R « Hello world » dans SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -43,7 +43,8 @@ L’exercice suivant se concentre sur le premier modèle d’interaction : comm
     b <- 2
     c <- a/b
     d <- a*b
-    print(c, d)'
+    print(c(c, d))'
+    '
     ```
 
 2. En supposant que vous avez tout configuré correctement le résultat correct est calculée et le R `print` fonction retourne le résultat à la **Messages** fenêtre.
@@ -90,4 +91,4 @@ Entrées dans cette procédure stockée sont les suivantes :
 Maintenant que vous avez exécuté quelques scripts R simples, examinons plus en détail la structuration des entrées et sorties.
 
 > [!div class="nextstepaction"]
-> [Démarrage rapide : Gérer les entrées et sorties](quickstart-r-inputs-and-outputs.md)
+> [Démarrage rapide : Gérer les entrées et les sorties](quickstart-r-inputs-and-outputs.md)
