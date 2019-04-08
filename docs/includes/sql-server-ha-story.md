@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.translationtype: HT
+ms.contentlocale: fr-FR
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055640"
+---
 Cet article fournit une vue d’ensemble des solutions de continuité d’activité dans le cadre de la haute disponibilité et de la récupération d’urgence dans SQL Server. 
 
 Quand vous déployez SQL Server, vous devez toujours vérifier que toutes les instances SQL Server critiques et les bases de données qu’elles contiennent sont disponibles pour l’entreprise et les utilisateurs finaux, quels que soient l’heure ou le jour. L’objectif est de maintenir l’activité avec un minimum d’interruption voire sans interruption. Ce concept est également connu sous le nom de continuité d’activité.
@@ -128,9 +136,7 @@ La liste ci-dessous souligne les différences entre les instances FCI sur Window
 * Le nom commun utilisé par les instances FCI dans Linux est défini dans le système DNS, et doit être identique à la ressource créée pour l’instance FCI.
 
 #### <a name="log-shipping"></a>Copie des journaux de transaction
-Si les objectifs de point de récupération et de délai de récupération sont plus flexibles, ou que les bases de données ne sont pas considérées comme très critiques, la copie des journaux de transaction est une autre fonctionnalité de disponibilité qui a fait ses preuves dans SQL Server. Basé sur les sauvegardes natives de SQL Server, le processus de copie des journaux de transaction génère automatiquement des sauvegardes de fichier journal, les copie dans une ou plusieurs instances appelées secours semi-automatique, et applique automatiquement les sauvegardes du fichier journal à ce secours. La copie des journaux de transaction utilise les travaux de SQL Server Agent pour automatiser le processus de sauvegarde, de copie et d’application des sauvegardes du fichier journal. 
-> [!IMPORTANT] 
-> Sur Linux, les travaux de SQL Server Agent ne font pas partie de l’installation de SQL Server elle-même. Ils sont disponibles dans le package mssql-server-Agent jobs qui doit également être installé pour utiliser la copie des journaux de transaction.
+Si les objectifs de point de récupération et de délai de récupération sont plus flexibles, ou que les bases de données ne sont pas considérées comme très critiques, la copie des journaux de transaction est une autre fonctionnalité de disponibilité qui a fait ses preuves dans SQL Server. Basé sur les sauvegardes natives de SQL Server, le processus de copie des journaux de transaction génère automatiquement des sauvegardes de fichier journal, les copie dans une ou plusieurs instances appelées secours semi-automatique, et applique automatiquement les sauvegardes du fichier journal à ce secours. La copie des journaux de transaction utilise les travaux de SQL Server Agent pour automatiser le processus de sauvegarde, de copie et d’application des sauvegardes du fichier journal.
 
 ![Copie des journaux de transactions](media/sql-server-ha-story/image5.png)
  

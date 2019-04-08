@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7854ddbe4795a347b0a824f607c7206c0bc6b78c
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: dc51c4376f38d62f63969aaf3bba39715a9871ba
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421366"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872289"
 ---
 # <a name="transactions-with-memory-optimized-tables"></a>Transactions with Memory-Optimized Tables
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ Cet article décrit tous les aspects des transactions propres aux tables optimis
   
 Les niveaux d’isolation de la transaction dans SQL Server s’appliquent différemment aux tables optimisées en mémoire et aux tables sur disque. En outre, les mécanismes sous-jacents sont différents. La compréhension de ces différences permet au programmeur de concevoir un système à débit élevé. L’objectif de l’intégrité de la transaction est partagé dans tous les cas.  
 
-Pour connaître les conditions d’erreur spécifiques aux transactions dans les tables optimisées en mémoire, passez à la section [Détection des conflits et logique des nouvelles tentatives](#confdetretry34ni).
+Pour connaître les conditions d’erreur spécifiques aux transactions dans les tables optimisées en mémoire, passez à la section [Détection des conflits et logique des nouvelles tentatives](#conflict-detection-and-retry-logic).
   
 Pour des informations générales, consultez [SET TRANSACTION ISOLATION LEVEL (Transact-SQL)](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
@@ -97,7 +97,7 @@ Les tables sur disque disposent indirectement d’un système de contrôle de ve
   
 ## <a name="isolation-levels"></a>Niveaux d’isolation 
   
-La table suivante répertorie les niveaux d’isolation des transactions possibles, du plus faible au plus élevé. Pour plus d’informations sur les conflits qui peuvent se produire et la logique de nouvelles tentatives permettant de résoudre ces conflits, consultez [Détection des conflits et logique des nouvelles tentatives](#confdetretry34ni). 
+La table suivante répertorie les niveaux d’isolation des transactions possibles, du plus faible au plus élevé. Pour plus d’informations sur les conflits qui peuvent se produire et la logique de nouvelles tentatives permettant de résoudre ces conflits, consultez [Détection des conflits et logique des nouvelles tentatives](#conflict-detection-and-retry-logic). 
   
 | Niveau d'isolement | Description |   
 | :-- | :-- |   
@@ -123,7 +123,7 @@ Voici une description des phases.
 #### <a name="validation-phase-2-of-3"></a>Validation : Phase 2 (sur 3)  
   
 - La phase de validation commence par l’assignation d’une heure de fin et donc le marquage d’une transaction comme logiquement terminée. Ceci rend toutes les modifications de la transaction visibles aux autres transactions qui dépendent de cette transaction. La validation des transactions dépendantes n’est pas autorisée tant que la validation de cette transaction n’a pas réussi. En outre, les transactions qui ont ces dépendances ne sont pas autorisées à retourner des jeux de résultats au client. De cette manière, le client voit seulement les données dont la validation a réussi dans la base de données.  
-- Cette phase comprend les validations REPEATABLE READ et SERIALIZABLE. La validation REPEATABLE READ vérifie si des lignes lues par la transaction ont été mises à jour entre-temps. La validation SERIALIZABLE vérifie si une ligne a été insérée dans une plage de données analysée par cette transaction. Selon le tableau de la section [Niveaux d’isolation et conflits](#confdegreeiso30ni), les validations REPEATABLE READ et SERIALIZABLE peuvent avoir lieu quand vous utilisez l’isolation SNAPSHOT pour valider la cohérence des contraintes de clés étrangères et uniques.  
+- Cette phase comprend les validations REPEATABLE READ et SERIALIZABLE. La validation REPEATABLE READ vérifie si des lignes lues par la transaction ont été mises à jour entre-temps. La validation SERIALIZABLE vérifie si une ligne a été insérée dans une plage de données analysée par cette transaction. Selon le tableau de la section [Niveaux d’isolation et conflits](#isolation-levels), les validations REPEATABLE READ et SERIALIZABLE peuvent avoir lieu quand vous utilisez l’isolation SNAPSHOT pour valider la cohérence des contraintes de clés étrangères et uniques.  
   
 #### <a name="commit-processing-phase-3-of-3"></a>Traitement de la validation : Phase 3 (sur 3)  
   

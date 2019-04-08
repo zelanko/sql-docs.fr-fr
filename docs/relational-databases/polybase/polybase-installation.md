@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3c08f8cb48e22ba5ca1546f9fcca63f77868b356
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6783112203e5c63aae41749f942da6240265eea3
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208797"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872299"
 ---
 # <a name="install-polybase-on-windows"></a>Installer PolyBase sur Windows
 
@@ -77,7 +77,7 @@ Une fois que vous avez installé PolyBase de manière autonome ou dans un groupe
    
    > [!IMPORTANT] 
    >
-   >Dans un groupe de scale out PolyBase, le moteur PolyBase et le service Mouvement de données PolyBase doivent être exécutés sous le même compte de domaine, et ce sur tous les nœuds. Voir [Groupes de scale out PolyBase](#Enable).
+   >Dans un groupe de scale out PolyBase, le moteur PolyBase et le service Mouvement de données PolyBase doivent être exécutés sous le même compte de domaine, et ce sur tous les nœuds. Voir [Groupes de scale out PolyBase](#enable).
    
 5. Dans la page Configuration de PolyBase, sélectionnez l’une des deux options. Pour plus d’informations, consultez [Groupes de scale out PolyBase](../../relational-databases/polybase/polybase-scale-out-groups.md).  
    
@@ -106,14 +106,14 @@ Utilisez les valeurs de cette table pour créer des scripts d'installation. Le M
 |composant SQL Server|Paramètre et valeurs|Description|  
 |--------------------------|--------------------------|-----------------|  
 |Contrôle d'installation de SQL Server|**Requis**<br /><br /> /FEATURES=PolyBase|Sélectionne la fonctionnalité PolyBase.|  
-|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCACCOUNT|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
-|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCPASSWORD|Spécifie le mot de passe du compte du service de moteur.|  
-|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCSTARTUPTYPE|Spécifie le mode de démarrage du moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
-|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCACCOUNT|Spécifie le compte pour le service Mouvement de données. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
-|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCPASSWORD|Spécifie le mot de passe du compte de déplacement des données.|  
-|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCSTARTUPTYPE|Spécifie le mode de démarrage du service de déplacement des données : Automatique (par défaut), Désactivé ou Manuel.|  
-|PolyBase|**Facultatif**<br /><br /> /PBSCALEOUT|Spécifie si l’instance de SQL Server est utilisée dans le cadre d’un groupe de calcul de scale out PolyBase. <br />Valeurs prises en charge : True, False.|  
-|PolyBase|**Facultatif**<br /><br /> /PBPORTRANGE|Spécifie une plage de ports avec au moins six ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|Moteur SQL Server PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBENGSVCACCOUNT|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
+|Moteur SQL Server PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBENGSVCPASSWORD|Spécifie le mot de passe du compte du service de moteur.|  
+|Moteur SQL Server PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBENGSVCSTARTUPTYPE|Spécifie le mode de démarrage du moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
+|Mouvement de données PolyBase SQL Server |**Ce paramètre est facultatif**<br /><br /> /PBDMSSVCACCOUNT|Spécifie le compte pour le service Mouvement de données. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
+|Mouvement de données PolyBase SQL Server |**Ce paramètre est facultatif**<br /><br /> /PBDMSSVCPASSWORD|Spécifie le mot de passe du compte de déplacement des données.|  
+|Mouvement de données PolyBase SQL Server |**Ce paramètre est facultatif**<br /><br /> /PBDMSSVCSTARTUPTYPE|Spécifie le mode de démarrage du service de déplacement des données : Automatique (par défaut), Désactivé ou Manuel.|  
+|PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBSCALEOUT|Spécifie si l’instance de SQL Server est utilisée dans le cadre d’un groupe de calcul de scale out PolyBase. <br />Valeurs prises en charge : True, False.|  
+|PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBPORTRANGE|Spécifie une plage de ports avec au moins six ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 <!--SQL Server 2019-->
@@ -121,15 +121,15 @@ Utilisez les valeurs de cette table pour créer des scripts d'installation. Le M
 
 |composant SQL Server|Paramètre et valeurs|Description|  
 |--------------------------|--------------------------|-----------------|  
-|Contrôle d'installation de SQL Server|**Obligatoire**<br /><br /> /FEATURES= PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installe la prise en charge de toutes les fonctionnalités de PolyBase, à l’exception de la connectivité Hadoop. PolyBaseJava active la connectivité Hadoop. PolyBase installe les deux. |  
-|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCACCOUNT|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
-|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCPASSWORD|Spécifie le mot de passe du compte du service de moteur.|  
-|Moteur SQL Server PolyBase|**Facultatif**<br /><br /> /PBENGSVCSTARTUPTYPE|Spécifie le mode de démarrage du moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
-|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCACCOUNT|Spécifie le compte pour le service de déplacement des données. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
-|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCPASSWORD|Spécifie le mot de passe du compte de déplacement des données.|  
-|Mouvement de données PolyBase SQL Server |**Facultatif**<br /><br /> /PBDMSSVCSTARTUPTYPE|Spécifie le mode de démarrage du service de déplacement des données : Automatique (par défaut), Désactivé ou Manuel.|  
-|PolyBase|**Facultatif**<br /><br /> /PBSCALEOUT|Spécifie si l’instance de SQL Server est utilisée dans le cadre d’un groupe de calcul de scale out PolyBase. <br />Valeurs prises en charge : True, False.|  
-|PolyBase|**Facultatif**<br /><br /> /PBPORTRANGE|Spécifie une plage de ports avec au moins six ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
+|Contrôle d'installation de SQL Server|**Requis**<br /><br /> /FEATURES= PolyBaseCore, PolyBaseJava, PolyBase | PolyBaseCore installe la prise en charge de toutes les fonctionnalités de PolyBase, à l’exception de la connectivité Hadoop. PolyBaseJava active la connectivité Hadoop. PolyBase installe les deux. |  
+|Moteur SQL Server PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBENGSVCACCOUNT|Spécifie le compte pour le service de moteur. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
+|Moteur SQL Server PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBENGSVCPASSWORD|Spécifie le mot de passe du compte du service de moteur.|  
+|Moteur SQL Server PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBENGSVCSTARTUPTYPE|Spécifie le mode de démarrage du moteur PolyBase : Automatique (par défaut), Désactivé ou Manuel.|  
+|Mouvement de données PolyBase SQL Server |**Ce paramètre est facultatif**<br /><br /> /PBDMSSVCACCOUNT|Spécifie le compte pour le service de déplacement des données. La valeur par défaut est **NT Authority\NETWORK SERVICE**.|  
+|Mouvement de données PolyBase SQL Server |**Ce paramètre est facultatif**<br /><br /> /PBDMSSVCPASSWORD|Spécifie le mot de passe du compte de déplacement des données.|  
+|Mouvement de données PolyBase SQL Server |**Ce paramètre est facultatif**<br /><br /> /PBDMSSVCSTARTUPTYPE|Spécifie le mode de démarrage du service de déplacement des données : Automatique (par défaut), Désactivé ou Manuel.|  
+|PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBSCALEOUT|Spécifie si l’instance de SQL Server est utilisée dans le cadre d’un groupe de calcul de scale out PolyBase. <br />Valeurs prises en charge : True, False.|  
+|PolyBase|**Ce paramètre est facultatif**<br /><br /> /PBPORTRANGE|Spécifie une plage de ports avec au moins six ports pour les services PolyBase. Exemple :<br /><br /> `/PBPORTRANGE=16450-16460`|  
 
 ::: moniker-end
 
@@ -137,7 +137,7 @@ Après l’installation, vous devez [activer la fonctionnalité PolyBase](#enabl
 
 
 
-**Exemple**
+** Exemple**
 
 Cet exemple montre un exemple de script d’installation.  
 
