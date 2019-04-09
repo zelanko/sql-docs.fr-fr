@@ -13,12 +13,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 542225a31879c47e58893f438e3af0309a6eca88
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 939a60c8c23ee59e77f6a2f3c3a2b71a98a426bf
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241717"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Installer, désinstaller et prendre en charge le Générateur de rapports
   Le Générateur de rapports est un outil de création de rapports permettant de créer, mettre à jour et partager des rapports, des parties de rapports et des datasets partagés. Le Générateur de rapports est disponible dans deux versions : autonome et [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. La version autonome est installée sur votre ordinateur par vos propres soins ou par un administrateur. La version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est installée automatiquement avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] et téléchargée sur votre ordinateur à partir du Gestionnaire de rapports ou d'un site SharePoint intégré à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -59,7 +59,7 @@ ms.locfileid: "56298317"
 ### <a name="installing-the-clickonce-version-of-report-builder-on-your-computer"></a>Installation de la version ClickOnce du Générateur de rapports sur votre ordinateur  
  La version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports est installée avec [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Elle est installée via l'installation native et l'installation intégrée SharePoint de [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)].  
   
- [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est une technologie Microsoft pour le déploiement d'applications Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permet aux utilisateurs d'installer et d'exécuter une application Windows telle que le Générateur de rapports en cliquant sur un lien dans une page Web. Pour plus d'informations sur le déploiement des applications [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] , sur la mise en œuvre de la sécurité pour les applications [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] ou sur l'exécution des applications [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] dans la zone Internet, consultez le site Web [!INCLUDE[msCoName](../includes/msconame-md.md)] Developer Network, à l'adresse [www.microsoft.com/msdn](https://www.microsoft.com/msdn), les articles, éventuellement en anglais, consacrés au déploiement de ClickOnce pour les applications Windows Forms, à la sécurité dans l'approche générale de Windows Forms ou à la présentation générale du déploiement des applications approuvées.  
+ [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] est une technologie Microsoft pour le déploiement d'applications Windows. [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] permet aux utilisateurs d'installer et d'exécuter une application Windows telle que le Générateur de rapports en cliquant sur un lien dans une page Web. Pour plus d’informations sur le déploiement [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications, appliquer [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] sécurité de l’application, ou en cours d’exécution [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] applications dans la zone Internet, consultez le « déploiement pour Windows Forms Applications ClickOnce », « Security in Articles de vue d’ensemble de Windows Forms » ou « Trusted Application Deployment Overview » sur le [!INCLUDE[msCoName](../includes/msconame-md.md)] site Web MSDN à l’adresse [ https://developer.microsoft.com/ ](https://developer.microsoft.com/).  
   
  La version [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] du Générateur de rapports se trouve sur le serveur de rapports et est installée sur votre ordinateur lorsque vous cliquez sur le bouton **Générateur de rapports** dans le Gestionnaire de rapports, ou sur l'option **Rapport du Générateur de rapports** dans le menu **Nouveau document** d'une bibliothèque SharePoint.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "56298317"
 |1030|Danish|da-DK|  
 |1031|German|de-DE|  
 |1032|Greek|el-GR|  
-|1033|Anglais|en-US|  
+|1033|Anglais|fr-FR|  
 |1035|Finlandais|fi-FI|  
 |1036|Français|fr-FR|  
 |1038|Hongrois|hu-HU|  

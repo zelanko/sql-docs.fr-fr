@@ -14,12 +14,12 @@ ms.assetid: ead0150e-4943-4ad5-84c8-36f85c7278f4
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8a9018c43ace6ebbf0a905567bb806b616530a02
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 1484a32eb808e6778896a498d5a6dee525b18aed
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352188"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242457"
 ---
 # <a name="sql-server-encryption"></a>Chiffrement SQL Server
   Le chiffrement est un processus visant à rendre des données inintelligibles à l'aide d'une clé ou d'un mot de passe. Les données sont alors inutiles en l'absence du mot de passe ou de la clé de déchiffrement correspondante. Le chiffrement ne résout pas les problèmes de contrôle d'accès. Toutefois, il améliore la sécurité en limitant les pertes de données même si les contrôles d'accès sont contournés. Par exemple, si l'ordinateur hôte de la base de données est mal configuré et qu'un pirate parvient à se procurer des données sensibles, les données subtilisées seront vraisemblablement inexploitables si elles sont chiffrées.  
@@ -43,7 +43,7 @@ ms.locfileid: "53352188"
  Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], les clés de chiffrement incluent une combinaison d'une clé publique, d'une clé privée et d'une clé symétrique, dont le but est de protéger les données sensibles. Cette section explique comment implémenter et gérer des clés de chiffrement.  
   
 ## <a name="related-content"></a>Contenu associé  
- [Sécurisation de SQL Server](../securing-sql-server.md)  
+ [Sécurisation de SQL Server](../securing-sql-server.md)  
  Vue d'ensemble du processus permettant de mieux sécuriser la plateforme [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et du travail avec des utilisateurs et des objets sécurisables.  
   
  [Fonctions de chiffrement &#40;Transact-SQL&#41;](/sql/t-sql/functions/cryptographic-functions-transact-sql)  
@@ -62,7 +62,7 @@ ms.locfileid: "53352188"
  Informations sur l'utilisation d'un certificat pour chiffrer des données.  
   
 ## <a name="external-resources"></a>Ressources externes  
- [Microsoft TechNet : SQL Server TechCenter : Protection et sécurité de SQL Server 2005](https://www.microsoft.com/technet/prodtechnol/sql/2005/library/security.mspx)  
+ [10 étapes à la sécurité de SQL Server 2005](https://www.itprotoday.com/sql-server/10-steps-sql-server-2005-security)  
  Informations à jour sur la sécurité [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  

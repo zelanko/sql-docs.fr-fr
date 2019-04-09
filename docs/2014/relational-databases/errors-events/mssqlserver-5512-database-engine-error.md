@@ -12,12 +12,12 @@ ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 859a2b99a62b0ed33f3c6773fe2df3dcbdb91a87
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fb94a88d749b7d850eee9eff96cd78ef8cf9e08d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240677"
 ---
 # <a name="mssqlserver5512"></a>MSSQLSERVER_5512
     
@@ -36,6 +36,6 @@ ms.locfileid: "53366821"
  Échec de l’opération de troncation.  
   
 ## <a name="user-action"></a>Action de l'utilisateur  
- Pour connaître la cause de l’erreur, consultez le code d’état Windows spécifique. Pour plus d’informations sur ce code d’état, consultez le [Events and Errors Message Center](https://go.microsoft.com/fwlink/?linkid=47660).  
+ Pour connaître la cause de l’erreur, consultez le code d’état Windows spécifique. Pour plus d’informations sur ce code d’état, consultez [événements et Messages d’erreur au Support Microsoft](https://support.microsoft.com/search?query=events%20and%20error%20messages).  
   
   

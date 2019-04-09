@@ -15,18 +15,18 @@ ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 601e3b906a8c10d6f073eb05b3f62857f8c79bac
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 00d28ef5dbe2c0a19e5a464981934f2a84df7a7c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241187"
 ---
 # <a name="ole-db-connection-manager"></a>Gestionnaire de connexions OLE DB
   Un gestionnaire de connexions OLE DB permet à un package de se connecter à une source de données à l'aide d'un fournisseur OLE DB. Par exemple, un gestionnaire de connexions OLE DB qui se connecte à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut utiliser le fournisseur [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]
->  Le fournisseur OLEDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 ne prend pas en charge les mots clés de la nouvelle chaîne de connexion (MultiSubnetFailover=True) pour le clustering de basculement de sous-réseaux multiples. Pour plus d’informations, consultez le [Notes de publication de SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) et le billet de blog, [basculement de sous-réseaux multiples AlwaysOn et SSIS](https://go.microsoft.com/fwlink/?LinkId=247825), sur www.mattmasson.com.  
+>  Le fournisseur OLEDB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11.0 ne prend pas en charge les mots clés de la nouvelle chaîne de connexion (MultiSubnetFailover=True) pour le clustering de basculement de sous-réseaux multiples. Pour plus d’informations, consultez le [Notes de publication de SQL Server](https://go.microsoft.com/fwlink/?LinkId=247824) et le billet de blog, [basculement de sous-réseaux multiples AlwaysOn et SSIS](https://www.mattmasson.com/2012/03/alwayson-multi-subnet-failover-and-ssis/), sur www.mattmasson.com.  
   
  Plusieurs tâches et composants de flux de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilisent un gestionnaire de connexions OLE DB. Ainsi, la source et la destination OLE DB utilisent ce gestionnaire de connexions pour extraire et charger des données, tandis que la tâche d’exécution SQL utilise ce gestionnaire pour se connecter à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] afin d’exécuter des requêtes.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "58390461"
 ## <a name="see-also"></a>Voir aussi  
  [Source OLE DB](../data-flow/ole-db-source.md)   
  [Destination OLE DB](../data-flow/ole-db-destination.md)   
- [Tache d'exécution de requêtes SQL](../control-flow/execute-sql-task.md)   
+ [Tâche d’exécution de requêtes SQL](../control-flow/execute-sql-task.md)   
  [Connexions Integration Services &#40;SSIS&#41;](integration-services-ssis-connections.md)  
   
   

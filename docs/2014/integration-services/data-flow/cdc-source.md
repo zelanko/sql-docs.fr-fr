@@ -12,12 +12,12 @@ ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 80e557d9d286040b1d145c852779a9eca5cd4e64
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241787"
 ---
 # <a name="cdc-source"></a>Source CDC
   La source CDC lit une plage de données modifiées dans les tables de modifications de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] et apporte les modifications en aval aux autres composants SSIS.  
@@ -45,11 +45,11 @@ ms.locfileid: "58382725"
 ## <a name="error-handling"></a>Gestion des erreurs  
  la source CDC a une sortie d'erreur. La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d’erreur**: La valeur est toujours -1.  
+-   **Code d'erreur** : La valeur est toujours -1.  
   
--   **Colonne d’erreur**: La colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur** : colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
--   **Colonnes de ligne d’erreur**: Les données d’enregistrement qui provoque l’erreur.  
+-   **Colonnes de ligne d’erreur** : Données d’enregistrement à l’origine de l’erreur.  
   
  Selon le comportement paramétré pour les erreurs, la source CDC prend en charge les erreurs de retour (conversion de données, troncation) qui se produisent pendant le processus d'extraction dans la sortie d'erreur. Pour plus d’informations, consultez [CDC Source Editor &#40;Error Output Page&#41;](../cdc-source-editor-error-output-page.md).  
   
@@ -88,7 +88,7 @@ use <cdc-enabled-database-name>
 #### <a name="sql-server-error-message"></a>Message d'erreur SQL Server  
  Le message suivant peut être retourné par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
- **Nombre d’arguments fournis insuffisant pour la procédure ou la fonction cdc.fn_cdc_get_net_changes_\<..>.**  
+ **Un nombre insuffisant d’arguments fourni pour la procédure ou la fonction cdc.fn_cdc_get_net_changes_\<... >.**  
   
  Cette erreur n'indique pas qu'un argument est manquant. Elle signifie que les valeurs du NSE de début ou du NSE de fin dans la variable d'état de capture de données modifiées ne sont pas valides.  
   
@@ -125,6 +125,6 @@ use <cdc-enabled-database-name>
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [Processing Modes for the CDC Source](https://go.microsoft.com/fwlink/?LinkId=242541) (Modes de traitement pour la source CDC), sur mattmasson.com.  
+-   Entrée de blog, [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/) (Modes de traitement pour la source CDC), sur mattmasson.com.  
   
   

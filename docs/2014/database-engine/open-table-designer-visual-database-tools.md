@@ -15,12 +15,12 @@ ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3e0ceb2ef7e152829cbb6bd33cdcb3d0812a69bf
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240717"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Ouvrir le Concepteur de tables (Visual Database Tools)
   Outil visuel Concepteur de tables permettant de concevoir et de visualiser des tables de base de données auxquelles vous êtes connecté. Vous pouvez utiliser le Concepteur de tables pour créer, modifier ou supprimer des tables, des colonnes, des clés, des index, des relations et des contraintes.  
@@ -34,7 +34,7 @@ ms.locfileid: "53355655"
      Le menu **Concepteur de tables** est ajouté au menu principal et les volets du concepteur s’ouvrent.  
   
 > [!NOTE]  
->  Si vous êtes connecté à une base de données SQL Azure, la nouvelle option de table lancera un script de création de modèle de table. Modifiez les paramètres, puis exécutez le script pour créer une table. Pour plus d'informations, consultez [SQL Azure Overview (en anglais)](https://go.microsoft.com/fwlink/?LinkId=163948).  
+>  Si vous êtes connecté à une base de données SQL Azure, la nouvelle option de table lancera un script de création de modèle de table. Modifiez les paramètres, puis exécutez le script pour créer une table. Pour plus d'informations, consultez [SQL Azure Overview (en anglais)](/azure/sql-database/sql-database-technical-overview).  
   
 ### <a name="open-an-existing-table"></a>Ouverture d'une table existante  
   
@@ -43,7 +43,7 @@ ms.locfileid: "53355655"
      Le menu **Concepteur de tables** est ajouté au menu principal et la table s’ouvre dans les volets du concepteur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conception de Tables &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
+ [Concevoir des tables &#40;Visual Database Tools&#41;](../ssms/visual-db-tools/visual-database-tools.md)   
  [Tables](../relational-databases/tables/tables.md)  
   
   

@@ -12,22 +12,22 @@ ms.assetid: 5ed6f7cd-d9af-4439-9f33-fc935b883d91
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 9a67eff74a4c95a851c65b2fb7db959d765bc192
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374531"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240635"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nouveau catalogue de texte intégral (page Général)
   Utilisez cette boîte de dialogue pour créer un catalogue de texte intégral.  
   
- **Pour utiliser SQL Server Management Studio pour créer un catalogue de texte intégral**  
+ **Pour utiliser SQL Server Management Studio afin de créer un catalogue de texte intégral**  
   
 -   [Créer et gérer des catalogues de texte intégral](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **nom du catalogue de texte intégral**  
+ **Nom du catalogue de texte intégral**  
  Nom du catalogue de texte intégral.  
   
  **Propriétaire**  
@@ -38,7 +38,7 @@ ms.locfileid: "53374531"
  Sélectionnez cette option pour définir le catalogue comme catalogue par défaut pour les nouveaux catalogues de texte intégral.  
   
  **Respect des accents**  
- Indique si le catalogue respecte ou non les signes diacritiques, par exemple le tilde (**~**), l'accent aigu (**´**) ou le tréma (**¨**). Si vous sélectionnez **Non-respect**, les signes diacritiques sont ignorés dans les index de recherche en texte intégral qui sont associés à ce catalogue de texte intégral. Pour plus d’informations sur les marques diacritiques, consultez[DIACRITIQUE](https://go.microsoft.com/fwlink/?LinkId=154091) dans l’Encyclopédie Encarta MSN.  
+ Indique si le catalogue respecte ou non les signes diacritiques, par exemple le tilde (**~**), l'accent aigu (**´**) ou le tréma (**¨**). Si vous sélectionnez **Non-respect**, les signes diacritiques sont ignorés dans les index de recherche en texte intégral qui sont associés à ce catalogue de texte intégral. Pour plus d’informations sur les marques diacritiques, consultez [DIACRITIQUE](https://www.merriam-webster.com/dictionary/diacritic) dans le site Web Merriam-Webster.  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)  

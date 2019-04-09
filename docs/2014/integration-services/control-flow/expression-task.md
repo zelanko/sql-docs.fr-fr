@@ -12,12 +12,12 @@ ms.assetid: 1d7f042d-508d-4e1a-b83a-86a18e23b85f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aec88e77e5306736e89d353b3299bb04441f4b1c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ef46b33beeb57267ad5a06d1d3b1c5788439c027
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241888"
 ---
 # <a name="expression-task"></a>Tâche d'expression
   La tâche d'expression crée et évalue les expressions qui définissent les valeurs des variables au moment de l'exécution, à l'aide du Générateur d'expressions. Lorsque vous modifiez la tâche, le [Expression Builder](../expressions/expression-builder.md) est lancé.  
@@ -33,6 +33,6 @@ ms.locfileid: "58379268"
  [Utiliser une expression dans un composant de flux de données](../use-an-expression-in-a-data-flow-component.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Article technique, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), sur pragmaticworks.com  
+ Article technique, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), sur pragmaticworks.com  
   
   

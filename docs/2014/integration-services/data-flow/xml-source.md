@@ -16,12 +16,12 @@ ms.assetid: 68c27ea5-e93d-4e26-bfb2-d967ca0a5282
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1e18d8058519127108b2b23a6a798fe3d37c25c0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 28e7a7395c02e44e52469992f3738f0d873e227f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240377"
 ---
 # <a name="xml-source"></a>Source XML
   La source XML lit un fichier de données XML et remplit les colonnes de la sortie source avec les données.  
@@ -69,11 +69,11 @@ ms.locfileid: "58386637"
   
  La source XML prend en charge plusieurs sorties standard et plusieurs sorties d'erreur.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] inclut la boîte de dialogue **Éditeur de source XML**pour configurer la source XML. Cette boîte de dialogue est disponible dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes the **XML Source Edito**r dialog box for configuring La boîte de dialogue **Éditeur de source XML**permet de configurer la source XML.sCette boîte de dialogue est disponible dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
   
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source XML** , cliquez sur l’une des rubriques suivantes :  
+ Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source XML**, cliquez sur l’une des rubriques suivantes :  
   
 -   [Éditeur de source XML &#40;page Gestionnaire de connexions&#41;](../xml-source-editor-connection-manager-page.md)  
   
@@ -92,9 +92,9 @@ ms.locfileid: "58386637"
 -   [Définir les propriétés d’un composant de flux de données](set-the-properties-of-a-data-flow-component.md)  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Extraire des données à l’aide de la source XML](xml-source.md)  
+ [Extraire des données à l'aide de la source XML](xml-source.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Réponse traitée, [Créer une destination XML pour un package SSIS](https://go.microsoft.com/fwlink/?LinkId=321993), sur curatedviews.cloudapp.net.  
+ Article technique, [à l’aide d’un fichier XML pour configurer un package SSIS](https://www.sqlshack.com/using-xml-file-configure-ssis-package/).  
   
   

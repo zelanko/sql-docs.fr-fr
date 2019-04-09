@@ -16,31 +16,31 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: c2a6acd93bc711e4722f3ca437b17cba603dfcad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242202"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gestion de clés extensible à l'aide d'Azure Key Vault (SQL Server)
   Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connecteur pour [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiffrement pour tirer parti du service Azure Key Vault comme un [gestion de clés Extensible &#40;EKM&#41; ](extensible-key-management-ekm.md) fournisseur pour protéger ses clés de chiffrement.  
   
  Contenu de cette rubrique :  
   
--   [Utilisations de gestion de clés extensible](#Uses)  
+-   [Utilisations de la gestion de clés extensible](#Uses)  
   
--   [Étape 1 : Configuration de Key Vault pour une utilisation par SQL Server](#Step1)  
+-   [Étape 1 : Configuration du coffre de clés pour une utilisation par SQL Server](#Step1)  
   
--   [Étape 2 : L’installation du connecteur SQL Server](#Step2)  
+-   [Étape 2 : Installation du connecteur SQL Server](#Step2)  
   
--   [Étape 3 : Configurer SQL Server pour utiliser un fournisseur EKM pour le coffre de clés](#Step3)  
+-   [Étape 3 : Configuration de SQL Server afin d'utiliser un fournisseur EKM pour le coffre de clés](#Step3)  
   
--   [Exemple a : Chiffrement transparent des données à l’aide d’une clé asymétrique du coffre de clés](#ExampleA)  
+-   [Exemple A : Chiffrement transparent des données à l'aide d'une clé asymétrique du coffre de clés](#ExampleA)  
   
--   [Exemple b : Le chiffrement des sauvegardes à l’aide d’une clé asymétrique du coffre de clés](#ExampleB)  
+-   [Exemple B : Chiffrement des sauvegardes à l'aide d'une clé asymétrique du coffre de clés](#ExampleB)  
   
--   [Exemple c : Chiffrement au niveau colonne à l’aide d’une clé asymétrique du coffre de clés](#ExampleC)  
+-   [Exemple C : Chiffrement au niveau colonne à l’aide d’une clé asymétrique dans le coffre de clés](#ExampleC)  
   
 ##  <a name="Uses"></a> Utilisations de gestion de clés extensible  
  Une organisation peut utiliser le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour protéger les données sensibles. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] le chiffrement inclut [Transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md), [Column Level Encryption](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE), et [chiffrement de sauvegarde](../../backup-restore/backup-encryption.md). Dans tous ces cas, les données sont chiffrées à l'aide d'une clé de chiffrement de données symétrique. La clé de chiffrement de données symétrique est elle-même chiffrée avec une hiérarchie de clés stockées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Par ailleurs, l'architecture du fournisseur EKM permet à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de protéger les clés de chiffrement de données à l'aide d'une clé asymétrique stockée en dehors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans un fournisseur de services de chiffrement externe. L'utilisation de l'architecture du fournisseur EKM ajoute une couche supplémentaire de sécurité et permet aux organisations de séparer la gestion des clés de celle des données.  
@@ -52,7 +52,7 @@ ms.locfileid: "53372761"
  ![Gestion de clés extensible (EKM) SQL Server avec Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "Gestion de clés extensible (EKM) SQL Server avec Azure Key Vault")  
   
 ##  <a name="Step1"></a> Étape 1 : configurer le coffre de clés pour une utilisation par SQL Server  
- Les étapes suivantes vous permettent de configurer un coffre de clés en vue de l'utiliser avec le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] pour la protection de clé de chiffrement. Un coffre est peut-être déjà en cours d'utilisation pour l'organisation. Si aucun coffre n'existe, l'administrateur Azure dans votre organisation chargé de gérer les clés de chiffrement peut créer un coffre, générer une clé asymétrique dans le coffre, puis autoriser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à utiliser la clé. Pour vous familiariser avec le service de coffre de clés, consultez la page [Prise en main du coffre de clés Azure](https://go.microsoft.com/fwlink/?LinkId=521402)et les informations de référence sur les [applets de commande du coffre de clés Azure](https://go.microsoft.com/fwlink/?LinkId=521403) PowerShell.  
+ Les étapes suivantes vous permettent de configurer un coffre de clés en vue de l'utiliser avec le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] pour la protection de clé de chiffrement. Un coffre est peut-être déjà en cours d'utilisation pour l'organisation. Si aucun coffre n'existe, l'administrateur Azure dans votre organisation chargé de gérer les clés de chiffrement peut créer un coffre, générer une clé asymétrique dans le coffre, puis autoriser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à utiliser la clé. Pour vous familiariser avec le service de coffre de clés, consultez la page [Prise en main du coffre de clés Azure](https://go.microsoft.com/fwlink/?LinkId=521402)et les informations de référence sur les [applets de commande du coffre de clés Azure](/powershell/module/azurerm.keyvault/) PowerShell.  
   
 > [!IMPORTANT]  
 >  Si vous avez plusieurs abonnements Azure, vous devez utiliser l'abonnement qui comprend [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -94,9 +94,9 @@ ms.locfileid: "53372761"
   
      Liens vers la documentation du coffre de clés Azure  
   
-    -   [Qu'est-ce qu'Azure Key Vault ?](https://go.microsoft.com/fwlink/?LinkId=521401)  
+    -   [Qu'est-ce que le coffre de clés Azure ?](https://go.microsoft.com/fwlink/?LinkId=521401)  
   
-    -   [Prise en main d'Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)  
+    -   [Prise en main du coffre de clés Azure](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
     -   Informations de référence sur les [applets de commande Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521403) de PowerShell  
   
@@ -113,9 +113,9 @@ ms.locfileid: "53372761"
   
  L'installation du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vous permet également de télécharger éventuellement des exemples de scripts pour le chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-##  <a name="Step3"></a> Étape 3 : Configuration de SQL Server afin d'utiliser un fournisseur EKM pour le coffre de clés  
+##  <a name="Step3"></a> Étape 3 : Configuration de SQL Server afin d'utiliser un fournisseur EKM pour le coffre de clés  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  L'exécution de l'ensemble de ce processus nécessite l'autorisation CONTROL SERVER ou l'appartenance au rôle serveur fixe **sysadmin** . Des actions spécifiques nécessitent les autorisations suivantes :  
   
 -   Pour créer un fournisseur de chiffrement, l'autorisation CONTROL SERVER ou l'appartenance au rôle de serveur fixe **sysadmin** est requise.  
@@ -347,7 +347,7 @@ CLOSE SYMMETRIC KEY DATA_ENCRYPTION_KEY;
  [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql)   
  [CREATE SYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-symmetric-key-transact-sql)   
  [Gestion de clés extensible &#40;EKM&#41;](extensible-key-management-ekm.md)   
- [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible](enable-tde-on-sql-server-using-ekm.md)   
+ [Activer le chiffrement transparent des données à l'aide de la gestion de clés extensible (EKM)](enable-tde-on-sql-server-using-ekm.md)   
  [Chiffrement de sauvegarde](../../backup-restore/backup-encryption.md)   
  [Créer une sauvegarde chiffrée](../../backup-restore/create-an-encrypted-backup.md)  
   

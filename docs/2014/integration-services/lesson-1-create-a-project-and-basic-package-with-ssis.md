@@ -10,18 +10,18 @@ ms.assetid: 84d0b877-603f-4f8e-bb6b-671558ade5c2
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 77812ef81d77be668a449af6c79e833ffc4d81aa
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 652cf44f70e890b3203ed27890d06f98d70b7f1d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390147"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241797"
 ---
 # <a name="lesson-1-creating-the-project-and-basic-package"></a>Leçon 1 : Création du package de base et du package du projet
   Au cours de cette leçon, vous allez créer un package ETL simple qui extrait des données d'une seule source de fichier plat, transforme ces données en utilisant deux composants de transformation de recherche et les écrit dans la table de faits **FactCurrency** de la base de données **AdventureWorksDW2012**. Dans le cadre de cette leçon, vous allez apprendre à créer de nouveaux packages, ajouter et configurer des sources de données et des destinations et enfin, à utiliser le nouveau flux de contrôle et les composants de flux de données.  
   
 > [!IMPORTANT]  
->  Pour suivre ce didacticiel, vous devez disposer de l'exemple de base de données **AdventureWorksDW2012** . Pour plus d'informations sur l'installation et le déploiement d' **AdventureWorksDW2012**, consultez [Reporting Services Product Samples sur CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Pour suivre ce didacticiel, vous devez disposer de l'exemple de base de données **AdventureWorksDW2012** . Pour plus d’informations sur l’installation et de déploiement **AdventureWorksDW2012**, consultez [Microsoft SQL Server Product Samples : Reporting Services](https://archive.codeplex.com/?p=msftrsprodsamples).  
   
 ## <a name="understanding-the-package-requirements"></a>Connaissances préalables à la création d'un package  
  Ce didacticiel nécessite Microsoft SQL Server Data Tools.  
@@ -80,25 +80,25 @@ ms.locfileid: "58390147"
 ## <a name="lesson-tasks"></a>Tâches de la leçon  
  Cette leçon contient les tâches suivantes :  
   
--   [Étape 1 : Création d’un nouveau projet Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
+-   [Étape 1 : Création d'un nouveau projet Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
--   [Étape 2 : Ajout et configuration d’un Gestionnaire de connexions de fichiers plats](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
+-   [Étape 2 : Ajout et configuration d'un Gestionnaire de connexions de fichiers plats](lesson-1-2-adding-and-configuring-a-flat-file-connection-manager.md)  
   
--   [Étape 3 : Ajout et configuration d’un gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
+-   [Étape 3 : Ajout et configuration d'un Gestionnaire de connexions OLE DB](lesson-1-3-adding-and-configuring-an-ole-db-connection-manager.md)  
   
--   [Étape 4 : Ajout d’une tâche de flux de données au Package](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
+-   [Étape 4 : Ajout d'une tâche de flux de données au package](lesson-1-4-adding-a-data-flow-task-to-the-package.md)  
   
 -   [Étape 5 : Ajout et configuration de la source de fichier plat](lesson-1-5-adding-and-configuring-the-flat-file-source.md)  
   
--   [Étape 6 : Ajout et configuration des Transformations de recherche](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+-   [Étape 6 : Ajout et configuration des transformations de recherche](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
--   [Étape 7 : Ajout et configuration de la Destination OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
+-   [Étape 7 : Ajout et configuration de la destination OLE DB](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
--   [Étape 8 : Rendre le Package de la leçon 1 plus facile à comprendre](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
+-   [Étape 8 : Comment rendre le package de la leçon 1 plus facile à assimiler](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  
   
--   [Étape 9 : Test de la leçon 1 du Package du didacticiel](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
+-   [Étape 9 : Test de la leçon 1 du Package du didacticiel](lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Démarrer la leçon  
- [Étape 1 : Création d’un nouveau projet Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
+ [Étape 1 : Création d'un nouveau projet Integration Services](lesson-1-1-creating-a-new-integration-services-project.md)  
   
   

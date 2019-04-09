@@ -54,12 +54,12 @@ ms.assetid: 33fd90ee-cead-48f0-8ff9-9b458994c766
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: da1f12da9dc3ff3145e2fc1ea9f592e70cfe0c3c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240728"
 ---
 # <a name="log-properties"></a>Propriétés du journal
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur de journal répertoriées dans les tableaux suivants. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -86,11 +86,11 @@ ms.locfileid: "53374591"
  Propriété utilisée comme valeur par défaut durant une opération de traitement effectuée par le serveur.  
   
  **ErrorLog\KeyErrorAction**  
- Spécifie l'action entreprise par le serveur lorsqu'une erreur `KeyNotFound` se produit. Les réponses valides à cette erreur sont :  
+ Spécifie l'action que doit entreprendre le serveur en cas d'erreur `KeyNotFound`. Les réponses valides à cette erreur sont :  
   
--   `ConvertToUnknown` indique au serveur d'allouer la valeur de clé d'erreur au membre inconnu.  
+-   `ConvertToUnknown` Indique au serveur d’allouer de la valeur de clé d’erreur au membre inconnu.  
   
--   `DiscardRecord` indique au serveur d'exclure l'enregistrement.  
+-   `DiscardRecord` Indique au serveur d’exclure l’enregistrement.  
   
  **ErrorLog\KeyErrorLogFile**  
  Il s'agit d'un nom de fichier défini par l'utilisateur qui doit avoir une extension de fichier .log, situé dans un dossier sur lequel le compte de services dispose des autorisations d'accès en lecture/écriture. Ce fichier journal contient uniquement les erreurs générées lors du traitement. Utilisez la Boîte noire si vous avez besoin de plus d'informations.  
@@ -101,18 +101,18 @@ ms.locfileid: "53374591"
  **ErrorLog\KeyErrorLimitAction**  
  Spécifie l'action entreprise par le serveur lorsque le nombre maximal d'erreurs de clé est atteint. Les réponses valides à cette action sont :  
   
--   `StopProcessing` indique au serveur d'arrêter le traitement lorsque le nombre maximal d'erreurs est atteint.  
+-   `StopProcessing` Indique au serveur d’arrêter le traitement lorsque le nombre maximal d’erreurs est atteint.  
   
--   `StopLogging` indique au serveur d'arrêter l'enregistrement des erreurs lorsque le nombre maximal d'erreurs est atteint, mais d'autoriser la poursuite du traitement.  
+-   `StopLogging` Indique au serveur d’arrêter l’enregistrement des erreurs lorsque le nombre maximal d’erreurs est atteint, mais autoriser la poursuite du traitement.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
- Spécifie l'action entreprise par le serveur lorsqu'une erreur `KeyNotFound` se produit. Les réponses valides à cette erreur sont :  
+ Spécifie l'action que doit entreprendre le serveur en cas d'erreur `KeyNotFound`. Les réponses valides à cette erreur sont :  
   
--   `IgnoreError` indique au serveur de poursuivre le traitement sans enregistrer l'erreur ou la compter dans le nombre maximal d'erreurs de clé. Lorsque vous ignorez l'erreur, vous permettez au traitement de continuer sans ajouter l'erreur au nombre d'erreurs ou l'enregistrer à l'écran ou dans le fichier journal. L'enregistrement en question rencontre un problème d'intégrité des données et ne peut pas être ajouté à la base de données. L'enregistrement sera ignoré ou agrégé dans le membre inconnu, tel que le détermine la propriété `KeyErrorAction`.  
+-   `IgnoreError` Indique au serveur pour continuer sans enregistrer l’erreur ou la compter dans le nombre maximal d’erreurs de traitement. Lorsque vous ignorez l'erreur, vous permettez au traitement de continuer sans ajouter l'erreur au nombre d'erreurs ou l'enregistrer à l'écran ou dans le fichier journal. L'enregistrement en question rencontre un problème d'intégrité des données et ne peut pas être ajouté à la base de données. L'enregistrement est ignoré ou agrégé à un membre inconnu, tel que le détermine la propriété `KeyErrorAction`.  
   
--   `ReportAndContinue` indique au serveur d'enregistrer l'erreur, de la compter dans le nombre maximal d'erreurs de clé et de continuer le traitement. L'enregistrement déclenchant l'erreur est ignoré ou converti en membre inconnu.  
+-   `ReportAndContinue` Indique au serveur d’enregistrer l’erreur, compter dans le nombre maximal d’erreurs et continuer le traitement. L'enregistrement déclenchant l'erreur est ignoré ou converti en membre inconnu.  
   
--   `ReportAndStop` indique au serveur d'enregistrer l'erreur et d'arrêter le traitement immédiatement, quel que soit le nombre maximal d'erreurs de clé. L'enregistrement déclenchant l'erreur est ignoré ou converti en membre inconnu.  
+-   `ReportAndStop` Indique au serveur d’enregistrer l’erreur et arrêter le traitement immédiatement, quel que soit le nombre maximal d’erreurs. L'enregistrement déclenchant l'erreur est ignoré ou converti en membre inconnu.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  Spécifie l'action entreprise par le serveur lorsqu'une clé dupliquée est détectée. Les valeurs valides sont `IgnoreError` pour continuer le traitement comme si l'erreur ne s'était pas produite, `ReportAndContinue` pour enregistrer l'erreur et continuer le traitement et `ReportAndStop` pour enregistrer l'erreur et arrêter le traitement immédiatement, même si le nombre d'erreurs est inférieur au nombre maximal.  
@@ -121,7 +121,7 @@ ms.locfileid: "53374591"
  Spécifie l'action entreprise par le serveur lorsqu'une clé NULL a été convertie en membre inconnu. Les valeurs valides sont `IgnoreError` pour continuer le traitement comme si l'erreur ne s'était pas produite, `ReportAndContinue` pour enregistrer l'erreur et continuer le traitement et `ReportAndStop` pour enregistrer l'erreur et arrêter le traitement immédiatement, même si le nombre d'erreurs est inférieur au nombre maximal.  
   
  **ErrorLog\ LogErrorTypes\NullKeyNotAllowed**  
- Spécifie l'action effectuée par le serveur lorsque `NullProcessing` a la valeur `Error` pour un attribut de dimension. Une erreur est générée lorsqu'une valeur NULL n'est pas autorisée dans un attribut donné. Cette propriété de configuration d'erreur informe l'étape suivante, qui consiste à créer un rapport d'erreurs et poursuivre le traitement tant que le nombre maximal d'erreurs n'est pas atteint. Les valeurs valides sont `IgnoreError` pour continuer le traitement comme si l'erreur ne s'était pas produite, `ReportAndContinue` pour enregistrer l'erreur et continuer le traitement et `ReportAndStop` pour enregistrer l'erreur et arrêter le traitement immédiatement, même si le nombre d'erreurs est inférieur au nombre maximal.  
+ Spécifie l'action entreprise par le serveur lorsque `NullProcessing` a la valeur `Error` pour un attribut de dimension. Une erreur est générée lorsqu'une valeur NULL n'est pas autorisée dans un attribut donné. Cette propriété de configuration d'erreur informe l'étape suivante, qui consiste à créer un rapport d'erreurs et poursuivre le traitement tant que le nombre maximal d'erreurs n'est pas atteint. Les valeurs valides sont `IgnoreError` pour continuer le traitement comme si l'erreur ne s'était pas produite, `ReportAndContinue` pour enregistrer l'erreur et continuer le traitement et `ReportAndStop` pour enregistrer l'erreur et arrêter le traitement immédiatement, même si le nombre d'erreurs est inférieur au nombre maximal.  
   
  **ErrorLog\ LogErrorTypes\CalculationError**  
  Propriété utilisée comme valeur par défaut durant une opération de traitement effectuée par le serveur.  
@@ -199,7 +199,7 @@ ms.locfileid: "53374591"
  La valeur par défaut de cette propriété, False, indique que ne serveur ne crée pas automatiquement la table du journal et n'enregistre pas d'événements de requête.  
   
 > [!NOTE]  
->  Pour plus d’informations sur la configuration du journal des requêtes, consultez [Configuration du journal des requêtes Analysis Services](https://go.microsoft.com/fwlink/?LinkId=81890).  
+>  Pour plus d’informations sur la configuration du journal des requêtes, consultez [journalisation des opérations dans Analysis Services](../instances/log-operations-in-analysis-services.md).  
   
 ## <a name="trace"></a>Trace  
  **Trace\TraceBackgroundDistributionPeriod**  

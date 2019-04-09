@@ -10,12 +10,12 @@ ms.assetid: ef217717-6d05-443e-af26-44dc745a349d
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 4b1a5d1aa7c35455e83361e2c04a686a75713574
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d52c140a1a3b9bc4c329c8034918486f2fd3e01e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038350"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241757"
 ---
 # <a name="reference-data-services-in-dqs"></a>Services de données de référence dans DQS
   Les données de référence correspondent à un ensemble précis et complet de données globales associées ou classées (au-delà des limites d'une entreprise) qui sont disponibles pour les domaines publics approuvés ou auprès de fournisseurs de contenu commercial de premier ordre.  
@@ -31,7 +31,7 @@ ms.locfileid: "56038350"
 -   Elle prend en charge l'utilisation de données de référence provenant de Windows Azure Marketplace, ainsi que de données de référence provenant directement de fournisseurs de données de référence tiers.  
   
 ##  <a name="Marketplace"></a> Utilisation de données de référence provenant de Windows Azure Marketplace  
- DQS prend en charge l'utilisation de données de référence provenant de Windows Azure Marketplace afin de permettre aux fournisseurs de contenu de fournir des services de données de référence via Marketplace. Marketplace est un service Microsoft qui fournit un canal de remise et de marché unique permettant d'obtenir des données et des applications de haute qualité sous la forme de services en nuage. Pour plus d’informations sur la Place de marché, consultez [Découvrir la Place de marché Microsoft Azure](https://go.microsoft.com/fwlink/?LinkId=211291) (https://go.microsoft.com/fwlink/?LinkId=211291).  
+ DQS prend en charge l'utilisation de données de référence provenant de Windows Azure Marketplace afin de permettre aux fournisseurs de contenu de fournir des services de données de référence via Marketplace. Marketplace est un service Microsoft qui fournit un canal de remise et de marché unique permettant d'obtenir des données et des applications de haute qualité sous la forme de services en nuage. Pour plus d’informations sur la place de marché, consultez [en savoir plus sur Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/).  
   
  L'intégration transparente entre la Place de marché et DQS simplifie les étapes associées à la découverte, l'exploration et l'acquisition d'informations pour des projets de qualité des données à partir de DQS. Les données sont utilisées à partir de DQS, et permettent aux utilisateurs de DQS d'atteindre une haute qualité de données en rassemblant de façon innovante DQS, Marketplace et des fournisseurs de services de données de référence.  
   
@@ -53,17 +53,17 @@ ms.locfileid: "56038350"
 ##  <a name="HowToCleanse"></a> Procédure : nettoyer des données à l'aide de données de référence  
  Le nettoyage de vos données dans DQS à l'aide de données de référence inclut les trois étapes suivantes :  
   
-1.  **Configuration des détails de fournisseur de données de référence dans DQS**: Avant de pouvoir utiliser les données de référence dans DQS, vous devez configurer les détails de service de données de référence dans DQS.  
+1.  **Configuration des détails sur le fournisseur de données de référence dans DQS** : avant de pouvoir utiliser des données de référence dans DQS, vous devez configurer les détails du service de données de référence dans DQS.  
   
-    1.  Si vous utilisez Marketplace, fournissez une clé de compte Marketplace valide, accédez à la catégorie de données [Data Quality Services](https://go.microsoft.com/fwlink/?LinkId=227587) dans Marketplace, et abonnez-vous aux fournisseurs requis.  
+    1.  Si vous utilisez Marketplace, fournissez une clé de compte Marketplace valide, accédez à la catégorie de données [Data Quality Services](../data-quality-services/data-quality-services.md) dans Marketplace, et abonnez-vous aux fournisseurs requis.  
   
     2.  Si vous utilisez un fournisseur de données de référence en ligne direct, vous devez ajouter les détails du fournisseur de données de référence direct dans DQS avant de pouvoir l'utiliser.  
   
      La configuration des détails de fournisseur de données de référence dans DQS est une activité qui s'effectue une seule fois pour un fournisseur de données particulier. Seuls les administrateurs DQS peuvent configurer des paramètres de données de référence dans DQS.  
   
-2.  **Mapper un domaine/domaine composite dans une base de connaissances au service de données de référence**: Mapper un domaine/domaine composite au service de données de référence approprié souscrit/ajouté à l’étape 1.  
+2.  **Mapper un domaine/domaine composite d’une base de connaissances au service de données de référence** : mappez un domaine/domaine composite au service de données de référence approprié souscrit/ajouté à l’étape 1.  
   
-3.  **Utilisation des domaines mappés pour l’activité de nettoyage dans un projet de qualité des données**: Lors de la création d’un projet de qualité des données pour le **nettoyage** activité, sélectionnez la base de connaissances qui contient des domaines/domaines composites mappés avec des services de données de référence à l’étape 2, puis effectuez l’activité de nettoyage.  
+3.  **Utiliser les domaines mappés pour l’activité de nettoyage dans un projet de qualité des données** : au moment de créer un projet de qualité des données pour l’activité **Nettoyage**, sélectionnez la base de connaissances qui contient les domaines/domaines composites mappés avec des services de données de référence à l’étape 2, puis effectuez l’activité de nettoyage.  
   
 ## <a name="related-tasks"></a>Tâches associées  
   
@@ -71,6 +71,6 @@ ms.locfileid: "56038350"
 |----------------------|-----------|  
 |Explique comment configurer DQS pour utiliser des services de données de référence provenant de Marketplace ou de fournisseurs de données tiers en ligne directs.|[Configurer DQS pour utiliser des données de référence](../../2014/data-quality-services/configure-dqs-to-use-reference-data.md)|  
 |Explique comment mapper un domaine/domaine composite dans une base de connaissances à un service de données de référence.|[Attacher un domaine ou un domaine composite à des données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)|  
-|Explique comment nettoyer des données à l'aide d'un service de données de référence.|[Nettoyer des données à l’aide de la connaissance des données de référence &#40;externes&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
+|Explique comment nettoyer des données à l'aide d'un service de données de référence.|[Nettoyer des données à l’aide des connaissances des données de référence &#40;externes&#41;](../../2014/data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)|  
   
   

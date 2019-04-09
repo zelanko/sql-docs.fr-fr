@@ -12,12 +12,12 @@ ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 7fa2edb4437b2d97a5a78da609838c6fcaaadda3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353580"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241448"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriétés du catalogue de texte intégral (page Général)
   Cette section présente les options et fonctions disponibles dans la page **Général** de la boîte de dialogue **Propriétés du catalogue de texte intégral** .  
@@ -34,27 +34,27 @@ ms.locfileid: "53353580"
  **État du remplissage**  
  Indique l'état du catalogue. Les valeurs possibles sont :  
   
--   **Inactivité**  
+-   **Idle**  
   
 -   **Analyse en cours**  
   
 -   **Suspendu**  
   
--   **Limitées**  
+-   **Accéléré**  
   
--   **La récupération**  
+-   **Récupération**  
   
 -   **Arrêter**  
   
 -   **Remplissage incrémentiel en cours**  
   
--   **Création de l’index**  
+-   **Construction des index**  
   
 -   **Le disque est en pause l’intégral**  
   
--   **Change tracking**  
+-   **Suivi des modifications**  
   
- **Nombre d’éléments**  
+ **Nombre d'éléments**  
  Affiche le nombre d'éléments de texte intégral contenus dans le catalogue.  
   
  **Taille du catalogue**  
@@ -70,7 +70,7 @@ ms.locfileid: "53353580"
   
 -   **Oui**  
   
--   Pour plus d'informations sur les signes diacritiques, consultez [diacritique, signe](https://go.microsoft.com/fwlink/?LinkId=154091) (en anglais) dans l'encyclopédie Encarta MSN.  
+-   Pour plus d’informations sur les marques diacritiques, consultez [diacritiques](https://www.merriam-webster.com/dictionary/diacritic) dans le dictionnaire Merriam-Webster.  
   
  **Date du dernier remplissage**  
  Affiche la date du dernier remplissage du catalogue.  
@@ -85,9 +85,9 @@ ms.locfileid: "53353580"
   
 |||  
 |-|-|  
-|**Aucun**|N'exécute aucune opération de type **Optimiser le catalogue**, **Reconstruire le catalogue**ou **Remplir à nouveau le catalogue** .|  
+|**None**|N'exécute aucune opération de type **Optimiser le catalogue**, **Reconstruire le catalogue**ou **Remplir à nouveau le catalogue** .|  
 |**Optimiser le catalogue**|Optimise l'utilisation de l'espace du catalogue et améliore les performances des requêtes. Cette option améliore également la précision du classement de la pertinence des résultats de la recherche.<br /><br /> Cette action exécute ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
-|**La reconstruction du catalogue**|Supprime et reconstruit le catalogue de texte intégral. Cette opération doit être exécutée si une propriété fondamentale du catalogue a été modifiée (par exemple, le respect des accents).<br /><br /> Pour que la reconstruction réussisse, le groupe de fichiers dans lequel réside le catalogue de texte intégral doit être en ligne ou accessible en lecture et en écriture. Après la reconstruction, l'index de texte intégral sera rempli à nouveau.<br /><br /> Cette action exécute ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
+|**Reconstruire le catalogue**|Supprime et reconstruit le catalogue de texte intégral. Cette opération doit être exécutée si une propriété fondamentale du catalogue a été modifiée (par exemple, le respect des accents).<br /><br /> Pour que la reconstruction réussisse, le groupe de fichiers dans lequel réside le catalogue de texte intégral doit être en ligne ou accessible en lecture et en écriture. Après la reconstruction, l'index de texte intégral sera rempli à nouveau.<br /><br /> Cette action exécute ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Remplir à nouveau le catalogue**|Met à jour le catalogue avec les modifications récemment apportées aux données. Cette option ne requiert aucun temps mort du catalogue.|  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -14,12 +14,12 @@ ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 86b86039f3e308953d41f5a463b0716a76d5c361
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240808"
 ---
 # <a name="web-service-task"></a>Tâche de service Web
   La tâche de service Web exécute une méthode de service Web. Vous pouvez utiliser la tâche de service Web pour :  
@@ -74,7 +74,7 @@ ms.locfileid: "58377307"
   
  Pour plus d'informations sur la définition de ces propriétés dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur la rubrique suivante :  
   
--   [Définir les propriétés d’une tâche ou d’un conteneur](../set-the-properties-of-a-task-or-container.md)  
+-   [Définir les propriétés d'une tâche ou d'un conteneur](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="programmatic-configuration-of-the-web-service-task"></a>Configuration par programmation de la tâche de service web  
  Pour plus d'informations sur la définition par programmation de ces propriétés, cliquez sur l'une des rubriques suivantes :  
@@ -82,8 +82,8 @@ ms.locfileid: "58377307"
 -   <xref:Microsoft.SqlServer.Dts.Tasks.WebServiceTask.WebServiceTask>  
   
 ## <a name="related-content"></a>Contenu associé  
- Vidéo, [Guide pratique pour Appeler un Service Web à l’aide de la tâche de Service Web (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642), sur technet.microsoft.com.  
+ Vidéo, [Guide pratique pour appeler un service web à l’aide de la tâche Service web (vidéo liée à SQL Server)](https://go.microsoft.com/fwlink/?LinkId=259642) sur technet.microsoft.com.  
   
- Réponse traitée, [Consume Web Services in SSIS using Scripts](https://go.microsoft.com/fwlink/?LinkId=321996)(Consommer des services web dans SSIS à l’aide de scripts), sur curatedviews.cloudapp.net.  
+ [Comment consommer le Service Web via un Package SSIS](https://www.c-sharpcorner.com/article/how-to-consume-web-service-through-ssis-package/).  
   
   

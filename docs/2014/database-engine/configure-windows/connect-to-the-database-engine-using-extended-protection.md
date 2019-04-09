@@ -17,12 +17,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0df4e17291e03e23cb68e984c8473064b0208a9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241429"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la **protection étendue** depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protection étendue de l'authentification** est une fonctionnalité des composants réseau implémentée par le système d'exploitation. La**protection étendue** est prise en charge dans Windows 7 et Windows Server 2008 R2. La**protection étendue** figure dans les Service Packs pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] plus anciens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est plus sécurisé lorsque les connexions sont établies à l'aide de la **protection étendue**.  
@@ -48,14 +48,14 @@ ms.locfileid: "53366321"
  La liaison de canal établit un canal sécurisé (Schannel) entre un client et une instance du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le service vérifie l’authenticité du client en comparant le jeton de liaison de canaux du client à son propre jeton de liaison de canaux. La liaison de canal répond à la fois aux attaques par leurre et d'usurpation. Toutefois, elle implique un coût d'exécution plus important, car elle nécessite le chiffrement TLS (Transport Layer Security) de tout le trafic de session. La liaison de canal se produit lorsqu'une application cliente utilise le chiffrement pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que le chiffrement soit appliqué par le client ou par le serveur.  
   
 > [!WARNING]  
->  Les fournisseurs de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
   
 ### <a name="operating-system-support"></a>Prise en charge du système d'exploitation  
  Les liens suivants fournissent davantage d'informations sur la prise en charge de la **protection étendue**par Windows :  
   
 -   [Integrated Windows Authentication with Extended Protection (en anglais)](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft Security Advisory (973811), Extended Protection for Authentication (en anglais)](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft Security Advisory (973811), Extended Protection for Authentication (en anglais)](https://support.microsoft.com//help/973811/microsoft-security-advisory-extended-protection-for-authentication)  
   
 ## <a name="settings"></a>Paramètres  
  Trois paramètres de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] affectent la liaison de service et la liaison de canal. Les paramètres peuvent être configurés à l'aide du Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ou en utilisant WMI, et peuvent être affichés à l'aide de la facette **Paramètres de protocole serveur** de la gestion basée sur des stratégies.  
@@ -64,7 +64,7 @@ ms.locfileid: "53366321"
   
      Les valeurs possibles sont **On** (activé) et **Off**(désactivé). Pour utiliser la liaison de canal, **Forcer le chiffrement** doit avoir la valeur **On**et le chiffrement sera forcé pour tous les clients. Si la valeur est **Off**, seule la liaison de service est garantie. **Forcer le chiffrement** figure dans **Propriétés de Protocoles pour MSSQLSERVER (onglet Indicateurs)** dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **Protection étendue**  
+-   **protection étendue**  
   
      Les valeurs possibles sont **Off**, **Autorisée**et **Requis**. La variable **Protection étendue** permet aux utilisateurs de configurer le niveau de **protection étendue** pour chaque instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Protection étendue** figure dans **Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)** dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -104,6 +104,6 @@ ms.locfileid: "53366321"
  [Configuration réseau du serveur](server-network-configuration.md)   
  [Configuration du réseau client](client-network-configuration.md)   
  [Extended Protection for Authentication Overview (en anglais)](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [Authentification Windows intégrée avec protection étendue](https://go.microsoft.com/fwlink/?LinkId=179922) (Integrated Windows Authentication with Extended Protection)  
+ [Integrated Windows Authentication with Extended Protection (en anglais)](https://go.microsoft.com/fwlink/?LinkId=179922)  
   
   

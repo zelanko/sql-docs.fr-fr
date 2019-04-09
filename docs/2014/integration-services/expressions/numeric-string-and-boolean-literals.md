@@ -17,12 +17,12 @@ ms.assetid: a980cd52-54ef-4b9c-b00c-e6807cf8e01f
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f931b6c9edd917a12d3a84cc9cd65af862f0697e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 9b307c48da04e32691afa12ff1b05f6a4e8c33d8
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242187"
 ---
 # <a name="literals-ssis"></a>Littéraux (SSIS)
   Les expressions peuvent contenir des littéraux numériques, booléens et de chaîne. L'évaluateur d'expression prend en charge divers littéraux numériques tels que les entiers, les décimaux et les constantes en virgule flottante. L'évaluateur d'expression prend également en charge les suffixes longs et flottants, qui spécifient comment il doit gérer les valeurs, ainsi que la notation scientifique dans les littéraux numériques.  
@@ -117,6 +117,6 @@ ms.locfileid: "58384747"
 >  Dans une expression, un littéral booléen doit être délimité par des espaces.  
   
 ## <a name="related-content"></a>Contenu associé  
- Article technique, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), sur pragmaticworks.com  
+ Article technique, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), sur pragmaticworks.com  
   
   

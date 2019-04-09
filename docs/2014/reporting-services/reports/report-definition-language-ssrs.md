@@ -20,12 +20,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 32442fad5d3d6f265769927d291c3154ff362f38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241150"
 ---
 # <a name="report-definition-language-ssrs"></a>Langage de définition de rapport (SSRS, Report Definition Language)
   Report Definition Language (RDL) est une représentation XML d’une définition de rapport [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Une définition de rapport contient les informations d'extraction de données et de mise en page d'un rapport. La spécification RDL est composée d’éléments XML qui sont conformes à une grammaire XML créée pour [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Vous pouvez ajouter vos propres fonctions personnalisées pour contrôler les valeurs, les styles et la mise en forme des éléments de rapport en accédant à des assemblys de code dans les fichiers de définition de rapport.  
@@ -71,7 +71,7 @@ ms.locfileid: "56010417"
 |`Language`|Propriété dont la valeur est le texte d'une chaîne, qui contient un code de langue et de culture, tel que « en-us » pour l'anglais (États-Unis). La valeur doit être une langue spécifique ou une langue neutre pour laquelle une langue par défaut est définie dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].|  
 |`Name`|Propriété dont la valeur est le texte d'une chaîne. Les noms doivent être uniques dans l'espace de noms de l'élément. S'il n'est pas spécifié, l'espace de noms d'un élément est l'objet conteneur le plus profond doté d'un nom.|  
 |`NormalizedString`|Propriété dont la valeur est le texte d'une chaîne, qui a été normalisée.|  
-|`Size`|Un élément de taille doit contenir un nombre (avec une virgule comme séparateur décimal facultatif). Le nombre doit être suivi d'un indicateur pour une unité de longueur CSS ; par exemple, cm, mm, in, pt ou pc. Un espace entre le nombre et l'indicateur est facultatif. Pour plus d’informations sur les indicateurs de taille, consultez [CSS Length Units Reference](https://go.microsoft.com/fwlink/?LinkId=9257)(Guide de référence des unités de longueur CSS).<br /><br /> Dans RDL, la valeur maximale pour `Size` est de 160 po. La taille minimale est 0 po.|  
+|`Size`|Un élément de taille doit contenir un nombre (avec une virgule comme séparateur décimal facultatif). Le nombre doit être suivi d'un indicateur pour une unité de longueur CSS ; par exemple, cm, mm, in, pt ou pc. Un espace entre le nombre et l'indicateur est facultatif. Pour plus d’informations sur les indicateurs de taille, consultez [CSS Length Units Reference](https://www.w3schools.com/CSSref/css_units.asp)(Guide de référence des unités de longueur CSS).<br /><br /> Dans RDL, la valeur maximale pour `Size` est de 160 po. La taille minimale est 0 po.|  
 |`String`|Propriété dont la valeur est le texte d'une chaîne.|  
 |`UnsignedInt`|Propriété dotée d'une valeur entière non signée (uint32).|  
 |`Variant`|Une propriété dotée d'un type XML simple.|  

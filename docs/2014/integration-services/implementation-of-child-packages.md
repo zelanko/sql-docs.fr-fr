@@ -13,12 +13,12 @@ ms.assetid: ab0c09d7-ce2e-487d-a1ed-a4b5adb6cc01
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ea69aa9c04ce323b43e28d5426acd383d574a538
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 04ad145d23cfcd158cf68ac941606e1c3bd0114a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242167"
 ---
 # <a name="implementation-of-child-packages"></a>Implémentation de packages enfants
   Quand vous implémentez un équilibrage de charge avec [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], des packages enfants sont installés sur d’autres serveurs pour tirer parti du temps UC ou serveur disponible. Pour créer et exécuter les packages enfants, les opérations suivantes sont nécessaires :  
@@ -68,8 +68,8 @@ ms.locfileid: "58386764"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://go.microsoft.com/fwlink/?LinkId=257729), sur le site Web consultingblogs.emc.com.  
+-   Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), sur andyleonard.blog.  
   
--   Entrée de blog, [SSIS : Doit s’exécuter des packages enfants in-process ou out-of-process ? ](https://go.microsoft.com/fwlink/?LinkId=220819), sur le site Web consultingblogs.emc.com.  
+-   Article, [tâche Exécuter Package](../integration-services/control-flow/execute-package-task.md).  
   
   

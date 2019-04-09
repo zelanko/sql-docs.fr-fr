@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: eb7800a18e8df28848d775746bab6d90f75d7439
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242257"
 ---
 # <a name="excel-source"></a>Source Excel
   La source Excel extrait des données de feuilles de calcul ou de plages dans des classeurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -80,7 +80,7 @@ ms.locfileid: "58390931"
 ## <a name="excel-source-configuration"></a>Configuration d'une source Excel  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source Excel** , cliquez sur l’une des rubriques suivantes :  
+ Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source Excel**, cliquez sur l’une des rubriques suivantes :  
   
 -   [Éditeur de source Excel &#40;page Gestionnaire de connexions&#41;](../excel-source-editor-connection-manager-page.md)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "58390931"
   
 -   Entrée de blog, [Excel in Integration Services, partie 3 sur 3 : Issues and Alternatives](https://go.microsoft.com/fwlink/?LinkId=217676), sur dougbert.com.  
   
--   Entrée de blog, [Using XLSX files in SSIS](https://go.microsoft.com/fwlink/?LinkId=233704), sur sqlservergeeks.com.  
+-   Entrée de blog, [connexion à Excel (XLSX) dans SSIS ](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

@@ -18,12 +18,12 @@ ms.assetid: 1e3be259-d453-4802-b2f5-6b81ef607edf
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 46b6a89d5ce643aa67f3f514052c19ea77e6e72e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b43ad109b3b64927f2e4b03ef26fc0bc648a1ec7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240647"
 ---
 # <a name="report-and-snapshot-size-limits"></a>Limites de taille des instantanés et des rapports
   Les administrateurs qui gèrent un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent utiliser les informations figurant dans cette rubrique pour comprendre les limites de taille lorsque le rapport est publié sur un serveur de rapports, rendu lors de l'exécution et enregistré dans le système de fichiers. Cette rubrique fournit également des conseils pratiques expliquant comment mesurer la taille d'une base de données de serveur de rapports, et elle décrit l'incidence de la taille des instantanés sur les performances des serveurs.  
@@ -53,7 +53,7 @@ ms.locfileid: "56035640"
  La seule limite physique sur la taille du rapport s'applique lors du rendu au format Excel. Les feuilles de calcul ne peuvent pas contenir plus de 65 536 lignes ou 256 colonnes. D'autres formats de rendu ne sont pas soumis à ces limites, par conséquent, la taille est limitée uniquement par la quantité de ressources sur votre serveur. Pour plus d’informations sur les limites de fichier Excel, consultez [exporter un rapport dans un autre Type de fichier &#40;Générateur de rapports et SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
   
 > [!NOTE]  
->  Le traitement et le rendu d'un rapport sont opérés en mémoire. Si vous possédez des rapports volumineux ou un grand nombre d'utilisateurs, veillez à réaliser une planification de capacité pour vous assurer que vos utilisateurs sont satisfaits des performances de votre déploiement de serveur de rapports. Pour plus d'informations sur les outils et pour obtenir des instructions, consultez les publications suivantes sur MSDN : [Planning for Scalability and Performance with Reporting Services](https://go.microsoft.com/fwlink/?LinkID=70650) et [à l’aide de Visual Studio 2005 pour effectuer le test de charge sur un SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
+>  Le traitement et le rendu d'un rapport sont opérés en mémoire. Si vous possédez des rapports volumineux ou un grand nombre d'utilisateurs, veillez à réaliser une planification de capacité pour vous assurer que vos utilisateurs sont satisfaits des performances de votre déploiement de serveur de rapports. Pour plus d'informations sur les outils et pour obtenir des instructions, consultez les publications suivantes sur MSDN : [Planning for Scalability and Performance with Reporting Services](http://spmarchitecture.com/ssrs-architecture/planning-for-scalability-and-performance-reporting-services-70744/) et [à l’aide de Visual Studio 2005 pour effectuer le test de charge sur un SQL Server 2005 Reporting Services Report Server](https://go.microsoft.com/fwlink/?LinkID=77519).  
   
 ## <a name="measuring-snapshot-storage"></a>Mesure du stockage des instantanés  
  La taille d'un instantané est directement proportionnelle à la quantité de données dans le rapport. Les instantanés sont généralement bien plus volumineux que les autres éléments stockés sur un serveur de rapports. Leur taille oscille généralement entre quelques mégaoctets et des dizaines de mégaoctets. Si vos rapports sont extrêmement volumineux, il est probable que les instantanés le seront encore plus. En fonction de la fréquence d'utilisation des instantanés et de la configuration de l'historique des rapports, la quantité d'espace disque nécessaire par la base de données du serveur de rapports peut augmenter rapidement en peu de temps.  
@@ -81,7 +81,7 @@ EXEC sp_spaceused
  La quantité d'instantanés qui est stockée dans une base de données de serveur de rapports n'est pas, en soi, un facteur de performances. Vous pouvez stocker un grand nombre d'instantanés sans aucune incidence sur les performances. Vous pouvez conserver les instantanés indéfiniment. Sachez cependant que l'historique de rapport est configurable. Si un administrateur de serveur de rapports abaisse la limite de l'historique de rapport, vous risquez de perdre des rapports que vous comptiez garder. Si vous supprimez le rapport, tout l'historique est également supprimé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de traitement d’un rapport](set-report-processing-properties.md)   
+ [Définir les propriétés de traitement d'un rapport](set-report-processing-properties.md)   
  [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](report-server-database-ssrs-native-mode.md)   
  [Traiter les rapports volumineux](process-large-reports.md)  
   

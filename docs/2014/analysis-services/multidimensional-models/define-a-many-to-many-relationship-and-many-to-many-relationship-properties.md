@@ -13,12 +13,12 @@ ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 93f00a9544512c3c5efb63667d715c57bcf62de9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242477"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs
   Cette rubrique explique les dimensions plusieurs-à-plusieurs dans Analysis Services, à quel moment les utiliser, et comment les créer.  
@@ -180,7 +180,7 @@ ms.locfileid: "53354013"
 ##  <a name="bkmk_Learn"></a> Learn more  
  Consultez les liens suivants pour obtenir davantage d'informations sur ces concepts.  
   
- [Comment définir une dimension plusieurs-à-plusieurs dans Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [Comment définir des dimensions plusieurs-à-plusieurs dans Analysis Services ?](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [La révolution 2.0 des relations plusieurs-à-plusieurs](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

@@ -12,12 +12,12 @@ ms.assetid: 14129cc4-be80-4772-9e3f-0e5da4d0696b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38405f6bfe2744445abe9884350a703cbb0374cd
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241647"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
     
@@ -43,17 +43,17 @@ ms.locfileid: "53377521"
   
  Utilisez l'Analyseur de performances pour consulter les compteurs suivants :  
   
--   **Moyenne disque s/transfert**  
+-   **Moy. disque s/transfert**  
   
--   **Longueur moyenne de la file d’attente du disque**  
+-   **Longueur moyenne de la file d'attente du disque**  
   
--   **Longueur actuelle de la file d’attente du disque**  
+-   **Longueur actuelle de la file d'attente du disque**  
   
  Par exemple, la durée **Moyenne disque s/transfert** sur un ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est généralement inférieure à 15 millisecondes. Si la valeur **Moyenne disque s/transfert** augmente, cela indique que le sous-système d’E/S ne parvient pas parfaitement à suivre la demande d’E/S.  
   
 > [!NOTE]  
 >  L'accès au disque peut être ralenti par un antivirus. Pour augmenter la vitesse d'accès, excluez des analyses antivirus actives les fichiers de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui sont spécifiés dans le message d'erreur.  
   
- Pour plus d’informations sur les erreurs d’E/S, consultez [Concepts de base des E/S de Microsoft SQL Server, chapitre 2](https://go.microsoft.com/fwlink/?LinkId=69370) et l’article de la Base de connaissances disponible à l’adresse [https://support.microsoft.com/kb/897284/en-us](https://support.microsoft.com/kb/897284/en-us).  
+ Pour plus d’informations sur les erreurs d’E/S, consultez [Concepts de base des E/S de Microsoft SQL Server, chapitre 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10)) et l’article de la Base de connaissances disponible à l’adresse [https://support.microsoft.com/kb/897284](https://support.microsoft.com/kb/897284).  
   
   

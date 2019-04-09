@@ -18,17 +18,17 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 14d0f9f445717ed7744f5da14eba3e99b16127db
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3115624895c45585101db4d5c02ea85509d68220
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241817"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Paramètres de rapport (Générateur de rapports et Concepteur de rapports)
   Cette rubrique décrit les utilisations courantes des paramètres de rapport SSRS, les propriétés pouvant être définies et bien d'autres paramètres. Les paramètres de rapport vous permettent de contrôler les données du rapport, d'interconnecter les rapports associés et de varier la présentation des rapports.  
   
-[!INCLUDE[applies](../../includes/applies-md.md)] Mode SharePoint et en mode natif
+[!INCLUDE[applies](../../includes/applies-md.md)] Mode SharePoint et mode natif
   
  Pour une démonstration sur l’ajout d’un paramètre à un rapport, consultez [didacticiel : Ajout de paramètres à un rapport (SSRS)](https://technet.microsoft.com/library/aa337432\(v=SQL.105\).aspx)  
 
@@ -36,7 +36,7 @@ ms.locfileid: "56286657"
 ##  <a name="bkmk_Common_Uses_for_Parameters"></a> Utilisations courantes des paramètres  
  Voici quelques-unes des utilisations les plus courantes des paramètres.  
   
- **Données de rapport de contrôle**  
+ **Contrôler les données de rapport**  
   
 -   Filtrez les données de rapport au niveau de la source de données en écrivant des requêtes de dataset qui comportent des variables.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "56286657"
   
      ![Boîte de dialogue Propriétés de jeu de données et le volet de rapport](../media/datasetquery-parameters.png "boîte de dialogue Propriétés de jeu de données et le volet de rapport")  
   
-    > **REMARQUE !** Toutes les sources de données ne prennent pas en charge les paramètres.  
+    > **REMARQUE** Toutes les sources de données ne prennent pas en charge les paramètres.  
   
      Le dataset peut être incorporé ou partagé. Lorsque vous ajoutez un dataset partagé à un rapport, les paramètres de dataset marqués comme internes ne peuvent pas être substitués dans le rapport. Vous pouvez substituer les paramètres de dataset qui ne sont pas marqués comme internes.  
   
@@ -103,13 +103,13 @@ ms.locfileid: "56286657"
      Vous pouvez configurer des paramètres de rapport afin qu'un utilisateur puisse entrer de manière interactive des valeurs dans le but de personnaliser le contenu ou l'apparence d'un rapport. Vous pouvez également configurer des paramètres de rapport afin qu'un utilisateur ne puisse pas modifier les valeurs préconfigurées.  
   
 
-  > **REMARQUE !** Les paramètres sont gérés indépendamment sur le serveur ; par conséquent, si vous republiez un rapport principal avec de nouveaux paramètres, les paramètres existants du rapport ne sont pas remplacés.  
+  > **REMARQUE** Les paramètres sont gérés indépendamment sur le serveur ; par conséquent, si vous republiez un rapport principal avec de nouveaux paramètres, les paramètres existants du rapport ne sont pas remplacés.  
   
 -   Ajoutez une partie de rapport qui contient des références à un paramètre ou à un dataset partagé contenant des variables.  
   
      Les parties de rapports sont stockées sur le serveur de rapports et sont à la disposition des autres utilisateurs qui souhaitent s'en servir dans leurs rapports. Les parties de rapports qui sont des paramètres ne peuvent pas être gérées à partir du serveur de rapports. Vous pouvez rechercher des paramètres dans la bibliothèque de parties de rapports et les configurer une fois que vous les avez ajoutés à votre rapport. Pour plus d’informations, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
      
-   > **REMARQUE !** Les paramètres peuvent être publiés en tant que partie de rapport distincte pour les régions de données qui ont des datasets dépendants avec des paramètres. Bien que les paramètres apparaissent sous la forme d'une partie de rapport, vous ne pouvez pas ajouter directement un paramètre de partie de rapport à un rapport. À la place, ajoutez la partie de rapport pour que tous les paramètres de rapport nécessaires soient générés automatiquement à partir des requêtes de dataset qui sont contenues ou référencées par la partie de rapport. Pour plus d’informations sur les parties de rapport, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md) et [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md).  
+   > **REMARQUE** Les paramètres peuvent être publiés en tant que partie de rapport distincte pour les régions de données qui ont des datasets dépendants avec des paramètres. Bien que les paramètres apparaissent sous la forme d'une partie de rapport, vous ne pouvez pas ajouter directement un paramètre de partie de rapport à un rapport. À la place, ajoutez la partie de rapport pour que tous les paramètres de rapport nécessaires soient générés automatiquement à partir des requêtes de dataset qui sont contenues ou référencées par la partie de rapport. Pour plus d’informations sur les parties de rapport, consultez [Publication de parties de rapports &#40;Générateur de rapports et SSRS&#41;](../report-parts-report-builder-and-ssrs.md) et [Parties de rapports dans le Concepteur de rapports &#40;SSRS&#41;](report-parts-in-report-designer-ssrs.md).  
   
 ### <a name="parameter-values"></a>Valeurs des paramètres  
  Utilisez les options suivantes pour sélectionner les valeurs de paramètre dans le rapport.  
@@ -129,9 +129,9 @@ ms.locfileid: "56286657"
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|Créer une vue d’abonnement|Tapez un nom de paramètre qui respecte la casse. Le nom doit commencer par une lettre et contenir des lettres, des chiffres, un trait de soulignement (_). Le nom ne peut pas contenir d'espace. Les noms des paramètres générés automatiquement correspondent au paramètre dans la requête du dataset. Par défaut, les paramètres créés manuellement sont similaires à ReportParameter1.|  
+|Nom|Tapez un nom de paramètre qui respecte la casse. Le nom doit commencer par une lettre et contenir des lettres, des chiffres, un trait de soulignement (_). Le nom ne peut pas contenir d'espace. Les noms des paramètres générés automatiquement correspondent au paramètre dans la requête du dataset. Par défaut, les paramètres créés manuellement sont similaires à ReportParameter1.|  
 |Demander|Texte qui apparaît en regard du paramètre dans la barre d'outils de la visionneuse de rapports.|  
-|Type de données|Lorsque les valeurs disponibles sont définies pour un paramètre, l’utilisateur choisit des valeurs dans une liste déroulante, même lorsque le type de données est `DateTime`. Un paramètre de rapport doit avoir l'un des types de données suivants :<br /><br /> `Boolean` . L'utilisateur sélectionne True ou False à l'aide d'une case d'option.<br /><br /> `DateTime` . L'utilisateur sélectionne une date à l'aide d'un contrôle calendrier.<br /><br /> **Entier**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Float**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> `Text` . L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> Pour plus d'informations sur les types de données de rapport, consultez [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
+|Type de données|Lorsque les valeurs disponibles sont définies pour un paramètre, l’utilisateur choisit des valeurs dans une liste déroulante, même lorsque le type de données est `DateTime`. Un paramètre de rapport doit avoir l'un des types de données suivants :<br /><br /> `Boolean`. L'utilisateur sélectionne True ou False à l'aide d'une case d'option.<br /><br /> `DateTime`. L'utilisateur sélectionne une date à l'aide d'un contrôle calendrier.<br /><br /> **Entier**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> **Float**. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> `Text`. L'utilisateur tape des valeurs dans une zone de texte.<br /><br /> Pour plus d'informations sur les types de données de rapport, consultez [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Autoriser une valeur vide|Sélectionnez cette option si la valeur du paramètre peut être une chaîne ou une valeur vide.<br /><br /> Si vous spécifiez les valeurs valides d'un paramètre et si vous souhaitez qu'une valeur vide soit l'une des valeurs valides, vous devez l'inclure dans les valeurs que vous spécifiez. La sélection de cette option n'inclut pas automatiquement une valeur vide dans les valeurs disponibles.|  
 |Autoriser les valeurs de type NULL|Sélectionnez cette option si la valeur du paramètre peut être Null.<br /><br /> Si vous spécifiez les valeurs valides d'un paramètre et si vous souhaitez qu'une valeur Null soit l'une des valeurs valides, vous devez l'inclure dans les valeurs que vous spécifiez. La sélection de cette option n'inclut pas automatiquement une valeur Null dans les valeurs disponibles.|  
 |Autoriser les valeurs multiples|Fournissez les valeurs disponibles pour la création d'une liste déroulante dans laquelle vos utilisateurs peuvent effectuer des choix. Cela constitue une bonne méthode pour s'assurer que seules les valeurs valides sont envoyées dans la requête de dataset.<br /><br /> Sélectionnez cette option si la valeur pour le paramètre peut être plusieurs valeurs affichées dans une liste déroulante. Les valeurs NULL ne sont pas autorisées. Lorsque cette option est sélectionnée, les cases à cocher sont ajoutées à la liste de valeurs disponibles dans une liste déroulante de paramètre. Le haut de la liste comporte une case à cocher pour **Sélectionner tout**. Les utilisateurs peuvent activer les valeurs qu'ils souhaitent.<br /><br /> Si les données qui fournissent des valeurs changent rapidement, il est possible que la liste visible par l'utilisateur ne soit pas actualisée.|  
@@ -156,7 +156,7 @@ ms.locfileid: "56286657"
   
  Pour un rapport publié, vous pouvez utiliser les éléments suivants :  
   
--   **Propriétés des paramètres de rapport.** Modifiez des valeurs de paramètres du rapport directement sur le serveur de rapports, indépendamment de la définition de rapport.  
+-   **Propriétés des paramètres de rapport.** Modifiez des valeurs de paramètres de rapport directement sur le serveur de rapports, indépendamment de la définition de rapport.  
   
 -   **Rapports mis en cache.** Pour permettre la création d’un plan de cache pour un rapport, chaque paramètre doit avoir une valeur par défaut. Pour plus d’informations, consultez [Mise en cache de rapports &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md).  
   
@@ -219,17 +219,17 @@ ms.locfileid: "56286657"
   
 -   [Ajouter un sous-rapport et des paramètres &#40;Générateur de rapports et SSRS&#41;](add-a-subreport-and-parameters-report-builder-and-ssrs.md)  
   
--   [Comment utiliser les paramètres SSRS avec des procédures stockées](https://go.microsoft.com/fwlink/p/?LinkId=396970)  
+-   [Rapport SSRS pour la procédure stockée paramétrable](https://www.c-sharpcorner.com/UploadFile/7d3362/ssrs-report-for-parameterize-stored-procedure/)  
   
 ## <a name="did-this-article-help-you-were-listening"></a>Cet article vous a-t-il été utile ? Nous sommes à votre écoute  
  Quels renseignements souhaitez-vous obtenir ? Avez-vous trouvé ce que vous cherchiez ? Nous sommes à l’écoute de vos commentaires pour améliorer le contenu. Veuillez envoyer vos commentaires à l’adresse suivante : [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Report%20Parameters%20page)  
   
 ##  <a name="bkmk_Related_Topics"></a> Contenu associé  
- [Configuration de paramètres de rapport SSRS (quiz)](https://go.microsoft.com/fwlink/p/?LinkID=306443)  
+ [Configuration de paramètres de rapport SSRS (quiz)](https://www.trenovision.com/quiz/sql-server-reporting-services-ssrs-quiz/)  
   
  [Didacticiel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)  
   
- [Les mystères de InvalidReportParameterException dans le service de création de rapports de rupture](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
+ [Bursting the mysteries of InvalidReportParameterException in Reporting service](https://go.microsoft.com/fwlink/p/?LinkId=393118)  
   
  [Exemples de rapports (Générateur de rapports et SSRS)](https://go.microsoft.com/fwlink/?LinkId=198283)  
   

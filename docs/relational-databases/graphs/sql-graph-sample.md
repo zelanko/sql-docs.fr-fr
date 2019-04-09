@@ -16,26 +16,28 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d439464e4066e395fc9e420cc0d506e5c15c1691
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 7774bec919a494ceac674b764eef2e38ca99414c
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512464"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291519"
 ---
 # <a name="create-a-graph-database-and-run-some-pattern-matching-queries-using-t-sql"></a>Créer une base de données de graphique et exécuter certains critères spéciaux des requêtes à l’aide de T-SQL
+
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 Cet exemple fournit un [!INCLUDE[tsql-md](../../includes/tsql-md.md)] script pour créer une base de données de graphique avec les nœuds et les bords, puis utiliser la nouvelle clause de correspondance pour faire correspondre des modèles et de parcourir le graphique. Cet exemple de script fonctionne sur les deux de base de données SQL Azure et [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)]  
- 
-## <a name="sample-schema"></a>Exemple de schéma  
-Cet exemple crée un schéma de graphique, comme montré dans la Figure 1, pour un réseau social hypothétique qui a des nœuds de personnes, Restaurant et City. Ces nœuds sont connectés entre eux à l’aide de vos amis, j’aime, les bords LivesIn et trouvera dans. 
+
+## <a name="sample-schema"></a>Exemple de schéma
+
+Cet exemple crée un schéma de graphique, comme montré dans la Figure 1, pour un réseau social hypothétique qui a des nœuds de personnes, Restaurant et City. Ces nœuds sont connectés entre eux à l’aide de vos amis, j’aime, les bords LivesIn et trouvera dans.
 
 ![personne-villes-restaurants-tables](../../relational-databases/graphs/media/person-cities-restaurants-tables.png "exemple de base de données de graphique Sql")  
 Figure 1 : Exemple de schéma avec un restaurant, ville, nœuds de la personne et LivesIn, trouvera dans, les bords de mentions j’aime.
 
-
 ## <a name="sample-script"></a>Exemple de script
+
 ```
 -- Create a graph demo database
 CREATE DATABASE graphdemo;
@@ -46,19 +48,19 @@ go
 
 -- Create NODE tables
 CREATE TABLE Person (
-  ID INTEGER PRIMARY KEY, 
+  ID INTEGER PRIMARY KEY,
   name VARCHAR(100)
 ) AS NODE;
 
 CREATE TABLE Restaurant (
-  ID INTEGER NOT NULL, 
-  name VARCHAR(100), 
+  ID INTEGER NOT NULL,
+  name VARCHAR(100),
   city VARCHAR(100)
 ) AS NODE;
 
 CREATE TABLE City (
-  ID INTEGER PRIMARY KEY, 
-  name VARCHAR(100), 
+  ID INTEGER PRIMARY KEY,
+  name VARCHAR(100),
   stateName VARCHAR(100)
 ) AS NODE;
 
@@ -83,43 +85,43 @@ INSERT INTO City VALUES (1,'Bellevue','wa');
 INSERT INTO City VALUES (2,'Seattle','wa');
 INSERT INTO City VALUES (3,'Redmond','wa');
 
--- Insert into edge table. While inserting into an edge table, 
+-- Insert into edge table. While inserting into an edge table,
 -- you need to provide the $node_id from $from_id and $to_id columns.
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 1), 
-       (SELECT $node_id FROM Restaurant WHERE id = 1),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 2), 
-      (SELECT $node_id FROM Restaurant WHERE id = 2),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 3), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 4), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
-INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE id = 5), 
-      (SELECT $node_id FROM Restaurant WHERE id = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 1), 
+       (SELECT $node_id FROM Restaurant WHERE ID = 1),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 2), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 2),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 3), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 4), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
+INSERT INTO likes VALUES ((SELECT $node_id FROM Person WHERE ID = 5), 
+      (SELECT $node_id FROM Restaurant WHERE ID = 3),9);
 
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 1),
-      (SELECT $node_id FROM City WHERE id = 1));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 2),
-      (SELECT $node_id FROM City WHERE id = 2));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 3),
-      (SELECT $node_id FROM City WHERE id = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 4),
-      (SELECT $node_id FROM City WHERE id = 3));
-INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE id = 5),
-      (SELECT $node_id FROM City WHERE id = 1));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 1),
+      (SELECT $node_id FROM City WHERE ID = 1));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 2),
+      (SELECT $node_id FROM City WHERE ID = 2));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 3),
+      (SELECT $node_id FROM City WHERE ID = 3));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 4),
+      (SELECT $node_id FROM City WHERE ID = 3));
+INSERT INTO livesIn VALUES ((SELECT $node_id FROM Person WHERE ID = 5),
+      (SELECT $node_id FROM City WHERE ID = 1));
 
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 1),
-      (SELECT $node_id FROM City WHERE id =1));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 2),
-      (SELECT $node_id FROM City WHERE id =2));
-INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE id = 3),
-      (SELECT $node_id FROM City WHERE id =3));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 1),
+      (SELECT $node_id FROM City WHERE ID =1));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 2),
+      (SELECT $node_id FROM City WHERE ID =2));
+INSERT INTO locatedIn VALUES ((SELECT $node_id FROM Restaurant WHERE ID = 3),
+      (SELECT $node_id FROM City WHERE ID =3));
 
--- Insert data into the friendof edge.
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 1), (SELECT $NODE_ID FROM person WHERE ID = 2));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 2), (SELECT $NODE_ID FROM person WHERE ID = 3));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 3), (SELECT $NODE_ID FROM person WHERE ID = 1));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 4), (SELECT $NODE_ID FROM person WHERE ID = 2));
-INSERT INTO friendof VALUES ((SELECT $NODE_ID FROM person WHERE ID = 5), (SELECT $NODE_ID FROM person WHERE ID = 4));
+-- Insert data into the friendOf edge.
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 1), (SELECT $NODE_ID FROM Person WHERE ID = 2));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 2), (SELECT $NODE_ID FROM Person WHERE ID = 3));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 3), (SELECT $NODE_ID FROM Person WHERE ID = 1));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 4), (SELECT $NODE_ID FROM Person WHERE ID = 2));
+INSERT INTO friendOf VALUES ((SELECT $NODE_ID FROM Person WHERE ID = 5), (SELECT $NODE_ID FROM Person WHERE ID = 4));
 
 
 -- Find Restaurants that John likes
@@ -138,11 +140,11 @@ AND person1.name='John';
 SELECT Person.name
 FROM Person, likes, Restaurant, livesIn, City, locatedIn
 WHERE MATCH (Person-(likes)->Restaurant-(locatedIn)->City AND Person-(livesIn)->City);
-
 ```
 
 ## <a name="clean-up"></a>Nettoyer  
 Nettoyer le schéma et la base de données créée pour l’exemple.
+
 ```
 USE graphdemo;
 go
@@ -159,8 +161,6 @@ USE master;
 go
 DROP DATABASE graphdemo;
 go
-
-
 ```
 
 ## <a name="script-explanation"></a>Explication du script  
@@ -170,4 +170,4 @@ Ce script utilise la nouvelle syntaxe T-SQL pour créer des tables de nœuds et 
 |---  |---  |
 |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)  |Créer la table de nœuds ou d’arêtes de graphe  |
 |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)  |Insérer dans une table de nœuds ou d’arêtes  |
-|[CORRESPONDANCE &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Utiliser la correspondance pour faire correspondre un modèle ou de parcourir le graphique  |
+|[MATCH &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)  |Utiliser la correspondance pour faire correspondre un modèle ou de parcourir le graphique  |

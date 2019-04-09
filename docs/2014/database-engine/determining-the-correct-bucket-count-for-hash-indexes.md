@@ -10,12 +10,12 @@ ms.assetid: 6d1ac280-87db-4bd8-ad43-54353647d8b5
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 42fe996b3521316279caf3fcf7adb3e155a83dbd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241957"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Déterminer le nombre de compartiments correct pour les index de hachage
   Vous devez spécifier une valeur pour le paramètre `BUCKET_COUNT` lorsque vous créez la table mémoire optimisée. Cette rubrique fournit des recommandations pour déterminer la valeur appropriée du paramètre `BUCKET_COUNT`. Si vous ne pouvez pas déterminer le nombre de compartiments correct, utilisez un index non cluster à la place.  Une valeur `BUCKET_COUNT` incorrecte, en particulier une valeur trop basse, peut avoir un impact important sur les performances de la charge de travail, ainsi que sur le temps de récupération de la base de données. Il vaut mieux surestimer le nombre de compartiments.  
@@ -26,7 +26,7 @@ ms.locfileid: "58536691"
   
  Une table de hachage est allouée pour chaque index de hachage sur une table mémoire optimisée. La taille de la table de hachage allouée pour un index est spécifié par le `BUCKET_COUNT` paramètre dans [CREATE TABLE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-table-transact-sql) ou [CREATE TYPE &#40;Transact-SQL&#41; ](/sql/t-sql/statements/create-type-transact-sql). Le nombre de compartiment est arrondi en interne à la puissance de 2 suivante. Par exemple, la spécification d'un nombre de compartiments égal à 300 000 créera un nombre réel de compartiments égal à 524 288.  
   
- Pour accéder à un article et à une vidéo sur le nombre de compartiments, consultez [How to determine the right bucket count for hash indexes (In-Memory OLTP)](https://go.microsoft.com/fwlink/p/?LinkId=525853).  
+ Pour accéder à un article et à une vidéo sur le nombre de compartiments, consultez [How to determine the right bucket count for hash indexes (In-Memory OLTP)](https://www.mssqltips.com/sqlservertip/3104/determine-bucketcount-for-hash-indexes-for-sql-server-memory-optimized-tables/).  
   
 ## <a name="recommendations"></a>Recommandations  
  Dans la plupart des cas, le nombre de compartiments doit être compris entre 1 et 2 fois par le nombre estimé maximal de valeurs distinctes dans la clé d'index. Si la clé d'index contient de nombreuses valeurs dupliquées (en moyenne il y a plus de 10 lignes pour chaque valeur de clé d'index), utilisez un index non cluster à la place  

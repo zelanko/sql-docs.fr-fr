@@ -13,12 +13,12 @@ ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79939ea5addd97833faaf1d955b72ae17e487ceb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240367"
 ---
 # <a name="syntax-ssis"></a>Syntaxe (SSIS)
   La syntaxe des expressions [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] est similaire à la syntaxe utilisée par les langages C et C#. Les expressions comprennent des éléments tels que des identificateurs (colonnes et variables), des littéraux, des opérateurs et des fonctions. Cette rubrique récapitule les contraintes de la syntaxe de l'évaluateur d'expression applicables aux différents éléments d'une expression.  
@@ -26,7 +26,7 @@ ms.locfileid: "58389847"
 > [!NOTE]  
 >  Les versions précédentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]limitaient à 4000 caractères le résultat de l'évaluation d'une expression lorsqu'il était caractérisé par le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_WSTR ou DT_STR. Cette limite a été supprimée.  
   
- Pour des exemples d'expression utilisant des opérateurs et des fonctions spécifiques, consultez la rubrique relative à chaque opérateur et fonction dans les rubriques [Opérateurs &#40;SSIS Expression&#41; ](operators-ssis-expression.md) et [fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md).  
+ Pour des exemples d'expression utilisant des opérateurs et des fonctions spécifiques, consultez la rubrique relative à chaque opérateur et fonction dans les rubriques [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md) et [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md).  
   
  Pour obtenir des exemples d’expressions utilisant plusieurs opérateurs et fonctions, ainsi que des identificateurs et des littéraux, consultez [Exemples d’expressions Integration Services avancées](examples-of-advanced-integration-services-expressions.md).  
   
@@ -80,7 +80,7 @@ ms.locfileid: "58389847"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Article technique, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), sur pragmaticworks.com  
+-   Article technique, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), sur pragmaticworks.com  
   
 -   Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  
   

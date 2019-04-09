@@ -16,12 +16,12 @@ ms.assetid: 042d4ec0-0668-401c-bb3a-a25fe2602eac
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d7d0273e166f715030da1ae2a984f4f744364ba4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241247"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
   La tâche d'exécution de package étend les fonctionnalités d'entreprise de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] en permettant à des packages d'exécuter d'autres packages au sein d'un flux de travail.  
@@ -75,7 +75,7 @@ ms.locfileid: "58387137"
   
  Vous pouvez utiliser les méthodes suivantes pour passer des valeurs à un package enfant :  
   
--   **Configurations de package**  
+-   **Configurations du package**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient un type de configuration, en l'occurrence la configuration Variable de package parent, qui permet de passer les valeurs du package parent au package enfant. La configuration est basée sur le package enfant et utilise une variable dans le package parent. La configuration est mappée à une variable ou à la propriété d'un objet du package enfant. La variable peut également être utilisée dans les scripts utilisés par la tâche de script ou le composant de script.  
   
@@ -97,14 +97,14 @@ ms.locfileid: "58387137"
  Pour plus d’informations, consultez [Utiliser les valeurs des variables et des paramètres dans un package enfant](../use-the-values-of-variables-and-parameters-in-a-child-package.md).  
   
 ### <a name="accessing-parent-package-variables"></a>Accès aux variables de package parent  
- Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Quand vous entrez le nom de la variable de package parent sur la page **Script** dans l’**Éditeur de tâche de script**, n’incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable quand vous exécutez le package parent. Pour plus d’informations sur l’utilisation de la tâche de Script pour accéder aux variables de package parent, consultez cette entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://go.microsoft.com/fwlink/?LinkId=257729), sur le site Web consultingblogs.emc.com.  
+ Les packages enfants peuvent accéder à des variables de package parent à l'aide de la tâche de script. Quand vous entrez le nom de la variable de package parent sur la page **Script** dans l’**Éditeur de tâche de script**, n’incluez pas **Utilisateur :** dans le nom de la variable. Sinon, le package enfant ne localise pas la variable quand vous exécutez le package parent. Pour plus d’informations sur l’utilisation de la tâche de Script pour accéder aux variables de package parent, consultez cette entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/).  
   
 ## <a name="configuring-the-execute-package-task"></a>Configuration de la tâche d'exécution de package  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Execute Package Task Editor](../execute-package-task-editor.md)  
+-   [Éditeur de tâche d'exécution de package](../execute-package-task-editor.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   
@@ -118,6 +118,6 @@ ms.locfileid: "58387137"
   
 -   Entrée de blog, [SSIS : Doit s’exécuter des packages enfants in-process ou out-of-process ? ](https://go.microsoft.com/fwlink/?LinkId=220819), sur le site Web consultingblogs.emc.com.  
   
--   Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://go.microsoft.com/fwlink/?LinkId=257729), sur le site Web consultingblogs.emc.com.  
+-   Entrée de blog, [SSIS : L’accès aux variables dans un package parent](https://andyleonard.blog/2015/08/ssis-design-pattern-access-parent-variables-from-a-child-package-in-the-ssis-catalog/), sur andyleonard.blog. 
   
   

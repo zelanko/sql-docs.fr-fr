@@ -11,12 +11,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: e51aef3d9aa06790420cec9fab0d487a68563a4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 56973f01112b670727cc0ffa83ba6372c45a3faa
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658263"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241577"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Applets de commande PowerShell pour le mode SharePoint de Reporting Services
   Lorsque vous installez le mode SharePoint de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , les applets de commande PowerShell sont installées pour prendre en charge les serveurs de rapports en mode SharePoint. Les applets de commande couvrent trois catégories de fonctionnalités.  
@@ -45,18 +45,20 @@ ms.locfileid: "58658263"
   
 -   [Exemples détaillés](#bkmk_detailedsamples)  
   
-    -   [Créer une application de service Reporting Services et un proxy](#bkmk_example_create_service_application)  
+    -   [Création d'une application de service Reporting Services et d'un proxy](#bkmk_example_create_service_application)  
   
-    -   [Passez en revue et mettre à jour une extension de remise de Reporting Services](#bkmk_example_delivery_extension)  
+    -   [Analyse et mise à jour d'une extension de remise Reporting Services](#bkmk_example_delivery_extension)  
   
-    -   [Obtenir et définir les propriétés de la base de données de l’application du Reporting Services, par exemple délai d’attente de base de données](#bkmk_example_db_properties)  
+    -   [Obtenir et définir les propriétés de la base de données d'application Reporting Services, par exemple le délai d'expiration de la base de données](#bkmk_example_db_properties)  
   
     -   [Liste des extensions de données reporting services - mode SharePoint](#bkmk_example_list_data_extensions)  
   
-    -   [Modifier et répertorier les propriétaires d’abonnements](#bkmk_change_subscription_owner)  
+    -   [Modifier et répertorier les propriétaires d'abonnement](#bkmk_change_subscription_owner)  
   
 ##  <a name="bkmk_cmdlet_sum"></a> Résumé des applets de commande  
+
  Pour exécuter les applets de commande, vous devez ouvrir SharePoint Management Shell. Vous pouvez aussi utiliser l’éditeur d’interface utilisateur graphique fourni avec Microsoft Windows : **l’Environnement d’écriture de scripts intégré de Windows PowerShell (ISE)**. Pour plus d’informations, consultez [Démarrage de Windows PowerShell sur Windows Server](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell). Dans les résumés suivants d’applet de commande, le service application « bases de données » fait référence à toutes les bases de données créées et utilisées par un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] application de service. Cela inclut la configuration, la définition d'alertes et les bases de données temp.  
+
   
  Si vous voyez un message d'erreur semblable au suivant lorsque vous tapez les exemples PowerShell :  
   
@@ -129,7 +131,7 @@ ms.locfileid: "58658263"
 |New-SPRSExtension|Enregistre une nouvelle extension avec une application de service Reporting Services.|  
 |Set-SPRSExtension|Définit les propriétés d'une extension Reporting Services existante.|  
 |Remove-SPRSExtension|Supprime une extension d'une application de service Reporting Services.|  
-|Get-SPRSExtension|Obtient une ou plusieurs extensions d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour une application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> Les valeurs valides sont :<br /><br /> **Remise**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Sécurité**<br /><br /> **Authentification**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|Obtient une ou plusieurs extensions d' [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour une application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .<br /><br /> Les valeurs valides sont :<br /><br /> **Remise**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Données**<br /><br /> **Sécurité**<br /><br /> **Authentification**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Concepteur**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|Obtient les sites SharePoint en fonction de l'activation de la fonction « ReportingService ». Par défaut, les sites qui activent la fonction « ReportingService » sont retournés.|  
   
 ##  <a name="bkmk_basic_samples"></a> Exemples de base  
@@ -302,8 +304,8 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
   
 ## <a name="see-also"></a>Voir aussi  
  [Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [Liste de vérification : Utiliser PowerShell pour vérifier PowerPivot pour SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
+ [Liste de vérification : utiliser PowerShell pour vérifier PowerPivot pour SharePoint](../analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint.md)   
  [Scripts PowerShell de gestion CodePlex SharePoint](http://sharepointpsscripts.codeplex.com/)   
- [Comment administrer SSRS à l’aide de PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
+ [Comment administrer SSRS à l'aide de PowerShell](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
   
   

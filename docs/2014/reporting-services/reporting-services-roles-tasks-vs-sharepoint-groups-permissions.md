@@ -19,12 +19,12 @@ ms.assetid: 429f1dbb-183a-4097-bd1b-693da9fe7a36
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 812f9351e294b4af9fb6854937a1a6cd211e8147
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b78f9e6a5493d3c06dfade34833cd69ddd56b58a
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036640"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241557"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Comparer des rôles et des tâches dans Reporting Services avec les autorisations et les groupes SharePoint
   Cette rubrique compare les fonctionnalités d'autorisation basées sur les rôles et les tâches en mode natif [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] aux fonctionnalités de sécurité dans les produits SharePoint. Cette rubrique compare la terminologie et les caractéristiques des rôles, des tâches, des groupes SharePoint, des niveaux d'autorisation et des autorisations.  
@@ -54,16 +54,16 @@ ms.locfileid: "56036640"
 |---|**Groupe de niveau d’autorisation :** Par exemple « Afficher uniquement » pour le groupe « Visiteurs ».|  
 |**Tâches :** « Gérer les rapports », par exemple.|**Autorisations :** Par exemple, au sein du groupe « Afficher uniquement », il existe des autorisations de liste des éléments de la vue, des versions de la vue et des pages d’application de la vue.|  
   
- Pour plus d'informations sur les autorisations SharePoint, consultez [Autorisations et niveaux d'autorisation](http://office.microsoft.com/windows-sharepoint-services-help/permission-levels-and-permissions-HA010100149.aspx) et [Déterminer les niveaux d'autorisation et les groupes dans SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
+ Pour plus d’informations sur les autorisations SharePoint, consultez [autorisations utilisateur et niveaux d’autorisation dans SharePoint Server](/sharepoint/sites/user-permissions-and-permission-levels) et [déterminer les niveaux d’autorisation et les groupes dans SharePoint 2013](https://technet.microsoft.com/library/cc262690.aspx).  
   
 ##  <a name="bkmk_compare_roles_groups"></a> Comparer les rôles en mode natif et les groupes SharePoint  
  Le tableau suivant compare les définitions de rôles prédéfinies dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode natif aux groupes SharePoint standard. Si les groupes SharePoint ne correspondent pas au rôle spécifique que vous recherchez, vous pouvez créer un groupe personnalisé et attribuer des niveaux d'autorisation dans SharePoint.  
   
  **Remarque**: les groupes SharePoint disponibles par défaut dépendent du modèle de site utilisé pour créer le site SharePoint.  
   
-|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Rôle|Groupes SharePoint|  
+|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Role|Groupes SharePoint|  
 |--------------------------------------|-----------------------|  
-|**Navigateur**<br /><br /> Affichage|Utilisez le groupe **Visiteurs** pour accorder des autorisations pour afficher des rapports. Le groupe **Visiteurs** possède les autorisations de niveau Lecture qui permettent aux membres du groupe d'afficher des pages, des éléments de liste et des documents.|  
+|**Browser**<br /><br /> Affichage|Utilisez le groupe **Visiteurs** pour accorder des autorisations pour afficher des rapports. Le groupe **Visiteurs** possède les autorisations de niveau Lecture qui permettent aux membres du groupe d'afficher des pages, des éléments de liste et des documents.|  
 |**Gestionnaire de contenu**<br /><br /> Autorisations complètes à tous les éléments et opérations au niveau élément, et notamment les autorisations de définir la sécurité.|Utilisez le groupe **Propriétaires** pour accorder le contrôle total sur la gestion des éléments de serveur de rapports sur un site SharePoint. Le groupe **Propriétaires** possède les autorisations Contrôle total qui permettent aux membres du groupe d'apporter des modifications au contenu, aux pages ou aux fonctionnalités du site. L'accès Contrôle total doit être limité aux administrateurs de site uniquement.|  
 |**Mes rapports**|Il n'y a pas de groupe équivalent. **Mes rapports** n'est pas pris en charge sur un serveur de rapports qui s'exécute en mode SharePoint. Vous pouvez utiliser les fonctionnalités relatives à Mon Site dans [!INCLUDE[winSPServ](../includes/winspserv-md.md)] si vous souhaitez utiliser des fonctionnalités équivalentes.|  
 |**Serveur de publication**<br /><br /> Ajoutez, mettez à jour, affichez et supprimez des rapports, des modèles de rapport, des sources de données partagées et des ressources.|Utilisez le groupe **Membres** pour accorder des autorisations d'ajouter des éléments, de modifier des éléments et de mettre à jour des références à des éléments dépendants sur un site SharePoint. Le groupe **Membres** possède les autorisations de niveau Collaboration qui permettent aux membres du groupe d'afficher des pages, d'ajouter et de mettre à jour des éléments, de soumettre à l'approbation des modifications.|  
@@ -105,9 +105,9 @@ ms.locfileid: "56036640"
   
 ## <a name="see-also"></a>Voir aussi  
  [Définir les autorisations sur les éléments du serveur de rapports sur un site SharePoint &#40;Reporting Services en mode intégré SharePoint&#41;](security/set-permissions-for-report-server-items-on-a-sharepoint-site.md)   
- [Définir des autorisations pour les opérations de serveur de rapports dans une application Web SharePoint](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
- [Accord d’autorisations sur des éléments de serveur de rapports sur un site SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint](security/set-permissions-for-report-server-operations-in-a-sharepoint-web-application.md)   
+ [Accord d'autorisations sur des éléments de serveur de rapports sur un site SharePoint](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Définitions de rôles](security/role-definitions.md)   
- [Rôles prédéfinis](security/role-definitions-predefined-roles.md)  
+ [Predefined Roles](security/role-definitions-predefined-roles.md)  
   
   

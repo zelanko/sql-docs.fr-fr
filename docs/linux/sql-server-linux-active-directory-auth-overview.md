@@ -3,7 +3,7 @@ title: Authentification Active Directory pour SQL Server sur Linux
 titleSuffix: SQL Server
 description: Cet article fournit une vue d’ensemble de l’authentification Active Directory pour SQL Server sur Linux.
 author: rothja
-ms.date: 02/23/2018
+ms.date: 04/01/2019
 ms.author: jroth
 manager: craigg
 ms.topic: conceptual
@@ -12,12 +12,12 @@ ms.custom: sql-linux, seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: fcc2148119634c7114d72f67b2c7143fa7d47724
-ms.sourcegitcommit: de8ef246a74c935c5098713f14e9dd06c4733713
+ms.openlocfilehash: a4411f8ff8b1eae7fa7a28615e34d0711829d081
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53160398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241019"
 ---
 # <a name="active-directory-authentication-for-sql-server-on-linux"></a>Authentification Active Directory pour SQL Server sur Linux
 
@@ -42,9 +42,11 @@ Pour pouvoir utiliser l’authentification Active Directory, vous devez disposer
 
 Les détails pour savoir comment configurer l’authentification Active Directory sont fournis dans le didacticiel, [didacticiel : Utilisez l’authentification Active Directory avec SQL Server sur Linux](sql-server-linux-active-directory-authentication.md). La liste suivante fournit un résumé avec un lien vers chaque section dans le didacticiel :
 
-1. [Joindre un ordinateur hôte SQL Server à un domaine Active Directory](sql-server-linux-active-directory-authentication.md#join).
+1. [Joindre un ordinateur hôte SQL Server à un domaine Active Directory](sql-server-linux-active-directory-join-domain.md).
 1. [Créer un utilisateur AD pour SQL Server et définissez ServicePrincipalName](sql-server-linux-active-directory-authentication.md#createuser).
 1. [Configurer le service de SQL Server fichier keytab](sql-server-linux-active-directory-authentication.md#configurekeytab).
+1. [Sécuriser le fichier keytab](sql-server-linux-active-directory-authentication.md#securekeytab).
+1. [Configurer SQL Server pour utiliser le fichier keytab pour l’authentification Kerberos](sql-server-linux-active-directory-authentication.md#keytabkerberos).
 1. [Créer des connexions basées sur Active Directory SQL Server dans Transact-SQL](sql-server-linux-active-directory-authentication.md#createsqllogins).
 1. [Se connecter à SQL Server à l’aide de l’authentification AD](sql-server-linux-active-directory-authentication.md#connect).
 
