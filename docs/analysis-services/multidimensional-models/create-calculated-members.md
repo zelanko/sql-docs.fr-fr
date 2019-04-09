@@ -1,5 +1,5 @@
 ---
-title: Créer des membres calculés | Documents Microsoft
+title: Créer des membres calculés | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,18 +9,18 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: a0cee9d01fb55ace4d7062f96b5d3ea16c026669
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023176"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241464"
 ---
 # <a name="create-calculated-members"></a>Créer des membres calculés
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Vous pouvez créer des mesures ou des membres de dimension personnalisés, nommés « membres calculés », en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Par exemple, vous pouvez créer un membre calculé nommé Euros qui convertit les dollars en euros en multipliant une mesure de dollar existante par un taux de conversion. Les euros peuvent ensuite être affichés par l'utilisateur final dans une ligne ou une colonne séparée.  
   
- Les définitions du membre calculé sont stockées, mais leurs valeurs existent uniquement en mémoire. Dans l'exemple précédent, les valeurs en marks sont présentées aux utilisateurs finaux, mais elles ne sont pas stockées comme données du cube.  
+ Les définitions du membre calculé sont stockées, mais leurs valeurs existent uniquement en mémoire. Dans l’exemple précédent, les valeurs en euros sont affichés aux utilisateurs finaux mais ne sont pas stockées en tant que données de cube.  
   
  Vous créez les membres calculés dans les cubes. Pour créer un membre calculé, sous l’onglet **Calculs** du Concepteur de cube, cliquez sur l’icône **Nouveau membre calculé** de la barre d’outils. Cette commande affiche un formulaire dans lequel vous spécifiez les options suivantes pour le membre calculé :  
   
