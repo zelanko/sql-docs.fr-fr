@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 624d00d0c9cd27acbaa00fefa52f6880c7a69916
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: f5f5a449fc3bf87ce6999f424957466bae49ee38
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400582"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872229"
 ---
 # <a name="reporting-services-report-server"></a>Serveur de rapports Reporting Services
 
@@ -25,7 +25,7 @@ Découvrez la pièce centrale d’une installation [!INCLUDE[ssNoVersion](../../
 > [!NOTE]
 > L’intégration de Reporting Services à SharePoint n’est plus disponible après SQL Server 2016.
 
-Un serveur de rapports Reporting Services s’exécute dans l’un des deux modes de déploiement : le mode natif ou le mode SharePoint. Consultez la section [Comparaison des fonctionnalités du mode natif et du mode SharePoint](#bkmk_featuresupport) pour obtenir une comparaison des fonctionnalités.  
+Un serveur de rapports Reporting Services s’exécute dans l’un des deux modes de déploiement : le mode natif ou le mode SharePoint. Consultez la section [Comparaison des fonctionnalités du mode natif et du mode SharePoint](#feature-comparison-of-sharepoint-and-native-mode) pour obtenir une comparaison des fonctionnalités.  
   
  **Installation :** pour plus d’informations sur l’installation de Reporting Services, consultez [Installer SQL Server Reporting Services](../install-windows/install-reporting-services.md).
 
@@ -54,16 +54,16 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 |**Gestionnaire de configuration**|Oui|**\*\* Important \*\*** Le gestionnaire de configuration ne peut pas être utilisé pour gérer un serveur de rapports en mode SharePoint. À la place, utilisez l'Administration centrale de SharePoint.|  
 |**Gestionnaire de rapports**|Oui|Le gestionnaire de rapports ne peut pas être utilisé pour gérer le mode SharePoint. Utilisez les pages d'application SharePoint. Pour plus d’informations, consultez [Service Reporting Services SharePoint et applications de service](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Rapports liés**|Oui|Non.|  
-|**Mes rapports**|Oui|non|  
-|**Mes abonnements** et méthodes de traitement par lot.|Oui|non|  
-|**Alertes de données**|non|Oui|  
-|**Power View**|non|Oui<br /><br /> Requiert Silverlight dans le navigateur client. Pour plus d’informations sur la configuration de navigateur requise, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
+|**Mes rapports**|Oui|Non|  
+|**Mes abonnements** et méthodes de traitement par lot.|Oui|Non|  
+|**Alertes de données**|Non|Oui|  
+|**Power View**|Non|Oui<br /><br /> Requiert Silverlight dans le navigateur client. Pour plus d’informations sur la configuration de navigateur requise, consultez [Planification de la prise en charge des navigateurs pour Reporting Services et Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md).|  
 |**Rapports .RDL**|Oui|Oui<br /><br /> Les rapports .RDL peuvent s’exécuter sur des serveurs de rapports Reporting Services en mode natif ou en mode SharePoint.|  
-|**Rapports .RDLX**|non|Oui<br /><br /> Les rapports .RDLX Power View peuvent s’exécuter uniquement sur des serveurs de rapports Reporting Services en mode SharePoint.|  
-|**Informations d'identification du jeton utilisateur SharePoint pour l'extension de liste SharePoint**|non|Oui|  
-|**Zones AAM (mappages des accès de substitution) pour les déploiements exposés à Internet**|non|Oui|  
-|**Sauvegarde et récupération SharePoint**|non|Oui|  
-|**Prise en charge des journaux ULS**|non|Oui|  
+|**Rapports .RDLX**|Non|Oui<br /><br /> Les rapports .RDLX Power View peuvent s’exécuter uniquement sur des serveurs de rapports Reporting Services en mode SharePoint.|  
+|**Informations d'identification du jeton utilisateur SharePoint pour l'extension de liste SharePoint**|Non|Oui|  
+|**Zones AAM (mappages des accès de substitution) pour les déploiements exposés à Internet**|Non|Oui|  
+|**Sauvegarde et récupération SharePoint**|Non|Oui|  
+|**Prise en charge des journaux ULS**|Non|Oui|  
   
 ## <a name="native-mode"></a>en mode natif
 
@@ -85,7 +85,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 
  En mode SharePoint, un serveur de rapports doit s'exécuter dans une batterie de serveurs SharePoint. Les fonctionnalités de traitement, de rendu et de gestion du serveur de rapports sont représentées par un serveur d’applications SharePoint exécutant le service partagé Reporting Services SharePoint et une ou plusieurs applications de service Reporting Services. Un site SharePoint fournit l'accès frontal au contenu et aux opérations du serveur de rapports.  
   
- Le mode SharePoint requiert :  
+ Le mode SharePoint requiert :  
   
 -   [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
   
@@ -118,7 +118,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 
  Le serveur de rapports prend en charge les types d'extensions suivants : extensions d'authentification, extensions pour le traitement des données, extensions pour le traitement des rapports, extensions de rendu et extensions de remise. Un serveur de rapports nécessite au moins une extension d'authentification, une extension pour le traitement des données et une extension de rendu. Les extensions de remise et les extensions pour le traitement des rapports personnalisés sont facultatives, mais nécessaires si vous voulez prendre en charge la diffusion des rapports ou les contrôles personnalisés.  
   
- Reporting Services fournit des extensions par défaut afin que vous puissiez utiliser toutes les fonctionnalités de serveur sans avoir à développer des composants personnalisés. Le tableau suivant décrit les extensions par défaut qui contribuent à une instance de serveur de rapports complète avec des fonctions prêtes à utiliser :  
+ Reporting Services fournit des extensions par défaut afin que vous puissiez utiliser toutes les fonctionnalités de serveur sans avoir à développer des composants personnalisés. Le tableau suivant décrit les extensions par défaut qui contribuent à une instance de serveur de rapports complète avec des fonctions prêtes à utiliser :  
   
 |Type|Valeur par défaut|  
 |----------|-------------|  
@@ -137,7 +137,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 |Tâche|Lien|  
 |----------|----------|  
 |Vérifier les configurations matérielle et logicielle requises|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Installer Reporting Services en mode SharePoint.|[Installer le mode SharePoint de Reporting Services pour SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|Installer Reporting Services en mode SharePoint.|[Installer le mode SharePoint de Reporting Services pour SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
 |Si vous êtes un développeur Web expérimenté dans la création de feuilles de style en cascade, vous pouvez modifier les styles par défaut à vos propres risques pour changer les couleurs, les polices et la disposition de la barre d'outils ou du Gestionnaire de rapports. Ni les feuilles de style par défaut, ni les instructions pour modifier ces feuilles de style ne sont documentées dans cette version.|[Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports](https://msdn.microsoft.com/library/df805cff-b1de-4062-b2ac-423f37390fbd)|  
 |Les développeurs de sites Web qui sont habitués aux styles HTML et aux feuilles de style en cascade (CSS) peuvent utiliser les informations de cette rubrique pour déterminer les fichiers à modifier dans le but de personnaliser l'apparence du Gestionnaire de rapports.|[Configurer le portail web pour passer des cookies d’authentification personnalisée](assetid:///91aeb053-149e-4562-ae4c-a688d0e1b2ba)|  
 |Explique comment ajuster les paramètres de la mémoire pour le service Web Report Server et le service Windows.|[Configurer la mémoire disponible pour les applications du serveur de rapports](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
@@ -147,7 +147,7 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-[Extensions Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
+[Extensions Reporting Services](../../reporting-services/extensions/reporting-services-extensions.md)   
 [Outils de Reporting Services](../../reporting-services/tools/reporting-services-tools.md)   
 [Abonnements et remise &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
 [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
@@ -155,4 +155,4 @@ Un serveur de rapports Reporting Services s’exécute dans l’un des deux mode
 [Implémentation d'une extension pour le traitement des données](../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
 [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)   
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Posez une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
