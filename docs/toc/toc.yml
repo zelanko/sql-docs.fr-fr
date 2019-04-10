@@ -961,7 +961,7 @@ items:
           href: ../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md
         - name: Basculement de rôle
           href: ../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md
-        - name: "Quorum : effets d'un témoin sur la disponibilité de la base de données"
+        - name: 'Quorum : Effets d’un témoin sur la disponibilité de la base de données'
           href: ../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md
         - name: Cause possible d’échecs
           href: ../database-engine/database-mirroring/possible-failures-during-database-mirroring.md
@@ -1602,7 +1602,7 @@ items:
       items:
       - name: Utilisation du type de données hierarchyid
         href: ../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md
-      - name: "Leçon 1 : conversion d'une table en une structure hiérarchique"
+      - name: 'Leçon 1 : Conversion d’une table en une structure hiérarchique'
         href: ../relational-databases/tables/lesson-1-converting-a-table-to-a-hierarchical-structure.md
       - name: 'Leçon 2 : Création et gestion de données dans une table hiérarchique'
         href: ../relational-databases/tables/lesson-2-creating-and-managing-data-in-a-hierarchical-table.md
@@ -3345,7 +3345,7 @@ items:
       items:
       - name: Côté client et côté serveur
         href: ../relational-databases/sqlxml/formatting/client-side-and-server-side-formatting-sqlxml-4-0.md
-      - name: XPath côté client et côté serveur
+      - name: Côté client et côté serveur
         href: ../relational-databases/sqlxml/formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
       - name: Côté client
         href: ../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md
@@ -3982,12 +3982,6 @@ items:
       href: ../sql-server/maximum-capacity-specifications-for-sql-server.md
     - name: Limites de capacité de calcul par édition
       href: ../sql-server/compute-capacity-limits-by-edition-of-sql-server.md
-    - name: Customer Experience Improvement Program (CEIP)
-      href: ../sql-server/customer-experience-improvement-program-for-sql-server-data-tools.md
-    - name: Supplément de confidentialité
-      href: ../sql-server/sql-server-privacy.md
-    - name: Configurer SQL Server pour envoyer des commentaires à Microsoft
-      href: ../sql-server/sql-server-customer-feedback.md
   - name: Notes de publication
     items:
     - name: compatibilité descendante ;
@@ -4017,6 +4011,16 @@ items:
       href: ../sql-server/install/local-language-versions-in-sql-server.md
     - name: Emplacements des fichiers
       href: ../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
+    - name: Collecte des données d’utilisation et de diagnostic
+      items:
+      - name: Supplément de confidentialité
+        href: ../sql-server/sql-server-privacy.md
+      - name: Configurer les données d’utilisation et de diagnostic SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
+      - name: Configurer les données d’utilisation et de diagnostic des outils
+        href: ../sql-server/usage-and-diagnostic-data-configuration-for-sql-server-tools.md
+      - name: Audit local pour SQL Server
+        href: ../sql-server/usage-and-diagnostic-data-in-local-audit.md
   - name: Installer SQL Server
     href: ../database-engine/install-windows/installation-for-sql-server.md
     items:
@@ -4113,8 +4117,6 @@ items:
       href: ../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md
     - name: Ordinateur multirésident
       href: ../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md
-    - name: Audit local pour la collecte de commentaires d’utilisation
-      href: ../database-engine/install-windows/local-audit-for-sql-server-usage-feedback-collection.md
     - name: Configurer des instances du moteur de base de données
       href: ../database-engine/configure-windows/configure-database-engine-instances-sql-server.md
     - name: Emplacements par défaut pour les fichiers de données
@@ -6493,7 +6495,7 @@ items:
           href: ../relational-databases/policy-based-management/use-database-mail-instead-of-sql-mail.md
         - name: Vérifier le paramètre de l'option Max Worker Threads
           href: ../relational-databases/policy-based-management/verify-max-worker-threads-setting.md
-      - name: "Didacticiel : Administration de serveurs à l'aide de la Gestion basée sur des stratégies"
+      - name: 'Tutoriel : Administration de serveurs à l’aide de la Gestion basée sur des stratégies'
         href: ../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md
         items:
         - name: 'Leçon 1 : Créer et appliquer une stratégie Désactivé par défaut'
@@ -6971,7 +6973,7 @@ items:
         - name: Exemples de code OLTP en mémoire
           href: ../relational-databases/in-memory-oltp/in-memory-oltp-code-samples.md
           items:
-          - name: "Démonstration : optimisation des performances de l'OLTP en mémoire"
+          - name: "Démonstration : Optimisation des performances de l'OLTP en mémoire"
             href: ../relational-databases/in-memory-oltp/demonstration-performance-improvement-of-in-memory-oltp.md
           - name: Création d’une table optimisée en mémoire et d’une procédure stockée compilée en mode natif
             href: ../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md
@@ -8259,11 +8261,11 @@ items:
       - name: Didacticiels
         href: ../tools/dta/tutorial-database-engine-tuning-advisor.md
         items:
-        - name: "Leçon 1 : Navigation de base dans l'Assistant Paramétrage du moteur de base de données"
+        - name: 'Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données'
           href: ../tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
-        - name: "Leçon 2 : Utilisation de l'Assistant Paramétrage du moteur de base de données"
+        - name: 'Leçon 2 : Utilisation de l’Assistant Paramétrage du moteur de base de données'
           href: ../tools/dta/lesson-2-using-database-engine-tuning-advisor.md
-        - name: "Leçon 3 : Utilisation de l'utilitaire de ligne de commande dta"
+        - name: 'Leçon 3 : Utilisation de l’utilitaire de ligne de commande dta'
           href: ../tools/dta/lesson-3-using-the-dta-command-prompt-utility.md
   - name: Distributed Replay
     href: ../tools/distributed-replay/sql-server-distributed-replay.md
@@ -8640,7 +8642,7 @@ items:
         - name: Personnaliser la génération et le déploiement de bases de données à l’aide de contributeurs de génération et de déploiement
           href: ../ssdt/use-deployment-contributors-to-customize-database-build-and-deployment.md
           items:
-          - name: 'Procédure pas à pas : étendre la génération du projet de base de données à la génération de statistiques de modèle'
+          - name: 'Procédure pas à pas : Étendre la génération du projet de base de données à la génération de statistiques de modèle'
             href: ../ssdt/walkthrough-extend-database-project-build-to-generate-model-statistics.md
           - name: 'Procédure pas à pas : Étendre le déploiement du projet de base de données pour analyser le plan de déploiement'
             href: ../ssdt/walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan.md
@@ -8671,7 +8673,7 @@ items:
         href: ../ssms/install-other-languages.md
       - name: Politique de support de SSMS
         href: ../ssms/support-policy.md
-    - name: 'Didacticiels : SQL Server Management Studio'
+    - name: 'Tutoriels : SQL Server Management Studio'
       href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
       items:
       - name: Se connecter à et interroger SQL Server avec SSMS
@@ -10088,8 +10090,8 @@ items:
           href: ../linux/sql-server-linux-configure-msdtc-docker.md
       - name: Configurer la mémoire persistante (PMEM)
         href: ../linux/sql-server-linux-configure-pmem.md
-      - name: Feedback des clients
-        href: ../linux/sql-server-linux-customer-feedback.md
+      - name: Configurer pour envoyer des données d’utilisation et de diagnostics à Microsoft
+        href: ../linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Développer
       href: ../linux/sql-server-linux-develop-overview.md
       items:
@@ -10198,10 +10200,10 @@ items:
         href: ../linux/sql-server-linux-security-get-started.md
       - name: Authentification Active Directory
         href: ../linux/sql-server-linux-active-directory-auth-overview.md
+      - name: Rejoindre un domaine AD
+        href: ../linux/sql-server-linux-active-directory-join-domain.md
       - name: Chiffrement des connexions
         href: ../linux/sql-server-linux-encrypted-connections.md
-      - name: Authentification AD tierce
-        href: ../linux/sql-server-linux-active-directory-third-party-providers.md
     - name: Performances
       items:
       - name: Meilleures pratiques
@@ -11151,7 +11153,7 @@ items:
     - name: Catégorie d'événement de rapport de progression
       href: ../relational-databases/event-classes/progress-report-event-category.md
       items:
-      - name: "Progress Report: Classe d'événements Online Index Operation Event Class"
+      - name: "Rapport de progression : Classe d'événements Online Index Operation Event Class"
         href: ../relational-databases/event-classes/progress-report-online-index-operation-event-class.md
     - name: Catégorie d'événement Notifications de requêtes
       href: ../relational-databases/event-classes/query-notifications-event-category.md
@@ -11314,25 +11316,25 @@ items:
         href: ../relational-databases/event-classes/dtctransaction-event-class.md
       - name: SQLTransaction (classe d'événements)
         href: ../relational-databases/event-classes/sqltransaction-event-class.md
-      - name: "Classe d'événements TM: TM: Begin Tran Completed"
+      - name: "TM : Begin Tran Completed (classe d'événements)"
         href: ../relational-databases/event-classes/tm-begin-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Begin Tran Starting"
+      - name: "TM : Begin Tran Starting (classe d'événements)"
         href: ../relational-databases/event-classes/tm-begin-tran-starting-event-class.md
-      - name: "Classe d'événements TM: Commit Tran Completed"
+      - name: "TM : Commit Tran Completed (classe d'événements)"
         href: ../relational-databases/event-classes/tm-commit-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Classe d'événements Commit Tran Starting"
+      - name: "TM : Commit Tran Starting (classe d'événements)"
         href: ../relational-databases/event-classes/tm-commit-tran-starting-event-class.md
-      - name: "Classe d'événements TM: Promote Tran Completed"
+      - name: "TM : Promote Tran Completed (classe d'événements)"
         href: ../relational-databases/event-classes/tm-promote-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Promote Tran Starting"
+      - name: "TM : Promote Tran Starting (classe d'événements)"
         href: ../relational-databases/event-classes/tm-promote-tran-starting-event-class.md
-      - name: "Classe d'événements TM: Rollback Tran Completed"
+      - name: "TM : Rollback Tran Completed (classe d'événements)"
         href: ../relational-databases/event-classes/tm-rollback-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Classe d'événements Rollback Tran Starting"
+      - name: "TM : Rollback Tran Starting (classe d'événements)"
         href: ../relational-databases/event-classes/tm-rollback-tran-starting-event-class.md
-      - name: "Classe d'événements TM: Save Tran Completed"
+      - name: "TM : Save Tran Completed (classe d'événements)"
         href: ../relational-databases/event-classes/tm-save-tran-completed-event-class.md
-      - name: "Classe d'événements TM: Save Tran Starting (classe d'événements)"
+      - name: "TM : Save Tran Starting (classe d'événements)"
         href: ../relational-databases/event-classes/tm-save-tran-starting-event-class.md
       - name: TransactionLog (classe d'événements)
         href: ../relational-databases/event-classes/transactionlog-event-class.md
@@ -17273,9 +17275,9 @@ items:
         href: ../xquery/string-search-in-xquery.md
       - name: Gestion des espaces de noms dans XQuery
         href: ../xquery/handling-namespaces-in-xquery.md
-ms.openlocfilehash: bb8074720b48ca68679d43e12a04e868e6469ea6
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: ee53aa861524c5bcf117fdaef3d857cf62a54fc7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042488"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242357"
