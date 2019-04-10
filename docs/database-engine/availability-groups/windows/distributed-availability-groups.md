@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1aaf988a3b9a869aba5ef30c6aac739a6349c70e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53381030"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860740"
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Pour configurer un groupe de disponibilité distribué, consultez [Configurer de
 
 Un groupe de disponibilité distribué est un type spécial de groupe de disponibilité qui englobe deux groupes de disponibilité distincts. Les groupes de disponibilité qui participent à un groupe de disponibilité distribué n’ont pas besoin de se trouver au même emplacement. Ils peuvent être physiques, virtuels, locaux, ou se trouver dans le cloud public ou en tout lieu prenant en charge le déploiement d’un groupe de disponibilité. Ils peuvent notamment être sur plusieurs domaines et même sur plusieurs plateformes, comme entre un groupe de disponibilité hébergé sur Linux et un hébergé sur Windows. Tant que les deux groupes de disponibilité peuvent communiquer, vous pouvez configurer un groupe de disponibilité distribué avec eux.
 
-Un groupe de disponibilité traditionnel dispose de ressources configurées dans un cluster WSFC. Un groupe de disponibilité distribué ne configure rien dans le cluster WSFC. Tout élément le concernant est géré dans SQL Server. Pour savoir comment afficher les informations relatives à un groupe de disponibilité distribué, consultez [Affichage des informations relatives aux groupes de disponibilité distribués](#viewing-distributed-availability-group-information). 
+Un groupe de disponibilité traditionnel dispose de ressources configurées dans un cluster WSFC. Un groupe de disponibilité distribué ne configure rien dans le cluster WSFC. Tout élément le concernant est géré dans SQL Server. Pour savoir comment afficher les informations relatives à un groupe de disponibilité distribué, consultez [Affichage des informations relatives aux groupes de disponibilité distribués](#monitor-distributed-availability-group-health). 
 
 Un groupe de disponibilité distribué requiert que les groupes de disponibilité sous-jacents aient un écouteur. Au lieu de fournir le nom du serveur sous-jacent pour une instance autonome (ou, dans le cas d’une instance de cluster de basculement SQL Server, la valeur associée à la ressource de nom réseau) comme vous le feriez avec un groupe de disponibilité traditionnel, vous spécifiez l’écouteur configuré pour le groupe de disponibilité distribué avec le paramètre ENDPOINT_URL quand vous le créez. Bien que chaque groupe de disponibilité sous-jacent du groupe de disponibilité distribué ait un écouteur, un groupe de disponibilité distribué n’en a pas.
 
@@ -76,7 +76,7 @@ Les groupes de disponibilité distribués dans SQL Server 2017 ou version ulté
 
 ### <a name="windows-server-versions-and-distributed-availability-groups"></a>Versions de Windows Server et groupes de disponibilité distribués
 
-Un groupe de disponibilité distribué englobe plusieurs groupes de disponibilité, chacun situé sur son propre cluster WSFC sous-jacent, et est une construction SQL Server uniquement.  Cela signifie que les clusters WSFC qui hébergent les différents groupes de disponibilité peuvent avoir différentes versions principales de Windows Server. Les versions principales de SQL Server doivent être les mêmes, comme indiqué dans la section précédente. Très comparable à [la figure initiale](#fig1), la figure suivante montre AG 1 et AG 2 participant à un groupe de disponibilité distribué, mais chacun des clusters WSFC correspond à une version différente de Windows Server.
+Un groupe de disponibilité distribué englobe plusieurs groupes de disponibilité, chacun situé sur son propre cluster WSFC sous-jacent, et est une construction SQL Server uniquement.  Cela signifie que les clusters WSFC qui hébergent les différents groupes de disponibilité peuvent avoir différentes versions principales de Windows Server. Les versions principales de SQL Server doivent être les mêmes, comme indiqué dans la section précédente. Tout comme l’illustration initiale, la figure suivante montre AG 1 et AG 2 participant à un groupe de disponibilité distribué, mais chacun des clusters WSFC correspond à une version différente de Windows Server.
 
 
 ![Groupes de disponibilité distribués avec des clusters WSFC dotés de versions différentes de Windows Server](./media/distributed-availability-group/dag-03-distributed-ags-wsfcs-different-versions-windows-server.png)
@@ -96,9 +96,9 @@ Dans le cas d’un groupe de disponibilité distribué, le réplica principal de
 
 Voici les trois principaux scénarios d’utilisation d’un groupe de disponibilité distribué : 
 
-* [Récupération d’urgence et configurations multisite plus faciles](#disaster-recovery-and-multi-site-scenarios)
-* [Migration vers un nouveau matériel ou vers de nouvelles configurations, ce qui peut signifier l’utilisation d’un nouveau matériel ou le changement de système d’exploitation sous-jacent](#migration-using-a-distributed-availability-group)
-* [Augmentation au-delà de huit du nombre de réplicas lisibles dans un même groupe de disponibilité en englobant plusieurs groupes de disponibilité](#scaling-out-readable-replicas-with-distributed-accessibility-groups)
+* [Récupération d’urgence et configurations multisites plus faciles](#disaster-recovery-and-multi-site-scenarios)
+* [Migration vers du nouveau matériel ou de nouvelles configurations, ce qui peut impliquer d’utiliser du nouveau matériel ou de changer de systèmes d’exploitation sous-jacents](#migrate-by-using-a-distributed-availability-group)
+* [Augmentation au-delà de huit du nombre de réplicas lisibles dans un même groupe de disponibilité en englobant plusieurs groupes de disponibilité](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>Scénarios de récupération d’urgence et de configuration multisite
 
@@ -178,7 +178,7 @@ Quand vous ajoutez le réplica principal du deuxième groupe de disponibilité a
 
 Un groupe de disponibilité distribué est une construction SQL Server uniquement, et il n’est pas visible dans le cluster WSFC sous-jacent. La figure suivante illustre deux clusters WSFC différents (CLUSTER_A et CLUSTER_B), chacun ayant ses propres groupes de disponibilité. Seuls AG1 dans CLUSTER_A et AG2 dans CLUSTER_B sont présentés ici. 
 
-[Deux clusters WSFC avec plusieurs groupes de disponibilité via la commande PowerShell Get-ClusterGroup](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+[Deux clusters WSFC avec plusieurs groupes de disponibilité par le biais de la commande PowerShell Get-ClusterGroup](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
 
 
 ```
@@ -212,7 +212,7 @@ Toutefois, si vous cliquez sur le groupe de disponibilité distribué, aucune op
 
 ![Aucune option disponible pour l’action](./media/distributed-availability-group/dag-09-no-options-available-action.png)
 
-Comme le montre la figure ci-dessous, les réplicas secondaires n’affichent rien dans SQL Server Management Studio concernant le groupe de disponibilité distribué. Ces noms de groupes de disponibilité sont mappés aux rôles indiqués dans l’image de [cluster CLUSTER_A WSFC](#fig7) précédente.
+Comme le montre la figure ci-dessous, les réplicas secondaires n’affichent rien dans SQL Server Management Studio concernant le groupe de disponibilité distribué. Ces noms de groupes de disponibilité correspondent aux rôles indiqués dans l’image de cluster WSFC CLUSTER_A précédente.
 
 ![Vue dans SQL Server Management Studio d’un réplica secondaire](./media/distributed-availability-group/dag-10-view-ssms-secondary-replica.png)
 
@@ -308,7 +308,7 @@ La requête ci-dessous affiche les compteurs de performances associés spécifiq
  >Le filtre `LIKE` doit porter le nom du groupe de disponibilité distribué. Dans cet exemple, le nom du groupe de disponibilité distribué est « distributedag ». Changez le modificateur `LIKE` afin de refléter le nom de votre groupe de disponibilité distribué.  
 
 ### <a name="dmv-to-display-health-of-both-ag-and-distributed-ag"></a>Vue de gestion dynamique pour afficher l’intégrité du groupe de disponibilité et du groupe de disponibilité distribué
-La requête ci-dessous affiche une mine d’informations sur l’intégrité du groupe de disponibilité et du groupe de disponibilité distribué. [Merci Tracy Boggiano !](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
+La requête ci-dessous affiche une mine d’informations sur l’intégrité du groupe de disponibilité et du groupe de disponibilité distribué. [Merci, Tracy Boggiano !](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
 
  ```sql
  -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
@@ -346,7 +346,7 @@ La requête ci-dessous affiche une mine d’informations sur l’intégrité du 
 ![Intégrité du groupe de disponibilité et du groupe de disponibilité distribué](./media/distributed-availability-group/dmv-sync-status-send-rate.png)
 
 ### <a name="dmvs-to-view-metadata-of-distributed-ag"></a>Vues de gestion dynamique pour afficher les métadonnées du groupe de disponibilité distribué
-Les requêtes ci-dessous affichent des informations sur les URL de point de terminaison utilisées par les groupes de disponibilité, dont le groupe de disponibilité distribué.  [Merci David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+Les requêtes ci-dessous affichent des informations sur les URL de point de terminaison utilisées par les groupes de disponibilité, dont le groupe de disponibilité distribué.  [Merci, David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
 
 
@@ -374,7 +374,7 @@ Les requêtes ci-dessous affichent des informations sur les URL de point de term
 
 
 ### <a name="dmv-to-show-current-state-of-seeding"></a>Vue de gestion dynamique pour afficher l’état actuel de l’amorçage
-La requête ci-dessous affiche des informations sur l’état actuel de l’amorçage. Cela est utile pour le dépannage des erreurs de synchronisation entre les réplicas. [Encore merci David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+La requête ci-dessous affiche des informations sur l’état actuel de l’amorçage. Cela est utile pour le dépannage des erreurs de synchronisation entre les réplicas. [Encore merci, David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
  ```sql
  -- shows current_state of seeding 
@@ -412,5 +412,3 @@ La requête ci-dessous affiche des informations sur l’état actuel de l’amor
 * [Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)
  
 * [Créer un groupe de disponibilité avec Transact-SQL](create-an-availability-group-transact-sql.md)
-
- 

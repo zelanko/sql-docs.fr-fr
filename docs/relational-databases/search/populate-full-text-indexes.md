@@ -25,12 +25,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3583a5a0a4f68304bdc4cc78eadbadf3fb14b20
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: b49e8a5802152eeee8d1a2cac28ac0098057f423
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973648"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042268"
 ---
 # <a name="populate-full-text-indexes"></a>Alimenter des index de recherche en texte intégral
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -97,13 +97,13 @@ Il existe deux types de suivi des modifications :
   
      Par défaut, ou si vous spécifiez `CHANGE_TRACKING AUTO`, le moteur d’indexation et de recherche en texte intégral utilise l’alimentation automatique sur l’index de recherche en texte intégral. Une fois l'alimentation complète initiale terminée, les données modifiées dans la table de base font l'objet d'un suivi, et ces modifications sont propagées automatiquement. L'index de recherche en texte intégral étant toutefois mis à jour en arrière-plan, il se peut que les modifications propagées ne soient pas répercutées immédiatement dans l'index.  
   
-     **Pour commencer le suivi des modifications avec alimentation automatique**  
+     **Pour commencer le suivi des modifications avec remplissage automatique**  
   
     -   [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) ... WITH CHANGE_TRACKING AUTO  
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING AUTO  
   
-    **Exemple - Modifier un index de recherche en texte intégral pour qu’il utilise le suivi des modifications automatique**  
+    **Exemple – Modifier un index de recherche en texte intégral pour qu’il utilise le suivi automatique des modifications**  
     L'exemple ci-après modifie l'index de recherche en texte intégral de la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` pour qu'il utilise le suivi des modifications avec alimentation automatique.  
   
     ```sql  
@@ -123,7 +123,7 @@ Il existe deux types de suivi des modifications :
   
     -   [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) ... SET CHANGE_TRACKING MANUAL  
   
-    **Exemple - Créer un index de recherche en texte intégral avec le suivi des modifications manuel**  
+    **Exemple – Créer un index de recherche en texte intégral avec suivi manuel des modifications**  
     L'exemple ci-après crée un index de recherche en texte intégral qui utilisera le suivi des modifications avec alimentation manuelle sur la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` .  
   
     ```sql
@@ -137,7 +137,7 @@ Il existe deux types de suivi des modifications :
     GO  
     ```  
   
-    **Exemple - Exécuter une alimentation manuelle**  
+    **Exemple – Exécuter un remplissage manuel**  
     L'exemple ci-après exécute une alimentation manuelle sur l'index de recherche en texte intégral faisant l'objet d'un suivi des modifications, sur la table `HumanResources.JobCandidate` de l'exemple de base de données `AdventureWorks` .  
   
     ```sql 
@@ -217,8 +217,8 @@ Le fichier journal de l'analyse respecte le modèle de dénomination suivant :
 `SQLFT<DatabaseID><FullTextCatalogID>.LOG[<n>]`
   
 Les parties variables du nom de fichier du journal d’analyse sont les suivantes.
--   <**DatabaseID**> - ID d’une base de données. <**dbid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
--   <**FullTextCatalogID**> - ID du catalogue de texte intégral. <**catid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
+-   <**DatabaseID**> - ID d’une base de données. \<**dbid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
+-   <**FullTextCatalogID**> - ID du catalogue de texte intégral. \<**catid**> est un nombre à 5 chiffres commençant par des zéros non significatifs.  
 -   <**n**> - Entier qui indique qu’il existe un ou plusieurs journaux d’analyse du même catalogue de texte intégral.  
   
  Par exemple, `SQLFT0000500008.2` est le fichier journal d’analyse pour une base de données ayant un ID de base de données = 5 et un ID de catalogue de texte intégral = 8. Le 2 à la fin du nom de fichier indique qu'il existe deux fichiers journaux d'analyse pour cette combinaison base de données/catalogue.  

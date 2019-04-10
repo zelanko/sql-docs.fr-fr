@@ -11,12 +11,12 @@ ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: fa8c74ec8bb9c80350b537142ce27cb61354c52f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207568"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860630"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurer les événements étendus pour les groupes de disponibilité Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,9 +81,9 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
   
  [availability_replica_manager_state](#BKMK_availability_replica_manager_state)  
   
- [error_reported (1480) : Le rôle de réplica de base de données a changé](#BKMK_error_reported_1480)  
+ [error_reported (1480) : Le rôle de réplica de base de données a changé](#BKMK_error_reported_1480)  
   
-###  <a name="BKMK_availability_replica_state_change "></a> availability_replica_state_change  
+###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Se produit en cas de changement de l’état d’un réplica de disponibilité. La création d’un groupe de disponibilité ou la participation à un réplica de disponibilité peut déclencher cet événement. Il est utile pour diagnostiquer les échecs de basculement automatique. Il peut également être utilisé pour suivre les étapes de basculement.  
   
 #### <a name="event-information"></a>Informations sur l’événement  
@@ -101,8 +101,8 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
 |availability_replica_id|guid|ID du réplica de disponibilité.|  
-|previous_state|availability_replica_state|Rôle du réplica avant le changement.<br /><br /> **Valeurs possibles :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
-|current_state|availability_replica_state|Rôle du réplica après le changement.<br /><br /> **Valeurs possibles :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|previous_state|availability_replica_state|Rôle du réplica avant le changement.<br /><br /> **Les valeurs possibles sont :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|current_state|availability_replica_state|Rôle du réplica après le changement.<br /><br /> **Les valeurs possibles sont :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
   
@@ -384,5 +384,3 @@ GO
   
 ## <a name="next-steps"></a>Étapes suivantes  
  [Afficher des données de session d’événements](https://msdn.microsoft.com/library/hh710068(v=sql.110).aspx)   
- 
-  

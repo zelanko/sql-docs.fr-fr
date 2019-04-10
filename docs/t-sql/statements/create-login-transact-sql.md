@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 410cd9444cec90f5d6357e2084bab47f5ab25d37
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2440f1b61b1b97fab41bf22e1fd466cd30b8e4cf
+ms.sourcegitcommit: 258b4aa0d431537323c5ab1307f599615c29df53
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828369"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58797039"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
 
@@ -115,7 +115,7 @@ Si la stratégie windows requiert des mots de passe forts, les mots de passe doi
 - Une majuscule (A-Z).
 - Une minuscule (a-z).
 - Un chiffre (0-9).
-- Un des caractères non alphanumériques, tels qu'un espace, _, @, *, ^, % ! , $, # ou &.
+- Un des caractères non alphanumériques, à savoir un espace, _, @, *, ^, % ! , $, # ou &.
 
 WINDOWS Spécifie que la connexion doit être mappée sur une connexion Windows.
 
@@ -140,9 +140,9 @@ ASYMMETRIC KEY *asym_key_name* Spécifie le nom d’une clé asymétrique à ass
 - Le [mode d’authentification](../../relational-databases/security/choose-an-authentication-mode.md) du serveur doit correspondre au type de connexion pour autoriser l’accès.
 - Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
-- Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles.
+- Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 - Si l'option **CREDENTIAL** est utilisée, l'autorisation **ALTER ANY CREDENTIAL** est également exigée sur le serveur.
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
@@ -165,7 +165,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>b. Création d’une connexion avec un mot de passe qui doit être changé
+### <a name="b-creating-a-login-with-a-password-that-must-be-changed"></a>B. Création d’une connexion avec un mot de passe qui doit être changé
 
 L'exemple suivant crée une connexion pour un utilisateur particulier et attribue un mot de passe. L'option `MUST_CHANGE` exige que les utilisateurs modifient ce mot de passe la première fois qu'ils se connectent au serveur.
 
@@ -309,9 +309,9 @@ Dans SQL Database, les données de connexion exigées pour authentifier une conn
 
 Pour plus d’informations sur les connexions SQL Database, consultez [Gestion des bases de données et des connexions dans Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
-Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="logins"></a>Connexions
 
@@ -323,7 +323,7 @@ Seule la connexion principale au niveau du serveur (créée par le processus de 
 Après la création d’une connexion, celle-ci peut se connecter à SQL Database, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion à cette base de données. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, consultez [Utilisateurs non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles et l’instruction [GRANT](grant-transact-sql.md).
+- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, voir [Rôles non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Rôles d’administrateur au niveau du serveur supplémentaires](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et l’instruction [GRANT](grant-transact-sql.md).
 - Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 - Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT](../../t-sql/statements/grant-transact-sql.md).
 
@@ -338,7 +338,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>b. Création d'une connexion à partir d'un SID
+### <a name="b-creating-a-login-from-a-sid"></a>B. Création d'une connexion à partir d'un SID
 
 L’exemple suivant crée d’abord une connexion d’authentification SQL Server et détermine le SID de la connexion.
 
@@ -418,7 +418,9 @@ SID **=** *sid* Utilisé pour recréer une connexion. S’applique uniquement au
 - Une nouvelle syntaxe est introduite pour la création de principaux au niveau du serveur mappés à des comptes Azure AD (**FROM EXTERNAL PROVIDER**)
 - Quand **FROM EXTERNAL PROVIDER** est spécifié :
 
-  - login_name doit représenter un compte Azure AD existant (utilisateur, groupe ou application) qui est accessible dans Azure AD par l’instance managée Azure SQL active.
+  - login_name doit représenter un compte Azure AD existant (utilisateur, groupe ou application) qui est accessible dans Azure AD par l’instance managée Azure SQL active. Pour les principaux Azure AD, la syntaxe CREATE LOGIN exige les éléments suivants :
+    - UserPrincipalName de l’objet Azure AD pour les utilisateurs Azure AD.
+    - DisplayName de l’objet Azure AD pour les groupes Azure AD et les applications Azure AD.
   - Vous ne pouvez pas utiliser l’option **PASSWORD**.
   - Actuellement, la première connexion Azure AD doit être créée par le compte SQL Server standard (non Azure AD) qui est un `sysadmin` à l’aide de la syntaxe ci-dessus.
   - Quand vous créez une connexion Azure Active Directory à l’aide d’un administrateur Azure AD pour l’instance managée SQL Database, l’erreur suivante se produit :</br>
@@ -448,7 +450,7 @@ Par défaut, les autorisations standard accordées à une connexion Azure AD nou
 Après la création d’une connexion, celle-ci peut se connecter à une instance managée SQL Database, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour créer un utilisateur Azure AD à partir d’une connexion Azure AD, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, consultez [Utilisateurs non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles et l’instruction [GRANT](grant-transact-sql.md).
+- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](../../t-sql/statements/grant-transact-sql.md). Pour plus d’informations, voir [Rôles non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Rôles d’administrateur au niveau du serveur supplémentaires](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et l’instruction [GRANT](grant-transact-sql.md).
 - Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
   - Utilisez la commande suivante pour ajouter le rôle `sysadmin` à une connexion Azure AD : `ALTER SERVER ROLE sysadmin ADD MEMBER [AzureAD_Login_name]`
 - Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT](../../t-sql/statements/grant-transact-sql.md).
@@ -472,7 +474,7 @@ L'exemple suivant crée une connexion pour un utilisateur particulier et attribu
  GO
  ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>b. Création d'une connexion à partir d'un SID
+### <a name="b-creating-a-login-from-a-sid"></a>B. Création d'une connexion à partir d'un SID
 
  L’exemple suivant crée d’abord une connexion d’authentification SQL Server et détermine le SID de la connexion.
 
@@ -606,16 +608,16 @@ Dans SQL Database Warehouse, les données de connexion exigées pour authentifie
 
 Pour plus d’informations sur les connexions SQL Database Warehouse, consultez [Gestion des bases de données et des connexions dans Microsoft Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
-Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Seule la connexion principale au niveau du serveur (créée par le processus de configuration) ou les membres du rôle de base de données `loginmanager` dans la base de données master peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
 
 Après la création d’une connexion, celle-ci peut se connecter à SQL Database Warehouse, mais elle dispose uniquement des autorisations accordées au rôle **public**. Envisagez d’effectuer certaines des activités suivantes.
 
 - Pour vous connecter à une base de données, créez un utilisateur de base de données pour la connexion. Pour plus d’informations, consultez [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
-- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](grant-transact-sql.md). Pour plus d’informations, consultez [Utilisateurs non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md). https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles et l’instruction [GRANT](grant-transact-sql.md).
+- Pour accorder des autorisations à un utilisateur dans une base de données, utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles de base de données intégrés ou à un rôle personnalisé, ou pour accorder directement des autorisations à l’utilisateur à l’aide de l’instruction [GRANT](grant-transact-sql.md). Pour plus d’informations, voir [Rôles non administrateurs](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Rôles d’administrateur au niveau du serveur supplémentaires](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et l’instruction [GRANT](grant-transact-sql.md).
 - Pour accorder des autorisations à l’échelle du serveur, créez un utilisateur de base de données dans la base de données master et utilisez **ALTER SERVER ROLE** ... Instruction **ADD MEMBER** pour ajouter l’utilisateur à l’un des rôles serveur d’administration. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md) et [Rôles serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles).
 
 - Utilisez l’instruction **GRANT** pour accorder des autorisations au niveau du serveur à la nouvelle connexion ou à un rôle qui contient la connexion. Pour plus d’informations, consultez [GRANT](../../t-sql/statements/grant-transact-sql.md).
@@ -631,7 +633,7 @@ CREATE LOGIN <login_name> WITH PASSWORD = '<enterStrongPasswordHere>';
 GO
 ```
 
-### <a name="b-creating-a-login-from-a-sid"></a>b. Création d'une connexion à partir d'un SID
+### <a name="b-creating-a-login-from-a-sid"></a>B. Création d'une connexion à partir d'un SID
 
  L’exemple suivant crée d’abord une connexion d’authentification SQL Server et détermine le SID de la connexion.
 
@@ -710,7 +712,7 @@ Si la stratégie windows requiert des mots de passe forts, les mots de passe doi
 - Une majuscule (A-Z).
 - Une minuscule (a-z).
 - Un chiffre (0-9).
-- Un des caractères non alphanumériques, tels qu'un espace, _, @, *, ^, % ! , $, # ou &.
+- Un des caractères non alphanumériques, à savoir un espace, _, @, *, ^, % ! , $, # ou &.
 
 WINDOWS Spécifie que la connexion doit être mappée sur une connexion Windows.
 
@@ -728,9 +730,9 @@ WINDOWS Spécifie que la connexion doit être mappée sur une connexion Windows.
 - La création d'une connexion active automatiquement la nouvelle connexion et accorde à la connexion l'autorisation **CONNECT SQL** au niveau du serveur.
 - Pour plus d’informations sur la conception d’un système d’autorisations, voir [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
-Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).<https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles>.
+Seuls les utilisateurs ayant l’autorisation **ALTER ANY LOGIN** sur le serveur ou appartenant au rôle serveur fixe **securityadmin** peuvent créer des connexions. Pour plus d’informations, consultez [Rôles de niveau serveur](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#groups-and-roles) et [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md).
 
 ## <a name="after-creating-a-login"></a>Après la création d’une connexion
 

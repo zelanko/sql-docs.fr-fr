@@ -23,12 +23,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4214bcf8d2dcd3c8b00d51580ea71eae0e40e96e
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880542"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872329"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -277,7 +277,7 @@ Si l’index cluster n’est pas créé avec la propriété `UNIQUE`, le [!INCLU
     Par exemple, l'ID d'un salarié l'identifie de manière unique. Un index cluster ou une contrainte [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) sur la colonne `EmployeeID` améliore les performances des requêtes qui recherchent des informations sur les salariés en fonction de leur ID. D'une autre manière, un index cluster peut être créé sur `LastName`, `FirstName`, `MiddleName` , car les enregistrements de salariés sont fréquemment groupés et interrogés de cette façon et l'association de ces colonnes présente toujours un niveau élevé de différenciation. 
 
     > [!TIP]
-    > Sauf si cela est spécifié différemment, quand une contrainte [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) est créée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crée un [index cluster](#clustered_index) qui prend en charge cette contrainte.
+    > Sauf si cela est spécifié différemment, quand une contrainte [PRIMARY KEY](../relational-databases/tables/create-primary-keys.md) est créée, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] crée un [index cluster](#Clustered) qui prend en charge cette contrainte.
     > Vous pouvez utiliser un *[uniqueidentifier](../t-sql/data-types/uniqueidentifier-transact-sql.md)* pour garantir l’unicité en tant que PRIMARY KEY, mais ce n’est pas une clé de clustering efficace.
     > Si vous utilisez un *uniqueidentifier* comme PRIMARY KEY, la recommandation est de le créer en tant qu’index non-cluster et d’utiliser une autre colonne (par exemple, un `IDENTITY`) pour créer l’index cluster.   
   
@@ -892,10 +892,10 @@ Les performances d’un index non-cluster sont meilleures que celles d’un inde
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Réorganiser et reconstruire des index](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [Amélioration des performances avec les vues indexées SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Tables et index partitionnés](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-[Créer des clés primaires](../relational-databases/tables/create-primary-keys.md)    
+[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Créer une clé primaire](../relational-databases/tables/create-primary-keys.md)    
 [Index pour les tables optimisées en mémoire](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
-[Index columnstore - Présentation](../relational-databases/indexes/columnstore-indexes-overview.md)  
+[Vue d’ensemble des index columnstore](../relational-databases/indexes/columnstore-indexes-overview.md)  
 [Résolution des problèmes des index de hachage pour les tables à mémoire optimisée](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
 [Vues de gestion dynamique des tables à mémoire optimisée &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       

@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 866d71333297b609642707a793b27c735d29057d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e6e0f7bc107ae731e3eb2e7f6685e6c02914d41d
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327885"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872149"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>Configurer Always Encrypted avec enclaves sécurisées
 
@@ -46,7 +46,7 @@ L’ordinateur qui exécute SQL Server a besoin du système d’exploitation et 
 
 *SQL Server* :
 
-- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] ou ultérieur
+- [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] ou version ultérieure
 
 *Windows* :
 
@@ -144,7 +144,7 @@ L’introduction de clés prenant en charge les enclaves ne change pas fondament
 - La propriété **ENCLAVE_COMPUTATIONS** dans les métadonnées de clé principale de colonne de la base de données est définie.
 - Les valeurs de propriété de la clé principale de colonne (notamment le paramétrage de **ENCLAVE_COMPUTATIONS**) sont signées numériquement. L’outil ajoute la signature, qui est générée à l’aide de la clé principale de colonne actuelle, aux métadonnées. L’objectif de la signature est d’empêcher des administrateurs de bases de données et d’ordinateurs malveillants de falsifier le paramètre **ENCLAVE_COMPUTATIONS**. Les pilotes du client SQL vérifient les signatures avant d’autoriser l’utilisation de l’enclave. Cela permet aux administrateurs de sécurité de contrôler des données de la colonne pouvant être calculées à l’intérieur de l’enclave.
 
-La propriété **ENCLAVE_COMPUTATIONS** d’une clé principale de colonne est immuable : vous ne pouvez pas la modifier après que la clé a été provisionnée. Vous pouvez, cependant, remplacer la clé principale de colonne par une nouvelle clé dont la valeur de la propriété **ENCLAVE_COMPUTATIONS** est différente de celle de la clé d’origine, via un processus appelé [remplacement de clé principale de colonne](#initiate-the-rotation-from-the-current-column-master-key-to-the-new-column-master-key). Pour plus d’informations sur la propriété **ENCLAVE_COMPUTATIONS**, consultez [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
+La propriété **ENCLAVE_COMPUTATIONS** d’une clé principale de colonne est immuable : vous ne pouvez pas la modifier après que la clé a été provisionnée. Vous pouvez, cependant, remplacer la clé principale de colonne par une nouvelle clé dont la valeur de la propriété **ENCLAVE_COMPUTATIONS** est différente de celle de la clé d’origine, via un processus appelé [remplacement de clé principale de colonne](#make-columns-enclave-enabled-by-rotating-their-column-master-key). Pour plus d’informations sur la propriété **ENCLAVE_COMPUTATIONS**, consultez [CREATE COLUMN MASTER KEY](../../../t-sql/statements/create-column-master-key-transact-sql.md).
 
 Pour approvisionner une clé de chiffrement de colonne prenant en charge les enclaves, vous devez vous assurer que la clé principale de colonne qui chiffre la clé de chiffrement de colonne prend en charge les enclaves.
 
@@ -152,7 +152,7 @@ Les limitations suivantes s’appliquent actuellement à l’approvisionnement d
 
 - Les **clés principales de colonne prenant en charge les enclaves doivent être stockées dans le magasin de certificats Windows ou dans Azure Key Vault**. Le stockage de clés principales de colonne prenant en charge les enclaves dans d’autres types de magasins de clés (modules de sécurité matériels ou magasins de clés personnalisés) n’est actuellement pas pris en charge.
 
-### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>**Approvisionner des clés prenant en charge les enclaves à l’aide de SQL Server Management Studio (SSMS)**
+### **<a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>Approvisionner des clés prenant en charge les enclaves avec SQL Server Management Studio (SSMS)**
 
 Les étapes suivantes créent des clés prenant en charge les enclaves (requiert SSMS 18.0 ou version ultérieure) :
 
@@ -177,11 +177,11 @@ Les étapes suivantes créent des clés prenant en charge les enclaves (requiert
     3. Dans le menu déroulant **Clé principale de colonne**, sélectionnez la clé principale de colonne que vous avez créée aux étapes précédentes.
     4. Cliquez sur **OK**.
 
-### <a name="provision-enclave-enabled-keys-using-powershell"></a>**Approvisionner des clés prenant en charge les enclaves avec PowerShell**
+### **<a name="provision-enclave-enabled-keys-using-powershell"></a>Approvisionner des clés prenant en charge les enclaves avec PowerShell**
 
 Les sections suivantes fournissent des exemples de scripts PowerShell pour l’approvisionnement des clés prenant en charge les enclaves. Les étapes qui sont spécifiques à Always Encrypted (nouvelles) avec des enclaves sécurisées sont mises en surbrillance. Pour plus d’informations (non spécifiques à Always Encrypted avec enclaves sécurisées) sur l’approvisionnement des clés à l’aide de PowerShell, consultez [Configurer des clés Always Encrypted à l’aide de PowerShell](https://docs.microsoft.com/sql/relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell).
 
-**Provisionnement des clés prenant en charge l’enclave - Magasin de certificats Windows**
+**Approvisionner des clés prenant en charge les enclaves – Magasin de certificats Windows**
 
 Sur l’ordinateur client/développement, ouvrez Windows PowerShell ISE et exécutez le script suivant.
 
@@ -218,7 +218,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 Sur l’ordinateur client/développement, ouvrez Windows PowerShell ISE et exécutez le script suivant.
 
-**Étape 1 : provisionner une clé principale de colonne dans Azure Key Vault**
+**Étape 1 : Approvisionner une clé principale de colonne dans Azure Key Vault**
 
 Cela est également possible à l’aide du portail Azure. Pour plus d’informations, consultez [Gérer vos coffres de clés à partir du portail Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
 
@@ -250,7 +250,7 @@ Set-AzKeyVaultAccessPolicy -VaultName $akvName -ResourceGroupName $resourceGroup
 $akvKey = Add-AzureKeyVaultKey -VaultName $akvName -Name $akvKeyName -Destination "Software"
 ```
 
-**Étape 2 : créer des métadonnées de clé principale de colonne dans la base de données, créer une clé de chiffrement de colonne et créer des métadonnées de clé de chiffrement de colonne dans la base de données**
+**Étape 2 : Créer des métadonnées de clé principale de colonne dans la base de données, une clé de chiffrement de colonne et des métadonnées de clé de chiffrement de colonne dans la base de données**
 
 
 ```powershell
@@ -536,9 +536,9 @@ Voici les trois approches de prise en charge d’enclaves pour des colonnes exis
   - Tout le contenu de la table qui contient la colonne doit être déplacé en dehors de la base de données pour le nouveau chiffrement. Cette option est donc recommandée uniquement pour les petites tables. 
 
 Pour plus d'informations, consultez les sections suivantes :
-  - [Faire prendre en charge les enclaves par des colonnes en remplaçant leur clé principale de colonne](#make-columns-enclave-enabled-by-rotating-their-column-master-key)
-  - [Nouveau chiffrement des colonnes sur place](#re-encrypt-columns-in-place)
-  - [Nouveau chiffrement des colonnes côté client](#re-encrypt-columns-on-the-client-side)
+  - [Rendre des colonnes compatibles avec les enclaves en remplaçant leur clé principale de colonne](#make-columns-enclave-enabled-by-rotating-their-column-master-key)
+  - [Rechiffrer des colonnes sur place](#re-encrypt-columns-in-place)
+  - [Rechiffrer des colonnes côté client](#re-encrypt-columns-on-the-client-side)
 
 ### <a name="make-columns-enclave-enabled-by-rotating-their-column-master-key"></a>Faire prendre en charge les enclaves par des colonnes en remplaçant leur clé principale de colonne
 
@@ -553,7 +553,7 @@ Vous devrez peut-être également transformer le classement pour les colonnes de
 Le processus de modification de la clé principale de colonne est le même si l’une des clés impliquées prend en charge les enclaves. Vous trouverez plus d’informations sur la manière de remplacer la clé principale de colonne dans les articles suivants :
 
 - [Remplacer une clé principale de colonne avec SSMS](configure-always-encrypted-using-sql-server-management-studio.md)
-- [Remplacement d’une clé principale de colonne avec PowerShell](rotate-always-encrypted-keys-using-powershell.md)
+- [Remplacer une clé principale de colonne avec PowerShell](rotate-always-encrypted-keys-using-powershell.md)
 
 Pour votre commodité, un exemple de script PowerShell pour le remplacement d’une clé principale de colonne est fourni ci-dessous.
 
@@ -742,7 +742,7 @@ GO
 
 Le moyen le plus rapide d’essayer des requêtes complexes sur vos colonnes prenant en charge les enclaves est de partir d’une fenêtre de requête SSMS avec paramétrage d’Always Encrypted activé. Pour plus d’informations sur cette fonctionnalité utile dans SSMS, consultez :
 
-- [Paramétrage d’Always Encrypted : utilisation de SSMS pour Insérer dans, Mettre à jour et Filtrer par colonne chiffrée](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
+- [Paramétrage Always Encrypted : utiliser SSMS pour Insérer dans, Mettre à jour et Filtrer par colonne chiffrée](https://blogs.msdn.microsoft.com/sqlsecurity/2016/12/13/parameterization-for-always-encrypted-using-ssms-to-insert-into-update-and-filter-by-encrypted-columns/)
 - [Interrogation de colonnes chiffrées](configure-always-encrypted-using-sql-server-management-studio.md#querying-encrypted-columns)
 
 
@@ -860,8 +860,8 @@ De plus, votre application doit se conformer aux instructions courantes qui s’
 
 Pour plus d’informations sur le développement d’applications .NET Framework à l’aide d’Always Encrypted, consultez les articles suivants :
 
-- [Développer à l’aide d’Always Encrypted avec le fournisseur de données .NET Framework](develop-using-always-encrypted-with-net-framework-data-provider.md)
-- [Always Encrypted : protéger les données sensibles de la base de données SQL et stocker vos clés de chiffrement dans Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
+- [Développer à l’aide d’Always Encrypted avec le Fournisseur de données .NET Framework](develop-using-always-encrypted-with-net-framework-data-provider.md)
+- [Always Encrypted : Protéger les données sensibles de la base de données SQL et stocker les clés de chiffrement dans Azure Key Vault](https://docs.microsoft.com/azure/sql-database/sql-database-always-encrypted)
 
 #### <a name="example"></a> Exemple
 

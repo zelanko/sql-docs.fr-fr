@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: a24f7577a5ac01b3bc035bd68056de3a95fa156c
-ms.sourcegitcommit: 2111068372455b5ec147b19ca6dbf339980b267d
+ms.openlocfilehash: b25824b52a09afd7111cacc3a1ec05969766863e
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58417151"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042128"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Didacticiel : Bien démarrer avec Always Encrypted avec enclaves sécurisées en utilisant SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -36,8 +36,16 @@ Pour bien démarrer avec Always Encrypted avec enclaves sécurisées, vous avez 
 
 ### <a name="sql-server-computer-requirements"></a>Configuration requise de l’ordinateur SQL Server
 
-- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] ou ultérieur
-- Windows 10 Entreprise version 1809 ou Windows Server 2019 Datacenter
+- [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] ou version ultérieure.
+- Windows 10 Entreprise version 1809 ou Windows Server 2019 Datacenter.
+- Si votre ordinateur SQL Server est une machine physique, il doit respecter la [Configuration matérielle Hyper-V requise](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements) :
+   - Processeur 64 bits avec traduction d’adresses de deuxième niveau (SLAT)
+   - Prise en charge du processeur pour l’extension Mode moniteur de machine virtuelle (VT-c sur processeurs Intel)
+   - Prise en charge de la virtualisation activée (Intel VT-x ou AMD-V)
+- Si votre ordinateur SQL Server est une machine virtuelle, il doit être configuré de façon à autoriser la virtualisation imbriquée.
+   - Sur Hyper-V 2016 et les versions ultérieures, [activez les extensions de virtualisation imbriquée](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization) sur le processeur de la machine virtuelle.
+   - Dans Azure, vérifiez que vous utilisez une taille de machine virtuelle qui prend en charge la virtualisation imbriquée, comme les machines virtuelles des séries Dv3 et Ev3. Voir [Créer une machine virtuelle Azure compatible avec l’imbrication](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm).
+   - Sur VMware vSphere 6.7 et les versions ultérieures, activez la prise en charge de la sécurité basée sur la virtualisation pour la machine virtuelle, comme le décrit la [documentation VMware](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html).
 - [SQL Server Management Studio (SSMS) version 18.0 ou ultérieure](../../ssms/download-sql-server-management-studio-ssms.md).
 
 Vous pouvez aussi installer SSMS sur un autre ordinateur.
@@ -105,6 +113,21 @@ Dans cette étape, vous allez configurer l’ordinateur SQL Server comme hôte S
    ```
 
 3. Quand vous y êtes invité, redémarrez votre ordinateur SQL Server pour terminer l’installation d’Hyper-V.
+
+4. Si votre ordinateur SQL Server est une machine virtuelle, ou bien une machine physique ancienne génération qui ne prend pas en charge le démarrage sécurisé UEFI ou n’est pas équipée d’IOMMU, vous devez supprimer la condition VBS pour les fonctionnalités de sécurité de la plateforme.
+    1. Supprimez la condition dans le Registre Windows.
+
+        ```powershell
+       Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
+       ```
+
+    1. Redémarrez l’ordinateur pour que VBS présente les conditions réduites en ligne.
+
+        ```powershell
+       Restart-Computer
+       ```
+
+
 
 4. Reconnectez-vous à l’ordinateur SQL Server en tant qu’administrateur, ouvrez une console Windows PowerShell avec élévation de privilèges, générez une clé d’hôte unique, puis exportez la clé publique qui en résulte dans un fichier.
 
@@ -236,7 +259,7 @@ Dans cette étape, vous allez créer une clé principale de colonne et une clé 
     3. Veillez à sélectionnez **Magasin de certificats Windows (utilisateur actuel ou ordinateur local)** ou **Azure Key Vault**.
     4. Sélectionnez **Autoriser les calculs d’enclave**.
     5. Si vous avez sélectionné Azure Key Vault, connectez-vous à Azure et sélectionnez votre coffre de clés. Pour plus d’informations sur la création d’un coffre de clés pour Always Encrypted, consultez [Gérer vos coffres de clés à partir du portail Azure](https://blogs.technet.microsoft.com/kv/2016/09/12/manage-your-key-vaults-from-new-azure-portal/).
-    6. Sélectionnez votre clé si elle existe déjà ou créez-en une en suivant les instructions du formulaire.
+    6. Sélectionnez votre certificat ou votre clé Valeur de clé Azure, ou cliquez sur le bouton **Générer un certificat** pour en créer.
     7. Sélectionnez **OK**.
 
         ![Autoriser les calculs d’enclave](encryption/media/always-encrypted-enclaves/allow-enclave-computations.png)
@@ -258,8 +281,8 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
     3. Sélectionnez Connexion \> Changer la connexion.
     4. Sélectionnez **Options**. Accédez à l’onglet **Always Encrypted**, sélectionnez **Activer Always Encrypted**, puis spécifiez l’URL d’attestation d’enclave (par exemple, <span>http://</span>hgs.bastion.local/Attestation).
     5. Sélectionnez **Se connecter**.
-    6. Changez le contexte de base de données en spécifiant la base de données ContosoHR.
-1. Dans SSMS, configurez une autre fenêtre de requête en désactivant Always Encrypted pour la connexion de base de données.
+    6. S’il vous est demandé d’activer le paramétrage des requêtes Always Encrypted, cliquez sur **Activer**.
+2. Dans SSMS, configurez une autre fenêtre de requête en désactivant Always Encrypted pour la connexion de base de données.
     1. Dans SSMS, ouvrez une nouvelle fenêtre de requête.
     2. Cliquez avec le bouton droit n’importe où dans la nouvelle fenêtre de requête.
     3. Sélectionnez Connexion \> Changer la connexion.
@@ -296,12 +319,12 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
 
 À présent, vous pouvez exécuter des requêtes complexes sur les colonnes chiffrées. Un traitement de requête se produit à l’intérieur de votre enclave côté serveur. 
 
-1. Activez le paramétrage d’Always Encrypted.
+1. Vérifiez que le paramétrage Always Encrypted est activé.
     1. Sélectionnez **Requête** dans le menu principal de SSMS.
     2. Sélectionnez **Options de requête…**.
     3. Accédez à **Exécution** > **Avancé**.
-    4. Sélectionnez **Activer le paramétrage d’Always Encrypted**.
-    5. Sélectionnez **OK**.
+    4. Vérifiez que la case Activer le paramétrage Always Encrypted est cochée.
+    5. Sélectionnez OK.
 2. Dans la fenêtre de requête avec Always Encrypted activé, collez et exécutez la requête ci-dessous. La requête doit retourner des valeurs de texte en clair et des lignes correspondant aux critères de recherche spécifiés.
 
     ```sql
@@ -316,5 +339,5 @@ Dans cette étape, vous allez chiffrer les données stockées dans les colonnes 
 Consultez [Configurer Always Encrypted avec enclaves sécurisées](encryption/configure-always-encrypted-enclaves.md) pour voir d’autres cas d’utilisation. Vous pouvez aussi essayer ce qui suit :
 
 - [Configurer l’attestation TPM.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-initialize-hgs-tpm-mode)
-- [Configurer HTTPS pour votre instance SGH.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
+- [Configurer HTTPS pour une instance SGH.](https://docs.microsoft.com/windows-server/security/guarded-fabric-shielded-vm/guarded-fabric-configure-hgs-https)
 - Développer des applications qui émettent des requêtes complexes sur des colonnes chiffrées.

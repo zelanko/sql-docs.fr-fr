@@ -10,12 +10,12 @@ ms.assetid: 7b6867fa-1039-49b3-90fb-85b84678a612
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f12fdd6e68b2e6d823ec32f88334804443a79555
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241887"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
   Le `dtexec` utilitaire d’invite de commandes est utilisé pour configurer et exécuter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. L'utilitaire `dtexec` fournit un accès à toutes les fonctions de configuration et d'exécution de packages, telles que les paramètres, les connexions, les propriétés, les variables, la journalisation et les indicateurs de progression. Le `dtexec` utilitaire vous permet de charger des packages à partir de ces sources : le [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, un fichier de projet .ispac, une [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de données, le [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store et le système de fichiers.  
@@ -115,7 +115,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="syntaxRules"></a> Règles de la syntaxe  
  **Règles de syntaxe de l'utilitaire**  
   
- Toutes les options doivent commencer par une barre oblique (/) ou par un signe moins (-). Les options qui sont présentées ici commencent par une barre oblique (/), mais le signe moins (-) peut être utilisé à la place.  
+ Toutes les options doivent commencer par une barre oblique (/) ou par un signe moins (-). Les options qui sont présentées ici commencent par une barre oblique (/), mais le signe moins (-) peut être utilisé à la place.  
   
  Un argument doit être placé entre guillemets s'il contient un espace. Si l'argument n'est pas placé entre guillemets, il ne peut pas contenir d'espaces.  
   
@@ -126,7 +126,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="cmdshell"></a> Utilisation de dtexec à partir de l'invite xp_cmdshell  
  **Utilisation de dtexec à partir de l'invite xp_cmdshell**  
   
- Vous pouvez exécuter dtexec à partir de l’invite **xp_cmdshell** . L'exemple suivant indique comment exécuter un package nommé UpsertData.dtsx et ignorer le code de retour :  
+ Vous pouvez exécuter dtexec à partir de l’invite **xp_cmdshell**. L'exemple suivant indique comment exécuter un package nommé UpsertData.dtsx et ignorer le code de retour :  
   
 ```  
 EXEC xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'  
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’option **xp_cmdshell** est désactivée par défaut sur les nouvelles installations. Elle peut être activée en exécutant la procédure stockée système **sp_configure** . Pour plus d’informations, consultez [xp_cmdshell (option de configuration de serveur)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’option **xp_cmdshell** est désactivée par défaut sur les nouvelles installations. Elle peut être activée en exécutant la procédure stockée système **sp_configure**. Pour plus d’informations, consultez [xp_cmdshell (option de configuration de serveur)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a> Syntaxe  
   
@@ -285,7 +285,7 @@ dtexec /option [value] [/option [value]]...
   
      Si vous spécifiez un *option_name* argument, `dtexec` démarre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne et affiche la rubrique de l’utilitaire dtexec.  
   
--   `/ISServer` *packagepath*:  
+-   `/ISServer` *PackagePath*:  
                   Facultatif. Exécute un package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’argument *PackagePath* spécifie le nom de fichier et le chemin complet du package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si le chemin d'accès ou le nom de fichier spécifié dans l'argument *PackagePath* contient un espace, vous devez placer l'argument *PackagePath* entre guillemets.  
   
      Le format du package est le suivant :  
@@ -629,7 +629,7 @@ dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"
   
  **Option SET**  
   
- L’exemple suivant montre comment utiliser l’option **/SET** , qui permet de modifier la valeur de toute variable ou propriété du package quand vous démarrez le package à partir de la ligne de commande.  
+ L’exemple suivant montre comment utiliser l’option **/SET**, qui permet de modifier la valeur de toute variable ou propriété du package quand vous démarrez le package à partir de la ligne de commande.  
   
 ```  
 /SET \package\DataFlowTask.Variables[User::MyVariable].Value;newValue  
@@ -669,6 +669,6 @@ dtexec /isserver "\SSISDB\MyFolder\MyProject\MyPackage.dtsx" /server "."
  [Exécuter un package dans les outils de données SQL Server](../run-a-package-in-sql-server-data-tools.md)  
   
 ## <a name="related-content"></a>Contenu associé  
- Entrée de blog, [Exit Codes, DTEXEC, and SSIS Catalog](https://go.microsoft.com/fwlink/?LinkId=251523), sur www.mattmasson.com.  
+ Entrée de blog, [Exit Codes, DTEXEC, and SSIS Catalog](https://www.mattmasson.com/2012/02/exit-codes-dtexec-and-ssis-catalog/), sur www.mattmasson.com.  
   
   

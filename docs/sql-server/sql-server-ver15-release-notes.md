@@ -10,18 +10,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6336e6ebc549d1be2787bb8a100efec1ea9b6836
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 62c637f8432fd168a9b23a92b7d50c00ea6c1e14
+ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492851"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58860060"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notes de publication de SQL Server 2019 Preview
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Cet article décrit les limitations et problèmes connus concernant les versions [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP). Pour des informations connexes, consultez :
-- [Nouveautés de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
+- [Nouveautés de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
 > [!NOTE]
 > Les préversions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont mises à votre disposition pour que vous puissiez découvrir les fonctionnalités de la version à venir. Elles ne sont pas prises en charge ou distribuées sous licence dans le cadre d’une utilisation en production. Les scénarios suivants sont explicitement non pris en charge :
@@ -37,13 +37,13 @@ Cet article décrit les limitations et problèmes connus concernant les versions
 ## <a name="ctp-24"></a>CTP 2.4
 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 est la dernière version publique de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP  2.3 est disponible uniquement en version d’évaluation. Aucune autre édition n’est disponible. La prise en charge des versions CTP est décrite dans le fichier `license_Eval.rtf` qui se trouve sur votre support d’installation.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 est disponible uniquement en version d’évaluation. Aucune autre édition n’est disponible. La prise en charge des versions CTP est décrite dans le fichier `license_Eval.rtf` qui se trouve sur votre support d’installation.
 
 Une prise en charge limitée peut être disponible aux emplacements suivants :
 
 - Forums
-  - [Commentaires SQL Server](https://aka.ms/sqlfeedback)
-  - [Prise en main de SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
+  - [Commentaires sur SQL Server](https://aka.ms/sqlfeedback)
+  - [Bien démarrer avec SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
   - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
   - [Documentation SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
 
@@ -63,8 +63,8 @@ Une prise en charge limitée peut être disponible aux emplacements suivants :
 
   - **Matériel**
     - [Windows : processeur, mémoire et système d’exploitation requis](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#pmosr)
-    - [Linux : configuration système requise](../linux/sql-server-linux-setup.md#system)
-  - **Logiciels**
+    - [Linux : configuration requise](../linux/sql-server-linux-setup.md#system)
+  - **Logiciel**
     - Windows Server 2016 ou version ultérieure. Pour connaître la configuration requise supplémentaire, consultez [Configuration requise pour l’installation de SQL Server](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).
     - Microsoft .NET Framework 4.6.2. Disponible sur le [Centre de téléchargement](https://www.microsoft.com/download/details.aspx?id=53344).
     - Pour Linux, reportez-vous à [Linux : plateformes prises en charge](../linux/sql-server-linux-setup.md#supportedplatforms).

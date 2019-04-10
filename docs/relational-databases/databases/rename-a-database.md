@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a0ea80a51a578f99cdff6189acacfe991ab34c43
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557836"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872019"
 ---
 # <a name="rename-a-database"></a>Modifier le nom d'une base de données
 
@@ -41,7 +41,7 @@ ms.locfileid: "51557836"
   
      [Transact-SQL](#rename-a-database-using-transact-sql)  
   
-- **Follow Up:**  [After renaming a database](#FollowUp)  
+- **Suivi :**  [Après le renommage d’une base de données](#backup-after-renaming-a-database)  
 
 > [!NOTE]
 > Pour renommer une base de données dans Azure SQL Data Warehouse ou Parallel Data Warehouse, utilisez l’instruction [RENAME (Transact-SQL)](../../t-sql/statements/rename-transact-sql.md).
@@ -57,7 +57,7 @@ ms.locfileid: "51557836"
   
 ### <a name="security"></a>Sécurité  
   
-#### <a name="permissions"></a>Permissions
+#### <a name="permissions"></a>Autorisations
 
 Nécessite l'autorisation ALTER sur la base de données.  
   
@@ -114,4 +114,4 @@ Après avoir renommé une base de données dans SQL Server, sauvegardez la base 
 ## <a name="see-also"></a> Voir aussi
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)
-- [Identificateurs de base de données](../../relational-databases/databases/database-identifiers.md)  
+- [Identificateur de la base de données](../../relational-databases/databases/database-identifiers.md)  

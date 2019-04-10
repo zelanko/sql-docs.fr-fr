@@ -41,12 +41,12 @@ ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9957e69ae2cc285ecad5709a9169bd3ee01be464
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801593"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042448"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -270,7 +270,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>Arguments
 *OR ALTER*  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Modifie, de manière conditionnelle, la fonction uniquement si elle existe déjà. 
  
@@ -334,7 +334,7 @@ Valeur par défaut pour le paramètre. Si une valeur *default* est définie, la 
   
  Dans les fonctions table en ligne, la valeur de retour TABLE est définie via une instruction SELECT unique. Aucune variable retournée n'est associée à une fonction en ligne.  
   
- <a name="mstvf"></a> Dans les fonctions table à instructions multiples, @*return_variable* est une variable TABLE, utilisée pour stocker et cumuler les lignes à retourner comme valeur de la fonction. @ *return_variable* peut être spécifié uniquement pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], et pas pour les fonctions CLR.  
+ <a name="mstvf"></a> Dans les fonctions table à instructions multiples, \@*return_variable* est une variable TABLE servant à stocker et à cumuler les lignes à retourner comme valeur de la fonction. \@ *return_variable* peut être spécifié uniquement pour les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)], et pas pour les fonctions CLR.  
   
  *select_stmt*  
  Représente l’instruction SELECT unique qui définit la valeur de retour d’une fonction table en ligne.  
@@ -567,15 +567,15 @@ Si une fonction définie par l’utilisateur n’est pas créée avec la clause 
 
 -   Instructions de contrôle de flux, à l’exception des instructions `TRY...CATCH`.  
 
--   Instructions `DECLARE` définissant des variables de données locales et des curseurs locaux.  
+-   `DECLARE` Instructions définissant des variables de données locales et des curseurs locaux.  
 
--   Instructions `SELECT` qui contiennent des listes de sélection avec des expressions affectant des valeurs à des variables locales.  
+-   `SELECT` Instructions qui contiennent des listes de sélection avec des expressions affectant des valeurs à des variables locales.  
 
 -   Opérations de curseur faisant référence à des curseurs locaux déclarés, ouverts, fermés et libérés dans la fonction. Seules les instructions `FETCH` affectant des valeurs à des variables locales avec la clause `INTO` sont autorisées ; les instructions `FETCH` qui retournent des données au client ne sont pas autorisées.  
 
--   Instructions `INSERT`, `UPDATE` et `DELETE` modifiant des variables de table locales.  
+-   `INSERT`Instructions `UPDATE` et `DELETE` modifiant des variables de table locales.  
 
--   Instructions `EXECUTE` appelant des procédures stockées étendues.  
+-   `EXECUTE` Instructions appelant des procédures stockées étendues.  
 
 Pour plus d’informations, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
@@ -645,11 +645,11 @@ Quand vous utilisez la clause `ORDER` dans des fonctions table CLR, prenez en co
   
     -   Requêtes d’insertion dans lesquelles la clause `ORDER` est compatible avec un index.  
   
-    -   Clauses `ORDER BY` qui sont compatibles avec la clause `ORDER`.  
+    -   `ORDER BY` Clauses compatibles avec la clause `ORDER`.  
   
     -   Agrégats, où `GROUP BY` est compatible avec la clause `ORDER`.  
   
-    -   Agrégats `DISTINCT` dans lesquels les colonnes distinctes sont compatibles avec la clause `ORDER`.  
+    -   `DISTINCT` Agrégats dans lesquels les colonnes distinctes sont compatibles avec la clause `ORDER`.  
   
 La clause `ORDER` ne garantit pas des résultats ordonnés quand une requête SELECT est exécutée, sauf si la clause `ORDER BY` est également spécifiée dans la requête. Pour plus d’informations sur la façon de rechercher par requête les colonnes incluses dans l’ordre de tri pour les fonctions table, consultez [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md).  
   
@@ -663,7 +663,7 @@ La clause `ORDER` ne garantit pas des résultats ordonnés quand une requête SE
 |[sys.parameters](../../relational-databases/system-catalog-views/sys-parameters-transact-sql.md)|Affiche des informations sur les paramètres définis dans les fonctions définies par l'utilisateur.|  
 |[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)|Affiche les objets sous-jacents référencés par une fonction.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation `CREATE FUNCTION` dans la base de données et l’autorisation `ALTER` sur le schéma dans lequel la fonction est créée. Si la fonction spécifie un type défini par l’utilisateur, elle nécessite l’autorisation `EXECUTE` sur le type.  
   
 ## <a name="examples"></a>Exemples  
@@ -710,7 +710,7 @@ ISO Week
 52  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>b. Création d'une fonction table incluse  
+### <a name="b-creating-an-inline-table-valued-function"></a>B. Création d'une fonction table incluse  
  L'exemple suivant retourne une fonction table incluse dans la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. Pour chaque produit vendu au magasin, il retourne trois colonnes : `ProductID`, `Name` et l’agrégat des totaux annuels par magasin sous `YTD Total`.  
   
 ```sql  
@@ -831,7 +831,7 @@ GO
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [Fonctions CLR définies par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
+ [Fonctions CLR définies par l'utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
   

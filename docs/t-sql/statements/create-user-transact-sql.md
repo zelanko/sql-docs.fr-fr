@@ -30,12 +30,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c43e8ae5b32753eccb42e1e706bbe13b9bf4f8d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421216"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59042169"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -192,15 +192,16 @@ CREATE USER user_name
   
  Spécifie le principal Azure Active Directory pour lequel l’utilisateur de la base de données est créé. *Azure_Active_Directory_principal* peut être un utilisateur Azure Active Directory, un groupe Azure Active Directory ou une application Azure Active Directory. (Les utilisateurs Azure Active Directory ne peuvent pas avoir de comptes de connexion d’authentification Windows [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ; seuls les utilisateurs de base de données le peuvent.) La chaîne de connexion doit spécifier la base de données autonome comme catalogue initial.
 
- Pour les utilisateurs, vous utilisez l’alias complet de leur principal de domaine.   
- 
--   `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
-  
--   `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+ Pour les principaux Azure AD, la syntaxe CREATE USER exige les éléments suivants :
 
- Pour les groupes de sécurité, vous utilisez le *nom d’affichage* du groupe de sécurité. Pour le groupe de sécurité *Nurses*, vous devez utiliser le code suivant :  
+- UserPrincipalName de l’objet Azure AD pour les utilisateurs Azure AD.
+
+  - `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [alice@fabrikam.onmicrosoft.com] FROM EXTERNAL PROVIDER;`
+
+- DisplayName de l’objet Azure AD pour les groupes Azure AD et les applications Azure AD. Avec le groupe de sécurité *Nurses*, on utiliserait :  
   
--   `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
+  - `CREATE USER [Nurses] FROM EXTERNAL PROVIDER;`  
   
  Pour plus d’informations, voir [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication).  
   
@@ -278,7 +279,7 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
 ##  <a name="SyntaxSummary"></a> Résumé de syntaxe  
- **Utilisateurs basés sur des comptes de connexion dans Master**  
+ **Utilisateurs basés sur des comptes de connexions dans master**  
   
  La liste suivante affiche la syntaxe possible pour les utilisateurs basés sur des comptes de connexion. Les options de schéma par défaut ne sont pas répertoriées.  
   
@@ -292,7 +293,7 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
 -   `CREATE USER SQLAUTHLOGIN FOR LOGIN SQLAUTHLOGIN`  
 -   `CREATE USER SQLAUTHLOGIN FROM LOGIN SQLAUTHLOGIN`  
   
-**Utilisateurs qui s’authentifient auprès de la base de données**  
+**Utilisateurs qui s'authentifient à la base de données**  
   
  La liste suivante affiche la syntaxe possible pour les utilisateurs qui peuvent être utilisés uniquement dans une base de données autonome. Les utilisateurs créés ne seront liés à aucun compte de connexion dans la base de données **Master**. Les options de langue et de schéma par défaut ne sont pas répertoriées.  
   
@@ -303,7 +304,7 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
 -   `CREATE USER [Domain1\WindowsGroupManagers]`  
 -   `CREATE USER Barry WITH PASSWORD = 'sdjklalie8rew8337!$d'`  
   
-**Utilisateurs basés sur des principaux Windows sans comptes de connexion dans Master**  
+**Utilisateurs basés sur des principaux Windows sans comptes de connexion dans master**  
   
  La liste suivante affiche la syntaxe possible pour les utilisateurs qui ont accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] via un groupe Windows, mais qui ne disposent pas d’un compte de connexion dans **Master**. Cette syntaxe peut être utilisée dans tous les types de bases de données. Les options de langue et de schéma par défaut ne sont pas répertoriées.  
   
@@ -318,7 +319,7 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
 -   `CREATE USER [Domain1\WindowsGroupManagers] FOR LOGIN [Domain1\WindowsGroupManagers]`  
 -   `CREATE USER [Domain1\WindowsGroupManagers] FROM LOGIN [Domain1\WindowsGroupManagers]`  
   
-**Utilisateurs qui ne peuvent pas s’authentifier**  
+**Utilisateurs qui ne peuvent pas s'authentifier**  
   
  La liste suivante affiche la syntaxe possible pour les utilisateurs qui ne peuvent pas se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -336,13 +337,13 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
   
  Dans une base de données autonome, la création d’utilisateurs permet de séparer la base de données de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] afin que la base de données puisse être déplacée facilement vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md) et [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Pour changer un utilisateur de base de données basé sur un compte de connexion d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisateur de base de données autonome avec mot de passe, consultez [sp_migrate_user_to_contained &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- Dans une base de données autonome, les utilisateurs n'ont pas besoin d'un compte de connexion dans la base de données **master**. Les administrateurs du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent comprendre que l'accès à une base de données autonome peut être accordé au niveau de la base de données, plutôt qu'au niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour plus d'informations, consultez [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Dans une base de données autonome, les utilisateurs n'ont pas besoin d'un compte de connexion dans la base de données **master**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Les administrateurs doivent bien comprendre que l’accès à une base de données autonome peut être accordé au niveau de la base de données, plutôt qu’au niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour plus d'informations, consultez [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  En cas d'utilisateurs de base de données autonome [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configurez l'accès à l'aide d'une règle de pare-feu de niveau base de données, et non d'une règle de pare-feu de niveau serveur. Pour plus d’informations, consultez [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  
 Pour les utilisateurs de base de données autonome [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)], SSMS peut prendre en charge l’authentification multifacteur. Pour plus d’informations, consultez [Prise en charge SSMS pour Azure AD MFA avec SQL Database et SQL Data Warehouse](https://azure.microsoft.com/documentation/articles/sql-database-ssms-mfa-authentication/).  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY USER sur la base de données.  
   
 ## <a name="examples"></a>Exemples  
@@ -361,7 +362,7 @@ CREATE USER AbolrousHazem FOR LOGIN AbolrousHazem;
 GO   
 ```  
   
-### <a name="b-creating-a-database-user-with-a-default-schema"></a>b. Création d'un utilisateur de base de données avec un schéma par défaut  
+### <a name="b-creating-a-database-user-with-a-default-schema"></a>B. Création d'un utilisateur de base de données avec un schéma par défaut  
  L'exemple suivant crée d'abord une connexion serveur nommée `WanidaBenshoof` avec un mot de passe, puis crée un utilisateur de base de données correspondant nommé `Wanida` avec le schéma par défaut `Marketing`.  
   
 ```  
@@ -468,7 +469,7 @@ WITH
 
  Pour créer un utilisateur Azure AD à partir d’une connexion Azure AD, utilisez la syntaxe suivante.
 
- Connectez-vous à votre instance managée avec une connexion Azure AD détentrice du rôle `sysadmin`. Le code suivant crée un utilisateur Azure AD bob@contoso.com à partir de la connexion bob@contoso.com. Cette connexion a été créée dans l’exemple [CREATE LOGIN](create-login-transact-sql.md#d-creating-a-login-for-a-federated-azure-ad-account).
+ Connectez-vous à votre instance managée avec une connexion Azure AD détentrice du rôle `sysadmin`. Le code suivant crée un utilisateur Azure AD bob@contoso.com à partir de la connexion bob@contoso.com. Cette connexion a été créée dans l’exemple [CREATE LOGIN](create-login-transact-sql.md#examples).
 
 ```sql
 CREATE USER [bob@contoso.com] FROM LOGIN [bob@contoso.com];
@@ -515,7 +516,3 @@ Vous pouvez également [octroyer (GRANT) des autorisations sur un objet](../../t
  [Bases de données autonomes](../../relational-databases/databases/contained-databases.md)   
  [Connexion à la base de données SQL à l’aide de l’authentification Azure Active Directory](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication)   
  [Prise en main des autorisations du moteur de base de données](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)  
-  
-  
-
-

@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 79337a1eb89de27f5522b5432e77f43f62d4489c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
+ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306247"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58872259"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Choisir une méthode de mise à niveau du moteur de base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -33,7 +33,7 @@ Si vous planifiez une mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.m
   
 > [!NOTE]  
 >  Vous pouvez également envisager de mettre à niveau la Base de données SQL Azure ou de virtualiser votre environnement SQL Server dans le cadre de votre plan de mise à niveau. Bien que ces sujets ne soient pas abordés dans cet article, voici quelques liens :
->   - [Vue d’ensemble de SQL Server sur des machines virtuelles Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
+>   - [Vue d’ensemble de SQL Server sur des Machines virtuelles Azure](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
 >   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
 >   - [Sélection d’une option SQL Server dans Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
   
@@ -77,7 +77,7 @@ Si vous planifiez une mise à niveau du [!INCLUDE[ssDE](../../includes/ssde-md.m
  Après la migration des bases de données utilisateur, vous pointez les nouveaux utilisateurs sur la nouvelle instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l’aide de diverses méthodes (par exemple, en renommant le serveur, en utilisant une entrée DNS, en modifiant des chaînes de connexion).  La nouvelle approche de l’installation réduit les risques et les temps morts par rapport à une mise à niveau sur place. Elle facilite également les mises à niveau du matériel et du système d’exploitation conjointement avec la mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  Si vous avez déjà une solution à haute disponibilité en place ou d’autres environnements d’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], accédez à [Mise à niveau propagée](#RollingUpgrade). Si vous n’avez pas de solution à haute disponibilité en place, vous pouvez envisager de configurer temporairement une [mise en miroir de base de données](../database-mirroring/setting-up-database-mirroring-sql-server.md) pour réduire le temps d’arrêt afin de faciliter cette mise à niveau ou de saisir cette opportunité pour configurer un [groupe de disponibilité Always On](https://msdn.microsoft.com/library/hh510260.aspx) en tant que solution à haute disponibilité permanente.  
+>  Si vous avez déjà une solution à haute disponibilité en place ou d’autres environnements d’instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], accédez à [Mise à niveau propagée](#rolling-upgrade). Si vous n’avez pas de solution à haute disponibilité en place, vous pouvez envisager de configurer temporairement une [mise en miroir de base de données](../database-mirroring/setting-up-database-mirroring-sql-server.md) pour réduire le temps d’arrêt afin de faciliter cette mise à niveau ou de saisir cette opportunité pour configurer un [groupe de disponibilité Always On](https://msdn.microsoft.com/library/hh510260.aspx) en tant que solution à haute disponibilité permanente.  
   
  Par exemple, vous pouvez utiliser cette approche pour mettre à niveau :  
   
@@ -111,5 +111,3 @@ Les étapes requises pour une nouvelle mise à niveau d’installation varient l
 ## <a name="next-steps"></a>Étapes suivantes
  [Planifier et tester le plan de mise à niveau du moteur de base de données](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md)   
  [Mise à niveau du moteur de base de données](../../database-engine/install-windows/complete-the-database-engine-upgrade.md)  
-  
-  
