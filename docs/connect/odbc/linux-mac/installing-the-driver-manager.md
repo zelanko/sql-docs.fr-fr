@@ -1,7 +1,7 @@
 ---
 title: Installation du Gestionnaire de pilote (pilote ODBC pour SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 02/15/2018
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 78eaf77064fb96c024c548c320ca9feeec10ce02
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
+ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305807"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041918"
 ---
 # <a name="installing-the-driver-manager"></a>Installation du Gestionnaire de pilotes
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -44,7 +44,7 @@ Pour installer le Gestionnaire de pilotes
   
 1.  Assurez-vous de disposer d’une autorisation d’accès à la racine.  
   
-2.  Accédez au répertoire où le téléchargement de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a placé le fichier nommé `msodbcsql-11.0.2270.0.tar.gz`. Assurez-vous de disposer du fichier \*.tar.gz correspondant à votre version de Linux. Pour extraire les fichiers, exécutez la commande suivante : **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
+2.  Accédez au répertoire où le téléchargement de [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ODBC Driver a placé le fichier nommé `msodbcsql-11.0.2270.0.tar.gz`. Assurez-vous de disposer du fichier \*.tar.gz correspondant à votre version de Linux. Pour extraire les fichiers, exécutez la commande suivante : **tar xvzf msodbcsql-11.0.2270.0.tar.gz**.  
 
 3.  Accédez au répertoire `msodbcsql-11.0.2270.0`, où devrait se trouver un fichier nommé `build_dm.sh`. Vous pouvez exécuter `build_dm.sh` pour installer le Gestionnaire de pilotes unixODBC.
 
@@ -52,7 +52,7 @@ Pour installer le Gestionnaire de pilotes
   
 5.  Quand vous êtes prêt pour l’installation et si votre ordinateur peut accéder à un site externe par le biais de FTP, exécutez la commande suivante : **./build_dm.sh**.
 
-Si votre ordinateur ne peut pas accéder à un site externe par le biais de FTP, obtenez `unixODBC-2.3.0.tar.gz`. Vous pouvez obtenir `unixODBC-2.3.0.tar.gz` de [ http://www.unixodbc.org ](http://www.unixodbc.org/). Cliquez sur le lien **Télécharger** sur le côté gauche de la page pour accéder à la page de téléchargement. Cliquez ensuite sur le lien approprié pour télécharger unixODBC-2.3.0 (et non unixODBC-2.3.1). unixODBC-2.3.1 n’est pas pris en charge avec cette version de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Exécutez la commande suivante pour commencer l’installation du Gestionnaire de pilotes unixODBC : **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
+Si votre ordinateur ne peut pas accéder à un site externe par le biais de FTP, obtenez `unixODBC-2.3.0.tar.gz`. Vous pouvez obtenir `unixODBC-2.3.0.tar.gz` à partir de [http://www.unixodbc.org](http://www.unixodbc.org/). Cliquez sur le lien **Télécharger** sur le côté gauche de la page pour accéder à la page de téléchargement. Cliquez ensuite sur le lien approprié pour télécharger unixODBC-2.3.0 (et non unixODBC-2.3.1). unixODBC-2.3.1 n’est pas pris en charge avec cette version de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Exécutez la commande suivante pour commencer l’installation du Gestionnaire de pilotes unixODBC : **./build_dm.sh --download-url=file://unixODBC-2.3.0.tar.gz**.  
 
 6.  Tapez **OUI** pour poursuivre la décompression des fichiers. Cette partie du processus peut prendre jusqu’à cinq minutes.  
 
@@ -89,4 +89,4 @@ Vous êtes maintenant prêt à installer le pilote. Pour plus d’informations, 
 
 [Problèmes connus dans cette version du pilote](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 
-[Notes de publication](../../../connect/odbc/linux-mac/release-notes.md)
+[Notes de publication](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)

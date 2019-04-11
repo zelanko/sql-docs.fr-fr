@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: efd71653e723344e9175d9ab1529fafd610901df
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4c1b433ae2023f544073e285cca9594c980dd83f
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685427"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476715"
 ---
 # <a name="analyze-in-excel"></a>Analyser dans Excel
 
@@ -33,7 +33,7 @@ Cet article fait partie d’un didacticiel de modélisation tabulaire, qui doit 
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Parcourir des données à l'aide des perspectives par défaut et Internet Sales  
 
-Dans ces premières tâches, vous parcourez votre modèle à l’aide à la fois la perspective par défaut, qui inclut tous les objets de modèle, et également à l’aide de la perspective Internet Sales précédemment. La perspective Internet Sales exclut l'objet table Customer.  
+Dans ces premières tâches, vous parcourez votre modèle à l’aide à la fois la perspective par défaut, qui inclut tous les objets de modèle, et également à l’aide de la perspective ventes sur Internet vous avez créé précédemment. La perspective Internet Sales exclut l'objet table Customer.  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>Pour parcourir les données à l'aide de la perspective par défaut  
   

@@ -15,14 +15,15 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 48f9935f26ac4ae17b15f4008dcdb0d8a0e69e5c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 9f0d8c0f371d4c2bfd1ba6ce4c0ea5a0361eb25a
+ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677718"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "59476655"
 ---
 # <a name="clr-integration-security"></a>Sécurité de l'intégration du CLR
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Le modèle de sécurité de l'intégration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le Common Language Runtime (CLR) [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] gère et sécurise l'accès entre types différents d'objets CLR et non-CLR qui s'exécutent dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ces objets peuvent être appelés par une instruction [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou un autre objet CLR qui s'exécute dans le serveur. Les appels entre objets portent le nom de liens. Les types de vérifications de sécurité effectués sur ces objets dépendent des types de liens impliqués.  
   
@@ -36,29 +37,29 @@ ms.locfileid: "51677718"
   
 -   Le code défini par l'utilisateur ne doit pas être en mesure d'accéder de façon non autorisée aux ressources système du fait de son exécution dans le processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intègre maintenant le modèle de sécurité basé sur utilisateur de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le modèle de sécurité basé sur l'accès du code du CLR. Quelques-uns des avantages offerts par cette approche combinée de la sécurité sont discutés dans cette section.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’intègre à présent le modèle de sécurité basé sur utilisateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] avec le modèle de sécurité basée sur l’accès de code du CLR. Quelques-uns des avantages offerts par cette approche combinée de la sécurité sont discutés dans cette section.  
   
  Le tableau suivant décrit les rubriques de cette section.  
   
- [Sécurité d’accès du code d’intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
+ [Sécurité d'accès du code de l'intégration du CLR](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)  
  Discute du modèle de sécurité d'accès du code pour le code managé.  
   
- [Attributs de protection de l’hôte et programmation de l’intégration du CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
+ [Attributs de protection de l'hôte et programmation de l'intégration CLR](../../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)  
  Fournit des informations à propos des valeurs d'attributs de protection de l'hôte (HPA) interdites dans les assemblys SAFE et EXTERNAL_ACCESS.  
   
- [Liens dans la sécurité d’intégration du CLR](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
+ [Liens dans la sécurité d'intégration du CLR](https://msdn.microsoft.com/library/168efd01-d12e-4bdf-a1b3-0b5c76474eaf)  
  Décrit comment les segments de code utilisateur peuvent s'appeler dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Emprunt d’identité et sécurité de l’intégration du CLR](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
+ [Emprunt d'identité et sécurité de l'intégration du CLR](https://msdn.microsoft.com/library/1495a7af-2248-4cee-afdb-9269fb3a7774)  
  Discute la manière dont le code managé accède aux ressources externes à l'aide de l'emprunt d'identité.  
   
- [Autorisation d’appelants partiellement approuvés](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
+ [Autorisation d'appelants partiellement approuvés](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
  Discute des problèmes qui surviennent lorsqu'une méthode managée appelle une méthode dans une classe contenue dans un autre assembly.  
   
- [Domaines d’application et sécurité de l’intégration du CLR](https://msdn.microsoft.com/library/54ee904e-e21a-4ee7-b4ad-a6f6f71bd473)  
+ [Domaines d'application et sécurité de l'intégration du CLR](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  Décrit la façon dont les assemblys sont chargés dans les domaines d'application.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des assemblys d’intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
+ [Gestion des assemblys d'intégration du CLR](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   
