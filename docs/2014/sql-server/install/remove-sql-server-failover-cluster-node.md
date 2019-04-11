@@ -11,14 +11,16 @@ ms.assetid: 0c9f7f83-9972-4545-9ac7-1bb98201115c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 67d64e2b2b269b0980c64741542a98ebc06aafd8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8f0881341cc899ac010de68b873e3fe7628a664b
+ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48108239"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480285"
 ---
 # <a name="remove-sql-server-failover-cluster-node"></a>Supprimer un nœud de cluster de basculement SQL Server
   Utilisez la page Supprimer un nœud de cluster de basculement pour identifier l'ordinateur à supprimer en tant que nœud de cluster de basculement [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  
+  Cette page est conçue comme une référence à l’interface graphique. Pour obtenir des instructions sur la suppression d’un nœud de cluster, consultez [ajouter ou supprimer des nœuds](../failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md#Remove). 
   
   
