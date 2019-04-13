@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: e951e87abf7e88502597b6a3caf6f7ca4e34e60b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 9a9a3d18f1850b563882a2303db8dd28b2916ac4
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205748"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542229"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Créer et configurer un groupe de disponibilité pour SQL Server sur Linux
 
@@ -243,7 +243,7 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     GO
     ```
     
-10.  Restaurer LinAGN1_Cert et LinAGN3_Cert sur LinAGN2. 
+10. Restaurer LinAGN1_Cert et LinAGN3_Cert sur LinAGN2.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -257,8 +257,9 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     FROM FILE = '/var/opt/mssql/data/LinAGN3_Cert.cer';
     
     GO
+    ```
     
-11.  Grant the logins associated with LinAG1 and LinAGN3 permission to connect to the endpoint on LinAGN2.
+11. Accorder les connexions associées LinAG1 et LinAGN3 autorisation de se connecter au point de terminaison sur LinAGN2.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +271,7 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     GO
     ```
     
-12.  Créer les connexions au niveau de l’instance et les utilisateurs associés à LinAGN1 et LinAGN2 sur LinAGN3.
+12. Créer les connexions au niveau de l’instance et les utilisateurs associés à LinAGN1 et LinAGN2 sur LinAGN3.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +285,7 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     GO
     ```
     
-13.  Restaurer LinAGN1_Cert et LinAGN2_Cert sur LinAGN3. 
+13. Restaurer LinAGN1_Cert et LinAGN2_Cert sur LinAGN3. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -298,8 +299,9 @@ Cet exemple va créer des certificats pour une configuration à trois nœuds. Le
     FROM FILE = '/var/opt/mssql/data/LinAGN2_Cert.cer';
     
     GO
+    ```
     
-14.  Grant the logins associated with LinAG1 and LinAGN2 permission to connect to the endpoint on LinAGN3.
+14. Accorder les connexions associées LinAG1 et LinAGN2 autorisation de se connecter au point de terminaison sur LinAGN3.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -369,7 +371,7 @@ Cette section montre comment créer un groupe de disponibilité avec un cluster 
 
 16. Lors de la création du groupe de disponibilité est terminée, cliquez sur **fermer** sur les résultats. Vous pouvez maintenant voir le groupe de disponibilité sur les réplicas dans les vues de gestion dynamique ainsi que sous le dossier de haute disponibilité Always On dans SSMS.
 
-### <a name="use-transact-sql"></a>Utilisation de Transact-SQL
+### <a name="use-transact-sql"></a>Utiliser Transact-SQL
 
 Cette section présente des exemples de création d’un groupe de disponibilité à l’aide de Transact-SQL. L’écouteur et le routage en lecture seule peuvent être configurés après avoir créé le groupe de disponibilité. Le groupe de disponibilité peut être modifié avec `ALTER AVAILABILITY GROUP`, mais la modification du type de cluster ne peut pas être effectuée [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]. Si vous n’aviez pas l’intention de créer un groupe de disponibilité avec un type de cluster externe, vous devez supprimer et recréer avec un type de cluster aucun. Vous trouverez plus d’informations et d’autres options sur les liens suivants :
 
@@ -416,7 +418,7 @@ Cet exemple montre comment créer un groupe de disponibilité de deux réplicas 
     GO
     ```
     
-3.  Dans une fenêtre de requête connectée au réplica en configuration seule, vous devez le joindre au groupe de disponibilité.
+3. Dans une fenêtre de requête connectée au réplica en configuration seule, vous devez le joindre au groupe de disponibilité.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -539,7 +541,7 @@ Un cluster de haute disponibilité de Pacemaker sous-jacent [!INCLUDE[ssnoversio
 1.  Dans une fenêtre de requête connectée vers le premier réplica, exécutez la commande suivante :
 
     ```SQL
-    CREATE LOGIN PMLogin WITH PASSWORD '<StrongPassword>';
+    CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
     
     GO
     

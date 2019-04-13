@@ -18,12 +18,12 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 51bc927dc252eb700825dac6e865e8932586cd07
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838107"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542189"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,30 +35,29 @@ ms.locfileid: "47838107"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
 sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'   
-     [ , [ @useself = ] 'TRUE' | 'FALSE' | NULL ]   
+     [ , [ @useself = ] { 'TRUE' | 'FALSE' | NULL } ]   
      [ , [ @locallogin = ] 'locallogin' ]   
      [ , [ @rmtuser = ] 'rmtuser' ]   
      [ , [ @rmtpassword = ] 'rmtpassword' ]   
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @rmtsrvname **=** ] **'***nom_du_serveur_distant***'**  
+ `[ @rmtsrvname = ] 'rmtsrvname'`  
  Nom d'un serveur lié auquel s'applique le mappage de la connexion. *nom_du_serveur_distant* est **sysname**, sans valeur par défaut.  
   
- [ @useself **=** ] **'** TRUE **'** | 'FALSE' | 'NULL'  
+ `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
  Détermine s’il faut se connecter à *nom_du_serveur_distant* en empruntant l’identité des connexions locales ou en envoyant explicitement une connexion et un mot de passe. Le type de données est **varchar (** 8 **)**, avec TRUE comme valeur par défaut.  
   
  La valeur TRUE Spécifie que les connexions utilisent leurs propres informations d’identification pour se connecter à *nom_du_serveur_distant*, avec le *l’argument utildist* et *rmtpassword* ignorés des arguments. La valeur FALSE indique que le *l’argument utildist* et *rmtpassword* arguments sont utilisés pour se connecter à *nom_du_serveur_distant* spécifié *locallogin* . Si *l’argument utildist* et *rmtpassword* sont également défini sur NULL, aucune connexion ou le mot de passe est utilisé pour se connecter au serveur lié.  
   
- [ @locallogin **=** ] **'***locallogin***'**  
+ `[ @locallogin = ] 'locallogin'`  
  Connexion sur le serveur local. *LocalLogin* est **sysname**, avec NULL comme valeur par défaut. La valeur NULL spécifie que cette entrée s’applique à toutes les connexions locales qui se connectent à *nom_du_serveur_distant*. Si non NULL, *locallogin* peut être un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion ou un compte de connexion Windows. La connexion Windows doit être autorisée à accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directement ou par l'intermédiaire de son appartenance à un groupe Windows qui a une autorisation d'accès.  
   
- [ @rmtuser **=** ] **'***l’argument utildist***'**  
+ `[ @rmtuser = ] 'rmtuser'`  
  Nom de connexion à distance utilisé pour se connecter à *nom_du_serveur_distant* lorsque @useself a la valeur FALSE. Lorsque le serveur distant est une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui n’utilise pas l’authentification Windows, *l’argument utildist* est un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion. *l’argument utildist* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ @rmtpassword **=** ] **'***rmtpassword***'**  
+ `[ @rmtpassword = ] 'rmtpassword'`  
  Le mot de passe associé *l’argument utildist*. *rmtpassword* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -87,7 +86,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
  La procédure sp_addlinkedsrvlogin ne peut pas être exécutée dans une transaction définie par l'utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation ALTER ANY LOGIN sur le serveur.  
   
 ## <a name="examples"></a>Exemples  

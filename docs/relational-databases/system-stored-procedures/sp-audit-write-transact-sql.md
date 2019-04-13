@@ -18,12 +18,12 @@ ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 23520ce686562e7ed2f45e87aa4717135dd1ab8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732897"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542159"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,22 +35,21 @@ ms.locfileid: "47732897"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-  
-sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,   
-        [ @succeeded =  succeeded   
-    [ , [ @user_defined_information =  ] 'user_defined_information' ]   
-    [ ; ]  
+sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
+    [ , [ @succeeded = ] succeeded ]
+    [ , [ @user_defined_information = ] 'user_defined_information' ]
+    [ ; ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **@user_defined_event_id**  
+ `[ @user_defined_event_id = ] user_defined_event_id`  
  Un paramètre défini par l’utilisateur et enregistré dans le **user_defined_event_id** colonne du journal d’audit. *@user_defined_event_id* est de type **smallint**.  
   
- **@succeeded**  
- Paramètre passé par l'utilisateur pour indiquer si l'événement a ou non réussi. Il apparaît dans la colonne succeeded du journal d'audit. *@succeeded* est **bits**.  
+ `[ @succeeded = ] succeeded`  
+ Paramètre passé par l'utilisateur pour indiquer si l'événement a ou non réussi. Il apparaît dans la colonne succeeded du journal d'audit. `@succeeded` est **bits**.  
   
- **@user_defined_information**  
- Texte défini par l'utilisateur et enregistré dans la nouvelle colonne user_defined_event_id du journal d'audit. *@user_defined_information* est **nvarchar (4000)**.  
+ `[ @user_defined_information = ] 'user_defined_information'`  
+ Texte défini par l'utilisateur et enregistré dans la nouvelle colonne user_defined_event_id du journal d'audit. `@user_defined_information` est **nvarchar (4000)**.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  0 (réussite) ou 1 (échec)  
@@ -60,7 +59,7 @@ sp_audit_write [ @user_defined_event_id =  ] user_defined_event_id ,
 ## <a name="remarks"></a>Notes  
  Lorsque le **USER_DEFINED_AUDIT_GROUP** est ajouté à une spécification d’audit de serveur ou une spécification d’audit de base de données, l’événement déclenché par **sp_audit_write** figureront dans le journal d’audit.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **public** rôle de base de données.  
   
 ## <a name="examples"></a>Exemples  

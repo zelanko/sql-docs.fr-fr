@@ -19,12 +19,12 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: e95110bdbbfbe0f5ca6ff453045cc4f759163036
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.openlocfilehash: c8f202dd4f383d1ed2186e589b275afc0049fb50
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57973678"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542209"
 ---
 # <a name="spfilestreamforcegarbagecollection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +37,20 @@ ms.locfileid: "57973678"
 ## <a name="syntax"></a>Syntaxe  
   
 ```  
-sp_filestream_force_garbage_collection  
-    [ @dbname = ]  'database_name',  
-    [ @filename = ] 'logical_file_name' ]  
+sp_filestream_force_garbage_collection
+    [ @dbname = ]  'database_name'
+    [ , [ @filename = ] 'logical_file_name' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **@dbname** = *database_name* représente le nom de la base de données pour exécuter le garbage collector.  
+ `[ @dbname = ]  'database_name'`  
+ Représente le nom de la base de données dans laquelle exécuter le garbage collector.  
   
 > [!NOTE]  
->  *dbname* est **sysname**. En l'absence de spécification, c'est la base de données actuelle qui est utilisée.  
+> `@dbname` est **sysname**. En l'absence de spécification, c'est la base de données actuelle qui est utilisée.  
   
- **@filename** = *logical_file_name*  
- Spécifie le nom logique du conteneur FILESTREAM dans lequel exécuter le garbage collector. **@filename** est facultatif. Si aucun nom de fichier logique n’est spécifié, le garbage collector nettoie tous les conteneurs FILESTREAM dans la base de données spécifié.  
+ `[ @filename = ] 'logical_file_name'`  
+ Spécifie le nom logique du conteneur FILESTREAM dans lequel exécuter le garbage collector. `@filename` est facultatif. Si aucun nom de fichier logique n’est spécifié, le garbage collector nettoie tous les conteneurs FILESTREAM dans la base de données spécifié.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
   
@@ -96,7 +97,7 @@ GO
 EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB';  
 ```  
   
-### <a name="b-specifying-a-container"></a>b. Spécification d'un conteneur  
+### <a name="b-specifying-a-container"></a>B. Spécification d'un conteneur  
   
 ```sql  
 USE FSDB;  

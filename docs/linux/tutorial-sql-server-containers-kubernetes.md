@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.prod: sql
 ms.custom: sql-linux,mvc
 ms.technology: linux
-ms.openlocfilehash: 669d02d32642ba4723892a98a1f4d0f3bc6e51f6
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.openlocfilehash: 13bd39a2d5334c2d343fdbc6c77a697a5d6a8403
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626319"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516605"
 ---
 # <a name="deploy-a-sql-server-container-in-kubernetes-with-azure-kubernetes-services-aks"></a>Déployer un conteneur de SQL Server dans Kubernetes avec Azure Kubernetes Services (AKS)
 
@@ -155,7 +155,7 @@ Configurer un [volume persistant](https://kubernetes.io/docs/concepts/storage/pe
 
 Dans cet exemple, le conteneur qui héberge l’instance de SQL Server est décrite comme un objet de déploiement Kubernetes. Le déploiement crée un jeu de réplicas. Le jeu de réplicas crée le pod. 
 
-Dans cette étape, créez un manifeste pour décrire le conteneur basé sur le serveur SQL [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image Docker. Le manifeste fait référence à la `mssql-server` revendication de volume persistant et le `mssql` secret que vous avez déjà appliqué au cluster Kubernetes. Le manifeste décrit également un [service](https://kubernetes.io/docs/concepts/services-networking/service/). Ce service est un équilibreur de charge. L’équilibreur de charge garantit que l’adresse IP persiste une fois que l’instance de SQL Server est récupérée. 
+Dans cette étape, créez un manifeste pour décrire le conteneur basé sur le serveur SQL [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) image Docker. Le manifeste fait référence à la `mssql-server` revendication de volume persistant et le `mssql` secret que vous avez déjà appliqué au cluster Kubernetes. Le manifeste décrit également un [service](https://kubernetes.io/docs/concepts/services-networking/service/). Ce service est un équilibreur de charge. L’équilibreur de charge garantit que l’adresse IP persiste une fois que l’instance de SQL Server est récupérée. 
 
 1. Créez un manifeste (fichier YAML) pour décrire le déploiement. L’exemple suivant décrit un déploiement, y compris un conteneur basé sur l’image de conteneur de SQL Server.
 
@@ -253,7 +253,7 @@ Dans cette étape, créez un manifeste pour décrire le conteneur basé sur le s
    Dans l’image précédente, le pod a le statut `Running`. Cet état indique que le conteneur est prêt. Cette opération peut prendre plusieurs minutes.
 
    >[!NOTE]
-   >Une fois le déploiement est créé, il peut prendre quelques minutes avant que le pod est visible. Le délai est parce que le cluster extrait la [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image à partir du hub Docker. Une fois que l’image est extraite de la première fois, les déploiements suivants peuvent être plus rapides si le déploiement vers un nœud qui possède déjà l’image mis en cache sur ce dernier. 
+   >Une fois le déploiement est créé, il peut prendre quelques minutes avant que le pod est visible. Le délai est parce que le cluster extrait la [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) image à partir du hub Docker. Une fois que l’image est extraite de la première fois, les déploiements suivants peuvent être plus rapides si le déploiement vers un nœud qui possède déjà l’image mis en cache sur ce dernier. 
 
 1. Vérifiez que les services sont en cours d’exécution. Exécutez la commande suivante :
 

@@ -11,18 +11,18 @@ ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 ms.custom: sql-linux
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: f45f667dc85ff3069d55fa3badb7c5c7f82f5929
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: 8b7f256aec6fc01500f5c98709086a69815fd6ef
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566628"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516515"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Configurer des images de conteneur de SQL Server sur Docker
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Cet article explique comment configurer et utiliser le [image mssql-server-linux conteneur](https://hub.docker.com/r/microsoft/mssql-server-linux/) avec Docker. Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubuntu 16.04. Elle peut être utilisée avec Docker Engine 1.8+ sur Linux ou sur Docker pour Mac/Windows.
+Cet article explique comment configurer et utiliser le [image mssql-server-linux conteneur](https://hub.docker.com/_/microsoft-mssql-server) avec Docker. Cette image est composée de SQL Server s’exécutant sur Linux basé sur Ubuntu 16.04. Elle peut être utilisée avec Docker Engine 1.8+ sur Linux ou sur Docker pour Mac/Windows.
 
 > [!NOTE]
 > Cet article se concentre spécifiquement sur l’utilisation de l’image mssql-server-linux. L’image de Windows n’est pas couverte, mais vous pouvez en savoir plus sur la [page du Hub Docker mssql-server-windows](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/).
@@ -411,7 +411,7 @@ sudo docker run -e 'ACCEPT_EULA=Y' -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" 
 
 Il existe des scénarios où vous ne souhaiterez pas utiliser la dernière image de conteneur de SQL Server. Pour exécuter une image de conteneur SQL Server spécifique, utilisez les étapes suivantes :
 
-1. Identifier le Docker **balise** pour la version que vous souhaitez utiliser. Pour afficher les légendes disponibles, consultez [la page du hub Docker mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/tags/).
+1. Identifier le Docker **balise** pour la version que vous souhaitez utiliser. Pour afficher les légendes disponibles, consultez [la page du hub Docker mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server).
 
 2. Extrayez l’image de conteneur de SQL Server avec la balise. Par exemple, pour extraire l’image de RC1, remplacez `<image_tag>` dans la commande suivante avec `rc1`.
 
