@@ -1,6 +1,6 @@
 ---
 title: Personnalisation du portail web | Microsoft Docs
-ms.date: 12/06/2018
+ms.date: 04/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -8,21 +8,21 @@ description: Dans cet article, vous découvrez comment changer l’apparence du 
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 6e3761e7bc91a219562d46cc33f0c5bbd4ca6aa3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201039"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506506"
 ---
 # <a name="branding-the-web-portal"></a>Personnalisation du portail web
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-Vous pouvez modifier l'apparence du portail web en le personnalisant à l’image de votre entreprise. Cette opération s'effectue via un package de marque. Le package de marque est conçu pour vous permettre de le créer même si vous n’avez pas les connaissances approfondies nécessaires en matière de feuille de style en cascade (CSS).  
-  
-<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA?list=PLv2BtOtLblH3F--8WmK9QcLbx6dV_lVkL" frameborder="0" allowfullscreen></iframe>  
-   
+Vous pouvez modifier l'apparence du portail web en le personnalisant à l’image de votre entreprise. Cette opération s'effectue via un package de marque. Le package de marque est conçu pour vous permettre de le créer même si vous n’avez pas les connaissances approfondies nécessaires en matière de feuille de style en cascade (CSS).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/m08kLuofwFA" frameborder="0" allowfullscreen></iframe>
+
 ## <a name="creating-the-brand-package"></a>Création du package de marque
   
 Un package de marque pour Reporting Services se compose de trois éléments, et il est empaqueté comme un fichier .zip.   
@@ -243,4 +243,4 @@ Vous pouvez également **télécharger** ou **supprimer** le package. La suppres
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Posez une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
