@@ -23,12 +23,12 @@ ms.assetid: 2c785b3b-4a0c-4df7-b5cd-23756dc87842
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7e64827ba35236f120f296baaaff7d01833ed6f5
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 9c29a6baa8948168f4fa8bc8a8099941e8b91503
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58280543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291559"
 ---
 # <a name="integration-services-service-ssis-service"></a>Service Integration Services (Service SSIS)
   Les rubriques de cette section décrivent le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , un service Windows de gestion des packages [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Ce service n'est pas obligatoire pour créer, enregistrer et exécuter des packages Integration Services. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] prend en charge le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour la compatibilité avec les versions antérieures de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -381,7 +381,7 @@ Pour plus d’informations, consultez [Getting Cross Domain Kerberos and Delegat
 > [!IMPORTANT]  
 >  Pour gérer des packages stockés sur un serveur distant, vous ne devez pas vous connecter à l’instance du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sur ce serveur distant. Au lieu de cela, modifiez le fichier de configuration du service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] afin que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] affiche les packages stockés sur le serveur distant.
   
- Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise le protocole DCOM. Pour plus d’informations sur le fonctionnement du protocole DCOM à travers les pare-feu, consultez l’article «[Using Distributed COM with Firewalls](https://go.microsoft.com/fwlink/?LinkId=12490)» (Utilisation de Distributed COM avec des pare-feu) dans MSDN Library.  
+ Le service [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] utilise le protocole DCOM.
   
  De nombreux systèmes de pare-feu sont disponibles. Si vous exécutez un autre pare-feu que le Pare-feu Windows, consultez la documentation de votre pare-feu pour obtenir des informations spécifiques au système utilisé.  
   

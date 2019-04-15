@@ -1,7 +1,7 @@
 ---
 title: Créer une sauvegarde différentielle de base de données (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7272df471f734d0813258897bb1e1a187efdfe6e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 279047e483720f5d089325f9d9ed17467ea96804
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47849890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241409"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Créer une sauvegarde différentielle de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,11 +29,11 @@ ms.locfileid: "47849890"
   
  **Sections de cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
      [Limitations et restrictions](#Restrictions)  
   
-     [Conditions préalables](#Prerequisites)  
+     [Conditions préalables requises](#Prerequisites)  
   
      [Recommandations](#Recommendations)  
   
@@ -69,7 +69,9 @@ ms.locfileid: "47849890"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio  
   
 #### <a name="create-a-differential-database-backup"></a>Créer une sauvegarde différentielle de base de données  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 1.  Après la connexion à l'instance appropriée du [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], dans l'Explorateur d'objets, cliquez sur le nom du serveur pour développer son arborescence.  
   
 2.  Développez **Bases de données**puis, selon la base de données, sélectionnez une base de données utilisateur ou développez **Bases de données système** et sélectionnez une base de données système.  
@@ -132,7 +134,7 @@ ms.locfileid: "47849890"
   
      **Pour consulter la valeur par défaut de compression de la sauvegarde actuelle**  
   
-    -   [Afficher ou configurer la compression par défaut des sauvegardes (option de configuration de serveur)](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
+    -   [Afficher ou configurer l'option de configuration du serveur valeur par défaut de compression de la sauvegarde](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
     > [!NOTE]  
     >  Vous pouvez également utiliser l'Assistant Plan de maintenance pour créer des sauvegardes différentielles de base de données.  
@@ -143,7 +145,7 @@ ms.locfileid: "47849890"
   
 1.  Exécutez l'instruction BACKUP DATABASE pour créer une sauvegarde différentielle de base de données, en spécifiant les éléments suivants :  
   
-    -   le nom de la base de données à sauvegarder ;  
+    -   le nom de la base de données à sauvegarder ;  
   
     -   l'unité de sauvegarde où est écrite la sauvegarde complète de la base de données.  
   

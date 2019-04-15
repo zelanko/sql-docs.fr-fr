@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 39030ba95129160680782eeb88e3b4c99da622e7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407865"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516585"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Clustering de sous-réseaux multiples SQL Server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "52407865"
 ##  <a name="VisualElement"></a> Cluster de basculement de sous-réseaux multiples SQL Server (deux nœuds, deux sous-réseaux)  
  L'illustration suivante représente une instance de cluster de basculement (FCI) à deux nœuds et deux sous-réseaux dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- ![Architecture de sous-réseaux multiples avec MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Architecture de sous-réseaux multiples avec MultiSubnetFailover")  
+ ![Architecture de sous-réseaux multiples avec MultiSubnetFailover](../../../sql-server/failover-clusters/windows/media/multi-subnet-architecture-withmultisubnetfailoverparam.png "Architecture de sous-réseaux multiples avec MultiSubnetFailover")  
   
   
 ##  <a name="Configurations"></a> Configurations d'une instance de cluster de basculement à plusieurs sous-réseaux  
@@ -45,12 +45,12 @@ ms.locfileid: "52407865"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI SQLCLUST1 inclut Node1 et Node2. Node1 est connecté à Subnet1 et Subnet2. Node2 est également connecté à Subnet1 et Subnet2. La dépendance de ressource d’adresse IP est définie sur **AND** par le programme de configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
-    > **REMARQUE :** cette configuration n’est pas considérée comme une configuration de cluster de basculement de sous-réseaux multiples car les nœuds de clusters se trouvent sur le même ensemble de sous-réseaux.  
+    > **REMARQUE :** Cette configuration n'est pas considérée comme une configuration de cluster de basculement de sous-réseaux multiples car les nœuds de clusters se trouvent sur le même ensemble de sous-réseaux.  
   
 ##  <a name="ComponentsAndConcepts"></a> Considérations relatives aux ressources d'adresses IP  
  Dans une configuration de cluster de basculement de sous-réseaux multiples, les adresses IP ne sont pas détenues par tous les nœuds dans le cluster de basculement et ne peuvent pas être toutes en ligne pendant le démarrage de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . À compter de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], vous pouvez définir la dépendance de ressource d’adresse IP sur **OR**. Cela permet à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] d'être en ligne lorsqu'il y a au moins une adresse IP valide avec laquelle il peut être lié.  
   
-> **REMARQUE :** dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], une technologie d’étirement V-LAN a été utilisée dans les configurations de clusters multisites pour exposer une adresse IP unique pour le basculement à travers différents sites. Avec la nouvelle fonctionnalité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permettant de mettre des nœuds de cluster à travers différents sous-réseaux, vous pouvez maintenant configurer des clusters de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à travers plusieurs sites sans implémenter la technologie d'étirement V-LAN.  
+> **REMARQUE :** Dans les versions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], une technologie d'étirement V-LAN a été utilisée dans les configurations de clusters multisites pour exposer une adresse IP unique pour le basculement à travers différents sites. Avec la nouvelle fonctionnalité de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permettant de mettre des nœuds de cluster à travers différents sous-réseaux, vous pouvez maintenant configurer des clusters de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] à travers plusieurs sites sans implémenter la technologie d'étirement V-LAN.  
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Considérations relatives à la dépendance OR de la ressource d'adresse IP  
  Vous pouvez considérer le comportement du basculement suivant si vous définissez la dépendance de ressource d’adresse IP sur **OR**:  

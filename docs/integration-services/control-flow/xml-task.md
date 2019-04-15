@@ -17,12 +17,12 @@ ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a399ee84e84f0c85e057b8eaf6294548e18f75ee
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 84711a5bdef0ce13f640b26b3973860b9b5a6f48
+ms.sourcegitcommit: 2e7686443a61b1a2cf4ca47d9ab1010b9e9b5188
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290565"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59291549"
 ---
 # <a name="xml-task"></a>Tâche XML
   La tâche XML est utilisée pour travailler avec des données XML. À l'aide de cette tâche, un package peut extraire des documents XML, appliquer des opérations aux documents en utilisant des feuilles de style XSLT (Extensible Stylesheet Language Transformations) et des expressions XPath, fusionner plusieurs documents, ou bien valider, comparer et enregistrer les documents mis à jour dans des fichiers et des variables.  
@@ -121,7 +121,7 @@ ms.locfileid: "58290565"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Effectuer une validation XML avec la tâche XML](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
+-   [Validate XML with the XML Task](../../integration-services/control-flow/validate-xml-with-the-xml-task.md)  
   
 -   [Page Expressions](../../integration-services/expressions/expressions-page.md)  
   
@@ -189,7 +189,7 @@ ms.locfileid: "58290565"
  **Destination**  
  Sélectionnez un gestionnaire de connexions de fichiers existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../integration-services/connection-manager/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
  **DestinationType**  
  Permet de sélectionner le type de destination correspondant au document XML. Cette propriété dispose des options répertoriées dans le tableau suivant.  
@@ -428,11 +428,11 @@ ms.locfileid: "58290565"
 |**IgnoreXMLDeclaration**|Permet d'indiquer si la déclaration XML doit être comparée.|  
 |**IgnoreDTD**|Permet d'ignorer le DTD (Document Type Definition).|  
 |**IgnoreWhite Spaces**|Spécifie s'il faut ignorer les différences dans le nombre d'espaces vides lorsque des documents sont comparés.|  
-|**IgnoreNamespaces**|Permet d'indiquer si la comparaison doit aussi porter sur l'URI (Uniform Resource Identifier) d'espace de nom relatif à un élément ainsi que sur les noms d'attribut de ce même élément.<br /><br /> Remarque : Si cette option a la valeur **True**, deux éléments possédant le même nom local, mais des espaces de nom distincts sont considérés comme identiques.|  
+|**IgnoreNamespaces**|Permet d'indiquer si la comparaison doit aussi porter sur l'URI (Uniform Resource Identifier) d'espace de nom relatif à un élément ainsi que sur les noms d'attribut de ce même élément.<br /><br /> Remarque : Si cette option a la valeur **True**, deux éléments possédant le même nom local, mais des espaces de nom distincts sont considérés comme identiques.|  
 |**IgnoreProcessingInstructions**|Permet d'indiquer si les instructions de traitement doivent être comparées.|  
-|**IgnoreOrderOf ChildElements**|Permet d'indiquer si l'ordre des éléments enfants doit être comparé.<br /><br /> Remarque : Si cette option a la valeur **True**, les éléments enfants qui diffèrent uniquement par leur position dans une liste de frères sont considérés comme identiques.|  
+|**IgnoreOrderOf ChildElements**|Permet d'indiquer si l'ordre des éléments enfants doit être comparé.<br /><br /> Remarque : Si cette option a la valeur **True**, les éléments enfants qui diffèrent uniquement par leur position dans une liste de frères sont considérés comme identiques.|  
 |**IgnoreComments**|Permet d'indiquer si les nœuds de commentaires doivent être comparés.|  
-|**IgnorePrefixes**|Permet d'indiquer si les préfixes d'un élément et ses noms d'attribut doivent être comparés.<br /><br /> Remarque : Si vous définissez cette option sur **True**, deux éléments possédant le même nom local, mais des URI et des préfixes d’espace de nom distincts sont considérés comme identiques.|  
+|**IgnorePrefixes**|Permet d'indiquer si les préfixes d'un élément et ses noms d'attribut doivent être comparés.<br /><br /> Remarque : Si vous définissez cette option sur **True**, deux éléments possédant le même nom local, mais des URI et des préfixes d’espace de nom distincts sont considérés comme identiques.|  
   
  **FailOnDifference**  
  Permet d'indiquer si la tâche échoue si l'opération Diff échoue.  
@@ -530,9 +530,7 @@ ms.locfileid: "58290565"
  **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md), [Ajouter une variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 ## <a name="related-content"></a>Contenu associé  
-  
--   Entrée de Blog, [XML Destination Script Component](https://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/), sur agilebi.com  
-  
+
 -   Exemple CodePlex, [Process XML Data Package Sample](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), sur www.codeplex.com  
   
   

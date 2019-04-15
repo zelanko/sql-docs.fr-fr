@@ -18,15 +18,15 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: ba3e358e897b35aadf68ce198c0a43ec8f24adef
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295667"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516555"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Quand vous migrez d’une ancienne version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ou version ultérieure et que vous passez au tout dernier [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md), il est possible que les performances d’une charge de travail fassent l’objet d’une régression. Cela est également possible (à un degré moindre) lors de la mise à niveau entre [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et les versions plus récentes.
 
@@ -206,7 +206,7 @@ L’Assistant Paramétrage de requêtes est une fonctionnalité basée sur la se
     > Si vous supprimez une session qui avait des repères de plan déployé, vous ne pouvez pas utiliser l’Assistant Paramétrage de requêtes pour revenir en arrière.    
     > Au lieu de cela, recherchez les repères de plan à l’aide de la table système [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) et supprimez-les manuellement à l’aide de [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite l’appartenance au rôle **db_owner**.
   
 ## <a name="see-also"></a> Voir aussi  

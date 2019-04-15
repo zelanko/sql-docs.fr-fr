@@ -16,12 +16,12 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 729464b51af6c9450f9166bd9a3c51d35541810f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 21f9be84c86e2991a600dc340347c4ca89f519e9
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801914"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533337"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>Créer une sauvegarde complète de base de données (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "56801914"
   
  À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , les options **PASSWORD** et **MEDIAPASSWORD** sont suspendues pour la création de sauvegardes. Vous pouvez toujours restaurer les sauvegardes créées avec des mots de passe.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** .  
   
  Des problèmes de propriété et d'autorisations sur le fichier physique de l'unité de sauvegarde sont susceptibles de perturber une opération de sauvegarde. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doit pouvoir lire et écrire sur l’unité. Le compte sous lequel le service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s’exécute **doit** avoir des autorisations d’écriture. Toutefois, [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md), qui ajoute une entrée pour une unité de sauvegarde dans les tables système, ne vérifie pas les autorisations d’accès au fichier. De tels problèmes pour le fichier physique de l'unité de sauvegarde peuvent n'apparaître que lorsque la ressource physique est sollicitée au moment de la sauvegarde ou de la restauration.  
@@ -211,19 +211,19 @@ Une stratégie d’accès stockée a été créée avec des droits de lecture, �
 *
     5.  Sélectionnez `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dans la zone de texte **Conteneur de stockage Windows Azure** .
 
-    6.  Dans la zone de texte **Fichier de sauvegarde** , entrez `Sales_stripe1of2_20160601.bak`.
+   6.  Dans la zone de texte **Fichier de sauvegarde** , entrez `Sales_stripe1of2_20160601.bak`.
 
-    7.  Cliquez sur **OK**.
+   7.  Cliquez sur **OK**.
 
-    8.  Répétez les étapes **4** et **5**.
+   8.  Répétez les étapes **4** et **5**.
 
-    9.  Dans la zone de texte **Fichier de sauvegarde** , entrez `Sales_stripe2of2_20160601.bak`.
+   9.  Dans la zone de texte **Fichier de sauvegarde** , entrez `Sales_stripe2of2_20160601.bak`.
 
-    10.  Cliquez sur **OK**.
+   10.  Cliquez sur **OK**.
 
-    11.   Cliquez sur **OK**.
+   11.   Cliquez sur **OK**.
 
-    **D2.  Il existe une signature d’accès partagé mais pas d’informations d’identification SQL Server**
+   **D2.  Il existe une signature d’accès partagé mais pas d’informations d’identification SQL Server**
   5.    Entrez `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` dans la zone de texte **Conteneur de stockage Windows Azure** .
   
   6.    Entrez la signature d’accès partagé dans la zone de texte **Stratégie d’accès partagé** .

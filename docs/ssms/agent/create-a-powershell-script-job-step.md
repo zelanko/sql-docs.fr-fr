@@ -1,7 +1,7 @@
 ---
 title: Créer une étape de travail exécutant un script PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1da40c8cc57b1f31447304717034b5c574d68143
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 268f504a717769a3b7ac9836349eb12273b49f5b
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240357"
 ---
 # <a name="create-a-powershell-script-job-step"></a>Create a PowerShell Script Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ Cette rubrique explique comment créer et définir une étape de travail de l'Ag
   
 **Dans cette rubrique**  
   
--   **Avant de commencer :**  
+-   **Avant de commencer :**  
   
     [Sécurité](#Security)  
   
@@ -45,12 +45,14 @@ Cette rubrique explique comment créer et définir une étape de travail de l'Ag
     [Transact-SQL](#TSQL)  
   
     [SQL Server Management Objects](#SMO)  
-  
+
 ## <a name="BeforeYouBegin"></a>Avant de commencer  
   
 ### <a name="Security"></a>Sécurité  
-Pour plus d'informations, consultez [Implement SQL Server Agent Security](../../ssms/agent/implement-sql-server-agent-security.md).  
-  
+Pour plus d'informations, consultez [Implémenter la sécurité de SQL Server Agent](../../ssms/agent/implement-sql-server-agent-security.md).  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="SSMS"></a>Utilisation de SQL Server Management Studio  
   
 #### <a name="to-create-a-powershell-script-job-step"></a>Pour créer une étape de travail exécutant un script PowerShell  

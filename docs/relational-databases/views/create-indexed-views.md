@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f29c5c3fbe0a0d9e3e8bb724ad2f7b2af7ad545e
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: 1714cc67cae1d8f2b49117891fa5a5b060f14415
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191049"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533347"
 ---
 # <a name="create-indexed-views"></a>Créer des vues indexées
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "52191049"
 > <sup>1</sup> Comme des opérations UPDATE, DELETE ou INSERT.   
   
 ###  <a name="Restrictions"></a> Options SET requises pour les vues indexées  
-L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET `CONCAT_NULL_YIELDS_NULL` est définie sur ON, l’expression `'abc' + NULL` retourne la valeur `NULL`. Cependant, si l’option `CONCAT_NULL_YIEDS_NULL` est définie sur OFF, la même expression produit `'abc'`.  
+L'évaluation de la même expression peut produire des résultats différents dans le [!INCLUDE[ssDE](../../includes/ssde-md.md)] si des options SET différentes sont actives lors de l'exécution de la requête. Par exemple, si l’option SET `CONCAT_NULL_YIELDS_NULL` est définie sur ON, l’expression `'abc' + NULL` retourne la valeur `NULL`. Cependant, si l’option `CONCAT_NULL_YIELDS_NULL` est définie sur OFF, la même expression produit `'abc'`.  
   
 Pour pouvoir gérer correctement les vues et retourner des résultats cohérents, les vues indexées nécessitent des valeurs fixes pour plusieurs options SET. Les options SET répertoriées dans le tableau ci-dessous doivent être définies avec les valeurs indiquées dans la colonne **Valeur requise** chaque fois que les conditions suivantes sont réunies :  
   
@@ -160,7 +160,7 @@ Lors de l’exécution d’instructions DML (comme `UPDATE`, `DELETE` ou `INSERT
 
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l’autorisation **CREATE VIEW** dans la base de données et l’autorisation **ALTER** sur le schéma dans lequel la vue est créée.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
