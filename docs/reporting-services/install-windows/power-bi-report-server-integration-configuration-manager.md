@@ -7,16 +7,16 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 1543846ec5353f5419b12bb5747b1ced53d2b4f0
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
+ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556241"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59506556"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Intégration du serveur de rapports Power BI (Gestionnaire de configuration)
 
-[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)])
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
 
 La page  **Intégration de Power BI** du Gestionnaire de configuration [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sert à inscrire le serveur de rapports auprès du client géré Azure Active Directory (AD) souhaité pour permettre aux utilisateurs du serveur de rapports d’épingler les éléments de rapports pris en charge à des tableaux de bord [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] . Pour obtenir la liste des éléments pris en charge que vous pouvez épingler, consultez [Épingler des éléments Reporting Services aux tableaux de bord Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md).
 
@@ -34,15 +34,15 @@ Outre une connexion Internet active pour pouvoir accéder au service [!INCLUDE[s
 
 - Les rapports dont vous voulez épingler des éléments doivent utiliser des informations d’identification stockées. Ce n’est pas une exigence pour l’intégration de [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)] en soi, mais pour le processus d’actualisation des éléments épinglés.  L’action d’épingler un élément de rapport crée un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour gérer la planification de l’actualisation des vignettes dans [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nécessitent des informations d’identification stockées. Si un rapport n’utilise pas des informations d’identification stockées, un utilisateur peut toujours épingler des éléments de rapport, mais un message d’erreur similaire à celui ci-dessous apparaît dans la page [!INCLUDE[sspowerbi](../../includes/sspowerbi-md.md)]Mes abonnements **lorsque l’abonnement associé tente d’actualiser les données dans** .
 
-        PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credential.
+    Erreur de remise Power BI : tableau de bord : IT Spend Analysis Sample, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Les informations d’identification de la source de données de l’utilisateur.
 
 Pour en savoir plus sur le stockage d’informations d’identification, consultez la section « Configurer des informations d’identification stockées pour une source de données propre à un rapport » dans [Stocker les informations d’identification dans une source de données Reporting Services](../../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).
 
 Un administrateur peut consulter les fichiers de journaux  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour plus d’informations.  Il y trouvera des messages semblables au suivant : Pour consulter et surveiller les fichiers journaux [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , vous pouvez utiliser [!INCLUDE[msCoName](../../includes/msconame-md.md)] Power Query sur les fichiers.  Pour en savoir plus et visionner une courte vidéo, consultez [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).
 
-    subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared dataset. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- subscription!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Erreur de remise Power BI : tableau de bord : IT Spend Analysis Sample, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou ce dataset partagé. Elles ne sont pas stockées dans la base de données du serveur de rapports ou la source de données de l’utilisateur est configurée pour ne pas exiger d’informations d’identification, mais le compte d’exécution sans assistance n’est pas spécifié.
 
-    notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Error occurred processing subscription fcdb8581-d763-4b3b-ba3e-8572360df4f9: PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: The current action cannot be completed. The user data source credentials do not meet the requirements to run this report or shared data set. Either the user data source credentials are not stored in the report server database, or the user data source is configured not to require credentials but the unattended execution account is not specified.
+- notification!WindowsService_1!1458!09/24/2015-00:09:27:: e ERROR: Une erreur s’est produite lors du traitement de l’abonnement fcdb8581-d763-4b3b-ba3e-8572360df4f9 : Erreur de remise Power BI : tableau de bord : IT Spend Analysis Sample, élément visuel : Chart2, erreur : Impossible de terminer l’action en cours. Les informations d’identification de la source de données de l’utilisateur ne répondent pas à la configuration requise pour exécuter ce rapport ou dataset partagé. Elles ne sont pas stockées dans la base de données du serveur de rapports ou la source de données de l’utilisateur est configurée pour ne pas exiger d’informations d’identification, mais le compte d’exécution sans assistance n’est pas spécifié.
 
 ## <a name="bkmk_steps2integrate"></a> Pour intégrer et inscrire le serveur de rapports
 
@@ -109,7 +109,7 @@ Cette section présente les étapes de base et les technologies impliquées dans
 
  ![ssrs_pbiflow_integration](../../reporting-services/install-windows/media/ssrs-pbiflow-integration.png "ssrs_pbiflow_integration")
 
- **Lorsqu’un utilisateur épingle un élément de rapport à un tableau de bord :**
+ **Lorsqu’un utilisateur épingle un élément de rapport à un tableau de bord :**
 
 1. Les utilisateurs prévisualisent les rapports dans le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] la première fois qu’ils cliquent pour épingler un élément de rapport dans le [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]
 
@@ -149,12 +149,12 @@ Lorsqu’un utilisateur épingle un élément pour la deuxième fois, les étape
 
 ## <a name="considerations-and-limitations"></a>Observations et limitations
 
-* Clients de protections et government ne sont pas pris en charge.
+* Les locataires viraux et gouvernementaux ne sont pas pris en charge.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
 [Mes paramètres pour l’intégration de Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
 [Épingler des éléments Reporting Services aux tableaux de bord Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
-[des tableaux de bord dans Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
+[Tableaux de bord Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 
-D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Posez une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
