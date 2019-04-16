@@ -1,27 +1,27 @@
 ---
 title: Où trouver le complément Reporting Services pour les produits SharePoint | Microsoft Docs
-ms.custom: ''
-ms.date: 11/16/2015
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - rsSharePoint
-ms.assetid: 069ac476-6336-44a9-a0e7-db1c4888948f
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 818b927f403d5d58bef41ce1dac033549e106a4c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 11/16/2015
+ms.openlocfilehash: 7c7dc81f4599d6f532ade1914d5561d845dd193e
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041030"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582532"
 ---
 # <a name="where-to-find-the-reporting-services-add-in-for-sharepoint-products"></a>Où trouver le complément Reporting Services pour les produits SharePoint
-  Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) pour les produits et les technologies SharePoint (rsSharePoint.msi) est téléchargeable sur le web et fournit des fonctionnalités pour intégrer un serveur de rapports avec un déploiement de SharePoint.  
+
+Le complément [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS) pour les produits et les technologies SharePoint (rsSharePoint.msi) est téléchargeable sur le web et fournit des fonctionnalités pour intégrer un serveur de rapports avec un déploiement de SharePoint.  
   
 > [!IMPORTANT]  
 >  Pour obtenir la liste des combinaisons prises en charge de la [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complément, serveur de rapports et SharePoint, consultez Pour plus d’informations, consultez [pris en charge les combinaisons de SharePoint et le serveur Reporting Services et complément &#40;SQL Server 2014&#41; ](supported-combinations-of-sharepoint-and-reporting-services-server.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "56041030"
 ##  <a name="bkmk_sql2008"></a> SQL Server 2008 Reporting Services Add-in pour 2007 produits et Technologies SharePoint  
  Le complément Microsoft SQL Server 2008 Reporting Services pour les technologies Microsoft SharePoint est téléchargeable sur le Web et permet d'exécuter un serveur de rapports au sein d'un déploiement plus étendu de Microsoft Windows SharePoint Services 3.0 ou de Microsoft Office SharePoint Server 2007.  
   
- La version la plus récente de ce fichier est disponible en ligne sur le site Web du Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] , à partir de la page [Complément Microsoft SQL Server 2008 Reporting Services pour les technologies Microsoft SharePoint](https://go.microsoft.com/fwlink/?LinkID=204813).  
+ La version la plus récente de ce fichier est disponible en ligne sur le site Web du Centre de téléchargement [!INCLUDE[msCoName](../../includes/msconame-md.md)] , à partir de la page [Complément Microsoft SQL Server 2008 Reporting Services pour les technologies Microsoft SharePoint](https://www.microsoft.com/download/details.aspx?id=622).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer ou désinstaller le complément Services Reporting pour SharePoint &#40;SharePoint 2010 et SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   

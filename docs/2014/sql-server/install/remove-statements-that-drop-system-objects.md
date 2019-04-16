@@ -13,12 +13,12 @@ ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e1f355b9e13bb85f1bc91d9626e27d6ee3fafa15
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 68e5000e924c438a4611e2fa8c134f0dd822f930
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153713"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581543"
 ---
 # <a name="remove-statements-that-drop-system-objects"></a>Supprimer les instructions qui suppriment des objets système
   Le Conseiller de mise à niveau a détecté des instructions qui suppriment les objets système. Les objets système, y compris les procédures stockées étendues, sont déployés dans une base de données de **ressources** en lecture seule (mssqlsystemresource) et ne peuvent pas être supprimés. Modifiez vos applications pour révoquer ou refuser l'autorisation EXECUTE sur les objets système.  
@@ -34,6 +34,6 @@ ms.locfileid: "48153713"
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

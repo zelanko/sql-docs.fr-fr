@@ -4,20 +4,20 @@ description: Apprenez à modéliser, former et utiliser des données partitionn�
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7ccdc67413e6714c762d165a8d087b9385a3f5a4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f7b176cf4aa50292c3b3968107ded5fcdd3533d8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512166"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582137"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Didacticiel : Créer des modèles basés sur une partition dans R sur SQL Server
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>Tutoriel : Créer des modèles basés sur une partition dans R sur SQL Server
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 Dans SQL Server 2019, en fonction de partition de modélisation est la possibilité de créer et former des modèles sur des données partitionnées. Pour les données stratifiées segmente naturellement dans un schéma de donnée de classification - tel que les régions géographiques, date et heure, âge ou sexe - vous pouvez exécuter les script sur l’ensemble de données, avec la possibilité de modéliser, former et noter sur les partitions qui restent intactes sur toutes ces opérations. 

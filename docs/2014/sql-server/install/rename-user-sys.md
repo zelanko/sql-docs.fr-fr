@@ -13,12 +13,12 @@ ms.assetid: d622d646-83e4-4b6f-9a21-77b301af04b5
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ddcadb1fe32c61fbab45bbdcfbc18d60d1072d23
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 8e227e4d382dac627626b977427aae05d0295744
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078210"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582332"
 ---
 # <a name="rename-user-sys"></a>Renommer l'utilisateur système
   Le Conseiller de mise à niveau a détecté le nom d'utilisateur **sys** dans une base de données. Ce nom est réservé. Renommez l'utilisateur avant d'effectuer la mise à niveau. Si l'utilisateur n'est pas renommé, la base de données sera marquée comme étant suspecte après l'opération de mise à niveau et restera indisponible jusqu'à ce qu'elle soit mise en ligne.  
@@ -64,6 +64,6 @@ ms.locfileid: "48078210"
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -1,9 +1,6 @@
 ---
 title: Mettre à niveau et migrer Reporting Services | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - database-engine
 ms.topic: conceptual
@@ -12,19 +9,22 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 5028e1034a7f94cc877d6164b15f6f7b925a661e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017180"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583072"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
-  Cette rubrique est une vue d’ensemble des options de mise à niveau et migration pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il existe deux approches générales liées à la mise à niveau d'un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
+
+Cette rubrique est une vue d’ensemble des options de mise à niveau et migration pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il existe deux approches générales liées à la mise à niveau d'un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
 -   **Mise à niveau :** vous mettez à niveau les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les serveurs et instances où ils sont installés. C’est ce que l’on appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d’informations, consultez la section « Native pour la Migration de SharePoint » plus loin dans ce document et de la rubrique connexe [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
@@ -155,7 +155,7 @@ ms.locfileid: "56017180"
   
     3.  Les autres outils clients, tels que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et la documentation en ligne, ne sont pas mis à niveau. Pour obtenir des nouvelles versions des outils, vous pouvez les ajouter lorsque vous exécutez le programme d'installation. Les versions antérieures coexistent avec les versions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Si vous avez installé les exemples, la version antérieure demeure. L'installation ne prend pas en charge la mise à niveau pour les exemples SQL Server.  
   
-    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est disponible en téléchargement séparé. Pour plus d'informations, consultez [Microsoft SQL Server 2014 Data Tools - Business Intelligence pour Microsoft Visual Studio 2012](https://go.microsoft.com/fwlink/?LinkID=325512).  
+    4.  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est disponible en téléchargement séparé. Pour plus d'informations, consultez [Microsoft SQL Server 2014 Data Tools - Business Intelligence pour Microsoft Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
 6.  Le programme d'installation réutilise l'entrée de service du gestionnaire de services de contrôle pour le service Report Server de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Cette entrée de service inclut le compte de service Windows Report Server.  
   

@@ -13,15 +13,15 @@ ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9cf8109d1faa9bcd75a6150aea3959f37b79f1cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136349"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582692"
 ---
 # <a name="specify-merge-replication-properties"></a>Spécifiez les propriétés de réplication de fusion
-Cette rubrique explique comment spécifier différentes propriétés pour la réplication de fusion. 
+Cette rubrique explique comment spécifier différentes propriétés pour votre réplication de fusion. 
 
 
 ## <a name="download-only"></a>Téléchargement seul
@@ -72,7 +72,7 @@ Cette rubrique explique comment spécifier différentes propriétés pour la ré
         > [!NOTE]  
         >  Si la table source d'un article est déjà publiée dans une autre publication, les deux articles doivent être en téléchargement uniquement ou ne pas l'être.  
  
-## <a name="interactive-conflict-resolution"></a>Résolution de conflits interactive
+## <a name="interactive-conflict-resolution">Résolution de conflits interactive</a>
 La réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] propose un programme de résolution interactif qui vous permet de résoudre manuellement des conflits au cours d'une synchronisation à la demande dans le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Quand la résolution de conflits est activée, résolvez les conflits de façon interactive au cours de la synchronisation, à l'aide du résolveur interactif. Le résolveur interactif est disponible via le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Pour plus d’informations, consultez [Synchroniser un abonnement à l’aide du Gestionnaire de synchronisation Windows &#40;Gestionnaire de synchronisation Windows&#41;](../synchronize-a-subscription-using-windows-synchronization-manager.md).  
   
     
@@ -82,7 +82,7 @@ La réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[
   
 ###  <a name="using-sql-server-management-studio"></a>Utilisation de SQL Server Management Studio  
   
-#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Activer la résolution interactive des conflits pour un article  
+#### <a name="enable-interactive-conflict-resolution-for-an-article"></a>Activer la résolution de conflits interactive pour un article  
   
 1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez une table. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](view-and-modify-publication-properties.md).    
 2.  Cliquez sur **Propriétés de l'article**, puis cliquez sur **Définir les propriétés de l'article de Table en surbrillance** ou sur **Définir les propriétés de tous les articles de table**.    
@@ -93,13 +93,13 @@ La réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>Pour spécifier qu'un abonnement doit utiliser la résolution de conflits interactive  
   
-1.  Dans le **Subscription Properties - \<abonné > : \<Base_de_données_abonnement >** boîte de dialogue, spécifiez une valeur de **True** pour le **résoudre les conflits interactivement** option. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) et [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
+1.  Dans la boîte de dialogue **Propriétés de l’abonnement - \<Abonné> : \<Base_de_données_abonnement>**, affectez la valeur **True** à l’option **Résoudre les conflits interactivement**. Pour plus d'informations sur l'accès à cette boîte de dialogue, consultez [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) et [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md). 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
  Vous pouvez spécifier par programme qu'un Abonné utilisera cette interface graphique pour résoudre les conflits dans les articles lorsqu'un abonnement par extraction à une publication de fusion est créé. Seuls les conflits dans les articles qui prennent en charge cette option seront affichés dans le programme de résolution interactif.  
   
-#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Créer un abonnement par extraction de fusion qui utilise le composant résolveur interactif  
+#### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>Créer un abonnement de fusion par extraction qui utilise l’outil de résolution interactif  
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql), en spécifiant **@publication**. Notez la valeur de **allow_interactive_resolver** pour chaque article du jeu de résultats pour lequel le programme de résolution interactif sera utilisé.    
     -   Si cette valeur est **1**, le programme de résolution interactif sera utilisé.    
@@ -113,7 +113,7 @@ La réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[
     -   Les informations de compte de sécurité requises par l'Agent de fusion. Pour plus d’informations, consultez [Create a Pull Subscription](../create-a-pull-subscription.md).    
 4.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql).  
   
-#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Définir un article qui prend en charge le composant résolveur interactif  
+#### <a name="define-an-article-that-supports-the-interactive-resolver"></a>Définir un article qui prend en charge l’outil de résolution interactif  
   
 Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez le nom de la publication à laquelle l'article appartient pour **@publication**, le nom de l'article pour **@article**, l'objet de base de données qui est publié pour **@source_object**la valeur **true** à **@allow_interactive_resolver**. Pour plus d'informations, voir [Define an Article](define-an-article.md).  
 
@@ -130,11 +130,11 @@ Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplicat
 ###  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
  Spécifiez le suivi au niveau des lignes ou des colonnes pour les articles de fusion sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article**, disponible dans l’Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication - \<Publication>**. Pour plus d’informations sur l’utilisation de l’Assistant et sur l’accès à la boîte de dialogue, consultez [Créer une publication](create-a-publication.md) et [Afficher et modifier les propriétés d’une publication](../publish/view-and-modify-publication-properties.md).  
   
-#### <a name="specify-row--or-column-level-tracking"></a>Spécifiez ou colonne-suivi de niveau ligne  
+#### <a name="specify-row--or-column-level-tracking"></a>Spécifier le suivi au niveau des lignes ou des colonnes  
   
 1.  Dans la page **Articles** de l’Assistant Nouvelle publication ou la boîte de dialogue **Propriétés de la publication - \<Publication>**, sélectionnez une table.    
 2.  Cliquez sur **Propriétés de l'article**, puis cliquez sur **Définir les propriétés de l'article de Table en surbrillance** ou sur **Définir les propriétés de tous les articles de table**.   
-3.  Sur le **propriétés** onglet de la **propriétés de l’Article \<Article >** boîte de dialogue, sélectionnez une de ces valeurs pour le **niveau de suivi** propriété : **Le suivi au niveau des lignes** ou **le suivi au niveau de la colonne**.    
+3.  Sous l’onglet **Propriétés** de la boîte de dialogue **Propriétés de l’article\<Article>**, sélectionnez l’une des valeurs suivantes pour la propriété **Niveau de suivi** : **Suivi au niveau des lignes** ou **Suivi au niveau des colonnes**.    
 4.  Si vous êtes dans la boîte de dialogue **Propriétés de la publication - \<Publication>**, cliquez sur **OK** pour enregistrer et fermer la boîte de dialogue.  
   
 ###  <a name="using-transact-sql"></a>Utilisation de Transact-SQL  
@@ -146,7 +146,7 @@ Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplicat
     -   **true** - utiliser le suivi au niveau des colonnes pour l'article.    
     -   **false** - utiliser le suivi au niveau des lignes, qui est la valeur par défaut.  
   
-#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Modifier les options de suivi pour un article de fusion des conflits  
+#### <a name="change-conflict-tracking-options-for-a-merge-article"></a>Changer les options de suivi des conflits pour un article de fusion  
   
 1.  Pour déterminer les options de suivi des conflits pour un article de fusion, exécutez [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql). Notez la valeur de l'option **column_tracking** dans le jeu de résultats de l'article. La valeur **1** indique que le suivi au niveau des colonnes est utilisé, tandis que la valeur **0** indique que le suivi au niveau des lignes est utilisé.    
 2.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql). Affectez la valeur **column_tracking** à **@property** et l'une des valeurs suivantes à **@value**:
@@ -165,14 +165,14 @@ Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplicat
 > [!IMPORTANT]  
 >  L'activation de cette fonctionnalité conduit à une non-convergence ; autrement dit, les données présentes au niveau de l'Abonné ne reflèteront pas correctement les données présentes au niveau du serveur de publication. Vous devez implémenter votre propre mécanisme de manière à supprimer manuellement les lignes supprimées.  
   
-### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Spécifiez que les suppressions doivent être ignorées pour un nouvel article de fusion  
+### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>Spécifier que les suppressions doivent être ignorées pour un nouvel article de fusion  
   
 1.  Dans la base de données de publication sur le serveur de publication, exécutez [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql). Spécifiez la valeur `false` pour **@delete_tracking**. Pour plus d'informations, voir [Define an Article](../publish/define-an-article.md).  
   
     > [!NOTE]  
     >  Si la table source d'un article est déjà publiée dans une autre publication, la valeur de **delete_tracking** doit être la même pour les deux articles.  
   
-### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Spécifiez que les suppressions doivent être ignorées pour un article de fusion existant  
+### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>Spécifier que les suppressions doivent être ignorées pour un article de fusion existant  
   
 1.  Pour déterminer si la compensation d’erreur est activée pour un article, exécutez [sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) et notez la valeur de **delete_tracking** dans le jeu de résultats. Si cette valeur est **0**, les suppressions sont déjà ignorées.    
 2.  Si la valeur à l’étape 1 est **1**, exécutez [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) sur la base de données de publication au niveau du serveur de publication. Spécifiez la valeur **delete_tracking** pour **@property**et la valeur `false` pour **@value**.  
@@ -181,7 +181,7 @@ Lorsqu'un abonnement à une publication de fusion est synchronisé, la réplicat
     >  Si la table source d'un article est déjà publiée dans une autre publication, la valeur de **delete_tracking** doit être la même pour les deux articles.  
   
 ## <a name="processing-order"></a>Ordre de traitement
-  La réplication de fusion vous permet de spécifier l'ordre dans lequel les articles sont traités par l'Agent de fusion pendant le processus de synchronisation. Vous pouvez attribuer par programme un ordre à chaque article lors de la création de l'article à l'aide des procédures stockées de réplication. Les articles sont traités à partir de la valeur la plus faible vers la valeur la plus élevée. Si deux articles ont la même valeur, ils sont traités simultanément. Pour plus d’informations, consultez [propriétés de spécifier la réplication de fusion](../publish/specify-merge-replication-properties.md).  
+  La réplication de fusion vous permet de spécifier l'ordre dans lequel les articles sont traités par l'Agent de fusion pendant le processus de synchronisation. Vous pouvez attribuer par programme un ordre à chaque article lors de la création de l'article à l'aide des procédures stockées de réplication. Les articles sont traités à partir de la valeur la plus faible vers la valeur la plus élevée. Si deux articles ont la même valeur, ils sont traités simultanément. Pour plus d’informations, consultez [Spécifier les propriétés de la réplication de fusion](../publish/specify-merge-replication-properties.md).  
 
   À partir de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], il est possible de remplacer l'ordre de traitement par défaut des articles pour les publications de fusion. Ceci est utile par exemple si vous définissez une intégrité référentielle via des déclencheurs et que ces déclencheurs doivent s'exécuter dans un certain ordre. 
 

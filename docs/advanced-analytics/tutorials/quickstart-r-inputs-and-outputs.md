@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 56d2eb65ca95dd4f153f3c7a6ebb00e926465687
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046787"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582682"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>Démarrage rapide : Gérer les entrées et sorties à l’aide de R dans SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -87,8 +87,6 @@ Jetons un œil à la valeur par défaut des variables d’entrée et de sortie d
     ```
 
     Notez que R respecte la casse, par conséquent, le cas des variables d’entrée et de sortie dans `@input_data_1_name` et `@output_data_1_name` doivent correspondre celles figurant dans le code R dans `@script`. 
-
-    En outre, l’ordre des paramètres est important. Vous devez commencer par spécifier les paramètres obligatoires *@input_data_1* et *@output_data_1* pour pouvoir utiliser les paramètres facultatifs *@input_data_1_name* et *@output_data_1_name*.
 
     Vous ne pouvez passer qu’un seul dataset d’entrée comme paramètre, et vous ne pouvez retourner qu’un seul dataset. Toutefois, vous pouvez appeler d’autres datasets à partir de votre code R et retourner des sorties d’autres types en plus du dataset. Vous pouvez aussi ajouter le mot clé OUTPUT à n’importe quel paramètre pour qu’il soit retourné avec les résultats. 
 

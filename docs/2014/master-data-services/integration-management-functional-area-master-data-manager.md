@@ -10,12 +10,12 @@ ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: leolimsft
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 31cf50a29e9dfcc0952df7132dcbed1690aeb831
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 571f0bbd06c141173e7717e304722eb7d4bcd346
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353599"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582790"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>Zone fonctionnelle Gestion de l'intégration (Master Data Manager)
   Dans la zone fonctionnelle Gestion de l'intégration, les administrateurs peuvent importer les données des tables de mise en lots et créer des vues d'abonnement à utiliser pour les systèmes d'abonnement. Pour plus d’informations sur les administrateurs, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  
@@ -23,7 +23,7 @@ ms.locfileid: "53353599"
 ## <a name="import-data"></a>Importer des données  
  [Importation de données &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)  
   
- [Charger ou mettre à jour des membres dans Master Data Services à l’aide du processus de site](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
+ [Charger ou mettre à jour des membres dans Master Data Services à l’aide du processus de site](add-update-and-delete-data-master-data-services.md)  
   
  [Déplacer des membres de hiérarchie explicite à l’aide du processus de site &#40;Master Data Services&#41;](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)  
   

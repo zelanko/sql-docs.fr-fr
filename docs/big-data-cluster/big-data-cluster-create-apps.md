@@ -6,17 +6,17 @@ author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: jroth
 manager: craigg
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 6cdedc7eac7b9faa2d266b1a32c299d8b7f5fe73
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.openlocfilehash: 40919c7b300ffed0bdc84f4214b28c8ea71b15b8
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58871999"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582444"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Comment déployer une application sur un cluster de données volumineux de SQL Server (version préliminaire)
 
@@ -41,7 +41,7 @@ Les types d’applications suivants sont pris en charge :
 ## <a name="prerequisites"></a>Prérequis
 
 - [Cluster de données volumineux de SQL Server 2019](deployment-guidance.md)
-- [utilitaire de ligne de commande mssqlctl](deploy-install-mssqlctl.md)
+- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
 
 ## <a name="capabilities"></a>Fonctions
 
@@ -111,7 +111,7 @@ Cela suppose que vous disposez de votre application stockée dans le `addpy` dos
 
 Pour déployer cet exemple d’application, créer les fichiers suivants dans un répertoire appelé `addpy`:
 
-- `add.py`. Copiez le code Python suivant dans ce fichier :
+- `add.py` . Copiez le code Python suivant dans ce fichier :
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +119,7 @@ Pour déployer cet exemple d’application, créer les fichiers suivants dans un
         return result
     result=add(x,y)
    ```
-- `spec.yaml`. Copiez le code suivant dans ce fichier :
+- `spec.yaml` . Copiez le code suivant dans ce fichier :
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

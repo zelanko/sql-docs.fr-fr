@@ -17,12 +17,12 @@ ms.assetid: ee66c7a5-eb6d-4fcf-970c-ab099d78c8d9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 641dbb6e33f7b39a7542fdd43a940c487a4b21d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: fc6b4ec763457996309caf1884829638367e9b18
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093039"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582852"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>Utiliser sp_rename pour renommer le nom d'index en double
   Le Conseiller de mise à niveau a détecté des noms d'index de table ou de vue en double. Renommez les index afin de supprimer les doublons avant la mise à niveau.  
@@ -63,6 +63,6 @@ ms.locfileid: "48093039"
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -36,12 +36,12 @@ ms.assetid: 4a3cb94a-a7ac-4cec-94c7-db26fcf6d161
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0d8ec04baf292807120ed5a26360878ac7e20442
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48070899"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59581924"
 ---
 # <a name="using-reports"></a>Utilisation de rapports
   Un rapport distinct est généré pour chaque composant et, si nécessaire, pour chaque instance, que l'Assistant Analyse du Conseiller de mise à niveau analyse sur un serveur. Le rapport contient des détails sur les problèmes connus qui affectent une mise à niveau. Il fournit également des liens vers des informations et les actions suggérées pour traiter les problèmes identifiés.  
@@ -83,10 +83,10 @@ ms.locfileid: "48070899"
  Si vous souhaitez partager les informations avec d'autres personnes, vous pouvez leur envoyer le rapport XML. Ou, si vous souhaitez utiliser une autre application, vous pouvez exporter le rapport dans un fichier de valeurs séparées par des virgules (CSV) qui vous permettra de créer une feuille de calcul, un fichier texte ou un message électronique.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
- [Comment : exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)   
- [Comment : filtrer les rapports](../../../2014/sql-server/install/how-to-filter-reports.md)   
+ [Procédure : Afficher un rapport du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-view-an-upgrade-advisor-report.md)   
+ [Procédure : Exporter des rapports](../../../2014/sql-server/install/how-to-export-reports.md)   
+ [Procédure : Rapports de filtre](../../../2014/sql-server/install/how-to-filter-reports.md)   
  [Résolution des problèmes de mise à niveau](../../../2014/sql-server/install/resolving-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -14,12 +14,12 @@ ms.assetid: f88d86ec-324b-4518-b6d7-1af7e7265812
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0cf438c6c5ef374e6119f583ffd72a76a99d3110
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: b29dc4e8f6dc32a1bda1ace7f029e77d8b1a45b9
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105789"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583122"
 ---
 # <a name="large-backup-or-restore-history-tables-make-upgrade-appear-to-not-respond"></a>Les tables d'historique de sauvegarde ou de restauration importantes donnent l'impression que la mise à niveau ne répond pas
   Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], de nouvelles colonnes ont été ajoutées dans certaines tables d'historique de sauvegarde et de restauration. La mise à niveau de ces tables implique de les modifier pour ajouter les nouvelles colonnes. Si une ou plusieurs de ces tables contiennent un grand nombre de lignes, la mise à niveau semblera bloquée pendant une durée substantielle sur l'instruction ALTER TABLE qui ajoute des colonnes à ces tables.  
@@ -54,6 +54,6 @@ ms.locfileid: "48105789"
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

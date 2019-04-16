@@ -11,12 +11,12 @@ ms.assetid: 500ee6b3-2154-45d2-a3cf-8760166d9413
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d9ee14c39f7fee577065de934f839f9d6c88e630
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 08b853d57068121fccb4db2341754eea0af7f734
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413769"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583132"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Avertissement sur l'utilisation du côté client de GEOMETRY, de la GÉOGRAPHIE et du HIERARCHYID
   L’assembly **Microsoft.SqlServer.Types.dll**, qui contient les types de données spatiales, a été mis à niveau de la version 10.0 vers la version 11.0. Les applications personnalisées qui font référence à cet assembly peuvent échouer lorsque certaines conditions sont vraies.  
@@ -27,7 +27,7 @@ ms.locfileid: "52413769"
 ## <a name="description"></a>Description  
  L’assembly **Microsoft.SqlServer.Types.dll**, qui contient les types de données spatiales, a été mis à niveau de la version 10.0 vers la version 11.0. Les applications personnalisées qui font référence à cet assembly peuvent échouer lorsque les conditions suivantes sont remplies.  
   
--   Lorsque vous déplacez une application personnalisée à partir d’un ordinateur sur lequel [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a été installé sur un ordinateur sur lequel uniquement [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé, l’application échoue, car la version référencée 10.0 de le **SqlTypes** assembly n’est pas présent. Le message d'erreur suivant peut s'afficher : `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
+-   Lorsque vous déplacez une application personnalisée à partir d’un ordinateur sur lequel [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] a été installé sur un ordinateur sur lequel uniquement [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est installé, l’application échoue, car la version référencée 10.0 de le **SqlTypes** assembly n’est pas présent. Ce message d'erreur peut s'afficher : `"Could not load file or assembly 'Microsoft.SqlServer.Types, Version=10.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91' or one of its dependencies. The system cannot find the file specified."`  
   
 -   Lorsque vous référencez le **SqlTypes** version 11.0, de l’assembly et la version 10.0 est également installée, vous pouvez voir ce message d’erreur : `"System.InvalidCastException: Unable to cast object of type 'Microsoft.SqlServer.Types.SqlGeometry' to type 'Microsoft.SqlServer.Types.SqlGeometry'."`  
   
@@ -85,6 +85,7 @@ ms.locfileid: "52413769"
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md
+)  
   
   

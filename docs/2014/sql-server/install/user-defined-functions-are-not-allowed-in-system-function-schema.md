@@ -14,12 +14,12 @@ ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b7c21521fbdd4a4e80ed196c67c72f790341f020
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 35cc33df40c17e6dbc1935e205ed688615de0294
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254274"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583103"
 ---
 # <a name="user-defined-functions-are-not-allowed-in-systemfunctionschema"></a>Les fonctions définies par l'utilisateur ne sont pas autorisées dans system_function_schema
   Le Conseiller de mise à niveau a détecté des fonctions définies par l’utilisateur qui sont détenues par l’utilisateur non documenté **system_function_schema**. Vous ne pouvez pas créer une fonction système définie par l'utilisateur en spécifiant cet utilisateur. Le **system_function_schema** nom d’utilisateur n’existe pas, et l’ID d’utilisateur qui est associé à ce nom (UID = 4) est réservé pour le **sys** schéma et est limité à un usage interne uniquement.  
@@ -66,7 +66,7 @@ ms.locfileid: "54254274"
 -   « Base de données Resource »  
   
 ## <a name="see-also"></a>Voir aussi  
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)   
  [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Supprimer les instructions qui modifient les objets système](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [Supprimer les instructions qui suppriment des objets système](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

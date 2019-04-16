@@ -13,12 +13,12 @@ ms.assetid: 10c32f06-f7e1-40e0-8f79-6d921f2bef1d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 068346ed0adb5c74d5e892d25c2cc7b93fc57871
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 84e00a2111b9cfe38ca680ec6c17ada724456878
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096759"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583192"
 ---
 # <a name="for-xml-auto-queries-return-derived-table-references-in-90-or-later-compatibility-modes"></a>Les requêtes FOR XML AUTO retournent des références de tables dérivées en mode de compatibilité 90 ou ultérieur
   Lorsque le niveau de compatibilité de la base de données est supérieur ou égal à 90, les requêtes FOR XML qui s'exécutent en mode AUTO retournent des références à des alias de table dérivée. Lorsque le niveau de compatibilité est égal à 80, les instructions FOR XML AUTO retournent des références à des tables de base qui définissent une table dérivée.  
@@ -62,6 +62,6 @@ FOR XML AUTO;
   
 ## <a name="see-also"></a>Voir aussi  
  [Problèmes de mise à niveau du moteur de base de données](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [Conseiller de mise à niveau de SQL Server 2014 &#91;nouveau&#93;](sql-server-2014-upgrade-advisor.md)  
   
   
