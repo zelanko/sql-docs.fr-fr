@@ -24,12 +24,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5225b335cc028397f63cb930b07e8781ce0d8454
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ed70ca65089991b2b557179beda3c7bd6c58b9ac
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213708"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429355"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "53213708"
 ![fixed_server_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-server-roles.png)   
   
 > [!IMPORTANT]  
->  L'autorisation **CONTROL SERVER** ressemble, mais n'est pas identique au rôle serveur fixe **sysadmin** . Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple : **CONTROL SERVER** n’implique pas l’appartenance au rôle serveur fixe **sysadmin**.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes **DBCC** et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe **sysadmin** . Pour découvrir la liste des 171 procédures stockées système qui nécessitent l’appartenance à **sysadmin** , consultez le billet de blog suivant d’Andreas Wolter : [Comparaison entre CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et réaffectation de privilèges - avertissements](https://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  L'autorisation **CONTROL SERVER** ressemble, mais n'est pas identique au rôle serveur fixe **sysadmin** . Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple : **CONTROL SERVER** n’implique pas l’appartenance au rôle serveur fixe **sysadmin**.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes **DBCC** et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe **sysadmin** . Pour découvrir la liste des 171 procédures stockées système qui nécessitent l’appartenance à **sysadmin** , consultez le billet de blog suivant d’Andreas Wolter : [Comparaison entre CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et réaffectation de privilèges - avertissements](http://andreas-wolter.com/en/control-server-vs-sysadmin-sa/).  
   
 ## <a name="server-level-permissions"></a>Autorisations au niveau serveur  
  Seules des autorisations au niveau du serveur peuvent être ajoutées aux rôles serveur définis par l'utilisateur. Pour répertorier les autorisations au niveau du serveur, exécutez l'instruction suivante. Les autorisations au niveau du serveur sont :  
@@ -94,9 +94,9 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
   
 ## <a name="see-also"></a> Voir aussi  
  [Rôles au niveau de la base de données](../../../relational-databases/security/authentication-access/database-level-roles.md)   
- [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Affichages catalogue de sécurité&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
- [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)   
+ [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [Autorisations du principal du serveur GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   
  [Autorisations du principal du serveur REVOKE &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [Autorisations du principal du serveur DENY &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   

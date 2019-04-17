@@ -13,13 +13,13 @@ ms.assetid: f5309285-ce93-472c-944b-9014dc8f001d
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b9b0e74eebe3a1cf86af9e3bf8a9a8d4e58495b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
+ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
+ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372481"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59542039"
 ---
 # <a name="query-store-usage-scenarios"></a>Scénarios d’utilisation du Magasin des requêtes
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -131,6 +131,9 @@ Avant [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les utilisateurs étaie
     A.  En cas de régression, forcez le précédent plan connu adéquat dans le Magasin des requêtes.  
   
     B.  Si des plans de requête ne peuvent pas être forcés ou si les performances restent insuffisantes, envisagez de revenir au [niveau de compatibilité de la base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) précédent et de faire appel au support technique Microsoft.  
+    
+> [!TIP]
+> Utilisez la tâche [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] *Mettre à niveau la base de données* pour mettre à niveau la [compatibilité de la base de données](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades). Consultez [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête](../../relational-databases/performance/upgrade-dbcompat-using-qta.md) pour plus d’informations.
   
 ## <a name="identify-and-improve-ad-hoc-workloads"></a>Identifier et améliorer les charges de travail ad hoc  
 Certaines charges de travail n’ont pas de requêtes dominantes que vous pouvez paramétrer pour améliorer les performances globales de l’application. Ces charges de travail se caractérisent généralement par un nombre relativement important de requêtes différentes, chacune consommant une partie des ressources système. Chacune étant unique, ces requêtes sont exécutées très rarement (généralement une seule fois, d’où leur nom de « requêtes ad hoc »). Leur consommation d’exécution n’est donc pas critique. Par ailleurs, étant donné que l’application génère en permanence de nouvelles requêtes, une part importante des ressources système sont consacrées à la compilation des requêtes, ce qui n’est pas optimal. Cette situation n’est pas non plus idéale pour le magasin de requêtes car un grand nombre de requêtes et de plans inondent l’espace que vous avez réservé. De ce fait, il est probable que le magasin de requêtes se retrouvera très rapidement en mode lecture seule. Si vous avez activé **Stratégie de nettoyage basée sur la taille** ([fortement recommandé](best-practice-with-the-query-store.md) pour toujours maintenir le magasin de requêtes activé et en cours d’exécution), le processus en arrière-plan nettoie les structures du magasin de requêtes qui, la plupart du temps, utilisent également d’importantes ressources système.  
@@ -217,6 +220,7 @@ ALTER DATABASE [QueryStoreTest] SET QUERY_STORE = ON
   
 ## <a name="see-also"></a> Voir aussi  
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)  
+ [Bonnes pratiques relatives au magasin de requêtes](../../relational-databases/performance/best-practice-with-the-query-store.md)         
+ [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
   
   

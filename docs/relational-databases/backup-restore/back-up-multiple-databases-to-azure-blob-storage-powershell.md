@@ -1,7 +1,7 @@
 ---
 title: Sauvegarder plusieurs bases de données dans le service Stockage Blob Azure - PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/20/2016
+ms.date: 05/21/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f043a9df2b561fb9fbd7a56c993838137b0601d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 09e32f92112844e8a291d212e271281636df55e1
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242467"
 ---
 # <a name="back-up-multiple-databases-to-azure-blob-storage---powershell"></a>Sauvegarder plusieurs bases de données dans le service Stockage Blob Azure - PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,14 @@ ms.locfileid: "52512890"
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>PowerShell pour des opérations de sauvegarde de plusieurs bases de données, sur plusieurs instances  
  Les sections suivantes contiennent des scripts pour différentes opérations, notamment créer des informations d'identification SQL sur plusieurs instances de SQL Server, sauvegarder toutes les bases de données utilisateur dans une instance de SQL Server, etc. Utilisez ces scripts pour automatiser ou planifier des opérations de sauvegarde en fonction des spécifications de votre environnement. Les scripts fournis ici sont des exemples, et peuvent être modifiés ou étendus pour votre environnement.  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Voici quelques observations concernant les exemples de script :  
   
-1.  **Parcourir les chemins d'accès PowerShell SQL Server :** Windows PowerShell implémente des applets de commande pour parcourir la structure de chemin d'accès qui représente la hiérarchie des objets pris en charge par un fournisseur PowerShell. Une fois que vous avez accédé à un nœud dans le chemin d'accès, vous pouvez utiliser d'autres applets de commande pour exécuter des opérations de base sur l'objet actif.  
+1.  **Parcours des chemins SQL Server PowerShell :** Windows PowerShell implémente des applets de commande pour parcourir la structure de chemin d'accès qui représente la hiérarchie des objets pris en charge par un fournisseur PowerShell. Une fois que vous avez accédé à un nœud dans le chemin d'accès, vous pouvez utiliser d'autres applets de commande pour exécuter des opérations de base sur l'objet actif.  
   
-2.  Applet de commande**Get-ChildItem** : les informations retournées par **Get-ChildItem** dépendent de l’emplacement dans un chemin PowerShell SQL Server. Par exemple, si l'emplacement est au niveau de l'ordinateur, cette applet de commande retourne toutes les instances du moteur de base de données SQL Server installées sur l'ordinateur. Si l'emplacement est au niveau de l'objet, tel que des bases de données, cette applet de commande retourne une liste d'objets de base de données.  Par défaut, l’applet de commande **Get-ChildItem** ne retourne pas d’objets système.  Pour afficher les objets système, utilisez le paramètre -Force.  
+2.  Applet de commande **Get-ChildItem** : les informations retournées par **Get-ChildItem** dépendent de l’emplacement dans un chemin SQL Server PowerShell. Par exemple, si l'emplacement est au niveau de l'ordinateur, cette applet de commande retourne toutes les instances du moteur de base de données SQL Server installées sur l'ordinateur. Si l'emplacement est au niveau de l'objet, tel que des bases de données, cette applet de commande retourne une liste d'objets de base de données.  Par défaut, l’applet de commande **Get-ChildItem** ne retourne pas d’objets système.  Pour afficher les objets système, utilisez le paramètre -Force.  
   
      Pour plus d’informations, consultez [Navigate SQL Server PowerShell Paths](../../relational-databases/scripting/navigate-sql-server-powershell-paths.md).  
   
@@ -269,6 +271,6 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
   
 ## <a name="see-also"></a> Voir aussi  
  [Sauvegarde et restauration SQL Server avec le service de stockage d’objets blob Microsoft Azure](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
- [Bonnes pratiques en matière de sauvegarde SQL Server vers une URL et résolution des problèmes associés](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
+ [Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

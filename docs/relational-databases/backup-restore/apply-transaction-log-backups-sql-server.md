@@ -1,7 +1,7 @@
 ---
 title: Appliquer les sauvegardes du journal de transactions (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/13/2016
+ms.date: 08/14/2016
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -17,12 +17,12 @@ ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1e4927c1eb0dba333091f231a624db3c8cb7e45
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242170"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59240589"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Appliquer les sauvegardes du journal de transactions (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +61,12 @@ ms.locfileid: "54242170"
 |20h00|Sauvegarde du journal des transactions.|  
 |21h45|Une défaillance se produit.|  
   
-> **REMARQUE :** Pour une explication de cet exemple de cette séquence de sauvegardes, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
+> Pour une explication de cet exemple de cette séquence de sauvegardes, consultez [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md).  
   
  Pour restaurer la base de données à son état à 21:45 (point d'échec), les autres procédures suivantes peuvent être utilisées :  
-  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  **Solution 1 : restaurer la base de données en utilisant la sauvegarde complète de base de données la plus récente**  
   
 1.  Créez une sauvegarde de la fin du journal du journal des transactions actuellement actif comme point d'échec.  
@@ -73,7 +75,7 @@ ms.locfileid: "54242170"
   
  **Solution 2 : restaurer la base de données en utilisant une sauvegarde complète de base de données antérieure**  
   
-> **REMARQUE :** Cette autre solution est utile si un problème vous empêche d'utiliser la sauvegarde complète de base de données de 18h00. Ce processus prend plus de temps que la restauration de la sauvegarde complète de base de données de 18h00.  
+> Cette autre solution est utile si un problème vous empêche d'utiliser la sauvegarde complète de base de données de 18h00. Ce processus prend plus de temps que la restauration de la sauvegarde complète de base de données de 18h00.  
   
 1.  Créez une sauvegarde de la fin du journal du journal des transactions actuellement actif comme point d'échec.  
   
@@ -81,7 +83,7 @@ ms.locfileid: "54242170"
   
      Cette solution souligne la sécurité redondante offerte par le maintien d'une séquence de sauvegardes de journaux de transactions dans une série de sauvegardes complètes de base de données.  
   
-> **REMARQUE :** Dans certains cas, vous pouvez utiliser des journaux de transactions pour restaurer une base de données à un point spécifique dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
+> Dans certains cas, vous pouvez utiliser des journaux de transactions pour restaurer une base de données à un point spécifique dans le temps. Pour plus d’informations, consultez [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
 ##  <a name="RelatedTasks"></a> Related tasks  
  **Pour appliquer une sauvegarde du journal des transactions**  
@@ -92,7 +94,7 @@ ms.locfileid: "54242170"
   
 -   [Restaurer une base de données jusqu’au point d’échec en mode de récupération complète &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/restore-database-to-point-of-failure-full-recovery.md)  
   
--   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;Mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A> (SMO)  
   

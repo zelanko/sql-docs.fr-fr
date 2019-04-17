@@ -35,12 +35,12 @@ ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
 manager: craigg
-ms.openlocfilehash: ec8ac971776b9b069fa9fb74bea2ee6bc9a22be3
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429365"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -174,23 +174,23 @@ DBCC CHECKDB n'examine pas les index désactivés. Pour plus d’informations su
 
 Si un type défini par l'utilisateur est marqué comme étant ordonné par octet, il ne doit y avoir qu'une seule sérialisation du type défini par l'utilisateur. En l'absence de sérialisation cohérente de type défini par l'utilisateur ordonné par octet, l'erreur 2537 est générée à l'exécution de DBCC CHECKDB. Pour plus d’informations, consultez [Configuration requise pour les types définis par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-requirements.md).    
 
-Étant donné que la [base de données Resource](../../relational-databases/databases/resource-database.md) est modifiable uniquement en mode mono-utilisateur, vous ne pouvez pas y exécuter la commande DBCC CHECKDB directement. Cependant, lors de l’exécution de DBCC CHECKDB sur la [base de données master](../../relational-databases/databases/master-database.md), une deuxième commande CHECKDB est également exécutée en interne sur la base de données Resource. Cela signifie que DBCC CHECKDB peut retourner des résultats supplémentaires. La commande retourne des jeux de résultats supplémentaires lorsqu'aucune option n'est définie ou lorsque l'option PHYSICAL_ONLY ou ESTIMATEONLY est définie.    
+Étant donné que la [base de données Resource](../../relational-databases/databases/resource-database.md) est modifiable uniquement en mode mono-utilisateur, vous ne pouvez pas y exécuter la commande DBCC CHECKDB directement. Cependant, lors de l’exécution de DBCC CHECKDB sur la [base de données master](../../relational-databases/databases/master-database.md), une deuxième commande CHECKDB est également exécutée en interne sur la base de données Resource. Cela signifie que DBCC CHECKDB peut retourner des résultats supplémentaires. La commande retourne des jeux de résultats supplémentaires lorsqu'aucune option n'est définie ou lorsque l'option `PHYSICAL_ONLY` ou `ESTIMATEONLY` est définie.    
 
 À compter de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2, l’exécution de la commande DBCC CHECKDB n’efface **plus** le cache du plan pour l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Avant [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2, l’exécution de la commande DBCC CHECKDB effaçait le cache du plan. Cette opération entraîne la recompilation de tous les plans d'exécution ultérieurs et peut entraîner une baisse temporaire et brutale des performances des requêtes. 
     
 ## <a name="performing-logical-consistency-checks-on-indexes"></a>Exécution de vérifications de cohérence logique sur des index    
 La vérification de la cohérence logique sur les index varie selon le niveau de compatibilité de la base de données, comme suit :
 -   Si le niveau de compatibilité est égal à 100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]) ou supérieur :    
--   À moins que l'option NOINDEX soit spécifiée, DBCC CHECKDB effectue des vérifications de cohérence physique et logique sur une table individuelle et sur tous ses index non-cluster. Toutefois, seules des vérifications de cohérence physique sont effectuées par défaut sur les index XML, les index spatiaux et les vues indexées.
--   Si WITH EXTENDED_LOGICAL_CHECKS est spécifié, des vérifications logiques sont effectués sur une vue indexée, des index XML et des index spatiaux, là où ils sont présents. Par défaut, les vérifications de cohérence physique sont effectuées avant les vérifications de cohérence logique. Si l'option NOINDEX est également spécifiée, seules les vérifications logiques sont effectuées.
+-   À moins que l'option `NOINDEX` soit spécifiée, DBCC CHECKDB effectue des vérifications de cohérence physique et logique sur une table individuelle et sur tous ses index non-cluster. Toutefois, seules des vérifications de cohérence physique sont effectuées par défaut sur les index XML, les index spatiaux et les vues indexées.
+-   Si `WITH EXTENDED_LOGICAL_CHECKS` est spécifié, des vérifications logiques sont effectuées sur une vue indexée, des index XML et des index spatiaux, là où ils sont présents. Par défaut, les vérifications de cohérence physique sont effectuées avant les vérifications de cohérence logique. Si `NOINDEX` est également spécifié, seules les vérifications logiques sont effectuées.
     
-Ces vérifications de cohérence logique effectuent une vérification croisée de la table d'index interne de l'objet d'index avec la table utilisateur à laquelle il fait référence. Pour rechercher les lignes excentrées, une requête interne est construite pour effectuer l'intersection complète de la table interne et de la table utilisateur. L'exécution de cette requête peut avoir un effet très important sur les performances et il n'est pas possible de suivre sa progression. Par conséquent, nous vous recommandons de spécifier WITH EXTENDED_LOGICAL_CHECKS seulement si vous soupçonnez des problèmes d'index qui ne sont pas liés à une altération physique ou si les sommes de contrôle au niveau de la page ont été désactivées et que vous soupçonnez un endommagement matériel au niveau des colonnes.
+Ces vérifications de cohérence logique effectuent une vérification croisée de la table d'index interne de l'objet d'index avec la table utilisateur à laquelle il fait référence. Pour rechercher les lignes excentrées, une requête interne est construite pour effectuer l'intersection complète de la table interne et de la table utilisateur. L'exécution de cette requête peut avoir un effet très important sur les performances et il n'est pas possible de suivre sa progression. Par conséquent, nous vous recommandons de spécifier `WITH EXTENDED_LOGICAL_CHECKS` seulement si vous soupçonnez des problèmes d'index qui ne sont pas liés à une altération physique ou si les sommes de contrôle au niveau de la page ont été désactivées et que vous soupçonnez un endommagement matériel au niveau des colonnes.
 -   Si l'index est un index filtré, DBCC CHECKDB effectue des vérifications de cohérence pour vérifier que les entrées de l'index satisfont le prédicat du filtre.
--   Si le niveau de compatibilité est égal ou inférieur à 90, à moins que l'option NOINDEX soit spécifiée, DBCC CHECKDB effectue à la fois des vérifications de cohérence physique et logique sur une seule table ou vue indexée et sur tous ses index non-cluster et XML. Les index spatiaux ne sont pas pris en charge.  
-- À compter de SQL Server 2016, les vérifications supplémentaires sur les colonnes calculées persistantes, les colonnes UDT et les index filtrés ne seront pas exécutées par défaut afin d’éviter les évaluations d’expressions coûteuses. Cette modification réduit considérablement la durée de CHECKDB sur les bases de données contenant ces objets. Cependant, les vérifications de cohérence physique de ces objets sont toujours effectuées. Les évaluations d’expressions ne seront effectuées en plus des vérifications logiques déjà présentes (vue indexée, index XML et index spatiaux) dans le cadre de l’option EXTENDED_LOGICAL_CHECKS que quand l’option EXTENDED_LOGICAL_CHECKS est spécifiée.   
+-   Si le niveau de compatibilité est égal ou inférieur à 90, à moins que l'option `NOINDEX` soit spécifiée, DBCC CHECKDB effectue à la fois des vérifications de cohérence physique et logique sur une seule table ou vue indexée et sur tous ses index non-cluster et XML. Les index spatiaux ne sont pas pris en charge.  
+- À compter de SQL Server 2016, les vérifications supplémentaires sur les colonnes calculées persistantes, les colonnes UDT et les index filtrés ne seront pas exécutées par défaut afin d’éviter les évaluations d’expressions coûteuses. Cette modification réduit considérablement la durée de CHECKDB sur les bases de données contenant ces objets. Cependant, les vérifications de cohérence physique de ces objets sont toujours effectuées. Les évaluations d’expressions ne seront effectuées en plus des vérifications logiques déjà présentes (vue indexée, index XML et index spatiaux) dans le cadre de l’option `EXTENDED_LOGICAL_CHECKS` que quand l’option `EXTENDED_LOGICAL_CHECKS` est spécifiée.   
     
 **Pour connaître le niveau de compatibilité d’une base de données**
--   [Afficher ou modifier le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
+-   [Afficher ou modifier le niveau de compatibilité d'une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Instantané de base de données interne    
 DBCC CHECKDB utilise un instantané de base de données interne pour la cohérence transactionnelle nécessaire à la réalisation de ces vérifications. Ceci évite les problèmes de blocage et d'accès simultané lors de l'exécution de ces commandes. Pour plus d’informations, consultez [Afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) et la section Utilisation de l’instantané de base de données interne DBCC dans [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md). Si vous ne pouvez créer aucun instantané ou si TABLOCK est spécifié, la commande DBCC CHECKDB acquiert des verrous pour obtenir la cohérence requise. Dans ce cas, un verrou de base de données exclusif est requis pour effectuer les vérifications d'allocation, tandis que des verrous de table partagés sont nécessaires pour effectuer les vérifications de table.
@@ -203,7 +203,7 @@ Quand FILESTREAM est activé pour une base de données et une table, vous pouvez
 Par exemple, si une table contient une colonne **varbinary(max)** qui utilise l’attribut FILESTREAM, DBCC CHECKDB vérifiera qu’il existe un mappage un-à-un entre les répertoires et les fichiers du système de fichiers et les lignes, les colonnes et les valeurs de colonne de la table. DBCC CHECKDB peut réparer l'altération si vous spécifiez l'option REPAIR_ALLOW_DATA_LOSS. Pour réparer l'altération FILESTREAM, DBCC supprime toutes les lignes de la table auxquelles il manque des données du système de fichiers.
     
 ## <a name="best-practices"></a>Bonnes pratiques    
-Nous vous recommandons d'utiliser l'option PHYSICAL_ONLY pour une utilisation fréquente sur des systèmes de production. L'utilisation de PHYSICAL_ONLY permet de raccourcir nettement le temps d'exécution de DBCC CHECKDB sur des bases de données volumineuses. Nous vous conseillons également d'exécuter régulièrement DBCC CHECKDB sans option. La fréquence à laquelle vous devez effectuer ces exécutions dépend de chaque activité et de son environnement de production.
+Nous vous recommandons d'utiliser l'option `PHYSICAL_ONLY` pour une utilisation fréquente sur des systèmes de production. L'utilisation de PHYSICAL_ONLY permet de raccourcir nettement le temps d'exécution de DBCC CHECKDB sur des bases de données volumineuses. Nous vous conseillons également d'exécuter régulièrement DBCC CHECKDB sans option. La fréquence à laquelle vous devez effectuer ces exécutions dépend de chaque activité et de son environnement de production.
     
 ## <a name="checking-objects-in-parallel"></a>Vérification des objets en parallèle    
 DBCC CHECKDB effectue par défaut une vérification parallèle des objets. Le degré de parallélisme est automatiquement défini par le processeur de requêtes. Le degré maximum de parallélisme est configuré de la même manière que les requêtes parallèles. Pour limiter le nombre maximal de processeurs disponibles pour la vérification DBCC, utilisez [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md). Pour plus d’informations, consultez [Configurer l’option de configuration du serveur max degree of parallelism](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). La vérification parallèle peut être désactivée à l'aide de l'indicateur de trace 2528. Pour plus d’informations, consultez [Indicateurs de trace &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
@@ -267,7 +267,7 @@ L'exécution de la commande DBCC CHECKDB avec l'option REPAIR_ALLOW_DATA_LOSS pe
 -   Tables de métadonnées de réplication. Pour les actions effectuées par le processus CHECKDB afin de réparer les tables de métadonnées de réplication corrompues, la réplication doit être supprimée puis reconfigurée.    
     
 Si vous devez exécuter la commande DBCC CHECKDB avec l'option REPAIR_ALLOW_DATA_LOSS sur une base de données utilisateur ou de distribution :
-1.  Suspendez le système : Arrêtez l'activité sur la base de données et toutes les autres bases de données appartenant à la topologie de réplication, puis tentez de synchroniser tous les nœuds. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
+1.  Suspendez le système : arrêtez l'activité sur la base de données et toutes les autres bases de données appartenant à la topologie de réplication, puis tentez de synchroniser tous les nœuds. Pour plus d’informations, consultez [Suspendre une topologie de réplication &#40;programmation Transact-SQL de la réplication&#41;](../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).    
 1.  Exécutez DBCC CHECKDB.    
 1.  Si le rapport DBCC CHECKDB inclut des réparations pour des tables de la base de données de distribution ou des tables de métadonnées de réplication dans une base de données utilisateur, supprimez et reconfigurez la réplication. Pour plus d’informations, consultez [Désactiver la publication et la distribution](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 1.  Si le rapport DBCC CHECKDB inclut des réparations pour des tables répliquées, procédez à une validation des données pour déterminer s'il existe des différences entre les données de la base de données de publication et celles de la base de données d'abonnement.    
@@ -365,7 +365,7 @@ DBCC CHECKDB retourne le jeu de résultats suivant si ESTIMATEONLY est spécifi�
  DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 ```
     
-## <a name="permissions"></a>Permissions    
+## <a name="permissions"></a>Autorisations    
 Nécessite l’appartenance au rôle serveur fixe sysadmin ou au rôle de base de données fixe db_owner.
     
 ## <a name="examples"></a>Exemples    
@@ -382,7 +382,7 @@ DBCC CHECKDB (AdventureWorks2012, NOINDEX);
 GO    
 ```    
     
-### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>b. Vérification de la base de données actuelle et suppression des messages d'information    
+### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>B. Vérification de la base de données actuelle et suppression des messages d'information    
 L'exemple suivant vérifie la base de données actuelle et supprime tous les messages d'information.
     
 ```sql    
@@ -394,5 +394,5 @@ GO
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

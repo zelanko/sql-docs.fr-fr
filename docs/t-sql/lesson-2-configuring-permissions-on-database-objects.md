@@ -1,7 +1,7 @@
 ---
 title: 'Tutoriel T-SQL : Configurer des autorisations sur des objets de base de données | Microsoft Docs'
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 07/31/2018
 ms.prod: sql
 ms.technology: t-sql
 ms.reviewer: ''
@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4faa36c3cbef3d0ae84ac62a6cb7e866998ee064
-ms.sourcegitcommit: ce4b39bf88c9a423ff240a7e3ac840a532c6fcae
+ms.openlocfilehash: 56f98831db725a04d7399a49fbe8f6803cbe510c
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48878132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241397"
 ---
-# <a name="lesson-2-configure-permissions-on-database-objects"></a>Leçon 2 : Configurer des autorisations sur des objets de base de données
+# <a name="lesson-2-configure-permissions-on-database-objects"></a>Leçon 2 : Configurer des autorisations sur des objets de base de données
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 L'octroi à un utilisateur de l'accès à une base de données implique trois étapes. Commencez par créer une connexion. La connexion permet à l’utilisateur de se connecter au [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]. Puis, configurez la connexion en tant qu'utilisateur dans la base de données spécifiée. Enfin, accordez à cet utilisateur l'autorisation sur les objets de base de données. Cette leçon illustre ces trois étapes et vous montre comment créer une vue et une procédure stockée comme objet.  
 
@@ -33,9 +33,11 @@ Pour suivre ce tutoriel, vous avez besoin de SQL Server Management Studio et d�
 - Installez [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
 Si vous n’avez pas accès à une instance SQL Server, sélectionnez votre plateforme parmi les liens suivants. Si vous choisissez l’authentification SQL, utilisez vos informations d’identification de connexion SQL Server.
-- **Windows** : [Téléchargez SQL Server 2017 Édition Développeur](https://www.microsoft.com/sql-server/sql-server-downloads).
-- **macOS** : [Téléchargez SQL Server 2017 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
-  
+- **Windows** : [Télécharger SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+- **macOS** : [Télécharger SQL Server 2017 sur Docker](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker).
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="create-a-login"></a>Créer un compte de connexion
 Pour accéder au [!INCLUDE[ssDE](../includes/ssde-md.md)], les utilisateurs ont besoin d’une connexion. Cette connexion peut représenter l’identité de l’utilisateur sous forme d’un compte Windows ou d’un membre d’un groupe Windows, ou la connexion peut être une connexion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui existe uniquement dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Chaque fois que vous en avez la possibilité, utilisez l’authentification Windows.  
   

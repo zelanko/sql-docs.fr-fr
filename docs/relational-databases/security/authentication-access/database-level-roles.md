@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d8d205e184f31e628cf9629b702e21e43c200e38
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420094"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516495"
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
 
@@ -58,7 +58,7 @@ Pour ajouter et supprimer des utilisateurs à un rôle de base de données, util
   
  Les rôles de base de données fixes sont définis au niveau de la base de données et existent dans chaque base de données. Les membres du rôle de base de données **db_owner** peuvent gérer l’appartenance aux rôles de base de données fixes. La base de données msdb comprend également des rôles de base de données spéciaux.  
   
- Vous pouvez ajouter tout compte de base de données, ainsi que d’autres rôles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans des rôles au niveau de la base de données. Chaque membre d’un rôle de base de données fixe peut ajouter des utilisateurs à ce rôle.  
+ Vous pouvez ajouter tout compte de base de données, ainsi que d’autres rôles [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans des rôles au niveau de la base de données.
   
 > [!TIP]  
 >  N’ajoutez pas de rôles de base de données définis par l’utilisateur en tant que membres de rôles fixes. Cela pourrait activer une élévation de privilèges involontaire.  
@@ -74,7 +74,7 @@ Pour obtenir une liste de toutes les autorisations, consultez l’affiche [Autor
 |Nom du rôle de base de données fixe|Description|  
 |-------------------------------|-----------------|  
 |**db_owner**|Les membres du rôle de base de données fixe **db_owner** peuvent effectuer toutes les activités de configuration et de maintenance sur la base de données et peuvent également supprimer la base de données dans [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (Dans [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] et [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], certaines activités de maintenance requièrent des autorisations de niveau serveur et ne peuvent pas être effectuées par **db_owners**.)|  
-|**db_securityadmin**|Les membres du rôle de base de données fixe **db_securityadmin** peuvent modifier l'appartenance au rôle et gérer les autorisations. L'ajout de principaux à ce rôle pourrait activer une élévation de privilèges involontaire.|  
+|**db_securityadmin**|Les membres du rôle de base de données fixe **db_securityadmin** peuvent modifier l’appartenance au rôle pour les rôles personnalisés uniquement, créer des utilisateurs et gérer les autorisations. L'ajout de principaux à ce rôle pourrait activer une élévation de privilèges involontaire.|  
 |**db_accessadmin**|Les membres du rôle de base de données fixe **db_accessadmin** peuvent ajouter ou supprimer l'accès à la base de données des connexions Windows, des groupes Windows et des connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|  
 |**db_backupoperator**|Les membres du rôle de base de données fixe **db_backupoperator** peuvent sauvegarder la base de données.|  
 |**db_ddladmin**|Les membres du rôle de base de données fixe **db_ddladmin** peuvent exécuter n'importe quelle commande DDL (Data Definition Language) dans une base de données.|  
@@ -93,7 +93,7 @@ Ces rôles de base de données existent uniquement dans la base de données MAST
 
 |Nom du rôle|Description|  
 |--------------------|-----------------|
-|**dbmanager** | Permet de créer et de supprimer des bases de données. Un membre du rôle dbmanager qui crée une base de données devient le propriétaire de cette base de données qui permet à cet utilisateur de se connecter à cette base de données en tant qu’utilisateur dbo. L’utilisateur dbo possède toutes les autorisations de base de données dans la base de données. Les membres du rôle dbmanager n’ont pas nécessairement l’autorisation d’accéder aux bases de données qui ne leur appartiennent pas.|
+|**dbmanager** | Permet de créer et de supprimer des bases de données. Un membre du rôle dbmanager qui crée une base de données en devient le propriétaire, ce qui lui permet de se connecter à cette base de données en tant qu’utilisateur dbo. L’utilisateur dbo possède toutes les autorisations de base de données dans la base de données. Les membres du rôle dbmanager n’ont pas nécessairement l’autorisation d’accéder aux bases de données qui ne leur appartiennent pas.|
 |**loginmanager** | Peut créer et supprimer des connexions dans la base de données MASTER virtuelle.|
 
 > [!NOTE]
@@ -143,9 +143,9 @@ Quand vous installez R Services, vous disposez de rôles de base de données sup
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|Supprime un rôle de base de données de la base de données actuelle.|  
 |[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Ajoute un utilisateur ou un rôle de base de données, un compte de connexion ou un groupe Windows à un rôle de base de données dans la base de données active. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|  
 |[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Supprime un compte de sécurité d'un rôle SQL Server dans la base de données actuelle. Toutes les plateformes sauf [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] doivent utiliser `ALTER ROLE` à la place.|
-|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | Ajoute l’autorisation à un rôle.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Refuse une autorisation à un rôle.
-|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | Supprime des autorisations accordées ou refusées antérieurement.
+|[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Autorisations | Ajoute l’autorisation à un rôle.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Autorisations | Refuse une autorisation à un rôle.
+|[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Autorisations | Supprime des autorisations accordées ou refusées antérieurement.
   
   
 ## <a name="public-database-role"></a>Rôle de base de données public  

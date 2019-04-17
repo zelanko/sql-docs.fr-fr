@@ -1,7 +1,7 @@
 ---
 title: Utiliser Windows PowerShell dans les étapes de travail de l’Agent SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/16/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -10,37 +10,39 @@ ms.assetid: f25f7549-c9b3-4618-85f2-c9a08adbe0e3
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0ea20fbf0eb09686075c4fceeee2f3091bc244c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9034e88276192c14eb8d7008ced10b7041e40c9
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241198"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Utiliser Windows PowerShell dans les étapes de travail de l'Agent SQL Server
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Utilisez SQL Server Agent pour exécuter des scripts PowerShell SQL Server à des horaires planifiés.  
   
-**Pour exécuter PowerShell à partir de SQL Server Agent, à l'aide de :**  [Étape de travail PowerShell](#PShellJob), [Étape de travail d'invite de commandes](#CmdExecJob)  
+**Pour exécuter PowerShell à partir de SQL Server Agent avec :**  [Étape de travail PowerShell](#PShellJob), [Etape de travail invite de commandes](#CmdExecJob)  
   
-> [!NOTE]
+> [!IMPORTANT]
 > Il existe deux modules SQL Server PowerShell : **SqlServer** et **SQLPS**. Le module **SQLPS** fait partie de l’installation de SQL Server (à des fins de compatibilité descendante), mais il n’est plus mis à jour. Le module PowerShell le plus récent est **SqlServer**. Le module **SqlServer** contient les versions mises à jour des applets de commande disponibles dans **SQLPS**, ainsi que de nouvelles applets de commande pour prendre en charge les dernières fonctionnalités SQL.  
 > Des versions précédentes du module **SqlServer** *étaient* fournies avec SQL Server Management Studio (SSMS), mais uniquement avec les versions 16.x de SSMS. Pour utiliser PowerShell avec SSMS 17.0 et ultérieur, vous devez installer le module **SqlServer** à partir de PowerShell Gallery.
 > Pour installer le module **SqlServer**, consultez [Installer SQL Server PowerShell](download-sql-server-ps-module.md).
 
 
 Il y a plusieurs types d'étapes de travail de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Chaque type est associé à un sous-système qui implémente un environnement spécifique, tel qu'un agent de réplication ou un environnement d'invite de commandes. Vous pouvez coder les scripts Windows PowerShell, puis utiliser l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour les inclure dans les travaux qui s'exécutent à des heures planifiées ou en réponse à des événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les scripts Windows PowerShell peuvent être exécutés à l'aide d'une étape de travail d'invite de commandes ou d'une étape de travail PowerShell.  
-  
-1.  Utilisez une étape du travail PowerShell pour que le sous-système de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent exécute l’utilitaire **sqlps** , qui lance PowerShell 2.0 et importe le module **sqlps** .  
-  
-2.  Utilisez une étape du travail d’invite de commandes pour exécuter PowerShell.exe et spécifiez un script qui importe le module **sqlps** .  
-  
-###  <a name="LimitationsRestrictions"></a> Limitations et restrictions  
-  
-> [!CAUTION]  
->  Chaque étape de travail de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent qui exécute PowerShell avec le module **sqlps** lance un processus qui consomme environ 20 Mo de mémoire. L'exécution simultanée d'un grand nombre d'étapes de travail Windows PowerShell peut nuire aux performances.  
-  
+
+- Utilisez une étape du travail PowerShell pour que le sous-système de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent exécute l’utilitaire **sqlps** , qui lance PowerShell 2.0 et importe le module **sqlps** .
+
+- Utilisez une étape du travail d’invite de commandes pour exécuter PowerShell.exe et spécifiez un script qui importe le module **sqlps** .
+
+### <a name="LimitationsRestrictions"></a> Avertissement concernant la consommation de mémoire
+
+Chaque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] étape de travail d’Agent qui exécute PowerShell avec le module **sqlps** lance un processus qui consomme environ **20 Mo** de mémoire. L'exécution simultanée d'un grand nombre d'étapes de travail Windows PowerShell peut nuire aux performances.  
+
+[!INCLUDE[Freshness](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="PShellJob"></a> Créer une étape de travail PowerShell  
  **Pour créer une étape de travail PowerShell**  
   

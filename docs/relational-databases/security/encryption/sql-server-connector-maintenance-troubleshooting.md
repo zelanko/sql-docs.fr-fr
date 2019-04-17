@@ -12,12 +12,12 @@ ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 48db6ede27c4ca7565ca4de1b0eab798c1eb2ef7
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59241377"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>Résolution des problèmes et maintenance du connecteur SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ Si vous utilisez actuellement la version 1.0.0.440 ou une version plus récente,
 8.  Après avoir vérifié que la mise à jour fonctionne, vous pouvez supprimer le dossier de l’ancien connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] si vous avez choisi de le renommer au lieu de le désinstaller à l’étape 3.  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>Modification du principal du service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des principaux du service créés dans Azure Active Directory comme informations d’identification pour accéder au coffre de clés.  Le principal du service a un ID client et une clé d’authentification.  Des informations d’identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont configurées avec le **nom du coffre**, l’ **ID client**et la **clé d’authentification**.  La **clé d’authentification** est valide un certain temps (1 ou 2 ans).   Avant l’expiration de cette période, une nouvelle clé doit être générée pour le principal du service dans Azure AD.  Ensuite, les informations d’identification doivent être modifiées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] gère un cache pour les informations d’identification de la session en cours ; ainsi, si des informations d’identification sont modifiées, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] doit être redémarré.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des principaux du service créés dans Azure Active Directory comme informations d’identification pour accéder au coffre de clés.  Le principal du service a un ID client et une clé d’authentification.  Des informations d’identification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sont configurées avec le **nom du coffre**, l’ **ID client**et la **clé d’authentification**.  La **clé d’authentification** est valide un certain temps (1 ou 2 ans).   Avant l’expiration de cette période, une nouvelle clé doit être générée pour le principal du service dans Azure AD.  Ensuite, les informations d’identification doivent être modifiées dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] gère un cache pour les informations d’identification de la session en cours ; ainsi, si des informations d’identification sont modifiées, [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] doit être redémarré.  
   
 ### <a name="key-backup-and-recovery"></a>Sauvegarde et récupération des clés  
 Le coffre de clés doit être sauvegardé régulièrement. Si une clé asymétrique dans le coffre est perdue, elle peut être restaurée à partir d’une sauvegarde. La clé doit être restaurée à l’aide du même nom qu’avant, ce que fera la commande PowerShell Restore (voir les étapes ci-dessous).  
@@ -158,10 +158,10 @@ Les sauvegardes des clés peuvent être restaurées dans les régions Azure, tan
 ##  <a name="AppendixB"></a> B. Forum Aux Questions (FAQ)  
 ### <a name="on-azure-key-vault"></a>À propos d’Azure Key Vault  
   
-**Comment fonctionnent les opérations de clé avec Azure Key Vault ?**  
- La clé asymétrique dans le coffre de clés permet de protéger les clés de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Seule la partie publique de la clé asymétrique sort du coffre ; la partie privée n’est jamais exportée par le coffre. Toutes les opérations de chiffrement effectuées à l’aide de la clé asymétrique ont lieu dans le service Azure Key Vault et sont protégées par la sécurité de ce service.  
+**Comment fonctionnent les opérations de clé avec Azure Key Vault ?**  
+ La clé asymétrique dans le coffre de clés permet de protéger les clés de chiffrement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Seule la partie publique de la clé asymétrique sort du coffre ; la partie privée n’est jamais exportée par le coffre. Toutes les opérations de chiffrement effectuées à l’aide de la clé asymétrique ont lieu dans le service Azure Key Vault et sont protégées par la sécurité de ce service.  
   
- **Qu’est-ce qu’un URI de clé ?**  
+ **Qu’est-ce qu’un URI de clé ?**  
  Dans Azure Key Vault, chaque clé a un URI, que vous pouvez utiliser pour référencer la clé dans votre application. Utilisez le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` pour obtenir la version actuelle, et le format `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` pour obtenir une version spécifique.  
   
 ### <a name="on-configuring-includessnoversionincludesssnoversion-mdmd"></a>À propos de la configuration de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
@@ -170,7 +170,7 @@ Les sauvegardes des clés peuvent être restaurées dans les régions Azure, tan
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
   
-**Quels sont les niveaux d’autorisation minimaux exigés pour chaque étape de configuration dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]?**  
+**Quels sont les niveaux d’autorisation minimaux exigés pour chaque étape de configuration dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ?**  
  Même si vous pouvez effectuer toutes les étapes de configuration comme membre du rôle serveur fixe sysadmin, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] vous encourage à réduire les autorisations que vous utilisez. La liste suivante définit le niveau d’autorisation minimal pour chaque action.  
   
 -   Pour créer un fournisseur de services de chiffrement, l’autorisation `CONTROL SERVER` ou l’appartenance au rôle de serveur fixe **sysadmin** est exigée.  
@@ -200,7 +200,7 @@ Les sauvegardes des clés peuvent être restaurées dans les régions Azure, tan
 Pour en savoir plus sur Active Directory, lisez [Association des abonnements Azure avec Azure Active Directory](https://azure.microsoft.com/documentation/articles/active-directory-how-subscriptions-associated-directory/)
   
 ##  <a name="AppendixC"></a> C. Explications des codes d’erreur du connecteur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
- **Codes d’erreur du fournisseur :**  
+ **Codes d’erreur du fournisseur :**  
   
 Code d'erreur  |Symbole  |Description    
 ---------|---------|---------  
@@ -253,15 +253,15 @@ Si votre code d’erreur ne figure pas dans ce tableau, voici d’autres raisons
 Version de SQL Server  |Lien d’installation du package redistribuable    
 ---------|--------- 
 2008, 2008 R2, 2012, 2014 | [Packages redistribuables Visual C++ pour Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40784)    
-2016 | [Package redistribuable Visual C++ pour Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
+2016 | [Package redistribuable Visual C++ pour Visual Studio 2015](https://www.microsoft.com/download/details.aspx?id=48145)    
   
   
 ## <a name="additional-references"></a>Références supplémentaires  
- Informations supplémentaires sur la gestion de clés extensible :  
+ Informations supplémentaires sur la gestion de clés extensible :  
   
 -   [Gestion de clés extensible &#40;EKM&#41;](../../../relational-databases/security/encryption/extensible-key-management-ekm.md)  
   
- Chiffrements SQL prenant en charge la gestion de clés extensible :  
+ Chiffrements SQL prenant en charge la gestion de clés extensible :  
   
 -   [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible (EKM)](../../../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  
   
@@ -269,7 +269,7 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
 -   [Créer une sauvegarde chiffrée](../../../relational-databases/backup-restore/create-an-encrypted-backup.md)  
   
- Commandes [!INCLUDE[tsql](../../../includes/tsql-md.md)] associées :  
+ Commandes [!INCLUDE[tsql](../../../includes/tsql-md.md)] associées :  
   
 -   [sp_configure &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   
@@ -287,15 +287,15 @@ Version de SQL Server  |Lien d’installation du package redistribuable
   
  Documentation relative à Azure Key Vault  
   
--   [Qu'est-ce qu'Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
+-   [Qu'est-ce qu'Azure Key Vault ?](https://azure.microsoft.com/documentation/articles/key-vault-whatis/)  
   
--   [Prise en main d'Azure Key Vault](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
+-   [Prise en main du coffre de clés Azure](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   
--   Informations de référence sur les [applets de commande Azure Key Vault](https://msdn.microsoft.com/library/dn868052.aspx) de PowerShell  
+-   Informations de référence sur les [applets de commande Azure Key Vault](/powershell/module/azurerm.keyvault/) de PowerShell  
   
 ## <a name="see-also"></a> Voir aussi  
- [Gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
- [Fournisseur EKM activé (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
+ [Gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md) [Utiliser le connecteur SQL Server avec les fonctionnalités de chiffrement SQL](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
+ [EKM provider enabled (option de configuration de serveur)](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
  [Étapes de la configuration de la gestion de clés extensible à l’aide d’Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
   
   

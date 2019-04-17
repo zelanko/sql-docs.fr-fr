@@ -20,12 +20,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee8626047df76aaf9186295c092623a7cee6d263
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: fb4a69420f4fc3ac7881b2798ef97fc0b202a31f
+ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570662"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59429385"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
 ## <a name="arguments"></a>Arguments  
  **'**\<algorithm>**'**  
- Identifie l'algorithme de hachage à utiliser pour les données d'entrée. Cet argument est obligatoire, sans valeur par défaut. Les guillemets simples sont obligatoires. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tous les algorithmes autres que SHA2_256 et SHA2_512 sont déconseillés. Des algorithmes plus anciens (non recommandés) continueront de fonctionner, mais ils déclencheront un événement de dépréciation.  
+ Identifie l'algorithme de hachage à utiliser pour les données d'entrée. Cet argument est obligatoire, sans valeur par défaut. Les guillemets simples sont obligatoires. À partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], tous les algorithmes autres que SHA2_256 et SHA2_512 sont déconseillés.  
   
  **@input**  
  Variable contenant les données à hacher. **@input** est de type **varchar**, **nvarchar** ou **varbinary**.  
@@ -54,7 +54,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
   
  La sortie est conforme à l’algorithme standard : 128 bits (16 octets) pour MD2, MD4 et MD5 ; 160 bits (20 octets) pour SHA et SHA1 ; 256 bits (32 octets) pour SHA2_256 et 512 bits (64 octets) pour SHA2_512.  
   
-**S’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**S'applique à** : [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
   
  Pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] et versions antérieures, les valeurs d’entrée autorisées sont limitées à 8 000 octets.  
   
@@ -64,7 +64,7 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 ## <a name="remarks"></a>Notes   
 Envisagez d’utiliser `CHECKSUM` ou `BINARY_CHECKSUM` comme alternatives pour calculer une valeur de hachage.
 
-Les algorithmes MD2, MD4, MD5, SHA et SHA1 ne sont pas disponibles sous le niveau de compatibilité 130 et les versions ultérieures. Utilisez SHA2_256 ou SHA2_512 à la place.
+Les algorithmes de hachage MD2, MD4, MD5, SHA et SHA1 sont dépréciés à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. Utilisez SHA2_256 ou SHA2_512 à la place. Des algorithmes plus anciens continueront de fonctionner, mais ils déclencheront un événement de dépréciation.
 
 ## <a name="examples"></a>Exemples  
 ### <a name="return-the-hash-of-a-variable"></a>Retourne le hachage d'une variable  

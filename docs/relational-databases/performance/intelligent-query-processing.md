@@ -13,18 +13,18 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d3572af85861c2175638484e9e2097d43a65b63d
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
+ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042228"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59533357"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-La famille des fonctionnalités de traitement de requêtes intelligent inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation. 
+La famille des fonctionnalités de traitement de requêtes intelligent inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation à entreprendre. 
 
 ![Traitement de requêtes intelligent](./media/3_iqpfeaturefamily.png)
 
@@ -36,15 +36,15 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 Le tableau suivant détaille toutes les fonctionnalités du traitement de requêtes intelligent ainsi que les exigences qui y sont associées pour le niveau de compatibilité de base de données.
 
-| **Fonctionnalité de traitement intelligent des requêtes** | **Prise en charge dans Azure SQL Database** | **Prise en charge dans SQL Server** |**Description** |
+| **Fonctionnalité IQP** | **Pris en charge dans Azure SQL Database** | **Pris en charge dans SQL Server** |**Description** |
 | --- | --- | --- |--- |
 | [Jointures adaptatives (mode batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | Oui, avec le niveau de compatibilité 140| Oui, à partir de SQL Server 2017 sous le niveau de compatibilité 140|Les jointures adaptatives sélectionnent dynamiquement un type de jointure lors de l’exécution en fonction des lignes d’entrée réelles.|
-| [COUNT DISTINCT approximatif](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Oui, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0, préversion publique|Fournit un comptage distinct (COUNT DISTINCT) approximatif pour les scénarios Big Data avec les avantages de performances élevées et d’une faible empreinte mémoire. |
+| [Nombre approximatif distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | Oui, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0, préversion publique|Fournit un comptage distinct (COUNT DISTINCT) approximatif pour les scénarios Big Data avec les avantages de performances élevées et d’une faible empreinte mémoire. |
 | [Mode Batch sur Rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0 sous le niveau de compatibilité 150, préversion publique|Fournit un mode batch pour les charges de travail DW relationnelles utilisant le processeur de manière intensive sans nécessiter d’index columnstore.  | 
 | [Exécution entrelacée](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | Oui, avec le niveau de compatibilité 140| Oui, à partir de SQL Server 2017 sous le niveau de compatibilité 140|Utilise la cardinalité réelle de la fonction table à instructions multiples rencontrée à la première compilation, au lieu d’une estimation fixe.|
-| [Retour d’allocation de mémoire (mode batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Oui, avec le niveau de compatibilité 140| Oui, à partir de SQL Server 2017 sous le niveau de compatibilité 140|Si une requête en mode batch a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire, réduisez l’octroi de mémoire pour les exécutions suivantes.|
-| [Retour d’allocation de mémoire (mode ligne)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0 sous le niveau de compatibilité 150, préversion publique|Si une requête en mode ligne a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire, réduisez l’octroi de mémoire pour les exécutions suivantes.|
-| [Incorporation des fonctions UDF scalaires](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Non | Oui, à partir de SQL Server 2019 CTP 2.1 sous le niveau de compatibilité 150, préversion publique|Les fonctions scalaires définies par l’utilisateur sont transformées en expressions relationnelles équivalentes qui sont « placées inline » dans la requête appelante, ce qui entraîne souvent des gains de performances significatifs.|
+| [Retour d’allocation de mémoire (mode batch)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | Oui, avec le niveau de compatibilité 140| Oui, à partir de SQL Server 2017 sous le niveau de compatibilité 140|Si une requête en mode batch a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
+| [Retour d’allocation de mémoire (mode ligne)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0 sous le niveau de compatibilité 150, préversion publique|Si une requête en mode ligne a des opérations débordant sur le disque, ajoutez de la mémoire pour les exécutions suivantes. Si une requête gaspille plus de 50 % de la mémoire qui lui est allouée, réduisez l’octroi de mémoire pour les exécutions suivantes.|
+| [Incorporation (inlining) des fonctions UDF scalaires](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | Non | Oui, à partir de SQL Server 2019 CTP 2.1 sous le niveau de compatibilité 150, préversion publique|Les fonctions scalaires définies par l’utilisateur sont transformées en expressions relationnelles équivalentes qui sont « placées inline » dans la requête appelante, ce qui entraîne souvent des gains de performances significatifs.|
 | [Compilation différée de variable de table](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | Oui, sous le niveau de compatibilité 150, préversion publique| Oui, à partir de SQL Server 2019 CTP 2.0 sous le niveau de compatibilité 150, préversion publique|Utilise la cardinalité réelle de la variable de table rencontrée à la première compilation, au lieu d’une estimation fixe.|
 
 ## <a name="batch-mode-adaptive-joins"></a>Jointures adaptatives en mode batch
@@ -414,7 +414,7 @@ Le mode batch sur rowstore permet l’exécution en mode batch des charges de tr
 
 ### <a name="background"></a>Arrière-plan
 
-[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a introduit une nouvelle fonctionnalité permettant d’accélérer les charges de travail analytiques : les index columnstore. Nous avons étendu les cas d’utilisation et amélioré les performances des index columnstore dans chaque version suivante. Jusqu’à présent, nous avons présenté et documenté toutes ces fonctionnalités sous la forme d’une fonctionnalité unique. Vous créez des index columnstore sur vos tables. Et votre charge de travail analytique s’exécute plus rapidement. Toutefois, il existe deux jeux de technologies connexes mais distincts :
+[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a introduit une nouvelle fonctionnalité pour accélérer les charges de travail analytiques : les index columnstore. Nous avons étendu les cas d’utilisation et amélioré les performances des index columnstore dans chaque version suivante. Jusqu’à présent, nous avons présenté et documenté toutes ces fonctionnalités sous la forme d’une fonctionnalité unique. Vous créez des index columnstore sur vos tables. Et votre charge de travail analytique s’exécute plus rapidement. Toutefois, il existe deux jeux de technologies connexes mais distincts :
 - Les index **ColumnStore** permettent aux requêtes analytiques d’accéder uniquement aux données dans les colonnes nécessaires. La compression de page au format columnstore est aussi plus efficace que la compression dans des index **rowstore** traditionnels. 
 - Avec le traitement **en mode batch**, les opérateurs de requête traitent les données plus efficacement. Ils travaillent sur un lot de lignes au lieu d’une ligne à la fois. Plusieurs autres améliorations d’évolutivité sont liées au traitement en mode Batch. Pour plus d’informations sur le mode batch, consultez [Modes d’exécution](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
 
@@ -502,7 +502,7 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 
 [Centre de performances pour le moteur de base de données SQL Server et Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)    
-[Guide de référence des opérateurs logiques et physiques du plan d’exécution de requêtes](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
+[Guide de référence des opérateurs Showplan logiques et physiques](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [Jointures](../../relational-databases/performance/joins.md)    
 [Illustration du traitement de requêtes adaptatif](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)       
-[Illustration du traitement intelligent des requêtes](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   
+[Illustration du traitement de requêtes (QP) intelligent](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

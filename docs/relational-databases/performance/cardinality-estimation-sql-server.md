@@ -16,14 +16,15 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca1168e0e101f8d8d8c5ae75636f2923faf7e2a1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828019"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516455"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Évaluation de la cardinalité (SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 L’optimiseur de requête [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un optimiseur de requête basé sur les coûts. Cela signifie qu'il sélectionne des plans de requête dont l'exécution présente le plus faible coût de traitement estimé. L’optimiseur de requête détermine le coût d’exécution d’un plan de requête à partir de deux facteurs principaux :
@@ -53,9 +54,10 @@ Le système d’applications peut contenir une requête importante dont le plan 
 - Une requête OLTP (traitement transactionnel en ligne) qui s’exécute si souvent que plusieurs instances de cette requête s’exécutent simultanément.  
 - Une instruction SELECT avec une agrégation importante qui s’exécute pendant vos heures de travail OLTP.  
   
-Vous disposez de techniques pour identifier une requête qui s’exécute plus lentement avec la nouvelle estimation de cardinalité. Vous disposez d’options pour résoudre les problèmes de performances.     
+Vous disposez de techniques pour identifier une requête qui s’exécute plus lentement avec la nouvelle estimation de cardinalité. Vous disposez d’options pour résoudre les problèmes de performances.
   
-## <a name="versions-of-the-ce"></a>Versions de l’estimation de cardinalité  
+## <a name="versions-of-the-ce"></a>Versions de l’estimation de cardinalité
+
 En 1998, une mise à jour majeure de l’estimation de cardinalité a été intégrée à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, pour lequel le niveau de compatibilité était de 70. Cette version du modèle CE est fondée sur quatre hypothèses de base :
 
 -  **Indépendance :** les distributions de données sur différentes colonnes sont supposées être indépendantes les unes des autres, à moins que des informations de corrélation soient disponibles et utilisables.
@@ -106,7 +108,7 @@ Ou, à partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, à l’a
  ```sql  
 SELECT CustomerId, OrderAddedDate  
 FROM OrderTable  
-WHERE OrderAddedDate >= '2016-05-01'; 
+WHERE OrderAddedDate >= '2016-05-01'
 OPTION (USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION'));  
 ```
  
@@ -293,5 +295,6 @@ WHERE s.ticket = r.ticket AND
  [Optimizing Your Query Plans with the SQL Server 2014 Cardinality Estimator](https://msdn.microsoft.com/library/dn673537.aspx) (Optimisation de vos plans de requête avec l’estimateur de cardinalité SQL Server 2014)  
  [Indicateurs de requête](../../t-sql/queries/hints-transact-sql-query.md)     
  [Indicateurs de requête USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint)       
+ [Mise à niveau des bases de données à l’aide de l’Assistant Paramétrage de requête](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)           
  [Analyse des performances à l'aide du magasin de requêtes](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)    
  [Guide d’architecture de traitement des requêtes](../../relational-databases/query-processing-architecture-guide.md)   

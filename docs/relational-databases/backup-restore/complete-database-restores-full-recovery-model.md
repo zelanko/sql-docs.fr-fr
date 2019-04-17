@@ -1,7 +1,7 @@
 ---
 title: Restaurations complètes de bases de données (mode de récupération complète) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/15/2017
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 5b4c471c-b972-498e-aba9-92cf7a0ea881
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 38c3fd7407955d1c05e7c3bf7550531a4bce2978
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 838a6f840f6576d502fa1908c0f4b876b4cf62b7
+ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241980"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59242199"
 ---
 # <a name="complete-database-restores-full-recovery-model"></a>Restaurations complètes de bases de données (mode de récupération complète)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,21 +34,18 @@ ms.locfileid: "54241980"
   
  Lorsque vous restaurez une base de données, en particulier en mode de restauration complète ou de récupération utilisant les journaux des transactions, vous devez utiliser une séquence de restauration unique. Une *séquence de restauration* consiste en une ou plusieurs opérations de restauration déplaçant des données entre une ou plusieurs phases de restauration.  
   
-> [!IMPORTANT]  
->  Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant qui peut exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] imprévisible ou causer des erreurs en modifiant le schéma ou la structure physique de la base de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou tout autre code défini par l’utilisateur, de la base de données.  
-  
- **Dans cette rubrique :**  
-  
--   [Restauration d'une base de données jusqu'au point de défaillance](#PointOfFailure)  
-  
--   [Restauration d'une base de données jusqu'à un point dans une sauvegarde de fichier journal](#PointWithinBackup)  
-  
--   [Tâches associées](#RelatedTasks)  
-  
-> [!NOTE]  
->  Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+### <a name="untrusted-sources"></a>Sources non approuvées
+
+Nous vous recommandons de ne _pas_ attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant qui peut exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] imprévisible ou causer des erreurs en modifiant le schéma ou la structure physique de la base de données. Avant d'utiliser une base de données à partir d'une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) sur la base de données, sur un serveur hors production. Examinez également le code écrit par l’utilisateur dans la base données, tel que les procédures stockées ou tout autre code défini par l'utilisateur.
+
+### <a name="backups-from-earlier-versions"></a>Sauvegarde de versions antérieures
+
+Pour plus d’informations sur la prise en charge de sauvegardes provenant de versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez la section « Prise en charge de la compatibilité » de [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).
   
 ##  <a name="PointOfFailure"></a> Restauration d'une base de données jusqu'au point de défaillance  
+
+[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Généralement, la récupération d'une base de données jusqu'au point de défaillance comprend les étapes de base suivantes :  
   
 1.  Sauvegardez le journal des transactions actives (connu sous le nom de fin du journal). Cela entraîne la création d'une sauvegarde de la fin du journal. Si le journal des transactions actives n'est pas disponible, toutes les transactions contenues dans cette partie du journal sont perdues.  
@@ -172,7 +169,7 @@ GO
   
  **Pour restaurer une base de données jusqu'à un point dans une sauvegarde de fichier journal**  
   
--   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
+-   [Restaurer une base de données SQL Server jusqu’à une limite dans le temps &#40;Mode de récupération complète&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)  
   
 -   [Récupération de bases de données associées contenant une transaction marquée](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md)  
   

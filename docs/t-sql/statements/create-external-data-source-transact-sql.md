@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f3c92067adfc0469802c81d78a7267af2cd28cc
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 986a658c315241e14efd6fd10b170aaf9fb17da0
+ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421196"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59516525"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -208,7 +208,7 @@ CREATE EXTERNAL DATA SOURCE MyElasticDBQueryDataSrc WITH
 Pour un tutoriel détaillé sur le SGBDR, consultez [Prise en main des requêtes de bases de données croisées (partitionnement vertical)](https://azure.microsoft.com/documentation/articles/sql-database-elastic-query-getting-started-vertical/).  
 
 **BLOB_STORAGE**   
-Ce type est utilisé uniquement pour les opérations en bloc uniquement, `LOCATION` doit être valide dans l’URL vers le stockage d’objets blob Azure et le conteneur. Ne placez pas **/**, le nom du fichier ou les paramètres de signature d’accès partagé à la fin de l’URL `LOCATION`. `CREDENTIAL` est requis si l’objet blob n’est pas public. Exemple : 
+Ce type est utilisé uniquement pour les opérations en bloc uniquement, `LOCATION` doit être valide dans l’URL vers le stockage d’objets blob Azure et le conteneur. Ne placez pas **/**, le nom du fichier ou les paramètres de signature d’accès partagé à la fin de l’URL `LOCATION`. `CREDENTIAL` est requis si l’objet blob n’est pas public. Par exemple : 
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureBlobStorage
 WITH (  TYPE = BLOB_STORAGE, 
@@ -216,7 +216,7 @@ WITH (  TYPE = BLOB_STORAGE,
         CREDENTIAL= MyAzureBlobStorageCredential    --> CREDENTIAL is not required if a blob has public access!
 );
 ```
-L'identifiant utilisé doit être créé en utilisant `SHARED ACCESS SIGNATURE` comme identité, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et la période d'expiration doit être valide (toutes les dates sont en heure UTC). Exemple :
+L'identifiant utilisé doit être créé en utilisant `SHARED ACCESS SIGNATURE` comme identité, ne doit pas avoir le premier `?` dans le jeton SAS, doit avoir au moins les droits de lecture sur le fichier à charger (par exemple `srt=o&sp=r`), et la période d'expiration doit être valide (toutes les dates sont en heure UTC). Par exemple :
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyAzureBlobStorageCredential 
  WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
@@ -302,7 +302,7 @@ Pour une liste complète des sources de données externes prises en charge, cons
   
 -   Une table externe qui fait référence à la source de données externe et au format de fichier externe.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation CONTROL sur la base de données dans SQL DW, SQL Server, APS 2016 et SQL DB.
 
 > [!IMPORTANT]  
@@ -325,6 +325,10 @@ Pour garantir la réussite des requêtes PolyBase en cas de basculement du NameN
  Toutes les sources de données définies sur le même emplacement de cluster Hadoop doivent utiliser le même paramètre pour RESOURCE_MANAGER_LOCATION ou JOB_TRACKER_LOCATION. S’il existe une incohérence, une erreur d’exécution se produit.  
   
  Si le cluster Hadoop est configuré avec un nom et si la source de données externe utilise l’adresse IP de l’emplacement du cluster, PolyBase doit quand même pouvoir résoudre le nom du cluster quand la source de données est utilisée. Pour résoudre le nom, vous devez faire appel à un redirecteur DNS.  
+ 
+Actuellement, un jeton SAS de type `hadoop` n’est pas pris en charge. Il n’est pris en charge qu’avec une clé d'accès au compte de stockage. Une tentative de créer une source de données externe de type `hadoop` et l’utilisation d’informations d'identification SAS peuvent échouer avec l’erreur :
+
+`Msg 105019, Level 16, State 1 - EXTERNAL TABLE access failed due to internal error: 'Java exception raised on call to HdfsBridge_Connect. Java exception message: Parameters provided to connect to the Azure storage account are not valid.: Error [Parameters provided to connect to the Azure storage account are not valid.] occurred while accessing external file.'`
   
 ## <a name="locking"></a>Verrouillage  
  Prend un verrou partagé sur l’objet EXTERNAL DATA SOURCE.  
@@ -343,7 +347,7 @@ WITH (
 
 ```  
   
-### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>b. Créer une source de données externe pour faire référence à Hadoop avec pushdown activé  
+### <a name="b-create-external-data-source-to-reference-hadoop-with-pushdown-enabled"></a>B. Créer une source de données externe pour faire référence à Hadoop avec pushdown activé  
 Spécifiez l’option RESOURCE_MANAGER_LOCATION pour activer le pushdown de calcul sur Hadoop pour des requêtes PolyBase. Une fois activé, PolyBase utilise une décision basée sur les coûts pour déterminer si le calcul de la requête doit être poussé vers Hadoop ou si toutes les données doivent être déplacées pour traiter la requête dans SQL Server.
   
 ```sql  

@@ -47,9 +47,9 @@ Pour éviter la suppression des connexions inactives par un composant réseau, l
   
 |Paramètre de Registre|Valeur recommandée|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ paramètres \ KeepAliveTime|30 000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ paramètres \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ paramètres \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30 000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
   
 Redémarrez l’ordinateur pour appliquer les paramètres du Registre.  
 
@@ -81,7 +81,7 @@ Avant la version 4.0 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Utilisation du chiffrement, nécessitant la définition d'un hostNameInCertificate
 
-Avant la version 7.2 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **chiffrer = true** (si le nom de serveur dans la connexion la chaîne est *shortName*. *domainName*, définissez le **hostNameInCertificate** propriété \*. *domainName*.). Cette propriété est facultative à partir de la version 7.2 du pilote.
+Avant la version 7.2 du [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], lors de la connexion à un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], vous devez spécifier **hostNameInCertificate** si vous spécifiez **encrypt=true** (si le nom de serveur dans la connexion la chaîne est *shortName*. *domainName*, définissez le **hostNameInCertificate** propriété \*. *domainName*.). Cette propriété est facultative à partir de la version 7.2 du pilote.
 
 Exemple :
 
