@@ -1,23 +1,23 @@
 ---
 title: Mettre à niveau et migrer Reporting Services | Microsoft Docs
-ms.date: 08/17/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint, reporting-services-native
-ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, upgrading
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-ms.assetid: 851a19a8-07ab-4d42-992f-1986c4c8df55
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a912718146d2c106072615577c130b2da576a578
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+manager: kfile
+ms.topic: conceptual
+ms.date: 08/17/2017
+ms.openlocfilehash: e1c32d07408f9eaf2beeaff5d92865520b49f08d
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518510"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583362"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -208,7 +208,7 @@ ms.locfileid: "52518510"
   
 -   Mode SharePoint : consultez la section « Gestion des clés » de l’article [Gérer une application de service Reporting Services SharePoint](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
   
--   Mode natif : consultez [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-   Mode natif : Consultez [Sauvegarder et restaurer les clés de chiffrement Reporting Services](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
   
   
 ### <a name="fixed-database-name"></a>Nom de base de données fixe  
