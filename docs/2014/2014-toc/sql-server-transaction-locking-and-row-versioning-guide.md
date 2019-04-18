@@ -10,12 +10,12 @@ ms.assetid: c7757153-9697-4f01-881c-800e254918c9
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 09c39fdb8cdb811efecbf84d41ce8778f022001a
-ms.sourcegitcommit: 5ca813d045e339ef9bebe0991164a5d39c8c742b
+ms.openlocfilehash: b49007cb51a2990ea90eb67b6e71087f59018d37
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54880562"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671425"
 ---
 # <a name="sql-server-transaction-locking-and-row-versioning-guide"></a>Guide du verrouillage des transactions et du contrôle de version de ligne SQL Server
 
@@ -152,7 +152,7 @@ CREATE TABLE TestBatch (Cola INT PRIMARY KEY, Colb CHAR(3));
 GO  
 INSERT INTO TestBatch VALUES (1, 'aaa');  
 INSERT INTO TestBatch VALUES (2, 'bbb');  
-INSERT INTO TestBatch VALUES (3, 'ccc');  -- Syntax error.  
+INSERT INTO TestBatch VALUSE (3, 'ccc');  -- Syntax error.  
 GO  
 SELECT * FROM TestBatch;  -- Returns no rows.  
 GO  
@@ -310,14 +310,14 @@ GO
 |Lecture non validée|Le niveau d'isolement le plus bas et suffisant pour s'assurer que les données physiquement corrompues ne sont pas lues. À ce niveau, les lectures de modifications sont autorisées. Ainsi, une transaction peut afficher les modifications qui ne sont pas encore validées apportées par d'autres transactions.|  
 |Lecture validée|Permet à une transaction de lire des données lues auparavant (non modifiées) par une autre transaction, sans attendre la fin de la première transaction. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] conserve les verrous d'écriture (acquis sur les données sélectionnées) jusqu'à la fin de la transaction, mais les verrous le lecture sont libérés dès que l'opération SELECT est terminée. C'est le niveau par défaut du [!INCLUDE[ssDE](../includes/ssde-md.md)].|  
 |Lecture renouvelable|Le [!INCLUDE[ssDE](../includes/ssde-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées jusqu'à la fin de la transaction. Cependant, étant donné que les verrous d'étendus ne sont pas gérés, des lectures fantômes peuvent se produire.|  
-|Sérialisable|Niveau le plus élevé, dans lequel les transactions sont totalement isolées les unes des autres. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées de façon à les libérer à la fin de la transaction. Les verrous d'étendues sont acquis lorsqu'une opération SELECT utilise une clause WHERE, plus particulièrement pour éviter les lectures fantômes.<br /><br /> **Remarque :** Les opérations DDL et les transactions sur les tables répliquées peuvent échouer lorsque le niveau d'isolation sérialisable est demandé. Cela est dû au fait que les requêtes de réplication utilisent des indicateurs qui peuvent être incompatibles avec le niveau d'isolation sérialisable.|  
+|Sérialisable|Niveau le plus élevé, dans lequel les transactions sont totalement isolées les unes des autres. Le [!INCLUDE[ssDE](../includes/ssde-md.md)] conserve les verrous de lecture et d'écriture acquis sur les données sélectionnées de façon à les libérer à la fin de la transaction. Les verrous d'étendues sont acquis lorsqu'une opération SELECT utilise une clause WHERE, plus particulièrement pour éviter les lectures fantômes.<br /><br /> **Remarque :** Opérations DDL et les transactions sur les tables répliquées peuvent échouer lorsque le niveau d’isolation sérialisable est demandé. Cela est dû au fait que les requêtes de réplication utilisent des indicateurs qui peuvent être incompatibles avec le niveau d'isolation sérialisable.|  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prend également en charge deux niveaux d'isolement de la transaction supplémentaires qui utilisent le contrôle de version de ligne. Le premier est une implémentation de l'isolement read committed, et le deuxième est un niveau d'isolement, l'instantané.  
   
 |Niveau d'isolement basé sur le contrôle de version de ligne|Définition|  
 |------------------------------------|----------------|  
 |Instantané read committed|Lorsque l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur ON, le niveau d'isolation read committed utilise le contrôle de version de ligne pour procurer une lecture cohérente au niveau des instructions. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. À savoir, le moteur de base de données utilise le contrôle de version de ligne pour présenter à chaque instruction un instantané cohérent des données (du point de vue transactionnel) telles qu'elles étaient au début de l'instruction. Les verrous ne sont pas utilisés pour protéger les données des mises à jour par d'autres transactions. Une fonction définie par l'utilisateur peut retourner des données qui ont été validées après l'heure de début de l'instruction contenant cette fonction.<br /><br /> Si l'option de base de données READ_COMMITTED_SNAPSHOT a la valeur OFF (valeur par défaut), l'isolement read committed utilise des verrous partagés pour empêcher d'autres transactions de modifier des lignes pendant que la transaction active exécute une opération de lecture. Les verrous partagés empêchent également l'instruction de lire des lignes modifiées par d'autres transactions, tant que celles-ci ne sont pas terminées. Les deux variantes sont conformes à la définition de l'isolation read committed de l'ISO.|  
-|Snapshot|Le niveau d'isolation d'instantané utilise le contrôle de version de ligne pour assurer la cohérence des lectures au niveau de la transaction. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. Lorsque l'opération de lecture lit des lignes modifiées par une autre transaction, elle récupère la version de la ligne du début de la transaction. Vous pouvez utiliser l'isolation d'instantané pour une base de données uniquement lorsque la valeur ON est attribuée à l'option de base de données ALLOW_SNAPSHOT_ISOLATION. Par défaut, cette option est désactivée (OFF) pour les bases de données utilisateur.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge le contrôle de version des métadonnées. Pour cette raison, il existe des restrictions sur les opérations DDL pouvant être effectuées dans une transaction explicite exécutée avec le niveau d'isolement d'instantané. Les instructions DDL suivantes ne sont pas autorisées en isolement d'instantanée après une instruction BEGIN TRANSACTION : ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou toute instruction DDL CLR (Common Language Runtime). Ces instructions sont autorisées lorsque vous avez recours à l'isolation d'instantané au sein des transactions implicites. Par définition, une transaction implicite est une instruction unique qui permet d'appliquer la sémantique de l'isolation d'instantané, même avec des instructions DDL. Les violations de ce principe peuvent provoquer l'erreur 3961 : « La transaction d'isolement d'instantané a échoué dans la base de données '%.*ls', car l'objet auquel l'instruction a eu accès a été modifié par une instruction DDL dans une autre transaction simultanée depuis le début de cette transaction. Cela est interdit, car les métadonnées sont dépourvues de version. Une mise à jour simultanée des métadonnées peut provoquer des incohérences si elle est associée à une isolation d'instantané. »|  
+|Snapshot|Le niveau d'isolation d'instantané utilise le contrôle de version de ligne pour assurer la cohérence des lectures au niveau de la transaction. Les opérations de lecture ont besoin uniquement de verrous de table SCH-S, et pas de verrous de page ni de ligne. Lorsque l'opération de lecture lit des lignes modifiées par une autre transaction, elle récupère la version de la ligne du début de la transaction. Vous pouvez utiliser l'isolation d'instantané pour une base de données uniquement lorsque la valeur ON est attribuée à l'option de base de données ALLOW_SNAPSHOT_ISOLATION. Par défaut, cette option est désactivée (OFF) pour les bases de données utilisateur.<br /><br /> **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ne prend pas en charge le contrôle de version des métadonnées. Pour cette raison, il existe des restrictions sur les opérations DDL pouvant être effectuées dans une transaction explicite exécutée avec le niveau d'isolement d'instantané. Les instructions DDL suivantes ne sont pas autorisées en isolement d’instantané après une instruction BEGIN TRANSACTION : ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME ou toute instruction de DDL common language runtime (CLR). Ces instructions sont autorisées lorsque vous avez recours à l'isolation d'instantané au sein des transactions implicites. Par définition, une transaction implicite est une instruction unique qui permet d'appliquer la sémantique de l'isolation d'instantané, même avec des instructions DDL. Violation de ce principe peut provoquer l’erreur 3961 : « A échoué dans la base de données de la transaction d’isolement de capture instantanée ' %. * ls', car l’objet accessible par l’instruction a été modifiés par une instruction DDL dans une autre transaction simultanée depuis le début de cette transaction. Cela est interdit, car les métadonnées sont dépourvues de version. Une mise à jour simultanée des métadonnées peut provoquer des incohérences si elle est associée à une isolation d'instantané. »|  
   
  Le tableau suivant répertorie les effets secondaires de la concurrence provoqués par les différents niveaux d'isolation.  
   
@@ -561,7 +561,7 @@ GO
   
 -   Le niveau d'isolement de la transaction doit être défini sur SERIALIZABLE.  
   
--   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d'étendue avec le prédicat suivant : ColonneX BETWEEN N **’** AAA **’** AND N **’** CZZ **’**. Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
+-   Le processeur de requêtes doit utiliser un index pour implémenter le prédicat de filtre de l'étendue. Par exemple, la clause WHERE dans une instruction SELECT peut établir une condition d’étendue avec le prédicat : ColonneX BETWEEN N **’** AAA **’** AND N **’** CZZ **’**. Un verrou de groupes de clés ne peut être acquis que si **ColumnX** est couvert par une clé d’index.  
   
 #### <a name="examples"></a>Exemples  
 
@@ -649,7 +649,7 @@ INSERT mytable VALUES ('Dan');
   
 -   La transaction B demande un verrou exclusif sur la ligne 1, mais elle est bloquée jusqu'à la fin de la transaction A qui libérera le verrou partagé sur la ligne 1.  
   
- La transaction A ne peut pas se terminer tant que la transaction B n'est pas terminée, mais la transaction B est bloquée par la transaction A. Il s'agit d'une dépendance cyclique : La transaction A est dépendante de la transaction B, mais celle-ci ne peut pas s'exécuter car elle est dépendante de la transaction A.  
+ Impossible de terminer la transaction A jusqu'à ce que la fin de la transaction B, mais la transaction B est bloquée par la transaction A. Cette condition est également appelée une dépendance cyclique : La transaction A a une dépendance sur la transaction B, et la transaction B ferme le cercle en possède une dépendance vis-à-vis de la transaction A.  
   
  Les deux transactions en interblocage attendent indéfiniment que la situation soit débloquée par un processus externe. Le moniteur d’interblocage du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] recherche périodiquement les tâches d’interblocage. S'il détecte une situation de dépendance cyclique, il désigne une des tâches comme victime et met fin à sa transaction avec un message d'erreur. Cela permet à l'autre tâche de terminer sa transaction. L'application qui exécutait la transaction abandonnée peut effectuer une nouvelle tentative qui réussit en général une fois que l'autre transaction est terminée.  
   
@@ -1406,7 +1406,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>b. Utilisation d'une transaction validée en lecture à l'aide du contrôle de version de ligne  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. Utilisation d'une transaction validée en lecture à l'aide du contrôle de version de ligne  
 
  Dans cet exemple, une transaction validée en lecture à l'aide du contrôle de version de ligne est exécutée en même temps qu'une autre transaction. La transaction validée en lecture se comporte différemment de la transaction d'instantané. À l'instar d'une transaction d'instantané, la transaction validée en lecture lit les lignes avec version même après la modification des données effectuée par l'autre transaction. Toutefois, contrairement à une transaction d'instantané, la transaction validée en lecture :  
   
@@ -1924,7 +1924,7 @@ GO
   
  Une transaction longue peut entraîner de graves problèmes pour une base de données, comme suit :  
   
--   Si une instance de serveur est arrêtée après qu’une transaction active a effectué de nombreuses modifications non validées, la phase de récupération du redémarrage suivant peut prendre beaucoup plus longue que la durée spécifiée par la **intervalle de récupération** server option de configuration ou par l’instruction ALTER DATABASE... SET TARGET_RECOVERY_TIME. Ces options contrôlent la fréquence des points de contrôle actifs et indirects, respectivement. Pour plus d’informations sur les types de points de contrôle, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
+-   Si une instance de serveur est arrêtée après qu’une transaction active a effectué de nombreuses modifications non validées, la phase de récupération du redémarrage suivant peut prendre beaucoup plus longue que la durée spécifiée par la **intervalle de récupération** server option de configuration ou par l’instruction ALTER DATABASE... Option SET TARGET_RECOVERY_TIME. Ces options contrôlent la fréquence des points de contrôle actifs et indirects, respectivement. Pour plus d’informations sur les types de points de contrôle, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 -   Plus important, bien qu'une transaction en attente génère très peu d'entrées de journal, elle empêche la troncation du journal et entraîne ainsi sa croissance et son remplissage. Si le journal des transactions est rempli, la base de données ne peut plus effectuer de mises à jour. Pour plus d’informations, consultez [résoudre les problèmes d’un journal des transactions saturé &#40;erreur SQL Server 9002&#41;](../relational-databases/logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md), et [journal des transactions &#40;SQL Server&#41;](../relational-databases/logs/the-transaction-log-sql-server.md).  
   

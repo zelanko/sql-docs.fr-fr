@@ -16,12 +16,12 @@ ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7e8d3f735a096eeaf60ecdb376d02d046112a25
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375361"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671365"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implémenter un outil personnalisé de résolution des conflits pour un article de fusion
   Cette rubrique décrit comment implémenter l'outil personnalisé de résolution des conflits pour un article de fusion dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou du [programme de résolution personnalisé COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "53375361"
   
 #### <a name="viewing-a-sample-custom-resolver"></a>Affichage d'un exemple de programme de résolution personnalisé  
   
-1.  Un exemple est disponible dans les fichiers d'exemple de SQL Server 2000. Téléchargez **sql2000samples.cab** dans les [Exemples mis à jour pour SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560). Huit fichiers sont téléchargés d'une taille de 6,9 Mo.  
+1.  Un exemple est disponible dans les fichiers d'exemple de SQL Server 2000. Téléchargez le [ **sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip). Cela permet de télécharger des 3 fichiers qui consiste à 6,9 Mo.  
   
 2.  Extrayez les fichiers du fichier .cab compressé téléchargé.  
   

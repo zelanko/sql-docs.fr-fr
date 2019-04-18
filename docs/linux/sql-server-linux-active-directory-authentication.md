@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Utiliser l’authentification AD pour SQL Server sur Linux'
+title: 'Tutoriel : Utiliser l’authentification AD pour SQL Server sur Linux'
 titleSuffix: SQL Server
 description: Ce didacticiel fournit les étapes de configuration pour l’authentification Active Directory pour SQL Server sur Linux.
 author: Dylan-MSFT
@@ -13,14 +13,14 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 5e75a0315c0e632e9637ad1f1467acc90dc586cf
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: e71c4c68a7f04e5f7f33b8635e660a84f501c263
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240777"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671295"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Didacticiel : Utiliser l’authentification Active Directory avec SQL Server sur Linux
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutoriel : Utiliser l’authentification Active Directory avec SQL Server sur Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -42,9 +42,9 @@ Ce didacticiel se compose des tâches suivantes :
 Avant de configurer l’authentification Active Directory, vous devez :
 
 * Configurer un contrôleur de domaine Active Directory (Windows) sur votre réseau  
-* Installation [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
+* Installer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
   * [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
-  * [SLES (SUSE Linux Enterprise Server)](quickstart-install-connect-suse.md)
+  * [SUSE Linux Enterprise Server (SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
 ## <a id="join"></a> Joindre [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hôte au domaine AD
@@ -315,11 +315,11 @@ systemctl restart mssql-server
 Si votre contrôleur de domaine prend en charge le protocole LDAPS, vous pouvez forcer toutes les connexions à partir de SQL Server pour les contrôleurs de domaine sur LDAPS. Pour vérifier votre client peut contacter le contrôleur de domaine via le protocole ldaps, exécutez la commande bash suivante, `ldapsearch -H ldaps://contoso.com:3269`. Pour définir SQL Server à utiliser uniquement le protocole LDAPS, exécutez la commande suivante :
 
 ```bash
-sudo mssql-conf set network.forceldaps true
+sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-Cette opération utilise LDAPS sur SSSD si AD domain join sur hôte a été effectué via le package SSSD et **disablesssd** n’est pas définie sur true. Si **disablesssd** est défini sur true avec **forceldaps** définie sur true, puis il utilisera les protocole LDAPS sur les appels de bibliothèque openldap effectués par SQL Server.
+Cette opération utilise LDAPS sur SSSD si AD domain join sur hôte a été effectué via le package SSSD et **disablesssd** n’est pas définie sur true. Si **disablesssd** est défini sur true avec **forcesecureldap** définie sur true, puis il utilisera les protocole LDAPS sur les appels de bibliothèque openldap effectués par SQL Server.
 
 ### <a name="post-sql-server-2017-cu14"></a>Publication SQL Server 2017 CU14
 

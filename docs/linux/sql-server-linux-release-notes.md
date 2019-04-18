@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: feba6aca66d4428733b11db778c6b590dfde9f8b
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 21ee0544a91199648f2d96a631c567dd9788bc2f
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290775"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671405"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notes de publication pour 2017 de SQL Server sur Linux
 
@@ -48,6 +48,7 @@ Le tableau suivant répertorie l’historique de publication pour [!INCLUDE[ssSQ
 
 | Version               | Version       | Date de publication |
 |-----------------------|---------------|--------------|
+| [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
 | [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
@@ -76,6 +77,20 @@ Si vous mettez à jour existant [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
 - [Installer le package de recherche en texte intégral](sql-server-linux-setup-full-text-search.md)
 - [Installer SQL Server Integration Services](sql-server-linux-setup-ssis.md)
 - [Activer l’Agent SQL Server](sql-server-linux-setup-sql-agent.md)
+
+## <a id="CU14"></a> CU14 (mars 2018)
+
+Ceci est la version 14 de mise à jour Cumulative (CU14) de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Le [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version pour cette version est 14.0.3076.1. Pour plus d’informations sur les correctifs et les améliorations apportées dans cette version, consultez [ https://support.microsoft.com/help/4484710 ](https://support.microsoft.com/help/4484710).
+
+### <a name="package-details"></a>Détails du package
+
+Pour les installations de package manuelles ou hors connexion, vous pouvez télécharger les packages RPM et Debian avec les informations contenues dans le tableau suivant :
+
+| Package | Version du package | Téléchargements |
+|-----|-----|-----|
+| Package Red Hat RPM | 14.0.3076.1-2 | [Package RPM de moteur](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[Package RPM de disponibilité élevée](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[Package RPM de recherche de texte intégral](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm)</br>[Package SSIS](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| Package RPM de SLES | 14.0.3076.1-2 | [package de moteur RPM MSSQL-server](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3076.1-2.x86_64.rpm)</br>[Package RPM de disponibilité élevée](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3076.1-2.x86_64.rpm)</br>[Package RPM de recherche de texte intégral](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3076.1-2.x86_64.rpm) | 
+| Package Debian Ubuntu 16.04 | 14.0.3076.1-2 | [Package Debian moteur](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3076.1-2_amd64.deb)</br>[Package de Debian haute disponibilité](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3076.1-2_amd64.deb)</br>[Package Debian de recherche en texte intégral](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3076.1-2_amd64.deb)<br/>[Package SSIS](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a id="CU13"></a> CU13 (décembre 2018)
 

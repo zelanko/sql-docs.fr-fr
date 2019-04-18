@@ -3,19 +3,19 @@ title: R-to-SQL des types de données - SQL Server Machine Learning Services
 description: Passez en revue les type de données implicites et explicites converstions entre R et SQL Server dans la science des données et des solutions d’apprentissage.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2018
+ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cf293c0efbc5b9da8fe5338b97cb10c30f45320b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511536"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671115"
 ---
-# <a name="data-type-mappings-betweenr-and-sql-server"></a>Type de données betweenR de mappages et de SQL Server
+# <a name="data-type-mappings-between-r-and-sql-server"></a>Mappages de types de données entre R et SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Pour les solutions R qui s’exécutent sur la fonctionnalité d’intégration de R dans SQL Server Machine Learning Services, passez en revue la liste des types de données non pris en charge et les conversions de types de données qui peuvent être effectuées implicitement lorsque les données sont transmises entre les bibliothèques R et SQL Server.

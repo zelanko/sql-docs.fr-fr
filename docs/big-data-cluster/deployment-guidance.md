@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 7a863259a3eb04aef648d98f1d8c4ac22e4a3f38
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: b7ca08d7ab73cc90e90717b23d2e5b293022bb1c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582412"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671375"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Comment déployer des clusters de données volumineuses de SQL Server sur Kubernetes
 
@@ -120,6 +120,29 @@ La configuration du cluster peut être personnalisée à l’aide d’un ensembl
 >1. Assurez-vous que vous encapsulez les mots de passe entre guillemets s’il contient des caractères spéciaux. Vous pouvez définir le MSSQL_SA_PASSWORD sur comme vous le souhaitez, mais assurez-vous qu’ils sont suffisamment complexes et n’utilisent pas le `!`, `&` ou `'` caractères. Notez que les délimiteurs de guillemets doubles ne fonctionnent que dans les commandes bash.
 >1. Le nom de votre cluster doit être uniquement alphanumériques minuscules, sans espaces. Tous les artefacts de Kubernetes (conteneurs, pods, les jeux avec état, services) pour le cluster seront créées dans un espace de noms avec le même nom que le cluster de nom spécifié.
 >1. Le **SA** compte est un administrateur système sur l’instance principale de SQL Server qui est créé pendant l’installation. Après que la création de votre conteneur de SQL Server, la variable d’environnement MSSQL_SA_PASSWORD que vous avez spécifié est détectable en exécutant l’écho MSSQL_SA_PASSWORD $ dans le conteneur. Pour des raisons de sécurité, modifier votre mot de passe SA conformément aux bonnes pratiques documentées [ici](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker?view=sql-server-2017#change-the-sa-password).
+
+La section suivante décrit sur les options de configuration YARN. Remarque : Il s’agit des configurations de niveau expert. L’utilisateur n’est pas nécessaire de spécifier une de ces valeurs et dans ce cas les valeurs par défaut prennent effet. Yarn est Resource Manager pour Spark. Spark s’exécute dans des blocs de stockage et qui peut être contrôlé via CLUSTER_STORAGE_POOL_REPLICAS.
+
+| Variable d’environnement yarn | Requis | Valeur par défaut | Description |
+|---|---|---|---|
+| **HADOOP_HEAPSIZE** | Non | 2048  | Taille du tas pour les processus de nœud de nom et les données HDFS |
+| **YARN_HEAPSIZE**   | Non | 2048  | Taille du tas pour les processus fils RM et NM |
+| **YARN_NODEMANAGER_RESOURCE_MEMORY** | Non | 18432  | Mémoire totale maximale Yarn peut utiliser par K8 conteneur  |
+| **YARN_NODEMANAGER_RESOURCE_VCORES** | Non | 6  | Cœurs virtuels max Yarn peut utiliser sur un nœud  |
+| **YARN_SCHEDULER_MAX_MEMORY** | Non | 18432  | Mémoire max. un conteneur de Yarn peut utiliser sur un nœud  |
+| **YARN_SCHEDULER_MAX_VCORES** | Non | 6  | Mémoire max. un conteneur de Yarn peut utiliser sur un nœud  |
+| **YARN_SCHEDULER_CAPACITY_MAX_AM_PERCENT** | Non | 0.3  | Ratio de la mémoire totale qui permettent de maîtres d’Application   |
+
+Cette section décrit en détail sur les configurations Spark options. Remarque : Il s’agit des configurations de niveau expert. L’utilisateur n’est pas nécessaire de spécifier une de ces valeurs et dans ce cas les valeurs par défaut prennent effet. En cours d’exécution utilisateur peut configurer sur chaque application via %% configurer dans les notebooks spark.
+
+| Variable d’environnement de Spark | Requis | Valeur par défaut | Description |
+|---|---|---|---|
+| **SPARK_DRIVER_MEMORY** | Non | 2048  | Mémoire utilisées pilote Spark  |
+| **SPARK_DRIVER_CORES** | Non | 1  | Nombre de cœurs utilisés par le pilote Spark  |
+| **SPARK_EXECUTOR_INSTANCES** | Non | 3  | Mémoire utilisées pilote Spark  |
+| **SPARK_EXECUTOR_MEMORY** | Non | 1536  | Mémoire utilisée exécuteur Spark |
+| **SPARK_EXECUTOR_CORES** | Non | 1  | Nombre de cœurs utilisés par les exécuteurs Spark  |
+
 
 Définition des variables d’environnement requises pour le déploiement d’un cluster de données volumineux diffère selon que vous utilisez un client Windows ou Linux.  Choisissez les étapes ci-dessous, selon le système d’exploitation que vous utilisez.
 

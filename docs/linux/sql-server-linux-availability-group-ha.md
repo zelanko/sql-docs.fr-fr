@@ -1,7 +1,7 @@
 ---
 title: SQL Server Always On le modèles de déploiement du groupe de disponibilité | Microsoft Docs
 ms.custom: sql-linux
-ms.date: 10/16/2017
+ms.date: 04/17/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: linux
@@ -10,12 +10,12 @@ ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a9d09f9f769d195600c8af97b347831340837d91
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: b0b7e735b2897f8bc942f1d4e6c151f27f588e8c
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044932"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671175"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Haute disponibilité et protection des données pour les configurations de groupe de disponibilité
 
@@ -62,7 +62,7 @@ Un groupe de disponibilité avec trois réplicas synchrones peut fournir en lect
 | |échelle de lecture|Haute disponibilité & </br> protection de données | Protection des données|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
-|Indisponibilité du réplica principal | Basculement manuel. Perte de données possible. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire. |
+|Indisponibilité du réplica principal |Basculement automatique. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal est R / w. |Basculement automatique. Nouveau réplica principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que le réplica principal précédent récupère et joint le groupe de disponibilité comme secondaire. |
 |Une indisponibilité du réplica secondaire  | Principal est R / w. Aucun basculement automatique si le serveur principal échoue. |Principal est R / w. Aucun basculement automatique si le serveur principal échoue également. | Principal n’est pas disponible pour les transactions utilisateur. |
 
 <sup>\*</sup> Par défaut
@@ -71,7 +71,7 @@ Un groupe de disponibilité avec trois réplicas synchrones peut fournir en lect
 
 ## <a name="two-synchronous-replicas"></a>Deux réplicas synchrones
 
-Cette configuration permet la protection des données. Comme les autres configurations de groupe de disponibilité, il peut activer avec échelle lecture. La configuration de deux réplicas synchrones ne fournit pas de haute disponibilité automatique. 
+Cette configuration permet la protection des données. Comme les autres configurations de groupe de disponibilité, il peut activer avec échelle lecture. La configuration de deux réplicas synchrones ne fournit pas de haute disponibilité automatique. Configurer deux réplicas est uniquement applicable à SQL Server 2017 RTM et est plus pris en charge avec une version ultérieure (CU1 et au-delà) les versions de SQL Server 2017...
 
 ![Deux réplicas synchrones][1]
 
@@ -84,9 +84,6 @@ Un groupe de disponibilité avec deux réplicas synchrones fournit une protectio
 |Une indisponibilité du réplica secondaire  |Principal est en lecture/écriture, exécution exposée à une perte de données. |Principal n’est pas disponible pour les transactions utilisateur jusqu'à ce que la récupération du réplica secondaire.|
 
 <sup>\*</sup> Par défaut
-
-> [!NOTE]
-> Le scénario précédent est le comportement antérieur à SQL Server 2017 CU 1. 
 
 <a name = "configOnly"></a>
 

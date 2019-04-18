@@ -4,18 +4,18 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.date: 11/27/2017
+ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1273d445d52c00db01cac884b171e8feedceb49a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cec05fbb83bf3b86babfa26df619ebc8f9a2a34d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206618"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671285"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Sur Linux, les groupes de disponibilité Always On
 
@@ -49,7 +49,7 @@ Un type de cluster aucun signifie qu’il n’est pas nécessaire pour, ni le gr
 
 Type de cluster est stocké dans le [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] vue de gestion dynamique (DMV) `sys.availability_groups`, dans les colonnes `cluster_type` et `cluster_type_desc`.
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>requis\_synchronisés\_secondaires\_à\_validation
+## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
 
 Débutez [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] est un paramètre qui est utilisé par les groupes de disponibilité appelés `required_synchronized_secondaries_to_commit`. Le groupe de disponibilité vous indique le nombre de réplicas secondaires qui doivent être par échelons avec le réplica principal. Cela permet le basculement automatique (uniquement en cas d’intégré à Pacemaker avec un type de cluster externe) et contrôle le comportement des éléments tels que la disponibilité du site principal si le nombre approprié de réplicas secondaires est en ligne ou hors connexion. Pour en savoir plus sur cette procédure, consultez [haute disponibilité et protection des données pour les configurations de groupe de disponibilité](sql-server-linux-availability-group-ha.md). Le `required_synchronized_secondaries_to_commit` valeur est définie par défaut et gérée par Pacemaker / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Vous pouvez substituer manuellement cette valeur.
 
@@ -57,7 +57,7 @@ La combinaison de `required_synchronized_secondaries_to_commit` et le nouveau nu
 
 Il existe trois valeurs qui peuvent être définies pour `required_synchronized_secondaries_to_commit`: 0, 1 ou 2. Ils contrôlent le comportement de ce qui se passe lorsqu’un réplica devient indisponible. Les numéros correspondent au nombre de réplicas secondaires qui doivent être synchronisés avec le réplica principal. Le comportement est comme suit sous Linux :
 
--   0 - aucun basculement automatique n’est possible dans la mesure où aucun réplica secondaire n’est nécessaire pour être synchronisé. La base de données primaire est disponible en permanence.
+-   0 - réplicas secondaires n’avez pas besoin être dans un état synchronisé avec le réplica principal. Toutefois si les bases de données secondaires ne sont pas synchronisés, il n’y aura aucun basculement automatique. 
 -   1 - un réplica secondaire doit être dans un état synchronisé avec le réplica principal ; le basculement automatique est possible. La base de données primaire n’est pas disponible jusqu'à ce qu’un réplica synchrone secondaire n’est disponible.
 -   2 - les deux réplicas secondaires dans une configuration de groupe de disponibilité au moins trois nœuds doivent être synchronisés avec le serveur principal ; le basculement automatique est possible.
 
@@ -95,7 +95,7 @@ Si ces conditions sont remplies et que le serveur qui héberge le réplica princ
 
 Autres nouveautés de [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] depuis CU1 est un réplica en configuration seule. Étant donné que Pacemaker est différente de celle d’un cluster WSFC, en particulier lorsqu’il s’agit de quorum et nécessiter de STONITH, avoir seulement une configuration à deux nœuds ne fonctionne pas lorsqu’il s’agit d’un groupe de disponibilité. Pour une FCI, les mécanismes de quorum fournis par Pacemaker peuvent être parfaits, car tous les arbitrage de basculement FCI se produit au niveau de la couche de cluster. Pour un groupe de disponibilité, arbitrage sous Linux se produit dans [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], où toutes les métadonnées sont stockées. Il s’agit là le réplica de configuration entre en jeu.
 
-Sans quoi, un troisième nœud et au moins un réplica synchronisé serait requis. Cela ne fonctionnerait pas pour [!INCLUDE[ssstandard-md](../includes/ssstandard-md.md)], dans la mesure où il peut avoir uniquement deux réplicas qui participent à un groupe de disponibilité. Le réplica en configuration seule stocke la configuration du groupe de disponibilité dans la base de données master, identique à celui des autres réplicas dans la configuration du groupe de disponibilité. Le réplica en configuration seule n’a pas de bases de données utilisateur participant dans le groupe de disponibilité. Les données de configuration sont envoyées de manière synchrone depuis le serveur principal. Ces données de configuration sont ensuite utilisées pendant les basculements, qu’ils soient automatique ou manuelle.
+Sans quoi, un troisième nœud et au moins un réplica synchronisé serait requis. Le réplica en configuration seule stocke la configuration du groupe de disponibilité dans la base de données master, identique à celui des autres réplicas dans la configuration du groupe de disponibilité. Le réplica en configuration seule n’a pas de bases de données utilisateur participant dans le groupe de disponibilité. Les données de configuration sont envoyées de manière synchrone depuis le serveur principal. Ces données de configuration sont ensuite utilisées pendant les basculements, qu’ils soient automatique ou manuelle.
 
 Pour un groupe de disponibilité maintenir le quorum et activer les basculements automatiques avec un type de cluster externe, celle-ci soit doit :
 
