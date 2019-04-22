@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e9e05ab2dd5eeb0511838cd0c1540b2c1ba964d4
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860740"
 ---
 # <a name="distributed-availability-groups"></a>Groupes de disponibilité distribués
@@ -96,8 +96,8 @@ Dans le cas d’un groupe de disponibilité distribué, le réplica principal de
 
 Voici les trois principaux scénarios d’utilisation d’un groupe de disponibilité distribué : 
 
-* [Récupération d’urgence et configurations multisites plus faciles](#disaster-recovery-and-multi-site-scenarios)
-* [Migration vers du nouveau matériel ou de nouvelles configurations, ce qui peut impliquer d’utiliser du nouveau matériel ou de changer de systèmes d’exploitation sous-jacents](#migrate-by-using-a-distributed-availability-group)
+* [Récupération d’urgence et configurations multisite plus faciles](#disaster-recovery-and-multi-site-scenarios)
+* [Migration vers un nouveau matériel ou vers de nouvelles configurations, ce qui peut signifier l’utilisation d’un nouveau matériel ou le changement de système d’exploitation sous-jacent](#migrate-by-using-a-distributed-availability-group)
 * [Augmentation au-delà de huit du nombre de réplicas lisibles dans un même groupe de disponibilité en englobant plusieurs groupes de disponibilité](#scale-out-readable-replicas-with-distributed-availability-groups)
 
 ### <a name="disaster-recovery-and-multi-site-scenarios"></a>Scénarios de récupération d’urgence et de configuration multisite
@@ -178,7 +178,7 @@ Quand vous ajoutez le réplica principal du deuxième groupe de disponibilité a
 
 Un groupe de disponibilité distribué est une construction SQL Server uniquement, et il n’est pas visible dans le cluster WSFC sous-jacent. La figure suivante illustre deux clusters WSFC différents (CLUSTER_A et CLUSTER_B), chacun ayant ses propres groupes de disponibilité. Seuls AG1 dans CLUSTER_A et AG2 dans CLUSTER_B sont présentés ici. 
 
-[Deux clusters WSFC avec plusieurs groupes de disponibilité par le biais de la commande PowerShell Get-ClusterGroup](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
+[Deux clusters WSFC avec plusieurs groupes de disponibilité via la commande PowerShell Get-ClusterGroup](./media/distributed-availability-group/dag-07-two-wsfcs-multiple-ags-through-get-clustergroup-command.png)
 
 
 ```
@@ -308,7 +308,7 @@ La requête ci-dessous affiche les compteurs de performances associés spécifiq
  >Le filtre `LIKE` doit porter le nom du groupe de disponibilité distribué. Dans cet exemple, le nom du groupe de disponibilité distribué est « distributedag ». Changez le modificateur `LIKE` afin de refléter le nom de votre groupe de disponibilité distribué.  
 
 ### <a name="dmv-to-display-health-of-both-ag-and-distributed-ag"></a>Vue de gestion dynamique pour afficher l’intégrité du groupe de disponibilité et du groupe de disponibilité distribué
-La requête ci-dessous affiche une mine d’informations sur l’intégrité du groupe de disponibilité et du groupe de disponibilité distribué. [Merci, Tracy Boggiano !](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
+La requête ci-dessous affiche une mine d’informations sur l’intégrité du groupe de disponibilité et du groupe de disponibilité distribué. [Merci Tracy Boggiano !](https://tracyboggiano.com/archive/2017/11/distributed-availability-groups-setup-and-monitoring/)
 
  ```sql
  -- displays sync status, send rate, and redo rate of availability groups, including distributed AG
@@ -346,7 +346,7 @@ La requête ci-dessous affiche une mine d’informations sur l’intégrité du 
 ![Intégrité du groupe de disponibilité et du groupe de disponibilité distribué](./media/distributed-availability-group/dmv-sync-status-send-rate.png)
 
 ### <a name="dmvs-to-view-metadata-of-distributed-ag"></a>Vues de gestion dynamique pour afficher les métadonnées du groupe de disponibilité distribué
-Les requêtes ci-dessous affichent des informations sur les URL de point de terminaison utilisées par les groupes de disponibilité, dont le groupe de disponibilité distribué.  [Merci, David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+Les requêtes ci-dessous affichent des informations sur les URL de point de terminaison utilisées par les groupes de disponibilité, dont le groupe de disponibilité distribué.  [Merci David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
 
 
@@ -374,7 +374,7 @@ Les requêtes ci-dessous affichent des informations sur les URL de point de term
 
 
 ### <a name="dmv-to-show-current-state-of-seeding"></a>Vue de gestion dynamique pour afficher l’état actuel de l’amorçage
-La requête ci-dessous affiche des informations sur l’état actuel de l’amorçage. Cela est utile pour le dépannage des erreurs de synchronisation entre les réplicas. [Encore merci, David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
+La requête ci-dessous affiche des informations sur l’état actuel de l’amorçage. Cela est utile pour le dépannage des erreurs de synchronisation entre les réplicas. [Encore merci David Barbarin !](https://blog.dbi-services.com/sql-server-2016-alwayson-distributed-availability-groups/)
 
  ```sql
  -- shows current_state of seeding 

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241429"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
@@ -48,7 +48,7 @@ ms.locfileid: "59241429"
  La liaison de canal établit un canal sécurisé (Schannel) entre un client et une instance du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le service vérifie l’authenticité du client en comparant le jeton de liaison de canaux du client à son propre jeton de liaison de canaux. La liaison de canal répond à la fois aux attaques par leurre et d'usurpation. Toutefois, elle implique un coût d'exécution plus important, car elle nécessite le chiffrement TLS (Transport Layer Security) de tout le trafic de session. La liaison de canal se produit lorsqu'une application cliente utilise le chiffrement pour se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que le chiffrement soit appliqué par le client ou par le serveur.  
   
 > [!WARNING]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
+>  Les fournisseurs de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prennent en charge TLS 1.0 et SSL 3.0. Si vous appliquez un autre protocole (comme TLS 1.1 ou TLS 1.2) en apportant des modifications dans la couche SChannel du système d’exploitation, vos connexions à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] risquent d’échouer.  
   
 ### <a name="operating-system-support"></a>Prise en charge du système d'exploitation  
  Les liens suivants fournissent davantage d'informations sur la prise en charge de la **protection étendue**par Windows :  
@@ -64,7 +64,7 @@ ms.locfileid: "59241429"
   
      Les valeurs possibles sont **On** (activé) et **Off**(désactivé). Pour utiliser la liaison de canal, **Forcer le chiffrement** doit avoir la valeur **On**et le chiffrement sera forcé pour tous les clients. Si la valeur est **Off**, seule la liaison de service est garantie. **Forcer le chiffrement** figure dans **Propriétés de Protocoles pour MSSQLSERVER (onglet Indicateurs)** dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   **protection étendue**  
+-   **Protection étendue**  
   
      Les valeurs possibles sont **Off**, **Autorisée**et **Requis**. La variable **Protection étendue** permet aux utilisateurs de configurer le niveau de **protection étendue** pour chaque instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . **Protection étendue** figure dans **Propriétés de Protocoles pour MSSQLSERVER (onglet Avancé)** dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -104,6 +104,6 @@ ms.locfileid: "59241429"
  [Configuration réseau du serveur](server-network-configuration.md)   
  [Configuration du réseau client](client-network-configuration.md)   
  [Extended Protection for Authentication Overview (en anglais)](https://go.microsoft.com/fwlink/?LinkID=177943)   
- [Integrated Windows Authentication with Extended Protection (en anglais)](https://go.microsoft.com/fwlink/?LinkId=179922)  
+ [Authentification Windows intégrée avec protection étendue](https://go.microsoft.com/fwlink/?LinkId=179922) (Integrated Windows Authentication with Extended Protection)  
   
   

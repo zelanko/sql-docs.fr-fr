@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241827"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Langues et classements (Analysis Services)
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les langues et les classements fournis par les systèmes d'exploitation [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. `Language` et `Collation` propriétés sont définies initialement au niveau de l’instance pendant l’installation, mais peut être modifiées par la suite à différents niveaux de la hiérarchie d’objets.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les langues et les classements fournis par les systèmes d'exploitation [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Les propriétés `Language` et `Collation` sont initialement définies au niveau de l'instance pendant l'installation, mais peuvent être modifiées ultérieurement à différents niveaux de la hiérarchie d'objets.  
   
  Dans un modèle multidimensionnel (uniquement), vous pouvez définir ces propriétés sur une base de données ou un cube - vous pouvez également définir sur les traductions que vous créez des objets dans un cube.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "59241827"
   
  En outre, vous pouvez définir `Language`, en soi, sur un **traduction** objet.  
   
- Un objet de traduction est créé lorsque vous ajoutez des traductions à un cube ou à une dimension. `Language` fait partie de la définition de la traduction. `Collation`, en revanche, est définie sur le cube ou une version ultérieure et partagés par toutes les traductions. Ceci est évident dans le code XMLA d'un cube contenant des traductions, où figurent plusieurs propriétés de langue (une pour chaque traduction), mais un seul classement. Notez qu'il existe une exception pour les traductions d'attributs de dimension, où vous pouvez remplacer le classement de cube pour spécifier un classement d'attribut qui correspond à la colonne source (le moteur de base de données prend en charge la définition du classement sur des colonnes spécifiques et il est courant de configurer des traductions pour obtenir des données de membres à partir de colonnes sources différentes). Mais sinon, pour toutes les autres traductions, la propriété `Language` est utilisée seule, sans corollaire `Collation`. Pour plus d’informations, consultez [Traductions &#40;Analysis Services&#41;](translations-analysis-services.md).  
+ Un objet de traduction est créé lorsque vous ajoutez des traductions à un cube ou à une dimension. `Language` fait partie de la définition de la traduction. La propriété `Collation`, quant à elle, est définie sur le cube ou plus haut et elle est partagée par toutes les traductions. Ceci est évident dans le code XMLA d'un cube contenant des traductions, où figurent plusieurs propriétés de langue (une pour chaque traduction), mais un seul classement. Notez qu'il existe une exception pour les traductions d'attributs de dimension, où vous pouvez remplacer le classement de cube pour spécifier un classement d'attribut qui correspond à la colonne source (le moteur de base de données prend en charge la définition du classement sur des colonnes spécifiques et il est courant de configurer des traductions pour obtenir des données de membres à partir de colonnes sources différentes). Mais sinon, pour toutes les autres traductions, la propriété `Language` est utilisée seule, sans corollaire `Collation`. Pour plus d’informations, consultez [Traductions &#40;Analysis Services&#41;](translations-analysis-services.md).  
   
 ##  <a name="bkmk_lang"></a> Prise en charge linguistique dans Analysis Services  
  La propriété `Language` définit les paramètres régionaux d'un objet, utilisés durant le traitement, les requêtes et avec `Captions` et `Translations` pour prendre en charge les scénarios multilingues. Les paramètres régionaux sont basés sur un identificateur de langue, tel qu'Anglais, et un territoire, tel qu'États-Unis ou Australie, qui affine les représentations de date et d'heure.  
@@ -109,7 +109,7 @@ ms.locfileid: "59241827"
 ###  <a name="bkmk_collationtype"></a> Types de classements  
  Analysis Services prend en charge deux types de classements :  
   
--   **classements Windows**  
+-   **Classements Windows**  
   
      Les classements Windows trient les caractères selon les caractéristiques linguistiques et culturelles de la langue. Dans Windows, les classements sont plus nombreux que les paramètres régionaux (ou langues) utilisés avec eux, car de nombreuses langues partagent le même alphabet et les mêmes règles de tri et de comparaison des caractères. Par exemple, 33 groupes de paramètres régionaux Windows, notamment tous les groupes de paramètres régionaux portugais et anglais, utilisent la page de codes Latin1 (1252) et possèdent un ensemble de règles communes pour le tri et la comparaison des caractères.  
   
@@ -187,6 +187,6 @@ ms.locfileid: "59241827"
 ## <a name="see-also"></a>Voir aussi  
  [Scénarios de globalisation pour données multidimensionnelles Analysis Services](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)   
- [Prise en charge d’Unicode et du classement](../relational-databases/collations/collation-and-unicode-support.md)  
+ [Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md)  
   
   

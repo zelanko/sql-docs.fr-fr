@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2a2767de67eac1a0346f059e1a2c81a5698607dc
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240994"
 ---
 # <a name="derived-column-transformation"></a>Transformation de colonne dérivée
@@ -72,7 +72,7 @@ ms.locfileid: "59240994"
   
 ## <a name="related-tasks"></a>Tâches associées  
   
--   [Dériver les valeurs de colonnes à l'aide de la transformation de colonne dérivée](derived-column-transformation.md)  
+-   [Dériver les valeurs de colonnes à l’aide de la transformation de colonne dérivée](derived-column-transformation.md)  
   
 ## <a name="related-content"></a>Contenu associé  
  Article technique, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), sur social.technet.microsoft.com  

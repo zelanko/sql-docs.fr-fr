@@ -22,10 +22,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242447"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accessibilité pour personnes handicapées
@@ -48,12 +48,12 @@ ms.locfileid: "59242447"
   
 ### <a name="free-step-by-step-tutorials"></a>Didacticiels gratuits étape par étape  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)] propose une série de didacticiels qui vous aident pas à pas à personnaliser les options et paramètres d’accessibilité sur votre ordinateur. Les didacticiels expliquent en détail les procédures à suivre pour régler les options, les fonctionnalités et les paramètres qui facilitent l'utilisation des ordinateurs par les personnes présentant une incapacité physique. Ces informations sont présentées en vis-à-vis, afin que vous puissiez visualiser d'un seul coup d'œil la marche à suivre pour utiliser la souris, le clavier ou une combinaison des deux. Les didacticiels pas à pas d’une série de produits sont disponibles sur le site web [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67163).  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] propose une série de didacticiels qui vous aident pas à pas à personnaliser les options et paramètres d'accessibilité sur votre ordinateur. Les didacticiels expliquent en détail les procédures à suivre pour régler les options, les fonctionnalités et les paramètres qui facilitent l'utilisation des ordinateurs par les personnes présentant une incapacité physique. Ces informations sont présentées en vis-à-vis, afin que vous puissiez visualiser d'un seul coup d'œil la marche à suivre pour utiliser la souris, le clavier ou une combinaison des deux. Les didacticiels pas à pas d’une série de produits sont disponibles sur le site web [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67163).  
   
 ## <a name="assistive-technology-products-for-windows"></a>Produits de technologies d'assistance pour Windows  
  Il existe de nombreux produits de technologies d'assistance conçus pour faciliter l'utilisation des ordinateurs individuels par les personnes atteintes d'handicaps.  
   
- [!INCLUDE[msCoName](../includes/msconame-md.md)] met à votre disposition, sur le site Web [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=67166), un catalogue consultable de produits à technologies d'assistance exécutables sous les systèmes d'exploitation Windows.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] fournit un catalogue de produits de technologie d’assistance qui s’exécutent sur des systèmes d’exploitation Windows le [Site Web de Microsoft d’accessibilité](https://go.microsoft.com/fwlink/?LinkID=67166).  
   
  Les types de produits suivants sont disponibles :  
   
@@ -73,7 +73,7 @@ ms.locfileid: "59242447"
  Si vous utilisez un produit de technologie d'assistance, contactez votre revendeur pour vérifier la compatibilité des produits avant la mise à niveau de votre ordinateur. Votre revendeur vous aidera aussi à choisir les paramètres appropriés pour optimiser la compatibilité avec votre version de Windows ou d'autres produits [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 ## <a name="includemsconameincludesmsconame-mdmd-documentation-in-alternative-formats"></a>Documentation [!INCLUDE[msCoName](../includes/msconame-md.md)] dans d'autres formats  
- [!INCLUDE[msCoName](../includes/msconame-md.md)] documentation du produit est disponible dans d’autres formats pour aider nos clients ayant des besoins d’accessibilité.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] présente la documentation de ses produits sous d'autres formats de façon à la rendre accessible à tous.  
   
 ### <a name="obtaining-documentation-for-includessnoversionincludesssnoversion-mdmd"></a>Obtention de la documentation pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
  La documentation pour [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est disponible en ligne. Pour plus d’informations, consultez [utilisez Documentation du produit pour SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
@@ -82,15 +82,15 @@ ms.locfileid: "59242447"
  Vous pouvez obtenir la documentation relative aux [!INCLUDE[msCoName](../includes/msconame-md.md)] produits à partir de la [Site Web de Microsoft d’accessibilité](https://go.microsoft.com/fwlink/?LinkID=67164).  
   
 ### <a name="recording-for-the-blind--dyslexic-inc"></a>Recording for le Blind & Dyslexic, Inc.  
- Vous pouvez également vous procurer d'autres publications [!INCLUDE[msCoName](../includes/msconame-md.md)] auprès de Recording for the Blind & Dyslexic, Inc. Cette documentation est distribuée sur cassettes audio ou disquettes aux personnes inscrites auprès de leur service de diffusion. La collection de RFB&amp;D contient plus de 80 000 titres, dont la documentation sur les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] et les ouvrages de [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Pour plus d'informations sur l'accès et la disponibilité de la documentation sur les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] et des ouvrages de [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, contactez :  
+ Vous pouvez vous procurer d’autres [!INCLUDE[msCoName](../includes/msconame-md.md)] publications auprès de Recording for le Blind & Dyslexic, Inc. Ces documents sont distribués aux membres du service de distribution sur cassettes audio ou disquettes. La collection de RFB&amp;D contient plus de 80 000 titres, dont la documentation sur les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] et les ouvrages de [!INCLUDE[msCoName](../includes/msconame-md.md)] Press. Pour plus d'informations sur l'accès et la disponibilité de la documentation sur les produits [!INCLUDE[msCoName](../includes/msconame-md.md)] et des ouvrages de [!INCLUDE[msCoName](../includes/msconame-md.md)] Press, contactez :  
   
  Recording for le Blind & Dyslexic, Inc. 20 Roszel Road Princeton, NJ 08540  
   
  Téléphone depuis les États-Unis : (800) 221-4792  
   
- Téléphone depuis les autres pays : (609) 452-0606  
+ Téléphone depuis les États-Unis et Canada : (609) 452-0606  
   
- Télécopie : (609) 987-8116 Site Web : 
+ Télécopie : (609) 987-8116 web : 
 
 [Site Web d’accessibilité de Microsoft](https://www.microsoft.com/accessibility/)  
   
@@ -101,7 +101,7 @@ ms.locfileid: "59242447"
  Vous pouvez contacter le [!INCLUDE[msCoName](../includes/msconame-md.md)] Sales Information Center sur un téléphone texte en (800) 892-5234 numérotation entre 6 h 30. et 17h30, Heure du Pacifique, du lundi au vendredi, sauf les jours fériés.  
   
 ### <a name="technical-help"></a>Assistance technique  
- Pour l'assistance technique aux États-Unis, vous pouvez contacter les services de support technique de [!INCLUDE[msCoName](../includes/msconame-md.md)] sur un téléphone texte en composant le (800) 892-5234 entre 6h00 et 18 h 00. Heure du Pacifique, du lundi au vendredi, sauf les jours fériés. Au Canada, composez le (905) 568-9641 entre 8h00 et 20 h 00. Heure de l'Est, du lundi au vendredi, sauf les jours fériés. [!INCLUDE[msCoName](../includes/msconame-md.md)] sont soumis aux prix, termes et conditions en vigueur au moment de leur utilisation.  
+ Pour l'assistance technique aux États-Unis, vous pouvez contacter les services de support technique de [!INCLUDE[msCoName](../includes/msconame-md.md)] sur un téléphone texte en composant le (800) 892-5234 entre 6h00 et 18 h 00. Heure du Pacifique, du lundi au vendredi, sauf les jours fériés. Au Canada, composez le (905) 568-9641 entre 8h00 et 20 h 00. Heure de l'Est, du lundi au vendredi, sauf les jours fériés. Les services de support technique [!INCLUDE[msCoName](../includes/msconame-md.md)] sont soumis aux prix, termes et conditions en vigueur au moment de leur utilisation.  
   
 ## <a name="getting-more-accessibility-information"></a>Informations complémentaires sur l'accessibilité  
  Des informations sur les technologies d'assistance améliorant la vie des personnes souffrant d'un handicap sont disponibles sur le site Web [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287).  
@@ -111,7 +111,7 @@ ms.locfileid: "59242447"
  Un bulletin électronique gratuit est mis à votre disposition pour vous informer des questions d'accessibilité relatives aux produits [!INCLUDE[msCoName](../includes/msconame-md.md)] . Pour vous abonner, consultez le site Web [Microsoft Accessibility](https://go.microsoft.com/fwlink/?LinkID=8287).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Découvrir la documentation du produit SQL Server](../2014-toc/books-online-for-sql-server-2014.md)   
- [Assistance sur SQL Server](getting-sql-server-assistance.md)  
+ [Bien démarrer avec la Documentation du produit pour SQL Server](../2014-toc/books-online-for-sql-server-2014.md)   
+ [Obtenir de l’assistance sur SQL Server](getting-sql-server-assistance.md)  
   
   

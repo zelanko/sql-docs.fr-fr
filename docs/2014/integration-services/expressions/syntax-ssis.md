@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5ea8e711fcc3013a682f8c63a01dc042556f40
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240367"
 ---
 # <a name="syntax-ssis"></a>Syntaxe (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "59240367"
 > [!NOTE]  
 >  Les versions précédentes de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]limitaient à 4000 caractères le résultat de l'évaluation d'une expression lorsqu'il était caractérisé par le type de données [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] DT_WSTR ou DT_STR. Cette limite a été supprimée.  
   
- Pour des exemples d'expression utilisant des opérateurs et des fonctions spécifiques, consultez la rubrique relative à chaque opérateur et fonction dans les rubriques [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md) et [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md).  
+ Pour des exemples d’expressions qui utilisent des fonctions et des opérateurs spécifiques, consultez la rubrique relative à chaque opérateur et la fonction dans les rubriques : [Opérateurs &#40;SSIS Expression&#41;](operators-ssis-expression.md) et [Fonctions &#40;SSIS Expression&#41;](functions-ssis-expression.md).  
   
  Pour obtenir des exemples d’expressions utilisant plusieurs opérateurs et fonctions, ainsi que des identificateurs et des littéraux, consultez [Exemples d’expressions Integration Services avancées](examples-of-advanced-integration-services-expressions.md).  
   

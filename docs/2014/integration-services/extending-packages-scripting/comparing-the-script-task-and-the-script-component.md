@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c08545341e3ecfe8c82ab01723d96167412e1b03
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241337"
 ---
 # <a name="comparing-the-script-task-and-the-script-component"></a>Comparaison de la tâche de script et du composant Script
@@ -52,7 +52,7 @@ ms.locfileid: "59241337"
 |Retour de résultats|La tâche de Script utilise à la fois le <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.TaskResult%2A> propriété et la propriété facultative <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.ExecutionValue%2A> propriété de la `Dts` objet de notifier le runtime de ses résultats.|Le composant Script s'exécute dans le cadre de la tâche de flux de données et ne communique pas de résultats à l'aide de l'un ou l'autre de ces propriétés.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extension du package à l'aide de la tâche de script](task/extending-the-package-with-the-script-task.md)   
+ [Extension du package à l’aide de la tâche de script](task/extending-the-package-with-the-script-task.md)   
  [Extension du flux de données avec le composant Script](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
  [À l’aide d’une tâche de Script dans SQL Server Integration Services SSIS pour vous connecter à un Service Web](https://www.mssqltips.com/sqlservertip/4288/using-a-script-task-in-sql-server-integration-services-ssis-to-connect-to-a-web-service/)  
   

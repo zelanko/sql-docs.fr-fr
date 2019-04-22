@@ -25,10 +25,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ed70ca65089991b2b557179beda3c7bd6c58b9ac
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59429355"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
@@ -94,9 +94,9 @@ SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;
   
 ## <a name="see-also"></a> Voir aussi  
  [Rôles au niveau de la base de données](../../../relational-databases/security/authentication-access/database-level-roles.md)   
- [Affichages catalogue de sécurité&#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [Affichages catalogue de sécurité &#40;Transact-SQL&#41;](../../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [Fonctions de sécurité &#40;Transact-SQL&#41;](../../../t-sql/functions/security-functions-transact-sql.md)   
- [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)   
+ [Sécurisation de SQL Server](../../../relational-databases/security/securing-sql-server.md)   
  [Autorisations du principal du serveur GRANT &#40;Transact-SQL&#41;](../../../t-sql/statements/grant-server-principal-permissions-transact-sql.md)   
  [Autorisations du principal du serveur REVOKE &#40;Transact-SQL&#41;](../../../t-sql/statements/revoke-server-principal-permissions-transact-sql.md)   
  [Autorisations du principal du serveur DENY &#40;Transact-SQL&#41;](../../../t-sql/statements/deny-server-principal-permissions-transact-sql.md)   

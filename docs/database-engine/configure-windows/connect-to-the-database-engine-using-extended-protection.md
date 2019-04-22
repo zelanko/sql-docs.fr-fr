@@ -15,22 +15,22 @@ helpviewer_keywords:
 - channel binding
 - Extended Protection
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
-author: MikeRayMSFT
-ms.author: mikeray
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 185c03ef5c5ffdd35a1d32df6fecb29568d5ab82
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657803"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774544"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Se connecter au moteur de base de données à l'aide de la protection étendue
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la **protection étendue** depuis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protection étendue de l'authentification** est une fonctionnalité des composants réseau implémentée par le système d'exploitation. La**protection étendue** est prise en charge dans Windows 7 et Windows Server 2008 R2. La**protection étendue** figure dans les Service Packs pour les systèmes d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] plus anciens. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est plus sécurisé lorsque les connexions sont établies à l'aide de la **protection étendue**.  
   
 > [!IMPORTANT]  
->  Windows n'active pas la **protection étendue** par défaut. Pour plus d'informations sur l'activation de la **protection étendue** dans Windows, consultez [Protection étendue de l'authentification](https://support.microsoft.com/kb/968389)  
+> Windows n'active pas la **protection étendue** par défaut. Pour plus d'informations sur l'activation de la **protection étendue** dans Windows, consultez [Protection étendue de l'authentification](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
   
 ## <a name="description-of-extended-protection"></a>Description de la protection étendue  
  La**protection étendue** utilise la liaison de canal et la liaison de service pour mieux empêcher une attaque de relais d'authentification. Dans une attaque de relais d'authentification, un client qui peut effectuer l'authentification NTLM (par exemple, l'Explorateur Windows, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Outlook, une application SqlClient .NET, etc.), se connecte à une personne malveillante (par exemple, un serveur de fichiers CIFS nuisible). L’attaquant utilise les informations d’identification du client pour se faire passer pour le client et s’authentifier auprès d’un service (par exemple, une instance du service [!INCLUDE[ssDE](../../includes/ssde-md.md)]).  

@@ -55,10 +55,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5ade1c582956548a62f36d79f0e1b8fbd03525a
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240728"
 ---
 # <a name="log-properties"></a>Propriétés du journal
@@ -88,9 +88,9 @@ ms.locfileid: "59240728"
  **ErrorLog\KeyErrorAction**  
  Spécifie l'action que doit entreprendre le serveur en cas d'erreur `KeyNotFound`. Les réponses valides à cette erreur sont :  
   
--   `ConvertToUnknown` Indique au serveur d’allouer de la valeur de clé d’erreur au membre inconnu.  
+-   `ConvertToUnknown` indique au serveur d'allouer la valeur de clé d'erreur au membre inconnu.  
   
--   `DiscardRecord` Indique au serveur d’exclure l’enregistrement.  
+-   `DiscardRecord` indique au serveur d'exclure l'enregistrement.  
   
  **ErrorLog\KeyErrorLogFile**  
  Il s'agit d'un nom de fichier défini par l'utilisateur qui doit avoir une extension de fichier .log, situé dans un dossier sur lequel le compte de services dispose des autorisations d'accès en lecture/écriture. Ce fichier journal contient uniquement les erreurs générées lors du traitement. Utilisez la Boîte noire si vous avez besoin de plus d'informations.  
@@ -101,18 +101,18 @@ ms.locfileid: "59240728"
  **ErrorLog\KeyErrorLimitAction**  
  Spécifie l'action entreprise par le serveur lorsque le nombre maximal d'erreurs de clé est atteint. Les réponses valides à cette action sont :  
   
--   `StopProcessing` Indique au serveur d’arrêter le traitement lorsque le nombre maximal d’erreurs est atteint.  
+-   `StopProcessing` indique au serveur d'arrêter le traitement lorsque le nombre maximal d'erreurs est atteint.  
   
--   `StopLogging` Indique au serveur d’arrêter l’enregistrement des erreurs lorsque le nombre maximal d’erreurs est atteint, mais autoriser la poursuite du traitement.  
+-   `StopLogging` indique au serveur d'arrêter l'enregistrement des erreurs lorsque le nombre maximal d'erreurs est atteint, mais d'autoriser la poursuite du traitement.  
   
  **ErrorLog\ LogErrorTypes\KeyNotFound**  
  Spécifie l'action que doit entreprendre le serveur en cas d'erreur `KeyNotFound`. Les réponses valides à cette erreur sont :  
   
--   `IgnoreError` Indique au serveur pour continuer sans enregistrer l’erreur ou la compter dans le nombre maximal d’erreurs de traitement. Lorsque vous ignorez l'erreur, vous permettez au traitement de continuer sans ajouter l'erreur au nombre d'erreurs ou l'enregistrer à l'écran ou dans le fichier journal. L'enregistrement en question rencontre un problème d'intégrité des données et ne peut pas être ajouté à la base de données. L'enregistrement est ignoré ou agrégé à un membre inconnu, tel que le détermine la propriété `KeyErrorAction`.  
+-   `IgnoreError` indique au serveur de poursuivre le traitement sans enregistrer l'erreur ou la compter dans le nombre maximal d'erreurs de clé. Lorsque vous ignorez l'erreur, vous permettez au traitement de continuer sans ajouter l'erreur au nombre d'erreurs ou l'enregistrer à l'écran ou dans le fichier journal. L'enregistrement en question rencontre un problème d'intégrité des données et ne peut pas être ajouté à la base de données. L'enregistrement est ignoré ou agrégé à un membre inconnu, tel que le détermine la propriété `KeyErrorAction`.  
   
--   `ReportAndContinue` Indique au serveur d’enregistrer l’erreur, compter dans le nombre maximal d’erreurs et continuer le traitement. L'enregistrement déclenchant l'erreur est ignoré ou converti en membre inconnu.  
+-   `ReportAndContinue` indique au serveur d'enregistrer l'erreur, de la compter dans le nombre maximal d'erreurs de clé et de continuer le traitement. L'enregistrement déclenchant l'erreur est ignoré ou converti en membre inconnu.  
   
--   `ReportAndStop` Indique au serveur d’enregistrer l’erreur et arrêter le traitement immédiatement, quel que soit le nombre maximal d’erreurs. L'enregistrement déclenchant l'erreur est ignoré ou converti en membre inconnu.  
+-   `ReportAndStop` indique au serveur d'enregistrer l'erreur et d'arrêter le traitement immédiatement, quel que soit le nombre maximal d'erreurs de clé. L'enregistrement déclenchant l'erreur est ignoré ou converti en membre inconnu.  
   
  **ErrorLog\ LogErrorTypes\KeyDuplicate**  
  Spécifie l'action entreprise par le serveur lorsqu'une clé dupliquée est détectée. Les valeurs valides sont `IgnoreError` pour continuer le traitement comme si l'erreur ne s'était pas produite, `ReportAndContinue` pour enregistrer l'erreur et continuer le traitement et `ReportAndStop` pour enregistrer l'erreur et arrêter le traitement immédiatement, même si le nombre d'erreurs est inférieur au nombre maximal.  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 732b1c979f0dbf3a346ad85fc11bb8e0c5097c4f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240397"
 ---
 # <a name="usage-based-optimization-wizard-f1-help"></a>Aide F1 sur l'Assistant Optimisation de l'utilisation
@@ -39,7 +39,7 @@ ms.locfileid: "59240397"
   
 -   enregistrement et traitement facultatif de la partition, du groupe de mesures ou du cube pour générer les agrégations définies.  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est destiné à concevoir des agrégations en fonction de l'analyse statistique de la partition. Il permet d'obtenir un modèle d'agrégation qui peut être à nouveau limité par la capacité de stockage ou les performances estimées. Vous l'utilisez pour améliorer les performances globales d'une partition ; cependant, le modèle d'agrégation n'est pas destiné aux besoins particuliers de vos utilisateurs. L’Assistant Optimisation de l’utilisation fournit un modèle d’agrégation destiné à ces besoins particuliers ; cependant, il ne peut le faire que si le journal des requêtes de l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient suffisamment d’informations pour construire de telles requêtes.  
+ L'Assistant Conception d'agrégation [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est destiné à concevoir des agrégations en fonction de l'analyse statistique de la partition. Il permet d'obtenir un modèle d'agrégation qui peut être à nouveau limité par la capacité de stockage ou les performances estimées. Vous l'utilisez pour améliorer les performances globales d'une partition ; cependant, le modèle d'agrégation n'est pas destiné aux besoins particuliers de vos utilisateurs. L’Assistant Optimisation de l’utilisation fournit un modèle d’agrégation destiné à ces besoins particuliers ; cependant, il ne peut le faire que si le journal des requêtes de l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] contient suffisamment d’informations pour construire de telles requêtes.  
   
  Généralement, les deux assistants s'utilisent ensemble pour améliorer les performances lors du déploiement et par la suite. L'Assistant Conception d'agrégation doit être utilisé en premier lors du déploiement initial de la partition (ou du cube ou du groupe de mesures la contenant) pour améliorer globalement les performances. Après quelque temps passé à enregistrer dans le journal des requêtes les requêtes des utilisateurs de la partition, vous pouvez utiliser l'Assistant Optimisation de l'utilisation pour affiner le modèle d'agrégation et répondre plus précisément aux besoins de performances et aux exigences des requêtes de vos utilisateurs.  
   
@@ -48,24 +48,24 @@ ms.locfileid: "59240397"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Sélectionner les partitions à modifier &#40;Assistant Optimisation de l’utilisation&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
+-   [Sélectionner les Partitions à modifier &#40;Assistant Optimisation basée sur l’utilisation&#41;](select-partitions-to-modify-usage-based-optimization-wizard.md)  
   
--   [Spécifier les critères de requêtes &#40;Assistant Optimisation de l’utilisation&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
+-   [Spécifier des critères de requête &#40;Assistant Optimisation basée sur l’utilisation&#41;](specify-query-criteria-usage-based-optimization-wizard.md)  
   
 -   [Vérifier les requêtes qui seront optimisées &#40;Assistant Optimisation de l’utilisation&#41;](review-the-queries-that-will-be-optimized-usage-based-optimization-wizard.md)  
   
--   [Passer en revue l’utilisation d’agrégation &#40;Assistant Optimisation de l’utilisation&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
+-   [Passez en revue l’utilisation d’agrégation &#40;Assistant Optimisation basée sur l’utilisation de le&#41;](review-aggregation-usage-usage-based-optimiation-wizard.md)  
   
--   [Spécifier le nombre d’objets &#40;Assistant Optimisation de l’utilisation&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
+-   [Spécifiez le nombre d’objets &#40;Assistant Optimisation basée sur l’utilisation&#41;](specify-object-counts-usage-based-optimization-wizard.md)  
   
--   [Définir les options d’agrégation &#40;Assistant Optimisation de l’utilisation&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
+-   [Définir les Options d’agrégation &#40;Assistant Optimisation basée sur l’utilisation&#41;](set-aggregation-options-usage-based-optimization-wizard.md)  
   
--   [Fin de l’Assistant &#40;Assistant Optimisation de l’utilisation&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
+-   [Fin de l’Assistant &#40;Assistant Optimisation basée sur l’utilisation&#41;](completing-the-wizard-usage-based-optimization-wizard.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Agrégations et conceptions d'agrégation](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
+ [Agrégations et conceptions d’agrégation](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)   
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   
- [Aide (F1) de l'Assistant Conception d'agrégation](aggregation-design-wizard-f1-help.md)   
+ [Aide de F1 l’Assistant conception d’agrégation](aggregation-design-wizard-f1-help.md)   
  [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md)  
   
   

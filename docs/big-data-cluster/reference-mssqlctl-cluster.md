@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e4e54ac3c7206ad8a6592c8cfe0b45d9ea4b8fd8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860470"
 ---
 # <a name="mssqlctl-cluster"></a>Cluster mssqlctl
@@ -45,7 +45,7 @@ mssqlctl cluster create
 
 | Paramètres | Description |
 |---|---|
-| **--nom - n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. |
+| **--name -n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. |
 | **--accept-eula -e** | Acceptez-vous les termes du contrat de licence ? \[Oui/non\].  Valeurs autorisées : non, Oui. Obligatoire. |
 
 ## <a id="delete"></a> mssqlctl cluster delete
@@ -62,7 +62,7 @@ mssqlctl cluster delete
 
 | Paramètres | Description |
 |---|---|
-| **--nom - n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. Obligatoire. |
+| **--name -n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. Obligatoire. |
 | **--force -f** | Cluster de suppression de force. |
 
 ## <a name="next-steps"></a>Étapes suivantes

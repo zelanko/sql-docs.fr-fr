@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241727"
 ---
 # <a name="cdc-flow-components"></a>Composants de flux CDC
@@ -200,7 +200,7 @@ ms.locfileid: "59241727"
   
 -   [Diriger le flux de capture de données modifiées en fonction du type de modification](direct-the-cdc-stream-according-to-the-type-of-change.md)  
   
--   [Définir une variable d’état](define-a-state-variable.md)  
+-   [Définir une variable d'état](define-a-state-variable.md)  
   
 ## <a name="related-content"></a>Contenu associé  
   

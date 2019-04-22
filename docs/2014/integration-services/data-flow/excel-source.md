@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242257"
 ---
 # <a name="excel-source"></a>Source Excel
@@ -80,7 +80,7 @@ ms.locfileid: "59242257"
 ## <a name="excel-source-configuration"></a>Configuration d'une source Excel  
  Vous pouvez définir les propriétés par le biais du concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] ou par programmation.  
   
- Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source Excel**, cliquez sur l’une des rubriques suivantes :  
+ Pour plus d’informations sur les propriétés définissables dans la boîte de dialogue **Éditeur de source Excel** , cliquez sur l’une des rubriques suivantes :  
   
 -   [Éditeur de source Excel &#40;page Gestionnaire de connexions&#41;](../excel-source-editor-connection-manager-page.md)  
   

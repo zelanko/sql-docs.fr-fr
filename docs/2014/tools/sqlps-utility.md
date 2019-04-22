@@ -14,17 +14,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b25921a7b48ecd818527dd95ebc2d8714cb6871d
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241509"
 ---
 # <a name="sqlps-utility"></a>sqlps (utilitaire)
   L'utilitaire `sqlps` démarre une session Windows PowerShell 2.0 avec les applets de commande et le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell chargés et inscrits. Vous pouvez entrer des scripts ou des commandes PowerShell qui utilisent les composants [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell pour travailler avec des instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leurs objets.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Utilisez le `sqlps` module PowerShell à la place. Pour plus d’informations sur la `sqlps` module, consultez [importer le Module SQLPS](../database-engine/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Utilisez plutôt le module `sqlps` PowerShell. Pour plus d’informations sur la `sqlps` module, consultez [importer le Module SQLPS](../database-engine/import-the-sqlps-module.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -100,19 +100,19 @@ ms.locfileid: "59241509"
  La version de l'utilitaire `sqlps` dans [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] et [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] a été implémentée en tant que mini-shell Windows PowerShell 1.0. Les mini-shells comportent certaines restrictions, comme le fait de ne pas autoriser les utilisateurs à charger des composants logiciels enfichables autres que ceux chargés par le mini-shell. Ces restrictions ne s'appliquent pas à la version [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] et aux versions ultérieures de l'utilitaire, qui ont été modifiées pour utiliser le module `sqlps`.  
   
 ## <a name="examples"></a>Exemples  
- **A. Exécution de l’utilitaire sqlps en mode interactif par défaut, sans bannière de copyright**  
+ **A. Exécuter l’utilitaire sqlps en mode interactif par défaut, sans bannière de copyright**  
   
 ```  
 sqlps -NoLogo  
 ```  
   
- **B. Exécution d'un script SQL Server PowerShell à partir de l'invite de commandes**  
+ **B. Exécuter un script SQL Server PowerShell à partir de l’invite de commandes**  
   
 ```  
 sqlps -Command "&{.\MyFolder.MyScript.ps1}"  
 ```  
   
- **C. Exécution d'un script SQL Server PowerShell à partir de l'invite de commandes et poursuite de l'exécution une fois le script terminé**  
+ **C. Exécuter un script SQL Server PowerShell à partir de l’invite de commandes et poursuivre l’exécution une fois le script terminé**  
   
 ```  
 sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"  

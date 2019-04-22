@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dccae9216609e80b0eb87582a78b94cd6e7b2f0c
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241657"
 ---
 # <a name="integration-services-ssis-packages"></a>Packages Integration Services (SSIS)
@@ -66,10 +66,10 @@ ms.locfileid: "59241657"
  La configuration est enregistrée puis déployée avec le package lorsque celui-ci est installé sur un autre ordinateur. Lorsque vous installez le package, vous pouvez mettre à jour les valeurs de la configuration afin qu'il puisse être pris en charge dans un autre environnement. Pour plus d’informations, consultez [Créer des configurations de package](../../2014/integration-services/create-package-configurations.md).  
   
 ### <a name="logging-and-log-providers"></a>Journalisation et modules fournisseurs d'informations  
- Un journal est une collection d'informations relatives au package, qui sont rassemblées lorsque celui-ci s'exécute. Par exemple, un journal peut indiquer l'heure de début et de fin de l'exécution d'un package. Un module fournisseur d'informations définit le type de destination et le format que le package et ses conteneurs et ses tâches peuvent utiliser pour consigner les informations d'exécution. Les journaux sont associés à un package, mais les tâches et les conteneurs figurant dans le package peuvent consigner des informations dans n'importe quel journal de package. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend une série de modules fournisseurs d'informations intégrés qui facilitent la journalisation. Par exemple, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des modules fournisseurs d'informations pour les fichiers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les fichiers texte. Vous pouvez également créer des modules fournisseurs d'informations personnalisés et les utiliser pour la journalisation. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md).  
+ Un journal est une collection d'informations relatives au package, qui sont rassemblées lorsque celui-ci s'exécute. Par exemple, un journal peut indiquer l'heure de début et de fin de l'exécution d'un package. Un module fournisseur d'informations définit le type de destination et le format que le package et ses conteneurs et ses tâches peuvent utiliser pour consigner les informations d'exécution. Les journaux sont associés à un package, mais les tâches et les conteneurs figurant dans le package peuvent consigner des informations dans n'importe quel journal de package. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend une série de modules fournisseurs d’informations intégrés qui facilitent la journalisation. Par exemple, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des modules fournisseurs d'informations pour les fichiers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et les fichiers texte. Vous pouvez également créer des modules fournisseurs d'informations personnalisés et les utiliser pour la journalisation. Pour plus d’informations, consultez [Journalisation Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md).  
   
 ### <a name="variables"></a>Variables  
- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge les variables système et les variables définies par l'utilisateur. Les variables système fournissent des informations utiles sur les objets de package lors de l'exécution, tandis que les variables définies par l'utilisateur prennent en charge des scénarios personnalisés dans les packages. Vous pouvez utiliser les deux types de variables dans les expressions, les scripts et les configurations.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] prend en charge les variables système et les variables définies par l’utilisateur. Les variables système fournissent des informations utiles sur les objets de package lors de l'exécution, tandis que les variables définies par l'utilisateur prennent en charge des scénarios personnalisés dans les packages. Vous pouvez utiliser les deux types de variables dans les expressions, les scripts et les configurations.  
   
  Les variables de niveau package comprennent les variables système prédéfinies disponibles pour un package et les variables définies par l'utilisateur et dont la portée s'étend au package. Pour plus d’informations, consultez [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "59241657"
 ## <a name="related-tasks"></a>Tâches associées  
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , [!INCLUDE[ssIS](../includes/ssis-md.md)] met à votre disposition deux outils graphiques : le concepteur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et l'Assistant Importation et Exportation [!INCLUDE[ssIS](../includes/ssis-md.md)] . Consultez les rubriques suivantes pour plus de détails.  
   
--   [Exécuter l'Assistant Importation et Exportation SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
+-   [Exécuter l’Assistant Importation et Exportation SQL Server](import-export-data/start-the-sql-server-import-and-export-wizard.md)  
   
 -   [Créer des packages dans les outils de données SQL Server](create-packages-in-sql-server-data-tools.md)  
   

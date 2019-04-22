@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f3b2c9137f34a76ec77f179eb329042d92be5cd1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241029"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Types de données Integration Services dans les expressions
@@ -51,17 +51,17 @@ ms.locfileid: "59241029"
 >   
 >  Pour éviter des erreurs ou des résultats inattendus, n'écrivez pas de code fondé sur des valeurs numériques précises pour les valeurs `True` et `False`. Si possible, limitez l'utilisation de variables booléennes aux valeurs logiques pour lesquelles elles sont conçues.  
   
- Pour plus d'informations, consultez les rubriques suivantes :  
+ Pour plus d’informations, consultez les rubriques suivantes :  
   
 -   [== &#40;Égal&#41; &#40;expression SSIS&#41;](equal-ssis-expression.md)  
   
--   [!= &#40;Non égal&#41; &#40;expression SSIS&#41;](unequal-ssis-expression.md)  
+-   [\!= &#40;Non égal&#41; &#40;expression SSIS&#41;](unequal-ssis-expression.md)  
   
 -   [&#62; &#40;Supérieur à&#41; &#40;expression SSIS&#41;](greater-than-ssis-expression.md)  
   
 -   [&#60; &#40;Inférieur à&#41; &#40;expression SSIS&#41;](less-than-ssis-expression.md)  
   
--   [&#62; &#40;Supérieur ou égal à&#41; &#40;expression SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
+-   [&#62;= &#40;Supérieur ou égal à&#41; &#40;expression SSIS&#41;](greater-than-or-equal-to-ssis-expression.md)  
   
 -   [&#60;= &#40;Inférieur ou égal à&#41; &#40;expression SSIS&#41;](less-than-or-equal-to-ssis-expression.md)  
   
@@ -92,7 +92,7 @@ ms.locfileid: "59241029"
   
 -   Les arguments transmis aux fonctions mathématiques doivent s'évaluer à un type de données numérique. Selon la fonction ou l'opération, un type de données numérique spécifique peut être requis. Par exemple, la fonction HEX requiert un entier signé ou non signé.  
   
--   Les arguments transmis aux fonctions de chaîne doivent produire un type de données caractère : DT_STR ou DT_WSTR. Par exemple, UPPER("fleur"). Certaines fonctions de chaîne, telles que la fonction SUBSTRING, requièrent des arguments entiers supplémentaires pour définir la position de début et la longueur de la chaîne.  
+-   Arguments passés aux fonctions de chaîne doivent correspondre à un type de données caractère : DT_STR ou DT_WSTR. Par exemple, UPPER("fleur"). Certaines fonctions de chaîne, telles que la fonction SUBSTRING, requièrent des arguments entiers supplémentaires pour définir la position de début et la longueur de la chaîne.  
   
 -   Les arguments transmis aux fonctions de date et d'heure doivent s'évaluer à une date valide. Par exemple, DAY(GETDATE()). Certaines fonctions, telles que la fonction DATEADD, requièrent un argument entier supplémentaire pour définir le nombre de jours qu'elles ajoutent à une date.  
   

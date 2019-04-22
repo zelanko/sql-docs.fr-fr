@@ -11,13 +11,13 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 139c5dd5ade04c3d1a71412060f823d492843ecb
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58859980"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Didacticiel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutoriel : Interroger Oracle à partir d’un cluster de données volumineux de SQL Server
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b050638ee0ca600c5df0ecdbe5616b801f41e7a8
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860351"
 ---
 # <a name="mssqlctl"></a>mssqlctl
@@ -26,11 +26,11 @@ L’article suivant fournit la référence pour le **mssqlctl** outil pour [clus
 
 |||
 |---|---|
-| [Application](reference-mssqlctl-app.md) | Créer, supprimer, exécuter et gérer des applications. |
+| [app](reference-mssqlctl-app.md) | Créer, supprimer, exécuter et gérer des applications. |
 | [cluster](reference-mssqlctl-cluster.md) | Sélectionnez, gérer et exploiter des clusters. |
 | [login](#login) | Connectez-vous au cluster. |
-| [déconnexion](#logout) | Se déconnecter de cluster. |
-| [stockage](reference-mssqlctl-storage.md) | Gérer le stockage de cluster. |
+| [logout](#logout) | Se déconnecter de cluster. |
+| [storage](reference-mssqlctl-storage.md) | Gérer le stockage de cluster. |
 
 ## <a id="login"></a> mssqlctl login
 

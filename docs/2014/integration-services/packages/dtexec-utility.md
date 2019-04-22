@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 540f600d5005e8288aafe19ef59d4b7e894a99b0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241887"
 ---
 # <a name="dtexec-utility"></a>Utilitaire dtexec
@@ -84,11 +84,11 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="phases"></a> Phases d'exécution  
  L'utilitaire s'exécute en quatre phases. Ces phases sont les suivantes :  
   
-1.  Phase de source de commande : L'invite de commandes lit la liste d'options et d'arguments spécifiés. Toutes les phases suivantes sont ignorées si une option **/?** ou **/HELP** est rencontrée.  
+1.  Phase de source de commande : L’invite de commandes lit la liste des options et les arguments qui ont été spécifiés. Toutes les phases suivantes sont ignorées si une option **/?** ou **/HELP** est rencontrée.  
   
 2.  Phase de chargement de package : Le package spécifié par le `/SQL`, **/fichier**, ou `/DTS` option est chargée.  
   
-3.  Phase de configuration : Les options sont traitées dans l'ordre suivant :  
+3.  Phase de configuration : Les options sont traitées dans cet ordre :  
   
     -   Les options qui définissent les indicateurs, les variables et les propriétés de package.  
   
@@ -96,7 +96,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
   
     -   Les options qui configurent le comportement de l'utilitaire au moment de l'exécution, par exemple la génération de rapports.  
   
-4.  Phase de validation et d'exécution : Le package est exécuté ou validé sans exécution si l’option **/VALIDATE** a été spécifiée.  
+4.  Phase de validation et d’exécution : Le package est exécuté ou validé sans exécution si l’option **/VALIDATE** a été spécifiée.  
   
 ##  <a name="exit"></a> Codes de sortie retournés  
  **Code de sortie retourné par l'utilitaire dtexec**  
@@ -115,7 +115,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="syntaxRules"></a> Règles de la syntaxe  
  **Règles de syntaxe de l'utilitaire**  
   
- Toutes les options doivent commencer par une barre oblique (/) ou par un signe moins (-). Les options qui sont présentées ici commencent par une barre oblique (/), mais le signe moins (-) peut être utilisé à la place.  
+ Toutes les options doivent commencer par une barre oblique (/) ou par un signe moins (-). Les options qui sont présentées ici commencent par une barre oblique (/), mais le signe moins (-) peut être utilisé à la place.  
   
  Un argument doit être placé entre guillemets s'il contient un espace. Si l'argument n'est pas placé entre guillemets, il ne peut pas contenir d'espaces.  
   
@@ -126,7 +126,7 @@ DTExec /ISSERVER "\SSISDB\folderB\Integration Services Project17\Package.dtsx" /
 ##  <a name="cmdshell"></a> Utilisation de dtexec à partir de l'invite xp_cmdshell  
  **Utilisation de dtexec à partir de l'invite xp_cmdshell**  
   
- Vous pouvez exécuter dtexec à partir de l’invite **xp_cmdshell**. L'exemple suivant indique comment exécuter un package nommé UpsertData.dtsx et ignorer le code de retour :  
+ Vous pouvez exécuter dtexec à partir de l’invite **xp_cmdshell** . L'exemple suivant indique comment exécuter un package nommé UpsertData.dtsx et ignorer le code de retour :  
   
 ```  
 EXEC xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'  
@@ -140,7 +140,7 @@ EXEC @returncode = xp_cmdshell 'dtexec /f "C:\UpsertData.dtsx"'
 ```  
   
 > [!IMPORTANT]  
->  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’option **xp_cmdshell** est désactivée par défaut sur les nouvelles installations. Elle peut être activée en exécutant la procédure stockée système **sp_configure**. Pour plus d’informations, consultez [xp_cmdshell (option de configuration de serveur)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
+>  Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l’option **xp_cmdshell** est désactivée par défaut sur les nouvelles installations. Elle peut être activée en exécutant la procédure stockée système **sp_configure** . Pour plus d’informations, consultez [xp_cmdshell (option de configuration de serveur)](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md).  
   
 ##  <a name="syntax"></a> Syntaxe  
   
@@ -285,7 +285,7 @@ dtexec /option [value] [/option [value]]...
   
      Si vous spécifiez un *option_name* argument, `dtexec` démarre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne et affiche la rubrique de l’utilitaire dtexec.  
   
--   `/ISServer` *PackagePath*:  
+-   `/ISServer` *packagepath*:  
                   Facultatif. Exécute un package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . L’argument *PackagePath* spécifie le nom de fichier et le chemin complet du package déployé sur le serveur [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Si le chemin d'accès ou le nom de fichier spécifié dans l'argument *PackagePath* contient un espace, vous devez placer l'argument *PackagePath* entre guillemets.  
   
      Le format du package est le suivant :  
@@ -307,31 +307,31 @@ dtexec /option [value] [/option [value]]...
   
     -   Fichier texte :  
   
-        -   ProgID: DTS.LogProviderTextFile.1  
+        -   ProgID : DTS.LogProviderTextFile.1  
   
         -   ClassID : {59B2C6A5-663F-4C20-8863-C83F9B72E2EB}  
   
     -   [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]:  
   
-        -   ProgID: DTS.LogProviderSQLProfiler.1  
+        -   ProgID : DTS.LogProviderSQLProfiler.1  
   
         -   ClassID : {5C0B8D21-E9AA-462E-BA34-30FF5F7A42A1}  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
-        -   ProgID: DTS.LogProviderSQLServer.1  
+        -   ProgID : DTS.LogProviderSQLServer.1  
   
         -   ClassID : {6AA833A1-E4B2-4431-831B-DE695049DC61}  
   
     -   Journaux d'événements Windows :  
   
-        -   ProgID: DTS.LogProviderEventLog.1  
+        -   ProgID : DTS.LogProviderEventLog.1  
   
         -   ClassID : {97634F75-1DC7-4F1F-8A4C-DAF0E13AAA22}  
   
     -   Fichier XML :  
   
-        -   ProgID: DTS.LogProviderXMLFile.1  
+        -   ProgID : DTS.LogProviderXMLFile.1  
   
         -   ClassID : {AFED6884-619C-484F-9A09-F42D56E1A7EA}  
   
@@ -629,7 +629,7 @@ dtexec /f "c:\pkgOne.dtsx" /conf "c:\pkgOneConfig.cfg"
   
  **Option SET**  
   
- L’exemple suivant montre comment utiliser l’option **/SET**, qui permet de modifier la valeur de toute variable ou propriété du package quand vous démarrez le package à partir de la ligne de commande.  
+ L’exemple suivant montre comment utiliser l’option **/SET** , qui permet de modifier la valeur de toute variable ou propriété du package quand vous démarrez le package à partir de la ligne de commande.  
   
 ```  
 /SET \package\DataFlowTask.Variables[User::MyVariable].Value;newValue  

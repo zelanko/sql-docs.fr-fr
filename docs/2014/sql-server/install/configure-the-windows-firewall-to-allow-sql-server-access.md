@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 336cdd3d1b0de43a08cc4ea69dd072e5d0e09fe5
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860710"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configurer le Pare-feu Windows pour autoriser l’accès à SQL Server
@@ -121,7 +121,7 @@ ms.locfileid: "58860710"
   
     -   [Comment utiliser l'outil Netsh.exe et les commutateurs de ligne de commande](https://support.microsoft.com/kb/242468)  
   
-    -   [Comment utiliser le contexte « pare-feu netsh advfirewall » au lieu du contexte « pare-feu netsh » pour contrôler le comportement du pare-feu de Windows dans Windows Server 2008 et Windows Vista](https://support.microsoft.com/kb/947709)  
+    -   [Comment utiliser le contexte « pare-feu netsh advfirewall » à la place du contexte « pare-feu netsh » pour contrôler le comportement du Pare-feu Windows dans Windows Server 2008 et Windows Vista](https://support.microsoft.com/kb/947709)  
   
     -   [La commande de « netsh firewall » avec le paramètre « profile=all » ne configure pas le profil public sur un ordinateur Windows Vista](https://support.microsoft.com/kb/947213)  
   
@@ -150,7 +150,7 @@ ms.locfileid: "58860710"
 ####  <a name="BKMK_dynamic_ports"></a> Ports dynamiques  
  Par défaut, les instances nommées (y compris [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) utilisent des ports dynamiques. Cela signifie que chaque fois que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] démarre, il identifie un port disponible et utilise ce numéro de port. Si l'instance nommée est la seule instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] installée, elle utilisera probablement le port TCP 1433. Si d'autres instances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] sont installées, le port utilisé sera probablement un port TCP différent. Dans la mesure où le port sélectionné peut changer chaque fois que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est démarré, il est difficile de configurer le pare-feu pour qu'il active l'accès au numéro de port correct. Par conséquent, si un pare-feu est utilisé, nous vous recommandons de reconfigurer le [!INCLUDE[ssDE](../../includes/ssde-md.md)] pour qu'il utilise le même numéro de port à chaque fois. Cela s'appelle port fixe ou port statique. Pour plus d’informations, consultez [Configurer un serveur pour écouter un port TCP spécifique &#40;Gestionnaire de configuration SQL Server&#41;](../../database-engine/configure-windows/configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
- L’alternative à la configuration d’une instance nommée pour l’écoute sur un port fixe est de créer une exception dans le pare-feu pour un programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , tel que **sqlservr.exe** (pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Cette approche peut être pratique, mais le numéro de port n’apparaît pas dans la colonne **Port local** de la page **Règles de trafic entrant** quand vous utilisez le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité. Cela peut rendre plus difficile le fait d'auditer quels ports sont ouverts. Un autre élément à prendre en compte est qu’un Service Pack ou une mise à jour cumulative peut modifier le chemin vers le fichier exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ce qui risque d’invalider la règle de pare-feu.  
+ L’alternative à la configuration d’une instance nommée pour l’écoute sur un port fixe est de créer une exception dans le pare-feu pour un programme [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tel que **sqlservr.exe** (pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]). Cette approche peut être pratique, mais le numéro de port n’apparaît pas dans la colonne **Port local** de la page **Règles de trafic entrant** quand vous utilisez le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité. Cela peut rendre plus difficile le fait d'auditer quels ports sont ouverts. Un autre élément à prendre en compte est qu’un Service Pack ou une mise à jour cumulative peut modifier le chemin vers le fichier exécutable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , ce qui risque d’invalider la règle de pare-feu.  
   
 > [!NOTE]  
 >  La procédure suivante utilise l'élément **Pare-feu Windows** dans le Panneau de configuration. Le composant logiciel enfichable MMC du Pare-feu Windows avec fonctions avancées de sécurité peut configurer une règle plus complexe. Cela inclut la configuration d'une exception de service qui peut être utile pour assurer une défense en profondeur. Consultez ci-dessous [Utilisation du composant logiciel enfichable Pare-feu Windows avec fonctions avancées de sécurité](#BKMK_WF_msc) .  

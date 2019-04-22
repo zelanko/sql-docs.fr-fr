@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: dc53bdfb71efeafd55752686ff136355bc79bd34
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860480"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Installer les outils de données volumineuses de SQL Server 2019
@@ -31,11 +31,11 @@ Le tableau suivant répertorie les outils de cluster big data courants et commen
 
 | Tool | Requis | Description | Installation |
 |---|---|---|---|
-| **mssqlctl** | Oui | Outil de ligne de commande pour installer et gérer un cluster de données volumineux. | [Installation](deploy-install-mssqlctl.md) |
+| **mssqlctl** | Oui | Outil de ligne de commande pour installer et gérer un cluster de données volumineux. | [Installer](deploy-install-mssqlctl.md) |
 | **kubectl**<sup>1</sup> | Oui | Outil de ligne de commande pour l’analyse du cluster Kuberentes sous-jacent ([plus d’informations](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
-| **Azure Data Studio** | Oui | Outil graphique multiplateforme pour l’interrogation de SQL Server ([plus d’informations](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installation](../azure-data-studio/download.md) |
-| **Extension de SQL Server 2019** | Oui | Extension pour Azure Data Studio qui prend en charge la connexion au cluster big data. Fournit également un Assistant de virtualisation des données. | [Installation](../azure-data-studio/sql-server-2019-extension.md) |
-| **Azure CLI**<sup>2</sup> | Pour AKS | Interface de ligne de commande moderne pour la gestion des services Azure. Utilisé avec les déploiements de cluster AKS big data ([plus d’informations](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installation](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
+| **Azure Data Studio** | Oui | Outil graphique multiplateforme pour l’interrogation de SQL Server ([plus d’informations](https://docs.microsoft.com/sql/azure-data-studio/what-is?view=sql-server-ver15)). | [Installer](../azure-data-studio/download.md) |
+| **Extension de SQL Server 2019** | Oui | Extension pour Azure Data Studio qui prend en charge la connexion au cluster big data. Fournit également un Assistant de virtualisation des données. | [Installer](../azure-data-studio/sql-server-2019-extension.md) |
+| **Azure CLI**<sup>2</sup> | Pour AKS | Interface de ligne de commande moderne pour la gestion des services Azure. Utilisé avec les déploiements de cluster AKS big data ([plus d’informations](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [Installer](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
 | **mssql-cli** | Ce paramètre est facultatif | Interface de ligne de commande moderne pour l’interrogation de SQL Server ([plus d’informations](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | Pour certains scripts | Outil de ligne de commande hérité pour l’interrogation de SQL Server ([plus d’informations](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | Pour certains scripts | Outil de ligne de commande pour transférer des données avec des URL. | [Windows](https://curl.haxx.se/windows/) \| Linux : package d’installation de curl |

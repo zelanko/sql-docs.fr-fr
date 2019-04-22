@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 59b623076e86f3bacf5ae8c6e24b48774e33f670
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241247"
 ---
 # <a name="execute-package-task"></a>Tâche d'exécution de package
@@ -75,7 +75,7 @@ ms.locfileid: "59241247"
   
  Vous pouvez utiliser les méthodes suivantes pour passer des valeurs à un package enfant :  
   
--   **Configurations du package**  
+-   **Configurations de package**  
   
      [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] contient un type de configuration, en l'occurrence la configuration Variable de package parent, qui permet de passer les valeurs du package parent au package enfant. La configuration est basée sur le package enfant et utilise une variable dans le package parent. La configuration est mappée à une variable ou à la propriété d'un objet du package enfant. La variable peut également être utilisée dans les scripts utilisés par la tâche de script ou le composant de script.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "59241247"
   
  Pour plus d'informations sur les propriétés définissables dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)] , cliquez sur l'une des rubriques suivantes :  
   
--   [Éditeur de tâche d'exécution de package](../execute-package-task-editor.md)  
+-   [Execute Package Task Editor](../execute-package-task-editor.md)  
   
 -   [Page Expressions](../expressions/expressions-page.md)  
   

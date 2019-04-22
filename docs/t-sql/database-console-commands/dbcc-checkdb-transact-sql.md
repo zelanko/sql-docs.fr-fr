@@ -36,10 +36,10 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 ms.openlocfilehash: 08d47fc52268df4d5a8fb027cd47572c62428707
-ms.sourcegitcommit: 5f38c1806d7577f69d2c49e66f06055cc1b315f1
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59429365"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
@@ -190,7 +190,7 @@ Ces vérifications de cohérence logique effectuent une vérification croisée d
 - À compter de SQL Server 2016, les vérifications supplémentaires sur les colonnes calculées persistantes, les colonnes UDT et les index filtrés ne seront pas exécutées par défaut afin d’éviter les évaluations d’expressions coûteuses. Cette modification réduit considérablement la durée de CHECKDB sur les bases de données contenant ces objets. Cependant, les vérifications de cohérence physique de ces objets sont toujours effectuées. Les évaluations d’expressions ne seront effectuées en plus des vérifications logiques déjà présentes (vue indexée, index XML et index spatiaux) dans le cadre de l’option `EXTENDED_LOGICAL_CHECKS` que quand l’option `EXTENDED_LOGICAL_CHECKS` est spécifiée.   
     
 **Pour connaître le niveau de compatibilité d’une base de données**
--   [Afficher ou modifier le niveau de compatibilité d'une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
+-   [Afficher ou modifier le niveau de compatibilité d’une base de données](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
 ## <a name="internal-database-snapshot"></a>Instantané de base de données interne    
 DBCC CHECKDB utilise un instantané de base de données interne pour la cohérence transactionnelle nécessaire à la réalisation de ces vérifications. Ceci évite les problèmes de blocage et d'accès simultané lors de l'exécution de ces commandes. Pour plus d’informations, consultez [Afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) et la section Utilisation de l’instantané de base de données interne DBCC dans [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md). Si vous ne pouvez créer aucun instantané ou si TABLOCK est spécifié, la commande DBCC CHECKDB acquiert des verrous pour obtenir la cohérence requise. Dans ce cas, un verrou de base de données exclusif est requis pour effectuer les vérifications d'allocation, tandis que des verrous de table partagés sont nécessaires pour effectuer les vérifications de table.
@@ -394,5 +394,5 @@ GO
 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
 [Afficher la taille du fichier partiellement alloué d’un instantané de base de données &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
 [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[System Tables &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+[Tables système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
 

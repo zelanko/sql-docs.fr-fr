@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 88c22eebf7a070628e72515fafc83591a8e34c64
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241150"
 ---
 # <a name="report-definition-language-ssrs"></a>Langage de définition de rapport (SSRS, Report Definition Language)
@@ -64,7 +64,7 @@ ms.locfileid: "59241150"
 |----------|-----------------|  
 |`Binary`|Propriété dotée d'une valeur binaire encodée en base 64.|  
 |`Boolean`|Propriété de l'objet ayant pour valeur `true` ou `false`. Sauf indication contraire, la valeur d'un objet Boolean omis facultatif est `False`.|  
-|`Date`|Propriété dotée d'une valeur date ou date/heure entièrement spécifiée au format de date ISO8601 : AAAA-MM-JJ[THH:MM[:SS[.S]]].|  
+|`Date`|Une propriété avec une valeur de date ou date/heure entièrement spécifiée au format de date ISO8601 : AAAA-MM-JJ [THH [ : SS [. [S]]].|  
 |`Enum`|Propriété dont la valeur est le texte d'une chaîne, qui doit appartenir à une liste de valeurs désignées.|  
 |`Float`|Propriété dotée d'une valeur flottante (Float). Une virgule (,) est utilisée comme séparateur décimal facultatif.|  
 |`Integer`|Propriété dotée d'une valeur entière (int32).|  

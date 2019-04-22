@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860630"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configurer les événements étendus pour les groupes de disponibilité Always On
@@ -81,7 +81,7 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
   
  [availability_replica_manager_state](#BKMK_availability_replica_manager_state)  
   
- [error_reported (1480) : Le rôle de réplica de base de données a changé](#BKMK_error_reported_1480)  
+ [error_reported (1480) : Le rôle de réplica de base de données a changé](#BKMK_error_reported_1480)  
   
 ###  <a name="BKMK_availability_replica_state_change"></a> availability_replica_state_change  
  Se produit en cas de changement de l’état d’un réplica de disponibilité. La création d’un groupe de disponibilité ou la participation à un réplica de disponibilité peut déclencher cet événement. Il est utile pour diagnostiquer les échecs de basculement automatique. Il peut également être utilisé pour suivre les étapes de basculement.  
@@ -101,8 +101,8 @@ Pour plus d’informations sur certains des événements couverts par alwayson_h
 |availability_group_id|guid|ID du groupe de disponibilité.|  
 |availability_group_name|unicode_string|Nom du groupe de disponibilité.|  
 |availability_replica_id|guid|ID du réplica de disponibilité.|  
-|previous_state|availability_replica_state|Rôle du réplica avant le changement.<br /><br /> **Les valeurs possibles sont :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
-|current_state|availability_replica_state|Rôle du réplica après le changement.<br /><br /> **Les valeurs possibles sont :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|previous_state|availability_replica_state|Rôle du réplica avant le changement.<br /><br /> **Valeurs possibles :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
+|current_state|availability_replica_state|Rôle du réplica après le changement.<br /><br /> **Valeurs possibles :**<br /><br /> Primary_Normal<br /><br /> Secondary_Normal<br /><br /> Resolving_Pending_Failover<br /><br /> Resolving_Normal<br /><br /> Primary_Pending<br /><br /> Not_Available|  
   
 #### <a name="alwaysonhealth-session-definition"></a>Définition de la session alwayson_health  
   

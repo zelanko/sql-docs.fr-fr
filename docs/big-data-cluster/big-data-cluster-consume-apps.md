@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 4d299f364b4d67e1f31ce7c0e70d6ba062933f37
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860540"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Utiliser une application déployée sur un cluster de données volumineux de SQL Server à l’aide d’un service web RESTful
@@ -27,7 +27,7 @@ Cet article décrit comment utiliser une application déployée sur un cluster d
 ## <a name="prerequisites"></a>Prérequis
 
 - [Cluster de données volumineux de SQL Server 2019](deployment-guidance.md)
-- [utilitaire de ligne de commande mssqlctl](deploy-install-mssqlctl.md)
+- [mssqlctl command-line utility](deploy-install-mssqlctl.md)
 - Une application déployée à l’aide [ `mssqlctl` ](big-data-cluster-create-apps.md) ou [application déployer une extension](app-deployment-extension.md)
 
 ## <a name="capabilities"></a>Fonctions
@@ -105,7 +105,7 @@ Le résultat de cette demande vous donnera un JWT `access_token`, que vous devez
 > [!NOTE]
 > Si vous le souhaitez, vous pouvez ouvrir l’URL pour le `swagger` qui a été retourné lors de l’exécution `mssqlctl app describe --name [appname] --version [version]` dans votre navigateur, qui doit être similaire à `https://[IP]:[PORT]/api/app/[appname]/[version]/swagger.json`. Vous devrez vous connecter avec les mêmes informations d’identification que vous avez utilisé pour `mssqlctl login`. Le contenu de la `swagger.json` vous pouvez coller dans [Swagger Editor](https://editor.swagger.io). Vous verrez que le service web expose le `run` (méthode). Notez également l’URL de Base affichée en haut.
 
-Vous pouvez utiliser votre outil préféré pour appeler le `run` (méthode) (`https://[IP]:30778/api/app/[appname]/[version]/run`), en passant les paramètres dans le corps de votre demande POST en tant que json. Dans cet exemple, nous utiliserons [Postman](https://www.getpostman.com/). Avant d’effectuer l’appel, vous devez définir le `Authorization` à `Bearer Token` et collez dans le jeton que vous avez récupéré précédemment. Ceci définit un en-tête de votre demande. Consultez la capture d'écran ci-dessous.
+Vous pouvez utiliser votre outil préféré pour appeler le `run` (méthode) (`https://[IP]:30778/api/app/[appname]/[version]/run`), en passant les paramètres dans le corps de votre demande POST en tant que json. Dans cet exemple, nous utiliserons [Postman](https://www.getpostman.com/). Avant d’effectuer l’appel, vous devez définir le `Authorization` à `Bearer Token` et collez dans le jeton que vous avez récupéré précédemment. Ceci définit un en-tête de votre demande. Consultez la capture d’écran ci-dessous.
 
 ![Postman exécuter en-têtes](media/big-data-cluster-consume-apps/postman_run_1.png)
 

@@ -13,12 +13,12 @@ ms.assetid: 3242deef-6f5f-4051-a121-36b3b4da851d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 629ab86b869e36ec816dc99070f11a88147a1ca8
-ms.sourcegitcommit: e6e5da19b393f30b068552a18c911495cbc32952
+ms.openlocfilehash: 2bb8afe1e20e71245beea8f9482ff0aec4b047ba
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54443695"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671136"
 ---
 # <a name="set-or-change-the-server-collation"></a>Définir ou changer le classement du serveur
 
@@ -30,7 +30,7 @@ ms.locfileid: "54443695"
   
 ## <a name="setting-the-server-collation-in-sql-server"></a>Définition du classement du serveur dans SQL Server
 
-  Le classement du serveur est spécifié au cours de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement ne peuvent pas être spécifiés comme classement au niveau du serveur. Pour plus d’informations, consultez [Configuration du serveur - Classement](/sql/sql-server/install/server-configuration-collation.md).
+  Le classement du serveur est spécifié au cours de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le classement par défaut au niveau du serveur est **SQL_Latin1_General_CP1_CI_AS**. Les classements Unicode seulement ne peuvent pas être spécifiés comme classement au niveau du serveur. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](collation-and-unicode-support.md).
   
 ## <a name="changing-the-server-collation-in-sql-server"></a>Changement du classement du serveur dans SQL Server
 
@@ -42,7 +42,7 @@ ms.locfileid: "54443695"
   
 - Supprimez toutes les bases de données utilisateur.  
   
-- Recréez la base de données MASTER en spécifiant le nouveau classement dans la propriété SQLCOLLATION de la commande **setup** . Exemple :  
+- Recréez la base de données MASTER en spécifiant le nouveau classement dans la propriété SQLCOLLATION de la commande **setup** . Par exemple :  
   
     ```sql  
     Setup /QUIET /ACTION=REBUILDDATABASE /INSTANCENAME=InstanceName

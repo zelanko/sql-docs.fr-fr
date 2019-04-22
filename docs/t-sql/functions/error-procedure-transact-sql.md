@@ -26,10 +26,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc0765e02958e6ec59a419933716e8485879add3
-ms.sourcegitcommit: fc1739be9b2735b2bb469979936e76ca2a3830f8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58899725"
 ---
 # <a name="errorprocedure-transact-sql"></a>ERROR_PROCEDURE (Transact-SQL)
@@ -51,19 +51,19 @@ ERROR_PROCEDURE ( )
 ## <a name="return-value"></a>Valeur retournée  
 Si elle est appelée dans un bloc CATCH, `ERROR_PROCEDURE` retourne le nom de la procédure stockée ou du déclencheur d’où provient l’erreur.
   
-`ERROR_PROCEDURE` retourne Null si l’erreur ne s’est pas produite dans une procédure stockée ou un déclencheur.  
+`ERROR_PROCEDURE` retourne la valeur NULL si l’erreur ne s’est pas produite dans une procédure stockée ou un déclencheur.  
   
-`ERROR_PROCEDURE` retourne Null si elle est appelée en dehors de l’étendue d’un bloc CATCH.  
+`ERROR_PROCEDURE` retourne NULL quand l’appel a lieu en dehors de l’étendue d’un bloc CATCH.  
   
 ## <a name="remarks"></a>Notes   
-`ERROR_PROCEDURE` prend en charge les appels indépendamment de leur emplacement dans l’étendue d’un bloc CATCH.  
+`ERROR_PROCEDURE` prend en charge les appels à partir de n’importe quel emplacement dans l’étendue d’un bloc CATCH.  
   
-`ERROR_PROCEDURE` retourne le nom de la procédure stockée ou du déclencheur dans lequel une erreur s’est produite, indépendamment du nombre d’exécutions ou de l’emplacement d’exécution dans l’étendue du bloc `CATCH`. Ce comportement contraste avec celui d’une fonction comme @@ERROR, qui retourne uniquement un numéro d’erreur dans l’instruction immédiatement après celle qui a provoqué une erreur.  
+`ERROR_PROCEDURE` retourne le nom de la procédure stockée ou du déclencheur où une erreur se produit, quel que soit le nombre de fois où il/elle s’exécute ou l’emplacement de son exécution dans l’étendue du bloc `CATCH`. Ce comportement contraste avec celui d’une fonction comme @@ERROR, qui retourne uniquement un numéro d’erreur dans l’instruction immédiatement après celle qui a provoqué une erreur.  
    
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
   
 ### <a name="a-using-errorprocedure-in-a-catch-block"></a>A. Utilisation d'ERROR_PROCEDURE dans un bloc CATCH  
-L’exemple suivant illustre une procédure stockée qui génère une erreur de division par zéro. `ERROR_PROCEDURE` retourne le nom de la procédure stockée dans laquelle l’erreur s’est produite.  
+L’exemple suivant illustre une procédure stockée qui génère une erreur de division par zéro. `ERROR_PROCEDURE` retourne le nom de la procédure stockée où l’erreur s’est produite.  
   
 ```  
 -- Verify that the stored procedure does not already exist.  

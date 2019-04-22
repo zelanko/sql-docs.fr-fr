@@ -15,10 +15,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872309"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Nouveautés du moteur de base de données - SQL Server 2016
@@ -29,7 +29,7 @@ Cette rubrique récapitule les améliorations introduites dans la version [!INCL
 Pour découvrir les nouveautés des autres composants SQL Server, consultez [Nouveautés de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
 > [!NOTE]
->  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] est une application 64 bits. L’installation 32 bits n’est plus disponible, même si certains éléments s’exécutent en tant que composants 32 bits.
+>  [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] est une application 64 bits. L’installation 32 bits n’est plus disponible, même si certains éléments s’exécutent en tant que composants 32 bits.
 
 #### <a name="try-it-out"></a>À votre tour d’essayer
 
@@ -41,7 +41,7 @@ Pour découvrir les nouveautés des autres composants SQL Server, consultez [Nou
 > Pour obtenir les notes de publication actuelles, voir [SQL Server 2016 Release Notes](../sql-server/sql-server-2016-release-notes.md).
   
 ## <a name="sql-server-2016-service-pack-1-sp1"></a>SQL Server 2016 Service Pack 1 (SP1)  
--  `CREATE OR ALTER <object>` La syntaxe est maintenant disponible pour les [procédures](../t-sql/statements/create-procedure-transact-sql.md), les [vues](../t-sql/statements/create-view-transact-sql.md), les [fonctions](../t-sql/statements/create-function-transact-sql.md) et les [déclencheurs](../t-sql/statements/create-trigger-transact-sql.md).
+-  La syntaxe de `CREATE OR ALTER <object>` est désormais disponible pour les [procédures](../t-sql/statements/create-procedure-transact-sql.md), les [vues](../t-sql/statements/create-view-transact-sql.md), les [fonctions](../t-sql/statements/create-function-transact-sql.md) et les [déclencheurs](../t-sql/statements/create-trigger-transact-sql.md).
 -   La prise en charge d’un modèle d’indicateurs de requête plus générique a été ajoutée : `OPTION (USE HINT('<hint1>', '<hint2>'))`. Pour plus d’informations, consultez [Indicateurs de requête (Transact-SQL)](../t-sql/queries/hints-transact-sql-query.md).  
 - La DMV [sys.dm_exec_valid_use_hints](../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) a été ajoutée aux indicateurs de liste.  
 - La DMV [sys.dm_exec_query_statistics_xml](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) a été ajoutée pour retourner des statistiques temporaires XML de plan d’exécution de requêtes.  
@@ -61,11 +61,11 @@ Cette section contient les sous-sections suivantes :
 -   [OLTP en mémoire](#in-memory-oltp)
 -   [Optimiseur de requête](#query-optimizer)
 -   [Statistiques des requêtes dynamiques](#live-query-statistics)
--   [Magasin des requêtes](#query-store)
+-   [Magasin de requêtes](#query-store)
 -   [Tables temporelles](#temporal-tables)
 -   [Sauvegardes distribuées vers le Stockage Blob Microsoft Azure](#striped-backups-to-microsoft-azure-blob-storage)
 -   [Sauvegardes d’instantanés de fichiers vers le Stockage Blob Microsoft Azure](#file-snapshot-backups-to-microsoft-azure-blob-storage)
--   [Sauvegarde managée](#managed-backup)
+-   [Gestion de sauvegarde](#managed-backup)
 -   [Base de données tempdb](#tempdb-database)
 -   [Prise en charge de JSON intégrée](#built-in-json-support)
 -   [PolyBase](#polybase)
@@ -97,7 +97,7 @@ Pour plus d’informations, consultez les rubriques suivantes dans la section [G
 
 - [Performances des requêtes d’index columnstore](~/relational-databases/indexes/columnstore-indexes-query-performance.md)
 
-- [Prise en main de Columnstore pour l’analytique opérationnelle en temps réel](../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
+- [Prise en main de columnstore pour l’analytique opérationnelle en temps réel](../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)
 
 - [Index columnstore pour l’entreposage des données](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 
@@ -176,7 +176,7 @@ Il existe plusieurs éléments Transact-SQL qui n’étaient pas pris en charge 
 
 Pour obtenir des informations générales, consultez :
 
-- [Constructions Transact-SQL non prises en charge par l’OLTP en mémoire](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
+- [Les constructions Transact-SQL ne sont pas prises en charge par l’OLTP en mémoire](../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md)
 - [Fonctionnalités SQL Server non prises en charge pour l’OLTP en mémoire](~/relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)
 
 
@@ -361,7 +361,7 @@ Il existe des éléments Transact-SQL qui n’étaient pas pris en charge pour l
 Pour obtenir des informations générales, consultez :
 
 - [Fonctionnalités prises en charge pour les modules T-SQL compilés en mode natif](../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md)
-- [Altering Natively Compiled T-SQL Modules](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
+- [Modification de modules T-SQL compilés en mode natif](../relational-databases/in-memory-oltp/altering-natively-compiled-t-sql-modules.md)
 
 ## <a name="system-view-enhancements"></a>Améliorations des vues système
 - Deux nouvelles vues prennent en charge la sécurité au niveau des lignes. Pour plus d’informations, consultez [sys.security_predicates &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-predicates-transact-sql.md) et [sys.security_policies &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-security-policies-transact-sql.md).
@@ -451,4 +451,4 @@ SQL Server 2016 Upgrade Advisor Preview est un outil autonome qui permet aux uti
  
 [Notes de publication de SQL Server 2016](../sql-server/sql-server-2016-release-notes.md) 
  
-[Installer les Outils d’administration SQL Server avec SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)
+[Installer les Outils d’administration SQL Server avec SSMS](https://msdn.microsoft.com/library/af68d59a-a04d-4f23-9967-ad4ee2e63381)

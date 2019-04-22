@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 57b77e83994f8471e677ba2ba367acc48a66cddd
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860020"
 ---
 # <a name="mssqlctl-cluster-config"></a>Configuration de cluster mssqlctl
@@ -42,7 +42,7 @@ mssqlctl cluster config get
 
 | Paramètres | Description |
 |---|---|
-| **--nom - n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. Obligatoire. |
+| **--name -n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. Obligatoire. |
 | **--output-file -f** | Fichier de sortie pour stocker le résultat dans. Obligatoire. |
 
 ## <a name="next-steps"></a>Étapes suivantes

@@ -26,16 +26,16 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: a6c183fc402571ab359071160d515939257f773b
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241627"
 ---
 # <a name="reporting-services-report-server"></a>Serveur de rapports Reporting Services
   Cette rubrique est une vue d'ensemble du serveur de rapports [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , le composant central d'une installation [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Il se compose d'une paire de moteurs de traitement et d'une collection d'extensions spécialisées qui gèrent l'authentification, le traitement des données, le rendu et les opérations de remise. Un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] s'exécute dans l'un des deux modes de déploiement : mode natif ou mode SharePoint. Consultez la section [Comparaison des fonctionnalités du mode natif et du mode SharePoint](#bkmk_featuresupport) pour obtenir une comparaison des fonctionnalités.  
   
- **Installation :** pour plus d'informations sur l'installation de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez les rubriques suivantes :  
+ **Installation :** Pour plus d’informations sur [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] installation, consultez les rubriques suivantes :  
   
 -   [Installer le serveur de rapports Reporting Services en mode natif](install-windows/install-reporting-services-native-mode-report-server.md)  
   
@@ -49,21 +49,21 @@ ms.locfileid: "59241627"
   
 ##  <a name="bkmk_top"></a> Dans cette rubrique  
   
--   [Présentation des modes du serveur de rapports](#bkmk_overview)  
+-   [Vue d’ensemble des Modes de serveur de rapports](#bkmk_overview)  
   
--   [Comparaison des fonctionnalités du mode natif et du mode SharePoint](#bkmk_featuresupport)  
+-   [Comparaison des fonctionnalités de SharePoint et Mode natif](#bkmk_featuresupport)  
   
--   [Mode natif](#bkmk_nativemode)  
+-   [Native Mode](#bkmk_nativemode)  
   
--   [Mode natif avec composants WebPart SharePoint](#bkmk_nativewithwebparts)  
+-   [En Mode natif avec composants WebPart SharePoint](#bkmk_nativewithwebparts)  
   
--   [en mode SharePoint](#bkmk_sharepointmode)  
+-   [Mode SharePoint](#bkmk_sharepointmode)  
   
--   [Processus de rapports et processus de planification et de remise](#bkmk_reportprocessor)  
+-   [Processus de rapports et de planification et processus de distribution](#bkmk_reportprocessor)  
   
--   [base de données du serveur de rapports](#bkmk_reportdatabase)  
+-   [Base de données du serveur de rapports](#bkmk_reportdatabase)  
   
--   [Extensions d'authentification, de rendu, de données et de remise](#bkmk_authentication)  
+-   [L’authentification, le rendu, données et Extensions de remise](#bkmk_authentication)  
   
 -   [Tâches associées](#bkmk_relatedtasks)  
   
@@ -169,20 +169,20 @@ ms.locfileid: "59241627"
 |Vérifier les configurations matérielle et logicielle requises|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](../../2014/sql-server/install/hardware-and-software-requirements-for-reporting-services-in-sharepoint-mode.md).|  
 |Installez [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint.|[Installer le mode SharePoint de Reporting Services pour SharePoint 2010](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)|  
 |Si vous êtes un développeur Web expérimenté dans la création de feuilles de style en cascade, vous pouvez modifier les styles par défaut à vos propres risques pour changer les couleurs, les polices et la disposition de la barre d'outils ou du Gestionnaire de rapports. Ni les feuilles de style par défaut, ni les instructions pour modifier ces feuilles de style ne sont documentées dans cette version.|[Personnaliser des feuilles de style pour la visionneuse HTML et pour le Gestionnaire de rapports](../../2014/reporting-services/customize-style-sheets-for-html-viewer-and-report-manager.md)|  
-|Les développeurs de sites Web qui sont habitués aux styles HTML et aux feuilles de style en cascade (CSS) peuvent utiliser les informations de cette rubrique pour déterminer les fichiers à modifier dans le but de personnaliser l'apparence du Gestionnaire de rapports.|[Configurer le Gestionnaire de rapports pour passer des cookies d'authentification personnalisée](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
+|Les développeurs de sites Web qui sont habitués aux styles HTML et aux feuilles de style en cascade (CSS) peuvent utiliser les informations de cette rubrique pour déterminer les fichiers à modifier dans le but de personnaliser l'apparence du Gestionnaire de rapports.|[Configurer le Gestionnaire de rapports pour passer des cookies d’authentification personnalisée](security/configure-the-web-portal-to-pass-custom-authentication-cookies.md)|  
 |Explique comment ajuster les paramètres de la mémoire pour le service Web Report Server et le service Windows.|[Configurer la mémoire disponible pour les applications du serveur de rapports](report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explique les étapes recommandées pour configurer un serveur de rapports pour l'administration à distance.|[Configurer un serveur de rapports pour l'administration à distance](report-server/configure-a-report-server-for-remote-administration.md)|  
 |Fournit des instructions pour configurer la disponibilité de **Mes rapports** sur une instance de serveur de rapports en mode natif.|[Activer et désactiver Mes rapports](report-server/enable-and-disable-my-reports.md)|  
 |Fournit des instructions pour configurer le contrôle RSClientPrint qui expose les fonctionnalités d'impression dans les navigateurs pris en charge. Pour plus d’informations sur la configuration requise du navigateur, consultez [planification pour Reporting Services et la prise en charge du navigateur Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md).|[Activer et désactiver l'impression côté client pour Reporting Services](report-server/enable-and-disable-client-side-printing-for-reporting-services.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Extensions Reporting Services](extensions/reporting-services-extensions.md)   
+ [Extensions Reporting Services](extensions/reporting-services-extensions.md)   
  [Outils de Reporting Services](tools/reporting-services-tools.md)   
  [Abonnements et remise &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Base de données du serveur de rapports &#40;SSRS en mode natif&#41;](report-server/report-server-database-ssrs-native-mode.md)   
  [Implémentation d'une extension de sécurité](extensions/security-extension/implementing-a-security-extension.md)   
- [Implémentation d'une extension pour le traitement des données](extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implémentation d’une extension pour le traitement des données](extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Sources de données prises en charge par Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Comment administrer SSRS à l'aide de PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
+ [Comment administrer SSRS à l’aide de PowerShell](https://sqlbelle.wordpress.com/2015/08/17/automate-ssrs-report-generation-using-powershell/)  
   
   

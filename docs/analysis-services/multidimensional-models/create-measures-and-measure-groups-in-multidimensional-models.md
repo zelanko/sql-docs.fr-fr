@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9c963256ce1d2d0fa37c34d7ea96df60834f125f
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241967"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Création de mesures et de groupes de mesures dans les modèles multidimensionnels
@@ -49,7 +49,7 @@ ms.locfileid: "59241967"
 |-|-|  
 |**source**|La plupart des mesures proviennent de colonnes numériques de tables de faits contenues dans un entrepôt de données externe, telles que la colonne Sales Amount des tables Internet Sales et Reseller Sales contenues dans l'entrepôt de données AdventureWorks. Toutefois, vous pouvez également créer de nouvelles mesures entièrement basées sur des calculs que vous définissez.<br /><br /> Les colonnes d'attribut de tables de dimension peuvent être utilisées pour définir des mesures, mais de telles mesures ont généralement un comportement d'agrégation de type semi-additif ou non additif. Pour plus d’informations sur le comportement semi-additif, consultez [Définir le comportement semi-additif](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md).|  
 |**agrégation**|Par défaut, les mesures sont additionnées avec chaque dimension. Toutefois, la propriété **AggregateFunction** vous permet de modifier ce comportement. Pour obtenir la liste des fonctions d'agrégation, consultez [Use Aggregate Functions](../../analysis-services/multidimensional-models/use-aggregate-functions.md) .|  
-|**Properties**|Pour obtenir des descriptions de propriété supplémentaires, consultez [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) .|  
+|**Propriétés**|Pour obtenir des descriptions de propriété supplémentaires, consultez [Configure Measure Properties](../../analysis-services/multidimensional-models/configure-measure-properties.md) .|  
   
 ##  <a name="bkmk_modeling"></a> Mesures et groupes de mesures de modélisation sur des faits et des tables de faits  
  Avant d'exécuter un Assistant, il est utile de comprendre les principes de modélisation qui sous-tendent la définition d'une mesure.  

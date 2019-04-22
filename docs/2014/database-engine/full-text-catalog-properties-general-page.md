@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241448"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Propriétés du catalogue de texte intégral (page Général)
@@ -40,21 +40,21 @@ ms.locfileid: "59241448"
   
 -   **Suspendu**  
   
--   **Accéléré**  
+-   **Throttled**  
   
--   **Récupération**  
+-   **La récupération**  
   
 -   **Arrêter**  
   
 -   **Remplissage incrémentiel en cours**  
   
--   **Construction des index**  
+-   **Création de l’index**  
   
 -   **Le disque est en pause l’intégral**  
   
--   **Suivi des modifications**  
+-   **Change tracking**  
   
- **Nombre d'éléments**  
+ **Nombre d’éléments**  
  Affiche le nombre d'éléments de texte intégral contenus dans le catalogue.  
   
  **Taille du catalogue**  
@@ -85,9 +85,9 @@ ms.locfileid: "59241448"
   
 |||  
 |-|-|  
-|**None**|N'exécute aucune opération de type **Optimiser le catalogue**, **Reconstruire le catalogue**ou **Remplir à nouveau le catalogue** .|  
+|**Aucun**|N'exécute aucune opération de type **Optimiser le catalogue**, **Reconstruire le catalogue**ou **Remplir à nouveau le catalogue** .|  
 |**Optimiser le catalogue**|Optimise l'utilisation de l'espace du catalogue et améliore les performances des requêtes. Cette option améliore également la précision du classement de la pertinence des résultats de la recherche.<br /><br /> Cette action exécute ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE.|  
-|**Reconstruire le catalogue**|Supprime et reconstruit le catalogue de texte intégral. Cette opération doit être exécutée si une propriété fondamentale du catalogue a été modifiée (par exemple, le respect des accents).<br /><br /> Pour que la reconstruction réussisse, le groupe de fichiers dans lequel réside le catalogue de texte intégral doit être en ligne ou accessible en lecture et en écriture. Après la reconstruction, l'index de texte intégral sera rempli à nouveau.<br /><br /> Cette action exécute ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
+|**La reconstruction du catalogue**|Supprime et reconstruit le catalogue de texte intégral. Cette opération doit être exécutée si une propriété fondamentale du catalogue a été modifiée (par exemple, le respect des accents).<br /><br /> Pour que la reconstruction réussisse, le groupe de fichiers dans lequel réside le catalogue de texte intégral doit être en ligne ou accessible en lecture et en écriture. Après la reconstruction, l'index de texte intégral sera rempli à nouveau.<br /><br /> Cette action exécute ALTER FULLTEXT CATALOG *catalog_name* REBUILD.|  
 |**Remplir à nouveau le catalogue**|Met à jour le catalogue avec les modifications récemment apportées aux données. Cette option ne requiert aucun temps mort du catalogue.|  
   
 ## <a name="see-also"></a>Voir aussi  

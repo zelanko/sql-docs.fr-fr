@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 17819c4c2a1d74c8ca4cc5d4875a67c6fb236639
-ms.sourcegitcommit: 85a7a532f35b8ea1b45e9a83bfc8529a0abed264
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480275"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Surveiller l'utilisation de la mémoire et résoudre les problèmes connexes
@@ -112,7 +112,7 @@ ms.locfileid: "59480275"
   
 ##  <a name="monitoring-memory-usage"></a>Surveillance de l'utilisation de la mémoire  
   
-###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Utilisation de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
+###  <a name="using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>À l’aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] inclut des rapports standard intégrés pour surveiller la mémoire consommée par les tables en mémoire. Accédez à ces rapports à l'aide de l'Explorateur d'objets comme décrit [ici](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx). Vous pouvez également utiliser l'Explorateur d'objets pour surveiller la mémoire consommée par les tables optimisées en mémoire individuelles.  
   
 #### <a name="consumption-at-the-database-level"></a>Consommation au niveau de la base de données  

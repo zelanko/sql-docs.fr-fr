@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6bc44d24631454e792b150750508647019411631
-ms.sourcegitcommit: ae333686549dda5993fa9273ddf7603adbbaf452
+ms.openlocfilehash: 230a3cb352dca689ee891eca6c6bfd6f516b6ebc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59533357"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774574"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Traitement de requêtes intelligent dans les bases de données SQL
 
@@ -26,7 +26,7 @@ ms.locfileid: "59533357"
 
 La famille des fonctionnalités de traitement de requêtes intelligent inclut des fonctionnalités qui améliorent les performances des charges de travail existantes avec un minimum d’effort d’implémentation à entreprendre. 
 
-![Traitement de requêtes intelligent](./media/3_iqpfeaturefamily.png)
+![Traitement de requêtes intelligent](./media/iqp-feature-family.png)
 
 Vous pouvez faire en sorte que les charges de travail soient automatiquement éligibles au traitement de requêtes intelligent en activant le niveau de compatibilité applicable pour la base de données. Vous pouvez définir cette option à l’aide de Transact-SQL. Par exemple :  
 

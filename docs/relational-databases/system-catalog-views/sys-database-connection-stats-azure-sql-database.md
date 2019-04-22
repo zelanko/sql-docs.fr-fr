@@ -21,10 +21,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59242327"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL Database)
@@ -38,11 +38,11 @@ ms.locfileid: "59242327"
 |**database_name**|**sysname**|Nom de la base de données.|  
 |**start_time**|**datetime2**|Date et heure UTC indiquant le début de l'intervalle d'agrégation. L'heure est toujours un multiple de 5 minutes. Exemple :<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|Date et heure UTC indiquant la fin de l'intervalle d'agrégation. **End_time** est toujours exactement à cinq minutes plus tard correspondant **start_time** dans la même ligne.|  
-|**success_count**|**INT**|Nombre de connexions réussies.|  
-|**total_failure_count**|**INT**|Nombre total d'échecs de connexion. C’est la somme de **connection_failure_count**, **terminated_connection_count**, et **throttled_connection_count**et n’inclut pas les événements de blocage.|  
-|**connection_failure_count**|**INT**|Nombre d'échecs de connexion.|  
-|**terminated_connection_count**|**INT**|**_Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions terminées.|  
-|**throttled_connection_count**|**INT**|**_Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions limitées.|  
+|**success_count**|**Int**|Nombre de connexions réussies.|  
+|**total_failure_count**|**Int**|Nombre total d'échecs de connexion. C’est la somme de **connection_failure_count**, **terminated_connection_count**, et **throttled_connection_count**et n’inclut pas les événements de blocage.|  
+|**connection_failure_count**|**Int**|Nombre d'échecs de connexion.|  
+|**terminated_connection_count**|**Int**|**_Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions terminées.|  
+|**throttled_connection_count**|**Int**|**_Applicable uniquement pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> Nombre de connexions limitées.|  
   
 ## <a name="remarks"></a>Notes  
   

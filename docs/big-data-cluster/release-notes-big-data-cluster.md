@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 3c999d82df4e8b73e290456ad5d3601712747ef9
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860524"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notes de publication pour les clusters de données volumineuses sur SQL Server
@@ -33,12 +33,12 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 
 | Nouvelle fonctionnalité ou mise à jour | Détails |
 |:---|:---|
-| Obtenir des conseils sur le GPU prend en charge pour l’exécution de deep learning avec TensorFlow dans Spark. | [Déployer un cluster de données volumineuses avec prise en charge GPU et exécuter TensorFlow](spark-gpu-tensorflow.md). |
+| Conseils sur la prise en charge de GPU pour l’exécution de Deep Learning avec TensorFlow dans Spark. | [Déployer un cluster de données volumineuses avec prise en charge GPU et exécuter TensorFlow](spark-gpu-tensorflow.md). |
 | **SqlDataPool** et **SqlStoragePool** des sources de données ne sont plus créés par défaut. | Créer manuellement en fonction des besoins. Consultez le [problèmes connus](#externaltablesctp24). |
-| `INSERT INTO SELECT` prise en charge pour le pool de données. | Pour obtenir un exemple, consultez [didacticiel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md). |
+| Prise en charge d’`INSERT INTO SELECT` pour le pool de données. | Pour obtenir un exemple, consultez [didacticiel : Recevoir des données dans un pool de données SQL Server avec Transact-SQL](tutorial-data-pool-ingest-sql.md). |
 | `FORCE SCALEOUTEXECUTION` et `DISABLE SCALEOUTEXECUTION` option. | Force ou désactive l’utilisation du pool de calcul pour les requêtes sur les tables externes. Par exemple, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
 | Mise à jour des recommandations de déploiement AKS. | Lorsque vous évaluez les clusters de données volumineuses sur AKS, nous recommandons à présent à l’aide d’un seul nœud de taille **Standard_L8s**. |
-| Exécution de Spark mise à niveau à Spark 2.4. | |
+| Mise à niveau du runtime Spark vers Spark 2.4. | |
 
 ### <a name="known-issues"></a>Problèmes connus
 
@@ -135,7 +135,7 @@ Un nouveau client Kubernetes de Python (version 9.0.0) modifié delete espaces d
 
 - Si vous créez une table externe à Oracle qui utilisent des types de données caractères, l’Assistant de virtualisation d’Azure Data Studio interprète ces colonnes comme VARCHAR dans la définition de table externe. Cela entraîne un échec dans la table externe DDL. Modifiez le schéma Oracle pour utiliser le type NVARCHAR2, ou créer manuellement les instructions de la TABLE externe et spécifiez NVARCHAR au lieu d’utiliser l’Assistant.
 
-#### <a name="application-deployment"></a>Déploiement d’applications
+#### <a name="application-deployment"></a>Déploiement d'applications
 
 - Lors de l’appel d’une application de R, Python ou MLeap à partir de l’API RESTful, l’appel expire dans 5 minutes.
 
@@ -176,7 +176,7 @@ Les sections suivantes décrivent les nouvelles fonctionnalités et les problèm
 | Extension de Code Visual Studio pour déployer des applications sur un cluster de données volumineux. | [Comment utiliser VS Code pour déployer des applications sur les clusters de données volumineuses de SQL Server](app-deployment-extension.md) |
 | Modifications apportées à la **mssqlctl** outil utilisation de la commande. | Pour plus d’informations, consultez le [problèmes connus dans mssqlctl](#mssqlctlctp23). |
 | Utiliser Sparklyr dans un cluster de données volumineux | [Utiliser Sparklyr dans un cluster de données volumineux de SQL Server 2019](sparklyr-from-RStudio.md) |
-| Monter un stockage compatible HDFS externe dans le cluster de données volumineux avec **HDFS la hiérarchisation**. | Consultez [HDFS la hiérarchisation](hdfs-tiering.md). |
+| Monter un stockage compatible HDFS externe dans le cluster Big Data avec une **hiérarchisation HDFS**. | Consultez [HDFS la hiérarchisation](hdfs-tiering.md). |
 | Nouvelle expérience de connexion unifiée pour l’instance principale de SQL Server et de la passerelle HDFS/Spark. | Consultez [instance principale de SQL Server et de la passerelle HDFS/Spark](connect-to-big-data-cluster.md). |
 | Suppression d’un cluster avec **mssqlctl cluster delete** maintenant supprime uniquement les objets dans l’espace de noms qui faisaient partie du cluster de données volumineuses. | L’espace de noms n’est pas supprimé. Toutefois, dans les versions antérieures, cette commande n’a supprimé l’espace de noms entier. |
 | _Sécurité_ les noms de point de terminaison ont été modifiés et consolidés. | **service-sécurité-lb** et **service-sécurité-nodeport** ont été consolidées dans la **-security du point de terminaison** point de terminaison. |
@@ -257,7 +257,7 @@ Si vous utilisez kubeadm déploiement Kubernetes sur plusieurs ordinateurs, le p
 
 - Si vous créez une table externe à Oracle qui utilisent des types de données caractères, l’Assistant de virtualisation d’Azure Data Studio interprète ces colonnes comme VARCHAR dans la définition de table externe. Cela entraîne un échec dans la table externe DDL. Modifiez le schéma Oracle pour utiliser le type NVARCHAR2, ou créer manuellement les instructions de la TABLE externe et spécifiez NVARCHAR au lieu d’utiliser l’Assistant.
 
-#### <a name="application-deployment"></a>Déploiement d’applications
+#### <a name="application-deployment"></a>Déploiement d'applications
 
 - Lors de l’appel d’une application de R, Python ou MLeap à partir de l’API RESTful, l’appel expire dans 5 minutes.
 
