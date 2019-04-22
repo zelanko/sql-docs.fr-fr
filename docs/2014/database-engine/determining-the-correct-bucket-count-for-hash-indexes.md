@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241957"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Déterminer le nombre de compartiments correct pour les index de hachage
@@ -137,7 +137,7 @@ GO
   
  Considérez les trois index de hachage sur cette table :  
   
--   IX_Status : 50 pour cent des compartiments sont vides, ce qui est correct. Cependant, la longueur de chaîne moyenne est très élevée (65 536). Cela indique un grand nombre de valeurs dupliquées. Par conséquent, l'utilisation d'un index de hachage non cluster n'est pas appropriée dans ce cas. Il convient d'utiliser un index non cluster.  
+-   IX_Status : 50 pour cent des compartiments sont vides, ce qui est correct. Cependant, la longueur de chaîne moyenne est très élevée (65 536). Cela indique un grand nombre de valeurs dupliquées. Par conséquent, l'utilisation d'un index de hachage non cluster n'est pas appropriée dans ce cas. Il convient d'utiliser un index non cluster.  
   
 -   IX_OrderSequence: 0 pour cent des compartiments sont vides, ce qui est trop faible. En outre, la longueur de chaîne moyenne est de 8. En tant donné que les valeurs dans cet index sont uniques, cela signifie que 8 valeurs en moyenne sont mappées à chaque compartiment. Le nombre de compartiments doit être augmenté. Étant donné que la clé d'index a 262 144 valeurs uniques, le nombre de compartiments doit être égal ou supérieur à 262 144. Si une croissance future est attendue, le nombre doit être supérieur.  
   

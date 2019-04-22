@@ -12,20 +12,20 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 945cde51f7529dc31fd7018f1194de600ea1acf5
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241737"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : ajout d'un regroupement et de totaux (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Leçon 6 : Ajout de regroupement et totaux (Reporting Services)
   Ajoutez un regroupement et des totaux à votre rapport pour organiser et synthétiser vos données.  
   
  Pour plus d’informations sur l’ajout de totaux cumulés à des rapports, consultez : [Ajout de totaux à des rapports Reporting Services (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
   
  **Dans cette rubrique :**  
   
--   [Pour regrouper des données dans un rapport](#bkmk_groupdata)  
+-   [Pour regrouper les données dans un rapport](#bkmk_groupdata)  
   
 -   [Pour ajouter des totaux à un rapport](#bkmk_addtotals)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59241737"
   
 6.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Gris clair**, puis sur **OK**.  
   
-     ![Mode Conception : Table de base avec total des commandes](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Mode Création : Table de base avec total des commandes")  
+     ![Mode conception : Table de base avec total des commandes](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Mode Création : Table de base avec total des commandes")  
   
 ##  <a name="bkmk_adddailytotal"></a> Pour ajouter un total quotidien à un rapport  
   
@@ -107,7 +107,7 @@ ms.locfileid: "59241737"
   
 4.  Dans le menu **Format** , cliquez sur **Couleur d'arrière-plan**, sur **Bleu clair**, puis sur **OK**.  
   
-     ![Mode Conception : Total général dans une table de base](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Mode Création : Total général dans une table de base")  
+     ![Mode conception : Total général dans une table de base](../../2014/tutorials/media/rs-basictablesumgrandtotaldesign.gif "Mode Création : Total général dans une table de base")  
   
 5.  Cliquez sur Aperçu.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59241737"
   
      Si vous voyez un message semblable à ce qui suit dans la fenêtre de sortie, c'est que le déploiement a été réalisé avec succès.  
   
-    > ------ Création démarrée : Project: tutorial, Configuration: débogage ------« Sales Orders.rdl » ignoré. L'élément est à jour.Fin de la génération -- 0 erreur, 0 avertissement------ Début du déploiement : Project: tutorial, Configuration: Débogage---déploiement vers http://\<nom du serveur > / /reportserverdeploying report '/ tutorial/Sales Orders'. Fin du déploiement--0 erreur, 0 avertissement === générer : 1 réussi ou mis à jour, 0 échoué, 0 ignoré ==================== Déployer : 1 réussi, 0 échoué, 0 ignoré ==========  
+    > ---Début de la génération : Project: tutorial, Configuration: Débogage---ignorée « Sales Orders.rdl ». Élément est à jour. Génération terminée--0 erreur, 0 avertissements---déployer en route : Project: tutorial, Configuration: Débogage---déploiement vers http://\<nom du serveur > / /reportserverdeploying report '/ tutorial/Sales Orders'. Fin du déploiement--0 erreur, 0 avertissement === générer : 1 a réussi ou est à jour, 0 a échoué, 0 a été ignoré === déployer : 1 succeeded, 0 failed, 0 skipped ==========  
   
      Si un message d'erreur semblable au suivant s'affiche, vérifiez que vous disposez d'autorisations sur le serveur de rapports et que vous avez démarré [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] avec des privilèges d'administrateur.  
   

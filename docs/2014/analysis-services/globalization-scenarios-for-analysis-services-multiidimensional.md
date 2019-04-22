@@ -20,14 +20,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241896"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Scénarios de globalisation pour données multidimensionnelles Analysis Services
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stocke et manipule des données et des métadonnées multilingues dans les modèles de données tabulaires et multidimensionnels. Le stockage des données est en Unicode (UTF-16), dans des jeux de caractères qui utilisent l'encodage Unicode. Si vous chargez des données ANSI dans un modèle de données, les caractères sont stockés à l'aide de points de code équivalents Unicode.  
+  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stocke et manipule des données multilingues et les métadonnées dans les deux modèles de données tabulaires et multidimensionnels. Le stockage des données est en Unicode (UTF-16), dans des jeux de caractères qui utilisent l'encodage Unicode. Si vous chargez des données ANSI dans un modèle de données, les caractères sont stockés à l'aide de points de code équivalents Unicode.  
   
  La prise en charge d'Unicode signifie qu' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peut stocker des données dans n'importe laquelle des langues prises en charge par les systèmes d'exploitation Windows clients et serveurs, ce qui autorise la lecture, l'écriture, le tri et la comparaison des données dans n'importe quel jeu de caractères utilisé sur un ordinateur Windows. Les applications clientes BI consommant des données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] peuvent représenter les données dans la langue choisie par l'utilisateur, en supposant que les données existent dans cette langue dans le modèle.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59241896"
   
 -   Les fichiers journaux contiendront un mélange de messages localisés et en anglais, en supposant que vous avez installé un module linguistique sur le serveur Windows qui exécute Analysis Services.  
   
--   La documentation et les outils, tels que [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] et [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], sont traduits dans les langues suivantes : chinois simplifié, chinois traditionnel, français, allemand, italien, japonais, coréen, portugais (Brésil), russe et espagnol. Pour utiliser une version des outils spécifique à une langue, installez une version de SQL Server spécifique à une langue (par exemple, installez la version allemande de SQL Server pour obtenir Management Studio en allemand) ou exécutez le programme d'installation autonome dans la langue cible pour [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   Documentation et les outils, tels que [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] et [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)], sont traduits dans les langues suivantes : Chinois simplifié, chinois traditionnel, Français, allemand, italien, japonais, coréen, portugais (Brésil), russe et espagnol. Pour utiliser une version des outils spécifique à une langue, installez une version de SQL Server spécifique à une langue (par exemple, installez la version allemande de SQL Server pour obtenir Management Studio en allemand) ou exécutez le programme d'installation autonome dans la langue cible pour [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
  Analysis Services vous permet de définir la langue, le classement et les traductions indépendamment dans toute la hiérarchie d'objets.  
   

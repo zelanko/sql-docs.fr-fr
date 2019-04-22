@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: db70d1757073a48ab09f31cfb3570570e54a48cd
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241647"
 ---
 # <a name="mssqlserver833"></a>MSSQLSERVER_833
@@ -43,11 +43,11 @@ ms.locfileid: "59241647"
   
  Utilisez l'Analyseur de performances pour consulter les compteurs suivants :  
   
--   **Moy. disque s/transfert**  
+-   **Moyenne disque s/transfert**  
   
--   **Longueur moyenne de la file d'attente du disque**  
+-   **Longueur moyenne de la file d’attente du disque**  
   
--   **Longueur actuelle de la file d'attente du disque**  
+-   **Longueur actuelle de la file d’attente du disque**  
   
  Par exemple, la durée **Moyenne disque s/transfert** sur un ordinateur exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est généralement inférieure à 15 millisecondes. Si la valeur **Moyenne disque s/transfert** augmente, cela indique que le sous-système d’E/S ne parvient pas parfaitement à suivre la demande d’E/S.  
   

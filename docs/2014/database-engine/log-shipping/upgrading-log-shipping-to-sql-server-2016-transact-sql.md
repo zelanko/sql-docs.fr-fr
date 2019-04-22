@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19eae2e3ace3859d61048536be9b70bf58ad66f5
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042428"
 ---
 # <a name="upgrade-log-shipping-to-sql-server-2014-transact-sql"></a>Mettre à niveau la copie des journaux de transaction vers SQL Server 2014 (Transact-SQL)
@@ -193,7 +193,7 @@ ms.locfileid: "59042428"
 > [!IMPORTANT]  
 >  Mettez toujours à niveau toutes les instances de serveur secondaires avant de mettre à niveau le serveur principal.  
   
- **Pour effectuer une mise à niveau avec basculement et retourner au serveur principal d'origine**  
+ **Pour mettre à niveau à l’aide d’un basculement et retourner au serveur principal d’origine**  
   
 1.  Mettez à niveau toutes les instances de serveur secondaire (serveur B et serveur C).  
   
@@ -223,5 +223,5 @@ ms.locfileid: "59042428"
   
 ## <a name="see-also"></a>Voir aussi  
  [Sauvegardes des journaux de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)   
- [Appliquer les sauvegardes du journal de transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
- [Log Shipping Tables and Stored Procedures](log-shipping-tables-and-stored-procedures.md)  
+ [Appliquer les sauvegardes du journal des transactions &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md)   
+ [Tables et procédures stockées liées à la copie des journaux de transaction](log-shipping-tables-and-stored-procedures.md)  

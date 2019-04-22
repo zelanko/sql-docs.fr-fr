@@ -24,10 +24,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c5913b6b5bfc6d06038c1debfc36a0c203e3b54f
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872329"
 ---
 # <a name="sql-server-index-architecture-and-design-guide"></a>Guide de conception et d’architecture d’index SQL Server
@@ -892,10 +892,10 @@ Les performances d’un index non-cluster sont meilleures que celles d’un inde
 [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](../t-sql/statements/create-spatial-index-transact-sql.md)     
 [Réorganiser et reconstruire des index](../relational-databases/indexes/reorganize-and-rebuild-indexes.md)         
 [Amélioration des performances avec les vues indexées SQL Server 2008](https://msdn.microsoft.com/library/dd171921(v=sql.100).aspx)  
-[Partitioned Tables and Indexes](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
-[Créer une clé primaire](../relational-databases/tables/create-primary-keys.md)    
+[Tables et index partitionnés](../relational-databases/partitions/partitioned-tables-and-indexes.md)  
+[Créer des clés primaires](../relational-databases/tables/create-primary-keys.md)    
 [Index pour les tables optimisées en mémoire](../relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables.md)  
-[Vue d’ensemble des index columnstore](../relational-databases/indexes/columnstore-indexes-overview.md)  
+[Index columnstore - Présentation](../relational-databases/indexes/columnstore-indexes-overview.md)  
 [Résolution des problèmes des index de hachage pour les tables à mémoire optimisée](../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)    
 [Vues de gestion dynamique des tables à mémoire optimisée &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)   
 [Fonctions et vues de gestion dynamique relatives aux index &#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)       

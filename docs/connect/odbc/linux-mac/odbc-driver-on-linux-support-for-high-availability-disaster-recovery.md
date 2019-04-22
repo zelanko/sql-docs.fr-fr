@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4f307efedd62a1fcc923a2e61da8636a89e40bb
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042378"
 ---
 # <a name="odbc-driver-on-linux-and-macos-support-for-high-availability-and-disaster-recovery"></a>Pilote ODBC sur Linux et macOS - Haute disponibilité et reprise d’activité
@@ -76,7 +76,7 @@ Une connexion échoue si un réplica principal est configuré pour rejeter des c
 
 ## <a name="odbc-syntax"></a>Syntaxe ODBC
 
-Deux mots clés de chaîne de connexion ODBC prennent en charge [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]:  
+Deux mots clés de chaîne de connexion ODBC prennent en charge [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] :  
   
 -   **ApplicationIntent**  
   
@@ -96,8 +96,8 @@ Une application qui utilise [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] p
   
 |Fonction|Description|  
 |------------|---------------|  
-|[Fonction SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** prend en charge **ApplicationIntent** et **MultiSubnetFailover** via un nom de source de données ou un attribut de connexion.|  
-|[Fonction SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** prend en charge **ApplicationIntent** et **MultiSubnetFailover** via DSN, un mot clé de chaîne de connexion ou un attribut de connexion.|
+|[SQLConnect, fonction](../../../odbc/reference/syntax/sqlconnect-function.md)|**SQLConnect** prend en charge **ApplicationIntent** et **MultiSubnetFailover** via un nom de source de données ou un attribut de connexion.|  
+|[SQLDriverConnect, fonction](../../../odbc/reference/syntax/sqldriverconnect-function.md)|**SQLDriverConnect** prend en charge **ApplicationIntent** et **MultiSubnetFailover** via DSN, un mot clé de chaîne de connexion ou un attribut de connexion.|
   
 ## <a name="see-also"></a> Voir aussi  
 

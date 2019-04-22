@@ -10,10 +10,10 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: b12b0421cf32a36cfd6d681bc90ad9ca7c3f9209
-ms.sourcegitcommit: 2de5446fbc57787f18a907dd5deb02a7831ec07d
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58860550"
 ---
 # <a name="mssqlctl-cluster-debug"></a>Débogage de cluster mssqlctl
@@ -47,7 +47,7 @@ mssqlctl cluster debug copy-logs
 | Paramètres | Description |
 |---|---|
 | **--namespace -n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. Obligatoire. |
-| **--container - c** | Copier les journaux pour les conteneurs avec un nom similaire, facultatif, par défaut copie des journaux de tous les conteneurs. Ne peut pas être spécifié plusieurs fois. S’il est spécifié plusieurs fois, dernier un sera utilisé. |
+| **--container -c** | Copier les journaux pour les conteneurs avec un nom similaire, facultatif, par défaut copie des journaux de tous les conteneurs. Ne peut pas être spécifié plusieurs fois. S’il est spécifié plusieurs fois, dernier un sera utilisé. |
 | **--pod -p** | Copier les journaux pour les pods avec un nom similaire. Facultatif, par défaut, les journaux des copies pour tous les pods. Ne peut pas être spécifié plusieurs fois. S’il est spécifié plusieurs fois, dernier un sera utilisé. |
 | **--target-folder -d** | Chemin du dossier cible pour copier les journaux. Facultatif, par défaut crée le résultat dans le dossier local.  Ne peut pas être spécifié plusieurs fois. S’il est spécifié plusieurs fois, dernier un sera utilisé. |
 | **--timeout -t** | Le nombre de secondes d’attente de la commande se termine. La valeur par défaut est 0, ce qui est illimité. |
@@ -67,7 +67,7 @@ mssqlctl cluster debug dump
 
 | Paramètres | Description |
 |---|---|
-| **--container - c** | Copier les journaux pour les conteneurs avec un nom similaire, facultatif, par défaut copie des journaux de tous les conteneurs. Ne peut pas être spécifié plusieurs fois. S’il est spécifié plusieurs fois, dernier un sera utilisé.  Valeurs autorisées : mssql-controller. |
+| **--container -c** | Copier les journaux pour les conteneurs avec un nom similaire, facultatif, par défaut copie des journaux de tous les conteneurs. Ne peut pas être spécifié plusieurs fois. S’il est spécifié plusieurs fois, dernier un sera utilisé.  Valeurs autorisées : mssql-controller. |
 | **--namespace -n** | Nom du cluster, utilisé pour l’espace de noms kubernetes. Obligatoire. |
 | **--target-folder -d** | Chemin du dossier cible pour copier les journaux. Facultatif, par défaut crée le résultat dans le dossier local.  Ne peut pas être spécifié plusieurs fois. S’il est spécifié plusieurs fois, dernier un sera utilisé.  Par défaut : `./output/dump`. Obligatoire. |
 

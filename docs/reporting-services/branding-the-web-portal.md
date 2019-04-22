@@ -9,15 +9,15 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506506"
 ---
 # <a name="branding-the-web-portal"></a>Personnalisation du portail web
 
-[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
+[!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)])
 
 Vous pouvez modifier l'apparence du portail web en le personnalisant à l’image de votre entreprise. Cette opération s'effectue via un package de marque. Le package de marque est conçu pour vous permettre de le créer même si vous n’avez pas les connaissances approfondies nécessaires en matière de feuille de style en cascade (CSS).
 
@@ -243,4 +243,4 @@ Vous pouvez également **télécharger** ou **supprimer** le package. La suppres
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-D’autres questions ? [Posez une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)
+D’autres questions ? [Essayez de poser une question dans le forum Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231)

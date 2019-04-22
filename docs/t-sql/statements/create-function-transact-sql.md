@@ -42,10 +42,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042448"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
@@ -270,7 +270,7 @@ RETURNS return_data_type
   
 ## <a name="arguments"></a>Arguments
 *OR ALTER*  
- **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
+ **S’applique à** : [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) et [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Modifie, de manière conditionnelle, la fonction uniquement si elle existe déjà. 
  
@@ -567,15 +567,15 @@ Si une fonction définie par l’utilisateur n’est pas créée avec la clause 
 
 -   Instructions de contrôle de flux, à l’exception des instructions `TRY...CATCH`.  
 
--   `DECLARE` Instructions définissant des variables de données locales et des curseurs locaux.  
+-   Instructions `DECLARE` définissant des variables de données locales et des curseurs locaux.  
 
--   `SELECT` Instructions qui contiennent des listes de sélection avec des expressions affectant des valeurs à des variables locales.  
+-   Instructions `SELECT` qui contiennent des listes de sélection avec des expressions affectant des valeurs à des variables locales.  
 
 -   Opérations de curseur faisant référence à des curseurs locaux déclarés, ouverts, fermés et libérés dans la fonction. Seules les instructions `FETCH` affectant des valeurs à des variables locales avec la clause `INTO` sont autorisées ; les instructions `FETCH` qui retournent des données au client ne sont pas autorisées.  
 
--   `INSERT`Instructions `UPDATE` et `DELETE` modifiant des variables de table locales.  
+-   Instructions `INSERT`, `UPDATE` et `DELETE` modifiant des variables de table locales.  
 
--   `EXECUTE` Instructions appelant des procédures stockées étendues.  
+-   Instructions `EXECUTE` appelant des procédures stockées étendues.  
 
 Pour plus d’informations, consultez [Créer des fonctions définies par l’utilisateur &#40;moteur de base de données&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   
@@ -645,11 +645,11 @@ Quand vous utilisez la clause `ORDER` dans des fonctions table CLR, prenez en co
   
     -   Requêtes d’insertion dans lesquelles la clause `ORDER` est compatible avec un index.  
   
-    -   `ORDER BY` Clauses compatibles avec la clause `ORDER`.  
+    -   Clauses `ORDER BY` qui sont compatibles avec la clause `ORDER`.  
   
     -   Agrégats, où `GROUP BY` est compatible avec la clause `ORDER`.  
   
-    -   `DISTINCT` Agrégats dans lesquels les colonnes distinctes sont compatibles avec la clause `ORDER`.  
+    -   Agrégats `DISTINCT` dans lesquels les colonnes distinctes sont compatibles avec la clause `ORDER`.  
   
 La clause `ORDER` ne garantit pas des résultats ordonnés quand une requête SELECT est exécutée, sauf si la clause `ORDER BY` est également spécifiée dans la requête. Pour plus d’informations sur la façon de rechercher par requête les colonnes incluses dans l’ordre de tri pour les fonctions table, consultez [sys.function_order_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-function-order-columns-transact-sql.md).  
   
@@ -831,7 +831,7 @@ GO
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
- [Fonctions CLR définies par l'utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
+ [Fonctions CLR définies par l’utilisateur](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)   
  [CREATE SECURITY POLICY &#40;Transact-SQL&#41;](../../t-sql/statements/create-security-policy-transact-sql.md)   
   

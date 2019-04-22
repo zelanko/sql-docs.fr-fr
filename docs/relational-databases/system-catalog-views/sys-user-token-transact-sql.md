@@ -25,10 +25,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a120fe3802235ff0d5548693d9bf7f4638ef5e42
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59506486"
 ---
 # <a name="sysusertoken-transact-sql"></a>sys.user_token (Transact-SQL)
@@ -38,10 +38,10 @@ ms.locfileid: "59506486"
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**principal_id**|**INT**|ID du principal. Sa valeur est unique dans une base de données.|  
+|**principal_id**|**Int**|ID du principal. Sa valeur est unique dans une base de données.|  
 |**sid**|**varbinary(85)**|Identificateur de sécurité du principal, si le principal est défini comme externe à la base de données. Par exemple, ce peut être une information de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Windows, Windows Group, ou une information de connexion mappée sur un certificat ; sinon, cette valeur est NULL.|  
-|**NAME**|**nvarchar (128)**|Nom du principal. Sa valeur est unique dans une base de données.|  
-|**Type**|**nvarchar (128)**|Description du type de principal. Tous les types sont mappés aux **sid**. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**nom**|**nvarchar (128)**|Nom du principal. Sa valeur est unique dans une base de données.|  
+|**type**|**nvarchar (128)**|Description du type de principal. Tous les types sont mappés aux **sid**. Il peut s'agir de l'une des valeurs suivantes :<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> USER MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
 |**usage**|**nvarchar (128)**|Indique que le principal prend part à l'évaluation des autorisations GRANT ou DENY, ou sert d'authentificateur.<br /><br /> Cette valeur peut être une des opérations suivantes :<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>Voir aussi  

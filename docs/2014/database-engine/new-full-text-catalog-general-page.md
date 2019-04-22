@@ -13,21 +13,21 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 61c11ad810109d76a59b9f6d9c1a3620a2866d65
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59240635"
 ---
 # <a name="new-full-text-catalog-general-page"></a>Nouveau catalogue de texte intégral (page Général)
   Utilisez cette boîte de dialogue pour créer un catalogue de texte intégral.  
   
- **Pour utiliser SQL Server Management Studio afin de créer un catalogue de texte intégral**  
+ **Pour utiliser SQL Server Management Studio pour créer un catalogue de texte intégral**  
   
 -   [Créer et gérer des catalogues de texte intégral](../relational-databases/search/create-and-manage-full-text-catalogs.md)  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
- **Nom du catalogue de texte intégral**  
+ **nom du catalogue de texte intégral**  
  Nom du catalogue de texte intégral.  
   
  **Propriétaire**  
