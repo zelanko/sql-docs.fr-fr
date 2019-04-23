@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - XML for Analysis, traces
@@ -17,12 +15,12 @@ ms.assetid: cdbfb984-18bd-4c4e-8fb7-d64ce298ed35
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 24af6f2ff33235321ef49732721042ab2227ca5f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 678c6d2312261475f4b970b1535ce1faa1f00930
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146464"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156410"
 ---
 # <a name="monitoring-traces-xmla"></a>Surveillance de traces (XMLA)
   Vous pouvez utiliser la [s’abonner](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/subscribe-element-xmla) commande XML for Analysis (XMLA) pour surveiller une trace existante définie sur une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La commande `Subscribe` retourne les résultats d'une trace sous la forme d'un ensemble de lignes.  
@@ -39,9 +37,9 @@ ms.locfileid: "50146464"
 |------------|---------------|-----------------|  
 |EventClass|Entier|Classe d'événements de l'événement reçu par la trace.|  
 |EventSubclass|Entier long|Sous-classe d'événements de l'événement reçu par la trace.|  
-|CurrentTime|DATETIME|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|StartTime|DATETIME|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
-|EndTime|DATETIME|Heure de fin de l'événement, si elle est disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».<br /><br /> Cette colonne n'est pas remplie pour les classes d'événements qui décrivent le lancement d'un processus ou d'une action.|  
+|CurrentTime|Datetime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|StartTime|Datetime|Heure de début de l'événement, le cas échéant. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».|  
+|EndTime|Datetime|Heure de fin de l'événement, si elle est disponible. Pour le filtrage, les formats attendus sont « YYYY-MM-DD » et « YYYY-MM-DD HH:MM:SS ».<br /><br /> Cette colonne n'est pas remplie pour les classes d'événements qui décrivent le lancement d'un processus ou d'une action.|  
 |Duration|Entier long|Durée totale (en millisecondes) de l'événement.|  
 |CPUTime|Entier long|Temps processeur total (en millisecondes) écoulé pour l'événement.|  
 |JobID|Entier long|Identificateur de travail du processus.|  
@@ -56,8 +54,8 @@ ms.locfileid: "50146464"
 |ObjectReference|String|Représentation XML de la référence de l'objet spécifié dans ObjectName.|  
 |NestLevel|Entier|Niveau de la transaction pour laquelle l'événement s'est produit.|  
 |NumSegments|Entier long|Nombre de segments de données affectés ou atteints par la commande pour laquelle l'événement s'est produit.|  
-|Severity|Entier|Niveau de gravité d'une exception relative à l'événement. La colonne peut contenir l'une des valeurs suivantes :<br /><br /> Valeur : 0 = succès<br /><br /> Valeur : 1 = les informations<br /><br /> Valeur : 2 = avertissement<br /><br /> Valeur : 3 = Erreur|  
-|Réussi|Booléen|Indique si une commande a abouti ou échoué.|  
+|Severity|Entier|Niveau de gravité d'une exception relative à l'événement. La colonne peut contenir l'une des valeurs suivantes :<br /><br /> Valeur : 0 = Réussite<br /><br /> Valeur : 1 = les informations<br /><br /> Valeur : 2 = Avertissement<br /><br /> Valeur : 3 = Erreur|  
+|Opération réussie|Booléen|Indique si une commande a abouti ou échoué.|  
 |Error|Entier long|Numéro d'erreur de l'événement, le cas échéant.|  
 |ConnectionID|String|Identificateur de la connexion pour laquelle l'événement s'est produit.|  
 |DatabaseName|String|Nom de la base de données pour laquelle l'événement s'est produit.|  

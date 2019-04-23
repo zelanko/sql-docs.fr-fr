@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4470dc85b33930e136a9c2c1bbf47b1597753be5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 377b85c22d1c6da9f5296d6ad57a86028e022785
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519880"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156505"
 ---
 # <a name="database-representationtabular"></a>Représentation de la base de données (tabulaire)
   En mode tabulaire, la base de données est le conteneur de tous les objets dans le modèle tabulaire.  
@@ -88,6 +86,6 @@ catch (Exception createDBxc)
   
 ```  
   
- Pour savoir comment utiliser AMO pour créer et manipuler des représentations de base de données, consultez le code source de l'exemple d’AMO 2012 tabulaire ; plus précisément, archivez le fichier source suivant : Database.cs. Le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
+ Pour savoir comment utiliser AMO pour créer et manipuler des représentations de base de données, consultez le code source dans l’exemple AMO 2012 tabulaire ; plus précisément, archivez le fichier source suivant : Database.cs. Le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
   
   

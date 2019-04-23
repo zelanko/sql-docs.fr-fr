@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - cubes [Analysis Services], examples
@@ -15,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fd2aad1cf57852c2b78db1128a972c0490a52a85
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416490"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157122"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Vue d'ensemble de l'architecture logique (Analysis Services - données multidimensionnelles)
   Analysis Services s'exécute en mode de déploiement du serveur qui détermine l'architecture de la mémoire et l'environnement d'exécution utilisés par différents types de modèles Analysis Services. Le mode serveur est déterminé lors de l'installation. **Mode multidimensionnel et exploration de données** prend en charge OLAP traditionnel et exploration de données. **En mode tabulaire** prend en charge les modèles tabulaires. **En mode intégré SharePoint** fait référence à une instance d’Analysis Services qui a été installé en tant que PowerPivot pour SharePoint, utilisé pour le chargement et l’interrogation de modèles de données Excel ou PowerPivot à l’intérieur d’un classeur.  
@@ -83,13 +81,13 @@ ms.locfileid: "52416490"
 ||||.|||Dernière|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|DEC-29-99|DEC-22-99|DEC-29-99|  
+|All Time|||25110|6547|18563|Dec-29-99|Dec-22-99|Dec-29-99|  
 ||1st half||11173|2977|8196|Jun-28-99|Juin-20-99|Jun-28-99|  
 |||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|Juin-20-99|Jun-28-99|  
-||2nd half||13937|3570|10367|DEC-29-99|DEC-22-99|DEC-29-99|  
+||2nd half||13937|3570|10367|Dec-29-99|Dec-22-99|Dec-29-99|  
 |||3rd quarter|6119|1444|4675|Sep-30-99|SEP-18-99|Sep-30-99|  
-|||4th quarter|7818|2126|5692|DEC-29-99|DEC-22-99|DEC-29-99|  
+|||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
   
  Après la création d'un cube, il est possible de définir de nouvelles agrégations ou de modifier les agrégations existantes pour définir des options qui déterminent si les agrégations sont précalculées durant le traitement ou calculées lors de l'exécution des requêtes. **Rubrique connexe :**[agrégations et conceptions d’agrégation](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
@@ -112,8 +110,8 @@ ms.locfileid: "52416490"
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|.|Dernière|  
-|3516987|1|6|1|15|Janvier-10-99|  
-|3554790|1|6|1|40|Janvier-19-99|  
+|3516987|1|6|1|15|Jan-10-99|  
+|3554790|1|6|1|40|Jan-19-99|  
 |3572673|1|6|1|34|Jan-27-99|  
 |3600974|1|6|1|45|Feb-02-99|  
 |3645541|1|6|1|20|Feb-09-99|  

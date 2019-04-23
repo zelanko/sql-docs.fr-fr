@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - regular attributes [Analysis Services]
@@ -24,12 +22,12 @@ ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a42447bb508fee0510dc1d4543828475f584ed76
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 6c1f1c6644e14beaee7bdcab9e3f50129f73b7bc
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48165869"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60157265"
 ---
 # <a name="attributes-and-attribute-hierarchies"></a>Attributs et hiérarchies d'attributs
   Les dimensions sont des ensembles d'attributs, liés à une ou plusieurs colonnes dans une table ou une vue de la vue de source de données.  
@@ -49,7 +47,7 @@ ms.locfileid: "48165869"
  Par défaut, dans un schéma en étoile, tous les attributs sont directement liés à l'attribut clé, qui permet aux utilisateurs de parcourir les faits du cube sur la base de l'une des hiérarchies d'attributs de la dimension. Dans un schéma en flocon, tous les attributs sont soit directement liés à l'attribut clé si leur table sous-jacente est directement liée à la table de faits, soit indirectement liés au moyen de l'attribut qui est lié à la clé de la table sous-jacente qui lie la table en flocon à la table directement liée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer des hiérarchies définies par l’utilisateur](../multidimensional-models/user-defined-hierarchies-create.md)   
+ [Créer des hiérarchies définies par l'utilisateur](../multidimensional-models/user-defined-hierarchies-create.md)   
  [Définir des relations d’attributs](../multidimensional-models/attribute-relationships-define.md)   
  [Référence des propriétés d’attribut de dimension](../multidimensional-models/dimension-attribute-properties-reference.md)  
   

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 93ddce72-31f1-42f7-abd5-8191acbb00c5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a3872636fdfda37165bdf6cb83aa13aa51b230b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25dc3a8eb075f212728796465fe2d95c460cbebf
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040480"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963315"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Page Propriétés générales, parties de rapport (Gestionnaire de rapports)
   Utilisez la page Propriétés pour afficher et gérer les propriétés générales d'une partie de rapport.  

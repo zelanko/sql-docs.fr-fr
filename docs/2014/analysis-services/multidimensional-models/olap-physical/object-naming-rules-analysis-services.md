@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - objects [Analysis Services], naming
@@ -14,22 +12,22 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cc4392b2c78fc2d2709a37a27b17d930af0681dd
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: dce01d84be7f2850f916b21ccb02fb7cd24a6cdc
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578411"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158885"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Règles d'attribution de noms aux objets (Analysis Services)
   Cette rubrique décrit les conventions d'attribution de noms aux objets, ainsi que les caractères et les mots réservés qui ne peuvent pas être utilisés dans un nom d'objet, dans le code ou dans un script dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
   
 ##  <a name="bkmk_Names"></a> Conventions d’affectation de noms  
- Chaque objet possède une propriété `Name` et une propriété `ID` qui doivent être uniques dans l'étendue de la collection parente. Par exemple, deux dimensions peuvent porter le même nom dans la mesure où chacune réside dans une base de données différente.  
+ Chaque objet a une propriété `Name` et `ID` qui doit être unique dans l'étendue de la collection parente. Par exemple, deux dimensions peuvent porter le même nom dans la mesure où chacune réside dans une base de données différente.  
   
  Bien que vous puissiez le spécifier manuellement, l'`ID` est en principe généré automatiquement lorsque l'objet est créé. Vous ne devez jamais modifier l'`ID` une fois que vous avez démarré la création d'un modèle. Toutes les références d'objet d'un modèle sont basées sur l'`ID`. Par conséquent, modifier un `ID` peut facilement provoquer une altération du modèle.  
   
- Pour les objets `DataSource` et `DataSourceView`, des exceptions notables aux conventions d'affectation de noms s'appliquent. L'ID `DataSource` peut être défini comme un seul point (.), non unique, comme référence à la base de données active. Une autre exception est `DataSourceView`, qui se conforme aux conventions d'attribution de noms définies pour les objets `DataSet` dans le .NET Framework, où `Name` est utilisé comme identificateur.  
+ Pour les objets `DataSource` et `DataSourceView`, des exceptions notables aux conventions d'affectation de noms s'appliquent. L'ID `DataSource` peut être défini comme un seul point (.), non unique, comme référence à la base de données active. Une seconde exception concerne `DataSourceView`, qui adhère aux conventions d'affectation de noms définies pour les objets `DataSet` dans le .NET Framework, où `Name` est utilisé comme identifiant.  
   
  Les règles suivantes s'appliquent aux propriétés `Name` et `ID`.  
   

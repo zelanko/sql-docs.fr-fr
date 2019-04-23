@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - EditionID property
 ms.assetid: ee84dd74-0eb3-4d29-807a-8b317c2fde96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65d4248fcabe0d1350c44246940582b247c4cca2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9b64e568e9d087069654e4e8dca37fc281f599a8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016690"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971225"
 ---
 # <a name="editionid-property-wmi-msreportserverinstance"></a>Propriété EditionID (WMI MSReportServer_Instance)
   Retourne l'édition du serveur de rapports. En lecture seule.  

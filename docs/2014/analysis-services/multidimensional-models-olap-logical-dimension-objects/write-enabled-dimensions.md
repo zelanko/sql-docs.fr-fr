@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - write-enabled dimensions [Analysis Services]
@@ -18,12 +16,12 @@ ms.assetid: 0bac050d-cd3b-427b-884a-65a91be89500
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bf87518328e036b69dfc8596ec239b4770c1edab
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225129"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156946"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensions activées en écriture
     
@@ -36,7 +34,7 @@ ms.locfileid: "48225129"
   
  Les dimensions activées en écriture et les cubes activés en écriture ont des fonctionnalités différentes mais complémentaires. Une dimension activée en écriture permet aux utilisateurs de l'entreprise de mettre à jour les membres, tandis qu'un cube activé en écriture leur permet de mettre à jour les valeurs des cellules. Bien que ces deux fonctions soient complémentaires, il n'est pas nécessaire de les utiliser conjointement. Il n'est pas nécessaire d'inclure une dimension dans un cube pour pouvoir utiliser l'écriture différée de dimension. Une dimension activée en écriture peut également figurer dans un cube qui n'est pas activé en écriture. Différentes procédures permettent d'activer en écriture les dimensions et les cubes et de gérer leur sécurité.  
   
- Les restrictions suivantes s'appliquent à l'écriture différée de dimension :  
+ Les restrictions suivantes s'appliquent à l'écriture différée de dimension :  
   
 -   Lorsque vous créez un membre, vous devez inclure chaque attribut dans une dimension. Vous ne pouvez pas insérer un membre sans définir la valeur de l'attribut clé de la dimension. Par conséquent, la création de membres est soumise aux contraintes (telles que valeurs de clés non NULL) définies dans la table de dimension.  
   
@@ -62,8 +60,8 @@ ms.locfileid: "48225129"
  Les utilisateurs et les groupes inclus dans le rôle des Administrateurs peuvent mettre à jour les membres d'attribut d'une dimension activée en écriture, même si la dimension n'est pas incluse dans un cube.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Propriétés de Dimension de base de données](database-dimension-properties.md)   
+ [Propriétés de dimension d'une base de données](database-dimension-properties.md)   
  [Partitions activées en écriture](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

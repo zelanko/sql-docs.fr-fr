@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: b09161af-6ac1-406c-9d62-e40be3b4cf8d
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1f39555217bf847b6b8f29b8c4de0b5c349ee5e4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 13d23977aeeb6f7643fc039c23b02267d47c106f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361371"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154685"
 ---
 # <a name="clr-transactions-sample"></a>Exemple de transactions CLR
   Cet exemple montre comment contrôler les transactions à l'aide des API managées situées dans l'espace de noms `System.Transactions` . La classe `System.Transactions.TransactionScope` est notamment utilisée pour établir la limite d'une transaction de sorte que les chiffres de stock ne soient pas modifiés tant que le stock n'est pas suffisant pour répondre à la demande et, si le stock est suffisant, que le transfert du stock d'un emplacement à un autre s'effectue de manière atomique. L'inscription automatique dans une transaction distribuée s'effectue en enregistrant les modifications apportées au stock dans une base de données d'audit stockée sur une instance distincte de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

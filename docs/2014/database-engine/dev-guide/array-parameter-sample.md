@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 ms.assetid: 5d7034ca-ce88-4a7e-8dd9-82f867479e7f
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4eead93b1c2254ee9634ef5a05b1cd5d60ce079f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 24babe845d204f2938d86fc8fa70d747bbc92f36
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375381"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158675"
 ---
 # <a name="array-parameter-sample"></a>Exemple de paramètre tableau
   Il est parfois utile de créer, de mettre à jour ou de supprimer un ensemble de lignes dans une base de données. Il existe plusieurs méthodes que vous pouvez utiliser dans ce but. L'une d'elles consiste à transmettre un tableau d'informations d'un client à une procédure stockée d'intégration CLR (Common Language Runtime) sur le serveur en utilisant un type de données d'intégration du CLR défini par l'utilisateur. La nature de tels types de données définis par l'utilisateur limite à 8000 octets le volume des données fournies au serveur. De ce fait, cette méthode n'est pas satisfaisante pour les données volumineuses ou complexes. Si les données manipulées sont simples et de petite taille, cette méthode peut s'avérer beaucoup plus efficace que l'appel d'une procédure stockée pour chaque ligne. En utilisant un tableau, l'ordre des données est préservé pour les applications où l'ordre a de l'importance. Cet exemple contient les éléments suivants :  

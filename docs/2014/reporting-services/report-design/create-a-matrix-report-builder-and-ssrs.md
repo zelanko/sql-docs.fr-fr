@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 493e63b9-ecd0-4054-97ec-92d84e9b8182
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 89fd4a6500484ca1a07ca781233675683d2a5750
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1cf085763acdde040abd8e91760ac954d3a4fb8e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295757"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967305"
 ---
 # <a name="matrices-report-builder-and-ssrs"></a>Matrices (Générateur de rapports et SSRS)
   Utilisez une matrice pour afficher des données groupées et des informations récapitulatives. Vous pouvez regrouper des données en fonction de plusieurs champs ou expressions dans des groupes de lignes et de colonnes. Une matrice fournit des fonctionnalités similaires à celles des analyses croisées et des tableaux croisés dynamiques. À l'exécution, lorsque les données de rapport sont associées aux régions de données, une matrice se développe horizontalement et verticalement sur la page. Les valeurs des cellules de matrice sont des valeurs d'agrégat limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient. Vous pouvez mettre en forme les lignes et les colonnes afin de mettre en surbrillance les données que vous souhaitez mettre en évidence. Vous pouvez également inclure des bascules d'extraction qui permettent initialement de masquer les données de détail ; l'utilisateur peut ensuite cliquer sur ces bascules pour afficher plus ou moins de détails, en fonction de ses besoins.  
   
  Vous pouvez enrichir votre conception initiale en développant une matrice en vue d'améliorer l'affichage pour l'utilisateur. Pour plus d’informations, consultez [Contrôle de l’affichage de la région de données de tableau matriciel sur une page de rapport &#40;Générateur de rapports et SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md).  
   
- Pour rapidement commencer à utiliser les matrices, consultez [didacticiel : Création d’un rapport de matrice &#40;Générateur de rapports&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
+ Pour rapidement commencer à utiliser les matrices, consultez [Tutoriel : Création d’un rapport de matrice &#40;Générateur de rapports&#41;](../tutorial-creating-a-matrix-report-report-builder.md).  
   
  Les exemples de rapports de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluent un certain nombre de rapports qui utilisent des matrices. Vous pouvez découvrir les matrices en explorant la définition de rapport d'un exemple de rapport dans le Générateur de rapports ou le Concepteur de rapports ou en affichant un aperçu du rapport rendu dans le Générateur de rapports ou le Concepteur de rapports. Pour plus d'informations sur le téléchargement des exemples de rapports, consultez [Exemples de produits (SSRS) Server Reporting Services](https://go.microsoft.com/fwlink/?LinkID=198283).  
   

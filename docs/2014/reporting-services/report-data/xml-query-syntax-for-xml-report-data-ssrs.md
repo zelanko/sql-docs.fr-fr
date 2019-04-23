@@ -13,15 +13,15 @@ helpviewer_keywords:
 - xmldp [Reporting Services]
 - XML [Reporting Services], data retrieval
 ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ac63791bd33d9f6f774cd1d56601a28d3683b249
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 717852ad4cb5f63ee4ac84820f1af00cfa5f2d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037140"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970995"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Syntaxe de requête XML pour les données de rapport XML (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]vous permet de créer des datasets pour des sources de données XML. Après avoir défini une source de données, vous devez créer une requête pour le dataset. Selon le type de données XML désigné par la source de données, vous pouvez créer la requête du dataset en incluant une `Query` XML ou un chemin d'accès à un élément. Un document XML `Query` commence par un  **\<requête >** balise et inclut des espaces de noms et les éléments XML qui varient en fonction de la source de données. Un chemin d'accès à un élément opère indépendamment des espaces de noms ; il précise les nœuds et les attributs de nœud à utiliser à partir des données XML sous-jacentes avec une syntaxe similaire à la syntaxe XPath. Pour plus d’informations sur les chemins d’éléments, consultez [Syntaxe du chemin vers l’élément pour des données de rapport XML &#40;SSRS&#41;](report-data-ssrs.md).  
@@ -91,7 +91,7 @@ ms.locfileid: "56037140"
 |\<Query/>|R : la valeur https://schemas.microsoft.com/...<br /><br /> Valeur b : https://schemas.microsoft.com/...<br /><br /> Valeur C: https://schemas.microsoft.com/...|  
 |\<xmldp:Query xmlns:xmldp="https://schemas.microsoft.com/sqlserver/2005/02/reporting/XmlDPQuery" xmlns:ns="https://schemas.microsoft.com/..."><br /><br /> \<xmldp:ElementPath>Root {}/ns:Element2/Node\</xmldp:ElementPath><br /><br /> \</xmldp:Query>|Valeur D<br /><br /> Valeur E<br /><br /> Valeur F|  
   
-#### <a name="xml-document-dpnamespacexml"></a>Document XML : DPNamespace.xml  
+#### <a name="xml-document-dpnamespacexml"></a>Document XML : DPNamespace.xml  
  Vous pouvez copier ce document XML et l'enregistrer dans une URL disponible pour être utilisée en tant que source de données par le Concepteur de rapports : par exemple http://localhost/DPNamespace.xml.  
   
 ```  

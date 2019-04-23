@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - impersonation [CLR integration]
@@ -18,12 +16,12 @@ ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2695445caee79ee2248a6855bb36349b6ff5f644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088059"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158695"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Emprunt d'identité et sécurité de l'intégration du CLR
   Lorsque du code managé accède à des ressources externes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'emprunte pas automatiquement l'identité du contexte d'exécution actuel sous lequel la routine s'exécute. Le code dans les assemblys `EXTERNAL_ACCESS` et `UNSAFE` peut emprunter l'identité du contexte d'exécution actuel de manière explicite.  
@@ -39,7 +37,7 @@ ms.locfileid: "48088059"
   
 -   Pour le code managé qui s'exécute de façon asynchrone (par exemple, par le biais d'assemblys `UNSAFE` créant des threads et exécutant du code de façon asynchrone), l'accès aux données in-process n'est jamais autorisé. Cela est vrai qu'il y ait emprunt d'identité ou non.  
   
- Lorsque le code s'exécute dans un contexte dont l'identité a été empruntée qui est différent de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il ne peut pas effectuer d'appels d'accès aux données in-process ; il doit annuler le contexte d'emprunt d'identité avant d'effectuer des appels d'accès aux données in-process. Lorsque l'accès aux données in-process est effectué à partir de code managé, le contexte d'exécution d'origine du point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le code managé est toujours utilisé pour l'autorisation.  
+ Lorsque le code s'exécute dans un contexte dont l'identité a été empruntée qui est différent de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], il ne peut pas effectuer d'appels d'accès aux données in-process ; il doit annuler le contexte d'emprunt d'identité avant d'effectuer des appels d'accès aux données in-process. Lorsque l'accès aux données in-process est effectué à partir de code managé, le contexte d'exécution d'origine du point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] dans le code managé est toujours utilisé pour l'autorisation.  
   
  Les assemblys `EXTERNAL_ACCESS` et `UNSAFE` accèdent tous deux aux ressources de système d'exploitation avec le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], à moins qu'ils n'empruntent volontairement l'identité du contexte de sécurité actuel comme décrit précédemment. Pour cette raison, les auteurs des assemblys `EXTERNAL_ACCESS` nécessitent un niveau supérieur d'approbation que ceux des assemblys `SAFE`, spécifié par l'autorisation au niveau de la connexion `EXTERNAL ACCESS`. L'autorisation `EXTERNAL ACCESS` doit être accordée uniquement aux connexions approuvées pour exécuter du code sous le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

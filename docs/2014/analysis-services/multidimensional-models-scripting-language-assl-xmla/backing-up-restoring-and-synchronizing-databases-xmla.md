@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - restoring databases [XML for Analysis]
@@ -18,12 +16,12 @@ ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f3b9c0ce529927e088e9f2153fadc3470dc36b7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146084"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158805"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sauvegarde, restauration et synchronisation de bases de données (XMLA)
   XML for Analysis propose trois commandes qui permettent de sauvegarder, restaurer et synchroniser des bases de données :  
@@ -61,9 +59,9 @@ ms.locfileid: "50146084"
   
  La valeur de la propriété `Security` est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Inclut les définitions de sécurité dans le fichier de sauvegarde mais exclut les informations d'appartenance.|  
+|*SkipMembership*|Inclut les définitions de sécurité dans le fichier de sauvegarde mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans le fichier de sauvegarde.|  
 |*IgnoreSecurity*|Exclut les définitions de sécurité du fichier de sauvegarde.|  
   
@@ -91,9 +89,9 @@ ms.locfileid: "50146084"
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Inclut les définitions de sécurité dans la base de données mais exclut les informations d'appartenance.|  
+|*SkipMembership*|Inclut les définitions de sécurité dans la base de données mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans la base de données.|  
 |*IgnoreSecurity*|Exclut les définitions de sécurité de la base de données.|  
   
@@ -129,9 +127,9 @@ ms.locfileid: "50146084"
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Inclut les définitions de sécurité dans la base de données de destination mais exclut les informations d'appartenance.|  
+|*SkipMembership*|Inclut les définitions de sécurité dans la base de données de destination mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans la base de données de destination.|  
 |*IgnoreSecurity*|Exclut les définitions de sécurité de la base de données de destination.|  
   

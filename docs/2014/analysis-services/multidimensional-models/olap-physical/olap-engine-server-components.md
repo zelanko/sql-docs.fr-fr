@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - Analysis Services, architecture
@@ -17,12 +15,12 @@ ms.assetid: 5193c976-9dcd-459c-abba-8c3c44e7a7f2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4121fb0ad30b7593fcca384235ac4990fc54979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 138a5ec08ae7ca427352f8c0332b2012e6c0ea3d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164779"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156235"
 ---
 # <a name="olap-engine-server-components"></a>Composants serveur du moteur OLAP
   Le composant serveur de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] est la **msmdsrv.exe** application qui s’exécute comme un service Windows. Cette application intègre des composants de sécurité, un composant d'écoute XMLA (XML for Analysis), un composant processeur de requêtes et de nombreux autres composants internes qui permettent d'effectuer les actions suivantes :  
@@ -65,7 +63,7 @@ ms.locfileid: "48164779"
   
 ## <a name="see-also"></a>Voir aussi  
  [Objet de règles de nommage &#40;Analysis Services&#41;](object-naming-rules-analysis-services.md)   
- [Architecture physique &#40;Analysis Services - données multidimensionnelles&#41;](understanding-microsoft-olap-physical-architecture.md)   
+ [Architecture physique &#40;Analysis Services - Données multidimensionnelles&#41;](understanding-microsoft-olap-physical-architecture.md)   
  [Architecture logique &#40;Analysis Services - données multidimensionnelles&#41;](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

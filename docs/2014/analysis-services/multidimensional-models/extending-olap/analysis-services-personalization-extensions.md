@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - personalization extensions [Multidimensional Databases]
@@ -14,12 +12,12 @@ ms.assetid: 0f144059-24e0-40c0-bde4-d48c75e46598
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d1d563b4cefc2e074c437fa0ab3b66bfea9796fb
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372221"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156257"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Extensions de personnalisation Analysis Services
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation sont le fondement de l’idée d’implémentation d’une architecture de plug-in. Dans une architecture de plug-in, vous pouvez développer dynamiquement des nouveaux objets de cube et de nouvelles fonctionnalités, et les partager facilement avec d'autres développeurs. Par conséquent, [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] extensions de personnalisation fournissent les fonctionnalités qui le rend possible d’atteindre les objectifs suivants :  
@@ -141,10 +139,10 @@ ms.locfileid: "53372221"
  Les commandes CREATE KPI et DROP KPI sont ajoutées à la syntaxe MDX. Les indicateurs de performance clés peuvent être créés dynamiquement à partir de tout script MDX.  
   
 ### <a name="schema-rowsets-extensions"></a>Extensions d'ensembles de lignes de schéma  
- Sur MDSCHEMA_MEMBERS *étendue* colonne est ajoutée. Valeurs d’étendue sont les suivantes : MDMEMBER_SCOPE_GLOBAL = 1, MDMEMBER_SCOPE_SESSION = 2.  
+ Sur MDSCHEMA_MEMBERS *étendue* colonne est ajoutée. Valeurs d’étendue sont les suivantes : MDMEMBER_SCOPE_GLOBAL=1, MDMEMBER_SCOPE_SESSION=2.  
   
  Sur MDSCHEMA_SETS *set_evaluation_context* colonne est ajoutée. Définir le contexte d’évaluation valeurs sont les suivantes : MDSET_RESOLUTION_STATIC = 1, MDSET_RESOLUTION_DYNAMIC = 2.  
   
- Sur MDSCHEMA_KPIS, la colonne de portée est ajoutée. Valeurs d’étendue sont les suivantes : MDKPI_SCOPE_GLOBAL = 1, MDKPI_SCOPE_SESSION = 2.  
+ Sur MDSCHEMA_KPIS, la colonne de portée est ajoutée. Valeurs d’étendue sont les suivantes : MDKPI_SCOPE_GLOBAL=1, MDKPI_SCOPE_SESSION=2.  
   
   

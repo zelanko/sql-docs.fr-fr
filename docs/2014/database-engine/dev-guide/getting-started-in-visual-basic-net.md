@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 dev_langs:
 - VB
@@ -16,12 +14,12 @@ ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d8737579fc495f36c59b13d67100854822145ebf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226759"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154515"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Mise en route avec Visual Basic .NET
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET est l'un des langages de programmation managés pris en charge par la bibliothèque CRT (Common Runtime Library) en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. De nombreux exemples de cette documentation sont écrits en [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Vous pouvez utiliser aussi bien [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] que [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] pour développer des applications SMO.  

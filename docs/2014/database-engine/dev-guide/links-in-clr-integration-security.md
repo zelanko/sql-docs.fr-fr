@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
-- docset-sql-devref
+ms.technology: database-engine
 ms.topic: reference
 helpviewer_keywords:
 - table-access links [CLR integration]
@@ -17,12 +15,12 @@ ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 32974fc138cb5bcd444af18d0854c7a07d8fdcad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067187"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156775"
 ---
 # <a name="links-in-clr-integration-security"></a>Liens dans la sécurité d'intégration du CLR
   Cette section décrit la façon dont les parties de code utilisateur peuvent s'appeler dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en langage [!INCLUDE[tsql](../../includes/tsql-md.md)] ou dans l'un des langages managés. Ces relations entre objets sont connues sous le nom de liens.  
@@ -38,10 +36,10 @@ ms.locfileid: "48067187"
   
  Les liens contrôlés sont toujours utilisés conjointement à une dépendance de métadonnées entre deux objets. Cette dépendance de métadonnées est une relation établie dans les catalogues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui empêche un objet d'être supprimé tant qu'un autre objet dépend de lui.  
   
- Les liens contrôlés sont utiles lorsqu'il n'est ni approprié ou réalisable d'accorder des autorisations à de nombreux objets dépendants. Des liens contrôlés sont introduits entre les objets qui définissent des points d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] dans des assemblys CLR (par exemple, des procédures, déclencheurs, fonctions, types et agrégats CLR) et les assemblys à partir desquels ils sont définis. La sécurité contrôlée contre ces objets implique que pour appeler un point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] défini dans un assembly CLR, l'appelant n'a besoin que d'une autorisation appropriée sur ce point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'appelant n'est pas obligé d'avoir des autorisations sur cet assembly ou tout autre assembly auquel il fait référence de manière statique. Les autorisations sur l'assembly sont vérifiées au moment de la création du point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+ Les liens contrôlés sont utiles lorsqu'il n'est ni approprié ou réalisable d'accorder des autorisations à de nombreux objets dépendants. Des liens contrôlés sont introduits entre les objets qui définissent des points d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] dans des assemblys CLR (par exemple, des procédures, déclencheurs, fonctions, types et agrégats CLR) et les assemblys à partir desquels ils sont définis. La sécurité contrôlée contre ces objets implique que pour appeler un point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] défini dans un assembly CLR, l'appelant n'a besoin que d'une autorisation appropriée sur ce point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] . L'appelant n'est pas obligé d'avoir des autorisations sur cet assembly ou tout autre assembly auquel il fait référence de manière statique. Les autorisations sur l'assembly sont vérifiées au moment de la création du point d'entrée [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ## <a name="sql-server-authorization-based-security"></a>Sécurité SQL Server basée sur l'autorisation  
- Vous trouverez ci-dessous les règles de base sous-jacentes aux contrôles de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les appels de et entre des objets de base de données basés sur le CLR ; les trois premières règles définissent les autorisations qui sont contrôlées et contre quel objet ; la quatrième règle définit le contexte d'exécution par rapport auquel l'autorisation est contrôlée.  
+ Vous trouverez ci-dessous les règles de base sous-jacentes aux contrôles de sécurité [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les appels de et entre des objets de base de données basés sur le CLR ; les trois premières règles définissent les autorisations qui sont contrôlées et contre quel objet ; la quatrième règle définit le contexte d'exécution par rapport auquel l'autorisation est contrôlée.  
   
 1.  Tous les appels requièrent l'autorisation `EXECUTE`, à moins que les appels ne se produisent dans le même objet ; cela signifie que les appels dans le même assembly ne nécessitent aucun contrôle d'autorisation. L'autorisation est contrôlée au moment de l'exécution.  
   
