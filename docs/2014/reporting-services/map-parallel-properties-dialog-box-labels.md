@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapparallelproperties.labels.f1
 - "10519"
 ms.assetid: 4560a7e4-e19b-4a6e-8ef4-e963497e01ae
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8f274d544162b7fa9f5cf8321c246477311cbbf2
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3d00e2180f1d1e49caf7c5680fe8fa2d87579d85
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297984"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968265"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Boîte de dialogue Propriétés des parallèles de la carte, Étiquettes
   Utilisez le **MapParallel propriétés** la boîte de dialogue options d’étiquette pour le quadrillage horizontal de la carte. Un parallèle représente la valeur suivante en fonction du système de coordonnées spécifié pour la fenêtre de carte :  

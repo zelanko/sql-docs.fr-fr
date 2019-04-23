@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 9dba8c68-4bef-4c2b-815c-c286f1a1939b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b5a80b6bd9ef469d6711f7d6d019935fbfa1a581
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218029"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155215"
 ---
 # <a name="imdembedded-interface"></a>Interface IMDEmbedded
   L'interface IMDEmbedded est une interface publique utilisée pour gérer une base de données incorporée PowerPivot ou une base de données model tabulaire. L'interface hérite de l'interface `IPersistStream`. Elle permet les opérations suivantes :  
@@ -32,13 +30,13 @@ ms.locfileid: "48218029"
   
 -   Annuler l'opération incorporée actuelle.  
   
--   Obtenir la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de `IPersistStream`.  
+-   Obtenir la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de l'objet `IPersistStream`.  
   
--   Vérifier si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de `IPersistStream`.  
+-   Vérifier si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de l'objet `IPersistStream`.  
   
--   Charger la base de données incorporée dans le moteur local ou in-process. Hérité de `IPersistStream`.  
+-   Charger la base de données incorporée dans le moteur local ou in-process. Hérité de l'objet `IPersistStream`.  
   
--   Enregistrer la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de `IPersistStream`.  
+-   Enregistrer la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de l'objet `IPersistStream`.  
   
 ## <a name="reference"></a>Référence  
  La référence suivante documente la `IMDEmbedded` telle que présentée dans l’interface **msmd.h** fichier d’en-tête.  
@@ -105,7 +103,7 @@ HRESULT GetStreamIdentifier (
   
  Les valeurs possibles pour DBPROP_MSMD_EMBEDDED_DATA sont :  
   
-|Nom   |Valeur|Définition|  
+|Créer une vue d’abonnement|Value|Définition|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Aucune base de données incorporée disponible|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|L'application actuelle contient la base de données incorporée|  
@@ -247,7 +245,7 @@ HRESULT GetSizeMax (
 ```  
   
 #### <a name="description"></a>Description  
- Obtient la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de `IPersistStream`.  
+ Obtient la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de l'objet `IPersistStream`.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_bstrPath*  
@@ -267,7 +265,7 @@ HRESULT IsDirty ( void )
 ```  
   
 #### <a name="description"></a>Description  
- Vérifie si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de `IPersistStream`.  
+ Vérifie si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de l'objet `IPersistStream`.  
   
 #### <a name="parameters"></a>Paramètres  
  none  
@@ -291,7 +289,7 @@ HRESULT Load (
 ```  
   
 #### <a name="description"></a>Description  
- Charge la base de données incorporée dans le moteur local ou in-process. Hérité de `IPersistStream`.  
+ Charge la base de données incorporée dans le moteur local ou in-process. Hérité de l'objet `IPersistStream`.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_pStm*  
@@ -317,7 +315,7 @@ HRESULT Save (
 ```  
   
 #### <a name="description"></a>Description  
- Enregistre la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de `IPersistStream`.  
+ Enregistre la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de l'objet `IPersistStream`.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_pStm*  

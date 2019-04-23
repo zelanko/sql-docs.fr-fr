@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10023"
 ms.assetid: 3a0672ad-c969-455b-b952-585164ce1dda
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b4d473958e17fd67c1685e206fc02a5f5feca60
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fe7194c8a6f54da50eeef21891bc1049735ddd1e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298007"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968229"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Boîte de dialogue Propriétés du dataset, Paramètres (Générateur de rapports)
   Sélectionnez **paramètres** sur le **propriétés du Dataset** boîte de dialogue pour ajouter, modifier et supprimer des paramètres de requête.  

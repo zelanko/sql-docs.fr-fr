@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - errors [XML for Analysis]
@@ -22,12 +20,12 @@ ms.assetid: ab895282-098d-468e-9460-032598961f45
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5a41e9cedf8a2a19aea0cf8a374bc71f520ff52f
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147744"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60156386"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Gestion des erreurs et des avertissements (XMLA)
   Gestion des erreurs est requises lorsqu’un document XML for Analysis (XMLA) [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) ou [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) appel de méthode n’est pas exécuté, s’exécute correctement mais génère des erreurs ou avertissements, ou s’exécute correctement mais retourne des résultats qui contient des erreurs.  
@@ -54,7 +52,7 @@ ms.locfileid: "50147744"
   
 |Nom de colonne|Type|Description|Null autorisé<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|`ErrorCode`|`UnsignedInt`|Code de retour qui indique le succès ou l'échec de la méthode. La valeur hexadécimale doit être convertie en valeur `UnsignedInt`.|non|  
+|`ErrorCode`|`UnsignedInt`|Code de retour qui indique le succès ou l'échec de la méthode. La valeur hexadécimale doit être convertie en valeur `UnsignedInt`.|Non|  
 |`WarningCode`|`UnsignedInt`|Code de retour qui indique une condition d'avertissement. La valeur hexadécimale doit être convertie en valeur `UnsignedInt`.|Oui|  
 |`Description`|`String`|Texte et description de l'erreur ou de l'avertissement retourné par le composant qui a généré l'erreur.|Oui|  
 |`Source`|`String`|Nom du composant qui a généré l'erreur ou l'avertissement.|Oui|  

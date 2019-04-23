@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- docset-sql-devref
-- reporting-services-native
+ms.technology: reporting-services
 ms.topic: reference
 helpviewer_keywords:
 - report servers [Reporting Services], properties
@@ -14,15 +12,15 @@ helpviewer_keywords:
 - report items [Reporting Services], properties
 - items [Reporting Services], properties
 ms.assetid: 21edec6d-9897-48fb-8c75-182305b1dbdb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 368ee35385a7147c849a4800cf9419b19986545d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020500"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158015"
 ---
 # <a name="report-server-item-properties"></a>Propriétés d'élément du serveur de rapports
   Les propriétés d'élément sont des propriétés spécifiques à des éléments dans la base de données du serveur de rapports, notamment des rapports, des rapports liés, des dossiers, des ressources, des modèles et des sources de données.  
@@ -60,7 +58,7 @@ ms.locfileid: "56020500"
 |Propriété|Description|  
 |--------------|-----------------|  
 |**Langage**|Langue utilisé dans un rapport. La valeur est un code de langue défini dans la spécification RFC1766 du groupe de travail IETF (Internet Engineering Task Force). La première partie est une désignation de deux caractères de la langue de base. La deuxième partie est séparée par un trait d'union et désigne la variation ou le dialecte de la langue. Si aucune valeur n'est spécifiée dans l'élément `Style` associé à l'élément `Body` dans la définition du rapport, la valeur par défaut est la langue du serveur de rapports.|  
-|`ReportProcessingTimeout`|Délai d'expiration, en secondes, d'un rapport individuel. Si cette valeur est définie, le serveur de rapports tente d'arrêter le traitement d'un rapport lorsque le délai spécifié est écoulé. Les valeurs valides sont comprises entre `-1` et `2`,`147`,`483`,`647`. Si la valeur est `-1`, le rapport n'arrive pas à expiration au cours du traitement. Si la valeur est `null`, la valeur de la propriété système `ReportProcessingTimeout` est utilisée pour le délai d'expiration de traitement des rapports. La valeur par défaut est `null`. Pour plus d’informations, consultez [Propriétés système de Report Server](reporting-services-properties-report-server-system-properties.md).|  
+|`ReportProcessingTimeout`|Délai d'expiration, en secondes, d'un rapport individuel. Si cette valeur est définie, le serveur de rapports tente d'arrêter le traitement d'un rapport lorsque le délai spécifié est écoulé. Les valeurs valides sont comprises entre `-1` et `2`,`147`,`483`,`647`. Si la valeur est `-1`, le rapport n'arrive pas à expiration au cours du traitement. Si la valeur est `null`, la valeur de la propriété système `ReportProcessingTimeout` est utilisé pour le délai d’attente de traitement de rapport. La valeur par défaut est `null`. Pour plus d’informations, consultez [Propriétés système de Report Server](reporting-services-properties-report-server-system-properties.md).|  
 |**ExecutionDate**|Date et heure de dernière création d'un instantané de rapport pour un rapport.|  
 |**CanRunUnattended**|Valeur qui indique si un rapport peut être exécuté sans assistance selon une planification. Si cette propriété a la valeur `true`, les valeurs par défaut pour les paramètres de rapport sont définies et les informations d'identification de la source de données sont stockées avec le rapport, ou l'option de récupération des informations d'identification a la valeur `None`. Si cette propriété a la valeur `false`, les conditions requises pour exécuter un rapport sans assistance ne sont pas satisfaites. Pour plus d’informations, consultez [Configurer le compte d’exécution sans assistance &#40;Gestionnaire de configuration de SSRS&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
 |**HasParameterDefaultValues**|Valeur qui indique si le rapport a des valeurs par défaut valides définies pour tous les paramètres de rapport. La valeur est également `true` si un rapport ne possède pas de paramètres de rapport. Si cette propriété a la valeur `false`, un ou plusieurs paramètres de rapport n'ont pas de valeur par défaut valide.|  

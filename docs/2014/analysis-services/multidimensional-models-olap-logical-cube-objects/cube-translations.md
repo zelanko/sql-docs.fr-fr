@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - multiple language support [Analysis Services]
@@ -19,12 +17,12 @@ ms.assetid: 4e4fd6a4-d324-4508-b75a-2a57de9ab8ff
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c32010135b534975f5ddabc86dcf23591d2d457f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125999"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154066"
 ---
 # <a name="cube-translations"></a>Traductions de cube
   Une traduction est un mécanisme simple permettant de modifier les étiquettes et les légendes affichées d'une langue à une autre. Chaque traduction est définie comme une paire de valeurs : une chaîne avec le texte traduit et un nombre avec l'ID de langue. Les traductions sont disponibles pour tous les objets dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les valeurs d'attribut peuvent également être traduites pour les dimensions. L'application cliente est chargée de rechercher le paramètre de langue que l'utilisateur a défini et bascule pour afficher toutes les légendes et les étiquettes dans cette langue. Un objet peut avoir autant de traductions que vous le souhaitez.  
@@ -40,6 +38,6 @@ ms.locfileid: "48125999"
 ## <a name="see-also"></a>Voir aussi  
  [Traductions de dimension](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Traductions &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Globalisation conseils et meilleures pratiques &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Conseils et meilleures pratiques en matière de globalisation &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

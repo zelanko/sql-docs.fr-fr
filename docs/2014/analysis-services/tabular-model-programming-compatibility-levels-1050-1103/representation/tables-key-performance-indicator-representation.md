@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 ms.assetid: 8d3d949e-5d43-4d2e-9dc8-48d182a7a935
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1af16003b73b76ea0d899ecacb19dda42aa867d9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: d0981b473ef29ac709213c1e9eee1cea01f47e2b
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538696"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154181"
 ---
 # <a name="key-performance-indicator-representation-tabular"></a>Représentation (tabulaire) d'un indicateur de performance clé
   Un KPI évalue la performance d'une valeur, définie par une mesure de base, par rapport à une valeur cible.  
@@ -223,6 +221,6 @@ private void addStaticKPI(object sender, EventArgs e)
 ```  
   
 ## <a name="amo2tabular-sample"></a>Exemple AMO2Tabular  
- Pour savoir comment utiliser AMO pour créer et manipuler des représentations d'indicateur de performance clé, consultez le code source de l'exemple Objets AMO vers objets tabulaires ; plus précisément, archivez le fichier source suivant : AddKPIs.cs. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
+ Pour comprendre comment utiliser AMO pour créer et manipuler l’indicateur de Performance clé des représentations, consultez le code source de la AMO pour exemple sous forme de tableau ; plus précisément, archivez le fichier source suivant : AddKPIs.cs. L'exemple est disponible sur Codeplex. Remarque importante à propos du code : le code est fourni uniquement comme un support aux concepts logiques expliqués ici et ne doit pas être utilisé dans un environnement de production, ni à des fins autres que pédagogiques.  
   
   

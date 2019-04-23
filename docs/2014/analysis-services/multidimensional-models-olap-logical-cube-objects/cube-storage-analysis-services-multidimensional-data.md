@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - measure groups [Analysis Services], cubes
@@ -19,12 +17,12 @@ ms.assetid: 1b1ad360-9a9b-4996-bee9-84238a2bb4ac
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 88bd86cad9eaf3884b19c6a74f6594d8c71ca25d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177859"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154335"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Stockage de cube (Analysis Services - Données multidimensionnelles)
   Il se peut que le stockage n'inclue que les métadonnées de cube, ou toutes les données sources de la table de faits ainsi que les agrégations définies par des dimensions liées au groupe de mesures. La quantité de données stockée dépend du mode de stockage sélectionné et du nombre d'agrégations défini. Cette quantité de données stockées influence directement les performances des requêtes. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise plusieurs techniques pour minimiser l’espace nécessaire pour le stockage des données de cube et les agrégations :  
@@ -50,6 +48,6 @@ ms.locfileid: "48177859"
  Cette approche peut nécessiter un espace disque considérable afin de stocker plusieurs copies d'un cube sur différentes instances [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], mais elle permet de réduire tangiblement l'espace nécessaire en remplaçant les copies du groupe de mesures par des groupes de mesures liés. Un groupe de mesures lié est basé sur un groupe de mesures d'un cube dans une autre base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], sur la même instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou sur une instance différente. Un groupe de mesures lié peut également être utilisé avec des dimensions liées provenant du même cube source. Les dimensions et les groupes de mesures liés utilisent les agrégations du cube source et n'ont aucun besoin de stockage de données propre. Par conséquent, en conservant les groupes de mesures et les dimensions sources dans une base de données et en créant des cubes et des dimensions liés dans des cubes d'autres bases de données, vous pouvez économiser de l'espace disque destiné autrement au stockage. Pour plus d’informations, consultez [Linked Measure Groups](../multidimensional-models/linked-measure-groups.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Agrégations et conceptions d’agrégation](aggregations-and-aggregation-designs.md)  
+ [Agrégations et conceptions d'agrégation](aggregations-and-aggregation-designs.md)  
   
   

@@ -4,25 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- data-quality-services
-- database-engine
-- integration-services
-- master-data-services
-- reporting-services-native
-- reporting-services-sharepoint
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 0652a2545f0b1e9d591777f0bcabe6395cf4feaa
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802653"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60158005"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Fonctionnalités prises en charge par les éditions de SQL Server 2014
 
@@ -31,7 +24,7 @@ ms.locfileid: "56802653"
 
  > **Remarque :** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est disponible dans une version d’évaluation pour une période d’essai de 180 jours. Pour plus d’informations, consultez le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
-> **REMARQUE :** Pour les fonctionnalités prises en charge par les éditions Evaluation Edition et Developer Edition, consultez le jeu de fonctionnalités [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise.  
+> **REMARQUE :** Pour les fonctionnalités prises en charge par les éditions Evaluation et Developer, consultez le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ensemble de fonctionnalités d’entreprise.  
   
  Pour naviguer jusqu'à la table d'une technologie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , cliquez sur son lien :  
   
@@ -381,13 +374,13 @@ ms.locfileid: "56802653"
 |Outils d'exploration de données (Assistants, éditeurs, générateurs de requêtes)|Oui|Oui|Oui|||||  
 |Validation croisée|Oui|Oui||||||  
 |Modèles sur les sous-ensembles filtrés de données de structure d'exploration de données|Oui|Oui||||||  
-|Série chronologique : fusion personnalisée entre les méthodes ARTXP et ARIMA|Oui|Oui||||||  
-|Série chronologique : prédiction avec les nouvelles données|Oui|Oui||||||  
+|Série chronologique : Fusion personnalisée entre les méthodes ARTXP et ARIMA|Oui|Oui||||||  
+|Série chronologique : PRÉDICTION avec de nouvelles données|Oui|Oui||||||  
 |Requêtes d'exploration de données simultanées illimitées|Oui|Oui||||||  
-|Configuration avancée et options de paramétrage pour les algorithmes d'exploration de données|Oui|Oui||||||  
+|Configuration avancée et paramétrage des Options pour les algorithmes d’exploration de données|Oui|Oui||||||  
 |Prise en charge des algorithmes de plug-in|Oui|Oui||||||  
 |Traitement de modèle parallèle|Oui|Oui||||||  
-|Série chronologique : prédiction inter-série|Oui|Oui||||||  
+|Série chronologique : PRÉDICTION inter-série|Oui|Oui||||||  
 |Attributs illimités pour les règles d'association|Oui|Oui||||||  
 |Prédiction de séquence|Oui|Oui||||||  
 |Plusieurs cibles de prédiction pour naïve Bayes, réseau neuronal et régression logistique|Oui|Oui||||||  

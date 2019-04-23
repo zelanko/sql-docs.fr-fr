@@ -4,9 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- docset-sql-devref
+ms.technology: analysis-services
 ms.topic: reference
 helpviewer_keywords:
 - members [Analysis Services], hierarchies
@@ -27,12 +25,12 @@ ms.assetid: 9394e9a3-2242-4f0e-85e0-25d499d2d3b6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c9e5b2be2d3c6c83e91fd735f3e32c826e2f50c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e06a332823c593468c73fce635e1eac3040c6b6f
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152779"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60155141"
 ---
 # <a name="user-hierarchies"></a>Hiérarchies utilisateur
   Hiérarchies définies par l’utilisateur sont définis par l’utilisateur de hiérarchies d’attributs qui sont utilisés dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour organiser les membres d’une dimension en structures hiérarchiques et fournir des chemins de navigation dans un cube. Par exemple, le tableau suivant définit une table de dimension pour une dimension de temps. La table de dimension prend en charge trois attributs nommés Year, Quarter et Month.  
@@ -95,8 +93,8 @@ ms.locfileid: "48152779"
  Contrairement aux hiérarchies définies par l'utilisateur, dans lesquelles le nombre de niveaux de la hiérarchie détermine le nombre de niveaux visibles pour les utilisateurs finaux, une hiérarchie parent-enfant est définie avec le niveau unique d'une hiérarchie d'attribut, et les valeurs de ce niveau unique produisent les multiples niveaux visibles pour les utilisateurs. Le nombre de niveaux affichés dépend du contenu des colonnes de table de dimension qui stockent les clés de membre et les clés parentes. Le nombre de niveaux peut changer à mesure que les données des tables de dimension changent. Pour plus d’informations, consultez [hiérarchie Parent-enfant](../multidimensional-models/parent-child-dimension.md), et [attributs dans les hiérarchies Parent-enfant](../multidimensional-models/parent-child-dimension-attributes.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer des hiérarchies définies par l’utilisateur](../multidimensional-models/user-defined-hierarchies-create.md)   
- [Propriétés de la hiérarchie utilisateur](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
+ [Créer des hiérarchies définies par l'utilisateur](../multidimensional-models/user-defined-hierarchies-create.md)   
+ [Propriétés de la hiérarchie définie par l'utilisateur](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
  [Référence des propriétés d’attribut de dimension](../multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

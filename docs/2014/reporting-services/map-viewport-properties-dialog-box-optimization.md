@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.mapviewport.optimization.f1
 - "10522"
 ms.assetid: 8c0310ba-eedd-4c9f-95bd-1f9e2a1a8ed3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7d9d9ff8cf279ff9a88a4c46b2ddc4b97e834b49
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 833b60a0e96cc79c136a58bebca1c69486795e2b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287158"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59968905"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Boîte de dialogue Propriétés du point de vue de la carte, Optimisation
   Sélectionnez **Optimisation** dans la boîte de dialogue **Propriétés de la fenêtre d'affichage de la carte** pour contrôler la résolution appliquée lors de l'affichage d'une carte dans un rapport.  
@@ -40,6 +40,6 @@ ms.locfileid: "56287158"
   
 ## <a name="see-also"></a>Voir aussi  
  [Cartes &#40;Générateur de rapports et SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Résoudre les problèmes liés aux rapports : Mapper des rapports &#40;Générateur de rapports et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Résoudre les problèmes liés aux rapports : rapports cartographiques &#40;Générateur de rapports et SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

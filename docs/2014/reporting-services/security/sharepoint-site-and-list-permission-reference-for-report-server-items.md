@@ -13,15 +13,15 @@ helpviewer_keywords:
 - security [Reporting Services], SharePoint integrated mode
 - permission sets [Reporting Services]
 ms.assetid: 1fcb27bd-4c4a-43f4-bfff-e42a59c87c49
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2a05787e4e06c7cf178c2618e2fbfbac4de596cd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1a08fccd5b6739dd27fc25c87e8b6ff3facfd62e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035060"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59970945"
 ---
 # <a name="sharepoint-site-and-list-permission-reference-for-report-server-items"></a>Article de référence sur les autorisations de site SharePoint et de listes pour les éléments de serveur de rapports
   Cette rubrique constitue une référence concernant les autorisations de SharePoint utilisables pour accorder un accès à des opérations sur un serveur de rapports qui s'exécute en mode intégré SharePoint. Si vous créez des niveaux d'autorisation personnalisés, cette rubrique peut vous aider à choisir les autorisations à utiliser.  
@@ -45,7 +45,7 @@ ms.locfileid: "56035060"
 ## <a name="list-permissions"></a>Autorisations sur les listes  
  Les autorisations définies sur la bibliothèque contenant les éléments du serveur de rapports déterminent la façon dont les utilisateurs accèdent à ces éléments.  
   
-|Autorisation|Description|F|C|V|Opération de serveur de rapports|  
+|Permission|Description|F|C|V|Opération de serveur de rapports|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gérer les listes|Créez et supprimez des listes, ajoutez ou supprimez des colonnes dans une liste et ajoutez ou supprimez des vues publiques d'une liste.|X|||Créez un dossier dans une bibliothèque SharePoint au cours d'une opération de publication depuis un outil de création. Cette autorisation est également requise pour gérer l'historique de rapport.|  
 |Ajouter des éléments|Ajoutez des éléments aux listes, des documents aux bibliothèques de documents et des commentaires aux discussions Web.|X|X||Ajoutez des rapports, des modèles de rapport, des sources de données partagées et des ressources (fichiers image externes) aux bibliothèques SharePoint. Créez des sources de données partagées. Créez des modèles de rapport à partir de sources de données partagées. Démarrez le Générateur de rapports et créez un nouveau rapport ou chargez un modèle dans le Générateur de rapports.|  
@@ -62,7 +62,7 @@ ms.locfileid: "56035060"
 ## <a name="site-permissions"></a>Autorisations sur le site  
  Les autorisations sur le site déterminent l'accès aux opérations sur le serveur de rapports qui ne sont pas directement liées aux éléments stockés dans une bibliothèque donnée. Par exemple, la création ou la gestion de planifications partagées peut servir à des éléments de plusieurs bibliothèques, et la configuration du composant WebPart Visionneuse de rapport peut être utilisée sur la totalité d'un site.  
   
-|Autorisation|Description|F|C|V|Opération de serveur de rapports|  
+|Permission|Description|F|C|V|Opération de serveur de rapports|  
 |----------------|-----------------|-------|-------|-------|-----------------------------|  
 |Gérer les autorisations|Créez et modifiez les niveaux d'autorisation sur le site Web et attribuez des autorisations aux utilisateurs et aux groupes.|X|||Vous pouvez modifier les autorisations pour tous les éléments et opérations du serveur de rapports. Vous pouvez définir la sécurité des éléments d'un modèle.|  
 |Gérer le site Web|Réalisez toutes les tâches d'administration du site Web et gérez le contenu.|X|||Créez, modifiez et supprimez des planifications partagées.|  

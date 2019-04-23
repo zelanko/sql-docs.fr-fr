@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ee23e7f2382ca84ad609b3c150f77b4f9530725b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0613234749c2bf419f3013226b3935782833e65e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033830"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59971895"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Applications de service SharePoint de sauvegarde et de restauration Reporting Services
   Cette rubrique explique comment sauvegarder et restaurer une application de service [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] à l'aide de l'Administration centrale de SharePoint ou PowerShell. La rubrique contient :  
@@ -74,7 +74,7 @@ ms.locfileid: "56033830"
  [Enregistrer une application de service (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428318.aspx)  
   
 ### <a name="verify-execution-account-and-database-authentication"></a>Vérifier le compte d'exécution et l'authentification de la base de données  
- **Compte d’exécution :** pour vérifier si votre application de service utilise un compte d'exécution :  
+ **Compte d’exécution :** Pour vérifier si votre application de service est à l’aide d’un compte d’exécution :  
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
   
@@ -84,7 +84,7 @@ ms.locfileid: "56033830"
   
 4.  Si un compte d'exécution est configuré, vous devez connaître les informations d'identification lorsqu'il est temps de restaurer la sauvegarde de l'application de service. N'effectuez pas la procédure de sauvegarde et restauration avant de connaître les informations d'identification correctes.  
   
- **Authentification de base de données :** pour vérifier si votre application de service utilise l'authentification Windows pour l'authentification de base de données :  
+ **Authentification de base de données :** Pour vérifier si votre application de service est à l’aide de l’authentification Windows pour l’authentification de base de données :  
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
   
@@ -129,7 +129,7 @@ ms.locfileid: "56033830"
  Pour plus d’informations sur la restauration des clés de chiffrement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consultez la section Clés de chiffrement de l’article [Gérer une application de service SharePoint Reporting Services](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Configurer le compte d'exécution et l'authentification de base de données  
- **Compte d’exécution :** si votre application de service utilisait un compte d'exécution, procédez comme suit pour le configurer :  
+ **Compte d’exécution :** Si votre application de service utilisait un compte d’exécution, procédez comme suit pour le configurer :  
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
   
@@ -141,7 +141,7 @@ ms.locfileid: "56033830"
   
 5.  Cliquez sur **OK**.  
   
- **Authentification de base de données :** si votre application de service utilisait l'authentification Windows pour l'authentification de base de données procédez comme suit :  
+ **Authentification de base de données :** Si votre application de service utilisait l’authentification Windows pour l’authentification de base de données complète comme suit :  
   
 1.  Dans l'Administration Centrale de SharePoint, sous le groupe **Gestion des applications** , cliquez sur **Gérer les applications de service** .  
   

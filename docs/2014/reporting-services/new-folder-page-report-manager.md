@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9212fc68-f0a6-4f79-83c1-84baf4d1957e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b4af24352b24741fffe53f9eae6675a9a43b4595
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9cf188964290652d9b98e55e3f646d83337dafe1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020584"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59969055"
 ---
 # <a name="new-folder-page-report-manager"></a>Page Nouveau dossier (Gestionnaire de rapports)
   La page Nouveau dossier vous permet de créer un dossier dans l'arborescence des dossiers du serveur de rapports. Le dossier que vous créez est un dossier virtuel qui est stocké dans une base de données du serveur de rapports. Le dossier n'est pas créé dans le système de fichiers de votre ordinateur.  
