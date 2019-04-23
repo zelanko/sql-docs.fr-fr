@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Introduction aux expressions | Microsoft Docs'
+title: 'Tutoriel : Introduction aux expressions | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 847fc357ecd8b62279827f05b5aa08d4f5e6f068
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: d155dd77380b202938476e7a34fdb51d212b4330
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579599"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938325"
 ---
-# <a name="tutorial-introducing-expressions"></a>Didacticiel : Introduction aux expressions
+# <a name="tutorial-introducing-expressions"></a>Tutoriel : Introduction aux expressions
   Les expressions vous permettent de créer des rapports puissants et flexibles. Ce didacticiel vous apprend à créer et implémenter des expressions qui utilisent des fonctions et des opérateurs communs. Vous utiliserez le **Expression** boîte de dialogue pour écrire des expressions qui concatènent des valeurs de nom, recherchent des valeurs dans un dataset distinct, afficher des images différentes en fonction des valeurs de champ et ainsi de suite.  
   
  Le rapport est un rapport en barres avec des lignes en couleur alternées de lignes blanches. Le rapport inclut un paramètre de sélection de couleur pour les lignes non blanches.  
@@ -54,7 +54,7 @@ ms.locfileid: "57579599"
   
 -   [Enregistrer le rapport](#Save)  
   
- Durée estimée pour effectuer ce didacticiel : 30 minutes  
+ Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
 ## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  

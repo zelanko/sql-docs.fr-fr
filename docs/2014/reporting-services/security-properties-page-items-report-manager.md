@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 351b8503-354f-4b1b-a7ac-f1245d978da0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9b38c5820a1680726b3c69d2e09c1d29600a71b4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bb1835a67ca1f909bf382fd227783cb0a20bbbf5
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024470"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934765"
 ---
 # <a name="security-properties-page-items-report-manager"></a>Page Propriétés de sécurité, Éléments (Gestionnaire de rapports)
   La page Propriétés de sécurité vous permet d'afficher ou de modifier les paramètres de sécurité qui déterminent l'accès aux dossiers, aux rapports, aux modèles, aux ressources et aux sources de données partagées. Cette page est disponible pour les éléments que vous êtes autorisé à sécuriser.  

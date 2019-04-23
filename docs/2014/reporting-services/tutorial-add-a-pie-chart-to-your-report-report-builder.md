@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Ajouter un graphique à secteurs à votre rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Ajouter un graphique à secteurs à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 65a0db21f0334c6782c7888e7484f91058424cd1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290447"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959505"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Didacticiel : Ajouter un graphique à secteurs à votre rapport (Générateur de rapports)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique en secteurs à un rapport (Générateur de rapports)
   Les graphiques à secteurs et les graphiques en anneau affichent des données sous la forme d'une proportion de la totalité. Les graphiques en secteurs sont utilisés le plus souvent pour faire des comparaisons entre des groupes. Les graphique à secteurs et les graphiques en anneau, ainsi que les graphiques en pyramide et les graphiques en entonnoir, constituent un groupe de graphiques connus sous le nom de graphiques à base de formes. Les graphiques à base de formes n'ont pas d'axe. Lorsqu'un champ numérique est placé sur un graphique à base de formes, le graphique calcule le pourcentage de chaque valeur par rapport au total.  
   
  Lorsqu'un graphique à secteurs comporte trop de points de données, vos étiquettes de points de données peuvent devenir illisibles. Dans ce cas, envisagez d’utiliser un graphique en courbes. Pensez à utiliser des graphiques à secteurs uniquement lorsque vos données ont été agrégées en quelques points de données.  
@@ -45,7 +45,7 @@ ms.locfileid: "56290447"
 7.  [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, ajouter une source de données et ajouter un jeu de données, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l'accès à un serveur de rapports, l'ajout d'une source de données et l'ajout d'un dataset, consultez le premier didacticiel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Durée estimée pour effectuer ce didacticiel : 10 minutes  
   
@@ -173,7 +173,7 @@ ms.locfileid: "56290447"
   
  Dans la légende, la catégorie « Autre » est désormais présente. Le nouveau secteur regroupe tous les secteurs de moins de 5 % dans un seul secteur qui représente 6 % de l'ensemble.  
   
-##  <a name="DrawingEffect"></a> 5. Personnaliser l'effet de dessin  
+##  <a name="DrawingEffect"></a> 5. Personnaliser l’effet de dessin  
  Dans l'Assistant Graphique, le style par défaut d'un graphique à secteurs est Océan, qui représente un effet de dessin concave. Vous pouvez le changer après avoir exécuté l'Assistant.  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>Pour ajouter un effet de dessin au graphique à secteurs  
