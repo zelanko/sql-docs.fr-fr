@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 3550e17c8f4d6384ceafabb77aa9ca70cd80c44b
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042328"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Installation de Microsoft ODBC Driver for SQL Server sur Linux et macOS
@@ -513,7 +513,7 @@ Le pilote ODBC sur Linux et MacOS est constitué des composants suivants :
 |Composant|Description|  
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X ou libmsodbcsql-13.X.so.X.X|Fichier bibliothèque dynamique (`so`) d’objets partagés contenant l’ensemble des fonctionnalités du pilote. Ce fichier est installé dans `/opt/microsoft/msodbcsql17/lib64/` pour Driver 17 et dans `/opt/microsoft/msodbcsql/lib64/` pour Driver 13.|  
-|`msodbcsqlr17.rll` ou Gestionnaire de configuration `msodbcsqlr13.rll`|Fichier de ressources qui accompagne la bibliothèque du pilote. Ce fichier est installé dans `[driver .so directory]../share/resources/en_US/`| 
+|`msodbcsqlr17.rll` ou `msodbcsqlr13.rll`|Fichier de ressources qui accompagne la bibliothèque du pilote. Ce fichier est installé dans `[driver .so directory]../share/resources/en_US/`| 
 |msodbcsql.h|Fichier d’en-tête qui contient toutes les nouvelles définitions nécessaires à l’utilisation du pilote.<br /><br /> **Remarque :**  vous ne pouvez pas référencer msodbcsql.h et odbcss.h dans le même programme.<br /><br /> msodbcsql.h est installé dans `/opt/microsoft/msodbcsql17/include/` pour Driver 17 et dans `/opt/microsoft/msodbcsql/include/` pour Driver 13. |
 |LICENSE.txt|Fichier texte qui contient les termes du contrat de licence utilisateur final. Ce fichier est placé dans `/usr/share/doc/msodbcsql17/` pour Driver 17 et dans `/usr/share/doc/msodbcsql/` pour Driver 13.|
 |RELEASE_NOTES|Fichier texte qui contient les notes de publication. Ce fichier est placé dans `/usr/share/doc/msodbcsql17/` pour Driver 17 et dans `/usr/share/doc/msodbcsql/` pour Driver 13.|
@@ -524,7 +524,7 @@ Le pilote ODBC sur Linux et MacOS est constitué des composants suivants :
 |Composant|Description|  
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib ou libmsodbcsql.13.dylib|Fichier de bibliothèque dynamique (`dylib`) contenant l’ensemble des fonctionnalités du pilote. Ce fichier est installé dans `/usr/local/lib/`.|  
-|`msodbcsqlr17.rll` ou Gestionnaire de configuration `msodbcsqlr13.rll`|Fichier de ressources qui accompagne la bibliothèque du pilote. Ce fichier est installé dans `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` pour Driver 17 et dans `[driver .dylib directory]../share/msodbcsql/resources/en_US/` pour Driver 13. | 
+|`msodbcsqlr17.rll` ou `msodbcsqlr13.rll`|Fichier de ressources qui accompagne la bibliothèque du pilote. Ce fichier est installé dans `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` pour Driver 17 et dans `[driver .dylib directory]../share/msodbcsql/resources/en_US/` pour Driver 13. | 
 |msodbcsql.h|Fichier d’en-tête qui contient toutes les nouvelles définitions nécessaires à l’utilisation du pilote.<br /><br /> **Remarque :**  vous ne pouvez pas référencer msodbcsql.h et odbcss.h dans le même programme.<br /><br /> msodbcsql.h est installé dans `/usr/local/include/msodbcsql17/` pour Driver 17 et dans `/usr/local/include/msodbcsql/` pour Driver 13. |
 |LICENSE.txt|Fichier texte qui contient les termes du contrat de licence utilisateur final. Ce fichier est placé dans `/usr/local/share/doc/msodbcsql17/` pour Driver 17 et dans `/usr/local/share/doc/msodbcsql/` pour Driver 13. |
 |RELEASE_NOTES|Fichier texte qui contient les notes de publication. Ce fichier est placé dans `/usr/local/share/doc/msodbcsql17/` pour Driver 17 et dans `/usr/local/share/doc/msodbcsql/` pour Driver 13. |
