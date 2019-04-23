@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Mettre en forme le texte (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Mettre en forme du texte (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c4b9edce95b37417c031c8af06887f0933528038
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e509fb84ffd35085e7930925fd71499a6c96c87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56297284"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961335"
 ---
-# <a name="tutorial-format-text-report-builder"></a>Didacticiel : Format texte (Générateur de rapports)
+# <a name="tutorial-format-text-report-builder"></a>Tutoriel : Mettre en forme du texte (Générateur de rapports)
   Dans ce didacticiel, vous pouvez vous entraîner à mettre en forme le texte de plusieurs façons. Après avoir configuré le rapport vierge avec la source de données et le dataset, vous pourrez choisir les étapes que vous souhaitez explorer.  
   
  L'illustration suivante montre un rapport similaire à celui que vous allez créer.  
@@ -49,7 +49,7 @@ ms.locfileid: "56297284"
   
  [Enregistrer le rapport](#Save)  
   
- Durée estimée pour effectuer ce didacticiel : 20 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  

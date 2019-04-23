@@ -3,7 +3,7 @@ title: Extension de SQL Server 2019 (version préliminaire)
 titleSuffix: Azure Data Studio
 description: Extension de la version préliminaire de SQL Server 2019 pour Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 04/19/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: craigg
-ms.openlocfilehash: dfa49b1611c7fd9b196e57ea08575388aa90329b
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: 11dee99f7d0648a4c7fc701234796e6d552d47a9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161547"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59934125"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extension de SQL Server 2019 (version préliminaire)
 
@@ -30,9 +30,9 @@ Pour installer l’extension de SQL Server 2019 (version préliminaire), téléc
 
    |Plateforme|Télécharger|Date de publication|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083220)|18 mars 2019 |0.11.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083219)|18 mars 2019 |0.11.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2083218)|18 mars 2019 |0.11.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087443)|18 avril 2019 |0.12.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087442)|18 avril 2019 |0.12.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2087441)|18 avril 2019 |0.12.0
 
 1. Dans Azure Data Studio choisissez **installer l’Extension à partir du Package VSIX** à partir de la **fichier** menu et sélectionnez le fichier .vsix téléchargé.
 
@@ -44,12 +44,27 @@ Pour installer l’extension de SQL Server 2019 (version préliminaire), téléc
 
 1. Une fois les dépendances de terminer l’installation, fermez et rouvrez Studio de données Azure. Le **cluster de données volumineux de SQL Server** type de connexion n’est pas disponible tant que vous ne redémarrez Azure Data Studio.
 
+## <a name="changes-in-release-012"></a>Modifications apportées à la version 0.12
+
+* Le **cluster de données volumineux de SQL Server** type de connexion a été supprimé dans cette version. Toutes les fonctionnalités précédemment disponibles à partir de la connexion au cluster volumineuses de données SQL Server sont maintenant disponible dans la connexion SQL Server.
+* HDFS de navigation se trouve sous le **Data Services** dossier
+* Pour les blocs-notes le le noyaux PySpark et autres données volumineuses travailler connecté à l’instance principale de SQL Server dans votre cluster de données volumineux de SQL Server.
+* Créer un Assistant de Table externe :
+  * Prise en charge pour la création d’une Table externe à l’aide de la Source de données externe existante.
+  * Améliorations des performances dans l’Assistant.
+  * Amélioration de la gestion des noms d’objet avec des caractères spéciaux. Dans certains cas, ces a provoqué l’Assistant Échec
+  * Améliorations de la fiabilité de la page mappage de l’objet.
+  * Supprimé bases de données système - 'DWConfiguration', 'DWDiagnostics', « DWQueue - » dans la liste déroulante de bases de données.
+  * Prise en charge pour la définition du nom de l’objet de Format de fichier externe dans le **Create External Table à partir de fichiers CSV** Assistant.
+  * Ajouter un bouton d’actualisation pour la première page de la **Create External Table à partir de fichiers CSV** Assistant.
+
 ## <a name="release-notes-v0110"></a>Notes de publication (v0.11.0)
-  * Prise en charge de bloc-notes Jupyter, spécifiquement prennent en charge pour les noyaux Python3 et Spark a été déplacée dans Azure Data Studio. Cette extension n’est plus requise pour pouvoir utiliser des blocs-notes.
-  * Plusieurs correctifs de bogues dans les Assistants de données externes :
-    * Mappages de type Oracle ont été mis à jour pour refléter les modifications fournies dans SQL Server 2019 CTP 2.3.
-    * Correction d’un problème où de nouveaux schémas tapés dans les contrôles de mappage de table ont été perdus.
-    * Correction d’un problème où la vérification d’un nœud de base de données dans les mappages de table n’ont pas généré dans toutes les tables et vues en cours de vérification.
+
+* Prise en charge de bloc-notes Jupyter, spécifiquement prennent en charge pour les noyaux Python3 et Spark a été déplacée dans Azure Data Studio. Cette extension n’est plus requise pour pouvoir utiliser des blocs-notes.
+* Plusieurs correctifs de bogues dans les Assistants de données externes :
+  * Mappages de type Oracle ont été mis à jour pour refléter les modifications fournies dans SQL Server 2019 CTP 2.3.
+  * Correction d’un problème où de nouveaux schémas tapés dans les contrôles de mappage de table ont été perdus.
+  * Correction d’un problème où la vérification d’un nœud de base de données dans les mappages de table n’ont pas généré dans toutes les tables et vues en cours de vérification.
 
 
 ## <a name="release-notes-v0102"></a>Notes de publication (v0.10.2)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - overview of Report Builder
 - getting started
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb8120b9ba413ce6f1a59667c136b1580eb5b675
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a0c9605bfafac3611b9a24f25bb7e46c194ed22c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290437"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948265"
 ---
 # <a name="report-builder-in-sql-server-2014"></a>Générateur de rapports dans SQL Server 2014
   Le Générateur de rapports est un environnement de création de rapports destiné aux utilisateurs professionnels qui préfèrent travailler dans l'environnement [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Office. Lorsque vous concevez un rapport, vous spécifiez l'emplacement des données à obtenir, leur nature et leur mode d'affichage. Au moment de l'exécution du rapport, le processeur de rapports assimile l'ensemble des informations que vous avez spécifiées, puis il récupère les données et les combine à la mise en page du rapport pour générer le rapport. Vous pouvez soit afficher un aperçu de vos rapports dans le Générateur de rapports, soit les publier sur un serveur de rapports ou un serveur de rapports en mode intégré SharePoint, pour permettre à d'autres utilisateurs de les exécuter.  
@@ -38,7 +38,7 @@ ms.locfileid: "56290437"
   
 -   **Démarrez avec l'Assistant Tableau, Matrice ou Graphique**. Sélectionnez une connexion à une source de données, effectuez un glisser-déplacer de champs pour créer une requête de dataset, sélectionnez une disposition et un style, puis personnalisez votre rapport.  
   
--   **Démarrez avec l'Assistant Carte** pour créer des rapports qui affichent des données agrégées sur un arrière-plan géographique ou géométrique. Les données cartographiques peuvent être des données spatiales provenant d'une requête [!INCLUDE[tsql](../../includes/tsql-md.md)] ou d'un fichier de forme ESRI (Environmental Systems Research Institute, Inc.). Vous pouvez également ajouter un arrière-plan de mosaïque [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing.  
+-   **Démarrez avec l'Assistant Carte** pour créer des rapports qui affichent des données agrégées sur un arrière-plan géographique ou géométrique. Données cartographiques peuvent être des données spatiales à partir d’un [!INCLUDE[tsql](../../includes/tsql-md.md)] requête ou Environmental Systems Research Institute, Inc. Fichier de forme ESRI. Vous pouvez également ajouter un arrière-plan de mosaïque [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Bing.  
   
 
   
@@ -79,7 +79,7 @@ ms.locfileid: "56290437"
  [Nouveautés du Générateur de rapports pour SQL Server 2014](../what-s-new-in-report-builder-for-sql-server-2014.md)  
  Décrit les nouvelles fonctionnalités de cette version du Générateur de rapports, notamment les cartes.  
   
- [Didacticiel : Création d’un rapport de graphique rapide en mode hors connexion](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Didacticiel : Créer un rapport de graphique rapide en mode hors connexion](tutorial-create-a-quick-chart-report-offline-report-builder.md)  
  Ce didacticiel présente le Générateur de rapports et les Assistants disponibles pour vous aider à créer des rapports. Il fournit un ensemble de données que vous pouvez utiliser pour vous éviter d'avoir à vous connecter à une source de données pour la mise en route.  
   
  [Planification d’un rapport &#40;Générateur de rapports&#41;](../report-design/planning-a-report-report-builder.md)  

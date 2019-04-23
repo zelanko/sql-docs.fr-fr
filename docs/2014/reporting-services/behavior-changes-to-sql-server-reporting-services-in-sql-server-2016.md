@@ -21,15 +21,15 @@ helpviewer_keywords:
 - initializing installations [Reporting Services]
 - behavior changes [Reporting Services]
 ms.assetid: 2a767f0f-84f2-4099-8784-1e37790f858e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b845480863facf66ff33c5d976531118edb2d4a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6722c72c8d6ac152697c65b2c910e1f8d29139c9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033190"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59937355"
 ---
 # <a name="behavior-changes-to-sql-server-reporting-services--in-sql-server-2014"></a>Changements de comportement apportés à SQL Server Reporting Services dans SQL Server 2014
   Cette rubrique décrit les changements de comportement dans [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Les modifications de comportement affectent le mode de fonctionnement ou d'interaction des fonctionnalités de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -56,24 +56,24 @@ ms.locfileid: "56033190"
  Pour plus d'informations sur les niveaux d'autorisation SharePoint, consultez [Autorisations utilisateur et niveaux d'autorisation](https://technet.microsoft.com/library/cc721640.aspx)  
   
 ### <a name="report-server-trace-logs-are-in-a-new-location-for-sharepoint-mode-sharepoint-mode"></a>Les journaux de trace du serveur de rapports sont dans un nouvel emplacement en mode SharePoint (mode SharePoint)  
- **Nouveau comportement :** Pour un serveur de rapports installé en mode SharePoint, les journaux de trace du serveur de rapports se trouvent sous le dossier %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles.  
+ **Nouveau comportement :** Pour un serveur de rapports installé en mode SharePoint, les journaux de trace de serveur de rapports sera sous %Programfiles%\Common Files\Microsoft Shared\Web Server Extensions\14\Web Services\ReportServer\LogFiles.  
   
  **Comportement précédent :** Journaux de trace de serveur de rapports se trouvaient sous un chemin d’accès semblable au suivant : %Programfilesdir%\Microsoft SQL Server\\< RS_instance > \Reporting Services\LogFiles  
   
 ### <a name="getserverconfiginfo-soap-api-is-no-longer-supported-sharepoint-mode"></a>L'API SOAP GetServerConfigInfo n'est plus prise en charge (mode SharePoint)  
  **Nouveau comportement**: Utilisez l’applet de commande PowerShell « Get-SPRSServiceApplicationServers »  
   
- **Comportement précédent :** Les clients peuvent développer le code client SOAP pour communiquer directement avec le point de terminaison [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] et appeler GetReportServerConfigInfo().  
+ **Comportement précédent :** Les clients peuvent développer le code client SOAP pour communiquer directement avec le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] point de terminaison et appeler GetReportServerConfigInfo().  
   
 ### <a name="report-server-configuration-and-management-tools"></a>Configuration de Report Server et Outils d'administration  
   
 #### <a name="configuration-manager-is-not-used-for-sharepoint-mode"></a>Le gestionnaire de configuration n'est pas utilisé pour le mode SharePoint  
- **Nouveau comportement :** Le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne prend plus en charge les serveurs de rapports en mode SharePoint. La configuration du mode SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peut maintenant être exécutée à l'aide de l'Administration centrale SharePoint et, par conséquent, le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne prend plus en charge le mode SharePoint. Le gestionnaire de configuration est maintenant utilisé uniquement pour les serveurs de rapports en mode natif.  
+ **Nouveau comportement :** Le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Configuration Manager prend en charge n’est plus les serveurs de rapports en SharePoint Mode. La configuration du mode SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] peut maintenant être exécutée à l'aide de l'Administration centrale SharePoint et, par conséquent, le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ne prend plus en charge le mode SharePoint. Le gestionnaire de configuration est maintenant utilisé uniquement pour les serveurs de rapports en mode natif.  
   
 #### <a name="you-cannot-change-the-server-from-one-mode-to-another"></a>Vous ne pouvez pas modifier le serveur d'un mode en un autre.  
- **Nouveau comportement :** Vous ne pouvez pas modifier les modes de serveur. Si vous installez un serveur de rapports en mode natif, vous ne pouvez pas le reconfigurer ou le modifier en mode SharePoint. Si vous l'installez en mode SharePoint, vous pouvez modifier le serveur de rapports en mode natif.  
+ **Nouveau comportement :** Vous ne pouvez pas modifier les modes serveur. Si vous installez un serveur de rapports en mode natif, vous ne pouvez pas le reconfigurer ou le modifier en mode SharePoint. Si vous l'installez en mode SharePoint, vous pouvez modifier le serveur de rapports en mode natif.  
   
- **Comportement précédent :** Le client installe un serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en mode SharePoint. Si le client souhaite configurer le serveur de rapports en mode natif, il peut ouvrir le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour passer en mode natif en créant une base de données ou en se connectant à une base de données existante en mode natif. Le client peut également utiliser le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour passer du mode SharePoint en mode natif.  
+ **Comportement précédent :** Client installe un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] serveur de rapports en mode SharePoint. Si le client souhaite configurer le serveur de rapports en mode natif, il peut ouvrir le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour passer en mode natif en créant une base de données ou en se connectant à une base de données existante en mode natif. Le client peut également utiliser le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pour passer du mode SharePoint en mode natif.  
   
 ##  <a name="bkmk_kj"></a> SQL Server 2008 R2 Reporting Services des changements de comportement  
  Cette section décrit les changements de comportement dans [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 51f062efce64d7e8f29e156c51b2972624f46d5e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037352"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59933305"
 ---
 # <a name="search-page-report-manager"></a>Page Rechercher (Gestionnaire de rapports)
   La page Résultats de la recherche vous permet d'afficher les résultats d'une recherche spécifiée pour un rapport, un rapport lié, un modèle de rapport, une source de données partagée, un dossier ou une ressource. Les résultats de la recherche sont répertoriés par ordre alphabétique. Vous pouvez les trier par type, nom ou description.  

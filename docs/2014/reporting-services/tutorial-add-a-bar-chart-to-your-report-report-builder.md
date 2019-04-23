@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Ajouter un graphique à barres à votre rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6bd2d801c4f6aae8d87764bdefbe153f3d9743f8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295987"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59938155"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Didacticiel : Ajouter un graphique à barres à votre rapport (Générateur de rapports)
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)
   Un graphique à barres représente les données de catégorie horizontalement. Cela peut aider à :  
   
 -   améliorer la lisibilité des noms de catégorie longs ;  
@@ -55,7 +55,7 @@ ms.locfileid: "56295987"
 10. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, créer un jeu de données et choisissez une source de données, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l'accès à un serveur de rapports, la création d'un dataset et le choix d'une source de données, consultez le premier didacticiel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "56295987"
   
 2.  Cliquez sur **Barre**, puis sur **Suivant**.  
   
-     Sur le **organiser les champs du graphique** page, il existe quatre champs dans le **champs disponibles** volet : FirstName, LastName, SalesYear2009 et SalesYear2008.  
+     Dans la page **Organiser les champs du graphique**, quatre champs se trouvent dans le volet **Champs disponibles** : FirstName, LastName, SalesYear2009 et SalesYear2008.  
   
 3.  Faites glisser LastName vers le volet Catégories.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "56295987"
   
  Le rapport affiche le graphique à barres des ventes de chaque commercial pour les années 2008 et 2009. La longueur de la barre correspond au total des ventes.  
   
-##  <a name="AllValues"></a> 3. Modifier l'affichage des noms sur l'axe vertical  
+##  <a name="AllValues"></a> 3. Modifier l’affichage des noms sur l’axe Vertical  
  Par défaut, seules quelques-unes des valeurs de l'axe vertical s'affichent. Vous pouvez modifier le graphique pour afficher toutes les catégories.  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>Pour afficher tous les commerciaux le long de l'axe des abscisses d'un graphique à barres  
@@ -194,7 +194,7 @@ ms.locfileid: "56295987"
 > [!NOTE]  
 >  Si vous ne parvenez pas à lire les noms des commerciaux sur l'axe vertical, vous pouvez augmenter la taille de votre graphique ou modifier les options de mise en forme des étiquettes d'axe.  
   
-##  <a name="Sort"></a> 4. Modifier l'ordre de tri des noms sur l'axe vertical  
+##  <a name="Sort"></a> 4. Modifier l’ordre de tri des noms sur l’axe Vertical  
  Lorsque vous triez les données d'un graphique, vous modifiez l'ordre des valeurs sur l'axe des abscisses.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>Pour trier les noms dans l'ordre alphabétique sur le graphique à barres  
@@ -213,7 +213,7 @@ ms.locfileid: "56295987"
   
 7.  Cliquez sur **OK**.  
   
-8.  Sur le **propriétés du groupe de catégories** page, dans le **ordre** liste déroulante, sélectionnez **Z à A**. L'ordre alphabétique inversé est ainsi sélectionné de sorte que les noms apparaissent dans l'ordre de bas en haut.  
+8.  Sur le **propriétés du groupe de catégories** page, dans le **ordre** liste déroulante, sélectionnez **Z à A**. Cette opération sélectionne par ordre alphabétique inverse afin que les noms apparaissent dans l’ordre de haut en bas.  
   
 9. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

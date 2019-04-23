@@ -19,15 +19,15 @@ helpviewer_keywords:
 - user interface
 - overview of Report Builder
 ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d1a9e3264ce3580ec5b1c6d110ce745236accff1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287017"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953295"
 ---
 # <a name="report-design-view-report-builder"></a>Vue Conception de rapport (Générateur de rapports)
   La fenêtre du Générateur de rapports vise à vous permettre d'organiser facilement vos ressources de rapport et à générer rapidement les rapports dont vous avez besoin. L'aire de conception se trouve au centre de la fenêtre, avec au-dessus le ruban, à gauche le volet Données du rapport, en dessous le volet Regroupement et à droite le volet Propriétés, ainsi que la bibliothèque de parties de rapports. L'aire de conception est l'espace où vous ajoutez et organisez vos éléments de rapport. Le ruban organise les éléments de menu traditionnels en catégories faciles à repérer et à utiliser. Les volets vous permettent d'ajouter, de sélectionner et d'organiser vos ressources de rapport et de modifier les propriétés des éléments de rapport.  
@@ -42,7 +42,7 @@ ms.locfileid: "56287017"
  En mode exécution, le ruban a qu’un seul onglet, **exécuter**.  
   
 ### <a name="home-tab"></a>Onglet Dossier de base  
- L'onglet Dossier de base regroupe des commandes couramment utilisées centrées sur l'apparence des éléments contenus dans votre rapport. Sous l'onglet Dossier de base, vous avez accès à des commandes relatives à l'exécution, aux polices, aux paragraphes, aux bordures, aux nombres et à la disposition. Lorsque vous cliquez sur un élément de l'onglet, l'élément sélectionné dans l'aire de conception change. Lorsque vous cliquez sur **exécuter**, le rapport est rendu au format HTML, afin que vous puissiez voir comment le contenu du rapport s’affiche lors de la publication, et vous voyez l’onglet exécuter remplace l’onglet Accueil. L'onglet Dossier de base est l'onglet qui s'affiche par défaut lorsque vous créez initialement un rapport.  
+ L'onglet Dossier de base regroupe des commandes couramment utilisées centrées sur l'apparence des éléments contenus dans votre rapport. Sous l'onglet Dossier de base, vous avez accès à des commandes relatives à l'exécution, aux polices, aux paragraphes, aux bordures, aux nombres et à la disposition. Lorsque vous cliquez sur un élément de l'onglet, l'élément sélectionné dans l'aire de conception change. Lorsque vous cliquez sur **exécuter**, le rapport est rendu au format HTML, afin que vous puissiez voir comment le contenu du rapport s’affiche lors de la publication, et vous voyez l’onglet exécuter remplace l’onglet Accueil. L’onglet Accueil est l’onglet par défaut affiché lorsque vous créez un rapport.  
   
 ### <a name="insert-tab"></a>Onglet Insérer  
  L'onglet Insérer regroupe des commandes couramment utilisées pour ajouter des éléments de rapport au rapport. Sous l'onglet Insérer, vous pouvez ajouter un tableau, une matrice, un graphique ou une carte à l'aide d'Assistants. Vous pouvez également ajouter ces éléments sans Assistant et ajouter d'autres éléments de rapport (par exemple, des graphiques sparkline, indicateurs, zones de texte, images, rectangles, sous-rapports, en-têtes et pieds de page de rapport).  
@@ -146,17 +146,17 @@ ms.locfileid: "56287017"
 ### <a name="changing-the-properties-pane-view"></a>Modification de l'affichage du volet Propriétés  
  Par défaut, les propriétés affichées dans le volet Propriétés sont classées en grandes catégories, par exemple Action, Bordure, Remplissage, Police et Général. Un ensemble de propriétés est associé à chaque catégorie. Par exemple, les propriétés suivantes sont répertoriées dans la catégorie de police : Color, FontFamily, FontSize, FontStyle, FontWeight, LineHeight et TextDecoration. Si vous préférez, vous pouvez classer toutes les propriétés répertoriées dans le volet par ordre alphabétique. Les catégories sont ainsi supprimées et toutes les propriétés sont classées par ordre alphabétique, quelle que soit la catégorie.  
   
- Le volet Propriétés possède trois boutons en haut du volet : Catégorie, classer par ordre alphabétique et les Pages de propriétés. Cliquez sur les boutons Catégorie et Alphabétiser pour basculer entre les affichages du volet Propriétés. Cliquez sur le bouton **Pages de propriétés** pour ouvrir la boîte de dialogue des propriétés pour un élément de rapport sélectionné.  
+ Le volet Propriétés comporte trois boutons en haut du volet : Catégorie, Classer par ordre alphabétique et Pages de propriétés. Cliquez sur les boutons Catégorie et Alphabétiser pour basculer entre les affichages du volet Propriétés. Cliquez sur le bouton **Pages de propriétés** pour ouvrir la boîte de dialogue des propriétés pour un élément de rapport sélectionné.  
   
   
 ##  <a name="GroupPane"></a> Volet de regroupement (Générateur de rapports)  
- Les groupes sont utilisés pour hiérarchiser vos données de rapport de façon visuelle et pour calculer des totaux. Vous pouvez afficher les groupes de lignes et de colonnes d'une région de données sur l'aire de conception et également dans le volet de regroupement. Le volet de regroupement comporte deux volets : Groupes de lignes et groupes de colonnes. Lorsque vous sélectionnez une région de données, le volet de regroupement affiche tous les groupes au sein de cette région de données sous la forme d’une liste hiérarchique : Les groupes enfants apparaissent en retrait sous leurs groupes parents.  
+ Les groupes sont utilisés pour hiérarchiser vos données de rapport de façon visuelle et pour calculer des totaux. Vous pouvez afficher les groupes de lignes et de colonnes d'une région de données sur l'aire de conception et également dans le volet de regroupement. Le volet Regroupement comporte deux volets : Groupes de lignes et Groupes de colonnes. Lorsqu’une région de données est sélectionnée, le volet Regroupement affiche tous les groupes de cette région de données sous forme de liste hiérarchique : les groupes enfants apparaissent en retrait sous leur groupe parent.  
   
  ![Volet de regroupement pour les groupes de lignes et de colonnes imbriqués](../media/rs-basictablixdesigngroupingpanedefaultview.gif "Volet de regroupement pour les groupes de lignes et de colonnes imbriqués")  
   
  Vous pouvez créer des groupes en faisant glisser des champs du volet Données du rapport et en les plaçant sur l'aire de conception ou dans le volet de regroupement. Dans le volet de regroupement, vous pouvez ajouter des groupes parents, enfants et adjacents, modifier les propriétés de groupe et supprimer des groupes.  
   
- Le volet de regroupement s'affiche par défaut, mais vous pouvez le fermer en désactivant la case à cocher Volet de regroupement sous l'onglet Affichage. Le volet de regroupement n'est pas disponible pour les régions de données Graphique et Jauge.  
+ Le volet de regroupement s’affiche par défaut, mais vous pouvez fermer le volet en désactivant la case du volet de regroupement sous l’onglet Affichage. Le volet de regroupement n'est pas disponible pour les régions de données Graphique et Jauge.  
   
  Pour plus d’informations, consultez [Volet de regroupement &#40;Générateur de rapports&#41;](../report-design/grouping-pane-report-builder.md) et [Fonctionnement des groupes &#40;Générateur de rapports et SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  
   

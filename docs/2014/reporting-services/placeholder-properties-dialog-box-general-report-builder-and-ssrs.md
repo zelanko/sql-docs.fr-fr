@@ -11,15 +11,15 @@ f1_keywords:
 - "10131"
 - sql12.rtp.rptdesigner.placeholderproperties.general.f1
 ms.assetid: 7a867736-a3b0-4b5a-b3e5-fe7c8d7618a8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2ec66ffa7f8f5894d5ec09e217f343e34cd7d98
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5485a0b5ff39f8517ff6e73113f7405cab0a923c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56287877"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952305"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de l'espace réservé, Général (Générateur de rapports et SSRS)
   Utilisez la boîte de dialogue **Propriétés de l'espace réservé** pour modifier les options de valeur, d'info-bulle et de balise d'un espace réservé dans une zone de texte.  

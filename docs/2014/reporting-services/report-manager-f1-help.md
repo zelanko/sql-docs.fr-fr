@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Manager [Reporting Services], help
 ms.assetid: e0137273-85b8-45f0-83e5-38a50481768f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca003e937f5e9547fa1bda0243967a8ff1d8331a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f1437ee34eded7b9bec88ed9f8e8f64184f5a8d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019320"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967955"
 ---
 # <a name="report-manager-f1-help"></a>Aide F1 du Gestionnaire de rapports
   Les rubriques ci-dessous fournissent de l'aide sur les pages du Gestionnaire de rapports [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Il existe une rubrique pour chaque page de l'application. Certaines pages risquent de ne pas être disponibles. Les paramètres de sécurité déterminent les pages auxquelles vous avez accès. Pour accéder à ces rubriques à partir du Gestionnaire de rapports, cliquez sur **Aide** dans la barre d'outils principale.  

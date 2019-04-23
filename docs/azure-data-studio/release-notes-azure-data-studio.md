@@ -3,7 +3,7 @@ title: Notes de publication
 titleSuffix: Azure Data Studio
 description: Notes de publication Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/22/2019
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,16 +11,30 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 359723a1e2d75b7cbbd3a88c9a0ba7ee89fdf420
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.openlocfilehash: 5497a2d70c32763d765888235f694b89dd0bb340
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381587"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963785"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notes de publication pour Azure Data Studio
 
 **[Téléchargez et installez la dernière version !](download.md)**
+
+## <a name="april-2019"></a>Avril 2019
+
+Le 18 avril 2019 &nbsp;  /  &nbsp; version : 1.6.0 
+
+&nbsp;
+
+| Modifier | Détails |
+| :----- | :------ |
+| Renommé **serveurs** TAB pour accéder à **connexions** | |
+| Déplacé d’Azure Resource Explorer en tant que les vues font un Azure sous connexions | Les utilisateurs peuvent maintenant afficher leurs instances de SQL Azure via les vues font Azure dans la vue de connexions et se développent pour afficher les objets sous chaque serveur ou une base de données.|
+| Améliorations du bloc-notes SQL | &bull; &nbsp; Bouton ajouté dans la barre d’outils pour effacer la sortie pour toutes les cellules <br/>&bull; &nbsp; Bouton ajouté dans la barre d’outils pour exécuter toutes les cellules <br/>&bull; &nbsp; Nom de connexion fixe au lieu du nom du serveur (si défini) dans l’attacher à la liste déroulante <br/>&bull; &nbsp; Correctif pour les images dans un fichier markdown ne pas rendu lors de l’utilisation de chemins d’accès relatif de l’image <br/>&bull; &nbsp; Fonctionnalités améliorées dans les grilles de bloc-notes en ajoutant double-cliquez sur la taille de la colonne-redimensionnement automatique et prise en charge de la molette de souris améliorée <br/>&bull; &nbsp; Améliorations apportées à la gestion des erreurs et python installer résilience lors de l’installation de python via les blocs-notes <br/>&bull; &nbsp; Améliorations apportées à la fonctionnalité « sélectionner tout » lors de la sélection des cellules de bloc-notes <br/>&bull; &nbsp; Améliorations apportées à des connexions de bloc-notes pour empêcher la fermeture d’un ordinateur portable et ayant un impact sur une connexion de l’Explorateur d’objets <br/>&bull; &nbsp; Expérience de bloc-notes amélioré pour afficher un message à l’utilisateur lorsque le notebook déconnecté et nécessite une connexion à l’exécution des cellules<br/>&bull; &nbsp; Prise en charge améliorée pour les blocs-notes non enregistrées à rafraîchir des publicités au prochain démarrage de publicités |
+| Bogues résolus et les problèmes. | Consultez [bogues et des problèmes, sur GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
+| &nbsp; | &nbsp; |
 
 ## <a name="march-2019-hotfix"></a>Mars 2019 (correctif)
 

@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
 ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b46d985a4b43fc55fdbae3fa1012e77e4c2c0316
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e4f622d5963ae9da107aba9d6674e804b0c859da
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285627"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59935895"
 ---
 # <a name="reporting-services-query-designers"></a>Concepteurs de requêtes Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Fournit des concepteurs de requêtes graphiques et textuels pour vous aider à générer des requêtes pour chaque type de source de données dans votre rapport.  

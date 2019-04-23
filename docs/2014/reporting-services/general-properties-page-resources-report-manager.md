@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 23eed41b-283a-49df-a3aa-062dde8d6354
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 122fb28e82050fc134b86c2dc79559dec8d02478
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6b4b76edb7eb7761511e39ba97b811dcf3d5e99
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032420"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953495"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Page Propriétés générales, Ressources (Gestionnaire de rapports)
   La page Propriétés générales des ressources vous permet de renommer, supprimer, déplacer ou remplacer une ressource. Des informations sur la personne qui a ajouté la ressource ou modifié les propriétés apparaissent en haut de la page.  

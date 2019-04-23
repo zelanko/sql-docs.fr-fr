@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 45da3d39-278e-4760-a4b3-9932c9547cf2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5bffa581813929cd54daf2ff30a759cc37bc0e1a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: e111acfbaee8c73d2c105e977f2e8892a012bbea
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289532"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959766"
 ---
 # <a name="displaying-a-series-with-multiple-data-ranges-on-a-chart-report-builder-and-ssrs"></a>Affichage d'une série avec plusieurs plages de données sur un graphique (Générateur de rapports et SSRS)
   Le graphique utilisera les valeurs minimale et maximale d'une série pour calculer l'échelle de l'axe. Lorsqu'une série de votre graphique contient plusieurs plages de données, les points de données peuvent être masqués, et seuls quelques points de données sont aisément visibles sur le graphique. Par exemple, supposez qu'un rapport affiche les totaux de ventes quotidiennes sur une période de 30 jours.  

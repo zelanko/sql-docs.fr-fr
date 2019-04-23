@@ -13,15 +13,15 @@ helpviewer_keywords:
 - report servers [Reporting Services], content management
 - content management [Reporting Services]
 ms.assetid: 641961ac-53a5-4997-9d42-cf4ecce1f892
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11cf069257a0f851794341820994fbb453cb0052
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 25ee10bbda10329a3f28171eb0027df9769e9fde
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026100"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951660"
 ---
 # <a name="report-server-content-management-ssrs-native-mode"></a>Gestion du contenu du serveur de rapports (SSRS en mode natif)
   Dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], la gestion de contenu fait référence à la gestion des éléments du serveur de rapports. Tous les éléments peuvent être gérés indépendamment les uns des autres via des propriétés et des paramètres de sécurité. Chaque élément peut être déplacé dans l'espace de noms de dossier du serveur de rapports. Pour gérer ces éléments de façon efficace, vous devez connaître les tâches effectuées par un gestionnaire de contenu.  
@@ -65,7 +65,7 @@ ms.locfileid: "56026100"
 |![Icône Source de données partagée](../media/hlp-16datasource.png "Icône Source de données partagée")|Source de données partagée|  
 ||Dataset partagé|  
   
- Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L'autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l'élément considéré : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
+ Les éléments avec lesquels vous travaillez ne peuvent pas tous être déplacés. Par exemple, il n'est pas possible de déplacer les éléments qui sont associés à un rapport, comme les abonnements ou l'historique de rapport. Ces éléments se déplacent avec leurs rapports associés. Il n'est pas non plus possible de déplacer des éléments, comme les planifications partagées, qui existent à l'extérieur de l'arborescence des dossiers. Vous ne pouvez pas déplacer des éléments si vous n'avez pas l'autorisation de le faire. L’autorisation pour déplacer un élément est transmise lorsque les tâches suivantes sont sélectionnées dans votre attribution de rôle pour l’élément en question : « Gérer les rapports », « Gérer les modèles », « Gérer les dossiers » et « Gérer les sources de données ».  
   
 ##  <a name="bkmk_Folders"></a> Dossiers  
  Une hiérarchie de dossiers est utilisée pour l'adressage des éléments stockés et gérés par un serveur de rapports.  Par défaut, la structure des dossiers comporte un nœud racine nommé Accueil et des dossiers réservés qui prennent en charge la fonctionnalité optionnelle Mes rapports. Les dossiers supplémentaires sont définis par l'utilisateur. Les dossiers du serveur de rapports sont utiles si vous souhaitez accorder le même niveau d'accès à plusieurs éléments. Les autorisations que vous définissez sur le dossier peuvent être héritées par les éléments dans le dossier et par les dossiers supplémentaires qui dépendent de ce dossier. Par exemple, vous pouvez créer un jeu de dossiers sous le dossier de base, affecter des autorisations d'équipe à chaque dossier, puis laisser les membres de l'équipe personnaliser les dossiers sous le dossier d'équipe, si nécessaire.  

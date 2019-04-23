@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Création d’un rapport de matrice (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Création d’un rapport de matrice (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1b1f3226d196354dbbe6a959822534342a92f818
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 86bffd9c3cf98732da253e511287a9c9e722f4a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288410"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965695"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Didacticiel : Création d’un rapport de matrice (Générateur de rapports)
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutoriel : Création d'un rapport de matrice (Générateur de rapports)
   Ce didacticiel vous apprend comment créer un rapport de matrice de base reposant sur des exemples de données de vente. La matrice comporte des groupes de lignes et de colonnes imbriqués, ainsi qu'un groupe de colonnes adjacent. Vous apprendrez également comment mettre en forme les colonnes et faire pivoter le texte. L'illustration suivante montre un rapport similaire à celui que vous allez créer.  
   
  ![rs_CreateMatixReportTutorial](../../2014/tutorials/media/rs-creatematixreporttutorial.gif "rs_CreateMatixReportTutorial")  
@@ -48,7 +48,7 @@ ms.locfileid: "56288410"
   
 1.  [Faire pivoter le texte zone de 270 degrés](#RotateTextBox)  
   
- Durée estimée pour effectuer ce didacticiel : 20 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -74,7 +74,7 @@ ms.locfileid: "56288410"
   
 5.  Cliquer sur **Suivant**.  
   
-6.  Sur le **choisir une connexion à une source de données** page, sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Sur le **choisir une connexion à une source de données** page, sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n'est disponible ou si vous n'avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations sur la création d’une source de données incorporée, consultez [didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquer sur **Suivant**.  
   
@@ -117,7 +117,7 @@ ms.locfileid: "56288410"
   
 10. Cliquer sur **Suivant**.  
   
-##  <a name="Groups"></a> 2. Organiser les données et choisir la mise en page et le style à partir de l'Assistant Nouveau tableau ou nouvelle matrice  
+##  <a name="Groups"></a> 2. Organiser les données et choisir la disposition et un Style à partir de l’Assistant nouveau tableau ou matrice  
  Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la matrice.  
   
 #### <a name="to-organize-data-into-groups-and-choose-a-layout-and-style"></a>Pour organiser les données en groupes et choisir une mise en page et un style  
@@ -160,7 +160,7 @@ ms.locfileid: "56288410"
   
 13. Cliquez sur **Terminer**.  
   
-     La matrice est ajoutée à l'aire de conception. Le volet de groupes de lignes affiche deux groupes de lignes : Territory et SalesDate. Le volet groupes de colonnes affiche deux groupes de colonnes : SubCategory et Product. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+     La matrice est ajoutée à l'aire de conception. Le volet Groupes de lignes affiche deux groupes de lignes : Territory et SalesDate. Le volet Groupes de colonnes affiche deux groupes de colonnes : Subcategory et Product. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 14. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   

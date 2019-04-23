@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e062d516b929f436c6a255a9dfb28e69568133e5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: df69bfef4b82aa9451fb47f6169f5966090f633a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025140"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59954966"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>Activer des événements Reporting Services pour le journal des traces SharePoint (ULS)
   À partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], les serveurs d' [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en mode SharePoint peuvent écrire des événements [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] dans le journal des traces su service de journalisation unifiée SharePoint (ULS). [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] sont disponibles sur la page de supervision de l'Administration centrale de SharePoint.  
@@ -40,7 +40,7 @@ ms.locfileid: "56025140"
 ##  <a name="bkmk_general"></a> Recommandations générales du journal ULS  
  Le tableau suivant répertorie les catégories et niveaux d'événements recommandés pour l'analyse d'un environnement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Lorsqu'un événement est journalisé, chaque entrée inclut l'heure à laquelle l'événement a été enregistré, le nom du processus et l'ID du thread.  
   
-|Catégorie|Level|Description|  
+|Category|Level|Description|  
 |--------------|-----------|-----------------|  
 |Base de données|Commentaires|Journalise les événements ayant trait à l'accès aux bases de données.|  
 |Général|Commentaires|Journalise les événements ayant trait à l'accès aux éléments suivants :<br /><br /> [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] pages Web<br /><br /> Gestionnaire HTTP de la visionneuse de rapports<br /><br /> Accès aux rapports (fichiers .rdl)<br /><br /> Sources de données (fichiers .rsds)<br /><br /> URL sur le site SharePoint (fichiers .smdl)|  
@@ -126,7 +126,7 @@ Get-SPDiagnosticConfig
 |Fournisseur du serveurs de rapports||  
 |Rendu service Web Report Server||  
 |Aperçu des rapports service Web Report Server||  
-|Utilitaire des ressources service Web Report Server|Entrées témoin :<br /><br /> Référence SKU de démarrage des services MediumReporting : Evaluation<br /><br /> Copie de MediumEvaluation : 180 jours restants|  
+|Utilitaire des ressources service Web Report Server|Entrées témoin :<br /><br /> Démarrage des Services MediumReporting : Evaluation<br /><br /> De mediumevaluation : 180 jours restants|  
 |Travaux d'exécution service Web Report Server||  
 |Demandes d'exécution service Web Report Server||  
 |Planification service Web Report Server||  

@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 525820a2-7eba-4982-8518-e6db041b1fc6
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cae3e0395279ee8bb2b301c65628dc92c8e820fb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 414f817adbbafd0e85cf5503336965ed86567caf
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298667"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959285"
 ---
 # <a name="glossary-report-builder"></a>Glossaire (Générateur de rapports)
   
   
 |Terme|Définition|  
 |----------|----------------|  
-|.NET Framework|Composant Windows intégral qui prend en charge la création, le déploiement et l'exécution de la génération suivante d'applications et de services Web. Il constitue un environnement multilingue hautement productif et reposant sur des standards qui permet d'intégrer les investissements existants à la prochaine génération d'applications et de services, ainsi que de résoudre les problèmes liés au déploiement et au fonctionnement des applications Internet. Le .NET Framework se compose de trois parties principales : le Common Language Runtime (CLR), un ensemble hiérarchique de bibliothèques de classes unifiées et une version d'ASP à base de composants appelée ASP.NET. Voir aussi : ASP.NET, common language runtime, bibliothèque de classes .NET Framework.|  
+|.NET Framework|Composant Windows intégral qui prend en charge la création, le déploiement et l'exécution de la génération suivante d'applications et de services Web. Il constitue un environnement multilingue hautement productif et reposant sur des standards qui permet d'intégrer les investissements existants à la prochaine génération d'applications et de services, ainsi que de résoudre les problèmes liés au déploiement et au fonctionnement des applications Internet. Le .NET Framework se compose de trois parties principales : le Common Language Runtime (CLR), un ensemble hiérarchique de bibliothèques de classes unifiées et une version d'ASP à base de composants appelée ASP.NET. Voir aussi : ASP.NET, Common Language Runtime, bibliothèque de classes .NET Framework.|  
 |ActiveX Data Objects|Objets COM (Component Object Model) qui fournissent un accès à des sources de données. Cette interface API fournit une couche entre OLE DB et les langages de programmation tels que Visual Basic, Visual Basic pour Applications, Active Server Pages et Microsoft Internet Explorer Visual Basic Scripting.|  
 |rapport ad hoc|Rapport .rdl créé à l'aide du Générateur de rapports version 1.0 qui accède à des modèles de rapport.|  
 |ornement|Zone de contrôle ou d'état qui est attachée au bord d'un volet ou d'une fenêtre ; par exemple, une barre d'outils ou une règle.|  
@@ -143,8 +143,8 @@ ms.locfileid: "56298667"
 |journal des erreurs|1. Dans SQL Server, il s'agit d'un fichier texte qui enregistre les informations système. 2. Dans Integration Services, il s'agit d'un enregistrement d'erreurs, d'avertissements ou d'événements, qui peut être stocké par plusieurs modules fournisseurs d'informations, notamment SQL Server Profiler, le journal des événements Windows et SQL Server.|  
 |numéro d'état de l'erreur|Numéro associé aux messages SQL Server qui permet aux ingénieurs du support technique de Microsoft de localiser la partie du code à l'origine du message.|  
 |caractère d’échappement|Caractère permettant d'indiquer qu'un autre caractère dans une expression doit être interprété littéralement et non comme un opérateur.|  
-|fichier ESRI .shp|Spécification Open développée par l'ESRI (Environmental Systems Research Institute, Inc.) pour les données spatiales.|  
-|fichier de forme ESRI|Spécification Open développée par l'ESRI (Environmental Systems Research Institute, Inc.) pour les données spatiales.|  
+|fichier ESRI .shp|Spécification Open développée par Environmental Systems Research Institute, Inc. (Environmental) pour les données spatiales.|  
+|fichier de forme ESRI|Spécification Open développée par Environmental Systems Research Institute, Inc. (Environmental) pour les données spatiales.|  
 |événement|Toute occurrence significative se produisant dans le système ou dans une application, qui doit être signalée aux utilisateurs ou être ajoutée sous forme d'entrée dans un journal.|  
 |gestionnaire d'événements|1. Routine logicielle qui s'exécute en réponse à un événement. 2. Dans Integration Services, flux de contrôle qui s'exécute en réponse à un événement d'exécution.|  
 |expression|1. Dans SQL, combinaison de symboles et d'opérateurs dont l'évaluation aboutit à une valeur de données unique. 2. Dans Integration Services, combinaison de littéraux, de constantes, de fonctions et d'opérateurs dont l'évaluation aboutit à une valeur de données unique.|  
@@ -169,7 +169,7 @@ ms.locfileid: "56298667"
 |carte thermique|Type de présentation de carte où l'intensité de couleur pour chaque polygone correspond aux données analytiques connexes. Par exemple, les valeurs basses d'une plage apparaissent en bleu (froid) et les valeurs élevées en rouge (chaud).|  
 |hiérarchie|Structure arborescente logique qui organise les membres d'une dimension de telle sorte que chaque membre possède un membre parent et éventuellement des membres enfants.|  
 |haute disponibilité|État d'une ressource qui reste opérationnelle et utilisable par les clients la plupart du temps, avec un pourcentage très bas d'échecs interrompant le service.|  
-|HTML|Voir le terme Hypertext Markup Language|  
+|HTML|Voir autre terme : Hypertext Markup Language|  
 |Visionneuse HTML|Interface utilisateur constituée d'une barre d'outils Rapport et d'autres éléments de navigation permettant d'utiliser un rapport.|  
 |Hypertext Markup Language|Langage de balisage de texte utilisé pour créer des documents pour le Web. Le langage HTML définit la structure et la mise en page d'un document Web en utilisant divers attributs et balises.|  
 |identificateur|Nom d'un objet dans une base de données.|  
@@ -180,12 +180,12 @@ ms.locfileid: "56298667"
 |instance|1. Copie de SQL Server en cours d'exécution sur un ordinateur. 2. Copie spécifique d'un élément de rapport, par exemple une partie de rapport, un sous-rapport, un membre dynamique ou un groupe.|  
 |entier|Catégorie de types de données numérique qui inclut les types de données bigint, int, smallint et tinyint.|  
 |sécurité du protocole Internet|Règles que les ordinateurs suivent pour fournir des communications privées et sécurisées sur des réseaux IP (Internet Protocol), au moyen de services de sécurité de chiffrement.|  
-|IPsec|Voir le terme sécurité du protocole Internet|  
+|IPsec|Voir autre terme : sécurité du protocole Internet|  
 |ISO|Un des deux instituts de normalisation internationaux responsables du développement de normes internationales dans le domaine des communications de données. L’Organisation internationale de normalisation (ISO) travaille étroitement avec la Commission Électrotechnique Internationale (CEI) pour définir des standards en informatique. Elles ont publié conjointement la norme ISO/CEI SQL-92 pour SQL.|  
 |attribution de rôle au niveau élément|Stratégie de sécurité qui s'applique à un élément dans le dossier du serveur de rapports.|  
 |définition de rôle au niveau élément|Modèle de sécurité qui définit un rôle utilisé pour contrôler l'accès à un élément ou l'interaction avec un élément dans l'espace de noms de dossier du serveur de rapports.|  
 |indicateur de performance clé|(KPI) Mesure normalisée quantifiable qui reflète une variable professionnelle essentielle (par exemple, une part de marché) mesurée au fil du temps.|  
-|mot clé|Mot réservé dans SQL Server qui assure une fonction spécifique, telle que la définition, la manipulation ou l'accès à des objets de base de données. Exemple : SELECT, FROM, et and.|  
+|mot clé|Mot réservé dans SQL Server qui assure une fonction spécifique, telle que la définition, la manipulation ou l'accès à des objets de base de données. Exemple : SELECT, FROM et AND.|  
 |Indicateur de performance clé|Voir le terme : indicateur de performance clé.|  
 |champ d'étiquette|Champ de dataset de rapport qui identifie une étiquette pour un champ clé correspondant. Les paramètres et régions de données peuvent afficher l'étiquette pour un champ clé à la place de la valeur.|  
 |latence|Durée s'écoulant entre l'application d'une modification de données sur un serveur et sa répercussion sur un autre serveur.|  
@@ -213,7 +213,7 @@ ms.locfileid: "56298667"
 |fichier maître|Fichier installé avec les versions antérieures de SQL Server, utilisé pour stocker les bases de données système master, model et tempdb et les journaux des transactions, ainsi que l'exemple de base de données pubs et le journal des transactions.|  
 |champs de correspondance|Ensemble de champs utilisés pour générer une relation entre des données spatiales et des données analytiques.|  
 |région de données de matrice|Région de données dans une mise en page de rapport qui fournit des fonctionnalités similaires aux analyses croisées et rapports de tableaux croisés dynamiques. À l'exécution, lorsque les données de rapport sont associées aux régions de données, une matrice se développe horizontalement et verticalement sur la page. Les valeurs des cellules de matrice sont des valeurs d'agrégat limitées à l'intersection des groupes de lignes et de colonnes auxquels la cellule appartient.|  
-|MDX|Voir le terme MDX (Multidimensional Expressions)|  
+|MDX|Voir autre terme : MDX (Multidimensional Expressions)|  
 |projection Mercator|Dans un élément de rapport cartographique, projection cartographique cylindrique imaginée par Gerardus Mercator en 1569.|  
 |métadonnées|Informations sur les propriétés de données, telles que le type de données dans une colonne (numérique, texte, etc.) ou la longueur d'une colonne ; informations sur un fichier, telles que son titre, sa description, la date de sa création et la date de la dernière modification ; ou des informations sur la structure des données ou la conception d'objets, tels que des cubes ou des dimensions.|  
 |méthode|Fonction réalisant une action au moyen d'un objet COM, comme dans SQL-DMO, OLE DB et ADO (ActiveX Data Objects).|  
@@ -264,7 +264,7 @@ ms.locfileid: "56298667"
 |protocol|Ensemble normalisé de formats et de procédures qui permettent à des ordinateurs d'échanger des informations.|  
 |fournisseur|1. Fournisseur OLE DB. 2. Bibliothèque de liens dynamiques (DLL) in-process qui permet d'accéder à une base de données.|  
 |paramètres de requête|Paramètres spécifiés dans une requête de dataset, par exemple une requête Transact-SQL.|  
-|RDL|Voir le terme Report Definition Language (RDL)|  
+|RDL|Voir autre terme : Report Definition Language (RDL)|  
 |enregistrement|Groupe de champs (colonnes) associés d'informations, traité comme une unité. Un enregistrement est plus communément appelé ligne dans une base de données relationnelle.|  
 |rectangle|Élément de rapport qui peut être utilisé comme conteneur pour plusieurs éléments de rapport ou comme élément graphique sur un rapport.|  
 |hiérarchie récursive|1. Hiérarchie de données d'un dataset de rapport unique qui inclut plusieurs niveaux hiérarchiques dans une structure de hiérarchie, par exemple la structure de rapports pour les relations entre directeur et employé dans une hiérarchie d'organisation. 2. Dans Master Data Services, hiérarchie dérivée qui comporte une relation récursive. Une relation récursive existe lorsqu'une entité a un attribut basé sur un domaine basé sur l'entité elle-même.|  
@@ -332,12 +332,12 @@ ms.locfileid: "56298667"
 |référence SKU|Mode d'identification des différentes éditions d'un produit. L'acronyme SKU (Stock Keeping Unit) signifie également « unité de gestion des stocks » dans la terminologie d'entreprise standard.|  
 |coupe|Sous-ensemble des données d'un cube, spécifié par la limitation d'une ou de plusieurs dimensions par des membres de la dimension.|  
 |balise active|Une balise active expose des configurations de clés directement sur l'aire de conception afin d'améliorer la productivité globale lors de la conception dans Visual Studio 2005.|  
-|SMDL|Voir le terme Semantic Model Definition Language (SMDL)|  
+|SMDL|Voir autre terme : Semantic Model Definition Language (SMDL)|  
 |snapshot|Voir le terme : instantané de rapport|  
 |ordre de tri|Ensemble des règles d'un classement qui définissent l'évaluation des caractères dans les opérations de comparaison et l'ordre dans lequel ils sont triés.|  
 |données spatiales|Données qui spécifient les emplacements des objets sur une surface plate ou courbe. Les données spatiales peuvent être des points, lignes ou polygones.|  
 |types de données spatiales|Spécifie des données qui représentent des informations de géométrie (planaires) ou de géographie (géodésiques).|  
-|SQL|Voir le terme SQL (Structured Query Language)|  
+|SQL|Voir autre terme : SQL (Structured Query Language)|  
 |requête SQL|Instruction SQL, telle que SELECT, INSERT, UPDATE, DELETE ou CREATE TABLE.|  
 |Authentification SQL Server|Mécanisme de validation d'une tentative de connexion à une instance de SQL Server en spécifiant un ID de compte de connexion et un mot de passe SQL Server.|  
 |compte de connexion SQL Server|Compte stocké dans SQL Server et qui permet aux utilisateurs de se connecter à SQL Server.|  
@@ -366,7 +366,7 @@ ms.locfileid: "56298667"
 |Windows Management Instrumentation|Interface qui fournit des informations sur les objets dans un environnement managé.|  
 |WKB|Représentation des données WKB (Well Known Binary) comme spécifié par l'OGC (Open Geospatial Consortium).|  
 |WKT|Représentation des données WKT (Well Known Text) comme spécifié par l'OGC (Open Geospatial Consortium).|  
-|WMI|Voir le terme Windows Management Instrumentation|  
+|WMI|Voir autre terme : Windows Management Instrumentation|  
 |axe X|Voir le terme : axe des abscisses (x)|  
 |axe Y|Voir le terme : axe des ordonnées (y)|  
   

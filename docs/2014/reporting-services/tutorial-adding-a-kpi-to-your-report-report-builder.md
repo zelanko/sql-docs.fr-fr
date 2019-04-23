@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Ajout d’un indicateur de performance clé à votre rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Ajouter un indicateur de performance clé à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1bf77859-0b33-4f40-abaf-ebeeb6ebb1f8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5e00afd4954a328e767ccb2d991338d9dffb1dff
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5362e72fefa36102737e362a1b4ec8b11b96c77f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296447"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946017"
 ---
-# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Didacticiel : Ajout d’un indicateur de performance clé à votre rapport (Générateur de rapports)
+# <a name="tutorial-adding-a-kpi-to-your-report-report-builder"></a>Tutoriel : Ajouter un indicateur de performance clé à un rapport (Générateur de rapports)
   Un indicateur de performance clé (KPI) est une valeur mesurable qui revêt une importance significative sur le plan opérationnel. Ce didacticiel vous apprend comment inclure un indicateur de performance clé dans un rapport. Dans ce scénario, le récapitulatif des ventes par sous-catégories de produits est l'indicateur de performance clé. L'état actuel de l'indicateur de performance clé est indiqué à l'aide de couleurs, de jauges et d'indicateurs.  
   
  L'illustration suivante montre le rapport que vous allez créer.  
@@ -45,7 +45,7 @@ ms.locfileid: "56296447"
 7.  [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, choisissez une source de données, créer un jeu de données et exécuter l’Assistant, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données, créer un jeu de données et exécuter l’Assistant, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "56296447"
   
 5.  Cliquer sur **Suivant**.  
   
-6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d’informations, consultez [didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  Dans la page **Choisir une connexion à une source de données** , sélectionnez une source de données existante ou naviguez jusqu’au serveur de rapports, puis sélectionnez une source de données. Si aucune source de données n’est disponible ou que vous n’avez pas accès à un serveur de rapports, vous pouvez utiliser une source de données incorporée à la place. Pour plus d'informations, voir [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Cliquer sur **Suivant**.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "56296447"
   
 10. Cliquer sur **Suivant**.  
   
-##  <a name="CompleteWizard"></a> 2. Organiser les données, choisir la mise en page et le style à partir de l'Assistant Tableau ou matrice  
+##  <a name="CompleteWizard"></a> 2. Organiser les données, choisissez la disposition et le Style à partir de l’Assistant tableau ou matrice  
  Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la table ou de la matrice.  
   
 #### <a name="to-organize-data-into-groups-choose-a-layout-and-a-style"></a>Pour organiser les données en groupes, choisir une mise en page et un style  
@@ -159,7 +159,7 @@ ms.locfileid: "56296447"
   
 12. Cliquez sur **Terminer**.  
   
-     Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+     Le tableau est ajouté à l'aire de conception. Le tableau possède cinq colonnes et cinq lignes. Le volet Groupes de lignes affiche trois groupes de lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 13. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "56296447"
   
 1.  Dans la table, avec le bouton droit deux cellules vers le bas à partir de la `[Sum(Sales)]` cellule (ligne de sous-total qui affiche les ventes d’une sous-catégorie), puis cliquez sur **propriétés de la zone texte**.  
   
-2.  Dans **remplir**, cliquez sur le **fx** situé en regard du **couleur de remplissage** option et entrez l’expression suivante dans la **définir l’expression pour : BackgroundColor** champ :  
+2.  Dans **remplir**, cliquez sur le **fx** situé en regard du **couleur de remplissage** option et entrez l’expression suivante dans la **définir l’expression pour : BackgroundColor** :  
   
  `=IIF(Sum(Fields!Sales.Value) >= 5000 ,"Lime", IIF(Sum(Fields!Sales.Value) < 2500, "Red","Yellow"))`  
   

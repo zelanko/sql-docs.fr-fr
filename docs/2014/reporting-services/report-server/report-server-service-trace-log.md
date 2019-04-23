@@ -13,15 +13,15 @@ helpviewer_keywords:
 - system information [Reporting Services]
 - versions [Reporting Services]
 ms.assetid: 2fde08b2-137d-4f4b-88e5-216030216e0d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1c04e3d642b267660b8527502a248a386c8ba93d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bbe16cf43b546c0b4eb0c6f0c59c695dff6c7ad8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010670"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948135"
 ---
 # <a name="report-server-service-trace-log"></a>Report Server Service Trace Log
   Le journal des traces du serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] est un fichier texte ASCII qui contient des informations détaillées sur les opérations du service Report Server, y compris celles effectuées par le service web Report Server, le Gestionnaire de rapports et les traitements en arrière-plan. Le fichier journal des traces comprend des informations redondantes qui sont consignées dans d'autres fichiers journaux, ainsi que des informations qui ne se trouvent nulle part ailleurs. Les informations du journal des traces sont utiles si vous déboguez une application qui comprend un serveur de rapports, ou si vous essayez de déterminer l'origine d'un problème consigné dans le journal des événements ou le journal des exécutions.  
@@ -89,7 +89,7 @@ ms.locfileid: "56010670"
 |`Components`|Spécifie les composants pour lesquels les informations du journal des traces sont générées, ainsi que le niveau des traces, dans le format suivant :<br /><br /> \<catégorie de composant>:\<tracelevel><br /><br /> Catégories de composants pouvant être définies :<br />Le composant `All` est utilisé pour effectuer le suivi de l'activité générale du serveur de rapports de tous les processus qui ne se retrouvent pas dans les catégories spécifiques.<br />Le composant `RunningJobs` est utilisé pour effectuer le suivi d'une opération de rapport ou d'abonnement en cours.<br />Le composant `SemanticQueryEngine` est utilisé pour effectuer le suivi d'une requête sémantique qui est traitée lorsqu'un utilisateur effectue une exploration de données ad hoc dans un rapport basé sur un modèle.<br />Le composant `SemanticModelGenerator` est utilisé pour effectuer le suivi de la génération de modèle.<br />Le composant `http` sert à activer le fichier journal HTTP Report Server. Pour plus d'informations, consultez [Report Server HTTP Log](report-server-http-log.md).<br /><br /> <br /><br /> Valeurs valides pour le niveau de trace :<br /><br /> 0= Trace désactivée<br /><br /> 1= Exceptions et redémarrages<br /><br /> 2= Exceptions, redémarrages, avertissements<br /><br /> 3= Exceptions, redémarrages, avertissements, messages d'état (par défaut)<br /><br /> 4= Mode commenté<br /><br /> La valeur par défaut pour Report Server est : « all:3 ».<br /><br /> Vous pouvez spécifier l'ensemble ou une partie des composants (`all`, `RunningJobs`, `SemanticQueryEngine`, `SemanticModelGenerator`). Si vous ne voulez pas générer les informations relatives à un composant spécifique, désactivez les traces de ce composant (par exemple, « SemanticModelGenerator:0 »). Ne désactivez pas les traces du composant `all`.<br /><br /> Si vous n'ajoutez pas de niveau de trace au composant, la valeur spécifiée pour `DefaultTraceSwitch` est utilisée. Par exemple, si vous spécifiez « all,RunningJobs,SemanticQueryEngine,SemanticModelGenerator », tous les composants utilisent le niveau des traces par défaut.<br /><br /> Vous pouvez définir « SemanticQueryEngine:4 » si vous voulez afficher les instructions Transact-SQL qui sont générées pour chaque requête sémantique. Les instructions Transact-SQL sont enregistrées dans le journal des traces. L'exemple suivant illustre le paramètre de configuration qui ajoute les instructions Transact-SQL au journal :<br /><br /> \<add name="Components" value="all,SemanticQueryEngine:4" />|  
   
 ##  <a name="bkmk_add_custom"></a> Ajout d'un paramètre de configuration personnalisé destiné à spécifier l'emplacement des fichiers de vidage  
- Vous pouvez ajouter un paramètre personnalisé visant à définir l'emplacement que Dr Watson pour Windows utilise pour stocker les fichiers de vidage. Ce paramètre personnalisé est `Directory`. L'exemple suivant illustre l'utilisation de ce paramètre de configuration dans la section `RStrace` :  
+ Vous pouvez ajouter un paramètre personnalisé visant à définir l'emplacement que Outil de Watson pour Windows utilise pour stocker les fichiers de vidage. Ce paramètre personnalisé est `Directory`. L'exemple suivant illustre l'utilisation de ce paramètre de configuration dans la section `RStrace` :  
   
 ```  
 <add name="Directory" value="U:\logs\" />  

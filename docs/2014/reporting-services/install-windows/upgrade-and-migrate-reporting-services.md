@@ -9,26 +9,26 @@ helpviewer_keywords:
 - Reporting Services, upgrades
 - SQL Server Reporting Services, upgrading
 - upgrading Reporting Services
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/13/2017
-ms.openlocfilehash: 77bc8ae2bb029218d79025cb97d9fb1ed281fe6c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2ef6c53e1cb9fd11eb8cba6bb788de9b9b1fe10a
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583072"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59952845"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
 Cette rubrique est une vue d’ensemble des options de mise à niveau et migration pour [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Il existe deux approches générales liées à la mise à niveau d'un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   **Mise à niveau :** vous mettez à niveau les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur les serveurs et instances où ils sont installés. C’est ce que l’on appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d’informations, consultez la section « Native pour la Migration de SharePoint » plus loin dans ce document et de la rubrique connexe [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
+-   **Mise à niveau :** Vous mettez à niveau le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] composants sur les serveurs et instances où ils sont installés. C’est ce que l’on appelle communément une mise à niveau « sur place ». La mise à niveau sur place n'est pas prise en charge d'un mode de serveur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à un autre. Par exemple, vous ne pouvez pas mettre à niveau un serveur de rapports en mode natif vers un serveur de rapports en mode SharePoint. vous pouvez migrer vos éléments de rapport d'un mode à l'autre. Pour plus d’informations, consultez la section « Native pour la Migration de SharePoint » plus loin dans ce document et de la rubrique connexe [Sample Reporting Services rs.exe Script to Migrate Content between Report Servers](../tools/sample-reporting-services-rs-exe-script-to-copy-content-between-report-servers.md).  
   
--   **Migrer**: vous installez et configurez un nouvel environnement SharePoint, copiez vos éléments de rapport et ressources dans le nouvel environnement et configurez le nouvel environnement de façon à utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
+-   **Migrer**: Installer et configurer un nouvel environnement SharePoint, copiez vos éléments de rapport et les ressources dans le nouvel environnement et configurez le nouvel environnement pour utiliser le contenu existant. une forme de migration de niveau inférieur consiste à copier les bases de données [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , les fichiers de configuration, et si vous utilisez le mode SharePoint, les bases de données de contenu SharePoint.  
   
 ||  
 |-|  
@@ -135,7 +135,7 @@ Cette rubrique est une vue d’ensemble des options de mise à niveau et migrati
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans cette rubrique :](#bkmk_top)  
   
 ##  <a name="bkmk_native_scenarios"></a> Scénarios de mise à niveau et de migration en mode natif  
- **Mise à niveau :** la mise à niveau sur place pour le mode natif est identique pour chacune des versions prises en charge répertoriées plus haut dans cette rubrique. Exécutez l'Assistant Installation de SQL Server ou une installation à partir de la ligne de commande. L'installation suivante dans la base de données du serveur de rapports effectuera automatiquement la mise à niveau vers le nouveau schéma de base de données du serveur de rapports. Pour plus d'informations, consultez la section [In-place upgrade](#bkmk_inplace_upgrade) de cette rubrique.  
+ **Mise à niveau :** Mise à niveau sur place pour le mode natif est le même processus pour chacune des versions prises en charge répertoriées plus haut dans cette rubrique. Exécutez l'Assistant Installation de SQL Server ou une installation à partir de la ligne de commande. L'installation suivante dans la base de données du serveur de rapports effectuera automatiquement la mise à niveau vers le nouveau schéma de base de données du serveur de rapports. Pour plus d'informations, consultez la section [In-place upgrade](#bkmk_inplace_upgrade) de cette rubrique.  
   
  Le processus de mise à niveau commence lorsque vous sélectionnez une instance de serveur de rapports existante à mettre à niveau.  
   
@@ -165,7 +165,7 @@ Cette rubrique est une vue d’ensemble des options de mise à niveau et migrati
   
 9. L'installation fusionne les paramètres dans les fichiers de configuration. En utilisant comme base les fichiers de configuration de l'installation actuelle, les nouvelles entrées sont ajoutées. Les entrées obsolètes ne sont pas supprimées, mais ne seront plus lues après la mise à niveau par le serveur de rapports. La mise à niveau ne supprime pas les anciens fichiers journaux, le fichier RSWebApplication.config obsolète ou les paramètres de répertoire virtuel dans IIS. La mise à niveau ne supprime pas le Concepteur de rapports de SQL Server 2005, Management Studio ou autres outils clients. Si vous n'en avez plus besoin, veillez à supprimer ces fichiers et outils après la mise à niveau.  
   
- **Migration :** la migration d'une version précédente d'une installation en mode natif vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est identique à celle de toutes les versions prises en charge répertoriées plus haut dans cette rubrique. Pour plus d’informations, consultez [Migrer une installation Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
+ **Migration :** Migration d’une version précédente d’une installation en mode natif vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] est identique à celle de toutes les versions prises en charge répertoriées plus haut dans cette rubrique. Pour plus d’informations, consultez [Migrer une installation Reporting Services &#40;mode natif&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-native-mode.md).  
   
  ![Icône de flèche utilisée avec le lien Retour au début](../../2014-toc/media/uparrow16x16.gif "icône de flèche utilisée avec le lien Retour au début") [dans cette rubrique :](#bkmk_top)  
   
@@ -204,7 +204,7 @@ Cette rubrique est une vue d’ensemble des options de mise à niveau et migrati
   
  **Environnement final :** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010 ou SharePoint 2013.  
   
--   **SharePoint 2010 :** La mise à niveau sur place de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est prise en charge, mais le scénario de mise à niveau ne nécessite pas de temps mort de l'environnement SharePoint.  
+-   **SharePoint 2010 :** Mise à niveau sur place [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est pris en charge, mais le scénario de mise à niveau nécessite l’arrêt de l’environnement SharePoint.  
   
      Si vous souhaitez également que l'environnement de fin exécute SharePoint 2013, vous devez effectuer une mise à niveau avec attachement des bases de données de SharePoint 2010 vers SharePoint 2013.  
   
@@ -213,7 +213,7 @@ Cette rubrique est une vue d’ensemble des options de mise à niveau et migrati
      Si vous avez une installation [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] intégrée à SharePoint 2010, vous ne pouvez pas effectuer une mise à niveau sur place du serveur SharePoint. Toutefois, vous pouvez migrer les bases de données de contenu et les bases de données d'application de service de la batterie de serveurs SharePoint 2010 vers une batterie de serveurs SharePoint 2013.  
   
 ### <a name="includesskilimanjaroincludessskilimanjaro-mdmd-to-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- **Environnement de départ :** SQL Server 2008 R2, SharePoint 2010.  
+ **Environnement de départ :** SQL Server 2008 R2, SharePoint 2010.  
   
  **Environnement final :** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SharePoint 2010.  
   

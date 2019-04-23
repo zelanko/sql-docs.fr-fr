@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0fa6cb36-68fc-4fb8-b1dc-ae4f12bf6ff0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ccd079eeda467e77c8fb8daa1d95533a5e8532b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 53fc7b585edf852d04256c9e85fa0bd96aa7eced
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56029470"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960895"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Utiliser PowerShell pour modifier et répertorier les propriétaires d’abonnements Reporting Services, et exécuter un abonnement
   À compter de [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] , vous pouvez transférer par programmation la propriété d’un abonnement [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] d’un utilisateur à un autre. Cette rubrique fournit plusieurs scripts Windows PowerShell que vous pouvez utiliser pour modifier ou simplement dresser la liste des appartenances aux abonnements. Chaque exemple comprend un exemple de syntaxe pour le mode Natif et le mode SharePoint. Une fois que vous avez modifié le propriétaire d'un abonnement, celui-ci s'exécute dans le contexte de sécurité du nouveau propriétaire et le champ User!UserID du rapport affiche la valeur du nouveau propriétaire. Pour plus d’informations sur le modèle objet appelé par les exemples PowerShell, consultez <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>  
@@ -58,21 +58,21 @@ ms.locfileid: "56029470"
   
  **Mode natif :**  
   
--   Dresser la liste des abonnements : (Lien hypertexte « https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx» ReadSubscription sur le rapport et l’utilisateur est propriétaire de l’abonnement) ou ReadAnySubscription  
+-   Liste des abonnements : (Lien hypertexte « https://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx» ReadSubscription sur le rapport et l’utilisateur est propriétaire de l’abonnement) ou ReadAnySubscription  
   
--   Modifier des abonnements : l'utilisateur doit être membre du groupe BUILTIN\\Administrateurs  
+-   Modifier des abonnements : L’utilisateur doit être membre du groupe BUILTIN\Administrators  
   
--   Dresser la liste des enfants : ReadProperties sur Item  
+-   Liste des enfants : ReadProperties sur Item  
   
--   Déclencher un événement : GenerateEvents (Système)  
+-   Déclencher un événement : GenerateEvents (système)  
   
  **Mode SharePoint :**  
   
--   Dresser la liste des abonnements : ManageAlerts ou (lien hypertexte « https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx» CreateAlerts sur le rapport et l’utilisateur est propriétaire de l’abonnement et l’abonnement est un abonnement planifié).  
+-   Liste des abonnements : ManageAlerts ou (lien hypertexte « https://technet.microsoft.com/library/microsoft.sharepoint.spbasepermissions.aspx» CreateAlerts sur le rapport et l’utilisateur est propriétaire de l’abonnement et l’abonnement est un abonnement planifié).  
   
 -   Modifier des abonnements : ManageWeb  
   
--   Dresser la liste des enfants : ViewListItems  
+-   Liste des enfants : ViewListItems  
   
 -   Déclencher un événement : ManageWeb  
   
@@ -99,7 +99,7 @@ ms.locfileid: "56029470"
   
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]  
   
-##  <a name="bkmk_list_ownership_all"></a> Script : dresser la liste des propriétaires de tous les abonnements  
+##  <a name="bkmk_list_ownership_all"></a> Script : Répertorier les propriétaires de tous les abonnements  
  Ce script dresse la liste de tous les abonnements sur un site. Vous pouvez utiliser ce script pour tester votre connexion ou pour vérifier le chemin d'accès aux rapports et l'ID d'abonnement utilisables dans les autres scripts. Il est également utile pour simplement vérifier quels abonnements existent et qui en est le propriétaire.  
   
  **Syntaxe en mode natif :**  
@@ -136,7 +136,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]  
 >  Pour vérifier les URL de site en mode SharePoint, utilisez l’applet de commande SharePoint **Get-SPSite**. Pour plus d’informations, consultez [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).  
   
-##  <a name="bkmk_list_all_one_user"></a> Script : dresser la liste de tous les abonnements détenus par un utilisateur spécifique  
+##  <a name="bkmk_list_all_one_user"></a> Script : Répertorier tous les abonnements détenus par un utilisateur spécifique  
  Ce script dresse la liste de tous les abonnements détenus par un utilisateur spécifique. Vous pouvez utiliser ce script pour tester votre connexion ou pour vérifier le chemin d'accès aux rapports et l'ID d'abonnement utilisables dans les autres scripts. Il est utile en cas de départ d'un employé de votre organisation, si vous souhaitez vérifier les abonnements qu'il détenait afin d'en modifier le propriétaire ou de supprimer les abonnements.  
   
  **Syntaxe en mode natif :**  
@@ -173,7 +173,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}  
 ```  
   
-##  <a name="bkmk_change_all"></a> Script : modifier la propriété de tous les abonnements détenus par un utilisateur spécifique  
+##  <a name="bkmk_change_all"></a> Script : Modifier la propriété de tous les abonnements détenus par un utilisateur spécifique  
  Ce script affecte un nouveau propriétaire à tous les abonnements détenus par un utilisateur spécifique.  
   
  **Syntaxe en mode natif :**  
@@ -243,7 +243,7 @@ ForEach ($item in $items)
 }  
 ```  
   
-##  <a name="bkmk_list_for_1_report"></a> Script : dresser la liste de tous les abonnements associés à un rapport spécifique  
+##  <a name="bkmk_list_for_1_report"></a> Script : Liste de tous les abonnements associés à un rapport spécifique  
  Ce script dresse la liste de tous les abonnements associés à un rapport spécifique. La syntaxe du chemin d'accès au rapport est différente en mode SharePoint, car elle nécessite une URL complète. Dans les exemples de syntaxe, le nom du rapport utilisé est « title only », qui contient un espace et nécessite par conséquent de placer le nom du rapport entre guillemets simples.  
   
  **Syntaxe en mode natif :**  
@@ -281,7 +281,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}  
 ```  
   
-##  <a name="bkmk_change_all_1_subscription"></a> Script : modifier la propriété d'un abonnement spécifique  
+##  <a name="bkmk_change_all_1_subscription"></a> Script : Modifier le propriétaire d’un abonnement spécifique  
  Ce script modifie la propriété d'un abonnement spécifique. L'abonnement est identifié par le paramètre SubscriptionID, que vous passez dans le script. Vous pouvez utiliser l'un des scripts de liste d'abonnements pour déterminer le SubscriptionID correct.  
   
  **Syntaxe en mode natif :**  
@@ -327,7 +327,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status  
 ```  
   
-##  <a name="bkmk_run_1_subscription"></a> Script : exécuter (déclencher) un seul abonnement  
+##  <a name="bkmk_run_1_subscription"></a> Script : Exécuter (déclencher) un seul abonnement  
  Ce script exécute un abonnement spécifique à l'aide de la méthode FireEvent. Le script exécute immédiatement l'abonnement quelle que soit la planification configurée pour lui. L'EventType est comparé à l'ensemble connu d'événements définis dans le fichier de configuration du serveur de rapports **rsreportserver.config** . Le script utilise le type d'événement suivant pour les abonnements standard :  
   
  `<Event>`  

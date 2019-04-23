@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f37edda0-19e6-489e-b544-8751fa6b6cfb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e2e0a15c9b60faf43a7e067d696f2a6cdeb5b7b1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 00bc66f116a489858d6383d90a17e730792e6325
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031982"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941635"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Page des propriétés des sources de données (Gestionnaire de rapports)
   La page de propriétés des sources de données permet de définir la connexion du rapport actif à une source de données externe. Vous pouvez remplacer les informations de connexion à la source de données publiées à l'origine avec le rapport. Si plusieurs sources de données sont utilisées avec un rapport, chacune d'elles possède sa propre section dans la page de propriétés. Les sources de données sont répertoriées dans l'ordre dans lequel elles sont définies dans le rapport.  

@@ -13,15 +13,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.placeholderproperties.alignment.f1
 - sql12.rtp.rptdesigner.textproperties.alignment.f1
 ms.assetid: ea2bbcec-03d8-42e7-8f8e-3cccd9548586
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c450670f38ba1fd9b7e9b17ce697c56f37e552b2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0663bfce435187be66889858316b5ced0573f149
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039780"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953715"
 ---
 # <a name="alignment-dialog-box-for-text-and-placeholders-report-builder-and-ssrs"></a>Boîte de dialogue d'alignement du texte et des espaces réservés (Générateur de rapports et SSRS)
   Sélectionnez l'onglet **Alignement** pour positionner les valeurs dans une cellule ou région de données sélectionnée. Vous ne pouvez mettre en forme que l'alignement horizontal de chaque texte dans une zone de texte. Si vous souhaitez définir des valeurs de remplissage sur la zone de texte ou le mode d'alignement vertical du texte, utilisez les propriétés de zone de texte correspondantes. Pour plus d’informations, consultez [boîte de dialogue de propriétés de zone de texte, alignement &#40;Générateur de rapports et SSRS&#41;](../../2014/reporting-services/text-box-properties-dialog-box-alignment-report-builder-and-ssrs.md).  

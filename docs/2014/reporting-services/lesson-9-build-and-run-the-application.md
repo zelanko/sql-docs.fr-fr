@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f52d3f3a-0b09-4b34-9112-0b3655271587
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 47519a65a927184f67799a7c82a9a10d1d39c91f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: b87a8b4ba546c53dfd4e4e1819b3b01b4f5cf3bc
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56042793"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59942125"
 ---
-# <a name="lesson-9-build-and-run-the-application"></a>Leçon 9 : Générer et exécuter l’Application
+# <a name="lesson-9-build-and-run-the-application"></a>Leçon 9 : Générer et exécuter l'application
   Après avoir créé un filtre de données pour la table de données, l'étape suivante consiste à générer et à exécuter l'application de site Web.  
   
 ### <a name="to-build-and-run-the-application"></a>Pour générer et exécuter l'application  

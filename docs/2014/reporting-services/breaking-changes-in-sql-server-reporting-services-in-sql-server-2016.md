@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Reporting Services, backward compatibility
 - breaking changes [Reporting Services]
 ms.assetid: 39c7aafd-dcb9-4317-b8f7-d15828eb4f9a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 00b787d9fbeebd04b81ec608bf23745ddd733a0a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e779a88940db2883846168535e7823c1723f4b4e
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040170"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947655"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Modifications importantes de SQL Server Reporting Services dans SQL Server 2014
   Cette rubrique décrit les changements importants apportés à [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. Ces modifications peuvent interrompre les applications, scripts ou fonctionnalités fondés sur les versions antérieures de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Vous pouvez rencontrer ces problèmes lorsque vous effectuez une mise à niveau, ou dans les scripts ou les rapports personnalisés. Pour plus d'informations, consultez [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "56040170"
   
 -   Le gestionnaire de configuration [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , rskeymgmt.exe et rsconfig.exe. Au lieu d'utiliser ces utilitaires pour la configuration du mode SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , utilisez l'Administration centrale de SharePoint et PowerShell.  
   
--   SQL Server Management Studio : Les clients ne peuvent pas faire référence à un serveur avec une syntaxe telle que <nom_ordinateur>/<nom_instance>. À compter de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , la méthode recommandée consistait à utiliser une URL de site SharePoint. Par exemple, **http://<sharepoint_server>/<sharePoint_site&gt ;**. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], une URL de site SharePoint est la seule syntaxe prise en charge.  
+-   SQL Server Management Studio : Les clients ne peuvent pas faire référence à un serveur avec une syntaxe semblable à < nom_ordinateur > / < nom_instance >. À compter de la version [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] , la méthode recommandée consistait à utiliser une URL de site SharePoint. Par exemple, **http://<sharepoint_server>/<sharePoint_site&gt ;**. À compter de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], une URL de site SharePoint est la seule syntaxe prise en charge.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Le générateur de modèles de rapport est disponible dans les outils de données SQL Server  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ne prend plus en charge les projets de modèle de rapport. Le générateur de modèles de rapport n'est pas disponible dans [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]. Vous ne pouvez pas créer de nouveaux projets de modèle de rapport ni ouvrir des projets existants dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et vous ne pouvez pas créer ou mettre à jour des modèles de rapport. Pour mettre à jour des modèles de rapport, vous pouvez utiliser [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ou des outils précédents. Vous pouvez continuer à utiliser les modèles de rapport comme sources de données dans les rapports créés à l'aide d'outils [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] tels que le Générateur de rapports et le Concepteur de rapports. Le concepteur de requêtes que vous utilisez pour créer des requêtes et extraire des données de rapport à partir de modèles de rapport est toujours disponible dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  

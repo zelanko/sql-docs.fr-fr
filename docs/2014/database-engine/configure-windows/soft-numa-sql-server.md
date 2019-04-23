@@ -13,12 +13,12 @@ ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c9acd3857115a2f6fc13e74d4129630286a27323
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356129"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953825"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurer SQL Server pour utiliser soft-NUMA (SQL Server)
 Les processeurs modernes disposent de nombreux noyaux par socket. Chaque socket est généralement représenté sous forme de nœud NUMA unique. Le moteur de base de données SQL Server partitionne plusieurs structures internes et threads de service de partitionnement par nœud NUMA. Avec les processeurs contenant 10 ou plusieurs noyaux par socket, à l’aide de logiciels NUMA (soft-NUMA) pour fractionner les nœuds NUMA matériels généralement augmente l’évolutivité et performances.   
@@ -27,7 +27,6 @@ Les processeurs modernes disposent de nombreux noyaux par socket. Chaque socket 
 > Les processeurs ajoutés à chaud ne sont pas pris en charge par le soft-NUMA.
   
 ## <a name="automatic-soft-numa"></a>Soft-NUMA automatique
-
 Nœuds soft-NUMA à partir de SQL Server 2014 Service Pack 2, chaque fois que le serveur de moteur de base de données détecte plus de 8 processeurs physiques au démarrage, sont créés automatiquement si l’indicateur de trace 8079 est activé en tant que paramètre de démarrage. Cœurs de processeurs multithreads ne sont pas prises en compte pour lors du décompte des processeurs physiques. Lorsque le nombre de processeurs physiques détectés est supérieur à 8 par socket, le service de moteur de base de données crée des nœuds soft-NUMA que dans l’idéal, contient 8 cœurs, chiffre peuvent varier de 5 ou jusqu'à 9 processeurs logiques par nœud. La taille du nœud matériel peut être limitée par un masque d'affinité de l’UC. Le nombre de nœuds NUMA ne dépasse jamais le nombre maximal de nœuds NUMA pris en charge.
 
 Sans l’indicateur de trace, soft-NUMA est désactivée par défaut. Vous pouvez activer soft-NUMA à l’aide de l’indicateur de trace 8079. La modification de ce paramètre requiert le redémarrage du moteur de base de données pour s’appliquer.
@@ -35,6 +34,9 @@ Sans l’indicateur de trace, soft-NUMA est désactivée par défaut. Vous pouve
 La figure ci-dessous illustre le type d’informations concernant le soft-NUMA qui s’affiche dans le journal des erreurs SQL Server lorsque SQL Server détecte des nœuds NUMA matériels avec plus de 8 processeurs logiques et si l’indicateur de trace 8079 est activé.
 
 ![Soft-NUMA](./media/soft-numa-sql-server/soft-numa.PNG)
+
+> [!NOTE]
+> En commençant par SQL Server 2016, ce comportement est contrôlé par le moteur d’indicateur de trace 8079 n’a aucun effet.
 
 ## <a name="manual-soft-numa"></a>Soft-NUMA manuel
   
@@ -55,7 +57,7 @@ Pour configurer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour u
   
  L'instance A, confrontée à des E/S importantes, possède maintenant deux threads d'E/S et un thread d'écriture différée, tandis que l'instance B, qui exécute des opérations nécessitant des ressources UC conséquentes, ne possède qu'un seul thread d'E/S et un seul thread d'écriture différée. Il est possible d'affecter des quantités de mémoire différentes aux instances, mais contrairement à l'accès NUMA matériel, elles reçoivent toutes deux la mémoire du même bloc mémoire du système d'exploitation et il n'existe pas d'affinité entre la mémoire et le processeur.  
   
- Le thread d'écriture différée est lié à la vue du système d'exploitation SQL des nœuds de mémoire NUMA physiques. Par conséquent, tout ce que le matériel présente sous la forme de nœuds NUMA physiques va correspondre au nombre de thread d'écriture différée qui sont créés. Pour plus d’informations, consultez [fonctionnement : Soft-NUMA, Thread d’achèvement d’e/s, travailleurs de l’écriture différée et nœuds de mémoire](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ Le thread d'écriture différée est lié à la vue du système d'exploitation SQL des nœuds de mémoire NUMA physiques. Par conséquent, tout ce que le matériel présente sous la forme de nœuds NUMA physiques va correspondre au nombre de thread d'écriture différée qui sont créés. Pour plus d’informations, consultez [How It Works: Soft-NUMA, Thread d’achèvement d’e/s, travailleurs de l’écriture différée et nœuds de mémoire](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]  
 >  Les clés de Registre **NUMA logiciel** ne sont pas copiées quand vous mettez à niveau une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

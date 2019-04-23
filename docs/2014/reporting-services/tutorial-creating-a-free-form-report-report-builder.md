@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : création d’un rapport au format libre (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eaf7f68cb2658b50bf21ea188324f5208acd488a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9e1246a32f890c5842a1d1a9c8ad0202c160a171
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286799"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951245"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Didacticiel : création d'un rapport au format libre (Générateur de rapports)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutoriel : Création d’un rapport de forme libre (Générateur de rapports)
   Ce didacticiel vous apprend à créer un rapport de forme libre SSRS qui ressemble à une lettre type. Vous pouvez organiser les éléments du rapport pour créer un formulaire avec des zones de texte, des images et autres régions de données.  
   
  Le rapport que vous créez dans ce didacticiel est basé sur des exemples de données de vente incluses dans le didacticiel. Le rapport regroupe les informations par secteur de vente et affiche le nom du directeur des ventes pour le secteur, ainsi que des informations détaillées et de synthèse sur les ventes. Vous allez utiliser la région de données de liste comme base du rapport de forme libre, puis ajouterez un panneau décoratif avec une image, du texte statique avec des données insérées, un tableau pour afficher les informations détaillées, et éventuellement, un graphique à secteurs et un histogramme pour afficher les informations de synthèse.  
@@ -46,7 +46,7 @@ ms.locfileid: "56286799"
   
 -   [Ajouter la visualisation des données de synthèse](#Visualization)  
   
- Durée estimée pour effectuer ce didacticiel : 20 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -224,7 +224,7 @@ ms.locfileid: "56286799"
   
 2.  Sous l'onglet **Insertion** du ruban, cliquez sur **Zone de texte**, puis faites glisser une zone de texte en haut à gauche de la liste, à l'intérieur du rectangle que vous avez ajouté précédemment. Définissez la taille de la zone de texte sur environ 3 pouces de haut et 5 pouces de large.  
   
-3.  Placez le curseur dans la partie supérieure de la zone de texte, puis tapez  : **Newsletter for**.  
+3.  Placez le curseur dans la partie supérieure de la zone de texte et tapez : **Newsletter for**.  
   
      ![Ajouter un texte de titre au bulletin d’informations](../../2014/tutorials/media/tutorial-newsletterfor.png "Ajouter un texte de titre au bulletin d’informations")  
   
@@ -245,7 +245,7 @@ ms.locfileid: "56286799"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-9. Placez le curseur sous le texte que vous avez tapé à l'étape 3, puis tapez : **Hello** .  
+9. Placez le curseur sous le texte que vous avez tapé dans l’étape 3 et tapez : **Hello** .  
   
     > [!NOTE]  
     >  Veillez à inclure l'espace supplémentaire après « Bonjour ». Cet espace sépare le texte du champ que vous allez ajouter à l'étape suivante.  
@@ -279,7 +279,7 @@ ms.locfileid: "56286799"
   
      ![Ajouter du texte du bulletin d’informations](../../2014/tutorials/media/tutorial-newslettertext.png "ajouter du texte du bulletin d’informations")  
   
-20. Placez le curseur sous le texte que vous avez collé à l'étape 15, puis tapez : **Félicitations pour votre total de ventes** .  
+20. Placez le curseur sous le texte que vous avez collé à étape 15 et tapez : **Félicitations pour votre total de ventes** .  
   
     > [!NOTE]  
     >  Veillez à inclure l'espace supplémentaire après la virgule. Cet espace sépare le texte du champ que vous allez ajouter à l'étape suivante.  

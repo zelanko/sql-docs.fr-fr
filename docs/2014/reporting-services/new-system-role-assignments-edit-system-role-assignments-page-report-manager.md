@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 62a22ab9-1eb4-4ce5-8dd7-06b5ed2d9a2a
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7c1354228c1afbebe519a94d16973d024b84caac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 18adcf15f92ded91a4bacc5342162b82b4aec375
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032390"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951535"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Nouvelle attribution de rôle système : Modifier la Page attributions de rôle système (Gestionnaire de rapports)
   La page Nouvelle attribution de rôle système ou Modifier les attributions de rôle système vous permet de définir la sécurité pour le serveur de rapports. La sécurité est définie par l'intermédiaire des attributions de rôle qui mappent des groupes ou des utilisateurs spécifiques aux tâches qu'ils peuvent effectuer. La liste des tâches est représentée sous la forme d'une définition de rôle que vous sélectionnez lors de l'attribution de rôle.  

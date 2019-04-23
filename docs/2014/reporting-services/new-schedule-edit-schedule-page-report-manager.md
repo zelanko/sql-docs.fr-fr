@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 52a4d250-e185-4116-a29c-d809940a00fb
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 97af25216bd0f1e30531fcb43e182672cd299ac6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a43744243713fb522356814df8fa80a3e11197bd
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034544"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59967915"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Nouvelle planification : Modifier la Page de planification (Gestionnaire de rapports)
   La page Nouvelle planification / Modifier la planification permet de créer une planification pour un rapport. Les planifications sont utilisées avec des abonnements. Elles permettent en outre d'actualiser des rapports mis en cache et de créer des instantanés en tant qu'éléments autonomes ou dans un historique de rapport.  
@@ -79,7 +79,7 @@ ms.locfileid: "56034544"
   
 -   **Heure** définit une planification qui s'exécute toutes les heures. Utilisez la section **Dates de début et de fin** pour spécifier le jour d'exécution de la planification.  
   
--   **Jour** définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : Chaque \< *jour*>, tous les jours ouvrables et chaque \< *nombre*> jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
+-   **Jour** définit une planification qui s'exécute les jours sélectionnés à une heure spécifique. Vous pouvez spécifier les jours comme suit : Chaque \< *jour*>, tous les jours ouvrables et chaque \< *nombre*> jours. La sélection d'une option rend les autres inapplicables même si d'autres jours semblent sélectionnés.  
   
 -   **Semaine** définit une planification qui s'exécute toutes les semaines à une heure spécifique. L'intervalle peut correspondre à des semaines entières (toutes les deux semaines, par exemple) ou à des jours compris dans la semaine.  
   

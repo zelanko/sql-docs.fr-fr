@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SQL Server Reporting Services, tools
 - architecture [Reporting Services]
 ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 144cce158e6b4f8814392a996699ddbe214ca628
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016030"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59939845"
 ---
 # <a name="reporting-services-tools"></a>Outils de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contient un ensemble d'outils de graphisme et de script qui prennent en charge le développement et l'utilisation de rapports complets dans un environnement géré. Le jeu d'outils comprend des outils de développement, des outils de configuration et d'administration, et des outils d'affichage des rapports. Cette rubrique donne une vue d'ensemble de chaque outil, ainsi que son mode d'accès, dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -39,7 +39,7 @@ ms.locfileid: "56016030"
   
 |Tool|Description|Procédure accès|  
 |----------|-----------------|-------------------|  
-|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Une exploration interactive des données et une expérience de présentation visuelle conçue pour vous permettre de créer et interagir avec les rapports basés sur des modèles tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Remarque : Requiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode intégré SharePoint.|Navigateur avec Silverlight.|  
+|[!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]|Une exploration interactive des données et une expérience de présentation visuelle conçue pour vous permettre de créer et interagir avec les rapports basés sur des modèles tabulaires de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .<br /><br /> Remarque : Requiert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode SharePoint.|Navigateur avec Silverlight.|  
 |Concepteur de rapports|Utilisez cet outil pour concevoir des rapports et déployer sur un serveur de rapports en mode natif ou en mode SharePoint.<br /><br /> Hébergé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]<br /><br /> Volet des données de rapport pour organiser les données utilisées dans votre rapport<br /><br /> Vues à onglets pour la conception et aperçu pour la création de rapports interactifs<br /><br /> Des concepteurs de requêtes pour spécifier les données à récupérer à partir de sources de données, et qui sont associés à la source de données dans [RSReportDesigner Configuration File](../report-server/rsreportdesigner-configuration-file.md)<br /><br /> Un éditeur d'expression avec Intellisense pour générer les expressions de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] qui personnalisent le contenu et l'apparence d'un rapport<br /><br /> Prend en charge les éléments de rapport personnalisés et les concepteurs de requêtes personnalisés<br /><br /> <br /><br /> Pour plus d’informations, consultez [Reporting Services dans les outils de données SQL Server &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]|  
 |Générateur de rapports|Utilisez cet outil pour concevoir des rapports et déployer sur un serveur de rapports en mode natif ou en mode SharePoint.<br /><br /> Environnement de création semblable à Office de [!INCLUDE[msCoName](../../includes/msconame-md.md)]<br /><br /> Capacité à enregistrer des éléments de rapport en tant que parties de rapports<br /><br /> Un assistant pour la création de cartes<br /><br /> Agrégat d'agrégats<br /><br /> Prise en charge améliorée des expressions<br /><br /> Des concepteurs de requêtes pour spécifier quelles données extraire d'une sélection de types de sources de données intégrées<br /><br /> <br /><br /> Pour plus d’informations, consultez [le Générateur de rapports &#40;SSRS&#41;](report-builder-authoring-environment-ssrs.md).|Téléchargez MSI ou ouvrez le gestionnaire de rapports/de SharePoint|  
   

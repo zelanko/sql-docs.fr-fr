@@ -11,15 +11,15 @@ helpviewer_keywords:
 - reports [Reporting Services], display options
 - URL access [Reporting Services], report display parameters
 ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fcbf2d23dc543edbd6fc6fc20136f0ff4e81bd90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d57d3a1b50b88bfd2ec27641cca4f7058f9639f1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031730"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955885"
 ---
 # <a name="url-access-parameter-reference"></a>Référence de paramètre d’accès URL
   Vous pouvez utiliser les paramètres suivants dans le cadre d'une URL pour configurer l'apparence de vos rapports. Les paramètres les plus courants sont répertoriés dans cette section. Les paramètres ne sont pas sensibles à la casse et commencent par le préfixe de paramètre *rs:* s’ils sont dirigés vers le serveur de rapports ou par *rc:* s’ils sont dirigés vers une visionneuse HTML. Vous pouvez également spécifier des paramètres spécifiques aux périphériques ou des extensions de rendu. Pour plus d’informations sur les paramètres spécifiques au périphérique, consultez [Spécifier les paramètres d’informations de périphérique dans une URL](specify-device-information-settings-in-a-url.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "56031730"
 |*PersistStreams*|Effectue le rendu d'un flux de données persistant distinct. Ce paramètre est repris par le convertisseur d'image pour transmettre le rapport segment par segment. Après avoir utilisé ce paramètre dans une chaîne d'accès à l'URL, utilisez cette même chaîne avec le paramètre *GetNextStream* au lieu du paramètre *PersistStreams* pour obtenir le segment suivant dans le flux de données persistant. Cette URL permet d'obtenir un flux de 0 octets. Il désigne la fin du flux persistent. La valeur par défaut est `false`.|  
 |*GetNextStream*|Permet d’obtenir le bloc de données suivant dans un flux persistant auquel vous accédez à l’aide du paramètre *PersistStreams* . Pour plus d'informations, consultez la description de *PersistStreams*. La valeur par défaut est `false`.|  
 |*SessionID*|Spécifie une session de rapport active établie entre l'application cliente et le serveur de rapports. La valeur de ce paramètre est l'identificateur de session.<br /><br /> Vous pouvez spécifier l'ID de session en tant que cookie ou dans le cadre de l'URL. Lorsque le serveur de rapports a été configuré de manière à ne pas utiliser de cookies de session, la première demande sans un ID de session spécifié provoque une redirection avec un ID de session. Pour plus d'informations sur les sessions de serveur de rapports, consultez [Identifying Execution State](report-server-web-service-net-framework-soap-headers/identifying-execution-state.md).|  
-|*ClearSession*|Une valeur de `true` indique au serveur de rapports de supprimer un rapport d'une session de rapport. Toutes les instances de rapport associées à un utilisateur authentifié sont supprimées de la session de rapport. (Par définition, une instance de rapport est un rapport identique exécuté plusieurs fois avec des valeurs de paramètre de rapport différentes.) La valeur par défaut est `false`.|  
+|*ClearSession*|Une valeur de `true` indique au serveur de rapports de supprimer un rapport d'une session de rapport. Toutes les instances de rapport associées à un utilisateur authentifié sont supprimées de la session de rapport. (Une instance de rapport est définie en tant que rapport identique exécuté plusieurs fois avec les valeurs de paramètre de rapport différent). La valeur par défaut est `false`.|  
 |*ResetSession*|Une valeur de `true` dirige le serveur de rapports de manière à réinitialiser la session de rapport en supprimant l'association entre la session de rapport et tous les instantanés de rapport. La valeur par défaut est `false`.|  
 |*ShowHideToggle*|Bascule de l'état afficher à masquer d'une section du rapport. Spécifiez un entier positif pour représenter la section à basculer.|  
   

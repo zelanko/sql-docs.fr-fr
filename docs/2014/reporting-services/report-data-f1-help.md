@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 61b91ccf-7b4c-4f3d-8992-2c8eb105ccf4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 555cbc9e0151f68ab560fdc6620d1c6566770e57
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9979c894d4dc74fc3f9c2783bdc7a46131f94e5c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56285578"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936116"
 ---
 # <a name="report-data-f1-help"></a>Aide F1 de données de rapport
   Les rubriques de cette section fournissent des informations sur les options que vous pouvez définir sur les sources de données, les sources de données partagées, les datasets, ainsi que des informations sur les concepteurs de requêtes disponibles dans le Concepteur de rapports.  

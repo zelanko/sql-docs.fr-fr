@@ -13,15 +13,15 @@ helpviewer_keywords:
 - encryption keys [Reporting Services]
 - symmetric keys [Reporting Services]
 ms.assetid: 6773d5df-03ef-4781-beb7-9f6825bac979
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 558c27c978ec6343b6185fab3792906c6d21ad52
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43e705bf75e70b12c8201fb583462e2ee36c31c7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036590"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59943195"
 ---
 # <a name="back-up-and-restore-reporting-services-encryption-keys"></a>Sauvegarder et restaurer les clés de chiffrement Reporting Services
   Une part importante de la configuration d'un serveur de rapports est réservée à la création d'une copie de sauvegarde de la clé symétrique utilisée pour le chiffrement d'informations confidentielles. Cet exemplaire de clé sauvegardée est nécessaire dans de nombreuses opérations courantes. Elle vous permet de réutiliser une base de données de serveur de rapports existante dans une nouvelle installation.  
@@ -49,7 +49,7 @@ ms.locfileid: "56036590"
   
  **Mode natif :** Le Reporting Services Gestionnaire de Configuration ou le **rskeymgmt** utilitaire.  
   
- **Mode SharePoint :** pages de l'Administration centrale de SharePoint ou PowerShell.  
+ **Mode SharePoint :** Pages d’Administration centrale de SharePoint ou PowerShell.  
   
 ####  <a name="bkmk_backup_sharepoint"></a> Sauvegarde de serveurs de rapports en mode SharePoint  
  Pour les serveurs de rapports en mode SharePoint, vous pouvez utiliser des commandes PowerShell ou utiliser les pages de gestion pour l'application de service [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Pour plus d’informations, consultez la section « Gestion des clés » de l’article [Gérer une application de service Reporting Services SharePoint](../manage-a-reporting-services-sharepoint-service-application.md).  

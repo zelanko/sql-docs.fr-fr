@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], managing
 ms.assetid: 7f46cbdb-5102-4941-bca2-5e0ff9012c6b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 44bf77f23724f51ddc75f708e5663b43e607df0e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f93148eed4b059a3c7f9a591b08b885c948ffd4c
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023910"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953685"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Créer et gérer des abonnements pour les serveurs de rapports en mode natif
   Cette section contient des rubriques sur le traitement, la supervision et le contrôle des abonnements. La gestion des abonnements varie selon qu'il s'agit d'abonnements standard ou pilotés par les données. Les abonnements standard sont généralement gérés par les utilisateurs qui en sont également les propriétaires. En revanche, les abonnements pilotés par les données sont généralement créés par un administrateur de serveur de rapports, qui en assure également la maintenance.  

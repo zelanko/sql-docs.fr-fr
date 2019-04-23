@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5b55fff2-1b15-4156-83ef-15ad9cf9f509
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1be357ab864a0d7249a2f9d4529591813b4a01ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e7442847c4c96148635320335956a02cec2bad87
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028010"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945395"
 ---
 # <a name="xml-connection-type-ssrs"></a>Type de connexion XML (SSRS)
   Pour inclure les données d'une source de données XML dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type XML. Ce type de source de données intégré est basé sur l'extension de données XML. Ce type de source de données vous permet de vous connecter et de récupérer des données à partir de documents XML, de services Web ou de données XML incorporées dans la requête.  
@@ -115,7 +115,7 @@ ms.locfileid: "56028010"
 ### <a name="requirements-for-retrieving-xml-web-service-data"></a>Configuration requise pour la récupération de données d'un service Web XML  
  L'extension pour le traitement des données XML ne détecte pas le schéma automatiquement. Vous devez donc disposer d'un moyen d'identifier quelles méthodes SOAP permettent d'extraire les données de votre choix. Vous devez également comprendre le schéma d'adressage ou l'espace de noms que le service Web utilise pour ses données.  
   
- Pour un service Web, vous pouvez fournir un élément <`Query`> qui spécifie une méthode à appeler ou une action SOAP. Vous pouvez laisser la requête vide et adopter la requête par défaut si la source de données XML dispose d'une structure hiérarchique produisant les données que vous souhaitez utiliser dans votre rapport. Les valeurs de nœud d'élément XML et les attributs récupérés lors de l'exécution de la requête correspondent aux champs de dataset que vous utilisez dans votre rapport.  
+ Pour un service Web, vous pouvez fournir un <`Query`> élément qui spécifie une méthode à appeler ou une action SOAP. Vous pouvez laisser la requête vide et adopter la requête par défaut si la source de données XML dispose d'une structure hiérarchique produisant les données que vous souhaitez utiliser dans votre rapport. Les valeurs de nœud d'élément XML et les attributs récupérés lors de l'exécution de la requête correspondent aux champs de dataset que vous utilisez dans votre rapport.  
   
 ### <a name="requirements-for-retrieving-xml-document-data"></a>Conditions requises pour la récupération de données de documents XML  
  À l'aide du protocole HTTP, le serveur doit retourner les données XML ou ces dernières doivent être incorporées dans l'élément `Query` XML. Si vous faites directement référence à un document XML à l'aide du protocole HTTP, l'extension employée doit être l'extension .xml.  

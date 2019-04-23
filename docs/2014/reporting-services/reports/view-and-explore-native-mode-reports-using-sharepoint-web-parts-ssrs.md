@@ -8,22 +8,22 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: dee8ee42-156b-43b6-b202-02dfb9404284
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 17706542014f3835cb0a100d7dbf3e579b47aa65
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 77a18098a80686fcb12aca64f5b7d1452fbff452
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010654"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964955"
 ---
 # <a name="view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs"></a>Afficher et explorer des rapports en mode natif à l’aide de composants WebPart SharePoint (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit plusieurs composants WebPart qui fonctionnent avec des versions spécifiques d'un serveur de rapports et dans des modes de déploiement particulier.  
   
--   **Mode natif :** Si vous souhaitez accéder au contenu d'un serveur de rapports sur un site SharePoint à partir d'un serveur de rapports en mode natif, utilisez les composants WebPart de SharePoint 2.0, Explorateur de rapports et Visionneuse de rapports, inclus dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Cette rubrique fournit des instructions pour l'installation et l'utilisation des composants WebPart 2.0.  
+-   **Mode natif :** Si vous souhaitez accéder au contenu de serveur de rapports sur un site SharePoint à partir d’un serveur de rapports en mode natif, utilisez la visionneuse de rapports qui sont inclus avec les composants WebPart SharePoint 2.0 rapport Explorateur [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Cette rubrique fournit des instructions pour l'installation et l'utilisation des composants WebPart 2.0.  
   
--   **Mode SharePoint :** si vous souhaitez accéder à un serveur de rapports qui s'exécute en mode SharePoint, utilisez les composants WebPart qui sont installés par le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Pour plus d’informations sur le complément, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
+-   **Mode SharePoint :** Si vous souhaitez accéder à un serveur de rapports qui s’exécute en mode SharePoint, utilisez les composants WebPart qui sont installés par le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] complément pour les produits SharePoint. Pour plus d’informations sur le complément, consultez [Où trouver le complément Reporting Services pour les produits SharePoint](../install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  
   
 -   > [!NOTE]  
     >  Le composant WebPart Visionneuse de rapports en mode natif (SPViewer.dwp) est différent du composant (ReportViewer.dwp) qui est installé par le complément [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour les produits SharePoint. Ces composants WebPart présentent des schémas et des implémentations différents, mais ils peuvent être installés tous les deux sur la même batterie de serveurs SharePoint. Vous pouvez distinguer visuellement les deux composants WebPart, car le composant WebPart Visionneuse de rapports installé via le complément **Actions** possède un menu dans la barre d’outils.  

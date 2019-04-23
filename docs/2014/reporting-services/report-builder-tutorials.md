@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11e1f02ebe6c1d8965d7f42b76dc6057824c59c5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: a7d077ffdddaf88a004e5b1fc7e35c08fb3e2562
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291557"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59957195"
 ---
 # <a name="tutorials-report-builder"></a>Didacticiels (Générateur de rapports)
   Utilisez les didacticiels suivants relatifs au Générateur de rapports pour apprendre à créer des rapports de base.  
@@ -38,22 +38,22 @@ ms.locfileid: "56291557"
  [Didacticiel : Création d’un rapport de forme libre &#40;Générateur de rapports&#41;](tutorial-creating-a-free-form-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à créer un rapport de forme libre entièrement nouveau. Ce rapport a l'apparence d'un bulletin d'informations.  
   
- [Didacticiel : Mettre en forme texte &#40;Générateur de rapports&#41;](tutorial-format-text-report-builder.md)  
+ [Didacticiel : Mettre en forme du texte &#40;Générateur de rapports&#41;](tutorial-format-text-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre quelques-unes des nombreuses manières de mettre en forme le texte de vos rapports.  
   
- [Didacticiel : Ajouter un histogramme au rapport &#40;Générateur de rapports&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
+ [Didacticiel : Ajouter un histogramme à un rapport &#40;Générateur de rapports&#41;](tutorial-add-a-column-chart-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à ajouter un histogramme avec une moyenne mobile à un rapport.  
   
- [Didacticiel : Ajouter un graphique à secteurs à votre rapport &#40;Générateur de rapports&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
+ [Didacticiel : Ajouter un graphique à secteurs à un rapport &#40;Générateur de rapports&#41;](tutorial-add-a-pie-chart-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à ajouter un graphique à secteurs à un rapport.  
   
- [Didacticiel : Ajouter un graphique à barres à votre rapport &#40;Générateur de rapports&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
+ [Didacticiel : Ajouter un graphique à barres à un rapport &#40;Générateur de rapports&#41;](tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à ajouter un graphique à barres à un rapport.  
   
- [Didacticiel : Ajouter un graphique Sparkline à un rapport &#40;Générateur de rapports&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
+ [Didacticiel : Ajouter un graphique sparkline à un rapport &#40;Générateur de rapports&#41;](tutorial-add-a-sparkline-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à créer une matrice, puis à ajouter un jeu de graphiques sparkline à la matrice.  
   
- [Didacticiel : Ajout d’un indicateur de performance clé à votre rapport &#40;Générateur de rapports&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+ [Didacticiel : Ajout d’un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](tutorial-adding-a-kpi-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à ajouter un indicateur de performance clé (KPI) à un rapport.  
   
  [Didacticiel : Rapport cartographique &#40;Générateur de rapports&#41;](tutorial-map-report-report-builder.md)  
@@ -62,7 +62,7 @@ ms.locfileid: "56291557"
  [Didacticiel : Ajouter un paramètre à votre rapport &#40;Générateur de rapports&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à personnaliser l’apparence et le contenu d’un rapport à l’aide de paramètres.  
   
- [Didacticiel : Création d’un rapport principal et l’extraction &#40;Générateur de rapports&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
+ [Didacticiel : Création d’un rapport principal et d’un rapport d’extraction &#40;Générateur de rapports&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md)  
  Suivez les étapes de ce didacticiel pour apprendre à créer des rapports pour un scénario d'extraction basé sur un cube Analysis Services. Vous allez créer le rapport principal et l'activer en vue de l'extraction, ainsi que le rapport cible de l'action d'extraction.  
   
  [Didacticiel : Introduction aux expressions](tutorial-introducing-expressions.md)  

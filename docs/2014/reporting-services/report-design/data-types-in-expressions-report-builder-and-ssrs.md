@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 694afd46c2b04a09bffc951cba82af91edf9b6a5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290727"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956105"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Types de données dans les expressions (Générateur de rapports et SSRS)
   Les données sont représentées par différents types de données permettant de les stocker et de les traiter de manière efficace. Les types de données typiques incluent du texte (également appelé chaînes), des numéros avec et sans décimales, des dates, des heures et des images. Les valeurs dans un rapport doivent être un type de données RDL (Report Definition Language). Vous pouvez mettre en forme une valeur selon votre préférence lorsque vous l'affichez dans un rapport. Par exemple, un champ qui représente une devise est stocké dans la définition de rapport sous la forme d'un nombre à virgule flottante, mais peut être affiché sous divers formats en fonction de la propriété de format choisie.  
@@ -34,7 +34,7 @@ ms.locfileid: "56290727"
 |String|Valeur par défaut : String<br /><br /> Chart, GUID, Timespan|  
 |Booléen|Valeur par défaut : Booléen|  
 |Entier|Valeur par défaut : Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|Valeur par défaut : DateTime<br /><br /> DateTimeOffset|  
+|Datetime|Valeur par défaut : Datetime<br /><br /> DateTimeOffset|  
 |float|Valeur par défaut : Double<br /><br /> Single, Decimal|  
 |Binaire|Valeur par défaut : Byte[]|  
 |Variant|Une des valeurs ci-dessus à l'exception de Byte[]|  
@@ -69,7 +69,7 @@ ms.locfileid: "56290727"
 -   Vérifiez si l'extension de traitement des données que vous utilisez inclut les métadonnées permettant d'extraire des données préformatées. Par exemple, une requête MDX [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] inclut une propriété étendue FORMATTED_VALUE pour les valeurs de cube qui ont déjà été mises en forme pendant le traitement du cube. Pour plus d’informations, consultez [Propriétés de champ étendues pour une base de données Analysis Services &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Présentation des types de données des paramètres  
- Paramètres de rapport doivent être un des cinq types de données : Valeur booléenne, DateTime, Integer, Float ou texte (également connu en tant que chaîne). Lorsqu'une requête de dataset comprend des paramètres de requête, des paramètres de rapport sont automatiquement créés et liés aux paramètres de requête. Le type de données par défaut d'un paramètre de rapport est String. Pour modifier le type de données par défaut d’un paramètre de rapport, sélectionnez la valeur correcte dans la liste déroulante **Type de données** de la page **Général** de la boîte de dialogue **Propriétés du paramètre de rapport** .  
+ Les paramètres de rapport doivent avoir l’un des cinq types de données : Boolean, DateTime, Integer, Float ou Text (également appelé String). Lorsqu'une requête de dataset comprend des paramètres de requête, des paramètres de rapport sont automatiquement créés et liés aux paramètres de requête. Le type de données par défaut d'un paramètre de rapport est String. Pour modifier le type de données par défaut d’un paramètre de rapport, sélectionnez la valeur correcte dans la liste déroulante **Type de données** de la page **Général** de la boîte de dialogue **Propriétés du paramètre de rapport** .  
   
 > [!NOTE]  
 >  Les paramètres de rapport utilisant le type de données DateTime ne prennent pas en charge les millisecondes. Même s'il est possible de créer un paramètre basé sur des valeurs incluant des millisecondes, vous ne pouvez pas sélectionner de valeur dans une liste déroulante de valeurs disponibles qui comprend des valeurs Date ou Time utilisant des millisecondes.  
@@ -117,7 +117,7 @@ ms.locfileid: "56290727"
   
     -   L'expression suivante convertit la chaîne en une valeur de date et heure : `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         Si la chaîne `MyDateTime.Value` utilise un décalage UTC, la fonction `DateTime.Parse` ajuste tout d'abord le décalage UTC (7 A.M. - [`+08:00`] de manière à afficher l'heure UTC 11 P.M. la nuit précédente). La fonction `DateTime.Parse` applique ensuite le décalage UTC du serveur de rapports local et, si nécessaire, ajuste à nouveau l'heure pour tenir compte de l'heure d'été. Par exemple, à Redmond, dans l'état de Washington, le décalage horaire local ajusté pour tenir compte de l'heure d'été est `[-07:00]`, ou 7 heures avant 11 PM. Le résultat est le suivant `DateTime` valeur : `2007-07-06 04:07:07 PM` (Juillet 6 2007 à 4:07 p.M).  
+         Si la chaîne `MyDateTime.Value` utilise un décalage UTC, la fonction `DateTime.Parse` ajuste tout d'abord le décalage UTC (7 A.M. - [`+08:00`] de manière à afficher l'heure UTC 11 P.M. la nuit précédente). La fonction `DateTime.Parse` applique ensuite le décalage UTC du serveur de rapports local et, si nécessaire, ajuste à nouveau l'heure pour tenir compte de l'heure d'été. Par exemple, à Redmond, dans l'état de Washington, le décalage horaire local ajusté pour tenir compte de l'heure d'été est `[-07:00]`, ou 7 heures avant 11 PM. Le résultat est le suivant `DateTime` valeur : `2007-07-06 04:07:07 PM` (6 juillet 2007 à 4:07 P.M).  
   
  Pour plus d’informations sur la conversion de chaînes en `DateTime` des types de données, consultez [l’analyse de chaînes de Date et heure](https://go.microsoft.com/fwlink/?LinkId=89703), [mise en forme la Date et l’heure pour une Culture spécifique](https://go.microsoft.com/fwlink/?LinkId=89704), et [si vous choisissez Entre DateTime, DateTimeOffset et TimeZoneInfo](https://go.microsoft.com/fwlink/?linkid=110652) sur MSDN.  
   

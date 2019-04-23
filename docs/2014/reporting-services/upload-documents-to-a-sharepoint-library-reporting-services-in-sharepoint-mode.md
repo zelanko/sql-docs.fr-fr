@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
 - uploading reports [Reporting Services]
 ms.assetid: 93bd1b19-061b-409f-8dc2-ec416b2f4b39
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c5534c1946cc07e35f64ab3baf3654a589a60706
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 83d04d6f8bb5b9c0701df3e6ba0d2c498cd2d5ea
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017150"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59960285"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Télécharger des documents vers une bibliothèque SharePoint (Reporting Services en mode SharePoint)
   Vous pouvez télécharger des définitions de rapport et des modèles de rapport vers une bibliothèque SharePoint. Lorsque vous téléchargez un élément du serveur de rapports, vous devez sélectionner une bibliothèque ou un dossier dans une bibliothèque. Vous ne pouvez pas télécharger un élément de serveur de rapports vers une liste ou une page.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 73549c4e578b65d87da4c9863f537bc898973657
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030070"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59963738"
 ---
 # <a name="dependent-items-page-report-manager"></a>Page Éléments dépendants (Gestionnaire de rapports)
   La page Éléments dépendants vous permet d'afficher la liste des rapports et modèles qui font référence à une source de données partagée. L'icône de chaque type d'élément indique s'il s'agit d'un rapport ou d'un modèle. Cette page peut être affichée en mode Liste ou Détails. Utilisez le mode Détails pour afficher plus d'informations sur chaque élément. Des options de page supplémentaires sont disponibles en mode Détails. Pour vous aider à gérer la source de données partagée, cette page fournit des liens vers les rapports et modèles qui utilisent la source de données, des métriques sur la dernière exécution ou modification du rapport ou modèle, des boutons Supprimer et Déplacer afin que vous puissiez supprimer facilement les rapports et modèles qui ne sont plus utilisés, ou les déplacer vers un emplacement différent pendant que vous déterminez s'ils sont toujours nécessaires.  

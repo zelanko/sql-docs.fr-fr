@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 1c1e265e-52a2-4de3-96fd-ca4abae01c02
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 59b1574f7c302a5cf3adc3bee04881eefd176080
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4347854a56e0d6cb021a3958203d94c28cb96d22
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032010"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936825"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planifier la conception de rapports et le déploiement de rapports (Reporting Services 2014)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] offre plusieurs approches pour créer et déployer des rapports. Utilisez cette rubrique pour planifier un environnement de création de rapports et un serveur de rapports fonctionnant ensemble. Cette rubrique offre une vue d'ensemble de la prise en charge de la définition de rapport par les composants [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] . Une définition de rapport est un fichier XML écrit dans le langage RDL (Report Definition Language) ou RDLC (Report Definition Language for Clients). Chaque définition de rapport est conforme à une version de schéma spécifique qui est indiquée au début du fichier.  
@@ -56,15 +56,15 @@ ms.locfileid: "56032010"
 ##  <a name="bkmk_report_server_rdl_schema_support"></a> Prise en charge du serveur de rapports et du schéma RDL  
  Un fichier de définition de rapport peut être déployé sur un serveur de rapports [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] des manières suivantes :  
   
--   **Concepteur de rapports :** déployez un rapport à partir du Concepteur de rapports dans [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
+-   **Concepteur de rapports :** Déployez un rapport du Concepteur de rapports dans [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)].  
   
--   **Générateur de rapports :** enregistrez un rapport sur le serveur de rapports à partir du Générateur de rapports.  
+-   **Générateur de rapports :** Enregistrer un rapport au serveur de rapports du Générateur de rapports.  
   
--   **Gestionnaire de rapports :** téléchargez un rapport vers un serveur de rapports configuré en mode natif à partir du Gestionnaire de rapports.  
+-   **Gestionnaire de rapports :** Téléchargez un rapport sur un serveur de rapports en mode natif à partir du Gestionnaire de rapports.  
   
--   **SharePoint :** téléchargez un rapport vers un site SharePoint configuré avec un serveur de rapports en mode SharePoint.  
+-   **SharePoint :** Téléchargez un rapport sur un site SharePoint qui est configuré avec un serveur de rapports en mode SharePoint.  
   
--   **Par programmation :** publiez par programme un rapport à l'aide des interfaces API SOAP vers un serveur de rapports. Pour plus d'informations, consultez [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
+-   **Par programmation :** Publiez par programme un rapport en utilisant les interfaces API SOAP à un serveur de rapports. Pour plus d'informations, consultez [Report Server Web Service](report-server-web-service/report-server-web-service.md).  
   
  Le tableau suivant indique version par version le schéma RDL pris en charge pour le serveur de rapports.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "56032010"
   
 |Contrôle ReportViewer du produit|Version de RDL pour la prévisualisation locale|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> ou<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> ou<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|RDL 2008|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> ou<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> ou<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|RDL 2008|  
 |[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> ou<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|RDL 2005|  
   
  Pour plus d'informations, consultez les documents suivants :  

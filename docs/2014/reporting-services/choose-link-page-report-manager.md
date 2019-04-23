@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ae9bebff71148f9b88228c77fb3946919c7fd197
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036120"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59965475"
 ---
 # <a name="choose-link-page-report-manager"></a>Page Choisir un lien (Gestionnaire de rapports)
   La page Choisir un lien vous permet de choisir un autre rapport sur lequel baser le rapport lié qui est actuellement sélectionné. Les rapports liés sont basés sur d'autres rapports qui sont déjà publiés sur le serveur de rapports. Un rapport lié utilise la mise en page et les données du rapport de base, mais a des pages de propriétés séparées afin que vous puissiez personnaliser les propriétés de paramètres, les paramètres de sécurité, le nom, la description et l'emplacement.  

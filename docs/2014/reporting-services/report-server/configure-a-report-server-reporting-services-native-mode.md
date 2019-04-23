@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report server configuration
 - report servers [Reporting Services], configuring
 ms.assetid: ef84ce9d-9156-48e9-8073-7e0535476932
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2097ea745bd9ddb359347ddbbaa41976e636ed4e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 12695fbbaf796097f7273134dbc5db4e294ce508
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010920"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944395"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Configurer un serveur de rapports (mode natif de Reporting Services)
   Selon les options que vous avez sélectionnées pendant l'installation, le serveur de rapports peut requérir une configuration supplémentaire avant de pouvoir fonctionner. Dans sa configuration minimale, un serveur de rapports se compose des éléments suivants :  
@@ -30,7 +30,7 @@ ms.locfileid: "56010920"
   
 -   Une base de données du serveur de rapports qui stocke des données d'application, des rapports et d'autres éléments.  
   
- Le programme d'installation configure les paramètres minimum si vous sélectionnez l’une des options d'installation suivantes : Configuration par défaut du mode natif ou configuration par défaut du mode intégré SharePoint. Si vous avez installé le serveur de rapports en mode de fichiers uniquement (option **Installer mais ne pas configurer** dans l’Assistant Installation), seul le compte de service est configuré. L'URL du service Web et la base de données du serveur de rapports doivent être configurés à l'issue de l'installation.  
+ Le programme d’installation configure les paramètres minimum si vous sélectionnez une des options d’installation suivantes : Configuration par défaut du mode natif ou configuration par défaut de mode intégré SharePoint. Si vous avez installé le serveur de rapports en mode de fichiers uniquement (option **Installer mais ne pas configurer** dans l’Assistant Installation), seul le compte de service est configuré. L'URL du service Web et la base de données du serveur de rapports doivent être configurés à l'issue de l'installation.  
   
  Le Gestionnaire de rapports est une fonctionnalité en option pour un serveur de rapports en mode natif, mais il vous est recommandé de configurer le Gestionnaire de rapports pour vous permettre d'accorder à l'utilisateur l'accès au serveur de rapports et gérer le contenu de ce serveur. Si vous déployez un serveur de rapports en mode intégré SharePoint, utilisez le frontal Web d'un serveur SharePoint pour accorder l'accès.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 2 : Spécification des informations de connexion (Reporting Services) | Microsoft Docs'
+title: 'Leçon 2 : Spécifier des informations de connexion (Reporting Services) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 67336ec0829c810a087ddfdcf79628408c045a76
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cd0c7e3bc9ece2a6eafa9de1623bfa2b641e5e64
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290177"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59955575"
 ---
-# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécification des informations de connexion (Reporting Services)
+# <a name="lesson-2-specifying-connection-information-reporting-services"></a>Leçon 2 : Spécifier des informations de connexion (Reporting Services)
   Après avoir ajouté un rapport au projet Didacticiel, vous devez définir une *source de données*, qui sont des informations de connexion que le rapport utilise pour accéder aux données à partir d’une base de données relationnelle, d’une base de données multidimensionnelle ou d’une autre ressource.  
   
  Dans cette leçon, vous allez utiliser l'exemple de base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] comme source de données. Ce didacticiel part du principe que cette base de données se trouve dans une instance par défaut du [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] installée sur l’ordinateur local.  
@@ -56,7 +56,7 @@ ms.locfileid: "56290177"
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] source de données [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] est ajouté à la **les données de rapport** volet.  
   
 ## <a name="next-task"></a>Tâche suivante  
- Vous avez défini avec succès une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Vous allez ensuite créer un rapport. Consultez [leçon 3 : Définition d’un Dataset pour le rapport de Table &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
+ Vous avez défini avec succès une connexion à l’exemple de base de données [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] . Vous allez ensuite créer un rapport. Voir [Leçon 3 : Définir un jeu de données pour un rapport de table &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Connexions de données, sources de données et chaînes de connexion dans Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md)  

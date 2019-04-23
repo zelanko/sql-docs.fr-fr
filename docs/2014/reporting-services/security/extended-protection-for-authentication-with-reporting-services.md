@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eb5c6f4a-3ed5-430b-a712-d5ed4b6b9b2b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d071000fa25a732465deb9c1020ed6365a9fc58e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 48e798aeb8309060a6f56a8a2ffcdbe0e0166fb9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017924"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958475"
 ---
 # <a name="extended-protection-for-authentication-with-reporting-services"></a>Protection étendue de l'authentification avec Reporting Services
   La protection étendue est un ensemble d'améliorations apportées aux dernières versions du système d'exploitation [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. La protection étendue améliore la manière dont les applications protègent les informations d'identification et l'authentification. La fonctionnalité ne fournit pas directement de protection contre des attaques spécifiques telles que le transfert d'informations d'identification, mais offre une infrastructure aux applications telles que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] afin d'appliquer la protection étendue de l'authentification.  
@@ -44,7 +44,7 @@ ms.locfileid: "56017924"
 > 
 >  La documentation pour une technologie d'accès aux données doit disposer d'informations sur la prise en charge de la protection étendue.  
   
-### <a name="upgrade"></a>UPGRADE  
+### <a name="upgrade"></a>Mettre à niveau  
   
 -   La mise à niveau d'un serveur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] ajoute des paramètres de configuration avec des valeurs par défaut au fichier `rsreportserver.config`. Si les paramètres y figurent déjà, le [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] installation les laisse dans le `rsreportserver.config` fichier.  
   
@@ -113,8 +113,8 @@ ms.locfileid: "56017924"
   
 |Paramètre|Description|  
 |-------------|-----------------|  
-|`RSWindowsExtendedProtectionLevel`|Indique le niveau d'application de la protection étendue. Les valeurs correctes sont `Off`, `Allow` et `Require`.<br /><br /> La valeur par défaut est `Off`.<br /><br /> La valeur `Off` indique l'absence de vérification de la liaison de canal ou de service.<br /><br /> La valeur `Allow` prend en charge la protection étendue, mais ne l'impose pas. La valeur Autoriser indique les éléments suivants :<br /><br /> La protection étendue est appliquée aux applications clientes qui s'exécutent sur les systèmes d'exploitation prenant en charge la protection étendue. La manière dont la protection s'applique dépend de la définition du `RsWindowsExtendedProtectionScenario`.<br /><br /> L'authentification est autorisée pour les applications fonctionnant sur des systèmes d'exploitation qui ne prennent pas en charge la protection étendue.<br /><br /> La valeur `Require` indique les éléments suivants :<br /><br /> La protection étendue est appliquée aux applications clientes qui s'exécutent sur les systèmes d'exploitation prenant en charge la protection étendue.<br /><br /> L'authentification n'est **pas** autorisée pour les applications fonctionnant sur des systèmes d'exploitation qui ne prennent pas en charge la protection étendue.|  
-|`RsWindowsExtendedProtectionScenario`|Spécifie quelles formes de protection étendue sont validées : Liaison de canal, liaisons de service ou les deux. Les valeurs correctes sont `Any`, `Proxy` et `Direct`.<br /><br /> La valeur par défaut est `Proxy`.<br /><br /> La valeur `Any` indique les éléments suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate, ainsi qu’une liaison de canal, ne sont pas obligatoires.<br /><br /> -La liaison de service est appliquée.<br /><br /> La valeur `Proxy` indique les éléments suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’un jeton de liaison de canal est présent.<br /><br /> -La liaison de service est appliquée.<br /><br /> La valeur `Direct` indique les éléments suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’il existe un jeton de liaison de canal et une connexion SSL au service actuel, et lorsque le jeton de liaison de canal pour la connexion SSL correspond à celui du jeton NTLM, Kerberos ou Negotiate.<br /><br /> -La liaison de service n’est pas appliquée.<br /><br /> <br /><br /> Remarque : Ce paramètre est ignoré si `RsWindowsExtendedProtectionLevel` est défini sur `OFF`.|  
+|`RSWindowsExtendedProtectionLevel`|Indique le niveau d'application de la protection étendue. Les valeurs valides sont `Off`, `Allow` et `Require`.<br /><br /> La valeur par défaut est `Off`.<br /><br /> La valeur `Off` indique l'absence de vérification de la liaison de canal ou de service.<br /><br /> La valeur `Allow` prend en charge la protection étendue, mais ne l'impose pas. La valeur Autoriser indique les éléments suivants :<br /><br /> La protection étendue est appliquée aux applications clientes qui s'exécutent sur les systèmes d'exploitation prenant en charge la protection étendue. La manière dont la protection s'applique dépend de la définition du `RsWindowsExtendedProtectionScenario`.<br /><br /> L'authentification est autorisée pour les applications fonctionnant sur des systèmes d'exploitation qui ne prennent pas en charge la protection étendue.<br /><br /> La valeur `Require` indique les éléments suivants :<br /><br /> La protection étendue est appliquée aux applications clientes qui s'exécutent sur les systèmes d'exploitation prenant en charge la protection étendue.<br /><br /> L'authentification n'est **pas** autorisée pour les applications fonctionnant sur des systèmes d'exploitation qui ne prennent pas en charge la protection étendue.|  
+|`RsWindowsExtendedProtectionScenario`|Spécifie quelles formes de protection étendue sont validées : Liaison de canal, les liaisons de Service ou les deux. Les valeurs valides sont `Any`, `Proxy` et `Direct`.<br /><br /> La valeur par défaut est `Proxy`.<br /><br /> La valeur `Any` indique les éléments suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate, ainsi qu’une liaison de canal, ne sont pas obligatoires.<br /><br /> -La liaison de service est appliquée.<br /><br /> La valeur `Proxy` indique les éléments suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’un jeton de liaison de canal est présent.<br /><br /> -La liaison de service est appliquée.<br /><br /> La valeur `Direct` indique les éléments suivants :<br /><br /> -L’authentification Windows NTLM, Kerberos et Negotiate a lieu lorsqu’il existe un jeton de liaison de canal et une connexion SSL au service actuel, et lorsque le jeton de liaison de canal pour la connexion SSL correspond à celui du jeton NTLM, Kerberos ou Negotiate.<br /><br /> -La liaison de service n’est pas appliquée.<br /><br /> <br /><br /> Remarque : Ce paramètre est ignoré si `RsWindowsExtendedProtectionLevel` est défini sur `OFF`.|  
   
  Exemples d'entrées dans le fichier de configuration `rsreportserver.config` :  
   

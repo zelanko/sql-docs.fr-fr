@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Windows authentication [Reporting Services]
 - Reporting Services, configuration
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f24a625c3bd523907ba51662f80c2cd26bec5704
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c57046a5dc5b92cfd3b4b349dc86d004d477169f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56043000"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966105"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurer une authentification Windows sur le serveur de rapports
   Par défaut, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepte les demandes qui spécifient l'authentification Negotiate ou NTLM. Si votre déploiement inclut des applications clientes et des navigateurs clients qui utilisent ces fournisseurs de sécurité, vous pouvez utiliser les valeurs par défaut sans configuration supplémentaire. Si vous voulez utiliser un fournisseur de sécurité différent pour la sécurité intégrée de Windows (par exemple, si vous voulez utiliser Kerberos directement), ou si vous avez modifié les valeurs par défaut et que vous voulez restaurer les paramètres d'origine, vous pouvez utiliser les informations de cette rubrique pour spécifier des paramètres d'authentification sur le serveur de rapports.  
@@ -52,7 +52,7 @@ ms.locfileid: "56043000"
   
 1.  Ouvrez RSReportServer.config dans un éditeur de texte.  
   
-2.  Recherchez <`Authentication`>.  
+2.  Trouver <`Authentication`>.  
   
 3.  Copiez, parmi les structures XML suivantes, celle qui répond le mieux à vos besoins. Vous pouvez spécifier `RSWindowsNegotiate`, `RSWindowsNTLM` et `RSWindowsKerberos` dans n'importe quel ordre. Vous devez activer la permanence de l'authentification si vous voulez authentifier la connexion plutôt que chaque demande individuelle. En cas de permanence de l'authentification, toutes les demandes qui requièrent une authentification seront autorisées pendant la durée de la connexion.  
   

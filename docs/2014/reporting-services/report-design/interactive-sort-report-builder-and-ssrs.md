@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 00cafed5-1a3c-4ce0-a1fb-ff1e2613f495
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f3e427e0bc407167f25d679954a8506256300fc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 5c62d4244b025ab987100a58aef1b2a10a7efa17
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294320"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966825"
 ---
 # <a name="interactive-sort-report-builder-and-ssrs"></a>Tri interactif (Générateur de rapports et SSRS)
   Vous pouvez ajouter des boutons de tri interactifs pour permettre à un utilisateur de basculer entre l'ordre croissant et l'ordre décroissant pour les lignes d'une table ou pour les lignes et les colonnes d'une matrice. L'utilisation la plus courante du tri interactif consiste à ajouter un bouton de tri à chaque en-tête de colonne. L'utilisateur peut alors choisir la colonne en fonction de laquelle trier le contenu.  
@@ -28,15 +28,15 @@ ms.locfileid: "56294320"
   
  Lorsque vous ajoutez un tri interactif, vous devez spécifier les éléments suivants :  
   
--   **Les éléments à trier :** Lignes ou colonnes ?  
+-   **Quoi trier :** les lignes ou les colonnes ?  
   
--   **Les éléments à trier par :** Un champ qui s’affiche dans une colonne de table ? Un champ non affiché ?  
+-   **Sur quel élément trier :** un champ affiché dans une colonne de la table ? Un champ non affiché ?  
   
--   **Quel contexte trier :** Par exemple, vous pouvez trier sur les lignes associées aux groupes de lignes ; colonnes associées à des groupes de colonnes ; lignes de détails ; groupes enfants dans un groupe parent ; ou le groupe parent et enfant ensemble.  
+-   **Dans quel contexte trier :** par exemple, vous pouvez trier sur les lignes associées à des groupes de lignes, sur les colonnes associées à des groupes de colonnes, sur les lignes de détails, sur les groupes enfants dans un groupe parent, ou encore sur le groupe parent et enfant ensemble.  
   
--   **Quelle zone de texte pour ajouter le bouton de tri :** Dans l’en-tête de colonne ou dans l’en-tête de ligne de groupe ?  
+-   **À quelle zone de texte ajouter le bouton de tri :** dans l’en-tête de colonne ou dans l’en-tête de ligne du groupe ?  
   
--   **Si vous souhaitez synchroniser le tri pour plusieurs régions de données :** Vous pouvez concevoir un rapport afin que lorsque l’utilisateur bascule l’ordre de tri, autres régions de données avec le même ancêtre soient également triées.  
+-   **Faut-il ou non synchroniser le tri pour plusieurs régions de données :** vous pouvez concevoir un rapport de sorte que, lorsque l’utilisateur bascule l’ordre de tri, d’autres régions de données possédant le même ancêtre soient également triées.  
   
  Pour obtenir des instructions détaillées, consultez [Ajouter un tri interactif à un tableau ou une matrice &#40;Générateur de rapports et SSRS&#41;](add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs.md).  
   

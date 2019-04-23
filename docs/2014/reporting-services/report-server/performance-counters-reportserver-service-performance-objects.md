@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Report Server service, performance counters
 ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e63f964d61fa5f7402244186f292d6d0543b9304
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7fb15529a9547edc64ffe1a0a53d69e16a0618f4
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037610"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59944545"
 ---
 # <a name="performance-counters-for-the-reportserverservice--and-reportserversharepointservice-performance-objects"></a>Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects
   Cette rubrique décrit les compteurs de performance pour les objets de performance [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] suivants :  
@@ -68,7 +68,7 @@ ms.locfileid: "56037610"
 |`Logon Attempts/sec`|Taux de tentatives d'ouverture de session.|  
 |`Logon Successes Total`|Nombre d'ouvertures de session réussies pour les types d'authentification RSWindows. Les types d'authentification RSWindows incluent RSWindowsNegotiate, RSWindowsNTLM, RSWindowsKerberos et RSWindowsBasic. La valeur zéro (0) représente l'authentification personnalisée.|  
 |`Logon Successes/sec`|Taux d'ouvertures de session réussies.|  
-|`Memory Pressure State`|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1 : Aucune sollicitation<br /><br /> 2 : Sollicitation faible<br /><br /> 3: Sollicitation moyenne<br /><br /> 4 : Sollicitation élevée<br /><br /> 5 : Sollicitation dépassée|  
+|`Memory Pressure State`|Nombre, compris entre 1 et 5, qui indique l'état de mémoire actuel du serveur :<br /><br /> 1: Aucune sollicitation<br /><br /> 2: Sollicitation faible<br /><br /> 3: Sollicitation moyenne<br /><br /> 4: Sollicitation élevée<br /><br /> 5: Sollicitation dépassée|  
 |`Memory Shrink Amount`|Nombre d'octets demandés par le serveur pour réduire la mémoire utilisée.|  
 |`Memory Shrink Notifications/sec`|Nombre de notifications émises par le serveur au cours de la dernière seconde pour réduire la mémoire utilisée. Cette valeur indique la fréquence à laquelle le serveur se trouve en situation de sollicitation de la mémoire.|  
 |`Requests Disconnected`|Nombre de requêtes qui sont déconnectées en raison d'un échec de communication.|  

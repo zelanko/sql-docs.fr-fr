@@ -1,7 +1,7 @@
 ---
 title: Afficher un aperçu des rapports
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services-2014, sql-server-2014
@@ -9,14 +9,14 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 7746263fc015f7cf1d398c821ce94e49c134ba0f
-ms.sourcegitcommit: 2f5773f4bc02bfff4f2924226ac5651eb0c00924
+ms.openlocfilehash: af45559f2eccfc718aa1d4ba3e986ecd3144c847
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53553231"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946945"
 ---
-# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Aperçu des rapports dans SQL Server Reporting Services (SSRS)
+# <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Afficher un aperçu des rapports dans SQL Server Reporting Services (SSRS)
 
   Lorsque vous concevez un rapport, vous pouvez le visualiser avant de le publier sur l'environnement de production. Pour ce faire, vous disposez de plusieurs méthodes : en passant en mode aperçu dans le Concepteur de rapports, en utilisant la fenêtre d'aperçu du Concepteur de rapports et en publiant le rapport sur un serveur de rapports dans un environnement de test.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "53553231"
   
  Vous pouvez changer la vue pour afficher le rapport tel qu'il sera imprimé en activant le mode d'aperçu avant impression. Cliquez sur le bouton **Aperçu avant impression** dans la barre d'outils d'aperçu. Le rapport s'affiche comme sur une véritable page. Ce que vous voyez ressemble au résultat que produisent les extensions de rendu Image et PDF. L'aperçu avant impression n'est pas une image ni un fichier PDF, mais la disposition et la pagination du rapport sont similaires à celles de ces formats.  
   
-## <a name="publish-to-a-test-server"></a>Publier sur un serveur de Test
+## <a name="publish-to-a-test-server"></a>Publier sur un serveur de test
 
  Vous pouvez également tester les rapports en les publiant sur un serveur de test. La publication d'un rapport sur un serveur de test revient, au niveau de la procédure, à publier un rapport sur un serveur de production. Pour plus d’informations sur la publication d’un rapport, consultez [Publication de rapports sur un serveur de rapports](publishing-reports-to-a-report-server.md).  
   

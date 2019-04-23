@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f14a144bcdfbfd65d7ea3e99d9ac03d7b2ee0f1d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294427"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945435"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Mise en page et rendu (Générateur de rapports et SSRS)
   Lorsque vous créez des rapports, il est important de comprendre le comportement des convertisseurs [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] afin de garantir que le rapport rendu aura l'apparence souhaitée, notamment en termes de mise en page et de sauts de page. Vous souhaiterez probablement aussi vous assurer que le rapport rendu sera ajusté au format de papier utilisé couramment dans votre organisation.  

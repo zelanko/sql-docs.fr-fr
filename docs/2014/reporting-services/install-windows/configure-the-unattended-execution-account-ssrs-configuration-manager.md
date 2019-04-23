@@ -16,15 +16,15 @@ helpviewer_keywords:
 - accounts [Reporting Services]
 - reports [Reporting Services], processing
 ms.assetid: 4e50733e-bd8c-4bf6-8379-98b1531bb9ca
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22810ae8acf19782997245a3746c70f95628fd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 2d79a28204600adbe247864df68853b24bf8cf51
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012070"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59946925"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Configurer le compte d'exécution sans assistance (Gestionnaire de configuration de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] fournit un compte spécial utilisé pour le traitement de rapport sans assistance et pour l'envoi de demandes de connexion par le biais du réseau. Le compte est utilisé des façons suivantes :  
@@ -36,7 +36,7 @@ ms.locfileid: "56012070"
  Le traitement sans surveillance des rapports désigne tout processus d'exécution de rapport déclenché par un événement, d'actualisation de données ou piloté par planification, plutôt que par une demande d'utilisateur. Le serveur de rapports utilise le compte de traitement sans surveillance des rapports pour se connecter à l'ordinateur qui héberge la source de données externe. Ce compte est nécessaire car les informations d'identification du compte de service Report Server ne sont jamais utilisées pour la connexion à d'autres ordinateurs.  
   
 > [!IMPORTANT]  
->  La configuration de ce compte est facultative. Cependant, si vous ne le configurez pas, vous limitez vos options pour la connexion à certaines sources de données et vous risquez de ne pas pouvoir récupérer de fichiers image à partir d'ordinateurs distants. Si vous configurez le compte, vous devez le maintenir à jour. Plus spécifiquement, si vous laissez un mot de passe expirer ou si les informations de compte sont modifiées dans Active Directory, vous rencontrerez l'erreur suivante lors du prochain traitement de rapport : « Échec d'ouverture de session (rsLogonFailed) Échec d'ouverture de session : nom d'utilisateur inconnu ou mot de passe incorrect. » Une maintenance correcte du compte de traitement de rapport sans surveillance est essentielle, même si vous ne récupérez jamais de fichiers image ou si vous n'envoyez jamais de demandes de connexion à des ordinateurs externes. Si vous configurez le compte et constatez ultérieurement que vous ne l'utilisez pas, vous pouvez le supprimer afin d'éliminer des tâches de maintenance de compte routinières.  
+>  La configuration de ce compte est facultative. Cependant, si vous ne le configurez pas, vous limitez vos options pour la connexion à certaines sources de données et vous risquez de ne pas pouvoir récupérer de fichiers image à partir d'ordinateurs distants. Si vous configurez le compte, vous devez le maintenir à jour. Plus spécifiquement, si vous laissez un mot de passe expirer ou les informations de compte sont modifiées dans Active Directory, vous rencontrerez l’erreur suivante lors du prochain que traitement de rapport : « Échec d’ouverture de session (rsLogonFailed) d’ouverture de session Échec : nom d’utilisateur inconnu ou mot de passe incorrect. » Une maintenance correcte du compte de traitement de rapport sans surveillance est essentielle, même si vous ne récupérez jamais de fichiers image ou si vous n'envoyez jamais de demandes de connexion à des ordinateurs externes. Si vous configurez le compte et constatez ultérieurement que vous ne l'utilisez pas, vous pouvez le supprimer afin d'éliminer des tâches de maintenance de compte routinières.  
   
 ## <a name="how-to-configure-the-account"></a>Comment configurer le compte  
  Vous devez utiliser un compte utilisateur de domaine. Pour assumer son rôle prévu, ce compte doit être différent de celui utilisé pour exécuter le service Report Server. Veillez à utiliser un compte ayant les autorisations minimales (l'accès en lecture seule avec les autorisations de connexion réseau est suffisant) et un accès limité aux seuls ordinateurs qui fournissent des sources de données et des ressources au serveur de rapports. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md).  

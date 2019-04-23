@@ -12,15 +12,15 @@ f1_keywords:
 helpviewer_keywords:
 - Edit References dialog box
 ms.assetid: 7bdd2eee-195a-4a2f-a0aa-56f7e90c1fb4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 72c14cba8580e926eff05dbb5b7644d64e517913
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 99094f6e0edc60dfa6ce77474c52f1cf9dfc50fa
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56009483"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948075"
 ---
 # <a name="add-reference-dialog-box"></a>Ajouter une référence, boîte de dialogue
   Utilisez la boîte de dialogue **Ajouter une référence** pour ajouter à votre rapport des références à un assembly personnalisé ou un composant [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] . Après avoir ajouté une référence d'assembly, vous pouvez écrire des expressions ou du code personnalisé incorporé qui inclut des références qualifiées complètes aux classes ou méthodes dans l'assembly ou composant. Pour plus d’informations, consultez [Code personnalisé et références d’assembly dans les expressions du Concepteur de rapports &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) ou [Ajouter une référence d’assembly à un rapport &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  

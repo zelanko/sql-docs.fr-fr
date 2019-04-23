@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10059"
 ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ce767793dc0994c30bba1301a193f0736c7e2e14
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030420"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949636"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Boîte de dialogue Ouverture de session Reporting Services (Générateur de rapports)
   Utilisez la boîte de dialogue **Ouverture de session Reporting Services** pour fournir les informations d'identification nécessaires à la publication de rapports sur le serveur de rapports. Pour obtenir de l'aide sur ces informations d'identification, contactez l'administrateur de votre serveur de rapports.  

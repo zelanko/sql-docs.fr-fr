@@ -1,6 +1,6 @@
 ---
 title: Concepts clés pour MDX (Analysis Services) | Microsoft Docs
-ms.date: 05/02/2018
+ms.date: 04/19/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bb527f78b886154372092c128e2c2a33e1eac75c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b00478a739796d27b44899aa72099583b1d9a113
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527826"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962165"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Concepts clés dans MDX (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "52527826"
   
  ![Tableau croisé dynamique avec tous les membres appelés](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "tableau croisé dynamique avec tous les membres appelés")  
   
- Développez la hiérarchie et vous finissez par atteindre le niveau le plus bas. Il s'agit du **membre feuille**. Un membre feuille appartient à une hiérarchie qui n'a pas d'enfants. Dans cet exemple, Australia est le membre feuille.  
+ Développez la hiérarchie et vous finissez par atteindre le niveau le plus bas. Il s'agit du **membre feuille**. Un membre feuille appartient à une hiérarchie qui n'a pas d'enfants. Dans cet exemple, Sud-Ouest est le membre feuille.  
   
  ![Tableau croisé dynamique avec un membre feuille](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "tableau croisé dynamique avec un membre feuille")  
   
- Tout ce qui se trouve plus haut est un **membre parent**. Pacific est le parent d'Australia.  
+ Tout ce qui se trouve plus haut est un **membre parent**. United States est le parent de la région Sud-Ouest.  
   
  **Composants d'une hiérarchie d'attribut**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "52527826"
 ## <a name="key-attributes"></a>Attributs clés  
  Les modèles sont une collection d'objets liés qui reposent sur des clés et des index pour établir les associations. Les modèles Analysis Services ne diffèrent en rien de ce point de vue. Pour chaque dimension (souvenez-vous que cela équivaut à une table dans un modèle relationnel), il existe un attribut clé. **L’attribut clé** est utilisé dans les relations entre les clés étrangères et la table de faits (groupe de mesures). Tous les attributs non-clés de la dimension sont liés (directement ou indirectement) à l'attribut clé.  
   
- Souvent, mais pas toujours, l'attribut clé est également l' **attribut de granularité**. La granularité renvoie au niveau de détail ou de précision des données. Là encore, un exemple courant permet de mieux comprendre de quoi il s'agit. Prenez des valeurs de date : pour les ventes quotidiennes, vous avez besoin de valeurs de date spécifiées au jour près. Pour les quotas, des valeurs trimestrielles peuvent suffire, mais si vos données d'analyse sont constituées de résultats de courses d'un événement sportif, le grain devra peut-être s'exprimer en millisecondes. Le niveau de précision de vos valeurs de données est le grain.  
+ Souvent, mais pas toujours, l'attribut clé est également l' **attribut de granularité**. La granularité renvoie au niveau de détail ou de précision des données. Là encore, un exemple courant permet de mieux comprendre de quoi il s'agit. Tenez compte des valeurs de date : Pour les ventes quotidiennes, vous avez besoin de valeurs de date spécifiées au jour ; pour les quotas, tous les trimestres peuvent suffire, mais si vos données analytiques sont constituées de résultats d’une course à partir d’un événement sportif, le niveau de granularité très devra peut-être être millisecondes. Le niveau de précision de vos valeurs de données est le grain.  
   
  Devise est un autre exemple : une application financière peut effectuer le suivi valeurs monétaires à plusieurs décimales, tandis que la collecte de fonds de votre établissement local besoin de ces valeurs au dollar plus proche. La compréhension du grain est importante, car il vaut mieux éviter de stocker des données inutiles. La suppression des millisecondes d'un horodateur ou des centimes d'un montant des ventes peut économiser du stockage et du temps de traitement lorsque ce niveau de détail n'est pas pertinent pour votre analyse.  
   

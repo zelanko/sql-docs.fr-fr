@@ -12,15 +12,15 @@ helpviewer_keywords:
 - subscriptions [Reporting Services], deleting
 - subscriptions [Reporting Services], managing
 ms.assetid: 44be7ee2-33ce-46e4-9d1a-a20aaf43a227
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e53af8ff7de611f00af6e38553f21885597e7232
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4d28613857573b2793937a20b94d637d4f36b084
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040640"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59950735"
 ---
 # <a name="create-and-manage-subscriptions-for-sharepoint-mode-report-servers"></a>Créer et gérer des abonnements pour des serveurs de rapports en mode SharePoint
   Vous pouvez créer des abonnements [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour remettre les rapports à partir d’une application web SharePoint qui est intégrée à un serveur de rapports en mode SharePoint. Les abonnements peuvent remettre des rapports dans une bibliothèque de documents, un dossier de fichiers ou sous forme de courrier électronique. Cette rubrique résume les conditions requises et les étapes de création d’un abonnement [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
@@ -31,11 +31,11 @@ ms.locfileid: "56040640"
   
  Lorsque vous créez un abonnement, il existe trois méthodes pour spécifier sa remise :  
   
--   **Bibliothèque de documents**: Vous pouvez créer un abonnement qui remet un document basé sur le rapport d'origine dans une bibliothèque située sur le même site SharePoint que le rapport d'origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
+-   **Bibliothèque de documents**: Vous pouvez créer un abonnement qui remet un document basé sur le rapport d’origine dans une bibliothèque située sur le même site SharePoint que le rapport d’origine. Vous ne pouvez pas remettre le document dans une bibliothèque sur un autre serveur ou un autre site au sein de la même collection de sites. Pour remettre le document, vous devez être autorisé à ajouter des éléments dans la bibliothèque à laquelle le rapport est remis.  
   
--   **Dossier de fichiers :** Vous pouvez remettre un document basé sur le rapport d'origine dans un dossier partagé du système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
+-   **Dossier de fichiers :** Vous pouvez remettre un document basé sur le rapport d’origine vers un dossier partagé sur le système de fichiers. Vous devez sélectionner un dossier existant accessible via une connexion réseau.  
   
--   **Adresse de messagerie :** Si le serveur de rapports est configuré pour utiliser l'extension de remise par messagerie du serveur de rapports, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte de réception. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
+-   **Adresse de messagerie :** Si le serveur de rapports est configuré pour utiliser l’extension de remise par messagerie Report Server, vous pouvez créer un abonnement qui envoie un rapport ou un fichier de rapport exporté (enregistré dans un format de sortie) vers votre boîte. Pour recevoir simplement la notification sans le rapport ou l'URL du rapport, désactivez les cases à cocher **Inclure un lien dans le rapport** et **Afficher le rapport dans le message** .  
   
  **Dans cette rubrique :**  
   

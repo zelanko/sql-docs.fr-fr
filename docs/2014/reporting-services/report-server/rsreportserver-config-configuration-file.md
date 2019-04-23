@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 60e0a0b2-8a47-4eda-a5df-3e5e403dbdbc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3b532758e9a8631adeacd00a4fce8d9029cfcd1b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 67f243e3ab09809c263a3aff6554aaf5364271e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015600"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59958435"
 ---
 # <a name="rsreportserver-configuration-file"></a>RSReportServer Configuration File
   Le fichier **RsReportServer.config** stocke les paramètres utilisés par le Gestionnaire de rapports, le service Web Report Server et le traitement en arrière-plan. Toutes les applications [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] s'exécutent au sein d'un processus unique qui lit les paramètres de configuration stockés dans le fichier RSReportServer.config. Les serveurs de rapports en mode natif et en mode SharePoint utilisent le fichier RSReportServer.config. Toutefois, les deux modes n'utilisent pas les mêmes paramètres dans le fichier de configuration. La version en mode SharePoint du fichier est moins volumineuse car de nombreux paramètres du mode SharePoint sont stockés dans des bases de données de configuration SharePoint plutôt que dans le fichier. Cette rubrique décrit le fichier de configuration par défaut installé en mode natif ou en mode SharePoint, et certains paramètres et comportements importants qui sont contrôlés par le fichier de configuration.  
@@ -176,7 +176,7 @@ ms.locfileid: "56015600"
 |`RSWindowsKerberos`|Le serveur accepte les jetons de sécurité Kerberos.<br /><br /> Utilisez ce paramètre ou RSWindowsNegotiate lorsque vous utilisez l'authentification Kerberos dans un modèle d'authentification de délégation contrainte.|N|  
 |`RSWindowsBasic`|Le serveur accepte les informations d'identification de base et émet une stimulation/réponse lorsqu'une connexion est établie sans information d'identification.<br /><br /> L'authentification de base passe les informations d'identification dans les requêtes HTTP en texte clair. Si vous utilisez l'authentification de base, utilisez le protocole SSL pour chiffrer le trafic réseau vers et en provenance du serveur de rapports. Pour obtenir un exemple de syntaxe de configuration de l’authentification de base dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], consultez [Authentification avec le serveur de rapports](../security/authentication-with-the-report-server.md).|N|  
 |`Custom`|Spécifiez cette valeur si vous avez déployé une extension de sécurité personnalisée sur le serveur de rapports. Pour plus d’informations, consultez [Implémentation d’une extension de sécurité](../extensions/security-extension/implementing-a-security-extension.md).|N|  
-|**LogonMethod**|Cette valeur spécifie le type d’ouverture de session pour `RSWindowsBasic`. Si vous spécifiez `RSWindowsBasic`, cette valeur est obligatoire. Les valeurs valides sont 2 ou 3, où chaque valeur représente ce qui suit :<br /><br /> `2` = serveurs haute performance d’ouverture de session réseau pour l’authentification des mots de passe de texte en clair.<br /><br /> `3` = ouverture de session basée sur du texte en clair ; les informations d’identification d’ouverture de session sont conservées dans le package d’authentification envoyé avec chaque requête HTTP, ce qui permet au serveur d’emprunter l’identité de l’utilisateur lors de la connexion à d’autres serveurs du réseau.<br /><br /> Remarque : Les valeurs 0 (pour l'ouverture de session interactive) et 1 (pour l'ouverture de session par lot) ne sont pas prises en charge dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|N|  
+|**LogonMethod**|Cette valeur spécifie le type d’ouverture de session pour `RSWindowsBasic`. Si vous spécifiez `RSWindowsBasic`, cette valeur est obligatoire. Les valeurs valides sont 2 ou 3, où chaque valeur représente ce qui suit :<br /><br /> `2` = serveurs haute performance d’ouverture de session réseau pour l’authentification des mots de passe de texte en clair.<br /><br /> `3` = ouverture de session basée sur du texte en clair ; les informations d’identification d’ouverture de session sont conservées dans le package d’authentification envoyé avec chaque requête HTTP, ce qui permet au serveur d’emprunter l’identité de l’utilisateur lors de la connexion à d’autres serveurs du réseau.<br /><br /> Remarque : Les valeurs 0 (pour l’ouverture de session interactive) et 1 (pour l’ouverture de session de lot) ne sont pas pris en charge dans [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)].|N|  
 |**Realm**|Cette valeur est utilisée pour `RSWindowsBasic`. Elle spécifie une partition de ressource qui inclut les fonctionnalités d'autorisation et d'authentification permettant de contrôler l'accès aux ressources protégées de votre organisation.|N|  
 |**DefaultDomain**|Cette valeur est utilisée pour `RSWindowsBasic`. Elle permet de déterminer le domaine utilisé par le serveur pour authentifier l'utilisateur. Cette valeur est facultative, mais si vous l'omettez, le serveur de rapports utilise le nom d'ordinateur comme domaine. Si vous avez installé le serveur de rapports sur un contrôleur de domaine, le domaine utilisé est celui contrôlé par l'ordinateur.|N|  
 |**RSWindowsExtendedProtectionLevel**|La valeur par défaut est **off**. Pour plus d'informations, consultez [Extended Protection for Authentication with Reporting Services](../security/extended-protection-for-authentication-with-reporting-services.md)|N|  

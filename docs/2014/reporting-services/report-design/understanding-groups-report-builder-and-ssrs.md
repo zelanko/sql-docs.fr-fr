@@ -11,15 +11,15 @@ f1_keywords:
 - "10056"
 - "10424"
 ms.assetid: c32d4d89-45e4-4f77-a3e9-0429f53f9d6f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 97f61325c563c1c8ff22ff3e4177c74726f775cc
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9b21947a879517196bc2447ae9a0cde0db1be6a8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286537"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961585"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Fonctionnement des groupes (Générateur de rapports et SSRS)
   Dans le Générateur de rapports, un groupe est un jeu de données nommé provenant du dataset du rapport qui est lié à une région de données. En principe, un groupe organise une vue d'un dataset du rapport. Tous les groupes d'une région de données spécifient des vues différentes du même dataset de rapport.  
@@ -37,7 +37,7 @@ ms.locfileid: "56286537"
  Un groupe possède un nom et un ensemble d'expressions de groupe que vous spécifiez. L'ensemble des expressions de groupe peut être une référence de champ de dataset unique ou une combinaison de plusieurs expressions. Lors de l'exécution, les expressions de groupe sont combinées (si le groupe possède plusieurs expressions) et appliquées aux données d'un groupe. Par exemple, vous avez un groupe qui utilise un champ de date pour organiser les données dans la région de données. Lors de l'exécution, les données sont organisées par date, puis affichées avec les totaux d'autres valeurs de dataset pour chaque date.  
   
 ## <a name="when-do-i-create-groups"></a>Quand dois-je créer des groupes ?  
- Dans la plupart des cas, le Générateur de rapports et le Concepteur de rapports créent automatiquement un groupe lorsque vous concevez une région de données. Pour un tableau, une matrice ou une liste, des groupes sont créés lorsque vous déposez des champs dans le volet de regroupement. Pour un graphique, des groupes sont créés lorsque vous déposez des champs dans les zones de dépôt du graphique. Pour une jauge, vous devez utiliser la boîte de dialogue des propriétés de la jauge. Pour une table, une matrice ou une liste, vous pouvez également créer manuellement un groupe. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Pour obtenir un exemple montrant comment ajouter des groupes lorsque vous créez un rapport, consultez [didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41; ](../tutorial-creating-a-basic-table-report-report-builder.md) ou [créer un rapport de tableau de base &#40;SSRS didacticiel&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
+ Dans la plupart des cas, le Générateur de rapports et le Concepteur de rapports créent automatiquement un groupe lorsque vous concevez une région de données. Pour un tableau, une matrice ou une liste, des groupes sont créés lorsque vous déposez des champs dans le volet de regroupement. Pour un graphique, des groupes sont créés lorsque vous déposez des champs dans les zones de dépôt du graphique. Pour une jauge, vous devez utiliser la boîte de dialogue des propriétés de la jauge. Pour une table, une matrice ou une liste, vous pouvez également créer manuellement un groupe. Pour plus d’informations, consultez [Ajouter ou supprimer un groupe dans une région de données &#40;Générateur de rapports et SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md). Pour obtenir un exemple de la façon d'ajouter des groupes lorsque vous créez un rapport, consultez [Tutoriel : création d’un rapport de table de base &#40;Générateur de rapports&#41;](../tutorial-creating-a-basic-table-report-report-builder.md) ou [Créer un rapport de table de base &#40;didacticiel SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
 ## <a name="how-can-i-modify-a-group"></a>Comment puis-je modifier un groupe ?  
  Après avoir créé un groupe, vous pouvez définir les propriétés spécifiques à la région de données, telles que les expressions de filtre et de tri, les sauts de page et les variables de groupe pour accepter des données spécifiques à l'étendue. Pour plus d’informations, consultez [Filtrer, regrouper et trier des données &#40;Générateur de rapports et SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "56286537"
 > [!NOTE]  
 >  Bien que les groupes aient des noms différents dans les différentes régions de données, les principes qui sous-tendent la création et l'utilisation de ces groupes sont identiques. Lorsque vous créez un groupe pour une région de données, vous spécifiez une méthode pour organiser les données de détail du dataset qui est lié à la région de données. Chaque région de données prend en charge une structure de groupe sur laquelle afficher des données groupées.  
   
-### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Groupes dans une région de données de tableau matriciel : Plus d’informations, des lignes et des groupes de colonnes  
+### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Groupes dans une région de données de tableau matriciel : Groupes Détails, Ligne et Colonne  
  Comme indiqué précédemment dans cette rubrique, une région de données de tableau matriciel vous permet d'organiser des données en groupes par lignes ou par colonnes. Toutefois, les groupes de lignes et de colonnes ne sont pas les seuls groupes disponibles dans une région de données de tableau matriciel. Cette région de données peut comporter les types de groupes suivants :  
   
 -   **Groupe Détails** : le groupe Détails se compose de toutes les données extraites d’un dataset de rapport après que le Générateur de rapports et le Concepteur de rapports ont appliqué les filtres de datasets et de régions de données. Le groupe de détails est donc le seul groupe qui ne comporte aucune expression de groupe.  

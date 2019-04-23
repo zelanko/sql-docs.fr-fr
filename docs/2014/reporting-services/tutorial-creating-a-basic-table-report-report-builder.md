@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Création d’un rapport de tableau de base (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Création d’un rapport de tableau de base (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f6d835c7f600264f91303046cb35d52424978861
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295367"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59959545"
 ---
-# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Didacticiel : Création d’un rapport de tableau de base (Générateur de rapports)
+# <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutoriel : Création d'un rapport de tableau de base (Générateur de rapports)
   Ce didacticiel vous apprend à créer un rapport de tableau de base à partir des exemples de données de ventes. L’illustration suivante montre le rapport que vous allez créer.  
   
  ![rs_CreateBasicReportTutorial](../../2014/tutorials/media/rs-createbasicreporttutorial.gif "rs_CreateBasicReportTutorial")  
@@ -50,12 +50,12 @@ ms.locfileid: "56295367"
   
 7.  [Exporter le rapport](#Export)  
   
- Durée estimée pour effectuer ce didacticiel : 20 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 20 minutes.  
   
 ## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a> 1. Créer un rapport à partir de la mise en route  
+##  <a name="CreateTable"></a> 1. Créer un nouveau rapport à partir de la mise en route  
  Créer un rapport de tableau à partir de la **mise en route** boîte de dialogue. Il existe deux modes : création de rapport et création de dataset partagé. En mode création de rapport, vous pouvez spécifier les données dans le volet des données de rapport et la disposition du rapport dans l'aire de conception. En mode création de dataset partagé, vous créez des requêtes de dataset à partager avec d'autres utilisateurs. Dans ce didacticiel, vous allez utiliser le mode création de rapport.  
   
 #### <a name="to-create-a-new-report"></a>Pour créer un rapport  
@@ -229,7 +229,7 @@ ms.locfileid: "56295367"
   
 3.  Cliquez sur **Terminer**.  
   
- Le tableau est ajouté à l'aire de conception. Le tableau possède 5 colonnes et 5 lignes. Le volet groupes de lignes affiche trois lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+ Le tableau est ajouté à l'aire de conception. Le tableau possède 5 colonnes et 5 lignes. Le volet Groupes de lignes affiche trois groupes de lignes : SalesDate, Subcategory et Details. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 ##  <a name="FormatCurrency"></a> 2. Mettre en forme les données en tant que devises  
  Par défaut, les données de synthèse du champ Sales affichent un nombre général. Appliquez une mise en forme pour afficher ce nombre dans un format monétaire. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé en tant qu’exemples de valeurs.  

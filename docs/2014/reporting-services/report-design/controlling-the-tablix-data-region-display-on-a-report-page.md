@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 4f6402d68a1d6b2b62b5e4c2879f26c9ee917f2b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56295201"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951705"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Contrôle de l'affichage de la région de données de tableau matriciel sur une page de rapport (Générateur de rapports et SSRS)
   Cette rubrique décrit les propriétés pour une région de données de tableau matriciel qui permettent de modifier la façon dont une région de données de tableau matriciel s'affiche dans un rapport.  

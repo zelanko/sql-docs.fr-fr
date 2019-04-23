@@ -15,15 +15,15 @@ helpviewer_keywords:
 - reportservertempdb
 - reportserver database
 ms.assetid: 97b2e1b5-3869-4766-97b9-9bf206b52262
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6870e52124d303b2e04e85158adb98872b78085f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: bc152d3130d903f4b098a495451d2918abcd7329
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041250"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961135"
 ---
 # <a name="administer-a-report-server-database-ssrs-native-mode"></a>Administrer une base de données du serveur de rapports (SSRS en mode natif)
   Un déploiement de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] utilise deux bases de données relationnelles [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour le stockage interne. Par défaut, les bases de données ont pour nom respectif Reportserver et ReportServerTempdb. La base de données ReportServerTempdb est créée à l'aide de la base de données du serveur de rapports primaire et sert à stocker les données temporaires, les informations de session et les rapports mis en mémoire cache.  
@@ -59,7 +59,7 @@ ms.locfileid: "56041250"
  Cette erreur se produit car le nom ReportServerTempdb est stocké en interne et utilisé par des procédures stockées pour effectuer des opérations internes. Renommer la base de données temporaire empêche le bon fonctionnement des procédures stockées.  
   
 ## <a name="enabling-snapshot-isolation-on-the-report-server-database"></a>Activation de l'isolement d'instantané sur la base de données du serveur de rapports  
- Vous ne pouvez pas activer l'isolement d'instantané sur la base de données du serveur de rapports. Si l'isolement d'instantané est activé, l'erreur suivante s'affiche : « Le rapport sélectionné n'est pas prêt pour être affiché. Le rendu du rapport n'est pas terminé ou son instantané n'est pas disponible ».  
+ Vous ne pouvez pas activer l'isolement d'instantané sur la base de données du serveur de rapports. Si l’isolement d’instantané est activée, vous rencontrerez l’erreur suivante : « Le rapport sélectionné n’est pas prêt pour l’affichage. Le rendu du rapport n'est pas terminé ou son instantané n'est pas disponible ».  
   
  Si vous n’avez pas intentionnellement activé l’isolement d’instantané, il est possible que l’attribut ait été défini par une autre application ou que l’isolement d’instantané soit activé sur la base de données **model** ; dans ce dernier cas, toutes les nouvelles bases de données héritent du paramètre.  
   

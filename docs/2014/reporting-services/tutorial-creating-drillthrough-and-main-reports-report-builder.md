@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Création d’une extraction et de rapports principaux (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Créer un rapport principal et un rapport d’extraction (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b150ff5fd1e69a9c6ac8ea7e2f2ef2b60d32ffb8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1177dfb7260959940eb89a31dde740e290ab73f8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289867"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59961235"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Didacticiel : création d'un rapport principal et d'un rapport d'extraction (Générateur de rapports)
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutoriel : Création d’une extraction et de rapports principaux (Générateur de rapports)
   Ce didacticiel vous apprend comment créer deux types de rapports : un rapport d'extraction et un rapport principal. Les exemples de données de ventes utilisés dans ces rapports sont récupérés d'un cube Analysis Services. L'illustration suivante montre les rapports que vous allez créer.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
@@ -80,7 +80,7 @@ ms.locfileid: "56289867"
   
 8.  [Exécuter les rapports principal et extraction](#MRunReports)  
   
- Durée estimée pour effectuer ce didacticiel : 30 minutes  
+ Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
 ## <a name="requirements"></a>Configuration requise  
  Pour suivre ce didacticiel, vous avez besoin d'accéder au cube Contoso Sales. Cette condition s'applique à la fois aux rapports principal et d'extraction. Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -168,7 +168,7 @@ ms.locfileid: "56289867"
   
 5.  Dans la liste d’expression de filtre, développez **All Channel**, cliquez sur **Online**, sur **Reseller**, puis sur **OK**.  
   
-     La requête comporte maintenant un filtre permettant de n'inclure que les canaux suivants : Online et Reseller.  
+     La requête comporte maintenant un filtre pour inclure uniquement ces canaux : En ligne et le revendeur.  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
@@ -390,7 +390,7 @@ ms.locfileid: "56289867"
   
 7.  Cliquez sur **Enregistrer**.  
   
-##  <a name="MMatrixAndDataset"></a> 1. Créer un rapport à partir de l'Assistant Tableau ou matrice  
+##  <a name="MMatrixAndDataset"></a> 1. Créer un rapport à partir de l’Assistant tableau ou matrice  
  Dans la boîte de dialogue **Prise en main** , créez un rapport de matrice à l’aide de **l’Assistant Tableau ou matrice**.  
   
 #### <a name="to-create-a-new-report"></a>Pour créer un rapport  
@@ -462,7 +462,7 @@ ms.locfileid: "56289867"
   
 5.  Dans la liste Expression de filtre, développez **All Channel**, cliquez sur **Online** et **Reseller**, puis sur **OK**.  
   
-     La requête comporte maintenant un filtre permettant de n'inclure que les canaux suivants : Online et Reseller.  
+     La requête comporte maintenant un filtre pour inclure uniquement ces canaux : En ligne et le revendeur.  
   
 6.  Développez la dimension Sales Territory, puis faites glisser Sales Territory Group vers la colonne **Hierarchy** , sous **Channel Name**.  
   
@@ -562,7 +562,7 @@ ms.locfileid: "56289867"
   
 1.  Dans la page **Choisir la disposition** , sous **Options**, vérifiez que **Afficher les sous-totaux et les totaux généraux** est sélectionné.  
   
-     Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  Lorsque vous exécutez le rapport, chaque ligne est affichée de la manière suivante : la première ligne correspond au groupe de colonnes, la seconde ligne aux en-têtes de colonnes, la troisième ligne contient les données de catégories de produits (`[Sum(Net_ QTY)]` et `[Sum(Net_Sales)]`, tandis que la quatrième ligne indique les totaux.  
+     Le volet Aperçu de l'Assistant affiche une matrice avec quatre lignes.  Lorsque vous exécutez le rapport, chaque ligne est affichée de la manière suivante : La première ligne est le groupe de colonnes, la deuxième ligne contient les en-têtes de colonne, la troisième ligne contient les données de catégorie de produit (`[Sum(Net_ QTY)]` et `[Sum(Net_Sales)]`, et la quatrième ligne indique les totaux.  
   
 2.  Cliquer sur **Suivant**.  
   
@@ -685,7 +685,7 @@ ms.locfileid: "56289867"
   
 1.  Dans l'aire de conception, cliquez sur **Cliquez pour ajouter un titre**.  
   
-2.  Type **2009 Product Category Sales : Online and Reseller Category :**.  
+2.  Tapez **2009 Product Category Sales: Online and Reseller Category:**.  
   
 3.  Sélectionnez le texte que vous avez tapé.  
   

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - Report Builder 1.0, SharePoint integration
 - model item security [Reporting Services]
 ms.assetid: 9ea71f1a-ee9e-4337-95ff-d7cef79946e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3dcb6feb0accb9c8033ea6f7d58a645aae31bc25
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: fc3faf212a1777938194927b364c29750113196d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017743"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59953375"
 ---
 # <a name="set-permissions-for-report-server-operations-in-a-sharepoint-web-application"></a>Définir des autorisations pour les opérations de serveur de rapports dans une application web SharePoint
   Pour un serveur de rapports qui s'exécute en mode intégré SharePoint, les paramètres de sécurité définis sur le site SharePoint déterminent le mode d'affichage et de gestion des rapports, des modèles de rapport et des sources de données partagées. Si vous utilisez les groupes SharePoint par défaut, les niveaux d'autorisation et les attributions d'autorisations, vous pouvez utiliser les rapports et d'autres documents à l'aide des paramètres de sécurité actuels.  
@@ -57,7 +57,7 @@ ms.locfileid: "56017743"
 ##  <a name="permissionReports"></a> Autorisations pour afficher et gérer des rapports  
  Les autorisations de définition de rapport sont définies par l'intermédiaire des autorisations pour les listes sur la bibliothèque contenant le rapport ; vous pouvez toutefois définir des autorisations sur des rapports individuels si vous souhaitez en restreindre l'accès. Le tableau suivant présente une liste de tâches et les autorisations nécessaires pour chacune d'entre elles.  
   
-|Tâche|Autorisation|  
+|Tâche|Permission|  
 |----------|----------------|  
 |Afficher un rapport.|**Afficher les éléments** sur la bibliothèque contenant les fichiers ou sur le rapport individuel.|  
 |Afficher un rapport consultable à l'aide de clics qui utilise un modèle de rapport comme source de données.|**Afficher les éléments** sur la bibliothèque contenant le rapport ou le modèle de rapport, ou sur le rapport individuel. Si vous ne disposez pas d'autorisations d'affichage sur le modèle, vous pouvez cependant ouvrir le rapport, mais l'exploration ad hoc des données n'est pas possible.<br /><br /> Si le modèle de rapport utilise la sécurité des éléments d'un modèle, l'utilisateur doit aussi disposer d'une autorisation **Énumérer les autorisations** sur le modèle de rapport.|  
@@ -80,7 +80,7 @@ ms.locfileid: "56017743"
   
  Le tableau suivant présente une liste de tâches permettant de créer des rapports et d'utiliser le Générateur de rapports, ainsi que les autorisations nécessaires pour chacune d'entre elles :  
   
-|Tâche|Autorisation|  
+|Tâche|Permission|  
 |----------|----------------|  
 |Démarrer le Générateur de rapports.|Aucune autorisation ne sert explicitement à contrôler l'accès à l'utilisation du Générateur de rapports. Le Générateur de rapports est disponible si l'intégration du serveur de rapports est configurée et si vous disposez de l'autorisation d'ajouter des éléments à une bibliothèque. Pour démarrer le Générateur de rapports à partir du menu **Nouveau** de la bibliothèque, vous devez enregistrer le type de contenu Générateur de rapports. Pour plus d’informations, consultez [ajouter Types serveur de rapports contenus dans une bibliothèque &#40;Reporting Services en Mode intégré SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Télécharger un modèle ou une source de données partagée.|**Ajouter des éléments** sur la bibliothèque qui contiendra les fichiers.|  
@@ -98,7 +98,7 @@ ms.locfileid: "56017743"
   
  Le tableau suivant présente une liste des tâches et des autorisations permettant de créer, gérer et utiliser les planifications partagées :  
   
-|Tâche|Autorisation|  
+|Tâche|Permission|  
 |----------|----------------|  
 |Créer, modifier ou supprimer une planification partagée.|**Gérer le site Web** sur le site.|  
 |Sélectionner une planification partagée pour le traitement des abonnements ou la récupération de données.|**Ouvrir** sur le site contenant la bibliothèque.|  
@@ -108,7 +108,7 @@ ms.locfileid: "56017743"
   
  Le tableau suivant présente une liste des tâches et des autorisations permettant de créer, gérer et utiliser les abonnements :  
   
-|Tâche|Autorisation|  
+|Tâche|Permission|  
 |----------|----------------|  
 |Créer, modifier ou supprimer un abonnement à un rapport spécifique, qui a pour propriétaire un utilisateur.|**Modifier des éléments** sur la bibliothèque contenant le rapport ou sur le rapport lui-même. Afficher les éléments est une autorisation dépendante qui sera automatiquement incluse dans le niveau d'autorisation. Les utilisateurs en mesure de créer un abonnement peuvent également créer des planifications personnalisées pour exécuter cet abonnement.|  
 |Sélectionner une planification partagée à utiliser avec l'abonnement.|**Ouvrir** sur le site contenant la bibliothèque.|  
@@ -119,7 +119,7 @@ ms.locfileid: "56017743"
   
  Vous pouvez définir des propriétés sur les sources de données partagées qui déterminent si des utilisateurs individuels peuvent afficher ou gérer ces sources de données partagées. Les autorisations pour afficher ou gérer une source de données partagée sont différentes des autorisations pour afficher un rapport ; vous pouvez afficher un rapport utilisant un fichier .rsds sans disposer d'autorisation d'affichage sur le fichier .rsds lui-même.  
   
-|Tâches|Autorisation|  
+|Tâches|Permission|  
 |-----------|----------------|  
 |Créer une source de données partagée.|**Ajouter des éléments** sur la bibliothèque contenant la source de données partagée. Vous pouvez créer de nouvelles sources de données partagées à partir du menu Nouveau d'une bibliothèque. Pour ce faire, vous devez enregistrer le type de contenu Source de données du rapport avec la bibliothèque. Pour plus d’informations, consultez [ajouter Types serveur de rapports contenus dans une bibliothèque &#40;Reporting Services en Mode intégré SharePoint&#41;](../add-reporting-services-content-types-to-a-sharepoint-library.md).|  
 |Modifier une source de données partagée.|**Modifier des éléments** sur la bibliothèque contenant la source de données partagée ou sur la source de données partagée elle-même.|  

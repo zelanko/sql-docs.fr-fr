@@ -12,15 +12,15 @@ helpviewer_keywords:
 - walkthroughs [Reporting Services]
 - data-driven subscriptions
 ms.assetid: 79ab0572-43e9-4dc4-9b5a-cd8b627b8274
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4122aa579766d80cfac6600753d4a8f8a672ae9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a6e1399c97e77a2b7b0bb68a8022effefb1d4814
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56017911"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59964105"
 ---
 # <a name="create-a-data-driven-subscription-ssrs-tutorial"></a>Créer un abonnement piloté par les données (didacticiel SSRS)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] fournit des abonnements pilotés par les données qui permettent de personnaliser la distribution d'un rapport basé sur des données d'abonnés dynamiques. Les abonnements pilotés par les données s'utilisent dans les types de scénarios suivants :  
@@ -64,7 +64,7 @@ ms.locfileid: "56017911"
   
 -   Dossier partagé pour lequel vous bénéficiez de droits d'accès en écriture. Le dossier partagé doit être accessible via une connexion réseau.  
   
- **Durée estimée pour effectuer le tutoriel :** 30 minutes. Trente minutes supplémentaires si vous n'avez pas étudié le didacticiel de création d'un rapport de base.  
+ **Durée estimée pour effectuer le tutoriel :** 30 minutes. Trente minutes supplémentaires si vous n'avez pas étudié le didacticiel de création d'un rapport de base.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   

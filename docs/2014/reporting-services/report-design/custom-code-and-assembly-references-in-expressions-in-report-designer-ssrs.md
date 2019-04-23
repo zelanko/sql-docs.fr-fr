@@ -17,15 +17,15 @@ helpviewer_keywords:
 - data manipulation [Reporting Services]
 - SQL Server Reporting Services, expressions
 ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: beec46edc483bee002f8fc2605c22b59a63d7048
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ea0a963781d4f0864f6aa02d8276bab1386a979d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041200"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947844"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Code personnalisé et références d'assembly dans les expressions du Concepteur de rapports (SSRS)
   Vous pouvez ajouter des références à du code personnalisé incorporé dans un rapport ou à des assemblys personnalisés que vous générez et enregistrez sur votre ordinateur et déployez sur le serveur de rapports. L'incorporation de code convient dans le cas de constantes personnalisées, de fonctions complexes ou de fonctions utilisées plusieurs fois dans un même rapport. Quant aux assemblys personnalisés, il est préférable de les utiliser si vous voulez centraliser du code en un emplacement unique et le partager en vue de son utilisation par plusieurs rapports. Le code personnalisé peut inclure de nouvelles constantes personnalisées, variables, fonctions ou sous-routines. Vous pouvez inclure des références en lecture seule à des collections intégrées, telles que la collection de paramètres. Cependant, les fonctions personnalisées ne peuvent pas recevoir des ensembles de valeurs de données de rapport : les agrégations personnalisées ne sont notamment pas prises en charge.  
@@ -51,7 +51,7 @@ ms.locfileid: "56041200"
 2.  Afficher l'aperçu d'un rapport avec des références aux assemblys personnalisés en mode local.  
   
 ##  <a name="Common"></a> Intégration de références aux fonctions couramment utilisées  
- Utilisez la boîte de dialogue **Expression** pour consulter une liste classée par catégorie de fonctions courantes intégrées à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Lorsque vous développez **Fonctions communes** et cliquez sur une catégorie, le volet **Élément** affiche la liste des fonctions que vous incluez dans une expression. Les fonctions courantes incluent des classes provenant des espaces de noms [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> et <xref:System.Convert> ainsi que des fonctions de la bibliothèque d’exécutables [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Pour plus de commodité, vous pouvez afficher les fonctions couramment utilisées dans les **Expression** boîte de dialogue, où elles sont répertoriées par catégorie : Texte, Date et heure, Math, Inspection, Flux de programme, Agrégat, Financier, Conversion et Divers. Les fonctions moins souvent utilisées n'apparaissent pas dans la liste, mais peuvent cependant être utilisées dans une expression.  
+ Utilisez la boîte de dialogue **Expression** pour consulter une liste classée par catégorie de fonctions courantes intégrées à [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Lorsque vous développez **Fonctions communes** et cliquez sur une catégorie, le volet **Élément** affiche la liste des fonctions que vous incluez dans une expression. Les fonctions courantes incluent des classes provenant des espaces de noms [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> et <xref:System.Convert> ainsi que des fonctions de la bibliothèque d’exécutables [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Pour plus de commodité, vous pouvez afficher les fonctions couramment utilisées dans les **Expression** boîte de dialogue, où elles sont répertoriées par catégorie : Texte, Date et heure, Math, Inspection, flux de programme, agrégat, financier, Conversion et divers. Les fonctions moins souvent utilisées n'apparaissent pas dans la liste, mais peuvent cependant être utilisées dans une expression.  
   
  Pour utiliser une fonction intégrée, double-cliquez sur son nom dans le volet Élément. Une description de la fonction s'affiche dans le volet Description et un exemple de l'appel de la fonction apparaît dans le volet d'exemple. Dans le volet du code, quand vous tapez le nom de la fonction suivi d’une parenthèse ouvrante **(**, l’aide d’IntelliSense affiche chaque syntaxe valide pour l’appel de la fonction. Par exemple, pour calculer la valeur maximale pour un champ nommé `Quantity` dans une table, ajoutez l'expression simple `=Max(` au volet du code, puis utilisez les balises actives pour consulter toutes les syntaxes valides possibles pour l'appel de la fonction. Pour compléter cet exemple, tapez `=Max(Fields!Quantity.Value)`.  
   

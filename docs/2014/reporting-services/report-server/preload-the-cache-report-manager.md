@@ -11,15 +11,15 @@ helpviewer_keywords:
 - cache [Reporting Services]
 - preloading cache
 ms.assetid: 152a1051-8aa5-4c01-bc85-f8be8971b0cd
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff32fcd498d7998f79b480369d90a07f974f6dc6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7813470269697b0df65715c6f114b5df635888c1
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035080"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59949105"
 ---
 # <a name="preload-the-cache-report-manager"></a>préchargement du cache (Gestionnaire de rapports)
   Vous pouvez précharger le cache pour un dataset partagé en créant un plan d'actualisation du cache pour le dataset partagé.  
@@ -114,7 +114,7 @@ ms.locfileid: "56035080"
   
 17. Choisissez l'une des deux options de mise en cache suivantes et configurez l'expiration comme suit :  
   
-    -   Pour effectuer l'expiration d'une copie mise en cache après l'écoulement d'une durée particulière, cliquez sur **Mettre en cache une copie temporaire du rapport. Faire expirer la copie du rapport après un certain nombre de minutes.** Tapez le nombre de minutes pour l'expiration du rapport.  
+    -   Pour effectuer la copie en cache expirent après une période donnée, cliquez sur **mettre en Cache une copie temporaire du rapport. Faire expirer la copie du rapport après un certain nombre de minutes.** Tapez le nombre de minutes pour l'expiration du rapport.  
   
     -   Pour définir l’expiration d’une copie mise en cache selon une planification, cliquez sur **Mettre en cache une copie temporaire du rapport. Faire expirer la copie du rapport selon la planification suivante.** Cliquez sur **Configurer**ou sélectionnez une planification partagée pour définir l’expiration du rapport.  
   

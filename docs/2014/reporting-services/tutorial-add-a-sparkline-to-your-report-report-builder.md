@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Ajouter un graphique Sparkline à votre rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1fddfc39b7f6e5764dbe11bf6b069136fba8420d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294727"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59951235"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Didacticiel : ajouter un graphique sparkline à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique Sparkline à votre rapport (Générateur de rapports)
   Dans ce didacticiel, vous allez créer un rapport de tableau de base reposant sur les exemples de données de vente, puis ajouter un graphique sparkline à une cellule du tableau.  
   
  Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=184851). L'illustration suivante montre l'exemple de rapport similaire à celui que vous allez créer.  
@@ -49,7 +49,7 @@ ms.locfileid: "56294727"
   
  9. [Enregistrer le rapport](#Save)  
   
- Durée estimée pour effectuer ce didacticiel : 30 minutes  
+ Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   
 ## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
@@ -183,7 +183,7 @@ ms.locfileid: "56294727"
   
 14. Le tableau est ajouté à l'aire de conception. Il comporte trois colonnes et trois lignes.  
   
-     Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet Groupes de lignes affiche un groupe de lignes : **Produit**. Le volet Groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
+     Recherchez le volet de regroupement. S’il n’est pas visible, dans le menu **Affichage** , cliquez sur **Regroupement**. Le volet groupes de lignes affiche un groupe de lignes : **Product**. Le volet groupes de colonnes affiche un groupe de colonnes : **SalesDate**. Les données de détail sont toutes les données récupérées par la requête de dataset.  
   
 15. Cliquez sur **Exécuter** pour afficher un aperçu du rapport.  
   
@@ -244,7 +244,7 @@ ms.locfileid: "56294727"
   
  Notez que toutes les barres sont maintenant alignées sur les barres des autres lignes.  
   
-##  <a name="FormatCurrency"></a> 5. (Facultatif) Mettre en forme les données en tant que devises  
+##  <a name="FormatCurrency"></a> 5. (Facultatif) Format des données en tant que devises  
  Par défaut, les données de synthèse du champ **Sales** affichent un nombre général. Appliquez une mise en forme pour afficher ce nombre dans un format monétaire. Activez/désactivez **Styles des espaces réservés** pour afficher les zones de texte mises en forme et le texte de l’espace réservé en tant qu’exemples de valeurs.  
   
 #### <a name="to-format-a-currency-field"></a>Pour mettre en forme un champ monétaire  

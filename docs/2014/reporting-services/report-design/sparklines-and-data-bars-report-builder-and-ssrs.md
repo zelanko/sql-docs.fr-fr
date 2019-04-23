@@ -11,15 +11,15 @@ f1_keywords:
 - sql12.rtp.rptdesigner.sparklines.f1
 - "10544"
 ms.assetid: b287436b-fa48-4970-a1a7-1dbcb86e7411
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 98e98c3908735d53777ed425b26c2f229c830f92
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 9c89de031408d222caa030900cececb97d8aa2db
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658043"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59941645"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Graphiques sparkline et barres de données (Générateur de rapports et SSRS)
   Les graphiques sparkline et les barres de données sont des graphiques simples de petite taille qui communiquent beaucoup d'informations dans un petit espace, souvent intégré au texte. Ils sont souvent utilisés dans les tables et les matrices. Ils tirent leur impact de l'affichage d'un grand nombre d'entre eux en même temps et de la possibilité de les comparer rapidement par superposition, au lieu de les examiner séparément. Les valeurs hors norme, les lignes qui ne sont pas exécutées comme les autres, sont ainsi plus visibles. Malgré sa petite taille, chaque graphique sparkline représente fréquemment plusieurs points de données, souvent dans le temps. Les barres de données peuvent représenter plusieurs points de données, mais en général n'en illustrent qu'un seul. Chaque graphique sparkline présente en général une série unique. Vous ne pouvez pas ajouter de graphique sparkline à un groupe de détails dans une table. Étant donné que les graphiques sparkline affichent des données agrégées, ils doivent entrer dans une cellule associée à un groupe. Les graphiques sparkline et les barres de données ont les mêmes éléments de graphique de base de catégories, séries et valeurs, mais ils n'ont aucune légende, ligne d'axe, étiquette ni graduation.  
@@ -37,15 +37,15 @@ ms.locfileid: "58658043"
 ##  <a name="KindsofSparklines"></a> Types de graphiques sparkline  
  Vous pouvez créer presque autant de types de graphiques sparkline qu'il n'existe de graphiques standard. En général, vous ne pouvez pas créer de graphiques sparkline 3D. Vous pouvez dériver des versions de graphique sparkline de ces graphiques intégraux :  
   
--   [Histogrammes &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md) : Histogrammes de base, empilés et empilés 100 %.  
+-   [Histogrammes &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md) : Les graphiques à colonnes empilées de base, empilés et 100 %.  
   
--   [Graphiques en courbes &#40;Générateur de rapports et SSRS&#41;](line-charts-report-builder-and-ssrs.md) : Tous à l'exception du graphique en courbes 3D.  
+-   [Graphiques en courbes &#40;Générateur de rapports et SSRS&#41;](line-charts-report-builder-and-ssrs.md) : Tous, à l’exception de la 3D graphique en courbes.  
   
--   [Graphiques en aires &#40;Générateur de rapports et SSRS&#41;](area-charts-report-builder-and-ssrs.md) : Tous à l'exception des graphiques en aires 3D.  
+-   [Graphiques en aires &#40;Générateur de rapports et SSRS&#41;](area-charts-report-builder-and-ssrs.md) : Tous à l’exception des graphiques en aires 3D  
   
--   [Graphiques à secteurs &#40;Générateur de rapports et SSRS&#41;](pie-charts-report-builder-and-ssrs.md) : Graphiques en anneau, à la fois plats et 3D, mais pas les autres formes, telles que les graphiques en entonnoir et en pyramide.  
+-   [Graphiques à secteurs &#40;Générateur de rapports et SSRS&#41;](pie-charts-report-builder-and-ssrs.md) : Graphiques en anneau, à la fois plats et 3D, mais pas les autres formes telles que des graphiques en entonnoir et en pyramide.  
   
--   [Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](range-charts-report-builder-and-ssrs.md) : Graphiques boursiers, en bougies, avec des barres d'erreur et à surfaces.  
+-   [Graphiques d’étendue &#40;Générateur de rapports et SSRS&#41;](range-charts-report-builder-and-ssrs.md) : Le stock, en bougies, barres d’erreur et les graphiques de courbes de zone.  
   
 ##  <a name="DataBars"></a> Barres de données  
  Les barres de données représentent en général un point de données unique, même si elles peuvent représenter plusieurs points de données, tout comme des graphiques à barres standard. Elles contiennent souvent plusieurs séries sans catégorie ou ont un regroupement de séries.  
@@ -56,9 +56,9 @@ ms.locfileid: "58658043"
   
  Vous pouvez dériver des versions de barre de données de ces graphiques intégraux :  
   
--   [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](bar-charts-report-builder-and-ssrs.md) : Graphiques à barres de base, empilées et empilées 100 %.  
+-   [Graphiques à barres &#40;Générateur de rapports et SSRS&#41;](bar-charts-report-builder-and-ssrs.md) : Base, empilé et 100 % des graphiques à barres empilées.  
   
--   [Histogrammes &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md) : Histogrammes de base, empilés et empilés 100 %. Les histogrammes peuvent être des graphiques sparkline ou des barres de données.  
+-   [Histogrammes &#40;Générateur de rapports et SSRS&#41;](charts-report-builder-and-ssrs.md) : Graphiques à colonnes empilées de base, empilés et 100 %. Les histogrammes peuvent être des graphiques sparkline ou des barres de données.  
 
 ##  <a name="AlignDatainTableMatrix"></a> Alignement des données du graphique sparkline dans une table ou matrice  
  Lorsque vous insérez un graphique sparkline dans une table ou matrice, il est habituellement important que les points de données dans chaque graphique sparkline soient alignés avec les points de données des autres graphiques sparkline dans cette colonne. Sinon, il est difficile de comparer les données dans des lignes différentes. Par exemple, lorsque vous comparez les chiffres des ventes par mois pour différents vendeurs dans votre société, vous souhaitez que les mois soient alignés. Si un employé était absent pendant le mois d'avril, il n'existe aucune donnée pour cet employé pour ce mois. Vous souhaitez voir un vide pour ce mois et les données pour les mois suivants alignées avec celles pour les autres employés. Pour cela, vous pouvez aligner l'axe horizontal. Pour plus d’informations, consultez la section relative aux graphiques sparkline dans [Étendue des expressions pour les totaux, les agrégats et les collections intégrées &#40;Générateur de rapports et SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md), ainsi que la rubrique [Aligner les données d’un graphique dans une table ou une matrice &#40;Générateur de rapports et SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  

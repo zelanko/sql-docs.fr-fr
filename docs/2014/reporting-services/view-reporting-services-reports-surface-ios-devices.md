@@ -14,15 +14,15 @@ helpviewer_keywords:
 - Report Viewer [Reporting Services]
 - iOS
 ms.assetid: 2124bcf5-d60a-475f-a4ae-de6df44d2860
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5bedfa3c06a760baccd460915f313bb1bc6dcd79
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 1453d381b38d01cca5b531661714dbbce1693d1b
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293127"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59947966"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Afficher des rapports Reporting Services sur des appareils Microsoft Surface et Apple iOS
   Cet article décrit les fonctionnalités et les flux de travail de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pris en charge pour les appareils Microsoft Surface ainsi que les appareils utilisant Apple iOS 6 et Apple Safari, tels que les iPad.  
@@ -49,16 +49,16 @@ Visionnez une démonstration d'affichage de rapports sur un iPad.
   
 2.  Ouvrez le rapport en effectuant une des actions suivantes.  
   
-    -   **Démarrer à partir de la messagerie :** À partir d'un message électronique créé par un abonnement [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , cliquez sur l'URL du rapport. Le rapport s'ouvre dans le navigateur.  
+    -   **Démarrer à partir de la messagerie :** À partir d’un message électronique qui est créé par un [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] abonnement, appuyez sur l’URL du rapport. Le rapport s'ouvre dans le navigateur.  
   
-    -   **Démarrer à partir du serveur de rapports :** Parcourez le répertoire du serveur de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], puis touchez le nom du rapport pour l'ouvrir.  
+    -   **Démarrer à partir du serveur de rapports :** Parcourez le répertoire sur le [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] du serveur de rapports, puis appuyez sur le nom du rapport pour ouvrir le rapport.  
   
-    -   **Démarrer à partir d’une bibliothèque de documents SharePoint :** Accédez à une bibliothèque de documents SharePoint contenant des rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], puis touchez le nom du rapport. Vous pouvez afficher et interagir avec le rapport.  
+    -   **Démarrer à partir d’une bibliothèque de documents SharePoint :** Accédez à une bibliothèque de documents SharePoint qui contient [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] signale et appuyez sur le nom du rapport. Vous pouvez afficher et interagir avec le rapport.  
   
         > [!IMPORTANT]  
         >  Pour un iPad, assurez-vous que la propriété **Private Browsing** de Safari est désactivée.  
   
-    -   **Composant WebPart SharePoint :** Si le composant WebPart a été ajouté à une page SharePoint, vous pourrez afficher des rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
+    -   **Composant WebPart SharePoint :** Si le composant WebPart a été ajouté à une page SharePoint, vous pouvez afficher [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] rapports.  
   
 3.  Sur votre appareil Microsoft Surface, vous pouvez également ouvrir le rapport grâce au Gestionnaire de rapports. Parcourez le répertoire du Gestionnaire de rapports [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] , puis touchez le nom du rapport pour l'ouvrir.  
   

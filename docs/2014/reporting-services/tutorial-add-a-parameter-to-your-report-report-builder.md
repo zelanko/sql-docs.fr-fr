@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Ajouter un paramètre à votre rapport (Générateur de rapports) | Microsoft Docs'
+title: 'Tutoriel : Ajouter un paramètre à un rapport (Générateur de rapports) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -8,17 +8,17 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6545812b60732d07881a17dba57cc36066d2f8b5
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cf5f7a4bee10b58f644d98fe03ada0a9e8d0faa3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298657"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966515"
 ---
-# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Didacticiel : Ajouter un paramètre à un rapport (Générateur de rapports)
+# <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutoriel : Ajouter un paramètre à votre rapport (Générateur de rapports)
   Ajoutez un paramètre à votre rapport pour permettre aux utilisateurs de filtrer les données de rapport à partir de la source de données ou dans le rapport. Les paramètres de rapport sont créés automatiquement pour chaque paramètre de requête que vous incluez dans une requête de dataset. Le type de données du paramètre détermine son apparence dans la barre d'outils de l'affichage du rapport.  
   
  ![rs_tut_Parameter](../../2014/tutorials/media/rs-tut-parameter.gif "rs_tut_Parameter")  
@@ -55,14 +55,14 @@ ms.locfileid: "56298657"
 10. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions détaillées sur l’accès à un serveur de rapports, choisissez une source de données et créer un jeu de données, consultez le premier didacticiel de cette série : [Didacticiel : Création d’un rapport de tableau de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
- Durée estimée pour effectuer ce didacticiel : 25 minutes.  
+ Durée estimée pour effectuer ce didacticiel : 25 minutes.  
   
 ## <a name="requirements"></a>Configuration requise  
  Pour plus d’informations sur les spécifications, consultez [Éléments requis pour les didacticiels &#40;Générateur de rapports&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a> 1. Créer un rapport de matrice et un dataset à partir de l'Assistant Tableau ou matrice  
+##  <a name="Setup"></a> 1. Créer un rapport de matrice et un Dataset à partir de l’Assistant tableau ou matrice  
  Créez un rapport de matrice, une source de données et un dataset.  
   
 > [!NOTE]  
@@ -123,7 +123,7 @@ ms.locfileid: "56298657"
   
 12. Cliquer sur **Suivant**.  
   
-##  <a name="CompleteWizard"></a> 2. Organiser les données, choisir la mise en page et le style à partir de l'Assistant Tableau ou matrice  
+##  <a name="CompleteWizard"></a> 2. Organiser les données, choisissez la disposition et le Style à partir de l’Assistant tableau ou matrice  
  Utilisez l'Assistant pour obtenir une conception initiale dans laquelle afficher les données. Le volet de visualisation de l'Assistant vous aide à visualiser le résultat du regroupement des données avant de terminer la conception de la table ou de la matrice.  
   
 #### <a name="to-organize-data-into-groups"></a>Pour organiser les données en groupes  
@@ -327,7 +327,7 @@ ms.locfileid: "56298657"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     L’en-tête de colonne de magasin contient le texte affiché pour une expression complexe : **<\<Expr >>**.  
+     L'en-tête de colonne du magasin contient le texte d’affichage d’une expression complexe : **<\<Expr >>**.  
   
 8.  Affichez l'aperçu du rapport.  
   
@@ -422,7 +422,7 @@ ms.locfileid: "56298657"
   
 14. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-15. Cliquez dans la zone de texte devant l'expression que vous venez de créer, puis tapez ce qui suit :  Valeurs de paramètres sélectionnées :.  
+15. Cliquez dans la zone de texte devant l'expression que vous venez de créer, puis tapez ce qui suit : Valeurs de paramètres sélectionnées :.  
   
 16. Affichez l'aperçu du rapport.  
   

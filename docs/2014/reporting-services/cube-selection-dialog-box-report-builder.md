@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10027"
 ms.assetid: 2887ad5f-015f-4197-8388-c59f78d32f52
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 43668ec1da730687ea422511021ebe64deec9d30
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 788e749d7fbfe62e61bedb57b53c994351427be3
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288887"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59962175"
 ---
 # <a name="cube-selection-dialog-box-report-builder"></a>Boîte de dialogue Sélection de cube (Générateur de rapports)
   Utilisez la boîte de dialogue **Sélection de cube** pour sélectionner un cube différent comme source de données pour votre rapport. En sélectionnant un autre cube, votre requête risque de ne plus être valide.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: a15a96c3-7d2c-433e-a440-4ea051e967a9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d5617e01eb7bec7091918f55ad41668d683bcac8
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 9dcd848643f942006b6e837a5a4670cf7c7b90d8
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292867"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936605"
 ---
 # <a name="set-and-configure-measurement-units-report-builder-and-ssrs"></a>Définir et configurer des unités de mesure (Générateur de rapports et SSRS)
   Les indicateurs fournissent deux unités de mesure : valeurs en pourcentage et valeurs numériques. Par défaut, les indicateurs sont configurés pour utiliser des pourcentages comme unité de mesure. Cela signifie que les valeurs d'indicateur affectées à chaque icône dans le jeu d'indicateurs sont déterminées par une plage de pourcentages. Les plages de pourcentages sont réparties de façon égale entre les icônes dans le jeu d'indicateurs. Chaque icône représente un état d'indicateur. Vous pouvez modifier les pourcentages pour chaque icône du jeu d'indicateurs en spécifiant différents pourcentages de début et de fin. Les indicateurs détectent également automatiquement les valeurs maximale et minimale des données.  

@@ -8,15 +8,15 @@ ms.technology:
 - reporting-services-native
 ms.topic: conceptual
 ms.assetid: 775706be-41a7-4ae7-bad6-349f5ebd9e4d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f4bbbdc167bac7457ed14415422bf4e362630b69
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: cb40a0e2a41e638c4e7058f296badc4feeb9aa60
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56284997"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59936235"
 ---
 # <a name="report-f1-help"></a>Aide F1 sur les rapports
   Les rubriques de cette section fournissent des informations sur les options que vous pouvez définir sur le rapport dans la boîte de dialogue **Propriétés du rapport** . Pour ouvrir la boîte de dialogue **Propriétés du rapport** , cliquez avec le bouton droit sur l'arrière-plan du Concepteur de rapports, puis sur **Propriétés du rapport**.  

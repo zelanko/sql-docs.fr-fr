@@ -13,15 +13,15 @@ helpviewer_keywords:
 - SharePoint integration [Reporting Services], starting Report Builder
 - starting Report Builder
 ms.assetid: 8c8c7d2e-b315-418d-bf65-90e7685e4259
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 506a989494d3f69b5ca9873cc191487bb3b0b296
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 70ec1c794e86782551099b4fb5d8459c8bae6191
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290037"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966505"
 ---
 # <a name="start-report-builder-report-builder"></a>Démarrer le Générateur de rapports (Générateur de rapports)
   [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] comprend une version autonome et [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] versions du Générateur de rapports. La version [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] peut être utilisée avec [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif ou en mode intégré SharePoint.  

@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.shareddatasource.general.f1
 ms.assetid: 8dc51d5a-39e0-4870-8874-9e3d1626e16d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: feaf57f433b0f21b4bf4bb6600e22010e68d9fef
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 3936047c89a76181710fa3bba04cc20b95ef70b9
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296129"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59956025"
 ---
 # <a name="shared-data-source-properties-dialog-box-general"></a>Boîte de dialogue Propriétés de la source de données partagée, Général
   Utilisez la boîte de dialogue **Propriétés de la source de données partagée** pour afficher et modifier les informations de connexion pour une source de données partagée dans le rapport.  
