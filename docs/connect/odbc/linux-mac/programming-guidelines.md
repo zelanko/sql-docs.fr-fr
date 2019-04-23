@@ -11,17 +11,17 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 591c0cc47a4f807172cbfd24b91f465144faae09
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042368"
 ---
 # <a name="programming-guidelines"></a>Instructions de programmation
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Les fonctionnalités de programmation de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur macOS et Linux reposent sur ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se base sur ODBC dans Windows Data Access Components ([Référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkID=45250)).  
+Les fonctionnalités de programmation de [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur macOS et Linux reposent sur ODBC dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ([SQL Server Native Client (ODBC)](https://go.microsoft.com/fwlink/?LinkID=134151)). [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client se base sur ODBC dans Windows Data Access Components ([Guide de référence du programmeur ODBC](https://go.microsoft.com/fwlink/?LinkID=45250)).  
 
 Une application ODBC peut utiliser MARS (Multiple Active Result Sets) et d’autres fonctionnalités spécifiques [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en incluant `/usr/local/include/msodbcsql.h` après avoir inclus les en-têtes unixODBC (`sql.h`, `sqlext.h`, `sqltypes.h` et `sqlucode.h`). Utilisez alors les mêmes noms symboliques pour les éléments spécifiques à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que dans vos applications ODBC Windows.
 
@@ -31,14 +31,14 @@ Les sections suivantes de la documentation de [!INCLUDE[ssNoVersion](../../../in
 -   [Communication avec SQL Server (ODBC)](https://msdn.microsoft.com/library/ms131692.aspx)  
 -   [Prise en charge des connexions et délais de requête](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)  
 -   [Curseurs](../../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
--   [Améliorations de la date et de l’heure (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
+-   [Améliorations des types de données date et heure (ODBC)](https://msdn.microsoft.com/library/bb677319.aspx)  
 -   [Exécution de requêtes (ODBC)](https://msdn.microsoft.com/library/ms131677.aspx)  
 -   [Gestion des erreurs et des messages](../../../relational-databases/native-client-odbc-error-messages/handling-errors-and-messages.md)  
 -   [Authentification Kerberos](../../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)  
 -   [Types CLR volumineux définis par l’utilisateur (ODBC)](https://msdn.microsoft.com/library/bb677316.aspx)  
 -   [Exécution de transactions (ODBC) (à l’exception des transactions distribuées)](https://msdn.microsoft.com/library/ms131706.aspx)  
 -   [Traitement des résultats (ODBC)](https://msdn.microsoft.com/library/ms130812.aspx)  
--   [Exécution des procédures stockées](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
+-   [Exécution de procédures stockées](../../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)
 -   [Prise en charge des colonnes éparses (ODBC)](https://msdn.microsoft.com/library/cc280357.aspx)
 -   [Chiffrement SSL](../../../relational-databases/native-client/features/using-encryption-without-validation.md)
 -   [Paramètres table](https://docs.microsoft.com/sql/relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc)
@@ -132,7 +132,7 @@ Dans ODBC Driver 13 et 13.1, quand des caractères multioctets UTF-8 ou des subs
 2.  Le Gestionnaire de pilotes UnixODBC retourne « Identificateur d’option/d’attribut non valide » pour tous les attributs d’instruction quand ils sont passés par le biais de SQLSetConnectAttr. Sur Windows, quand SQLSetConnectAttr reçoit une valeur d’attribut d’instruction, le pilote est amené à définir cette valeur sur toutes les instructions actives qui sont des enfants du handle de connexion.  
 
 ## <a name="see-also"></a> Voir aussi  
-[Forum Aux Questions (FAQ)](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[Questions fréquentes (FAQ)](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 
 [Problèmes connus dans cette version du pilote](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 

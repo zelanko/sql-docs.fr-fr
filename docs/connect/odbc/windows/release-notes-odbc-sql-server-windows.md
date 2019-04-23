@@ -12,10 +12,10 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872009"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notes de publication d’ODBC pour SQL Server sur Windows
@@ -67,7 +67,7 @@ GeneMi (and CraigG).  2019/03/30.
 
 | Fonctionnalité ajoutée | Détails |
 | :------------ | :------ |
-| Prise en charge des attributs de connexion `SQL_COPT_SS_CEKCACHETTL` et `SQL_COPT_SS_TRUSTEDCMKPATHS`. | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`<br/>Permet de contrôler la durée d’existence du cache local des clés de chiffrement de colonne, ainsi que son vidage.<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`<br/>Permet à l’application de limiter les opérations AE à la seule utilisation de la liste spécifiée de clés principales de colonne.<br/><br/> Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
+| Prise en charge des attributs de connexion `SQL_COPT_SS_CEKCACHETTL` et `SQL_COPT_SS_TRUSTEDCMKPATHS`. | &bull; &nbsp; `SQL_COPT_SS_CEKCACHETTL`)<br/>Permet de contrôler la durée d’existence du cache local des clés de chiffrement de colonne, ainsi que son vidage.<br/><br/>&bull; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS`)<br/>Permet à l’application de limiter les opérations AE à la seule utilisation de la liste spécifiée de clés principales de colonne.<br/><br/> Pour plus d’informations, consultez [Utilisation d’Always Encrypted avec ODBC Driver for SQL Server](../using-always-encrypted-with-the-odbc-driver.md). |
 | Prise en charge de l’authentification interactive Azure Active Directory | &nbsp; |
 | Correctifs de bogues. | Consultez [Correctifs de bogues](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
@@ -98,7 +98,7 @@ Cette version d’ODBC prend en charge Azure SQL Managed Instance (préversion p
 > - La création d’un UDT depuis le chemin local n’est pas prise en charge.
 > - L’authentification intégrée de Windows n’est pas prise en charge.
 > - DTC n’est pas pris en charge.
-> - `sa` Le compte n’est pas présent (le compte par défaut est appelé `cloudSA`).
+> - Le compte `sa` n’est pas présent (le compte par défaut est appelé `cloudSA`).
 > - L’erreur de jeton TDS (0xAA) retourne un nom de serveur incorrect.
 > - Les caractères spéciaux dans les noms de base de données ne sont pas pris en charge.
 > - ALTER DATABASE [nom_bd_1] MODIFY NAME = [nom_bd_2] n’est pas pris en charge.

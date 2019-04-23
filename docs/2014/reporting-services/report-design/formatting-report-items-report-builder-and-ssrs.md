@@ -10,15 +10,15 @@ ms.topic: conceptual
 f1_keywords:
 - "10444"
 ms.assetid: fdaa402e-4681-4ab8-9b9e-4dbcbb706bac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0b85adfaffc3914eaeb18dc9385668edb4f34ec7
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56289617"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59948514"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
   La mise en forme des éléments du rapport rend celui-ci plus attrayant et améliore sa lisibilité. Vous pouvez mettre en forme les zones de texte et des éléments individuels dans les zones de texte, les images, les expressions et les données en mode création de rapport.  
@@ -27,7 +27,7 @@ ms.locfileid: "56289617"
   
  A. Zone de texte avec une bordure à double trait et divers styles de mise en forme, incluant un lien.  
   
- b. Zone de texte avec une bordure en pointillés, un contenu HTML brut et un contenu HTML rendu.  
+ B. Zone de texte avec une bordure en pointillés, un contenu HTML brut et un contenu HTML rendu.  
   
  C. Zone de texte avec une étiquette de texte et un espace réservé.  
   

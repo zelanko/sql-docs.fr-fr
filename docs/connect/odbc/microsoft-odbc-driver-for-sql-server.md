@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e991ad5b1b88798604f4c8ba6486af3d739c96c1
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: MTE75
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041878"
 ---
 # <a name="microsoft-odbc-driver-for-sql-server"></a>Pilote Microsoft ODBC pour SQL Server
@@ -55,12 +55,12 @@ L’exemple C++ suivant montre comment utiliser les API ODBC pour se connecter e
 - [Connexion avec **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Connexion avec **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
 - [Traçage de l’accès aux données](../../connect/odbc/linux-mac/data-access-tracing-with-the-odbc-driver-on-linux.md)
-- [Forum Aux Questions (FAQ)](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+- [Questions fréquentes (FAQ)](../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
 - [Installation du Gestionnaire de pilotes](../../connect/odbc/linux-mac/installing-the-driver-manager.md)
 - [Problèmes connus](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [Instructions de programmation](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [Notes de publication](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
-- [Prise en charge de la haute disponibilité et de la reprise d’activité](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
+- [Prise en charge de la haute disponibilité et de la récupération d’urgence](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 - [Utilisation de l’authentification intégrée (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 
 ### <a name="windows"></a>Windows
@@ -69,11 +69,11 @@ L’exemple C++ suivant montre comment utiliser les API ODBC pour se connecter e
 - [Résilience de connexion du pilote ODBC Windows](../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)
 - [Regroupement de connexions prenant en charge les pilotes](../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md)
 - [Fonctionnalités et changements de comportement](../../connect/odbc/windows/features-of-the-microsoft-odbc-driver-for-sql-server-on-windows.md)
-- [Notes de publication d’ODBC pour SQL Server sur Windows](windows/release-notes-odbc-sql-server-windows.md)
+- [Notes de publication relatives à ODBC pour SQL Server sur Windows](windows/release-notes-odbc-sql-server-windows.md)
 - [Configuration système requise, installation et fichiers de pilote](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
 
 
 ## <a name="community"></a>Communauté  
 - [Blog de l’équipe Microsoft ODBC Driver for SQL Server](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
-- [Forum d'accès aux données SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  
+- [Forum sur l’accès aux données SQL Server](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

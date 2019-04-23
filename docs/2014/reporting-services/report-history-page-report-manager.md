@@ -1,31 +1,32 @@
 ---
 title: Signaler la Page d’historique (Gestionnaire de rapports) | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
 ms.technology:
 - reporting-services-native
 ms.topic: conceptual
-ms.assetid: 4c64e58a-ed83-4e29-a422-9baaac2be4b8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cb6d9de69656d40b3a5fd87c5353c6d0b8f0ef5f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 06/13/2017
+ms.openlocfilehash: e7c39ebb4d42fbb03560b99d6e191cb0c69bb73f
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033860"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59945135"
 ---
 # <a name="report-history-page-report-manager"></a>Page Historique de rapport (Gestionnaire de rapports)
-  La page Historique de rapport vous permet d'afficher des instantanés de rapport qui sont générés et stockés dans le temps. Selon les options définies sur le serveur de rapports, l'historique de rapport peut contenir uniquement les instantanés les plus récents.  
+
+La page Historique de rapport vous permet d'afficher des instantanés de rapport qui sont générés et stockés dans le temps. Selon les options définies sur le serveur de rapports, l'historique de rapport peut contenir uniquement les instantanés les plus récents.  
   
- Un historique de rapport est toujours affiché dans le contexte du rapport dont il est issu. Vous ne pouvez pas afficher l'historique de tous les rapports sur un serveur de rapports dans un seul emplacement.  
+
+Un historique de rapport est toujours affiché dans le contexte du rapport dont il est issu. Vous ne pouvez pas afficher l'historique de tous les rapports sur un serveur de rapports dans un seul emplacement.  
   
- Pour générer un historique de rapport, le rapport doit pouvoir s'exécuter sans assistance (c'est-à-dire qu'il doit utiliser les informations d'identification stockées ; les rapports paramétrables doivent contenir des valeurs de paramètres par défaut pour tous les paramètres). Un historique de rapport peut être généré manuellement ou sous forme d'opération planifiée. Les propriétés d'historique du rapport déterminent les modes de création de l'historique de rapport.  
+Pour générer un historique de rapport, le rapport doit pouvoir s'exécuter sans assistance (c'est-à-dire qu'il doit utiliser les informations d'identification stockées ; les rapports paramétrables doivent contenir des valeurs de paramètres par défaut pour tous les paramètres). Un historique de rapport peut être généré manuellement ou sous forme d'opération planifiée. Les propriétés d'historique du rapport déterminent les modes de création de l'historique de rapport.  
   
- Vous pouvez cliquer sur un instantané d'historique de rapport pour l'afficher. Les instantanés qui apparaissent dans l'historique de rapport ne sont différenciés que par la date et l'heure de leur création. Il n'y a aucun moyen de déterminer si un instantané a été généré par une opération manuelle ou planifiée.  
+Vous pouvez cliquer sur un instantané d'historique de rapport pour l'afficher. Les instantanés qui apparaissent dans l'historique de rapport ne sont différenciés que par la date et l'heure de leur création. Il n'y a aucun moyen de déterminer si un instantané a été généré par une opération manuelle ou planifiée.  
   
 > [!NOTE]  
 >  Cette fonctionnalité n'est pas disponible dans toutes les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour obtenir une liste des fonctionnalités prises en charge par les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], consultez [Features Supported by the Editions of SQL Server 2014](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -59,6 +60,4 @@ ms.locfileid: "56033860"
  [Ajout d’un instantané à un historique de rapport &#40;Gestionnaire de rapports&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Page Propriétés générales, Rapports &#40;Gestionnaire de rapports&#41;](../../2014/reporting-services/general-properties-page-reports-report-manager.md)   
  [F1 du Gestionnaire de rapports](../../2014/reporting-services/report-manager-f1-help.md)   
- [Page de propriétés Options d’instantanés &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)  
-  
-  
+ [Page de propriétés Options d’instantanés &#40;le Gestionnaire de rapports&#41;](../../2014/reporting-services/snapshot-options-properties-page-report-manager.md)

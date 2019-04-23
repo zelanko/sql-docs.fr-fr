@@ -27,15 +27,15 @@ ms.assetid: ccdfc689-ad4e-44c0-83f7-0f2cfcfb6406
 author: juliemsft
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 7cd77a10ee161cd118b168ce2a9aaacf1bb0cc8d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 3fc30986de5a7629771b05b7fd6df8dc12ea158b
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334636"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59582982"
 ---
 # <a name="checkpoint-transact-sql"></a>CHECKPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Génère un point de contrôle manuel dans la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à laquelle vous êtes connecté.  
   
@@ -62,7 +62,7 @@ CHECKPOINT [ checkpoint_duration ]
   
 ##  <a name="Security"></a> Sécurité  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>Autorisations  
  Les autorisations de CHECKPOINT sont accordées par défaut aux membres du rôle serveur fixe **sysadmin** et aux membres des rôles de base de données fixes **db_owner** et **db_backupoperator** ; elles ne sont pas transférables.  
   
 ## <a name="see-also"></a> Voir aussi  
