@@ -1,7 +1,7 @@
 ---
 title: Matrice de prise en charge de Microsoft JDBC Driver pour SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 31c5829322a4c3d2bc6266a6a0ddd3a1f86f505a
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
-ms.translationtype: MTE75
+ms.openlocfilehash: c5afea07126f93937a46254682b163407db6f75d
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154914"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671305"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Matrice de support de Microsoft JDBC Driver pour SQL Server
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "56154914"
     
  Les pilotes Microsoft JDBC suivants bénéficient d’un support jusqu’à la date de fin de support indiquée.  
   
-|Nom du pilote|Version de package du pilote|JAR(s) applicable|Fin du Support standard|
+|Nom du pilote|Version de package du pilote|Fichier(s) JAR applicable(s)|Fin du support standard|
 |-|-|-|-|  
-|Microsoft JDBC Driver 7.2 pour SQL Server|7.2|mssql-jdbc-7.2.1.jre11.jar<br> mssql-jdbc-7.2.1.jre8.jar|11 février 2024|
-|Microsoft JDBC Driver 7.0 pour SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 juillet 2023|  
-|Microsoft JDBC Driver 6.4 pour SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 février 2023|    
+|Microsoft JDBC Driver 7.2 pour SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16 avril 2024|
+|Microsoft JDBC Driver 7.0 pour SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31 juillet 2023|  
+|Microsoft JDBC Driver 6.4 pour SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27 février 2023|    
 |Microsoft JDBC Driver 6.2 pour SQL Server|6.2|mssql-jdbc-6.2.2.jre8.jar<br> mssql-jdbc-6.2.2.jre7.jar|30 juin 2022|    
 |Microsoft JDBC Driver 6.0 pour SQL Server|6.0|sqljdbc42.jar<br>sqljdbc41.jar|14 juillet 2021|    
 |Microsoft JDBC Driver 4.2 pour SQL Server|4.2|sqljdbc42.jar<br>sqljdbc41.jar|24 août 2020|  
@@ -42,7 +42,7 @@ ms.locfileid: "56154914"
   
  Le support des pilotes Microsoft JDBC suivants est fini.  
  
-|Nom du pilote|Version de package du pilote|Fin du Support standard|  
+|Nom du pilote|Version de package du pilote|Fin du support standard|  
 |-|-|-|
 |Microsoft JDBC Driver 4.0 pour SQL Server|4.0|6 mars 2017|  
 |Pilote JDBC Microsoft SQL Server 3.0|3|23 avril 2015|  
@@ -54,7 +54,7 @@ ms.locfileid: "56154914"
   
 ## <a name="sql-version-compatibility"></a>Compatibilité des versions de SQL  
   
-|Version du pilote|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Database Managed Instance (version préliminaire privée d’étendu)|  
+|Version du pilote|SQL Server 2008|SQL Server 2008 R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|Azure SQL Managed Instance (préversion privée étendue)|  
 |-|-|-|-|-|-|-|-|-|-|
 |7.2|N|O|O|O|O|O|O|O|O|  
 |7.0|N|O|O|O|O|O|O|O|O|  

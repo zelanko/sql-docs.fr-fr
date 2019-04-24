@@ -13,10 +13,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 44229bbe0bd0a4df65e9dfbfe213c6a14cee0f42
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59241886"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>Notes de publication pour SQL Server Data Tools (SSDT)
@@ -284,7 +284,7 @@ SSDT pour Visual Studio 2017 (15.5.0) qui était en préversion est désormais e
 ## <a name="173nbsp-ssdt-for-vs-2015"></a>17.3,&nbsp; SSDT pour VS 2015
 
 _Numéro de build :_ &nbsp; 14.0.61712.050  
-_SSDT pour Visual Studio 2015._
+_SSDT pour Visual Studio 2015._
 
 ### <a name="whats-new"></a>Nouveautés
 
@@ -300,7 +300,7 @@ _SSDT pour Visual Studio 2015._
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
 
-**Projets AS (Analysis Services) :**
+**Projets AS (Analysis Services) :**
 - Résolution d’un problème qui pouvait entraîner une exception non gérée lors de l’archivage des modifications du modèle dans TFS.
 - Résolution d’un problème qui pouvait entraîner une exception lors de l’ajout d’une table avec une expression M complexe à un modèle 1400.
 - Résolution d’un problème qui pouvait entraîner un incident dans Visual Studio lors de la recherche de métadonnées dans la vue de diagramme de modèle.
@@ -318,7 +318,7 @@ _SSDT pour Visual Studio 2015._
 - Les mots clés de requêtes M tels que « Source » dans l’éditeur PowerQuery ne s’affichent pas comme étant localisés.
 - Mise en cache des informations d’identification lors de l’utilisation des modèles 1400 et des sources de données structurées pour éviter d’avoir à entrer les mêmes informations d’identification pour chaque table modifiée.
 
-**Projets RS :**
+**Projets RS :**
 - Résolution d’un problème qui empêchait le déploiement d’un rapport unique dans un projet de plusieurs rapports
 - Résolution d’un problème qui pouvait se poser avec les sources de données partagées lors du déploiement
 - Résolution d’un problème qui pouvait entraîner un incident dans le gestionnaire d’annulation quand vous basculiez entre le mode Code, la vue design et la fenêtre de l’éditeur de requête
@@ -366,7 +366,7 @@ Cette version fournit un programme d’installation web autonome pour les projet
 ## <a name="1730nbsp-ssdt-for-vs-2015"></a>17.30,&nbsp; SSDT pour VS 2015
 
 _Numéro de build :_ &nbsp; 14.0.61709.290  
-_SSDT pour Visual Studio 2015._
+_SSDT pour Visual Studio 2015._
 
 ### <a name="whats-new"></a>Nouveautés
 
@@ -477,12 +477,12 @@ Cette préversion est la première version de SSDT pour Visual Studio 2017. Cet
 ## <a name="172nbsp-ssdt-for-vs-2015"></a>17.2,&nbsp; SSDT pour VS 2015
 
 _Numéro de build :_ &nbsp; 14.0.61707.300  
-_SSDT pour Visual Studio 2015._
+_SSDT pour Visual Studio 2015._
 
 ### <a name="whats-new"></a>Nouveautés
 
 
-**Projets AS :**
+**Projets AS :**
 - La sécurité au niveau des objets peut maintenant être configurée dans la boîte de dialogue *Rôles* pour la sécurité avancée dans les modèles tabulaires de niveau de compatibilité 1400.
 - Une nouvelle sélection de membre du rôle AAD a été ajoutée pour les utilisateurs sans adresse e-mail dans les modèles Azure AS des projets AS SSDT pour VS2017.
 - Une nouvelle propriété de projet Azure AS « Toujours demander » a été ajoutée dans les projets tabulaires AS SSDT pour personnaliser le comportement de mise en cache des informations d’identification ADAL.
@@ -526,16 +526,16 @@ _SSDT pour Visual Studio 2015._
 ## <a name="1710nbsp-ssdt-for-vs-2015"></a>17.10,&nbsp; SSDT pour VS 2015
 
 _Numéro de build :_ &nbsp; 14.0.61705.170  
-_SSDT pour Visual Studio 2015._
+_SSDT pour Visual Studio 2015._
 
 ### <a name="whats-new"></a>Nouveautés
-**Projets AS :**
+**Projets AS :**
 - Les utilisateurs peuvent définir des indications sur le codage des colonnes dans l’interface utilisateur sur les modèles 1400
 - IntelliSense non associé à un modèle est désormais disponible en mode hors connexion
 - L’Explorateur de modèles tabulaires contient maintenant un nœud pour représenter des expressions M nommées disponibles dans le modèle (modèles tabulaires de niveau de compatibilité 1400)
 - Un sélecteur de personnes Azure Active Directory similaire à la gestion des identités et des accès du portail Microsoft Azure est désormais disponible lors de la configuration des membres du rôle dans les modèles tabulaires
 
-**Projets de base de données :**
+**Projets de base de données :**
 - Mis à jour vers DacFx 17.1
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
@@ -560,22 +560,22 @@ _SSDT pour Visual Studio 2015._
 ## <a name="170nbsp-ssdt-for-vs-2015"></a>17.0,&nbsp; SSDT pour VS 2015
 
 _Numéro de build :_ &nbsp; 14.0.61704.140  
-_SSDT pour Visual Studio 2015._  
+_SSDT pour Visual Studio 2015._  
 _Prend en charge jusqu’à SQL Server 2017._
 
 ### <a name="whats-new"></a>Nouveautés
-**Projets de base de données :**
+**Projets de base de données :**
 - La modification d’un index cluster sur une vue ne bloque plus le déploiement.
 - Les chaînes de comparaison de schéma relatives au chiffrement des colonnes utilisent désormais le nom approprié au lieu du nom de l’instance.   
 - Ajout d’une nouvelle option de ligne de commande à SqlPackage : ModelFilePath.  Ceci permet aux utilisateurs avancés de spécifier un fichier model.xml externe pour les opérations d’importation, de publication et de script.   
 - L’API DacFx a été étendue pour prendre en charge l’authentification universelle Azure AD et l’authentification multifacteur
 
-**Projets IS :**
+**Projets IS :**
 - Le Gestionnaire de connexions OData et de sources OData de SSIS prend maintenant en charge la connexion aux flux OData de Microsoft Dynamics AX Online et Microsoft Dynamics CRM Online.
 - Les projets SSIS prennent maintenant en charge la version de serveur cible « SQL Server 2017 ». 
 - Prise en charge des tâches de contrôle CDC, du séparateur CDC et des sources CDC lors du ciblage de SQL Server 2017. 
 
-**Projets AS :**
+**Projets AS :**
 - Intégration de PowerQuery à Analysis Services (modèles tabulaires de niveau de compatibilité 1400) :
     - DirectQuery est disponible pour SQL Oracle et pour Teradata si l’utilisateur a installé les pilotes des tiers
     - Ajouter des colonnes par exemple dans PowerQuery
@@ -597,21 +597,21 @@ _Prend en charge jusqu’à SQL Server 2017._
     - Améliorations apportées à l’analyseur\Intellisense DAX
 
 
-**Projets RS :**
+**Projets RS :**
 - Les contrôles RVC intégrable sont désormais disponibles pour la prise en charge de SSRS 2016
 
 ### <a name="bug-fixes"></a>Correctifs de bogues
-**Projets AS :**
+**Projets AS :**
 - Correction de la priorité du modèle pour les projets BI pour qu’ils ne s’affichent plus en haut des catégories Nouveaux projets dans VS
 - Correction d’un incident VS susceptible de survenir rarement lors de l’ouverture de la solution SSIS, SSAS ou SSRS
 - Tabulaire : Améliorations et correctifs de performances pour l’analyse et la barre de formules DAX.
 - Tabulaire : L’Explorateur de modèles tabulaires ne sera plus visible si aucun projet tabulaire SSAS n’est ouvert.
 - Multidimensionnel: Résolution d’un problème où la boîte de dialogue de traitement était inutilisable sur les machines avec écran haute résolution.
-- Tabulaire : Résolution d’un problème d’erreur de SSDT à l’ouverture de projets BI quand SSMS est déjà ouvert. [Article Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
+- Tabulaire : Résolution d’un problème d’erreur de SSDT à l’ouverture de projets BI quand SSMS est déjà ouvert. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)
 - Tabulaire : Résolution d’un problème où les hiérarchies n’étaient pas correctement enregistrées dans le fichier BIM dans un modèle 1103. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)
 - Tabulaire : Résolution d’un problème où le mode Espace de travail intégré était autorisé sur les ordinateurs 32 bits alors qu’il n’est pas pris en charge.
 - Tabulaire : Résolution d’un problème où le fait de cliquer sur quoi que ce soit en mode de semi-sélection (par exemple en tapant une expression DAX mais en cliquant sur une mesure) pouvait provoquer des blocages.
-- Tabulaire : Résolution d’un problème où l’Assistant Déploiement réinitialisait la propriété .Name du modèle sur « Model ». [Article Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
+- Tabulaire : Résolution d’un problème où l’Assistant Déploiement réinitialisait la propriété .Name du modèle sur « Model ». [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)
 - Tabulaire : Correction d’un problème où la sélection d’une hiérarchie dans TME affichait des propriétés même si la vue Diagramme n’était pas sélectionnée.
 - Tabulaire : Résolution d’un problème où l’opération Coller dans la barre de formule DAX collait les images ou d’autres contenus au lieu du texte lors d’une opération Coller à partir de certaines applications.
 - Tabulaire : Résolution d’un problème où certains anciens modèles dans 1103 ne pouvaient pas être ouverts en raison de la présence de mesures avec une définition spécifique.
@@ -638,22 +638,22 @@ _Prend en charge jusqu’à SQL Server 2017._
 - Correction d’un problème dans l’aperçu des rapports avec un échec de connexion à AS dans VS2017
  
 
-**Projets RS :**
+**Projets RS :**
 - Correction d’un problème lié à la réduction de l’affichage de l’arborescence des paramètres, des sources de données et des jeux de données lorsque la plupart des modifications ont été effectuées survenant, lors de la conception de rapports dans SSDT 
 - Résolution d’un problème où l’opération Enregistrer enregistrait la version de RDL et non pas la version la plus récente.
 - Résolution d’un problème où SSDT RS sauvegardait des fichiers alors que la sauvegarde était désactivée et de plusieurs autres problèmes.
-- Résolution d’un problème dans le Générateur de rapports où une erreur était affichée quand l’utilisateur cliquait sur « Fractionner les cellules ». [Article Connect](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
-- Résolution d’un problème où la mise en cache pouvait entraîner des données incorrectes dans un rapport. [Article Connect](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
+- Résolution d’un problème dans le Générateur de rapports où une erreur était affichée quand l’utilisateur cliquait sur « Fractionner les cellules ». [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)
+- Résolution d’un problème où la mise en cache pouvait entraîner des données incorrectes dans un rapport. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3102158/ssdtbi-14-0-60812-report-preview-data-is-frequently-wrong-due-to-bad-caching)
 
-**Projets IS :**
+**Projets IS :**
 - Résolution d’un problème où le paramètre run64bitruntime n’était pas conservé.
 - Résolution d’un problème où DataViewer n’enregistrait pas les colonnes affichées.
-- Résolution d’un problème où Parties de package masque les annotations. [Article Connect](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
-- Résolution d’un problème où Parties de package ignore les dispositions et les annotations des flux de données. [Article Connect](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
+- Résolution d’un problème où Parties de package masque les annotations. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3106624/package-parts-hide-annotations)
+- Résolution d’un problème où Parties de package ignore les dispositions et les annotations des flux de données. [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/3109241/package-parts-discard-data-flow-layouts-and-annotations)
 - Résolution d’un problème où SSDT se bloque lors de l’importation d’un projet depuis SQL Server.
 - Correction d’un problème où la valeur par défaut de TimeoutInMinutes pour les tâches du système de fichiers Hadoop était définie sur 10 après l’ouverture d’un package SSIS enregistré et à l’exécution.
 
-**Projets de base de données :**
+**Projets de base de données :**
 - SSDT DACPAC : réinsertion du paramètre de déploiement/ajout pour IgnoreColumnOrder [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
 - Échec de compilation en cas d’utilisation de STRING_SPLIT [Article de Microsoft Connect](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
 - Correction du problème lié à l’accès de DeploymentContributors au modèle public, sans que le schéma de sauvegarde ait été initialisé [Problème de Github](https://github.com/Microsoft/DACExtensions/issues/8)
@@ -665,7 +665,7 @@ _Prend en charge jusqu’à SQL Server 2017._
 
 _Mise en production :_ &nbsp;20 octobre 2016  
 _Numéro de build :_ &nbsp; 14.0.61021.0  
-_SSDT pour Visual Studio 2015._  
+_SSDT pour Visual Studio 2015._  
 _Prend en charge jusqu’à SQL Server 2016._
 
 **Nouveautés**
@@ -693,7 +693,7 @@ Exemple d’utilisation :
 
 ```Sqlpackage.exe /a:Publish /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
-**Action de script**
+**Action Script**
 
 ```Sqlpackage.exe /a:Script /tsn:(localdb)\ProjectsV13 /tdn:MyDatabase /deployscriptpath:"My\DeployScript.sql" /deployreportpath:"My\DeployReport.xml"```
 
@@ -723,7 +723,7 @@ Console.WriteLine(result.MasterDbScript);
 Console.WriteLine(result.DeploymentReport);
 ```
 
-**Analysis Services et Reporting Services**
+**Analysis Services & Reporting Services**
 
 Amélioration des performances de l’analyseur DAX du concepteur tabulaire SSAS lors de l’utilisation d’expressions DAX longues.
 Pour plus d’informations, lisez le [billet du blog Analysis Services](https://blogs.msdn.microsoft.com/analysisservices/2016/09/20/introducing-integrated-workspace-mode-for-sql-server-data-tools-for-analysis-services-tabular-projects-ssdt-tabular/).
@@ -742,7 +742,7 @@ Pour plus d’informations, lisez le [billet du blog Analysis Services](https://
 * Amélioration : Le bouton Épingler/Désépingler dans l’onglet Historique de la boîte de dialogue de connexion est désormais plus compact, ce qui rend moins probable l’affichage d’une barre de défilement
 * Correction : Plusieurs problèmes d’accessibilité ont été résolus dans la boîte de dialogue de connexion.
 
-**Analysis Services et Reporting Services**
+**Analysis Services & Reporting Services**
 
 * Correction d’un problème dans le concepteur tabulaire SSDT AS où le fait de cliquer sur le curseur de la barre de défilement dans la grille de données générait un blocage dans certaines situations
 * Correction d’un problème où l’option permettant de se connecter en tant qu’utilisateur actuel dans le concepteur tabulaire SSDT AS n’était pas disponible
@@ -777,7 +777,7 @@ Le modèle tabulaire SSDT comprend désormais une instance SSAS interne qu’il 
 - [Problème Connect 2900167](https://connect.microsoft.com/SQLServer/feedback/details/2900167) : L’exécution de tests unitaires SSDT laisse des fichiers temporaires
 - [Problème Connect 1807712](https://connect.microsoft.com/SQLServer/feedback/details/1807712) : Rupture de compatibilité descendante - AppLocal et Nugetization
 
-**Analysis Services et Reporting Services**
+**Analysis Services & Reporting Services**
 
 * Correction d’un problème dans SSDT où des fenêtres contextuelles de conseil sur les erreurs s’affichaient lors de la modification des colonnes calculées DAX pour DirectQuery.
 * Correction d’un problème dans la grille tabulaire SSDT AS où l’icône de KPI ne s’affichait pas dans la grille de mesure quand le facteur d’échelle Windows était défini avec une haute résolution de plus de 200 %.
@@ -820,7 +820,7 @@ _Pour SQL Server 2016._
         - Correction d’un problème où le niveau de compatibilité de DACFx n’était pas mis à jour pour l’erreur SqlAzureV12.
         - Correction d’un problème où la propriété IsAutoGeneratedHistoryTable était exclue sans raison de la comparaison du modèle.
 
-- **Analysis Services et Reporting Services**
+- **Analysis Services & Reporting Services**
     - **SSDT :**
         - Correction d’un problème où il était impossible d’enregistrer le modèle tabulaire lorsque la connexion au serveur était perdue.
         - Correction d’un problème où SSDT cessait de répondre en raison d’un possible problème de boucle infinie dans AS.
@@ -855,7 +855,7 @@ _Pour SQL Server 2016._
     * Correction d’un problème où les utilisateurs ne figuraient pas dans le dossier Sécurité des connexions APS et DW Azure SQL.
 
 
- * **Analysis Services et Reporting Services :**
+ * **Analysis Services & Reporting Services :**
     * Correction d’un problème SxS avec le fournisseur OLEDB MSOLAP où seul le fournisseur 32 bits était installé, ce qui impactait Excel 2016 64 bits lors de la connexion à SQL Server 2014 (ne se reproduisait pas avec les installations ClickOnce à partir d’Office365, seulement avec l’installation du MSI Excel).
     * Correction d’un problème par le renforcement un « corner case » qui pouvait générer l’erreur « La relation utilise un ID de colonne non valide » pendant le passage du niveau de compatibilité 1103 à 1200 pour un modèle AS avec des tables collées.
     * Correction d’un problème SxS où SSDT-BI 2013, installé sur le même ordinateur, ne pouvait plus importer des données dans le modèle Analysis Services après la désinstallation de SSDT 2015 (paramètre du Registre partagé de cartouches).

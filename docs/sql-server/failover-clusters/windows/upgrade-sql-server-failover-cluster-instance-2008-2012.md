@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 1a4aa8d2bdebeb3be911406fc19dfb6085d30b04
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58872249"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Mettre à niveau les instances de SQL Server s’exécutant sur des clusters Windows Server 2008/2008 R2/2012
@@ -47,8 +47,8 @@ La stratégie de migration appropriée dépend de certains paramètres de la top
 |                                   | Nécessite tous les objets serveur et noms de réseaux virtuels | Nécessite tous les objets serveur et noms de réseaux virtuels | Ne nécessite pas d’objets serveur/de noms de réseaux virtuels\* | Ne nécessite pas d’objets serveur/de noms de réseaux virtuels\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
 | **_Groupes de disponibilité ? (O/N)_**                  | **_O_**                              | **_N_**                                                            | **_O_**    | **_N_**    |
-| **Le cluster utilise uniquement l’instance de cluster de basculement SQL**         | [Scénario 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Scénario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Scénario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scénario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
-| **Le cluster utilise des instances autonomes** | [Scénario 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Scénario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Scénario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scénario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
+| **Le cluster utilise l’instance de cluster de basculement SQL uniquement**         | [Scénario 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Scénario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Scénario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scénario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
+| **Le cluster utilise des instances autonomes** | [Scénario 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Scénario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Scénario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Scénario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
 \* À l’exception des noms des écouteurs de groupe de disponibilité
 
@@ -123,7 +123,7 @@ Si vous avez un environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversi
 
 ## <a name="scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups"></a>Scénario 3 : Cluster Windows avec à la fois des instances de cluster de basculement SQL et des groupes de disponibilité SQL Server
 
-Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui n’utilise aucune instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], uniquement des instances de cluster de basculement SQL contenues dans au moins un groupe de disponibilité, vous pouvez effectuer cette migration vers un nouveau cluster à l’aide de méthodes similaires à celles du scénario « aucun groupe de disponibilité, aucune instance autonome ». Avant de copier des tables système sur les disques partagés d’instance de cluster de basculement cible, vous devez supprimer tous les groupes de disponibilité dans l’environnement d’origine. Une fois que toutes les bases de données ont été migrées vers les ordinateurs cibles, vous allez recréer les groupes de disponibilité avec les mêmes noms de schéma et d’écouteur. Ce faisant, les ressources de cluster de basculement Windows Server sont correctement formées et gérées sur le cluster cible. **Always On doit être activé dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur tous les ordinateurs de l’environnement cible avant la migration.**
+Si vous avez un programme d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui n’utilise aucune instance autonome de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], uniquement des instances de cluster de basculement SQL contenues dans au moins un groupe de disponibilité, vous pouvez effectuer cette migration vers un nouveau cluster à l’aide de méthodes similaires à celles du scénario « aucun groupe de disponibilité, aucune instance autonome ». Avant de copier des tables système sur les disques partagés d’instance de cluster de basculement cible, vous devez supprimer tous les groupes de disponibilité dans l’environnement d’origine. Une fois que toutes les bases de données ont été migrées vers les ordinateurs cibles, vous allez recréer les groupes de disponibilité avec les mêmes noms de schéma et d’écouteur. Ce faisant, les ressources de cluster de basculement Windows Server sont correctement formées et gérées sur le cluster cible. **Always On doit être activé dans le Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur chaque ordinateur dans l’environnement cible avant la migration.**
 
 ### <a name="to-perform-the-upgrade"></a>Pour effectuer la mise à niveau
 
@@ -197,7 +197,7 @@ La migration d’un cluster avec des instances autonomes est similaire au proces
 
 ## <a name="scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups"></a>Scénario 5 : Cluster Windows avec des instances SQL Server autonomes et des groupes de disponibilité
 
-La migration d’un cluster qui utilise des groupes de disponibilité avec des réplicas autonomes est similaire au processus de migration d’un cluster avec des instances de cluster de basculement utilisant des groupes de disponibilité. Vous devez toujours supprimer les groupes de disponibilité d’origine et les reconstruire sur le cluster cible ; toutefois, un temps d’arrêt supplémentaire est généré en raison des frais additionnels de la migration des instances autonomes. **Always On doit être activé sur toutes les instances de cluster de basculement de l’environnement cible avant la migration.**
+La migration d’un cluster qui utilise des groupes de disponibilité avec des réplicas autonomes est similaire au processus de migration d’un cluster avec des instances de cluster de basculement utilisant des groupes de disponibilité. Vous devez toujours supprimer les groupes de disponibilité d’origine et les reconstruire sur le cluster cible ; toutefois, un temps d’arrêt supplémentaire est généré en raison des frais additionnels de la migration des instances autonomes. **Always On doit être activé sur chaque instance de cluster de basculement dans l’environnement cible avant la migration.**
 
 ###  <a name="to-perform-the-upgrade"></a>Pour effectuer la mise à niveau
 
@@ -285,7 +285,7 @@ La migration d’un cluster qui utilise des groupes de disponibilité avec des r
 
 ### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent
 
--   **travaux**
+-   **Travaux**
 
     Les travaux sont correctement migrés avec les bases de données système. Tout utilisateur qui exécute un travail de SQL Agent ou SQL Agent lui-même a les mêmes autorisations sur l’ordinateur cible, comme indiqué dans les conditions préalables.
 
@@ -309,7 +309,7 @@ La migration d’un cluster qui utilise des groupes de disponibilité avec des r
 
 ### <a name="integration-services"></a>Integration Services
 
--   **projets SSIS**
+-   **Projets SSIS**
 
     Les projets SSIS sont migrés avec la base de données SSIS. Une fois que la base de données SSIS est déplacée, les packages sont immédiatement exécutables avant de déplacer des tables système.
 
@@ -322,5 +322,5 @@ La migration d’un cluster qui utilise des groupes de disponibilité avec des r
 - [Modifier le mode de compatibilité de base de données et utiliser le magasin des requêtes](../../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)
 - [Tirer parti des nouveautés de SQL Server 2016](https://msdn.microsoft.com/library/d8879659-8efa-4442-bcbb-91272647ae16)
 - [Mettre à niveau une instance de cluster de basculement SQL Server](upgrade-a-sql-server-failover-cluster-instance.md)
-- [Afficher et lire les fichiers journaux d’installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
+- [Afficher et lire les fichiers journaux d'installation de SQL Server](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)
 - [Ajouter des fonctionnalités à une instance de SQL Server 2016 (programme d’installation)](../../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)

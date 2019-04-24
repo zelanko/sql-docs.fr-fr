@@ -19,12 +19,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1816363425276ec532e5cc04433630e8e6b9bcac
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 089c6d25d7c899db03d67a6f7d1b8c9d495c94e6
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974348"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671385"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Nom de classement Windows (Transact-SQL)
 
@@ -37,7 +37,6 @@ Spécifie le nom de classement Windows dans la clause COLLATE dans [!INCLUDE[ssN
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 <Windows_collation_name> :: =
 CollationDesignator_<ComparisonStyle>
 
@@ -50,7 +49,8 @@ CollationDesignator_<ComparisonStyle>
 
 ## <a name="arguments"></a>Arguments
 
-*CollationDesignator* Spécifie les règles de classement de base utilisées par le classement Windows. Les règles de classement de base incluent les éléments suivants :
+*CollationDesignator*   
+Spécifie les règles de classement de base utilisées par le classement Windows. Les règles de classement de base incluent les éléments suivants :
 
 - Les règles de tri et de comparaison appliquées quand le tri de dictionnaire est spécifié. Les règles de tri sont basées sur l'alphabet ou la langue ;
 - La page de codes utilisée pour stocker les données **varchar**.
@@ -67,20 +67,20 @@ Exemples :
 **AI** ne respecte pas les accents, contrairement à **AS**.
 
 *KanatypeSensitive*  
-**Omitted** ne respecte pas les caractères Kana alors que **KS** les respecte.
+L’oubli de cette option ne suit pas les caractères Kana, alors que **KS** les respecte.
 
 *WidthSensitivity*  
-**Omitted** ne tient pas compte des largeurs, contrairement à **WS**.
+L’oubli de cette option ne tient pas compte des largeurs, alors que **WS** les respecte.
 
 *VariationSelectorSensitivity*  
-**S’applique à** : À compter de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
+- **S’applique à** : À compter de [!INCLUDE[ssSQL15](../../includes/sssqlv14-md.md)] 
 
-**Omitted** spécifie le non-respect du sélecteur de variation, **VSS** spécifie le respect du sélecteur de variation.
+- L’oubli de cette option spécifie le non-respect du sélecteur de variation, **VSS** spécifie le respect du sélecteur de variation.
 
 **UTF8**  
-**S’applique à** : À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
+- **S’applique à** : À compter de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]   
 
-Spécifie l’encodage UTF-8 à utiliser pour les types de données éligibles. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
+- Spécifie l’encodage UTF-8 à utiliser pour les types de données éligibles. Pour plus d’informations, consultez [Prise en charge d’Unicode et du classement](../../relational-databases/collations/collation-and-unicode-support.md).
 
 **BIN**  
 Indique l'ordre de tri binaire et assurant la compatibilité descendante à utiliser.
@@ -197,10 +197,10 @@ Le tableau suivant répertorie tous les classements Windows pris en charge dans 
 |Quechua (Pérou)|Latin1_General_100_|Non disponible|
 |Romanche (Suisse)|Romansh_100_|Non disponible|
 |Same d'Inari (Finlande)|Sami_Sweden_Finland_100_|Non disponible|
-|Same de Lule (Norvège)|Sami_Norway_100_|Non disponible|
+|Sami (Lule, Norvège)|Sami_Norway_100_|Non disponible|
 |Same de Lule (Suède)|Sami_Sweden_Finland_100_|Non disponible|
 |Same du nord (Finlande)|Sami_Sweden_Finland_100_|Non disponible|
-|Same du nord (Norvège)|Sami_Norway_100_|Non disponible|
+|Sami (Nord, Norvège)|Sami_Norway_100_|Non disponible|
 |Same du nord (Suède)|Sami_Sweden_Finland_100_|Non disponible|
 |Same de Skolt (Finlande)|Sami_Sweden_Finland_100_|Non disponible|
 |Same du sud (Norvège)|Sami_Norway_100_|Non disponible|

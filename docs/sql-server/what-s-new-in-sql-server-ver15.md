@@ -1,6 +1,6 @@
 ---
 title: Nouveautés de SQL Server 2019 | Microsoft Docs
-ms.date: 03/27/2018
+ms.date: 03/27/2019
 ms.prod: sql-server-2019
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0c36b85b210cf10a3d35e5708b123a30e85e3c39
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 4e2e29a3b473ca94ff203e99c9e4a76c803d69fc
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042418"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774604"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Nouveautés de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -39,8 +39,8 @@ CTP (Community Technology Preview) 2.4 est la dernière version publique de [!I
 - [Cluster Big Data](#bigdatacluster)
   - Conseils sur la prise en charge de GPU pour l’exécution de Deep Learning avec TensorFlow dans Spark.
   - Mise à niveau du runtime Spark vers Spark 2.4.
-  - `INSERT INTO SELECT` Prise en charge pour le pool de données.
-  - `FORCE SCALEOUTEXECUTION` Clause d’option `DISABLE SCALEOUTEXECUTION` pour les requêtes de table externe.
+  - Prise en charge d’`INSERT INTO SELECT` pour le pool de données.
+  - Clause des options `FORCE SCALEOUTEXECUTION` et `DISABLE SCALEOUTEXECUTION` pour les requêtes de table externe.
 
 - [Moteur de base de données](#databaseengine)
   - Le message d’erreur de troncation inclut par défaut les noms de tables et de colonnes, ainsi que la valeur tronquée. Consultez [Troncation](#truncation).
@@ -55,12 +55,12 @@ Les sections suivantes décrivent les nouvelles fonctionnalités qui ont été i
 
 ## <a id="bigdatacluster"></a>Clusters Big Data
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Les [clusters Big Data](../big-data-cluster/big-data-cluster-overview.md) donnent accès à de nouveaux scénarios, notamment les suivants :
+Les [clusters Big Data](../big-data-cluster/big-data-cluster-overview.md) [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] permettent de nouveaux scénarios, notamment les suivants :
 
 - [Prise en charge de GPU pour l’exécution de Deep Learning avec TensorFlow dans Spark](../big-data-cluster/spark-gpu-tensorflow.md). (CTP 2.4)
 - Mise à niveau du runtime Spark vers Spark 2.4. (CTP 2.4)
-- `INSERT INTO SELECT` Prise en charge pour le pool de données.
-- `FORCE SCALEOUTEXECUTION` Clause d’option `DISABLE SCALEOUTEXECUTION` pour les requêtes de table externe.
+- Prise en charge d’`INSERT INTO SELECT` pour le pool de données.
+- Clause des options `FORCE SCALEOUTEXECUTION` et `DISABLE SCALEOUTEXECUTION` pour les requêtes de table externe.
 - [Envoyer des travaux Spark sur des clusters Big Data [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] dans IntelliJ](../big-data-cluster/spark-submit-job-intellij-tool-plugin.md). (CTP 2.3)
 - [Expérience de déploiement et de gestion d’applications](../big-data-cluster/big-data-cluster-create-apps.md) pour diverses applications liées aux données, notamment l’opérationnalisation de modèles Machine Learning à l’aide de R et Python, l’exécution de tâches SQL Server Integration Services (SSIS), et plus encore. (CTP 2.3)
 - [Utilisation de Sparklyr dans les clusters Big Data de la [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](../big-data-cluster/sparklyr-from-RStudio.md). (CTP 2.3)
@@ -152,7 +152,7 @@ ALTER DATABASE <db_name> SET ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ```
 
 > [!NOTE]
-> Cette syntaxe n’est pas obligatoire pour tirer parti de cette fonctionnalité dans Azure SQL DB, où elle est activée par défaut.
+> Cette syntaxe n’est pas obligatoire pour tirer parti de cette fonctionnalité dans Azure SQL DB, où elle est [activée sur demande lors de la préversion publique](/azure/sql-database/sql-database-accelerated-database-recovery#to-enable-adr-during-this-preview-period). Une fois activée, la fonctionnalité est active par défaut.
 
 Si vous avez des bases de données critiques enclines à des transactions volumineuses, essayez cette fonctionnalité dans la préversion. Envoyez vos commentaires à l’[équipe [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](<https://aka.ms/sqlfeedback>).
 
@@ -171,7 +171,7 @@ Le résultat final est une réduction des recompilations superflues et du temps 
 
 ### <a name="improved-indirect-checkpoint-scalability-ctp-23"></a>Scalabilité du point de contrôle indirect améliorée (CTP 2.3)
 
-Dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les utilisateurs peuvent rencontrer des erreurs de planificateur improductives lorsqu’il existe une base de données qui génère un grand nombre de pages de modifications, comme tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit une meilleure scalabilité pour le point de contrôle indirect, ce qui devrait permettre d’éviter ces erreurs sur les bases de données dont la charge de travail UPDATE/INSERT est importante.
+Dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], les utilisateurs peuvent rencontrer des erreurs de planificateur improductives lorsqu’il existe une base de données qui génère un grand nombre de pages de modifications, comme tempdb. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduit une scalabilité améliorée pour le point de contrôle indirect, qui permet d’éviter ces erreurs sur les bases de données dont la charge de travail de mise à jour/insertion est importante.
 
 ### <a name="utf-8-support-ctp-23"></a>Prise en charge d’UTF-8 (CTP 2.3)
 
@@ -210,7 +210,7 @@ Pour un niveau de compatibilité de la base de données égal ou inférieur à 
 
 ### <a name="improved-diagnostic-data-for-stats-blocking-ctp-21"></a>Amélioration des données de diagnostic pour le blocage des statistiques (CTP 2.1)
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fournit de meilleures données de diagnostic pour les requêtes longues qui attendent des opérations de mise à jour synchrone des statistiques. La colonne `command` de la vue de gestion dynamique `sys.dm_exec_requests` indique `SELECT (STATMAN)` si une instruction `SELECT` attend la fin d’une opération de mise à jour synchrone des statistiques pour poursuivre l’exécution de la requête. Par ailleurs, le nouveau type d’attente `WAIT_ON_SYNC_STATISTICS_REFRESH` est exposé dans la vue de gestion dynamique `sys.dm_os_wait_stats`. Il montre le temps, cumulé par instance, consacré aux opérations d’actualisation synchrone des statistiques.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] fournit des données de diagnostic améliorées pour les requêtes longues qui attendent des opérations de mise à jour synchrone des statistiques. La colonne `command` de la vue de gestion dynamique `sys.dm_exec_requests` indique `SELECT (STATMAN)` si une instruction `SELECT` attend la fin d’une opération de mise à jour synchrone des statistiques pour poursuivre l’exécution de la requête. Par ailleurs, le nouveau type d’attente `WAIT_ON_SYNC_STATISTICS_REFRESH` est exposé dans la vue de gestion dynamique `sys.dm_os_wait_stats`. Il montre le temps, cumulé par instance, consacré aux opérations d’actualisation synchrone des statistiques.
 
 ### <a name="hybrid-buffer-pool-ctp-21"></a>Pool de mémoires tampons hybride (CTP 2.1)
 
@@ -330,9 +330,9 @@ Pour utiliser les fonctionnalités de traitement de requête intelligent, défin
 
 - Définissez ces valeurs par défaut à l’aide des options de configuration de niveau base de données `ELEVATE_ONLINE` et `ELEVATE_RESUMABLE`. Les deux options forcent le moteur à élever automatiquement les opérations prises en charge à une exécution d’index en ligne ou pouvant être reprise. Vous pouvez activer les comportements suivants à l’aide de ces options :
 
-  - `FAIL_UNSUPPORTED` L’option autorise toutes les opérations d’index en ligne ou pouvant être reprises et fait échouer les opérations d’index qui ne sont pas prises en charge dans le cadre d’une utilisation en ligne ou qui ne peuvent pas être reprises.
-  - `WHEN_SUPPPORTED` L’option autorise les opérations prises en charge en ligne ou pouvant être reprises et exécute les opérations d’index non prises en charge hors connexion ou ne pouvant pas être reprises.
-  - `OFF` L’option autorise le comportement actuel consistant à exécuter toutes les opérations d’index hors connexion et ne pouvant pas être reprises, sauf mention explicite dans l’instruction DDL.
+  - L’option `FAIL_UNSUPPORTED` autorise toutes les opérations d’index en ligne ou pouvant être reprises et fait échouer les opérations d’index qui ne sont pas prises en charge dans le cadre d’une utilisation en ligne ou qui ne peuvent pas être reprises.
+  - L’option `WHEN_SUPPPORTED` autorise les opérations prises en charge en ligne ou pouvant être reprises et exécute les opérations d’index non prises en charge hors connexion ou ne pouvant pas être reprises.
+  - L’option `OFF` autorise le comportement actuel consistant à exécuter toutes les opérations d’index hors connexion et ne pouvant pas être reprises sauf spécification explicite dans l’instruction DDL.
 
 Pour remplacer le paramétrage par défaut, incluez l’option `ONLINE` ou `RESUMABLE` dans les commandes de création ou de regénération d’index. 
 
@@ -368,7 +368,7 @@ Pour plus d’informations, consultez [Découverte et classification des donnée
 
 ### <a name="expanded-support-for-persistent-memory-devices-ctp-20"></a>Prise en charge étendue des appareils à mémoire persistante (CTP 2.0)
 
-Tout fichier [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] placé sur un appareil de mémoire persistante peut maintenant fonctionner en mode *compatible*. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accède directement à l’appareil, contournant ainsi la pile de stockage du système d’exploitation à l’aide d’opérations memcpy efficaces. Ce mode améliore les performances, car il permet une faible latence d’entrée/sortie par rapport à ces appareils.
+Tout fichier [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] placé sur un appareil de mémoire persistante peut maintenant fonctionner en mode *compatible*. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accède directement à l’appareil, en contournant la pile de stockage du système d’exploitation à l’aide d’opérations memcpy efficace. Ce mode améliore les performances, car il permet une faible latence d’entrée/sortie par rapport à ces appareils.
     - Voici quelques exemples de fichiers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] concernés :
         - fichiers de la base de données ;
         - Fichiers journaux de transactions
@@ -377,11 +377,11 @@ Tout fichier [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] placé sur u
     - La mémoire persistante est parfois appelée de manière informelle *pmem* sur certains sites web non-Microsoft.
 
 > [!NOTE]
-> Pour cette préversion, la mise en compatibilité des fichiers sur des appareils de mémoire persistante est uniquement disponible sur Linux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Windows prend en charge les appareils à mémoire persistante à compter de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].
+> Pour cette préversion, la mise en compatibilité des fichiers sur des appareils de mémoire persistante est uniquement disponible sur Linux. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur Windows prend en charge les appareils de mémoire persistante à compter de [!INCLUDE[ssSQL15](../includes/sssql15-md.md)].
 
 ### <a name="support-for-columnstore-statistics-in-dbcc-clonedatabase-ctp-20"></a>Prise en charge des statistiques columnstore dans DBCC CLONEDATABASE (CTP 2.0)
 
-`DBCC CLONEDATABASE` crée une copie de schéma uniquement d’une base de données qui comporte tous les éléments nécessaires pour résoudre les problèmes de performances des requêtes sans copier les données. Dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la commande ne copiait pas les statistiques permettant de résoudre avec précision les problèmes des requêtes d’index columnstore, ce qui obligeait l’utilisateur à effectuer des étapes manuelles pour capturer ces informations. Maintenant, dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` capture automatiquement les objets blob de statistiques pour les index columnstore ; aucune étape manuelle n’est donc requise.
+`DBCC CLONEDATABASE` crée une copie de schéma uniquement d’une base de données qui inclut tous les éléments nécessaires pour résoudre les problèmes de performances de requête sans copier les données. Dans les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la commande ne copiait pas les statistiques permettant de résoudre avec précision les problèmes des requêtes d’index columnstore, ce qui obligeait l’utilisateur à effectuer des étapes manuelles pour capturer ces informations. Maintenant, dans [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)], `DBCC CLONEDATABASE` capture automatiquement les objets blob de statistiques pour les index columnstore ; aucune étape manuelle n’est donc requise.
 
 ### <a name="new-options-added-to-spestimatedatacompressionsavings-ctp-20"></a>Ajout d’options à sp_estimate_data_compression_savings (CTP 2.0)
 
@@ -409,7 +409,7 @@ Avec **CTP 2.3**, une nouvelle configuration étendue à la base de données `L
 
 ### <a name="new-sysdmdbpageinfo-system-function-returns-page-information-ctp-20"></a>Nouvelle fonction système sys.dm_db_page_info retournant des informations sur une page (CTP 2.0)
 
-`sys.dm_db_page_info(database_id, file_id, page_id, mode)` retourne des informations sur une page de la base de données. La fonction retourne une ligne qui contient les informations d’en-tête de la page, notamment les `object_id`, `index_id` et `partition_id`. Cette fonction rend superflue l’utilisation de `DBCC PAGE` dans la plupart des cas. 
+`sys.dm_db_page_info(database_id, file_id, page_id, mode)` retourne des informations sur une page dans une base de données. La fonction retourne une ligne qui contient les informations d’en-tête de la page, notamment les `object_id`, `index_id` et `partition_id`. Cette fonction rend superflue l’utilisation de `DBCC PAGE` dans la plupart des cas. 
 
 Afin de faciliter la résolution des problèmes d’attentes liées à une page, une nouvelle colonne nommée page_resource a également été ajoutée à `sys.dm_exec_requests` et `sys.sysprocesses`. Cette nouvelle colonne vous permet de joindre `sys.dm_db_page_info` à ces vues par le biais d’une autre nouvelle fonction : `sys.fn_PageResCracker`. En guise d’exemple, consultez le script suivant :
 
@@ -524,11 +524,11 @@ Les groupes de calcul traitent un problème courant dans les modèles complexes 
 
 Un groupe de calcul peut comporter n’importe quel nombre d’éléments de calcul. Chaque élément de calcul est défini par une expression DAX. Trois nouvelles fonctions DAX sont introduites pour utiliser des groupes de calcul : 
 
-- `SELECTEDMEASURE()` : retourne une référence à la mesure actuellement dans le contexte.  
+- `SELECTEDMEASURE()` : Retourne une référence à la mesure actuellement dans le contexte.  
 
-- `SELECTEDMEASURENAME()` : retourne une chaîne contenant le nom de la mesure actuellement dans le contexte.  
+- `SELECTEDMEASURENAME()` : Retourne une chaîne contenant le nom de la mesure actuellement dans le contexte.  
 
-- `ISSELECTEDMEASURE(M1, M2, …)` : retourne une valeur booléenne indiquant si la mesure actuellement dans le contexte est l’une de celles spécifiées en argument.
+- `ISSELECTEDMEASURE(M1, M2, …)` : Retourne une valeur booléenne indiquant si la mesure actuellement dans le contexte est l’une de celles spécifiées en tant qu’argument.
 
 En plus des nouvelles fonctions DAX, deux nouvelles vues de gestion dynamique sont introduites :
 
@@ -562,6 +562,6 @@ Les groupes de calcul exigent que les modèles soient au niveau de compatibilit�
 
 - [Notes de publication de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]](sql-server-ver15-release-notes.md).
 
-- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] : livre blanc technique](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Publié en septembre 2018. S’applique à Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 pour conteneurs Docker, Linux et Windows.
+- [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] : Livre blanc technique](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />Publié en septembre 2018. S’applique à Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 pour conteneurs Docker, Linux et Windows.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

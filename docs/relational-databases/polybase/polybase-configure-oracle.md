@@ -11,10 +11,10 @@ ms.author: aboke
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4a7484acf7a63b5c2a6804e1f3f7914cabaf8524
-ms.sourcegitcommit: 57f7e5f25161dbb4cc446e751ea74b1ac5f86165
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59476644"
 ---
 # <a name="configure-polybase-to-access-external-data-in-oracle"></a>Configurer PolyBase pour accéder à des données externes dans Oracle
@@ -45,7 +45,7 @@ Les commandes Transact-SQL suivantes sont utilisées dans cette section :
    ```
 
    > [!NOTE]
-   > `PASSWORD` Mot de passe utilisé pour chiffrer la clé principale dans la base de données. Il doit remplir les critères de la stratégie de mot de passe Windows de l’ordinateur qui héberge l’instance SQL Server.
+   > `PASSWORD` est le mot de passe utilisé pour chiffrer la clé principale dans la base de données. Il doit remplir les critères de la stratégie de mot de passe Windows de l’ordinateur qui héberge l’instance SQL Server.
 
 1. Créez des informations d’identification incluses dans l’étendue de la base de données.
 

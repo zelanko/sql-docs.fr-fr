@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 25b7f1be157d6557842e9d482db2404c2705e932
-ms.sourcegitcommit: 403f07b335498ad577402fb432fefcdec700466e
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58913294"
 ---
 # <a name="before-installing-failover-clustering"></a>Avant l'installation du clustering de basculement
@@ -32,9 +32,9 @@ ms.locfileid: "58913294"
 |Description des rubriques|Rubrique|  
 |-----------------------|-----------|  
 |Décrit les concepts de clustering de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et fournit des liens vers les contenus et tâches associés.|[Instances de cluster de basculement Always On &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)|  
-|Décrit les concepts de stratégie de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et fournit des liens pour la configuration de la stratégie de basculement selon les besoins de votre organisation.|[Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
-|Décrit comment gérer votre cluster de basculement existant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|[Administration et maintenance de l'instance de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
-|Explique comment installer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sur un cluster de basculement Windows Server (WSFC).|[Procédure : mettre en cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
+|Décrit les concepts de stratégie de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et fournit des liens pour la configuration de la stratégie de basculement selon les besoins de votre organisation.|[Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)|  
+|Décrit comment gérer votre cluster de basculement existant [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Administration et maintenance de l'instance de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)|  
+|Explique comment installer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sur un cluster de basculement Windows Server (WSFC).|[Procédure : mettre en cluster SQL Server Analysis Services](https://go.microsoft.com/fwlink/p/?LinkId=396548)|  
   
  
   
@@ -207,7 +207,7 @@ ms.locfileid: "58913294"
   
 -   Pour plus d’informations sur les éditions de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui prennent en charge un cluster de basculement de plusieurs sous-réseaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , consultez [Fonctionnalités prises en charge par les éditions de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
--   Pour créer un cluster de basculement de plusieurs sous-réseaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], vous devez d'abord créer le cluster de basculement multisite [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] sur plusieurs sous-réseaux.  
+-   Pour créer un cluster de basculement de plusieurs sous-réseaux [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez d'abord créer le cluster de basculement multisite [!INCLUDE[winserver2008r2](../../../includes/winserver2008r2-md.md)] sur plusieurs sous-réseaux.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dépend du cluster de basculement Windows Server pour s'assurer que les conditions de la dépendance d'IP est valide en cas de basculement.  
   
@@ -228,9 +228,9 @@ ms.locfileid: "58913294"
   
 ##  <a name="WSFC"></a> Configurer le cluster de basculement Windows Server  
   
--   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Le logiciel WSFC (service de cluster) doit être configuré sur au moins l’un des nœuds de votre cluster de serveurs. Vous devez également exécuter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard conjointement à WSFC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise prend en charge les clusters de basculement contenant jusqu'à 16 nœuds. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard prennent en charge les clusters de basculement à deux nœuds.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Le logiciel WSFC (service de cluster) doit être configuré sur au moins l’un des nœuds de votre cluster de serveurs. Vous devez également exécuter [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard conjointement à WSFC. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Enterprise prend en charge les clusters de basculement contenant jusqu'à 16 nœuds. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Business Intelligence et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Standard prennent en charge les clusters de basculement à deux nœuds.  
   
--   La DLL de ressource pour le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exporte deux fonctions utilisées par le gestionnaire de cluster WSFC pour vérifier la disponibilité de la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
+-   La DLL de ressource pour le service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] exporte deux fonctions utilisées par le gestionnaire de cluster WSFC pour vérifier la disponibilité de la ressource [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Pour plus d’informations, consultez [Stratégie de basculement pour les instances de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md).  
   
 -   WSFC doit être en mesure de vérifier que l'instance de cluster de basculement s'exécute à l'aide de la vérification IsAlive. Cela signifie qu'il convient de se connecter au serveur à l'aide d'une connexion approuvée. Par défaut, le compte qui exécute le service de cluster n'est pas configuré en tant qu'administrateur sur les nœuds du cluster, et le groupe BUILTIN\Administrateurs n'a pas l'autorisation de se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ces paramètres changent uniquement si vous modifiez les autorisations définies sur les nœuds du cluster.  
   
@@ -258,7 +258,7 @@ ms.locfileid: "58913294"
  Une fois que vous avez installé le système d'exploitation et configuré votre cluster, vous devez configurer MSDTC pour qu'il fonctionne dans un cluster à l'aide de l'Administrateur de cluster. L'échec de la mise en cluster de MSDTC ne bloquera pas l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , mais les fonctionnalités des applications [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peuvent être affectées si MSDTC n'est pas configuré correctement.  
   
 ## <a name="see-also"></a> Voir aussi  
- [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
+ [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2016](../../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Paramètres de l'outil d'analyse de configuration système](../../../database-engine/install-windows/check-parameters-for-the-system-configuration-checker.md)   
  [Administration et maintenance de l'instance de cluster de basculement](../../../sql-server/failover-clusters/windows/failover-cluster-instance-administration-and-maintenance.md)  
   

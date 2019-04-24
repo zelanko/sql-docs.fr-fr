@@ -31,10 +31,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: af33c0234ba1b8e6b92b5f1fee7f17f4d12dc667
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042169"
 ---
 # <a name="create-user-transact-sql"></a>CREATE USER (Transact-SQL)
@@ -279,7 +279,7 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
 `CREATE USER [bob@contoso.com] FROM EXTERNAL PROVIDER`
   
 ##  <a name="SyntaxSummary"></a> Résumé de syntaxe  
- **Utilisateurs basés sur des comptes de connexions dans master**  
+ **Utilisateurs basés sur des comptes de connexion dans Master**  
   
  La liste suivante affiche la syntaxe possible pour les utilisateurs basés sur des comptes de connexion. Les options de schéma par défaut ne sont pas répertoriées.  
   
@@ -293,7 +293,7 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
 -   `CREATE USER SQLAUTHLOGIN FOR LOGIN SQLAUTHLOGIN`  
 -   `CREATE USER SQLAUTHLOGIN FROM LOGIN SQLAUTHLOGIN`  
   
-**Utilisateurs qui s'authentifient à la base de données**  
+**Utilisateurs qui s’authentifient auprès de la base de données**  
   
  La liste suivante affiche la syntaxe possible pour les utilisateurs qui peuvent être utilisés uniquement dans une base de données autonome. Les utilisateurs créés ne seront liés à aucun compte de connexion dans la base de données **Master**. Les options de langue et de schéma par défaut ne sont pas répertoriées.  
   
@@ -304,7 +304,7 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
 -   `CREATE USER [Domain1\WindowsGroupManagers]`  
 -   `CREATE USER Barry WITH PASSWORD = 'sdjklalie8rew8337!$d'`  
   
-**Utilisateurs basés sur des principaux Windows sans comptes de connexion dans master**  
+**Utilisateurs basés sur des principaux Windows sans comptes de connexion dans Master**  
   
  La liste suivante affiche la syntaxe possible pour les utilisateurs qui ont accès au [!INCLUDE[ssDE](../../includes/ssde-md.md)] via un groupe Windows, mais qui ne disposent pas d’un compte de connexion dans **Master**. Cette syntaxe peut être utilisée dans tous les types de bases de données. Les options de langue et de schéma par défaut ne sont pas répertoriées.  
   
@@ -319,7 +319,7 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
 -   `CREATE USER [Domain1\WindowsGroupManagers] FOR LOGIN [Domain1\WindowsGroupManagers]`  
 -   `CREATE USER [Domain1\WindowsGroupManagers] FROM LOGIN [Domain1\WindowsGroupManagers]`  
   
-**Utilisateurs qui ne peuvent pas s'authentifier**  
+**Utilisateurs qui ne peuvent pas s’authentifier**  
   
  La liste suivante affiche la syntaxe possible pour les utilisateurs qui ne peuvent pas se connecter à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -337,7 +337,7 @@ Quand vous créez l’utilisateur dans la base de données de l’instance manag
   
  Dans une base de données autonome, la création d’utilisateurs permet de séparer la base de données de l’instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] afin que la base de données puisse être déplacée facilement vers une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [Bases de données autonomes](../../relational-databases/databases/contained-databases.md) et [Utilisateurs de base de données autonome - Rendre votre base de données portable](../../relational-databases/security/contained-database-users-making-your-database-portable.md). Pour changer un utilisateur de base de données basé sur un compte de connexion d’authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en utilisateur de base de données autonome avec mot de passe, consultez [sp_migrate_user_to_contained &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md).  
   
- Dans une base de données autonome, les utilisateurs n'ont pas besoin d'un compte de connexion dans la base de données **master**. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Les administrateurs doivent bien comprendre que l’accès à une base de données autonome peut être accordé au niveau de la base de données, plutôt qu’au niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour plus d'informations, consultez [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
+ Dans une base de données autonome, les utilisateurs n'ont pas besoin d'un compte de connexion dans la base de données **master**. Les administrateurs du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doivent comprendre que l'accès à une base de données autonome peut être accordé au niveau de la base de données, plutôt qu'au niveau du [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Pour plus d'informations, consultez [Meilleures pratiques de sécurité recommandées avec les bases de données autonomes](../../relational-databases/databases/security-best-practices-with-contained-databases.md).  
   
  En cas d'utilisateurs de base de données autonome [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], configurez l'accès à l'aide d'une règle de pare-feu de niveau base de données, et non d'une règle de pare-feu de niveau serveur. Pour plus d’informations, consultez [sp_set_database_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-set-database-firewall-rule-azure-sql-database.md).
  

@@ -1,7 +1,7 @@
 ---
-title: SQL Server Management Studio (SSMS) - Télémétrie (SSMS) | Microsoft Docs
+title: SQL Server Management Studio - Données d’utilisation et de diagnostic (SSMS) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/20/2017
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,28 +11,29 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: ce4abde855b5fe6a65c3038e93eb8609f9736dc1
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: d76b2cbcab3ad156e3a8a5054429198c542c602b
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240387"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59670845"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>Audit local pour l’utilisation de SSMS et collecte des données d’utilisation et de diagnostic
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 SQL Server Management Studio (SSMS) intègre des fonctionnalités Internet qui peuvent recueillir et envoyer à Microsoft des données d’utilisation et de diagnostic anonymes. SSMS peut recueillir des informations standard sur l’ordinateur et des informations sur l’utilisation et les performances qui peuvent être transmises à Microsoft et analysées dans le but d’améliorer la qualité, la sécurité et la fiabilité de SSMS. Microsoft ne collecte ni votre nom, ni votre adresse, ni aucune autre information permettant de vous contacter. Pour plus d’informations, consultez la [Déclaration de confidentialité Microsoft](https://privacy.microsoft.com/privacystatement) et l’[Avenant à la déclaration de confidentialité de SQL Server](https://go.microsoft.com/fwlink/?LinkID=868444).
 
-## <a name="audit-feature-usage-data"></a>Données d’utilisation des fonctionnalités d’audit
+## <a name="audit-feature-usage-and-diagnostic-data"></a>Utilisation de la fonctionnalité d’audit et données de diagnostic
 
-Pour connaître les données d’utilisation qui sont recueillies par SSMS, effectuez les étapes suivantes :
+Pour voir les données d’utilisation qui sont recueillies par SSMS, effectuez les étapes suivantes :
+
 1.  Lancez SSMS.
 2.  Cliquez sur **Affichage** et sur **Sortie** dans le menu principal pour afficher la fenêtre **Sortie**. 
 3.  Une fois la fenêtre **Sortie** affichée à l’écran, choisissez **Télémétrie** dans le menu **Afficher la sortie à partir de :**.
 
 Quand vous utilisez SSMS pour interagir avec vos bases de données, la fenêtre **Sortie** indique les données qui sont recueillies.
 
-## <a name="enable-or-disable-usage-feedback-collection-in-ssms"></a>Activer ou désactiver la collecte de commentaires relatifs l’utilisation dans SSMS
+## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>Activer ou désactiver la collecte des données d’utilisation et de diagnostic dans SSMS
 
 Pour accepter ou refuser la collecte des données d’utilisation pour SSMS :
 
@@ -40,7 +41,7 @@ Pour accepter ou refuser la collecte des données d’utilisation pour SSMS :
 
   `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\14.0`
 
-  RegEntry name = `UserFeedbackOptIn`
+  Nom RegEntry = `UserFeedbackOptIn`
 
   Type d’entrée `DWORD`: `0` pour refuser ; `1` pour accepter
 
@@ -57,7 +58,7 @@ Pour accepter ou refuser la collecte des données d’utilisation pour SSMS :
 
   `Subkey = HKEY_CURRENT_USER\Software\Microsoft\SQL Server Management Studio\18.0_IsoShell`
 
-  RegEntry name = `UserFeedbackOptIn`
+  Nom RegEntry = `UserFeedbackOptIn`
 
   Type d’entrée `DWORD`: `0` pour refuser ; `1` pour accepter
 

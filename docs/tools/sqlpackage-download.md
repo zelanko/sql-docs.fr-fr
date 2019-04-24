@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 7b909df2e97149019d70af49085cc5f1e212f5ee
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
-ms.translationtype: MTE75
+ms.openlocfilehash: 809a78130c5bc015114138e678c55522fa556f01
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59240407"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671165"
 ---
 # <a name="download-and-install-sqlpackage"></a>Télécharger et installer sqlpackage
 
@@ -25,9 +25,9 @@ Téléchargez et installez la dernière version de .NET Framework et les version
 
 |Plateforme|Télécharger|Date de publication|Options de version|Build
 |:---|:---|:---|:---|:---|
-|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2069405)|1er février 2019|18.1|15.0.4316.1|
-|macOS .NET Core (préversion)|[Fichier .zip](https://go.microsoft.com/fwlink/?linkid=2069126)|1er février 2019 | 18.1 |15.0.4316.1|
-|Linux .NET Core (préversion)|[Fichier .zip](https://go.microsoft.com/fwlink/?linkid=2069122)|1er février 2019 | 18.1 |15.0.4316.1|
+|Windows|[Programme d’installation MSI](https://go.microsoft.com/fwlink/?linkid=2087429)|15 avril 2019|18.2|15.0.4384.2|
+|macOS .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2087247)|15 avril 2019 | 18.2 |15.0.4384.2|
+|Linux .NET Core (préversion)|[Fichier zip](https://go.microsoft.com/fwlink/?linkid=2087431)|15 avril 2019 | 18.2 |15.0.4384.2|
 
 Pour plus d’informations sur la dernière version, consultez les [notes de publication](release-notes-sqlpackage.md).
 
@@ -37,17 +37,17 @@ Pour plus d’informations sur la dernière version, consultez les [notes de pub
 
 Cette version de sqlpackage comprend une expérience du programme d’installation Windows standard et un fichier .zip : 
 
-1. Téléchargez et exécutez le [programme d’installation DacFramework.msi pour Windows](https://go.microsoft.com/fwlink/?linkid=2069405).
+1. Téléchargez et exécutez le [programme d’installation DacFramework.msi pour Windows](https://go.microsoft.com/fwlink/?linkid=2087429).
 2. Ouvrez une nouvelle fenêtre d’invite de commandes et exécutez sqlpackage.exe
     - sqlpackage est installé dans le dossier ```C:\Program Files\Microsoft SQL Server\150\DAC\bin```
     - En cas d’installation de la version x86 sur un ordinateur x64, sqlpackage est installé dans le dossier ```C:\Program Files (x86)\Microsoft SQL Server\150\DAC\bin```
 
 ## <a name="get-sqlpackage-preview-for-macos"></a>Obtenir sqlpackage (préversion) pour macOS
 
-1. Téléchargez [sqlpackage pour macOS](https://go.microsoft.com/fwlink/?linkid=2069126).
+1. Téléchargez [sqlpackage pour macOS](https://go.microsoft.com/fwlink/?linkid=2087247).
 2. Pour extraire le fichier et lancer sqlpackage, ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
-   **Installation du fichier .zip :**
+   **Installation de fichier .zip :**
 
    ```bash
    mkdir sqlpackage
@@ -59,10 +59,10 @@ Cette version de sqlpackage comprend une expérience du programme d’installati
 
 ## <a name="get-sqlpackage-preview-for-linux"></a>Obtenir sqlpackage (préversion) pour Linux
 
-1. Téléchargez [sqlpackage pour Linux](https://go.microsoft.com/fwlink/?linkid=2069122) à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
+1. Téléchargez [sqlpackage pour Linux](https://go.microsoft.com/fwlink/?linkid=2087431) à l’aide d’un des programmes d’installation ou de l’archive tar.gz :
 2. Pour extraire le fichier et lancer sqlpackage, ouvrez une nouvelle fenêtre de Terminal et tapez les commandes suivantes :
 
-   **Installation du fichier .zip :**
+   **Installation de fichier .zip :**
 
    ```bash
    cd ~
@@ -77,13 +77,13 @@ Cette version de sqlpackage comprend une expérience du programme d’installati
    > [!NOTE]
    > Sur Debian, Red Hat et Ubuntu, vous pouvez avoir des dépendances manquantes. Utilisez les commandes suivantes pour installer ces dépendances selon votre version de Linux :
 
-   **Debian :**
+   **Debian :**
 
    ```bash
    sudo apt-get install libunwind8
    ```
 
-   **Red Hat :**
+   **Redhat :**
 
    ```bash
    yum install libunwind

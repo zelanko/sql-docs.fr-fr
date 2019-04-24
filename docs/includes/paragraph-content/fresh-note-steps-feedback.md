@@ -1,12 +1,12 @@
 ---
-ms.openlocfilehash: b1151235fb0c78925d1823ad0bfa5de1c3a155ff
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: 9c440470361c1bb466ce41e3f78df17484d19a56
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59243493"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59737066"
 ---
 
 > [!NOTE]
-> Si vous trouvez des informations obsolètes ou incorrectes dans cet article, par exemple concernant une étape ou une erreur dans un code, n’hésitez pas à nous en faire part. Pour ce faire, vous pouvez cliquer sur le bouton de commentaires au bas de cette page. Merci !
+> Si vous trouvez des informations obsolètes ou incorrectes dans cet article, par exemple concernant une étape ou une erreur dans un code, n’hésitez pas à nous en faire part. Vous pouvez cliquer sur le bouton **Cette page** dans la section **Commentaires** au bas de cette page. Ou mieux, si vous connaissez le correctif, vous pouvez cliquer sur l’icône **modifier-crayon** en haut de cette page, puis cliquez sur l’icône de crayon dans la page GitHub. Merci !
 

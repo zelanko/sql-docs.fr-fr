@@ -1,7 +1,7 @@
 ---
 title: Niveau de compatibilité ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 04/15/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dbc27afcf47429d0c6a74b43244ba9a4f6f483a7
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
+ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828079"
+ms.lasthandoff: 04/15/2019
+ms.locfileid: "59583372"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Niveau de compatibilité ALTER DATABASE (Transact-SQL)
 
@@ -176,6 +176,14 @@ Cette section décrit les nouveaux comportements introduits avec le niveau de co
 
 Le niveau 150 de compatibilité de la base de données est actuellement en préversion publique pour [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] et [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]. Il sera associé à la prochaine génération d’amélioration du traitement des requêtes, au-delà de ce qui a été introduit dans le niveau 140 de compatibilité de la base de données.
 
+|Paramètre de niveau de compatibilité inférieur ou égal à 140|Paramètre de niveau de compatibilité égal à 150|
+|--------------------------------------------------|-----------------------------------------|
+|L’entrepôt de données relationnelles et les charges de travail analytiques peuvent ne pas être en mesure de tirer parti des index columnstore en raison d’une charge mémoire OLTP, de l’absence de prise en charge du fournisseur ou d’autres limitations.  Sans les index columnstore, ces charges de travail ne peuvent pas bénéficier du mode d’exécution par lot.|Le mode d’exécution par lot est désormais disponible pour les charges de travail analytiques sans avoir besoin d’index columnstore. Pour plus d’informations, consultez [mode batch sur rowstore](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore).|
+|Les requêtes en mode ligne qui demandent des tailles insuffisantes d’allocation de mémoire et entraînent des dépassements sur le disque, peuvent continuer à avoir des problèmes lors des exécutions suivantes.|Les requêtes en mode ligne qui demandent des tailles insuffisantes d’allocation de mémoire et entraînent des dépassements sur le disque, peuvent avoir de meilleures performances lors des exécutions suivantes. Pour plus d’informations, consultez [rétroaction d’allocation de mémoire en mode ligne](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Les requêtes en mode ligne qui demandent des tailles excessives d’allocation de mémoire et entraînent des problèmes de concurrence, peuvent continuer à avoir des problèmes lors des exécutions suivantes.|Les requêtes en mode ligne qui demandent des tailles excessives d’allocation de mémoire et entraînent des problèmes de concurrence, peuvent avoir une concurrence améliorée lors des exécutions suivantes. Pour plus d’informations, consultez [rétroaction d’allocation de mémoire en mode ligne](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback).|
+|Les requêtes faisant référence à des fonctions scalaires définies par l’utilisateur T-SQL utilisent l’invocation itérative, ne disposent pas de l’évaluation des coûts et forcent l’exécution en série. |Les fonctions scalaires définies par l’utilisateur T-SQL sont transformées en expressions relationnelles équivalentes qui sont « placées inline » dans la requête appelante, ce qui entraîne souvent des gains de performances significatifs. Pour plus d’informations, consultez [Incorporation des fonctions UDF scalaires T-SQL](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining).|
+|Les variables de table utilisent une estimation fixe pour l’estimation de la cardinalité.  Si le nombre réel de lignes est nettement supérieur à la valeur devinée, les performances des opérations en aval peuvent être dégradées. |Les nouveaux plans utilisent la cardinalité réelle de la variable de table rencontrée à la première compilation, au lieu d’une estimation fixe. Pour plus d'informations, consultez [compilation différée de variable de table](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation).|
+
 Pour plus d’informations sur les fonctionnalités de traitement des requêtes activées dans le niveau de compatibilité de base de données 150, consultez [Nouveautés de SQL Server 2019](../../sql-server/what-s-new-in-sql-server-ver15.md) et [Traitement de requêtes intelligent dans les bases de données SQL](https://docs.microsoft.com/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017).
 
 ## <a name="differences-between-compatibility-level-130-and-level-140"></a>Différences entre le niveau de compatibilité 130 et le niveau 140
@@ -291,7 +299,7 @@ Si une application utilise un identificateur réservé en tant que mot clé pour
 
 Pour plus d’informations, consultez [Mots clés réservés](../../t-sql/language-elements/reserved-keywords-transact-sql.md).
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Nécessite l'autorisation ALTER sur la base de données.
 
@@ -315,7 +323,7 @@ FROM sys.databases
 WHERE name = db_name();
 ```
 
-### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>b. Instruction SET LANGUAGE non prise en compte, sauf avec le niveau de compatibilité 120
+### <a name="b-ignoring-the-set-language-statement-except-under-compatibility-level-120"></a>B. Instruction SET LANGUAGE non prise en compte, sauf avec le niveau de compatibilité 120
 
 La requête suivante ignore l’instruction SET LANGUAGE, sauf avec le niveau de compatibilité 120.
 

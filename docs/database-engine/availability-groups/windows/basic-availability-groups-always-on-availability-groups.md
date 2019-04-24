@@ -11,12 +11,12 @@ ms.assetid: 285adbc7-ac9b-40f6-b4a9-3f1591d3b632
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d95ef944f0ff4712a117b8c76f83116276aae184
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 25ca94913d3d59754e941d883baa9502c9b700ce
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210708"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671205"
 ---
 # <a name="basic-always-on-availability-groups-for-a-single-database"></a>Groupes de disponibilité Always On de base pour une base de données
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53210708"
 ## <a name="limitations"></a>Limitations  
  Les groupes de disponibilité de base utilisent un sous-ensemble de fonctionnalités si on les compare aux groupes de disponibilité avancés sur SQL Server 2016 Enterprise Edition. Les groupes de disponibilité de base incluent les limitations suivantes :  
   
-- Limite de deux réplicas (principal et secondaire).  
+- Limite de deux réplicas (principal et secondaire). Les groupes de disponibilité de base pour SQL Server 2017 sur Linux prennent en charge un seul réplica de configuration supplémentaire.
   
 - Aucun accès en lecture sur le réplica secondaire.  
   

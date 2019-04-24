@@ -1,7 +1,7 @@
 ---
-title: Présentation de prise en charge de Java EE | Microsoft Docs
+title: Fonctionnement de la prise en charge Java EE | Microsoft Docs
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 04/16/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ae55a5bc677c70d2a1f998e235031ac9bafd5aba
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
-ms.translationtype: MTE75
+ms.openlocfilehash: 7d7d1867c8c6d9311736124cf74e30b748a9de68
+ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154614"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59671225"
 ---
 # <a name="understanding-java-ee-support"></a>Fonctionnement de la prise en charge Java EE
 
@@ -30,19 +30,19 @@ En premier lieu, assurez-vous que votre environnement Java (JDK, JRE) inclut le 
 
 Le nom de la classe du pilote est **com.microsoft.sqlserver.jdbc.SQLServerDriver**. Pour les pilotes JDBC Driver 4.1, 4.2 et 6.0, le pilote est contenu dans le fichier **sqljdbc.jar**, **sqljdbc4.jar**, **sqljdbc41.jar** ou **sqljdbc42.jar**.
 
-Pour JDBC Driver 6.2, le pilote est contenu dans **mssql-jdbc-6.2.2.jre7.jar** ou **mssql-jdbc-6.2.2.jre8.jar**.
+Pour le pilote JDBC 6.2, le pilote est contenu dans **mssql-jdbc-6.2.2.jre7.jar** ou dans **mssql-jdbc-6.2.2.jre8.jar**.
 
-Pour JDBC Driver 6.4, le pilote est contenu dans **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar**, ou **mssql-jdbc-6.4.0.jre9.jar**.
+Pour le pilote JDBC 6.4, le pilote est contenu dans **mssql-jdbc-6.4.0.jre7.jar**, **mssql-jdbc-6.4.0.jre8.jar** ou **mssql-jdbc-6.4.0.jre9.jar**.
 
-Pour 7.0 du pilote JDBC, le pilote est contenu dans **mssql-jdbc-7.0.0.jre8.jar**, ou **mssql-jdbc-7.0.0.jre10.jar**.
+Pour le pilote JDBC 7.0, le pilote est contenu dans **mssql-jdbc-7.0.0.jre8.jar** ou dans **mssql-jdbc-7.0.0.jre10.jar**.
 
-Pour 7.2 du pilote JDBC, le pilote est contenu dans **mssql-jdbc-7.2.1.jre8.jar**, ou **mssql-jdbc-7.2.1.jre11.jar**.
+Pour le pilote JDBC 7.2, le pilote est contenu dans **mssql-jdbc-7.2.2.jre8.jar** ou dans **mssql-jdbc-7.2.2.jre11.jar**.
   
 Le nom de la classe est utilisé chaque fois que le pilote est chargé avec la classe DriverManager JDBC. Il sert également chaque fois que le nom de la classe du pilote doit être spécifié, quelle que soit la configuration du pilote. Par exemple, la configuration d'une source de données dans un serveur d'applications Java EE peut imposer d’entrer le nom de la classe du pilote.  
   
 ## <a name="data-sources"></a>Sources de données
 
-Le pilote JDBC assure la prise en charge des sources de données Java EE / JDBC 3.0. Le pilote JDBC [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) classe est implémentée par `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
+Le pilote JDBC assure la prise en charge des sources de données Java EE / JDBC 3.0. La classe [SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) du pilote JDBC est implémentée par `com.microsoft.sqlserver.jdbc.SQLServerXADataSource`.  
   
 ### <a name="datasource-names"></a>Noms de sources de données
 
@@ -73,7 +73,7 @@ DataSource ds = (DataSource) ctx.lookup("MyDataSource");
 Connection c = ds.getConnection("user", "pwd");  
 ```
 
-Pour plus d’informations sur les propriétés de source de données, consultez [définissant les propriétés de Source de données](../../connect/jdbc/setting-the-data-source-properties.md).  
+Pour plus d’informations sur les propriétés de source de données, consultez [Définition des propriétés de la source de données](../../connect/jdbc/setting-the-data-source-properties.md).  
   
 ## <a name="see-also"></a> Voir aussi
 

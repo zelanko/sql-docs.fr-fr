@@ -25,10 +25,10 @@ author: dnethi
 ms.author: dinethi
 manager: craigg
 ms.openlocfilehash: 9bc678f69df60ec07e1cca6eddbb337aab8ed8ff
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59042026"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>Télécharger SQL Server Management Studio (SSMS)
@@ -44,13 +44,13 @@ SSMS est gratuit !
 
 ## <a name="ssms-1791-is-the-current-general-availability-ga-version-of-ssms"></a>SSMS 17.9.1 est la version en disponibilité générale actuelle de SSMS
 
-[![dTélécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
+[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154)
 
-[![dTélécharger](../ssdt/media/download.png) Télécharger le package de mise à niveau SQL Server Management Studio 17.9.1 (de 17.x vers 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
+[![télécharger](../ssdt/media/download.png) Télécharger le package de mise à niveau SQL Server Management Studio 17.9.1 (met à niveau 17.x vers 17.9.1)](https://go.microsoft.com/fwlink/?linkid=2043430)
 
 **Informations sur la version**
 
-- Numéro de version : 17.9.1<br>
+- Numéro de version : 17.9.1<br>
 - Numéro de build : 14.0.17289.0<br>
 - Date de publication : 21 novembre 2018
 
@@ -76,9 +76,9 @@ Pour plus d’informations sur SSMS 17.9.1, consultez le [journal des modificat
 
 ## <a name="ssms-180-rc1"></a>SSMS 18.0 (RC1)
 
-**La version finale 1 (RC1) de SSMS 18.0, maintenant disponible, est la nouvelle génération de *SQL Server Management Studio* avec prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] !**
+**La version finale 1 (RC1) de SSMS 18.0, maintenant disponible, est la dernière génération de *SQL Server Management Studio* et offre une prise en charge de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-**[![dowTélécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
+**[![télécharger](../ssdt/media/download.png) Télécharger SQL Server Management Studio 18.0 (RC1)](https://go.microsoft.com/fwlink/?linkid=2085742)**
 
 *RC1* est la dernière préversion publique de SSMS 18.0. Si une préversion précédente de SSMS 18.0 est installée, désinstallez-la avant d’installer SSMS 18.0 RC1.
 
@@ -144,13 +144,13 @@ Néant
 
 ## <a name="feedback"></a>Commentaires
 
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum des Outils clients SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
+![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [Forum des outils clients SQL](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 
 ## <a name="see-also"></a> Voir aussi
 
-- [Didacticiel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
+- [Tutoriel : SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [Documentation de SQL Server Management Studio](sql-server-management-studio-ssms.md)
 - [Service Packs et mises à jour supplémentaires](https://technet.microsoft.com/sqlserver/ff803383.aspx)
 - [Télécharger SSDT (SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md)
