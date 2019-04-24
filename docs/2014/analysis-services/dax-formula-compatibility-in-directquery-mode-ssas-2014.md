@@ -4,20 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
-- analysis-services/multidimensional-tabular
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8061cf30107a5bdfff6d8af53e70affb93ff9469
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
-ms.translationtype: MT
+ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
+ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372661"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60154245"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilité des formules DAX en mode DirectQuery (SSAS 2014)
 Le langage Data Analysis expressions (DAX) peut être utilisé pour créer des mesures et autres formules personnalisées pour une utilisation dans les modèles tabulaires Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] les modèles de données dans des classeurs Excel et les modèles de données Power BI Desktop. Dans bien des égards, les modèles que vous créez dans ces environnements sont identiques, et vous pouvez utiliser les mesures de même, les relations et les indicateurs de performance clés, etc. Toutefois, si vous créez un modèle tabulaire Analysis Services et le déployez en mode DirectQuery, il existe certaines restrictions sur les formules que vous pouvez utiliser. Cette rubrique fournit une vue d’ensemble de ces différences, répertorie les fonctions qui ne sont pas pris en charge dans le modèle de tabulars SQL Server 2014 Analysis Services au niveau de compatibilité 1100 ou 1103 et en mode DirectQuery, et répertorie les fonctions qui sont prises en charge, mais peut retourner des résultats différents.  
@@ -133,7 +131,7 @@ SQL Server gère les valeurs Null et les espaces différemment du moteur xVeloci
   
 `EXAMPLE: LOG(blank())`  
   
-Les mêmes limitations s'appliquent aux autres fonctions logarithmiques : LOG10 et LN.  
+Les mêmes limitations s’appliquent aux autres fonctions logarithmiques : LOG10 et LN.  
   
 Pour plus d’informations sur le type de données **blank** dans DAX, consultez [Spécification de syntaxe DAX pour PowerPivot](https://msdn.microsoft.com/library/ee634217.aspx).  
   
@@ -165,9 +163,9 @@ Formules dans [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] et les modèles t
   
 En général, étant donné que les plages de dates acceptées sont différentes pour Excel et SQL Server, les résultats peuvent être garantis pour correspondre uniquement lorsque les dates sont dans la plage de dates commune, qui compris les dates suivantes :  
   
--   Première date : 1er mars 1990  
+-   Date la plus ancienne : 1er mars 1990  
   
--   Dernière date : 31 décembre 9999  
+-   Date la plus récente : Le 31 décembre 9999  
   
 Si les dates utilisées dans les formules n'appartiennent pas à cette plage, la formule génère une erreur ou les résultats ne correspondent pas.  
   
@@ -226,7 +224,7 @@ En mode DirectQuery, si le résultat d’une opération arithmétique est de typ
   
 -   Minimum : -922337203685477,5808  
   
--   Maximum :  922337203685477.5807  
+-   Maximum : 922337203685477.5807  
   
 **Combinaison de types de données Currency et REAL**  
 EXEMPLE : `Currency sample 1`  
