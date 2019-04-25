@@ -19,7 +19,7 @@
       href: formatting/server-side-xml-formatting-sqlxml-4-0.md
     - name: "Mise en forme XML côté client (SQLXML\_4.0)"
       href: formatting/client-side-xml-formatting-sqlxml-4-0.md
-    - name: "XPath côté client et Mise en forme\_XML côté serveur (SQLXML\_4.0)"
+    - name: "Côté client et Mise en forme\_XML côté serveur (SQLXML\_4.0)"
       href: formatting/client-side-vs-server-side-xml-formatting-sqlxml-4-0.md
 - name: "Schémas XSD annotés dans SQLXML\_4.0"
   href: annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md

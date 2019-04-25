@@ -148,7 +148,7 @@
 - name: Gestion des colonnes text et image
   href: ../../native-client-odbc-text-image-columns/managing-text-and-image-columns.md
   items:
-    - name: Colonnes texte et image liées et non liées
+    - name: Colonnes de texte et d’image liées et non liées
       href: ../../native-client-odbc-text-image-columns/bound-vs-unbound-text-and-image-columns.md
     - name: Modifications enregistrées ou non enregistrées
       href: ../../native-client-odbc-text-image-columns/logged-vs-unlogged-modifications.md
@@ -309,7 +309,7 @@
       href: ../../native-client-odbc-how-to/support-for-large-udts.md
     - name: Appeler SQLColumns sur une table avec des colonnes éparses
       href: ../../native-client-odbc-how-to/call-sqlcolumns-on-a-table-with-sparse-columns.md
-    - name: "Procédure\_: insérer des lignes dans la colonne de géographie (ODBC)"
+    - name: "Procédure\_: Insérer des lignes dans la colonne de géographie (ODBC)"
       href: ../../native-client-odbc-how-to/how-to-insert-rows-into-geography-column-odbc.md
     - name: Obtenir une authentification Kerberos mutuelle
       href: ../../native-client-odbc-how-to/get-mutual-kerberos-authentication.md

@@ -24,7 +24,7 @@
       href: features/using-large-value-types.md
     - name: Modification des mots de passe par programme
       href: features/changing-passwords-programmatically.md
-    - name: Utilisation du niveau d’isolement de capture instantanée
+    - name: Utilisation de l’isolement de capture instantanée
       href: features/working-with-snapshot-isolation.md
     - name: Utilisation de notifications de requêtes
       href: features/working-with-query-notifications.md

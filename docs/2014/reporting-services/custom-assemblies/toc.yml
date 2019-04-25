@@ -13,5 +13,5 @@
       href: accessing-custom-assemblies-through-expressions.md
     - name: Initialisation d'objets Assembly personnalisés
       href: initializing-custom-assembly-objects.md
-    - name: "Procédure\_: déboguer des assemblys personnalisés"
+    - name: "Procédure\_: Déboguer des assemblages personnalisés"
       href: how-to-debug-custom-assemblies.md

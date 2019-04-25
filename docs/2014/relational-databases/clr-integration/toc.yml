@@ -33,7 +33,7 @@
       href: assemblies-getting-information.md
     - name: Propriétés de l'assembly (page Général)
       href: assemblies-properties.md
-- name: Création d'objets de base de données avec intégration du Common Language Runtime (CLR)
+- name: Génération d'objets de base de données à l'aide de l'intégration du CLR (Common Language Runtime)
   href: database-objects/building-database-objects-with-common-language-runtime-clr-integration.md
   items:
     - name: "Bibliothèques .NET\_Framework prises en charge"
