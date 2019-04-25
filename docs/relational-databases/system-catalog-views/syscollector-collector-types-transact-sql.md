@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760236"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47650577"
 |**upload_package_name**|**sysname**|Nom du package à télécharger. N'accepte pas la valeur NULL.|  
 |**is_system**|**bit**|Activé (1) ou désactivé (0) pour indiquer si le type de collecteur a été livré avec le collecteur de données ou s’il a été ajouté ultérieurement par le **dc_admin**. Il peut s'agir d'un type personnalisé développé en interne ou par un tiers. N'accepte pas la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation SELECT pour **dc_operator**, **dc_proxy**.  
   
 ## <a name="change-history"></a>Historique des modifications  
