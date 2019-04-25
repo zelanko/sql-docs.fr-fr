@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae982257f0be29103803a7d036142f58a50f1a04
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59933101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631318"
 ---
 # <a name="supported-access-report-features-ssrs"></a>Fonctionnalités des états Access prises en charge (SSRS)
   Lorsque vous importez un rapport dans le Concepteur de rapports, le processus d'importation convertit le rapport d'Access [!INCLUDE[msCoName](../includes/msconame-md.md)] en un fichier RDL (Report Definition Language) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] prend en charge plusieurs fonctionnalités d'Access ; toutefois, puisqu'il existe des différences entre Access et [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], certains éléments sont légèrement modifiés ou ne sont pas pris en charge. Cette rubrique décrit comment les fonctionnalités des états Access sont converties en mode RDL.  
@@ -263,7 +263,7 @@ ms.locfileid: "59933101"
   
 |||||  
 |-|-|-|-|  
-|Avg|Compter|Max|Min|  
+|Avg|Count|Max|Min|  
 |StDev|StDevP|Sum|Var|  
 |VarP||||  
   

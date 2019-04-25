@@ -11,11 +11,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 983711f4ac679cdb12fa7c31509725f13fba8bb3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524435"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
   Un `CompoundCurve` est une collection de zéro ou plusieurs instances continues `CircularString` ou `LineString`, de type geometry ou geography.  

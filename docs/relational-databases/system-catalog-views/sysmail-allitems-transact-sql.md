@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759861"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,17 +36,17 @@ ms.locfileid: "47824847"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**Int**|Identificateur de l'élément de messagerie dans la file d'attente des messages.|  
 |**profile_id**|**Int**|Identificateur du profil utilisé pour envoyer le message.|  
-|**destinataires**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
+|**recipients**|**varchar(max)**|Adresses de messagerie des destinataires du message.|  
 |**copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message.|  
 |**blind_copy_recipients**|**varchar(max)**|Adresses de messagerie des personnes qui reçoivent une copie du message mais dont le nom n'apparaît pas dans l'en-tête du message.|  
 |**subject**|**nvarchar(510)**|Ligne d'objet du message.|  
-|**Corps**|**varchar(max)**|Le corps du message.|  
+|**body**|**varchar(max)**|Le corps du message.|  
 |**body_format**|**varchar(20)**|Le format du corps du message. Les valeurs possibles sont TEXT et HTML.|  
 |**importance**|**varchar(6)**|Le **importance** paramètre du message.|  
-|**Sensibilité**|**varchar(12)**|Le **sensibilité** paramètre du message.|  
+|**sensitivity**|**varchar(12)**|Le **sensibilité** paramètre du message.|  
 |**file_attachments**|**varchar(max)**|Liste des noms de fichiers joints au message électronique (délimitée par des points-virgules).|  
 |**attachment_encoding**|**varchar(20)**|Type de pièce jointe.|  
-|**Requête**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
+|**query**|**varchar(max)**|Requête exécutée par le programme de messagerie.|  
 |**execute_query_database**|**sysname**|Contexte de base de données dans lequel le programme de messagerie a exécuté la requête.|  
 |**attach_query_result_as_file**|**bit**|Lorsque la valeur est 0, les résultats de la requête ont été inclus dans le corps du message électronique, après le contenu du corps. Lorsque la valeur est 1, les résultats ont été renvoyés sous forme de pièce jointe.|  
 |**query_result_header**|**bit**|Lorsque la valeur est 1, cela signifie que les résultats de la requête contenaient des en-têtes de colonne. Lorsque la valeur est 0, cela signifie que les résultats de la requête ne contenaient pas d'en-têtes de colonne.|  
@@ -67,7 +67,7 @@ ms.locfileid: "47824847"
   
  Les tables système affichées dans cette vue contiennent tous les messages et peut entraîner la **msdb** base de données augmente. Supprimez périodiquement les anciens messages de la vue afin de réduire la taille de ces tables. Pour plus d’informations, consultez [créer un travail SQL Server Agent pour archiver les Messages de messagerie de base de données et journaux des événements](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md).  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Accordées à **sysadmin** rôle serveur fixe et **DatabaseMailUserRole** rôle de base de données. Lors de l’exécution par un membre de la **sysadmin** rôle serveur fixe, cette vue affiche tous les messages. Les autres utilisateurs voient uniquement les messages qu'ils ont essayé d'envoyer.  
   
   

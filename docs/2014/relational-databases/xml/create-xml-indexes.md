@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7da89810a92c14f5b59ebcd546c4fb4cfa256f02
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637759"
 ---
 # <a name="create-xml-indexes"></a>Créer des index XML
   Cette rubrique décrit comment créer des index XML primaires et secondaires.  
@@ -99,7 +99,7 @@ FROM    sys.xml_indexes;
   
  Les valeurs retournées dans la colonne **secondary_type_desc** peuvent être NULL, PATH, VALUE ou PROPERTY. Pour l'index XML primaire, la valeur renvoyée correspond à NULL.  
   
-### <a name="example-creating-secondary-xml-indexes"></a>Exemple : Création d’index XML secondaire  
+### <a name="example-creating-secondary-xml-indexes"></a>Exemple : Création d’index XML secondaires  
  L'exemple suivant illustre le mode de création d'index XML secondaires. Il montre également les informations relatives aux index XML que vous avez créés.  
   
 ```  

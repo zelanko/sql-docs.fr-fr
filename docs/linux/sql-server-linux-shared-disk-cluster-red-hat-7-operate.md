@@ -11,11 +11,11 @@ ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 075ab7d8-8b68-43f3-9303-bbdf00b54db1
 ms.openlocfilehash: 2967277ca109b9ee55221a7b12f5af891a5e45a2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635585"
 ---
 # <a name="operate-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>Fonctionnement du cluster de disque partagé de Red Hat Enterprise Linux pour SQL Server
 
@@ -257,7 +257,7 @@ Dans l’exemple, `partition with quorum` signifie qu’un quorum majoritaire de
 
 Vérifiez les éléments suivants quand un nœud est hors connexion.
 
-- **Pare-feu**
+- **Firewall**
 
     Les ports suivants doivent être ouverts sur tous les nœuds pour Pacemaker être en mesure de communiquer.
     

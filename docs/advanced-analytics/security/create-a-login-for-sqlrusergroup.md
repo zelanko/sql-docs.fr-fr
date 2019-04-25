@@ -9,13 +9,13 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 62dd1ddf61c3cc2e1340619566ad9f4dcce062b7
-ms.sourcegitcommit: 32a55df1275ad169bb1457243dc8caa8b48b206f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55147040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642098"
 ---
-# <a name="create-a-login-for-sqlrusergroup"></a>Créez une connexion pour SQLRUserGroup
+# <a name="create-a-login-for-sqlrusergroup"></a>Créer un nom de connexion pour SQLRUserGroup
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Créer un [connexion dans SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) pour [SQLRUserGroup](../concepts/security.md#sqlrusergroup) lorsqu’un [connexion de retour de boucle](../../advanced-analytics/concepts/security.md#implied-authentication) dans votre script spécifie une *connexion approuvée*, et l’identité utilisée pour exécuter un objet contient votre code est un compte d’utilisateur Windows.

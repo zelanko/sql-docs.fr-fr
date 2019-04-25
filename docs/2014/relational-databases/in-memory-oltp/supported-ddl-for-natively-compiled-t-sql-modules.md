@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc064eb8a4c6b206d3b690a4c4e7ca196c7475dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467873"
 ---
 # <a name="supported-constructs-on-natively-compiled-stored-procedures"></a>Constructions prises en charge dans les procédures stockées compilées en mode natif
   Cette rubrique répertorie les constructions prises en charge dans les procédures stockées compilées en mode natif.  
@@ -40,7 +40,7 @@ ms.locfileid: "48113209"
 ## <a name="security"></a>Sécurité  
  Les constructions suivantes sont admises :  
   
--   Pour les procédures : EXECUTE AS OWNER, SELF, et utilisateur.  
+-   Pour connaître les procédures : EXECUTE AS OWNER, SELF et utilisateur.  
   
 -   GRANT (accorder) et DENY (refuser) des autorisations sur les tables et les procédures.  
   

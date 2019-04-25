@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12fcc899eb4cb60b6616949c51c44419cc5a20ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635441"
 ---
 # <a name="advanced-view-aggregations-tab-cube-designer"></a>Vue avancée (onglet Agrégations, Concepteur de cube)
   Utilisez la **vue avancée** du concepteur d'agrégation pour créer et modifier manuellement des conceptions d'agrégation et des agrégations individuelles. Cette vue ne doit être utilisée par des utilisateurs expérimentés.  

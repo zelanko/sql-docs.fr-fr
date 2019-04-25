@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47936b5c085514fca4ecc1c81057ef78a19f05c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628462"
 ---
 # <a name="embedded-sql"></a>Embedded SQL
 La première technique pour l’envoi d’instructions SQL au SGBD est incorporée SQL. Étant donné que SQL n’utilise pas les variables et les instructions de contrôle de flux, il est souvent utilisé comme une sous-langue de la base de données qui peut être ajoutée à un programme écrit dans un langage de programmation conventionnels, tels que C ou COBOL. Il s’agit d’une idée centrale d’embedded SQL : placer des instructions SQL dans un programme écrit dans un hôte de langage de programmation. En bref, les techniques suivantes sont utilisées pour incorporer des instructions SQL dans un langage hôte :  

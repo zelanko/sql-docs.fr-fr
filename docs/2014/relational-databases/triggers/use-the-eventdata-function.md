@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a34a3e69e157894b29db48da19f44d1e35dad746
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524252"
 ---
 # <a name="use-the-eventdata-function"></a>Utiliser la fonction EVENTDATA
   Les informations sur un événement qui lance un déclencheur DDL sont capturées à l'aide de la fonction EVENTDATA. Cette fonction retourne une valeur `xml`. Le schéma XML inclut des informations sur les éléments suivants :  
@@ -125,9 +125,9 @@ GO
 ```  
   
 > [!NOTE]  
->  Pour retourner des données d'événement, nous vous recommandons d'utiliser la méthode XQuery `value()` à la place de la méthode `query()`. La méthode `query()` retourne des instances XML et CR/LF (retour chariot/saut de ligne) à échappement & dans les résultats, alors que la méthode `value()` rend les instances CR/LF invisibles dans le résultat.  
+>  Pour retourner des données d'événement, nous vous recommandons d'utiliser la méthode XQuery `value()` à la place de la méthode `query()`. La méthode `query()` retourne des instances XML et CR/LF (retour chariot/saut de ligne) à échappement &amp; dans les résultats, alors que la méthode `value()` rend les instances CR/LF invisibles dans le résultat.  
   
- L'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] fournit un exemple similaire de déclencheur DDL. Pour trouver cet exemple, accédez au dossier des déclencheurs de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ce dossier se trouve dans le dossier **Programmabilité** de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Avec le bouton droit **ddlDatabaseTriggerLog** et sélectionnez **Script du déclencheur de base de données en tant que**. Par défaut, le déclencheur DDL **ddlDatabaseTriggerLog** est désactivé.  
+ L'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] fournit un exemple similaire de déclencheur DDL. Pour trouver cet exemple, accédez au dossier des déclencheurs de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ce dossier se trouve dans le dossier **Programmabilité** de la base de données [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] . Cliquez avec le bouton droit sur **ddlDatabaseTriggerLog** et sélectionnez **Générer un script du déclencheur de la base de données en tant que**. Par défaut, le déclencheur DDL **ddlDatabaseTriggerLog** est désactivé.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Événements DDL](../triggers/ddl-events.md)   

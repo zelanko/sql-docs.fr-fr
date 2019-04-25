@@ -1,5 +1,5 @@
 ---
-title: 'Progress Report: Classe d’événements Online Index Operation | Microsoft Docs'
+title: 'Rapport de progression : Classe d’événements Online Index Operation | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,16 +15,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520407"
 ---
-# <a name="progress-report-online-index-operation-event-class"></a>Progress Report: Classe d'événements Online Index Operation Event Class
+# <a name="progress-report-online-index-operation-event-class"></a>Rapport de progression : Classe d'événements Online Index Operation Event Class
   Le rapport de progression : Classe d’événements opération d’Index en ligne indique la progression d’une opération de génération d’index en ligne pendant le processus de génération est en cours d’exécution.  
   
-## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Progress Report: Colonnes de données de classe Online Index Operation Event  
+## <a name="progress-report-online-index-operation-event-class-data-columns"></a>Rapport de progression : Colonnes de données de classe Online Index Operation Event  
   
 |Nom de la colonne de données|Type de données|Description|ID de la colonne|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  

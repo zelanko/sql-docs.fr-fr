@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e93c341a73d55094624f3930934076f10674bce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758485"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Paramètres de stockage (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Paramètres de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les paramètres de mise en cache proactive, de stockage et de notification d’une dimension, d’un cube, d’un groupe de mesures ou d’une partition. Vous pouvez afficher la boîte de dialogue **Paramètres de stockage** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en :  
@@ -40,7 +40,7 @@ ms.locfileid: "48063445"
 |**Paramètre standard**|Définissez l'un des paramètres prédéfinis suivants :<br /><br /> **ROLAP en temps réel**<br /><br /> Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :|Mode de stockage ROLAP<br /><br /> Active la mise en cache proactive<br /><br /> Supprime le cache obsolète avec une latence de 0 seconde<br /><br /> Met l'objet en ligne immédiatement|  
 ||**HOLAP en temps réel**<br /><br /> Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :|Mode de stockage HOLAP<br /><br /> Active la mise en cache proactive<br /><br /> Supprime le cache obsolète avec une latence de 0 seconde<br /><br /> Met à jour le cache lorsque les données changent avec une fréquence de 0 seconde et aucune fréquence de remplacement<br /><br /> Met l'objet en ligne immédiatement|  
 ||**MOLAP à faible latence**<br /><br /> Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :|Mode de stockage MOLAP<br /><br /> Active la mise en cache proactive<br /><br /> Supprime le cache obsolète avec une latence de 30 minutes<br /><br /> Met à jour le cache lorsque les données changent avec une fréquence de 10 secondes et une fréquence de remplacement de 10 minutes<br /><br /> Met l'objet en ligne immédiatement|  
-||**MOLAP à latence moyenne**<br /><br /> Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :|Mode de stockage MOLAP<br /><br /> Active la mise en cache proactive<br /><br /> Supprime le cache obsolète avec une latence de 4 heures<br /><br /> Met à jour le cache lorsque les données changent avec une fréquence de 10 secondes et une fréquence de remplacement de 10 minutes<br /><br /> Met l'objet en ligne immédiatement|  
+||**MOLAP à latence moyenne**<br /><br /> Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :|Mode de stockage MOLAP<br /><br /> Active la mise en cache proactive<br /><br /> Supprime le cache obsolète avec une latence de 4 heures<br /><br /> Met à jour le cache lorsque les données changent avec une fréquence de 10 secondes et une fréquence de remplacement de 10 minutes<br /><br /> Met l'objet en ligne immédiatement|  
 ||**MOLAP automatique**<br /><br /> Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :|Mode de stockage MOLAP<br /><br /> Active la mise en cache proactive<br /><br /> Met à jour le cache lorsque les données changent avec une fréquence de 0 seconde et aucune fréquence de remplacement|  
 ||**MOLAP planifié**<br /><br /> Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :|Mode de stockage MOLAP<br /><br /> Activer la mise en cache proactive<br /><br /> Met périodiquement à jour la mémoire cache avec un intervalle de reconstruction égal à 1 jour|  
 ||**MOLAP**<br /><br /> Sélectionnez cette option pour utiliser les paramètres suivants de stockage et de mise en cache proactive :|Mode de stockage MOLAP|  

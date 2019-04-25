@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 486bbe240656bb2719ad4ce8f1ec51b226bec30b
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466897"
 ---
 # <a name="csdlbi-concepts"></a>Concepts CSDLBI
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -123,27 +123,27 @@ ms.locfileid: "50146264"
 ## <a name="additions-to-support-multidimensional-models"></a>Ajouts pour prendre en charge les modèles multidimensionnels  
  La version 1.0 des annotations CSDLBI prenait uniquement en charge les modèles tabulaires. Dans la version 1.1., la prise en charge a été ajoutée pour les modèles multidimensionnels (cubes OLAP) créés à l'aide des outils de développement Business Intelligence traditionnels. Par conséquent, vous pouvez maintenant émettre une demande XML dans un modèle multidimensionnel et recevoir une définition CSDLBI du modèle, à utiliser lors de la création de rapports.  
   
- **Cubes :** un serveur SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données tabulaire peut contenir qu’un seul mode. En revanche, chaque base de données multidimensionnelle peut contenir plusieurs cubes, chaque base de données étant associée à un cube par défaut. Par conséquent, lorsque vous exécutez une requête XML sur un serveur multidimensionnel, vous devez spécifier le cube ; sinon, le code XML du cube par défaut est retourné.  
+ **Cubes :** Un serveur SQL Server [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données tabulaire peut contenir qu’un seul mode. En revanche, chaque base de données multidimensionnelle peut contenir plusieurs cubes, chaque base de données étant associée à un cube par défaut. Par conséquent, lorsque vous exécutez une requête XML sur un serveur multidimensionnel, vous devez spécifier le cube ; sinon, le code XML du cube par défaut est retourné.  
   
  La représentation d'un cube est similaire à celle d'une base de données model tabulaire. Le nom du cube et le cube correspondent au nom de la base de données tabulaire et à l'identificateur de la base de données.  
   
- **Dimensions :** une dimension est représentée en CSDLBI en tant qu’entité (table) avec des colonnes et des propriétés. Notez que même si ne pas inclus dans une perspective, une dimension qui est incluse dans le modèle est représentée dans la sortie CSDL, marquée en tant que **Hidden**.  
+ **Dimensions :** Une dimension est représentée en CSDLBI en tant qu’entité (table) avec des colonnes et des propriétés. Notez que même si ne pas inclus dans une perspective, une dimension qui est incluse dans le modèle est représentée dans la sortie CSDL, marquée en tant que **Hidden**.  
   
- **Perspectives :** un client peut demander CSDL pour des perspectives individuelles. Pour plus d’informations, consultez [ensemble de lignes DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ **Perspectives :** Un client peut demander CSDL pour des perspectives individuelles. Pour plus d’informations, consultez [ensemble de lignes DISCOVER_CSDL_METADATA](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
   
- **Hiérarchies :** hiérarchies sont pris en charge et représentées en CSDLBI en tant qu’ensemble de niveaux.  
+ **Hiérarchies :** Hiérarchies sont pris en charge et représentées en CSDLBI en tant qu’ensemble de niveaux.  
   
- **Membres :** prennent en charge pour le membre par défaut a été ajouté et les valeurs par défaut sont automatiquement ajoutées à la sortie CSDLBI.  
+ **Membres :** Prise en charge pour le membre par défaut a été ajoutée et les valeurs par défaut sont automatiquement ajoutées à la sortie CSDLBI.  
   
- **Les membres calculés :** les modèles multidimensionnels prennent en charge les membres calculés pour l’enfant de **tous les** avec un membre réel unique.  
+ **Membres calculés :** Les modèles multidimensionnels prennent en charge les membres calculés pour l’enfant de **tous les** avec un membre réel unique.  
   
- **Attributs de dimension :** dans la sortie CSDLBI, les attributs de dimension sont pris en charge et automatiquement marquées comme non regroupable.  
+ **Attributs de dimension :** Dans la sortie CSDLBI, les attributs de dimension sont pris en charge et automatiquement marquées comme non regroupable.  
   
- **Indicateurs de performance clés :** indicateurs de performance clés étaient pris en charge en CSDLBI version 1.1, mais la représentation a changé. Avant, un indicateur de performance clé était la propriété d'une mesure. Dans la version 1.1, l’élément KPI peut être ajouté à une mesure  
+ **Indicateurs de performance clés :** Indicateurs de performance clés étaient pris en charge en CSDLBI version 1.1, mais la représentation a changé. Avant, un indicateur de performance clé était la propriété d'une mesure. Dans la version 1.1, l’élément KPI peut être ajouté à une mesure  
   
- **Nouvelles propriétés :** des attributs supplémentaires ont été ajoutées pour prendre en charge les modèles DirectQuery.  
+ **Nouvelles propriétés :** Les attributs supplémentaires ont été ajoutés pour prendre en charge les modèles DirectQuery.  
   
- **Limitations :** la sécurité de cellule n’est pas pris en charge.  
+ **Limitations :** Sécurité de cellule n’est pas prise en charge.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Annotations CSDL pour Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  

@@ -1,5 +1,5 @@
 ---
-title: Sys.database_principals (Transact-SQL) | Microsoft Docs
+title: sys.database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632678"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,8 +45,8 @@ ms.locfileid: "47643157"
 |**owning_principal_id**|**Int**|Identificateur du principal qui possède ce principal. Tous les principaux à l’exception des rôles de base de données doivent être détenues par **dbo**.|  
 |**sid**|**varbinary(85)**|SID (identificateur de sécurité) du principal.  NULL pour SYS et INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Avec la valeur 1, cette ligne représente une entrée pour un des rôles de base de données fixes : db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**Int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Signifie le type d'authentification. Voici les valeurs possibles et leurs descriptions.<br /><br /> 0 : aucune authentification<br />1 : authentification de l’instance<br />2 : authentification de base de données<br />3 : l’authentification Windows|  
-|**authentication_type_desc**|**nvarchar(60)**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Description du type d'authentification. Voici les valeurs possibles et leurs descriptions.<br /><br /> NONE : Aucune authentification<br />INSTANCE : Authentification de l’Instance<br />Base de données : Authentification de base de données<br />WINDOWS : L’authentification Windows|  
+|**authentication_type**|**Int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Signifie le type d'authentification. Voici les valeurs possibles et leurs descriptions.<br /><br /> 0 : Aucune authentification<br />1 : Authentification de l’instance<br />2 : Authentification de base de données<br />3 : Authentification Windows|  
+|**authentication_type_desc**|**nvarchar(60)**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Description du type d'authentification. Voici les valeurs possibles et leurs descriptions.<br /><br /> NONE : Aucune authentification<br />INSTANCE : Authentification de l’instance<br />BASE DE DONNÉES : Authentification de base de données<br />WINDOWS : Authentification Windows|  
 |**default_language_name**|**sysname**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Signifie la langue par défaut de ce principal.|  
 |**default_language_lcid**|**Int**|**S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Signifie le LCID par défaut de ce principal.|  
 |**allow_encrypted_value_modifications**|**bit**|**S’applique à** : [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] jusqu’à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].<br /><br /> Supprime les contrôles de métadonnées de chiffrement sur le serveur dans les opérations de copie en bloc. Cela permet à l’utilisateur pour les données de copie en bloc chiffrées à l’aide de Always Encrypted, entre des tables ou bases de données, sans déchiffrer les données. La valeur par défaut est OFF. |      
@@ -54,12 +54,12 @@ ms.locfileid: "47643157"
 ## <a name="remarks"></a>Notes  
  Le *PasswordLastSetTime* propriétés sont disponibles sur toutes les configurations prises en charge de SQL Server, mais les autres propriétés sont uniquement disponibles lorsque SQL Server s’exécute sur Windows Server 2003 ou version ultérieure et CHECK_POLICY et CHECK_ EXPIRATION sont activés. Consultez [stratégie de mot de passe](../../relational-databases/security/password-policy.md) pour plus d’informations.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Tout utilisateur peut consulter son nom d'utilisateur, les utilisateurs système et les rôles de base de données fixes. Pour voir les autres utilisateurs, vous devez disposer de l'autorisation ALTER ANY USER, ou d'une autorisation sur l'utilisateur. Pour afficher les rôles définis par l'utilisateur, vous devez disposer de l'autorisation ALTER ANY ROLE, ou appartenir au rôle.  
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>A : Énumération de toutes les autorisations des principaux de base de données  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>R : Énumération de toutes les autorisations des principaux de base de données  
  La requête suivante énumère les autorisations accordées ou refusées explicitement aux principaux de base de données.  
   
 > [!IMPORTANT]  
@@ -73,7 +73,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B. Énumération des autorisations sur les objets de schéma dans une base de données  
+### <a name="b-listing-permissions-on-schema-objects-within-a-database"></a>B : Affichage des autorisations sur les objets de schéma dans une base de données  
  La requête suivante joint sys.database_principals et sys.database_permissions à sys.objects et sys.schemas pour répertorier les autorisations accordées ou refusées sur des objets de schéma spécifiques.  
   
 ```  
@@ -91,7 +91,7 @@ JOIN sys.schemas AS s
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Exemples : [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] et [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: répertoriant toutes les autorisations des principaux de base de données  
+### <a name="c-listing-all-the-permissions-of-database-principals"></a>C: Énumération de toutes les autorisations des principaux de base de données  
  La requête suivante énumère les autorisations accordées ou refusées explicitement aux principaux de base de données.  
   
 > [!IMPORTANT]  
@@ -105,7 +105,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D : affichage des autorisations sur les objets de schéma dans une base de données  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D : Affichage des autorisations sur les objets de schéma dans une base de données  
  La requête suivante jointures `sys.database_principals` et `sys.database_permissions` à `sys.objects` et `sys.schemas` pour répertorier les autorisations accordées ou refusées aux objets de schéma spécifique.  
   
 ```  

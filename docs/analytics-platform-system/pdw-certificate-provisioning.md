@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639895"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Approvisionnement du certificat PDW - Analytique Platform System
 Le **provisionnement du certificat PWD** page du système de plateforme Analytique **Configuration Manager** importe ou supprime le certificat utilisé par la région PDW. À l’aide, un certificat pour chiffrer les connexions peut aider à une communication sécurisée au nœud de contrôle via les clients de SQL Server, les outils qui utilisent les pilotes SQL Server PDW, le [Console d’administration](monitor-the-appliance-by-using-the-admin-console.md), et charge les Services d’intégration.  

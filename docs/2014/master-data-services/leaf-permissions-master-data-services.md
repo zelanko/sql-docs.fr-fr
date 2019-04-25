@@ -17,11 +17,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b2f0bac42ce0fb2ae814b48cd21e0cffb84128b1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764886"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorisations de feuille (services de données de référence)
   Les autorisations de feuille s'appliquent aux valeurs d'attribut pour tous les membres feuille d'une entité.  
@@ -34,7 +34,7 @@ ms.locfileid: "52812101"
   
 -   Les autorisations attribuées à **Nom** et **Code** ne sont pas appliquées.  
   
-|Autorisation|Description|  
+|Permission|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|Les membres feuille sont affichés, mais l'utilisateur ne peut ni les ajouter, ni les supprimer ni les modifier.<br /><br /> Si des membres consolidés existent, les noms et codes sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
 |**Update**|Les membres feuille sont affichés et l'utilisateur peut les ajouter, les supprimer et les modifier.<br /><br /> Si des membres consolidés existent, les noms et codes sont affichés, mais l'utilisateur ne peut pas les ajouter, les supprimer ni les modifier.|  
@@ -43,16 +43,16 @@ ms.locfileid: "52812101"
 ## <a name="attribute-permissions"></a>Autorisations d'attribut  
  Les autorisations d’attribut s’appliquent aux valeurs de l’attribut pour l’entité spécifique. Les utilisateurs avec des autorisations d'attribut uniquement ne peuvent pas ajouter ni supprimer des membres.  
   
-|Autorisation|Description|  
+|Permission|Description|  
 |----------------|-----------------|  
 |**Lecture seule**|L'attribut est affiché, mais l'utilisateur ne peut pas modifier les valeurs d'attribut.|  
 |**Update**|L'attribut est affiché et l'utilisateur peut modifier les valeurs d'attribut.|  
-|**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : Vous ne pouvez pas refuser explicitement l'accès aux attributs Name et Code.|  
+|**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : Vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
 ### <a name="example"></a>Exemple  
  Pour l'entité Product, affectez l'autorisation **Mise à jour** à l'attribut Subcategory. Autorisation refuser à tous les autres attributs.  
   
-|Créer une vue d’abonnement|Code|Subcategory (Mise à jour)|  
+|Nom|Code|Subcategory (Mise à jour)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain Bikes|  
 |Mountain-100|BK-M201|{5} Mountain Bikes|  

@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: c2b8e9404b447c098fb4513fe0cea261da04626a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626559"
 ---
 # <a name="user-interface-reference-sybasetosql"></a>Informations de référence sur l’interface utilisateur (SybaseToSQL)
 Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour Sybase.  
@@ -33,7 +33,7 @@ Cette section inclut des rubriques d’aide pour [!INCLUDE[ssNoVersion](../../in
 |[Paramètres de migration de données](data-migration-settings-sybasetosql.md)|Utilisez le **paramètres de Migration de données étendus** tab pour écrire des requêtes personnalisées pour la migration de données.|  
 |[Modifier le mappage de Type &#40;SybaseToSQL&#41;](../../ssma/sybase/edit-type-mapping-sybasetosql.md)|Utilisez le **nouveau mappage de Type** ou **modifier un mappage de Type** boîte de dialogue pour créer ou modifier le mappage des types de données entre les bases de données source et cible et les objets de base de données.|  
 |[Paramètres globaux &#40;éditeur&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-editor-sybasetosql.md)|Utilisez la page de l’éditeur de la **paramètres globaux** boîte de dialogue pour configurer les options de l’éditeur de code.|  
-|[Paramètres globaux &#40;boîtes de dialogue&#41;&#40;SybaseToSQL  &#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Utilisez la page de l’éditeur de la **paramètres globaux** boîte de dialogue pour configurer les paramètres de l’avertissement et de la boîte de dialogue par défaut.|  
+|[Global Settings &#40;Dialogs&#41;  &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-dialogs-sybasetosql.md)|Utilisez la page de l’éditeur de la **paramètres globaux** boîte de dialogue pour configurer les paramètres de l’avertissement et de la boîte de dialogue par défaut.|  
 |[Paramètres globaux &#40;journalisation&#41; &#40;OracleToSQL&#41;](../../ssma/oracle/global-settings-logging-oracletosql.md)|Utilisez la page Journalisation de le **paramètres globaux** boîte de dialogue pour configurer la journalisation.|  
 |[Paramètres globaux &#40;journalisation&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-logging-sybasetosql.md)|Utilisez le **paramètres globaux** boîte de dialogue pour définir les préférences de SSMA pour Sybase l’interface utilisateur.|  
 |[Paramètres globaux &#40;testeur&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/global-settings-tester-sybasetosql.md)|Utilisez la page de testeur de la **paramètres globaux** boîte de dialogue pour spécifier les paramètres pour un testeur.|  

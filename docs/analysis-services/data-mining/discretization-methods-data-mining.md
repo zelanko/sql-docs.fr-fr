@@ -1,5 +1,5 @@
 ---
-title: Méthodes de discrétisation (exploration de données) | Documents Microsoft
+title: Méthodes de discrétisation (exploration de données) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 610108ce4edb6e3beb5c13398d0a79eca200bdba
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467760"
 ---
 # <a name="discretization-methods-data-mining"></a>Méthodes de discrétisation (exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34016976"
   
  Le tableau suivant décrit les méthodes que vous pouvez utiliser pour discrétiser des données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
-|Méthode de discrétisation| Description|  
+|Méthode de discrétisation|Description|  
 |---------------------------|-----------------|  
 |**AUTOMATIC**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] détermine la méthode de discrétisation à utiliser.|  
 |**CLUSTERS**|L'algorithme divise les données en groupes en échantillonnant les données d'apprentissage, en initialisant à un certain nombre de points aléatoires, puis en exécutant plusieurs itérations de l'algorithme MC (Microsoft Clustering) à l'aide de la méthode de clustering EM (expectation-maximisation). La méthode **CLUSTERS** est utile, car elle fonctionne sur n’importe quelle courbe de distribution. Cependant, elle nécessite une durée de traitement plus longue que les autres méthodes de discrétisation.<br /><br /> Cette méthode peut uniquement être utilisée sur des colonnes numériques.|  
@@ -47,12 +47,12 @@ ms.locfileid: "34016976"
   
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu des Types de & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Contenu des Types de & #40 ; DMX & #41 ;](../../dmx/content-types-dmx.md)   
- [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Les Structures d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Types de données & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/data-types-data-mining.md)   
- [Colonnes de Structure d’exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)   
+ [Types de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Types de contenu &#40;DMX&#41;](../../dmx/content-types-dmx.md)   
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Types de données &#40;Exploration de données&#41;](../../analysis-services/data-mining/data-types-data-mining.md)   
+ [Colonnes de structure d'exploration de données](../../analysis-services/data-mining/mining-structure-columns.md)   
  [Distributions de colonnes &#40;exploration de données&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)  
   
   

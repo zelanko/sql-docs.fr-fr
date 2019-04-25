@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aef22dfdc18304591b8d556fd323ba6b851778eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757823"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Suggérer les colonnes associées (Assistant Exploration de données)
   Utilisez la page **Suggérer les colonnes associées** pour afficher les recommandations de la fonction **Suggérer**, que vous avez sélectionnée dans la page précédente de l’Assistant. Les colonnes d’entrée seront présélectionnées en fonction de leur association avec la colonne **prédictible** sélectionnée. Si vous acceptez les modifications dans cette boîte de dialogue, les modifications seront transmises à la page **Spécifier les données d’apprentissage**.  
   
- **Pour plus d’informations** : [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Nom de la colonne**  

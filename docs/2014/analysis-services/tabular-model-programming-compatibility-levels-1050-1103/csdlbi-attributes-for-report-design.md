@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757939"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>Attributs CSDLBI pour la conception de rapport
   Cette section décrit les attributs des extensions au CSDL pour la modélisation tabulaire qui affectent la création de requête [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  
@@ -25,7 +25,7 @@ ms.locfileid: "60157846"
   
 |Nom de l'attribut|Type de données|Description|  
 |--------------------|---------------|-----------------|  
-|Culture|Texte|Indique la culture utilisée pour les formats monétaires. En cas d'omission, EN-US est utilisé.|  
+|Culture|Text|Indique la culture utilisée pour les formats monétaires. En cas d'omission, EN-US est utilisé.|  
 |IsRightToLeft|Booléen|Indique si les valeurs des champs de texte doivent être lues de droite à gauche par défaut|  
   
 ## <a name="entity-attributes"></a>Attributs d'entité  
@@ -33,11 +33,11 @@ ms.locfileid: "60157846"
   
 |Nom de l'attribut|Type de données|Description|  
 |--------------------|---------------|-----------------|  
-|`ReferenceName`|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom est utilisé.|  
-|`Caption`|Texte|Nom complet de l'entité.|  
-|`Documentation`|Texte|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification des données.|  
+|`ReferenceName`|Text|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom est utilisé.|  
+|`Caption`|Text|Nom complet de l'entité.|  
+|`Documentation`|Text|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification des données.|  
 |`Hidden`|Booléen|Indique si l'entité doit être affichée. La valeur par défaut est `false`.|  
-|`CollectionCaption`|Texte|Nom au pluriel pour faire référence à un jeu d'instances de l'entité. En cas d'omission, l'attribut Caption est utilisé.|  
+|`CollectionCaption`|Text|Nom au pluriel pour faire référence à un jeu d'instances de l'entité. En cas d'omission, l'attribut Caption est utilisé.|  
 |`DisplayKey`|MemberRef[]|Liste triée de champs utilisés pour désigner une instance d'entité à un utilisateur professionnel. Les références peuvent inclure des propriétés d'instance et des propriétés de navigation. Lorsqu'une propriété de navigation est référencée, la valeur `DisplayKey` de l'entité cible est affichée. Si la valeur `DisplayKey` est omise, le champ Key est utilisé.|  
 |`DefaultImage`|MemberRef|Référence au champ contenant une image utilisée pour désigner visuellement une instance d'entité à un utilisateur professionnel. En cas d'omission, le premier champ d'image de l'entité est utilisé, le cas échéant.|  
 |`DefaultDetails`|MemberRef[]|Liste triée de champs qui représente l'ensemble par défaut des informations détaillées affichées à un utilisateur professionnel sur une instance de l'entité. En cas d'omission, les cinq (5) premiers champs de l'entité sont utilisés, à l'exception de ceux déjà référencés par `Key`, `DisplayKey` ou `DefaultImage`.|  
@@ -50,15 +50,15 @@ ms.locfileid: "60157846"
   
 |Nom de l'attribut|Type de données|Description|  
 |--------------------|---------------|-----------------|  
-|`ReferenceName`|Texte|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom du champ est utilisé.|  
-|`Caption`|Texte|Nom complet de l'entité. Si omis, le champ `ReferenceName` est utilisé.|  
-|`Documentation`|Texte|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification du champ.|  
+|`ReferenceName`|Text|Identificateur utilisé pour référencer cette entité dans une requête DAX. En cas d'omission, le nom du champ est utilisé.|  
+|`Caption`|Text|Nom complet de l'entité. Si omis, le champ `ReferenceName` est utilisé.|  
+|`Documentation`|Text|Texte descriptif pour aider les utilisateurs professionnels à comprendre la signification du champ.|  
 |`Hidden`|Booléen|Indique si le champ doit être affiché. La valeur par défaut est `false`, qui signifie que le champ est affiché.|  
-|`DisplayFolder`|Texte|Nom (chemin d'accès complet) du dossier dans lequel ce champ s'affiche. En cas d'omission, le champ s'affiche à la racine du modèle.|  
+|`DisplayFolder`|Text|Nom (chemin d'accès complet) du dossier dans lequel ce champ s'affiche. En cas d'omission, le champ s'affiche à la racine du modèle.|  
 |`ContextualNameRule`|Enum|Valeur qui indique si et comment le nom de la propriété doit être modifié en fonction du contexte dans lequel il est utilisé. Les valeurs possibles sont les suivantes : `None`, `Role`, `Merge`.|  
 |`Alignment`|Enum|Valeur indiquant comment les valeurs de champ doivent être alignées dans une présentation tabulaire. Les valeurs possibles sont les suivantes : `Default`, `Center`, `Left`, `Right`. Si omis, la valeur par défaut détermine l’alignement selon le type de données du champ.|  
-|`FormatString`|Texte|Une chaîne de format .NET indiquant comment la valeur du champ doit être mise en forme par défaut. En cas d'omission, le format suivant est utilisé :<br /><br /> -Champs Datetime : date courte régionale ou « d »<br />-Fonction d’agrégation des champs virgule flottante et champs intégraux avec une valeur par défaut : nombre local ou « n »<br />-Fonction d’agrégation entiers sans valeur par défaut : nombre décimal local ou « d »<br /><br /> Pour tous les autres types de champs, aucune chaîne de format ne s'applique.|  
-|`Units`|Texte|Symbole qui est appliqué aux valeurs de champ pour exprimer des unités. En cas d'omission, les unités sont inconnues.|  
+|`FormatString`|Text|Une chaîne de format .NET indiquant comment la valeur du champ doit être mise en forme par défaut. En cas d'omission, le format suivant est utilisé :<br /><br /> -Champs Datetime : date courte régionale ou « d »<br />-Fonction d’agrégation des champs virgule flottante et champs intégraux avec une valeur par défaut : nombre local ou « n »<br />-Fonction d’agrégation entiers sans valeur par défaut : nombre décimal local ou « d »<br /><br /> Pour tous les autres types de champs, aucune chaîne de format ne s'applique.|  
+|`Units`|Text|Symbole qui est appliqué aux valeurs de champ pour exprimer des unités. En cas d'omission, les unités sont inconnues.|  
 |`Width`|Entier|La largeur par défaut en caractères qui doit être réservée pour afficher les valeurs du champ dans une présentation tabulaire. Si omis, une largeur par défaut est basée sur le type de données.|  
 |`SortDirection`|Enum|Valeur indiquant comment les valeurs de champs sont généralement triées. Les valeurs possibles sont les suivantes : `Default`, `Ascending`, `Descending`. Si omis, la valeur par défaut affecte qu'un ordre de tri est basé sur les données du champ type.|  
 |`IsRightToLeft`|Booléen|Indique si le champ contient du texte qui doit être lu de droite à gauche. En cas d'omission, le paramètre de modèle est utilisé.|  

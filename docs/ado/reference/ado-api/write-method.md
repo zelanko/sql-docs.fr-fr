@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 52561b6d240a58e59490d607c8729b5d878b96a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47772554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642430"
 ---
 # <a name="write-method"></a>Write, méthode
 Écrit des données binaires à un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objet.  
@@ -35,7 +35,7 @@ Stream.Write Buffer
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *mémoire tampon*  
+ *Buffer*  
  Un **Variant** qui contient un tableau d’octets à écrire.  
   
 ## <a name="remarks"></a>Notes  

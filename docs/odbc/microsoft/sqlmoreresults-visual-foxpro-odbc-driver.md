@@ -14,19 +14,19 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b402c71a2501fa15f98ccaf1b0d89d2c3dac40ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636768"
 ---
 # <a name="sqlmoreresults-visual-foxpro-odbc-driver"></a>SQLMoreResults (pilote ODBC Visual FoxPro)
 > [!NOTE]  
 >  Cette rubrique contient des informations spécifiques au pilote ODBC Visual FoxPro. Pour obtenir des informations générales sur cette fonction, consultez la rubrique appropriée sous [ODBC API Reference](../../odbc/reference/syntax/odbc-api-reference.md).  
   
- Prise en charge : complète  
+ Prise en charge : Complète  
   
- Conformité d’API ODBC : 2 de niveau  
+ Conformité d’API ODBC : Niveau 2  
   
  Détermine si plus de résultats sont en attente sur un descripteur d’instruction, *hstmt*, qui contient des instructions SELECT, UPDATE, INSERT ou DELETE et si tel est le cas, initialise le traitement de ces résultats.  
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0bc4168d6e6cf786b3137713d44441be0bd3a13f
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932605"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511390"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Spécifier une image en tant que pointeur dans une jauge (Générateur de rapports et SSRS)
   La jauge contient trois styles intégrés pouvant être utilisés pour personnaliser l'apparence du pointeur. Pour une jauge radiale, les styles intégrés sont : AIGUILLE, marqueur et barre. Pour une jauge linéaire, les styles intégrés sont les suivants : Marqueur, Barre et Thermomètre. Si un pointeur unique est requis, l'utilisateur peut créer et spécifier une image qui sera utilisée en tant que pointeur totalement fonctionnel.  

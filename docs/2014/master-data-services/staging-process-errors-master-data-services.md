@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8b32a8e9b6b61c2d108d3a9b8e63242854d0a63
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763270"
 ---
 # <a name="staging-process-errors-master-data-services"></a>Erreurs du processus de site (Master Data Services)
   Lorsque le processus de mise en lots est terminé, tous les enregistrements traités dans les tables intermédiaires ont une valeur dans la colonne ErrorCode. Ces valeurs sont répertoriées dans le tableau suivant.  
@@ -33,7 +33,7 @@ ms.locfileid: "52822353"
 |210041|« ROOT » n’est pas un code de membre valide.|La valeur **MemberCode** contient le mot « ROOT ».|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |210042|« MDMUNUSED » n’est pas un code de membre valide.|La valeur **MemberCode** contient le mot « MDMUNUSED ».|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |210052|MemberCode ne peut pas être désactivé, car il est utilisé comme valeur d'attribut basée sur un domaine.|Lorsque **ImportType** = **3** ou **4**, la mise en lots échoue si le membre est utilisé comme valeur d’attribut pour d’autres membres. Utilisez **ImportType5** ou **6** pour définir la valeur sur NULL ou modifiez les valeurs avant d’exécuter le processus de mise en lots.|Feuille<br /><br /> Consolidé|  
-|300002|Le code de membre n'est pas valide.|Relations : Code de membre parent ou enfant n’existe pas.<br /><br /> Feuille ou consolidé : **ImportType** = **3** ou **4** et le code de membre n’existe pas.|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
+|300002|Le code de membre n'est pas valide.|Relations : Le code de membre parent ou enfant n’existe pas.<br /><br /> Feuille ou Consolidé : **ImportType** = **3** ou **4** et le code de membre n’existe pas.|Feuille<br /><br /> Consolidé<br /><br /> Relation|  
 |300004|Le code de membre existe déjà.|**ImportType** = **1** et vous avez utilisé un code de membre qui existe déjà dans l’entité.|Feuille<br /><br /> Consolidé|  
 |210011|Lorsque **RelationshipType** a la valeur **1**, **ParentCode** ne peut pas être un membre feuille.|Vérifiez que la valeur **ParentCode** est un code de membre consolidé.|Relation|  
 |210015|Le code de membre est présent plusieurs fois dans la table de mise en lots pour une hiérarchie et un lot.|Pour une hiérarchie explicite, vous avez spécifié l'emplacement du même membre plusieurs fois dans le même lot.|Relation|  

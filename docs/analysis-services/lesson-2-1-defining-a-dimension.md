@@ -1,5 +1,5 @@
 ---
-title: Définition d’une Dimension | Documents Microsoft
+title: Définition d’une Dimension | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38185df9928286acf184fbad21fd75839856d017
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467923"
 ---
-# <a name="lesson-2-1---defining-a-dimension"></a>Leçon 2-1-Définition d’une Dimension
+# <a name="lesson-2-1---defining-a-dimension"></a>Leçon 2-1 : définition d’une Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Dans la tâche suivante, vous allez utiliser l'Assistant Dimension pour générer une dimension Date.  
@@ -36,7 +36,7 @@ Dans la tâche suivante, vous allez utiliser l'Assistant Dimension pour génére
   
 5.  Dans la liste **Table principale** , sélectionnez **Date**.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Dans la page **Sélectionner les attributs de la dimension** , cochez les cases à côté des attributs suivants :  
   
@@ -62,7 +62,7 @@ Dans la tâche suivante, vous allez utiliser l'Assistant Dimension pour génére
   
     -   **Calendar Semester** en **Half Year**  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 10. Dans la page **Fin de l’Assistant** , dans le volet de visualisation, vous pouvez consulter la dimension **Date** et ses attributs.  
   
@@ -73,7 +73,7 @@ Dans la tâche suivante, vous allez utiliser l'Assistant Dimension pour génére
 12. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
-[Définition d’un Cube](../analysis-services/lesson-2-2-defining-a-cube.md)  
+[Définition d'un cube](../analysis-services/lesson-2-2-defining-a-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Dimensions dans les modèles multidimensionnels](../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27a8ff70a995ab24dcf762d0ada731e0de6fa92
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472281"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>Détection et résolution des conflits
 Si vous êtes confronté à votre jeu d’enregistrements en mode exécution, il est beaucoup moins le risque de problèmes d’accès concurrentiel se produise. En revanche, si votre application utilise la mise à jour du mode de traitement par lots, il peut y avoir une bonne chance qu’un utilisateur modifie un enregistrement avant l’enregistrement des modifications apportées par un autre utilisateur, ce même enregistrement. Dans ce cas, vous souhaiterez votre application de façon à gérer le conflit. Il peut être votre souhait de la dernière personne à envoyer une mise à jour au serveur « remporte ». Ou vous pouvez laisser l’utilisateur la plus récente pour déterminer quelle mise à jour doit être prioritaire en lui offrant un choix entre les deux valeurs en conflit.  

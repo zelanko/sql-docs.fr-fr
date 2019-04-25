@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Signature de procédures stockées avec un certificat | Microsoft Docs'
+title: 'Tutoriel : Signature de procédures stockées avec un certificat | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: daf80492cd6a0d8040d1497e71600c798e7ef96c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524092"
 ---
-# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Didacticiel : Signature de procédures stockées à l'aide d'un certificat
+# <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>Tutoriel : Signature de procédures stockées à l'aide d'un certificat
   Ce didacticiel explique comment signer des procédures stockées à l'aide d'un certificat généré par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  

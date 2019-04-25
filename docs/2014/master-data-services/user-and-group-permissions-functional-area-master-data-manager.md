@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bb4422ea0b2ac93ec928bc8ae755f715cb4def44
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763364"
 ---
 # <a name="user-and-group-permissions-functional-area-master-data-manager"></a>Zone fonctionnelle Autorisations d'accès (Master Data Manager)
   Dans la zone fonctionnelle Autorisations d'accès, les administrateurs peuvent accorder une autorisation d'accès à des zones fonctionnelles, à des attributs (sous l'onglet Modèles), ainsi qu'à des membres (sous l'onglet Membres de hiérarchie). Les chevauchements d’autorisations sont résolus afin de déterminer l’autorisation dont dispose un utilisateur sur chaque valeur d’attribut individuelle.  

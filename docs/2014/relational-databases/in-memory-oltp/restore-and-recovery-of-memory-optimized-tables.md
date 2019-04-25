@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9560249e07cbd360914b5dab21eb68dc8e7f013f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48208949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467243"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauration et récupération de tables optimisées en mémoire
   Le mécanisme de base utilisé pour récupérer ou restaurer une base de données avec des tables mémoire optimisées est similaire à celui utilisé pour les bases de données avec uniquement des tables sur disque. Mais à la différence des tables sur disque, les tables mémoire optimisées doivent être chargées dans la mémoire avant que la base de données soit disponible pour l'accès utilisateur. Cela ajoute une nouvelle étape à la récupération de la base de données. Les étapes de récupération de bases de données sont modifiées comme suit :  

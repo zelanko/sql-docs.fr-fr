@@ -25,11 +25,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3aa122e19d890b0b994e4403dcc59b3131571d7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629692"
 ---
 # <a name="subscribe-to-publications"></a>S'abonner à des publications
   Un abonnement est une demande de copie de données et d'objets de base de données d'une publication. Il définit la publication qui sera reçue, où et quand elle sera reçue. Lorsque vous planifiez des abonnements, pensez à l'endroit où vous voulez qu'ait lieu le traitement de l'agent. Le type d'abonnement choisi détermine l'emplacement d'exécution de l'agent. Avec un abonnement par envoi de données (push), l'Agent de fusion ou l'Agent de distribution s'exécute sur le serveur de distribution tandis qu'avec un abonnement par extraction de données (pull), les agents s'exécutent sur les Abonnés. Il n'est plus possible de modifier le type d'un abonnement une fois celui-ci créé.  

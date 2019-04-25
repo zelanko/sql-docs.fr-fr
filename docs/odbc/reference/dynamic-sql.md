@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cbecd1d6db1d5ed77082253f6a6a57a96ceec4d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628695"
 ---
 # <a name="dynamic-sql"></a>SQL dynamique
 Bien que SQL statique fonctionne bien dans de nombreuses situations, il existe une classe d’applications dans lequel l’accès aux données ne peut pas être déterminé à l’avance. Par exemple, qu'une feuille de calcul permet à un utilisateur à entrer une requête, puis envoie à la feuille de calcul au SGBD pour récupérer des données. Évidemment, le contenu de cette requête ne peut pas être connu au programmeur lorsque le programme de feuille de calcul est écrit.  

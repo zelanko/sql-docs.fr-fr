@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 04eb0e01b1c98552c0364c5b60d918608ae23faa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511374"
 ---
 # <a name="fetching-blob-data-using-irowgetcolumns-and-isequentialstream"></a>Extraction de données BLOB à l'aide d'IRow::GetColumns et ISequentialStream
   La fonction suivante utilise les interfaces **IRow::GetColumns** et **ISequentialStream** pour récupérer (fetch) les données volumineuses :  

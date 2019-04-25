@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6411a69ba754cfc06f651224391ed41cf96fe07
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517810"
 ---
 # <a name="discontinued-master-data-services-features"></a>Fonctionnalités Master Data Services éliminées
 
@@ -29,7 +29,7 @@ ms.locfileid: "52759881"
   
  Le modèle de métadonnées n’est plus disponible. Par ailleurs, vous ne pouvez plus afficher les métadonnées dans la zone fonctionnelle Explorateur.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Fonctionnalités Master Data Services déconseillées](../master-data-services/deprecated-master-data-services-features.md)  
   
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 232ea094ac81badfe7a6ec378371b55a0b08103b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518742"
 ---
 # <a name="using-database-mail"></a>Utilisation de la messagerie de base de données
   Dans SMO, le sous-système de la messagerie de base de données est représentée par l'objet <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> qui est référencé par la propriété <xref:Microsoft.SqlServer.Management.Smo.Server.Mail%2A>. En utilisant l'objet SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail>, vous pouvez configurer le sous-système de messagerie de base de données et gérer des profils et des comptes de messagerie. L'objet SMO <xref:Microsoft.SqlServer.Management.Smo.Mail.SqlMail> appartient à l'objet `Server`, ce qui signifie que l'étendue des comptes de messagerie est au niveau du serveur.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fde9e5cdaea245fd0b99820a89a4466e2d669fdf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769065"
 ---
 # <a name="log-ssis-expression"></a>LOG (expression SSIS)
   Renvoie le logarithme de base 10 d'une expression numérique.  

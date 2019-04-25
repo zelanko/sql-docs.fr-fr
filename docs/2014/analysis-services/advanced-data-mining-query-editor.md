@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80b2705920b7793f7f89b323a16fa2f3618e4d1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635631"
 ---
 # <a name="advanced-data-mining-query-editor"></a>Éditeur de requêtes d’exploration de données avancée
   Le **données d’exploration de données éditeur de requêtes avancé** est un outil pour vous aider à créer des requêtes et des modèles personnalisés.  
@@ -37,7 +37,7 @@ ms.locfileid: "48072799"
  Utilisez ce bouton pour basculer l’éditeur entre un éditeur de texte, où vous pouvez écrire des instructions DMX directement ; et le **Générateur de requêtes**, qui vous aide à vous générez une instruction DMX.  
   
 > [!NOTE]  
->  **Avertissement :** si vous changez de vue avant l’exécution de la requête, un message s’affiche indiquant que vous risquez de perdre certaines modifications. Si l’instruction DMX est valide, dans de nombreux cas le **Générateur de requêtes** convertit correctement ces modifications. Toutefois, si vous avez généré une instruction DMX particulièrement complexe, vous devez enregistrer votre travail avant de changer de vue.  
+>  **Avertissement :** Si vous changez de vue avant l’exécution de la requête, un message s’affiche indiquant que vous risquez de perdre certaines modifications. Si l’instruction DMX est valide, dans de nombreux cas le **Générateur de requêtes** convertit correctement ces modifications. Toutefois, si vous avez généré une instruction DMX particulièrement complexe, vous devez enregistrer votre travail avant de changer de vue.  
   
  **Modèles DMX**  
  Cliquez et sélectionnez à partir d'une liste de modèles qui contient des exemples DMX. Les modèles fournissent tous les types de modèle ou requête de prédiction nécessaires, notamment les requêtes qui utilisent des tables imbriquées, et les instructions DMX pour gérer des modèles. Même si vous connaissez certaines instructions DMX, les modèles permettent de gagner du temps en obtenant la syntaxe correcte.  

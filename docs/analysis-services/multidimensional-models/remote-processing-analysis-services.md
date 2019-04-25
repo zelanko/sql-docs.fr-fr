@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4860a890ba0443b66f9568edd05257eff7ad70b2
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40395734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472410"
 ---
 # <a name="remote-processing-analysis-services"></a>Traitement à distance (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,10 +91,10 @@ ms.locfileid: "40395734"
 2.  Dans la dernière étape, modifiez le travail pour qu'il soit exécuté selon la planification de votre choix, en ajoutant toutes les alertes ou notifications nécessaires à la gestion du travail. Vous pouvez également affiner le script de traitement ou créer plusieurs étapes au sein du travail pour traiter les objets indépendamment.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Composants SQL Server Agent](../../ssms/agent/sql-server-agent.md)   
- [Planification des tâches administratives SSAS avec SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
+ [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md)   
+ [Planifier des tâches administratives SSAS avec SQL Server Agent](../../analysis-services/instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md)   
  [Traitement par lots &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/batch-processing-analysis-services.md)   
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Traitement des objets &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
+ [Traitement d’objets &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/processing-objects-xmla.md)  
   
   

@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ccb874a18fcc7c9ded489b758852ad24ea35c45f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769825"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Référence de l'interface utilisateur de la boîte de dialogue Signature numérique
   Utilisez la boîte de dialogue **Signature numérique** pour signer un package par une signature numérique ou pour la supprimer. La boîte de dialogue **Signature numérique** est disponible via l'option **Signature numérique** dans le menu **SSIS** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 29449905da888d0f7c85b66d3731eed381dc582c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506056"
 ---
 # <a name="sysdmosbufferdescriptors-transact-sql"></a>sys.dm_os_buffer_descriptors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47704707"
   
  Lorsqu'une page de données est lue à partir du disque, cette page est copiée dans le pool de mémoires tampons de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et mise en cache en vue de sa réutilisation. Chaque page de données mise en cache est associée à un descripteur de mémoire tampon. Les descripteurs de mémoire tampon identifient de manière unique chaque page de données actuellement mise en cache dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sys.dm_os_buffer_descriptors retourne les pages mises en cache pour toutes les bases de données utilisateur et système. Cela inclut les pages qui sont associées à la base de données Resource.  
   
-> **Remarque :** à appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_buffer_descriptors**.  
+> **REMARQUE :** À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_os_buffer_descriptors**.  
 
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -44,16 +44,16 @@ ms.locfileid: "47704707"
 |page_id|**Int**|Identificateur de la page dans le fichier. Autorise la valeur NULL.|  
 |page_level|**Int**|Niveau d'index de la page. Autorise la valeur NULL.|  
 |allocation_unit_id|**bigint**|Identificateur de l'unité d'allocation de la page. Cette valeur peut être utilisée pour la jointure de sys.allocation_units. Autorise la valeur NULL.|  
-|page_type|**nvarchar(60)**|Type de la page, par exemple page de données ou page d'index. Autorise la valeur NULL.|  
+|page_type|**nvarchar(60)**|Type de la page, par exemple : Page de données ou page d’Index. Autorise la valeur NULL.|  
 |row_count|**Int**|Nombre de lignes dans la page. Autorise la valeur NULL.|  
 |free_space_in_bytes|**Int**|Quantité d'espace disponible dans la page, en octets. Autorise la valeur NULL.|  
 |is_modified|**bit**|1 = la page a été modifiée après avoir été lue sur le disque. Autorise la valeur NULL.|  
 |numa_node|**Int**|Nœud NUMA (Nonuniform Memory Access) pour la mémoire tampon. Autorise la valeur NULL.|  
-|read_microsec|**bigint**|Temps réel (en microsecondes) requis pour lire la page dans la mémoire tampon. Ce nombre est réinitialisé lorsque la mémoire tampon est réutilisée. Autorise la valeur NULL.|  
-|is_in_bpool_extension|**bit**|1 = Page se trouve dans l’extension du pool de mémoires tampons. Autorise la valeur NULL.|  
-|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
+|read_microsec|**bigint**|Temps réel (en microsecondes) requis pour lire la page dans la mémoire tampon. Ce nombre est réinitialisé lorsque la mémoire tampon est réutilisée. Autorise la valeur NULL.|  
+|is_in_bpool_extension|**bit**|1 = Page se trouve dans l’extension du pool de mémoires tampons. Autorise la valeur NULL.|  
+|pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -61,7 +61,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 ## <a name="remarks"></a>Notes  
  Sys.dm_os_buffer_descriptors retourne les pages qui sont utilisés par la base de données de ressources. Sys.dm_os_buffer_descriptors ne retourne pas d’informations sur les pages libres ou occultées, ni sur les pages qui contenaient des erreurs lors de leur lecture.  
   
-|From|Pour|Le|Relation|  
+|From|Pour|Actif|Relation|  
 |----------|--------|--------|------------------|  
 |sys.dm_os_buffer_descriptors|sys.databases|database_id|plusieurs-à-un|  
 |sys.dm_os_buffer_descriptors|\<userdb>.sys.allocation_units|allocation_unit_id|plusieurs-à-un|  

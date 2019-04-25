@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468690"
 ---
 # <a name="row-wise-binding"></a>Liaison selon les lignes
 Lorsque vous utilisez la liaison selon les lignes, une application définit une structure contenant un ou deux, ou dans certains cas, trois, les éléments pour chaque colonne pour laquelle les données doit être retourné. Le premier élément conserve la valeur de données, et le deuxième élément conserve la mémoire tampon de longueur / d’indicateur. Indicateurs et des valeurs de longueur peuvent être stockées dans les mémoires tampons distinctes en définissant les champs de descripteur SQL_DESC_INDICATOR_PTR et SQL_DESC_OCTET_LENGTH_PTR sur des valeurs différentes ; Si cette opération est effectuée, la structure contient un troisième élément. L’application puis alloue un tableau de ces structures, qui contient autant d’éléments qu’il existe des lignes dans l’ensemble de lignes.  

@@ -1,5 +1,5 @@
 ---
-title: Mise en cache proactive (Partitions) | Documents Microsoft
+title: Mise en cache proactive (Partitions) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4959473b120a3a8a0c289ff3cd8f91e89df44b86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640390"
 ---
-# <a name="partitions---proactive-caching"></a>Partitions - mise en cache Proactive
+# <a name="partitions---proactive-caching"></a>Partitions - Mise en cache proactive
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   La mise en cache proactive fournit la création et la gestion de la mise en cache MOLAP automatique pour les objets OLAP. Les cubes incorporent immédiatement les modifications apportées aux données dans la base de données, en fonction des notifications reçues de cette dernière. L'objectif de la mise en cache proactive est de fournir la performance MOLAP traditionnelle tout en conservant la rapidité et la facilité de gestion offertes par ROLAP.  
   
@@ -35,6 +35,6 @@ ms.locfileid: "34020756"
   
 ## <a name="see-also"></a>Voir aussi  
  [Stockage de dimension](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)   
- [Définir le stockage des partitions & #40 ; Analysis Services - multidimensionnel & #41 ;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
+ [Définir un stockage de partitions &#40;Analysis Services - Multidimensionnel&#41;](../../analysis-services/multidimensional-models/set-partition-storage-analysis-services-multidimensional.md)  
   
   

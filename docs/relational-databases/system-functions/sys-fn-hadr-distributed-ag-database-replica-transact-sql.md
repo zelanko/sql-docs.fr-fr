@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs
+title: sys.fn_hadr_distributed_ag_database_replica (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2016
 ms.prod: sql
@@ -21,13 +21,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff99c2b63ad3f104b5bae4f6378af2e4fe0575bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640323"
 ---
-# <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>Sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
+# <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   Utilisé pour mapper une base de données dans un groupe de disponibilité distribué à la base de données dans le groupe de disponibilité local.  
@@ -45,7 +45,7 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
  «*lag_Id*»  
  Est l’identificateur du groupe de disponibilité distribué. *lag_Id* est de type **uniqueidentifier**.  
   
- «*database_id*»  
+ '*database_id*'  
  Est l’identificateur de la base de données dans un groupe de disponibilité distribué. *database_id* est de type **uniqueidentifier**.  
   
 ## <a name="tables-returned"></a>Tables retournées  

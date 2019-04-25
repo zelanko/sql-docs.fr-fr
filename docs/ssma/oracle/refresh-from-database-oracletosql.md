@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: decc6e25cc8480dfaf041a79baa0972bdd78e569
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625859"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Actualiser à partir de la base de données (OracleToSQL)
 Le **Actualiser à partir de la base de données** boîte de dialogue vous permet de sélectionner les objets à actualiser à partir de la base de données Oracle. Lignes dans la boîte de dialogue sont codées par couleur selon l’état des métadonnées :  
@@ -36,7 +36,7 @@ Pour accéder à la **Actualiser à partir de la base de données** boîte de di
 **Réduction (-)**  
 Réduire tous les groupes d’objets pour masquer les objets individuels.  
   
-**Développement (+)**  
+**Expand (+)**  
 Développez tous les groupes d’objets pour afficher les objets individuels.  
   
 **Masquer/afficher les objets identiques**  
