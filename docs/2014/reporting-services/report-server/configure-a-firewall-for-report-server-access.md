@@ -11,15 +11,15 @@ helpviewer_keywords:
 - firewall systems [Reporting Services]
 - configuring servers [Reporting Services]
 ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0f7016d47d060fa5f6708f907da848d7329482d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: MT
+ms.openlocfilehash: a8c43d75b0b070a73f89a16300694fc11234d6a7
+ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024710"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59966705"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurer un pare-feu pour accéder au serveur de rapports
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et les rapports publiés sont accessibles via les URL qui spécifient une adresse IP, un port et un répertoire virtuel. Si le Pare-feu Windows est activé, le port que le serveur de rapports est configuré pour utiliser est très probablement fermé. La présence d'une page Web vierge après la demande d'un rapport ou l'affichage d'une page vierge lorsque vous tentez d'ouvrir le Gestionnaire de rapports à partir d'un ordinateur client distant constituent une indication qu'un port peut être fermé.  
@@ -46,7 +46,7 @@ ms.locfileid: "56024710"
   
 3.  Cliquez sur **Règles de trafic entrant**.  
   
-4.  Cliquez sur **Nouvelle règle** dans la fenêtre **Actions**.****  
+4.  Cliquez sur **Nouvelle règle** dans la fenêtre **Actions****.**  
   
 5.  Cliquez sur **Type de règle** de **Port**.  
   
