@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9228eb879ed1417b31c95d53783d32acf53bcdb4
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509805"
 ---
 # <a name="powershell-reference-for-power-pivot-for-sharepoint"></a>Référence PowerShell pour Power Pivot pour SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "53072406"
 |[Set-PowerPivotSystemService, applet de commande](../../analysis-services/powershell/set-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
 |[Applet de commande Update-PowerPivotSystemService](../../analysis-services/powershell/update-powerpivotsystemservice-cmdlet.md)|SharePoint 2013 &#124; SharePoint 2016|  
   
- Remarque : Les applets de commande suivantes ne fonctionnent qu’avec SharePoint 2010, qui [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ne prend pas en charge.  
+ Remarque : Les applets de commande suivantes ne fonctionnent qu’avec SharePoint 2010, qui [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ne prend pas en charge.  
   
 -   Get-PowerPivotEngineService  
   

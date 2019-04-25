@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57c73e3ae9661058277a377b7d17b6a4af393ba0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640458"
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Partitions - Traitement et modes de stockage des partitions
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,9 +63,9 @@ ms.locfileid: "52545655"
   
 -   Dans le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], la taille totale de la clé d'index ne peut pas dépasser 900 octets. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie cette condition grâce aux colonnes de clés de longueur fixe lors du traitement de l’instruction CREATE INDEX. Toutefois, s’il existe des colonnes de longueur variable dans la clé d’index, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] vérifie également cette condition pour chaque mise à jour pour les tables de base. Dans la mesure où des agrégations différentes correspondent à des définitions de vues différentes, le traitement ROLAP à l'aide de vues indexées peut réussir ou échouer en fonction de la structure de l'agrégation.  
   
--   Les options suivantes doivent être activées (ON) pour la session de création de la vue indexée : ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING, et ANSI_WARNING. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   La session de création de la vue indexée doit avoir les options suivantes, la valeur ON : ARITHABORT, CONCAT_NULL_YEILDS_NULL, QUOTED_IDENTIFIER, ANSI_NULLS, ANSI_PADDING et ANSI_WARNING. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
--   L'option suivante doit être activée (OFF) pour la session de création de la vue indexée : NUMERIC_ROUNDABORT. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+-   La session de création de la vue indexée doit avoir l’option suivante est désactivée (OFF) : NUMERIC_ROUNDABORT. Ce paramétrage peut être effectué dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="holap"></a>HOLAP  
  Le mode de stockage HOLAP combine les attributs des modes de stockage MOLAP et ROLAP. Comme MOLAP, HOLAP les agrégations de la partition sont stockées dans une structure multidimensionnelle dans un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance. Dans le mode HOLAP, aucune copie des données source n'est stockée. Pour les requêtes qui accèdent uniquement aux données de synthèse dans les agrégations d'une partition, le stockage HOLAP est similaire au stockage MOLAP. Requêtes qui accèdent à la source de données-par exemple, si vous souhaitez Explorer d’une cellule de cube atomique pour lequel il n’existe aucune agrégation données-doit récupérer des données à partir de la base de données relationnelle et ne sera pas aussi rapide tels qu’ils seraient si la source de données ont été stockées dans le structur MOLAP e. Dans le mode HOLAP, les temps de requête sont généralement très différents selon que la requête peut être résolue dans le cache ou les agrégations, ou dans les données sources.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4587dda82f8e6e3d02581ebcd5a13bf0005b14ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757627"
 ---
 # <a name="compatibility-level-ssas-tabular-sp1"></a>Niveau de compatibilité (SSAS Tabulaire SP1)
   Vous pouvez spécifier *niveau de compatibilité* lors de la création de nouveaux projets de modèle tabulaire, la mise à niveau des projets de modèles tabulaires existants, la mise à niveau existant de bases de données de modèle tabulaire déployées ou lors de l’importation de classeurs PowerPivot.  

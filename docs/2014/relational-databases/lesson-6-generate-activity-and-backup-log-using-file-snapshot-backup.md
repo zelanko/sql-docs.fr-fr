@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 45004f8544efc0f0cc02292dbe28fdd75d6dc1de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743255"
 ---
 # <a name="lesson-7-move-your-data-files-to-windows-azure-storage"></a>Leçon 7 : Déplacement des fichiers de données dans le Stockage Microsoft Azure
   Dans cette leçon, vous allez apprendre comment déplacer les fichiers de données vers le Stockage Microsoft Azure (mais pas vers l'instance SQL Server). Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5 et 6.  
@@ -64,7 +64,7 @@ ms.locfileid: "58534071"
   
     ```  
   
-3.  Lorsque vous exécutez ce code, le message suivant s'affiche : « Le fichier « TestDB1Alter » a été modifié dans le catalogue système. Le nouveau chemin sera utilisé au prochain que démarrage de la base de données. »  
+3.  Lorsque vous exécutez ce code, vous verrez ce message : « Le fichier « TestDB1Alter » a été modifié dans le catalogue système. Le nouveau chemin sera utilisé au prochain que démarrage de la base de données. »  
   
 4.  Ensuite, mettez la base de données hors connexion.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "58534071"
   
 5.  Vous devez maintenant copier les fichiers de données dans le Stockage Microsoft Azure à l'aide de l'une des méthodes suivantes : [Outil AzCopy](https://blogs.msdn.com/b/windowsazurestorage/archive/2012/12/03/azcopy-uploading-downloading-files-for-windows-azure-blobs.aspx), [Put Page](https://msdn.microsoft.com/library/azure/ee691975.aspx), [référence de bibliothèque cliente de stockage](https://msdn.microsoft.com/library/azure/dn261237.aspx), ou un outil Explorateur de stockage tiers.  
   
-     **Important :** si vous utilisez cette amélioration, vérifiez systématiquement que vous créez un objet blob de pages et non un objet blob de blocs.  
+     **Important :** Lorsque vous utilisez cette nouvelle amélioration, vérifiez systématiquement que vous créez un objet blob de pages pas un objet blob de blocs.  
   
 6.  Ensuite, mettez la base de données en ligne.  
   

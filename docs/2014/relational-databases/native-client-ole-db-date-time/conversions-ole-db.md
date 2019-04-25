@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638206"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Liaisons et conversions (OLE DB)
   Cette section explique comment réaliser des conversions entre des valeurs `datetime` et `datetimeoffset`. Les conversions décrites dans cette section sont soit déjà fournies par OLE DB, soit une extension cohérente de ce dernier.  

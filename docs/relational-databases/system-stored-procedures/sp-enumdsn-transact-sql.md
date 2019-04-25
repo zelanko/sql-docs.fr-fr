@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f58a16b3d4d393a94dc5e42413ddfeb2a8eb5d9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520922"
 ---
 # <a name="spenumdsn-transact-sql"></a>sp_enumdsn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ sp_enumdsn
 |-----------------|---------------|-----------------|  
 |**Nom de Source de données**|**sysname**|Nom de la source de données.|  
 |**Description**|**varchar(255)**|Description de la source de données.|  
-|**Type**|**Int**|Type de la source de données :<br /><br /> **1** = NOM ODBC DSN<br /><br /> **3** = source de données OLE DB|  
+|**Type**|**Int**|Type de la source de données :<br /><br /> **1** = ODBC DSN<br /><br /> **3** = source de données OLE DB|  
 |**Nom du fournisseur**|**varchar(255)**|Nom du fournisseur OLE DB. La valeur est NULL pour un DSN ODBC.|  
   
 ## <a name="remarks"></a>Notes  

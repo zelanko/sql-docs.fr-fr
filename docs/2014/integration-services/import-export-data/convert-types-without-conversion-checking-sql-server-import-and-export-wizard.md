@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea8b678731a10b483c233cdb17b394a22f647060
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768051"
 ---
 # <a name="convert-types-without-conversion-checking-sql-server-import-and-export-wizard"></a>Convertir les types sans vérification de la conversion (Assistant Importation et Exportation SQL Server)
   Utilisez le **convertir les Types sans vérification de la Conversion** page pour passer en revue les mappages de l’Assistant effectue lors de l’Assistant ne peut pas trouver un ou plusieurs de la [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] les fichiers de mappage et de conversion de type de données. Cette page comprend des informations qui vous permettent d'identifier le fichier ou les fichiers manquants.  

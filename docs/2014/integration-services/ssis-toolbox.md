@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed3b13619fa8206e9b4fa2054294c520f05ed890
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766342"
 ---
 # <a name="ssis-toolbox"></a>Boîte à outils SSIS
   Tous les composants installés sur l’ordinateur local, y compris les composants tiers générés pour SQL Server 2008 et 2008 R2, apparaissent maintenant automatiquement dans la nouvelle **boîte à outils SSIS**. Lorsque vous installez des composants additionnels, cliquez avec le bouton droit dans la boîte à outils, puis cliquez sur **Boîte à outils Actualiser** pour ajouter les composants.  

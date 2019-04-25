@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8fb6b68cbb30e9bbf19f854cf1dd1e7e0dd19d25
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58394437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768041"
 ---
 # <a name="import-an-integration-services-project"></a>Importer un projet Integration Services
   Utilisez [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]**l’Assistant Importation de projet** pour créer un projet à partir d’un fichier existant de déploiement (.ispac) ou d’un projet déployé sur le catalogue Integration Services. Cette fonctionnalité est particulièrement utile lorsque vous n'avez pas la copie originale du projet, mais que vous voulez en créer un à partir d'un fichier .ispac ou d'un catalogue SSISDB.  

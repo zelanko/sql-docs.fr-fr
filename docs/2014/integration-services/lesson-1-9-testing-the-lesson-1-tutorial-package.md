@@ -1,5 +1,5 @@
 ---
-title: 'Étape 9 : Test du Package de didacticiel de la leçon 1 | Microsoft Docs'
+title: 'Étape 9 : Test du Package de didacticiel de la leçon 1 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767605"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Étape 9 : Test de la leçon 1 du Package du didacticiel
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Étape 9 : Test de la leçon 1 du Package du didacticiel
   Au cours de cette leçon, vous allez effectuer les tâches suivantes :  
   
 -   création d'un nouveau projet [!INCLUDE[ssIS](../includes/ssis-md.md)] ;  

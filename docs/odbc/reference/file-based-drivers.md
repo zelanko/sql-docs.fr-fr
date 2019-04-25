@@ -16,14 +16,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45d9203a08b9c70809e81fb3d9cf84a521017068
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47722957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628597"
 ---
 # <a name="file-based-drivers"></a>Pilotes basés sur des fichiers
-Pilotes basés sur le fichier sont utilisés avec des sources de données comme dBASE qui ne fournissent pas d’un moteur de base de données autonome pour le pilote à utiliser. Ces pilotes accéder directement aux données physiques et doivent implémenter un moteur de base de données pour traiter les instructions SQL. Comme une pratique standard, les moteurs de base de données dans les pilotes basés sur fichier implémentent le sous-ensemble de ODBC SQL définie par le niveau de conformité minimale SQL ; Pour obtenir la liste des instructions SQL dans ce niveau de conformité, consultez [annexe c : SQL grammaire](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+Pilotes basés sur le fichier sont utilisés avec des sources de données comme dBASE qui ne fournissent pas d’un moteur de base de données autonome pour le pilote à utiliser. Ces pilotes accéder directement aux données physiques et doivent implémenter un moteur de base de données pour traiter les instructions SQL. Comme une pratique standard, les moteurs de base de données dans les pilotes basés sur fichier implémentent le sous-ensemble de ODBC SQL définie par le niveau de conformité minimale SQL ; Pour obtenir la liste des instructions SQL dans ce niveau de conformité, consultez [annexe c : Grammaire SQL](../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  Dans les pilotes basés sur SGBD et fichier de comparaisons, pilotes basés sur le fichier sont plus difficile à écrire en raison du composant du moteur de base de données, moins compliqué à configurer, car aucune autre pièce réseau et moins puissants, car peu de gens ont le temps d’écriture de base de données moteurs aussi puissantes que celles générées par des sociétés de la base de données.  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0f278f5d0d036bac02e53263acc023dcae7d808
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757618"
 ---
 # <a name="connect-to-a-tabular-model-database-ssas"></a>Se connecter à une base de données model tabulaire (SSAS)
   Après avoir généré un modèle tabulaire et l'avoir déployé sur un serveur Analysis Services en mode tabulaire, vous devez définir les autorisations qui le mettent à disposition des applications clientes. Cette rubrique explique comment accorder des autorisations et comment se connecter à une base de données à partir d'applications clientes.  
@@ -102,11 +102,11 @@ ms.locfileid: "52538136"
   
  Lors de l'importation de données, cette erreur Microsoft Excel se produit lorsque vous essayez d'utiliser l'Assistant pour vous connecter à une base de données model tabulaire sur un serveur Analysis Services distant, alors que vous ne disposez pas d'autorisations suffisantes. Pour résoudre cette erreur, vous devez avoir des droits d'accès utilisateur sur la base de données. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un utilisateur l'accès aux données.  
   
- **Une erreur s'est produite lors de la tentative de connexion à la source de données externe. Impossible d’actualiser les connexions suivantes : \<nom du modèle > bac à sable**  
+ **Une erreur s’est produite lors d’une tentative pour établir une connexion à la source de données externe. Impossible d’actualiser les connexions suivantes : \<nom du modèle > bac à sable**  
   
  Sur SharePoint, cette erreur Microsoft Excel se produit lorsque vous tentez une interaction de données, comme un filtrage des données, dans un tableau croisé dynamique qui utilise des données de modèle. L'erreur se produit parce que vous n'avez pas d'autorisations suffisantes sur le serveur Analysis Services distant. Pour résoudre cette erreur, vous devez avoir des droits d'accès utilisateur sur la base de données. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un utilisateur l'accès aux données.  
   
- **Une erreur s'est produite lors de cette opération. Recharger le classeur, puis essayez d’effectuer cette opération à nouveau.**  
+ **Une erreur s’est produite lors de la tentative effectuer cette opération. Recharger le classeur, puis essayez d’effectuer cette opération à nouveau.**  
   
  Sur SharePoint, cette erreur Microsoft Excel se produit lorsque vous tentez une interaction de données, comme un filtrage des données, dans un tableau croisé dynamique qui utilise des données de modèle. L'erreur se produit parce qu'Excel Services n'est pas approuvé par l'instance Analysis Services sur laquelle les données de modèle sont déployées. Pour résoudre cette erreur, accordez l'autorisation administrative Excel Services sur l'instance Analysis Services. Reportez-vous aux instructions fournies plus haut dans cette rubrique pour accorder à un administrateur les autorisations. Si l'erreur persiste, relancez le pool d'applications Excel Services.  
   

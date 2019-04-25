@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41b44df5fd990927c7b5a2e2a71698086a2bce61
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510626"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Suspendre le traitement des rapports et des abonnements
   Vous ne pouvez pas suspendre directement un rapport ou un abonnement. Cependant, vous pouvez bloquer le traitement du rapport et de l'abonnement avant le démarrage du processus ou lorsqu'une connexion à une source de données est établie. Vous pouvez également empêcher le traitement d'un rapport ou d'un abonnement en le rendant inaccessible aux utilisateurs.  

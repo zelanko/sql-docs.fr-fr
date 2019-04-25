@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_broker_forwarded_messages (Transact-SQL) | Microsoft Docs
+title: sys.dm_broker_forwarded_messages (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ce05635464cc9b02e419c4f0a5b162a14042d51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759898"
 ---
 # <a name="sysdmbrokerforwardedmessages-transact-sql"></a>sys.dm_broker_forwarded_messages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47633297"
 |**time_consumed**|**Int**|Durée totale d'activité du message. Chaque fois que le message est transféré, cette valeur est augmentée du temps de transfert correspondant. Cette colonne n'accepte pas la valeur NULL.|  
 |**message_id**|**uniqueidentifier**|ID du message. Accepte la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0850fb7b6be85f8052781ca70f97477d5cb3e403
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743305"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>Leçon 5. (Facultatif) Chiffrer votre base de données avec TDE
   En tant qu'étape facultative, chiffrez la base de données créée. Le chiffrement transparent des données (TDE, Transparent Data Encryption) effectue le chiffrement et le déchiffrement des E/S en temps réel des fichiers de données et des fichiers journaux. Le type de chiffrement utilise une clé de chiffrement de base de données (DEK), stockée dans l'enregistrement de démarrage de base de données pour être disponible pendant la récupération. Pour plus d’informations, consultez [Transparent Data Encryption &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) et [déplacer une base de données protégé par chiffrement transparent des données vers un autre serveur SQL](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
@@ -92,6 +92,6 @@ GO
   
  **Leçon suivante :**  
   
- [Leçon 6 : Migrer une base de données d’une machine source locale vers une machine de destination dans Microsoft Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [Leçon 6 : Migrer une base de données à partir d’une source de l’ordinateur local vers un ordinateur de destination dans Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

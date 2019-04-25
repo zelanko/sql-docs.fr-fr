@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 065cec0c70d0b98131dc4cdc5b477b11115091f8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757648"
 ---
 # <a name="add-a-table-ssas-tabular"></a>Ajouter une table (SSAS Tabulaire)
   Cette rubrique explique comment ajouter une table à partir d'une source de données dans laquelle vous avez précédemment importé des données dans votre modèle. Pour ajouter une table à partir de la même source de données, vous pouvez utiliser la connexion à la source de données existante. Il est recommandé d'utiliser toujours une connexion unique lorsque vous importez plusieurs tables à partir d'une source de données unique.  
@@ -40,7 +40,7 @@ ms.locfileid: "48146509"
 >  Lorsque vous importez plusieurs tables simultanément à partir d'une seule source de données, les relations entre ces tables à la source sont automatiquement créées dans le modèle. Si vous ajoutez une table ultérieurement, toutefois, vous devrez peut-être créer manuellement des relations dans le modèle entre les tables récemment ajoutées et les tables précédemment importées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importer des données &#40;SSAS tabulaire&#41;](../import-data-ssas-tabular.md)   
- [Supprimer une Table &#40;SSAS tabulaire&#41;](delete-a-table-ssas-tabular.md)  
+ [Importer des données &#40;SSAS Tabulaire&#41;](../import-data-ssas-tabular.md)   
+ [Supprimer une table &#40;SSAS Tabulaire&#41;](delete-a-table-ssas-tabular.md)  
   
   

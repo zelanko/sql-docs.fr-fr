@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639961"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Moniteur de charge dans Parallel Data Warehouse
 Moniteur actif et récent [dwloader](dwloader.md) charge à l’aide de la Console d’administration Analytique Platform System (APS) ou Parallel Data Warehouse (PDW) [vues système](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 

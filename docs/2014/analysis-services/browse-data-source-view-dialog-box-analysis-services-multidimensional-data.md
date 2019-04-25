@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14fcc55e8e50892ce2aa54326f9f82a195aa66e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640171"
 ---
 # <a name="browse-data-source-view-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Parcourir la vue des sources de données (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue Parcourir la vue des sources de données affiche un diagramme simple de la vue de la source de données sélectionnée. Le nom de la vue de source de données apparaît en tant que titre de la boîte de dialogue.  

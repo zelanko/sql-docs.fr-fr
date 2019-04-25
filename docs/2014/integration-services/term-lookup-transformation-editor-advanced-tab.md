@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c8f5dd315e7a6a7122768d4ebc893d8d7ad5ec90
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766273"
 ---
 # <a name="term-lookup-transformation-editor-advanced-tab"></a>Éditeur de transformation de recherche de terme (onglet Avancé).
   Utilisez l’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation de recherche de terme** pour spécifier si la recherche doit respecter la casse.  
@@ -29,7 +29,7 @@ ms.locfileid: "58387187"
   
 ## <a name="options"></a>Options  
  **Utiliser la recherche de terme respectant la casse**  
- Indique si la recherche respecte la casse. La valeur par défaut est `False`.  
+ Indique si la recherche respecte la casse. La valeur par défaut est `False`.  
   
  **Configurer la sortie d’erreur**  
  Utilisez la boîte de dialogue [Configurer l’affichage des erreurs](../../2014/integration-services/configure-error-output.md) pour spécifier les options de gestion des erreurs dans les lignes qui provoquent des erreurs.  

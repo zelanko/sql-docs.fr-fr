@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f577f7798da2ba7b7ee4259ecc98994f713cfc5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762344"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Créer un instantané de base de données (Transact-SQL)
   Pour créer un instantané de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous devez impérativement utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)]+. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ne prend pas en charge la création d'instantanés de base de données.  
@@ -28,7 +28,7 @@ ms.locfileid: "52768331"
   
      [Sécurité](#Security)  
   
-     [Recommandation : Dénomination des instantanés de base de données](#Naming)  
+     [Bonne pratique : Dénomination des instantanés de base de données](#Naming)  
   
 -   **Pour créer une base de données de capture instantanée, à l’aide de :**  [Transact-SQL](#TsqlProcedure)  
   
@@ -51,13 +51,13 @@ ms.locfileid: "52768331"
 ###  <a name="Recommendations"></a> Recommandations  
  Cette section présente les recommandations suivantes :  
   
--   [Recommandation : Dénomination des instantanés de base de données](#Naming)  
+-   [Bonne pratique : Dénomination des instantanés de base de données](#Naming)  
   
--   [Recommandation : Limitation du nombre de captures instantanées de base de données](#Limiting_Number)  
+-   [Bonne pratique : Limitation du nombre d’instantanés de base de données](#Limiting_Number)  
   
--   [Recommandation : Connexions client à un instantané de base de données](#Client_Connections)  
+-   [Bonne pratique : Connexions clientes à un instantané de base de données](#Client_Connections)  
   
-####  <a name="Naming"></a> Recommandation : Dénomination des instantanés de base de données  
+####  <a name="Naming"></a> Bonne pratique : Dénomination des instantanés de base de données  
  Avant de créer des instantanés, il est important de déterminer comment ils seront nommés. Chaque instantané de base de données nécessite un nom de base de données unique. Pour faciliter l'administration, le nom de l'instantané peut intégrer des informations identifiant la base de données, telles que :  
   
 -   Nom de la base de données source.  
@@ -82,18 +82,18 @@ AdventureWorks_snapshot_noon
 AdventureWorks_snapshot_evening  
 ```  
   
-####  <a name="Limiting_Number"></a> Recommandation : Limitation du nombre d'instantanés de base de données  
+####  <a name="Limiting_Number"></a> Bonne pratique : Limitation du nombre de captures instantanées de base de données  
  La création d'une série d'instantanés dans le temps fournit des instantanés consécutifs de la base de données source. Chaque instantané est conservé jusqu'à ce qu'il soit explicitement supprimé. Chaque instantané continuant à grandir au fur et à mesure que les pages d'origine sont mises à jour, vous voudrez peut-être conserver de l'espace disque en supprimant un instantané plus ancien après en avoir créé un nouveau.  
   
 > [!NOTE]  
 >  Si vous souhaitez revenir à un instantané de base de données, vous devez supprimer tous les autres instantanés de cette base de données.  
   
-####  <a name="Client_Connections"></a> Recommandation : Connexions clientes à un instantané de base de données  
+####  <a name="Client_Connections"></a> Bonne pratique : Connexions client à un instantané de base de données  
  Pour utiliser un instantané de base de données, les clients ont besoin de savoir où il se trouve. Les utilisateurs peuvent lire un instantané de base de données pendant qu'un autre instantané est créé ou supprimé. Cependant, lorsque vous substituez un nouvel instantané de base de données à un instantané existant, vous devez rediriger les clients vers le nouvel instantané. Les utilisateurs peuvent se connecter manuellement à un instantané de base de données à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cependant, pour prendre en charge un environnement de production, vous devez créer une solution de programmation qui dirige de façon transparente les clients écrivant des rapports vers le dernier instantané de la base de données.  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Tout utilisateur ayant la possibilité de créer une base de données peut également créer un instantané de base de données. Toutefois, pour créer un instantané d’une base de données miroir, vous devez être membre du rôle serveur fixe **sysadmin** .  
   
 ##  <a name="TsqlProcedure"></a> Comment créer un instantané de base de données (en utilisant Transact-SQL)  
@@ -136,7 +136,7 @@ AdventureWorks_snapshot_evening
   
 -   A. [Création d'un instantané sur la base de données AdventureWorks](#Creating_on_AW)  
   
--   b. [Création d'un instantané sur la base de données Sales (Ventes)](#Creating_on_Sales)  
+-   B. [Création d'un instantané sur la base de données Sales (Ventes)](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> A. Création d'un instantané sur la base de données AdventureWorks  
  Cet exemple montre comment créer un instantané de base de données sur la base de données `AdventureWorks` . Le nom de l'instantané, `AdventureWorks_dbss_1800`, et le nom de son fichier partiellement alloué, `AdventureWorks_data_1800.ss`, précisent l'heure de création, 6H00 du soir (18 heures).  

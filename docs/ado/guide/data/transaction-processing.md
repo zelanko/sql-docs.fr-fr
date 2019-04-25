@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ea890e0e2d49781f06f38f606a6c92582dc44d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742228"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472188"
 ---
 # <a name="transaction-processing"></a>Traitement des transactions
 Un *transaction* délimite le début et la fin d’une série d’opérations d’accès aux données exécutée sur une connexion. Selon les fonctionnalités transactionnelles de votre source de données, le **connexion** objet vous permet également de créer et gérer des transactions. Par exemple, si vous utilisez le fournisseur Microsoft OLE DB pour SQL Server pour accéder à une base de données sur Microsoft SQL Server, vous pouvez créer plusieurs transactions imbriquées pour les commandes que vous exécutez.  
@@ -41,7 +41,7 @@ Un *transaction* délimite le début et la fin d’une série d’opérations d�
   
  En fonction le **connexion** l’objet [attributs](../../../ado/reference/ado-api/attributes-property-ado.md) propriété, en appelant le **CommitTrans** ou **RollbackTrans** peut (méthode) Démarrer automatiquement une nouvelle transaction. Si le **attributs** propriété est définie sur **adXactCommitRetaining**, le fournisseur lance automatiquement une nouvelle transaction après une **CommitTrans** appeler. Si le **attributs** propriété est définie sur **adXactAbortRetaining**, le fournisseur lance automatiquement une nouvelle transaction après une **RollbackTrans** appeler.  
   
-## <a name="transaction-isolation-level"></a>Niveau d’Isolation de transaction  
+## <a name="transaction-isolation-level"></a>Niveau d’isolation de la transaction  
  Utilisez le **IsolationLevel** propriété à définir le niveau d’isolement d’une transaction sur une **connexion** objet. Le paramètre n’entre pas en vigueur jusqu'à ce que la prochaine fois que vous appelez le [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) (méthode). Si le niveau d’isolation demandé n’est pas disponible, le fournisseur peut renvoyer le niveau d’isolation supérieur suivant. Reportez-vous à la **IsolationLevel** propriété dans la référence du programmeur ADO pour plus d’informations sur les valeurs valides.  
   
 ## <a name="nested-transactions"></a>Transactions imbriquées  

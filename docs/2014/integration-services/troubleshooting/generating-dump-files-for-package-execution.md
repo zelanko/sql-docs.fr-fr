@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8022532dcb038b7c9a5839acb0541337ac3d5001
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766146"
 ---
 # <a name="generating-dump-files-for-package-execution"></a>Générer de fichiers de vidage pour l'exécution des packages
   Dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], vous pouvez créer des fichiers de vidage du débogage qui fournissent des informations sur l’exécution d’un package. Les informations contenues dans ces fichiers peuvent vous aider à résoudre des problèmes d'exécution du package.  
@@ -48,9 +48,9 @@ ms.locfileid: "58379217"
   
 |Type d'informations|Description|Exemple|  
 |-------------------------|-----------------|-------------|  
-|Environnement|Version de système d'exploitation, données d'utilisation de la mémoire, ID de processus et nom d'image de processus. Les informations d'environnement se trouvent au début du fichier .tmp.|# Vidage texte SSIS effectué le 13/09/2007 à 13:50:34<br /><br /> # PID 4120<br /><br /> #Nom de l'image [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Exécution sur 2 processeurs amd64 sous WOW64<br /><br /> # Mémoire : 58 % en cours d’utilisation. Physique : 845M / 2044M échange : 2404M / 4095M (dispo/total)|  
+|Environnement|Version de système d'exploitation, données d'utilisation de la mémoire, ID de processus et nom d'image de processus. Les informations d'environnement se trouvent au début du fichier .tmp.|# Vidage texte SSIS effectué le 13/09/2007 à 13:50:34<br /><br /> # PID 4120<br /><br /> #Nom de l'image [C:\Program Files\Microsoft SQL Server\110\DTS\Binn\DTExec.exe]<br /><br /> # OS major=6 minor=0 build=6000<br /><br /> # Exécution sur 2 processeurs amd64 sous WOW64<br /><br /> # Mémoire : 58 % utilisés. Physique : 845M/2044M  Pagination : 2404M/4095M (dispo/total)|  
 |Chemin d'accès et version des bibliothèques de liens dynamiques (DLL)|Chemin d'accès et numéro de version de chaque DLL que le système charge pendant le traitement d'un package.|# Module chargé : c:\bb\Sql\DTS\src\bin\debug\i386\DTExec.exe (10.0.1069.5)<br /><br /> # Module chargé : C:\Windows\SysWOW64\ntdll.dll (6.0.6000.16386)<br /><br /> # Module chargé : C:\Windows\syswow64\kernel32.dll (6.0.6000.16386)|  
-|Messages récents|Messages récents émis par le système. Inclut l'heure, le type, la description et l'ID de thread de chaque message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E : 3]         Date et heure : 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E : 3]         ID de thread : 2368           (ThreadID)<br /><br /> [E : 3]         Nom de l’événement : OnError (EventName)<br /><br /> [E : 3]         Nom de la source :                (SourceName)<br /><br /> [E : 3]         ID de source :                        (SourceID)<br /><br /> [E : 3]         ID d’exécution :                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E : 3]         Description : Le composant est manquant, n'est pas enregistré, ne peut pas être mis à niveau ou des interfaces obligatoires sont manquantes. Informations de contact de ce composant : «  ».|  
+|Messages récents|Messages récents émis par le système. Inclut l'heure, le type, la description et l'ID de thread de chaque message.|[M:1]   Ring buffer entry:              (*pRecord)<br /><br /> [D:2]      <<\<CRingBufferLogging::RingBufferLoggingRecord>>> ( \@ 0282F1A8 )<br /><br /> [E:3]         Horodatage : 2007-09-13 13:50:32.786      (szTimeStamp)<br /><br /> [E:3]         ID du thread : 2368           (ThreadID)<br /><br /> [E:3]         Nom d'événement : OnError                        (EventName)<br /><br /> [E:3]         Nom de la source :                (SourceName)<br /><br /> [E:3]         ID de la source :                        (SourceID)<br /><br /> [E:3]         ID d'exécution :                 (ExecutionGUID)<br /><br /> [E:3]         Data Code: -1073446879              (DataCode)<br /><br /> [E:3]         Description : Le composant est manquant, n'est pas enregistré, ne peut pas être mis à niveau ou des interfaces obligatoires sont manquantes. Informations de contact de ce composant : «  ».|  
   
 ## <a name="related-content"></a>Contenu associé  
  [Exécuter le package, boîte de dialogue](../execute-package-dialog-box.md)  

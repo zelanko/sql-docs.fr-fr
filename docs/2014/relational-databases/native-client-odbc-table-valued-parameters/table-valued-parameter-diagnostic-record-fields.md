@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c87e272b339357a18ef9f9a167672c1df4ed96e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625873"
 ---
 # <a name="table-valued-parameter-diagnostic-record-fields"></a>champs d'enregistrement de diagnostic de paramètre table
   Deux nouveaux champs de diagnostic, SQL_DIAG_SS_TABLE_COLUMN_NUMBER et SQL_DIAG_SS_TABLE_ROW_NUMBER, ont été ajoutés aux enregistrements de diagnostic. Ces champs vous permettent de déterminer les valeurs de colonne de paramètre table qui sont associées à des erreurs et à des avertissements.  

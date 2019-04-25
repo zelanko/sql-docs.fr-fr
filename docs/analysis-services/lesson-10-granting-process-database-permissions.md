@@ -1,5 +1,5 @@
 ---
-title: L’octroi d’autorisations de base de données de processus | Documents Microsoft
+title: Octroi d’autorisations de base de données de processus | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7777d2bb3a69a2f42c5ee25adbc77e0f07a0b3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467750"
 ---
 # <a name="lesson-10---granting-process-database-permissions"></a>Leçon 10 : octroi d’autorisations de base de données processus
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ Dans les tâches de cette rubrique, vous allez définir le rôle de sécurité P
 > Un projet complet pour la leçon 10 est disponible en téléchargeant et en installant les exemples mis à jour. Pour plus d’informations, consultez [Installer les exemples de données et de projets pour le didacticiel sur la modélisation multidimensionnelle Analysis Services](../analysis-services/install-sample-data-and-projects.md).  
   
 ## <a name="see-also"></a>Voir aussi  
-[Rôles et autorisations & #40 ; Analysis Services & #41 ;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+[Rôles et autorisations &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   
   

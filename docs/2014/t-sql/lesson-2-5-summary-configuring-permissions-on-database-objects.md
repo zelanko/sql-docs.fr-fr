@@ -13,18 +13,18 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ca78065f168c96ce5a092050e49e1d4e9f8f3f41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642714"
 ---
-# <a name="summary-configuring-permissions-on-database-objects"></a>Résumé : configuration des autorisations sur des objets de base de données
+# <a name="summary-configuring-permissions-on-database-objects"></a>Résumé : Configuration des autorisations sur des objets de base de données
   Les connexions attribuent aux utilisateurs les autorisations de se connecter à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les utilisateurs sont des connexions qui peuvent accéder à une base de données spécifique. L'instruction GRANT vous permet de donner aux utilisateurs l'autorisation de lire et d'accéder et de modifier les données.  
   
  Une vue est une instruction SELECT unique et apparaît sous la forme d'une table à l'utilisateur. Une procédure stockée correspond à une ou plusieurs instructions [!INCLUDE[tsql](../includes/tsql-md.md)] qui s'exécutent comme un traitement.  
   
 ## <a name="next-lesson-in-tutorial"></a>Leçon suivante du didacticiel  
- [Leçon 3 : Suppression des objets de base de données](lesson-3-1-deleting-database-objects.md)  
+ [Leçon 3 : Suppression des objets de base de données](lesson-3-1-deleting-database-objects.md)  
   
   

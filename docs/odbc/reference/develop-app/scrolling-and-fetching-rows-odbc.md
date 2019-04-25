@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 884c798e14964fbcaaf3ca9ba6656f4d62738fe8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445979"
 ---
 # <a name="scrolling-and-fetching-rows-odbc"></a>Défilement et extraction de lignes (ODBC)
 Lorsque vous utilisez un curseur de défilement, les applications appellent **SQLFetchScroll** pour positionner les curseur et extraire les lignes. **SQLFetchScroll** prend en charge le défilement relatif (relative suivant et avant *n* lignes), défilement absolu (prénom et de ligne *n*) et le positionnement par signet. Le *FetchOrientation* et *FetchOffset* arguments dans **SQLFetchScroll** spécifier quel ensemble de lignes à extraire, comme indiqué dans les diagrammes suivants.  
@@ -41,4 +41,4 @@ Lorsque vous utilisez un curseur de défilement, les applications appellent **SQ
  Une fois que l’ensemble de lignes a été récupérée, l’application peut appeler **SQLSetPos** pour positionner à une ligne particulière dans les lignes d’ensemble de lignes ou de l’actualisation de l’ensemble de lignes. Pour plus d’informations sur l’utilisation de **SQLSetPos**, consultez [la mise à jour des données avec SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
 > [!NOTE]  
->  Le défilement est pris en charge dans ODBC 2. *x* pilotes par **SQLExtendedFetch**. Pour plus d’informations, consultez [curseurs de bloc, curseurs avec défilement et compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)dans la section annexe g : pilote instructions pour la compatibilité descendante.
+>  Le défilement est pris en charge dans ODBC 2. *x* pilotes par **SQLExtendedFetch**. Pour plus d’informations, consultez [curseurs de bloc, curseurs avec défilement et compatibilité descendante](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)dans g : annexe Instructions de pilote pour la compatibilité descendante.

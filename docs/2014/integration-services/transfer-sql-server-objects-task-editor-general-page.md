@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa17cef1fddd5d131424dc645763683d59b75325
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766202"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>Éditeur de tâche de transfert d'objets SQL (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de transfert d'objets SQL** pour donner un nom et une description à la tâche de transfert d'objets [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d'informations sur cette tâche, consultez [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  

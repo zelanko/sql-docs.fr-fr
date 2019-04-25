@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19bdb9c165b5bfa6c8021fe596d9591e68d517ce
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469742"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Leçon 6-2 : définition de jeux nommés
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -133,7 +133,7 @@ Dans les tâches de cette rubrique, vous allez définir deux jeux nommés : un j
     ![Volet filtre contenant deux nommées définit](../analysis-services/media/l6-named-set-05.gif "définit volet filtre contenant deux nommées")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 7 : Définition des indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+[Leçon 7 : Définition des indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Calculs](../analysis-services/multidimensional-models-olap-logical-cube-objects/calculations.md)  

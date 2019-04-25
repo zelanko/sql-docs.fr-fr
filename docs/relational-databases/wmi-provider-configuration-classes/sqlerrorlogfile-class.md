@@ -12,11 +12,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 2794e4f59b6c898b1fd956c0f9390ba9bbbd439e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62515474"
 ---
 # <a name="sqlerrorlogfile-class"></a>Classe SqlErrorLogFile
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ class SQLErrorLogFile
   
 |||  
 |-|-|  
-|ArchiveNumber|Type de données : **uint32**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Numéro d'archive pour le fichier journal.|  
-|InstanceName|Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> <br /><br /> Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le fichier journal réside.|  
-|LastModified|Type de données : **datetime**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Date de la dernière modification du fichier journal.|  
-|LogFileSize|Type de données : **uint32**<br /><br /> Type d'accès : Lecture seule<br /><br /> <br /><br /> Taille du fichier journal, en octets.|  
-|Nom   |Type de données : **chaîne**<br /><br /> Type d'accès : Lecture seule<br /><br /> Qualificateurs : Clé<br /><br /> <br /><br /> Nom du fichier journal.|  
+|ArchiveNumber|Type de données : **uint32**<br /><br /> Type d’accès : Lecture seule<br /><br /> <br /><br /> Numéro d'archive pour le fichier journal.|  
+|InstanceName|Type de données : **chaîne**<br /><br /> Type d’accès : Lecture seule<br /><br /> Qualificateurs : Touche<br /><br /> <br /><br /> Nom de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] où le fichier journal réside.|  
+|LastModified|Type de données : **datetime**<br /><br /> Type d’accès : Lecture seule<br /><br /> <br /><br /> Date de la dernière modification du fichier journal.|  
+|LogFileSize|Type de données : **uint32**<br /><br /> Type d’accès : Lecture seule<br /><br /> <br /><br /> Taille du fichier journal, en octets.|  
+|Nom|Type de données : **chaîne**<br /><br /> Type d’accès : Lecture seule<br /><br /> Qualificateurs : Touche<br /><br /> <br /><br /> Nom du fichier journal.|  
   
 ## <a name="remarks"></a>Notes  
   

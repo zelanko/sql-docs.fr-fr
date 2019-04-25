@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : Créer des mesures | Microsoft Docs'
+title: 'Leçon 6 : Créer des mesures | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05855af1bf6809c6977b22bfdb3915e4e6dbbe03
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469804"
 ---
-# <a name="lesson-6-create-measures"></a>Leçon 6 : Créer des mesures
+# <a name="lesson-6-create-measures"></a>Leçon 6 : Créer des mesures
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dans cette leçon, vous allez créer des mesures à inclure dans votre modèle. Comme pour les colonnes calculées que vous avez créé dans la leçon précédente, une mesure est un calcul créé à l’aide d’une formule DAX. Toutefois, contrairement aux colonnes calculées, les mesures sont évaluées en fonction d'un *filtre*sélectionné par l'utilisateur ; par exemple, une colonne ou un segment particulier ajouté au champ des étiquettes de ligne dans un tableau croisé dynamique. Une valeur pour chaque cellule dans le filtre est ensuite calculée par la mesure appliquée. Les mesures sont des calculs puissants et flexibles que vous souhaitez inclure dans quasiment tous les modèles tabulaires pour effectuer des calculs dynamiques sur des données numériques. Pour plus d’informations, consultez [mesures](../analysis-services/tabular-models/measures-ssas-tabular.md).  
@@ -27,10 +27,10 @@ Vous pouvez créer une mesure en cliquant sur une cellule vide dans la grille de
   
 Dans cette leçon, vous allez créer des mesures en entrant une formule DAX dans la barre de formule et en utilisant la fonction de somme automatique.  
   
-Durée estimée pour effectuer cette leçon : **30 minutes**  
+Durée estimée pour effectuer cette leçon : **30 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
-Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 5 : créer des colonnes calculées](../analysis-services/lesson-5-create-calculated-columns.md).  
+Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 5 : Créer des colonnes calculées](../analysis-services/lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Créer des mesures  
   
@@ -48,7 +48,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
     Notez que la cellule en haut à gauche contient maintenant une mesure nommée **DaysCurrentQuarterToDate**, suivie du résultat, **92**.
     
-      ![en tant que-tabulaire-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
+      ![as-tabular-lesson6-newmeasure](../analysis-services/media/as-tabular-lesson6-newmeasure.png) 
     
     Contrairement aux colonnes calculées, avec les formules de mesure, vous pouvez taper le nom de mesure, suivi par une virgule, suivie de l’expression de formule.
 
@@ -75,7 +75,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
     La fonction de somme automatique crée automatiquement une mesure pour la colonne sélectionnée à l'aide de la formule de regroupement standard DistinctCount.  
     
-       ![en tant que-tabulaire-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
+       ![as-tabular-lesson6-newmeasure2](../analysis-services/media/as-tabular-lesson6-newmeasure2.png)
   
 4.  Dans la grille de mesures, cliquez sur la nouvelle mesure, puis, dans le **propriétés** fenêtre, dans **nom de la mesure**, renommez la mesure en **InternetDistinctCountSalesOrder**. 
  
@@ -86,14 +86,14 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
     |Nom de la mesure|colonne|Somme automatique (∑)|Formule|  
     |----------------|----------|-----------------|-----------|  
-    |InternetOrderLinesCount|SalesOrderLineNumber|Compter|=COUNTA([SalesOrderLineNumber])|  
-    |InternetTotalUnits|OrderQuantity|SUM|=SUM([OrderQuantity])|  
-    |InternetTotalDiscountAmount|DiscountAmount|SUM|=SUM([DiscountAmount])|  
-    |InternetTotalProductCost|TotalProductCost|SUM|=SUM([TotalProductCost])|  
-    |InternetTotalSales|SalesAmount|SUM|=SUM([SalesAmount])|  
-    |InternetTotalMargin|Margin|SUM|=SUM([Margin])|  
-    |InternetTotalTaxAmt|TaxAmt|SUM|=SUM([TaxAmt])|  
-    |InternetTotalFreight|Freight|SUM|=SUM([Freight])|  
+    |InternetOrderLinesCount|SalesOrderLineNumber|Count|=COUNTA([SalesOrderLineNumber])|  
+    |InternetTotalUnits|OrderQuantity|Sum|=SUM([OrderQuantity])|  
+    |InternetTotalDiscountAmount|DiscountAmount|Sum|=SUM([DiscountAmount])|  
+    |InternetTotalProductCost|TotalProductCost|Sum|=SUM([TotalProductCost])|  
+    |InternetTotalSales|SalesAmount|Sum|=SUM([SalesAmount])|  
+    |InternetTotalMargin|Margin|Sum|=SUM([Margin])|  
+    |InternetTotalTaxAmt|TaxAmt|Sum|=SUM([TaxAmt])|  
+    |InternetTotalFreight|Freight|Sum|=SUM([Freight])|  
   
 2.  En cliquant sur une cellule vide dans la grille de mesures et à l’aide de la barre de formule, créez et nommez les mesures suivantes dans l’ordre :  
   
@@ -124,6 +124,6 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
 Les mesures créées pour la table FactInternetSales peuvent être utilisées pour analyser les données financières critiques telles que les ventes, les coûts et marge pour les éléments définis par le filtre sélectionné d’utilisateur.  
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
-Accédez à la leçon suivante : [leçon 7 : créer des indicateurs de Performance clés](../analysis-services/lesson-7-create-key-performance-indicators.md).  
+Accédez à la leçon suivante : [Leçon 7 : Créer des indicateurs de Performance clés](../analysis-services/lesson-7-create-key-performance-indicators.md).  
 
   

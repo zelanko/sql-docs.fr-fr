@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16376e7c1be1e22968846e7cbfbfc361fa8bb16e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510318"
 ---
 # <a name="save-as"></a>Enregistrer sous
   Utilisez cette boîte de dialogue pour enregistrer une instance de l'élément en cours à l'emplacement spécifié et dans un format de fichier spécifique. Pour afficher cette boîte de dialogue, cliquez sur **enregistrer**  *\<fichier >* **comme** sur le **fichier** menu (où  *\<fichier >* est le nom de l’élément actuel), ou appuyez sur ALT + F, A dans l’éditeur de Code.  

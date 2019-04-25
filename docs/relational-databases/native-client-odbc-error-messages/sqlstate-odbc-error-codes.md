@@ -19,11 +19,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 18f7ebab7d6463c419d31464c1343d6fd03d4cec
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62738816"
 ---
 # <a name="sqlstate-odbc-error-codes"></a>SQLSTATE (codes d'erreur ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "51672978"
   
  Pour plus d'informations sur les codes d'erreur d'état, consultez les rubriques suivantes :  
   
--   [Annexe A : Codes d’erreur ODBC](https://go.microsoft.com/fwlink/?LinkId=89356)  
+-   [Annexe a : Codes d’erreur ODBC](https://go.microsoft.com/fwlink/?LinkId=89356)  
   
 -   [Mappages de SQLSTATE](https://go.microsoft.com/fwlink/?LinkId=89355)  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d43432a53eb2321c3707f4034e244752a5c368ba
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468644"
 ---
 # <a name="lesson-10-create-partitions"></a>Leçon 10 : Créer des partitions
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -141,7 +141,7 @@ Dans le Gestionnaire de Partition, notez que le **dernier traitement** colonne p
   
     La boîte de dialogue **Traitement des données** apparaît et affiche les détails du traitement pour chaque partition. Notez qu'un nombre de lignes différent est transféré pour chaque partition. Cela est dû au fait que chaque partition contient uniquement les lignes de l'année spécifiée dans la clause WHERE dans l'instruction SQL. Quand le traitement est terminé, continuez et fermez la boîte de dialogue Traitement des données.  
   
-    ![en tant que-tabulaire-lesson10-processus-complete](../analysis-services/media/as-tabular-lesson10-process-complete.png)
+    ![as-tabular-lesson10-process-complete](../analysis-services/media/as-tabular-lesson10-process-complete.png)
   
  ## <a name="whats-next"></a>Quelle est l’étape suivante ?
 Accédez à la leçon suivante : [Leçon 11 : Créer des rôles](../analysis-services/lesson-11-create-roles.md). 

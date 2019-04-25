@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760828"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportation d’un inventaire Access (AccessToSQL)
 Si vous avez plusieurs bases de données Access et que vous ne savez pas lesquels pour migrer vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez exporter un inventaire de toutes les bases de données Access dans un projet. Vous pouvez ensuite consulter et interroger les métadonnées d’inventaire pour déterminer les bases de données et les objets au sein de ces bases de données à migrer. Cet inventaire vous permet de rapidement trouver les réponses aux questions, telles que les éléments suivants :  
@@ -91,7 +91,7 @@ Pour plus d’informations sur la création de projets, consultez [Creating and 
   
     Vous pouvez utiliser la **sélectionner tout** et **Effacer tout** boutons en haut de la liste pour sélectionner ou effacer toutes les bases de données. Vous pouvez également maintenez la touche CTRL enfoncée pour sélectionner plusieurs lignes, ou maintenez la touche MAJ ENFONCÉE pour sélectionner une plage de lignes.  
   
-7.  Cliquez sur **Suivant**.  
+7.  Cliquer sur **Suivant**.  
   
 8.  Dans la page vérifier, cliquez sur **Terminer**.  
   
@@ -107,7 +107,7 @@ Pour plus d’informations sur l’ajout de bases de données à des projets, co
   
     -   Si vous vous connectez à l’instance par défaut sur un autre ordinateur, entrez le nom de l’ordinateur.  
   
-    -   Si vous vous connectez à une instance nommée, entrez le nom d’ordinateur, une barre oblique inverse et le nom d’instance. Par exemple : MyServer\MyInstance.  
+    -   Si vous vous connectez à une instance nommée, entrez le nom d’ordinateur, une barre oblique inverse et le nom d’instance. Exemple : MyServer\MyInstance.  
   
 3.  Dans le **base de données** , entrez le nom de la base de données cible pour les métadonnées exportées.  
   

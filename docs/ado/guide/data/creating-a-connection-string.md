@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 455fe1c3f5a19b498730909f1c56bf98b03ae51b
-ms.sourcegitcommit: e9fcd10c7eb87a4f09ac2d8f7647018e83a5f5c5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57972768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472645"
 ---
 # <a name="creating-a-connection-string"></a>Création d’une chaîne de connexion
 Une chaîne de connexion se compose d’une liste de paires de valeur d’argument (autrement dit, les paramètres), séparée par des points-virgules. Exemple :  

@@ -19,11 +19,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762026"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurer une connexion à la base de données du serveur de rapports (Gestionnaire de configuration de SSRS)
   Chaque instance de serveur de rapports requiert une connexion à la base de données de serveur de rapports qui stocke les rapports, les modèles de rapport, les sources de données partagées, les ressources et les métadonnées gérées par le serveur. La connexion initiale peut être créée lors de l'installation d'un serveur de rapports si vous installez la configuration par défaut. Dans la plupart des cas, vous utilisez l'outil de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour configurer la connexion une fois l'installation terminée. Vous pouvez modifier la connexion à tout moment afin de changer de type de compte ou de redéfinir les informations d'identification. Pour obtenir des instructions détaillées sur la création de la base de données et la configuration de la connexion, consultez [Créer une base de données du serveur de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "48202650"
   
 -   Modification du compte ou du mot de passe de l'utilisateur permettant d'établir la connexion à la base de données. Vous devez uniquement mettre à jour la connexion de base de données lorsque les informations du compte sont stockées dans le fichier RSReportServer.config. Si vous utilisez le compte de service pour la connexion (qui utilise la sécurité intégrée de Windows comme type d'informations d'identification), le mot de passe n'est pas stocké, ce qui évite de mettre à jour les informations de connexion. Pour plus d’informations sur la modification des comptes, consultez [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).  
   
--   Configuration d'un déploiement avec montée en puissance parallèle de serveurs de rapports La configuration d'un déploiement avec montée en puissance parallèle nécessite la création de plusieurs connexions à une base de données de serveur de rapports. Pour plus d’informations sur cette opération à plusieurs étapes, consultez [Configurer un déploiement avec montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
+-   Configuration d'un déploiement avec montée en puissance parallèle de serveurs de rapports La configuration d'un déploiement avec montée en puissance parallèle nécessite la création de plusieurs connexions à une base de données de serveur de rapports. Pour plus d’informations sur cette opération à plusieurs étapes, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="how-reporting-services-connects-to-the-database-engine"></a>Comment Reporting Services se connecte au moteur de base de données  
  L'accès du serveur de rapports à une base de données de serveur de rapports dépend des informations d'identification et de connexion, ainsi que de la validité des clés de chiffrement de l'instance de serveur de rapports qui utilise cette base de données. Il est nécessaire de recourir à des clés de chiffrement valides pour stocker et extraire des données sensibles. Des clés de chiffrement sont créées automatiquement lors de la première configuration de la base de données. Une fois les clés créées, vous devez les mettre à jour si vous changez l'identité du service Report Server. Pour plus d’informations sur l’utilisation des clés de chiffrement, consultez [Configurer et gérer des clés de chiffrement &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "48202650"
   
 -   Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] hébergeant la base de données du serveur de rapports.  
   
--   Nom de la base de données du serveur de rapports. Lorsque vous créez une connexion pour la première fois, vous pouvez créer une nouvelle base de données de serveur de rapports ou sélectionner une base de données existante. Pour plus d’informations, consultez [créer une base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
+-   Nom de la base de données du serveur de rapports. Lorsque vous créez une connexion pour la première fois, vous pouvez créer une nouvelle base de données de serveur de rapports ou sélectionner une base de données existante. Pour plus d’informations, consultez [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md).  
   
 -   Type d'informations d'identification. Vous pouvez utiliser les comptes de service, un compte de domaine Windows ou une connexion de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -123,7 +123,7 @@ ms.locfileid: "48202650"
  Vous pouvez configurer plusieurs serveurs de rapports de manière à utiliser la même base de données de serveur de rapports. Cette configuration de déploiement est appelée déploiement avec montée en puissance parallèle. Cette configuration est une condition préalable requise si vous voulez exécuter plusieurs serveurs de rapports dans un cluster de serveurs. Toutefois, vous pouvez aussi utiliser cette configuration pour segmenter les applications de service ou pour tester l'installation et les paramètres d'une nouvelle instance de serveur de rapports afin de la comparer à l'installation existante d'un serveur de rapports. Pour plus d’informations, consultez [Configurer un déploiement par montée en puissance parallèle de serveurs de rapports en mode natif &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une base de données de serveur de rapports &#40;Gestionnaire de Configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Créer une base de données du serveur de rapports &#40;Gestionnaire de configuration de SSRS&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Gérer un serveur de rapports Reporting Services (SSRS) en mode natif](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Configurer le compte de service Report Server &#40;Gestionnaire de configuration de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

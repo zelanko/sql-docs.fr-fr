@@ -1,5 +1,5 @@
 ---
-title: Colonnes de Structure d’exploration de données | Documents Microsoft
+title: Colonnes de Structure d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1cbdcd14127cdf45eb35dd7a24652be4f7c4d613
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509971"
 ---
 # <a name="mining-structure-columns"></a>Colonnes de structure d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,25 +27,25 @@ ms.locfileid: "34015156"
   
  La définition d'une colonne de structure d'exploration de données doit contenir les informations suivantes :  
   
--   **ID**: nom unique de la colonne, souvent identique au nom. Vous ne pouvez pas le modifier après avoir créé la structure d'exploration de données, tandis que le nom peut être modifié.  
+-   **ID** : Le nom unique de la colonne, souvent le même que le nom. Vous ne pouvez pas le modifier après avoir créé la structure d'exploration de données, tandis que le nom peut être modifié.  
   
--   **Nom**: nom ou alias de la colonne.  
+-   **Nom**: Un nom ou un alias pour la colonne.  
   
--   **Contenu**: énumération qui décrit si les données sont discrètes ou continues.  
+-   **Contenu**: Énumération qui décrit si les données sont discrètes ou continues.  
   
--   **Type**: énumération qui indique le type de données général.  
+-   **Type** : Énumération qui indique le type de données général.  
   
--   **Distribution**: énumération qui décrit la distribution attendue des valeurs. Une distribution est incluse si la colonne est continue.  
+-   **Distribution**: Énumération qui décrit la distribution attendue des valeurs. Une distribution est incluse si la colonne est continue.  
   
--   **Indicateurs de modélisation**: énumération qui indique comment gérer des valeurs manquantes, etc. Les indicateurs de modélisation peuvent également être définis sur le modèle d'exploration de données, mais les indicateurs de modèle sont différents des indicateurs utilisés sur les colonnes de structure.  
+-   **Indicateurs de modélisation**: Énumération qui indique comment gérer les valeurs manquantes et ainsi de suite. Les indicateurs de modélisation peuvent également être définis sur le modèle d'exploration de données, mais les indicateurs de modèle sont différents des indicateurs utilisés sur les colonnes de structure.  
   
--   **Liaisons**: propriétés qui spécifient les données sources.  
+-   **Liaisons**: Propriétés qui spécifient la source de données.  
   
  Les algorithmes de tiers peuvent également inclure des propriétés personnalisées qui peuvent être définies sur la colonne de structure d'exploration de données.  
   
  Pour plus d’informations sur la structure et le modèle d’exploration de données, consultez [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
-## <a name="related-content"></a>Contenu connexe  
+## <a name="related-content"></a>Contenu associé  
  Consultez les rubriques suivantes pour plus d'informations sur la définition et l'utilisation des colonnes de structure d'exploration de données.  
   
 |Rubrique|Liens|  
@@ -60,7 +60,7 @@ ms.locfileid: "34015156"
 |Apprenez à ajouter et modifier des colonnes de structure d'exploration de données.|[Tâches de la structure d'exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Les Structures d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Colonnes du modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md)  
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Colonnes d’un modèle d’exploration de données](../../analysis-services/data-mining/mining-model-columns.md)  
   
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471138"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tables d’applications de la couche Données - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,17 +35,17 @@ ms.locfileid: "47810385"
 |**action_id**|**Int**|Identificateur de l'action.|  
 |**sequence_id**|**Int**|Identifie une étape dans une action.|  
 |**instance_id**|**uniqueidentifier**|Identificateur de l'instance DAC. Cette colonne peut être jointe sur la **instance_id** colonne [dbo.sysdac_instances &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
-|**action_type**|**tinyint**|Identificateur du type d'action :<br /><br /> **0** = déployer<br /><br /> **1** = créer<br /><br /> **2** = changement de nom<br /><br /> **3** = détachement<br /><br /> **4** = delete|  
-|**action_type_name**|**varchar(19)**|Nom du type d'action :<br /><br /> **Déployer**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
-|**dac_object_type**|**tinyint**|Identificateur du type d'objet affecté par l'action :<br /><br /> **0** = dacpac<br /><br /> **1** = connexion<br /><br /> **2** = base de données|  
-|**dac_object_type_name**|**varchar(8)**|Nom du type d'objet affecté par l'action :<br /><br /> **dacpac** = instance DAC<br /><br /> **connexion**<br /><br /> **database**|  
+|**action_type**|**tinyint**|Identificateur du type d'action :<br /><br /> **0** = deploy<br /><br /> **1** = créer<br /><br /> **2** = changement de nom<br /><br /> **3** = detach<br /><br /> **4** = delete|  
+|**action_type_name**|**varchar(19)**|Nom du type d'action :<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
+|**dac_object_type**|**tinyint**|Identificateur du type d'objet affecté par l'action :<br /><br /> **0** = dacpac<br /><br /> **1** = login<br /><br /> **2** = database|  
+|**dac_object_type_name**|**varchar(8)**|Nom du type d'objet affecté par l'action :<br /><br /> **dacpac** = DAC instance<br /><br /> **login**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code qui identifie l'état actuel de l'action :<br /><br /> **0** = en attente<br /><br /> **1** = succès<br /><br /> **2** = Échec|  
-|**action_status_name**|**varchar(11)**|État actuel de l'action :<br /><br /> **En attente**<br /><br /> **Réussite**<br /><br /> **Échec**|  
+|**action_status_name**|**varchar(11)**|État actuel de l'action :<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
 |**Obligatoire**|**bit**|Utilisé par le [!INCLUDE[ssDE](../../includes/ssde-md.md)] lors de la restauration d’une opération DAC.|  
 |**dac_object_name_pretran**|**sysname**|Nom de l'objet avant la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
 |**dac_object_name_posttran**|**sysname**|Nom de l'objet après la validation de la transaction qui contient l'action. Utilisé uniquement pour les bases de données et les connexions.|  
 |**sqlscript**|**nvarchar(max)**|Script [!INCLUDE[tsql](../../includes/tsql-md.md)] qui implémente une action sur une base de données ou connexion.|  
-|**charge utile**|**varbinary(max)**|Définition de package DAC enregistrée dans une chaîne encodée au format binaire.|  
+|**payload**|**varbinary(max)**|Définition de package DAC enregistrée dans une chaîne encodée au format binaire.|  
 |**Commentaires**|**varchar(max)**|Enregistre la connexion d'un utilisateur qui a accepté la perte de données potentielle dans une mise à niveau DAC.|  
 |**error_string**|**nvarchar(max)**|Message d'erreur généré si une erreur se produit lors de l'action.|  
 |**created_by**|**sysname**|Connexion à l'origine de l'action qui a créé cette entrée.|  
@@ -77,7 +77,7 @@ WHERE instance_id NOT IN
 > [!NOTE]  
 >  Il n’existe actuellement aucun mécanisme pour supprimer **sysdac_history_internal** lignes sur [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle serveur fixe sysadmin. Accès en lecture seule à cette vue est disponible pour tous les utilisateurs disposant des autorisations pour se connecter à la base de données master.  
   
 ## <a name="see-also"></a>Voir aussi  

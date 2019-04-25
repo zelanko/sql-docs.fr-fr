@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 86e9d39e6dd56cb5762933dc5ed37b5740a34ea5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759588"
 ---
 # <a name="find-databases-wizard-select-locations-accesstosql"></a>Assistant de bases de données (sélectionner des emplacements) Rechercher (AccessToSQL)
 Dans la page Sélectionner les emplacements de l’Assistant trouver les bases de données, vous entrez les paramètres de recherche pour rechercher des bases de données Access.  

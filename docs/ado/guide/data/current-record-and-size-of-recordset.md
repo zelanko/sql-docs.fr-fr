@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bde55939e974c6c879dcd126fac863ef0a866487
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472602"
 ---
 # <a name="current-record-and-size-of-recordset"></a>Enregistrement actif et taille du recordset
 Cette section décrit comment localiser la position actuelle du curseur dans l’exemple **Recordset** dans [exemple de Code JScript pour retourner un jeu d’enregistrements](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  

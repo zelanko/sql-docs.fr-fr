@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e638cda03d7dc0f0bd580c3ca29c126568d1595a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472340"
 ---
 # <a name="determining-edit-mode"></a>Détermination du mode d’édition
 ADO gère une mémoire tampon d’édition associé à l’enregistrement actif. Le **EditMode** propriété indique si les modifications ont été apportées à cette mémoire tampon ou si un nouvel enregistrement a été créé. Utilisez **EditMode** pour déterminer l’état de modification de l’enregistrement en cours. Vous pouvez tester pour les modifications en attente si un processus de modification a été interrompu et déterminer s’il faut utiliser le **mise à jour** ou **CancelUpdate** (méthode).  

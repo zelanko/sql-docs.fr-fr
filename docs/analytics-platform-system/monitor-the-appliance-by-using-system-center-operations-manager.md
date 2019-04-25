@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3c43734dbd7ef1a766f3f1258f97565ab82e175d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639854"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Moniteur avec System Center Operations Manager - Analytique Platform System
 Utilisez System Center Operations Manager (SCOM) pour surveiller l’appliance Analytique Platform System (APS).
@@ -56,7 +56,7 @@ La Page du diagramme Appliances est où vous pouvez obtenir un coup de œil à l
   
 ![Diagramme des appliances](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
-### <a name="nodes"></a>Nœuds  
+### <a name="nodes"></a>Nodes  
 Enfin, l’affichage de nœuds vous permet de voir l’intégrité de votre appliance via chaque nœud :  
   
 ![Nodes](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  

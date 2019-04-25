@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfab3258ab8908c795e1c7d7e7719f1d0d4138bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62766991"
 ---
 # <a name="progress-tab"></a>Onglet Progression
   Utilisez l'onglet **Progression** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour afficher la progression d'un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] exécuté dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. L'onglet **Progression** répertorie l'heure de début, l'heure de fin et le temps écoulé pour la validation et l'exécution du package et de ses exécutables, les informations ou les avertissements éventuels pour le package, les notifications sur la progression, la réussite ou l'échec du package et les messages d'erreur éventuels générés pendant l'exécution du package.  

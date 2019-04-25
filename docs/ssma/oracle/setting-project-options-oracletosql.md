@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 7760a893082f7b4a8899e00480fc43914b1c12ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625913"
 ---
 # <a name="setting-project-options-oracletosql"></a>Définition des options du projet (OracleToSQL)
 Pour chaque projet SSMA, vous pouvez définir les options de niveau projet. Ces options spécifient la conversion de l’objet, le chargement d’objet, paramètres de migration des données et d’interface utilisateur. Avant de convertir des objets à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou migrer des données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vérifiez que les options de configuration sont appropriées pour le projet.  
@@ -33,13 +33,13 @@ SSMA a cinq jeux de paramètres de projet :
   
 -   Synchronization  
   
--   INTERFACE GRAPHIQUE UTILISATEUR  
+-   Interface graphique utilisateur  
   
 -   Mappage de type  
   
 Il a également quatre modes de configuration de ces paramètres :  
   
--   Valeur par défaut  
+-   Par défaut  
   
 -   Optimistic  
   

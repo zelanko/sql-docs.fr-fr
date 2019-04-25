@@ -1,5 +1,5 @@
 ---
-title: Algorithme de série chronologique de Microsoft | Documents Microsoft
+title: Algorithme de série chronologique de Microsoft | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 390ff54485e92e28736424048e5aaedbbee31181
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62758082"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algorithme MTS (Microsoft Time Series)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -89,13 +89,13 @@ ms.locfileid: "34018536"
   
  Dans les deux exemples, vous pouvez prédire les nouvelles ventes à venir et le volume pour chaque produit. Vous ne pouvez pas prédire les nouvelles valeurs pour le produit ou pour la chronologie.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Exemple 1 : jeu de données de série chronologique avec la série représentée comme valeurs de colonne  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Exemple 1 : Jeu de données de série chronologique avec la série représentée en tant que valeurs de colonne  
  Cet exemple utilise la table de cas d'entrée suivante :  
   
-|TimeID|Product|Ventes|Volume|  
+|TimeID|Produit|Ventes|Volume|  
 |------------|-------------|-----------|------------|  
-|1/2001|Objet|1000|600|  
-|2/2001|Objet|1100|500|  
+|1/2001|A|1000|600|  
+|2/2001|A|1100|500|  
 |1/2001|B|500|900|  
 |2/2001|B|300|890|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "34018536"
   
  La colonne Sales décrit les bénéfices bruts du produit spécifié pour un jour et la colonne Volume décrit la quantité du produit spécifié en stock. Ces deux colonnes contiennent les données utilisées pour effectuer l'apprentissage du modèle. Sales et Volume peuvent être des attributs prédictibles pour chaque série dans la colonne Product.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemple 2 : jeu de données de série chronologique avec chaque série dans une colonne distincte  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemple 2 : Jeu de données de série chronologique avec chaque série dans une colonne distincte  
  Bien que cet exemple utilise fondamentalement les mêmes données d'entrée que le premier exemple, elles sont structurées différemment, comme illustré dans le tableau suivant :  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -113,7 +113,7 @@ ms.locfileid: "34018536"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- Dans cette table, la colonne TimeID contient encore la série de cas pour le modèle de série chronologique, que vous désignez comme colonne Key Time. Toutefois, les colonnes Sales et Volume précédentes sont à présent divisées en deux colonnes, et chacune de ces colonnes est précédée du nom du produit. En conséquence, la colonne TimeID ne contient qu'une seule entrée par jour. Un modèle de série chronologique est ainsi créé, qui contient quatre colonnes prédictibles : A_Sales, A_Volume, B_Sales et B_Volume.  
+ Dans cette table, la colonne TimeID contient encore la série de cas pour le modèle de série chronologique, que vous désignez comme colonne Key Time. Toutefois, les colonnes Sales et Volume précédentes sont à présent divisées en deux colonnes, et chacune de ces colonnes est précédée du nom du produit. En conséquence, la colonne TimeID ne contient qu'une seule entrée par jour. Cette opération crée un modèle de série chronologique qui contiendrait quatre colonnes prédictibles : A_Sales, A_Volume, B_Sales et B_Volume.  
   
  En outre, puisque vous avez réparti les produits dans des colonnes différentes, vous n'avez pas à spécifier une colonne clé de série supplémentaire. Toutes les colonnes du modèle sont une colonne de série de cas ou une colonne prédictible.  
   
@@ -144,10 +144,10 @@ ms.locfileid: "34018536"
 -   Prend en charge l’extraction.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Parcourir un modèle à l’aide de la visionneuse de série Microsoft Time](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Référence technique de Microsoft Time Series algorithme](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Exemples de requête de modèle de série de temps](../../analysis-services/data-mining/time-series-model-query-examples.md)   
- [Contenu du modèle d’exploration de données pour les modèles de série chronologique & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Références techniques relatives à l’algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Exemples de requêtes de modèle de série chronologique](../../analysis-services/data-mining/time-series-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

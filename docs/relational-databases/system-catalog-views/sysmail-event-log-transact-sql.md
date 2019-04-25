@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ac38c2e54fde2beb02e009e00b9f587e9265a43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759947"
 ---
 # <a name="sysmaileventlog-transact-sql"></a>sysmail_event_log (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contient une ligne pour chaque message Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné par le système de messagerie de base de données (dans ce contexte, le terme « message » désigne un message de type message d'erreur, pas un message électronique). Configurer le **niveau de journalisation** paramètre à l’aide de la **configurer les paramètres du système** boîte de dialogue de l’Assistant Configuration de la messagerie de base de données, ou le [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)une procédure stockée, à déterminer quels messages sont retournés.  
+  Contient une ligne pour chaque message Windows ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourné par le système de messagerie de base de données (Dans ce contexte fait référence à un message comme un message d’erreur, pas un message électronique). Configurer le **niveau de journalisation** paramètre à l’aide de la **configurer les paramètres du système** boîte de dialogue de l’Assistant Configuration de la messagerie de base de données, ou le [sysmail_configure_sp](../../relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql.md)une procédure stockée, à déterminer quels messages sont retournés.  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "47781097"
   
  Lorsque les tentatives de remise d'un compte spécifique échouent, la messagerie de base de données conserve les messages d'erreur pendant les tentatives de reprises de comptes jusqu'à ce que la remise de l'élément de messagerie aboutisse ou échoue. En cas de réussite, toutes les erreurs accumulées sont consignés en tant qu’avertissements distincts, y compris le **account_id**. Il se peut alors que des avertissements s'affichent, bien que le message électronique ait été envoyé. En cas d’échec de la remise, tous les avertissements précédents sont consignés en tant que message d’une erreur sans un **account_id**, étant donné que tous les comptes ont échoué.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Vous devez être un membre de la **sysadmin** rôle serveur fixe ou le **DatabaseMailUserRole** rôle de base de données pour accéder à cette vue. Membres de **DatabaseMailUserRole** qui ne sont pas membres de la **sysadmin** rôle, peuvent voir uniquement les événements pour les messages électroniques qu’ils soumettent.  
   
 ## <a name="see-also"></a>Voir aussi  

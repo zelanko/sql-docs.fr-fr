@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a031466e35fef90104ab81fec17010725f8f5c0c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761730"
 ---
 # <a name="optimizing-the-neworg-table"></a>Optimisation de la table NewOrg
   Le **NewOrd** table que vous avez créé dans le [remplissage d’une Table avec des données hiérarchiques existantes](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) tâche contient toutes les informations des employés et représente la structure hiérarchique à l’aide d’un `hierarchyid`type de données. Cette tâche ajoute de nouveaux index pour prendre en charge les recherches sur la colonne `hierarchyid`.  
@@ -72,7 +72,7 @@ ms.locfileid: "48146979"
   
      [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-     Index à profondeur prioritaire : les enregistrements d'employés sont stockés à proximité de leur responsable.  
+     Index à profondeur prioritaire : Enregistrements d’employés sont stockés adjacente à son responsable.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -96,7 +96,7 @@ ms.locfileid: "48146979"
   
      `/2/2/       0x6B40       2         8      norint`  
   
-     Index avec **EmployeeID** prioritaire : les lignes sont stockées dans l’ordre des **EmployeeID**.  
+     **EmployeeID**-tout d’abord d’index : Lignes sont stockées dans **EmployeeID** séquence.  
   
      `LogicalNode OrgNode    H_Level EmployeeID LoginID`  
   
@@ -160,6 +160,6 @@ ms.locfileid: "48146979"
     ```  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : Conversion d'une table en une structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
+ [Résumé : Conversion d’une Table en une Structure hiérarchique](lesson-1-4-summary-converting-a-table-to-a-hierarchical-structure.md)  
   
   

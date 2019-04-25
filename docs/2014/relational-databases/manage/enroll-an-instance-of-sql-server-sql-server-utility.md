@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468266"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscrire une instance de SQL Server (utilitaire SQL Server)
   Inscrivez une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existant pour surveiller ses performances et sa configuration comme une instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le point de contrôle de l'utilitaire (UCP) recueille des informations sur la configuration et les performances des instances gérées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les 15 minutes. Ces informations sont stockées dans l'entrepôt de données de gestion de l'utilitaire (UMDW) sur l'UCP ; le nom de fichier UMDW est sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont comparées aux stratégies afin d'aider à identifier les opportunités de consolidation et les goulots d'étranglement de performances.  
@@ -145,9 +145,9 @@ ms.locfileid: "52762481"
   
  Paramètres de l'instance gérée :  
   
--   Nom de l’Instance SQL Server : Nom_ordinateur\nom_instance  
+-   Nom de l’Instance SQL Server : ComputerName\InstanceName  
   
--   Collecte de l’utilitaire définir le compte : Nomdomaine\nomutilisateur  
+-   Collecte de l’utilitaire définir le compte : DomainName\UserName  
   
  Pour continuer, cliquez sur **Suivant**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "52762481"
 >   
 >  Une exception s'est produite lors de l'exécution d'une instruction ou d'un lot Transact-SQL ou lot. (Microsoft.SqlServer.ConnectionInfo)  
 >   
->  Informations supplémentaires :  Impossible d’obtenir des informations sur l’utilisateur ou groupe Windows NT '\<DomainName\AccountName >', code d’erreur 0 x 5. (Microsoft SQL Server, erreur : 18456). » 15404)  
+>  Informations supplémentaires :  Impossible d’obtenir des informations sur l’utilisateur ou groupe Windows NT '\<DomainName\AccountName >', code d’erreur 0 x 5. (Microsoft SQL Server, erreur : 15404)  
 >   
 >  Pour plus d’informations sur la résolution de ce problème, consultez [Résolution des problèmes liés à l’utilitaire SQL Server](../../database-engine/troubleshoot-the-sql-server-utility.md).  
   

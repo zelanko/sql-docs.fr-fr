@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_broker_connections (Transact-SQL) | Microsoft Docs
+title: sys.dm_broker_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/08/2016
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 95acff9d1b80560294758045c449c1c6c6790c27
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759988"
 ---
 # <a name="sysdmbrokerconnections-transact-sql"></a>sys.dm_broker_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,8 +47,8 @@ ms.locfileid: "47615759"
 |**login_state**|**smallint**|État du processus de cette connexion. Valeurs possibles :<br /><br /> 0 = INITIAL<br /><br /> 1 = WAIT LOGIN NEGOTIATE<br /><br /> 2 = ONE ISC<br /><br /> 3 = ONE ASC<br /><br /> 4 = TWO ISC<br /><br /> 5 = TWO ASC<br /><br /> 6 = WAIT ISC Confirm<br /><br /> 7 = WAIT ASC Confirm<br /><br /> 8 = WAIT REJECT<br /><br /> 9 = WAIT PRE-MASTER SECRET<br /><br /> 10 = WAIT VALIDATION<br /><br /> 11 = WAIT ARBITRATION<br /><br /> 12 = EN LIGNE<br /><br /> 13 = ERROR|  
 |**login_state_desc**|**nvarchar(60)**|État actuel de la connexion en provenance de l'ordinateur distant. Valeurs possibles :<br /><br /> La négociation de connexion est initialisée.<br /><br /> La négociation de connexion attend le message de négociation de la connexion.<br /><br /> La négociation de connexion a initialisé et envoyé le contexte de sécurité pour l'authentification.<br /><br /> La négociation de connexion a reçu et accepté le contexte de sécurité pour l'authentification.<br /><br /> La négociation de connexion a initialisé et envoyé le contexte de sécurité pour l'authentification. Il existe un mécanisme facultatif disponible pour l'authentification des homologues.<br /><br /> La négociation de connexion a reçu et envoyé le contexte de sécurité accepté pour l'authentification. Il existe un mécanisme facultatif disponible pour l'authentification des homologues.<br /><br /> La négociation de connexion attend le message de confirmation d'initialisation du contexte de sécurité.<br /><br /> La négociation de connexion attend le message de confirmation d'acceptation du contexte de sécurité.<br /><br /> La négociation de connexion attend le message de rejet SSPI pour l'authentification qui a échoué.<br /><br /> La négociation de connexion attend le message secret pré-master.<br /><br /> La négociation de connexion attend le message de validation.<br /><br /> La négociation de connexion attend le message d'arbitrage.<br /><br /> La négociation de connexion est terminée et en ligne (prêt) pour l'échange de messages.<br /><br /> La connexion présente une erreur.|  
 |**peer_certificate_id**|**Int**|ID de l'objet local du certificat utilisé par l'instance distante pour l'authentification. Le propriétaire de ce certificat doit avoir l'autorisation CONNECT pour se connecter au point de terminaison [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Accepte la valeur NULL.|  
-|**encryption_algorithm**|**smallint**|Algorithme de chiffrement utilisé pour cette connexion. Accepte la valeur NULL. Valeurs possibles :<br /><br /> **Valeur &#124; Description &#124; option DDL correspondante**<br /><br /> 0 &#124; aucun &#124; désactivé<br /><br /> 1 &AMP;#124; SIGNATURE UNIQUEMENT<br /><br /> 2 &#124; AES, RC4 &#124; requis &#124; Required algorithm RC4}<br /><br /> 3 &#124; AES &#124;algorithme AES obligatoire<br /><br /> **Remarque :** l’algorithme RC4 est uniquement pris en charge pour la compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, le matériel chiffré à l’aide de RC4 ou de RC4_128 peut être déchiffré dans n’importe quel niveau de compatibilité.|  
-|**encryption_algorithm_desc**|**nvarchar(60)**|Représentation textuelle de l'algorithme de chiffrement. Accepte la valeur NULL. Valeurs possibles :<br /><br /> **Description &#124; option DDL correspondante**<br /><br /> AUCUN &#124; désactivé<br /><br /> RC4 &#124; {requis &#124; requis algorithme RC4}<br /><br /> AES &#124; requis de l’algorithme AES<br /><br /> NONE, RC4 &#124; {pris en charge &#124; pris en charge d’algorithme RC4}<br /><br /> Aucun, AES &#124; pris en charge d’algorithme RC4<br /><br /> RC4, AES &#124; requis algorithme RC4 AES<br /><br /> AES, RC4 &#124; requis algorithme AES RC4<br /><br /> NONE, RC4, AES &#124; pris en charge d’algorithme RC4 AES<br /><br /> Aucun, AES, RC4 &#124; pris en charge d’algorithme AES RC4|  
+|**encryption_algorithm**|**smallint**|Algorithme de chiffrement utilisé pour cette connexion. Accepte la valeur NULL. Valeurs possibles :<br /><br /> **Valeur &#124; Description &#124; option DDL correspondante**<br /><br /> 0 &#124; aucun &#124; désactivé<br /><br /> 1 &AMP;#124; SIGNATURE UNIQUEMENT<br /><br /> 2 &#124; AES, RC4 &#124; requis &#124; Required algorithm RC4}<br /><br /> 3 &#124; AES &#124;algorithme AES obligatoire<br /><br /> **Remarque :** L'algorithme RC4 est uniquement pris en charge pour des raisons de compatibilité descendante. Le nouveau matériel ne peut être chiffré à l'aide de RC4 ou de RC4_128 que lorsque la base de données se trouve dans le niveau de compatibilité 90 ou 100. (Non recommandé.) Utilisez à la place un algorithme plus récent, tel qu'un des algorithmes AES. Dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] et versions ultérieures, le matériel chiffré à l’aide de RC4 ou de RC4_128 peut être déchiffré dans n’importe quel niveau de compatibilité.|  
+|**encryption_algorithm_desc**|**nvarchar(60)**|Représentation textuelle de l'algorithme de chiffrement. Accepte la valeur NULL. Valeurs possibles :<br /><br /> **Description &#124; option DDL correspondante**<br /><br /> NONE &#124; Disabled<br /><br /> RC4  &#124; {Required &#124; Required Algorithm RC4}<br /><br /> AES &#124; requis de l’algorithme AES<br /><br /> NONE, RC4 &#124; {pris en charge &#124; pris en charge d’algorithme RC4}<br /><br /> Aucun, AES &#124; pris en charge d’algorithme RC4<br /><br /> RC4, AES &#124; requis algorithme RC4 AES<br /><br /> AES, RC4 &#124; requis algorithme AES RC4<br /><br /> NONE, RC4, AES &#124; pris en charge d’algorithme RC4 AES<br /><br /> Aucun, AES, RC4 &#124; pris en charge d’algorithme AES RC4|  
 |**receives_posted**|**smallint**|Nombre de réceptions asynchrones sur le réseau qui ne sont pas encore terminées pour cette connexion. Accepte la valeur NULL.|  
 |**is_receive_flow_controlled**|**bit**|Indique si les réceptions sur le réseau ont été retardées en raison du contrôle de flux car le réseau est occupé. Accepte la valeur NULL.<br /><br /> 1 = True|  
 |**sends_posted**|**smallint**|Nombre d'envois asynchrones sur le réseau qui ne sont pas encore terminés pour cette connexion. Accepte la valeur NULL.|  
@@ -61,7 +61,7 @@ ms.locfileid: "47615759"
 |**total_receives**|**bigint**|Nombre total de demandes d'envoi sur le réseau reçues par cette connexion. Accepte la valeur NULL.|  
 |**peer_arbitration_id**|**uniqueidentifier**|Identificateur interne du point de terminaison. Accepte la valeur NULL.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="physical-joins"></a>Jointures physiques  

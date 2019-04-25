@@ -1,5 +1,5 @@
 ---
-title: SQLAllocHandle, fonction | Microsoft Docs
+title: SQLAllocHandle Function | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f0a075b96e7a29cef4a10f034147732bf03f64b2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62761775"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle, fonction
 **Conformité**  
@@ -96,7 +96,7 @@ SQLRETURN SQLAllocHandle(
 |HY010|Erreur de séquence de fonction|(DM) le *HandleType* SQL_HANDLE_DBC, a été l’argument et **SQLSetEnvAttr** n’a pas été appelé pour définir l’attribut d’environnement SQL_ODBC_VERSION.<br /><br /> (DM) une fonction de façon asynchrone en cours d’exécution a été appelée pour le **InputHandle** et était en cours d’exécution lorsque le **SQLAllocHandle** fonction a été appelée avec **HandleType** définie à SQL_HANDLE_STMT ou SQL_HANDLE_DESC.|  
 |HY013|Erreur de gestion de mémoire|Le *HandleType* argument était SQL_HANDLE_DBC, SQL_HANDLE_STMT ou SQL_HANDLE_DESC ; et l’appel de fonction n’a pas pu être traité, car les objets sous-jacents de la mémoire ne sont pas accessible, éventuellement en raison d’une mémoire insuffisante conditions.|  
 |HY014|Limite du nombre de handles a été atteint|La limite définie par le pilote pour le nombre de handles qui peuvent être alloués pour le type de handle est indiqué par le *HandleType* argument a été atteint.|  
-|HY092|Identificateur d’option/attribut non valide|(DM) le *HandleType* argument n’était pas : SQL_HANDLE_ENV, SQL_HANDLE_DBC, SQL_HANDLE_STMT ou SQL_HANDLE_DESC.|  
+|HY092|Identificateur d’option/attribut non valide|(DM) le *HandleType* argument n’était pas : SQL_HANDLE_ENV, SQL_HANDLE_DBC, SQL_HANDLE_STMT, or SQL_HANDLE_DESC.|  
 |HY117|Connexion est suspendue en raison de l’état de transaction inconnu. Déconnecter uniquement et les fonctions en lecture seule sont autorisées.|(DM) pour plus d’informations sur l’état suspendu, consultez [SQLEndTran, fonction](../../../odbc/reference/syntax/sqlendtran-function.md).|  
 |HYC00|Fonctionnalité optionnelle non implémentée|Le *HandleType* SQL_HANDLE_DESC a été l’argument et le pilote a été un ODBC 2. *x* pilote.|  
 |HYT01|Délai de connexion expiré|Le délai de connexion a expiré avant que la source de données a répondu à la demande. Le délai de connexion est défini via **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  

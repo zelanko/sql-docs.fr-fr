@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c9e05a45b5f035a500e210c991a33216be318ea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472823"
 ---
 # <a name="boundaries-of-a-recordset"></a>Limites d’un recordset
 **Jeu d’enregistrements** prend en charge la **BOF** et **EOF** propriétés pour délimiter le début et la fin, respectivement, du jeu de données. Vous pouvez considérer **BOF** et **EOF** sous forme d’enregistrements « fantômes » qui sont placés au début et à la fin de la **Recordset**. Comptage **BOF** et **EOF**, notre exemple **Recordset** ressemblerait maintenant à ceci :  
@@ -30,7 +30,7 @@ ms.locfileid: "47633447"
 |BOF|||  
 |7|Poires secs organiques d’oncle Bob|30.0000|  
 |14|Tofu|23.2500|  
-|28|Rssle choucroute|45.6000|  
+|28|Rssle Sauerkraut|45.6000|  
 |51|Manjimup pommes en poudre|53.0000|  
 |74|Longlife Tofu|10.0000|  
 |EOF|||  

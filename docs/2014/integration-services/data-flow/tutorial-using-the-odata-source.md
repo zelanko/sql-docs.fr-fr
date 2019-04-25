@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : À l’aide de la Source OData [SSIS] | Microsoft Docs'
+title: 'Tutoriel : À l’aide de la Source OData [SSIS] | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770215"
 ---
-# <a name="tutorial-using-the-odata-source-ssis"></a>Didacticiel : À l’aide de la Source OData [SSIS]
+# <a name="tutorial-using-the-odata-source-ssis"></a>Tutoriel : À l’aide de la Source OData [SSIS]
   Ce tutoriel vous guide dans le processus d’extraction de la collection **Employees** de l’exemple de service OData **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/)), puis de son chargement dans un fichier plat.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Créer un projet Integration Services  

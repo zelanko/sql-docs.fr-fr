@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a610c41fd9e3126bb0f5833dcacfe27ce969a72
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468091"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Guide du traitement des requêtes pour les tables optimisées en mémoire
   L'OLTP en mémoire introduit les tables optimisées en mémoire et les procédures stockées compilées en mode natif dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Cet article présente le traitement des requêtes pour les tables mémoire optimisées et les procédures stockées compilées en mode natif.  
