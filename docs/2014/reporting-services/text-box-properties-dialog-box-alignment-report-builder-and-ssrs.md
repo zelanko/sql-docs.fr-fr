@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 409a541929e27a8076f2ab56cb95d928915c6eb7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631290"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Boîte de dialogue Propriétés de la zone de texte, Alignement (Générateur de rapports et SSRS)
   Sélectionnez **Alignement** dans la boîte de dialogue **Propriétés de la zone de texte** pour positionner les valeurs dans une cellule ou région de données sélectionnée.  

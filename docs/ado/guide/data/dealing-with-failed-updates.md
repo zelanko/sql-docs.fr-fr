@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9930e76c902080cb7df22bf2a28afc1ae18b3cfd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472371"
 ---
 # <a name="dealing-with-failed-updates"></a>Traitement des mises à jour ayant échoué
 Lorsqu’une mise à jour est terminée avec des erreurs, comment vous résolvez les erreurs varie selon la nature et la gravité des erreurs et la logique de votre application. Toutefois, si la base de données est partagée avec d’autres utilisateurs, une erreur typique est que quelqu'un d’autre modifie le champ avant de procéder. Ce type d’erreur est appelé un conflit. ADO détecte cette situation et signale une erreur.  

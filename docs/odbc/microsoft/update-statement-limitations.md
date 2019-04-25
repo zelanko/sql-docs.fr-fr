@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6b854cc417898c5576c60ca129c597eae280df4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633131"
 ---
 # <a name="update-statement-limitations"></a>UPDATE, instruction - limitations
 Pour le pilote Paradox mettre à jour une table, la table doit avoir un index unique (clé primaire). Lorsque vous utilisez le pilote Paradox sans avoir à implémenter le moteur de base de données Borland, il n’est pas possible de mettre à jour une table Paradox.  

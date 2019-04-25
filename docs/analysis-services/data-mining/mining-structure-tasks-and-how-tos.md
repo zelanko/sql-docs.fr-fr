@@ -1,5 +1,5 @@
 ---
-title: Procédures et les tâches de la Structure d’exploration de données | Documents Microsoft
+title: Tâches de la Structure et les procédures d’exploration de données | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f2b76018c66b1aa72aada859be2901e356c4ae34
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509856"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tâches de la structure d'exploration de données et procédures
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,19 +22,19 @@ ms.locfileid: "34015786"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Créer une nouvelle Structure d’exploration de données relationnelles](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
+-   [Créer une structure d’exploration de données relationnelles](../../analysis-services/data-mining/create-a-new-relational-mining-structure.md)  
   
--   [Créer une Structure d’exploration de données OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
+-   [Créer une structure d’exploration de données OLAP](../../analysis-services/data-mining/create-a-new-olap-mining-structure.md)  
   
--   [Ajouter des colonnes à une Structure d’exploration de données](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
+-   [Ajouter des colonnes à une structure d’exploration de données](../../analysis-services/data-mining/add-columns-to-a-mining-structure.md)  
   
--   [Supprimer des colonnes dans une Structure d’exploration de données](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
+-   [Supprimer des colonnes d’une structure d’exploration de données](../../analysis-services/data-mining/remove-columns-from-a-mining-structure.md)  
   
--   [Ajouter une Table imbriquée à une Structure d’exploration de données](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
+-   [Ajouter une table imbriquée à une structure d’exploration de données](../../analysis-services/data-mining/add-a-nested-table-to-a-mining-structure.md)  
   
--   [Modifier les propriétés d’une Structure d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
+-   [Modifier les propriétés d’une structure d’exploration de données](../../analysis-services/data-mining/change-the-properties-of-a-mining-structure.md)  
   
--   [Modifier la vue de Source de données utilisée pour une Structure d’exploration de données](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
+-   [Modifier la vue de source de données utilisée pour une structure d’exploration de données](../../analysis-services/data-mining/edit-the-data-source-view-used-for-a-mining-structure.md)  
   
 -   [traiter une structure d'exploration de données](../../analysis-services/data-mining/process-a-mining-structure.md)  
   

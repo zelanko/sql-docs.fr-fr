@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Fichiers de données SQL Server dans le service de stockage Windows Azure | Microsoft Docs'
+title: 'Tutoriel : Fichiers de données SQL Server dans le service de stockage Windows Azure | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e3d33209cd6dfe261a5deced345adac70b46961f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523893"
 ---
-# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Didacticiel : fichiers de données SQL Server dans le service de Stockage Microsoft Azure
+# <a name="tutorial-sql-server-data-files-in-windows-azure-storage-service"></a>Tutoriel : fichiers de données SQL Server dans le service de Stockage Microsoft Azure
   Bienvenue dans le didacticiel Fichiers de données SQL Server dans le service de Stockage Microsoft Azure. Ce didacticiel explique comment stocker directement des fichiers de données SQL Server dans le service de stockage d'objets blob Windows Azure.  
   
  La prise en charge de l'intégration de SQL Server au service de stockage d'objets blob Windows Azure est une amélioration de SQL Server 2014. Pour une vue d’ensemble des fonctionnalités et des avantages offerts par cette fonctionnalité, consultez [fichiers de données SQL Server dans Windows Azure](databases/sql-server-data-files-in-microsoft-azure.md).  

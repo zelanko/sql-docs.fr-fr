@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354ca92c8ed66c7669863cc234fe4999ab95e662
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743295"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Ajouter MSOLAP.5 en tant que fournisseur de données approuvé dans Excel Services
   MSOLAP.5 fait référence au fournisseur OLE DB Analysis Services pour SQL Server 2012. Excel Services doit approuver ce fournisseur avant d'effectuer la demande de connexion qui se traduit par la disponibilité des données PowerPivot sur un serveur.  
@@ -25,7 +25,7 @@ ms.locfileid: "48051177"
   
  Vous ne devez effectuer cette étape qu'une seule fois pour chaque application de service Excel Services.  
   
- Chaque serveur physique qui traite une requête de données PowerPivot, tel que PowerPivot pour SharePoint ou un serveur Excel Services, doit avoir installé le fournisseur OLE DB sur l'ordinateur. Une installation de PowerPivot pour SharePoint inclut toujours le fournisseur OLE DB, mais si Excel Services s'exécute sur un ordinateur qui ne dispose pas de PowerPivot pour SharePoint, vous devez installer le fournisseur manuellement. Pour plus d’informations, voir [Install the Analysis Services OLE DB Provider on SharePoint Servers](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)(Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint).  
+ Chaque serveur physique qui traite une requête de données PowerPivot, tel que PowerPivot pour SharePoint ou un serveur Excel Services, doit avoir installé le fournisseur OLE DB sur l'ordinateur. Une installation de PowerPivot pour SharePoint inclut toujours le fournisseur OLE DB, mais si Excel Services s'exécute sur un ordinateur qui ne dispose pas de PowerPivot pour SharePoint, vous devez installer le fournisseur manuellement. Pour plus d’informations, voir [Installer le fournisseur OLE DB Analysis Services sur les serveurs SharePoint](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>Ajouter un fournisseur approuvé à Excel Services  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48051177"
   
 4.  S'il n'est pas répertorié, cliquez sur **Ajouter un fournisseur de données approuvé**.  
   
-5.  ID du fournisseur, tapez `MSOLAP.5`.  
+5.  Pour l’ID du fournisseur, tapez `MSOLAP.5`.  
   
 6.  Pour le type de fournisseur, vérifiez que OLE DB est sélectionné.  
   

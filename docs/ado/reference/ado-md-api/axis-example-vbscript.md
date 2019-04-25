@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 420c8a67d8d0d0cbadcf8263a0921877d1444da4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469986"
 ---
 # <a name="axis-example-vbscript"></a>Exemple avec Axis (VBScript)
 Cette Page ASP affiche les données OLAP à partir d’une chaîne de requête MDX et écrit l’ensemble de cellules résultant dans une structure de table HTML.  

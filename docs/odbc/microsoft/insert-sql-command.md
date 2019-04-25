@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471174"
 ---
 # <a name="insert---sql-command"></a>INSERT, commande SQL
 Ajoute un enregistrement à la fin d’une table qui contient les valeurs de champ spécifié.  
@@ -41,10 +41,10 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  Si la table que vous spécifiez est ouverte, INSERT ajoute le nouvel enregistrement à la table. Si la table est ouverte dans une zone de travail autres que la zone de travail actuel, il n’est pas sélectionné après l’ajout de l’enregistrement ; la zone de travail actuel est sélectionnée.  
   
- [( *fname1*[, *fname2*[,...]])]  
+ [( *fname1*[, *fname2*[, ...]])]  
  Spécifie, dans le nouvel enregistrement, les noms des champs dans lesquels les valeurs sont insérées.  
   
- VALEURS ( *eExpression1*[, *eExpression2*[,...]])  
+ VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
  Spécifie les valeurs de champ insérés dans le nouvel enregistrement. Si vous omettez les noms de champ, vous devez spécifier les valeurs de champ dans l’ordre défini par la structure de table.  
   
 ## <a name="remarks"></a>Notes  

@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6c4affd835931c00fd5f8ad2514070527ce1b80f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636137"
 ---
 # <a name="developing-an-odbc-driver"></a>Développement d’un pilote ODBC
 Cette section contient des rubriques qui expliquent comment développer un pilote ODBC.  

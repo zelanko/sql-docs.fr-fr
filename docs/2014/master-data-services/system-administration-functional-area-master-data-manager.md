@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c4f85a74b91a74b58847a24d04053e2b8848234d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763385"
 ---
 # <a name="system-administration-functional-area-master-data-manager"></a>Zone fonctionnelle Administration de système (Master Data Manager)
   Dans la zone fonctionnelle Administration de système, les administrateurs peuvent créer un modèle et tous ses objets. Ils peuvent également créer des règles d'entreprise et créer et déployer des packages de modèles. Pour plus d’informations sur les administrateurs, consultez [Administrateurs &#40;Master Data Services&#41;](administrators-master-data-services.md).  

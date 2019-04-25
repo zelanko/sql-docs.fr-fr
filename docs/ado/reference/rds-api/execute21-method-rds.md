@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c1b4608dde67f31067ed34f7c552ba866a2095ed
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51603475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469321"
 ---
 # <a name="execute21-method-rds"></a>Execute21, méthode (RDS)
 Exécute la requête et crée un objet recordset ADO pour une utilisation dans ADO 2.1.  
@@ -41,7 +41,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *HandlerString*  
  La chaîne identifie le gestionnaire à utiliser avec cette exécution. La chaîne contient deux parties. La première partie contient le nom (ProgID) du gestionnaire à utiliser. La deuxième partie de la chaîne contient des arguments à passer au gestionnaire. Interprétation de la chaîne d’arguments est gestionnaire spécifique. Les deux parties sont séparées par la première instance d’une virgule dans la chaîne (bien que la chaîne d’arguments pouvant contenir des virgules supplémentaires). Les arguments sont facultatifs.  
   
- *Chaîne de requête*  
+ *QueryString*  
  Une commande dans le langage de commande pris en charge par le fournisseur OLE DB identifié dans la chaîne de connexion. Pour les fournisseurs SQL, il peut contenir un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction de commande, mais pour les fournisseurs non-SQL (par exemple, MSDataShape) peut différer un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instruction de requête.  
   
  En outre, si un gestionnaire est utilisé (et il est fortement recommandé d’utiliser qu’un gestionnaire), le gestionnaire peut alter ou remplacez la valeur spécifiée ici. Par exemple, le gestionnaire remplace généralement *QueryString* avec une chaîne de requête à partir de son fichier .ini. Par défaut, le fichier Msdfmap.ini est utilisé.  

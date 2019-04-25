@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c42a45ec20edbde61a2f1b7c5b026f3467cd2371
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42795648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468428"
 ---
 # <a name="lesson-12-analyze-in-excel"></a>Leçon 12 : Analyser dans Excel
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -23,10 +23,10 @@ Dans cette leçon, vous utiliserez l’analyser dans la fonctionnalité d’Exce
   
 Pour pouvoir effectuer cette leçon, Excel doit être installé sur le même ordinateur que SSDT. Pour en savoir plus, consultez [Analyser dans Excel](../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md).  
   
-Durée estimée pour effectuer cette leçon : **20 minutes**  
+Durée estimée pour effectuer cette leçon : **20 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
-Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 11 : créer des rôles](../analysis-services/lesson-11-create-roles.md).  
+Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 11 : Créer des rôles](../analysis-services/lesson-11-create-roles.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Parcourir des données à l'aide des perspectives par défaut et Internet Sales  
 Dans ces premières tâches, vous pourrez parcourir votre modèle à l’aide à la fois la perspective par défaut, qui inclut tous les objets de modèle, et également à l’aide de la perspective Internet Sales précédemment. La perspective Internet Sales exclut l'objet table Customer.  
@@ -53,7 +53,7 @@ Dans ces premières tâches, vous pourrez parcourir votre modèle à l’aide à
     
 3.  Dans Excel, dans **PivotTable Fields**, notez que la table DimCustomer est exclue de la liste de champs.  
     
-    ![en tant que-tabulaire-leçon 12-champs](../analysis-services/media/as-tabular-lesson12-fields.png)
+    ![as-tabular-lesson12-fields](../analysis-services/media/as-tabular-lesson12-fields.png)
     
 4.  Fermez Excel sans enregistrer le classeur.  
   
@@ -71,7 +71,7 @@ Les rôles font partie intégrante de n’importe quel modèle tabulaire. Au moi
 3.  Fermez Excel sans enregistrer le classeur.  
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
-Accédez à la leçon suivante : [leçon 13 : déployer](../analysis-services/lesson-13-deploy.md).
+Accédez à la leçon suivante : [Leçon 13 : Déployer](../analysis-services/lesson-13-deploy.md).
 
   
   

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6ce92fb9c6bead52848ad5de1b70092b8168f292
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466459"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Installation et configuration de Master Data Services
 
@@ -128,14 +128,14 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
   
 2.  Dans **l’Assistant Création d’une base de données**, cliquez sur **Créer une base de données** , puis sur **Suivant**.  
   
-3.  Dans la page **Serveur de base de données** , sélectionnez le **Type d’authentification** , puis cliquez sur **Tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données avec les informations d’identification correspondant au type d’authentification que vous avez sélectionné. Cliquez sur **Suivant**.
+3.  Dans la page **Serveur de base de données** , sélectionnez le **Type d’authentification** , puis cliquez sur **Tester la connexion** pour confirmer que vous pouvez vous connecter à la base de données avec les informations d’identification correspondant au type d’authentification que vous avez sélectionné. Cliquer sur **Suivant**.
   
     > [!NOTE]  
     >  Si vous sélectionnez le type d’authentification **Utilisateur actuel - Sécurité intégrée**, la zone **Nom d’utilisateur** est en lecture seule et affiche le nom du compte d’utilisateur Windows qui a ouvert une session sur l’ordinateur. Si vous exécutez [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] sur une machine virtuelle Azure, la zone **Nom d’utilisateur** affiche le nom de la machine virtuelle et le nom d’utilisateur associé au compte Administrateur local sur la machine virtuelle. 
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Tapez un nom dans le champ **Nom de la base de données** . (Facultatif) Pour sélectionner un classement Windows, décochez la case **Classement par défaut de SQL Server**, puis cliquez sur une ou plusieurs des options disponibles comme **Respecter la casse**. Cliquez sur **Suivant**.
+4.  Tapez un nom dans le champ **Nom de la base de données** . (Facultatif) Pour sélectionner un classement Windows, décochez la case **Classement par défaut de SQL Server**, puis cliquez sur une ou plusieurs des options disponibles comme **Respecter la casse**. Cliquer sur **Suivant**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   
@@ -282,7 +282,7 @@ Si vous souhaitez apporter des modifications à l’installation de [!INCLUDE[ss
   
  Pour obtenir une vue d’ensemble sur l’utilisation d’un modèle et d’entités en vue de créer une structure pour vos données dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], consultez [Vue d’ensemble de Master Data Services &#40;MDS&#41;](../master-data-services/master-data-services-overview-mds.md).  
     
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Base de données Master Data Services](../master-data-services/master-data-services-database.md)   
  [Application web Master Data Manager](../master-data-services/master-data-manager-web-application.md)   
  [Page Configuration de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   

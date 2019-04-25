@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 169ab149df11de12e5cf5452b0f8176737fb5dba
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510011"
 ---
 # <a name="windows-dialog-box-microsoft-document-explorer-help"></a>Boîte de dialogue Fenêtres (Aide de Microsoft Document Explorer)
   Cette boîte de dialogue vous permet d'afficher, de fermer et d'organiser les documents ouverts dans les éditeurs et concepteurs. Vous pouvez afficher cette boîte de dialogue en cliquant sur **Fenêtres** dans le menu **Fenêtre** .  

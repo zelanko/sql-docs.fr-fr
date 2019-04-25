@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6bd85b72fc786d4aa807d73e57a69193b515067d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762799"
 ---
 # <a name="mssqlserver847"></a>MSSQLSERVER_847
     
@@ -29,7 +29,7 @@ ms.locfileid: "48135919"
 |ID d'événement|847|  
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
-|Nom symbolique|Néant|  
+|Nom symbolique|N/A|  
 |Texte du message|Un dépassement de délai s’est produit lors de l’attente du verrou : classe '%ls', id %p, type %d, tâche 0x%p : %d, temps d’attente %d, indicateurs 0x%I64x, tâche propriétaire 0x%p. Poursuite de l'attente.|  
   
 ## <a name="explanation"></a>Explication  

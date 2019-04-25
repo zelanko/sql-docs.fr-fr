@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 328ce6c6474beb68d14edd26779d868142a29fd0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62520249"
 ---
 # <a name="accuracy-chart-sql-server-data-mining-add-ins"></a>Graphique de précision (Compléments d'exploration de données SQL Server)
   ![Bouton graphique de précision dans le ruban Exploration de données](media/dmc-accchart.gif "bouton graphique de précision dans le ruban Exploration de données")  
@@ -50,12 +50,12 @@ ms.locfileid: "48136795"
   
 2.  Dans le **précision et Validation** de groupe, cliquez sur **graphique de précision**.  
   
-3.  Dans le **sélectionner une Structure ou modèle** boîte de dialogue, sélectionnez le modèle que vous souhaitez évaluer. Cliquez sur **Suivant**.  
+3.  Dans le **sélectionner une Structure ou modèle** boîte de dialogue, sélectionnez le modèle que vous souhaitez évaluer. Cliquer sur **Suivant**.  
   
     > [!NOTE]  
     >  Vous devez choisir un modèle qui correspond le mieux possible aux données que vous avez l'intention de tester.  
   
-4.  Dans le **spécifier colonne à prédire et valeur à prédire** boîte de dialogue, sélectionnez la colonne que vous souhaitez prédire et une valeur cible, le cas échéant. Cliquez sur **Suivant**.  
+4.  Dans le **spécifier colonne à prédire et valeur à prédire** boîte de dialogue, sélectionnez la colonne que vous souhaitez prédire et une valeur cible, le cas échéant. Cliquer sur **Suivant**.  
   
      Par exemple, dans l'exemple ci-dessus, vous pouvez choisir la colonne qui modélise la réponse des clients et spécifier « Achat probable » comme valeur cible.  
   
@@ -72,8 +72,8 @@ ms.locfileid: "48136795"
   
      L'Assistant crée un rapport comprenant le graphique de courbes d'élévation et les données sous-jacentes.  
   
-### <a name="requirements"></a>Spécifications  
- Dans le cas de la prédiction d'une valeur discrète, vous devez sélectionner la valeur cible à prédire. Par exemple, si vos données sont classées en deux catégories, 1 correspondant à la réponse « Oui : acheter » et 2 correspondant à la réponse « Non : ne pas acheter », vous devez spécifier 1 ou 2 comme valeurs de prédiction. Par contre, si vous voulez prédire une plage de valeurs, vous ne pouvez comparer que deux valeurs à la fois. Par exemple, si vous voulez prédire un score supérieur à 5, il peut être nécessaire de réétiqueter vos données sources et de créer un nouveau modèle qui sépare les résultats en deux groupes : d'un côté, les valeurs supérieures à 5, de l'autre, les valeurs inférieures à 5. Vous pouvez ensuite comparer la précision de ces deux groupes.  
+### <a name="requirements"></a>Configuration requise  
+ Dans le cas de la prédiction d'une valeur discrète, vous devez sélectionner la valeur cible à prédire. Par exemple, si vos données sont classées avec une réponse « Oui : Acheter » en tant que 1 et la réponse « No : Ne pas acheter » en tant que 2, vous devez spécifier 1 ou 2 comme valeurs de prédiction. Par contre, si vous voulez prédire une plage de valeurs, vous ne pouvez comparer que deux valeurs à la fois. Par exemple, si vous voulez prédire un score supérieur à 5, il peut être nécessaire de réétiqueter vos données sources et de créer un nouveau modèle qui sépare les résultats en deux groupes : d'un côté, les valeurs supérieures à 5, de l'autre, les valeurs inférieures à 5. Vous pouvez ensuite comparer la précision de ces deux groupes.  
   
 ## <a name="understanding-accuracy"></a>À propos de la précision  
  Vous pouvez créer deux types de graphiques, l'un permettant de spécifier un état de la colonne prévisible, et l'autre ne permettant pas de spécifier l'état.  

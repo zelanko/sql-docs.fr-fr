@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 92e34de1b9fd675570527f9a28f8476a51597f10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472556"
 ---
 # <a name="data-shaping-example"></a>Exemple de mise en forme des données
 Les données suivantes mise en forme de la commande montre comment générer une liste hiérarchique **Recordset** à partir de la **clients** et **commandes** tables dans la base de données Northwind.  
@@ -38,7 +38,7 @@ RELATE customerID TO customerID)
 |ALFKI|Maria Ander|10643<br /><br /> 10692<br /><br /> 10702<br /><br /> 10835<br /><br /> 10952<br /><br /> 11011|1997-08-25<br /><br /> 1997-10-03<br /><br /> 1997-10-13<br /><br /> 1998-01-15<br /><br /> 1998-03-16<br /><br /> 1998-04-09|ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI<br /><br /> ALFKI|  
 |ANATR|Ana Trujillo|10308<br /><br /> 10625<br /><br /> 10759<br /><br /> 10926|1996-09-18<br /><br /> 1997-08-08<br /><br /> 1997-11-28<br /><br /> 1998-03-04|ANATR<br /><br /> ANATR<br /><br /> ANATR<br /><br /> ANATR|  
   
- Dans la commande SHAPE APPEND permet de créer un enfant **Recordset** liés au parent **Recordset** (tel que retourné par la commande spécifique au fournisseur immédiatement après le mot clé de forme qui a été abordé plus haut) par la clause RELATE. Parent et enfant ont généralement au moins une colonne en commun : la valeur de la colonne dans une ligne du parent est identique à la valeur de la colonne dans toutes les lignes de l’enfant.  
+ Dans la commande SHAPE APPEND permet de créer un enfant **Recordset** liés au parent **Recordset** (tel que retourné par la commande spécifique au fournisseur immédiatement après le mot clé de forme qui a été abordé plus haut) par la clause RELATE. Parent et enfant ont généralement au moins une colonne en commun : La valeur de la colonne dans une ligne du parent est identique à la valeur de la colonne dans toutes les lignes de l’enfant.  
   
  Il existe un deuxième moyen d’utiliser les commandes SHAPE : à savoir, pour générer un parent **Recordset** à partir d’un enfant **Recordset**. Les enregistrements dans l’enfant **Recordset** sont regroupés, généralement à l’aide de la clause BY et une ligne est ajouté au parent **Recordset** pour chaque groupe résultant dans l’enfant. Si la clause BY est omise, l’enfant **Recordset** sera formulaire un seul groupe et le parent **Recordset** contient exactement une ligne. Cela est utile pour calculer des agrégats de « total général » tout l’enfant **Recordset**.  
   

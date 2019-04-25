@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: efa4c0758ed85008ccb04b30a8dcd8e24ed54208
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62511364"
 ---
 # <a name="subscriptions-page-report-manager"></a>Page Abonnements (Gestionnaire de rapports)
   La page Abonnements vous permet de répertorier tous les abonnements de la source de données partagée ou du rapport actifs. Si vous disposez d'une autorisation suffisante (accordée par la tâche « Gérer tous les abonnements », par exemple), vous pouvez afficher les abonnements de tous les utilisateurs. Si ce n'est pas le cas, cette page affiche uniquement les abonnements dont vous être propriétaire.  

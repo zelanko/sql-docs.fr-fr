@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eef8c87a152795d4756d05ba8a279a0d12cbc38c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628613"
 ---
 # <a name="embedded-sql-example"></a>Exemple Embedded SQL
 Le code suivant est un simple programme SQL incorporé, écrit en C. Le programme illustre des techniques SQL nombreuses, mais pas tout, de l’élément incorporé. Le programme invite l’utilisateur à un numéro de commande récupère le numéro de client, le vendeur et l’état de la commande et affiche les informations récupérées à l’écran.  

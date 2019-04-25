@@ -1,5 +1,5 @@
 ---
-title: Supprimer la bibliothèque de flux de données de tableau croisé dynamique Power | Documents Microsoft
+title: Supprimer la bibliothèque de flux de données de tableau croisé dynamique Power | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5faff360ee314ae35632e9fc8578d6bd71436b3e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467592"
 ---
 # <a name="delete-a-power-pivot-data-feed-library"></a>Supprimer une bibliothèque de flux de données PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34022556"
   
 4.  Cliquez sur **personnaliser «\<nom de votre bibliothèque > »**  
   
-5.  Sous Autorisations et Gestion, cliquez sur **Supprimer cette bibliothèque**.  
+5.  Sous Autorisations et gestion, cliquez sur **Supprimer cette bibliothèque**.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Flux de données Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  

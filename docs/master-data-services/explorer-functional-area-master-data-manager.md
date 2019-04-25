@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4433de08779a908686efb3082f3ce4651f76a402
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517085"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Zone fonctionnelle Explorateur (Master Data Manager)
 
@@ -62,7 +62,7 @@ ms.locfileid: "52821893"
   
  [Réactiver un membre ou une collection &#40;Master Data Services&#41;](../master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Application Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   

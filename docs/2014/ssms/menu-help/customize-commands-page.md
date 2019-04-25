@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 805d500f33c661756d211f081254608eb389f298
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470016"
 ---
 # <a name="customize-commands-page"></a>Personnaliser (page Commandes)
   Cette boîte de dialogue vous permet d'ajouter des commandes à des barres d'outils et à des menus et d'en supprimer, ainsi que de modifier les images utilisées pour représenter les boutons des barres d'outils ou les commandes des menus. Vous pouvez accéder à la page **Commandes** en cliquant sur **Personnaliser** dans le menu **Outils** , puis en cliquant sur **Commandes**.  

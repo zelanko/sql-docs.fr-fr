@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5176d4e40f0f99810a14ad5ce4298e3a7167d770
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640278"
 ---
 # <a name="browsing-a-forecasting-model"></a>Exploration d'un modèle de prévision
   Lorsque vous ouvrez un modèle de prévision à l’aide **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de modèle de série de temps dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse permet d'explorer les tendances, de comparer les séries, de créer des prédictions et d'obtenir des informations sur le modèle et les données sous-jacentes.  

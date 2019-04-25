@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50099680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509938"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Afficher l’historique d’actualisation des données (Power Pivot pour SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "50099680"
   
 |Élément|Description|  
 |----------|-----------------|  
-|Nom   |Spécifie le nom de fichier du classeur Excel qui contient les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|Nom|Spécifie le nom de fichier du classeur Excel qui contient les données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |État actuel|Les valeurs possibles sont **Planifiée**, **Actualisation**, **Opération réussie**ou **Échec**.<br /><br /> **Planifiée** apparaît la première fois que vous créez la planification. Une fois la première actualisation des données effectuée, ce message d'état ne s'affiche plus.<br /><br /> **Actualisation** indique que l'actualisation des données est en cours. Une requête figure dans la file d'attente des processus ou s'exécute activement sur le serveur.<br /><br /> **Opération réussie** indique que la dernière opération d'actualisation des données est terminée et que le classeur mis à jour est archivé dans la bibliothèque SharePoint.<br /><br /> **Échec** indique que la dernière opération d'actualisation des données n'a pas réussi. Les données actualisées n'ont pas été enregistrées. Le classeur contient les mêmes données qu'avant l'opération d'actualisation des données.|  
 |Dernière actualisation réussie|Spécifie la date de dernière exécution réussie de l'actualisation des données.|  
 |Prochaine actualisation planifiée|Spécifie la date prévue pour la prochaine actualisation des données.<br /><br /> Le lien **Configurer la planification** vous dirige vers la page de définition de la planification. Si vous disposez d’autorisations de collaboration sur le classeur, vous pouvez cliquer sur ce lien pour visualiser et modifier les informations de planification qui contrôlent l’actualisation sans assistance des données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] du classeur.|  

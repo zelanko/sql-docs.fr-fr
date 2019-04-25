@@ -18,11 +18,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c34e517cadb6f529cd0406ae84a09eefc13f9c25
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467820"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Autorisations de feuille (services de données de référence)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52817801"
   
 -   Les autorisations attribuées à **Nom** et **Code** ne sont pas appliquées.  
   
-|Autorisation|Description|  
+|Permission|Description|  
 |----------------|-----------------|  
 |**Lecture**|L’utilisateur peut lire les membres feuille et les attributs.|  
 |**Créer**|L’utilisateur peut créer des membres feuille et affecter des valeurs d’attribut lors de la création.|  
@@ -51,18 +51,18 @@ ms.locfileid: "52817801"
 ## <a name="attribute-permissions"></a>Autorisations d'attribut  
  Les autorisations d’attribut s’appliquent aux valeurs de l’attribut pour l’entité spécifique. Les utilisateurs avec des autorisations d'attribut uniquement ne peuvent pas ajouter ni supprimer des membres.  
   
-|Autorisation|Description|  
+|Permission|Description|  
 |----------------|-----------------|  
 |**Lecture**|L’utilisateur peut lire des attributs.|  
 |**Créer**|L’utilisateur peut attribuer des valeurs lorsqu’il crée des membres.|  
 |**Update**|L’utilisateur peut mettre à jour des attributs.|  
 |**Supprimer**|Aucun effet.|  
-|**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : Vous ne pouvez pas refuser explicitement l'accès aux attributs Name et Code.|  
+|**Refuser**|L'attribut n'est pas affiché.<br /><br /> Remarque : Vous ne pouvez pas refuser explicitement l’accès aux attributs Name et Code.|  
   
-### <a name="example"></a> Exemple  
+### <a name="example"></a>Exemple  
  Pour l'entité Product, affectez l'autorisation **Mise à jour** à l'attribut Subcategory. Autorisation refuser à tous les autres attributs.  
   
-|Créer une vue d’abonnement|Code|Subcategory (Mise à jour)|  
+|Nom|Code|Subcategory (Mise à jour)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Mountain Bikes|  
 |Mountain-100|BK-M201|{5} Mountain Bikes|  
@@ -72,7 +72,7 @@ ms.locfileid: "52817801"
 > [!NOTE]  
 >  Dans cet exemple, Subcategory est un attribut basé sur un domaine, basé sur l'entité SubcategoryList. Vous pouvez sélectionner une sous-catégorie différente pour Mountain-100, mais vous ne pouvez pas ajouter ni supprimer des membres dans l'entité SubcategoryList.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
     
  [Autorisations d’objet de modèle &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)   

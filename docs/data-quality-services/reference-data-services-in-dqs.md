@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 35ba90efe3233c34f710dda0e35b7108352df421
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469430"
 ---
 # <a name="reference-data-services-in-dqs"></a>Services de données de référence dans DQS
 

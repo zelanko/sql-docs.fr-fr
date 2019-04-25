@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633770"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>Grammaire ODBC SQL prise en charge (pilote ODBC Visual FoxPro)
 Le pilote ODBC Visual FoxPro Microsoft prend en charge les éléments suivants :  
@@ -44,7 +44,7 @@ Le pilote ODBC Visual FoxPro Microsoft prend en charge les éléments suivants 
   
  En plus de la grammaire SQL ODBC pris en charge, le pilote ODBC Visual FoxPro prend en charge la syntaxe complète du langage Visual FoxPro native pour les commandes de Visual FoxPro suivantes :  
   
- [MODIFICATION DE LA TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
+ [ALTER TABLE](../../odbc/microsoft/alter-table-sql-command.md)  
   
  [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md)  
   

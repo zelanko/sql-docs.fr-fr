@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 690d12a2f5f397256760c1c0cf5e2ee954d90843
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473895"
 ---
 # <a name="refresh-from-database-mysqltosql"></a>Actualiser à partir de la base de données (MySQLToSQL)
 Le **Actualiser à partir de la base de données** boîte de dialogue vous permet de sélectionner les objets à actualiser à partir de la base de données MySQL. Lignes dans la boîte de dialogue sont codées par couleur selon l’état des métadonnées :  
@@ -38,7 +38,7 @@ Pour accéder à la **Actualiser à partir de la base de données** boîte de di
 |-|-|  
 |**Terme**|**Définition**|  
 |**Réduction (-)**|Réduire tous les groupes d’objets pour masquer les objets individuels.|  
-|**Développement (+)**|Développez tous les groupes d’objets pour afficher les objets individuels.|  
+|**Expand (+)**|Développez tous les groupes d’objets pour afficher les objets individuels.|  
 |**Masquer/afficher les objets identiques**|Masquer les objets dans la liste si les métadonnées d’objet sont le même dans la base de données MySQL et de SSMA.|  
 |**Actualiser à partir de la base de données (flèche)**|Utilisez le bouton fléché pour spécifier que les métadonnées pour les objets sélectionnés doivent être mis à jour dans SSMA.|  
 |**Faire pas actualiser à partir de la base de données (bouton) X**|Utilisez le bouton X pour spécifier que les métadonnées pour les objets sélectionnés ne doivent pas mis à jour dans SSMA.|  

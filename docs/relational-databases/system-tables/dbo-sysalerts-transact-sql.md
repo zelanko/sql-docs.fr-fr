@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7bad6fbd9229547318a060f08eeb102b21cda9bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470887"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47855038"
 |**job_id**|**uniqueidentifier**|Identificateur du travail exécuté lorsque l'alerte se produit.|  
 |**has_notification**|**Int**|Nombre d'opérateurs avertis par courrier électronique lorsque l'alerte a lieu.|  
 |**flags**|**Int**|Réservé.|  
-|**argument condition_performances**|**nvarchar(512)**|Réservé.|  
+|**performance_condition**|**nvarchar(512)**|Réservé.|  
 |**category_id**|**Int**|Réservé.|  
   
  ## <a name="remarks"></a>Notes

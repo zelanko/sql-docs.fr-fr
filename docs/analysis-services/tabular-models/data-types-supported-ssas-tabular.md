@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472198"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Types de données pris en charge dans les modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,10 +31,10 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
 ||||  
 |-|-|-|  
 |**Type de données dans le modèle**|**Type de données dans DAX**|**Description**|  
-|Nombre entier|Valeur entière de 64 bits (huit octets)*<br /><br /> Remarque :<br />         Les formules DAX ne prennent pas en charge les types de données qui sont trop petits pour contenir la valeur minimale indiquée dans la description.|Nombres qui n'ont pas de décimales. Les entiers peuvent être des nombres positifs ou négatifs, mais doivent être compris entre -9 223 372 036 854 775 808 (-2^63) et 9 223 372 036 854 775 807 (2^63-1).|  
-|Nombre décimal|Nombre réel de 64 bits (huit octets)*<br /><br /> Remarque :<br />         Les formules DAX ne prennent pas en charge les types de données qui sont trop petits pour contenir la valeur minimale indiquée dans la description.|Les nombres réels sont des nombres qui peuvent avoir des décimales. Les nombres réels couvrent une large gamme de valeurs :<br /><br /> Valeurs négatives de -1.79E +308 à -2.23E -308<br /><br /> Zéro<br /><br /> Valeurs positives de 2.23E -308 à -1.79E +308<br /><br /> Toutefois, le nombre de bits significatifs est limité à 17 chiffres décimaux.|  
+|Nombre entier|Valeur entière de 64 bits (huit octets)*<br /><br /> Remarque :<br />         Les formules DAX ne prennent pas en charge les types de données qui sont trop petits pour contenir la valeur minimale indiquée dans la description.|Nombres qui n'ont pas de décimales. Les entiers peuvent être des nombres positifs ou négatifs, mais doivent être compris entre -9 223 372 036 854 775 808 (-2^63) et 9 223 372 036 854 775 807 (2^63-1).|  
+|Nombre décimal|Nombre réel de 64 bits (huit octets)*<br /><br /> Remarque :<br />         Les formules DAX ne prennent pas en charge les types de données qui sont trop petits pour contenir la valeur minimale indiquée dans la description.|Les nombres réels sont des nombres qui peuvent avoir des décimales. Les nombres réels couvrent une large gamme de valeurs :<br /><br /> Valeurs négatives de -1.79E +308 à -2.23E -308<br /><br /> Zéro<br /><br /> Valeurs positives de 2.23E -308 à -1.79E +308<br /><br /> Toutefois, le nombre de bits significatifs est limité à 17 chiffres décimaux.|  
 |Booléen|Booléen|Valeur True ou valeur False.|  
-|Texte|String|Chaîne de données caractères au format Unicode. Peut être des chaînes, nombres ou dates représentés dans un format de texte.|  
+|Text|String|Chaîne de données caractères au format Unicode. Peut être des chaînes, nombres ou dates représentés dans un format de texte.|  
 |Date|Date/heure|Dates et heures dans une représentation date-heure acceptée.<br /><br /> Les dates valides sont toutes les dates après le 1er mars 1900.|  
 |Monétaire (Currency)|Monétaire (Currency)|Le type de données devise autorise des valeurs entre -922 337 203 685 477,5808 et 922 337 203 685 477,5807 avec quatre chiffres décimaux à précision fixe.|  
 |N/A|Vide|Le type de données Vide (Blank) de DAX représente et remplace les valeurs Null SQL. Vous pouvez créer une valeur vide à l'aide de la fonction BLANK et tester les valeurs vides à l'aide de la fonction logique ISBLANK.|  
@@ -58,7 +58,7 @@ Lorsque vous importez des données ou utilisez une valeur dans une formule, mêm
 > [!NOTE]  
 >  Vous ne pouvez pas importer à partir d’une colonne **varchar(max)** qui contient une chaîne de plus de 131 072 caractères.  
   
-### <a name="table-data-type"></a>Type de données table  
+### <a name="table-data-type"></a>Type de données de table  
  En outre, DAX utilise un type de données *table* . Ce type de données est utilisé par DAX dans de nombreuses fonctions, comme les agrégations et les calculs Time Intelligence. Certaines fonctions requièrent une référence à une table ; d'autres retournent une table qui peut ensuite être utilisée en entrée pour d'autres fonctions. Dans certaines fonctions qui requièrent une table en entrée, vous pouvez spécifier une expression qui donne une table ; pour d'autres, une référence à une table de base est obligatoire. Pour plus d'informations sur les exigences de fonctions spécifiques, voir [Référence des fonctions DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
   
 ##  <a name="bkmk_implicit"></a> Conversion de types de données implicites et explicites dans les formules DAX

@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e9549c442e301f3a6ed8d3da9c73d52177adf01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628901"
 ---
 # <a name="mapping-the-cursor-attributes1-information-types"></a>Mappage des types d’informations Attributes1 du curseur
 Lorsqu’une application ODBC 3. *x* application appelle **SQLGetInfo** dans un ODBC 2 *.x* pilote avec le type d’information SQL_XXXX_CURSOR_ATTRIBUTES1 (pour dynamique, avant uniquement, les curseurs pilotés, ou les curseurs statiques), le paramètre des bits retournés par le Gestionnaire de pilotes dépend de ce que les 2 d’ODBC. *x* pilote retourne pour le correspondantes ODBC 2. *x* types d’informations. Les bits sont définis comme indiqué dans le tableau suivant.  
   
-|Bit dans<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Type de curseur|ODBC 2. *x* informations<br /><br /> Type|  
+|Bit dans<br /><br /> SQL_XXXX_CURSOR_ATTRIBUTES1|Type de curseur|ODBC 2. *x* informations<br /><br /> type|  
 |-----------------------------------------------|-----------------|-------------------------------------|  
 |SQL_CA1_NEXT|All|SQL_FETCH_DIRECTION|  
 |SQL_CA1_ABSOLUTE SQL_CA1_RELATIVE SQL_CA1_BOOKMARK|Dynamiques, curseurs pilotés, statiques|SQL_FETCH_DIRECTION|  

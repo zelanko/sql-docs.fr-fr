@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468190"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>Prise en charge de SQL Server Management Studio pour l'OLTP en mémoire
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] est un environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit des outils permettant de configurer, de surveiller et d’administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour plus d’informations, consultez [SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "48050119"
   
  Pour la base de données, la table, la procédure stockée, le type de table défini par l'utilisateur ou les objets Index, les fonctionnalités de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] suivantes ont été mises à jour ou étendues pour prendre en charge OLTP en mémoire.  
   
--   Explorateur d'objets  
+-   Explorateur d’objets  
   
     -   Menu contextuels  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48050119"
   
              Dans l’**Assistant Générer et publier des scripts**, la valeur par défaut de l’option de script **Vérifier l’existence de l’objet** est FALSE. Si la valeur de l’option de script **Vérifier l’existence de l’objet** est TRUE dans l’écran **Définir les options de script** de l’Assistant, le script généré contient « CREATE PROCEDURE <nom_procédure> AS » et « ALTER PROCEDURE <nom_procédure> <définition_procédure> ». Lorsqu'il est exécuté, le script généré retourne une erreur, car ALTER PROCEDURE n'est pas pris en charge sur les procédures stockées compilées en mode natif.  
   
-             Pour modifier le script généré pour chaque procédure stockée compilée en mode natif :  
+             Pour modifier le script généré pour chaque procédure stockée compilée en mode natif :  
   
             1.  Dans « CREATE PROCEDURE <nom_procédure> AS », remplacez « AS » par « <définition_procédure> ».  
   

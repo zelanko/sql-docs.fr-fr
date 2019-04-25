@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 72d0d4c0af1b09c8cad4ab6ab5ab6636fd302e4f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469407"
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
 
@@ -42,10 +42,10 @@ ms.locfileid: "56015430"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exécuter un projet de correspondance.  
   
-##  <a name="StartingaMatchingProject"></a> Dernière étape : Démarrage d'un projet de correspondance  
+##  <a name="StartingaMatchingProject"></a> Dernière étape : À partir d’un projet de correspondance  
  Vous effectuez l'activité de correspondance dans un projet de qualité des données que vous créez dans l'application cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../data-quality-services/run-the-data-quality-client-application.md).  
@@ -179,7 +179,7 @@ ms.locfileid: "56015430"
   
  Les statistiques de la base de données source sont les suivantes :  
   
--   **Enregistrements** : nombre total d’enregistrements dans la base de données  
+-   **Enregistrements** : Nombre total d'enregistrements dans la base de données  
   
 -   **Valeurs totales** : nombre total de valeurs dans les champs  
   

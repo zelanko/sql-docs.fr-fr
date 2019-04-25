@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cfbe388f6320ba81dd2be38bf315f05326008235
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632336"
 ---
 # <a name="filestream-support-odbc"></a>Prise en charge de FILESTREAM (ODBC)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47637747"
  Si vous appelez SQLFetch sur une colonne liée, vous recevrez un avertissement « données tronquées » si la mémoire tampon n’est pas assez grande pour contenir la valeur entière. Ignorer cet avertissement et mettre à jour les données dans cette colonne liée avec les appels de SQLParamData et SQLPutData. Vous pouvez mettre à jour les données FILESTREAM à l’aide de SQLSetPos si elles sont liées avec SQLBindCol.  
   
 ## <a name="example"></a>Exemple  
- Les colonnes FILESTREAM se comportent exactement comme **varbinary (max)** colonnes, mais sans une taille limitent. Elles sont liées en tant que SQL_VARBINARY. (SQL_LONGVARBINARY est utilisé avec les colonnes image et ce type comporte un certain nombre de restrictions. Par exemple, SQL_LONGVARBINARY ne peut pas être utilisé comme paramètre de sortie.) Les exemples suivants affichent l'accès NTFS direct pour les colonnes FILESTREAM. Ces exemples supposent que le code [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant a été exécuté dans la base de données :  
+ Les colonnes FILESTREAM se comportent exactement comme **varbinary (max)** colonnes, mais sans une taille limitent. Elles sont liées en tant que SQL_VARBINARY. (SQL_LONGVARBINARY est utilisé avec les colonnes image et ce type comporte un certain nombre de restrictions. Par exemple, SQL_LONGVARBINARY ne peut pas être utilisé comme un paramètre de sortie.) Les exemples suivants montrent l’accès NTFS direct pour les colonnes FILESTREAM. Ces exemples supposent que le code [!INCLUDE[tsql](../../../includes/tsql-md.md)] suivant a été exécuté dans la base de données :  
   
 ```  
 CREATE TABLE fileStreamDocs(  

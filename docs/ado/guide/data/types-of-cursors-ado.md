@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db77de95e83e596a8a301fa65885ee640c742a71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472311"
 ---
 # <a name="types-of-cursors-ado"></a>Types de curseurs (ADO)
 En règle générale, votre application doit utiliser le curseur de la plus simple qui fournit l’accès aux données requises. Toutes les caractéristiques supplémentaires au-delà de ses fonctions de base (avant uniquement, en lecture seule, statique, défilement, sans tampon) a un prix - dans la mémoire du client, de la charge réseau ou les performances. Dans de nombreux cas, les options de curseur par défaut génèrent un curseur plus complexe que votre application a réellement besoin.  

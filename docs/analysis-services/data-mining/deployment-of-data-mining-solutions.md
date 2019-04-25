@@ -1,5 +1,5 @@
 ---
-title: Déploiement de Solutions d’exploration de données | Documents Microsoft
+title: Déploiement de Solutions d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b42d01b097483d9088bd76257cd30ac37158f889
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467405"
 ---
-# <a name="deployment-of-data-mining-solutions"></a>Déploiement de solutions d'exploration de données
+# <a name="deployment-of-data-mining-solutions"></a>Déploiement de solutions d’exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   La dernière étape du processus d'exploration de données consiste à déployer les modèles dans un environnement de production. Le déploiement est important car il met les modèles à la disposition des utilisateurs afin de vous permettre d'effectuer n'importe laquelle des tâches suivantes :  
   
@@ -37,7 +37,7 @@ ms.locfileid: "34015216"
  [Ressources connexes](#bkmk_Resources)  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Déployer une Solution d’exploration de données pour les Versions précédentes de SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+ [Déployer une solution d'exploration de données sur des versions antérieures de SQL Server](../../analysis-services/data-mining/deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Exporter et importer des objets d’exploration de données](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
@@ -71,13 +71,13 @@ ms.locfileid: "34015216"
   
  Lorsque des modèles utilisent un cube comme source de données, reportez-vous à cette rubrique pour plus d'informations sur le déplacement de modèles et de leurs données de cube de prise en charge.  
   
- [Déployer des projets Analysis Services & #40 ; SSDT & #41 ;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Déployer des projets Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
  Fournit des informations générales sur le déploiement de projets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , et décrit les propriétés que vous pouvez définir dans le cadre de la configuration du projet.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Traitement d’un modèle multidimensionnel &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Outils de requête d'exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Le traitement de la configuration requise et considérations relatives à la & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Outils de requête d’exploration de données](../../analysis-services/data-mining/data-mining-query-tools.md)   
+ [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](../../analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

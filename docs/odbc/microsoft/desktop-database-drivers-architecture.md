@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629071"
 ---
 # <a name="desktop-database-drivers-architecture"></a>Architecture des pilotes pour les bases de données de poste de travail
 Ces pilotes sont conçus pour les utiliser sur Microsoft Windows 95 ou version ultérieure, ou Windows NT 4.0 et Windows 2000. Seules les applications 32 bits sont pris en charge sur Windows 95 ou version ultérieure ; les applications 16 bits et 32 bits sont prises en charge sur Windows NT 4.0 et Windows 2000.  

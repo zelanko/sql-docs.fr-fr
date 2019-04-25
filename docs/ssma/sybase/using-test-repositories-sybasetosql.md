@@ -13,11 +13,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 939342a85ed657faa645c593018cbf39042031c2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625826"
 ---
 # <a name="using-test-repositories-sybasetosql"></a>Utilisation de référentiels de tests (SybaseToSQL)
 Les magasins de référentiel de Test de SSMA SSMA testeur de cas de test et les résultats des tests pour une utilisation ultérieure. Les données de référentiel sont enregistrées dans les tables SQL Server **TestCaseRepository** et **RunTestCaseResultRepository** dans le schéma **ssma_sybase_utilities** de **ssmatesterdb_syb** base de données.  
@@ -64,7 +64,7 @@ Les informations suivantes sur les résultats des tests s’affiche dans la gril
   
 -   Nom : Nom du cas de test.  
   
--   Début : Date du cas de test en cours d’exécution.  
+-   En route : Date du cas de test en cours d’exécution.  
   
 -   Résultat : Un bref résumé de l’exécution du test (info-bulle de cette cellule affiche un résumé complet de l’exécution de tests).  
   

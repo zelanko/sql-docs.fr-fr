@@ -20,11 +20,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759918"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Bien démarrer avec l’Assistant Migration SQL Server pour l’accès (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) pour l’accès vous permet de convertir rapidement accéder aux objets de base de données à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de base de données SQL Azure, téléchargez les objets résultants dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure, et migrer des données à partir de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure. Si nécessaire, vous pouvez également lier des tables de l’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou sur des tables de base de données SQL Azure afin que vous pouvez continuer à utiliser vos applications frontales Access existantes avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure.  
@@ -88,7 +88,7 @@ Vous pouvez utiliser SQL Server ou l’Explorateur de métadonnées de base de d
 Pour plus d’informations, consultez [le chargement des objets de base de données convertis dans SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md).  
   
 ### <a name="metadata"></a>Métadonnées  
-À droite de chaque Explorateur de métadonnées des onglets qui décrivent l’objet sélectionné. Par exemple, si vous sélectionnez une table dans l’Explorateur de métadonnées d’accès, quatre onglets apparaissent : **Table**, **le mappage de Type**, **propriétés**, et **données** . Si vous sélectionnez une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, trois onglets s’affichent : **Table**, **SQL**, et **données**.  
+À droite de chaque Explorateur de métadonnées des onglets qui décrivent l’objet sélectionné. Par exemple, si vous sélectionnez une table dans l’Explorateur de métadonnées d’accès, quatre onglets s’affichent : **Table**, **mappage de Type**, **propriétés**, et **données**. Si vous sélectionnez une table dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Explorateur de métadonnées, trois onglets s’affichent : **Table**, **SQL**, et **données**.  
   
 La plupart des paramètres de métadonnées sont en lecture seule. Toutefois, vous pouvez modifier les métadonnées suivantes :  
   
@@ -120,7 +120,7 @@ SSMA contient les menus suivants :
 |--------|---------------|  
 |**Fichier**|Contient des commandes pour l’Assistant de Migration, travaillez avec des projets, ajout et suppression des fichiers de base de données Access et la connexion à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou base de données SQL Azure.|  
 |**Modifier**|Contient des commandes pour la recherche et de travailler avec du texte dans les pages de détails, telles que la copie [!INCLUDE[tsql](../../includes/tsql-md.md)] depuis le volet de détails SQL. Pour ouvrir le **gérer les signets** boîte de dialogue, dans le menu Edition, cliquez sur Gérer les signets. Dans la boîte de dialogue, vous verrez une liste de signets existants. Vous pouvez utiliser les boutons sur le côté droit de la boîte de dialogue pour gérer les signets.|  
-|**Afficher**|Contient le **synchroniser les explorateurs de métadonnées** commande. Cette opération synchronise les objets entre l’Explorateur de métadonnées d’accès et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’Explorateur de métadonnées de base de données SQL Azure. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les mises en page.|  
+|**Affichage**|Contient le **synchroniser les explorateurs de métadonnées** commande. Cette opération synchronise les objets entre l’Explorateur de métadonnées d’accès et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou l’Explorateur de métadonnées de base de données SQL Azure. Contient également des commandes pour afficher et masquer le **sortie** et **liste d’erreurs** volets et une option **dispositions** pour gérer les mises en page.|  
 |**Outils**|Contient des commandes pour créer des rapports, exporter des données, migrer des objets et données, liez des tables et fournit des boîtes de dialogue Paramètres d’accès au déploiement global et projet.|  
 |**Aide**|Fournit l’accès à l’aide de SSMA et en le **sur** boîte de dialogue.|  
   

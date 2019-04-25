@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e336031d37ab09c3a2258be3aa3f5d570bf87a6e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762333"
 ---
 # <a name="mssqlserver7906"></a>MSSQLSERVER_7906
     
@@ -30,7 +30,7 @@ ms.locfileid: "48101699"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC2_FS_INVALID_TOP_LEVEL_FILE|  
-|Texte du message|Erreur de base de données : la base de données %d contient des métadonnées incohérentes.|  
+|Texte du message|Erreur de base de données : Le fichier 'Fichier' n’est pas un fichier Filestream valide.|  
   
 ## <a name="explanation"></a>Explication  
  À l'exception de certains fichiers spéciaux, tels que « filestream.hdr », aucun fichier ne doit figurer directement dans l'espace de données Filestream.  

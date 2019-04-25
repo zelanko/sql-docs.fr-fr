@@ -19,35 +19,35 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632769"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Fonctions d’heure et de date (pilote ODBC Visual FoxPro)
 Le tableau suivant répertorie les fonctions de date et heure ODBC pris en charge par le pilote ODBC Visual FoxPro ; lors de la grammaire de Visual FoxPro pour la même fonction diffère de la syntaxe ODBC, le Visual FoxPro équivalent est répertorié.  
   
 |Grammaire ODBC|Grammaire de Visual FoxPro|  
 |------------------|---------------------------|  
-|CURDATE *)*|DATE *)*|  
-|CURTIME *)*|TEMPS *)*|  
+|CURDATE *( )*|DATE *( )*|  
+|CURTIME *( )*|TIME *( )*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH (*date_exp)*|JOUR *)*|  
-|HEURE *(time_exp)*||  
+|DAYOFMONTH(*date_exp)*|JOUR *)*|  
+|HOUR *(time_exp)*||  
 |MINUTE *(time_exp)*||  
-|MOIS *(time_exp)*||  
+|MONTH *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|MAINTENANT *)*|DATE/HEURE *)*|  
-|DEUXIÈME *(time_exp)*|S *(time_exp)*|  
-|SEMAINE *(date_exp)*||  
-|ANNÉE *(date_exp)*||  
+|NOW *( )*|DATETIME *( )*|  
+|SECOND *(time_exp)*|SEC *(time_exp)*|  
+|WEEK *(date_exp)*||  
+|YEAR *(date_exp)*||  
   
  Les fonctions de date et heure suivantes ne sont pas prises en charge :  
   
  DAYOFYEAR *(date_exp)*  
   
- TRIMESTRE *(date_exp)*  
+ QUARTER *(date_exp)*  
   
  TIMESTAMPADD *(intervalle, integer_exp, exp_estampille)*  
   

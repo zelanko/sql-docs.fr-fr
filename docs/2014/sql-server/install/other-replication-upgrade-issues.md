@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5ffde063d94f0e08ea0e82e6b5998a6d23cfaac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473180"
 ---
 # <a name="other-replication-upgrade-issues"></a>Autres problèmes de mise à niveau de la réplication
   Cette rubrique traite de plusieurs problèmes de mise à niveau qui ne sont pas signalés par le Conseiller de mise à niveau.  
@@ -50,7 +50,7 @@ ms.locfileid: "48200729"
   
 -   Tous les contrôles ActiveX sont marqués comme non sûrs pour l'écriture de scripts et l'initialisation.  
   
--   Le contrôle ActiveX d'instantané a été supprimé. Vous pouvez créer et gérer des instantanés à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou par programmation en utilisant des procédures stockées de réplication. Pour plus d'informations, consultez les rubriques « Procédure : créer et appliquer l'instantané initial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) » et « Procédure : créer l'instantané initial (programmation Transact-SQL de programmation) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Le contrôle ActiveX d'instantané a été supprimé. Vous pouvez créer et gérer des instantanés à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou par programmation en utilisant des procédures stockées de réplication. Pour plus d’informations, consultez les rubriques « Comment : Créer et appliquer l’instantané Initial ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) » et « comment : Créer l’instantané Initial (programmation Transact-SQL) » dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
   
 -   Le contrôle ActiveX de distribution et le contrôle ActiveX de fusion ont été déconseillés. Une fonctionnalité semblable est fournie pour les applications de code managé à l'aide de Replication Management Objects. Pour plus d'informations, consultez « Synchronisation des abonnements (Programmation RMO) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

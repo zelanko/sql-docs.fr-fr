@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9bcb19e10417c24b30b5ee6346d6d6a19d4bbcb
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636778"
 ---
 # <a name="analysis-server-properties-dialog-box-analysis-services"></a>Boîte de dialogue Propriétés de Analysis Server (Analysis Services)
   Utilisez la boîte de dialogue **Propriétés de Analysis Server** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les paramètres généraux, de langue/classement et de sécurité d’une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour afficher la boîte de dialogue **Propriétés de Analysis Server**, cliquez avec le bouton droit de la souris sur une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans **l’Explorateur d’objets**, puis sélectionnez **Propriétés** dans le menu contextuel. Cette boîte de dialogue **Propriétés de Analysis Server** contient les propriétés suivantes.  
@@ -84,7 +84,7 @@ ms.locfileid: "50145094"
   
      Si l'option n'est pas cochée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences entre les lettres accentuées et non accentuées.  
   
--   **Respecter le jeu de caractères Kana** permet de trier et de comparer les données d’après les règles du dictionnaire de la langue ou de l’alphabet associé, et de faire la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana.  
+-   **De caractères Kana** est utilisé pour et comparer les données selon les règles du dictionnaire pour la langue associée ou l’alphabet et faire la distinction entre les deux types de caractères japonais kana : Hiragana et Katakana.  
   
      Si l'option n'est pas choisie, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences entre les caractères Hiragana et Katakana.  
   

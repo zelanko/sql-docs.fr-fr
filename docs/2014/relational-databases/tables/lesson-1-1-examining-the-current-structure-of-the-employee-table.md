@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 38c16d837dd886785479e1e2994b5b0f19372cfe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62760868"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Étude de la structure actuelle de la table Employee
   L'exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] contient une table **Employee** dans le schéma **HumanResources** . Afin d'éviter de modifier la table d'origine, cette étape effectue une copie de la table **Employee** , nommée **EmployeeDemo**. Pour simplifier l'exemple, vous ne copiez que cinq colonnes de la table d'origine. Ensuite, vous interrogez le **HumanResources.EmployeeDemo** table pour passer en revue la façon dont les données sont structurées dans une table sans utiliser le `hierarchyid` type de données.  

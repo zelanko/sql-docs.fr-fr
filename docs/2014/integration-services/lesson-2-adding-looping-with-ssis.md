@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767551"
 ---
-# <a name="lesson-2-adding-looping"></a>Leçon 2 : Ajout d'un bouclage
+# <a name="lesson-2-adding-looping"></a>Leçon 2 : Ajout d’un bouclage
   Dans [Leçon 1 : Création du projet et le Package de base](lesson-1-create-a-project-and-basic-package-with-ssis.md), que vous avez créé un package qui extrait des données d’une source de fichier plat unique, transformé les données à l’aide de transformations de recherche et enfin de charger les données dans le **FactCurrency** table de faits de la **AdventureWorksDW2012** base de données exemple.  
   
  Toutefois, il est rare qu'un processus d'extraction, de transformation et de chargement (ETL, extract, transform, and load) utilise un seul fichier plat. Un processus ETL classique extrait généralement les données de plusieurs sources de fichiers plats. L'extraction des données à partir de plusieurs sources nécessite un flux de contrôle répétitif. L'une des fonctions les plus appréciées de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est la facilité avec laquelle vous pouvez ajouter une itération ou un bouclage aux packages.  

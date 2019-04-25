@@ -34,11 +34,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7004f2cae60ab69c6c4bf94ceee47d270579570b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62631362"
 ---
 # <a name="xml-indexes-sql-server"></a>Index XML (SQL Server)
   Des index XML peuvent être créés sur des colonnes de type `xml`. L'indexation porte sur les balises, les valeurs et les chemins d'accès rencontrés dans les instances XML de la colonne et contribue à l'optimisation des performances des requêtes. Votre application peut bénéficier d'un index XML dans les situations suivantes :  
@@ -53,7 +53,7 @@ ms.locfileid: "58533971"
   
 -   Index XML secondaires  
   
- Le premier index portant sur la colonne de type `xml` est obligatoirement l'index XML primaire. Par le biais de l'index XML primaire, les trois types d'index secondaires suivants sont pris en charge : PATH, VALUE et PROPERTY. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
+ Le premier index portant sur la colonne de type `xml` est obligatoirement l'index XML primaire. À l’aide de l’index XML primaire, les types d’index secondaires suivants sont pris en charge : Chemin d’accès, la valeur et la propriété. Selon le type de requêtes, ces index secondaires peuvent contribuer à améliorer les performances liées à l'exécution de requêtes.  
   
 > [!NOTE]  
 >  Vous ne pouvez pas créer ou modifier d'index XML à moins que les options de base de données ne soient définies correctement pour utiliser le type de données `xml`. Pour plus d’informations, consultez [Utiliser la recherche en texte intégral avec des colonnes XML](use-full-text-search-with-xml-columns.md).  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dce19cfa521bcf14c2d42ef932083de8deea72fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465763"
 ---
 # <a name="lock-a-version-master-data-services"></a>Verrouiller une version (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52757761"
 > [!NOTE]  
 >  Quand une version est verrouillée, les super utilisateurs et les administrateurs de modèle peuvent continuer à ajouter, à modifier et à supprimer des membres. Les autres utilisateurs qui ont une autorisation sur le modèle peuvent consulter les membres uniquement.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez être administrateur de modèle. Pour plus d’informations, consultez [Administrateurs &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
@@ -49,13 +49,13 @@ ms.locfileid: "52757761"
   
 4.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   [Valider une version par rapport aux règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   [Activer une version &#40;Master Data Services&#41;](../master-data-services/commit-a-version-master-data-services.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Déverrouiller une version &#40;Master Data Services&#41;](../master-data-services/unlock-a-version-master-data-services.md)  
   

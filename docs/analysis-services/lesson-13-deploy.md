@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6b2ed8149cef9e9886398feebf43329f962b9537
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467618"
 ---
 # <a name="lesson-13-deploy"></a>Leçon 13 : Déployer
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dans cette leçon, vous allez configurer les propriétés de déploiement ; en spécifiant un local ou instance de serveur Azure et un nom pour le modèle. Vous allez ensuite déployer le modèle à cette instance. Une fois que votre modèle est déployé, les utilisateurs y connecter à l’aide d’une application cliente de création de rapports. Pour en savoir plus sur le déploiement, consultez [déploiement de solutions de modèle tabulaire](../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md) et [déployer sur Azure Analysis Services](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy).  
   
-Durée estimée pour effectuer cette leçon : **5 minutes**  
+Durée estimée pour effectuer cette leçon : **5 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
-Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 12 : analyser dans Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
+Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 12 : Analyser dans Excel](../analysis-services/lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Déployer le modèle  
   
@@ -34,7 +34,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
 2.  Dans le **Pages de propriétés de AW Internet Sales** boîte de dialogue **serveur de déploiement**, dans le **Server** propriété, tapez le nom d’un serveur Azure Analysis Services ou un instance de serveur sur site en cours d’exécution en mode tabulaire. Il s’agit de votre modèle sera déployé sur l’instance de serveur.  
 
-    ![AAS-déployer-déploiement-server-propriété](../analysis-services/media/aas-deploy-deployment-server-property.png)
+    ![aas-deploy-deployment-server-property](../analysis-services/media/aas-deploy-deployment-server-property.png)
  
     > [!IMPORTANT]  
     > Vous devez disposer des autorisations d’administrateur sur le distant Analysis Services instance pour pouvoir déployer sur celui-ci.  
@@ -55,14 +55,14 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
     La boîte de dialogue Déployer apparaît et affiche l'état de déploiement des métadonnées ainsi que de chaque table incluse dans le modèle.  
     
-    ![AAS-déployer-status](../analysis-services/media/aas-deploy-status.png)
+    ![aas-deploy-status](../analysis-services/media/aas-deploy-status.png)
   
 3. Une fois le déploiement correctement effectué, cliquez sur **Fermer**.  
   
 ## <a name="conclusion"></a>Conclusion  
-Félicitations ! Vous avez terminé de créer et déployer votre premier modèle tabulaire Analysis Services. Ce didacticiel vous a guidés dans les tâches courantes pour créer un modèle tabulaire. Maintenant que votre modèle Internet Sales Adventure Works est déployé, vous pouvez utiliser SQL Server Management Studio pour gérer le modèle, créer des scripts de processus et un plan de sauvegarde. Les utilisateurs peuvent également maintenant vous connecter au modèle à l’aide d’une application cliente de création de rapports tels que Microsoft Excel ou Power BI.  
+Félicitations ! Vous avez terminé de créer et déployer votre premier modèle tabulaire Analysis Services. Ce didacticiel vous a guidés dans les tâches courantes pour créer un modèle tabulaire. Maintenant que votre modèle Internet Sales Adventure Works est déployé, vous pouvez utiliser SQL Server Management Studio pour gérer le modèle, créer des scripts de processus et un plan de sauvegarde. Les utilisateurs peuvent également maintenant vous connecter au modèle à l’aide d’une application cliente de création de rapports tels que Microsoft Excel ou Power BI.  
 
-![en tant que-tabulaire-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
+![as-tabular-lesson13-ssms](../analysis-services/media/as-tabular-lesson13-ssms.png)
   
   
 ## <a name="see-also"></a>Voir aussi  

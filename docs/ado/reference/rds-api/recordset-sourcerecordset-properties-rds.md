@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50da9f42927747d0d901e24a6c1018cc7ab3f3f6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523327"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset et SourceRecordset, propriétés (RDS)
 Indique le **Recordset** objet retourné à partir d’un objet métier personnalisé.  

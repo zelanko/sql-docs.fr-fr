@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8b807f92b40a772762bf09edd83a129aabd91cad
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638127"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>Modifier le nom d'un indicateur de version (Master Data Services)
 
@@ -26,7 +26,7 @@ ms.locfileid: "52781821"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez modifier le nom d’un indicateur de version.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
@@ -49,7 +49,7 @@ ms.locfileid: "52781821"
   
 6.  Appuyez sur Entrée.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)   
  [Affecter un indicateur à une version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   

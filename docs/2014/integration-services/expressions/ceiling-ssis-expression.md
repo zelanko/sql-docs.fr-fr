@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a8306fa98194fbf314796b199fea98ddd53cb1fb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769425"
 ---
 # <a name="ceiling-ssis-expression"></a>CEILING (expression SSIS)
   Renvoie le plus petit entier qui est supérieur ou égal à une expression numérique.  

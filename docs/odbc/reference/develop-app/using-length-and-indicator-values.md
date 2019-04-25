@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 442d0865ede4819ea3413d662411295daa5b48bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501110"
 ---
 # <a name="using-length-and-indicator-values"></a>Utilisation des valeurs de longueur et d’indicateur
 La mémoire tampon de longueur / d’indicateur est utilisée pour passer la longueur d’octet des données dans le tampon de données ou un indicateur spécial tel que SQL_NULL_DATA, ce qui indique que les données sont NULL. En fonction de la fonction dans laquelle il est utilisé, une mémoire tampon de longueur / d’indicateur est définie comme un SQLINTEGER ou un SQLSMALLINT. Par conséquent, un seul argument est nécessaire pour le décrire. Si la mémoire tampon de données est une mémoire tampon d’entrée nondeferred, cet argument contient la longueur d’octet des données elles-mêmes ou une valeur d’indicateur. Il est souvent nommé *StrLen_or_Ind* ou un nom similaire. Par exemple, ce qui suit code appelle **SQLPutData** à passer une mémoire tampon complète de données ; la longueur d’octet (*ValueLen*) est passée directement, car le tampon de données (*ValuePtr*) est un mémoire tampon d’entrée.  

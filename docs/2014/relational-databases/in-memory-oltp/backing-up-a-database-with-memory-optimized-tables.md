@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bc4da6702716e845121d2081a166254d4be9449f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468325"
 ---
 # <a name="backing-up-a-database-with-memory-optimized-tables"></a>Sauvegarde d'une base de données avec des tables mémoire optimisées
   Les tables mémoire optimisées sont sauvegardées dans le cadre des sauvegardes de base de données normales. Pour les tables sur disque, la valeur CHECKSUM des paires de fichiers de données et delta est validée dans le cadre de la sauvegarde de base de données pour détecter la corruption du stockage.  
@@ -48,7 +48,7 @@ ms.locfileid: "52408626"
   
  Le premier scénario de charge de travail concerne l'insertion (pour la plupart). Dans ce scénario, la plupart des fichiers de données auront l'état ACTIVE, seront totalement chargés et comporteront très peu de lignes supprimées. La taille de la sauvegarde de base de données sera proche de la taille des données en mémoire.  
   
- Le second scénario de charge de travail correspond à des opérations fréquentes d'insertion, de suppression et de mise à jour : Dans le pire des cas, chacune des paires de fichiers de point de contrôle sont chargées, à 50 % après prise en compte les lignes supprimées. Par conséquent, la taille de la sauvegarde de base de données sera égale à au moins 2 fois la taille des données en mémoire. En outre, il y aura peu de paires de fichiers de point de contrôle dans l'état MERGE SOURCE et REQUIRED FOR BACKUP/HA susceptibles d'augmenter la taille de la sauvegarde de la base de données.  
+ Le second scénario de charge de travail est de fréquente opérations d’insertion, suppression et mise à jour : Dans le pire des cas, chacune des paires de fichiers de point de contrôle sont chargées, à 50 % après prise en compte les lignes supprimées. Par conséquent, la taille de la sauvegarde de base de données sera égale à au moins 2 fois la taille des données en mémoire. En outre, il y aura peu de paires de fichiers de point de contrôle dans l'état MERGE SOURCE et REQUIRED FOR BACKUP/HA susceptibles d'augmenter la taille de la sauvegarde de la base de données.  
   
 ## <a name="differential-backups-of-databases-with-memory-optimized-tables"></a>Sauvegardes différentielles de bases de données avec des tables mémoire optimisées  
  Le stockage des tables optimisées en mémoire comprend des données et des fichiers delta, comme décrit dans [Durabilité pour les tables optimisées en mémoire](memory-optimized-tables.md). La sauvegarde différentielle d'une base de données avec des tables mémoire optimisées contient les données suivantes :  

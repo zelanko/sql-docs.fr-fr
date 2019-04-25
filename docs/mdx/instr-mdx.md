@@ -1,5 +1,5 @@
 ---
-title: InStr (MDX) | Documents Microsoft
+title: Instr (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629094"
 ---
 # <a name="instr-mdx"></a>InStr (MDX)
 
@@ -41,7 +41,7 @@ InStr([start, ]searched_string, search_string[, compare])
  (facultatif) Valeur entière. Cet argument est toujours ignoré. Il est défini pour la compatibilité avec d’autres **Instr** fonctions dans d’autres langages.  
   
 ## <a name="return-value"></a>Valeur de retour  
- Une valeur entière avec la position de départ de *chaîne2* dans *String1*.  
+ Une valeur entière avec la position de départ de *String2* dans *String1*.  
   
  En outre, **InStr** fonction retourne les valeurs répertoriées dans le tableau suivant en fonction de la condition :  
   
@@ -103,9 +103,9 @@ from [Adventure Works]
 |majuscules trouvées dans la chaîne en minuscules|16|  
 |la chaîne de recherche est vide|0|  
 |la chaîne de recherche est Null|Non défini|  
-|chaîne de recherche est vide| 1|  
+|chaîne de recherche est vide|1|  
 |la chaîne de recherche est start 10 vide|10|  
-|chaîne de recherche a la valeur null|Non défini|  
+|chaîne de recherche est null|Non défini|  
 |trouvé à partir de start 10|16|  
 |introuvable à partir de start 17|0|  
 |start Null|Non défini|  

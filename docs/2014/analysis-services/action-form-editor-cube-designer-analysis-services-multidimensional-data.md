@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32d1389fcb780fab6a370e6a9043600461baec4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626098"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet Éditeur de formulaire d’action sous l’onglet **Actions** dans le Concepteur de cube pour créer et modifier des actions standard.  
@@ -33,11 +33,11 @@ ms.locfileid: "48225549"
  **Type de cible**  
  Sélectionnez le type d'objet auquel l'action doit être associée. Le serveur retourne au client uniquement les actions qui s'appliquent à l'objet du type spécifié. L’action est disponible pour le client si la **Condition** est remplie et si les objets spécifiés dans le tableau suivant sont sélectionnés.  
   
-|Valeur|Objet sélectionné|  
+|Value|Objet sélectionné|  
 |-----------|---------------------|  
 |Membres d'attribut|Un membre est sélectionné d’après un niveau qui dépend de l’attribut **Objet cible**.|  
 |Cellules|L’ensemble nommé dans **Objet cible** est sélectionné. Sélectionnez **Toutes les cellules** pour sélectionner toutes les cellules du cube.|  
-|Cube|Le cube dans **Objet cible** est sélectionné. Sélectionnez CURRENTCUBE pour utiliser le cube actif.<br /><br /> Remarque : l’utilisation de CURRENTCUBE améliore la portabilité lorsque le cube peut être éventuellement renommé ou l’action copiée dans d’autres cubes. Il est recommandé d'utiliser l'option CURRENTCUBE pour représenter le cube actif.|  
+|Cube|Le cube dans **Objet cible** est sélectionné. Sélectionnez CURRENTCUBE pour utiliser le cube actif.<br /><br /> Remarque : À l’aide de CURRENTCUBE fournit la portabilité supplémentaire dans les cas où le cube peut être renommé ou l’action copiée dans d’autres cubes. Il est recommandé d'utiliser l'option CURRENTCUBE pour représenter le cube actif.|  
 |Membres de dimension|Un membre de la dimension dans **Objet cible** est sélectionné.|  
 |Hierarchy|La hiérarchie dans **Objet cible** est sélectionnée.|  
 |Membres de hiérarchie|Un membre de la hiérarchie dans **Objet cible** est sélectionné.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48225549"
  **Type**  
  Sélectionnez le type d'action à effectuer lorsque l'action est exécutée. Les types d'actions suivants sont disponibles :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Dataset|Retourne une instruction MDX (Multidimensional Expressions) qui représente un jeu de données multidimensionnel que l'application cliente doit exécuter et afficher.|  
 |Propriétaire|Retourne une chaîne propriétaire que peuvent interpréter les applications clientes associées au paramètre **Application** de cette action.|  
@@ -82,7 +82,7 @@ ms.locfileid: "48225549"
   
  Le tableau suivant décrit les paramètres disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Traitement|L’action doit s’exécuter dans le cadre d’une opération par lot ou d’une tâche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
 |Interactif|L'action s'exécute lorsque l'utilisateur l'invoque.|  

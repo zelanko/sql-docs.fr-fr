@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffee06e8a6372f146996673c425a89000eda0a1d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518632"
 ---
 # <a name="create-a-custom-workflow-master-data-services"></a>Créer un flux de travail personnalisé (Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52420660"
 5.  Les services d'intégration de flux de travail MDS de SQL Server acheminent les données vers votre assembly de gestionnaire de flux de travail.  
   
 > [!NOTE]  
->  Remarque : le service d'intégration de flux de travail MDS de SQL Server est destiné à déclencher des processus simples. Si votre code personnalisé requiert un traitement complexe, effectuez votre traitement dans un thread distinct ou à l'extérieur du processus de flux de travail.  
+>  Remarque : Service d’intégration du flux de travail MDS SQL Server est destiné à déclencher des processus simples. Si votre code personnalisé requiert un traitement complexe, effectuez votre traitement dans un thread distinct ou à l'extérieur du processus de flux de travail.  
   
 ## <a name="configure-master-data-services-for-custom-workflows"></a>Configurer des services Master Data pour les flux de travail personnalisés  
  La création d'un flux de travail personnalisé requiert l'écriture d'un code personnalisé et la configuration de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour passer les données de flux de travail à votre gestionnaire de flux de travail. Procédez comme suit pour activer un traitement de flux de travail personnalisé :  
@@ -64,7 +64,7 @@ ms.locfileid: "52420660"
   
 3.  Ajoutez « using Microsoft.MasterDataServices.Core.Workflow; » à votre fichier de code C#.  
   
-4.  Héritez de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> dans votre déclaration de classe. La déclaration de classe doit ressembler à : « public class WorkflowTester : IWorkflowTypeExtender ».  
+4.  Héritez de <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> dans votre déclaration de classe. La déclaration de classe doit être semblable à : « public class WorkflowTester : IWorkflowTypeExtender'.  
   
 5.  Implémentez l'interface <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender>. La méthode <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender.StartWorkflow%2A> est appelée par le service d'intégration de flux de travail MDS de SQL Server pour démarrer votre flux de travail.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "52420660"
     </setting>  
     ```  
   
-3.  Sous le paramètre « ConnectionString » ajoutez un paramètre « WorkflowTypeExtenders » pour associer un nom de balise à votre assembly de gestionnaire de flux de travail. Exemple :  
+3.  Sous le paramètre « ConnectionString » ajoutez un paramètre « WorkflowTypeExtenders » pour associer un nom de balise à votre assembly de gestionnaire de flux de travail. Exemple :  
   
     ```xml  
     <setting name="WorkflowTypeExtenders" serializeAs="String">  
@@ -145,14 +145,14 @@ ms.locfileid: "52420660"
   
 1.  Utilisez le composant logiciel enfichable Services pour arrêter le service.  
   
-2.  Ouvrez une invite de commandes, naviguez jusqu'à l'emplacement du service, puis exécutez le service en mode console en entrant : Microsoft.MasterDataServices.Workflow.exe - console.  
+2.  Ouvrez une invite de commandes, naviguez jusqu'à l’emplacement du service et exécuter le service en mode console en entrant : Microsoft.MasterDataServices.Workflow.exe -console.  
   
 3.  Dans [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)], mettez à jour votre membre et appliquez à nouveau les règles d'entreprise. Les journaux détaillés sont affichés dans la fenêtre de la console.  
   
 ### <a name="view-the-service-broker-queue"></a>Afficher la file d'attente de Service Broker  
  La file d'attente Service Broker qui contient les données de référence passées dans le cadre du flux de travail est : mdm.microsoft/mdm/queue/externalaction. Les files d’attente se trouvent dans l’**Explorateur d’objets** de SQL Management Studio sous le nœud Service Broker de la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Notez que, si le service a effacé la file d'attente correctement, cette file d'attente est vide.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Exemple de flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)   
  [Description du code XML d’un flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-xml-description.md)  
   

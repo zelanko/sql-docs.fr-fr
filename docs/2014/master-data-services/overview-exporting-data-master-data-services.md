@@ -1,5 +1,5 @@
 ---
-title: Exportation de données (Master Data Services) | Microsoft Docs
+title: exportation de données (Master Data Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 76a9133a013087d96f9acc102232b2340212d19f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763831"
 ---
 # <a name="exporting-data-master-data-services"></a>Exportation de données (Master Data Services)
   Vous pouvez exporter des données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] vers des systèmes d'abonnement en créant des vues d'abonnement. Tout système d'abonnement peut ensuite afficher les données publiées dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Pour plus d’informations sur les vues, consultez [Vues](../relational-databases/views/views.md).  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee7ee9cf4ba8b7caa0085f0f792173b1f2856857
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48158079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62635595"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Boîte de dialogue Options avancées des vues de source de données (Assistant Vue de source de données) (Analysis Services)
   La boîte de dialogue **Options avancées des vues de source de données** vous permet de mieux contrôler la façon dont la vue de source de données extrait les schémas et relations à partir de la source de données afin de générer la vue.  
@@ -33,7 +33,7 @@ ms.locfileid: "48158079"
  Utilisez cette option pour spécifier une liste de noms de schémas séparés par des virgules qui limite les schémas récupérés à partir de la source de données. Si aucun nom de schéma n'est répertorié pour cette option, il n'y a aucune restriction sur les schémas qui peuvent être utilisés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données dans les modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [Sources de données dans des modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

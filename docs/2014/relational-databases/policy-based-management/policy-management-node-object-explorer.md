@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: febf8ce34e93f4efffaea1d9a9925ab5c8206652
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62625897"
 ---
 # <a name="policy-management-node-object-explorer"></a>Nœud Gestion de la stratégie (Explorateur d'objets)
   Cette section contient les rubriques d’aide suivantes, accessibles via la touche F1, relatives au nœud **Gestion de la stratégie** de l’Explorateur d’objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

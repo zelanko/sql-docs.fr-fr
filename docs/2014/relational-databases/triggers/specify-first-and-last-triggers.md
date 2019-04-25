@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a851a19a7f00afd055bb2ee8f00eaf4621a1e98f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524135"
 ---
 # <a name="specify-first-and-last-triggers"></a>Spécifier les premier et dernier déclencheurs
   Vous pouvez définir l'un des déclencheurs AFTER associés à une table comme étant le premier ou le dernier déclencheur AFTER activé pour chaque action de déclenchement INSERT, DELETE et UPDATE. L'ordre d'exécution des déclencheurs AFTER activés entre les premier et dernier déclencheurs est indéfini.  

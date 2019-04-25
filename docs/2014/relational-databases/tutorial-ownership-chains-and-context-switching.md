@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Chaînes de propriétés et changement de contexte | Microsoft Docs'
+title: 'Tutoriel : Chaînes de propriétés et changement de contexte | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,13 +14,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ae566345f722399982c909244e77c564abb7b53
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62524365"
 ---
-# <a name="tutorial-ownership-chains-and-context-switching"></a>Didacticiel : Chaînes de propriétés et changement de contexte
+# <a name="tutorial-ownership-chains-and-context-switching"></a>Tutoriel : Chaînes de propriétés et changement de contexte
   Ce didacticiel explore en se fondant sur un scénario les concepts de sécurité de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] impliquant les chaînes de propriétés et le changement de contexte utilisateur.  
   
 > [!NOTE]  

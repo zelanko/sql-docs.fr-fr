@@ -1,5 +1,5 @@
 ---
-title: Créer et gérer des Partitions de modèles tabulaires | Documents Microsoft
+title: Créer et gérer des Partitions de modèle tabulaire | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7067449c0de9958e98a7a9dc5cc09c7f89f33fa9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472291"
 ---
 # <a name="create-and-manage-tabular-model-partitions"></a>Créer et gérer des partitions de modèles tabulaires
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34039885"
   
 2.  Dans **Nom de la partition**, tapez un nom pour la partition. Par défaut, le nom de la partition par défaut est numéroté de manière incrémentielle pour chaque nouvelle partition.  
   
-3.  Dans **instruction de requête**, tapez ou collez une instruction de requête SQL ou M qui définit les colonnes et toutes les clauses que vous souhaitez inclure dans la partition dans la fenêtre de requête.  
+3.  Dans **instruction de requête**, tapez ou collez une instruction de requête SQL ou M qui définit les colonnes et les clauses que vous souhaitez inclure dans la partition dans la fenêtre de requête.  
   
 4.  Pour valider l'instruction, cliquez sur **Vérifier la syntaxe**.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "34039885"
   
 ## <a name="see-also"></a>Voir aussi  
  [Partitions de modèles tabulaires](../../analysis-services/tabular-models/tabular-model-partitions-ssas-tabular.md)   
- [Partitions de processus de modèles tabulaires](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
+ [Partitions de modèles tabulaires processus](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)  
   
   

@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32bd106320c8969813dbae107a7569af8560aba4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62513321"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Spécifier des informations d’identification dans le Générateur de rapports
   Les informations d'identification permettent d'authentifier l'utilisateur qui tente de récupérer des données à partir d'une source de données. Le propriétaire de la source de données détermine le type d'informations d'identification à utiliser. Par exemple, un administrateur de base de données peut spécifier que l'utilisateur doit fournir un nom d'utilisateur et un mot de passe Windows.  

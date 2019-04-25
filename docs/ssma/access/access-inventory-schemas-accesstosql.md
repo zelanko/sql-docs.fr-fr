@@ -38,11 +38,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47653716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62759705"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Schémas d’inventaire Access (AccessToSQL)
 Les sections suivantes décrivent les tables qui sont créés par SSMA lorsque vous exportez des schémas d’accès à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -55,7 +55,7 @@ Métadonnées de la base de données sont exportées vers le **SSMA_Access_Inven
 |**DatabaseId**|**uniqueidentifier**|GUID qui identifie de façon unique chaque base de données. Cette colonne est également la clé primaire pour la table.|  
 |**DatabaseName**|**nvarchar(4000)**|Le nom de la base de données Access.|  
 |**ExportTime**|**datetime**|Date et heure de que création de ces métadonnées par SSMA.|  
-|**Chemin d’accès**|**nvarchar(4000)**|Le nom de fichier et le chemin complet de la base de données Access.|  
+|**FilePath**|**nvarchar(4000)**|Le nom de fichier et le chemin complet de la base de données Access.|  
 |**FileSize**|**bigint**|La taille de la base de données Access en Ko.|  
 |**FileOwner**|**nvarchar(4000)**|Le compte Windows qui est spécifié comme propriétaire de la base de données Access.|  
 |**DateCreated**|**datetime**|Date et heure de que création de la base de données Access.|  
@@ -160,7 +160,7 @@ Métadonnées de la macro sont exportée vers le **SSMA_Access_InventoryMacros**
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient la macro.|  
 |**MacroId**|**Int**|Incrémentation integer qui identifie la macro. Cette colonne est la clé primaire pour la table.|  
-|**Nom_macro**|**nvarchar(4000)**|Le nom de la macro.|  
+|**MacroName**|**nvarchar(4000)**|Le nom de la macro.|  
   
 ## <a name="reports"></a>Rapports  
 Métadonnées du rapport sont exportée vers le **SSMA_Access_InventoryReports** table. Cette table contient les colonnes suivantes :  
@@ -168,7 +168,7 @@ Métadonnées du rapport sont exportée vers le **SSMA_Access_InventoryReports**
 |Nom de la colonne|Type de données|Description|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient le rapport.|  
-|**ID du rapport**|**Int**|Incrémentation integer qui identifie le rapport. Cette colonne est la clé primaire pour la table.|  
+|**ReportId**|**Int**|Incrémentation integer qui identifie le rapport. Cette colonne est la clé primaire pour la table.|  
 |**ReportName**|**nvarchar(4000)**|Nom du rapport.|  
   
 ## <a name="modules"></a>Modules  
@@ -178,7 +178,7 @@ Métadonnées du module sont exportées vers le **SSMA_Access_InventoryModules**
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifie la base de données qui contient le module.|  
 |**ModuleId**|**Int**|Incrémentation integer qui identifie le module. Cette colonne est la clé primaire pour la table.|  
-|**Nom du module**|**nvarchar(4000)**|Le nom du module.|  
+|**ModuleName**|**nvarchar(4000)**|Le nom du module.|  
   
 ## <a name="see-also"></a>Voir aussi  
 [Exportation d’un inventaire Access](exporting-an-access-inventory-accesstosql.md)  

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e70b6dab6399026606382396bded3a467a9b639c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62764232"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Chevauchement des autorisations de modèle et de membre (Master Data Services)
   Une autorisation attribuée à un membre et une autorisation attribuée à un objet de modèle peuvent se chevaucher. Lorsque des chevauchements se produisent, l'autorisation la plus restrictive entre en vigueur.  
@@ -41,7 +41,7 @@ ms.locfileid: "52814561"
   
  Sous l'onglet **Membres de hiérarchie** , le nœud de sous-catégorie Mountain Bikes dans une hiérarchie dérivée a l'autorisation **Mise à jour** attribuée.  
   
- Résultat : Dans **Explorer**, l’utilisateur a **mise à jour** autorisation sur toutes les valeurs d’attribut pour tous les membres dans le nœud Mountain Bikes. Tous les autres membres et attributs sont masqués.  
+ Résultat : dans l’**Explorateur**, l’utilisateur a l’autorisation de **mise à jour** sur toutes les valeurs d’attribut de tous les membres qui se trouvent dans le nœud Mountain Bikes. Tous les autres membres et attributs sont masqués.  
   
  ![mds_conc_overlap_model_example_1](../../2014/master-data-services/media/mds-conc-overlap-model-example-1.gif "mds_conc_overlap_model_example_1")  
   

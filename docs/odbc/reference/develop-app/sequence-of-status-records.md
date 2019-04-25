@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 17a88095611a5f551708f3950359063317368757
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465916"
 ---
 # <a name="sequence-of-status-records"></a>Séquence d’enregistrements d’état
 Si deux ou plusieurs enregistrements d’état sont retournés, le Gestionnaire de pilotes et le pilote classent selon les règles suivantes. L’enregistrement avec le rang le plus élevé est le premier enregistrement. La source d’un enregistrement (Gestionnaire de pilotes, pilotes, passerelle et ainsi de suite) constitue toutefois pas lorsque les enregistrements de classement.  

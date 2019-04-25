@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8e33c6aefcb1286e8550e539e1d403953aa6fa6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52751892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518635"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Exemples de règles d’entreprise (Master Data Services)
 
@@ -61,7 +61,7 @@ Else
   
 Exemple de modèle  |Entité  |Nom de la règle d’entreprise| Description    
 ---------|---------|---------|-----------  
-Product     |  Product       | DaysToManufacture |Spécifie la plage de jours avant la fabrication pour une fabrication en interne.          
+Produit     |  Produit       | DaysToManufacture |Spécifie la plage de jours avant la fabrication pour une fabrication en interne.          
 Dans la règle d’entreprise suivante, si la valeur de l’attribut InHouseManufacture répond à la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. Dans le cas contraire, aucune action n’est effectuée.  
 ```  
 If  
@@ -77,7 +77,7 @@ Else
   
 Exemple de modèle  |Entité  |Nom de la règle d’entreprise|Description    
 ---------|---------|---------|-------------  
-Product     |Product         |Required fields| Spécifie les attributs obligatoires pour les membres de l’entité Product.           
+Produit     |Product         |Required fields| Spécifie les attributs obligatoires pour les membres de l’entité Product.           
 Dans la règle d’entreprise suivante, si toutes les conditions sont réunies, `is required` [l’action de validation](../master-data-services/business-rule-actions-master-data-services.md) est effectuée pour les attributs spécifiés. Les valeurs de l’attribut ne peuvent pas être Null ni vides.  
 ```  
 If  
@@ -102,7 +102,7 @@ Else
   
 Exemple de modèle  |Entité  |Nom de la règle d’entreprise|Description    
 ---------|---------|---------|-----------  
-Product     | Product        |  Std Cost| Exige que le coût standard soit supérieur à 0.        
+Produit     | Produit        |  Std Cost| Exige que le coût standard soit supérieur à 0.        
 Dans la règle d’entreprise suivante, si toutes les conditions sont réunies, `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
@@ -118,7 +118,7 @@ Else
   
 Exemple de modèle  |Entité  |Nom de la règle d’entreprise|Description    
 ---------|---------|---------|------------  
-Product     | Product        | FG MSRP Cost|Spécifie que si le produit est un produit fini, le prix de vente conseillé et les coûts du revendeur doivent être supérieurs à 0.           
+Produit     | Produit        | FG MSRP Cost|Spécifie que si le produit est un produit fini, le prix de vente conseillé et les coûts du revendeur doivent être supérieurs à 0.           
   
 Dans la règle d’entreprise suivante, si la valeur de l’attribut FinishedGoodIndicator répond à la `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
@@ -136,7 +136,7 @@ Else
   
 Exemple de modèle  |Entité  |Nom de la règle d’entreprise|Description    
 ---------|---------|---------|------------  
-Product     | Product        |  Default Name| Spécifie le nom de produit par défaut sur la base des valeurs des attributs Color et Class. Lorsque la valeur de l’attribut Color n’est pas YLO et que la valeur de l’attribut Class n’est pas NA, le nom par défaut est Yellow NA.         
+Produit     | Produit        |  Default Name| Spécifie le nom de produit par défaut sur la base des valeurs des attributs Color et Class. Lorsque la valeur de l’attribut Color n’est pas YLO et que la valeur de l’attribut Class n’est pas NA, le nom par défaut est Yellow NA.         
 Dans la règle d’entreprise suivante, si la valeur des attributs Class et Color ne répondent pas à la condition de règle `is equal` , `defaults to` [l’action de règle](../master-data-services/business-rule-actions-master-data-services.md) est appliquée à l’attribut Name.  
 ```  
 If  

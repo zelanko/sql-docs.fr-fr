@@ -1,5 +1,5 @@
 ---
-title: Lier un attribut à une colonne de clé | Documents Microsoft
+title: Lier un attribut à une colonne de clé | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed2a51a39f1fa1fd465c6a57fb51552fcb7cabfb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472334"
 ---
-# <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Propriétés d’attribut : lier un attribut à une colonne de clé
+# <a name="attribute-properties---bind-an-attribute-to-a-key-column"></a>Propriétés d’attribut - Lier un attribut à une colonne clé
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Cette procédure explique comment modifier le paramètre de la propriété **Nom** d’un attribut d’une dimension.  
   

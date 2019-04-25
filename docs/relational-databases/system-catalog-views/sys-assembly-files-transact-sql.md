@@ -1,5 +1,5 @@
 ---
-title: Sys.assembly_files (Transact-SQL) | Microsoft Docs
+title: sys.assembly_files (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0279d6c2850dff07b365e7543f387f6cf6e9f328
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516081"
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "47810227"
 |**assembly_id**|**Int**|ID de l'assembly auquel ce fichier appartient.|  
 |**nom**|**nvarchar(260)**|Nom du fichier d'assembly.|  
 |**file_id**|**Int**|ID du fichier. Unique au sein d'un assembly. L'ID de fichier 1 représente la DLL de l'assembly.|  
-|**Contenu**|**varbinary(max)**|Contenu d'un fichier.|  
+|**content**|**varbinary(max)**|Contenu d'un fichier.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

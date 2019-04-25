@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468349"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Résoudre les problèmes de mémoire insuffisante
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] , l' [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il est possible que la quantité de mémoire que vous avez installée et allouée pour [!INCLUDE[hek_2](../../includes/hek-2-md.md)] ne convienne plus à vos besoins croissants. Si c'est le cas, vous risquez de manquer de mémoire. Cette rubrique explique les procédures à mettre en œuvre en cas d'insuffisance de mémoire. Consultez [Analyse et dépannage de l’utilisation de mémoire](monitor-and-troubleshoot-memory-usage.md) pour des conseils pouvant vous aider à éviter de nombreuses situations d’épuisement de la mémoire.  
@@ -29,7 +29,7 @@ ms.locfileid: "58527891"
 | [Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Explique la procédure à suivre si vous recevez le message d’erreur « Interdiction des allocations de pages pour la base de données « *\<nom_base_de_données>*  » en raison d’une mémoire insuffisante dans le pool de ressources « *\<nom_pool_de_ressources>*  ». ... » lorsque la mémoire disponible est suffisante pour l’opération.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Résoudre les problèmes de restauration de base de données en cas d'insuffisance de mémoire  
- Quand vous tentez de restaurer une base de données, le message d'erreur suivant peut s'afficher : « L’opération a échoué pour la base de données de restauration '*\<databaseName >*« en raison d’une mémoire insuffisante dans le pool de ressources'*\<Nom_pool_de_ressources >*'. » Avant de pouvoir restaurer correctement la base de données, vous devez résoudre le problème d'insuffisance de mémoire en augmentant la quantité de mémoire à disposition.  
+ Lorsque vous essayez de restaurer une base de données, vous pouvez recevoir le message d’erreur : « L’opération a échoué pour la base de données de restauration '*\<databaseName >*« en raison d’une mémoire insuffisante dans le pool de ressources'*\<Nom_pool_de_ressources >*'. » Avant de pouvoir restaurer correctement la base de données, vous devez résoudre le problème d'insuffisance de mémoire en augmentant la quantité de mémoire à disposition.  
   
  Pour résoudre un échec de récupération dû à une situation d'insuffisance de mémoire, augmentez la mémoire disponible à l'aide de tous les moyens à votre disposition afin de disposer temporairement d'une mémoire suffisante pour l'opération de récupération.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "58527891"
   
     > [!IMPORTANT]  
     >  Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
-    > Pour plus d'informations, consultez la rubrique [Meilleures pratiques : Utilisation d’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
+    > Consultez la rubrique [meilleures pratiques : Utilisation d’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
   
     ```sql  
   
@@ -105,7 +105,7 @@ Cet extrait de code modifie la valeur de MAX_MEMORY_PERCENT pour le pool de ress
   
 > [!IMPORTANT]  
 >  Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
-> Pour plus d'informations, consultez la rubrique [Meilleures pratiques : Utilisation d’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
+> Consultez la rubrique [meilleures pratiques : Utilisation d’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
   
 ```sql  
   
@@ -132,7 +132,7 @@ GO
   
 > [!IMPORTANT]  
 >  Si le serveur s'exécute sur une machine virtuelle sans être dédié, attribuez à MIN_MEMORY_PERCENT et à MAX_MEMORY_PERCENT la même valeur.   
-> Pour plus d'informations, consultez la rubrique [Meilleures pratiques : Utilisation d’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
+> Consultez la rubrique [meilleures pratiques : Utilisation d’OLTP en mémoire dans un environnement de machine virtuelle](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) pour plus d’informations.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Résoudre les échecs d'allocation de pages dus à une mémoire insuffisante alors qu'il y a suffisamment de mémoire à disposition  
  Si vous recevez le message d’erreur « interdiction des allocations de page pour la base de données '*\<databaseName >*« en raison d’une mémoire insuffisante dans le pool de ressources'*\<Nom_pool_de_ressources >*'. Consultez «<https://go.microsoft.com/fwlink/?LinkId=330673>» pour plus d’informations. » dans le journal des erreurs lorsque la mémoire physique disponible est suffisante pour allouer la page, il peut être dû à la désactivation de Resource Governor. Lorsque Resource Governor est désactivé, MEMORYBROKER_FOR_RESERVE induit une sollicitation de la mémoire artificielle.  

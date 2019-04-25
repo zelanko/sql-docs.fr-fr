@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54cf9a13396674c2ac9dd43845c94d7ac657f008
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62506351"
 ---
 # <a name="spdbmmonitorresults-transact-sql"></a>sp_dbmmonitorresults (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_dbmmonitorresults database_name
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|Nom d'une base de données mise en miroir.|  
-|**rôle**|**Int**|Rôle de mise en miroir actuel de l'instance du serveur :<br /><br /> 1 = Principal<br /><br /> 2 = Miroir|  
+|**role**|**Int**|Rôle de mise en miroir actuel de l'instance du serveur :<br /><br /> 1 = Principal<br /><br /> 2 = Miroir|  
 |**mirroring_state**|**Int**|État de la base de données :<br /><br /> 0 = suspendu<br /><br /> 1 = déconnecté<br /><br /> 2 = Synchronisation<br /><br /> 3 = Basculement en attente<br /><br /> 4 = Synchronisé|  
 |**witness_status**|**Int**|L'état de connexion du témoin dans la session de mise en miroir de la base de données peut être :<br /><br /> 0 = Inconnu<br /><br /> 1 = connecté<br /><br /> 2 = Déconnecté|  
 |**log_generation_rate**|**Int**|Quantité de journal générée, en kilo-octets/s, depuis la précédente mise à jour de l'état de mise en miroir de cette base de données.|  
@@ -103,7 +103,7 @@ sp_dbmmonitorresults database_name
 ## <a name="remarks"></a>Notes  
  **sp_dbmmonitorresults** peuvent être exécutées uniquement dans le contexte de la **msdb** base de données.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’appartenance dans le **sysadmin** rôle serveur fixe ou dans le **dbm_monitor** rôle de base de données fixe dans le **msdb** base de données. Le **dbm_monitor** rôle permet à ses membres afficher l’état, la mise en miroir de base de données mais pas mettre à jour mais pas afficher ou configurer les événements de mise en miroir de base de données.  
   
 > [!NOTE]  

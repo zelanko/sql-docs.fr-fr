@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91d39b174a0febed1aa6fd57140412828adc843b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466181"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Navigation dans un modèle Naive Bayes
   Lorsque vous ouvrez un modèle Naïve Bayes avec **Parcourir**, le modèle est affiché dans une visionneuse interactive avec quatre volets différents. Utilisez la visionneuse pour explorer les corrélations et obtenez des informations sur le modèle et les données sous-jacentes.  

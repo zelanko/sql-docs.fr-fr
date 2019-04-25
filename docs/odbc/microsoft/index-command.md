@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 864f6fa78ab1ef23b7db3a0be4c85738b95ea72d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471257"
 ---
 # <a name="index-command"></a>INDEX, commande
 Crée un fichier d’index pour afficher et accéder aux enregistrements de la table dans un ordre logique.  
@@ -46,7 +46,7 @@ INDEX ON eExpression TO IDXFileName | TAG TagName [OF CDXFileName]
   
  Il est possible de créer une clé d’index avec une longueur nulle. Par exemple, une clé d’index de longueur zéro est créée lors de l’expression d’index est une sous-chaîne d’un champ de type Mémo vide. Une clé d’index de longueur zéro génère un message d’erreur. Lorsque Visual FoxPro crée un index, il évalue les champs dans le premier enregistrement dans la table. Si un champ est vide, il peut être nécessaire d’entrer des données temporaires dans le champ dans le premier enregistrement afin d’éviter une clé d’index de longueur 0.  
   
- POUR *IDXFileName*  
+ TO *IDXFileName*  
  Crée un fichier d’index .idx. Le fichier d’index porte le .idx d’extension par défaut.  
   
  BALISE *TagName*[OF *CDXFileName*]  

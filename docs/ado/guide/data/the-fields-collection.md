@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4bd852423ed285165b4d699b391807b9a748f9b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472228"
 ---
 # <a name="the-fields-collection"></a>Fields, collection
 Le **champs** collection est une des collections intrinsèques d’ADO. Une collection est un ensemble ordonné d’éléments qui peuvent être référencés en tant qu’unité. Pour plus d’informations sur les collections ADO, consultez [le modèle d’objet ADO](../../../ado/guide/data/ado-objects-and-collections.md).  

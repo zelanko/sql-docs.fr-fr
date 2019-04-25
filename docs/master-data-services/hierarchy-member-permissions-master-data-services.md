@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c477fcb56fd8eeea68e44497b46be807a434d536
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62516507"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Autorisations des membres de la hiérarchie (Master Data Services)
 
@@ -38,9 +38,9 @@ ms.locfileid: "52817915"
   
  Les autorisations des membres de la hiérarchie s'appliquent à la version de modèle à laquelle vous les affectez ainsi qu'à toutes les futures copies de la version. Elles ne s'appliquent pas aux versions antérieures à celle à laquelle vous les affectez.  
   
-|Autorisation|Description|  
+|Permission|Description|  
 |----------------|-----------------|  
-|**Lire**|Les membres sont affichés.<br /><br /> <br /><br /> Remarque : Si vous affectez uniquement l’autorisation **Lire** à **Racine**, les membres sous **Racine** sont en lecture seule. Toutefois, dans les collections et hiérarchies explicites, l’utilisateur peut déplacer des membres vers **Racine** et ajouter de nouveaux membres à **Racine**.|  
+|**Lire**|Les membres sont affichés.<br /><br /> <br /><br /> Remarque : Si vous affectez uniquement l’autorisation **Lire** à **Racine**, les membres sous **Racine** sont en lecture seule. Toutefois, dans les collections et hiérarchies explicites, l’utilisateur peut déplacer des membres vers **Racine** et ajouter de nouveaux membres à **Racine**.|  
 |**Créer**|L’autorisation Créer n’est pas disponible dans les autorisations des membres de la hiérarchie.|  
 |**Update**|Les membres sont affichés et l'utilisateur peut les modifier. L'utilisateur peut également déplacer les membres dans les collections ou hiérarchies explicites auxquelles les membres appartiennent.|  
 |**Supprimer**|Les membres sont affichés, et l’utilisateur peut les modifier.|  
@@ -66,7 +66,7 @@ ms.locfileid: "52817915"
 ## <a name="external-resources"></a>Ressources externes  
  Billet de blog, [Améliorations de sécurité](https://go.microsoft.com/fwlink/p/?LinkId=615376), sur msdn.com.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Affecter des autorisations de membre de hiérarchie &#40;Master Data Services&#41;](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [Mode de détermination des autorisations &#40;Master Data Services&#41;](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Membres &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   

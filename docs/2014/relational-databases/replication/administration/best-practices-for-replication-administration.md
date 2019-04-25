@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fb7a972d865f7afe1295c5dbdf5ad3ce0c886556
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629638"
 ---
 # <a name="best-practices-for-replication-administration"></a>Bonnes pratiques en matière d’administration de la réplication
-  Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En plus de suivre les indications suivantes sur les méthodes conseillées présentées dans cette rubrique, il est conseillé de lire la rubrique du forum aux questions afin de vous familiariser avec les questions et les problèmes les plus courants : [Forum aux Questions sur les administrateurs de réplication](frequently-asked-questions-for-replication-administrators.md).  
+  Après avoir configuré la réplication, il est important de comprendre en quoi consiste l'administration d'une topologie de réplication. Cette rubrique fournit des indications de base sur les méthodes conseillées dans un certain nombre de domaines, avec des liens sur chaque domaine pour plus d'informations. En suivant les méthodes conseillées présentées dans cette rubrique, conseillé de lire la rubrique du Forum aux questions à vous familiariser avec les problèmes et questions courantes : [Questions fréquentes (FAQ) pour les administrateurs de la réplication](frequently-asked-questions-for-replication-administrators.md).  
   
  Les indications sur les méthodes conseillées sont scindées en deux domaines :  
   
@@ -148,6 +148,6 @@ ms.locfileid: "54134732"
  Pour plus d’informations, consultez [Modifier le schéma dans les bases de données de publication](../publish/make-schema-changes-on-publication-databases.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de réplication Forum aux questions](frequently-asked-questions-for-replication-administrators.md)  
+ [FAQ sur l’administration de la réplication](frequently-asked-questions-for-replication-administrators.md)  
   
   

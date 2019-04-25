@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465925"
 ---
 # <a name="sending-long-data"></a>Envoi de données de type Long
 Définir des SGBD *données de type long* sous forme de n’importe quel caractère ou binaire sur une certaine taille, telles que de 254 caractères. Il se peut qu’il ne soit pas possible de stocker la totalité d’un élément de données de type long dans la mémoire, telles que lorsque l’élément représente un document texte long ou une image bitmap. Étant donné que ces données ne peuvent pas être stockées dans une seule mémoire tampon, la source de données l’envoie au pilote dans des parties avec **SQLPutData** lorsque l’instruction est exécutée. Paramètres pour lesquels les données sont envoyées au moment de l’exécution sont appelés *data-at-execution paramètres*.  
@@ -43,6 +43,6 @@ Définir des SGBD *données de type long* sous forme de n’importe quel caract�
   
 7.  Appels **SQLParamData** à nouveau pour indiquer qu’il a envoyé toutes les données pour le paramètre. S’il y a aucun paramètre data-at-execution pour lequel les données n’ont pas été envoyées, le pilote retourne SQL_NEED_DATA et la valeur qui identifie le paramètre suivant ; l’application retourne à l’étape 6. Si les données ont été envoyées pour tous les paramètres de data-at-execution, l’instruction est exécutée. **SQLParamData** retourne SQL_SUCCESS, SQL_SUCCESS_WITH_INFO et peut retourne une valeur de retour ou diagnostic qui **SQLExecute** ou **SQLExecDirect** peut retourner.  
   
- Après avoir **SQLExecute** ou **SQLExecDirect** retourne SQL_NEED_DATA et avant l’envoi de données pour le dernier paramètre data-at-execution a complètement, l’instruction est dans un état besoin des données. Bien qu’une instruction soit dans un état besoin des données, l’application peut appeler uniquement **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, ou **SQLGetDiagRec**; toutes les autres fonctions retournent SQLSTATE HY010 (erreur de séquence de fonction). Appel **SQLCancel** annule l’exécution de l’instruction et le renvoie à son état précédent. Pour plus d’informations, consultez [tableaux des transitions d’état ODBC annexe b :](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ Après avoir **SQLExecute** ou **SQLExecDirect** retourne SQL_NEED_DATA et avant l’envoi de données pour le dernier paramètre data-at-execution a complètement, l’instruction est dans un état besoin des données. Bien qu’une instruction soit dans un état besoin des données, l’application peut appeler uniquement **SQLPutData**, **SQLParamData**, **SQLCancel**, **SQLGetDiagField**, ou **SQLGetDiagRec**; toutes les autres fonctions retournent SQLSTATE HY010 (erreur de séquence de fonction). Appel **SQLCancel** annule l’exécution de l’instruction et le renvoie à son état précédent. Pour plus d’informations, consultez [annexe b : Tableaux des transitions d’état ODBC](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Pour obtenir un exemple d’envoi de données au moment de l’exécution, consultez le [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md) description de fonction.

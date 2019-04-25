@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 845d69b539a0634c25f1402da503dd2f599ec442
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62517109"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Hiérarchies explicites (services de données de référence)
 
@@ -76,7 +76,7 @@ ms.locfileid: "52765051"
 |Peut être déséquilibré|Contient toujours un nombre cohérent de niveaux|  
   
 ## <a name="explicit-hierarchy-example"></a>Exemple de hiérarchie explicite  
- Dans l'exemple suivant, l'entité Product contient ces membres feuille : BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450}, and BK-R650 {Road-650}.  
+ Dans l’exemple suivant, l’entité Product contient ces membres feuille : BK-M101 {Mountain-100}, BK-M201 {Mountain-200}, BK-M301 {Mountain-300}, BK-R150 {Road-150}, BK-R450 {Road-450}, and BK-R650 {Road-650}.  
   
  Pour synthétiser ces membres feuille à des points de consolidation spécifiques, vous pouvez créer des membres consolidés dans l'entité Product. Insérez les membres consolidés à des niveaux de l'arborescence hiérarchique où vous souhaitez synthétiser les membres feuille. Il n'existe aucune limitation quant à l'emplacement où vous insérez vos membres consolidés ; toutefois, chaque membre (feuille ou consolidé) ne peut être utilisé qu'une fois.  
   

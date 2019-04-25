@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 257d193c84420a0c70ea99ef2a8cadfa9e11eec5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468761"
 ---
 # <a name="browsing-a-decision-trees-model"></a>Exploration d'un modèle Arbre de décision
   Lorsque vous ouvrez un modèle de classification avec **Parcourir**, le modèle est affiché dans une visionneuse d’arbre de décision interactive semblable à la [!INCLUDE[msCoName](../includes/msconame-md.md)] visionneuse d’arbres de décision dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse affiche les résultats de la classification sous la forme d'un graphique qui est conçu pour mettre en évidence les critères qui différencient un groupe de données d'un autre. Vous pouvez également explorer des sous-ensembles individuels de l'arborescence et récupérer les données sous-jacentes.  
@@ -92,13 +92,13 @@ ms.locfileid: "52525558"
   
          Nombre total de cas : 1150  
   
-         Probabilité de l’acheteur de vélo : 18 %  
+         Probabilité de l’acheteur de vélo : 18%  
   
     -   Âge > = 32 et \< 53 et Yearly Income > = 26000 et enfants ne pas = 0 et Marital état = 'Single'  
   
          Nombre total de cas : 402  
   
-         Probabilité de l’acheteur de vélo : 16 %  
+         Probabilité de l’acheteur de vélo : 16%  
   
 7.  Modifiez la valeur de **arrière-plan** de **Oui** à **non** et voir comment le graphique change.  
   

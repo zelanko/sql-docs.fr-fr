@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa72d2c9e2fcf953e8c34d7fdddd656c76b0685
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62632936"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Ajouter le modèle à la structure (Compléments d'exploration de données pour Excel)
   ![Ajouter un modèle au bouton de la Structure](media/dmc-addmodel.gif "ajouter le modèle à un bouton de la Structure")  
@@ -35,7 +35,7 @@ ms.locfileid: "52521038"
   
 2.  Dans le **sélectionner la Structure** boîte de dialogue, sélectionnez la structure qui contient les données que vous souhaitez utiliser, puis cliquez sur **suivant**.  
   
-     **Conseil**: Si vous n’êtes pas sûr de la structure d’exploration de données contient les données que vous avez besoin, utilisez le **Document modèle** Assistant pour afficher les colonnes et les statistiques de base sur les données.  
+     **Conseil** : Si vous n’êtes pas sûr de la structure d’exploration de données contient les données que vous avez besoin, utilisez le **Document modèle** Assistant pour afficher les colonnes et les statistiques de base sur les données.  
   
      Si vous ne trouvez pas une structure d’exploration de données, vérifiez la connexion que vous utilisez actuellement. Vous devrez peut-être établir une connexion à un serveur différent.  
   

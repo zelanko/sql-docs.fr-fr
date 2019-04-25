@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f445b32e0c580cde10f38a22b3d26270d927c5a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757323"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partitions et mode DirectQuery (SSAS Tabulaire)
-  Cette section explique comment sont utilisées les partitions dans les modèles DirectQuery. Pour obtenir des informations générales sur les partitions dans les modèles tabulaires, consultez [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md).  
+  Cette section explique comment sont utilisées les partitions dans les modèles DirectQuery. Pour obtenir des informations générales sur les partitions dans les modèles tabulaires, consultez [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md).  
   
  Pour obtenir des instructions sur la modification de la partition qui est utilisée, ou afficher des informations sur la partition, consultez [modifier la DirectQuery Partition &#40;tabulaire SSAS&#41;](../change-the-directquery-partition-ssas-tabular.md).  
   
@@ -49,6 +49,6 @@ ms.locfileid: "48054043"
 |InMemory avec DirectQuery|Autoriser le traitement de la partition|Si le modèle utilise le mode hybride, vous devez utiliser la même partition pour les requêtes sur InMemory et les requêtes sur la source de données DirectQuery.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;SSAS tabulaire&#41;](partitions-ssas-tabular.md)  
+ [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md)  
   
   

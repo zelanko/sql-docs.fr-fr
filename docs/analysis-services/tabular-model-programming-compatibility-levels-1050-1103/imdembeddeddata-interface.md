@@ -1,5 +1,5 @@
 ---
-title: Interface de IMDEmbeddedData | Documents Microsoft
+title: Imdembeddeddata, Interface | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 203eae4b3660aaf5d1f2ed3a92ba844e88a518ff
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467780"
 ---
-# <a name="imdembeddeddata-interface"></a>Interface de IMDEmbeddedData
+# <a name="imdembeddeddata-interface"></a>IMDEmbeddedData, interface
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  L’interface IMDEmbeddedData est une interface publique utilisée pour gérer un incorporé [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] base de données ou une base de données de modèle tabulaire. L’interface hérite de la **IPersistStream** interface. Elle permet les opérations suivantes :  
+  Imdembeddeddata, de l’interface est une interface publique utilisée pour gérer un embedded [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] base de données ou une base de données de modèle tabulaire. L’interface hérite le **IPersistStream** interface. Elle permet les opérations suivantes :  
   
 -   Ajouter un identificateur au flux de données incorporé dans le document conteneur.  
   
@@ -30,16 +30,16 @@ ms.locfileid: "34044383"
   
 -   Annuler l'opération incorporée actuelle.  
   
--   Obtenir la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de **IPersistStream**.  
+-   Obtenir la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Héritée de **IPersistStream**.  
   
--   Vérifier si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de **IPersistStream**.  
+-   Vérifier si la base de données incorporée a changé depuis le dernier enregistrement. Héritée de **IPersistStream**.  
   
--   Charger la base de données incorporée dans le moteur local ou in-process. Hérité de **IPersistStream**.  
+-   Charger la base de données incorporée dans le moteur local ou in-process. Héritée de **IPersistStream**.  
   
--   Enregistrer la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de **IPersistStream**.  
+-   Enregistrer la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Héritée de **IPersistStream**.  
   
 ## <a name="reference"></a>Référence  
- La référence suivante documente la **IMDEmbeddedData** s’affiche dans l’interface **msmd.h** fichier d’en-tête.  
+ La référence suivante documente la **IMDEmbeddedData** telle que présentée dans l’interface **msmd.h** fichier d’en-tête.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Fichier source : PXOEmbeddedData.idl  
   
@@ -81,14 +81,14 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a> Description  
+#### <a name="description"></a>Description  
  Ajoute l'identificateur utilisé par l'application hôte au flux de données incorporé dans le document conteneur.  
   
 #### <a name="parameters"></a>Paramètres  
  *out_pbstrStreamId*  
  Spécifie l'emplacement de l'identificateur de flux de données.  
   
-#### <a name="return-value"></a>Valeur retournée  
+#### <a name="return-value"></a>Valeur de retour  
  **S_OK**  
  L'identificateur de flux de données a été retourné avec succès.  
   
@@ -103,7 +103,7 @@ HRESULT GetStreamIdentifier (
   
  Les valeurs possibles pour DBPROP_MSMD_EMBEDDED_DATA sont :  
   
-|Nom|Valeur|Définition|  
+|Nom|Value|Définition|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Aucune base de données incorporée disponible|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|L'application actuelle contient la base de données incorporée|  
@@ -125,14 +125,14 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a> Description  
+#### <a name="description"></a>Description  
  Définit l'URL pour le fichier qui contient le flux de données incorporé.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_bstrURL*  
  Spécifie l'URL pour le document contenant.  
   
-#### <a name="return-value"></a>Valeur retournée  
+#### <a name="return-value"></a>Valeur de retour  
  **S_OK**  
  L'URL du conteneur a été définie avec succès.  
   
@@ -155,14 +155,14 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a> Description  
+#### <a name="description"></a>Description  
  Définit un indicateur pour indiquer si l'application d'incorporation est dans un environnement hébergé.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_ftHosted*  
  TRUE si l'appelant est hébergé dans une application de service (comme IIS).  
   
-#### <a name="return-value"></a>Valeur retournée  
+#### <a name="return-value"></a>Valeur de retour  
  **S_OK**  
  L'indicateur a été défini avec succès.  
   
@@ -185,14 +185,14 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a> Description  
+#### <a name="description"></a>Description  
  Définit le chemin d'accès aux fichiers temporaires utilisés par l'application d'incorporation.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_bstrPath*  
  Chemin d'accès utilisé par l'application hôte pour les fichiers temporaires.  
   
-#### <a name="return-value"></a>Valeur retournée  
+#### <a name="return-value"></a>Valeur de retour  
  **S_OK**  
  Le répertoire de fichier temporaire a été défini avec succès.  
   
@@ -213,13 +213,13 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a> Description  
+#### <a name="description"></a>Description  
  Annule l'opération de base de données incorporée actuelle  
   
 #### <a name="parameters"></a>Paramètres  
  Aucun.  
   
-#### <a name="return-value"></a>Valeur retournée  
+#### <a name="return-value"></a>Valeur de retour  
  **S_OK**  
  L'opération a été annulée avec succès.  
   
@@ -244,14 +244,14 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a> Description  
- Obtient la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Hérité de **IPersistStream**.  
+#### <a name="description"></a>Description  
+ Obtient la taille estimée (en octets) du flux de données pour enregistrer l'objet incorporé. Héritée de **IPersistStream**.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_bstrPath*  
  Taille estimée (en octets) de l'image de la base de données incorporée.  
   
-#### <a name="return-value"></a>Valeur retournée  
+#### <a name="return-value"></a>Valeur de retour  
  **S_OK**  
  La taille a été obtenue avec succès.  
   
@@ -264,11 +264,11 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a> Description  
- Vérifie si la base de données incorporée a changé depuis le dernier enregistrement. Hérité de **IPersistStream**.  
+#### <a name="description"></a>Description  
+ Vérifie si la base de données incorporée a changé depuis le dernier enregistrement. Héritée de **IPersistStream**.  
   
 #### <a name="parameters"></a>Paramètres  
- aucun  
+ none  
   
 #### <a name="return-values"></a>Valeur(s) de retour  
  **S_OK**  
@@ -288,8 +288,8 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a> Description  
- Charge la base de données incorporée dans le moteur local ou in-process. Hérité de **IPersistStream**.  
+#### <a name="description"></a>Description  
+ Charge la base de données incorporée dans le moteur local ou in-process. Héritée de **IPersistStream**.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_pStm*  
@@ -314,8 +314,8 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a> Description  
- Enregistre la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Hérité de **IPersistStream**.  
+#### <a name="description"></a>Description  
+ Enregistre la base de données locale ou in-process sur le flux de données incorporé dans le document conteneur. Héritée de **IPersistStream**.  
   
 #### <a name="parameters"></a>Paramètres  
  *in_pStm*  

@@ -21,21 +21,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 631e022e9c424344053153647fcf292c1c3f90db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62465324"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions, fonction
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : déconseillé  
+ Version introduite : Conformité aux normes 1.0 ODBC : Déprécié  
   
  **Résumé**  
  La fonction ODBC 2.0 **SQLParamOptions** a été remplacée dans ODBC 3. *x* par les appels à [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
 > [!NOTE]  
->  Pour plus d’informations sur quelles le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans la section annexe g : pilote instructions pour la compatibilité descendante.  
+>  Pour plus d’informations sur quelles le Gestionnaire de pilotes mappe cette fonction lorsqu’un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote, consultez [mappage de fonctions déconseillées](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) dans g : annexe Instructions de pilote pour la compatibilité descendante.  
   
 ## <a name="remarks"></a>Notes  
  Consultez [informations sur ODBC 64 bits](../../../odbc/reference/odbc-64-bit-information.md), si votre application s’exécutera sur un système d’exploitation 64 bits.  

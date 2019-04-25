@@ -1,5 +1,5 @@
 ---
-title: INSÉRER (DMX) | Microsoft Docs
+title: INSERT INTO (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62505163"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ INSERT INTO [MINING MODEL] <model>
   
  Le tableau ci-dessous donne une description du résultat de différentes formes de l'instruction, en fonction de l'état des objets.  
   
-|.|État des objets|Résultats|  
+|.|État des objets|Résultat|  
 |---------------|----------------------|------------|  
 |INSERT INTO MINING MODEL*\<modèle >*|La structure d'exploration de données est traitée.|Le modèle d'exploration de données est traité.|  
 ||La structure d'exploration de données n'est pas traitée.|Le modèle et la structure d'exploration de données sont traités.|  

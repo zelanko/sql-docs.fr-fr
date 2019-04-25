@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd7ac0496532ca0cd034d34fa44d922700c045a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62630732"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Assistant Mise à niveau de base de données (Gestionnaire de configuration Master Data Services)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52782181"
 ## <a name="progress-and-finish"></a>État d'avancement et fin  
  Affiche l'état d'avancement du processus de mise à niveau. Une fois la base de données mise à niveau, cliquez sur le lien vers le fichier journal pour afficher des informations détaillées sur la mise à niveau ou cliquez sur **Terminer** pour fermer l’Assistant Base de données et revenir à la page **Bases de données** . La base de données mise à niveau est sélectionnée et vous pouvez afficher et modifier ses paramètres système.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Page Configuration de base de données &#40;Gestionnaire de configuration Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [Installation et configuration de Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Mettre à niveau Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  

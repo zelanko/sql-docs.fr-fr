@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518619"
 ---
 # <a name="ado-programming-task-table"></a>Tableau de tâches de programmation ADO
 Le tableau suivant répertorie les tâches de programmation contenues dans le *Guide du programmeur ADO* et fournit des références pour chaque tâche. Ces références peuvent être des descriptions ou des exemples de code dans lequel vous pouvez trouver des informations sur la fonctionnalité ADO qui effectue la tâche.

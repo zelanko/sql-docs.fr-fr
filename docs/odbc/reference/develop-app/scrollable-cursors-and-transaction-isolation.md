@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468590"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Curseurs avec défilement et isolation des transactions
 Le tableau suivant répertorie les facteurs régissant la visibilité des modifications.  
@@ -41,26 +41,26 @@ Le tableau suivant répertorie les facteurs régissant la visibilité des modifi
 |Curseur type\action|Self|Propriétaire<br /><br /> BeginTransaction|Dépendant<br /><br /> BeginTransaction<br /><br /> (RU[a])|Dépendant<br /><br /> BeginTransaction<br /><br /> (RC[a])|Dépendant<br /><br /> BeginTransaction<br /><br /> (RR[a])|Dépendant<br /><br /> BeginTransaction<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Statique|||||||  
-|Insert|Peut-être [b]|non|non|non|non|non|  
-|Update|Peut-être [b]|non|non|non|non|non|  
-|DELETE|Peut-être [b]|non|non|non|non|non|  
+|Insert|Peut-être [b]|Non|Non|Non|Non|Non|  
+|Update|Peut-être [b]|Non|Non|Non|Non|Non|  
+|DELETE|Peut-être [b]|Non|Non|Non|Non|Non|  
 |Curseur piloté par jeu de clés|||||||  
-|Insert|Peut-être [b]|non|non|non|non|non|  
-|Update|Oui|Oui|Oui|Oui|non|non|  
-|DELETE|Peut-être [b]|Oui|Oui|Oui|non|non|  
-|Dynamique|||||||  
-|Insert|Oui|Oui|Oui|Oui|Oui|non|  
-|Update|Oui|Oui|Oui|Oui|non|non|  
-|DELETE|Oui|Oui|Oui|Oui|non|non|  
+|Insert|Peut-être [b]|Non|Non|Non|Non|Non|  
+|Update|Oui|Oui|Oui|Oui|Non|Non|  
+|DELETE|Peut-être [b]|Oui|Oui|Oui|Non|Non|  
+|dynamique|||||||  
+|Insert|Oui|Oui|Oui|Oui|Oui|Non|  
+|Update|Oui|Oui|Oui|Oui|Non|Non|  
+|DELETE|Oui|Oui|Oui|Oui|Non|Non|  
   
  [a] les lettres entre parenthèses indiquent le niveau d’isolation de la transaction contenant le curseur ; le niveau d’isolation de l’autre transaction (dans lequel la modification apportée) n’est pas pertinent.  
   
- RU : Lecture non validée  
+ UNITÉS DE REQUÊTE : Lecture non validée  
   
  RC : Lecture validée  
   
- RR : Lecture renouvelée  
+ ENREGISTREMENT DE RESSOURCE : Lecture renouvelable  
   
- %S : sérialisable  
+ %S :  Sérialisable  
   
  [b] varie selon la façon dont le curseur est implémenté. Indique si le curseur peut détecter ces modifications est signalé via l’option SQL_STATIC_SENSITIVITY dans **SQLGetInfo**.

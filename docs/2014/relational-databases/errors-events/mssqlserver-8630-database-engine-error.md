@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8942067b8a549ecc9d1da63a094645ea9609ab63
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62762449"
 ---
 # <a name="mssqlserver8630"></a>MSSQLSERVER_8630
     
@@ -30,7 +30,7 @@ ms.locfileid: "48060799"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|EXECUTION_ERR|  
-|Texte du message|Erreur interne du processeur de requêtes : le processeur de requêtes a rencontré une erreur inattendue pendant l'exécution.|  
+|Texte du message|Erreur interne du processeur de requêtes : le processeur de requêtes a rencontré une erreur inattendue pendant l’exécution.|  
   
 ## <a name="explanation"></a>Explication  
  Erreur interne du processeur de requêtes.  

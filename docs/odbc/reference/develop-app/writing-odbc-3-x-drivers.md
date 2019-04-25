@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62636104"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Écriture de pilotes ODBC 3.x
 Le tableau suivant présente la prise en charge de la fonction dans un ODBC 3. *x* pilote et une application ODBC et le mappage effectuée par le Gestionnaire de pilotes lorsque les fonctions sont appelées par rapport à un ODBC 3. *x* pilote.  
   
-|Fonction|Pris en charge<br /><br /> par un<br /><br /> ODBC 3. *x*<br /><br /> pilote ?|Pris en charge<br /><br /> par un<br /><br /> ODBC 3. *x*<br /><br /> application ?|Mappé/prise en charge<br /><br /> par le ODBC 3. *x*<br /><br /> Gestionnaire de pilotes à<br /><br /> un ODBC 3. *x* pilote ?|  
+|Fonction|Pris en charge<br /><br /> par un<br /><br /> ODBC 3.*x*<br /><br /> pilote ?|Pris en charge<br /><br /> par un<br /><br /> ODBC 3.*x*<br /><br /> application ?|Mappé/prise en charge<br /><br /> par le ODBC 3. *x*<br /><br /> Gestionnaire de pilotes à<br /><br /> un ODBC 3. *x* pilote ?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
 |**SQLAllocConnect**|Non|Aucun [1]|Oui|  
 |**SQLAllocEnv**|Non|Aucun [1]|Oui|  

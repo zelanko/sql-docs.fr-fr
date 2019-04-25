@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24dfd1f587db8d652390be27fa2307a8500c3145
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52764581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62470046"
 ---
 # <a name="choose-toolbox-items-maintenance-tasks-page"></a>Choisir des éléments de boîte à outils (page Tâches de maintenance)
   Cet onglet de la boîte de dialogue **Personnaliser la boîte à outils** affiche la liste de tous les composants des tâches de maintenance inscrits sur votre ordinateur et vous permet de modifier ceux qui sont affichés dans la boîte à outils. Vous pouvez ouvrir la boîte de dialogue **Personnaliser la boîte à outils** à partir du menu **Outils** . Pour trier la liste des composants, cliquez sur un en-tête de colonne.  

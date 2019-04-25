@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 48f1cbdf3d19ce7937df9fc2d6bb1454c65891e3
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38023877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62501932"
 ---
 # <a name="-positive-dmx"></a>+ (positif) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "38023877"
 ```  
   
 #### <a name="parameters"></a>Paramètres  
- *Numeric_expression*  
+ *Numeric_Expression*  
  Expression DMX (Data Mining Extensions) valide qui retourne une valeur numérique.  
   
 ## <a name="return-value"></a>Valeur de retour  
@@ -37,7 +37,7 @@ ms.locfileid: "38023877"
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [Opérateurs unaires &#40;DMX&#41;](../dmx/operators-unary.md)  
   
   

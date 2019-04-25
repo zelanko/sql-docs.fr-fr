@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633369"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>Commandes et fonctions Visual FoxPro non prises en charge (pilote ODBC Visual FoxPro)
 Le tableau suivant répertorie les commandes FoxPro et fonctions qui ne sont pas pris en charge par le pilote ODBC Visual FoxPro, mais sont pris en charge par Microsoft® Visual FoxPro.  
@@ -33,9 +33,9 @@ Le tableau suivant répertorie les commandes FoxPro et fonctions qui ne sont pas
   
 ||||  
 |-|-|-|  
-|#DEFINE... #UNDEF|#IF... #ENDIF Directive de préprocesseur|#IFDEF &AMP;#124; #IFNDEF|  
+|#DEFINE... #UNDEF|#IF... #ENDIF Directive de préprocesseur|#IFDEF &#124; #IFNDEF|  
 |#INCLUDE, Directive préprocesseur|:: Opérateur de résolution de portée|! Commande (voir exécution &#124; ! Commande)|  
-|? &#124; ?? Command|??? Command|\ &#124; \\\ Commande|  
+|? &#124; ?? Command|??? Command|\ &#124; \\\ Command|  
 |@ ... Commande de zone|@ ... Commande de la classe|@ ... Commande Effacer|  
 |@ ... MODIFIER - modifier les commandes de zones|@ ... REMPLIR, commande|@ ... GET|  
 |@ ... Commande de MENU|@ ... Commande invite|@ ... Par exemple de commande|  
@@ -237,7 +237,7 @@ Le tableau suivant répertorie les commandes FoxPro et fonctions qui ne sont pas
 |RENOMMER une commande de connexion|RENOMMER une commande de TABLE|RESTAURER à partir de la commande|  
 |Commande de rapport|REQUERY (fonction))|RESTAURER la fenêtre de commande|  
 |RESTAURER les commandes de MACROS|RESTAURER les commandes d’écran|RGBSCHEME (fonction))|  
-|Commande de reprise|RVB (fonction))|EXÉCUTEZ &AMP;#124; ! Command|  
+|Commande de reprise|RVB (fonction))|RUN &#124; ! Command|  
 |Commande RMDIR|LIGNE (fonction))||  
 |Commande RUNSCRIPT|RDLEVEL (fonction))||  
   

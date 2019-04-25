@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 29b82e87efd64265a22ef6a016640f8e723fb8f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52769521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62471666"
 ---
 # <a name="version-management-functional-area-master-data-manager"></a>Zone fonctionnelle Gestion des versions (Master Data Manager)
 
@@ -51,7 +51,7 @@ ms.locfileid: "52769521"
   
  [Inverser une transaction &#40;Master Data Services&#41;](../master-data-services/reverse-a-transaction-master-data-services.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Application Web Master Data Manager](../master-data-services/master-data-manager-web-application.md)  
   
   

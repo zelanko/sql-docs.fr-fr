@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2f8da4d4178a411f71311f9b2aa62c78276863c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52821783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62519224"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>Planification des tâches administratives automatiques dans l'Agent SQL Server
   Dans SMO, l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est représenté par les objets suivants :  
@@ -166,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-basic"></a>Création d'une alerte en Visual Basic  
  Cet exemple de code crée une alerte déclenchée par une condition de performance. La condition doit être fournie selon un format spécifique.  
   
- **ObjectName | CounterName | Instance | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Un opérateur est requis pour la notification d'alerte. Le type <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> doit être placé entre crochets car `operator` est un mot clé Visual Basic.  
   
@@ -175,7 +175,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Création d'une alerte en Visual C#  
  Cet exemple de code crée une alerte déclenchée par une condition de performance. La condition doit être fournie selon un format spécifique.  
   
- **ObjectName | CounterName | Instance | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Un opérateur est requis pour la notification d'alerte. Le type <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> doit être placé entre crochets car `operator` est un mot clé [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
   
@@ -208,7 +208,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>Création d'une alerte dans PowerShell  
  Cet exemple de code crée une alerte déclenchée par une condition de performance. La condition doit être fournie selon un format spécifique.  
   
- **ObjectName | CounterName | Instance | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  Un opérateur est requis pour la notification d'alerte. Le type <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> doit être placé entre crochets car `operator` est un mot clé [!INCLUDE[csprcs](../../../includes/csprcs-md.md)].  
   
@@ -281,7 +281,7 @@ pa.AddSubSystem(AgentSubSystem.CmdExec);
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Agent SQL Server](../../../ssms/agent/sql-server-agent.md)   
+ [SQL Server Agent](../../../ssms/agent/sql-server-agent.md)   
  [Implémenter des travaux](../../../ssms/agent/implement-jobs.md)  
   
   

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3acf5ed94993d50c3c81813cd9ea09db2c231a08
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472208"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>Fournisseur OLE DB pour la publication Internet
 ADO [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) et [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objets peuvent être utilisés avec le fournisseur Microsoft OLE DB pour la publication Internet (fournisseur de publication Internet) pour accéder et manipuler les ressources, telles que les dossiers ou fichiers Web pris en charge par Microsoft FrontPage. Avec ADO, vous pouvez spécifier la source d’un **enregistrement**, **Stream**, ou [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) pour être une URL. Vous pouvez ensuite charger, télécharger, déplacer, copier et supprimer des ressources ou manipuler directement les propriétés de ressource.  

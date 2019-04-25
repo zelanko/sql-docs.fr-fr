@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 80be6994c7094b365bc24dd135bdda6ec4e561ab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62468385"
 ---
 # <a name="scrollable-cursors"></a>Curseurs avec défilement
 Dans les applications modernes sur un écran, l’utilisateur fait défiler vers le haut et vers l’avant les données. Pour de telles applications, il existe un problème de retour à une ligne extraite précédemment. Une possibilité consiste à fermer et rouvrir le curseur et ensuite extraire les lignes jusqu'à ce que le curseur atteint la ligne requise. Une autre possibilité consiste à lire le jeu de résultats, le met en cache localement et implémenter le défilement dans l’application. Les deux possibilités fonctionnent bien uniquement avec les petits jeux de résultats, et la possibilité de ce dernier est difficile à implémenter. Une meilleure solution consiste à utiliser un *curseur permettant le défilement,* ce qui peut déplacer vers le haut et en avant dans le jeu de résultats.  

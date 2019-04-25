@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 725be263e30687a3f2ded90990e952e1cd97a185
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629386"
 ---
 # <a name="subscribers"></a>Abonnés
   Définissez les abonnés [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui doivent recevoir un abonnement à la publication sélectionnée.  
@@ -50,7 +50,7 @@ ms.locfileid: "52806201"
   
 -   Le serveur de la publication sélectionnée est [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] ou une version ultérieure.  
   
- En cliquant sur **ajouter un abonné** affiche un menu contenant deux options : **Ajouter un abonné SQL Server** et **ajouter un abonné non-SQL Server**. Cliquez sur **Ajouter un Abonné non-SQL Server** pour ajouter un abonné Oracle ou IBM DB2.  
+ Cliquez sur **Ajouter un abonné** pour afficher un menu contenant deux options : **Ajouter un abonné SQL Server** et **Ajouter un abonné non-SQL Server**. Cliquez sur **Ajouter un Abonné non-SQL Server** pour ajouter un abonné Oracle ou IBM DB2.  
   
  **Ajouter un abonné SQL Server**  
  Ajoute un serveur à la liste des serveurs pouvant être activés comme abonnés. Ce bouton s'affiche lorsqu'au moins une des conditions suivantes est vraie :  
@@ -68,7 +68,7 @@ ms.locfileid: "52806201"
     -   La publication autorise les abonnements anonymes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)   
  [S'abonner à des publications](subscribe-to-publications.md)  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 13ea15a23bbf6de6c50b494f709f65cae2f7c48b
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62509835"
 ---
 # <a name="analysis-services-powershell-reference"></a>Référence PowerShell Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,18 +31,18 @@ ms.locfileid: "37992901"
   
 |Applet de commande|Description|Méthodes AMO équivalentes|  
 |------------|-----------------|----------------------------|  
-|[Add-RoleMember, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/Add-RoleMember)|Ajoutez un membre à un rôle de base de données.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
-|[Backup-ASDatabase, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/backup-asdatabase)|Sauvegardez une base de données Analysis Services.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
+|[Applet de commande Add-RoleMember](https://docs.microsoft.com/powershell/module/sqlserver/Add-RoleMember)|Ajoutez un membre à un rôle de base de données.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Add%2A>|  
+|[Applet de commande Backup-ASDatabase](https://docs.microsoft.com/powershell/module/sqlserver/backup-asdatabase)|Sauvegardez une base de données Analysis Services.|[Database.Backup](https://msdn.microsoft.com/library/microsoft.analysisservices.database.backup.aspx)|  
 |[Invoke-ASCmd, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/invoke-ascmd)|Exécutez une requête ou un script au format XMLA ou TSML (JSON).|<xref:Microsoft.AnalysisServices.Core.Server.Execute%2A>|  
 |[Invoke-ProcessASDatabase](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processasdatabase)|Traitez une base de données.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessCube, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processcube)|Traitez un cube.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessDimension, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processdimension)|Traitez une dimension.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
-|[Invoke-ProcessPartition, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processpartition)|Traitez une partition.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
+|[Applet de commande Invoke-ProcessPartition](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processpartition)|Traitez une partition.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Invoke-ProcessTable, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/invoke-processtable)|Traiter une table dans un modèle tabulaire, le modèle de compatibilité 1200 ou supérieur.|<xref:Microsoft.AnalysisServices.IProcessable.Process%2A>|  
 |[Merge-Partition, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/merge-partition)|Fusionnez une partition.|<xref:Microsoft.AnalysisServices.Partition.Merge%2A>|  
 |[New-RestoreFolder, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/new-restorefolder)|Créer un dossier pour contenir une sauvegarde de base de données.|<xref:Microsoft.AnalysisServices.RestoreFolder>|  
-|[New-RestoreLocation, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/new-restorelocation)|Spécifier un ou plusieurs serveurs distants sur lesquels restaurer la base de données.|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
-|[Remove-RoleMember, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/remove-rolemember)|Supprimer un membre d'un rôle de base de données.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
+|[Applet de commande New-RestoreLocation](https://docs.microsoft.com/powershell/module/sqlserver/new-restorelocation)|Spécifier un ou plusieurs serveurs distants sur lesquels restaurer la base de données.|<xref:Microsoft.AnalysisServices.RestoreLocation>|  
+|[Applet de commande Remove-RoleMember](https://docs.microsoft.com/powershell/module/sqlserver/remove-rolemember)|Supprimer un membre d'un rôle de base de données.|<xref:Microsoft.AnalysisServices.RoleMemberCollection.Remove%2A>|  
 |[Restore-ASDatabase, applet de commande](https://docs.microsoft.com/powershell/module/sqlserver/restore-asdatabase)|Restaurer une base de données sur une instance de serveur.|<xref:Microsoft.AnalysisServices.Core.Server.Restore%2A>|  
   
 

@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 45e72fe3c163f05f283965beb5fb3cf6ce62c50e
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62510943"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>Remise par courrier électronique dans Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] comprend une extension de remise par e-mail qui permet d’envoyer par e-mail des rapports à des utilisateurs individuels ou à des groupes. Vous pouvez configurer l'extension de remise par messagerie à l'aide du Gestionnaire de configuration de Reporting Services et en modifiant les fichiers de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  

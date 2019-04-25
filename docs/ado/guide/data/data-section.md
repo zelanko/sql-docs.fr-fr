@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472546"
 ---
 # <a name="data-section"></a>Section de données
 La section de données définit les données de l’ensemble de lignes ainsi que tout en attente de mises à jour, les insertions ou les suppressions. La section de données peut contenir zéro ou plusieurs lignes. Il ne peut contenir que des données à partir d’un ensemble de lignes où la ligne est définie par le schéma. En outre, comme mentionné précédemment, les colonnes sans aucune donnée peuvent être omis. Si un attribut ou un sous-élément est utilisé dans la section de données et que cette construction n’a pas été définie dans la section de schéma, il est ignoré en mode silencieux.  
@@ -35,7 +35,7 @@ La section de données définit les données de l’ensemble de lignes ainsi que
 ## <a name="binary"></a>Binaire  
  Données binaires sont bin.hex encodé (autrement dit, un octet correspond à deux caractères, un caractère par quartet).  
   
-## <a name="datetime"></a>DateTime  
+## <a name="datetime"></a>Datetime  
  Le format VT_DATE variant n’est pas directement pris en charge par les types de données XML-Data. Le format correct pour les dates avec le composant à la fois une date et l’heure est aaaa-mm-jjThh.  
   
  Pour plus d’informations sur les formats de date spécifiée par XML, consultez le [spécification W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  

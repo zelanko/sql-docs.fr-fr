@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 3195007b4346c6010b416fae833643f3a80136fb
-ms.sourcegitcommit: 731c5aed039607a8df34c63e780d23a8fac937e1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2018
-ms.locfileid: "37909839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62639535"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Configuration du pare-feu entrepôt de données parallèle d’Analytique Platform System
 Le **pare-feu** page du Gestionnaire de Configuration PDW SQL Server vous permet d’activer ou désactiver les règles de pare-feu qui autorisent ou empêchent l’accès à des ports spécifiques sur l’appliance Analytique Platform System.  
@@ -34,7 +34,7 @@ Le **pare-feu** page du Gestionnaire de Configuration PDW SQL Server vous permet
 ## <a name="external-ports"></a>Ports externes  
 Les ports suivants sont ouverts pour les connexions client provenant en dehors de PDW.  
   
-|Fonction|N° de port|Nœuds|  
+|Objectif|N° de port|Nodes|  
 |-----------|-----------|---------|  
 |Accès Client SQL pour PDW (TDS)|17001|LISTE CTL|  
 |Accès au Client de chargeur (dwloader & SSIS)|8001|LISTE CTL|  
@@ -49,7 +49,7 @@ Les ports suivants sont ouverts pour les connexions client provenant en dehors d
 ## <a name="internal-ports"></a>Ports internes  
 Les ports suivants sont utilisés par PDW pour la communication interne, mais ne sont pas ouverts pour les connexions en provenance d’en dehors de l’appliance PDW.  
   
-|Fonction|N° de port|Nœuds|  
+|Objectif|N° de port|Nodes|  
 |-----------|-----------|---------|  
 |Trafic du canal de contrôle DMS|16450|CTL, CMP|  
 |Trafic du canal de données DMS|16550|CTL, CMP|  

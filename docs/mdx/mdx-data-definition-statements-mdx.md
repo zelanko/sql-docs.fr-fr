@@ -1,5 +1,5 @@
 ---
-title: Instructions de définition de données MDX (MDX) | Documents Microsoft
+title: Instructions de définition de données MDX (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d6a440b76ee639c345d24c1c1e60a2038fca75de
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34741588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62629778"
 ---
 # <a name="mdx-data-definition-statements-mdx"></a>Instructions MDX de définition de données (MDX)
 
@@ -36,13 +36,13 @@ ms.locfileid: "34741588"
 |[Instruction d’ACTION DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-action.md)|Supprime une action spécifiée d'un cube spécifié.|  
 |[Instruction de calcul de cellule DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-cell-calculation.md)|Supprime le calcul de cellule spécifié.|  
 |[Instruction de membre DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)|Supprime un membre calculé.|  
-|[Instruction SET de dépôt &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|Supprime un jeu nommé.|  
+|[Instruction de jeu DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-set.md)|Supprime un jeu nommé.|  
 |[Instruction de sous-cube DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)|Supprime un sous-cube spécifié, et restaure la définition de cube ou de sous-cube antérieurement définie portant le nom spécifié.|  
 |[REFRESH CUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-refresh-cube.md)|Actualise le cache client pour un cube.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Référence des instructions MDX &#40;MDX&#41;](../mdx/mdx-statement-reference-mdx.md)   
- [Les instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
+ [Instructions de Manipulation de données MDX &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [Instructions de script MDX &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)  
   
   

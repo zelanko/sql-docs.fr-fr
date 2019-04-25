@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc3d863889f7e5cb8ca1e79f78e920aedd79f979
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473491"
 ---
 # <a name="algorithm-parameters-dialog-box-mining-models-view"></a>Boîte de dialogue Paramètres d'algorithme (Vue Modèles d'exploration de données)
   Utilisez la boîte de dialogue **Paramètres d’algorithme** pour ajuster les paramètres d’algorithme spécifiques du modèle sélectionné. Lorsque vous modifiez un paramètre d'algorithme, vous modifiez habituellement les résultats du modèle d'exploration de données. L'influence de chaque paramètre sur les résultats dépend de l'algorithme que vous utilisez et de vos données. Pour plus d’informations, consultez [Personnaliser les modèles et les structures d’exploration de données](data-mining/customize-mining-models-and-structure.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "48172999"
 |**Paramètre**|Liste le nom du paramètre.|  
 |**Valeur**|Vous ne devez entrer une valeur que si vous souhaitez remplacer la valeur par défaut du paramètre.|  
 |**Default**|Donne la valeur par défaut du paramètre, qui sera utilisée par l’algorithme si vous n’entrez pas de valeur dans la colonne **Valeur** .|  
-|**plage**|Répertorie l’intervalle des valeurs possibles que vous pouvez entrer dans la colonne **Valeur** . Les plages peuvent prendre une des opérations suivantes :<br /><br /> Une liste de valeurs discrètes, telles que 1, 2, 3<br /><br /> Un intervalle inclusif, tel que [0, 100]<br /><br /> Un intervalle exclusif, tel que (0,...)<br /><br /> Une combinaison, telle que [0,...)|  
+|**Range**|Répertorie l’intervalle des valeurs possibles que vous pouvez entrer dans la colonne **Valeur** . Les plages peuvent prendre une des opérations suivantes :<br /><br /> Une liste de valeurs discrètes, telles que 1, 2, 3<br /><br /> Un intervalle inclusif, tel que [0, 100]<br /><br /> Un intervalle exclusif, tel que (0,...)<br /><br /> Une combinaison, telle que [0,...)|  
   
  **Description**  
  Décrit le paramètre sélectionné dans la liste **Paramètres** .  

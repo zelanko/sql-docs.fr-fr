@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad87b38ade044414062eba03e94dee415c53fc7e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637826"
 ---
 # <a name="system-requirements-for-sql-server-native-client"></a>Configuration requise pour SQL Server Native Client
   Pour utiliser les fonctionnalités d'accès aux données de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple MARS, les logiciels suivants doivent être installés :  
@@ -68,10 +68,10 @@ ms.locfileid: "53365121"
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT (\<= 8 Ko)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Image|  
-|varchar(max)|varchar|varchar|Texte|  
+|varchar(max)|varchar|varchar|Text|  
 |nvarchar(max)|NVARCHAR|NVARCHAR|Ntext|  
-|xml|xml|xml|Ntext|  
-|CLR UDT (>= 8 Ko)|udt|varbinary|Image|  
+|Xml|Xml|Xml|Ntext|  
+|CLR UDT (> 8Kb)|udt|varbinary|Image|  
 |date|date|varchar|Varchar|  
 |datetime2|datetime2|varchar|Varchar|  
 |datetimeoffset|datetimeoffset|varchar|Varchar|  

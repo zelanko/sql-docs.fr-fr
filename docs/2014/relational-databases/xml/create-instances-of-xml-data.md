@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637607"
 ---
 # <a name="create-instances-of-xml-data"></a>Créer des instances de données XML
   Cette rubrique décrit comment générer des instances XML.  
@@ -93,7 +93,7 @@ SELECT CONVERT(xml, N'<root>      <child/>     </root>', 1)
   
  Si le paramètre *style* n’est pas utilisé ou s’il a la valeur 0, les espaces non significatifs ne sont pas conservés durant la conversion de l’instance du type de données xml. Pour plus d’informations sur l’utilisation de l’opérateur CONVERT et de son paramètre *style* durant la conversion de données chaîne en instances du type de données xml, consultez [CAST et CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql).  
   
-### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemple : conversion d'une valeur chaîne en xml typé et affectation de cette valeur à une colonne  
+### <a name="example-cast-a-string-value-to-typed-xml-and-assign-it-to-a-column"></a>Exemple : Convertir une valeur de chaîne en xml typé et affectez-le à une colonne  
  L’exemple suivant convertit une variable de chaîne qui contient un fragment XML à le `xml` type de données et puis le stocke dans la `xml` colonne de type :  
   
 ```  
@@ -121,7 +121,7 @@ INSERT INTO T VALUES (3, cast (@s as xml))
 INSERT INTO T VALUES (3, convert (xml, @s))   
 ```  
   
-### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemple : conversion d'une valeur chaîne en xml typé et affectation de cette valeur à une variable  
+### <a name="example-convert-a-string-to-typed-xml-and-assign-it-to-a-variable"></a>Exemple : Convertir une chaîne en xml typé et l’assigner à une variable  
  Dans l’exemple suivant, une chaîne est convertie en `xml` tapez et assigné à une variable de la `xml` type de données :  
   
 ```  

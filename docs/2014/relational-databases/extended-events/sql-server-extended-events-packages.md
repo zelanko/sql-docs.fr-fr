@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62638744"
 ---
 # <a name="sql-server-extended-events-packages"></a>Packages d’événements étendus SQL Server
   Un package est un conteneur d'objets d'événements étendus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Il existe trois sortes de packages Événements étendus :  
@@ -79,7 +79,7 @@ ms.locfileid: "52767411"
 |Administratifs|Les événements administratifs sont principalement destinés aux utilisateurs finaux, aux administrateurs et au support technique. Les événements détectés dans les canaux administratifs font référence à un problème avec une solution déterminée qu'un administrateur peut mettre en place. Par exemple, le fait qu'une application ne puisse pas se connecter à une imprimante correspond à un événement administratif. Ces événements font l'objet d'une documentation détaillée ou sont accompagnés d'un message qui indique la procédure à suivre pour résoudre le problème.|  
 |Opérationnels|Les événements opérationnels permettent d'analyser et de diagnostiquer un problème ou une occurrence. Ils permettent de déclencher des outils ou des tâches en fonction du problème ou de l'occurrence. Par exemple, le fait qu'une imprimante soit ajoutée ou supprimée dans un système correspond à un événement opérationnel.|  
 |Analytiques|Les événements analytiques sont publiés selon un volume élevé. Ils décrivent le fonctionnement des programmes et sont généralement utilisés dans les enquêtes sur les performances.|  
-|Débogage|Les événements de débogage sont utilisés uniquement par les développeurs pour diagnostiquer un problème afin de le résoudre.<br /><br /> Remarque : Les événements du canal de débogage renvoient des données d'état internes propres à l'implémentation. Les schémas et les données renvoyées par les événements sont susceptibles de changer ou de ne plus être compatibles avec les prochaines versions de SQL Server. Par conséquent, les événements du canal de débogage pourront être changés ou supprimés dans les versions à venir de SQL Server sans notification.|  
+|Débogage|Les événements de débogage sont utilisés uniquement par les développeurs pour diagnostiquer un problème afin de le résoudre.<br /><br /> Remarque : Les événements du canal de débogage renvoient des données d'état internes propres à l'implémentation. Les schémas et les données renvoyées par les événements sont susceptibles de changer ou de ne plus être compatibles avec les prochaines versions de SQL Server. Par conséquent, les événements du canal de débogage pourront être changés ou supprimés dans les versions à venir de SQL Server sans notification.|  
   
  **Mot clé**  
   
@@ -147,7 +147,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   Type  
+-   type  
   
  Pour plus d’informations, consultez [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   

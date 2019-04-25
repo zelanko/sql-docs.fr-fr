@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9672408d1a63729f21395184644ca6a92d091e46
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48185839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62640512"
 ---
 # <a name="browser-dimension-designer-analysis-services---multidimensional-data"></a>Navigateur (Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez l'onglet **Navigateur** du Concepteur de dimensions pour parcourir les données et métadonnées d'une dimension. Si l'écriture différée de la dimension est activée pour la dimension sélectionnée, utilisez cette vue pour modifier les données des membres de la dimension.  
@@ -28,7 +28,7 @@ ms.locfileid: "48185839"
 ## <a name="panes"></a>Volets  
  L'onglet **Navigateur** contient les volets suivants :  
   
- [Barre d’outils](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barre d'outils](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md)  
  Utilisez la barre d’outils pour effectuer les opérations courantes sous l’onglet **Navigateur** du Concepteur de dimensions.  
   
  [Niveau et membres](level-members-dimension-designer-analysis-services-multidimensional-data.md)  

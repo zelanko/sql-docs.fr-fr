@@ -1,5 +1,5 @@
 ---
-title: Tables imbriquées (Analysis Services - Exploration de données) | Documents Microsoft
+title: Tables imbriquées (Analysis Services - Exploration de données) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 35444ae17ac4a11bd0321e70631f45d84273e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472407"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tables imbriquées (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données doivent être fournies à un algorithme d’exploration de données sous la forme d’une série de cas inclus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Fournit une méthode unique pour gérer de tels cas, à l’aide de *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  
+  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données doivent être fournies à un algorithme d’exploration de données sous la forme d’une série de cas inclus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une méthode unique permettant de gérer de tels cas, en utilisant des *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  
   
  ![Deux tables combinées à l’aide d’une table imbriquée](../../analysis-services/data-mining/media/nested-tables.gif "deux tables combinées à l’aide d’une table imbriquée")  
   
@@ -62,7 +62,7 @@ ms.locfileid: "34018116"
  Pour plus d’informations sur la création et l’utilisation de filtres de modèle, consultez [Filtres pour les modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithmes d’exploration de données &#40; Analysis Services - Exploration de données &#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Les Structures d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

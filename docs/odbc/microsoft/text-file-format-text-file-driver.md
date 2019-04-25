@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62633014"
 ---
 # <a name="text-file-format-text-file-driver"></a>Format du fichier texte (pilote de fichier texte)
 Le pilote ODBC texte prend en charge les deux fichiers texte délimités et à largeur fixe. Un fichier texte se compose d’une ligne d’en-tête facultatif et zéro ou plusieurs lignes de texte.  
@@ -41,7 +41,7 @@ Le pilote ODBC texte prend en charge les deux fichiers texte délimités et à l
 |Format|Représentation|  
 |------------|--------------------|  
 |Non-italique|Caractères qui doivent être entrés comme indiqué|  
-|*Italique*|Arguments qui sont définis ailleurs dans la grammaire|  
+|*italics*|Arguments qui sont définis ailleurs dans la grammaire|  
 |crochets ([])|Éléments facultatifs|  
 |accolades ({})|Une liste de choix qui s’excluent mutuellement|  
 |barres verticales (&#124;)|Options distinctes qui s’excluent mutuellement|  

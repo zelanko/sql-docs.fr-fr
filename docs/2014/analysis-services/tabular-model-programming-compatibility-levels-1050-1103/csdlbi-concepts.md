@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bf73822e8872397499bdfbc04bab6747035fbec
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757949"
 ---
 # <a name="csdlbi-concepts"></a>Concepts CSDLBI
   Le langage CSDL (Conceptual Schema Definition Language) avec annotations Business Intelligence (CSDLBI) est basé sur l'infrastructure de données d'entités (Entity Data Framework), qui est une abstraction pour représenter différents types de données de façon à activer les jeux de données disparates pour qu'ils soient accessibles, interrogés ou exportés par programme. CSDLBI est utilisé pour représenter les modèles de données créés à l'aide d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], car il prend en charge les applications et la création de rapports complets pilotée par les données.  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62626046"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Surveiller et appliquer les bonnes pratiques à l'aide de la Gestion basée sur des stratégies
   Gestion basée sur des stratégies vous permet de surveiller les bonnes pratiques pour la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] propose un ensemble de fichiers de stratégie que vous pouvez importer en tant que stratégies de meilleures pratiques, pour ensuite évaluer ces stratégies par rapport à un jeu de cibles qui inclut des instances, des objets d'instance, des bases de données ou des objets de base de données. Vous pouvez évaluer des stratégies manuellement, définir des stratégies pour évaluer un jeu de cibles selon une planification ou définir des stratégies pour évaluer un jeu de cibles en fonction d'un événement. Pour plus d’informations sur la gestion basée sur des stratégies, consultez [Administrer des serveurs à l’aide de la gestion basée sur des stratégies](administer-servers-by-using-policy-based-management.md).  

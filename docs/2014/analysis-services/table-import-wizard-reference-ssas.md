@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f247adeee3e7c46faf5aca64f2668d736bb167
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757793"
 ---
 # <a name="table-import-wizard-reference-ssas"></a>Référence de l'Assistant Importation de table (SSAS)
   Cette section fournit de l'aide sur l' **Assistant Importation de table**. Cet Assistant vous permet d'importer des données à partir de diverses sources de données. Pour accéder à l'Assistant depuis le générateur de modèles, dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -67,7 +67,7 @@ ms.locfileid: "48218179"
   
 -   [Boîte de dialogue informations d’emprunt d’identité &#40;Assistant Importation de Table&#41;](impersonation-information-dialog-box-table-import-wizard.md)  
   
--   [L’importation &#40;SSAS&#41;](importing-ssas.md)  
+-   [Importing &#40;SSAS&#41;](importing-ssas.md)  
   
 -   [Résumé d’importation &#40;SSAS&#41;](import-summary-ssas.md)  
   
@@ -86,6 +86,6 @@ ms.locfileid: "48218179"
 -   [Spécifiez une requête SQL ou MDX &#40;SSAS&#41;](specify-a-sql-or-mdx-query-ssas.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importer des données &#40;SSAS tabulaire&#41;](import-data-ssas-tabular.md)  
+ [Importer des données &#40;SSAS Tabulaire&#41;](import-data-ssas-tabular.md)  
   
   

@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767558"
 ---
-# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Étape 7 : Ajout et configuration de la destination OLE DB
+# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Étape 7 : Ajout et configuration de la Destination OLE DB
   Votre package peut maintenant extraire des données à partir de la source de fichier plat pour les transformer dans un format compatible avec la destination. La tâche suivante consiste à charger les données transformées dans la destination. Pour charger les données, vous devez ajouter une destination OLE DB au flux de données. La destination OLE DB peut utiliser une table de base de données, un affichage ou une commande SQL pour charger les données dans plusieurs bases de données compatibles OLE DB.  
   
  Au cours de cette procédure, vous allez ajouter et configurer une destination OLE DB pour utiliser le Gestionnaire de connexions OLE DB que vous avez créé précédemment.  

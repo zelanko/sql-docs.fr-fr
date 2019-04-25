@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6b750e435ab31fae25877cd6c53702aeeec2670d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366398"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643132"
 ---
 # <a name="protocolname-property-servernetworkprotocolipaddress-class"></a>Propriété ProtocolName (classe ServerNetworkProtocolIPAddress)
   Obtient le nom du protocole réseau serveur qui référence l'adresse IP.  

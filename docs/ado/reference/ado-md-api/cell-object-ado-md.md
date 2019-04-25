@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: df7b93e00ddff15c320152e3fa2bc1f104caa3a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469484"
 ---
 # <a name="cell-object-ado-md"></a>Cell, objet (ADO MD)
 Représente les données à l’intersection de coordonnées d’axe contenues dans un ensemble de cellules.  
@@ -43,13 +43,13 @@ Représente les données à l’intersection de coordonnées d’axe contenues d
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste de propriétés réelle peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom   |Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |CouleurFond|Couleur d’arrière-plan utilisée lors de l’affichage de la cellule.|  
 |FontFlags|Masque de bits détaillant les effets de la police.|  
 |FontName|Police utilisée pour afficher la valeur de cellule.|  
 |FontSize|Taille de police utilisée pour afficher la valeur de cellule.|  
-|CouleurTexte|Couleur de premier plan utilisée lors de l’affichage de la cellule.|  
+|ForeColor|Couleur de premier plan utilisée lors de l’affichage de la cellule.|  
 |FormatString|Valeur dans une chaîne mise en forme.|  
   
  Cette section contient les rubriques suivantes.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a2f507e9f22e4d090407b0b0849f69a8e7914e8d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62469130"
 ---
 # <a name="lesson-11-create-roles"></a>Leçon 11 : Créer les rôles
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -51,7 +51,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
 4.  Dans la colonne **Autorisations** , cliquez sur la liste déroulante, puis sélectionnez l’autorisation **Lecture** . 
 
-    ![en tant que-tabulaire-lesson11-nouveau-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
+    ![as-tabular-lesson11-new-role](../analysis-services/media/as-tabular-lesson11-new-role.png) 
   
 5.  Facultatif : Cliquez sur le **membres** onglet, puis cliquez sur **ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle.  
   
@@ -70,7 +70,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
     ```
     
     Une formule de filtre de lignes doit être résolue en une valeur booléenne (TRUE/FALSE). Avec cette formule, vous spécifiez que seules les lignes avec la valeur Code pays / région « US » soit visible par l’utilisateur.  
-    ![en tant que-tabulaire-lesson11-rôle-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
+    ![as-tabular-lesson11-role-filter](../analysis-services/media/as-tabular-lesson11-role-filter.png) 
   
 6.  Facultatif : Cliquez sur l’onglet **Membres** , puis cliquez sur **Ajouter**. Dans la boîte de dialogue **Sélectionner des utilisateurs ou des groupes** , entrez les utilisateurs ou les groupes Windows de votre organisation à inclure dans le rôle.  
   

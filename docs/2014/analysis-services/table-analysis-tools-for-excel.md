@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 596bc66152f36c25169e4a089644042d25f8c13b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757903"
 ---
 # <a name="table-analysis-tools-for-excel"></a>Outils d'analyse de table pour Excel
   Les outils d’exploration de données dans le **analyser** barre d’outils sont le moyen le plus simple pour bien démarrer avec l’exploration de données. Chaque outil analyse automatiquement la distribution et le type des données, et définit les paramètres pour garantir que les résultats sont valides. Vous n'avez pas à sélectionner un algorithme ou à configurer des paramètres complexes.  

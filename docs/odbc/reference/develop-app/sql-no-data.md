@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 749351694a41764b9b5cc8bf3421340d62626aaf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445961"
 ---
 # <a name="sqlnodata"></a>SQL_NO_DATA
 Lorsqu’une application ODBC 3. *x* application appelle **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** dans un ODBC 2. *x* pilote à exécuter une recherche de la mise à jour ou supprimer l’instruction qui affecte toutes les lignes à la source de données, le pilote doit retourner SQL_SUCCESS, pas SQL_NO_DATA. Lorsqu’une application ODBC 2. *x* ou ODBC 3. *x* application fonctionne avec un ODBC 3. *x* pilote appelle **SQLExecDirect**, **SQLExecute**, ou **SQLParamData** avec le même résultat, le ODBC 3. *x* pilote doit retourner SQL_NO_DATA.

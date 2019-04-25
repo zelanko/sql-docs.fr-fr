@@ -12,11 +12,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 1e391bc85bc74ac9bd7394161298b190426926ad
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62473467"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Installer des fonctionnalités SQL Server BI avec SharePoint (PowerPivot et Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] peuvent être intégrés avec une batterie de serveurs Microsoft SharePoint pour activer les fonctionnalités Business Intelligence (BI) dans SharePoint. Les fonctionnalités incluent [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]et [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est utilisé pour [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] accès aux données dans une batterie de serveurs SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] est le moteur de données des classeurs créés dans [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pour Excel et accessibles à partir d'une bibliothèque SharePoint. Une fois que vous avez enregistré un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] dans SharePoint, vous pouvez l'utiliser en tant que source de données des rapports [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: edbe8a3404217f330b5b62a9d433c7d560b28656
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62502689"
 ---
 # <a name="operators---arithmetic"></a>Opérateurs arithmétiques
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -25,10 +25,10 @@ ms.locfileid: "37989652"
   
 |Opérateur|Description|  
 |--------------|-----------------|  
-|[+ &#40;Ajouter&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Additionne deux nombres.|  
-|[- &#40;Soustraire&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Soustrait un nombre d'un autre.|  
-|[&#42;&#40;Multiplier&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Multiplie un nombre par un autre.|  
-|[&#40;Diviser&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|Divise un nombre par un autre.|  
+|[+ &#40;Add&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Additionne deux nombres.|  
+|[- &#40;Subtract&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Soustrait un nombre d'un autre.|  
+|[&#42; &#40;Multiply&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Multiplie un nombre par un autre.|  
+|[&#40;Divide&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|Divise un nombre par un autre.|  
   
  Les règles suivantes déterminent l'ordre de priorité des opérateurs arithmétiques dans une expression DMX :  
   
@@ -39,7 +39,7 @@ ms.locfileid: "37989652"
 -   Les expressions entre parenthèses ont priorité sur toutes les autres opérations.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   
@@ -47,7 +47,7 @@ ms.locfileid: "37989652"
  [Data Mining Extensions &#40;DMX&#41; éléments de syntaxe](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Expressions &#40;DMX&#41;](../dmx/expressions-dmx.md)   
  [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Opérateurs &#40;DMX&#41;](../dmx/operators-dmx.md)   
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)   
  [Structure et utilisation des requêtes de prédiction DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Présentation de l’instruction DMX Select](../dmx/understanding-the-dmx-select-statement.md)  
   

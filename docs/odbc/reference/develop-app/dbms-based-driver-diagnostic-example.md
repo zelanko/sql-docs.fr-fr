@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0485ecf720cb84580c17c77b31fc6816de2e679a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62641038"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>Exemple de diagnostic d’un pilote de SGBD
 Un pilote de SGBD envoie des demandes à un SGBD et retourne des informations à l’application via le Gestionnaire de pilotes. Étant donné que le pilote est le composant qui sert d’interface avec le Gestionnaire de pilotes, il met en forme et retourne les arguments pour **SQLGetDiagRec**.  

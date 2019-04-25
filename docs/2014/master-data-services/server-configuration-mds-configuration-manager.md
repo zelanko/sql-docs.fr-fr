@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8a65b9b50c3b57afc055022392681a946be605c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62763412"
 ---
 # <a name="master-data-services-server-configuration-page-configuration-manager"></a>Page de configuration du serveur Master Data Services (Gestionnaire de configuration)
   Utilisez la page **Configuration du serveur** pour afficher les informations de configuration pour l’ordinateur serveur local.  

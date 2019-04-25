@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 27bcc991088135b95305842639f55b0dc389c4ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518373"
 ---
 # <a name="create-a-custom-workflow---xml-description"></a>Créer un flux de travail personnalisé - Description du code XML
 
@@ -78,7 +78,7 @@ ms.locfileid: "47685697"
 |\<Name>|Premier attribut du membre qui a été modifié. Cet exemple de membre contient uniquement des attributs Name et Code.|  
 |\<Code>|Attribut suivant du membre qui a été modifié. Si cet exemple de membre contenait plus d'attributs, ils suivraient celui-ci.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer un flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)   
  [Exemple de flux de travail personnalisé &#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-example.md)  
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62628904"
 ---
 # <a name="reserved-keywords"></a>Mots clés réservés
 Les mots suivants sont réservés et utilisés dans les appels de fonction ODBC. Ces mots ne limitent pas la grammaire minimale SQL ; Toutefois, pour garantir la compatibilité avec les pilotes qui gèrent la grammaire SQL de base, les applications doivent éviter en utilisant l’une de ces mots clés. Le signe #**définir** valeur SQL_ODBC_KEYWORDS contient une liste séparée par des virgules de ces mots clés.  

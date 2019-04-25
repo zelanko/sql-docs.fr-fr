@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5c262a6cd29767f627e3827dff93078679867389
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62518534"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Actions de règle d'entreprise (Master Data Services)
 
@@ -72,7 +72,7 @@ ms.locfileid: "52760091"
 |-----------------|-----------------|  
 |**démarrer le flux de travail**|Initialise un flux de travail externe. Les données qui ont provoqué cette action sont transmises au flux de travail. Pour plus d'informations, consultez [Intégration de flux de travail SharePoint avec Master Data Services](https://msdn.microsoft.com/library/gg690195.aspx).<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Conditions de règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rule-conditions-master-data-services.md)   
  [Règles d’entreprise &#40;Master Data Services&#41;](../master-data-services/business-rules-master-data-services.md)   
  [Créer et publier une règle d’entreprise &#40;Master Data Services&#41;](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

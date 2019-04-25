@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 59ade343f282933e05619996b119bc08e2dfb2ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445911"
 ---
 # <a name="setting-up-the-cursor"></a>Configuration du curseur
 L’application peut spécifier le type de curseur avant que l’exécution d’une instruction qui crée un résultat défini. Il le fait avec l’attribut d’instruction SQL_ATTR_CURSOR_TYPE. Si l’application ne spécifie pas explicitement un type, un curseur avant uniquement est utilisé. Pour obtenir un curseur mixte, une application spécifie un curseur keyset mais déclare une curseur de taille inférieure à la taille du jeu de résultats.  

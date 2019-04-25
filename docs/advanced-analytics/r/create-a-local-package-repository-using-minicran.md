@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: d9154bc1c01bdf9bd7bdfd7a4032b4ed173464d6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62642604"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>Créer un référentiel de package R local à l’aide de miniCRAN
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea95066a8fecbf96c8f6b14b42486d4d62264ae2
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757715"
 ---
 # <a name="hierarchy-representation-tabular"></a>Représentation (tabulaire) d'une hiérarchie
   Dans les modèles tabulaires, une hiérarchie est un chemin de navigation d'un attribut à l'autre en fonction des valeurs sélectionnées par l'utilisateur.  

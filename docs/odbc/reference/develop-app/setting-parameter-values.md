@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62445951"
 ---
 # <a name="setting-parameter-values"></a>Définition de valeurs de paramètres
 Pour définir la valeur d’un paramètre, l’application définit simplement la valeur de la variable liée au paramètre. Il n’est pas important lorsque cette valeur est définie, tant qu’elle est définie avant l’exécution de l’instruction. L’application peut définir la valeur avant ou après la variable de liaison, et elle peut modifier la valeur autant de fois qu’il le souhaite. Lorsque l’instruction est exécutée, le pilote récupère simplement la valeur actuelle de la variable. Cela est particulièrement utile lorsqu’une instruction préparée est exécutée plusieurs fois ; l’application définit de nouvelles valeurs pour tout ou partie des variables chaque fois que l’instruction est exécutée. Pour obtenir un exemple de cela, consultez [exécution préparée](../../../odbc/reference/develop-app/prepared-execution-odbc.md), plus haut dans cette section.  
@@ -35,13 +35,13 @@ Pour définir la valeur d’un paramètre, l’application définit simplement l
   
  Le tableau suivant montre les valeurs de la variable liée et de la mémoire tampon de longueur / d’indicateur qui définit de l’application pour un large éventail de valeurs de paramètre.  
   
-|Paramètre<br /><br /> valeur|Paramètre<br /><br /> (SQL)<br /><br /> type de données|Variable (C)<br /><br /> type de données|Valeur dans<br /><br /> lié<br /><br /> variable|Valeur dans<br /><br /> longueur / d’indicateur<br /><br /> mémoire tampon [d]|  
+|Paramètre<br /><br /> valeur|Paramètre<br /><br /> (SQL)<br /><br /> type de données|Variable (C)<br /><br /> type de données|Valeur dans<br /><br /> lié<br /><br /> variable|Valeur dans<br /><br /> longueur / d’indicateur<br /><br /> buffer[d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
-|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0 [a]|SQL_NTS ou 3|  
+|"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS ou 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
-|10|SQL_INTEGER|SQL_C_CHAR|10\0 [a]|SQL_NTS ou 2|  
-|À 13 H|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0 [b]|--|  
-|À 13 H|SQL_TYPE_TIME|SQL_C_CHAR|{t ' 13 : 00:00'} \0 [a], [c]|SQL_NTS ou 14|  
+|10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS ou 2|  
+|À 13 H|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
+|À 13 H|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS ou 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
  [a] « \0 » représente un caractère de fin de la valeur null. Le caractère null de terminaison est requis uniquement si la valeur dans la mémoire tampon de longueur / d’indicateur est SQL_NTS.  

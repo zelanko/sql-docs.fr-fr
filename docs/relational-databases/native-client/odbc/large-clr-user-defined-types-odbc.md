@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62634574"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Types CLR volumineux définis par l’utilisateur (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "49072213"
   
  Le tableau suivant montre le mappage des types de données dans les paramètres et les jeux de résultats :  
   
-|Type de données SQL Server|Type de données SQL|Valeur|  
+|Type de données SQL Server|Type de données SQL|Value|  
 |--------------------------|-------------------|-----------|  
 |UDT CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
@@ -173,7 +173,7 @@ ms.locfileid: "49072213"
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  Les valeurs requises pour les UDT sont les suivantes :  
   
-|Type de données SQL|*Type de paramètre*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
+|Type de données SQL|*Parametertype*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-------------------|---------------------|---------------------|------------------------|  
 |SQL_SS_UDT<br /><br /> (longueur inférieure ou égale à 8 000 octets)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longueur supérieure à 8 000 octets)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  

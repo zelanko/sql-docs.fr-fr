@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4d8fc3b59d3296a2996d37a190dc5c8e075744a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466042"
 ---
 # <a name="table-and-row-size-in-memory-optimized-tables"></a>Taille de la table et des lignes dans les tables optimisées en mémoire
   Une table mémoire optimisée se compose d'une collection de lignes et d'index qui contiennent des pointeurs vers les lignes. Dans une table mémoire optimisée, les lignes ne peuvent pas dépasser 8 060 octets. La compréhension de la taille d'une table mémoire optimisée vous aidera à comprendre si votre ordinateur dispose de suffisamment de mémoire.  

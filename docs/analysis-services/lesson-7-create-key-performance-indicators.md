@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 7 : Créer des indicateurs de Performance clés | Microsoft Docs'
+title: 'Leçon 7 : Créer des indicateurs de Performance clés | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ecfedbbc4b7e606f1589f2b5415c5355bb0d95e1
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42790100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62523352"
 ---
-# <a name="lesson-7-create-key-performance-indicators"></a>Leçon 7 : Créer des indicateurs de performance clés
+# <a name="lesson-7-create-key-performance-indicators"></a>Leçon 7 : Créer des indicateurs de performance clé (KPI)
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Au cours de cette leçon, vous allez créer des indicateurs de performance clés (KPI). Les KPI évaluent la performance d’une valeur, définie par une mesure de *base* , par rapport à une valeur *cible* , également définie par une mesure ou par une valeur absolue. Dans les applications clientes de création de rapports, les indicateurs de performance clés offrent aux professionnels un moyen d'obtenir rapidement et aisément un récapitulatif d'un succès commercial ou d'identifier les tendances. Pour plus d’informations, consultez [indicateurs de performance clés](../analysis-services/tabular-models/kpis-ssas-tabular.md).  
   
-Durée estimée pour effectuer cette leçon : **15 minutes**  
+Durée estimée pour effectuer cette leçon : **15 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
-Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 6 : créer des mesures](../analysis-services/lesson-6-create-measures.md).   
+Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 6 : Créer des mesures](../analysis-services/lesson-6-create-measures.md).   
   
 ## <a name="create-key-performance-indicators"></a>Créer des indicateurs de performance clé (KPI)  
   
@@ -50,7 +50,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
 8.  Dans **Sélectionner le style d’icône**, sélectionnez le type d’icône losange (rouge), triangle (jaune) et cercle (vert).
   
-    ![en tant que-tabulaire-lesson7-indicateur de performance clé](../analysis-services/media/as-tabular-lesson7-kpi.png)
+    ![as-tabular-lesson7-kpi](../analysis-services/media/as-tabular-lesson7-kpi.png)
     
     > [!TIP]  
     > Notez l’extensible **Descriptions** étiquette sous les styles d’icône disponibles. Utilisez-la pour entrer des descriptions pour les différents éléments KPI afin de les rendre plus identifiables dans les applications clientes.  
@@ -78,6 +78,6 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
 6.  Dans **Sélectionner le style d’icône**, sélectionnez le type d’icône losange (rouge), triangle (jaune) et cercle (vert), puis cliquez sur **OK**.  
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
-Accédez à la leçon suivante : [leçon 8 : créer des Perspectives](../analysis-services/lesson-8-create-perspectives.md).
+Accédez à la leçon suivante : [Leçon 8 : Créer des Perspectives](../analysis-services/lesson-8-create-perspectives.md).
   
   

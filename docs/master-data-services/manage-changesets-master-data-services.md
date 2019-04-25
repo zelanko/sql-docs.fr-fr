@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 68c00133fde8c15fb028c013032c316658c056a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52777411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62466838"
 ---
 # <a name="manage-changesets-master-data-services"></a>Gérer les ensembles de modifications (Master Data Services)
 
@@ -24,7 +24,7 @@ ms.locfileid: "52777411"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , vous pouvez gérer toutes les modifications par modèle et par version.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** . Pour plus d’informations, consultez [Autorisations de zone fonctionnelle &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   

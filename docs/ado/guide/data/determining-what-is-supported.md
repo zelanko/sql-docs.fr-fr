@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3a9b8bcf01f348679fc16230c021166d4d9dc786
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62472218"
 ---
 # <a name="determining-what-is-supported"></a>Détermination de ce qui est pris en charge
 Le **prend en charge** méthode est utilisée pour déterminer si une certaine **Recordset** objet prend en charge un type particulier de fonctionnalité. Il présente la syntaxe suivante :  

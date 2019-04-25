@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2f6361e3e6a295398bdd88d56a6c70a79e92b526
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62467415"
 ---
 # <a name="unique-particle-attribution-constraint"></a>Contrainte d'attribution de particule unique
   Dans XSD, les modèles de contenu complexe sont soumis à la règle de la contrainte d'attribution de particule unique. Cette règle requiert que chaque élément d'un document d'instance corresponde sans ambiguïté à exactement une particule `<xsd:element>` ou `<xsd:any>` dans le modèle de contenu de son parent. Tout schéma qui contient un type avec un modèle de contenu potentiellement ambigu est rejeté.  
@@ -80,11 +80,11 @@ ms.locfileid: "58538518"
 ## <a name="finding-more-information"></a>Sources d'informations complémentaires  
  Le document suivant est publié par le World Wide Web Consortium (W3C) et contient la description technique de la contrainte d'attribution de particule unique :  
   
- « XML Schema Part 1: Structures Deuxième Édition, recommandation proposée par le W3C :  
+ « XML Schema Part 1 : Structures Second Edition, W3C Proposed Edited Recommendation » :  
   
--   Section 3.8.6 : Contraintes sur des composants de schéma de groupes modèles  
+-   Section 3.8.6 : Contraintes sur les composants de schéma de groupe de modèles  
   
--   Appendix H : Analyse de la contrainte d'attribution de particule unique (partie non normative)  
+-   Appendix h : Analyse de l’Unique Particle Attribution Constraint (non normative)  
   
  Pour lire le document, consultez [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881).  
   

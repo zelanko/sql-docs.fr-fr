@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d91192a8edd4d4ab93f539b9dc359e1be37eecf
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62637729"
 ---
 # <a name="example-querying-xmltype-columns"></a>Exemple : interrogation de colonnes de type XML
   La requête ci-dessous inclut des colonnes de type `xml`. Elle extrait l'ID de modèle de produit, le nom et les étapes de fabrication dans le premier emplacement à partir de la colonne `Instructions` de type `xml`.  
