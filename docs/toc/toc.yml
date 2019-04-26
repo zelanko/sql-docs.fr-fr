@@ -1,5 +1,5 @@
 - name: Bienvenue
-  href: ../sql-server/sql-server-technical-documentation.md?toc=..%2ftoc%2ftoc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
 - name: Vue d’ensemble
   items:
     - name: Nouveautés de SQL Server
@@ -28,7 +28,7 @@
         - name: SQL Server 2019
           href: ../sql-server/sql-server-ver15-release-notes.md
         - name: "SQL Server\_2017"
-          href: ../sql-server/sql-server-2017-release-notes.md?toc=..%2ftoc%2ftoc.json
+          href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc/toc.json
         - name: "SQL Server\_2016"
           href: ../sql-server/sql-server-2016-release-notes.md
         - name: "SQL Server\_2014"
@@ -61,20 +61,30 @@
               href: ../big-data-cluster/deploy-big-data-tools.md
             - name: Installer mssqlctl
               href: ../big-data-cluster/deploy-install-mssqlctl.md
-        - name: Scripts de déploiement
-          items:
-            - name: Azure Kubernetes Service
-              href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
-        - name: Conseils pour le déploiement
+        - name: Déployer
           items:
             - name: Conseils pour le déploiement
               href: ../big-data-cluster/deployment-guidance.md
-            - name: Azure Kubernetes Service
-              href: ../big-data-cluster/deploy-on-aks.md
-            - name: Kubeadm
-              href: ../big-data-cluster/deploy-with-kubeadm.md
-            - name: Minikube
-              href: ../big-data-cluster/deploy-on-minikube.md
+            - name: Effectuer une mise à niveau vers une nouvelle version
+              href: ../big-data-cluster/deployment-upgrade.md
+            - name: Personnaliser les déploiements
+              href: ../big-data-cluster/deployment-custom-configuration.md
+            - name: Configurer le stockage
+              href: ../big-data-cluster/concept-data-persistence.md
+            - name: Déploiements hors connexion
+              href: ../big-data-cluster/deploy-offline.md
+            - name: Cibles de déploiement
+              items:
+                - name: Azure Kubernetes Service
+                  href: ../big-data-cluster/deploy-on-aks.md
+                - name: Kubeadm
+                  href: ../big-data-cluster/deploy-with-kubeadm.md
+                - name: Minikube
+                  href: ../big-data-cluster/deploy-on-minikube.md
+            - name: Scripts de déploiement
+              items:
+                - name: Azure Kubernetes Service
+                  href: ../big-data-cluster/quickstart-big-data-cluster-deploy.md
     - name: Concepts
       items:
         - name: Déploiement d'applications
@@ -89,8 +99,6 @@
           href: ../big-data-cluster/concept-storage-pool.md
         - name: Pool de calcul
           href: ../big-data-cluster/concept-compute-pool.md
-        - name: Persistance des données
-          href: ../big-data-cluster/concept-data-persistence.md
         - name: Sécurité
           href: ../big-data-cluster/concept-security.md
     - name: Guides pratiques
@@ -111,6 +119,10 @@
                   href: ../big-data-cluster/tutorial-query-hdfs-storage-pool.md
                 - name: Hiérarchisation HDFS
                   href: ../big-data-cluster/hdfs-tiering.md
+                - name: Monter ADLS Gen2 pour la hiérarchisation HDFS
+                  href: ../big-data-cluster/hdfs-tiering-mount-adlsgen2.md
+                - name: Monter S3 pour la hiérarchisation HDFS
+                  href: ../big-data-cluster/hdfs-tiering-mount-s3.md
         - name: Ingestion de données
           items:
             - name: Charger des données avec curl
@@ -141,6 +153,8 @@
               href: ../big-data-cluster/sparklyr-from-RStudio.md
             - name: Prise en charge de GPU et TensorFlow
               href: ../big-data-cluster/spark-gpu-tensorflow.md
+            - name: Intégrer Spark à SQL Server
+              href: ../big-data-cluster/spark-mssql-connector.md
         - name: Gérer le cluster Big Data de SQL Server
           items:
             - name: Se connecter à un cluster de Big Data
@@ -167,6 +181,10 @@
               href: ../big-data-cluster/spark-history-server.md
     - name: Référence
       items:
+        - name: Informations de référence sur le déploiement
+          items:
+            - name: Fichier config du déploiement
+              href: ../big-data-cluster/reference-deployment-config.md
         - name: Référence mssqlctl
           items:
             - name: mssqlctl
@@ -183,6 +201,8 @@
                   href: ../big-data-cluster/reference-mssqlctl-cluster.md
                 - name: Configuration de cluster mssqlctl
                   href: ../big-data-cluster/reference-mssqlctl-cluster-config.md
+                - name: Section de la configuration de cluster mssqlctl
+                  href: ../big-data-cluster/reference-mssqlctl-cluster-config-section.md
                 - name: Débogage de cluster mssqlctl
                   href: ../big-data-cluster/reference-mssqlctl-cluster-debug.md
             - name: Stockage
@@ -7247,6 +7267,8 @@
               items:
                 - name: Installer sur Windows
                   href: ../relational-databases/polybase/polybase-installation.md
+                - name: Installer sur Linux
+                  href: ../relational-databases/polybase/polybase-linux-setup.md
                 - name: Fonctionnalités et limitations
                   href: ../relational-databases/polybase/polybase-versioned-feature-summary.md
             - name: Configurer des sources de données externes
@@ -7291,6 +7313,8 @@
           items:
             - name: Référence T-SQL
               href: ../relational-databases/polybase/polybase-t-sql-objects.md
+            - name: Mappage des types
+              href: ../relational-databases/polybase/polybase-type-mapping.md
         - name: Ressources
           items:
             - name: DBA Stack Exchange +

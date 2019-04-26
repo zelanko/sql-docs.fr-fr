@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f5d485aec6d3056022ea55f1cb2bc8ee29a4e314
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765762"
 ---
 # <a name="database-object-security-master-data-services"></a>Sécurité de l'objet de base de données (Master Data Services)
   Dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , les données sont stockées dans plusieurs tables de base de données et sont visible dans les vues. Les informations que vous avez sécurisées dans l'application Web [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] sont visibles aux utilisateurs qui ont accès à la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  
@@ -46,11 +46,11 @@ ms.locfileid: "52822233"
   
 |Action|Éléments sécurisables|Autorisations|  
 |------------|----------------|-----------------|  
-|Chargez les membres feuille et leurs attributs dans la table de mise en lots.|stg.name_Leaf|Obligatoire : INSERT<br /><br /> Facultatif : SÉLECTIONNER et mettre à jour|  
+|Chargez les membres feuille et leurs attributs dans la table de mise en lots.|stg.name_Leaf|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
 |Chargez les données de la table de mise en lots Feuille dans les tables de base de données MDS appropriées.|stg.udp_name_Leaf|Exécutez|  
-|Chargez les membres consolidés et leurs attributs dans la table de mise en lots.|stg.name_Consolidated|Obligatoire : INSERT<br /><br /> Facultatif : SÉLECTIONNER et mettre à jour|  
+|Chargez les membres consolidés et leurs attributs dans la table de mise en lots.|stg.name_Consolidated|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
 |Chargez les données de la table de mise en lots Consolidé dans les tables de base de données MDS appropriées.|stg.udp_name_Consolidated|Exécutez|  
-|Charger la feuille et les relations entre eux des membres consolidés dans une hiérarchie explicite dans la table intermédiaire.|stg.name_Relationship|Obligatoire : INSERT<br /><br /> Facultatif : SÉLECTIONNER et mettre à jour|  
+|Charger la feuille et les relations entre eux des membres consolidés dans une hiérarchie explicite dans la table intermédiaire.|stg.name_Relationship|Obligatoire : INSERT<br /><br /> Facultatif : SELECT et UPDATE|  
 |Chargez les données de la table de mise en lots Relation dans les tables MDS appropriées.|stg.udp_name_Relationship|Exécutez|  
 |Affichez les erreurs qui se sont produites lors de l'insertion des données des tables de mise en lots dans les tables de base de données MDS.|stg.udp_name_Relationship|SELECT|  
   

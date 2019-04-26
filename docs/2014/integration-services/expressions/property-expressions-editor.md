@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7539ae9426bfe480f7dbbe25ea1c3724815295e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768785"
 ---
 # <a name="property-expressions-editor"></a>Éditeur d'expressions de la propriété
   Utilisez la boîte de dialogue **Éditeur d'expressions de la propriété** pour créer, modifier ou supprimer les expressions de la propriété qui mettent à jour les valeurs de propriété.  

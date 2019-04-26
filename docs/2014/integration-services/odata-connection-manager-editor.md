@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8a025826262097ef23da8a54bbbefd6781e601f6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767161"
 ---
 # <a name="odata-connection-manager-editor"></a>Éditeur du gestionnaire de connexions OData
   La boîte de dialogue **Éditeur du gestionnaire de connexions OData** vous permet d'ajouter ou de modifier une connexion à une source OData existante.  

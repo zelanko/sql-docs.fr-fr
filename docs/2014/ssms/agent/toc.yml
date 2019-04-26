@@ -215,7 +215,7 @@
           href: change-steps-of-a-sql-server-agent-master-job.md
         - name: Remove Steps from a SQL Server Agent Master Job
           href: remove-steps-from-a-sql-server-agent-master-job.md
-        - name: Modify the Target Server(s) Associated with a SQL Server Agent Master Job
+        - name: Modifier les serveurs cibles associés à un travail maître SQL Server Agent
           href: modify-the-target-server-s-associated-with-a-sql-server-agent-master-job.md
         - name: Choisir le compte de service SQL Server Agent correct pour les environnements multiserveurs
           href: choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md
@@ -307,7 +307,7 @@
       href: operators-node-sql-server-agent-f1-help.md
     - name: Propriétés de l’opérateur et Nouvel opérateur (page Général)
       href: operator-properties-new-operator-general-page.md
-    - name: "Propriétés de l’opérateur\_: Nouvel opérateur (page Notifications)"
+    - name: "Propriétés de l’opérateur\_: Nouvel opérateur (Page Notifications)"
       href: operator-properties-new-operator-notifications-page.md
     - name: Propriétés Opérateur (page Historique)
       href: operator-properties-history-page.md

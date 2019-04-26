@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f9b60c47fd7cf05202a5203c1b908c9240cb5a22
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62765972"
 ---
 # <a name="add-a-user-master-data-services"></a>Ajouter un utilisateur (Master Data Services)
   Ajoutez un utilisateur à la liste **Utilisateurs** dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] pour commencer la procédure d’affectation d’une autorisation d’accès à l’application web. Avant qu’un utilisateur de la liste puisse accéder à [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], vous devez lui accorder une autorisation d’accès à un ou plusieurs objets de modèle et zones fonctionnelles.  

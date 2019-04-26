@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536aeb35d871fa2dd13e343cc589649dda45e984
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767211"
 ---
 # <a name="move-ssis-toolbox-items"></a>Déplacer des éléments de la boîte à outils SSIS
   La nouvelle boîte à outils SSIS inclut de nouvelles catégories et vous permet d'organiser les éléments selon vos préférences. Une fenêtre d'information en bas de la boîte à outils fournit une description d'un élément sélectionné de la boîte à outils et un lien vers une rubrique de la documentation en ligne.  
