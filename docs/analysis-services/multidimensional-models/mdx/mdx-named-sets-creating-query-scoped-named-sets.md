@@ -1,5 +1,5 @@
 ---
-title: Création d’étendue de requête de jeux nommés (MDX) | Documents Microsoft
+title: Création d’étendue de requête de jeux nommés (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9b30ba12d229f0c045d7a08a71c97a98de67a2bd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62739979"
 ---
-# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>MDX jeux - création d’étendue de requête nommé de jeux nommés
+# <a name="mdx-named-sets---creating-query-scoped-named-sets"></a>Jeux nommés MDX jeux nommé - création d’étendue de requête
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Si un jeu nommé n'est nécessaire que pour une seule requête MDX (Multidimensional Expressions), vous pouvez le définir à l'aide du mot clé WITH. Un jeu nommé créé à l'aide du mot clé WITH n'existe plus une fois que l'exécution de la requête est terminée.  
   
@@ -90,7 +90,7 @@ FROM Sales
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Instruction SELECT & #40 ; MDX & #41 ;](../../../mdx/mdx-data-manipulation-select.md)   
- [Création d’étendue de Session nommée Jeux & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Instruction SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Création de jeux nommés dans l’étendue de session &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

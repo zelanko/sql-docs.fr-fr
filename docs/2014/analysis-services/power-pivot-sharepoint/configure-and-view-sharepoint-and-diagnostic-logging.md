@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6196466246529521f356c193c3e8cc0ee688c197
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743375"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics (PowerPivot pour SharePoint)
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sont enregistrés dans les fichiers journaux SharePoint. Utilisez les informations de cette rubrique pour configurer les niveaux de journalisation et afficher les informations du fichier journal. Vous pouvez contrôler les événements du serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont enregistrés dans le fichier. Vous pouvez également contrôler la gravité des messages enregistrés. Pour plus d’informations, consultez [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "53354702"
 #### <a name="entries-for-powerpivot-services"></a>Entrées pour les services PowerPivot  
  Le tableau suivant décrit les entrées d'opérations de serveur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] susceptibles de se trouver dans un fichier journal SharePoint.  
   
-|Traiter|Domaine|Catégorie|Level|Boîte de|Détails|  
+|Traiter|Domaine|Category|Level|Boîte de|Détails|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
 |w3wp.exe|Service PowerPivot|Utilisation|Commentaires|There are no current request statistics, nothing to log.|À intervalles prédéfinis, le service fournit les statistiques de réponse aux requêtes en tant qu'événement d'utilisation au système de collecte des données d'utilisation. Ce message indique qu'il n'existe aucune statistique sur les requêtes à signaler.|  
 |w3wp.exe|Service PowerPivot|Web frontal|Commentaires|Démarrage de localiser un serveur d’applications pour la source de données =\<*chemin d’accès*>|Lorsqu'il reçoit une demande de connexion, le service [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] identifie un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] disponible pour gérer la demande. Si la batterie de serveurs ne contient qu'un seul serveur, le serveur local accepte toujours la demande.|  
