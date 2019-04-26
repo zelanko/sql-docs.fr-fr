@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 29e265db3d0751f306fcd50125502c287cac8f62
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768525"
 ---
 # <a name="persisting-custom-objects"></a>Persistance des objets personnalisés
   Il n'est pas nécessaire d'implémenter une persistance personnalisée pour les objets personnalisés que vous créez tant que leurs propriétés utilisent uniquement des types de données simples tels que les types `integer` et `string`. L'implémentation par défaut de la persistance enregistre les métadonnées de votre objet ainsi que les valeurs de toutes ses propriétés.  

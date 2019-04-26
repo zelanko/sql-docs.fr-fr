@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a79e359fb941ed847d1dadbf2ae499e06b9e2e29
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767111"
 ---
 # <a name="odbc-connection-manager-ui-reference"></a>Référence de l'interface utilisateur du gestionnaire de connexions ODBC
   Utilisez la boîte de dialogue **Configurer le gestionnaire de connexions ODBC** pour ajouter une connexion à une source de données ODBC.  

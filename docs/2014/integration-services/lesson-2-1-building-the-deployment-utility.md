@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b788f82fc28ee39e7d65ae484da49313eea7c610
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62767581"
 ---
-# <a name="step-1-building-the-deployment-utility"></a>Étape 1 : Génération de l'utilitaire de déploiement
+# <a name="step-1-building-the-deployment-utility"></a>Étape 1 : Génération de l’utilitaire de déploiement
   Au cours de cette tâche, vous allez configurer et générer un utilitaire de déploiement pour le projet Didacticiel de déploiement.  
   
  Avant de générer l'utilitaire de déploiement, vous devez modifier les propriétés du projet Didacticiel de déploiement. La boîte de dialogue **Pages de propriétés du didacticiel de déploiement** vous permet de configurer ces propriétés. Dans cette boîte de dialogue, vous devez activer la possibilité de mettre à jour des configurations au cours du déploiement et spécifier que le processus de création génère un utilitaire de déploiement. Après avoir défini les propriétés, vous allez générer le projet.  
@@ -48,7 +48,7 @@ ms.locfileid: "58381197"
   
 4.  Dans la fenêtre de sortie, vérifiez les informations suivantes :  
   
-     Création démarrée : projet SQL Integration Services : incrémentiel ...  
+     Build démarrée : Projet SQL Integration Services : Incrémentielle...  
   
      Création de l'utilitaire de déploiement...  
   
@@ -56,12 +56,12 @@ ms.locfileid: "58381197"
   
      Fin de la génération -- 0 erreur, 0 avertissement  
   
-     ========== Génération : 0 réussi, 0 échoué, 1 mis à jour, 0 ignoré ==========  
+     === Build : 0 a réussi, 0 a échoué, 1 mis à jour, 0 a été ignoré ===  
   
 5.  Dans le menu **Fichier** , cliquez sur **Quitter**. Si vous êtes invité à enregistrer les modifications apportées aux éléments du didacticiel de déploiement, cliquez sur **Oui**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 2 : Vérification du Bundle de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
+ [Étape 2 : Vérification de l'application de déploiement](../integration-services/lesson-2-2-verifying-the-deployment-bundle.md)  
   
 ![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   

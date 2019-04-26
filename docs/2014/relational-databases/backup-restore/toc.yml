@@ -18,7 +18,7 @@
   items:
     - name: Configuration de la sauvegarde managée SQL Server sur Windows Azure
       href: enable-sql-server-managed-backup-to-microsoft-azure.md
-    - name: Sauvegarde managée SQL Server sur Windows Azure - Interopérabilité et coexistence
+    - name: "Gestion de sauvegarde de SQL Server vers Microsoft Azure\_: Interopérabilité et coexistence"
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-interoperability-and-coexistence.md
     - name: Sauvegarde managée SQL Server sur Windows Azure - Paramètres de rétention et de stockage
       href: ../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md
@@ -202,13 +202,13 @@
       href: deferred-transactions-sql-server.md
     - name: Supprimer des groupes de fichiers obsolètes (SQL Server)
       href: remove-defunct-filegroups-sql-server.md
-    - name: 'Exemple : restauration en ligne d’un fichier en lecture/écriture (mode de récupération complète)'
+    - name: 'Exemple : Restauration en ligne d’un fichier en lecture/écriture (mode de récupération complète)'
       href: example-online-restore-of-a-read-write-file-full-recovery-model.md
-    - name: 'Exemple : restauration en ligne d''un fichier en lecture seule (mode de restauration complète)'
+    - name: 'Exemple : Restauration en ligne d’un fichier en lecture seule (mode de restauration complète)'
       href: example-online-restore-of-a-read-only-file-full-recovery-model.md
-    - name: 'Exemple : restauration en ligne d''un fichier en lecture seule (Mode de récupération simple)'
+    - name: 'Exemple : Restauration en ligne d’un fichier en lecture seule (Mode de récupération simple)'
       href: example-online-restore-of-a-read-only-file-simple-recovery-model.md
-    - name: 'Exemple : restauration hors ligne du groupe de fichiers primaire et d''un autre groupe de fichiers (mode de restauration complète)'
+    - name: 'Exemple : Restauration hors ligne du groupe de fichiers primaire et d’un autre groupe de fichiers (mode de restauration complète)'
       href: example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md
 - name: Restaurer des pages
   href: restore-pages-sql-server.md
@@ -218,13 +218,13 @@
 - name: Restaurations fragmentaires
   href: piecemeal-restores-sql-server.md
   items:
-    - name: 'Exemple : restauration fragmentaire d''une base de données (Mode de restauration complète)'
+    - name: 'Exemple : Restauration fragmentaire d''une base de données (Mode de restauration complète)'
       href: example-piecemeal-restore-of-database-full-recovery-model.md
-    - name: 'Exemple : restauration fragmentaire d''une base de données (mode de récupération simple)'
+    - name: 'Exemple : Restauration fragmentaire d’une base de données (mode de récupération simple)'
       href: example-piecemeal-restore-of-database-simple-recovery-model.md
-    - name: 'Exemple : restauration fragmentaire de quelques groupes de fichiers (mode de restauration complète)'
+    - name: 'Exemple : Restauration fragmentaire de quelques groupes de fichiers (mode de restauration complète)'
       href: example-piecemeal-restore-of-only-some-filegroups-full-recovery-model.md
-    - name: 'Exemple : restauration fragmentaire de quelques groupes de fichiers uniquement (mode de récupération simple)'
+    - name: 'Exemple : Restauration fragmentaire de quelques groupes de fichiers uniquement (mode de récupération simple)'
       href: example-piecemeal-restore-of-only-some-filegroups-simple-recovery-model.md
 - name: Récupérer une base de données sans restaurer les données (Transact-SQL)
   href: recover-a-database-without-restoring-data-transact-sql.md
@@ -233,5 +233,5 @@
   items:
     - name: Restaurer la base de données MASTER (Transact-SQL)
       href: restore-the-master-database-transact-sql.md
-- name: "sauvegarde et restauration\_: Interopérabilité et coexistence"
+- name: "Sauvegarde et restauration\_: Interopérabilité et coexistence"
   href: backup-and-restore-interoperability-and-coexistence-sql-server.md

@@ -24,23 +24,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768445"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Utilisation d'images à l'aide de la tâche de script
   Une base de données de produits ou d'utilisateurs contient généralement des images, en plus du texte et des données numériques. L'espace de noms `System.Drawing` dans Microsoft .NET Framework fournit des classes permettant de manipuler des images.  
   
- [Exemple 1 : Convertir des Images au Format JPEG](#example1)  
+ [Exemple 1 : Convertir des images au format JPEG](#example1)  
   
- [Exemple 2 : Créer et enregistrer des Images miniatures](#example2)  
+ [Exemple 2 : Créer et enregistrer des images miniatures](#example2)  
   
 > [!NOTE]  
 >  Si vous souhaitez créer une tâche plus facilement réutilisable sur plusieurs packages, envisagez d'utiliser le code indiqué dans l'exemple de tâche de script comme point de départ d'une tâche personnalisée. Pour plus d’informations, consultez [Développement d’une tâche personnalisée](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Description de l’exemple 1 : Convertir des Images au Format JPEG  
+##  <a name="example1"></a> Description de l'exemple 1 : Convertir des images au format JPEG  
  L'exemple suivant ouvre un fichier image spécifié par une variable et l'enregistre sous la forme d'un fichier JPEG compressé à l'aide d'un encodeur. Le code pour extraire les informations de l'encodeur est encapsulé dans une fonction privée.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Pour configurer cet exemple de tâche de script destiné à un seul fichier image  
@@ -149,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Description de l’exemple 2 : Créer et enregistrer des Images miniatures  
+##  <a name="example2"></a> Description de l'exemple 2 : Créer et enregistrer des images miniatures  
  L'exemple suivant ouvre un fichier image spécifié par une variable, crée une miniature de l'image en respectant les proportions et enregistre la miniature sous un nom de fichier modifié. Le code qui calcule la hauteur et la largeur de la miniature en préservant les proportions est encapsulé dans une sous-routine privée.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>Pour configurer cet exemple de tâche de script destiné à un seul fichier image  
