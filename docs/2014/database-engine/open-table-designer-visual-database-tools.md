@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57eb424087ccef14f4b1ff1aea4216b5dd0a205b
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774183"
 ---
 # <a name="open-table-designer-visual-database-tools"></a>Ouvrir le Concepteur de tables (Visual Database Tools)
   Outil visuel Concepteur de tables permettant de concevoir et de visualiser des tables de base de données auxquelles vous êtes connecté. Vous pouvez utiliser le Concepteur de tables pour créer, modifier ou supprimer des tables, des colonnes, des clés, des index, des relations et des contraintes.  

@@ -34,11 +34,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779861"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Fonctionnalités du moteur de base de données supprimées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités du [!INCLUDE[ssDE](../includes/ssde-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -46,17 +46,17 @@ ms.locfileid: "54132612"
 ## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Le tableau suivant répertorie les fonctionnalités qui ont été supprimées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-|Catégorie|Fonctionnalité supprimée|Remplacement|  
+|Category|Fonctionnalité supprimée|Remplacement|  
 |--------------|--------------------------|-----------------|  
 |Niveau de compatibilité|Niveau de compatibilité 90|Les bases de données doivent être définies au moins au niveau de compatibilité 100. Lorsqu'une base de données avec un niveau de compatibilité inférieur à 100 est mise à niveau vers [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], le niveau de compatibilité de la base de données est défini sur la valeur 100 pendant l'opération de mise à niveau.|  
   
 ## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  Le tableau suivant répertorie les fonctionnalités qui ont été supprimées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
-|Catégorie|Fonctionnalité supprimée|Remplacement|  
+|Category|Fonctionnalité supprimée|Remplacement|  
 |--------------|--------------------------|-----------------|  
 |Sauvegarde et restauration|**SAUVEGARDE {base de données &#124; LOG} WITH PASSWORD** et **sauvegarde {base de données &#124; LOG} WITH MEDIAPASSWORD** sont supprimés. **RESTORE {DATABASE &#124; journal} avec mot de passe [MEDIA]** continue à être déconseillé.|None|  
-|Sauvegarde et restauration|**RESTORE {DATABASE &AMP;#124; JOURNAL}... WITH DBO_ONLY**|**RESTORE {DATABASE &AMP;#124; JOURNAL}...... AVEC RESTRICTED_USER**|  
+|Sauvegarde et restauration|**RESTORE { DATABASE &#124; LOG } ... WITH DBO_ONLY**|**RESTORE { DATABASE &#124; LOG } ... ... AVEC RESTRICTED_USER**|  
 |Niveau de compatibilité|niveau de compatibilité 80|Les bases de données doivent être définies au moins au niveau de compatibilité 90.|  
 |Options de configuration|`sp_configure 'user instance timeout'` et `'user instances enabled'`|Utilisez la fonctionnalité de base de données locale. Pour plus d’informations, consultez [utilitaire SqlLocalDB](../tools/sqllocaldb-utility.md)|  
 |Protocoles de connexion|La prise en charge du protocole VIA est supprimée.|Utilisez à la place TCP.|  
@@ -74,7 +74,7 @@ ms.locfileid: "54132612"
 |Options définies|`SET DISABLE_DEF_CNST_CHK`|Aucun.|  
 |Tables système|sys.database_principal_aliases|Utilisez des rôles à la place d'alias.|  
 |Transact-SQL|`RAISERROR` dans le format `RAISERROR integer 'string'` est supprimé.|Réécrivez l’instruction à l’aide de cours **RAISERROR (…)**  syntaxe.|  
-|Syntaxe Transact-SQL|`COMPUTE / COMPUTE BY`|Utilisez `ROLLUP`.|  
+|Syntaxe Transact-SQL|`COMPUTE / COMPUTE BY`|Utiliser `ROLLUP`.|  
 |Syntaxe Transact-SQL|Utilisation de **\* =** et **=&#42;**|Utilisez la syntaxe de jointure ANSI. Pour plus d’informations, consultez [FROM (Transact-SQL).](https://msdn.microsoft.com/library/ms177634\(SQL.105\).aspx)|  
 |XEvents|databases_data_file_size_changed, databases_log_file_size_changed<br /><br /> eventdatabases_log_file_used_size_changed<br /><br /> locks_lock_timeouts_greater_than_0<br /><br /> locks_lock_timeouts|Remplacé par événement database_file_size_change database_file_size_change<br /><br /> événement database_file_size_change<br /><br /> lock_timeout_greater_than_0<br /><br /> lock_timeout|  
   

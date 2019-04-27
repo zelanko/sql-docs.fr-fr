@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b02eab5b0b2d6f6010df51151929c71188290b9c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743605"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>Boîte de dialogue Nouveau modèle d'exploration de données (vue Structure d'exploration de données)
   Utilisez la boîte de dialogue **Nouveau modèle d'exploration de données** pour ajouter un modèle d'exploration de données à la structure d'exploration de données.  

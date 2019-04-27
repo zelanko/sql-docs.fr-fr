@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6f878b194389f81980c924896ae4c2b97da81761
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769955"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Activer la journalisation des packages dans les outils de données SQL Server
   Cette procédure décrit comment ajouter des journaux à un package, configurer la journalisation au niveau du package et enregistrer la configuration dans un fichier XML. Vous ne pouvez ajouter des journaux qu'au niveau du package, mais le package n'a pas besoin d'effectuer une journalisation pour activer la journalisation dans les conteneurs inclus dans ce package.  

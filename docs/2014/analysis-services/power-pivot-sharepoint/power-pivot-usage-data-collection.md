@@ -12,16 +12,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9acdc193b608d42b21c69c380fb21db23ec3b89
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748911"
 ---
 # <a name="powerpivot-usage-data-collection"></a>Collecte des données d'utilisation PowerPivot
   La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. Le service PowerPivot pour SharePoint utilise et étend ce système pour fournir des rapports intégrés dans le tableau de bord de gestion PowerPivot qui indiquent la manière dont les données et services PowerPivot sont utilisés. Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie doit activer la journalisation de l'utilisation pour créer les données d'utilisation qui s'affichent dans le tableau de bord de gestion PowerPivot. Pour plus d’informations sur comment activer et configurer la collecte de données d’utilisation pour PowerPivot consultez événements [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
- Pour plus d’informations sur les données d’utilisation dans le tableau de bord de gestion PowerPivot, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Pour plus d'informations sur les données figurant dans le tableau de bord de gestion PowerPivot, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
  **Dans cette rubrique :**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "48187479"
   
  Dans le système de collecte des données d'utilisation, les informations d'événement sont intégrées au système de collecte des données d'utilisation sur le serveur d'applications ou le serveur Web frontal. Les données d'utilisation se déplacent dans le système en réponse aux travaux du minuteur : les données des fichiers de données temporaires sur le serveur physique sont déplacées vers un emplacement de stockage permanent sur un serveur de base de données. Le tableau suivant présente les composants et les traitements qui déplacent les données d'utilisation au sein du système de collecte des données et de création de rapports.  
   
- **Remarque :** vérifiez que la collecte des données d'utilisation est activée. Pour le vérifier, accédez à **Analyse** dans l'Administration centrale SharePoint. Pour plus d’informations, consultez [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
+ **Remarque :** Vérifiez l’utilisation de la collecte de données est activée. Pour le vérifier, accédez à **Analyse** dans l'Administration centrale SharePoint. Pour plus d’informations, consultez [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  ![Composants et les processus de collecte des données d’utilisation. ](../media/gmni-usagedata.gif "Composants et les processus de collecte des données d’utilisation.")  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48187479"
 |Chargement des données|Il s'agit des opérations de chargement des données effectuées par le [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. Les événements de chargement des données identifient les sources de données qui sont le plus fréquemment utilisées.|Vous pouvez activer et désactiver [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Déchargement des données|Il s'agit des opérations de déchargement des données effectuées par les applications de service PowerPivot. Un [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] décharge les sources de données PowerPivot inactives si elles ne sont pas utilisées, ou lorsque le serveur est soumis à une sollicitation de la mémoire ou a besoin d'une plus grande quantité de mémoire pour exécuter des travaux d'actualisation des données.|Vous pouvez activer et désactiver [Configure Usage Data Collection pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).|  
 |Intégrité du serveur|Il s'agit des opérations serveur indiquant l'intégrité du serveur, qui est mesurée d'après l'utilisation du processeur et de la mémoire. Il s'agit de données d'historique ; elles ne fournissent pas d'informations en temps réel sur la charge de traitement actuelle du serveur.|Non. Les données d'utilisation sont systématiquement collectées pour cet événement.|  
-|Actualisation des données|Il s'agit des opérations d'actualisation des données lancées par le service PowerPivot pour les mises à jour de données planifiées. L'historique d'utilisation pour l'actualisation des données est collecté au niveau application pour les rapports opérationnels, et il est répercuté dans les pages Gérer l'actualisation des données des classeurs.<br /><br /> **Remarque :** pour les déploiements de [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] et SharePoint 2013, l'actualisation des données est gérée par Excel Services et non par le serveur Analysis Services.|Non. Les données d'utilisation de l'actualisation des données sont systématiquement collectées si vous activez l'actualisation des données pour l'application de service PowerPivot.|  
+|Actualisation des données|Il s'agit des opérations d'actualisation des données lancées par le service PowerPivot pour les mises à jour de données planifiées. L'historique d'utilisation pour l'actualisation des données est collecté au niveau application pour les rapports opérationnels, et il est répercuté dans les pages Gérer l'actualisation des données des classeurs.<br /><br /> **Remarque :** Pour [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)] et déploiements de SharePoint 2013, l’actualisation des données est gérée par Excel Services et non le serveur Analysis Services.|Non. Les données d'utilisation de l'actualisation des données sont systématiquement collectées si vous activez l'actualisation des données pour l'application de service PowerPivot.|  
   
 ##  <a name="servicesjobs"></a> Services et travaux du minuteur  
  Le tableau suivant décrit les services et les emplacements de stockage de la collecte des données dans le système de collecte des données d'utilisation. Pour obtenir des instructions sur la façon de remplacer les planifications du travail du minuteur forcer une actualisation des données des données d’intégrité et de l’utilisation du serveur dans les rapports de tableau de bord de gestion PowerPivot, consultez [d’actualisation des données PowerPivot avec SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md). Vous pouvez afficher les travaux du minuteur dans l'Administration centrale de SharePoint. Accédez à **Analyse**, puis cliquez sur **Vérifier l’état du travail**. Cliquez sur **Examiner les définitions de travail**.  
@@ -75,7 +75,7 @@ ms.locfileid: "48187479"
 ##  <a name="reporting"></a> Création de rapports sur les données d'utilisation  
  Pour afficher les données d'utilisation des données PowerPivot, vous pouvez accéder à des rapports intégrés dans le tableau de bord de gestion PowerPivot. Les rapports intégrés regroupent les données d'utilisation récupérées à partir des structures de données de création de rapports dans la base de données d'application de service. Les données de rapport sous-jacentes sont mises à jour quotidiennement. Par conséquent, les rapports d'utilisation intégrés affichent les informations mises à jour uniquement après que le travail du minuteur pour le traitement des données d'utilisation de Microsoft SharePoint Foundation a copié les données dans une base de données d'application de service PowerPivot. Par défaut, cela se produit une fois par jour.  
   
- Pour plus d’informations sur l’affichage des rapports, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
+ Pour plus d'informations sur la façon d'afficher des rapports, consultez [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tableau de bord de gestion PowerPivot et les données d’utilisation](power-pivot-management-dashboard-and-usage-data.md)   

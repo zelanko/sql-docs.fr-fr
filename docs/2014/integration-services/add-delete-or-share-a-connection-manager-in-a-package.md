@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fdcc6285ba1a75827f91f856319d296c0cbbff5d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772265"
 ---
 # <a name="add-delete-or-share-a-connection-manager-in-a-package"></a>Ajouter, supprimer ou partager un gestionnaire de connexions dans un package
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] inclut différents types de gestionnaires de connexions pour la connexion à différentes sources de données, telles que bases de données relationnelles, bases de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et fichiers au format CSV et XML. Un gestionnaire de connexions peut être créé au niveau du package ou au niveau du projet. Le gestionnaire de connexions créé au niveau du projet est disponible pour tous les packages du projet. Le gestionnaire de connexions créé au niveau du package n'est, quant à lui, disponible que pour ce seul package.  

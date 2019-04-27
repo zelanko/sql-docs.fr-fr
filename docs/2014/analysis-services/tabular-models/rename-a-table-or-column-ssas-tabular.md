@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f9a869b4a280f8df44fce4c506c5f77afc7e8f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756634"
 ---
 # <a name="rename-a-table-or-column-ssas-tabular"></a>Renommer une table ou une colonne (SSAS Tabulaire)
   Vous pouvez modifier le nom d'une table pendant le processus d'importation en tapant un **Nom convivial** dans la page **Sélectionner des tables et des vues** de l' **Assistant Importation de table**. Vous pouvez également changer le nom des tables et des colonnes si vous importez des données en spécifiant une requête dans la page **Spécifier une requête SQL** de l' **Assistant Importation de table**.  
@@ -57,8 +57,8 @@ ms.locfileid: "48085580"
  De plus, tous les calculs qui utilisent la table renommée, ou qui utilisent des colonnes de la table que vous avez renommée, doivent également être mis à jour, et les données dérivées de ces calculs doivent être actualisées et recalculées. Selon le nombre de tables et de calculs affectés, cette opération peut prendre quelque temps. Par conséquent, le meilleur moment pour renommer des tables est soit pendant le processus d'importation, soit avant de commencer à générer des relations et des calculs complexes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et colonnes &#40;SSAS tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
+ [Tables et colonnes &#40;SSAS Tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
  [Importation à partir de PowerPivot &#40;SSAS tabulaire&#41;](import-from-power-pivot-ssas-tabular.md)   
- [Importer à partir d’Analysis Services &#40;SSAS tabulaire&#41;](import-from-analysis-services-ssas-tabular.md)  
+ [Importer à partir d’Analysis Services &#40;SSAS Tabulaire&#41;](import-from-analysis-services-ssas-tabular.md)  
   
   

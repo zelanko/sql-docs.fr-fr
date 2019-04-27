@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c32691a065c2bfc43868d6b4105fbf1395a63ed
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781127"
 ---
 # <a name="impersonation-and-clr-integration-security"></a>Emprunt d'identité et sécurité de l'intégration du CLR
   Lorsque du code managé accède à des ressources externes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'emprunte pas automatiquement l'identité du contexte d'exécution actuel sous lequel la routine s'exécute. Le code dans les assemblys `EXTERNAL_ACCESS` et `UNSAFE` peut emprunter l'identité du contexte d'exécution actuel de manière explicite.  

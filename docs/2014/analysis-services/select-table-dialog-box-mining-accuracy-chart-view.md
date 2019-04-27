@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8baaed268e01c9335484bab411c87afb17b482b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747211"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Boîte de dialogue Sélectionner une table (vue Graphique d'analyse de précision de l'exploration de données)
   Utilisez la boîte de dialogue **Sélectionner une table** pour sélectionner une table à utiliser pour tester la précision des modèles d'exploration de données contenus dans la structure d'exploration de données sélectionnée.  
@@ -35,6 +35,6 @@ ms.locfileid: "48140189"
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test et Validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 20e4cf3af48fa560293a9de05e768410d561a33b
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786698"
 ---
 # <a name="affinity64-mask-server-configuration-option"></a>affinity64 mask (option de configuration de serveur)
   L'option affinity64 mask lie des processeurs à des threads spécifiques, à l'image de l'option affinity mask. Utilisez l'option affinity mask pour lier les 32 premiers processeurs et l'option affinity64 mask pour lier les processeurs restants de l'ordinateur. Cette option est visible uniquement sur la version 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

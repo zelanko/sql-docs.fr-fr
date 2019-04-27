@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eca5e82b9d23709b45949cfe6af9022f1243ef08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774211"
 ---
 # <a name="new-full-text-stoplist-general-page"></a>Nouvelle liste de mots vides de texte intégral (page Général)
   Utilisez cette boîte de dialogue pour créer une liste de mots vides de texte intégral. Une *liste de mots vides* est un ensemble de mots couramment utilisés, appelés *mots vides*, qui sont omis de l'indexation de texte intégral pour les tables qui utilisent cette liste. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../relational-databases/search/full-text-search.md).  

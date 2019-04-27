@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fc360da93b905bed20f118812898b5c029c570cf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770741"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>Définir les propriétés d’un composant de flux de données
   Pour définir les propriétés de composants de flux de données, qui incluent des sources, des destinations et des transformations, utilisez l'une des fonctionnalités suivantes :  

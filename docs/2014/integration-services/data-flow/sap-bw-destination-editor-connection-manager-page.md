@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4e23849b50e8cfa0a0e8d3ef6def4fbd159381c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770845"
 ---
 # <a name="sap-bw-destination-editor-connection-manager-page"></a>Éditeur de destination SAP BW (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de destination SAP BW** pour sélectionner le gestionnaire de connexions SAP BW qui sera utilisé par la destination SAP BW. Sur cette page, sélectionnez également les paramètres pour charger les données dans le système SAP Netweaver BW.  

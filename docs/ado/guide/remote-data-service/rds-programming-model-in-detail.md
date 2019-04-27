@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b511f5d241216c2586870adadeb3c8586ee803be
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752956"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modèle de programmation RDS en détail
 Les éléments clés du modèle de programmation RDS sont les suivantes :  
@@ -27,7 +27,7 @@ Les éléments clés du modèle de programmation RDS sont les suivantes :
   
 -   RDSServer.DataFactory  
   
--   RDS. DataControl  
+-   RDS.DataControl  
   
 -   Événement  
   
@@ -54,7 +54,7 @@ Les éléments clés du modèle de programmation RDS sont les suivantes :
   
  Le programme du serveur est parfois appelé un *objet métier*. Vous pouvez écrire votre propre objet métier personnalisé qui peut effectuer compliqué accès aux données, vérifications de validité et ainsi de suite. Même lorsque vous écrivez un objet métier personnalisé, vous pouvez créer une instance d’un **RDSServer.DataFactory** et que vous utilisez certaines de ses méthodes pour réaliser vos propres tâches.  
   
-## <a name="rdsdatacontrol"></a>RDS. DataControl  
+## <a name="rdsdatacontrol"></a>RDS.DataControl  
  Services Bureau à distance fournit un moyen de combiner les fonctionnalités de la **RDS. DataSpace** et **RDSServer.DataFactory**et également activer des contrôles visuels d’utiliser facilement les **Recordset** objet retourné par une requête à partir d’une source de données. Tente de services Bureau à distance, pour la plupart des cas, à faire autant que possible accéder aux informations sur un serveur et l’afficher dans un contrôle visuel.  
   
  Le modèle objet RDS fournit cette fonctionnalité avec le [RDS. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objet.  

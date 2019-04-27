@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe860a52cb847aec473763c02f24348701766478
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772189"
 ---
 # <a name="advanced-editor"></a>Éditeur avancé
   Utilisez la boîte de dialogue **Éditeur avancé** pour configurer les propriétés du composant de l'objet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sélectionné.  

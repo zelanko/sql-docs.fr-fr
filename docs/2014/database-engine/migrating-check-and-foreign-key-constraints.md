@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2494ab96cc3b4964c26a1ce17593e9b5aece2e7e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774929"
 ---
 # <a name="migrating-check-and-foreign-key-constraints"></a>Migration des contraintes de validation et de clé étrangère
   Les contraintes de validation et de clés étrangères ne sont pas prises en charge dans [!INCLUDE[hek_2](../includes/hek-2-md.md)] dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Ces constructions sont généralement utilisées pour appliquer l'intégrité logique des données au schéma et peuvent être importantes pour conserver la précision fonctionnelle des applications.  

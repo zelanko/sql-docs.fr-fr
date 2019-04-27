@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb44454c12dec173e586fd2a94d0147dfde01eef
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757250"
 ---
 # <a name="impersonation-ssas-tabular"></a>Emprunt d'identité (SSAS Tabulaire)
   Cette rubrique explique aux créateurs de modèles tabulaires comment les informations d'identification d'ouverture de session sont utilisées par Analysis Services lors de la connexion à une source de données pour importer et traiter (actualiser) des données.  

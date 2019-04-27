@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8fef699da6e63c534d19e0d66bfa076f85348d29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786638"
 ---
 # <a name="common-criteria-compliance-enabled-server-configuration-option"></a>common criteria compliance enabled (option de configuration de serveur)
   L'option common criteria compliance enabled active les éléments suivants requis pour les critères communs.  

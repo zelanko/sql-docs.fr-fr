@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779406"
 ---
 # <a name="full-text-stoplist-properties"></a>Propriétés de la liste de mots vides de texte intégral
   Utilisez cette boîte de dialogue pour ajouter ou supprimer des mots vides, supprimer tous les mots vides pour une langue spécifique ou effacer la liste de mots vides actuelle. Un mot vide est un mot utilisé couramment et inclus dans une liste de mots vides. Les mots vides répertoriés dans une liste de mots vides sont omis de l'indexation de texte intégral pour les tables qui utilisent la liste de mots vides. Pour plus d’informations, consultez [Configurer et gérer les mots vides et listes de mots vides pour la recherche en texte intégral](../relational-databases/search/full-text-search.md).  

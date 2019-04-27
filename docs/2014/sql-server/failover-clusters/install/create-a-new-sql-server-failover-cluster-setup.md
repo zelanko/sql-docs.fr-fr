@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740597"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>Créer un cluster de basculement SQL Server (programme d'installation)
   Pour installer ou mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , vous devez exécuter le programme d'installation sur chaque nœud du cluster de basculement. Pour ajouter un nœud à un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] existant, vous devez exécuter le programme d'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sur le nœud destiné à être ajouté à l'instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . N'exécutez pas le programme d'installation sur le nœud actif pour gérer les autres nœuds.  
@@ -234,7 +234,7 @@ ms.locfileid: "53359381"
   
 ##  <a name="prepare"></a> Préparation  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Installation avancée/entreprise de cluster de basculement Étape 1 : Préparation  
+#### <a name="advancedenterprise-failover-cluster-install-step-1-prepare"></a>Installation avancée/entreprise Cluster de basculement étape 1 : Préparation  
   
 1.  Insérez le support d'installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et, dans le dossier racine, double-cliquez sur Setup.exe. Pour effectuer l'installation à partir d'un partage réseau, accédez au dossier racine sur le partage, puis double-cliquez sur Setup.exe. Pour plus d’informations sur l’installation des composants requis, consultez [Avant l’installation du clustering de basculement](before-installing-failover-clustering.md). Il se peut que vous deviez installer les composants requis si ceux-ci ne sont pas déjà présents sur l'ordinateur.  
   
@@ -328,7 +328,7 @@ ms.locfileid: "53359381"
   
 ## <a name="complete"></a>Terminé  
   
-#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Installation avancée/entreprise de cluster de basculement Étape 2 : Terminé  
+#### <a name="advancedenterprise-failover-cluster-install-step-2-complete"></a>Installation avancée/entreprise Cluster de basculement étape 2 : Terminé  
   
 1.  Une fois tous les nœuds préparés de la façon décrite dans [l’étape de préparation](#prepare), lancez le programme d’installation sur l’un des nœuds préparés, de préférence sur le nœud propriétaire du disque partagé. Dans la page **Avancé** du Centre d’installation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , cliquez sur **Création de cluster avancée**.  
   

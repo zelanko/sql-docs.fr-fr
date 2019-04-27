@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 578b870128486285a7c31bf9a860b85d170f8771
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786602"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>Configurer des instances du moteur de base de données (SQL Server)
   Chaque instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] doit être configurée pour répondre aux exigences en matière de performances et de disponibilité définies pour les bases de données hébergées par l'instance. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprend des options de configuration qui contrôlent des comportements (tels que l'utilisation des ressources) et la disponibilité de fonctionnalités (telles que l'audit ou la récursivité des déclencheurs).  

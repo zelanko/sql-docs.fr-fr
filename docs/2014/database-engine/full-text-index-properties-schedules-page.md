@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 067c77839a852965c7684359acf50fb328d21a6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779029"
 ---
 # <a name="full-text-index-properties-schedules-page"></a>Propriétés d'index de texte intégral (page Planifications)
-  Cette page vous permet d'afficher et de créer des planifications pour l'exécution d'un travail de l'Agent SQL Server qui démarre une alimentation incrémentielle de mises à jour dans la table de base de l'index de recherche en texte intégral. Si la table de base ou la vue ne contient pas une colonne de la `timestamp` de type de données, une alimentation complète est effectuée.  
+  Cette page vous permet d'afficher et de créer des planifications pour l'exécution d'un travail de l'Agent SQL Server qui démarre une alimentation incrémentielle de mises à jour dans la table de base de l'index de recherche en texte intégral. Si la table de base ou la vue ne contient pas une colonne du type de données `timestamp`, une alimentation complète est effectuée.  
   
  **Pour afficher ou modifier les propriétés d’un index de recherche en texte intégral**  
   

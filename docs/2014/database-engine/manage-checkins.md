@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774291"
 ---
 # <a name="manage-checkins"></a>Gérer les archivages
   Pour apporter des modifications à un fichier sous contrôle de code source mis à la disposition d'autres utilisateurs, vous devez archiver le fichier. Lorsque vous archivez un fichier, la version que vous avez créée est copiée dans le fournisseur de contrôle de code source. Elle devient la dernière version du fichier et est généralement mise à la disposition des utilisateurs possédant les droits d'accès requis.  

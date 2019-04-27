@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fda7911dc9e62741ba846e8a166bb0e3312f3425
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788061"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>Utiliser la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)
   Cette rubrique contient des informations sur l'utilisation de la boîte de dialogue **Nouveau groupe de disponibilité** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour créer un groupe de disponibilité AlwaysOn sur les instances [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] activées pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
@@ -54,7 +54,7 @@ ms.locfileid: "53373171"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de la boîte de dialogue Nouveau groupe de disponibilité (SQL Server Management Studio)  

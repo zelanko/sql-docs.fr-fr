@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 824a722c527b600fd09c8f68725ad033ab1a1b8c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780166"
 ---
 # <a name="utf8-string-user-defined-data-type-udt"></a>Type de données défini par l'utilisateur (UDT) pour les chaînes UTF8
   L'exemple UTF8String pour SQL Server montre l'implémentation d'un type de données défini par l'utilisateur. Cet exemple montre comment mettre en œuvre un type de données UTF8 défini par l'utilisateur qui étend le système de types de la base de données pour assurer le stockage des valeurs encodées en UTF8. Ce type implémente également le code permettant de convertir les chaînes Unicode en UTF8 et vice versa.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2c5509699945db857bd0b763192c7aea21ac90da
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771207"
 ---
 # <a name="specify-an-interval-of-change-data"></a>Spécifier un intervalle de données modifiées
   Dans le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un charge incrémentielle de données modifiées, la première tâche consiste à calculer les points de terminaison de l’intervalle de modification. Ces points de terminaison sont des valeurs `datetime` qui seront stockées dans des variables de package pour une utilisation ultérieure dans le package.  

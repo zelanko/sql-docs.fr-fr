@@ -11,16 +11,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38cd8aeb157a94a28b1cfd831bcfacfb3e93ea6f
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775282"
 ---
 # <a name="install-sql-server-2014-using-a-configuration-file"></a>Installer SQL Server 2014 à l'aide d'un fichier de configuration
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Le programme d’installation permet de générer un fichier de configuration basé sur les entrées système par défaut et celles effectuées au moment de l’exécution. Vous pouvez utiliser le fichier de configuration pour déployer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans la totalité de l'entreprise avec la même configuration. Vous pouvez également standardiser les installations manuelles dans l'ensemble de l'entreprise, en créant un fichier de commandes qui lance Setup.exe.  
   
- Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
+ Le programme d'installation prend en charge l'utilisation du fichier de configuration uniquement via l'invite de commandes. L'ordre de traitement des paramètres lors de l'utilisation du fichier de configuration est décrit ci-dessous :  
   
 -   Le fichier de configuration remplace les valeurs par défaut d'un package.  
   

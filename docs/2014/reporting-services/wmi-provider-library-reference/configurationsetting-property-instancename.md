@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8dfe34895ae18f3195ee90882ed0b400299418e3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646275"
 ---
 # <a name="instancename-property-wmi-msreportserverconfigurationsetting"></a>Propriété InstanceName (WMI MSReportServer_ConfigurationSetting)
   Spécifie le nom d'une instance de serveur de rapports sur un ordinateur spécifique. En lecture seule.  

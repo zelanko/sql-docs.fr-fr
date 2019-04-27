@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b80a13d61e1ddb1187f8114f756484dd608ad7b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740950"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchroniser des base de données Analysis Services
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comprend une fonctionnalité de synchronisation de bases de données qui rend deux bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] équivalentes en copiant les données et les métadonnées depuis une base de données sur un serveur source vers une base de données sur un serveur de destination. Utilisez la fonctionnalité de synchronisation de bases de données pour effectuer l'une des tâches suivantes :  

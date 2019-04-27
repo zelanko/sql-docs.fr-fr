@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 558218b4cff8e9d4ce100a92135f0fee4e0e09c8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786767"
 ---
 # <a name="configure-the-fill-factor-server-configuration-option"></a>Configurer l'option de configuration de serveur fill factor
   Cette rubrique explique comment configurer l'option de configuration de serveur **fill factor** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le facteur de remplissage permet de paramétrer précisément les performances et le stockage des données d'index. Lorsqu'un index est créé ou régénéré, la valeur du facteur de remplissage détermine le pourcentage d'espace sur chaque page de niveau feuille à remplir de données, réservant ainsi le reste comme espace disponible pour une croissance future. Pour plus d’informations, consultez [Spécifier un facteur de remplissage pour un index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  

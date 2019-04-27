@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756268"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Dépanner le traitement des données (SSAS Tabulaire)
   Cette rubrique fournit des informations à propos du traitement (actualisation) des données de modèle lors de la création d'un modèle à l'aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Cette rubrique ne fournit pas d'informations sur le traitement des données dans les modèles qui ont été déployés vers une instance de serveur Analysis Services. Pour plus d’informations sur le traitement des données dans un modèle déployé, consultez [Tâches d’administration à l’aide de scripts dans Analysis Services](script-administrative-tasks-in-analysis-services.md).  
@@ -106,7 +106,7 @@ ms.locfileid: "48174699"
 -   Vous ne pouvez pas effectuer une multi-sélection de colonnes dans des tables différentes et modifier les propriétés des colonnes. Vous pouvez travailler avec une seule table ou vue à la fois.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traiter manuellement les données &#40;SSAS tabulaire&#41;](manually-process-data-ssas-tabular.md)   
- [Modifier une connexion de Source de données existante &#40;SSAS tabulaire&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
+ [Traiter manuellement les données &#40;SSAS Tabulaire&#41;](manually-process-data-ssas-tabular.md)   
+ [Modifier une connexion à une source de données existante &#40;SSAS Tabulaire&#41;](edit-an-existing-data-source-connection-ssas-tabular.md)  
   
   

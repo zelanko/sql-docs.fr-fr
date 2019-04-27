@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e7ca6765ee44201badc54d15fb2a20aa9a863a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853475"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  *liste des définitions de colonne*  
  Liste des définitions de colonnes séparées par des virgules.  
   
- *algorithme*  
+ *algorithm*  
  Nom d'un algorithme d'exploration de données, tel que défini par le fournisseur actuel.  
   
 > [!NOTE]  
@@ -54,7 +54,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  Facultatif. Liste séparée par des virgules des paramètres définis par le fournisseur de l'algorithme.  
   
  *Chaîne XML*  
- (Pour utilisateurs expérimentés uniquement). Modèle XML encodé (PMML). La chaîne doit être entourée de guillemets simples (').  
+ (Pour utilisateurs expérimentés uniquement.) Un modèle XML encodé (PMML). La chaîne doit être entourée de guillemets simples (').  
   
  Le **SESSION** clause vous permet de créer un modèle d’exploration de données qui est automatiquement supprimé à partir du serveur lorsque la connexion se ferme ou que la session expire. **SESSION** les modèles d’exploration de données sont utiles car ils ne nécessitent pas l’utilisateur doit être un administrateur de base de données, et ils utilisent uniquement l’espace disque tant que la connexion est ouverte.  
   

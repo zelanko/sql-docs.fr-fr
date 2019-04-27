@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51019044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774573"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Mettre à niveau vers une autre édition de SQL Server 2014 (programme d'installation)
   L'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prend en charge la mise à niveau d'édition entre les différentes éditions de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Pour plus d’informations sur les chemins de mise à niveau d’édition pris en charge, consultez [Mises à niveau de version et d’édition prises en charge](supported-version-and-edition-upgrades.md). Avant d'initialiser la mise à niveau d'édition d'une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], consultez les rubriques suivantes :  
@@ -29,7 +29,7 @@ ms.locfileid: "51019044"
 -   [Configurations matérielle et logicielle requises pour l’installation de SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
   
 > [!NOTE]  
->  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement cluster :** il est suffisant d’exécuter la mise à niveau d’édition sur l’un des nœuds du cluster [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le nœud peut être actif ou passif et le moteur ne met pas les ressources hors ligne pendant la mise à niveau de l'édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
+>  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un environnement cluster :** Mise à niveau d’édition en cours d’exécution sur l’un des nœuds du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cluster est suffisant. Le nœud peut être actif ou passif et le moteur ne met pas les ressources hors ligne pendant la mise à niveau de l'édition. Après la mise à niveau de l'édition, il est nécessaire de redémarrer l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou de la basculer sur un nœud différent.  
   
 ## <a name="prerequisites"></a>Prérequis  
  Pour des installations locales, vous devez exécuter le programme d'installation en tant qu'administrateur. Si vous installez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'un partage distant, vous devez utiliser un compte de domaine qui dispose des autorisations de lecture sur le partage distant.  

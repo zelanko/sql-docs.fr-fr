@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07f438f86a22b866351a0b83ee7634338f3ad2cd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775342"
 ---
 # <a name="install-sql-server-2014-servicing-updates"></a>Installer des mises à jour de maintenance de SQL Server 2014
   Cette rubrique fournit des informations sur l'installation des mises à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Cette section aborde les sujets suivants :  

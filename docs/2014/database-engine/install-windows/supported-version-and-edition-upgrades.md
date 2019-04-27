@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a245aab71292e1482bd5a17bd32a27bded640ab
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775218"
 ---
 # <a name="supported-version-and-edition-upgrades"></a>Mises à niveau de version et d’édition prises en charge
-  Vous pouvez effectuer une mise à niveau depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Cette rubrique répertorie les chemins de mise à niveau pris en charge à partir de ces versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et les mises à niveau d'édition prises en charge pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+  Vous pouvez effectuer une mise à niveau depuis [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]et [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Cette rubrique répertorie les chemins de mise à niveau pris en charge à partir de ces versions [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , et les mises à niveau d'édition prises en charge pour [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
 ## <a name="pre-upgrade-checklist"></a>Liste de contrôle préalable à la mise à niveau  
   
@@ -59,15 +59,15 @@ ms.locfileid: "51018584"
 -   Les versions 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être mises à niveau uniquement vers un serveur 64 bits [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 > [!NOTE]  
->  Lorsque vous effectuez la mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] d'une version antérieure de l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , choisissez entre Enterprise Edition : contrat de licence selon le nombre de cœurs et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences et le nombre maximal de noyaux pris en charge. Pour plus d’informations, voir [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Lorsque vous mettez à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choisissez entre Enterprise Edition : Licence par cœur et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences et le nombre maximal de noyaux pris en charge. Pour plus d’informations, voir [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] prend en charge la mise à niveau à partir des versions suivantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  
   
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 ou version ultérieure  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP4 ou ultérieur  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP3 ou ultérieur  
   
--   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 ou version ultérieure  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP2 ou ultérieur  
   
 -   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 ou version ultérieure  
   
@@ -113,7 +113,7 @@ ms.locfileid: "51018584"
   
 -   Mettre à niveau un package [!INCLUDE[ssISversion2005](../../includes/ssisversion2005-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. Exécuter des packages avec mise à niveau automatique sur place.  
   
--   Mettre à niveau un [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en exécutant le programme d'installation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
+-   Mettre à niveau un [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] en exécutant le programme d'installation de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] .  
   
 -   Sauvegarder un cube [!INCLUDE[ssASversion2005](../../includes/ssasversion2005-md.md)] et le restaurer sur [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
@@ -121,7 +121,7 @@ ms.locfileid: "51018584"
   
 -   Se connecter à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]à l'aide de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 2014.  
   
- Lorsqu'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], le niveau de compatibilité de cette base de données passe de 90 à 100. (Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les valeurs valides du niveau de compatibilité de la base de données sont 100, 110 et 120.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) explique comment la modification du niveau de compatibilité peut affecter les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Lorsqu'une base de données [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] est mise à niveau vers [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], le niveau de compatibilité de cette base de données passe de 90 à 100. (Dans [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], les valeurs valides pour le niveau de compatibilité de base de données sont 100, 110 et 120.) [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level) explique comment la modification du niveau de compatibilité peut affecter les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Les scénarios non spécifiés dans la liste ci-dessus ne sont pas pris en charge, notamment :  
   

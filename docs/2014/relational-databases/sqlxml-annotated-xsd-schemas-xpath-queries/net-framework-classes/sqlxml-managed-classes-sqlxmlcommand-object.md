@@ -31,11 +31,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 736345b7ee5b9c3e40f0ae34fe139cb911cad42f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740512"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Objet SqlXmlCommand (classes managées SQLXML)
   Il s’agit du constructeur pour l’objet SqlXmlCommand :  
@@ -62,7 +62,7 @@ public SqlXmlCommand(string cnString)
  ExecuteToStream void publique (Stream outputStream)  
  Écrit les résultats de la requête dans un flux de données existant. Cette méthode est utile lorsque vous avez un flux auquel vous voulez ajouter (par exemple, pour obtenir les résultats de requête écrites dans le System.Web.HttpResponse.OutputStream) les résultats. Pour obtenir un exemple fonctionnel, consultez [l’exécution des requêtes SQL &#40;Classes managées SQLXML&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
- ExecuteXmlReader() de XmlReader  
+ XmlReader ExecuteXmlReader()  
  Retourne un objet XmlReader. Vous pouvez utiliser cette méthode à manipuler directement les données dans l’objet XmlReader ou incorporer dans l’architecture chainable de System.Xml. Pour plus d'informations, consultez la documentation sur [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. Pour obtenir un exemple fonctionnel, consultez [l’exécution de requêtes SQL à l’aide de la méthode ExecuteXMLReader](executing-sql-queries-by-using-the-executexmlreader-method.md).  
   
  Objet de TheSqlXmlCommand prend également en charge ces méthodes supplémentaires :  

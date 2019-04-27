@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfba4b1432f22c176c2504a771be81f2f6e053bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749462"
 ---
 # <a name="delete-powerpivot-gallery"></a>Supprimer une bibliothèque PowerPivot
   La suppression d’une bibliothèque [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] supprime également tous ses éléments, notamment l’historique d’actualisation des données pour les classeurs [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] qui sont configurés pour l’actualisation planifiée des données.  

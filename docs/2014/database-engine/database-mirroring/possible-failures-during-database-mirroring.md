@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 70f9bc727ba86d10a48dbc9265c9c2d3655d9fe0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754643"
 ---
 # <a name="possible-failures-during-database-mirroring"></a>Défaillances possibles pendant la mise en miroir d’une base de données
   Des problèmes physiques, de système d'exploitation ou propres à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent être responsables de l'échec d'une session de mise en miroir de bases de données. La mise en miroir de bases de données ne contrôle pas régulièrement les composants sur lesquels Sqlservr.exe s'appuie pour vérifier s'ils fonctionnent correctement ou s'ils ont échoué. Toutefois, pour certains types d'échecs, le composant affecté signale une erreur à Sqlservr.exe. Une erreur signalée par un autre composant est appelée *erreur matérielle*. La mise en miroir de bases de données implémente ses propres mécanismes de délai d'attente pour détecter les autres erreurs qui passeraient sinon inaperçues. En cas de délai d’attente de la mise en miroir, une *erreur logicielle*se produit quand la mise en miroir de bases de données détermine qu’une défaillance s’est produite. Toutefois, certaines erreurs qui se produisent au niveau de l'instance SQL Server n'entraîne pas de délai d'attente de la mise en miroir et peuvent ne pas être détectées.  
@@ -61,7 +61,7 @@ ms.locfileid: "48179069"
   
 -   le DNS ne fonctionne pas ;  
   
--   les câbles sont débranchés ;  
+-   les câbles sont débranchés ;  
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows comprend un pare-feu qui bloque un port spécifique ;  
   

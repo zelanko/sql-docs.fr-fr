@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407217"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774833"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Gestion de la mémoire pour l'OLTP en mémoire
   Les tables mémoire optimisées nécessitent suffisamment de mémoire pour conserver tous les index et les lignes en mémoire. Dans la mesure où la mémoire est une ressource limitée, il est important de comprendre et de gérer l'utilisation de la mémoire sur votre système. Les rubriques de cette section traitent de scénarios courants d'utilisation et de gestion de la mémoire.  

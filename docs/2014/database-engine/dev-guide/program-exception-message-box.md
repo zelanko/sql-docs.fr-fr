@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780693"
 ---
 # <a name="program-exception-message-box"></a>Programmer la boîte de message d'exceptions
   Vous pouvez utiliser la boîte de message d'exception dans vos applications pour fournir un contrôle nettement supérieur sur les messages que celui fourni par la classe <xref:System.Windows.Forms.MessageBox>. Pour plus d’informations, consultez [programmation de boîte de Message d’Exception](../../../2014/database-engine/dev-guide/exception-message-box-programming.md). Pour plus d'informations sur la façon d'obtenir et de déployer le fichier .dll de boîte de message d'exception, consultez [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md).  

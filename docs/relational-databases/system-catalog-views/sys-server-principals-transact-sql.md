@@ -1,5 +1,5 @@
 ---
-title: Sys.server_principals (Transact-SQL) | Microsoft Docs
+title: sys.server_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a1fa743255397aee03b71a8b7d77f79237a8b009
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744045"
 ---
 # <a name="sysserverprincipals-transact-sql"></a>sys.server_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47827727"
 |**owning_principal_id**|**Int**|Le **principal_id** du propriétaire d’un rôle de serveur. NULL, si le principal n'est pas un rôle serveur.|  
 |**is_fixed_role**|**bit**|Retourne 1 si le principal est un des rôles de serveur intégré avec des autorisations fixes. Pour plus d’informations, consultez [Rôles de niveau serveur](../../relational-databases/security/authentication-access/server-level-roles.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Toute connexion peut voir son propre nom de connexion, les connexions système, et les rôles serveur fixes. Pour voir d'autres connexions, vous devez disposer de l'autorisation ALTER ANY LOGIN, ou d'une autorisation sur la connexion. Pour afficher les rôles serveur définis par l'utilisateur, vous devez disposer de l'autorisation ALTER ANY SERVER ROLE, ou appartenir au rôle.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

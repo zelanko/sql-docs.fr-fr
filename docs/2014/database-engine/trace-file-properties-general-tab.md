@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d2c9c57a69f4ee16d614add0e9bfb92129ce429a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773485"
 ---
 # <a name="trace-file-properties-general-tab"></a>Propriétés du fichier de trace (onglet Général)
   Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du fichier de trace** pour consulter les propriétés d'un fichier de trace.  
@@ -52,6 +52,6 @@ ms.locfileid: "48212419"
 ## <a name="see-also"></a>Voir aussi  
  [Ouvrir un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
- [Modèles et autorisations SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

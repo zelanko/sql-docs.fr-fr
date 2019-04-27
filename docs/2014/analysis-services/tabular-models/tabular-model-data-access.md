@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5dc6ccd51a1ce8c64ef301e7435ee9ce21879cb5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756833"
 ---
 # <a name="tabular-model-data-access"></a>Accès aux données de modèle tabulaire
   Les bases de données model tabulaires dans Analysis Services sont accessibles par la plupart des mêmes clients, interfaces et langues que vous utilisez pour récupérer les données ou les métadonnées d'un modèle multidimensionnel. Pour plus d’informations, consultez [Accès aux données de modèles multidimensionnels &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  

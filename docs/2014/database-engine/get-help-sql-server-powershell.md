@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 67633bcfad7c18679dae93de6e5541f3000a1ccc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779101"
 ---
 # <a name="get-help-sql-server-powershell"></a>Obtenir de l'aide sur SQL Server PowerShell
   Il existe plusieurs sources d'informations sur l'utilisation du fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] pour Windows PowerShell et des applets de commande. Cela inclut l'aide qui est disponible dans l'environnement Windows PowerShell.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5fe10a98910f54e4317d0191753d40b9b6b0b94f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736080"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Contenu du modèle d’exploration de données (Analysis Services - Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -214,7 +214,7 @@ ms.locfileid: "52508543"
 |9|Statistiques|Indique une valeur numérique qui représente une statistique pour un régresseur.|  
 |10|Nom unique de nœud|Indique que la valeur ne doit pas être traitée comme numérique ou chaîne, mais comme l'identificateur unique d'un autre nœud de contenu dans un modèle.<br /><br /> Par exemple, dans un modèle de réseau neuronal, les ID fournissent des pointeurs à partir des nœuds dans la couche de sortie vers les nœuds de la couche masquée, et des nœuds de la couche masquée vers les nœuds de la couche d'entrée.|  
 |11|Intercepter|Indique une valeur numérique qui représente l'interception dans une formule de régression.|  
-|12|Périodicité|Indique que la valeur dénote une structure périodique dans un modèle.<br /><br /> S'applique uniquement aux modèles de série chronologique qui contiennent un modèle ARIMA.<br /><br /> Remarque : L'algorithme MTS (Microsoft Time Series) détecte automatiquement des structures périodiques en fonction des données d'apprentissage. Par conséquent, les périodicités dans le modèle final peuvent inclure des valeurs de périodicité que vous n'avez pas fournies comme paramètre lors de la création du modèle.|  
+|12|Périodicité|Indique que la valeur dénote une structure périodique dans un modèle.<br /><br /> S'applique uniquement aux modèles de série chronologique qui contiennent un modèle ARIMA.<br /><br /> Remarque : L’algorithme MTS détecte automatiquement les structures périodiques en fonction des données d’apprentissage. Par conséquent, les périodicités dans le modèle final peuvent inclure des valeurs de périodicité que vous n'avez pas fournies comme paramètre lors de la création du modèle.|  
 |13|Ordre autorégressif|Indique que la valeur représente le nombre de séries autorégressives.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
 |14|Ordre des moyennes mobiles|Valeur qui représente le nombre de moyennes mobiles dans une série.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  
 |15|Ordre des différences|Indique que la valeur représente une valeur qui indique le nombre de fois où la série fait l'objet d'une différenciation.<br /><br /> S'applique aux modèles de série chronologique qui utilisent l'algorithme ARIMA.|  

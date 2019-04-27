@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6360770c57660ec62493b8ecd6c2aaea695289f7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756575"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Colonnes calculées (SSAS Tabulaire)
   Les colonnes calculées, dans les modèles tabulaires, vous permettent d'ajouter de nouvelles données à votre modèle. Au lieu de coller ou importer des valeurs dans la colonne, vous créez une formule DAX qui définit les valeurs de niveau de ligne de la colonne. La colonne calculée peut alors être utilisée dans un rapport, un tableau croisé dynamique ou un graphique croisé dynamique comme toute autre colonne.  

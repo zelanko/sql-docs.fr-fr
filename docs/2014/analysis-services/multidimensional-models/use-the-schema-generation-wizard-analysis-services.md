@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da833d9c71b93405369a1fee1d7947784d2a09e8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740739"
 ---
 # <a name="use-the-schema-generation-wizard-analysis-services"></a>Utiliser l'Assistant Génération de schéma (Analysis Services)
   L'Assistant Génération de schéma requiert un volume d'informations restreint durant la phase de génération. La plupart des informations dont l’Assistant Génération de schéma a besoin pour générer des schémas relationnels sont extraites depuis les cubes et dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que vous avez déjà créés dans le projet. En outre, vous pouvez personnaliser la façon dont le schéma de la base de données de zone de sujet est généré et comment les objets du schéma sont nommés.  
@@ -33,7 +33,7 @@ ms.locfileid: "48210169"
   
 -   Démarrez l’Assistant depuis l’Assistant Dimension en cliquant sur la case à cocher **Créer le schéma maintenant** dans la dernière page de l’Assistant.  
   
-## <a name="step-1-specify-targets"></a>Étape 1 : spécifier des cibles  
+## <a name="step-1-specify-targets"></a>Étape 1 : Spécifiez des cibles  
  Vous devez spécifier la vue de source de données (DSV) dans laquelle l'Assistant Génération de schéma génère le schéma de la base de données de la zone de sujet. Bien que vous puissiez sélectionner une vue DSV existante, en général vous créez une nouvelle vue basée sur une source de données. Vous pouvez créer la source de données à partir d'une connexion existante ou d'une nouvelle connexion, ou bien à partir d'un autre objet. L'Assistant Génération de schéma génère le schéma pour la base de données de la zone de sujet dans la base de données référencée par la source de données, ainsi que dans la vue de la source de données. L'Assistant Génération de schéma ne crée pas la base de données de la zone de sujet lui-même ; il crée le schéma relationnel pour prendre en charge les cubes et les dimensions dans la base de données existante que vous spécifiez.  
   
  Quand l’Assistant Génération de schéma génère les objets sous-jacents, il lie les dimensions et les cubes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aux tables et colonnes générées à l’aide des liaisons de style d’affichage de source de données.  
@@ -41,7 +41,7 @@ ms.locfileid: "48210169"
 > [!NOTE]  
 >  Pour séparer les cubes et les dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] des objets préalablement générés, supprimez la vue de source de données à laquelle les cubes et les dimensions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sont liés, puis définissez une nouvelle vue de source de données pour les cubes et les dimensions à l'aide de l'Assistant Génération de schéma.  
   
-## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Étape 3 : spécifier des options de schéma pour la base de données de la zone de sujet  
+## <a name="step-3-specify-schema-options-for-the-subject-area-database"></a>Étape 3 : Spécifiez les Options de schéma pour la base de données de zone de sujet  
  L'Assistant Génération de schéma fournit des options pour définir le schéma qui est généré pour la base de données de la zone de sujet. Vous pouvez spécifier ces options dans la page **Options du schéma de la BdD de la zone de sujet** de l’Assistant.  
   
 ### <a name="specifying-the-schema-owner"></a>Spécification du propriétaire du schéma  
@@ -57,7 +57,7 @@ ms.locfileid: "48210169"
 ### <a name="preserving-data-for-incremental-generation"></a>Préservation de données pour la génération incrémentielle  
  L'Assistant Génération de schéma par défaut tente de préserver les données lorsque le schéma de la base de données est régénéré. Si l'Assistant Génération de schéma doit supprimer des lignes en raison d'une modification du schéma, vous recevez un avertissement avant que les lignes ne soient supprimées. Par exemple, des lignes doivent parfois être supprimées pour résoudre des problèmes d'intégrité référentielle, parce que vous avez supprimé une dimension ou qu'un type de données a changé lorsque vous avez modifié un attribut de dimension. Pour préserver les données pendant la régénération d’un schéma de base de données, sélectionnez **Préserver les données lors de la régénération**.  
   
-## <a name="step-4-specify-naming-conventions"></a>Étape 4 : spécifier des conventions de nom  
+## <a name="step-4-specify-naming-conventions"></a>Étape 4 : Spécifier les Conventions d’affectation de noms  
  Vous pouvez définir les conventions de nom que l’Assistant Génération de schéma utilise quand vous générez certains objets dans la base de données de la zone de sujet dans la page **Spécifier les conventions de nom** de l’assistant. Pour plus d’informations sur les options disponibles dans la page **Spécifier les conventions de nom**, consultez [Spécifier les conventions de nom &#40;Assistant Génération de schéma&#41; &#40;Analysis Services - Données multidimensionnelles&#41;](../specify-naming-conventions-schema-generation-analysis-services-multidimensional-data.md).  
   
   

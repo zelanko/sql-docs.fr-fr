@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 844879c0e1b02bc9b6fd88ab153cb2a5dbd6ebe6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754783"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Préparer une base de données miroir pour la mise en miroir (SQL Server)
   Avant qu'une session de mise en miroir de bases de données puisse commencer, le propriétaire de la base de données ou l'administrateur système doit s'assurer que la base de données miroir a été créée et qu'elle est prête pour la mise en miroir. La création d'une nouvelle base de données miroir requiert au minimum la réalisation d'une sauvegarde complète de la base de données principale puis d'une sauvegarde du journal, ainsi que la restauration de ces deux sauvegardes sur l'instance du serveur miroir, en utilisant WITH NORECOVERY.  
@@ -73,7 +73,7 @@ ms.locfileid: "48130079"
   
  Pour plus d’informations sur l’activation du déchiffrement automatique de la clé principale d’une base de données miroir, consultez [Configurer une base de données miroir chiffrée](set-up-an-encrypted-mirror-database.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Propriétaire de base de données ou administrateur système.  
   
 ##  <a name="PrepareToRestartMirroring"></a> Pour préparer une base de données miroir existante pour redémarrer la mise en miroir  
@@ -112,7 +112,7 @@ ms.locfileid: "48130079"
   
     -   [Restaurer une sauvegarde de base de données &#40;SQL Server Management Studio&#41;](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)  
   
-    -   [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) et [Arguments RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
+    -   [RESTORE &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/statements/restore-statements-transact-sql) et [RESTORE Arguments &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-arguments-transact-sql).  
   
 7.  À l'aide de RESTORE WITH NORECOVERY, appliquez les autres sauvegardes de fichiers journaux ou sauvegardes en attente à la base de données miroir.  
   
@@ -218,7 +218,7 @@ ms.locfileid: "48130079"
   
  Pour voir un exemple de configuration de la mise en miroir d’une base de données illustrant la configuration de la sécurité, la préparation de la base de données miroir, la configuration des serveurs partenaires et l’ajout d’un témoin, consultez [Configuration de la mise en miroir d’une base de données &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir préparé une base de données miroir  
+##  <a name="FollowUp"></a> Suivi : Après avoir préparé une base de données miroir  
   
 1.  Si des sauvegardes de fichier journal supplémentaires ont été effectuées depuis votre opération RESTORE LOG la plus récente, vous devez appliquer manuellement chaque sauvegarde de journal supplémentaire, à l'aide de RESTORE WITH NORECOVERY.  
   

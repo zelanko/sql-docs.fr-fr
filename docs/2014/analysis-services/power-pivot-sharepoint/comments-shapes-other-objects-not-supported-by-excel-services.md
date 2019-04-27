@@ -1,5 +1,5 @@
 ---
-title: 'Les fonctionnalités suivantes ne sont pas pris en charge par Excel Services et ne peut pas afficher ou peut afficher que partiellement : commentaires, les formes ou autres objets | Microsoft Docs'
+title: "Les fonctionnalités suivantes ne sont pas prises en charge par Excel Services et risquent de ne pas s'afficher ou de ne s'afficher que partiellement : Commentaires, les formes ou autres objets | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 16269f5c0d7b3d64c9639862995dee44146efb9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743931"
 ---
 # <a name="the-following-features-are-not-supported-by-excel-services-and-may-not-display-or-may-display-only-partially-comments-shapes-or-other-objects"></a>Les fonctionnalités suivantes ne sont pas prises en charge par Excel Services et risquent de ne pas s'afficher ou de ne s'afficher que partiellement : les commentaires, les formes ou d'autres objets
   Cette erreur se produit lorsque vous ajoutez des segments à un classeur PowerPivot à partir d'une liste de champs PowerPivot.  

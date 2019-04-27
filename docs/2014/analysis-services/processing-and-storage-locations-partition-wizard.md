@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a1462a2cc1338e973df3d0fd84641aa24d0bc41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748581"
 ---
 # <a name="processing-and-storage-locations-partition-wizard"></a>Emplacements pour le traitement et le stockage (Assistant Partition)
   Utilisez la page **Emplacements pour le traitement et le stockage** pour spécifier l’instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]du cube qui possède la partition, ainsi que l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui stocke les données de la partition. Vous pouvez définir une partition distante en spécifiant une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] distante ou un emplacement de stockage différent de l'emplacement par défaut. Pour plus d’informations sur les partitions distantes, consultez [Partitions distantes](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "48198619"
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide F1 de l’Assistant de partition &#40;Analysis Services - données multidimensionnelles&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)   
- [Partitions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Recherchez la boîte de dialogue dossier distant &#40;Analysis Services - données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
   

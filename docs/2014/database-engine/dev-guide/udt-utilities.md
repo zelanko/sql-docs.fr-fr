@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cfd005746302bef4b8e03b520babfdef41768083
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780213"
 ---
 # <a name="udt-utilities"></a>Utilitaires UDT
   L'exemple Utilitaires UDT contient diverses fonctions utilitaires, Celles-ci incluent notamment des fonctions pour afficher les métadonnées d'un assembly dans Transact-SQL, des exemples de fonctions table en continu pour retourner les types dans un assembly sous forme de table, et enfin des fonctions pour retourner les champs, méthodes et propriétés dans un type défini par l'utilisateur. Les technologies illustrées comprennent les fonctions table en continu, les API de réflexion du .NET Framework et l'appel des fonctions table à partir de Transact-SQL.  

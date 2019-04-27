@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774498"
 ---
 # <a name="new-search-property-list"></a>Nouvelle liste de propriétés de recherche
   Utilisez cette boîte de dialogue pour créer une liste de propriétés de recherche.  
@@ -44,11 +44,11 @@ ms.locfileid: "48195229"
  **Liste de propriétés de recherche source**  
  Sélectionnez le nom d'une liste de propriétés de recherche existante parmi celles appartenant à la base de données sélectionnée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Consultez [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 ## <a name="to-use-sql-server-management-studio-to-manage-search-property-lists"></a>Pour utiliser SQL Server Management Studio pour gérer des listes de propriétés de recherche  
- Pour plus d’informations sur la façon de créer, afficher, modifier ou supprimer une liste de propriétés de recherche et sur la configuration d’un index de recherche en texte intégral pour la recherche de propriétés, consultez [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
+ Pour plus d'informations sur la façon de créer, afficher, modifier ou supprimer une liste de propriétés de recherche et sur la configuration d'un index de recherche en texte intégral pour la recherche de propriétés, consultez [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   

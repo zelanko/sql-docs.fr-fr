@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773751"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Administration de l'utilitaire (utilitaire SQL Server)
   Utilisez les onglets Administration de l'utilitaire pour gérer les paramètres de stratégie, de sécurité et d'entrepôt de données pour un utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour plus d’informations sur les concepts de l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , consultez [Fonctionnalités et tâches de l’utilitaire SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
@@ -91,9 +91,9 @@ ms.locfileid: "48128839"
   
 -   Nom de l’UMDW : Sysutility_mdw_\<GUID>_DATA.  
   
--   fréquence de téléchargement du jeu d'éléments de collecte : toutes les 15 minutes.  
+-   Collection de définie la fréquence de téléchargement : Toutes les 15 minutes.  
   
- Le répertoire UMDW est configurable : \<Lecteur_système:\Program Files\Microsoft SQL Server\MSSQL10_50.<Nom_UCP>\MSSQL\Data\\, où \<Lecteur_système est normalement le lecteur C:\. Le fichier journal, UMDW_\<GUID>_LOG, se trouve dans le même répertoire.  
+ Le répertoire UMDW est configurable : \<Lecteur système > : Files\Microsoft SQL Server\MSSQL10_50. < nom_ucp > \MSSQL\Data\\, où \<lecteur système > est normalement le C:\ lecteur. Le fichier journal, UMDW_\<GUID>_LOG, se trouve dans le même répertoire.  
   
 > [!NOTE]  
 >  L'emplacement du fichier UMDW (sysutility_mdw) peut être modifié à l'aide des opérations de détachement et d'attachement ou d'ALTER DATABASE. Nous recommandons l'utilisation d'ALTER DATABASE. Pour plus d’informations, consultez [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

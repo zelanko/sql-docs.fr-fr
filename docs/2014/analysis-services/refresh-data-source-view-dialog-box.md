@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 722c2ae62376d30076b5cf5cf582ff80be311e50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748483"
 ---
 # <a name="refresh-data-source-view-dialog-box"></a>Boîte de dialogue Actualiser la vue de source de données
   Utilisez la boîte de dialogue **Actualiser la vue de source de données** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour accepter ou annuler les modifications résultant de l'actualisation de la vue de source de données. Cette boîte de dialogue affiche les modifications apportées à la vue de source de données résultant des modifications apportées à la source de données sous-jacente. Cliquez sur **OK** pour accepter les modifications et actualiser la vue de source de données, ou sur **Annuler** pour ignorer les modifications et ne pas modifier la vue de source de données. Vous pouvez afficher la boîte de dialogue **Actualiser la vue de source de données** de la manière suivante :  
@@ -38,6 +38,6 @@ ms.locfileid: "48119619"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de Source de données &#40;Analysis Services - données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

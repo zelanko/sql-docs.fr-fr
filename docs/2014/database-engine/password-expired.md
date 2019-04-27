@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70da82ab5d9ecb37ca08f3cf79801f209f25d86e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774742"
 ---
 # <a name="password-expired"></a>Mot de passe expiré
   S'affiche lorsque vous vous connectez à un serveur avec [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en utilisant l'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et que le mot de passe que vous avez fourni est correct, mais a expiré. S'affiche également lorsque vous vous connectez à un serveur avec un nouveau compte créé à l'aide de l'option **L'utilisateur doit changer le mot de passe à la prochaine ouverture de session** . Utilisez la boîte de dialogue **Mot de passe expiré** pour modifier le mot de passe de cette connexion d'authentification [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

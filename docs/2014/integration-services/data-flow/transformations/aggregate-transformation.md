@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4759050a9453e1925ea47bc3dbf66d13aa821feb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770635"
 ---
 # <a name="aggregate-transformation"></a>Transformation d'agrégation
   La transformation d’agrégation applique des fonctions d’agrégation, comme Average, aux valeurs des colonnes et copie les résultats dans la sortie de la transformation. Outre les fonctions d'agrégation, cette transformation propose la clause GROUP BY qui permet de spécifier des groupes auxquels appliquer l'agrégation.  
@@ -35,7 +35,7 @@ ms.locfileid: "58384866"
 |Group by|Divise les datasets en groupes. Les colonnes contenant tout type de données peuvent être utilisées pour le regroupement. Pour plus d’informations, consultez [GROUP BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-group-by-transact-sql).|  
 |Sum|Additionne les valeurs dans une colonne. Seules les colonnes dont les données sont numériques peuvent être additionnées. Pour plus d’informations, consultez [SUM &#40;Transact-SQL&#41;](/sql/t-sql/functions/sum-transact-sql).|  
 |Moyenne|Retourne la moyenne des valeurs d'une colonne. La moyenne ne peut être calculée que sur les colonnes dont les données sont numériques. Pour plus d’informations, consultez [AVG &#40;Transact-SQL&#41;](/sql/t-sql/functions/avg-transact-sql).|  
-|Compter|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d’informations, consultez [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
+|Count|Retourne le nombre d'éléments figurant dans un groupe. Pour plus d’informations, consultez [COUNT &#40;Transact-SQL&#41;](/sql/t-sql/functions/count-transact-sql).|  
 |Count distinct|Retourne le nombre de valeurs non NULL uniques d'un groupe.|  
 |Minimum|Renvoie la valeur minimale figurant dans un groupe. Pour plus d’informations, consultez [MIN &#40;Transact-SQL&#41;](/sql/t-sql/functions/min-transact-sql). À la différence de la fonction Transact-SQL MIN, cette opération peut être utilisée uniquement avec des données de type numérique, date et heure.|  
 |Maximum|Renvoie la valeur maximale figurant dans un groupe. Pour plus d’informations, consultez [MAX &#40;Transact-SQL&#41;](/sql/t-sql/functions/max-transact-sql). À la différence de la fonction Transact-SQL MAX, cette opération peut être utilisée uniquement avec des données de type numérique, date et heure.|  
@@ -100,7 +100,7 @@ ms.locfileid: "58384866"
   
  La transformation d'agrégation est asynchrone, ce qui signifie qu'elle ne consomme pas les données et ne les publie pas ligne par ligne. Au lieu de cela, elle consomme tout l'ensemble de lignes, effectue les regroupements et les agrégations, puis publie les résultats.  
   
- Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, l'entrée d'une transformation d'agrégation peut contenir trois colonnes : **CountryRegion**, **Ville**, et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
+ Cette transformation ne transmet aucune colonne, mais en crée de nouvelles dans le flux de données pour les données qu'elle publie. Seules les colonnes d'entrée auxquelles des fonctions d'agrégation s'appliquent ou les colonnes d'entrée que la transformation utilise pour le regroupement sont copiées dans la sortie de la transformation. Par exemple, une entrée de transformation d’agrégation peut contenir trois colonnes : **PaysRégion**, **Ville** et **Population**. La transformation effectue un regroupement à partir de la colonne **PaysRegion** et applique la fonction Sum à la colonne **Population** . La sortie n’inclut donc pas la colonne **Ville** .  
   
  Vous pouvez également ajouter plusieurs sorties à la transformation d'agrégation et diriger chaque agrégation vers une sortie différente. Par exemple, si la transformation d’agrégation applique les fonctions Sum et Average, chaque agrégation peut être dirigée vers une sortie différente.  
   

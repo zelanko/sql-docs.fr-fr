@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef5ec59980d267a8ead0f69aedb12c6eca5508dc
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51639866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743475"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partitions (boîte de dialogue Restaurer la base de données) (Analysis Services - Données multidimensionnelles)
   Utilisez la page **Partitions** de la boîte de dialogue **Restaurer la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] afin de spécifier l’emplacement de restauration des partitions locales et les fichiers de sauvegarde à distance à utiliser lors de la restauration des partitions distantes, et pour indiquer si les partitions distantes doivent, ou non, être restaurées.  
@@ -75,7 +75,7 @@ ms.locfileid: "51639866"
 > [!NOTE]  
 >  Cette option est uniquement active si le fichier de sauvegarde contient des références à des partitions distantes.  
   
- La grille suivante, active lorsque cette option est sélectionnée, permet de spécifier un dossier de restauration pour chaque partition locale :  
+ La grille suivante, active lorsque cette option est sélectionnée, permet de spécifier un dossier de restauration pour chaque partition locale :  
   
 |colonne|Description|  
 |------------|-----------------|  

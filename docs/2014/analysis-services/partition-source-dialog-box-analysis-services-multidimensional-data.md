@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f88f307f9cbace833a83603e0f24382b7e82e62f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743565"
 ---
 # <a name="partition-source-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Source de partition (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Source de partition** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir la source des données de table de faits d'une partition. Pour afficher la boîte de dialogue **Source de partition** :  
@@ -31,7 +31,7 @@ ms.locfileid: "48203179"
   
 |Option|Définition|  
 |------------|----------------|  
-|**Type de liaison**|Sélectionnez le type de liaison à utiliser pour la source de la partition spécifiée. Les options suivantes sont disponibles :<br /><br /> **Liaison de table**: sélectionnez cette option pour afficher le **détails de liaison de Table** volet et indiquez que la partition est liée au contenu d’une table dans une vue de source de données ou de la source de données. Pour plus d’informations sur le volet **Détails de la liaison de table**, consultez [Détails de la liaison de table &#40;boîte de dialogue Source de partition&#41; &#40;Analysis Services – Données multidimensionnelles&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Détail**: sélectionnez cette option pour afficher le **détails de liaison de requête** volet et indiquez que la partition est liée au contenu d’une requête exécutée sur une source de données. Pour plus d’informations sur le volet **Détails de la liaison de requête**, consultez [Détails de la liaison de requête &#40;boîte de dialogue Source de partition&#41; &#40;Analysis Services – Données multidimensionnelles&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
+|**Type de liaison**|Sélectionnez le type de liaison à utiliser pour la source de la partition spécifiée. Les options suivantes sont disponibles :<br /><br /> **Liaison de table**: Sélectionnez cette option pour afficher le volet **Détails de la liaison de table** et indiquez que la partition est liée au contenu d’une table d’une source de données ou d’une vue de source de données. Pour plus d’informations sur le volet **Détails de la liaison de table**, consultez [Détails de la liaison de table &#40;boîte de dialogue Source de partition&#41; &#40;Analysis Services – Données multidimensionnelles&#41;](table-binding-partition-source-dialog-analysis-services-multidimensional-data.md).<br /><br /> **Détail**: Sélectionnez cette option pour afficher le volet **Détails de la liaison de requête** et indiquez que la partition est liée au contenu d’une requête exécutée sur une source de données. Pour plus d’informations sur le volet **Détails de la liaison de requête**, consultez [Détails de la liaison de requête &#40;boîte de dialogue Source de partition&#41; &#40;Analysis Services – Données multidimensionnelles&#41;](query-binding-partition-source-dialog-analysis-services-multidimensional-data.md).|  
 |**Detail**|Affiche la boîte de dialogue **Détails de la liaison de table** ou **Détails de la liaison de requête** en fonction de la valeur de l'option **Type de liaison** .|  
   
 ## <a name="see-also"></a>Voir aussi  

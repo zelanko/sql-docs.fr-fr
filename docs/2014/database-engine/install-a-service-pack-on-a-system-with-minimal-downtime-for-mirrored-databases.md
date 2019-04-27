@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 821fd05e94ac820dff50bd08c70c75e7e9cc653d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779593"
 ---
 # <a name="install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases"></a>Installer un Service Pack sur un système avec un temps mort minimal pour les bases de données mises en miroir
   Cette rubrique décrit comment réduire le temps mort pour les bases de données mises en miroir lorsque vous installez des Service Packs et des correctifs. Ce processus implique la mise à niveau séquentielle des instances de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] qui participent à la mise en miroir de bases de données. Cette forme de mise à jour, ce qui est appelé un *mise à jour propagée*, réduit le temps mort que pour un seul basculement. Notez que pour les sessions en mode hautes performances dans lequel le serveur miroir est géographiquement distant du serveur principal, une mise à jour propagée peut être inappropriée.  
@@ -34,7 +34,7 @@ ms.locfileid: "52520384"
 -   Si la session inclut un témoin, nous vous recommandons de le supprimer. Sinon, lorsque l'instance de serveur miroir est mise à jour, la disponibilité de la base de données dépend du témoin qui reste connecté à l'instance de serveur principal. Après avoir supprimé un témoin, vous pouvez le mettre à jour à tout moment pendant le processus de mise à jour propagée sans risquer un temps mort de la base de données.  
   
     > [!NOTE]  
-    >  Pour plus d’informations, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Si une session s'exécute en mode hautes performances, convertissez le mode d'opération en mode haute sécurité.  
   

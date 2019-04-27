@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0e421d6ba1aaf69c04a450d8d93ff1ddf385935
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771775"
 ---
 # <a name="cdc-source-editor-connection-manager-page"></a>Éditeur de source CDC (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de la boîte de dialogue **Éditeur de source CDC** pour sélectionner le gestionnaire de connexions ADO.NET de la base de données [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] à partir de laquelle la source CDC lit les lignes modifiées (la base de données CDC). Une fois la base de données CDC sélectionnée, vous devez sélectionner une table capturée dans la base de données.  
@@ -52,15 +52,15 @@ ms.locfileid: "58391487"
  **Mode de traitement CDC**  
  Sélectionnez le mode de traitement le plus adapté pour la gestion de vos besoins de traitement. Les options possibles sont les suivantes :  
   
--   **tous les**: Retourne les modifications apportées à la plage de capture de données modifiées actuelle sans la **avant la mise à jour** valeurs.  
+-   **Tout** : retourne les modifications apportées à la plage CDC actuelle sans les valeurs **Avant la mise à jour**.  
   
--   **Tout avec les anciennes valeurs**: Retourne les modifications apportées dans la plage de traitement de capture de données modifiées actuelle, y compris les anciennes valeurs (**avant la mise à jour**). Chaque opération de mise à jour utilise deux lignes, une avec les valeurs avant la mise à jour et une avec la valeur après la mise à jour.  
+-   **Tout avec les anciennes valeurs** : retourne les modifications apportées à la plage de traitement CDC actuelle, dont les anciennes valeurs (**Avant la mise à jour**). Chaque opération de mise à jour utilise deux lignes, une avec les valeurs avant la mise à jour et une avec la valeur après la mise à jour.  
   
--   **NET**: Retourne la ligne qu’une seule modification par ligne source modifiée dans la plage de traitement de capture de données modifiées actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
+-   **Net** : retourne une seule ligne de modification par ligne source modifiée dans la plage CDC actuelle. Si une ligne source a été mise à jour plusieurs fois, la modification associée est appliquée (par exemple, l'insertion et la mise à jour sont considérées comme une mise à jour unique, et la mise à jour et la suppression sont considérées comme une suppression unique). Lorsque vous travaillez dans le mode de traitement de modifications Net, il est possible de fractionner les modifications apportées aux sorties de suppression, d'insertion et de mise à jour et de les traiter en parallèle car la ligne source apparaît dans plusieurs sorties.  
   
--   **NET avec masque de mise à jour**: Ce mode est semblable au mode Net standard, mais il ajoute également des colonnes booléennes au modèle de nom **__ $\<nom-colonne >\__Changed** qui indique la ligne de modification de colonnes modifiées dans actuel.  
+-   **Net avec masque de mise à jour** : ce mode est semblable au mode Net standard, à ceci près qu’il ajoute des colonnes booléennes au modèle de nom **__$\<nom-colonne>\__Changed** qui indique les colonnes modifiées dans la ligne de modification active.  
   
--   **NET avec fusion**: Ce mode est semblable à l’opération standard mode Net mais avec des opérations Insert et Update fusionnées en une seule opération de fusion (UPSERT).  
+-   **Net avec fusion** : Ce mode est semblable au mode Net standard, à ceci près que les opérations d’insertion et de mise à jour sont fusionnées en une seule opération de fusion (UPSERT).  
   
 > [!NOTE]  
 >  Pour toutes les options de modifications Net, la table source doit avoir une clé primaire ou un index unique. Pour les tables sans clé primaire ou sans index unique, vous devez utiliser l’option **Tout** .  

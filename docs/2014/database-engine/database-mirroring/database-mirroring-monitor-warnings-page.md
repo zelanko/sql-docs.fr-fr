@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 014c0891fa3a887e781def415e68c38549bafe08
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755052"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Moniteur de mise en miroir de bases de données (Page Avertissements)
   Affiche une liste, accessible en lecture seule, d'avertissements pris en charge lors d'événements de mise en miroir de bases de données, ainsi que les valeurs de seuil spécifiées pour les avertissements, si disponible.  
@@ -33,7 +33,7 @@ ms.locfileid: "54129039"
 |Warning|Seuil|  
 |-------------|---------------|  
 |**Avertir si le journal non envoyé dépasse le seuil**|Spécifie le nombre de kilo-octets (Ko) de journal non envoyé qui génère un avertissement sur l'instance de serveur principal. Cet avertissement permet de mesurer le risque de perte de données en termes de Ko et s'avère particulièrement approprié en mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
-|**Avertir si le journal non restauré dépasse le seuil**|Spécifie le nombre de kilo-octets (Ko) de journal non restauré qui génère un avertissement sur l'instance de serveur miroir. Cet avertissement permet de mesurer le temps de basculement en kilo-octets. Le*temps de basculement* est principalement constitué du temps nécessaire à l'ancien serveur miroir pour restaurer par progression tout journal demeuré dans sa file d'attente de restauration par progression et d'un court laps de temps supplémentaire.<br /><br /> Remarque : Pour un basculement automatique, le temps nécessaire au système pour remarquer l'erreur dépend du temps de basculement.<br /><br /> Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
+|**Avertir si le journal non restauré dépasse le seuil**|Spécifie le nombre de kilo-octets (Ko) de journal non restauré qui génère un avertissement sur l'instance de serveur miroir. Cet avertissement permet de mesurer le temps de basculement en kilo-octets. Le*temps de basculement* est principalement constitué du temps nécessaire à l'ancien serveur miroir pour restaurer par progression tout journal demeuré dans sa file d'attente de restauration par progression et d'un court laps de temps supplémentaire.<br /><br /> Remarque : Pour un basculement automatique, le temps nécessaire au système pour remarquer l'erreur dépend du temps de basculement.<br /><br /> Pour en savoir plus, voir [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md).|  
 |**Avertir si la durée de vie de la plus ancienne transaction non envoyée dépasse le seuil**|Spécifie le nombre de minutes de transactions pouvant s'accumuler dans la file d'attente d'envoi avant qu'un avertissement ne soit généré sur l'instance de serveur principal. Cet avertissement permet de mesurer le risque de perte de données en termes de durée et s'avère particulièrement approprié en mode hautes performances. Toutefois, l'avertissement est également approprié en mode haute sécurité lorsque la mise en miroir est interrompue ou suspendue en raison de la déconnexion des partenaires.|  
 |**Avertir si le temps de traitement de validation de miroir dépasse le seuil**|Spécifie, en millisecondes, le délai moyen par transaction au terme duquel un avertissement est généré sur le serveur principal. Ce délai correspond au temps de traitement pendant lequel l'instance de serveur principal attend que l'instance de serveur miroir écrive l'enregistrement du journal de transaction dans la file d'attente de restauration par progression. Cette valeur est utile uniquement en mode haute sécurité.|  
   
