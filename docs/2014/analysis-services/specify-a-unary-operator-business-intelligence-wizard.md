@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e50d43bc030ad3267076422b8f6610b68e447ac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746512"
 ---
 # <a name="specify-a-unary-operator-business-intelligence-wizard"></a>Spécifier un opérateur unaire (Assistant Business Intelligence)
   Utilisez la page **Spécifier un opérateur unaire** pour identifier la relation parent-enfant pour la colonne qui contient un opérateur unaire (pour des agrégations standard) ou une valeur représentant un facteur de pondération (pour des agrégations pondérées). Pour plus d’informations sur les agrégations standard et pondérées, consultez [Agrégations et conceptions d’agrégation](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
@@ -37,7 +37,7 @@ ms.locfileid: "48066919"
  Sélectionnez la colonne source qui contient l'opérateur unaire ou le facteur de pondération.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
+ [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

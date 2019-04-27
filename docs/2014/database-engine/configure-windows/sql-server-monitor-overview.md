@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 889e0c5a54477a1532aa9ec2760fad890a671618
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755180"
 ---
 # <a name="sql-server-monitor-overview"></a>Vue d'ensemble du moniteur SQL Server
   Le moniteur SQL Server n'effectue pas de fonctions de surveillance, mais il héberge des modules qui ont ce rôle. Le moniteur SQL Server inclut le moniteur de réplication et le moniteur de mise en miroir de bases de données.  
@@ -55,7 +55,7 @@ ms.locfileid: "52640240"
   
 -   Mise en miroir de bases de données  
   
--   REPLICATION  
+-   Réplication  
   
  **Pour utiliser SQL Server Management Studio pour contrôler la mise en miroir de base de données**  
   

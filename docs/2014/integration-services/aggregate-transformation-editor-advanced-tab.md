@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 605a92e00b21d64679076fabcb41068b94921779
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771935"
 ---
 # <a name="aggregate-transformation-editor-advanced-tab"></a>Éditeur de transformation d'agrégation (onglet Avancé)
   L’onglet **Avancé** de la boîte de dialogue **Éditeur de transformation d’agrégation** permet de définir les propriétés des composants, de spécifier des agrégations et de définir les propriétés des colonnes d’entrée et de sortie.  

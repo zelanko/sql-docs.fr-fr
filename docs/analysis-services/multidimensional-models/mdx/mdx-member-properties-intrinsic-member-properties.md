@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e54aa6bb53e6ce9f34e6647927f29b7aadb97180
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740249"
 ---
 # <a name="mdx-member-properties---intrinsic-member-properties"></a>Propriétés de membre MDX - propriétés de membre intrinsèques
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -105,7 +105,7 @@ ms.locfileid: "53206878"
 |**MEMBER_CAPTION**|Étiquette ou légende associée au membre. La légende est essentiellement utilisée à des fins d'affichage. En l’absence de légende, la requête retourne **MEMBER_NAME**.|  
 |**MEMBER_KEY**|Valeur de la clé du membre dans le type de données d'origine. MEMBER_KEY est fournie à des fins de compatibilité descendante.  MEMBER_KEY a la même valeur que KEY0 pour les clés non composites et la propriété MEMBER_KEY est Null pour les clés composites.|  
 |**MEMBER_NAME**|Nom du membre.|  
-|**MEMBER_TYPE**|Type du membre. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **MDMEMBER_TYPE_REGULAR**<br /><br /> **MDMEMBER_TYPE_ALL**<br /><br /> **MDMEMBER_TYPE_FORMULA**<br /><br /> **MDMEMBER_TYPE_MEASURE**<br /><br /> **MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> Remarque : MDMEMBER_TYPE_FORMULA est prioritaire sur MDMEMBER_TYPE_MEASURE. Ainsi, si la dimension Measures comprend un membre de formule (calculé), la propriété **MEMBER_TYPE** du membre calculé est MDMEMBER_TYPE_FORMULA.|  
+|**MEMBER_TYPE**|Type du membre. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **MDMEMBER_TYPE_REGULAR**<br /><br /> **MDMEMBER_TYPE_ALL**<br /><br /> **MDMEMBER_TYPE_FORMULA**<br /><br /> **MDMEMBER_TYPE_MEASURE**<br /><br /> **MDMEMBER_TYPE_UNKNOWN**<br /><br /> <br /><br /> Remarque : MDMEMBER_TYPE_FORMULA est prioritaire sur MDMEMBER_TYPE_MEASURE. Ainsi, si la dimension Measures comprend un membre de formule (calculé), la propriété **MEMBER_TYPE** du membre calculé est MDMEMBER_TYPE_FORMULA.|  
 |**MEMBER_UNIQUE_NAME**|Nom unique du membre. Pour les fournisseurs qui produisent des noms uniques par qualification, chaque composant du nom est délimité.|  
 |**MEMBER_VALUE**|Valeur du membre dans le type d'origine.|  
 |**PARENT_COUNT**|Nombre de parents de ce membre.|  
@@ -131,7 +131,7 @@ ms.locfileid: "53206878"
 ### <a name="example"></a>Exemple  
  Les exemples suivants montrent des requêtes MDX qui retournent les propriétés intrinsèques.  
   
- **Exemple 1 : Utilisez les propriétés intrinsèques contextuelles dans la requête**  
+ **Exemple 1 : Utilisez les propriétés intrinsèques contextuelles dans la requête**  
   
  L'exemple suivant retourne l'ID parent, la clé et le nom de chaque catégorie de produits. Notez que les propriétés sont exposées en tant que mesures. Cela vous permet d'afficher les propriétés d'un ensemble de cellules lorsque vous exécutez la requête, plutôt que la boîte de dialogue Propriétés de membre dans SSMS. Vous pouvez exécuter une requête comme celle qui suit pour récupérer des métadonnées de membre à partir d'un cube déjà déployé.  
   
@@ -149,7 +149,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **Exemple 2 : Propriétés intrinsèques non sensibles au contexte**  
+ **Exemple 2 : Propriétés intrinsèques non sensibles au contexte**  
   
  L'exemple suivant correspond à la liste exhaustive des propriétés intrinsèques non sensibles au contexte. Après avoir exécuté la requête dans SSMS, cliquez sur les membres individuels pour afficher les propriétés dans la boîte de dialogue Propriétés de membre.  
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 64de082cd12c967f3f3c90ca3cb99c51985ed41a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778910"
 ---
 # <a name="implementing-the-or-operator-in-natively-compiled-stored-procedures"></a>Implémentation de l'opérateur OR dans les procédures stockées compilées en mode natif
   Les opérateurs OR ne sont pas pris en charge dans les prédicats de requête des procédures stockées compilées en mode natif. Les opérateurs NOT n'étant pas pris en charge non plus dans les prédicats de requête des procédures stockées compilées en mode natif, les effets des opérateurs OR ne peuvent pas être simulés en utilisant uniquement des opérateurs logiques équivalents. Toutefois, les effets d'un opérateur OR peuvent être simulés avec des variables de table mémoire optimisée.  

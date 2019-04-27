@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a88d312d2764d04d1766371463a1735737973164
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740919"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Sources de données prises en charge (SSAS multidimensionnel)
   Cette rubrique décrit les types de sources de données que vous pouvez utiliser dans un modèle multidimensionnel.  

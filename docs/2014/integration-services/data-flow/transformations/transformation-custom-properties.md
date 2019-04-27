@@ -42,11 +42,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770723"
 ---
 # <a name="transformation-custom-properties"></a>Propriétés personnalisées des transformations
   En plus des propriétés qui sont communes à la plupart des objets de flux de données dans le modèle objet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] , de nombreux objets de flux de données possèdent des propriétés personnalisées qui sont spécifiques à l'objet. Ces propriétés personnalisées sont uniquement disponibles au moment de l'exécution et ne sont pas documentées dans la documentation de référence de la programmation managée de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  
@@ -70,7 +70,7 @@ ms.locfileid: "58387647"
 |[Colonne dérivée](#derived)|[Tableau croisé dynamique](#pivot)||  
   
 ### <a name="transformations-without-custom-properties"></a>Transformations sans propriétés personnalisées  
- Les transformations suivantes ne disposent pas de propriétés personnalisées au composant, entrée ou sortie niveaux : [Transformation de fusion](merge-transformation.md), [Transformation de multidiffusion](multicast-transformation.md), et [Union All Transformation](union-all-transformation.md). Ils font uniquement appel aux propriétés communes à l'ensemble des composants de flux de données.  
+ Les transformations suivantes ne disposent pas de propriétés personnalisées au niveau du composant, de l’entrée ou de la sortie : [Transformation par fusion](merge-transformation.md), [Transformation par multidiffusion](multicast-transformation.md) et [Transformation par union de tout](union-all-transformation.md). Ils font uniquement appel aux propriétés communes à l'ensemble des composants de flux de données.  
   
 ##  <a name="aggregate"></a> Transformation d'agrégation, propriétés personnalisées  
  La transformation d'agrégation dispose à la fois de propriétés personnalisées et de propriétés communes à l'ensemble des composants de flux de données.  
@@ -183,7 +183,7 @@ ms.locfileid: "58387647"
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|FastParse|Booléen|Valeur qui indique si la colonne fait appel aux routines d'analyse fournies par [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (routines plus rapides mais qui ne tiennent pas compte des paramètres régionaux) ou bien aux routines d'analyse standard qui prennent en compte les paramètres régionaux. La valeur par défaut de cette propriété est `False`. Pour plus d'informations, consultez [Fast Parse](../../fast-parse.md) et [Standard Parse](../../standard-parse.md). .<br /><br /> Remarque : Cette propriété n’est pas disponible dans le **éditeur de Transformation de Conversion de données**, mais peut être définie à l’aide de la **éditeur avancé**.|  
+|FastParse|Booléen|Valeur qui indique si la colonne fait appel aux routines d'analyse fournies par [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] (routines plus rapides mais qui ne tiennent pas compte des paramètres régionaux) ou bien aux routines d'analyse standard qui prennent en compte les paramètres régionaux. La valeur par défaut de cette propriété est `False`. Pour plus d'informations, consultez [Fast Parse](../../fast-parse.md) et [Standard Parse](../../standard-parse.md). .<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de transformation par conversion de données**, mais peut être définie avec **l’Éditeur avancé**.|  
 |SourceInputColumnLineageId|Entier|`LineageID` de la colonne d'entrée correspondant à la source de la colonne de sortie.|  
   
  L'entrée, les colonnes d'entrée et la sortie de la transformation de conversion de données ne disposent pas de propriétés personnalisées.  
@@ -261,8 +261,8 @@ ms.locfileid: "58387647"
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
 |Séparateurs|String|Séparateurs de jetons utilisés par la transformation. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (/), barre oblique inverse (\\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;), signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
-|Exhaustive|Booléen|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur `True` sert principalement à des fins de débogage. La valeur par défaut de cette propriété est `False`.<br /><br /> Remarque : Cette propriété n’est pas disponible dans le **éditeur de Transformation de regroupement probable**, mais peut être définie à l’aide de la **éditeur avancé**.|  
-|MaxMemoryUsage|Entier|Quantité de mémoire maximale que peut utiliser la transformation. La valeur par défaut de cette propriété est **0**, permettant ainsi l'utilisation dynamique de la mémoire.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Remarque : Cette propriété n’est pas disponible dans le **éditeur de Transformation de regroupement probable**, mais peut être définie à l’aide de la **éditeur avancé**.|  
+|Exhaustive|Booléen|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur `True` sert principalement à des fins de débogage. La valeur par défaut de cette propriété est `False`.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de transformation par regroupement probable**, mais peut être définie avec **l’Éditeur avancé**.|  
+|MaxMemoryUsage|Entier|Quantité de mémoire maximale que peut utiliser la transformation. La valeur par défaut de cette propriété est **0**, permettant ainsi l'utilisation dynamique de la mémoire.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de transformation par regroupement probable**, mais peut être définie avec **l’Éditeur avancé**.|  
 |MinSimilarity|Double|Seuil de similarité (exprimé par une valeur comprise entre 0 et 1) que la transformation utilise pour identifier des doublons.  La valeur par défaut de cette propriété est de 0,8.|  
   
  Le tableau suivant décrit les propriétés personnalisées des colonnes d'entrée de la transformation de regroupement probable. Toutes les propriétés sont en lecture/écriture.  
@@ -296,11 +296,11 @@ ms.locfileid: "58387647"
 |CopyReferenceTable|Booléen|Spécifie si une copie de la table de référence doit être réalisée pour la construction de l'index de recherche floue et les recherches suivantes. La valeur par défaut de cette propriété est `True`.|  
 |Séparateurs|String|Séparateurs utilisés par la transformation pour marquer les valeurs de colonne. Les séparateurs par défaut incluent les caractères suivants : espace ( ), virgule (,), point (.), point-virgule (;), deux-points (:), trait d’union (-), guillemet dactylographique double ("), guillemet dactylographique simple (’), esperluette (&), barre oblique (\\), barre oblique inverse (\), arobase (@), point d’exclamation (!), point d’interrogation (?), parenthèse ouvrante ((), parenthèse fermante ()), signe inférieur à (\<), signe supérieur à (>), crochet ouvrant ([), crochet fermant (]), accolade ouvrante ({), accolade fermante (}), barre verticale (&#124;). signe dièse (#), astérisque (*), signe insertion (^) et symbole de pourcentage (%).|  
 |DropExistingMatchIndex|Booléen|Valeur spécifiant si l’index de correspondance spécifié dans MatchIndexName est supprimé quand MatchIndexOptions n’est pas défini sur ReuseExistingIndex. La valeur par défaut de cette propriété est `True`.|  
-|Exhaustive|Booléen|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur `True` sert principalement à des fins de débogage. La valeur par défaut de cette propriété est `False`.<br /><br /> Remarque : Cette propriété n’est pas disponible dans le **éditeur de Transformation de recherche floue**, mais peut être définie à l’aide de la **éditeur avancé**.|  
+|Exhaustive|Booléen|Valeur spécifiant si chaque enregistrement d'entrée est comparé à tous les autres enregistrements d'entrée. La valeur `True` sert principalement à des fins de débogage. La valeur par défaut de cette propriété est `False`.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de transformation par recherche probable**, mais peut être définie avec **l’Éditeur avancé**.|  
 |MatchIndexName|String|Nom de l'index de correspondance. L'index de correspondance désigne la table dans laquelle la transformation crée et enregistre l'index qu'elle utilise. En cas de réutilisation de l’index de correspondance, MatchIndexName spécifie l’index à réutiliser. MatchIndexName doit être un nom d’identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide. Par exemple, si le nom contient des espaces, il doit apparaître entre crochets.|  
 |MatchIndexOptions|Integer (énumération)|Valeur précisant la manière dont la transformation gère l'index de correspondance. Cette propriété peut prendre les valeurs suivantes :<br /><br /> `ReuseExistingIndex` (0)<br /><br /> **GenerateNewIndex** (1)<br /><br /> **GenerateAndPersistNewIndex** (2)<br /><br /> **GenerateAndMaintainNewIndex** (3)|  
-|MaxMemoryUsage|Entier|Taille maximale du cache pour la table de recherche. La valeur par défaut de cette propriété est **0**, ce qui signifie que la taille du cache est illimitée.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Remarque : Cette propriété n’est pas disponible dans le **éditeur de Transformation de recherche floue**, mais peut être définie à l’aide de la **éditeur avancé**.|  
-|MaxOutputMatchesPerInput|Entier|Nombre maximal de correspondances que la transformation peut retourner pour chaque ligne d'entrée. La valeur par défaut de cette propriété est **1**.<br /><br /> Remarque : Valeurs supérieures à 100 peut uniquement être spécifié à l’aide de la **éditeur avancé**.|  
+|MaxMemoryUsage|Entier|Taille maximale du cache pour la table de recherche. La valeur par défaut de cette propriété est **0**, ce qui signifie que la taille du cache est illimitée.<br /><br /> Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de transformation par recherche probable**, mais peut être définie avec **l’Éditeur avancé**.|  
+|MaxOutputMatchesPerInput|Entier|Nombre maximal de correspondances que la transformation peut retourner pour chaque ligne d'entrée. La valeur par défaut de cette propriété est **1**.<br /><br /> Remarque : les valeurs supérieures à 100 ne peuvent être définies qu’avec **l’Éditeur Avancé**.|  
 |MinSimilarity|Entier|Seuil de similarité (exprimé par une valeur comprise entre 0 et 1) que la transformation utilise au niveau du composant. Seules les lignes supérieures au seuil sont validées comme des correspondances.|  
 |ReferenceMetadataXML|String|[!INCLUDE[ssInternalOnly](../../../includes/ssinternalonly-md.md)]|  
 |ReferenceTableName|String|Nom de la table de recherche. Le nom doit être un nom d'identificateur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] valide. Par exemple, si le nom contient des espaces, il doit apparaître entre crochets.|  
@@ -523,7 +523,7 @@ ms.locfileid: "58387647"
   
 |Propriété|Type de données|Description|  
 |--------------|---------------|-----------------|  
-|ColumnType|Integer (énumération)|Type de mise à jour de la colonne. Les valeurs sont : **Modification d’attribut** (2), **attribut fixe** (4), **attribut d’historique** (3), **clé** (1), et **autres** (0).|  
+|ColumnType|Integer (énumération)|Type de mise à jour de la colonne. Les valeurs sont : **Attribut variable** (2), **Attribut fixe** (4), **Attribut historique** (3), **Clé** (1) et **Autre** (0).|  
   
  L'entrée, les sorties et les colonnes de sortie de la transformation de dimension à variation lente ne disposent pas de propriétés personnalisées.  
   
@@ -569,7 +569,7 @@ ms.locfileid: "58387647"
 |NeedRefenceData|Booléen|Valeur qui spécifie si la transformation utilise une liste de termes d'exclusion stockée dans une table de référence. La valeur par défaut de cette propriété est `False`.|  
 |OutTermColumn|String|Nom de la colonne qui contient les termes d'exclusion.|  
 |OutTermTable|String|Nom de la table contenant la colonne qui comporte des termes d'exclusion.|  
-|ScoreType|Entier|Valeur qui précise le type de score à associer au terme. Les valeurs valides sont 0 qui indique la fréquence et 1 qui désigne un score TFIDF. Le score TFIDF est le produit de la fréquence des termes (TF, Term Frequency) et de la fréquence inverse de documents (IDF, Inverse Document Frequency), défini comme suit : TFIDF d’un terme T = (fréquence de T) \* log ((#rows en entrée) / (#rows ayant T)). La valeur par défaut de cette propriété est **0**.|  
+|ScoreType|Entier|Valeur qui précise le type de score à associer au terme. Les valeurs valides sont 0 qui indique la fréquence et 1 qui désigne un score TFIDF. Le score TFIDF est le produit de la fréquence des termes et Inverse Document Frequency, défini comme : TFIDF d’un terme T = (fréquence de T) \* log((nombre de lignes en entrée) / (nombre de lignes comportant T)). La valeur par défaut de cette propriété est **0**.|  
 |WordOrPhrase|Entier|Valeur qui spécifie le type de terme. Les valeurs valides sont 0 qui indique des mots uniquement, 1 qui désigne des expressions nominales seulement et 2 qui indique des mots et des expressions nominales à la fois. La valeur par défaut de cette propriété est **0**.|  
   
  L'entrée, les colonnes d'entrée, la sortie et les colonnes de sortie de la transformation d'extraction de terme ne disposent pas de propriétés personnalisées.  

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 490c8d5d3dc7c9b3dc083b61a904103092134636
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780176"
 ---
 # <a name="unused-assembly-cleanup"></a>Nettoyage d'assembly inutilisé
   L'exemple `AssemblyCleanup` contient une procédure stockée .NET qui nettoie les assemblys inutilisés de la base de données actuelle en interrogeant les catalogues de métadonnées. Son seul paramètre, `visible_assemblies`, est utilisé pour spécifier si les assemblys visibles inutilisés doivent être supprimés ou pas. La valeur « false » signifie par défaut que seuls les assemblys invisibles inutilisés seront supprimés ; sinon, tous les assemblys inutilisés le seront. L'ensemble des assemblys inutilisés sont les assemblys qui n'ont pas de points d'entrée définis (routines / types et agrégats) et qui ne sont référencés directement ou indirectement par aucun assembly utilisé.  

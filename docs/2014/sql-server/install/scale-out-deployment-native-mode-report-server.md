@@ -14,14 +14,14 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: c091c115f9e03fbc0f1243e1c2fcf3a075f3586f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753301"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Déploiement avec montée en puissance parallèle (serveur de rapports en mode natif)
-  Utilisez le **déploiement évolutif** page [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager pour afficher l’état d’initialisation pour un déploiement évolutif ou pour joindre un serveur de rapports à un déploiement avec montée en puissance. Un *déploiement avec montée en puissance* fait référence à deux ou plusieurs instances de serveurs de rapports qui partagent une même base de données de serveur de rapports.  
+  Utilisez la page **Déploiement avec montée en puissance parallèle** dans le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour afficher l'état d'initialisation d'un déploiement avec montée en puissance parallèle ou pour joindre un serveur de rapports à un déploiement avec montée en puissance parallèle. Un *déploiement avec montée en puissance* fait référence à deux ou plusieurs instances de serveurs de rapports qui partagent une même base de données de serveur de rapports.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en mode natif.  
   
@@ -35,13 +35,13 @@ ms.locfileid: "48099939"
   
  Pour configurer un déploiement avec montée en puissance parallèle, commencez par deux instances de serveurs de rapports ou plus qui sont toutes connectées à la même base de données de serveur de rapports. Après que toutes les instances ont été installées, vous vous connectez au premier serveur de rapports, puis utilisez la page Déploiement avec montée en puissance parallèle pour attacher chaque instance supplémentaire. Seul un serveur de rapports déjà initialisé pour utiliser une base de données peut initialiser des nœuds supplémentaires.  
   
- Pour ouvrir cette page, démarrez le [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager et sélectionnez **déploiement évolutif** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
+ Pour ouvrir la page, démarrez le Gestionnaire de configuration de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] et sélectionnez **Déploiement avec montée en puissance parallèle** dans le volet de navigation. Pour plus d’informations, consultez [Gestionnaire de configuration de Reporting Services &#40;mode natif&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
 ## <a name="options"></a>Options  
  **Nom du serveur SQL**  
- Spécifiez le nom de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] instance qui héberge la base de données de serveur de rapports.  
+ Spécifiez le nom de l’instance du [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui héberge la base de données du serveur de rapports.  
   
- **Database Name**  
+ **Nom de la base de données**  
  Spécifie le nom de la base de données à laquelle l'instance de serveur de rapports est connectée.  
   
  **Mode serveur**  
@@ -51,7 +51,7 @@ ms.locfileid: "48099939"
  Affiche le nom du serveur de rapports. Dans la plupart des cas, il s'agit du nom de l'ordinateur sur lequel le serveur de rapports est installé.  
   
  **Instance**  
- Affiche le nom de l'instance du serveur de rapports. Les instances de serveur de rapports sont basées sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Affiche le nom de l'instance du serveur de rapports. Les instances de serveur de rapports sont basées sur les instances [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
  **État**  
  Indique si le serveur de rapports est initialisé ou en attente de rejoindre un déploiement avec montée en puissance parallèle :  
@@ -64,7 +64,7 @@ ms.locfileid: "48099939"
   
      Pour un serveur de rapports qui fait déjà partie d'un déploiement avec montée en puissance parallèle, vous pouvez utiliser cette page pour ajouter ou supprimer des nœuds.  
   
- **initialiser**  
+ **Initialize**  
  Cliquez sur **Initialiser** pour ajouter un serveur de rapports au déploiement avec montée en puissance parallèle. Cette étape configure un serveur de rapports de telle sorte qu'il utilise une clé symétrique dans une base de données de serveur de rapports partagée. Vous pouvez utiliser **Initialiser** pour ajouter une instance de serveur de rapports à un déploiement avec montée en puissance parallèle ou pour résoudre un problème de migration ou d'installation.  
   
  Une instance de serveur de rapports est disponible uniquement si vous avez précédemment configuré une connexion à une base de données de serveur de rapports partagée. De plus, vous devez effectuer l'initialisation à partir d'un serveur de rapports qui est déjà initialisé pour utiliser la base de données du serveur de rapports.  

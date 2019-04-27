@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5c4e2c19fb768849c3418874b4f1a831fae858c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746611"
 ---
 # <a name="set-or-change-the-preferred-connection-method-for-directquery"></a>Définir ou modifier la méthode de connexion par défaut pour DirectQuery
   Lorsque vous créez un modèle à utiliser en mode DirectQuery, vous devez d'abord configurer l'environnement de conception de façon à ce qu'il prenne en charge l'utilisation de DirectQuery. Pour ce faire, consultez [activer le Mode Création DirectQuery &#40;tabulaire SSAS&#41;](tabular-models/enable-directquery-mode-in-ssdt.md).  
@@ -39,11 +39,11 @@ ms.locfileid: "48186689"
   
 3.  Dans le volet **Propriétés** , modifiez la propriété, **DirectQueryMode**, en l'une des valeurs qui prennent en charge l'utilisation de DirectQuery :  
   
-    -   **InMemory avec DirectQuery**: si vous utilisez cette option, le modèle est déployé, mais vous devez traiter le cache avant de pouvoir exécuter des requêtes sur le modèle.  
+    -   **InMemory avec DirectQuery**: Si vous utilisez cette option, le modèle est déployé, mais vous devez traiter le cache avant de pouvoir exécuter des requêtes sur le modèle.  
   
-    -   **DirectQuery avec InMemory**: si vous utilisez cette option, le cache est disponible pour une utilisation par les clients s'il a déjà été traité. Si vous déployez le modèle avec ce paramètre et ne traitez pas le cache, certains clients doivent obtenir une erreur lors de la tentative de connexion au modèle.  
+    -   **DirectQuery avec InMemory**: Si vous utilisez cette option, le cache sera disponible pour une utilisation par les clients s’il a déjà été traité. Si vous déployez le modèle avec ce paramètre et ne traitez pas le cache, certains clients doivent obtenir une erreur lors de la tentative de connexion au modèle.  
   
-    -   **DirectQuery uniquement**: si vous utilisez cette option, les métadonnées sont déployées mais le modèle ne contient pas de données. Les clients qui tentent de se connecter à l'aide du mode en mémoire obtiennent une erreur, indiquant que le modèle n'existe pas ou n'a pas été traité.  
+    -   **DirectQuery uniquement**: Si vous utilisez cette option, les métadonnées sont déployées mais le modèle ne comporte aucune donnée. Les clients qui tentent de se connecter à l'aide du mode en mémoire obtiennent une erreur, indiquant que le modèle n'existe pas ou n'a pas été traité.  
   
 4.  En cas de erreurs, dans Visual Studio, ouvrez la **Liste d'erreurs** et résolvez tous les problèmes qui empêcheraient le modèle d'être déployé en mode DirectQuery.  
   

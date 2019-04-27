@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3f47ddcfab5df43104d3998822fdaf8bd504946
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748783"
 ---
 # <a name="process-data-ssas-tabular"></a>Traiter les données (SSAS Tabulaire)
   Lorsque vous importez des données dans un modèle tabulaire, en mode mis en cache, vous capturez un instantané de ces données au moment de l'importation. Dans certains cas, ces données peuvent ne jamais changer et elles n'ont pas besoin d'être mises à jour dans le modèle. Toutefois, il est plus probable que les données que vous importez subissent des modifications régulièrement, et pour que votre modèle reflète les données les plus récentes des sources de données, il est nécessaire de traiter (actualiser) ces données et de recalculer les données calculées. Pour mettre à jour les données dans votre modèle, effectuez une action de traitement sur toutes les tables, sur une table individuelle, par partition ou par connexion de source de données.  
@@ -27,7 +27,7 @@ ms.locfileid: "48048429"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Traiter manuellement les données &#40;SSAS tabulaire&#41;](manually-process-data-ssas-tabular.md)|Explique comment traiter manuellement des données de l'espace de travail de modèle.|  
-|[Résoudre les problèmes de traitement des données &#40;SSAS tabulaire&#41;](troubleshoot-process-data-ssas-tabular.md)|Explique comment résoudre les problèmes liés aux opérations de traitement.|  
+|[Traiter manuellement les données &#40;SSAS Tabulaire&#41;](manually-process-data-ssas-tabular.md)|Explique comment traiter manuellement des données de l'espace de travail de modèle.|  
+|[Dépanner le traitement des données &#40;SSAS Tabulaire&#41;](troubleshoot-process-data-ssas-tabular.md)|Explique comment résoudre les problèmes liés aux opérations de traitement.|  
   
   

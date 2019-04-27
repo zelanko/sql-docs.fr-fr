@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771179"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Utilisation du service de capture de données modifiées Oracle
   Cette section décrit des concepts importants du service de capture de données modifiées Oracle. Les concepts inclus dans cette section sont les suivants :  

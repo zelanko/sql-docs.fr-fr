@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b99fb881fc6bf09aa848bd41a42f8254e5f3acd6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48085509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754207"
 ---
 # <a name="troubleshoot-database-mirroring-configuration-sql-server"></a>Résoudre les problèmes de configuration de mise en miroir de bases de données (SQL Server)
   Cette rubrique fournit des informations destinées à résoudre les problèmes de configuration d'une session de mise en miroir de base de données.  
@@ -28,7 +28,7 @@ ms.locfileid: "48085509"
 > [!NOTE]  
 >  Assurez-vous que vous prenez en charge toutes les [conditions préalables à la mise en miroir de bases de données](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
-|Problème|Résumé|  
+|Problème|Récapitulatif|  
 |-----------|-------------|  
 |Message d'erreur 1418|Ce message [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indique que l'adresse réseau du serveur ne peut pas être atteinte ou n'existe pas, et il suggère de vérifier le nom de l'adresse réseau puis de réexécuter la commande. Pour plus d’informations, consultez la rubrique [MSSQLSERVER_1418](../../relational-databases/errors-events/mssqlserver-1418-database-engine-error.md) .|  
 |[Comptes (Accounts)](#Accounts)|Traite des conditions nécessaires à la configuration correcte des comptes sous lesquels [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute.|  
@@ -131,7 +131,7 @@ ms.locfileid: "48085509"
 ##  <a name="FailedCreateFileOp"></a> Failed Create-File Operation  
  Pour pouvoir ajouter un fichier sans compromettre une session de mise en miroir, il est nécessaire que le chemin d'accès au fichier existe sur les deux serveurs. Par conséquent, si vous déplacez des fichiers de base de données lors de la création de la base de données miroir, une opération d'ajout de fichier ultérieure peut échouer sur la base de données miroir et entraîner la suspension de la mise en miroir.  
   
- Pour corriger le problème :  
+ Pour corriger le problème :  
   
 1.  Le propriétaire de la base de données doit supprimer la session de mise en miroir et restaurer une sauvegarde complète du groupe de fichiers qui contient le fichier ajouté.  
   

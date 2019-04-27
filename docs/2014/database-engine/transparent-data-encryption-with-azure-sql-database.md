@@ -15,36 +15,36 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3551cf4db3ab1b84f04ba13dea414943fbb2ef44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773872"
 ---
 # <a name="transparent-data-encryption-with-azure-sql-database"></a>Chiffrement transparent des données avec Azure SQL Database
-  [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] chiffrement transparent des données (version préliminaire) protège contre les menaces d’activités malveillantes en effectuant un chiffrement en temps réel et déchiffrement de la base de données, les sauvegardes associées et les fichiers journaux des transactions au repos sans nécessiter de modifications de l’application.  
+  Le chiffrement transparent des données (version Preview) de la [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] vous aide à protéger contre la menace d'activités malveillantes en effectuant le chiffrement et le déchiffrement en temps réel de la base de données, des sauvegardes associées et des fichiers journaux des transactions au repos sans nécessiter de modifications de l'application.  
   
  L'ensemble de la base de données est chiffré à l'aide d'une clé symétrique, appelée clé de chiffrement de base de données. Dans [!INCLUDE[ssSDS](../includes/sssds-md.md)] , la clé de chiffrement de base de données est protégée par un certificat de serveur intégré. Le certificat de serveur intégré est unique pour chaque serveur [!INCLUDE[ssSDS](../includes/sssds-md.md)] . Si une base de données a une relation GeoDR, elle est protégée par une clé différente sur chaque serveur. Si deux bases de données sont connectées au même serveur, elles partagent le même certificat intégré. [!INCLUDE[msCoName](../includes/msconame-md.md)] fait alterner automatiquement ces certificats au moins tous les 90 jours. Pour obtenir une description générale du chiffrement transparent des données, consultez [Chiffrement transparent des données &#40;TDE&#41;](../relational-databases/security/encryption/transparent-data-encryption.md).  
   
- [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] ne prend pas en charge l'intégration du coffre de clés Azure au chiffrement transparent des données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'exécute sur une machine virtuelle Azure, il peut utiliser une clé asymétrique provenant du coffre de clés. Pour plus d’informations, consultez [exemple a : chiffrement Transparent des données à l’aide d’une clé asymétrique dans le coffre de clés](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
+ [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] ne prend pas en charge l'intégration du coffre de clés Azure au chiffrement transparent des données. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] s'exécute sur une machine virtuelle Azure, il peut utiliser une clé asymétrique provenant du coffre de clés. Pour plus d’informations, consultez [r : exemple Chiffrement transparent des données à l’aide d’une clé asymétrique du coffre de clés](../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md#ExampleA).  
   
 ||  
 |-|  
-|**S’applique aux**: [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([Aperçu dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**S’applique à** : [!INCLUDE[sqldbesa](../includes/sqldbesa-md.md)] ([Aperçu dans certaines régions](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  Il s'agit actuellement d'une fonctionnalité d'aperçu. Je reconnais et accepte que l’implémentation de [!INCLUDE[ssSDS](../includes/sssds-md.md)] transparent data encryption dans mes bases de données est soumise aux conditions de version préliminaire dans mon contrat de licence (par exemple, le contrat entreprise, contrat Microsoft Azure ou abonnement en ligne Microsoft Contrat), ainsi qu’à toutes [conditions d’utilisation supplémentaires de Microsoft Azure Preview](http://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
+>  Il s'agit actuellement d'une fonctionnalité d'aperçu. Je reconnais et accepte que l'implémentation du chiffrement transparent des données de [!INCLUDE[ssSDS](../includes/sssds-md.md)] dans ma ou mes bases de données soit soumise aux conditions de la version d'évaluation dans mon contrat de licence (par exemple Contrat Entreprise, Contrat Microsoft Azure ou Contrat d'abonnement à Microsoft Online), ainsi que toutes les [conditions supplémentaires d'utilisation applicables de Microsoft Azure Preview](http://azure.microsoft.com/support/legal/preview-supplemental-terms/).  
   
- L'aperçu de l'état du chiffrement transparent des données s'applique même au sous-ensemble des régions géographiques où la famille de versions V12 de [!INCLUDE[ssSDS](../includes/sssds-md.md)] est annoncée comme ayant l'état de disponibilité générale. Le chiffrement transparent des données (TDE) pour [!INCLUDE[ssSDS](../includes/sssds-md.md)] n'est pas destiné à être utilisé dans les bases de données de production tant que [!INCLUDE[msCoName](../includes/msconame-md.md)] n'annonce pas qu'il est promu de l'aperçu à l'état de disponibilité générale. Pour plus d'informations sur la [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12, consultez [Nouveautés de la base de données SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
+ La version préliminaire de l'état du chiffrement transparent des données s'applique même au sous-ensemble des régions géographiques où la famille de versions V12 de la [!INCLUDE[ssSDS](../includes/sssds-md.md)] est annoncée comme ayant l'état de disponibilité générale. Le chiffrement transparent des données (TDE) pour [!INCLUDE[ssSDS](../includes/sssds-md.md)] n'est pas destiné à être utilisé dans les bases de données de production tant que [!INCLUDE[msCoName](../includes/msconame-md.md)] n'annonce pas qu'il est promu de l'aperçu à l'état de disponibilité générale. Pour plus d'informations sur la [!INCLUDE[ssSDS](../includes/sssds-md.md)] V12, consultez [Nouveautés de la base de données SQL Azure](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/).  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  Pour vous inscrire à la version Preview et configurer TDE via le portail Azure, en utilisant l'API REST ou en utilisant PowerShell, vous devez être connecté en tant que propriétaire, collaborateur ou gestionnaire de sécurité SQL Azure.  
   
  La configuration de TDE à l'aide de [!INCLUDE[tsql](../includes/tsql-md.md)] requiert les conditions suivantes :  
   
 -   Vous devez être déjà inscrit pour TDE en version Preview.  
   
--   Pour créer la clé de chiffrement de base de données, vous devez être un [!INCLUDE[ssSDS](../includes/sssds-md.md)] administrateur ou vous devez être membre du **dbmanager** rôle dans le maître de base de données et ont le **contrôle** autorisation sur la base de données.  
+-   Pour créer la clé de chiffrement de la base de données, vous devez être administrateur de la [!INCLUDE[ssSDS](../includes/sssds-md.md)] ou membre du rôle **dbmanager** dans la base de données master et disposer de l’autorisation **CONTRÔLE** sur la base de données.  
   
 -   L'exécution de l'instruction ALTER DATABASE avec l'option SET requiert seulement l'appartenance au rôle **dbmanager** .  
   
@@ -90,7 +90,7 @@ ms.locfileid: "48049779"
     GO  
     ```  
   
-3.  Pour surveiller la progression du chiffrement sur [!INCLUDE[ssSDS](../includes/sssds-md.md)], les utilisateurs disposant de la base de données le **VIEW DATABASE STATE** autorisation peut interroger le `encryption_state` colonne de la [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) vue.  
+3.  Pour surveiller la progression du chiffrement sur [!INCLUDE[ssSDS](../includes/sssds-md.md)], les utilisateurs disposant de la base de données le **VIEW DATABASE STATE** autorisation peut interroger le `encryption_state` colonne de la [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) Vue.  
   
 ## <a name="enabling-tde-on-sql-database-by-using-powershell"></a>Activation de TDE sur SQL Database en utilisant PowerShell  
  En utilisant Azure PowerShell, vous pouvez exécuter la commande suivante pour activer ou désactiver TDE. Vous devez connecter votre compte dans la fenêtre PS avant d'exécuter la commande. Les étapes suivantes supposent que vous êtes déjà inscrit à la version Preview. Pour plus d'informations sur PowerShell, consultez [Comment installer et configurer Azure PowerShell](http://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -146,10 +146,10 @@ ms.locfileid: "48049779"
     GO  
     ```  
   
-3.  Pour surveiller la progression du chiffrement sur [!INCLUDE[ssSDS](../includes/sssds-md.md)], les utilisateurs disposant de la base de données le **VIEW DATABASE STATE** autorisation peut interroger le `encryption_state` colonne de la [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) vue.  
+3.  Pour surveiller la progression du chiffrement sur [!INCLUDE[ssSDS](../includes/sssds-md.md)], les utilisateurs disposant de la base de données le **VIEW DATABASE STATE** autorisation peut interroger le `encryption_state` colonne de la [sys.dm_database_encryption_keys](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql) Vue.  
   
 ##  <a name="Working"></a> Utilisation de chiffrement transparent des données des bases de données protégées sur [!INCLUDE[ssSDS](../includes/sssds-md.md)]  
- Il n'est pas nécessaire de déchiffrer les bases de données pour effectuer des opérations dans Azure. La base de données cible hérite de façon transparente des paramètres de TDE sur la base de données source ou sur la base de données principale. Cela inclut les opérations impliquant :  
+ Il n'est pas nécessaire de déchiffrer les bases de données pour effectuer des opérations dans Azure. La base de données cible hérite de façon transparente des paramètres de TDE sur la base de données source ou sur la base de données principale. Cela inclut les opérations impliquant :  
   
 -   La géo-restauration  
   
@@ -162,7 +162,7 @@ ms.locfileid: "48049779"
 -   La création d'une copie de base de données  
   
 ##  <a name="Moving"></a> Passer une base de données protégé par chiffrement transparent des données à l’aide. Fichiers Bacpac  
- Lorsque l’exportation d’une chiffrement transparent des données protégée de la base de données à l’aide de la fonction d’exporter la base de données dans le [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] portail ou le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Assistant Importation et exportation, le contenu de la base de données n’est pas chiffré. Le contenu est stocké dans des fichiers .bacpac qui ne sont pas chiffrés.  Veillez à protéger les fichiers .bacpac de façon appropriée et à activer le TDE une fois l'importation de la base de données terminée.  
+ Lors de l’exportation d’une base de données protégée par TDE à l’aide de la fonction d’exportation de base de données dans le portail [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] ou à l’aide de l’Assistant Importation et exportation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], le contenu de la base de données n’est pas chiffré. Le contenu est stocké dans des fichiers .bacpac qui ne sont pas chiffrés.  Veillez à protéger les fichiers .bacpac de façon appropriée et à activer le TDE une fois l'importation de la base de données terminée.  
   
 ## <a name="related-sql-server-topic"></a>Rubrique SQL Server connexes  
  [Activer le chiffrement transparent des données à l’aide de la gestion de clés extensible (EKM)](../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md)  

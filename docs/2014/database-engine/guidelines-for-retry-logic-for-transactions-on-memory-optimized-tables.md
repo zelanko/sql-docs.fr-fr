@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 01f719470419940b130967b7c1360c4ae0c281eb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779213"
 ---
 # <a name="guidelines-for-retry-logic-for-transactions-on-memory-optimized-tables"></a>Instructions pour la logique de nouvelle tentative des transactions sur des tables mémoire optimisées
   Certaines conditions d'erreur peuvent se produire lors de l'accès des transactions aux tables mémoire optimisées.  

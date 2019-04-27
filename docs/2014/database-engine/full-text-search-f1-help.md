@@ -11,14 +11,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 447b91ee1aa99642647dd1377976feef026b9a08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778950"
 ---
 # <a name="full-text-search-f1-help"></a>Recherche en texte intégral – Aide (F1)
-  Cette section fournit des rubriques sur la [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] boîtes de dialogue de recherche en texte intégral de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour accéder à une rubrique de l'interface utilisateur, appuyez sur F1 ou cliquez sur **Aide** lorsque la boîte de dialogue est ouverte.  
+  Cette section contient les rubriques relatives aux boîtes de dialogues Recherche en texte intégral [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour accéder à une rubrique de l'interface utilisateur, appuyez sur F1 ou cliquez sur **Aide** lorsque la boîte de dialogue est ouverte.  
   
 |||  
 |-|-|  

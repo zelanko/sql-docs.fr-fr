@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d042ef49a82d16eb33cb27d80c8083a68ea69092
-ms.sourcegitcommit: 4b5ea5fa3253fea028e1adbd46bd18b89f0a115b
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773677"
 ---
 # <a name="ring-buffer-target"></a>Cible de mémoire tampon en anneau
   La cible de mémoire tampon en anneau maintient brièvement les données d'événements en mémoire. Cette cible peut gérer des événements dans deux modes différents.  

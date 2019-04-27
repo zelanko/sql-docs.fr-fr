@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b0588bbc8c21c9946ac72a2db92c593e48973dfa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787066"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Configurer l'option de configuration de serveur user options
   Cette rubrique explique comment configurer l'option de configuration de serveur **user options** dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'option **user options** spécifie des valeurs par défaut globales pour tous les utilisateurs. Une liste d'options de traitement des requêtes par défaut est générée pour la durée d'une session de travail d'un utilisateur. L’option **user options** permet de modifier les valeurs par défaut des options SET (si les paramètres par défaut du serveur ne sont pas appropriés).  

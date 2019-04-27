@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f4a4d4ce67d6087ca6efd2cb2285604a3d79d64f
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781025"
 ---
 # <a name="performing-transactions-odbc"></a>Exécution de transactions (ODBC)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prennent en charge les fonctions de gestion des transactions d'API ODBC. [!INCLUDE[msCoName](../../includes/msconame-md.md)] offre la prise en charge complète des transactions locales sur un serveur individuel. Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client utilise ces fonctionnalités pour prendre en charge les fonctions d'API ODBC qui gèrent les transactions.  

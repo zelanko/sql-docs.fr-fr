@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66f1f8f57dca3ad2edba3f4b63100b2de3ae5659
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779111"
 ---
 # <a name="migrate-query-plans"></a>Migrer des plans de requête
   Dans la plupart des cas, la mise à niveau d'une base de données vers la dernière version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] améliore les performances des requêtes. Toutefois, si vous avez des requêtes critiques réglées avec soin pour la performance, vous pouvez conserver les plans de requête pour ces requêtes avant d'effectuer la mise à niveau en créant un repère de plan pour chaque requête. Si, après avoir effectué la mise à niveau, l'optimiseur de requête choisit un plan moins efficace pour l'une ou plusieurs des requêtes, vous pouvez activer les repères de plan et forcer l'optimiseur de requête à utiliser les plans de pré-mise à niveau.  
@@ -41,7 +41,7 @@ ms.locfileid: "53352515"
 ## <a name="example"></a>Exemple  
  L'exemple suivant indique comment enregistrer un plan de pré-mise à niveau pour une requête en créant un repère de plan.  
   
-### <a name="step-1-collect-the-plan"></a>Étape 1 : récupération du plan  
+### <a name="step-1-collect-the-plan"></a>Étape 1 : Collecter le Plan  
  Le plan de requête enregistré dans le repère de plan doit être au format XML. Les plans de requête XML peuvent être générés des manières suivantes :  
   
 -   [SET SHOWPLAN_XML](/sql/t-sql/statements/set-showplan-xml-transact-sql)  
@@ -65,7 +65,7 @@ SELECT query_plan
 GO  
 ```  
   
-### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Étape 2 : création du repère de plan nécessaire à l'application forcée du plan  
+### <a name="step-2-create-the-plan-guide-to-force-the-plan"></a>Étape 2 : Créer le repère de Plan pour forcer le Plan  
  À l'aide du plan de requête au format XML (obtenu à l'aide de n'importe laquelle des méthodes décrites précédemment) dans le repère de plan, copiez et collez le plan de requête en tant que littéral de chaîne à l'intérieur de l'indicateur de requête USE PLAN spécifié dans la clause OPTION de sp_create_plan_guide.  
   
  Dans le plan XML lui-même, échappez les guillemets (') qui apparaissent dans le plan en ajoutant un deuxième guillemet avant de créer le repère de plan. Par exemple, si un plan contient `WHERE A.varchar = 'This is a string'`, vous devez utiliser un caractère d'échappement en modifiant le code par `WHERE A.varchar = ''This is a string''`.  

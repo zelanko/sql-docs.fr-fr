@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 254e1209a8198a6021222edc0b9b8abc72210884
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755898"
 ---
 # <a name="attach-a-domain-or-composite-domain-to-reference-data"></a>Attacher un domaine ou un domaine composite à des données de référence
   Cette rubrique explique comment attacher des domaines/domaines composites dans une base de connaissances à un service de données de référence dans Windows Azure Marketplace pour générer des connaissances sur les données de référence de haute qualité. Chaque service de données de référence contient un schéma (colonnes de données). Après avoir attaché un domaine ou un domaine composite à un service de données de référence, vous devez mapper le domaine joint, ou chaque domaine au sein du domaine composite joint, aux colonnes appropriées du schéma de service des données de référence. L'attachement d'un domaine composite à un service de données de référence vous permet d'attacher un seul domaine à un service de données de référence, puis de mapper les différents domaines du domaine composite aux colonnes appropriées du schéma de service des données de référence.  
@@ -28,7 +28,7 @@ ms.locfileid: "56024260"
   
  Un schéma de service de données de référence peut avoir une colonne obligatoire qui doit être mappée au domaine approprié si vous choisissez d'utiliser le schéma. La colonne obligatoire d’un schéma de données de référence est identifiée par « (M) » au niveau de son nom. Par exemple, **Adresse** est la colonne de schéma obligatoire dans **Melissa Data - Address Data** et **CompanyName** est la colonne de schéma obligatoire dans **Digital Trowel Inc. - Us companies and professional data for SQL users**.  
   
- Dans cette rubrique, nous allons créer quatre domaines : **Ligne d’adresse**, **Ville**, **état**, et **Zip**, sous un domaine composite, **vérification de l’adresse**, attacher le un domaine composite pour le **Melissa Data – contrôle d’adresse** service de données de référence, puis mapper les domaines individuels au sein du domaine composite aux colonnes appropriées dans le schéma de service de données de référence.  
+ Dans cette rubrique, nous allons créer quatre domaines : **Ligne d’adresse**, **Ville**, **État**, et **Code postal**, sous un domaine composite **Contrôle d’adresse**. Joignez le domaine composite au service de données de référence **Melissa Data - Contrôle d’adresse**, puis mappez les domaines dans le domaine composite aux colonnes appropriées dans le schéma de service de données de référence.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
@@ -48,7 +48,7 @@ ms.locfileid: "56024260"
   
 3.  Dans l'écran **Nouvelle Base de connaissances** , tapez un nom pour la nouvelle base de connaissances, cliquez sur l'activité **Gestion de l'arborescence du domaine** , puis cliquez **Créer**.  
   
-4.  Dans l'écran **Gestion de l'arborescence du domaine** , cliquez sur l'icône **Créer un domaine** pour créer un domaine. Créez les quatre domaines suivants : **Ligne d’adresse**, **Ville**, **état**, et **Zip**.  
+4.  Dans l'écran **Gestion de l'arborescence du domaine** , cliquez sur l'icône **Créer un domaine** pour créer un domaine. Créez les quatre domaines suivants : **Ligne d’adresse**, **Ville**, **État**, et **Code postal**.  
   
 5.  Cliquez sur l'icône **Créer un domaine composite** pour créer un domaine composite. Dans la boîte de dialogue **Créer un domaine composite** , tapez **Contrôle d'adresse** dans la zone **Nom du domaine composite** et incluez tous les domaines créés à l'étape 3 du domaine composite. Cliquez sur **OK**.  
   
@@ -71,11 +71,11 @@ ms.locfileid: "56024260"
   
 9. Retournez à l'onglet **Données de référence** . Dans la zone **Paramètres des fournisseurs**, modifiez les valeurs dans les zones suivantes, si nécessaire :  
   
-    -   **Seuil de Correction automatique**: Corrections des données du service de référence avec un niveau de confiance supérieur à ces valeurs de seuil seront automatiquement effectuées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %.  
+    -   **Seuil de correction automatique** : les corrections du service de données de référence avec un niveau de confiance supérieur aux valeurs de ce seuil seront automatiquement effectuées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,9 pour 90 %.  
   
-    -   **Candidats suggérés**: Nombre de candidats suggérés à afficher à partir du service de données de référence.  
+    -   **Candidats suggérés** : nombre des candidats suggérés à afficher à partir du service de données de référence.  
   
-    -   **Confiance minimale**: Suggestions du service de données de référence avec un niveau de confiance inférieur à cette valeur seront ignorées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,6 pour 60 %.  
+    -   **Confiance minimale** : les suggestions du service de données de référence avec un niveau de confiance inférieur à cette valeur sont ignorées. Entrez une valeur en notation décimale de la valeur de pourcentage correspondante. Par exemple, entrez 0,6 pour 60 %.  
   
 10. Cliquez sur **Terminer** pour publier la base de connaissances. Un message de confirmation s'affiche après que la base de connaissances a été publiée avec succès.  
   

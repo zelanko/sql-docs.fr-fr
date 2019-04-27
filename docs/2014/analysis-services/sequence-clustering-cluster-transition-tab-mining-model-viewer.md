@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bada5acfd14b824be79fca692debf1a3479f056d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48216639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746791"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Onglet Transition d'état du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L’onglet **Transitions d’état** dans la **Visionneuse de l’algorithme MSC** (Microsoft Sequence Clustering) fournit une présentation détaillée des transitions entre des paires attribut-valeur, ou des états, dans le cluster sélectionné.  
   
  Utilisez cette vue d'un modèle Sequence Clustering pour afficher des schémas. Dans le diagramme, un lien représente la probabilité d'une transition et un nœud l'état d'une séquence.  
   
- **Pour plus d’informations :** [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -52,17 +52,17 @@ ms.locfileid: "48216639"
  **Cluster**  
  Choisissez un cluster à afficher dans la visionneuse. Par défaut, **Remplissage (tout)** est sélectionné, ce qui signifie que les états et transitions du modèle entier sont inclus dans le graphique. Lorsque vous choisissez un cluster particulier, seuls les états et transitions qui figurent dans ce cluster sont affichés.  
   
- **Conseil :** Vous pouvez renommer les clusters à l’aide de l’onglet **Diagramme de cluster** . Il suffit de sélectionner un cluster, de cliquer avec le bouton droit et de choisir **Renommer**. Renommer les clusters avec un nom plus descriptif simplifie la comparaison des clusters sous l’onglet **Transitions d’état** .  
+ **Conseil :** Vous pouvez renommer les clusters à l’aide de la **diagramme de Cluster** onglet. Il suffit de sélectionner un cluster, de cliquer avec le bouton droit et de choisir **Renommer**. Renommer les clusters avec un nom plus descriptif simplifie la comparaison des clusters sous l’onglet **Transitions d’état** .  
   
  **Afficher les étiquettes du bord**  
  Sélectionnez cette option pour afficher les nombres sur chaque bord du graphique qui délimitent la probabilité de la transition.  
   
- **Liens**  
+ **Links**  
  Utilisez le curseur pour contrôler le nombre d'états et de transitions affichés dans le graphique. Abaisser le curseur permet d'afficher uniquement les états et les transitions ayant la probabilité la plus élevée.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

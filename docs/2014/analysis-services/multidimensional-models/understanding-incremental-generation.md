@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb2c032fc95738550aa92cc8905ebee7279dcc2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740907"
 ---
 # <a name="understanding-incremental-generation"></a>Présentation de la génération incrémentielle
   Après la génération de schéma initiale, vous pouvez modifier les définitions de cubes et de dimensions à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis exécuter à nouveau l'Assistant Génération de schéma. L'Assistant met à jour le schéma dans la base de données de la zone de sujet et dans la vue de source de données associée pour refléter les modifications, en conservant si possible les données qui existent actuellement dans les tables à régénérer. Si vous avez modifié les tables après la génération initiale, l'Assistant Génération de schéma préserve ces modifications si possible en appliquant les règles suivantes :  
@@ -85,7 +85,7 @@ ms.locfileid: "48049289"
  D'un autre côté, si vous modifiez la chaîne de connexion à la source de données en spécifiant une base de données différente de celle de la génération précédente, aucune erreur ne se produit. La nouvelle base de données est utilisée, et aucune modification n'est apportée à la base de données précédente.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gérer les modifications apportées aux vues de sources de données et Sources de données](manage-changes-to-data-source-views-and-data-sources.md)   
- [Assistant génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [Gérer des modifications dans les vues de source de données et les sources de données](manage-changes-to-data-source-views-and-data-sources.md)   
+ [Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

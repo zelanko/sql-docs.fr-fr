@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f33492191deac22f416aa2f823ea501d72765b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741103"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Présentation de Power View pour les modèles multidimensionnels
   Cet article décrit la fonctionnalité Power View pour les modèles multidimensionnels de Microsoft SQL Server 2014, et fournit des informations importantes pour les administrateurs et les professionnels dans le secteur du décisionnel qui envisagent d'implémenter Power View pour les modèles multidimensionnels dans leur organisation.  
@@ -98,7 +98,7 @@ ms.locfileid: "53362981"
  Les modèles tabulaires fournissent aux utilisateurs la possibilité de créer des mesures *implicites* , telles qu'un compte, une somme ou une moyenne sur des champs. Concernant les modèles multidimensionnels, étant donné que les données d'attribut de dimension sont stockées différemment, l'interrogation de mesures implicites peut durer un certain temps. De ce fait, les mesures implicites ne sont pas disponibles dans Power View.  
   
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensions, attributs et hiérarchies  
- Les dimensions de cube sont exposées sous forme de tableaux dans les métadonnées tabulaires. Dans la liste de champs Power View, les attributs de dimension sont affichés en tant que colonnes dans les dossiers d'affichage.  Attributs de dimension dont la propriété AttributeHierarchyEnabled a la valeur false, par exemple : l'attribut de date de naissance dans la dimension Customer ou la propriété AttributeHierarchyVisible avec la valeur False n'apparaissent pas dans la liste de champs Power View. Les hiérarchies à plusieurs niveaux ou les hiérarchies d'utilisateurs, par exemple, Customer Geography dans la dimension Customer, sont exposées en tant que hiérarchies dans la liste de champs Power View. Les éléments UnknownMembers cachés d'un attribut de dimension, sont exposés dans les requêtes DAX et dans Power View.  
+ Les dimensions de cube sont exposées sous forme de tableaux dans les métadonnées tabulaires. Dans la liste de champs Power View, les attributs de dimension sont affichés en tant que colonnes dans les dossiers d'affichage.  Les attributs de dimension qui ont la propriété AttributeHierarchyEnabled est définie sur false ; par exemple : Attribut de Date de naissance dans la dimension Customer ou la propriété AttributeHierarchyVisible est définie sur false n’apparaîtra pas dans la liste de champs Power View. Les hiérarchies à plusieurs niveaux ou les hiérarchies d'utilisateurs, par exemple, Customer Geography dans la dimension Customer, sont exposées en tant que hiérarchies dans la liste de champs Power View. Les éléments UnknownMembers cachés d'un attribut de dimension, sont exposés dans les requêtes DAX et dans Power View.  
   
  **Dimension, attributs et hiérarchies dans SQL Server Data Tools (SSDT) et dans une liste de champs Power View**  
   
@@ -137,7 +137,7 @@ ms.locfileid: "53362981"
  Les modèles multidimensionnels prennent en charge la sécurité au niveau de la cellule et de la dimension au moyen de rôles. Un utilisateur se connectant à un cube à l'aide de Power View est authentifié et évalué pour connaître les autorisations appropriées. Lorsque la sécurité des dimensions est appliquée, les membres des dimensions respectives ne sont pas vus par l'utilisateur dans Power View ; en revanche, si un utilisateur dispose d'une autorisation de sécurité au niveau de la cellule pour laquelle certaines cellules sont restreintes, il ne peut pas se connecter au cube avec Power View. Dans certains cas, les utilisateurs peuvent voir des données agrégées lorsque des portions de ces données sont calculées à partir de données sécurisées.  
   
 ### <a name="non-aggregatable-attributeshierarchies"></a>Hiérarchies/Attributs ne pouvant faire l'objet d'une agrégation  
- Dans un modèle multidimensionnel, la valeur False peut être définie pour la propriété IsAggregatable des attributs d'une dimension. Cela signifie que l'auteur du modèle a spécifié que les applications clientes ne doivent pas agréger les données entre les hiérarchies (attributs ou à plusieurs niveaux) lorsqu'elles interrogent les données. Dans Power View, cet attribut de dimension est exposé en tant que colonne pour laquelle les sous-totaux ne sont pas disponibles. Dans l'image ci-dessous, vous pouvez voir un exemple d'une hiérarchie ne pouvant faire l'objet d'une agrégation : Accounts. Le niveau le plus élevé de la hiérarchie parent-enfant Accounts ne peut pas faire l'objet d'une agrégation, contrairement aux autres niveaux. Dans une visualisation sous forme de matrice de la hiérarchie Accounts (deux premiers niveaux), vous voyez les sous-totaux pour le niveau 02 d'Accounts, mais pas pour le niveau le plus élevé (01).  
+ Dans un modèle multidimensionnel, la valeur False peut être définie pour la propriété IsAggregatable des attributs d'une dimension. Cela signifie que l'auteur du modèle a spécifié que les applications clientes ne doivent pas agréger les données entre les hiérarchies (attributs ou à plusieurs niveaux) lorsqu'elles interrogent les données. Dans Power View, cet attribut de dimension est exposé en tant que colonne pour laquelle les sous-totaux ne sont pas disponibles. Dans l’image ci-dessous, vous pouvez voir un exemple d’une hiérarchie non regroupable : Comptes. Le niveau le plus élevé de la hiérarchie parent-enfant Accounts ne peut pas faire l'objet d'une agrégation, contrairement aux autres niveaux. Dans une visualisation sous forme de matrice de la hiérarchie Accounts (deux premiers niveaux), vous voyez les sous-totaux pour le niveau 02 d'Accounts, mais pas pour le niveau le plus élevé (01).  
   
  **Hiérarchie ne pouvant faire l'objet d'une agrégation dans Power View**  
   
@@ -218,7 +218,7 @@ ms.locfileid: "53362981"
   
  La requête DISCOVER_CSDL_METADATA présente les restrictions suivantes :  
   
-|Créer une vue d’abonnement|Requis|Description|  
+|Nom|Requis|Description|  
 |----------|--------------|-----------------|  
 |CATALOG_NAME|Oui|Nom du catalogue\base de données.|  
 |PERSPECTIVE_NAME|Oui, si le cube contient plusieurs perspectives. Facultatif en présence d'un seul cube ou s'il existe une perspective par défaut.|Nom du cube ou de la perspective dans la base de données multidimensionnelle.|  

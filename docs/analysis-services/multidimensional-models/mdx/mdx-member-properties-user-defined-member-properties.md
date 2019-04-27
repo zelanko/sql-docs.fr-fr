@@ -1,5 +1,5 @@
 ---
-title: Propriétés de membre (MDX) défini par l’utilisateur | Documents Microsoft
+title: Propriétés de membre (MDX) défini par l’utilisateur | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ae7cf92c9384b2be79048c860ef6a8b0476535
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740224"
 ---
 # <a name="mdx-member-properties---user-defined-member-properties"></a>Propriétés de membre MDX - propriétés de membre définies par l’utilisateur
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ FROM [Adventure Works]
  Pour plus d’informations sur la création de membres calculés, consultez [Création de membres calculés dans MDX &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [À l’aide des propriétés de membre & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
- [Propriétés & #40 ; MDX & #41 ;](../../../mdx/properties-mdx.md)  
+ [Utilisation des propriétés de membre &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [Propriétés &#40;MDX&#41;](../../../mdx/properties-mdx.md)  
   
   

@@ -97,16 +97,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e89743de546afbc331259dbe3ff18a0344a4e420
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746721"
 ---
 # <a name="olap-properties"></a>Propriétés OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur OLAP répertoriées dans les tableaux suivants. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **S'applique à :** Mode serveur multidimensionnel uniquement  
+ **S’applique à :** Mode serveur multidimensionnel uniquement  
   
 ## <a name="memory"></a>Mémoire  
  `DefaultPageSizeForData`  
@@ -480,6 +480,6 @@ ms.locfileid: "48122139"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

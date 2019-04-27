@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 84f032e89730aa9828dada1208c6d794db97260b
-ms.sourcegitcommit: 87f29b23d5ab174248dab5d558830eeca2a6a0a4
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "51018564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774970"
 ---
 # <a name="upgrade-database-engine"></a>Mettre à niveau le moteur de base de données
   Cette rubrique fournit les informations qui vous aideront à préparer et à comprendre le processus de mise à niveau :  
@@ -43,7 +43,7 @@ ms.locfileid: "51018564"
 >  Avant toute mise à niveau d'une édition de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre, vérifiez que la fonctionnalité en cours d'utilisation est prise en charge dans l'édition vers laquelle vous effectuez la mise à niveau.  
   
 > [!NOTE]  
->  Lorsque vous effectuez la mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] d'une version antérieure de l'édition Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , choisissez entre Enterprise Edition : contrat de licence selon le nombre de cœurs et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences. Pour plus d'informations, consultez [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
+>  Lorsque vous mettez à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à partir d’une version antérieure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise edition, choisissez entre Enterprise Edition : Licence par cœur et Enterprise Edition. Ces éditions Enterprise se différencient uniquement par leur mode de licences. Pour plus d'informations, consultez [Compute Capacity Limits by Edition of SQL Server](../../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
 ## <a name="pre-upgrade-checklist"></a>Liste de contrôle préalable à la mise à niveau  
  La mise à niveau vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à partir d'une version précédente est prise en charge par le programme d'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous pouvez également migrer les bases de données à partir de versions précédentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . La migration peut être effectuée à partir d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers une autre instance située vers le même ordinateur ou à partir d'une instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers un autre ordinateur. Les options de migration incluent l'utilisation de l'Assistant Copie de base de données, de la fonctionnalité de sauvegarde et de restauration, ainsi que l'utilisation de l'Assistant Importation et exportation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] et des méthodes d'importation et d'exportation en bloc.  

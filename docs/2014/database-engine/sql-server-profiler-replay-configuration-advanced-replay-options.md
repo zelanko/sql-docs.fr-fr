@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fff89f4be7953e2eb0cec3ed9a04883052ed6d1f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773285"
 ---
 # <a name="sql-server-profiler---replay-configuration-advanced-replay-options"></a>Générateur de profils SQL Server - Configuration de la relecture (Options de relecture avancées)
   Dans la boîte de dialogue **Configuration de la relecture** , utilisez l’onglet **Options de relecture avancées** pour spécifier le mode de relecture d’un fichier de trace.  
@@ -59,7 +59,7 @@ ms.locfileid: "48192479"
  Configure la fréquence à laquelle le moniteur de processus recherche les processus bloqués ou les processus de blocage.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Relire une Table de Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Relire une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Relire un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
  [Relire des traces](../tools/sql-server-profiler/replay-traces.md)  
   

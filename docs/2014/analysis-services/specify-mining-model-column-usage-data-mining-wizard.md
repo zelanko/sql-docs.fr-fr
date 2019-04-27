@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6761a6c8e028ed5c589608886f763aed6455c520
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48175629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746232"
 ---
 # <a name="specify-mining-model-column-usage-data-mining-wizard"></a>Spécifier l'utilisation des colonnes du modèle d'exploration de données (Assistant Exploration de données)
   Utilisez la page **Utilisation des colonnes du modèle d’exploration** pour spécifier le mode d’utilisation des colonnes du modèle d’exploration de données et pour ajouter des tables imbriquées.  
@@ -26,7 +26,7 @@ ms.locfileid: "48175629"
 > [!NOTE]  
 >  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’un cube existant** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Tables/colonnes**  

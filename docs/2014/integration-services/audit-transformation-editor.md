@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 29d9d3f4cd9e6c4d1e652e52ea464df58eac279d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771975"
 ---
 # <a name="audit-transformation-editor"></a>Éditeur de transformation d'audit
   La transformation d'audit permet au flux de données d'un package de contenir des données relatives à l'environnement d'exécution du package. Par exemple, le nom du package, de l'ordinateur et de l'opérateur peuvent être ajoutés au flux de données. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] comprend des variables système qui fournissent ces informations.  

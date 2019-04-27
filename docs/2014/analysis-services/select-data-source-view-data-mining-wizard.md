@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7f1272a654749f1fa6c3b4f8cafdada26ad56a56
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747701"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>Sélectionner une vue de source de données (Assistant Exploration de données)
   La page **Sélectionner une vue de source de données** permet d’identifier la vue de source de données pour la structure d’exploration de données.  
@@ -26,7 +26,7 @@ ms.locfileid: "48177919"
 > [!NOTE]  
 >  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’une base de données relationnelle ou d’un entrepôt de données qui existent déjà** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md), [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Dans les modèles multidimensionnels, les vues de Source de données](multidimensional-models/data-source-views-in-multidimensional-models.md), [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Vues de sources de données disponibles**  

@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 384d1cd437947e23f571cf30b6ec7fad84704942
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746941"
 ---
 # <a name="thread-pool-properties"></a>Propriétés du pool de threads
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise le multithreading pour de nombreuses opérations, afin d’optimiser les performances globales du serveur en exécutant plusieurs travaux en parallèle. Pour gérer les threads plus efficacement, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise des pools pour préallouer les threads et faciliter leur disponibilité pour le travail suivant.  
@@ -251,17 +251,17 @@ ms.locfileid: "55087898"
   
  `"10/28/2013 9:20:52 AM) Message: The Query thread pool now has 1 minimum threads, 16 maximum threads, and a concurrency of 16.  Its thread pool affinity mask is 0x00000000000000ff. (Source: \\?\C:\Program Files\Microsoft SQL Server\MSAS11.MSSQLSERVER\OLAP\Log\msmdsrv.log, Type: 1, Category: 289, Event ID: 0x4121000A)"`  
   
- N'oubliez pas que l'algorithme permettant de définir **MinThread** et **MaxThread** intègre la configuration du système, notamment le nombre de processeurs. Le billet de blog suivant offre un aperçu du mode de calcul des valeurs : [Analysis Services 2012 Configuration settings (Wordpress Blog)](https://go.microsoft.com/fwlink/?LinkId=330387). Notez que ces paramètres et comportements sont susceptibles d'être modifiés dans les versions à venir.  
+ N'oubliez pas que l'algorithme permettant de définir **MinThread** et **MaxThread** intègre la configuration du système, notamment le nombre de processeurs. Le billet de blog suivante donne des éclaircissements sur la façon dont les valeurs sont calculées : [Analysis Services 2012 Configuration settings (Wordpress Blog)](https://go.microsoft.com/fwlink/?LinkId=330387). Notez que ces paramètres et comportements sont susceptibles d'être modifiés dans les versions à venir.  
   
  La liste suivante répertorie des exemples d'autres paramètres de masque d'affinité, pour différentes combinaisons de processeurs :  
   
--   L'affinité pour les processeurs 3-2-1-0 sur un système à huit cœurs génère ce masque de bits : 00001111 et la valeur hexadécimale suivante : 0xF  
+-   L’affinité pour les processeurs 3-2-1-0 sur un système à 8 cœurs génère ce masque de bits : 00001111 et une valeur hexadécimale : 0xF  
   
--   L'affinité pour les processeurs 7-6-5-4 sur un système à huit cœurs génère ce masque de bits : 11110000 et la valeur hexadécimale suivante : 0xF0  
+-   L’affinité pour les processeurs 7-6-5-4 sur un système à 8 cœurs génère ce masque de bits : 11110000 et une valeur hexadécimale : 0xF0  
   
--   L'affinité pour les processeurs 5-4-3-2 sur un système à huit cœurs génère ce masque de bits : 00111100 et la valeur hexadécimale suivante : 0x3C  
+-   L’affinité pour les processeurs 5-4-3-2 sur un système à 8 cœurs génère ce masque de bits : 00111100 et une valeur hexadécimale : 0x3C  
   
--   L'affinité pour les processeurs 7-6-1-0 sur un système à huit cœurs génère ce masque de bits : 11000011 et une valeur hexadécimale : 0xC3  
+-   L’affinité pour les processeurs 7-6-1-0 sur un système à 8 cœurs génère ce masque de bits : 11000011 et une valeur hexadécimale : 0xC3  
   
  Rappelez-vous que sur les systèmes avec plusieurs groupes de processeurs, un masque d'affinité distinct est généré pour chaque groupe, dans une liste séparée par des virgules.  
   

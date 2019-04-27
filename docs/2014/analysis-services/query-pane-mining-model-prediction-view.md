@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 316b82f15c28a13a2a04bdd81683d2fdf83707bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748371"
 ---
 # <a name="query-pane-mining-model-prediction-view"></a>Volet Requête (vue Prévision de modèle d'exploration de données)
   Le volet **Requête** affiche les instructions DMX (Data Mining Extensions) créées par le Générateur de requêtes de prévisions. Vous pouvez modifier les instructions, puis cliquer sur le bouton **Basculer vers l'affichage du résultat de la requête** pour retourner les résultats. Si vous basculez de nouveau vers la vue **Conception**, les modifications éventuelles apportées à l'instruction seront perdues.  
   
- **Pour plus d’informations :** [Instructions de manipulations de données DMX &#40;Data Mining Extensions&#41;](/sql/dmx/dmx-statements-data-manipulation), [Créer une requête DMX dans SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
+ **Pour plus d’informations :** [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](/sql/dmx/dmx-statements-data-manipulation), [créer une requête DMX dans SQL Server Management Studio](data-mining/create-a-dmx-query-in-sql-server-management-studio.md)  
   
 ## <a name="options"></a>Options  
  **Basculez vers l’affichage des résultats de requête**  

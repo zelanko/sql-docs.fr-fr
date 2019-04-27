@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72ac6ac92da531d0f653e0fc03d88d170b7706e5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743215"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Modifier la durée de récupération cible d'une base de données (SQL Server)
   Cette rubrique explique comment modifier le temps de récupération cible d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Par défaut, le temps de récupération cible est 0, et la base de données utilise des *points de contrôle automatiques* (qui sont contrôlés par l'option de serveur **intervalle de récupération** ). La définition du temps de récupération cible avec une valeur supérieure à 0 entraîne l'utilisation par la base de données de *points de contrôle indirects* et établit une limite supérieure sur le temps de récupération de cette base de données.  
@@ -23,9 +23,9 @@ ms.locfileid: "54131449"
 > [!NOTE]  
 >  La limite supérieure spécifiée pour une base de données spécifique par son paramètre de temps de récupération cible peut être dépassée si une transaction longue entraîne des durées UNDO excessives.  
   
--   **Avant de commencer :**  [Limitations et Restrictions](#Restrictions), [sécurité](#Security)  
+-   **Avant de commencer :**  [Limitations et restrictions](#Restrictions), [sécurité](#Security)  
   
--   **Pour modifier la cible de récupération du temps, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure) ou [Transact-SQL](#TsqlProcedure)  
+-   **Pour changer le temps de récupération cible à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure) ou de [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54131449"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

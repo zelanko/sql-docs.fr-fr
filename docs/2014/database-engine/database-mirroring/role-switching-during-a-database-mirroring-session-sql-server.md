@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754499"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Basculement de rôle durant une session de mise en miroir de bases de données (SQL Server)
   Dans le contexte d'une session de mise en miroir de bases de données, le rôle principal et le rôle miroir sont généralement interchangeables lors d'un processus appelé *basculement de rôle*. Dans une situation de basculement de rôle, le serveur miroir est le *partenaire de basculement* du serveur principal ; il adopte le rôle principal, en récupérant sa copie de la base de données et en la mettant en ligne en tant que nouvelle base de données principale. L'ancien serveur principal (s'il est disponible) joue le rôle de serveur miroir, et sa base de données devient la nouvelle base de données miroir. Les rôles peuvent éventuellement basculer plusieurs fois, soit en réponse à plusieurs défaillances, soit pour des raisons administratives.  
@@ -67,9 +67,9 @@ ms.locfileid: "48181211"
   
 ||Hautes performances|Mode haute performance sans témoin|Mode haute performance avec témoin|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|Basculement automatique|non|non|Oui|  
-|basculement manuel|non|Oui|Oui|  
-|Service forcé|Oui|Oui|non|  
+|Basculement automatique|Non|Non|Oui|  
+|basculement manuel|Non|Oui|Oui|  
+|Service forcé|Oui|Oui|Non|  
   
  Après un basculement de rôle, certaines métadonnées doivent exister sur les deux partenaires pour garantir que tous les utilisateurs de base de données peuvent accéder à la nouvelle base de données principale. De plus, des travaux de sauvegarde doivent être créés sur le nouveau serveur principal pour garantir que la base de données continue d'être sauvegardée régulièrement. Pour plus d’informations, consultez [Gestion des connexions et des travaux après un basculement de rôle &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -83,7 +83,7 @@ ms.locfileid: "48181211"
  L'administrateur de base de données peut recourir au basculement manuel pour mettre du matériel ou des logiciels à niveau sans sacrifier la disponibilité. Pour utiliser la mise en miroir de base de données dans le cadre de mises à niveau logicielles, le serveur miroir et/ou le système doivent déjà avoir été mis à niveau.  
   
 > [!NOTE]  
->  La fonction de mise en miroir de bases de données doit être en mesure d'effectuer une mise à niveau propagée mais sans le garantir puisque les modifications à apporter ultérieurement ne sont pas connues. Pour plus d'informations, voir [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
+>  La fonction de mise en miroir de bases de données doit être en mesure d'effectuer une mise à niveau propagée mais sans le garantir puisque les modifications à apporter ultérieurement ne sont pas connues. Pour plus d’informations, voir [réduire les temps d’arrêt pour la mise en miroir de bases de données lors de la mise à niveau d’Instances de serveur](upgrading-mirrored-instances.md).  
   
  L'illustration suivante montre une instance qui utilise le basculement manuel pour maintenir la disponibilité d'une base de données pendant la mise à niveau d'une instance serveur de base de données. Lorsque la mise à niveau est terminée, un administrateur peut éventuellement basculer à nouveau vers l'instance serveur d'origine. Ceci est utile lorsque l'administrateur veut arrêter la session de mise en miroir et utiliser le serveur de miroir ailleurs. De cette façon, une instance serveur donnée peut être utilisée à plusieurs reprises lors de la mise à jour d'une série d'instances serveur de base de données.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "48181211"
 -   Le serveur principal a perdu la communication avec le reste de la configuration de mise en miroir de base de données, tandis que le serveur miroir et le serveur témoin conservent le quorum. Toutefois, si toutes les instances de serveur perdent la communication et si le serveur témoin et le serveur miroir rétablissent ultérieurement la communication, le basculement automatique n'a pas lieu.  
   
     > [!NOTE]  
-    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   Le serveur miroir a détecté la perte du serveur principal.  
   
@@ -289,7 +289,7 @@ ms.locfileid: "48181211"
   
 ## <a name="see-also"></a>Voir aussi  
  [Estimer l’interruption de service au cours d’un basculement de rôle &#40;mise en miroir de bases de données&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Défaillances possibles pendant la mise en miroir de bases de données](possible-failures-during-database-mirroring.md)   
+ [Défaillances possibles pendant la mise en miroir d’une base de données](possible-failures-during-database-mirroring.md)   
  [Connecter des clients à une session de mise en miroir de bases de données &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Témoin de mise en miroir de base de données](database-mirroring-witness.md)   
  [Restaurations complètes de bases de données &#40;mode de récupération complète&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

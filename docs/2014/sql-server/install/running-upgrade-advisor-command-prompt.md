@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34f36ea3b27100510857a05cd5edffa68c5be74a
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753281"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Exécution du Conseiller de mise à niveau (Invite de commandes)
   Utilisez le **UpgradeAdvisorWizardCmd** utilitaire pour exécuter le Conseiller de mise à niveau à partir de l’invite de commandes. Vous pouvez choisir de recevoir les résultats dans le format XML ou dans un fichier dont les valeurs sont séparées par des virgules.  
@@ -43,30 +43,30 @@ where <server_info> is any combination of the following:
  **-?**  
  Affiche la syntaxe de la commande.  
   
- **-ConfigFile** _nom de fichier_  
+ **-ConfigFile** _filename_  
  Est le nom de chemin d’accès et le nom de fichier d’un fichier XML qui contient les paramètres à utiliser lorsque vous exécutez le **UpgradeAdvisorWizardCmd** utilitaire.  
   
- *< détails_serveur >*  
+ *<server_info>*  
  Spécifie l'ordinateur et l'instance à analyser. Servez-vous de ces options si vous n'utilisez pas de fichier de configuration.  
   
  *< détails_serveur >* peut être n’importe quelle combinaison des quatre arguments suivants :  
   
- **-Serveur** _nom_serveur_  
+ **-Server** _server_name_  
  Spécifie le nom de l'ordinateur à analyser. Il peut s'agir de l'ordinateur local , qui correspond à la valeur par défaut, ou d'un ordinateur distant.  
   
  **-Instance** _nom_instance_  
  Spécifie le nom de l'instance à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas ce paramètre, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] n’est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est MSSQLSERVER. Pour une instance nommée, utilisez le nom de l'instance.  
   
- **-ASInstance**_nom_instance_as_   
+ **-ASInstance**  _AS_instance_name_  
  Spécifie le nom de l'instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut d'[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est MSSQLServerOLAPService. Pour une instance nommée, utilisez le nom de l'instance.  
   
- **-RSInstance**_nom_instance_rs_   
+ **-RSInstance**  _RS_instance_name_  
  Spécifie le nom de l'instance de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] à analyser. Il n’y a pas de valeur par défaut. Si vous ne spécifiez pas cette valeur, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] n'est pas analysé. La valeur d'une instance par défaut de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est ReportServer. Pour une instance nommée, utilisez le nom de l'instance.  
   
  **-SqlUser** _login_id_  
  Si vous recourez à l'authentification [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette valeur est le compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que le Conseiller de mise à niveau utilise pour se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si vous ne spécifiez pas de compte de connexion, l'authentification Windows permet de se connecter à l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **-SqlPassword** _mot de passe_  
+ **-SqlPassword** _password_  
  Si vous utilisez le **- SqlUser** argument, utilisez cet argument pour spécifier le mot de passe pour le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion.  
   
  **-CSV**  
@@ -154,7 +154,7 @@ where <server_info> is any combination of the following:
 UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"  
 ```  
   
-### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>b. Exécuter le Conseiller de mise à niveau à l'aide des paramètres de configuration par défaut  
+### <a name="b-run-upgrade-advisor-using-default-configuration-settings"></a>B. Exécuter le Conseiller de mise à niveau à l'aide des paramètres de configuration par défaut  
  L'exemple suivant indique comment exécuter le Conseiller de mise à niveau à partir de l'invite de commandes en utilisant des paramètres de configuration par défaut et l'authentification Windows.  
   
 ```  

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0ff9d6a44f027de2ef5994ea9a7b29c97175e45b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747931"
 ---
 # <a name="script-administrative-tasks-in-analysis-services"></a>Tâches d'administration à l'aide de scripts dans Analysis Services
   Vous pouvez automatiser des tâches d'administration [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en écrivant ou en générant des scripts qui peuvent être exécutés manuellement ou planifiés grâce à SQL Server Agent. Le tableau suivant résume les options de script à votre disposition et fournit des liens vers des informations supplémentaires.  

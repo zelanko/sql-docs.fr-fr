@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33e64636e195a9f7048b21f2fd5ad7d37e03f9db
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752979"
 ---
 # <a name="exception-message-box-reference"></a>Informations de référence sur la boîte de message d'exception
   La boîte de message d'exception est implémentée par la classe <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> dans l'assembly Microsoft.ExceptionMessageBox.dll. Le dossier d'installation par défaut de cet assembly est [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. La boîte de message d'exception est présentée dans la documentation de référence de l'espace de noms <xref:Microsoft.SqlServer.MessageBox>. Les exemples suivants utilisent l'objet <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox> au cours de la gestion des exceptions.  

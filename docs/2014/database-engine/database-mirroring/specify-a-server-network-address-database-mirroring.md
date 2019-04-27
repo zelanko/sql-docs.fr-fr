@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f197eef6369281001359969bf1d92bd0390bedc8
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755055"
 ---
 # <a name="specify-a-server-network-address-database-mirroring"></a>Spécifier une adresse réseau de serveur (mise en miroir de bases de données)
   La configuration d'une session de mise en miroir de bases de données requiert une adresse réseau de serveur pour chaque instance de serveur. L'adresse réseau de serveur d'une instance de serveur doit identifier sans ambiguïté l'instance en fournissant une adresse système et le numéro du port sur lequel l'instance est à l'écoute.  
@@ -80,7 +80,7 @@ ms.locfileid: "54100654"
 ALTER DATABASE AdventureWorks SET PARTNER ='tcp://SYSTEM46:7022';  
 ```  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>b. Utilisation d'un nom de domaine complet  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Utilisation d'un nom de domaine complet  
  L'adresse réseau de serveur suivante spécifie un nom de domaine complet, `DBSERVER8.manufacturing.Adventure-Works.com`, et un port, `7024`.  
   
 ```  

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2b2268b945b6b4eb2f82ed3d517be01bb2ec750c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774383"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Options (Exécution de la requête : SQL Server : Page Avancé)
   Plusieurs options sont disponibles lors de l'utilisation de la commande SET. Cette page vous permet de spécifier une option **set** pour l'exécution des requêtes [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dans l'éditeur de requête SQL Server. Elles n'ont aucun effet sur les autres éditeurs de code. Les modifications de ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Pour modifier les options des requêtes en cours, cliquez sur **Options de requête** dans le menu **Requête** ou dans le menu contextuel de la fenêtre Requête de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Sous **Exécution**, cliquez sur **Avancé**. Pour plus d'informations sur chaque option, consultez la documentation en ligne de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 330e302d1832f8ec5c3e76f961e4e68cf16726af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748871"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Calcul de prédiction (Outils d'analyse de table pour Excel)
   ![Outil calcul de prédiction](media/tat-predcal.gif "outil calcul de prédiction")  
@@ -59,7 +59,7 @@ ms.locfileid: "48060019"
   
      L'outil crée de nouvelles feuilles de calcul qui contiennent les rapports et les tableaux de bord.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Le **calcul de prédiction** outil utilise l’algorithme Microsoft Logistic Regression, qui peut fonctionner avec des valeurs discrètes, ainsi que des données numériques continues et discrétisées.  
   
 ## <a name="understanding-the-scoring-reports"></a>Présentation des rapports de score  
@@ -98,7 +98,7 @@ ms.locfileid: "48060019"
   
  Les valeurs dans le **Impact relatif** colonne sont des probabilités, représentées sous forme de pourcentages. La cellule est ombrée pour représenter visuellement l'impact de cette valeur sur les résultats.  
   
-|Attribute|Valeur|Impact relatif|  
+|Attribute|Value|Impact relatif|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Marital Status|Unique|71|  
@@ -128,7 +128,7 @@ ms.locfileid: "48060019"
   
  Par exemple, si le rapport contient les valeurs suivantes, vous pouvez ramener la valeur de Voitures à 1 puis à 0 pour voir comment cela affecte le comportement d'achat du client. Lorsque vous modifiez la valeur de **voitures** à 0, la prédiction en bas passe à TRUE.  
   
-|Attribute|Valeur|Impact relatif|  
+|Attribute|Value|Impact relatif|  
 |---------------|-----------|---------------------|  
 |Marital Status|Married|0|  
 |Gender|Male|0|  

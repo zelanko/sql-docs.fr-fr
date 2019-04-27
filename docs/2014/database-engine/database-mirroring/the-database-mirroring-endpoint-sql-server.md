@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c18c22cf4db3f442050c739aaf68e159fd1cc230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754653"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>Point de terminaison de mise en miroir de bases de données (SQL Server)
   Pour faire partie de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de la mise en miroir de bases de données, chaque instance de serveur requiert son propre *point de terminaison de mise en miroir de bases de données*dédié. Ce point de terminaison a un objectif spécifique qui permet exclusivement de recevoir des connexions provenant d'autres instances de serveur. Sur une instance de serveur donnée, chaque connexion de [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] ou de mise en miroir de bases de données à une autre instance de serveur utilise un point de terminaison de mise en miroir de bases de données unique.  
@@ -67,7 +67,7 @@ ms.locfileid: "48170369"
   
 -   Si une instance de serveur s'exécute sous un compte intégré, tel que Système local, Service local ou Service réseau, ou un compte qui n'appartient pas au domaine, vous devez utiliser des certificats pour l'authentification de point de terminaison. Si vous utilisez des certificats pour vos points de terminaison de mise en miroir de bases de données, votre administrateur système doit configurer chaque instance de serveur pour utiliser des certificats sur les connexions sortantes et entrantes.  
   
-     Il n'existe aucune méthode automatisée permettant de configurer la sécurité de la mise en miroir de bases de données à l'aide de certificats. Vous devez utiliser soit CREATE ENDPOINT [!INCLUDE[tsql](../../includes/tsql-md.md)] instruction ou le `New-SqlHadrEndpoint` applet de commande PowerShell. Pour plus d’informations, consultez [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Pour plus d’informations sur l’activation de l’authentification par certificat sur une instance de serveur, consultez [utiliser des certificats pour un point de terminaison de mise en miroir de base de données &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
+     Il n'existe aucune méthode automatisée permettant de configurer la sécurité de la mise en miroir de bases de données à l'aide de certificats. Vous devez utiliser l'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ENDPOINT ou l'applet de commande `New-SqlHadrEndpoint` PowerShell. Pour plus d’informations, consultez [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql). Pour plus d’informations sur l’activation de l’authentification par certificat sur une instance de serveur, consultez [utiliser des certificats pour un point de terminaison de mise en miroir de base de données &#40;Transact-SQL&#41;](use-certificates-for-a-database-mirroring-endpoint-transact-sql.md).  
   
   
 ##  <a name="RelatedTasks"></a> Tâches associées  
@@ -95,7 +95,7 @@ ms.locfileid: "48170369"
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité du transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Résolution des problèmes de configuration de mise en miroir de bases de données &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
- [Sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
- [Sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
+ [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)   
+ [sys.dm_db_mirroring_connections &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)  
   
   

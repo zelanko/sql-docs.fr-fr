@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b196aaa30934e4206886b8b6290e402b6c28fce5
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771315"
 ---
 # <a name="finish"></a>Terminer
   La page **Terminer** résume le processus de l'Assistant. Cliquez sur **Terminer** pour fermer l'Assistant et générer toutes les tables que vous avez définies dans l'Assistant Création d'une instance de capture de données modifiées.  

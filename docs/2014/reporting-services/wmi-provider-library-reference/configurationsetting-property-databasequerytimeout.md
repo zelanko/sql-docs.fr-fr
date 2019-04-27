@@ -20,11 +20,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 25023ed146d00b8635b9ce822cbb2cdf23be65ec
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59968385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646355"
 ---
 # <a name="databasequerytimeout-property-wmi-msreportserverconfigurationsetting"></a>Propriété DatabaseQueryTimeout (WMI MSReportServer_ConfigurationSetting)
   Spécifie le nombre de secondes qui doivent s'écouler avant que le serveur de rapports suppose que la commande a échoué ou a pris trop de temps pour s'exécuter. Le serveur de rapports établit la valeur de minutage de la requête par rapport au catalogue SQL Server et non par rapport à une source de données du rapport. En lecture/écriture.  

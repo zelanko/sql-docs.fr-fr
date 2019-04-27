@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7904e42d9ffd82d2c8a5ec7f5c9226d01c5059ef
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749125"
 ---
-# <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Les connexions suivantes n'ont pas pu s'actualiser : Données PowerPivot
+# <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook-try-again-or-contact-your-system-administrator-the-following-connections-failed-to-refresh-powerpivot-data"></a>Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Les connexions suivantes n'ont pas pu s'actualiser : données PowerPivot
   Pour les classeurs Excel qui contiennent des données PowerPivot, Excel Services retourne cette erreur en cas de demande de connexion à un serveur PowerPivot qui échoue.  
   
 ## <a name="details"></a>Détails  
@@ -28,12 +28,12 @@ ms.locfileid: "53371001"
 |S'applique à :|Installation de PowerPivot pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Cause|Voir ci-dessous.|  
-|Texte du message|Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Les connexions suivantes n'ont pas pu s'actualiser : Données PowerPivot|  
+|Texte du message|Impossible d'actualiser les données pour une connexion de données dans le classeur. Essayez encore ou contactez votre administrateur système. Les connexions suivantes n'ont pas pu s'actualiser : données PowerPivot|  
   
 ## <a name="explanation-and-resolution"></a>Explication et résolution  
  Excel Services ne peut pas se connecter aux données PowerPivot ou les charger. Les conditions qui provoquent cette erreur sont les suivantes :  
   
- **Scénario 1 : Service n’est pas démarré.**  
+ **Scénario 1 : Service n’est pas démarré.**  
   
  L'instance de SQL Server Analysis Services (PowerPivot) n'est pas démarrée. Un mot de passe périmé arrête l'exécution du service. Pour plus d’informations sur la modification du mot de passe, consultez [configurer les comptes de Service PowerPivot](configure-power-pivot-service-accounts.md) et [démarrer ou arrêter un PowerPivot pour SharePoint Server](start-or-stop-a-power-pivot-for-sharepoint-server.md).  
   
@@ -41,7 +41,7 @@ ms.locfileid: "53371001"
   
  Le classeur que vous essayez d'ouvrir peut avoir été créé dans la version SQL Server 2008 R2 de PowerPivot pour Excel. Très probablement, le fournisseur de données Analysis Services qui est spécifié dans la chaîne de connexion de données n'est pas présent sur l'ordinateur qui gère la demande.  
   
- Si tel est le cas, vous trouverez ce message dans le journal ULS : « Échec de l’actualisation pour les données de PowerPivot dans le classeur '\<URL du classeur >' », suivi de « Impossible d’obtenir une connexion ».  
+ Si c’est le cas, vous trouverez ce message dans le journal ULS : « Échec de l’actualisation pour les données de PowerPivot dans le classeur '\<URL du classeur >' », suivi de « Impossible d’obtenir une connexion ».  
   
  Pour déterminer la version du classeur, ouvrez-le dans Excel et vérifiez quel fournisseur de données est spécifié dans la chaîne de connexion. Un classeur SQL Server 2008 R2 utilise MSOLAP.4 comme fournisseur de données.  
   

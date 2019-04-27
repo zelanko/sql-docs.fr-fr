@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7461464f1e55c9a762dd663e4c770663c10bb1c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756019"
 ---
 # <a name="viewing-data-mining-models-in-visio-data-mining-add-ins"></a>Affichage de modèles d'exploration de données dans Visio (Compléments d'exploration de données)
   Les formes Visio pour l'exploration de données vous permettent de vous connecter à un serveur et de créer un diagramme représentant un modèle d'exploration de données existant. Les diagrammes peuvent alors être personnalisés à l'aide de contrôles Visio, mais vous pouvez également explorer plus en détail les données, exposer une partie des statistiques sous-jacentes et utiliser le modèle sous-jacent.  
@@ -40,7 +40,7 @@ ms.locfileid: "48050639"
 |Forme Visio|Modèles pris en charge|  
 |-----------------|----------------------|  
 |Arbre de décision|Utilisez cette forme pour les modèles basés sur les algorithmes d'arbre de décision ou de régression linéaire.|  
-|Réseau de dépendances|Utilisez cette forme pour les modèles basés sur l'un des algorithmes suivants : Naive Bayes, Decision Trees ou Association Rules.|  
+|Réseau de dépendances|Utilisez cette forme pour les modèles basés sur un des algorithmes suivants : Naive Bayes, Decision Trees ou Association Rules.|  
 |Cluster|Utilisez cette forme pour les modèles basés sur les algorithmes de clustering.|  
   
  Selon le type de données figurant dans votre modèle d'exploration de données, l'Assistant peut proposer des options différentes. Par exemple, les colonnes qui contiennent des nombres continus sont visualisées différemment des variables catégorielles.  

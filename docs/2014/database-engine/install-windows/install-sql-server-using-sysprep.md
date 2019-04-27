@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6470cd60eb3b5491b8941685dcae00a49b4e967c
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775302"
 ---
 # <a name="install-sql-server-2014-using-sysprep"></a>Installation de SQL Server 2014 à l'aide de SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep sont accessibles via le Centre d'installation. La Page **Avancé** du **Centre d’installation** a deux options : **Préparation de l’image d’une instance autonome de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** et **Finalisation d’image d’une instance autonome préparée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Les sections [Préparer](#prepare) et [Finaliser](#complete) décrivent la procédure d'installation en détail. Pour plus d'informations, consultez [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 28878f96b843a8a557e95d6c4ddf10681f481b8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771435"
 ---
 # <a name="create-the-function-to-retrieve-the-change-data"></a>Créer la fonction de récupération des données modifiées
   Une fois que vous avez terminé le flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la tâche suivante consiste à créer une fonction table qui récupère les données modifiées. Vous ne devez créer cette fonction qu'une seule fois avant le premier chargement incrémentiel.  
@@ -132,7 +132,7 @@ deallocate #hfunctions
   
 -   Toutes les colonnes de données modifiées requises.  
   
--   Une colonne appelée __CDC_OPERATION qui utilise un champ à un ou deux caractères qui identifie l'opération associée à la ligne. Les valeurs valides pour ce champ sont comme suit : « I » pour l’insertion, qui a recours à ' pour la suppression, ou ' UO' pour mettre à jour les anciennes valeurs et un ' pour la mise à jour de nouvelles valeurs.  
+-   Une colonne appelée __CDC_OPERATION qui utilise un champ à un ou deux caractères qui identifie l'opération associée à la ligne. Les valeurs valides de ce champ sont les suivantes : « I » pour insert (insertion), « D » pour delete (suppression), « UO » pour update old values (mise à jour des anciennes valeurs) et « UN » pour update new values (mise à jour des nouvelles valeurs).  
   
 -   Indicateurs de mise à jour, lorsque vous les demandez, qui apparaissent sous la forme de colonnes de bits après le code d'opération et dans l'ordre spécifié dans le paramètre *@update_flag_list* . Ces colonnes sont nommées en ajoutant « _uflag » au nom de colonne associé.  
   

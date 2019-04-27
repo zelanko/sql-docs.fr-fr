@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48017f32b5c010498dc089982900b60f03371830
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780489"
 ---
 # <a name="supplementary-aware-string-manipulation-sample"></a>Exemple de manipulation de chaînes sensible aux caractères supplémentaires
   Cet exemple pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] illustre un traitement de chaînes sensible aux caractères supplémentaires. Cet exemple illustre l'implémentation de cinq fonctions de chaîne Transact-SQL qui procurent les mêmes fonctions de manipulation de chaînes que les fonctions intégrées, mais avec une capacité additionnelle autorisant la gestion des chaînes de caractères Unicode et supplémentaires. Les cinq fonctions sont lens(), `lefts(), rights(), subs()` et `replace_s()` qui sont équivalentes aux fonctions intégrées `LEN(), LEFT(), RIGHT(), SUBSTRING()` et `REPLACE()` fonctions de chaîne.  

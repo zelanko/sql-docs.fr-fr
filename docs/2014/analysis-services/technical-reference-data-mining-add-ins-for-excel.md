@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756539"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>Guide de référence technique (Compléments d'exploration de données pour Excel)
   Les compléments d'exploration de données pour Office contiennent des fonctionnalités utiles aux programmeurs et aux utilisateurs avancés des fonctionnalités d'exploration de données.  

@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643445"
 ---
 # <a name="granting-access-to-a-database-object"></a>Octroi de l'accès à un objet de base de données
   En tant qu’administrateur, vous pouvez exécuter l’instruction SELECT dans la table **Products** et la vue **vw_Names**, et exécuter la procédure **pr_Names**. Toutefois, Mary ne peut pas le faire. Pour lui octroyer les autorisations nécessaires, utilisez l'instruction GRANT.  
@@ -40,10 +40,10 @@ ms.locfileid: "48209509"
  Vous devez avoir l'autorisation EXECUTE pour exécuter une procédure stockée. Vous devez avoir les autorisations SELECT, INSERT, UPDATE, et DELETE pour accéder et modifier des données. L'instruction GRANT sert également à autres autorisations, telles que les autorisations de créer des tables.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Résumé : configuration des autorisations sur des objets de base de données](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
+ [Résumé : Configuration des autorisations sur des objets de base de données](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
- [RÉVOQUER &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
+ [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   
   

@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1dd5cec5623cfca499fcd4d1eb1ce93faec1dd36
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62782142"
 ---
 # <a name="result-set-sample"></a>Exemple de jeu de résultats
   Il est parfois utile d'être en mesure d'exécuter des commandes tout en lisant les résultats d'une requête, sans ouvrir de nouvelle connexion ni charger tous les résultats en mémoire. La fonctionnalité MARS (Multiple Active Result Set) d'ADO.NET 2.0 est une technologie qui vous permet de le faire. À l'heure actuelle, cette technologie n'est pas implémentée pour le fournisseur de processus interne employé dans la programmation côté serveur. Pour contourner cette limitation, il est possible d'utiliser des curseurs côté serveur. Cet exemple montre comment utiliser les curseurs côté serveur afin de pallier l'absence de prise en charge de MARS dans la programmation côté serveur.  

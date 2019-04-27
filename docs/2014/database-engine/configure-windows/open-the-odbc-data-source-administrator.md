@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 47710b89cdad74ac7e17a6091592af0d379ce2e6
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781399"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Ouvrir l'Administrateur de la source de données ODBC
   Cette rubrique indique comment ouvrir l'administrateur de la source de données ODBC. L'Administrateur de la source de données ODBC est un composant Windows. Utilisez l'Administrateur de la source de données ODBC pour créer et gérer des sources de données ODBC.  

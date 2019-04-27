@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f67f8d818b38387aef5723b5c6d15dc1958e145c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748181"
 ---
 # <a name="row-filters-role-designertabular-model"></a>Filtres de lignes (Concepteur de rôle) (Modèle tabulaire)
   Utilisez la page **Filtres de lignes** du Concepteur de rôle pour définir des filtres au niveau des lignes pour le rôle associé. Les filtres de lignes peuvent être définis uniquement pour les rôles avec des autorisations de lecture et de lecture et de traitement.  
@@ -38,6 +38,6 @@ ms.locfileid: "48061219"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rôles de modèles tabulaires &#40;SSAS tabulaire&#41;](tabular-models/roles-ssas-tabular.md)   
- [Gérer les rôles à l’aide de SSMS &#40;tabulaire SSAS&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
+ [Gérer les rôles à l’aide de SSMS &#40;SSAS Tabulaire&#41;](tabular-models/manage-roles-by-using-ssms-ssas-tabular.md)  
   
   

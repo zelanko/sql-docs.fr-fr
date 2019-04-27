@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8136f43214ef966c7beb05501ca0b27d451f0451
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48223881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773657"
 ---
 # <a name="query-options-results-text-page"></a>Options de requête — Résultats de requête (page Texte)
   Utilisez cette page pour définir les options d'affichage d'un jeu de résultats de requête au format texte. Ses paramètres s'appliquent également lorsque **Résultats dans un fichier** est sélectionné.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2cfa28b4fa5575fbdda06ed64f8f52994b596186
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753096"
 ---
 # <a name="lesson-4-create-relationships"></a>Leçon 4 : Créer des relations
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
@@ -24,7 +24,7 @@ Dans cette leçon, vous allez vérifier les relations qui ont été créées aut
 Durée estimée pour effectuer cette leçon : **10 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
-Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 3 : Marquer en tant que Table de dates](../analysis-services/lesson-3-mark-as-date-table.md). 
+Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 3 : Marquer en tant que Table de dates](../analysis-services/lesson-3-mark-as-date-table.md). 
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examiner les relations existantes et ajouter de nouvelles relations  
 Lorsque vous avez importé des données à l’aide de l’Assistant Importation de Table, vous avez obtenu sept tables à partir de la base de données AdventureWorksDW. En règle générale, lorsque vous importez des données à partir d’une source relationnelle, les relations existantes sont importées automatiquement avec les données. Toutefois, avant de poursuivre la création de votre modèle, vous devez vérifier que les relations entre les tables ont été créées correctement. Pour ce didacticiel, vous allez également ajouter trois relations.  
@@ -65,7 +65,7 @@ Dans la vue de diagramme, vous remarquerez une flèche, un astérisque et un nom
 
 La flèche indique la direction du filtrage, que l’astérisque indique que cette table est la cardinalité de la relation côté « plusieurs », et le 1 indique que cette table est le côté « un » de la relation. Si vous avez besoin modifier une relation ; par exemple, modifier la direction du filtrage de la relation ou sa cardinalité, double-cliquez sur la ligne de relation dans la vue de diagramme pour ouvrir la boîte de dialogue Modifier la relation.
 
-![en tant que-tabulaire-lesson4-modifier](../analysis-services/media/as-tabular-lesson4-edit.png)
+![as-tabular-lesson4-edit](../analysis-services/media/as-tabular-lesson4-edit.png)
 
 Très probablement, vous devrez jamais modifier une relation. Ces fonctionnalités sont destinées au modélisation de données avancée et sortent du cadre de ce didacticiel. Pour plus d’informations, consultez [bidirectionnelle entre les filtres pour les modèles tabulaires dans SQL Server 2016 Analysis Services](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md).
 
@@ -77,7 +77,7 @@ Dans certains cas, vous devrez peut-être créer des relations supplémentaires 
 
     Une ligne pleine apparaît et indique que vous avez créé une relation active entre la **OrderDate** colonne dans le **Internet Sales** table et le **Date** colonne dans la **Date** table. 
   
-      ![en tant que-tabulaire-lesson4-nouveau](../analysis-services/media/as-tabular-lesson4-new.png) 
+      ![as-tabular-lesson4-new](../analysis-services/media/as-tabular-lesson4-new.png) 
   
     > [!NOTE]  
     > Lorsque vous créez des relations, la direction de la cardinalité et de filtre entre la table primaire et de la table de recherche associée est automatiquement sélectionnée.  
@@ -88,10 +88,10 @@ Dans certains cas, vous devrez peut-être créer des relations supplémentaires 
   
 3.  Enfin, créez une relation plus ; dans le **FactInternetSales** table, cliquez et maintenez le doigt sur le **ShipDate** colonne, puis faites glisser le curseur vers le **Date** colonne dans la **DimDate**de table et relâchez.  
     
-     ![en tant que-tabulaire-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
+     ![as-tabular-lesson4-newinactive](../analysis-services/media/as-tabular-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
-Accédez à la leçon suivante : [Leçon 5 : Créer des colonnes calculées](../analysis-services/lesson-5-create-calculated-columns.md).
+Accédez à la leçon suivante : [Leçon 5 : Créer des colonnes calculées](../analysis-services/lesson-5-create-calculated-columns.md).
   
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1b59b0e279d016d2fcaee9b0fcae6742c4ff87b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52419850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756899"
 ---
 # <a name="roles-ssas-tabular"></a>Rôles (SSAS Tabulaire)
   Les rôles, dans les modèles tabulaires, définissent des autorisations de membre pour un modèle. Chaque rôle contient des membres, par nom d'utilisateur Windows ou par groupe Windows, ainsi que des autorisations (lecture, traitement, administrateur). Les membres du rôle peuvent effectuer des actions sur le modèle, comme défini par l'autorisation du rôle. Les rôles définis avec des autorisations de lecture peuvent également fournir une sécurité supplémentaire au niveau de la ligne grâce à l'utilisation de filtres au niveau de la ligne.  
@@ -56,7 +56,7 @@ ms.locfileid: "52419850"
 > [!NOTE]  
 >  Les rôles définis pour un modèle configuré pour le mode DirectQuery ne peuvent pas utiliser de filtres de lignes ; toutefois, les autorisations définies pour chaque rôle s'appliqueront.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> Autorisations  
  Chaque rôle a une seule autorisation de base de données définie (sauf l'autorisation combinée de lecture et de traitement). Par défaut, un nouveau rôle aura l'autorisation Aucune. Autrement dit, une fois que les membres sont ajoutés au rôle avec l'autorisation Aucune, ils ne peuvent pas modifier la base de données, exécuter une opération de traitement, interroger des données, ni voir la base de données, sauf si une autre autorisation leur est octroyée.  
   
  Un utilisateur ou un groupe Windows peut être membre de plusieurs rôles, chaque rôle disposant d'une autorisation différente. Lorsqu'un utilisateur est membre de plusieurs rôles, les autorisations définies pour chaque rôle se cumulent. Par exemple, si un utilisateur est membre d'un rôle bénéficiant d'un accès en lecture, et qu'il est également membre d'un rôle avec une autorisation Aucune, cet utilisateur disposera d'autorisations de lecture.  
@@ -82,8 +82,8 @@ ms.locfileid: "52419850"
   
 |Table de charge de travail|Expression DAX|  
 |-----------|--------------------|  
-|Région|= Région [pays] = « USA »|  
-|ProductCategory|= ProductCategory [nom] = « Bicyclettes »|  
+|Région|=Region[Country]="USA"|  
+|ProductCategory|=ProductCategory[Name]="Bicycles"|  
 |Transactions|=Transactions[Year]=2008|  
   
  L'effet net de ces autorisations sur la table de transactions est que les membres sont autorisés à interroger les lignes de données pour lesquelles le client réside aux États-unis, la catégorie de produits correspond à des bicyclettes et l'année est 2008. Les utilisateurs ne peuvent pas interroger de transaction en dehors des États-unis, ni de transactions qui ne correspondent pas à des bicyclettes ou des transactions n'ayant pas lieu en 2008, sauf s'ils sont membres d'un autre rôle qui accorde ces autorisations.  

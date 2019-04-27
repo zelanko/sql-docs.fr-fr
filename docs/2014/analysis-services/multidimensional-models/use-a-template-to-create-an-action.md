@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43be2214ce811b8b0a0855221823fa6f1bdf5984
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740789"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Utiliser un modèle pour créer une action
   La vue **Actions** du Concepteur de cube contient plusieurs modèles que vous pouvez utiliser pour créer des actions courantes. Le Concepteur de cube est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -33,6 +33,6 @@ ms.locfileid: "48154489"
 -   Indiquez les informations nécessaires pour générer l'action selon le modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Actions &#40;Analysis Services - données multidimensionnelles&#41;](actions-analysis-services-multidimensional-data.md)  
+ [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

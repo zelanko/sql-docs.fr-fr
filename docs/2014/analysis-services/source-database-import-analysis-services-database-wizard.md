@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d753fa58ce7b710ae406d4fc23a5745edafcec4f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746573"
 ---
 # <a name="source-database-import-analysis-services-database-wizard"></a>Base de données source (Assistant Importation de base de données Analysis Services)
   Utilisez la page **Base de données source** pour sélectionner l'instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et la base de données à partir desquelles vous voulez créer un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

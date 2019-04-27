@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f505d46526aede97ac01c8f3de1b11450aeed8d
-ms.sourcegitcommit: 032273bfbc240fe22ac6c1f6601a14a6d99573f7
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55513872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774301"
 ---
 # <a name="log-shipping-and-replication-sql-server"></a>Copie des journaux de transaction et réplication (SQL Server)
   La copie des journaux de transaction consiste à avoir deux exemplaires d'une même base de données qui résident généralement sur des ordinateurs différents. À un moment donné précis, les clients ne peuvent accéder qu'à un seul exemplaire de la base de données. Cet exemplaire s'appelle la base de données primaire. Les mises à jour apportées par les clients à la base de données primaire sont répercutées, par copie des journaux de transaction, à l'autre exemplaire de la base de données appelé base de données secondaire. La copie des journaux de transaction consiste à répercuter dans la base de données secondaire chaque insertion, mise à jour ou suppression apportée à la base de données primaire.  
@@ -109,7 +109,7 @@ ms.locfileid: "55513872"
   
     -   Si la publication n'est pas filtrée, vous devriez pouvoir mettre à jour la base de données de publication en la synchronisant avec l'Abonné le plus à jour.  
   
-    -   Si la publication est filtrée, il est possible que vous ne puissiez pas mettre à jour la base de données de publication. Supposons une table qui est partitionnée de façon telle que chaque abonnement reçoit des données client seulement pour une région : Nord, Est, Sud et Ouest. S'il y a au moins un Abonné pour chaque partition de données, la synchronisation avec un Abonné pour chaque partition doit permettre la mise à jour de la base de données de publication. Cependant, si par exemple des données de la partition Ouest n'ont été répliquées vers aucun des Abonnés, ces données ne peuvent pas être mises à jour au niveau du serveur de publication. Dans ce cas, nous vous conseillons de réinitialiser tous les abonnements de façon à ce que les données du serveur de publication et des Abonnés convergent. Pour plus d’informations, consultez [Réinitialiser des abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
+    -   Si la publication est filtrée, il est possible que vous ne puissiez pas mettre à jour la base de données de publication. Considérez une table est partitionnée de telle sorte que chaque abonnement reçoit des données client seulement pour une seule région : Nord, est, Sud et Ouest. S'il y a au moins un Abonné pour chaque partition de données, la synchronisation avec un Abonné pour chaque partition doit permettre la mise à jour de la base de données de publication. Cependant, si par exemple des données de la partition Ouest n'ont été répliquées vers aucun des Abonnés, ces données ne peuvent pas être mises à jour au niveau du serveur de publication. Dans ce cas, nous vous conseillons de réinitialiser tous les abonnements de façon à ce que les données du serveur de publication et des Abonnés convergent. Pour plus d’informations, consultez [Réinitialiser des abonnements](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
      Si la synchronisation se fait avec un Abonné exécutant une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], l'abonnement ne peut pas être anonyme. Il doit s'agir d'un abonnement client ou d'un abonnement serveur (appelées abonnement local et abonnement global dans les versions précédentes). Pour plus d’informations, consultez [Synchroniser les données](../../relational-databases/replication/synchronize-data.md).   
   

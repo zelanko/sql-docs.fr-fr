@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32f384889a8d68bc4683bd8773ea4618329ea44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743640"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire de jeu nommé (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Editeur de formulaire de jeu nommé** sous l'onglet **Calculs** du Concepteur de cube pour créer ou modifier un jeu nommé.  

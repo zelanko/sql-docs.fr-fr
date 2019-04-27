@@ -59,16 +59,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80e7a793973ddbe0e55862d2e68f23e6c7e31dc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746831"
 ---
 # <a name="data-mining-properties"></a>Propriétés de l'exploration de données
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés de serveur d'exploration de données répertoriées dans les tableaux suivants. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **S'applique à :** Mode serveur multidimensionnel uniquement  
+ **S’applique à :** Mode serveur multidimensionnel uniquement  
   
 ## <a name="non-specific-category"></a>Catégorie non spécifique  
  `AllowSessionMiningModels`  
@@ -121,6 +121,6 @@ ms.locfileid: "48224389"
 ## <a name="see-also"></a>Voir aussi  
  [Architecture physique &#40;Analysis Services - Exploration de données&#41;](../data-mining/physical-architecture-analysis-services-data-mining.md)   
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

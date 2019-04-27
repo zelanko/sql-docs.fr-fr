@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6aa18a6b40f073dbccd28d82477d0b1c5e2b69fb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753631"
 ---
 # <a name="installing-smo"></a>Installation de SMO
   Si vous souhaitez développer une application qui utilise SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects), vous devez sélectionner le Kit de développement logiciel (SDK) des outils clients lors de l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour installer le Kit de développement logiciel (SDK) des outils clients sans installer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], installez Shared Management Objects à partir du Feature Pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Afin d'être certain que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects est installé sur un ordinateur qui exécutera votre application, vous pouvez utiliser le fichier .msi des objets de gestion partagée dans le Feature Pack [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

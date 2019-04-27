@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743490"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Créer des serveurs liés (moteur de base de données SQL Server)
   Cette rubrique indique comment créer un serveur lié et accéder aux données provenant d'un autre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. En créant un serveur lié, vous pouvez utiliser des données provenant de plusieurs sources. Il n'est pas nécessaire que le serveur lié soit une autre instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], mais il s'agit d'un scénario courant.  
@@ -220,7 +220,7 @@ ms.locfileid: "58527843"
   
     ```  
   
-##  <a name="FollowUp"></a> Suivi : mesures à prendre après avoir créé un serveur lié  
+##  <a name="FollowUp"></a> Suivi : Étapes à suivre après avoir créé un serveur lié  
   
 #### <a name="to-test-the-linked-server"></a>Pour tester le serveur lié  
   

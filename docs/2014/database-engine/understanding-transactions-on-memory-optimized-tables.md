@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4ceedcedae64bf2ec8f8ede0ccbb99350b979fd7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773376"
 ---
 # <a name="understanding-transactions-on-memory-optimized-tables"></a>Comprendre les transactions sur les tables mémoire optimisées
   Les transactions accèdent aux tables mémoire optimisées à l'aide d'un type de contrôle d'accès concurrentiel optimiste et multiversion. Cela signifie qu'il existe différentes versions de données. Chaque transaction opère sur sa propre version de base de données cohérente d'un point de vue transactionnel, indépendamment des autres transactions exécutées simultanément. De plus, les transactions opèrent dans l'hypothèse optimiste qu'il n'y a aucun conflit avec d'autres transactions simultanées. Cela évite d'utiliser des verrous, mais nécessite que le système détecte les conflits et mette fin à l'une des transactions impliquées. Des conflits peuvent se produire uniquement pour les transactions d'écriture-écriture et les transactions de lecture-écriture. S'il existe un conflit d'écriture-écriture, une transaction d'écriture est terminée.  

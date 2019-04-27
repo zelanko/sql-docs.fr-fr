@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5f0eb497499eafe16756becfb9607b925add08e9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773811"
 ---
 # <a name="utility-dashboard-sql-server-utility"></a>Tableau de bord de l'utilitaire (utilitaire SQL Server)
   Pour consulter des données dans le tableau de bord de l’utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sélectionnez le nœud supérieur dans l’arborescence de l’Explorateur de l’utilitaire - étiqueté « Utility<nom_UCP\\\(NomOrdinateur\UCP) ». Le tableau de bord inclut les données de synthèse et les données détaillées de toutes les instances managées de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et de toutes les applications de couche Données dans l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour actualiser les données du tableau de bord, cliquez avec le bouton droit sur le nœud supérieur de l’arborescence de l’Explorateur de l’utilitaire et sélectionnez **Actualiser**.  

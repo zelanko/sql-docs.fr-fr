@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e99a6db1198422f137e281ea52da6b135172fcd7
-ms.sourcegitcommit: 7419a8c957c212e60422a5d87a253683031dc467
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2018
-ms.locfileid: "52951581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752766"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Leçon 4 : Définition des attributs avancés et des propriétés de dimension
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Leçon 4 : Définition des propriétés d’attribut et de dimension avancées
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Au cours de cette leçon, vous allez apprendre à utiliser certaines propriétés avancées des attributs, hiérarchies d'attributs et propriétés de dimensions.  
@@ -48,7 +48,7 @@ Au cours de cette tâche, vous allez apprendre à définir les propriétés des 
 Au cours de cette tâche, vous allez configurer les propriétés UnknownMember et UnknownMemberName pour gérer les conditions d’erreur causées par des membres de la dimension NULL.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 5 : Définition des relations entre des Dimensions et des groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Leçon 5 : Définition des relations entre des Dimensions et des groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Scénario du tutoriel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  

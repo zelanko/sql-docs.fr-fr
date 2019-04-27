@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 800326d3255180087cb7603435e2d0e1a8c8e029
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755733"
 ---
 # <a name="create-a-linked-domain"></a>Créer un domaine lié
   Cette rubrique explique comment créer un domaine lié dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine lié est créé à partir d'un autre domaine existant, et hérite de toutes les valeurs, règles et propriétés du domaine auquel il est lié, à l'exception du nom et de la description. Vous pouvez gérer un ensemble de domaines liés comme un seul domaine. En liant un domaine à l'autre, vous créez un domaine qui hérite son contenu de l'autre domaine.  
@@ -31,7 +31,7 @@ ms.locfileid: "56033650"
 ### <a name="controlling-data-flow-to-composite-domains"></a>Contrôle du flux de données dans des domaines composites  
  Les domaines liés vous permettent de contrôler le flux de données entre les champs et les domaines composites. Vous pouvez distinguer le moment où des données d'un champ passent dans un domaine composite du moment où les données d'un autre champ très similaire ne passent pas dans un domaine composite. Pour ce faire, spécifiez qu'entre deux domaines liés, l'un fait partie d'un domaine composite, et l'autre non. Du point de vue des domaines, les domaines liés sont identiques. Ils contiennent les mêmes connaissances. Toutefois, du point de vue des domaines composites, les domaines liés sont différents. L'un participe au domaine composite, et l'autre non.  
   
- Un exemple est un enregistrement qui contient les champs suivants : Prénom du client, nom de client et de père prénom. Supposons que vous mappiez le prénom du client et le prénom du parent à un domaine Prénom, puis que vous définissiez le domaine Prénom et le domaine Nom de famille en tant que partie d’un domaine composite Nom complet. Le problème est que le prénom du parent sera ajouté au domaine composite sans nom de famille. Si, en revanche, vous liez chacun des deux champs de prénom à un domaine, puis que vous liez les deux domaines, vous pouvez alors ajouter le domaine Prénom du client au domaine composite Nom complet, et ne pas ajouter le champ Prénom du parent au domaine composite, ce qui évite que le Prénom du parent soit ajouté au domaine composite.  
+ Un enregistrement qui contient les champs suivants en est un exemple : Prénom du client, Nom du client et Prénom du père. Supposons que vous mappiez le prénom du client et le prénom du parent à un domaine Prénom, puis que vous définissiez le domaine Prénom et le domaine Nom de famille en tant que partie d’un domaine composite Nom complet. Le problème est que le prénom du parent sera ajouté au domaine composite sans nom de famille. Si, en revanche, vous liez chacun des deux champs de prénom à un domaine, puis que vous liez les deux domaines, vous pouvez alors ajouter le domaine Prénom du client au domaine composite Nom complet, et ne pas ajouter le champ Prénom du parent au domaine composite, ce qui évite que le Prénom du parent soit ajouté au domaine composite.  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -40,7 +40,7 @@ ms.locfileid: "56033650"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine lié.  
   
 ##  <a name="Create"></a> Créer un domaine lié  
@@ -72,7 +72,7 @@ ms.locfileid: "56033650"
   
 4.  Dans la boîte de dialogue Créer un domaine, entrez un nom de domaine et une description, puis cliquez sur OK.  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir créé un domaine lié  
+##  <a name="FollowUp"></a> Suivi : après la création d’un domaine lié  
  Après avoir créé un domaine lié, vous pouvez effectuer d'autres tâches de gestion de l'arborescence du domaine sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Behavior"></a> Comportement d'un domaine lié  

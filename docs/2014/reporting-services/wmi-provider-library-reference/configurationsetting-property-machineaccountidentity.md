@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 340b1b54054ff8687fc08a92ebc91e1380f2ae7a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62646157"
 ---
 # <a name="machineaccountidentity-property-wmi"></a>Propriété MachineAccountIdentity (WMI)
   Obtient l'identité du compte d'ordinateur de l'ordinateur sur lequel le serveur de rapports est installé.  

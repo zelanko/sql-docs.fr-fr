@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36e74f875b8306a8678e0197d95f1fe18c5ea7f6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746731"
 ---
 # <a name="specify-dimension-type-dimension-wizard"></a>Spécifier le type de la dimension (Assistant Dimension)
   La page **Spécifier le type de la dimension** permet de définir le type de dimension et d'ajouter à la dimension des types d'attributs spéciaux associés au type de dimension sélectionné.  
@@ -30,7 +30,7 @@ ms.locfileid: "50145584"
  **Type de dimension**  
  Sélectionnez le type de la dimension. Le tableau suivant répertorie les types de dimensions disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Comptes (Accounts)**|Les dimensions de compte contiennent des données et métadonnées qui représentent une liste de comptes.<br /><br /> Pour plus d’informations sur les dimensions de compte, consultez [Créer un compte Finance de la dimension de type parent-enfant](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).|  
 |**BillOfMaterials**|Les dimensions de nomenclature sont des dimensions régulières dans lesquelles les données et métadonnées représentent des informations sur le stock ou la fabrication (par ex., listes de pièces pour des produits).<br /><br /> Pour plus d’informations sur les dimensions régulières, consultez [Types de dimensions](multidimensional-models-olap-logical-dimension-objects/database-dimension-properties-types.md).|  
@@ -53,7 +53,7 @@ ms.locfileid: "50145584"
 > [!NOTE]  
 >  Les options de cette section sont uniquement disponibles si le **type de dimension** sélectionné est associé à des types d'attributs spéciaux. Tous les types de dimensions ne sont pas associés à des types d'attributs spéciaux.  
   
- **inclure**  
+ **Include**  
  Permet d'inclure le type d'attribut dans la dimension.  
   
  **Type d’attribut**  

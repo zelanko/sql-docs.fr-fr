@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779223"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Instructions pour utiliser les index sur les tables optimisées en mémoire
   Les index sont utilisés pour accéder efficacement aux données dans les tables [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Spécifier les index appropriés peut améliorer considérablement les performances des requêtes. Par exemple, considérez la requête :  
@@ -28,7 +28,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
  S'il n'y a pas d'index sur la colonne c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] doit analyser la totalité de la table t, puis filtrer sur les lignes qui répondent à la condition c1=1. Toutefois, si t a un index sur la colonne c1, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut rechercher directement la valeur 1 et récupérer les lignes.  
   
- Lorsque vous recherchez des enregistrements ayant une valeur spécifique, ou une plage de valeurs, dans une ou plusieurs colonnes de la table, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut utiliser un index sur ces colonnes pour localiser rapidement les enregistrements correspondants. Les tables sur disque et optimisées en mémoire tirent parti des index. Il existe, toutefois, certaines différences entre les structures d'index, dont il faut tenir compte lorsqu'on utilise des tables optimisées en mémoire. (Les index des tables optimisées en mémoire sont appelés des index optimisés en mémoire.) Parmi les principales différences, citons :  
+ Lorsque vous recherchez des enregistrements ayant une valeur spécifique, ou une plage de valeurs, dans une ou plusieurs colonnes de la table, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peut utiliser un index sur ces colonnes pour localiser rapidement les enregistrements correspondants. Les tables sur disque et optimisées en mémoire tirent parti des index. Il existe, toutefois, certaines différences entre les structures d'index, dont il faut tenir compte lorsqu'on utilise des tables optimisées en mémoire. (Les index sur les tables mémoire optimisées sont appelés index optimisés en mémoire.) Certaines des principales différences sont :  
   
 -   Index optimisés en mémoire doivent être créés avec [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql). Les index sur disque peuvent être créés avec `CREATE TABLE` et `CREATE INDEX`.  
   
@@ -90,7 +90,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
   
      Le nettoyage de la mémoire fonctionne mieux si tous les index de la table sont utilisés fréquemment. Les index rarement utilisés peuvent entraîner un fonctionnement non optimal du système de nettoyage de la mémoire pour les anciennes versions de ligne.  
   
-## <a name="creating-a-memory-optimized-index-code-samples"></a>Création d'une table optimisée en mémoire : Exemples de code  
+## <a name="creating-a-memory-optimized-index-code-samples"></a>Création d’un Index optimisé en mémoire : Exemples de code  
  Index de hachage au niveau des colonnes :  
   
 ```sql  

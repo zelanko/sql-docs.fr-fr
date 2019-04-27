@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_column_store_row_group_physical_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/04/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f725ca776fcc65828c7f72b4e3c2b042d0203b71
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62742045"
 ---
-# <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>Sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
+# <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Fournit des informations au niveau du groupe de lignes actuelles sur tous les index columnstore dans la base de données actuelle.  
@@ -47,12 +47,12 @@ ms.locfileid: "52510852"
 |**total_rows**|**bigint**|Nombre de lignes physiques stocké dans le groupe de lignes. Pour les groupes de lignes compressé, cela inclut les lignes qui sont marquées à supprimer.|  
 |**deleted_rows**|**bigint**|Nombre de lignes stockées physiquement dans un groupe de lignes compressés qui sont marqués pour suppression.<br /><br /> 0 pour les groupes de lignes qui se trouvent dans le magasin delta.|  
 |**size_in_bytes**|**bigint**|Taille combinée, en octets, de toutes les pages dans ce groupe de lignes. Cette taille n’inclut pas la taille requise pour stocker les métadonnées ou les dictionnaires partagés.|  
-|**trim_reason**|**tinyint**|Raison qui a déclenché le groupe de lignes compressés d’avoir inférieur le nombre maximal de lignes.<br /><br /> 0 - UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1 - NO_TRIM<br /><br /> 2 - CHARGEMENT EN MASSE<br /><br /> 3 - REORG<br /><br /> 4 - DICTIONARY_SIZE<br /><br /> 5 - MEMORY_LIMITATION<br /><br /> 6 - RESIDUAL_ROW_GROUP<br /><br /> 7 - STATS_MISMATCH<br /><br /> 8 - DÉBORDEMENT|  
+|**trim_reason**|**tinyint**|Raison qui a déclenché le groupe de lignes compressés d’avoir inférieur le nombre maximal de lignes.<br /><br /> 0 - UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1 - NO_TRIM<br /><br /> 2 - CHARGEMENT EN MASSE<br /><br /> 3 - REORG<br /><br /> 4 - DICTIONARY_SIZE<br /><br /> 5 - MEMORY_LIMITATION<br /><br /> 6 - RESIDUAL_ROW_GROUP<br /><br /> 7  -  STATS_MISMATCH<br /><br /> 8 - DÉBORDEMENT|  
 |**trim_reason_desc**|**nvarchar(60)**|Description de *trim_reason*.<br /><br /> 0 - UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION : S’est produite lors de la mise à niveau à partir de la version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 - NO_TRIM : Le groupe de lignes n’était pas tronqué. Le groupe de lignes a été compressé avec un maximum de 1,048,476 lignes.  Le nombre de lignes peut être inférieure si un subsset de lignes a été supprimé après la fermeture de rowgroup delta<br /><br /> 2 - LE CHARGEMENT EN BLOC : La taille de lot de chargement en masse limité le nombre de lignes.<br /><br /> 3 - REORG :  Forcé de la compression dans le cadre de la commande REORG.<br /><br /> 4 - DICTIONARY_SIZE : Taille du dictionnaire a augmenté de trop grande pour compresser toutes les lignes ensemble.<br /><br /> 5 - MEMORY_LIMITATION : Mémoire insuffisante pour compresser toutes les lignes ensemble.<br /><br /> 6 - RESIDUAL_ROW_GROUP :  Fermé dans le cadre du dernier groupe de lignes avec des millions de lignes < 1 pendant l’opération de génération d’index<br /><br /> STATS_MISMATCH : Uniquement pour columnstore sur la table en mémoire. Si les statistiques incorrectement indiqué > = 1 million de lignes complet dans la fin, mais nous avons trouvé moins, le rowgroup compressé a < 1 millions de lignes<br /><br /> DÉBORDEMENT : Uniquement pour columnstore sur la table en mémoire. Si la fin du a > 1 millions de lignes complet, les dernières lignes restantes de lot sont compressés si le nombre est compris entre 100k et 1 million|  
 |**transition_to_compressed_state**|TINYINT|Montre comment ce groupe de lignes a été déplacé du deltastore à un état compressé dans le columnstore.<br /><br /> 1 - NOT_APPLICABLE<br /><br /> 2 - INDEX_BUILD<br /><br /> 3 - TUPLE_MOVER<br /><br /> 4 - REORG_NORMAL<br /><br /> 5 - REORG_FORCED<br /><br /> 6 - CHARGEMENT EN MASSE<br /><br /> 7 - FUSION|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE - l’opération ne s’applique pas dans le deltastore. Ou, le rowgroup a été compressé avant la mise à niveau vers [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] auquel cas l’historique n’est pas conservé.<br /><br /> INDEX_BUILD - création d’un index ou la reconstruction d’index compressés le groupe de lignes.<br /><br /> TUPLE_MOVER - le moteur de tuple en cours d’exécution en arrière-plan compressé le groupe de lignes. Cela se produit une fois que le groupe de lignes change d’état d’ouvert fermé.<br /><br /> REORG_NORMAL - l’opération de réorganisation, ALTER INDEX... RÉORGANISATION, déplacé le rowgroup fermé du deltastore dans le columnstore. Cela s’est produite avant que le moteur de tuple eu le temps de déplacer le groupe de lignes.<br /><br /> REORG_FORCED - ce groupe de lignes a été ouvert dans le deltastore et a été forcé dans le columnstore avant qu’elle avait un nombre total de lignes.<br /><br /> Chargement en bloc - une opération de chargement en bloc compressé le groupe de lignes directement sans utiliser le deltastore.<br /><br /> FUSION - une opération de fusion consolidées un ou plusieurs rowgroups dans ce groupe de lignes, puis effectué la compression columnstore.|  
 |**has_vertipaq_optimization**|bit|L’optimisation Vertipaq améliore la compression columnstore en réorganisant l’ordre des lignes dans le groupe de lignes pour obtenir une compression plus élevée. Cette optimisation s’effectue automatiquement dans la plupart des cas. Il existe deux cas Vertipaq optimisation n’est pas utilisée :<br/>  A. Dans ce cas quand un rowgroup delta se déplace dans le columnstore et il existe un ou plusieurs index non cluster sur l’index columnstore - optimisation de Vertipaq est ignorée pour réduit les modifications apportées à l’index de mappage ;<br/> B. pour les index columnstore sur les tables optimisées en mémoire. <br /><br /> 0 = Non<br /><br /> 1 = Oui|  
-|**génération**|BIGINT|Génération du groupe de lignes associée à ce groupe de lignes.|  
+|**generation**|BIGINT|Génération du groupe de lignes associée à ce groupe de lignes.|  
 |**created_time**|datetime2|Heure de création de ce groupe de lignes.<br /><br /> NULL - pour un index columnstore sur une table en mémoire.|  
 |**closed_time**|datetime2|Heure pour la fermeture de ce groupe de lignes.<br /><br /> NULL - pour un index columnstore sur une table en mémoire.|  
   

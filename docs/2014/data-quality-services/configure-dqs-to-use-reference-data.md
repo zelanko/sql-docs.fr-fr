@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c89d09d077a5b416d4afb46b195a03c5144c4108
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755770"
 ---
 # <a name="configure-dqs-to-use-reference-data"></a>Configurer DQS pour utiliser des données de référence
   Cette rubrique explique comment configurer [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) afin d'utiliser des données de référence pour le nettoyage de vos données. Vous pouvez utiliser des données de référence provenant de Windows Azure Marketplace ou de fournisseurs de données de référence tiers en ligne directs.  
@@ -31,7 +31,7 @@ ms.locfileid: "56037240"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_administrator sur la base de données DQS_MAIN pour configurer les paramètres du service de données de référence dans DQS.  
   
 ##  <a name="Marketplace"></a> Configurer DQS pour utiliser des données de référence de Marketplace  
@@ -76,7 +76,7 @@ ms.locfileid: "56037240"
   
  Vous êtes maintenant prêt à utiliser, dans DQS, les services de données de référence à partir du fournisseur de données de référence tiers en ligne direct que vous venez de configurer.  
   
-##  <a name="FollowUp"></a> Suivi : Après la configuration de DQS pour utiliser les données de référence  
+##  <a name="FollowUp"></a> Suivi : Après la configuration de DQS pour utiliser des données de référence  
  Vous devez maintenant mapper les domaines de base de connaissances requis aux données de référence disponibles auprès des fournisseurs de données que vous venez de configurer. Pour ce faire, consultez [joindre un domaine ou un domaine Composite aux données de référence](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
   

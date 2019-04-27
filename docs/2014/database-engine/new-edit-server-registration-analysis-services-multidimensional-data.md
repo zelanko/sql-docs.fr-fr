@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9d3d13ac64edbdbec4f131a09949e5724ab2932b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774913"
 ---
 # <a name="new-or-edit-server-registration-general-tab-analysis-services---multidimensional-data"></a>Nouvelle inscription de serveur ou Modifier les propriétés d’inscription du serveur (onglet Général) (Analysis Services - Données multidimensionnelles)
   Cet onglet vous permet de spécifier des options lors de l'inscription d'une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

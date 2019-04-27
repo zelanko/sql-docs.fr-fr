@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 90339f33d8bfa7f40db7eaf57ac49b85fde130cd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755487"
 ---
 # <a name="data-quality-services-features-and-tasks"></a>Fonctionnalités et tâches Data Quality Services
   Recherchez les informations nécessaires à toute personne (gestionnaire de données, administrateur de Data Quality Services ou administrateur SQL Server) pour préparer et exécuter un projet de qualité des données.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f18e9c5817de5e98ae21726b235d60d8d31e7d66
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747122"
 ---
 # <a name="select-tables-and-views-data-source-view-wizard-analysis-services"></a>Sélectionner des tables et des vues (Assistant Vue de source de données) (Analysis Services)
   Utilisez la page **Sélectionner des tables et des vues** pour sélectionner des tables ou des vues dans la source de données que vous voulez inclure dans la vue de la source des données.  
@@ -39,7 +39,7 @@ ms.locfileid: "48104009"
   
  Vous pouvez inclure n'importe où dans la chaîne de caractères les caractères génériques indiqués dans la liste ci-dessous.  
   
-|Caractère générique|Valeur|  
+|Caractère générique|Value|  
 |------------------------|-----------|  
 |**\***|N'importe quelle chaîne de caractères|  
 |**%**|N'importe quelle chaîne de caractères|  

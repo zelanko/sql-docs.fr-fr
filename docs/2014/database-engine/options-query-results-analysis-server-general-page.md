@@ -14,11 +14,11 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 80291e4dc4f53fd4818801f05d99ba655a1ff73c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48199199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774776"
 ---
 # <a name="options-query-results-analysis-server-general-page"></a>Options (la requête analyse des résultats Server Page Général)
   Cette page permet de déterminer le comportement par défaut de la fenêtre des résultats des requêtes [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour afficher ces paramètres, sélectionnez **Options** dans le menu **Outils** . Dans le dossier **Résultats de la requête** , développez le sous-dossier **Serveur d'analyse** , puis cliquez sur **Général**.  

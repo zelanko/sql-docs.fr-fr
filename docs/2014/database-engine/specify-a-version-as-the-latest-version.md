@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f34631e979ded7a329939c23a758ccc0c9aea959
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773475"
 ---
 # <a name="specify-a-version-as-the-latest-version"></a>Désigner une version comme étant la dernière version
   Lorsque vous archivez un fichier dans le contrôle de code source, la version que vous archivez devient la dernière version. Les utilisateurs qui extraient ou récupèrent la dernière version reçoivent des copies locales du tout dernier élément archivé.  

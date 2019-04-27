@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748361"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Objets relationnels (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Objets relationnels** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour sélectionner des tables, des vues ou d'autres objets dans une source de données à laquelle vous voulez appliquer la mise en cache proactive. Vous pouvez afficher cette boîte de dialogue dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] en cliquant sur le bouton avec des points de suspension (**...**) des options **Spécifier les tables de suivi** de l’onglet **Notifications** de la boîte de dialogue **Options de stockage** .  

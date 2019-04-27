@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f3544ce4297117be11b3ba68821e3b621fbc400
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749471"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>Configurer la collecte des données d'utilisation (PowerPivot pour SharePoint)
   La collecte des données d'utilisation est une fonctionnalité SharePoint au niveau de la batterie de serveurs. Le service PowerPivot pour SharePoint utilise et étend ce système pour fournir des rapports intégrés dans le tableau de bord de gestion PowerPivot qui indiquent la manière dont les données et services PowerPivot sont utilisés. Selon la façon dont vous avez installé votre serveur SharePoint, la collecte des données d'utilisation peut être désactivée pour la batterie de serveurs. Un administrateur de batterie doit activer la journalisation de l'utilisation pour créer les données d'utilisation qui s'affichent dans le tableau de bord de gestion PowerPivot.  
@@ -129,7 +129,7 @@ ms.locfileid: "52411276"
  Pour plus d’informations sur comment les données d’utilisation sont collectées et stockées, consultez [PowerPivot Usage Data Collection](power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Définir des catégories de temps de réponse aux requêtes lents, moyens et rapides à des fins de création de rapports  
- Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Les catégories prédéfinies sont notamment les suivantes : Triviale, Rapide, Attendue, Longue et Hors limite. Chaque demande auprès d'un serveur PowerPivot appartient à l'une des catégories en fonction de sa durée d'exécution.  
+ Les performances de traitement des requêtes sont mesurées par rapport à des catégories prédéfinies qui définissent un cycle de requête-réponse en fonction de sa durée d'exécution. Catégories prédéfinies sont les suivantes : Triviale, rapide, attendue, longue et hors limite. Chaque demande auprès d'un serveur PowerPivot appartient à l'une des catégories en fonction de sa durée d'exécution.  
   
  Les informations de réponse à une requête sont utilisées dans les rapports d'activité. Dans les rapports, chaque catégorie est utilisée différemment pour révéler de manière plus efficace les tendances des performances du système PowerPivot. Par exemple, les demandes triviales sont totalement exclues, car leur exclusion supprime le bruit dans les données et affiche des tendances plus significatives avec les catégories restantes. Par opposition, les statistiques sur les demandes longues ou hors limite sont les plus importantes dans le rapport afin que les administrateurs ou les propriétaires de classeurs puissent entreprendre l'action corrective sur le champ.  
   
@@ -182,7 +182,7 @@ ms.locfileid: "52411276"
   
 |Paramètre|Valeur par défaut|Type|Plage valide|  
 |-------------|-------------------|----------|-----------------|  
-|**Événements d’utilisation Analysis Services** (connexion, chargement, déchargement, requêtes)|\<activé >|Booléen|Ces valeurs sont activées ou désactivées.|  
+|**Événements d’utilisation Analysis Services** (connexion, chargement, déchargement, requêtes)|\<enabled>|Booléen|Ces valeurs sont activées ou désactivées.|  
 |**Query Reporting interval**|300 (en secondes)|Entier|Comprise entre 1 et n'importe quel entier positif. La valeur par défaut est 5 minutes.|  
 |**Usage data history**|365 (en jours)|Entier|La valeur 0 spécifie une durée illimitée, mais vous pouvez également définir une limite supérieure pour l'expiration des données d'historique qui sont alors automatiquement supprimées. Les valeurs valides pour une période de rétention limitée sont comprises entre 1 et 5 000 (en jours).|  
 |Limite supérieure de réponse triviale|500 (en millisecondes)|Entier|Définit une limite maximale qui définit un échange requête-réponse triviale. Toute demande dont la durée d'exécution est comprise entre 0 et 500 millisecondes est une demande triviale ; elle est ignorée à des fins de création de rapports.|  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a66e94a9cdafc327737c71cd710847033011dcfa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48156519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746542"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Spécifier les devises pour les rapports (Assistant Business Intelligence)
   Utilisez la page **Spécifier les devises pour les rapports** pour définir les devises des rapports de la fonctionnalité de conversion de devise qui couvre les types de conversion plusieurs-à-plusieurs ou un-à-plusieurs définis dans la page **Sélectionner le type de conversion**. (Une devise de rapport est une devise dans laquelle les valeurs des mesures sélectionnées dans **Sélectionnez les mesures** sont converties.) Les membres sélectionnés dans la dimension de devise définissent une dimension de devise de rapport pour la conversion de devise générée par l'Assistant Business Intelligence.  
@@ -33,7 +33,7 @@ ms.locfileid: "48156519"
  Sélectionnez un membre spécifique pour l'inclure dans la dimension de devise pour les rapports. Désactivez l'option pour exclure le membre.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
+ [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

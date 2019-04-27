@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a3d8f15f159ea41590c67677c2d020f0a5dbc79a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774963"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Options (Page de serveur-ANSI SQL de l’exécution de requête)
   Ensemble, ces options SET ANSI (ISO) définissent l'environnement de traitement des requêtes pour la durée de la requête de l'utilisateur, de l'exécution d'un déclencheur ou d'une procédure stockée. Toutefois, ces options SET ne contiennent pas toutes les options requises pour assurer la conformité à la norme ISO. Utilisez cette page pour spécifier si [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] exécute les requêtes avec l'ensemble ou une partie des paramètres spécifiés dans la norme ISO. Les modifications apportées à ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options des requêtes actuelles, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit dans la fenêtre Requête [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**. Dans la boîte de dialogue **Options de requête** , sous **Exécution**, cliquez sur **ANSI**.  

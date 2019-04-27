@@ -16,14 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a3d1c457d44edac0fbc4c09060eb6c33a0353f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749238"
 ---
 # <a name="powerpivot-data-feeds"></a>Flux de données PowerPivot
-  Un flux de données fournit un flux de données à la demande à partir d'une source de données en ligne à une application cliente. Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser des flux de données pour ajouter des données à partir d’une application à une source de données PowerPivot dans un classeur Excel ou un service Web compatible Atom.  
+  Un flux de données fournit un flux de données à la demande à partir d'une source de données en ligne à une application cliente. Dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser des flux de données pour ajouter des données provenant d'un service ou d'une application Web compatible Atom à une source de données PowerPivot dans un classeur Excel.  
   
  Cette section fournit des informations qui vous aideront à utiliser au mieux les flux de données pour obtenir dans des classeurs PowerPivot des données existantes d'entreprise ou de groupe de travail. Elle fournit également des informations sur le partage de flux de données avec d'autres personnes de votre organisation et explique comment sont créés et utilisés les flux de données pour vous permettre de résoudre les problèmes susceptibles de se présenter.  
   

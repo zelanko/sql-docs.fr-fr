@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 23c8c3c76b881f342f56490e5722a0ae641464ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755363"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Surveillance de la mise en miroir de bases de données (SQL Server)
   Cette section présente le moniteur de mise en miroir de bases de données et les procédures stockées système **sp_dbmmonitor** ; par ailleurs, elle décrit le fonctionnement de la surveillance de la mise en miroir de bases de données (ainsi que du **travail du moniteur de mise en miroir de bases de données)** et récapitule les informations que vous pouvez surveiller en matière de sessions de mise en miroir de bases de données. De plus, cette section explique comment définir des seuils d'avertissement pour un jeu d'événements de mise en miroir de bases de données prédéfinis et comment configurer des alertes pour des événements de mise en miroir de bases de données.  

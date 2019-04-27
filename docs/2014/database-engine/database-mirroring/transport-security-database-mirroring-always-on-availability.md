@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754298"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Sécurité du transport de la mise en miroir de bases de données et des groupes de disponibilité AlwaysOn (SQL Server)
   La sécurité du transport implique l'authentification et, éventuellement, le chiffrement des messages échangés entre les bases de données. Pour la mise en miroir de bases de données et [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], l'authentification et le chiffrement sont configurés sur le point de terminaison de la mise en miroir. Pour une présentation des points de terminaison de mise en miroir de bases de données, consultez [Point de terminaison de mise en miroir de bases de données &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48075859"
 ##  <a name="Authentication"></a> Authentification  
  L'authentification est le processus qui permet de vérifier qu'un utilisateur est la personne qu'il prétend être. Les connexions entre les points de terminaison de mise en miroir de bases de données requièrent une authentification. Les demandes de connexion éventuellement formulées par un partenaire ou un témoin doivent être authentifiées.  
   
- Le type d'authentification utilisé pour la mise en miroir de bases de données ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] par une instance de serveur est une propriété du point de terminaison de la mise en miroir. Deux types de sécurité de transport sont disponibles pour les points de terminaison de mise en miroir de bases de données : l'Authentification Windows (SSPI, Security Support Provider Interface) et l'authentification basée sur les certificats.  
+ Le type d'authentification utilisé pour la mise en miroir de bases de données ou [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] par une instance de serveur est une propriété du point de terminaison de la mise en miroir. Deux types de sécurité de transport sont disponibles pour les points de terminaison de mise en miroir de bases de données : l’authentification Windows (SSPI, Security Support Provider Interface) et l’authentification basée sur les certificats.  
   
 ### <a name="windows-authentication"></a>Authentification Windows  
  Avec l'authentification Windows, chaque instance de serveur se connecte à l'autre partie à l'aide des informations d'identification Windows du compte d'utilisateur Windows sous lequel le processus est en cours d'exécution. L'authentification Windows peut nécessiter une configuration manuelle des comptes de connexion, comme suit :  
@@ -46,12 +46,12 @@ ms.locfileid: "48075859"
 -   Si les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fonctionnent comme le compte de service réseau, la connexion de chaque compte d’ordinateur hôte (*nom_domaine***\\***nom_ordinateur$*) doit être créée en **maître** sur chacun des autres serveurs, et cette connexion doit disposer d’autorisations CONNECT sur le point de terminaison. En effet, une instance de serveur s'exécutant sous le compte de service réseau s'authentifie à l'aide du compte de domaine de l'ordinateur hôte.  
   
 > [!NOTE]  
->  Pour obtenir un exemple de configuration d’une session de mise en miroir de bases de données utilisant l’authentification Windows, consultez [Exemple : configurer la mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Pour obtenir un exemple de configuration d’une session de mise en miroir de bases de données utilisant l’authentification Windows, consultez [Exemple : Configuration de la mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
   
 ### <a name="certificates"></a>Certificats  
  Dans certaines situations, par exemple lorsque les instances de serveur ne se trouvent pas dans des domaines approuvés ou que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d'exécution en tant que service local, l'authentification Windows n'est pas disponible. Dans ces cas, ce ne sont pas des informations d'identification utilisateur, mais des certificats, qui sont nécessaires pour authentifier les demandes de connexion. Le point de terminaison de mise en miroir de chaque instance de serveur doit être configuré avec son propre certificat créé localement.  
   
- La méthode de chiffrement est établie lorsque le certificat est créé. Pour plus d’informations, consultez [Autoriser un point de terminaison de mise en miroir de bases de données à utiliser des certificats pour les connexions sortantes &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md). Gérez avec précaution les certificats que vous utilisez.  
+ La méthode de chiffrement est établie lorsque le certificat est créé. Pour plus d’informations, consultez [Allow a Database Mirroring Endpoint to Use Certificates for Outbound Connections &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md). Gérez avec précaution les certificats que vous utilisez.  
   
  Une instance de serveur utilise la clé privée de son propre certificat pour établir son identité lors de la configuration d'une connexion. L'instance de serveur qui reçoit la demande de connexion utilise la clé publique du certificat de l'émetteur pour authentifier l'identité de celui-ci. Par exemple, considérons deux instances de serveur, en l'occurrence Serveur_A et Serveur_B. Serveur_A utilise sa clé privée pour chiffrer l'en-tête de connexion avant d'envoyer une demande de connexion à Serveur_B. Serveur_B utilise la clé publique du certificat de Serveur_A pour déchiffrer l'en-tête de connexion. Si l'en-tête déchiffré est correct, Serveur_B sait que l'en-tête a été chiffré par Serveur_A et la connexion est authentifiée. Si l'en-tête déchiffré est incorrect, Serveur_B sait que la demande de connexion n'est pas authentique et refuse la connexion.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "48075859"
   
 |valeur ALGORITHM|Description|  
 |---------------------|-----------------|  
-|RC4|Indique que le point de terminaison doit utiliser l'algorithme RC4. Il s'agit du paramètre par défaut.<br /><br /> Remarque : L’algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.|  
+|RC4|Indique que le point de terminaison doit utiliser l'algorithme RC4. Il s'agit du paramètre par défaut.<br /><br /> Remarque : L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.|  
 |AES|Indique que le point de terminaison doit utiliser l'algorithme AES.|  
 |AES RC4|Indique que les deux points de terminaison négocieront un algorithme de chiffrement avec ce point de terminaison, en donnant la préférence à l'algorithme AES.|  
 |RC4 AES|Indique que les deux points de terminaison négocieront un algorithme de chiffrement avec ce point de terminaison, en donnant la préférence à l'algorithme RC4.|  

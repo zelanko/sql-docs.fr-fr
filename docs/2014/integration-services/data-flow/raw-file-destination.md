@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b7996ed3cc3ea209361790f23f6955f09be035e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770854"
 ---
 # <a name="raw-file-destination"></a>Destination de fichier brut
   La destination de fichier brut écrit des données brutes dans un fichier. Le format des données étant natif pour la destination, les données ne requièrent aucune traduction et peu d'analyse. Cela signifie que la destination de fichier brut peut écrire des données plus rapidement que d'autres destinations telles que les destinations de fichier plat et OLE DB.  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd284d3657a94e9c002ec252812e010e7014cd4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58381497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771239"
 ---
 # <a name="how-to-manage-a-cdc-service-from-the-cdc-designer-console"></a>Procédure : gérer un service de capture de données modifiées à partir de la console du concepteur CDC
   Cette procédure décrit comment utiliser la console du concepteur CDC pour gérer un service de capture de données modifiées.  
@@ -28,7 +28,7 @@ ms.locfileid: "58381497"
   
 3.  Sélectionnez le service à gérer.  
   
-     **Remarque**: S’il n’existe aucun service répertorié dans la Console du concepteur CDC, vous devez créer des instances à l’aide de la Console de Configuration de Service de capture de données modifiées. Pour plus d'informations sur la création d'un service, consultez l'aide en ligne fournie avec la console de configuration du service.  
+     **Remarque**: S'il n'existe aucun service répertorié dans la console du concepteur CDC, vous devez créer des instances à l'aide de la console de configuration du service de capture de données modifiées. Pour plus d'informations sur la création d'un service, consultez l'aide en ligne fournie avec la console de configuration du service.  
   
 4.  Vous pouvez effectuer les tâches suivantes pour un service de capture de données modifiées :  
   

@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 6632aa6ebcf55234bc89a23f24edc7ff8ee11106
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773415"
 ---
 # <a name="server-properties-f1-help"></a>Aide F1 des Propriétés du serveur
   Cette section contient les rubriques d'aide, accessibles via la touche F1, pour les pages **Propriétés du serveur** de SQL Server Management Studio.  

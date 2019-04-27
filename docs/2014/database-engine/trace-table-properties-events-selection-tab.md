@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77660e19bed6781d73efdd36e6a752ae5c3cc1fb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48169139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773465"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Propriétés de la table de trace (onglet Sélection des événements)
   Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Propriétés de la table de trace** pour afficher les propriétés des colonnes de données et d'événements dans la trace ou pour supprimer de tels événements ou colonnes.  
@@ -29,7 +29,7 @@ ms.locfileid: "48169139"
   
 ## <a name="options"></a>Options  
  Colonne **Événements**  
- Affiche les événements tracés organisés par catégorie. Sélectionnez les événements requis en activant ou en désactivant les cases à cocher correspondant à une colonne de données d'un événement. Si une case d'événement est cochée, toutes les colonnes de données de cet événement sont sélectionnées. Si la colonne de données d'un événement est cochée, l'événement l'est aussi, de même que toutes les autres colonnes requises. Lors de l'affichage d'une table ou d'un fichier de trace, la désactivation des cases à cocher de certains événements ou de colonnes de données réduit la quantité de données visibles dans la fenêtre de trace, ce qui facilite les analyses. Pour réduire la quantité d'informations visibles, vous pouvez également modifier les filtres de colonne. Pour plus d'informations sur les classes d'événements, consultez [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Affiche les événements tracés organisés par catégorie. Sélectionnez les événements requis en activant ou en désactivant les cases à cocher correspondant à une colonne de données d'un événement. Si une case d'événement est cochée, toutes les colonnes de données de cet événement sont sélectionnées. Si la colonne de données d'un événement est cochée, l'événement l'est aussi, de même que toutes les autres colonnes requises. Lors de l'affichage d'une table ou d'un fichier de trace, la désactivation des cases à cocher de certains événements ou de colonnes de données réduit la quantité de données visibles dans la fenêtre de trace, ce qui facilite les analyses. Pour réduire la quantité d'informations visibles, vous pouvez également modifier les filtres de colonne. Pour plus d'informations sur les classes d'événements, consultez [Référence de classe d'événements SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Autres colonnes de données  
  Colonnes de données tracées. Toutes les colonnes de données pertinentes de la trace sont cochées par défaut pour chaque événement inclus dans la trace.  
@@ -37,7 +37,7 @@ ms.locfileid: "48169139"
  Spécifiez les filtres en cliquant sur les en-têtes de colonne de données et entrant les critères du filtre. Les colonnes de données filtrées sont indiquées par une icône de filtre à gauche de l'étiquette de colonne dans la boîte de dialogue **Modifier le filtre** .  
   
  **Afficher tous les événements**  
- Affiche tous les événements disponibles. Par défaut, seules les lignes sélectionnées dans la grille **Sélection des événements** sont affichées. Désactivez cette case à cocher pour masquer tous les événements non sélectionnés dans la grille **Sélection des événements** . Si **elle** est activée, lors de l'affichage d'une table ou d'un fichier de trace, tous les événements enregistrés dans la trace s'affichent dans la fenêtre de trace.  
+ Affiche tous les événements disponibles. Par défaut, seules les lignes sélectionnées dans la grille **Sélection des événements** sont affichées. Désactivez cette case à cocher pour masquer tous les événements non sélectionnés dans la grille **Sélection des événements** . Si la case **Afficher tous les événements** est cochée et que vous visualisez un fichier ou une table de trace, tous les événements enregistrés dans la trace s'affichent dans la fenêtre de trace.  
   
  **Afficher toutes les colonnes**  
  Affiche toutes les colonnes de données disponibles. Par défaut, seules les colonnes de données sélectionnées sont affichées. Désactivez cette case à cocher pour masquer toutes les colonnes de données non sélectionnées dans la grille **Sélection des événements** .  

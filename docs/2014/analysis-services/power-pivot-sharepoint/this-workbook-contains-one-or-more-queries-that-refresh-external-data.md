@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25f4faa1aec81d940677c85c11be6f45f1e94de5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749032"
 ---
 # <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Ce classeur contient une ou plusieurs requêtes qui actualisent les données externes.
   Pour les classeurs Excel qui contiennent des données PowerPivot, Excel Services affiche cet avertissement lorsqu'il détecte des informations de connexion et vous demande d'activer ou de désactiver des requêtes pour ce classeur.  

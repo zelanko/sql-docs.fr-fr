@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771192"
 ---
 # <a name="the-oracle-cdc-databases"></a>Bases de données de capture de données modifiées Oracle
   Une instance Oracle CDC est associée à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le même nom sur l'instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cible. Cette base de données est appelée base de données de capture de données modifiées Oracle (ou base de données CDC).  
@@ -109,7 +109,7 @@ ms.locfileid: "58658393"
   
 |Nom|Par défaut|Min|Max|Statique|Description|  
 |----------|-------------|---------|---------|------------|-----------------|  
-|trace|False|-|-|False|Les valeurs disponibles :<br /><br /> **True**<br /><br /> **False**<br /><br /> **actif**<br /><br /> **inactif**|  
+|trace|False|-|-|False|Les valeurs disponibles :<br /><br /> **True**<br /><br /> **False**<br /><br /> **actif**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|Taille (en kilo-octets) des segments de mémoire alloués pour une transaction (une transaction peut allouer plusieurs segments). Consultez la colonne memory_limit dans la table [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) .|  
 |target_max_batched_transactions|100|1|1000|True|Nombre maximal de transactions Oracle qui peuvent être traitées comme une transaction avec mise à jour de tables SQL Server CT.|  
 |target_idle_lsn_update_interval|10|0|1|False|Intervalle (en secondes) de mise à jour de la table **lsn_time_mapping** quand les tables capturées n’ont aucune activité.|  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: da9a2e5bf8338b8188f00f3c340d50ef32f1204f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771835"
 ---
 # <a name="adding-tasks-programmatically"></a>Ajout de tâches par programme
   Il est possible d'ajouter des tâches aux types d'objets suivants dans le moteur d'exécution :  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08e05c68bf69bcb7ca54d2f0920ee041aae3ca99
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752547"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Leçon 4-7 : définition du membre inconnu et le traitement des propriétés des valeurs Null
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -179,7 +179,7 @@ Pour modifier le comportement mentionné dans la tâche précédente, activez la
     ![Niveau de nom de produit affichant des composants d’assemblage](../analysis-services/media/l4-assemblycomponents-1.gif "niveau Product Name montrant des composants d’assembly")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 5 : Définition des relations entre des Dimensions et des groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+[Leçon 5 : Définition des relations entre des Dimensions et des groupes de mesures](../analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   
   

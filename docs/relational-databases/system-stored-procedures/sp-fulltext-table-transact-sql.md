@@ -20,11 +20,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 340d50725a13da4993ade63d890f2300ba38763b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743973"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -84,7 +84,7 @@ sp_fulltext_table
   
  Si la table est réactivée et que l'index n'a pas été rempli à nouveau, l'ancien index est toujours disponible pour les requêtes sur les colonnes qui permettent la recherche en texte intégral et qui existent déjà, à l'exception des nouvelles colonnes. Les données des colonnes supprimées sont récupérables par les requêtes dans lesquelles une recherche en texte intégral sur toute une colonne est spécifiée.  
   
- Lorsque vous avez défini une table pour une indexation de texte intégral, échangez les colonnes clés unique de texte intégral d'un type de données en un autre en changeant le type de données de cette colonne ou en changeant la clé unique de texte intégral d'une colonne à une autre. Un remplissage incomplet peut provoquer un échec qui se produirait à la prochaine requête en provoquerait l'affichage du message d'erreur suivant : « La conversion en type *data_type* a échoué pour la valeur de clé de recherche en texte intégral *é chec*. » Pour éviter ce problème, supprimez la définition de la recherche en texte intégral pour cette table à l’aide de la **drop** action de **sp_fulltext_table** et redéfinissez-la à l’aide **sp_fulltext_table** et **sp_fulltext_column**.  
+ Après une table a été définie pour l’indexation de texte intégral, colonnes de clé unique de recherche en texte intégral à partir d’un type de données à un autre, soit en modifiant le type de données de cette colonne ou en modifiant la clé unique de recherche en texte intégral d’une colonne vers un autre, sans un nouveau remplissage complet peut entraîner une erreur se produise pendant une requête suivante et en retournant le message d’erreur : « La conversion en type *data_type* a échoué pour la valeur de clé de recherche en texte intégral *é chec*. » Pour éviter ce problème, supprimez la définition de la recherche en texte intégral pour cette table à l’aide de la **drop** action de **sp_fulltext_table** et redéfinissez-la à l’aide **sp_fulltext_table** et **sp_fulltext_column**.  
   
  La taille de la colonne clé de texte intégral doit être de 900 octets ou moins. Pour des raisons de performances, il est recommandé de limiter au minimum la taille de la colonne clé.  
   

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c27057a5968ac9c415852d7cb934251056af9d99
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779685"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Modifier les propriétés du modèle de trace (onglet Général)
   Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour consulter ou modifier les modèles de trace existants en utilisant les options suivantes. Pour accéder à cette boîte de dialogue, dans le menu **Fichier** de [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)], pointez sur **Modèles**, puis cliquez sur **Modifier le modèle**.  

@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754444"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>Démarrer l'Assistant Configuration de la sécurité de mise en miroir de bases de données (SQL Server Management Studio)
   Configurer l'Assistant Sécurité de mise en miroir de bases de données vous permet de procéder à la configuration initiale des paramètres de sécurité sur une partie ou sur l'ensemble des instances de serveur impliquées dans la mise en miroir. Cet Assistant travaille conjointement avec la page **Mise en miroir** de la boîte de dialogue **Propriétés de la base de données** .  

@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8eb25ae1083e05ccb85dda6d07d391ca58d7951a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770682"
 ---
 # <a name="sap-bw-source-editor-error-output-page"></a>Éditeur de source SAP BW (page Sortie d'erreur)
   Utilisez la page **Sortie d'erreur** de l' **Éditeur de source SAP BW** pour sélectionner les options de gestion des erreurs et pour définir les propriétés des colonnes de sortie d'erreur.  

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3489e7a925ec09f84397ea27e5a749180999a9fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53364421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753641"
 ---
 # <a name="bulk-copy-data-from-program-variables-odbc"></a>Copier en bloc des données à partir de variables de programme (ODBC)
   Cet exemple indique comment utiliser des fonctions de copie en bloc pour copier en bloc des données à partir de variables de programme vers SQL Server à l'aide de `bcp_bind` et `bcp_sendrow`. (Le code de contrôle d'erreurs est supprimé afin de simplifier cet exemple.)  

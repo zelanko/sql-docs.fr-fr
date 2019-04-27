@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754089"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Détails des applications de la couche Données déployées (utilitaire SQL Server)
   Les informations de la vue Applications de la couche Données déployées de l'Explorateur de l'utilitaire fournissent des données d'utilisation pour les applications de la couche Données, l'historique de l'utilisation du processeur, des détails sur l'utilisation du stockage au niveau du fichier, ainsi que la capacité d'afficher et de mettre à jour des seuils de stratégie. Les seuils de stratégie peuvent être contrôlés au niveau de l'application de la couche Données pour l'utilisation du processeur et pour les fichiers des données de la base de données et les fichiers journaux. Vous pouvez également consulter les détails des propriétés des applications de la couche Données.  

@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c7a76646d1f80e388737f520d497db4d6697a543
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774593"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd (applet de commande)
   **Invoke-Sqlcmd** est une applet de commande [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui exécute des scripts contenant des instructions des langages [!INCLUDE[tsql](../includes/tsql-md.md)] et XQuery ainsi que les commandes prises en charge par l’utilitaire **sqlcmd**.  
@@ -118,22 +118,22 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Désactiver les commandes interactives, le script de démarrage et les variables d'environnement.|-X|-DisableCommands|  
 |Désactiver la substitution de variable.|-X|-DisableVariables|  
 |Niveau de gravité minimal pour le rapport.|-v|-SeverityLevel|  
-|Niveau d'erreur minimal pour le rapport.|-m|-ErrorLevel|  
+|Niveau d'erreur minimal pour le rapport.|-M|-ErrorLevel|  
 |Intervalle de délai de connexion.|-l|-ConnectionTimeout|  
 |Nom d'hôte.|-H|-HostName|  
 |Modifier le mot de passe et quitter.|-Z|-NewPassword|  
 |Fichier d'entrée contenant une requête|-i|-InputFile|  
 |Longueur maximale de la sortie de type caractère|-w|-MaxCharLength|  
 |Longueur maximale de la sortie de type binaire|-w|-MaxBinaryLength|  
-|Établir la connexion à l'aide du chiffrement SSL|Aucun paramètre|-EncryptConnection|  
+|Établir la connexion à l'aide du chiffrement SSL|Aucun paramètre|-EncryptConnection|  
 |Afficher les erreurs|Aucun paramètre|-OutputSqlErrors|  
 |Sortie des messages vers stderr|-r|Aucun paramètre|  
 |Utiliser les paramètres régionaux du client|-r|Aucun paramètre|  
 |Exécuter la requête spécifiée et rester actif|-Q|Aucun paramètre|  
 |Page de codes à utiliser pour les données de sortie|-f|Aucun paramètre|  
 |Modifier un mot de passe et rester actif|-Z|Aucun paramètre|  
-|Taille du paquet|-a|Aucun paramètre|  
-|Séparateur de colonnes|-s|Aucun paramètre|  
+|Taille du paquet|-A|Aucun paramètre|  
+|Séparateur de colonnes|-S|Aucun paramètre|  
 |En-têtes de sortie des contrôles|-H|Aucun paramètre|  
 |Spécifier des caractères de contrôle|-k|Aucun paramètre|  
 |Largeur d'écran de longueur fixe|-Y|Aucun paramètre|  
@@ -142,8 +142,8 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Activer les identificateurs entre guillemets|-i|Aucun paramètre|  
 |Supprimer des espaces de fin|-w|Aucun paramètre|  
 |Instances de liste|-l|Aucun paramètre|  
-|Mettre en forme la sortie en Unicode|-U|Aucun paramètre|  
-|Imprimer les statistiques|-p|Aucun paramètre|  
+|Mettre en forme la sortie en Unicode|-u|Aucun paramètre|  
+|Imprimer les statistiques|-P|Aucun paramètre|  
 |Fin de la commande|-c|Aucun paramètre|  
 |Connexion avec l'authentification Windows|-E|Aucun paramètre|  
   

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5a26f9c950dd09b8e47c83089415bd2b3d47458f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740379"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implémentation de la sécurité dynamique à l'aide des filtres de lignes
   Dans cette leçon supplémentaire, vous allez créer un rôle supplémentaire qui implémente la sécurité dynamique. La sécurité dynamique permet de définir la sécurité de niveau ligne en fonction du nom d'utilisateur ou de l'ID de connexion de l'utilisateur actuellement connecté. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](../analysis-services/tabular-models/roles-ssas-tabular.md).  

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 183dba1f69634ea6931dc14cc6aa3fb6d6eca6ee
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755351"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Connecter des clients à une session de mise en miroir de bases de données (SQL Server)
   Pour établir une connexion avec une session de mise en miroir de bases de données, un client peut soit utiliser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, soit le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. S'ils sont configurés pour une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , ces deux fournisseurs d'accès aux données prennent pleinement en charge la mise en miroir de bases de données. Pour plus d'informations sur les éléments de programmation à prendre en compte pour l'utilisation d'une base de données mise en miroir, consultez [Using Database Mirroring](../../relational-databases/native-client/features/using-database-mirroring.md). Qui plus est, l'instance de serveur principal actuelle doit être disponible et la connexion du client doit avoir été créée dans l'instance de serveur. Pour plus d’informations, consultez [Dépanner des utilisateurs orphelins &#40;SQL Server&#41;](../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md). Les connexions clientes à une session de mise en miroir de base de données n'exigent pas l'intervention de l'instance de serveur témoin (le cas échéant).  
@@ -166,7 +166,7 @@ Server=123.34.45.56,4724;
   
  Le délai entre deux tentatives est calculé au moyen de la formule suivante :  
   
- _RetryTime_ **=** _PreviousRetryTime_ **+ (** 0,08 **&#42;**  _LoginTimeout_**)**  
+ _RetryTime_ **=** _PreviousRetryTime_ **+(** 0.08 **&#42;**_LoginTimeout_**)**  
   
  Où *PreviousRetryTime* a la valeur 0 au départ.  
   
@@ -174,10 +174,10 @@ Server=123.34.45.56,4724;
   
 |Arrondi|Calcul de*RetryTime* |Délai entre chaque tentative|  
 |-----------|-----------------------------|----------------------------|  
-|1|0 **+ (** 0,08 **&#42;** 15 **)**|1,2 secondes|  
-|2|1.2 **+ (** 0,08 **&#42;** 15 **)**|2,4 secondes|  
-|3|2.4 **+ (** 0,08 **&#42;** 15 **)**|3,6 secondes|  
-|4|3.6 **+ (** 0,08 **&#42;** 15 **)**|4,8 secondes|   
+|1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 secondes|  
+|2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 secondes|  
+|3|2,4 **+(** 0,08 **&#42;** 15 **)**|3,6 secondes|  
+|4|3,6 **+(** 0,08 **&#42;** 15 **)**|4,8 secondes|   
   
  Le tableau suivant illustre ces délais pour les tentatives de connexion successives, lesquelles excèdent toutes le délai d'expiration.  
   

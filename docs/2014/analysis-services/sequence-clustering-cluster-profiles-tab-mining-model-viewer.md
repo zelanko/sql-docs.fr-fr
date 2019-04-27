@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc1fd3f1b73d8b738f1ad8e38bc2be19e36b6fd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746811"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Onglet Profils du cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L’onglet **Profils du cluster** dans la **Visionneuse de l’algorithme MSC** (Microsoft Sequence Clustering) fournit une vue à code de couleurs des séquences incluses dans chaque cluster.  
   
  Utilisez cette vue d'un modèle Sequence Clustering pour obtenir une vue rapide de la façon dont les séquences trouvées par le modèle sont regroupées. Vous pouvez voir d'un coup d'œil le nombre de séquences qui sont longues et celles qui sont courtes. Vous pouvez également cliquer sur un cluster et afficher la **Légende d’exploration de données** pour voir exactement les états représentés par les couleurs dans chaque séquence.  
   
- **Pour plus d’informations :**[algorithme Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer  ](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :**  [Algorithme Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -50,17 +50,17 @@ ms.locfileid: "48068789"
   
  Deux ensembles d'histogrammes sont affichés pour chaque cluster du modèle, chacun sur une ligne différente dans le graphique :  
   
--   **\<nom de l’attribut > .samples**: les histogrammes de cette ligne affichent les séquences d’éléments qui sont représentatives de chaque cluster. En termes DMX, ce sont les cas d'exemple pour chaque cluster.  
+-   **\<nom de l’attribut > .samples**: Les histogrammes de cette ligne affichent les séquences d’éléments qui sont représentatives de chaque cluster. En termes DMX, ce sont les cas d'exemple pour chaque cluster.  
   
--   **\<nom de l’attribut >**: les histogrammes de cette ligne décrivent tous les éléments que le cluster contient et leur distribution globale. Cliquez sur un histogramme quand la **Légende d’exploration de données** est visible et que vous pouvez voir les valeurs numériques de chacun.  
+-   **\<nom de l’attribut >**: Les histogrammes de cette ligne décrivent tous les éléments que le cluster contient et leur distribution globale. Cliquez sur un histogramme quand la **Légende d’exploration de données** est visible et que vous pouvez voir les valeurs numériques de chacun.  
   
  **États**  
  Cette colonne du graphique est facultative et peut être affichée ou supprimée en sélectionnant l’option **Afficher la légende** . La colonne **États** fournit un guide indiquant l’état représenté par chacune des couleurs dans l’histogramme de clusters correspondant.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Algorithme de Clustering de séquence de Microsoft](data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Microsoft Sequence Clustering Algorithm](data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)   
  [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   

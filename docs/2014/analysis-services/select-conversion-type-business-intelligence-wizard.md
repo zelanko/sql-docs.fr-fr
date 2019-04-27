@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97ab8896d13bfb19790148fb6f01bb8e054ab270
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748081"
 ---
 # <a name="select-conversion-type-business-intelligence-wizard"></a>Sélectionner le type de conversion (Assistant Business Intelligence)
   La page **Sélectionner le type de conversion** permet de définir la relation entre les devises locales et celles des rapports pour des transactions stockées dans plusieurs devises. Une devise locale est une devise dans laquelle les transactions des mesures sélectionnées dans **Sélectionnez les mesures** sont stockées. Une devise de rapport est celle dans laquelle sont traduites les transactions sélectionnées dans la page **Sélectionnez les mesures** .  
@@ -49,7 +49,7 @@ ms.locfileid: "48092313"
  Par exemple, la devise pivot peut correspondre à des dollars américains (USD) et la table de faits peut stocker les transactions en USD. Cette option convertit ces transactions de la devise pivot dans les devises de rapport spécifiées. Résultat : les transactions peuvent être stockées dans la devise pivot spécifiée et être affichées soit dans la devise pivot indiquée, soit dans l'une des devises de rapport mentionnées à la page **Spécifier les devises pour les rapports** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
+ [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

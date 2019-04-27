@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d4f1ccb441da92c19b15a7e84b0fc0e451844d0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740279"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy, objet (ADO MD)
 Représente une façon dans lequel les membres d’un [dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) peuvent être agrégées ou « remontées ». Une dimension peut être agrégée avec une ou plusieurs hiérarchies.  
@@ -39,7 +39,7 @@ Représente une façon dans lequel les membres d’un [dimension](../../../ado/r
   
  Le **propriétés** collection contient des propriétés fournies par le fournisseur. Le tableau suivant répertorie les propriétés qui peuvent être disponibles. La liste de propriétés réelle peut varier en fonction de l’implémentation du fournisseur. Consultez la documentation de votre fournisseur pour obtenir une liste plus complète des propriétés disponibles.  
   
-|Nom   |Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |AllMember|Le membre au niveau plus élevé de la hiérarchie.|  
 |CatalogName|Le nom du catalogue auquel appartient ce cube.|  

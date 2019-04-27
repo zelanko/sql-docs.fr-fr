@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : SQL Server Management Studio | Microsoft Docs'
+title: 'Tutoriel : SQL Server Management Studio | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b6cd02b0679990e7781faf2195b17444cadb53e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753431"
 ---
-# <a name="tutorial-sql-server-management-studio"></a>Didacticiel : SQL Server Management Studio
+# <a name="tutorial-sql-server-management-studio"></a>Tutoriel : SQL Server Management Studio
   Ce didacticiel [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] vous présente l'environnement intégré pour la gestion de votre infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] présente une interface graphique pour configurer, surveiller et administrer les instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Il vous permet également de déployer, de surveiller et de mettre à niveau les composants de la couche Données utilisés par vos applications, comme les bases de données et les entrepôts de données. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] fournit également des éditeurs de langage [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX et XML pour modifier et déboguer des scripts.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  
@@ -39,16 +39,16 @@ ms.locfileid: "48167309"
   
  Ce didacticiel est divisé en trois leçons :  
   
- [Leçon 1 : Navigation de base dans SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
+ [Leçon 1 : Navigation de base dans SQL Server Management Studio](lesson-1-basic-navigation-in-sql-server-management-studio.md)  
  Dans cette leçon, vous allez apprendre à utiliser les composants de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], reconfigurer la disposition d'environnement et restaurer la disposition par défaut.  
   
- [Leçon 2 : écriture d'instructions Transact-SQL](lesson-2-writing-transact-sql.md)  
+ [Leçon 2 : Écriture d’instructions Transact-SQL](lesson-2-writing-transact-sql.md)  
  Dans cette leçon, vous allez apprendre à ouvrir l'éditeur de requête, gérer du code et utiliser les autres nouvelles fonctionnalités de l'éditeur de requête.  
   
- [Leçon 3 : utilisation de modèles, de solutions et de projets de scripts](lesson-3-working-with-templates-solutions-and-script-projects.md)  
+ [Leçon 3 : Utilisation des modèles, des Solutions et projets de Script](lesson-3-working-with-templates-solutions-and-script-projects.md)  
  Dans cette leçon, vous allez apprendre à utiliser des modèles et à organiser des scripts dans des solutions et des projets.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Ce didacticiel est destiné aux administrateurs et aux développeurs de base de données expérimentés, qui ne connaissent pas [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)], mais qui maîtrisent les concepts de base de données et le langage [!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
  Les éléments suivants doivent cependant être installés sur votre système :  

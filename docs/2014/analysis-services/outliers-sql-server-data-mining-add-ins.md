@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0771c953875e9871c53892bc14a3e2a537060833
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743619"
 ---
 # <a name="outliers-sql-server-data-mining-add-ins"></a>Valeurs hors norme (Compléments d'exploration de données SQL Server)
   ![Assistant valeurs hors norme dans le ruban Exploration de données](media/dmc-outliers.gif "Assistant valeurs hors norme dans le ruban Exploration de données")  
@@ -70,7 +70,7 @@ ms.locfileid: "48224110"
   
 3.  Dans le **sélectionner la colonne** boîte de dialogue, sélectionnez un **unique** colonne.  
   
-     Cliquez sur **Suivant**.  
+     Cliquer sur **Suivant**.  
   
 4.  Dans le **spécifier les seuils** boîte de dialogue zone, passez en revue la distribution des données.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48224110"
   
     -   Si la colonne contient des données numériques, vous pouvez cliquer sur le **vue comme discrètes** bouton ou le **afficher sous la forme numérique** bouton pour basculer entre l’affichage des valeurs dans un graphique à barres ou un graphique en courbes.  
   
-5.  Dans le **spécifier les seuils** boîte de dialogue, sélectionnez la plage de données que vous souhaitez conserver en tapant une valeur minimale et maximale, ou en faisant glisser les barres de curseur. Cliquez sur **Suivant**.  
+5.  Dans le **spécifier les seuils** boîte de dialogue, sélectionnez la plage de données que vous souhaitez conserver en tapant une valeur minimale et maximale, ou en faisant glisser les barres de curseur. Cliquer sur **Suivant**.  
   
 6.  Dans le **gestion des observations aberrantes** boîte de dialogue, spécifiez si vous souhaitez que les valeurs soient supprimées ou remplacées, puis cliquez sur **suivant**.  
   

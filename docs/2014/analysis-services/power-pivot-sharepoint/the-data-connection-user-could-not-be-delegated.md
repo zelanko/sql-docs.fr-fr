@@ -1,5 +1,5 @@
 ---
-title: "La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Impossible d’actualiser les connexions suivantes : données PowerPivot | Microsoft Docs"
+title: "La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Les connexions suivantes n'ont pas pu s'actualiser : Les données PowerPivot | Microsoft Docs"
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4332e19287b551341bb9851cf488ccb0b34aa5a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749110"
 ---
-# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Échec de l'actualisation des connexions suivantes : Données PowerPivot
+# <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Les connexions suivantes n'ont pas pu s'actualiser : données PowerPivot
   Pour les classeurs Excel contenant des données PowerPivot, Excel Services retourne cette erreur s'il ne peut pas se connecter à une instance de serveur PowerPivot dans SharePoint.  
   
 ## <a name="details"></a>Détails  
@@ -28,7 +28,7 @@ ms.locfileid: "48154079"
 |S'applique à|PowerPivot pour SharePoint|  
 |Version du produit|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Cause|Échec de connexion lors d'une tentative d'utilisation d'un fournisseur de données PowerPivot.|  
-|Texte du message|La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Échec de l'actualisation des connexions suivantes : Données PowerPivot|  
+|Texte du message|La connexion de données utilise l'authentification Windows, et les informations d'identification utilisateur n'ont pas pu être déléguées. Les connexions suivantes n'ont pas pu s'actualiser : données PowerPivot|  
   
 ## <a name="explanation"></a>Explication  
  Ce message d'erreur peut s'afficher pour plusieurs raisons. Le facteur qu'ils ont en commun est qu'Excel Services ne peut pas obtenir une identité de l'utilisateur Windows valide à partir d'un jeton de revendications dans SharePoint. Dans le cas des classeurs Excel contenant des données PowerPivot, cette erreur se produit lorsque l'une des conditions suivantes est respectée :  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756985"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)] `LocalDB` est un mode d’exécution de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] destiné aux développeurs de programme. `LocalDB` installation copie l’ensemble minimal de fichiers nécessaires pour démarrer le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Une fois `LocalDB` est installé, les développeurs initialisent une connexion à l’aide d’une chaîne de connexion particulière. Lors de la connexion, l'infrastructure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nécessaire est automatiquement créée et démarrée, ce qui permet à l'application d'utiliser la base de données sans tâches de configuration complexes ou longues. Les outils de développement incluent un [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] qui permet aux développeurs d'écrire et de tester le code [!INCLUDE[tsql](../../includes/tsql-md.md)] sans devoir gérer une instance de serveur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]complète. Une instance de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] `LocalDB` est géré à l’aide de la `SqlLocalDB.exe` utilitaire. [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]`LocalDB` doit être utilisé à la place de la [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] fonctionnalité d’instance utilisateur qui est déconseillée.  
@@ -87,7 +87,7 @@ REM Gather information about the instance of LocalDB
   
 |||  
 |-|-|  
-|Créer une vue d’abonnement|"LocalDBApp1"|  
+|Nom|"LocalDBApp1"|  
 |Version|\<Version actuelle>|  
 |Nom partagé|""|  
 |Propriétaire|"\<votre utilisateur Windows>"|  

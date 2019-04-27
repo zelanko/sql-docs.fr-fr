@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1f0c3536f8196a1ff0b31134f3818d3578b72635
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643724"
 ---
 # <a name="propertytype-property-servernetworkprotocolproperty-class"></a>Propriété PropertyType (classe ServerNetworkProtocolProperty)
   Obtient le type de propriété.  

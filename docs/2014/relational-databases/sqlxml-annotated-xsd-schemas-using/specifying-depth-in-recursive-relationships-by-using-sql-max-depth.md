@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 569bbbdec39a37ef7427a195529f26efc9d9b2a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745480"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Spécification de la profondeur dans les relations récursives à l'aide de sql:max-depth
   Dans les bases de données relationnelles, lorsqu'une table est impliquée dans une relation avec elle-même, on utilise le terme de relation récursive. Par exemple, dans une relation responsable-subalterne, une table qui stocke des enregistrements d'employés est impliquée dans une relation avec elle-même. Dans ce cas, la table d'employés joue un rôle de responsable d'un côté de la relation, et la même table joue un rôle de subalterne de l'autre côté.  
@@ -96,7 +96,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  La relation étant récursive, vous devez trouver un moyen de spécifier la profondeur de récursivité dans le schéma. Sinon, le résultat sera une récursivité sans fin (employé subalterne à employé subalterne à employé, et ainsi de suite). L'annotation `sql:max-depth` vous permet de spécifier la profondeur de récursivité. Dans cet exemple particulier, pour spécifier une valeur pour `sql:max-depth`, vous devez connaître la profondeur de la hiérarchie de direction dans la société.  
   
 > [!NOTE]  
->  Le schéma spécifie l'annotation `sql:limit-field`, mais ne spécifie pas l'annotation `sql:limit-value`. Cela limite le nœud supérieur dans la hiérarchie résultante uniquement aux employés qui ne sont subalternes de personne. (ReportsTo a la valeur NULL.) On obtient ce résultat en spécifiant `sql:limit-field` et en ne spécifiant pas l'annotation `sql:limit-value` (qui, par défaut, a la valeur NULL). Si vous souhaitez que le XML résultant inclue chaque arborescence de direction possible (l'arborescence de direction pour chaque employé dans la table), supprimez l'annotation `sql:limit-field` du schéma.  
+>  Le schéma spécifie l'annotation `sql:limit-field`, mais ne spécifie pas l'annotation `sql:limit-value`. Cela limite le nœud supérieur dans la hiérarchie résultante uniquement aux employés qui ne sont subalternes de personne. (ReportsTo a la valeur NULL). Spécification `sql:limit-field` et en ne spécifiant `sql:limit-value` (qui est par défaut avec la valeur NULL) annotation effectue cette opération. Si vous souhaitez que le XML résultant inclue chaque arborescence de direction possible (l'arborescence de direction pour chaque employé dans la table), supprimez l'annotation `sql:limit-field` du schéma.  
   
 > [!NOTE]  
 >  La procédure suivante utilise la base de données tempdb.  
@@ -232,7 +232,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
  Utilisez l'annotation `sql:max-depth` dans le schéma pour spécifier la profondeur de récursivité dans une relation récursive décrite dans le schéma. La valeur de la `sql:max-depth` annotation est un entier positif (1 à 50) qui indique le nombre de récursivités :  Une valeur de 1 arrête la récursivité à l’élément pour lequel le `sql:max-depth` annotation est spécifiée ; une valeur de 2 arrête la récursivité au niveau suivant de l’élément auquel `sql:max-depth` est spécifié ; et ainsi de suite.  
   
 > [!NOTE]  
->  Dans l'implémentation sous-jacente, une requête XPath spécifiée contre un schéma de mappage est convertie en requête SELECT ... FOR XML EXPLICIT. Cette requête nécessite que vous spécifiiez une profondeur de récursivité finie. Plus la valeur que vous spécifiez pour `sql:max-depth` est élevée, plus la requête FOR XML EXPLICIT générée est grande. Cela risque d'allonger la durée de récupération.  
+>  Dans l’implémentation sous-jacente, une requête XPath spécifiée contre un schéma de mappage est convertie en une instruction SELECT... POUR une requête XML EXPLICIT. Cette requête nécessite que vous spécifiiez une profondeur de récursivité finie. Plus la valeur que vous spécifiez pour `sql:max-depth` est élevée, plus la requête FOR XML EXPLICIT générée est grande. Cela risque d'allonger la durée de récupération.  
   
 > [!NOTE]  
 >  Les codes de mise à jour (updategrams) et chargements en masse XML ignorent l'annotation max-depth. Cela signifie que les insertions ou mises à jour récursives ont lieu indépendamment de la valeur que vous spécifiez pour max-depth.  

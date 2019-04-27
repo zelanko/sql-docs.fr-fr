@@ -32,11 +32,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bad975eb6b2b2645cb31b075089c02be735b1d88
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753321"
 ---
 # <a name="resolving-upgrade-issues"></a>Résolution de problèmes de mise à niveau
   Les rubriques dans cette section décrivent les problèmes de mise à niveau qui peuvent être détectés ainsi que ceux qui ne peuvent pas être détectés mais sont susceptibles d'affecter la mise à niveau ou les fonctionnalités après la mise à niveau. Les problèmes sont organisés par composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

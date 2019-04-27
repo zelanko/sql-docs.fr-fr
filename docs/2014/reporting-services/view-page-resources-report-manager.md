@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647042"
 ---
 # <a name="view-page-resources-report-manager"></a>Page Vue, Ressources (Gestionnaire de rapports)
   La page Afficher des ressources vous permet d'afficher une ressource. Une ressource est un élément stocké et géré sur un serveur de rapports, mais qui n'est pas traité sur un serveur de rapports (un serveur de rapports traite des rapports et des modèles). Vous pouvez utiliser des ressources lorsque vous souhaitez stocker des documents, des images ou d'autres fichiers arbitraires qui ne sont pas traités par le serveur. La plupart des fichiers image (tels que les fichiers JPG, GIF et PNG) peuvent être affichés dans la page Afficher du Gestionnaire de rapports. Les autres ressources s'ouvrent dans une autre fenêtre de l'application.  

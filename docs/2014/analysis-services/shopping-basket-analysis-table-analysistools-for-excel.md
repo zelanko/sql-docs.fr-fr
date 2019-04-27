@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8d5545d6a6d0deca345207ec73a039e7abe841ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746502"
 ---
 # <a name="shopping-basket-analysis-table-analysistools-for-excel"></a>Analyse du panier d'achat (Outils d'analyse de table pour Excel)
   ![Outil panier d’achat](media/tat-shopbskt.gif "outil panier d’achat")  
@@ -51,7 +51,7 @@ ms.locfileid: "48049749"
   
 5.  Cliquez sur**avancé**pour ouvrir le **valeur de paramètres avancés** boîte de dialogue. Augmentez la valeur de **prise en charge minimale** afin de réduire le nombre de produits sont regroupés en tant que jeux d’éléments. Augmenter la **probabilité de règle Minimum** pour filtrer les jeux d’éléments très courants.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Pour utiliser le **analyse de panier d’achat** outil, vos données doivent être stockées dans un tableau Excel et doit contenir les colonnes suivantes :  
   
 -   Colonne qui contient un ID unique représentant la transaction. L'ID peut être numérique ou texte, du moment que la valeur dans chaque ligne est unique.  
@@ -76,9 +76,9 @@ ms.locfileid: "48049749"
 ### <a name="minimum-support"></a>Prise en charge minimale  
  *Prise en charge minimale* signifie que le nombre de transactions qui doivent contenir un jeu d’éléments particulier pour le jeu d’éléments soit considéré comme significatif. Par exemple, vous pouvez ne pas être intéressé par un jeu d'éléments s'il n'a pas été acheté dans au moins 10 transactions différentes. Il existe deux façons de contrôler le seuil pour l’importance du jeu d’éléments et utiliser le **prise en charge minimale** paramètre.  
   
- **Une valeur absolue :** Entrez un nombre qui représente le nombre de transactions qui contiennent les éléments de la cible. Par exemple, si vous entrez 10, tout jeu d'éléments qui apparaît dans au moins 10 paniers d'achat est inclus dans les résultats.  
+ **En tant que valeur absolue :** Entrez un nombre qui représente le nombre de transactions qui contiennent les éléments de la cible. Par exemple, si vous entrez 10, tout jeu d'éléments qui apparaît dans au moins 10 paniers d'achat est inclus dans les résultats.  
   
- **Sous forme de pourcentage :** Entrez un nombre qui représente un pourcentage de la collection entière de jeux d’éléments. Par exemple, si vous spécifiez 10, tous les jeux d'éléments sont comptés et le jeu d'éléments ciblé doit apparaître et constituer au moins 10 pour cent de ce nombre total de jeux d'éléments. Si vous avez un jeu de données très volumineux, l'utilisation de pourcentages à la place d'un nombre peut vous aider à rester concentré sur les groupements d'élément les plus importants.  
+ **En tant que pourcentage :** Entrez un nombre qui représente un pourcentage de la collection entière de jeux d’éléments. Par exemple, si vous spécifiez 10, tous les jeux d'éléments sont comptés et le jeu d'éléments ciblé doit apparaître et constituer au moins 10 pour cent de ce nombre total de jeux d'éléments. Si vous avez un jeu de données très volumineux, l'utilisation de pourcentages à la place d'un nombre peut vous aider à rester concentré sur les groupements d'élément les plus importants.  
   
 > [!NOTE]  
 >  N'oubliez pas, le nombre de jeux d'éléments est différent du nombre des transactions dans vos données. Chaque transaction peut contenir plusieurs jeux de données ; toutefois, la plupart des jeux d'éléments se répètent plusieurs fois dans le jeu de données.  

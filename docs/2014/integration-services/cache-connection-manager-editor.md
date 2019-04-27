@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: af7696c1d5194af721b6ff803736193db0285b8b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771720"
 ---
 # <a name="cache-connection-manager-editor"></a>Éditeur du gestionnaire de connexions du cache
   Le gestionnaire de connexions du cache lit un dataset de référence à partir de la transformation de cache ou d'un fichier cache (.caw) et peut enregistrer les données dans un fichier cache. Les données sont toujours stockées en mémoire.  

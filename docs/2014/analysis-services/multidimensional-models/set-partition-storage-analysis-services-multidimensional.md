@@ -27,11 +27,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0738c0968606ea4f618f4d527db8c99cfff19296
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741905"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Définir un stockage de partitions (Analysis Services - Multidimensionnel)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs configurations de stockage standard pour les modes de stockage et les options de mise en cache. Celles-ci fournissent des configurations fréquemment utilisées pour la notification des mises à jour, la latence et la reconstruction des données.  

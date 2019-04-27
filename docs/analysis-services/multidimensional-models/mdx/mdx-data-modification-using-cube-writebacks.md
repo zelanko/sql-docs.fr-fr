@@ -1,5 +1,5 @@
 ---
-title: À l’aide d’écriture différée de cubes (MDX) | Documents Microsoft
+title: À l’aide d’écriture différée de cubes (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dc950c69a25ff976b8cdf1cd7cb4252c2584e0af
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740119"
 ---
-# <a name="mdx-data-modification---using-cube-writebacks"></a>Modification des données MDX - à l’aide d’écriture différée de cubes
+# <a name="mdx-data-modification---using-cube-writebacks"></a>Modification des données MDX - Utilisation de réécritures de cube
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  Pour mettre à jour un cube, vous pouvez utiliser l’instruction [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md). Celle-ci permet de mettre à jour un tuple avec une valeur spécifique. Pour utiliser efficacement l'instruction UPDATE CUBE afin de mettre à jour un cube, vous devez comprendre la syntaxe de l'instruction, les conditions d'erreur susceptibles de se produire, ainsi que les effets potentiels des mises à jour sur un cube.  
+  Pour mettre à jour un cube, vous pouvez utiliser l’instruction [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) . Celle-ci permet de mettre à jour un tuple avec une valeur spécifique. Pour utiliser efficacement l'instruction UPDATE CUBE afin de mettre à jour un cube, vous devez comprendre la syntaxe de l'instruction, les conditions d'erreur susceptibles de se produire, ainsi que les effets potentiels des mises à jour sur un cube.  
   
 ## <a name="update-cube-statement-syntax"></a>Syntaxe de l'instruction UPDATE CUBE  
  La syntaxe suivante décrit l'instruction UPDATE CUBE :  
@@ -111,6 +111,6 @@ USE_EQUAL_ALLOCATION
 -   modification de la granularité d'une dimension comprise dans l'écriture différée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modification des données & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
+ [Modification de données &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-modifying-data.md)  
   
   

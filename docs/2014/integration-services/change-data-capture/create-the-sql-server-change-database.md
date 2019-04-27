@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72785cffa01da7bf00248d442b1d3ce4103c45a8
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771365"
 ---
 # <a name="create-the-sql-server-change-database"></a>Créer la base de données de modification SQL Server
   Lorsque vous démarrez l'Assistant Nouvelle instance, la page Créer une base de données CDC s'ouvre. Cette page permet de fournir des informations sur la nouvelle instance de capture de données modifiées et de créer une nouvelle base de données de modification.  
@@ -35,16 +35,16 @@ ms.locfileid: "58391177"
  **Instance Oracle CDC**  
  Entrez les informations suivantes sur l'instance CDC que vous créez.  
   
--   **Nom**: Tapez un nom pour le nouveau service. Ce sera également le nom de la nouvelle base de données modifiée.  
+-   **Nom**: nom du nouveau service. Ce sera également le nom de la nouvelle base de données modifiée.  
   
--   **Description** : Tapez une description pour la nouvelle instance pour vous aider à identifier. Ce paramètre est facultatif.  
+-   **Description** : description de la nouvelle instance permettant de l’identifier plus facilement. Ce paramètre est facultatif.  
   
  **Base de données modifiée SQL Server**  
  Cette section est utilisée pour créer la base de données.  
   
-1.  **Modifier la base de données**: Le nom de la nouvelle base de données de modification. Le nom de la base de données est identique au nom donné à l'instance. Ce champ en lecture seule affiche le chemin d'accès complet à la base de données.  
+1.  **Modifier la base de données** : nom de la nouvelle base de données modifiée. Le nom de la base de données est identique au nom donné à l'instance. Ce champ en lecture seule affiche le chemin d'accès complet à la base de données.  
   
-2.  **Créer la base de données**: Cliquez sur **Create Database** pour créer la base de données.  
+2.  **Créer une base de données** : cliquez sur **Créer une base de données** pour créer la base de données.  
   
      Pour créer la base de données, la connexion doit posséder le rôle serveur `sysasmin` . Pour plus d'informations, consultez la remarque sur la sécurité ci-dessus.  
   

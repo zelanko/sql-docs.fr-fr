@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf954178516cef633dbe34c1b8b01579c8f3e4ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749052"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Actualisation planifiée des données et sources de données qui ne prennent pas en charge l'authentification Windows (PowerPivot pour SharePoint)
   Cette rubrique décrit un flux de travail d’actualisation planifiée des données PowerPivot pour SharePoint qui peut utiliser des sources de données qui **NE PRENNENT PAS EN CHARGE** l’authentification Windows. Par exemple, des sources de données Oracle ou IDM DB2. Les illustrations et les étapes figurant dans cette rubrique font référence à des sources de données Oracle, mais le même flux de travail s'applique aux autres sources de données.  
@@ -25,13 +25,13 @@ ms.locfileid: "53374861"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]** SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Vue d’ensemble :** Créez deux applications cibles Banque d'informations sécurisées. Configurez la première application cible (PowerPivotDataRefresh) en vue d'utiliser les informations d'identification Windows. Configurez la deuxième application cible avec les informations d'identification d'une source de données qui ne prend pas en charge l'authentification Windows, une base de données Oracle par exemple. La deuxième application cible utilise également la première application cible pour le compte d'actualisation des données sans assistance.  
+ **Vue d’ensemble :** Créez deux Store cible d’Applications sécurisées. Configurez la première application cible (PowerPivotDataRefresh) en vue d'utiliser les informations d'identification Windows. Configurez la deuxième application cible avec les informations d'identification d'une source de données qui ne prend pas en charge l'authentification Windows, une base de données Oracle par exemple. La deuxième application cible utilise également la première application cible pour le compte d'actualisation des données sans assistance.  
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh :** ID d'application cible de la Banque d'informations sécurisées qui est défini avec l'authentification Windows.  
+-   **(1) PowerPivotDatarefresh :** Un Secure Store ID d’Application cible qui est défini avec l’authentification windows.  
   
--   **(2) OracleAuthentication :** ID d'application cible de la Banque d'informations sécurisées qui est défini avec les informations d'identification Oracle.  
+-   **(2) OracleAuthentication :** Un Secure Store ID d’Application cible qui est défini avec les informations d’identification Oracle.  
   
 -   **(3)**  Application du PowerPivot Service est configurée pour utiliser l’application cible « PowerPivotDataRefresh » pour le **compte d’actualisation des données sans assistance**.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "53374861"
   
     -   **Adresse de messagerie du contact :** ?  
   
-    -   **Type d’Application cible :** Groupe.  
+    -   **Type d’Application cible :** groupe.  
   
     -   **URL de Page d’Application cible :** Aucun.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "53374861"
   
     -   **Adresse de messagerie du contact :** ?  
   
-    -   **Type d’Application cible :** Groupe.  
+    -   **Type d’Application cible :** groupe.  
   
     -   **URL de Page d’Application cible :** Aucun.  
   

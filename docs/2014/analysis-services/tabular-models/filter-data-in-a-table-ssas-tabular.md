@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d33148543677c58a353253a86bbdf99f1c892326
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48079699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62757210"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtrer des données dans une table (SSAS Tabulaire)
   Vous pouvez appliquer des filtres quand vous importez des données pour contrôler les lignes chargées dans une table. Une fois les données importées, vous ne pouvez pas supprimer de lignes individuelles. Toutefois, vous pouvez appliquer des filtres personnalisés pour contrôler la façon dont les lignes sont affichées. Les lignes qui ne répondent pas à ces critères de filtrage sont masquées. Vous pouvez filtrer les données sur une ou plusieurs colonnes. Les filtres sont additifs, ce qui signifie que chaque filtre supplémentaire est basé sur le filtre actuel et réduit davantage le sous-ensemble de données.  
@@ -53,8 +53,8 @@ ms.locfileid: "48079699"
 2.  Cliquez sur le menu **Colonne** , puis sur **Effacer tous les filtres**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtrer et trier des données &#40;SSAS tabulaire&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Perspectives &#40;SSAS tabulaire&#41;](perspectives-ssas-tabular.md)   
- [Rôles &#40;SSAS tabulaire&#41;](roles-ssas-tabular.md)  
+ [Filtrer et trier les données &#40;SSAS tabulaire&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabulaire&#41;](perspectives-ssas-tabular.md)   
+ [Rôles &#40;SSAS Tabulaire&#41;](roles-ssas-tabular.md)  
   
   

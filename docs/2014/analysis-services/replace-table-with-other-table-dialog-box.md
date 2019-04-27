@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17f87d063fd23ecc9ead9bfe097f21e74e011953
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748301"
 ---
 # <a name="replace-table-with-other-table-dialog-box"></a>Boîte de dialogue Remplacer la table par une autre table
   Utilisez la boîte de dialogue **Remplacer la table par une autre table** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour remplacer dans une vue de source de données une table existante par une table de la source de données sous-jacente qui n'est pas encore incluse dans la vue de source de données. Vous pouvez afficher la boîte de dialogue **Remplacer la table par une autre table** en cliquant avec le bouton droit sur le nom d’une table dans le volet **Diagramme** ou **Tables** du **Concepteur de vue de source de données** et en sélectionnant **Avec une autre table** dans **Remplacer la table**.  
@@ -29,7 +29,7 @@ ms.locfileid: "48173759"
  **Source de données**  
  Sélectionnez la source de données d'extraction de la table.  
   
- **Grille**  
+ **Grid**  
  Affiche les objets et leurs types disponibles dans la source de données sélectionnée, qui ne sont pas encore inclus dans la vue de source de données.  
   
  **Filter**  
@@ -40,6 +40,6 @@ ms.locfileid: "48173759"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de Source de données &#40;Analysis Services - données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

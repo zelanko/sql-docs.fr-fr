@@ -19,11 +19,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62770679"
 ---
 # <a name="sql-server-destination"></a>Destination SQL Server
   La destination SQL Server se connecte à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] locale et charge en masse des données dans des tables et des vues [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Vous ne pouvez pas utiliser la destination SQL Server dans des packages ayant accès à une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un serveur distant. Les packages doivent plutôt utiliser la destination OLE DB. Pour plus d’informations, consultez [OLE DB Destination](ole-db-destination.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "58374976"
  Les utilisateurs qui exécutent des packages incluant la destination SQL Server nécessitent l'autorisation « Create global objects » (Créer des objets globaux). Vous pouvez attribuer cette autorisation aux utilisateurs à l’aide de l’outil Stratégie de sécurité locale accessible dans le menu **Outils d’administration** . Si vous recevez un message d'erreur lors de l'exécution d'un package qui utilise la destination SQL Server, assurez-vous que le compte exécutant le package a l'autorisation « Create global objects » (Créer des objets globaux).  
   
 ## <a name="bulk-inserts"></a>Insertions en bloc  
- Si vous tentez d'utiliser la destination SQL Server pour charger en masse des données dans une base de données SQL Server distante, il est possible qu'un message d'erreur semblable au message suivant s'affiche : « Un enregistrement OLE DB est disponible. Source : "Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client" Hresult : 0x80040E14 Description : "Chargement en masse impossible car l'objet de mappage de fichier SSIS 'Global\DTSQLIMPORT ' n'a pas pu être ouvert. Code d'erreur du système d'exploitation 2 (Le système ne trouve pas le fichier spécifié.). Vérifiez que vous accédez à un serveur local par le biais de la sécurité Windows." »  
+ Si vous essayez d’utiliser la destination SQL Server en bloc des données de charge dans une base de données SQL Server distante, vous pouvez voir un message d’erreur semblable au suivant : « Un enregistrement OLE DB est disponible. Source : « Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client » Hresult : 0x80040E14 description : « Impossible chargement en masse, car l’objet de mappage de fichier SSIS 'Global\DTSQLIMPORT' n’a pas pu être ouvert. Code d'erreur du système d'exploitation 2 (Le système ne trouve pas le fichier spécifié.). Vérifiez que vous accédez à un serveur local par le biais de la sécurité Windows." »  
   
  La destination SQL Server offre la même insertion rapide de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que la tâche d’insertion en bloc ; toutefois, l’utilisation d’une destination SQL Server permet à un package d’appliquer des transformations à des données de colonne avant que les données ne soient chargées dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

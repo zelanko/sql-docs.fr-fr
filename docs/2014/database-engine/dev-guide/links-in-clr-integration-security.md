@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 37aa64129658128bd7297f147f317166917e05a6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781068"
 ---
 # <a name="links-in-clr-integration-security"></a>Liens dans la sécurité d'intégration du CLR
   Cette section décrit la façon dont les parties de code utilisateur peuvent s'appeler dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en langage [!INCLUDE[tsql](../../includes/tsql-md.md)] ou dans l'un des langages managés. Ces relations entre objets sont connues sous le nom de liens.  

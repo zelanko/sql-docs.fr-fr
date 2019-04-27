@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 5 : Créer des colonnes calculées | Microsoft Docs'
+title: 'Leçon 5 : Créer des colonnes calculées | Microsoft Docs'
 ms.date: 08/22/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5e23ca8ccf344ec9f250eac032946ac074a735d
-ms.sourcegitcommit: e8e013b4d4fbd3b25f85fd6318d3ca8ddf73f31e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/23/2018
-ms.locfileid: "42792180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752495"
 ---
-# <a name="lesson-5-create-calculated-columns"></a>Leçon 5 : Créer des colonnes calculées
+# <a name="lesson-5-create-calculated-columns"></a>Leçon 5 : Créer des colonnes calculées
 [!INCLUDE[ssas-appliesto-sql2016-later-aas](../includes/ssas-appliesto-sql2016-later-aas.md)]
 
 Dans cette leçon, vous allez créer des données dans votre modèle en ajoutant des colonnes calculées. Une colonne calculée est basée sur les données qui existent déjà dans votre modèle. Pour plus d’informations, consultez [Calculated Columns](../analysis-services/tabular-models/ssas-calculated-columns.md).  
   
 Vous allez créer cinq nouvelles colonnes calculées dans trois tables différentes. Les étapes sont légèrement différentes pour chaque tâche. Il s'agit de montrer qu'il existe plusieurs façons de créer de nouvelles colonnes, de les renommer, puis de les placer à différents emplacements dans une table.  
   
-Durée estimée pour effectuer cette leçon : **15 minutes**  
+Durée estimée pour effectuer cette leçon : **15 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
-Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [leçon 4 : créer des relations](../analysis-services/lesson-4-create-relationships.md). 
+Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 4 : Créer des relations](../analysis-services/lesson-4-create-relationships.md). 
   
 ## <a name="create-calculated-columns"></a>Créer des colonnes calculées  
   
@@ -52,7 +52,7 @@ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit
   
 5.  Renommer cette colonne **MonthCalendar**. 
 
-    ![en tant que-tabulaire-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
+    ![as-tabular-lesson5-newcolumn](../analysis-services/media/as-tabular-lesson5-newcolumn.png) 
   
 La colonne calculée MonthCalendar fournit un nom triable pour le mois.  
   
@@ -122,12 +122,12 @@ La colonne calculée ProductCategoryName est utilisée pour créer une hiérarch
   
 5.  Faites glisser la colonne entre la **SalesAmount** colonne et le **TaxAmt** colonne. 
  
-      ![en tant que-tabulaire-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
+      ![as-tabular-lesson5-newmargin](../analysis-services/media/as-tabular-lesson5-newmargin.png)
       
     La colonne calculée Margin est utilisée pour analyser les marges pour chaque vente.  
   
 ## <a name="whats-next"></a>Quelle est l’étape suivante ?
-Accédez à la leçon suivante : [Leçon 6 : créer des mesures](../analysis-services/lesson-6-create-measures.md).
+Accédez à la leçon suivante : [Leçon 6 : Créer des mesures](../analysis-services/lesson-6-create-measures.md).
   
   
   

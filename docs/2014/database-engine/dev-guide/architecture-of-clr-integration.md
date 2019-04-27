@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: febf7ccdc4a57f92a14048e3ddeea2d00bd9b32d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753861"
 ---
 # <a name="architecture-of-clr-integration"></a>Architecture d'intégration du CLR
   L'intégration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] avec le Common Language Runtime (CLR) .NET Framework permet aux programmeurs de base de données d'utiliser des langages tels que Visual C#, Visual Basic .NET et Visual C++. Les fonctions, procédures stockées, déclencheurs, types de données et agrégats sont parmi les types de logique métier que les programmeurs peuvent écrire avec ces langages.  

@@ -11,18 +11,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e97aed3a5a4f5b49e482479b58928d2092a314f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773785"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Utilisation d'index columnstore non cluster
-  Décrit les tâches clés pour l'utilisation d'un index columnstore non cluster sur une table [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+  Décrit les tâches clés pour l'utilisation d'un index columnstore non cluster sur une table [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
- Pour une vue d’ensemble des index columnstore, consultez [index Columnstore décrits](../relational-databases/indexes/columnstore-indexes-described.md).  
+ Pour une présentation des index columnstore, consultez [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md).  
   
- Pour plus d’informations sur les index columnstore en cluster, consultez [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
+ Pour plus d'informations sur les index columnstore cluster, consultez [Using Clustered Columnstore Indexes](../relational-databases/indexes/indexes.md).  
   
 ## <a name="contents"></a>Sommaire  
   

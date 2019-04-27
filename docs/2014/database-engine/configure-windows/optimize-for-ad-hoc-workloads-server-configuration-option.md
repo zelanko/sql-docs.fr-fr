@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7edf279b49374823c9083005be9b8d047b003f62
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781435"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads (option de configuration de serveur)
   L'option **optimize for ad hoc workloads** permet d'améliorer l'efficacité du cache du plan pour les charges de travail qui contiennent de nombreux lots ad hoc à usage unique. Lorsque cette option a la valeur 1, le [!INCLUDE[ssDE](../../includes/ssde-md.md)] stocke un petit stub du plan compilé dans le cache du plan lorsqu'un lot est compilé pour la première fois, au lieu du plan compilé complet. La mémoire est ainsi moins sollicitée car le cache du plan n'est pas saturé de plans compilés qui ne sont pas réutilisés.  

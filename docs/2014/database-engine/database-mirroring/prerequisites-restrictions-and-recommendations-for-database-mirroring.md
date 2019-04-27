@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9763385093db6e649e60ab7a6be74f8f28466e1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754599"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Conditions préalables, limitations et recommandations relatives à la mise en miroir de bases de données
     
@@ -110,7 +110,7 @@ ms.locfileid: "48164789"
   
  Le mode Haute sécurité avec basculement automatique est conçu pour un réseau de haute capacité équipé d'une connexion dédiée ou d'une configuration réseau relativement simple qui minimise les sources possibles de défaillance du réseau. Ce type d'environnement réseau de haute qualité est nécessaire au mode haute sécurité avec basculement automatique et est recommandé pour toutes les sessions de mise en miroir de bases de données. Toutefois, les modes Haute performance et Haute sécurité sans basculement automatique sont beaucoup moins tributaires de la fiabilité du réseau.  
   
- Par conséquent, pour les environnements de production, nous vous invitons à suivre les instructions de déploiement ci-dessous :  
+ Par conséquent, pour les environnements de production, nous vous invitons à suivre les instructions de déploiement ci-dessous :  
   
 1.  Lancez l'exécution en mode Haute performance, asynchrone. Ce mode est le moins sensible à l'environnement réseau et fournit la meilleure configuration pour explorer le fonctionnement de la mise en miroir. Nous vous recommandons d'exécuter votre système en mode asynchrone avant d'être certain que votre bande passante prend en charge la mise en miroir et pour vous permettre d'approfondir vos connaissances sur la configuration de la mise en miroir et sur les performances du mode asynchrone dans votre environnement. Pour plus d'informations, voir [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   

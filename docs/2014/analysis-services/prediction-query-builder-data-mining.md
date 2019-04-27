@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5e697003246ec00121c203a6b77fe68fed378fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748681"
 ---
 # <a name="prediction-query-builder-data-mining"></a>Générateur de requêtes de prédiction (exploration de données)
   Utilisez la vue **Prévision de modèle d'exploration de données** pour créer des prévisions basées sur les modèles d'exploration de données contenus dans une structure d'exploration de données.  
@@ -25,7 +25,7 @@ ms.locfileid: "48095049"
   
 -   [Tutoriel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
--   [Création et l’interrogation des modèles d’exploration de données avec DMX : didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+-   [Création et l’interrogation des modèles d’exploration de données avec DMX : Didacticiels &#40;Analysis Services - Exploration de données&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
 -   [Requêtes d’exploration de données](data-mining/data-mining-queries.md)  
   

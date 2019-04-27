@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5a749bb4da4511f30a231f6ab2dd05a35ebdb11d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779259"
 ---
 # <a name="full-text-search-backward-compatibility"></a>Compatibilité descendante de la recherche en texte intégral
   Les rubriques de la section qui traite de la compatibilité descendante décrivent les changements de comportement de la recherche en texte intégral entre les versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

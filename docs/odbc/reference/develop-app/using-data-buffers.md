@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: edddcb07702a33e6c2ce5f11feaf1716fc59573b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62751177"
 ---
 # <a name="using-data-buffers"></a>Utilisation des tampons de données
 Mémoires tampons de données sont décrits par trois éléments d’information : leur longueur en octets, l’adresse et type. Chaque fois qu’une fonction en a besoin de ces informations et ne connaissez pas déjà, il a un argument avec lequel l’application transmet.  

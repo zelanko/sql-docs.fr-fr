@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e3e3756f65baa7e1b62e3a84ff709a60b9c887b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754553"
 ---
 # <a name="mirroring-states-sql-server"></a>États de la mise en miroir (SQL Server)
   Pendant une session de mise en miroir de bases de données, la base de données mise en miroir est toujours dans un état spécifique (l’ *état de la mise en miroir*). L'état de la base de données reflète l'état de communication, le flux de données et les différences dans des données entre les partenaires. Une session de mise en miroir de bases de données adopte le même état que la base de données principale.  

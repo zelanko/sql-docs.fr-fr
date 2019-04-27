@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e347d942bf6541de9c16f34075e2d66817c3e347
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778920"
 ---
 # <a name="implementing-lob-columns-in-a-memory-optimized-table"></a>Implémentation de colonnes LOB dans une table mémoire optimisée
   Tables optimisées en mémoire n’ont pas de stockage d’objets hors ligne ou de grande taille (LOB) (cette limitation a été supprimée dans SQL Server 2016 et ultérieur - voir [pris en charge les Types de données pour OLTP en mémoire](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)), et la limite de taille de ligne est de 8 060 octets. Le stockage de valeurs de chaîne de caractères ou LOB peut être effectué de deux manières différentes :  

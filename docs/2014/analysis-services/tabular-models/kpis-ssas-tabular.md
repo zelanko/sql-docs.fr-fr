@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c0bf5769d20d806944a3b312ce0e65bc71c42aa
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756936"
 ---
 # <a name="kpis-ssas-tabular"></a>Indicateurs de performance clés (SSAS Tabulaire)
   Un *indicateur de performance clé* (KPI), dans un modèle tabulaire, permet de mesurer les performances d’une valeur, définies par une mesure de *base* par rapport à une valeur *cible*, également définie par une mesure ou par une valeur absolue. Cette rubrique fournit aux concepteurs de modèles tabulaires une présentation de base des indicateurs de performance clés dans un modèle tabulaire.  

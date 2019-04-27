@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 088d53d1257c4b0d4b141b1e090ab1174416d397
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746143"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Spécifier les critères de requêtes (Assistant Optimisation de l'utilisation)
   Utilisez la page **Spécifier les critères de requêtes** pour choisir unes ou plusieurs options de filtre afin d'identifier des requêtes à optimiser.  
@@ -28,7 +28,7 @@ ms.locfileid: "48088379"
   
 ## <a name="options"></a>Options  
  **Statistiques des journaux de requête**  
- Affiche des informations sur les requêtes stockées dans le journal pour les partitions sélectionnées. Les éléments suivants s'affichent :  
+ Affiche des informations sur les requêtes stockées dans le journal pour les partitions sélectionnées. Les éléments suivants s'affichent :  
   
 |Terme|Définition|  
 |----------|----------------|  

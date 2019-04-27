@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84946cd0dadd467e7998106f89868a5e9d401f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746341"
 ---
 # <a name="specify-table-types-data-mining-wizard"></a>Spécifier les types des tables (Assistant Exploration de données)
   Utilisez la page **Spécifier les types des tables** pour identifier la table à utiliser pour définir la structure d'exploration de données. Si une table n'est pas sélectionnée, elle ne sera pas utilisée pour définir la structure d'exploration de données.  
@@ -26,7 +26,7 @@ ms.locfileid: "48202639"
 > [!NOTE]  
 >  Vous pouvez ajouter des tables ultérieurement dans l’onglet **Structure d’exploration de données** du **Concepteur d’exploration de données**.  
   
- **Pour plus d’informations :** [Tables imbriquées &#40;Analysis Services - Exploration de données&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Tables imbriquées &#40;Analysis Services - Exploration de données&#41;](data-mining/nested-tables-analysis-services-data-mining.md), [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Tables**  
@@ -35,7 +35,7 @@ ms.locfileid: "48202639"
  **Cas**  
  Sélectionnez une table à utiliser comme table de cas.  
   
- **Imbriquées**  
+ **Nested**  
  Sélectionnez les tables à utiliser comme tables imbriquées  
   
 > [!NOTE]  

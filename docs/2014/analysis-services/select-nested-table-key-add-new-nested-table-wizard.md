@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72ab1727fc20f5eb47df7d933e9c7c42e598423b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48188929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747161"
 ---
 # <a name="select-nested-table-key-add-new-nested-table-wizard"></a>Sélectionner la clé de la table imbriquée (Assistant Ajouter une nouvelle table imbriquée)
   Utilisez la page **Sélectionner la clé de la table imbriquée** pour sélectionner l’attribut à utiliser comme clé de la table imbriquée.  
   
- **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Attributs**  

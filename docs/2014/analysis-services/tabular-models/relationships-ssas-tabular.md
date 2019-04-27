@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 979e379637f39bdcfb37c5b944ce6af45503f62a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756769"
 ---
 # <a name="relationships-ssas-tabular"></a>Relations (SSAS Tabulaire)
   Dans les modèles tabulaires, une relation est une connexion entre deux tables de données. La relation établit la façon dont les données des deux tables doivent être mises en corrélation. Par exemple, il est possible de créer une relation entre une table Clients et une table Commandes afin d'indiquer le nom du client associé à chaque commande.  
@@ -47,7 +47,7 @@ ms.locfileid: "48191739"
 ##  <a name="what"></a> Avantages  
  Une relation est une connexion entre deux tables de données, basée sur une ou plusieurs colonnes dans chaque table. Pour comprendre pourquoi les relations sont utiles, imaginez que vous effectuez le suivi des données des commandes client dans votre entreprise. Vous pouvez effectuer le suivi de toutes les données dans une table individuelle possédant une structure similaire à :  
   
-|CustomerID|Nom   |EMail|DiscountRate|OrderID|OrderDate|Product|Quantité|  
+|CustomerID|Nom|EMail|DiscountRate|OrderID|OrderDate|Produit|Quantité|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -57,7 +57,7 @@ ms.locfileid: "48191739"
   
 ### <a name="customers"></a>Customers  
   
-|[CustomerID]|Nom   |EMail|  
+|[CustomerID]|Nom|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -71,7 +71,7 @@ ms.locfileid: "48191739"
   
 ### <a name="orders"></a>Orders  
   
-|[CustomerID]|OrderID|OrderDate|Product|Quantité|  
+|[CustomerID]|OrderID|OrderDate|Produit|Quantité|  
 |--------------------|-------------|---------------|-------------|--------------|  
 |1|256|2010-01-07|Compact Digital|11|  
 |1|255|2010-01-03|SLR Camera|15|  
@@ -111,7 +111,7 @@ ms.locfileid: "48191739"
  Le générateur de modèles présente plusieurs conditions qui doivent être remplies lors de la création de relations :  
   
 ### <a name="single-active-relationship-between-tables"></a>Relation active unique entre des tables  
- Plusieurs relations pourraient générer des dépendances ambiguës entre des tables. Pour créer des calculs exacts, vous avez besoin d'un chemin d'accès unique entre une table et la table suivante. Par conséquent, il ne peut y avoir qu'une seule relation active entre chaque paire de tables. Par exemple, dans AdventureWorks DW 2012, la table DimDate contient une colonne DateKey qui est associée à trois colonnes différentes dans la table FactInternetSales : OrderDate, DueDate et ShipDate. Si vous tentez d'importer ces tables, la première relation est créée avec succès, mais vous recevrez l'erreur suivante sur les relations consécutives qui impliquent la même colonne :  
+ Plusieurs relations pourraient générer des dépendances ambiguës entre des tables. Pour créer des calculs exacts, vous avez besoin d'un chemin d'accès unique entre une table et la table suivante. Par conséquent, il ne peut y avoir qu'une seule relation active entre chaque paire de tables. Par exemple, dans AdventureWorks DW 2012, la table DimDate contient une colonne DateKey qui est associée à trois colonnes différentes dans la table FactInternetSales : OrderDate, DueDate et ShipDate. Si vous tentez d'importer ces tables, la première relation est créée avec succès, mais vous recevrez l'erreur suivante sur les relations consécutives qui impliquent la même colonne :  
   
  \* Relation : table [colonne 1] -> table [colonne 2] - état : erreur - raison : Impossible de créer une relation entre tables \<table 1 > et \<table 2 >. Une seule relation directe ou indirecte peut exister entre deux tables.  
   
@@ -187,11 +187,11 @@ ms.locfileid: "48191739"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer une relation entre deux Tables &#40;SSAS tabulaire&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Décrit comment créer manuellement une relation entre deux tables.|  
-|[Supprimer des relations &#40;SSAS tabulaire&#41;](relationships-ssas-tabular.md)|Décrit comment supprimer une relation et les conséquences de la suppression des relations.|  
+|[Créer une relation entre deux tables &#40;SSAS Tabulaire&#41;](create-a-relationship-between-two-tables-ssas-tabular.md)|Décrit comment créer manuellement une relation entre deux tables.|  
+|[Supprimer des relations &#40;SSAS Tabulaire&#41;](relationships-ssas-tabular.md)|Décrit comment supprimer une relation et les conséquences de la suppression des relations.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et colonnes &#40;SSAS tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
- [Importer des données &#40;SSAS tabulaire&#41;](../import-data-ssas-tabular.md)  
+ [Tables et colonnes &#40;SSAS Tabulaire&#41;](tables-and-columns-ssas-tabular.md)   
+ [Importer des données &#40;SSAS Tabulaire&#41;](../import-data-ssas-tabular.md)  
   
   

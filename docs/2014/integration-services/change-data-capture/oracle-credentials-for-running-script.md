@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12de97bf147ccb61cde5f82e2fa31782404071e4
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771110"
 ---
 # <a name="oracle-credentials-for-running-script"></a>Informations d'identification Oracle pour l'exécution d'un script
   Pour exécuter le script de journalisation supplémentaire Oracle à partir de la console du concepteur de capture de données modifiées Oracle, le programme vous invite à entrer les informations d'identification de l'utilisateur Oracle qui exécute le script. Pour exécuter ce script, l'utilisateur Oracle doit disposer de l'autorisation ALTER TABLE pour que toutes les tables soient capturées et de l'autorisation SELECT sur la vue DBA_LOG_GROUPS.  
@@ -29,7 +29,7 @@ ms.locfileid: "58388815"
   
 -   **Authentification Windows** : sélectionnez cette option pour utiliser les informations d’identification actuelles de domaine Windows. Vous ne pouvez utiliser cette option que si la base de données Oracle est configurée pour utiliser l'authentification Windows.  
   
--   **Authentification Oracle** : Si vous sélectionnez cette option, vous devez taper le **nom d’utilisateur** et **mot de passe** pour l’utilisateur dans la base de données Oracle Source à laquelle vous vous connectez à.  
+-   **Authentification Oracle** : si vous sélectionnez cette option, vous devez taper le **Nom d’utilisateur** et le **Mot de passe** de l’utilisateur dans la base de données Oracle source à laquelle vous vous connectez.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Procédure : gérer une instance de capture de données modifiées](manage-a-cdc-instance.md)   

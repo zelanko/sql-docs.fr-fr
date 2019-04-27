@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70903f580d55d674b099312c04a24632ac1d701
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743579"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Boîte de dialogue Propriétés de partition (SSMS)
   Utilisez la boîte de dialogue **Propriétés de partition** de SQL Server Management Studio pour définir les propriétés d'une partition pour un cube dans une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -37,7 +37,7 @@ ms.locfileid: "48113199"
 |**Configuration d’erreur**|Utilisez la page **Configuration d'erreur** pour afficher et modifier les paramètres de configuration des erreurs de traitement de la partition sélectionnée dans la page **Sélection** . Pour plus d’informations sur cette page, consultez [Configuration d’erreur pour le traitement des cubes, des partitions et des dimensions &#40;SSAS - Multidimensionnel&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Partitions distantes](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)  
   

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c73417ea9d74588c55177527abdbb42a33c4496e
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727079"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Attacher et détacher des bases de données Analysis Services
   Il existe souvent des cas où un administrateur de base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (dba) souhaite mettre une base de données hors connexion pendant un certain temps, puis la replacer en ligne sur la même (ou une autre) instance de serveur. Ces cas sont souvent motivés par des impératifs d’exploitation, tels que le déplacement de la base de données vers un autre disque afin d’obtenir de meilleures performances, le gain de place afin de permettre la croissance de la base de données, ou la mise à niveau d'un produit. Pour tous ces cas et bien plus encore, le `Attach` et `Detach` commandes activent le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba pour mettre la base de données hors connexion et la mettre en ligne avec peu d’efforts.  
@@ -47,7 +47,7 @@ ms.locfileid: "50144914"
   
 |Détachement d'une base de données en lecture/écriture|Détachement d'une base de données en lecture seule|  
 |--------------------------------------|-------------------------------------|  
-|1) Le serveur émet une demande de verrou CommitExclusive sur la base de données.<br />2) Le serveur attend que toutes les transactions en cours soient validées ou annulées.<br />3) Le serveur génère toutes les métadonnées dont il a besoin pour détacher la base de données.<br />4) La base de données est marquée comme supprimée.<br />5) Le serveur valide la transaction.|1) La base de données est marquée comme supprimée.<br />2) Le serveur valide la transaction.<br /><br /> <br /><br /> Remarque : le mot de passe qui sert à détacher la base de données ne peut pas être modifié pour une base de données en lecture seule. Une erreur est déclenchée si un paramètre de mot de passe est fourni pour une base de données attachée contenant déjà un mot de passe.|  
+|1) Le serveur émet une demande de verrou CommitExclusive sur la base de données.<br />2) Le serveur attend que toutes les transactions en cours soient validées ou annulées.<br />3) Le serveur génère toutes les métadonnées dont il a besoin pour détacher la base de données.<br />4) La base de données est marquée comme supprimée.<br />5) Le serveur valide la transaction.|1) La base de données est marquée comme supprimée.<br />2) Le serveur valide la transaction.<br /><br /> <br /><br /> Remarque : Impossible de modifier le mot de passe sert à détacher une base de données en lecture seule. Une erreur est déclenchée si un paramètre de mot de passe est fourni pour une base de données attachée contenant déjà un mot de passe.|  
   
  Les commandes `Attach` et `Detach` doivent être exécutées comme de simples opérations. Elles ne peuvent pas être combinées à d'autres opérations de la même transaction. En outre, le `Attach` et `Detach` commandes sont des commandes transactionnelles atomiques. Cela signifie que soit l'opération réussit, soit elle échoue. Aucune base de données ne demeurera dans un état inachevé.  
   

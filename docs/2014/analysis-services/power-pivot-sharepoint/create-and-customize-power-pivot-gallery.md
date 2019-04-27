@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f753856fbec3fe521cf23e6506c3b43e5dec481
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749607"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>Créer et personnaliser une Galerie PowerPivot
   La Galerie PowerPivot est un type de bibliothèque de documents SharePoint à usage spécial qui fournit des options d'aperçu et de gestion des documents pour les classeurs Excel publiés et les rapports Reporting Services contenant des données PowerPivot.  
@@ -137,7 +137,7 @@ ms.locfileid: "53358901"
 |----------|-----------------|  
 |Vue Galerie (valeur par défaut)|Galerie constitue la vue par défaut pour une Galerie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . L'aperçu s'affiche à gauche. Des miniatures plus petites de chaque feuille de calcul s'affichent en regard de celui-ci, en ordre séquentiel de gauche à droite.|  
 |Tous les documents|Il s'agit de la mise en page standard pour les bibliothèques de documents. Vous pouvez choisir cette vue pour gérer des documents individuels ou afficher le contenu de bibliothèques sous forme de liste.<br /><br /> Utilisez cette vue pour modifier des propriétés ou pour supprimer ou déplacer des documents.<br /><br /> Si vous avez activé le contrôle de version, vous devez utiliser cette vue pour archiver des documents dans la bibliothèque ou les en extraire.|  
-|Vue Théâtre et vue Carrousel|Ces vues spécialisées sont idéales pour exposer un petit nombre de documents connexes. La rotation complète des miniatures inclut toutes les pages de tous les documents de la bibliothèque. Si vous avez un grand nombre de documents, ces vues peuvent être impraticables pour les utilisateurs qui souhaitent trouver ou ouvrir un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifique.<br /><br /> Vue Théâtre : la zone d'aperçu est centrée. Des miniatures plus petites de chaque feuille de calcul s'affichent plus bas dans la page, des deux côtés.<br /><br /> Vue Carrousel : la zone d'aperçu est centrée. Les miniatures qui précèdent et suivent immédiatement la miniature actuelle sont adjacentes à la zone d'aperçu.|  
+|Vue Théâtre et vue Carrousel|Ces vues spécialisées sont idéales pour exposer un petit nombre de documents connexes. La rotation complète des miniatures inclut toutes les pages de tous les documents de la bibliothèque. Si vous avez un grand nombre de documents, ces vues peuvent être impraticables pour les utilisateurs qui souhaitent trouver ou ouvrir un classeur [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] spécifique.<br /><br /> Vue théâtre : La zone d’aperçu est centrée. Des miniatures plus petites de chaque feuille de calcul s'affichent plus bas dans la page, des deux côtés.<br /><br /> Vue carrousel : La zone d’aperçu est centrée. Les miniatures qui précèdent et suivent immédiatement la miniature actuelle sont adjacentes à la zone d'aperçu.|  
   
 ### <a name="switch-to-a-different-view"></a>Passer à une vue différente  
   

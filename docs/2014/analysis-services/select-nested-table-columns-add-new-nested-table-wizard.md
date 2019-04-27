@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e569dfba5470a6c8c13bb9caa0e36c9711119634
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747281"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Sélectionner les colonnes de la table imbriquée (Assistant Ajouter une nouvelle table imbriquée)
   Utilisez la page **Sélectionner les colonnes de la table imbriquée** pour sélectionner les attributs et les mesures à inclure dans la table imbriquée et pour définir comment le modèle d’exploration des données va les utiliser.  
   
- **Pour plus d’informations :** [Colonnes d’un modèle d’exploration de données](data-mining/mining-model-columns.md), [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Colonnes du modèle d’exploration de données](data-mining/mining-model-columns.md), [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Colonnes**  

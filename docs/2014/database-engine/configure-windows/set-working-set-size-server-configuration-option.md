@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4fe39e83507b8455fb25ba63812a75a7e9040990
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756241"
 ---
 # <a name="set-working-set-size-server-configuration-option"></a>set working set size (option de configuration de serveur)
   Cette option est toujours présente dans la procédure stockée **sp_configure** , mais ses fonctionnalités ne sont pas disponibles dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. (La valeur n'a pas d'effet.)  

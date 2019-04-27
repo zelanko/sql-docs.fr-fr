@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e8134b7a69df7254ce3609ddce24a15293c47efd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779731"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurer SQL Server sur une installation Server Core
   Cette rubrique fournit des détails sur la configuration de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur une installation Server Core de [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP1. 
@@ -238,7 +238,7 @@ $Tcp
 ##  <a name="use-troubleshooting-tools"></a>Utiliser les outils de dépannage  
  Vous pouvez utiliser [SQLdiag Utility](../../tools/sqldiag-utility.md) pour collecter des fichiers journaux et des fichiers de données à partir de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et depuis d'autres types de serveurs, mais aussi analyser vos serveurs au fil des jours ou trouver des solutions à des problèmes spécifiques les concernant. SQLdiag a été conçu pour accélérer et simplifier la collecte d'informations de diagnostic pour les services d'assistance Microsoft.  
   
- Vous pouvez lancer l'utilitaire dans l'invite de commandes d'administrateur sur Server Core, à l'aide de la syntaxe spécifiée dans la rubrique : [Utilitaire SQLdiag](../../tools/sqldiag-utility.md).  
+ Vous pouvez lancer l’utilitaire dans l’invite de commandes administrateur sur Server Core, à l’aide de la syntaxe spécifiée dans la rubrique : [Utilitaire SQLdiag](../../tools/sqldiag-utility.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Installer SQL Server 2014 sur Server Core](install-sql-server-on-server-core.md)   

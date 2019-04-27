@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dd78d7fb5f80b766dc7c51ae077d2a241c34d59c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768849"
 ---
 # <a name="use-property-expressions-in-packages"></a>Expressions de propriété dans des packages
   Une expression de propriété est une expression affectée à une propriété pour permettre la mise à jour dynamique de la propriété au moment de l'exécution. Par exemple, une expression de propriété peut mettre à jour la ligne À utilisée par une tâche Envoyer un message en insérant une adresse électronique qui est stockée dans une variable.  
@@ -125,7 +125,7 @@ ms.locfileid: "58376039"
   
  Si le nom du package est EmailRowCountPP, s'il a été exécuté le 03/04/2005 et que la durée de l'exécution était de 9 secondes, l'expression s'évalue à la chaîne.  
   
- PExpression-->Package : (EmailRowCountPP) Début : 3/4/2005 11:06:18 AM Durée : 9 secondes.  
+ PExpression--> Package : (EmailRowCountPP) Démarré : 3/4/2005 11:06:18 AM durée : 9 secondes.  
   
 ### <a name="property-expression-for-the-message-of-an-e-mail-message"></a>Expression de propriété pour le message d'un message électronique  
  L’expression de propriété suivante peut être utilisée pour définir la propriété MessageSource d’une tâche d’envoi de message. L'expression utilise une combinaison de littéraux de chaîne, de variables définies par l'utilisateur et l'opérateur de concaténation (+). Les variables définies par l’utilisateur sont appelées `nasdaqrawrows`, `nyserawrows`et `amexrawrows`. La chaîne "\n" indique un retour chariot.  
@@ -136,11 +136,11 @@ ms.locfileid: "58376039"
   
  Lignes traitées :  
   
- NASDAQ: 7058  
+ NASDAQ : 7058  
   
- NYSE: 3528  
+ WALL STREET : 3528  
   
- AMEX: 1102  
+ AMEX : 1102  
   
 ### <a name="property-expression-for-the-executable-property-of-an-execute-process-task"></a>Expression de propriété pour la propriété exécutable d'une tâche d'exécution de processus  
  L’expression de propriété suivante peut être utilisée pour définir la propriété Executable d’une tâche d’exécution de processus. L'expression utilise une combinaison de littéraux de chaîne, d'opérateurs et de fonctions. L'expression utilise les fonctions DATEPART et GETDATE et l'opérateur conditionnel.  

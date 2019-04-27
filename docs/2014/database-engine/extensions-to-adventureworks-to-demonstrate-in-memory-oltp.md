@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c2c7059c5c6ff6a770c1658d260da04f2a042ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779950"
 ---
 # <a name="extensions-to-adventureworks-to-demonstrate-in-memory-oltp"></a>Extensions à AdventureWorks pour présenter l'OLTP en mémoire
     
@@ -539,13 +539,13 @@ ostress.exe -S. -E -dAdventureWorks2014 -Q"EXEC Demo.usp_DemoReset"
 ###  <a name="Troubleshootingslow-runningtests"></a> Dépannage des tests lents  
  Les résultats des tests varient généralement selon le matériel, mais aussi selon le niveau de concurrence utilisé dans l'exécution du test. Voici quelques pistes à explorer, si les résultats ne sont pas tels que prévu :  
   
--   Nombre de transactions simultanées : lors de l'exécution de la charge de travail sur un seul thread, le gain de performances avec [!INCLUDE[hek_2](../includes/hek-2-md.md)] sera probablement inférieur à 2X. La contention de verrou n'est un problème que si le niveau de concurrence est élevé.  
+-   Nombre de transactions simultanées : Lors de l’exécution de la charge de travail sur un seul thread, le gain de performances avec [!INCLUDE[hek_2](../includes/hek-2-md.md)] sera probablement inférieur à 2 X. La contention de verrou n'est un problème que si le niveau de concurrence est élevé.  
   
--   Nombre faible de cœurs disponibles à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] : cela signifie qu'il y aura un niveau de simultanéité faible dans le système, car il ne peut pas y avoir plus de transactions simultanées en cours d'exécution que de cœurs disponibles pour SQL.  
+-   Nombre de cœurs disponibles à faible [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]: Cela signifie qu'il y aura un niveau de concurrence faible dans le système, car il ne peuvent avoir qu’autant de transactions qui s’exécutent simultanément car il y a de noyaux disponibles pour SQL.  
   
     -   Symptôme : si l'utilisation de l'UC est élevée lors de l'exécution de la charge de travail sur les tables sur disque, cela signifie qu'il n'y a pas beaucoup de contentions, et donc qu'il n'y a pas de concurrence.  
   
--   Vitesse du lecteur de journal : si le lecteur de journal n'arrive pas à suivre le débit des transactions dans le système, la charge de travail devient un goulot d'étranglement dans les E/S du journal. Bien que la journalisation soit plus efficace avec [!INCLUDE[hek_2](../includes/hek-2-md.md)], si le journal des E/S est congestionné, le gain de performance potentiel est limité.  
+-   Vitesse du lecteur de journal : Si le lecteur du journal ne peut pas suivre le niveau de débit des transactions dans le système, la charge de travail est congestionnée dans le journal d’e/s. Bien que la journalisation soit plus efficace avec [!INCLUDE[hek_2](../includes/hek-2-md.md)], si le journal des E/S est congestionné, le gain de performance potentiel est limité.  
   
     -   Symptôme : si l'utilisation de l'UC n'est pas proche de 100 % ou varie beaucoup pendant l'exécution de la charge de travail sur les tables mémoire optimisées, il est possible qu'il existe un goulot d'étranglement du journal des E/S. Cela peut être vérifié en ouvrant le moniteur de ressource et en examinant la longueur de la file d'attente du lecteur de journalisation.  
   
@@ -601,7 +601,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- Comme vous pouvez le constater, les tables sont assez petites : SalesOrderHeader_inmem a une taille d'environ 7 Mo et SalesOrderDetail_inmem a une taille d'environ 15 Mo.  
+ Comme vous pouvez le voir, les tables sont assez petites : SalesOrderHeader_inmem a une taille d’environ 7 Mo et SalesOrderDetail_inmem a une taille d’environ 15 Mo.  
   
  Ce qui est frappant ici est la taille de la mémoire allouée aux index, par rapport à la taille des données de table. Cela est dû au fait que les index de hachage de l'exemple sont prédimensionnés pour contenir plus de données. Notez que les index de hachage ont une taille fixe, par conséquent, leur taille n'augmente pas selon la taille des données de la table.  
   

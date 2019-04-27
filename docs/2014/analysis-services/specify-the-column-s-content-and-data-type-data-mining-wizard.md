@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc0fa58c45a49c6a2f09ca3e42df395cbaf20660
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745829"
 ---
 # <a name="specify-the-column39s-content-and-data-type-data-mining-wizard"></a>Spécifiez la colonne&#39;s contenu et le Type de données (Assistant exploration de données)
   La page **Spécifier le type de contenu et de données des colonnes** permet de modifier les types de colonne et de contenu qui ont déjà été définis par l’Assistant. L'Assistant utilise les types de données des colonnes sources et les capacités de l'algorithme sélectionné pour déterminer les types de données et de contenu par défaut de chaque colonne.  
   
- **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Colonnes**  
@@ -35,7 +35,7 @@ ms.locfileid: "48118979"
  **Type de données**  
  Types de données attribués à chaque colonne. Cliquez dans une cellule pour modifier le type de données. Pour plus d’informations sur les types de données, consultez [Types de données &#40;exploration de données&#41;](data-mining/data-types-data-mining.md).  
   
- **Détecter**  
+ **Detect**  
  Cliquez sur cette option pour détecter automatiquement les types de contenu continu et discret d'une colonne numérique. Ceci ne s'applique pas aux structures d'exploration de données basées sur les sources de données OLAP. Pour les structures d'exploration de données OLAP, l'Assistant détecte automatiquement les types de contenu et en choisit un compatible avec l'algorithme sélectionné.  
   
 ## <a name="see-also"></a>Voir aussi  

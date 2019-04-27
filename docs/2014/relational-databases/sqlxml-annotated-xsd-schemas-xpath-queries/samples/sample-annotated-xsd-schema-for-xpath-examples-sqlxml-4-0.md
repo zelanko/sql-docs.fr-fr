@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4702ad3ab9c36a5859064d1efe4b055decae8ae4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740449"
 ---
 # <a name="sample-annotated-xsd-schema-for-xpath-examples-sqlxml-40"></a>Exemple de schéma XSD annoté pour les exemples XPath (SQLXML 4.0)
   Les exemples de requêtes XPath de cette section font référence à un schéma de mappage. Le schéma de mappage est un fichier de schéma XML (XSD) annoté. Pour plus d’informations sur les schémas de mappage, consultez [Introduction aux schémas XSD annotés &#40;SQLXML 4.0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md).  

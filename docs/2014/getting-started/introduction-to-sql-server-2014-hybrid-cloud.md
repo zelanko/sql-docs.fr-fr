@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89344537c53c4caf066536804557451c965e4596
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772325"
 ---
 # <a name="introduction-to-sql-server-2014-hybrid-cloud"></a>Introduction au cloud hybride SQL Server 2014
  La plupart des applications sont confrontées à des défis, tels qu'assurer une efficacité maximale ou une valeur commerciale, ou bien gérer des configurations matérielles complexes ou des pics importants à la demande, tout en respectant les règlements du secteur et de l'entreprise. Compte tenu de tous ces facteurs, la création d'une technologie de niveau enterprise est une tâche complexe. La stratégie de cloud hybride Microsoft prend en charge les environnements de cloud computing traditionnels, privés, publics et hybrides pour surmonter ces difficultés. 

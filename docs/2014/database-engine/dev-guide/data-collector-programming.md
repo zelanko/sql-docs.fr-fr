@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 11da8d77f5ea97dc435b9af23090d1d34da0f05c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753113"
 ---
 # <a name="data-collector-programming"></a>Programmation du collecteur de données
   L'API du collecteur de données, dans <xref:Microsoft.SqlServer.Management.Collector>, autorise le contrôle par programmation de toutes les opérations de configuration par le biais du modèle objet. Par ailleurs, la plupart des opérations de collecte de données qui utilisent l'API sont implémentées en tant que procédures stockées installées sur le serveur.  

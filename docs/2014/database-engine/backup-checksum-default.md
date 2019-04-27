@@ -10,11 +10,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1db1ae871082ffe5b638e249592c75064eba47fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788798"
 ---
 # <a name="backup-checksum-default"></a>paramètre par défaut de la somme de contrôle de sauvegarde
   Utilisez le paramètre par défaut de la somme de contrôle de sauvegarde pour activer ou désactiver la somme de contrôle de sauvegarde lors d’une sauvegarde et d’une restauration.  
@@ -25,7 +25,7 @@ ms.locfileid: "48126732"
 |-|-|  
 |**Valeur**|**Signification**|  
 |0|Désactivé. Il s'agit du paramètre par défaut.|  
-|1|Activé|  
+|1|Enabled|  
   
  Ce paramètre prend effet immédiatement.  
   

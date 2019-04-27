@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96604a09811626a304502dc05ef4f7e9edcd0359
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771227"
 ---
 # <a name="how-to-edit-the-cdc-instance-properties"></a>Procédure : modifier les propriétés d'une instance de capture de données modifiées
   Cette procédure décrit comment utiliser la console du concepteur CDC pour modifier les propriétés de configuration d'une instance de capture de données modifiées.  
@@ -34,15 +34,15 @@ ms.locfileid: "58390847"
   
 5.  Dans l'éditeur de propriétés, modifiez les propriétés dans les onglets suivants :  
   
-    -   **Oracle**: Utilisez le **Oracle** onglet dans l’éditeur de propriétés pour apporter des modifications à la description que vous avez fourni dans la page de base de données CDC créer dans l’Assistant Nouvelle Instance et pour apporter des modifications aux informations de connexion de base de données Oracle journal d’exploration de données.  
+    -   **Oracle** : Utilisez l'onglet **Oracle** de l'éditeur de propriétés pour apporter des modifications à la description que vous avez fournie dans la page Créer une base de données CDC de l'Assistant Nouvelle instance et pour apporter des modifications aux informations de connexion à la base de données d'exploration de données de journaux Oracle.  
   
          Pour plus d'informations sur ce que vous pouvez modifier dans cet onglet, consultez [Edit the Oracle Database Properties](edit-the-oracle-database-properties.md).  
   
-    -   **Tables**: Utilisez l'onglet **Tables** pour apporter des modifications aux tables et aux colonnes sélectionnées dans la base de données source Oracle.  
+    -   **Tables** : Utilisez l'onglet **Tables** pour apporter des modifications aux tables et aux colonnes sélectionnées dans la base de données source Oracle.  
   
          Pour plus d'informations sur ce que vous pouvez modifier dans cet onglet, consultez [Edit Tables](edit-tables.md).  
   
-    -   **Scripts**: Utilisez le **Scripts** onglet à exécuter ou réexécuter un script sur la base de données source Oracle qui configure une journalisation supplémentaire.  
+    -   **Scripts** : L’onglet **Scripts** permet d’exécuter ou de réexécuter un script sur la base de données source Oracle qui configure une journalisation supplémentaire.  
   
          Pour plus d'informations sur ce que vous pouvez faire dans cet onglet, consultez [Review and Generate Supplemental Logging Scripts](review-and-generate-supplemental-logging-scripts.md).  
   

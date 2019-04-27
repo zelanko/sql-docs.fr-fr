@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ee1b63c13c7187ad99e77706e4b9550be77e816
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743465"
 ---
 # <a name="partitions-cube-designer-analysis-services---multidimensional-data"></a>Partitions (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   L'onglet **Partitions** du Concepteur de cube permet de créer et de modifier des partitions, notamment les paramètres de stockage, de mise en cache proactive et d'écriture différée, pour chaque groupe de mesures inclus dans le cube.  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0e4f36dab5b953b1a631f4510e11bba47798bf62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754522"
 ---
 # <a name="pausing-and-resuming-database-mirroring-sql-server"></a>Suspendre et reprendre la mise en miroir de bases de données (SQL Server)
   Le propriétaire de la base de données peut suspendre et reprendre ultérieurement une session de mise en miroir de bases de données à tout moment. La suspension conserve l'état de la session tout en suspendant la mise en miroir. En cas de goulots, la suspension peut permettre d'améliorer les performances sur le serveur principal.  
@@ -50,7 +50,7 @@ ms.locfileid: "48061461"
 >  Pour plus d'informations sur les points de contrôle et la troncature du journal, consultez [Points de contrôle de base de données &#40;SQL Server&#41;](../../relational-databases/logs/database-checkpoints-sql-server.md).  
   
 ##  <a name="AvoidFullLog"></a> Éviter la saturation du journal des transactions  
- Si le journal est plein (soit parce qu'il a atteint sa taille maximum, soit parce que l'instance du serveur manque de place), la base de données ne peut plus effectuer de mises à jour. Pour éviter ce problème, vous avez deux solutions :  
+ Si le journal est plein (soit parce qu'il a atteint sa taille maximum, soit parce que l'instance du serveur manque de place), la base de données ne peut plus effectuer de mises à jour. Pour éviter ce problème, vous avez deux solutions :  
   
 -   Reprendre la session de mise en miroir de base de données avant que le journal ne soit plein, ou ajouter un espace journal supplémentaire. La reprise de la mise en miroir de bases de données permet au serveur principal d'envoyer son journal actif cumulé au serveur miroir et met la base de données miroir en état SYNCHRONIZING. Le serveur miroir peut alors renforcer le journal sur le disque et commencer à le refaire.  
   

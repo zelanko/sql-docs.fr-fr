@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 49ee4726c0270f69122b50d61a2066ec0c165e60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48177972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62740779"
 ---
 # <a name="view-attributes-in-a-tree-list-or-grid-in-dimension-designer"></a>Afficher les attributs dans une arborescence, une liste ou une grille à l'aide du Concepteur de dimensions
   Cette procédure explique comment modifier la manière dont les attributs sont affichés dans le Générateur de dimension.  

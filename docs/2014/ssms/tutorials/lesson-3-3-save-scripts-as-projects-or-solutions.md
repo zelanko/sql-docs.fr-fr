@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6d17dd44f597d7b3ddfce574670e9e6bfd55f908
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753039"
 ---
 # <a name="save-scripts-as-projects-or-solutions"></a>Enregistrer des scripts sous forme de projets ou de solutions
   Les développeurs familiarisés avec [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio seront heureux de pouvoir utiliser l'Explorateur de solutions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Les scripts sur lesquels votre activité est basée peuvent être groupés en projets de scripts et ces projets être gérés ensemble sous la forme d'une solution. Lorsque les scripts sont placés dans des projets de scripts et des solutions, il est possible de les ouvrir en groupe ou de les enregistrer ensemble dans un produit de contrôle du code source tel que Visual SourceSafe. Les projets de scripts contiennent les informations de connexion pour que les scripts puissent s'exécuter correctement et peuvent inclure des fichiers non script tels que des fichiers texte.  

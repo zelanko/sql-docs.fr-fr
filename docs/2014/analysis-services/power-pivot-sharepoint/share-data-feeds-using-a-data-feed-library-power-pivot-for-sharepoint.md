@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1df9d79a6e7852e331edcb2b37396283aeedccb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749198"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Partager des flux de données à l'aide d'une bibliothèque de flux de données (PowerPivot pour SharePoint)
   Un flux de données est un flux de données XML généré à partir d'un service ou d'une application qui expose des données au format câble Atom. Son utilisation pour transporter des données entre applications et vers des visionneuses côté client est de plus en plus répandue. Dans un déploiement PowerPivot pour SharePoint, les flux de données sont utilisés pour remplir un [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] source de données contenant des données à partir d’une application prenant en charge Atom ou un service.  
@@ -35,7 +35,7 @@ ms.locfileid: "48178549"
   
  [Modifier un document de service de données](#modifydsdoc)  
   
- [Étape suivante : utiliser un document de service de données](#usedsdoc)  
+ [Étape suivante : Utiliser un Document de Service de données](#usedsdoc)  
   
 > [!NOTE]  
 >  Bien que les flux de données soient utilisés pour ajouter des données web à une source de données [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que vous créez dans [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)], toute application cliente qui peut lire un flux Atom peut traiter un document de service de données.  
@@ -110,7 +110,7 @@ ms.locfileid: "48178549"
 > [!IMPORTANT]  
 >  Bien que le document de service de données ne soit lu qu'une seule fois, les services de données qui fournissent les données réelles peuvent faire l'objet d'accès à intervalles réguliers pour obtenir des flux plus récents. Pour plus d’informations sur l’actualisation des données, consultez [d’actualisation des données PowerPivot](power-pivot-data-refresh.md).  
   
-##  <a name="usedsdoc"></a> Étape suivante : utiliser un document de service de données  
+##  <a name="usedsdoc"></a> Étape suivante : Utiliser un Document de Service de données  
  Pour utiliser un document de service de données que vous avez créé dans une bibliothèque SharePoint, vous utilisez le **à partir de flux de données** option dans une source de données PowerPivot d’importation. Pour obtenir des instructions, consultez [utiliser des flux de données &#40;PowerPivot pour SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ## <a name="see-also"></a>Voir aussi  

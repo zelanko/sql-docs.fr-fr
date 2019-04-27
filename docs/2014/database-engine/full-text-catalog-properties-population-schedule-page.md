@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8094d481af3fef9db8bb7ef9ab45fc5c66ff7e11
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778821"
 ---
 # <a name="full-text-catalog-properties-population-schedule-page"></a>Propriétés du catalogue de texte intégral (page Planification du remplissage)
   Cette boîte de dialogue vous permet d'ajouter et de modifier des planifications qui déterminent quand le catalogue de texte intégral sera rempli ou rempli à nouveau.  

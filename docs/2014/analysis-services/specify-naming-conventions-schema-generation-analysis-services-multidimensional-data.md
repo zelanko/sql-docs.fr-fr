@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0cbf9d1e9a26c6a9c64cf93974ae9198a13cbf6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746272"
 ---
 # <a name="specify-naming-conventions-schema-generation-wizard-analysis-services---multidimensional-data"></a>Spécifier les conventions de nom (Assistant Génération de schéma) (Analysis Services - Données multidimensionnelles)
   Utilisez la page **Spécifier les conventions de nom** pour définir les conventions de nom utilisées par l'Assistant Génération de schéma lors de la création des objets de schéma.  

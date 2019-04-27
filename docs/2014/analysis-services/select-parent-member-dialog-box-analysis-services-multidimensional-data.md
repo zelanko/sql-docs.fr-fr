@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ba9b6439938461b6cb9cbe4146f0046cc1f7cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747191"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Sélectionnez le membre parent (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Sélectionnez le membre parent** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour sélectionner un membre parent d'un membre calculé. Pour afficher la boîte de dialogue **Sélectionnez le membre parent** , cliquez sur **Modifier** dans le volet **Éditeur de formulaire de membre calculé** de l'onglet **Calculs** du Concepteur de cube.  

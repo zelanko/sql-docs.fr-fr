@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7776ed3550d5bfa8caec4c017c46946e31845af
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755915"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>Ce que&#39;s inclus dans les données des compléments d’exploration de données pour Office
   Lorsque vous installez les Compléments d'exploration de données pour Office 2013, et sélectionnez toutes les options d'installation, les barres d'outils et les modèles suivants sont ajoutés :  
@@ -47,7 +47,7 @@ ms.locfileid: "52519087"
   
      Pour l'analyse de données, il est essentiel de connaître quelles données utiliser et comment les préparer. Cette rubrique permet d'obtenir des conseils sur la façon de préparer vos données pour créer le meilleur modèle possible.  
   
-     Si vous débutez avec l'exploration de données et souhaitez faire des essais avec les outils, nous vous recommandons d'utiliser le classeur d'exemple de données qui est installé avec les compléments. En examinant ces données, vous pouvez également afficher des exemples de préparation des données pour les modèles de série chronologique ou les modèles d'association.  
+     Si vous débutez avec l’exploration de données et que vous souhaitez faire des essais avec les outils, nous vous recommandons d’utiliser le classeur d’exemples de données qui sont installés avec les compléments. En examinant ces données, vous pouvez également voir des exemples montrant comment préparer les données pour les modèles de série chronologique ou des modèles d’association.  
   
      **Exemples de données**  
   

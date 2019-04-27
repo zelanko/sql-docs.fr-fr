@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cab25b1e9501cf1081d0885fa2bf81a9b1065012
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746472"
 ---
 # <a name="specify-nested-join-dialog-box-mining-accuracy-chart-view"></a>Boîte de dialogue Spécifier la jointure imbriquée (vue Graphique d'analyse de précision de l'exploration de données)
   La boîte de dialogue **Spécifier la jointure imbriquée** crée une relation entre la table imbriquée et la table de cas. Pour ouvrir la boîte de dialogue **Spécifier la jointure imbriquée** , sélectionnez la table imbriquée et cliquez sur **Modifier la jointure**.  

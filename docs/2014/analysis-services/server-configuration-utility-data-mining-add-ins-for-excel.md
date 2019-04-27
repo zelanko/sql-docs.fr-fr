@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e7a40b0cbcab787b6aa29abaa828aedcce8f5c6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746801"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Utilitaire de configuration du serveur (Compléments d'exploration de données pour Excel)
-  Lorsque vous installez des compléments d'exploration de données pour Excel, un utilitaire de configuration de serveur est également installé, et s'exécutera la première fois que vous ouvrez les compléments. Cette rubrique explique comment utiliser l'utilitaire pour vous connecter à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et installer une base de données pour travailler avec les modèles d'exploration de données.  
+  Lorsque vous installez les compléments d’exploration de données pour Excel, un utilitaire de Configuration du serveur est également installé et s’exécutera la première fois que vous ouvrez les compléments. Cette rubrique décrit comment utiliser l’utilitaire pour se connecter à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] et configurer une base de données pour l’utilisation des modèles d’exploration de données.  
   
 
   
@@ -45,7 +45,7 @@ ms.locfileid: "48069630"
   
  L'Assistant commence par détecter les paramètres du serveur spécifié. Si le serveur autorise déjà les modèles d’exploration de données temporaire, vous pouvez cliquer sur **suivant** pour continuer. L'Assistant fournit également des instructions pour activer les modèles d'exploration de données temporaires sur le serveur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] spécifié, ou pour en faire la demande à votre administrateur [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
-##  <a name="bkmk_step3"></a> Étape 3 : Créer la base de données pour les utilisateurs des compléments  
+##  <a name="bkmk_step3"></a> Étape 3 : Créer la base de données pour les utilisateurs des compléments  
  Dans cette page de l'Assistant Installation et configuration, vous créez une nouvelle base de données qui est dédiée à l'exploration de données, ou vous sélectionnez une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existante.  
   
 > [!WARNING]  
@@ -67,7 +67,7 @@ ms.locfileid: "48069630"
  **Sauvegarde de la base de données**  
  Si vous choisissez d'utiliser une base de données existante, vous devez sélectionner son nom dans la liste.  
   
-##  <a name="bkmk_step4"></a> Étape 4 : Donner les autorisations appropriées aux utilisateurs des compléments  
+##  <a name="bkmk_step4"></a> Étape 4 : Accorder des autorisations appropriées aux utilisateurs des compléments  
  Assurez-vous que vous-même (et les autres utilisateurs des compléments) bénéficiez des autorisations nécessaires pour parcourir, modifier, traiter ou créer des structures et des modèles d'exploration de données.  
   
  Par défaut, l'Authentification Windows intégrée est un préalable de l'utilisation des compléments.  

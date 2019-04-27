@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f773eb7fb512b9b1ae14b14a13717ecc8f42599f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747241"
 ---
 # <a name="lock-manager-properties"></a>Propriétés du gestionnaire de verrous
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prend en charge les propriétés du serveur du gestionnaire de verrous répertoriées dans le tableau suivant. Pour plus d'informations sur les autres propriétés de serveur et la façon de les configurer, consultez [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
- **S'applique à :** mode serveur multidimensionnel et tabulaire  
+ **S’applique à :** Mode serveur multidimensionnel et tabulaire  
   
 ## <a name="properties"></a>Properties  
  `DefaultLockTimeoutMS`  
@@ -42,6 +42,6 @@ ms.locfileid: "48198759"
   
 ## <a name="see-also"></a>Voir aussi  
  [Configurer les propriétés du serveur dans Analysis Services](server-properties-in-analysis-services.md)   
- [Déterminer le mode serveur d’une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Déterminer le mode serveur d'une instance Analysis Services](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 49e14c0a68ad901e8d22388c7edd993744c9afc7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737535"
 ---
 # <a name="specifying-relational-operators-in-xpath-queries-sqlxml-40"></a>Spécification d'opérateurs de relation dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "56030641"
 </ROOT>  
 ```  
   
-### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>b. Spécifier l'opérateur relationnel dans la requête XPath et utiliser une fonction booléenne pour comparer le résultat  
+### <a name="b-specify-relational-operator-in-the-xpath-query-and-use-boolean-function-to-compare-the-result"></a>B. Spécifier l'opérateur relationnel dans la requête XPath et utiliser une fonction booléenne pour comparer le résultat  
  Cette requête retourne tous les  **\<ordre >** éléments enfants du nœud de contexte qui ont un **SalesPersonID** attribut la valeur est inférieure à 270 :  
   
 ```  
@@ -95,7 +95,7 @@ ms.locfileid: "56030641"
 ```  
   
 > [!NOTE]  
->  Lorsque cette requête est spécifiée dans un modèle, le caractère < doit être encodé sous forme d'entité < car il a une signification spéciale dans un document XML. Dans un modèle, utilisez `<` pour spécifier le caractère <.  
+>  Lorsque cette requête est spécifiée dans un modèle, le < caractère doit être encodée, car le < caractère a une signification spéciale dans un document XML. Dans un modèle, utilisez `<` pour spécifier le < caractère.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Pour tester la requête XPath par rapport au schéma de mappage  
   

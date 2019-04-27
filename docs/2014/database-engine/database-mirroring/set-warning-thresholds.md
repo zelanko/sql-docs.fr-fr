@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 09f9cc460368109e3e1a7fd7464602182bf188e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754137"
 ---
 # <a name="set-warning-thresholds"></a>Définir les seuils d'avertissement
   Utilisez cette boîte de dialogue pour activer et configurer un ou plusieurs seuils d'avertissement pour la base de données sélectionnée dans l'arborescence de navigation de la boîte de dialogue **Moniteur de mise en miroir de bases de données** .  
@@ -65,7 +65,7 @@ ms.locfileid: "48195472"
  **Avertissements**  
  Répertorie les avertissements pris en charge :  
   
-|Avertissement|Description|  
+|Warning|Description|  
 |-------------|-----------------|  
 |**Avertir si le journal non envoyé dépasse le seuil**|Ce seuil indique la taille en kilo-octets (Ko) du journal non envoyé dans la file d'attente d'envoi sur le principal.|  
 |**Avertir si le journal non restauré dépasse le seuil**|Ce seuil indique la taille (en Ko) de la file d'attente de restauration sur l'instance du serveur miroir.|  

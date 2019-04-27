@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755032"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Vue d'ensemble du moniteur de mise en miroir de bases de données
   Si vous disposez des autorisations appropriées, vous pouvez utiliser le moniteur de mise en miroir de bases de données pour surveiller un sous-ensemble quelconque des bases de données mises en miroir sur une instance de serveur. La surveillance permet de vérifier si et comment les données circulent dans la session de mise en miroir de bases de données. Le moniteur de mise en miroir de bases de données permet de déterminer la cause d'une réduction du flux de données.  

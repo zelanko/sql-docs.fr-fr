@@ -17,11 +17,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ed4ae6c15a16c3db009145f7daa995988ac04fbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753681"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Problèmes de mise à niveau de Reporting Services (Conseiller de mise à niveau)
   Les rubriques suivantes décrivent les [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] problèmes susceptibles d’affecter votre mise à niveau vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Les rubriques décrivent les mesures que vous pouvez prendre pour atténuer l’effet de ces modifications sur votre environnement.  

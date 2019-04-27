@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754241"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Déterminer le nombre de compartiments correct pour les index de hachage
   Vous devez spécifier une valeur pour le paramètre `BUCKET_COUNT` lorsque vous créez la table mémoire optimisée. Cette rubrique fournit des recommandations pour déterminer la valeur appropriée du paramètre `BUCKET_COUNT`. Si vous ne pouvez pas déterminer le nombre de compartiments correct, utilisez un index non cluster à la place.  Une valeur `BUCKET_COUNT` incorrecte, en particulier une valeur trop basse, peut avoir un impact important sur les performances de la charge de travail, ainsi que sur le temps de récupération de la base de données. Il vaut mieux surestimer le nombre de compartiments.  

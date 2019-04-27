@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9ca751ff6cf83b648e722a7577042adc0eb02681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62744526"
 ---
 # <a name="sphelplogshippingalertjob-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sp_help_log_shipping_alert_job
 ## <a name="remarks"></a>Notes  
  **sp_help_log_shipping_alert_job** doit être exécuté à partir de la **master** base de données sur le serveur moniteur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Seuls les membres de la **sysadmin** rôle serveur fixe peut exécuter cette procédure.  
   
 ## <a name="see-also"></a>Voir aussi  

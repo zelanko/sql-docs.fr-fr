@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_file_space_usage (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b803b86c216d877c0e056dd4892931575ca91010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741935"
 ---
 # <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47837997"
 |user_object_reserved_page_count|**bigint**|Nombre total de pages allouées à partir d'étendues uniformes pour les objets utilisateur de la base de données. Ce nombre inclut les pages non utilisées provenant d'une étendue allouée.<br /><br /> Les pages IAM ne sont pas incluses parce qu'elles sont toujours allouées à partir d'étendues mixtes. Les pages PFS sont incluses si elles sont allouées à partir d'une étendue uniforme.<br /><br /> Vous pouvez utiliser la colonne total_pages le [sys.allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) vue pour retourner le nombre de pages réservées de chaque unité d’allocation dans l’objet utilisateur de catalogue. Notez toutefois que la colonne total_pages inclut les pages IAM.|  
 |internal_object_reserved_page_count|**bigint**|Nombre total de pages d'étendues uniformes allouées pour des objets internes dans le fichier. Ce nombre inclut les pages non utilisées provenant d'une étendue allouée.<br /><br /> Les pages IAM ne sont pas incluses parce qu'elles sont toujours allouées à partir d'étendues mixtes. Les pages PFS sont incluses si elles sont allouées à partir d'une étendue uniforme.<br /><br /> Il n'existe pas d'affichage catalogue ni d'objet de gestion dynamique qui retourne le nombre de pages de chaque objet interne.|  
 |mixed_extent_page_count|**bigint**|Nombre total de pages allouées et non allouées dans les étendues mixtes allouées du fichier. Les étendues mixtes contiennent des pages allouées à différents objets. Ce nombre comprend toutes les pages IAM du fichier.|
-|modified_extent_page_count|**bigint**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Nombre total de pages modifiées dans allouée étendues du fichier depuis la dernière sauvegarde de base de données complète. Le nombre de pages modifiées peut être utilisé pour effectuer le suivi de la quantité de modifications différentielles dans la base de données depuis la dernière sauvegarde complète, à décider si la sauvegarde différentielle est nécessaire.|
+|modified_extent_page_count|**bigint**|**S’applique à** : [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br />Nombre total de pages modifiées dans allouée étendues du fichier depuis la dernière sauvegarde de base de données complète. Le nombre de pages modifiées peut être utilisé pour effectuer le suivi de la quantité de modifications différentielles dans la base de données depuis la dernière sauvegarde complète, à décider si la sauvegarde différentielle est nécessaire.|
 |pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
 |distribution_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Id numérique unique associé à la distribution.|  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47837997"
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|Un à un|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

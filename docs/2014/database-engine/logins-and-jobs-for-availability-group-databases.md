@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a19d5d39a3133ffc664f5ea7050645e2a28a8a20
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774281"
 ---
 # <a name="management-of-logins-and-jobs-for-the-databases-of-an-availability-group-sql-server"></a>Gestion des connexions et des travaux pour les bases de données d'un groupe de disponibilité (SQL Server)
   Vous devez maintenir régulièrement le même ensemble de connexions utilisateur et de travaux de l'Agent [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur chaque base de données primaire d'un groupe de disponibilité AlwaysOn et les bases de données secondaires correspondantes. Les connexions et les travaux doivent être reproduits sur chaque instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui héberge un réplica de disponibilité pour le groupe de disponibilité.  

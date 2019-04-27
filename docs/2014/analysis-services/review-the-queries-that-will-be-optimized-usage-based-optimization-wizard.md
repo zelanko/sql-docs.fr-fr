@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa9e0f98df874ec7da9525fd361b67bf5331b41
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748171"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>Vérifier les requêtes qui seront optimisées (Assistant Optimisation de l'utilisation)
   La page **Vérifier les requêtes qui seront optimisées** permet d’afficher et de sélectionner les requêtes récupérées du journal des requêtes que l’Assistant Optimisation de l’utilisation utilise ensuite pour concevoir les agrégations des partitions sélectionnées.  
   
 ## <a name="options"></a>Options  
- **(Sélectionner)**  
+ **(Select)**  
  Activez la case à cocher de la requête pour laquelle vous souhaitez concevoir des agrégations.  
   
  **Demande du client**  

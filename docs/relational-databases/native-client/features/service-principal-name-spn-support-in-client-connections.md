@@ -17,11 +17,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 415e1a46734eeed97457a6235a0d9912b17e232b
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745271"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Prise en charge des noms de principaux du service (SPN) dans les connexions clientes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,18 +73,18 @@ ms.locfileid: "53979965"
  Le nouveau comportement de connexion est implémenté par le client ; par conséquent, il n'est pas spécifique à une version de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Serveurs liés et délégation  
- Quand des serveurs liés sont créés, le paramètre **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) peut être utilisé pour spécifier les noms de principal du service du serveur et du partenaire de basculement. Les avantages de cette opération sont les mêmes que la spécification des noms principaux de service dans les chaînes de connexion client : il est plus facile et plus fiable d'établir des connexions qui utilisent l'authentification Kerberos.  
+ Quand des serveurs liés sont créés, le paramètre **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) peut être utilisé pour spécifier les noms de principal du service du serveur et du partenaire de basculement. Les avantages de cette opération sont les mêmes que ceux offerts par la spécification des noms principaux de service dans les chaînes de connexion au client : Il est plus simple et plus fiable d’établir des connexions qui utilisent l’authentification Kerberos.  
   
  La délégation avec des serveurs liés requiert l'authentification Kerberos.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Aspects liés à la gestion des noms principaux de service spécifiés par les applications  
  Au moment de choisir s'il faut spécifier des noms principaux de service dans une application (via les chaînes de connexion) ou par programme via les propriétés de connexion (au lieu de recourir aux noms principaux de service par défaut générés par le fournisseur), prenez en considération les facteurs suivants :  
   
--   Sécurité : est-ce que le nom de principal de service spécifié divulgue des informations protégées ?  
+-   Sécurité : Le nom SPN spécifié divulgue des informations protégées ?  
   
--   Fiabilité : pour permettre l'utilisation des noms principaux de service par défaut, le compte de service dans lequel s'exécute l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] doit avoir des privilèges suffisants pour mettre à jour Active Directory sur le centre de distribution de clés.  
+-   Fiabilité : Pour activer l’utilisation de noms principaux de service par défaut, le compte de service dans lequel le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] s’exécute d’instance doit disposer des privilèges suffisants pour mettre à jour d’Active Directory sur le contrôleur de domaine Kerberos.  
   
--   Commodité et transparence de l'emplacement : comment les noms de principaux du service d'une application sont-ils affectés si la base de données correspondante est déplacée vers une autre instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ? Cela s'applique à la fois au serveur principal et à son partenaire de basculement, si vous utilisez la mise en miroir de bases de données. Si une modification du serveur signifie une modification des noms principaux de service, comment cela affecte-t-il les applications ? Est-ce que les modifications sont gérées ?  
+-   Transparence de commodité et l’emplacement : Comment les SPN d’une application affectés si sa base de données est déplacée vers un autre [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance ? Cela s'applique à la fois au serveur principal et à son partenaire de basculement, si vous utilisez la mise en miroir de bases de données. Si une modification du serveur signifie une modification des noms principaux de service, comment cela affecte-t-il les applications ? Est-ce que les modifications sont gérées ?  
   
 ## <a name="specifying-the-spn"></a>Spécification du nom principal de service  
  Vous pouvez spécifier un nom principal de service dans les boîtes de dialogue et dans le code. Cette section explique comment vous pouvez spécifier un nom principal de service.  

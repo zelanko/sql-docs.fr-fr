@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62778940"
 ---
 # <a name="full-text-index-properties-general-page"></a>Propriétés d'index de recherche en texte intégral (page Général)
   **Pour afficher ou modifier les propriétés modifiables d’un index de recherche en texte intégral**  
@@ -86,7 +86,7 @@ ms.locfileid: "48072459"
  **Nombre d’éléments de la recherche en texte intégral de table**  
  Indique le nombre de lignes qui ont été correctement indexées en texte intégral.  
   
- Cette propriété correspond à la `TableFulltextItemCount` propriété retournée par la OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)] (fonction).  
+ Cette propriété correspond à la propriété `TableFulltextItemCount` retournée par la fonction OBJECTPROPERTYEX [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  **Documents traités de la recherche en texte intégral table**  
  Affiche le nombre de lignes qui ont été traitées depuis le démarrage de l'indexation de texte intégral. Dans une table en cours d'indexation pour une recherche en texte intégral, toutes les colonnes d'une ligne sont considérées comme faisant partie d'un même document à indexer. Les lignes supprimées ne sont pas comptées.  
@@ -119,7 +119,7 @@ ms.locfileid: "48072459"
   
 |||  
 |-|-|  
-|**True**|Activé|  
+|**True**|Enabled|  
 |**False**|Désactivé|  
   
  **Suivi des modifications**  
@@ -129,7 +129,7 @@ ms.locfileid: "48072459"
   
 |||  
 |-|-|  
-|**Hors tension**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
+|**Off**|L'index de recherche en texte intégral n'est pas mis à jour avec les modifications des données sous-jacentes.|  
 |**Manual**|L'index de recherche en texte intégral n'est pas mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes. Toutefois, les modifications apportées aux données sous-jacentes sont conservées et vous pouvez les propager à l'index de recherche en texte intégral soit de manière planifiée à l'aide de l'Agent SQL Server, soit de façon manuelle.|  
 |**Automatic**|L'index de recherche en texte intégral est mis à jour automatiquement au fur et à mesure des modifications des données sous-jacentes dans la table de base.|  
   
@@ -139,7 +139,7 @@ ms.locfileid: "48072459"
 |||  
 |-|-|  
 |**Complet**|Au cours d'un remplissage complet d'une table, les entrées d'index sont créées pour toutes les lignes.|  
-|**Incrémentielle**|Le remplissage incrémentiel permet de mettre à jour l'index de recherche en texte intégral pour les lignes ajoutées, supprimées ou modifiées après le dernier remplissage ou pendant l'exécution de ce dernier. Effectuer un remplissage incrémentiel nécessite que la table de base contienne une colonne de la `timestamp` type de données.|  
+|**Incremental**|Le remplissage incrémentiel permet de mettre à jour l'index de recherche en texte intégral pour les lignes ajoutées, supprimées ou modifiées après le dernier remplissage ou pendant l'exécution de ce dernier. Pour effectuer un remplissage incrémentiel, il est nécessaire que la table de base contienne une colonne du type de données `timestamp`.|  
 |**Update**|L'index de recherche en texte intégral est mis à jour chaque fois que les données de la table de base sont modifiées.|  
   
 ## <a name="see-also"></a>Voir aussi  

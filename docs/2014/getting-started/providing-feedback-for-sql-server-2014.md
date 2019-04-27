@@ -23,11 +23,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 10466721f50dd8b090b5d6b1a06b5bffd6e5289d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62772276"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>Envoi de commentaires sur SQL Server 2014
   [!INCLUDE[msCoName](../includes/msconame-md.md)] vous remercie de l'aide que vous lui apportez afin d'améliorer ses produits [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et leur documentation. Vous pouvez transmettre vos suggestions et rapports de bogues sur les caractéristiques et l'interface utilisateur d'un produit, soumettre des commentaires sur la documentation, ou envoyer automatiquement des rapports d'erreurs et des données sur l'utilisation à [!INCLUDE[msCoName](../includes/msconame-md.md)] en vue de leur analyse. Chacune de ces trois options d'envoi de commentaires est décrite ici.  

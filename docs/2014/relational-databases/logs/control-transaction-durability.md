@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a90d40b158acf786ccb5bcdf962c2d6077c59dd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743165"
 ---
 # <a name="control-transaction-durability"></a>Contrôler la durabilité d'une transaction
   Les validations de transactions[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent avoir une durabilité complète, la durabilité par défaut de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou une durabilité retardée (également appelée Validation différée).  
@@ -131,7 +131,7 @@ AS BEGIN ATOMIC WITH
 END  
 ```  
   
-### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : durabilité dans les blocs atomiques  
+### <a name="table-1-durability-in-atomic-blocks"></a>Tableau 1 : Durabilité dans les blocs atomiques  
   
 |Option de durabilité de bloc atomique|Aucune transaction existante|Transaction en cours (à durabilité complète ou retardée)|  
 |------------------------------------|-----------------------------|---------------------------------------------------------|  
@@ -169,7 +169,7 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
   
 -   Exécutez la procédure stockée système `sp_flush_log`. Cette procédure force le vidage sur le disque des enregistrements de journal de toutes les transactions à durabilité retardée déjà validées. Pour plus d’informations, consultez [sys.sp_flush_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-flush-log-transact-sql).  
   
-##  <a name="delayed-durability-and-other-sql-server-features"></a>Durabilité retardée et autres fonctionnalités de SQL Server  
+##  <a name="delayed-durability-and-other-sql-server-features"></a>Durabilité retardée et autres fonctionnalités SQL Server  
  **Suivi des modifications et capture de données modifiées**  
  Toutes les transactions avec suivi des modifications ont une durabilité complète. Une transaction présente la propriété de suivi des modifications si elle effectue des opérations d’écriture dans des tables qui sont activées pour le suivi des modifications. L’utilisation de la durabilité différée n’est pas prise en charge pour les bases de données qui utilisent la capture de données modifiées (CDC).   
   

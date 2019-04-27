@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c76fda112acae7b8a9314d217f5c32d197e87f9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775629"
 ---
 # <a name="upgrade-data-quality-services"></a>Mettre à niveau Data Quality Services
   Cette rubrique fournit des informations sur la mise à niveau de votre installation existante de Data Quality Services (DQS) vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Dans le cadre de la mise à niveau de Data Quality Server dans DQS vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous devez également mettre à niveau le schéma de bases de données DQS.  

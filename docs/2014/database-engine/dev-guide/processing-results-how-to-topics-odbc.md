@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: acd65a4dfc708c88dd30b6d2e15b189c0d340849
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780794"
 ---
 # <a name="processing-results-how-to-topics-odbc"></a>Traitement des rubriques Comment relatives aux résultats (ODBC)
   Le traitement des résultats dans une application ODBC implique tout d’abord déterminer les caractéristiques du jeu de résultats, puis récupérer les données dans des variables de programme à l’aide [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) ou [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) .  

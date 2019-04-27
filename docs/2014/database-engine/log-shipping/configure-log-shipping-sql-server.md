@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7533eb253ba32dd8ef2d57c3182096b36a6e47b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774583"
 ---
 # <a name="configure-log-shipping-sql-server"></a>Configurer la copie des journaux de transaction (SQL Server)
   Cette rubrique explique comment configurer une copie des journaux de transaction dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -52,7 +52,7 @@ ms.locfileid: "48049239"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les procédures stockées de copie des journaux de transaction nécessitent l’appartenance au rôle serveur fixe **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -78,7 +78,7 @@ ms.locfileid: "48049239"
   
 8.  Notez la planification de la sauvegarde figurant dans la zone **Planification** sous **Travail de sauvegarde**. Si vous souhaitez personnaliser la planification pour votre installation, cliquez ensuite sur **Planification** et ajustez la planification de l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en fonction de vos besoins.  
   
-9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Lors de la création d'une configuration de copie des journaux de transaction, vous pouvez contrôler le comportement de compression de la sauvegarde pour les sauvegardes de journaux en choisissant l'une des options suivantes : **Utiliser le paramètre du serveur par défaut**, **Compresser la sauvegarde**ou **Ne pas compresser la sauvegarde**. Pour plus d’informations, consultez [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
+9. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] prend en charge la [compression de la sauvegarde](../../relational-databases/backup-restore/backup-compression-sql-server.md). Lorsque vous créez une configuration d’envoi de journaux, vous pouvez contrôler le comportement de compression des sauvegardes de journaux en choisissant une des options suivantes : **Utilisez le paramètre de serveur par défaut**, **compresser la sauvegarde**, ou **ne pas compresser la sauvegarde**. Pour plus d’informations, consultez [Log Shipping Transaction Log Backup Settings](../../relational-databases/databases/log-shipping-transaction-log-backup-settings.md).  
   
 10. Cliquez sur **OK**.  
   

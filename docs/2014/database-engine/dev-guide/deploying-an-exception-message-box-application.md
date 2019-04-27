@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 162c878c5d39356f08f01c4eb51a0f88e3ed2d45
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753256"
 ---
 # <a name="deploying-an-exception-message-box-application"></a>Déploiement d'une application de boîte de message d'exception
   La boîte de message d’exception est installée par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est pris en charge pour une utilisation dans vos applications Windows personnalisées pour améliorer la gestion des exceptions. La boîte de message d’exception étant installée par toutes les éditions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sauf [!INCLUDE[ssEW](../../includes/ssew-md.md)], vous pouvez l’utiliser sans aucune configuration supplémentaire sur n’importe quel ordinateur sur lequel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] composants clients, y compris le Kit de développement logiciel, ont été installés.  

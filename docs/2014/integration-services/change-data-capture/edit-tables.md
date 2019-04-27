@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c80f562b36e775ebcbbb3dd30a97fdb0bf61cb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771335"
 ---
 # <a name="edit-tables"></a>Modifier des tables
   Utilisez l'onglet **Tables** pour apporter des modifications aux tables et aux colonnes sélectionnées dans la base de données source Oracle. Cet onglet contient les éléments suivants :  
@@ -25,11 +25,11 @@ ms.locfileid: "58385976"
  **Liste Table**  
  La liste de tables comporte trois colonnes :  
   
--   **Nom de la Table Oracle**: Le nom de la table, y compris le schéma de table.  
+-   **Nom de la table Oracle** : Nom de la table, y compris du schéma de la table.  
   
--   **Instance de capture**: Le nom de l’instance de capture utilisée pour nommer des objets de capture de données de modification de spécifique à l’instance. L'instance de capture ne peut pas être NULL. S'il n'est pas spécifié, le nom est dérivé du nom de schéma d'origine associé au nom de table source au format `<schema-name>_<table-name>.` . Le nom de l'instance de capture ne peut pas dépasser 100 caractères et doit être unique dans la base de données. Vous pouvez cliquer dans n’importe quelle cellule de cette colonne pour modifier manuellement **capture_instance**.  
+-   **Instance de capture** : Nom de l’instance de capture utilisée pour nommer les objets de capture de données modifiées spécifiques à l’instance. L'instance de capture ne peut pas être NULL. S'il n'est pas spécifié, le nom est dérivé du nom de schéma d'origine associé au nom de table source au format `<schema-name>_<table-name>.` . Le nom de l'instance de capture ne peut pas dépasser 100 caractères et doit être unique dans la base de données. Vous pouvez cliquer dans n’importe quelle cellule de cette colonne pour modifier manuellement **capture_instance**.  
   
--   **Rôle de sécurité**: Le nom du rôle de base de données utilisé pour accéder aux données modifiées. Vous pouvez cliquer dans n’importe quelle cellule de cette colonne pour modifier manuellement **security_role**.  
+-   **Rôle de sécurité** : Nom du rôle de base de données utilisé pour obtenir l'accès aux données modifiées. Vous pouvez cliquer dans n’importe quelle cellule de cette colonne pour modifier manuellement **security_role**.  
   
  **Ajouter des tables**  
  Cliquez sur **Ajouter des tables** pour ouvrir la boîte de dialogue Sélection de table dans laquelle vous pouvez [ajouter des tables à une instance de capture de données modifiées](add-tables-to-a-cdc-instance.md). Lorsque vous accédez pour la première fois à la base de données Oracle, vous devez [Connect to Oracle](connect-to-oracle.md).  

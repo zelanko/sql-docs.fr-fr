@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1a75160826fad9df3e6a401e72cc85b5a8c8c6e7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780956"
 ---
 # <a name="send-dataset-sample"></a>Exemple Send DataSet
   L'exemple Send `DataSet` montre comment retourner un `DataSet` basé sur ADO.NET dans une procédure stockée CLR (Common Language Runtime) côté serveur en tant que jeu de résultats au client. Cette opération est utile lorsque, par exemple, ce type de procédure stockée remplit un `DataSet` à l'aide des résultats d'une requête, puis manipule les données contenues dans ce `DataSet`. C'est également utile si la procédure stockée crée et remplit un `DataSet` de toutes pièces. L'exemple est composé de deux classes, `DataSetUtilities` et `TestSendDataSet`. La méthode `SendDataSet` sur la classe `DataSetUtilities` implémente une méthode globale pour transmettre le contenu d'une instance de `DataSet` au client. La méthode `DoTest` définie sur la classe `TestSendDataSet` s'assure que la méthode `SendDataSet` fonctionne en créant un `DataSet` et en le remplissant de données provenant de la procédure stockée `uspGetTwoBOMTestData` Transact-SQL. `uspGetTwoBOMTestData` exécute la procédure stockée Transact-SQL exécute la procédure stockée `uspGetBillOfMaterials` à deux reprises pour interroger de manière récursive la nomenclature de deux produits spécifiés en tant que paramètres pour la procédure stockée `usp_GetTwoBOMTestData` . Généralement, après avoir rempli le jeu de données, les données sont modifiées avant d'appeler `SendDataSet` pour remettre les données dans le jeu de données, sous la forme d'un jeu de résultats au client. Mais, à des fins de simplicité, cet exemple retourne les données sans modification.  

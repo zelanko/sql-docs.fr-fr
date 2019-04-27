@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ebc622c0adb9fe2422c1cd215de36b6ba79057c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780830"
 ---
 # <a name="preparing-to-use-smo"></a>Préparation à l'utilisation de SMO
   Cette section contient des informations sur la mise en route avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). La liste suivante vous aidera à localiser les informations relatives aux styles de syntaxe dans la documentation, à la configuration requise pour la programmation dans SMO, aux fichiers et numéros de version, à la description des nouveautés dans SMO et à l'installation de SMO.  

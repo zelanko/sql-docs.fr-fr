@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 42ae16970e59e2eac1af68e54a38b19bd760c068
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779899"
 ---
 # <a name="exclude-files-from-source-control"></a>Exclure des fichiers du contrôle de code source
   Si la solution que vous travaillez sur contient des fichiers qui ne nécessitent pas de services de contrôle de code source, vous pouvez utiliser la **exclure du contrôle de Source** commande pour exclure le fichier de contrôle de code source. Lorsque vous effectuez cette opération, le fichier reste dans la base de données de [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe, mais il ne fait plus l'objet d'archivage ni d'extraction dans le cadre du projet.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a1d9e03f71f1dbcf2f00cce5185ec0e2b237b4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748503"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Boîte de dialogue Paramètres de la requête (MDX)
   Utilisez la boîte de dialogue **Paramètres de la requête** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour ajouter des paramètres à des requêtes MDX utilisées pour définir des jeux, des dimensions et des sous-cubes. Vous pouvez afficher la boîte de dialogue **Paramètres de la requête** en cliquant sur l'icône **Paramètres** dans la boîte de dialogue **Générateur de requêtes MDX** .  

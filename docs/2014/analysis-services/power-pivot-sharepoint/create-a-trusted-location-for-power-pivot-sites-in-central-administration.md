@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e73468de8edd2497409c37acb2c00bfaf79ebd2c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749413"
 ---
 # <a name="create-a-trusted-location-for-powerpivot-sites-in-central-administration"></a>Créer un emplacement approuvé pour les sites PowerPivot dans l'Administration centrale
   Excel Services vous permet de spécifier les emplacements qui constituent des référentiels valides pour les classeurs que vous ouvrez sur un serveur SharePoint. Ces emplacements sont appelés « emplacements approuvés ». Vous pouvez utiliser des paramètres de configuration différents pour chaque emplacement approuvé créé. Pour un déploiement de PowerPivot pour SharePoint, vous envisagez peut être de créer un emplacement approuvé pour les sites qui contiennent des classeurs PowerPivot, pour pouvoir appliquer les paramètres les plus appropriés à l'accès aux données PowerPivot tout en conservant les paramètres par défaut pour le reste de la batterie.  

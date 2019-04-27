@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 21b3c477c87861d224d72a52dcce89ceacf7bb3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756571"
 ---
 # <a name="restore-from-powerpivot"></a>Restaurer à partir de PowerPivot
   Utilisez la fonctionnalité Restaurer à partir de PowerPivot dans SQL Server Management Studio pour créer une nouvelle base de données model tabulaire sur une instance Analysis Services (exécution en mode tabulaire), ou restaurer une base de données existante dans un classeur PowerPivot (.xlsx).  
@@ -49,7 +49,7 @@ ms.locfileid: "48146649"
 5.  Dans **Options**, conservez l'option **Inclure des informations sur la sécurité** activée. Lors de la restauration à partir d'un classeur PowerPivot, ce paramètre ne s'applique pas.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Bases de données Model tabulaire &#40;SSAS tabulaire&#41;](tabular-model-databases-ssas-tabular.md)   
+ [Bases de données model tabulaires #40;SSAS Tabulaire#41;](tabular-model-databases-ssas-tabular.md)   
  [Importation à partir de PowerPivot &#40;SSAS tabulaire&#41;](import-from-power-pivot-ssas-tabular.md)  
   
   

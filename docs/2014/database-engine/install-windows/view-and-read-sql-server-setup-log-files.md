@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858654"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774321"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Afficher et lire les fichiers journaux d’installation de SQL Server
   Chaque exécution du programme d’installation crée des fichiers journaux sont créés dans un nouveau dossier de journal horodaté à % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\. Le format du nom du dossier de journal horodaté est AAAAMMJJ_hhmmss. Lorsque le programme d'installation est exécuté en mode sans assistance, les journaux sont créés à l'emplacement % temp%\sqlsetup*.log. Tous les fichiers du dossier de journal sont archivés dans le fichier Log\*.cab dans leur dossier de journal respectif.  
@@ -77,7 +77,7 @@ ms.locfileid: "51858654"
   
 -   l'emplacement du fichier du rapport de règles.  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Celui-ci se trouve dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\.  
   
  Pour trouver les erreurs dans le fichier texte résumé, recherchez les mots clés « error » ou « failed » dans le fichier.  
@@ -87,7 +87,7 @@ ms.locfileid: "51858654"
 ### <a name="overview"></a>Vue d'ensemble  
  Le fichier de base summary_engine est semblable au fichier résumé et est généré au cours du flux de travail principal.  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Celui-ci se trouve dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammjj_hhmm >\\.  
   
 ## <a name="summaryengine-baseyyyymmddhhmmsscomponentupdatetxt"></a>Summary_engine-base_YYYYMMDD_HHMMss_ComponentUpdate.txt  
@@ -95,7 +95,7 @@ ms.locfileid: "51858654"
 ### <a name="overview"></a>Vue d'ensemble  
  Le fichier journal résumé de mise à jour des composants est semblable au fichier résumé et est généré au cours du flux de travail de mise à jour des composants.  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Celui-ci se trouve dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammjj_hhmm >\\.  
   
 ## <a name="summaryengine-baseversionnumbermmddhhmmssglobalrulestxt"></a>Summary_engine-base_\<numéro_version>MMJJ_HHMMss_GlobalRules.txt  
@@ -103,7 +103,7 @@ ms.locfileid: "51858654"
 ### <a name="overview"></a>Vue d'ensemble  
  Le fichier journal résumé des règles globales est semblable au fichier résumé généré au cours du flux de travail des règles globales.  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Celui-ci se trouve dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammjj_hhmm >\\.  
   
 ## <a name="detailtxt"></a>Detail.txt  
@@ -111,7 +111,7 @@ ms.locfileid: "51858654"
 ### <a name="overview"></a>Vue d'ensemble  
  Detail.txt est généré pour le flux de travail principal, par exemple l'installation ou la mise à niveau, et fournit les détails de l'exécution. Les journaux dans le fichier sont générés en fonction de l'heure à laquelle chaque action pour l'installation a été appelée, et indiquent l'ordre dans lequel les actions ont été exécutées et leurs dépendances.  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Celui-ci se trouve dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup  
   
  Bootstrap\Log\\<AAAAMMJJ_HHMM>\Detail.txt.  
@@ -123,7 +123,7 @@ ms.locfileid: "51858654"
 ### <a name="overview"></a>Vue d'ensemble  
  Le fichier Detail_ComponentUpdate.txt est généré pour le flux de travail de mise à jour des composants et est semblable au fichier Detail.txt.  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Celui-ci se trouve dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammjj_hhmm >\\.  
   
 ## <a name="detailglobalrulestxt"></a>Detail_GlobalRules.txt  
@@ -131,7 +131,7 @@ ms.locfileid: "51858654"
 ### <a name="overview"></a>Vue d'ensemble  
  Le fichier Detail_GlobalRules.txt est généré pour l'exécution des règles globales et est semblable au fichier Detail.txt.  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Celui-ci se trouve dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammjj_hhmm >\\.  
   
 ## <a name="msi-log-files"></a>Fichiers journaux MSI  
@@ -147,7 +147,7 @@ ms.locfileid: "51858654"
   
 -   \<Fonctionnalité>_\<Architecture>\_\<Interaction>\_\<FLux_de_travail>.log  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Les fichiers journaux MSI se trouvent dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammjj_hhmm >\\< nom\>. journal.  
   
  À la fin du fichier se trouve un résumé de l'exécution qui indique l'état de réussite ou d'échec et les propriétés. Pour trouver l'erreur dans le fichier MSI, recherchez « value 3 ». Les erreurs se trouvent généralement à proximité de cette chaîne.  
@@ -157,7 +157,7 @@ ms.locfileid: "51858654"
 ### <a name="overview"></a>Vue d'ensemble  
  Le fichier de configuration contient les paramètres d'entrée fournis au cours de l'installation. Vous pouvez l'utiliser pour redémarrer l'installation sans entrer les paramètres manuellement. Toutefois, les mots de passe pour les comptes, PID et certains paramètres ne sont pas enregistrés dans le fichier de configuration. Les paramètres peuvent être soit ajoutés au fichier, soit fournis à l'aide de la ligne de commande ou de l'interface utilisateur du programme d'installation. Pour plus d’informations, consultez [installer SQL Server 2014 avec un fichier de Configuration](install-sql-server-using-a-configuration-file.md).  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Celui-ci se trouve dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammjj_hhmm >\\.  
   
 ## <a name="systemconfigurationcheckreporthtm"></a>SystemConfigurationCheck_Report.htm  
@@ -165,7 +165,7 @@ ms.locfileid: "51858654"
 ### <a name="overview"></a>Vue d'ensemble  
  Le rapport de vérification de la configuration du système contient une brève description de chaque rôle exécuté et de l'état d'exécution.  
   
-### <a name="location"></a>Emplacement  
+### <a name="location"></a>Location  
  Celui-ci se trouve dans % ProgramFiles%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\Setup Bootstrap\Log\\< aaaammjj_hhmm >\\.  
   
 ## <a name="see-also"></a>Voir aussi  

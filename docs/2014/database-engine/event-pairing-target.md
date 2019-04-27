@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7907ec8b5fa2e450a1a9e3e73c82bf8511da64ca
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48127939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780410"
 ---
 # <a name="event-pairing-target"></a>Cible d'appariement d'événements
   La cible d'appariement d'événements correspond à deux événements qui utilisent une ou plusieurs colonnes de données qui sont présentes dans chaque événement. De nombreux événements se présentent sous forme de paires, tels que les acquisitions et les libérations de verrous. Une fois qu'une séquence d'événement a été couplée, les deux événements sont ignorés. Ignorer des jeux correspondants permet de détecter facilement les acquisitions de verrous qui n'ont pas été libérées.  

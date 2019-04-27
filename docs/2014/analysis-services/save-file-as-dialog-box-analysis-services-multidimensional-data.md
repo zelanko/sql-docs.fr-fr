@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a58daa6e66f591dee73f823b3a401ae9ac45d80a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748021"
 ---
 # <a name="save-file-as-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Enregistrer le fichier sous (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Enregistrer le fichier sous** contient la liste des fichiers disponibles dans les dossiers des journaux et de données définis pour une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez sélectionner un des fichiers répertoriés ou spécifier un dossier et un fichier manuellement. Vous pouvez afficher la boîte de dialogue **Enregistrer le fichier sous** en :  

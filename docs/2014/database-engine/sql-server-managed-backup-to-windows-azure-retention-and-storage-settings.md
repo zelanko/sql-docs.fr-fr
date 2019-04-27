@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f9f9db58c48e74a91ec85972befb206ed3fb07f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773540"
 ---
 # <a name="sql-server-managed-backup-to-windows-azure---retention-and-storage-settings"></a>Sauvegarde managée SQL Server sur Windows Azure - Paramètres de rétention et de stockage
   Cette rubrique décrit les étapes de base requises pour configurer la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour une base de données, et pour configurer les paramètres par défaut de l'instance. Elle décrit également les étapes nécessaires pour interrompre et reprendre les services de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] pour l'instance.  
@@ -44,7 +44,7 @@ ms.locfileid: "52534484"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Pour exécuter les procédures stockées d’activation [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)], vous devez être un un `System Administrator` ou un membre dans le **db_backupoperator** rôle de base de données avec **ALTER ANY CREDENTIAL** autorisations et `EXECUTE` autorisations sur le **sp_delete_backuphistory**, et `smart_admin.sp_backup_master_switch` des procédures stockées.  Les procédures stockées et les fonctions utilisées pour passer en revue les paramètres existants nécessitent généralement des autorisations `Execute` sur la procédure stockée et `Select` sur la fonction, respectivement.  
   
 
@@ -66,7 +66,7 @@ ms.locfileid: "52534484"
 #### <a name="enabling-includesssmartbackupincludesss-smartbackup-mdmd-at-the-instance-level-with-default-settings"></a>Activation de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] au niveau de l'instance avec des paramètres par défaut  
  Utilisez ces paramètres si la plupart des bases de données dans l'instance ont les mêmes exigences de sauvegarde et les mêmes stratégies de rétention, ou si vous souhaitez que les nouvelles instances de bases de données soient automatiquement sauvegardées à la création. Les bases de données qui font exception à la stratégie peuvent être configurées individuellement. Voici une liste des avantages et des éléments à prendre en considération lorsque vous activez la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] au niveau de l'instance.  
   
--   Automatisation au niveau de l'instance : paramètres communs appliqués automatiquement aux nouvelles bases de données ajoutées par la suite.  
+-   Automatisation au niveau de l’instance : Paramètres communs appliqués automatiquement aux nouvelles bases de données ajoutées par la suite.  
   
 -   Les nouvelles bases de données sont automatiquement sauvegardées après leur création dans les instances  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52534484"
     ```  
   
 ##  <a name="InstanceConfigure"></a> Activer et configurer la valeur par défaut [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] paramètres pour l’Instance  
- Vous pouvez activer et configurer les paramètres de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] par défaut au niveau de l'instance de deux manières :  En utilisant le système de procédure stockée `smart_backup.set_instance_backup` ou **SQL Server Management Studio**. Les deux méthodes sont expliquées ci-dessous :  
+ Vous pouvez activer et configurer la valeur par défaut [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] paramètres au niveau de l’instance de deux manières :  En utilisant le système de procédure stockée `smart_backup.set_instance_backup` ou **SQL Server Management Studio**. Les deux méthodes sont expliquées ci-dessous :  
   
  **smart_backup.set_instance_backup :**. En spécifiant la valeur **1** pour *@enable_backup* paramètre, vous pouvez activer la sauvegarde et définissez les configurations par défaut. Une fois appliqués au niveau de l'instance, ces paramètres par défaut sont appliqués aux nouvelles bases de données ajoutées à cette instance.  Lorsque la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est activée pour la première, les informations suivantes doivent être spécifiées en plus de l'activation de la [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] sur l'instance :  
   

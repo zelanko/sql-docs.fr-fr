@@ -16,23 +16,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62769005"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analyse de formats de fichiers texte non standard à l'aide du composant Script
   Lorsque vos données sources sont organisées dans un format non standard, il peut être plus pratique de consolider l'ensemble de la logique d'analyse en un seul script au lieu de chaîner plusieurs transformations [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] pour parvenir au même résultat.  
   
- [Exemple 1 : Analyse d’enregistrements délimitée par des lignes](#example1)  
+ [Exemple 1 : Analyse d’enregistrements délimités par des lignes](#example1)  
   
  [Exemple 2 : Fractionnement d’enregistrements parents et enfants](#example2)  
   
 > [!NOTE]  
 >  Si vous souhaitez créer un composant que vous pouvez réutiliser plus facilement dans plusieurs tâches de flux de données et plusieurs packages, utilisez le code présenté dans cet exemple de composant Script comme point de départ pour un composant de flux de données personnalisé. Pour plus d’informations, consultez [Développement d’un composant de flux de données personnalisé](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a> Exemple 1 : Analyse d’enregistrements délimitée par des lignes  
+##  <a name="example1"></a> Exemple 1 : Analyse d’enregistrements délimités par des lignes  
  Cet exemple montre comment analyser un fichier texte, dans lequel chaque colonne de données figure sur une ligne séparée, dans une table de destination, à l'aide du composant Script.  
   
  Pour plus d’informations sur la configuration du composant de Script pour une utilisation en tant que transformation dans le flux de données, consultez [création d’une Transformation synchrone avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)et [création d’un asynchrone Transformation avec le composant Script](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  

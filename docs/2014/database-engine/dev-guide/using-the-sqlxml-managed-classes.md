@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ad1756d3943f6a9db68633c59013bcb85037ffa7
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780328"
 ---
 # <a name="using-the-sqlxml-managed-classes"></a>Utilisation des classes managées SQLXML
   Cette section fournit des exemples d'applications qui montrent comment utiliser les classes managées [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML.  

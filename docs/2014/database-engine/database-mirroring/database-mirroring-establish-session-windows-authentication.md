@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62755509"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Établir une session de mise en miroir de bases de données au moyen de l'authentification Windows (Transact-SQL)
     
@@ -42,7 +42,7 @@ ms.locfileid: "54135524"
      Chaque instance de serveur participant à une session de mise en miroir de bases de données requiert un point de terminaison de mise en miroir de bases de données. Si le point de terminaison n'existe pas, vous devez le créer.  
   
     > [!NOTE]  
-    >  Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de bases de données : l'authentification Windows ou l'authentification basée sur les certificats. Pour plus d’informations, consultez [sécurité du Transport de mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+    >  Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de base de données : L’authentification Windows ou authentification par certificat. Pour plus d’informations, consultez [sécurité du Transport de mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
      Sur chaque serveur partenaire, assurez-vous de la présence d'un point de terminaison pour la mise en miroir. Indépendamment du nombre de sessions de mise en miroir à prendre en charge, l'instance du serveur ne peut avoir qu'un seul point de terminaison de mise en miroir de bases de données. Si vous envisagez d’utiliser cette instance de serveur exclusivement pour les partenaires de sessions de mise en miroir, vous pouvez attribuer le rôle de partenaire au point de terminaison (ROLE**=** PARTNER). Si vous comptez aussi utiliser ce serveur comme témoin dans d'autres sessions, attribuez au point de terminaison le rôle ALL.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "54135524"
     ```  
   
     > [!IMPORTANT]  
-    >  Ne reconfigurez pas un point de terminaison de mise en miroir de base de données en cours d'utilisation. Si le point de terminaison de mise en miroir de base de données existe et est déjà utilisé, nous vous recommandons d'utiliser ce point de terminaison pour toute session établie sur l'instance du serveur. La suppression d'un point de terminaison en cours d'utilisation peut entraîner son redémarrage et perturber les connexions des sessions existantes, ce qui peut être perçu comme une erreur par les autres instances de serveurs. Cela est particulièrement important en mode haute sécurité avec basculement automatique, où la reconfiguration d'un point de terminaison sur un partenaire peut déclencher un basculement. Par ailleurs, si un témoin a été défini pour une session, la suppression du point de terminaison de la mise en miroir de bases de données peut provoquer la perte du quorum par le serveur principal de cette session ; si cela se produit, la base de données est mise en mode hors connexion et ses utilisateurs sont déconnectés. Pour plus d’informations, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Ne reconfigurez pas un point de terminaison de mise en miroir de base de données en cours d'utilisation. Si le point de terminaison de mise en miroir de base de données existe et est déjà utilisé, nous vous recommandons d'utiliser ce point de terminaison pour toute session établie sur l'instance du serveur. La suppression d'un point de terminaison en cours d'utilisation peut entraîner son redémarrage et perturber les connexions des sessions existantes, ce qui peut être perçu comme une erreur par les autres instances de serveurs. Cela est particulièrement important en mode haute sécurité avec basculement automatique, où la reconfiguration d'un point de terminaison sur un partenaire peut déclencher un basculement. Par ailleurs, si un témoin a été défini pour une session, la suppression du point de terminaison de la mise en miroir de bases de données peut provoquer la perte du quorum par le serveur principal de cette session ; si cela se produit, la base de données est mise en mode hors connexion et ses utilisateurs sont déconnectés. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Si l’un ou l’autre partenaire ne dispose pas d’un point de terminaison, consultez [Créer un point de terminaison de mise en miroir de bases de données pour l’authentification Windows &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "54135524"
          Si vous ne voulez pas utiliser le basculement automatique et si vous préférez privilégier les performances par rapport à la disponibilité, désactivez la sécurité des transactions. Pour plus d’informations, consultez [Modifier la sécurité des transactions dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
-        >  En mode hautes performances, la valeur de WITNESS doit être définie sur OFF. Pour plus d’informations, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+        >  En mode hautes performances, la valeur de WITNESS doit être définie sur OFF. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ## <a name="example"></a>Exemple  
   

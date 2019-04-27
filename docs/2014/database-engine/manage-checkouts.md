@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9de9a1f8ceca0fbb05ab2b6680c5fcc34c951109
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774533"
 ---
 # <a name="manage-checkouts"></a>Gérer les extractions
   Une fois un fichier ajouté au contrôle de code source, vous devez l'extraire avant de pouvoir le modifier. Lorsque vous procédez à l'extraction d'un fichier du contrôle de code source, le fournisseur de contrôle de code source copie la dernière version sur votre disque local et désactive l'attribut de lecture seule du fichier. Dans certains cas, il est possible que vous deviez modifier un fichier sans procéder à son extraction. Pour plus d’informations sur la modification d’un fichier sans vérifier le fichier de sortie, consultez [modifier de fichiers](../../2014/database-engine/edit-checked-in-files.md).  

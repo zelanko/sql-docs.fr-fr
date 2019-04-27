@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ecbf8d8b11e0804c3621163d38e243bd78259e43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743195"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone (OLE DB)
   Valide les lignes restantes à envoyer à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -34,7 +34,7 @@ HRESULT BCPDone(void);
 ```  
   
 ## <a name="remarks"></a>Notes  
- Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s’apparente à l’appel de la méthode [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md).  
+ Aucune autre opération ne peut être appelée dans l’interface [IBCPSession](ibcpsession-ole-db.md) après avoir appelé la méthode **BCPDone**. La seule possibilité consiste à appeler la méthode [IBCPSession::BCPInit](ibcpsession-bcpinit-ole-db.md) pour démarrer une nouvelle opération de copie en bloc. Cela s'apparente à l'appel de la méthode [IRowsetFastLoad::Commit](irowsetfastload-commit-ole-db.md) .  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
  Cette méthode signale les erreurs en attribuant à la propriété Nombre de l'objet Err global l'une des valeurs du tableau suivant.  
@@ -46,7 +46,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>Exemple  
  Cet exemple montre comment utiliser l'interface **IBCPSession** .  
   
- L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante doit être exécutée avant d'exécuter cet exemple :  
+ L'instruction [!INCLUDE[tsql](../../includes/tsql-md.md)] suivante doit être exécutée avant d'exécuter cet exemple :  
   
 ```  
 create table fltest(col1 int, col2 int, col3 image)  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2a280b02b8c8a4a918083c7d664d70db4ee533ce
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743445"
 ---
 # <a name="perspectives-cube-designer-analysis-services---multidimensional-data"></a>Perspectives (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez l'onglet **Perspectives** du Concepteur de cube pour créer et modifier les perspectives du cube sélectionné.  

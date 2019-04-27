@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62768955"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Création d'une destination à l'aide du composant Script
   Les composants de destination dans le flux de données d'un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] permettent d'enregistrer des données provenant de sources et de transformations en amont dans une source de données. En principe, le composant de destination se connecte à la source de données via un gestionnaire de connexions existant.  
@@ -119,7 +119,7 @@ ms.locfileid: "58375237"
   
 3.  Ajoutez un nouveau composant Script à l'aire du concepteur de flux de données et configurez-le en tant que destination.  
   
-4.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter directement une source à une destination sans transformation.) Cette sortie doit fournir les données à partir de la **Person.Address** table de la `AdventureWorks` base de données exemple contienne au moins les **AddressID** et **Ville** colonnes.  
+4.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez vous connecter une source directement vers une destination sans transformation.) Cette sortie doit fournir les données à partir de la **Person.Address** table de la `AdventureWorks` base de données exemple contienne au moins les **AddressID** et **Ville** colonnes.  
   
 5.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes d’entrée **AddressID** et **City**.  
   
@@ -236,7 +236,7 @@ public class ScriptMain:
   
 2.  Ajoutez un nouveau composant Script à l'aire du concepteur de flux de données et configurez-le en tant que destination.  
   
-3.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez connecter directement une source à une destination sans transformation.) Cette sortie doit fournir les données à partir de la **Person.Address** table de la `AdventureWorks` exemple de base de données et doit contenir au moins le **AddressID** et **Ville** colonnes.  
+3.  Connectez la sortie d'une source ou transformation en amont au composant de destination dans le concepteur [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Vous pouvez vous connecter une source directement vers une destination sans transformation.) Cette sortie doit fournir les données à partir de la **Person.Address** table de la `AdventureWorks` exemple de base de données et doit contenir au moins le **AddressID** et **Ville** colonnes.  
   
 4.  Ouvrez l' **Éditeur de transformation de script**. Dans la page **Colonnes d’entrée**, sélectionnez les colonnes **AddressID** et **City**.  
   

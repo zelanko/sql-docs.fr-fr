@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779154"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Instructions pour les niveaux d'isolement des transactions sur les tables mémoire optimisées
   Dans de nombreux scénarios, vous devez spécifier le niveau d'isolation de la transaction. L'isolation des transactions pour les tables mémoire optimisées est différente de celle des tables sur disque.  

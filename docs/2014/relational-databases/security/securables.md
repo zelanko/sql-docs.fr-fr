@@ -19,16 +19,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7c4a82cfa4d8a82db1e01c49899c3c49c2e01ee9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745718"
 ---
 # <a name="securables"></a>Éléments sécurisables
   Les éléments sécurisables sont les ressources auxquelles le système d'autorisation du moteur de base de données [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] régule l'accès. Par exemple, une table est un élément sécurisable. Certains éléments sécurisables peuvent être contenus dans d'autres, de façon à créer des hiérarchies imbriquées appelées « étendues », pouvant elles-mêmes être sécurisées. L'étendue de ces éléments sécurisables est constituée par le **serveur**, la **base de données**et le **schéma**.  
   
-## <a name="securable-scope-server"></a>Étendue sécurisable : Serveur  
+## <a name="securable-scope-server"></a>Étendue des éléments sécurisables : Serveur  
  Les éléments sécurisables du **serveur** sont les suivants :  
   
 -   Groupe de disponibilité  
@@ -41,7 +41,7 @@ ms.locfileid: "52532475"
   
 -   Base de données  
   
-## <a name="securable-scope-database"></a>Étendue sécurisable : Base de données  
+## <a name="securable-scope-database"></a>Étendue des éléments sécurisables : Base de données  
  Les éléments sécurisables de la **base de données** sont les suivants :  
   
 -   Rôle d'application  
@@ -76,7 +76,7 @@ ms.locfileid: "52532475"
   
 -   Utilisateur  
   
-## <a name="securable-scope-schema"></a>Étendue sécurisable : schéma  
+## <a name="securable-scope-schema"></a>Étendue des éléments sécurisables : schéma  
  Les éléments sécurisables du **schéma** sont les suivants :  
   
 -   Type  

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774410"
 ---
 # <a name="memory-optimized-table-variables"></a>Variables de table mémoire optimisée
   En plus des tables mémoire optimisées (pour un accès efficace aux données) et des procédures stockées compilées en mode natif (pour une exécution efficace des requêtes et de la logique métier), [!INCLUDE[hek_2](../includes/hek-2-md.md)] introduit un troisième type d'objet : le type de table mémoire optimisée. Une variable de table créée avec un type de table mémoire optimisée est une variable de table mémoire optimisée.  
@@ -36,7 +36,7 @@ ms.locfileid: "58530741"
   
 -   Les variables de table peuvent être utilisées pour simuler des curseurs dans les procédures stockées compilées en mode natif, ce qui peut vous aider à contourner les limitations concernant la surface d'exposition dans ces procédures.  
   
- Comme les tables mémoire optimisées, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] génère une DLL pour chaque type de table mémoire optimisée. (La compilation est appelée lorsque le type de table mémoire optimisée est créé et non lorsqu'il est utilisé pour créer des variables de table mémoire optimisée). Cette DLL contient les fonctions pour accéder aux index et récupérer des données des variables de table. Lorsqu'une variable de table mémoire optimisée est déclarée en fonction du type de table, une instance de la table et des structures d'index correspondant au type de table est créée dans la session utilisateur. La variable de table peut ensuite être utilisée de la même manière que les variables de table sur disque. Vous pouvez insérer, mettre à jour, et supprimer des lignes dans la variable de table, et utiliser des variables dans les requêtes [!INCLUDE[tsql](../includes/tsql-md.md)] . Vous pouvez également passer les variables dans les procédures stockées compilées en mode natif et interprétées, comme paramètres de table (TVP).  
+ Comme les tables mémoire optimisées, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] génère une DLL pour chaque type de table mémoire optimisée. (Compilation est appelée lorsque le type de table mémoire optimisée est créé et ne pas lorsque vous permet de créer des variables de table mémoire optimisée). Cette DLL contient les fonctions pour accéder aux index et récupérer des données des variables de table. Lorsqu'une variable de table mémoire optimisée est déclarée en fonction du type de table, une instance de la table et des structures d'index correspondant au type de table est créée dans la session utilisateur. La variable de table peut ensuite être utilisée de la même manière que les variables de table sur disque. Vous pouvez insérer, mettre à jour, et supprimer des lignes dans la variable de table, et utiliser des variables dans les requêtes [!INCLUDE[tsql](../includes/tsql-md.md)] . Vous pouvez également passer les variables dans les procédures stockées compilées en mode natif et interprétées, comme paramètres de table (TVP).  
   
  L'exemple suivant illustre un type de table mémoire optimisée tiré de l'exemple basé sur AdventureWorks de l'OLTP en mémoire ([Exemple d'OLTP en mémoire SQL Server 2014](https://msftdbprodsamples.codeplex.com/releases/view/114491)).  
   

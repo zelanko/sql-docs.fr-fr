@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb8659f916fa32c7b5c944bb525e64cf0551b0d1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748381"
 ---
 # <a name="report-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action de rapport (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire d’action de rapport** de l’onglet **Actions** dans le Concepteur de cube pour modifier l’action de rapport sélectionnée dans le volet **Organisateur d’action**.  
@@ -33,11 +33,11 @@ ms.locfileid: "48196589"
  **Type de cible**  
  Sélectionnez le type d'objet auquel l'action doit être associée. Le serveur retourne au client uniquement les actions qui s'appliquent à l'objet du type spécifié. L’action est disponible pour le client si la **Condition** est remplie et si les objets spécifiés dans le tableau suivant sont sélectionnés.  
   
-|Valeur|Objet sélectionné|  
+|Value|Objet sélectionné|  
 |-----------|---------------------|  
-|Membres d'attribut|Un membre est sélectionné d’après un niveau qui dépend de l’attribut **Objet cible**.<br /><br /> Remarque : les autres hiérarchies des utilisateurs qui utilisent l’attribut sélectionné héritent de l’action de rapport.|  
+|Membres d'attribut|Un membre est sélectionné d’après un niveau qui dépend de l’attribut **Objet cible**.<br /><br /> Remarque : Autres hiérarchies des utilisateurs qui utilisent l’attribut sélectionné héritent de l’action de rapport.|  
 |Cellules|L’ensemble nommé dans **Objet cible** est sélectionné. Sélectionnez **Toutes les cellules** pour sélectionner toutes les cellules du cube.|  
-|Cube|Le cube dans **Objet cible** est sélectionné. Sélectionnez CURRENTCUBE pour utiliser le cube actif.<br /><br /> Remarque : l’utilisation de CURRENTCUBE améliore la portabilité lorsque le cube peut être éventuellement renommé ou l’action copiée dans d’autres cubes. Il est recommandé d'utiliser l'option CURRENTCUBE pour représenter le cube actif.|  
+|Cube|Le cube dans **Objet cible** est sélectionné. Sélectionnez CURRENTCUBE pour utiliser le cube actif.<br /><br /> Remarque : À l’aide de CURRENTCUBE fournit la portabilité supplémentaire dans les cas où le cube peut être renommé ou l’action copiée dans d’autres cubes. Il est recommandé d'utiliser l'option CURRENTCUBE pour représenter le cube actif.|  
 |Membres de dimension|Un membre de la dimension dans **Objet cible** est sélectionné.|  
 |Hierarchy|La hiérarchie dans **Objet cible** est sélectionnée.|  
 |Membres de hiérarchie|Un membre de la hiérarchie dans **Objet cible** est sélectionné.|  
@@ -64,7 +64,7 @@ ms.locfileid: "48196589"
  **Format de rapport**  
  Sélectionnez le format dans lequel le rapport est retourné. Le tableau suivant décrit les formats disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |HTML5|Le rapport est retourné dans format compatible HTML 5.0.|  
 |HTML3|Le rapport est retourné dans format compatible HTML 3,2.|  
@@ -90,7 +90,7 @@ ms.locfileid: "48196589"
   
  Le tableau suivant décrit les paramètres disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Traitement|L’action doit s’exécuter dans le cadre d’un traitement ou d’une tâche [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
 |Interactif|L'action s'exécute lorsque l'utilisateur l'invoque.|  

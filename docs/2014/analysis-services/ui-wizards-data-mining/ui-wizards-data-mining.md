@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25f4cf1cb5a7bf38fb49157667fccbdf70a0218b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756092"
 ---
 # <a name="ui-wizards-for-data-mining-analysis"></a>Assistants Interface utilisateur pour l’analyse de l’exploration de données
 

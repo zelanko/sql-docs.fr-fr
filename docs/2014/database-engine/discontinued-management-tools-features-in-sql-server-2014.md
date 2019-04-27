@@ -11,19 +11,19 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7c966c3e4388588810438d7e91a9ae0356ef60c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780348"
 ---
 # <a name="discontinued-management-tools-features-in-sql-server-2014"></a>Fonctionnalités des outils d'administration supprimées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités des outils de gestion [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
+## <a name="features-removed-in-includesscurrentincludessscurrent-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
  None  
   
-## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="features-removed-in-includesssql11includessssql11-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 ### <a name="sql-server-compact-edition"></a>SQL Server Compact Edition  
  L'éditeur de code SQL Server Compact Edition a été supprimé de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. La prise en charge de SQL Server Compact Edition a également été supprimée de l'Explorateur d'objets, de l'Explorateur de solutions et de l'Explorateur de modèles. Utilisez à la place les éditeurs Transact-SQL dans Service Pack 1 de Microsoft Visual Studio 2010 ou Webmatrix.  

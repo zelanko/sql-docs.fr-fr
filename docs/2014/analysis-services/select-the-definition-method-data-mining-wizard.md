@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b99b04937df2adbf53d06fd0ae1bfd4de29f87a2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747144"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>Sélectionner la méthode de définition (Assistant Exploration de données)
   Utilisez la page **Sélectionner la méthode de définition** pour sélectionner la source de création du nouveau modèle d’exploration de données. Votre progression dans l'Assistant sera différente selon vos sélections, car une structure d'exploration de données basée sur un cube impose des étapes différentes pour sa construction par rapport à une structure d'exploration de données basée sur une source de données relationnelle.  
   
- **Pour plus d’informations :** [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md), [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **Pour plus d’informations :** [Créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md), [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="options"></a>Options  
  **À partir de l’entrepôt de données ou de la base de données relationnelle existant**  

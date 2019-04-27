@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac74d361758cda8ec0b345b93e542d96c709e586
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773455"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>Propriétés du modèle de trace (onglet Sélection des événements)
   L'onglet **Sélection des événements** de la boîte de dialogue **Propriétés du modèle de trace** vous permet d'afficher, de modifier ou de spécifier les classes d'événements et les colonnes de données à inclure dans un modèle de trace [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] .  
@@ -29,7 +29,7 @@ ms.locfileid: "48227789"
  Colonne**Events**   
  Permet de spécifier les événements à tracer en activant ou en désactivant la case à cocher dans la colonne d'événement. Les événements sont organisés par catégorie d'événement.  
   
- Si vous avez sélectionné **Baser le nouveau modèle sur un modèle existant** sous l'onglet **Général** , des événements sont sélectionnés automatiquement en fonction du modèle spécifié. Pour plus d'informations sur les classes d'événements, consultez [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Si vous avez sélectionné **Baser le nouveau modèle sur un modèle existant** sous l'onglet **Général** , des événements sont sélectionnés automatiquement en fonction du modèle spécifié. Pour plus d'informations sur les classes d'événements, consultez [Référence de classe d'événements SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Colonnes de données  
  Permet de spécifier les colonnes de données à tracer en activant la case à cocher qui correspond à la colonne d'événement et de données dont vous avez besoin. Toutes les colonnes d'événements appropriées sont sélectionnées par défaut pour chaque événement inclus dans la trace, si la case à cocher correspondant à l'événement est activée. Si vous avez activé **Baser le nouveau modèle sur un modèle existant** sous l'onglet **Général** , les colonnes de données et les filtres sont sélectionnés automatiquement en fonction du modèle spécifié.  
@@ -49,7 +49,7 @@ ms.locfileid: "48227789"
  Modifie l'ordre des colonnes dans la trace et regroupe les résultats suivant une ou plusieurs colonnes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier des événements et les colonnes de données d’un fichier de Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [Spécifier les événements et les colonnes de données d’un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Organiser les colonnes affichées dans une Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [Filtrer les événements dans une Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Afficher des informations de filtre &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   

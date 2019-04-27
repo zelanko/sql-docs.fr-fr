@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fe555d94eb8e00cddd147c2424d0cf60e1d47b34
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62771615"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>Appliquer des modifications à la destination
   Dans le flux d’un package [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui effectue un chargement incrémentiel des données modifiées, la troisième et dernière tâche consiste à appliquer les modifications à votre destination. Vous aurez besoin de trois composants : un pour appliquer les insertions, un pour appliquer les mises à jour et un pour appliquer les suppressions.  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754276"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Réduire le temps d'indisponibilité des bases de données mises en miroir lors de la mise à niveau d'instances de serveur
   Lors de la mise à niveau des instances de serveur [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez réduire les temps d’arrêt pour chaque base de données mise en miroir à un seul basculement manuel en effectuant une mise à niveau séquentielle, appelé un *mise à niveau propagée*. Une mise à niveau propagée est un processus en plusieurs étapes qui, dans sa forme la plus simple, consiste à mettre à niveau l'instance de serveur qui agit actuellement en tant que serveur miroir dans une session de mise en miroir, puis à basculer manuellement la base de données mise en miroir, à mettre à niveau l'ancien serveur principal et à reprendre la mise en miroir. En pratique, le processus exact dépend du mode d'opération, du nombre et de la disposition de sessions de mise en miroir qui s'exécutent sur les instances de serveur que vous mettez à niveau.  
@@ -78,7 +78,7 @@ ms.locfileid: "52509420"
 1.  Si une session de mise en miroir fait intervenir un témoin, nous vous recommandons de le supprimer avant d'effectuer une mise à niveau propagée. Sinon, lorsque l'instance de serveur miroir est mise à niveau, la disponibilité de la base de données dépend du témoin qui reste connecté à l'instance de serveur principal. Après avoir supprimé un témoin, vous pouvez le mettre à niveau à tout moment pendant le processus de mise à niveau propagée sans risquer un temps mort de la base de données.  
   
     > [!NOTE]  
-    >  Pour plus d’informations, consultez [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
     -   [Supprimer le témoin d’une session de mise en miroir de bases de données &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   

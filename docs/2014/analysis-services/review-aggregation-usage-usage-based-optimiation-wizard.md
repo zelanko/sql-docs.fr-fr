@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a50c241bc70d48577b558827a278d5423ee8344b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748251"
 ---
 # <a name="review-aggregation-usage-usage-based-optimiation-wizard"></a>Passer en revue l'utilisation d'agrégation (Assistant Optimisation de l'utilisation)
   Utilisez la page **Passer en revue l'utilisation d'agrégation** pour configurer des paramètres d'utilisation d'agrégation.  

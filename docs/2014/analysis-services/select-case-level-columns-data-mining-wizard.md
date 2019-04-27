@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74bb2b88a152d812a29dc399c887d78ed264532f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747721"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>Sélectionner les colonnes de niveau de cas (Assistant Exploration de données)
   Utilisez la page **Sélectionner les colonnes de niveau de cas** pour sélectionner les attributs et mesures de la dimension du cube source sous-jacent qui représenteront les colonnes de niveau de cas dans la structure d’exploration des données.  
@@ -26,7 +26,7 @@ ms.locfileid: "48129759"
 > [!NOTE]  
 >  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’un cube existant** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Attributs et mesures associés**  

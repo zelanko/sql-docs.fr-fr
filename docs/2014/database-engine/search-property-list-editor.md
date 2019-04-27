@@ -13,11 +13,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 818e1176cb5a4f81205a36dc7be6fd9fded286ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773667"
 ---
 # <a name="search-property-list-editor"></a>Éditeur de listes de propriétés de recherche
   Utilisez cette boîte de dialogue pour ajouter ou supprimer des propriétés de recherche dans une liste de propriétés de recherche.  
@@ -29,13 +29,13 @@ ms.locfileid: "48148939"
  **Nom de propriété**  
  Spécifiez le nom à utiliser pour identifier la propriété dans les requêtes de texte intégral. Un nom de propriété peut contenir des espaces internes. La longueur maximale de **Property Name** est de 256 caractères. Ce nom peut être un nom convivial, tel que « Auteur » ou « Domicile », ou ce peut être le nom canonique Windows de la propriété, tel que `System.Author` ou `System.Contact.HomeAddress`. **Property Name** doit identifier la propriété de manière unique dans le jeu de propriétés.  
   
- Les développeurs utilisent le nom de propriété pour identifier la propriété dans le [CONTAINS](/sql/t-sql/queries/contains-transact-sql) prédicat. Par conséquent, lors de l'ajout d'une propriété, il est important de spécifier une valeur qui représente la propriété de manière significative.  
+ Les développeurs utilisent le nom de la propriété pour identifier la propriété dans le prédicat [CONTAINS](/sql/t-sql/queries/contains-transact-sql) . Par conséquent, lors de l'ajout d'une propriété, il est important de spécifier une valeur qui représente la propriété de manière significative.  
   
  **GUID du jeu de propriété**  
  Spécifiez l'identificateur du jeu de propriétés auquel appartient la propriété. Il s'agit d'un identificateur global unique (GUID). Un jeu de propriétés est un groupe de propriétés connexes du point du vue logique. Pour plus d'informations sur l'obtention de cette valeur, consultez les « Notes », dans la suite de cette rubrique.  
   
  **ID entier de propriété**  
- Spécifiez l'identificateur entier de la propriété. Cette valeur pré-assignée est un entier positif qui est unique dans le jeu de propriétés. Pour plus d'informations sur l'obtention de cette valeur, consultez les « Notes », dans la suite de cette rubrique.  
+ Spécifiez l'identificateur entier de la propriété. Cette valeur pré-assignée est un entier positif qui est unique dans le jeu de propriétés. Pour plus d'informations sur l'obtention de cette valeur, consultez les « Notes », dans la suite de cette rubrique.  
   
 > [!NOTE]  
 >  Les propriétés du document qui utilisent des identificateurs de chaîne ne sont pas prises en charge par la recherche en texte intégral.  
@@ -52,7 +52,7 @@ ms.locfileid: "48148939"
   
 -   [Rechercher les propriétés du document à l’aide des listes des propriétés de recherche](../relational-databases/search/search-document-properties-with-search-property-lists.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Consultez [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql).  
   
 ## <a name="see-also"></a>Voir aussi  

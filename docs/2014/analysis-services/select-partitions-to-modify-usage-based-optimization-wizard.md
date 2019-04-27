@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2dc3f38aec3ba41330e29aa8ac5fdea771d90da6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747111"
 ---
 # <a name="select-partitions-to-modify-usage-based-optimization-wizard"></a>Sélectionner les partitions à modifier (Assistant Optimisation de l'utilisation)
   Utilisez la page **Sélectionner les partitions à modifier** pour sélectionner les partitions pour lesquelles vous souhaitez concevoir des agrégations.  
   
 ## <a name="options"></a>Options  
- **(Sélectionner)**  
+ **(Select)**  
  Activez la case à cocher de l'en-tête de colonne pour définir des agrégations pour toutes les partitions du groupe de mesures.  
   
  Activez la case à cocher d'une partition pour ne définir d'agrégations que pour la partition sélectionnée.  

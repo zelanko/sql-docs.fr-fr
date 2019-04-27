@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7e1e411b8a4bb6b8b6d70bbacd783933958c70e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747823"
 ---
 # <a name="script-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de script (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de script** sous l’onglet **Calculs** du Concepteur de cube pour modifier l’expression d’une commande de script (en mode Formulaire) ou le script complet du cube (en mode Script).  
@@ -30,7 +30,7 @@ ms.locfileid: "48197789"
 |**Expression**|Tapez les expressions et les instructions MDX (Multidimensional Expressions) pour la commande de script sélectionnée dans le volet **Métadonnées** (en mode Formulaire) ou pour le script complet du cube (en mode Script).<br /><br /> Faites glisser les éléments sélectionnés du volet **Outils de calcul** dans cette option pour inclure la syntaxe MDX de l'élément sélectionné.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions multidimensionnelles &#40;MDX&#41; référence](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Barre d’outils &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organisateur de script &#40;onglet calculs, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](script-organizer-cube-designer-analysis-services-multidimensional-data.md)   

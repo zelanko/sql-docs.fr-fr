@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9231189bb3bf127c7413a0b5d55ae286a32f42cc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748411"
 ---
 # <a name="restore-database-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Restaurer la base de données (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Restaurer la base de données** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permet de restaurer une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à partir d’un fichier de sauvegarde portant l’extension .abf ([!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Backup File).  

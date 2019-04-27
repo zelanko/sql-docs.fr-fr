@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf132a6cd6e15002b36ba7ecdced512e3686e433
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748901"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>Tableau de bord de gestion PowerPivot et données d'utilisation
   Le tableau de bord de gestion PowerPivot est une collection de rapports et de composants WebPart prédéfinis dans l'Administration centrale de SharePoint, qui vous aident à administrer un déploiement de SQL Server PowerPivot pour SharePoint. Le tableau de bord de gestion fournit des informations sur l'intégrité du serveur, l'activité du classeur et l'actualisation des données. Le tableau de bord utilise les données issues de la collecte des données d'utilisation de SharePoint.  
@@ -82,7 +82,7 @@ ms.locfileid: "55087710"
   
 -   [Configurer la collecte de données d’utilisation pour &#40;PowerPivot pour SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Pour capturer des données sur le système du serveur PowerPivot, vérifiez que la messagerie d'événements, l'historique d'actualisation des données et les autres historiques d'utilisation sont activés pour chaque application de service PowerPivot. Les données sur le serveur et l'utilisation collectées lors du fonctionnement normal du serveur constituent la source de données utilisée dans le modèle de données interne. **Remarque :** Si vous désactivez les historiques d'événements ou d'utilisation, les rapports composites seront incomplets ou erronés.  
+ Pour capturer des données sur le système du serveur PowerPivot, vérifiez que la messagerie d'événements, l'historique d'actualisation des données et les autres historiques d'utilisation sont activés pour chaque application de service PowerPivot. Les données sur le serveur et l'utilisation collectées lors du fonctionnement normal du serveur constituent la source de données utilisée dans le modèle de données interne. **Remarque :** Si vous désactivez les historiques d’événements ou l’utilisation, les rapports composites seront incomplets ou erronés.  
   
 ##  <a name="edit"></a> Modifier le tableau de bord PowerPivot  
  Si vous avez des compétences en matière de développement ou de personnalisation de tableaux de bord, vous pouvez modifier le tableau de bord pour y inclure de nouveaux composants WebPart. Vous avez également la possibilité de modifier les propriétés des composants WebPart inclus dans le tableau de bord.  
@@ -93,7 +93,7 @@ ms.locfileid: "55087710"
  Pour vous aider à prendre en main la génération de rapports personnalisés, le tableau de bord de gestion PowerPivot propose un fichier Office Data Connection (.odc) pour la connexion au classeur source. Par exemple, vous pouvez utiliser le fichier .odc dans Excel pour créer des rapports supplémentaires.  
   
 > [!NOTE]  
->  Modifiez le fichier pour éviter l'erreur suivante lors de la tentative d'utilisation du fichier .odc dans Excel : « Échec de l'initialisation de la source de données ». Le fichier .odc généré automatiquement inclut un paramètre qui n'est pas pris en charge par le fournisseur OLE DB MSOLAP. Les instructions suivantes fournissent la solution de contournement permettant de supprimer ces paramètres.  
+>  Modifiez le fichier pour éviter l’erreur suivante lorsque vous tentez d’utiliser le fichier .odc dans Excel : « Échec de l’initialisation de la source de données ». Le fichier .odc généré automatiquement inclut un paramètre qui n'est pas pris en charge par le fournisseur OLE DB MSOLAP. Les instructions suivantes fournissent la solution de contournement permettant de supprimer ces paramètres.  
   
  Vous devez être administrateur de batterie de serveurs ou de service pour générer des rapports basés sur le classeur PowerPivot dans l'Administration centrale.  
   

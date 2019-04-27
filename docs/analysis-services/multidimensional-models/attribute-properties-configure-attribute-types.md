@@ -1,5 +1,5 @@
 ---
-title: Configurer les Types d’attributs | Documents Microsoft
+title: Configurer les Types d’attributs | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e7be9da1b7405aa522dc29057764e7351924b41
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62745660"
 ---
-# <a name="attribute-properties---configure-attribute-types"></a>Propriétés d’attribut - configurer des Types d’attributs
+# <a name="attribute-properties---configure-attribute-types"></a>Propriétés d’attribut - Configurer des types d’attributs
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les types d’attributs permettent de classer un attribut en termes de fonctionnalité métier. Il existe un grand nombre de types d'attributs que la plupart des applications clientes utilisent pour afficher ou prendre en charge un attribut. Cependant, certains types d’attributs ont une signification particulière pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, certains types d'attributs identifient des attributs qui représentent des périodes dans divers calendriers des dimensions de temps.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "34025566"
   
 ###  <a name="general_attribute_types"></a> General Attribute Types  
   
-|Valeur de type d'attribut| Description|  
+|Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  
 |**Adresse**|Représente une adresse.|  
 |**AddressBuilding**|Représente un identificateur d'immeuble d'une adresse.|  
@@ -147,7 +147,7 @@ ms.locfileid: "34025566"
   
 ###  <a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|Valeur de type d'attribut| Description|  
+|Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  
 |**Compte**|Représente le parent d'un compte. Ce type d'attribut est généralement appliqué à l'attribut parent d'une dimension de comptes.|  
 |**AccountName**|Représente le nom du compte. Ce type d'attribut est généralement appliqué aux attributs clés d'une dimension de comptes.|  
@@ -156,7 +156,7 @@ ms.locfileid: "34025566"
   
 ###  <a name="currency_dimension_attribute_types"></a> Types d'attributs de dimension monétaire  
   
-|Valeur de type d'attribut| Description|  
+|Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  
 |**CurrencyDestination**|Représente la devise de destination d'une opération de change. Ce type d'attribut est généralement appliqué à l'attribut clé d'une dimension de rapport pour utilisation dans une conversion monétaire. Pour plus d’informations sur la conversion monétaire, consultez [Conversions monétaires &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md).|  
 |**CurrencyIsoCode**|Représente le code ISO (International Standards Organization) d'une devise. Pour plus d’informations sur la conversion monétaire, consultez [Conversions monétaires &#40;Analysis Services&#41;](../../analysis-services/currency-conversions-analysis-services.md).|  
@@ -165,7 +165,7 @@ ms.locfileid: "34025566"
   
 ###  <a name="slowly_changing_dimension_attribute_types"></a> Types d'attributs de dimension à variation lente  
   
-|Valeur de type d'attribut| Description|  
+|Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  
 |**ScdEndDate**|Représente la date de fin effective d'un membre dans une dimension à variation lente.|  
 |**ScdOriginalID**|Représente l'identificateur d'origine d'un membre dans une dimension à variation lente.|  
@@ -174,7 +174,7 @@ ms.locfileid: "34025566"
   
 ###  <a name="time_dimension_attribute_types"></a> Types d'attributs de dimension de temps  
   
-|Valeur de type d'attribut| Description|  
+|Valeur de type d'attribut|Description|  
 |--------------------------|-----------------|  
 |**Date**|Représente une date. Ce type d'attribut est généralement appliqué à l'attribut clé d'une dimension de temps ou d'une dimension de temps du serveur.|  
 |**DayOfHalfYear**|Représente l'ordinal de jour d'un semestre.|  
@@ -299,7 +299,7 @@ ms.locfileid: "34025566"
 |**Années**|Représente des années.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d’attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Attributs et hiérarchies d'attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Référence des propriétés d'attribut de dimension](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

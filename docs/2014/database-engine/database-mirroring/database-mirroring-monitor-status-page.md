@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754709"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Moniteur de mise en miroir de bases de données (Page État)
   Cette page accessible en lecture seule affiche le dernier état de mise en miroir pour les instances de serveur miroir et de principal de la base de données actuellement sélectionnée dans l'arborescence de navigation. Si les informations d'une instance ne sont pas actuellement disponibles, certaines des cellules de la grille **État** correspondant à cette instance sont grisées et affichent le texte **Inconnu**.  

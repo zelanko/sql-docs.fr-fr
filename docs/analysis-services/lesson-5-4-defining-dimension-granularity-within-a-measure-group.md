@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e047f955f9c4ecccc02404dc139d557935e0f090
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542244"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62752433"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Leçon 5-4 : définition granularité des dimensions dans un groupe de mesures
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -221,7 +221,7 @@ Au cours des tâches de cette rubrique, vous allez ajouter un groupe de mesures 
     ![Groupe de mesures Sales Quota dimensionné correctement](../analysis-services/media/l5-granularity-7.gif "groupe de mesures Sales Quota dimensionné correctement")  
   
 ## <a name="next-lesson"></a>Leçon suivante  
-[Leçon 6 : Définition de calculs](../analysis-services/lesson-6-defining-calculations.md)  
+[Leçon 6 : Définition de calculs](../analysis-services/lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
 [Relations de dimension](../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)  

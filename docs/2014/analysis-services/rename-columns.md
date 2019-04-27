@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748241"
 ---
 # <a name="lesson-3-rename-columns"></a>Leçon 3 : Renommer des colonnes
   Dans cette leçon, vous allez renommer plusieurs colonnes dans chaque table que vous avez importée. En renommant les colonnes, elles seront plus faciles à identifier et à parcourir dans le concepteur de modèles mais aussi via les champs de sélection dans une application cliente. Pour plus d’informations, consultez [Renommer une table ou une colonne &#40;SSAS Tabulaire&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -172,6 +172,6 @@ ms.locfileid: "52416690"
     |ShipDate|Ship Date|  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 4 : Marquer en tant que Table de dates](lesson-3-mark-as-date-table.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 4 : Marquer en tant que Table de dates](lesson-3-mark-as-date-table.md).  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f96a4b976d338e7f005d0f731bac0b58f5798bb
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749874"
 ---
 # <a name="powerpivot-health-rules---configure"></a>Règles d'intégrité de PowerPivot - Configurer
   PowerPivot pour SharePoint inclut des règles d'intégrité SharePoint qui vous aident à analyser et à résoudre les problèmes de disponibilité et de configuration du serveur. Les règles d'intégrité qui s'appliquent à PowerPivot pour SharePoint apparaissent dans la page Vérifier les définitions de règles.  
@@ -29,7 +29,7 @@ ms.locfileid: "52401474"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Remarque :** Les paramètres des règles d'intégrité sont configurés séparément pour l'instance de SQL Server Analysis Services et l'application de service PowerPivot. Suivez les instructions de cette rubrique pour configurer des règles d'intégrité pour chaque service. Pour un déploiement SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] utilise uniquement l'application de service. Par conséquent, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe différents jeux de règles d'intégrité pour différentes versions de SharePoint. Consultez la colonne « version » dans la rubrique [référence de règles d’intégrité &#40;PowerPivot pour SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), ou vous pouvez exécuter la commande Windows PowerShell suivante pour voir les règles installées.  
+ **Remarque :** Paramètres de règle d’intégrité sont configurés séparément pour l’instance de SQL Server Analysis Services et de l’application de service PowerPivot. Suivez les instructions de cette rubrique pour configurer des règles d'intégrité pour chaque service. Pour un déploiement SharePoint 2013, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] utilise uniquement l'application de service. Par conséquent, [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installe différents jeux de règles d'intégrité pour différentes versions de SharePoint. Consultez la colonne « version » dans la rubrique [référence de règles d’intégrité &#40;PowerPivot pour SharePoint&#41;](health-rules-reference-power-pivot-for-sharepoint.md), ou vous pouvez exécuter la commande Windows PowerShell suivante pour voir les règles installées.  
   
 ```  
 Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -like "*power*"}  | format-table -property * -autosize | out-default  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1434ae3750a76ecffc029d618ce32acea982b035
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748331"
 ---
 # <a name="rename-instance-dialog-box-analysis-services"></a>Boîte de dialogue Renommer l'instance (Analysis Services)
   Utilisez la boîte de dialogue **Renommer l'instance** pour renommer une instance existante de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour afficher la boîte de dialogue **Renommer l’instance** , exécutez l’utilitaire **Modification du nom d’instance** (asinstancerename.exe) à partir de C:\Program Files\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE.  

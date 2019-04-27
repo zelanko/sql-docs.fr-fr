@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef93edfe6e78dd86963c7e810d33ec413194746a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62746123"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Spécifier des informations sur la source (Assistant Partition)
   La page **Spécifier des informations sur la source** permet de sélectionner le groupe de mesures dans lequel doit être créée la partition ainsi que la vue de source de données et les tables filtrées se rapportant à cette dernière.  
@@ -50,6 +50,6 @@ ms.locfileid: "48120556"
 >  Si plusieurs tables sont sélectionnées, la page **Restreindre les lignes** ne peut alors pas s'afficher et les lignes ne peuvent pas être restreintes pour les partitions créées à partir des tables sélectionnées. Dans ce cas, pour restreindre les lignes relatives à chaque partition, lancez l'Assistant Partition une fois pour chaque table à partir de laquelle une partition doit être créée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

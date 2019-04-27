@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0841c3473baf73033f298cfd3c8402ffc3aa19
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62743344"
 ---
 # <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>Leçon 8. Restaurer une base de données dans le Stockage Microsoft Azure
   Dans cette leçon, vous allez apprendre comment créer un fichier de sauvegarde localement, puis le restaurer dans le Stockage Microsoft Azure. Notez que vous votre base de données peut être locale ou dans une machine virtuelle Windows Azure. Pour suivre cette leçon, vous n'avez pas besoin de terminer les leçons 4, 5, 6 et 7.  

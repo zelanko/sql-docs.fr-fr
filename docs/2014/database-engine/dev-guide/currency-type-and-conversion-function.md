@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a3a6a9c08672e489bd5b4939bd0899f2ebe46d5e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753240"
 ---
 # <a name="currency-type-and-conversion-function"></a>Type de devise et fonction de conversion
   Cet exemple crée un type de données Currency défini par l'utilisateur à l'aide de C#. Ce type de données défini par l'utilisateur encapsule un montant et une culture qui permet de déterminer la façon correcte d'exprimer le montant comme valeur monétaire dans la culture en question. Cet exemple fournit également une fonction de conversion monétaire qui retourne une instance du type de données Currency défini par l'utilisateur. Si la base de données AdventureWorks dispose d'un taux de conversion des dollars (USD) vers la devise associée à la culture spécifiée, la fonction de conversion retourne un type de données Currency défini par l'utilisateur avec le montant converti et une culture qui correspond à la culture demandée. Sinon, un type de données Currency défini par l'utilisateur est retourné avec le montant d'origine, qui doit être en USD, avec la culture `en-us`. Cet exemple montre également comment inscrire des méthodes CLR (Common Language Runtime) et des assemblys et annuler leur inscription à l'aide de Transact-SQL.  

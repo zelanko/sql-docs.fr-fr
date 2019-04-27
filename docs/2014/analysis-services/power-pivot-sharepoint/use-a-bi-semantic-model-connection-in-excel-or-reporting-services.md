@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1356eeaabf8de5d406e7fbc11d86cbb043f64be2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749221"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Utiliser une connexion de modèle sémantique BI dans Excel ou Reporting Services
   Cette rubrique explique comment utiliser les connexions de modèles sémantiques BI que vous avez créées à l'aide des instructions fournies dans d'autres rubriques. Si vous n’avez pas encore créé de modèle sémantique BI, consultez [créer une connexion de modèle sémantique BI à un classeur PowerPivot](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) et [créer une connexion de modèle sémantique BI à une base de données Model tabulaire](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831257"
 ---
 # <a name="integration-services-containers"></a>Conteneurs Integration Services
   Les conteneurs sont des objets de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] qui fournissent une structure aux packages et des services aux tâches. Ils prennent en charge les flux de contrôle répétitifs dans les packages, et regroupent les tâches et les conteneurs en unités de travail significatives. Outre des tâches, les conteneurs peuvent comprendre d'autres conteneurs.  

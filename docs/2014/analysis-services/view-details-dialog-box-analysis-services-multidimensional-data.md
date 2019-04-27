@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c6a87ed9157c8a38676bd2984975fe11e9e2e4a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62756124"
 ---
 # <a name="view-details-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Afficher les détails (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Afficher les détails** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour afficher des détails supplémentaires sur un message ou une opération dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Pour afficher la boîte de dialogue **Afficher les détails** , vous pouvez procéder de deux manières :  

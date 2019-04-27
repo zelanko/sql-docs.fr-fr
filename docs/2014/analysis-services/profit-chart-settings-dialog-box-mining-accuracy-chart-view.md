@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48deee5b5928ff812a67f26a780ea765b05d5097
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748493"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Boîte de dialogue Paramètres du graphique des bénéfices (vue Graphique d'analyse de précision de l'exploration de données)
   Utilisez la boîte de dialogue **Paramètres du graphique des bénéfices** pour configurer les paramètres de génération d'un graphique des bénéfices. Pour plus d’informations sur les graphiques de bénéfices, consultez [Graphique de courbes d’élévation &#40;Analysis Services - Exploration de données&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
@@ -39,6 +39,6 @@ ms.locfileid: "48114184"
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test et Validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

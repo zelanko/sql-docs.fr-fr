@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0772ab148c413d685f046a5a238761edf647641b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788683"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Groupe de disponibilité (SQL Server Management Studio)
   Cette rubrique explique comment utiliser l'Assistant Nouveau groupe de disponibilité (dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]) pour créer et configurer un groupe de disponibilité AlwaysOn dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
@@ -36,7 +36,7 @@ ms.locfileid: "53363881"
   
      [Sécurité](#Security)  
   
--   **Pour créer et configurer un groupe de disponibilité de groupe, à l’aide de :**  [Nouvel Assistant de groupe de disponibilité (SQL Server Management Studio)](#RunAGwiz)  
+-   **Pour créer et configurer un groupe de disponibilité avec :**  [Nouvel Assistant de groupe de disponibilité (SQL Server Management Studio)](#RunAGwiz)  
   
 > [!NOTE]  
 >  Comme alternative à l'utilisation de l'Assistant Nouveau groupe de disponibilité, vous pouvez utiliser les applets de commande [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour plus d’informations, consultez [Créer un groupe de disponibilité &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md) ou [Créer un groupe de disponibilité &#40;SQL Server PowerShell&#41;](../../../powershell/sql-server-powershell.md).  
@@ -88,7 +88,7 @@ ms.locfileid: "53363881"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert le rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
   
  Nécessite également l'autorisation CONTROL ON ENDPOINT si vous souhaitez autoriser l'Assistant Nouveau groupe de disponibilité à gérer le point de terminaison de mise en miroir de bases de données.  
@@ -111,12 +111,12 @@ ms.locfileid: "53363881"
   
      Si vous modifiez une base de données pour la rendre éligible, cliquez sur **Actualiser** pour mettre à jour la grille de bases de données.  
   
-7.  Sur la page **Spécifier les réplicas** , spécifiez et configurez un ou plusieurs réplicas pour le nouveau groupe de disponibilité. Cette page contient quatre onglets. Le tableau suivant présente ces onglets. Pour plus d’informations, consultez le [Page spécifier les réplicas &#40;Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica&#41; ](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) rubrique.  
+7.  Sur la page **Spécifier les réplicas** , spécifiez et configurez un ou plusieurs réplicas pour le nouveau groupe de disponibilité. Cette page contient quatre onglets. Le tableau suivant présente ces onglets. Pour plus d’informations, consultez la rubrique [Page Spécifier les réplicas &#40;Assistant Nouveau groupe de disponibilité : Assistant Ajout de réplica&#41;](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md).  
   
     |Onglet|Brève description|  
     |---------|-----------------------|  
     |**Réplicas**|Cet onglet vous permet de spécifier chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergera un réplica secondaire. Notez que l'instance de serveur à laquelle vous êtes actuellement connecté doit héberger le réplica principal.|  
-    |**Points de terminaison**|Utilisez cet onglet pour vérifier tous les points de terminaison de mise en miroir de bases de données existants et également, si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, pour créer le point de terminaison automatiquement. **Remarque :**  Si une instance de serveur s'exécute sous un compte d'utilisateur qui n'appartient pas au domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l'Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#PrerequisitesRestrictions), plus haut dans cette rubrique.|  
+    |**Points de terminaison**|Utilisez cet onglet pour vérifier tous les points de terminaison de mise en miroir de bases de données existants et également, si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, pour créer le point de terminaison automatiquement. **Remarque :**  Si une instance de serveur s’exécute sous un compte d’utilisateur sans domaine, vous devez apporter une modification manuelle à votre instance de serveur avant de pouvoir continuer dans l’Assistant. Pour plus d'informations, consultez [Conditions préalables requises](#PrerequisitesRestrictions), plus haut dans cette rubrique.|  
     |**Préférences de sauvegarde**|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, ainsi que les priorités de sauvegarde pour les différents réplicas de disponibilité.|  
     |**Port d'écoute**|Utilisez cet onglet pour créer un écouteur de groupe de disponibilité. Par défaut, l'assistant ne crée pas d'écouteur.|  
   
@@ -204,7 +204,7 @@ ms.locfileid: "53363881"
   
 -   **Vidéos :**  
   
-     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Présentation de la Solution de haute disponibilité prochaine génération](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (vidéo de présentation de la solution haute disponibilité de la génération suivante)  
   
      [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 2 : Création d’une Solution de haute disponibilité critique à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

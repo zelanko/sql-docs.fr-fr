@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773885"
 ---
 # <a name="use-sql-server-management-studio"></a>Utiliser SQL Server Management Studio
   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) est un environnement intégré pour l’accès à configurer, gérer, administrer et développer tous les composants de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. SSMS associe un groupe d'outils graphiques à des éditeurs de script performants pour permettre aux développeurs et aux administrateurs de tous niveaux d'avoir accès à [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  

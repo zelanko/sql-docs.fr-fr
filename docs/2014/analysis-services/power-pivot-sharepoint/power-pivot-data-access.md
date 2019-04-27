@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 75da2776f867ae89da049ba31a9180d21922cd84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62749359"
 ---
 # <a name="powerpivot-data-access"></a>Accès aux données PowerPivot
   Cette rubrique décrit les manières dont les données sont récupérées à partir d'un classeur PowerPivot publié dans une bibliothèque SharePoint.  

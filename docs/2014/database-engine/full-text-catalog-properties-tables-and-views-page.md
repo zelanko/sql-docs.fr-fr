@@ -13,18 +13,18 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62779190"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Propriétés du catalogue de texte intégral (page Tables et vues)
   Utilisez cette page de dialogue pour consulter ou modifier les tables et les vues qui sont attribuées au catalogue de texte intégral.  
   
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur  
  **Tous les objets admissibles de table/vue dans cette base de données**  
- Répertorie les tables et les vues sur lesquelles un index unique est défini, mais qui ne font pas déjà partie du catalogue de texte intégral. Pour sélectionner une table ou une vue et l'attribuer au catalogue, sélectionnez les éléments dans la zone de liste et appuyez sur le bouton « -> ».  
+ Répertorie les tables et les vues sur lesquelles un index unique est défini, mais qui ne font pas déjà partie du catalogue de texte intégral. Pour sélectionner une table ou vue et affectez-le au catalogue, sélectionnez les éléments dans la zone de liste et appuyez sur le bouton « -> ».  
   
  **Objets de table ou de vue attribués au catalogue**  
  Répertorie les tables et les vues qui sont actuellement attribuées au catalogue de texte intégral.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2d15a32302aa5d7a4ee3ca087944effc017ce8c1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747512"
 ---
 # <a name="select-members-business-intelligence-wizard"></a>Sélectionner les membres (Assistant Business Intelligence)
   Utilisez la page **Sélectionner les membres** pour déterminer à quels membres l'Assistant Business Intelligence doit appliquer la fonction de conversion monétaire spécifiée à la page **Définir les options de conversion monétaire** .  
@@ -48,7 +48,7 @@ ms.locfileid: "48105142"
 |**Mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives au membre choisi dans **Membre du compte** .|  
   
  **Selon le type de hiérarchie de compte**  
- Sélectionnez cette option pour appliquer la fonctionnalité de conversion monétaire à tous les membres des attributs dans la hiérarchie de comptes dont `Type` propriété est définie sur un type de compte spécifié.  
+ Sélectionnez afin d'appliquer la fonctionnalité de conversion monétaire à tous les membres d'attributs dans la hiérarchie de comptes dont la propriété `Type` est définie sur le type de compte indiqué.  
   
  Une fois cette option sélectionnée, la grille affiche les options répertoriées dans le tableau suivant.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48105142"
 |**Mesures**|Sélectionnez la mesure dans le groupe de mesures Taux qui contient le taux de change à utiliser lors de la conversion des mesures relatives aux membres d'attributs dont le type de compte correspond à celui indiqué dans **Type de compte** .|  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
+ [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

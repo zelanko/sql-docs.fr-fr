@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b704f24379a0d56f738b28f9553cf03d214b9e3c
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62780584"
 ---
 # <a name="string-utility-functions-sample"></a>Exemple de fonctions d'utilitaire de chaîne
   L'exemple String Utilities contient une fonction table en continu écrite en Visual C# et Visual Basic qui fractionne une chaîne séparée par des virgules en une table avec une colonne. Il contient également une fonction d'agrégation qui convertit une colonne de chaîne en une chaîne séparée par des virgules.  Une fonction scalaire et une fonction table sont également implémentées ; elles fournissent des fonctionnalités de recherche et de remplacement d'expressions régulières.  

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 52365cbe64a50b9622ded5587f0baf2ed46cce98
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62753156"
 ---
 # <a name="getting-started-in-smo"></a>Mise en route avec SMO
   Cette rubrique contient des informations sur la mise en route avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). La section SMO s'adresse aux développeurs. La liste suivante vous aidera à trouver des informations sur la hiérarchie des objets SMO, la préparation de l'écriture de programmes dans SMO, l'écriture d'un programme SMO dans différents langages de programmation, ainsi que des informations sur des tâches de programmation générales et spécifiques.  

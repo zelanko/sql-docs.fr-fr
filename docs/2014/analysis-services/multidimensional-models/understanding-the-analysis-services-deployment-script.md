@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84bc0e699a0fb47b78b1b0d075a0ef87c8a4dcc3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62741109"
 ---
 # <a name="understanding-the-analysis-services-deployment-script"></a>Description du script de déploiement Analysis Services
   Le script de déploiement XMLA généré par l’Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comporte deux sections :  
@@ -36,7 +36,7 @@ ms.locfileid: "48099290"
 >  L’Assistant Déploiement [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] déploie les objets uniquement dans une seule base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Il ne déploie pas des objets, ni des données au niveau du serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Déploiement de Analysis Services en cours d’exécution](running-the-analysis-services-deployment-wizard.md)   
- [Présentation des fichiers d’entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md)  
+ [Exécution de l'Assistant Déploiement d'Analysis Services](running-the-analysis-services-deployment-wizard.md)   
+ [Précisions sur les fichiers d'entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30393fd4233e0e6b1707de36fb881e97b626d1f9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48071179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748211"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Volet Résultats (vue Prévision de modèle d'exploration de données)
   Le volet **Résultat** affiche les résultats de la requête de prévision d'exploration de données créée dans la vue **Conception** du générateur de requête de prévision. Vous pouvez copier une sélection ou la totalité de la grille des résultats dans le Presse-papiers.  

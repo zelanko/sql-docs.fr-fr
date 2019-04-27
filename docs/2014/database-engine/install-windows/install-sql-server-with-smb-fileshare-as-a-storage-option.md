@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3242f463e24322921b16a513c1b3a6905965b390
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775332"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>Installer SQL Server avec le partage de fichiers SMB en tant qu'option de stockage
   À compter de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], les bases de données système (Master, Model, MSDB et TempDB) et les bases de données utilisateur du [!INCLUDE[ssDE](../../includes/ssde-md.md)] peuvent être installées avec le serveur de fichiers SMB (Server Message Block) comme option de stockage. Cela s'applique à la fois aux installations autonomes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et aux installations de cluster de basculement (FCI) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -113,7 +113,7 @@ ms.locfileid: "54136049"
 -   Après avoir détaché une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui réside sur le stockage attaché au réseau, vous pouvez rencontrer un problème d'autorisations sur la base de données lorsque vous essaierez de lier à nouveau la base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le problème est décrit dans [cet article de la Base de connaissances](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). Pour le contourner, consultez la section **Plus d'informations** dans l'article de la Base de connaissances.  
   
 -   Certains tiers, tels que NetApp, ne gèrent pas tous les appels d'API SQL Server. Avec ces vous risquez d’obtenir :   
-    2015-06-04 13:14:19.97 spid9s erreur : 17053, gravité : 16, état : 1.  
+    2015-06-04 13:14:19.97 spid9s erreur : 17053, Gravité : 16, état : 1.  
     2015-06-04 13:14:19.97 spid9s DoDevIoCtlOut() GetOverlappedResult() : Erreur de système d’exploitation 1 (fonction incorrecte.) rencontrée.  
   
      Pour NTFS, l'erreur est sans conséquence.  Par contre, pour ReFS, elle peut entraîner une dégradation significative des performances.  

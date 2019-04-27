@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89d33663e520fdecdf6fc8548d4930a6ea642718
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62747265"
 ---
 # <a name="sequence-clustering-cluster-discrimination-tab-mining-model-viewer"></a>Onglet Discrimination de cluster du modèle Sequence Clustering (Visionneuse de modèle d'exploration de données)
   L’onglet **Discrimination de cluster** de la **Visionneuse de l’algorithme MSC** (Microsoft Sequence Clustering) compare les clusters sélectionnés à partir d’un modèle Sequence Clustering.  
   
  Utilisez cette vue d'un modèle Sequence Clustering pour comparer deux clusters et déterminer les états et les transitions qui sont différents.  
   
- **Pour plus d’informations :** [Algorithme MSC (Microsoft Sequence Clustering)](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme Microsoft Sequence Clustering](data-mining/microsoft-sequence-clustering-algorithm.md), [Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -50,7 +50,7 @@ ms.locfileid: "48218301"
   
  De façon générale, un cluster particulier peut contenir plusieurs états : par exemple, un état courant peut être l'achat d'une bouteille d'eau et d'un porte-bidon, dans l'ordre. Toutefois, la séquence peut être présente dans d'autres clusters qui ont des caractéristiques de définition plus importantes. Par exemple, un autre cluster peut être caractérisé de manière plus importante par des temps de transaction très courts, et une analyse indiquerait que les éléments « bouteille d'eau » et « porte-bidon » sont positionnés de manière à pouvoir généralement, mais pas systématiquement, être regroupés dans ce cluster.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Variables**|Attribut du modèle d'exploration de données.|  
 |**Valeurs**|État de l’attribut répertorié dans **Variables**.|  
@@ -58,7 +58,7 @@ ms.locfileid: "48218301"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

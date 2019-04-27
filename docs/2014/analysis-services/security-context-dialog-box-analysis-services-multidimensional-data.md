@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b959a34d9f50a539b14c9c54d77c1dfc696e16ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748123"
 ---
 # <a name="security-context-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Contexte de sécurité (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Contexte de sécurité** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] permet de modifier l'utilisateur et le rôle utilisé pour analyser les données ou métadonnées d'un objet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Pour afficher la boîte de dialogue **Contexte de sécurité** , cliquez sur **Contexte de sécurité** dans le volet **Barre d'outils** soit de l'onglet **Calculs** , soit de l'onglet **Navigateur** du Concepteur de cube.  

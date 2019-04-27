@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748401"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Interroger et filtrer (onglet Navigateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Cette zone de l'onglet **Navigateur** dans le Concepteur de cube contient une zone de requête et de filtre qui vous aide à choisir les données du cube à utiliser dans la navigation ou dans les requêtes. Vous pouvez ajouter autant d'objets de cube que vous le souhaitez, puis vous pouvez afficher les résultats dans la zone de données, ou les exporter dans un rapport en utilisant Analyser dans Excel pour visualiser la façon dont les données sont affichées par les utilisateurs finaux.  
@@ -38,7 +38,7 @@ ms.locfileid: "48074899"
  **Opérateur**  
  Sélectionnez l’opérateur qui définit comment l’expression dans **Expression de filtre** est appliquée à la hiérarchie sélectionnée. Le tableau suivant décrit les opérateurs disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**égal**|Les résultats se limitent à l'ensemble défini dans **Expression de filtre**.|  
 |**Non égal**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble défini dans **Expression de filtre**.|  

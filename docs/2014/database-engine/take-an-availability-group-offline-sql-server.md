@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 28d8279226469b8d7a39c5cf6ec802a393337087
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62773597"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Placer un groupe de disponibilité hors connexion (SQL Server)
   Cette rubrique explique comment faire passer un groupe de disponibilité AlwaysOn de l'état ONLINE à l'état OFFLINE à l'aide de [!INCLUDE[tsql](../includes/tsql-md.md)] dans [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] et versions ultérieures. Il n'y a aucune perte de données des bases de données de validation synchrone, car si aucun réplica avec validation synchrone n'est synchronisé, l'opération OFFLINE génère une erreur et conserve le groupe de disponibilité dans l'état ONLINE. Conserver le groupe de disponibilité en ligne protège les bases de données non synchronisées avec validation synchrone contre la perte de données. Après qu'un groupe de disponibilité a été mis hors connexion, ses bases de données deviennent indisponibles pour les clients et vous ne pouvez pas remettre le groupe de disponibilité en ligne. Par conséquent, mettez un groupe de disponibilité hors connexion uniquement pour migrer les ressources du groupe de disponibilité d'un cluster WSFC à un autre.  
@@ -42,7 +42,7 @@ ms.locfileid: "53371371"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
@@ -63,7 +63,7 @@ ms.locfileid: "53371371"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> Suivi : Après que le groupe de disponibilité a été mis hors connexion  
+##  <a name="FollowUp"></a> Suivi : Une fois que le groupe de disponibilité est hors connexion  
   
 -   **Journalisation des opérations hors connexion :**  L’identité du nœud WSFC sur lequel l’opération hors connexion a été initialisée est stockée dans le journal du cluster WSFC et SQL ERRORLOG.  
   

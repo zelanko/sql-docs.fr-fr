@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48065989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62754454"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configuration de la mise en miroir de bases de données (SQL Server)
   Cette section décrit les conditions préalables, les recommandations et les étapes relatives à la configuration de la mise en miroir d'une base de données. Pour une présentation de la mise en miroir de bases de données, consultez [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "48065989"
   
 1.  Le serveur principal, le serveur miroir et le serveur témoin, le cas échéant, doivent être hébergés par des instances de serveur distinctes, chacune devant se trouver sur des systèmes hôtes distincts. Chacune des instances de serveur nécessite un point de terminaison de mise en miroir de bases de données. Si vous devez créer un point de terminaison de mise en miroir de bases de données, vérifiez qu'il est accessible aux autres instances de serveur.  
   
-     Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de bases de données : Authentification Windows ou authentification basée sur les certificats. Pour plus d’informations, consultez [sécurité du Transport de mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
+     Le type d'authentification utilisé pour la mise en miroir de la base de données par une instance de serveur est une propriété de son point de terminaison de mise en miroir de bases de données. Deux types de sécurité de transport sont disponibles pour la mise en miroir de base de données : L’authentification Windows ou authentification par certificat. Pour plus d’informations, consultez [sécurité du Transport de mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md).  
   
      Les spécifications liées à l'accès réseau sont spécifiques à la forme d'authentification, comme suit :  
   
@@ -48,7 +48,7 @@ ms.locfileid: "48065989"
   
 3.  Sur l'instance de serveur qui hébergera la base de données miroir, configurez le reste de l'environnement requis pour la base de données mise en miroir. Pour plus d’informations, consultez [Gérer les métadonnées durant la mise à disposition d’une base de données sur une autre instance de serveur &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Vue d'ensemble : établissement d'une session de mise en miroir de bases de données  
+##  <a name="EstablishUsingWinAuthentication"></a> Vue d’ensemble : L’établissement d’une Session de mise en miroir de base de données  
  Les étapes de base pour établir une session de mise en miroir sont les suivantes :  
   
 1.  Créez la base de données miroir en restaurant les sauvegardes suivantes, à l'aide de RESTORE WITH NORECOVERY sur chaque opération de restauration :  
@@ -90,12 +90,12 @@ ms.locfileid: "48065989"
          Si vous ne voulez pas utiliser le basculement automatique et si vous préférez privilégier les performances par rapport à la disponibilité, désactivez la sécurité des transactions. Pour plus d’informations, consultez [Modifier la sécurité des transactions dans une session de mise en miroir de bases de données &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
-        >  En mode haute performance, la valeur de WITNESS doit être définie sur OFF. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+        >  En mode haute performance, la valeur de WITNESS doit être définie sur OFF. Pour plus d’informations, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 > [!NOTE]  
->  Pour obtenir un exemple de l’utilisation de [!INCLUDE[tsql](../../includes/tsql-md.md)] pour configurer la mise en miroir de bases de données à l’aide de l’authentification Microsoft Windows, consultez [Exemple : Configuration de la mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Pour obtenir un exemple d’utilisation de [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir la mise en miroir de base de données à l’aide de l’authentification de Microsoft Windows, consultez [exemple : Configuration de la mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
 >   
->  Pour obtenir un exemple de l’utilisation de [!INCLUDE[tsql](../../includes/tsql-md.md)] pour configurer la mise en miroir de bases de données à l’aide de l’authentification Microsoft Windows, consultez [Exemple : Configuration de la mise en miroir de bases de données à l’aide de certificats &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+>  Pour obtenir un exemple d’utilisation de [!INCLUDE[tsql](../../includes/tsql-md.md)] pour définir la mise en miroir de base de données à l’aide de la sécurité basée sur certificat, consultez [exemple : Configuration des certificats à l’aide de la mise en miroir de base de données &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
  
   
@@ -112,10 +112,10 @@ ms.locfileid: "48065989"
  [Établir une session de mise en miroir de bases de données au moyen de l’authentification Windows &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
  Décrit les étapes [!INCLUDE[tsql](../../includes/tsql-md.md)] de la configuration de la mise en miroir de bases de données.  
   
- [Exemple : Configuration de la mise en miroir de bases de données à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [Exemple : Configuration de base de données mise en miroir à l’aide de l’authentification Windows &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
  Contient un exemple de toutes les étapes nécessaires à la création d'une session de mise en miroir de bases de données avec un serveur témoin, en utilisant l'authentification Windows.  
   
- [Exemple : Configuration de la mise en miroir de bases de données à l’aide de certificats &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+ [Exemple : Configuration des certificats à l’aide de la mise en miroir de base de données &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
  Contient un exemple de toutes les étapes nécessaires à la création d'une session de mise en miroir de bases de données avec un serveur témoin, en utilisant l'authentification basée sur les certificats.  
   
  [Configurer des comptes de connexion pour la mise en miroir de base de données ou des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
@@ -156,7 +156,7 @@ ms.locfileid: "48065989"
   
 ## <a name="see-also"></a>Voir aussi  
  [Mise en miroir de bases de données &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Mise en miroir de bases de données : interopérabilité et coexistence &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
+ [Mise en miroir de base de données : interopérabilité et coexistence &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Sécurité du transport pour la mise en miroir de base de données et de groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](transport-security-database-mirroring-always-on-availability.md)   
  [Spécifier une adresse réseau de serveur &#40;mise en miroir de bases de données&#41;](specify-a-server-network-address-database-mirroring.md)  
   
