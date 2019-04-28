@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: f5f74c6621d329885e9149fce9a37c7418d9c37b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025200"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653753"
 ---
-# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Leçon 2 : Génération de classes à partir du schéma RDL à l'aide de l'outil xsd
+# <a name="lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool"></a>Leçon 2 : Générer des classes à partir du schéma RDL à l’aide de l’outil xsd
   Une fois que vous avez créé votre projet [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], l'étape suivante consiste à extraire une copie locale du schéma de la définition du rapport et à exécuter l'outil de définition du schéma XML (Xsd.exe).  
   
 ### <a name="to-generate-the-rdl-classes"></a>Pour générer les classes RDL  
@@ -52,7 +52,7 @@ ms.locfileid: "56025200"
     >  Une fois que vous avez ajouté le fichier ReportDefinition.xsd au projet que vous constaterez dans **l’Explorateur de solutions** que le fichier ReportDefinition.cs (.vb) n’est pas il. Pour afficher le fichier, cliquez sur le bouton Développer/Réduire en regard du fichier ReportDefinition.xsd.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- Dans la prochaine leçon, vous allez écrire du code pour charger une définition de rapport à partir d'un serveur de rapports à l'aide des classes que vous avez générées depuis le schéma RDL. Consultez [leçon 3 : Charger une définition de rapport du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
+ Dans la prochaine leçon, vous allez écrire du code pour charger une définition de rapport à partir d'un serveur de rapports à l'aide des classes que vous avez générées depuis le schéma RDL. Voir [Leçon 3 : Charger une définition de rapport du serveur de rapports](../../2014/tutorials/lesson-3-load-a-report-definition-from-the-report-server.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [La mise à jour des rapports à l’aide des Classes générées à partir du schéma RDL &#40;didacticiel SSRS&#41;](../../2014/tutorials/updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial.md)   

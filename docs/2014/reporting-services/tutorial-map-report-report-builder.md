@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fe9eaf39f101e6f64946e7c60a04765e4099d5a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649331"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutoriel : Rapport cartographique (Générateur de rapports)
   Ce didacticiel est conçu pour vous aider à découvrir les fonctionnalités cartographiques que vous pouvez utiliser pour afficher des données de rapport sur un arrière-plan géographique.  
@@ -63,7 +63,7 @@ ms.locfileid: "59946935"
 10. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données, créer un jeu de données et exécuter l’Assistant, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées sous forme de deux procédures : l'une pour créer le dataset, et l'autre pour créer une table. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données, créer un jeu de données et exécuter l’Assistant, voir le premier tutoriel de cette série : [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Durée estimée pour effectuer ce didacticiel : 30 minutes.  
   

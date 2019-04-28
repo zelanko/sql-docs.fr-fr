@@ -1,5 +1,5 @@
 ---
-title: 'Gestion des domaines : Liste des domaines | Microsoft Docs'
+title: 'Gestion de l’arborescence du domaine : Liste des domaines | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a68300e15c1ae05bcd6ae83228565842a854234
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792746"
 ---
-# <a name="domain-management-domain-list"></a>Gestion des domaines : Liste des domaines
+# <a name="domain-management-domain-list"></a>Gestion de l’arborescence du domaine : Liste des domaines
   Cette rubrique décrit les contrôles dans la liste des domaines de la page **Gestion de l'arborescence du domaine** dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Utilisez ce volet pour sélectionner un domaine sur lequel effectuer des opérations de gestion. Le même volet est utilisé pour toutes les pages à onglets dans la page **Gestion de l'arborescence du domaine** .  
   
 ## <a name="options"></a>Options  

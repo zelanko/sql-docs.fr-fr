@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1259cc627ef53d8f5a201e42772a9dba390824cc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664397"
 ---
 # <a name="browsing-an-association-rules-model"></a>Exploration d'un modèle d'exploration de données Règles d'association
   Lorsque vous ouvrez un modèle d’association à l’aide **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de règles d’Association dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  La visionneuse vous permet de voir d'un seul coup d'œil les éléments corrélés les uns aux autres, et d'afficher les règles que vous pouvez utiliser pour la prédiction ou pour formuler des recommandations.  
@@ -149,9 +149,9 @@ ms.locfileid: "52537183"
   
  Si vous souhaitez définir des paramètres avancés ou alter probabilité minimale et la prise en charge, utilisez le [Assistant associer &#40;Client d’exploration de données pour Excel&#41; ](associate-wizard-data-mining-client-for-excel.md) Assistant, ou créez votre propre modèle avec le [ajouter le modèle à Structure &#40;des compléments d’exploration de données pour Excel&#41; ](add-model-to-structure-data-mining-add-ins-for-excel.md) option de modélisation.  
   
--   **Jeux d’éléments :** Lors de la création du modèle, vous pouvez aussi contrôler le nombre de jeux d'éléments générés en affectant une valeur au paramètre MINIMUM_PROBABILITY. Ce paramètre est disponible dans la boîte de dialogue Paramètres d’algorithme.  
+-   **Jeux d’éléments :** Lorsque vous créez le modèle, vous pouvez également contrôler le nombre de jeux d’éléments qui est générés en affectant une valeur au paramètre MINIMUM_PROBABILITY. Ce paramètre est disponible dans la boîte de dialogue Paramètres d’algorithme.  
   
--   **Règles :** L'algorithme MAR ([!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules) utilise les valeurs de probabilité pour limiter le nombre de règles générées. Vous pouvez contrôler le nombre de règles en définissant les paramètres `MINIMUM_PROBABILITY` ou `MINIMUM _IMPORTANCE`.  
+-   **Règles :** Le [!INCLUDE[msCoName](../includes/msconame-md.md)] algorithme de règles d’Association utilise les valeurs de probabilité pour limiter le nombre de règles qui sont générés. Vous pouvez contrôler le nombre de règles en définissant les paramètres `MINIMUM_PROBABILITY` ou `MINIMUM _IMPORTANCE`.  
   
  Pour plus d’informations sur la configuration des paramètres avancés, consultez [algorithmes d’exploration de données &#40;SQL Server Data Mining Add-ins&#41;](data-mining-algorithms-sql-server-data-mining-add-ins.md).  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eae0fe81f501ff83d81722ece541085b00ade44a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730699"
 ---
 # <a name="import-from-a-multidimensional-data-source-ssas-tabular"></a>Importer à partir d'une source de données multidimensionnelle (SSAS Tabulaire)
   Vous pouvez utiliser une base de données de cube Analysis Services comme source de données pour un modèle tabulaire. Pour importer des données à partir d'un cube Analysis Services, vous devez définir une requête MDX afin de sélectionner les données à importer.  
@@ -34,7 +34,7 @@ ms.locfileid: "48076989"
 3.  Suivez les étapes de l'Assistant Importation de table. Vous pouvez spécifier une requête MDX sur la page **Spécifier une requête MDX** . Pour utiliser le concepteur de requêtes MDX, sur la page Spécifier une requête MDX, cliquez sur **Conception**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importer des données &#40;SSAS tabulaire&#41;](import-data-ssas-tabular.md)   
+ [Importer des données &#40;SSAS Tabulaire&#41;](import-data-ssas-tabular.md)   
  [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

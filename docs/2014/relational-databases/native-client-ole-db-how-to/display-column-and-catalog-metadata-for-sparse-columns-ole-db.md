@@ -1,5 +1,5 @@
 ---
-title: Colonne d’affichage et les métadonnées de catalogue pour les colonnes éparses (OLE DB) | Microsoft Docs
+title: Afficher les métadonnées de colonne et de catalogue pour les colonnes éparses (OLE DB) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fa66d85d11c4c99094f554cb1be8c036329b8608
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48109279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655550"
 ---
 # <a name="display-column-and-catalog-metadata-for-sparse-columns-ole-db"></a>Afficher une colonne et des métadonnées de catalogue pour les colonnes éparses (OLE DB)
   Cet exemple crée une table à trois colonnes : une colonne éparse, une colonne non éparse et une colonne de jeu de colonnes. L'exemple affiche ensuite les indicateurs OLE DB indiquant la colonne et les métadonnées de catalogue de la colonne non éparse et de la colonne de jeu de colonnes.  

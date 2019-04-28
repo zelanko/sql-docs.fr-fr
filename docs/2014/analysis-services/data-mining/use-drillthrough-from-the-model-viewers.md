@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ad62600c6ae48f156049cdae6078df37de0b330
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732594"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Utiliser l'extraction des visionneuses de modèle
   Selon le type de modèle, vous pouvez utiliser l'extraction des visionneuses d'exploration sur l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données pour explorer les cas utilisés dans le modèle d'exploration de données ou pour afficher des colonnes supplémentaires de la structure d'exploration de données. Bien que de nombreux types de modèles ne prennent pas en charge l'extraction, car les séquences du modèle ne peuvent pas être directement liées à des cas spécifiques, les types de modèles suivants prennent en charge l'extraction.  
@@ -29,7 +29,7 @@ ms.locfileid: "48090689"
   
 2.  Cliquez avec le bouton droit sur un nœud dans le graphique d’arbre, puis sélectionnez **Extraire**.  
   
-3.  Sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **Colonnes de structure et de modèle**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
+3.  Sélectionnez l'une des options suivantes : **Colonnes de modèle uniquement** ou **modéliser et de colonnes de Structure**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
   
 4.  La boîte de dialogue **Extraire** s’ouvre, affichant les données de cas et/ou de structure. La barre de titre de la boîte de dialogue contient également une description qui identifie le nœud dont la requête d'extraction a été exécutée.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "48090689"
   
 2.  Sous l’onglet **Cluster** , cliquez avec le bouton droit sur n’importe quel nœud.  
   
-3.  Sélectionnez **Extraire**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **Colonnes de structure et de modèle**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
+3.  Sélectionnez **extraction**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **modéliser et de colonnes de Structure**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
   
 4.  La boîte de dialogue **Extraire** s’ouvre, affichant les données de cas et/ou de structure. La barre de titre de la boîte de dialogue contient également une description qui identifie le cluster pour les cas.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48090689"
   
 2.  Sous l’onglet **Règles** , cliquez avec le bouton droit sur une ligne qui représente une règle. Dans l'onglet **Jeux d'éléments** , cliquez sur n'importe quelle ligne qui contient un jeu d'éléments.  
   
-3.  Sélectionnez **Extraire**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **Colonnes de structure et de modèle**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
+3.  Sélectionnez **extraction**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **modéliser et de colonnes de Structure**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
   
 4.  La boîte de dialogue **Extraire** s’ouvre, affichant les données de cas et/ou de structure. La barre de titre de la boîte de dialogue contient également une description qui identifie le nom de la règle.  
   
@@ -65,15 +65,15 @@ ms.locfileid: "48090689"
   
 2.  Sous l’onglet **Diagramme de cluster**, cliquez avec le bouton droit sur n’importe quel nœud qui représente un cluster. Dans l'onglet **Profils du cluster** , cliquez n'importe où dans un profil de cluster ou dans le cluster représentant la totalité de la population du modèle.  
   
-3.  Sélectionnez **Extraire**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **Colonnes de structure et de modèle**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
+3.  Sélectionnez **extraction**, puis sélectionnez une des options suivantes : **Colonnes de modèle uniquement** ou **modéliser et de colonnes de Structure**. Si vous n'avez pas d'autorisations, une option peut ne pas être disponible.  
   
 4.  La boîte de dialogue **Extraire** s’ouvre, affichant les données de cas et/ou de structure. La barre de titre de la boîte de dialogue contient également une description qui identifie le cluster pour les cas.  
   
 5.  Cliquez avec le bouton droit n’importe où dans les résultats et sélectionnez **Copier tout** pour enregistrer les résultats dans le Presse-papiers. Si le modèle contient une colonne de table imbriquée, seul le nom de la colonne de table imbriquée est collé ; pour extraire les valeurs de données de la colonne de table imbriquée pour chaque cas vous devez créer une requête sur le contenu.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Extraction sur les modèles d’exploration de données](drillthrough-on-mining-models.md)   
- [Extraction sur des structures d’exploration de données](drillthrough-on-mining-structures.md)  
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Extraction sur des modèles d'exploration de données](drillthrough-on-mining-models.md)   
+ [Extraction sur des structures d'exploration de données](drillthrough-on-mining-structures.md)  
   
   

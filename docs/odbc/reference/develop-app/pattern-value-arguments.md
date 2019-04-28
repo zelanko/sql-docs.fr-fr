@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861725"
 ---
 # <a name="pattern-value-arguments"></a>Arguments de valeur de modèle
 Certains arguments dans le catalogue des fonctions, telles que la *TableName* argument dans **SQLTables**, acceptez les modèles de recherche. Ces arguments acceptent des modèles de recherche si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_FALSE ; ils sont des arguments d’identificateur qui n’acceptent pas d’un modèle de recherche si cet attribut a la valeur SQL_TRUE.  
@@ -37,7 +37,7 @@ Certains arguments dans le catalogue des fonctions, telles que la *TableName* ar
   
 |Modèle de recherche|Description|  
 |--------------------|-----------------|  
-|%A %|Tous les identificateurs contenant la lettre A|  
+|%A%|Tous les identificateurs contenant la lettre A|  
 |ABC_|Tous les identificateurs de quatre caractères en commençant par ABC|  
 |ABC\\_|L’identificateur ABC_, en supposant que le caractère d’échappement est une barre oblique inverse (\\)|  
 |\\\\%|Tous les identificateurs commençant par une barre oblique inverse (\\), en supposant que le caractère d’échappement est une barre oblique inverse|  

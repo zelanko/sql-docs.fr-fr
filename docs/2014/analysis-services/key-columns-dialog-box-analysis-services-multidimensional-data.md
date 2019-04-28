@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c67966895699c34d58a0527ea27c06e7cc05ed5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729682"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Colonnes clés (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Colonnes clés** permet de modifier la propriété **KeyColumns** d’un attribut. Pour plus d’informations, consultez [Modifier la propriété KeyColumn d’un attribut](multidimensional-models/attribute-properties-modify-the-keycolumn-property.md).  

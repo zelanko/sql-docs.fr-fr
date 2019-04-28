@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9d7d4bd52a5f6e5b03a084cef4402e0a9044f97d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861399"
 ---
 # <a name="retrieving-bookmarks"></a>Récupération des signets
 Si l’application utilisera des signets, il doit définir l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS à SQL_UB_VARIABLE avant la préparation ou l’exécution de l’instruction. Cela est nécessaire, car la création et la maintenance des signets peuvent être une opération coûteuse, et signets doivent être activées uniquement quand une application peut faire une bonne de les utilisent.  

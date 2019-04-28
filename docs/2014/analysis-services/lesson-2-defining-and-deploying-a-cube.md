@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7396b5c5bf46abcbc60ac9e3a984fb2d7a7a2ee5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729395"
 ---
-# <a name="lesson-2-defining-and-deploying-a-cube"></a>Leçon 2 : Définition et déploiement d'un cube
+# <a name="lesson-2-defining-and-deploying-a-cube"></a>Leçon 2 : Définition et déploiement d’un cube
   Lorsque vous avez défini une vue de source de données dans votre projet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , vous êtes prêt à définir un premier cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
  Vous pouvez également définir un cube et ses dimensions en une même phase, en utilisant l'Assistant Cube. Vous pouvez également définir une ou plusieurs dimensions, puis utiliser l'Assistant Cube pour définir un cube qui utilise ces dimensions. Si vous concevez une solution complexe, vous démarrez généralement en définissant les dimensions. Pour plus d’informations, consultez [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md) ou [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md).  
@@ -47,7 +47,7 @@ ms.locfileid: "53374501"
  Au cours de cette tâche, vous allez explorer le cube et les données de dimension à l'aide d'Excel ou du Concepteur de requêtes MDX.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 3 : Modification des mesures, attributs et hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Leçon 3 : Modification des mesures, attributs et hiérarchies](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   

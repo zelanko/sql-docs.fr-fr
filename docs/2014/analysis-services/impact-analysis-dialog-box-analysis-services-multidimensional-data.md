@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79a356f8afe169c049cfcf55ceb2626a9e3c9ec1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730684"
 ---
 # <a name="impact-analysis-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Analyse d'impact (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Analyse d'impact** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour identifier et éventuellement traiter les objets dépendants affectés si les objets figurant dans la boîte de dialogue **Traiter** sont traités. Pour afficher la boîte de dialogue **Analyse d'impact** , cliquez sur **Analyse d'impact** dans la boîte de dialogue **Traiter** .  
@@ -41,12 +41,12 @@ ms.locfileid: "48191489"
   
 |Impact|Message|  
 |------------|-------------|  
-|L'objet sera exclu (non traité)|Avertissement|  
+|L'objet sera exclu (non traité)|Warning|  
 |L'objet serait non valide|Error|  
-|L'agrégation serait supprimée|Avertissement|  
-|L'agrégation flexible serait supprimée|Avertissement|  
-|Les index vont être supprimés|Avertissement|  
-|L'objet non enfant va être traité|Avertissement|  
+|L'agrégation serait supprimée|Warning|  
+|L'agrégation flexible serait supprimée|Warning|  
+|Les index vont être supprimés|Warning|  
+|L'objet non enfant va être traité|Warning|  
   
  **Objet de processus**  
  Sélectionnez les objets dépendants à traiter. Les objets dépendants non sélectionnés doivent être traités une fois le traitement terminé. Sinon, ils ne pourront pas être utilisés.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 161ba42729a21bd3794cf380c745380f8f7ed59c
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650015"
 ---
 # <a name="data-mining-concepts"></a>Concepts d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,15 +26,15 @@ ms.locfileid: "54185135"
   
  Ces motifs et tendances peuvent être collectés et définis en tant que *modèle d'exploration de données*. Les modèles d'exploration de données peuvent être appliqués à des scénarios spécifiques, tels que :  
   
--   **Prévision**: estimation des ventes, prédiction des charges du serveur ou du temps d'arrêt du serveur  
+-   **Prévision**: Estimation des ventes, prédiction des charges de serveur ou de temps mort de serveur  
   
--   **Risque et probabilité**: choix des meilleurs clients pour des publipostages ciblés, détermination du seuil de rentabilité probable pour les scénarios à risque, affectation de probabilités aux diagnostics ou à d'autres résultats  
+-   **Risque et probabilité**: Choix des meilleurs clients pour des publipostages ciblés, détermination de la rentabilité probable pour les scénarios à risque, affectation de probabilités aux diagnostics ou à d’autres résultats  
   
--   **Recommandations**: identification des produits susceptibles d'être vendus ensemble, génération de recommandations  
+-   **Recommandations**: Identification des produits susceptibles d’être vendus ensemble, génération de recommandations  
   
--   **Recherche de séquences**: analyse de sélections de clients dans un panier, prédiction de probables événements à venir  
+-   **Recherche de séquences**: Analyse de sélections de clients dans un panier, prédiction de probables événements à venir  
   
--   **Regroupement**: séparation des clients ou des événements dans un cluster d'éléments associés, analyse et prédiction d'affinités  
+-   **Regroupement**: Séparation des clients ou des événements dans un cluster d’éléments associés, analyse et prédiction d’affinités  
   
  La création d'un modèle d'exploration de données fait partie d'un processus plus vaste qui va de la pose de questions sur les données et la création d’un modèle afin de répondre à ces questions au déploiement du modèle dans un environnement de travail. Ce processus peut être défini à l'aide des six étapes de base suivantes :  
   

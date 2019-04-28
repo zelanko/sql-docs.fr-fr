@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53299289e4daf504eef9cb382469225d14efd698
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732620"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Afficher ou modifier les indicateurs de modélisation (Exploration de données)
   Les indicateurs de modélisation sont des propriétés que vous définissez sur une colonne de structure d'exploration de données ou des colonnes du modèle d'exploration de données afin de contrôler la façon dont l'algorithme traite les données pendant l'analyse.  
@@ -52,7 +52,7 @@ ms.locfileid: "48050135"
     ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
  [Indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)  
   
   

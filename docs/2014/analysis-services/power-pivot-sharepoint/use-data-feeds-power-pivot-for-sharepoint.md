@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 354e1dce8bfb11f7eefc0f90df0868ebc01757e0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62748991"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Utiliser des flux de données (PowerPivot pour SharePoint)
   Les flux de données comportent un ou plusieurs flux de données générés à partir d'une source de données en ligne et transmis en continu à un document ou une application de destination. Si vous utilisez PowerPivot pour Excel, les flux peuvent vous aider à obtenir des données d'entreprise ou données métier à partir de sources de données arbitraires et qui s'affichent dans la fenêtre PowerPivot dans votre classeur Excel 2010. Après avoir importé un flux dans un classeur, vous pouvez y faire référence ultérieurement dans toute opération d'actualisation des données que vous planifiez sur un serveur SharePoint.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f9cc17fb916bad5879c4f55737b72f9a1013de51
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663505"
 ---
 # <a name="cursorexecute-event-class"></a>CursorExecute (classe d'événements)
   La classe d’événements **CursorExecute** décrit les événements d’exécution de curseur qui se produisent dans les curseurs de l’interface de programmation d’applications (API). Les événements d’exécution de curseur se produisent lorsque le [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée et remplit un curseur à partir du plan d’exécution généré par un événement de préparation de curseur.  

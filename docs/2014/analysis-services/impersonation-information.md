@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05236d05e1b543ea7acb36f0856083e1c1db77a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730671"
 ---
 # <a name="impersonation-information"></a>Informations d’emprunt d’identité
   Utilisez la page **Informations d’emprunt d’identité** pour spécifier les informations d’identification qu’Analysis Services utilisera pour se connecter à la source de données.  
@@ -47,7 +47,7 @@ ms.locfileid: "48209719"
  Sélectionnez cette option pour utiliser le comportement d'emprunt d'identité, défini au niveau de la base de données, qui a été défini par l'administrateur du serveur à l'aide de la propriété de base de données `DataSourceImpersonation`.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données dans les modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [Sources de données dans des modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

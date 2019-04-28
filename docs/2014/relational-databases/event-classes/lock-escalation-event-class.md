@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662367"
 ---
 # <a name="lockescalation-event-class"></a>Classe d'événements Lock:Escalation
   La classe d’événements **Lock:Escalation** indique qu’un verrouillage spécifique s’est transformé en verrouillage de plus grande ampleur, comme par exemple un verrou de ligne transformé en verrou d’objet. La classe d'événements Escalation est l'ID d'événement 60.  

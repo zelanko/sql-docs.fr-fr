@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3647937630b259d60670cc470bbd1014dd288404
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666904"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Utiliser l'utilitaire sqlcmd
   L'utilitaire `sqlcmd` est un utilitaire de ligne de commande destiné à l'exécution ad hoc et interactive des instructions et des scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] et à l'automatisation des tâches de script [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pour utiliser `sqlcmd` de façon interactive ou pour créer des fichiers de script destinés à être exécutés avec `sqlcmd`, les utilisateurs doivent connaître [!INCLUDE[tsql](../../includes/tsql-md.md)]. L'utilitaire `sqlcmd` est généralement utilisé des façons suivantes :  
@@ -251,7 +251,7 @@ ms.locfileid: "52513341"
   
  `(3 rows affected)`  
   
-### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>b. Utilisation de sqlcmd avec une connexion d'administration dédiée  
+### <a name="b-using-sqlcmd-with-a-dedicated-administrative-connection"></a>B. Utilisation de sqlcmd avec une connexion d'administration dédiée  
  Dans l'exemple suivant, `sqlcmd` permet de se connecter à un serveur ayant un problème de blocage à l'aide de la connexion administrateur dédiée.  
   
  `C:\>sqlcmd -S ServerName -A`  

@@ -1,5 +1,5 @@
 ---
-title: Sys.server_event_notifications (Transact-SQL) | Microsoft Docs
+title: sys.server_event_notifications (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b985d915d3d7bb6b3130ccb63a400f314fa05a38
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62860906"
 ---
 # <a name="sysservereventnotifications-transact-sql"></a>sys.server_event_notifications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +42,11 @@ ms.locfileid: "47646483"
 |**create_date**|**datetime**|Date de création.|  
 |**modify_date**|**datetime**|Date de la dernière modification de l'objet à l'aide d'une instruction ALTER.|  
 |**service_name**|**nvarchar (256)**|Nom du service cible auquel la notification est envoyée.|  
-|**BROKER_INSTANCE**|**nvarchar(128)**|Service Broker sur lequel le service cible nommé est défini.|  
+|**broker_instance**|**nvarchar(128)**|Service Broker sur lequel le service cible nommé est défini.|  
 |**creator_sid**|**varbinary(85)**|ID de sécurité de la connexion exécutant l'instruction qui crée la notification d'événement. La valeur est NULL si WITH FAN_IN n'est pas spécifié dans la définition de la notification d'événement.|  
 |**principal_id**|**Int**|ID du principal de serveur propriétaire.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

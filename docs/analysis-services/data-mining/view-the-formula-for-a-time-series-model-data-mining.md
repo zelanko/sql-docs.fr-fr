@@ -1,5 +1,5 @@
 ---
-title: Afficher la formule d’une série chronologique (exploration de données) de modèle | Documents Microsoft
+title: Afficher la formule d’une série chronologique (exploration de données) de modèle | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0aaa1be07dcd5857585e7db3dbd4a78a44d41ff3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659728"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Afficher la formule d'un modèle de série chronologique (exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "34017226"
     >  Si vous parcourez le contenu d’un modèle mixte qui utilise des modèles ARTXP et ARIMA, les deux modèles se trouvent dans des arborescences distinctes, jointes au niveau du nœud racine qui représentant le modèle. Bien que les modèles ARTXP et ARIMA soient présentés dans une seule visionneuse pour des raisons pratiques, les structures sont très différentes, comme le sont les équations, qui ne peuvent pas être associées ou comparées. Par exemple, l’arbre ARTXP s’apparente plutôt à un arbre de décision, alors que l’arbre ARIMA représente une série de moyennes mobiles.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Parcourir un modèle à l’aide de la visionneuse de série Microsoft Time](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
   

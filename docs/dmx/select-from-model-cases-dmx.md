@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f65aa4dc64e795235286eccd9f3283216ba6f4f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658766"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>SELECT FROM &lt;modèle&gt;. CAS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
 ## <a name="examples"></a>Exemples  
  Les exemples suivants sont basés sur la structure d’exploration de données Targeted Mailing, qui est basé sur le [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]base de données et ses modèles d’exploration de données associée. Pour plus d’informations, consultez [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c).  
   
-### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Exemple 1 : Extraction dans des cas de modèles et des colonnes de structure  
+### <a name="example-1-drillthrough-to-model-cases-and-structure-columns"></a>Exemple 1 : Extraction des colonnes de Structure et les scénarios de modèle  
  L'exemple suivant retourne les colonnes de tous les cas qui ont été utilisés pour tester le modèle Targeted Mailing. Si la structure d'exploration de données sur laquelle le modèle est construit ne possède pas de jeu de données du test d'exclusion, cette requête retourne 0 cas. Vous pouvez utiliser la liste d'expressions pour retourner uniquement les colonnes dont vous avez besoin.  
   
 ```  
@@ -72,7 +72,7 @@ SELECT * FROM [TM Decision Tree].Cases
 WHERE IsTestCase();  
 ```  
   
-### <a name="example-2-drillthrough-to-training-cases-in-a-specific-node"></a>Exemple 2 : Extraction dans des cas d'apprentissage dans un nœud spécifique  
+### <a name="example-2-drillthrough-to-training-cases-in-a-specific-node"></a>Exemple 2 : Extraction des cas d’apprentissage dans un nœud spécifique  
  L'exemple suivant retourne uniquement les cas utilisés pour l'apprentissage de Cluster 2. Le nœud pour Cluster 2 a la valeur '002' pour la colonne NODE_UNIQUE_NAME. L'exemple retourne également une colonne de structure, [Customer Key], qui ne faisait pas partie du modèle d'exploration de données, et fournit l'alias `CustomerID` pour la colonne. Notez que le nom de la colonne de structure est passé en tant que valeur de chaîne ; par conséquent, il doit être entre guillemets, et non entre crochets.  
   
 ```  
@@ -88,7 +88,7 @@ AND IsInNode('002')
 >  La prise en charge de l'extraction varie selon le type de modèle d'exploration de données. Pour plus d’informations sur les modèles qui prennent en charge l’extraction, consultez [requêtes d’extraction &#40;d’exploration de données&#41;](../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SÉLECTIONNEZ &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

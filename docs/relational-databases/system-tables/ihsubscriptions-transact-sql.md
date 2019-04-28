@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1c8ac59b6a9798f04efaf756c83b6862e9fa9871
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719608"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "52823573"
 |**srvid**|**smallint**|L’ID de serveur de l’abonné.|  
 |**dest_db**|**sysname**|Nom de la base de données de destination.|  
 |**login_name**|**sysname**|Nom d’accès utilisé lors de l’ajout de l’abonnement|  
-|**distribution_jobid**|**binary (16)**|ID de travail de l’Agent de distribution|  
+|**distribution_jobid**|**binary(16)**|ID de travail de l’Agent de distribution|  
 |**timestamp**|**timestamp**|Date et heure de création de l'abonnement.|  
 |**queued_reinit**|**bit**|Indique si l'article est marqué pour l'initialisation ou la réinitialisation. La valeur **1** indique que l’abonnement à l’article est marqué pour l’initialisation ou la réinitialisation.|  
 |**status**|**tinyint**|L’état de l’abonnement :<br /><br /> **0** = inactif.<br /><br /> **1** = abonné.<br /><br /> **2** = actif.|  
 |**sync_type**|**tinyint**|Type de synchronisation initiale :<br /><br /> **1** = automatique.<br /><br /> **2** = none.|  
 |**subscription_type**|**Int**|Le type d’abonnement :<br /><br /> **0** = push - l’agent de distribution s’exécute sur l’abonné.<br /><br /> **1** = par extraction - l’agent de distribution s’exécute sur le serveur de distribution.|  
-|**update_mode**|**tinyint**|Mode de mise à jour :<br /><br /> **0** = lecture seule.<br /><br /> **1** = mise à jour immédiate.|  
+|**update_mode**|**tinyint**|Mode de mise à jour :<br /><br /> **0** = lecture seule.<br /><br /> **1** = Immediate-updating.|  
 |**loopback_detection**|**bit**|S'applique aux abonnements qui font partie d'une topologie de réplication transactionnelle bidirectionnelle. La détection de boucle détermine si l'Agent de distribution renvoie à l'Abonné les transactions émanant de ce dernier :<br /><br /> **0** = renvoie les transactions.<br /><br /> **1** = ne pas renvoyer.|  
   
 ## <a name="see-also"></a>Voir aussi  

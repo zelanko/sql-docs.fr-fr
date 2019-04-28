@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 127111dcbcdef14d511c7e296743ba23a5ca1cdd
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670437"
 ---
 # <a name="data-mining-schema-rowsets-ssas"></a>Ensembles de lignes de schéma d’exploration de données (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "50144285"
 ## <a name="examples"></a>Exemples  
  La section suivante fournit quelques exemples de requêtes sur les ensembles de lignes de schéma d'exploration de données.  
   
-### <a name="example-1-list-data-mining-services"></a>Exemple 1 : Répertorier les services d'exploration de données  
+### <a name="example-1-list-data-mining-services"></a>Exemple 1 : Services d’exploration de données de liste  
  La requête suivante retourne une liste des services d'exploration de données qui sont disponibles sur le serveur actuel, c'est-à-dire les algorithmes qui sont activés. Les colonnes fournies pour chaque service d'exploration de données comprennent notamment les indicateurs de modélisation et les types de contenu qui peuvent être utilisés par chaque algorithme, le GUID pour chaque service et toute limite de prédiction ayant pu être ajoutée pour chaque service.  
   
 ```  
@@ -52,7 +52,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Exemple 2 : Répertorier les paramètres du modèle d'exploration de données  
+### <a name="example-2-list-mining-model-parameters"></a>Exemple 2 : Liste des paramètres de modèle d’exploration de données  
  L'exemple suivant retourne les paramètres utilisés pour créer un modèle d'exploration de données spécifique :  
   
 ```  
@@ -61,7 +61,7 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Exemple 3 : Répertorier tous les ensembles de lignes  
+### <a name="example-3-list-all-rowsets"></a>Exemple 3 : Répertorier tous les ensembles de lignes  
  L'exemple suivant retourne une liste complète des ensembles de lignes disponibles sur le serveur actuel :  
   
 ```  

@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (pilote Paradox) | Microsoft Docs
+title: SQLConfigDataSource (Paradox Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665341"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (pilote Paradox)
 > [!NOTE]  
@@ -34,7 +34,7 @@ ms.locfileid: "47694590"
 |DEFAULTDIR|La spécification de chemin d’accès au répertoire.|  
 |DESCRIPTION|Une description des données dans la source de données.<br /><br /> La même option est définie en tant que **Description** dans la boîte de dialogue d’installation.|  
 |DRIVER|La spécification de chemin d’accès à la DLL du pilote.|  
-|DRIVERID|Un ID d’entier pour le pilote.<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
+|DRIVERID|Un ID d’entier pour le pilote.<br /><br /> 26 (Paradox 3.x)<br /><br /> 282 (Paradox 4.x)<br /><br /> 538 (Paradox 5.x)|  
 |EXCLUSIF|Détermine si la base de données doit être ouvert en mode exclusif (accédé par un seul utilisateur à la fois) ou mode (accédé par plusieurs utilisateurs à la fois) partagé. Peut être true (mode exclusif) ou false (mode partagé).<br /><br /> La même option est définie en tant que **exclusif** dans la boîte de dialogue d’installation.|  
 |FIL|Fichier de type Paradox 3.x, Paradox 4.x ou Paradox 5.x|  
 |TYPE DE FICHIER|Type de fichier pour le pilote de texte (texte).|  

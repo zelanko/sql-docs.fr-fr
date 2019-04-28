@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a55f15074257ae19b026ef373ea0c7838a55081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680104"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Connexion à un flux de rapport ou de données (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de vous connecter à un flux de données. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -56,7 +56,7 @@ ms.locfileid: "48090209"
  **Clé de compte**  
  Spécifiez la clé de compte utilisée pour accéder à vos abonnements de dataset Windows Azure Marketplace.  
   
- **Rechercher**  
+ **Find**  
  Recherchez une clé de compte associée à un compte Windows Live.  
   
  **Enregistrer ma clé de compte**  

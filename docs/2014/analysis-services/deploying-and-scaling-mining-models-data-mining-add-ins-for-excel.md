@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cedf0226f4386be5b822a06dc85f384044e94f0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732159"
 ---
 # <a name="deploying-and-scaling-mining-models-data-mining-add-ins-for-excel"></a>Déploiement et mise à l'échelle des modèles d'exploration de données (Compléments d'exploration de données pour Excel)
   Les outils dans le **l’utilisation du modèle** et **gestion** groupe sont fournies pour vous aider à gérer et parcourir les modèles d’exploration de données existants. Utilisez ces outils pour afficher tous les modèles stockés sur une instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], et non pas uniquement ceux créés avec les compléments.  
