@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b964e1a3958ed57251b2b5cccc8ec4dfc13f9eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869209"
 ---
 # <a name="mssqlserver2512"></a>MSSQLSERVER_2512
     
@@ -30,7 +30,7 @@ ms.locfileid: "48118071"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC_DUPLICATE_KEYS|  
-|Texte du message|Erreur de table : ID d'objet O_ID, ID d'index I_ID, ID de partition PN_ID, ID d'unité d'allocation A_ID (type TYPE). Clés en double sur la page P_ID1, emplacement SLOT1, et sur la page P_ID2, emplacement SLOT2.|  
+|Texte du message|Erreur de table, ID d’objet O_ID, ID d’index I_ID, ID de partition PN_ID, unité d’allocation ID A_ID (type TYPE). Clés en double sur la page P_ID1, emplacement SLOT1, et sur la page P_ID2, emplacement SLOT2.|  
   
 ## <a name="explanation"></a>Explication  
  Les deux emplacements spécifiés ont des clés identiques, y compris tout `uniqueifiers`.  

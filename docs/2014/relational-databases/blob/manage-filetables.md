@@ -14,16 +14,16 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 2e8522cde5be0ccc34f858ce6bff945433af11ac
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874786"
 ---
 # <a name="manage-filetables"></a>Gérer des FileTables
   Décrit les tâches d'administration courantes permettant de gérer des FileTables.  
   
-##  <a name="HowToEnumerate"></a> Comment : Obtenir une liste de FileTables et d'objets connexes  
+##  <a name="HowToEnumerate"></a> Comment : Obtenir une liste de FileTables et d’objets connexes  
  Pour obtenir une liste de FileTables, interrogez l'un des affichages catalogue suivants :  
   
 -   [sys.filetables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetables-transact-sql)  
@@ -79,7 +79,7 @@ GO
   
 -   Aucun des répertoires au niveau de la base de données sur l'instance n'est visible si FILESTREAM est désactivé au niveau de l'instance.  
   
-###  <a name="HowToDisable"></a> Comment : Désactiver et réactiver l'accès non transactionnel au niveau de la base de données  
+###  <a name="HowToDisable"></a> Comment : Désactiver et réactiver l’accès Non transactionnel au niveau de la base de données  
  Pour plus d’informations, consultez [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options).  
   
  **Pour désactiver l'accès non transactionnel complet**  
@@ -138,7 +138,7 @@ GO
   
 -   Le répertoire FileTable et les fichiers et répertoires qu'il contient sont visibles dans le système de fichiers et sont disponibles pour l'accès aux E/S de fichier.  
   
-###  <a name="HowToEnableNS"></a> Comment : Désactiver et réactiver l'espace de noms FileTable au niveau de la table  
+###  <a name="HowToEnableNS"></a> Comment : Désactiver et réactiver le Namespace FileTable au niveau des tables  
  Appelez l’instruction ALTER TABLE avec l’option **{ENABLE | DISABLE} FILETABLE_NAMESPACE** .  
   
  **Pour désactiver l'espace de noms FileTable**  

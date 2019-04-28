@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832871"
 ---
 # <a name="bulk-insert-task"></a>tâche d'insertion en bloc
   La tâche d'insertion en bloc est un moyen efficace pour copier de gros volumes de données dans une table ou une vue [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par exemple, supposons que votre entreprise stocke la liste de ses produits d’un million de lignes sur un mainframe, mais que son système d’e-commerce utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour fournir des données à des pages web. Vous devez mettre à jour la table des produits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] toutes les nuits, à l'aide de la liste principale des produits depuis le gros ordinateur. Pour mettre à jour la table, vous enregistrez la liste des produits dans un fichier au format délimité par des tabulations, puis vous utilisez la tâche d'insertion en bloc pour copier les données directement dans la table [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

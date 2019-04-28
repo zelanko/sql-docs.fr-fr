@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f1fd069336a52b0a27ae927880f749c02d2c1d43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998919"
 ---
 # <a name="parameter-binding-offsets"></a>Décalages des liaisons de paramètres
 Une application peut spécifier qu’un décalage est ajouté à adresses de tampons de paramètre et l’indicateur de longueur/correspondante liées aux adresses de mémoire tampon quand **SQLExecDirect** ou **SQLExecute** est appelée. Le résultat de ces ajouts détermine les adresses utilisées dans ces opérations.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c34694012a69285ee92fa90c58f293654c961890
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722351"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importer un projet d'exploration de données à l'aide de l'Assistant Importation d'Analysis Services
   Cette rubrique décrit la méthode de création d’un projet d’exploration de données en important les métadonnées d’un projet existant d’exploration de données sur un autre serveur, à l’aide du modèle **Importer à partir du serveur (Multidimensionnel et exploration de données)**, dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

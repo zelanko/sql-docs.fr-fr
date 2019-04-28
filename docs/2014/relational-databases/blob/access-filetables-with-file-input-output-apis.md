@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 8c12736694451d1a6fd1dff34c4f883cb45694e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876911"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Accéder aux FileTables avec des API d’entrée-sortie de fichier
   Décrit le fonctionnement des E/S du système de fichiers sur un FileTable.  
@@ -105,29 +105,29 @@ ms.locfileid: "48082202"
 |Fonctionnalité|Pris en charge|Commentaires|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Oui|La prise en charge du niveau 2, du niveau 1, des oplocks Lot et Filtre est assurée.|  
-|**Attributs étendus**|non||  
-|**Points d'analyse**|non||  
-|**ACL persistants**|non||  
-|**Flux nommés**|non||  
+|**Attributs étendus**|Non||  
+|**Points d'analyse**|Non||  
+|**ACL persistants**|Non||  
+|**Flux nommés**|Non||  
 |**Fichiers partiellement alloués**|Oui|Le caractère éparse ne peut être défini que sur les fichiers et affecte le stockage du flux de données. Dans la mesure où les données FILESTREAM sont stockées sur des volumes NTFS, la fonctionnalité FileTable prend en charge les fichiers partiellement alloués en envoyant les demandes au système de fichiers NTFS.|  
 |**Compression**|Oui||  
 |**Chiffrement**|Oui||  
-|**TxF**|non||  
-|**ID de fichier**|non||  
-|**ID d'objet**|non||  
-|**Liens symboliques**|non||  
-|**Liens physiques**|non||  
-|**Noms courts**|non||  
-|**Notifications de modification de répertoire**|non||  
+|**TxF**|Non||  
+|**ID de fichier**|Non||  
+|**ID d'objet**|Non||  
+|**Liens symboliques**|Non||  
+|**Liens physiques**|Non||  
+|**Noms courts**|Non||  
+|**Notifications de modification de répertoire**|Non||  
 |**Verrouillage de plage d'octets**|Oui|Les demandes de verrouillage de plage d'octets sont passées au système de fichiers NTFS.|  
-|**Fichiers mappés en mémoire**|non||  
+|**Fichiers mappés en mémoire**|Non||  
 |**Annulation d'entrées/sorties**|Oui||  
-|**Sécurité**|non|La sécurité au niveau du partage Windows et la sécurité au niveau table/colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont appliquées.|  
-|**Journal USN**|non|Les modifications de métadonnées apportées aux fichiers et répertoires d'un FileTable sont des opérations DML sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, elles sont journalisées dans le fichier journal de base de données correspondant. En revanche, elles ne sont pas consignées dans le journal USN NTFS (à l'exception des modifications de taille).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent d'obtenir des informations similaires.|  
+|**Sécurité**|Non|La sécurité au niveau du partage Windows et la sécurité au niveau table/colonne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont appliquées.|  
+|**Journal USN**|Non|Les modifications de métadonnées apportées aux fichiers et répertoires d'un FileTable sont des opérations DML sur une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Par conséquent, elles sont journalisées dans le fichier journal de base de données correspondant. En revanche, elles ne sont pas consignées dans le journal USN NTFS (à l'exception des modifications de taille).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permettent d'obtenir des informations similaires.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Charger des fichiers dans FileTables](load-files-into-filetables.md)   
- [Travailler avec des répertoires et des chemins d'accès dans FileTables](work-with-directories-and-paths-in-filetables.md)   
+ [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md)   
  [Accéder aux FileTables avec Transact-SQL](access-filetables-with-transact-sql.md)   
  [DDL, fonctions, procédures stockées et vues FileTable](../views/views.md)  
   

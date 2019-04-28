@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 875f89a53963633a267ada1ae1563360cbebf7d8
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62713722"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Quelles sont les nouveautés de SSMA pour SAP ASE (SybaseToSQL)
 Cet article répertorie les SQL Server Migration Assistant (SSMA) pour les modifications de SAP ASE (anciennement SSMA pour Sybase) dans chaque version.

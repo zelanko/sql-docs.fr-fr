@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 9 : Configuration d’un Service de données de référence | Microsoft Docs'
+title: 'Tâche 9 : Configuration d’un Service de données de référence | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: adbde32de86da407bdd2655f66d036021e6784f8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866228"
 ---
-# <a name="task-9-configuring-a-reference-data-service"></a>Tâche 9 : Configuration d'un service de données de référence
+# <a name="task-9-configuring-a-reference-data-service"></a>Tâche 9 : Configuration d’un service de données de référence
   Dans cette tâche, vous allez configurer DQS pour utiliser un service de données de référence dans la Place de marché Microsoft Azure. Dans la tâche suivante, vous allez configurer le domaine **Validation d'adresses** pour utiliser ce service. Au moment de l'exécution, pendant l'activité de nettoyage, DQS passe les valeurs des domaines du domaine **Validation d'adresses** au service pour le nettoyage. Consultez [Configurer DQS pour utiliser des données de référence](https://msdn.microsoft.com/library/hh213070.aspx) pour plus de détails.  
   
 1.  Dans la page principale du **Client DQS**, cliquez sur **Configuration** dans le volet **Administration**.  

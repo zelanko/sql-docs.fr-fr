@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 96926b2c7c305bf685bc91206072755081ed35a4
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59967925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011174"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Configurer un serveur de rapports en mode natif pour l'administration locale (SSRS)
   Le déploiement d'un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] sur l'un des systèmes d'exploitation suivants requiert davantage d'étapes de configuration si vous souhaitez administrer l'instance du serveur de rapports localement. Cette rubrique explique comment configurer le serveur de rapports pour l'administration locale. Si vous n’avez pas encore installé ou configuré le serveur de rapports, consultez [installer SQL Server 2014 à partir de l’Assistant Installation &#40;le programme d’installation&#41; ](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md) et [gérer un serveur Reporting Services Native Mode rapport](manage-a-reporting-services-native-mode-report-server.md).  

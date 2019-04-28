@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13b7f6a2e34d7819b930d919e9fd773e2c993d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010690"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>Rapprocher les modifications effectuées par plusieurs utilisateurs (Visual Database Tools)
   Dans un environnement multi-utilisateur, des modifications peuvent être apportées à un même objet par plusieurs utilisateurs simultanément. Cela peut se produire lorsque vous travaillez sur la structure de l’objet dans le Concepteur de tables ou dans le Concepteur de diagrammes de base de données, ou dans les valeurs des résultats retournés dans le volet Résultats du Concepteur de requêtes et de vues. Cela peut provoquer des conflits que vous souhaiterez résoudre.  

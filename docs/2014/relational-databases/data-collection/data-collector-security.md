@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7dd2b26662fea95837eabaf61f61e3da04fac69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873620"
 ---
 # <a name="data-collector-security"></a>Sécurité du collecteur de données
   Le collecteur de données utilise le modèle de sécurité basée sur les rôles implémenté par l'Agent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce modèle permet à l'administrateur de base de données d'exécuter les différentes tâches du collecteur de données dans un contexte de sécurité qui ne dispose que des autorisations requises pour effectuer ces tâches. Cette méthode est également utilisée pour les opérations qui impliquent des tables internes, uniquement accessibles à l'aide d'une procédure stockée ou d'une vue. Aucune autorisation n'est accordée aux tables internes. En revanche, il est procédé à une vérification des autorisations de l'utilisateur de la procédure stockée ou de la vue utilisée pour accéder à une table.  

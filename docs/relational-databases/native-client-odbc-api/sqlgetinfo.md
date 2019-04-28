@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 15add88f6a244b81b13bf9f63d4a53381fe091eb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014391"
 ---
 # <a name="sqlgetinfo"></a>SQLGetInfo
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -212,7 +212,7 @@ ms.locfileid: "51665958"
 |SQL_USER_NAME|Nom d'utilisateur actuel.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLGetInfo, fonction](https://go.microsoft.com/fwlink/?LinkId=59354)   
+ [SQLGetInfo Function](https://go.microsoft.com/fwlink/?LinkId=59354)   
  [Détails de l’implémentation d’API ODBC](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

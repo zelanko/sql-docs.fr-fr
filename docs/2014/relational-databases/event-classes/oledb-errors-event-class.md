@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961065"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors (classe d'événements)
   La classe d'événements OLEDB Errors se produit dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lorsqu'un appel vers un fournisseur OLE DB retourne une erreur. Utilisez cette classe d'événements dans vos traces afin d'afficher un HRESULT d'échec provenant d'un fournisseur OLE DB.  

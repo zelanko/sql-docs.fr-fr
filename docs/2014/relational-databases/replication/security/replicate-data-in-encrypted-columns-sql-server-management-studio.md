@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955842"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Répliquer des données dans des colonnes chiffrées (SQL Server Management Studio)
   La réplication permet de publier des données de colonnes chiffrées. Pour déchiffrer et exploiter ces données sur l'Abonné, la clé employée pour chiffrer les données sur le serveur de publication doit également être présente sur l'Abonné. La réplication n'offre pas un mécanisme sécurisé de transport des clés de chiffrement. Vous devez manuellement recréer la clé de chiffrement sur l'Abonné. Cette rubrique explique comment chiffrer une colonne sur le serveur de publication et vous assurer que la clé de chiffrement est disponible au niveau de l'Abonné.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9e37fd917dc2716967623648a62057e45df73dc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873319"
 ---
 # <a name="use-sql-server-profiler-to-create-a-sql-trace-collection-set-sql-server-management-studio"></a>Utiliser SQL Server Profiler pour créer un jeu d'éléments de collecte Trace SQL (SQL Server Management Studio)
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], vous pouvez exploiter les fonctions de trace côté serveur de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pour exporter une définition de trace que vous pouvez utiliser afin de créer un jeu d’éléments de collecte qui utilise le type de collecteur Trace SQL générique. Ce processus se décompose en deux parties :  

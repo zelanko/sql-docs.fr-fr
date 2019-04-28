@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -20,13 +20,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c0064e35be2ab514e93b9119f7994849cf50cc4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013201"
 ---
-# <a name="sysdmexecfunctionstats-transact-sql"></a>Sys.dm_exec_function_stats (Transact-SQL)
+# <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   Retourne les statistiques de performances pour les fonctions de mise en cache des agrégats. La vue retourne une ligne pour chaque plan de la fonction mise en cache, et la durée de vie de la ligne est aussi longtemps que la fonction est mis en cache. Lorsqu’une fonction est supprimée du cache, la ligne correspondante est éliminée de cette vue. À ce stade, un événement de trace SQL de statistiques de performances est déclenché similaire à **sys.dm_exec_query_stats**. Retourne des informations sur les fonctions scalaires, y compris les fonctions en mémoire et fonctions scalaires CLR. Ne retourne pas d’informations sur les fonctions table.  
@@ -92,6 +92,6 @@ ORDER BY [total_worker_time] DESC;
  [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
  [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [Sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

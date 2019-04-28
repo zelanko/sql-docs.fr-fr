@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 50cd0b4e2336b20ab12b8c5e6fda6615af03abd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722689"
 ---
 # <a name="deployment-of-data-mining-solutions"></a>Déploiement de solutions d’exploration de données
   La dernière étape du processus d'exploration de données consiste à déployer les modèles dans un environnement de production. Le déploiement est important car il met les modèles à la disposition des utilisateurs afin de vous permettre d'effectuer n'importe laquelle des tâches suivantes :  
@@ -44,7 +44,7 @@ ms.locfileid: "48087639"
  [Ressources connexes](#bkmk_Resources)  
   
 ## <a name="in-this-section"></a>Dans cette section  
- [Déployer une solution d’exploration de données sur des versions antérieures de SQL Server](deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
+ [Déployer une solution d'exploration de données sur des versions antérieures de SQL Server](deploy-a-data-mining-solution-to-previous-versions-of-sql-server.md)  
   
  [Exporter et importer des objets d’exploration de données](export-and-import-data-mining-objects.md)  
   
@@ -85,6 +85,6 @@ ms.locfileid: "48087639"
 ## <a name="see-also"></a>Voir aussi  
  [Traitement des objets de modèle multidimensionnel](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Interfaces de requête d’exploration de données](data-mining-query-tools.md)   
- [Traitement des exigences et considérations &#40;exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
+ [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](processing-requirements-and-considerations-data-mining.md)  
   
   

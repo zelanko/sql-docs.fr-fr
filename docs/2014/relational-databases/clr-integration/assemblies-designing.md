@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874930"
 ---
 # <a name="designing-assemblies"></a>Conception d'assemblys
   Cette rubrique décrit les facteurs suivants, à prendre en considération lors de la conception d'assemblys :  
@@ -39,7 +39,7 @@ ms.locfileid: "48196239"
 -   Si une portion de code managé requiert une autorisation plus élevée, il est préférable de la placer dans un assembly distinct du code qui ne requiert pas une telle autorisation.  
   
 ## <a name="managing-assembly-security"></a>Gestion de la sécurité des assemblys  
- Vous pouvez contrôler la quantité d’un assembly peut accéder aux ressources protégées par la sécurité d’accès du Code .NET lorsqu’il s’exécute du code managé. Pour ce faire, vous spécifiez l'un des trois jeux d'autorisations lorsque vous créez ou modifiez un assembly : SAFE, EXTERNAL_ACCESS ou UNSAFE.  
+ Vous pouvez contrôler la quantité d’un assembly peut accéder aux ressources protégées par la sécurité d’accès du Code .NET lorsqu’il s’exécute du code managé. Pour cela, en spécifiant une des trois jeux d’autorisations lorsque vous créez ou modifiez un assembly : SAFE, EXTERNAL_ACCESS ou UNSAFE.  
   
 ### <a name="safe"></a>SAFE  
  SAFE est le jeu d'autorisations par défaut et il s'agit du plus restrictif. Le code exécuté par un assembly avec des autorisations SAFE ne peut pas accéder aux ressources système externes telles que les fichiers, le réseau, les variables d'environnement ou le Registre. Le code SAFE peut accéder aux données des bases de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] locales ou réaliser des calculs et une logique métier qui ne nécessitent pas l'accès aux ressources situées hors de ces bases de données.  

@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873407"
 ---
 # <a name="system-data-collection-set-reports"></a>Rapports de jeux d'éléments de collecte de données système
   Le collecteur de données fournit un rapport historique pour chaque jeu d'éléments de collecte de données système. Chacun des rapports suivants utilise des données stockées dans l'entrepôt de données de gestion :  
@@ -58,7 +58,7 @@ ms.locfileid: "54100494"
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Sous-rapport Utilisation du disque pour la base de données : <nom_base_de_données>  
  Le sous-rapport **Utilisation du disque pour la base de données :**_<nom_base_de_données>_ s’affiche quand vous cliquez sur un nom de base de données dans la table de résumé du rapport Jeu d’éléments de collecte Utilisation du disque. Ce rapport fournit une répartition numérique et graphique de l'utilisation de l'espace par les fichiers de données et les fichiers journaux de transactions de la base de données. L'utilisation de l'espace pour les fichiers de données est catégorisée en tant que pourcentage alloué aux pages d'index, à l'espace non alloué, aux pages de données et à l'espace inutilisé. Ces catégories sont définies comme suit :  
   
-|Catégorie|Définition|  
+|Category|Définition|  
 |--------------|----------------|  
 |Index|Quantité d'espace disque utilisée pour contenir les pages d'index.|  
 |Non alloué|Quantité d'espace disque disponible pour la base de données mais non encore allouée à un objet.|  
@@ -81,21 +81,21 @@ ms.locfileid: "54100494"
   
  **Contrôle de chronologie et boutons de navigation**  
   
- Utilisez le contrôle de chronologie et les boutons de navigation pour parcourir la chronologie ou pour sélectionner une plage de dates. Les boutons fléchés permettent de faire défiler vers la droite et vers la gauche de manière à avancer ou à reculer dans la chronologie. Par défaut, les flèches permettent de parcourir la chronologie par incréments de 4 heures. À l’aide des boutons de loupe, vous pouvez développer ou réduire cet intervalle de temps à une des valeurs suivantes : 15 minutes, 1 heure, 4 heures, 12 heures ou 24 heures. La plage temporelle actuellement sélectionnée est indiquée par la partie en surbrillance de la chronologie et affichée dans le texte au-dessous de celle-ci. Ces valeurs, ainsi que les données du rapport, sont mises à jour chaque fois que vous cliquez sur la chronologie ou que vous utilisez les boutons de navigation.  
+ Utilisez le contrôle de chronologie et les boutons de navigation pour parcourir la chronologie ou pour sélectionner une plage de dates. Les boutons fléchés permettent de faire défiler vers la droite et vers la gauche de manière à avancer ou à reculer dans la chronologie. Par défaut, les flèches permettent de parcourir la chronologie par incréments de 4 heures. À l’aide des boutons de loupe, vous pouvez développer ou contracter cet incrément d’heure sur l’une des valeurs suivantes : 15 minutes, 1 heure, 4 heures, 12 heures ou 24 heures. La plage temporelle actuellement sélectionnée est indiquée par la partie en surbrillance de la chronologie et affichée dans le texte au-dessous de celle-ci. Ces valeurs, ainsi que les données du rapport, sont mises à jour chaque fois que vous cliquez sur la chronologie ou que vous utilisez les boutons de navigation.  
   
  **Bouton Calendrier**  
   
  Utilisez le bouton Calendrier pour spécifier la date de début, l'heure de début et la durée des données pour lesquelles vous voulez créer un rapport.  
   
 #### <a name="query-statistics-history-report"></a>Rapport Historique des statistiques sur les requêtes  
- Le graphique Requêtes principales par temps processeur total montre la dépense relative de chaque requête pour la plage temporelle sélectionnée par rapport à l'utilisation totale du processeur. Pour afficher une vue différente des dépenses de requêtes relatives, cliquez sur un des liens hypertexte situés sous le graphique : **Durée**, **nombre Total d’e/s**, **lectures physiques**, ou **écritures logiques**.  
+ Le graphique Requêtes principales par temps processeur total montre la dépense relative de chaque requête pour la plage temporelle sélectionnée par rapport à l'utilisation totale du processeur. Pour afficher une vue différente des dépenses de requêtes relatives, cliquez sur l’un des liens hypertexte situés sous le graphique : **Durée**, **Total E/S**, **Lectures physiques** ou **Écritures logiques**.  
   
  La table située au-dessous du graphique fournit des données de requête supplémentaires. Elle répertorie le texte de chaque requête représentée dans le graphique avec des informations statistiques détaillées. Notez que les barres de graphique sont des liens actifs, comme le sont toutes les requêtes répertoriées dans la table. Un clic sur un lien actif ouvre le sous-rapport Détails de la requête.  
   
 #### <a name="query-details-subreport"></a>Sous-rapport Détails de la requête  
  Le sous-rapport Détails de la requête fournit l'intégralité du texte de la requête. Un lien hypertexte **Modifier le texte de la requête** est situé juste à côté de la requête. Vous pouvez cliquer sur ce lien pour ouvrir la requête dans l'Éditeur de requête. La table située sous la fenêtre de requête fournit des statistiques sur l'exécution de la requête, telles que la durée moyenne par exécution de requête.  
   
- Un graphique de plans de requête et la durée moyenne par exécution sont affichés. Pour afficher une vue différente du coût de plan de requête relatif, cliquez sur un des liens hypertexte affichés sous le graphique : **Durée**, **lectures physiques**, ou **écritures logiques**. La courbe de graphique est active et vous pouvez cliquer sur un point quelconque pour ouvrir le sous-rapport Détails du plan de requête.  
+ Un graphique de plans de requête et la durée moyenne par exécution sont affichés. Pour afficher une vue différente du coût de plan de requête relatif, cliquez sur l’un des liens hypertexte affichés sous le graphique : **Durée**, **Lectures physiques** ou **Écritures logiques**. La courbe de graphique est active et vous pouvez cliquer sur un point quelconque pour ouvrir le sous-rapport Détails du plan de requête.  
   
  La table située au-dessous du graphique montre les 10 principaux plans de requête, identifiés en fonction de l'utilisation de l'UC par exécution. Chaque nombre figurant dans la colonne **Plan numéro** est un lien actif sur lequel vous pouvez cliquer pour ouvrir le sous-rapport Détails du plan de requête.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54100494"
   
  **Contrôle de chronologie et boutons de navigation**  
   
- Utilisez le contrôle de chronologie et les boutons de navigation pour parcourir la chronologie ou pour sélectionner une plage de dates. Les boutons fléchés permettent de faire défiler vers la droite et vers la gauche de manière à avancer ou à reculer dans la chronologie. Par défaut, les flèches permettent de parcourir la chronologie par incréments de 4 heures. À l’aide des boutons de loupe, vous pouvez développer ou réduire cet intervalle de temps à une des valeurs suivantes : 15 minutes, 1 heure, 4 heures, 12 heures ou 24 heures. La plage temporelle actuellement sélectionnée est indiquée par la partie en surbrillance de la chronologie et affichée dans le texte au-dessous de celle-ci. Ces valeurs, ainsi que les données du rapport, sont mises à jour chaque fois que vous cliquez sur la chronologie ou que vous utilisez les boutons de navigation.  
+ Utilisez le contrôle de chronologie et les boutons de navigation pour parcourir la chronologie ou pour sélectionner une plage de dates. Les boutons fléchés permettent de faire défiler vers la droite et vers la gauche de manière à avancer ou à reculer dans la chronologie. Par défaut, les flèches permettent de parcourir la chronologie par incréments de 4 heures. À l’aide des boutons de loupe, vous pouvez développer ou contracter cet incrément d’heure sur l’une des valeurs suivantes : 15 minutes, 1 heure, 4 heures, 12 heures ou 24 heures. La plage temporelle actuellement sélectionnée est indiquée par la partie en surbrillance de la chronologie et affichée dans le texte au-dessous de celle-ci. Ces valeurs, ainsi que les données du rapport, sont mises à jour chaque fois que vous cliquez sur la chronologie ou que vous utilisez les boutons de navigation.  
   
  **Bouton Calendrier**  
   

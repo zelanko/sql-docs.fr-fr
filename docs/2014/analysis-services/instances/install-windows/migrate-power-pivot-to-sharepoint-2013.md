@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64f3d3474ac812f07645cd3064c270ba10ad76c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729918"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>Migrer PowerPivot vers SharePoint 2013
   
@@ -107,7 +107,7 @@ ms.locfileid: "53368371"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Résoudre les problèmes lors du montage des bases de données  
  Cette section résume les problèmes que vous pouvez rencontrer lors du montage de la base de données.  
   
-1.  **Erreurs d’authentification :** si des erreurs liées à l'authentification s'affichent, vérifiez quel mode d'authentification est utilisé par les applications web source. L'erreur peut être due à une incohérence entre l'authentification de l'application Web SharePoint 2013 et celle de l'application Web SharePoint 2010. Pour plus d'informations, consultez [1) Préparer la batterie de serveurs SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
+1.  **Erreurs d’authentification :** Si vous constatez des erreurs liées à l’authentification, vérifiez quel mode d’authentification utilisé par les applications web source. L'erreur peut être due à une incohérence entre l'authentification de l'application Web SharePoint 2013 et celle de l'application Web SharePoint 2010. Pour plus d'informations, consultez [1) Préparer la batterie de serveurs SharePoint 2013](#bkmk_prepare_sharepoint2013) .  
   
 2.  **Absents :** Si vous voyez des erreurs liées aux fichiers .dll PowerPivot manquants, le **spPowerPivot.msi** n’a pas été installé ou [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] outil de Configuration n’a pas été utilisé pour configurer PowerPivot.  
   

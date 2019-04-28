@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4233bc1ddd98d6fe678d9d37f1acd7a4b66b687e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874370"
 ---
 # <a name="disallowed-types-and-members-in-systemdatadll"></a>Types et membres non autorisés dans System.Data.dll
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] programmation de l’intégration (CLR) langage commun n’autorise pas l’utilisation d’un type ou membre qui a un `HostProtectionAttribute` qui spécifie un `System.Security.Permissions.HostProtectionResource` énumération avec la valeur `ExternalProcessMgmt`, `ExternalThreading`, `MayLeakOnAbort`, `SecurityInfrastructure`, `SelfAffectingProcessMgmnt`, `SelfAffectingThreading`, **SharedState**, `Synchronization`, ou `UI`. Le tableau suivant répertorie les membres et les types de l'assembly System.Data dll dont les valeurs d'attribut de protection de l'hôte (HPA) sont interdites.  

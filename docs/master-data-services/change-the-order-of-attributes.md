@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 08df7b421795ad73090fe8edfbe6657ed7ffca11
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63008487"
 ---
 # <a name="change-the-order-of-attributes"></a>Changer l'ordre des attributs
 
@@ -24,7 +24,7 @@ ms.locfileid: "52754831"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], vous pouvez changer l'ordre des attributs.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Administration de système** .  
@@ -56,7 +56,7 @@ ms.locfileid: "52754831"
   
 7.  Cliquez sur **Monter** ou sur **Descendre**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Attributs &#40;Master Data Services&#41;](../master-data-services/attributes-master-data-services.md)  
   
   

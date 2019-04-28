@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d047cbc4fe3ba3f4945acd9da4f627a05992e779
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842398"
 ---
 # <a name="system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp"></a>Vues système, procédures stockées, DMV et types d’attente pour l’OLTP en mémoire
   Cette rubrique fournit de brèves descriptions et des liens vers de nombreux objets de base de données qui prennent en charge OLTP en mémoire.  
@@ -27,9 +27,9 @@ ms.locfileid: "52406158"
 |[sys.data_spaces &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-data-spaces-transact-sql)|Vérifiez si un groupe de fichiers contient des données optimisées en mémoire.|Les colonnes suivantes affichent des valeurs supplémentaires : **type** et **type_desc**.|  
 |[sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)|Vérifiez si un index est une table optimisée en mémoire.|Les colonnes suivantes affichent des valeurs supplémentaires : **type** et **type_desc**.|  
 |[sys.parameters &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-parameters-transact-sql)|Vérifiez si un paramètre n'accepte pas la valeur null (pour une exécution plus efficace des procédures stockées compilées en mode natif).|**is_nullable** colonne.|  
-|[Sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Vérifiez si une procédure stockée est compilée en mode natif.|**uses_native_compilation** colonne.|  
+|[sys.all_sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-all-sql-modules-transact-sql)|Vérifiez si une procédure stockée est compilée en mode natif.|**uses_native_compilation** colonne.|  
 |[sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql)|Vérifiez si une procédure stockée est compilée en mode natif.|**uses_native_compilation** colonne.|  
-|[Sys.table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Vérifiez si une table est optimisée en mémoire.|**is_memory_optimized** colonne.|  
+|[sys.table_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-table-types-transact-sql)|Vérifiez si une table est optimisée en mémoire.|**is_memory_optimized** colonne.|  
 |[sys.tables &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-tables-transact-sql)|Vérifie si une table est mémoire optimisé, vérifiez le paramètre de durabilité d’une table.|**durabilité**, **durability_desc**, et **is_memory_optimized** colonnes.|  
 |[sys.hash_indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-hash-indexes-transact-sql)|Affichez les index de hachage d'une table optimisée en mémoire.|OLTP en mémoire spécifique.|  
   
@@ -44,12 +44,12 @@ ms.locfileid: "52406158"
   
 |Procédure stockée|Description|  
 |----------------------|-----------------|  
-|[Sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Liez une base de données OLTP en mémoire à un pool de ressources.|  
-|[Sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Initialisez le garbage collection sur une base de données OLTP en mémoire.|  
-|[Sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|Activez la collection de statistiques pour les procédures stockées compilées en mode natif.|  
-|[Sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|Activez la collection de statistiques par requête pour les procédures stockées compilées en mode natif.|  
-|[Sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|Fusionnez les fichiers de données et les fichiers delta.|  
-|[Sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|Supprimez la liaison entre une base de données et un pool de ressources.|  
+|[sys.sp_xtp_bind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-bind-db-resource-pool-transact-sql)|Liez une base de données OLTP en mémoire à un pool de ressources.|  
+|[sys.sp_xtp_checkpoint_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-checkpoint-force-garbage-collection-transact-sql)|Initialisez le garbage collection sur une base de données OLTP en mémoire.|  
+|[sys.sp_xtp_control_proc_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-proc-exec-stats-transact-sql)|Activez la collection de statistiques pour les procédures stockées compilées en mode natif.|  
+|[sys.sp_xtp_control_query_exec_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql)|Activez la collection de statistiques par requête pour les procédures stockées compilées en mode natif.|  
+|[sys.sp_xtp_merge_checkpoint_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-merge-checkpoint-files-transact-sql)|Fusionnez les fichiers de données et les fichiers delta.|  
+|[sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql)|Supprimez la liaison entre une base de données et un pool de ressources.|  
   
 ## <a name="dynamic-management-views-dmvs"></a>Vues de gestion dynamique  
  Il existe plusieurs vues de gestion dynamique des tables optimisées en mémoire.  

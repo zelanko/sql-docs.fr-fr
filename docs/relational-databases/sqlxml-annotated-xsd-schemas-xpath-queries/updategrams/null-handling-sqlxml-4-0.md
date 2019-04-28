@@ -18,15 +18,15 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 253e29ffb6b0723d672fdbf4de8a3cd6aff334d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007977"
 ---
 # <a name="null-handling-sqlxml-40"></a>gestion NULL (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  La syntaxe XML assimile la valeur NULL à une absence. (Par exemple, si une valeur d'attribut ou d'élément est NULL, cet attribut ou élément est absent du document XML.) Dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, le **NullValue** attribut permet de spécifier NULL pour une valeur d’élément ou attribut.  
+  La syntaxe XML assimile la valeur NULL à une absence. (Par exemple, si une valeur d’attribut ou un élément est NULL, cet attribut ou élément est absent du document XML.) Dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML, le **NullValue** attribut permet de spécifier NULL pour une valeur d’élément ou attribut.  
   
  Par exemple, la mise à jour suivant garantit que le **titre** valeur pour un contact avec **ContactID** de 64 est NULL et puis met à jour le **titre** valeur à « Mr. » pour ce contact.  
   

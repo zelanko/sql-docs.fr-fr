@@ -26,26 +26,26 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4bbc1e991787c9e2d98595ba61d4334dccf35f00
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722972"
 ---
 # <a name="data-mining-concepts"></a>Concepts d'exploration de données
   L'exploration de données est un processus de recherche d'informations utilisables à partir de jeux de données de grande taille. L'exploration de données utilise l’analyse mathématique pour dégager les motifs et les tendances existant dans les données. En général, ces motifs ne peuvent pas être trouvés par l’exploration de données traditionnelle parce que les relations sont trop complexes ou parce que la quantité de données est trop importante.  
   
  Ces motifs et tendances peuvent être collectés et définis en tant que *modèle d'exploration de données*. Les modèles d'exploration de données peuvent être appliqués à des scénarios spécifiques, tels que :  
   
--   **Prévisions**: estimation des ventes, prédiction des charges du serveur ou du temps mort de serveur  
+-   **Prévision**: Estimation des ventes, prédiction des charges de serveur ou de temps mort de serveur  
   
--   **Risque et probabilité**: choix des meilleurs clients pour des publipostages ciblés, détermination du seuil de rentabilité probable pour les scénarios à risque, affectation de probabilités aux diagnostics ou à d’autres résultats  
+-   **Risque et probabilité**: Choix des meilleurs clients pour des publipostages ciblés, détermination de la rentabilité probable pour les scénarios à risque, affectation de probabilités aux diagnostics ou à d’autres résultats  
   
--   **Recommandations**: identification des produits susceptibles d'être vendus ensemble, génération de recommandations  
+-   **Recommandations**: Identification des produits susceptibles d’être vendus ensemble, génération de recommandations  
   
--   **Recherche de séquences**: analyse de sélections de clients dans un panier, prédiction de probables événements à venir  
+-   **Recherche de séquences**: Analyse de sélections de clients dans un panier, prédiction de probables événements à venir  
   
--   **Regroupement**: séparation des clients ou des événements dans un cluster d'éléments associés, analyse et prédiction d'affinités  
+-   **Regroupement**: Séparation des clients ou des événements dans un cluster d’éléments associés, analyse et prédiction d’affinités  
   
  La création d'un modèle d'exploration de données fait partie d'un processus plus vaste qui va de la pose de questions sur les données et la création d’un modèle afin de répondre à ces questions au déploiement du modèle dans un environnement de travail. Ce processus peut être défini à l'aide des six étapes de base suivantes :  
   
@@ -122,7 +122,7 @@ ms.locfileid: "48067679"
   
  Vous pouvez utiliser des outils tels que [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] pour prospecter des sources de données disponibles et déterminer leur disponibilité pour l'exploration de données. Vous pouvez utiliser des outils tels que [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)], ou le profileur de données dans Integration Services, pour analyser la distribution de vos données et réparer les problèmes tels que des données incorrectes ou manquantes.  
   
- Après avoir défini vos sources, vous les combinez dans une vue de source de données à l'aide du concepteur de vue de source de données dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Pour plus d’informations sur les vues de source de données, consultez [Vues de sources de données dans les modèles multidimensionnels](../multidimensional-models/data-source-views-in-multidimensional-models.md). Ce concepteur contient également plusieurs outils que vous pouvez utiliser pour explorer les données et vérifier qu'ils fonctionnent pour créer un modèle. Pour plus d’informations, consultez [Explorer des données dans une vue de source de données &#40;Analysis Services&#41;](../multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md).  
+ Après avoir défini vos sources, vous les combinez dans une vue de source de données à l'aide du concepteur de vue de source de données dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](../multidimensional-models/data-source-views-in-multidimensional-models.md). Ce concepteur contient également plusieurs outils que vous pouvez utiliser pour explorer les données et vérifier qu'ils fonctionnent pour créer un modèle. Pour plus d’informations, consultez [Explorer des données dans une vue de source de données &#40;Analysis Services&#41;](../multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md).  
   
  Notez que lorsque vous créez un modèle, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée automatiquement des résumés statistiques des données contenues dans le modèle, que vous pouvez interroger pour les utiliser dans des rapports ou une autre analyse. Pour plus d’informations, consultez [Requêtes d’exploration de données](data-mining-queries.md).  
   
@@ -150,7 +150,7 @@ ms.locfileid: "48067679"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit des outils qui permettent de séparer vos données en jeux de données d’apprentissage et en jeux de données de test afin d’évaluer correctement la performance de tous les modèles sur les mêmes données. Le jeu de données d'apprentissage sert à générer le modèle tandis que le jeu de données de test sert à vérifier la précision du modèle en créant des requêtes de prédictions. Dans [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)], ce partitionnement peut être effectué automatiquement lorsque le modèle d'exploration de données est généré. Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md).  
   
- Vous pouvez explorer les tendances et les motifs trouvés par les algorithmes en utilisant les visionneuses du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md). Vous pouvez également tester la qualité des prédictions créées par les modèles à l'aide des outils du Concepteur, tels que le graphique de courbes d'élévation et la matrice de classification. Pour vérifier si le modèle est spécifique à vos données ou s’il peut être utilisé pour faire des inférences générales, vous pouvez utiliser la technique statistique appelée *validation croisée* pour créer automatiquement des sous-ensembles de données et tester le modèle avec chaque sous-ensemble. Pour plus d’informations, consultez [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md).  
+ Vous pouvez explorer les tendances et les motifs trouvés par les algorithmes en utilisant les visionneuses du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Pour plus d’informations, consultez [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md). Vous pouvez également tester la qualité des prédictions créées par les modèles à l'aide des outils du Concepteur, tels que le graphique de courbes d'élévation et la matrice de classification. Pour vérifier si le modèle est spécifique à vos données ou s’il peut être utilisé pour faire des inférences générales, vous pouvez utiliser la technique statistique appelée *validation croisée* pour créer automatiquement des sous-ensembles de données et tester le modèle avec chaque sous-ensemble. Pour plus d’informations, consultez [Test et validation &#40;Exploration des données&#41;](testing-and-validation-data-mining.md).  
   
  Si aucun des modèles créés à l'étape [Création des modèles](#BuildingModels) ne fonctionne bien, vous devrez peut-être revenir à une étape antérieure du processus et redéfinir le problème ou analyser de nouveau les données du jeu de données d'origine.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "48067679"
 -   Mettre à jour les modèles dynamiquement lorsque des données supplémentaires entrent dans l'entreprise et apporter des modifications constantes pour améliorer l'efficacité de la solution doivent faire partie de la stratégie de déploiement. Pour plus d’informations, consultez [Gestion des solutions et des objets d’exploration de données](management-of-data-mining-solutions-and-objects.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Solutions d’exploration de données](data-mining-solutions.md)   
- [Outils d’exploration de données](data-mining-tools.md)  
+ [Solutions d'exploration de données](data-mining-solutions.md)   
+ [Outils d'exploration de données](data-mining-tools.md)  
   
   

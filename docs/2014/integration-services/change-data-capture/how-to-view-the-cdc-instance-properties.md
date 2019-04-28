@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3f320b5e1d3801426dfc4843f2929be6284d87e
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58384737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835565"
 ---
 # <a name="how-to-view-the-cdc-instance-properties"></a>Procédure : afficher les propriétés d'une instance de capture de données modifiées
   Cette procédure décrit comment utiliser la console du concepteur CDC pour afficher des informations sur les instances que vous créez afin d'aider à gérer le fonctionnement des instances.  

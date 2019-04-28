@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea3e991cc936aed41350347f095f8e69d5025450
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720886"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Datasets incorporés dans le rapport et datasets partagés (Générateur de rapports et SSRS)
   Un dataset spécifie les données que vous souhaitez utiliser à partir d'une connexion de données. Un dataset est basé sur une connexion de données enregistrée dans le rapport en tant que source de données incorporée ou référence à une source de données partagée sur un serveur de rapports. Le dataset inclut une requête qui spécifie un ensemble de champs. Lorsque vous faites glisser ces champs vers l'aire de conception, vous créez des expressions qui correspondent aux données effectives lorsque le rapport s'exécute.  

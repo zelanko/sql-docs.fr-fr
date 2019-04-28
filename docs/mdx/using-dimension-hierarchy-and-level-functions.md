@@ -1,5 +1,5 @@
 ---
-title: À l’aide de la Dimension, hiérarchie et fonctions de niveau | Documents Microsoft
+title: À l’aide de la Dimension, de hiérarchie et de fonctions de niveau | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fb6460ed28c856ef6b5ceea8bf89c7bf33f54f2e
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982188"
 ---
 # <a name="using-dimension-hierarchy-and-level-functions"></a>Utilisation de fonctions de dimension, de hiérarchie et de niveau
 
@@ -46,7 +46,7 @@ ms.locfileid: "34743388"
 ## <a name="see-also"></a>Voir aussi  
  [Dimension &#40;MDX&#41;](../mdx/dimension-mdx.md)   
  [Fonctions &#40;syntaxe MDX&#41;](../mdx/functions-mdx-syntax.md)   
- [Hiérarchie &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
- [Niveau &#40;MDX&#41;](../mdx/level-mdx.md)  
+ [Hierarchy &#40;MDX&#41;](../mdx/hierarchy-mdx.md)   
+ [Level &#40;MDX&#41;](../mdx/level-mdx.md)  
   
   

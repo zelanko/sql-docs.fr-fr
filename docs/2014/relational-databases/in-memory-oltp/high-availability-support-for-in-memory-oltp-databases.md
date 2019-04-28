@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 37c719beb625a533c2d8f279a8500365c4786c05
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48100779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990582"
 ---
 # <a name="high-availability-support-for-in-memory-oltp-databases"></a>Prise en charge de la haute disponibilité pour les bases de données OLTP en mémoire
   Les bases de données contenant des tables mémoire optimisées, avec ou sans procédures stockées compilées natives, sont entièrement prises en charge avec les groupes de disponibilité AlwaysOn.  Il n’existe aucune différence dans la configuration et la prise en charge des bases de données contenant des objets [!INCLUDE[hek_2](../../includes/hek-2-md.md)] et celles n’en comportant pas.  
@@ -30,9 +30,9 @@ ms.locfileid: "48100779"
     Les réplicas secondaires maintiennent l’état en mémoire des tables optimisées en mémoire durables. En cas de basculement automatique ou forcé, le temps de basculement vers le nouveau réplica principal est comparable aux tables sur disque car aucune récupération n'est nécessaire. Les tables mémoire optimisées créées en tant que SCHEMA_ONLY sont prises en charge dans cette configuration. Toutefois, les modifications apportées à ces tables ne sont pas enregistrées et par conséquent, aucune donnée n'existera dans ces tables sur le réplica secondaire.  
   
 -   **Secondaire accessible en lecture**   
-    Vous pouvez accéder aux tables optimisées en mémoire sur le réplica secondaire et les interroger si le réplica secondaire a été configuré pour un accès en lecture. Pour plus d’informations, consultez [Secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+    Vous pouvez accéder aux tables optimisées en mémoire sur le réplica secondaire et les interroger si le réplica secondaire a été configuré pour un accès en lecture. Pour plus d’informations, consultez [secondaires actifs : Réplicas secondaires lisibles (groupes de disponibilité AlwaysOn)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
-## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Instance de clustering de basculement (FCI) et bases de données OLTP en mémoire  
+## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>Instance de clustering de basculement (FCI) et bases de données OLTP en mémoire  
  Pour bénéficier d’une haute disponibilité dans une configuration de stockage partagé, vous pouvez configurer le clustering de basculement sur les instances comportant une ou plusieurs bases de données avec des tables mémoire optimisées. Vous devez tenir compte des facteurs suivants dans le cadre de la configuration d'une instance FCI.  
   
 -   **Objectif de temps de récupération**   

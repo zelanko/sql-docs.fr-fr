@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d6ee17a176c77bf29eb308d2af1bae364f37098
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721871"
 ---
 # <a name="ltagentnamegt-agent-location"></a>Emplacement de l’agent &lt;nom_agent&gt;
   L'Agent de fusion (pour les abonnements de fusion) et l'Agent de distribution (pour les abonnements transactionnels et d'instantanés) s'exécutent sur le serveur de publication ou sur l'Abonné. Si l'Agent s'exécute sur le serveur de distribution, l'abonnement est référencé comme un abonnement par envoi de données ; s'il s'exécute sur l'Abonné, il est référencé comme un abonnement par extraction. Pour plus d’informations sur les abonnements par envoi et par extraction de données, consultez [S’abonner à des publications](subscribe-to-publications.md). Tous les abonnements créés de cette manière au moyen de l'Assistant ont le type sélectionné. Pour créer des abonnements des deux types, vous devez exécuter deux fois l'Assistant.  
@@ -26,7 +26,7 @@ ms.locfileid: "52813791"
 >  Vous ne pouvez pas modifier le type d'un abonnement après sa création.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
  [Create a Push Subscription](create-a-push-subscription.md)   
  [Présentation des Agents de réplication](agents/replication-agents-overview.md)  
   

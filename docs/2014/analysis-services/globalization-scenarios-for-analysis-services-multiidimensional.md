@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b12c2f4a95b2fc295aa1a3524def774e74a5ed32
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730606"
 ---
 # <a name="globalization-scenarios-for-analysis-services-multiidimensional"></a>Scénarios de globalisation pour données multidimensionnelles Analysis Services
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stocke et manipule des données multilingues et les métadonnées dans les deux modèles de données tabulaires et multidimensionnels. Le stockage des données est en Unicode (UTF-16), dans des jeux de caractères qui utilisent l'encodage Unicode. Si vous chargez des données ANSI dans un modèle de données, les caractères sont stockés à l'aide de points de code équivalents Unicode.  

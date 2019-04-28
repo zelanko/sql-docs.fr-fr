@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b98fa9765a40d3eb9c05852e9c20c05c4bb818a0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856312"
 ---
 # <a name="remove-udt39s-named-after-the-reserved-ordpath-data-type"></a>Supprimez les UDT&#39;s nommé d’après le type de données ORDPATH
   Le Conseiller de mise à niveau a détecté un type défini par l'utilisateur (UDT) nommé d'après un terme réservé pour le type de donnée `ORDPATH`.  

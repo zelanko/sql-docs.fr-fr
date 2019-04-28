@@ -1,5 +1,5 @@
 ---
-title: Sys.fulltext_indexes (Transact-SQL) | Microsoft Docs
+title: sys.fulltext_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,11 +23,11 @@ ms.author: douglasl
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a96249e8b1ba5d0fc6ac39fab7cf1f8ac00aba3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007543"
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47699517"
 |**data_space_id**|**Int**|Groupe de fichiers où réside cet index de recherche en texte intégral.|  
 |**property_list_id**|**Int**|ID de la liste de propriétés de recherche associée à cet index de recherche en texte intégral. NULL indique qu'aucune liste de propriétés de recherche n'est associée à l'index de recherche en texte intégral. Pour obtenir plus d’informations sur cette liste de propriétés de recherche, utilisez le [sys.registered_search_property_lists &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) vue de catalogue.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  
   
 ## <a name="examples"></a>Exemples  

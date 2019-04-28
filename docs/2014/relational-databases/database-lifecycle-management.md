@@ -31,11 +31,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07710fbf649037843479de94057f2efcf2a8f558
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872169"
 ---
 # <a name="database-lifecycle-management"></a>Gestion du cycle de vie de base de données
   La gestion du cycle de vie des bases de données (Database lifecycle management ou DLM) est une approche stratégique de la gestion des bases de données et ressources de données. DLM n'est pas un produit, mais une approche complète de la gestion du schéma, des données et des métadonnées d'une application de base de données. Grâce à l'approche réfléchie et proactive de DLM, une entreprise peut gérer ses ressources de données en fonction des niveaux de performance, de protection, de disponibilité et de coût requis.  

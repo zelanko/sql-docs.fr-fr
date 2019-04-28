@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c131f413c8b7be0dad8432c5711b19e74253aab
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873335"
 ---
 # <a name="create-a-custom-collection-set-that-uses-the-generic-t-sql-query-collector-type-transact-sql"></a>Créer un jeu d'éléments de collecte personnalisé qui utilise le type de collecteur Requête T-SQL générique (Transact-SQL)
   Vous pouvez créer un jeu d'éléments de collecte personnalisé avec des éléments de collecte qui utilisent le type de collecteur Requête T-SQL générique à l'aide des procédures stockées fournies avec le collecteur de données. Accomplir cette tâche implique l'utilisation de l'éditeur de requête dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour effectuer les procédures suivantes :  

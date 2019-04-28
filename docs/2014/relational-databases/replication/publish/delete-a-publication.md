@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 08623cc2f9bf5d57141644a9f24c01d29d04cbe3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62865019"
 ---
 # <a name="delete-a-publication"></a>Supprimer une publication
   Cette rubrique explique comment supprimer une publication dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects).  
@@ -136,7 +136,7 @@ ms.locfileid: "52771651"
   
     2.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si cette méthode retourne `false`, vérifiez que la base de données existe.  
   
-    3.  Attribuez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> la valeur `false`.  
+    3.  Affectez à la propriété <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> la valeur `false`.  
   
     4.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> .  
   

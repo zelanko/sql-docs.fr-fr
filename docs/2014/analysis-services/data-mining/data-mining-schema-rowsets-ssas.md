@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fef47b83e341e9c8fed6a4824da882550c9a892
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722621"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Interrogation des ensembles de lignes de schéma d'exploration de données (Analysis Services - Exploration de données)
   Dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], la plupart des ensembles de lignes de schéma d'exploration de données OLE DB existants sont exposés sous forme d'un jeu de tables système que vous pouvez interroger à l'aide d'instructions DMX (Data Mining Extensions). En créant des requêtes sur l'ensemble de lignes de schéma d'exploration de données, vous pouvez identifier les services qui sont disponibles, obtenir des mises à jour sur l'état de vos modèles et de vos structures, et obtenir des détails sur le contenu ou les paramètres du modèle. Pour obtenir une description des ensembles de lignes de schéma d’exploration de données, consultez [Ensembles de lignes de schéma d’exploration de données](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  
@@ -52,7 +52,7 @@ ms.locfileid: "48173169"
 ## <a name="examples"></a>Exemples  
  La section suivante fournit quelques exemples de requêtes sur les ensembles de lignes de schéma d'exploration de données.  
   
-### <a name="example-1-list-data-mining-services"></a>Exemple 1 : Répertorier les services d'exploration de données  
+### <a name="example-1-list-data-mining-services"></a>Exemple 1 : Services d’exploration de données de liste  
  La requête suivante retourne une liste des services d'exploration de données qui sont disponibles sur le serveur actuel, c'est-à-dire les algorithmes qui sont activés. Les colonnes fournies pour chaque service d'exploration de données comprennent notamment les indicateurs de modélisation et les types de contenu qui peuvent être utilisés par chaque algorithme, le GUID pour chaque service et toute limite de prédiction ayant pu être ajoutée pour chaque service.  
   
 ```  
@@ -60,7 +60,7 @@ SELECT *
 FROM $system.DMSCHEMA_MINING_SERVICES  
 ```  
   
-### <a name="example-2-list-mining-model-parameters"></a>Exemple 2 : Répertorier les paramètres du modèle d'exploration de données  
+### <a name="example-2-list-mining-model-parameters"></a>Exemple 2 : Liste des paramètres de modèle d’exploration de données  
  L'exemple suivant retourne les paramètres utilisés pour créer un modèle d'exploration de données spécifique :  
   
 ```  
@@ -69,8 +69,8 @@ FROM $system.DMSCHEMA_MINING_MODELS
 WHERE MODEL_NAME = 'TM Clustering'  
 ```  
   
-### <a name="example-3-list-all-rowsets"></a>Exemple 3 : Répertorier tous les ensembles de lignes  
- L'exemple suivant retourne une liste complète des ensembles de lignes disponibles sur le serveur actuel :  
+### <a name="example-3-list-all-rowsets"></a>Exemple 3 : Répertorier tous les ensembles de lignes  
+ L'exemple suivant retourne une liste complète des ensembles de lignes disponibles sur le serveur actuel :  
   
 ```  
 SELECT *   

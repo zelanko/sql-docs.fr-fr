@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992269"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Exploration du modèle de prévision (Didacticiel sur l'exploration de données intermédiaire)
-  Maintenant que vous avez créé le modèle de prévision d’exploration de données, vous pouvez explorer les résultats à l’aide de la **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. La Visionneuse de l'algorithme MTS ([!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series) contient deux onglets : **Graphiques** et **modèle**.  
+  Maintenant que vous avez créé le modèle de prévision d’exploration de données, vous pouvez explorer les résultats à l’aide de la **visionneuse de modèle d’exploration de données** onglet du Concepteur d’exploration de données. Le [!INCLUDE[msCoName](../includes/msconame-md.md)] temps série visionneuse contient deux onglets : **Graphiques** et **modèle**.  
   
  En outre, vous pouvez utiliser la visionneuse générique d'arborescences Microsoft avec tous les modèles. Chaque vue présente une image légèrement différente des informations comprises dans le modèle de série chronologique.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "56040030"
   
 3.  Notez l'échelle de l'axe des X. Les modifications portant sur les données historiques et prédites sont toujours exprimées en pourcentage, mais les valeurs réelles sont ajustées automatiquement pour correspondre à toutes les valeurs présentées sur le graphique. Vous devez donc être vigilant lorsque vous comparez les modèles à ne pas compter uniquement sur les visuels. Pour obtenir exactement la valeur, ou le pourcentage d’augmentation et la valeur pour les prédictions, placez la souris sur la ligne en pointillés ou des lignes pleines, ou cliquez sur les lignes pour afficher les valeurs dans le **légende d’exploration de données**.  
   
-     **Conseil**: Si le **légende d’exploration de données** n’est pas visible, basculez vers **modèle** afficher, avec le bouton droit n’importe quel nœud, puis sélectionnez **afficher la légende**.  
+     **Conseil** : Si le **légende d’exploration de données** n’est pas visible, basculez vers **modèle** afficher, avec le bouton droit n’importe quel nœud, puis sélectionnez **afficher la légende**.  
   
  Une fois ces tendances consultées, vous vous inquiétez du manque de données pour une partie de la série et vous vous demandez si vous pouvez obtenir des prédictions plus fiables en faisant la moyenne des ventes par modèle ou peut-être en calculant la moyenne des ventes par région. Vous allez explorer cette approche lors d'une leçon ultérieure de ce didacticiel.  
   

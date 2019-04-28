@@ -16,14 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 775c5955766bb7a269ac48b25c9d7cf44bdaea19
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842570"
 ---
 # <a name="view-the-extended-events-targets-for-registered-packages"></a>Afficher les cibles d'événements étendus pour les packages enregistrés
-  Avant de créer une session d’événements étendus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , il est utile de déterminer quelles sont les cibles d’événements étendus présentes. Cette tâche implique l'utilisation de l'Éditeur de requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour effectuer la procédure suivante.  
+  Avant de créer une session d’événements étendus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], il est utile de déterminer quelles sont les cibles d’événements étendus présentes. Cette tâche implique l'utilisation de l'Éditeur de requête dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour effectuer la procédure suivante.  
   
  Une fois que les instructions de cette procédure sont exécutées, l’onglet **Résultats** de l’éditeur de requête affiche les deux colonnes suivantes :  
   

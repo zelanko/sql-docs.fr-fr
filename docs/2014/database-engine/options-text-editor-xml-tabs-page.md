@@ -1,5 +1,5 @@
 ---
-title: 'Options (Page de l’éditeur : XML:Tabs texte) | Microsoft Docs'
+title: Options (Text Editor:XML:Tabs Page) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 30842eec745c87848e4eb1c78c4806639da3ac0b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843687"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Options (page Éditeur de texte : XML : Tabulations)
   Cette boîte de dialogue vous permet de modifier le comportement de tabulation de l'Éditeur XML, qui permet de modifier des documents XML. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez le dossier **Éditeur de texte** , puis le sous-dossier **XML** , et cliquez ensuite sur **Tabulations**.  
@@ -30,10 +30,10 @@ ms.locfileid: "48050149"
  **Aucun**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE n'est pas mise en retrait. Le curseur est placé au niveau de la première colonne de la nouvelle ligne.  
   
- **Bloc**  
+ **Block**  
  Lorsque cette option est sélectionnée, la nouvelle ligne créée lorsque vous appuyez sur Entrée est automatiquement mise en retrait comme la ligne précédente.  
   
- **Intelligent**  
+ **Smart**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE est positionnée en fonction du contexte. Par exemple, après une accolade ouvrante ({), les lignes incluses sont automatiquement mises en retrait d'une tabulation supplémentaire. L'accolade fermante (}) correspondante est réalignée sur l'accolade ouvrante.  
   
 ## <a name="tabs"></a>Tabulations  

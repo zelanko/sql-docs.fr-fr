@@ -21,11 +21,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: b26f4644c7c922b58f884352ce52b3c572f469f6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62865669"
 ---
 # <a name="columndomainusage-transact-sql"></a>COLUMN_DOMAIN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,14 +38,14 @@ ms.locfileid: "54127419"
 |-----------------|---------------|-----------------|  
 |**DOMAIN_CATALOG**|**nvarchar(** 128 **)**|Base de données dans laquelle réside le type de données alias.|  
 |**DOMAIN_SCHEMA**|**nvarchar(** 128 **)**|Nom du schéma qui contient le type de données alias.<br /><br /> **&#42;&#42;Important &#42; &#42;**  n’utilisez pas de vues INFORMATION_SCHEMA pour déterminer le schéma d’un type de données. La seule méthode fiable pour rechercher le schéma d'un type est d'utiliser la fonction TYPEPROPERTY.|  
-|**NOM_DOMAINE**|**sysname**|Type de données alias.|  
+|**DOMAIN_NAME**|**sysname**|Type de données alias.|  
 |**TABLE_CATALOG**|**nvarchar(** 128 **)**|Qualificateur de la table.|  
 |**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Propriétaire de la table.<br /><br /> **&#42;&#42;Important &#42; &#42;**  n’utilisez pas les vues INFORMATION_SCHEMA pour déterminer le schéma d’un objet. La seule méthode fiable pour rechercher le schéma d’un objet est d’interroger l’affichage catalogue sys.objects.|  
 |**TABLE_NAME**|**sysname**|Base de données où le type de données alias est utilisé.|  
 |**COLUMN_NAME**|**sysname**|Colonne utilisant le type de données alias.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Vues système &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
+ [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   
  [Vues de schémas d’informations &#40;Transact-SQL&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)  

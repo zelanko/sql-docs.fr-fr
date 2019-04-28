@@ -24,11 +24,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52782841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721651"
 ---
 # <a name="configure-web-synchronization"></a>Configurer la synchronisation Web
   L'option de synchronisation Web de la réplication de fusion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] permet de répliquer les données à l'aide du protocole HTTPS sur Internet. Pour utiliser la synchronisation Web, vous devez d'abord effectuer les actions de configuration suivantes :  

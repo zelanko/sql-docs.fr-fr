@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97dbdfcdbc1ddf2a8aba10845f1bc5e3c785a9ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842514"
 ---
 # <a name="sql-server-extended-events-targets"></a>SQL Server Extended Events Targets
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Cibles des événements étendus sont des consommateurs d’événements. Les cibles peuvent écrire dans un fichier, stocker des données d'événement dans une mémoire tampon ou agréger des données d'événement. Les cibles peuvent traiter des données de façon synchrone ou asynchrone.  
+  Les cibles des Événements étendus [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont des consommateurs d'événements. Les cibles peuvent écrire dans un fichier, stocker des données d'événement dans une mémoire tampon ou agréger des données d'événement. Les cibles peuvent traiter des données de façon synchrone ou asynchrone.  
   
  La conception des Événements étendus garantit que les cibles sont assurées de recevoir des événements une seule fois par session.  
   

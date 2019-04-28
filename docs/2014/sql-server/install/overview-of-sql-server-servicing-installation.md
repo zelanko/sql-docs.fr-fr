@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011646"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Vue d'ensemble de l'installation de maintenance de SQL Server
   Vous pouvez appliquer une mise à jour à n'importe quel composant [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installé sur votre ordinateur à une mise à jour de maintenance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Si le niveau de version d'un composant [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existant est ultérieur à celui de la mise à jour, le programme d'installation exclut ce composant de la mise à jour. Pour plus d’informations sur l’application d’une maintenance de mise à jour, consultez [installer SQL Server 2014 de maintenance mises à jour](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  
@@ -36,7 +36,7 @@ ms.locfileid: "53369061"
 ## <a name="requirements-and-known-issues"></a>Configuration requise et problèmes connus  
  L'espace disque nécessaire représente environ 2,5 fois la taille du package pour permettre l'installation, le téléchargement et l'extraction de ce dernier. Après l'installation d'un Service Pack, vous pouvez supprimer le package téléchargé. Les fichiers temporaires sont supprimés automatiquement.  
   
- **Passez en revue les problèmes connus :** Pour plus d'informations sur les problèmes connus relatifs à la version actuelle, consultez ici la rubrique correspondante consacrée aux notes de publication  [Notes de publication SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
+ **Passez en revue les problèmes connus :** Pour plus d’informations sur les problèmes connus de la version actuelle, consultez la notes ici rubrique correspondante : [Notes de publication SQL Server](https://msdn.microsoft.com/f617a0af-92dd-47aa-82c3-f51b1346bcd8).  
   
 ## <a name="installation-overview"></a>Vue d'ensemble de l'installation  
  Cette section traite de l'installation de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] pour les mises à jour cumulatives et les Service Packs. Elle explique notamment comment effectuer les opérations suivantes :  
@@ -88,15 +88,15 @@ ms.locfileid: "53369061"
 #### <a name="starting-a-includesscurrentincludessscurrent-mdmd-update"></a>Démarrage d'une mise à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Pour installer une mise à jour de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , exécutez le fichier de package à extraction automatique.  
   
- Package de mise à jour cumulative (CU) : \<SQLServer2014 > - KBxxxxxx -*PPP*.exe  
+ Package de mise à jour cumulative (CU) : \<SQLServer2014>-KBxxxxxx-*PPP*.exe  
   
- Package service pack (PCU) : \<SQLServer2014 >\<SPx > - KBxxxxxx-PPP-LLL.exe  
+ Package service pack (PCU) : \<SQLServer2014>\<SPx> -KBxxxxxx-PPP-LLL.exe  
   
 -   x indique le numéro de Service Pack  
   
 -   PPP indique la plateforme spécifique.  
   
--   LLL correspond à l'abréviation de la langue de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], par exemple : pour l'anglais, LLL correspond à ENU.  
+-   LLL correspond à l’abréviation de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] langage, par exemple : LLL pour l’anglais correspond à ENU.  
   
  Pour appliquer des mises à jour à des composants [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] qui font partie d'un cluster de basculement, consultez la section relative à l'installation d'un cluster de basculement. Pour plus d’informations sur l’exécution d’une installation de mise à jour en mode sans assistance, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   

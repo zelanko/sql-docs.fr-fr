@@ -1,5 +1,5 @@
 ---
-title: Choisir et mapper les données d’entrée pour une requête de prédiction | Documents Microsoft
+title: Choisir et mapper les données d’entrée pour une requête de prédiction | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0781c35dfe7bcc1ea99be3d68fcbb839d5f9374b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724858"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Choisir et mapper les données d'entrée pour une requête de prédiction
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -115,6 +115,6 @@ ms.locfileid: "34015056"
      Si une relation existe, les colonnes du modèle d'exploration de données sont mappées automatiquement aux colonnes portant le même nom dans la table d'entrée. Vous pouvez modifier la relation entre la table imbriquée et la table de cas en cliquant sur **Modifier la jointure**qui ouvre la boîte de dialogue **Créer une relation** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes de prédiction & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+ [Requêtes de prédiction &#40;Exploration de données&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

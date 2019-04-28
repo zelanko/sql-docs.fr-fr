@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4e58f43c7004f94aeff81d9ac43a9c9c2804b184
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722001"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MDT (Microsoft Decision Trees)
   L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme hybride qui incorpore des méthodes différentes pour créer une arborescence et prend en charge plusieurs tâches analytiques, dont la régression, la classification et l'association. L'algorithme MDT (Microsoft Decision Trees) prend en charge la modélisation des attributs discrets et continus.  
@@ -61,7 +61,7 @@ ms.locfileid: "53365401"
  Pour obtenir une explication plus dont sur la façon dont [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme d’arbres de décision fonctionne avec les colonnes prédictibles discrètes, consultez [réseaux BAYÉSIENS : La combinaison de connaissance et données statistiques](https://go.microsoft.com/fwlink/?LinkId=45963). Pour plus d’informations sur le fonctionnement de l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) avec une colonne prédictible continue, consultez l’annexe disponible dans le document [Autoregressive Tree Models for Time-Series Analysis](https://go.microsoft.com/fwlink/?LinkId=45966).  
   
 ### <a name="scoring-methods-and-feature-selection"></a>Résultat des méthodes et sélection des fonctionnalités  
- L'algorithme MDT (Microsoft Decision Trees) offre trois formules pour définir le score du gain d'informations : l'entropie de Shannon, le réseau bayésien avec a priori K2 et le réseau bayésien de Dirichlet avec a priori uniforme. Les trois méthodes sont bien établies dans le champ d'exploration de données. Nous vous recommandons d'expérimenter des paramètres et des méthodes différents pour déterminer ceux qui fournissent les meilleurs résultats. Pour plus d'informations sur ces méthodes de calcul de score, consultez [Feature Selection](../../sql-server/install/feature-selection.md).  
+ L’algorithme d’arbres de décision de Microsoft offre trois formules pour calculer les scores gain d’informations : Entropie de Shannon, réseau bayésien avec a K2 préalable et réseau bayésien avec a une distribution de Dirichlet uniforme d’antécédents. Les trois méthodes sont bien établies dans le champ d'exploration de données. Nous vous recommandons d'expérimenter des paramètres et des méthodes différents pour déterminer ceux qui fournissent les meilleurs résultats. Pour plus d'informations sur ces méthodes de calcul de score, consultez [Feature Selection](../../sql-server/install/feature-selection.md).  
   
  Tous les algorithmes d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilisent automatiquement la sélection des fonctionnalités pour améliorer l'analyse et réduire la charge de traitement. La méthode utilisée pour la sélection des fonctionnalités dépend de l'algorithme utilisé pour générer le modèle. Les paramètres d'algorithme qui contrôlent la sélection des fonctionnalités pour un modèle d'arbre de décision sont MAXIMUM_INPUT_ATTRIBUTES et MAXIMUM_OUTPUT.  
   
@@ -163,7 +163,7 @@ ms.locfileid: "53365401"
  *SPLIT_METHOD*  
  Spécifie la méthode utilisée pour fractionner le nœud. Les options suivantes sont disponibles :  
   
-|ID|Créer une vue d’abonnement|  
+|ID|Nom|  
 |--------|----------|  
 |1|**Binaire :** Indique que, quel que soit le nombre réel de valeurs pour l’attribut, l’arborescence doit être fractionnée en deux branches.|  
 |2|**Terminer :** Indique que l’arborescence peut créer autant de divisions qu’il existe des valeurs d’attribut.|  

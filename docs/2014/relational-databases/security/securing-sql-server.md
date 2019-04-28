@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62992355"
 ---
 # <a name="securing-sql-server"></a>Sécurisation de SQL Server
   La sécurisation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut être vue comme une série d’étapes impliquant quatre domaines : la plateforme, l’authentification, les objets (notamment les données) et les applications qui accèdent au système. Les rubriques suivantes vous guideront tout au long des processus de création et de mise en place d'un plan de sécurité efficace.  

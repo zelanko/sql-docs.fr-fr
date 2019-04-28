@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721162"
 ---
-# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Leçon 1 : Création de comptes Windows pour la réplication
+# <a name="lesson-1-creating-windows-accounts-for-replication"></a>Leçon 1 : Windows de création de comptes pour la réplication
   Dans cette leçon, vous allez créer des comptes Windows pour exécuter les agents de réplication. Vous allez créer un compte Windows distinct sur le serveur local pour les agents suivants :  
   
-|Agent|Emplacement|Nom du compte|  
+|Agent|Location|Nom du compte|  
 |-----------|--------------|------------------|  
 |Agent d'instantané|Serveur de publication|\<*nom_ordinateur*>\repl_snapshot|  
 |l'Agent de lecture du journal ;|Serveur de publication|\<*nom_ordinateur*>\repl_logreader|  
@@ -62,7 +62,7 @@ ms.locfileid: "54127454"
 6.  Cliquez sur **Fermer**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès les comptes Windows des agents de réplication. Ensuite, vous allez configurer le dossier d'instantanés. Consultez [leçon 2 : Préparation du dossier d’instantané](lesson-2-preparing-the-snapshot-folder.md).  
+ Vous avez créé avec succès les comptes Windows des agents de réplication. Ensuite, vous allez configurer le dossier d'instantanés. Consultez [Leçon 2 : Préparation du dossier d’instantané](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Présentation des Agents de réplication](agents/replication-agents-overview.md)  

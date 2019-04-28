@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 8cd45bd5a03cd50053ffe436fbf62d01019c2ae7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011557"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurer une clé principale de base de données
   Cette rubrique décrit la restauration de la clé principale de base de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -46,7 +46,7 @@ ms.locfileid: "48056985"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio avec Transact-SQL  
@@ -55,7 +55,7 @@ ms.locfileid: "48056985"
   
 1.  Récupérez une copie de la clé principale de base de données sauvegardée, à partir d'un support de sauvegarde physique ou d'un répertoire sur le système de fichiers local.  
   
-2.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 3.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

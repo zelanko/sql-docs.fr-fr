@@ -30,11 +30,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 11aa57037a1ea92bd72ed2eaa581d34baff8a122
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874306"
 ---
 # <a name="manipulating-udt-data"></a>Manipulation de données UDT
   [!INCLUDE[tsql](../../includes/tsql-md.md)] ne fournit aucune syntaxe spécialisée pour les instructions INSERT, UPDATE ou DELETE lors de la modification de données dans des colonnes de type défini par l'utilisateur (UDT). Les fonctions [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST ou CONVERT sont utilisées pour convertir des types de données natives en type UDT.  

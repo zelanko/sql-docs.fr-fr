@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3066700945d2d6dad33f04c6bc905720daab61c3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876169"
 ---
 # <a name="deleting-backup-blob-files-with-active-leases"></a>Suppression de fichiers de sauvegarde d'objets blob avec des baux actifs
   En cas de sauvegarde vers ou de restauration depuis le stockage Windows Azure, SQL Server acquiert un bail infini pour verrouiller l'accès exclusif à l'objet blob. Lorsque le processus de sauvegarde ou de restauration est terminé, le bail est libéré. Si une sauvegarde ou une restauration échoue, le processus de sauvegarde tente de nettoyer tout objet blob non valide. Toutefois, si la sauvegarde échoue en raison d'un problème de connectivité du réseau prolongé, le processus de sauvegarde peut ne pas être à nouveau en mesure d'accéder à l'objet blob et celui-ci peut rester orphelin. Par conséquent, l'objet blob ne peut pas être écrit ou supprimé tant que le bail n'a pas été libéré. Cette rubrique explique comment libérer le bail et supprimer l'objet blob.  
@@ -29,9 +29,9 @@ ms.locfileid: "53352664"
 ## <a name="managing-orphaned-blobs"></a>Gestion des objets blob orphelins  
  Les étapes suivantes décrivent la procédure de nettoyage après l'échec d'une activité de sauvegarde ou de restauration. Toutes les opérations peuvent être effectuées à l'aide de scripts PowerShell. Un exemple de code est fourni dans la section suivante :  
   
-1.  **Identifier les objets BLOB avec baux :** Si vous avez un script ou un processus qui exécute les processus de sauvegarde, vous pourrez peut-être capturer l’erreur dans le script ou le processus et l’utiliser pour nettoyer les objets BLOB.   Vous pouvez également utiliser les propriétés LeaseStats et LeastState pour identifier les objets blob auxquels des baux sont associés. Une fois que vous avez identifié les objets blob, nous vous recommandons de consulter la liste et de vérifier la validité du fichier de sauvegarde avant de supprimer l'objet blob.  
+1.  **Identifier les objets BLOB avec baux :** si vous avez un script ou un processus qui exécute les processus de sauvegarde, vous pouvez capturer l’erreur dans le script ou le processus, et l’utiliser pour nettoyer les objets blob.   Vous pouvez également utiliser les propriétés LeaseStats et LeastState pour identifier les objets blob auxquels des baux sont associés. Une fois que vous avez identifié les objets blob, nous vous recommandons de consulter la liste et de vérifier la validité du fichier de sauvegarde avant de supprimer l'objet blob.  
   
-2.  **Résiliation du bail :** Une demande autorisée peut résilier le bail sans fournir d’ID de bail. Pour plus d’informations, consultez [cet article](https://go.microsoft.com/fwlink/?LinkID=275664) .  
+2.  **Résiliation du bail :** une demande autorisée peut résilier le bail sans fournir d’ID de bail. Pour plus d’informations, consultez [cet article](https://go.microsoft.com/fwlink/?LinkID=275664) .  
   
     > [!TIP]  
     >  SQL Server génère un ID de bail pour établir un accès exclusif pendant l'opération de restauration. L'ID de bail de la restauration est BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
@@ -80,7 +80,7 @@ ms.locfileid: "53352664"
   
      **Résiliation de baux**  
   
-     **Le bail sur \<URL de l’objet Blob > est un bail de restauration : Vous verrez ce message uniquement si vous avez un objet blob avec un bail de restauration est toujours actif.**  
+     **Le bail sur \<URL de l’objet blob> est un bail de restauration : vous verrez ce message seulement si vous avez un objet blob avec un bail de restauration toujours actif.**  
   
      **Le bail sur \<URL de l’objet blob> n’est pas un bail de restauration. Résiliation du bail sur \<URL de l’objet blob.**  
   

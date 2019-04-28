@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2585452ee31c911ea6e288effc3e5e91fff88a64
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721268"
 ---
 # <a name="generate-sql-script-replication-objects"></a>Générer un script SQL (objets de réplication)
   Un script de réplication contient les procédures stockées système [!INCLUDE[tsql](../../includes/tsql-md.md)] nécessaires à l'implémentation de composants de réplication en script, tels qu'une publication ou un abonnement. Tous les composants de réplication dans une topologie doivent faire l'objet d'un script et s'intégrer dans un plan de récupération des données en cas de sinistre ; les scripts peuvent également être utilisés pour automatiser des tâches répétitives. La réplication propose deux boîtes de dialogue spécifiques à l'écriture de scripts mettant en œuvre des objets de réplication :  

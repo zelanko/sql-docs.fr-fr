@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d69af9ad01e001394836449f97c48b4dae8dab7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734822"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MNB (Microsoft Naive Bayes)
   L’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) est un algorithme de classification fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui est conçu pour la modélisation prédictive. Cet algorithme calcule la probabilité conditionnelle entre les colonnes d'entrée et les colonnes prédictibles, et suppose que les colonnes sont indépendantes. Naive Bayes tire son nom de cette hypothèse d'indépendance.  
@@ -82,7 +82,7 @@ ms.locfileid: "53376931"
   
 |Indicateur de modélisation|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|Signifie que la colonne sera considérée comme ayant deux états possibles : Manquant et Existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
+|MODEL_EXISTENCE_ONLY|Signifie que la colonne sera considérée comme ayant deux états possibles : Manquant et existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
 |NOT NULL|Indique que la colonne ne peut pas contenir de valeur Null. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
 ## <a name="requirements"></a>Configuration requise  

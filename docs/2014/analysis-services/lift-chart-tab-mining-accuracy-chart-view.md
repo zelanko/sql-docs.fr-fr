@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cbd4465152e3f862d53dec66bd7888c70b393a5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728085"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Onglet Graphique de courbes d'élévation (vue Graphique d'analyse de précision de l'exploration de données)
   Le volet **Graphique de courbes d’élévation** permet d’afficher un graphique qui compare tous les modèles d’exploration de données sélectionnés de la structure d’exploration de données sélectionnée.  
@@ -46,6 +46,6 @@ ms.locfileid: "48168129"
 ## <a name="see-also"></a>Voir aussi  
  [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Test et des tâches de Validation et des procédures &#40;exploration de données&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Test et Validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

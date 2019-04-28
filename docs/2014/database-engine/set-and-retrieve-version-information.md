@@ -20,11 +20,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 68113c6de003aea94924f6e220373664212becf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843480"
 ---
 # <a name="set-and-retrieve-version-information"></a>Définir et récupérer des informations sur la version
   Les informations sur une version comprennent l'historique et l'état en cours d'un fichier sous contrôle de code source. [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe gère un historique complet pour chaque fichier sous contrôle de code source, de sorte que vous puissiez suivre l'évolution d'un ou de plusieurs fichiers dans le temps. Vous pouvez également utiliser ces informations pour récupérer une copie locale d'une version d'un fichier ou pour comparer deux versions d'un fichier.  

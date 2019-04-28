@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842534"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Résoudre les problèmes de performance courants avec les index de hachage mémoire optimisés
   Cette rubrique traite du dépannage et des solutions de contournement des problèmes couramment rencontrés avec les index de hachage.  

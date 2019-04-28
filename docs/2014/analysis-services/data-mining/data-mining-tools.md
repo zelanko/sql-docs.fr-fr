@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70669026a7953ba1c2818ebc35b3d8fa7cb55427
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722881"
 ---
 # <a name="data-mining-tools"></a>Outils d'exploration de données
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit les outils suivants que vous pouvez utiliser pour créer des solutions d'exploration de données :  
@@ -43,7 +43,7 @@ ms.locfileid: "48171549"
 ## <a name="data-mining-wizard"></a>Assistant Exploration de données  
  Utilisez l'Assistant Exploration de données pour commencer la création de solutions d'exploration de données. Cet Assistant est facile et rapide à utiliser, et vous guide tout au long du processus de création d'une structure d'exploration de données et d'un modèle d'exploration de données initial qui lui est associé ; il inclut les tâches de sélection d'un type d'algorithme et d'une source de données, ainsi que la définition des données de cas utilisées pour l'analyse.  
   
- **Pour plus d’informations** : [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-analysis-services-data-mining.md).  
+ **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-wizard-analysis-services-data-mining.md)  
   
 ## <a name="data-mining-designer"></a>Concepteur d’exploration de données  
  Après avoir créé une structure et un modèle d'exploration de données à l'aide de l'Assistant Exploration de données, vous pouvez utiliser le Concepteur d'exploration de données depuis [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour utiliser les structures et les modèles existants.  
@@ -62,7 +62,7 @@ ms.locfileid: "48171549"
   
 -   Créer des prédictions et des requêtes de contenu sur des modèles d'exploration de données existants. Générer des requêtes uniques ou configurer des requêtes afin de générer des prédictions pour des tables entières de données externes.  
   
- **Pour plus d'informations :** [Concepteur d'exploration de données](data-mining-designer.md)  
+ **Pour plus d’informations :** [Concepteur d’exploration de données](data-mining-designer.md)  
   
 ## <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Après avoir créé et déployé des modèles d'exploration de données sur un serveur, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour gérer la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui héberge les objets d'exploration de données. Vous pouvez également continuer à exécuter des tâches qui utilisent le modèle, telles que l'exploration des modèles, le traitement de nouvelles données et la création de prédictions.  
@@ -88,12 +88,12 @@ ms.locfileid: "48171549"
   
 -   Utilisation de la régression logistique pour segmenter les clients entrants par risque.  
   
- **Pour plus d’informations** [Projets connexes pour des solutions d’exploration de données](data-mining-solutions.md)  
+ **Pour plus d’informations :** [Projets connexes pour des solutions d’exploration de données](data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference)   
- [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Référence DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)   
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
  [Solutions d’exploration de données](data-mining-solutions.md)  
   
   

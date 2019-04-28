@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e1cc5bfb5388cd71ca3217bd060e3dde0428f36
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832098"
 ---
 # <a name="create-parameters"></a>Create Parameters
   Vous pouvez utiliser [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer les paramètres de projet et de package. Les procédures suivantes fournissent des instructions pas-à-pas pour créer les paramètres de package/projet.  
@@ -40,7 +40,7 @@ ms.locfileid: "58392137"
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Créer une vue d’abonnement|Nom du paramètre.|  
+    |Nom|Nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  
@@ -74,7 +74,7 @@ ms.locfileid: "58392137"
   
     |Propriété|Description|  
     |--------------|-----------------|  
-    |Créer une vue d’abonnement|Nom du paramètre.|  
+    |Nom|Nom du paramètre.|  
     |Type de données|Type de données du paramètre.|  
     |Valeur par défaut|Valeur par défaut du paramètre affecté au moment de la conception. Cette valeur est aussi appelée « valeur de conception par défaut ».|  
     |Sensible|Les valeurs de paramètre sensibles sont chiffrées dans le catalogue et apparaissent sous la forme d'une valeur Null lorsqu'elles sont affichées avec Transact-SQL ou SQL Server Management Studio.|  

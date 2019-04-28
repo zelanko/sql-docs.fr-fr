@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011944"
 ---
 # <a name="create-an-application-role"></a>Créer un rôle d'application
   Cette rubrique explique comment créer un rôle d'application dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Les rôles d'application limitent l'accès utilisateur à une base de données sauf via des applications spécifiques. Les rôles d'application ne possèdent pas d'utilisateurs, de sorte que la liste **Membres du rôle** n'est pas affichée lorsque l'option **Rôle d'application** est sélectionnée.  
@@ -43,7 +43,7 @@ ms.locfileid: "52532439"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'autorisation ALTER ANY APPLICATION ROLE sur la base de données.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

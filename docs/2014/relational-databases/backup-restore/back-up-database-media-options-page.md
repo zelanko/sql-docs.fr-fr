@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876816"
 ---
 # <a name="back-up-database-media-options-page"></a>Sauvegarder la base de données (page Options de support)
   Utilisez la page  **Options de support** de la boîte de dialogue **Sauvegarder la base de données** pour afficher ou modifier les options de sauvegarde de la base de données.  

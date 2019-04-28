@@ -21,11 +21,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0a5846f45a2919bf5d2de2e94e205bfd59b0fe94
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737429"
 ---
 # <a name="specifying-boolean-valued-predicates-in-xpath-queries-sqlxml-40"></a>Spécification de prédicats booléens dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "56036268"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-     Voici le résultat :  
+     Voici le résultat :  
   
     ```  
     <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -91,7 +91,7 @@ ms.locfileid: "56036268"
     </ROOT>  
     ```  
   
-### <a name="b-specify-successive-and-nested-predicates"></a>b. Spécifier les prédicats consécutifs et imbriqués  
+### <a name="b-specify-successive-and-nested-predicates"></a>B. Spécifier les prédicats consécutifs et imbriqués  
  La requête suivante affiche l'utilisation de prédicats consécutifs. La requête retourne tous les  **\<client >** les éléments enfants du nœud de contexte qui ont les deux un **SalesPersonID** attribut avec la valeur 277 et un **TerritoryID**attribut avec une valeur de 3 :  
   
 ```  
@@ -205,7 +205,7 @@ ms.locfileid: "56036268"
   
      Pour plus d’informations, consultez [à l’aide d’ADO pour exécuter des requêtes SQLXML 4.0](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Voici le résultat partiel :  
+ Voici le résultat partiel :  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

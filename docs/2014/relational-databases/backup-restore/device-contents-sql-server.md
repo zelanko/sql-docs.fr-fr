@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 890a03221888693c1696059ed5d31a9907ea2872
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876046"
 ---
 # <a name="device-contents-sql-server"></a>Contenu de l'unité (SQL Server)
   Utilisez cette boîte de dialogue pour consulter les informations de sauvegarde. Ces informations décrivent le périphérique, le support, le jeu de supports, ainsi que le ou les jeux de sauvegarde.  
@@ -53,11 +53,11 @@ ms.locfileid: "48101689"
  **Jeux de sauvegarde**  
  Affiche les informations relatives au(x) jeu(x) de sauvegarde contenus dans les supports. Un jeu de sauvegarde est le résultat d'une opération de sauvegarde réussie dont le contenu est divisé entre les supports présents dans le jeu d'unités de sauvegarde.  
   
-|En-tête|Valeurs|  
+|Header|Valeurs|  
 |------------|------------|  
 |**Nom**|Nom du jeu de sauvegarde.|  
-|**Type**|Type de sauvegarde effectué : Complète, Différentielle ou Journal des transactions.|  
-|**Composant**|Composant sauvegardé : Base de données, Fichier ou *\<vide>* (pour les journaux des transactions).|  
+|**Type**|Le type de sauvegarde effectué : Complète, différentielle ou journal des transactions.|  
+|**Composant**|Le composant sauvegardé : Base de données, fichier, ou  *\<vide >* (pour les journaux des transactions).|  
 |**Server**|Nom de l'instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] qui a effectué l'opération de sauvegarde.|  
 |**Sauvegarde de la base de données**|Le nom de la base de données qui a été sauvegardée.|  
 |**Position**|La position du jeu de sauvegarde dans le volume.|  

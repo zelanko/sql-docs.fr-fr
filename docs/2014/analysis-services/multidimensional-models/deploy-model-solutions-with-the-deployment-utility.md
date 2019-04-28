@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b84aae1c024be9a7d5da02dce0e69d2040266fed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726353"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Déployer des solutions de modèle avec l'utilitaire de déploiement
   L'utilitaire **Microsoft.AnalysisServices.Deployment** permet de démarrer le moteur de déploiement de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à partir de l'invite de commandes. Comme un fichier d'entrée, l'utilitaire emploie les fichiers de sorties XML générés par la construction d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Les fichiers d'entrées sont facilement modifiables pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  

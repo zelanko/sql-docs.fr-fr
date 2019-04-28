@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2e277313ac2da5c8a92d69985344d3cc646dbf7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843575"
 ---
 # <a name="sql-server-profiler---source-table-database-engine-tuning-advisor---select-workload-table"></a>Table SQL Server Profiler - moteur de base de données de la Table Source l’Assistant Paramétrage - sélectionnez la charge de travail
   Microsoft [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] et l'Assistant Paramétrage de [!INCLUDE[ssDE](../includes/ssde-md.md)] utilisent cette boîte de dialogue pour sélectionner des tables.  
@@ -44,8 +44,8 @@ ms.locfileid: "48161685"
  Spécifie le nom de la table de trace à partir de laquelle la trace doit être lue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Enregistrer les résultats de Trace dans une Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Enregistrer des résultats d’une trace dans une table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
- [Assistant Paramétrage du moteur de base de données](../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Database Engine Tuning Advisor](../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

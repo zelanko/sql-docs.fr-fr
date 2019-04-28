@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adbed9b575be07354cfe1d1a3bf5f2c0526f458c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722837"
 ---
 # <a name="data-mining-model-viewers"></a>Visionneuses de modèle d’exploration de données
   Après avoir effectué l’apprentissage d’un modèle d’exploration de données dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez explorer le modèle pour rechercher des tendances intéressantes. Étant donné que les résultats des modèles d'exploration de données sont complexes et peuvent être difficiles à comprendre dans un format brut, l'examen visuel des données constitue souvent le moyen le plus simple pour comprendre les règles et les relations que les algorithmes découvrent au sein des données.  
@@ -58,25 +58,25 @@ ms.locfileid: "48068859"
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques suivantes décrivent plus en détail chacune des visionneuses, et expliquent comment interpréter les informations qu'elles contiennent.  
   
- [Explorer un modèle à l’aide de la visionneuse d’arborescences Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse d'arborescences Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md)  
  Décrit la Visionneuse d'arborescences [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Cette visionneuse affiche les modèles d'exploration de données qui sont générés avec l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) et l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression).  
   
- [Explorer un modèle à l’aide de Microsoft Cluster Viewer](browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Explorer un modèle à l'aide de Microsoft Sequence Cluster](browse-a-model-using-the-microsoft-cluster-viewer.md)  
  Décrit le composant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer. Cette visionneuse affiche les modèles d’exploration de données qui sont générés avec l’algorithme MC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering).  
   
- [Explorer un modèle à l’aide de la visionneuse de l’algorithme MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md)  
  Décrit la Visionneuse de l’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series). Cette visionneuse affiche les modèles d’exploration de données qui sont générés avec l’algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
   
- [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNB (Microsoft Naive Bayes)](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MNB (Microsoft Naive Bayes)](browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
  Décrit la Visionneuse de l’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes). Cette visionneuse affiche les modèles d'exploration de données qui sont générés avec l'algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes).  
   
- [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MSC (Microsoft Sequence Cluster)](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
  Décrit la Visionneuse de l'algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). Cette visionneuse affiche les modèles d’exploration de données qui sont générés avec l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering).  
   
- [Explorer un modèle à l’aide de la visionneuse de l’algorithme MAR (Microsoft Association Rules)](browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)](browse-a-model-using-the-microsoft-association-rules-viewer.md)  
  Décrit la Visionneuse de l’algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules). Cette visionneuse affiche les modèles d'exploration de données qui sont générés avec l'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules).  
   
- [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MNN (Microsoft Neural Network)](browse-a-model-using-the-microsoft-neural-network-viewer.md)  
  Décrit la Visionneuse de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network). Cette visionneuse affiche les modèles d'exploration de données qui sont générés avec l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network), y compris les modèles qui utilisent l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression).  
   
  [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  

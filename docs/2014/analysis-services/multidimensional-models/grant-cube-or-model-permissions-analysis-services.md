@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44159dccd8fd912e0ebee75c5ab7d1a72c946e75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725963"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Octroyer des autorisations de cube ou de modèle (Analysis Services)
   Un cube ou modèle tabulaire est le principal objet de requête dans un modèle de données Analysis Services. Lors de la connexion à des données tabulaires ou multidimensionnelles à partir d'Excel pour l'exploration de données ad hoc, les utilisateurs commencent en général par sélectionner un cube ou modèle tabulaire spécifique comme structure de données derrière l'objet de rapport de tableau croisé dynamique. Cette rubrique explique comment accorder les autorisations nécessaires pour l'accès aux données tabulaires ou de cube.  
@@ -37,7 +37,7 @@ ms.locfileid: "48149709"
 > [!NOTE]  
 >  Seuls les administrateurs de serveur, ou les administrateurs de base de données ayant des autorisations Contrôle total, peuvent déployer un cube à partir de fichiers sources vers un serveur ou créer des rôles et assigner des membres. Consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) et [accorder des autorisations de base de données &#40;Analysis Services&#41; ](grant-database-permissions-analysis-services.md) pour plus d’informations sur ces autorisations niveaux.  
   
-#### <a name="step-1-create-the-role"></a>Étape 1 : Créer le rôle  
+#### <a name="step-1-create-the-role"></a>Étape 1 : Créer le rôle  
   
 1.  Dans SSMS, connectez-vous à Analysis Services. Si vous avez besoin d’aide sur cette étape, consultez [Connexion à partir d’applications clientes &#40;Analysis Services&#41;](../instances/connect-from-client-applications-analysis-services.md).  
   
@@ -49,15 +49,15 @@ ms.locfileid: "48149709"
   
 5.  Continuez à l'étape suivante après avoir entré un nom et une description facultative.  
   
-#### <a name="step-2-assign-membership"></a>Étape 2 : Assigner l’appartenance  
+#### <a name="step-2-assign-membership"></a>Étape 2 : Affecter une appartenance  
   
 1.  Dans le volet **Appartenance** , cliquez sur **Ajouter** pour entrer les comptes d’utilisateurs ou de groupes Windows qui accéderont au cube à l’aide de ce rôle. Analysis Services prend uniquement en charge les identités de sécurité Windows. Notez que vous ne créez pas de connexions de base de données lors de cette étape. Dans Analysis Services, les utilisateurs se connectent par l'intermédiaire de comptes Windows.  
   
 2.  Continuez à l'étape suivante, la définition des autorisations de cube.  
   
-     Notez que nous ignorons le volet Source de données. La plupart des consommateurs ordinaires de données Analysis Services n'ont pas besoin d'autorisations sur l'objet source de données. Pour obtenir des informations sur ces niveaux d’autorisation, consultez [Grant permissions on a data source object &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) .  
+     Notez que nous ignorons le volet Source de données. La plupart des consommateurs ordinaires de données Analysis Services n'ont pas besoin d'autorisations sur l'objet source de données. Pour obtenir des informations sur ces niveaux d’autorisation, consultez [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md) .  
   
-#### <a name="step-3-set-cube-permissions"></a>Étape 3 : Définir les autorisations du cube  
+#### <a name="step-3-set-cube-permissions"></a>Étape 3 : Définir des autorisations de Cube  
   
 1.  Dans le **Cubes** volet, sélectionnez un cube, puis cliquez sur `Read` ou **en lecture/écriture** accès.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48149709"
   
      Pour finir, ce volet vous permet d’accorder des droits **Traiter la base de données** sur le cube pour permettre à tous les membres de ce rôle de traiter des données pour ce cube. Le traitement étant généralement une opération restreinte, nous vous recommandons de laisser cette tâche aux administrateurs ou de définir des rôles spécifiquement pour cette tâche. Pour plus d’informations sur les bonnes pratiques concernant les autorisations de traitement, consultez [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md).  
   
-#### <a name="step-4-test"></a>Étape 4 : Tester  
+#### <a name="step-4-test"></a>Étape 4 : Test  
   
 1.  Utilisez Excel pour tester les autorisations d'accès au cube. Vous pouvez également utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], en suivant la même technique que celle décrite ci-dessous (exécution de l’application comme utilisateur non-administrateur).  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48149709"
   
      Si vous recevez des erreurs lors de la connexion, vérifiez la configuration des ports pour Analysis Services et vérifiez que le serveur accepte les connexions à distance. Pour la configuration des ports, consultez [Configurer le pare-feu Windows pour autoriser l’accès à Analysis Services](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>Étape 5 : Écrire un script de définition et d’assignation des rôles  
+#### <a name="step-5-script-role-definition-and-assignments"></a>Étape 5 : Assignations et la définition de rôle de script  
   
 1.  En guise d'étape finale, vous devez générer un script qui capture la définition de rôle que vous venez de créer.  
   
@@ -102,8 +102,8 @@ ms.locfileid: "48149709"
  Vous pouvez affiner les autorisations de cube de façon à limiter l'accès à des données de dimension ou de cellule. Pour plus d’informations, consultez [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) et [Octroyer un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Méthodologies d’authentification pris en charge par Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Accorder des autorisations sur les structures d’exploration de données et modèles &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Accorder des autorisations sur un objet de source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Méthodologies d'authentification prises en charge par Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

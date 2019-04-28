@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 965022adeeee40ca7f8fd45a722b22fa6aa64931
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726493"
 ---
 # <a name="define-named-queries-in-a-data-source-view-analysis-services"></a>Définir des requêtes nommées dans une vue de source de données (Analysis Services)
   Une requête nommée est une expression SQL représentée sous forme de table. Dans une requête nommée, vous pouvez spécifier une expression SQL pour sélectionner les lignes et les colonnes retournées d'une ou de plusieurs tables dans une ou plusieurs sources de données. Une requête nommée est similaire à toute autre table dans une vue de source de données (DSV) avec des lignes et des relations, si ce n'est que la requête nommée se base sur une expression.  

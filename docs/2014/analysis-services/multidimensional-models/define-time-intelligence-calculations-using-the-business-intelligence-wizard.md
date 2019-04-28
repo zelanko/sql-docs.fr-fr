@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a67270205e6c6977e01c274f0f864dc77ce8b13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726423"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Définir des calculs Time Intelligence à l'aide de l'Assistant Business Intelligence
   L'amélioration Time Intelligence est une amélioration de cube qui ajoute des calculs de temps (ou vues temporelles) à une hiérarchie sélectionnée. Cette amélioration prend en charge les catégories de calculs suivantes :  
@@ -42,14 +42,14 @@ ms.locfileid: "48059526"
   
 -   Comparaisons de périodes parallèles  
   
- Vous pouvez appliquer Time Intelligence aux cubes qui possèdent une dimension de temps (une dimension de temps est une dimension dont la propriété `Type` a la valeur `Time`). En outre, la propriété `Type` des attributs de temps de cette dimension doit également être définie sur le paramètre approprié (comme Années ou Mois). Le `Type` propriété de la dimension et ses attributs sera correctement définie si vous utilisez l’Assistant Dimension pour créer la dimension de temps.  
+ Vous pouvez appliquer Time Intelligence aux cubes qui possèdent une dimension de temps (une dimension de temps est une dimension dont la propriété `Type` a la valeur `Time`). En outre, la propriété `Type` des attributs de temps de cette dimension doit également être définie sur le paramètre approprié (comme Années ou Mois). La propriété `Type` de la dimension et de ses attributs sera correctement définie si vous utilisez l'Assistant Dimension pour créer la dimension de temps.  
   
  Pour ajouter Time Intelligence à un cube, utilisez l’Assistant Business Intelligence, puis sélectionnez l’option **Exécuter l’Assistant Time Intelligence** dans la page **Choisir des améliorations** . Cet Assistant vous guide ensuite dans la procédure à suivre pour sélectionner la hiérarchie à laquelle vous voulez ajouter Time Intelligence et pour spécifier les membres de la hiérarchie auxquels vous voulez appliquer cette fonctionnalité. Dans la dernière page de l’Assistant, vous pouvez voir les modifications qui vont être apportées à la base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour ajouter la fonctionnalité Time Intelligence sélectionnée.  
   
 ## <a name="selecting-a-time-hierarchy"></a>Sélection d'une hiérarchie de temps  
  Dans la page **Choisir la hiérarchie cible et les calculs** , sélectionnez la hiérarchie de temps à laquelle vous souhaitez appliquer Time Intelligence. Vous pouvez appliquer Time Intelligence à une seule hiérarchie de temps à chaque fois que vous exécutez l'Assistant Business Intelligence. Si vous voulez appliquer cette amélioration à plusieurs hiérarchies de temps, vous devez exécuter à nouveau l'Assistant.  
   
- Après avoir sélectionné une hiérarchie de temps, dans la liste **Calculs de temps disponibles** , vous sélectionnez les calculs qui s’appliquent à la hiérarchie. Les calculs qui sont répertoriés varient selon les niveaux dans la hiérarchie et sur le `Type` paramètre de propriété de l’attribut pour chaque niveau. Par exemple, une hiérarchie Années, contrairement à une hiérarchie Trimestres, prend en charge Cumul annuel jusqu'à ce jour et Croissance d'une année sur l'autre.  
+ Après avoir sélectionné une hiérarchie de temps, dans la liste **Calculs de temps disponibles** , vous sélectionnez les calculs qui s’appliquent à la hiérarchie. Les calculs disponibles dépendent des niveaux de la hiérarchie et du paramètre de la propriété `Type` de l'attribut pour chaque niveau. Par exemple, une hiérarchie Années, contrairement à une hiérarchie Trimestres, prend en charge Cumul annuel jusqu'à ce jour et Croissance d'une année sur l'autre.  
   
 > [!NOTE]  
 >  Le fichier modèle Timeintelligence.xml définit les calculs de temps qui figurent dans la liste **Calculs de temps disponibles**. Si les calculs disponibles ne correspondent pas à vos besoins, vous pouvez soit modifier les calculs existants, soit ajouter de nouveaux calculs au fichier Timeintelligence.xml.  

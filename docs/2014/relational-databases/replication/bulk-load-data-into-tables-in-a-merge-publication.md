@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 09e535057fcf573dfa189b7e5fdc0e0df06e5d4a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721761"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication-replication-transact-sql-programming"></a>Charger en masse des données dans les tables d'une publication de fusion (programmation Transact-SQL de la réplication)
   Lorsque les données sont chargées dans des tables à l'aide des [bcp Utility](../../tools/bcp-utility.md) ou de la commande [BULK INSERT](/sql/t-sql/statements/bulk-insert-transact-sql) , par défaut, les déclencheurs de réplication de fusion qui conservent les données de suivi dans la table système [MSmerge_contents](/sql/relational-databases/system-tables/msmerge-contents-transact-sql) ne sont pas déclenchés. Vous avez le choix entre forcer les déclencheurs de réplication de fusion à se déclencher au chargement des données et insérer par programmation les métadonnées de réplication générées après l'opération de copie en bloc à l'aide de procédures stockées de réplication.  

@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 551a0cce8326c4727efcc1d348be5019809f0506
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48203479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734910"
 ---
 # <a name="microsoft-neural-network-algorithm"></a>Microsoft Neural Network Algorithm
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de réseau neuronal associe chaque état possible de l’attribut d’entrée avec chaque état possible de l’attribut prédictible et utilise les données d’apprentissage pour calculer les probabilités. Vous pouvez utiliser ces probabilités ultérieurement pour procéder à une classification ou à une régression ainsi que pour prédire le résultat de l'attribut prédit en fonction des attributs d'entrée.  
@@ -52,13 +52,13 @@ ms.locfileid: "48203479"
 -   Tout modèle de prédiction qui analyse des relations complexes entre de nombreuses entrées et des sorties beaucoup moins nombreuses.  
   
 ## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
- Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de réseau neuronal crée un réseau qui se compose de trois couches de neurones. une couche d'entrée, une couche masquée facultative et une couche de sortie.  
+ L’algorithme MNN ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) crée un réseau composé de trois couches de neurones maximum. une couche d'entrée, une couche masquée facultative et une couche de sortie.  
   
- **Couche d’entrée :** neurones d’entrée définissent toutes les valeurs d’attribut d’entrée pour le modèle d’exploration de données et leurs probabilités.  
+ **Couche d’entrée :** Neurones d’entrée définissent toutes les valeurs d’attribut d’entrée pour le modèle d’exploration de données et leurs probabilités.  
   
- **Couche masquée :** les neurones masqués reçoivent des entrées des neurones d’entrée et fournissent des sorties aux neurones de sortie. La couche masquée correspond à la couche où des poids sont affectés aux diverses probabilités des entrées. Un poids décrit la pertinence ou l’importance d'une entrée donnée par rapport au neurone masqué. Plus le poids assigné à une entrée est élevé, plus la valeur de cette entrée sera importante. Les poids peuvent être négatifs, ce qui implique que l'entrée peut désactiver un résultat spécifique au lieu de l'activer.  
+ **Couche masquée :** Les neurones cachés reçoivent des entrées des neurones d'entrée et fournissent des sorties aux neurones de sortie. La couche masquée correspond à la couche où des poids sont affectés aux diverses probabilités des entrées. Un poids décrit la pertinence ou l’importance d'une entrée donnée par rapport au neurone masqué. Plus le poids assigné à une entrée est élevé, plus la valeur de cette entrée sera importante. Les poids peuvent être négatifs, ce qui implique que l'entrée peut désactiver un résultat spécifique au lieu de l'activer.  
   
- **Couche de sortie :** neurones de sortie représentent les valeurs d’attribut prévisible pour le modèle d’exploration de données.  
+ **Couche de sortie :** Les neurones de sortie représentent les valeurs des attributs prédictibles du modèle d'exploration de données.  
   
  Pour en savoir plus sur la construction et le notation des couches d’entrée, des couches masquées et des couches de sortie, consultez [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md).  
   
@@ -90,9 +90,9 @@ ms.locfileid: "48203479"
 -   Ne prend pas en charge la création de dimensions d’exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence technique de Microsoft Neural Network algorithme](microsoft-neural-network-algorithm-technical-reference.md)   
- [Contenu du modèle pour les modèles de réseau neuronal d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)   
- [Algorithme de régression logistique Microsoft](microsoft-logistic-regression-algorithm.md)  
+ [Algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm.md)  
   
   

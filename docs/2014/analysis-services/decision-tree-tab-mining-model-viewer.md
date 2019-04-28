@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dbb34719b79ba5a12249cdb96187b178450d5802
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732680"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Onglet Arbre de décision (Visionneuse de modèle d'exploration de données)
   Le volet **Arbre de décision** affiche une représentation visuelle des règles de décision créées dans un modèle d’arbre de décision. Les règles de décision décrivent les chemins d'accès vers certains résultats.  
   
- **Pour plus d’informations :** [Algorithme MDT (Microsoft Decision Trees)](data-mining/microsoft-decision-trees-algorithm.md), [Explorer un modèle à l’aide de la Visionneuse d’arborescences Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ **Pour plus d’informations :** [Algorithme d’arbres de décision de Microsoft](data-mining/microsoft-decision-trees-algorithm.md), [Explorer un modèle à l’aide de la visionneuse d’arborescences Microsoft](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -67,7 +67,7 @@ ms.locfileid: "48194489"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

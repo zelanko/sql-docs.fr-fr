@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22090b659e78ac322aee9376a93f31bebfe77be0
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988029"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportation vers XML (Générateur de rapports et SSRS)
   L'extension de rendu XML rend un rapport au format XML. Le schéma du rapport XML est spécifique du rapport et contient uniquement des données. Les informations de mise en page ne sont pas rendues et la pagination n'est pas conservée par l'extension de rendu XML. La sortie XML générée par cette extension peut être importée dans une base de données, utilisée en tant que message de données XML ou envoyée à une application personnalisée.  
@@ -81,7 +81,7 @@ ms.locfileid: "59964245"
   
  Les valeurs des variables sont les suivantes :  
   
-|Créer une vue d’abonnement|Value|  
+|Nom|Value|  
 |----------|-----------|  
 |Rapport|Report.DataElementName|  
 |ReportURL|URL absolue URLEncoded d'accès au rapport sur le serveur.|  

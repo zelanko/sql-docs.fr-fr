@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8232f701a8702965b35277ffab4f92459f32c063
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010712"
 ---
 # <a name="create-modify-and-delete-snapshots-in-report-history"></a>Créer, modifier et supprimer des instantanés dans l'historique de rapport
   L'historique de rapport est un ensemble d'instantanés de rapport. Vous pouvez gérer l'historique de rapport en ajoutant et en supprimant des instantanés, ou en modifiant les propriétés qui affectent le stockage de l'historique de rapport. Vous pouvez créer un historique de rapport manuellement ou de manière planifiée.  

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013233"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52413409"
 |**timeout_sec**|**Int**|Délai d'expiration, en secondes, avant que cette requête abandonne la demande d'allocation de la mémoire.|  
 |**resource_semaphore_id**|**smallint**|ID non unique du sémaphore de ressource sur lequel attend cette requête.<br /><br /> **Remarque :** Cet ID est unique dans les versions de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieures à [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. Cette modification peut affecter l'exécution de la requête de résolution des problèmes. Pour plus d’informations, consultez la section « Remarques » plus loin dans cette rubrique.|  
 |**queue_id**|**smallint**|ID de la file d'attente dans laquelle cette requête attend l'allocation de mémoire. NULL si la mémoire est déjà allouée.|  
-|**wait_order**|**Int**|Ordre séquentiel des requêtes en attente dans le texte spécifié **queue_id**. Cette valeur peut changer pour une requête donnée si d'autres requêtes bénéficient d'une allocation mémoire ou d'un délai d'attente. NULL si la mémoire est déjà allouée.|  
+|**wait_order**|**Int**|Ordre séquentiel des requêtes en attente dans le texte spécifié **queue_id**. Cette valeur peut changer pour une requête donnée si d’autres requêtes bénéficient d’allocations de mémoire ou de délai d’attente. NULL si la mémoire est déjà allouée.|  
 |**is_next_candidate**|**bit**|Candidat pour l'allocation mémoire suivante.<br /><br /> 1 = Oui<br /><br /> 0 = Non<br /><br /> NULL = La mémoire est déjà allouée.|  
 |**wait_time_ms**|**bigint**|Temps d'attente en millisecondes. NULL si la mémoire est déjà allouée.|  
 |**plan_handle**|**varbinary(64)**|Identificateur de ce plan de requête. Utilisez **sys.dm_exec_query_plan** pour extraire le plan XML réel.|  

@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877246"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Restaurer une sauvegarde différentielle de base de données (SQL Server)
   Cette rubrique explique comment restaurer une sauvegarde différentielle de base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -137,7 +137,7 @@ ms.locfileid: "58531301"
   
 #### <a name="to-restore-a-differential-database-backup"></a>Pour restaurer une sauvegarde différentielle de base de données  
   
-1.  Exécutez l'instruction RESTORE DATABASE, en spécifiant la clause NORECOVERY, pour restaurer la sauvegarde complète de la base de données précédant la sauvegarde différentielle. Pour plus d'informations, consultez [Procédure : Restaurer une sauvegarde complète](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
+1.  Exécutez l'instruction RESTORE DATABASE, en spécifiant la clause NORECOVERY, pour restaurer la sauvegarde complète de la base de données précédant la sauvegarde différentielle. Pour plus d’informations, consultez [Comment : Restaurer une sauvegarde complète](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md).  
   
 2.  Exécutez l'instruction RESTORE DATABASE pour restaurer la sauvegarde différentielle de la base de données, en spécifiant :  
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 689290211033d85ea658004f6664eaebec193439
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722205"
 ---
 # <a name="management-of-data-mining-solutions-and-objects"></a>Gestion des solutions et des objets d'exploration de données
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] fournit des outils clients que vous pouvez utiliser pour gérer les structures et modèles d'exploration de données existants. Cette section décrit les opérations de gestion que vous pouvez effectuer avec chaque environnement.  
@@ -80,14 +80,14 @@ ms.locfileid: "50147574"
   
 -   <xref:Microsoft.AnalysisServices>  
   
- **Restrictions :** Aucun.  
+ **Restrictions :** Aucun.  
   
 ### <a name="data-mining-extensions-dmx"></a>DMX (Data Mining Extensions)  
  Data Mining Extensions (DMX) peut être utilisé avec d'autres interfaces de commandes telles que [!INCLUDE[vstecado](../../includes/vstecado-md.md)] ou ADOMD.NET pour créer, supprimer et interroger les structures et modèles d'exploration de données.  
   
 -   [Instructions de définition de données DMX &#40;Data Mining Extensions&#41;](/sql/dmx/dmx-statements-data-definition)  
   
- **Restrictions :** Certaines propriétés ne peuvent pas être modifiées avec DMX.  
+ **Restrictions :** Certaines propriétés ne peuvent pas être modifiées à l’aide de DMX.  
   
 ### <a name="xml-for-analysis-xmla"></a>XML for Analysis (XMLA)  
  XML for Analysis (XMLA) est le langage de définition de données utilisé pour l'ensemble d'Analysis Services. XMLA vous permet de contrôler la plupart des objets d'exploration de données et opérations de serveur. Toutes les opérations de gestion entre le client et le serveur peuvent être effectuées avec XMLA. Pour plus de commodité, vous pouvez utiliser le langage de script [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (ASSL) pour inclure le code XML dans un wrapper.  

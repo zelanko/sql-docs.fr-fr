@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0650d15ece36593139ae804f6535315eacbf9294
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843439"
 ---
 # <a name="what39s-new-database-engine"></a>Ce que&#39;s nouveau (moteur de base de données)
   Cette nouvelle version du [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] intègre de nouvelles fonctionnalités et des améliorations qui augmentent la puissance et la productivité des architectes, des développeurs et des administrateurs qui conçoivent, développent et maintiennent des systèmes de stockage de données. Vous trouverez ci-dessous les domaines d'amélioration du [!INCLUDE[ssDE](../includes/ssde-md.md)] .  
@@ -118,7 +118,7 @@ ms.locfileid: "53371551"
   
   
 ###  <a name="OnlineEvent"></a> Online Index Operation Event Class  
- Le rapport de progression de la classe d'événements d'opération d'index en ligne présente désormais deux nouvelles colonnes de données : **PartitionId** et **PartitionNumber**. Pour plus d’informations, consultez [Progress Report : Online Index Operation Event Class](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
+ Le rapport de progression de la classe d’événements online index operation présente désormais deux nouvelles colonnes de données : **PartitionId** et **PartitionNumber**. Pour plus d’informations, consultez [Progress Report : Online Index Operation Event Class](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
 ###  <a name="Compat"></a> Niveau de compatibilité de base de données  

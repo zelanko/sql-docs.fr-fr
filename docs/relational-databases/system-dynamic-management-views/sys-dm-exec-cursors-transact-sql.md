@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_cursors (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013419"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ dm_exec_cursors (session_id | 0 )
 |**session_id**|**Int**|ID de la session propriétaire de ce curseur.|  
 |**cursor_id**|**Int**|ID de l'objet curseur.|  
 |**nom**|**nvarchar (256)**|Nom du curseur, défini par l'utilisateur.|  
-|**Propriétés**|**nvarchar (256)**|Spécifie les propriétés du curseur. Les valeurs des propriétés suivantes sont concaténées pour former la valeur de cette colonne :<br />Interface déclaration<br />Type de curseur <br />Accès simultané au curseur<br />Étendue du curseur<br />Niveau d'imbrication du curseur<br /><br /> Par exemple, la valeur retournée dans cette colonne peut être « TSQL &#124; dynamique &#124; Optimistic &#124; Global (0) ».|  
+|**properties**|**nvarchar (256)**|Spécifie les propriétés du curseur. Les valeurs des propriétés suivantes sont concaténées pour former la valeur de cette colonne :<br />Interface déclaration<br />Type de curseur <br />Accès simultané au curseur<br />Étendue du curseur<br />Niveau d'imbrication du curseur<br /><br /> Par exemple, la valeur retournée dans cette colonne peut être « TSQL &#124; dynamique &#124; Optimistic &#124; Global (0) ».|  
 |**sql_handle**|**varbinary(64)**|Descripteur du texte du traitement qui a déclaré le curseur.|  
 |**statement_start_offset**|**Int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution commencent. Peut être utilisé conjointement avec le **sql_handle**, le **statement_end_offset**et le [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
 |**statement_end_offset**|**Int**|Nombre de caractères dans le traitement ou la procédure stockée en cours d'exécution où les instructions en cours d'exécution se terminent. Peut être utilisé conjointement avec le **sql_handle**, le **statement_start_offset**et le **sys.dm_exec_sql_text** fonction de gestion dynamique pour récupérer l’actuellement l’exécution d’instruction pour la demande.|  
@@ -65,11 +65,11 @@ dm_exec_cursors (session_id | 0 )
 |**fetch_buffer_start**|**Int**|Pour les curseurs FAST_FORWARD et DYNAMIC, retourne 0 si le curseur n'est pas ouvert ou s'il est positionné devant la première ligne. Sinon, retourne -1.<br /><br /> Pour les curseurs STATIC et KEYSET, retourne 0 si le curseur n'est pas ouvert et -1 si le curseur est positionné au-delà de la dernière ligne.<br /><br /> Sinon, retourne le numéro de la ligne où il est positionné.|  
 |**ansi_position**|**Int**|Position du curseur dans le tampon d'extraction.|  
 |**worker_time**|**bigint**|Temps, en microsecondes, passés par les travaux qui exécutent ce curseur.|  
-|**Lectures**|**bigint**|Nombre de lectures effectuées par le curseur.|  
+|**reads**|**bigint**|Nombre de lectures effectuées par le curseur.|  
 |**writes**|**bigint**|Nombre d'écritures effectuées par le curseur.|  
 |**dormant_duration**|**bigint**|Millisecondes écoulées depuis le début de la dernière requête (ouverture ou extraction) sur ce curseur.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="remarks"></a>Notes  
@@ -85,7 +85,7 @@ dm_exec_cursors (session_id | 0 )
 |Type|Description|  
 |----------|-----------------|  
 |Keyset|Le curseur est déclaré comme Keyset.|  
-|Dynamique|Le curseur est déclaré comme dynamique.|  
+|dynamique|Le curseur est déclaré comme dynamique.|  
 |Snapshot|Le curseur est déclaré comme instantané ou statique.|  
 |Fast_Forward|Le curseur est déclaré comme curseur avant.|  
   
@@ -93,7 +93,7 @@ dm_exec_cursors (session_id | 0 )
   
 |Accès concurrentiel|Description|  
 |-----------------|-----------------|  
-|Read Only|Le curseur est déclaré en lecture seule|  
+|Lecture seule|Le curseur est déclaré en lecture seule|  
 |Scroll Locks|Le curseur utilise des défilements.|  
 |Optimistic|Le curseur utilise l'accès concurrentiel optimiste.|  
   

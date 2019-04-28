@@ -14,18 +14,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 173dd379ac2857cef0faafda27aa74d7026b791a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727835"
 ---
 # <a name="model-tab-mining-model-viewers"></a>Onglet Modèle (Visionneuses de modèle d'exploration de données)
   L'onglet **Modèle** dans la visionneuse de l'algorithme MTS affiche une représentation de série chronologique en tant que nœud dans un graphique, comme celles utilisées dans les modèles d'arbre de décision.  
   
  Utilisez cette vue d'un modèle de série chronologique pour extraire des informations utiles sur l'analyse de série chronologique, y compris l'équation pour le graphique, les termes ARIMA et les coefficients.  
   
- **Pour plus d’informations :** [Algorithme MTS (Microsoft Time Series)](data-mining/microsoft-time-series-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MTS (Microsoft Time Series)](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [Algorithme MTS (Microsoft Time Series)](data-mining/microsoft-time-series-algorithm.md)  
+ **Pour plus d’informations :** [Algorithme de série chronologique de Microsoft](data-mining/microsoft-time-series-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de la série Microsoft Time](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md), [algorithme de série chronologique de Microsoft](data-mining/microsoft-time-series-algorithm.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -72,7 +72,7 @@ ms.locfileid: "48164169"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

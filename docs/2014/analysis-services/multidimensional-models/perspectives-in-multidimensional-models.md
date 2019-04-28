@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb1d01e8ba6e6fa55af9e1f63d6d5fb9da29cde0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736896"
 ---
 # <a name="perspectives-in-multidimensional-models"></a>Perspectives dans les modèles multidimensionnels
   Une perspective est un sous-ensemble de cube créé pour une application ou un groupe d'utilisateurs particuliers. Le cube lui-même est la perspective par défaut. Une perspective se présente à un client sous forme de cube. Lorsqu'un utilisateur affiche une perspective, elle ressemble à n'importe quel autre cube. Toute modification apportée aux données du cube via l'écriture différée dans la perspective affecte le cube d'origine. Pour plus d’informations sur les vues dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], consultez [Perspectives](../multidimensional-models-olap-logical-cube-objects/perspectives.md).  

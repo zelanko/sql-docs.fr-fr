@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7033db55df0dd9b25c3dee5accdd4259842a571b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999618"
 ---
 # <a name="article-options-for-merge-replication"></a>Options d'articles pour la réplication de fusion
   Les articles de table de fusion proposent de nombreuses options vous permettant de personnaliser le comportement de réplication en fonction des besoins de vos applications. La réplication de fusion vous offre les possibilités suivantes :  
@@ -29,7 +29,7 @@ ms.locfileid: "54133319"
   
 -   Spécifier que les suppressions d'un ou plusieurs articles ne soient pas suivies par les déclencheurs de réplication et les tables système. Cette option peut être utile dans de nombreux scénarios d'application, comme ceux qui utilisent des suppressions par lot qu'il n'est pas nécessaire de répliquer. Pour plus d’informations, consultez [Optimiser les performances de la réplication de fusion avec le suivi conditionnel des suppressions](optimize-merge-replication-performance-with-conditional-delete-tracking.md).  
   
--   Spécifier l'ordre de traitement des articles pour s'assurer que les articles sont traités dans l'ordre requis par votre application. Pour plus d’informations, consultez [propriétés de spécifier la réplication de fusion](../publish/specify-merge-replication-properties.md).  
+-   Spécifier l'ordre de traitement des articles pour s'assurer que les articles sont traités dans l'ordre requis par votre application. Pour plus d’informations, consultez [Spécifier les propriétés de la réplication de fusion](../publish/specify-merge-replication-properties.md).  
   
 -   Spécifier qu'un ensemble d'enregistrements associés soit traité comme une unité (par défaut, la réplication de fusion traite les modifications sur les tables ligne par ligne). Pour plus d’informations, consultez [Regrouper les modifications apportées à des lignes connexes à l’aide d’enregistrements logiques](group-changes-to-related-rows-with-logical-records.md).  
   

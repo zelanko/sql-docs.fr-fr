@@ -38,11 +38,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011720"
 ---
 # <a name="database-level-roles"></a>Rôles au niveau de la base de données
   Pour gérer facilement les autorisations dans vos bases de données, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit plusieurs *rôles* , qui sont des principaux de sécurité regroupant d'autres principaux. Ils sont similaires aux ***groupes*** du système d'exploitation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows. Les autorisations des rôles au niveau de la base de données ont une portée à l'échelle de la base de données.  

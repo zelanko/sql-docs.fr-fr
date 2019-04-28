@@ -22,14 +22,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b3b9d48c6bcdfd07599ded1b4a92955cc45abfec
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721959"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Algorithme de clustering Microsoft
-  Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de Clustering est un algorithme de segmentation fourni par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'algorithme utilise des techniques itératives pour grouper les cas d'un jeu de données en clusters contenant des caractéristiques similaires. Ces regroupements sont utiles pour l'exploration des données, l'identification d'anomalies dans les données et la création de prédictions.  
+  L'algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] est un algorithme de segmentation fourni par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. L'algorithme utilise des techniques itératives pour grouper les cas d'un jeu de données en clusters contenant des caractéristiques similaires. Ces regroupements sont utiles pour l'exploration des données, l'identification d'anomalies dans les données et la création de prédictions.  
   
  Les modèles de clusters identifient des relations dans un jeu de données que vous ne pourriez peut-être pas déduire d'une observation informelle. Par exemple, vous pouvez déduire logiquement que les personnes qui se rendent à leur travail en vélo n'habitent généralement pas très loin de leur travail. Toutefois, l'algorithme peut trouver d'autres caractéristiques moins évidentes sur les personnes qui se rendent à leur travail en vélo. Dans le diagramme ci-dessous, le cluster A représente des données sur les personnes qui se rendent généralement en voiture à leur travail, tandis que le cluster B représente des données sur les personnes qui vont généralement à vélo à leur travail.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "48195099"
   
 -   **Des colonnes d’entrée** Chaque modèle doit posséder au moins une colonne d’entrée qui contient les valeurs utilisées pour générer les clusters. Vous pouvez avoir autant de colonnes d'entrée que vous le souhaitez. Toutefois, en fonction du nombre de valeurs dans chaque colonne, l'ajout de colonnes supplémentaires peut accroître le temps nécessaire à l'apprentissage du modèle.  
   
--   **Une colonne prédictible facultative** L’algorithme n’a pas besoin de colonne prédictible pour générer le modèle, mais vous pouvez ajouter une colonne prédictible de n’importe quel type de données ou presque. Les valeurs de la colonne prédictible peuvent être traitées en tant qu'entrée du modèle de clustering, ou vous pouvez spécifier qu'elles soit uniquement utilisées à des fins de prédiction. Par exemple, si vous souhaitez prédire le revenu du client en cluster les données démographiques telles que la région ou l’âge, vous spécifiez le revenu en tant que `PredictOnly` et ajoutez tous les autres colonnes, telles que la région ou l’âge, en tant qu’entrées.  
+-   **Une colonne prédictible facultative** L’algorithme n’a pas besoin de colonne prédictible pour générer le modèle, mais vous pouvez ajouter une colonne prédictible de n’importe quel type de données ou presque. Les valeurs de la colonne prédictible peuvent être traitées en tant qu'entrée du modèle de clustering, ou vous pouvez spécifier qu'elles soit uniquement utilisées à des fins de prédiction. Par exemple, si vous souhaitez prédire les revenus de vos clients en mettant en cluster les données démographiques telles que la région ou l'âge, vous spécifiez le revenu en tant que `PredictOnly` et vous ajoutez toutes les autres colonnes, telles que la région ou l'âge, en tant qu'entrées.  
   
  Pour des informations plus détaillées sur les types de contenu et les types de données pris en charge pour les modèles de clustering, consultez la section relative aux spécifications dans [Références techniques relatives à l’algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md).  
   
@@ -84,8 +84,8 @@ ms.locfileid: "48195099"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Clustering algorithme informations techniques de référence](microsoft-clustering-algorithm-technical-reference.md)   
- [Contenu du modèle d’exploration de données pour les modèles de Clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
+ [Références techniques relatives à l’algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de clustering &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)   
  [Exemples de requêtes de modèle de clustering](clustering-model-query-examples.md)  
   
   

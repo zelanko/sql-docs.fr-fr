@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012018"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Afficher un journal d'audit SQL Server
   Cette rubrique explique comment afficher un journal d'audit SQL Server dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "54100164"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l’autorisation `CONTROL SERVER`.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

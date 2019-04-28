@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721731"
 ---
 # <a name="create-a-push-subscription"></a>Créer un abonnement par émission (push)
   Cette rubrique explique comment créer un abonnement par émission de données (push) dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../includes/tsql-md.md)]ou d'objets RMO (Replication Management Objects). Pour plus d’informations sur la création d’un abonnement par émission de données pour un Abonné non-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez [Créer un abonnement pour un Abonné non-SQL Server](create-a-subscription-for-a-non-sql-server-subscriber.md).  
@@ -170,7 +170,7 @@ ms.locfileid: "54135539"
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si elle retourne la valeur `false`, les propriétés spécifiées à l'étape 2 sont incorrectes, ou la publication n'existe pas sur le serveur.  
   
-4.  Effectuez une opération AND logique au niveau du bit (`&` dans Visual C# et `And` dans Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résultat d'une opération OR logique au niveau du bit (`|` dans Visual C# et `Or` dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
+4.  Effectuez une opération AND logique au niveau du bit (`&` dans Visual C# et `And` dans Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résutat d'une opération OR logique au niveau du bit (`|` dans Visual C# et `Or` dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
   
 5.  Si la base de données d'abonnements n'existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
@@ -210,7 +210,7 @@ ms.locfileid: "54135539"
   
 3.  Appelez la méthode <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> . Si elle retourne la valeur `false`, les propriétés spécifiées à l'étape 2 sont incorrectes, ou la publication n'existe pas sur le serveur.  
   
-4.  Effectuez une opération AND logique au niveau du bit (`&` dans Visual C# et `And` dans Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résultat d'une opération OR logique au niveau du bit (`|` dans Visual C# et `Or` dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
+4.  Effectuez une opération AND logique au niveau du bit (`&` dans Visual C# et `And` dans Visual Basic) entre la propriété <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Si le résultat est <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>, appliquez à<xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> le résutat d'une opération OR logique au niveau du bit (`|` dans Visual C# et `Or` dans Visual Basic) entre <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> et <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>. Appelez ensuite <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> pour activer les abonnements par envoi de données.  
   
 5.  Si la base de données d'abonnements n'existe pas, créez-la en utilisant la classe <xref:Microsoft.SqlServer.Management.Smo.Database> . Pour plus d’informations, consultez [Création, modification et suppression de bases de données](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   

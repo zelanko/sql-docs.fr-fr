@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736362"
 ---
 # <a name="specify-parameters"></a>Spécifier les paramètres
   En spécifiant les paramètres de la procédure, les programmes appelants peuvent passer des valeurs dans le corps de la procédure. Ces valeurs peuvent être utilisées à plusieurs fins pendant l'exécution de la procédure. Les paramètres de la procédure peuvent également retourner des valeurs au programme appelant si le paramètre est marqué comme paramètre OUTPUT.  

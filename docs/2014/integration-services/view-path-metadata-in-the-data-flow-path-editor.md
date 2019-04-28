@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d185dc36c81863176f7249c4fa680c37069c2f28
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877830"
 ---
 # <a name="view-path-metadata-in-the-data-flow-path-editor"></a>Afficher les métadonnées d'un chemin d'accès dans l'Éditeur du chemin d'accès au flux de données
   Les chemins d'accès connectent deux composants de flux de données. Pour pouvoir afficher les métadonnées d'un chemin d'accès, le flux de données doit contenir au moins deux composants de flux de données connectés. Pour plus d’informations, consultez [Ajouter ou supprimer un composant dans un flux de données](data-flow/add-or-delete-a-component-in-a-data-flow.md) et [Connecter des composants dans un flux de données](data-flow/connect-components-in-a-data-flow.md).  

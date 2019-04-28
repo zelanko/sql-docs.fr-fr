@@ -29,11 +29,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc37fbade038b39d6d05cb5b51ecc3e8ba405e2a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871572"
 ---
 # <a name="file-states"></a>États des fichiers
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], l'état d'un fichier de base de données est géré indépendamment de l'état de la base de données. Un fichier a toujours un seul état spécifique, tel que ONLINE ou OFFLINE. Pour afficher l’état actuel d’un fichier, utilisez l’affichage catalogue [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) ou [sys.database_files](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) . Si la base de données est hors connexion, l’état des fichiers peut être visualisé à partir de l’affichage catalogue [sys.master_files](/sql/relational-databases/system-catalog-views/sys-master-files-transact-sql) .  

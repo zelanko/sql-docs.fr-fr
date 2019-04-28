@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/20/2017
 ms.prod: sql
@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013225"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Dans le tableau ci-dessus, **attribut** peut avoir les valeurs suivantes :
 |sql_handle|**varbinary**(64)|Handle SQL du lot.|  
 |merge_action_type|**smallint**|Type du plan d'exécution du déclencheur utilisé à la suite d'une instruction MERGE.<br /><br /> 0 indique un plan de non-déclencheur, un plan de déclencheur qui ne s'exécute pas à la suite d'une instruction MERGE ou un plan de déclencheur qui s'exécute à la suite d'une instruction MERGE qui spécifie uniquement une action DELETE.<br /><br /> 1 indique un plan de déclencheur INSERT qui s'exécute à la suite d'une instruction MERGE.<br /><br /> 2 indique un plan de déclencheur UPDATE qui s'exécute à la suite d'une instruction MERGE.<br /><br /> 3 indique un plan de déclencheur DELETE qui s'exécute à la suite d'une instruction MERGE contenant une action INSERT ou UPDATE correspondante.<br /><br /> Pour les déclencheurs imbriqués exécutés par des actions en cascade, cette valeur correspond à l'action de l'instruction MERGE qui a provoqué la cascade.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -92,7 +92,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 ### <a name="evaluating-set-options"></a>Évaluation des options définies  
  Pour convertir la valeur retournée dans **set_options** dans les options ayant servi à compiler le plan, soustraire les valeurs de la **set_options** valeur, en commençant par la plus grande valeur possible, jusqu'à ce que vous arriver à 0. Chaque valeur soustraite correspond à une option utilisée dans le plan de requête. Par exemple, si la valeur dans **set_options** est 251, les options que le plan a été compilé avec sont ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS(32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), Plan(2) parallèles et ANSI_PADDING (1).  
   
-|Option|Valeur|  
+|Option|Value|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Plan en parallèle|2|  
@@ -120,7 +120,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 ### <a name="evaluating-cursor-options"></a>Évaluation des options de curseur  
  Pour convertir la valeur retournée dans **required_cursor_options** et **acceptable_cursor_options** dans les options ayant servi à compiler le plan, soustraire les valeurs de la valeur de colonne, en commençant par la plus grande valeur possible, jusqu'à ce que vous atteigniez 0. Chaque valeur soustraite correspond à une option de curseur utilisée dans le plan de requête.  
   
-|Option|Valeur|  
+|Option|Value|  
 |------------|-----------|  
 |None|0|  
 |INSENSITIVE|1|  

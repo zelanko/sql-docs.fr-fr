@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 9405bbb1eb8737b38c1e9214713b5447f1917d7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856521"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>Exécution de modèles contenant des requêtes SQL (fournisseur SQLXMLOLEDB)
   Cet exemple illustre l’utilisation de la propriété spécifique au fournisseur SQLXMLOLEDB ClientSideXML. Dans cet exemple d'application ADO côté client, un modèle XML contenant une requête SQL est exécuté sur le serveur.  

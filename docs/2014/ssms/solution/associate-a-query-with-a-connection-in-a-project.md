@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a28982b3dcf8136e7981899b50aed1aa8f9904c9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955892"
 ---
 # <a name="associate-a-query-with-a-connection-in-a-project"></a>Associer une requête à une connexion dans un projet
   Si une requête a été créée sans connexion ou si elle est déplacée d'un projet vers un autre, elle ne sera pas associée à une connexion dans le projet actif.  

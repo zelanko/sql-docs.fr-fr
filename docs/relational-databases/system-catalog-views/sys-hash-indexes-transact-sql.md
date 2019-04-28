@@ -1,5 +1,5 @@
 ---
-title: Sys.hash_indexes (Transact-SQL) | Microsoft Docs
+title: sys.hash_indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59d98fe6c7def4073bf0f2cd7cb631c143a766b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004689"
 ---
 # <a name="syshashindexes-transact-sql"></a>sys.hash_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47729617"
 |**\<héritée de colonnes >**||Hérite des colonnes de [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).|  
 |**bucket_count**|**Int**|Nombre de compartiments de hachage pour les index de hachage.<br /><br /> Pour plus d’informations sur la valeur de bucket_count, notamment les instructions pour définir la valeur, consultez [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md).|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] . Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  

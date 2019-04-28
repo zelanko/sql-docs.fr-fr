@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 92ac3366a2473fb92fe33dcf884d3806c65e8609
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62885083"
 ---
 # <a name="set-the-properties-of-a-connection-manager"></a>Définir les propriétés d’un gestionnaire de connexions
   Tous les gestionnaires de connexions peuvent être configurés à l'aide de la fenêtre **Propriétés** .  

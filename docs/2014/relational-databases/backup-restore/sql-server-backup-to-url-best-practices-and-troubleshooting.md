@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f54ae14c13d58c75da0ddd6eb69a9d9d7527991f
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877091"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Meilleures pratiques et dépannage de sauvegarde SQL Server vers une URL
   Cette rubrique présente les pratiques recommandées et des conseils de dépannage pour la sauvegarde et la restauration SQL Server dans le service d'objets blob Windows Azure.  
@@ -24,7 +24,7 @@ ms.locfileid: "53349991"
   
 -   [Sauvegarde et restauration SQL Server avec le service Stockage Blob Microsoft Azure](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)  
   
--   [Didacticiel : SQL Server Backup and Restore au Service de stockage Windows Azure Blob](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [Tutoriel : Sauvegarde et restauration SQL Server dans le service Stockage Blob Windows Azure](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="managing-backups"></a>Gestion des sauvegardes  
  La liste suivante comprend des recommandations générales sur la gestion des sauvegardes :  
@@ -98,7 +98,7 @@ ms.locfileid: "53349991"
   
          Pour résoudre cette erreur, réexécutez l'instruction `BACKUP` en spécifiant `BLOCKSIZE = 65536`.  
   
--   Erreur lors de la sauvegarde en raison d’objets BLOB qui ont un bail actif sur ces derniers : Activité de sauvegarde ayant échoué peut entraîner des objets BLOB avec baux actifs.  
+-   Erreur lors de la sauvegarde en raison d’objets blob pour lesquels un bail est actif : L’échec d’une activité de sauvegarde peut aboutir à des objets blob avec des bails actifs.  
   
      Si une instruction de sauvegarde est retentée, l'opération de sauvegarde échoue avec une erreur semblable à celle qui suit :  
   
@@ -106,7 +106,7 @@ ms.locfileid: "53349991"
   
      Si une instruction de restauration est tentée sur un fichier de sauvegarde d'objet blob dont le bail est actif, l'opération de restauration échoue avec une erreur semblable à celle qui suit :  
   
-     **Message d’exception : Le serveur distant a retourné une erreur : Conflit (409)...**  
+     **Message d’exception : Le serveur distant a retourné une erreur : (409) Conflict..**  
   
      Lorsqu'une telle erreur se produit, les fichiers d'objets blob doivent être supprimés. Pour plus d'informations sur ce scénario et la résolution du problème, consultez [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)  
   

@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94224bbc5c254b01fab49c850b554427757b714b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48105675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733427"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles Sequence Clustering (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme MSC (Microsoft Sequence Clustering). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -231,7 +231,7 @@ ORDER BY Count(*) DESC
   
  La table suivante affiche les résultats de la table NODE_DISTRIBUTION, ainsi que les valeurs de probabilité arrondies présentées dans la visionneuse graphique.  
   
-|Product|Prise en charge (table NODE_DISTRIBUTION)|Probabilité (table NODE_DISTRIBUTION)|Probabilité (du graphique)|  
+|Produit|Prise en charge (table NODE_DISTRIBUTION)|Probabilité (table NODE_DISTRIBUTION)|Probabilité (du graphique)|  
 |-------------|------------------------------------------|------------------------------------------------|--------------------------------|  
 |manquantes|48.447887|0.138028169|(non affiché)|  
 |Cycling Cap|10.876056|0.030985915|0.03|  
@@ -262,8 +262,8 @@ ORDER BY Count(*) DESC
  Pour savoir comment obtenir la liste des chemins d’accès observés en interrogeant le contenu du modèle et pour voir d’autres exemples de requêtes sur un modèle Sequence Clustering, consultez [Exemples de requêtes de modèle MSC (Sequence Clustering)](clustering-model-query-examples.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Algorithme de Clustering de séquence de Microsoft](microsoft-sequence-clustering-algorithm.md)   
- [Exemples de requêtes de modèle Sequence Clustering](clustering-model-query-examples.md)  
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Microsoft Sequence Clustering Algorithm](microsoft-sequence-clustering-algorithm.md)   
+ [Exemples de requêtes de modèle MSC (Sequence Clustering)](clustering-model-query-examples.md)  
   
   

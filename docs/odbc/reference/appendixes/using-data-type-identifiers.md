@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f14294b76fc7977de256697c730f7dca31e7a469
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735128"
 ---
 # <a name="using-data-type-identifiers"></a>Utilisation d’identificateurs de types de données
 Applications utilisent des identificateurs de type de données de deux manières : pour décrire les tampons pour le pilote et pour récupérer des métadonnées sur le jeu à partir du pilote afin qu’ils puissent identifier quel type de C met en mémoire tampon pour stocker les données de résultats. Les applications appellent les fonctions suivantes pour effectuer ces tâches :  

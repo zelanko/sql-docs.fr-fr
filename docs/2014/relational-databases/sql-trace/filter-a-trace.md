@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 381007cb26f74cdf945900436d8a9fcea5a4ef39
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714716"
 ---
 # <a name="filter-a-trace"></a>Filtrer une trace
   Les filtres limitent les événements recueillis dans une trace. Si aucun filtre n'est défini, tous les événements des classes d'événements sélectionnées sont retournés dans le résultat de trace. Par exemple, limiter les noms d'utilisateurs Windows d'une trace à des utilisateurs particuliers réduit le volume des données de sortie à ces seuls utilisateurs.  

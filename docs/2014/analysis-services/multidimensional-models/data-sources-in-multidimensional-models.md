@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 930137c05cdf7465ba6f68aa3396d092fa6a926f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726767"
 ---
 # <a name="data-sources-in-multidimensional-models"></a>Sources de données dans des modèles multidimensionnels
   Toutes les données que vous importez ou chargez dans un modèle multidimensionnel proviennent d'une source de données externe. En général, les données source proviennent d’un entrepôt de données conçu pour générer des rapports, mais elles peuvent provenir de n’importe quelle base de données relationnelle, accessible directement ou indirectement via un intermédiaire, tel qu’un package [!INCLUDE[ssIS](../../includes/ssis-md.md)] .  
@@ -56,15 +56,15 @@ ms.locfileid: "48113299"
 |Rubrique|Description|  
 |-----------|-----------------|  
 |[Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)|Décrit les types de sources de données qui peuvent être utilisés dans un modèle multidimensionnel.|  
-|[Créer une Source de données &#40;SSAS multidimensionnel&#41;](create-a-data-source-ssas-multidimensional.md)|Explique comment ajouter un objet de source de données à un modèle multidimensionnel.|  
-|[Supprimer une Source de données dans l’Explorateur de solutions &#40;SSAS multidimensionnel&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Utilisez cette procédure pour supprimer un objet de source de données d'un modèle multidimensionnel.|  
-|[Définir les propriétés de Source de données &#40;SSAS multidimensionnel&#41;](set-data-source-properties-ssas-multidimensional.md)|Décrit chaque propriété et explique comment la définir.|  
-|[Définir les Options de l’emprunt d’identité &#40;SSAS - multidimensionnel&#41;](set-impersonation-options-ssas-multidimensional.md)|Explique comment configurer les options dans la boîte de dialogue Informations d'emprunt d'identité.|  
+|[Créer une source de données &#40;SSAS Multidimensionnel&#41;](create-a-data-source-ssas-multidimensional.md)|Explique comment ajouter un objet de source de données à un modèle multidimensionnel.|  
+|[Supprimer une source de données dans l’Explorateur de solutions &#40;SSAS Multidimensionnel&#41;](delete-a-data-source-in-solution-explorer-ssas-multidimensional.md)|Utilisez cette procédure pour supprimer un objet de source de données d'un modèle multidimensionnel.|  
+|[Définir les propriétés de la source de données &#40;SSAS Multidimensionnel&#41;](set-data-source-properties-ssas-multidimensional.md)|Décrit chaque propriété et explique comment la définir.|  
+|[Définir les options d’emprunt d’identité &#40;SSAS - Multidimensionnel&#41;](set-impersonation-options-ssas-multidimensional.md)|Explique comment configurer les options dans la boîte de dialogue Informations d'emprunt d'identité.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de base de données &#40;Analysis Services - données multidimensionnelles&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Architecture logique &#40;Analysis Services - données multidimensionnelles&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Objets de bases de données &#40;Analysis Services - Données multidimensionnelles &#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Architecture logique &#40;Analysis Services - Données multidimensionnelles&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Sources de données et liaisons &#40;SSAS multidimensionnel&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
+ [Sources de données et liaisons &#40;SSAS Multidimensionnel&#41;](data-sources-and-bindings-ssas-multidimensional.md)  
   
   

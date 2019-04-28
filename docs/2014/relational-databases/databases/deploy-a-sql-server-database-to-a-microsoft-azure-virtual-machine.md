@@ -44,11 +44,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40f1bf8c37ab27bc00fd291d6687737215519259
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871678"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Déployer une base de données SQL Server sur une machine virtuelle Microsoft Azure
   Utilisez l’Assistant **Déployer une base de données SQL Server sur une machine virtuelle Windows Azure** pour déployer une base de données d’une instance du [!INCLUDE[ssDE](../../includes/ssde-md.md)] vers [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans une machine virtuelle Windows Azure (VM). L'Assistant utilise une sauvegarde complète de la base de données ; par conséquent, il copie toujours le schéma complet de la base de données et les données d'une base de données utilisateur SQL Server. L'Assistant effectue également toutes les configurations de machine virtuelle Windows Azure pour vous ; par conséquent, aucune configuration préalable de machine virtuelle n'est requise.  
@@ -89,9 +89,9 @@ ms.locfileid: "53357889"
   
  Sur les ordinateurs qui exécutent des systèmes d'exploitation Windows Server, vous devez utiliser les paramètres de configuration suivants pour exécuter l'Assistant :  
   
--   Désactivez la configuration de sécurité renforcée :  Utilisez le Gestionnaire de serveur > serveur Local pour définir la Configuration de sécurité renforcée d’Internet Explorer (ESC) **OFF**.  
+-   Désactiver la Configuration de sécurité renforcée :  Utilisez le Gestionnaire de serveur > serveur Local pour définir la Configuration de sécurité renforcée d’Internet Explorer (ESC) **OFF**.  
   
--   Activez JavaScript :  Internet Explorer > Options Internet > Sécurité > Niveau client > Création de scripts > Active Scripting : **Activer**.  
+-   Activez JavaScript :  Internet Explorer > Options Internet > sécurité > niveau client > Scripts > Active Scripting : **Activer**.  
   
 ###  <a name="limitations"></a> Limitations et restrictions  
  La limite de taille de la base de données pour cette opération est 1 To.  

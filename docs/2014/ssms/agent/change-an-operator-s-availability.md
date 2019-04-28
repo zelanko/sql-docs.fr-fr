@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 11e5b26a9e2a953aff319b41749d2c12be1a880e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017099"
 ---
 # <a name="change-an-operator39s-availability"></a>Modifier la disponibilité d’un opérateur
   Cette rubrique explique comment modifier la disponibilité d'un opérateur pour la réception des notifications d'alertes dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -48,7 +48,7 @@ ms.locfileid: "54135679"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Seuls les membres du rôle serveur fixe **sysadmin** peuvent modifier des opérateurs.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

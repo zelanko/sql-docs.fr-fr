@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6f87cda5fb38fad586e5272d7d7c3ea255a478b7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728335"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Traiter manuellement les données (SSAS Tabulaire)
   Cette rubrique décrit la procédure permettant de traiter manuellement des données d'espace de travail dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -74,7 +74,7 @@ ms.locfileid: "48189765"
  Cliquez pour arrêter l'opération de traitement. Cette option est utile si l'opération prend trop de temps ou génère trop d'erreurs.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traiter les données &#40;SSAS tabulaire&#41;](process-data-ssas-tabular.md)   
- [Résoudre les problèmes de traitement des données &#40;SSAS tabulaire&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [Traiter les données &#40;SSAS Tabulaire&#41;](process-data-ssas-tabular.md)   
+ [Dépanner le traitement des données &#40;SSAS Tabulaire&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

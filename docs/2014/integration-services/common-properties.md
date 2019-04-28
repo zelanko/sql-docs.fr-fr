@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835211"
 ---
 # <a name="common-properties"></a>Propriétés communes
   Les objets de flux de données dans le modèle objet [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] présentent des propriétés communes et personnalisées au niveau des composants, des entrées et sorties, et des colonnes d'entrée et de sortie. De nombreuses propriétés ont des valeurs en lecture seule qui sont assignées au moment de l'exécution par le moteur de flux de données.  
@@ -114,7 +114,7 @@ ms.locfileid: "58378877"
 |ID|Entier|Valeur qui identifie l'entrée de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie l'entrée.|  
 |IsSorted|Booléen|Indique si les données dans l'entrée sont triées.|  
-|Créer une vue d’abonnement|String|Nom de l'entrée.|  
+|Nom|String|Nom de l'entrée.|  
 |SourceLocale|Entier|ID de paramètres régionaux (LCID) des données d'entrée.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. . Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
   
@@ -160,7 +160,7 @@ ms.locfileid: "58378877"
 |IdentificationString|String|Chaîne qui identifie la sortie.|  
 |IsErrorOut|Booléen|Indique si la sortie est une sortie d'erreur.|  
 |IsSorted|Booléen|Indique si la sortie est triée. La valeur par défaut est `False`.<br /><br /> **\*\* Important \* \***  définissant la valeur de la `IsSorted` propriété `True` ne trie pas les données. Cette propriété indique uniquement aux composants en aval que les données ont été précédemment triées. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|Créer une vue d’abonnement|String|Nom de la sortie.|  
+|Nom|String|Nom de la sortie.|  
 |SynchronousInputID|Entier|ID d'une entrée synchrone avec la sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`.|  
   
@@ -179,7 +179,7 @@ ms.locfileid: "58378877"
 |ID|Entier|Valeur qui identifie la colonne de sortie de façon unique.|  
 |IdentificationString|String|Chaîne qui identifie la colonne de sortie.|  
 |LineageID|Entier|ID de la colonne de sortie. Les composants en aval font référence à la colonne à l'aide de cette valeur.|  
-|Créer une vue d’abonnement|String|Nom de la colonne de sortie.|  
+|Nom|String|Nom de la colonne de sortie.|  
 |SortKeyPosition|Entier|Valeur qui indique si une colonne est triée, son ordre de tri et l'ordre dans lequel plusieurs colonnes sont triées. La valeur **0** indique que la colonne n'est pas triée. Pour plus d’informations, consultez [Trier des données pour les transformations de fusion et de jointure de fusion](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Entier|Valeur qui contient les indicateurs spéciaux de la colonne de sortie.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valeur qui détermine la façon dont le composant gère les troncations qui se produisent lors du traitement des lignes. Ces valeurs sont `Fail component`, `Ignore failure` et `Redirect row`. La valeur par défaut est `Fail component`.|  

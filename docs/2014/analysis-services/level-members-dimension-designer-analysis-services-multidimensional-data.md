@@ -14,17 +14,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a737b79944635af1a45dd4fc51a9ef2e2967a31
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728156"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Niveau et membres (onglet Navigateur, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez ce volet pour parcourir les membres correspondant à la hiérarchie et à la langue sélectionnée. Pour sélectionner une hiérarchie ou une langue à consulter, utilisez les options **Hiérarchie** et **Langue** du volet **Barre d'outils** . Pour plus d’informations sur le volet Barre d’outils, consultez [Toolbar &#40;Browser Tab, Dimension Designer&#41; &#40;Analysis Services - Multidimensional Data&#41;](toolbar-browser-tab-dimension-designer-analysis-services-multidimensional-data.md).  
   
 ## <a name="writeback-mode"></a>Mode Écriture différée  
- La fonctionnalité de ce volet change si vous activez le mode d'écriture différé. La dimension sélectionnée doit être activée en écriture (en d’autres termes, le `WriteEnabled` propriété de la dimension doit être définie sur true) et la dimension doit être déployée sur un [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance afin d’activer le mode d’écriture différée.  
+ La fonctionnalité de ce volet change si vous activez le mode d'écriture différé. L'écriture doit être activée sur la dimension sélectionnée (en d'autres termes, la propriété `WriteEnabled` de la dimension doit être affectée de la valeur true) et la dimension doit être déployée sur une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour pouvoir activer le mode d'écriture différée.  
   
  Pour activer le mode d’écriture différée, vous pouvez sélectionner **Écriture différée** dans le volet **Barre d’outils** ou cliquer avec le bouton droit sur le volet **Niveau et membres** et sélectionner **Écriture différée** dans le menu contextuel.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "48209701"
 > [!NOTE]  
 >  Cette option n'est disponible que si le mode d'écriture différée est activé.  
   
- **Couper**  
+ **Cut**  
  Copie les membres sélectionnés vers le Presse-papiers et les supprime de la hiérarchie.  
   
 > [!NOTE]  

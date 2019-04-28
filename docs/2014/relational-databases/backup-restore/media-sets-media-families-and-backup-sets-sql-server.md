@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 101ac93ba885ebcd571387785aa814ddef873619
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876247"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Jeux de supports, familles de supports et jeux de sauvegarde (SQL Server)
   Cette rubrique présente la terminologie de base des supports de sauvegarde propre aux sauvegardes et restaurations dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique s'adresse aux lecteurs qui font leurs premiers pas dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cette rubrique décrit le format utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour les supports de sauvegarde, la correspondance entre le support de sauvegarde et les unités de sauvegarde, l'organisation des sauvegardes sur le support de sauvegarde, et plusieurs considérations relatives aux jeux de supports et aux familles de supports. La rubrique décrit également les étapes de l'initialisation ou la mise en forme du support de sauvegarde avant de l'utiliser pour la première fois ou de remplacer un jeu de supports ancien par un nouveau, comment remplacer d'anciens jeux de sauvegarde dans un jeu de supports, et comment ajouter de nouveaux jeux de sauvegarde à un jeu de supports.  

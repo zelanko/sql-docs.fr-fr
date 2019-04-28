@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d12bf6f0e002b1f06bc96ff97608f88bd305b34b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960800"
 ---
 # <a name="oledb-dataread-event-class"></a>OLEDB DataRead (classe d'événements)
   La classe d'événements OLEDB DataRead se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] appelle un fournisseur OLE DB dans le cadre de requêtes distribuées ou de procédures stockées distantes. Incluez cette classe d'événements au sein des traces qui surveillent les moments où [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectue un appel de type demande de données à l'attention du fournisseur OLE DB.  

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e77a72246854ef990e0aea9bde80bbc33ce5994
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715116"
 ---
 # <a name="create-a-relational-mining-structure"></a>Créer une structure d’exploration de données relationnelle
   La plupart des modèles d'exploration de données sont basés sur des sources de données relationnelles. Les avantages de la création d'un modèle d'exploration de données relationnel sont que vous pouvez compiler des données ad hoc et effectuer l'apprentissage et la mise à jour d'un modèle sans entrer dans la complexité d'une création de cube.  

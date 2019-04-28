@@ -18,14 +18,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4cdbacc27816464440fe57db7c7d727026754220
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733565"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles d'association (Analysis Services - Exploration de données)
-  Cette rubrique décrit le contenu du modèle d’exploration qui est spécifique aux modèles utilisant l’algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+  Cette rubrique décrit le contenu du modèle d’exploration qui est spécifique aux modèles utilisant l’algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules). Pour une explication de la terminologie générale et statistique en rapport avec le contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-an-association-model"></a>Fonctionnement de la structure d'un modèle d'association  
  La structure d'un modèle d'association est simple. Chaque modèle possède un nœud parent unique qui représente le modèle et ses métadonnées, et chaque nœud parent possède une liste plate de jeux d'éléments et de règles. Les jeux d'éléments et les règles ne sont pas organisés dans des arbres. Comme le montre le diagramme suivant, les jeux d'éléments précèdent les règles.  
@@ -41,7 +41,7 @@ ms.locfileid: "48135059"
 ## <a name="model-content-for-an-association-model"></a>Contenu du modèle pour un modèle d'association  
  Cette section fournit des informations et des exemples pour les colonnes du contenu du modèle d'exploration de données qui s'appliquent aux modèles d'association.  
   
- Pour plus d’informations sur les colonnes à caractère général dans l’ensemble de lignes du schéma, comme MODEL_CATALOG et MODEL_NAME, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Pour plus d’informations sur les colonnes à caractère général dans l’ensemble de lignes du schéma, comme MODEL_CATALOG et MODEL_NAME, consultez [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
  MODEL_CATALOG  
  Nom de la base de données où le modèle est stocké.  
@@ -102,12 +102,12 @@ ms.locfileid: "48135059"
 |RULE_COUNT|Nombre de règles dans le modèle.|  
 |MIN_SUPPORT|Prise en charge minimale trouvée pour un jeu d'éléments unique.<br /><br /> **Remarque** : Cette valeur peut différer de celle à laquelle vous avez défini le paramètre *MINIMUM _SUPPORT* .|  
 |MAX_SUPPORT|Prise en charge maximale trouvée pour un jeu d'éléments unique.<br /><br /> **Remarque** : Cette valeur peut différer de celle à laquelle vous avez défini le paramètre *MAXIMUM_SUPPORT* .|  
-|MIN_ITEMSET_SIZE|Taille du plus petit jeu d'éléments, représentée par un nombre d'éléments.<br /><br /> La valeur 0 indique que le `Missing` état a été traité comme un élément indépendant.<br /><br /> **Remarque** : La valeur par défaut du paramètre *MINIMUM_ITEMSET_SIZE* est 1.|  
+|MIN_ITEMSET_SIZE|Taille du plus petit jeu d'éléments, représentée par un nombre d'éléments.<br /><br /> La valeur 0 indique que l'état `Missing` a été traité en tant qu'élément indépendant.<br /><br /> **Remarque** : La valeur par défaut du paramètre *MINIMUM_ITEMSET_SIZE* est 1.|  
 |MAX_ITEMSET_SIZE|Indique la taille du plus grand jeu d'éléments trouvé.<br /><br /> **Remarque** : Cette valeur est conditionnée par la valeur que vous avez attribuée au paramètre *MAX_ITEMSET_SIZE* quand vous avez créé le modèle. Cette valeur ne peut jamais dépasser cette valeur ; toutefois, elle peut être inférieure à celle-ci. La valeur par défaut est 3.|  
 |MIN_PROBABILITY|Probabilité minimale détectée pour un jeu d'éléments ou une règle unique dans le modèle.<br /><br /> Exemple : 0.400390625<br /><br /> **Remarque** : Pour les jeux d’éléments, cette valeur est toujours supérieure à celle que vous avez attribuée au paramètre *MINIMUM_PROBABILITY* lors de la création du modèle.|  
 |MAX_PROBABILITY|Probabilité maximale détectée pour un jeu d'éléments ou une règle unique dans le modèle.<br /><br /> Exemple : 1<br /><br /> **Remarque** : Il n’existe pas de paramètre pour conditionner la probabilité maximale des jeux d’éléments. Si vous voulez éliminer des éléments qui sont trop fréquents, utilisez à la place le paramètre *MAXIMUM_SUPPORT* .|  
-|MIN_LIFT|Quantité minimale de finesse fournie par le modèle pour un jeu d'éléments.<br /><br /> Exemple : 0,14309369632511<br /><br /> Remarque : le fait de connaître la finesse minimale peut vous aider à déterminer si la finesse est significative pour un jeu d’éléments.|  
-|MAX_LIFT|Quantité maximale de finesse fournie par le modèle pour un jeu d'éléments.<br /><br /> Exemple: 1,95758227647523 **Remarque** : Le fait de connaître la finesse maximale peut vous aider à déterminer si la finesse est significative pour un jeu d’éléments.|  
+|MIN_LIFT|Quantité minimale de finesse fournie par le modèle pour un jeu d'éléments.<br /><br /> Exemple : 0.14309369632511<br /><br /> Remarque : Le fait de connaître la finesse minimale peut vous aider à déterminer si l’élévation pour tout un jeu d’éléments est significative.|  
+|MAX_LIFT|Quantité maximale de finesse fournie par le modèle pour un jeu d'éléments.<br /><br /> Exemple : 1,95758227647523 **Remarque** connaître la finesse maximale peut vous aider à déterminer si l’élévation pour tout un jeu d’éléments est significative.|  
   
  **Nœud de jeu d’éléments** : les nœuds de jeu d’éléments contiennent une liste des éléments qui est affichée sous forme d’une chaîne de texte avec une virgule comme séparateur.  
   
@@ -194,8 +194,8 @@ ms.locfileid: "48135059"
  : vide.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Algorithme Microsoft Association](microsoft-association-algorithm.md)   
- [Exemples de requêtes de modèle d’association](association-model-query-examples.md)  
+ [Exemples de requête de modèle d’association](association-model-query-examples.md)  
   
   

@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3e604ee6aac125f366ac2fca6444527340213019
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721492"
 ---
 # <a name="distribution-agent-security"></a>Sécurité de l'Agent de distribution
   La boîte de dialogue **Sécurité de l'Agent de distribution** permet de spécifier le compte Windows sous lequel s'exécute l'Agent de distribution. Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. Le compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows est également baptisé *compte de processus*du fait que le processus agent s'exécute sous ce compte. La boîte de dialogue propose des options supplémentaires en fonction de la façon d'y accéder :  
   
 -   Si vous accédez à la boîte de dialogue à partir de l'Assistant Nouvel abonnement, elle permet de spécifier le contexte dans lequel l'Agent de distribution établit les connexions avec l'Abonné (pour les abonnements par envoi de données) ou avec le serveur de distribution (pour les abonnements par extraction). La connexion peut avoir lieu en empruntant l'identité du compte Windows ou dans le contexte d'un compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vous spécifiez.  
   
--   Si vous accédez à la boîte de dialogue à partir de la boîte de dialogue **Propriétés de l'abonnement** , spécifiez le contexte dans lequel l'Agent de distribution établit les connexions en cliquant sur le bouton des propriétés (**...**) dans **Connexion de l'Abonné** ou sur la ligne **Connexion du serveur de distribution** de cette boîte de dialogue. Pour plus d’informations sur l’accès à la **propriétés de l’abonnement** boîte de dialogue, consultez [afficher et modifier les propriétés d’abonnement Push](view-and-modify-push-subscription-properties.md) et comment : [Afficher et modifier les propriétés de l’abonnement par extraction](view-and-modify-pull-subscription-properties.md).  
+-   Si vous accédez à la boîte de dialogue à partir de la boîte de dialogue **Propriétés de l'abonnement** , spécifiez le contexte dans lequel l'Agent de distribution établit les connexions en cliquant sur le bouton des propriétés (**...**) dans **Connexion de l'Abonné** ou sur la ligne **Connexion du serveur de distribution** de cette boîte de dialogue. Pour plus d’informations sur l’accès à la boîte de dialogue **Propriétés de l’abonnement**, consultez [Afficher et modifier les propriétés d’un abonnement par émission de données](view-and-modify-push-subscription-properties.md) et le guide pratique pour [Afficher et modifier les propriétés d’un abonnement par extraction](view-and-modify-pull-subscription-properties.md).  
   
  Tous les comptes doivent être valides, le mot de passe correct étant spécifié pour chaque compte. Les comptes et les mots de passe ne sont pas validés tant qu'un agent ne s'exécute pas.  
   

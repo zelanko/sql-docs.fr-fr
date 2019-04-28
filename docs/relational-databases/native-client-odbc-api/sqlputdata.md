@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c8c8755b100fcfbdb8c1ca9e067a79eb09bd37ba
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014266"
 ---
 # <a name="sqlputdata"></a>SQLPutData
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51664218"
   
  Le *DataPtr* paramètre est ignoré, mais doit être défini sur une valeur non NULL. Pour plus d’informations, consultez la section sur la liaison de ligne Variable TVP dans [liaison et les valeurs de colonne et les paramètres Data Transfer of Table-Valued](../../relational-databases/native-client-odbc-table-valued-parameters/binding-and-data-transfer-of-table-valued-parameters-and-column-values.md).  
   
- Si *StrLen_Or_Ind* a une valeur autre que SQL_DEFAULT_PARAM ou un nombre compris entre 0 et SQL_PARAMSET_SIZE (autrement dit, le *ColumnSize* paramètre de SQLBindParameter), il s’agit d’une erreur. Cette erreur conduit SQLPutData à retourner SQL_ERROR: SQLSTATE=HY090, « Longueur de chaîne ou de mémoire tampon non valide ».  
+ Si *StrLen_Or_Ind* a une valeur autre que SQL_DEFAULT_PARAM ou un nombre compris entre 0 et SQL_PARAMSET_SIZE (autrement dit, le *ColumnSize* paramètre de SQLBindParameter), il s’agit d’une erreur. Cette erreur conduit SQLPutData à retourner SQL_ERROR : SQLSTATE = HY090, « Longueur de chaîne ou une mémoire tampon non valide ».  
   
  Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   

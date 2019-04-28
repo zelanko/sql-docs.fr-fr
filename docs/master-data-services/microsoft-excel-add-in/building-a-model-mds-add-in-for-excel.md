@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 61fe8cbe7335584feb925879572cddcc368b33d6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63002618"
 ---
 # <a name="building-a-model-mds-add-in-for-excel"></a>Génération d'un modèle (Complément MDS pour Excel)
 
@@ -35,7 +35,7 @@ ms.locfileid: "47721317"
 ## <a name="related-tasks"></a>Tâches associées  
  La plupart des tâches d'administration doivent toujours être effectuées dans l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] ou à l'aide du service Web. Le tableau suivant montre les outils que les administrateurs peuvent utiliser pour exécuter des tâches dans MDS.  
   
-|Description de la tâche|Outil|Rubrique|  
+|Description de la tâche|Tool|Rubrique|  
 |----------------------|----------|-----------|  
 |Créer des modèles.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Application web ou service web|[Créer un modèle &#40;Master Data Services&#41;](../../master-data-services/create-a-model-master-data-services.md)|  
 |Créer une entité.|[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] application Web, service Web ou le [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]|[Créer une entité &#40;Complément MDS pour Excel&#41;](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)|  
@@ -62,7 +62,7 @@ ms.locfileid: "47721317"
   
 -   [Règles d’entreprise &#40;Master Data Services&#41;](../../master-data-services/business-rules-master-data-services.md)  
   
--   [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)  
+-   [Vue d’ensemble : exportation de données &#40;Master Data Services&#41;](../../master-data-services/overview-exporting-data-master-data-services.md)  
   
 -   [Hiérarchies &#40;Master Data Services&#41;](../../master-data-services/hierarchies-master-data-services.md)  
   

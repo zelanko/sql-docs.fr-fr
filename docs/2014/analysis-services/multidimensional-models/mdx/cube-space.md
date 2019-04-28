@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 029492a13a3b332ba05ff7f0b84ea06a4d2a0fd5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091119"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725584"
 ---
 # <a name="cube-space"></a>Espace du cube
   L'espace du cube est le produit des membres des hiérarchies d'attribut d'un cube associés aux mesures du cube. Par conséquent, l'espace du cube est déterminé par le produit combinatoire de tous les membres de la hiérarchie d'attribut dans le cube et par les mesures du cube, et définit la taille maximale du cube. Il est important de noter que cet espace inclut toutes les combinaisons possibles de membres de la hiérarchie d'attribut ; même les combinaisons qui peuvent être jugées comme impossibles dans le monde réel, c'est-à-dire les combinaisons où la ville est Paris et les pays sont l'Angleterre, l'Espagne, le Japon, l'Inde ou ailleurs.  
@@ -130,12 +130,12 @@ FROM [Adventure Works]
 ## <a name="calculation-context"></a>Contexte de calcul  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés pour MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Tuples](tuples.md)   
- [La fonctionnalité Autoexists](autoexists.md)   
- [Utilisation de membres, Tuples et jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Les valeurs visibles et Non affichées](visual-totals-and-non-visual-totals.md)   
- [Référence du langage MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Expressions multidimensionnelles &#40;MDX&#41; référence](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Autoexists](autoexists.md)   
+ [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Valeurs totales affichées et non affichées](visual-totals-and-non-visual-totals.md)   
+ [Guide de référence du langage MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

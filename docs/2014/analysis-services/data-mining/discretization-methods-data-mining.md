@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7cf775406905a920861236dafa8d740c9074101
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722721"
 ---
 # <a name="discretization-methods-data-mining"></a>Méthodes de discrétisation (exploration de données)
   Certains algorithmes utilisés pour créer des modèles d’exploration de données dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nécessitent des types de contenu spécifiques pour pouvoir fonctionner correctement. Par exemple, l'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes ne peut pas utiliser de colonnes continues comme entrée ni prédire des valeurs continues. En outre, certaines colonnes peuvent contenir tellement de valeurs que l'algorithme ne peut pas identifier facilement les motifs intéressants qui ressortent des données et qui vont servir à créer un modèle.  
@@ -51,19 +51,19 @@ ms.locfileid: "48187050"
   
 ## <a name="remarks"></a>Notes  
   
--   Vous pouvez utiliser la `EQUAL_AREAS` méthode pour discrétiser des chaînes.  
+-   Vous pouvez utiliser la méthode `EQUAL_AREAS` pour discrétiser des chaînes.  
   
--   Le `CLUSTERS` méthode utilise un échantillon aléatoire de 1 000 enregistrements pour discrétiser les données. Utilisez la méthode `EQUAL_AREAS` si vous ne voulez pas que l'algorithme échantillonne les données.  
+-   La méthode `CLUSTERS` utilise un échantillon aléatoire de 1 000 enregistrements pour discrétiser les données. Utilisez la méthode `EQUAL_AREAS` si vous ne voulez pas que l'algorithme échantillonne les données.  
   
--   Le didacticiel du modèle d'exploration de données du réseau neuronal fournit un exemple montrant comment la discrétisation peut être personnalisée. Pour plus d’informations, consultez [leçon 5 : génération réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
+-   Le didacticiel du modèle d'exploration de données du réseau neuronal fournit un exemple montrant comment la discrétisation peut être personnalisée. Pour plus d’informations, consultez [leçon 5 : Création de réseau neuronal et modèles de régression logistique &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md)   
+ [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md)   
  [Types de contenu &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Types de données &#40;exploration de données&#41;](data-types-data-mining.md)   
- [Colonnes de Structure d’exploration de données](mining-structure-columns.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Types de données &#40;Exploration de données&#41;](data-types-data-mining.md)   
+ [Colonnes de structure d'exploration de données](mining-structure-columns.md)   
  [Distributions de colonnes &#40;exploration de données&#41;](column-distributions-data-mining.md)  
   
   

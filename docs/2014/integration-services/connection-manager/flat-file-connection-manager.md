@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62833810"
 ---
 # <a name="flat-file-connection-manager"></a>Gestionnaire de connexions de fichiers plats
   Un gestionnaire de connexions de fichiers plats permet à un package d'accéder aux données d'un fichier plat. Ainsi, les sources et destinations de fichiers plats peuvent utiliser des gestionnaires de connexions de fichiers plats pour extraire et charger des données.  

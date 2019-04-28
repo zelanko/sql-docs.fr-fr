@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b809aff14e75f41089f01345607f63f8c2dd9166
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018416"
 ---
 # <a name="odbc-escape-sequences"></a>Séquences d’échappement ODBC
 Les séquences d’échappement suivantes sont utilisées dans ODBC. La grammaire dans cette section utilise certains éléments définis dans [éléments utilisés dans les instructions SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  

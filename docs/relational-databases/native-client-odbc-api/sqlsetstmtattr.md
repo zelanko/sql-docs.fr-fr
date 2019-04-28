@@ -16,11 +16,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bbe732e9f0d22047146edc3d37a049b7300db0b7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63014102"
 ---
 # <a name="sqlsetstmtattr"></a>SQLSetStmtAttr
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "51667780"
   
  Le type de SQL_SOPT_SS_PARAM_FOCUS est SQLULEN.  
   
- La valeur par défaut est 0, ce qui signifie que ces appels adressent les paramètres qui correspondent aux marqueurs de paramètre dans l'instruction SQL. En cas de définition sur le numéro de paramètre d'un paramètre table, ces appels adressent les colonnes de ce paramètre table. En cas de définition sur une valeur qui n'est pas le numéro de paramètre d'un paramètre table, ces appels retournent l'erreur IM020 : « Le focus de paramètre ne fait pas référence à un paramètre table ».  
+ La valeur par défaut est 0, ce qui signifie que ces appels adressent les paramètres qui correspondent aux marqueurs de paramètre dans l'instruction SQL. En cas de définition sur le numéro de paramètre d'un paramètre table, ces appels adressent les colonnes de ce paramètre table. Lorsque la valeur est une valeur qui n’est pas le numéro de paramètre d’un paramètre table, ces appels retournent l’erreur IM020 : « Focus de paramètre ne fait pas référence à un paramètre table ».  
   
 ### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
  L'attribut SQL_SOPT_SS_NAME_SCOPE spécifie la portée de nom des appels de fonctions de catalogue suivants. Le jeu de résultats retourné par SQLColumns dépend de la valeur de SQL_SOPT_SS_NAME_SCOPE.  

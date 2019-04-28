@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 47d0f7c4eb6c78b9e551fafdc1e018a27604086e
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721229"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>Implémenter un outil personnalisé de résolution des conflits pour un article de fusion
   Cette rubrique décrit comment implémenter l'outil personnalisé de résolution des conflits pour un article de fusion dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou du [programme de résolution personnalisé COM](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  

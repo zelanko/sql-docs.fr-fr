@@ -1,5 +1,5 @@
 ---
-title: Fusionner des Partitions dans Analysis Services (SSAS - multidimensionnel) | Documents Microsoft
+title: Fusionner des Partitions dans Analysis Services (SSAS - multidimensionnel) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b488997ae97a54a2755847ad9112047015fb0eb5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62988628"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Fusionner des partitions dans Analysis Services (SSAS - Multidimensionnel)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -91,13 +91,13 @@ ms.locfileid: "34025396"
   
  Pour la même raison, les partitions obtenant des données segmentées de requêtes nommées requièrent également une mise à jour. La partition associée doit maintenant avoir une requête nommée qui retourne le jeu de résultats combiné qui a été obtenu précédemment à partir des requêtes nommées distinctes.  
   
-## <a name="partition-storage-considerations-molap"></a>Considérations sur le stockage de partitions : MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Considérations de stockage de partition : MOLAP  
  Lors de la fusion de partitions MOLAP, les faits stockés dans les structures multidimensionnelles des partitions sont également fusionnés. Ceci produit une partition complète et cohérente en interne. Cependant, les faits stockés dans les partitions MOLAP sont des copies des faits de la table de faits. Lorsque la partition est traitée ultérieurement, les faits de la structure multidimensionnelle sont supprimés (seulement pour un traitement complet et d'actualisation) et les données sont copiées à partir de la table de faits, comme indiqué par la source de données et le filtre de la partition. Si la partition source utilise une table de faits différente de celle de la partition de destination, vous devez fusionner manuellement ces deux tables de faits pour vous assurer qu'un ensemble de données complet sera disponible au moment du traitement de la partition résultante. Cela s'applique également si les deux partitions se basent sur des requêtes nommées différentes.  
   
 > [!IMPORTANT]  
 >  Une partition MOLAP (OLAP multidimensionnel) fusionnée avec une table de faits incomplète contient une copie fusionnée en interne des données de la table de faits et fonctionne correctement jusqu'à son traitement.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considérations sur le stockage de partitions : partitions HOLAP et ROLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considérations de stockage de partition : Partitions HOLAP et ROLAP  
  Lorsque des partitions HOLAP ou ROLAP ayant des tables de faits différentes sont fusionnées, ces tables de faits ne sont pas automatiquement fusionnées. À moins qu'elles ne soient fusionnées manuellement, seule la table de faits associée à la partition de destination est disponible pour la partition fusionnée. Les faits associés à la partition source ne permettent pas de développer le niveau inférieur d'une partition résultante, et au moment du traitement de la partition, les agrégations ne synthétiseront pas les données de la table non disponible.  
   
 > [!IMPORTANT]  
@@ -114,7 +114,7 @@ ms.locfileid: "34025396"
   
 1.  Dans l’Explorateur d’objets, développez le nœud **Groupes de mesures** du cube contenant les partitions à fusionner, développez **Partitions**, cliquez avec le bouton droit sur la partition correspondant à la cible ou à la destination de la fusion. Par exemple, si vous déplacez des données de faits trimestrielles vers une partition qui stocke des données de faits annuelles, sélectionnez la partition qui contient les données de faits annuelles.  
   
-2.  Cliquez sur **fusionner des Partitions** pour ouvrir le **Partition de fusion \<nom de la partition >** boîte de dialogue.  
+2.  Cliquez sur **fusionner des Partitions** pour ouvrir le **Partition de fusion \<nom_partition >** boîte de dialogue.  
   
 3.  Sous **Partitions sources**, cochez la case à côté de chaque partition source que vous voulez fusionner avec la partition cible, puis cliquez sur **OK**.  
   
@@ -129,12 +129,12 @@ ms.locfileid: "34025396"
  Pour plus d’informations, consultez [Fusion de partitions &#40;XMLA&#41;](../../analysis-services/multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Pour des objets de traitement Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
- [Partitions & #40 ; Analysis Services - données multidimensionnelles & #41 ;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Créer et gérer une Partition locale & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
- [Créer et gérer une Partition distante & #40 ; Analysis Services & #41 ;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
- [Définir l’écriture différée de Partition](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
+ [Traitement des objets Analysis Services](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)   
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Créer et gérer une partition locale &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
+ [Créer et gérer une partition distante &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
+ [Définir l'écriture différée de partition](../../analysis-services/multidimensional-models/set-partition-writeback.md)   
  [Partitions activées en écriture](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Configurer le stockage des chaînes pour les Dimensions et Partitions](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
+ [Configurer le stockage de chaînes pour des dimensions et des partitions](../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)  
   
   

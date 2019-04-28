@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6bac9958c7b906a52b5b0d9d28a37c31d280b836
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726059"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Octroyer des autorisations de base de données (Analysis Services)
   Si vous débutez dans l'administration des bases de données Analysis Services avec une expérience des bases de données relationnelles, la première chose que vous devez comprendre est qu'en termes d'accès aux données, la base de données n'est pas l'objet sécurisable principal dans Analysis Services.  
   
- La principale structure de requête dans Analysis Services est un cube (ou modèle tabulaire), avec des autorisations utilisateur définies sur ces objets spécifiques. Si on la compare au moteur de base de données relationnelle (dans lequel les connexions de base de données et les autorisations utilisateur, souvent `db_datareader`, sont définies sur la base de données proprement dite), une base de données Analysis Services est principalement un conteneur pour les principaux objets de requête dans un modèle de données. Si votre objectif immédiat consiste à activer l’accès aux données pour un cube ou un modèle tabulaire, vous pouvez ignorer les autorisations de base de données pour l’instant et passer directement à la rubrique suivante : [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
+ La principale structure de requête dans Analysis Services est un cube (ou modèle tabulaire), avec des autorisations utilisateur définies sur ces objets spécifiques. Si on la compare au moteur de base de données relationnelle (dans lequel les connexions de base de données et les autorisations utilisateur, souvent `db_datareader`, sont définies sur la base de données proprement dite), une base de données Analysis Services est principalement un conteneur pour les principaux objets de requête dans un modèle de données. Si votre objectif immédiat consiste à activer l’accès aux données pour un cube ou modèle tabulaire, vous pouvez ignorer les autorisations de base de données pour l’instant et passer directement à cette rubrique : [Accorder des autorisations de cube ou modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
  Les autorisations de base de données dans Analysis Services activent des fonctions d'administration, soit d'un point de vue global (comme c'est le cas avec l'autorisation de base de données Contrôle total), soit de nature plus granulaire si vous déléguez des opérations de traitement. La définition des niveaux d’autorisation pour une base de données Analysis Services s’effectue dans le volet **Général** de la boîte de dialogue **Créer un rôle** , illustrée et décrite ci-dessous.  
   
@@ -39,9 +39,9 @@ ms.locfileid: "48149009"
 > [!NOTE]  
 >  Les administrateurs de serveur (membres du rôle Administrateur du serveur) disposent également d'un Contrôle total implicite sur chaque base de données du serveur.  
   
- `Process Database` Obtenir cette autorisation permet de déléguer le traitement au niveau de la base de données. En tant qu'administrateur, vous pouvez vous décharger de cette tâche en créant un rôle qui permet à une autre personne ou à un autre service d'exécuter des opérations de traitement pour tout objet de la base de données. En guise d'alternative, vous pouvez créer des rôles qui autorisent le traitement d'objets spécifiques. Pour plus d’informations, consultez [Grant process permissions &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
+ `Process Database` Obtenir cette autorisation permet de déléguer le traitement au niveau de la base de données. En tant qu'administrateur, vous pouvez vous décharger de cette tâche en créant un rôle qui permet à une autre personne ou à un autre service d'exécuter des opérations de traitement pour tout objet de la base de données. En guise d'alternative, vous pouvez créer des rôles qui autorisent le traitement d'objets spécifiques. Pour plus d’informations, consultez [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) .  
   
- `Read Definition` Obtenir cette autorisation donne la possibilité de lire les métadonnées d’objet, sans toutefois pouvoir afficher les données associées. En général, on l'utilise dans les rôles créés pour le traitement dédié, en ajoutant la capacité à utiliser des outils tels que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour traiter une base de données de manière interactive. Sans `Read Definition`, l'autorisation `Process Database` est efficace uniquement dans les scénarios scriptés. Si vous prévoyez d’automatiser le traitement, par exemple grâce à SSIS ou un autre planificateur, vous souhaiterez probablement créer un rôle qui a `Process Database` sans `Read Definition`. Sinon, vous pouvez combiner les deux propriétés dans le même rôle pour prendre en charge le traitement interactif et sans assistance via les outils SQL Server qui visualisent le modèle de données dans une interface utilisateur.  
+ `Read Definition` Obtenir cette autorisation donne la possibilité de lire les métadonnées d’objet, sans toutefois pouvoir afficher les données associées. En général, on l'utilise dans les rôles créés pour le traitement dédié, en ajoutant la capacité à utiliser des outils tels que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ou [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour traiter une base de données de manière interactive. Sans `Read Definition`, l'autorisation `Process Database` est efficace uniquement dans les scénarios scriptés. Si vous prévoyez d'automatiser le traitement, par exemple grâce à SSIS ou un autre planificateur, vous souhaiterez probablement créer un rôle qui a `Process Database` sans `Read Definition`. Sinon, vous pouvez combiner les deux propriétés dans le même rôle pour prendre en charge le traitement interactif et sans assistance via les outils SQL Server qui visualisent le modèle de données dans une interface utilisateur.  
   
 ## <a name="full-control-administrator-permissions"></a>Autorisations Contrôle total (Administrateur)  
  Dans [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], un administrateur de base de données est toute identité utilisateur Windows assignée à un rôle qui comprend des autorisations Contrôle total (Administrateur). Un administrateur de base de données peut effectuer toute tâche dans la base de données, y compris les suivantes :  
@@ -66,7 +66,7 @@ ms.locfileid: "48149009"
   
 2.  Dans le volet **Général** , entrez un nom tel que DBAdmin.  
   
-3.  Cochez la case **Contrôle total (Administrateur)** pour le cube. Notez que `Process Database` et `Read Definition` sont sélectionnées automatiquement. Ces deux autorisations sont toujours inclus dans les rôles qui incluent `Full Control`.  
+3.  Cochez la case **Contrôle total (Administrateur)** pour le cube. Notez que `Process Database` et `Read Definition` sont sélectionnées automatiquement. Ces deux autorisations sont toujours incluses dans les rôles qui comprennent `Full Control`.  
   
 4.  Dans le volet **Appartenance** , entrez les comptes d'utilisateurs et de groupes Windows qui se connectent à Analysis Services à l'aide de ce rôle.  
   
@@ -80,6 +80,6 @@ ms.locfileid: "48149009"
   
 ## <a name="see-also"></a>Voir aussi  
  [Accorder des autorisations administrateur du serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [Accorder des autorisations de processus &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
+ [Octroyer des autorisations de traitement &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

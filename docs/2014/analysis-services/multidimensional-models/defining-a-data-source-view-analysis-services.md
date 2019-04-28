@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a19c663fe646c50a977b23e219580e3d7e280945
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726389"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Définition d'une vue de source de données (Analysis Services)
   Une vue de source de données contient le modèle logique du schéma utilisé par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données multidimensionnelle objets à savoir les cubes, dimensions et les structures d’exploration de données. Une vue de source de données représente la définition, stockée au format XML, des métadonnées de ces éléments de schéma utilisés par le modèle UDM (Unified Dimensional Model) et par les structures d'exploration de données. Une vue de source de données :  

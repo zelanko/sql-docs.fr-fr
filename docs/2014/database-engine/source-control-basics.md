@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bce3bd6862e612a8cefa35d1c981d608bf2c341c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48205368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842983"
 ---
 # <a name="source-control-basics"></a>Présentation du contrôle de code source
   Le contrôle de code source fait référence à un système dans lequel un logiciel serveur central stocke et effectue le suivi des versions de fichiers et contrôle l'accès aux fichiers. Un système de contrôle de code source comprend généralement un fournisseur de contrôle de code source et deux (voire plus) clients de contrôle de code source.  

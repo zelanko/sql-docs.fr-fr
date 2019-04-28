@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89900ccb182c58041af7b428af336ddab217d245
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722471"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Requêtes d'extraction (exploration de données)
   Une *requête d'extraction* vous permet de récupérer les détails des cas ou des données de structure sous-jacents, en envoyant une requête au modèle d'exploration de données. L'extraction est utile si vous souhaitez consulter les cas utilisés pour l'apprentissage du modèle, par opposition à ceux utilisés pour tester le modèle, ou si vous souhaitez consulter des détails supplémentaires à partir des données de cas.  

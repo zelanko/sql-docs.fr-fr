@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d311a07eb11f1c5119a3c20d7536b5a2986b49
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719888"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sauvegarde, restauration et synchronisation de bases de données (XMLA)
   XML for Analysis propose trois commandes qui permettent de sauvegarder, restaurer et synchroniser des bases de données :  
@@ -52,9 +52,9 @@ ms.locfileid: "50145934"
   
  La valeur de la **sécurité** propriété est limitée à une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Inclut les définitions de sécurité dans le fichier de sauvegarde mais exclut les informations d'appartenance.|  
+|*SkipMembership*|Inclut les définitions de sécurité dans le fichier de sauvegarde mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans le fichier de sauvegarde.|  
 |*IgnoreSecurity*|Exclut les définitions de sécurité du fichier de sauvegarde.|  
   
@@ -82,9 +82,9 @@ ms.locfileid: "50145934"
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Inclut les définitions de sécurité dans la base de données mais exclut les informations d'appartenance.|  
+|*SkipMembership*|Inclut les définitions de sécurité dans la base de données mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans la base de données.|  
 |*IgnoreSecurity*|Exclut les définitions de sécurité de la base de données.|  
   
@@ -120,9 +120,9 @@ ms.locfileid: "50145934"
   
  La valeur de cet élément est limitée à l'une des chaînes répertoriées dans le tableau suivant.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|*skipMembership*|Inclut les définitions de sécurité dans la base de données de destination mais exclut les informations d'appartenance.|  
+|*SkipMembership*|Inclut les définitions de sécurité dans la base de données de destination mais exclut les informations d'appartenance.|  
 |*CopyAll*|Inclut les définitions de sécurité et les informations d'appartenance dans la base de données de destination.|  
 |*IgnoreSecurity*|Exclut les définitions de sécurité de la base de données de destination.|  
   

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 565cc98059c056dbb4fc73f3e0734229754aad93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724194"
 ---
 # <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sp_cycle_errorlog
 ## <a name="remarks"></a>Notes  
  Chaque fois que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est démarré, le journal des erreurs en cours est renommé en **errorlog.1**; **errorlog.1** devient **errorlog.2**, **errorlog.2** devient **errorlog.3**, et ainsi de suite. **sp_cycle_errorlog** vous permet de parcourir les fichiers journaux des erreurs sans arrêter et démarrer le serveur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d’exécution **sp_cycle_errorlog** sont limités aux membres de la **sysadmin** rôle serveur fixe.  
   
 ## <a name="examples"></a>Exemples  

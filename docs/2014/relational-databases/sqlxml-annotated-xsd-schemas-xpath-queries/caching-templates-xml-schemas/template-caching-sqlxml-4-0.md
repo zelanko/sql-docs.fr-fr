@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: d38459f470bf75d12d9fcd69da96a4d772776c01
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52793711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015391"
 ---
 # <a name="template-caching-sqlxml-40"></a>Mise en cache de modèle (SQLXML 4.0)
   La mise en cache de modèle améliore considérablement les performances. Si la mise en cache de modèle est définie, le modèle reste en mémoire lors de sa première exécution. Il s'ensuit une amélioration des performances de la prochaine exécution du modèle.  
@@ -43,7 +43,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SQLXML4\TemplateCacheSi
 >  Les paramètres de modèle et les propriétés de commande ne sont pas mis en cache.  
   
 ## <a name="see-also"></a>Voir aussi  
- [La mise en cache de schéma &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)   
- [La mise en cache XSL &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
+ [Schema Caching &#40;SQLXML 4.0&#41;](schema-caching-sqlxml-4-0.md)   
+ [XSL Caching &#40;SQLXML 4.0&#41;](xsl-caching-sqlxml-4-0.md)  
   
   

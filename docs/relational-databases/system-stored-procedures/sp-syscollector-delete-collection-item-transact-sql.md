@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb3db70db6d888858ec413de852acccf73b96e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004172"
 ---
 # <a name="spsyscollectordeletecollectionitem-transact-sql"></a>sp_syscollector_delete_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  Identificateur unique de l'élément de collecte. *collection_item_id* est **int** avec NULL comme valeur par défaut. *collection_item_id* doit avoir une valeur si *nom* est NULL.  
   
  [ @name =] '*nom*'  
@@ -56,7 +56,7 @@ sp_syscollector_delete_collection_item [[ @collection_item_id = ] collection_ite
   
  Le jeu d'éléments de collecte qui contient l'élément de collecte est arrêté puis redémarré au cours de cette opération.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe dc_admin (avec autorisation EXECUTE) pour exécuter cette procédure.  
   
 ## <a name="examples"></a>Exemples  

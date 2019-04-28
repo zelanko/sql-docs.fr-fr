@@ -24,11 +24,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48228059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62876109"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Erreurs de support possibles pendant les opérations de sauvegarde et de restauration (SQL Server)
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] vous donne la possibilité de récupérer une base de données en dépit des erreurs détectées. Un nouveau et important mécanisme de détection d'erreur est la création facultative d'une somme de contrôle de sauvegarde qui peut être créée par une opération de sauvegarde et validée par une opération de restauration. Vous pouvez déterminer si une opération recherche la présence d'erreurs et si elle s'arrête ou si elle continue en présence d'une erreur. Si une sauvegarde contient une somme de contrôle de sauvegarde, les instructions RESTORE et RESTORE VERIFYONLY peuvent rechercher la présence d'erreurs.  
@@ -47,7 +47,7 @@ ms.locfileid: "48228059"
   
  L'instruction BACKUP ne modifie jamais la page source sur le disque, ni le contenu d'une page.  
   
- Lorsque les sommes de contrôle de sauvegarde sont activées, une opération de sauvegarde effectue les étapes suivantes :  
+ Lorsque les sommes de contrôle de sauvegarde sont activées, une opération de sauvegarde effectue les étapes suivantes :  
   
 1.  Avant d'écrire une page sur le support de sauvegarde, l'opération de sauvegarde vérifie les informations de niveau page : somme de contrôle de page ou détection de page endommagée, si elles existent. En l'absence d'informations, la sauvegarde ne peut pas vérifier la page. Non vérifiées, les pages sont incluses en l'état, et leur contenu est ajouté à la somme de contrôle de sauvegarde globale.  
   

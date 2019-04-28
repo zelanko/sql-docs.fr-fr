@@ -1,5 +1,5 @@
 ---
-title: Choisir un Type de graphique d’analyse de précision et l’ensemble du graphique Options | Documents Microsoft
+title: Choisir un Type de graphique d’analyse de précision et la définir Options de graphique | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1a2ab960740e15091868103113bcdaed0ef8833c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724913"
 ---
 # <a name="choose-an-accuracy-chart-type-and-set-chart-options"></a>Choisir un type de graphique d'analyse de précision et définir des options de graphique
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour déterminer la validité de vos modèles d’exploration de données. Le type de graphique d'analyse de précision que vous pouvez créer pour chaque modèle ou structure dépend des facteurs suivants :  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour déterminer la validité de vos modèles d’exploration de données. Le type de graphique d'analyse de précision que vous pouvez créer pour chaque modèle ou structure dépend des facteurs suivants :  
   
 -   Le type d'algorithme utilisé pour créer le modèle  
   

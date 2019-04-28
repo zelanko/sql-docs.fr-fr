@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877058"
 ---
 # <a name="back-up-database-general-page"></a>Sauvegarder la base de données (page Général)
   La page **Général** de la boîte de dialogue **Sauvegarder la base de données** vous permet d'afficher ou de modifier les paramètres d'une opération de sauvegarde de base de données.  
@@ -88,7 +88,7 @@ ms.locfileid: "48050075"
 |||  
 |-|-|  
 |**Disque**|Permet de sauvegarder sur un disque. Il peut s'agir d'un fichier système ou d'une unité logique de sauvegarde sur disque créée pour la base de données. Les disques sélectionnés apparaissent dans la liste **Sauvegarde sur** . Vous pouvez sélectionner jusqu'à 64 disques pour l'opération de sauvegarde.|  
-|**Bande**|Permet de sauvegarder sur bande. Il peut s'agir d'un lecteur de bandes local ou d'une unité logique de sauvegarde sur bande créée pour la base de données. Les bandes sélectionnées apparaissent dans la liste **Sauvegarde sur** . Le nombre maximal est de 64. Si aucun lecteur de bandes n'est connecté au serveur, cette option est désactivée. Les bandes que vous sélectionnez sont répertoriées dans la liste **Sauvegarde sur** .<br /><br /> Remarque : la prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
+|**Bande**|Permet de sauvegarder sur bande. Il peut s'agir d'un lecteur de bandes local ou d'une unité logique de sauvegarde sur bande créée pour la base de données. Les bandes sélectionnées apparaissent dans la liste **Sauvegarde sur** . Le nombre maximal est de 64. Si aucun lecteur de bandes n'est connecté au serveur, cette option est désactivée. Les bandes que vous sélectionnez sont répertoriées dans la liste **Sauvegarde sur** .<br /><br /> Remarque : La prise en charge des unités de sauvegarde sur bande sera supprimée dans une prochaine version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Évitez d'utiliser cette fonctionnalité dans de nouveaux travaux de développement, et prévoyez de modifier les applications qui utilisent actuellement cette fonctionnalité.|  
 |**URL**|Permet de sauvegarder dans le stockage d'objets blob Windows Azure.|  
   
  L'affichage des options suivantes dépend du type de destination sélectionné. Si vous sélectionnez Disque ou Bande, les options suivantes s'affichent.  

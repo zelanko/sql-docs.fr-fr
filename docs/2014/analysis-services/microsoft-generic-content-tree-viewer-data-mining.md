@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5df092bc94bcab3dcfd2909807eb650e696e9be0
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727920"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Visionneuse de l'arborescence de contenu générique Microsoft (exploration de données)
   La **Visionneuse de l'arborescence de contenu générique Microsoft** affiche des informations détaillées sur le contenu d'un modèle d'exploration de données dans un format de table HTML standardisé. Cette vue est utile car elle présente la structure sous-jacente du modèle, ainsi que des détails sur les coefficients, la distribution des valeurs, et beaucoup plus encore.  

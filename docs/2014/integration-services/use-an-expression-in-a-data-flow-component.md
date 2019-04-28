@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58378068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877924"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Utiliser une expression dans un composant de flux de données
   Cette procédure permet d'ajouter une expression à la transformation de fractionnement conditionnel ou à la transformation de colonne dérivée. La transformation de fractionnement conditionnel utilise des expressions pour définir les conditions qui dirigent les lignes de données vers une sortie de transformation et la transformation de colonne dérivée utilise des expressions pour définir les valeurs affectées aux colonnes.  

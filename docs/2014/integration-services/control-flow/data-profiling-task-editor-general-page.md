@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8462f85dc6c804020f12b9bc989d683c5a4ad0ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832215"
 ---
 # <a name="data-profiling-task-editor-general-page"></a>Éditeur de tâche de profilage de données (page Général)
   Utilisez la page **Général** de l' **Éditeur de tâche de profilage de données** pour configurer les options suivantes :  
@@ -52,8 +52,8 @@ ms.locfileid: "58385349"
   
 |Value|Description|  
 |-----------|-----------------|  
-|**FileConnection**|Enregistrez la sortie du profil dans un fichier à l'emplacement spécifié dans un gestionnaire de connexions de fichiers.<br /><br /> Remarque : Vous spécifiez le Gestionnaire de connexions de fichiers à utiliser dans le **Destination** option.|  
-|**Variable**|Enregistrez la sortie du profil dans une variable de package.<br /><br /> Remarque : Vous spécifiez la variable de package à utiliser dans le **Destination** option.|  
+|**FileConnection**|Enregistrez la sortie du profil dans un fichier à l'emplacement spécifié dans un gestionnaire de connexions de fichiers.<br /><br /> Remarque : Vous devez spécifier le gestionnaire de connexions de fichiers à utiliser dans l'option **Destination**.|  
+|**Variable**|Enregistrez la sortie du profil dans une variable de package.<br /><br /> Remarque : Vous devez spécifier la variable de package à utiliser dans l'option **Destination**.|  
   
  **Destination**  
  Spécifiez le gestionnaire de connexions de fichiers ou la variable de package qui contient la sortie du profil des données :  

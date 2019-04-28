@@ -12,17 +12,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8e6565d727ad6fd3f11e2332f53e32fb2c942687
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725163"
 ---
 # <a name="tuples"></a>Tuples
   Un tuple identifie de façon unique une coupe de données d'un cube. Le tuple est formé par une combinaison de membres de la dimension, à condition qu'il n'y ait pas deux membres ou plus appartenant à la même hiérarchie.  
   
 ## <a name="implicit-or-default-attribute-members-in-a-tuple"></a>Membres d'attribut implicites ou par défaut dans un tuple  
- Lorsque vous définissez un tuple dans une requête ou une expression MDX, vous n'avez pas besoin d'inclure le membre d'attribut de chaque hiérarchie d'attribut de manière explicite. Si un membre d'une hiérarchie d'attribut n'est pas explicitement intégré dans une requête ou une expression, le membre par défaut de la hiérarchie d'attribut en question correspond au membre d'attribut inclus implicitement dans le tuple. À moins d'être explicitement défini dans un cube, le membre par défaut de chaque hiérarchie d'attribut est le membre (All) s'il existe. Si un membre (All) n'existe pas dans une hiérarchie d'attribut, le membre par défaut est un membre au niveau supérieur de la hiérarchie d'attribut. La mesure par défaut correspond à la première mesure précisée dans le cube, sauf si une mesure par défaut est explicitement définie. Pour plus d’informations, consultez [Définir un membre par défaut](../attribute-properties-define-a-default-member.md) et [DefaultMember &#40;MDX&#41;](/sql/mdx/defaultmember-mdx).  
+ Lorsque vous définissez un tuple dans une requête ou une expression MDX, vous n'avez pas besoin d'inclure le membre d'attribut de chaque hiérarchie d'attribut de manière explicite. Si un membre d'une hiérarchie d'attribut n'est pas explicitement intégré dans une requête ou une expression, le membre par défaut de la hiérarchie d'attribut en question correspond au membre d'attribut inclus implicitement dans le tuple. À moins d'être explicitement défini dans un cube, le membre par défaut de chaque hiérarchie d'attribut est le membre (All) s'il existe. Si un membre (All) n'existe pas dans une hiérarchie d'attribut, le membre par défaut est un membre au niveau supérieur de la hiérarchie d'attribut. La mesure par défaut correspond à la première mesure précisée dans le cube, sauf si une mesure par défaut est explicitement définie. Pour plus d’informations, consultez [Définir un membre par défaut](../attribute-properties-define-a-default-member.md) et [DefaultMember &#40;MDX&#41;](/sql/mdx/defaultmember-mdx).  
   
  Par exemple, le tuple suivant permet d'identifier une cellule unique dans la base de données Adventure Works en définissant uniquement un membre unique de la dimension de mesures.  
   
@@ -64,9 +64,9 @@ FROM [Adventure Works]
 >  Vous pouvez désigner un membre d'attribut selon son nom ou sa clé de membre. Dans l'exemple précédent, vous pouviez remplacer la référence à [CY 2004] par &[2004].  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés pour MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Espace du cube](cube-space.md)   
- [La fonctionnalité Autoexists](autoexists.md)   
- [Utilisation de membres, Tuples et jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
+ [Autoexists](autoexists.md)   
+ [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)  
   
   

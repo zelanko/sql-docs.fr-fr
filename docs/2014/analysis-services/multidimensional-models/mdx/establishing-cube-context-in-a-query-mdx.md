@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b877875c6a5c02b7d7715916d5515e93d95dbeb3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725553"
 ---
 # <a name="establishing-cube-context-in-a-query-mdx"></a>Définition d'un contexte de cube dans une requête (MDX)
   Chaque requête MDX s'exécute dans un contexte de cube spécifié. Ce contexte définit les membres qui sont évalués par les expressions incluses dans la requête.  
@@ -60,6 +60,6 @@ FROM [Adventure Works]
  Vous pouvez utiliser la fonction [LookupCube](/sql/mdx/lookupcube-mdx) MDX pour récupérer des données de cubes en dehors du contexte des cubes. De plus, il existe des fonctions telles que [Filter](/sql/mdx/filter-mdx) qui permettent de restreindre temporairement le contexte durant l’évaluation de la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes de base de requête MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

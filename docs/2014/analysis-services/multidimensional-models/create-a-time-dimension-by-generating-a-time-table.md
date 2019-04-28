@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35aa267c22d5320ab7f7d912d091e72d00e9e48c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726853"
 ---
 # <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser l'Assistant Dimension dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour créer une dimension de temps lorsque aucune table de temps n'est disponible dans la base de données source. Pour ce faire, sélectionnez l'une des options suivantes dans la page **Sélectionner la méthode de création** :  
@@ -36,13 +36,13 @@ ms.locfileid: "48131589"
  Lorsque vous créez une dimension de temps du serveur, vous spécifiez les périodes, ainsi que les dates de début et de fin de la dimension. L'Assistant utilise les périodes spécifiées pour créer les attributs de temps. Lorsque vous traitez la dimension, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] génère et stocke les données requises pour prendre en charge les dates et les périodes spécifiées. L'Assistant utilise les attributs créés pour une dimension de temps afin de recommander les hiérarchies de la dimension. Les hiérarchies font apparaître les relations entre les différentes périodes et tiennent compte des différents calendriers. Par exemple, dans une hiérarchie de calendrier standard, un niveau Semaines apparaît sous un niveau Années, mais pas sous un niveau Mois, car les années se divisent en nombre égal de semaines, mais pas les mois. En revanche, dans une hiérarchie de calendrier de fabrication ou de rapports, les mois se divisent en nombre égal de semaines, de sorte qu'un niveau Semaines apparaît sous un niveau Mois.  
   
 ## <a name="define-time-periods"></a>Définition de périodes  
- Utilisez la page **Définir des périodes** de l'Assistant pour spécifier les plages de dates que vous voulez inclure dans la dimension. Par exemple, vous pouvez sélectionner une plage qui débute le 1er janvier de l'année la plus ancienne dans vos données et se termine un ou deux ans après l'année en cours (pour autoriser les futures transactions). Les transactions qui sont en dehors de la plage de ne pas apparaître ou apparaissent comme étant inconnus membres dans la dimension, selon le `UnknownMemberVisible` paramètre de propriété pour la dimension. Vous pouvez également modifier le premier jour de la semaine utilisé par vos données (le jour par défaut est le dimanche).  
+ Utilisez la page **Définir des périodes** de l'Assistant pour spécifier les plages de dates que vous voulez inclure dans la dimension. Par exemple, vous pouvez sélectionner une plage qui débute le 1er janvier de l'année la plus ancienne dans vos données et se termine un ou deux ans après l'année en cours (pour autoriser les futures transactions). Les transactions qui sont en dehors de la plage n'apparaissent pas ou apparaissent en tant que membres inconnus dans la dimension, selon la valeur de la propriété `UnknownMemberVisible` de la dimension. Vous pouvez également modifier le premier jour de la semaine utilisé par vos données (le jour par défaut est le dimanche).  
   
  Sélectionnez les périodes de temps  à utiliser lorsque l'Assistant crée les hiérarchies qui s'appliquent à vos données, telles que Années, Semestres, Trimestres, Quadrimestres, Mois, Décades, Semaines ou Date. Vous devez toujours sélectionner au moins la période Date. L'attribut Date étant l'attribut clé de la dimension, cette dernière ne peut pas fonctionner sans lui.  
   
  À côté de **Langue pour les noms des membres de temps**, sélectionnez la langue à utiliser pour étiqueter les membres de la dimension.  
   
- Une fois que vous avez créé une dimension de temps qui repose sur une plage de dates, vous pouvez utiliser le Concepteur de dimensions pour ajouter ou supprimer les attributs de temps. L'attribut Date étant l'attribut clé de la dimension, vous ne pouvez pas le supprimer de la dimension. Pour masquer l’attribut Date aux utilisateurs, vous pouvez modifier le `AttributeHierarchyVisible` propriété sur l’attribut `False`.  
+ Une fois que vous avez créé une dimension de temps qui repose sur une plage de dates, vous pouvez utiliser le Concepteur de dimensions pour ajouter ou supprimer les attributs de temps. L'attribut Date étant l'attribut clé de la dimension, vous ne pouvez pas le supprimer de la dimension. Pour masquer l'attribut Date aux utilisateurs, vous pouvez modifier la valeur de la propriété `AttributeHierarchyVisible` sur l'attribut par la valeur `False`.  
   
 ## <a name="select-calendars"></a>Sélection de calendriers  
  Le calendrier standard de 12 mois (grégorien), qui débute le 1er janvier et se termine le 31 décembre, est toujours inclus lorsque vous créez une dimension de temps. Dans la page **Sélectionner des calendriers** de l'Assistant, vous pouvez spécifier des calendriers supplémentaires sur lesquels reposeront les hiérarchies de la dimension. Pour obtenir une description des types de calendrier, consultez [Créer une dimension de type Date](database-dimensions-create-a-date-type-dimension.md).  
@@ -56,8 +56,8 @@ ms.locfileid: "48131589"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Créer une Dimension de type Date](database-dimensions-create-a-date-type-dimension.md)   
- [Propriétés de Dimension de base de données](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
+ [Créer une dimension de type Date](database-dimensions-create-a-date-type-dimension.md)   
+ [Propriétés de dimension d'une base de données](../multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Relations de dimension](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Créer une Dimension à l’aide d’une Table existante](create-a-dimension-by-using-an-existing-table.md)   
  [Créer une dimension en générant une table non temporelle dans la source de données](create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  

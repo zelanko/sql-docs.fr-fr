@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17a132ea3a775104420640cab5f60cfdd0028fba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725403"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Création de cellules calculées au niveau de la session
     
@@ -76,7 +76,7 @@ FOR String_Expression AS 'MDX_Expression'
   
  La valeur `String_Expression` contient une liste d'expressions de jeu MDX unidimensionnelles et orthogonales dont chacune doit prendre la valeur de l'une des catégories de jeux répertoriées dans le tableau suivant.  
   
-|Catégorie|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |Jeu vide|Expression de jeu MDX qui prend la valeur d'un ensemble vide. Dans ce cas, la portée de la cellule calculée est l'intégralité du cube.|  
 |Jeu à un seul membre|Expression de jeu MDX qui prend la valeur d'un seul membre.|  
@@ -84,6 +84,6 @@ FOR String_Expression AS 'MDX_Expression'
 |Jeu de descendants|Expression de jeu MDX qui prend la valeur des descendants d'un membre spécifié. Un exemple de ceci est le `Descendants`(*Member_Expression*, *Level_Expression*, *Desc_Flag*) fonction MDX.<br /><br /> Pour plus d’informations, consultez [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création de calculs de cellules dans une expression MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [Création de calculs de cellules à l’aide de la syntaxe MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

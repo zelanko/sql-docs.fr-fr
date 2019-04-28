@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 436610a4c52d213a2d5b80c4277988b615f81449
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732158"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Définir le comportement semi-additif (Assistant Business Intelligence)
   Utilisez la page **Définir le comportement semi-additif** pour activer ou désactiver le comportement semi-additif sur les mesures. Celui-ci détermine comment les mesures sont contenues dans un cube sont agrégées sur une dimension de temps.  
@@ -31,7 +31,7 @@ ms.locfileid: "48168009"
  Désactive le comportement semi-additif dans toutes les mesures contenues dans le cube.  
   
  **L’Assistant a détecté le \<nom de la dimension > dimension de compte, qui contient des membres semi-additifs. Le serveur agrégera les membres de cette dimension selon le comportement semi-additif spécifié pour chaque type de compte.**  
- Active le comportement semi-additif pour les dimensions de compte qui contiennent des membres semi-additifs. Cette option définit la fonction d’agrégation de toutes les mesures dans les groupes de mesures qui font référence à la dimension de compte `ByAccount`.  
+ Active le comportement semi-additif pour les dimensions de compte qui contiennent des membres semi-additifs. Cette option configure la fonction d'agrégation de toutes les mesures dans des groupes qui font référence à la dimension de compte `ByAccount`.  
   
  Pour plus d’informations sur les dimensions de compte, consultez [Créer un compte Finance de la dimension de type parent-enfant](multidimensional-models/database-dimensions-finance-account-of-parent-child-type.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "48168009"
  **Fonction semi-additive**  
  Sélectionnez le type d'agrégation de la mesure sélectionnée. Le tableau suivant répertorie les fonctions d'agrégation disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**AverageOfChildren**|Agrégation réalisée en retournant la moyenne des enfants de la mesure.|  
 |`ByAccount`|Agrégation réalisée par la fonction d'agrégation associée au type de compte spécifié d'un attribut dans une dimension de compte.|  
@@ -63,7 +63,7 @@ ms.locfileid: "48168009"
 >  Les sélections effectuées pour cette option s’appliquent uniquement si l’option **Définir le comportement semi-additif pour les membres individuels** est sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
+ [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

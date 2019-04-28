@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7efb9258203efcffeb98bf4404faee5f80aff9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63016342"
 ---
 # <a name="upgrade-advisor-progress"></a>Progression du Conseiller de mise à niveau
   L'analyse du Conseiller de mise à niveau commence par une analyse de chaque composant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sélectionné exécutée par un analyseur dédié. Analyse des composants, la progression est signalée dans le **progression** boîte de dialogue.  
@@ -47,8 +47,8 @@ ms.locfileid: "48160359"
 >  Les rapports précédents sont enregistrés chaque fois que vous analysez un serveur. Les rapports sont enregistrés en utilisant le timestamp pour le nom de fichier. La visionneuse de rapports affiche les cinq derniers rapports enregistrés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : lancer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
- [Comment : exécuter l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
+ [Procédure : Lancer le Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-launch-upgrade-advisor.md)   
+ [Procédure : Exécutez l’Assistant analyse du Conseiller de mise à niveau](../../../2014/sql-server/install/how-to-run-the-upgrade-advisor-analysis-wizard.md)   
  [Composants de SQL Server](../../../2014/sql-server/install/sql-server-components.md)   
  [Référence de l’Interface utilisateur Conseiller de mise à niveau](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)   
  [Utilisation du Conseiller de mise à niveau](../../../2014/sql-server/install/working-with-upgrade-advisor.md)  

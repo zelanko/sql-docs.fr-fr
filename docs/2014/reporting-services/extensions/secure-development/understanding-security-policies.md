@@ -22,11 +22,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb69c4b064329b53f9ab3efef62f0d1c54b897a9
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62990130"
 ---
 # <a name="understanding-security-policies"></a>Présentation des stratégies de sécurité
   Tout code exécuté par un serveur de rapports doit faire partie d'une stratégie de sécurité d'accès du code spécifique. Ces stratégies de sécurité comprennent des groupes de codes qui mappent une preuve à un ensemble de jeux d'autorisations nommés. Souvent, les groupes de codes sont associés à un jeu d'autorisations nommé qui spécifie les autorisations pouvant être accordées au code dans ce groupe. Le runtime utilise la preuve fournie par un hôte approuvé ou par le chargeur pour déterminer les groupes de codes auxquels le code appartient et, par conséquent, les autorisations à accorder au code. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adhère à cette architecture de stratégie de sécurité telle qu’elle est définie par le Common Language Runtime (CLR) [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Les sections suivantes décrivent les divers types de codes qui existent dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], ainsi que les règles de stratégie associées.  

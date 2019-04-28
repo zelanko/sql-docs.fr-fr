@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9323b5d28c0b41b56f4b6fb78c39d8bfacf0ba8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721318"
 ---
 # <a name="errors-and-events-reference-replication"></a>Guide de référence des erreurs et des événements (réplication)
   Cette section de la documentation contient des informations sur la cause et la résolution de nombreuses erreurs liées à la réplication.  
@@ -76,7 +76,7 @@ ms.locfileid: "52781031"
 |MSSQL_ENG021642. Consultez [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Les serveurs de publication hétérogènes requièrent un serveur lié. Un serveur lié appelé '%s' existe déjà. Supprimez ce serveur ou choisissez un autre nom de serveur de publication.|  
 |MSSQL_ENG021663. Consultez [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Aucune clé primaire valide n'a été trouvée pour la table source [%s].[%s].|  
 |MSSQL_ENG021684. Consultez [Troubleshooting Oracle Publishers](non-sql/troubleshooting-oracle-publishers.md).|Les autorisations associées à la connexion administrateur du serveur de publication Oracle '% s' ne suffisent pas.|  
-|[MSSQL_ENG021797](mssql-eng021797.md)|'%s' doit être une connexion Windows valide de ce format : 'MACHINE\Connexion' ou 'DOMAIN\Connexion'. Consultez la documentation de '%s'.|  
+|[MSSQL_ENG021797](mssql-eng021797.md)|« %s » doit être une connexion Windows valide sous la forme : 'Machine\connexion' ou 'DOMAIN\Login'. Consultez la documentation de '%s'.|  
 |[MSSQL_ENG021798](mssql-eng021798.md)|Le travail de l'Agent '%s' doit être ajouté à l'aide de '%s' avant de continuer. Consultez la documentation de '%s'.|  
 |[MSSQL_REPL020011](mssql-repl020011.md)|Le processus n'a pas pu exécuter '%1' sur '%2'.|  
 |[MSSQL_REPL027056](mssql-repl027056.md)|Le processus de fusion n'a pas pu modifier l'historique de génération sur le '%1'. Lors de la résolution du problème, redémarrez la synchronisation avec un enregistrement d'historique détaillé et spécifiez un fichier de sortie dans lequel écrire.|  

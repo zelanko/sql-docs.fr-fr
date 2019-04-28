@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4dfa4771fa60286e054270cb644c72cabe8e40
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855854"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Fournisseur Microsoft OLE DB pour Microsoft, vue d’ensemble du Service d’indexation
 Le fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft fournit un accès en lecture seule par programmation pour le système de fichiers et des données Web indexées par le Service d’indexation Microsoft. Les applications ADO peuvent émettre des requêtes SQL pour récupérer des informations de propriété de contenu et de fichier.
@@ -75,9 +75,9 @@ MSIDXS
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Lecture seule|
 |[Signet](../../../ado/reference/ado-api/bookmark-property-ado.md)*|lecture/écriture|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lecture/écriture|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|toujours **adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|toujours **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|toujours **adEditNone**|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|Lecture seule|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lecture/écriture|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lecture/écriture|
@@ -96,23 +96,23 @@ MSIDXS
 
 |Méthode|Disponible ?|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|non|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Non|
 |[Annuler](../../../ado/reference/ado-api/cancel-method-ado.md)|Oui|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|non|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|non|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Non|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Non|
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|Oui|
 |[Fermer](../../../ado/reference/ado-api/close-method-ado.md)|Oui|
-|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|non|
+|[Supprimer](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Non|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Oui|
 |[Déplacer](../../../ado/reference/ado-api/move-method-ado.md)|Oui|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Oui|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Oui|
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|
-|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Oui|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Oui|
 |[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|
-|[Update](../../../ado/reference/ado-api/update-method.md)|non|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|non|
+|[Update](../../../ado/reference/ado-api/update-method.md)|Non|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Non|
 
  Pour les détails d’implémentation spécifiques et des informations fonctionnelles sur le fournisseur Microsoft OLE DB pour le Service d’indexation Microsoft, consultez le [Guide du programmeur OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), ou visitez la page Services Web du site Web Windows NT Server site.
 

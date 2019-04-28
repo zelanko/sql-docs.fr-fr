@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40c4abad803424ac9b274045f699785b85689644
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48069899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874844"
 ---
 # <a name="collation-and-clr-integration-data-types"></a>Classement et types de données de l'intégration du CLR
   Dans le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], l'objet `CompareInfo` gère les classements. Les interfaces de programmation d'applications (API) de chaîne du [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] utilisent la propriété `CompareInfo` associée à l'objet `CultureInfo` du thread courant pour effectuer les comparaisons de chaînes. Le paramètre par défaut de la `CultureInfo` objet est basé sur le [!INCLUDE[msCoName](../../includes/msconame-md.md)] paramètres régionaux de Windows pour l’ordinateur sur lequel [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est en cours d’exécution. Cela détermine la sémantique de comparaison par défaut, si aucune propriété `CultureInfo` explicite n'est spécifiée, pour les comparaisons de valeurs `System.String`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne change pas explicitement la propriété `CompareInfo` en classement de la base de données ou du serveur. Si besoin est, les utilisateurs doivent définir la propriété `CompareInfo` appropriée dans leurs routines.  

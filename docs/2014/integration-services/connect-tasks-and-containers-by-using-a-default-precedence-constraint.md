@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a900b6c2bb6e55d57bcf32aff0ac6ea4667bdd7f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834051"
 ---
 # <a name="connect-tasks-and-containers-by-using-a-default-precedence-constraint"></a>Connecter des tâches et des conteneurs à l'aide d'une contrainte de précédence par défaut
   Les contraintes de précédence connectent deux exécutables. Un exécutable peut être une tâche quelconque ou encore un conteneur de boucles For, de boucles Foreach ou un conteneur Sequence. Cette procédure décrit comment définir le comportement par défaut des contraintes de précédence et comment connecter des exécutables à l'aide de contraintes de précédence par défaut.  

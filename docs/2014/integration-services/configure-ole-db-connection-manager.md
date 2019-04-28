@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a21e362d870337420bec17f6210972a73055dc32
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834139"
 ---
 # <a name="configure-ole-db-connection-manager"></a>Configurer le gestionnaire de connexions OLE DB
   La boîte de dialogue **Configurer le gestionnaire de connexions OLE DB** vous permet d’ajouter une connexion à une source de données, qui peut être une nouvelle connexion ou la copie d’une connexion existante.  

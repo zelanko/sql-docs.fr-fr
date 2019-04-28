@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 7 : Ajout de transformation au flux de données de nettoyage DQS | Microsoft Docs'
+title: 'Tâche 7 : Ajout de transformation au flux de données de nettoyage DQS | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a43ac39754a5f5e83e664a2e21be904c2525bd53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866365"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tâche 7 : Ajout d'une transformation de nettoyage DQS au flux de données
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Tâche 7 : Ajout d’une transformation de nettoyage DQS au flux de données
   Dans cette tâche, vous allez ajouter la transformation de nettoyage DQS au flux de données pour nettoyer les données des fournisseurs d'entrée à l'aide de DQS. Consultez **[transformation de nettoyage DQS](https://msdn.microsoft.com/library/ee677619.aspx)** pour plus d’informations sur la transformation.  
   
 1.  Avec le bouton droit **nettoyage DQS** dans le **de flux de données** onglet, puis cliquez sur **renommer**. Type **nettoyer les données des fournisseurs**, puis appuyez sur **entrée**.  

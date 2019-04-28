@@ -14,11 +14,11 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9ba41b602ec91516e87b7fe5ec0276c586b17613
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53352978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989040"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>Compte d'exécution (SSRS en mode natif)
   Utilisez cette page pour configurer un compte à utiliser pour le traitement sans assistance. Ce compte est utilisé dans des circonstances particulières lorsque d'autres sources d'informations d'identification ne sont pas disponibles :  

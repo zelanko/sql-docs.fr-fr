@@ -25,18 +25,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 553f35862684c7b7c860b70211f903dec253a799
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872655"
 ---
 # <a name="upgrade-a-data-tier-application"></a>Upgrade a Data-tier Application
   Utilisez l'Assistant Mise à niveau de l'application de la couche Données ou bien un script Windows PowerShell pour modifier le schéma et les propriétés d'une application de la couche Données (DAC) actuellement déployée pour qu'ils correspondent à ceux définis dans la nouvelle version de la DAC.  
   
--   **Avant de commencer :**  [Choix des Options de mise à niveau DAC](#ChoseDACUpgOptions), [Limitations et Restrictions](#LimitationsRestrictions), [prérequis](#Prerequisites), [sécurité](#Security), [autorisations](#Permissions)  
+-   **Avant de commencer :**  [Choix des options de mise à niveau de la DAC](#ChoseDACUpgOptions), [Limitations et restrictions](#LimitationsRestrictions), [Prérequis](#Prerequisites), [Sécurité](#Security), [Autorisations](#Permissions)  
   
--   **Pour mettre à niveau une DAC, à l’aide de :**  [L’Assistant d’Application de couche données de mise à niveau](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
+-   **Pour mettre à niveau une DAC à l’aide de** :  [l’Assistant Mise à niveau de l’application de la couche Données](#UsingDACUpgradeWizard), [PowerShell](#UpgradeDACPowerShell)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  La mise à niveau d'une DAC est un processus sur place qui modifie le schéma de la base de données existante de manière à ce qu'il corresponde au schéma défini dans une nouvelle version de la DAC. La nouvelle version de la DAC est fournie dans un fichier de package DAC. Pour plus d’informations sur la création d’un package DAC, consultez [Applications de la couche Données](data-tier-applications.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "52774321"
 ###  <a name="Security"></a> Sécurité  
  Pour améliorer la sécurité, les connexions d'authentification SQL Server sont stockées dans un package DAC sans mot de passe. Lorsque le package est déployé ou mis à niveau, la connexion est créée en tant que connexion désactivée avec un mot de passe généré. Pour activer les connexions, connectez-vous à l'aide d'une connexion qui possède l'autorisation ALTER ANY LOGIN et utilisez ALTER LOGIN pour activer la connexion et affecter un nouveau mot de passe pouvant être communiqué à l'utilisateur. Cela n'est pas nécessaire pour les connexions d'authentification Windows car leurs mots de passe ne sont pas gérés par SQL Server.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Une DAC ne peut être mise à niveau que par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par les connexions situées dans le rôle serveur fixe **dbcreator** et disposant d'autorisations ALTER ANY LOGIN. La connexion doit être propriétaire de la base de données existante. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut aussi mettre à niveau une DAC.  
   
 ##  <a name="UsingDACUpgradeWizard"></a> Utilisation de l'Assistant Mise à niveau de l'application de la couche Données  

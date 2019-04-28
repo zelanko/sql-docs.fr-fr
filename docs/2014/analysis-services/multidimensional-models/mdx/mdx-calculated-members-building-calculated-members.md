@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea31ff7c14baff6a102ad9aa11c227e9c333da60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725528"
 ---
 # <a name="building-calculated-members-in-mdx-mdx"></a>Création de membres calculés dans MDX (MDX)
   Dans MDX (Multidimensional Expressions), un membre calculé est un membre qui est résolu par le retour d'une valeur issue du calcul d'une expression MDX. Cette définition anodine couvre un vaste champ d'action. La possibilité de bâtir et d'utiliser des membres calculés dans une requête MDX est un élément fondamental de la manipulation des données multidimensionnelles.  
@@ -40,7 +40,7 @@ ms.locfileid: "48051791"
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Référence des fonctions MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [Instruction SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

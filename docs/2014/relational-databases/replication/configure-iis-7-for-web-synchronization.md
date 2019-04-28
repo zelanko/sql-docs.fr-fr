@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721537"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurer IIS 7 pour la synchronisation web
   Les procédures décrites dans cette rubrique vous guident dans le processus de configuration manuelle des services IIS ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services) version 7 et ultérieures pour une utilisation avec la synchronisation web en vue de la réplication de fusion. 
@@ -28,7 +28,7 @@ ms.locfileid: "52819331"
  L’ensemble du processus de configuration est présenté dans [Configurer la synchronisation web](configure-web-synchronization.md).  
   
 > [!IMPORTANT]  
->  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peut provoquer des erreurs, telles que : « Le format d'un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web ».  
+>  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures de la [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peut provoquer des erreurs, telles que : « Le format d’un message pendant la synchronisation Web n’était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web ».  
   
  Pour utiliser la synchronisation Web, vous devez configurer IIS 7 en effectuant les étapes ci-dessous. Chaque étape est détaillée dans cette rubrique.  
   

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 62d61d43638c0ca6e3e43da83367dff461033463
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982292"
 ---
 # <a name="sqldescribeparam-function"></a>Fonction SQLDescribeParam
 **Conformité**  
- Version introduite : La mise en conformité des normes 1.0 ODBC : ODBC  
+ Version introduite : Conformité aux normes 1.0 ODBC : ODBC  
   
  **Résumé**  
  **SQLDescribeParam** retourne la description d’un marqueur de paramètre associé à une instruction SQL préparée. Ces informations sont également disponibles dans les champs de l’IPD.  
@@ -48,20 +48,20 @@ SQLRETURN SQLDescribeParam(
 ```  
   
 ## <a name="argument"></a>Argument  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *ParameterNumber*  
  [Entrée] Numéro de marqueur de paramètre triées séquentiellement ordre croissant des paramètres, en commençant à 1.  
   
  *DataTypePtr*  
- [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le type de données SQL du paramètre. Cette valeur est lue à partir du champ d’enregistrement SQL_DESC_CONCISE_TYPE de l’IPD. Il s’agit d’une des valeurs dans le [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) section de l’annexe d : Types de données ou un type de données spécifiques au pilote SQL.  
+ [Sortie] Pointeur vers une mémoire tampon dans lequel retourner le type de données SQL du paramètre. Cette valeur est lue à partir du champ d’enregistrement SQL_DESC_CONCISE_TYPE de l’IPD. Il s’agit d’une des valeurs dans le [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) section de l’annexe d : Types de données, ou un type de données spécifiques au pilote SQL.  
   
  Dans ODBC 3. *x*, SQL_TYPE_DATE, SQL_TYPE_TIME et SQL_TYPE_TIMESTAMP s’affichera dans  *\*DataTypePtr* de date, d’heure ou de données timestamp, respectivement ; dans ODBC 2. *x*, SQL_DATE, SQL_TIME ou SQL_TIMESTAMP sera retourné. Le Gestionnaire de pilotes effectue les mappages requis lorsqu’un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote ou lorsqu’un ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote.  
   
  Lorsque *ColumnNumber* est égal à 0 (pour une colonne de signet), SQL_BINARY est retourné dans  *\*DataTypePtr* pour les signets de longueur variable. (SQL_INTEGER est retournée si les signets sont utilisés par un ODBC 3. *x* application fonctionne avec une API ODBC 2. *x* pilote ou par un ODBC 2. *x* application fonctionne avec un ODBC 3. *x* pilote.)  
   
- Pour plus d’informations, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) annexe d : Types de données. Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.  
+ Pour plus d’informations, consultez [les Types de données SQL](../../../odbc/reference/appendixes/sql-data-types.md) dans l’annexe d : Types de données. Pour plus d’informations sur les types de données spécifiques au pilote SQL, consultez la documentation du pilote.  
   
  *ParameterSizePtr*  
  [Sortie] Pointeur vers une mémoire tampon dans lequel retourner la taille, en caractères, de la colonne ou l’expression du marqueur de paramètre correspondant, tel que défini par la source de données. Pour plus d’informations sur la taille de colonne, consultez [taille de colonne, des chiffres décimaux, transférer la longueur en octets et la taille d’affichage](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).  
@@ -76,7 +76,7 @@ SQLRETURN SQLDescribeParam(
   
 -   SQL_NULLABLE : Le paramètre accepte les valeurs NULL.  
   
--   SQL_NULLABLE_UNKNOWN : Le pilote ne peut pas déterminer si le paramètre autorise les valeurs NULL.  
+-   SQL_NULLABLE_UNKNOWN: Le pilote ne peut pas déterminer si le paramètre autorise les valeurs NULL.  
   
 ## <a name="returns"></a>Valeur renvoyée  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR ou SQL_INVALID_HANDLE.  

@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9f9969630f8fe9f665a04575af8670ddb1af1b3c
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835632"
 ---
 # <a name="manage-an-oracle-cdc-service"></a>Gérer un Service de capture de données modifiées Oracle
   Vous pouvez utiliser la console de configuration du service de capture de données modifiées pour gérer un service de capture de données modifiées spécifique.  

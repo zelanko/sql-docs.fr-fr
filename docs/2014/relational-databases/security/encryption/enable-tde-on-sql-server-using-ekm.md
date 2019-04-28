@@ -16,11 +16,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e55afa78d82c19d9a6a09226c537ca95f65105ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48125079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011508"
 ---
 # <a name="enable-tde-using-ekm"></a>Activer le chiffrement transparent des données à l'aide de la gestion de clés extensible (EKM)
   Cette rubrique explique comment activer le chiffrement transparent des données (TDE) dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] afin de protéger une clé de chiffrement de base de données à l'aide d'une clé asymétrique stockée dans un module de gestion de clés extensible (EKM) avec [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "48125079"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Cette rubrique utilise les autorisations suivantes :  
   
 -   Pour modifier une option de configuration et exécuter l'instruction RECONFIGURE, vous devez disposer de l'autorisation de niveau serveur ALTER SETTINGS. L'autorisation ALTER SETTINGS est implicitement détenue par les rôles serveur fixes **sysadmin** et **serveradmin** .  
@@ -75,7 +75,7 @@ ms.locfileid: "48125079"
     > [!NOTE]  
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ne propose pas de fournisseur EKM. Chaque fournisseur EKM peut utiliser des procédures différentes pour l'installation, la configuration et l'autorisation des utilisateurs.  Consultez la documentation de votre fournisseur EKM pour effectuer cette étape.  
   
-3.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+3.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 4.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

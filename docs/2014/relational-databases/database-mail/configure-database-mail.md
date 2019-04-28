@@ -40,11 +40,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872215"
 ---
 # <a name="configure-database-mail"></a>Configuration de la Messagerie de base de données
   Cette rubrique explique comment activer et configurer la messagerie de base de données à l'aide de l'Assistant Configuration de la messagerie de base de données, et créer un script de configuration de la messagerie de base de données à l'aide de modèles.  
@@ -90,7 +90,7 @@ ms.locfileid: "54131489"
  Chaque fois que vous utilisez l'Assistant, utilisez la page **Sélectionner une tâche de configuration** pour indiquer quelle tâche vous allez réaliser. Si vous changez d'avis avant d'avoir terminé l'Assistant, utilisez le bouton **Précédent** pour retourner à cette page et sélectionner une autre tâche.  
   
 > [!NOTE]  
->  Si la messagerie de base de données n'a pas été activée, vous recevrez le message : **Le composant de messagerie de base de données n'est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui**équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  
+>  Si la messagerie de base de données n’a pas été activée, vous recevrez le message : **La fonctionnalité de messagerie de base de données n’est pas disponible.  Voulez-vous activer ce composant ?** Répondre **Oui**équivaut à activer la messagerie de base de données à l’aide de l’option [Database Mail XPs](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) de la procédure stockée système **sp_configure** .  
   
  **Configurer la messagerie de base de données en effectuant les tâches suivantes**  
  Permet d'exécuter toutes les tâches nécessaires pour configurer la messagerie de base de données pour la première fois. Cette option inclut l'ensemble des trois autres options.  

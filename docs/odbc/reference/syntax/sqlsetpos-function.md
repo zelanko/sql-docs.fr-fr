@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e769949c8c57bbec56055c58c9002494fc6d37be
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982397"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos, fonction
 **Conformité**  
@@ -46,7 +46,7 @@ SQLRETURN SQLSetPos(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *RowNumber*  
@@ -85,8 +85,8 @@ SQLRETURN SQLSetPos(
 |01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01001|Conflit d’opération de curseur|Le *opération* argument était SQL_DELETE ou SQL_UPDATE, et aucune ligne ou plusieurs lignes ont été supprimés ou mis à jour. (Pour plus d’informations sur les mises à jour de plusieurs lignes, consultez la description de la SQL_ATTR_SIMULATE_CURSOR *attribut* dans **SQLSetStmtAttr**.) (La fonction retourne SQL_SUCCESS_WITH_INFO.)<br /><br /> Le *opération* argument était SQL_DELETE ou SQL_UPDATE, et l’opération a échoué en raison de l’accès concurrentiel optimiste. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Chaîne de données tronquée à droite|Le *opération* argument était SQL_REFRESH, et données de chaîne ou binaire retournées pour une ou plusieurs colonnes avec un type de données SQL_C_CHAR ou SQL_C_BINARY a entraîné la troncation des caractères non vides ou non NULL des données binaires.|  
-|01 S 01|Erreur de ligne|Le *RowNumber* argument était égale à 0, et une erreur s’est produite dans une ou plusieurs lignes lors de l’exécution de l’opération spécifiée avec le *opération* argument.<br /><br /> (SQL_SUCCESS_WITH_INFO est retourné si une erreur se produit sur un ou plus, mais pas toutes, les lignes d’une opération de plusieurs ligne, SQL_ERROR est retournée si une erreur se produit sur une opération de ligne unique.)<br /><br /> (Cet SQLSTATE est renvoyé uniquement lorsque **SQLSetPos** est appelée après **SQLExtendedFetch**, si le pilote est une API ODBC 2. *x* pilote et la bibliothèque de curseurs n’est pas utilisé.)|  
-|01 S 07|Troncation fractionnelle|Le *opération* argument était SQL_REFRESH, le type de données de la mémoire tampon d’application n’était pas SQL_C_CHAR ou SQL_C_BINARY, et les données retournées dans les mémoires tampons d’application pour une ou plusieurs colonnes ont été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour heure, timestamp et les types de données interval contenant un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S01|Erreur de ligne|Le *RowNumber* argument était égale à 0, et une erreur s’est produite dans une ou plusieurs lignes lors de l’exécution de l’opération spécifiée avec le *opération* argument.<br /><br /> (SQL_SUCCESS_WITH_INFO est retourné si une erreur se produit sur un ou plus, mais pas toutes, les lignes d’une opération de plusieurs ligne, SQL_ERROR est retournée si une erreur se produit sur une opération de ligne unique.)<br /><br /> (Cet SQLSTATE est renvoyé uniquement lorsque **SQLSetPos** est appelée après **SQLExtendedFetch**, si le pilote est une API ODBC 2. *x* pilote et la bibliothèque de curseurs n’est pas utilisé.)|  
+|01S07|Troncation fractionnelle|Le *opération* argument était SQL_REFRESH, le type de données de la mémoire tampon d’application n’était pas SQL_C_CHAR ou SQL_C_BINARY, et les données retournées dans les mémoires tampons d’application pour une ou plusieurs colonnes ont été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour heure, timestamp et les types de données interval contenant un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violation de l’attribut de type de données restreint|La valeur de données d’une colonne dans le jeu de résultats n’a pas pu être convertie au type de données spécifié par *TargetType* dans l’appel à **SQLBindCol**.|  
 |07009|Index de descripteur non valide|L’argument *opération* était SQL_REFRESH ou SQL_UPDATE, et une colonne a été liée avec un numéro de colonne supérieur au nombre de colonnes dans le jeu de résultats.|  
 |21S02|Degré de la table dérivée ne correspond pas à la liste des colonnes|L’argument *opération* était SQL_UPDATE, et aucune colonne ont été être mise à jour, car toutes les colonnes ont été soit indépendant, en lecture seule, ou la valeur dans la mémoire tampon de longueur / d’indicateur lié était SQL_COLUMN_IGNORE.|  

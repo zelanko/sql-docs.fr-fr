@@ -1,5 +1,5 @@
 ---
-title: Classés de colonnes (exploration de données) | Documents Microsoft
+title: Classé colonnes (exploration de données) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b014f82376b15d9d29834103d8827bf31231ef90
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724825"
 ---
 # <a name="classified-columns-data-mining"></a>Colonnes classifiées (exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,8 +49,8 @@ ms.locfileid: "34019946"
  La valeur de la colonne représente le poids, ou facteur de réplication de cas, de la valeur associée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu des Types de & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/content-types-data-mining.md)   
- [Les Structures d’exploration de données & #40 ; Analysis Services - Exploration de données & #41 ;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Types de données & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/data-types-data-mining.md)  
+ [Types de contenu &#40;Exploration de données&#41;](../../analysis-services/data-mining/content-types-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Types de données &#40;exploration de données&#41;](../../analysis-services/data-mining/data-types-data-mining.md)  
   
   

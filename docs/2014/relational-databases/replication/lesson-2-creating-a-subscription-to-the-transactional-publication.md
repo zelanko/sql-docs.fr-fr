@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721078"
 ---
-# <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Leçon 2 : Création d'un abonnement à la publication transactionnelle
+# <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Leçon 2 : Création d’un abonnement à la Publication transactionnelle
   Dans cette leçon, vous allez créer l'abonnement à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Cette leçon requiert que vous avez terminé la leçon précédente, [leçon 1 : Publication des données à l’aide de la réplication transactionnelle](lesson-1-publishing-data-using-transactional-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Pour créer l'abonnement  
@@ -65,7 +65,7 @@ ms.locfileid: "54129389"
 3.  Si l’abonnement n’apparaît pas sous **AdvWorksProductTrans**, appuyez sur F5 pour actualiser la liste.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès un abonnement à la publication transactionnelle. Comme l'Agent de distribution de cet abonnement s'exécute en permanence, l'abonnement est initialisé lors de sa création. Ensuite, vous allez utiliser les jetons de suivi pour vérifier que les modifications sont bien répliquées sur l'Abonné et pour déterminer la latence. Consultez [leçon 3 : Validation de l’abonnement et mesure de la latence](lesson-3-validating-the-subscription-and-measuring-latency.md).  
+ Vous avez créé avec succès un abonnement à la publication transactionnelle. Comme l'Agent de distribution de cet abonnement s'exécute en permanence, l'abonnement est initialisé lors de sa création. Ensuite, vous allez utiliser les jetons de suivi pour vérifier que les modifications sont bien répliquées sur l'Abonné et pour déterminer la latence. Voir [Leçon 3 : Validation de l’abonnement et mesure de la latence](lesson-3-validating-the-subscription-and-measuring-latency.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Initialiser un abonnement avec un instantané](initialize-a-subscription-with-a-snapshot.md)   

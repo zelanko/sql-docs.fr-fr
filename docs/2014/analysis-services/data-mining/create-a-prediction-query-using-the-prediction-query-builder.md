@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a3211e342528cea6b26630d06ae7b42baf5a6c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715146"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>Créer une requête de prédiction à l’aide du Générateur de requêtes de prédiction
   Vous pouvez créer des requêtes de prédiction soit quand vous générez une solution d’exploration de données dans BI Development Studio, soit en cliquant avec le bouton droit sur un modèle d’exploration de données existant dans SQL Server Management Studio, puis en choisissant l’option **Générer une requête de prédiction**.  
@@ -92,7 +92,7 @@ ms.locfileid: "48189686"
 8.  Exécutez la requête en cliquant sur le premier bouton de la barre d’outils de l’onglet **Prévision de modèle d’exploration de données** et en sélectionnant **Résultat**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une requête Singleton dans le Concepteur d’exploration de données](create-a-singleton-query-in-the-data-mining-designer.md)   
- [Requêtes d’exploration de données](data-mining-queries.md)  
+ [créer une requête singleton dans le Concepteur d'exploration de données](create-a-singleton-query-in-the-data-mining-designer.md)   
+ [Requêtes d'exploration de données](data-mining-queries.md)  
   
   

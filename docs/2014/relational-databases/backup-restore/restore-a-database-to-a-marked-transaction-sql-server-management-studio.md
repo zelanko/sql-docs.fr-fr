@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 919c10372e397f0c2d66d7648363aef7916ec598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875602"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurer une base de données jusqu'à une transaction marquée (SQL Server Management Studio)
   Quand une base de données se trouve dans l’état de restauration, vous pouvez utiliser la boîte de dialogue **Restaurer le journal des transactions** pour restaurer la base de données jusqu’à une transaction marquée dans les sauvegardes du journal disponibles.  
@@ -45,7 +45,7 @@ ms.locfileid: "48050429"
   
      Le tableau suivant répertorie les en-têtes de colonnes de la grille et décrit leur valeur.  
   
-    |En-tête|Valeur|  
+    |Header|Value|  
     |------------|-----------|  
     |\<vide>|Affiche une case à cocher pour la sélection de la marque.|  
     |**Marque de transaction**|Nom de la transaction marquée spécifiée par l'utilisateur lors de la validation de la transaction.|  

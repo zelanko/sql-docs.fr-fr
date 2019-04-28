@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48102999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011498"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Rubriques de procédures relatives à la gestion des connexions, des utilisateurs et des schémas
   Cette page fournit des liens vers des rubriques qui vous indiquent comment gérer des connexions, des utilisateurs de la base de données et les schémas de base de données de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , ainsi que la façon de joindre un rôle et d'accorder des autorisations à un principal.  

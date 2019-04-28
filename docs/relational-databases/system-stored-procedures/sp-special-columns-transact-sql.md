@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004157"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,10 @@ sp_special_columns [ @table_name = ] 'table_name'
   
  Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l'utilisateur actuel est propriétaire d'une table portant le nom spécifié, les colonnes de cette table sont renvoyées. Si *propriétaire* n’est pas spécifié et l’utilisateur actuel ne possède pas d’une table de l’objet *nom*, cette procédure recherche une table de l’objet *nom* appartenant à la base de données propriétaire. Si la table existe, ses colonnes sont retournées.  
   
- [ @qualifier=] '*qualificateur*'  
+ [ @qualifier=] '*qualifier*'  
  Nom du qualificateur de la table. *qualificateur* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualifier.owner.name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans certains produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [ @col_type=] '*type_colonne*'  
+ [ @col_type=] '*col_type*'  
  Est le type de colonne. *type_colonne* est **char (** 1 **)**, avec un défaut Type R retourne la colonne ou jeu optimal de colonnes qui, en récupérant des valeurs à partir de l’ou les colonnes, permettant à n’importe quelle ligne dans le texte spécifié table pour identifier de manière unique. Une colonne peut être soit une colonne virtuelle spécifiquement créée à cet effet, soit la ou les colonnes d'un index unique de la table. Le type V fournit la ou les colonnes de la table spécifiée qui, le cas échéant, sont automatiquement mises à jour par la source de données lorsqu'une valeur dans la ligne est mise à jour par une transaction.  
   
  [ @scope=] '*étendue*'  
@@ -89,7 +89,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>Notes  
  sp_special_columns est équivalent à SQLSpecialColumns dans ODBC. Les résultats obtenus sont triés par SCOPE.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  

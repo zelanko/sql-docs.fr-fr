@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8589c743e926b6654cfba123ef7a47a85c0e95d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731709"
 ---
 # <a name="drillthrough-action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'action d'extraction (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire d’action d’extraction** sous l’onglet **Actions** du Concepteur de cube pour modifier l’action d’extraction sélectionnée dans le volet **Organisateur d’action**. Pour plus d’informations sur les actions d’extraction, consultez [Actions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md).  
@@ -76,7 +76,7 @@ ms.locfileid: "48213229"
   
  Le tableau suivant décrit les paramètres disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Traitement|L’action doit s’exécuter dans le cadre d’une opération par lot ou d’une tâche [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .|  
 |Interactif|L'action s'exécute lorsque l'utilisateur l'invoque.|  
@@ -104,7 +104,7 @@ ms.locfileid: "48213229"
  Sélectionnez **True** pour indiquer que la **Légende** contient une expression MDX qui retourne une chaîne représentant une légende à afficher pour l’action dans l’application cliente. L'expression MDX doit être résolue avant que l'action soit retournée à l'application cliente.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Expressions multidimensionnelles &#40;MDX&#41; référence](/sql/mdx/multidimensional-expressions-mdx-reference)   
+ [Référence MDX &#40;Multidimensional Expressions&#41;](/sql/mdx/multidimensional-expressions-mdx-reference)   
  [Actions &#40;Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](actions-cube-designer-analysis-services-multidimensional-data.md)   
  [Barre d’outils &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md)   
  [Organisateur d’action &#40;onglet Actions, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](action-organizer-cube-designer-analysis-services-multidimensional-data.md)   

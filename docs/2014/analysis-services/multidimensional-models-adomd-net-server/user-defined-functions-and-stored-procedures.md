@@ -1,27 +1,20 @@
 ---
 title: Fonctions définies par l’utilisateur et des procédures stockées | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
+ms.date: 05/02/2018
+ms.prod: sql
 ms.technology: analysis-services
-ms.topic: reference
-helpviewer_keywords:
-- stored procedures [ADOMD.NET]
-- ADOMD.NET, user defined functions
-- user defined functions [ADOMD.NET]
-- ADOMD.NET, UDFs
-- ADOMD.NET, stored procedures
-ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
-author: minewiskan
+ms.custom: adomd
+ms.topic: conceptual
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727855"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Fonctions définies par l'utilisateur et procédures stockées
   Avec des objets serveur ADOMD.NET, vous pouvez créer une fonction définie par l’utilisateur (UDF) ou des procédures stockées pour [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui interagissent avec les métadonnées et les données à partir du serveur. Ces méthodes in-process sont appelées au moyen d'instructions MDX (Multidimensional Expressions) ou DMX (Data Mining Extensions) pour fournir des fonctionnalités supplémentaires sans les temps d'attente inhérents aux communications réseau.  
@@ -93,7 +86,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ### <a name="applying-a-filter-to-a-tuple"></a>Application d'un filtre à un tuple  
  Dans l'exemple suivant, la fonction définie par l'utilisateur prend un ensemble et applique un filtre à chaque tuple de l'ensemble en utilisant l'objet Expression. Les tuples qui sont conformes au filtre sont ajoutés à l'ensemble retourné.  
   
- [!code-csharp[Adomd.NetServer#FilterSet](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#filterset)]  
+ [!code-cs[Adomd.NetServer#FilterSet](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_1.cs)]  
   
  L'exemple précédent est appelé dans l'exemple MDX ci-dessous, dont le filtre porte sur les noms de ville commençant par la lettre A.  
   
@@ -106,6 +99,6 @@ From [Adventure Works]
 ## <a name="stored-procedure-example"></a>Exemple de procédure stockée  
  Dans l'exemple suivant, une procédure stockée MDX utilise AMO pour créer, si nécessaire, des partitions pour Internet Sales.  
   
- [!code-csharp[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#createinternetsalesmeasuregrouppartitions)]  
+ [!code-cs[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_2.cs)]  
   
   

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84b5d71a14c08c47d630ed834ef0a6e436b52edd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726286"
 ---
 # <a name="define-semiadditive-behavior"></a>Définir le comportement semi-additif
   Les mesures semi-additives, qui n'agrègent pas uniformément toutes les dimensions, sont très fréquentes dans les scénarios d'entreprise. Chaque cube qui se base sur l'instantané de soldes dans le temps pose ce problème. Ces instantanés s'utilisent dans des applications traitant de titres de placement, de soldes de compte, de budgétisation, de ressources humaines, de polices et de déclarations d'assurance, et de nombreux autres domaines d'activité.  
@@ -35,7 +35,7 @@ ms.locfileid: "48190269"
  Dans la page **Définir le comportement semi-additif** de l’Assistant, choisissez comment définir le comportement semi-additif en sélectionnant l’une des options suivantes :  
   
  **Désactiver le comportement semi-additif**  
- Supprime le comportement semi-additif d'un cube dans lequel le comportement semi-additif était auparavant défini. Cette sélection redéfinit une mesure pour `SUM` si elle est définie à l’un des types de fonction d’agrégation suivants :  
+ Supprime le comportement semi-additif d'un cube dans lequel le comportement semi-additif était auparavant défini. Cette sélection affecte de nouveau la valeur `SUM` à une mesure si cette dernière a l'un des types de fonction d'agrégation suivants :  
   
 -   By Account  
   
@@ -53,14 +53,14 @@ ms.locfileid: "48190269"
   
  Cette option ne change pas les mesures avec une fonction d’agrégation normale : `Sum`, `Min`, `Max`, `Count`, ou `Distinct``Count`.  
   
- **L'Assistant a détecté une dimension de compte, « Compte », qui contient des membres semi-additifs. Le serveur agrégera les membres de cette dimension selon le comportement semi-additif spécifié pour chaque type de compte.**  
+ **L’Assistant a détecté le « compte » dimension de compte, qui contient des membres semi-additifs. Le serveur agrégera les membres de cette dimension selon le comportement semi-additif spécifié pour chaque type de compte.**  
  Provoque la définition de toutes les mesures d'un groupe de mesures dimensionné par une dimension de type Compte dans la fonction d'agrégation par le système, et le serveur agrège les membres de la dimension en fonction du comportement semi-additif spécifié pour chaque type de compte.  
   
 > [!NOTE]  
 >  Cette option est sélectionnée par défaut si l'Assistant détecte une dimension de type Compte.  
   
  **Définir le comportement semi-additif pour les mesures individuelles**  
- Sélectionne le comportement semi-additif de chaque mesure individuellement. Le paramètre par défaut est `SUM` (totalement additif).  
+ Sélectionne le comportement semi-additif de chaque mesure individuellement. La valeur par défaut est `SUM` (totalement additif).  
   
 > [!NOTE]  
 >  Cette option est sélectionnée par défaut si l'Assistant ne détecte pas une dimension de type Compte.  
@@ -71,7 +71,7 @@ ms.locfileid: "48190269"
 |---------------------------|-----------------|  
 |Average of Children|L'agrégation d'un membre est la moyenne de ses enfants.|  
 |ByAccount|Le système lit le comportement semi-additif spécifié pour le type de compte.|  
-|Compter|L'agrégation est un nombre de membres.|  
+|Count|L'agrégation est un nombre de membres.|  
 |Distinct Count|L'agrégation est un nombre de membres uniques.|  
 |First Child|La valeur de membre est évaluée comme la valeur de son premier enfant avec la dimension de temps.|  
 |FirstNonEmpty|La valeur de membre est évaluée comme la valeur de son premier enfant avec la dimension de temps qui contient les données.|  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84a7ae52cf3556d7c79e3b9ca8d6027f8a5f14db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734129"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Algorithme MLR (Microsoft Linear Regression)
   L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) est une variante de l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) qui vous permet de calculer une relation linéaire entre une variable dépendante et indépendante, puis d’utiliser cette relation pour la prédiction.  
@@ -79,8 +79,8 @@ ms.locfileid: "48180409"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Référence technique de Microsoft Linear Regression algorithme](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Références techniques relatives à l’algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md)   
  [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)   
- [Contenu du modèle pour les modèles de régression linéaire d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

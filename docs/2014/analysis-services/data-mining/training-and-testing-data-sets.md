@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6e4cf182d303d2fc671b5b6003483781e2d3a4aa
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144994"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733474"
 ---
 # <a name="training-and-testing-data-sets"></a>Jeux de données d'apprentissage et de test
   La séparation des données en jeux d'apprentissage et jeux de test correspond à une partie importante de l'évaluation des modèles d'exploration de données. En général, lorsque vous séparez un jeu de données en un jeu d'apprentissage et un jeu de test, la plupart des données sont utilisées pour l'apprentissage et une plus petite partie des données est utilisée pour les tests. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] échantillonne de manière aléatoire les données afin de s'assurer que les jeux de test et d'apprentissage sont semblables. L'utilisation de données similaires pour l'apprentissage et les tests vous permet de minimiser les effets des différences de données et de mieux comprendre les caractéristiques du modèle.  
@@ -40,7 +40,7 @@ ms.locfileid: "50144994"
 -   en créant et modifiant par programmation les structures à l'aide des objets AMO (Analysis Management Objects) ou du langage de définition de données (DDL) XML.  
   
 ### <a name="using-the-data-mining-wizard-to-divide-a-mining-structure"></a>Utilisation de l'Assistant Exploration de données pour diviser une structure d'exploration de données  
- Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
+ Par défaut, après avoir défini les sources de données pour une structure d'exploration de données, l'Assistant Exploration de données divise les données en deux jeux : l'un avec 70 % des données source pour l'apprentissage du modèle et l'autre avec 30 % des données source pour tester le modèle. Ces valeurs par défaut ont été choisies parce qu’un rapport 70-30 est souvent utilisé dans l’exploration de données, mais avec [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vous pouvez modifier ce rapport en fonction de vos besoins.  
   
  Vous pouvez également configurer l'Assistant pour définir un nombre maximal de cas d'apprentissage ou vous pouvez associer les limites pour permettre un pourcentage maximal de cas jusqu'à un nombre maximal spécifié de cas. Lorsque vous spécifiez à la fois un pourcentage maximal de cas et un nombre maximal de cas, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise la plus petite des deux limites comme taille du jeu de test. Par exemple, si vous spécifiez une exclusion de 30 % pour les scénarios de test et un nombre maximal de scénarios de test égal à 1000, la taille du jeu de test ne dépassera jamais 1 000 scénarios. Cela peut être utile si vous souhaitez garantir que la taille de votre jeu de test reste cohérente même si des données d'apprentissage supplémentaires sont ajoutées au modèle.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "50144994"
 |Propriété|Description|  
 |--------------|-----------------|  
 |`HoldoutMaxCases`|Spécifie le nombre maximal de scénarios à inclure dans le jeu de test.|  
-|`HoldoutMaxPercent`|Spécifie le nombre de cas à inclure dans le jeu de test en tant que pourcentage du jeu de données complet. Pour n'avoir aucun jeu de données, il convient de spécifier 0.|  
+|`HoldoutMaxPercent`|Spécifie le nombre de cas à inclure dans le jeu de test en tant que pourcentage du jeu de données complet. Pour n'avoir aucun jeu de données, il convient de spécifier 0.|  
 |`HoldoutSeed`|Spécifie une valeur entière à utiliser comme valeur de départ lors de la sélection aléatoire de données pour les partitions. Cette valeur n'affecte pas le nombre de cas dans le jeu d'apprentissage ; à la place, elle garantit que la partition peut être répétée.|  
   
  Si vous ajoutez ou modifiez un jeu de données de test dans une structure existante, vous devez retraiter la structure et tous les modèles associés. En outre, comme la division des données source provoque l'apprentissage du modèle sur un autre sous-ensemble des données, vous pouvez constater des résultats différents de votre modèle.  

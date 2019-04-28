@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 44bf8de8ea4c33a20a6159c5702db0b7eaee9eed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735045"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Transfert de données dans leur forme binaire
 Une application peut transférer en toute sécurité des données (sous la forme interne utilisée par un SGBD spécifié) entre deux sources de données qui utilisent le même SGBD et la plate-forme matérielle. Pour un élément de données, les types de données SQL doivent être la même dans les sources de données source et cible. Le type de données C est SQL_C_BINARY.  

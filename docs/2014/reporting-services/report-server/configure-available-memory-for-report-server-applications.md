@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dcd685965d6a8265ac7d8cddeb4a319d0e95a338
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59966895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011045"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurer la mémoire disponible pour les applications du serveur de rapports
   Bien que [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puisse utiliser toute la mémoire disponible, vous pouvez substituer le comportement par défaut en configurant une limite supérieure pour la quantité totale des ressources de mémoire allouées aux applications serveur [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] . Vous pouvez également définir des seuils qui obligent le serveur de rapports à modifier son mode de traitement des requêtes et leur classement par ordre de priorité, selon que la sollicitation de la mémoire est faible, moyenne ou élevée. Face à de faibles niveaux de sollicitation de la mémoire, le serveur de rapports répond en donnant une priorité légèrement supérieure au traitement de rapport interactif ou à la demande. Face à des niveaux élevés de sollicitation de la mémoire, le serveur de rapports utilise plusieurs techniques pour rester opérationnel en utilisant les ressources limitées dont il dispose.  

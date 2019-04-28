@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98633674559feead48a5b1c3cbe997863ad0f18a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985796"
 ---
 # <a name="verify-all-filegroups-are-writeable-during-the-upgrade-process"></a>Vérifier que tous les groupes de fichiers sont accessibles en écriture pendant le processus de mise à niveau
   Le Conseiller de mise à niveau a détecté une base de données possédant un ou plusieurs groupes de fichiers en lecture seule. Toutes les bases de données de l'instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] doivent avoir leurs groupes de fichiers définis sur READ_WRITE avant la mise à niveau.  

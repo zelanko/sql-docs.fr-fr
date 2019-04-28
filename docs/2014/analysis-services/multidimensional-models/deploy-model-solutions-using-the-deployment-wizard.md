@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0136631904a9f4bf8a0cdb7c22e7c9241ba3aff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726265"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>Deploy Model Solutions Using the Deployment Wizard
   L'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise les fichiers de sortie XML générés à partir d'un projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme fichiers d'entrée. Il est facile de modifier ces fichiers d'entrée pour personnaliser le déploiement d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Le script de déploiement généré peut alors être immédiatement exécuté ou enregistré en vue d'un déploiement ultérieur.  
@@ -36,14 +36,14 @@ ms.locfileid: "48087649"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Exécution de l’Assistant Déploiement d’Analysis Services](running-the-analysis-services-deployment-wizard.md)|Décrit les différentes façons d'exécuter l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
-|[Présentation des fichiers d’entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md)|Décrit les fichiers que l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise comme valeurs d'entrée et leur contenu, en fournissant des liens à des rubriques qui expliquent comment modifier les valeurs stockées dans chacun des fichiers d'entrée.|  
+|[Exécution de l'Assistant Déploiement d'Analysis Services](running-the-analysis-services-deployment-wizard.md)|Décrit les différentes façons d'exécuter l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
+|[Précisions sur les fichiers d'entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md)|Décrit les fichiers que l'Assistant Déploiement de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise comme valeurs d'entrée et leur contenu, en fournissant des liens à des rubriques qui expliquent comment modifier les valeurs stockées dans chacun des fichiers d'entrée.|  
 |[Description du script de déploiement Analysis Services](understanding-the-analysis-services-deployment-script.md)|Décrit le contenu du script de déploiement et explique comment il s'exécute.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déployer des Solutions de modèle à l’aide de XMLA](deploy-model-solutions-using-xmla.md)   
- [Synchroniser les bases de données Analysis Services](synchronize-analysis-services-databases.md)   
- [Précisions sur les fichiers d’entrée utilisés pour créer le Script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md)   
- [Déployer des solutions de modèle avec l’utilitaire de déploiement](deploy-model-solutions-with-the-deployment-utility.md)  
+ [Déployer des solutions de modèle à l'aide de XMLA](deploy-model-solutions-using-xmla.md)   
+ [Synchroniser des base de données Analysis Services](synchronize-analysis-services-databases.md)   
+ [Précisions sur les fichiers d'entrée utilisés pour créer le script de déploiement](deployment-script-files-input-used-to-create-deployment-script.md)   
+ [Déployer des solutions de modèle avec l'utilitaire de déploiement](deploy-model-solutions-with-the-deployment-utility.md)  
   
   

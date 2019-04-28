@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 040bcc41137bce095d4db3ec2cbf8d8a22610f13
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727123"
 ---
 # <a name="configure-attribute-types"></a>Configurer des types d'attributs
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les types d’attributs permettent de classer un attribut en termes de fonctionnalité métier. Il existe un grand nombre de types d'attributs que la plupart des applications clientes utilisent pour afficher ou prendre en charge un attribut. Cependant, certains types d’attributs ont une signification particulière pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Par exemple, certains types d'attributs identifient des attributs qui représentent des périodes dans divers calendriers des dimensions de temps.  
@@ -307,7 +307,7 @@ ms.locfileid: "48220909"
 |`Years`|Représente des années.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)  
+ [Attributs et hiérarchies d'attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Référence des propriétés d'attribut de dimension](dimension-attribute-properties-reference.md)  
   
   

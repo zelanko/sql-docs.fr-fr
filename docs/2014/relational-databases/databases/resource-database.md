@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4595fbd7be23414f55a51c2333eee7ebe4f39899
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871106"
 ---
 # <a name="resource-database"></a>Base de données Resource
   La base de données Resource est une base de données en lecture seule qui contient tous les objets système fournis avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Les objets système, tels que sys.objects, sont conservés physiquement dans la base de données Resource, mais ils figurent logiquement dans le schéma sys de chaque base de données. La base de données Resource ne contient ni données utilisateur, ni métadonnées utilisateur.  

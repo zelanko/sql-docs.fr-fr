@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e5bfe2673b599a1da90c940015e5be84b361eb6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726833"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Modifier les propriétés d'une vue de source de données (Analysis Services)
   Après avoir défini une vue de source de données à l'aide de l'Assistant Vue de source de données, puis ajouté des tables, des vues, des calculs nommés et des requêtes nommées à la vue de source de données, vous pouvez modifier les propriétés en rapport avec :  
@@ -48,7 +48,7 @@ ms.locfileid: "48153029"
 |--------------|-----------------|  
 |Source de données|Indique la source de données dans la vue de source de données dont vous consultez les propriétés|  
 |Description|Fournit la description de la vue de source de données.|  
-|Nom   |Indique le nom de la vue de source de données qui apparaît dans l'Explorateur de solutions ou la base de données Analysis Services. Vous pouvez modifier le nom de la vue de source de données ici ou dans l'Explorateur de solutions.|  
+|Créer une vue d’abonnement|Indique le nom de la vue de source de données qui apparaît dans l'Explorateur de solutions ou la base de données Analysis Services. Vous pouvez modifier le nom de la vue de source de données ici ou dans l'Explorateur de solutions.|  
 |NameMatchingCriteria|Critères de correspondance de noms pour la source de données. La valeur par défaut est (none) si des relations clé primaire/clé étrangère ont été détectées par l'Assistant Vue de source de données. Que cette propriété ait été définie ou non par l'Assistant Vue de source de données, vous pouvez spécifier une valeur ici. S'il existe des relations de base de données et que vous spécifiez des critères de correspondance de noms, les deux seront utilisés pour déterminer les relations entre les tables existantes et les nouvelles tables ajoutées.|  
 |RetrieveRelationships|Indique si les relations sont récupérées dans la base de données. La valeur par défaut est True.|  
 |SchemaRestriction|Indique les restrictions, le cas échéant, sur les schémas récupérés dans une source de données. Par défaut, aucune restriction de schéma n'est définie.|  
@@ -62,7 +62,7 @@ ms.locfileid: "48153029"
 |DataSource|Définit la source de données de l'objet. Vous ne pouvez pas modifier cette propriété.|  
 |Description|Fournit la description de la table, la vue ou la requête nommée. Si la vue ou la table de la base de données sous-jacente dispose d'une description stockée comme propriété étendue, cette valeur s'affiche. Vous pouvez modifier cette propriété.|  
 |FriendlyName|Indique un nom de table ou de vue plus facile à comprendre ou plus approprié pour la zone de sujet. Par défaut, la valeur de la propriété **FriendlyName** d’une table ou d’une vue est identique à celle de la propriété **Name** correspondante. La propriété **FriendlyName** est utilisée par des objets OLAP et d’exploration de données lors de la définition de noms d’objets basés sur des tables ou des vues. Vous pouvez modifier cette propriété.|  
-|Nom   |Indique le nom de la vue ou de la table sous-jacente, ou le nom de la requête nommée. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition de noms d’objets basés sur des requêtes nommées. Vous pouvez modifier cette propriété uniquement pour les requêtes nommées.|  
+|Nom|Indique le nom de la vue ou de la table sous-jacente, ou le nom de la requête nommée. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition de noms d’objets basés sur des requêtes nommées. Vous pouvez modifier cette propriété uniquement pour les requêtes nommées.|  
 |QueryDefinition|Définit une requête nommée. Cette propriété ne s'applique qu'aux requêtes nommées et vous ne pouvez pas la modifier directement. Pour modifier cette propriété, vous devez modifier la requête nommée.|  
 |schéma|Indique le schéma de base de données applicable à la table, la vue ou la requête nommée. Cette propriété n’est pas modifiable.|  
 |TableType|Indique le type de table de la table, de la vue ou de la requête nommée. Cette propriété n’est pas modifiable.|  
@@ -78,10 +78,10 @@ ms.locfileid: "48153029"
 |Description|Fournit la description de la colonne. Si la colonne de base de données sous-jacente dispose d'une description stockée comme propriété étendue, cette valeur s'affiche. Vous pouvez modifier cette propriété.|  
 |FriendlyName|Indique un nom de colonne dans une table ou une vue plus facile à comprendre ou plus approprié pour la zone de sujet. Par défaut, la valeur de la propriété **FriendlyName** d’une colonne dans une table ou une vue est identique à celle de la propriété **Name** correspondante. La propriété **FriendlyName** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des colonnes de tables ou de vues. Vous pouvez modifier cette propriété.|  
 |Longueur|Indique la longueur maximale de la colonne, en fonction des données de la colonne dans la vue ou la table sous-jacente.|  
-|Nom   |Indique le nom de la colonne sous-jacente, ou le nom du calcul nommé. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des calculs nommés. Vous pouvez modifier cette propriété uniquement pour les calculs nommés.|  
+|Nom|Indique le nom de la colonne sous-jacente, ou le nom du calcul nommé. La propriété **Name** est utilisée par des objets OLAP et d’exploration de données lors de la définition d’attributs basés sur des calculs nommés. Vous pouvez modifier cette propriété uniquement pour les calculs nommés.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Utiliser des diagrammes dans le Concepteur de vue de Source de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

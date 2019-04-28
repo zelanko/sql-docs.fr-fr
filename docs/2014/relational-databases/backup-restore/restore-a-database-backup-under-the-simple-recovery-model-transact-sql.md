@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2fd00fd96fe9b0bf7e1b605d935908970d0c1fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48107599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875628"
 ---
 # <a name="restore-a-database-backup-under-the-simple-recovery-model-transact-sql"></a>Restaurer une sauvegarde de base de données en mode de récupération simple (Transact-SQL)
   Cette rubrique explique comment restaurer une sauvegarde complète de base de données.  
@@ -31,7 +31,7 @@ ms.locfileid: "48107599"
   
 ## <a name="prerequisites-and-recommendations"></a>Conditions préalables et recommandations  
   
--   Pour restaurer une base de données chiffrée, vous devez avoir accès au certificat ou à la clé asymétrique qui a servi à chiffrer la base de données. Sans le certificat et la clé asymétrique, la base de données ne peut pas être restaurée. En conséquence, le certificat utilisé pour chiffrer la clé de chiffrement de base de données doit être conservé tant que la sauvegarde est utile. Pour plus d’informations, consultez [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
+-   Pour restaurer une base de données chiffrée, vous devez avoir accès au certificat ou à la clé asymétrique qui a servi à chiffrer la base de données. Sans le certificat et la clé asymétrique, la base de données ne peut pas être restaurée. En conséquence, le certificat utilisé pour chiffrer la clé de chiffrement de base de données doit être conservé tant que la sauvegarde est utile. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
 -   Pour des raisons de sécurité, nous vous recommandons de ne pas attacher ni restaurer des bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou tout autre code défini par l’utilisateur, de la base de données.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48107599"
   
 #### <a name="to-restore-a-full-database-backup"></a>Pour restaurer une sauvegarde complète de base de données  
   
-1.  Exécutez l'instruction RESTORE DATABASE pour restaurer la sauvegarde complète de la base de données, en spécifiant :  
+1.  Exécutez l'instruction RESTORE DATABASE pour restaurer la sauvegarde complète de la base de données, en spécifiant :  
   
     -   le nom de la base de données à restaurer ;  
   
@@ -56,7 +56,7 @@ ms.locfileid: "48107599"
     -   la clause NORECOVERY si vous devez appliquer la sauvegarde différentielle de base de données ou du journal des transactions après avoir restauré la sauvegarde complète de base de données.  
   
     > [!IMPORTANT]  
-    >  Pour restaurer une base de données chiffrée, vous devez avoir accès au certificat ou à la clé asymétrique qui a servi à chiffrer la base de données. Sans le certificat et la clé asymétrique, la base de données ne peut pas être restaurée. En conséquence, le certificat utilisé pour chiffrer la clé de chiffrement de base de données doit être conservé tant que la sauvegarde est utile. Pour plus d’informations, consultez [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
+    >  Pour restaurer une base de données chiffrée, vous devez avoir accès au certificat ou à la clé asymétrique qui a servi à chiffrer la base de données. Sans le certificat et la clé asymétrique, la base de données ne peut pas être restaurée. En conséquence, le certificat utilisé pour chiffrer la clé de chiffrement de base de données doit être conservé tant que la sauvegarde est utile. Pour plus d'informations, consultez [SQL Server Certificates and Asymmetric Keys](../security/sql-server-certificates-and-asymmetric-keys.md).  
   
 2.  Spécifiez éventuellement :  
   

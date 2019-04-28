@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fe75fc89ffa1642ebc3fa4301cb0a80c83895141
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730001"
 ---
 # <a name="checklist-use-powershell-to-verify-powerpivot-for-sharepoint"></a>Liste de vérification : utiliser PowerShell pour vérifier PowerPivot pour SharePoint
   Aucune opération d'installation ou de récupération de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] n'est terminée sans exécuter un test de vérification complet qui confirme que les services et les données sont opérationnels. Dans cet article, nous vous indiquons comment effectuer ces étapes avec Windows PowerShell. Nous avons consacré une section distincte à chaque étape afin que vous puissiez accéder directement aux tâches spécifiques. Par exemple, exécutez le script dans la section [Bases de données](#bkmk_databases) de cette rubrique pour vérifier le nom de l'application de service et des bases de données de contenu si vous souhaitez les planifier pour la maintenance ou la sauvegarde.  
@@ -29,7 +29,7 @@ ms.locfileid: "55087788"
 |-|  
 |**[!INCLUDE[applies](../../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- **Dans cette rubrique**: Les lettres dans la table des matières qui suit correspondent aux zones du schéma. Le schéma illustre les points suivants :  
+ **Dans cette rubrique**: Les éléments de lettres dans l’exemple suivant la table des matières correspondent aux zones du diagramme. Le schéma illustre les points suivants :  
   
 |||  
 |-|-|  
@@ -286,7 +286,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
   
  La commande suivante recherche le journal des événements Windows pour les événements associés à l'instance d' [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode SharePoint. Pour plus d’informations sur la désactivation des événements ou de modification du niveau d’événement, consultez [configurer et afficher les fichiers journaux SharePoint et la journalisation des diagnostics &#40;PowerPivot pour SharePoint&#41;](../../power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
- **Nom du service :** MSOLAP$POWERPIVOT  
+ **Nom du service :** MSOLAP$ POWERPIVOT  
   
  **Nom d’affichage dans les Services Windows :** SQL Server Analysis Services (POWERPIVOT)  
   

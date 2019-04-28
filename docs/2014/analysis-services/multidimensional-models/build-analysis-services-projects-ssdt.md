@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f1a0afbd256b26a3743d85f2e8e5d09bba428fff
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726861"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Générer des projets Analysis Services (SSDT)
   Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], la procédure de génération d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est semblable à celle que vous suivez pour générer un projet de programmation dans Visual Studio. Lorsque vous générez le projet, un ensemble de fichiers XML est créé dans le répertoire de sortie. Ces fichiers XML utilisent le langage ASSL (Analysis Services Scripting Language), qui correspond au dialecte XML utilisé par les applications clientes telles que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour communiquer avec une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] afin de créer ou de modifier des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Ils permettent de déployer des définitions d’objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] d’un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dans une instance spécifique d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  

@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2bf67585a29ffe1e055efaf9132656c3d1da5dc4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837656"
 ---
 # <a name="sql-server-backward-compatibility"></a>Compatibilité descendante SQL Server
   Les rubriques de la section consacrée à la compatibilité descendante décrivent les changements de comportement de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] entre les différentes versions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

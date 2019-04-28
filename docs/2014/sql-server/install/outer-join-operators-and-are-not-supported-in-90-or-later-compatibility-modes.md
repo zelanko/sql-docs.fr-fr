@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 01584c368f9af43a8e63ec04d3eaf4f9228d9c96
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010785"
 ---
 # <a name="outer-join-operators--and--are-not-supported-in-90-or-later-compatibility-modes"></a>Les opérateurs de jointure externe \*= et =\* ne sont pas pris en charge en mode de compatibilité 90 ou ultérieur
   Conseiller de mise à niveau a détecté l’utilisation d’opérateurs de jointure externe \*= et =\*. Ces opérateurs ne sont pas pris en charge en mode de compatibilité 90 ou ultérieur. Lorsque vous effectuez une mise à niveau, les bases de données utilisateur conservent leur mode de compatibilité. Les instructions qui utilisent des opérateurs vont échouer.  

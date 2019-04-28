@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47717117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63001385"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ sp_syscollector_update_collection_item
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @collection_item_id =] *collection_item_id*  
+ [ @collection_item_id = ] *collection_item_id*  
  Identificateur unique qui identifie l'élément de collecte. *collection_item_id* est **int** avec une valeur par défaut NULL. *collection_item_id* doit avoir une valeur si *nom* est NULL.  
   
  [ @name =] '*nom*'  
@@ -58,7 +58,7 @@ sp_syscollector_update_collection_item
   
  *new_name* doit être unique. Pour obtenir une liste de noms d'élément de collecte actuels, interrogez la vue système syscollector_collection_items.  
   
- [ @frequency =] *fréquence*  
+ [ @frequency = ] *frequency*  
  Fréquence (en secondes) de la collecte de données par cet élément de collecte. *fréquence* est **int**, avec une valeur par défaut de 5, la valeur minimale qui peut être spécifié.  
   
  [ @parameters =] '*paramètres*'  
@@ -82,7 +82,7 @@ ON ci.collection_set_id = cs.collection_set_id
 WHERE collection_item_id = <collection_item_id>;  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'appartenance au rôle de base de données fixe dc_admin ou dc_operator (avec autorisation EXECUTE) pour exécuter cette procédure. Même si dc_operator peut exécuter cette procédure stockée, les membres de ce rôle sont limités en ce qui concerne les propriétés qu'ils peuvent modifier. Les propriétés suivantes peuvent être modifiées uniquement par dc_admin :  
   
 -   @new_name  

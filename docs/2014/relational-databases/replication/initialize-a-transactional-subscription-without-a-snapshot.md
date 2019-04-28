@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c0cef8a7e8a64935cca6b378e14c00eb0d80f6b8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721155"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>Initialiser un abonnement transactionnel sans instantané
   Par défaut, un abonnement à une publication transactionnelle est initialisé avec un instantané, lequel est généré par l'Agent d'instantané et appliqué par l'Agent de distribution. Dans certains scénarios, comme ceux impliquant de volumineux datasets initiaux, il est préférable d'initialiser un abonnement à l'aide d'une autre méthode. Autres méthodes d'initialisation d'un abonné :  

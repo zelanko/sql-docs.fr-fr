@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e67d8818fb20d339c4166f606d15e0f7dbceced
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52800582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015261"
 ---
 # <a name="using-messages"></a>Utilisation de messages
   Dans SMO, les messages système sont représentés par l'objet <xref:Microsoft.SqlServer.Management.Smo.SystemMessageCollection> qui appartient à l'objet `Server`. Comme les messages système ne peuvent pas être modifiés, les propriétés d'objet `SystemMessage` sont en lecture seule.  

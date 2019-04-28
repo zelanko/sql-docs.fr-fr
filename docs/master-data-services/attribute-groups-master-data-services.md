@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fab92b86d9df1ca0000fb762602280b14e6a1aa7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012988"
 ---
 # <a name="attribute-groups-master-data-services"></a>Groupes d'attributs (Master Data Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "52760431"
 ## <a name="show-or-hide-attribute-groups"></a>Afficher ou masquer les groupes d'attributs  
  Lorsque vous créez un groupe d'attributs, il est automatiquement masqué pour tous les utilisateurs, à l'exception de son créateur. Pour plus d’informations sur le fait de rendre visible le groupe, consultez [Rendre un groupe d’attributs visible pour les utilisateurs &#40;Master Data Services&#41;](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md).  
   
- Si vous souhaitez masquer un attribut spécifique dans un groupe, vous pouvez lui affecter une autorisation **Refuser** . Pour plus d’informations, consultez [Autorisations de feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md).  
+ Si vous souhaitez masquer un attribut spécifique dans un groupe, vous pouvez lui affecter une autorisation **Refuser**. Pour plus d’informations, consultez [Autorisations de feuille &#40;Master Data Services&#41;](../master-data-services/leaf-permissions-master-data-services.md).  
   
 ## <a name="related-tasks"></a>Tâches associées  
   

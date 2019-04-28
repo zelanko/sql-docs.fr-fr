@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23ad4cd92d186f43fb1a9dd81e1dbb0727170367
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721134"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>Initialiser un abonnement avec un instantané
   Lorsqu'une publication est créée, un instantané initial est généralement créé puis copié dans le dossier d'instantanés (cela se produit par défaut pour les publications de fusion créées avec l'Assistant Nouvelle publication). Il est ensuite appliqué à l'Abonné par l'Agent de distribution (pour les publications transactionnelles et d'instantané) ou l'Agent de fusion (pour les publications de fusion) lors de la synchronisation initiale de l'abonnement. Le processus d'instantané dépend du type de publication :  

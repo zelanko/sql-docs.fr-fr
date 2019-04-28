@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a0fa6b877b0c4f9dd2754301c9b2e47964b1ad9e
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874547"
 ---
 # <a name="clr-table-valued-functions"></a>Fonctions table CLR
   Une fonction table est une fonction définie par l'utilisateur qui retourne une table.  

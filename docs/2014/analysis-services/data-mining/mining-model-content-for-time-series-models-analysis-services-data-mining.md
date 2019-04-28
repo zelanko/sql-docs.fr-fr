@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 03d108e015b831f44c84747b48afd110bf3fe2f3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733585"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de séries chronologiques (Analysis Services - Exploration de données)
   Tous les modèles d'exploration de données utilisent la même structure pour stocker leur contenu. Cette structure est définie d'après l'ensemble de lignes de schéma du contenu de l'exploration de données. Toutefois, dans cette structure standard, les nœuds qui contiennent des informations sont organisés de différentes façons pour représenter différents types d'arbres. Cette rubrique décrit l'organisation des nœuds, ainsi que la signification de chacun, pour les modèles d'exploration de données qui sont basés sur l'algorithme MTS ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series).  
@@ -312,7 +312,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> Fonctionnement de l'arbre ARIMA  
  Chaque structure d'un modèle ARIMA correspond à une *périodicité* ou *structure périodique*. Une structure périodique est un modèle de données qui se répète dans l'ensemble de la série de données. Une variation mineure dans le modèle est autorisée, dans les limites statistiques. La périodicité est mesurée en fonction des unités de temps par défaut qui ont été utilisées dans les données d'apprentissage. Par exemple, si les données d'apprentissage fournissent les données de ventes pour chaque jour, l'unité de temps par défaut est un jour, et toutes les structures périodiques sont définies sous la forme d'un nombre de jours spécifié.  
   
- Chaque période détectée par l'algorithme obtient son propre nœud de structure. Par exemple, si vous analysez les données de ventes quotidiennes, le modèle peut détecter des structures périodiques qui représentent les semaines. Dans le cas présent, l'algorithme créera deux structures périodiques dans le modèle fini : une pour la période quotidienne par défaut, notée {1}, et une pour les semaines, signalée par {7}.  
+ Chaque période détectée par l'algorithme obtient son propre nœud de structure. Par exemple, si vous analysez les données de ventes quotidiennes, le modèle peut détecter des structures périodiques qui représentent les semaines. Dans ce cas, l’algorithme créera deux structures périodiques dans le modèle fini : une pour la période par défaut quotidienne, notée en tant que {1}, et une pour les semaines, signalée par {7}.  
   
  Par exemple, la requête suivante retourne toutes les structures ARIMA d'un modèle d'exploration de données.  
   
@@ -336,7 +336,7 @@ WHERE NODE_TYPE = 27
 |Prévision|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
 |Prévision|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
 |Prévision|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Prévision|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
+|Prévision|T1'000 Pacifique : quantité | TA0000000b | 27 | ARIMA (1,0,3)|  
   
  À partir de ces résultats, que vous pouvez également parcourir à l’aide de la [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](../microsoft-generic-content-tree-viewer-data-mining.md), vous pouvez indiquer, d’un seul coup d’œil, les séries qui sont complètement linéaires, celles qui ont plusieurs structures périodiques et les périodicités qui ont été découvertes.  
   
@@ -401,7 +401,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **DESCRIPTION DU NŒUD :** Affiche le long format de l’équation, qui est également la forme de l’équation qui apparaît dans le **légende d’exploration de données**. La forme longue de l'équation est semblable à la forme abrégée, mais les valeurs réelles des coefficients sont affichées au lieu d'être dénombrées.  
   
- **NODE_RULE :** Affiche une représentation XML de l’équation. En fonction du type de nœud, la représentation XML peut inclure une seule ou plusieurs structures périodiques. Le tableau suivant illustre la façon dont les nœuds XML sont reportés jusqu'aux niveaux supérieurs du modèle ARIMA.  
+ **NODE_RULE:** Affiche une représentation XML de l’équation. En fonction du type de nœud, la représentation XML peut inclure une seule ou plusieurs structures périodiques. Le tableau suivant illustre la façon dont les nœuds XML sont reportés jusqu'aux niveaux supérieurs du modèle ARIMA.  
   
 |Type de nœud|Contenu XML|  
 |---------------|-----------------|  

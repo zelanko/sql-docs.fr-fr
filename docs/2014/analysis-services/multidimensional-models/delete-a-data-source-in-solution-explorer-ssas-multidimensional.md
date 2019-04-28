@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 648c974b1a23128c9d6c6e3977494291ef182510
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726273"
 ---
 # <a name="delete-a-data-source-in-solution-explorer-ssas-multidimensional"></a>Supprimer une source de données dans l'Explorateur de solutions (SSAS Multidimensionnel)
   Vous pouvez supprimer un objet de source de données afin de l'effacer définitivement d'un projet de modèle multidimensionnel Analysis Services.  
@@ -45,7 +45,7 @@ ms.locfileid: "48113341"
      Après avoir supprimé une source de données dans un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , vous devez enregistrer le projet modifié. Dans le cas contraire, vous recevrez un message d’erreur la prochaine fois que vous ouvrirez le projet, car le fichier XML sous-jacent de la source de données supprimée sera manquant lorsque le projet tentera de charger la source de données supprimée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données dans les modèles multidimensionnels](data-sources-in-multidimensional-models.md)   
+ [Sources de données dans des modèles multidimensionnels](data-sources-in-multidimensional-models.md)   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7437296543aa762ce51f5a31592a724cd0004419
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53361382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728475"
 ---
-# <a name="lesson-6-defining-calculations"></a>Leçon 6 : Définition de calculs
+# <a name="lesson-6-defining-calculations"></a>Leçon 6 : Définition des calculs
   Dans cette leçon, vous apprenez à définir des calculs, qui sont des expressions ou des scripts MDX (Multidimensional Expressions). Les calculs vous permettent de définir des membres calculés, des jeux nommés et d'exécuter d'autres commandes de script pour étendre les possibilités d'un cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Par exemple, vous pouvez exécuter une commande de script pour définir un sous-cube et assigner un calcul aux cellules du sous-cube.  
   
  Lorsque vous définissez un nouveau calcul dans le Concepteur de cube, ce calcul est ajouté au volet **Organisateur de script** de l'onglet **Calculs** du Concepteur de cube, et les champs pour ce type de calcul particulier s'affichent dans un formulaire de calcul dans le volet **Expressions de calcul** . Les calculs sont exécutés dans l'ordre où ils apparaissent dans le volet **Organisateur de script** . Vous pouvez changer l’ordre des calculs en cliquant avec le bouton droit sur un calcul particulier, puis en sélectionnant **Monter** ou **Descendre**. Ou bien, vous pouvez cliquer sur un calcul particulier, puis utiliser l’icône **Monter** ou **Descendre** de la barre d’outils de l’onglet **Calculs** .  
@@ -53,7 +53,7 @@ ms.locfileid: "53361382"
  Dans cette tâche, vous apprenez à définir des jeux nommés.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 7 : Définition des indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Leçon 7 : Définition des indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)   

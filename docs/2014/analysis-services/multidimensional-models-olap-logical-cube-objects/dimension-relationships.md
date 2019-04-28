@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec3b57b08460b834868581ac8872ac3c78a38bbe
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727785"
 ---
 # <a name="dimension-relationships"></a>Relations de dimension
   L'utilisation d'une dimension définit les relations entre une dimension de cube et les groupes de mesures d'un cube. Une dimension de cube est une instance d'une dimension de base de données qui est utilisée dans un cube spécifique. Un cube peut (et c'est souvent le cas) avoir des dimensions de cube qui ne sont pas directement liées à un groupe de mesures, mais qui peuvent être indirectement liées au groupe de mesures via une autre dimension ou un autre groupe de mesures. Lorsque vous ajoutez un groupe de dimension ou une mesure de base de données à un cube, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente de déterminer l’utilisation de la dimension en examinant les relations entre les tables de dimension et les tables de faits dans la vue de source de données du cube et en examinant les relations entre les attributs dans les dimensions. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] définit automatiquement les paramètres d'utilisation de la dimension pour les relations qu'il peut détecter.  

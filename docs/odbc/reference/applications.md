@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dc655740701822d8c6ff9595327b906ee9a67026
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734995"
 ---
 # <a name="applications"></a>Applications
 Un *application* est un programme qui appelle l’API ODBC pour accéder aux données. Bien que de nombreux types d’applications sont possibles, la plupart se répartissent en trois catégories, qui sont utilisés comme exemples dans ce guide.  

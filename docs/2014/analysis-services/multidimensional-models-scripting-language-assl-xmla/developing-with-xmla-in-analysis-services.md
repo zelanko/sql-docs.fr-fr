@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00cb50fe4c71ad853e88ebd86b0891ca4bc24604
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60156595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727226"
 ---
 # <a name="developing-with-xmla-in-analysis-services"></a>Développement avec XMLA dans Analysis Services
   XMLA (XML for Analysis) est un protocole XML basé sur SOAP (Simple Object Access Protocol) conçu spécifiquement pour offrir un accès universel à n'importe quelle source de données multidimensionnelle standard accessible via une connexion HTTP. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise XMLA comme seul protocole pour communiquer avec les applications clientes. Fondamentalement, toutes les bibliothèques clientes prises en charge par Analysis Services formulent des demandes et des réponses XMLA.  

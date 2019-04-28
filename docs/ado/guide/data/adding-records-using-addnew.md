@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 68b1a34a5d23d9aab32b6216eda3b3ef8f977e79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47819523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010731"
 ---
 # <a name="adding-records-using-addnew-method"></a>Ajout d’enregistrements à l’aide de AddNew (méthode)
 Voici la syntaxe de base de la **AddNew** méthode :
 
- *jeu d’enregistrements*. AddNew *FieldList*, *valeurs*
+ *recordset*.AddNew *FieldList*, *Values*
 
  Le *FieldList* et *valeurs* arguments sont facultatifs. *Liste de champs* est un nom unique ou un tableau de noms ou les positions ordinales des champs dans le nouvel enregistrement.
 

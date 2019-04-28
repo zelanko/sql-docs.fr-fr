@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c97c07d34de2b17b6966ab269004612c966b961
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856443"
 ---
 # <a name="stored-procedure-properties-general-page"></a>Propriétés de la procédure stockée (page Général)
   Affiche des informations sur une procédure stockée. Toutes les informations sont en lecture seule.  

@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f5333d67e40d4abc10134f339e39a41c83fbcc1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722791"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Déployer une solution d'exploration de données sur des versions antérieures de SQL Server
   Cette section décrit des problèmes de compatibilité connus qui peuvent survenir lorsque vous essayez de déployer un modèle d'exploration de données ou une structure d'exploration de données créée dans une instance de [!INCLUDE[ssASCurrent](../../includes/ssascurrent-md.md)] sur une base de données qui utilise SQL Server 2005 Analysis Services, ou lorsque vous déployez des modèles créés dans SQL Server 2005 sur une instance de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -79,6 +79,6 @@ ms.locfileid: "48218689"
  Si vous essayez de synchroniser une base de données [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , le serveur retourne une erreur et la synchronisation de la base de données échoue.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Compatibilité descendante d’Analysis Services](../analysis-services-backward-compatibility.md)  
+ [Compatibilité descendante Analysis Services](../analysis-services-backward-compatibility.md)  
   
   

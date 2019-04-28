@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b30322bb48cfff6e0bca092d72aa9d5ad0990948
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875072"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>Restaurer les fichiers à un nouvel emplacement (SQL Server)
   Cette rubrique explique comment restaurer des fichiers à un nouvel emplacement dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -89,7 +89,7 @@ ms.locfileid: "58527911"
     |**Restaurer**|Les cases à cocher sélectionnées correspondent aux jeux de sauvegarde à restaurer.|  
     |**Nom**|Nom du jeu de sauvegarde.|  
     |**Type de fichier**|Spécifie le type de données de la sauvegarde : **Données**, **journal**, ou **données Filestream**. Les données qui sont contenues dans les tables sont dans les fichiers **Données** . Les données du journal des transactions sont dans les fichiers **Journaux** . Les données des objets BLOB (Binary Large Object) qui sont stockées dans le système de fichiers se trouvent dans des fichiers **Données Filestream** .|  
-    |**Type**|Types de sauvegarde proposés : **Complète**, **Différentielle** ou **Journal des transactions**.|  
+    |**Type**|Le type de sauvegarde effectué : **Complète**, **Différentielle** ou **Journal des transactions**.|  
     |**Server**|Nom de l'instance Base de données-Moteur ayant effectué l'opération de sauvegarde.|  
     |**Nom logique du fichier**|Comme son nom l'indique.|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  

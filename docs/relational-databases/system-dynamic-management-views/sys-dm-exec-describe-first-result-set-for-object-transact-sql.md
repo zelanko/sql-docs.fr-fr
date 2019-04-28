@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013928"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set_for_object(OBJECT_ID('TestPr
 GO  
 ```  
   
-### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>b. Combinaison de la fonction sys.dm_exec_describe_first_result_set_for_object avec une table ou une vue  
+### <a name="b-combining-the-sysdmexecdescribefirstresultsetforobject-function-and-a-table-or-view"></a>B. Combinaison de la fonction sys.dm_exec_describe_first_result_set_for_object avec une table ou une vue  
  L’exemple suivant utilise à la fois la vue de catalogue de système sys.procedures et **sys.dm_exec_describe_first_result_set_for_object** (fonction) pour afficher les métadonnées des jeux de résultats de toutes les procédures stockées dans le [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de données.  
   
 ```  

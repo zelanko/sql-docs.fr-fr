@@ -21,11 +21,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 31b22b1dce53bb82f85ae946290024408d2facd3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874481"
 ---
 # <a name="requirements-for-clr-user-defined-aggregates"></a>Conditions requises pour les agrégats CLR définis par l'utilisateur
   Un type dans un assembly CLR (Common Language Runtime) peut être enregistré comme une fonction d'agrégation définie par l'utilisateur, tant qu'il implémente le contrat d'agrégation requis. Ce contrat se compose de l'attribut `SqlUserDefinedAggregate` et des méthodes du contrat d'agrégation. Le contrat d'agrégation inclut le mécanisme permettant d'enregistrer l'état intermédiaire de l'agrégation, ainsi que le mécanisme permettant d'accumuler de nouvelles valeurs, lequel est composé de quatre méthodes : `Init`, `Accumulate`, `Merge` et `Terminate`. Lorsque ces conditions sont satisfaites, vous serez en mesure de tirer pleinement parti des agrégats définis par l’utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Les sections suivantes de cette rubrique fournissent des détails supplémentaires sur la façon de créer et d'utiliser les agrégats définis par l'utilisateur. Pour obtenir un exemple, consultez [Invoking CLR User-Defined les fonctions d’agrégation](clr-user-defined-aggregate-invoking-functions.md).  
@@ -38,7 +38,7 @@ ms.locfileid: "53376065"
   
 |Méthode|Syntaxe|Description|  
 |------------|------------|-----------------|  
-|`Init`|Init() void publique ;|Le processeur de requêtes utilise cette méthode pour initialiser le calcul de l'agrégation. Cette méthode est appelée une fois pour chaque groupe dont le processeur de requêtes effectue l'agrégation. Le processeur de requêtes peut choisir de réutiliser la même instance de la classe d'agrégation pour calculer des agrégats de plusieurs groupes. La méthode `Init` doit effectuer tout nettoyage nécessaire à partir des utilisations précédentes de cette instance et lui permettre de redémarrer un nouveau calcul d'agrégation.|  
+|`Init`|public void Init();|Le processeur de requêtes utilise cette méthode pour initialiser le calcul de l'agrégation. Cette méthode est appelée une fois pour chaque groupe dont le processeur de requêtes effectue l'agrégation. Le processeur de requêtes peut choisir de réutiliser la même instance de la classe d'agrégation pour calculer des agrégats de plusieurs groupes. La méthode `Init` doit effectuer tout nettoyage nécessaire à partir des utilisations précédentes de cette instance et lui permettre de redémarrer un nouveau calcul d'agrégation.|  
 |`Accumulate`|public Accumulate void (valeur de type d’entrée [, valeur de type d’entrée,...]) ;|Un ou plusieurs paramètres représentant les paramètres de la fonction. *INPUT_TYPE* doit être managé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données équivalent natif [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type de données spécifié par *input_sqltype* dans le `CREATE AGGREGATE` instruction. Pour plus d’informations, consultez [mappage des données de paramètre CLR](../clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md).<br /><br /> Pour les types définis par l'utilisateur (UDT), le type d'entrée est le même que le type UDT. Le processeur de requêtes utilise cette méthode pour accumuler les valeurs d'agrégation. La méthode est appelée une fois pour chaque valeur dans le groupe qui fait l'objet de l'agrégation. Le processeur de requêtes l'appelle uniquement après avoir appelé la méthode `Init` sur l'instance donnée de la classe d'agrégation. L'implémentation de cette méthode doit mettre à jour l'état de l'instance pour refléter l'accumulation de la valeur d'argument qui est passée.|  
 |`Merge`|Fusion void publique (valeur udagg_class) ;|Cette méthode peut être utilisée pour fusionner une autre instance de cette classe d'agrégation avec l'instance actuelle. Le processeur de requêtes utilise cette méthode pour fusionner plusieurs calculs partiels d'une agrégation.|  
 |`Terminate`|return_type publique utiliser Terminate() ;|Cette méthode termine le calcul d'agrégation et retourne le résultat de l'agrégation. Le *return_type* doit être managé [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de type de données qui est l’équivalent managé de *return_sqltype* spécifié dans le `CREATE AGGREGATE` instruction. Le *return_type* peut également être un type défini par l’utilisateur.|  

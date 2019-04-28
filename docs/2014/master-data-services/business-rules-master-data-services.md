@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 211434d182a0c3fd6da777b8834380a67c4d58c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877233"
 ---
 # <a name="business-rules-master-data-services"></a>Règles d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], une règle d'entreprise est une règle qui vous permet de vérifier la qualité et l'exactitude de vos données de référence. Vous pouvez utiliser une règle d'entreprise pour mettre à jour automatiquement vos données, envoyer un message électronique ou démarrer un processus ou un flux de travail d'entreprise.  

@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000348"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Détection et résolution avancées des conflits de réplication de fusion
   Lorsqu'un serveur de publication et un Abonné sont connectés et que la synchronisation se produit, l'Agent de fusion détecte la présence d'éventuels conflits. Si tel est le cas, l'Agent de fusion utilise un programme de résolution de conflits (spécifié lorsqu'un article est ajouté à une publication) pour déterminer les données qui doivent être acceptées et propagées aux autres sites.  
@@ -94,9 +94,9 @@ ms.locfileid: "54132879"
   
  Pour spécifier un type d'abonnement de fusion et une priorité pour la résolution des conflits, consultez  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Spécifiez un Type d’abonnement de fusion et une priorité de résolution de conflits &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Spécifier un type d’abonnement de fusion et une priorité pour la résolution des conflits &#40;SQL Server Management Studio&#41;](../specify-a-merge-subscription-type-and-conflict-resolution-priority.md)  
   
--   Réplication [!INCLUDE[tsql](../../../includes/tsql-md.md)] programmation et la programmation d’objets RMO (Replication Management Objects) : [Créer un abonnement par extraction](../create-a-pull-subscription.md) et [créer un abonnement envoyé](../create-a-push-subscription.md)  
+-   Programmation [!INCLUDE[tsql](../../../includes/tsql-md.md)] de la réplication et programmation RMO (Replication Management Objects) : [Créer un abonnement par extraction de données (pull)](../create-a-pull-subscription.md) et [Créer un abonnement par émission (push)](../create-a-push-subscription.md).  
   
 ### <a name="interactive-resolver"></a>Programme de résolution interactif  
  La réplication fournit une interface utilisateur du programme de résolution interactif, exploitable en association avec le programme de résolution de conflits par défaut basé sur les priorités ou avec un programme de résolution d'articles. Lors d'une synchronisation à la demande via le Gestionnaire de synchronisation [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows, le programme de résolution interactif affiche les données conflictuelles durant l'exécution et vous permet de choisir le moyen de résoudre les conflits. Pour plus d'informations sur la manière d'activer la résolution interactive et de démarrer le programme de résolution interactif, consultez [Interactive Conflict Resolution](advanced-merge-replication-conflict-interactive-resolution.md).  

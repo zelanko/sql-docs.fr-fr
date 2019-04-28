@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b064db7ff0e496ea7a46085825afc202fced605
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726358"
 ---
 # <a name="define-cube-hierarchy-properties"></a>Définir les propriétés des hiérarchies de cube
   Les propriétés des hiérarchies de cube vous permettent de spécifier des paramètres uniques pour les hiérarchies définies par l'utilisateur des dimensions de cube à partir de la même dimension de base de données. Le tableau suivant décrit les propriétés d'une hiérarchie de cube.  
@@ -28,7 +28,7 @@ ms.locfileid: "48087319"
 |--------------|-----------------|  
 |`Enabled`|Détermine si la hiérarchie est activée pour la dimension de cube.|  
 |`HierarchyID`|Contient l'identificateur unique (ID) de la hiérarchie.|  
-|`OptimizedState`|Détermine le niveau d'optimisation appliqué à la hiérarchie. Cette propriété peut avoir les valeurs suivantes :<br /><br /> `FullyOptimized`: L’instance construit des index pour la hiérarchie améliorer les performances de requête. Il s'agit de la valeur par défaut.<br /><br /> `NotOptimized`: L’instance ne génère pas d’index supplémentaires.|  
+|`OptimizedState`|Détermine le niveau d'optimisation appliqué à la hiérarchie. Cette propriété peut avoir les valeurs suivantes :<br /><br /> `FullyOptimized`: L'instance construit des index pour la hiérarchie afin d'augmenter les performances en matière de requêtes. Valeur par défaut.<br /><br /> `NotOptimized`: L'instance ne construit pas d'index supplémentaire.|  
 |`Visible`|Détermine la visibilité de la hiérarchie du cube. La valeur par défaut est `True`.|  
   
 ## <a name="see-also"></a>Voir aussi  

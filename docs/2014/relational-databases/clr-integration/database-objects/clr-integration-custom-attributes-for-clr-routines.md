@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 817591cec64a4210c4cc573588be1b8ac6dfb8a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873808"
 ---
 # <a name="custom-attributes-for-clr-routines"></a>Attributs personnalisés pour les routines CLR
   Les attributs répertoriés peuvent être appliqués au common language runtime (CLR) routines, types définis par l’utilisateur et les agrégats définis par l’utilisateur qui sont inscrits dans [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)]. Si l'attribut n'est pas appliqué, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise la valeur par défaut. Les attributs répertoriés sont définis dans l'espace de noms `Microsoft.SqlServer.Server`.  

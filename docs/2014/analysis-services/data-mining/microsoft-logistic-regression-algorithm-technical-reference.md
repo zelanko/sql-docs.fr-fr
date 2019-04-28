@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 157baeb7e5bd8fb53b2435f55e3e71c098632002
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733921"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)
   L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Logistic Regression) est une variante de l’algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network), où le paramètre *HIDDEN_NODE_RATIO* 0. Ce paramètre crée un modèle de réseau neuronal qui ne contient pas de couche masquée et qui, par conséquent, est équivalent à la régression logistique.  
@@ -61,7 +61,7 @@ ms.locfileid: "52518054"
   
  Μg = p - (probabilité antérieure d’un état)  
   
- StdDev = sqrt(p(1-p))  
+ StdDev  = sqrt(p(1-p))  
   
  Valeur est présente :     (1-μ)/σ / / (1 moins mu) divisé par sigma)  
   
@@ -85,7 +85,7 @@ WHERE NODE_TYPE = 23
   
  Pour chaque valeur de sortie, cette requête retourne les coefficients et un ID qui pointe en retour vers le nœud d'entrée associé. Elle retourne également une ligne qui contient la valeur de la sortie et de l'ordonnée à l'origine. Chaque entrée X a son propre coefficient (Ci), mais la table imbriquée contient également un coefficient « libre » (Co), calculé en fonction de la formule suivante :  
   
- F (x) = X1 * C1 + X2\*C2 +... + Xn\*Cn + X0  
+ F(X) = X1*C1 + X2\*C2 + ... +Xn\*Cn + X0  
   
  Activation : exp (F (X)) / (1 + exp (F (X)))  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55eab0bbfacdde17ff69dd36a0641561695bc14d
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872205"
 ---
 # <a name="create-a-database-mail-profile"></a>Créer un profil de messagerie de base de données
   Utilisez l' **Assistant Configuration de la messagerie de base de données** ou [!INCLUDE[tsql](../../includes/tsql-md.md)] pour créer des profils privés et publics de messagerie de base de données.  
@@ -34,7 +34,7 @@ ms.locfileid: "53979135"
 ###  <a name="Security"></a> Sécurité  
  Un profil public permet à tout utilisateur ayant accès à la base de données **msdb** d’envoyer des e-mails à l’aide de ce profil. Un profil privé peut être utilisé par un utilisateur ou par un rôle. Accorder l'accès de rôles aux profils permet de créer une architecture plus facile à maintenir. Pour envoyer du courrier, vous devez être membre du rôle **DatabaseMailUserRole** de la base de données **msdb** et disposer d'au moins un accès à un profil de messagerie de base de données.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  L'utilisateur qui crée les comptes de profils et exécute des procédures stockées doit être membre du rôle serveur fixe sysadmin.  
   
 
@@ -52,7 +52,7 @@ ms.locfileid: "53979135"
   
 -   Dans la page **Gérer les profils et les comptes** , sélectionnez l'option **Créer un nouveau profil** , puis cliquez sur **Suivant**.  
   
--   Sur le **nouveau profil** page, spécifiez le nom du profil, Description et ajouter des comptes pour être inclus dans le profil, puis cliquez sur **suivant**.  
+-   Dans la page **Nouveau profil**, spécifiez le nom de profil et la description, et ajoutez des comptes à inclure dans le profil, puis cliquez sur **Suivant**.  
   
 -   Dans la page **Terminer l'Assistant** , examinez les actions à exécuter, puis cliquez sur **Terminer** pour terminer la création du nouveau profil.  
   

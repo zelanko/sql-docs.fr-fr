@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e56e641a594d9a543c70485dc37daaf83f5e46f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724174"
 ---
 # <a name="sysdmdbxtptransactions-transact-sql"></a>sys.dm_db_xtp_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "47757358"
 |dependent_7_address|**varbinary(8)**|À usage interne uniquement|  
 |dependent_8_address|**varbinary(8)**|À usage interne uniquement|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

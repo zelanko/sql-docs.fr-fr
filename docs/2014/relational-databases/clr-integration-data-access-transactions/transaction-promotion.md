@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bf30b06849c0384d118edf635a6361712c2d22f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48212929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874762"
 ---
 # <a name="transaction-promotion"></a>Promotion des transactions
   La *promotion* des transactions décrit une transaction locale légère qui peut être promue automatiquement en une transaction entièrement distribuable si nécessaire. Lorsqu'une procédure stockée managée est appelée au sein d'une transaction de base de données sur le serveur, le CLR s'exécute dans le contexte d'une transaction locale.  Si une connexion à un serveur distant est ouverte dans une transaction de base de données, la connexion au serveur distant est inscrite dans la transaction distribuée et la transaction locale est promue automatiquement en une transaction distribuée. Ainsi, la promotion des transactions réduit les charges mémoire des transactions distribuées en différant la création d'une transaction distribuée tant qu'elle n'est pas nécessaire. La promotion des transactions est automatique, si elle a été activée à l'aide du mot clé `Enlist`, et ne requiert aucune intervention du développeur. Le fournisseur de données .NET Framework pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assure la prise en charge de la promotion des transactions au travers des classes de l'espace de noms `System.Data.SqlClient` du .NET Framework.  

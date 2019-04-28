@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c0ed819643e7ea818fc17c0fa317473afc8f5ca3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007864"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>Liaison de colonnes pour une utilisation avec des curseurs de bloc
 Étant donné que les curseurs de bloc retournent plusieurs lignes, les applications qui les utilisent doivent lier un tableau de variables à chaque colonne plutôt qu’une variable unique. Ces tableaux est collectivement regroupés sous le *tampons de l’ensemble de lignes*. Voici les deux styles de liaison :  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6370034c90acf91bcf69fc0dee697f48458b7e22
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722902"
 ---
 # <a name="data-mining-projects"></a>Projets d'exploration de données
   Un projet d'exploration de données fait partie d'une solution [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pendant le processus de conception, les objets que vous créez dans ce projet sont disponibles à des fins de test et d'interrogation dans le cadre d'une base de données d'espace de travail. Lorsque vous souhaitez que les utilisateurs puissent interroger ou parcourir les objets dans le projet, vous devez déployer le projet sur une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s'exécutant en mode multidimensionnel.  

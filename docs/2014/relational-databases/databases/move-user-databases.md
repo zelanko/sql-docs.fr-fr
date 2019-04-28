@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 602ac6de5a2b623e33b1b85b46a9f8cf31e0b225
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871718"
 ---
 # <a name="move-user-databases"></a>Déplacer des bases de données utilisateur
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez déplacer les fichiers de données, les fichiers journaux et les fichiers de catalogues de texte intégral d’une base de données utilisateur vers un nouvel emplacement, en spécifiant le nouvel emplacement de fichier dans la clause FILENAME de l’instruction [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) . Cette méthode s'applique au déplacement des fichiers de base de données dans la même instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Pour déplacer une base de données vers une autre instance [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou vers un autre serveur, utilisez les opérations de [sauvegarde et de restauration](../backup-restore/back-up-and-restore-of-sql-server-databases.md) ou les [opérations de détachement et d'attachement](move-a-database-using-detach-and-attach-transact-sql.md).  

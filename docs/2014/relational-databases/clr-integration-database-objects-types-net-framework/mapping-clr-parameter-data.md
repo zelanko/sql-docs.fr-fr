@@ -27,11 +27,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b297d329f11e05ed1b1995004150644e4b76ec9b
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58477684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874837"
 ---
 # <a name="mapping-clr-parameter-data"></a>Mappage des données de paramètres CLR
   Le tableau suivant répertorie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] types de données, leurs équivalents dans le common language runtime (CLR) pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans le `System.Data.SqlTypes` espace de noms et leurs équivalents de CLR natifs dans le [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  

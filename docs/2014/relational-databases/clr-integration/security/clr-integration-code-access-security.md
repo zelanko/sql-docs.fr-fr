@@ -18,22 +18,22 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873741"
 ---
 # <a name="clr-integration-code-access-security"></a>Sécurité d'accès du code de l'intégration du CLR
   Le common language runtime (CLR) prend en charge un modèle de sécurité appelé sécurité d’accès du code pour le code managé. Dans ce modèle, les autorisations sont accordées aux assemblys selon l'identité du code. Pour plus d'informations, consultez la section relative à la sécurité d'accès du code dans le kit de développement logiciel (SDK) .NET Framework.  
   
  La stratégie de sécurité qui détermine les autorisations accordée aux assemblys est définie dans trois emplacements différents :  
   
--   Stratégie de l'ordinateur : il s'agit de la stratégie appliquée pour tout le code managé qui s'exécute sur l'ordinateur sur lequel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé.  
+-   Stratégie d’ordinateur : Il s’agit la stratégie en vigueur pour tout le code managé exécuté sur l’ordinateur sur lequel [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est installé.  
   
--   Stratégie de l'utilisateur : il s'agit de la stratégie appliquée pour le code managé hébergé par un processus. Pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service est en cours d’exécution.  
+-   Stratégie d’utilisateur : Il s’agit de la stratégie en vigueur pour le code managé hébergé par un processus. Pour [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service est en cours d’exécution.  
   
--   Stratégie de l'hôte : il s'agit de la stratégie configurée par l'hôte du CLR (dans ce cas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) qui est appliquée pour le code managé qui s'exécute sur cet hôte.  
+-   Stratégie d’hôte : Il s’agit la stratégie configurée par l’hôte du CLR (dans ce cas, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) qui est en vigueur pour le code managé en cours d’exécution sur cet hôte.  
   
  Le mécanisme de sécurité d'accès du code pris en charge par le CLR est basé sur la supposition que le module d'exécution peut héberger à la fois du code d'un niveau de confiance total et d'un niveau de confiance partiel. Les ressources qui sont protégées par la sécurité d’accès du code CLR sont généralement enveloppées par les interfaces de programmation d’application gérée cette autorisation correspondante requirethe avant d’autoriser l’accès à la ressource. Le demandfor l’autorisation est satisfaite seulement si tous les appelants (au niveau de l’assembly) dans la pile des appels ont l’autorisation de ressource correspondante.  
   
@@ -55,17 +55,17 @@ ms.locfileid: "48076000"
   
  Les assemblys `SAFE` ont les autorisations et valeurs suivantes :  
   
-|Autorisation|Valeur(s)/description|  
+|Permission|Valeur(s)/description|  
 |----------------|-----------------------------|  
 |`SecurityPermission`|`Execution:` autorisation d'exécuter le code managé.|  
-|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: seule la connexion contextuelle peut être utilisée et la chaîne de connexion peut spécifier uniquement une valeur de « context connection=true » ou « context connection=yes ».<br /><br /> **AllowBlankPassword = false :** mots de passe vides ne sont pas autorisées.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes` : Uniquement la connexion de contexte peut être utilisée et la chaîne de connexion ne peut spécifier une valeur de « connexion contextuelle = true » ou « connexion contextuelle = yes ».<br /><br /> **AllowBlankPassword = false :**  Mots de passe vides ne sont pas autorisées.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Assemblys EXTERNAL_ACCESS ont les mêmes autorisations que `SAFE` assemblys, avec possibilité en prime d’accéder aux ressources système externes telles que des fichiers, des réseaux, des variables d’environnement et le Registre.  
   
  Les assemblys `EXTERNAL_ACCESS` ont également les autorisations et valeurs suivantes :  
   
-|Autorisation|Valeur(s)/description|  
+|Permission|Valeur(s)/description|  
 |----------------|-----------------------------|  
 |`DistributedTransactionPermission`|`Unrestricted:` Les transactions distribuées sont autorisées.|  
 |`DNSPermission`|`Unrestricted:` Autorisation de demander des informations à partir de serveurs de noms de domaine.|  
@@ -108,9 +108,9 @@ ms.locfileid: "48076000"
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|Exécution uniquement|Exécution + accès aux ressources externes|Illimité (y compris P/Invoke)|  
 |`Programming model restrictions`|Oui|Oui|Aucune restriction|  
-|`Verifiability requirement`|Oui|Oui|non|  
+|`Verifiability requirement`|Oui|Oui|Non|  
 |`Local data access`|Oui|Oui|Oui|  
-|`Ability to call native code`|non|non|Oui|  
+|`Ability to call native code`|Non|Non|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécurité d’intégration du CLR](clr-integration-security.md)   

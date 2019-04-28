@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 09f0b1ece44841cb608469cf2087041d20a9bf39
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837281"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Ajouter, supprimer, modifier l'étendue de la variable définie par l'utilisateur dans un package
   Les procédures suivantes expliquent comment ajouter, supprimer et modifier l’étendue d’une variable définie par l’utilisateur dans un package, à l’aide de la fenêtre **Variables**.  

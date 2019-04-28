@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1f39b4295aceadc7c738ade04379d85d39377d9b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011567"
 ---
 # <a name="configure-a-report-server-for-remote-administration"></a>Configurer un serveur de rapports pour l'administration à distance
   Dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vous pouvez configurer des instances de serveur de rapports localement ou à distance. Pour configurer une instance de serveur de rapports à distance, vous pouvez faire appel à l’outil de configuration de Reporting Services ou bien écrire un code personnalisé qui utilise le fournisseur WMI (Windows Management Instrumentation) de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . L'outil de configuration de Reporting Services offre une interface graphique avec le fournisseur WMI pour vous permettre de configurer un serveur de rapports sans avoir à écrire du code. Lorsque vous démarrez l'outil, vous pouvez spécifier un serveur distant auquel vous connecter.  

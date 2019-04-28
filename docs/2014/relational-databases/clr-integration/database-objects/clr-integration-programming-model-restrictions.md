@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873815"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restrictions du modèle de programmation de l'intégration du CLR
   Quand vous créez une procédure stockée managée ou un autre objet de base de données managés, il existe certains contrôles de code effectués par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] effectue des contrôles sur l’assembly de code managé lorsqu’il est tout d’abord inscrit dans la base de données, à l’aide de la `CREATE ASSEMBLY` instruction et également lors de l’exécution. Le code managé est également vérifié pendant l'exécution, car dans un assembly il peut y avoir des chemins d'accès de code qui peuvent ne jamais être atteints pendant l'exécution.  Cela fournit la souplesse nécessaire pour inscrire notamment des assemblys tiers, afin qu'un assembly ne soit pas bloqué là où il y a du code « potentiellement dangereux » conçu pour s'exécuter dans un environnement client, mais ne soit jamais exécuté dans le CLR hébergé. Le code managé doit satisfaire les exigences varient selon que l’assembly est inscrit en tant que `SAFE`, `EXTERNAL_ACCESS`, ou `UNSAFE`, `SAFE` en cours les plus strictes et sont répertoriées ci-dessous.  

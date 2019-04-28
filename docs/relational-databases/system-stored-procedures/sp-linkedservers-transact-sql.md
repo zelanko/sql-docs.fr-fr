@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f21e65fab4cdedb37b2971e037f9b24c3b29fcd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957134"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,12 +49,12 @@ sp_linkedservers
 |**SRV_NAME**|**sysname**|Nom du serveur lié.|  
 |**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|Nom du fournisseur OLE DB gérant l'accès au serveur lié spécifié.|  
 |**SRV_PRODUCT**|**nvarchar(** 128 **)**|Nom de produit du serveur lié.|  
-|**INFORMATIONS SRV_DATASOURCE**|**nvarchar (** 4000 **)**|Propriété de source de données OLE DB correspondant au serveur lié spécifié.|  
-|**SRV_PROVIDERSTRING**|**nvarchar (** 4000 **)**|Propriété de chaîne du fournisseur OLE DB correspondant au serveur lié.|  
-|**SRV_LOCATION**|**nvarchar (** 4000 **)**|Propriété d'emplacement OLE DB correspondant au serveur lié spécifié.|  
+|**SRV_DATASOURCE**|**nvarchar(** 4000 **)**|Propriété de source de données OLE DB correspondant au serveur lié spécifié.|  
+|**SRV_PROVIDERSTRING**|**nvarchar(** 4000 **)**|Propriété de chaîne du fournisseur OLE DB correspondant au serveur lié.|  
+|**SRV_LOCATION**|**nvarchar(** 4000 **)**|Propriété d'emplacement OLE DB correspondant au serveur lié spécifié.|  
 |**SRV_CAT**|**sysname**|Propriété de catalogue OLE DB correspondant au serveur lié spécifié.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="see-also"></a>Voir aussi  

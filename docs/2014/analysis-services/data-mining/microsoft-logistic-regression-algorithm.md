@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 577ab402178272c5f20f3a17f167c8dadb4fe7fd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733747"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Algorithme MLR (Microsoft Logistic Regression)
   La régression logistique est une technique statistique connue utilisée pour modéliser les résultats binaires.  
@@ -80,8 +80,8 @@ ms.locfileid: "48179389"
 -   Ne prend pas en charge l’utilisation du langage PMML (Predictive Model Markup Language) pour créer des modèles d’exploration de données.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle pour les modèles de régression logistique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Référence technique de Microsoft Logistic Regression algorithme](microsoft-logistic-regression-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression logistique &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-logistic-regression-models.md)   
+ [Références techniques relatives à l’algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Exemples de requêtes de modèle de régression logistique](logistic-regression-model-query-examples.md)  
   
   

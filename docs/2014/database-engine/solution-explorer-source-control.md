@@ -19,11 +19,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 788ce615f914dcc8a2a49fba7575061fff0df870
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843104"
 ---
 # <a name="solution-explorer-source-control"></a>Contrôle de code source de l'Explorateur de solutions
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] L’Explorateur de solutions peut être intégré dans un système de contrôle de source distinct. Après intégration d'une solution ou d'un projet à un système de contrôle de code source, vous pouvez contrôler l'accès aux fichiers et les versions pour les scripts et les requêtes de vos projets.  

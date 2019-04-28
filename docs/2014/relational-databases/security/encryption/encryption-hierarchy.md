@@ -17,11 +17,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 5be9eb21e12402f7463c7e79714ef93e7eccb455
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48093140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011456"
 ---
 # <a name="encryption-hierarchy"></a>Hiérarchie de chiffrement
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiffre les données avec un chiffrement hiérarchique et une infrastructure de gestion des clés. Chaque couche chiffre la couche qui se trouve en dessous d'elle à l'aide d'une combinaison de certificats, de clés asymétriques et de clés symétriques. Les clés asymétriques et les clés symétriques peuvent être stockées hors de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dans un module de gestion de clés extensible (EKM, Extensible Key Management).  

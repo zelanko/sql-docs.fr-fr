@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fdab9e6e60311aca4ce0ae35f92e38c45fdf3702
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018474"
 ---
 # <a name="overriding-default-leading-and-seconds-precision-for-interval-data-types"></a>Remplacement de la précision du début et de la fin par défaut pour les types de données d’intervalle
 Lorsque le champ SQL_DESC_TYPE d’un ARD est défini à un type de C datetime ou interval, en appelant **SQLBindCol** ou **SQLSetDescField**, le champ SQL_DESC_PRECISION (qui contient l’intervalle en secondes précision) est définie sur les valeurs par défaut suivantes :  

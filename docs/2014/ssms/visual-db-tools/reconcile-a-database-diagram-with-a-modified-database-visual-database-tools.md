@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d779e6362cc3e2842003b82a092ce48ce4933e8e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011378"
 ---
 # <a name="reconcile-a-database-diagram-with-a-modified-database-visual-database-tools"></a>Rapprocher un diagramme de base de données et une base de données modifiée (Visual Database Tools)
   Vous enregistrez votre diagramme de base de données lorsque vous êtes prêt à mettre à jour la base de données par rapport à ce diagramme. Toutefois, si d'autres utilisateurs ont mis à jour la base de données depuis l'ouverture de votre schéma, leurs modifications risquent d'avoir une incidence sur le schéma et vice versa.  

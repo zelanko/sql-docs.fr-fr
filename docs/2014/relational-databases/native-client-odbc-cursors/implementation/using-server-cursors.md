@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cef56db912d786b6908271d0747fe45690e90536
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011842"
 ---
 # <a name="using-server-cursors"></a>Utilisation des curseurs côté serveur
   Si une application ODBC définit les attributs de curseur ODBC sur n’importe quelle autre que les valeurs par défaut, le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pilote ODBC Native Client demande au serveur d’implémenter un curseur de serveur API du même type. L'utilisation de curseurs côté serveur d'API libère la mémoire sur le client et peut réduire considérablement le trafic réseau entre le client et le serveur.  

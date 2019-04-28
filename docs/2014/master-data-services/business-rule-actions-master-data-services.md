@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dca11c580ea8427ce04619720af659f16d6df9ea
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877193"
 ---
 # <a name="business-rule-actions-master-data-services"></a>Actions de règle d'entreprise (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], les actions de règle d'entreprise sont la conséquence de l'évaluation des conditions des règles d'entreprise. Si une condition est vraie (True), l'action est initiée.  
@@ -50,7 +50,7 @@ ms.locfileid: "53357719"
 |**est requis**|L'attribut sélectionné **est requis**, ce qui signifie qu'il ne peut pas être null ou vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**n'est pas valide**|L'attribut sélectionné **n'est pas valide**.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**doit contenir le modèle**|L'attribut sélectionné **doit contenir le modèle** spécifié. Utilisez des expressions régulières .NET Framework pour spécifier le modèle.<br /><br /> Pour plus d'informations sur les expressions régulières, consultez [Éléments du langage des expressions régulières](https://go.microsoft.com/fwlink/?LinkId=164401) dans MSDN Library.<br /><br /> Cette action est valide pour les valeurs de texte et de lien.|  
-|**doit être unique**|L'attribut sélectionné **doit être unique** indépendamment ou en association avec des attributs définis.<br /><br /> **Recommandation :** Associez cette action avec une condition obligatoire pour garantir la validité des champs d’index dans les systèmes d’abonnement.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
+|**doit être unique**|L'attribut sélectionné **doit être unique** indépendamment ou en association avec des attributs définis.<br /><br /> **Bonne pratique :** associez cette action à une condition obligatoire pour garantir la validité des champs d’index dans les systèmes d’abonnement.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  
 |**doit avoir l'une des valeurs suivantes**|L'attribut sélectionné **doit avoir l'une des valeurs** spécifiées dans une liste.<br /><br /> Cette action est valide pour les valeurs de texte.|  
 |**doit être supérieur à**|L'attribut sélectionné **doit être supérieur à** un attribut spécifique, une valeur d'attribut spécifique, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre et date.|  
 |**doit être égal**|L'attribut sélectionné **doit être égal** à une valeur d'attribut définie, un autre attribut, ou être vide.<br /><br /> Cette action est valide pour les valeurs de texte, nombre, date et lien.|  

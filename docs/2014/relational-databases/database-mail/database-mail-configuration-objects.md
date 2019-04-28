@@ -33,11 +33,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872431"
 ---
 # <a name="database-mail-configuration-objects"></a>Objets de configuration de la messagerie de base de données
   Messagerie de base de données fournit deux objets de configuration : Les objets de configuration de base de données offrent un moyen de vous permettent de configurer les paramètres de cette base de données que la messagerie doit utiliser lors de l’envoi d’un message électronique à partir de votre application de base de données ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -58,11 +58,11 @@ ms.locfileid: "52772633"
   
  Une messagerie de base de données accepte trois méthodes d'authentification pour communiquer avec un serveur SMTP :  
   
--   Authentification Windows : La messagerie de base de données utilise les informations d'identification du compte de service Windows du [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] pour l'authentification sur le serveur SMTP.  
+-   Authentification Windows : Les informations d’identification de la messagerie de base de données utilise le [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] Windows compte de service pour l’authentification sur le serveur SMTP.  
   
--   Authentification de base :  La messagerie de base de données utilise le nom d'utilisateur et le mot de passe spécifiés pour s'authentifier sur le serveur SMTP.  
+-   Authentification de base :  La messagerie de base de données utilise le nom d’utilisateur et le mot de passe spécifiés pour s’authentifier sur le serveur SMTP.  
   
--   Authentification anonyme :  Le serveur SMTP ne demande aucune authentification.  La messagerie de base de données n'utilise pas d'informations d'identification pour s'authentifier sur le serveur SMTP.  
+-   Authentification anonyme :  Le serveur SMTP ne nécessite pas d’authentification.  La messagerie de base de données n'utilise pas d'informations d'identification pour s'authentifier sur le serveur SMTP.  
   
  Les informations de compte sont stockées dans la base de données **msdb** . Chaque compte comprend les informations suivantes :  
   
@@ -127,14 +127,14 @@ ms.locfileid: "52772633"
   
 ### <a name="database-mail-settings"></a>Paramètres de messagerie de base de données  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql)|Modifie les paramètres de configuration de la messagerie de base de données.|  
 |[sysmail_help_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql)|Affiche les paramètres de configuration pour la messagerie de base de données.|  
   
 ### <a name="accounts-and-profiles"></a>Comptes et profils  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)|Ajoute un compte de messagerie dans un profil de messagerie de base de données.|  
 |[sysmail_delete_account_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql)|Supprime un compte de messagerie de base de données.|  
@@ -158,7 +158,7 @@ ms.locfileid: "52772633"
   
 ### <a name="system-state"></a>État du système  
   
-|Créer une vue d’abonnement|Description|  
+|Nom|Description|  
 |----------|-----------------|  
 |[sysmail_start_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-start-sp-transact-sql)|Démarre le programme externe de messagerie de base de données et la file d'attente du Service Broker SQL associé.|  
 |[sysmail_stop_sp &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sysmail-stop-sp-transact-sql)|Arrête le programme externe de messagerie de base de données et la file d'attente du Service Broker SQL associé.|  

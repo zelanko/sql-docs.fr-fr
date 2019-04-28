@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012364"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats (classe d'événements)
   La classe d’événements **Auto Stats** indique qu’une mise à jour automatique des statistiques d’index et de colonne s’est produite.  
@@ -37,7 +37,7 @@ ms.locfileid: "52775761"
 |**Erreur**|**Int**|Numéro d'erreur d'un événement donné. Il s’agit souvent du numéro d’erreur stocké dans l’affichage catalogue **sys.messages** .|31|Oui|  
 |**EventClass**|**Int**|Type d’événement = 58|27|Non|  
 |**EventSequence**|**Int**|Séquence d'un événement donné au sein de la demande.|51|Non|  
-|**EventSubClass**|**Int**|Type de sous-classe d'événements.<br /><br /> 1 : Statistiques créées/mises à jour de façon synchrone ; **TextData** colonne indique les statistiques, et ils ont été créés ou mis à jour.<br /><br /> 2 : Mise à jour asynchrone des statistiques ; mise en file d'attente du travail.<br /><br /> 3: Mise à jour asynchrone des statistiques ; démarrage du travail.<br /><br /> 4 : Mise à jour asynchrone des statistiques ; fin du travail.|21|Oui|  
+|**EventSubClass**|**Int**|Type de sous-classe d'événements.<br /><br /> 1: Statistiques créées/mises à jour de façon synchrone ; **TextData** colonne indique les statistiques, et ils ont été créés ou mis à jour.<br /><br /> 2: Mise à jour asynchrone des statistiques ; travail en file d’attente.<br /><br /> 3: Mise à jour asynchrone des statistiques ; tâche de démarrage.<br /><br /> 4: Mise à jour asynchrone des statistiques ; tâche terminée.|21|Oui|  
 |**GroupID**|**Int**|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |**HostName**|**nvarchar**|Nom de l'ordinateur sur lequel le client est exécuté. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |**IndexID**|**Int**|ID de l'entrée index/statistiques sur l'objet affecté par l'événement. Pour déterminer l’ID d’index d’un objet, utilisez la colonne **index_id** de l’affichage catalogue **sys.indexes** .|24|Oui|  
@@ -55,7 +55,7 @@ ms.locfileid: "52775761"
 |**SPID**|**Int**|ID de la session au cours de laquelle l'événement s'est produit.|12|Oui|  
 |**StartTime**|**datetime**|Heure à laquelle a débuté l'événement, si elle est connue.|14|Oui|  
 |**Réussi**|**Int**|0 = erreur<br /><br /> 1 = réussite.<br /><br /> 2 = ignoré en raison de l'accélération du serveur (MSDE).|23|Oui|  
-|**TextData**|**ntext**|Le contenu de cette colonne dépend si les statistiques sont mises à jour de façon synchrone (**EventSubClass** 1) ou asynchrone (**EventSubClass** 2, 3 ou 4) :<br /><br /> 1 : Affiche les statistiques qui ont été mises à jour/créées<br /><br /> 2, 3 ou 4 : VALEUR NULL. **IndexID** colonne est remplie avec l’ID d’index/statistiques pour les statistiques mises à jour.|1|Oui|  
+|**TextData**|**ntext**|Le contenu de cette colonne dépend si les statistiques sont mises à jour de façon synchrone (**EventSubClass** 1) ou asynchrone (**EventSubClass** 2, 3 ou 4) :<br /><br /> 1: Énumère les statistiques ont été mises à jour/créées<br /><br /> 2, 3 ou 4 : VALEUR NULL. **IndexID** colonne est remplie avec l’ID d’index/statistiques pour les statistiques mises à jour.|1|Oui|  
 |**TransactionID**|**bigint**|ID affecté par le système à la transaction.|4|Oui|  
 |**Type**|**Int**|Type du travail.|57|Oui|  
   

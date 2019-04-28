@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3bb07b6cc317e4d522e178751fe228fce69457fb
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878232"
 ---
 # <a name="set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu"></a>Définir la valeur d'une contrainte de précédence à l'aide du menu contextuel
   Cette procédure décrit comment définir une valeur de contrainte de précédence à l'aide du menu contextuel.  

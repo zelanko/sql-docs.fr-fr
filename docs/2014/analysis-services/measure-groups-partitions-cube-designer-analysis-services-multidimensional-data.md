@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ffd5b3ff4eb98c96e1832e353e64f1953bd62e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727985"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Groupes de mesures (onglet Partitions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Le volet **Groupes de mesures** de l’onglet **Partitions** du Concepteur de cube permet de gérer les partitions associées à chaque groupe de mesures du cube.  
@@ -66,11 +66,11 @@ ms.locfileid: "48084799"
 |**Ajouter Business Intelligence**|Affiche l' **Assistant Business Intelligence** pour ajouter au cube des fonctionnalités d'aide à la décision. Pour plus d’informations sur **l’Assistant Business Intelligence**, consultez [Aide (F1) de l’Assistant Business Intelligence](business-intelligence-wizard-f1-help.md).|  
 |**Nouvelle Partition**|Cliquez pour afficher **l’Assistant Partition** et créer une partition dans le groupe de mesures sélectionné.|  
 |**Renommer la Partition**|Sélectionnez pour renommer la partition sélectionnée.|  
-|**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
-|**Concevoir des agrégations**|Cliquez sur cette option pour afficher **l’Assistant Conception d’agrégation** et créer une conception d’agrégation pour la partition sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
+|**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : Cette option est désactivée si une partition avec écriture différée est sélectionnée.|  
+|**Concevoir des agrégations**|Cliquez sur cette option pour afficher **l’Assistant Conception d’agrégation** et créer une conception d’agrégation pour la partition sélectionnée.<br /><br /> Remarque : Cette option est désactivée si une partition avec écriture différée est sélectionnée.|  
 |**Paramètres de stockage**|Cliquez sur cette option pour afficher la boîte de dialogue **Paramètres de stockage** et définir les paramètres de mode de stockage, de mise en cache proactive et de notification pour la partition sélectionnée.|  
 |**Paramètres d’écriture différée**|Cliquez sur cette option pour afficher la boîte de dialogue **Activer/Désactiver l’écriture différée** et définir les paramètres d’écriture différée pour le groupe de mesures contenant la partition sélectionnée.|  
-|**L’optimisation basée sur l’utilisation**|Cliquez sur cette option pour afficher **l’Assistant Optimisation de l’utilisation** et créer une conception d’agrégation basée sur des modèles d’utilisation existants pour la partition sélectionnée.<br /><br /> Remarque : cette option est désactivée si une partition d’écriture différée est sélectionnée.|  
+|**L’optimisation basée sur l’utilisation**|Cliquez sur cette option pour afficher **l’Assistant Optimisation de l’utilisation** et créer une conception d’agrégation basée sur des modèles d’utilisation existants pour la partition sélectionnée.<br /><br /> Remarque : Cette option est désactivée si une partition avec écriture différée est sélectionnée.|  
 |**Traiter**|Cliquez sur cette option pour afficher la boîte de dialogue **Traiter** et traiter la partition sélectionnée.|  
 |**Copier**|Cette option est désactivée.|  
 |**Coller**|Cette option est désactivée.|  

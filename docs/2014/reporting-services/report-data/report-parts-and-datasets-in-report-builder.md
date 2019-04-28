@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf9296a798135a8fb7fac8f3919cfca20385004c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59940565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720876"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Parties de rapports et datasets dans le Générateur de rapports
   Dans le Générateur de rapports, la façon la plus simple d'inclure des données dans un rapport est d'ajouter des parties de rapports à partir de la bibliothèque de parties de rapports. Les parties de rapports contiennent les datasets desquels elles dépendent, appelés *datasets dépendants*. Les datasets dépendants sont basés sur les sources de données partagées et peuvent être des datasets incorporés ou partagés.  

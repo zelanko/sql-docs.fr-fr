@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724044"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +42,13 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @cursor_return=] *cursor_variable_name*sortie  
+ [ @cursor_return= ] *cursor_variable_name*OUTPUT  
  Nom d'une variable de curseur déclarée. *cursor_variable_name* est **curseur**, sans valeur par défaut. Le curseur renvoyé est un curseur en lecture seule, dynamique et permettant les défilements.  
   
- [ @cursor_scope=] *étendue_curseur*  
+ [ @cursor_scope= ] *cursor_scope*  
  Spécifie le niveau des curseurs à signaler. *étendue_curseur* est **int**, sans valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Signaler tous les curseurs locaux.|  
 |2|Signaler tous les curseurs globaux.|  
@@ -88,7 +88,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  Utilisez sp_describe_cursor_columns pour obtenir une description des attributs du jeu de résultats retourné par le curseur. Utilisez sp_describe_cursor_tables pour générer un rapport sur les tables de base référencées par le curseur. sp_describe_cursor rapporte les mêmes informations que sp_cursor_list, mais uniquement pour un curseur spécifié.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Les autorisations d'exécution sont attribuées par défaut au rôle public.  
   
 ## <a name="examples"></a>Exemples  

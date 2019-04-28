@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4424504ddbfd0dfa1b16169186988141bb7b4c41
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62999556"
 ---
 # <a name="open-and-configure-object-explorer"></a>Ouvrir et configurer l'Explorateur d'objets
   Ouvrez l'Explorateur d'objets à l'aide du menu **Affichage** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configurez les options de l'Explorateur d'objets à l'aide de l'option **Options** du menu **Outils** .  

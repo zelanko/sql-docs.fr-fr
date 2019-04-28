@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ae0775260a0f86ae79f91e3bdaa3773ef58976de
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837148"
 ---
 # <a name="add-an-annotation-to-a-package"></a>Ajouter une annotation à un package
   Cette procédure décrit comment ajouter une annotation à un package.  

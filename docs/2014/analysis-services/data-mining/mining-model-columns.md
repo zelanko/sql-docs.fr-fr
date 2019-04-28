@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92cee93affaedab7c36517c730e09914ba842041
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733621"
 ---
 # <a name="mining-model-columns"></a>Colonnes d'un modèle d'exploration de données
   Un modèle d'exploration de données applique un algorithme de modèle d'exploration de données aux données qui sont représentées par une structure d'exploration de données. Comme la structure d'exploration de données, le modèle d'exploration de données contient des colonnes. Un modèle d'exploration de données est inclus dans la structure d'exploration de données et hérite de toutes les valeurs des propriétés définies par la structure d'exploration de données. Le modèle peut utiliser toutes les colonnes que contient la structure d'exploration de données ou un sous-ensemble de ces colonnes.  
@@ -47,9 +47,9 @@ ms.locfileid: "48167989"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Modifier les propriétés d’un modèle d’exploration de données](change-the-properties-of-a-mining-model.md)   
- [Exclure une colonne d’un modèle d’exploration de données](exclude-a-column-from-a-mining-model.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Modifier les propriétés d'un modèle d'exploration de données](change-the-properties-of-a-mining-model.md)   
+ [Exclure une colonne d'un modèle d'exploration de données](exclude-a-column-from-a-mining-model.md)   
  [Colonnes de structure d’exploration de données](mining-structure-columns.md)  
   
   

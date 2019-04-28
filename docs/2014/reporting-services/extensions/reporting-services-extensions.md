@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b671200dce3b5be1e01e40b09ff285563c4d4f6b
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985776"
 ---
 # <a name="reporting-services-extensions"></a>Extensions Reporting Services
   L'architecture modulaire de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] est conçue à des fins d'extensibilité. Une API de code managé est disponible afin de vous permettre de développer, installer et gérer facilement des extensions consommées par de nombreux composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Vous pouvez créer des assemblys privés ou partagés à l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], puis ajouter de nouvelles fonctionnalités [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] pour répondre aux besoins en constante évolution de votre entreprise.  

@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a0cfc68f78ae9ca4022abfb59a33d756e82a6f2f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875672"
 ---
 # <a name="restore-a-transaction-log-backup-sql-server"></a>Restaurer une sauvegarde de journal des transactions (SQL Server)
   Cette rubrique explique comment restaurer une sauvegarde du journal des transactions dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -100,7 +100,7 @@ ms.locfileid: "58535031"
     |------------|-----------|  
     |**Restore**|Les cases à cocher indiquent les jeux de sauvegarde à restaurer.|  
     |**Nom**|Nom du jeu de sauvegardes.|  
-    |**Composant**|Composant de sauvegarde : **Base de données**, **fichier**, ou \<vide > (pour les journaux des transactions).|  
+    |**Composant**|Composant sauvegardé : **Base de données**, **fichier**, ou \<vide > (pour les journaux des transactions).|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Date de début**|Date et heure de début de la sauvegarde, d'après les paramètres régionaux du client.|  
     |**Date de fin**|Date et heure de fin de la sauvegarde, d'après les paramètres régionaux du client.|  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cefb51ce26bcc0bd454defe29c8d7f7969c1c6fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727258"
 ---
 # <a name="rename-an-attribute"></a>Renommer un attribut
   Le nom d’un attribut dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est défini par sa propriété **Name**. Pour renommer un attribut, cliquez dessus avec le bouton droit dans le volet **Attributs** de l’onglet **Structure de dimension** du Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], puis cliquez sur **Renommer**. Si le volet **Attributs** affiche la grille, vous pouvez cliquer sur le nom de l’attribut et le modifier directement dans la grille. Vous pouvez aussi sélectionner un attribut et définir sa propriété **Name** dans la fenêtre **Propriétés** .  
@@ -29,6 +29,6 @@ ms.locfileid: "48180029"
  Pour plus d’informations sur la façon de renommer un attribut, consultez [Lier un attribut à une colonne clé](attribute-properties-bind-an-attribute-to-a-key-column.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)  
+ [Référence des propriétés d'attribut de dimension](dimension-attribute-properties-reference.md)  
   
   

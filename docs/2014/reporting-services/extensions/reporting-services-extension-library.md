@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62985750"
 ---
 # <a name="reporting-services-extension-library"></a>Bibliothèque d'extensions Reporting Services
   La bibliothèque d'extensions Reporting Services est un ensemble de classes, d'interfaces et de types de valeur inclus dans [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Cette bibliothèque fournit l’accès aux fonctionnalités du système ; elle est conçue pour servir de base sur laquelle les applications [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peuvent être utilisées pour étendre les composants [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5366db29a8e3fbfc286684b372c9f71d0cf6a7ff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727918"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>Boîte de dialogue Légende d'exploration de données (Visionneuse de modèles d'exploration de données)
   Utilisez la boîte de dialogue **Légende d'exploration de données** pour obtenir des informations détaillées sur l'élément ou le nœud sélectionné dans une visionneuse de modèle d'exploration de données.  
@@ -55,7 +55,7 @@ ms.locfileid: "48218719"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

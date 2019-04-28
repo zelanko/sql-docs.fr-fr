@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62995675"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ GO
 EXEC sp_bindrule 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-rule-to-an-alias-data-type"></a>b. Liaison d'une règle à un type de données d'alias  
+### <a name="b-binding-a-rule-to-an-alias-data-type"></a>B. Liaison d'une règle à un type de données d'alias  
  En supposant l'existence d'une règle nommée `rule_ssn` et d'un type de données d'alias nommé `ssn`, cet exemple lie `rule_ssn` à `ssn`. Toutes les colonnes créées par une instruction CREATE TABLE avec le type de données `ssn` héritent de la règle `rule_ssn`. Les colonnes existantes de type `ssn` héritent également la `rule_ssn` règle, sauf si **futureonly** est spécifiée pour *futureonly_flag*, ou `ssn` dispose d’une règle directement liée. Les règles liées à des colonnes ont toujours priorité sur les règles liées à des types de données.  
   
 ```  

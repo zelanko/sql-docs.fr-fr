@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ebcb8171ef63411fface757d2e6000e95eec6822
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017191"
 ---
 # <a name="osql-utility"></a>Utilitaire osql
   L'utilitaire **osql** permet de spécifier des instructions [!INCLUDE[tsql](../includes/tsql-md.md)] , des procédures système, ainsi que des fichiers de script. Pour communiquer avec le serveur, cet utilitaire fait appel à ODBC.  
@@ -109,7 +109,7 @@ C:\>osql
  Spécifie le nombre de secondes accordées pour l'exécution d'une commande. Si aucune valeur *time_out* n’est spécifiée, les commandes n’ont pas de délai d’expiration.  
   
  **-h** _headers_  
- Spécifie le nombre de lignes à imprimer entre les en-têtes de colonne. Par défaut, les en-têtes ne sont imprimés qu'une fois pour chaque jeu de résultats d'une requête. Utilisez -1 pour indiquer qu'aucun titre ne sera imprimé. Si -1 est utilisé, il ne doit y avoir aucun espace entre le paramètre et sa valeur (**-h-1**, et non **-h -1**).  
+ Spécifie le nombre de lignes à imprimer entre les en-têtes de colonne. Par défaut, les en-têtes ne sont imprimés qu'une fois pour chaque jeu de résultats d'une requête. Utilisez -1 pour indiquer qu'aucun titre ne sera imprimé. Si vous utilisez -1, ne laissez aucun espace entre le paramètre et sa valeur (**-h-1**, et non **-h -1**).  
   
  **-s** _col_separator_  
  Spécification du caractère de séparation des colonnes, qui est par défaut un espace. Pour utiliser des caractères qui ont une signification particulière pour le système d’exploitation (par exemple, | ; & \< >), mettez-les entre guillemets doubles («).  
@@ -294,7 +294,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Exécute le traitement, puis quitte sans retourner de valeur.  
   
--   SORTIE **(*`query`*)**  
+-   EXIT **(*`query`*)**  
   
 > [!NOTE]  
 >  Exécute le traitement, y compris la requête, puis quitte en retournant les résultats de la requête.  

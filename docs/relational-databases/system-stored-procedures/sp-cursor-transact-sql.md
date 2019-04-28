@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724204"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,9 +59,9 @@ sp_cursor  cursor, optype, rownum, table
 |0X0008|REFRESH|Utilisée pour remplir la mémoire tampon à partir de tables sous-jacentes et peut être utilisée pour actualiser la ligne si une mise à jour ou une suppression échoue en raison d'un contrôle d'accès concurrentiel optimiste, ou après une opération UPDATE.|  
 |0X10|LOCK|Provoque un SQL Server U-acquisition du verrou sur la page contenant la ligne spécifiée. Ce verrou est compatible avec les verrous S-Lock mais pas avec les verrous X-Lock ou autres verrous U-Lock. Permet d'implémenter le verrouillage à court terme.|  
 |0X20|SETPOSITION|Est utilisé uniquement lorsque le programme va émettre un serveur SQL suivant positionné instruction DELETE ou UPDATE.|  
-|0X40|ABSOLUTE|Peut uniquement être utilisée avec UPDATE ou DELETE.  ABSOLUTE est utilisée uniquement avec les curseurs KEYSET (est ignorée pour les curseurs DYNAMIC et les curseurs STATIC ne peuvent pas être mis à jour).<br /><br /> Remarque : Si ABSOLUTE est spécifiée sur une ligne dans le jeu de clés qui n'a pas été extrait, l'opération peut entraîner l'échec du contrôle d'accès concurrentiel et le résultat obtenu ne peut pas être garanti.|  
+|0X40|ABSOLUTE|Peut uniquement être utilisée avec UPDATE ou DELETE.  ABSOLUTE est utilisée uniquement avec les curseurs KEYSET (est ignorée pour les curseurs DYNAMIC et les curseurs STATIC ne peuvent pas être mis à jour).<br /><br /> Remarque : Si ABSOLUTE est spécifiée sur une ligne dans le jeu de clés n’a pas été extrait, l’opération peut échouer la vérification d’accès concurrentiel et le résultat obtenu ne peut pas être garanti.|  
   
- *ROWNUM*  
+ *rownum*  
  Spécifie les lignes dans le tampon d'extraction sur lesquelles le curseur interviendra, qu'il mettra à jour ou supprimera.  
   
 > [!NOTE]  

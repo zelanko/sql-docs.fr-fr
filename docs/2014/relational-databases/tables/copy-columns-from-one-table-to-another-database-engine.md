@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736352"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copier des colonnes d'une table vers une autre (Moteur de base de données)
   Cette rubrique explique comment copier des colonnes d'une table vers une autre, en copiant uniquement la définition de la colonne ou la définition et les données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -44,7 +44,7 @@ ms.locfileid: "52794621"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert une autorisation ALTER sur la table.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

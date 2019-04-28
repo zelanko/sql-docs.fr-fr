@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a49db54b71f3b7daf0a7a10cc1b4073f1b651fc5
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844190"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Options (Éditeur de texte - Toutes les langues - Page Onglets)
   Cette boîte de dialogue vous permet de définir le comportement de tabulation des cinq éditeurs de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour afficher ces options, sélectionnez **Options** dans le menu **Outils** . Sélectionnez le dossier **Éditeur de texte** , développez le dossier **Tous les langages** , puis cliquez sur **Tabulations**.  
@@ -33,10 +33,10 @@ ms.locfileid: "51030139"
  **Aucun**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE n'est pas mise en retrait. Le curseur est placé au niveau de la première colonne de la nouvelle ligne.  
   
- **Bloc**  
+ **Block**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE est automatiquement mise en retrait à la même distance que la ligne précédente.  
   
- **Intelligent**  
+ **Smart**  
  Lorsque cette option est activée, la nouvelle ligne créée grâce à la touche ENTRÉE est positionnée en fonction du contexte.  
   
 ## <a name="tabs"></a>Tabulations  

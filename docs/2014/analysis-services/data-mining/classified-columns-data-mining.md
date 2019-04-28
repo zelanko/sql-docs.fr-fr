@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4a0fc7a0eeb0cabd07a38f77d5024aac0eaebb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48193749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715176"
 ---
 # <a name="classified-columns-data-mining"></a>Colonnes classifiées (exploration de données)
   Lorsque vous définissez une colonne classée, vous créez une relation entre la colonne actuelle et une autre colonne de la structure d'exploration de données. Les données de la colonne de structure d'exploration de données que vous désignez comme colonne classée contiennent des informations catégorielles qui décrivent les valeurs dans une autre colonne de la structure d'exploration de données.  
@@ -37,7 +37,7 @@ ms.locfileid: "48193749"
 >  Les algorithmes fournis dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ne prennent pas en charge l’utilisation des colonnes classifiées ; cette fonctionnalité est fournie pour une utilisation dans la création d’algorithmes personnalisés.  
   
 ## <a name="defining-a-classified-column"></a>Définition d'une colonne classée  
- Le type de données d’une colonne classifiée doit être soit `Long` ou `Double`.  
+ Le type de données d'une colonne classée doit être `Long` ou `Double`.  
   
  La liste suivante décrit les types de contenu pris en charge par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour les colonnes classifiées.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48193749"
  La valeur de la colonne représente le poids, ou facteur de réplication de cas, de la valeur associée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Types de contenu &#40;exploration de données&#41;](content-types-data-mining.md)   
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Types de contenu &#40;Exploration de données&#41;](content-types-data-mining.md)   
+ [Structures d’exploration de données &#40;Analysis Services – Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
  [Types de données &#40;exploration de données&#41;](data-types-data-mining.md)  
   
   

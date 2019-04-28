@@ -13,11 +13,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: cd9f8912ff167e70caf601d4816d2d92f1af04c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48154335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874799"
 ---
 # <a name="filetable-ddl-functions-stored-procedures-and-views"></a>DDL, fonctions, procédures stockées et vues FileTable
   Répertorie les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] et les objets de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui ont été ajoutés ou modifiés afin de prendre en charge la fonctionnalité FileTable dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -30,7 +30,7 @@ ms.locfileid: "48154335"
   
 |Object|État|Informations supplémentaires|  
 |------------|------------|----------------------|  
-|[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Modifié|[Activer les conditions préalables pour les FileTables](enable-the-prerequisites-for-filetable.md)<br /><br /> [Gérer des FileTables](manage-filetables.md)|  
+|[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)<br /><br /> [Options ALTER DATABASE SET &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)|Modifié|[Activer les conditions préalables pour les FileTables](enable-the-prerequisites-for-filetable.md)<br /><br /> [Gérer des FileTables](manage-filetables.md)|  
 |[ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)|Modifié|[Créer, modifier et supprimer des FileTables](create-alter-and-drop-filetables.md)<br /><br /> [Gérer des FileTables](manage-filetables.md)|  
 |[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)|Modifié|[Activer les conditions préalables pour les FileTables](enable-the-prerequisites-for-filetable.md)|  
 |[CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)|Modifié|[Créer, modifier et supprimer des FileTables](create-alter-and-drop-filetables.md)|  
@@ -40,7 +40,7 @@ ms.locfileid: "48154335"
   
 |Object|État|Informations supplémentaires|  
 |------------|------------|----------------------|  
-|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d’accès dans des FileTables](work-with-directories-and-paths-in-filetables.md)|  
+|[FileTableRootPath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/filetablerootpath-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d'accès dans FileTables](work-with-directories-and-paths-in-filetables.md)|  
 |[GetFileNamespacePath &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d’accès dans des FileTables](work-with-directories-and-paths-in-filetables.md)|  
 |[GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql)|**Ajouté**|[Travailler avec des répertoires et des chemins d'accès dans FileTables](work-with-directories-and-paths-in-filetables.md)|  
   

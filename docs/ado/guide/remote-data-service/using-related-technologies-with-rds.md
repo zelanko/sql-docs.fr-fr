@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28f03940214817a4f578e76e1d56f2b9a99c1482
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62957551"
 ---
 # <a name="using-related-technologies-with-rds"></a>Utilisation de technologies associées avec RDS
 Cette section contient les rubriques suivantes.  

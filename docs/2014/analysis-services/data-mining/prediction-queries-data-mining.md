@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 935cd8ec3f4e5069807e914e5af20e39b645deb3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733195"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
   Un projet d'exploration de données type a pour objectif d'utiliser le modèle d'exploration de données pour faire des prédictions. Par exemple, vous pouvez prédire le temps d'inactivité prévu d'un certain cluster de serveurs, ou générer un score qui indique si des segments de clients sont susceptibles de répondre à une campagne de publicité. Pour effectuer toutes ces tâches, vous devez créer une requête de prédiction.  

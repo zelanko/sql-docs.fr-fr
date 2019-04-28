@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866831"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Améliorations des types de données de date et d’heure (OLE DB)
   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduit de nouveaux types de données de date et d'heure. Cette section décrit comment ces nouveaux types sont exposés en tant qu’extensions dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Pour une vue d’ensemble de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge les nouveaux types date et heure données, consultez [améliorations Date / heure](../native-client/features/date-and-time-improvements.md). Pour obtenir un exemple, consultez [utilisation améliorée fonctionnalités de Date et heure &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "52818013"
  Fournit des informations sur OLE DB ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) qui prennent en charge les types [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les types de données date et time.  
   
  [Métadonnées &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
- Contient des informations sur la structure DBBINDING, `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset` et `ColumnsInfo::GetColumnInfo`. Contient aussi des informations sur les mises à jour des ensembles de lignes de schéma OLE DB.  
+ Contient des informations sur la structure DBBINDING, `ICommandWithParameters::GetParameterInfo`, `ICommandWithParameters::SetParameterInfo`, `IColumnsRowset::GetColumnsRowset`et j’ai`ColumnsInfo::GetColumnInfo`. Contient aussi des informations sur les mises à jour des ensembles de lignes de schéma OLE DB.  
   
  [Liaisons et conversions &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/conversions-ole-db.md)  
  Décrit les règles de conversion entre le serveur et le client pour les types date nouveaux et existants.  

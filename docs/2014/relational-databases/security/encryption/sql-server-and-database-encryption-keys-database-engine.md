@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: e214a46adece1bcee940f57805db897d1c8c76db
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011316"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server et clés de chiffrement de base de données (moteur de base de données)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utilise des clés de chiffrement pour mieux sécuriser les données, les informations d’identification et les informations de connexion qui sont stockées dans une base de données du serveur. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a deux types de clés : des clés *symétriques* et *asymétriques*. Les clés symétriques utilisent le même mot de passe pour chiffrer et déchiffrer des données. Les clés asymétriques utilisent un premier mot de passe pour chiffrer des données (appelé clé *publique* ) et un second mot de passe pour déchiffrer les données (appelé clé *privée* ).  
@@ -31,9 +31,9 @@ ms.locfileid: "48160699"
   
  La clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Elle peut également être utilisée pour chiffrer des données, mais elle présente des limitations de longueur qui la rendent moins pratique pour les données que l'utilisation d'une clé symétrique.  
   
- Lors de sa création, la clé principale est chiffrée à l'aide de l'algorithme Triple DES et d'un mot de passe fourni par l'utilisateur. Pour activer le déchiffrement automatique de la clé principale, une copie de la clé est chiffrée au moyen de la clé SMK. Elle est stockée dans la base de données où elle est utilisée et dans le `master` base de données système.  
+ Lors de sa création, la clé principale est chiffrée à l'aide de l'algorithme Triple DES et d'un mot de passe fourni par l'utilisateur. Pour activer le déchiffrement automatique de la clé principale, une copie de la clé est chiffrée au moyen de la clé SMK. Elle est stockée à la fois dans la base de données où elle est utilisée et dans la base de données système `master`.  
   
- La copie de la clé DMK stockée dans le `master` base de données système est mise à jour silencieusement chaque fois que la clé DMK est modifiée. Toutefois, cette valeur par défaut peut être modifiée à l’aide de la `DROP ENCRYPTION BY SERVICE MASTER KEY` possibilité du `ALTER MASTER KEY` instruction. Une clé DMK qui n'est pas chiffrée par la clé principale de service doit être ouverte à l'aide de l'instruction `OPEN MASTER KEY` et d'un mot de passe.  
+ La copie de la clé DMK stockée dans la base de données système `master` est mise à jour silencieusement chaque fois que la clé DMK est modifiée. Toutefois, cette valeur par défaut peut être modifiée en utilisant l'option `DROP ENCRYPTION BY SERVICE MASTER KEY` de l'instruction `ALTER MASTER KEY`. Une clé DMK qui n'est pas chiffrée par la clé principale de service doit être ouverte à l'aide de l'instruction `OPEN MASTER KEY` et d'un mot de passe.  
   
 ## <a name="managing-sql-server-and-database-keys"></a>Gestion des clés SQL Server et de base de données  
  La gestion des clés de chiffrement consiste à créer de nouvelles clés de base de données, à créer une sauvegarde des clés de serveur et de base de données et à savoir quand et comment restaurer, supprimer et modifier les clés.  

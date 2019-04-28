@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b77e1d920f97891d173bfdcdcb23ceb6c0acf0c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870707"
 ---
 # <a name="mssqlserver10061"></a>MSSQLSERVER_10061
     
@@ -32,7 +32,7 @@ ms.locfileid: "48062219"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique||  
-|Texte du message|Une erreur s'est produite lors de l'établissement d'une connexion au serveur.  Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur TCP, erreur : 0 - Aucune connexion n’a pu être établie, car l’ordinateur cible l’a expressément refusée.) (Microsoft SQL Server, Error: 10061)|  
+|Texte du message|Une erreur s'est produite lors de l'établissement d'une connexion au serveur.  Lors de la connexion à SQL Server, cet échec peut être dû au fait que les paramètres par défaut de SQL Server n'autorisent pas les connexions à distance. (fournisseur : Fournisseur TCP, erreur : 0 - Aucune connexion n’a pu être établie, car l’ordinateur cible l’a expressément refusée.) (Microsoft SQL Server, Erreur: 10061)|  
   
 ## <a name="explanation"></a>Explication  
  Le serveur n'a pas répondu à la demande du client. Cette erreur s'est peut-être produite parce que le serveur n'a pas été démarré.  

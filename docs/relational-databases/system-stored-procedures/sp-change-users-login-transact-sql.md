@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997083"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,22 +45,22 @@ sp_change_users_login [ @Action = ] 'action'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @Action=] '*action*'  
- Décrit l'action à effectuer par la procédure. *action* est **varchar (10)**. *action* peut avoir l’une des valeurs suivantes.  
+ [ @Action= ] '*action*'  
+ Décrit l'action à effectuer par la procédure. *action* is **varchar(10)**. *action* peut avoir l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Auto_Fix**|Lie une entrée d'utilisateur de l'affichage catalogue système sys.database_principals de la base de données active à une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] du même nom. Le compte de connexion de même nom est créé s'il n'existe pas déjà. Examinez les résultats de la **Auto_Fix** instruction pour confirmer que la liaison correcte est effectuée. Évitez d’utiliser **Auto_Fix** dans les situations sensibles à la sécurité.<br /><br /> Lorsque vous utilisez **Auto_Fix**, vous devez spécifier *utilisateur* et *mot de passe* si la connexion n’existe pas déjà, sinon vous devez spécifier *utilisateur*mais *mot de passe* sera ignoré. *connexion* doit être NULL. *utilisateur* doit être un utilisateur valide dans la base de données actuelle. Le compte de connexion ne doit être associé à aucun autre utilisateur.|  
 |**Rapport**|Dresse la liste des utilisateurs qui ne sont pas liés à un compte de connexion dans la base de données active et indique les identificateurs de sécurité (SID) correspondants. *utilisateur*, *connexion*, et *mot de passe* doit être NULL ou non spécifié.<br /><br /> Pour remplacer l’option de rapport avec une requête en utilisant les tables système, comparer les entrées de **sys.server_prinicpals** avec les entrées dans **sys.database_principals**.|  
 |**Update_One**|Lie le spécifié *utilisateur* dans la base de données actuelle à un existant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *connexion*. *utilisateur* et *connexion* doit être spécifié. *mot de passe* doit être NULL ou non spécifié.|  
   
- [ @UserNamePattern=] '*utilisateur*'  
+ [ @UserNamePattern= ] '*user*'  
  Nom d'un utilisateur dans la base de données active. *utilisateur* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ @LoginName=] '*connexion*'  
+ [ @LoginName= ] '*login*'  
  Est le nom d'un compte de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* est de type **sysname**, avec NULL comme valeur par défaut.  
   
- [ @Password=] '*mot de passe*'  
+ [ @Password= ] '*password*'  
  Mot de passe affecté à un nouveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion qui est créée en spécifiant **Auto_Fix**. Si une connexion correspondante existe déjà, l’utilisateur est mappé sur et *mot de passe* est ignoré. Si une connexion correspondante n’existe pas, sp_change_users_login crée une nouvelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connexion et lui affecte *mot de passe* comme mot de passe pour la nouvelle connexion. *mot de passe* est **sysname**, et ne doit pas être NULL.  
   
 > **IMPORTANT** Utilisez toujours un [mot de passe fort !](../../relational-databases/security/strong-passwords.md)
@@ -84,7 +84,7 @@ sp_change_users_login [ @Action = ] 'action'
   
  La procédure sp_change_users_login ne peut pas être exécutée dans une transaction définie par l'utilisateur.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner. Seuls les membres du rôle serveur fixe sysadmin peuvent spécifier le **Auto_Fix** option.  
   
 ## <a name="examples"></a>Exemples  

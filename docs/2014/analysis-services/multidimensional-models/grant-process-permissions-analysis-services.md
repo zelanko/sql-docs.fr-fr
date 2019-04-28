@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 175e07432d3f67374710d6e33f3006f2b3b6bf68
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726602"
 ---
 # <a name="grant-process-permissions-analysis-services"></a>Octroyer des autorisations de traitement (Analysis Services)
   En tant qu'administrateur, vous pouvez créer un rôle dédié aux opérations de traitement Analysis Services, ce qui vous permet de déléguer cette tâche spécifique à d'autres utilisateurs ou à des applications utilisées pour le traitement planifié sans assistance. Les autorisations de traitement peuvent être accordées au niveau de la base de données, du cube, de la dimension et de la structure d'exploration de données. À moins de travailler sur une base de données de cube ou tabulaire très grande, nous vous recommandons d'accorder des droits de traitement au niveau de la base de données, y compris à tous les objets (même à ceux ayant des dépendances les uns envers les autres).  
@@ -27,9 +27,9 @@ ms.locfileid: "48181264"
  Les autorisations sont accordées par le biais de rôles qui associent des objets à des autorisations et des comptes d'utilisateurs ou de groupes Windows. N'oubliez pas que les autorisations s'ajoutent les unes aux autres. Si un rôle accorde l'autorisation de traiter un cube tandis qu'un second rôle accorde au même utilisateur l'autorisation de traiter une dimension, les autorisations des deux rôles différents se combinent pour accorder à l'utilisateur l'autorisation de traiter le cube et de traiter la dimension spécifiée dans cette base de données.  
   
 > [!IMPORTANT]  
->  Un utilisateur dont le rôle ne dispose que d’autorisations de traitement ne peut pas utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour se connecter à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et traiter des objets. Ces outils nécessitent le `Read Definition` autorisé à accéder aux métadonnées de l’objet. Sans la capacité à utiliser l'un de ces outils, vous devez utiliser le script XMLA pour exécuter une opération de traitement.  
+>  Un utilisateur dont le rôle ne dispose que d’autorisations de traitement ne peut pas utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour se connecter à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et traiter des objets. Ces outils nécessitent l'autorisation `Read Definition` pour accéder aux métadonnées des objets. Sans la capacité à utiliser l'un de ces outils, vous devez utiliser le script XMLA pour exécuter une opération de traitement.  
 >   
->  Nous vous suggérons également accorder `Read Definition` autorisations à des fins de test. Un utilisateur présentant les deux `Read Definition` et `Process Database` autorisations peuvent traiter des objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]de manière interactive. Pour plus d’informations, consultez [Grant read definition permissions on object metadata &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
+>  Nous vous suggérons également d'accorder des autorisations `Read Definition` à des fins de test. Un utilisateur disposant des autorisations `Read Definition` et `Process Database` peut traiter des objets dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] de manière interactive. Pour plus d’informations, consultez [Octroyer des autorisations Lire la définition sur des métadonnées d’objets &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md) .  
   
 ## <a name="set-processing-permissions-at-the-database-level"></a>Définir les autorisations de traitement au niveau de la base de données  
  Cette section explique comment les non-administrateurs peuvent activer le traitement de tous les cubes, dimensions, structures d'exploration et modèles d'exploration dans la base de données.  
@@ -93,7 +93,7 @@ ms.locfileid: "48181264"
 ## <a name="see-also"></a>Voir aussi  
  [Processus de base de données, la Table ou Partition](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [Traitement des objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)   
- [Accorder des autorisations de base de données &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [Octroyer des autorisations de définition des métadonnées de l’objet lire &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
+ [Octroyer des autorisations de base de données &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
+ [Octroyer des autorisations Lire la définition sur des métadonnées d’objets &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  
   
   

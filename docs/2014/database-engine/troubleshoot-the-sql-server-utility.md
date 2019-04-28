@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ed71e0fb889b0cff71937e78245bef1453e13a10
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842525"
 ---
 # <a name="troubleshoot-the-sql-server-utility"></a>Résolution des problèmes liés à l’utilitaire SQL Server
   Les problèmes à résoudre liés à l'utilitaire [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] peuvent inclure la résolution d'une opération ayant échoué d'inscription d'une instance de SQL Server avec un UCP, de l'échec de la collecte de données qui grise des icônes dans le mode Liste de l'instance gérée sur un UCP, l'atténuation des goulots d'étranglement des performances, ou la résolution des problèmes d'intégrité des ressources. Pour plus d’informations sur l’atténuation des problèmes d’intégrité de ressource identifiées par un [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] UCP, consultez [résoudre les problèmes de SQL Server Resource Health &#40;utilitaire SQL Server&#41;](../relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md).  
@@ -25,7 +25,7 @@ ms.locfileid: "53371061"
   
  Une exception s'est produite lors de l'exécution d'une instruction ou d'un lot Transact-SQL ou lot. (Microsoft.SqlServer.ConnectionInfo)  
   
- Informations supplémentaires :  Impossible d’obtenir des informations sur l’utilisateur ou groupe Windows NT '\<DomainName\AccountName >', code d’erreur 0 x 5. (Microsoft SQL Server, erreur : 18456). » 15404)  
+ Informations supplémentaires :  Impossible d’obtenir des informations sur l’utilisateur ou groupe Windows NT '\<DomainName\AccountName >', code d’erreur 0 x 5. (Microsoft SQL Server, erreur : 15404)  
   
  Dans ce scénario d'exemple, vous pouvez rencontrer le problème suivant :  
   
@@ -48,9 +48,9 @@ ms.locfileid: "53371061"
   
  Les messages d'erreur simplifiés sont les suivants :  
   
- L'exécution de la commande s'est arrêtée, car la variable d'environnement « ErrorActionPreference » a la valeur Stop : Accès refusé.  
+ Exécution de la commande s’est arrêté, car la variable d’environnement « ErrorActionPreference » est la valeur Stop : Accès refusé.  
   
- ERREUR : \<Date-heure (MM/jj/aaaa hh : mm :) > : Exception interceptée lors de la collecte des propriétés de l'UC.  Une requête WMI a peut-être échoué.  AVERTISSEMENT.  
+ ERREUR : \<Date-heure (MM/jj/aaaa hh : mm :) > : Exception interceptée lors de la collecte des propriétés de l’UC.  Une requête WMI a peut-être échoué.  AVERTISSEMENT.  
   
  Pour résoudre ce problème, vérifiez les paramètres de configuration suivants :  
   

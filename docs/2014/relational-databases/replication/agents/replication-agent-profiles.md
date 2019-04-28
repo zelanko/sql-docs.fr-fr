@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95692fd0ecf365f1fb54c8c1c3a090227b0d9a38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721751"
 ---
 # <a name="replication-agent-profiles"></a>Profils de l'Agent de réplication
   Quand la réplication est configurée, un ensemble de profils d'agent est installé sur le serveur de distribution. Un profil d'agent contient un ensemble de paramètres qui sont utilisés chaque fois qu'un agent s'exécute : pendant le processus de démarrage, chaque agent se connecte au service de distribution et interroge les paramètres situés dans son profil. Pour les abonnements de fusion utilisant la synchronisation Web, les profils sont téléchargés et stockés sur l'Abonné. En cas de modification du profil, le profil sur l'Abonné est mis à jour à l'exécution suivante de l'Agent de fusion. Pour plus d'informations sur la synchronisation Web, consultez [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  

@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ee7ba55e48f4704c912e92a4d8352e7c891c06b6
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989678"
 ---
 # <a name="using-reporting-services-security-policy-files"></a>Utilisation des fichiers de stratégie de sécurité Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] stocke les informations de stratégie de sécurité dans trois fichiers de configuration qui sont copiés dans le système de fichiers au cours de l'installation. Ces fichiers de configuration peuvent contenir une combinaison de stratégies de sécurité à usage interne et définies par l'utilisateur pour les assemblys de code dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Les trois fichiers de configuration correspondent à trois composants sécurisables dans [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]: Le serveur de rapports et de service Windows, l’application Web du Gestionnaire de rapports et le Concepteur de rapports afficher un aperçu de fenêtre.  

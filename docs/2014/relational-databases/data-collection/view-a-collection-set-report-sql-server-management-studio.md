@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 898dd309dae82818b60332b29c14f785c18b173b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873060"
 ---
 # <a name="view-a-collection-set-report-sql-server-management-studio"></a>Afficher un rapport de jeu d'éléments de collecte (SQL Server Management Studio)
   Après avoir configuré l'entrepôt de données de gestion, vous pouvez afficher un rapport sur un jeu d'éléments de collecte dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Des rapports sont fournis pour les jeux d'éléments de collecte de données système installés pendant l'installation. Les rapports proposés sont les suivants :  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870901"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Références relatives aux erreurs et aux événements (moteur de base de données)
 
@@ -35,7 +35,7 @@ Cette section contient des messages d’erreur du moteur de base de données sé
   
  Le tableau ci-dessous répertorie et décrit les liens vers ces ressources.  
   
-|Ressource|Description|  
+|Resource|Description|  
 |--------------|-----------------|  
 |[Communauté SQL Server](https://go.microsoft.com/fwlink/?LinkId=42455)|Ce site contient des liens vers des groupes de discussion et des forums contrôlés par la communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . S'y trouvent également des sources d'information de la communauté, telles que les blogs et les sites Web. La communauté [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] représente une aide précieuse grâce aux réponses qu'elle fournit aux questions posées, mais l'obtention d'une réponse ne peut pas être garantie.|  
 |[SQL Server Developer Center Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Ce site est centré sur les groupes de discussion, les forums et d'autres ressources de communautés qui sont utiles aux développeurs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  

@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537431"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875082"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Afficher ou modifier le mode de récupération d'une base de données (SQL Server)
   Cette rubrique explique comment afficher ou modifier le mode de récupération d'une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un *mode de récupération* est une propriété de base de données qui contrôle la façon dont les transactions sont journalisées, précise si le journal des transactions nécessite (et permet) une sauvegarde et spécifie les types d'opérations de restauration disponibles. Il existe trois modes de récupération : simple, complète et utilisant les journaux de transactions. En règle générale, une base de données utilise le mode de restauration complète ou le mode de récupération simple. Il est possible de modifier le mode de récupération d'une base de données à tout moment. La base de données **model** définit le mode de récupération par défaut des nouvelles bases de données.  
@@ -117,7 +117,7 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a> Recommandations de suivi : Après avoir modifié le modèle de récupération  
+##  <a name="FollowUp"></a> Recommandations de suivi : Après avoir modifié le mode de récupération  
   
 -   **Après un changement de mode de récupération complète ou de mode de récupération utilisant les journaux de transactions**  
   

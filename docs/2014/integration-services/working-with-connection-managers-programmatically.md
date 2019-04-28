@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 973cb7dcfe7eb95e003428adf0c8a0beb7e68e87
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877700"
 ---
 # <a name="working-with-connection-managers-programmatically"></a>Utilisation de gestionnaires de connexions par programme
   Dans [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], la méthode AcquireConnection de la classe de gestionnaire de connexions associée est celle que vous appelez le plus souvent quand vous utilisez des gestionnaires de connexions dans le code managé. Quand vous écrivez du code managé, vous devez appeler la méthode AcquireConnection pour utiliser les fonctionnalités d’un gestionnaire de connexions. Vous devez appeler cette méthode que vous écriviez du code managé dans une tâche de script, un composant Script, un objet personnalisé ou une application personnalisée.  

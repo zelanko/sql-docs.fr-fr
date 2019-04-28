@@ -1,5 +1,5 @@
 ---
-title: Déployer une Solution d’exploration de données pour les Versions précédentes de SQL Server | Documents Microsoft
+title: Déployer une Solution d’exploration de données aux Versions précédentes de SQL Server | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df527197f0ddd1eacc2e86e59092f45b1ac78c9a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011031"
 ---
 # <a name="deploy-a-data-mining-solution-to-previous-versions-of-sql-server"></a>Déployer une solution d'exploration de données sur des versions antérieures de SQL Server
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "34015096"
   
  Lorsque vous ouvrez la structure d'exploration de données dans SQL Server 2005 Analysis Services, [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] génère une erreur, puis régénère la structure pour supprimer la partition d'exclusion.  
   
- Une fois que la structure a été reconstruite, la taille de la partition d’exclusion n’est plus disponible dans la fenêtre Propriétés. Toutefois, la valeur \<ddl100_100 : holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) peuvent toujours être présents dans le fichier de script ASSL.  
+ Une fois que la structure a été régénérée, la taille de la partition d’exclusion n’est plus disponible dans la fenêtre Propriétés. Toutefois, la valeur \<ddl100_100 : holdoutmaxpercent > 30\</ddl100_100:HoldoutMaxPercent >) peuvent toujours être présents dans le fichier de script ASSL.  
   
 ##  <a name="bkmk_Filter"></a> Déploiement de modèles avec filtres  
- Si vous appliquez un filtre à un modèle d’exploration de données, le modèle peut être déployé à une instance de SQL Server 2005, mais le filtre n’est pas appliqué.  
+ Si vous appliquez un filtre à un modèle d’exploration de données, le modèle peut être déployé à une instance de SQL Server 2005, mais le filtre ne sera pas appliqué.  
   
  Lorsque vous ouvrez le modèle d'exploration de données, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] génère une erreur, puis régénère le modèle pour supprimer le filtre.  
   

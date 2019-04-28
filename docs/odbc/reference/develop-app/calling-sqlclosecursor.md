@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7ee139dd652204c750c99d8bad8ab2b17c7c1ba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63007805"
 ---
 # <a name="calling-sqlclosecursor"></a>Appel de SQLCloseCursor
 Étant donné que **SQLCloseCursor** est presque identique **SQLFreeStmt** avec SQL_CLOSE, le Gestionnaire de pilotes ne mappe pas cette fonction. Fonctions de remplacement sont mappées afin qu’existant ODBC 2 *.x* applications peuvent facilement transférer dans ODBC 3. *x* à l’aide des nouvelles fonctions. Ce déplacement rend plus facile pour de telles applications commencer à l’aide de la nouvelle ODBC 3. *x* fonctionnalités à l’intérieur du code conditionnel de façon modulaire. **SQLCloseCursor** ne représente pas de nouvelles fonctionnalités. Une application ne peut pas accéder tout l’avantage en déplaçant vers **SQLCloseCursor** de **SQLFreeStmt** avec SQL_CLOSE.

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f781dd3c1a9a98857c8e2e72e82792632fdb17c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721139"
 ---
 # <a name="initialize-subscriptions"></a>Initialiser les abonnements
   Les abonnés doivent être initialisés pour pouvoir recevoir des données répliquées. Un jeu de données initial n'est pas nécessaire, mais l'abonné doit avoir au minimum le schéma de chaque objet répliqué ainsi que les tables de métadonnées et les procédures nécessaires à la réplication.  
@@ -32,7 +32,7 @@ ms.locfileid: "52794471"
 >  Il se peut que l'Assistant demande une connexion au serveur de distribution pour pouvoir démarrer le travail approprié pour l'Agent de distribution ou l'Agent de fusion.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
  [Créer un abonnement par émission (push)](create-a-push-subscription.md)   
  [Initialiser un abonnement](initialize-a-subscription.md)   
  [S'abonner à des publications](subscribe-to-publications.md)  

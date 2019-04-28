@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75e62ab8ae3953524d41a85512d4d95ead968ecf
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010864"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Activer les erreurs distantes (Reporting Services)
   Vous pouvez définir des propriétés de serveur sur un serveur de rapports [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] de façon à retourner des informations supplémentaires concernant les conditions d'erreur qui se produisent sur des serveurs distants. Si un message d'erreur contient le texte « Pour obtenir plus d'informations sur cette erreur, accédez au serveur de rapports sur le serveur local ou activez les erreurs distantes », vous pouvez définir la propriété `EnableRemoteErrors` de façon à accéder à des informations supplémentaires qui peuvent vous aider à résoudre le problème. Pour plus d’informations, consultez [Propriétés système de Report Server](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) dans la documentation en ligne [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

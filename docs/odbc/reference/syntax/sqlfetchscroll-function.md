@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f7b7e5141a465249c818b50466b34a8155adc1d6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982181"
 ---
 # <a name="sqlfetchscroll-function"></a>Fonction SQLFetchScroll
 **Conformité**  
@@ -47,7 +47,7 @@ SQLRETURN SQLFetchScroll(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *FetchOrientation*  
@@ -88,9 +88,9 @@ SQLRETURN SQLFetchScroll(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Données de chaîne droite tronquées|Données de chaîne ou binaire retournées pour une colonne a entraîné la troncation des caractères non vides ou non NULL des données binaires. S’il s’agissait d’une valeur de chaîne, il a été tronquée à droite.|  
-|01 S 01|Erreur de ligne|Une erreur s’est produite lors de l’extraction d’une ou plusieurs lignes.<br /><br /> (Si cet valeur SQLSTATE est retourné lorsqu’une ODBC 3 *.x* application fonctionne avec un ODBC 2 *.x* pilote, il peut être ignoré.)|  
+|01S01|Erreur de ligne|Une erreur s’est produite lors de l’extraction d’une ou plusieurs lignes.<br /><br /> (Si cet valeur SQLSTATE est retourné lorsqu’une ODBC 3 *.x* application fonctionne avec un ODBC 2 *.x* pilote, il peut être ignoré.)|  
 |01S06|Tentative d’extraction avant que le jeu de résultats renvoyé le premier ensemble de lignes|L’ensemble de lignes demandé avec chevauchement le début du jeu de résultats si FetchOrientation était SQL_FETCH_PRIOR, la position actuelle a été au-delà de la première ligne et le numéro de la ligne actuelle est inférieure ou égale à la taille de l’ensemble de lignes.<br /><br /> L’ensemble de lignes demandé avec chevauchement le début du jeu de résultats si FetchOrientation était SQL_FETCH_PRIOR, la position actuelle a été au-delà de la fin du jeu de résultats, et la taille de l’ensemble de lignes était supérieure à la taille du jeu de résultats.<br /><br /> L’ensemble de lignes demandé avec chevauchement le début du jeu de résultats si FetchOrientation était SQL_FETCH_RELATIVE, FetchOffset était négative, et la valeur absolue de FetchOffset était inférieur ou égal à la taille de l’ensemble de lignes.<br /><br /> L’ensemble de lignes demandé avec chevauchement le début du jeu de résultats si FetchOrientation était SQL_FETCH_ABSOLUTE, FetchOffset était négative, et la valeur absolue de FetchOffset était supérieure à la taille du jeu de résultats, mais inférieur ou égal à la taille de l’ensemble de lignes.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01 S 07|Troncation fractionnelle|Les données retournées pour une colonne a été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour heure, timestamp et les types de données interval contenant un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S07|Troncation fractionnelle|Les données retournées pour une colonne a été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour heure, timestamp et les types de données interval contenant un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violation de l’attribut de type de données restreint|La valeur de données d’une colonne dans le jeu de résultats n’a pas pu être convertie au type de données spécifié par *TargetType* dans **SQLBindCol**.<br /><br /> La colonne 0 a été liée avec un type de données de SQL_C_BOOKMARK, et l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a été défini à SQL_UB_VARIABLE.<br /><br /> La colonne 0 a été liée avec un type de données de SQL_C_VARBOOKMARK, et l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS n’est pas défini à SQL_UB_VARIABLE.|  
 |07009|Index de descripteur non valide|Le pilote a été un ODBC 2 *.x* pilote qui ne prend pas en charge **SQLExtendedFetch**, et un numéro de colonne spécifié dans la liaison pour une colonne était égale à 0.<br /><br /> La colonne 0 a été liée, et l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a été définie sur SQL_UB_OFF.|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
@@ -164,8 +164,8 @@ SQLRETURN SQLFetchScroll(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |*Avant de démarrer*|1|  
-|*CurrRowsetStart + la RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + la RowsetSize*[1]|  
-|*CurrRowsetStart + la RowsetSize*[1]*> LastResultRow*|*Après la fin*|  
+|*CurrRowsetStart + la RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Après la fin*|  
 |*Après la fin*|*Après la fin*|  
   
  [1] si la taille de l’ensemble de lignes a été modifiée depuis le précédent appel pour extraire les lignes, il s’agit de la taille de l’ensemble de lignes qui a été utilisée avec l’appel précédent.  
@@ -177,8 +177,8 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Avant de démarrer*|*Avant de démarrer*|  
 |*CurrRowsetStart = 1*|*Avant de démarrer*|  
-|*1 < CurrRowsetStart < = la RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > La RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - la RowsetSize* <sup>[2]</sup>|  
+|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*Après la fin et LastResultRow < la RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*Après la fin LastResultRow et > = La RowsetSize* <sup>[2]</sup>|*LastResultRow - la RowsetSize + 1* <sup>[2].</sup>|  
   
@@ -192,11 +192,11 @@ SQLRETURN SQLFetchScroll(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |*(Avant de démarrer et FetchOffset > 0) OU (après la fin et FetchOffset < 0)*|*--* <sup>[1]</sup>|  
-|*BeforeStart et FetchOffset < = 0*|*Avant de démarrer*|  
+|*BeforeStart AND FetchOffset <= 0*|*Avant de démarrer*|  
 |*CurrRowsetStart = 1 AND FetchOffset < 0*|*Avant de démarrer*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > La RowsetSize* <sup>[3]</sup>|*Avant de démarrer*|  
-|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = la RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
-|*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Avant de démarrer*|  
+|*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
+|*1 <= CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
 |*CurrRowsetStart + FetchOffset > LastResultRow*|*Après la fin*|  
 |*Après la fin et FetchOffset > = 0*|*Après la fin*|  
   
@@ -211,9 +211,9 @@ SQLRETURN SQLFetchScroll(
   
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > La RowsetSize* <sup>[2]</sup>|*Avant de démarrer*|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = la RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; <= LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Avant de démarrer*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Avant de démarrer*|  
 |*1 < = FetchOffset \<= LastResultRow*|*FetchOffset*|  
 |*FetchOffset > LastResultRow*|*Après la fin*|  
@@ -247,7 +247,7 @@ SQLRETURN SQLFetchScroll(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |*BookmarkRow + FetchOffset < 1*|*Avant de démarrer*|  
-|*1 < = BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
+|*1 <= BookmarkRow + FetchOffset \<= LastResultRow*|*BookmarkRow + FetchOffset*|  
 |*BookmarkRow + FetchOffset > LastResultRow*|*Après la fin*|  
   
  Pour plus d’informations sur les signets, consultez [signets (ODBC)](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -334,7 +334,7 @@ SQLFetchScroll(hstmt, SQL_FETCH_RELATIVE, 0);
   
 |SQLExtendedFetch argument|Value|  
 |-------------------------------|-----------|  
-|Au paramètre StatementHandle|Au paramètre StatementHandle dans **SQLFetchScroll**.|  
+|StatementHandle|Au paramètre StatementHandle dans **SQLFetchScroll**.|  
 |FetchOrientation|FetchOrientation dans **SQLFetchScroll**.|  
 |FetchOffset|Si FetchOrientation n’est pas SQL_FETCH_BOOKMARK, la valeur de l’argument FetchOffset dans **SQLFetchScroll** est utilisé.<br /><br /> Si FetchOrientation est SQL_FETCH_BOOKMARK, la valeur stockée à l’adresse spécifiée par l’attribut d’instruction SQL_ATTR_FETCH_BOOKMARK_PTR est utilisée.|  
 |RowCountPtr|L’adresse spécifiée par l’attribut d’instruction SQL_ATTR_ROWS_FETCHED_PTR.|  

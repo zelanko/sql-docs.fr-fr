@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8ffa3e3508fef50491f20b47e13c12865cb5432d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874983"
 ---
 # <a name="overview-of-clr-integration"></a>Vue d'ensemble de l'intégration du CLR
   Le CLR (Common Language Runtime) est le cœur de Microsoft .NET Framework et fournit l'environnement d'exécution de la totalité du code .NET Framework. Le code qui s'exécute au sein du CLR est désigné sous le nom de code managé. Le CLR fournit divers fonctions et services requis pour l'exécution du programme, y compris la compilation juste-à-temps (JIT), l'allocation et la gestion de la mémoire, la mise en application de la cohérence des types, la gestion des exceptions, la gestion des threads et la sécurité.  Pour plus d'informations, consultez la documentation du Kit de développement (SDK) .NET Framework.  

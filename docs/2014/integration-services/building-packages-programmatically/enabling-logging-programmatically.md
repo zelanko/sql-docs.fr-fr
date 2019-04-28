@@ -24,11 +24,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b83f5842ebb2bb97ebd58142ef69d3a3d153f51
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836491"
 ---
 # <a name="enabling-logging-programmatically"></a>Activation de la journalisation par programme
   Le moteur d'exécution fournit une collection d'objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> qui permettent la capture d'informations spécifiques à un événement au cours de la validation et de l'exécution de package. Les objets <xref:Microsoft.SqlServer.Dts.Runtime.LogProvider> sont disponibles pour les objets <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer>, y compris les objets <xref:Microsoft.SqlServer.Dts.Runtime.TaskHost>, <xref:Microsoft.SqlServer.Dts.Runtime.Package>, <xref:Microsoft.SqlServer.Dts.Runtime.ForLoop> et <xref:Microsoft.SqlServer.Dts.Runtime.ForEachLoop>. La journalisation est activée sur des conteneurs individuels, ou sur l'ensemble du package.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c35eeb8905a5f4753572ae89adce0c8fdfbec691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732867"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Spécifier une colonne à utiliser comme régresseur dans un modèle
   Un modèle de régression linéaire représente la valeur de l'attribut prévisible résultant d'une formule qui combine les entrées de telle façon que les données sont ajustées le mieux possible à une ligne de régression estimée. L'algorithme accepte uniquement les valeurs numériques comme entrées, et détecte automatiquement les entrées qui sont le mieux adaptées.  
@@ -61,9 +61,9 @@ ms.locfileid: "48179924"
      Dans la visionneuse, le modèle est représenté sous la forme d'un nœud unique contenant la formule de régression. Vous pouvez afficher la formule dans la **Légende d’exploration de données**, ou extraire les coefficients de la formule à l’aide de requêtes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Linear Regression](microsoft-linear-regression-algorithm.md)   
- [Requêtes d’exploration de données](data-mining-queries.md)   
- [Référence technique de Microsoft Linear Regression algorithme](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Contenu du modèle pour les modèles de régression linéaire d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm.md)   
+ [Requêtes d'exploration de données](data-mining-queries.md)   
+ [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm-technical-reference.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services – Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

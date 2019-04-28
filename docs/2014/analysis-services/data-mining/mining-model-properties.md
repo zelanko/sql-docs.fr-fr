@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a47d893aa1020112290c31c7e6b645a29aaccb5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733329"
 ---
 # <a name="mining-model-properties"></a>Propriétés du modèle d'exploration de données
   Les modèles d'exploration de données ont les types de propriétés suivantes :  
@@ -60,12 +60,12 @@ ms.locfileid: "48171379"
 |**Usage**|Définit comment la colonne sera utilisée par le modèle d'exploration de données.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Colonnes du modèle d’exploration de données](mining-model-columns.md)   
- [Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
- [Tâches du modèle d’exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
- [Modifier les propriétés d’un modèle d’exploration de données](change-the-properties-of-a-mining-model.md)   
- [Outils d’exploration de données](data-mining-tools.md)   
- [Créer une Structure d’exploration de données relationnelles](create-a-relational-mining-structure.md)   
+ [Colonnes d'un modèle d'exploration de données](mining-model-columns.md)   
+ [Structures d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-structures-analysis-services-data-mining.md)   
+ [Tâches du modèle d'exploration de données et procédures](mining-model-tasks-and-how-tos.md)   
+ [Modifier les propriétés d'un modèle d'exploration de données](change-the-properties-of-a-mining-model.md)   
+ [Outils d'exploration de données](data-mining-tools.md)   
+ [Créer une structure d'exploration de données relationnelle](create-a-relational-mining-structure.md)   
  [Créer un alias pour une colonne du modèle](create-an-alias-for-a-model-column.md)  
   
   

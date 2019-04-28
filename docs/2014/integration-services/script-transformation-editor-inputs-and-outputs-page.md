@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0d15b3979209e4dba6983a845ae1752d3e136fb7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62889192"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Éditeur de transformation de script (page Entrées et sorties)
   Utilisez la page **Entrées et sorties** de la boîte de dialogue **Éditeur de transformation de script** pour ajouter, supprimer et configurer les entrées et les sorties destinées à la transformation de script.  

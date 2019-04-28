@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b10717491672e0323afb39ada55aafff5c056caf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733051"
 ---
 # <a name="query-the-parameters-used-to-create-a-mining-model"></a>Interroger les paramètres utilisés pour créer un modèle d'exploration de données
   La composition d'un modèle d'exploration de données est affecté non seulement par les cas d'apprentissage, mais aussi par les paramètres définis lors de la création du modèle. Par conséquent, il peut s'avérer utile d'extraire les paramètres d'un modèle existant pour mieux comprendre le comportement du modèle. La récupération des paramètres peut aussi servir à documenter une version particulière de ce modèle.  
@@ -68,7 +68,7 @@ WHERE MODEL_NAME = 'TM Clustering'
  CLUSTER_COUNT=10,CLUSTER_SEED=0,CLUSTERING_METHOD=1,MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_STATES=100,MINIMUM_SUPPORT=1,MODELLING_CARDINALITY=10,SAMPLE_SIZE=50000,STOPPING_TOLERANCE=10  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de requête d’exploration de données et de procédures](data-mining-query-tasks-and-how-tos.md)   
+ [Tâches de requête d’exploration de données et procédures](data-mining-query-tasks-and-how-tos.md)   
  [Requêtes d’exploration de données](data-mining-queries.md)  
   
   

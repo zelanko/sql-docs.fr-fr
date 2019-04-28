@@ -15,25 +15,25 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53372751"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722365"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurer IIS pour la synchronisation web
   Les procédures de cette rubrique constituent la deuxième étape de la configuration de la synchronisation Web pour la réplication de fusion. Cette étape est réalisée après l'activation d'une publication pour la synchronisation Web. Le processus de configuration est présenté dans [Configurer la synchronisation Web](configure-web-synchronization.md). Après avoir terminé les procédures de cette rubrique, poursuivez par la troisième étape, qui est la configuration d'un abonnement pour qu'il utilise la synchronisation Web. Cette troisième étape est décrite dans les rubriques suivantes :  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Comment : Configurer un abonnement pour utiliser la synchronisation Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Procédure : Configurer un abonnement pour utiliser la synchronisation Web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programmation de la réplication [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Comment : Configurer un abonnement pour utiliser la synchronisation Web (programmation Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programmation de la réplication [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Procédure : Configurer un abonnement pour utiliser la synchronisation Web (programmation Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO : [Comment : Configurer un abonnement pour utiliser la synchronisation Web (programmation RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO : [Procédure : Configurer un abonnement pour utiliser la synchronisation Web (programmation RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  La synchronisation Web utilise un ordinateur exécutant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) pour synchroniser des abonnements par extraction de données (pull) avec des publications de fusion. IIS version 5.0, IIS version 6.0 et IIS version 7.0 sont pris en charge. L'Assistant Configuration de la synchronisation Web n'est pas pris en charge sur IIS version 7.0.  
   
 > [!IMPORTANT]  
->  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peuvent provoquer des erreurs. Ces options en question sont les suivantes : « Le format d'un message pendant la synchronisation Web n'était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web. »  
+>  Assurez-vous que votre application utilise uniquement [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] ou une version ultérieure et qu'aucune version antérieure de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] n'est installée sur le serveur IIS. Les versions antérieures de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] peuvent provoquer des erreurs. Ces options en question sont les suivantes : « Le format d’un message pendant la synchronisation Web n’était pas valide. Vérifiez que les composants de réplication sont correctement configurés sur le serveur Web. »  
   
 > [!CAUTION]  
 >  N'utilisez pas WebSync et d'autres emplacements de dossier d'instantanés à la fois.  
@@ -217,7 +217,7 @@ ms.locfileid: "53372751"
   
 #### <a name="to-configure-iis-authentication"></a>Pour configurer l'authentification IIS  
   
--   Quand des Abonnés se connectent à IIS, IIS doit les authentifier avant qu'ils puissent accéder aux ressources et aux processus. IIS offre trois types d'authentification : anonyme, de base et intégrée. L'authentification peut être appliquée au site Web tout entier ou au répertoire virtuel que vous avez créé.  
+-   Quand des Abonnés se connectent à IIS, IIS doit les authentifier avant qu'ils puissent accéder aux ressources et aux processus. IIS offre trois types d’authentification : Anonyme, de base et intégrée. L'authentification peut être appliquée au site Web tout entier ou au répertoire virtuel que vous avez créé.  
   
      Nous vous recommandons d'utiliser l'authentification de base avec SSL. SSL est nécessaire quel que soit le type d'authentification utilisé. Pour plus d'informations sur la configuration de l'authentification, consultez la documentation de IIS.  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64e7e0fe7a8f68ce9248c02e3a59f34e1b7f65bb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722651"
 ---
 # <a name="data-mining-architecture"></a>Architecture d'exploration de données
   Cette section décrit l'architecture des solutions d'exploration de données qui sont hébergées dans une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Les rubriques de cette section décrivent l'architecture logique et physique d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui prend en charge l'exploration de données, et fournissent également des informations sur les clients, les fournisseurs et les protocoles qui peuvent être utilisés pour communiquer avec des serveurs d'exploration de données, et pour utiliser des objets d'exploration de données localement ou à distance.  
@@ -38,7 +38,7 @@ ms.locfileid: "48121049"
   
  [Architecture physique &#40;Analysis Services - Exploration de données&#41;](physical-architecture-analysis-services-data-mining.md)  
   
- [Services et sources de données d’exploration de données](data-mining-services-and-data-sources.md)  
+ [Services d'exploration de données et sources de données](data-mining-services-and-data-sources.md)  
   
  [Gestion des solutions et des objets d’exploration de données](management-of-data-mining-solutions-and-objects.md)  
   
@@ -46,6 +46,6 @@ ms.locfileid: "48121049"
   
 ## <a name="see-also"></a>Voir aussi  
  [Programmation de modèle multidimensionnel](../multidimensional-models/multidimensional-model-programming.md)   
- [Programmation de l’exploration de données](../dev-guide/data-mining-programming.md)  
+ [Programmation de l'exploration de données](../dev-guide/data-mining-programming.md)  
   
   

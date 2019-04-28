@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2a7e507e45d8429312834911b7bef5ae1e784c8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62870878"
 ---
 # <a name="view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql"></a>Afficher la taille du fichier partiellement alloué d'un instantané de base de données (Transact-SQL)
   Cette rubrique explique comment utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] pour vérifier qu'un fichier de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est un fichier partiellement alloué et pour déterminer ses tailles réelle et maximale. Les fichiers partiellement alloués, qui sont une fonctionnalité du système de fichiers NTFS, sont utilisés par les instantanés de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

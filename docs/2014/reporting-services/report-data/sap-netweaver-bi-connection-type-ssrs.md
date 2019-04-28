@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd5201b32342734258a729de9ba474ac6cdf1be9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59969505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720639"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>Type de connexion SAP NetWeaver BI (SSRS)
   Pour inclure les données d'une source de données externe SAP NetWeaver® Business Intelligence dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)]. Ce type de source de données intégré est basé sur l'extension de données du fournisseur de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework 1.0 pour [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)].  

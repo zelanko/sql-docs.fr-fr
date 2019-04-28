@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012028"
 ---
 # <a name="create-a-login"></a>Créer un compte de connexion
   Cette rubrique explique comment créer un compte de connexion dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Un compte de connexion est l'identité de la personne ou du processus qui se connecte à une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -73,7 +73,7 @@ ms.locfileid: "54131589"
   
      Si vous cliquez sur **Rechercher…**  :  
   
-    1.  Sous **sélectionner ce type d’objet**, cliquez sur **les Types d’objets...**  pour ouvrir le **Types d’objets** boîte de dialogue zone et sélectionnez tout ou partie des éléments suivants : **Principaux de sécurité intégrés**, **groupes**, et **utilisateurs**. Les options**Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
+    1.  Sous **Sélectionner ce type d’objet**, cliquez sur **Types d’objet...** pour ouvrir la boîte de dialogue **Types d’objet** et sélectionnez tout ou partie des éléments suivants : **Entités de sécurité intégrées**, **Groupes** et **Utilisateurs**. Les options**Principaux de sécurité intégrés** et **Utilisateurs** sont sélectionnées par défaut. Lorsque vous avez terminé, cliquez sur **OK**.  
   
     2.  Sous **À partir de cet emplacement**, cliquez sur **Emplacements…** pour ouvrir la boîte de dialogue **Emplacements** et sélectionner un des emplacements de serveur disponibles. Lorsque vous avez terminé, cliquez sur **OK**.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54131589"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Options supplémentaires  
- Le **nouvelle connexion** boîte de dialogue offre également des options sur quatre pages supplémentaires : **Rôles de serveur**, **mappage utilisateur**, **éléments sécurisables**, et **état**.  
+ La boîte de dialogue **Connexion – Nouvelle** offre également des options sur quatre pages supplémentaires : **Rôles de serveur**, **Mappage utilisateur**, **Éléments sécurisables** et **État**.  
   
 ### <a name="server-roles"></a>Rôles de serveur  
  La page **Rôles de serveur** répertorie tous les rôles possibles qui peuvent être affectés au nouveau compte de connexion. Les options suivantes sont disponibles :  
@@ -176,7 +176,7 @@ ms.locfileid: "54131589"
   
 1.  Cliquez sur **Rechercher**.  
   
-2.  Dans le **ajouter des objets** boîte de dialogue, sélectionnez une des options suivantes : **Objets spécifiques...** , **Tous les objets des types...** , ou **le serveur**_nom_serveur_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  Dans la boîte de dialogue **Ajouter des objets**, sélectionnez l’une des options suivantes : **Objets spécifiques...** , **Tous les objets des types...** , ou **le serveur**_nom_serveur_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
     >  La sélection de l’option **Le serveur**_nom_serveur_ remplit automatiquement la grille supérieure avec tous les objets sécurisables de ce serveur.  
@@ -185,7 +185,7 @@ ms.locfileid: "54131589"
   
     1.  Dans la boîte de dialogue **Sélectionner les objets**, sous **Sélectionnez ces types d’objets**, cliquez sur **Types d’objets…**.  
   
-    2.  Dans le **sélectionner les Types d’objet** boîte de dialogue, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **connexions**, **serveurs**, **groupes de disponibilité**, et **rôles de serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  Dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     3.  Sous **Entrez les noms d’objets à sélectionner (exemples)**, cliquez sur **Parcourir…**.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54131589"
   
     5.  Dans la boîte de dialogue **Sélectionner des objets** , cliquez sur **OK**.  
   
-4.  Si vous sélectionnez **tous les objets des types...** , dans le **sélectionner les Types d’objet** boîte de dialogue, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **connexions**, **serveurs**, **groupes de disponibilité**, et **rôles de serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Si vous sélectionnez **Tous les objets des types...**, dans la boîte de dialogue **Sélectionner les types d’objets**, sélectionnez tout ou partie des types d’objets suivants : **Points de terminaison**, **Connexions**, **Serveurs**, **Groupes de disponibilité** et **Rôles serveur**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nom**  
  Nom de chaque principal ou élément sécurisable ajouté à la grille.  
@@ -278,7 +278,7 @@ ms.locfileid: "54131589"
   
  Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a> Suivi : Mesures à prendre après avoir créé une connexion  
+##  <a name="FollowUp"></a> Suivi : Étapes à suivre après avoir créé un compte de connexion  
  Une fois le compte de connexion créé, celui-ci peut se connecter à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], mais il ne dispose pas nécessairement des autorisations suffisantes pour effectuer des tâches utiles. La liste suivante fournit des liens vers des actions de compte de connexion courantes.  
   
 -   Pour effectuer une jointure entre le compte de connexion et un rôle de base de données, consultez [Attacher un rôle](join-a-role.md).  

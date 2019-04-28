@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d396ac9bfd8f04a211e01c8e8384e62f0808d42b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725525"
 ---
 # <a name="calculation-context"></a>Contexte de calcul
   Le contexte de calcul est le sous-espace connu du cube où une expression est évaluée et où toutes les coordonnées sont explicitement connues ou peuvent être dérivées de l'expression.  
@@ -71,8 +71,8 @@ WHERE (Customer.Country.France,
 >  Pour accroître les performances de la requête, pensez à éliminer les membres et les tuples le plus tôt possible au cours du processus de résolution. De cette manière, les calculs de temps des requêtes complexes dans le jeu de membres final peuvent cibler le plus petit nombre de cellules possible.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définition d’un contexte de Cube dans une requête &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
- [Principes de base de requête MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [Concepts clés pour MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [Définition d’un contexte de cube dans une requête &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)   
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
   

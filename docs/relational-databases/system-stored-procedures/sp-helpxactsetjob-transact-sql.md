@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959609"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +45,15 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
-|**numéro_travail**|**Int**|Numéro de travail Oracle.|  
+|**jobnumber**|**Int**|Numéro de travail Oracle.|  
 |**lastdate**|**varchar(22)**|Dernière date d'exécution du travail.|  
 |**thisdate**|**varchar(22)**|Heure de la modification|  
 |**nextdate**|**varchar(22)**|Date de la prochaine exécution du travail.|  
-|**rompu**|**varchar (1)**|Indicateur signalant si le travail est interrompu.|  
-|**Intervalle**|**varchar(200)**|Intervalle du travail.|  
-|**échecs**|**Int**|Nombre d'échecs du travail.|  
+|**broken**|**varchar(1)**|Indicateur signalant si le travail est interrompu.|  
+|**interval**|**varchar(200)**|Intervalle du travail.|  
+|**failures**|**Int**|Nombre d'échecs du travail.|  
 |**xactsetjobwhat**|**varchar(200)**|Nom de la procédure exécutée par le travail.|  
-|**xactsetjob**|**varchar (1)**|État du travail, qui peut être l'un des suivants :<br /><br /> **1** -le travail est activé.<br /><br /> **0** -le travail est désactivé.|  
+|**xactsetjob**|**varchar(1)**|État du travail, qui peut être l'un des suivants :<br /><br /> **1** -le travail est activé.<br /><br /> **0** -le travail est désactivé.|  
 |**xactsetlonginterval**|**Int**|Intervalle long pour le travail.|  
 |**xactsetlongthreshold**|**Int**|Seuil long pour le travail.|  
 |**xactsetshortinterval**|**Int**|Intervalle court pour le travail.|  

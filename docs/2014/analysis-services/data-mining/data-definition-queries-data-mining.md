@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf9674f348541e0c4d8fe4f8c6c35740124b91d2
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723121"
 ---
 # <a name="data-definition-queries-data-mining"></a>Requêtes de définition des données (Exploration de données)
   Pour l’exploration de données, la catégorie *requête Définition des données* signifie des instructions DMX ou des commandes XMLA qui effectuent les opérations suivantes :  

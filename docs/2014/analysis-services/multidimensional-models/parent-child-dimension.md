@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: be08164b3e96f5995c5ed1b64edc83699c7d8b40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736797"
 ---
 # <a name="parent-child-hierarchy"></a>Hiérarchie parent-enfant
   Une hiérarchie parent-enfant est une hiérarchie dans une dimension standard qui contient un attribut parent. Un attribut parent décrit une *relation d’auto-référencement*, ou *jointure réflexive*, dans une table de dimension principale. Les hiérarchies parent-enfant sont construites à partir d'un seul attribut parent. Un seul niveau est affecté à une hiérarchie parent-enfant parce que les niveaux présents dans la hiérarchie sont constitués à partir des relations parent-enfant entre les membres associés à l'attribut parent. La position d'un membre au sein d'une hiérarchie parent-enfant est déterminée par les propriétés `KeyColumns` et `RootMemberIf` de l'attribut parent, tandis que la position d'un membre au sein d'un niveau est déterminée par la propriété `OrderBy` de l'attribut parent. Pour plus d’informations sur les propriétés d’attributs, consultez [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

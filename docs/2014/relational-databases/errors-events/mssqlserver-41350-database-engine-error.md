@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a9d5d403312bc2267fe629d62f5393b835351a32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867883"
 ---
 # <a name="mssqlserver41350"></a>MSSQLSERVER_41350
     
@@ -30,7 +30,7 @@ ms.locfileid: "48066369"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|HK_CREATE_TABLE_WITH_ENCRYPTION|  
-|Texte du message|Avertissement : une table optimisée en mémoire avec la durabilité SCHEMA_AND_DATA a été créée dans une base de données dont le chiffrement est activé. Les données de la table optimisée en mémoire ne seront pas chiffrées.|  
+|Texte du message|Avertissement : une table optimisée par mémoire avec la durabilité SCHEMA_AND_DATA a été créée dans une base de données activée pour le chiffrement. Les données de la table optimisée en mémoire ne seront pas chiffrées.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [OLTP en mémoire &#40;Optimisation en mémoire&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  

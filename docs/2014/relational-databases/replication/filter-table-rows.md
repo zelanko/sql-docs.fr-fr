@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eafa0dc2be5ee9ceffd86185399168589fdd8b1f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721219"
 ---
 # <a name="filter-table-rows"></a>Filtrer les lignes de la table
   La page **Filtrer les lignes de la table** vous permet d'effectuer les opérations suivantes :  
@@ -49,7 +49,7 @@ ms.locfileid: "52752231"
  Ce volet est rempli avec des filtres à mesure que vous les ajoutez aux articles de table dans la publication. Les tables avec filtres de lignes sont affichées en tant que nœuds de niveau supérieur dans le volet. Pour les publications de fusion, les tables auxquelles les filtres ont été étendus par le biais d'un filtre de jointure sont affichées en tant que nœuds enfants.  
   
  **Ajouter**  
- Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. En cliquant sur **ajouter** pour une fusion de publication des trois choix s’affiche : **Ajouter un filtre**; **Ajouter une jointure pour étendre le filtre sélectionné**; **Générer automatiquement des filtres**.  
+ Cliquez sur **Ajouter** pour lancer une boîte de dialogue qui vous permet de filtrer les articles de table. Si vous cliquez sur **Ajouter** pour une publication d'instantané ou transactionnelle, une boîte de dialogue s'ouvre immédiatement. Si vous cliquez sur **Ajouter** pour une publication de fusion, trois choix s’affichent : **Ajouter un filtre**, **Ajouter une jointure pour étendre le filtre sélectionné** et **Générer automatiquement des filtres**.  
   
 -   Sélectionnez **Ajouter un filtre** pour ouvrir la boîte de dialogue du **même nom** . Elle vous permet d'appliquer des filtres de lignes à un article de table. Dans la boîte de dialogue **Ajouter un filtre** , vous pouvez, par exemple, indiquer qu'une table contenant des données client doit uniquement comporter des données relatives aux clients français lors de sa réplication vers des abonnés.  
   

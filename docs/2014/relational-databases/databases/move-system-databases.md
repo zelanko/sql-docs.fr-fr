@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: da6b02061ca12210f78ee48b9d3a78c30d43e0b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871536"
 ---
 # <a name="move-system-databases"></a>Déplacer des bases de données système
   Cette rubrique décrit comment déplacer des bases de données système dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Le déplacement des bases de données système peut être utile dans les cas suivants :  
@@ -196,7 +196,7 @@ ms.locfileid: "52756271"
 ##  <a name="Resource"></a> Déplacement de la base de données Resources  
  L’emplacement de la base de données Resource est \<*lecteur*>:\Program Files\Microsoft SQL Server\MSSQL\<version>.\<*nom_instance*>\MSSQL\Binn\\. La base de données ne peut pas être déplacée.  
   
-##  <a name="Follow"></a> Suivi : après le déplacement de toutes les bases de données système  
+##  <a name="Follow"></a> Suivi : Après le déplacement de toutes les bases de données système  
  Si vous avez déplacé toutes les bases de données système vers un même lecteur ou volume ou vers un autre serveur utilisant une lettre de lecteur différente, effectuez les mises à jour suivantes.  
   
 -   Modifiez le chemin d'accès du journal de l'Agent SQL Server. Si vous ne mettez pas à jour ce chemin d'accès, l'Agent SQL Server ne démarre pas.  

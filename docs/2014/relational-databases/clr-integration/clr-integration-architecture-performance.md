@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874496"
 ---
 # <a name="performance-of-clr-integration"></a>Performances de l'intégration du CLR
   Cette rubrique aborde certains choix de conception qui améliorent les performances de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] intégration avec le [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework common language runtime (CLR).  
@@ -48,13 +48,13 @@ ms.locfileid: "53368181"
   
  Les fonctions table en continu sont des fonctions managées qui retournent une interface `IEnumerable`. `IEnumerable` possède des méthodes pour se déplacer à travers le jeu de résultats retourné par la fonction table en continu. Lorsque la fonction table en continu est appelée, l'interface `IEnumerable` retournée est directement connectée au plan de requête. Le plan de requête appelle les méthodes `IEnumerable` lorsqu'il doit extraire des lignes. Ce modèle d'itération permet que les résultats soient consommés immédiatement après que la première ligne a été créée, au lieu d'attendre que la totalité de la table soit remplie. Il réduit aussi considérablement la mémoire consommée en appelant la fonction.  
   
-### <a name="arrays-vs-cursors"></a>Différences entre les tableaux et les Curseurs  
+### <a name="arrays-vs-cursors"></a>Visual Studio de tableaux. Curseurs  
  Lorsque les curseurs [!INCLUDE[tsql](../../../includes/tsql-md.md)] doivent parcourir des données qui sont plus aisément exprimées en tableau, le code managé peut être utilisé avec des gains de performance significatifs.  
   
 ### <a name="string-data"></a>Données de type chaîne  
  Les données caractères [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], telles que `varchar`, peuvent être du type SqlString ou SqlChars dans les fonctions managées. Les variables SqlString créent une instance de la valeur entière en mémoire. Les variables SqlChars fournissent une interface multidiffusion qui peut être utilisée pour obtenir de meilleures performances et une meilleure évolutivité en ne créant pas d'instance de la totalité de la valeur en mémoire. Ce point est particulièrement important pour les données LOB. En outre, il est possible d'accéder aux données XML du serveur via une interface de diffusion retournée par `SqlXml.CreateReader()`.  
   
-### <a name="clr-vs-extended-stored-procedures"></a>Différences entre le CLR et les Procédures stockées étendues  
+### <a name="clr-vs-extended-stored-procedures"></a>Visual Studio CLR. Procédures stockées étendues  
  Les API Microsoft.SqlServer.Server (API) qui permettent aux procédures managées de renvoyer des jeux de résultats au client s'exécutent mieux que les API ODS (Open Data Services) utilisées par les procédures stockées étendues. En outre, les API System.Data.SqlServer prennent en charge les types de données tels que `xml`, `varchar(max)`, `nvarchar(max)` et `varbinary(max)`, introduits dans [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], alors que les API ODS n'ont pas été étendues pour prendre en charge les nouveaux types de données.  
   
  Avec le code managé, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gère l'utilisation de ressources telles que la mémoire, les threads et la synchronisation. La raison en est que les API managées qui exposent ces ressources sont implémentées sur le gestionnaire de ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Inversement, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] n'a ni vue ou contrôle sur l'utilisation des ressources de la procédure stockée étendue. Par exemple, si une procédure stockée étendue consomme une quantité trop importante d'UC ou de ressources mémoire, il n'existe aucun moyen de le détecter ou de le contrôler avec [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Avec le code managé, toutefois, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut détecter qu'un thread donné n'a rien produit pendant une longue période de temps, puis forcer la tâche à être abandonnée afin qu'un autre travail puisse être planifié. Par conséquent, l'utilisation du code managé offre une meilleure évolutivité et une meilleure utilisation des ressources système.  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960817"
 ---
 # <a name="secure-the-subscriber"></a>Sécuriser l'abonné
   Les Agents de fusion et les Agents de distribution se connectent à l'Abonné. Ces connexions peuvent être effectuées dans le contexte d'un nom de connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou d'un nom de connexion Windows. Il est important de fournir un nom de connexion approprié à ces agents tout en respectant le principe consistant à attribuer les droits nécessaires minimaux et à protéger aussi le stockage de tous les mots de passe. Pour des informations sur les autorisations requises pour chaque agent, consultez [Replication Agent Security Model](replication-agent-security-model.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "54125424"
     > [!IMPORTANT]  
     >  Utilisez l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour les connexions avec les Abonnés, et spécifiez un autre compte pour la connexion avec chaque Abonné. Si vous utilisez un abonnement par extraction de données (pull), la réplication définit toujours la connexion de façon à ce qu'elle utilise l'authentification Windows (pour les abonnements par extraction de données, la réplication ne peut pas accéder aux métadonnées sur l'Abonné qui doit utiliser l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ). Dans ce cas, modifiez la connexion pour qu'elle utilise l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] après la configuration de l'abonnement.  
   
-     Pour plus d’informations, consultez Comment : Créer un abonnement avec mise à jour pour une Publication transactionnelle (SQL Server Management Studio) et [afficher et modifier les paramètres de sécurité de réplication](view-and-modify-replication-security-settings.md).  
+     Pour plus d’informations, consultez Guide pratique pour créer un abonnement pouvant être mis à jour à une publication transactionnelle (SQL Server Management Studio) et [Afficher et modifier les paramètres de sécurité de la réplication](view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Activer les connexions chiffrées dans le moteur de base de données &#40;Gestionnaire de configuration SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

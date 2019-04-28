@@ -15,18 +15,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b555d929bb343de1d651b158335673bd2e0573f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733377"
 ---
 # <a name="mining-model-tasks-and-how-tos"></a>Tâches du modèle d'exploration de données et procédures
   L’onglet **Modèles d’exploration de données** du Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] permet de gérer et de traiter les modèles d’exploration de données dans une structure d’exploration de données.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Ajouter un modèle d’exploration de données à une structure d’exploration de données existante](add-a-mining-model-to-an-existing-mining-structure.md)  
+-   [Ajouter un modèle d'exploration de données à une structure d'exploration de données existante](add-a-mining-model-to-an-existing-mining-structure.md)  
   
 -   [Supprimer un modèle d’exploration de données dans une structure d’exploration de données](delete-a-mining-model-from-a-mining-structure.md)  
   
@@ -34,9 +34,9 @@ ms.locfileid: "48196059"
   
 -   [Créer un alias pour une colonne du modèle](create-an-alias-for-a-model-column.md)  
   
--   [Modifier la discrétisation d’une colonne dans un modèle d’exploration de données](change-the-discretization-of-a-column-in-a-mining-model.md)  
+-   [Modifier la discrétisation d'une colonne dans un modèle d'exploration de données](change-the-discretization-of-a-column-in-a-mining-model.md)  
   
--   [Afficher ou modifier des indicateurs de modélisation &#40;exploration de données&#41;](modeling-flags-data-mining.md)  
+-   [Afficher ou modifier les indicateurs de modélisation &#40;Exploration de données&#41;](modeling-flags-data-mining.md)  
   
 -   [Spécifier une colonne à utiliser comme régresseur dans un modèle](specify-a-column-to-use-as-regressor-in-a-model.md)  
   
@@ -50,15 +50,15 @@ ms.locfileid: "48196059"
   
 -   [Afficher ou modifier les paramètres d’un algorithme](view-or-change-algorithm-parameters.md)  
   
--   [Faire une copie d’un modèle d’exploration de données](make-a-copy-of-a-mining-model.md)  
+-   [Créer une copie d'un modèle d'exploration de données](make-a-copy-of-a-mining-model.md)  
   
--   [Traiter un modèle d’exploration de données](process-a-mining-model.md)  
+-   [Traiter un modèle d'exploration de données](process-a-mining-model.md)  
   
--   [Créer une dimension d’exploration de données](create-a-data-mining-dimension.md)  
+-   [Créer une dimension d'exploration de données](create-a-data-mining-dimension.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la Structure d’exploration de données et procédures](mining-structure-tasks-and-how-tos.md)   
+ [Tâches de la structure d'exploration de données et procédures](mining-structure-tasks-and-how-tos.md)   
  [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)   
- [Concepts de l’exploration de données](data-mining-concepts.md)  
+ [Concepts d'exploration de données](data-mining-concepts.md)  
   
   

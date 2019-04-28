@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011916"
 ---
 # <a name="principals-database-engine"></a>Principaux (moteur de base de données)
-  Les*principaux* sont des entités qui peuvent demander des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. La portée de l'influence d'un principal dépend de la portée de sa définition : Windows, serveur, base de données ; et du fait que le principal est indivisible ou qu'il s'agit d'une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID).  
+  Les*principaux* sont des entités qui peuvent demander des ressources [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Comme les autres composants du modèle d'autorisation [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , les principaux peuvent être ordonnés de façon hiérarchique. L’étendue d’influence d’un principal dépend de l’étendue de la définition de l’entité de sécurité : Windows, serveur, base de données ; et si le principal est indivisible ou une collection. Une connexion Windows est un exemple de principal indivisible et un groupe Windows est un exemple de principal constituant une collection. Chaque principal a un identificateur de sécurité (SID).  
   
  **Principaux au niveau Windows**  
   
@@ -65,7 +65,7 @@ ms.locfileid: "53371211"
  Chaque utilisateur de base de données appartient au rôle de base de données public. Quand des autorisations spécifiques sur un élément sécurisable n’ont pas été accordées ni refusées à un utilisateur, celui-ci hérite des autorisations accordées à public sur cet élément sécurisable.  
   
 ## <a name="informationschema-and-sys"></a>INFORMATION_SCHEMA et sys  
- Chaque base de données inclut deux entités qui apparaissent comme des utilisateurs dans des affichages catalogue : INFORMATION_SCHEMA et sys. Ces entités sont requises par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ce ne sont pas des principaux et ils ne peuvent être ni modifiés, ni supprimés.  
+ Chaque base de données inclut deux entités qui apparaissent en tant qu’utilisateurs dans les affichages catalogue : INFORMATION_SCHEMA et sys. Ces entités sont requises par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ce ne sont pas des principaux et ils ne peuvent être ni modifiés, ni supprimés.  
   
 ## <a name="certificate-based-sql-server-logins"></a>Connexions SQL Server basées sur des certificats  
  Les principaux de serveur compris entre deux signes dièse (##) sont destinés uniquement à une utilisation système interne. Les principaux suivants sont créés à partir de certificats lors de l'installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ; ils ne doivent pas être supprimés.  

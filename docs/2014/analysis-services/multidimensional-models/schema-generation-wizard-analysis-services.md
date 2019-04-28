@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0ca7153fc8f36792c61f5c2720117dfd9996893
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48219519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736553"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Assistant Génération de schéma (Analysis Services)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] prend en charge deux méthodes d'utilisation des schémas relationnels lors de la définition d'objets OLAP dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Généralement, vous définissez des objets OLAP en fonction d'un modèle d'objet logique construit dans une vue de source de données d'un projet ou d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Cette vue de source de données est définie en fonction d'éléments de schéma provenant d'une ou plusieurs sources de données relationnelles, lorsqu'ils sont personnalisés dans la vue de source de données.  
   
- Vous pouvez également commencer par définir des objets OLAP, puis générer une vue de source de données, une source de données et le schéma de base de données relationnelle sous-jacent qui prend en charge ces objets OLAP. Cette base de données relationnelle est appelée « base de données de la zone de sujet ».  
+ Vous pouvez également commencer par définir des objets OLAP, puis générer une vue de source de données, une source de données et le schéma de base de données relationnelle sous-jacent qui prend en charge ces objets OLAP. Cette base de données relationnelle est appelée « base de données de la zone de sujet ».  
   
  Cette approche, parfois appelée construction verticale, sert fréquemment à créer des prototypes et des modèles d'analyse. Lorsque vous utilisez cette approche, vous faites appel à l'Assistant Génération de schéma pour créer la vue de source de données et les objets de source de données sous-jacents selon les objets OLAP définis dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
@@ -40,13 +40,13 @@ ms.locfileid: "48219519"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Utilisez l’Assistant génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Explique comment générer le schéma pour les bases de données de la zone de sujet et de la zone de transit.|  
+|[Utiliser l’Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Explique comment générer le schéma pour les bases de données de la zone de sujet et de la zone de transit.|  
 |[Présentation des schémas de base de données](understanding-the-database-schemas.md)|Décrit le schéma généré pour les bases de données de la zone de sujet et de la zone de transit.|  
 |[Présentation de la génération incrémentielle](understanding-incremental-generation.md)|Décrit les fonctionnalités de génération incrémentielle de l'Assistant Génération de schéma.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Sources de données dans les modèles multidimensionnels](data-sources-in-multidimensional-models.md)   
+ [Sources de données dans des modèles multidimensionnels](data-sources-in-multidimensional-models.md)   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f44ae90a82e778bf8e8564b719aa6b9f0157a05a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982384"
 ---
 # <a name="sqlspecialcolumns-function"></a>Fonction SQLSpecialColumns
 **Conformité**  
@@ -56,7 +56,7 @@ SQLRETURN SQLSpecialColumns(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *IdentifierType*  
@@ -66,7 +66,7 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_ROWVER : Retourne l’ou les colonnes dans la table spécifiée, cas échéant, qui sont automatiquement mis à jour par la source de données n’importe quelle valeur dans la ligne est mise à jour par une transaction (comme dans SQLBase ROWID ou Sybase TIMESTAMP).  
   
- *Nom de catalogue*  
+ *CatalogName*  
  [Entrée] Nom de catalogue pour la table. Si un pilote prend en charge les catalogues pour certaines tables, mais pas pour d’autres, telles que lorsque le pilote récupère les données à partir de différents SGBD, une chaîne vide (« ») indique les tables qui n’ont pas de catalogues. *CatalogName* ne peut pas contenir un modèle de recherche de chaîne.  
   
  Si l’attribut d’instruction SQL_ATTR_METADATA_ID a la valeur SQL_TRUE, *CatalogName* est traité comme un identificateur et ses cas n’est pas significatif. S’il s’agit de SQL_FALSE, *CatalogName* est un argument ordinaire ; il est traité littéralement, et sa casse est significatif. Pour plus d’informations, consultez [Arguments dans les fonctions de catalogue](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md).  
@@ -95,9 +95,9 @@ SQLRETURN SQLSpecialColumns(
   
  SQL_SCOPE_CURROW : Le rowid est garanti être valide uniquement tout en étant positionné sur cette ligne. Un rowid ultérieure qui utiliserait ne peut pas retourner une ligne si la ligne a été mis à jour ou supprimée par une autre transaction.  
   
- SQL_SCOPE_TRANSACTION : Le rowid est garanti être valide pour la durée de la transaction actuelle.  
+ SQL_SCOPE_TRANSACTION: Le rowid est garanti être valide pour la durée de la transaction actuelle.  
   
- SQL_SCOPE_SESSION : Le rowid est garanti valide pendant la durée de la session (sur des limites de transaction).  
+ SQL_SCOPE_SESSION: Le rowid est garanti valide pendant la durée de la session (sur des limites de transaction).  
   
  *Nullable*  
  [Entrée] Détermine s’il faut retourner les colonnes spéciales qui peuvent avoir une valeur NULL. Doit prendre l'une des valeurs suivantes :  

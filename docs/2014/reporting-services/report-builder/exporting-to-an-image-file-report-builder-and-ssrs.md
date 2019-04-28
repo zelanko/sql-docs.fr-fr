@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3bdbed10df5dd2d8b52fdaa49d04758d150098b5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62991473"
 ---
 # <a name="exporting-to-an-image-file-report-builder-and-ssrs"></a>Exportation vers un fichier image (Générateur de rapports et SSRS)
   L'extension de rendu de type image effectue le rendu d'un rapport dans un fichier bitmap ou un métafichier. Par défaut, l'extension de rendu de type image génère un fichier TIFF du rapport, qui peut être présenté dans plusieurs pages. Lorsque le client reçoit l'image, il peut l'afficher dans une visionneuse d'images et l'imprimer. Cette rubrique fournit des informations spécifiques au rendu de l'image et décrit les exceptions aux règles de rendu.  

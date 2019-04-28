@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab64006b1454e63a7ed750476ff107dd1fe992
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720536"
 ---
 # <a name="sql-server-connection-type-ssrs"></a>Type de connexion SQL Server (SSRS)
   Pour inclure des données d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ce type de source de données intégré est basé sur l’extension de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Ce type de source de données vous permet de vous connecter et de récupérer des données à partir de la version actuelle et des versions antérieures des bases de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  

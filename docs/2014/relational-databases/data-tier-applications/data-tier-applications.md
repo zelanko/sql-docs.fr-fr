@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873100"
 ---
 # <a name="data-tier-applications"></a>Applications de la couche Données
   Une application de la couche Données (DAC) est une entité de gestion de base de données logique qui définit tous les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], notamment les tables, les vues et les objets d’instance, y compris les connexions, qui sont associés à une base de données utilisateur. Une application DAC est une unité autonome de déploiement de base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui permet aux développeurs et aux administrateurs de base de données de la couche Données d'empaqueter les objets [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dans un artefact portable appelé « package DAC », ou encore DACPAC.  
@@ -108,7 +108,7 @@ ms.locfileid: "52540116"
   
 -   **IMPORT** : l’utilisateur peut importer le schéma et les données dans une nouvelle base de données du serveur hôte.  
   
- Ces deux fonctionnalités sont prises en charge par les outils de gestion de base de données : Server Management Studio, le portail de gestion pour SQL Azure et l’API DACFx.  
+ Ces deux fonctionnalités sont prises en charge par les outils de gestion de bases de données : Server Management Studio, le portail de gestion pour SQL Azure et l’API DACFx.  
   
 ## <a name="permissions"></a>Autorisations  
  Vous devez être membre du rôle `dbmanager` ou disposer d'autorisations `CREATE DATABASE` pour pouvoir créer une base de données, notamment en déployant un package DAC. Vous devez être membre du rôle `dbmanager` ou disposer d'autorisations `DROP DATABASE` pour pouvoir supprimer une base de données.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 92384d07e258423e08793b08afe45b6d14253cff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733075"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Projets connexes pour des solutions d'exploration de données
   Une solution d'exploration de données requiert au minimum le projet d'exploration de données, lequel définit les sources de données, les vues de source de données, ainsi que les structures et modèles d'exploration de données. Toutefois, lorsque les modèles d'exploration de données sont utilisés dans les prises de décision quotidiennes, il est important que l'exploration de données soit intégrée à l'autre partie d'une solution d'analyse prédictive, qui peut inclure ces processus et composants :  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 78d8baed7783459db79bb9facb0141cc570c4127
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721380"
 ---
 # <a name="distribution-agent-security-peer-to-peer-replication"></a>Sécurité de l'Agent de distribution (réplication d'égal à égal)
   La page **Sécurité de l'Agent de distribution** permet de spécifier les comptes sous lesquels l'Agent de distribution s'exécute et établit les connexions avec les ordinateurs dans une topologie d'égal à égal. Pour plus d’informations sur les autorisations exigées par les agents et les bonnes pratiques méthodes pour la sécurité de la réplication, consultez [Modèle de sécurité de l’Agent de réplication](security/replication-agent-security-model.md) et [Bonnes pratiques en matière de sécurité de réplication](security/replication-security-best-practices.md).  
@@ -37,10 +37,10 @@ ms.locfileid: "52765511"
  Base de données de l'homologue utilisée à la fois comme base de données de publication et d'abonnement.  
   
  **Connexion au serveur de distribution**  
- Le contexte dans lequel la connexion au serveur de distribution s'établit. Les connexions locales sont toujours établies en utilisant le contexte du compte Windows dans lequel s'exécute l'agent. Cet Assistant crée les abonnements par envoi (la connexion locale est celle du serveur de distribution). Ce champ affiche donc toujours : **Emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'**.  
+ Le contexte dans lequel la connexion au serveur de distribution s'établit. Les connexions locales sont toujours établies en utilisant le contexte du compte Windows dans lequel s'exécute l'agent. Cet Assistant crée les abonnements envoyés (la connexion locale est la connexion au serveur de distribution), ce champ affiche donc toujours : **Emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'**.  
   
  **Connexion à l'Abonné**  
- Le contexte dans lequel la connexion à l'abonné s'établit. Il est possible d'établir la connexion en utilisant le contexte du compte Windows sous lequel s'exécute l'agent ou le contexte d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Les champs affichent : **Utiliser la connexion «\<connexion >'**, **emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
+ Le contexte dans lequel la connexion à l'abonné s'établit. Il est possible d'établir la connexion en utilisant le contexte du compte Windows sous lequel s'exécute l'agent ou le contexte d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Le champ affiche l’un des éléments suivants : **Utiliser la connexion \<Connexion>**, **Emprunter l’identité \<Domaine>\\<Connexion\>** ou **Emprunter l’identité\<Ordinateur>\\<Connexion\>**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

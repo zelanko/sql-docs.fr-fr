@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 620e74b3854b5cc590ffb84e2b8b70b33d0bfcd3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732221"
 ---
 # <a name="deprecated-analysis-services-features-in-sql-server-2014"></a>Fonctionnalités Analysis Services déconseillées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] déconseillées qui sont toujours disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Il est prévu que ces fonctionnalités soient supprimées dans une prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les fonctions déconseillées ne doivent pas être utilisées dans de nouvelles applications.  
@@ -29,7 +29,7 @@ ms.locfileid: "48067709"
 ## <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Fonctionnalités non prises en charge dans la prochaine version de SQL Server  
  Les fonctionnalités suivantes du [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ne seront pas prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Évitez d'utiliser ces fonctionnalités dans vos nouveaux développements et modifiez dès que possible les applications qui y ont recours.  
   
-|Catégorie|Fonctionnalité déconseillée|Remplacement|  
+|Category|Fonctionnalité déconseillée|Remplacement|  
 |--------------|------------------------|-----------------|  
 |Fonction MDX|Fonction CalculationPassValue|Aucun. Le moteur OLAP gère le test de calcul. Cette fonction MDX n'est plus requise.|  
 |Fonction MDX|fonction CalculationCurrentPass|Aucun. Le moteur OLAP gère le test de calcul. Cette fonction MDX n'est plus requise.|  
@@ -40,10 +40,10 @@ ms.locfileid: "48067709"
 ## <a name="features-not-supported-in-a-future-version-of-sql-server"></a>Fonctionnalités non prises en charge dans une future version de SQL Server  
  Les fonctions suivantes du [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] seront prises en charge dans la prochaine version de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais seront supprimées dans une version ultérieure. La version spécifique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] n'a pas été déterminée.  
   
-|Catégorie|Fonctionnalité déconseillée|Remplacement|  
+|Category|Fonctionnalité déconseillée|Remplacement|  
 |--------------|------------------------|-----------------|  
 |Modèles multidimensionnels|Partitions distantes|Aucun. Utilisez des partitions locales à la place. Consultez [créer et gérer une Partition locale &#40;Analysis Services&#41; ](multidimensional-models/create-and-manage-a-local-partition-analysis-services.md) pour plus d’informations.|  
-|Modèles multidimensionnels|Groupes de mesures liés distants|Un groupe de mesures lié distant est un groupe de mesures lié avec une source de données sur un serveur distant. La possibilité d'utiliser une source de données distante pour un groupe de mesures lié va être abandonnée.<br /><br /> Aucun remplacement n'est prévu pour cette fonctionnalité. Nous recommandons d'utiliser des groupes de mesures liés locaux à la place. Consultez [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) pour plus d’informations.|  
+|Modèles multidimensionnels|Groupes de mesures liés distants|Un groupe de mesures lié distant est un groupe de mesures lié avec une source de données sur un serveur distant. La possibilité d'utiliser une source de données distante pour un groupe de mesures lié va être abandonnée.<br /><br /> Aucun remplacement n'est prévu pour cette fonctionnalité. Nous recommandons d'utiliser des groupes de mesures liés locaux à la place. Consultez la rubrique [Linked Measure Groups](multidimensional-models/linked-measure-groups.md) (éventuellement en anglais) pour plus d'informations.|  
 |Modèles multidimensionnels|Écriture différée dimensionnelle|Aucun. Utilisez l'écriture différée de partition si vous avez besoin de la fonction d'écriture différée. Consultez [Set Partition Writeback](multidimensional-models/set-partition-writeback.md) pour plus d’informations.|  
 |Modèles multidimensionnels|Dimensions liées|Aucun. Envisagez de copier les dimensions dans des modèles supplémentaires plutôt que les lier à une dimension dans un autre modèle.|  
 |MDX|Propriété Non_Empty_Behavior|Aucun. Si vous ne définissez pas correctement cette propriété lorsque vous créez un membre calculé, cela augmente la probabilité de retour de résultats non valides. Les optimisations qui ont récemment été apportées au moteur OLAP ont amélioré les opérations sur les jeux de données éparses, rendant cette propriété moins pertinente.|  

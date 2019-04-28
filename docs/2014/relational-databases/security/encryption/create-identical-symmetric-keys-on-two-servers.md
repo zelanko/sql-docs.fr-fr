@@ -13,11 +13,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 85901ba63607de721259431ab83d3a0cd3a3185d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48115919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011712"
 ---
 # <a name="create-identical-symmetric-keys-on-two-servers"></a>Créer des clés symétriques identiques sur deux serveurs
   Cette rubrique décrit comment créer des clés symétriques identiques sur deux serveurs différents dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Pour pouvoir déchiffrer du texte chiffré, vous devez posséder la clé qui a été utilisée pour le chiffrer. Quand le chiffrement et le déchiffrement interviennent dans une seule base de données, la clé est stockée dans la base de données et demeure disponible, en fonction des autorisations, pour le chiffrement et le déchiffrement. Cependant, lorsque le chiffrement et le déchiffrement se produisent dans des bases de données distinctes ou sur des serveurs séparés, la clé stockée dans une base de données ne peut pas être utilisée dans l'autre base de données.  
@@ -42,14 +42,14 @@ ms.locfileid: "48115919"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER ANY SYMMETRIC KEY sur la base de données. Si la clause AUTHORIZATION est spécifiée, l'autorisation IMPERSONATE sur l'utilisateur de base de données ou l'autorisation ALTER sur le rôle d'application est requise. Si le chiffrement s'effectue par certificat ou clé asymétrique, l'autorisation VIEW DEFINITION est requise sur le certificat ou la clé asymétrique. Les connexions Windows, les connexions [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et les rôles d'application sont les seuls à pouvoir posséder des clés symétriques. Les groupes et les rôles ne peuvent pas posséder de clés symétriques.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   
 #### <a name="to-create-identical-symmetric-keys-on-two-different-servers"></a>Pour créer des clés symétriques identiques sur deux serveurs différents  
   
-1.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+1.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 2.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

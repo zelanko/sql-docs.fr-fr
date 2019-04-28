@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 13864dba5cac0274204050a8c78730de29f3321e
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727173"
 ---
 # <a name="write-enabled-partitions"></a>Partitions activées en écriture
   Dans un cube, les données sont généralement en lecture seule. Cependant, dans certains scénarios, vous pouvez activer l'écriture sur une partition. Les partitions activées en écriture permettent aux utilisateurs professionnels d'explorer différents scénarios en changeant les valeurs des cellules et en analysant les effets de ces modifications sur les données de cube. Si vous activez une partition en écriture, les applications clientes peuvent enregistrer les modifications des données de la partition. Ces modifications, qu'il est convenu d'appeler données d'écriture différée, sont stockées dans une table séparée et ne remplacent pas de données existantes d'un groupe de mesures. Toutefois, elles sont incorporées dans les résultats des requêtes comme si elles faisaient partie des données de cube.  

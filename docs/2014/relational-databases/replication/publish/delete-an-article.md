@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce51b3fc6730b984c36aa44e87d3983233a3b006
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960868"
 ---
 # <a name="delete-an-article"></a>Supprimer un article
   Cette rubrique explique comment supprimer un article dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)] ou des objets RMO (Replication Management Objects). Pour plus d’informations sur les conditions dans lesquelles un article peut être supprimé et pour savoir si la suppression d’un article requiert un nouvel instantané ou la réinitialisation des abonnements, consultez [Ajouter et supprimer des articles de publications existantes](add-articles-to-and-drop-articles-from-existing-publications.md).  

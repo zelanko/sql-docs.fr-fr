@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48074763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844285"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Éditeur de texte - Texte brut - Page Onglets)
   Utilisez cette boîte de dialogue pour modifier le comportement de tabulation de l'Éditeur de texte, qui permet de modifier un document non associé à un langage de développement particulier. Pour afficher ces paramètres, cliquez sur **Options** dans le menu **Outils** , développez **Éditeur de texte**, puis **Texte brut**, et cliquez ensuite sur **Tabulations**.  
@@ -30,10 +30,10 @@ ms.locfileid: "48074763"
  **Aucun**  
  Ne met pas en retrait la nouvelle ligne créée en appuyant sur Entrée. Le curseur est placé au niveau de la première colonne de la nouvelle ligne.  
   
- **Bloc**  
+ **Block**  
  Met en retrait la nouvelle ligne créée en appuyant sur Entrée, exactement à la même distance que la ligne précédente.  
   
- **Intelligent**  
+ **Smart**  
  L'éditeur de texte brut ne prend pas en charge ce type de mise en forme.  
   
 ## <a name="tabs"></a>Tabulations  

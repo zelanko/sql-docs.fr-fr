@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db1d69bcd614144a33aabde0934d7c4d12060e82
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726098"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>Modifier ou supprimer des partitions (Analysis Services - Multidimensionnel)
   Les partitions de cube sont modifiées à l’aide de l’onglet **Partitions** du Concepteur de cube dans [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]. L’onglet **Partitions** répertorie les partitions pour tous les groupes de mesures d’un cube. Il répertorie également les partitions d'écriture différée pour lesquelles l'écriture différée est activée.  
@@ -48,8 +48,8 @@ ms.locfileid: "48104905"
  Le stockage peut être configuré séparément pour chacune des partitions de chaque groupe de mesures d'un cube. Vous pouvez également configurer les paramètres de stockage par défaut pour un cube ou un groupe de mesures. Le stockage est configuré sous l’onglet **Partitions** de l’Assistant Cube.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer et gérer une Partition locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Conception d’agrégations &#40;Analysis Services - données multidimensionnelles&#41;](designing-aggregations-analysis-services-multidimensional.md)   
- [Fusionner des Partitions dans Analysis Services &#40;SSAS - multidimensionnel&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Créer et gérer une partition locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [Conception d’agrégations &#40;Analysis Services – Multidimensionnel&#41;](designing-aggregations-analysis-services-multidimensional.md)   
+ [Fusionner des partitions dans Analysis Services &#40;SSAS - Multidimensionnel&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

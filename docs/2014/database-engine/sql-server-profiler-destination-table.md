@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6b48d02ff1ed38f2c2e49d509ef6c483af4cc44
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842740"
 ---
 # <a name="sql-server-profiler---destination-table"></a>Générateur de profils SQL Server – Table de destination
   La boîte de dialogue **Table de destination** vous permet de spécifier la table dans laquelle vous souhaitez stocker la trace.  
@@ -39,7 +39,7 @@ ms.locfileid: "48227559"
  Spécifiez le nom de la table dans laquelle vous voulez stocker la trace.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Enregistrer les résultats de Trace dans une Table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
+ [Enregistrer des résultats d’une trace dans une table &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/save-trace-results-to-a-table-sql-server-profiler.md)   
  [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

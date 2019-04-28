@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9225b2eb95d267c78caaf7521a8dee0b436db08
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48163999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733678"
 ---
 # <a name="view-the-formula-for-a-time-series-model-data-mining"></a>Afficher la formule d'un modèle de série chronologique (exploration de données)
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] inData de visionneuse de série chronologique Concepteur d’exploration de données fournit le moyen le plus simple pour afficher les détails de l’équation de régression utilisée dans un modèle de série chronologique.  
@@ -79,8 +79,8 @@ ms.locfileid: "48163999"
 5.  Si la **Légende d’exploration de données** n’est pas disponible, cliquez avec le bouton droit sur le nœud, puis sélectionnez **Afficher la légende**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Explorer un modèle à l’aide de la visionneuse de la série Microsoft Time](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Exemples de requêtes de modèle de séries chronologiques](time-series-model-query-examples.md)  
   
   

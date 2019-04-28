@@ -17,11 +17,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843719"
 ---
 # <a name="set-source-control-options"></a>Définir les options du contrôle de code source
   Pour pouvoir bénéficier des fonctionnalités du contrôle de code source intégrées à [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], vous devez préalablement configurer les options du contrôle de code source relatives aux différents environnements dans lesquels vous travaillez.  
@@ -86,7 +86,7 @@ ms.locfileid: "53589893"
      Spécifie que les éléments doivent rester extraits à votre niveau lorsque vous procédez à l'archivage d'éléments pour mettre à jour le magasin du contrôle de code source. Si vous souhaitez modifier cette option pour un archivage spécifique, cliquez sur le **Options** flèche dans le **archiver** boîte de dialogue, puis désactivez la **conserver extraits** case à cocher.  
   
      **Éléments archivés**  
-     Affiche une liste d'options qui spécifient comment [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] doit se comporter lorsque vous tentez de modifier un élément non extrait. Les tableaux suivants décrivent les options disponibles.  
+     Affiche une liste d’options qui spécifient comment [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] doit se comporter lorsque vous tentez de modifier un élément qui n’est pas extrait. Les tableaux suivants décrivent les options disponibles.  
   
      **L’enregistrement**  
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f1864bd14a3822269594773afa8b01fe36723f6a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52392002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722741"
 ---
 # <a name="create-an-olap-mining-structure"></a>Create an OLAP Mining Structure
   Il existe de nombreux avantages à la création d'un modèle d'exploration de données basé sur un cube OLAP ou une autre banque de données multidimensionnelles. Une solution OLAP contient déjà de grandes quantités de données qui sont correctement organisées, nettoyées et mises en forme ; toutefois, la complexité des données est telle que les utilisateurs ont peu de chances de trouver des modèles explicites par une exploration ad hoc. L'exploration de données offre la possibilité de découvrir de nouvelles corrélations et de fournir un éclairage utilisable.  

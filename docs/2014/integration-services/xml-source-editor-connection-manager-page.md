@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52933b6bc560ecf2e1d7efda8b54502bafe72a6b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877415"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Éditeur de source XML (page Gestionnaire de connexions)
   Utilisez la page **Gestionnaire de connexions** de l' **Éditeur de source XML** pour spécifier un fichier XML et le schéma XSD qui transforme les données XML.  
@@ -34,7 +34,7 @@ ms.locfileid: "58393887"
 |Value|Description|  
 |-----------|-----------------|  
 |Emplacement du fichier XML|Récupère des données dans un fichier XML.|  
-|Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes**: [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
+|Fichier XML à partir d'une variable|Spécifiez le nom de fichier XML dans une variable.<br /><br /> **Informations connexes** : [Utiliser des variables dans des packages](../../2014/integration-services/use-variables-in-packages.md)|  
 |Données XML à partir d'une variable|Récupère des données XML à partir d'une variable.|  
   
  **Utiliser le schéma inclus**  

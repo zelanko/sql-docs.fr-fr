@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1345051d06493a456172a183defce3a8bd555ca
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872053"
 ---
 # <a name="contained-database-collations"></a>Classements de base de données autonome
   Diverses propriétés affectent l'ordre de tri et la sémantique d'égalité des données textuelles, notamment le respect de la casse, le respect des accents et la langue de base utilisée. Ces qualités sont exprimées à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par le choix du classement des données. Pour une explication plus approfondie des classements eux-mêmes, consultez [Prise en charge d’Unicode et du classement](../collations/collation-and-unicode-support.md).  

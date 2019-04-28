@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722391"
 ---
 # <a name="feature-selection-data-mining"></a>Sélection des fonctionnalités (exploration de données)
   *Sélection des fonctionnalités* est un terme couramment utilisé dans l’exploration de données pour décrire les outils et techniques disponibles pour réduire les entrées à une taille gérable pour le traitement et l’analyse. Sélection de fonctionnalités implique non seulement *la réduction de cardinalité*, ce qui signifie que d’imposer une coupure aléatoire ou prédéfinie sur le nombre d’attributs pouvant être pris en compte lors de la création d’un modèle, mais également le choix des attributs, ce qui signifie que que l’analyste ou l’outil de modélisation activement sélectionne ou ignore les attributs en fonction de leur utilité pour l’analyse.  

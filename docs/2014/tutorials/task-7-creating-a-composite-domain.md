@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 7 : Création d’un domaine Composite | Microsoft Docs'
+title: 'Tâche 7 : Création d’un domaine Composite | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c48144ca3720565c3c745ffd8aa39b0896e1fb66
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866278"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Tâche 7 : Création d'un domaine composite
+# <a name="task-7-creating-a-composite-domain"></a>Tâche 7 : Création d’un domaine composite
   Dans cette tâche, vous créez un domaine composite, **Validation d’adresses**, qui comprend **ligne d’adresse**, **Ville**, **état**et  **Code postal** domaines. Un domaine composite permet de définir une règle interdomaines qui implique plusieurs domaines. Un domaine composite présente d'autres avantages, notamment, il permet d'analyser une valeur de champ dans plusieurs domaines.  Par exemple, une valeur d'un champ Nom complet peut être analysée dans des domaines Prénom, Deuxième prénom et Nom de famille distincts. Dans ce didacticiel, vous allez uniquement définir une règle interdomaines. Consultez [gestion d’un domaine Composite](https://msdn.microsoft.com/library/hh510399.aspx) pour plus d’informations.  
   
 1.  Dans le volet gauche, cliquez sur **créer un domaine composite** dans la barre d’outils.  

@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724434"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,14 +46,14 @@ sp_cursoroption cursor, code, value
  *code*  
  Permet de stipuler différents facteurs des valeurs de retour de curseur. *code* requiert l’une des opérations suivantes **int** valeurs d’entrée :  
   
-|Value|Créer une vue d’abonnement|Description|  
+|Value|Nom|Description|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Retourne le pointeur de texte, et non les données réelles, pour certaines colonnes text ou image désignées.<br /><br /> TEXTPTR_ONLY permet l’utilisation des pointeurs de texte à utiliser comme *handles* vers des objets blob qui peuvent être récupérés ultérieurement à sélectivement ou mis à jour à l’aide de [!INCLUDE[tsql](../../includes/tsql-md.md)] ou les fonctions DBLIB (par exemple) [!INCLUDE[tsql](../../includes/tsql-md.md)] READTEXT ou DBLIB DBWRITETEXT).<br /><br /> Si une valeur « 0 » est affectée, toutes les colonnes text et image dans la liste de sélection retourneront des pointeurs de texte plutôt que des données.|  
 |0x0002|CURSOR_NAME|Assigne le nom spécifié dans *valeur* jusqu’au curseur. Ceci, à son tour, ODBC peut ainsi utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] positionné les instructions UPDATE/DELETE sur les curseurs ouverts via sp_cursoropen.<br /><br /> La chaîne peut être spécifiée comme tout caractère ou type de données Unicode.<br /><br /> Dans la mesure où [!INCLUDE[tsql](../../includes/tsql-md.md)] des instructions UPDATE/DELETE positionnées fonctionnent, par défaut, sur la première ligne dans un curseur fat, sp_cursor SETPOSITION doit être utilisé pour positionner le curseur avant d’émettre l’instruction UPDATE/DELETE positionnée.|  
 |0x0003|TEXTDATA|Retourne les données réelles, et non le pointeur de texte, pour certaines colonnes text ou image sur les extractions suivantes (autrement dit, cela annule l'effet de TEXTPTR_ONLY).<br /><br /> Si TEXTDATA est activé pour une colonne particulière, la ligne est à nouveau extraite ou actualisée, et TEXTPTR_ONLY peut ensuite lui être à nouveau affecté. Comme avec TEXTPTR_ONLY, le paramètre de valeur est un entier qui spécifie le numéro de colonne et une valeur zéro retourne toutes les colonnes text et image.|  
 |0x0004|SCROLLOPT|Option de défilement. Pour plus d'informations, consultez « Valeurs des codes de retour » plus loin dans cette rubrique.|  
 |0x0005|CCOPT|Option de contrôle en matière d'accès concurrentiel. Pour plus d'informations, consultez « Valeurs des codes de retour » plus loin dans cette rubrique.|  
-|0x0006|ROWCOUNT|Nombre de lignes actuellement dans le jeu de résultats.<br /><br /> Remarque : La valeur ROWCOUNT peut avoir changé depuis la valeur retournée par sp_cursoropen si l'alimentation asynchrone est utilisée. La valeur -1 est retournée si le nombre de lignes est inconnu.|  
+|0x0006|ROWCOUNT|Nombre de lignes actuellement dans le jeu de résultats.<br /><br /> Remarque : Le nombre de lignes peut avoir changé depuis la valeur retournée par sp_cursoropen si le remplissage asynchrone est utilisé. La valeur -1 est retournée si le nombre de lignes est inconnu.|  
   
  *value*  
  Désigne la valeur retournée par *code*. *valeur* est un paramètre obligatoire qui appelle un 0 x 0001, 0 x 0002 ou 0 x 0003 *code* valeur d’entrée.  

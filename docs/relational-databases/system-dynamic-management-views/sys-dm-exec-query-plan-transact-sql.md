@@ -19,12 +19,12 @@ ms.assetid: e26f0867-9be3-4b2e-969e-7f2840230770
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: cb77a386ac0c7aa4fe6246b04723227b68ffa455
-ms.sourcegitcommit: d92ad400799d8b74d5c601170167b86221f68afb
+ms.openlocfilehash: c879af413bd8b3cf4b90e8112f10e5f756201148
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58080251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013276"
 ---
 # <a name="sysdmexecqueryplan-transact-sql"></a>sys.dm_exec_query_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,9 @@ Le *plan_handle* peut être obtenu à partir d’objets de gestion dynamique sui
   
  Lorsqu’une requête ad hoc utilise un paramétrage simple ou forcé, le **query_plan** colonne contiendra uniquement le texte de l’instruction et pas le plan de requête. Pour retourner le plan de requête, appelez **sys.dm_exec_query_plan** pour le descripteur de plan de la requête paramétrable préparée. Vous pouvez déterminer si la requête a été paramétrée en référençant le **sql** colonne de la [sys.syscacheobjects](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md) vue ou la colonne de texte de la [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)vue de gestion dynamique.  
   
- En raison d’une limitation du nombre de niveaux imbriqués autorisés dans les **xml** type de données, **sys.dm_exec_query_plan** ne peut pas retourner des plans de requête qui correspondent ou sont supérieurs à 128 niveaux d’éléments imbriqués. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette condition empêchait les retours par le plan de requête et générait l'erreur 6335. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, le **query_plan** colonne retourne NULL. Vous pouvez utiliser la [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) fonction de gestion dynamique pour retourner la sortie du plan de requête au format texte.  
+> [!NOTE] 
+> En raison d’une limitation du nombre de niveaux imbriqués autorisés dans les **xml** type de données, **sys.dm_exec_query_plan** ne peut pas retourner des plans de requête qui correspondent ou sont supérieurs à 128 niveaux d’éléments imbriqués. Dans les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette condition empêchait les retours par le plan de requête et générait l'erreur 6335. Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 et versions ultérieures, le **query_plan** colonne retourne NULL.   
+> Vous pouvez utiliser la [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md) fonction de gestion dynamique pour retourner la sortie du plan de requête au format texte.  
   
 ## <a name="permissions"></a>Autorisations  
  Pour exécuter **sys.dm_exec_query_plan**, un utilisateur doit être un membre de la **sysadmin** rôle serveur fixe ou avoir la `VIEW SERVER STATE` autorisation sur le serveur.  
@@ -125,7 +127,7 @@ FROM sys.dm_exec_query_plan (0x06000100A27E7C1FA821B10600);
 GO  
 ```  
   
-### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>b. Récupérer chaque plan de requête du cache du plan  
+### <a name="b-retrieve-every-query-plan-from-the-plan-cache"></a>B. Récupérer chaque plan de requête du cache du plan  
  Pour récupérer un instantané de tous les plans de requête résidant dans la mémoire cache des plans, procurez-vous les descripteurs de tous les plans de requête dans la mémoire cache via une requête dans la vue de gestion dynamique `sys.dm_exec_cached_plans`. Les descripteurs de plan sont stockés dans la colonne `plan_handle` de `sys.dm_exec_cached_plans`. Utilisez ensuite l'opérateur CROSS APPLY pour transmettre les descripteurs à `sys.dm_exec_query_plan` comme suit. La sortie du plan d'exécution de requêtes XML pour chaque plan actuellement dans la mémoire cache des plans se trouve dans la colonne `query_plan` de la table retournée.  
   
 ```sql  

@@ -1,5 +1,5 @@
 ---
-title: 'Didacticiel : Évaluation des meilleures pratiques à l’aide de gestion basée sur des stratégies | Microsoft Docs'
+title: 'Tutoriel : Évaluation des meilleures pratiques à l’aide de gestion basée sur des stratégies | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,13 +20,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 72d4d0863c516fed3a318aca45e8ec478af46a58
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62956155"
 ---
-# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Didacticiel : Évaluation des meilleures pratiques à l’aide de gestion basée sur des stratégies
+# <a name="tutorial-evaluating-best-practices-by-using-policy-based-management"></a>Tutoriel : Évaluation des bonnes pratiques à l’aide de la Gestion basée sur des stratégies
   Bienvenue dans le didacticiel d'évaluation des meilleures pratiques à l'aide de la Gestion basée sur des stratégies. Ce didacticiel est destiné aux utilisateurs familiarisés avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], mais ne connaissant pas la Gestion basée sur des stratégies. Le système de gestion basée sur des stratégies permet de définir des stratégies qui peuvent être utilisées pour appliquer des normes d'administration de site. Il comprend un jeu de stratégies des meilleures pratiques que vous pouvez utiliser pour analyser une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] afin de déterminer si l'instance répond aux indications et recommandations des meilleures pratiques.  
   
 ## <a name="what-you-will-learn"></a>Contenu du didacticiel  

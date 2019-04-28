@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2903eef63152af9b2e9af1434ba12ea91b4058fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721781"
 ---
 # <a name="article-properties---ltarticlegt"></a>Propriétés de l’article - &lt;Article&gt;
   La boîte de dialogue **Propriétés de l'article** est accessible depuis l'Assistant Nouvelle publication et la boîte de dialogue **Propriétés de la publication** . Elle permet d'afficher et de définir les propriétés de tous les types d'articles. Certaines propriétés peuvent être définies uniquement lors de la création de la publication, et d'autres uniquement si la publication n'a pas d'abonnements actifs. Les propriétés qui ne peuvent pas être définies s'affichent en lecture seule.  
@@ -88,7 +88,7 @@ ms.locfileid: "54124989"
  Cette option s'applique uniquement aux procédures stockées. Elle permet d'indiquer si vous voulez répliquer la définition de la procédure stockée (instruction CREATE PROCEDURE) ou son exécution. Si vous répliquez l'exécution de la procédure, la définition de la procédure est répliquée vers l'Abonné lors de l'initialisation de l'abonnement. Lorsque la procédure est exécutée sur le serveur de publication, la réplication exécute la procédure correspondante au niveau de l'Abonné. Ceci peut améliorer les performances de manière significative lorsque des opérations de traitement par lot volumineuses sont exécutées. Pour plus d’informations, voir [Publishing Stored Procedure Execution in Transactional Replication](transactional/publishing-stored-procedure-execution-in-transactional-replication.md).  
   
 ## <a name="options-for-merge-publications"></a>Options des publications de fusion  
- Le **propriétés de l’Article** boîte de dialogue pour les publications de fusion comporte deux onglets : **Propriétés** et **résolveur**.  
+ La boîte de dialogue **Propriétés de l’article** des publications de fusion contient deux onglets : **Propriétés** et **Résolveur**.  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
  **Direction de la synchronisation**  
@@ -135,7 +135,7 @@ ms.locfileid: "54124989"
  Tous les résolveurs COM fournis par [!INCLUDE[msCoName](../../includes/msconame-md.md)] sont signés. Sélectionnez cette option pour vérifier que le résolveur est valide lors de la synchronisation.  
   
 ## <a name="options-for-oracle-publications"></a>Options des publications Oracle  
- Le **propriétés de l’Article** boîte de dialogue pour les publications Oracle comporte deux onglets : **Propriétés** et **mappage de données**. Les publications Oracle ne prennent pas en charge toutes les propriétés que prennent en charge les publications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, voir [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
+ La boîte de dialogue **Propriétés de l’article** des publications Oracle contient deux onglets : **Propriétés** et **Mappage de données**. Les publications Oracle ne prennent pas en charge toutes les propriétés que prennent en charge les publications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Pour plus d’informations, voir [Design Considerations and Limitations for Oracle Publishers](non-sql/design-considerations-and-limitations-for-oracle-publishers.md).  
   
 ### <a name="properties-tab"></a>Onglet Propriétés  
  **Copie des procédures stockées INSERT, UPDATE et DELETE**  

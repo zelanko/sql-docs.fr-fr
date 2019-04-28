@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61e6b3d1682ba746f74f22413e49afa1ea585591
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960763"
 ---
 # <a name="replication-tutorials"></a>Didacticiels sur la réplication
   La réplication inclut des didacticiels que vous pouvez utiliser pour apprendre à configurer et à exécuter les topologies de réplication à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

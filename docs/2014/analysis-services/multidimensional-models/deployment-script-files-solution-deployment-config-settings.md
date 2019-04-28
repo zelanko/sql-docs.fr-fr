@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3f0f24aec895c482ba357dbc4330baaf2798ba6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726253"
 ---
 # <a name="specifying-configuration-settings-for-solution-deployment"></a>Spécification de paramètres de configuration pour le déploiement de solutions
   Le [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Assistant Déploiement de lit la partition et le rôle des options de déploiement que vous utilisez dans le script de déploiement à partir de la \< *nom_projet*> .configsettings fichier. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] crée ce fichier lorsque vous générez le projet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] utilise les paramètres de configuration du projet actuel pour créer le \< *nom_projet*> .configsettings fichier.  

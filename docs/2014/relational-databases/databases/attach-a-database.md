@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4c9a3160224078b908059c3902e66ef59608bac
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872248"
 ---
 # <a name="attach-a-database"></a>Attacher une base de données
   Cette rubrique explique comment attacher une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Vous pouvez utiliser cette fonctionnalité pour copier, déplacer, ou mettre à niveau une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -61,7 +61,7 @@ Les autorisations d'accès au fichier sont définies au cours de plusieurs opér
   
 Nous vous recommandons de ne pas attacher ni restaurer de bases de données provenant de sources inconnues ou non approuvées. Ces bases de données peuvent contenir du code malveillant susceptible d'exécuter du code [!INCLUDE[tsql](../../includes/tsql-md.md)] indésirable ou de provoquer des erreurs en modifiant le schéma ou la structure physique des bases de données. Avant d’utiliser une base de données issue d’une source inconnue ou non approuvée, exécutez [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) sur la base de données sur un serveur autre qu’un serveur de production et examinez également le code, notamment les procédures stockées ou le code défini par l’utilisateur, de la base de données. Pour plus d’informations sur l’attachement de bases de données et sur les modifications apportées aux métadonnées à cette occasion, consultez [Attacher et détacher une base de données &#40;SQL Server&#41](database-detach-and-attach-sql-server.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
 Requiert l’autorisation `CREATE DATABASE`, `CREATE ANY DATABASE` ou `ALTER ANY DATABASE`.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

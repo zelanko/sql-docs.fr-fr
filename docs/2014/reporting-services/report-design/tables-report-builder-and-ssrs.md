@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7c5c384edbab7792f373b62417f7ad43832e1ff3
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720823"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tables (Générateur de rapports et SSRS)
   Utilisez une table pour afficher des données de détail ou groupées, ou une combinaison des deux. Vous pouvez grouper des données selon un champ unique, selon plusieurs champs ou en écrivant votre propre expression. Vous pouvez créer des groupes imbriqués ou des groupes indépendants, adjacents. Pour afficher des valeurs de synthèse pour les données groupées, ajoutez des totaux aux groupes. Formatez les lignes et les colonnes afin de mettre en surbrillance les données que vous souhaitez mettre en évidence. Vous pouvez au départ masquer les données groupées ou les données de détail et inclure des bascules d'extraction pour permettre à un utilisateur de choisir de manière interactive les données à afficher.  

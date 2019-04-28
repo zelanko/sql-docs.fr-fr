@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724028"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ sp_cursoropen cursor OUTPUT, stmt
   
  Comme avec *scrollopt*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peuvent substituer demandé *ccopt* valeurs.  
   
- *nombre de lignes*  
+ *rowcount*  
  Nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est de 20 lignes. *nombre de lignes* se comporte différemment lorsqu’assigné comme une valeur d’entrée ou une valeur de retour.  
   
 |Comme une valeur d'entrée|Comme une valeur de retour|  
@@ -146,7 +146,7 @@ sp_cursoropen cursor OUTPUT, stmt
  Un curseur avance rapide a été automatiquement fermé.  
   
 > [!NOTE]  
->  Si la procédure sp_cursoropen a été correctement exécutée, les paramètres de retour RPC et un jeu de résultats avec des informations de format de colonne TDS (messages 0xa0 & 0xa1) sont envoyés. En cas d'échec, un ou plusieurs messages d'erreur TDS sont envoyés. Dans les deux cas, aucune donnée de ligne ne s’affichera et le *fait* nombre de messages sera égal à zéro. Si vous utilisez une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à 7.0, 0xa0, 0xa1 (standard pour les instructions SELECT) sont retournés avec les flux de jetons 0xa5 et 0xa4. Si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, 0x81 est retourné (standard pour les instructions SELECT) avec les flux de jetons 0xa5 et 0xa4.  
+>  Si la procédure sp_cursoropen s’exécute correctement, le RPC retourner des paramètres et un jeu de résultats avec des informations de format de colonne TDS (0xa0 & 0xa1 messages) sont envoyés. En cas d'échec, un ou plusieurs messages d'erreur TDS sont envoyés. Dans les deux cas, aucune donnée de ligne ne s’affichera et le *fait* nombre de messages sera égal à zéro. Si vous utilisez une version de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] antérieure à 7.0, 0xa0, 0xa1 (standard pour les instructions SELECT) sont retournés avec les flux de jetons 0xa5 et 0xa4. Si vous utilisez [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0, 0x81 est retourné (standard pour les instructions SELECT) avec les flux de jetons 0xa5 et 0xa4.  
   
 ## <a name="remarks"></a>Notes  
   
@@ -207,7 +207,7 @@ sp_cursoropen cursor OUTPUT, stmt
 ### <a name="boundparam-parameter"></a>Paramètre bound_param  
  Tous les paramètres après le cinquième sont passés au plan d'instruction comme paramètres d'entrée. Le premier paramètre de ce type doit être une chaîne sous la forme suivante :  
   
- *{type de données de nom de variable locale} [,... n].*  
+ *{type de données de nom de variable locale} [,... n]*  
   
  Les paramètres suivants sont utilisés pour passer les valeurs à substituer le *nom de variable locale* dans l’instruction.  
   

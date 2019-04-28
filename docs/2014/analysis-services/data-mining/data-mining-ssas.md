@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c798ff08653e770ea633597dfc64dfadf4639fbf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48227169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722732"
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une plateforme intégrée pour les solutions qui intègrent l'exploration de données. Vous pouvez utiliser des données de cube ou relationnelles pour créer des solutions décisionnelles avec des analyses prévisionnelles.  
@@ -31,21 +31,21 @@ ms.locfileid: "48227169"
 ## <a name="key-data-mining-features"></a>Fonctionnalités d'exploration de données clés  
  SQL Server fournit les fonctionnalités suivantes pour la prise en charge des solutions d'exploration de données intégrées :  
   
--   Plusieurs sources de données : vous n'avez pas à créer d'entrepôt de données ni de cube OLAP pour effectuer l'exploration de données. Vous pouvez utiliser des données tabulaires, des feuilles de calcul et même des fichiers texte provenant de fournisseurs externes. Vous pouvez aussi facilement exploiter les cubes OLAP créés dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Toutefois, vous ne pouvez pas utiliser les données d'une base de données en mémoire.  
+-   Plusieurs sources de données : Il est inutile de créer un entrepôt de données ou un cube OLAP pour effectuer l’exploration de données. Vous pouvez utiliser des données tabulaires, des feuilles de calcul et même des fichiers texte provenant de fournisseurs externes. Vous pouvez aussi facilement exploiter les cubes OLAP créés dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Toutefois, vous ne pouvez pas utiliser les données d'une base de données en mémoire.  
   
--   Nettoyage de données intégré, gestion des données et ETL (extraction, transformation et chargement) : Data Quality Services fournit des outils avancés pour le profilage et le nettoyage des données. Integration Services peut être utilisé pour générer des processus ETL pour nettoyer les données, ainsi que pour créer, traiter, effectuer l'apprentissage et mettre à jour des modèles.  
+-   Nettoyage des données intégrées, gestion des données et ETL : Data Quality Services fournit des outils avancés pour le profilage et de nettoyage des données. Integration Services peut être utilisé pour générer des processus ETL pour nettoyer les données, ainsi que pour créer, traiter, effectuer l'apprentissage et mettre à jour des modèles.  
   
--   Plusieurs algorithmes personnalisables : outre la mise à disposition d'algorithmes comme le clustering, les réseaux neuronaux et les arbres de décision, la plateforme prend en charge le développement de vos propres algorithmes de plug-in personnalisés.  
+-   Plusieurs algorithmes personnalisables : En plus de fournir des algorithmes comme le clustering, les réseaux neuronaux et les arbres de décision, la plateforme prend en charge le développement de vos propres algorithmes de plug-in personnalisés.  
   
--   Infrastructure de test de modèle : testez vos modèles et jeux de données à l'aide d'outils statistiques importants comme la validation croisée, les matrices de classification, les graphiques de courbes d'élévation et les nuages de points. Créez et gérez facilement des jeux d'apprentissage et de test.  
+-   Infrastructure de test de modèle : Tester vos modèles et jeux de données à l’aide d’outils statistiques importants comme la validation croisée, les matrices de classification, soulevez graphiques et les nuages. Créez et gérez facilement des jeux d'apprentissage et de test.  
   
--   Interrogation et extraction : créez des requêtes de prédiction, récupérer les schémas et statistiques de modèles et explorez des données de cas.  
+-   Interrogation et extraction : Créer des requêtes de prédiction, extraire des statistiques et des schémas de modèle et extraire des données de cas.  
   
--   Outils clients : outre les studios de développement et de conception fournis par SQL Server, vous pouvez utiliser les compléments d'exploration de données pour Excel afin de créer, interroger et parcourir des modèles. Vous pouvez également créer des clients personnalisés, notamment des services Web.  
+-   Outils clients : Outre les studios de développement et de conception fournis par SQL Server, vous pouvez utiliser les compléments d’exploration de données pour Excel pour créer, interroger et parcourir des modèles. Vous pouvez également créer des clients personnalisés, notamment des services Web.  
   
--   Prise en charge du langage de script et des API managées : tous les objets d'exploration de données sont entièrement programmables. La création de scripts est possible grâce à MDX, XMLA ou aux extensions PowerShell pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Utilisez le langage DMX (Data Mining Extensions) pour la création rapide de requêtes et de scripts.  
+-   Langage de script prend en charge et l’API managée : Tous les objets d’exploration de données sont entièrement programmables. La création de scripts est possible grâce à MDX, XMLA ou aux extensions PowerShell pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Utilisez le langage DMX (Data Mining Extensions) pour la création rapide de requêtes et de scripts.  
   
--   Sécurité et déploiement : fournit la sécurité basée sur les rôles via [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], notamment les autorisations distinctes pour l’extraction des données de structure et de modèle. Déploiement simple des modèles vers d'autres serveurs, afin que les utilisateurs puissent accéder aux modèles ou effectuer des prédictions  
+-   Sécurité et déploiement : Fournit l’en fonction du rôle de sécurité via [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], notamment les autorisations distinctes pour l’extraction des données de structure et de modèle. Déploiement simple des modèles vers d'autres serveurs, afin que les utilisateurs puissent accéder aux modèles ou effectuer des prédictions  
   
 ## <a name="in-this-section"></a>Dans cette section  
  Les rubriques de cette section présentent les principales fonctionnalités de l'exploration de données et des tâches associées de SQL Server.  
@@ -58,15 +58,15 @@ ms.locfileid: "48227169"
   
 -   [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [Test et Validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
+-   [Test et validation &#40;exploration de données&#41;](testing-and-validation-data-mining.md)  
   
 -   [Requêtes d’exploration de données](data-mining-queries.md)  
   
--   [Solutions d’exploration de données](data-mining-solutions.md)  
+-   [Solutions d'exploration de données](data-mining-solutions.md)  
   
 -   [Outils d’exploration de données](data-mining-tools.md)  
   
--   [Architecture d’exploration de données](data-mining-architecture.md)  
+-   [Architecture d'exploration de données](data-mining-architecture.md)  
   
 -   [Vue d’ensemble de la sécurité &#40;exploration de données&#41;](security-overview-data-mining.md)  
   

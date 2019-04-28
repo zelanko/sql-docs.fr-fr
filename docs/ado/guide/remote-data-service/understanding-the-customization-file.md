@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955802"
 ---
 # <a name="understanding-the-customization-file"></a>Présentation du fichier de personnalisation
 Chaque en-tête de section dans le fichier de personnalisation se compose de crochets (**[]**) contenant un type et un paramètre. Les quatre types de section sont indiquées par les chaînes littérales **connecter**, **sql**, **userlist**, ou **journaux**. Le paramètre est la chaîne littérale, la valeur par défaut, un identificateur spécifié par l’utilisateur ou rien du tout.  

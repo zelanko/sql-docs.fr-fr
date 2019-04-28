@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4948973576eb0b541892fe84bc86edea1514fe92
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877845"
 ---
 # <a name="view-reports-for-the-integration-services-server"></a>Afficher les rapports du serveur Integration Services
   Dans la version actuelle de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], les rapports standard sont disponibles dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour vous aider à surveiller les projets [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] déployés sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  Pour plus d’informations sur les rapports, consultez [Rapports du serveur Integration Services](../../2014/integration-services/reports-for-the-integration-services-server.md).  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 10c3556edb5c58e281db2dcaf5c05e9a202a3091
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012513"
 ---
 # <a name="audit-server-alter-trace-event-class"></a>Audit Server Alter Trace (classe d'événements)
   La classe d'événements **Audit Server Alter Trace Event** se produit pour toutes les instructions qui vérifient l'autorisation ALTER TRACE. Les instructions qui vérifient ALTER TRACE incluent celles utilisées pour créer et configurer une trace, ou bien pour définir un filtre sur une trace.  

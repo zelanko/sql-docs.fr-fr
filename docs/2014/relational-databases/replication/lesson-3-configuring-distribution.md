@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721099"
 ---
-# <a name="lesson-3-configuring-distribution"></a>Leçon 3 : Configuration de la distribution
+# <a name="lesson-3-configuring-distribution"></a>Leçon 3 : Configuration de la Distribution
   Dans cette leçon, vous allez configurer la distribution sur le serveur de publication et définir les autorisations requises sur les bases de données de publication et de distribution. Si vous avez déjà configuré le serveur de distribution, vous devez d'abord désactiver la publication et la distribution avant de commencer cette leçon. Ne procédez pas ainsi si vous devez conserver une topologie de réplication existante.  
   
  La configuration d'un serveur de publication avec un serveur de distribution distant dépasse le cadre de ce didacticiel.  

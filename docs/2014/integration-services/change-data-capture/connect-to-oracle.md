@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1ca7eb5b4883edf9ab718c731049da4c3be44324
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835797"
 ---
 # <a name="connect-to-oracle"></a>Connexion à Oracle
   Lorsque vous ajoutez ou modifiez les tables utilisées dans l'instance de capture de données modifiées pour la première fois, vous pouvez être invité à vous connecter à la base de données Oracle. Vous devez entrer les informations d'identification d'un utilisateur Oracle qui a accès au schéma des tables à capturer. Entrez les informations suivantes dans cette boîte de dialogue :  

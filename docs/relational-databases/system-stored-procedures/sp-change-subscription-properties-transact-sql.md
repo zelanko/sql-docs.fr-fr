@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62997098"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**internet_login**||Connexion que l'Agent de fusion utilise pour se connecter, à l'aide de l'authentification de base, au serveur Web qui héberge la synchronisation Web.|  
 |**internet_password**||Mot de passe qu'utilise l'Agent de fusion lors de la connexion au serveur Web qui héberge la synchronisation Web avec l'authentification de base.|  
 |**internet_security_mode**|**1**|Utilise l'authentification intégrée Windows pour la synchronisation Web. Il est recommandé d'utiliser l'authentification de base pour la synchronisation Web. Pour plus d’informations, consultez [Configurer la synchronisation Web](../../relational-databases/replication/configure-web-synchronization.md).|  
-||**0**|Utiliser l'authentification de base pour la synchronisation Web.<br /><br /> Remarque : La synchronisation Web nécessite une connexion SSL au serveur Web.|  
+||**0**|Utiliser l'authentification de base pour la synchronisation Web.<br /><br /> Remarque : Synchronisation Web nécessite une connexion SSL au serveur Web.|  
 |**internet_timeout**||Délai en secondes avant l'expiration d'une demande de synchronisation Web.|  
 |**internet_url**||URL qui représente l'emplacement de l'écouteur de réplication pour la synchronisation Web.|  
 |**merge_job_login**||Nom de connexion pour le compte Windows sous lequel l’agent s’exécute.|  

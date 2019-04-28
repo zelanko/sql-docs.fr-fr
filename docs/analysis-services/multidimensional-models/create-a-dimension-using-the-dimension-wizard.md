@@ -1,5 +1,5 @@
 ---
-title: Créer une Dimension à l’aide de l’Assistant Dimension | Documents Microsoft
+title: Créer une Dimension à l’aide de l’Assistant Dimension | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ba906ab17169b2e2faf6bef54137fcc4e6210660
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866875"
 ---
 # <a name="create-a-dimension-using-the-dimension-wizard"></a>Créer une dimension à l'aide de l'Assistant Dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34023266"
   
          Si la liste **Colonnes clés** contient plusieurs colonnes clés, vous devez spécifier une colonne de nom qui fournit les valeurs d’un membre pour l’attribut de clé. Pour cela, vous pouvez créer un calcul nommé dans la vue de source de données et l'utiliser comme colonne de nom.  
   
-    5.  Cliquez sur **Suivant**.  
+    5.  Cliquer sur **Suivant**.  
   
 4.  Dans la page **Sélectionner les tables associées** , sélectionnez les tables associées à inclure dans votre dimension, puis cliquez sur **Suivant**.  
   
@@ -70,6 +70,6 @@ ms.locfileid: "34023266"
     >  Vous pouvez utiliser le Concepteur de dimensions après avoir terminé l'Assistant Dimension pour ajouter, supprimer et configurer des attributs et des hiérarchies dans la dimension.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une Dimension à l’aide d’une Table existante](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
+ [Créer une dimension à l'aide d'une table existante](../../analysis-services/multidimensional-models/create-a-dimension-by-using-an-existing-table.md)  
   
   

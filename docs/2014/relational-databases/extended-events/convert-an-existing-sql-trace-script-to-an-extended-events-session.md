@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83cf9390524d2fdc013fdddc41c610c28930e998
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015771"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script Trace SQL existant en session d'événements étendus
   Si vous disposez d'un script Trace SQL existant que vous souhaitez convertir en session d'événements étendus, vous pouvez utiliser les procédures décrites dans cette rubrique pour créer une session d'événements étendus équivalente. En utilisant les informations contenues dans les tables système trace_xe_action_map et trace_xe_event_map, vous pouvez recueillir les informations nécessaires pour effectuer la conversion.  

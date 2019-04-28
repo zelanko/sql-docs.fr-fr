@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb7fee7425db1e22cd8db59477fb0bf30ce1d01c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728182"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>Gérer les modèles (Compléments d'exploration de données SQL Server)
   ![Bouton de gérer les modèles, ruban Exploration de données](media/dmc-manage.gif "bouton de gérer les modèles, ruban Exploration de données")  
@@ -46,7 +46,7 @@ ms.locfileid: "48225369"
 > [!NOTE]  
 >  Cette boîte de dialogue ne vous permet pas de créer des requêtes ou des modèles. Pour créer une nouvelle structure d’exploration de données, utilisez un des Assistants fournis dans le Client d’exploration de données pour Excel, ou utilisez le **éditeur avancé de requête d’exploration de données**.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Pour gérer des modèles d'exploration de données, créez tout d'abord une connexion à une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La connexion est requise même si vous utilisez des modèles de session stockés dans un fichier temporaire. Pour plus d’informations sur la création ou modification d’une connexion, consultez [se connecter à la Source de données &#40;Client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Si l'instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] à laquelle vous vous connectez ne contient aucune structure d'exploration de données ni aucun modèle d'exploration de données, vous pouvez les créer en utilisant les Assistants et les autres outils fournis par ce complément. Vous pouvez également créer de nouveaux modèles à l’aide de la **d’exploration de données modèle Éditeur avancé de données**.  

@@ -21,15 +21,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c5288fe363350aebacba436cef388ae51e2bdd73
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982168"
 ---
 # <a name="sqlsetdescrec-function"></a>SQLSetDescRec, fonction
 **Conformité**  
- Version introduite : Conformité des normes 3.0 de ODBC : ISO 92  
+ Version introduite : Conformité aux normes 3.0 de ODBC : ISO 92  
   
  **Résumé**  
  Le **SQLSetDescRec** fonction définit plusieurs champs de descripteur qui affectent le type de données et la mémoire tampon à une colonne ou le paramètre des données liées.  

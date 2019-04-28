@@ -25,11 +25,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 41775a529d34aa5ca457f92c9d26e327b74705ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721911"
 ---
 # <a name="replication-agents-overview"></a>Présentation des Agents de réplication
   La réplication utilise une série de programmes indépendants, appelés Agents, pour effectuer les tâches associées au suivi des modifications et à la distribution des données. Par défaut, les Agents de réplication s'exécutent comme des travaux planifiés sous [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent doit être démarré pour que ces travaux puissent s'exécuter. Les Agents de réplication peuvent être également exécutés à partir de la ligne de commande et par des applications qui utilisent des Replication Management Objects. Les Agents de réplication peuvent être administrés à partir du moniteur de réplication [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] et de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  

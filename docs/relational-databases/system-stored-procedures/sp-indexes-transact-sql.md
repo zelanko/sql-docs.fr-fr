@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791247"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62961911"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,25 +45,25 @@ sp_indexes [ @table_server = ] 'table_server'
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @table_server=] '*serveur_de_la_table*'  
+ [ @table_server= ] '*table_server*'  
  Nom du serveur lié exécutant [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour lequel les informations de table sont demandées. *serveur_de_la_table* est **sysname**, sans valeur par défaut.  
   
  [ @table_name=] '*table_name*'  
  Nom de la table distante pour laquelle les informations d'index sont demandées. *table_name* est **sysname**, avec NULL comme valeur par défaut. Si la valeur de cet argument est NULL, toutes les tables de la base de données spécifiée sont retournées.  
   
- [ @table_schema=] '*table_schema*'  
+ [ @table_schema= ] '*table_schema*'  
  Spécifie le schéma de table. Dans l'environnement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ceci correspond au propriétaire de la table. *table_schema* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ @table_catalog=] '*bd_table*'  
+ [ @table_catalog= ] '*table_db*'  
  Est le nom de la base de données dans lequel *table_name* réside. *bd_table* est **sysname**, avec NULL comme valeur par défaut. Si NULL, *bd_table* par défaut est **master**.  
   
  [ @index_name=] '*index_name*'  
  Nom de l'index pour lequel les informations sont demandées. *index* est **sysname**, avec NULL comme valeur par défaut.  
   
- [ @is_unique=] '*is_unique*'  
+ [ @is_unique= ] '*is_unique*'  
  Type d'index pour lequel les informations sont demandées. *is_unique* est **bits**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |1|Renvoie des informations sur les index uniques.|  
 |0|Renvoie des informations sur les index qui ne sont pas uniques.|  
@@ -85,9 +85,9 @@ sp_indexes [ @table_server = ] 'table_server'
 |ASC_OR_DESC|**varchar**|Ordre utilisé dans les classements :<br /><br /> A = Croissant<br /><br /> D = Décroissant<br /><br /> NULL = Non applicable<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retourne toujours A.|  
 |CARDINALITY|**Int**|Est le nombre de lignes dans la table ou de valeurs uniques dans l’index.|  
 |PAGES|**Int**|Nombre de pages pour le stockage de l'index ou de la table.|  
-|FILTER_CONDITION|**nvarchar (** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur.|  
+|FILTER_CONDITION|**nvarchar(** 4000 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne retourne pas de valeur.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  

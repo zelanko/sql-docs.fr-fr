@@ -14,11 +14,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 17a404ef96b4800aa072b8f35c2d22c349361ca3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011549"
 ---
 # <a name="restore-the-service-master-key"></a>Restaurer la clé principale du service
   Cette rubrique explique comment restaurer la clé principale de service dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -51,7 +51,7 @@ ms.locfileid: "48229789"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CONTROL SERVER sur le serveur.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de Transact-SQL  
@@ -60,7 +60,7 @@ ms.locfileid: "48229789"
   
 1.  Récupérez une copie de la clé principale du service sauvegardée, à partir d'un support de sauvegarde physique ou d'un répertoire sur le système de fichiers local.  
   
-2.  Dans l'**Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
+2.  Dans l' **Explorateur d'objets**, connectez-vous à une instance de [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 3.  Dans la barre d'outils standard, cliquez sur **Nouvelle requête**.  
   

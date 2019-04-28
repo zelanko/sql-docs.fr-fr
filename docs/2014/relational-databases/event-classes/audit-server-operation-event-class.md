@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 99f3b353231da86af00bc4531e2645fe0a5b1994
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012437"
 ---
 # <a name="audit-server-operation-event-class"></a>Audit Server Operation (classe d'événements)
   La classe d'événements **Audit Server Operation** se produit lorsque des opérations d'audit de sécurité sont utilisées, telles que la modification des paramètres, des ressources, de l'accès externe ou de l'autorisation.  

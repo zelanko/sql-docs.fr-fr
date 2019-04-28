@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ecdc453b6498463e431cbad555af738fde2da1d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725433"
 ---
 # <a name="language-and-formatstring-on-formatedvalue"></a>LANGUAGE et FORMAT_STRING sur FORMATED_VALUE
   La propriété FORMATTED_VALUE est basée sur les interactions des propriétés VALUE, FORMAT_STRING et LANGUAGE de la cellule. Cette rubrique explique comment ces propriétés interagissent pour générer la propriété FORMATTED_VALUE.  
@@ -34,7 +34,7 @@ ms.locfileid: "48052351"
  Spécification de paramètres régionaux à appliquer dans toute la propriété FORMAT_STRING pour générer une version localisée de FORMATTED_VALUE  
   
 ## <a name="formattedvalue-constructed"></a>Création de FORMATTED_VALUE  
- La propriété FORMATTED_VALUE est créée en utilisant la valeur de la propriété VALUE et en appliquant le modèle de mise en forme spécifié dans la propriété FORMAT_STRING à cette valeur. En outre, chaque fois que la valeur mise en forme est un `named formatting literal` la spécification de la propriété LANGUAGE modifie la sortie de FORMAT_STRING pour suivre l’utilisation du langage pour la mise en forme nommée. Les littéraux de mise en forme nommée sont tous définis d'une façon permettant leur localisation. Par exemple, `"General Date"` est une spécification qui peut être localisée, par opposition au modèle suivant `"YYYY-MM-DD hh:nn:ss",` qui présente la date sous la forme définie par le modèle indépendamment de la spécification de langue.  
+ La propriété FORMATTED_VALUE est créée en utilisant la valeur de la propriété VALUE et en appliquant le modèle de mise en forme spécifié dans la propriété FORMAT_STRING à cette valeur. De plus, chaque fois que la valeur de mise en forme est un `named formatting literal`, la spécification de propriété LANGUAGE modifie la sortie de FORMAT_STRING pour se conformer à la langue utilisée pour la mise en forme nommée. Les littéraux de mise en forme nommée sont tous définis d'une façon permettant leur localisation. Par exemple, `"General Date"` est une spécification qui peut être localisée, par opposition au modèle suivant `"YYYY-MM-DD hh:nn:ss",` qui présente la date sous la forme définie par le modèle indépendamment de la spécification de langue.  
   
  S'il y a un conflit entre le modèle FORMAT_STRING et la spécification LANGUAGE, le modèle FORMAT_STRING remplace la spécification LANGUAGE. Par exemple, si FORMAT_STRING="$ #0" et LANGUAGE=1034 (Espagne), et si VALUE=123.456, puis FORMATTED_VALUE="$ 123" au lieu de FORMATTED_VALUE="€ 123", le format attendu est en euros car la valeur du modèle de mise en forme remplace la langue spécifiée.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "48052351"
 |E|5,04E+03|FORMAT_STRING a pour valeur `Scientific` et LANGUAGE a pour valeur explicite `1034,` le signe `,` (virgule) est donc utilisé comme séparateur décimal.|  
 |F|50.40%|FORMAT_STRING a pour valeur `Percent` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système. Le signe `.` (point) est donc utilisé comme séparateur décimal.<br /><br /> Notez que VALUE est passé de 5040 à 0.5040|  
 |G|50,40|FORMAT_STRING a pour valeur `Percent`, valeur héritée de F, et LANGUAGE a pour valeur explicite `1034` . Le signe `,` (virgule) est donc utilisé comme séparateur décimal.<br /><br /> Notez que VALUE a été hérité de la valeur F.|  
-|H|non|FORMAT_STRING a pour valeur `YES/NO`, VALUE a pour valeur 0 et LANGUAGE a pour valeur explicite `1034`. Étant donné qu’il n’y a aucune différence entre le NO anglais et le NO espagnol, l’utilisateur ne voit aucune différence au niveau de FORMATTED_VALUE.|  
+|H|Non|FORMAT_STRING a pour valeur `YES/NO`, VALUE a pour valeur 0 et LANGUAGE a pour valeur explicite `1034`. Étant donné qu’il n’y a aucune différence entre le NO anglais et le NO espagnol, l’utilisateur ne voit aucune différence au niveau de FORMATTED_VALUE.|  
 |I|SI|FORMAT_STRING a pour valeur `YES/NO`, VALUE a pour valeur 59 et LANGUAGE a pour valeur explicite `1034`. Comme défini pour la mise en forme de YES/NO, toute valeur différente de zéro (0) est égale à YES et comme la langue est l’espagnol, FORMATTED_VALUE a pour valeur SI.|  
 |J|Desactivado|FORMAT_STRING a pour valeur `ON/OFF`, VALUE a pour valeur 0 et LANGUAGE a pour valeur explicite `1034`. Comme défini pour la mise en forme de ON/OFF, toute valeur égale à zéro (0) est égale à OFF et comme la langue est l’espagnol, FORMATTED_VALUE a pour valeur Desactivado.|  
 |K|Activado|FORMAT_STRING a pour valeur `ON/OFF`, VALUE a pour valeur -312 et LANGUAGE a pour valeur explicite `1034`. Comme défini pour la mise en forme de ON/OFF, toute valeur différente de zéro (0) est égale à ON et comme la langue est l'espagnol, FORMATTED_VALUE a pour valeur Activado.|  
@@ -144,8 +144,8 @@ ms.locfileid: "48052351"
   
 ## <a name="see-also"></a>Voir aussi  
  [Contenu de FORMAT_STRING &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md)   
- [À l’aide des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
- [Création et utilisation des valeurs de propriété &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
- [Principes de base de requête MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Utilisation des propriétés de cellule &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)   
+ [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)   
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a18669d646dcf6e46f609faeb0861e5fa9732850
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732546"
 ---
 # <a name="database-properties-dialog-box-ssas---multidimensional"></a>Boîte de dialogue Propriétés de la base de données (SSAS - Multidimensionnelle)
   Utilisez la boîte de dialogue **Propriétés de la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés d'une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez afficher la boîte de dialogue **Propriétés de la base de données** en cliquant avec le bouton droit sur une base de données dans l’Explorateur d’objets et en sélectionnant **Propriétés**.  
@@ -40,6 +40,6 @@ ms.locfileid: "48196729"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Bases de données Model multidimensionnelles &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
+ [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](multidimensional-models/multidimensional-model-databases-ssas.md)  
   
   

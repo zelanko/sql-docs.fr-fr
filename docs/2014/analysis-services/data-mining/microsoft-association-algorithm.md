@@ -32,14 +32,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722102"
 ---
 # <a name="microsoft-association-algorithm"></a>Algorithme Microsoft Association
-  L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est un algorithme d'association fourni par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui est utile pour les moteurs de recommandation. Un moteur de recommandation recommande des produits aux clients en se basant sur les éléments qu'ils ont déjà achetés ou pour lesquels ils ont manifesté un intérêt. L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est utile également pour l’analyse du panier d’achat. Pour obtenir un exemple d’une analyse de panier d’achat, consultez [leçon 3 : génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) dans le didacticiel d’exploration de données.  
+  L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est un algorithme d'association fourni par [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] qui est utile pour les moteurs de recommandation. Un moteur de recommandation recommande des produits aux clients en se basant sur les éléments qu'ils ont déjà achetés ou pour lesquels ils ont manifesté un intérêt. L’algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association est utile également pour l’analyse du panier d’achat. Pour obtenir un exemple d’une analyse de panier d’achat, consultez [leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) dans le didacticiel d’exploration de données.  
   
  Des modèles d'association sont générés sur les jeux de données qui contiennent des identificateurs pour les cas individuels et pour les éléments que les cas contiennent. Un groupe d’éléments dans un cas est appelé un *jeu d’éléments*. Un modèle d'association se compose d'une série de jeux d'éléments et de règles qui décrivent la manière dont ces éléments sont groupés au sein des cas. Les règles que l'algorithme identifie peuvent être utilisées pour prévoir les prochains achats d'un client, en fonction des éléments déjà présents dans le panier d'achat du client. Le diagramme ci-dessous montre une série de règles dans un jeu d'éléments.  
   

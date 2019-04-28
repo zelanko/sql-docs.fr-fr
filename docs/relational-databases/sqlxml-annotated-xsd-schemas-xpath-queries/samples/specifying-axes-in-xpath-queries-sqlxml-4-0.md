@@ -21,11 +21,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 820542c25947157b9e062608f1134e4bdeaa702a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737689"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Spécification d'axes dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "56036220"
 </ROOT>  
 ```  
   
-### <a name="b-retrieve-grandchildren-of-the-context-node"></a>b. Récupérer les petits-enfants du nœud de contexte  
+### <a name="b-retrieve-grandchildren-of-the-context-node"></a>B. Récupérer les petits-enfants du nœud de contexte  
  La requête XPath suivante sélectionne tous les  **\<ordre >** éléments enfants de la  **\<client >** éléments enfants du nœud de contexte :  
   
 ```  

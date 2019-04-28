@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f817a74d71d12e02d4cb742a0d5423b9a8ac7807
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725463"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Création de calculs de cellules à l'aide de la syntaxe MDX (MDX)
   MDX (Multidimensional Expressions) propose un certain nombre d'outils qui vous permettent de générer des valeurs calculées comme des membres calculés, des cumuls personnalisés et des membres personnalisés. Cependant, il est difficile d'affecter un jeu de cellules spécifique (voire une cellule unique) à l'aide de ces outils.  
@@ -35,9 +35,9 @@ ms.locfileid: "48226019"
   
  Du point de vue de leur portée, les cellules calculées sont semblables aux jeux nommés et aux membres calculés en ce sens qu'elles peuvent créées temporairement pour la durée d'une session ou d'une seule requête, ou encore être globalement mises à la disposition des utilisateurs dans le cadre d'un cube :  
   
--   **Étendue de requête** Pour créer une cellule calculée définie en tant que partie d’une requête MDX, et dont l’étendue est donc limitée à la requête, utilisez le mot clé WITH. Vous pouvez ensuite utiliser la cellule calculée au sein d'une instruction MDX SELECT. À l’aide de cette approche, la cellule calculée créée à l’aide de la `WITH` mot clé peut être modifié sans porter atteinte à l’instruction SELECT.  
+-   **Étendue de requête** Pour créer une cellule calculée définie en tant que partie d’une requête MDX, et dont l’étendue est donc limitée à la requête, utilisez le mot clé WITH. Vous pouvez ensuite utiliser la cellule calculée au sein d'une instruction MDX SELECT. De cette manière, vous pouvez modifier la cellule calculée créée à l'aide du mot clé `WITH` sans porter atteinte à l'instruction SELECT.  
   
-     Pour plus d’informations sur l’utilisation du mot clé WITH pour la création de membres calculés, consultez [Creating Query-Scoped Cell Calculations &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
+     Pour plus d’informations sur l’utilisation du mot clé WITH pour la création de membres calculés, consultez [Création de calculs de cellules au niveau de la requête &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
   
 -   **Étendue de session** Pour créer un membre calculé dont l’étendue est plus étendue que le contexte de la requête, c’est-à-dire dont l’étendue est la durée de vie de la session MDX, vous devez utiliser l’instruction CREATE CELL CALCULATION ou ALTER CUBE.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "48226019"
 ## <a name="see-also"></a>Voir aussi  
  [Instruction ALTER CUBE &#40;MDX&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
  [Instruction CREATE CELL CALCULATION &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
- [Création de calculs de cellules au niveau requête &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Principes de base de requête MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Création de calculs de cellules au niveau de la requête &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

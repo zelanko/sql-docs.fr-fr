@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4389ab6f8cd2df0f744eca5b4552a4bb18723627
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721981"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Références techniques relatives à l’algorithme Microsoft Association
   L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est une implémentation simple de l'algorithme Apriori bien connu.  

@@ -21,18 +21,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62872718"
 ---
 # <a name="delete-a-data-tier-application"></a>Supprimer une application de la couche Données
   Vous pouvez supprimer une application de la couche Données à l'aide de l'Assistant Supprimer l'application de la couche Données ou d'un script Windows PowerShell. Vous pouvez spécifier si la base de données associée doit être conservée, détachée ou supprimée.  
   
--   **Avant de commencer :**  [Limitations et Restrictions](#LimitationsRestrictions), [autorisations](#Permissions)  
+-   **Avant de commencer :**  [Limitations et restrictions](#LimitationsRestrictions), [Autorisations](#Permissions)  
   
--   **Pour mettre à niveau une DAC, à l’aide de :**  [L’Assistant inscrire l’Application de couche données](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
+-   **Pour mettre à niveau une DAC à l’aide de**  [l’Assistant d’inscription de l’application de la couche Données](#UsingDeleteDACWizard), [PowerShell](#DeleteDACPowerShell)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
  Lorsque vous supprimez une instance d'application de la couche Données (DAC), vous choisissez l'une des trois options qui spécifient le mode de traitement de la base de données associée à l'application de la couche Données. Les trois options suppriment les métadonnées de définition de la DAC. Les options diffèrent de par ce qu'elles font de la base de données associée à l'application de couche Données. L'Assistant ne supprime aucun des objets au niveau de l'instance associés à la DAC ou base de données, tels que les connexions.  
@@ -55,7 +55,7 @@ ms.locfileid: "52532512"
 > [!WARNING]  
 >  La reconstruction d'une instance de la DAC en inscrivant une DAC à partir d'une base de données rattachée ou restaurée ne recréera pas certaines parties de la DAC d'origine, telles que la stratégie de sélection du serveur.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Autorisations  
  Une DAC peut uniquement être supprimée par les membres des rôles serveur fixes **sysadmin** ou **serveradmin** , ou par le propriétaire de la base de données. Le compte d’administrateur système [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intégré nommé **sa** peut également lancer l’Assistant.  
   
 ##  <a name="UsingDeleteDACWizard"></a> Utilisation de l'Assistant Supprimer l'application de la couche Données  

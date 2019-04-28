@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1bb6f278b18381d1b3d3defdb53a7c40a6f673ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62960276"
 ---
 # <a name="secure-the-distributor"></a>Sécuriser le serveur de distribution
   Les Agents de réplication suivants se connectent au serveur de distribution : l'Agent de lecture du journal, l'Agent d'instantané, l'Agent de lecture de la file d'attente, l'Agent de distribution et l'Agent de fusion. Il est important de donner un nom d'accès approprié à chacun de ces agents tout en suivant le principe d'accorder le minimum de droits nécessaires et de protéger également le stockage de tous les mots de passe.  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62959748"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Architecture de la sécurité pour la synchronisation web
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permet un contrôle fin de la configuration de la sécurité de la synchronisation Web. Cette rubrique donne une liste complète de tous les composants qui peuvent être inclus dans une configuration de synchronisation Web, ainsi que des informations sur les connexions qui sont établies entre ces composants. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
@@ -37,7 +37,7 @@ ms.locfileid: "52804381"
 |Compte de service Windows pour l'Agent [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Gestionnaire de configuration[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
 |Application indépendante|L'Agent de fusion est exécuté dans le contexte de l'utilisateur Windows qui exécute l'application.|  
   
-## <a name="b-connection-to-the-subscriber"></a>b. Connexion à l'Abonné  
+## <a name="b-connection-to-the-subscriber"></a>B. Connexion à l'Abonné  
  L'Agent de fusion se connecte à l'Abonné à l'aide de l'authentification Windows ou de l'authentification [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . L'utilisateur Windows ou la connexion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] spécifié doit être associé à un utilisateur de base de données membre du rôle de base de données fixe **dbowner** dans la base de données d'abonnement.  
   
 > [!NOTE]  

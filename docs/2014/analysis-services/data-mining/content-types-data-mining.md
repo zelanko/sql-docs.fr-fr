@@ -28,11 +28,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ee6c08cf0b9c2cba8e8931e0949734f2afa66e9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723131"
 ---
 # <a name="content-types-data-mining"></a>Types de contenu (Exploration de données)
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez définir à la fois le type de données physique d’une colonne dans une structure d’exploration de données et un type de contenu logique pour la colonne quand elle est utilisée dans un modèle.  
@@ -50,14 +50,14 @@ ms.locfileid: "48190089"
   
  Les valeurs dans une colonne d'attributs discrète ne peuvent pas impliquer un classement, même si les valeurs sont numériques. De plus, même si les valeurs utilisées pour la colonne discrète sont numériques, le calcul de valeurs fractionnaires est impossible. Les indicatifs téléphoniques sont un bon exemple de données discrètes numériques.  
   
- Le `Discrete` type de contenu est pris en charge par les données de tous les types de données d’exploration de données.  
+ Le type de contenu `Discrete` est pris en charge par tous les types de données d'exploration de données.  
   
 ## <a name="continuous"></a>Continu  
  Le terme*continu* signifie que la colonne contient des valeurs qui représentent des données numériques sur une échelle qui autorise des valeurs temporaires. À la différence d'une colonne discrète, qui représente des données finies et dénombrables, une colonne continue représente des mesures évolutives et les données peuvent contenir un nombre infini de valeurs fractionnaires. Une colonne de températures est un exemple de colonne d'attributs continue.  
   
  Lorsqu'une colonne contient les données numériques continues, et que vous savez comment les données doivent être distribuées, vous pouvez potentiellement améliorer l'exactitude de l'analyse en spécifiant la distribution attendue des valeurs. Vous spécifiez la distribution des colonnes au niveau de la structure d'exploration de données. Ainsi, le paramètre s’applique à tous les modèles basés sur la structure. Pour plus d’informations, consultez [Distributions de colonnes &#40;exploration de données&#41;](column-distributions-data-mining.md).  
   
- Le `Continuous` type de contenu est pris en charge par les types de données suivants : `Date`, `Double`, et `Long`.  
+ Le type de contenu `Continuous` est pris en charge par les types de données suivants : `Date`, `Double` et `Long`.  
   
 ## <a name="discretized"></a>Discrétisé  
  La*discrétisation* est le processus consistant à mettre les valeurs d’un jeu continu de données dans des compartiments pour obtenir un nombre limité de valeurs possibles. Seules des données numériques peuvent être discrétisées.  
@@ -68,22 +68,22 @@ ms.locfileid: "48190089"
   
  Le type de contenu `Discretized` est pris en charge par les types de données suivants : `Date`, `Double`, `Long` et `Text`.  
   
-## <a name="key"></a>Key  
- Le type de contenu *clé* (Key) signifie que la colonne identifie de façon unique une ligne. Dans une table de cas, la colonne clé est généralement un identificateur numérique ou texte. Vous définissez le type de contenu sur `key` pour indiquer que la colonne ne doit pas être utilisée pour l’analyse, uniquement pour les enregistrements de suivi.  
+## <a name="key"></a>Touche  
+ Le type de contenu *clé* (Key) signifie que la colonne identifie de façon unique une ligne. Dans une table de cas, la colonne clé est généralement un identificateur numérique ou texte. Vous attribuez la valeur `key` au type de contenu pour indiquer que la colonne doit uniquement servir au suivi des enregistrements, et non à des fins d'analyse.  
   
- Les tables imbriquées ont également des clés, mais l'utilisation de la clé de table imbriquée diffère quelque peu. Vous définissez le type de contenu sur `key` dans une table imbriquée si la colonne est l’attribut que vous souhaitez analyser. Les valeurs dans la clé de table imbriquée doivent être uniques pour chaque cas, mais il peut y avoir des doublons sur tout le jeu de cas.  
+ Les tables imbriquées ont également des clés, mais l'utilisation de la clé de table imbriquée diffère quelque peu. Vous attribuez la valeur `key` au type de contenu dans une table imbriquée si la colonne est l'attribut à analyser. Les valeurs dans la clé de table imbriquée doivent être uniques pour chaque cas, mais il peut y avoir des doublons sur tout le jeu de cas.  
   
  Par exemple, si vous analysez les produits qu’achètent les clients, vous attribuez la valeur key au type de contenu de la colonne **CustomerID** dans la table de cas et de la colonne **PurchasedProducts** dans la table imbriquée.  
   
 > [!NOTE]  
 >  Les tables imbriquées sont disponibles uniquement si vous utilisez les données d’une source de données externe ayant été définie comme vue de source de données Analysis Services.  
   
- Ce type de contenu est pris en charge par les types de données suivants : `Date`, `Double`, `Long`, et `Text`.  
+ Ce type de contenu est pris en charge par les types de données suivants : `Date`, `Double`, `Long` et `Text`.  
   
 ## <a name="key-sequence"></a>Séquence clé  
  Le type de contenu *séquence clé* (key sequence) ne peut être utilisé que dans des modèles Sequence Clustering. En attribuant la valeur `key sequence` au type de contenu, vous indiquez que la colonne contient des valeurs qui représentent une séquence d'événements. Les valeurs sont ordonnées, mais elles n'ont pas besoin d'être séparées par une distance égale.  
   
- Ce type de contenu est pris en charge par les types de données suivants : `Double`, `Long`, `Text`, et `Date`.  
+ Ce type de contenu est pris en charge par les types de données suivants : `Double`, `Long`, `Text` et `Date`.  
   
 ## <a name="key-time"></a>Temps clé  
  Le type de contenu *temps clé* (key time) ne peut être utilisé que dans les modèles de série chronologique. En attribuant la valeur `key time` au type de contenu, vous indiquez que les valeurs sont ordonnées et qu'elles représentent une échelle de temps.  
@@ -116,7 +116,7 @@ ms.locfileid: "48190089"
  [Types de contenu &#40;DMX&#41;](/sql/dmx/content-types-dmx)   
  [Types de données &#40;exploration de données&#41;](data-types-data-mining.md)   
  [Types de données &#40;DMX&#41;](/sql/dmx/data-types-dmx)   
- [Modifier les propriétés d’une Structure d’exploration de données](change-the-properties-of-a-mining-structure.md)   
+ [Modifier les propriétés d'une structure d'exploration de données](change-the-properties-of-a-mining-structure.md)   
  [Colonnes de structure d’exploration de données](mining-structure-columns.md)  
   
   

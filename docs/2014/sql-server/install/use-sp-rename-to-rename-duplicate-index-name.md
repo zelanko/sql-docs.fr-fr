@@ -18,11 +18,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc6b4ec763457996309caf1884829638367e9b18
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987330"
 ---
 # <a name="use-sprename-to-rename-duplicate-index-name"></a>Utiliser sp_rename pour renommer le nom d'index en double
   Le Conseiller de mise à niveau a détecté des noms d'index de table ou de vue en double. Renommez les index afin de supprimer les doublons avant la mise à niveau.  

@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: befef498ab4cda12ce38a34678b78a2b5dcd278c
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842883"
 ---
 # <a name="view-event-session-data"></a>Afficher des données de session d'événements
   Cette rubrique décrit l'utilisation de l'interface utilisateur pour afficher et analyser les données d'événements étendus :  
@@ -43,9 +43,9 @@ ms.locfileid: "49120296"
   
 -   Pour afficher les données ring_buffer au format XML, dans la fenêtre des données cibles, cliquez sur le lien **données cibles ring_buffer** . Le fichier ring_buffer.xml apparaît dans l'éditeur XML.  
   
--   Pour une cible event_file, affichez les données cibles du fichier (fichier .XEL) à l'aide de l'une des méthodes suivantes :  
+-   Pour une cible event_file, affichez les données cibles du fichier (fichier .XEL) à l'aide de l'une des méthodes suivantes :  
   
-    -   Utilisez Fichier -> Ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
+    -   Utiliser un fichier -> Ouvrir dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   
     -   Faites glisser le fichier dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
   

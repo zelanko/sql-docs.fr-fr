@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40cf44e416a7507693b44cc691a89ad3a5ac95af
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726443"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Définir des relations logiques dans une vue de source de données (Analysis Services)
   L'Assistant Vue de source de données et le Concepteur de vue de source de données définissent automatiquement les relations entre les tables ajoutées à une vue de source de données (DSV), en fonction des relations de la base de données sous-jacente ou des critères de correspondance de noms que vous spécifiez.  

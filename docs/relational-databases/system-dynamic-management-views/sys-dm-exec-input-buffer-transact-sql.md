@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/13/2017
 ms.prod: sql
@@ -22,13 +22,13 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8531f33f2d027eba14d4416e9138560b25ead20e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013134"
 ---
-# <a name="sysdmexecinputbuffer-transact-sql"></a>Sys.dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
   Retourne des informations sur les instructions envoyées à une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -60,7 +60,7 @@ L’id de session exécute le lot à rechercher. *session_id* est **smallint**. 
 |**parameters**|**smallint**|Tous les paramètres fournis pour l’instruction.|  
 |**event_info**|**nvarchar(max)**|Le texte de l’instruction dans la mémoire tampon d’entrée pour le spid donné.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si l’utilisateur a l’autorisation VIEW SERVER STATE, l’utilisateur verra en cours d’exécution toutes les sessions sur l’instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; sinon, l’utilisateur verra uniquement la session active.  
   
  Sur [!INCLUDE[ssSDS](../../includes/sssds-md.md)], si l’utilisateur est le propriétaire de la base de données, l’utilisateur verra en cours d’exécution toutes les sessions sur le [!INCLUDE[ssSDS](../../includes/sssds-md.md)]; sinon, l’utilisateur verra uniquement la session active.  
