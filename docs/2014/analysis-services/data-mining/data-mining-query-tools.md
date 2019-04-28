@@ -20,16 +20,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722910"
 ---
 # <a name="data-mining-query-interfaces"></a>Interface de requête d'exploration de données
   Les requêtes d'exploration de données sont basées sur le langage DMX (Data Mining Extensions). Vous utilisez DMX pour toutes les tâches de prédiction et de modélisation, notamment la classification, l'évaluation des risques, la génération de recommandations et la régression linéaire. Vous pouvez également récupérer les modèles et les statistiques générés lorsque vous avez traité le modèle.  
   
- La syntaxe d'une requête de prédiction utilisant DMX est semblable à la syntaxe d'une requête en langage [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournissent des outils qui vous permettent de générer des requêtes de prédiction DMX.  
+ La syntaxe d'une requête de prédiction utilisant DMX est semblable à la syntaxe d'une requête en langage [!INCLUDE[tsql](../../includes/tsql-md.md)]. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] fournissent des outils qui vous permettent de générer des requêtes de prédiction DMX.  
   
  Cette rubrique décrit les interfaces que vous pouvez utiliser pour créer et exécuter des requêtes d'exploration de données à l'aide de DMX.  
   

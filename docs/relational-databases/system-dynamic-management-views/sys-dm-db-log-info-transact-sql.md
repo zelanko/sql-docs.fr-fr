@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -21,11 +21,11 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: ef115025e57ec342c14ed3151ce006f484d1fadc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49411146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719510"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sys.dm_db_log_info ( database_id )
 ``` 
 
 ## <a name="arguments"></a>Arguments  
- *database_id* | NULL | PAR DÉFAUT  
+ *database_id* | NULL | DEFAULT  
  Est l’ID de la base de données. *database_id* est de type **int**. Les entrées valides sont le numéro d’ID de base de données, NULL ou par défaut. La valeur par défaut est NULL. NULL et par défaut sont des valeurs équivalentes dans le contexte de base de données actuelle.
  
  Spécifiez NULL pour retourner des informations de fichier journal virtuel de la base de données actuelle.
@@ -65,7 +65,7 @@ sys.dm_db_log_info ( database_id )
 ## <a name="remarks"></a>Notes
 Le `sys.dm_db_log_info` fonction de gestion dynamique remplace la `DBCC LOGINFO` instruction.    
  
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 Nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.  
   
 ## <a name="examples"></a>Exemples  

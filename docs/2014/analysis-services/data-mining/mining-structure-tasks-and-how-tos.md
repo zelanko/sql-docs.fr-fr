@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 118e4eee68f3c88bd2d09f1d0c366d1c5d9e65df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733319"
 ---
 # <a name="mining-structure-tasks-and-how-tos"></a>Tâches de la structure d'exploration de données et procédures
   L'onglet **Structure d'exploration de données** du Concepteur d'exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contient des outils qui permettent de créer, de modifier et de traiter une structure d'exploration de données.  

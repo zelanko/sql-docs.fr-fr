@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 7 : Créer des mesures | Microsoft Docs'
+title: 'Leçon 7 : Créer des mesures | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7fdd611d1757712baa13e58ba31d78a2081f3d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48213239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728105"
 ---
-# <a name="lesson-7-create-measures"></a>Leçon 7 : Créer des mesures
+# <a name="lesson-7-create-measures"></a>Leçon 7 : Créer des mesures
   Dans cette leçon, vous allez créer des mesures à inclure dans votre modèle. Similairement aux colonnes calculées que vous avez créées dans la leçon précédente, une mesure est essentiellement un calcul créé à l'aide d'une formule DAX. Toutefois, contrairement aux colonnes calculées, les mesures sont évaluées en fonction d'un *filtre*sélectionné par l'utilisateur ; par exemple, une colonne ou un segment particulier ajouté au champ des étiquettes de ligne dans un tableau croisé dynamique.   Une valeur pour chaque cellule dans le filtre est ensuite calculée par la mesure appliquée. Les mesures sont des calculs puissants et flexibles que vous pouvez inclure dans pratiquement tous les modèles tabulaires, pour effectuer des calculs dynamiques sur des données numériques. Pour plus d’informations, consultez [Mesures &#40;SSAS Tabulaire&#41;](tabular-models/measures-ssas-tabular.md).  
   
  Pour créer des mesures, vous utilisez la grille de mesures. Par défaut, chaque table contient une grille de mesures vide ; toutefois, en général, vous ne créez pas de mesures pour chaque table. La grille de mesures s'affiche sous une table au sein du générateur de modèles dans la vue de données. Pour cacher ou afficher la grille de mesures d'une table, cliquez sur le menu **Table** , puis sur **Afficher la grille de mesures**.  
@@ -27,10 +27,10 @@ ms.locfileid: "48213239"
   
  Dans cette leçon, vous allez créer des mesures en entrant une formule DAX dans la barre de formule et en utilisant la fonction de somme automatique.  
   
- Durée estimée pour effectuer cette leçon : **30 minutes**  
+ Durée estimée pour effectuer cette leçon : **30 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Créer des mesures  
   
@@ -91,14 +91,14 @@ ms.locfileid: "48213239"
   
     |Nom de la mesure|colonne|Somme automatique (∑)|Formule|  
     |------------------|------------|-------------------|-------------|  
-    |Internet Order Lines Count|Sales Order Line Number|Compter|=COUNT([Sales Order Line Number])|  
-    |Internet Total Units|Order Quantity|SUM|=SUM([Order Quantity])|  
-    |Internet Total Discount Amount|Discount Amount|SUM|=SUM([Discount Amount])|  
-    |Internet Total Product Cost|Total Product Cost|SUM|=SUM([Total Product Cost])|  
-    |Internet Total Sales|Sales Amount|SUM|=SUM([Sales Amount])|  
-    |Internet Total Margin|Margin|SUM|=SUM([Margin])|  
-    |Internet Total Tax Amt|Tax Amt|SUM|=SUM([Tax Amt])|  
-    |Internet Total Freight|Freight|SUM|=SUM([Freight])|  
+    |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
+    |Internet Total Units|Order Quantity|Sum|=SUM([Order Quantity])|  
+    |Internet Total Discount Amount|Discount Amount|Sum|=SUM([Discount Amount])|  
+    |Internet Total Product Cost|Total Product Cost|Sum|=SUM([Total Product Cost])|  
+    |Internet Total Sales|Sales Amount|Sum|=SUM([Sales Amount])|  
+    |Internet Total Margin|Margin|Sum|=SUM([Margin])|  
+    |Internet Total Tax Amt|Tax Amt|Sum|=SUM([Tax Amt])|  
+    |Internet Total Freight|Freight|Sum|=SUM([Freight])|  
   
 2.  En cliquant sur une cellule vide dans la grille de mesures, et à l'aide de la barre de formule, créez et nommez les mesures suivantes :  
   
@@ -117,6 +117,6 @@ ms.locfileid: "48213239"
  Les mesures créées pour la table Internet Sales peuvent être utilisées pour analyser des données financières critiques telles que les ventes, les coûts et la marge bénéficiaire des éléments définis par le filtre sélectionné par l'utilisateur.  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 8 : Créer les indicateurs de performance clés](lesson-7-create-key-performance-indicators.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 8 : Créer des indicateurs de Performance clés](lesson-7-create-key-performance-indicators.md).  
   
   

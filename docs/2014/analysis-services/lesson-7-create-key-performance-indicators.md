@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 8 : Créer des indicateurs de Performance clés | Microsoft Docs'
+title: 'Leçon 8 : Créer des indicateurs de Performance clés | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,19 +12,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62b4102ba7a8b1ff2d5c833001b90dd74707fdc5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728135"
 ---
-# <a name="lesson-8-create-key-performance-indicators"></a>Leçon 8 : Créer les indicateurs de performance clés
+# <a name="lesson-8-create-key-performance-indicators"></a>Leçon 8 : Créer des indicateurs de performance clé (KPI)
   Au cours de cette leçon, vous allez créer des indicateurs de performance clés (KPI). Les KPI évaluent la performance d’une valeur, définie par une mesure de *base* , par rapport à une valeur *cible* , également définie par une mesure ou par une valeur absolue. Dans les applications clientes de création de rapports, les indicateurs de performance clés offrent aux professionnels un moyen d'obtenir rapidement et aisément un récapitulatif d'un succès commercial ou d'identifier les tendances. Pour en savoir plus, consultez [KPI &#40;SSAS Tabulaire&#41;](tabular-models/kpis-ssas-tabular.md).  
   
- Durée estimée pour effectuer cette leçon : **15 minutes**  
+ Durée estimée pour effectuer cette leçon : **15 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la [Leçon 7 : Créer des mesures](lesson-6-create-measures.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 7 : Créer des mesures](lesson-6-create-measures.md).  
   
 ## <a name="create-key-performance-indicators"></a>Créer des indicateurs de performance clé (KPI)  
   
@@ -82,6 +82,6 @@ ms.locfileid: "48120666"
 7.  Dans **Sélectionner le style d’icône**, sélectionnez le type d’icône losange (rouge), triangle (jaune) et cercle (vert), puis cliquez sur **OK**.  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour continuer ce didacticiel, passez à la [Leçon 9 : Créer des perspectives](lesson-8-create-perspectives.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 9 : Créer des Perspectives](lesson-8-create-perspectives.md).  
   
   

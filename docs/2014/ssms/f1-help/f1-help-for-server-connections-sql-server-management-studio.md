@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6d845874a2fd221163953b0aeb2b8d32516e14b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62955888"
 ---
 # <a name="f1-help-for-server-connections-sql-server-management-studio"></a>Aide accessible via la touche F1 sur les connexions serveur (SQL Server Management Studio)
   Cette section contient les rubriques d’aide, accessibles via la touche F1, pour la boîte de dialogue **Se connecter au serveur** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

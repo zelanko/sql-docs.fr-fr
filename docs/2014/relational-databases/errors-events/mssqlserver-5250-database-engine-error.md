@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 542a873b98c6fc6fde48b34d7ff44061dad5d45b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867933"
 ---
 # <a name="mssqlserver5250"></a>MSSQLSERVER_5250
     
@@ -30,7 +30,7 @@ ms.locfileid: "48143219"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|Texte du message|Erreur de base de données : PAGE_TYPE, la page P_ID de la base de données 'NAME' (ID de base de données DB_ID) n'est pas valide. Cette erreur ne peut pas être corrigée. Vous devez effectuer une restauration à partir de la sauvegarde.|  
+|Texte du message|Erreur de base de données : La page PAGE_TYPE P_ID de la base de données « NAME » (base de données ID DB_ID) n’est pas valide. Cette erreur ne peut pas être corrigée. Vous devez effectuer une restauration à partir de la sauvegarde.|  
   
 ## <a name="explanation"></a>Explication  
  Une page d'en-tête de fichier ou une page de démarrage est endommagée dans la base de données spécifiée.  

@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a0351173100703b8b78f7b4b019fcd2c63688918
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843688"
 ---
 # <a name="query-options-results-grid-page"></a>Options de requête – Résultats (page Grille)
   Cette page vous permet de spécifier les options d'affichage du jeu de résultats d'une requête au format grille.  

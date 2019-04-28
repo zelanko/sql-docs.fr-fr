@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c598ca2dc2e1fd79e221c0c3d3fc1a5c3592dcb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844170"
 ---
 # <a name="query-options-execution-advanced-page"></a>Options Exécution de la requête (page Avancé)
   Différentes options sont disponibles à l'aide de l'instruction **SET** . Cette page vous permet de spécifier une option **set** pour exécuter les requêtes Microsoft SQL Server. Pour des informations détaillées sur chacune de ces options, consultez la documentation en ligne de SQL Server.  

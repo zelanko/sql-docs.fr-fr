@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721026"
 ---
-# <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Leçon 2 : Création d'un abonnement à la publication de fusion
+# <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Leçon 2 : Création d’un abonnement à la Publication de fusion
   Dans cette leçon, vous allez créer l’abonnement à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Puis, vous définirez les autorisations sur la base de données d'abonnement et génèrerez manuellement l'instantané filtré des données du nouvel abonnement. Cette leçon requiert que vous avez terminé la leçon précédente, [leçon 1 : Publication des données à l’aide de la réplication de fusion](lesson-1-publishing-data-using-merge-replication.md).  
   
 ### <a name="to-create-the-subscription"></a>Pour créer l'abonnement  
@@ -71,11 +71,11 @@ ms.locfileid: "54127539"
 5.  Sélectionnez la partition nouvellement ajoutée, cliquez sur **Générer les instantanés sélectionnés maintenant**, puis sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès un abonnement à la publication de fusion et généré l'instantané filtré pour la partition de données du nouvel abonnement de telle sorte qu'il soit disponible lors de l'initialisation de l'abonnement. Ensuite, vous allez accorder des droits à l'Agent de fusion sur la base de données d'abonnement et exécuter l'Agent de fusion pour démarrer la synchronisation et initialiser l'abonnement. Consultez [leçon 3 : Synchronisation de l’abonnement à la Publication de fusion](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
+ Vous avez créé avec succès un abonnement à la publication de fusion et généré l'instantané filtré pour la partition de données du nouvel abonnement de telle sorte qu'il soit disponible lors de l'initialisation de l'abonnement. Ensuite, vous allez accorder des droits à l'Agent de fusion sur la base de données d'abonnement et exécuter l'Agent de fusion pour démarrer la synchronisation et initialiser l'abonnement. Voir [Leçon 3 : Synchronisation de l’abonnement à la Publication de fusion](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [S’abonner aux Publications](subscribe-to-publications.md)   
- [Create a Pull Subscription](create-a-pull-subscription.md)   
+ [Créer un abonnement par extraction de données ](create-a-pull-subscription.md)   
  [Instantanés des publications de fusion avec des filtres paramétrés](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

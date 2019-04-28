@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013432"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *\@TSQL*  
+ *\@tsql*  
  Une ou plusieurs instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] *Transact-SQL_batch* peut être **nvarchar (***n***)** ou **nvarchar (max)**.  
   
  *\@params*  
@@ -139,7 +139,7 @@ SELECT * FROM sys.dm_exec_describe_first_result_set
 (N'SELECT object_id, name, type_desc FROM sys.indexes', null, 0) ;  
 ```  
   
-### <a name="b-returning-information-about-a-procedure"></a>b. Retour d'informations sur une procédure  
+### <a name="b-returning-information-about-a-procedure"></a>B. Retour d'informations sur une procédure  
  L’exemple suivant crée une procédure stockée nommée pr_TestProc qui retourne deux jeux de résultats. Puis l’exemple montre que **sys.dm_exec_describe_first_result_set** retourne des informations sur le premier jeu de résultats dans la procédure.  
   
 ```  

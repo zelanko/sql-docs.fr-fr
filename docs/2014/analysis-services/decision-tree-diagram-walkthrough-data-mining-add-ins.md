@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732431"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Procédure pas à pas de décision arborescence diagramme (compléments d’exploration de données)
   Si vous avez créé un modèle d'arbre de décision, vous pouvez créer un diagramme personnalisé dans Visio à l'aide de la forme Arbre de décision ou de la forme Réseau de dépendances. Cette rubrique décrit les personnalisations que vous pouvez effectuer à l’aide de la **arbre de décision** ces contrôles et la forme :  

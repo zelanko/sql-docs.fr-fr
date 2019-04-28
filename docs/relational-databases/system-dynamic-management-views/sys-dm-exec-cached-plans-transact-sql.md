@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 8d23ba5a1fbb88bd430c1422019087a5df70c884
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013534"
 ---
 # <a name="sysdmexeccachedplans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ ORDER BY usecounts DESC;
 GO  
 ```  
   
-### <a name="b-returning-query-plans-for-all-cached-triggers"></a>b. Retour des plans de requête pour tous les déclencheurs en cache  
+### <a name="b-returning-query-plans-for-all-cached-triggers"></a>B. Retour des plans de requête pour tous les déclencheurs en cache  
  L'exemple suivant retourne les plans de requête de tous les déclencheurs en cache.  
   
 ```sql  

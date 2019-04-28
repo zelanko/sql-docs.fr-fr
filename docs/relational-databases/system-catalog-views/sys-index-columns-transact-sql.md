@@ -1,5 +1,5 @@
 ---
-title: Sys.index_columns (Transact-SQL) | Microsoft Docs
+title: sys.index_columns (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d7ee4944511dca9167c787c529cdebcf33cdc92c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004391"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47655817"
 |**is_descending_key**|**bit**|1 = Colonne clé d'index avec un ordre de tri descendant.<br /><br /> 0 = Colonne clé d'index avec un ordre de tri croissant, ou il s'agit d'une colonne qui fait partie d'un index de hachage.|  
 |**is_included_column**|**bit**|1 = colonne est une colonne non clée ajoutée à l’index à l’aide de la clause CREATE INDEX INCLUDE ou de la colonne fait partie d’un index columnstore.<br /><br /> 0 = Colonne non incluse.<br /><br /> Les colonnes ajoutées implicitement car ils font partie de la clé de clustering ne figurent pas dans **sys.index_columns**.<br /><br /> Les colonnes ajoutées implicitement car il s'agit de colonnes de partitionnement sont retournées avec la valeur 0.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  

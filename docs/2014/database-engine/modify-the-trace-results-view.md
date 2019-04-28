@@ -12,11 +12,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9bafb97065c86a4d227f79b62c3d388d45c1445f
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62845935"
 ---
 # <a name="modify-the-trace-results-view"></a>Modifier la vue des résultats de trace
   Cette rubrique explique comment modifier la vue des résultats de trace d'une session événements étendus dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] en effectuant les tâches suivantes.  
@@ -149,7 +149,7 @@ ms.locfileid: "49120378"
 ##  <a name="AggregateResults"></a> Agréger les résultats  
  Les événements étendus prennent en charge cinq fonctions d'agrégation :  
   
--   SUM  
+-   Sum  
   
 -   Min  
   
@@ -157,7 +157,7 @@ ms.locfileid: "49120378"
   
 -   Moyenne  
   
--   Compter  
+-   Count  
   
  Somme, Min, Max et Moyenne peuvent être utilisés avec les colonnes numériques disponibles. La fonction « count » correspond au nombre de valeurs non Null qui existent pour la colonne sélectionnée dans le groupe.  
   

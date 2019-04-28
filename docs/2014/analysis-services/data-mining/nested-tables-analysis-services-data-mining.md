@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 278244f5cf8f7a25f497ece40490920c7a8a9c8b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48121089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733256"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Tables imbriquées (Analysis Services - Exploration de données)
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les données doivent être fournies à un algorithme d’exploration de données sous la forme d’une série de cas inclus dans une table de cas. Toutefois, tous les cas ne peuvent pas être décrits par une ligne de données unique. Par exemple, un cas peut être dérivé de deux tables : une qui contient des informations sur les clients et une autre qui contient les achats des clients. Un client unique présent dans la table des informations sur les clients peut avoir plusieurs articles dans la table des achats des clients, ce qui rend difficile la description des données à l'aide d'une seule ligne. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit une méthode unique permettant de gérer de tels cas, en utilisant des *tables imbriquées*. Le concept d'une table imbriquée est illustré dans la figure ci-dessous.  

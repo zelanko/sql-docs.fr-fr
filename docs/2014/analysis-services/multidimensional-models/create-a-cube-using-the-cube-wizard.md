@@ -1,26 +1,23 @@
 ---
 title: Créer un Cube à l’aide de l’Assistant Cube | Microsoft Docs
-ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.date: 05/02/2018
+ms.prod: sql
+ms.technology: analysis-services
+ms.custom: multidimensional-models
 ms.topic: conceptual
-helpviewer_keywords:
-- cubes [Analysis Services], creating
-ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
-author: minewiskan
 ms.author: owend
-manager: craigg
+ms.reviewer: owend
+author: minewiskan
+manager: kfile
 ms.openlocfilehash: 7545bc1e1ad37ff395f3e4c3f65b1cb4614e533e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726893"
 ---
 # <a name="create-a-cube-using-the-cube-wizard"></a>Créer un cube à l'aide de l'Assistant Cube
+[!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Vous pouvez créer un cube en utilisant l’Assistant Cube dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
 ### <a name="to-create-a-new-cube"></a>Pour créer un cube  
@@ -38,7 +35,7 @@ ms.locfileid: "48087031"
   
     2.  Dans la liste **Tables de groupes de mesures** , sélectionnez les tables qui à utiliser pour créer des groupes de mesures.  
   
-    3.  Cliquez sur **Suivant**.  
+    3.  Cliquer sur **Suivant**.  
   
 4.  Dans la page **Sélectionner les mesures** , sélectionnez les mesures à inclure dans le cube, puis cliquez sur **Suivant**.  
   

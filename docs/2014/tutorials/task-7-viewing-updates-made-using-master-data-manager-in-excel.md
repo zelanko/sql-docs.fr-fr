@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 7 : Affichage des mises à jour effectuées à l’aide de Master Data Manager dans Excel | Microsoft Docs'
+title: 'Tâche 7 : Affichage des mises à jour effectuées à l’aide de Master Data Manager dans Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 544e61a95f4a2177e60c2b3fe11a91a5a23480e4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866153"
 ---
-# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Tâche 7 : Affichage des mises à jour effectuées à l'aide de Master Data Manager dans Excel
+# <a name="task-7-viewing-updates-made-using-master-data-manager-in-excel"></a>Tâche 7 : Affichage des mises à jour effectuées à l’aide de Master Data Manager dans Excel
   Dans cette tâche, vous allez vérifier que vous pouvez voir les données mises à jour depuis MDS dans Excel.  
   
 1.  Maintenant, basculez vers la fenêtre excel qui a **Cleansed and Matched Suppliers.xls** feuille de calcul ouverte.  

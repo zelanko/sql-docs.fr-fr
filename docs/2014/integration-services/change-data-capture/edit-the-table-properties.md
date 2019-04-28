@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 618a155390d8719e639d0e12d241b2f824e5375d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835987"
 ---
 # <a name="edit-the-table-properties"></a>Modifier les propriétés d'une table
   Cette boîte de dialogue permet de modifier des colonnes spécifiques de la table sélectionnée où les modifications sont capturées. Vous pouvez également modifier les informations du **Rôle de sécurité** et de l' **Instance de capture** .  
@@ -40,13 +40,13 @@ ms.locfileid: "58390930"
   
 2.  Enregistrez l'instance de capture comme un des éléments suivants :  
   
-    -   **Nouvelle Instance de Capture**: Dans ce cas une nouvelle instance de capture est enregistrée et l’ancienne instance de capture n’est pas supprimée.  
+    -   **Nouvelle instance de capture** : dans ce cas, une nouvelle instance de capture est enregistrée et l’ancienne n’est pas supprimée.  
   
-         **Remarque**: Vous pouvez avoir pas plus de deux instances de capture par table. S'il existe déjà deux instances de capture, cette option n'est pas disponible.  
+         **Remarque**: il n’est pas possible d’avoir plus de deux instances de capture par table. S'il existe déjà deux instances de capture, cette option n'est pas disponible.  
   
-    -   **Remplacez**: Dans ce cas, l’instance de capture actuelle est supprimée et remplacée par l’instance de capture que vous avez créé. Si deux instances de capture sont définies pour cette table, vous devez en sélectionner une à remplacer.  
+    -   **Remplacer l’instance de capture existante** : dans ce cas, l’instance de capture actuelle est supprimée et remplacée par celle que vous avez créée. Si deux instances de capture sont définies pour cette table, vous devez en sélectionner une à remplacer.  
   
- **Remarque**: Vous pouvez supprimer une instance de capture à partir de la liste des tables dans le **Table** onglet.  
+ **Remarque**: vous pouvez supprimer une instance de capture de la liste des tables dans l’onglet **Table** .  
   
  Une fois les informations entrées dans cette boîte de dialogue, cliquez sur **OK** pour accepter les modifications.  
   

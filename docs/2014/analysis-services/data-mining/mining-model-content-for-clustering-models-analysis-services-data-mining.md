@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e3d93d564dedbb5a08cf403d771a6f8e794fb498
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733457"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de clustering (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données qui est spécifique aux modèles qui utilisent l'algorithme de gestion de clusters Microsoft. Pour obtenir une explication générale du contenu du modèle d’exploration de données pour tous les types de modèles, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "48190279"
 > [!NOTE]  
 >  La variance représente la variance totale pour le cluster. Lorsque la valeur de la variance est faible, cela signifie que la plupart des valeurs dans la colonne sont assez proches de la moyenne. Pour obtenir l'écart type, calculez la racine carrée de la variance.  
   
- Notez que pour chacun des attributs est un `Missing` type valeur qui indique le nombre de cas n’avaient aucune donnée pour cet attribut. Les données manquantes peuvent être importantes et affecter les calculs de différentes manières en fonction du type de données. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services – Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
+ Notez qu'il existe, pour chacun des attributs, un type de valeur `Missing` qui vous indique combien de cas ne possèdent pas de données pour cet attribut. Les données manquantes peuvent être importantes et affecter les calculs de différentes manières en fonction du type de données. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services – Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="model-content-for-a-clustering-model"></a>Contenu du modèle pour un modèle de clustering  
  Cette section fournit des informations et des exemples pour les colonnes du contenu du modèle d'exploration de données qui s'appliquent aux modèles de clustering.  
@@ -149,9 +149,9 @@ ms.locfileid: "48190279"
  MSOLAP_NODE_SHORT_CAPTION  
  Étiquette utilisée à des fins d'affichage. Vous ne pouvez pas modifier cette légende.  
   
- **Nœud parent** : type de modèle : modèle de cluster.  
+ **Nœud parent** le type de modèle : Modèle de cluster  
   
- **Nœuds du cluster** : nom du cluster. Par exemple : Cluster 1.  
+ **Nœuds du cluster** : nom du cluster. Exemple : Cluster 1.  
   
 ## <a name="remarks"></a>Notes  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit plusieurs méthodes pour créer un modèle de clustering. Si vous ne savez pas quelle méthode a été utilisée pour créer le modèle avec lequel vous travaillez, vous pouvez récupérer les métadonnées du modèle par programmation en utilisant un client ADOMD ou un objet AMO, ou encore en interrogeant l'ensemble de lignes de schéma d'exploration de données. Pour plus d’informations, consultez [Interroger les paramètres utilisés pour créer un modèle d’exploration de données](query-the-parameters-used-to-create-a-mining-model.md).  
@@ -160,9 +160,9 @@ ms.locfileid: "48190279"
 >  La structure et le contenu du modèle restent les même, indépendamment de la méthode de clustering ou des paramètres que vous utilisez.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)   
- [Algorithme Microsoft Clustering](microsoft-clustering-algorithm.md)   
+ [Algorithme de clustering Microsoft](microsoft-clustering-algorithm.md)   
  [Requêtes d’exploration de données](data-mining-queries.md)  
   
   

@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68df3c4b4fa64b6c2fd07e9ed79e96115a2f7293
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725795"
 ---
 # <a name="measures-and-measure-groups"></a>Mesures et groupes de mesures
   Un cube inclut des *mesures* contenues dans des *groupes de mesures*, une logique métier, ainsi qu'une collection de dimensions qui donnent le contexte d'évaluation des données numériques fournies par une mesure. Les mesures et les groupes de mesures constituent chacun un composant essentiel d'un cube. Un cube ne peut pas exister sans au moins un de chacun de ces composants.  
@@ -35,10 +35,10 @@ ms.locfileid: "48092629"
   
 |**Lien**|**Description**|  
 |--------------|---------------------|  
-|[Créer des mesures et groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|Choisissez entre les différentes approches permettant de créer des mesures et des groupes de mesures.|  
+|[Création de mesures et de groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|Choisissez entre les différentes approches permettant de créer des mesures et des groupes de mesures.|  
 |[Configurer des propriétés de mesure](configure-measure-properties.md)|Si vous avez utilisé l'Assistant Cube pour entreprendre la création de votre cube, vous devrez peut-être modifier la méthode d'agrégation, appliquer un format de données, définir la visibilité de la mesure dans les applications clientes ou éventuellement ajouter une expression de mesure pour manipuler les données avant que les valeurs soient agrégées.|  
-|[Configurer les propriétés d’un groupe de mesures](configure-measure-group-properties.md)|Dans un modèle multidimensionnel, un groupe de mesures équivaut à une table de faits de l'entrepôt de données source. Les propriétés définies sur un groupe de mesures vous permettent de spécifier des comportements de mise en cache, le stockage et les directives de traitement qui fonctionnent collectivement au niveau du groupe de mesures. La configuration de partitions est en partie déterminée par les propriétés définies sur les objets groupes de mesures.|  
-|[Utiliser des fonctions d’agrégation](use-aggregate-functions.md)|Découvrez les méthodes d'agrégation qui peuvent être affectées à une mesure.|  
+|[Configurer les propriétés d'un groupe de mesures](configure-measure-group-properties.md)|Dans un modèle multidimensionnel, un groupe de mesures équivaut à une table de faits de l'entrepôt de données source. Les propriétés définies sur un groupe de mesures vous permettent de spécifier des comportements de mise en cache, le stockage et les directives de traitement qui fonctionnent collectivement au niveau du groupe de mesures. La configuration de partitions est en partie déterminée par les propriétés définies sur les objets groupes de mesures.|  
+|[Utiliser des fonctions d'agrégation](use-aggregate-functions.md)|Découvrez les méthodes d'agrégation qui peuvent être affectées à une mesure.|  
 |[Définir le comportement semi-additif](define-semiadditive-behavior.md)|Le comportement semi-additif fait référence aux agrégations qui sont valides pour certaines dimensions, mais pas pour d'autres. Un solde de compte bancaire en est un exemple courant. Vous pouvez agréger des soldes par client et par région, mais pas sur une période donnée. Par exemple, il n'est pas souhaitable d'ajouter des soldes du même compte sur plusieurs jours consécutifs. Pour définir un comportement semi-additif, utilisez l'Assistant Ajouter Business Intelligence.|  
 |[Groupes de mesures liés](linked-measure-groups.md)|Réaffectez un groupe de mesures existant à d'autres cubes de la même base de données ou à des bases de données Analysis Services différentes.|  
   
@@ -68,6 +68,6 @@ ms.locfileid: "48092629"
   
 ## <a name="see-also"></a>Voir aussi  
  [Cubes dans les modèles multidimensionnels](cubes-in-multidimensional-models.md)   
- [Créer des mesures et groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)  
+ [Création de mesures et de groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   

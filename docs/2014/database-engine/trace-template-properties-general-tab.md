@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f9e78216d333303cfacaf49ed85b7ac2c6c8f1a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48088809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844407"
 ---
 # <a name="trace-template-properties-general-tab"></a>Propriétés du modèle de trace (onglet Général)
   Utilisez l'onglet **Général** de la boîte de dialogue **Propriétés du modèle de trace** pour créer de nouveaux modèles de trace à l'aide des options suivantes. Pour accéder à cette boîte de dialogue, dans le menu [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **de** , pointez sur **Modèles**, puis cliquez sur **Nouveau modèle**.  
@@ -39,7 +39,7 @@ ms.locfileid: "48088809"
  Utilisez ce modèle par défaut pour les traces créées pour ce type de serveur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer un modèle de Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
+ [Créer un modèle de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
  [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   

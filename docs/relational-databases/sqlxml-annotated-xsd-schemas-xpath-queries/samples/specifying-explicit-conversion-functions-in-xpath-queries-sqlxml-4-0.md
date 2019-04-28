@@ -18,11 +18,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 543f0d0234c6f4bc2f34904bda0cd6b0019aaaa0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737418"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>Spécification de fonctions de conversion explicite dans les requêtes XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "56030700"
 </ROOT>  
 ```  
   
-### <a name="b-use-the-string-explicit-conversion-function"></a>b. Utiliser la fonction de conversion explicite string()  
+### <a name="b-use-the-string-explicit-conversion-function"></a>B. Utiliser la fonction de conversion explicite string()  
  Le **string()** fonction convertit un argument en une chaîne.  
   
  La requête suivante convertit **ContactID** en une chaîne et la compare avec la chaîne de valeur « 4 ». La requête retourne tous les  **\<employé >** éléments enfants du nœud de contexte avec un **ContactID** avec une valeur de chaîne « 4 » :  

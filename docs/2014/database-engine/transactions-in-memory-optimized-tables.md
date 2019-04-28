@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bc72eeeb154749b0e889b495fab79bb8bf86db10
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843098"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transactions dans les tables mémoire optimisées
   Le contrôle de version de ligne des tables sur disque (à l'aide de l'isolation SNAPSHOT ou avec READ_COMMITTED_SNAPSHOT) fournit un type de contrôle d'accès concurrentiel optimiste. Les programmes d'écriture et les programmes de lecture ne se bloquent pas les uns les autres. Avec les tables mémoire optimisées, les programmes d'écriture ne bloquent pas les autres programmes d'écriture. Avec le contrôle de version de ligne pour les tables sur disque, une transaction verrouille la ligne et les transactions concomitantes tentant de mettre à jour cette ligne sont bloquées. Il n'existe pas de verrouillage avec les tables mémoire optimisées. En revanche, si deux transactions tentent de mettre à jour la même ligne, un conflit d'écriture/écriture (erreur 41302) se produit.  

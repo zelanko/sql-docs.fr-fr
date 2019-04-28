@@ -17,11 +17,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5a25f4f151bb7aa1a9deef24486bd533d5755b2
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837519"
 ---
 # <a name="legal-notice-for-documentation"></a>Notice légale pour documentation
   Ce document est fourni « en l'état ». Les informations et les opinions exprimées dans ce document, y compris les adresses URL et les autres références à des sites Internet, peuvent faire l'objet de modifications sans préavis. Vous assumez les risques liés à leur utilisation.  

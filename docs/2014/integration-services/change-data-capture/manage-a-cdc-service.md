@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c254e5c9cefa8a7e65b18fa25cc597ab3afc642
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58373828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835741"
 ---
 # <a name="manage-a-cdc-service"></a>Gérer un service de capture de données modifiées
   Utilisez la console du concepteur CDC pour afficher les services que vous avez créés à l'aide de la console de configuration du service de capture de données modifiées et gérer toutes les instances dans le service de capture de données modifiées Oracle.  

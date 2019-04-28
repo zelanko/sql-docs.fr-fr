@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5199fb82cbc6b2a9da644554db12dc525cc0be40
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998902"
 ---
 # <a name="retrieving-results-advanced"></a>Récupération des résultats (avancée)
 Une application peut spécifier qu’un décalage est ajouté à adresses de tampons de données et l’indicateur de longueur/correspondante liées aux adresses de mémoire tampon quand **SQLBulkOperations**, **SQLFetch**,  **SQLFetchScroll**, ou **SQLSetPos** est appelée. Les résultats de ces ajouts déterminent les adresses utilisées dans ces opérations.  

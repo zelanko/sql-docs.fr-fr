@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836783"
 ---
 # <a name="working-with-variables-programmatically"></a>Utilisation de variables par programmation
   Les variables constituent un moyen de définir des valeurs et de contrôler des processus dans les packages, conteneurs, tâches et gestionnaires d'événements de manière dynamique. Les variables peuvent également être utilisées par les contraintes de précédence pour contrôler la direction du flux de données vers différentes tâches. Les variables ont diverses utilisations :  

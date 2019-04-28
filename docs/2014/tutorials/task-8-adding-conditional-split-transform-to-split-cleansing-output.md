@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 8 : Ajout conditionnel fractionner transformation pour fractionner la sortie de nettoyage | Microsoft Docs'
+title: 'Tâche 8 : Ajout conditionnel fractionner transformation pour fractionner la sortie de nettoyage | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 401768ca9a811e9b9709127be391bb52de778b32
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866155"
 ---
-# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tâche 8 : Ajout de la transformation de fractionnement conditionnel pour fractionner la sortie du nettoyage
+# <a name="task-8-adding-conditional-split-transform-to-split-cleansing-output"></a>Tâche 8 : Ajout de la transformation de fractionnement conditionnel pour fractionner la sortie du nettoyage
   Dans cette tâche, vous allez ajouter une transformation de fractionnement conditionnel au flux de données. La transformation de fractionnement conditionnel peut acheminer les lignes vers différentes sorties, suivant le contenu des données. Pour ce didacticiel, vous utilisez le **état de l’enregistrement** colonne de sortie à partir de la transformation de nettoyage DQS. Vous téléchargerez uniquement les enregistrements corrects ou corrigés sur le serveur MDS. Par conséquent vous permet de vérifier si le **état de l’enregistrement** est **Correct** ou **corrigés**et combiner les enregistrements avant de les télécharger dans MDS.  
   
 1.  Glisser-déplacer **transformation de fractionnement conditionnel** à partir de **commune** section dans le **boîte à outils SSIS** à la **de flux de données** onglet sous **Nettoyer les données des fournisseurs**.  

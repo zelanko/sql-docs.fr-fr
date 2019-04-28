@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724494"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,10 +45,10 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  [ @name =] N'*plan_guide_name*'  
  Est le nom du repère de plan. Les noms des repères de plan sont limités à la base de données active. *plan_guide_name* doivent respecter les règles pour [identificateurs](../../relational-databases/databases/database-identifiers.md) et ne peut pas commencer par le signe dièse (#). La longueur maximale de *plan_guide_name* est de 124 caractères.  
   
- [ @plan_handle =] *plan_handle*  
+ [ @plan_handle = ] *plan_handle*  
  Identifie un traitement dans le repère de plan. *plan_handle* est **varbinary (64)**. *plan_handle* peut être obtenu à partir de la [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vue de gestion dynamique.  
   
- [ @statement_start_offset =] { *statement_start_offset* | NULL}]  
+ [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
  Identifie la position de départ de l’instruction dans le lot spécifié *plan_handle*. *statement_start_offset* est **int**, avec NULL comme valeur par défaut.  
   
  Le décalage d’instruction correspond à la colonne statement_start_offset dans la [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vue de gestion dynamique.  
@@ -64,7 +64,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
 ## <a name="creating-plan-guides-for-multiple-statements-within-a-query-plan"></a>Création de repères de plan pour plusieurs instructions dans un plan de requête  
  Comme l'instruction sp_create_plan_guide, l'instruction sp_create_plan_guide_from_handle supprime du cache du plan le plan de requête du lot ou module ciblé. Cette suppression permet de garantir que tous les utilisateurs commencent à utiliser le nouveau repère de plan. Lorsque vous créez un repère de plan pour plusieurs instructions dans un plan de requête unique, vous pouvez différer la suppression du plan du cache en créant tous les repères de plan dans une transaction explicite. Cette méthode permet au plan de rester dans le cache jusqu'à ce que la transaction soit terminée et qu'un repère de plan soit créé pour chaque instruction spécifiée. Voir l'exemple B.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW SERVER STATE. De plus, des autorisations individuelles sont requises pour chaque repère de plan créé à l'aide de l'instruction sp_create_plan_guide_from_handle. Pour créer un repère de plan de type objet nécessite l’autorisation ALTER sur l’objet référencé. Pour créer un repère de plan de type SQL ou TEMPLATE, il vous faut une autorisation ALTER sur la base de données active. Pour déterminer le type de repère de plan qui sera créé, exécutez la requête suivante :  
   
 ```  
@@ -127,7 +127,7 @@ GO
  [Repères de plan](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [Sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

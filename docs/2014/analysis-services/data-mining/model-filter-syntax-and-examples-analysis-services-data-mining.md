@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c9c148995dfe83d24798c31900874e4fe3e80df
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733140"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Syntaxe de filtre de modèle et exemples (Analysis Services - Exploration de données)
   Cette section fournit des informations détaillées sur la syntaxe des filtres de modèle, avec quelques exemples d'expressions.  
@@ -112,7 +112,7 @@ ms.locfileid: "52405364"
 ## <a name="examples-of-filters"></a>Exemples de filtres  
  Les exemples suivants montrent l'utilisation de filtres appliqués à un modèle d'exploration de données. Si vous créez l'expression de filtre à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], dans la fenêtre **Propriété** et le volet **Expression** de la boîte de dialogue de filtre, vous obtiendriez uniquement la chaîne qui apparaît après les mots clés WITH FILTER. Ici, la définition de la structure d'exploration de données est incluse afin de simplifier la compréhension du type et de l'utilisation de colonne.  
   
-###  <a name="bkmk_Ex1"></a> Exemple 1 : Filtrage par défaut au niveau du cas  
+###  <a name="bkmk_Ex1"></a> Exemple 1 : Filtrage par défaut au niveau du cas  
  Cet exemple montre un filtre simple qui restreint les cas utilisés dans le modèle aux clients de plus de trente ans exerçant la profession (occupation) d'architecte.  
   
 ```  
@@ -128,7 +128,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
   
 
   
-###  <a name="bkmk_Ex2"></a> Exemple 2 : Le filtrage au niveau du cas à l’aide des attributs de tables imbriquées  
+###  <a name="bkmk_Ex2"></a> Exemple 2 : Le filtrage au niveau du cas à l’aide des attributs de tables imbriquées  
  Si votre structure d'exploration de données contient des tables imbriquées, vous pouvez filtrer sur l'existence d'une valeur dans une table imbriquée ou filtrer sur des lignes de table imbriquée qui contiennent une valeur spécifique. Cet exemple restreint les cas utilisés pour le modèle aux clients dont l'âge est supérieur à 30 et qui ont effectué au moins un achat incluant du lait.  
   
  Comme le montre cet exemple, il n'est pas nécessaire que le filtre utilise uniquement des colonnes incluses dans le modèle. La table imbriquée **Products** fait partie de la structure d'exploration de données, mais elle n'est pas incluse dans le modèle d'exploration de données. Toutefois, vous pouvez toujours filtrer sur des valeurs et des attributs dans la table imbriquée. Pour afficher les détails de ces cas, l'extraction doit être activée.  

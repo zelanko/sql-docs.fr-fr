@@ -14,11 +14,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 947412d7a4d0fe27af7975919bddb3107007e801
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48152985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851437"
 ---
 # <a name="options-query-execution-sql-server-general-page"></a>Options (Page de requête d’exécution SQL Server-général)
   Cette page vous permet de spécifier les options d'exécution des requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les modifications de ces options sont appliquées uniquement aux nouvelles requêtes [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour modifier les options relatives à une requête en cours, cliquez sur **Options de requête** dans le menu **Requête** ou cliquez avec le bouton droit dans une fenêtre Requête de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] et sélectionnez **Options de requête**.  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 001238b4e5d47b22ca991efcd8b4ee28971d7af7
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982306"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch, fonction
 **Conformité**  
@@ -43,7 +43,7 @@ SQLRETURN SQLFetch(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
 ## <a name="returns"></a>Valeur renvoyée  
@@ -58,8 +58,8 @@ SQLRETURN SQLFetch(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Données de chaîne droite tronquées|Données de chaîne ou binaire retournées pour une colonne a entraîné la troncation des caractères non vides ou non NULL des données binaires. S’il s’agissait d’une valeur de chaîne, il a été tronquée à droite.|  
-|01 S 01|Erreur de ligne|Une erreur s’est produite lors de l’extraction d’une ou plusieurs lignes.<br /><br /> (Si cet valeur SQLSTATE est retourné lorsqu’une ODBC 3 *.x* application fonctionne avec un ODBC 2 *.x* pilote, il peut être ignoré.)|  
-|01 S 07|Troncation fractionnelle|Les données retournées pour une colonne a été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour l’heure, timestamp et les types de données d’intervalle qui contiennent un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S01|Erreur de ligne|Une erreur s’est produite lors de l’extraction d’une ou plusieurs lignes.<br /><br /> (Si cet valeur SQLSTATE est retourné lorsqu’une ODBC 3 *.x* application fonctionne avec un ODBC 2 *.x* pilote, il peut être ignoré.)|  
+|01S07|Troncation fractionnelle|Les données retournées pour une colonne a été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour l’heure, timestamp et les types de données d’intervalle qui contiennent un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violation de l’attribut de type de données restreint|La valeur de données d’une colonne dans le jeu de résultats n’a pas pu être convertie au type de données spécifié par *TargetType* dans **SQLBindCol**.<br /><br /> La colonne 0 a été liée avec un type de données de SQL_C_BOOKMARK, et l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a été défini à SQL_UB_VARIABLE.<br /><br /> La colonne 0 a été liée avec un type de données de SQL_C_VARBOOKMARK, et l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS n’est pas défini à SQL_UB_VARIABLE.|  
 |07009|Index de descripteur non valide|Le pilote a été un ODBC 2 *.x* pilote qui ne prend pas en charge **SQLExtendedFetch**, et un numéro de colonne spécifié dans la liaison pour une colonne était égale à 0.<br /><br /> La colonne 0 a été liée, et l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS a été définie sur SQL_UB_OFF.|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  
@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
 |Condition|Première ligne du nouvel ensemble de lignes|  
 |---------------|-----------------------------|  
 |Avant de démarrer|1|  
-|*CurrRowsetStart* \< =  *LastResultRow - la RowsetSize*[1]|*CurrRowsetStart* + *la RowsetSize*[2]|  
+|*CurrRowsetStart* \< =  *LastResultRow - la RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow - la RowsetSize*[1]|Après la fin|  
 |Après la fin|Après la fin|  
   
@@ -183,8 +183,8 @@ SQLRETURN SQLFetch(
 |SQL_ROW_SUCCESS_WITH_INFO|La ligne a été récupérée avec succès et n’a pas changé depuis sa dernière extraction à partir de ce jeu de résultats. Toutefois, un avertissement a été retourné sur la ligne.|  
 |SQL_ROW_ERROR|Une erreur s’est produite lors de l’extraction de la ligne.|  
 |SQL_ROW_UPDATED [1], [2] et [3]|La ligne a été récupérée avec succès et a été modifié depuis sa dernière extraction à partir de ce jeu de résultats. Si la ligne est extrait à nouveau à partir de ce jeu de résultats ou qu’il est actualisée par **SQLSetPos**, l’état est passé à l’état de la ligne est nouvelle.|  
-|SQL_ROW_DELETED [3]|La ligne a été supprimée depuis sa dernière extraction à partir de ce jeu de résultats.|  
-|SQL_ROW_ADDED [4]|La ligne a été insérée par **SQLBulkOperations**. Si la ligne est extrait à nouveau à partir de ce jeu de résultats ou qu’il est actualisée par **SQLSetPos**, son état est SQL_ROW_SUCCESS.|  
+|SQL_ROW_DELETED[3]|La ligne a été supprimée depuis sa dernière extraction à partir de ce jeu de résultats.|  
+|SQL_ROW_ADDED[4]|La ligne a été insérée par **SQLBulkOperations**. Si la ligne est extrait à nouveau à partir de ce jeu de résultats ou qu’il est actualisée par **SQLSetPos**, son état est SQL_ROW_SUCCESS.|  
 |SQL_ROW_NOROW|L’ensemble de lignes avec chevauchement de la fin du jeu de résultats, et aucune ligne n’a été retourné qui correspondait à cet élément du tableau d’état de ligne.|  
   
  [1] pour le jeu de clés, mixtes et les curseurs dynamiques, si une valeur de clé est mis à jour, la ligne de données est considéré comme a été supprimé et ajouté une nouvelle ligne.  
@@ -230,7 +230,7 @@ SQLRETURN SQLFetch(
 #### <a name="other-descriptor-fields"></a>Autres champs de descripteur  
  Les champs de descripteur suivants sont utilisés par **SQLFetch**.  
   
-|Champ de descripteur|DESC.|Champ dans|Défini par le biais|  
+|Champ de descripteur|Desc.|Champ dans|Défini par le biais|  
 |----------------------|-----------|--------------|-----------------|  
 |SQL_DESC_ARRAY_SIZE|ARD|En-tête|Attribut d’instruction SQL_ATTR_ROW_ARRAY_SIZE|  
 |SQL_DESC_ARRAY_STATUS_PTR|IRD|En-tête|Attribut d’instruction SQL_ATTR_ROW_STATUS_PTR|  

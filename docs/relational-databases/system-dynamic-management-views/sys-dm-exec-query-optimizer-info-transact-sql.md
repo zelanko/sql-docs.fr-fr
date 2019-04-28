@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_query_optimizer_info (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013214"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,14 +36,14 @@ ms.locfileid: "47718637"
 > [!NOTE]  
 >  À appeler à partir [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] ou [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], utilisez le nom **sys.dm_pdw_nodes_exec_query_optimizer_info**.  
   
-|Nom   |Type de données|Description|  
+|Nom|Type de données|Description|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|Nom de l'événement statistique de l'optimiseur.|  
 |**occurrence**|**bigint**|Nombre d'occurrences de l'événement d'optimisation pour ce compteur.|  
 |**value**|**float**|Valeur moyenne de la propriété par occurrence de l'événement.|  
 |**pdw_node_id**|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   
@@ -51,7 +51,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 ## <a name="remarks"></a>Notes  
  **Sys.dm_exec_query_optimizer_info** contient les propriétés suivantes (compteurs). Toutes les valeurs d'occurrence sont cumulatives et sont définies à 0 au redémarrage du système. Tous les champs de valeurs sont initialisés à NULL au redémarrage du système. Toutes les colonnes de valeurs qui indiquent une moyenne utilisent la valeur d'occurrence de la ligne comme dénominateur pour le calcul de la moyenne. Toutes les optimisations de requêtes sont mesurées lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détermine les modifications de **dm_exec_query_optimizer_info**, y compris les deux requêtes utilisateur - et -générées par le système. L’exécution d’un plan déjà mis en cache ne modifie pas les valeurs **dm_exec_query_optimizer_info**, seules les optimisations sont significatives.  
   
-|Compteur|Occurrence|Valeur|  
+|Compteur|Occurrence|Value|  
 |-------------|----------------|-----------|  
 |optimizations|Nombre total d'optimisations.|Non applicable|  
 |elapsed time|Nombre total d'optimisations.|Temps moyen écoulé par optimisation d'une instruction (requête) individuelle, en secondes.|  
@@ -78,7 +78,7 @@ Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABA
 |contains subquery|Nombre d'optimisations associées à une requête qui contient au moins une sous-requête.|Non applicable|  
 |unnest failed|Interne uniquement|Interne uniquement|  
 |tables|Nombre total d'optimisations.|Nombre moyen de tables référencées par requête optimisée.|  
-|indications|Nombre de définitions d'un certain indicateur. Les indicateurs pris en charge sont : les indicateurs de requête JOIN, GROUP, UNION et FORCE ORDER, l'option de configuration FORCE PLAN et les indicateurs de jointure.|Non applicable|  
+|indications|Nombre de définitions d'un certain indicateur. Indicateurs pris en charge sont les suivantes : Indicateurs de requête de jointure, groupe, UNION et FORCE ORDER, option de jeu FORCE PLAN et les indicateurs de jointure.|Non applicable|  
 |indicateur de commande|Nombre de définitions d'un indicateur de commande forcée.|Non applicable|  
 |indicateur de jointure|Nombre de fois que l'algorithme de jointure a été forcé par un indicateur de jointure.|Non applicable|  
 |view reference|Nombre de fois qu'une vue a été référencée dans une requête|Non applicable|  

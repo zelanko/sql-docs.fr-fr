@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca6e9661c65098bed1175c7108b18a482b14a542
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48058819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730325"
 ---
 # <a name="defining-a-data-source-view"></a>Définition d'une vue de source de données
   L'étape qui suit la définition des sources de données que vous utiliserez dans un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] consiste généralement à définir une vue de source de données pour le projet. Une vue de source de données est une vue unique et unifiée des métadonnées des tables et des vues spécifiées que la source de données définit dans le projet. Le stockage des métadonnées dans la vue de source de données permet d'utiliser ces métadonnées au cours de la phase de développement sans avoir besoin de disposer d'une connexion ouverte à une source de données sous-jacente. Pour plus d’informations, consultez [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "48058819"
   
 2.  Dans la page **Assistant Vue de source de données** , cliquez sur **Suivant**. La page **Sélectionner une source de données** s’affiche.  
   
-3.  Sous **Sources de données relationnelles**, la source de données **Adventure Works DW 2012** est sélectionnée. Cliquez sur **Suivant**.  
+3.  Sous **Sources de données relationnelles**, la source de données **Adventure Works DW 2012** est sélectionnée. Cliquer sur **Suivant**.  
   
     > [!NOTE]  
     >  Pour créer une vue de source de données basée sur plusieurs sources de données, vous devez d’abord définir une vue de source de données basée sur une seule source de données. Cette source de données est alors appelée la source de données principale. Vous pouvez ensuite ajouter des tables et des vues à partir d'une source de données secondaire. Quand vous concevez des dimensions qui contiennent des attributs basés sur des tables associées dans plusieurs sources de données, vous pouvez avoir besoin de définir une source de données [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comme source de données principale pour utiliser ses fonctionnalités de moteur de requête distribuée.  

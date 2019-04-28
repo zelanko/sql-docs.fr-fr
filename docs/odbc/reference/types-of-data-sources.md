@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7c0e4ccc55ce8fe35dc129c6dded889e2923b4f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62851397"
 ---
 # <a name="types-of-data-sources"></a>Types de sources de données
 Il existe deux types de sources de données : sources de données et les fichiers sources de données de l’ordinateur. Bien que les deux contiennent des informations relatives à la source des données similaires, elles se différencient par que ces informations sont stockées. En raison de ces différences, ils sont utilisés de quelque peu différentes manières.  

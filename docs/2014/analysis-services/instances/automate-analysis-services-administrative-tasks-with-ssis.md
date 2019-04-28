@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5d1b3d68038843e15717564e25cb88c181c2bda
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729947"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatiser les tâches d'administration Analysis Services avec SSIS
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permet d'automatiser l'exécution de scripts DDL, de tâches de traitement de cube et de modèle d'exploration de données, ainsi que de tâches de requête d'exploration de données. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut être considéré comme une collection de tâches de flux de contrôle et de maintenance, qui peuvent être liées pour former des tâches de traitement de données séquentielles et parallèles.  
@@ -43,6 +43,6 @@ ms.locfileid: "48099259"
  [Destination de traitement de dimension](../../integration-services/data-flow/dimension-processing-destination.md)   
  [Transformation de requête d’exploration de données](../../integration-services/data-flow/transformations/data-mining-query-transformation.md)   
  [Traitement des objets de modèle multidimensionnel](../multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
- [Script des tâches administratives dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Tâches d'administration à l'aide de scripts dans Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

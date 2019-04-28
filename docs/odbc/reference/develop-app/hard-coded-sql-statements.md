@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724214"
 ---
 # <a name="hard-coded-sql-statements"></a>Instructions SQL codées en dur
 Les applications qui effectuent une tâche fixe généralement contient des instructions SQL codées en dur. Par exemple, un système de saisie de commandes peut utiliser l’appel suivant à des commandes client en cours liste :  
@@ -29,7 +29,7 @@ Les applications qui effectuent une tâche fixe généralement contient des inst
 SQLExecDirect(hstmt, "SELECT OrderID FROM Orders WHERE Status = 'OPEN'", SQL_NTS);  
 ```  
   
- Il existe des instructions SQL codées en dur présente plusieurs avantages : ils peuvent être testées lors de l’application est écrite ; ils sont plus simples à implémenter que les instructions construites au moment de l’exécution ; et ils simplifient l’application.  
+ Il existe des instructions SQL codées en dur présente plusieurs avantages : Ils peuvent être testées lors de l’application est écrite ; ils sont plus simples à implémenter que les instructions construites au moment de l’exécution ; et ils simplifient l’application.  
   
  À l’aide des paramètres d’instruction et la préparation des instructions fournissent même meilleures façons d’utiliser des instructions SQL codées en dur. Par exemple, supposons que la table de pièces détachées contient les colonnes PartID, Description et prix. Une façon d’insérer une nouvelle ligne dans cette table serait pour construire et exécuter un **insérer** instruction :  
   

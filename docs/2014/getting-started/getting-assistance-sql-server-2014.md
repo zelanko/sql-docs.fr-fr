@@ -12,14 +12,14 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69127078f72eeab296c754dfce666804dcdda53d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837689"
 ---
 # <a name="getting-assistance-sql-server-2014"></a>Obtenir de l'aide (SQL Server 2014)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] propose trois principales sources d'informations sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] propose trois principales sources d'informations sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
   
 -   La documentation et les didacticiels installés avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -27,7 +27,7 @@ ms.locfileid: "48134889"
   
 -   Les informations [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] disponibles sur d'autres sites Web [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
- Si vous ne trouvez pas les informations que vous recherchez dans ces sources, vous pouvez poser des questions dans le [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] forums des Communautés et groupes de discussion ou vous pouvez ouvrir une demande de support avec [!INCLUDE[msCoName](../includes/msconame-md.md)] prennent en charge.  
+ Si vous ne trouvez pas les informations que vous recherchez dans ces sources, vous pouvez poser des questions sur les forums et groupes de discussion de la communauté [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou présenter un cas de support à [!INCLUDE[msCoName](../includes/msconame-md.md)] .  
   
 ## <a name="in-this-section"></a>Dans cette section  
  [Obtenir de l’assistance sur SQL Server](../../2014/getting-started/getting-sql-server-assistance.md)  

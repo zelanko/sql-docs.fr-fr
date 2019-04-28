@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 333d4d9f0ab9feb5d5b5c4d0aa48fd584cef3143
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856512"
 ---
 # <a name="view-the-definition-of-a-stored-procedure"></a>Afficher la définition d'une procédure stockée
     
@@ -28,18 +28,18 @@ ms.locfileid: "48063849"
   
 -   **Avant de commencer :**  [Sécurité](#Security)  
   
--   **Pour afficher la définition d’une procédure, en utilisant**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour afficher la définition d’une procédure, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Procédure stockée système : `sp_helptext`  
- Nécessite l'appartenance au rôle **public** . Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION.  
+ Nécessite l'appartenance au rôle **public** . Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, contrôle, TAKE OWNERSHIP ou VIEW DEFINITION.  
   
  Fonction système : `OBJECT_DEFINITION`  
- Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
+ Les définitions de l'objet système sont visibles publiquement. La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, contrôle, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
   
  Affichage catalogue d'objets : `sys.sql_modules`  
  La visibilité des métadonnées dans les affichages catalogue est limitée aux éléments sécurisables qu'un utilisateur détient ou pour lesquels des autorisations lui ont été accordées. Pour plus d'informations, consultez [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "48063849"
   
 2.  Développez **Bases de données**, développez la base de données à laquelle appartient la procédure, puis développez **Programmabilité**.  
   
-3.  Développez **Procédures stockées**, cliquez avec le bouton droit sur la procédure, cliquez sur **Générer un script de la procédure stockée en tant que**, puis sur l’une des opérations suivantes : **Create To**, **Alter To**ou **Drop and Create To**.  
+3.  Développez **Stored Procedures**, avec le bouton droit de la procédure, puis cliquez sur **procédure stockée de Script en tant que**, puis cliquez sur une des opérations suivantes : **Créer à**, **Alter To**, ou **supprimer et créer dans**.  
   
 4.  Sélectionnez **Nouvelle fenêtre d'éditeur de requête**. Cette action affiche la définition de la procédure.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "48063849"
   
 2.  Dans la barre d'outils, cliquez sur **Nouvelle requête**.  
   
-3.  Dans la fenêtre de requête, entrez l’instruction suivante qui utilise le `sp_helptext` procédure stockée système. Modifiez le nom de la base de données et celui de la procédure stockée pour faire référence à la base de données et à la procédure stockée de votre choix.  
+3.  Dans la fenêtre de requête, entrez l'instruction suivante qui utilise la procédure stockée système `sp_helptext`. Modifiez le nom de la base de données et celui de la procédure stockée pour faire référence à la base de données et à la procédure stockée de votre choix.  
   
     ```  
     USE AdventureWorks2012;  
@@ -96,7 +96,7 @@ ms.locfileid: "48063849"
   
 2.  Dans la barre d'outils, cliquez sur **Nouvelle requête**.  
   
-3.  Dans la fenêtre de requête, entrez les instructions suivantes qui utilisent le `sys.sql_modules` vue de catalogue. Modifiez le nom de la base de données et celui de la procédure stockée pour faire référence à la base de données et à la procédure stockée de votre choix.  
+3.  Dans la fenêtre de requête, entrez les instructions suivantes qui utilisent l'affichage catalogue `sys.sql_modules`. Modifiez le nom de la base de données et celui de la procédure stockée pour faire référence à la base de données et à la procédure stockée de votre choix.  
   
     ```  
     USE AdventureWorks2012;  

@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0dbabfc0564d1338fb4eec8b9688acd99538576
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844926"
 ---
 # <a name="sql-server-profiler---tools-options-general-options-page"></a>SQL Server Profiler - Outils-Options (Page d’Options Général)
   Utilisez la boîte de dialogue **Options générales** pour afficher ou spécifier les options ci-après.  
@@ -61,7 +61,7 @@ ms.locfileid: "48113059"
  Le [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] vous demande confirmation avant l'ajout d'un fichier de substitution lorsqu'un fichier de trace est ouvert.  
   
  **Ne jamais charger les fichiers de substitution suivants**  
- [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ne charge jamais de fichiers de substitution suivants lorsqu'un fichier de trace est ouvert.  
+ [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] ne charge jamais les fichiers de substitution suivants quand un fichier de trace est ouvert.  
   
 ### <a name="replay-options"></a>Options de relecture  
  **Nombre par défaut de threads de relecture**  
@@ -74,11 +74,11 @@ ms.locfileid: "48113059"
  Spécifiez, en secondes, l'intervalle d'interrogation du moniteur d'intégrité pendant la relecture. La valeur par défaut est 60 secondes. Cette valeur permet à l'utilisateur de configurer la fréquence à laquelle le moniteur d'intégrité interroge les candidats à l'arrêt.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Démarrer automatiquement une Trace après connexion à un serveur &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
- [Définir l’affichage de Trace par défaut &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
- [Relire une Table de Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
+ [Démarrer automatiquement une trace après s’être connecté à un serveur &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/start-a-trace-automatically-after-connecting-to-a-server-sql-server-profiler.md)   
+ [Définir les valeurs par défaut de l’affichage des traces &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-trace-display-defaults-sql-server-profiler.md)   
+ [Relire une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-table-sql-server-profiler.md)   
  [Relire un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/replay-a-trace-file-sql-server-profiler.md)   
- [Relire des Traces](../tools/sql-server-profiler/replay-traces.md)   
+ [Relire des traces](../tools/sql-server-profiler/replay-traces.md)   
  [Définir les Options globales des traces &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/set-global-trace-options-sql-server-profiler.md)   
  [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62853328"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Fournisseur Microsoft OLE DB pour ODBC présentation
 Pour un programmeur ADO ou RDS, l’idéal serait dans toutes les données source expose une interface OLE DB, afin que ADO peut appeler directement dans la source de données. Bien que les fournisseurs de base de données plus en plus implémentez des interfaces OLE DB, certaines sources de données ne sont pas encore exposées de cette façon. Toutefois, la plupart des systèmes SGBD utilisés aujourd'hui sont accessibles via ODBC.
@@ -101,7 +101,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Nom du pilote (KAGPROP_DRIVERNAME)|Indique le nom de fichier du pilote ODBC.|
 |Pilote ODBC Version (KAGPROP_DRIVERODBCVER)|Indique la version d’ODBC qui prend en charge par ce pilote.|
 |Utilisation du fichier (KAGPROP_FILEUSAGE)|Indique comment le pilote traite un fichier dans une source de données ; sous la forme d’une table ou un catalogue.|
-|Comme la Clause d’échappement (KAGPROP_LIKEESCAPECLAUSE)|Indique si le pilote prend en charge la définition et l’utilisation d’un caractère d’échappement de pour le caractère de pourcentage (%) et le caractère de soulignement (_) dans le prédicat LIKE d’une clause WHERE.|
+|Comme la Clause d’échappement (KAGPROP_LIKEESCAPECLAUSE)|Indique si le pilote prend en charge la définition et l’utilisation d’un caractère d’échappement pour le caractère de pourcentage (%) et de soulignement (_) de caractère dans le prédicat LIKE d’une clause WHERE.|
 |Nombre maximal de colonnes dans Group By (KAGPROP_MAXCOLUMNSINGROUPBY)|Indique le nombre maximal de colonnes qui peuvent être répertoriées dans la clause GROUP BY d’une instruction SELECT.|
 |Nombre maximal de colonnes dans l’Index (KAGPROP_MAXCOLUMNSININDEX)|Indique le nombre maximal de colonnes qui peuvent être inclus dans un index.|
 |Nombre maximal de colonnes dans la clause Order By (KAGPROP_MAXCOLUMNSINORDERBY)|Indique le nombre maximal de colonnes qui peuvent être répertoriées dans la clause ORDER BY d’une instruction SELECT.|
@@ -217,7 +217,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Oui|Oui|Oui|Oui|
 |[Ouvrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Oui|Oui|Oui|Oui|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Oui|Oui|Oui|Oui|
-|[Resynchronisation](../../../ado/reference/ado-api/resync-method.md)|Non|Non|Oui|Oui|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Non|Non|Oui|Oui|
 |[Prise en charge](../../../ado/reference/ado-api/supports-method.md)|Oui|Oui|Oui|Oui|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Oui|Oui|Oui|Oui|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Oui|Oui|Oui|Oui|
@@ -256,7 +256,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |Niveaux d’isolation|DBPROP_SUPPORTEDTXNISOLEVELS|
 |Conservation d’isolement|DBPROP_SUPPORTEDTXNISORETAIN|
 |Identificateur de paramètres régionaux|DBPROP_INIT_LCID|
-|Emplacement|DBPROP_INIT_LOCATION|
+|Location|DBPROP_INIT_LOCATION|
 |Taille d’Index maximale|DBPROP_MAXINDEXSIZE|
 |Taille maximale de ligne|DBPROP_MAXROWSIZE|
 |Taille de ligne maximale inclut des objets BLOB|DBPROP_MAXROWSIZEINCLUDESBLOB|

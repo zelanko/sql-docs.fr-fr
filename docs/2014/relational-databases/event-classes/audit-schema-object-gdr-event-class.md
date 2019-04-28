@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e29280e6771c06ad11a0ec833445ba94c93c279f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012191"
 ---
 # <a name="audit-schema-object-gdr-event-class"></a>Audit Schema Object GDR (classe d'événements)
   La classe d’événements **Audit Schema Object GDR** intervient chaque fois qu’une instruction GRANT, REVOKE ou DENY est émise pour une autorisation d’objet de schéma par un utilisateur dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

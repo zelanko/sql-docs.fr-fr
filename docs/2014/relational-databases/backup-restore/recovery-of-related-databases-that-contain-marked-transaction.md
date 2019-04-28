@@ -23,11 +23,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62875712"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Récupération de bases de données associées contenant une transaction marquée
   Cette rubrique s'applique uniquement aux bases de données qui contiennent des transactions marquées et qui utilisent le mode de récupération complète ou le mode de récupération utilisant les journaux de transactions.  
@@ -54,7 +54,7 @@ ms.locfileid: "48187139"
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   
- Le journal des transactions enregistre le nom de la marque (nom de la transaction), la description, la base de données, l’utilisateur, `datetime` plus d’informations et le numéro de séquence de journal (LSN). Le `datetime` informations sont utilisées avec le nom de marque pour identifier la marque.  
+ Le journal des transactions enregistre le nom de la marque (nom de la transaction), la description, la base de données, l'utilisateur, les informations de `datetime`, et le numéro séquentiel dans le journal (LSN, Log Sequence Number). Les informations de `datetime` sont utilisées conjointement avec le nom de la marque pour identifier celle-ci de façon univoque.  
   
  Pour plus d’informations sur la façon d’insérer une marque dans une transaction qui s’étend sur plusieurs bases de données, consultez [Utiliser les transactions marquées pour récupérer des bases de données associées uniformément &#40;mode de récupération complète&#41;](use-marked-transactions-to-recover-related-databases-consistently.md).  
   

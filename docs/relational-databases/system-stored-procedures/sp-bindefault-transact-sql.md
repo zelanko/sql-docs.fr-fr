@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62996293"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ GO
 EXEC sp_bindefault 'today', 'HumanResources.Employee.HireDate';  
 ```  
   
-### <a name="b-binding-a-default-to-an-alias-data-type"></a>b. Liaison d'une valeur par défaut à un type de données d'alias  
+### <a name="b-binding-a-default-to-an-alias-data-type"></a>B. Liaison d'une valeur par défaut à un type de données d'alias  
  Une valeur par défaut nommée `def_ssn` et un type de données d'alias nommé `ssn` existent déjà. L'exemple suivant lie la valeur par défaut `def_ssn` à `ssn`. Lors de la création d'une table, toutes les colonnes affectées au type de données d'alias `ssn` héritent la valeur par défaut. Les colonnes existantes de type **ssn** héritent également la valeur par défaut **def_ssn**, sauf si **futureonly** est spécifiée pour *futureonly_flag* valeur, ou, à moins que la colonne a une valeur par défaut directement liée. Les valeurs par défaut liées aux colonnes ont toujours priorité sur celles liées à des types de données.  
   
 ```  

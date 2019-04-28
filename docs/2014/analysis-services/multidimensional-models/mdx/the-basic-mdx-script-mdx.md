@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e557807f2371b933896a7855c92ef0241ef3af37
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725363"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Script MDX de base (MDX)
   Un script MDX (Multidimensional Expressions) définit le processus de calcul pour un cube dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Il existe deux types de scripts MDX :  
@@ -53,18 +53,18 @@ ms.locfileid: "48164375"
  Toutes les instructions de script MDX  
  Dans les scripts MDX, les instructions de script MDX contrôlent le contexte et la portée des calculs et gèrent le comportement des autres instructions dans le script MDX. Cette catégorie comprend les instructions suivantes :  
   
--   [CALCULER](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
--   [FIGER](/sql/mdx/mdx-scripting-freeze)  
+-   [FREEZE](/sql/mdx/mdx-scripting-freeze)  
   
--   [ÉTENDUE](/sql/mdx/mdx-scripting-scope)  
+-   [SCOPE](/sql/mdx/mdx-scripting-scope)  
   
  Pour plus d’informations sur les instructions de script MDX, consultez [Instructions de script MDX &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [CRÉER DES MEMBRES](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  L'instruction CREATE MEMBER crée des membres calculés. Pour plus d’informations sur la création de membres calculés, consultez [Création de membres calculés dans MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
- [CRÉER LE JEU](/sql/mdx/mdx-data-definition-create-set)  
+ [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
  L'instruction CREATE SET crée des jeux nommés. Pour plus d’informations sur la création de jeux nommés, consultez [Création de jeux nommés à l’aide d’expressions MDX &#40;MDX&#41;](mdx-named-sets-building-named-sets.md).  
   
  Instructions conditionnelles  
@@ -91,7 +91,7 @@ ms.locfileid: "48164375"
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
+ [Informations de référence sur le langage MDX &#40;MDX&#41;](/sql/mdx/mdx-language-reference-mdx)   
  [Principes de base des scripts MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

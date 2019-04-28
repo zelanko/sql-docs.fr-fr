@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 612a997e51e23c6b8d3b1860fbc74df79de6c73c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48211099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731954"
 ---
 # <a name="general-partition-properties-dialog-box-ssms"></a>Général (boîte de dialogue Propriétés de partition) (SSMS)
   Utilisez la page **Général** de la boîte de dialogue **Propriétés de partition** de SQL Server Management Studio pour définir les propriétés générales d'une partition d'un groupe de mesures d'un cube d'une base de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -30,7 +30,7 @@ ms.locfileid: "48211099"
 |**ID de conception d’agrégation**|Affiche l'identificateur du modèle d'agrégation utilisé par la partition.|  
 |**Préfixe d’agrégation**|Affiche le préfixe par défaut des instances d'agrégation contenues dans la partition.|  
 |**Créer un horodateur**|Affiche la date et l'heure de création de la partition.|  
-|**Mode de stockage actuel**|Affiche le mode de stockage actif de la partition.<br /><br /> Remarque : ce mode dépend des paramètres de mise en cache proactive de la partition. Pour plus d’informations sur la mise en cache proactive, consultez [Mise en cache proactive &#40;partitions&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
+|**Mode de stockage actuel**|Affiche le mode de stockage actif de la partition.<br /><br /> Remarque : Ce mode peut varier selon les paramètres de mise en cache proactive pour la partition. Pour plus d’informations sur la mise en cache proactive, consultez [Mise en cache proactive &#40;partitions&#41;](multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).|  
 |**Description**|Modifie la description de la référence de la partition.|  
 |**Lignes estimées**|Tapez le nombre de lignes estimé dans la source de données sous-jacente représentée par la partition. Cette valeur est utilisée pendant le traitement pour estimer le temps et la capacité de stockage nécessaires au traitement de la partition.|  
 |**Taille estimée**|Affiche la taille estimée de la partition.|  
@@ -39,15 +39,15 @@ ms.locfileid: "48211099"
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées de la partition.|  
 |**Nom**|Affiche le nom de la partition.|  
 |**Mode de traitement**|Sélectionnez le mode de traitement à utiliser pour la partition. Pour plus d’informations sur les modes de traitement des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , consultez [traitement d’un objet de modèle multidimensionnel](multidimensional-models/processing-a-multidimensional-model-analysis-services.md).|  
-|**ID de Source de données distante**|Affiche l'identificateur de la source de données distante d'où est extraite la partition.<br /><br /> Remarque : cette propriété contient une valeur uniquement pour les partitions distantes.|  
-|**tranche**|Affiche l'expression qui identifie la tranche de données représentée par la partition.|  
+|**ID de Source de données distante**|Affiche l'identificateur de la source de données distante d'où est extraite la partition.<br /><br /> Remarque : Cette propriété contient une valeur uniquement pour les partitions distantes.|  
+|**Slice**|Affiche l'expression qui identifie la tranche de données représentée par la partition.|  
 |**Source**|Affiche la table ou la requête qui fournit la source de données pour la partition.|  
 |**État**|Affiche l'état actuel du traitement de la partition.|  
-|**Emplacement de stockage**|Affiche le dossier dans lequel les données de la partition sont stockées.<br /><br /> Remarque : cette propriété contient une valeur uniquement si un emplacement de stockage différent de celui par défaut de l’instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] est spécifié.|  
+|**Emplacement de stockage**|Affiche le dossier dans lequel les données de la partition sont stockées.<br /><br /> Remarque : Cette propriété contient une valeur uniquement si un emplacement de stockage autre que l’emplacement de stockage par défaut pour le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance est spécifiée.|  
 |**Type**|Affiche le type de la partition.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Partitions distantes](multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
  [Boîte de dialogue Propriétés de partition &#40;SSMS&#41;](partition-properties-dialog-box-ssms.md)   
  [Sélection &#40;boîte de dialogue Propriétés de Partition&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md)   

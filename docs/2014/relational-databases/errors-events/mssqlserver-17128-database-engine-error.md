@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a73f2469c38d611b95e3446e80755687f40346e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507044"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869707"
 ---
 # <a name="mssqlserver17128"></a>MSSQLSERVER_17128
     
@@ -30,7 +30,7 @@ ms.locfileid: "52507044"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|INIT_NOBUFSPACE|  
-|Texte du message|initdata : Aucune mémoire pour les tampons du noyau.|  
+|Texte du message|initdata : aucune mémoire pour les tampons du noyau.|  
   
 ## <a name="explanation"></a>Explication  
  Les réservations ou les allocations de mémoire initiales du pool de mémoires tampons ont échoué, et SQL Server se termine.  

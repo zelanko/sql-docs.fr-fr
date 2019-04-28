@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1bee662934a8c63393da3fdf1f6c64b3e9def579
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726929"
 ---
 # <a name="add-dimension-intelligence-to-a-dimension"></a>Ajouter de l'intelligence de dimensions à une dimension
   Ajoutez l'intelligence des dimensions à un cube ou à une dimension pour spécifier un type d'entreprise standard pour une dimension. Cette amélioration spécifie également les types correspondants pour les attributs de la dimension. Les applications clientes peuvent utiliser ces spécifications de type lors de l'analyse de données.  
@@ -35,13 +35,13 @@ ms.locfileid: "48061279"
 >  Si vous sélectionnez **Compte** comme dimension, vous spécifierez l’intelligence comptable pour la dimension. Pour plus d’informations, consultez [Ajouter de l’intelligence comptable à une dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
 ## <a name="specifying-dimension-attributes"></a>Spécification des attributs de dimension  
- Sur le **définir l’Intelligence des dimensions** page **Type de Dimension** liste, la sélection que vous effectuez définit la dimension `Type` propriété. Le `Type` paramètre de propriété fournit des informations sur les serveurs et clients applications sur le contenu d’une dimension. Certains paramètres permettent uniquement de guider les applications clientes ; ces paramètres sont facultatifs. D'autres paramètres, tels que Comptes ou Temps, déterminent des comportements spécifiques et peuvent être requis pour implémenter des améliorations de décisionnel particulières. Par exemple, SQL Server Management Studio utilise le type de dimension pour identifier une dimension Devise et définir les règles de conversion monétaire appropriées. La définition par défaut du **Type de dimension** est **Normal**et ne fournit aucune information théorique sur le contenu de la dimension.  
+ Sur le **définir l’Intelligence des dimensions** page **Type de Dimension** liste, la sélection que vous effectuez définit la dimension `Type` propriété. La définition de la propriété `Type` fournit des informations aux serveurs et aux applications clientes sur le contenu d'une dimension. Certains paramètres permettent uniquement de guider les applications clientes ; ces paramètres sont facultatifs. D'autres paramètres, tels que Comptes ou Temps, déterminent des comportements spécifiques et peuvent être requis pour implémenter des améliorations de décisionnel particulières. Par exemple, SQL Server Management Studio utilise le type de dimension pour identifier une dimension Devise et définir les règles de conversion monétaire appropriées. La définition par défaut du **Type de dimension** est **Normal**et ne fournit aucune information théorique sur le contenu de la dimension.  
   
  Après avoir sélectionné le type de dimension, dans **Attributs de la dimension**, dans la colonne **Inclure** , cochez la case à côté de chaque type d’attribut standard pour lequel il existe un attribut correspondant dans la dimension. Enfin, dans la colonne **Attribut de dimension** , développez la liste déroulante, puis sélectionnez l’attribut de la dimension qui correspond au type d’attribut sélectionné. La sélection de l'attribut dans la liste définit la propriété `Type` d'attribut pour les attributs.  
   
  Par exemple, vous souhaitez ajouter l'intelligence des dimensions à une dimension Comptes. Dans **Type de dimension**, vous sélectionnez **Comptes**. Ensuite, si la dimension a les attributs **Type de compte** et **Description du compte** , dans la colonne **Inclure** , cochez les cases pour les types de comptes **Nom du compte** et **Type de compte** . Dans la colonne **Attribut de dimension** , vous associez ensuite ces types de comptes aux attributs **Description du compte** et **Type de compte** , respectivement, dans la dimension.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir des calculs Time Intelligence à l’aide de l’Assistant Business Intelligence](define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [Définir des calculs Time Intelligence à l'aide de l'Assistant Business Intelligence](define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

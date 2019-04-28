@@ -14,25 +14,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e84c49055a1fdb5b11487ab17af19762f86686c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726413"
 ---
 # <a name="define-cube-attribute-properties"></a>Définir des propriétés d'attributs de cube
   Les propriétés des attributs de cube vous permettent de spécifier des paramètres uniques pour les attributs de dimension des dimensions de cube à partir de la même dimension de base de données. Le tableau suivant décrit les propriétés d'un attribut de cube.  
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|`AggregationUsage`|Indique le mode de création des agrégations d'attribut par l'Assistant Conception d'agrégation. Cette propriété peut avoir les valeurs suivantes :<br /><br /> `Default`: Valeur par défaut. L'Assistant Conception d'agrégation applique une règle par défaut en fonction du type d'attribut (Full pour les clés, Unrestricted pour les autres types).<br /><br /> `None`: Aucune agrégation du cube ne doit inclure cet attribut.<br /><br /> `Unrestricted`: L’Assistant conception d’agrégation aucune restriction.<br /><br /> `Full`: Chaque agrégation du cube doit inclure cet attribut.|  
-|`AttributeHierarchyEnabled`|Indique si la hiérarchie d'attributs est activée sur cette dimension de cube. Cet attribut permet de désactiver les hiérarchies d'attributs sur des cubes ou des rôles de dimension spécifiques. Ce paramètre est sans effet si la hiérarchie d'attributs sous-jacente est désactivée. Valeur par défaut est `True`.|  
-|`OptimizedState`|Indique si la hiérarchie d'attributs est optimisée sur cette dimension de cube. Cet attribut permet d'optimiser les hiérarchies d'attributs sur des cubes ou des rôles de dimension spécifiques. Ce paramètre est sans effet si la hiérarchie d'attributs sous-jacente n'est pas optimisée. Cette propriété peut avoir les valeurs suivantes :<br /><br /> `FullyOptimized`: Valeur par défaut. L'instance construit des index pour la hiérarchie afin d'augmenter les performances en matière de requêtes. Il s'agit de la valeur par défaut.<br /><br /> `NotOptimized`: L’instance ne génère pas d’index supplémentaires.|  
+|`AggregationUsage`|Indique le mode de création des agrégations d'attribut par l'Assistant Conception d'agrégation. Cette propriété peut avoir les valeurs suivantes :<br /><br /> `Default`: Valeur par défaut. L'Assistant Conception d'agrégation applique une règle par défaut en fonction du type d'attribut (Full pour les clés, Unrestricted pour les autres types).<br /><br /> `None`: Aucune agrégation du cube ne doit inclure cet attribut.<br /><br /> `Unrestricted`: Aucune restriction sur l’Assistant conception d’agrégation.<br /><br /> `Full`: Toutes les agrégations de cube doivent inclure cet attribut.|  
+|`AttributeHierarchyEnabled`|Indique si la hiérarchie d'attributs est activée sur cette dimension de cube. Cet attribut permet de désactiver les hiérarchies d'attributs sur des cubes ou des rôles de dimension spécifiques. Ce paramètre est sans effet si la hiérarchie d'attributs sous-jacente est désactivée. La valeur par défaut est `True`.|  
+|`OptimizedState`|Indique si la hiérarchie d'attributs est optimisée sur cette dimension de cube. Cet attribut permet d'optimiser les hiérarchies d'attributs sur des cubes ou des rôles de dimension spécifiques. Ce paramètre est sans effet si la hiérarchie d'attributs sous-jacente n'est pas optimisée. Cette propriété peut avoir les valeurs suivantes :<br /><br /> `FullyOptimized`: Valeur par défaut. L'instance construit des index pour la hiérarchie afin d'augmenter les performances en matière de requêtes. Valeur par défaut.<br /><br /> `NotOptimized`: L'instance ne construit pas d'index supplémentaire.|  
 |`AttributeHierarchyVisible`|Indique si la hiérarchie d'attributs est visible sur cette dimension de cube. Cet attribut permet de rendre visible les hiérarchies d'attributs sur des cubes ou des rôles de dimension spécifiques. Ce paramètre est sans effet si la hiérarchie d'attributs sous-jacente n'est pas visible. La valeur par défaut est `True`.|  
 |`AttributeID`|Contient l'identificateur unique (ID) de l'attribut.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir les propriétés de Dimension de Cube](define-cube-dimension-properties.md)   
+ [Définir des propriétés d'une dimension de cube](define-cube-dimension-properties.md)   
  [Définir les propriétés des hiérarchies de cube](define-cube-hierarchy-properties.md)  
   
   

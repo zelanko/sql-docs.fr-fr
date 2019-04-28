@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d5b823481d47f6e986815673aa3ab65d44f07c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733488"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
   Cette rubrique décrit le contenu du modèle d'exploration de données qui est spécifique aux modèles qui utilisent l'algorithme MNN (Microsoft Neural Network). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "48218699"
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Nœud masqué|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Nom d'attribut de sortie|  
@@ -132,7 +132,7 @@ ms.locfileid: "48218699"
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Nœud masqué|Entier qui indique la séquence du nœud masqué dans la liste de nœuds masqués.|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Si l'attribut de sortie est continu, contient le nom de l'attribut de sortie.<br /><br /> Si l'attribut de sortie est discret ou discrétisé, contient le nom de l'attribut et la valeur.|  
@@ -217,11 +217,11 @@ ms.locfileid: "48218699"
 ### <a name="input-nodes"></a>Nœuds d'entrée  
  La couche d'entrée contient un nœud pour chaque valeur de l'attribut utilisé dans le modèle.  
   
- **Attribut discret :** le nœud d’entrée stocke uniquement le nom de l’attribut et sa valeur dans les colonnes ATTRIBUTE_NAME et ATTRIBUTE_VALUE. Par exemple, s'il s'agit de la colonne [Poste de travail], un nœud distinct est créé pour chaque valeur de cette colonne utilisée dans le modèle, tel que Matin et Après-midi. La table NODE_DISTRIBUTION pour chaque nœud liste uniquement la valeur actuelle de l'attribut.  
+ **Attribut discret :** Le nœud d’entrée stocke uniquement le nom de l’attribut et sa valeur dans les colonnes ATTRIBUTE_NAME et ATTRIBUTE_VALUE. Par exemple, s'il s'agit de la colonne [Poste de travail], un nœud distinct est créé pour chaque valeur de cette colonne utilisée dans le modèle, tel que Matin et Après-midi. La table NODE_DISTRIBUTION pour chaque nœud liste uniquement la valeur actuelle de l'attribut.  
   
- **Attribut numérique discrétisé :** le nœud d'entrée stocke le nom de l'attribut et la valeur, qui peut être une plage ou une valeur spécifique. Toutes les valeurs sont représentées par des expressions telles que "77,4 - 87,4" ou "< 64,0" pour la valeur de [Temps par problème]. La table NODE_DISTRIBUTION pour chaque nœud liste uniquement la valeur actuelle de l'attribut.  
+ **Attribut numérique discrétisé :** Le nœud d’entrée stocke le nom de l’attribut et la valeur, qui peut être une plage ou une valeur spécifique. Toutes les valeurs sont représentées par des expressions telles que "77,4 - 87,4" ou "< 64,0" pour la valeur de [Temps par problème]. La table NODE_DISTRIBUTION pour chaque nœud liste uniquement la valeur actuelle de l'attribut.  
   
- **Attribut continu :** le nœud d'entrée stocke la valeur moyenne de l'attribut. La table NODE_DISTRIBUTION pour chaque nœud liste uniquement la valeur actuelle de l'attribut.  
+ **Attribut continu :** Le nœud d’entrée stocke la valeur moyenne de l’attribut. La table NODE_DISTRIBUTION pour chaque nœud liste uniquement la valeur actuelle de l'attribut.  
   
 ### <a name="hidden-layer-nodes"></a>Nœuds de couche masquée  
  La couche masquée contient un nombre variable de nœuds. Dans chaque nœud, la table NODE_DISTRIBUTION contient des mappages de la couche masquée aux nœuds dans la couche d'entrée. La colonne ATTRIBUTE_NAME contient un ID de nœud qui correspond à un nœud dans la couche d'entrée. La colonne ATTRIBUTE_VALUE contient le poids associé à cette combinaison de nœud d'entrée et nœud de couche masquée. La dernière ligne de la table contient un coefficient qui représente le poids de ce nœud masqué dans la couche masquée.  
@@ -231,15 +231,15 @@ ms.locfileid: "48218699"
   
  La table NODE_DISTRIBUTION présente les informations supplémentaires suivantes, selon le type de l'attribut :  
   
- **Attribut discret :** les deux lignes finales de la table NODE_DISTRIBUTION contiennent un coefficient pour le nœud dans son ensemble et la valeur actuelle de l’attribut.  
+ **Attribut discret :** Les deux lignes finales de la table NODE_DISTRIBUTION contiennent un coefficient pour le nœud dans son ensemble et la valeur actuelle de l’attribut.  
   
- **Attribut numérique discrétisé :** identique aux attributs discrets, mais la valeur de l'attribut est une plage de valeurs.  
+ **Attribut numérique discrétisé :** Identique aux attributs discrets, sauf que la valeur de l’attribut est une plage de valeurs.  
   
- **Attribut continu :** les deux lignes finales de la table NODE_DISTRIBUTION contiennent la moyenne de l’attribut, le coefficient pour le nœud dans son ensemble et la variance du coefficient.  
+ **Attribut continu :** Les deux lignes finales de la table NODE_DISTRIBUTION contiennent la moyenne de l’attribut, le coefficient pour le nœud dans son ensemble et la variance du coefficient.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de réseau neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
- [Référence technique de Microsoft Neural Network algorithme](microsoft-neural-network-algorithm-technical-reference.md)   
- [Exemples de requêtes de modèle de réseau neuronal](neural-network-model-query-examples.md)  
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](microsoft-neural-network-algorithm-technical-reference.md)   
+ [Neural Network Model Query Examples](neural-network-model-query-examples.md)  
   
   

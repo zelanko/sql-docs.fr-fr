@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
+title: sys.dm_os_waiting_tasks (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998002"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,11 +55,11 @@ ms.locfileid: "47629517"
   
  **Propriétaire de ressources de pool de threads :**  
   
--   id de pool de threads = planificateur\<hex-address >  
+-   threadpool id=scheduler\<hex-address>  
   
  **Propriétaire de ressources de requête parallèle :**  
   
--   exchangeEvent id = {Port | Canal}\<hex-address > WaitType =\<type d’attente exchange > nodeId =\<id de nœud exchange >  
+-   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
   
  **Exchange--type d’attente :**  
   
@@ -79,23 +79,23 @@ ms.locfileid: "47629517"
   
  **Propriétaire de ressource de verrou :**  
   
--   \<type-specific-description > id = verrou\<verrou-hex-address > mode =\<mode > associatedObjectId =\<associés-obj-id >  
+-   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
   
      **\<type-specific-description > peut être :**  
   
     -   Pour la base de données : Databaselock subresource =\<databaselock-subresource > dbid =\<db-id >  
   
-    -   Pour un fichier : Filelock fileid =\<fichier-id > subresource =\<filelock-subresource > dbid =\<db-id >  
+    -   For FILE: filelock fileid=\<file-id> subresource=\<filelock-subresource> dbid=\<db-id>  
   
     -   Pour l’objet : Objectlock lockPartition =\<lock-partition-id > objid =\<obj-id > subresource =\<objectlock-subresource > dbid =\<db-id >  
   
-    -   Pour PAGE : Pagelock fileid =\<fichier-id > pageid =\<page-id > dbid =\<db-id > subresource =\<pagelock-subresource >  
+    -   For PAGE: pagelock fileid=\<file-id> pageid=\<page-id> dbid=\<db-id> subresource=\<pagelock-subresource>  
   
     -   Pour Key : Keylock hobtid =\<hobt-id > dbid =\<db-id >  
   
     -   Pour EXTENT : Extentlock fileid =\<fichier-id > pageid =\<page-id > dbid =\<db-id >  
   
-    -   Pour RID : Ridlock fileid =\<fichier-id > pageid =\<page-id > dbid =\<db-id >  
+    -   For RID: ridlock fileid=\<file-id> pageid=\<page-id> dbid=\<db-id>  
   
     -   Pour l’APPLICATION : Applicationlock hash =\<hash > databasePrincipalId =\<rôle-id > dbid =\<db-id >  
   
@@ -129,13 +129,13 @@ ms.locfileid: "47629517"
   
  **Propriétaire de ressource de verrou :**  
   
--   \<DB-id > :\<id de fichier > :\<page dans le fichier >  
+-   \<db-id>:\<file-id>:\<page-in-file>  
   
--   \<GUID &GT;  
+-   \<GUID>  
   
--   \<classe de verrou > (\<verrou-address >)  
+-   \<latch-class> (\<latch-address>)  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

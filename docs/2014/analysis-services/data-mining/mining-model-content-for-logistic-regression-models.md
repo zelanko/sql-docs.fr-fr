@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56bd850ac5da9353073d2cf4d75fd1980bb8a38b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733508"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles de régression logistique (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles qui utilisent l'algorithme MLR (Microsoft Logistic Regression). Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -58,7 +58,7 @@ ms.locfileid: "48164509"
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Nom d'attribut de sortie|  
   
@@ -114,7 +114,7 @@ ms.locfileid: "48164509"
 |Statistiques marginales|Vide|  
 |Couche d'entrée|Vide|  
 |Nœud d'entrée|Nom d'attribut d'entrée|  
-|Couche masquée|Vide|  
+|hidden layer|Vide|  
 |Couche de sortie|Vide|  
 |Nœud de sortie|Si l'attribut de sortie est continu, contient le nom de l'attribut de sortie.<br /><br /> Si l'attribut de sortie est discret ou discrétisé, contient le nom de l'attribut et la valeur.|  
   
@@ -185,9 +185,9 @@ ms.locfileid: "48164509"
  Vous pouvez utiliser ces ID pour déterminer comment les attributs de sortie sont liés aux attributs spécifiques de la couche d'entrée, en consultant la table NODE_DISTRIBUTION du nœud de sortie. Chaque ligne de cette table contient un ID qui renvoie à un nœud d'attribut d'entrée spécifique. La table NODE_DISTRIBUTION contient également le coefficient correspondant à cette paire entrée/sortie.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de régression logistique de Microsoft](microsoft-logistic-regression-algorithm.md)   
- [Contenu du modèle pour les modèles de réseau neuronal d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
- [Exemples de requête de modèle de régression logistique](logistic-regression-model-query-examples.md)   
- [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](microsoft-logistic-regression-algorithm-technical-reference.md)  
+ [Algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm.md)   
+ [Contenu du modèle d’exploration de données pour les modèles de réseau neuronal &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [Exemples de requêtes de modèle de régression logistique](logistic-regression-model-query-examples.md)   
+ [Références techniques relatives à l'algorithme MLR (Microsoft Logistic Regression)](microsoft-logistic-regression-algorithm-technical-reference.md)  
   
   

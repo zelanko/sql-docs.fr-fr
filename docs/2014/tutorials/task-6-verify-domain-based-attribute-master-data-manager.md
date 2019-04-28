@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 6 : Vérifiez que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager | Microsoft Docs'
+title: 'Tâche 6 : Vérifiez que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ef3d063db5578485e89dc18b4a5e93af800b15fe
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866151"
 ---
-# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tâche 6 : Vérifier que l'attribut basé sur un domaine est créé à l'aide de Master Data Manager
+# <a name="task-6-verify-that-the-domain-based-attribute-is-created-using-master-data-manager"></a>Tâche 6 : Tâche 6 : Vérification que l’attribut basé sur un domaine est créé à l’aide de Master Data Manager
   Dans cette tâche, vous allez vérifier que l’entité **État** est créée dans **MDS** et que l’attribut **État** de l’entité **Fournisseur** est un attribut basé sur un domaine qui dépend de l’entité **État** à l’aide de **Master Data Manager**.  
   
 1.  Basculez vers l’application web **Master Data Manger**.  
@@ -38,7 +38,7 @@ ms.locfileid: "56037730"
   
 8.  Répétez les étapes précédentes pour les autres États.  
   
-    |Code|Créer une vue d’abonnement|  
+    |Code|Nom|  
     |----------|----------|  
     |CA|California|  
     |CO|Colorado|  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 378f59e4cf37328178cc537fde4c797badc927f2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733605"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Contenu du modèle d'exploration de données pour les modèles Naive Bayes (Analysis Services - Exploration de données)
   Cette rubrique décrit le contenu du modèle d'exploration de données spécifique aux modèles utilisant l'algorithme Naive Bayes [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Pour obtenir une explication sur la procédure d’interprétation des statistiques et de la structure partagées par tous les types de modèles et pour obtenir des définitions générales de termes en rapport avec le contenu du modèle d’exploration de données, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
@@ -190,7 +190,7 @@ ms.locfileid: "48197329"
 |---------------|----------------------------|  
 |Racine du modèle (1)|Toujours 0.|  
 |Nœud de statistiques marginales (26)|Valeur d'ID arbitraire.|  
-|attribut prédictible (9)|Nombre hexadécimal commençant par 10000000<br /><br /> Exemple : 100000001, 10000000b|  
+|attribut prédictible (9)|Nombre hexadécimal commençant par 10000000<br /><br /> Exemple : 100000001, 10000000b|  
 |Attribut d'entrée (10)|Nombre hexadécimal bipartite où la première partie est toujours 20000000 et où la deuxième partie commence par l'identificateur hexadécimal de l'attribut prédictible connexe.<br /><br /> Exemple : 20000000b00000000<br /><br /> Dans ce cas, l'attribut prédictible connexe est 10000000b.|  
 |État d'attribut d'entrée (11)|Nombre hexadécimal tripartite où la première partie est toujours 30000000, où la deuxième partie commence par l'identificateur hexadécimal de l'attribut prédictible connexe et où la troisième partie représente l'identificateur de la valeur.<br /><br /> Exemple : 30000000b00000000200000000<br /><br /> Dans ce cas, l'attribut prédictible connexe est 10000000b.|  
   
@@ -239,7 +239,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
   
 |Type de nœud|Contenu de table imbriquée|  
 |---------------|-----------------------------|  
-|Racine du modèle (1)|Vide.|  
+|Racine du modèle (1)|: vide.|  
 |Nœud de statistiques marginales (24)|Contient des informations de résumé pour tous les attributs prédictibles et les attributs d'entrée, et ce pour le jeu complet de données d'apprentissage.|  
 |attribut prédictible (9)|: vide.|  
 |Attribut d'entrée (10)|: vide.|  
@@ -264,7 +264,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
- Dans ces résultats, la valeur de la colonne SUPPORT indique le nombre de clients ayant la situation de famille spécifiée qui ont acheté un vélo. La colonne PROBABILITY contient la probabilité de chaque valeur d'attribut, telle que calculée pour ce nœud uniquement. Pour obtenir des définitions générales des termes utilisés dans la table NODE_DISTRIBUTION, consultez [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
+ Dans ces résultats, la valeur de la colonne SUPPORT indique le nombre de clients ayant la situation de famille spécifiée qui ont acheté un vélo. La colonne PROBABILITY contient la probabilité de chaque valeur d'attribut, telle que calculée pour ce nœud uniquement. Pour obtenir des définitions générales des termes utilisés dans la table NODE_DISTRIBUTION, consultez [Contenu du modèle d’exploration &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md).  
   
 ###  <a name="bkmk_margstats"></a> Informations du nœud de statistiques marginales  
  Dans un modèle Naive Bayes, la table imbriquée du nœud de statistiques marginales contient la distribution des valeurs pour le jeu complet de données d'apprentissage. Par exemple, la table suivante contient une liste partielle des statistiques figurant dans la table NODE_DISTRIBUTION imbriquée pour le modèle, `TM_NaiveBayes`:  
@@ -286,12 +286,12 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Dans un modèle Naive Bayes, il ne peut pas y avoir d'attributs continus ; par conséquent, toutes les données numériques sont représentées comme discrètes (VALUE_TYPE = 4) ou discrétisées (VALUE_TYPE = 5).  
   
- Un `Missing` valeur (VALUE_TYPE = 1) est ajouté à chaque attribut d’entrée et de sortie pour représenter les valeurs potentielles qui ne figuraient pas dans les données d’apprentissage. Vous devez être prudent de faire la distinction entre « manquant » en tant que chaîne et la valeur par défaut `Missing` valeur. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services – Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
+ Une valeur `Missing` (VALUE_TYPE = 1) est ajoutée à chaque attribut d’entrée et de sortie pour représenter les valeurs potentielles qui ne figuraient pas dans les données d'apprentissage. Vous devez faire la distinction entre « manquant » en tant que chaîne et la valeur `Missing` par défaut. Pour plus d’informations, consultez [Valeurs manquantes &#40;Analysis Services - Exploration de données&#41;](missing-values-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
+ [Contenu du modèle d’exploration &#40;Analysis Services – Exploration de données&#41;](mining-model-content-analysis-services-data-mining.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)   
- [Requêtes d’exploration de données](data-mining-queries.md)   
+ [Requêtes d'exploration de données](data-mining-queries.md)   
  [Algorithme MNB (Microsoft Naive Bayes)](microsoft-naive-bayes-algorithm.md)  
   
   

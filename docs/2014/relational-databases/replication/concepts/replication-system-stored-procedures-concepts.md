@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721941"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Concepts liés aux procédures stockées système de réplication
   Dans [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], l'accès par programme à toutes les fonctionnalités d'une topologie de réplication configurables par l'utilisateur est opéré par les procédures stockées système. Bien que les procédures stockées puissent être exécutées individuellement à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de l'utilitaire en ligne de commande sqlcmd, il peut être judicieux d'écrire des fichiers de script [!INCLUDE[tsql](../../../includes/tsql-md.md)] qui peuvent être exécutés pour effectuer une séquence logique de tâches de réplication.  

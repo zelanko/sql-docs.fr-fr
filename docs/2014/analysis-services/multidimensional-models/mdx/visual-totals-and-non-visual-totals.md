@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4d831d2c6b42a591dff5fc3c8424a55ac91062
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725137"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Valeurs totales affichées et non affichées
   Les valeurs totales affichées sont les totaux à la fin d'une colonne ou d'une ligne qui additionnent tous les éléments dans la colonne ou la ligne. C'est le comportement par défaut pour la plupart des tables en cas d'affichage. Toutefois, dans certains cas, l'utilisateur peut souhaiter afficher uniquement certaines colonnes dans une table mais garder les totaux pour la ligne entière, y compris ceux qui ne sont pas affichés. On les appelle des `Non Visual Totals`, parce que le total est calculé à partir des valeurs visibles et non visibles.  
@@ -98,12 +98,12 @@ ms.locfileid: "48197049"
  Lorsque l'on effectue une comparaison avec les résultats précédents, on observe que la ligne [All Resellers] est additionnée avec les valeurs affichées pour [Value Added Reseller] et [Warehouse] mais que la colonne [All Products] affiche la valeur totale pour tous les produits, y compris ceux qui ne sont pas affichés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Concepts clés pour MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
- [La fonctionnalité Autoexists](autoexists.md)   
- [Utilisation de membres, Tuples et jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
- [Principes de base de requête MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [La requête MDX de base &#40;MDX&#41;](mdx-query-the-basic-query.md)   
- [Restriction de la requête avec les Axes de requête et segment &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [Définition d’un contexte de Cube dans une requête &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [Concepts clés de MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
+ [Autoexists](autoexists.md)   
+ [Utilisation de membres, de tuples et de jeux &#40;MDX&#41;](working-with-members-tuples-and-sets-mdx.md)   
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
+ [Requête MDX de base &#40;MDX&#41;](mdx-query-the-basic-query.md)   
+ [Restriction de la requête avec des axes de requête et de secteur &#40;MDX&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
+ [Définition d’un contexte de cube dans une requête &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   

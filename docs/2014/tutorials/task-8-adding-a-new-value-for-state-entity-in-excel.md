@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 8 : Ajout d’une nouvelle valeur pour l’entité état dans Excel | Microsoft Docs'
+title: 'Tâche 8 : Ajout d’une nouvelle valeur pour l’entité état dans Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 04ed80887a2a81a2179dcec423b9e22b3f9d43ef
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56032030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866499"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tâche 8 : Ajout d'une nouvelle valeur pour l'entité État dans Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Tâche 8 : Ajout d’une nouvelle valeur pour l’entité État dans Excel
   Dans cette tâche, vous allez ajouter une valeur pour l'entité État dans Excel et publier la modification sur le serveur MDS.  
   
 1.  Ajouter un **feuille de calcul** dans Excel en cliquant sur le nouvel onglet en bas.  
@@ -30,7 +30,7 @@ ms.locfileid: "56032030"
   
 4.  Double-cliquez sur **état** dans la liste. Tous les membres de la **état** entité à partir de MDS doit être affichée dans la feuille de calcul.  
   
-5.  Maintenant, ajoutez une ligne à la fin, avec les valeurs suivantes : **Caroline du Nord** pour **nom** et **NC** pour **Code**. Les codes de couleur différencient tous les nouveaux enregistrements, ou les enregistrements mis à jour, des autres enregistrements.  
+5.  Maintenant, ajoutez une ligne à la fin avec les valeurs suivantes : **Caroline du Nord** pour **nom** et **NC** pour **Code**. Les codes de couleur différencient tous les nouveaux enregistrements, ou les enregistrements mis à jour, des autres enregistrements.  
   
      ![Excel - ajouter North Carolina aux États](../../2014/tutorials/media/et-addinganewvalueforstateentityinexcel-02.jpg "Excel - ajouter North Carolina aux États")  
   

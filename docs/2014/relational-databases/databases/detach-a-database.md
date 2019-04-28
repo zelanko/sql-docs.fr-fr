@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871954"
 ---
 # <a name="detach-a-database"></a>Détacher une base de données
   Cette rubrique explique comment détacher une base de données dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Les fichiers détachés restent et peuvent être rattachés à l'aide de CREATE DATABASE avec l'option FOR ATTACH ou FOR ATTACH_REBUILD_LOG. Vous pouvez les déplacer sur un autre serveur et les y attacher.  
@@ -46,7 +46,7 @@ ms.locfileid: "54134639"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle de base de données fixe db_owner.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -78,21 +78,21 @@ ms.locfileid: "54134639"
      Par défaut, l'opération de détachement conserve tous les catalogues de texte intégral associés à la base de données. Pour les supprimer, décochez la case **Conserver les catalogues de texte intégral** . Cette option s'affiche uniquement lors de la mise à niveau d'une base de données à partir de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **État**  
-     Indique un des états suivants : **Prêt** ou **non prêt**.  
+     Affiche l’un des états suivants : **Prêt** ou **Non prêt**.  
   
      **Message**  
      La colonne **Message** peut indiquer des informations sur la base de données, comme suit :  
   
     -   Lorsqu'une base de données est impliquée dans la réplication, l' **État** est **Non prêt** et la colonne **Message** indique **Base de données répliquée**.  
   
-    -   Lorsqu’une base de données a une ou plusieurs connexions actives, le **état** est **non prêt** et **Message** colonne affiche _< nombre_de_connexions_actives >_**(S) active** , par exemple : **1 connexion (s) active**. Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
+    -   Lorsqu’une base de données a une ou plusieurs connexions actives, le **état** est **non prêt** et **Message** colonne affiche _< nombre_de_connexions_actives >_**(S) active** , par exemple : **1 connexion(s) active(s)**. Avant de détacher la base de données, vous devez déconnecter toutes les connexions actives en cliquant sur **Supprimer les connexions**.  
   
      Pour obtenir plus d'informations sur un message, cliquez sur le texte du lien hypertexte pour ouvrir le Moniteur d'activité.  
   
 4.  Lorsque vous avez prêt à lancer le processus, cliquez sur **OK**.  
   
 > [!NOTE]  
->  La base de données ainsi détachée reste toujours visible dans le nœud **Bases de données** de l'explorateur d'objets jusqu'à ce que la vue soit actualisée. Vous pouvez le faire à tout moment Cliquez sur dans le volet Explorateur d’objets, à partir de la barre de menus sélectionnez **vue** , puis **Actualiser**.  
+>  La base de données ainsi détachée reste toujours visible dans le nœud **Bases de données** de l'explorateur d'objets jusqu'à ce que la vue soit actualisée. Vous pouvez actualiser la vue à tout moment : Cliquez sur dans le volet Explorateur d’objets, à partir de la barre de menus sélectionnez **vue** , puis **Actualiser**.  
   
 ##  <a name="TsqlProcedure"></a> Utilisation de Transact-SQL  
   

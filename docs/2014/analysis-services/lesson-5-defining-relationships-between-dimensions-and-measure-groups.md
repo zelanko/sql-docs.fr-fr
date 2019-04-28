@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aaac863432c5ba289be43f24a384d392f0b42697
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728125"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures
   Au cours des leçons précédentes de ce didacticiel, vous avez appris que des dimensions de base de données ajoutées à un cube pouvaient être utilisées comme base pour une ou plusieurs dimensions de cube. Au cours de cette leçon, vous allez apprendre à définir différents types de relations entre des dimensions de cube et des groupes de mesures et à spécifier les propriétés de ces relations.  
@@ -41,7 +41,7 @@ ms.locfileid: "53368731"
  Au cours de cette tâche, vous allez apprendre à modifier la granularité d'une dimension pour un groupe de mesures spécifique.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 6 : Définition de calculs](lesson-6-defining-calculations.md)  
+ [Leçon 6 : Définition de calculs](lesson-6-defining-calculations.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   

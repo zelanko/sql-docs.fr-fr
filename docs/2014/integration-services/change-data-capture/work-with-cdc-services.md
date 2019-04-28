@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0aefc386d2da3cc17c7ed335a6438667b715d11a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835146"
 ---
 # <a name="work-with-cdc-services"></a>Utiliser des services de capture de données modifiées
   Vous pouvez utiliser la console de configuration du service de capture de données modifiées pour créer un service de capture de données modifiées et préparer une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour la capture de données modifiées.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf59757e72b8892e0b32202d9e7f5dc9a3d66be3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728166"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Rechercher les fichiers de base de données (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Rechercher les fichiers de base de données** affiche la liste des fichiers disponibles dans le journal ainsi que les dossiers de données définis pour une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Vous pouvez sélectionner un des fichiers répertoriés ou spécifier un dossier et un fichier manuellement. Pour afficher la boîte de dialogue **Rechercher les fichiers de base de données** , utilisez l’une des méthodes suivantes :  

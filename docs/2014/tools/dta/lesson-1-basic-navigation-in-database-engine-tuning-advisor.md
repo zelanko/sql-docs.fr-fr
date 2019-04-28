@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 1 : Assistant Paramétrage du moteur de Navigation de base dans la base de données | Microsoft Docs'
+title: 'Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fb0e6219d06b83de9311099189dd1cbab31dd2f7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63010746"
 ---
-# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Leçon 1 : Navigation de base dans l'Assistant Paramétrage du moteur de base de données
+# <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>Leçon 1 : Navigation de base dans l’Assistant Paramétrage du moteur de base de données
   L'Assistant Paramétrage du moteur de base de données fournit une interface graphique utilisateur qui permet d'afficher des sessions de paramétrage et des rapports de recommandations de paramétrage. Cette leçon explique comment démarrer cet outil et comment configurer l'affichage. À la fin de la leçon vous connaîtrez les différentes façons de démarrer cet outil et de configurer son affichage pour l'adapter aux tâches de paramétrage que vous effectuez régulièrement.  
   
  Cette leçon contient les rubriques suivantes :  

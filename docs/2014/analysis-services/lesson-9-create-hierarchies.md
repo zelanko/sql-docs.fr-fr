@@ -12,21 +12,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51f8d7b6616f6f14621209561146916cb4b0acd1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728115"
 ---
-# <a name="lesson-10-create-hierarchies"></a>Leçon 10 : Créer des hiérarchies
+# <a name="lesson-10-create-hierarchies"></a>Leçon 10 : Créer des hiérarchies
   Dans cette leçon, vous allez créer des hiérarchies. Les hiérarchies sont des groupes de colonnes ordonnées par niveaux ; par exemple, une hiérarchie Geography peut avoir des sous-niveaux Country, State, County et City. Les hiérarchies peuvent apparaître séparément des autres colonnes dans une liste de champs de l'application cliente de création de rapports, ce qui les rend faciles à parcourir par les utilisateurs clients et à inclure dans un rapport. Pour plus d’informations, consultez [Hiérarchies &#40;SSAS Tabulaire&#41;](tabular-models/hierarchies-ssas-tabular.md).  
   
  Pour créer des hiérarchies, vous allez utiliser le concepteur de modèles dans la *Vue du diagramme*. La création et la gestion des hiérarchies n'est pas prise en charge dans le générateur de modèles dans la vue de données.  
   
- Durée estimée pour effectuer cette leçon : **20 minutes**  
+ Durée estimée pour effectuer cette leçon : **20 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 9 : Créer des perspectives](lesson-8-create-perspectives.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 9 : Créer des Perspectives](lesson-8-create-perspectives.md).  
   
 ## <a name="create-hierarchies"></a>Créer des hiérarchies  
   
@@ -89,6 +89,6 @@ ms.locfileid: "48187286"
     |Jour de la semaine|Jour|  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Pour poursuivre l’étude de ce didacticiel, passez à la [Leçon 11 : Créer des partitions](lesson-10-create-partitions.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 11 : Créer des Partitions](lesson-10-create-partitions.md).  
   
   

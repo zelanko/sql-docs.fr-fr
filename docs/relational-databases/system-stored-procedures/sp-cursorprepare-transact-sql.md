@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1f26ada2f116d684091f7e5e928d04e3530567f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724124"
 ---
 # <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 |-----------|-----------------|  
 |0|Opération réussie|  
 |0x0001|Failure|  
-|1FF6|Impossible de retourner des métadonnées.<br /><br /> Remarque : Cela se produit lorsque l'instruction ne produit pas de jeu de résultats ; par exemple, il s'agit d'une instruction INSERT ou DDL.|  
+|1FF6|Impossible de retourner des métadonnées.<br /><br /> Remarque : La raison en est que l’instruction ne produit pas un jeu de résultats ; par exemple, il est une instruction INSERT ou DDL.|  
   
 ## <a name="examples"></a>Exemples  
  Lorsque *stmt* est paramétré et le *scrollopt* parameterized_stmt est ON, le format de la chaîne est comme suit :  

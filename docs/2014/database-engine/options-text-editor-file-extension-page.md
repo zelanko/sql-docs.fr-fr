@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: dd5309a335f637ae205993d930fde7ad25fdf21f
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51031786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844160"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Options (Éditeur de texte - Page Extension de fichier)
   La boîte de dialogue **Options** vous permet de spécifier la manière dont tous les fichiers présentant certaines extensions de fichier sont traités par [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour chaque extension que vous entrez, vous pouvez sélectionner un éditeur. Ainsi, vous pouvez choisir l'éditeur [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] dans lequel doivent s'ouvrir les documents d'un certain type. Pour afficher les options d’extension de fichier, cliquez sur **Options** dans le menu **Outils**, développez **Éditeur de texte**, puis cliquez sur **Extension de fichier**.  

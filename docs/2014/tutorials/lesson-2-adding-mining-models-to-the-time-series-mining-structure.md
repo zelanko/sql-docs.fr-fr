@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855718"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Leçon 2 : Ajout de modèles d’exploration de données à la Structure d’exploration de données de série chronologique
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Leçon 2 : Ajout de modèles d’exploration de données à la structure d’exploration de données de série chronologique
   Dans cette leçon, vous allez ajouter un nouveau modèle d’exploration de données à la structure d’exploration de données que vous venez de créer dans [leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md).  
   
 ## <a name="alter-mining-structure-statement"></a>Instruction ALTER MINING STRUCTURE  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9786faaf44724b1a2452bd5304b63deb2c9ea54e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63015311"
 ---
 # <a name="get-information-about-event-notifications"></a>Obtenir des informations concernant les notifications d'événements
   Les affichages catalogue suivants vous permettent d'interroger les métadonnées concernant les notifications d'événements.  
@@ -29,14 +29,14 @@ ms.locfileid: "48191479"
 -   [sys.event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  Pour afficher les métadonnées sur une notification d’événement dans l’affichage catalogue **sys.event_notifications** créée au niveau de la base de données, vous devez au moins disposer de l’autorisation CONTROL, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION sur la base de données, être propriétaire de la notification d’événement ou disposer de l’autorisation ALTER ANY DATABASE EVENT NOTIFICATION. Pour les notifications d'événements créées sur une file d'attente spécifique, vous devez au moins disposer de l'autorisation CONTROL, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION sur l'objet, être propriétaire de la notification d'événement ou disposer de l'autorisation ALTER ANY DATABASE EVENT NOTIFICATION.  
+>  Pour afficher les métadonnées concernant toute notification d’événement dans **sys.event_notifications** créé à la base de données, au minimum, vous devez disposer les éléments suivants : CONTRÔLER, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION sur la base de données, être propriétaire de la notification d’événement ou ont l’autorisation ALTER ANY DATABASE EVENT NOTIFICATION. Pour les notifications d’événements créées sur une file d’attente spécifique, au minimum vous devez disposer des éléments suivants : CONTRÔLER, ALTER, TAKE OWNERSHIP ou VIEW DEFINITION sur l’objet, être propriétaire de la notification d’événement ou ont l’autorisation ALTER ANY DATABASE EVENT NOTIFICATION.  
   
  **Pour obtenir des informations sur les notifications d'événements qui se produisent au niveau du serveur**  
   
 -   [sys.server_event_notifications &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql)  
   
 > [!NOTE]  
->  Vous devez au moins disposer de l’autorisation CONTROL ou VIEW ANY DEFINITION sur le serveur, être la connexion ou le propriétaire de la notification d’événement ou disposer de l’autorisation ALTER ANY EVENT NOTIFICATION pour afficher les métadonnées concernant toute notification d’événement dans **sys.server_event_notifications**.  
+>  Au minimum, vous devez disposer des éléments suivants : CONTRÔLER ou afficher n’importe quelle autorisation de définition sur le serveur, être la connexion ou le propriétaire de la notification d’événement, ou avoir l’autorisation ALTER ANY EVENT NOTIFICATION pour afficher les métadonnées concernant toute notification d’événement dans **sys.server_event_notifications**.  
   
  **Pour obtenir des informations sur tous les événements pouvant déclencher des notifications**  
   

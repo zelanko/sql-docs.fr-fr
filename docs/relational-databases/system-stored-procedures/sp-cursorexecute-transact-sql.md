@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcc62c09d42adb10f8984a8f48d8b70e2f5c78de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47854037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62723994"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ sp_cursorexecute prepared_handle, cursor
 > [!IMPORTANT]  
 >  Si un *ccopt* valeur n’est pas spécifiée, la valeur par défaut est OPTIMISTIC indépendamment de *ccopt* valeur spécifiée dans sp_cursorprepare.  
   
- *nombre de lignes*  
+ *rowcount*  
  Paramètre optionnel qui indique le nombre de lignes de tampon d'extraction à utiliser avec AUTO_FETCH. La valeur par défaut est de 20 lignes. *nombre de lignes* se comporte différemment lorsqu’assigné comme une valeur d’entrée ou une valeur de retour.  
   
 |Comme une valeur d'entrée|Comme une valeur de retour|  
@@ -80,7 +80,7 @@ sp_cursorexecute prepared_handle, cursor
 ## <a name="code-return-value"></a>Valeur de retour de code  
  *nombre de lignes* peut renvoyer les valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |-1|Nombre de lignes inconnues.|  
 |-n|Un remplissage asynchrone est appliqué.|  

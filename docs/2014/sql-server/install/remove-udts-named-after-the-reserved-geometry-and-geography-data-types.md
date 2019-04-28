@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f93b179da229793c65db452e4f38bb1f08fbfad1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855886"
 ---
 # <a name="remove-udts-named-after-the-reserved-geometry-and-geography-data-types"></a>Supprimer des types définis par l'utilisateur nommés d'après les types de données réservés GEOMETRY et GEOGRAPHY
   Le Conseiller de mise à niveau a détecté un type défini par l'utilisateur (UDT) nommé d'après un terme a réservé pour les types de donnée `geometry` ou `geography`. Les types de données `geometry` et `geography` font partie de la nouvelle fonctionnalité de données spatiales.  

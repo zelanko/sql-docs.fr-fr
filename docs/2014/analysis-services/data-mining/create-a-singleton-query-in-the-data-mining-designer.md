@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1413171abde49f8ae35ef55664135ba924cee5f0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715056"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>créer une requête singleton dans le Concepteur d'exploration de données
   Une requête singleton est utile si vous voulez créer une prédiction pour un seul cas. Pour plus d’informations sur les requêtes singleton, consultez [Requêtes d’exploration de données](data-mining-queries.md).  
@@ -81,6 +81,6 @@ AS [t]
      Un nouvel écran s'affiche avec le résultat de la requête. Pour examiner l’instruction DMX que vous venez de créer, cliquez sur **SQL**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes de prédiction &#40;exploration de données&#41;](prediction-queries-data-mining.md)  
+ [Requêtes de prédiction &#40;Exploration de données&#41;](prediction-queries-data-mining.md)  
   
   

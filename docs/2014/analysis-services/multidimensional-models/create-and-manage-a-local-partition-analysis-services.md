@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5665db92828c5a6ea6a6d94587414dc6b411a01b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726803"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Créer et gérer une partition locale (Analysis Services)
   Vous pouvez créer des partitions supplémentaires pour un groupe de mesures afin d'améliorer les performances de traitement. Le fait de disposer de plusieurs partitions permet d'allouer des données de faits sur un nombre correspondant de fichiers de données physiques sur les serveurs locaux, ainsi que sur les serveurs distants. Dans Analysis Services, les partitions peuvent être traitées indépendamment et en parallèle, ce qui vous permet de contrôler davantage le traitement des charges de travail sur le serveur.  
@@ -45,7 +45,7 @@ ms.locfileid: "48091299"
 |Utiliser des requêtes SQL pour segmenter les données de faits|Les partitions peuvent provenir de requêtes SQL. Au cours du traitement, la requête SQL consiste à récupérer les données. La clause WHERE de la requête fournit le filtre qui segmente les données pour chaque partition. Analysis Services génère la requête à votre place, mais vous devez remplir la clause WHERE afin de segmenter correctement les données.<br /><br /> Le principal avantage de cette méthode réside dans la facilité avec laquelle vous pouvez partitionner des données depuis une seule table source. Si toutes les données sources proviennent d'une table de faits volumineuse, vous pouvez générer des requêtes qui filtrent ces données dans des partitions discrètes, sans avoir à créer des structures de données supplémentaires dans la vue de source de données (DSV).<br /><br /> En revanche, l'utilisation de requêtes rompt la liaison entre la partition et la vue de source de données (DSV). Si, ultérieurement, vous effectuez une mise à jour de la vue DSV dans le projet Analysis Services, notamment en ajoutant des colonnes à la table de faits, vous devez modifier manuellement les requêtes pour chaque partition de manière à inclure la nouvelle colonne. La deuxième méthode, présentée ci-dessous, ne présente pas cet inconvénient.|  
 |Utiliser des tables dans la vue DSV pour segmenter les données de faits|Vous pouvez lier une partition à une table, une requête nommée ou une vue dans la vue DSV. Les trois méthodes sont fonctionnellement équivalentes en tant que base d'une partition. La table entière, la requête nommée ou la vue fournit l'ensemble des données à une partition unique.<br /><br /> L'utilisation d'une table, d'une vue ou d'une requête nommée place toute la logique de sélection des données dans la vue DSV, laquelle peut être gérée et entretenue plus facilement au fil du temps. L'un des avantages importants de cette approche est que les liaisons de table sont conservées. Si, ultérieurement, vous mettez à jour la table source, vous n'avez pas à modifier les partitions qui l'utilisent. Deuxièmement, toutes les tables, les requêtes nommées et les vues se trouvent dans un espace de travail commun, ce qui rend les mises à jour plus pratiques et évite de devoir ouvrir et modifier des requêtes de partition individuellement.|  
   
-## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>Option 1 : filtrer une table de faits pour plusieurs partitions  
+## <a name="option-1-filter-a-fact-table-for-multiple-partitions"></a>Option n°1 : Filtrer une Table de faits pour plusieurs Partitions  
  Pour créer plusieurs partitions, commencez par modifier la propriété **Source** de la partition par défaut. Par défaut, un groupe de mesures est créé avec une seule partition qui est liée à une table unique dans la vue DSV. Avant de pouvoir ajouter des partitions supplémentaires, vous devez modifier la partition d'origine de manière à ce qu'elle contienne uniquement une partie des données de faits. Vous pouvez continuer à créer des partitions supplémentaires pour stocker les autres données.  
   
  Construisez des filtres de sorte que les données ne soient pas dupliquée entre les partitions. Le filtre d'une partition spécifie quelles données de la table de faits sont utilisées dans la partition. Il est important que les filtres de toutes les partitions utilisées dans un cube extraient, à partir de la table de faits, des jeux de données qui s'excluent mutuellement. Les mêmes données de faits peuvent être comptées deux fois si elles apparaissent dans plusieurs partitions.  
@@ -85,7 +85,7 @@ ms.locfileid: "48091299"
 > [!NOTE]  
 >  Au lieu de filtrer les données dans une partition, vous pouvez utiliser la même requête pour créer une requête nommée dans la vue DSV, puis baser la partition sur la requête nommée.  
   
-## <a name="option-2-use-tables-views-or-named-queries"></a>Option 2 : utiliser des tables, des vues ou des requêtes nommées  
+## <a name="option-2-use-tables-views-or-named-queries"></a>Option n°2 : Utiliser des Tables, vues ou requêtes nommées  
  Si la vue DSV organise déjà des faits dans des tables individuelles (par exemple, par année ou trimestre), vous pouvez créer des partitions basées sur une table individuelle, où chaque partition possède sa propre table de source de données. Il s'agit de la procédure généralement utilisée pour partitionner les groupes de mesures par défaut, mais dans le cas de plusieurs partitions, vous divisez la partition d'origine en plusieurs partitions et mappez chaque nouvelle partition à la table de source de données qui fournit les données.  
   
  Les vues et les requêtes nommées sont équivalentes aux tables, d'un point de vue fonctionnel, car les trois objets sont définis dans la vue DSV et liés à une partition à l'aide de l'option Liaison de table de la boîte de dialogue Source de partition. Vous pouvez créer une vue ou une requête nommée pour générer le segment de données requis pour chaque partition. Pour plus d’informations, consultez [Définir des requêtes nommées dans une vue de source de données &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md).  
@@ -123,8 +123,8 @@ ms.locfileid: "48091299"
  Dans la dernière étape, vous voulez normalement supprimer la partition par défaut qui était basée sur la table elle-même (si elle existe toujours), sinon les partitions basées sur la requête empièteront sur la requête basée sur la table entière.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
  [Partitions distantes](../multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md)   
- [Fusionner des Partitions dans Analysis Services &#40;SSAS - multidimensionnel&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
+ [Fusionner des partitions dans Analysis Services &#40;SSAS - Multidimensionnel&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)  
   
   

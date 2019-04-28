@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a4bf6fac03eab1e096c0ac5dc63285c11bd3f114
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735752"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet, élément (Assistant Paramétrage de base de données)
   Contient les structures PDS (index ou vues indexées) que vous aimeriez que l'Assistant Paramétrage du moteur de base de données utilise durant l'analyse.  

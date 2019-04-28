@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 986c1bf7f604f531180a14a4456325ce01702b94
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855491"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Fournisseur Microsoft OLE DB pour Microsoft Jet présentation
 Le fournisseur OLE DB pour Microsoft Jet permet à ADO accéder aux bases de données Microsoft Jet.
@@ -62,7 +62,7 @@ Microsoft.Jet.OLEDB.4.0
 |---------------|-----------------|
 |Jet OLEDB:Compact espace récupéré quantité (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|Indique une estimation de la quantité d’espace, en octets, qui peuvent être récupérées par le compactage de la base de données. Cette valeur est valide uniquement après avoir établi une connexion de base de données.|
 |Contrôle de OLEDB:Connection Jet (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indique si les utilisateurs peuvent se connecter à la base de données.|
-|Jet OLEDB : créer la base de données système (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indique si une base de données système doit être créé lors de la création d’une source de données.|
+|Jet OLEDB:Create System Database (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indique si une base de données système doit être créé lors de la création d’une source de données.|
 |Jet OLEDB : Database le Mode de verrouillage (DBPROP_JETOLEDB_DATABASELOCKMODE)|Indique le mode de verrouillage pour cette base de données. Le premier utilisateur pour ouvrir la base de données détermine le mode utilisé lorsque la base de données est ouverte.|
 |Jet OLEDB : Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indique le mot de passe de base de données.|
 |Jet OLEDB : ne copiez pas les paramètres régionaux sur Compact (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE)|Indique si Jet doit copier les informations de paramètres régionaux lorsque vous compactez une base de données.|

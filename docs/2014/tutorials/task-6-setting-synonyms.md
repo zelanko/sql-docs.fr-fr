@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 6 : Définition des synonymes | Microsoft Docs'
+title: 'Tâche 6 : Définition des synonymes | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a81a538e2cd15dd38a6c32993395cac20079b6f2
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866331"
 ---
-# <a name="task-6-setting-synonyms"></a>Tâche 6 : Définition des synonymes
+# <a name="task-6-setting-synonyms"></a>Tâche 6 : Définition des synonymes
   Dans cette tâche, vous devez définir deux valeurs de domaine, **USA** et **États-Unis**, du domaine **Pays** comme synonymes, avec **États-Unis** comme valeur menante. Dans la mesure où l'option **Utiliser des valeurs menantes** a été sélectionnée lors de la création du domaine **Pays** , toutes les valeurs **USA** pour le domaine **Pays** seront remplacées par **États-Unis** (car États-Unis est la valeur menante). Consultez [Modifier les valeurs de domaine](https://msdn.microsoft.com/library/hh510408.aspx) pour plus de détails.  
   
 1.  Sélectionnez le domaine **Pays** dans la liste des domaines.  

@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51e180d39df78a90869c2d6cdfc366e0cc13ba02
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48091731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726600"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Octroyer un accès personnalisé à des données de dimension (Analysis Services)
   Après avoir activé l'accès en lecture à un cube, vous pouvez définir des autorisations supplémentaires qui accordent ou refusent explicitement l'accès aux membres de dimension (y compris les mesures contenues dans la dimension de mesures contenant toutes les mesures utilisées dans un cube). Par exemple, étant donné plusieurs catégories de revendeurs, vous pouvez définir des autorisations pour exclure les données d'un type spécifique. L'illustration suivante est une représentation avant/après du refus de l'accès au type d'entreprise Warehouse dans la dimension Reseller.  
@@ -51,7 +51,7 @@ ms.locfileid: "48091731"
   
 2.  Recherchez `DefaultMeasure`. Vous devriez en trouver une pour le cube, et une pour chaque perspective. Quand vous définissez la sécurité des dimensions, évitez de restreindre l'accès aux mesures par défaut.  
   
-3.  Ensuite, recherchez `MeasureExpression`. Une expression de mesure est une mesure basée sur un calcul, qui inclut souvent d'autres mesures. Vérifiez que la mesure que vous souhaitez restreindre n'est pas utilisée dans une expression. Sinon, continuez et limitez l'accès. Toutefois, veillez à exclure également toutes les références à cette mesure dans l'ensemble du cube.  
+3.  Recherchez ensuite `MeasureExpression`. Une expression de mesure est une mesure basée sur un calcul, qui inclut souvent d'autres mesures. Vérifiez que la mesure que vous souhaitez restreindre n'est pas utilisée dans une expression. Sinon, continuez et limitez l'accès. Toutefois, veillez à exclure également toutes les références à cette mesure dans l'ensemble du cube.  
   
 4.  Enfin, recherchez `DefaultMember`. Notez tous les attributs qui servent de membre par défaut à un attribut. Évitez d'appliquer des restrictions à ces attributs quand vous définissez la sécurité des dimensions.  
   
@@ -127,9 +127,9 @@ ms.locfileid: "48091731"
  Cliquez pour tester la syntaxe MDX définie dans cette page.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Accorder des autorisations de cube ou modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Octroyer un accès personnalisé aux données des cellules &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
- [Accorder des autorisations sur les structures d’exploration de données et modèles &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Accorder des autorisations sur un objet de source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Octroyer un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
+ [Octroyer des autorisations sur des modèles et des structures d’exploration de données &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Octroyer des autorisations sur un objet de source de données &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

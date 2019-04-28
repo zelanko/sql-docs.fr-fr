@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3877278e26b6373c9121ad6b5c7e8249b73dc166
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48173319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736916"
 ---
 # <a name="multidimensional-model-object-processing"></a>Traitement des objets de modèles multidimensionnels
   Le traitement est l'étape, ou la série d'étapes, dans lesquelles Analysis Services charge des données d'une source de données relationnelle dans un modèle multidimensionnel. Pour les objets qui utilisent le mode de stockage MOLAP, les données sont enregistrées sur le disque le dossier des fichiers de la base de données. Pour le mode de stockage ROLAP, le traitement s'effectue à la demande, en réponse à une requête MDX sur un objet. Pour les objets qui utilisent le stockage ROLAP, le traitement fait référence à la mise à jour du cache avant de retourner des résultats de la requête.  
@@ -80,7 +80,7 @@ ms.locfileid: "48173319"
  Lorsque vous traitez des objets dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez sélectionner une option de traitement ou vous pouvez demander à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de déterminer le type de traitement approprié. Les méthodes de traitement disponibles varient d'un objet à l'autre et sont basées sur le type d'objet. En outre, les méthodes disponibles dépendent des modifications qui ont été apportées à l'objet depuis son dernier traitement. Si vous autorisez [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] à sélectionner automatiquement une méthode de traitement, la méthode utilisée sera celle qui permet de traiter complètement l’objet le plus rapidement possible. Pour plus d’informations, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Architecture logique &#40;Analysis Services - données multidimensionnelles&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
- [Objets de base de données &#40;Analysis Services - données multidimensionnelles&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
+ [Architecture logique &#40;Analysis Services - Données multidimensionnelles&#41;](olap-logical/understanding-microsoft-olap-logical-architecture.md)   
+ [Objets de bases de données &#40;Analysis Services - Données multidimensionnelles&#41;](olap-logical/database-objects-analysis-services-multidimensional-data.md)  
   
   

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 605e9f2635ceef0546f4c8e37f74a04a2d27ece0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834506"
 ---
 # <a name="configure-logging-by-using-a-saved-configuration-file"></a>Configurer la journalisation à l'aide d'un fichier de configuration enregistré
   Cette procédure permet de configurer la journalisation de nouveaux conteneurs dans un package en chargeant un fichier de configuration de journalisation déjà enregistré.  

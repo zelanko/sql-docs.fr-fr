@@ -13,20 +13,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 768a9c821c2c8f663bf65c58ed495993795b2eb9
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835945"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Concepteur de capture de données modifiées pour Oracle par Attunity
   La console du concepteur CDC est utilisée pour développer et maintenir les instances Oracle CDC. Il s'agit d'un composant logiciel enfichable MMC (Microsoft Management Console) qui contient les éléments suivants :  
   
--   Assistant Nouvelle Instance : Cet Assistant crée une nouvelle Instance de capture de données modifiées Oracle. Pour plus d'informations sur l'utilisation de l'Assistant Nouvelle instance, consultez [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
+-   Assistant Nouvelle instance : Cet Assistant crée une instance Oracle CDC. Pour plus d'informations sur l'utilisation de l'Assistant Nouvelle instance, consultez [Use the New Instance Wizard](use-the-new-instance-wizard.md).  
   
--   Visionneuse de propriétés d’Instance de capture de données modifiées : Il s’agit d’une vue ancrée affichant l’état et la configuration de l’instance de capture de données modifiées sélectionnée. Pour plus d’informations sur la visionneuse de propriétés, consultez [Procédure : gérer une instance de capture de données modifiées](manage-a-cdc-instance.md).  
+-   Visionneuse de propriétés d'instance de capture de données modifiées : Il s'agit d'une vue ancrée affichant l'état et la configuration de l'instance de capture de données modifiées sélectionnée. Pour plus d’informations sur la visionneuse de propriétés, consultez [Procédure : gérer une instance de capture de données modifiées](manage-a-cdc-instance.md).  
   
--   Éditeur de propriétés d’Instance de capture de données modifiées : Cette boîte de dialogue permet de modifier n’importe quelle instance Oracle CDC Service existant. Pour plus d'informations sur la modification des propriétés d'une instance de capture de données modifiées, consultez [Edit Instance Properties](edit-instance-properties.md).  
+-   Éditeur de propriétés d'instance de capture de données modifiées : Cette boîte de dialogue permet de modifier n'importe quelle instance de service de capture de données modifiées Oracle. Pour plus d'informations sur la modification des propriétés d'une instance de capture de données modifiées, consultez [Edit Instance Properties](edit-instance-properties.md).  
   
 ## <a name="in-this-documentation"></a>Dans cette documentation  
   
