@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721020"
 ---
-# <a name="lesson-2-preparing-the-snapshot-folder"></a>Leçon 2 : Préparation du dossier d'instantanés
+# <a name="lesson-2-preparing-the-snapshot-folder"></a>Leçon 2 : Préparation du dossier d’instantané
   Dans cette leçon, vous allez apprendre à configurer le dossier d'instantanés utilisé pour créer et stocker l'instantané des publications.  
   
 ### <a name="to-create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>Pour créer un partage pour le dossier d'instantanés et attribuer les autorisations  
@@ -51,7 +51,7 @@ ms.locfileid: "54128489"
 10. Cliquez sur **OK** pour fermer la boîte de dialogue **Propriétés de repldata** et créer le partage repldata.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez configuré avec succès le partage du dossier d'instantanés. Ensuite, vous allez configurer la distribution. Consultez [leçon 3 : Configuration de la Distribution](lesson-3-configuring-distribution.md).  
+ Vous avez configuré avec succès le partage du dossier d'instantanés. Ensuite, vous allez configurer la distribution. Voir [Leçon 3 : Configuration de la Distribution](lesson-3-configuring-distribution.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Sécuriser le dossier d'instantané](security/secure-the-snapshot-folder.md)  

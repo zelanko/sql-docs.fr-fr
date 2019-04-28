@@ -12,11 +12,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c5c4226b9ee4f45d7e732044379962489ecacd0f
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62837496"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Sauvegarder, restaurer et déplacer le catalogue SSIS
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] comprend la base de données SSISDB. Interrogez les vues de la base de données SSISDB pour inspecter les objets, les paramètres et les données opérationnelles stockés dans le catalogue **SSISDB** . Cette rubrique fournit des instructions sur la sauvegarde et la restauration de la base de données.  
@@ -39,7 +39,7 @@ ms.locfileid: "58393627"
   
     ```  
   
-3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d'informations, consultez [Procédure : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
+3.  Sauvegardez la base de données SSISDB à l’aide de la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Comment : sauvegarder une base de données (SQL Server Management Studio)](https://go.microsoft.com/fwlink/?LinkId=231812).  
   
 4.  Générez le script CREATE LOGIN pour ##MS_SSISServerCleanupJobLogin## en procédant comme suit. Pour plus d’informations, consultez [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   

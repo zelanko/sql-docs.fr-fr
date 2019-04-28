@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4fe65216ad293786496f412c9cc1451e6b92a7bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866994"
 ---
 # <a name="create-an-analysis-services-project-ssdt"></a>Créer un projet Analysis Services (SSDT)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -143,7 +143,7 @@ ms.locfileid: "52503395"
   
  Les modèles d’éléments répertoriés dans le tableau ci-dessous sont disponibles dans la catégorie Éléments du projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dans la boîte de dialogue **Ajouter un nouvel élément** .  
   
-|Catégorie|Modèle d'élément|Description|  
+|Category|Modèle d'élément|Description|  
 |--------------|-------------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Éléments de projet|Cube|Démarre l’Assistant Cube pour ajouter un nouveau cube au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  
 ||Source de données|Démarre l’Assistant Source de données pour ajouter une nouvelle source de données au projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .|  

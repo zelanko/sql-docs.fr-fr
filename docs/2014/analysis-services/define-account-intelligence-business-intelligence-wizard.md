@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0afc9be649d3d9eb23a9c0e4b1b601b772cd16fc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732567"
 ---
 # <a name="define-account-intelligence-business-intelligence-wizard"></a>Définir l'intelligence comptable (Assistant Business Intelligence)
   Utilisez la page **Définir l'intelligence comptable** pour faire correspondre les types de comptes définis dans l'instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avec ceux définis par une table source de la source de données qui fournit les données de dimension du compte.  
@@ -35,7 +35,7 @@ ms.locfileid: "48209399"
   
  Le tableau ci-dessous répertorie les types de comptes définis dans une instance [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Actif**|Valeur des biens possédés à un moment donné.|  
 |**Balance**|Comptage d'une grandeur à un moment donné.|  
@@ -46,7 +46,7 @@ ms.locfileid: "48209399"
 |**Statistique**|Rapport calculé d'une grandeur, ou comptage d'une grandeur qu'il n'est pas possible d'agréger.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
+ [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

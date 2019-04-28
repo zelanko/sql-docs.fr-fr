@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/29/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aa87aa3514af538f55965b00efe8f5965f5c753f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63003502"
 ---
 # <a name="sysdmdbxtpnonclusteredindexstats-transact-sql"></a>sys.dm_db_xtp_nonclustered_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "51674308"
 |key_merge_count|**bigint**|Nombre cumulé d'opérations de fusion de clé dans l'index.|  
 |key_merge_retry_count|**bigint**|Nombre cumulé de nouvelles tentatives de fusion de clé.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation VIEW DATABASE STATE sur la base de données active.  
   
 ## <a name="see-also"></a>Voir aussi  

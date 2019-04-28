@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41ddab5d08673ea71cefb7cf44169e8da6777292
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727225"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>Création de modèles MDX à l'aide des Outils de données SQL Server (SSDT)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit deux environnements différents pour générer, déployer et gérer des solutions [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] : [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Ces deux environnements implémentent un système de projet. Pour plus d’informations sur les projets Visual Studio, consultez [Projets en tant que conteneurs](https://go.microsoft.com/fwlink/?LinkId=63960) dans MSDN Library.  

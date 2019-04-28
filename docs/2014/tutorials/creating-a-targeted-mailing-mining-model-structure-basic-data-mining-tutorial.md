@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856164"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Création d'une structure de modèle d'exploration de données pour le publipostage ciblé (Didacticiel sur l'exploration de données de base)
   La première étape dans la création d'un scénario de publipostage ciblé consiste à utiliser l'Assistant Exploration de données dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une structure d'exploration de données et un modèle d'exploration de données du type Arbres de décision.  

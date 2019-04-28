@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf6919230c1621d2b81eb41cd715fc1878a90c5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721883"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme de gestion de clusters Microsoft
   Cette section explique l'implémentation de l'algorithme de gestion de clusters [!INCLUDE[msCoName](../../includes/msconame-md.md)] , en particulier les paramètres que vous pouvez utiliser pour contrôler le comportement des modèles de clustering. Vous y trouverez également des informations sur la façon d'améliorer les performances lors de la création et du traitement des modèles de clustering.  
@@ -162,7 +162,7 @@ ms.locfileid: "53371521"
   
 |Indicateur de modélisation|Description|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|La colonne est considérée comme ayant deux états possibles : Manquant et Existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
+|MODEL_EXISTENCE_ONLY|La colonne sera considérée comme ayant deux états possibles : Manquant et existant. Une valeur NULL est une valeur manquante.<br /><br /> S'applique à la colonne de modèle d'exploration de données.|  
 |NOT NULL|La colonne ne peut pas contenir de valeur NULL. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique à la colonne de structure d'exploration de données.|  
   
 ## <a name="requirements"></a>Configuration requise  

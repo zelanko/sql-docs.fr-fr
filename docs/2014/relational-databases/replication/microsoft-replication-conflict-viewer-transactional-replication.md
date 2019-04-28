@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 293048b191fff03b11b7e28d7778a34793b4c7f2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714866"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Outil de résolution des conflits de réplication de Microsoft (réplication transactionnelle)
   L'Outil de résolution des conflits de réplication vous permet d'examiner les conflits qui se sont produits lors de la synchronisation pour la réplication transactionnelle d'égal à égal et la réplication transactionnelle avec des abonnements de mise à jour en attente. Pour plus d’informations, consultez [Afficher les conflits de données pour les publications transactionnelles &#40;SQL Server Management Studio&#41;](view-data-conflicts-for-transactional-publications-sql-server-management-studio.md).  
@@ -61,7 +61,7 @@ ms.locfileid: "52788385"
  Sélectionnez cette option pour afficher les cinq premières colonnes et toute colonne qui comporte des conflits. Cette option est utile lorsque la table comporte de nombreuses colonnes si vous voulez afficher uniquement les colonnes les plus pertinentes pour la résolution du conflit. Les cinq premières colonnes figurent toujours dans cette vue du fait que les champs qui identifient une ligne (par exemple la clé primaire ou les noms des champs) se trouvent souvent parmi les premières colonnes de la table.  
   
  **Informations sur la colonne** (**…**)  
- Affiche les informations sur la colonne : **Nom de la table**, **nom de colonne**, **Type de données**, et **valeur de la colonne**.  
+ Cliquez pour afficher les informations de colonne : **Nom de la table**, **Nom de la colonne**, **Type de données** et **Valeur de la colonne**.  
   
  **Consigner les détails de ce conflit**  
  Activez cette case pour enregistrer les détails du conflit dans un fichier. Pour spécifier l'emplacement du fichier, pointez sur le menu **Affichage** et cliquez sur **Options**. Entrez une valeur ou cliquez sur le bouton d'exploration (**...**) et allez au fichier voulu. Cliquez sur **OK** pour fermer la boîte de dialogue **Options** .  

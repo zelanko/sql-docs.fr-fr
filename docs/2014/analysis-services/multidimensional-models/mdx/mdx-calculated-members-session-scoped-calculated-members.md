@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53d6cc069e316bc399235aafbf59c7586bbdc6c3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725393"
 ---
 # <a name="creating-session-scoped-calculated-members-mdx"></a>Création de membres calculés au niveau de la session (MDX)
   Pour créer un membre calculé disponible dans l’ensemble d’une session MDX (Multidimensional Expressions), vous utilisez l’instruction [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member). Un membre calculé créé à l'aide de l'instruction CREATE MEMBER n'est supprimé qu'après la fermeture de la session MDX.  
@@ -53,6 +53,6 @@ sum(([Stores].[ByLocation].Lag(3) :
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création d’étendue de requête des membres calculés &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
+ [Création de membres calculés d’étendue de requête &#40;MDX&#41;](mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

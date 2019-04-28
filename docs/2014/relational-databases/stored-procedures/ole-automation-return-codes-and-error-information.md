@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 34744bedb701155d2695f6efc5aab3c493e6cf48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48132929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011268"
 ---
 # <a name="ole-automation-return-codes-and-error-information"></a>Codes de retour OLE Automation et informations sur les erreurs
-  Procédures stockées du système OLE Automation retournent un `int` code de retour qui équivaut au HRESULT retourné par l’opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Une valeur HRESULT différente de zéro est un code d’erreur OLE de forme hexadécimale 0 x 800*nnnnn*, qui est retourné comme un `int` valeur dans un code de retour de procédure stockée, HRESULT est au format 214*nnnnnnn*.  
+  Les procédures stockées système OLE Automation retournent un code de retour de type `int` qui équivaut au HRESULT retourné par l'opération OLE Automation sous-jacente. Une valeur HRESULT égale à 0 indique que l'opération a réussi. Une valeur HRESULT différente de zéro est un code d’erreur OLE de forme hexadécimale 0 x 800*nnnnn*, qui est retourné comme un `int` valeur dans un code de retour de procédure stockée, HRESULT est au format 214*nnnnnnn*.  
   
  Par exemple, en passant un nom d’objet non valide (SQLDMO. Xyzzy) à sp_OACreate provoque la procédure retournent un `int` HRESULT de 2147221005, ce qui correspond à 0x800401f3 en hexadécimal.  
   

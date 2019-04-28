@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 23bbfd748bcb649e5f7d103683d20413764a62a8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48078928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842498"
 ---
 # <a name="sql-server-profiler---find-dialog-box"></a>Générateur de profils SQL Server (boîte de dialogue Rechercher)
   Utilisez la boîte de dialogue **Rechercher** pour rechercher une trace de caractères ou de mots spécifiques. Pour annuler une recherche en cours, appuyez sur ÉCHAP.  
@@ -48,7 +48,7 @@ ms.locfileid: "48078928"
   
 ## <a name="see-also"></a>Voir aussi  
  [Rechercher une valeur ou une colonne de données lors du traçage &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/find-a-value-or-data-column-while-tracing-sql-server-profiler.md)   
- [Créer une Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
+ [Créer une trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Ouvrir une table de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Ouvrir un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [Modèles et autorisations du générateur de SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   

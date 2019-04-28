@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45543781aad4ea3997b0d62b238ddf348a3c8230
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48110229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732641"
 ---
 # <a name="data-source-view-properties-dialog-box-ssas"></a>Boîte de dialogue Propriétés de la vue de source de données (SSAS)
   Utilisez la boîte de dialogue **Propriétés de la vue de source de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés d'une vue de source de données dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez afficher la boîte de dialogue **Propriétés de la vue de source de données** en cliquant avec le bouton droit sur une vue de source de données dans **l’Explorateur d’objets** et en sélectionnant **Propriétés**.  

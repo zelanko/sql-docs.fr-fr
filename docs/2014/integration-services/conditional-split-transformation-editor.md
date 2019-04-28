@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9307dd8c31d1f84f989e15dc36086066f6969ba
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835185"
 ---
 # <a name="conditional-split-transformation-editor"></a>Éditeur de transformation de fractionnement conditionnel
   Utilisez la boîte de dialogue **Éditeur de transformation de fractionnement conditionnel** pour créer des expressions, définir l'ordre dans lequel les expressions sont évaluées et nommer les sorties d'un fractionnement conditionnel. Cette boîte de dialogue comprend des fonctions mathématiques, de chaînes de caractères et de date/heure, ainsi que des opérateurs utilisés pour créer des expressions. La première condition évaluée comme vraie détermine la sortie vers laquelle une ligne est dirigée.  
@@ -42,7 +42,7 @@ ms.locfileid: "58392959"
   
  Il est possible de spécifier la valeur de cette propriété en utilisant l'expression d'une propriété.  
   
- **Rubriques connexes :**  [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [opérateurs &#40;SSIS Expression&#41;](expressions/operators-ssis-expression.md), et [fonctions &#40;SSIS Expression&#41;](expressions/functions-ssis-expression.md)  
+ **Rubriques connexes :**  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Opérateurs &#40;expression SSIS&#41;](expressions/operators-ssis-expression.md) et [Fonctions &#40;expression SSIS&#41;](expressions/functions-ssis-expression.md)  
   
  **Nom de sortie par défaut**  
  Tapez un nom pour la sortie par défaut ou utilisez le nom par défaut.  

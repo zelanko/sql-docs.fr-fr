@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62735065"
 ---
 # <a name="transfer-octet-length"></a>Longueur en octets du transfert
 La longueur d’octet de transfert d’une colonne est le nombre maximal d’octets retournés à l’application lorsque les données sont transférées vers son type de données C par défaut. Pour les données de caractères, la longueur d’octet de transfert n’inclut pas d’espace pour le caractère de fin de la valeur null. La longueur d’octet de transfert d’une colonne peut être différente du nombre d’octets requis pour stocker les données sur la source de données.  
@@ -35,7 +35,7 @@ La longueur d’octet de transfert d’une colonne est le nombre maximal d’oct
 |SQL_TINYINT|1|  
 |SQL_SMALLINT|2|  
 |SQL_INTEGER|4|  
-|SQL_BIGINT|Le nombre d’octets requis pour conserver la représentation sous forme de caractère de ces données si le jeu de caractères est ANSI et deux fois ce nombre si le jeu de caractères UNICODE, car ce type de données est retourné comme une chaîne de caractères par défaut. La représentation sous forme de caractères se compose de 20 caractères : 19 chiffres et un signe, si signé, ou 20 chiffres, non signée. Par conséquent, la longueur est de 20.|  
+|SQL_BIGINT|Le nombre d’octets requis pour conserver la représentation sous forme de caractère de ces données si le jeu de caractères est ANSI et deux fois ce nombre si le jeu de caractères UNICODE, car ce type de données est retourné comme une chaîne de caractères par défaut. La représentation sous forme de caractère est constitué de 20 caractères : 19 pour les chiffres et une connexion, si signé, ou 20 chiffres, non signée. Par conséquent, la longueur est de 20.|  
 |SQL_REAL|4|  
 |SQL_FLOAT|8|  
 |SQL_DOUBLE|8|  

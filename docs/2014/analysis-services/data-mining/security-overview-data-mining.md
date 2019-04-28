@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85a208cdc973cf4e54bb0a68020182d41eb798f3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733041"
 ---
 # <a name="security-overview-data-mining"></a>Vue d'ensemble de la sécurité (exploration de données)
   La sécurisation de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a lieu à plusieurs niveaux. Vous devez sécuriser chaque instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et ses sources de données pour vous assurer que seuls les utilisateurs autorisés disposent d'autorisations de lecture/écriture sur les dimensions, les modèles d'exploration de données et les sources de données sélectionnés. Vous devez également sécuriser les sources de données sous-jacentes pour empêcher les utilisateurs non autorisés de compromettre volontairement les informations professionnelles sensibles. Le processus de sécurisation d’une instance de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est décrit dans les rubriques suivantes.  
@@ -26,13 +26,13 @@ ms.locfileid: "48149619"
 ##  <a name="bkmk_Architecture"></a> Architecture de la sécurité  
  Consultez les ressources suivantes pour en savoir plus sur l'architecture de sécurité de base d'une instance d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], notamment sur la manière dont [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise l'authentification Windows de [!INCLUDE[msCoName](../../includes/msconame-md.md)] pour authentifier l'accès utilisateur.  
   
--   [Rôles de sécurité &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [Rôles de sécurité &#40;Analysis Services - Données multidimensionnelles&#41;](../multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [Propriétés de sécurité](../server-properties/security-properties.md)  
   
--   [Configurer les comptes de Service &#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
+-   [Configurer les comptes de service &#40;Analysis Services&#41;](../instances/configure-service-accounts-analysis-services.md)  
   
--   [Autoriser l’accès aux objets et aux opérations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Autorisation de l’accès à des objets et des opérations &#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Configuration du compte d'ouverture de session d'Analysis Services  
  Vous devez sélectionner un compte d’ouverture de session approprié pour [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et définir ses autorisations. Vous devez vérifier que le compte d’ouverture de session [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dispose uniquement des autorisations indispensables pour effectuer les tâches nécessaires, notamment les autorisations appropriées sur les sources de données sous-jacentes.  

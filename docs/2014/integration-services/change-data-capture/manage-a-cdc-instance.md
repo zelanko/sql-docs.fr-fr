@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f29463784436918834fe94c3ac5e4a8c5420703
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835601"
 ---
 # <a name="manage-a-cdc-instance"></a>Gérer une instance de capture de données modifiées
   Vous pouvez utiliser la console du concepteur CDC pour afficher des informations sur les instances que vous créez et gérer le fonctionnement des instances.  

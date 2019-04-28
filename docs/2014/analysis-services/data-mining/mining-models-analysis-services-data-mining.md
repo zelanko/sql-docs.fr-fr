@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0bf91af4556694ea032dccd8d502e4480fc4c750
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733771"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Modèles d'exploration de données (Analysis Services - Exploration de données)
   Un *modèle d’exploration de données* est créé en appliquant un algorithme aux données, mais c’est plus qu’un algorithme ou qu’un conteneur de métadonnées : il s’agit d’un jeu de données, de statistiques et de modèles qui peuvent être appliqués à de nouvelles données pour générer des prédictions et pour effectuer des inférences sur les relations.  

@@ -15,18 +15,18 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4271188149c8bafaaf256fa5056dd25ffc39aa38
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62843121"
 ---
 # <a name="about-the-sql-server-license-terms"></a>À propos des termes du contrat de licence SQL Server
   Les termes de la Licence d'utilisation du logiciel [!INCLUDE[msCoName](../includes/msconame-md.md)] sont copiés vers l'ordinateur local lorsque [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] est installé. Lorsque plusieurs instances des mêmes édition et langue de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont installées sur le même ordinateur, une seule copie du contrat de licence s'applique à toutes les instances de cette édition et de cette langue. Les fichiers sont écrits dans : % ProgramFiles%\\[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\license ou % % ProgramFiles(x86) \ [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]\120\License termes\\.  
   
  Lorsque plusieurs instances des mêmes édition et langue de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont installées sur le même ordinateur, une seule copie du contrat de licence s'applique à toutes les instances de cette édition et de cette langue.  
   
- Le nom de fichier des termes du contrat de licence indique l'édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ainsi que l'édition linguistique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui est installée. Le nom de fichier des termes du contrat de licence est au format : SQLServer2014_License_Edition_\<TYPE > _\<LCID > .rtf. Exemple :  
+ Le nom de fichier des termes du contrat de licence indique l'édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ainsi que l'édition linguistique de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] qui est installée. Le nom de fichier des termes du contrat de licence est au format : SQLServer2014_License_Edition_\<TYPE>_\<LCID>.rtf. Exemple :  
   
 -   SQLServer2014_License_DEV_1033.rtf pour [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Developer, en langue anglaise.  
   
@@ -34,9 +34,9 @@ ms.locfileid: "53354606"
   
  TYPE indique l'édition de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Les segments de noms de fichiers suivants sont utilisés pour identifier les éditions de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
--   ENT - Enterprise Edition : Licence serveur/licence d'Accès client (CAL)  
+-   ENT - Enterprise Edition : Serveur/Client License (CAL) gestion des licences d’accès  
   
--   ENTCORE - Enterprise Edition : licence par cœur  
+-   ENTCORE - Enterprise Edition : Licence par cœur  
   
 -   BI - Business Intelligence  
   

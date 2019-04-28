@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18889a1dfded5f8653446c02a637502a75efd659
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733668"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>Afficher ou modifier les paramètres d'algorithme
   Vous pouvez modifier les paramètres fournis avec les algorithmes que vous utilisez pour générer des modèles d'exploration de données pour personnaliser les résultats du modèle.  
@@ -36,7 +36,7 @@ ms.locfileid: "48226987"
   
 -   spécifier une valeur de départ ou la taille du jeu de données d'exclusion interne utilisé pour la création de modèle.  
   
- Les paramètres fournis pour chaque algorithme varient considérablement. Pour obtenir la liste des paramètres que vous pouvez définir pour chaque algorithme, consultez les rubriques de références techniques dans cette section : [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
+ Les paramètres fournis pour chaque algorithme varient considérablement ; Pour obtenir la liste des paramètres que vous pouvez définir pour chaque algorithme, consultez les rubriques de référence technique de cette section : [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md).  
   
 ### <a name="change-an-algorithm-parameter"></a>Changer un paramètre d'algorithme  
   

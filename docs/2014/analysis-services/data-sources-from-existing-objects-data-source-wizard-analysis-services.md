@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90773f9a7ccf7e1e34cc81f761b7a9849144d4a1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732780"
 ---
 # <a name="data-sources-from-existing-objects-data-source-wizard-analysis-services"></a>Sources de données d'objets existants (Assistant Source de données) (Analysis Services)
   Utilisez la page **Sources de données d'objets existants** pour spécifier une source de données ou un projet existant sur laquelle (ou lequel) baser la nouvelle source de données.  
@@ -38,7 +38,7 @@ ms.locfileid: "48142239"
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide F1 de l’Assistant Source de données &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
- [Sources de données dans les modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [Sources de données dans des modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

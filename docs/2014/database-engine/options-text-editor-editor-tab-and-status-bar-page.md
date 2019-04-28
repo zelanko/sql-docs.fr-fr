@@ -1,5 +1,5 @@
 ---
-title: 'Options (éditeur de texte : onglet Éditeur et Page barre d’état) | Microsoft Docs'
+title: 'Options (Éditeur de texte : Onglet Éditeur et Page barre d’état) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 241a74861a7f634389324276daf9b03a8590e64d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844269"
 ---
-# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Options (Éditeur de texte/onglet Éditeur et page Barre d’état)
+# <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Options (Éditeur de texte : onglet Éditeur et page Barre d’état)
   L' **onglet Éditeur et la page Barre d'état** vous permettent de personnaliser les informations affichées par les éditeurs de requête [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] . Vous pouvez spécifier le niveau d'informations affiché dans l'onglet et la barre d'état de la fenêtre Éditeur de requête, et indiquer si la barre d'état doit apparaître en haut ou en bas de la fenêtre de l'éditeur.  
   
 ## <a name="option-settings-by-editor"></a>Paramètres d'option par éditeur  
@@ -38,7 +38,7 @@ ms.locfileid: "48055449"
  **Aucun**  
  La barre d'état n'affiche pas d'informations horaires.  
   
- **fin**  
+ **End**  
  La barre d'état affiche l'heure réelle du jour pendant l'exécution du script. À l'achèvement du script, l'affichage indique l'heure du jour à laquelle le script s'est terminé.  
   
  **Écoulé**  
@@ -71,7 +71,7 @@ ms.locfileid: "48055449"
  **Top**  
  La barre d'état apparaît en haut de la fenêtre de l'éditeur de requête.  
   
- **en bas**  
+ **Bottom**  
  La barre d'état apparaît au bas de la fenêtre de l'éditeur de requête.  
   
 ## <a name="tab-text"></a>Texte de l'onglet  

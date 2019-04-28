@@ -19,18 +19,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1454e6d0644b8eed74cf9328e2068d91e7c8e8ba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733394"
 ---
 # <a name="mining-model-viewer-tasks-and-how-tos"></a>Tâches de la visionneuse de modèle d'exploration de données et procédures
   Le concepteur d’exploration de données de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] contient des outils que vous pouvez utiliser pour explorer les modèles d’exploration de données. Les rubriques suivantes expliquent en détail comment exécuter les tâches spécifiques à l’utilisation de l’onglet **Visionneuse de modèle d’exploration** du Concepteur.  
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Sélectionner un modèle d’exploration de données et une visionneuse d’exploration de données](select-a-mining-model-and-a-data-mining-viewer.md)  
+-   [Sélectionner un modèle d'exploration de données et une visionneuse d'exploration de données](select-a-mining-model-and-a-data-mining-viewer.md)  
   
 -   [Copier une vue d’un modèle d’exploration de données](copy-a-view-of-a-mining-model.md)  
   
@@ -38,16 +38,16 @@ ms.locfileid: "48189670"
   
 -   [Filtrer une règle dans un modèle de règles d’association](filter-a-rule-in-an-association-rules-model.md)  
   
--   [Filtrer un jeu d’éléments dans un modèle de règles d’association](filter-an-itemset-in-an-association-rules-model.md)  
+-   [Filtrer un jeu d'éléments dans un modèle de règles d'association](filter-an-itemset-in-an-association-rules-model.md)  
   
 -   [Extraire des données de cas à partir d’un modèle d’exploration de données](drill-through-to-case-data-from-a-mining-model.md)  
   
--   [Afficher la formule d’une série chronologique modèle &#40;exploration de données&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Afficher la formule d’un modèle de série chronologique &#40;exploration de données&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
--   [Changer les couleurs utilisées dans la visionneuse d’exploration de données](change-the-colors-used-in-the-data-mining-viewer.md)  
+-   [Modifier les couleurs utilisées dans la visionneuse d'exploration de données](change-the-colors-used-in-the-data-mining-viewer.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Didacticiel d’exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md)  
+ [Didacticiel sur l'exploration de données de base](../../tutorials/basic-data-mining-tutorial.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md)  
   
   

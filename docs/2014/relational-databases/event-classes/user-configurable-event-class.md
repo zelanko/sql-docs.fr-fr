@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 975da6bc447ed3a29f39dd9a8e877a5b556098c6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724828"
 ---
 # <a name="user-configurable-event-class"></a>Configurables par l’utilisateur, classe d’événements
   Utilisez la catégorie d'événement Configurables par l'utilisateur pour surveiller les événements définis par l'utilisateur. Créez des événements définis par l'utilisateur pour surveiller des événements ne pouvant pas être surveillés par les événements fournis par le système dans les autres catégories d'événement. Par exemple, il est possible de créer un événement défini par l'utilisateur pour surveiller la progression de l'application que vous testez. Durant l'exécution de l'application, des événements peuvent être générés à des points prédéfinis, ce qui vous permet de définir le point d'exécution actuel de votre application.  

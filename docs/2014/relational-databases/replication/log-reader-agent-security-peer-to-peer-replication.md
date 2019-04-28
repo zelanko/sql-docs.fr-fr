@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6bcf7d78fd550404f81f9cc303414303ad82504
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63000356"
 ---
 # <a name="log-reader-agent-security-peer-to-peer-replication"></a>Sécurité de l'Agent de lecture du journal (réplication d'égal à égal)
   La page **Sécurité de l'Agent de lecture du journal** permet de définir les comptes sous lesquels l'Agent de lecture du journal sur chaque homologue s'exécute et établit des connexions. Pour plus d’informations sur les autorisations exigées par les agents et les bonnes pratiques méthodes pour la sécurité de la réplication, consultez [Modèle de sécurité de l’Agent de réplication](security/replication-agent-security-model.md) et [Bonnes pratiques en matière de sécurité de la réplication](security/replication-security-best-practices.md).  
@@ -40,7 +40,7 @@ ms.locfileid: "52761441"
  Le contexte dans lequel la connexion au serveur de distribution s'établit. La connexion locale au serveur de distribution est toujours établie en utilisant le contexte du compte [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows sous lequel l’Agent s’exécute. Par conséquent, ce champ contient toujours **Emprunter l’identité '\<Domaine>\\<Connexion>\>'** ou **Emprunter l’identité '\<Ordinateur>\\<Connexion>\>'**.  
   
  **Connexion au serveur de publication**  
- Contexte sous lequel la connexion au serveur de publication est établie. La connexion au serveur de publication peut être établie en utilisant une connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le contexte du compte Windows sous lequel l'Agent s'exécute. Les champs affichent : **Utiliser la connexion «\<connexion >'**, **emprunter l’identité '\<domaine >\\< connexion\>'** ou **emprunter l’identité '\<ordinateur >\\< connexion\>'**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
+ Contexte sous lequel la connexion au serveur de publication est établie. La connexion au serveur de publication peut être établie en utilisant une connexion [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou le contexte du compte Windows sous lequel l'Agent s'exécute. Le champ affiche l’un des éléments suivants : **Utiliser la connexion \<Connexion>**, **Emprunter l’identité \<Domaine>\\<Connexion\>** ou **Emprunter l’identité\<Ordinateur>\\<Connexion\>**. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recommande d'établir toutes les connexions dans le contexte du compte Windows.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Administrer une topologie d’égal à égal &#40;programmation Transact-SQL de la réplication&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   

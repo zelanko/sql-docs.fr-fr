@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85f0c099aba12fe9a4049fe787e248cfe580ff3b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731998"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Scénario Valeur cible (Outils d'analyse de table pour Excel)
   ![Bouton de recherche d’objectif dans Outils d’analyse de Table](media/tat-goalseek.gif "valeur cible de bouton dans Outils d’analyse de Table")  

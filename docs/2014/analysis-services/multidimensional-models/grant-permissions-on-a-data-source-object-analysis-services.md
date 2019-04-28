@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 124795b07c79d0b2478bb91121d37783a48a1782
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725853"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Octroyer des autorisations sur un objet de source de données (Analysis Services)
   Généralement, la plupart des utilisateurs d' [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'ont pas besoin d'accéder aux sources de données d'un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . D'ordinaire, les utilisateurs interrogent simplement les données d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Toutefois, dans le contexte de l'exploration de données, lors de l'exécution de prévisions en fonction d'un modèle d'exploration, par exemple, l'utilisateur doit joindre les données connues d'un modèle d'exploration de données avec les données fournies par l'utilisateur. Pour se connecter à la source de données qui contient les données fournies par l’utilisateur, celui-ci doit utiliser une requête DMX (Data Mining Extensions) qui contient la clause [OPENQUERY &#40;DMX&#41;](/sql/dmx/source-data-query-openquery) ou la clause [OPENROWSET &#40;DMX&#41;](/sql/dmx/source-data-query-openrowset).  
@@ -55,11 +55,11 @@ ms.locfileid: "48126259"
      Si le client n’autorise pas l’emprunt d’identité (via la propriété Impersonation Level dans OLE DB et d’autres composants du client), [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tente de se connecter de manière anonyme à la source de données sous-jacente. Les connexions anonymes aux sources de données distantes réussissent rarement, car la plupart des sources de données n'acceptent pas les connexions anonymes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Sources de données dans les modèles multidimensionnels](data-sources-in-multidimensional-models.md)   
- [Propriétés de chaîne de connexion &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
- [Méthodologies d’authentification pris en charge par Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Octroyer un accès personnalisé aux données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Accorder des autorisations de cube ou modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Octroyer un accès personnalisé aux données des cellules &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Sources de données dans des modèles multidimensionnels](data-sources-in-multidimensional-models.md)   
+ [Propriétés des chaînes de connexion &#40;Analysis Services&#41;](../instances/connection-string-properties-analysis-services.md)   
+ [Méthodologies d'authentification prises en charge par Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)   
+ [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
+ [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
+ [Octroyer un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

@@ -15,25 +15,25 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1db3c3efe332eb65504c9476a569ec54b49cc1a9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62874828"
 ---
 # <a name="filestream-sql-server"></a>FILESTREAM (SQL Server)
-  FILESTREAM permet aux applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]de stocker des données non structurées, telles que des documents et des images, dans le système de fichiers. Les applications peuvent tirer parti des API de diffusion et des performances du système de fichiers, et en même temps maintenir la cohérence transactionnelle entre les données non structurées et les données structurées correspondantes.  
+  FILESTREAM permet aux applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de stocker des données non structurées, telles que des documents et des images, dans le système de fichiers. Les applications peuvent tirer parti des API de diffusion et des performances du système de fichiers, et en même temps maintenir la cohérence transactionnelle entre les données non structurées et les données structurées correspondantes.  
   
  FILESTREAM intègre le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] avec un système NTFS système de fichiers en stockant `varbinary(max)` données d’objet binaire volumineux (BLOB) en tant que fichiers sur le système de fichiers. Les instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] peuvent insérer, mettre à jour, interroger, rechercher et sauvegarder des données FILESTREAM. Les interfaces de système de fichiers Win32 fournissent l'accès de diffusion en continu aux données.  
   
  FILESTREAM utilise le cache système NT pour mettre en cache les données de fichiers. Cela aide à réduire tout effet que les données FILESTREAM peuvent avoir sur les performances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Le pool de mémoires tampons [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'est pas utilisé ; par conséquent, cette mémoire est disponible pour le traitement de requête.  
   
- FILESTREAM n'est pas activé automatiquement lorsque vous installez ou mettez à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous devez activer FILESTREAM à l’aide du Gestionnaire de configuration SQL Server et de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour utiliser FILESTREAM, vous devez créer ou modifier une base de données de sorte qu'elle contienne un type spécial de groupe de fichiers. Ensuite, créez ou modifiez une table pour qu’il contienne un `varbinary(max)` colonne avec l’attribut FILESTREAM. Après avoir effectué ces tâches, vous pouvez utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] et Win32 pour gérer les données FILESTREAM.  
+ FILESTREAM n'est pas activé automatiquement lorsque vous installez ou mettez à niveau [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous devez activer FILESTREAM à l’aide du Gestionnaire de configuration SQL Server et de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Pour utiliser FILESTREAM, vous devez créer ou modifier une base de données de sorte qu'elle contienne un type spécial de groupe de fichiers. Ensuite, créez ou modifiez une table afin qu'elle contienne une colonne `varbinary(max)` avec l'attribut FILESTREAM. Après avoir effectué ces tâches, vous pouvez utiliser [!INCLUDE[tsql](../../includes/tsql-md.md)] et Win32 pour gérer les données FILESTREAM.  
   
  Pour plus d’informations sur l’installation et l’utilisation de FILESTREAM, consultez la liste des [tâches connexes](#reltasks).  
   
 ##  <a name="whentouse"></a> Quand utiliser FILESTREAM  
- Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], objets BLOB peut être standard `varbinary(max)` données qui stocke les données dans des tables ou FILESTREAM `varbinary(max)` objets qui stockent les données dans le système de fichiers. La taille et l'utilisation des données déterminent si vous devez utiliser du stockage de base de données ou du stockage de système de fichiers. Si les conditions suivantes sont remplies, vous devez envisager d'utiliser FILESTREAM :  
+ Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], les objets blob peuvent être des données `varbinary(max)` standard qui stockent les données dans des tables, ou des objets `varbinary(max)` FILESTREAM qui stockent les données dans le système de fichiers. La taille et l'utilisation des données déterminent si vous devez utiliser du stockage de base de données ou du stockage de système de fichiers. Si les conditions suivantes sont remplies, vous devez envisager d'utiliser FILESTREAM :  
   
 -   La taille des objets stockés est, en moyenne, supérieure à 1 Mo.  
   
@@ -45,9 +45,9 @@ ms.locfileid: "48087239"
   
   
 ##  <a name="storage"></a> Stockage FILESTREAM  
- Stockage FILESTREAM est implémenté comme un `varbinary(max)` colonne dans laquelle les données sont stockées en tant qu’objets BLOB dans le système de fichiers. Les tailles des objets blob sont limitées uniquement par la taille de volume du système de fichiers. La norme `varbinary(max)` limitation de taille des fichiers de 2 Go ne s’applique pas aux objets BLOB sont stockés dans le système de fichiers.  
+ Le stockage FILESTREAM est implémenté en tant que colonne `varbinary(max)` dans laquelle les données sont stockées comme objet blob dans le système de fichiers. Les tailles des objets blob sont limitées uniquement par la taille de volume du système de fichiers. La limitation `varbinary(max)` standard de tailles de fichiers de 2 Go ne s'applique pas aux objets blob stockés dans le système de fichiers.  
   
- Pour spécifier qu’une colonne doit stocker des données dans le système de fichiers, spécifiez l’attribut FILESTREAM sur une `varbinary(max)` colonne. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] stocke alors toutes les données pour cette colonne dans le système de fichiers, mais pas dans le fichier de base de données.  
+ Pour spécifier qu'une colonne doit stocker des données dans le système de fichiers, spécifiez l'attribut FILESTREAM sur une colonne `varbinary(max)`. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] stocke alors toutes les données pour cette colonne dans le système de fichiers, mais pas dans le fichier de base de données.  
   
  Les données FILESTREAM doivent être stockées dans des groupes de fichiers FILESTREAM. Un groupe de fichiers FILESTREAM est un groupe de fichiers spécial qui contient des répertoires de système de fichiers au lieu des fichiers eux-mêmes. Ces répertoires de système de fichiers portent le nom de *conteneurs de données*. Les conteneurs de données sont l’interface entre le stockage du [!INCLUDE[ssDE](../../includes/ssde-md.md)] et le stockage du système de fichiers.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48087239"
 > [!NOTE]  
 >  Le chiffrement n'est pas pris en charge sur les données FILESTREAM.  
   
- Seul le compte sous lequel le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compte de service s’exécute dispose des autorisations NTFS sur le conteneur FILESTREAM. Nous recommandons de n'accorder des autorisations sur le conteneur de données à aucun autre compte.  
+ Seul le compte sous lequel le compte de service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] s'exécute dispose des autorisations NTFS sur le conteneur FILESTREAM. Nous recommandons de n'accorder des autorisations sur le conteneur de données à aucun autre compte.  
   
 > [!NOTE]  
 >  Les connexions SQL ne fonctionnent pas avec les conteneurs FILESTREAM. Seule l'authentification NTFS fonctionne avec les conteneurs FILESTREAM.  
@@ -135,7 +135,7 @@ ms.locfileid: "48087239"
 |Ouvert pour l'écriture.|Ouvert pour l'écriture.|L'opération d'ouverture sur la transaction 2 échoue avec une exception ERROR_SHARING_VIOLATION.|L'opération d'ouverture sur la transaction 2 échoue avec une exception ERROR_SHARING_VIOLATION.|  
 |Ouvert pour la lecture.|Ouvert pour SELECT.|Réussite des deux transactions.|Réussite des deux transactions.|  
 |Ouvert pour la lecture.|Ouvert pour UPDATE ou DELETE.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas les opérations de lecture effectuées dans la transaction 1.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas les opérations de lecture effectuées dans la transaction 1.|  
-|Ouvert pour l'écriture.|Ouvert pour SELECT.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|Réussite des deux transactions.|  
+|Ouvert pour l'écriture.|Ouvert pour SELECT.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|Réussite des deux transactions.|  
 |Ouvert pour l'écriture.|Ouvert pour UPDATE ou DELETE.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|La transaction 2 se bloque jusqu'à ce que la transaction 1 valide ou termine la transaction, ou l'opération d'obtention d'un verrou pour la transaction se solde par une erreur de délai d'attente.|  
 |Ouvert pour SELECT.|Ouvert pour la lecture.|Réussite des deux transactions.|Réussite des deux transactions.|  
 |Ouvert pour SELECT.|Ouvert pour l'écriture.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas la transaction 1.|Réussite des deux transactions. Les opérations d'écriture sous la transaction 2 n'affectent pas la transaction 1.|  
@@ -163,6 +163,6 @@ ms.locfileid: "48087239"
   [Configurer FILESTREAM sur un cluster de basculement](set-up-filestream-on-a-failover-cluster.md)  
   [Configurer un pare-feu pour l’accès FILESTREAM](configure-a-firewall-for-filestream-access.md)  
   
-##  <a name="relcontent"></a> Contenu connexe  
+##  <a name="relcontent"></a> Contenu associé  
  [Compatibilité de FILESTREAM avec d’autres fonctionnalités SQL Server](filestream-compatibility-with-other-sql-server-features.md)  
   

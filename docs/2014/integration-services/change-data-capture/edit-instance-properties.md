@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f7873f616e2a6e9657f2e7c59c745fdab77c9b61
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836048"
 ---
 # <a name="edit-instance-properties"></a>Modifier les propriétés d'instance
   Utilisez l'éditeur de propriétés pour apporter des modifications à l'instance CDC après avoir créé les configurations initiales. Vous pouvez effectuer les opérations suivantes dans l'éditeur de propriétés.  

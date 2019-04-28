@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 43eed16aa9cd69d70f308c3ce397720020446fdd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62885570"
 ---
 # <a name="troubleshooting-tools-for-package-development"></a>Outils de dépannage pour le développement des packages
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] comprend des fonctionnalités et des outils que vous pouvez utiliser pour dépanner les packages quand vous les développez dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

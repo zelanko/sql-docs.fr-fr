@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5e8844d3152f9465c8bb61acca9351f58834087f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62982285"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch, fonction
 **Conformité**  
@@ -50,7 +50,7 @@ SQLRETURN SQLExtendedFetch(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *FetchOrientation*  
@@ -79,9 +79,9 @@ SQLRETURN SQLExtendedFetch(
 |--------------|-----------|-----------------|  
 |01000|Avertissement général|Message d’information spécifiques au pilote. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01004|Données de chaîne droite tronquées|Données de chaîne ou binaire retournées pour une colonne a entraîné la troncation des caractères non vides ou non NULL des données binaires. S’il s’agissait d’une valeur de chaîne, il a été tronquée à droite. S’il s’agissait d’une valeur numérique, la partie fractionnaire du nombre a été tronquée.  (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01 S 01|Erreur de ligne|Une erreur s’est produite lors de l’extraction d’une ou plusieurs lignes. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S01|Erreur de ligne|Une erreur s’est produite lors de l’extraction d’une ou plusieurs lignes. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |01S06|Tentative d’extraction avant que le jeu de résultats renvoyé le premier ensemble de lignes|L’ensemble de lignes demandé avec chevauchement le début du jeu de résultats si la position actuelle a été au-delà de la première ligne et soit *FetchOrientation* a été SQL_PRIOR ou *FetchOrientation* a été SQL_RELATIVE avec un négatif *FetchOffset* dont la valeur absolue est inférieure ou égale à la SQL_ROWSET_SIZE actuel. (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
-|01 S 07|Troncation fractionnelle|Les données retournées pour une colonne a été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour heure, timestamp et les types de données interval contenant un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
+|01S07|Troncation fractionnelle|Les données retournées pour une colonne a été tronquées. Types de données numériques, la partie fractionnaire du nombre ont été tronquée. Pour heure, timestamp et les types de données interval contenant un composant au moment, la partie fractionnaire du temps a été tronquée.<br /><br /> (La fonction retourne SQL_SUCCESS_WITH_INFO.)|  
 |07006|Violation de l’attribut de type de données restreint|Une valeur de données n’a pas pu être convertie au type de données C spécifié par *TargetType* dans **SQLBindCol**.|  
 |07009|Index de descripteur non valide|La colonne 0 a été liée avec **SQLBindCol**, et l’attribut d’instruction SQL_ATTR_USE_BOOKMARKS était définie sur SQL_UB_OFF.|  
 |08S01|Échec de lien de communication|Échec de la liaison de communication entre le pilote et de la source de données à laquelle le pilote a été connecté avant le traitement de la fonction a été exécutée.|  

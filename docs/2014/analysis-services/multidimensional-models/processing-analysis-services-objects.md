@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 704b775a881bc3c08f9789229231e05b56005257
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48050969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736787"
 ---
 # <a name="processing-analysis-services-objects"></a>Traitement des objets Analysis Services
   Le traitement affecte les types d’objets [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] suivants : bases de données, cubes, dimensions, groupes de mesures, partitions, et structures et modèles d’exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Pour chaque objet, vous pouvez spécifier le niveau de traitement de l’objet ou spécifier l’option Traiter par défaut pour permettre à [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de sélectionner automatiquement le niveau optimal de traitement. Pour plus d’informations sur les différents niveaux de traitement pour chaque objet, consultez [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  
@@ -73,7 +73,7 @@ ms.locfileid: "48050969"
   
  Le traitement de dimension n'entraîne pas la création ni la mise à jour des membres calculés, qui sont définis au niveau du cube. Les membres calculés sont affectés lorsque la définition du cube est mise à jour. En outre, le traitement des dimensions n'entraîne pas la création ni la mise à jour des agrégations. Il peut cependant provoquer la suppression d'agrégations. Les agrégations sont créées ou mises à jour uniquement durant le traitement de partition.  
   
- Lorsque vous traitez une dimension, soyez conscient que la dimension peut être utilisée dans plusieurs cubes. Lorsque vous traitez la dimension, ces cubes sont marqués comme non traités et deviennent indisponibles pour les requêtes. Pour traiter au même moment la dimension et les cubes liés, utilisez les paramètres de traitement par lots. Pour plus d’informations, consultez [Batch Processing &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
+ Lorsque vous traitez une dimension, soyez conscient que la dimension peut être utilisée dans plusieurs cubes. Lorsque vous traitez la dimension, ces cubes sont marqués comme non traités et deviennent indisponibles pour les requêtes. Pour traiter au même moment la dimension et les cubes liés, utilisez les paramètres de traitement par lots. Pour plus d’informations, consultez [Traitement par lots &#40;Analysis Services&#41;](batch-processing-analysis-services.md).  
   
 ##  <a name="bkmk_procmeasure"></a> Traitement d'un groupe de mesures  
  Quand vous traitez un groupe de mesures, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] traite une partie ou l’ensemble des partitions au sein du groupe de mesures, ainsi que toutes les dimensions non traitées qui participent au groupe de mesures. Les particularités du traitement dépendent de l'option de traitement que vous sélectionnez. Vous pouvez traiter un ou plusieurs groupes de mesures dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sans affecter d'autres groupes de mesures dans un cube.  

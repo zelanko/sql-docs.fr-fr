@@ -13,13 +13,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 204742cb6c712c1e293048ed6216d9b007f2541b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721179"
 ---
-# <a name="lesson-1-publishing-data-using-merge-replication"></a>Leçon 1 : Publication de données à l'aide de la réplication de fusion
+# <a name="lesson-1-publishing-data-using-merge-replication"></a>Leçon 1 : Publication de données à l’aide de la réplication de fusion
   Dans cette leçon, vous créez une publication de fusion à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour publier un sous-ensemble des tables **Employee**, **SalesOrderHeader**et **SalesOrderDetail** de l’exemple de base de données [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Ces tables sont filtrées avec des filtres de lignes paramétrables pour que chaque abonnement contienne une partition unique des données. Vous ajoutez également la connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilisée par l’Agent de fusion à la liste d’accès à la publication. Pour suivre ce didacticiel, vous devez avoir terminé le didacticiel précédent, [Préparation du serveur pour la réplication](tutorial-preparing-the-server-for-replication.md).  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>Pour créer une publication et définir des articles  
@@ -110,7 +110,7 @@ ms.locfileid: "54131056"
 4.  Dans la boîte de dialogue Ajouter un accès à une publication, sélectionnez _<nom_ordinateur>_**\repl_merge** et cliquez sur **OK**. Cliquez sur **OK**.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Vous avez créé avec succès la publication de fusion. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [leçon 2 : Création d’un abonnement à la Publication de fusion](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
+ Vous avez créé avec succès la publication de fusion. Ensuite, vous allez créer l'abonnement à cette publication. Consultez [Leçon 2 : Création d’un abonnement à la Publication de fusion](lesson-2-creating-a-subscription-to-the-merge-publication.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Filtrer des données publiées](publish/filter-published-data.md)   

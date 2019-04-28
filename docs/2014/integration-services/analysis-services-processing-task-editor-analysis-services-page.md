@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 386854ec9a20931571ececf4bca943f95fc0dbf7
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836449"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Éditeur de tâche de traitement d'Analysis Services (page Analysis Services)
   Utilisez la page **Analysis Services** de la boîte de dialogue **Éditeur de tâche de traitement d’Analysis Services** pour définir un gestionnaire de connexions Analysis Services, sélectionner les objets analytiques à traiter et définir les options de traitement et de gestion des erreurs.  
@@ -44,7 +44,7 @@ ms.locfileid: "58380897"
  **Nouveau**  
  Créez un nouveau gestionnaire de connexions Analysis Services.  
   
- **Rubriques connexes :** [Analysis Services Connection Manager](connection-manager/analysis-services-connection-manager.md), [Ajout d’Analysis Services de référence de l’interface utilisateur de la boîte de dialogue Gestionnaire de connexions](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions Analysis Services](connection-manager/analysis-services-connection-manager.md), [Informations de référence sur l’interface utilisateur de la boîte de dialogue Ajout d’un gestionnaire de connexions Analysis Services](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Liste d'objets**  
  |Propriété|Description|  
@@ -63,7 +63,7 @@ ms.locfileid: "58380897"
  **Analyse d'impact**  
  Analyse l'impact sur l'objet sélectionné.  
   
- **Rubriques connexes :** [Impact sur la boîte de dialogue analyse &#40;Analysis Services - données multidimensionnelles&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
+ **Rubriques connexes :** [Boîte de dialogue Analyse d'impact &#40;Analysis Services - Données multidimensionnelles&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **Résumé des paramètres du traitement**  
  |Propriété|Description|  
@@ -77,7 +77,7 @@ ms.locfileid: "58380897"
  **Modifier les paramètres**  
  Change les options de traitement et la gestion des erreurs dans les clés de dimension.  
   
- **Rubriques connexes :** [Modifier la boîte de dialogue Paramètres &#40;Analysis Services - données multidimensionnelles&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
+ **Rubriques connexes :** [Boîte de dialogue Modifier les paramètres &#40;Analysis Services - Données multidimensionnelles&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Guide de référence des erreurs et des messages propres à Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   

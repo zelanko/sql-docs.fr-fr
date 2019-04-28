@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d86ae88fba4cb817ea7966daa60932238c7f0460
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842428"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Propriétés de la trace (onglet Sélection des événements)
   Utilisez l'onglet **Sélection des événements** de la boîte de dialogue **Propriétés de la trace** pour afficher ou spécifier les événements à tracer et les colonnes de données.  
   
 ## <a name="options"></a>Options  
  Colonne **Events**  
- Spécifiez les événements à tracer en activant ou en désactivant les cases à cocher dans la colonne des événements. Les**événements** sont organisés par catégorie. Les classes d'événements spécifiées dans le modèle sont automatiquement sélectionnées. Pour plus d'informations, consultez [SQL Server Event Class Reference](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+ Spécifiez les événements à tracer en activant ou en désactivant les cases à cocher dans la colonne des événements. Les**événements** sont organisés par catégorie. Les classes d'événements spécifiées dans le modèle sont automatiquement sélectionnées. Pour plus d'informations, consultez [Référence de classe d'événements SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Colonnes de données  
  Précisez les colonnes de données à tracer en activant la case à cocher correspondant à l'événement et à la colonne de données requis. Toutes les colonnes d'événements pertinentes sont cochées par défaut pour chaque événement inclus dans la trace.  
@@ -47,7 +47,7 @@ ms.locfileid: "48129449"
  Modifie l'ordre des colonnes dans la trace et regroupe les résultats suivant une ou plusieurs colonnes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Spécifier des événements et les colonnes de données d’un fichier de Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
+ [Spécifier les événements et les colonnes de données d’un fichier de trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/specify-events-and-data-columns-for-a-trace-file-sql-server-profiler.md)   
  [Organiser les colonnes affichées dans une Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/organize-columns-displayed-in-a-trace-sql-server-profiler.md)   
  [Filtrer les événements dans une Trace &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Afficher des informations de filtre &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   

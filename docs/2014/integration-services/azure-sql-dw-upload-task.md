@@ -15,11 +15,11 @@ author: yualan
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1e5e39f8049a5f2832e7a37381c4d22ef2483b62
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58388857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836376"
 ---
 # <a name="azure-sql-dw-upload-task"></a>Tâche de chargement Azure SQL Data Warehouse
 La **tâche de chargement Azure SQL Data Warehouse** permet à un package SSIS de charger des données locales sur une table dans Azure SQL Data Warehouse. Le format de fichier de données source pris en charge actuellement est le texte délimité dans l’encodage UTF-8. Le processus de chargement suit l’approche PolyBase efficace. Plus précisément, les données sont tout d’abord chargées sur le stockage Blob Azure, puis sur Azure SQL Data Warehouse. Par conséquent, un compte de stockage Blob Azure est nécessaire pour utiliser cette tâche.

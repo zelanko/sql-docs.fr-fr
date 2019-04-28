@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52759111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871136"
 ---
 # <a name="use-the-copy-database-wizard"></a>Utiliser l'Assistant Copie de base de données
   L'Assistant Copie de base de données vous permet de facilement déplacer ou copier des bases de données et leurs objets d'un serveur à un autre, sans nécessiter l'arrêt des serveurs. Vous pouvez également mettre à niveau les bases de données d'une version précédente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vers [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. À l'aide de cet Assistant, vous pouvez d'effectuer les opérations suivantes :  
@@ -102,7 +102,7 @@ ms.locfileid: "52759111"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez être membre du rôle de serveur fixe **sysadmin** sur le serveur source et sur le serveur de destination.  
   
 ##  <a name="Copy_Move"></a> Copier, déplacer ou mettre à niveau des bases de données  
@@ -228,7 +228,7 @@ ms.locfileid: "52759111"
      **Emplacement du dossier**  
      Spécifiez l'emplacement des fichiers de base de données source sur le système de fichiers.  
   
-     Exemple : C:\Program Files\Microsoft SQL Server\MSSQL110. MSSQLSERVER\MSSQL\DATA  
+     Exemple : C:\Program Files\Microsoft SQL Server\MSSQL110.MSSQLSERVER\MSSQL\DATA  
   
      **Partage de fichier sur le serveur source**  
      Spécifiez l’emplacement des fichiers de base de données source sous la forme du chemin d'accès à un partage de fichiers.  
@@ -257,7 +257,7 @@ ms.locfileid: "52759111"
      **Planification**  
      Démarre l'opération de déplacement ou de copie plus tard. Les paramètres de planification actuels s'affichent dans la zone de description. Pour modifier la planification, cliquez sur **Modifier**.  
   
-     **Modification**  
+     **Change**  
      Ouvre la boîte de dialogue **Nouvelle planification du travail** .  
   
      **Compte proxy Integration Services**  

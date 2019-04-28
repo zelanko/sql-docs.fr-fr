@@ -15,11 +15,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 42ec76542ffdf382c10c48cd107765d312ed1781
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011666"
 ---
 # <a name="extensible-key-management-ekm"></a>Gestion de clés extensible (EKM)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des fonctions de chiffrement de données en même temps que la *gestion de clés extensible* (EKM, Extensible Key Management) à l’aide du fournisseur de *l’API Microsoft Cryptography* (MSCAPI) pour le chiffrement et la génération de clés. Les clés de chiffrement pour les données et le chiffrement à clé sont créés dans des conteneurs de clé transitoires, et ils doivent être exportés d'un fournisseur avant d'être stockés dans la base de données. Cette approche permet à la gestion des clés, qui comprend une hiérarchie de clé de chiffrement et une sauvegarde de clé, d'être gérée par [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

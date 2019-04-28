@@ -1,5 +1,5 @@
 ---
-title: Créer une Dimension de temps en générant une Table de temps | Documents Microsoft
+title: Créer une Dimension de temps en générant une Table temporelle | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d35cf55f64b977e952b57416a31c35cd669fc468
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62867053"
 ---
-# <a name="create-a-time-dimension-by-generating-a-time-table"></a>Créer une dimension de temps en générant une table de temps
+# <a name="create-a-time-dimension-by-generating-a-time-table"></a>Create a Time Dimension by Generating a Time Table
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous pouvez utiliser l'Assistant Dimension dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour créer une dimension de temps lorsque aucune table de temps n'est disponible dans la base de données source. Pour ce faire, sélectionnez l'une des options suivantes dans la page **Sélectionner la méthode de création** :  
   
@@ -47,9 +47,9 @@ ms.locfileid: "34022046"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [Créer une Dimension de type Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
- [Propriétés de Dimension de base de données](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
+ [Créer une dimension de type Date](../../analysis-services/multidimensional-models/database-dimensions-create-a-date-type-dimension.md)   
+ [Propriétés de dimension d'une base de données](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [Relations de dimension](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Créer une Dimension en générant une Table Non temporelle dans la Source de données](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Créer une dimension en générant une table non temporelle dans la source de données](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

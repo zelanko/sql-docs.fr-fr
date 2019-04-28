@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a4bd34c0ce6a84ca4f9050f4c4b428123c379dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48106069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62721901"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)
   L’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression) est une version spéciale de l’algorithme MDT (Microsoft Decision Trees) qui est optimisée pour la modélisation des paires d’attributs continus. Cette rubrique explique l'implémentation de l'algorithme, décrit la façon de personnaliser le comportement de l'algorithme et fournit des liens vers des informations supplémentaires sur l'interrogation des modèles.  
@@ -51,7 +51,7 @@ ms.locfileid: "48106069"
 |Paramètre|Description|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|Spécifie le nombre d'attributs d'entrée que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.<br /><br /> La valeur par défaut est 255.|  
-|*MAXIMUM_OUTPUT_ATTRIBUTES*|Spécifie le nombre d'attributs de sortie que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.<br /><br /> La valeur par défaut est 255.|  
+|*MAXIMUM_OUTPUT_ATTRIBUTES*|Spécifie le nombre d'attributs de sortie que l'algorithme peut traiter avant d'appeler la sélection des fonctionnalités. Attribuez à ce paramètre la valeur 0 pour désactiver la sélection des fonctionnalités.<br /><br /> La valeur par défaut est 255.|  
 |*FORCE_REGRESSOR*|Force l'algorithme à utiliser les colonnes indiquées comme régresseurs, quelle que soit leur importance, telle que calculée par l'algorithme.|  
   
 ### <a name="modeling-flags"></a>Indicateurs de modélisation  
@@ -60,7 +60,7 @@ ms.locfileid: "48106069"
 |Indicateur de modélisation|Description|  
 |-------------------|-----------------|  
 |NOT NULL|Indique que la colonne ne peut pas contenir de valeur Null. Une erreur est générée si Analysis Services rencontre une valeur NULL au cours de l'apprentissage du modèle.<br /><br /> S'applique aux colonnes de structure d'exploration de données.|  
-|REGRESSOR|Indique que la colonne contient des valeurs numériques continues qui doivent être traitées comme variables indépendantes potentielles pendant l'analyse.<br /><br /> Remarque : attribuer un indicateur de régresseur sur une colonne ne garantit pas que la colonne sera utilisée comme régresseur dans le modèle final.<br /><br /> S'applique aux colonnes de modèle d'exploration de données.|  
+|REGRESSOR|Indique que la colonne contient des valeurs numériques continues qui doivent être traitées comme variables indépendantes potentielles pendant l'analyse.<br /><br /> Remarque : Marquage d’une colonne comme un régresseur ne garantit pas que la colonne sera être utilisée comme régresseur dans le modèle final.<br /><br /> S'applique aux colonnes de modèle d'exploration de données.|  
   
 ### <a name="regressors-in-linear-regression-models"></a>Régresseurs dans les modèles de régression linéaire  
  Les modèles de régression linéaire sont basés sur l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). Cependant, même si vous n’utilisez pas l’algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression), tout modèle d’arbre de décision peut contenir un arbre ou des nœuds qui représentent une régression sur un attribut continu.  
@@ -71,7 +71,7 @@ ms.locfileid: "48106069"
   
  Vous pouvez utiliser le paramètre FORCED_REGRESSOR pour faire en sorte que l'algorithme utilise un régresseur particulier. Ce paramètre peut être utilisé avec les algorithmes MDT et MLR.  
   
-## <a name="requirements"></a>Spécifications  
+## <a name="requirements"></a>Configuration requise  
  Un modèle de régression linéaire doit contenir une colonne clé, des colonnes d'entrée et au moins une colonne prédictible.  
   
 ### <a name="input-and-predictable-columns"></a>Colonnes d'entrée et prédictibles  
@@ -83,11 +83,11 @@ ms.locfileid: "48106069"
 |Attribut prédictible|Continu, Cyclique et Ordonné|  
   
 > [!NOTE]  
->  `Cyclical` et `Ordered` types de contenu sont pris en charge, mais l’algorithme les traite comme des valeurs discrètes et n’effectue pas de traitement spécial.  
+>  Les types de contenu `Cyclical` et `Ordered` sont pris en charge, mais l'algorithme les traite comme des valeurs discrètes et n'effectue pas de traitement spécial.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Linear Regression](microsoft-linear-regression-algorithm.md)   
+ [Algorithme MLR (Microsoft Linear Regression)](microsoft-linear-regression-algorithm.md)   
  [Exemples de requête de modèle de régression linéaire](linear-regression-model-query-examples.md)   
- [Contenu du modèle pour les modèles de régression linéaire d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de régression linéaire &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

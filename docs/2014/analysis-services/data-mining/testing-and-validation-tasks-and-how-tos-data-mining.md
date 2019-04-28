@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4697af2463587fcca244a291be0c8dace2907cc8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48143289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732840"
 ---
 # <a name="testing-and-validation-tasks-and-how-tos-data-mining"></a>Tâches de test et validation et procédures (exploration de données)
   Vous pouvez utiliser l’onglet **Graphique d’analyse de précision de l’exploration de données** du Concepteur d’exploration de données dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour comparer la précision prédictive des modèles d’exploration de données dans la structure d’exploration de données.  
@@ -46,7 +46,7 @@ ms.locfileid: "48143289"
   
 ## <a name="in-this-section"></a>Dans cette section  
   
--   [Créer un graphique de courbes d’élévation, un graphique des bénéfices ou une matrice de classification](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
+-   [Créer un graphique de courbes d'élévation, un graphique des bénéfices ou une matrice de classification](create-a-lift-chart-profit-chart-or-classification-matrix.md)  
   
 -   [Créer un rapport de validation croisée](create-a-cross-validation-report.md)  
   
@@ -54,8 +54,8 @@ ms.locfileid: "48143289"
   
 -   [Appliquer des filtres aux données de test du modèle](apply-filters-to-model-testing-data.md)  
   
--   [Choisir la colonne à utiliser pour tester un modèle d’exploration de données](choose-the-column-to-use-for-testing-a-mining-model.md)  
+-   [Choisir la colonne à utiliser pour tester un modèle d'exploration de données](choose-the-column-to-use-for-testing-a-mining-model.md)  
   
--   [Utilisation des données de table imbriquée comme entrée d’un graphique d’analyse de précision](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
+-   [Utilisation des données de table imbriquée comme entrée pour un graphique d'analyse de précision](using-nested-table-data-as-an-input-for-an-accuracy-chart.md)  
   
   

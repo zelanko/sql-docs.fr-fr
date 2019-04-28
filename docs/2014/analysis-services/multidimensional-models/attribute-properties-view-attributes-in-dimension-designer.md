@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e7e5ea7af394905d9f5efcb27dce4d102fb5d3c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48180039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727514"
 ---
 # <a name="view-attributes-in-dimension-designer"></a>Afficher les attributs dans le Concepteur de dimensions
   Les attributs sont créés sur des objets de dimension. Vous pouvez afficher et configurer les attributs à l'aide du Concepteur de dimensions de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Le volet **Attributs** de l'onglet **Structure de dimension** du Concepteur de dimensions répertorie les attributs qui figurent dans une dimension. Utilisez ce volet pour ajouter, supprimer ou configurer les attributs. Vous pouvez également sélectionner les attributs à utiliser comme niveau d'une nouvelle hiérarchie ou à ajouter comme niveau d'une hiérarchie existante.  
@@ -31,17 +31,17 @@ ms.locfileid: "48180039"
 |------------------------|-----------------|  
 |**Liste**|Affiche les attributs sous forme de liste.<br /><br /> Cliquez avec le bouton droit sur un attribut pour le supprimer de la liste, le renommer ou modifier son utilisation.<br /><br /> Utilisez ce mode d'affichage pour construire des hiérarchies. Les informations sur les attributs et les propriétés de membre ne sont pas visibles.|  
 |**Arborescence**|Affiche les attributs sous forme d'arborescence dont le nœud de premier niveau correspond à la dimension. Utilisez ce mode d'affichage pour afficher et créer des propriétés de membre. Il permet également de construire des hiérarchies. Développez un attribut pour afficher ses relations ou créer une relation d'attribut, en procédant comme suit :<br /><br /> Cliquez sur la dimension, un attribut ou une propriété de membre pour afficher ses propriétés dans la fenêtre **Propriétés** .<br /><br /> Cliquez avec le bouton droit sur un attribut ou sur une propriété de membre pour les supprimer de la liste, les renommer ou en modifier l'utilisation.|  
-|**Grille**|Affiche les attributs sous forme de grille. Cliquez sur n'importe quelle ligne de la grille pour afficher les propriétés de cet attribut.  Utilisez ce mode d'affichage pour créer et configurer des attributs. La grille affiche les colonnes suivantes :<br /><br /> **Nom**: affiche la valeur de la **nom** propriété. Tapez un nom différent si vous souhaitez modifier ce paramètre.<br /><br /> **Utilisation**: Spécifie s’il s’agit d’un attribut Regular, Key, Parent ou AccountType. Cliquez sur une valeur dans cette colonne pour sélectionner un autre paramètre.<br /><br /> **Type**: Spécifie la catégorie de décisionnel pour l’attribut. Cliquez sur cette cellule pour sélectionner un autre paramètre.<br /><br /> **Colonne de clé**: affiche le type de données OLE DB pour le **KeyColumn** propriété sur l’attribut. Cette colonne ne peut pas être modifiée.<br /><br /> **Nom de colonne**: indique si le **NameColumn** paramètre de propriété sur l’attribut est la même colonne que la définition de la **KeyColumn** propriété. Cette colonne ne peut pas être modifiée.|  
+|**Grid**|Affiche les attributs sous forme de grille. Cliquez sur n'importe quelle ligne de la grille pour afficher les propriétés de cet attribut.  Utilisez ce mode d'affichage pour créer et configurer des attributs. La grille affiche les colonnes suivantes :<br /><br /> **Nom**: affiche la valeur de la **nom** propriété. Tapez un nom différent si vous souhaitez modifier ce paramètre.<br /><br /> **Utilisation**: Spécifie s’il s’agit d’un attribut Regular, Key, Parent ou AccountType. Cliquez sur une valeur dans cette colonne pour sélectionner un autre paramètre.<br /><br /> **Type**: Spécifie la catégorie de décisionnel pour l’attribut. Cliquez sur cette cellule pour sélectionner un autre paramètre.<br /><br /> **Colonne de clé**: affiche le type de données OLE DB pour le **KeyColumn** propriété sur l’attribut. Cette colonne ne peut pas être modifiée.<br /><br /> **Nom de colonne**: indique si le **NameColumn** paramètre de propriété sur l’attribut est la même colonne que la définition de la **KeyColumn** propriété. Cette colonne ne peut pas être modifiée.|  
   
  Dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], les icônes affichées dans le tableau suivant marquent les attributs en fonction de leur utilisation.  
   
 |Icône|Utilisation de l'attribut|  
 |----------|---------------------|  
 |![Icône d’attribut](../media/as-icon-attribute.gif "icône d’attribut")|Regular ou AccountType|  
-|![Icône d’attribut de clé](../media/as-icon-key-attribute.gif "icône d’attribut de clé")|Key|  
+|![Icône d’attribut de clé](../media/as-icon-key-attribute.gif "icône d’attribut de clé")|Touche|  
 |![Icône d’attribut parent](../media/as-icon-parent-attribute.gif "icône d’attribut Parent")|Parent|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)  
+ [Référence des propriétés d'attribut de dimension](dimension-attribute-properties-reference.md)  
   
   

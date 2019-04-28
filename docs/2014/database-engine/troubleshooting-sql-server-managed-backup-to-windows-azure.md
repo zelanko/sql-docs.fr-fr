@@ -11,11 +11,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842576"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Dépannage de la sauvegarde managée de SQL Server sur Microsoft Azure
   Cette rubrique décrit les tâches et les outils que vous pouvez utiliser pour résoudre les erreurs qui peuvent se produire lors des opérations de [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)].  
@@ -86,9 +86,9 @@ ms.locfileid: "52522534"
   
          *« Probablement rencontre des problèmes de connectivité avec SQL Server. Elle est ignorée dans l’itération actuelle. »*  
   
-         *« Interrogation des informations sur l’utilisation du journal a échoué. L'échec peut être temporaire. Elle est ignorée dans l’itération actuelle. »*  
+         *« Interrogation des informations sur l’utilisation du journal a échoué. L’échec peut être temporaire. Elle est ignorée dans l’itération actuelle. »*  
   
-         *« Exception SQL rencontrée lors du chargement des métadonnées de l’agent SSMBackup2WA. L'échec peut être temporaire. Opération sera retentée. »*  
+         *« Exception SQL rencontrée lors du chargement des métadonnées de l’agent SSMBackup2WA. L’échec peut être temporaire. Opération sera retentée. »*  
   
          *« SSMBackup2WA a rencontré une exception SQL lors de … "*  
   

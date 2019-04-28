@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc90c76792ae6eaaa21ba3e32bea66e4942c354f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733692"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Algorithme MSC (Microsoft Sequence Clustering)
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme Sequence Clustering est un algorithme d’analyse de séquence fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Vous pouvez utiliser cet algorithme pour Explorer les données qui contient les événements qui peuvent être liés en suivant des chemins ou *séquences*. L'algorithme recherche les séquences les plus communes en groupant, ou en regroupant en clusters, les séquences identiques. Voici quelques exemples de données qui contiennent des séquences qui peuvent être utilisées pour l'exploration de données, pour fournir des précisions sur des problèmes courants ou des scénarios d'entreprise :  
@@ -79,8 +79,8 @@ ms.locfileid: "48190779"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Microsoft Sequence Clustering des références techniques relatives aux algorithmes](microsoft-sequence-clustering-algorithm-technical-reference.md)   
- [Modèle Sequence Clustering Model Query Examples](clustering-model-query-examples.md)   
+ [Références techniques relatives à l’algorithme MSC (Microsoft Sequence Clustering)](microsoft-sequence-clustering-algorithm-technical-reference.md)   
+ [Exemples de requêtes de modèle MSC (Sequence Clustering)](clustering-model-query-examples.md)   
  [Explorer un modèle à l’aide de la visionneuse de l’algorithme MSC (Microsoft Sequence Cluster)](browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
   

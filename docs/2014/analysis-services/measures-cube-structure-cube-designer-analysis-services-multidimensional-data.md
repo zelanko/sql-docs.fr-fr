@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3b063029126a8141e1a1a8044991a1653b536b8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48090312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727975"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Mesures (onglet Structure de cube, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Mesures** pour manipuler des groupes de mesures et des membres de l'onglet **Structure de cube** le Concepteur de cube.  
@@ -64,7 +64,7 @@ ms.locfileid: "48090312"
 |Option|Définition|  
 |------------|----------------|  
 |**Arborescence**|Affiche les groupes et les mesures sous forme d'arborescence.|  
-|**Grille**|Affiche les groupes et les mesures sous forme de tableau.|  
+|**Grid**|Affiche les groupes et les mesures sous forme de tableau.|  
   
  **Renommer**  
  Sélectionnez cette option pour renommer la mesure ou le groupe de mesures sélectionné.  

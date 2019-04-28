@@ -27,11 +27,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b6e2072e06e1ea5d61802a4c6a006737bc04762
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871695"
 ---
 # <a name="database-states"></a>États d'une base de données
   Une base de données est toujours dans un état spécifique. Par exemple, elle peut être dans l'état ONLINE, OFFLINE ou SUSPECT. Pour vérifier l’état actuel d’une base de données, sélectionnez la colonne **state_desc** de la vue du catalogue [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) ou la propriété **Status** de la fonction [DATABASEPROPERTYEX](/sql/t-sql/functions/databasepropertyex-transact-sql) .  

@@ -23,11 +23,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 95ffdd52ff4c71039a87f177e67d51cb81830c68
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011925"
 ---
 # <a name="server-level-roles"></a>Rôles de niveau serveur
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fournit des rôles au niveau du serveur pour vous aider à gérer les autorisations sur les serveurs. Ces rôles sont des principaux de sécurité qui regroupent d'autres principaux. Les autorisations des rôles serveur ont une portée à l'échelle du serveur. (Les*rôles* sont semblables aux *groupes* du système d’exploitation Microsoft Windows.)  
@@ -57,7 +57,7 @@ ms.locfileid: "58531851"
  Certaines autorisations sont assignées à chaque rôle serveur fixe. Pour un graphique des autorisations assignées aux rôles serveur, consultez [Serveur fixe du moteur de base de données et rôles de base de données fixes](https://social.technet.microsoft.com/wiki/contents/articles/2024.database-engine-fixed-server-and-fixed-database-roles.aspx).  
   
 > [!IMPORTANT]  
->  L'autorisation `CONTROL SERVER` ressemble, mais n'est pas identique au rôle serveur fixe `sysadmin`. Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple : `CONTROL SERVER` n'implique pas l'appartenance au rôle serveur fixe `sysadmin`.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes `DBCC` et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe `sysadmin`. Pour obtenir la liste du système 171 procédures stockées qui nécessitent `sysadmin` l’appartenance, consultez le blog suivant Andreas wolter [CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et privilèges mises en garde de réaffectation -](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
+>  L'autorisation `CONTROL SERVER` ressemble, mais n'est pas identique au rôle serveur fixe `sysadmin`. Les autorisations n'impliquent pas les appartenances au rôle et les appartenances au role n'accordent pas d'autorisation. (Par exemple : `CONTROL SERVER` n’implique pas de l’appartenance dans le `sysadmin` rôle serveur fixe.) Cependant, il est parfois possible d'emprunter l'identité entre les rôles et les autorisations équivalentes. La plupart des commandes `DBCC` et de nombreuses procédures système exigent l'appartenance au rôle serveur fixe `sysadmin`. Pour obtenir la liste du système 171 procédures stockées qui nécessitent `sysadmin` l’appartenance, consultez le blog suivant Andreas wolter [CONTROL SERVER et sysadmin/sa : autorisations, procédures système, DBCC, création de schéma automatique et privilèges mises en garde de réaffectation -](http://www.insidesql.org/blogs/andreaswolter/2013/08/control-server-vs-sysadmin-sa-permissions-privilege-escalation-caveats).  
   
 ## <a name="server-level-permissions"></a>Autorisations au niveau serveur  
  Seules des autorisations au niveau du serveur peuvent être ajoutées aux rôles serveur définis par l'utilisateur. Pour répertorier les autorisations au niveau du serveur, exécutez l'instruction suivante. Les autorisations au niveau du serveur sont :  

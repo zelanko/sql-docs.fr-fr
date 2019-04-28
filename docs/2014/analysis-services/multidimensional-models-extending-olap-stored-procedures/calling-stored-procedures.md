@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 55569f23ae943e96a495905434bb0d39f2796a63
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60157887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727755"
 ---
 # <a name="calling-stored-procedures"></a>Appel des procédures stockées
   Les procédures stockées peuvent être appelées sur le serveur ou à partir d'une application cliente. Dans les deux cas, les procédures stockées s'exécutent toujours sur le serveur, soit dans le contexte du serveur, soit dans le contexte d'une base de données. Aucune autorisation spéciale n'est requise pour exécuter une procédure stockée. Lorsqu'une procédure stockée est ajoutée par un assembly dans le contexte du serveur ou de la base de données, tous les utilisateurs peuvent l'exécuter, à condition que leur rôle autorise les actions qu'elle effectue.  

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1ce0c45a46842791890257593ff2b839fc50289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62871408"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimer la taille d'un index non-cluster
   Utilisez la procédure suivante pour estimer la quantité d'espace nécessaire au stockage d'un index non cluster :  
@@ -118,7 +118,7 @@ ms.locfileid: "48146739"
     >  Vous pouvez étendre un index non cluster en incluant les colonnes sans clé en plus des colonnes de clés d'index. Ces colonnes supplémentaires sont stockées uniquement au niveau feuille de l'index non-cluster. Pour plus d’informations, consultez [Créer des index avec colonnes incluses](../indexes/create-indexes-with-included-columns.md).  
   
     > [!NOTE]  
-    >  Vous pouvez combiner `varchar`, `nvarchar`, `varbinary`, ou `sql_variant` colonnes aboutissant à la largeur totale définie de la table dépasse 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne `varchar`, `varbinary` ou `sql_variant` et de 4 000 octets pour les colonnes `nvarchar`. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table. Ceci s'applique également aux lignes de feuille d'index non-cluster possédant des colonnes incluses.  
+    >  Vous pouvez combiner des colonnes `varchar`, `nvarchar`, `varbinary` ou `sql_variant` qui provoquent le dépassement de la largeur totale de la table définie au-delà de 8 060 octets. La longueur de chacune de ces colonnes doit toujours être inférieure à la limite de 8 000 octets pour une colonne `varchar`, `varbinary` ou `sql_variant` et de 4 000 octets pour les colonnes `nvarchar`. Toutefois, l'association de leurs largeurs peut dépasser la limite de 8 060 octets dans une table. Ceci s'applique également aux lignes de feuille d'index non-cluster possédant des colonnes incluses.  
   
      Si l'index non-cluster ne possède aucune colonne incluse, utilisez les valeurs de l'étape 1, y compris les éventuelles modifications déterminées dans l'étape 1.3 :  
   
@@ -221,7 +221,7 @@ ms.locfileid: "48146739"
   
      Arrondissez chaque élément de la somme au nombre entier supérieur le plus proche. À titre d’exemple simple, imaginez un index où ***Num_Leaf_Pages*** = 1000 et ***Index_Rows_Per_Page*** = 25. Le premier niveau d'index au-dessus du niveau feuille stocke 1 000 lignes d'index, ce qui représente une ligne d'index par page feuille et 25 lignes d'index par page. Par conséquent, il faut 40 pages pour stocker ces 1 000 lignes d'index. Le niveau suivant de l'index doit stocker 40 lignes. Cela requiert donc 2 pages. Le niveau final de l'index doit stocker 2 lignes. Cela requiert donc 1 page. Il en résulte 43 pages d'index non-feuille. Lorsque ces nombres sont utilisés dans les formules précédentes, le résultat est le suivant :  
   
-     ***Non-leaf_Levels*** = 1 + log25 (1000 / 25) = 3  
+     ***Non-leaf_Levels***  = 1 + log25 (1000 / 25) = 3  
   
      ***Num_Index_Pages*** = 1000 /(25<sup>3</sup>) + 1000 / (25<sup>2</sup>) + 1000 / (25<sup>1</sup>) = 1 + 2 + 40 = 43, ce qui est le nombre de pages décrit dans l’exemple.  
   
@@ -246,7 +246,7 @@ ms.locfileid: "48146739"
   
 -   Valeurs LOB  
   
-     L’algorithme pour déterminer avec exactitude la quantité d’espace sera utilisée pour stocker les types de données LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml`, et `image` valeurs est complexe. Il suffit d’ajouter simplement la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***et d’ajouter ce produit à la taille totale de l’index non cluster.  
+     L'algorithme permettant de déterminer avec exactitude la quantité d'espace qui sera utilisée pour stocker les valeurs des types de données LOB `varchar(max)`, `varbinary(max)`, `nvarchar(max)`, `text`, `ntext`, `xml` et `image` est complexe. Il suffit d’ajouter simplement la taille moyenne des valeurs LOB attendues, de la multiplier par ***Num_Rows***et d’ajouter ce produit à la taille totale de l’index non cluster.  
   
 -   Compression  
   

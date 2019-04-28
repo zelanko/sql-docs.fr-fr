@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: dbba1b7712bcbdccc821e419b3101065c3164913
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62834565"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configurer les journaux SSIS (boîte de dialogue)
   Utilisez la boîte de dialogue **Configurer les journaux SSIS** pour définir les options de journalisation d’un package.  
@@ -76,7 +76,7 @@ ms.locfileid: "58375210"
  **Configuration**  
  Sélectionnez un gestionnaire de connexions existant dans la liste ou cliquez sur \<**Nouvelle connexion**> pour créer un gestionnaire de connexions. En fonction du type de module fournisseur d'informations, vous pouvez configurer un gestionnaire de connexions OLE DB ou un gestionnaire de connexions de fichiers. Le module fournisseur d’informations du journal des événements [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows ne nécessite aucune connexion.  
   
- Rubriques connexes : [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md) manager, [File Connection Manager](connection-manager/file-connection-manager.md)  
+ Rubriques connexes : [Gestionnaire de connexions OLE DB](connection-manager/ole-db-connection-manager.md) , [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md)  
   
  **Supprimer**  
  Sélectionnez un module fournisseur d’informations, puis cliquez sur **Supprimer**.  

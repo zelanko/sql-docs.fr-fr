@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62855343"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Création d'une solution et d'une source de données (Didacticiel sur l'exploration de données intermédiaire)
   Pour utiliser l'exploration de données, vous devez d'abord créer un projet dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] à l'aide du modèle **Projet multidimensionnel et d'exploration de données Analysis Services**. Lorsque vous ouvrez le modèle, il charge dans le concepteur tous les schémas dont vous pourriez avoir besoin pour l'exploration de données : sources de données, structures et modèles d'exploration de données, et même cubes si votre structure d'exploration de données utilise des données multidimensionnelles.  

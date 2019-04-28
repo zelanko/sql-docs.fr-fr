@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3f842060c6ca621fc52fa34f08838541dc65e993
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719551"
 ---
 # <a name="sphelpmaintenanceplan-transact-sql"></a>sp_help_maintenance_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ sp_help_maintenance_plan [ [ @plan_id = ] 'plan_id' ]
  None  
   
 ## <a name="result-sets"></a>Jeux de résultats  
- Si *plan_id* est spécifié, **sp_help_maintenance_plan** renvoie trois tables : Plan, Database et Job.  
+ Si *plan_id* est spécifié, **sp_help_maintenance_plan** renvoie trois tables : Plan, base de données et le travail.  
   
 ### <a name="plan-table"></a>Table Plan  
   

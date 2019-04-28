@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ab0560e0df37c80a82017e5f076af969931a79e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012006"
 ---
 # <a name="create-a-credential"></a>Create a Credential
   Cette rubrique explique comment créer des informations d'identification dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
@@ -52,7 +52,7 @@ ms.locfileid: "52519030"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER ANY CREDENTIAL pour créer ou modifier des informations d'identification et une autorisation ALTER ANY LOGIN pour mapper une connexion à des informations d'identification.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

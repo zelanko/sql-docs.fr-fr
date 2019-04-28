@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856330"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Création d'une structure et d'un modèle de réseau neuronal (Didacticiel sur l'exploration de données intermédiaire)
   Pour créer un modèle d'exploration de données, vous devez d'abord utiliser l'Assistant Exploration de données pour créer une nouvelle structure d'exploration de données basée sur la nouvelle vue de source de données. Au cours de cette tâche, vous allez utiliser cet Assistant pour créer une structure d'exploration de données ainsi qu'un modèle d'exploration de données associé basé sur l'algorithme MNN ([!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network).  
@@ -96,15 +96,15 @@ ms.locfileid: "56037720"
     |AutomaticResponses|Continu|Long|  
     |AverageTimePerIssue|Continu|Long|  
     |Calls|Continu|Long|  
-    |DayOfWeek|Discret|Texte|  
+    |DayOfWeek|Discret|Text|  
     |FactCallCenterID|Touche|Long|  
     |IssuesRaised|Continu|Long|  
     |LevelOneOperators|Continu|Long|  
     |LevelTwoOperators|Continu|Long|  
     |Orders|Continu|Long|  
     |ServiceGrade|Continu|Double|  
-    |Shift|Discret|Texte|  
-    |WageType|Discret|Texte|  
+    |Shift|Discret|Text|  
+    |WageType|Discret|Text|  
   
 13. Sur le **créer le test défini** page, désactivez la zone de texte pour l’option, **pourcentage des données de test**. Cliquer sur **Suivant**.  
   

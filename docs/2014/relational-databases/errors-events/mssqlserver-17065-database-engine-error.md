@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33dfe774838aa88dc0c68829ae0abe34f3f1dda9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62869753"
 ---
 # <a name="mssqlserver17065"></a>MSSQLSERVER_17065
     
@@ -30,7 +30,7 @@ ms.locfileid: "48083639"
 |Source de l'événement|MSSQLSERVER|  
 |Composant|SQLEngine|  
 |Nom symbolique|SQLASSERT_BOTH|  
-|Texte du message|Assertion SQL Server : fichier : \<%s>, ligne= %d Échec d’assertion = ’%s’ %s. Cette erreur est éventuellement liée à un délai d'attente. Si l'erreur persiste après une nouvelle exécution de l'instruction, utilisez DBCC CHECKDB pour vérifier l'intégrité structurelle de la base de données ou redémarrez le serveur pour vous assurer que les structures de données en mémoire ne sont pas corrompues.|  
+|Texte du message|Assertion SQL Server : Fichier : \<%s >, ligne = %d Échec d’Assertion = '%s' %se. Cette erreur est éventuellement liée à un délai d'attente. Si l'erreur persiste après une nouvelle exécution de l'instruction, utilisez DBCC CHECKDB pour vérifier l'intégrité structurelle de la base de données ou redémarrez le serveur pour vous assurer que les structures de données en mémoire ne sont pas corrompues.|  
   
 ## <a name="explanation"></a>Explication  
  Cette erreur peut être provoquée par des erreurs temporaires liées à un délai d'attente ou par une corruption des données en mémoire ou sur disque.  

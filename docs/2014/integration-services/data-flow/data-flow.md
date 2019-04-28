@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828009"
 ---
 # <a name="data-flow"></a>Flux de données
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] fournit trois types différents de composants de flux de données : les sources, les transformations et les destinations. Les sources extraient les données des banques de données qui peuvent être des tables et des vues de bases de données relationnelles, des fichiers et des bases de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Les transformations modifient, synthétisent et nettoient les données. Les destinations chargent les données dans des banques de données ou créent des datasets en mémoire.  

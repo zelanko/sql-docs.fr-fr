@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 20d730ed2fd975d800b27882ecc218f7ce1868b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52529042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725133"
 ---
 # <a name="content-queries-data-mining"></a>Requêtes de contenu (Exploration de données)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -134,7 +134,7 @@ ms.locfileid: "52529042"
   
  Certains exemples sont fournis dans cette section pour montrer comment le choix de l'algorithme affecte le type d'informations stockées dans le modèle. Pour plus d’informations sur le contenu du modèle d’exploration de données et sur le contenu spécifique à chaque type de modèle, consultez [Contenu du modèle d’exploration de données &#40;Analysis Services – Exploration de données&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Assoc"></a> Exemple 1 : Requête de contenu sur un modèle d'association  
+###  <a name="bkmk_Assoc"></a> Exemple 1 : Requête de contenu sur un modèle d'association  
  L'instruction, `SELECT FROM <model>.CONTENT`, retourne différents types d'informations, selon le type de modèle que vous interrogez. Pour un modèle d'association, le *type de nœud*constitue une information clé. Les nœuds sont comme des conteneurs pour les informations dans le contenu du modèle. Dans un modèle d'association, les nœuds qui représentent des règles ont une valeur NODE_TYPE de 8, tandis que les nœuds qui représentent des jeux d'éléments ont une valeur NODE_TYPE de 7.  
   
  Ainsi, la requête suivante retourne les 10 premiers jeux d’éléments, classés par prise en charge (classement par défaut).  
@@ -166,7 +166,7 @@ ORDER BY NODE_SUPPORT DESC
   
  Pour obtenir plus d’exemples, consultez [Exemples de requête de modèle d’association](../../analysis-services/data-mining/association-model-query-examples.md).  
   
-###  <a name="bkmk_DecTree"></a> Exemple 2 : Requête de contenu sur un modèle d'arbre de décision  
+###  <a name="bkmk_DecTree"></a> Exemple 2 : Requête de contenu sur un modèle d'arbre de décision  
  Un modèle d'arbre de décision peut être utilisé pour la prédiction ainsi que pour la classification.  Dans cet exemple, on suppose que vous utilisez le modèle pour prédire un résultat, mais vous souhaitez également découvrir quels facteurs ou règles peuvent être utilisés pour classer les résultats.  
   
  Dans un modèle d'arbre de décision, les nœuds sont utilisés pour représenter des arbres et des nœuds terminaux. La légende de chaque nœud contient la description du chemin d'accès au résultat. Par conséquent, pour tracer le chemin d'accès d'un résultat particulier, vous devez identifier le nœud qui le contient, et obtenir des détails relatifs à ce nœud.  

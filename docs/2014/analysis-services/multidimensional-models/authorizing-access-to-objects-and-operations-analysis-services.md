@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e19a2faf3bba980ff7329084c073cabb1f696c9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726996"
 ---
 # <a name="authorizing-access-to-objects-and-operations-analysis-services"></a>Autorisation de l'accès à des objets et des opérations (Analysis Services)
   L'accès utilisateur non-administratif aux cubes, aux dimensions et aux modèles d'exploration de données au sein d'une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est octroyé via l'appartenance à un ou à plusieurs rôles de base de données. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] les administrateurs créent ces rôles de base de données, octroient des autorisations en lecture ou en lecture/écriture sur des objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , puis ajoutent des groupes et des utilisateurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows pour chaque rôle.  
@@ -51,15 +51,15 @@ ms.locfileid: "48197109"
 ## <a name="top-down-overview-of-analysis-services-authorization"></a>Vue d'ensemble verticale de l'autorisation Analysis Services  
  Cette section traite du flux de travail de base pour la configuration des autorisations.  
   
- **Étape 1 : Administration du serveur**  
+ **Étape 1 : Administration de serveur**  
   
  En guise de première étape, identifiez qui disposera de droits d'administrateur au niveau du serveur. Pendant l'installation, l'administrateur local qui installe SQL Server doit spécifier un ou plusieurs comptes Windows en tant qu'administrateur serveur Analysis Services. Les administrateurs de serveur disposent de toutes les autorisations possibles sur un serveur, notamment l'autorisation pour afficher, modifier et supprimer les objets sur le serveur ou afficher les données associées. Une fois l'installation terminée, un administrateur de serveur peut ajouter ou supprimer des comptes pour changer l'appartenance de ce rôle. Consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41; ](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md) pour plus d’informations sur ce niveau d’autorisation.  
   
- **Étape 2 : Administration de bases de données**  
+ **Étape 2 : Administration de la base de données**  
   
  Ensuite, une fois qu'une solution tabulaire ou multidimensionnelle a été créée, elle est déployée sur le serveur en tant que base de données. Un administrateur de serveur peut déléguer les tâches d'administration de base de données en définissant un rôle qui dispose des autorisations Contrôle total pour la base de données en question. Les membres de ce rôle peuvent traiter ou interroger les objets dans la base de données, et créer des rôles supplémentaires pour accéder aux cubes, dimensions et autres objets au sein de la base de données elle-même. Pour plus d’informations, consultez [Octroyer des autorisations de base de données &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md).  
   
- **Étape 3 : Activer l’accès à un cube ou à un modèle pour les charges de travail de requête et de traitement**  
+ **Étape 3 : Activer l’accès cube ou de modèle pour le traitement des requêtes et des charges de travail**  
   
  Par défaut, seuls les administrateurs du serveur et de la base de données ont accès aux cubes ou aux modèles tabulaires. La mise à disposition de ces structures de données pour d'autres membres de votre organisation requiert des assignations de rôles supplémentaires qui mappent des comptes d'utilisateurs et de groupes Windows à des cubes ou des modèles, ainsi que des autorisations qui spécifient des privilèges `Read`. Pour plus d’informations, consultez [Octroyer des autorisations de cube ou de modèle &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48197109"
 > [!NOTE]  
 >  Les utilisateurs ne nécessitent pas d’autorisations pour accéder aux tables relationnelles de la base de données relationnelle sous-jacente à partir de laquelle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] charge ses données, et ils ne nécessitent pas non plus d’autorisations sur les fichiers de l’ordinateur sur lequel l’instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est exécutée.  
   
- **Étape 4 (facultative) : Accorder ou refuser l’accès à des objets de cube intérieurs**  
+ **Étape 4 (facultatif) : Autoriser ou refuser l’accès aux objets de cube intérieurs**  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] fournit des paramètres de sécurité pour définir des autorisations sur des objets spécifiques, notamment des membres de dimension et des cellules dans un modèle de données. Pour plus d’informations, consultez [Octroyer un accès personnalisé à des données de dimension &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md) et [Octroyer un accès personnalisé à des données de cellule &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md).  
   
@@ -94,6 +94,6 @@ ms.locfileid: "48197109"
 ## <a name="see-also"></a>Voir aussi  
  [Accorder des autorisations administrateur du serveur &#40;Analysis Services&#41;](../instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [Rôles et autorisations &#40;Analysis Services&#41;](roles-and-permissions-analysis-services.md)   
- [Méthodologies d’authentification pris en charge par Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)  
+ [Méthodologies d'authentification prises en charge par Analysis Services](../instances/authentication-methodologies-supported-by-analysis-services.md)  
   
   

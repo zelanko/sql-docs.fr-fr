@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c9f4a8c8c968bcd7a633b943ea8c42b08662a50
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48126109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726813"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vues de sources de données dans les modèles multidimensionnels
   Une vue de source de données (DSV) est une abstraction d'une source de données relationnelle qui devient la base des cubes et des dimensions que vous créez dans un projet multidimensionnel. L'objectif d'une vue DSV est de vous donner le contrôle des structures de données utilisées dans votre projet, et de travailler indépendamment des sources de données sous-jacentes (par exemple, possibilité de renommer ou concaténer des colonnes sans modifier directement la source de données d'origine).  
@@ -32,32 +32,32 @@ ms.locfileid: "48126109"
  Vous pouvez créer plusieurs vues de sources de données dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] sur une ou plusieurs sources de données et construire chacune d’elles en fonction de la configuration requise pour une solution différente.  
   
 ## <a name="related-tasks"></a>Tâches associées  
- [Définition des données d’une vue de Source &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
+ [Définition d’une vue de source de données &#40;Analysis Services&#41;](defining-a-data-source-view-analysis-services.md)  
   
- [Ajout ou suppression des Tables ou des vues de données de vue de Source &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
+ [Ajout ou suppression de tables ou de vues dans une vue de source de données &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  
   
- [Modifier les propriétés d’une vue de Source de données &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
+ [Modifier les propriétés d’une vue de source de données &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md)  
   
- [Définir des relations logiques dans une vue de Source de données &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
+ [Définir des relations logiques dans une vue de source de données &#40;Analysis Services&#41;](define-logical-relationships-in-a-data-source-view-analysis-services.md)  
   
- [Définir des clés primaires logiques dans une vue de Source de données &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
+ [Définir des clés primaires logiques dans une vue de source de données &#40;Analysis Services&#41;](define-logical-primary-keys-in-a-data-source-view-analysis-services.md)  
   
- [Définir des calculs nommés dans une vue de Source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
- [Définir des requêtes nommées dans une vue de Source de données &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Définir des requêtes nommées dans une vue de source de données &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
- [Remplacer une Table ou une requête nommée dans une vue de Source de données &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
+ [Remplacer une table ou une requête nommée dans une vue de source de données &#40;Analysis Services&#41;](replace-a-table-or-a-named-query-in-a-data-source-view-analysis-services.md)  
   
- [Utiliser des diagrammes dans le Concepteur de vue de Source de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
- [Explorer les données dans une vue de Source de données &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
+ [Explorer des données dans une vue de source de données &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)  
   
- [Supprimer une vue de Source de données &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
+ [Supprimer une vue de source de données &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)  
   
- [Actualiser le schéma dans une vue de Source de données &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [Actualiser le schéma dans une vue de source de données &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assistant génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
+ [Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](supported-data-sources-ssas-multidimensional.md)  
   
   

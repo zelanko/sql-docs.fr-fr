@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 751ace509744cdfbaee7b6b4c262988a92652c88
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58379967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62878026"
 ---
 # <a name="sql-destination-editor-advanced-page"></a>Éditeur de destination SQL (page Avancé)
   Utilisez la page **Avancé** de la boîte de dialogue **Éditeur de destination SQL** pour spécifier les options avancées pour l’insertion en bloc.  

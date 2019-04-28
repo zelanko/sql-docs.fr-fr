@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 9 : Ajout d’Union All transformation pour combiner des enregistrements corrects et corrigés | Microsoft Docs'
+title: 'Tâche 9 : Ajout d’Union All transformation pour combiner des enregistrements corrects et corrigés | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2a3861e7de24e4fdf43ea11cf447b448c9d17b48
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56022860"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866409"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Tâche 9 : Ajout d'une transformation d'union totale pour combiner des enregistrements corrects et corrigés
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Tâche 9 : Ajout d’une transformation d’union totale pour combiner des enregistrements corrects et corrigés
   Dans cette tâche, vous allez ajouter une transformation d'union totale au flux de données. La transformation d'union totale combine plusieurs entrées en une seule sortie. Dans votre scénario, elle combine les enregistrements corrects et corrigés dans un seul flux.  
   
 1.  Glisser-déplacer **Union All** transformer de **courants** section de la **boîte à outils SSIS** à la **de flux de données** onglet et placez-le sous **Choisir les enregistrements corrects et corrigés**.  

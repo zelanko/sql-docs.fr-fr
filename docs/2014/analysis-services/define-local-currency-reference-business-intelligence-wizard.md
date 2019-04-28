@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d6616f5f09ce39682a24c74808ca90084ee775f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732827"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Définir le référencement pour les devises locales (Assistant Business Intelligence)
   La page **Définir le référencement pour les devises locales** permet de définir les devises locales de la fonctionnalité de conversion de devise qui couvre les types de conversion plusieurs-à-plusieurs ou plusieurs-à-un définis dans la page **Sélectionner le type de conversion** . Une devise locale est une devise dans laquelle les transactions des mesures sélectionnées dans **Sélectionnez les mesures** sont stockées.  

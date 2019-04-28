@@ -1,5 +1,5 @@
 ---
-title: Sys.Indexes (Transact-SQL) | Microsoft Docs
+title: sys.indexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/18/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f65371e31362524a5a909d1fdda4a047b2525966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63004241"
 ---
 # <a name="sysindexes-transact-sql"></a>sys.indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "47607357"
 |-----------------|---------------|-----------------|  
 |**object_id**|**Int**|ID de l'objet auquel appartient cet index.|  
 |**nom**|**sysname**|Nom de l’index. **nom** est unique seulement dans l’objet.<br /><br /> NULL = Segment|  
-|**index_id**|**Int**|Identificateur de l'index. **index_id** est unique seulement dans l’objet.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = Index non cluster|  
+|**index_id**|**Int**|Identificateur de l'index. **index_id** est unique seulement dans l’objet.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = index non cluster|  
 |**type**|**tinyint**|Type de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = ordonné en clusters<br /><br /> 2 = Non cluster<br /><br /> 3 = XML<br /><br /> 4 = Spatial<br /><br /> 5 = index cluster columnstore. **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 6 = index non cluster columnstore. **S'applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 7 = index nonclustered hash. **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
-|**type_desc**|**nvarchar(60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> COLUMNSTORE en cluster - **s’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> COLUMNSTORE non cluster - **s’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> HACHAGE non cluster : Les index NONCLUSTERED HASH sont pris en charge uniquement sur les tables optimisées en mémoire. La vue sys.hash_indexes indique les index de hachage actuels et les propriétés de hachage. Pour plus d’informations, consultez [sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+|**type_desc**|**nvarchar(60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> XML<br /><br /> SPATIAL<br /><br /> COLUMNSTORE en cluster - **s’applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> COLUMNSTORE non cluster - **s’applique à**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] via [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> HACHAGE NON CLUSTER : Index de hachage non cluster sont pris en charge uniquement sur les tables optimisées en mémoire. La vue sys.hash_indexes indique les index de hachage actuels et les propriétés de hachage. Pour plus d’informations, consultez [sys.hash_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-hash-indexes-transact-sql.md). **S'applique à**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] jusqu'à [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
 |**is_unique**|**bit**|1 = L'index est unique.<br /><br /> 0 = L'index n'est pas unique.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
 |**data_space_id**|**Int**|ID de l'espace de données de cet index. L'espace de données est soit un groupe de fichiers, soit un schéma de partition.<br /><br /> 0 = **object_id** est une fonction table ou un index en mémoire.|  
-|**IGNORE_DUP_KEY**|**bit**|1 = IGNORE_DUP_KEY est ON.<br /><br /> 0 = IGNORE_DUP_KEY est OFF.|  
+|**ignore_dup_key**|**bit**|1 = IGNORE_DUP_KEY est ON.<br /><br /> 0 = IGNORE_DUP_KEY est OFF.|  
 |**is_primary_key**|**bit**|1 = L'index fait partie d'une contrainte PRIMARY KEY.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
 |**is_unique_constraint**|**bit**|1 = L'index fait partie d'une contrainte UNIQUE.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
-|**pour Facteur_Remplissage**|**tinyint**|> 0 = Pourcentage FILLFACTOR utilisé lorsque l'index a été créé ou reconstruit.<br /><br /> 0 = Valeur par défaut<br /><br /> Toujours 0 pour des index columnstore cluster.|  
+|**fill_factor**|**tinyint**|> 0 = pourcentage FILLFACTOR utilisé lorsque l’index a été créé ou reconstruit.<br /><br /> 0 = Valeur par défaut<br /><br /> Toujours 0 pour des index columnstore cluster.|  
 |**is_padded**|**bit**|1 = PADINDEX est ON.<br /><br /> 0 = PADINDEX est OFF.<br /><br /> Toujours 0 pour des index columnstore cluster.|  
 |**is_disabled**|**bit**|1 = L'index est désactivé.<br /><br /> 0 = L'index n'est pas désactivé.|  
 |**is_hypothetical**|**bit**|1 = L'index est hypothétique et ne peut être utilisé directement comme un chemin d'accès aux données. Les index hypothétiques conservent des statistiques au niveau des colonnes.<br /><br /> 0 = L'index n'est pas hypothétique.|  
@@ -55,7 +55,7 @@ ms.locfileid: "47607357"
 |**filter_definition**|**nvarchar(max)**|Expression pour le sous-ensemble de lignes inclus dans l'index filtré.<br /><br /> NULL pour un segment de mémoire ou un index non filtré.|  
 |**auto_created**|**bit**|1 = Index a été créé par le réglage automatique.<br /><br />0 = Index a été créé par l’utilisateur.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="examples"></a>Exemples  

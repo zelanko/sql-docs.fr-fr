@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c14a039d22238450023c4a7f9b7b099e9a2a53
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727945"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Métadonnées (onglet Explorateur, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Métadonnées** de l’onglet **Navigateur** dans le Concepteur de cube pour parcourir la structure du cube, afficher les mesures associées et afficher et créer des dimensions. Vous pouvez explorer les hiérarchies, afficher la liste des mesures et des indicateurs de performance clés disponibles et copier les noms complets des objets.  
@@ -39,7 +39,7 @@ ms.locfileid: "48171149"
   
  Lorsque vous utilisez un modèle tabulaire, la liste des fonctions inclut les fonctions MDX et les fonctions DAX. Sinon, la liste inclut uniquement MDX. Un modèle multidimensionnel ne peut pas utiliser les fonctions DAX directement, bien qu'une expression DAX puisse être incluse dans le cadre d'une définition d'objet.  
   
- Conseil : les dossiers qui contiennent des fonctions DAX sont répertoriés en lettres majuscules. Tous les autres dossiers contiennent des fonctions MDX. Par exemple, il existe deux dossiers pour les fonctions statistiques : **STATISTICAL** contient les fonctions DAX connexes.  
+ Conseil : Les dossiers qui contiennent des fonctions DAX sont répertoriés en lettres majuscules. Tous les autres dossiers contiennent des fonctions MDX. Par exemple, il existe deux dossiers pour les fonctions statistiques : **STATISTIQUES** contient les fonctions DAX connexes.  
   
 ## <a name="context-menu"></a>Menu contextuel  
  Les options suivantes sont disponibles dans le menu contextuel qui s’affiche quand vous cliquez avec le bouton droit sur un élément se trouvant dans le volet **Métadonnées** :  
@@ -47,8 +47,8 @@ ms.locfileid: "48171149"
 |Option|Description|  
 |------------|-----------------|  
 |**Ajouter à la requête**|Cliquez pour ajouter l'objet sélectionné dans le volet inférieur de la zone de génération de la requête.|  
-|**Ajouter au filtre**|Permet d’ajouter la dimension, l’attribut, la hiérarchie ou le niveau sélectionné à la zone de filtre du **Navigateur**.<br /><br /> Remarque : cette option n’est active que si une dimension, un attribut, une hiérarchie ou un niveau est sélectionné.|  
-|**Copier**|Permet d'ajouter l'élément sélectionné dans le Presse-papiers.<br /><br /> Remarque : cette option copie le nom complet de l’objet.|  
+|**Ajouter au filtre**|Permet d’ajouter la dimension, l’attribut, la hiérarchie ou le niveau sélectionné à la zone de filtre du **Navigateur**.<br /><br /> Remarque : Cette option est activée uniquement si une dimension, l’attribut, la hiérarchie ou niveau est sélectionné.|  
+|**Copier**|Permet d'ajouter l'élément sélectionné dans le Presse-papiers.<br /><br /> Remarque : Cette option copie le nom qualifié complet de l’objet.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Barre d’outils &#40;onglet navigateur, Concepteur de Cube&#41; &#40;Analysis Services - données multidimensionnelles&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

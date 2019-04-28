@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 53b96a33e4fc369c486dcdf19ed34279898eee57
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012545"
 ---
 # <a name="audit-schema-object-management-event-class"></a>Audit Schema Object Management (classe d'événements)
   La classe d’événements **Audit Schema Object Management** intervient pour indiquer la création, la modification ou la suppression d’un objet Server.  

@@ -1,5 +1,5 @@
 ---
-title: Créer une Dimension à l’aide d’une Table existante | Documents Microsoft
+title: Créer une Dimension à l’aide d’une Table existante | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70291e20f318830ca8cf83d48b5ee2e21f5cc6ce
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62866950"
 ---
 # <a name="create-a-dimension-by-using-an-existing-table"></a>Créer une dimension à l'aide d'une table existante
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,10 +81,10 @@ ms.locfileid: "34023889"
  Dans la page **Fin de l’Assistant** , vous terminez l’Assistant en tapant un nom pour la nouvelle dimension et en examinant la structure de la dimension.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une Dimension en générant une Table Non temporelle dans la Source de données](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
- [Créer une Dimension de temps en générant une Table de temps](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Dimension Attribute Properties Reference](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
- [Créer une Dimension de temps en générant une Table de temps](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [Créer une Dimension en générant une Table Non temporelle dans la Source de données](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
+ [Créer une dimension en générant une table non temporelle dans la source de données](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)   
+ [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [Référence des propriétés d’attribut de dimension](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
+ [Create a Time Dimension by Generating a Time Table](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [Créer une dimension en générant une table non temporelle dans la source de données](../../analysis-services/multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md)  
   
   

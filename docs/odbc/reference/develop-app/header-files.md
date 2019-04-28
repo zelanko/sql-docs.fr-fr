@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724364"
 ---
 # <a name="header-files"></a>Fichiers d’en-tête
 Le fichier d’en-tête Sql.h contient des prototypes pour les fonctions et fonctionnalités dans le niveau de conformité Interface ODBC de base. Le fichier d’en-tête Sqlext.h contient des prototypes pour les fonctions et fonctionnalités dans le niveau 1 et les niveaux de conformité des API de niveau 2. Le fichier d’en-tête Sqltypes.h contient les définitions de type et des indicateurs pour les types de données SQL.  

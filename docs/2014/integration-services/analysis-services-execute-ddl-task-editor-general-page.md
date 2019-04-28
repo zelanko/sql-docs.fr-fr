@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1b7a01a2b49900653fb3acba85517315aa32579b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62836754"
 ---
 # <a name="analysis-services-execute-ddl-task-editor-general-page"></a>Éditeur de tâche DDL d'exécution Analysis Services (page Général)
   La page **Général** de la boîte de dialogue **Éditeur de tâche DDL d’exécution Analysis Services** permet de nommer et de décrire la tâche DDL d’exécution [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

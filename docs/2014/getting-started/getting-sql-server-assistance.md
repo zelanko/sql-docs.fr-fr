@@ -43,11 +43,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62838002"
 ---
 # <a name="getting-sql-server-assistance"></a>Assistance sur SQL Server
   [!INCLUDE[msCoName](../includes/msconame-md.md)] propose trois principales sources d'informations sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -78,7 +78,7 @@ ms.locfileid: "53355114"
   
  Le tableau suivant décrit ces sources d'information et les personnes à qui elles sont destinées.  
   
-|Ressource|Public visé|  
+|Resource|Public visé|  
 |--------------|--------------|  
 |[Centre de développement SQL Server](https://msdn.microsoft.com/sqlserver/)|Les développeurs qui créent des bases de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], des systèmes de génération de rapports et des solutions de Business Intelligence, et qui font en sorte que leurs applications et leurs sites Web utilisent ces systèmes.|  
 |[Centre de développement XML](https://go.microsoft.com/fwlink/?LinkId=42458)|Les créateurs de sites Web et les développeurs d'applications dont les sites et applications utilisent XML pour le stockage et la manipulation des données.|  
@@ -87,7 +87,7 @@ ms.locfileid: "53355114"
 ## <a name="additional-online-information"></a>Autres informations en ligne  
  Des informations supplémentaires sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sont disponibles sur ces sites Web [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-|Ressource|Description|  
+|Resource|Description|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Fournit des informations d'avant-vente sur l'évaluation de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en tant qu'outil de stockage de données et de Business Intelligence.|  
 |[Base de connaissances Microsoft](https://go.microsoft.com/fwlink/?LinkId=42461)|Fournit un référentiel dans lequel il est possible de chercher des articles sur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] rédigés par le support [!INCLUDE[msCoName](../includes/msconame-md.md)].|    

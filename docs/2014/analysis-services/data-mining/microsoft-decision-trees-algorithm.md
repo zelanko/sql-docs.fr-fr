@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0e68a857a928cbc737a647d0b497366c1148d948
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48198179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722147"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Algorithme MDT (Microsoft Decision Trees)
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme d’arbres de décision est un algorithme de classification et de régression fourni par [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour une utilisation dans la modélisation prédictive des attributs discrets et continus.  
@@ -44,7 +44,7 @@ ms.locfileid: "48198179"
 ## <a name="how-the-algorithm-works"></a>Fonctionnement de l'algorithme  
  L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) crée un modèle d’exploration de données en créant une série de divisions dans l’arbre. Ces divisions sont représentées sous forme de *nœuds*. L'algorithme ajoute un nœud au modèle chaque fois qu'une colonne d'entrée en corrélation significative avec la colonne prédictible est détectée. La manière dont l'algorithme détermine une division diffère selon qu'il prévoit une colonne continue ou une colonne discrète.  
   
- L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) utilise la *sélection de fonctionnalités* pour guider la sélection des attributs les plus utiles. Sélection de fonctionnalités est utilisée par tous les [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] algorithmes d’exploration de données pour améliorer les performances et la qualité d’analyse. Elle est importante pour empêcher que des attributs sans importance utilisent du temps processeur. Si vous utilisez trop d'attributs d'entrée ou d'attributs prédictibles lorsque vous concevez un modèle d'exploration de données, le traitement du modèle peut nécessiter beaucoup de temps, voire même manquer de mémoire. Parmi les méthodes utilisées pour déterminer si l’arbre doit être divisé figurent des métriques standard pour l’*entropie* et les réseaux bayésiens *.* Pour plus d’informations sur les méthodes utilisées pour sélectionner, évaluer et classer des attributs significatifs, consultez [Sélection des fonctionnalités &#40;exploration de données&#41;](feature-selection-data-mining.md).  
+ L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) utilise la *sélection de fonctionnalités* pour guider la sélection des attributs les plus utiles. La sélection de fonctionnalités est utilisée par tous les algorithmes d'exploration de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour améliorer les performances et la qualité d'analyse. Elle est importante pour empêcher que des attributs sans importance utilisent du temps processeur. Si vous utilisez trop d'attributs d'entrée ou d'attributs prédictibles lorsque vous concevez un modèle d'exploration de données, le traitement du modèle peut nécessiter beaucoup de temps, voire même manquer de mémoire. Parmi les méthodes utilisées pour déterminer si l’arbre doit être divisé figurent des métriques standard pour l’*entropie* et les réseaux bayésiens *.* Pour plus d’informations sur les méthodes utilisées pour sélectionner, évaluer et classer des attributs significatifs, consultez [Sélection des fonctionnalités &#40;exploration de données&#41;](feature-selection-data-mining.md).  
   
  Un problème courant dans les modèles d’exploration de données est que le modèle devient trop sensible aux petites différences dans les données d’apprentissage, auquel cas il est dit *surajusté* ou *surentraîné*. Un modèle surajusté ne peut pas être généralisé à d'autres jeux de données. Pour éviter le surajustement sur tout jeu particulier de données, l'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) utilise des techniques qui permettent de contrôler la croissance de l'arbre. Pour obtenir une explication plus détaillée du fonctionnement de l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees), consultez [Références techniques relatives à l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "48198179"
 ## <a name="viewing-a-decision-trees-model"></a>Affichage d'un modèle d'arbre de décision  
  Pour explorer le modèle, vous pouvez utiliser la **Visionneuse d’arborescences Microsoft**. Si votre modèle génère plusieurs arbres, vous pouvez sélectionner un arbre. La visionneuse vous montre alors le détail de la façon dont les cas sont organisés pour chaque attribut prédictible. Vous pouvez également afficher l'interaction des arbres en utilisant la visionneuse du réseau de dépendance. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse d’arborescences Microsoft](browse-a-model-using-the-microsoft-tree-viewer.md).  
   
- Si vous voulez en savoir plus sur une branche ou un nœud de l’arbre, vous pouvez aussi parcourir le modèle en utilisant la [Visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Le contenu stocké pour le modèle inclut la distribution de toutes les valeurs pour chaque nœud, des probabilités à chaque niveau de l'arbre et des formules de régression pour les attributs continus. Pour plus d’informations, consultez [Mining Model Content for Decision Tree Models &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
+ Si vous voulez en savoir plus sur une branche ou un nœud de l’arbre, vous pouvez aussi parcourir le modèle en utilisant la [Visionneuse de l’arborescence de contenu générique Microsoft](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md). Le contenu stocké pour le modèle inclut la distribution de toutes les valeurs pour chaque nœud, des probabilités à chaque niveau de l'arbre et des formules de régression pour les attributs continus. Pour plus d’informations, consultez [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
 ## <a name="creating-predictions"></a>Création de prédictions  
  Une fois le modèle traité, les résultats sont stockés sous la forme d'un jeu de modèles et de statistiques, que vous pouvez utiliser pour explorer les relations ou élaborer des prédictions.  
@@ -103,8 +103,8 @@ ms.locfileid: "48198179"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Références techniques relatives aux algorithmes d’arbre de décision de Microsoft](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Exemples de requête de modèle d’arbre de décision](decision-trees-model-query-examples.md)   
- [Contenu pour les modèles d’arbre de décision du modèle d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Références techniques relatives à l’algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm-technical-reference.md)   
+ [Exemples de requêtes de modèle d’arbre de décision](decision-trees-model-query-examples.md)   
+ [Contenu du modèle d’exploration de données pour les modèles d’arbre de décision &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

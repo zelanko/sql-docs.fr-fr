@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 509f9f08449499e2cf4bd155aa468b165fb9a689
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62722481"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrer une règle dans un modèle de règles d'association
   Vous pouvez utiliser le filtrage avec des modèles d'association pour restreindre les résultats aux associations qui vous intéressent. Par exemple, vous pouvez filtrer les règles pour afficher uniquement celles qui incluent un produit spécifique.  
@@ -44,7 +44,7 @@ ms.locfileid: "48118629"
   
 5.  Pour **Importance minimale**, augmentez la valeur d'importance afin de voir moins de règles ou réduisez cette valeur afin de voir davantage de règles.  
   
-6.  Pour **Afficher**, sélectionnez l'une des options suivantes : **Afficher le nom et la valeur de l'attribut**, **Afficher le nom de l'attribut uniquement**ou **Afficher la valeur de l'attribut uniquement**.  
+6.  Pour **afficher**, sélectionnez une des options suivantes : **Afficher le nom de l’attribut et valeur**, **afficher uniquement le nom attribut**, ou **afficher la valeur de l’attribut uniquement**.  
   
 7.  Pour **Lignes au maximum**, augmentez la valeur afin d'augmenter le nombre total de règles répondant aux conditions spécifiées ou réduisez la valeur afin de limiter le nombre de règles retournées. Les règles sont classées par ordre de probabilité ; par conséquent, vous risquez d'éliminer des règles supplémentaires qui répondent aux conditions spécifiées pour la probabilité ou l'importance.  
   
@@ -60,8 +60,8 @@ ms.locfileid: "48118629"
 -   [Exemples de requêtes de modèle d’association](association-model-query-examples.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Explorer un modèle à l’aide de la visionneuse de règles Microsoft Association](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)](browse-a-model-using-the-microsoft-association-rules-viewer.md)   
+ [Leçon 3 : Génération d’un scénario de panier &#40;didacticiel d’exploration de données intermédiaire&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

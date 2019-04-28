@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8dbeb94f9d6b4fea97a99544ed4a0bf358851acf
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731619"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>Fonctionnalités Analysis Services abandonnées dans SQL Server 2014
   Cette rubrique décrit les fonctionnalités de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
 ## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Fonctionnalités supprimées dans [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
-|Catégorie|Fonctionnalité déconseillée|Remplacement|  
+|Category|Fonctionnalité déconseillée|Remplacement|  
 |--------------|------------------------|-----------------|  
 |Cube locaux|Propriété de chaîne de connexion INSERTINTO|La syntaxe de la chaîne de connexion d'origine pour le remplissage de cubes locaux est remplacée par l'instruction CREATE GLOBAL CUBE. Pour plus d’informations, consultez [créer une instruction de CUBE GLOBAL &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
 |Cube locaux|Propriété de chaîne de connexion CREATECUBE|La syntaxe de la chaîne de connexion d'origine pour le remplissage de cubes locaux est remplacée par l'instruction CREATE GLOBAL CUBE. Pour plus d’informations, consultez [créer une instruction de CUBE GLOBAL &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
@@ -42,6 +42,6 @@ ms.locfileid: "48117969"
  La bibliothèque DSO (Decision Support Objects), qui assurait la compatibilité avec les bases de données SQL Server 2000 Analysis Services, est également supprimée et ne fait plus partie de SQL Server.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Compatibilité descendante d’Analysis Services](analysis-services-backward-compatibility.md)  
+ [Compatibilité descendante Analysis Services](analysis-services-backward-compatibility.md)  
   
   

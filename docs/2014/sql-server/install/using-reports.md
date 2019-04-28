@@ -37,11 +37,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eb2537af2539854f0f66e3f6c39c3b6e5315ec6f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989764"
 ---
 # <a name="using-reports"></a>Utilisation de rapports
   Un rapport distinct est généré pour chaque composant et, si nécessaire, pour chaque instance, que l'Assistant Analyse du Conseiller de mise à niveau analyse sur un serveur. Le rapport contient des détails sur les problèmes connus qui affectent une mise à niveau. Il fournit également des liens vers des informations et les actions suggérées pour traiter les problèmes identifiés.  

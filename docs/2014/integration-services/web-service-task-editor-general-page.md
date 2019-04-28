@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4890f4c56e207432a5b64cd04a0bfeac15135b1b
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62877689"
 ---
 # <a name="web-service-task-editor-general-page"></a>Éditeur de tâche de service Web (page Général)
   Utilisez la page **Général** de la boîte de dialogue **Éditeur de tâche de service Web** pour définir un gestionnaire de connexions HTTP, spécifier l’emplacement du fichier WSDL (Web Services Description Language) qu’utilise la tâche de service web, décrire la tâche de service web et télécharger le fichier WSDL.  
@@ -34,7 +34,7 @@ ms.locfileid: "58374747"
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions HTTP prend en charge uniquement l'authentification anonyme et l'authentification de base. Il ne prend pas en charge l'authentification Windows.  
   
- **Rubriques connexes :**  [Gestionnaire de connexions HTTP](connection-manager/http-connection-manager.md), [HTTP Connection Manager Editor &#40;Page du serveur&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
+ **Rubriques connexes :**  [Gestionnaire de connexions HTTP](connection-manager/http-connection-manager.md), [Éditeur du gestionnaire de connexions &#40;Server Page&#41;](../../2014/integration-services/http-connection-manager-editor-server-page.md)  
   
  **WSDLFile**  
  Tapez le chemin d’accès qualifié complet d’un fichier WSDL qui est en local sur l’ordinateur ou cliquez sur le bouton Parcourir **(...)** et recherchez ce fichier.  

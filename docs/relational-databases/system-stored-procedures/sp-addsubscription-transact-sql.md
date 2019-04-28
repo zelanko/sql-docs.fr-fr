@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998308"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Value|Description|  
 |-----------|-----------------|  
-|none|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : Cette option est déconseillée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
+|none|L'abonnement dispose déjà du schéma et des données initiales destinées aux tables publiées.<br /><br /> Remarque : Cette option est déconseillée. Utilisez plutôt la prise en charge de la réplication uniquement.|  
 |automatic (valeur par défaut)|Le schéma et les données initiales des tables publiées sont transférés en premier lieu vers l'Abonné.|  
 |replication support only|Fournit une génération automatique au niveau de l'Abonné des procédures stockées personnalisées de l'article et des déclencheurs qui prennent en charge les abonnements de mise à jour, le cas échéant. Considère que l'Abonné dispose déjà du schéma et des données initiales pour les tables publiées. Lors de la configuration d'une topologie de réplication transactionnelle d'égal à égal, veillez à ce que les données de tous les nœuds de la topologie soient identiques. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).<br /><br /> *Pas de prise en charge pour les abonnements aux publications non-SQL Server.*|  
 |initialize with backup|Le schéma et les données initiales destinées aux tables publiées proviennent d'une sauvegarde de la base de données de publication. L'abonné est censé avoir accès à une sauvegarde de la base de données de publication. L’emplacement du type de sauvegarde et de support pour la sauvegarde sont spécifiés par *backupdevicename* et *backupdevicetype*. Lors de l'utilisation de cette option, il n'est pas nécessaire de suspendre la topologie de réplication transactionnelle d'égal à égal pendant la configuration.<br /><br /> *Pas de prise en charge pour les abonnements aux publications non-SQL Server.*|  
@@ -129,7 +129,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
  Notez que les valeurs synctran et queued tran ne sont pas autorisés si l’objet d’un abonnement de publication autorise DTS.  
   
- [ @loopback_detection=] '*détection_de_boucle*'  
+ [ @loopback_detection=] '*loopback_detection*'  
  Indique si l'Agent de distribution envoie des transactions à un abonné qui en est l'auteur. *détection_de_boucle* est **nvarchar (5)**, et peut prendre l’une des valeurs suivantes.  
   
 |Value|Description|  
@@ -199,10 +199,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  Invite de commandes facultative à exécuter. *optional_command_line* est **nvarchar (4000)**, avec NULL comme valeur par défaut.  
   
- [ @reserved=] '*réservé*'  
+ [ @reserved=] '*reserved*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @enabled_for_syncmgr=] '*l’argument enabled_for_syncmgr*'  
+ [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
  Détermine si l’abonnement peut être synchronisé via [!INCLUDE[msCoName](../../includes/msconame-md.md)] le Gestionnaire de synchronisation Windows. *l’argument enabled_for_syncmgr* est **nvarchar (5)**, avec FALSE comme valeur par défaut. Si la valeur est false, l'abonnement n'est pas enregistré par le Gestionnaire de synchronisation Windows. Si la valeur est true, l'abonnement est enregistré par le Gestionnaire de synchronisation Windows et il peut ensuite être synchronisé, sans qu'il soit nécessaire de démarrer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Non pris en charge pour les serveurs de publication Oracle.  
   
  [ @offloadagent= ] '*remote_agent_activation*'  
@@ -211,22 +211,22 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  Ce paramètre est déconseillé et n'est conservé que pour la compatibilité descendante des scripts.  
   
- [ @offloadserver=] '*remote_agent_server_name*'  
+ [ @offloadserver= ] '*remote_agent_server_name*'  
  Indique le nom réseau du serveur à utiliser pour l'activation à distance. *remote_agent_server_name*est **sysname**, avec NULL comme valeur par défaut.  
   
- [ @dts_package_name=] '*l’argument dts_package_name*'  
+ [ @dts_package_name= ] '*dts_package_name*'  
  Spécifie le nom du package DTS (Data Transformation Services). *l’argument dts_package_name* est un **sysname** avec NULL comme valeur par défaut. Par exemple, pour spécifier un package de DTSPub_Package, le paramètre est : `@dts_package_name = N'DTSPub_Package'`. Ce paramètre est disponible avec les abonnements envoyés. Pour ajouter des informations de package DTS à un abonnement extrait, utilisez sp_addpullsubscription_agent.  
   
- [ @dts_package_password=] '*dts_package_password*'  
+ [ @dts_package_password= ] '*dts_package_password*'  
  Spécifie le mot de passe du package, s'il existe. *dts_package_password* est **sysname** avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  Vous devez spécifier un mot de passe si *l’argument dts_package_name* est spécifié.  
   
- [ @dts_package_location=] '*dts_package_location*'  
+ [ @dts_package_location= ] '*dts_package_location*'  
  Spécifie l'emplacement du package. *dts_package_location* est un **nvarchar (12)**, avec une valeur par défaut du serveur de distribution. L'emplacement du package peut prendre la valeur distributor ou subscriber.  
   
- [ @distribution_job_name=] '*distribution_job_name*'  
+ [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @publisher=] '*publisher*'  
@@ -249,25 +249,25 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicename=] '*backupdevicename*'  
  Indique le nom de l'unité utilisée lors de l'initialisation d'un Abonné à partir d'une sauvegarde. *backupdevicename* est **nvarchar (1000)**, avec NULL comme valeur par défaut.  
   
- [ @mediapassword=] '*mediapassword*'  
+ [ @mediapassword= ] '*mediapassword*'  
  Indique un mot de passe pour le support spécifié, si un mot de passe a été défini lors du formatage du support. *MEDIAPASSWORD* est **sysname**, avec NULL comme valeur par défaut.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password=] '*mot de passe*'  
+ [ @password= ] '*password*'  
  Indique un mot de passe pour la sauvegarde, si un mot de passe a été défini lors de la création de celle-ci. *mot de passe*est **sysname**, avec NULL comme valeur par défaut.  
   
- [ @fileidhint=] *fileidhint*  
+ [ @fileidhint= ] *fileidhint*  
  Identifie une valeur ordinale du jeu de sauvegarde à restaurer. *fileidhint* est **int**, avec NULL comme valeur par défaut.  
   
- [ @unload=] *décharger*  
+ [ @unload= ] *unload*  
  Indique si une unité de sauvegarde sur bande doit être déchargée une fois l'initialisation de la sauvegarde terminée. *décharger* est **bits**, valeur par défaut est 1. 1 indique que la bande doit être déchargée. *décharger* est uniquement utilisé lorsque *backupdevicetype* est une bande.  
   
- [ @subscriptionlsn=] *subscriptionlsn*  
+ [ @subscriptionlsn= ] *subscriptionlsn*  
  Spécifie le numéro séquentiel dans le journal auquel un abonnement doit commencer à remettre des modifications à un nœud dans une topologie de réplication transactionnelle d'égal à égal. Utilisé avec un @sync_type valeur Initialize from lsn pour vous assurer que toutes les transactions appropriées sont répliquées vers un nouveau nœud. Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
- [ @subscriptionstreams=] *subscriptionstreams*  
+ [ @subscriptionstreams= ] *subscriptionstreams*  
  Nombre de connexions autorisées par l'Agent de distribution afin d'appliquer des lots de modifications en parallèle à un Abonné, tout en conservant bon nombre des caractéristiques transactionnelles présentes lors de l'utilisation d'un thread unique. *subscriptionstreams* est **tinyint**, avec NULL comme valeur par défaut. Une plage de valeurs allant de 1 à 64 est prise en charge. Ce paramètre n’est pas pris en charge pour les non - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] les abonnés, les serveurs de publication Oracle ou les abonnements d’égal à égal. Chaque fois que des flux d'abonnements sont utilisés, des lignes supplémentaires sont ajoutées au tableau msreplication_subscriptions (1 par flux) avec agent_id défini à NULL.  
   
 > [!NOTE]  
@@ -278,7 +278,7 @@ sp_addsubscription [ @publication = ] 'publication'
   
 |Value|Description|  
 |-----------|-----------------|  
-|0 (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné|  
+|0 (valeur par défaut)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] abonné|  
 |1|Serveur de la source de données ODBC.|  
 |2|Base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet|  
 |3|Fournisseur OLE DB|  

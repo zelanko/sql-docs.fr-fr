@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 745d7dc7682c06b776dca3df6a69fb8e235c1d27
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725333"
 ---
 # <a name="specifying-the-contents-of-a-slicer-axis-mdx"></a>Spécification du contenu d'un axe de secteur (MDX)
   L'axe de secteur filtre les données retournées par l'instruction SELECT MDX (Multidimensional Expressions), en restreignant les données retournées de telle sorte que seules les données communes aux membres spécifiés soient retournées. Il peut être perçu comme un axe supplémentaire invisible dans une requête. L'axe de secteur est défini dans la clause WHERE de l'instruction SELECT de MDX.  

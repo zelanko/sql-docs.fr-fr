@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725373"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Création de jeux nommés d'étendue de requête (MDX)
   Si un jeu nommé n'est nécessaire que pour une seule requête MDX (Multidimensional Expressions), vous pouvez le définir à l'aide du mot clé WITH. Un jeu nommé créé à l'aide du mot clé WITH n'existe plus une fois que l'exécution de la requête est terminée.  
@@ -95,6 +95,6 @@ FROM Sales
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
- [Création d’une Session spécifique de jeux nommés &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
+ [Création de jeux nommés dans l’étendue de session &#40;MDX&#41;](mdx-named-sets-creating-session-scoped-named-sets.md)  
   
   

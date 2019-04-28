@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57b7320e8d09a3106d29a7f4c53c14a52afaadd7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725664"
 ---
 # <a name="error-handling-mdx"></a>Gestion des erreurs (MDX)
-  Chaque cube peut contrôler le mode de gestion des erreurs contenues dans un script MDX (Multidimensional Expressions). Gestion des erreurs s’effectue via le `ScriptErrorHandlingMode` énumérateur. Les valeurs possibles pour cet énumérateur sont les suivantes :  
+  Chaque cube peut contrôler le mode de gestion des erreurs contenues dans un script MDX (Multidimensional Expressions). La gestion des erreurs s'effectue par l'intermédiaire de l'énumérateur `ScriptErrorHandlingMode`. Les valeurs possibles pour cet énumérateur sont les suivantes :  
   
  `IgnoreNone`  
  Entraîne la génération d’une erreur par le serveur si [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] détecte une erreur dans le script MDX.  

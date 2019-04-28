@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f25cf5a2466cc7ec8ae00b55591279e66ea7ce57
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51030917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62844180"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Options (Éditeur de texte - Toutes les langues - Page Général)
   Cette boîte de dialogue vous permet de définir les options d'édition générales des cinq éditeurs de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour afficher ces options, sélectionnez **Options** dans le menu **Outils** . Sélectionnez le dossier **Éditeur de texte**, développez le dossier **Tous les langages**, puis cliquez sur **Général**.  

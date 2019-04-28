@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_connections (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/16/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 305f544bf34b4f5e9ab4132dc2ffb45ff89cf0df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63013496"
 ---
 # <a name="sysdmexecconnections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47774227"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |session_id|**Int**|Identifie la session associée à cette connexion. Autorise la valeur NULL.|  
-|most_recent_session_id|**Int**|Représente l'ID de session de la requête la plus récente associée à cette connexion. (Les connexions SOAP peuvent être réutilisées par une autre session.) Autorise la valeur NULL.|  
+|most_recent_session_id|**Int**|Représente l'ID de session de la requête la plus récente associée à cette connexion. (Connexions SOAP peuvent être réutilisées par une autre session.) Autorise la valeur NULL.|  
 |connect_time|**datetime**|Cachet temporel d'établissement de la connexion. N'accepte pas la valeur NULL.|  
-|net_transport|**nvarchar(40)**|Retourne toujours **Session** lorsqu’une connexion comporte plusieurs ensembles de résultats actifs (MARS) activés.<br /><br /> **Remarque :** décrit le protocole de transport physique utilisé par cette connexion. N'accepte pas la valeur NULL.|  
+|net_transport|**nvarchar(40)**|Retourne toujours **Session** lorsqu’une connexion comporte plusieurs ensembles de résultats actifs (MARS) activés.<br /><br /> **Remarque :** Décrit le protocole de transport physique utilisé par cette connexion. N'accepte pas la valeur NULL.|  
 |protocol_type|**nvarchar(40)**|Spécifie le type de protocole de la charge utile. Il effectue la distinction entre TDS (TSQL) et SOAP. Autorise la valeur NULL.|  
 |protocol_version|**Int**|Version du protocole d'accès aux données associé à cette connexion. Autorise la valeur NULL.|  
 |endpoint_id|**Int**|Identificateur qui décrit le type de connexion. endpoint_id peut être utilisé pour interroger la vue sys.endpoints. Autorise la valeur NULL.|  
@@ -62,7 +62,7 @@ ms.locfileid: "47774227"
 |most_recent_sql_handle|**varbinary(64)**|Descripteur SQL de la dernière requête exécutée sur cette connexion. La colonne most_recent_sql_handle est toujours synchronisée avec la colonne most_recent_session_id. Autorise la valeur NULL.|  
 |pdw_node_id|**Int**|**S’applique aux**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> L’identificateur pour le nœud se trouvant sur cette distribution.|  
   
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>Autorisations
 
 Sur [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], nécessite `VIEW SERVER STATE` autorisation.   
 Sur [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], nécessite le `VIEW DATABASE STATE` autorisation dans la base de données.   

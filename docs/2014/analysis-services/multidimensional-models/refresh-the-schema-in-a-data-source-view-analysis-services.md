@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad3d6233ef9678933aa9492ccc81f306186592b3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62737093"
 ---
 # <a name="refresh-the-schema-in-a-data-source-view-analysis-services"></a>Actualiser le schéma dans une vue de source de données (Analysis Services)
   Après avoir défini une vue de source de données dans un projet ou une base de données [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], le schéma d’une source de données sous-jacente peut être différent. Ces modifications ne sont pas détectés ni mises à jour automatiquement dans un projet de développement. De plus, si vous avez déployé le projet sur un serveur, vous rencontrerez maintenant des erreurs de traitement si Analysis Services ne peut plus se connecter à la source de données externe.  

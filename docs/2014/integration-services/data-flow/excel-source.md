@@ -16,11 +16,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856941"
 ---
 # <a name="excel-source"></a>Source Excel
   La source Excel extrait des données de feuilles de calcul ou de plages dans des classeurs [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  

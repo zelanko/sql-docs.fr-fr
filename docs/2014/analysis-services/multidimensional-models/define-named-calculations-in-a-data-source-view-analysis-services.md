@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c67d7becd2fae8557a734424f9f767e17b3ba7ea
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726465"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>Définir des calculs nommés dans une vue de source de données (Analysis Services)
   Un calcul nommé est une expression SQL représentée sous la forme d'une colonne calculée. Cette expression apparaît et se comporte comme une colonne dans la table. Un calcul nommé vous permet d'étendre le schéma relationnel des tables ou vues existantes dans une vue de source de données sans modifier les tables ou vues dans la source de données sous-jacente. Observez les exemples suivants :  
@@ -85,6 +85,6 @@ FROM
  Lorsque vous supprimez un calcul nommé, la liste des objets définis dans le projet ou la base de données et qui ne seront plus valides après la suppression s'affichent. Examinez la liste soigneusement avant de supprimer le calcul.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir des requêtes nommées dans une vue de Source de données &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Définir des requêtes nommées dans une vue de source de données &#40;Analysis Services&#41;](define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

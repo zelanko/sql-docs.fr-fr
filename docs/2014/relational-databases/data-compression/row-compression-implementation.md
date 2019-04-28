@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62873010"
 ---
 # <a name="row-compression-implementation"></a>Implémentation de la compression de ligne
   Cette rubrique récapitule la manière dont le [!INCLUDE[ssDE](../../includes/ssde-md.md)] implémente la compression de ligne. Elle fournit des informations de base qui vous aideront à planifier l'espace de stockage dont vous avez besoin pour vos données.  

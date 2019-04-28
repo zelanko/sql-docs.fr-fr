@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12891d7ee674167157bcb02300d2e4181ef51734
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63012116"
 ---
 # <a name="concurrency-types"></a>Types d’accès concurrentiels
 Pour résoudre le problème de concurrence réduite dans les curseurs, ODBC expose quatre types d’accès concurrentiel au curseur :  
@@ -31,6 +31,6 @@ Pour résoudre le problème de concurrence réduite dans les curseurs, ODBC expo
   
 -   **Verrouillage** le curseur utilise le plus bas niveau de verrouillage nécessaire pour s’assurer qu’il peut mettre à jour ou supprimer des lignes dans le jeu de résultats. Cela se produit généralement dans les niveaux de concurrence très faible, en particulier sur les niveaux d’isolation de transaction Repeatable Read et Serializable.  
   
--   **L’accès concurrentiel optimiste à l’aide de versions de ligne et l’accès concurrentiel optimiste à l’aide de valeurs** le curseur utilise l’accès concurrentiel optimiste : il met à jour ou supprime des lignes uniquement si elles n’ont pas changé depuis leur dernière lecture. Pour détecter les modifications, il compare les versions de ligne ou de valeurs. Il n’existe aucune garantie que le curseur sera en mesure de mettre à jour ou supprimer une ligne, mais l’accès concurrentiel est beaucoup plus élevée que lorsque le verrouillage est utilisé. Pour plus d’informations, consultez la section suivante, [d’accès concurrentiel optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
+-   **L’accès concurrentiel optimiste à l’aide de versions de ligne et l’accès concurrentiel optimiste à l’aide de valeurs** le curseur utilise l’accès concurrentiel optimiste : Il met à jour ou supprime des lignes uniquement si elles n’ont pas changé depuis leur dernière lecture. Pour détecter les modifications, il compare les versions de ligne ou de valeurs. Il n’existe aucune garantie que le curseur sera en mesure de mettre à jour ou supprimer une ligne, mais l’accès concurrentiel est beaucoup plus élevée que lorsque le verrouillage est utilisé. Pour plus d’informations, consultez la section suivante, [d’accès concurrentiel optimiste](../../../odbc/reference/develop-app/optimistic-concurrency.md).  
   
  Une application spécifie quel type d’accès concurrentiel qu’il veut le curseur à utiliser avec l’attribut d’instruction SQL_ATTR_CONCURRENCY. Pour déterminer quels types sont pris en charge, il appelle **SQLGetInfo** avec l’option SQL_SCROLL_CONCURRENCY.

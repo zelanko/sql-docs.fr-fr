@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ac889b67dec5c6ff014f18d18899109741a2eef9
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62725273"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Accès aux données de modèles multidimensionnels (Analysis Services - Données multidimensionnelles)
   Utilisez les informations de cette rubrique pour savoir comment accéder aux données multidimensionnelles de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] à l'aide des méthodes de programmation, d'un script ou d'applications clientes incluant la prise en charge intégrée pour se connecter à un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] sur votre réseau.  

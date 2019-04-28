@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62727660"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Stockage de cube (Analysis Services - Données multidimensionnelles)
   Il se peut que le stockage n'inclue que les métadonnées de cube, ou toutes les données sources de la table de faits ainsi que les agrégations définies par des dimensions liées au groupe de mesures. La quantité de données stockée dépend du mode de stockage sélectionné et du nombre d'agrégations défini. Cette quantité de données stockées influence directement les performances des requêtes. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise plusieurs techniques pour minimiser l’espace nécessaire pour le stockage des données de cube et les agrégations :  

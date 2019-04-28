@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b370c8f3fb3c8a672f832c13ba89381f475733f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62733339"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Structures d'exploration de données (Analysis Services – exploration de données)
   La structure d'exploration de données définit les données à partir desquelles les modèles d'exploration de données sont construits : elle spécifie la vue de source de données, le nombre et le type de colonnes, ainsi qu'une partition facultative en jeux d'apprentissage et en jeux de test. Une structure d'exploration de données individuelle peut prendre en charge plusieurs modèles d'exploration de données qui partagent le même domaine. Le diagramme suivant illustre la relation de la structure d'exploration de données par rapport à la source de données et à ses modèles d'exploration de données constitutifs.  
@@ -94,7 +94,7 @@ ms.locfileid: "48172519"
 ### <a name="processing-mining-structures"></a>Traitement des structures d'exploration de données  
  Une structure d'exploration de données est un simple conteneur de métadonnées tant qu'elle n'est pas traitée. Quand vous traitez une structure d’exploration de données, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] crée un cache qui stocke des statistiques sur les données, ainsi que des informations sur la manière dont les attributs continus sont discrétisés et toute autre information qui sera utilisée ultérieurement par les modèles d’exploration de données. Le modèle d'exploration de données lui-même ne stocke pas ces informations de synthèse, mais référence à la place des informations qui ont été mises en cache lorsque la structure d'exploration de données a été traitée. Par conséquent, vous n'avez pas à retraiter la structure chaque fois que vous ajoutez un nouveau modèle à une structure existante ; vous pouvez simplement traiter le modèle.  
   
- Vous pouvez choisir d'ignorer ce cache après le traitement, s'il est très volumineux ou si vous souhaitez supprimer des données détaillées. Si vous ne voulez pas mettre ces données en cache, vous pouvez modifier la propriété `CacheMode` de la structure d’exploration de données en `ClearAfterProcessing`. Cela détruira le cache lorsque tous les modèles auront été traités. Définition de la `CacheMode` propriété `ClearAfterProcessing` désactivera l’extraction à partir du modèle d’exploration de données.  
+ Vous pouvez choisir d'ignorer ce cache après le traitement, s'il est très volumineux ou si vous souhaitez supprimer des données détaillées. Si vous ne voulez pas mettre ces données en cache, vous pouvez modifier la propriété `CacheMode` de la structure d’exploration de données en `ClearAfterProcessing`. Cela détruira le cache lorsque tous les modèles auront été traités. La définition de la propriété `CacheMode` sur `ClearAfterProcessing` désactivera l’extraction dans le modèle d’exploration de données.  
   
  Toutefois, après avoir détruit le cache, vous ne pouvez pas ajouter de nouveaux modèles à la structure d'exploration de données. Si vous ajoutez un nouveau modèle d'exploration de données à la structure, ou modifiez les propriétés de modèles existants, vous devez d'abord retraiter la structure d'exploration de données. Pour plus d’informations, consultez [Exigences et considérations concernant le traitement &#40;exploration de données&#41;](processing-requirements-and-considerations-data-mining.md).  
   
@@ -115,14 +115,14 @@ ms.locfileid: "48172519"
   
 |Tâches|Liens|  
 |-----------|-----------|  
-|Utiliser des structures d'exploration de données relationnelles|[Créer une structure d’exploration de données relationnelles](create-a-new-relational-mining-structure.md)<br /><br /> [Ajouter une table imbriquée à une structure d’exploration de données](add-a-nested-table-to-a-mining-structure.md)|  
+|Utiliser des structures d'exploration de données relationnelles|[créer une structure d'exploration de données relationnelle](create-a-new-relational-mining-structure.md)<br /><br /> [Ajouter une table imbriquée à une structure d’exploration de données](add-a-nested-table-to-a-mining-structure.md)|  
 |Utiliser des structures d'exploration de données basées sur des cubes OLAP|[Créer une structure d’exploration de données OLAP](create-a-new-olap-mining-structure.md)<br /><br /> [Filtrer le cube source d’une structure d’exploration de données](../filter-the-source-cube-for-a-mining-structure.md)|  
-|Utiliser des colonnes dans une structure d'exploration de données|[Ajouter des colonnes à une structure d’exploration de données](add-columns-to-a-mining-structure.md)<br /><br /> [Supprimer des colonnes d’une structure d’exploration de données](remove-columns-from-a-mining-structure.md)|  
-|Modifier ou interroger les propriétés et les données de structure d'exploration de données|[Modifier les propriétés d’une structure d’exploration de données](change-the-properties-of-a-mining-structure.md)|  
-|Utiliser des sources de données sous-jacentes et mettre à jour des données sources|[Modifier la vue de source de données utilisée pour une structure d’exploration de données](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [Traiter une structure d’exploration de données](process-a-mining-structure.md)|  
+|Utiliser des colonnes dans une structure d'exploration de données|[Ajouter des colonnes à une structure d’exploration de données](add-columns-to-a-mining-structure.md)<br /><br /> [Supprimer des colonnes d'une structure d'exploration de données](remove-columns-from-a-mining-structure.md)|  
+|Modifier ou interroger les propriétés et les données de structure d'exploration de données|[Modifier les propriétés d'une structure d'exploration de données](change-the-properties-of-a-mining-structure.md)|  
+|Utiliser des sources de données sous-jacentes et mettre à jour des données sources|[Modifier la vue de source de données utilisée pour une structure d’exploration de données](edit-the-data-source-view-used-for-a-mining-structure.md)<br /><br /> [traiter une structure d'exploration de données](process-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Objets de base de données &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
+ [Objets de bases de données &#40;Analysis Services - Données multidimensionnelles &#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
  [Modèles d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-models-analysis-services-data-mining.md)  
   
   

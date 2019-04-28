@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 61573352407d883df91327a1d27f3968ad1d1708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732967"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propriétés des colonnes de structure et des structure d'exploration de données
   Vous pouvez définir ou modifier les propriétés pour une structure d’exploration de données ainsi que pour ses colonnes et colonnes imbriquées associées en utilisant l’onglet **Structure d’exploration de données** du Concepteur d’exploration de données. Les propriétés que vous définissez sous cet onglet sont propagées à chaque modèle d'exploration de données associé à la structure.  
@@ -59,8 +59,8 @@ ms.locfileid: "48190009"
 |**ClassifiedColumns**|Identifie la colonne qu'une colonne classifiée décrit.|  
 |**Contenu**|Type de contenu de la colonne.|  
 |**Description**|Décrit la colonne. Il est recommandé que la description de la colonne fournisse des informations sur la manière dont les données dans la colonne ont été dérivées ou modifiées pour l'exploration de données.|  
-|**DiscretizationBucketCount**|Affiche le nombre de compartiments dans la colonne discrétisée.<br /><br /> Activé uniquement si le type de contenu est défini sur `Discretized`.<br /><br /> Cette propriété est en lecture seule.|  
-|**DiscretizationMethod**|Affiche la méthode utilisée pour discrétiser la colonne.<br /><br /> Activé uniquement si le type de contenu est défini sur `Discretized`.<br /><br /> Cette propriété est en lecture seule.|  
+|**DiscretizationBucketCount**|Affiche le nombre de compartiments dans la colonne discrétisée.<br /><br /> Activé uniquement si le type de contenu a la valeur `Discretized`.<br /><br /> Cette propriété est en lecture seule.|  
+|**DiscretizationMethod**|Affiche la méthode utilisée pour discrétiser la colonne.<br /><br /> Activé uniquement si le type de contenu a la valeur `Discretized`.<br /><br /> Cette propriété est en lecture seule.|  
 |**Distribution**|Spécifie la distribution de contenu dans la colonne.|  
 |**ID**|Affiche l'identificateur de la colonne.<br /><br /> Modifier la valeur de la propriété Name de la colonne n'affecte pas la valeur de la propriété ID.|  
 |**IsKey**|Indique si la colonne est une colonne clé.|  
@@ -75,7 +75,7 @@ ms.locfileid: "48190009"
  Pour plus d’informations sur la définition ou la modification des propriétés, consultez [Tâches de la structure d’exploration de données et procédures](mining-structure-tasks-and-how-tos.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une Structure d’exploration de données relationnelles](create-a-relational-mining-structure.md)   
+ [Créer une structure d'exploration de données relationnelle](create-a-relational-mining-structure.md)   
  [Colonnes de structure d’exploration de données](mining-structure-columns.md)  
   
   

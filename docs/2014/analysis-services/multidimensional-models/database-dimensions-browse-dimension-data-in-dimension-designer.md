@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2823f88c31fe69c6d39713580ee176d1e3190093
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48114182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62726743"
 ---
 # <a name="browse-dimension-data-in-dimension-designer"></a>Explorer les données d'une dimension dans le Concepteur de dimensions
   Vous pouvez parcourir les données dans une dimension en utilisant la vue **Navigateur** du Concepteur de dimensions, accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -38,7 +38,7 @@ ms.locfileid: "48114182"
     >  Une traduction doit être définie dans la dimension pour la langue sélectionnée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Présentation des Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
+ [Présentation des dimensions &#40;Analysis Services – Données multidimensionnelles&#41;](../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)   
  [Dimensions dans les modèles multidimensionnels](dimensions-in-multidimensional-models.md)  
   
   

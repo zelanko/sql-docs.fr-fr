@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9cf1670325e0f40ddfb481f186ee3440aa5b9dc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62734067"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Algorithme MTS (Microsoft Time Series)
   Le [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithme de série chronologique fournit des algorithmes de régression qui sont optimisés pour prévoir des valeurs continues, telles que les ventes de produit, au fil du temps. Contrairement à d'autres algorithmes [!INCLUDE[msCoName](../../includes/msconame-md.md)] , tels que les arbres de décision, un modèle de série chronologique ne nécessite pas de colonnes supplémentaires avec de nouvelles informations comme entrée pour prédire une tendance. Un modèle de série chronologique peut prédire des tendances en fonction uniquement du jeu de données d'origine utilisé pour créer le modèle. Vous pouvez également ajouter de nouvelles données au modèle lorsque vous effectuez une prédiction et les incorporer automatiquement à l'analyse de tendances.  
@@ -99,10 +99,10 @@ ms.locfileid: "48134259"
   
  Dans les deux exemples, vous pouvez prédire les nouvelles ventes à venir et le volume pour chaque produit. Vous ne pouvez pas prédire les nouvelles valeurs pour le produit ou pour la chronologie.  
   
-### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Exemple 1 : jeu de données de série chronologique avec la série représentée comme valeurs de colonne  
+### <a name="example-1-time-series-data-set-with-series-represented-as-column-values"></a>Exemple 1 : Jeu de données de série chronologique avec la série représentée en tant que valeurs de colonne  
  Cet exemple utilise la table de cas d'entrée suivante :  
   
-|TimeID|Product|Ventes|Volume|  
+|TimeID|Produit|Ventes|Volume|  
 |------------|-------------|-----------|------------|  
 |1/2001|A|1000|600|  
 |2/2001|A|1100|500|  
@@ -115,7 +115,7 @@ ms.locfileid: "48134259"
   
  La colonne Sales décrit les bénéfices bruts du produit spécifié pour un jour et la colonne Volume décrit la quantité du produit spécifié en stock. Ces deux colonnes contiennent les données utilisées pour effectuer l'apprentissage du modèle. Sales et Volume peuvent être des attributs prédictibles pour chaque série dans la colonne Product.  
   
-### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemple 2 : jeu de données de série chronologique avec chaque série dans une colonne distincte  
+### <a name="example-2-time-series-data-set-with-each-series-in-separate-column"></a>Exemple 2 : Jeu de données de série chronologique avec chaque série dans une colonne distincte  
  Bien que cet exemple utilise fondamentalement les mêmes données d'entrée que le premier exemple, elles sont structurées différemment, comme illustré dans le tableau suivant :  
   
 |TimeID|A_Sales|A_Volume|B_Sales|B_Volume|  
@@ -123,7 +123,7 @@ ms.locfileid: "48134259"
 |1/2001|1000|600|500|900|  
 |2/2001|1100|500|300|890|  
   
- Dans cette table, la colonne TimeID contient encore la série de cas pour le modèle de série chronologique, que vous désignez comme colonne Key Time. Toutefois, les colonnes Sales et Volume précédentes sont à présent divisées en deux colonnes, et chacune de ces colonnes est précédée du nom du produit. En conséquence, la colonne TimeID ne contient qu'une seule entrée par jour. Un modèle de série chronologique est ainsi créé, qui contient quatre colonnes prédictibles : A_Sales, A_Volume, B_Sales et B_Volume.  
+ Dans cette table, la colonne TimeID contient encore la série de cas pour le modèle de série chronologique, que vous désignez comme colonne Key Time. Toutefois, les colonnes Sales et Volume précédentes sont à présent divisées en deux colonnes, et chacune de ces colonnes est précédée du nom du produit. En conséquence, la colonne TimeID ne contient qu'une seule entrée par jour. Cette opération crée un modèle de série chronologique qui contiendrait quatre colonnes prédictibles : A_Sales, A_Volume, B_Sales et B_Volume.  
   
  En outre, puisque vous avez réparti les produits dans des colonnes différentes, vous n'avez pas à spécifier une colonne clé de série supplémentaire. Toutes les colonnes du modèle sont une colonne de série de cas ou une colonne prédictible.  
   
@@ -155,9 +155,9 @@ ms.locfileid: "48134259"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Explorer un modèle à l’aide de la visionneuse de la série Microsoft Time](browse-a-model-using-the-microsoft-time-series-viewer.md)   
- [Référence technique de Microsoft Time Series algorithme](microsoft-time-series-algorithm-technical-reference.md)   
+ [Explorer un modèle à l'aide de la visionneuse de l'algorithme MTS (Microsoft Time Series)](browse-a-model-using-the-microsoft-time-series-viewer.md)   
+ [Références techniques relatives à l’algorithme MTS (Microsoft Time Series)](microsoft-time-series-algorithm-technical-reference.md)   
  [Exemples de requêtes de modèle de série chronologique](time-series-model-query-examples.md)   
- [Contenu du modèle pour les modèles de série chronologique d’exploration de données &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Contenu du modèle d’exploration de données pour les modèles de séries chronologiques &#40;Analysis Services - Exploration de données&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

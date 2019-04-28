@@ -17,11 +17,11 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63011530"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Gestion de clés extensible à l'aide d'Azure Key Vault (SQL Server)
   Le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connecteur pour [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] chiffrement pour tirer parti du service Azure Key Vault comme un [gestion de clés Extensible &#40;EKM&#41; ](extensible-key-management-ekm.md) fournisseur pour protéger ses clés de chiffrement.  
@@ -30,7 +30,7 @@ ms.locfileid: "59242202"
   
 -   [Utilisations de gestion de clés extensible](#Uses)  
   
--   [Étape 1 : Configuration de Key Vault pour une utilisation par SQL Server](#Step1)  
+-   [Étape 1 : Configuration de Key Vault pour une utilisation par SQL Server](#Step1)  
   
 -   [Étape 2 : L’installation du connecteur SQL Server](#Step2)  
   

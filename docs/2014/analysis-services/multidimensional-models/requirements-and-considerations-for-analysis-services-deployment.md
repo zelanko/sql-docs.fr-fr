@@ -23,11 +23,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6759c38aa519979bdf05ba8848aaccbb89f37a94
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62736727"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Configuration requise et considérations relatives au déploiement d'Analysis Services
   Les performances et la disponibilité d'une solution dépendent de nombreux facteurs, notamment des capacités du matériel sous-jacent, de la topologie de votre déploiement de serveur, des caractéristiques de votre solution (présence, par exemple, de partitions distribuées sur plusieurs serveurs ou utilisation du stockage ROLAP qui requiert l'accès direct au moteur relationnel), des contrats de niveau de service et de la complexité de votre modèle de données.  

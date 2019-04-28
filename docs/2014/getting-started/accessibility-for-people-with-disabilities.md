@@ -22,11 +22,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3df8c5c308502e3e3e50e79c174f1ed96bbeacf9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62842750"
 ---
 # <a name="accessibility-for-people-with-disabilities"></a>Accessibilité pour personnes handicapées
   [!INCLUDE[msCoName](../includes/msconame-md.md)] considère qu'il est de son devoir de faire en sorte que ses produits et services soient accessibles et faciles à utiliser par tous. Cette rubrique contient des informations sur les fonctionnalités, produits et services ci-après qui contribuent à rendre les produits de la famille [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows Server plus accessibles aux personnes handicapées.  

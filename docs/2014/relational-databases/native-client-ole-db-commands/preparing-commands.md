@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dada733f7729d534b66777f747560cd45530727
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62865018"
 ---
 # <a name="preparing-commands"></a>Préparation des commandes
   Le fournisseur OLE DB [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client prend en charge la préparation de commande pour l'exécution multiple optimisée d'une commande unique ; toutefois, la préparation de commande génère une charge mémoire et un consommateur n'a pas besoin de préparer une commande pour l'exécuter plus d'une fois. En général, la préparation de commande est nécessaire si celle-ci doit être exécutée plus de trois fois.  

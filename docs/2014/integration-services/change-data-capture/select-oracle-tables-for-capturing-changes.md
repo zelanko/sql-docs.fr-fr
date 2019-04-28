@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0b962db5e005837a2e9d3fe68564fceb5bfc253
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62835264"
 ---
 # <a name="select-oracle-tables-for-capturing-changes"></a>Sélectionner des tables Oracle pour capturer des modifications
   Cette boîte de dialogue permet de sélectionner les tables incluses dans l'instance de capture de données modifiées. Les tables sélectionnées sont ajoutées à la liste dans la page **Sélectionner des tables et des colonnes** de l'Assistant Nouvelle instance. Cette boîte de dialogue permet d'effectuer les opérations suivantes :  
@@ -27,14 +27,14 @@ ms.locfileid: "58390857"
  **Pour rechercher des tables spécifiques**  
  Entrez les critères de recherche comme suit, puis cliquez sur **Rechercher**:  
   
--   **Schéma**: Sélectionnez un schéma de base de données dans la liste. Seules les tables qui ont ce schéma seront incluses dans la liste.  
+-   **Schéma** : sélectionnez un schéma de base de données dans la liste. Seules les tables qui ont ce schéma seront incluses dans la liste.  
   
--   **Modèle de nom de table**: Entrez la chaîne de caractères. Seules les tables qui incluent la chaîne de caractères entrée s'affichent.  
+-   **Modèle de nom de table** : entrez une chaîne de caractères. Seules les tables qui incluent la chaîne de caractères entrée s'affichent.  
   
 > [!NOTE]  
 >  Vous pouvez entrer des critères dans un des deux champs ou dans les deux.  
   
--   **Afficher les 1 000 premières tables correspondantes**: Par défaut, cette case à cocher est sélectionnée. Elle limite l'affichage aux 1 000 premières tables correspondantes. Si vous désactivez la case à cocher, toutes les tables qui correspondent aux critères s'affichent. S'il existe un grand nombre de tables, l'affichage de la liste peut prendre beaucoup de temps.  
+-   **Afficher les 1 000 premières tables correspondantes** : cette case est cochée par défaut. Elle limite l'affichage aux 1 000 premières tables correspondantes. Si vous désactivez la case à cocher, toutes les tables qui correspondent aux critères s'affichent. S'il existe un grand nombre de tables, l'affichage de la liste peut prendre beaucoup de temps.  
   
  **Pour sélectionner les tables à inclure dans l'instance CDC**  
  Cochez la case en regard d’une table à inclure, puis cliquez sur **Ajouter**. Les tables sont ajoutées à la liste dans la page **Sélectionner des tables et des colonnes** de l'Assistant Nouvelle instance.  

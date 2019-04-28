@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68e965a523df8dadd03d77df8d3d522870f70a93
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60155495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62987148"
 ---
 # <a name="implementing-the-irenderingextension-interface"></a>Implémentation de l'interface IRenderingExtension 
   L'extension de rendu prend les résultats d'une définition de rapport qui est combinée aux données réelles et restitue les données résultantes dans un format utilisable. La transformation de la combinaison des données et de la mise en forme s'effectue par le biais d'une classe CLR (Common Language Runtime) qui implémente <xref:Microsoft.ReportingServices.OnDemandReportRendering.IRenderingExtension>. Cela transforme le modèle objet en un format de sortie qui est consommable par une visionneuse, une imprimante ou une autre cible de sortie.  

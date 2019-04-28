@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2e2ba7f2874cc35fbd662c8696fa999980b52bb6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52530615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62989987"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
   IBCPSession2::BCPSetBulkMode fournit une alternative à [IBCPSession::BCPColFmt &#40;OLE DB&#41; ](ibcpsession-bcpcolfmt-ole-db.md) pour spécifier le format de colonne. Contrairement à IBCPSession::BCPColFmt, qui définit les attributs de format de colonne individuels, IBCPSession2::BCPSetBulkMode définit tous les attributs.  

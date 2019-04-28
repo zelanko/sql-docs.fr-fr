@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d478fa9203988d043212e4187792d816a69c0402
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62724788"
 ---
 # <a name="tracing-and-replaying-events"></a>Événements de traçage et de relecture
   Dans SMO, les objets `Trace` et `Replay` de l'espace de noms <xref:Microsoft.SqlServer.Management.Trace> fournissent l'accès par programme à la fonctionnalité [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)], qui est utilisée pour surveiller une instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Vous pouvez capturer et enregistrer des données sur chaque événement dans un fichier ou dans une table en vue d'une analyse ultérieure. Par exemple, vous pouvez surveiller un environnement de production pour savoir quelles sont les procédures qui compromettent les performances en s'exécutant trop lentement.  
