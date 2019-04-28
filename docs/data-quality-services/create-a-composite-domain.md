@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6aae15d10385a3668a247db8482615d0510155b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862685"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
 
@@ -38,7 +38,7 @@ ms.locfileid: "56026210"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine composite.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Créer un domaine composite dans l'activité de découverte des connaissances  

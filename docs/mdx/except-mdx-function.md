@@ -1,5 +1,5 @@
 ---
-title: À l’exception (MDX) | Documents Microsoft
+title: Except (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03d9b5140eb0cbf9d868e43c65213efe917994a9
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690880"
 ---
 # <a name="except-mdx-function"></a>EXCEPT (fonction) (MDX)
 
@@ -36,7 +36,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  Une expression MDX (Multidimensional Expressions) valide qui retourne un jeu.  
   
 ## <a name="remarks"></a>Notes  
- Si **tous les** est spécifiée, la fonction conserve les doublons trouvés dans le premier jeu ; les doublons trouvés dans le deuxième jeu va être supprimés. Les membres sont retournés dans l'ordre de leur apparition dans le premier jeu.  
+ Si **tous les** est spécifié, la fonction conserve les doublons trouvés dans le premier jeu ; les doublons trouvés dans le deuxième jeu va être supprimés. Les membres sont retournés dans l'ordre de leur apparition dans le premier jeu.  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous illustre l'utilisation de cette fonction.  
@@ -58,7 +58,7 @@ WHERE
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [- &#40;Sauf&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [- &#40;Except&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

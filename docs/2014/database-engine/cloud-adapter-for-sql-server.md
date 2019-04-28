@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9dd6b8e754ea4bc56884b456d673e5af31a013d5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812633"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Adaptateur de cloud pour SQL Server
   Le service Adaptateur de cloud est créé dans le cadre de la configuration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur une machine virtuelle Windows Azure. Il génère un certificat SSL auto-signé dans le cadre de sa première exécution, puis s’exécute en tant que compte **Système local** . Il génère un fichier de configuration utilisé pour sa configuration. L'adaptateur de cloud crée également une règle de Pare-feu Windows pour autoriser les connexions TCP entrantes sur le port 11435 par défaut.  
@@ -48,19 +48,19 @@ ms.locfileid: "52518255"
   
 -   **Paramètres du fichier de configuration** -  
   
-    -   \<configuration >  
+    -   \<configuration>  
   
-        -   \<appSettings >  
+        -   \<appSettings>  
   
-            -   \<Ajouter une clé = « WebServicePort » valeur = « » / >  
+            -   \<add key="WebServicePort" value="" />  
   
-            -   \<Ajouter une clé = « WebServiceCertificate » value = « GUID » / >  
+            -   \<add key="WebServiceCertificate" value="GUID" />  
   
-            -   \<Ajouter une clé = « ExposeExceptionDetails » value = « true » / >  
+            -   \<add key="ExposeExceptionDetails" value="true" />  
   
-        -   \</appSettings >  
+        -   \</appSettings>  
   
-    -   \</configuration >  
+    -   \</configuration>  
   
 -   **Détails du certificat** -le certificat a les valeurs suivantes :  
   

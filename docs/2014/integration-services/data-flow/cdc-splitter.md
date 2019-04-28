@@ -13,11 +13,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 551e5bfdba63ca09388db5260adb5accafe2a78a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828229"
 ---
 # <a name="cdc-splitter"></a>Séparateur de capture de données modifiées
   Le séparateur de capture de données modifiées fractionne un flux de lignes de modification d'un flux de données de source CDC en flux de données distincts pour les opérations d'insertion, de mise à jour et de suppression. Le flux de données est fractionné en fonction de la colonne requise `__$operation` et de ses valeurs standard dans les tables de modification de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] .  
@@ -40,11 +40,11 @@ ms.locfileid: "58387741"
   
  La sortie d'erreur du composant contient les colonnes de sortie suivantes :  
   
--   **Code d’erreur**: La valeur 1.  
+-   **Code d'erreur** : défini sur 1.  
   
--   **Colonne d’erreur**: La colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
+-   **Colonne d’erreur** : colonne source à l’origine de l’erreur (pour les erreurs de conversion).  
   
--   **Colonnes de ligne d’erreur**: Les colonnes d’entrée de la ligne qui a provoqué l’erreur.  
+-   **Colonnes de ligne d’erreur** : colonnes d'entrée de la ligne à l'origine de l'erreur.  
   
 ## <a name="configuring-the-cdc-splitter"></a>Configuration du séparateur de capture de données modifiées  
  Le séparateur de capture de données modifiées ne comporte aucune propriété configurable.  

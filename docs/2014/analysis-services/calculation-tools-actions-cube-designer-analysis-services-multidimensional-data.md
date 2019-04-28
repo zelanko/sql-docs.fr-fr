@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2ba3dd43475f656be7268349e0760cd48cbaa32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677069"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Outils de calcul (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Outils de calcul** sur l'onglet **Actions** du Concepteur de cube afin d'explorer les métadonnées, les fonctions et les modèles disponibles en vue de leur utilisation dans des actions, des actions d'extraction et des actions du rapport.  
@@ -49,7 +49,7 @@ ms.locfileid: "48133509"
 |------------|----------------|  
 |**Copier**|Sélectionnez cette option pour copier l'élément sélectionné dans **Métadonnées** ou **Fonctions** dans le Presse-papiers.<br /><br /> Notez que cette option n’est pas affichée si **modèles** est sélectionné. Notez également que cette option est désactivée si le membre sélectionné ne peut pas être copié, comme le **jeux** dossier d’une dimension affichée dans **métadonnées** ou le dossier de groupe de fonctions affiché dans  **Fonctions**.|  
 |**Filtrer les membres**|Sélectionnez cette option pour afficher la boîte de dialogue **Filtrer les membres** et filtrer les membres affichés pour l'élément sélectionné dans **Métadonnées**. Pour plus d’informations sur la boîte de dialogue **Filtrer les membres**, consultez [Boîte de dialogue Filtrer les membres &#40;Analysis Services - Données multidimensionnelles&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Notez que cette option s’affiche uniquement si **métadonnées** est sélectionné. Notez également que cette option est activée uniquement si un niveau d’attribut est sélectionné dans **métadonnées**.|  
-|**Ajouter un modèle**|Permet d'ajouter au cube une nouvelle action, action d'extraction ou action de rapport s'appuyant sur le modèle sélectionné et d'afficher, selon le type d'action, l' **Éditeur de formulaire d'action**, l' **Éditeur de formulaire d'action d'extraction**ou l' **Éditeur de formulaire d'action de rapport**.<br /><br /> Remarque : Cette option s’affiche uniquement si **métadonnées** est sélectionné.|  
+|**Ajouter un modèle**|Permet d'ajouter au cube une nouvelle action, action d'extraction ou action de rapport s'appuyant sur le modèle sélectionné et d'afficher, selon le type d'action, l' **Éditeur de formulaire d'action**, l' **Éditeur de formulaire d'action d'extraction**ou l' **Éditeur de formulaire d'action de rapport**.<br /><br /> Remarque : Cette option s'affiche uniquement si **Métadonnées** est sélectionné.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Principes de base des scripts MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)   

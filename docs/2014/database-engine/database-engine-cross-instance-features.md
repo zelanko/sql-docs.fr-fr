@@ -11,11 +11,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: bd95133bee73720e6117a0eedd93f8de56b5496f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807523"
 ---
 # <a name="database-engine-cross-instance-features"></a>Fonctionnalités entre les instances du moteur de base de données
   Cette section contient les outils et les tâches associés à la gestion et à la surveillance des serveurs des instances de base de données.  

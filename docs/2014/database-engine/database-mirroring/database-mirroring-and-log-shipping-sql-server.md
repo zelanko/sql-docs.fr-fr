@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48112109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807454"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Mise en miroir de bases de données et copie des journaux de transaction (SQL Server)
   Une base de données déterminée peut être simultanément mise en miroir et/ou faire l'objet d'une copie des journaux de transaction. Pour choisir l'approche à utiliser, tenez compte des éléments suivants :  

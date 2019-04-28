@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14ae3f58a8cfdef4dfde4d30e969e4386bd1dbc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48190839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679609"
 ---
 # <a name="currency-conversions-analysis-services"></a>Conversions monétaires (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensionnel uniquement  
@@ -40,7 +40,7 @@ ms.locfileid: "48190839"
  Devise locale  
  Devise utilisée pour stocker les transactions sur lesquelles se basent les mesures à convertir.  
   
- La devise locale peut être identifiée par un des éléments suivants :  
+ La devise locale peut être identifiée par un des éléments suivants :  
   
 -   Un identificateur de devise dans la table de faits stockée avec la transaction, comme cela est communément le cas avec les applications bancaires où la transaction identifie elle-même la devise qu'elle utilise.  
   
@@ -53,9 +53,9 @@ ms.locfileid: "48190839"
 >  Pour les conversions monétaires plusieurs-à-un, la devise pivot et la devise pour les rapports sont les mêmes.  
   
  Dimension monétaire  
- Dimension de base de données définie avec les paramètres suivants :  
+ Dimension de base de données définie avec les paramètres suivants :  
   
--   Le `Type` propriété de la dimension a la valeur monétaire.  
+-   La propriété `Type` de la dimension a la valeur Currency.  
   
 -   La propriété `Type` d'un attribut de la dimension a la valeur CurrencyName.  
   
@@ -69,18 +69,18 @@ ms.locfileid: "48190839"
   
 -   Une relation de dimension régulière existe entre une dimension de temps et le groupe de mesures de taux.  
   
--   En option, la propriété `Type` a la valeur ExchangeRate. Alors que l’Assistant Business Intelligence utilise les relations avec la devise et les dimensions de temps pour identifier les groupes de mesures de taux probables, attribuer le `Type` propriété ExchangeRate permet aux applications clientes d’identifier plus facilement les mesures de taux groupes.  
+-   En option, la propriété `Type` a la valeur ExchangeRate. Alors que l'Assistant Business Intelligence utilise les relations avec les dimensions monétaire et de temps pour identifier les groupes de mesures de taux probables, attribuer à la propriété `Type` la valeur ExchangeRate permet aux applications clientes d'identifier plus facilement les groupes de mesures de taux.  
   
 -   Une ou plusieurs mesures, représentant les taux de change contenus par le groupe de mesures de taux.  
   
  Dimension monétaire de rapport  
- Dimension, définie par l'Assistant Business Intelligence après qu'une conversion monétaire a été définie, qui contient les devises pour les rapports relatives à cette conversion monétaire. La dimension monétaire de rapport se base sur une requête nommée, définie dans la vue de source de données sur laquelle se base la dimension monétaire associée au groupe de mesures de taux, à partir de la table principale de dimensions de la dimension monétaire. La dimension est définie avec les paramètres suivants :  
+ Dimension, définie par l'Assistant Business Intelligence après qu'une conversion monétaire a été définie, qui contient les devises pour les rapports relatives à cette conversion monétaire. La dimension monétaire de rapport se base sur une requête nommée, définie dans la vue de source de données sur laquelle se base la dimension monétaire associée au groupe de mesures de taux, à partir de la table principale de dimensions de la dimension monétaire. La dimension est définie avec les paramètres suivants :  
   
--   Le `Type` propriété de la dimension a la valeur monétaire.  
+-   La propriété `Type` de la dimension a la valeur Currency.  
   
--   Le `Type` propriété de l’attribut clé pour la dimension a la valeur CurrencyName.  
+-   La propriété `Type` de l'attribut clé de la dimension a la valeur CurrencyName.  
   
--   Le `Type` propriété d’un attribut au sein de la dimension a la valeur CurrencyDestination et la colonne liée à l’attribut contient les identificateurs de devises qui représentent les devises de rapport pour la conversion monétaire.  
+-   La propriété `Type` d'un attribut au sein de la dimension a la valeur CurrencyDestination et la colonne liée à cet attribut contient les identificateurs de devises qui représentent les devises pour les rapports de la conversion monétaire.  
   
 ## <a name="defining-currency-conversions"></a>Définition des conversions monétaires  
  Vous pouvez utiliser l'Assistant Business Intelligence pour définir la fonctionnalité de conversion monétaire pour un cube ou vous pouvez définir manuellement les conversions monétaires à l'aide de scripts MDX.  

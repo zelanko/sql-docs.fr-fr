@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62817022"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "52748422"
 |**retention**|**Int**|La période de rétention pour l’ensemble de l’ensemble de la publication, où l’unité est indiquée par la valeur de la **retention_period_unit** colonne.|  
 |**publication_type**|**tinyint**|Indique que la publication est filtrée :<br /><br /> **0** = non filtrée.<br /><br /> **1** = filtrée.|  
 |**pubid**|**uniqueidentifier**|Numéro d'identification unique de cette publication. Ce numéro est généré lors de l'ajout de la publication.|  
-|**DesignMasterID**|**uniqueidentifier**|Réservé pour un usage ultérieur.|  
+|**designmasterid**|**uniqueidentifier**|Réservé pour un usage ultérieur.|  
 |**parentid**|**uniqueidentifier**|Indique la publication parente à partir de laquelle la publication paire courante ou la publication de sous-ensemble a été créée (utilisé pour les topologies de publication hiérarchiques).|  
 |**sync_mode**|**tinyint**|Mode de synchronisation de la publication :<br /><br /> **0** = native.<br /><br /> **1** = caractère.|  
 |**allow_push**|**Int**|Indique si la publication autorise les abonnements par envoi de données (push).<br /><br /> **0** = les abonnements envoyés ne pas autorisés.<br /><br /> **1** = push abonnements sont autorisés.|  
@@ -59,7 +59,7 @@ ms.locfileid: "52748422"
 |**ftp_port**|**Int**|Le numéro de port du service FTP du serveur de distribution.|  
 |**ftp_subdirectory**|**nvarchar(255)**|Sous-répertoire à partir duquel l'Agent de fusion peut extraire les fichiers d'instantané.|  
 |**ftp_login**|**sysname**|Nom de l'utilisateur, utilisé pour la connexion au service FTP.|  
-|**ftp_password**|**nvarchar (524)**|Le mot de passe d’utilisateur utilisé pour se connecter au service FTP.|  
+|**ftp_password**|**nvarchar(524)**|Le mot de passe d’utilisateur utilisé pour se connecter au service FTP.|  
 |**conflict_retention**|**Int**|Indique la période de rétention, en jours, pendant laquelle les conflits sont conservés. À la fin de cette période, la ligne de conflits est purgée de la table de conflits.|  
 |**keep_before_values**|**Int**|Indique si l'optimisation de la synchronisation intervient pour cette publication :<br /><br /> **0** = synchronisation n’est pas optimisée et les partitions envoyées à tous les abonnés seront vérifiées lors de la modification des données dans une partition.<br /><br /> **1** = la synchronisation est optimisée et seuls les abonnés ayant des lignes dans la partition modifiée sont concernés.|  
 |**allow_subscription_copy**|**bit**|Indique si la possibilité de copier la base de données d'abonnement a été activée. **0** signifie que la copie n’est pas autorisée.|  
@@ -77,11 +77,11 @@ ms.locfileid: "52748422"
 |**allow_subscriber_initiated_snapshot**|**bit**|Indique que les Abonnés peuvent initier le processus qui génère l'instantané d'une publication à l'aide de filtres paramétrés. **1** indique que les abonnés peuvent initier le processus d’instantané.|  
 |**dynamic_snapshot_queue_timeout**|**Int**|Spécifie le nombre de minutes pendant lesquelles un Abonné doit patienter dans la file d'attente avant que ne démarre le processus de génération d'instantané lors de l'utilisation de filtres paramétrés.|  
 |**dynamic_snapshot_ready_timeout**|**Int**|Spécifie le nombre de minutes pendant lesquelles un Abonné attend que se déroule le processus de génération d'instantané lors de l'utilisation de filtres paramétrés.|  
-|**serveur de distribution**|**sysname**|Nom du serveur de distribution de la publication.|  
-|**snapshot_jobid**|**binary (16)**|Identifie le travail d'Agent qui génère l'instantané lorsque l'Abonné peut initier le processus de génération d'instantané.|  
+|**distributor**|**sysname**|Nom du serveur de distribution de la publication.|  
+|**snapshot_jobid**|**binary(16)**|Identifie le travail d'Agent qui génère l'instantané lorsque l'Abonné peut initier le processus de génération d'instantané.|  
 |**allow_web_synchronization**|**bit**|Spécifie si la publication est activée pour la synchronisation Web, où **1** signifie que la synchronisation Web est activée pour la publication.|  
 |**web_synchronization_url**|**nvarchar(500)**|Spécifie la valeur par défaut de l'URL Internet utilisée pour la synchronisation Web.|  
-|**allow_partition_realignment**|**bit**|Indique si les suppressions sont envoyées à l'Abonné lorsque la modification de la ligne sur le serveur de publication amène celui-ci à modifier sa partition.<br /><br /> **0** = données à partir d’une ancienne partition demeurent sur l’abonné, où les modifications apportées à ces données sur le serveur de publication ne seront pas répliquées sur l’abonné, mais les modifications apportées sur l’abonné sont répliquées sur le serveur de publication.<br /><br /> **1** = les suppressions à l’abonné pour refléter les résultats d’une modification de partition en supprimant les données qui ne font plus partie de la partition de l’abonné.<br /><br /> Pour plus d’informations, consultez [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Remarque : Données qui restent sur l’abonné lorsque cette valeur est **0** doit être traitée comme si elle était en lecture seule ; toutefois, cela n’est pas strictement appliquée par le système de réplication.|  
+|**allow_partition_realignment**|**bit**|Indique si les suppressions sont envoyées à l'Abonné lorsque la modification de la ligne sur le serveur de publication amène celui-ci à modifier sa partition.<br /><br /> **0** = données à partir d’une ancienne partition demeurent sur l’abonné, où les modifications apportées à ces données sur le serveur de publication ne seront pas répliquées sur l’abonné, mais les modifications apportées sur l’abonné sont répliquées sur le serveur de publication.<br /><br /> **1** = les suppressions à l’abonné pour refléter les résultats d’une modification de partition en supprimant les données qui ne font plus partie de la partition de l’abonné.<br /><br /> Pour plus d’informations, consultez [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Remarque : Données qui restent sur l’abonné lorsque cette valeur est **0** doit être traitée comme si elle était en lecture seule ; toutefois, cela n’est pas strictement appliquée par le système de réplication.|  
 |**retention_period_unit**|**tinyint**|Définit l’unité utilisée lors de la définition *rétention*, qui peut être une des valeurs suivantes :<br /><br /> **0** = jour.<br /><br /> **1** = semaine.<br /><br /> **2** = mois.<br /><br /> **3** = année.|  
 |**decentralized_conflicts**|**Int**|Indique si les enregistrements en conflit sont stockés dans l'Abonné à l'origine du conflit :<br /><br /> **0** = les enregistrements en conflit ne sont pas stockés sur l’abonné.<br /><br /> **1** = les enregistrements en conflit sont stockés sur l’abonné.|  
 |**generation_leveling_threshold**|**Int**|Indique le nombre de modifications contenues dans une génération. Une génération est une collection de modifications remises à un serveur de publication ou à un Abonné.|  

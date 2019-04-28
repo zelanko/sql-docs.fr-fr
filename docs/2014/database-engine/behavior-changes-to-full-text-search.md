@@ -15,11 +15,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813192"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Changements de comportement pour la recherche en texte intégral
   Cette rubrique décrit les changements de comportement de la recherche en texte intégral. Les modifications de comportement affectent le mode de fonctionnement ou d'interaction des fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -68,7 +68,7 @@ ms.locfileid: "52508866"
   
 |**Terme**|**Résultats avec l’analyseur lexical précédent et le Générateur de formes dérivées**|**Résultats avec les nouveaux analyseur lexical et Générateur de formes dérivées**|  
 |--------------|--------------------------------------------------------|---------------------------------------------------|  
-|jěˊÿqℭžl<br /><br /> *(où les termes du contrat n’est pas des caractères anglais valides)*|'jěˊÿqℭžl'|je yq zl|  
+|jěˊÿｑℭžl<br /><br /> *(où les termes du contrat n’est pas des caractères anglais valides)*|'jěˊÿｑℭžl'|je yq zl|  
 |table's|table's<br /><br /> table|table's|  
 |cat-|cat<br /><br /> cat-|cat|  
 |v-z *(où v et z sont des mots parasites)*|*(aucun résultat)*|v-z|  

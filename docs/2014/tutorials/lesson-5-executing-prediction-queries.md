@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a5f4d6dd79f62541e207df688349f694680e2421
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822311"
 ---
 # <a name="lesson-5-executing-prediction-queries"></a>Leçon 5 : Exécution des requêtes de prédiction
   Dans cette leçon, vous allez utiliser le [SELECT FROM \<modèle > PREDICTION JOIN (DMX)](/sql/dmx/select-from-model-cases-dmx) de modèle que vous avez créé dans le formulaire de l’instruction SELECT pour créer deux différents types de prédictions basées sur l’arbre de décision [ Leçon 2 : Ajout des modèles d’exploration de données à la Structure d’exploration de données Association](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). Ces types de prédiction sont définis ci-dessous.  

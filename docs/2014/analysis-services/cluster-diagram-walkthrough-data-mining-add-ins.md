@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee4a7a09471078753589463c058ba5ea2e39c4d2
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680925"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Procédure pas à pas Diagramme de cluster (Compléments d'exploration de données)
   Une fois que vous avez créé un modèle de clustering, vous pouvez l’importer dans Visio à l’aide du **Cluster** mettre en forme, puis continuer de personnaliser et d’améliorer la disposition. Le **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour l’utilisation des diagrammes d’exploration de données :  
@@ -127,7 +127,7 @@ ms.locfileid: "52420002"
      **Slider**  
      Filtre les lignes entre les clusters. Le fait de déplacer le curseur vers le haut supprime toutes les associations, sauf les plus importantes.  
   
-     **Ombrage**  
+     **Shading**  
      Ce contrôle ne fonctionne pas dans Office 2013.  
   
 5.  Utilisez le **panoramique et Zoom** contrôle, dans le **volet** zone de Visio **vue** ruban pour vous concentrer sur un ensemble de clusters et vous déplacer dans le diagramme.  

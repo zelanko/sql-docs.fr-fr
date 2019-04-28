@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 32e66a84dea20964c11c7de0aa568530aa8c28c5
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823276"
 ---
 # <a name="adding-a-logistic-regression-model-to-the-call-center-structure-intermediate-data-mining-tutorial"></a>Ajout d'un modèle de régression logistique à la structure de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   En plus d'analyser les facteurs qui peuvent affecter le fonctionnement d'un centre d'appels, il vous a été demandé de fournir des recommandations spécifiques sur la façon dont le personnel peut améliorer la qualité de service. Au cours de cette tâche, vous utiliserez la même structure d'exploration de données que celle que vous avez utilisée pour générer le modèle exploratoire et ajouter un modèle d'exploration de données qui sera utilisé pour créer des prédictions.  

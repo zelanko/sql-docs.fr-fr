@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b3b52b0fbdfcd5ccdd7c841bf1a7b73f54857b8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862436"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>Attacher un domaine ou un domaine composite à des données de référence
 
@@ -44,7 +44,7 @@ ms.locfileid: "56010720"
   
 ###  <a name="Security"></a> Sécurité  
   
-#### <a name="permissions"></a>Permissions  
+#### <a name="permissions"></a>Autorisations  
  Vous devez disposer du rôle de dqs_kb_editor sur la base de données de DQS_MAIN pour mapper les domaines aux données de référence.  
   
 ##  <a name="Map"></a> Mapper les domaines aux données de référence de Melissa Data  
@@ -91,7 +91,7 @@ ms.locfileid: "56010720"
 ##  <a name="FollowUp"></a> Suivi : Après le mappage d’un domaine aux données de référence  
  Créez un projet de qualité des données et exécutez l'activité de nettoyage sur vos données sources contenant les adresses américaines en les comparant à la base de connaissances créée dans cette rubrique. Consultez [Nettoyer les données à l’aide de la connaissance des données de référence &#40;externes&#41;](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Services de données de référence dans DQS](../data-quality-services/reference-data-services-in-dqs.md)   
  [Nettoyage de données](../data-quality-services/data-cleansing.md)  
   

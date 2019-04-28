@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38041266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62854340"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,10 +41,10 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  *liste des définitions de colonne*  
  Liste des définitions de colonnes séparées par des virgules.  
   
- *maxpercent d’exclusion*  
+ *holdout-maxpercent*  
  Entier compris entre 1 et 100 qui indique le pourcentage de données à réserver au test.  
   
- *maxcases d’exclusion*  
+ *holdout-maxcases*  
  Entier qui indique le nombre maximal de cas à utiliser pour le test.  
   
  Si la valeur spécifiée pour le nombre maximal de cas est supérieure au nombre de cas d'entrée, tous les cas d'entrée sont utilisés pour le test et un avertissement est déclenché.  
@@ -60,7 +60,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 > [!NOTE]  
 >  Vous devez spécifier une valeur initiale si vous devez vous assurer qu'une partition peut être reproduite.  
   
- Valeur par défaut : RÉPÉTABLE(0)  
+ Valeur par défaut : REPEATABLE(0)  
   
 ## <a name="remarks"></a>Notes  
  Vous définissez une structure d'exploration de données en spécifiant une liste de colonnes, en spécifiant éventuellement des relations hiérarchiques entre les colonnes, puis en partitionnant éventuellement la structure d'exploration de données en jeux de données d'apprentissage et de test.  
@@ -137,7 +137,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 ## <a name="examples"></a>Exemples  
  Les exemples suivants montrent comment créer une structure d'exploration de données avec exclusion à l'aide de DMX.  
   
-### <a name="example-1-adding-a-structure-with-no-training-set"></a>Exemple 1 : Ajout d'une structure sans jeu d'apprentissage  
+### <a name="example-1-adding-a-structure-with-no-training-set"></a>Exemple 1 : Ajout d’une Structure avec aucun jeu d’apprentissage  
  L'exemple suivant crée une structure d'exploration de données nommée `New Mailing` sans créer de modèle d'exploration de données associé et sans utiliser d'exclusion. Pour savoir comment ajouter un modèle d’exploration de données à la structure, consultez [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md).  
   
 ```  
@@ -150,7 +150,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Exemple 2 : Spécification d'un pourcentage et d'une valeur initiale d'exclusion  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>Exemple 2 : En spécifiant le pourcentage d’exclusion et la valeur initiale  
  La clause suivante peut être ajoutée après la liste des définitions de colonnes pour définir un jeu de données qui peut être utilisé pour tester tous les modèles d'exploration de données associés à la structure d'exploration de données. L'instruction crée un jeu de test qui contient 25 % du nombre total de cas d'entrée, sans limite sur le nombre maximal de cas. La valeur 5 000 est utilisée comme valeur initiale pour la création de la partition. Lorsque vous spécifiez une valeur initiale, les mêmes cas sont choisis pour le jeu de test chaque fois vous traitez la structure d'exploration de données, tant que les données sous-jacentes ne changent pas.  
   
 ```  
@@ -164,7 +164,7 @@ CREATE MINING STRUCTURE [New Mailing]
 WITH HOLDOUT(25 PERCENT) REPEATABLE(5000)  
 ```  
   
-### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Exemple 3 : Spécification du pourcentage d'exclusion et du nombre maximal de cas  
+### <a name="example-3-specifying-holdout-percentage-and-max-cases"></a>Exemple 3 : En spécifiant le pourcentage d’exclusion et le nombre maximal de cas  
  La clause suivante crée un jeu de test qui contient soit 25 % du nombre total de cas d'entrée, soit 2 000 cas, la valeur la plus petite étant retenue. La valeur 0 étant spécifiée comme valeur initiale, le nom de la structure d'exploration de données est utilisé pour créer la valeur initiale utilisée pour commencer l'échantillonnage des cas d'entrée.  
   
 ```  

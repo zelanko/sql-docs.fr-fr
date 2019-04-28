@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48155899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808397"
 ---
 # <a name="connection-properties-dialog-box"></a>Propriétés de connexion, boîte de dialogue
   Cette boîte de dialogue vous permet d'afficher les propriétés de la connexion en cours. Cette boîte de dialogue est disponible lorsque vous cliquez sur **Afficher les propriétés de connexion** dans les différentes boîtes de dialogue de l'Explorateur d'objets. Les propriétés affichées dans cette page sont en lecture seule.  

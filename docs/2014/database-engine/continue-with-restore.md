@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d396dd41c7643991063bfa476059362c668673e5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48139979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808250"
 ---
 # <a name="continue-with-restore"></a>Continuer la restauration
   Utilisez la boîte de dialogue **Continuer la restauration** pour indiquer si vous voulez restaurer le prochain jeu de sauvegarde. Pour différer l'opération de restauration, par exemple pour échanger des bandes, attendez d'être prêt à continuer avant de cliquer sur **OK**.  

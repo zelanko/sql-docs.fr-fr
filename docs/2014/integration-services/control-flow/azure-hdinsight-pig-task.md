@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3da6ce80cc9e7bff25614e8589b4bf85dfc68e81
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832706"
 ---
 # <a name="azure-hdinsight-pig-task"></a>Tâche Pig Azure HDInsight
 Utilisez la **tâche Pig Azure HDInsight** pour exécuter un script Pig sur un cluster Azure HDInsight.
@@ -37,8 +37,8 @@ Pour ajouter une **tâche Pig Azure HDInsight**, faites-la glisser sur le concep
   
 5.  Deux méthodes permettent de spécifier le script Pig à exécuter :
   
-    1.  **Script en ligne**: Spécifiez le **Script** champ en tapant en ligne le script à exécuter dans le **entrer le Script** boîte de dialogue.
+    1.  **Script inline** : renseignez le champ **Script** en tapant directement le script à exécuter dans la boîte de dialogue **Entrer le script**.
   
-    2.  **Fichier de script**: Téléchargez le fichier de script vers le stockage Blob Azure et spécifiez le **BlobName** champ. Si l’objet blob ne se trouve pas dans le compte ou le conteneur de stockage par défaut associé au cluster HDInsight, vous devez renseigner les champs **ExternalStorageAccountName** et **ExternalBlobContainer**. Dans le cas d’un objet blob externe, assurez-vous qu’il est configuré comme étant accessible au public.  
+    2.  **Fichier script** : chargez le fichier script dans le Stockage Blob Azure et renseignez le champ **BlobName**. Si l’objet blob ne se trouve pas dans le compte ou le conteneur de stockage par défaut associé au cluster HDInsight, vous devez renseigner les champs **ExternalStorageAccountName** et **ExternalBlobContainer**. Dans le cas d’un objet blob externe, assurez-vous qu’il est configuré comme étant accessible au public.  
   
      Si les deux sont spécifiés, le fichier de script est utilisé et le script en ligne est ignoré.

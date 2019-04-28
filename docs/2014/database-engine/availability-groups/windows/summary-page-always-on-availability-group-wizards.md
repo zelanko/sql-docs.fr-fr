@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814065"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Page Résumé (assistants de groupe de disponibilité AlwaysOn)
   Cette rubrique d'aide décrit les options de la page **Résumé** . Cette rubrique s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], à l' [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] et à l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez la grille de cette page pour passer vos choix en revue pour le nouveau groupe de disponibilité. Pour effectuer une ou plusieurs modifications, cliquez sur **Précédent** pour revenir à la page ou aux pages appropriées. Lorsque vous êtes prêt, cliquez sur **Suivant** pour revenir à la page **Résumé** . Lorsque vous êtes satisfait de vos choix, cliquez sur **Terminer**.  

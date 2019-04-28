@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d57f5938cb888a955645f5a9e0b01eeacfc1142b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48222819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812788"
 ---
 # <a name="change-source-control-connections"></a>Modifier les connexions du contrôle de code source
   La première fois que vous ouvrez ou ajoutez une solution au contrôle de code source, le fournisseur de contrôle de code source crée une association entre le dossier racine du répertoire de la solution locale et le dossier de serveur correspondant.  

@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: c3843fafac0616ffed52e82a307b1f3bfa801cc2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52788901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62672144"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrer et surveiller la capture de données modifiées (SQL Server)
   Cette rubrique décrit comment administrer et surveiller la capture de données modifiées.  
@@ -75,7 +75,7 @@ ms.locfileid: "52788901"
  Lorsqu'un nettoyage est effectué, la limite inférieure de toutes les instances de capture est initialement mise à jour au cours d'une même transaction. Le processus essaie ensuite de supprimer les entrées obsolètes des tables de modifications et de la table cdc.lsn_time_mapping. La valeur de seuil configurable limite le nombre d'entrées pouvant être supprimées au cours de chaque instruction. Tout échec de suppression sur une table individuelle n'empêchera pas l'opération d'être tentée sur les tables restantes.  
   
 ### <a name="cleanup-job-customization"></a>Personnalisation d'un travail de nettoyage  
- Pour le travail de nettoyage, la possibilité de personnalisation réside dans la stratégie utilisée pour déterminer quelles entrées de table de modifications doivent être ignorées. La seule stratégie prise en charge dans le travail de nettoyage réalisé est une stratégie basée sur le temps. Dans cette situation, la nouvelle limite inférieure est calculée en soustrayant la période de rétention autorisée de l'heure de validation de la dernière transaction traitée. Étant donné que les procédures de nettoyage sous-jacentes sont basées sur `lsn` au lieu du temps, autant de stratégies peut être utilisée pour déterminer le plus petit `lsn` à conserver dans les tables de modifications. Seules certaines sont strictement basées sur le temps. Par exemple, la connaissance des clients pourrait être utilisée comme mécanisme de prévention de défaillance si en aval, les processus qui requièrent l'accès aux tables de modifications ne peuvent pas s'exécuter. En outre, bien que la stratégie par défaut applique le même `lsn` pour nettoyer les tables de modifications de toutes les bases de données, la procédure de nettoyage sous-jacente peut également être appelée pour le nettoyage au niveau de l’instance de capture.  
+ Pour le travail de nettoyage, la possibilité de personnalisation réside dans la stratégie utilisée pour déterminer quelles entrées de table de modifications doivent être ignorées. La seule stratégie prise en charge dans le travail de nettoyage réalisé est une stratégie basée sur le temps. Dans cette situation, la nouvelle limite inférieure est calculée en soustrayant la période de rétention autorisée de l'heure de validation de la dernière transaction traitée. Comme les procédures de nettoyage sous-jacentes sont basées sur `lsn` et non pas sur le temps, vous pouvez utiliser autant de stratégies que vous le souhaitez pour déterminer le plus petit `lsn` à conserver dans les tables de modifications. Seules certaines sont strictement basées sur le temps. Par exemple, la connaissance des clients pourrait être utilisée comme mécanisme de prévention de défaillance si en aval, les processus qui requièrent l'accès aux tables de modifications ne peuvent pas s'exécuter. Par ailleurs, bien que la stratégie par défaut applique le même `lsn` pour nettoyer les tables de modifications de toutes les bases de données, la procédure de nettoyage sous-jacente peut également être appelée pour effectuer le nettoyage au niveau de l’instance de capture.  
   
 ##  <a name="Monitor"></a> Surveiller le processus de capture de données modifiées  
  La surveillance du processus de capture de données modifiées vous permet de déterminer si les modifications sont écrites correctement et avec une latence raisonnable aux tables de modifications. La surveillance peut également vous aider à identifier les erreurs qui peuvent se produire. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inclut deux vues de gestion dynamique pour vous aider à surveiller la capture de données modifiées : [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) et [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  

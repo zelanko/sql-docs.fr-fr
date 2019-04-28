@@ -1,5 +1,5 @@
 ---
-title: Niveau de compatibilité d’une base de données multidimensionnelle (Analysis Services) | Documents Microsoft
+title: Niveau de compatibilité d’une base de données multidimensionnelle (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d8f11bb819073ef054582a55620b553865469466
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62825884"
 ---
 # <a name="compatibility-level-of-a-multidimensional-database-analysis-services"></a>Niveau de compatibilité d’une base de données multidimensionnelle (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34024226"
   
  Pour une base de données multidimensionnelle, les valeurs valides pour la propriété **CompatibilityLevel** sont les suivantes :  
   
-|Paramètre| Description|  
+|Paramètre|Description|  
 |-------------|-----------------|  
 |**1050**|Cette valeur n'est pas visible dans un script ou des outils, mais elle correspond aux bases de données créées dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]ou [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. Toute base de données pour laquelle **CompatibilityLevel** n'est pas défini explicitement, s'exécute implicitement au niveau **1050** .|  
 |**1 100**|C'est la valeur par défaut pour les nouvelles bases de données que vous créez dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Vous pouvez également la spécifier pour les bases de données créées dans les versions antérieures de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour permettre l'utilisation des fonctionnalités prises en charge uniquement à ce niveau de compatibilité (à savoir, le stockage amélioré des chaînes pour les attributs de dimension ou les mesures de comptage des valeurs qui contiennent les données de chaîne).<br /><br /> Les bases de données dont la valeur **CompatibilityLevel** est définie sur **1 100** comportent une propriété supplémentaire, **StringStoresCompatibilityLevel**, qui vous permet de choisir un autre stockage de chaînes pour les partitions et les dimensions.|  
@@ -39,7 +39,7 @@ ms.locfileid: "34024226"
 > [!WARNING]  
 >  La définition de la compatibilité de la base de données sur un niveau supérieur est irrévocable. Après avoir augmenté le niveau de compatibilité à **1 100**, vous devez continuer à exécuter la base de données sur des serveurs plus récents. Vous ne pouvez pas revenir au niveau **1 050**. Vous ne pouvez pas attacher ni restaurer une base de données **1 100** sur une version de serveur antérieure à [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## <a name="prerequisites"></a>Configuration requise  
+## <a name="prerequisites"></a>Prérequis  
  Les niveaux de compatibilité de la base de données ont été introduits dans [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Vous devez disposer de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou ultérieur pour visualiser ou définir le niveau de compatibilité de la base de données.  
   
  La base de données ne peut pas être un cube local. Les cubes locaux ne prennent pas en charge la propriété **CompatibilityLevel** .  

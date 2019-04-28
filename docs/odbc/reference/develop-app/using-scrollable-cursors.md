@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cac190a634185a5bed77a7ff38423782044c83ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658215"
 ---
 # <a name="using-scrollable-cursors"></a>Utilisation des curseurs avec défilement
 À l’aide d’un curseur de défilement requiert ces trois étapes :  

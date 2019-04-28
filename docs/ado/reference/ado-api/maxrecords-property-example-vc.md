@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d4c9d8f6f39abf50238866dae9decfb6f04651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863696"
 ---
 # <a name="maxrecords-property-example-vc"></a>MaxRecords, exemple de propriété (VC++)
 Cet exemple utilise le [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propriété pour ouvrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenant les 10 plus chers dans le ***titres*** table.  
@@ -169,12 +169,12 @@ void PrintComError(_com_error &e) {
  **Titres des dix principaux par prix :**  
 **Mais elle est adaptée à l’utilisateur ? ---22,95**  
 **Ordinateur des personnes Phobic et Non allergiques au : Variations de comportement---21,59**  
-**Ail Oignons et Leeks : cuire les Secrets de la Méditerranée---20.95**  
+**Oignons, Leeks et ail : Secrets de la Méditerranée---20.95 la cuisine**  
 **Secrets de la Silicon Valley---20,00**  
 **Guide de base de données de l’exécutif occupé---(19,99 dollars)**  
 **Une discussion sur les ordinateurs---(19,99 dollars)**  
 **Traite de la Silicon Valley gastronomique---(19,99 dollars)**  
-**Privation de données prolongée : Quatre études de cas---(19,99 dollars)**  
+**Prolonge la privation de données : Quatre études de cas---(19,99 dollars)**  
 **Sushi, tout le monde ? ---14,99**  
 **Cinquante années dans Buckingham Palace cuisines---11.95**   
 ## <a name="see-also"></a>Voir aussi  

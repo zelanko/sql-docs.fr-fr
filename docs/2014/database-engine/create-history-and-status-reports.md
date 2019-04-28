@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48192369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807503"
 ---
 # <a name="create-history-and-status-reports"></a>Créer des rapports d'état et historiques
   Vous pouvez créer un rapport sur l'historique ou l'état en cours de fichiers dans la solution actuellement chargée. Vous pouvez également afficher un aperçu du rapport, puis l'envoyer vers une imprimante, un fichier ou le Presse-Papiers. Ces rapports ne sont pas générés par [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. mais par [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe.  

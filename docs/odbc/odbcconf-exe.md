@@ -1,5 +1,5 @@
 ---
-title: ODBCCONF. EXE | Microsoft Docs
+title: ODBCCONF.EXE | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 33688a46be5e5e33aa940f3553c98db5091b159d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62677373"
 ---
-# <a name="odbcconfexe"></a>ODBCCONF. EXE
+# <a name="odbcconfexe"></a>ODBCCONF.EXE
 ODBCCONF.exe est un outil de ligne de commande qui vous permet de configurer des noms de source de données et les pilotes ODBC.  
   
 > [!NOTE]  
@@ -33,7 +33,7 @@ ODBCCONF [switches] action
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Commutateurs*  
+ *switches*  
  Zéro ou plusieurs options de commutateur. Pour la liste des commutateurs disponibles, consultez la section Notes, plus loin dans cette rubrique.  
   
  *action*  
@@ -42,7 +42,7 @@ ODBCCONF [switches] action
 ## <a name="remarks"></a>Notes  
  Les commutateurs suivants sont disponibles :  
   
-|Commutateur|Description|  
+|Basculer|Description|  
 |------------|-----------------|  
 |/A {*action*}|Spécifiez une action.<br /><br /> /A est facultative si seule une action est spécifiée.|  
 |/?|Afficher l’utilisation pour ODBCCONF. EXE.|  
@@ -50,7 +50,7 @@ ODBCCONF [switches] action
 |/E|Effacer le fichier de réponse spécifié avec /F lorsque le traitement est terminé.|  
 |/F|Utiliser un fichier réponse, tel que `odbcconf /F my.rsp`.<br /><br /> My.rsp peut se présenter comme suit : `REGSVR c:\my.dll`<br /><br /> /A n’est pas utilisé dans un fichier réponse.|  
 |/H|Afficher l’utilisation (aide). Ce commutateur est identique à / ?.|  
-|/ L [*mode*] *nom de fichier*|Envoyer la sortie du programme dans un fichier dans un des trois modes : normal (n), verbose (v) et le débogage (d). Les DLL qui sont chargés par odbcconf.exe enregistrements du mode de débogage.<br /><br /> Si vous spécifiez/l sans mode, le fichier journal sera vide.<br /><br /> Par exemple, **/Lv log.txt**.|  
+|/L[*mode*] *filename*|Envoyer la sortie du programme dans un fichier dans un des trois modes : normal (n), verbose (v) et le débogage (d). Les DLL qui sont chargés par odbcconf.exe enregistrements du mode de débogage.<br /><br /> Si vous spécifiez/l sans mode, le fichier journal sera vide.<br /><br /> Par exemple, **/Lv log.txt**.|  
 |/R|L’action sera effectuée après un redémarrage.|  
 |/S|Mode silencieux. Ne pas afficher les messages d’erreur.|  
   
@@ -59,10 +59,10 @@ ODBCCONF [switches] action
 |Action|Description|  
 |------------|-----------------|  
 |CONFIGDRIVER *nom_pilote ** configuration spécifique au pilote params*|Charge la DLL d’installation du pilote approprié et appelle le **ConfigDriver** (fonction).<br /><br /> Équivalent à la [sqlconfigdriver, fonction](../odbc/reference/syntax/sqlconfigdriver-function.md).<br /><br /> Exemple :<br /><br /> /A {CONFIGDRIVER « Nom du pilote » « CPTimeout = 60 »}<br /><br /> /A {CONFIGDRIVER « Nom du pilote » « DriverODBCVer = 03.80 »}|  
-|CONFIGDSN *nom_pilote* DSN =*nom* &#124; *attributs*|Ajoute ou modifie une source de données système.<br /><br /> Équivalent à la [fonction SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Exemple :<br /><br /> /A {CONFIGDSN « SQL Server » « DSN = nom &#124; Server = srv »}|  
-|CONFIGSYSDSN *nom_pilote* DSN =*nom* &#124; *attributs*|Ajoute ou modifie une source de données système.<br /><br /> Équivalent à la [fonction SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Exemple :<br /><br /> /A {CONFIGSYSDSN « SQL Server » « DSN = nom &#124; Server = srv »}|  
-|/INSTALLDRIVER|Équivalent à [sqlinstalldriverex, fonction](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Pour plus d’informations sur la syntaxe de paires mot clé-valeur passée à /INSTALLDRIVER, consultez [sous-clés de spécification de pilote](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Exemple :<br /><br /> /A {/INSTALLDRIVER » votre pilote &#124; Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel = 2 &#124; ConnectFunctions = YYY &#124; DriverODBCVer = 03.50 &#124; FileUsage = 0 &#124; SQLLevel = 1 »}|  
-|INSTALLTRANSLATOR *configuration du traducteur ** chemin d’accès du pilote*|Ajoute des informations sur un traducteur pour le **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. INI\ODBC traducteurs** clé de Registre.<br /><br /> Équivalent à [sqlinstalltranslatorex, fonction](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Pour plus d’informations sur la syntaxe de paires mot clé-valeur passée à /INSTALLDRIVER, consultez [sous-clés de spécification de traducteur](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Exemple :<br /><br /> /A {INSTALLTRANSLATOR « mon Translator &#124; Translator=c:\my.dll &#124; Setup=c:\my.dll »}|  
+|CONFIGDSN *nom_pilote* DSN =*nom* &#124; *attributs*|Ajoute ou modifie une source de données système.<br /><br /> Équivalent à la [fonction SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Exemple :<br /><br /> /A {CONFIGDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
+|CONFIGSYSDSN *driver_name* DSN=*name* &#124; *attributes*|Ajoute ou modifie une source de données système.<br /><br /> Équivalent à la [fonction SQLConfigDataSource](../odbc/reference/syntax/sqlconfigdatasource-function.md).<br /><br /> Exemple :<br /><br /> /A {CONFIGSYSDSN "SQL Server" "DSN=name &#124; Server=srv"}|  
+|/INSTALLDRIVER|Équivalent à [sqlinstalldriverex, fonction](../odbc/reference/syntax/sqlinstalldriverex-function.md).<br /><br /> Pour plus d’informations sur la syntaxe de paires mot clé-valeur passée à /INSTALLDRIVER, consultez [sous-clés de spécification de pilote](../odbc/reference/install/driver-specification-subkeys.md).<br /><br /> Exemple :<br /><br /> /A {INSTALLDRIVER  "Your Driver &#124; Driver=c:\your.dll &#124; Setup=c:\your.dll &#124; APILevel=2 &#124; ConnectFunctions=YYY &#124; DriverODBCVer=03.50 &#124; FileUsage=0 &#124; SQLLevel=1"}|  
+|INSTALLTRANSLATOR *configuration du traducteur ** chemin d’accès du pilote*|Ajoute des informations sur un traducteur pour le **HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBCINST. INI\ODBC traducteurs** clé de Registre.<br /><br /> Équivalent à [sqlinstalltranslatorex, fonction](../odbc/reference/syntax/sqlinstalltranslatorex-function.md).<br /><br /> Pour plus d’informations sur la syntaxe de paires mot clé-valeur passée à /INSTALLDRIVER, consultez [sous-clés de spécification de traducteur](../odbc/reference/install/translator-specification-subkeys.md).<br /><br /> Exemple :<br /><br /> /A {INSTALLTRANSLATOR  "My Translator &#124; Translator=c:\my.dll &#124; Setup=c:\my.dll"}|  
 |REGSVR *dll*|Inscrit une DLL.<br /><br /> Équivalent de regsvr32.exe.<br /><br /> Exemple :<br /><br /> /A {REGSVR c:\my.dll}|  
 |SETFILEDSNDIR|Lorsque HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. INI\ODBC fichier DSN\DefaultDSNDir n’existe pas, l’action SETFILEDSNDIR crée et affectez-lui la valeur à HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CommonFilesDir, ajouté avec \ODBC\Data Sources.<br /><br /> Valeur à HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC. INI\ODBC fichier DSN\DefaultDSNDir Spécifie l’emplacement par défaut utilisé par l’administrateur de sources de données ODBC lors de la création d’une source de données de fichiers.<br /><br /> Exemple :<br /><br /> /A {SETFILEDSNDIR}|  
   
