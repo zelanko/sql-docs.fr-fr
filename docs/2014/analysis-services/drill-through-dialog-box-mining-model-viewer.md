@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d26fcb3d26570adafe340f190e7a91c82fd2ef3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731548"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Boîte de dialogue Extraire (Visionneuse de modèle d'exploration de données)
   Quand vous affichez un modèle d’exploration de données sous l’onglet **Visionneuse de modèle d’exploration de données** du concepteur de modèle d’exploration de données, vous pouvez extraire les détails des données de cas, à condition que l’extraction ait été activée sur le modèle. De plus, si l'extraction a été activée sur la structure d'exploration de données sous-jacente, vous pouvez aussi afficher les colonnes dans la structure d'exploration de données, même si ces colonnes n'ont pas été incluses dans le modèle d'exploration de données. Dans la liste de colonnes, les colonnes de structure portent un préfixe par l’étiquette « Structure. ».  
@@ -47,7 +47,7 @@ ms.locfileid: "48066951"
   
 ## <a name="see-also"></a>Voir aussi  
  [Requêtes d’extraction &#40;exploration de données&#41;](data-mining/drillthrough-queries-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Tâches et procédures de la visionneuse de modèle d’exploration de données](data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

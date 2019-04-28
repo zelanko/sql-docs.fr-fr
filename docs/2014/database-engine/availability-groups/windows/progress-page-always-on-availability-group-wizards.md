@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3c87b2a3c6ac2156a4d52ece48efa2982bb4ca2d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48130839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789109"
 ---
 # <a name="progress-page-alwayson-availability-group-wizards"></a>Page Progression (Assistants Groupe de disponibilité AlwaysOn)
   Utilisez cette boîte de dialogue pour afficher la progression d'un Assistant [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] que vous exécutez dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. La barre de progression indique la progression relative des étapes que l'Assistant effectue.  
@@ -39,7 +39,7 @@ ms.locfileid: "48130839"
  **État**  
  Indique le résultat des étapes terminées et le pourcentage d'exécution de l'étape active, comme suit :  
   
-|Résultats|Description|  
+|Résultat|Description|  
 |------------|-----------------|  
 |**Erreur**|Indique que l'opération pour cette étape a rencontré une erreur. Cliquez sur le lien pour afficher une boîte de dialogue de message qui décrit l'erreur.|  
 |**En cours (** *pourcentage-effectué* **)**|Indique que l'opération a maintenant lieu et estime le pourcentage de réalisation de cette étape.|  

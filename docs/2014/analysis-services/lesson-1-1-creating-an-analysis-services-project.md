@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b6e7fca1013811f8a5a8b36e85970bd7a74b6d9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48066946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730265"
 ---
 # <a name="creating-an-analysis-services-project"></a>Création d'un projet Analysis Services
   Dans la tâche suivante, vous utilisez [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer un nouveau [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] projet nommé `Analysis Services Tutorial`, selon le [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] modèle de projet. Un *projet* est une collection d'objets connexes. Les projets existent au sein d'une solution, laquelle peut inclure un ou plusieurs projets. Pour plus d’informations, consultez [Créer un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md).  
@@ -38,10 +38,10 @@ ms.locfileid: "48066946"
  Vous avez créé le `Analysis Services Tutorial` projet, selon le **Analysis Services Multidimensional and Data Mining Project** modèle, dans une nouvelle solution qui est également nommée `Analysis Services Tutorial`.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition d’une source de données](lesson-1-2-defining-a-data-source.md)  
+ [Définition d'une source de données](lesson-1-2-defining-a-data-source.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Création multidimensionnelles de modèles à l’aide de SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Création de modèles multidimensionnels à l’aide des Outils de données SQL Server &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
  [Créer un projet Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

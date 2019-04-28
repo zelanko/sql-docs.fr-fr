@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: eac9f39478b66df98de0483f8dc68d3e671ce045
-ms.sourcegitcommit: 12911093559b4e006189d7a7d32b8d0474961cd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54372674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789145"
 ---
 # <a name="replication-subscribers-and-alwayson-availability-groups-sql-server"></a>Abonnés de réplication et groupes de disponibilité AlwaysOn (SQL Server)
-  Lorsqu'un groupe de disponibilité AlwaysOn contenant une base de données est un abonné de réplication et bascule, l'abonnement de réplication peut échouer. Pour les abonnés de push de la réplication transactionnelle, l’agent de distribution continue à répliquer automatiquement après un basculement, si l’abonnement a été créé en utilisant le nom d’écouteur de groupe de disponibilité. Pour les abonnés par extraction de la réplication transactionnelle, l’agent de distribution est toujours répliqués automatiquement après un basculement, si l’abonnement a été créé à l’aide du nom de l’écouteur de groupe de disponibilité et le serveur d’origine de l’abonné est opérationnel et en cours d’exécution. Il s’agit, car les travaux de l’agent de distribution créés uniquement sur l’abonné d’origine (réplica principal du groupe de disponibilité). Pour les abonnés de fusion, un administrateur de réplication doit reconfigurer l'abonné manuellement, en recréant l'abonnement.  
+  Lorsqu'un groupe de disponibilité AlwaysOn contenant une base de données est un abonné de réplication et bascule, l'abonnement de réplication peut échouer. Pour les abonnés de réplication par émission transactionnelle, l’agent de distribution continue la réplication automatiquement après un basculement si l’abonnement a été créé avec le nom de l’écouteur de groupe de disponibilité. Pour les abonnés de réplication par réception transactionnelle, l’agent de distribution continue la réplication automatiquement après un basculement si l’abonnement a été créé avec le nom de l’écouteur de groupe de disponibilité et que le serveur de l’Abonné d’origine fonctionne. C’est parce que les travaux de l’agent de distribution sont uniquement créés sur l’Abonné d’origine (réplica principal du groupe de disponibilité). Pour les abonnés de fusion, un administrateur de réplication doit reconfigurer l'abonné manuellement, en recréant l'abonnement.  
   
 ## <a name="what-is-supported"></a>Ce qui est pris en charge  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] prend en charge le basculement automatique du serveur de publication, le basculement automatique des abonnés transactionnels et le basculement manuel des abonnés de fusion. Le basculement d'un serveur de distribution dans une base de données de disponibilité n'est pas pris en charge. AlwaysOn ne peut pas être combiné avec Websync et [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Compact.  

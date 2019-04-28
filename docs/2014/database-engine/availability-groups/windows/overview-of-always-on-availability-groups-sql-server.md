@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 749aaffe61033564649f9cd70871f2cb01340757
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789563"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Vue d'ensemble des groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique présente les concepts [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] essentiels pour configurer et gérer un ou plusieurs groupes de disponibilité dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Pour obtenir un résumé des avantages offerts par les groupes de disponibilité et une vue d’ensemble de la terminologie [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], consultez [Groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](always-on-availability-groups-sql-server.md).  
@@ -29,7 +29,7 @@ ms.locfileid: "53363591"
  Un *groupe de disponibilité* prend en charge un environnement de basculement pour un ensemble discret de bases de données utilisateur, appelées *bases de données de disponibilité*, qui basculent de concert. Un groupe de disponibilité prend en charge un ensemble de bases de données primaires et un à huit ensembles de bases de données secondaires correspondantes. Les bases de données secondaires ne sont *pas* des sauvegardes. Continuez à sauvegarder vos bases de données et leurs journaux des transactions de manière régulière.  
   
 > [!TIP]  
->  Vous pouvez créer n'importe quel type de sauvegarde d'une base de données primaire. Vous pouvez également créer des sauvegardes de journaux et des sauvegardes complètes de copie uniquement des bases de données secondaires. Pour plus d’informations, consultez [secondaires actifs : Sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Vous pouvez créer n'importe quel type de sauvegarde d'une base de données primaire. Vous pouvez également créer des sauvegardes de journaux et des sauvegardes complètes de copie uniquement des bases de données secondaires. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
  Chaque ensemble de bases de données de disponibilité est hébergé par un *réplica de disponibilité*. Deux types de réplicas de disponibilité existent mais il ne peut y avoir qu'un seul *réplica principal* qui héberge les bases de données primaires et un à huit *réplicas secondaires*qui hébergent un ensemble de bases de données secondaires et servent de cibles potentielles d'un basculement du groupe de disponibilité. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Un réplica de disponibilité apporte la redondance uniquement au niveau de la base de données, pour l’ensemble des bases de données d’un groupe de disponibilité. Les basculements ne sont pas dus à des problèmes de base de données, tels qu'une base de données devenant suspecte en raison de la perte d'un fichier de données ou de l'altération d'un journal des transactions.  
   
@@ -118,11 +118,11 @@ ms.locfileid: "53363591"
   
 -   **Exécution d'opérations de sauvegarde sur des réplicas secondaires**  
   
-     Les réplicas secondaires prennent en charge l’exécution de sauvegardes de journal et de sauvegardes en [copie seule](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) d’une base de données complète, de fichiers ou de groupes de fichiers. Vous pouvez configurer le groupe de disponibilité pour spécifier une préférence concernant l'emplacement où les sauvegardes doivent être effectuées. Il est important de comprendre que la préférence n'est pas appliquée par SQL Server. Par conséquent, elle n'a aucune incidence sur les sauvegardes ad hoc. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans vos travaux de sauvegarde pour chacune des bases de données dans un groupe de disponibilité donné. Pour un réplica de disponibilité particulier, vous pouvez spécifier la priorité d'exécution des sauvegardes sur ce réplica par rapport aux autres réplicas dans le même groupe de disponibilité. Pour plus d’informations, consultez [secondaires actifs : Sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Les réplicas secondaires prennent en charge l’exécution de sauvegardes de journal et de sauvegardes en [copie seule](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) d’une base de données complète, de fichiers ou de groupes de fichiers. Vous pouvez configurer le groupe de disponibilité pour spécifier une préférence concernant l'emplacement où les sauvegardes doivent être effectuées. Il est important de comprendre que la préférence n'est pas appliquée par SQL Server. Par conséquent, elle n'a aucune incidence sur les sauvegardes ad hoc. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans vos travaux de sauvegarde pour chacune des bases de données dans un groupe de disponibilité donné. Pour un réplica de disponibilité particulier, vous pouvez spécifier la priorité d'exécution des sauvegardes sur ce réplica par rapport aux autres réplicas dans le même groupe de disponibilité. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur les réplicas secondaires &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Accès en lecture seule à un ou plusieurs réplicas secondaires (réplicas secondaires lisibles)**  
   
-     Tout réplica de disponibilité peut être configuré pour autoriser l'accès en lecture seule à ses bases de données locales lorsqu'il a le rôle secondaire, bien que certaines opérations ne soient pas totalement prises en charge. De plus, si vous souhaitez empêcher que les charges de travail en lecture seule s'exécutent sur le réplica principal, vous pouvez configurer les réplicas pour autoriser uniquement l'accès en lecture en cas d'exécution sous le rôle principal. Pour plus d’informations, consultez [secondaires actifs : Réplicas secondaires lisibles &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+     Tout réplica de disponibilité peut être configuré pour autoriser l'accès en lecture seule à ses bases de données locales lorsqu'il a le rôle secondaire, bien que certaines opérations ne soient pas totalement prises en charge. De plus, si vous souhaitez empêcher que les charges de travail en lecture seule s'exécutent sur le réplica principal, vous pouvez configurer les réplicas pour autoriser uniquement l'accès en lecture en cas d'exécution sous le rôle principal. Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires lisibles &#40;groupes de disponibilité AlwaysOn&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
      Si un groupe de disponibilité a un écouteur de groupe de disponibilité et un ou plusieurs réplicas secondaires lisibles, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] peut acheminer les demandes de connexion d’intention de lecture vers l’un d’entre eux (*routage en lecture seule*). Pour plus d’informations, consultez [Écouteurs de groupe de disponibilité, connectivité client et basculement d’application &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md).  
   
@@ -157,7 +157,7 @@ ms.locfileid: "53363591"
   
 -   **Vidéos :**  
   
-     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Présentation de la Solution de haute disponibilité prochaine génération](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (vidéo de présentation de la solution haute disponibilité de la génération suivante)  
   
      [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 2 : Création d’une Solution de haute disponibilité critique à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

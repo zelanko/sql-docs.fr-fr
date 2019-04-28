@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8126278319caff77a3d4ff6a334ed985c190288e
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795496"
 ---
 # <a name="partitions-ssas-tabular"></a>Partitions (SSAS Tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment d'autres partitions. Les partitions créées à l'aide de la boîte de dialogue Partitions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] au cours de la création de modèles s'appliquent à la base de données model de l'espace de travail. Lorsque le modèle est déployé, les partitions définies pour la base de données model de l'espace de travail sont dupliquées dans la base de données model déployée. Vous pouvez continuer à créer et gérer des partitions pour une base de données model déployée à l'aide de la boîte de dialogue Partitions dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  Les informations fournies dans cette rubrique décrivent les partitions créées pendant la génération de modèles à l'aide de la boîte de dialogue Gestionnaire de partitions dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur la création et la gestion de partitions pour un modèle déployé, consultez [Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md).  

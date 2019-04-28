@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ed7273b2fd24690956fa5c5ffe317ad9c00c40ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710268"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Spécifie le type d’objet de base de données pour lequel définir des autorisations ou la propriété.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adPermObjColumn**|2|L’objet est une colonne.|  
 |**adPermObjDatabase**|3|L’objet est une base de données.|  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11480432c19f84d58c5804927c3c22ac31be4342
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711813"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>Modifier la valeur du délai d'attente pour les requêtes d'exploration de données
   Lorsque vous générez un graphique de courbes d'élévation ou que vous exécutez une requête de prédiction, quelquefois, la génération de toutes les données requises pour la prédiction peut prendre du temps. Pour empêcher l'expiration du délai pour la requête, vous pouvez modifier la valeur qui contrôle le délai d'attente du serveur [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour achever une requête.  
@@ -36,7 +36,7 @@ ms.locfileid: "48077453"
 3.  Cliquez sur la zone de texte **Délai de requête** et tapez une valeur pour le nombre de secondes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de requête d’exploration de données et de procédures](data-mining-query-tasks-and-how-tos.md)   
+ [Tâches de requête d’exploration de données et procédures](data-mining-query-tasks-and-how-tos.md)   
  [Requêtes d’exploration de données](data-mining-queries.md)  
   
   

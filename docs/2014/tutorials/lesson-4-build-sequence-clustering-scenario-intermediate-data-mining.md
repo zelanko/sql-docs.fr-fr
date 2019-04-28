@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d34125b7b750daa1da25c9e8788172b5d9ca2c35
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62710601"
 ---
 # <a name="lesson-4-building-a-sequence-clustering-scenario-intermediate-data-mining-tutorial"></a>Leçon 4 : Création d’un scénario Sequence Clustering (didacticiel d’exploration de données intermédiaire)
   Le service marketing de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] souhaite comprendre comment les clients se déplacent sur le site web [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] . Cette société suppose que l'ordre dans lequel les clients ajoutent des produits dans leurs paniers obéit à un modèle. Il souhaite en effet analyser l'ordre des séquences d'achat afin de découvrir comment les clients ajoutent des articles associés à leurs paniers. Elle peut utiliser ces informations pour rationaliser le flux du site Web afin qu'il conduise les clients à acheter des produits supplémentaires.  

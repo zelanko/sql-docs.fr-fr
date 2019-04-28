@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 871919554975f04fae0aeaa1b8e6ec684c6650a4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47729297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62714146"
 ---
 # <a name="why-was-odbc-created"></a>Pourquoi ODBC a-t-il été créé ?
-Historiquement, les entreprises utilisent un SGBD unique. Tous les accès de base de données a été effectuée via le serveur frontal de ce système ou les applications écrites pour fonctionner exclusivement avec ce système. Toutefois, quand l’utilisation d’ordinateurs a augmenté et plus de matériel informatique et de logiciels sont devenues disponibles, entreprises ont commencé acquérir des différents SGBD. Les raisons qui ont été nombreux : personnes a acheté ce qui était moins coûteux, ce qui a été le plus rapide, ce qu’ils déjà savais, ce qui était la plus récente sur le marché, ce qui a fonctionné mieux pour une application unique. Pour d’autres raisons ont été réorganisations et les fusions, où les départements qui avait précédemment un SGBD unique devaient désormais plusieurs.  
+Historiquement, les entreprises utilisent un SGBD unique. Tous les accès de base de données a été effectuée via le serveur frontal de ce système ou les applications écrites pour fonctionner exclusivement avec ce système. Toutefois, quand l’utilisation d’ordinateurs a augmenté et plus de matériel informatique et de logiciels sont devenues disponibles, entreprises ont commencé acquérir des différents SGBD. Les raisons étaient nombreuses : Personnes a acheté ce qui était moins coûteux, ce qui a été le plus rapide, ce qu’ils déjà savais, ce qui était la plus récente sur le marché, ce qui a fonctionné mieux pour une application unique. Pour d’autres raisons ont été réorganisations et les fusions, où les départements qui avait précédemment un SGBD unique devaient désormais plusieurs.  
   
  Le problème a augmenté encore plus complexe avec l’avènement des ordinateurs personnels. Ces ordinateurs dans un large éventail d’outils pour interroger, analyser et affichage des données, ainsi que plusieurs bases de données peu coûteuses, facile à utiliser. Dès lors, une seule corporation était souvent des données répartis sur une multitude de postes de travail, serveurs et miniordinateurs, stockées dans diverses bases de données incompatibles et accessibles par un grand nombre de différents outils, peu d'entre eux peuvent accéder à toutes les données.  
   

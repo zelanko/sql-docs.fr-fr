@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 941c6a8cf6c7ed57e0a28d5cb288d92ab8e231c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864504"
 ---
 # <a name="item-property-example-vb"></a>Item, exemple de propriété (VB)
 Cet exemple montre comment la [élément](../../../ado/reference/ado-api/item-property-ado.md) propriété accède aux membres d’une collection. L’exemple ouvre le ***auteurs*** table de la ***Pubs*** base de données avec une commande paramétrée.  
@@ -137,7 +137,7 @@ End Sub
   
 ## <a name="see-also"></a>Voir aussi  
  [Objet Command (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Élément propriété (ADO)](../../../ado/reference/ado-api/item-property-ado.md)   
  [Collection de paramètres (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

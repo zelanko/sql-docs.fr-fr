@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a16319b01c6555aa3bf299da201d9662cd59f4b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667859"
 ---
 # <a name="calculated-member-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire de membre calculé (onglet Calculs, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire de membre calculé** de l'onglet **Calculs** dans le Concepteur de cube pour créer et modifier un membre calculé.  
@@ -40,7 +40,7 @@ ms.locfileid: "48049109"
   
  **Remarque** Cette option est disponible si **Hiérarchie parente** spécifie une hiérarchie différente de MESURES.  
   
- **Modification**  
+ **Change**  
  Affiche la boîte de dialogue **Sélectionnez le membre parent** pour choisir un **Membre parent**. Pour plus d’informations sur la boîte de dialogue **Sélectionnez le membre parent**, consultez [Boîte de dialogue Sélectionnez le membre parent &#40;Analysis Services - Données multidimensionnelles&#41;](select-parent-member-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Expression**  

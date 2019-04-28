@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04b1afa7f9902d0e1510aaab5f84f96b4b01eacc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691904"
 ---
 # <a name="apply-prediction-functions-to-a-model"></a>Appliquer des fonctions de prédiction à un modèle
   Pour créer une requête de prédiction, vous devez d'abord sélectionner le modèle d'exploration de données sur lequel la requête sera basée. Vous pouvez sélectionner n'importe quel modèle d'exploration de données existant du projet actuel.  

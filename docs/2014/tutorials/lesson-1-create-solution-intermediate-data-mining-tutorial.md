@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3bb2f1dcabe17bb2c3e7258653602ac43615c706
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678479"
 ---
 # <a name="lesson-1-creating-the-intermediate-data-mining-solution-intermediate-data-mining-tutorial"></a>Leçon 1 : Création de la Solution d’exploration de données intermédiaire (didacticiel d’exploration de données intermédiaire)
   Dans le didacticiel sur l'exploration de données de base, vous avez créé un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui contient une solution d'exploration de données simple basée sur la nouvelle base de données [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] .  
@@ -33,7 +33,7 @@ ms.locfileid: "56035800"
  [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="all-lessons"></a>Toutes les leçons  
- Leçon 1 : Création de la Solution d’exploration de données intermédiaires  
+ Leçon 1 : Création de la solution intermédiaire d’exploration de données  
   
  [Leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   

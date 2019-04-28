@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2788c663553d8b01e6a047be70f101dc364d6042
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679903"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Créer une structure d'exploration de données (Compléments d'exploration de données SQL Server)
   ![Bouton de créer une Structure d’exploration de données, ruban Exploration de données](media/dmc-createstruct.gif "bouton Créer la Structure d’exploration de données, ruban Exploration de données")  
@@ -48,7 +48,7 @@ ms.locfileid: "52542966"
   
     -   **Temps clé**. Cette option est disponible uniquement pour les modèles de prévision, si nécessaire.  
   
-    -   **Inclure**. Indique que la colonne doit être disponible dans la structure d'exploration de données, mais n'est pas une colonne clé.  
+    -   **Include**. Indique que la colonne doit être disponible dans la structure d'exploration de données, mais n'est pas une colonne clé.  
   
     -   **N’utilisez pas**. Indique que la colonne ne doit pas être incluse dans la structure d'exploration de données.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "52542966"
   
 |Valeurs|Description|  
 |------------|-----------------|  
-|**inclure**|Spécifie que la colonne contient des données qui peuvent être utilisées pour l'analyse ou la prédiction.|  
+|**Include**|Spécifie que la colonne contient des données qui peuvent être utilisées pour l'analyse ou la prédiction.|  
 |**Clé**|Spécifie que la colonne contient un ID de transaction, un ID de série ou une autre clé nécessaire au traitement.<br /><br /> Tous les algorithmes nécessitent une colonne Clé. Certains algorithmes n'autorisent toutefois qu'une seule clé, tandis que d'autres en autorisent plusieurs.<br /><br /> Si la colonne contient une clé mais n’est pas obligatoire pour le traitement, sélectionnez **n’utilisent pas**.|  
 |**Temps clé**|Spécifie que la colonne contient une date ou une autre valeur numérique qui peut être utilisée pour identifier de façon unique les éléments d'une série chronologique.|  
 |**N’utilisez pas**|Spécifie que la colonne doit être ignorée. Les données de la colonne ne seront pas traitées.|  

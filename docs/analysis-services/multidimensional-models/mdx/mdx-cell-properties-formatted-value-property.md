@@ -1,5 +1,5 @@
 ---
-title: LANGUAGE et FORMAT_STRING sur FORMATTED_VALUE | Documents Microsoft
+title: LANGUAGE et FORMAT_STRING sur FORMATTED_VALUE | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ad2038e28afb455dd1ad239a2bf02cab99ed4d9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807553"
 ---
-# <a name="mdx-cell-properties---formattedvalue-property"></a>Propriétés de cellule MDX - FORMATTED_VALUE (propriété)
+# <a name="mdx-cell-properties---formattedvalue-property"></a>Propriétés de cellule MDX - propriété FORMATTED_VALUE
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   La propriété FORMATTED_VALUE est basée sur les interactions des propriétés VALUE, FORMAT_STRING et LANGUAGE de la cellule. Cette rubrique explique comment ces propriétés interagissent pour générer la propriété FORMATTED_VALUE.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34026956"
   
 |Membre|FORMATTED_VALUE|Explication|  
 |------------|----------------------|-----------------|  
-|Objet|$5,040.00|FORMAT_STRING a pour valeur `Currency` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système.|  
+|A|$5,040.00|FORMAT_STRING a pour valeur `Currency` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système.|  
 |B|€5.040,00|FORMAT_STRING a pour valeur `Currency` (hérité de A) et LANGUAGE a pour valeur explicite `1034` (Espagne), ce qui explique le symbole de l’euro, le séparateur décimal différent et le séparateur des milliers différent.|  
 |C|$5.040,00|FORMAT_STRING a pour valeur `$#,##0.00` en remplacement de la devise héritée de A, et LANGUAGE a pour valeur explicite `1034` (Espagne). Étant donné que la propriété FORMAT_STRING a pour valeur explicite le symbole monétaire $, FORMATTED_VALUE est présenté avec le signe $. Toutefois, étant donné que `.` (point) et `,` (virgule) sont respectivement des espaces réservés pour le séparateur décimal et le séparateur des milliers, la spécification de langue les affecte et une sortie localisée pour les séparateurs décimal et des milliers est générée.|  
 |D|5.04E+03|FORMAT_STRING a pour valeur `Scientific` et LANGUAGE a pour valeur `1033`, valeur héritée des paramètres régionaux système. Le signe `.` (point) est donc utilisé comme séparateur décimal.|  
@@ -142,9 +142,9 @@ ms.locfileid: "34026956"
 |L|06:30|FORMAT_STRING a pour valeur explicite `Short Time` et LANGUAGE a pour valeur explicite `1041` (japonais).|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Contenu de FORMAT_STRING & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
- [À l’aide des propriétés de cellule & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
- [Création et utilisation des valeurs de propriété & #40 ; MDX & #41 ;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
- [Principes de base de requête MDX & #40 ; Analysis Services & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Contenu de FORMAT_STRING &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md)   
+ [Utilisation des propriétés de cellule &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md)   
+ [Création et utilisation de valeurs de propriétés &#40;MDX&#41;](http://msdn.microsoft.com/library/0cafb269-03c8-4183-b6e9-220f071e4ef2)   
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

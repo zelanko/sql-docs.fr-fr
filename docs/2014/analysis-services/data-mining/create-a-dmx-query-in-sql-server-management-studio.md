@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c68e181a1ad0992e85c638accad26a0418be4b5e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715346"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Créer une requête DMX dans SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit un ensemble de fonctionnalités pour vous aider à créer des requêtes de prédiction, des requêtes de contenu et des requêtes de définition des données sur des modèles et des structures d’exploration de données.  
@@ -81,12 +81,12 @@ ms.locfileid: "48101409"
   
  Pour obtenir des exemples de création de types spécifiques de requêtes à partir de modèles, consultez les rubriques suivantes :  
   
- [Créer une requête singleton de prédiction à partir d’un modèle](create-a-singleton-prediction-query-from-a-template.md)  
+ [Créer une requête de prédiction Singleton à partir d’un modèle](create-a-singleton-prediction-query-from-a-template.md)  
   
  [Créer une requête de contenu sur un modèle d’exploration de données](create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Interfaces de requête d’exploration de données](data-mining-query-tools.md)   
- [Data Mining Extensions &#40;DMX&#41; référence](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Informations de référence sur le langage DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

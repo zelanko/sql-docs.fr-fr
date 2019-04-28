@@ -12,11 +12,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: b71d7468e668db88b26e038bc5593d6a83bcc0d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812818"
 ---
 # <a name="cause-and-resolution-of-database-engine-errors"></a>Cause et résolution des erreurs du moteur de base de données
   Cette rubrique contient des informations de cause et résolution pour un nombre d’erreurs liées à la [!INCLUDE[ssDE](../includes/ssde-md.md)].  

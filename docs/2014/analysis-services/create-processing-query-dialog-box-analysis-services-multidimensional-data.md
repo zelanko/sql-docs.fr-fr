@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b162480fef7894a04d2488058a1e21b5bc40b602
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679717"
 ---
 # <a name="create-processing-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer la requête de traitement (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer la requête de traitement** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une requête de traitement dans l'onglet **Notifications** de la boîte de dialogue **Options de stockage** . Une requête de traitement retourne un ensemble de lignes qui contient les modifications apportées à une table associée à un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] depuis la dernière interrogation de la table de façon à effectuer une mise à jour incrémentielle de la mémoire cache OLAP multidimensionnelle (MOLAP) de l'objet. Analysis Services utilise une autre requête, baptisée requête d'interrogation, pour interroger une table associée à un objet et déterminer si la table a été modifiée. Les requêtes de traitement ne sont pas nécessaires lors de la mise à jour complète de la mémoire cache MOLAP de l'objet.  
@@ -60,21 +60,21 @@ ms.locfileid: "48077739"
  **Barre d'outils**  
  Utilisez la barre d'outils pour gérer les datasets, sélectionner les volets à afficher et contrôler diverses fonctions de requête.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**Basculer vers le Générateur de requêtes générique**|Sélectionnez cette option pour afficher uniquement les options disponibles dans la vue Générateur de requêtes générique. Seules les options suivantes sont affichées :<br /><br /> **Volet SQL**<br /><br /> **Volet résultats**<br /><br /> **Barre d'outils**qui contient uniquement les commandes **Basculer vers le générateur de requêtes VDT** et **Exécuter**<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
-|**Basculer vers le Générateur de requêtes VDT**|Sélectionnez cette option pour afficher toutes les options disponibles dans la vue Générateur de requête Outils Visual Database (VDT).<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes générique** est sélectionné.|  
+|**Basculer vers le Générateur de requêtes générique**|Sélectionnez cette option pour afficher uniquement les options disponibles dans la vue Générateur de requêtes générique. Seules les options suivantes sont affichées :<br /><br /> **Volet SQL**<br /><br /> **Volet résultats**<br /><br /> **Barre d'outils**qui contient uniquement les commandes **Basculer vers le générateur de requêtes VDT** et **Exécuter**<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
+|**Basculer vers le Générateur de requêtes VDT**|Sélectionnez cette option pour afficher toutes les options disponibles dans la vue Générateur de requête Outils Visual Database (VDT).<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes générique** est sélectionné.|  
 |**Afficher/Masquer le volet Diagramme**|Affiche ou masque le **volet Diagramme**.<br /><br /> **Remarque** Cette option s'affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
-|**Afficher/Masquer le volet Grille**|Affiche ou masque le **volet Grille**.<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
-|**Afficher/Masquer le volet SQL**|Affiche ou masque le **volet SQL**.<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
-|**Afficher/masquer le volet de résultats**|Affiche ou masque le **volet Résultats**.<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
+|**Afficher/Masquer le volet Grille**|Affiche ou masque le **volet Grille**.<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
+|**Afficher/Masquer le volet SQL**|Affiche ou masque le **volet SQL**.<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
+|**Afficher/masquer le volet de résultats**|Affiche ou masque le **volet Résultats**.<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
 |**Exécuter**|Exécute la requête. Les résultats s'affichent dans le **volet Résultats**.|  
-|**Vérifier SQL**|Vérifie l'instruction SQL dans la requête.<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
-|**Tri croissant**|Trie en ordre croissant les lignes de résultat de la colonne sélectionnée dans le **volet Grille**.<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
-|**Tri décroissant**|Trie en ordre décroissant les lignes de résultat de la colonne sélectionnée dans le **volet Grille**.<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
-|**Supprimer le filtre**|Supprime les critères de tri, le cas échéant, de la ligne sélectionnée dans le **volet Grille**.<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
-|**Utiliser GROUP BY**|Ajoute la fonctionnalité de regroupement à la requête.<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
-|**Ajouter une table**|Affiche la boîte de dialogue **Ajouter une table** pour ajouter une nouvelle table ou une nouvelle vue à la requête. Pour plus d’informations sur la boîte de dialogue **Ajouter une table**, consultez [Boîte de dialogue Ajouter une table &#40;Analysis Services - Données multidimensionnelles&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Remarque : cette option s’affiche uniquement si **Basculer vers le générateur de requêtes VDT** est sélectionné.|  
+|**Vérifier SQL**|Vérifie l'instruction SQL dans la requête.<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
+|**Tri croissant**|Trie en ordre croissant les lignes de résultat de la colonne sélectionnée dans le **volet Grille**.<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
+|**Tri décroissant**|Trie en ordre décroissant les lignes de résultat de la colonne sélectionnée dans le **volet Grille**.<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
+|**Supprimer le filtre**|Supprime les critères de tri, le cas échéant, de la ligne sélectionnée dans le **volet Grille**.<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
+|**Utiliser GROUP BY**|Ajoute la fonctionnalité de regroupement à la requête.<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
+|**Ajouter une table**|Affiche la boîte de dialogue **Ajouter une table** pour ajouter une nouvelle table ou une nouvelle vue à la requête. Pour plus d’informations sur la boîte de dialogue **Ajouter une table**, consultez [Boîte de dialogue Ajouter une table &#40;Analysis Services - Données multidimensionnelles&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Remarque : Cette option s’affiche uniquement si **basculer vers le Générateur de requêtes VDT** est sélectionné.|  
   
  **Volet Schéma**  
  Affiche les objets référencés par la requête sous forme de diagramme. Le diagramme illustre les tables contenues dans la requête et leur mode de jointure. Activez ou désactivez la case à cocher correspondant à une colonne de la table pour l'ajouter ou la supprimer du résultat de la requête.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3d87e8919f7a6173614f0da6a874d83e5da7a874
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48056679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702091"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Connexion en mode en ligne à une base de données Analysis Services
   Vous pouvez vous connecter directement à une base de données [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] et modifier directement les objets qu’elle contient. Si vous vous connectez directement à une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , les modifications sont immédiates et aucun projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] n'est créé dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
@@ -40,7 +40,7 @@ ms.locfileid: "48056679"
      Vous pouvez maintenant modifier directement des objets dans la base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Utilisation Analysis Services projets et bases de données pendant la Phase de développement](work-with-analysis-services-projects-and-databases-in-development.md)   
- [Création multidimensionnelles de modèles à l’aide de SQL Server Data Tools &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [Utilisation de projets et de bases de données Analysis Services en phase de développement](work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Création de modèles multidimensionnels à l’aide des Outils de données SQL Server &#40;SSDT&#41;](creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

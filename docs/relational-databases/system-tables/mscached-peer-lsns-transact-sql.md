@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 406715f59a3a45184b9700d72331688911bc83e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816992"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52810301"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**Int**|ID de l'Agent de distribution.|  
-|**donneur d’ordre**|**sysname**|Nom du serveur de publication d'origine.|  
+|**originator**|**sysname**|Nom du serveur de publication d'origine.|  
 |**originator_db**|**sysname**|Nom de la base de données de publication d'origine.|  
 |**originator_publication_id**|**Int**|Identifie la publication d'origine.|  
 |**originator_db_version**|**Int**|Identifie le numéro de version de la base de données d'origine.|  

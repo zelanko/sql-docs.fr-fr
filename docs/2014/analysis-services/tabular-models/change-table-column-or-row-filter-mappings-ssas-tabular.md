@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af4604c6a645c181aab1b95db99d545ae0bb5221
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795356"
 ---
 # <a name="change-table-column-or-row-filter-mappings-ssas-tabular"></a>Changer des mappages de filtres de lignes, de tables ou de colonnes (SSAS Tabulaire)
   Cette rubrique explique comment modifier des mappages de filtres de lignes, de tables ou de colonnes à l’aide de la boîte de dialogue **Modifier les propriétés de la table** dans [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -45,6 +45,6 @@ ms.locfileid: "48201489"
          Si vous faites une erreur et devez recommencer, cliquez sur **Effacer les filtres de lignes**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modifier la boîte de dialogue Propriétés Table &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
+ [Boîte de dialogue Modifier les propriétés de la table &#40;SSAS&#41;](../edit-table-properties-dialog-box-ssas.md)  
   
   

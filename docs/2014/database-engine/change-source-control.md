@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812743"
 ---
 # <a name="change-source-control"></a>Modifier le contrôle de code source
   Cette boîte de dialogue permet de créer et de gérer les connexions et liaisons entre une solution ou un projet enregistré en local et un dossier de base de données de contrôle de code source.  
@@ -31,7 +31,7 @@ ms.locfileid: "48092539"
 >  Cette boîte de dialogue est également disponible en cliquant avec le bouton droit sur l'élément dans l'Explorateur de solutions.  
   
 ## <a name="options"></a>Options  
- **Lier**  
+ **Bind**  
  Associe les éléments sélectionnés à un emplacement de serveur de contrôle de code source spécifié. Par exemple, vous pouvez utiliser cette option pour effectuer une liaison vers le dernier dossier et la dernière base de données connus du serveur de contrôle de code source. Si aucun dossier ou base de données récent n'est trouvé, vous devez en spécifier un ou une autre.  
   
  **Parcourir**  

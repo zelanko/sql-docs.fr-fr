@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1b4022f14c1f39984b1feaa0a45adef2154c1d0a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62826841"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt (OLE DB)
   Écrit les informations de format pour chaque colonne dans le fichier de format.  
@@ -37,9 +37,9 @@ const wchar_t *pwszFormatFile);
 ## <a name="remarks"></a>Notes  
  Le fichier de format spécifie le format de données d'un fichier de données créé par le biais d'une copie en bloc. Les appels aux méthodes [IBCPSession::BCPColumns](ibcpsession-bcpcolumns-ole-db.md) et [IBCPSession::BCPColFmt](ibcpsession-bcpcolfmt-ole-db.md) définissent le format du fichier de données. La méthode **BCPWriteFmt** enregistre cette définition dans le fichier référencé par l'argument pwszFormatFile.  
   
- La méthode **BCPWriteFmt** peut enregistrer les fichiers de format dans un format XML ou texte. Vous devez l’indiquer au moyen de l’option de contrôle BCP_OPTION_XML avec la méthode [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md).  
+ La méthode **BCPWriteFmt** peut enregistrer les fichiers de format dans un format XML ou texte. Vous devez l'indiquer au moyen de l'option de contrôle BCP_OPTION_XML avec la méthode [IBCPSession::BCPControl](ibcpsession-bcpcontrol-ole-db.md) .  
   
- Pour charger un fichier de format enregistré, utilisez la méthode [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md).  
+ Pour charger un fichier de format enregistré, utilisez la méthode [IBCPSession::BCPReadFmt](ibcpsession-bcpreadfmt-ole-db.md) .  
   
 ## <a name="arguments"></a>Arguments  
  *pwszFormatFile*[in]  

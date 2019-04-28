@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad0e0c5fc4aec54e9da3333994bf25a34d51acd1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828135"
 ---
 # <a name="bulk-load-data-by-using-the-sql-server-destination"></a>Charger des données en masse à l'aide de la destination SQL Server
   Pour pouvoir ajouter et configurer une destination [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , le package doit inclure au moins une tâche de flux de données et une source de données.  
@@ -54,7 +54,7 @@ ms.locfileid: "58387407"
     > [!NOTE]  
     >  La destination mappe automatiquement les colonnes portant le même nom.  
   
-9. Cliquez sur **avancé** et définissez les options de chargement en bloc : **Conserver l’identité**, **conserver les valeurs null**, **Table lock**, **contraintes Check**, et **exécutent des déclencheurs**.  
+9. Cliquez sur **Avancé** et définissez les options de chargement en masse : **Conserver l'identité**, **Conserver les valeurs NULL**, **Verrou de table**, **Vérifier les contraintes** et **Exécuter les déclencheurs**.  
   
      Si vous le souhaitez, indiquez la première et la dernière ligne d'entrée à insérer, le nombre maximal d'erreurs avant arrêt de l'opération d'insertion et les colonnes sur lesquelles l'insertion est triée.  
   

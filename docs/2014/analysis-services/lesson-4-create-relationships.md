@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05ebc2ffa952c0b5c927d890aad70bbf55f3c5af
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728585"
 ---
 # <a name="lesson-5-create-relationships"></a>Leçon 5 : Créer des relations
   Dans cette leçon, vous allez vérifier les relations qui ont été créées automatiquement lorsque vous avez importé des données, et vous allez ajouter de nouvelles relations entre les tables. Une relation est une connexion entre deux tables qui établit le mode de corrélation des données dans les deux tables. Par exemple, la table Product et la table Product Subcategory ont une relation basée sur le fait que chaque produit appartient à une sous-catégorie. Pour en savoir plus, consultez [Relations &#40;SSAS Tabulaire&#41;](tabular-models/relationships-ssas-tabular.md).  
@@ -24,7 +24,7 @@ ms.locfileid: "52409056"
  Durée estimée pour effectuer cette leçon : **10 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 3 : Renommer des colonnes](rename-columns.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 3 : Renommer des colonnes](rename-columns.md).  
   
 ## <a name="review-existing-relationships-and-add-new-relationships"></a>Examiner les relations existantes et ajouter de nouvelles relations  
  Lorsque vous avez importé des données à l'aide de l'Assistant Importation de table, vous avez importé sept tables de la base de données AdventureWorksDW. En général, si vous importez des données d'une source relationnelle, les relations existantes sont importées automatiquement avec les données. Toutefois, avant de poursuivre la création de votre modèle, vous devez vérifier que les relations entre les tables ont été créées correctement. Pour ce didacticiel, vous allez également ajouter trois relations.  
@@ -76,6 +76,6 @@ ms.locfileid: "52409056"
      Une ligne en pointillés apparaît et indique que vous avez créé une relation inactive entre la colonne **Ship Date** dans la table **Internet Sales** et la colonne **Date** dans la table **Date** .  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour continuer cette leçon, passez à la leçon suivante : [Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md).  
+ Pour continuer cette leçon, passez à la leçon suivante : [Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md).  
   
   

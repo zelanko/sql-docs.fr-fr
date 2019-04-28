@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823696"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Utiliser des rapports personnalisés avec les propriétés des nœuds de l'Explorateur d'objets
   Vous pouvez exécuter des rapports personnalisés dans le contexte d'un nœud de l'Explorateur d'objets si les rapports personnalisés font référence aux paramètres de rapport de ce nœud. Un rapport peut ainsi exploiter le contexte actuel (par exemple, la base de données actuelle ou un objet de serveur ou de base de données).  

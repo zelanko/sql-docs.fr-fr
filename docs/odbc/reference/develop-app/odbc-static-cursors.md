@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ddd2b4d998ab2718757db4dd58de6aea8bee05e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62799009"
 ---
 # <a name="odbc-static-cursors"></a>Curseurs statiques dans ODBC
 Un curseur statique est un dans lequel le jeu de résultats apparaît comme statique. Généralement, il ne détecte pas les modifications qui ont été apportées à l’appartenance, l’ordre ou les valeurs du jeu de résultats après l’ouverture du curseur. Par exemple, un curseur statique extrait une ligne et une autre application, puis met à jour de cette ligne. Si le curseur statique réextrait la ligne, les valeurs sont inchangées, malgré les modifications qui ont été apportées par l’autre application.  

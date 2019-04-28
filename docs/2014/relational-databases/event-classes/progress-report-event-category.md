@@ -17,18 +17,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4b91a2848dda5dff2150d80760c7a43680a8f325
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827014"
 ---
 # <a name="progress-report-event-category"></a>Catégorie d'événement de rapport de progression
-  Le **rapport de progression** catégorie d’événement contient le **Progress Report : Online Index Operation** classe d’événements.  
+  Le **rapport de progression** catégorie d’événement contient le **Progress Report : Online Index Operation**.  
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Progress Report : Online Index Operation Event Class](progress-report-online-index-operation-event-class.md)|Indique l'état d'avancement d'une opération de création d'index en ligne.|  
+|[Classe d’événements Progress Report: Online Index Operation](progress-report-online-index-operation-event-class.md)|Indique l'état d'avancement d'une opération de création d'index en ligne.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  

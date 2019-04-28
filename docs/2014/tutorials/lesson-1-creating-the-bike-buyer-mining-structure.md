@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678501"
 ---
-# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Leçon 1 : Création de la structure d'exploration de données Bike Buyer
+# <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Leçon 1 : Création de la structure d’exploration de données Bike Buyer
   Dans cette leçon, vous allez créer une structure d'exploration de données à l'aide de laquelle vous pouvez prévoir si un acheteur potentiel de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] est intéressé par l'achat d'un vélo. Si vous n’êtes pas familiarisé avec les structures d’exploration de données et leur rôle dans l’exploration de données, consultez [les Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  La structure d’exploration de données Bike Buyer que vous allez créer dans cette leçon prend en charge l’ajout de modèles d’exploration de données selon le [Microsoft Clustering Algorithm](../../2014/analysis-services/data-mining/microsoft-clustering-algorithm.md)[algorithme d’arbres de décision de Microsoft](../../2014/analysis-services/data-mining/microsoft-decision-trees-algorithm.md). Au cours d'autres leçons, vous utiliserez les modèles d'exploration de données clustering pour examiner différentes méthodes de regroupement des clients et exploiterez les modèles d'exploration de données d'arbre de décision pour déterminer si un client potentiel est susceptible d'acheter un vélo.  

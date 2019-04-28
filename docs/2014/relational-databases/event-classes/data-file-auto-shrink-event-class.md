@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52813621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663166"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink, classe d'événements
   La classe d'événements **Data File Auto Shrink** indique que le fichier de données a été réduit automatiquement. Cet événement ne se déclenche pas si le fichier de données est réduit en raison d'une instruction ALTER DATABASE explicite. Intégrez la classe d'événements **Data File Auto Shrink** dans les traces qui surveillent les modifications de la taille des fichiers de données.  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c3775443782b433651af4dd927c60ead1382b004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48206929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794529"
 ---
 # <a name="toolbar-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Actions, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Barre d’outils** pour exécuter des actions courantes sous l’onglet **Actions** du Concepteur de cube.  
@@ -31,7 +31,7 @@ ms.locfileid: "48206929"
 |**Nouvelle Action**|Cliquez pour afficher le volet **Éditeur de formulaire d’action** et créer une action.|  
 |**Nouvelle Action d’extraction**|Cliquez pour afficher **Éditeur de formulaire d’action d’extraction** et créer une action d’extraction.|  
 |**Nouvelle Action de rapport**|Cliquez pour afficher **Éditeur de formulaire d’action de rapport** et créer une action de rapport.|  
-|**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : Cette option est activée uniquement si le volet **Organisateur d’action** est sélectionné.|  
+|**Supprimer**|Cliquez sur cette option pour afficher la boîte de dialogue **Supprimer les objets** et supprimer l’action sélectionnée.<br /><br /> Remarque : Cette option est activée uniquement si le volet **Organisateur d’action** est sélectionné.|  
 |**Vérifiez la syntaxe**|Cliquez pour vérifier la syntaxe de l’action sélectionnée dans le volet **Organisateur d’action** .|  
   
   

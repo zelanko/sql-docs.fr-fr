@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5545b36aba250a04744b66abad5434f8573c053e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788322"
 ---
 # <a name="use-the-object-explorer-details-to-monitor-availability-groups-sql-server-management-studio"></a>Utiliser les détails de l'Explorateur d'objets pour surveiller les groupes de disponibilité (SQL Server Management Studio)
   Cette rubrique explique comment utiliser le volet **Détails de l'Explorateur d'objets** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] pour surveiller et gérer des groupes de disponibilité AlwaysOn existants, des réplicas de disponibilité et des bases de données de disponibilité.  
@@ -29,9 +29,9 @@ ms.locfileid: "48075129"
 > [!NOTE]  
 >  Pour plus d’informations sur l’utilisation du volet Détails de l’Explorateur d’objets, consultez [Volet Détails de l’Explorateur d’objets](../../../ssms/object/object-explorer-details-pane.md).  
   
--   **Avant de commencer :**  [Conditions préalables](#Prerequisites)  
+-   **Avant de commencer :**  [Prérequis](#Prerequisites)  
   
--   **Pour surveiller un groupe de disponibilité, à l'aide de :**  [SQL Server Management Studio](#SSMSProcedure)  
+-   **Pour surveiller un groupe de disponibilité, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure)  
   
 -   **Détails de l'Explorateur d'objets :**  
   
@@ -87,7 +87,7 @@ ms.locfileid: "48075129"
   
  Les valeurs possibles sont les suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Interdire les connexions**|Aucune connexion directe n'est autorisée aux bases de données de disponibilité lorsque ce réplica de disponibilité joue le rôle de réplica secondaire. Les bases de données secondaires ne sont pas disponibles pour l'accès en lecture.|  
 |**Autoriser uniquement les connexions de tentatives de lecture**|Seules les connexions en lecture seule directes sont autorisées lorsque ce réplica agit comme réplica secondaire. Toutes les bases de données du réplica sont disponibles pour l'accès en lecture.|  
@@ -96,7 +96,7 @@ ms.locfileid: "48075129"
  **État de la connexion**  
  Indique si un réplica secondaire est actuellement connecté au réplica principal. Les valeurs possibles sont les suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Déconnecté**|Pour un réplica de disponibilité distant, indique qu'il est déconnecté du réplica de disponibilité local. La réponse du réplica local à l'état déconnecté dépend de son rôle, comme suit :<br /><br /> Sur le réplica principal, si un réplica secondaire est déconnecté, les bases de données secondaires sont marquées comme **Non synchronisé** sur le réplica principal, et le réplica principal attend que le réplica secondaire se reconnecte.<br /><br /> Une fois la déconnexion détectée, le réplica secondaire tente de se reconnecter au réplica principal.|  
 |**Connecté**|Réplica de disponibilité distant qui est actuellement connecté au réplica local.|  
@@ -105,10 +105,10 @@ ms.locfileid: "48075129"
  **État de synchronisation**  
  Indique si un réplica secondaire est actuellement synchronisé avec le réplica principal. Les valeurs possibles sont les suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Non synchronisé**|La base de données n'est pas synchronisée ou n'a pas encore été jointe au groupe de disponibilité.|  
-|**Synchronisé**|La base de données est synchronisée avec la base de données primaire sur le réplica principal actuel, le cas échéant, ou sur le dernier réplica principal.<br /><br /> Remarque : en mode de performances, la base de données n’est jamais dans l’état synchronisé.|  
+|**Synchronisé**|La base de données est synchronisée avec la base de données primaire sur le réplica principal actuel, le cas échéant, ou sur le dernier réplica principal.<br /><br /> Remarque : En mode de performances, la base de données n’est jamais dans l’état Synchronized.|  
 |**NULL**|État inconnu. Cette valeur se produit lorsque l'instance de serveur locale ne peut pas communiquer avec le cluster de basculement WSFC (le nœud local ne fait pas partie du quorum WSFC).|  
   
 > [!NOTE]  
@@ -125,14 +125,14 @@ ms.locfileid: "48075129"
   
  Les possibles états de synchronisation sont les suivants :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|Synchronisation|La base de données secondaire a reçu les enregistrements du journal des transactions de la base de données primaire qui ne sont pas encore écrits sur le disque (renforcé).<br /><br /> Remarque : En mode de validation asynchrone, l’état de synchronisation est toujours **Synchronisation**.|  
+|Synchronisation|La base de données secondaire a reçu les enregistrements du journal des transactions de la base de données primaire qui ne sont pas encore écrits sur le disque (renforcé).<br /><br /> Remarque : En mode de validation asynchrone, l’état de synchronisation est toujours **Synchronizing**.|  
   
  **Suspendu**  
  Indique si la base de données de disponibilité est actuellement en ligne. Les valeurs possibles sont les suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Suspendu**|Cet état indique que la base de données est interrompue localement et doit être reprise manuellement.<br /><br /> Sur le réplica principal, la valeur est peu fiable pour une base de données secondaire. Pour déterminer de manière fiable si une base de données secondaire est interrompue, interrogez-la sur le réplica secondaire qui héberge la base de données.|  
 |**Non jointe**|Indique que la base de données secondaire n'a pas été jointe au groupe de disponibilité ou a été supprimée du groupe.|  

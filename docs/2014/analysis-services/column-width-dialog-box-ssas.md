@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 097b29ca68b03d6711265c9194c318397fd03381
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680602"
 ---
 # <a name="column-width-dialog-box-ssas"></a>Largeur de colonne, boîte de dialogue (SSAS)
   La boîte de dialogue **Largeur de colonne** vous permet de spécifier la largeur d’une colonne dans le concepteur de modèles. Pour accéder à cette boîte de dialogue, cliquez avec le bouton droit sur une colonne, puis cliquez sur **Largeur de colonne**. Vous pouvez également faire en sorte que la colonne s’ajuste automatiquement à la taille de son contenu en double-cliquant sur le quadrillage sur le bord droit de la colonne.  

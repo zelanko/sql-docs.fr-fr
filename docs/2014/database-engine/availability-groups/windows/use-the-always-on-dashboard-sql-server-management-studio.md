@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c4402cd9e7c02b598c47a851c8318e7c840bfbc3
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788726"
 ---
 # <a name="use-the-alwayson-dashboard-sql-server-management-studio"></a>Utiliser le tableau de bord AlwaysOn (SQL Server Management Studio)
   Les administrateurs de base de données utilisent le tableau de bord AlwaysOn pour afficher l'intégrité d'un groupe de disponibilité AlwaysOn et de ses réplicas de disponibilité et bases de données dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Parmi les utilisations courantes du tableau de bord AlwaysOn, citons :  
@@ -58,7 +58,7 @@ ms.locfileid: "49120366"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert les autorisations CONNECT, VIEW SERVER STATE et VIEW ANY DEFINITION.  
   
 ##  <a name="SSMSProcedure"></a> Pour démarrer le tableau de bord AlwaysOn  

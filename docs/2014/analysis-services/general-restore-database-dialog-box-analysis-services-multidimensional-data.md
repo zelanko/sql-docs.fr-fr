@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b63beac3d5034d041488b44202c4173b759a1884
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730410"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Général (boîte de dialogue Restaurer la base de données) (Analysis Services - Données multidimensionnelles)
   La page **Général** de la boîte de dialogue **Restaurer la base de données** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] permet de spécifier le fichier de sauvegarde et les paramètres généraux à utiliser lors de la restauration d'une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -64,7 +64,7 @@ ms.locfileid: "48099309"
  **Inclure les informations de sécurité**  
  Sélectionnez cette option pour copier les informations sur la sécurité stockées dans le fichier de sauvegarde vers la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
- Lorsque cette option est sélectionnée, vous pouvez choisir la quantité d'informations sur la sécurité dans la liste déroulante activée par l'option. Les options suivantes sont disponibles :  
+ Lorsque cette option est sélectionnée, vous pouvez choisir la quantité d'informations sur la sécurité dans la liste déroulante activée par l'option. Les options suivantes sont disponibles :  
   
 |Option|Description|  
 |------------|-----------------|  
@@ -75,7 +75,7 @@ ms.locfileid: "48099309"
  Si le fichier de sauvegarde est chiffré, tapez le mot de passe utilisé lors de son chiffrement.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Restaurer la boîte de dialogue base de données &#40;Analysis Services - données multidimensionnelles&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
+ [Boîte de dialogue Restaurer la base de données &#40;Analysis Services - Données multidimensionnelles&#41;](restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Partitions &#40;restaurer la boîte de dialogue base de données&#41; &#40;Analysis Services - données multidimensionnelles&#41;](partitions-restore-database-dialog-box-analysis-services-multidimensional-data.md)   
  [Sauvegarde et restauration de bases de données Analysis Services](multidimensional-models/backup-and-restore-of-analysis-services-databases.md)  
   

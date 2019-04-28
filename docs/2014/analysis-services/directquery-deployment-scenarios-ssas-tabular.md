@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 679658c7ffdc00a90cb485bb9f1892ddffde7775
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48135179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731665"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>Scénarios de déploiement DirectQuery (SSAS Tabulaire)
   Cette rubrique fournit une procédure pas-à-pas présentant le processus de conception et de déploiement des modèles DirectQuery. Vous pouvez configurer DirectQuery pour utiliser des données relationnelles uniquement (DirectQuery uniquement), ou vous pouvez configurer le modèle pour basculer entre l'utilisation de données en mémoire cache uniquement ou de données relationnelles uniquement (mode hybride). Cette rubrique présente le processus d'implémentation pour les deux modes, et décrit les différences possibles dans les résultats de la requête selon le mode et la configuration de la sécurité.  
@@ -78,7 +78,7 @@ ms.locfileid: "48135179"
   
 |||  
 |-|-|  
-|**DirectQuery uniquement**|Pour la propriété  **Paramètres d'emprunt d'identité** , spécifiez le compte qui sera utilisé pour se connecter à la source de données SQL Server.<br /><br /> Si vous utilisez la valeur, **ImpersonateCurrentUser**, l’instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui héberge le modèle passe les informations d’identification de l’utilisateur actuel du modèle à la base de données SQL Server.|  
+|**DirectQuery uniquement**|Pour la propriété  **Paramètres d'emprunt d'identité** , spécifiez le compte qui sera utilisé pour se connecter à la source de données SQL Server.<br /><br /> Si vous utilisez la valeur **ImpersonateCurrentUser**, l'instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] qui héberge le modèle passe les informations d'identification de l'utilisateur actuel du modèle à la base de données SQL Server.|  
 |**Mode hybride**|Pour la propriété **Paramètres d'emprunt d'identité** , spécifiez le compte qui sera utilisé pour accéder aux données contenues dans la source de données SQL Server.<br /><br /> Ce paramètre n'affecte pas les informations d'identification utilisées pour traiter le cache utilisé par le modèle.|  
   
  **Étape 7. Déployer le modèle**  
@@ -94,7 +94,7 @@ ms.locfileid: "48135179"
   
  **Étape 8. Vérifiez le modèle déployé**  
   
- Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ouvrez l'instance d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans laquelle vous avez déployé le modèle. Cliquez avec le bouton droit sur le nom de la base de données, puis sélectionnez **Propriétés**.  
+ Dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], ouvrez l'instance d' [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans laquelle vous avez déployé le modèle. Cliquez avec le bouton droit sur le nom de la base de données, puis sélectionnez **Propriétés**.  
   
 -   La propriété, **DirectQueryMode**, a été définie lorsque vous avez défini les propriétés de déploiement.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "48135179"
  **DirectQuery uniquement**  
  Cette option est recommandée lorsque vous voulez garantir une seule source de données, ou si vos données sont trop volumineuses pour tenir en mémoire. Si vous utilisez une source de données relationnelle très volumineuse, lors de la conception, vous pouvez créer le modèle à l'aide d'un sous-ensemble des données. Lorsque vous déployez le modèle en mode DirectQuery uniquement, vous pouvez modifier la définition de la source de données de manière à inclure toutes les données requises.  
   
- Cette option est également recommandée si vous souhaitez utiliser la sécurité fournie par la source de données relationnelle pour contrôler l'accès utilisateur aux données. Avec les modèles tabulaires mis en cache, vous pouvez également utiliser [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rôles pour l’accès aux données de contrôle, mais les données stockées dans le cache doivent également être sécurisées. Vous devez toujours utiliser cette option si votre contexte de sécurité nécessite que les données ne soient jamais mises en cache.  
+ Cette option est également recommandée si vous souhaitez utiliser la sécurité fournie par la source de données relationnelle pour contrôler l'accès utilisateur aux données. Avec les modèles tabulaires mis en cache, vous pouvez également utiliser des rôles [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] pour contrôler l'accès aux données, mais les données stockées dans le cache doivent également être sécurisées. Vous devez toujours utiliser cette option si votre contexte de sécurité nécessite que les données ne soient jamais mises en cache.  
   
  Le tableau suivant décrit les résultats de déploiement possibles pour le mode DirectQuery uniquement :  
   

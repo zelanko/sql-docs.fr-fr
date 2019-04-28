@@ -23,11 +23,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657996"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutoriel : Comment localiser et démarrer les outils Reporting Services (SSRS)
   Ce didacticiel présente les outils permettant de configurer un serveur de rapports, de gérer le contenu et les opérations d'un serveur de rapports, et de créer et publier des rapports. Ce didacticiel a pour but d'aider les nouveaux utilisateurs à savoir rechercher et ouvrir chaque outil. Si vous connaissez déjà les différents outils, vous pouvez enchaîner sur les autres didacticiels qui peuvent vous aider à acquérir d'importantes compétences dans l'utilisation de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Pour plus d’informations sur les autres didacticiels, consultez [didacticiels sur Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

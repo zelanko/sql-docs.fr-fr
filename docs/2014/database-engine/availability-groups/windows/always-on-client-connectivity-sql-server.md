@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790658"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Connectivité client Always On (SQL Server)
   Cette rubrique décrit les considérations relatives à la connectivité client aux groupes de disponibilité AlwaysOn, y compris les conditions préalables requises, les restrictions et les recommandations concernant les paramètres et les configurations de clients.  
@@ -33,7 +33,7 @@ ms.locfileid: "53355764"
   
  Le tableau suivant récapitule les pilotes pris en charge pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|Pilote|Basculement de sous-réseaux multiples|Intention de l'application|Routage en lecture seule|Basculement de sous-réseaux multiples : Basculement plus rapide du point de terminaison d'un sous-réseau unique|Basculement de sous-réseaux multiples : Résolution de noms pour les instances cluster SQL|  
+|Pilote|Basculement de sous-réseaux multiples|Intention de l'application|Routage en lecture seule|Basculement de sous-réseaux multiples : Basculement de point de terminaison de sous-réseau unique plus rapide|Basculement de sous-réseaux multiples : Résolution d’Instance nommée de SQL en cluster des Instances|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Oui|Oui|Oui|Oui|Oui|  
 |SQL Native Client 11.0 OLEDB|Non|Oui|Oui|Non|Non|  

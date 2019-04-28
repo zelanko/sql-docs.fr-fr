@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5da7978db04b0fdf6e1d4f7740857fc5c0cf90ed
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823299"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données pour les données de centre d'appels (Didacticiel sur l'exploration de données intermédiaire)
   Au cours de cette tâche, vous allez ajouter une vue de source de données qui sera utilisée pour accéder aux données d'un centre d'appels. Les mêmes données seront utilisées pour générer aussi bien le modèle de réseau neuronal initial destiné à l'exploration que le modèle de régression logistique que vous utiliserez pour faire des recommandations.  

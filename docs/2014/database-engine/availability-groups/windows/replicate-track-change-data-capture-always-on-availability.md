@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814055"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Réplication, suivi des modifications, capture de données modifiées et groupes de disponibilité AlwaysOn (SQL Server)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] La réplication, la capture de données modifiées (CDC) et le suivi des modifications (CT) sont pris en charge sur [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aide à fournir des fonctionnalités haute disponibilité et de récupération de base de données supplémentaires.  
@@ -191,9 +191,9 @@ ms.locfileid: "57579319"
   
 -   Lors de l'utilisation de la réplication de fusion, si la base de données de publication se trouve dans un groupe de disponibilité :  
   
-    -   Abonnement par émission de données : le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
+    -   Abonnement envoyé : Le serveur de publication et le serveur de distribution doivent exécuter au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
-    -   Abonnement par extraction : le serveur de publication, le serveur de distribution et les bases de données de l'abonné doivent s'exécuter sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
+    -   Abonnement par extraction : Les bases de données de serveur de publication, serveur de distribution et l’abonné doivent se trouver sur au moins [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. Cela est dû au fait que l'Agent de fusion sur l'abonné doit comprendre la façon dont un groupe de disponibilité peut basculer sur son serveur secondaire.  
   
 -   Le placement de la base de données de distribution sur un groupe de disponibilité n'est pas pris en charge.  
   

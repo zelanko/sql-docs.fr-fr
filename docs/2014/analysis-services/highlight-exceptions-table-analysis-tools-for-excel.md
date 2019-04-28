@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fb3dcd1729805c9458b7cc882e1d33f6be918e4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730750"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Mettre en surbrillance les exceptions (Outils d'analyse de table pour Excel)
   ![Mettez en surbrillance le bouton d’Exceptions dans le ruban](media/tat-highlightex.gif "bouton mettre en surbrillance les Exceptions dans le ruban")  
@@ -44,7 +44,7 @@ ms.locfileid: "48149219"
   
 5.  Pour modifier le nombre de mises en surbrillance, cliquez sur le haut et flèches de direction dans le **seuil des exceptions** ligne de la **mettre en surbrillance le rapport Exceptions**.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Vous pouvez inclure des colonnes qui ne contiennent pas des valeurs incorrectes si ces valeurs contiennent des informations pouvant être utiles pour la prédiction d'autres lignes. Cependant, vous devez désélectionner les colonnes susceptibles de contenir des valeurs manquantes ou nulles.  
   
  Dans la mesure où toutes les colonnes sélectionnées sont utilisées pour créer une séquence générale, vous devez éviter d'utiliser les colonnes d'entrée contenant des informations médiocres, telles que les suivantes :  

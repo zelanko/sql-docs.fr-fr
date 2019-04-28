@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 6 : Créer des colonnes calculées | Microsoft Docs'
+title: 'Leçon 6 : Créer des colonnes calculées | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,21 +12,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adc7b7bf3335c8c9c7530d18f4d553492cfe9e1b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48134039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728641"
 ---
-# <a name="lesson-6-create-calculated-columns"></a>Leçon 6 : Créer des colonnes calculées
+# <a name="lesson-6-create-calculated-columns"></a>Leçon 6 : Créer des colonnes calculées
   Dans cette leçon, vous allez créer des données dans votre modèle en ajoutant des colonnes calculées. Une colonne calculée est basée sur les données qui existent déjà dans votre modèle. Pour en savoir plus, consultez [Colonnes calculées &#40;SSAS Tabulaire&#41;](tabular-models/ssas-calculated-columns.md).  
   
  Vous allez créer cinq nouvelles colonnes calculées dans trois tables différentes. Les étapes sont légèrement différentes pour chaque tâche. Il s'agit de montrer qu'il existe plusieurs façons de créer de nouvelles colonnes, de les renommer, puis de les placer à différents emplacements dans une table.  
   
- Durée estimée pour effectuer cette leçon : **15 minutes**  
+ Durée estimée pour effectuer cette leçon : **15 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la [Leçon 5 : Créer des relations](lesson-4-create-relationships.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 5 : Créer des relations](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Créer des colonnes calculées  
   
@@ -51,7 +51,7 @@ ms.locfileid: "48134039"
      Des valeurs remplissent ensuite toutes les lignes de la colonne calculée. Si vous faites défiler la table vers le bas, vous remarquez que les lignes peuvent avoir des valeurs différentes pour cette colonne, en fonction des données figurant dans chaque ligne.  
   
     > [!NOTE]  
-    >  Si vous obtenez une erreur, vérifiez que les noms de colonne dans la formule correspondent aux noms de colonne que vous avez modifiés dans la [Leçon 3 : Renommer des colonnes](rename-columns.md).  
+    >  Si vous recevez une erreur, vérifiez les noms de colonne dans la formule correspondent aux noms de colonnes que vous avez modifié dans [leçon 3 : Renommer des colonnes](rename-columns.md).  
   
 5.  Renommer cette colonne `Month Calendar`.  
   
@@ -127,6 +127,6 @@ ms.locfileid: "48134039"
  La colonne calculée Margin est utilisée pour analyser les marges bénéficiaires pour chaque ligne (produit).  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour continuer cette leçon, passez à la [Leçon 7 : Créer des mesures](lesson-6-create-measures.md).  
+ Pour continuer cette leçon, passez à la leçon suivante : [Leçon 7 : Créer des mesures](lesson-6-create-measures.md).  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8f0807478066e5e82cf479246c35dcd6b511f75
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728923"
 ---
 # <a name="defining-and-browsing-kpis"></a>Définition et exploration d'indicateurs de performance clés
   Pour définir un indicateur de performance clé (PKI, Key Performance Indicator), vous définissez d'abord son nom et le groupe de mesures auquel il est associé. Un indicateur de performance clé peut être associé à tous les groupes de mesures ou à un seul groupe de mesures. Vous définissez ensuite les éléments suivants de l'indicateur de performance clé :  
@@ -269,6 +269,6 @@ ms.locfileid: "48170379"
      La marge brute de la vente de vélos par les revendeurs en Amérique du Nord pour le troisième trimestre de l'année fiscale 2007 s'affiche.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 8 : Définition des actions](../analysis-services/lesson-8-defining-actions.md)  
+ [Leçon 8 : Définition des Actions](../analysis-services/lesson-8-defining-actions.md)  
   
   

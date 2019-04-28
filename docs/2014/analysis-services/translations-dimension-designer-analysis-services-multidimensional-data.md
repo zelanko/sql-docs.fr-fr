@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 991f5df41294b6d44f083f3da73236eabd125cba
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794003"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>Traductions (Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   L’onglet **Traductions** du Concepteur de dimensions permet de définir et de gérer les traductions de la dimension, ainsi que les hiérarchies et les attributs de la dimension.  
@@ -26,7 +26,7 @@ ms.locfileid: "48186289"
 ## <a name="panes"></a>Volets  
  L'onglet **Traductions** contient les volets suivants :  
   
- [Barre d’outils](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Barre d'outils](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
  La barre d’outils permet d’effectuer des actions courantes sous l’onglet **Traductions** du Concepteur de dimensions.  
   
  [Détails des traductions](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  

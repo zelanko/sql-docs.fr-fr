@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21eaa86fb1ff594e8b9d2b779b787276ee13ab4b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720099"
 ---
 # <a name="specifying-a-testing-data-set-for-the-structure-basic-data-mining-tutorial"></a>Spécification d'un jeu de données de test pour la structure (Didacticiel sur l'exploration de données de base)
   Dans les écrans finals de l'Assistant Exploration de données, vous allez diviser vos données en un jeu de test et un jeu d'apprentissage. Vous nommerez ensuite votre structure et activerez l'extraction sur le modèle.  

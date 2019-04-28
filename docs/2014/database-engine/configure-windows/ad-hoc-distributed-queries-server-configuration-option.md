@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 04c2ea76808c2fa98e933021af93481c829baa21
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813482"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>ad hoc distributed queries (option de configuration de serveur)
   Par défaut, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] n'autorise pas les requêtes distribuées ad hoc avec les fonctions OPENROWSET et OPENDATASOURCE. Lorsque cette option est définie sur 1, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autorise l'accès d'égal à égal. Lorsque cette option n'est pas définie ou lorsqu'elle est définie sur 0, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne permet pas non plus l'accès d'égal à égal.  

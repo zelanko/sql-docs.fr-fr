@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29f5e6952c733ac56671e48fd1ec809b3f0ab329
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700933"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurer le stockage de chaînes pour des dimensions et des partitions
   Vous pouvez reconfigurer le stockage des chaînes pour adapter les chaînes de très grande taille dans les attributs de dimension ou les partitions qui dépassent la limite de taille de fichier de 4 Go pour les magasins de chaînes. Si vos dimensions ou partitions incluent des magasins de chaînes de cette taille, vous pouvez contourner cette contrainte de taille de fichier en modifiant la propriété **StringStoresCompatibilityLevel** au niveau de la dimension ou de la partition, pour les objets locaux et les objets liés (locaux ou distants).  
@@ -25,7 +25,7 @@ ms.locfileid: "48060389"
   
  Les valeurs valides pour cette propriété sont les suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**1050**|Spécifie l'architecture de stockage de chaînes par défaut, assujettie à une limite de taille de fichier de 4 Go par magasin.|  
 |**1100**|Spécifie le stockage de chaînes plus important, prend en charge jusqu'à 4 milliards de chaînes uniques par magasin.|  
@@ -39,9 +39,9 @@ ms.locfileid: "48060389"
   
 -   [Conditions préalables](#bkmk_prereq)  
   
--   [Étape 1 : définir la propriété StringStoreCompatiblityLevel dans les outils de données SQL Server](#bkmk_step1)  
+-   [Étape 1 : Définir la propriété StringStoreCompatiblityLevel dans SQL Server Data Tools](#bkmk_step1)  
   
--   [Étape 2 : traitement des objets](#bkmk_step2)  
+-   [Étape 2 : Traiter les objets](#bkmk_step2)  
   
 ##  <a name="bkmk_background"></a> À propos des magasins de chaînes  
  La configuration du stockage des chaînes est facultative, ce qui signifie que même les nouvelles bases de données que vous créez utilisent l'architecture du magasin de chaînes par défaut, dont la taille de fichier maximale est limitée à 4 Go. L'utilisation de l'architecture de stockage de chaînes plus important a un impact limité mais notable sur les performances. Vous devez l'utiliser uniquement si vos fichiers de stockage de chaînes s'approchent de ou atteignent la limite de 4 Go.  
@@ -62,7 +62,7 @@ ms.locfileid: "48060389"
   
  Le niveau de compatibilité de la base de données doit être 1100. Si vous avez créé ou déployé une base de données en utilisant [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] et la version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ou ultérieure d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le niveau de compatibilité de la base de données est déjà défini à 1100. Si vous avez déplacé une base de données créée dans une version antérieure d’ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] vers ssSQL11 ou ultérieur, vous devez mettre à jour le niveau de compatibilité. Pour les bases de données que vous déplacez, mais ne redéployez pas, vous pouvez utiliser [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] pour définir le niveau de compatibilité. Pour plus d’informations, consultez [définir le niveau de compatibilité d’une base de données multidimensionnelle &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a> Étape 1 : définir la propriété StringStoreCompatiblityLevel dans les outils de données SQL Server  
+##  <a name="bkmk_step1"></a> Étape 1 : Définir la propriété StringStoreCompatiblityLevel dans SQL Server Data Tools  
   
 1.  Dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], ouvrez le projet qui contient les dimensions ou partitions à modifier.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "48060389"
   
 8.  Enregistrez le fichier.  
   
-##  <a name="bkmk_step2"></a> Étape 2 : traitement des objets  
+##  <a name="bkmk_step2"></a> Étape 2 : Traiter les objets  
  La nouvelle architecture de stockage sera utilisée une fois que vous aurez traité les objets. Le traitement des objets prouve également que vous avez résolu les problèmes de limite de stockage parce que l'erreur qui signalait précédemment une condition de dépassement de capacité du magasin de chaînes ne devrait plus apparaître.  
   
 -   Dans l’Explorateur de solutions, cliquez avec le bouton droit sur la dimension que vous venez de modifier et sélectionnez **Traiter**.  
@@ -90,7 +90,7 @@ ms.locfileid: "48060389"
 ## <a name="see-also"></a>Voir aussi  
  [Outils et approches de traitement &#40;Analysis Services&#41;](tools-and-approaches-for-processing-analysis-services.md)   
  [Options et paramètres de traitement &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md)   
- [Traitement et Modes de stockage de partitions](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [Traitement et modes de stockage des partitions](../multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Stockage de dimension](../multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

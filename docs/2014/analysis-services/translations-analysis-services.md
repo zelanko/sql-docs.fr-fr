@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e85f6ca82f11b9f19c14a020d879afb65a6d1775
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794480"
 ---
 # <a name="translations-analysis-services"></a>Traductions (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensionnel uniquement  
@@ -54,7 +54,7 @@ ms.locfileid: "50145954"
   
  Les formats de date, d'heure et de devise ne sont pas implémentés dans les traductions. Pour fournir de manière dynamique des formats spécifiques à une culture en fonction des paramètres régionaux du client, utilisez l'Assistant Conversion monétaire et la propriété `FormatString`. Pour plus d’informations, consultez [Conversions monétaires &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) et [Élément FormatString &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) d ans le didacticiel Analysis Services décrit les étapes de création et de test des traductions.  
+ [Leçon 9 : Définition de Perspectives et traductions](lesson-9-defining-perspectives-and-translations.md) dans le didacticiel Analysis Services vous guidera à travers les étapes de création et test des traductions.  
   
 ## <a name="defining-translations"></a>Définition des traductions  
  La définition d'une traduction crée un objet `Translation` comme enfant de l'objet de base de données, de dimension ou de cube [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Utilisez [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] pour ouvrir la solution et définir des traductions.  

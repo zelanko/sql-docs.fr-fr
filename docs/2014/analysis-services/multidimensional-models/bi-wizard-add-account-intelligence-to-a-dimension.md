@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 069611d1466f2810b958a7ad825f5abb0895f63f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701374"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Ajouter de l'intelligence comptable à une dimension
   Ajoutez l'intelligence comptable à un cube ou une dimension pour affecter des classes comptables standard, par exemple recettes et dépenses, aux membres d'un attribut de compte. Cette amélioration identifie également les types de comptes (tels que l'actif et le passif) et affecte l'agrégation appropriée à chaque type de compte. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut utiliser les classifications pour agréger les comptes sur une période.  
@@ -51,7 +51,7 @@ ms.locfileid: "48183439"
     |**Dettes**|`LastNonEmpty`|Prix ou valeur de choses dues à un instant spécifique. Ce type de compte n'effectue pas de cumuls sur le temps écoulé et, de ce fait, ne s'agrège pas naturellement avec le temps. Par exemple, le montant Year est la valeur du dernier mois avec des données. Ce type de compte effectue des conversions entre les monnaies avec le taux End of Period.|  
     |**Actif**|`LastNonEmpty`|Prix ou valeur de choses détenues à un instant spécifique. Ce type de compte s’accumule au fil du temps et, de ce fait, ne s’agrège pas naturellement avec le temps. Par exemple, le montant Year est la valeur du dernier mois avec des données. Ce type de compte effectue des conversions entre les monnaies avec le taux End of Period.|  
     |**Balance**|`LastNonEmpty`|Nombre d'un objet à un instant spécifique. Ce type de compte effectue des cumuls sur le temps écoulé, mais ne s'agrège pas naturellement avec le temps. Par exemple, le montant Year est la valeur du dernier mois avec des données.|  
-    |**Flux**|`Sum`|Nombre incrémentiel d'un objet. Ce type de compte agrège sous un `Sum` au fil du temps, mais ne convertit pas avec les règles de conversion de devise.|  
+    |**Flux**|`Sum`|Nombre incrémentiel d'un objet. Ce type de compte s'agrège sous forme de somme (`Sum`) avec le temps, mais n'effectue pas de conversion entre les monnaies selon des règles de conversion.|  
     |**Dépenses**|`Sum`|Prix ou valeur de choses dépensées. Ce type de compte s'agrège sous forme de somme (`Sum`) avec le temps et effectue les conversions entre les monnaies avec un taux moyen.|  
     |**Revenu**|`Sum`|Prix ou valeur de choses reçues. Ce type de compte s'agrège sous forme de somme (`Sum`) avec le temps et effectue les conversions entre les monnaies avec un taux moyen.|  
   

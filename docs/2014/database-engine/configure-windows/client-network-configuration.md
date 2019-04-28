@@ -19,11 +19,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52641050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787101"
 ---
 # <a name="client-network-configuration"></a>Configuration du réseau client
   Un logiciel client permet aux ordinateurs clients de se connecter à une instance de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sur un réseau. Un client est une application frontale utilisant les services fournis par un serveur tel que le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. L'ordinateur sur lequel se trouve cette application est appelé *ordinateur client*.  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0cb5bacaeab817c491ae72018630cf88e62b3b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791739"
 ---
 # <a name="automatically-check-out-files-upon-edit"></a>Extraire automatiquement des fichiers lors de leur modification
   Vous pouvez configurer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] de telle sorte que tout fichier modifié soit automatiquement extrait.  

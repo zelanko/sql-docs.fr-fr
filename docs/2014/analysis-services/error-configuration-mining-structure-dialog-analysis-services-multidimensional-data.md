@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1cf11c572860815f46e6d20a0cf1a4b82399a93
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48210909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731451"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Configuration d'erreur (boîte de dialogue Structure d'exploration de données) (Analysis Services - Données multidimensionnelles)
   Utilisez la page **Configuration d'erreur** de la boîte de dialogue **Propriétés de la structure d'exploration de données** de **SQL Server Management Studio** pour définir les propriétés de configuration des erreurs d'une structure d'exploration des données dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

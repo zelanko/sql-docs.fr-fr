@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: cc1a94e0677f0c9356f4fba43b7b6230759c9458
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52819281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696299"
 ---
 # <a name="import-statuses-master-data-services"></a>États d'importation (Master Data Services)
 
@@ -32,7 +32,7 @@ ms.locfileid: "52819281"
 |En file d'attente de suppression|Le lot a terminé le traitement et sera effacé.|4|  
 |Désactivé|Le traitement a été effacé.|5|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
   

@@ -12,11 +12,11 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 028d14230f0f48f04bd94f327c1e46c5bee42b56
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62774713"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Fonctionnalités SQL Server supprimées dans SQL Server 2014
   Cette rubrique décrit des fonctionnalités qui ne sont plus disponibles dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
@@ -29,7 +29,7 @@ ms.locfileid: "53351016"
 ### <a name="discontinued-active-directory-helper-service"></a>Service Active Directory Helper  
  Le service Active Directory Helper et les composants associés ont été supprimés. Le tableau suivant répertorie les composants associés qui se trouvent par conséquent supprimés :  
   
-|Catégorie|Fonctionnalité supprimée|Remplacement|  
+|Category|Fonctionnalité supprimée|Remplacement|  
 |--------------|--------------------------|-----------------|  
 |Procédures stockées système|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|Aucun remplacement disponible|  
   

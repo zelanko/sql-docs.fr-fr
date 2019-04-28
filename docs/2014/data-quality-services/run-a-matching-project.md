@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f020f30d651acd8ac9267b510d116af808d9b5e7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792337"
 ---
 # <a name="run-a-matching-project"></a>Exécuter un projet de correspondance
   Cette rubrique décrit comment réaliser la correspondance de données dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Le processus de correspondance identifie les clusters des enregistrements correspondants selon les règles de correspondance de la stratégie de correspondance, indique un enregistrement de chaque cluster en tant que survivant basé sur une règle de survivance, et exporte les résultats. DQS exécute le processus de correspondance, également appelé déduplication, dans un processus assisté par ordinateur, mais vous créez des règles de correspondance de manière interactive et sélectionnez la règle de survivance parmi plusieurs choix, afin de contrôler le processus de correspondance.  
@@ -38,10 +38,10 @@ ms.locfileid: "56019690"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exécuter un projet de correspondance.  
   
-##  <a name="StartingaMatchingProject"></a> Première étape : Démarrage d'un projet de correspondance  
+##  <a name="StartingaMatchingProject"></a> Dernière étape : À partir d’un projet de correspondance  
  Vous effectuez l'activité de correspondance dans un projet de qualité des données que vous créez dans l'application cliente DQS.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)] [Exécutez l’application Data Quality Client](../../2014/data-quality-services/run-the-data-quality-client-application.md).  
@@ -107,7 +107,7 @@ ms.locfileid: "56019690"
   
  La survivance est facultative. Vous pouvez exporter les résultats sans exécuter la survivance, auquel cas DQS utilise l'enregistrement pivot qui a été indiqué dans l'analyse de correspondance. Si plusieurs enregistrements dans un cluster sont conformes à la règle de survivance, le processus de survivance sélectionne l'ID d'enregistrement le plus bas parmi les enregistrements en conflit pour être le survivant. Vous pouvez exporter des survivants vers divers fichiers ou tables en utilisant différentes règles de survivance.  
   
-1.  Sur le **exporter** page, sélectionnez la destination où vous souhaitez exporter les données correspondantes dans **Type de Destination**: **SQL Server**, **fichier CSV**, ou **un fichier Excel**.  
+1.  Dans la page **Exporter**, sélectionnez la destination de l’exportation des données de correspondance dans **Type de destination** : **SQL Server**, **Fichier CSV** ou **Fichier Excel**.  
   
     > [!IMPORTANT]  
     >  Si vous utilisez une version 64 bits d'Excel, vous ne pouvez pas exporter les données correspondantes vers un fichier Excel : vous ne pouvez exporter que vers une base de données SQL Server ou un fichier .csv.  
@@ -164,7 +164,7 @@ ms.locfileid: "56019690"
     > [!NOTE]  
     >  Si vous avez terminé un projet de correspondance et l'utilisez de nouveau, il utilise la base de connaissances en place lorsqu'il a été publié. Il n'utilise aucune modification que vous avez apportée à la base de connaissances depuis que vous avez terminé le projet. Pour utiliser ces modifications, ou une nouvelle base de connaissances, vous devez créer un projet de correspondance. En revanche, si vous avez créé, mais pas fini, un projet de correspondance, toutes les modifications que vous avez publiées dans la stratégie de correspondance sont utilisées si vous exécutez une correspondance dans le projet.  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir exécuté un projet de correspondance  
+##  <a name="FollowUp"></a> Suivi : après l’exécution d’un projet de correspondance  
  Après avoir exécuté un projet de correspondance, vous pouvez modifier la stratégie de correspondance dans la base de connaissances, puis créer et exécuter un autre projet de correspondance basé sur la stratégie de correspondance mise à jour. Pour plus d’informations, consultez [Create a Matching Policy](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="Profiler"></a> Onglets Générateur de profils et Résultats  
@@ -175,27 +175,27 @@ ms.locfileid: "56019690"
   
  Les statistiques de la base de données source sont les suivantes :  
   
--   **Enregistrements**: Nombre total d'enregistrements dans la base de données  
+-   **Enregistrements** : Nombre total d'enregistrements dans la base de données  
   
--   **Nombre total de valeurs**: Le nombre total de valeurs dans les champs  
+-   **Valeurs totales** : nombre total de valeurs dans les champs  
   
--   **Nouvelles valeurs**: Le nombre total de valeurs qui sont nouvelles depuis l’exécution précédente et leur pourcentage de la totalité  
+-   **Nouvelles valeurs** : nombre total de valeurs nouvelles depuis l’exécution précédente et leur pourcentage par rapport à l’ensemble  
   
--   **Valeurs uniques**: Le nombre total de valeurs uniques dans les champs et leur pourcentage de la totalité  
+-   **Valeurs uniques** : nombre total de valeurs uniques dans les champs et leur pourcentage par rapport à l’ensemble  
   
--   **Nouvelles valeurs uniques**: Le nombre total de valeurs uniques qui sont nouvelles dans les champs et leur pourcentage de la totalité  
+-   **Nouvelles valeurs uniques** : nombre total de valeurs uniques nouvelles dans les champs et leur pourcentage par rapport à l’ensemble  
   
  Les statistiques de champ sont les suivantes :  
   
--   **Champ**: Nom du champ qui a été inclus dans les mappages.  
+-   **Champ** : nom du champ qui a été inclus dans les mappages  
   
--   **Domaine**: Nom de domaine qui a été mappé au champ.  
+-   **Domaine** : nom du domaine qui a été mappé au champ  
   
--   **Nouveau**: Le nombre de nouvelles correspondances trouvées et leur pourcentage du total  
+-   **Nouveau** : nombre de nouvelles correspondances trouvées et leur pourcentage par rapport à l’ensemble  
   
--   **Unique**: Le nombre d’enregistrements uniques dans le champ et leur pourcentage par rapport au total  
+-   **Unique** : nombre d’enregistrements uniques dans le champ et leur pourcentage par rapport à l’ensemble  
   
--   **Exhaustivité**: Le pourcentage que l’exécution de règles est terminée.  
+-   **Exhaustivité** : pourcentage d’achèvement de l’exécution de la règle.  
   
 ### <a name="matching-policy-notifications"></a>Notifications de stratégie de correspondance  
  Pour l'activité de stratégie de correspondance, les conditions suivantes génèrent des notifications :  

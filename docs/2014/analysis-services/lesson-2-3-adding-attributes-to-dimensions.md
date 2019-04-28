@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80ca92d824c6832c42161a00a0b1f59884f26880
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729205"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Ajout d'attributs aux dimensions
   Une fois les dimensions définies, vous pouvez les remplir avec les attributs qui représentent chaque élément de données dans la dimension. Les attributs reposent généralement sur les champs d'une vue de source de données. Lorsque vous ajoutez des attributs à une dimension, vous pouvez inclure des champs de n'importe quelle table dans la vue de source de données.  
@@ -127,6 +127,6 @@ ms.locfileid: "48075329"
  [Vérification des propriétés de cube et de dimension](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des propriétés d’attribut de dimension](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Référence des propriétés d'attribut de dimension](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

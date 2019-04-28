@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bf246256471931292d6dfcee8a83386bce256e08
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52810541"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816942"
 ---
 # <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "52810541"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**datatype_id**|**Int**|Identifie chaque type de données unique.|  
-|**ID DBMS**|**Int**|Identifie le SGBD auquel appartient le type.|  
+|**dbms_id**|**Int**|Identifie le SGBD auquel appartient le type.|  
 |**type**|**sysname**|Nom du type de données (natif).|  
-|**CreateParams**|**Int**|Bitmap qui décrit la combinaison de longueur, précision et échelle applicable à chaque type de données, à savoir :<br /><br /> **0 x 1** = précision.<br /><br /> **0 x 2** = mise à l’échelle.<br /><br /> **0 x 4** = longueur.|  
+|**createparams**|**Int**|Bitmap qui décrit la combinaison de longueur, précision et échelle applicable à chaque type de données, à savoir :<br /><br /> **0 x 1** = précision.<br /><br /> **0 x 2** = mise à l’échelle.<br /><br /> **0 x 4** = longueur.|  
   
 ## <a name="remarks"></a>Notes  
  Cette table contient des entrées pour les types de données SQL Server, car une instance de SQL Server peut s’abonner à une base de données non SQL Server et publier vers un abonné non SQL Server.  

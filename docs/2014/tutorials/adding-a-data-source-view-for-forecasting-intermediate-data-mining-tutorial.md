@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f60ea2b2a642cf9435ed8366c42e43abb927e426
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62823129"
 ---
 # <a name="adding-a-data-source-view-for-forecasting-intermediate-data-mining-tutorial"></a>Ajout d'une vue de source de données à des fins de prévision (Didacticiel sur l'exploration de données intermédiaire)
   Au cours de cette tâche, vous allez ajouter une vue de source de données qui sera utilisée pour le scénario de prévision. Un modèle de prévision requiert que les données contiennent une colonne pouvant être utilisée pour identifier des étapes dans une série chronologique. Si vous envisagez d'analyser plusieurs séries de données, toutes les séries doivent se terminer à la même date ou heure.  

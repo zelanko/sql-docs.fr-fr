@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb9ad70b14298c602ca1af3fc60b66bbe5c9af43
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48059422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731655"
 ---
 # <a name="dismiss-warning-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ignorer l'avertissement (Analysis Services - Données multidimensionnelles)
   La boîte de dialogue **Ignorer l'avertissement** permet d'ignorer une instance particulière d'un avertissement.  

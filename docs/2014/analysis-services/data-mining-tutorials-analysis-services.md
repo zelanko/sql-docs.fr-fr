@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d94209a4716e8e559028125899ba4e46b2d1b61
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53358921"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689596"
 ---
 # <a name="data-mining-tutorials-analysis-services"></a>Didacticiels sur l'exploration de données (Analysis Services)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] rend plus facile de créer des solutions d’exploration de données sophistiqués. Les outils de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] permettent de concevoir, créer et gérer des modèles d'exploration de données qui utilisent des données relationnelles ou de cubes. Vous pouvez gérer l'accès des client aux modèles d'exploration de données et créer des requêtes de prédiction à partir de plusieurs clients.  

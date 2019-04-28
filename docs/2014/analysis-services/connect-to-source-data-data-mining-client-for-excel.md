@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78c60832ea6111b0682e8a6d2b5ab3540a19cfb1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48159739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680252"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Connexion à une source de données (Client d'exploration de données pour Excel)
   Cette rubrique décrit comment créer et utiliser les connexions utilisées pour stocker des modèles d'exploration de données et pour accéder aux données externes stockées dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

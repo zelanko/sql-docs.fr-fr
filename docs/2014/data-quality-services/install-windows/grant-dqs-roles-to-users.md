@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 020b692bc97afc4c76447274b3b900a6355d99d8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792549"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Affecter des rôles DQS aux utilisateurs
   Cette rubrique décrit comment créer des connexions SQL selon un principal Windows, et accorde ces rôles de [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) sur la base de données DQS_MAIN.  
@@ -38,7 +38,7 @@ ms.locfileid: "56035448"
   
 5.  Une fois l'utilisateur validé, dans le volet de gauche, cliquez sur **Mappage de l'utilisateur** .  
   
-6.  Dans le volet droit, sélectionnez la case à cocher sous la **carte** colonne pour le **DQS_MAIN** de base de données, puis sélectionnez le **dqs_administrator**, **dqs_kb_editor** , ou **dqs_kb_operator** case à cocher dans la **appartenance au rôle de la base de données : DQS_MAIN** volet, selon le niveau d’accès nécessaire pour l’utilisateur. Pour plus d'informations sur les trois rôles DQS, consultez [Sécurité DQS](../dqs-security.md).  
+6.  Dans le volet droit, cochez la case sous la colonne **Mapper** pour la base de données **DQS_MAIN**, puis cochez la case **dqs_administrator**, **dqs_kb_editor** ou **dqs_kb_operator** dans le volet **Appartenance au rôle de base de données : DQS_MAIN**, selon le niveau d’accès nécessaire à l’utilisateur. Pour plus d'informations sur les trois rôles DQS, consultez [Sécurité DQS](../dqs-security.md).  
   
 7.  Dans la boîte de dialogue **Nouvelle connexion**, cliquez sur **OK** pour appliquer les modifications.  
   

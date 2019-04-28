@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d90f2a1504daecf80901157b34dcaffa4220261b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689433"
 ---
 # <a name="data-mining-wizard-f1-help-analysis-services---data-mining"></a>Aide de l'Assistant Exploration de données accessible par la touche F1 (Analysis Services - Exploration de données)
   Utilisez **l’Assistant Exploration de données** pour créer une structure d’exploration de données et son éventuel modèle d’exploration de données associé.  
@@ -58,9 +58,9 @@ ms.locfileid: "48087759"
  Après avoir créé la structure d’exploration de données et un modèle d’exploration de données facultatif, vous pouvez utiliser le **Concepteur d’exploration de données** pour modifier leurs propriétés.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
- [Concepteur d’exploration de données](data-mining/data-mining-designer.md)   
- [Créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)   
+ [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)   
+ [Concepteur d'exploration de données](data-mining/data-mining-designer.md)   
+ [Créer une structure d'exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)   
  [Sélectionnez la méthode de définition &#40;Assistant exploration de données&#41;](select-the-definition-method-data-mining-wizard.md)   
  [Créer la Structure d’exploration de données &#40;Assistant exploration de données&#41;](create-the-data-mining-structure-data-mining-wizard.md)   
  [Sélectionnez la vue de Source de données &#40;Assistant exploration de données&#41;](select-data-source-view-data-mining-wizard.md)   

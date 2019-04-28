@@ -1,5 +1,5 @@
 ---
-title: '- (Sauf) (MDX) | Documents Microsoft'
+title: '- (Except) (MDX) | Microsoft Docs'
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 618beda530627898cdf55f08be5071fd7568688c
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690872"
 ---
-# <a name="except-mdx-operator"></a>EXCEPT (opérateur) (MDX)
+# <a name="except-mdx-operator"></a>À l’exception d’opérateur de (MDX)
 
 
   Exécute une opération de jeu qui retourne la différence entre deux jeux, en supprimant les doublons.  
@@ -36,7 +36,7 @@ Set_Expression - Set_Expression
  Jeu qui contient des membres qui ne sont pas partagés par les deux paramètres spécifiés.  
   
 ## <a name="remarks"></a>Notes  
- Le **- (sauf)** opérateur est fonctionnellement équivalente à la [sauf](../mdx/except-mdx-function.md) (fonction).  
+ Le **- (à l’exception)** opérateur est fonctionnellement équivalent à la [sauf](../mdx/except-mdx-function.md) (fonction).  
   
 ## <a name="examples"></a>Exemples  
  L'exemple ci-dessous illustre l'utilisation de cet opérateur :  

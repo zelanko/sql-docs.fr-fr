@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04f2f2c71c3560fe892d63dd5263b8b6f846a241
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51638616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794539"
 ---
 # <a name="process-tabular-model-partitions-ssas-tabular"></a>Traiter les partitions de modèles tabulaires (SSAS Tabulaire)
   Les partitions divisent une table en sections logiques. Chaque partition peut ensuite être traitée (actualisée) indépendamment d'autres partitions. Les tâches de cette rubrique décrivent comment traiter les partitions dans une base de données model à l'aide de la boîte de dialogue **Traiter la ou les partitions** dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

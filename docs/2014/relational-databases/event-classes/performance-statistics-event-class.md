@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52761841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827192"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics (classe d'événements)
   La classe d'événements Performance Statistics permet de surveiller les performances des requêtes, des procédures stockées et des déclencheurs en cours d'exécution. Chacune des six sous-classes d'événements indique un événement dans la durée de vie des requêtes, des procédures stockées et des déclencheurs au sein du système. En combinant ces sous-classes d'événements aux vues de gestion dynamique sys.dm_exec_query_stats, sys.dm_exec_procedure_statset sys.dm_exec_trigger_stats correspondantes, vous pouvez reconstituer l'historique des performances d'une requête, d'une procédure stockée ou d'un déclencheur donnés.  
   
 ## <a name="performance-statistics-event-class-data-columns"></a>Colonnes de données de la classe d'événements Performance Statistics  
- Les tableaux suivants décrivent les colonnes des données de la classe d'événements associées à chaque sous-classe des événements suivantes : EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 et EventSubClass 5.  
+ Les tableaux suivants décrivent les colonnes de données de classe événement associés à chacune des sous-classes d’événements suivantes : EventSubClass 0, EventSubClass 1, EventSubClass 2, EventSubClass 3, EventSubClass 4 et EventSubClass 5.  
   
 ### <a name="eventsubclass-0"></a>EventSubClass 0  
   

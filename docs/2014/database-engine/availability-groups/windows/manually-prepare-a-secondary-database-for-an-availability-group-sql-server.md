@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2fd8058518d59e5eb3fcf8a8514425c69339dfb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792079"
 ---
 # <a name="manually-prepare-a-secondary-database-for-an-availability-group-sql-server"></a>Préparer manuellement une base de données secondaire pour un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment préparer une base de données secondaire pour un groupe de disponibilité AlwaysOn dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)]ou de PowerShell. Préparation de la base de données secondaire requiert deux étapes : (1) restauration d’une sauvegarde récente de la base de données de la base de données primaire et de sauvegardes de journaux suivantes sur chaque instance de serveur qui héberge le réplica secondaire, à l’aide de RESTORE WITH NORECOVERY et (2) attachement de la base de données restaurée au groupe de disponibilité.  
@@ -76,7 +76,7 @@ ms.locfileid: "52525747"
 ###  <a name="Security"></a> Sécurité  
  Lorsqu'une base de données est sauvegardée, la valeur OFF est attribuée à la propriété [TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) de la base de données. Par conséquent, la propriété TRUSTWORTHY d'une base de données nouvellement restaurée a toujours la valeur OFF.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Les autorisations BACKUP DATABASE et BACKUP LOG reviennent par défaut aux membres du rôle serveur fixe **sysadmin** et des rôles de base de données fixes **db_owner** et **db_backupoperator** . Pour plus d’informations, consultez [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
   
  Lorsque la base de données en cours de restauration n'existe pas dans l'instance de serveur, l'instruction RESTORE nécessite des autorisations CREATE DATABASE. Pour plus d’informations, consultez [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql).  

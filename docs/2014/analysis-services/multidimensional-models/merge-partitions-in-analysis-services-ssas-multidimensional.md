@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11f6267cb8546ac21dedeae0c802cbbb9af9ce6b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699082"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Fusionner des partitions dans Analysis Services (SSAS - Multidimensionnel)
   Vous pouvez fusionner des partitions dans une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] existante pour consolider les données de faits de plusieurs partitions du même groupe de mesures.  
@@ -70,7 +70,7 @@ ms.locfileid: "48063339"
 ##  <a name="bkmk_Where"></a> Mettre à jour la source de partition après avoir fusionné les partitions  
  Les partitions sont segmentées par requête, comme la clause WHERE d'une requête SQL utilisée pour traiter les données, ou par une table ou une requête nommée qui fournit des données à la partition. La propriété `Source` sur la partition indique si la partition est liée à une requête ou une table.  
   
- Lorsque vous fusionnez des partitions, le contenu des partitions est consolidé, mais le `Source` propriété n’est pas mis à jour pour refléter l’étendue supplémentaire de la partition. Cela signifie que si vous Retraitez par la suite d’une partition qui conserve son état d’origine `Source`, vous obtenez des données incorrectes de cette partition. La partition agrégera à tort des données au niveau parent. L’exemple suivant illustre ce comportement.  
+ Lorsque vous fusionnez des partitions, le contenu des partitions est consolidé, mais la propriété `Source` n'est pas mise à jour pour refléter l'étendue supplémentaire de la partition. Cela signifie que si, plus tard, vous traitez à nouveau une partition qui conserve sa `Source`d'origine, vous obtiendrez des données incorrectes de cette partition. La partition agrégera à tort des données au niveau parent. L’exemple suivant illustre ce comportement.  
   
  **Le problème**  
   
@@ -78,16 +78,16 @@ ms.locfileid: "48063339"
   
  **La solution**  
   
- La solution consiste à mettre à jour le `Source` propriété, en ajustant la clause WHERE ou la requête nommée, ou en fusionnant manuellement les données à partir de tables de faits sous-jacentes, pour garantir que les traitements ultérieurs sont exactes, étant donné l’étendue supplémentaire de la partition.  
+ La solution consiste à mettre à jour la propriété `Source`, en ajustant la clause WHERE ou la requête nommée, ou en fusionnant manuellement les données des tables de faits sous-jacentes, afin que le traitement suivant soit précis, compte tenu de l'étendue supplémentaire de la partition.  
   
  Dans cet exemple, après la fusion de la partition 3 dans la partition 2, vous pouvez créer un filtre, tel que ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet') dans la partition obtenue (partition2) pour spécifier que seules les données relatives à [ColaDecaf] et [ColaDiet] doivent être extraites de la table de faits, et que les données de [ColaFull] doivent être exclues. Vous pouvez également spécifier des filtres pour la partition2 et la partition 3 au moment de la création de ces partitions. Ces filtres seront associés pendant la fusion. Dans les deux cas, après le traitement de la partition, le cube ne contiendra pas de données en double.  
   
  **La conclusion**  
   
- Une fois que vous fusionnez des partitions, vous devez toujours vérifier le `Source` pour vérifier le filtre est approprié pour les données fusionnées. Si vous avez commencé par une partition qui incluait des données historiques pour Q1, Q2 et Q3 et que vous fusionnez maintenant Q4, vous devez ajuster le filtre de manière à inclure Q4. Sinon, le traitement ultérieur de la partition générera des résultats erronés. Il ne sera pas correct pour Q4.  
+ Après avoir fusionné des partitions, vérifiez toujours la `Source` pour vous assurer que le filtre est approprié pour les données fusionnées. Si vous avez commencé par une partition qui incluait des données historiques pour Q1, Q2 et Q3 et que vous fusionnez maintenant Q4, vous devez ajuster le filtre de manière à inclure Q4. Sinon, le traitement ultérieur de la partition générera des résultats erronés. Il ne sera pas correct pour Q4.  
   
 ##  <a name="bkmk_fact"></a> Considérations spéciales pour les partitions segmentées par une table de faits ou une requête nommée  
- Outre les requêtes, les partitions peuvent également être segmentées par une table ou une requête nommée. Si la partition source et la partition cible utilisent la même table de faits dans une source de données ou une vue de source de données, la propriété `Source` est valide après la fusion des partitions. Elle spécifie les données de la table de faits qui sont appropriées à la partition résultante. Étant donné les faits qui sont requis pour la partition résultante existent dans le fait de table, aucune modification de la `Source` propriété n’est nécessaire.  
+ Outre les requêtes, les partitions peuvent également être segmentées par une table ou une requête nommée. Si la partition source et la partition cible utilisent la même table de faits dans une source de données ou une vue de source de données, la propriété `Source` est valide après la fusion des partitions. Elle spécifie les données de la table de faits qui sont appropriées à la partition résultante. Étant donné que les faits nécessaires à la partition résultante existent dans la table de faits, aucune modification de la propriété `Source` n'est requise.  
   
  Les partitions utilisant des données provenant de plusieurs tables de faits ou requêtes nommées requièrent un travail supplémentaire. Vous devez fusionner manuellement les faits de la table de faits de la partition source dans la table de faits de la partition de destination.  
   
@@ -95,13 +95,13 @@ ms.locfileid: "48063339"
   
  Pour la même raison, les partitions obtenant des données segmentées de requêtes nommées requièrent également une mise à jour. La partition associée doit maintenant avoir une requête nommée qui retourne le jeu de résultats combiné qui a été obtenu précédemment à partir des requêtes nommées distinctes.  
   
-## <a name="partition-storage-considerations-molap"></a>Considérations sur le stockage de partitions : MOLAP  
+## <a name="partition-storage-considerations-molap"></a>Considérations de stockage de partition : MOLAP  
  Lors de la fusion de partitions MOLAP, les faits stockés dans les structures multidimensionnelles des partitions sont également fusionnés. Ceci produit une partition complète et cohérente en interne. Cependant, les faits stockés dans les partitions MOLAP sont des copies des faits de la table de faits. Lorsque la partition est traitée ultérieurement, les faits de la structure multidimensionnelle sont supprimés (seulement pour un traitement complet et d'actualisation) et les données sont copiées à partir de la table de faits, comme indiqué par la source de données et le filtre de la partition. Si la partition source utilise une table de faits différente de celle de la partition de destination, vous devez fusionner manuellement ces deux tables de faits pour vous assurer qu'un ensemble de données complet sera disponible au moment du traitement de la partition résultante. Cela s'applique également si les deux partitions se basent sur des requêtes nommées différentes.  
   
 > [!IMPORTANT]  
 >  Une partition MOLAP (OLAP multidimensionnel) fusionnée avec une table de faits incomplète contient une copie fusionnée en interne des données de la table de faits et fonctionne correctement jusqu'à son traitement.  
   
-## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considérations sur le stockage de partitions : partitions HOLAP et ROLAP  
+## <a name="partition-storage-considerations-holap-and-rolap-partitions"></a>Considérations de stockage de partition : Partitions HOLAP et ROLAP  
  Lorsque des partitions HOLAP ou ROLAP ayant des tables de faits différentes sont fusionnées, ces tables de faits ne sont pas automatiquement fusionnées. À moins qu'elles ne soient fusionnées manuellement, seule la table de faits associée à la partition de destination est disponible pour la partition fusionnée. Les faits associés à la partition source ne permettent pas de développer le niveau inférieur d'une partition résultante, et au moment du traitement de la partition, les agrégations ne synthétiseront pas les données de la table non disponible.  
   
 > [!IMPORTANT]  
@@ -133,11 +133,11 @@ ms.locfileid: "48063339"
  Pour plus d’informations, consultez [Fusion de partitions &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Pour des objets de traitement Analysis Services](processing-analysis-services-objects.md)   
- [Partitions &#40;Analysis Services - données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
- [Créer et gérer une Partition locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
- [Créer et gérer une Partition distante &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
- [Définir l’écriture différée de Partition](set-partition-writeback.md)   
+ [Traitement des objets Analysis Services](processing-analysis-services-objects.md)   
+ [Partitions &#40;Analysis Services - Données multidimensionnelles&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)   
+ [Créer et gérer une partition locale &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)   
+ [Créer et gérer une partition distante &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)   
+ [Définir l'écriture différée de partition](set-partition-writeback.md)   
  [Partitions activées en écriture](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Configurer le stockage de chaînes pour des dimensions et des partitions](configure-string-storage-for-dimensions-and-partitions.md)  
   

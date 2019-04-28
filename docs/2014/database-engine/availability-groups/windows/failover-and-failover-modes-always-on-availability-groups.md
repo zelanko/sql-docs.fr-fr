@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814494"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Basculement et modes de basculement (groupes de disponibilité AlwaysOn)
   Dans le contexte d'un groupe de disponibilité, le rôle principal et le rôle secondaire des réplicas de disponibilité sont généralement interchangeables au moyen d'un processus appelé *basculement*. Trois formes de basculement existent : basculement automatique (sans perte de données), basculement manuel planifié (sans perte de données) et basculement manuel forcé (avec perte de données possible), ce dernier étant généralement appelé *basculement forcé*. Les basculements automatiques et planifiés manuels préservent vos données. Un groupe de disponibilité bascule au niveau d'un réplica de disponibilité. Autrement dit, un groupe de disponibilité bascule vers l’un de ses réplicas secondaires ( *cible de basculement*actuelle).  
@@ -82,7 +82,7 @@ ms.locfileid: "53359241"
   
 -   **[!INCLUDE[ssFosSyncC](../../../includes/ssfossyncc-md.md)] (facultatif) :**  Dans un groupe de disponibilité donné, un groupe de deux ou trois réplicas de disponibilité (réplica principal actuel compris) qui est configuré pour le mode de validation synchrone, le cas échéant. Un groupe de basculements avec validation synchrone est appliqué uniquement si les réplicas secondaires sont configurés pour le mode de basculement manuel et qu'au moins un réplica secondaire se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
--   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Dans un groupe de disponibilité donné, l'ensemble de tous les réplicas de disponibilité dont l'état opérationnel est actuellement ONLINE, quel que soit le mode de disponibilité et le mode de basculement. Le groupe de basculements devient approprié lorsqu'aucun réplica secondaire ne se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
+-   **[!INCLUDE[ssFosEntireC](../../../includes/ssfosentirec-md.md)] :**  Dans un groupe de disponibilité donné, l'ensemble de tous les réplicas de disponibilité dont l'état opérationnel est actuellement ONLINE, quel que soit le mode de disponibilité et le mode de basculement. Le groupe de basculements devient approprié lorsqu'aucun réplica secondaire ne se trouve actuellement en mode SYNCHRONIZED avec le réplica principal.  
   
  Lorsque vous configurez un réplica de disponibilité en tant que validation synchrone avec basculement automatique, le réplica de disponibilité devient partie intégrante du [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]. Toutefois, l'entrée en vigueur de l'ensemble dépend du réplica principal actuel. Les formes de basculement qui sont en fait possibles à un moment donné dépendent des ensembles de basculement actuellement en vigueur.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "53359241"
 ###  <a name="WhyFFoPostForcedQuorum"></a> Raisons pour lesquelles le basculement forcé est requis après avoir forcé le quorum  
  Après avoir forcé le quorum sur le cluster WSFC (*quorum forcé*), vous devez forcer le basculement de chaque groupe de disponibilité (avec perte possible de données). Le basculement forcé est requis, car l'état réel des valeurs de cluster WSFC peut avoir été perdu. Il est nécessaire d'empêcher les basculements normaux après un quorum forcé, car un réplica secondaire non synchronisé pourrait apparaître comme synchronisé sur le cluster WSFC reconfiguré.  
   
- Par exemple, considérez un cluster WSFC qui héberge un groupe de disponibilité sur trois nœuds :  Nœud A héberge le réplica principal et le nœud B et C hébergent un réplica secondaire. Le nœud C est déconnecté du cluster WSFC tandis que le réplica secondaire local est SYNCHRONIZED.  Mais le nœud A et le nœud B conservent un quorum sain et le groupe de disponibilité reste en ligne. Sur le nœud A, le réplica principal continue d'accepter les mises à jour, et sur le nœud B, le réplica secondaire continue d'être synchonisé avec le réplica principal. Le réplica secondaire sur le nœud C n'est plus synchronisé et passe de plus en plus derrière le réplica principal. Toutefois, étant donné que le nœud C est déconnecté, le réplica reste incorrectement dans l'état SYNCHRONIZED.  
+ Par exemple, considérez un cluster WSFC qui héberge un groupe de disponibilité sur trois nœuds :  le nœud A héberge le réplica principal et les nœuds B et C hébergent un réplica secondaire. Le nœud C est déconnecté du cluster WSFC tandis que le réplica secondaire local est SYNCHRONIZED.  Mais le nœud A et le nœud B conservent un quorum sain et le groupe de disponibilité reste en ligne. Sur le nœud A, le réplica principal continue d'accepter les mises à jour, et sur le nœud B, le réplica secondaire continue d'être synchonisé avec le réplica principal. Le réplica secondaire sur le nœud C n'est plus synchronisé et passe de plus en plus derrière le réplica principal. Toutefois, étant donné que le nœud C est déconnecté, le réplica reste incorrectement dans l'état SYNCHRONIZED.  
   
  Si le quorum est perdu et s’il est ensuite forcé sur le nœud A, l’état de synchronisation du groupe de disponibilité sur le cluster WSFC devrait être correct, et le réplica secondaire sur le nœud C apparaît comme UNSYNCHRONIZED. Toutefois, si le quorum est forcé sur le nœud C, la synchronisation du groupe de disponibilité sera incorrecte. L’état de synchronisation sur le cluster retrouve le même niveau que lorsque le nœud C a été déconnecté, et le réplica secondaire sur le nœud C apparaît *incorrectement* comme SYNCHRONIZED. Puisque les basculements manuels planifiés garantissent la sécurité des données, ils ne sont pas autorisés pour ramener un groupe de disponibilité en ligne après qu'un quorum a été forcé.  
   

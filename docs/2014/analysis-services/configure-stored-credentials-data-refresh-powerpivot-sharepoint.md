@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73ee3f7f86203f4fa0ac2e4da86fecee0e2b4cf5
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680447"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Configurer les informations d'identification stockées pour l'actualisation des données PowerPivot (PowerPivot pour SharePoint)
   Les travaux d'actualisation des données PowerPivot peuvent s'exécuter sous n'importe quel compte d'utilisateur Windows, du moment que vous créez une application cible dans le service Banque d'informations sécurisé pour stocker les informations d'identification que vous souhaitez utiliser. De la même façon, si vous souhaitez fournir une connexion à une base de données qui varie de celle utilisée à l'origine pour importer les données dans PowerPivot pour Excel, vous pouvez mapper ces informations d'identification à une application cible de service Banque d'informations sécurisé, puis spécifier cette application cible dans une planification d'actualisation des données.  
@@ -117,7 +117,7 @@ ms.locfileid: "53365082"
   
 5.  Sélectionnez **Contribute**, puis cliquez sur **OK**.  
   
-###  <a name="bkmk_dbread"></a> Étape 3 : Accorder des autorisations pour accéder aux sources de données externes utilisées dans l’actualisation des données de lecture  
+###  <a name="bkmk_dbread"></a> Étape 3 : Accorder des autorisations pour accéder aux sources de données externes utilisées dans l’actualisation des données de lecture  
  Lors de l'importation de données dans un classeur PowerPivot, les connexions aux données externes sont souvent basées sur des connexions approuvées ou des connexions avec emprunt d'identité qui utilisent l'identité de l'utilisateur actuel pour se connecter à la source de données. Ces types de connexions fonctionnent uniquement lorsque l'utilisateur actuel a l'autorisation de lire les données importées.  
   
  Dans un scénario d'actualisation de données, la chaîne de connexion utilisée pour importer des données est réutilisée pour actualiser les données. Si la chaîne de connexion suppose qu'il s'agit de l'utilisateur actuel (par exemple, une chaîne qui inclut Integrated_Security=SSPI), le service système PowerPivot passera alors l'identité de l'utilisateur spécifié dans l'application cible en tant qu'utilisateur actuel. Cette connexion réussira uniquement si le compte a des autorisations en lecture sur la source de données externe.  

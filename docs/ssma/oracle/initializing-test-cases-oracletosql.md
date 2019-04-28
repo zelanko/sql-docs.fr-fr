@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 80b02e10fa148924e78159024969bad077392d99
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62864854"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>Initialisation de cas de test (OracleToSQL)
 À cette étape, vous spécifiez les informations initiales pour le nouveau cas de test.  

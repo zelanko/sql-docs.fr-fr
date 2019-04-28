@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b716b3854ec2fbf931facf3aa224a04055e9f73e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715356"
 ---
 # <a name="clustering-model-query-examples"></a>Exemples de requêtes de modèle de clustering
   Lorsque vous créez une requête sur un modèle d'exploration de données, vous pouvez récupérer les métadonnées sur le modèle ou créer une requête de contenu qui fournit des détails sur les séquences découvertes dans l'analyse. Une autre solution consiste à créer une requête de prédiction qui utilise les séquences dans le modèle pour faire des prédictions pour les nouvelles données. Chaque type de requête fournit des informations différentes. Par exemple, une requête de contenu peut fournir des détails supplémentaires sur les clusters identifiés, tandis qu'une requête de prédiction peut vous dire à quel cluster un nouveau point de données est le plus susceptible d'appartenir.  
@@ -56,7 +56,7 @@ ms.locfileid: "48087489"
   
  [Retour en haut](#bkmk_top2)  
   
-###  <a name="bkmk_Query1"></a> Exemple de requête 1 : obtention des métadonnées du modèle à l'aide de DMX  
+###  <a name="bkmk_Query1"></a> Exemple de requête 1 : Obtention des métadonnées du modèle avec DMX  
  La requête suivante retourne les métadonnées de base sur le modèle de clustering `TM_Clustering`que vous avez créé dans le Didacticiel sur l'exploration de données de base. Les métadonnées disponibles dans le nœud parent d'un modèle de clustering incluent le nom du modèle, la base de données où le modèle est stocké et le nombre de nœuds enfants dans le modèle. Cette requête utilise une requête de contenu DMX pour récupérer les métadonnées du nœud parent du modèle:  
   
 ```  
@@ -84,7 +84,7 @@ WHERE NODE_TYPE = 1
   
  [Retour en haut](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a> Exemple de requête 2 : récupération des métadonnées du modèle de l'ensemble de lignes de schéma  
+###  <a name="bkmk_Query2"></a> Exemple de requête 2 : Récupération des métadonnées du modèle de l'ensemble de lignes de schéma  
  En interrogeant l'ensemble de lignes de schéma d'exploration de données, vous pouvez obtenir les mêmes informations que celles retournées par une requête de contenu DMX. Toutefois, l'ensemble de lignes de schéma fournit quelques colonnes supplémentaires, telles que les paramètres utilisés lorsque le modèle a été créé, la date et l'heure auxquelles le modèle a été traité pour la dernière fois et le propriétaire du modèle.  
   
  L'exemple suivant retourne la date à laquelle le modèle a été créé, modifié et traité pour la dernière fois, ainsi que les paramètres de clustering utilisés pour générer le modèle et la taille du jeu d'apprentissage. Ces informations peuvent être utiles pour documenter le modèle ou pour déterminer les options de clustering qui ont été utilisées pour créer un modèle existant.  
@@ -110,7 +110,7 @@ WHERE MODEL_NAME = 'TM_Clustering'
 ## <a name="finding-information-about-clusters"></a>Recherche d'informations sur les Clusters  
  Les requêtes de contenu les plus utiles sur les modèles de clustering retournent généralement le même type d'informations que celles auxquelles vous pouvez accéder à l'aide de **Cluster Viewer**. Il s'agit notamment des profils, des caractéristiques et de la discrimination de cluster. Cette section fournit des exemples de requêtes qui récupèrent ces informations.  
   
-###  <a name="bkmk_Query3"></a> Exemple de requête 3: retour d'un cluster ou d'une liste de clusters  
+###  <a name="bkmk_Query3"></a> Exemple de requête 3 : Retour d’un Cluster ou une liste de Clusters  
  Tous les clusters ayant un type de nœud égal à 5, vous pouvez facilement récupérer une liste des clusters en interrogeant uniquement le contenu du modèle au sujet des nœuds de ce type. Vous pouvez également filtrer les nœuds retournés par probabilité ou par prise en charge, comme le montre cet exemple.  
   
 ```  
@@ -136,7 +136,7 @@ WHERE NODE_TYPE = 5 AND NODE_SUPPORT > 1000
   
  [Retour en haut](#bkmk_top2)  
   
-###  <a name="bkmk_Query4"></a> Exemple de requête 4 : retour d'attributs pour un cluster  
+###  <a name="bkmk_Query4"></a> Exemple de requête 4 : Retour d'attributs pour un cluster  
  Pour chaque cluster, **Cluster Viewer** affiche un profil qui répertorie les attributs et leurs valeurs. La visionneuse affiche également un histogramme qui montre la distribution des valeurs pour toute la population de cas dans le modèle. Si vous parcourez le modèle dans la visionneuse, vous pouvez copier facilement l'histogramme de la Légende d'exploration de données et le coller dans un document Excel ou Word. Vous pouvez également utiliser le volet Caractéristiques du cluster de la visionneuse pour comparer graphiquement les attributs de différents clusters.  
   
  Toutefois, si vous devez obtenir des valeurs pour plusieurs clusters à la fois, il est plus facile d'interroger le modèle. Par exemple, lorsque vous parcourez le modèle, vous pouvez remarquer que les deux premiers clusters diffèrent d'un attribut, `Number Cars Owned`. Par conséquent, vous souhaitez extraire les valeurs pour chaque cluster.  
@@ -178,7 +178,7 @@ WHERE NODE_TYPE = 5
   
  [Retour en haut](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a> Exemple de requête 5 : retour d'un profil de cluster à l'aide de procédures stockées système  
+###  <a name="bkmk_Query5"></a> Exemple de requête 5 : Un profil de Cluster à l’aide du système de retour de procédures stockées  
  Pour aller plus vite, au lieu d'écrire vos propres requêtes avec DMX, vous pouvez appeler les procédures stockées système que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utilise pour traiter les clusters. L'exemple suivant illustre comment utiliser les procédures stockées internes pour retourner le profil pour un cluster avec l'ID 002.  
   
 ```  
@@ -204,7 +204,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterCh
   
  [Retour en haut](#bkmk_top2)  
   
-###  <a name="bkmk_Query6"></a> Exemple de requête 6 : recherche de facteurs de discrimination pour un cluster  
+###  <a name="bkmk_Query6"></a> Exemple de requête 6 : Recherche de facteurs de discrimination pour un Cluster  
  L’onglet **Discrimination de cluster** de **Cluster Viewer** vous permet de comparer facilement un cluster à un autre ou de comparer un cluster avec tous les cas restants (le complément du cluster).  
   
  Toutefois, la création de requêtes pour retourner ces informations peut être complexe, et un traitement additionnel sur le client peut être nécessaire pour stocker les résultats temporaires et comparer les résultats de deux requêtes ou plus. Pour aller plus vite, vous pouvez utiliser les procédures stockées système.  
@@ -235,7 +235,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
   
  [Retour en haut](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a> Exemple de requête 7 : retour des cas qui appartiennent à un cluster  
+###  <a name="bkmk_Query7"></a> Exemple de requête 7 : Retour des cas qui appartiennent à un cluster  
  Si l'extraction a été activée sur le modèle d'exploration de données, vous pouvez créer des requêtes qui retournent des informations détaillées sur les cas utilisés dans le modèle. De plus, si l’extraction a été activée sur la structure d’exploration de données, vous pouvez inclure des colonnes de la structure sous-jacente à l’aide de la fonction [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx).  
   
  L'exemple suivant retourne deux colonnes utilisées dans le modèle (Age et Region), plus une colonne supplémentaire (First Name) qui n'a pas été utilisée dans le modèle. La requête retourne uniquement les cas qui étaient classifiés dans le Cluster 1.  
@@ -257,8 +257,8 @@ WHERE IsInNode('001')
   
  [Retour en haut](#bkmk_top2)  
   
-###  <a name="bkmk_Query8"></a> Exemple de requête 8 : prédiction de résultats à partir d'un modèle de clustering  
- Si le modèle de clustering que vous créez contient un attribut prévisible, vous pouvez utiliser le modèle pour faire des prédictions sur les résultats. Toutefois, le modèle gère l’attribut prédictible différemment selon que vous affectez à la colonne prédictible `Predict` ou `PredictOnly`. Si vous définissez l’utilisation de la colonne à `Predict`, les valeurs de cet attribut sont ajoutées au modèle de clustering et apparaissent en tant qu’attributs dans le modèle fini. Toutefois, si vous attribuez la valeur `PredictOnly` à la colonne, les valeurs ne sont pas utilisées pour créer des clusters. Au lieu de cela, une fois que le mode terminé, l’algorithme de clustering crée de nouvelles valeurs pour le `PredictOnly` attribut basé sur les clusters auxquels chaque cas appartient.  
+###  <a name="bkmk_Query8"></a> Exemple de requête 8 : Prédiction de résultats à partir d'un modèle de clustering  
+ Si le modèle de clustering que vous créez contient un attribut prévisible, vous pouvez utiliser le modèle pour faire des prédictions sur les résultats. Toutefois, le modèle gère différemment l'attribut prédictible selon que vous attribuez la valeur `Predict` ou `PredictOnly` à la colonne prédictible. Si vous attribuez la valeur `Predict` à la colonne, les valeurs de cet attribut sont ajoutées au modèle de clustering et apparaissent sous forme d'attributs dans le modèle fini. Toutefois, si vous attribuez la valeur `PredictOnly` à la colonne, les valeurs ne sont pas utilisées pour créer des clusters. Au lieu de cela, une fois le mode terminé, l'algorithme de clustering crée de nouvelles valeurs pour l'attribut `PredictOnly` en fonction des clusters auxquels chaque cas appartient.  
   
  La requête suivante fournit un nouveau cas unique au modèle, où les seules informations sur le cas sont l'âge et le sexe. L’instruction SELECT spécifie la paire attribut/valeur prévisible qui vous intéresse, et la fonction [PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx) indique la probabilité qu’un cas avec ces attributs ait le résultat désiré.  
   
@@ -272,7 +272,7 @@ NATURAL PREDICTION JOIN
   'F' AS [Gender]) AS t  
 ```  
   
- Exemple de résultats lorsque l’utilisation est définie sur `Predict`:  
+ Exemple de résultats lorsque l'utilisation a pour valeur `Predict` :  
   
 |Bike Buyer|Expression|  
 |----------------|----------------|  
@@ -288,7 +288,7 @@ NATURAL PREDICTION JOIN
   
  Le nombre retourné par la fonction PredictCaseLikelihood est une probabilité. Par conséquent, il est donc toujours égal à 0 ou 1, la valeur 0,5 représentant un résultat aléatoire. Un score inférieur à 0,5 signifie que le cas prédit est improbable pour le modèle donné, tandis qu'un score supérieur à 0,5 indique que le cas prédit est plus susceptible d'être adapté au modèle que de ne pas l'être.  
   
- Par exemple, la requête suivante retourne deux valeurs qui caractérisent la vraisemblance d'un nouveau cas d'exemple. La valeur non normalisée représente la probabilité pour le modèle actuel donné. Lorsque vous utilisez le mot clé NORMALIZED, le score de vraisemblance retourné par la fonction est ajusté en divisant la « probabilité avec le modèle » par la « probabilité sans le modèle ».  
+ Par exemple, la requête suivante retourne deux valeurs qui caractérisent la vraisemblance d'un nouveau cas d'exemple. La valeur non normalisée représente la probabilité pour le modèle actuel donné. Lorsque vous utilisez le mot clé NORMALIZED, le score de vraisemblance retourné par la fonction est ajusté en divisant la « probabilité avec le modèle » par la « probabilité sans le modèle ».  
   
 ```  
 SELECT  
@@ -310,7 +310,7 @@ NATURAL PREDICTION JOIN
   
  [Retour en haut](#bkmk_top2)  
   
-###  <a name="bkmk_Query9"></a> Exemple de requête 9 : identification de l'appartenance au cluster  
+###  <a name="bkmk_Query9"></a> Exemple de requête 9 : Détermination de l'appartenance au cluster  
  Cet exemple utilise la fonction [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) pour retourner le cluster auquel le nouveau cas est le plus susceptible d’appartenir, et la fonction [ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx) pour retourner la probabilité d’appartenance à ce cluster.  
   
 ```  
@@ -333,7 +333,7 @@ NATURAL PREDICTION JOIN
   
  [Retour en haut](#bkmk_top2)  
   
-###  <a name="bkmk_Query10"></a> Exemple de requête 10 : retour de tous les clusters possibles avec la probabilité et la distance  
+###  <a name="bkmk_Query10"></a> Exemple de requête 10 : Retour de tous les clusters possibles avec la probabilité et la distance  
  Dans l'exemple précédent, le score de probabilité n'était pas très élevé. Pour déterminer si un meilleur cluster existe, vous pouvez utiliser la fonction [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx) avec la fonction [Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx) pour retourner une table imbriquée qui inclut tous les clusters possibles, ainsi que la probabilité que le nouveau cas appartienne à chaque cluster. Le mot clé FLATTENED est utilisé pour remplacer l'ensemble de lignes hiérarchique par une table à plat à des fins de visualisation.  
   
 ```  
@@ -389,8 +389,8 @@ NATURAL PREDICTION JOIN
  Pour en savoir plus sur la syntaxe de fonctions spécifiques, consultez [Informations de référence sur les fonctions DMX &#40;Data Mining Extensions&#41;](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’exploration de données](data-mining-queries.md)   
- [Microsoft Clustering algorithme informations techniques de référence](microsoft-clustering-algorithm-technical-reference.md)   
+ [Requêtes d'exploration de données](data-mining-queries.md)   
+ [Références techniques relatives à l’algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm-technical-reference.md)   
  [Algorithme de gestion de clusters Microsoft](microsoft-clustering-algorithm.md)  
   
   

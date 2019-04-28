@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44af3840dc6e54a461bedc19db45de12204e8c94
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48191049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794227"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Barre d'outils (onglet Utilisation de la dimension, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Le volet **Barre d'outils** permet d'effectuer des actions courantes (ex. : ajouter une dimension de cube ou traiter le cube) dans l'onglet **Utilisation de la dimension** du Concepteur de cube.  

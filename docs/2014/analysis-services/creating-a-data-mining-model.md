@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d7efc9df277f609bf53ffb49f2253a937f45a4b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52394462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679694"
 ---
 # <a name="creating-a-data-mining-model"></a>Création d'un modèle d'exploration de données
   Modélisation des données est l’étape d’exploration de données où vous générez des modèles et les tendances en appliquant *algorithmes* aux données. Ultérieurement, utilisez ces séquences pour l'analyse, ou pour faire des prédictions.  

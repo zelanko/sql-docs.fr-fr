@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: b06773049204b126a37e21ce8c070f11666f19df
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62826647"
 ---
 # <a name="setordervalue-method-clientnetworkprotocol-class"></a>Méthode SetOrderValue (classe ClientNetworkProtocol)
   Sélectionne le protocole avec la valeur d'ordre spécifiée dans la liste de protocoles du client.  

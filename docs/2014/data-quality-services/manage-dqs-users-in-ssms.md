@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d8d7e0c31b1e022445006598f791716d765b98c9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792388"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Gérer des utilisateurs DQS dans SSMS
   Cette rubrique décrit comment créer des utilisateurs supplémentaires dans l'instance SQL Server à l'aide de SQL Server Management Studio et leur accorder des rôles [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) appropriés sur la base de données DQS_MAIN.  
@@ -24,7 +24,7 @@ ms.locfileid: "56027980"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Votre compte d'utilisateur Windows doit être un membre du rôle serveur fixe approprié (tel que securityadmin, serveradmin ou sysadmin) pour créer une connexion SQL et lui accorder des rôles DQS appropriés.  
   
 ##  <a name="GrantRoles"></a> Créer une connexion SQL et l’accorder un rôle DQS  
@@ -42,7 +42,7 @@ ms.locfileid: "56027980"
   
 5.  Une fois l'utilisateur validé, dans le volet de gauche, cliquez sur **Mappage de l'utilisateur** .  
   
-6.  Dans le volet droit, sélectionnez la case à cocher sous la **carte** colonne pour le **DQS_MAIN** de base de données, puis sélectionnez le **dqs_administrator**, **dqs_kb_editor** , ou **dqs_kb_operator** case à cocher dans la **appartenance au rôle de la base de données : DQS_MAIN** volet, selon le niveau d’accès nécessaire pour l’utilisateur.  
+6.  Dans le volet droit, cochez la case sous la colonne **Mapper** pour la base de données **DQS_MAIN**, puis cochez la case **dqs_administrator**, **dqs_kb_editor** ou **dqs_kb_operator** dans le volet **Appartenance au rôle de base de données : DQS_MAIN**, selon le niveau d’accès nécessaire à l’utilisateur.  
   
 7.  Dans la boîte de dialogue **Nouvelle connexion**, cliquez sur **OK** pour appliquer les modifications.  
   

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 12a183718ee13915fd6236caf943fea03819e723
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54420124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812974"
 ---
 # <a name="use-alwayson-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Utiliser les stratégies AlwaysOn pour afficher l'intégrité d'un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment déterminer l'état opérationnel d'un groupe de disponibilité AlwaysOn à l'aide d'une stratégie AlwaysOn dans [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Pour plus d’informations sur la gestion basée sur AlwaysOn, consultez [stratégies AlwaysOn pour les problèmes opérationnels avec des groupes de disponibilité AlwaysOn (SQL Server)](always-on-policies-for-operational-issues-always-on-availability.md).  
@@ -31,7 +31,7 @@ ms.locfileid: "54420124"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert les autorisations CONNECT, VIEW SERVER STATE et VIEW ANY DEFINITION.  
   
 ##  <a name="SSMSProcedure"></a> À l’aide du tableau de bord AlwaysOn  
@@ -117,11 +117,11 @@ ms.locfileid: "54420124"
 ##  <a name="RelatedContent"></a> Contenu associé  
  **Blogs de la surveillance de l’intégrité AlwaysOn avec PowerShell de l’équipe SQL Server AlwaysOn :**  
   
--   [Première partie : Basic Cmdlet Overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) (Supervision de l’intégrité Always On avec PowerShell - Partie 1 : Vue d’ensemble des applets de commande de base)  
+-   [Partie 1 : Basic Cmdlet Overview](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-1.aspx) (Supervision de l’intégrité Always On avec PowerShell - Partie 1 : Vue d’ensemble des applets de commande de base)  
   
--   [Deuxième partie : Advanced Cmdlet Usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx) (Supervision de l’intégrité Always On avec PowerShell - Partie 2 : Utilisation des applets de commande avancées)  
+-   [Partie 2 : Advanced Cmdlet Usage](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/monitoring-alwayson-health-with-powershell-part-2.aspx) (Supervision de l’intégrité Always On avec PowerShell - Partie 2 : Utilisation des applets de commande avancées)  
   
--   [Partie 3 : A Simple Monitoring Application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx) (Supervision de l’intégrité Always On avec PowerShell - Partie 3 : Application de supervision simple)  
+-   [Partie 3 : A Simple Monitoring Application](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/monitoring-alwayson-health-with-powershell-part-3.aspx) (Supervision de l’intégrité Always On avec PowerShell - Partie 3 : Application de supervision simple)  
   
 -   [Partie 4 : Integration with SQL Server Agent](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/15/the-always-on-health-model-part-4.aspx) (Supervision de l’intégrité Always On avec PowerShell - Partie 4 : Intégration à l’Agent SQL Server)  
   

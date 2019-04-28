@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72d896e4d8e7b098729fb65c7b2d21ff81df96fe
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731695"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensions (onglet Structure de cube, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Dimensions** pour afficher et modifier les dimensions d’un cube, notamment les hiérarchies et les attributs sous l’onglet **Structure de cube** du Concepteur de cube.  

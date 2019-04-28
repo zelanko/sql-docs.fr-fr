@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d018fb391c7633877f985b4e5e0798bfd803a5fc
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53363711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680364"
 ---
 # <a name="upgrade-a-sql-server-failover-cluster-instance-setup"></a>Mettre à niveau une instance de cluster de basculement SQL Server (programme d'installation)
   Vous pouvez mettre à niveau un cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vers un cluster de basculement [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] à l'aide de l'Assistant Installation de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ou à partir de l'invite de commandes.  
@@ -78,9 +78,9 @@ ms.locfileid: "53363711"
 ## <a name="upgrading-to-a-includesssql14includessssql14-mdmd-multi-subnet-failover-cluster"></a>Mise à niveau vers un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]  
  Il existe deux scénarios possibles pour les mises à niveau :  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de basculement est actuellement configuré sur un sous-réseau unique : Vous mettez d’abord à niveau le cluster existant vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en lançant le programme d'installation et en suivant le processus de mise à niveau. Après avoir terminé la mise à niveau du cluster de basculement existant, ajoutez un nœud qui se trouve sur un sous-réseau différent à l'aide de la fonctionnalité AddNode. Confirmez la modification de dépendance de ressource d'adresse IP en OR dans la page de configuration de réseau de clusters. Vous avez maintenant un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de basculement est actuellement configuré sur un sous-réseau unique : Vous devez d’abord passer le cluster existant vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] en lançant le programme d’installation et en suivant le processus de mise à niveau. Après avoir terminé la mise à niveau du cluster de basculement existant, ajoutez un nœud qui se trouve sur un sous-réseau différent à l'aide de la fonctionnalité AddNode. Confirmez la modification de dépendance de ressource d'adresse IP en OR dans la page de configuration de réseau de clusters. Vous avez maintenant un cluster de basculement de sous-réseaux multiples [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
-2.  Le cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est configuré actuellement sur plusieurs sous-réseaux à l'aide de la technologie d'étirement V-LAN : Vous devez d’abord mettre à niveau le cluster existant vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Comme la technologie d'étirement V-LAN configure un sous-réseau unique, la configuration réseau doit être modifiée pour inclure plusieurs sous-réseaux. La dépendance de ressource d'adresse IP doit être modifiée à l'aide de l'outil d'administration de cluster de basculement Windows et la dépendance IP doit être définie sur OR.  
+2.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cluster de basculement est actuellement configuré sur plusieurs sous-réseaux à l’aide de l’étirement de la technologie de V-LAN : Vous devez d’abord passer le cluster existant vers [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]. Comme la technologie d'étirement V-LAN configure un sous-réseau unique, la configuration réseau doit être modifiée pour inclure plusieurs sous-réseaux. La dépendance de ressource d'adresse IP doit être modifiée à l'aide de l'outil d'administration de cluster de basculement Windows et la dépendance IP doit être définie sur OR.  
   
 ###  <a name="BestPractices"></a> Meilleures pratiques avant la mise à niveau un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Cluster de basculement  
  Pour réduire le temps mort inattendu provoqué par un redémarrage, préinstallez le package de non-redémarrage pour le .NET Framework 4.0 sur tous les nœuds de cluster de basculement avant d'exécuter la mise à niveau sur les nœuds de cluster. Il est recommandé de respecter les étapes suivantes pour la préinstallation des composants requis :  

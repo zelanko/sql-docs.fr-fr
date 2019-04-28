@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4fe890744f546e02c91630c5bb0115f5b5c8cb9a
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62805645"
 ---
 # <a name="other-database-engine-upgrade-issues"></a>Autres problèmes de mise à niveau du moteur de base de données
   Les problèmes de mise à niveau suivants ne peuvent pas être détectés par la version actuelle du Conseiller de mise à niveau. Passez en revue les problèmes répertoriés ci-dessous pour évaluer leur impact potentiel sur vos systèmes.  
@@ -57,7 +57,7 @@ ms.locfileid: "52321635"
   
 -   Géographie  
   
--   Géométrie  
+-   Geometry  
   
 -   Datetime2  
   

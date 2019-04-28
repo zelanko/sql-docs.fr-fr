@@ -25,11 +25,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f7b0d8a4c5e3403e326cd88d2a7eafa5726addb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689420"
 ---
 # <a name="browse-a-model-using-the-microsoft-tree-viewer"></a>Explorer un modèle à l'aide de la visionneuse d'arborescences Microsoft
   La Visionneuse d’arborescence [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les arbres de décision qui sont générés avec l’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees). L'algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est un algorithme d'arbre de décision hybride qui prend en charge à la fois la classification et la régression. Par conséquent, vous pouvez également utiliser cette visionneuse pour consulter les modèles fondés sur l'algorithme MLR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression). L’algorithme MDT ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees) est utilisé pour la modélisation prédictive des attributs discrets et continus. Pour plus d’informations sur cet algorithme, consultez [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md).  
@@ -105,10 +105,10 @@ ms.locfileid: "48104731"
  [Retour au début](#BKMK_TabsPanes)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme d’arbres de décision de Microsoft](microsoft-decision-trees-algorithm.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Outils d’exploration de données](data-mining-tools.md)   
+ [Algorithme MDT (Microsoft Decision Trees)](microsoft-decision-trees-algorithm.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](../mining-model-viewers-data-mining-model-designer.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Outils d'exploration de données](data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)  
   
   

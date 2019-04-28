@@ -13,11 +13,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c64f95b0c366453e1099c80d8e40b217fb7801
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702462"
 ---
 # <a name="dimension-objects-analysis-services---multidimensional-data"></a>Objets de dimension (Analysis Services - Données multidimensionnelles)
   Un objet <xref:Microsoft.AnalysisServices.Dimension> simple est composé des informations de base, des attributs et des hiérarchies. Les informations de base incluent le nom de la dimension, le type de dimension, la source de données, le mode de stockage et d'autres informations. Les attributs définissent les données effectives dans la dimension. Les attributs n'appartiennent pas nécessairement à une hiérarchie, mais les hiérarchies sont construites à partir d'attributs. Une hiérarchie crée des listes de niveaux triées et définit les façons dont la dimension peut être explorée par un utilisateur.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7e20e18f2e4395720c4e895d53c9a78a75d38dee
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58391730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828271"
 ---
 # <a name="azure-blob-destination"></a>Destination d’objet blob Azure
   Le composant **Destination d’objet blob Azure** permet à un package SSIS d’écrire des données dans un objet blob Azure. Les formats de fichier pris en charge sont : CSV et AVRO. Faites glisser le composant **Destination d’objet Blob Azure** au Concepteur de flux de données et double-cliquez dessus pour afficher l’éditeur).  

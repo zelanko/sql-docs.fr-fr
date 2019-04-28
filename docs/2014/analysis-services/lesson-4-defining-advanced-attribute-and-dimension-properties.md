@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 4 : Définition avancées des attributs et des propriétés de Dimension | Microsoft Docs'
+title: 'Leçon 4 : Définition avancée des attributs et des propriétés de Dimension | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c685a2050611ce9cc55309847608bf50521fff16
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62728738"
 ---
-# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Leçon 4 : Définition des attributs avancés et des propriétés de dimension
+# <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Leçon 4 : Définition des propriétés d’attribut et de dimension avancées
   Au cours de cette leçon, vous allez apprendre à utiliser certaines propriétés avancées des attributs, hiérarchies d'attributs et propriétés de dimensions.  
   
 > [!NOTE]  
@@ -26,7 +26,7 @@ ms.locfileid: "48184069"
   
  Cette leçon contient les tâches suivantes :  
   
- [Utilisation d’une version modifiée du projet du tutoriel Analysis Services](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
+ [Utilisation d'une version modifiée du projet du didacticiel Analysis Services](lesson-4-1-using-a-modified-version-of-the-analysis-services-tutorial-project.md)  
  Au cours de cette tâche, vous allez ouvrir, vérifier et déployer une version modifiée du projet de didacticiel [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , qui contient plusieurs groupes de mesures et dimensions supplémentaires.  
   
  [Définition des propriétés d’attribut parent dans une hiérarchie parent-enfant](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
@@ -38,17 +38,17 @@ ms.locfileid: "48184069"
  [Masquage et désactivation des hiérarchies d’attributs](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  Au cours de cette tâche, vous allez apprendre à désactiver ou à masquer les hiérarchies d'attributs et à quel moment le faire.  
   
- [Tri des membres d’attribut sur la base d’un attribut secondaire](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [Tri des membres d'attribut sur la base d'un attribut secondaire](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
  Au cours de cette tâche, vous allez apprendre à trier les membres de la dimension sur la base d'un attribut secondaire, pour obtenir l'ordre de tri souhaité.  
   
- [Spécification des relations d’attribut dans une hiérarchie définie par l’utilisateur](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
+ [Spécification des relations d'attribut dans une hiérarchie définie par l'utilisateur](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
  Au cours de cette tâche, vous allez apprendre à définir les propriétés des membres pour les attributs et à spécifier les relations d’agrégation qui existent entre eux. Pour plus d’informations, consultez [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md) et [Propriétés de la hiérarchie définie par l’utilisateur](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  [Définition du membre inconnu et des propriétés de traitement Null](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  Au cours de cette tâche, vous allez configurer les propriétés UnknownMember et UnknownMemberName pour gérer les conditions d’erreur causées par des membres de la dimension NULL.  
   
 ## <a name="next-lesson"></a>Leçon suivante  
- [Leçon 5 : Définition des relations entre les dimensions et les groupes de mesures](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [Leçon 5 : Définition des relations entre des Dimensions et des groupes de mesures](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Scénario du didacticiel Analysis Services](analysis-services-tutorial-scenario.md)   

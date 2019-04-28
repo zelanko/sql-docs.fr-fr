@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5f451a9948315a32710bdb1755bb95a5b8d3b98
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700575"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Créer et gérer une partition distante (Analysis Services)
   Lorsque vous partitionnez un groupe de mesures, vous pouvez configurer une base de données secondaire sur une instance distante de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] comme stockage de partition.  
@@ -67,7 +67,7 @@ ms.locfileid: "53356642"
   
 2.  Sur le serveur subordonné : Dans l’Explorateur de solutions, créer une nouvelle source de données qui pointe vers la base de données de cube, db-master. Utilisez le fournisseur **OLE DB natif\Fournisseur Microsoft OLE DB pour Analysis Services 11.0**.  
   
-3.  Sur le serveur subordonné : déployer la solution ;  
+3.  Sur le serveur subordonné : Déployer la solution.  
   
 #### <a name="enable-features-in-ssms"></a>Activer les fonctionnalités (dans SSMS)  
   

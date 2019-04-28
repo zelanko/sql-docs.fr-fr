@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52414086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791877"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services avec les groupes de disponibilité Always On
   Un groupe de disponibilité AlwaysOn est une collection prédéfinie de bases de données relationnelles SQL Server qui basculent ensemble lorsque les conditions déclenchent un basculement dans l'une des bases de données, redirigeant les requêtes vers une base de données mise en miroir sur une autre instance dans le même groupe de disponibilité. Si vous utilisez des groupes de disponibilité pour votre solution haute disponibilité, vous pouvez utiliser une base de données de ce groupe comme source de données dans une solution Analysis Services tabulaire ou multidimensionnelle. Toutes les opérations d'Analysis Services s'exécutent comme prévu lorsque vous utilisez une base de données de disponibilité : le traitement ou l'importation des données, l'interrogation directe des données relationnelles (à l'aide du stockage ROLAP ou du mode DirectQuery) et l'écriture différée.  
@@ -151,7 +151,7 @@ ms.locfileid: "52414086"
 ##  <a name="bkmk_test"></a> Tester la configuration  
  Après avoir configuré le réplica secondaire et créez une connexion à la source de données dans Analysis Services, vous pouvez vérifier que le traitement et les commandes de requête sont redirigées vers le réplica secondaire. Vous pouvez également effectuer un basculement manuel planifié afin de vérifier votre plan de récupération pour ce scénario.  
   
-#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Étape 1 : Confirmer que la connexion de source de données est redirigée vers le réplica secondaire  
+#### <a name="step-1-confirm-the-data-source-connection-is-redirected-to-the-secondary-replica"></a>Étape 1 : Vérifier que la connexion à la source de données est redirigée vers le réplica secondaire  
   
 1.  Démarrez le Générateur de profils SQL Server et connectez-vous à l'instance SQL Server qui héberge le réplica secondaire.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "52414086"
 ##  <a name="bkmk_whathappens"></a> Que se passe-t-il après un basculement  
  Lors d'un basculement, un réplica secondaire adopte le rôle principal et l'ancien réplica principal joue le rôle secondaire. Toutes les connexions clientes sont terminées, la propriété de l’écouteur du groupe de disponibilité passe avec le rôle de réplica principal à une nouvelle instance de SQL Server, et le point de terminaison de l’écouteur est lié aux adresses IP virtuelles et aux ports TCP de la nouvelle instance. Pour plus d’informations, consultez [À propos de l’accès de la connexion client aux réplicas de disponibilité &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- En cas de basculement au cours du traitement, l’erreur suivante se produit dans Analysis Services dans la fenêtre de sortie ou de fichier journal : « Une erreur OLE DB : Erreur OLE DB ou ODBC : Échec du lien de communication ; 08 S 01 ; Fournisseur TPC : Une connexion existante a dû être fermée par l’hôte distant. ; 08S01. »  
+ Si un basculement a lieu pendant le processus, l’erreur suivante se produit dans Analysis Services et s’affiche dans la fenêtre de sortie ou le fichier journal : « Erreur OLE DB : Erreur OLE DB ou ODBC : Échec du lien de communication ; 08S01 ; Fournisseur TPC : une connexion existante a dû être fermée par l’hôte distant. ; 08S01. »  
   
  Cette erreur devrait être résolue si vous attendez une minute avant de recommencer. Si le groupe de disponibilité est configuré correctement pour le réplica secondaire lisible, le traitement continue sur le nouveau réplica secondaire lorsque vous réexécutez le traitement.  
   
@@ -210,7 +210,7 @@ ms.locfileid: "52414086"
 ##  <a name="bkmk_writeback"></a> Écriture différée lors de l’utilisation d’une base de données de disponibilité AlwaysOn  
  L'écriture différée est une fonctionnalité Analysis Services qui prend en charge l'analyse Scénario dans Excel. Elle est généralement utilisée pour budgéter et prévoir des tâches dans des applications personnalisées.  
   
- La prise en charge de l'écriture différée nécessite une connexion cliente READWRITE. Dans Excel, si vous tentez d’écrire en différé sur une connexion en lecture seule, l’erreur suivante se produit : « Impossible de récupérer les données de la source de données externe. » « Impossible de récupérer les données de la source de données externe. »  
+ La prise en charge de l'écriture différée nécessite une connexion cliente READWRITE. Dans Excel, si vous tentez une réécriture sur une connexion en lecture seule, l’erreur suivante se produit : « Impossible de récupérer les données de la source de données externe. » « Impossible de récupérer les données de la source de données externe. »  
   
  Si vous avez configuré une connexion pour accéder toujours à un réplica secondaire lisible, vous devez maintenant configurer une connexion qui utilise une connexion READWRITE au réplica principal.  
   

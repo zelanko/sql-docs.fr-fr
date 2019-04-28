@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fed53298272e4fddb33175c06a8b4b40452e3365
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828715"
 ---
 # <a name="data-flow-tab"></a>Onglet Flux de données
   Utilisez l'onglet **Flux de données** du concepteur [!INCLUDE[ssIS](../includes/ssis-md.md)] pour créer des flux de données dans un package [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .  

@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c479c8e7026e549c33b838c39017c9063894b607
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58389497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828778"
 ---
 # <a name="custom-messages-for-logging"></a>Messages personnalisés pour la journalisation
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] fournit un ensemble complet d'événements personnalisés permettant d'écrire des entrées de journal pour des packages et bon nombre de tâches. Vous pouvez utiliser ces entrées pour enregistrer des informations détaillées sur l'avancement, les résultats et les problèmes d'exécution en enregistrant des événements prédéfinis ou des messages définis par l'utilisateur en vue d'une analyse ultérieure. Vous pouvez ainsi enregistrer l'heure de début et de fin d'une insertion en bloc pour identifier des problèmes de performances lors de l'exécution du package.  
@@ -81,8 +81,8 @@ ms.locfileid: "58389497"
   
 |Entrée du journal|Description|  
 |---------------|-----------------|  
-|`PackageStart`|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
-|`PackageEnd`|Indique que le package est terminé.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
+|`PackageStart`|Indique que le package a commencé à s'exécuter.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
+|`PackageEnd`|Indique que le package est terminé.<br /><br /> Remarque : Cette entrée de journal est automatiquement écrite au journal. Vous ne pouvez pas l'exclure.|  
 |`Diagnostic`|Fournit des informations sur la configuration système qui affecte l'exécution du package, notamment le nombre d'exécutables pouvant s'exécuter simultanément.<br /><br /> L'entrée de journal `Diagnostic` inclut également des entrées avant et après les appels effectués auprès des fournisseurs de données externes. Pour plus d’informations, voir [Outils de dépannage de la connectivité des packages](troubleshooting/troubleshooting-tools-for-package-connectivity.md).|  
   
 ###  <a name="BulkInsert"></a> Tâche d'insertion en bloc  
@@ -116,7 +116,7 @@ ms.locfileid: "58389497"
 |Entrée du journal|Description|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Indique que la tâche a commencé l'exécution d'un package DTS 2000.|  
-|`ExecuteDTS80PackageTaskEnd`|Indique que la tâche est terminée.<br /><br /> Remarque : Il est possible que le package DTS 2000 continue à s'exécuter à la fin de la tâche.|  
+|`ExecuteDTS80PackageTaskEnd`|Indique que la tâche est terminée.<br /><br /> Remarque : Le package DTS 2000 peut continuer à fonctionner après la fin de la tâche.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Fournit des informations détaillées concernant la tâche.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Indique le résultat d'exécution du package DTS 2000 que la tâche a exécuté.|  
   

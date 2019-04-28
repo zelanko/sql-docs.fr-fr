@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: ef78cc196329a10fc5c731556afceaac5fd4cb13
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49460969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789818"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Surveiller des groupes de disponibilité (Transact-SQL)
   Pour surveiller les groupes de disponibilité et les réplicas, ainsi que les bases de données associées à l'aide de [!INCLUDE[tsql](../../../includes/tsql-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] fournit un ensemble d'affichages catalogue et de vues de gestion dynamique, et des propriétés de serveur. Au moyen d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)] SELECT, vous pouvez utiliser les vues pour surveiller les groupes de disponibilité, ainsi que leurs réplicas et bases de données. Les informations retournées pour un groupe de disponibilité donné varient selon que vous êtes connecté à l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica principal ou un réplica secondaire.  
@@ -32,7 +32,7 @@ ms.locfileid: "49460969"
   
  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] nécessitent l'autorisation VIEW ANY DEFINITION sur l'instance de serveur. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ##  <a name="AoAgFeatureOnSI"></a> Surveillance de la fonctionnalité de groupes de disponibilité AlwaysOn sur une Instance de serveur  
@@ -41,7 +41,7 @@ ms.locfileid: "49460969"
  [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) (fonction)  
  Retourne des informations de propriété de serveur indiquant si [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] est activé et, si tel est le cas, s'il a démarré sur l'instance de serveur.  
   
- **Noms de colonne :** IsHadrEnabled, HadrManagerStatus  
+ **Noms de colonne :** IsHadrEnabled, HadrManagerStatus  
   
 ##  <a name="WSFC"></a> Surveillance des groupes de disponibilité sur le cluster WSFC  
  Pour surveiller le cluster WSFC (clustering de basculement Windows Server) qui héberge une instance de serveur locale activée pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], utilisez les vues suivantes :  
@@ -64,7 +64,7 @@ ms.locfileid: "49460969"
  **Clé primaire :** member_name + network_subnet_IP + network_subnet_prefix_length  
   
  [sys.dm_hadr_instance_node_map](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-instance-node-map-transact-sql)  
- Pour chaque instance de SQL Server qui héberge un réplica de disponibilité joint à son groupe de disponibilité AlwaysOn, retourne le nom du nœud WSFC (clustering de basculement Windows Server) qui héberge l'instance de serveur. Cette vue de gestion dynamique permet les utilisations suivantes :  
+ Pour chaque instance de SQL Server qui héberge un réplica de disponibilité joint à son groupe de disponibilité AlwaysOn, retourne le nom du nœud WSFC (clustering de basculement Windows Server) qui héberge l'instance de serveur. Cette vue de gestion dynamique permet les utilisations suivantes :  
   
 -   Cette vue de gestion dynamique est utile pour détecter un groupe de disponibilité avec plusieurs réplicas de disponibilité hébergés sur le même nœud WSFC, ce qui correspond à une configuration non prise en charge qui peut se produire après un basculement FCI si le groupe de disponibilité n'est pas correctement configuré.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "49460969"
 >  L'emplacement du réplica principal constitue la source d'autorité pour un groupe de disponibilité.  
   
 > [!NOTE]  
->  Pour plus d’informations sur les compteurs de performances [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les bases de données de disponibilité (l’objet de performances **SQLServer:Database Replica** ), consultez [SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md). De plus, pour surveiller l’activité des journaux des transactions sur des bases de données de disponibilité, utilisez les compteurs suivants de l’objet de performance **SQLServer:Databases** : **Temps d’attente de vidage du journal (ms)**, **Vidages du journal/s**, **Journaliser les absences dans le cache/s du pool**, **Journaliser les lectures du disque/s du pool**et **Journaliser les requêtes/s du pool**. Pour plus d’informations, voir [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Pour plus d’informations sur les compteurs de performances [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] pour les bases de données de disponibilité (l’objet de performances **SQLServer:Database Replica** ), consultez [SQL Server, réplica de base de données](../../../relational-databases/performance-monitor/sql-server-database-replica.md). De plus, pour superviser l’activité des journaux des transactions sur des bases de données de disponibilité, utilisez les compteurs suivants de l’objet de performance **SQLServer:Databases** : **Temps d’attente de vidage du journal (ms)**, **Vidages du journal/s**, **Journaliser les absences dans le cache/s du pool**, **Journaliser les lectures du disque/s du pool** et **Journaliser les requêtes/s du pool**. Pour plus d’informations, voir [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Surveillance des écouteurs de groupe de disponibilité  
  Pour surveiller les écouteurs de groupe de disponibilité sur les sous-réseaux du cluster WSFC, utilisez les vues suivantes :  

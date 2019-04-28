@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48094225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789079"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>Résultat d'évaluation de stratégie (AlwaysOn)
   Utilisez la page **Résultat d'évaluation de stratégie** du tableau de bord AlwaysOn pour visualiser tous les problèmes de stratégie actuels.  
@@ -32,7 +32,7 @@ ms.locfileid: "48094225"
 |Icône|Severity|  
 |----------|--------------|  
 |![Icône d’interface utilisateur : erreur](../../../relational-databases/replication/media/repl-icon-error.gif "Icône d’interface utilisateur : erreur")|Critique|  
-|![Icône d’interface utilisateur : avertissement](../../../relational-databases/replication/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|Avertissement|  
+|![Icône d’interface utilisateur : avertissement](../../../relational-databases/replication/media/repl-icon-warn.gif "Icône d’interface utilisateur : avertissement")|Warning|  
   
  **Description**  
  Cette grille affiche une brève description du problème sélectionné.  

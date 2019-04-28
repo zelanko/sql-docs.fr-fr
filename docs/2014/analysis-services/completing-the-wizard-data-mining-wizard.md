@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99cc8b42d30bd19e878283d0641d23c894d1abb8
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48202569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680612"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Fin de l'Assistant (Assistant Exploration de données)
   Utilisez la page **Fin de l’Assistant** pour examiner la structure d’exploration de données qui sera créée à la fin de l’Assistant. Vous pouvez également définir le nom de la structure d'exploration de données.  
@@ -28,7 +28,7 @@ ms.locfileid: "48202569"
 > [!NOTE]  
 >  Cette page varie selon que vous avez choisi **À partir d’une base de données relationnelles ou d’un entrepôt de données qui existent déjà** ou **À partir d’un cube existant** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Concepteur d’exploration de données](data-mining/data-mining-designer.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Concepteur d’exploration de données](data-mining/data-mining-designer.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Nom de la structure d’exploration de données**  

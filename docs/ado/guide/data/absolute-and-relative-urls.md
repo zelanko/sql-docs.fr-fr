@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52541931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802938"
 ---
 # <a name="absolute-and-relative-urls"></a>URL absolues et relatives
 Une URL spécifie l’emplacement d’une cible sur un ordinateur local ou en réseau. La cible peut être un fichier, répertoire, page HTML, image, programme et ainsi de suite *.*  

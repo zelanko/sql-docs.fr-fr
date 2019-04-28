@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01f4bcc06ca7bf8bcee3cf581ad0c2bec3ba4f9f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794597"
 ---
 # <a name="tabular-model-solution-deployment-ssas-tabular"></a>Déploiement d'une solution de modèle tabulaire (SSAS Tabulaire)
   Après la création d'un projet de modèle tabulaire, vous devez déployer ce dernier pour que les utilisateurs puissent parcourir le modèle à l'aide d'une application cliente de création de rapports. Cette rubrique décrit les différentes propriétés et méthodes que vous pouvez utiliser lors du déploiement de solutions de modèle tabulaire dans votre environnement.  
@@ -62,7 +62,7 @@ ms.locfileid: "52502926"
 |--------------|---------------------|-----------------|  
 |**Serveur**<br /><br /> Définie à la création du projet.|**localhost**|Cette propriété, définie à la création du projet, spécifie le nom de l'instance Analysis Services sur laquelle le modèle sera déployé. Par défaut, le modèle sera déployé dans l'instance par défaut d'Analysis Services sur l'ordinateur local. Toutefois, vous pouvez modifier ce paramètre pour spécifier une instance nommée sur l'ordinateur local ou n'importe quelle autre instance sur un ordinateur distant sur lequel vous avez l'autorisation de créer des objets Analysis Services.|  
 |**Édition**|La même édition de l'instance dans laquelle le serveur de l'espace de travail se trouve.|Cette propriété spécifie l'édition du serveur Analysis Services sur lequel le modèle sera déployé. L'édition du serveur définit différentes fonctionnalités qui peuvent être incorporées dans le projet. Par défaut, l'édition sera celle du serveur Analysis Services local. Si vous spécifiez un serveur Analysis Services différent, par exemple, un serveur Analysis Services de production, veillez à spécifier l'édition de ce serveur Analysis Services.|  
-|**Sauvegarde de la base de données**|**\<nom du projet >**|Cette propriété spécifie le nom de la base de données Analysis Services dans laquelle les objets de modèle seront instanciés après le déploiement. Ce nom sera également spécifié dans une connexion de données au client de création de rapports ou un fichier de connexion de données .bism.<br /><br /> Vous pouvez modifier ce nom à tout moment lorsque vous créez le modèle. Si vous modifiez le nom après avoir déployé le modèle, les modifications que vous avez apportées après le déploiement ne vont pas affecter le modèle que vous avez déployé précédemment. Par exemple, si vous ouvrez une solution nommée `TestDB` et déployez votre solution avec le nom de base de données model par défaut « Model », puis que vous modifiez la solution et renommez la base de données model `Sales`, l’instance d’Analysis Services sur laquelle les solutions ont été déployées affichera des bases de données différentes, l’une nommée « Model » et l’autre « Sales ».|  
+|**Sauvegarde de la base de données**|**\<projectname>**|Cette propriété spécifie le nom de la base de données Analysis Services dans laquelle les objets de modèle seront instanciés après le déploiement. Ce nom sera également spécifié dans une connexion de données au client de création de rapports ou un fichier de connexion de données .bism.<br /><br /> Vous pouvez modifier ce nom à tout moment lorsque vous créez le modèle. Si vous modifiez le nom après avoir déployé le modèle, les modifications que vous avez apportées après le déploiement ne vont pas affecter le modèle que vous avez déployé précédemment. Par exemple, si vous ouvrez une solution nommée `TestDB` et déployez votre solution avec le nom de base de données model par défaut « Model », puis que vous modifiez la solution et renommez la base de données model `Sales`, l’instance d’Analysis Services sur laquelle les solutions ont été déployées affichera des bases de données différentes, l’une nommée « Model » et l’autre « Sales ».|  
 |**Nom du cube**|**Modèle**|Cette propriété indique le nom du cube tel qu'il s'affiche dans les outils clients (notamment Excel) et les objets AMO (Analysis Management Objects).|  
   
 ### <a name="directquery-options-properties"></a>Propriétés Options DirectQuery  

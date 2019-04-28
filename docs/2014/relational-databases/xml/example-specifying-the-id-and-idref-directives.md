@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Spécification des Directives ID et IDREF | Microsoft Docs'
+title: 'Exemple : Spécification des directives ID et IDREF | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f985745f450b402781685ded5c0a655e3f4e497c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704828"
 ---
 # <a name="example-specifying-the-id-and-idref-directives"></a>Exemple : Spécification des directives ID et IDREF
   Cet exemple est presque identique à l'exemple [Spécification de la directive ELEMENTXSINIL](example-specifying-the-elementxsinil-directive.md) . La seule différence est que la requête spécifie les directives **ID** et **IDREF** . Ces directives remplacent les types de l’attribut **SalesPersonID** des éléments <`OrderHeader`> et <`OrderDetail`>. Il en résulte des liens à l'intérieur du document. Vous avez besoin du schéma pour visualiser les types remplacés. Par conséquent, la requête spécifie l'option **XMLDATA** dans la clause FOR XML pour extraire le schéma.  

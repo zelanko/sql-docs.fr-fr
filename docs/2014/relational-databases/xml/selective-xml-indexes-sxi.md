@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679820"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Index XML sélectifs (SXI)
   Les index XML sélectifs sont un autre type d'index XML disponible en plus des index XML ordinaires. Les objectifs de la fonctionnalité d'index XML sélectif sont les suivants :  
@@ -123,7 +123,7 @@ FOR
   
 -   Indexation des nœuds avec des types de données binaires XS : par exemple, base64Binary et hexBinary.  
   
--   Spécification des nœuds à indexer avec des expressions XPath qui contiennent le caractère générique `*` à la fin : Par exemple, `/a/b/c/*`, `/a//b/*`, ou `/a/b/*:c`.  
+-   Spécification des nœuds à indexer avec des expressions XPath qui se terminent par le caractère générique `*` : Par exemple, `/a/b/c/*`, `/a//b/*` ou `/a/b/*:c`.  
   
 -   Indexation d'un axe autre que l'enfant, l'attribut ou le descendant. `//<step>` est autorisé comme un cas particulier.  
   

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 56a87741b104a49f98a3cba05dc65d911774774d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662897"
 ---
 # <a name="degree-of-parallelism-70-insert-event-class"></a>Classe d'événements Degree of Parallelism (7.0 Insert)
   La classe d’événements **Degree of Parallelism (7.0 Insert)** se produit lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une instruction SELECT, INSERT, UPDATE ou DELETE.  

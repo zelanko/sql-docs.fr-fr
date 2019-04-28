@@ -11,11 +11,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 3c9ee00a81dd64ea1fa6093eaccc8d9b96e0aa59
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806691"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauration fragmentaire de bases de données avec des tables mémoire optimisées
   La restauration fragmentaire est prise en charge sur les bases de données avec des tables mémoire optimisées, à l'exception d'une restriction décrite ci-dessous. Pour plus d’informations sur la sauvegarde et restauration fragmentaires, consultez [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql) et [Restaurations fragmentaires &#40;SQL Server&#41;](../backup-restore/piecemeal-restores-sql-server.md).  
@@ -62,7 +62,7 @@ ALTER DATABASE imoltp ADD FILE (name='imoltp_mod2', filename='c:\data\imoltp_mod
 GO  
 ```  
   
-### <a name="backup"></a>Sauvegarde  
+### <a name="backup"></a>Backup  
  Cet exemple montre comment sauvegarder le groupe de fichiers principal et le groupe de fichiers mémoire optimisé. Vous devez spécifier le groupe de fichiers principal et le groupe de fichiers mémoire optimisé.  
   
 ```  

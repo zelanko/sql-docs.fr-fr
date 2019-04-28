@@ -1,5 +1,5 @@
 ---
-title: MarshalOptions | Microsoft Docs
+title: MarshalOptionsEnum | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e1a89759d6943dc6ccae2a6bfbe65bd96927f87c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47681623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62863941"
 ---
 # <a name="marshaloptionsenum"></a>MarshalOptionsEnum
 Spécifie les enregistrements qui doivent être renvoyées au serveur.  
   
-|Constante|Valeur|Description|  
+|Constante|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adMarshalAll**|0|Valeur par défaut. Retourne toutes les lignes sur le serveur.|  
 |**adMarshalModifiedOnly**|1|Retourne uniquement les lignes modifiées au serveur.|  

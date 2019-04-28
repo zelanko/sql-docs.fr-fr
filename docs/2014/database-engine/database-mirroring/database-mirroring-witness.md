@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48183829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807622"
 ---
 # <a name="database-mirroring-witness"></a>Témoin de mise en miroir de base de données
   Pour permettre la prise en charge du basculement automatique, une session de mise en miroir de bases de données doit être configurée en mode haute sécurité et disposer d’une troisième instance de serveur, appelée *témoin*. Le témoin correspond à une instance facultative de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui active le serveur miroir dans une session en mode haute sécurité pour déterminer s'il est nécessaire d'initier un basculement automatique. Contrairement aux deux autres, le témoin ne dessert pas la base de données. La prise en charge du basculement automatique est le seul rôle rempli par le témoin.  
@@ -62,7 +62,7 @@ ms.locfileid: "48183829"
   
 -   Si le serveur miroir est déconnecté du témoin ainsi que du serveur principal, le basculement automatique n'est pas possible, indépendamment de l'état du serveur principal.  
   
- La condition selon laquelle au moins deux instances de serveur doivent être connectées s’appelle *quorum*. Le quorum garantit que la base de données ne peut être servie que par un seul partenaire à la fois. Pour plus d’informations sur le fonctionnement du quorum et son impact sur une session, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ La condition selon laquelle au moins deux instances de serveur doivent être connectées s’appelle *quorum*. Le quorum garantit que la base de données ne peut être servie que par un seul partenaire à la fois. Pour plus d’informations sur le fonctionnement du quorum et son impact sur une session, consultez [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ##  <a name="AddRemoveWitness"></a> Pour ajouter ou supprimer un témoin  
  **Pour ajouter un témoin**  
@@ -78,8 +78,8 @@ ms.locfileid: "48183829"
 ## <a name="see-also"></a>Voir aussi  
  [Basculement de rôle durant une session de mise en miroir de bases de données &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Modes de fonctionnement de la mise en miroir de bases de données](database-mirroring-operating-modes.md)   
- [Quorum : effets d’un témoin sur la disponibilité de la base de données &#40;Mise en miroir de bases de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
- [Défaillances possibles pendant la mise en miroir d’une base de données](possible-failures-during-database-mirroring.md)   
+ [Quorum : Comment un témoin sur la disponibilité de base de données &#40;mise en miroir de base de données&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
+ [Défaillances possibles pendant la mise en miroir de bases de données](possible-failures-during-database-mirroring.md)   
  [États de la mise en miroir &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   
   

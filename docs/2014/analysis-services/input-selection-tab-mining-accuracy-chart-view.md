@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c1027310bdf012f00e7b70981521088d69d08598
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48120869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729895"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Onglet Sélection d'entrée (vue Graphique d'analyse de précision de l'exploration de données)
   Utilisez l’onglet **Sélection d’entrée** du concepteur **Graphique d’analyse de précision de l’exploration de données** pour spécifier la source des données utilisées pour tester le modèle et générer le graphique d’analyse de précision.  
   
- **Pour plus d’informations :** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Pour plus d'informations, consultez :** [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Options  
  **Synchroniser les colonnes**  **de prédiction et les valeurs**  
@@ -34,9 +34,9 @@ ms.locfileid: "48120869"
  **Sélectionnez les colonnes du modèle d’exploration de données prévisibles à afficher dans le graphique de courbes d’élévation**  
  Grille contenant les colonnes permettant de contrôler les modèles qui sont inclus dans le graphique de courbes d'élévation et leur mode d'utilisation dans ce graphique.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|**Afficher**|Activez la case à cocher située en regard du nom de chaque colonne prédictible dans le modèle d'exploration de données que vous souhaitez afficher dans le graphique.<br /><br /> Si le graphique est trop complexe pour être consulté facilement, désactivez la case à cocher en regard d'une ou de plusieurs colonnes pour le simplifier.<br /><br /> Remarque : vous ne pouvez créer un graphique d’analyse de précision que si au moins une colonne est sélectionnée.|  
+|**Afficher**|Activez la case à cocher située en regard du nom de chaque colonne prédictible dans le modèle d'exploration de données que vous souhaitez afficher dans le graphique.<br /><br /> Si le graphique est trop complexe pour être consulté facilement, désactivez la case à cocher en regard d'une ou de plusieurs colonnes pour le simplifier.<br /><br /> Remarque : Impossible de créer un graphique de précision que si au moins une colonne est sélectionnée.|  
 |**Modèle d'exploration de données**|Répertorie les modèles d'exploration de données contenus dans la structure d'exploration de données.|  
 |**Nom de la colonne prévisible**|Sélectionnez une colonne prédictible contenue dans les modèles d'exploration de données qui sont utilisés pour créer le graphique de courbes d'élévation.|  
 |**Prédire la valeur**|Sélectionnez une valeur pour la colonne prédictible. Si vous laissez ce champ vide, le graphique de courbes d'évaluation prédit le comportement du modèle pour tous les états de la colonne prédictible.|  
@@ -44,7 +44,7 @@ ms.locfileid: "48120869"
  **Sélectionner le jeu de données à utiliser pour le graphique de précision**  
  Groupe d'options qui contient trois options pour spécifier les données de test de précision.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Utiliser des scénarios de test de modèle d'exploration de données**|Utilisez le jeu de test créé lorsque vous avez partitionné la structure d'exploration de données et appliquez le filtre défini sur le modèle. Pour plus d’informations sur les filtres de modèle, consultez [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
 |**Utiliser des scénarios de test de structure d'exploration de données**|Utilisez le jeu de test créé lorsque vous avez partitionné la structure d'exploration de données.|  

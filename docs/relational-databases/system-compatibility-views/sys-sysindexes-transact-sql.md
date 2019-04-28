@@ -1,5 +1,5 @@
 ---
-title: Sys.sysindexes (Transact-SQL) | Microsoft Docs
+title: sys.sysindexes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0c33336f1e58dadb8781072afc1d4f694a402e01
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690241"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "47709167"
 |**id**|**Int**|Identificateur de la table à laquelle l'index appartient.|  
 |**status**|**Int**|Informations sur l'état du système.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**first**|**binary(6)**|Pointeur vers la première page ou la page racine.<br /><br /> Inutilisé lorsque **indid** = 0.<br /><br /> NULL = l’Index est partitionné lorsque **indid** > 1.<br /><br /> NULL = la Table est partitionnée quand **indid** est 0 ou 1.|  
-|**indid**|**smallint**|Identificateur de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> >1 = Index non cluster|  
-|**Racine**|**binary(6)**|Pour **indid** > = 1, **racine** est le pointeur vers la page racine.<br /><br /> Inutilisé lorsque **indid** = 0.<br /><br /> NULL = l’Index est partitionné lorsque **indid** > 1.<br /><br /> NULL = la Table est partitionnée quand **indid** est 0 ou 1.|  
+|**indid**|**smallint**|Identificateur de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = index non cluster|  
+|**root**|**binary(6)**|Pour **indid** > = 1, **racine** est le pointeur vers la page racine.<br /><br /> Inutilisé lorsque **indid** = 0.<br /><br /> NULL = l’Index est partitionné lorsque **indid** > 1.<br /><br /> NULL = la Table est partitionnée quand **indid** est 0 ou 1.|  
 |**minlen**|**smallint**|Taille minimale d'une ligne.|  
 |**keycnt**|**smallint**|Nombre de clés.|  
-|**GroupID**|**smallint**|Identificateur du groupe de fichiers sur lequel l'objet a été créé.<br /><br /> NULL = l’Index est partitionné lorsque **indid** > 1.<br /><br /> NULL = la Table est partitionnée quand **indid** est 0 ou 1.|  
+|**groupid**|**smallint**|Identificateur du groupe de fichiers sur lequel l'objet a été créé.<br /><br /> NULL = l’Index est partitionné lorsque **indid** > 1.<br /><br /> NULL = la Table est partitionnée quand **indid** est 0 ou 1.|  
 |**dpages**|**Int**|Pour **indid** = 0 ou **indid** = 1, **dpages** est le nombre de pages de données utilisé.<br /><br /> Pour **indid** > 1, **dpages** est le nombre de pages d’index utilisé.<br /><br /> 0 = l’Index est partitionné lorsque **indid** > 1.<br /><br /> 0 = la table est partitionnée quand **indid** est 0 ou 1.<br /><br /> Ne fournit pas de résultats précis en cas de dépassement de capacité des données sur des lignes.|  
-|**réservé**|**Int**|Pour **indid** = 0 ou **indid** = 1, **réservé** est le nombre de pages allouées à tous les index et les données de la table.<br /><br /> Pour **indid** > 1, **réservé** est le nombre de pages allouées à l’index.<br /><br /> 0 = l’Index est partitionné lorsque **indid** > 1.<br /><br /> 0 = la table est partitionnée quand **indid** est 0 ou 1.<br /><br /> Ne fournit pas de résultats précis en cas de dépassement de capacité des données sur des lignes.|  
-|**utilisé**|**Int**|Pour **indid** = 0 ou **indid** = 1, **utilisé** est le nombre total de pages utilisé pour toutes les données de table et index.<br /><br /> Pour **indid** > 1, **utilisé** est le nombre de pages utilisées pour l’index.<br /><br /> 0 = l’Index est partitionné lorsque **indid** > 1.<br /><br /> 0 = la table est partitionnée quand **indid** est 0 ou 1.<br /><br /> Ne fournit pas de résultats précis en cas de dépassement de capacité des données sur des lignes.|  
+|**reserved**|**Int**|Pour **indid** = 0 ou **indid** = 1, **réservé** est le nombre de pages allouées à tous les index et les données de la table.<br /><br /> Pour **indid** > 1, **réservé** est le nombre de pages allouées à l’index.<br /><br /> 0 = l’Index est partitionné lorsque **indid** > 1.<br /><br /> 0 = la table est partitionnée quand **indid** est 0 ou 1.<br /><br /> Ne fournit pas de résultats précis en cas de dépassement de capacité des données sur des lignes.|  
+|**used**|**Int**|Pour **indid** = 0 ou **indid** = 1, **utilisé** est le nombre total de pages utilisé pour toutes les données de table et index.<br /><br /> Pour **indid** > 1, **utilisé** est le nombre de pages utilisées pour l’index.<br /><br /> 0 = l’Index est partitionné lorsque **indid** > 1.<br /><br /> 0 = la table est partitionnée quand **indid** est 0 ou 1.<br /><br /> Ne fournit pas de résultats précis en cas de dépassement de capacité des données sur des lignes.|  
 |**rowcnt**|**bigint**|Nombre de lignes de niveau données **indid** = 0 et **indid** = 1.<br /><br /> 0 = l’Index est partitionné lorsque **indid** > 1.<br /><br /> 0 = la table est partitionnée quand **indid** est 0 ou 1.|  
 |**rowmodctr**|**Int**|Compte le nombre total de lignes insérées, supprimées ou mises à jour depuis la dernière mise à jour des statistiques de la table.<br /><br /> 0 = l’Index est partitionné lorsque **indid** > 1.<br /><br /> 0 = la table est partitionnée quand **indid** est 0 ou 1.<br /><br /> Dans [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] et versions ultérieures, **rowmodctr** n’est pas entièrement compatible avec les versions antérieures. Pour plus d'informations, consultez la section Notes.|  
 |**reserved3**|**Int**|Retourne 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -60,13 +60,13 @@ ms.locfileid: "47709167"
 |**reserved2**|**Int**|Retourne 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**FirstIAM**|**binary(6)**|NULL = L'index est partitionné.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**impid**|**smallint**|Indicateur d'implémentation de l'index.<br /><br /> Retourne 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**LockFlags**|**smallint**|Utilisé pour limiter les granularités de verrouillage d'un index. Par exemple, une table de recherche qui est essentiellement accessible en lecture seule peut être configurée pour poser uniquement des verrous de niveau table, de façon à minimiser les coûts de verrouillage.|  
+|**lockflags**|**smallint**|Utilisé pour limiter les granularités de verrouillage d'un index. Par exemple, une table de recherche qui est essentiellement accessible en lecture seule peut être configurée pour poser uniquement des verrous de niveau table, de façon à minimiser les coûts de verrouillage.|  
 |**pgmodctr**|**Int**|Retourne 0.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Clés**|**varbinary(816)**|Liste des identificateurs de colonne pour les colonnes qui constituent la clé d'index.<br /><br /> Renvoie NULL.<br /><br /> Pour afficher les colonnes clés d’index, utilisez [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**keys**|**varbinary(816)**|Liste des identificateurs de colonne pour les colonnes qui constituent la clé d'index.<br /><br /> Renvoie NULL.<br /><br /> Pour afficher les colonnes clés d’index, utilisez [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**nom**|**sysname**|Nom de l'index ou de la statistique. Retourne la valeur NULL lorsque **indid** = 0. Modifiez votre application pour rechercher le nom d'un segment de mémoire de valeur NULL.|  
 |**statblob**|**image**|Statistiques sur les objets binaires volumineux (BLOB).<br /><br /> Renvoie NULL.|  
-|**MAXLEN**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**lignes**|**Int**|Nombre de lignes de niveau données **indid** = 0 et **indid** = 1, et la valeur est répétée pour **indid** > 1.|  
+|**maxlen**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**rows**|**Int**|Nombre de lignes de niveau données **indid** = 0 et **indid** = 1, et la valeur est répétée pour **indid** > 1.|  
   
 ## <a name="remarks"></a>Notes  
  Les colonnes définies comme réservées ne doivent pas être utilisées.  

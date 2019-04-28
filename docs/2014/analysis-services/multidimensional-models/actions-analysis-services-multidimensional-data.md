@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47c289b312b411259e341ab0ef9cc01085f314f1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729069"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Actions (Analysis Services - Données multidimensionnelles)
   Les actions peuvent être de types différents et doivent être créées en conséquence. Les actions peuvent être :  
@@ -37,7 +37,7 @@ ms.locfileid: "50146586"
   
  Un objet <xref:Microsoft.AnalysisServices.Action> simple est composé des informations de base, de la cible où l’action doit se produire, d’une condition pour limiter la portée de l’action et du type. Les informations de base incluent le nom de l'action, la description de l'action, la légende suggérée pour l'action, et d'autres informations.  
   
- La cible est l'emplacement réel dans le cube où l'action doit se produire. La cible est composée d'un type de cible et d'un objet cible. Le type de cible représente le type d'objet, dans le cube, où l'action sera activée. Les types de cible peuvent être des membres de niveau, des cellules, une hiérarchie, des membres de hiérarchie, ou d'autres éléments. L'objet cible est un objet spécifique au type de cible ; si le type de cible est une hiérarchie, l'objet cible est n'importe laquelle des hiérarchies définies dans le cube.  
+ La cible est l'emplacement réel dans le cube où l'action doit se produire. La cible est composée d'un type de cible et d'un objet cible. Le type de cible représente le type d'objet, dans le cube, où l'action sera activée. Les types de cible peuvent être des membres de niveau, des cellules, une hiérarchie, des membres de hiérarchie, ou d'autres éléments. L'objet cible est un objet spécifique au type de cible ; si le type de cible est une hiérarchie, l'objet cible est n'importe laquelle des hiérarchies définies dans le cube.  
   
  La condition est une expression MDX `Boolean` évaluée à l'événement d'action. Si la condition prend la valeur `true`, alors l'action est exécutée. Sinon, l'action n'est pas exécutée.  
   

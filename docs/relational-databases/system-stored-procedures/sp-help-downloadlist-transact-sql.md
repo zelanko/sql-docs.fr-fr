@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62796162"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**object_name**|**sysname**|Objet affecté par l'instruction.|  
 |**object_id**|**uniqueidentifier**|Numéro d’identification de l’objet affecté par l’instruction (**job_id** pour un objet de travail, ou 0 x 00 pour un objet serveur) ou une valeur de données spécifique à la **operation_code**.|  
 |**target_server**|**nvarchar(30)**|Serveur cible devant télécharger cette instruction.|  
-|**error_message**|**nvarchar(1024)**|Message d'erreur (le cas échéant) émis par le serveur cible s'il y a eu un problème lors du traitement de l'instruction.<br /><br /> Remarque : Tout message d'erreur stoppe les téléchargements du serveur cible.|  
+|**error_message**|**nvarchar(1024)**|Message d'erreur (le cas échéant) émis par le serveur cible s'il y a eu un problème lors du traitement de l'instruction.<br /><br /> Remarque : N’importe quel message d’erreur stoppe tous les téléchargements par le serveur cible.|  
 |**date_posted**|**datetime**|Date à laquelle l'instruction a été envoyée à la table.|  
 |**date_downloaded**|**datetime**|Date à laquelle l'instruction a été téléchargée par le serveur cible.|  
 |**status**|**tinyint**|État du travail :<br /><br /> **0** ne = pas encore téléchargé<br /><br /> **1** = téléchargé avec succès.|  

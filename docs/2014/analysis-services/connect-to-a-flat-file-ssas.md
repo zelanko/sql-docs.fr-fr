@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b3fa68b63e9ccf1a11712192d675c46ece7a86b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680306"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Connexion à un fichier plat (SSAS)
   Cette page de **l’Assistant Importation de table** vous permet de vous connecter à un fichier plat (.txt), un fichier séparé par des tabulations (.tab) ou un fichier séparé par des virgules (.csv). Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  
@@ -41,7 +41,7 @@ ms.locfileid: "48148949"
  **Séparateur de colonnes**  
  Effectuez une sélection dans une liste de séparateurs de colonnes disponibles. Choisissez un séparateur qu'il est peu probable de rencontrer dans le texte.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |Tabulation (t)|Les colonnes sont séparées par une tabulation (t).|  
 |Virgule (,)|Les colonnes sont séparées par une virgule (,).|  

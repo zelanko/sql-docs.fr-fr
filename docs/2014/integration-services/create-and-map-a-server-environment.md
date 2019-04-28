@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d40f86706a8c2b9c3d8815398457073ca7acce0
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58393267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62828734"
 ---
 # <a name="create-and-map-a-server-environment"></a>Créer et mapper un environnement serveur
   Vous créez un environnement serveur pour spécifier les valeurs d’exécution des packages contenus dans un projet que vous avez déployé sur le serveur [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Vous pouvez ensuite mapper les variables d'environnement aux paramètres, pour un package spécifique, pour les packages de point d'entrée, ou pour tous les packages dans un projet donné. Un package de point d'entrée est généralement un package parent qui exécute un package enfant.  

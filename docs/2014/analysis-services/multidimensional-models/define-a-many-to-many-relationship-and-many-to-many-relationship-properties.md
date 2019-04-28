@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86582634958ded57db85c0f9e732927bb639cd6a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700183"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Définir une relation plusieurs à plusieurs et les propriétés d’une relation plusieurs à plusieurs
   Cette rubrique explique les dimensions plusieurs-à-plusieurs dans Analysis Services, à quel moment les utiliser, et comment les créer.  
@@ -184,7 +184,7 @@ ms.locfileid: "59242477"
   
  [La révolution 2.0 des relations plusieurs-à-plusieurs](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Didacticiel : Exemple d’une dimension plusieurs-à-plusieurs pour SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Tutoriel : Exemple d’une dimension plusieurs-à-plusieurs pour SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Relations de dimension](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

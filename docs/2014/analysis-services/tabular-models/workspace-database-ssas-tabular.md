@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d70cf1724eb67dbf8f1a75989df5f4021b5512d6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794604"
 ---
 # <a name="workspace-database-ssas-tabular"></a>Base de données d'espace de travail (SSAS Tabulaire)
   La base de données de l'espace de travail de modèles tabulaires, utilisée lors de la création d'un modèle, est créée lorsque vous créez un projet de modèle tabulaire dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. La base de données de l’espace de travail réside en mémoire sur une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] s’exécutant en mode tabulaire, en général sur le même ordinateur que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  

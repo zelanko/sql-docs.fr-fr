@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660800"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Arguments  
- [ @publication **=** ] **'**_publication_**'**  
+ [ @publication**=** ] **'**_publication_**'**  
  Nom de la publication. *publication*est **sysname**, avec une valeur par défaut **%**, qui retourne des informations sur toutes les publications de fusion dans la base de données actuelle.  
   
  [ @found **=** ] **'***trouvé***'** sortie  
  Indicateur désignant les lignes retournées. *trouvé*est **int** d’un paramètre OUTPUT, avec NULL comme valeur par défaut. **1** indique la publication a été trouvée. **0** indique que la publication est introuvable.  
   
- [ @publication_id **=**] **'***publication_id***'** sortie  
+ [ @publication_id**=**] **'***publication_id***'** OUTPUT  
  Numéro d'identification de la publication. *id_de_la_publication* est **uniqueidentifier** d’un paramètre OUTPUT, avec NULL comme valeur par défaut.  
   
- [ @reserved **=**] **'***réservé***'**  
+ [ @reserved**=**] **'***reserved***'**  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *réservé* est **nvarchar (20)**, avec NULL comme valeur par défaut.  
   
  [ @publisher **=** ] **'***publisher***'**  
  Le nom du serveur de publication. *serveur de publication* est **sysname**, avec NULL comme valeur par défaut.  
   
- [@publisher_db **=** ] **'***publisher_db***'**  
+ [@publisher_db**=** ] **'***publisher_db***'**  
  Le nom de la base de données de publication. *publisher_db* est **sysname**, avec NULL comme valeur par défaut.  
   
 ## <a name="result-sets"></a>Jeux de résultats  
@@ -79,11 +79,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |snapshot_ready|**tinyint**|Indique si l'instantané de cette publication est prêt :<br /><br /> **0** = instantané est prêt à être utilisé.<br /><br /> **1** = instantané n’est pas prêt à être utilisé.|  
 |publication_type|**Int**|Type de publication :<br /><br /> **0** = instantané.<br /><br /> **1** = transactionnelle.<br /><br /> **2** = fusion.|  
 |pubid|**uniqueidentifier**|Identificateur unique de la publication.|  
-|snapshot_jobid|**binary (16)**|ID de travail de l'Agent d'instantané. Pour obtenir l’entrée du travail d’instantané dans le [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) (table système), vous devez convertir cette valeur hexadécimale à **uniqueidentifier**.|  
+|snapshot_jobid|**binary(16)**|ID de travail de l'Agent d'instantané. Pour obtenir l’entrée du travail d’instantané dans le [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) (table système), vous devez convertir cette valeur hexadécimale à **uniqueidentifier**.|  
 |enabled_for_internet|**Int**|Détermine si la publication est activée pour Internet. Si **1**, les fichiers de synchronisation pour la publication sont placés dans le `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` directory. L'utilisateur doit créer le répertoire FTP (File Transfer Protocol). Si **0**, la publication n’est pas activée pour l’accès Internet.|  
 |dynamic_filter|**Int**|Indique si un filtre de lignes paramétrable est utilisé. **0** signifie un filtre de lignes paramétrable n’est pas utilisé.|  
 |has_subscription|**bit**|Indique si la publication comporte des abonnements. **0** signifie qu’il n’y a actuellement aucun abonnement à cette publication.|  
-|snapshot_in_default_folder|**bit**|Spécifie si les fichiers d’instantanés sont stockés dans le dossier par défaut.<br /><br /> Si **1**, vous trouverez les fichiers d’instantanés dans le dossier par défaut.<br /><br /> Si **0**, fichiers d’instantané sont stockés dans l’emplacement secondaire spécifié par **alt_snapshot_folder**. Les emplacements secondaires peuvent se trouver sur un autre serveur, un lecteur réseau ou un support amovible (tel qu'un CD-ROM ou des disques amovibles). Vous pouvez également enregistrer les fichiers d'instantané sur un site FTP, pour permettre à l'Abonné de les extraire plus tard.<br /><br /> Remarque : Ce paramètre peut avoir la valeur true et néanmoins avoir un emplacement le **alt_snapshot_folder** paramètre. Cette combinaison spécifie que les fichiers d'instantané sont stockés à la fois dans l'emplacement par défaut et dans l'emplacement secondaire.|  
+|snapshot_in_default_folder|**bit**|Spécifie si les fichiers d’instantanés sont stockés dans le dossier par défaut.<br /><br /> Si **1**, vous trouverez les fichiers d’instantanés dans le dossier par défaut.<br /><br /> Si **0**, fichiers d’instantané sont stockés dans l’emplacement secondaire spécifié par **alt_snapshot_folder**. Les emplacements secondaires peuvent se trouver sur un autre serveur, un lecteur réseau ou un support amovible (tel qu'un CD-ROM ou des disques amovibles). Vous pouvez également enregistrer les fichiers d'instantané sur un site FTP, pour permettre à l'Abonné de les extraire plus tard.<br /><br /> Remarque : Ce paramètre peut avoir la valeur true et néanmoins avoir un emplacement le **alt_snapshot_folder** paramètre. Cette combinaison spécifie que les fichiers d'instantané sont stockés à la fois dans l'emplacement par défaut et dans l'emplacement secondaire.|  
 |alt_snapshot_folder|**nvarchar(255)**|Indique l'emplacement du dossier de remplacement pour l'instantané.|  
 |pre_snapshot_script|**nvarchar(255)**|Spécifie un pointeur vers un **.sql** scripts de fichier que l’Agent de fusion s’exécute avant tout de l’objet répliqué lors de l’application de l’instantané sur l’abonné.|  
 |post_snapshot_script|**nvarchar(255)**|Spécifie un pointeur vers un **.sql** fichier que l’Agent de fusion s’exécute après toutes les autres scripts et objet répliqués données ont été appliquées lors d’une synchronisation initiale.|  
@@ -93,11 +93,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |ftp_subdirectory|**nvarchar(255)**|Spécifie l'emplacement où l'Agent de fusion peut accéder aux fichiers d'instantanés lorsque l'instantané est envoyé via FTP.|  
 |ftp_login|**sysname**|Le nom d’utilisateur est utilisé pour se connecter au service FTP.|  
 |conflict_retention|**Int**|Indique la période de rétention, en jours, pendant laquelle les conflits sont conservés. Au terme du nombre de jours spécifié, la ligne en conflit est purgée de la table des conflits.|  
-|keep_partition_changes|**Int**|Indique si l'optimisation de la synchronisation intervient pour cette publication. **keep_partition_changes** a une valeur par défaut de **0**. La valeur **0** signifie que la synchronisation n’est pas optimisée, et les partitions envoyées à tous les abonnés sont vérifiées lors de la modification des données dans une partition.<br /><br /> **1** signifie que la synchronisation est optimisée et seuls les abonnés ayant des lignes dans la partition modifiée sont concernés.<br /><br /> Remarque : Par défaut, les publications de fusion utilisent des partitions précalculées, ce qui offre un meilleur niveau d'optimisation que cette option. Pour plus d’informations, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) et [optimiser les performances des filtres paramétrés avec des Partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
+|keep_partition_changes|**Int**|Indique si l'optimisation de la synchronisation intervient pour cette publication. **keep_partition_changes** a une valeur par défaut de **0**. La valeur **0** signifie que la synchronisation n’est pas optimisée, et les partitions envoyées à tous les abonnés sont vérifiées lors de la modification des données dans une partition.<br /><br /> **1** signifie que la synchronisation est optimisée et seuls les abonnés ayant des lignes dans la partition modifiée sont concernés.<br /><br /> Remarque : Par défaut, les publications de fusion utilisent des partitions précalculées, qui fournit un meilleur niveau d’optimisation que cette option. Pour plus d’informations, consultez [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) et [optimiser les performances des filtres paramétrés avec des Partitions précalculées](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |allow_subscription_copy|**Int**|Spécifie si la possibilité de copier les bases de données d'abonnement qui s'abonnent à cette publication a été activée. La valeur **0** signifie que la copie n’est pas autorisée.|  
 |allow_synctoalternate|**Int**|Spécifie si un partenaire de synchronisation différent est autorisé pour se synchroniser avec le serveur de publication. La valeur **0** signifie un partenaire de synchronisation n’est pas autorisé.|  
 |validate_subscriber_info|**nvarchar(500)**|Donne la liste des fonctions utilisées pour extraire les informations d'Abonné et valider les critères de filtre de lignes paramétrable sur l'Abonné. Permet de vérifier la cohérence du partitionnement des informations avec chaque fusion.|  
-|backward_comp_level|**Int**|Niveau de compatibilité de la base de données. Il peut avoir une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90**  =  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|backward_comp_level|**Int**|Niveau de compatibilité de la base de données. Il peut avoir une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|Spécifie si les informations de publication sont publiées dans Active Directory. La valeur **0** signifie que les informations de publication ne sont pas disponibles à partir d’Active Directory.<br /><br /> Ce paramètre est déconseillé et il n'est pris en charge que pour la compatibilité descendante des scripts. Vous ne pouvez plus ajouter d'informations de publication dans Active Directory.|  
 |max_concurrent_merge|**Int**|Nombre de processus de fusion simultanés. Si **0**, il n’existe aucune limite au nombre de processus de fusion simultanés en cours d’exécution à un moment donné.|  
 |max_concurrent_dynamic_snapshots|**Int**|Nombre maximal de sessions d'instantané filtrée pouvant être exécutées simultanément par rapport à la publication de fusion. Si **0**, il n’existe aucune limite au nombre maximal de sessions d’instantanés de données filtrées simultanées pouvant s’exécuter simultanément sur la publication à un moment donné.|  

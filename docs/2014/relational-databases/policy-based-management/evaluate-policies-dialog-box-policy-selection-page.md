@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705123"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Boîte de dialogue Évaluer les stratégies, page Sélectionner la stratégie
   Utilisez cette boîte de dialogue pour évaluer les stratégies de la Gestion basée sur des stratégies. En sélectionnant la page **Résultats d'évaluation** , vous pouvez appliquer des stratégies aux éléments d'un jeu de cibles non conforme aux stratégies.  
@@ -38,7 +38,7 @@ ms.locfileid: "52780951"
  **Stratégies : Catégorie**  
  Indique la catégorie de la stratégie. Cette zone est en lecture seule.  
   
- **Stratégies : Facette**  
+ **Stratégies : Facet**  
  Indique la facette implémentée par la stratégie. Cette zone est en lecture seule.  
   
  **Évaluer**  

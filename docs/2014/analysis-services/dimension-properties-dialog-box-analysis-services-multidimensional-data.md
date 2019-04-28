@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cb71a47263b98100b37707b369ff1c89ad62d282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731836"
 ---
 # <a name="dimension-properties-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Propriétés de la dimension (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Propriétés de la dimension** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés d'une dimension dans la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Vous pouvez afficher la boîte de dialogue **Propriétés de la dimension** en cliquant avec le bouton droit sur une dimension dans l’Explorateur d'objets et en sélectionnant **Propriétés**.  
@@ -34,13 +34,13 @@ ms.locfileid: "48101469"
 |**Description**|Affiche la description de la dimension.|  
 |**Créer un horodateur**|Affiche la date et l'heure de création de la dimension.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées de la dimension.|  
-|**Mode de traitement**|Sélectionnez le mode de traitement à utiliser pour la dimension. Pour plus d’informations sur les valeurs de cette propriété, consultez <xref:Microsoft.AnalysisServices.Dimension.ProcessingMode%2A>.|  
-|**État**|Affiche l'état du traitement de la dimension. Pour plus d’informations sur les valeurs de cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Mode de traitement**|Sélectionnez le mode de traitement à utiliser pour la dimension. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.Dimension.ProcessingMode%2A>.|  
+|**État**|Affiche l'état du traitement de la dimension. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Dernier traitement**|Affiche la date et l'heure du dernier traitement de la dimension.|  
-|**Mode de stockage actuel**|Affiche le mode de stockage actuel de la dimension. Pour plus d’informations sur les valeurs de cette propriété, consultez <xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>.|  
+|**Mode de stockage actuel**|Affiche le mode de stockage actuel de la dimension. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.Dimension.CurrentStorageMode%2A>.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Dimensions &#40;Analysis Services - données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensions &#40;Analysis Services - Données multidimensionnelles&#41;](multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  
   
   

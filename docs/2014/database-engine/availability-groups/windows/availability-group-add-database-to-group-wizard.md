@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0be8ed6cf2a163b3c195cfb5e4e18440549b501c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62815724"
 ---
 # <a name="use-the-add-database-to-availability-group-wizard-sql-server-management-studio"></a>Utiliser l'Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)
   Utilisez l'Assistant Ajouter une base de données au groupe de disponibilité pour ajouter une ou plusieurs bases de données à un groupe de disponibilité AlwaysOn existant.  
@@ -36,7 +36,7 @@ ms.locfileid: "48055633"
   
      [Sécurité](#Security)  
   
--   **Pour ajouter une base de données, utilisez :**  [Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Pour ajouter une base de données, à l’aide de :**  [Assistant Ajouter un base de données au groupe de disponibilité (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Si vous n’avez jamais ajouté une base de données à un groupe de disponibilité, consultez la section « Bases de données de disponibilité » dans [prérequis, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "48055633"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de l'Assistant Ajouter une base de données au groupe de disponibilité (SQL Server Management Studio)  

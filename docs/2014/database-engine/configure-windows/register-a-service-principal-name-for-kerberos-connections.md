@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5acd507be99d7ff36245e723d20aebc36f42a917
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62781994"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Inscrire un nom de principal du service pour les connexions Kerberos
   Pour utiliser l'authentification Kerberos avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , les deux conditions suivantes doivent être remplies :  
@@ -158,8 +158,8 @@ WHERE session_id = @@SPID;
   
 |Scénario|Méthode d'authentification|  
 |--------------|---------------------------|  
-|Le SPN est mappé au compte de domaine, au compte virtuel, au compte de service administré ou au compte intégré approprié. Par exemple, Système local ou SERVICE RÉSEAU.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte sous lequel s'exécute le service SQL Server.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
-|Le SPN est le compte de domaine, le compte virtuel, le compte de service administré ou le compte intégré approprié.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte sous lequel s'exécute le service SQL Server.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
+|Le SPN est mappé au compte de domaine, au compte virtuel, au compte de service administré ou au compte intégré approprié. Par exemple, Système local ou SERVICE RÉSEAU.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte que le service SQL Server s’exécute sous.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
+|Le SPN est le compte de domaine, le compte virtuel, le compte de service administré ou le compte intégré approprié.<br /><br /> Remarque : Correct signifie que le compte mappé par le SPN inscrit est le compte que le service SQL Server s’exécute sous.|Les connexions locales utilisent NTLM, les connexions distantes utilisent Kerberos.|  
 |Le SPN est mappé à un compte de domaine, un compte virtuel, un compte de service administré ou un compte intégré erroné.|L'authentification échoue.|  
 |La recherche du SPN échoue ou ne mappe pas à un compte de domaine, un compte virtuel, un compte de service administré ou un compte intégré correct, ou n'est pas un compte de domaine, un compte virtuel, un compte de service administré ou un compte intégré correct.|Les connexions locales et distantes utilisent NTLM.|  
   

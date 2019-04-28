@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e52a160dd72e541e51a57a002919aa2cc251e7e6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731511"
 ---
 # <a name="find-node-dialog-box-mining-model-viewer"></a>Boîte de dialogue Rechercher un nœud (Visionneuse de modèle d'exploration de données)
   Utilisez la boîte de dialogue **Rechercher un nœud** , disponible sous l'onglet **Réseau de dépendances** d'un modèle, pour rechercher un nœud spécifique. Cette fonctionnalité est utile dans les schémas complexes qui contiennent un grand nombre de nœuds ou de jeux d'éléments.  
@@ -36,7 +36,7 @@ ms.locfileid: "48218534"
  Sélectionnez un nœud dans la liste, puis cliquez sur **OK**. La boîte de dialogue se ferme et le nœud sélectionné est mis en surbrillance dans la visionneuse.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)   
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   

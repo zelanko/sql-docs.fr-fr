@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 728643793aa43eb76e5a94a5d35e5e06acec5c6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680642"
 ---
 # <a name="completing-the-wizard-data-source-view-wizard-analysis-services"></a>Fin de l'Assistant (Assistant Vue de source de données) (Analysis Services)
   Utilisez la page **Fin de l'Assistant** de l'Assistant pour définir le nom de la vue de source de données et vérifier les tables et les vues incluses dans la vue. Après avoir cliqué sur **Terminer**, vous pouvez utiliser le Concepteur de vue de source de données pour modifier les propriétés de la vue dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Pour plus d’informations sur le Concepteur de vue de source de données, consultez [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  

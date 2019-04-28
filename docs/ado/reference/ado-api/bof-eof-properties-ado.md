@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 72954cb199976f05eacd7c79ba0e89cab0a45bbc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62821440"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF, propriétés (ADO)
 -   **BOF** indique que la position actuelle est avant le premier enregistrement dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objet.  
@@ -62,9 +62,9 @@ ms.locfileid: "47748117"
 ||BOF|EOF|  
 |------|---------|---------|  
 |**MoveFirst**, **MoveLast**|La valeur **True**|La valeur **True**|  
-|**Déplacer** 0|Aucun changement|Aucun changement|  
-|**MovePrevious**, **déplacer** < 0|La valeur **True**|Aucun changement|  
-|**MoveNext**, **déplacer** > 0|Aucun changement|La valeur **True**|  
+|**Move** 0|Aucune modification|Aucune modification|  
+|**MovePrevious**, **déplacer** < 0|La valeur **True**|Aucune modification|  
+|**MoveNext**, **déplacer** > 0|Aucune modification|La valeur **True**|  
   
 ## <a name="applies-to"></a>S'applique à  
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48104949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789010"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Page Résultats (assistants de groupe de disponibilité AlwaysOn)
   Cette rubrique d'aide décrit les options de la page **Résultats** . Cette rubrique s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], à l' [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]et à l' [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez cette page pour afficher les résultats de l'Assistant.  
@@ -34,7 +34,7 @@ ms.locfileid: "48104949"
  **Result**  
  Pour chaque étape terminée, affiche l'un des textes de lien hypertexte suivants.  
   
-|Résultats|Description|  
+|Résultat|Description|  
 |------------|-----------------|  
 |**Erreur**|Indique que l'étape de validation a échoué. Cliquez sur le lien pour afficher le message d'erreur.|  
 |**Réussi**|Indique que l'étape de validation s'est terminée avec succès.|  

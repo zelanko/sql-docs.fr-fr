@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 951ff99f6c1e234a0c2861b12ae8f54815f1e37e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792602"
 ---
 # <a name="access-data-for-the-dqs-operations"></a>Accéder aux données pour les opérations DQS
   Pour utiliser vos données sources pour les opérations [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS), et exporter vos données traitées, vous pouvez effectuer l'une des opérations suivantes :  
@@ -40,13 +40,13 @@ ms.locfileid: "56019920"
   
 4.  Dans la boîte de dialogue **Propriétés de la connexion** , cliquez sur la page de **Mappage de l'utilisateur** dans le volet gauche.  
   
-5.  Dans le volet droit, sélectionnez la case à cocher sous la **carte** colonne pour le **DQS_STAGING_DATA** de base de données, puis sélectionnez les rôles suivants dans le **appartenance au rôle de la base de données : DQS_STAGING_DATA** volet :  
+5.  Dans le volet droit, cochez la case sous la colonne **Mapper** de la base de données **DQS_STAGING_DATA**, puis sélectionnez les rôles suivants dans le volet **Appartenance au rôle de base de données : DQS_STAGING_DATA** :  
   
-    -   **db_datareader**: Lire les données à partir de tables/vues.  
+    -   **db_datareader** : lit les données des tables/vues.  
   
-    -   **db_datawriter**: Ajouter, supprimer ou modifier des données dans les tables.  
+    -   **db_datawriter** : ajoute, supprime ou modifie les données dans les tables.  
   
-    -   **db_ddladmin**: Créer, modifier ou supprimer des tables/vues.  
+    -   **db_ddladmin**: crée, modifie ou supprime des tables/vues.  
   
 6.  Dans la boîte de dialogue **Propriétés de la connexion** , cliquez sur **OK** pour appliquer les modifications.  
   

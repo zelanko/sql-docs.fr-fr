@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c725218ac66be169d59f2b32f42e156361b13a51
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62831919"
 ---
 # <a name="create-a-deployment-utility"></a>Créer un utilitaire de déploiement
   La première étape de déploiement des packages consiste à créer un utilitaire de déploiement pour un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. L'utilitaire de déploiement est un dossier qui contient les fichiers dont vous avez besoin pour déployer les packages dans un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur un serveur différent. L'utilitaire de déploiement est créé sur l'ordinateur sur lequel le projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] est stocké.  

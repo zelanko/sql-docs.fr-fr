@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56014160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678450"
 ---
-# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Leçon 1 : Création d’une série chronologique de modèle d’exploration de données et la Structure d’exploration de données
+# <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Leçon 1 : Création d’une structure d’exploration de données et de modèle d’exploration de données de série chronologique
   Dans cette leçon, vous allez créer un modèle d'exploration de données qui vous permet de prédire des valeurs dans le temps à partir de données historiques. Lorsque vous créez le modèle, la structure sous-jacente est générée automatiquement et peut servir de base pour les modèles d'exploration de données supplémentaires.  
   
  Cette leçon suppose que vous connaissez les modèles de prévision et les spécifications de l'algorithme MTS (Microsoft Time Series). Pour plus d’informations, consultez [Algorithme MTS (Microsoft Time Series)](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md).  

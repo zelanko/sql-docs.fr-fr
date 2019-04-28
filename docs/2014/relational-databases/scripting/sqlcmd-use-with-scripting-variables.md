@@ -20,11 +20,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 85c701c583705a2d2c0e7438832a5074e60c337a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48113779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666776"
 ---
 # <a name="use-sqlcmd-with-scripting-variables"></a>Utiliser sqlcmd avec des variables de script
   Les variables utilisées dans les scripts sont appelées des variables de script. Ces variables permettent à un script d'être utilisé dans plusieurs scénarios. Par exemple, pour exécuter un script sur plusieurs serveurs, vous pouvez utiliser une variable de script pour le nom du serveur au lieu de modifier le script pour chaque serveur. La modification du nom de serveur fourni à la variable de script permet d'exécuter le même script sur différents serveurs.  
@@ -103,7 +103,7 @@ ms.locfileid: "48113779"
 ## <a name="sqlcmd-scripting-variables"></a>Variables de script sqlcmd  
  Les variables définies par **sqlcmd** sont reconnues comme des variables de script. Le tableau suivant répertorie les variables de script **sqlcmd** .  
   
-|Variable|Option connexe|R/W (Lecture/écriture)|Valeur par défaut|  
+|Variable|Option connexe|R/W (Lecture/écriture)|Par défaut|  
 |--------------|--------------------|----------|-------------|  
 |SQLCMDUSER*|-U|R|""|  
 |SQLCMDPASSWORD*|-P|--|""|  
@@ -111,7 +111,7 @@ ms.locfileid: "48113779"
 |SQLCMDWORKSTATION|-H|R|"ComputerName"|  
 |SQLCMDDBNAME|-d|R|""|  
 |SQLCMDLOGINTIMEOUT|-l|R/W (Lecture/écriture)|"8" (secondes)|  
-|SQLCMDSTATTIMEOUT|-t|R/W (Lecture/écriture)|"0" = Attendre indéfiniment|  
+|SQLCMDSTATTIMEOUT|-T|R/W (Lecture/écriture)|"0" = Attendre indéfiniment|  
 |SQLCMDHEADERS|-H|R/W (Lecture/écriture)|"0"|  
 |SQLCMDCOLSEP|-S|R/W (Lecture/écriture)|« »|  
 |SQLCMDCOLWIDTH|-w|R/W (Lecture/écriture)|"0"|  

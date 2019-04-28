@@ -10,11 +10,11 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678549"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacité de stockage et de traitement d’Analytique Platform System
 Besoins de votre entreprise déterminent le nombre d’unités d’échelle de données et la taille des disques de nœud de calcul dont vous avez besoin dans votre appliance Analytique Platform System (APS). Utilisez ces calculs de traitement et de stockage pour guider votre capacité d’achat et planification des décisions.  

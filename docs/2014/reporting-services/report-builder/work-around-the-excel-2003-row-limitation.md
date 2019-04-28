@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d78406155e9d2fb808664ce1377d0aba9d52dc84
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698023"
 ---
 # <a name="work-around-the-excel-row-limitation"></a>Contournement de la limite d'Excel
   Cette rubrique explique comment contourner la limitation de ligne d'Excel 2003 lorsque vous exportez des rapports vers Excel. Elle s'applique à un rapport qui ne contient qu'une seule table.  

@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 392fcbf3a46b48b2032b5792321e9a22b3027341
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58375577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62832775"
 ---
 # <a name="azure-blob-upload-task"></a>Tâche de chargement d’objets blob Azure
   La tâche de chargement des objets Blob Azure permet à un package SSIS charger des fichiers vers un stockage blob Azure.   

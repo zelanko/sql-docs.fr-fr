@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 58df84bf96306a2cfbc0567a3d5f6cb13514a06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62861894"
 ---
 # <a name="prompting-the-user-for-connection-information"></a>Demande des informations de connexion à l’utilisateur
 Si l’application utilise **SQLConnect** et besoins pour inviter l’utilisateur les informations de connexion, telles que le nom d’utilisateur et mot de passe, elle doit le faire lui-même. Bien que cela permet à l’application contrôler son « apparence », cela peut obliger l’application devant contenir le code spécifique au pilote. Cela se produit lorsque l’application doit inviter l’utilisateur pour les informations de connexion spécifiques au pilote. Cela présente une situation impossible pour les applications génériques, qui sont conçus pour fonctionner avec tous les pilotes, y compris les pilotes qui n’existent pas lorsque l’application est écrite.  

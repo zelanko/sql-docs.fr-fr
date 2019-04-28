@@ -14,11 +14,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809031"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurer SQL Server pour utiliser soft-NUMA (SQL Server)
 Les processeurs modernes disposent de nombreux noyaux par socket. Chaque socket est généralement représenté sous forme de nœud NUMA unique. Le moteur de base de données SQL Server partitionne plusieurs structures internes et threads de service de partitionnement par nœud NUMA. Avec les processeurs contenant 10 ou plusieurs noyaux par socket, à l’aide de logiciels NUMA (soft-NUMA) pour fractionner les nœuds NUMA matériels généralement augmente l’évolutivité et performances.   

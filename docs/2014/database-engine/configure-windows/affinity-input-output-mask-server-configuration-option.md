@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 65e412a3dfdfc71931e6af4d449c5be88ae351b7
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813677"
 ---
 # <a name="affinity-input-output-mask-server-configuration-option"></a>affinity Input-Output mask (option de configuration de serveur)
   Pour exécuter des travaux multitâche, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 2000 et Windows Server 2003 transfèrent parfois des threads de processus entre différents processeurs. Bien qu’efficace du point de vue du système d’exploitation, cette activité peut réduire les performances de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sous des charges de système intenses, car des données sont rechargées de façon répétée dans chaque cache de processeur. L'affectation de processeurs à des threads spécifiques peut améliorer les performances sous ces conditions en éliminant les rechargements de processeur ; une telle association entre un thread et un processeur est qualifiée d'affinité de processeur.  

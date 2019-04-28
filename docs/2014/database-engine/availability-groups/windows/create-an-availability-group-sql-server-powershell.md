@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 824479a4fa58e171cee07a3187b85e5a1be94699
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62790668"
 ---
 # <a name="create-an-availability-group-sql-server-powershell"></a>Créer un groupe de disponibilité (SQL Server PowerShell)
   Cette rubrique explique comment utiliser des applets de commande PowerShell pour créer et configurer un groupe de disponibilité AlwaysOn à l'aide de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Un *groupe de disponibilité* définit un jeu de bases de données utilisateur qui basculent en tant qu'unité unique et un jeu de partenaires de basculement, appelés *réplicas de disponibilité*, qui prennent en charge le basculement.  
@@ -39,7 +39,7 @@ ms.locfileid: "53350301"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l’appartenance au rôle serveur fixe **sysadmin** et l’autorisation de serveur CREATE AVAILABILITY GROUP, l’autorisation ALTER ANY AVAILABILITY GROUP ou l’autorisation CONTROL SERVER.  
   
 ###  <a name="SummaryPSStatements"></a> Résumé des tâches et applets de commande PowerShell correspondantes  
@@ -47,7 +47,7 @@ ms.locfileid: "53350301"
   
 |Tâche|Applets de commande PowerShell (le cas échéant) ou instruction Transact-SQL|Où effectuer la tâche**<sup>*</sup>**|  
 |----------|--------------------------------------------------------------------|-------------------------------------------|  
-|Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.<br /><br /> Remarque : Pour modifier un point de terminaison de mise en miroir de bases de données existant, utilisez `Set-SqlHadrEndpoint`.|  
+|Créer le point de terminaison de mise en miroir de bases de données (une fois par instance [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] )|`New-SqlHadrEndPoint`|Exécutez sur chaque instance de serveur dans laquelle le point de terminaison de mise en miroir de bases de données est manquant.<br /><br /> Remarque : Pour modifier un point de terminaison de mise en miroir de base de données existante, utilisez `Set-SqlHadrEndpoint`.|  
 |Créer un groupe de disponibilité|En premier lieu, utilisez l'applet de commande `New-SqlAvailabilityReplica` avec le paramètre `-AsTemplate` pour créer un objet réplica de disponibilité en mémoire pour chacun des deux réplicas de disponibilité que vous envisagez d'inclure dans le groupe de disponibilité.<br /><br /> Puis, créez le groupe de disponibilité en utilisant l'applet de commande `New-SqlAvailabilityGroup` et en référençant vos objets réplica de disponibilité.|Exécutez sur l'instance de serveur qui hébergera le réplica principal initial.|  
 |Joindre le réplica secondaire au groupe de disponibilité|`Join-SqlAvailabilityGroup`|Exécutez sur chaque instance de serveur qui héberge un réplica secondaire.|  
 |Préparer la base de données secondaire|`Backup-SqlDatabase` et `Restore-SqlDatabase`|Créez des sauvegardes sur l'instance de serveur qui héberge le réplica principal.<br /><br /> Restaurez les sauvegardes sur chaque instance de serveur qui héberge un réplica secondaire, à l'aide du paramètre de restauration `NoRecovery`. Si les chemins d'accès de fichier diffèrent entre les ordinateurs qui hébergent le réplica principal et le réplica secondaire cible, utilisez également le paramètre de restauration `RelocateFile`.|  
@@ -88,7 +88,7 @@ ms.locfileid: "53350301"
 > [!NOTE]  
 >  Si les comptes de service [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des instances serveur s'exécutent sous des comptes utilisateur de domaine différents, sur chaque instance serveur, créez une connexion pour l'autre instance serveur et accordez l'autorisation CONNECT sur le point de terminaison de mise en miroir de bases de données local.  
   
-##  <a name="ExampleConfigureGroup"></a> Exemple : Utilisation de PowerShell pour créer un groupe de disponibilité  
+##  <a name="ExampleConfigureGroup"></a> Exemple : À l’aide de PowerShell pour créer un groupe de disponibilité  
  L'exemple PowerShell suivant crée et configure un groupe de disponibilité simple nommé `MyAG` avec deux réplicas de disponibilité et une base de données de disponibilité. L'exemple :  
   
 1.  Sauvegarde `MyDatabase` et son journal des transactions.  
@@ -229,7 +229,7 @@ Add-SqlAvailabilityDatabase -Path "SQLSERVER:\SQL\SecondaryComputer\Instance\Ava
   
 -   **Vidéos :**  
   
-     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Présentation de la Solution de haute disponibilité prochaine génération](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 1 : Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302) (vidéo de présentation de la solution haute disponibilité de la génération suivante)  
   
      [Microsoft SQL Server nom de code « Denali », série AlwaysOn, partie 2 : Création d’une Solution de haute disponibilité critique à l’aide d’AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   

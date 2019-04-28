@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 82c8ee7fcc998f8c8524cfe4d09474a707d0051a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730980"
 ---
 # <a name="general-mining-structure-dialog-box-analysis-services---data-mining"></a>Général (Boîte de dialogue Structure d'exploration de données) (Analysis Services – Exploration de données)
   Utilisez la page **Général** de la boîte de dialogue **Propriétés de structure d'exploration de données** dans **SQL Server Management Studio** pour définir les propriétés générales d'une structure d'exploration de données dans une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
@@ -32,7 +32,7 @@ ms.locfileid: "48099219"
 |**Description**|Affiche la description de la structure d'exploration de données.|  
 |**Créer un horodateur**|Affiche la date et l'heure de la création de la structure d'exploration de données.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées de la structure d'exploration de données.|  
-|**État**|Affiche l'état d'avancement de la structure d'exploration de données. Pour plus d’informations sur les valeurs de cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**État**|Affiche l'état d'avancement de la structure d'exploration de données. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Dernier traitement**|Affiche la date et l'heure du dernier traitement de la structure d'exploration de données.|  
   
 ## <a name="see-also"></a>Voir aussi  

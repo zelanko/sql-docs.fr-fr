@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aadcdb901c39af148b22640413b921aae288f016
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711731"
 ---
 # <a name="post-install-configuration-analysis-services"></a>Configuration consécutive à l'installation (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Après avoir installé Analysis Services, des tâches de configuration supplémentaires sont requises pour rendre le serveur complètement opérationnel et disponible en vue d'une utilisation générale. Cette section présente les autres tâches qui complètent l'installation. Selon les exigences en matière de connexion, vous devrez peut-être aussi configurer l’authentification (consultez [Se connecter à Analysis Services](../../analysis-services/instances/connect-to-analysis-services.md)).  
   
- Plus tard, des étapes supplémentaires devront être réalisées une fois que vous aurez des bases de données prêtes à déployer. Vous devrez notamment configurer les appartenances au rôle sur la base de données afin d'accorder à l'utilisateur l'accès aux données, concevoir une stratégie de sauvegarde et de restauration des bases de données et déterminer si vous avez besoin d'une charge de travail de traitement planifiée afin que les données soient actualisées à intervalles réguliers. Pour plus d'informations sur le déploiement et l'administration de base de données, consultez ces liens : [Bases de données Model multidimensionnelles](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) et [bases de données tabulaires](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
+ Plus tard, des étapes supplémentaires devront être réalisées une fois que vous aurez des bases de données prêtes à déployer. Vous devrez notamment configurer les appartenances au rôle sur la base de données afin d'accorder à l'utilisateur l'accès aux données, concevoir une stratégie de sauvegarde et de restauration des bases de données et déterminer si vous avez besoin d'une charge de travail de traitement planifiée afin que les données soient actualisées à intervalles réguliers. Vous trouverez plus d’informations sur le déploiement de la base de données et l’administration grâce à ces liens : [Bases de données Model multidimensionnelles](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md) et [bases de données tabulaires](../../analysis-services/tabular-models/tabular-model-databases-ssas-tabular.md).  
   
 ## <a name="instance-configuration"></a>Configuration de l'instance  
  Analysis Services est un service réplicable, ce qui signifie que vous pouvez installer plusieurs instances du service sur un seul serveur. Chaque instance supplémentaire est installée séparément en tant qu'instance nommée, à l'aide du programme d'installation de SQL Server, et configurée indépendamment afin de prendre en charge le rôle prévu. Par exemple, un serveur de développement peut exécuter Boîte noire ou utiliser les valeurs par défaut pour le stockage des données, valeurs que vous pouvez aussi modifier sur des serveurs acceptant les charges de production. Autre exemple justifiant la configuration du système : l'installation de l'instance Analysis Services sur du matériel partagé par d'autres services. Lorsque vous hébergez plusieurs applications grandes consommatrices de données sur le même matériel, vous pouvez configurer des propriétés de serveur qui abaissent les seuils de mémoire afin d'optimiser les ressources disponibles pour toutes les applications.  

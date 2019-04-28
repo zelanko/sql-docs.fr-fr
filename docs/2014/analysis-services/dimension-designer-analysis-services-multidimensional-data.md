@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fa14cea178d732332ab4729b1c653ef6d19cfab9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731783"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Concepteur de dimensions (Analysis Services - Données multidimensionnelles)
   Le Concepteur de dimensions dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] permet de parcourir les données que la dimension contient et de modifier diverses propriétés d'une dimension existante : attributs, hiérarchies, niveaux, relations d'attributs et traductions.  

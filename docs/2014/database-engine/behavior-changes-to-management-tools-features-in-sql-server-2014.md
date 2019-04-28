@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6319d9b1c5e091297e371c03949daf73e9551bd7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62787945"
 ---
 # <a name="behavior-changes-to-management-tools-features-in-sql-server-2014"></a>Modifications de comportement des fonctionnalités des outils d'administration dans SQL Server 2014
   Cette rubrique décrit les modifications de comportement des fonctionnalités des outils d’administration de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Les modifications de comportement affectent le mode de fonctionnement ou d'interaction des fonctionnalités dans [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] par rapport aux versions précédentes de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

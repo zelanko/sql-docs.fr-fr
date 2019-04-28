@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2aaef74d9e94446022b8c0585749a4eb0bf05cd2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732115"
 ---
 # <a name="define-dimension-intelligence-business-intelligence-wizard"></a>Définir l'intelligence des dimensions (Assistant Business Intelligence)
   Utilisez la page **Définir l'intelligence des dimensions** pour mapper les attributs de dimensions existant aux types d'attributs pour le type de dimension spécifié.  
@@ -30,7 +30,7 @@ ms.locfileid: "48194248"
  **Attributs de dimension**  
  Affiche les types d'attributs disponibles pour le type de dimension spécifié et vous permet de spécifier les attributs de dimension à appliquer aux types d'attributs.  
   
- **inclure**  
+ **Include**  
  Sélectionnez cette option pour inclure le type d'attribut correspondant dans la dimension.  
   
  **Type d’attribut**  
@@ -40,7 +40,7 @@ ms.locfileid: "48194248"
  Sélectionnez l'attribut de dimension existant auquel mapper le type d'attribut correspondant.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
+ [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)  
   

@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 135541d4474ab68fc8bdbc294663c8d9bcbc7c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715022"
 ---
 # <a name="spatial-data-types-overview"></a>Présentation des types de données spatiales
   Il existe deux types de données spatiales. Le type de données `geometry` prend en charge les données planaires, ou euclidiennes (monde en deux dimensions). Le type de données `geometry` se conforme à la fois à la spécification Open Geospatial Consortium (OGC) Simple Features for SQL version 1.1.0. et à la norme SQL MM (norme ISO).  
@@ -192,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');  
 ```  
   
- Les instances `CompoundCurve` autorisent à la fois les composants `LineString` et  `CircularString` afin que seuls deux points des segments de ligne du graphique en secteurs soient requis.  Cet exemple de code indique comment utiliser un `CompoundCurve` pour stocker la même figure :  
+ `CompoundCurve` les instances permettent à la fois `LineString` et `CircularString` composants afin que seuls deux points des segments de ligne du secteur doivent être connus.  Cet exemple de code indique comment utiliser un `CompoundCurve` pour stocker la même figure :  
   
 ```sql  
 DECLARE @g geometry;  

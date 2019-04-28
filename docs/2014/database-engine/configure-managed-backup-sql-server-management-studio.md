@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8c9664baa2803bbab4282b6897d49f0ddb1831
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62812706"
 ---
 # <a name="configure-managed-backup-sql-server-management-studio"></a>Configuration de la sauvegarde managée (SQL Server Management Studio)
   Le **sauvegarde managée** boîte de dialogue permet de configurer [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] valeurs par défaut pour l’instance. Cette rubrique explique comment utiliser cette boîte de dialogue pour configurer les paramètres [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] par défaut de l'instance et les options à prendre en compte. Lorsque [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] est configuré pour l'instance, les paramètres sont appliqués aux nouvelles bases de données créées par la suite.  
@@ -51,7 +51,7 @@ ms.locfileid: "52523633"
   
  L'appartenance au rôle de base de données `db_backupoperator`, avec autorisations `ALTER ANY CREDENTIAL` et autorisations `EXECUTE` sur la procédure stockée `sp_delete_backuphistory`.  
   
- Autorisations `SELECT` sur la fonction `smart_admin.fn_get_current_xevent_settings`.  
+ `SELECT` autorisations sur le `smart_admin.fn_get_current_xevent_settings` (fonction).  
   
  `EXECUTE` autorisations sur le `smart_admin.sp_get_backup_diagnostics` procédure stockée. En outre, nécessite les autorisations `VIEW SERVER STATE`, car elle appelle en interne d'autres objets système qui nécessitent cette autorisation.  
   

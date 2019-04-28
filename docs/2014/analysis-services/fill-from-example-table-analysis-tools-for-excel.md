@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f5ca47ac10549a727f284eb412ba2b35127a518
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160899"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731582"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Remplir à partir de l'exemple (Outils d'analyse de table pour Excel)
   ![Bouton remplir à partir de l’exemple dans la Table Analysis Tools](media/tat-fillex.gif "bouton remplir à partir de l’exemple dans les outils d’analyse de Table")  
@@ -50,7 +50,7 @@ ms.locfileid: "48160899"
   
      L'outil ajoute également automatiquement une colonne contenant les nouvelles valeurs à la table de données d'origine. Vous pouvez examiner les valeurs et les comparer à celles d'origine.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Vous ne pouvez utiliser que des données de colonnes. Si la série que vous souhaitez remplir est stockée dans une ligne, vous pouvez utiliser la fonction de collage, transposition d'Excel pour mettre les données sous forme de colonne.  
   
 ## <a name="understanding-the-pattern-report"></a>Présentation du rapport de séquence  
@@ -60,9 +60,9 @@ ms.locfileid: "48160899"
   
  Par exemple, si vous essayez de remplir une feuille de calcul indiquant la distance de transport des marchandises commandées, vous pouvez vous attendre en toute logique à ce que la destination ait un fort impact sur cette valeur de distance. Dans ce cas, la requête peut contenir la ligne suivante :  
   
-|colonne|Valeur|Privilèges|Impact relatif|  
+|colonne|Value|Privilèges|Impact relatif|  
 |------------|-----------|------------|---------------------|  
-|StateProvinceCode|AB|>500 kilomètres|80 %|  
+|StateProvinceCode|AB|> 500 kilomètres|80 %|  
   
  Cela signifie que la valeur AB figurant dans le **StateProvinceCode** colonne prédit une distance de transport > 500 kilomètres.  
   

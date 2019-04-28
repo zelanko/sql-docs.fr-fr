@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 01060e5161071a06a0fb2c269af5f5a3e14c31b6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48178479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795296"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Supprimer une colonne (SSAS Tabulaire)
   Cette rubrique explique comment supprimer une colonne d'une table de modèle tabulaire.  
@@ -39,7 +39,7 @@ ms.locfileid: "48178479"
 3.  Dans la boîte de dialogue **Modifier les propriétés de la table** , dans la fenêtre d’aperçu de la table, décochez la colonne à supprimer, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Ajouter des colonnes à une Table &#40;SSAS tabulaire&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Partitions &#40;SSAS tabulaire&#41;](partitions-ssas-tabular.md)  
+ [Ajouter des colonnes à une table &#40;SSAS Tabulaire&#41;](add-columns-to-a-table-ssas-tabular.md)   
+ [Partitions &#40;SSAS Tabulaire&#41;](partitions-ssas-tabular.md)  
   
   

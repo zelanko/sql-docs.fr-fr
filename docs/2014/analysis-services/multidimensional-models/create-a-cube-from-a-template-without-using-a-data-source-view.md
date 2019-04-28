@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0125550f8ec4a3fa290ea29df3d33cc3bebe3c7e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700323"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Créer un cube a partir d'un modèle sans utiliser de vue de source de données
   Sélectionnez **Construire le cube sans utiliser de source de données** dans la première page de l’Assistant Cube pour créer un cube sans utiliser de vue de source de données. Vous pouvez par la suite utiliser l’Assistant Génération de schéma pour générer le schéma relationnel pour la vue de source de données basée sur la structure du cube et éventuellement d’autres objets [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Pour plus d’informations sur la génération d’un schéma, consultez [Assistant Génération de schéma &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md).  

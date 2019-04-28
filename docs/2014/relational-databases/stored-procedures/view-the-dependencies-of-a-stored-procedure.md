@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48224419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856499"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Afficher les dépendances d'une procédure stockée
     
@@ -27,13 +27,13 @@ ms.locfileid: "48224419"
   
 -   **Avant de commencer :**  [Sécurité](#Security)  
   
--   **Pour afficher les dépendances d’une procédure, avec :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **Pour afficher les dépendances d’une procédure, à l’aide de :**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Fonction système : `sys.dm_sql_referencing_entities`  
  Requiert l'autorisation CONTROL sur l'entité référencée et l'autorisation SELECT sur sys.dm_sql_referencing_entities. Lorsque l'entité référencée est une fonction de partition, l'autorisation CONTROL sur la base de données est requise. Par défaut, l'autorisation SELECT est accordée à public.  
   

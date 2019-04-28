@@ -12,23 +12,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 696b4e9402e58da6308e6746cadbc25d43396d8f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729315"
 ---
 # <a name="lesson-2-add-data"></a>Leçon 2 : Ajouter des données
   Dans cette leçon, vous allez utiliser l'Assistant Importation de table dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour vous connecter à la base de données SQL AdventureWorksDW, sélectionner des données, afficher un aperçu et filtrer les données, puis les importer dans votre espace de travail de modèle.  
   
- À l'aide de l'Assistant Importation de Table, vous pouvez importer des données provenant de diverses sources relationnelles : Access, SQL, Oracle, Sybase, Informix, DB2, Teradata et bien plus encore. Les étapes d'importation de données à partir des différentes sources relationnelles sont très semblables à celles qui suivent. En outre, les données peuvent être sélectionnées à l'aide d'une procédure stockée.  
+ À l’aide de l’Assistant Importation de Table, vous pouvez importer des données à partir de diverses sources relationnelles : Access, SQL, Oracle, Sybase, Informix, DB2, Teradata et bien plus encore. Les étapes d'importation de données à partir des différentes sources relationnelles sont très semblables à celles qui suivent. En outre, les données peuvent être sélectionnées à l'aide d'une procédure stockée.  
   
  Pour en savoir plus sur l’importation de données et les différents types de sources de données que vous pouvez importer, consultez [Sources de données &#40;SSAS Tabulaire&#41;](data-sources-ssas-tabular.md).  
   
  Durée estimée pour effectuer cette leçon : **20 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Créer une connexion  
   
@@ -165,6 +165,6 @@ ms.locfileid: "52416350"
 -   Dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], cliquez sur le menu **Fichier** , puis cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 3 : Renommer des colonnes](rename-columns.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 3 : Renommer des colonnes](rename-columns.md).  
   
   

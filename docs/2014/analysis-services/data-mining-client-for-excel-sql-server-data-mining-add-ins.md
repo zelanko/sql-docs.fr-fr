@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e61ae53ee78574351545109f75cebd88827c404b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48063555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692028"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Client d'exploration de données pour Excel (Compléments d'exploration de données SQL Server)
   Le client d'exploration de données pour Excel est un ensemble d'outils qui vous permettent d'effectuer des tâches courantes d'exploration de données, allant du nettoyage des données à la génération de modèle et de requêtes de prédiction. Utilisez les données dans des tableaux ou des plages Excel, ou accédez à des sources de données externes.  
@@ -77,12 +77,12 @@ ms.locfileid: "48063555"
  [Assistant classification &#40;les données des compléments d’exploration de données pour Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
  Le **classifier** Assistant vous aide à créer un modèle de classification basé sur des données existantes dans un tableau Excel, une plage Excel ou une source de données externe. Un modèle de classification extrait des séquences de vos données qui indiquent des similarités et vous aide à faire des prédictions basées sur des groupements de valeurs. Par exemple, un modèle de classification peut être utilisé pour prédire un risque en fonction des caractéristiques des revenus ou des dépenses.  
   
- Le **classifier** Assistant prend en charge l’utilisation de ces algorithmes d’exploration de données de Microsoft : algorithme d’arbres de décision, régression logistique, Naïve Bayes, réseaux neuronaux.  
+ Le **classifier** Assistant prend en charge l’utilisation de ces algorithmes d’exploration de données de Microsoft : Algorithme d’arbres, régression logistique, Naïve Bayes, réseaux neuronaux de décision.  
   
  [Assistant estimation &#40;les données des compléments d’exploration de données pour Excel&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)  
  Le **estimation** Assistant vous permet de créer un modèle d’estimation. Un modèle d'estimation extrait les séquences de données remarquables et les utilise pour prédire des valeurs de type numérique, telles que devise, montant des ventes, date ou heure.  
   
- Le **estimation** Assistant utilise ces algorithmes d’exploration de données de Microsoft : arbres de décision, régression linéaire, régression logistique et réseaux neuronaux.  
+ Le **estimation** Assistant utilise ces algorithmes d’exploration de données de Microsoft : Arbres de décision, régression linéaire, régression logistique et réseaux neuronaux.  
   
  [Analyser les facteurs d’influence clés &#40;outils d’analyse de Table pour Excel&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
  L'Assistant Cluster vous permet de créer un modèle de clustering. Un modèle de clustering détecte les groupes de lignes qui partagent des caractéristiques communes. Cet Assistant permet d'explorer des séquences dans tous les types de données.  

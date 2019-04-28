@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6300606195ea435a0290d828109b821d0d6702c
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730222"
 ---
 # <a name="languages-and-collations-analysis-services"></a>Langues et classements (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] prend en charge les langues et les classements fournis par les systèmes d'exploitation [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. Les propriétés `Language` et `Collation` sont initialement définies au niveau de l'instance pendant l'installation, mais peuvent être modifiées ultérieurement à différents niveaux de la hiérarchie d'objets.  

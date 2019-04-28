@@ -1,5 +1,5 @@
 ---
-title: 'Page spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica) | Microsoft Docs'
+title: 'Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53371571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788340"
 ---
-# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica)
+# <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Page Spécifier les réplicas (Assistant Nouveau groupe de disponibilité : Assistant Ajouter un réplica)
   Cette rubrique décrit les options de la page **Spécifier les réplicas** . Cette page s'applique à l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] et à l' [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilisez la page **Spécifier les réplicas** pour spécifier et configurer un ou plusieurs réplicas de disponibilité afin d'ajouter le groupe de disponibilité. Cette page contient quatre onglets, qui sont présentés dans le tableau suivant. Cliquez sur le nom d'un onglet du tableau pour atteindre la section correspondante, plus loin dans cette rubrique.  
   
 |Onglet|Brève description|  
@@ -29,7 +29,7 @@ ms.locfileid: "53371571"
 |[Réplicas](#ReplicasTab)|Cet onglet vous permet de spécifier chaque instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergera ou héberge actuellement un réplica secondaire. Notez que l'instance de serveur à laquelle vous êtes actuellement connecté doit héberger le réplica principal.<br /><br /> Conseil : Terminez la spécification de tous les réplicas sur l’onglet **Réplicas** avant de passer aux autres onglets.|  
 |[Points de terminaison](#EndpointsTab)|Utilisez cet onglet pour vérifier tous les points de terminaison de mise en miroir de bases de données existants et également, si ce point de terminaison manque sur une instance de serveur dont les comptes de service utilisent l'authentification Windows, pour créer le point de terminaison automatiquement.|  
 |[Préférences de sauvegarde](#BackupPreferencesTab)|Utilisez cet onglet pour spécifier vos préférences de sauvegarde pour le groupe de disponibilité dans son ensemble, ainsi que les priorités de sauvegarde pour les différents réplicas de disponibilité.|  
-|[Port d'écoute](#Listener)|Utilisez cet onglet, s'il est disponible, pour créer un écouteur de groupe de disponibilité. Par défaut, aucun écouteur n'est créé.<br /><br /> Remarque : Cet onglet est disponible uniquement si vous exécutez l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
+|[Port d'écoute](#Listener)|Utilisez cet onglet, s'il est disponible, pour créer un écouteur de groupe de disponibilité. Par défaut, aucun écouteur n'est créé.<br /><br /> Remarque : Cet onglet est disponible uniquement si vous exécutez l' [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)].|  
   
 ##  <a name="ReplicasTab"></a> Onglet Réplicas  
  **Instance de serveur**  
@@ -38,7 +38,7 @@ ms.locfileid: "53371571"
  Si une instance de serveur que vous utilisez pour héberger un réplica secondaire n'est pas répertoriée par la grille **Réplicas de disponibilité** , cliquez sur le bouton **Ajouter un réplica** . Si vous configurez un groupe de disponibilité dans un environnement hybride (consultez [Haute disponibilité et récupération d’urgence pour SQL Server dans des machines virtuelles Microsoft Azure](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)), cliquez sur le bouton **Ajouter un réplica Azure** pour créer des machines virtuelles avec des réplicas secondaires dans Microsoft Azure.  
   
  **Rôle initial**  
- Indique le rôle que le nouveau réplica jouera initialement : **Principal** ou **secondaire**.  
+ Indique le rôle que le nouveau réplica jouera initialement : **Principal** ou **Secondaire**.  
   
  **Basculement automatique (jusqu'à 2)**  
  Activez cette case à cocher uniquement si vous souhaitez que ce réplica de disponibilité soit un partenaire de basculement automatique. Pour configurer le basculement automatique, vous devez choisir cette option pour le réplica principal initial et pour un réplica secondaire. Les deux réplicas utilisent le mode de disponibilité avec validation synchrone. Seuls deux réplicas peuvent prendre en charge le basculement automatique.  
@@ -122,7 +122,7 @@ ms.locfileid: "53371571"
  Spécifie que vous préférez que les travaux de sauvegarde ignorent le rôle des réplicas de disponibilité lorsque vous choisissez le réplica pour effectuer les sauvegardes. Notez que les travaux de sauvegarde peuvent évaluer d'autres facteurs tels que la priorité de sauvegarde de chaque réplica de disponibilité en association avec son état opérationnel et son état connecté.  
   
 > [!IMPORTANT]  
->  Il n'y a aucune contrainte du paramètre de préférence de sauvegarde. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Pour plus d’informations, consultez [secondaires actifs : Sauvegarde sur les réplicas secondaires (groupes de disponibilité AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+>  Il n'y a aucune contrainte du paramètre de préférence de sauvegarde. La traduction de cette préférence dépend de la logique, le cas échéant, que vous avez écrite dans les travaux de sauvegarde pour les bases de données dans un groupe de disponibilité donné. Pour plus d’informations, consultez [Secondaires actifs : Sauvegarde sur les réplicas secondaires (groupes de disponibilité AlwaysOn)](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 ### <a name="replica-backup-priorities-grid"></a>Grille des priorités de sauvegarde de réplica  
  Utilisez la grille **Priorités de sauvegarde de réplica** pour spécifier les priorités de sauvegarde pour chacun des réplicas du groupe de disponibilité. Cette grille comporte les colonnes suivantes :  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8355c828cdc3479b108a693b07b3dfb5a92a289
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48140359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793224"
 ---
 # <a name="what-if-scenario-table-analysis-tools-for-excel"></a>Scénario (Outils d'analyse de table pour Excel)
   ![Bouton scénarios des outils d’analyse de Table de](media/tat-whatif.gif "bouton scénario quelles dans Outils d’analyse de Table")  
@@ -49,7 +49,7 @@ ms.locfileid: "48140359"
   
 8.  Si vous sélectionnez **table entière**, l’outil affiche un message d’état dans la boîte de dialogue et ajoute deux nouvelles colonnes à la table de données d’origine. Cliquez sur **fermer** pour afficher les résultats complets dans la feuille de calcul.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Cet outil utilise l'algorithme MLR (Microsoft Logistic Regression), qui prend en charge la prédiction de valeurs numériques ou discrètes. Cependant, nous suggérons les meilleures pratiques suivantes pour maximiser les résultats :  
   
 -   Sélectionnez les colonnes contenant des informations utiles à l'analyse.  
@@ -84,7 +84,7 @@ ms.locfileid: "48140359"
   
  **'Achats vélo' = yes**  
   
- **Niveau de confiance : répartition de charge**  
+ **Niveau de confiance : Répartition de charge**  
   
  Ce résultat étant basé sur une ligne existante de la table de données, cela signifie qu'il y a un client spécifique qui, si tous les facteurs restaient les mêmes sauf son âge qui augmenterait à 25 ans, serait susceptible d'acheter un vélo.  
   

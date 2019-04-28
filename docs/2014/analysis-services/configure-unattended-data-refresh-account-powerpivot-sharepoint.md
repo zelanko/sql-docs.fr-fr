@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51cc5f71c3a3e7515238aef08e97316e549c0e70
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53366592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680556"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Configurer le compte d'actualisation des données PowerPivot sans assistance (PowerPivot pour SharePoint)
   Le compte d'actualisation des données PowerPivot sans assistance est un compte désigné pour l'exécution de travaux d'actualisation des données PowerPivot dans une batterie de serveurs SharePoint. En configurant, vous activez le **utilisation de l’actualisation des données configuré par l’administrateur de compte** option dans une page de planification d’actualisation des données (voir ci-dessous). Les auteurs de classeurs qui planifient l'actualisation des données peuvent choisir cette option s'ils souhaitent utiliser le compte d'actualisation des données PowerPivot sans assistance pour exécuter un travail d'actualisation des données. Pour plus d’informations sur comment afficher les options d’informations d’identification dans une planification d’actualisation des données, consultez [planifier une actualisation des données &#40;PowerPivot pour SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
@@ -35,13 +35,13 @@ ms.locfileid: "53366592"
   
  [Étape 1 : Créer une application cible et définir les informations d’identification](#bkmk_create)  
   
- [Étape 2 : Spécifiez le compte sans assistance dans les pages de configuration de serveur PowerPivot](#bkmk_specifyUA)  
+ [Étape 2 : Spécifiez le compte sans assistance dans les pages de configuration de serveur PowerPivot](#bkmk_specifyUA)  
   
- [Étape 3 : Grant apporte les autorisations au compte](#bkmk_grant)  
+ [Étape 3 : Grant apporte les autorisations au compte](#bkmk_grant)  
   
- [Étape 4 : Accorder des autorisations pour accéder aux sources de données externes utilisées dans l’actualisation des données de lecture](#bkmk_dbread)  
+ [Étape 4 : Accorder des autorisations pour accéder aux sources de données externes utilisées dans l’actualisation des données de lecture](#bkmk_dbread)  
   
- [Étape 5 : Vérifier la disponibilité du compte dans les pages de configuration de l’actualisation de données](#bkmk_verify)  
+ [Étape 5 : Vérifier la disponibilité du compte dans les pages de configuration de l’actualisation de données](#bkmk_verify)  
   
  [À l’aide de l’actualisation des données sans assistance PowerPivot compte](#bkmk_use)  
   
@@ -123,7 +123,7 @@ ms.locfileid: "53366592"
   
 6.  Cliquez sur **OK**.  
   
-###  <a name="bkmk_grant"></a> Étape 3 : Grant apporte les autorisations au compte  
+###  <a name="bkmk_grant"></a> Étape 3 : Grant apporte les autorisations au compte  
  Avant de pouvoir utiliser le compte d'actualisation des données PowerPivot sans assistance, il faut attribuer des autorisations Collaboration sur tous les classeurs PowerPivot pour lequel il est utilisé. Ce niveau d'autorisation est nécessaire pour ouvrir le classeur d'une bibliothèque, puis l'enregistrer à nouveau dans la bibliothèque une fois les données actualisées.  
   
  L'affectation d'autorisations est une procédure effectuée par l'administrateur de collection de sites. Les autorisations SharePoint peuvent être affectées à la collection de sites racine ou à n'importe quel niveau inférieur, notamment aux documents individuels et aux éléments. La manière dont vous définissez les autorisations dépendra du degré de granularité que vous souhaitez. Les étapes suivantes vous montrent une méthode d'affectation des autorisations.  
@@ -187,7 +187,7 @@ ms.locfileid: "53366592"
   
 8.  Cliquez sur **OK**.  
   
- Si vous modifiez non seulement le mot de passe, mais également le nom d'utilisateur de compte, vous devrez très probablement effectuer des étapes de configuration supplémentaires, telles qu'accorder des autorisations de lecture pour accéder aux sources de données externes et des autorisations SharePoint pour mettre à jour le classeur PowerPivot. Pour obtenir des instructions, accédez à cette étape de configuration de compte l’actualisation des données sans assistance PowerPivot : [Étape 3 : Grant apporte les autorisations au compte](#bkmk_grant), puis poursuivez les étapes restantes, et terminez en vérifiant que le compte est configuré correctement.  
+ Si vous modifiez non seulement le mot de passe, mais également le nom d'utilisateur de compte, vous devrez très probablement effectuer des étapes de configuration supplémentaires, telles qu'accorder des autorisations de lecture pour accéder aux sources de données externes et des autorisations SharePoint pour mettre à jour le classeur PowerPivot. Pour obtenir des instructions, accédez à cette étape de configuration de compte l’actualisation des données sans assistance PowerPivot : [Étape 3 : Grant apporte les autorisations au compte](#bkmk_grant), puis poursuivez les étapes restantes, et terminez en vérifiant que le compte est configuré correctement.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Actualisation des données PowerPivot avec SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md)   

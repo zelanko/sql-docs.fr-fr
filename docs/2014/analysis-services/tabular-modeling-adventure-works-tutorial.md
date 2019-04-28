@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2693bd51da682e9af0133c8400f2cfeacd2737ca
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795514"
 ---
 # <a name="tabular-modeling-adventure-works-tutorial"></a>Modélisation tabulaire (didacticiel Adventure Works)
   Ce didacticiel inclut des leçons sur la création d’un modèle tabulaire [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services, à l’aide de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -68,14 +68,14 @@ ms.locfileid: "53373681"
   
 |Leçon|Durée estimée|  
 |------------|--------------------------------|  
-|[Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md)|10 minutes|  
+|[Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md)|10 minutes|  
 |[Leçon 2 : Ajouter des données](lesson-2-add-data.md)|20 minutes|  
-|[Leçon 3 : Renommer des colonnes](rename-columns.md)|20 minutes|  
-|[Leçon 4 : Marquer comme Table de dates](lesson-3-mark-as-date-table.md)|3 minutes|  
-|[Leçon 5 : Créer des relations](lesson-4-create-relationships.md)|10 minutes|  
-|[Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md)|15 minutes|  
-|[Leçon 7 : Créer des mesures](lesson-6-create-measures.md)|30 minutes|  
-|[Leçon 8 : Créer des indicateurs de Performance clés](lesson-7-create-key-performance-indicators.md)|15 minutes|  
+|[Leçon 3 : Renommer des colonnes](rename-columns.md)|20 minutes|  
+|[Leçon 4 : Marquer comme Table de dates](lesson-3-mark-as-date-table.md)|3 minutes|  
+|[Leçon 5 : Créer des relations](lesson-4-create-relationships.md)|10 minutes|  
+|[Leçon 6 : Créer des colonnes calculées](lesson-5-create-calculated-columns.md)|15 minutes|  
+|[Leçon 7 : Créer des mesures](lesson-6-create-measures.md)|30 minutes|  
+|[Leçon 8 : Créer des indicateurs de Performance clés](lesson-7-create-key-performance-indicators.md)|15 minutes|  
 |[Leçon 9 : Créer des Perspectives](lesson-8-create-perspectives.md)|5 minutes|  
 |[Leçon 10 : Créer des hiérarchies](lesson-9-create-hierarchies.md)|20 minutes|  
 |[Leçon 11 : Créer des Partitions](lesson-10-create-partitions.md)|15 minutes|  
@@ -94,6 +94,6 @@ ms.locfileid: "53373681"
 |[Configurer les propriétés de création de rapports pour les rapports Power View](supplemental-lesson-configure-reporting-properties-for-power-view-reports.md)configurer les propriétés de création de rapports pour les rapports Power View|30 minutes|  
   
 ## <a name="next-step"></a>Étape suivante  
- Pour démarrer le didacticiel, passez à la première leçon : [Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  
+ Pour démarrer le didacticiel, passez à la première leçon : [Leçon 1 : Créez un projet de modèle tabulaire](lesson-1-create-a-new-tabular-model-project.md).  
   
   

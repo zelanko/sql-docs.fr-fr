@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04a5bf6b80e95df3b01ac73fd4580813c0709fe9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731475"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Assistant Estimation (Compléments d'exploration de données pour Excel)
   ![Assistant estimation dans le ruban Exploration de données](media/dmc-estimate.gif "Assistant estimation dans le ruban Exploration de données")  
@@ -84,13 +84,13 @@ ms.locfileid: "48182459"
   
  [Informations techniques de référence sur l’algorithme MDT (Microsoft Decision Trees)](data-mining/microsoft-decision-trees-algorithm-technical-reference.md)  
   
- [Informations techniques de référence sur l’algorithme Microsoft Linear Regression](data-mining/microsoft-linear-regression-algorithm-technical-reference.md)  
+ [Références techniques relatives à l'algorithme MLR (Microsoft Linear Regression)](data-mining/microsoft-linear-regression-algorithm-technical-reference.md)  
   
  [Informations techniques de référence sur l’algorithme Microsoft Logistic Regression](data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   
  [Informations techniques de référence sur l’algorithme MNN (Microsoft Neural Network)](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Pour utiliser l'Assistant Estimation des données, vous devez être connecté à une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
   
  Pour plus d’informations sur la création d’une connexion, consultez [se connecter à la Source de données &#40;Client d’exploration de données pour Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  

@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5c7d3208729ec225c25d1616e7a2052245e6ed25
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48123523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731341"
 ---
 # <a name="filter-the-source-cube-for-a-mining-structure"></a>Filtrer le cube source d'une structure d'exploration de données
   Lorsque vous créez une structure d’exploration de données qui est basée sur les données dans un modèle multidimensionnel (cube OLAP), vous pouvez *tranche* le cube basé sur la structure d’exploration de données. Le découpage vous permet de créer des sous-ensembles de données, comme un genre de filtre sur les données utilisées pour l'apprentissage du modèle d'exploration de données.  
@@ -53,7 +53,7 @@ ms.locfileid: "48123523"
      Le cube source est filtré comme défini par la coupe de cube.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la Structure d’exploration de données et procédures](data-mining/mining-structure-tasks-and-how-tos.md)   
+ [Tâches de la structure d'exploration de données et procédures](data-mining/mining-structure-tasks-and-how-tos.md)   
  [Créer une structure d’exploration de données OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   
   

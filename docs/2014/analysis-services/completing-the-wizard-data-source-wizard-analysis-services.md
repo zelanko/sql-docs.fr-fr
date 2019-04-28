@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6099fdba06e03c178f2673c66e49e71564a0d5f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680582"
 ---
 # <a name="completing-the-wizard-data-source-wizard-analysis-services"></a>Fin de l'Assistant (Assistant Source de données) (Analysis Services)
   Utilisez la page **Fin de l'Assistant** pour afficher la chaîne de connexion et spécifier le nom de la nouvelle source de données.  
@@ -32,7 +32,7 @@ ms.locfileid: "48048749"
   
 ## <a name="see-also"></a>Voir aussi  
  [Aide F1 de l’Assistant Source de données &#40;Analysis Services&#41;](data-source-wizard-f1-help-analysis-services.md)   
- [Sources de données dans les modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [Sources de données dans des modèles multidimensionnels](multidimensional-models/data-sources-in-multidimensional-models.md)   
  [Sources de données prises en charge &#40;SSAS multidimensionnel&#41;](multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

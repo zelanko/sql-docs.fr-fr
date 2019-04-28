@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bb982848854eef74363250c291b9f5676abec2f6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729011"
 ---
 # <a name="defining-named-sets"></a>Définition de jeux nommés
   Un jeu nommé est une expression MDX (Multidimensional Expressions) qui retourne un ensemble de membres de dimension. Vous pouvez définir des jeux nommés et les enregistrer en tant que partie de la définition du cube ; vous pouvez aussi créer des jeux nommés dans des applications clientes. Vous créez des jeux nommés en combinant des données de cube, des opérateurs arithmétiques, des nombres et des fonctions. Les jeux nommés peuvent être employés par les utilisateurs dans des requêtes MDX dans des applications clientes. Ils peuvent aussi être utilisés pour définir des jeux dans des sous-cubes. Un sous-cube est une collection de jeux joints entre eux qui limite l'espace du cube au sous-espace défini pour les instructions suivantes. Définir un espace de cube limité est un des concepts fondamentaux des scripts MDX.  
@@ -133,7 +133,7 @@ ms.locfileid: "52507856"
      ![Volet filtre contenant deux nommées définit](../../2014/tutorials/media/l6-named-set-05.gif "définit volet filtre contenant deux nommées")  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Leçon 7 : Définition des indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Leçon 7 : Définition des indicateurs de Performance clés &#40;indicateurs de performance clés&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Calculs](multidimensional-models-olap-logical-cube-objects/calculations.md)   

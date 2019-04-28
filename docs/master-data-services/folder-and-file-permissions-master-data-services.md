@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 97dc32d375c34d0e4993cdd297783f44a0f28d13
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696369"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>Autorisations d'accès aux dossiers et aux fichiers (Master Data Services)
 
@@ -36,7 +36,7 @@ ms.locfileid: "52760160"
   
 ###### <a name="program-files-default-permissions"></a>Autorisations par défaut du dossier Program Files  
   
-|Nom de groupe ou de compte|Permissions|  
+|Nom de groupe ou de compte|Autorisations|  
 |---------------------------|-----------------|  
 |CREATOR OWNER|Autorisations spéciales|  
 |SYSTEM|Autorisations spéciales|  
@@ -49,7 +49,7 @@ ms.locfileid: "52760160"
   
 ###### <a name="mdstempdir-permissions"></a>Autorisations MDSTempDir  
   
-|Nom de groupe ou de compte|Permissions|  
+|Nom de groupe ou de compte|Autorisations|  
 |---------------------------|-----------------|  
 |SYSTEM|Modifier, lire & exécuter, répertorier le contenu des dossiers, lire, écrire|  
 |Administrateurs|Modifier, lire & exécuter, répertorier le contenu des dossiers, lire, écrire|  
@@ -57,7 +57,7 @@ ms.locfileid: "52760160"
   
 ###### <a name="webconfig-permissions"></a>Autorisations Web.config  
   
-|Nom de groupe ou de compte|Permissions|  
+|Nom de groupe ou de compte|Autorisations|  
 |---------------------------|-----------------|  
 |SYSTEM|Contrôle total, modifier, lire & exécuter, lire, écrire|  
 |Administrateurs|Contrôle total, modifier, lire & exécuter, lire, écrire|  
@@ -65,7 +65,7 @@ ms.locfileid: "52760160"
   
  Pour plus d’informations sur le contenu de le fichier [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Web.config, consultez [Référence de configuration web &#40;Master Data Services&#41;](../master-data-services/web-configuration-reference-master-data-services.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer Master Data Services](../master-data-services/install-windows/install-master-data-services.md)  
   
   

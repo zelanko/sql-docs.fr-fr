@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4fd42458d59f7d591bf7de8279e983e30f754164
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48081849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794369"
 ---
 # <a name="sort-data-in-a-table-ssas-tabular"></a>Trier des données dans une table (SSAS Tabulaire)
   Vous pouvez trier des données en fonction du texte (de A à Z ou de Z à A) ou des nombres (du plus petit au plus grand ou du plus grand au plus petit) dans une ou plusieurs colonnes.  
@@ -48,8 +48,8 @@ ms.locfileid: "48081849"
     >  Si les résultats ne sont pas ce attendus, il se peut que la colonne contienne des nombres stockés sous forme de texte plutôt que sous forme de nombres. Par exemple, les nombres négatifs importés à partir de certains logiciels de comptabilité ou un nombre entré avec un signe ' (apostrophe) de début sont stockés sous forme de texte.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Filtrer et trier des données &#40;SSAS tabulaire&#41;](../filter-and-sort-data-ssas-tabular.md)   
- [Perspectives &#40;SSAS tabulaire&#41;](perspectives-ssas-tabular.md)   
- [Rôles &#40;SSAS tabulaire&#41;](roles-ssas-tabular.md)  
+ [Filtrer et trier les données &#40;SSAS tabulaire&#41;](../filter-and-sort-data-ssas-tabular.md)   
+ [Perspectives &#40;SSAS Tabulaire&#41;](perspectives-ssas-tabular.md)   
+ [Rôles &#40;SSAS Tabulaire&#41;](roles-ssas-tabular.md)  
   
   

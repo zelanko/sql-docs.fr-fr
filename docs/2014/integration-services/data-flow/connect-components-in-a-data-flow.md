@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 90d3e9e50ef16e51e9669a92cfb53f5f734c83ef
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58390237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827916"
 ---
 # <a name="connect-components-in-a-data-flow"></a>Connecter des composants dans un flux de données
   Cette procédure décrit comment connecter la sortie de composants d'un flux de données à d'autres composants du même flux de données.  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a942bb85a2af9b933c8091004fa9bb15529e86d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731521"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Activer l'écriture différée de la dimension (Dimension) (Assistant Business Intelligence)
   Utilisez la page **Activer l'écriture différée de la dimension** pour sélectionner une dimension pour laquelle l'Assistant Business Intelligence activera l'écriture différée.  
@@ -31,7 +31,7 @@ ms.locfileid: "48129029"
  Sélectionnez la dimension pour laquelle l'Assistant activera l'écriture différée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [L’Assistant Business Intelligence F1](business-intelligence-wizard-f1-help.md)   
+ [Aide (F1) de l'Assistant Business Intelligence](business-intelligence-wizard-f1-help.md)   
  [Concepteur de cube &#40;Analysis Services - données multidimensionnelles&#41;](cube-designer-analysis-services-multidimensional-data.md)   
  [Concepteur de dimensions &#40;Analysis Services - données multidimensionnelles&#41;](dimension-designer-analysis-services-multidimensional-data.md)   
  [Activer l’écriture différée de la dimension](multidimensional-models/bi-wizard-enable-dimension-writeback.md)  

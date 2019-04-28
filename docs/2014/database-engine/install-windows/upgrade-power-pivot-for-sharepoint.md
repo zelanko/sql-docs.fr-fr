@@ -11,11 +11,11 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de63ecc80b175385846845f5901fde5eb37ec97c
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62775647"
 ---
 # <a name="upgrade-powerpivot-for-sharepoint"></a>Mettre à niveau PowerPivot pour SharePoint
   Cette rubrique résume les étapes nécessaires pour mettre à niveau un déploiement de [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] vers [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)]. Les étapes spécifiques dépendent de la version de SharePoint exécutée par votre environnement et incluent le complément PowerPivot pour SharePoint (**spPowerPivot.msi**).  
@@ -160,7 +160,7 @@ ms.locfileid: "58434500"
   
     3.  Cliquez sur **Mettre à niveau des fonctionnalités, des services, des applications et des solutions**, puis sur **OK** pour continuer.  
   
-    4.  L'avertissement suivant s'affiche : « Les classeurs du tableau de bord de gestion PowerPivot sont sur le point d’être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? ».  
+    4.  L’avertissement suivant apparaît : « Les classeurs du tableau de bord de gestion PowerPivot sont sur le point d’être mis à niveau vers la dernière version. Les personnalisations apportées aux classeurs existants seront perdues. Voulez-vous continuer ? ».  
   
          Cet avertissement fait référence aux classeurs du tableau de bord de gestion PowerPivot qui rendent compte de l'activité d'actualisation des données. Si vous avez personnalisé ces classeurs, toutes les modifications que vous avez apportées à ces classeurs seront perdues lorsque des fichiers existants seront remplacés par des versions plus récentes.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "58434500"
   
     10. La mise à niveau des solutions et des fonctionnalités de la batterie de serveurs peut prendre plusieurs minutes. Pendant ce temps, les demandes de connexion pour les données PowerPivot échoue avec des erreurs telles que : « Impossible d’actualiser les données » ou « une erreur s’est produite essaie d’effectuer l’action demandée. Réessayez. » Une fois la mise à niveau terminée, le serveur devient disponible et ces erreurs ne se produiront plus.  
   
-8.  **Répétez le processus** pour chaque service SQL Server Analysis Services (PowerPivot) dans la batterie de serveurs : 1) Exécutez l’installation de SQL Server 2) Exécutez l'outil de configuration PowerPivot  
+8.  **Répétez le processus** pour chaque service SQL Server Analysis Services (PowerPivot) dans la batterie de serveurs : Le programme d’installation 1) exécutez SQL Server 2) exécutez l’outil de Configuration de PowerPivot.  
   
 9. Vérifiez que la mise à niveau a réussi en effectuant les étapes postérieures à la mise à niveau et en vérifiant la version des serveurs PowerPivot de la batterie. Pour plus d'informations, consultez [Post-upgrade verification tasks](#verify) dans cette rubrique et la section suivante :  
   

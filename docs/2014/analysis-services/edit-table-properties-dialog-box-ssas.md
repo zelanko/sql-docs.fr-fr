@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11e2dbc6cdd0911361aff76f252e9a772104789b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48229279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731491"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Modifier les propriétés de la table, boîte de dialogue (SSAS)
   La boîte de dialogue **Modifier les propriétés de la table** vous permet d'afficher et de modifier les propriétés des tables importées dans le générateur de modèles à l'aide de l'Assistant Importation de table. Pour accéder à cette boîte de dialogue, dans le générateur de modèles, sélectionnez une table, puis cliquez sur le menu **Table** , puis sur **Propriétés de la table**.  
@@ -100,6 +100,6 @@ ms.locfileid: "48229279"
  Cliquez pour appliquer toutes les modifications que vous avez apportées, notamment le remplacement des colonnes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tables et colonnes &#40;SSAS tabulaire&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tables et colonnes &#40;SSAS Tabulaire&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

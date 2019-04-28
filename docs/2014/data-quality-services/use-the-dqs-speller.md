@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e043e20af78653fccfa0ed3a2b227a1023e0657
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792059"
 ---
 # <a name="use-the-dqs-speller"></a>Utiliser le vérificateur d'orthographe DQS
   Le vérificateur d'orthographe [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) vérifie la syntaxe, l'orthographe, et la structure de la phrase des valeurs de chaîne dans un domaine. Le vérificateur d'orthographe est une fonctionnalité autonome et côté client qui n'a pas d'intégration avec les moteurs côté serveur et aucune conséquence sur les flux ou les états actuels. Le vérificateur d'orthographe identifie ces valeurs de chaîne qu'il considère comme des erreurs potentielles, puis les marque d'un trait de soulignement rouge dans le même emplacement que celui où vous apportez d'autres modifications manuelles aux valeurs de domaine. Ces emplacements incluent :  
@@ -35,7 +35,7 @@ ms.locfileid: "56016080"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour exécuter le vérificateur d'orthographe.  
   
 ##  <a name="Enable"></a> Activer le vérificateur d'orthographe  
@@ -64,7 +64,7 @@ ms.locfileid: "56016080"
   
 6.  Si vous souhaitez ajouter la valeur au dictionnaire, cliquez sur **Ajouter au dictionnaire**. Le trait de soulignement rouge disparaîtra de la valeur.  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir utilisé le vérificateur d’orthographe  
+##  <a name="FollowUp"></a> Suivi : Après utilisation du vérificateur d’orthographe  
  Après avoir exécuté le vérificateur d'orthographe, complétez l'activité dans laquelle le domaine est pour utiliser les corrections suggérées par le vérificateur d'orthographe. Si vous êtes dans l'activité de découverte des connaissances, de gestion des domaines ou de stratégie de correspondance, publiez la base de connaissances afin que les résultats de l'analyse du vérificateur d'orthographe soient utilisables dans la base de connaissances. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="How"></a> Fonctionnement du vérificateur d'orthographe  

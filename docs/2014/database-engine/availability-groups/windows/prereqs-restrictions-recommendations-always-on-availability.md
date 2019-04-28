@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62789865"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Conditions préalables requises, restrictions et recommandations pour les groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique décrit les considérations relatives au déploiement de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], notamment les conditions préalables, restrictions et recommandations concernant les ordinateurs hôtes, les clusters WSFC (clustering de basculement Windows Server), les instances de serveur et les groupes de disponibilité. Pour chacun de ces composants, les considérations relatives à la sécurité et les autorisations requises (le cas échéant) sont indiquées.  
@@ -39,12 +39,12 @@ ms.locfileid: "59242227"
   
 ||Fonctionnalité dépendante|Correctif logiciel|Lien|  
 |------|-----------------------|------------|----------|  
-|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Le correctif pour .Net 3.5 SP1 ajoute une prise en charge au client SQL concernant les fonctionnalités AlwaysOn d'intention de lecture (read-intent), de lecture seule (readonly) et de basculement à plusieurs sous-réseaux (multisubnetfailover). Le correctif doit être installé sur chaque serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|KB 2654347 : [Correctif pour .net 3.5 SP1 pour ajouter la prise en charge des fonctionnalités AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Le correctif pour .Net 3.5 SP1 ajoute une prise en charge au client SQL concernant les fonctionnalités AlwaysOn d'intention de lecture (read-intent), de lecture seule (readonly) et de basculement à plusieurs sous-réseaux (multisubnetfailover). Le correctif doit être installé sur chaque serveur de rapports [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] .|ARTICLE 2654347 DE LA BASE DE CONNAISSANCES : [Correctif pour .net 3.5 SP1 pour ajouter la prise en charge des fonctionnalités AlwaysOn](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="SystemReqsForAOAG"></a> Exigences et recommandations système de Windows  
   
   
-###  <a name="SystemRequirements"></a> Liste de vérification : Conditions requises (système Windows)  
+###  <a name="SystemRequirements"></a> Liste de vérification : Configuration requise (système Windows)  
  Pour prendre en charge la fonctionnalité [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vérifiez que chaque ordinateur devant participer à un ou plusieurs groupes de disponibilité respecte les conditions requises fondamentales suivantes :  
   
 ||Condition requise|Lien|  
@@ -76,7 +76,7 @@ ms.locfileid: "59242227"
   
 -   **Systèmes comparables :**  Pour un groupe de disponibilité donné, tous les réplicas de disponibilité doivent s’exécuter sur des systèmes comparables qui peuvent gérer des charges de travail identiques.  
   
--   **Cartes réseau dédiées :**  Pour de meilleures performances, utilisez une carte réseau dédiée (carte d’interface réseau) pour [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
+-   **Cartes réseau dédiées :**  Pour des performances optimales, utilisez une carte d'interface réseau dédiée à [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)].  
   
 -   **Espace disque suffisant :**  Chaque ordinateur sur lequel une instance de serveur héberge un réplica de disponibilité doit avoir suffisamment d’espace disque pour stocker toutes les bases de données dans le groupe de disponibilité. Gardez à l'esprit qu'à mesure que le volume des bases de données primaires croît, le volume des bases de données secondaires correspondantes augmente aussi.  
   
@@ -134,12 +134,12 @@ ms.locfileid: "59242227"
   
  
   
-###  <a name="PrerequisitesSI"></a> Liste de vérification : Conditions préalables requises (Instance de serveur)  
+###  <a name="PrerequisitesSI"></a> Liste de vérification : Prérequis (instance serveur)  
   
 ||Condition préalable|Liens|  
 |-|------------------|-----------|  
 |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|L'ordinateur hôte doit se trouver sur un nœud WSFC (clustering de basculement Windows Server). Les instances de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui hébergent les réplicas de disponibilité d'un groupe de disponibilité donné doivent résider sur des nœuds distincts d'un même cluster WSFC. La seule exception survient lors de la migration vers un autre cluster WSFC : un groupe de disponibilité peut temporairement chevaucher deux clusters.|[Clustering de basculement Windows Server &#40;WSFC&#41; avec SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)<br /><br /> [Clustering de basculement et groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](failover-clustering-and-always-on-availability-groups-sql-server.md)|  
-|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si vous souhaitez qu'un groupe de disponibilité utilise Kerberos :<br /><br /> Toutes les instances de serveur qui hébergent un réplica de disponibilité pour le groupe de disponibilité doivent utiliser le même compte de service SQL Server.<br /><br /> L'administrateur de domaine doit inscrire manuellement un nom de principal de service (SPN) avec Active Directory sur le compte de service SQL Server pour le nom de réseau virtuel (VNN) de l'écouteur de groupe de disponibilité. Si le SPN est inscrit sur un compte différent du compte de service SQL Server, l'authentification échoue.<br /><br /> **\*\* Important \*\*** Si vous modifiez le compte de service SQL Server, l’administrateur de domaine devra réinscrire le SPN manuellement.|[Inscrire un nom de principal du service pour les connexions Kerberos](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Brève explication :**<br /><br /> Kerberos et les SPN assurent une authentification mutuelle. Le SPN est mappé au compte Windows qui démarre les services SQL Server. Si l'inscription du SPN n'est pas effectuée correctement ou échoue, la couche de sécurité Windows ne peut pas déterminer le compte associé au SPN et l'authentification Kerberos ne peut pas être utilisée.<br /><br /> Remarque : NTLM n’est pas soumis à cette exigence.|  
+|![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si vous souhaitez qu'un groupe de disponibilité utilise Kerberos :<br /><br /> Toutes les instances de serveur qui hébergent un réplica de disponibilité pour le groupe de disponibilité doivent utiliser le même compte de service SQL Server.<br /><br /> L'administrateur de domaine doit inscrire manuellement un nom de principal de service (SPN) avec Active Directory sur le compte de service SQL Server pour le nom de réseau virtuel (VNN) de l'écouteur de groupe de disponibilité. Si le SPN est inscrit sur un compte différent du compte de service SQL Server, l'authentification échoue.<br /><br /> **\*\* Important \*\*** Si vous modifiez le compte de service SQL Server, l’administrateur de domaine devra réinscrire le SPN manuellement.|[Inscrire un nom de principal du service pour les connexions Kerberos](../../configure-windows/register-a-service-principal-name-for-kerberos-connections.md)<br /><br /> **Brève explication :**<br /><br /> Kerberos et les SPN assurent une authentification mutuelle. Le SPN est mappé au compte Windows qui démarre les services SQL Server. Si l'inscription du SPN n'est pas effectuée correctement ou échoue, la couche de sécurité Windows ne peut pas déterminer le compte associé au SPN et l'authentification Kerberos ne peut pas être utilisée.<br /><br /> Remarque : NTLM n'est pas soumis à cette condition.|  
 |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Si vous envisagez d'utiliser une instance de cluster de basculement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] pour héberger un réplica de disponibilité, assurez-vous de comprendre les restrictions relatives à l'instance de cluster de basculement et de respecter les conditions préalables requises pour cette dernière.|[Restrictions et conditions préalables requises pour l’utilisation d’une instance de cluster de basculement SQL Server afin d’héberger un réplica de disponibilité](#FciArLimitations) (plus loin dans cette rubrique)|  
 |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Chaque instance de serveur doit exécuter [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Enterprise Edition.|[Fonctionnalités prises en charge par les éditions de SQL Server 2014](../../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)|  
 |![Case à cocher](../../media/checkboxemptycenterxtraspacetopandright.gif "Case à cocher")|Toutes les instances de serveur qui hébergent des réplicas de disponibilité pour un groupe de disponibilité doivent utiliser le même classement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .|[Définir ou modifier le classement du serveur](../../../relational-databases/collations/set-or-change-the-server-collation.md)|  
@@ -216,7 +216,7 @@ ms.locfileid: "59242227"
   
 -   **Modification du nom réseau d’une instance de cluster de basculement :**  si vous devez modifier le nom réseau d’une instance de cluster de basculement qui héberge un réplica de disponibilité, vous devez supprimer le réplica de son groupe de disponibilité, puis l’ajouter de nouveau au groupe de disponibilité. Étant donné que vous ne pouvez pas supprimer le réplica principal, si vous renommez une instance de cluster de basculement qui héberge le réplica principal, vous devez basculer vers un réplica secondaire, puis supprimer le réplica principal précédent avant de l'ajouter à nouveau. Notez que l'attribution d'un nouveau nom à une instance de cluster de basculement modifie l'URL de son point de terminaison de mise en miroir de bases de données. Lorsque vous ajoutez le réplica, veillez à spécifier l'URL du point de terminaison actuel.  
   
-###  <a name="PrerequisitesFCI"></a> Liste de vérification : Conditions préalables (fci)  
+###  <a name="PrerequisitesFCI"></a> Liste de vérification : Prérequis (ICF)  
   
 ||Condition préalable|Lien|  
 |-|------------------|----------|  
@@ -251,7 +251,7 @@ ms.locfileid: "59242227"
   
 -   **Réplicas de disponibilité :**  Chaque groupe de disponibilité prend en charge un réplica principal et jusqu'à huit réplicas secondaires. Tous les réplicas peuvent s'exécuter en mode de validation asynchrone, ou au plus trois d'entre eux peuvent s'exécuter en mode de validation synchrone (un réplica principal et deux réplicas secondaires synchrones).  
   
--   **Nombre maximal de groupes de disponibilité et de bases de données de disponibilité par ordinateur :** Le nombre réel de bases de données et les groupes de disponibilité que vous pouvez placer sur un ordinateur (virtuel ou physique) dépend du matériel et de la charge de travail, mais il n’existe aucune limite imposée. Microsoft a largement testé des systèmes comportant 10 100 groupes de disponibilité et 100 bases de données par ordinateur physique. Les signes d'un système surchargé incluent, notamment, l'épuisement des threads de travail, des temps de réponse longs pour les vues système et les vues de gestion dynamique AlwaysOn et/ou des vidages de système de répartiteur bloqués. Veillez à tester soigneusement votre environnement avec une charge de travail semblable à celle de production pour vous assurer qu'il peut gérer la capacité de pointe conformément au contrat de niveau de service de l'application. Lorsque vous choisissez les contrats de niveau de service, assurez-vous de prendre en compte la charge en conditions d'échec ainsi que les temps de réponse attendus.  
+-   **Nombre maximal de groupes de disponibilité et de bases de données de disponibilité par ordinateur :** Le nombre réel de bases de données et les groupes de disponibilité que vous pouvez placer sur un ordinateur (virtuel ou physique) dépendent du matériel et de la charge de travail, mais il n'existe aucune limite imposée. Microsoft a largement testé des systèmes comportant 10 100 groupes de disponibilité et 100 bases de données par ordinateur physique. Les signes d'un système surchargé incluent, notamment, l'épuisement des threads de travail, des temps de réponse longs pour les vues système et les vues de gestion dynamique AlwaysOn et/ou des vidages de système de répartiteur bloqués. Veillez à tester soigneusement votre environnement avec une charge de travail semblable à celle de production pour vous assurer qu'il peut gérer la capacité de pointe conformément au contrat de niveau de service de l'application. Lorsque vous choisissez les contrats de niveau de service, assurez-vous de prendre en compte la charge en conditions d'échec ainsi que les temps de réponse attendus.  
   
 -   **N'utilisez pas le gestionnaire du cluster de basculement pour manipuler des groupes de disponibilité :**  
   

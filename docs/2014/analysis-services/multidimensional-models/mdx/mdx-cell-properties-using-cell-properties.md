@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a8b302391eb4e7384a54181b102f4ae8f3de522
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700608"
 ---
 # <a name="using-cell-properties-mdx"></a>Utilisation des propriétés de cellule (MDX)
   Les propriétés de cellule dans les expressions multidimensionnelles (MDX, Multidimensional Expressions) contiennent des informations sur le contenu et le format des cellules appartenant à une source de données multidimensionnelles, par exemple un cube.  
@@ -50,7 +50,7 @@ SELECT [<axis_specification>
   
 |Propriété|Description|  
 |--------------|-----------------|  
-|`ACTION_TYPE`|Masque binaire indiquant les types d'actions qui existent sur la cellule. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Remarque : Les actions d'extraction des requêtes dont la clause Where contient un jeu ne sont pas comprises.|  
+|`ACTION_TYPE`|Masque binaire indiquant les types d'actions qui existent sur la cellule. Cette propriété peut prendre les valeurs suivantes :<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Remarque : Actions d’extraction ne sont pas incluses pour les requêtes contenant un ensemble dont la clause.|  
 |**BACK_COLOR**|Couleur d'arrière-plan utilisée pour afficher la propriété `VALUE` ou `FORMATTED_VALUE`. Pour plus d’informations, consultez [Contenu de FORE_COLOR et BACK_COLOR &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`CELL_ORDINAL`|Numéro ordinal de la cellule dans le jeu de données.|  
 |**FONT_FLAGS**|Masque de bits détaillant les effets sur la police. Par exemple, la valeur 5 représente la combinaison des effets gras (`MDFF_BOLD`) et souligné (`MDFF_UNDERLINE`). La valeur de cette propriété est le résultat d'une opération OU au niveau du bit sur une ou plusieurs des constantes suivantes :<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  

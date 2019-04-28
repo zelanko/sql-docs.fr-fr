@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5e8022dd9a7bd4f301ca55f60614e1b13369b804
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62810420"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>Connexion de diagnostic pour les administrateurs de base de données
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit aux administrateurs une connexion de diagnostic spéciale lorsque des connexions standard au serveur sont impossibles. Cette connexion de diagnostic permet aux administrateurs d'accéder à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour exécuter des requêtes de diagnostic et résoudre des problèmes, même lorsque [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ne répond pas à des demandes de connexion standard.  
@@ -93,11 +93,11 @@ ms.locfileid: "54124519"
   
  Le port DAC est affecté dynamiquement par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pendant le démarrage. Lors d’une connexion à l’instance par défaut, la DAC évite d’utiliser une demande SSRP ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resolution Protocol) à SQL Server Browser Service lors de la connexion. Elle se connecte d'abord sur le port TCP 1434. Si cette tentative échoue, elle effectue un appel SSRP pour obtenir le port. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser n'écoute pas les demandes SSRP, la demande de connexion retourne une erreur. Reportez-vous au journal des erreurs pour trouver le numéro de port que la DAC écoute. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour accepter les connexions d'administration distante, la DAC doit être initialisée avec un numéro de port explicite :  
   
- **SQLCMD-Stcp :**  _\<serveur >,\<port >_  
+ **sqlcmd-Stcp:** _\<server>,\<port>_  
   
  Le journal des erreurs de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] indique le numéro de port de la connexion DAC, qui est 1434 par défaut. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est configuré pour accepter uniquement des connexions DAC locales, connectez-vous au moyen de l'adaptateur de bouclage en utilisant la commande suivante :  
   
- **SQLCMD-S127.0.0.1**,`1434`  
+ **sqlcmd-S127.0.0.1**,`1434`  
   
 ## <a name="example"></a>Exemple  
  Dans cet exemple, un administrateur note que le serveur `URAN123` ne répond pas et souhaite diagnostiquer le problème. Pour ce faire, l'utilisateur active l'utilitaire de ligne de commande `sqlcmd` et se connecte au serveur `URAN123` en utilisant `-A` pour indiquer la connexion DAC.  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3cfaf75851b97a8b13856fa8f65aca0bde7e10d1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56034090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793210"
 ---
 # <a name="create-a-composite-domain"></a>Créer un domaine composite
   Cette rubrique explique comment créer un domaine composite dans une base de connaissances dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Un domaine composite comprend un ou plusieurs domaines uniques qui s'appliquent à un seul champ de données. Pour plus d’informations sur les domaines composites, consultez [Gestion d’un domaine composite](../../2014/data-quality-services/managing-a-composite-domain.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "56034090"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour créer un domaine composite.  
   
 ##  <a name="ParsingKnowledgeDiscoveryActivity"></a> Créer un domaine composite dans l'activité de découverte des connaissances  
@@ -79,17 +79,17 @@ ms.locfileid: "56034090"
   
 4.  Sélectionnez l'une des valeurs suivantes pour l'option **Méthode d'analyse**:  
   
-    -   **Données de référence**: Analyser les valeurs du champ en fonction de la façon dont les données sont formatées par le Service de données de référence (RDS). Data Quality Services envoie les valeurs du domaine composite au service RDS et celui-ci retourne les données corrigées et analysées en fonction du domaine dans le domaine composite.  
+    -   **Données de référence** : analysez les valeurs du champ selon la façon dont les données sont mises en forme par le service de données de référence (RDS). Data Quality Services envoie les valeurs du domaine composite au service RDS et celui-ci retourne les données corrigées et analysées en fonction du domaine dans le domaine composite.  
   
-    -   **Dans l’ordre**: Analyser les valeurs du champ en fonction de l’ordre des domaines dans le domaine composite. La première valeur sera incluse dans le premier domaine, la deuxième valeur dans le deuxième domaine, et ainsi de suite.  
+    -   **Dans l’ordre** : analysez les valeurs du champ en fonction de l’ordre des domaines dans le domaine composite. La première valeur sera incluse dans le premier domaine, la deuxième valeur dans le deuxième domaine, et ainsi de suite.  
   
-    -   **Délimiteurs**: Analysez les valeurs du champ en fonction du délimiteur sélectionné à partir des cases affichées lorsque délimiteurs est sélectionné. Il peut s'agir de **Tabulation**, **Point-virgule**, **Virgule**, **Espace**ou **Autre**. Si la valeur est **Autre**, entrez la valeur qui servira de délimiteur.  
+    -   **Délimiteurs** : analysez les valeurs du champ en fonction du délimiteur sélectionné à partir des cases d’option affichées quand Délimiteurs est sélectionné. Il peut s'agir de **Tabulation**, **Point-virgule**, **Virgule**, **Espace**ou **Autre**. Si la valeur est **Autre**, entrez la valeur qui servira de délimiteur.  
   
 5.  Si vous avez sélectionné **Délimiteurs** pour la méthode d'analyse, vous pouvez également sélectionner **Utiliser l'analyse de Base de connaissances**. Pour plus d’informations, consultez [Knowledge-Based Parsing](#KnowledgeBaseParsing).  
   
 6.  Cliquez sur **Terminer** pour terminer l'activité de gestion de l'arborescence du domaine, comme décrit dans [End the Domain Management Activity](../../2014/data-quality-services/end-the-domain-management-activity.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir créé un domaine Composite  
+##  <a name="FollowUp"></a> Suivi : après la création d’un domaine composite  
  Après avoir créé un domaine composite, vous pouvez effectuer d'autres tâches de gestion des domaines sur le domaine, effectuer une découverte des connaissances pour ajouter des connaissances au domaine ou ajouter une stratégie de correspondance au domaine. Pour plus d’informations, consultez [Effectuer une découverte des connaissances](../../2014/data-quality-services/perform-knowledge-discovery.md), [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md) ou [Créer une stratégie de correspondance](../../2014/data-quality-services/create-a-matching-policy.md).  
   
 ##  <a name="KnowledgeBaseParsing"></a> Knowledge-Based Parsing  

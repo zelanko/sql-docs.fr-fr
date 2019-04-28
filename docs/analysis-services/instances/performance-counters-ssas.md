@@ -1,5 +1,5 @@
 ---
-title: Les compteurs de performance (SSAS) | Documents Microsoft
+title: Les compteurs de performance (SSAS) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 79b4ecc40d69e8f40a5a1612985477d8ee6f166a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709727"
 ---
 # <a name="performance-counters-ssas"></a>Compteurs de performance (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34019236"
   
 ## <a name="counters-by-groups"></a>Compteurs par groupes  
   
-|Grouper|Description|  
+|Regrouper|Description|  
 |-----------|-----------------|  
 |[Cache](#bkmk_Cache)|Statistiques relatives au cache d'agrégation Analysis Services.|  
 |[Connexion](#bkmk_Connection)|Statistiques relatives aux connexions Microsoft Analysis Services.|  

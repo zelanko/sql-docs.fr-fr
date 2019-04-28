@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27c22caf9c3b6dfebede60cd795496496562c19b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730768"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importer à partir d'un flux de données (SSAS Tabulaire)
   Les flux de données désignent un ou plusieurs flux de données XML générés à partir d'une source de données en ligne et transmis en continu à un document ou une application de destination. Vous pouvez importer des données à partir d'un flux de données dans votre modèle à l'aide de l'Assistant Importation de table.  
@@ -45,7 +45,7 @@ ms.locfileid: "48099839"
  **Flux Atom**  
  Le flux doit être un flux Atom. Les flux RSS ne sont pas pris en charge. Le flux doit être disponible publiquement ou vous devez être autorisé à vous y connecter avec le compte Windows avec lequel vous êtes actuellement connecté.  
   
- Les données d'un flux de données sont ajoutées dans un modèle une fois au cours de l'importation. Pour obtenir des données à jour à partir du flux, vous pouvez soit actualiser les données du générateur de modèles, soit configurer une planification d'actualisation des données pour le modèle après qu'il a été déployé sur une instance de production d'Analysis Services. Pour plus d’informations, consultez [Traiter les données &#40;SSAS tabulaire&#41;](process-data-ssas-tabular.md).  
+ Les données d'un flux de données sont ajoutées dans un modèle une fois au cours de l'importation. Pour obtenir des données à jour à partir du flux, vous pouvez soit actualiser les données du générateur de modèles, soit configurer une planification d'actualisation des données pour le modèle après qu'il a été déployé sur une instance de production d'Analysis Services. Pour plus d’informations, consultez [Traiter les données &#40;SSAS Tabulaire&#41;](process-data-ssas-tabular.md).  
   
 ##  <a name="azure"></a> Importer des données à partir d'un dataset Azure DataMarket  
  Vous pouvez importer des données à partir d'un dataset Azure DataMarket comme table dans votre modèle.  
@@ -192,9 +192,9 @@ ms.locfileid: "48099839"
   
 ## <a name="see-also"></a>Voir aussi  
  [Sources de données prises en charge &#40;SSAS tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Types de données pris en charge &#40;SSAS tabulaire&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
- [L’emprunt d’identité &#40;SSAS tabulaire&#41;](tabular-models/impersonation-ssas-tabular.md)   
- [Traiter les données &#40;SSAS tabulaire&#41;](process-data-ssas-tabular.md)   
- [Importer des données &#40;SSAS tabulaire&#41;](import-data-ssas-tabular.md)  
+ [Types de données pris en charge &#40;SSAS Tabulaire&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
+ [Emprunt d’identité &#40;SSAS Tabulaire&#41;](tabular-models/impersonation-ssas-tabular.md)   
+ [Traiter les données &#40;SSAS Tabulaire&#41;](process-data-ssas-tabular.md)   
+ [Importer des données &#40;SSAS Tabulaire&#41;](import-data-ssas-tabular.md)  
   
   

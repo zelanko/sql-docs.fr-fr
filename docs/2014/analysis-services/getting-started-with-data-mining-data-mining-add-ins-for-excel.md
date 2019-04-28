@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3b34ff1ef4f204b2c4a753366aa6e84f678c9ea8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730723"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Mise en route avec l'exploration de données (compléments d'exploration de données pour Excel)
   L'exploration de données est le processus de découverte des tendances au travers de données. L'exploration de données est un complément naturel du processus d'exploration et d'analyse de vos données via la BI traditionnelle. Les algorithmes d'ordinateur peuvent traiter de grandes quantités de données et dégager des tendances et des séquences qui resteraient autrement masquées.  

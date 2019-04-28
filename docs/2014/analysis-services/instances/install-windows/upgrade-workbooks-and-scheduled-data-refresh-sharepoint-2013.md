@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ed3fc8546ef7bd85934d8b127ff124acc095e29
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730197"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Mettre à niveau les classeurs et l'actualisation planifiée des données (SharePoint 2013)
   Cette rubrique traite de l'utilisation des classeurs créés dans les environnements PowerPivot précédents et comment mettre à niveau les classeurs PowerPivot afin de pouvoir tirer parti des nouvelles fonctionnalités introduites dans cette version. Pour en savoir plus sur les nouvelles fonctionnalités, consultez [What ' s New in PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  
@@ -53,14 +53,14 @@ ms.locfileid: "53373939"
 |Environnement de création|\<|Prise en charge et comportement|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot pour SharePoint 2010**|**2012 PowerPivot pour SharePoint 2010**|**2012 SP1 PowerPivot pour SharePoint 2013**|  
-|**2008 R2 PowerPivot pour Excel 2010**|Toutes les fonctionnalités|**Expérience :** les utilisateurs peuvent interagir avec le classeur dans le navigateur et l'utiliser comme source de données pour d'autres solutions.<br /><br /> **Mise à niveau :** les classeurs sont mis à niveau automatiquement dans la bibliothèque de documents si la mise à niveau automatique est activée pour le service système PowerPivot dans la batterie de serveurs SharePoint.<br /><br /> **Planifier l’actualisation des données :** NON pris en charge. Le classeur doit être mis à niveau.|**Expérience :** les utilisateurs peuvent interagir avec le classeur et l'utiliser comme source de données pour d'autres solutions.<br /><br /> **Mise à niveau :** la mise à niveau automatique n'est pas disponible. Les utilisateurs doivent mettre à niveau leurs classeurs 2008 R2 vers la version 2012 ou version Office 2013 manuellement.<br /><br /> **Planifier l’actualisation des données :** NON pris en charge. Le classeur doit être mis à niveau.|  
-|**2012 PowerPivot pour Excel**|Non pris en charge|Toutes les fonctionnalités|**Expérience :** les utilisateurs peuvent interagir avec le classeur dans le navigateur et l'utiliser comme source de données pour d'autres solutions. La planification de l'actualisation des données est disponible.<br /><br /> **Mise à niveau :** la mise à niveau automatique n'est pas prise en charge. Les utilisateurs peuvent mettre à niveau leurs classeurs vers la version Office 2013.<br /><br /> **Planification de l'actualisation des données :** prise en charge.|  
+|**2008 R2 PowerPivot pour Excel 2010**|Toutes les fonctionnalités|**Expérience :** Les utilisateurs peuvent interagir avec le classeur dans le navigateur et utiliser comme source de données pour d’autres solutions.<br /><br /> **Mise à niveau :** Classeurs seront automatiquement mise à niveau dans la bibliothèque de documents si la mise à niveau automatique est activée pour le Service système PowerPivot dans la batterie de serveurs SharePoint,<br /><br /> **Planifier l’actualisation des données :** NON pris en charge. Le classeur doit être mis à niveau.|**Expérience :** Les utilisateurs peuvent interagir avec le classeur et utilisez-le comme une source de données pour d’autres solutions.<br /><br /> **Mise à niveau :** Mise à niveau automatique n’est pas disponible. Les utilisateurs doivent mettre à niveau leurs classeurs 2008 R2 vers la version 2012 ou version Office 2013 manuellement.<br /><br /> **Planifier l’actualisation des données :** NON pris en charge. Le classeur doit être mis à niveau.|  
+|**2012 PowerPivot pour Excel**|Non pris en charge|Toutes les fonctionnalités|**Expérience :** Les utilisateurs peuvent interagir avec le classeur dans le navigateur et utiliser comme source de données pour d’autres solutions. La planification de l'actualisation des données est disponible.<br /><br /> **Mise à niveau :** Mise à niveau automatique n’est pas pris en charge. Les utilisateurs peuvent mettre à niveau leurs classeurs vers la version Office 2013.<br /><br /> **Planification de l'actualisation des données :** prise en charge.|  
 |**Excel 2013**|Non pris en charge|Non pris en charge|Toutes les fonctionnalités|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Mettre à niveau des classeurs SQL Server 2008 R2 vers des classeurs SQL Server 2012 Service Pack 1 (SP1)  
  Cette section décrit la mise à niveau de classeurs SQL Server 2008 R2 PowerPivot pour Excel 2010 vers des classeurs SQL Server 2012 SP1 PowerPivot pour Excel 2013.  
   
- **Changement de comportement :** les classeurs SQL Server 2008 R2 PowerPivot ne sont pas mis à niveau automatiquement lorsqu'ils sont utilisés dans SQL Server 2012 SP1 PowerPivot pour SharePoint 2013. Par conséquent, les actualisations planifiées de données ne fonctionnent pas pour les classeurs PowerPivot SQL Server 2008 R2.  
+ **Changement de comportement :** Classeurs PowerPivot SQL Server 2008 R2 ne seront pas mis à niveau automatiquement lorsqu’ils sont utilisés dans SQL Server 2012 SP1 PowerPivot pour SharePoint 2013. Par conséquent, les actualisations planifiées de données ne fonctionnent pas pour les classeurs PowerPivot SQL Server 2008 R2.  
   
  Les classeurs SQL Server 2008 R2 s'ouvrent dans PowerPivot pour SharePoint 2013, cependant les actualisations planifiées de données ne fonctionnent pas. Si vous observez l'historique d'actualisation, vous pouvez voir un message d'erreur semblable au message suivant :  
   
@@ -70,7 +70,7 @@ ms.locfileid: "53373939"
   
 -   SQL Server 2012 PowerPivot pour Excel 2013.  
   
- **La mise à niveau un classeur :** L'actualisation planifiée des données ne fonctionne pas tant que vous n'avez pas mis à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :  
+ **La mise à niveau un classeur :** L’actualisation des données planifiée ne fonctionne pas jusqu'à ce que vous mettez à niveau le classeur vers un classeur 2012. Pour mettre à niveau le classeur et le modèle qu'il contient, procédez de l'une des façons suivantes :  
   
 -   Téléchargez et ouvrez le classeur dans Microsoft Excel 2010 avec le complément SQL Server 2012 PowerPivot pour Excel installé.  
   

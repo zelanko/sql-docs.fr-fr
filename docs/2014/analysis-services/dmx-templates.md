@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7e3bee7fa85c98e50fdb940d2dfb23f76f3a462c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731756"
 ---
 # <a name="dmx-templates"></a>Modèles DMX
   Les modèles d'exploration de données vous aident à créer rapidement des requêtes sophistiquées. Bien que la syntaxe générale des requêtes DMX soit bien documentée, l'utilisation de modèles facilite leur création car il suffit de cliquer et pointer sur les arguments et les sources de données.  
@@ -53,7 +53,7 @@ ms.locfileid: "52504695"
 ## <a name="list-of-dmx-templates"></a>Liste des modèles DMX  
  Les modèles DMX suivants sont inclus dans le Client d'exploration de données pour Excel.  
   
- **PRÉDICTION**  
+ **Prediction**  
   
  Utilisez ces modèles pour créer des requêtes de prédiction avancées, notamment des requêtes non prises en charge par les Assistants des compléments, par exemple les requêtes qui utilisent des tables imbriquées ou des sources de données externes.  
   

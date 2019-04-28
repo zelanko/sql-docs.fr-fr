@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 9 : Définition de Perspectives et traductions | Documents Microsoft'
+title: 'Leçon 9 : Définition de Perspectives et traductions | Microsoft Docs'
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d36bf95a0f0758b9e33a6c695a5a060ba54706b8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62807513"
 ---
-# <a name="lesson-9-defining-perspectives-and-translations"></a>Leçon 9 : Définition de perspectives et de traductions
+# <a name="lesson-9-defining-perspectives-and-translations"></a>Leçon 9 : Définition des perspectives et des traductions
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
 Dans cette leçon, vous apprenez à définir des perspectives et des traductions. Les perspectives servent à réduire l'apparente complexité d'un cube, et les traductions permettent aux utilisateurs d'afficher les métadonnées de cube dans la langue de leur choix.  
@@ -26,7 +26,7 @@ Dans cette leçon, vous apprenez à définir des perspectives et des traductions
   
 Cette leçon contient les tâches suivantes :  
   
-[Définition et exploration de Perspectives](../analysis-services/lesson-9-1-defining-and-browsing-perspectives.md)  
+[Définition et exploration de perspectives](../analysis-services/lesson-9-1-defining-and-browsing-perspectives.md)  
 Dans cette tâche, vous définissez et parcourez des perspectives afin de simplifier l'affichage du cube pour des utilisateurs ou des usages spécifiques.  
   
 [Définition et exploration de traductions](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
@@ -36,8 +36,8 @@ Dans cette tâche, vous définissez et parcourez des traductions de métadonnée
 [Leçon 10 : Définition de rôles administratifs](../analysis-services/lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>Voir aussi  
-[Scénario du didacticiel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
-[Modélisation multidimensionnelle & #40 ; Didacticiel Adventure Works & #41 ;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
+[Scénario du tutoriel Analysis Services](../analysis-services/analysis-services-tutorial-scenario.md)  
+[Modélisation multidimensionnelle &#40;didacticiel Adventure Works&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)  
 [Perspectives](../analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives.md)  
 [Perspectives dans les modèles multidimensionnels](../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)  
 [Traductions de dimension](../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)  

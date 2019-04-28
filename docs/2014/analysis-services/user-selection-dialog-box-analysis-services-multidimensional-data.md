@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6b72e4872de2f1e744ac55a60c5abb34aea0f32
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48201539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62793430"
 ---
 # <a name="user-selection-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Sélection de l'utilisateur (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Sélection de l’utilisateur** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour sélectionner les utilisateurs sur lesquels filtrer les requêtes stockées dans le journal des requêtes pour l’Assistant Optimisation de l’utilisation.  

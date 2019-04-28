@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83c864fc3af588b2dbf78346af1ddf1cd8430a01
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701683"
 ---
 # <a name="define-custom-member-formulas"></a>Définir des formules de membre personnalisées
   Vous pouvez définir une expression MDX (Multidimensional Expressions) appelée formule de membre personnalisée pour fournir les valeurs des membres d'un attribut spécifié. Une colonne d'une table issue d'une vue de source de données fournit, pour chaque membre d'un attribut, l'expression utilisée pour fournir la valeur de ce membre.  
@@ -39,23 +39,23 @@ ms.locfileid: "48186019"
   
 -   2003: 2100  
   
-    -   Quarter 1: 700  
+    -   Trimestre 1 : 700  
   
-    -   Quarter 2: 500  
+    -   2e trimestre : 500  
   
-    -   Quarter 3: 100  
+    -   Trimestre 3 : 100  
   
-    -   Quarter 4: 800  
+    -   Trimestre 4 : 800  
   
 -   2004: 1500  
   
-    -   Quarter 1: 600  
+    -   Trimestre 1 : 600  
   
-    -   Quarter 2: 200  
+    -   2e trimestre : 200  
   
-    -   Quarter 3: 300  
+    -   Trimestre 3 : 300  
   
-    -   Quarter 4 : 400  
+    -   Trimestre 4 : 400  
   
  Avec une formule de membre personnalisée, la valeur du membre est fournie par la formule de cumul personnalisée. Par exemple, la formule de membre personnalisée suivante permet de fournir 450 comme valeur du membre Quarter 4 enfant du membre 2004 dans la dimension Time.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "48186019"
 Time.[Quarter 3] * 1.5  
 ```  
   
- Les formules de membre personnalisées sont stockées dans une colonne de la table de dimension. Vous activez les formules de cumul personnalisé en définissant le `CustomRollupColumn` propriété sur un attribut.  
+ Les formules de membre personnalisées sont stockées dans une colonne de la table de dimension. Vous activez les formules de cumul personnalisées en définissant la propriété `CustomRollupColumn` d'un attribut.  
   
  Pour appliquer une seule expression MDX à tous les membres d'un attribut, créez sur la table de dimension un calcul nommé qui retourne une expression MDX sous forme de chaîne littérale. Ensuite, spécifiez le calcul nommé avec la valeur de la propriété `CustomRollupColumn` de l'attribut que vous voulez configurer. Un calcul nommé est une colonne d'une table de vue de source de données qui retourne des valeurs de ligne définies par une expression SQL. Pour plus d’informations sur la construction de calculs nommés, consultez [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md).  
   
@@ -73,7 +73,7 @@ Time.[Quarter 3] * 1.5
  Si vous utilisez des membres calculés ainsi que des formules de cumul personnalisées pour les membres d'un attribut, vous devez être conscient de l'ordre d'évaluation. Les membres calculés sont résolus avant les formules de cumul personnalisées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d’attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Attributs et hiérarchies d'attributs](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [Définir des formules de membre personnalisées pour les attributs d’une dimension](bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: acd35ed9c39dc11b0ea60017b082d407f6c1b47d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700684"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Concepts clés dans MDX (Analysis Services)
   Avant de pouvoir utiliser MDX (Multidimensional Expressions) pour interroger des données multidimensionnelles ou créer des expressions MDX dans un cube, vous devez vous familiariser avec les concepts et les termes liés aux données multidimensionnelles.  
@@ -103,7 +103,7 @@ ms.locfileid: "52512799"
 ## <a name="key-attributes"></a>Attributs clés  
  Les modèles sont une collection d'objets liés qui reposent sur des clés et des index pour établir les associations. Les modèles Analysis Services ne diffèrent en rien de ce point de vue. Pour chaque dimension (souvenez-vous que cela équivaut à une table dans un modèle relationnel), il existe un attribut clé. **L’attribut clé** est utilisé dans les relations entre les clés étrangères et la table de faits (groupe de mesures). Tous les attributs non-clés de la dimension sont liés (directement ou indirectement) à l'attribut clé.  
   
- Souvent, mais pas toujours, l'attribut clé est également l' **attribut de granularité**. La granularité renvoie au niveau de détail ou de précision des données. Là encore, un exemple courant permet de mieux comprendre de quoi il s'agit. Prenez des valeurs de date : pour les ventes quotidiennes, vous avez besoin de valeurs de date spécifiées au jour près. Pour les quotas, des valeurs trimestrielles peuvent suffire, mais si vos données d'analyse sont constituées de résultats de courses d'un événement sportif, le grain devra peut-être s'exprimer en millisecondes. Le niveau de précision de vos valeurs de données est le grain.  
+ Souvent, mais pas toujours, l'attribut clé est également l' **attribut de granularité**. La granularité renvoie au niveau de détail ou de précision des données. Là encore, un exemple courant permet de mieux comprendre de quoi il s'agit. Tenez compte des valeurs de date : Pour les ventes quotidiennes, vous avez besoin de valeurs de date spécifiées au jour ; pour les quotas, tous les trimestres peuvent suffire, mais si vos données analytiques sont constituées de résultats d’une course à partir d’un événement sportif, le niveau de granularité très devra peut-être être millisecondes. Le niveau de précision de vos valeurs de données est le grain.  
   
  Devise est un autre exemple : une application financière peut effectuer le suivi valeurs monétaires à plusieurs décimales, tandis que la collecte de fonds de votre établissement local besoin de ces valeurs au dollar plus proche. La compréhension du grain est importante, car il vaut mieux éviter de stocker des données inutiles. La suppression des millisecondes d'un horodateur ou des centimes d'un montant des ventes peut économiser du stockage et du temps de traitement lorsque ce niveau de détail n'est pas pertinent pour votre analyse.  
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
+title: sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e4ef878879fb5c2896c45aedbf2a86f83557804c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62856106"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -72,22 +72,22 @@ ms.locfileid: "47826183"
 |-----------------|------------------------|-----------------------|  
 |Table de charge de travail|Oui*|Oui|  
 |Affichage|Oui|Oui|  
-|Index filtré|Oui**|non|  
-|Statistiques filtrées|Oui**|non|  
+|Index filtré|Oui**|Non|  
+|Statistiques filtrées|Oui**|Non|  
 |Procédure stockée [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Oui|Oui|  
-|Procédure stockée CLR|non|Oui|  
+|Procédure stockée CLR|Non|Oui|  
 |Fonction [!INCLUDE[tsql](../../includes/tsql-md.md)] définie par l'utilisateur|Oui|Oui|  
-|Fonction CLR définie par l'utilisateur|non|Oui|  
-|Déclencheur CLR (DML et DDL)|non|non|  
-|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|  
-|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|  
-|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|non|  
-|Procédures stockées étendues|non|Oui|  
-|File d'attente|non|Oui|  
-|Synonyme|non|Oui|  
-|Type (alias et type CLR défini par l'utilisateur)|non|Oui|  
-|Collection de schémas XML|non|Oui|  
-|Fonction de partition|non|Oui|  
+|Fonction CLR définie par l'utilisateur|Non|Oui|  
+|Déclencheur CLR (DML et DDL)|Non|Non|  
+|Déclencheur DML [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DDL au niveau de la base de données [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Déclencheur DDL au niveau du serveur [!INCLUDE[tsql](../../includes/tsql-md.md)]|Oui|Non|  
+|Procédures stockées étendues|Non|Oui|  
+|File d'attente|Non|Oui|  
+|Synonyme|Non|Oui|  
+|Type (alias et type CLR défini par l'utilisateur)|Non|Oui|  
+|Collection de schémas XML|Non|Oui|  
+|Fonction de partition|Non|Oui|  
   
  \* Une table est suivie comme entité de référence uniquement lorsqu’il fait référence à un [!INCLUDE[tsql](../../includes/tsql-md.md)] module, de type défini par l’utilisateur ou de collection de schémas XML dans la définition d’une colonne calculée, une contrainte CHECK ou une contrainte par défaut.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "47826183"
   
  *** Les procédures stockées numérotées avec une valeur entière supérieure à 1 ne sont pas suivies en tant qu'entité de référence ou référencée.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Requiert l'autorisation VIEW DEFINITION sur la base de données et l'autorisation SELECT sur sys.sql_expression_dependencies pour la base de données. Par défaut, l'autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe db_owner. Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  
   
 ## <a name="examples"></a>Exemples  

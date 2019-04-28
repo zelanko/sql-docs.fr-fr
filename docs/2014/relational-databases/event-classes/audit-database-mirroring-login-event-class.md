@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 57ad0c696eb8c81a029160417a7d847d6e0600ec
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52776481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711823"
 ---
 # <a name="audit-database-mirroring-login-event-class"></a>Audit Database Mirroring Login, classe d'événements
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crée un événement **Audit Database Mirroring Login** pour retourner les messages d’audit relatifs à la sécurité du transport de la mise en miroir de bases de données.  
@@ -50,7 +50,7 @@ ms.locfileid: "52776481"
 |**SPID**|**Int**|ID du processus serveur affecté par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] au processus associé au client.|12|Oui|  
 |**StartTime**|**datetime**|Heure de début de l'événement, le cas échéant.|14|Oui|  
 |**État**|**Int**|Indique l'emplacement dans le code source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] qui a produit l'événement. Chaque emplacement susceptible de générer cet événement possède un code d'état spécifique. Un spécialiste de l'assistance technique Microsoft peut se servir de ce code d'état afin de déterminer où l'événement s'est produit.|30|Non|  
-|**TargetUserName**|**nvarchar**|État de connexion. Une des valeurs suivantes :<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> d’erreur<br /><br /> <br /><br /> Remarque : ISC = Initiate Security Context. ASC = Accept Security Context.|39|Non|  
+|**TargetUserName**|**nvarchar**|État de connexion. Une des valeurs suivantes :<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> d’erreur<br /><br /> <br /><br /> Remarque : ISC = Initiate Security Context. ASC = Accept Security Context.|39|Non|  
 |**TransactionID**|**bigint**|ID affecté à la transaction par le système.|4|Non|  
   
  Le tableau suivant répertorie les valeurs des sous-classes pour cette classe d'événements.  

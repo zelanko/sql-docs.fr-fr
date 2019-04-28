@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48149869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62791903"
 ---
 # <a name="availability-replica-properties-general-page"></a>Propriétés du réplica de disponibilité (page Général)
   Utilisez cette boîte de dialogue pour afficher les propriétés d’un réplica de disponibilité.  
@@ -87,7 +87,7 @@ ms.locfileid: "48149869"
  **Oui**  
  Toutes les connexions sont autorisées aux bases de données secondaires de ce réplica, mais uniquement pour l'accès en lecture. La ou les bases de données secondaires sont toutes disponibles pour l'accès en lecture.  
   
- Pour plus d’informations, consultez [secondaires actifs : réplicas secondaires lisibles (groupes de disponibilité AlwaysOn)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Pour plus d’informations, consultez [Secondaires actifs : Réplicas secondaires lisibles (groupes de disponibilité AlwaysOn)](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **Délai d'attente de session (secondes)**  
  Délai d'attente en secondes. Le délai d’expiration est le temps maximum pendant lequel le réplica attend de recevoir un message d’un autre réplica avant de considérer que la connexion entre les réplicas principal et secondaire a échoué. Le délai d'expiration de session détecte si les réplicas secondaries sont connectés au réplica primaire. En cas de détection d’un échec de connexion avec un réplica secondaire, le réplica principal considère que le réplica secondaire présente l’état NOT_SYNCHRONIZED. En cas de détection d'un échec de connexion avec le réplica principal, un réplica secondaire tente simplement de se reconnecter.  

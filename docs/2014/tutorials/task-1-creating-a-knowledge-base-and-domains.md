@@ -1,5 +1,5 @@
 ---
-title: 'Tâche 1 : Création d’une Base de connaissances et domaines | Microsoft Docs'
+title: 'Tâche 1 : Création d’une Base de connaissances et domaines | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eeaebadd43fe1969ae1c728f8e2f8284ddf7f7ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62822183"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tâche 1 : Création d'une base de connaissances et de domaines
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Tâche 1 : Création d’une base de connaissances et de domaines
   Dans cette tâche, vous allez créer le **fournisseurs** base de connaissances et créer des domaines qui est utilisé pour la correspondance des données et de nettoyage des données pour supprimer les doublons.  
   
 1.  Lancez **Data Quality Client**. Cliquez sur **Démarrer**, pointez sur **tous les programmes**, cliquez sur **Microsoft SQL Server 2012**, cliquez sur **Data Quality Services**, puis cliquez sur  **Data Quality Client**.  
@@ -46,7 +46,7 @@ ms.locfileid: "56011100"
   
      ![Créer la boîte de dialogue domaine](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-05.jpg "créer la boîte de dialogue domaine")  
   
-9. Répétez l'étape précédente pour créer les domaines suivants avec les paramètres par défaut. Pour simplifier le didacticiel, vous définissez le **Type de données** de tous les domaines en tant que **chaîne**. Les autres types de données autorisés sont les suivants : Integer, Decimal, et Date. Lorsque le **utiliser des valeurs Menantes** option est activée (par défaut), tous les synonymes sont remplacés par la valeur de début du groupe de synonymes dans la sortie. Paramètre **normaliser la chaîne** option (valeur par défaut) supprime tous les caractères spéciaux dans les valeurs de domaine. Le **Format de sortie à** option vous permet de sélectionner la mise en forme est appliquée lorsque les valeurs de données dans le domaine sont générées. Sélectionnez **activer le vérificateur d’orthographe** (valeur par défaut) pour exécuter le vérificateur orthographique sur toutes les valeurs de chaîne en remplissant le domaine. Le **langage** paramètre spécifie la version linguistique de la **le vérificateur d’orthographe** vous souhaitez appliquer. Sélectionnez **désactiver les algorithmes d’erreur de syntaxe** pour remplir le domaine sans vérifier les valeurs de chaîne pour les erreurs de syntaxe. Consultez [créer un domaine](https://msdn.microsoft.com/library/hh510401.aspx) rubrique dans la bibliothèque MSDN pour plus d’informations.  
+9. Répétez l'étape précédente pour créer les domaines suivants avec les paramètres par défaut. Pour simplifier le didacticiel, vous définissez le **Type de données** de tous les domaines en tant que **chaîne**. Les autres types de données autorisés sont : Entier, décimal et Date. Lorsque le **utiliser des valeurs Menantes** option est activée (par défaut), tous les synonymes sont remplacés par la valeur de début du groupe de synonymes dans la sortie. Paramètre **normaliser la chaîne** option (valeur par défaut) supprime tous les caractères spéciaux dans les valeurs de domaine. Le **Format de sortie à** option vous permet de sélectionner la mise en forme est appliquée lorsque les valeurs de données dans le domaine sont générées. Sélectionnez **activer le vérificateur d’orthographe** (valeur par défaut) pour exécuter le vérificateur orthographique sur toutes les valeurs de chaîne en remplissant le domaine. Le **langage** paramètre spécifie la version linguistique de la **le vérificateur d’orthographe** vous souhaitez appliquer. Sélectionnez **désactiver les algorithmes d’erreur de syntaxe** pour remplir le domaine sans vérifier les valeurs de chaîne pour les erreurs de syntaxe. Consultez [créer un domaine](https://msdn.microsoft.com/library/hh510401.aspx) rubrique dans la bibliothèque MSDN pour plus d’informations.  
   
     -   Nom du fournisseur  
   

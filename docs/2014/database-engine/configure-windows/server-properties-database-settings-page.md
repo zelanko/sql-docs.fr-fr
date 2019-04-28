@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21731b1b99c29257700393b5b7713a723c35dbac
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52639427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809531"
 ---
 # <a name="server-properties-database-settings-page"></a>Propriétés du serveur (page Paramètres de base de données)
   Utilisez cette page pour consulter ou modifier vos paramètres de base de données.  

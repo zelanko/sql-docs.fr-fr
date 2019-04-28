@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95d0a5e0f7d3d108543d6741dea84efde4280387
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679834"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validation croisée (Compléments d'exploration de données SQL Server)
   ![Bouton Validation croisée, ruban Exploration de données](media/dmc-xvalid.gif "bouton Validation croisée, ruban Exploration de données")  
@@ -68,7 +68,7 @@ ms.locfileid: "48171749"
     > [!NOTE]  
     >  Microsoft Excel peut rester temporairement sans réponse pendant que le modèle est partitionné en replis et que chaque repli est testé.  
   
-### <a name="requirements"></a>Spécifications  
+### <a name="requirements"></a>Configuration requise  
  Pour créer un rapport de validation croisée, vous devez avoir déjà créé une structure d'exploration de données et des modèles connexes. L'Assistant fournit une boîte de dialogue pour vous aider à faire un choix parmi les structures et les modèles existants.  
   
  Si vous choisissez une structure d'exploration de données qui prend en charge plusieurs modèles d'exploration de données, et les modèles utilisent des attributs prévisibles différents, l'Assistant Validation croisée testera uniquement les modèles qui partagent le même attribut prévisible.  
@@ -101,7 +101,7 @@ ms.locfileid: "48171749"
   
  Réussite/échec est calculé à partir de cas qui remplissent les conditions suivantes : **passer** si l’état prédit avec la probabilité la plus élevée est identique à l’état d’entrée et de probabilité est supérieure à la valeur que vous avez spécifié pour **Seuil d’état**; sinon, **échouer**.  
   
-#### <a name="classification-true-or-false-positives-and-negatives"></a>Classification : vrais ou faux positifs et négatifs  
+#### <a name="classification-true-or-false-positives-and-negatives"></a>Classification : Négatifs et positifs true ou False  
  Ce test est utilisé pour tous les modèles de classification qui ont une cible spécifiée. La mesure indique comment chaque cas est classé en réponse à ces questions : ce que le modèle a prédit, et ce qu'était le résultat réel.  
   
 |Measure|Description|  

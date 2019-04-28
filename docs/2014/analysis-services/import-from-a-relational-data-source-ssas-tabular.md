@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44c4f0a5fbdaa64f2145113bf5135dad9acbddbb
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48167509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730731"
 ---
 # <a name="import-from-a-relational-data-source-ssas-tabular"></a>Importer à partir d'une source de données relationnelles (SSAS Tabulaire)
   Vous pouvez importer des données provenant de diverses bases de données relationnelles à l’aide de l’Assistant Importation de table. L’assistant est disponible dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], dans le menu **Modèle** . Pour vous connecter à une source de données, vous devez disposer du fournisseur approprié, installé sur votre ordinateur. Pour plus d’informations sur les fournisseurs et les sources de données pris en charge, consultez [Data Sources Supported &#40;SSAS Tabular&#41;](tabular-models/data-sources-supported-ssas-tabular.md).  
@@ -60,7 +60,7 @@ ms.locfileid: "48167509"
 3.  Suivez les étapes de l'Assistant Importation de table. Dans les pages suivantes, vous pouvez sélectionner des vues et des tables spécifiques ou appliquer des filtres à l’aide de la page **Sélectionner des tables et des vues** ou en créant une requête SQL dans la page **Spécifier une requête SQL** .  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importer des données &#40;SSAS tabulaire&#41;](import-data-ssas-tabular.md)   
+ [Importer des données &#40;SSAS Tabulaire&#41;](import-data-ssas-tabular.md)   
  [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   

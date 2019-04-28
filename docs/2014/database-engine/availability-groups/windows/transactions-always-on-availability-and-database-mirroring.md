@@ -17,18 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c3616e40ff54c67d27902ddf9454084fb62e282
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48101369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62813654"
 ---
 # <a name="cross-database-transactions-not-supported-for-database-mirroring-or-alwayson-availability-groups-sql-server"></a>Transactions entre bases de données non prises en charge pour la mise en miroir de bases de données ou les groupes de disponibilité AlwaysOn (SQL Server)
   Les transactions entre bases de données et les transactions distribuées ne sont pas prises en charge par [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] et par la mise en miroir de bases de données. En effet, l'atomicité/intégrité des transactions ne peut pas être garantie pour les raisons suivantes :  
   
--   Pour les transactions entre bases de données : chaque base de données est validée indépendamment. Par conséquent, même pour les bases de données dans un seul groupe de disponibilité, un basculement peut se produire après qu'une base de données a validé une transaction, mais avant que l'autre base de données ne le fasse. Pour la mise en miroir de bases de données, ce problème est aggravé car après un basculement, la base de données mise en miroir figure généralement sur une instance de serveur différente de l'autre base de données, et même si les deux bases de données sont mises en miroir entre les mêmes deux partenaires, il n'y a aucune garantie que les deux bases de données basculent au même moment.  
+-   Pour les transactions entre bases de données : Chaque base de données est validée indépendamment. Par conséquent, même pour les bases de données dans un seul groupe de disponibilité, un basculement peut se produire après qu'une base de données a validé une transaction, mais avant que l'autre base de données ne le fasse. Pour la mise en miroir de bases de données, ce problème est aggravé car après un basculement, la base de données mise en miroir figure généralement sur une instance de serveur différente de l'autre base de données, et même si les deux bases de données sont mises en miroir entre les mêmes deux partenaires, il n'y a aucune garantie que les deux bases de données basculent au même moment.  
   
--   Pour les transactions distribuées : après un basculement, le nouveau principal/réplica principal ne peut pas se connecter au coordinateur de transaction distribuée sur le principal/réplica principal. Par conséquent, le nouveau principal/réplica principal ne peut pas obtenir l'état de la transaction.  
+-   Pour les transactions distribuées : Après un basculement, le nouveau principal/réplica principal est incapable de se connecter au coordinateur de transaction distribuée sur le précédent principal/réplica principal. Par conséquent, le nouveau principal/réplica principal ne peut pas obtenir l'état de la transaction.  
   
  L'exemple de mise en miroir de bases de données suivant illustre la manière dont une incohérence logique pourrait se produire. Dans cet exemple, une application utilise une transaction entre bases de données pour insérer deux lignes de données : une ligne est insérée dans une table dans une base de données mise en miroir, A, et l'autre ligne est insérée dans une table dans une autre base de données, B. La base de données A est mise en miroir en mode haute sécurité avec basculement automatique. Pendant la validation de la transaction, la base de données A devient indisponible et la session de mise en miroir bascule automatiquement vers le miroir de la base de données A.  
   

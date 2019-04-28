@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0c1ae3f098aea3886d5cb84a0bfcb7553a8181fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719728"
 ---
 # <a name="the-driver-manager"></a>Le gestionnaire de pilotes
 Le *Gestionnaire de pilotes* est une bibliothèque qui gère la communication entre les applications et pilotes. Par exemple, sur les plateformes de Microsoft® Windows®, le Gestionnaire de pilotes est une bibliothèque de liens dynamiques (DLL) qui est écrite par Microsoft et peut être redistribuée par les utilisateurs du MDAC 2.8 SP1 SDK redistribuable.  
@@ -32,7 +32,7 @@ Le *Gestionnaire de pilotes* est une bibliothèque qui gère la communication en
   
  Le Gestionnaire de pilotes résout ce problème en fournissant un emplacement unique pour appeler chaque fonction. L’application est liée aux fonctions ODBC Gestionnaire de pilotes et des appels dans le Gestionnaire de pilotes, pas le pilote. L’application identifie la source de données et de pilote cible avec un *handle de connexion*. Lorsqu’il charge un pilote, le Gestionnaire de pilotes crée un tableau de pointeurs vers les fonctions de ce pilote. Il utilise le handle de connexion transmis par l’application pour trouver l’adresse de la fonction dans le pilote de la cible et appelle cette fonction par adresse.  
   
- La plupart du temps, le Gestionnaire de pilotes transmet simplement les appels de fonction à partir de l’application pour le pilote correct. Toutefois, il implémente également certaines fonctions (**SQLDataSources**, **SQLDrivers**, et **SQLGetFunctions**) et effectue la vérification des erreurs de base. Par exemple, le Gestionnaire de pilotes vérifie que les handles ne sont pas des pointeurs null, que les fonctions sont appelées dans le bon ordre, et que certains arguments de fonction sont valides. Pour obtenir une description complète des erreurs vérifiées par le Gestionnaire de pilotes, consultez la section de référence pour chaque fonction et [tableaux des transitions d’état ODBC annexe b :](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
+ La plupart du temps, le Gestionnaire de pilotes transmet simplement les appels de fonction à partir de l’application pour le pilote correct. Toutefois, il implémente également certaines fonctions (**SQLDataSources**, **SQLDrivers**, et **SQLGetFunctions**) et effectue la vérification des erreurs de base. Par exemple, le Gestionnaire de pilotes vérifie que les handles ne sont pas des pointeurs null, que les fonctions sont appelées dans le bon ordre, et que certains arguments de fonction sont valides. Pour obtenir une description complète des erreurs vérifiées par le Gestionnaire de pilotes, consultez la section de référence pour chaque fonction et [annexe b : Tableaux des transitions d’état ODBC](../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md).  
   
  Le rôle majeur final du Gestionnaire de pilotes est le chargement et déchargement des pilotes. L’application charge et décharge uniquement le Gestionnaire de pilotes. Lorsqu’il souhaite utiliser un pilote spécifique, il appelle une fonction de connexion (**SQLConnect**, **SQLDriverConnect**, ou **SQLBrowseConnect**) dans le Gestionnaire de pilotes et spécifie le nom de source de données particulière ou de pilote, tels que « Comptabilité » ou « SQL Server ». Le Gestionnaire de pilotes à l’aide de ce nom, recherche dans les informations de source de données pour le nom de fichier du pilote, telles que Sqlsrvr.dll. Il charge le pilote (en supposant qu’il n’est pas déjà chargé), stocke l’adresse de chaque fonction dans le pilote, puis appelle la fonction de connexion dans le pilote, puis initialise lui-même et se connecte à la source de données.  
   

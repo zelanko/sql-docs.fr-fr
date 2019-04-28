@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fad4cf000bda343970c0c2b6c18adb8f5e7fb548
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711219"
 ---
 # <a name="design-view"></a>Vue Design
   Utilisez la vue Design pour organiser les éléments présents dans le rapport. Cette vue est parfois appelée aire de conception ou mode de conception.  

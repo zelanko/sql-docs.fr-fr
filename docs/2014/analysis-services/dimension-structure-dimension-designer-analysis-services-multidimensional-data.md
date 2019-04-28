@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b9eb15a1f82f8b6d139f220a564582ef9699b24
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731795"
 ---
 # <a name="dimension-structure-dimension-designer-analysis-services---multidimensional-data"></a>Structure de dimension (Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   La page **Structure de dimension** du Concepteur de dimensions permet de modifier les attributs, les hiérarchies et les niveaux de la dimension sélectionnée. La page **Structure de dimension** comporte une barre d'outils et trois volets.  

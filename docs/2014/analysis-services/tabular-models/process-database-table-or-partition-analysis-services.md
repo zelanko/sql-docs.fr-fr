@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6cfe1f291bd6a045bea635ea4501e76854d32e47
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62794549"
 ---
 # <a name="process-database-table-or-partition"></a>Traiter une base de données, une table ou une partition
   Les tâches de cette rubrique décrivent comment traiter une base de données de modèle tabulaire, table ou des partitions manuellement à l’aide de la **processus \<objet >** boîte de dialogue dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -77,7 +77,7 @@ ms.locfileid: "48067719"
 4.  Dans la colonne de case à cocher **Traiter** , sélectionnez les partitions à traiter avec le mode sélectionné, puis cliquez sur **OK**.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Partitions de modèles tabulaires &#40;SSAS tabulaire&#41;](tabular-model-partitions-ssas-tabular.md)   
- [Créer et gérer des Partitions de modèles tabulaires &#40;SSAS tabulaire&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
+ [Partitions de modèle tabulaire &#40;SSAS Tabulaire&#41;](tabular-model-partitions-ssas-tabular.md)   
+ [Créer et gérer des partitions de modèles tabulaires &#40;SSAS Tabulaire&#41;](create-and-manage-tabular-model-partitions-ssas-tabular.md)  
   
   

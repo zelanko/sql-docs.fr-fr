@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 340accda9321eb8732f909e73729ccaf5193e9a6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48145989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730388"
 ---
 # <a name="import-data-ssas-tabular"></a>Importer des données (SSAS Tabulaire)
   Vous pouvez importer des données dans un modèle tabulaire à partir d'une grande diversité de sources. Les rubriques de cette section décrivent l'utilisation de l'Assistant Importation de données pour vous connecter à des données et les sélectionner afin de les importer dans un projet de modèle.  
@@ -43,6 +43,6 @@ ms.locfileid: "48145989"
 |[Importer à partir d’une Source de données multidimensionnelle &#40;SSAS tabulaire&#41;](import-from-a-multidimensional-data-source-ssas-tabular.md)|Décrit comment importer les données d'un cube multidimensionnel SQL Server Analysis Services.|  
 |[Importer à partir d’un flux de données &#40;SSAS tabulaire&#41;](import-from-a-data-feed-ssas-tabular.md)|Décrit comment importer des données depuis un flux de données tel qu'un rapport Microsoft Reporting Services ou un dataset Azure Data Market.|  
 |[Importer à partir d’un fichier texte &#40;SSAS tabulaire&#41;](import-from-a-text-file-ssas-tabular.md)|Décrit comment importer des données à partir d'un classeur Microsoft Excel ou d'un fichier texte.|  
-|[Copier et coller des données &#40;SSAS tabulaire&#41;](copy-and-paste-data-ssas-tabular.md)|Décrit comment ajouter des données à une table existante dans le générateur de modèles à l'aide des commandes Coller et Coller par ajout.|  
+|[Copier et coller des données &#40;SSAS Tabulaire&#41;](copy-and-paste-data-ssas-tabular.md)|Décrit comment ajouter des données à une table existante dans le générateur de modèles à l'aide des commandes Coller et Coller par ajout.|  
   
   

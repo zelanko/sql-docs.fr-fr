@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fa3c6f3f6d1a0870fca88871ad3effe642f547e6
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62651469"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutoriel : Création d'un rapport de tableau de base (Générateur de rapports)
   Ce didacticiel vous apprend à créer un rapport de tableau de base à partir des exemples de données de ventes. L’illustration suivante montre le rapport que vous allez créer.  

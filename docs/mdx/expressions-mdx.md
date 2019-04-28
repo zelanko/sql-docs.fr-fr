@@ -1,5 +1,5 @@
 ---
-title: Les expressions (MDX Multidimensional) | Documents Microsoft
+title: Expressions (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,16 +10,16 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77ef7250c7af3918509e38c9aa1f5350f3ac5610
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690843"
 ---
 # <a name="expressions-mdx"></a>Expressions (MDX)
 
 
-  Une expression est une combinaison d’identificateurs, de valeurs et d’opérateurs qui peuvent être évaluées pour obtenir un résultat. Les données peuvent être utilisées à différents endroits lors de l'accès ou la modification des données. Vous pouvez, par exemple, utiliser une expression en tant qu'élément des données à récupérer dans une requête ou en tant que condition de recherche de données répondant à un jeu de critères.  
+  Une expression est une combinaison d’identificateurs, les valeurs et les opérateurs qui peut être évaluée pour obtenir un résultat. Les données peuvent être utilisées à différents endroits lors de l'accès ou la modification des données. Vous pouvez, par exemple, utiliser une expression en tant qu'élément des données à récupérer dans une requête ou en tant que condition de recherche de données répondant à un jeu de critères.  
   
 ## <a name="simple-and-complex-expressions"></a>Expressions simples et complexes  
  Dans la syntaxe MDX, une expression peut être simple ou complexe :  
@@ -85,7 +85,7 @@ WHERE [Product].[Category].[Bikes]
 |[Manipulation de valeurs vides](../mdx/working-with-empty-values.md)|Décrit une valeur vide et la manière dont les valeurs de ce type sont gérées.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Principes de base de requête MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Guide de référence du langage MDX &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

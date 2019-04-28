@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: ba10d54fb2c18e29a6cc41d74e8d79bc6355e63e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62712796"
 ---
 # <a name="specify-field-and-row-terminators-sql-server"></a>Spécifier des indicateurs de fin de champ et de fin de ligne (SQL Server)
   Dans le cas de champs de données de type caractère, des caractères facultatifs de fin vous permettent d'indiquer la fin de chaque champ inclus dans un fichier de données par un *indicateur de fin de champ* et la fin de chaque ligne par un *indicateur de fin de ligne*. Les caractères de fin constituent un moyen d'indiquer à des programmes en cours de lecture du fichier de données la fin d'un champ ou d'une ligne et le début du suivant.  
@@ -37,7 +37,7 @@ ms.locfileid: "52539748"
 |Onglet|\t<br /><br /> Il s'agit de l'indicateur de fin de champ par défaut.|  
 |Caractère de saut de ligne|\n<br /><br /> Il s'agit de l'indicateur de fin de ligne par défaut.|  
 |Retour chariot/saut de ligne|\r|  
-|Barre oblique inverse<sup>1</sup>|\\\|  
+|Backslash<sup>1</sup>|\\\|  
 |Marque de fin null (indicateur de fin)<sup>2</sup>|\0|  
 |Tout caractère imprimable (les caractères de contrôle ne le sont pas, sauf les valeurs NULL, tabulation, saut de ligne et retour chariot)|(*, A, t, l, etc.)|  
 |Une chaîne de 10 caractères imprimables maximum, y compris certains ou tous les indicateurs de fin énumérés précédemment|(**\t\*\*, fin, !!!!!!!!!!, \t-\n, etc.)|  
@@ -164,7 +164,7 @@ GO
 bcp AdventureWorks..myDepartment in C:\myDepartment-c-t.txt -c -t , -r \n -T  
 ```  
   
-#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>b. Utilisation de BULK INSERT pour spécifier de façon interactive les terminateurs  
+#### <a name="b-using-bulk-insert-to-interactively-specify-terminators"></a>B. Utilisation de BULK INSERT pour spécifier de façon interactive les terminateurs  
  L'exemple suivant importe en bloc le fichier de données `Department-c-t.txt` par le biais de l'instruction `BULK INSERT` en utilisant les qualificateurs répertoriés dans le tableau suivant.  
   
 |Option|Attribute|  

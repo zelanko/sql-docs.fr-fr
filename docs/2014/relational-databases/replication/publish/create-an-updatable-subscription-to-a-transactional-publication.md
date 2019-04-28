@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691593"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Créer un abonnement pouvant être mis à jour pour une publication transactionnelle (Management Studio)
 
@@ -29,7 +29,7 @@ La réplication transactionnelle permet de propager sur le serveur de publicatio
 
 Configurez des abonnements pouvant être mis à jour dans la page **Abonnements pouvant être mis à jour** de l’**Assistant Nouvel abonnement**. Cette page est disponible seulement si vous avez activé une publication transactionnelle pour les abonnements pouvant être mis à jour. Pour plus d’informations sur l’activation des abonnements pouvant être mis à jour, consultez [Activer la mise à jour d’abonnements pour les publications transactionnelles](enable-updating-subscriptions-for-transactional-publications.md).   
   
-## <a name="configure-an-updatable-subscription-from-the-publisher"></a>Configurer un abonnement d’être mise à jour du serveur de publication  
+## <a name="configure-an-updatable-subscription-from-the-publisher"></a>Configurer un abonnement pouvant être mis à jour à partir du serveur de publication  
 
 1. Connectez-vous au serveur de publication dans Microsoft SQL Server Management Studio, puis développez le nœud du serveur.
 2. Développez le dossier **Réplication** , puis développez le dossier **Publications locales** .
@@ -52,7 +52,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 
 8. Terminez l'Assistant.
 
-## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configurer un abonnement d’être mise à jour de l’abonné
+## <a name="configure-an-updatable-subscription-from-the-subscriber"></a>Configurer un abonnement pouvant être mis à jour à partir de l’Abonné
 
 
 1. Connectez-vous à l’abonné dans SQL Server Management Studio, puis développez le nœud du serveur.
@@ -79,7 +79,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 
 11. Terminez l'Assistant.
 
-## <a name="create-an-immediate-updating-pull-subscription"></a>Créer un abonnement par extraction de la mise à jour immédiate
+## <a name="create-an-immediate-updating-pull-subscription"></a>Créer un abonnement par extraction avec mise à jour immédiate
 
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour immédiate en exécutant [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 
@@ -121,7 +121,7 @@ Configurez des abonnements pouvant être mis à jour dans la page **Abonnements 
 L'abonnement par extraction est alors inscrit sur le serveur de publication. 
 
 
-## <a name="create-an-immediate-updating-push-subscription"></a>Créer un abonnement envoyé avec mise à jour immédiate 
+## <a name="create-an-immediate-updating-push-subscription"></a>Créer un abonnement par émission de données avec mise à jour immédiate 
 
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour immédiate en exécutant [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 
@@ -159,7 +159,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
      * `2` - Utiliser une connexion de serveur lié existante, définie par l’utilisateur, créée à l’aide de [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql).
 
 
-## <a name="create-a-queued-updating-pull-subscription"></a>Créer un abonnement par extraction de la mise à jour en file d’attente ##
+## <a name="create-a-queued-updating-pull-subscription"></a>Créer un abonnement par extraction avec mise à jour en file d’attente ##
 
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour en file d’attente en exécutant [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 
@@ -200,7 +200,7 @@ L'abonnement par extraction est alors inscrit sur le serveur de publication.
 1. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements avec mise à jour en file d’attente en exécutant [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 
     * Si la valeur de allow_queued_tran dans le jeu de résultats est 1, la publication prend en charge les abonnements avec mise à jour immédiate.
-    * Si la valeur de allow_queued_tran dans le jeu de résultats est 0, la publication doit être recréée en activant la prise en charge des abonnements avec mise à jour en file d’attente. Pour plus d’informations, consultez Comment : Activer la mise à jour des abonnements pour les Publications transactionnelles (programmation Transact-SQL de la réplication).
+    * Si la valeur de allow_queued_tran dans le jeu de résultats est 0, la publication doit être recréée en activant la prise en charge des abonnements avec mise à jour en file d’attente. Pour plus d’informations, consultez Guide pratique pour activer les abonnements avec mise à jour pour les publications transactionnelles (programmation Transact-SQL de la réplication).
 
 2. Sur le serveur de publication, vérifiez que la publication prend en charge les abonnements par émission de données en exécutant [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql). 
 

@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bec1e9c00c0c97bda29dd1deceac6ca152b6c085
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62862682"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Nettoyer les données à l'aide de la connaissance des données de référence (externes)
 
@@ -53,7 +53,7 @@ ms.locfileid: "56036020"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_kb_operator sur la base de données DQS_MAIN pour effectuer le nettoyage des données.  
   
 ##  <a name="Cleanse"></a> Nettoyer les données à l'aide de la connaissance des données de référence  
@@ -61,7 +61,7 @@ ms.locfileid: "56036020"
   
 1.  Créez un projet de qualité des données, puis sélectionnez l'activité **Nettoyage** . Consultez [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   
-2.  Dans la page **Mapper**, mappez les 4 domaines suivants avec les colonnes appropriées de vos données sources : **Ligne d’adresse**, **Ville**, **État** et **Code postal**. Cliquez sur **Suivant**.  
+2.  Dans la page **Mapper**, mappez les 4 domaines suivants avec les colonnes appropriées de vos données sources : **Ligne d’adresse**, **Ville**, **État** et **Code postal**. Cliquer sur **Suivant**.  
   
     > [!NOTE]  
     >  Lorsque vous avez mappé les 4 domaines du domaine composite de **Contrôle d'adresse** , le nettoyage des données sera effectué au niveau du domaine composite, et non au niveau du domaine individuel.  

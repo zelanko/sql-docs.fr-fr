@@ -21,11 +21,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c027b6648da799be5a2b9381a0f19dc437563242
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53377661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806369"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Créer un point de contrôle de l'utilitaire SQL Server (utilitaire SQL Server)
   Une entreprise peut disposer de plusieurs utilitaires [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut gérer de nombreuses instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et applications de la couche Données. Chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] détient un seul et unique point de contrôle de l’utilitaire (UCP). Vous devez créer un UCP pour chaque utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Chaque instance gérée de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et chaque composant d'application de la couche Données est membre d'un seul et unique utilitaire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et est géré par un UCP unique.  
@@ -76,7 +76,7 @@ ms.locfileid: "53377661"
   
 -   Cette procédure doit être exécutée par un utilisateur disposant d'autorisations sysadmin, qui sont les mêmes autorisations requises pour créer un UCP.  
   
--   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d'informations, consultez [Procédure : Supprimer une Instance de SQL Server à partir de l’utilitaire SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
+-   Toutes les instances gérées de SQL Server doivent être supprimées de l'UCP. Notez que l'UCP est une instance gérée de SQL Server. Pour plus d’informations, consultez [Comment : Supprimer une Instance de SQL Server à partir de l’utilitaire SQL Server](https://go.microsoft.com/fwlink/?LinkId=169392).  
   
  Utilisez cette procédure pour supprimer un UCP SQL Server de l'utilitaire SQL Server. Une fois l'opération terminée, il est possible de créer à nouveau un UCP sur l'instance de SQL Server.  
   
