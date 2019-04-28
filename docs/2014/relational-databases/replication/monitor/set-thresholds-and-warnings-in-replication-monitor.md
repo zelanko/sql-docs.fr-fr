@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 13511f66d2636634daa11b8e6555bb1f5ccd335f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52781191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667182"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>Définir des seuils et des avertissements dans le Moniteur de réplication
   Le moniteur de réplication[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] présente des informations sur l'état des publications et des abonnements. Par défaut, le Moniteur de réplication affiche des avertissements uniquement pour les abonnements non initialisés, mais vous pouvez activer les avertissements pour d'autres conditions. Il est recommandé d'activer les avertissements pour votre topologie, afin que vous soyez informés de l'état et des performances en temps voulu.  
@@ -61,7 +61,7 @@ ms.locfileid: "52781191"
   
 2.  Cliquez sur l'onglet **Avertissements** . Pour afficher des informations plus complètes sur les options de cet onglet, cliquez sur **Aide** dans la barre de menus.  
   
-3.  Sélectionnez un avertissement en activant la case à cocher appropriée : **Avertir si un abonnement expire avant le seuil** ou **avertir si la latence dépasse le seuil**.  
+3.  Sélectionnez un avertissement en activant la case à cocher appropriée : **Avertir si un abonnement expire avant le seuil défini** ou **Avertir si la latence dépasse le seuil**.  
   
 4.  Définissez un seuil pour les avertissements dans la colonne **Seuil** . Si, par exemple, vous avez sélectionné **Avertir si la latence dépasse le seuil** à l'étape 3, vous pouvez choisir une latence de **60 secondes** dans la colonne **Seuil** .  
   

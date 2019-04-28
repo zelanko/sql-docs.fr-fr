@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 20787347abe92f83ea2163f5cd297804153d364d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59953275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659228"
 ---
 # <a name="generate-data-feeds-from-a-report-report-builder-and-ssrs"></a>Générer des flux de données à partir d'un rapport (Générateur de rapports et SSRS)
   Vous pouvez générer des flux de données conformes à Atom à partir de rapports, puis utiliser ces flux de données dans des applications, par exemple le client [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , qui est capable d'utiliser des flux de données.  

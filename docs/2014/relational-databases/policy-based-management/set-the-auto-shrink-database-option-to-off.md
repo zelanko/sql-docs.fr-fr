@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c81885e5a3aaec197b8963c2e868b6f65a0b0544
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53374301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691510"
 ---
 # <a name="set-the-autoshrink-database-option-to-off"></a>Définir l'option de base de données AUTO_SHRINK sur OFF
   Cette règle vérifie si l'option de base de données AUTO_SHRINK est définie avec la valeur OFF. La réduction et le développement fréquents d'une base de données peuvent entraîner une fragmentation physique.  

@@ -29,11 +29,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 1ae1037a8b04ad1a16b8d42485105927015359a1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717906"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Spécification de relations à l'aide de sql:relationship (SQLXML 4.0)
   Les éléments d'un document XML peuvent être liés. Les éléments peuvent être imbriqués hiérarchiquement ; en outre, des relations ID, IDREF ou IDREFS peuvent être spécifiées entre les éléments.  
@@ -56,13 +56,13 @@ ms.locfileid: "52814871"
  **Parent**  
  Spécifie la relation parente (table). Il s'agit d'un attribut facultatif ; si l'attribut n'est pas spécifié, le nom de la table parente est obtenu à partir des informations contenues dans la hiérarchie enfant du document. Si le schéma spécifie deux hiérarchies parent-enfant qui utilisent la même  **\<SQL : Relationship >** , mais les éléments parents différents, vous ne spécifiez pas l’attribut parent dans  **\<sql : relation >**. Ces informations sont obtenues à partir de la hiérarchie du schéma.  
   
- **clé de parent**  
+ **parent-key**  
  Spécifie la clé parente du parent. Si la clé parente est composée de plusieurs colonnes, les valeurs sont spécifiées en étant séparées par un espace. Il existe un mappage de position entre les valeurs spécifiées pour la clé multicolonne et pour la clé enfant correspondante.  
   
- **Enfant**  
+ **Child**  
  Spécifie la relation enfant (table).  
   
- **clé de l’enfant**  
+ **child-key**  
  Spécifie la clé enfant de l'enfant faisant référence à la clé parente du parent. Si la clé enfant est composée de plusieurs attributs (colonnes), les valeurs de child-key sont spécifiées en étant séparées par un espace. Il existe un mappage de position entre les valeurs spécifiées pour la clé multicolonne et pour la clé parente correspondante.  
   
  **Inverse**  
@@ -184,7 +184,7 @@ ms.locfileid: "52814871"
 </ROOT>  
 ```  
   
-### <a name="b-specifying-a-relationship-chain"></a>b. Spécification d'une chaîne de relation  
+### <a name="b-specifying-a-relationship-chain"></a>B. Spécification d'une chaîne de relation  
  Pour cet exemple, vous souhaitez obtenir le document XML suivant à l'aide des données provenant de la base de données AdventureWorks :  
   
 ```  

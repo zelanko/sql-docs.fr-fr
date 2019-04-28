@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88c4fedbce9dea4bbf50aadf4a9e91de362998ab
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60154485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702649"
 ---
 # <a name="setting-security-for-stored-procedures"></a>Définition de la sécurité pour les procédures stockées
   La sécurité des procédures stockées est définie avec la propriété `PermissionSet` sur une procédure stockée pour une instance [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] (niveau serveur), une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou un projet [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

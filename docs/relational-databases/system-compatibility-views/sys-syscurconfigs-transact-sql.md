@@ -1,5 +1,5 @@
 ---
-title: Sys.syscurconfigs (Transact-SQL) | Microsoft Docs
+title: sys.syscurconfigs (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 3ef0f49229ab374a0ca9e2dce12d7fa6ea5f59bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47757692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693842"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47757692"
 |-----------------|---------------|-----------------|  
 |**value**|**Int**|Valeur modifiable par l'utilisateur pour la variable. Utilisée par le [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] uniquement en cas d'exécution de RECONFIGURE.|  
 |**config**|**smallint**|Numéro de variable de configuration.|  
-|**Commentaire**|**nvarchar(255)**|Explication de l'option de configuration.|  
+|**comment**|**nvarchar(255)**|Explication de l'option de configuration.|  
 |**status**|**smallint**|Bitmap indiquant l'état de l'option. Il peut prendre les valeurs suivantes :<br /><br /> 0 = Statique. Le paramètre prend effet au redémarrage du serveur.<br /><br /> 1 = Dynamique. La variable prend effet lorsque l'instruction RECONFIGURE est exécutée.<br /><br /> 2 = Avancé. Variable s’affiche uniquement lorsque le **afficher les options avancées** est définie.<br /><br /> 3 = Dynamique et avancé.|  
   
 ## <a name="see-also"></a>Voir aussi  

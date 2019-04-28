@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645502"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +38,12 @@ ms.locfileid: "47842977"
 |**first_media_number**|**smallint**|Numéro de support du premier support contenant ce fichier de sauvegarde. Sa valeur peut être NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Nom du groupe de fichiers contenant un fichier de base de données sauvegardée. Sa valeur peut être NULL.|  
 |**page_size**|**Int**|Taille de la page en octets.|  
-|**file_number**|**NUMERIC(10,0)**|Numéro d’identification de fichier unique au sein d’une base de données (correspond à **sys.database_files**. **FILE_ID**).|  
-|**backed_up_page_count**|**NUMERIC(10,0)**|Nombre de pages sauvegardées. Sa valeur peut être NULL.|  
+|**file_number**|**numeric(10,0)**|Numéro d’identification de fichier unique au sein d’une base de données (correspond à **sys.database_files**. **FILE_ID**).|  
+|**backed_up_page_count**|**numeric(10,0)**|Nombre de pages sauvegardées. Sa valeur peut être NULL.|  
 |**file_type**|**char(1)**|Fichier sauvegardé, avec une des valeurs suivantes :<br /><br /> D = Fichier de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> L = Journal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> F = Catalogue de texte intégral.<br /><br /> Sa valeur peut être NULL.|  
-|**source_file_block_size**|**NUMERIC(10,0)**|Unité sur laquelle le fichier de données ou le fichier journal d'origine se trouvaient au moment de la sauvegarde. Sa valeur peut être NULL.|  
+|**source_file_block_size**|**numeric(10,0)**|Unité sur laquelle le fichier de données ou le fichier journal d'origine se trouvaient au moment de la sauvegarde. Sa valeur peut être NULL.|  
 |**file_size**|**numeric(20,0)**|Longueur en octets du fichier sauvegardé. Sa valeur peut être NULL.|  
-|**nom_logique**|**nvarchar(128)**|Nom logique du fichier sauvegardé. Sa valeur peut être NULL.|  
+|**logical_name**|**nvarchar(128)**|Nom logique du fichier sauvegardé. Sa valeur peut être NULL.|  
 |**physical_drive**|**nvarchar(260)**|Nom de l'unité physique ou de la partition. Sa valeur peut être NULL.|  
 |**physical_name**|**nvarchar(260)**|Suite du nom physique du fichier (système d'exploitation). Sa valeur peut être NULL.|  
 |**state**|**tinyint**|État du fichier, avec une des valeurs suivantes :<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = SUPPRIMÉ<br /><br /> Remarque : La valeur 5 est ignorée afin que ces valeurs correspondent aux valeurs des États de la base de données.|  

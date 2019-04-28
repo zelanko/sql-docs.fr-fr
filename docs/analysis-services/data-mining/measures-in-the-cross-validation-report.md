@@ -1,5 +1,5 @@
 ---
-title: Mesures dans le rapport de Validation croisée | Documents Microsoft
+title: Mesures dans le rapport de Validation croisée | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 00a8d7d0e05d4fa4a714011e18ec1162eb7b68e7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678890"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Mesures dans le rapport de validation croisée
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,6 +49,6 @@ ms.locfileid: "34016727"
 ||**Écart type**:<br />                      Moyenne de l'écart par rapport à la moyenne d'une mesure spécifique, sur toutes les partitions d'un modèle.<br /><br /> Pour la validation croisée, une valeur plus élevée pour ce score implique une variation substantielle entre les replis.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Test et Validation & #40 ; exploration de données & #41 ;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
+ [Test et validation &#40;exploration de données&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8ea81dff0f7c302395e4577d0b336b06f7c5d3fc
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52806333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678567"
 ---
 # <a name="copy-a-version-master-data-services"></a>Copier une version (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52806333"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], copiez une version du modèle pour en créer une nouvelle version.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Gestion des versions** .  
@@ -49,11 +49,11 @@ ms.locfileid: "52806333"
   
 4.  Dans la boîte de dialogue de confirmation, cliquez sur **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   [Modifier le nom d’une version &#40;Master Data Services&#41;](../master-data-services/change-a-version-name-master-data-services.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Versions &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  
   
   

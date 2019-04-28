@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5604aafbbc8a6d77081e829269955c8b7600f4ee
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657808"
 ---
 # <a name="sqlgetstmtattr"></a>SQLGetStmtAttr
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client étend le SQLGetStmtAttr pour exposer les attributs d’instruction spécifiques au pilote.  
@@ -50,7 +50,7 @@ ms.locfileid: "53359922"
  Pour plus d’informations sur les paramètres table, consultez [paramètres table &#40;ODBC&#41;](../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [SQLSetStmtAttr, fonction](https://go.microsoft.com/fwlink/?LinkId=59370)   
+ [SQLSetStmtAttr Function](https://go.microsoft.com/fwlink/?LinkId=59370)   
  [Détails de l’implémentation d’API ODBC](odbc-api-implementation-details.md)  
   
   

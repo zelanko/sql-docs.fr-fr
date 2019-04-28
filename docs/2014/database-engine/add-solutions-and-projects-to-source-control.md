@@ -16,11 +16,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6d9cc15f79235e225dc6589a16b48c373479e639
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792089"
 ---
 # <a name="add-solutions-and-projects-to-source-control"></a>Ajouter des solutions et des projets au contrôle de code source
   Lorsque vous ajoutez une solution au contrôle de code source, la solution est intégrée à une archive de contrôle de version dynamique créée et gérée par le fournisseur de contrôle de code source. Chaque fois qu'un utilisateur archive une nouvelle version de la solution, cette version est intégrée à l'archive et devient disponible auprès des autres utilisateurs du contrôle de code source.  

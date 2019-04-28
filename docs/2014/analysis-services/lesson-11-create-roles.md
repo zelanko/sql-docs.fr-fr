@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 12 : Créer des rôles | Microsoft Docs'
+title: 'Leçon 12 : Créer des rôles | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4eec5e4f93a085ab784135593c139410f5911e1e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729616"
 ---
-# <a name="lesson-12-create-roles"></a>Leçon 12 : Créer les rôles
+# <a name="lesson-12-create-roles"></a>Leçon 12 : Créer les rôles
   Dans cette leçon, vous allez créer des rôles. Les rôles fournissent la sécurité des objets et des données d'une base de données de modèles, en limitant l'accès aux utilisateurs Windows qui y sont membres. Chaque rôle est défini avec une autorisation unique : Aucun, lecture, lecture et processus, processus ou administrateur. Les rôles peuvent être définis lors de la création du modèle à l'aide de la boîte de dialogue Gestionnaire de rôles de [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Une fois le modèle déployé, vous pouvez gérer les rôles à l'aide de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Pour plus d’informations, consultez [Rôles &#40;SSAS Tabulaire&#41;](tabular-models/roles-ssas-tabular.md).  
   
 > [!NOTE]  

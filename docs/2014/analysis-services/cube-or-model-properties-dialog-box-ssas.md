@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 404dd6cd6c47f89b3a8e12acd6048aecae0c7098
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48153499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679569"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Boîte de dialogue de propriétés du cube ou du modèle (SSAS)
   Utilisez la boîte de dialogue **Propriétés de la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour définir les propriétés d'un cube ou d'une base de données. Pour afficher la boîte de dialogue, cliquez avec le bouton droit sur un cube ou un modèle dans **l’Explorateur d’objets** et sélectionnez **Propriétés**.  
@@ -40,10 +40,10 @@ ms.locfileid: "48153499"
 |**Description**|Affiche la description du cube ou du modèle.|  
 |**Créer un horodateur**|Affiche la date et l'heure de création du cube ou du modèle.|  
 |**Dernière mise à jour du schéma**|Affiche la date et l'heure de la dernière mise à jour des métadonnées du cube ou du modèle.|  
-|**Mode de traitement du Cache de script**|Permet de sélectionner le mode de traitement à utiliser pour le cache des scripts du cube ou du modèle. Pour plus d’informations sur les valeurs de cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
-|**Mode de traitement**|Permet de sélectionner le mode de traitement à utiliser pour le cube ou le modèle. Pour plus d’informations sur les valeurs de cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
-|**Emplacement de stockage**|Tapez le nom du dossier à utiliser comme emplacement de stockage par défaut pour les groupes de mesures et les partitions associés au cube ou au modèle, ou cliquez sur le bouton représentant des points de suspension (**...**) pour afficher la boîte de dialogue **Rechercher un dossier distant** et sélectionner un dossier. Pour plus d'informations sur la boîte de dialogue **Rechercher un dossier distant**, consultez [Boîte de dialogue Rechercher un dossier distant &#40;Analysis Services - Données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Pour plus d’informations sur les valeurs de cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
-|**État**|Affiche l'état du traitement du cube ou du modèle. Pour plus d’informations sur les valeurs de cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
+|**Mode de traitement du Cache de script**|Permet de sélectionner le mode de traitement à utiliser pour le cache des scripts du cube ou du modèle. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
+|**Mode de traitement**|Permet de sélectionner le mode de traitement à utiliser pour le cube ou le modèle. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
+|**Emplacement de stockage**|Tapez le nom du dossier à utiliser comme emplacement de stockage par défaut pour les groupes de mesures et les partitions associés au cube ou au modèle, ou cliquez sur le bouton représentant des points de suspension (**...**) pour afficher la boîte de dialogue **Rechercher un dossier distant** et sélectionner un dossier. Pour plus d'informations sur la boîte de dialogue **Rechercher un dossier distant**, consultez [Boîte de dialogue Rechercher un dossier distant &#40;Analysis Services - Données multidimensionnelles&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
+|**État**|Affiche l'état du traitement du cube ou du modèle. Pour plus d'informations sur les valeurs que peuvent prendre cette propriété, consultez <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**LastProcessed**|Affiche la date et l'heure du dernier traitement du cube ou du modèle.|  
   
 ## <a name="see-also"></a>Voir aussi  

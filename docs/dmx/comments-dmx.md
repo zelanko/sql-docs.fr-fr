@@ -1,5 +1,5 @@
 ---
-title: Commentaires (DMX) | Microsoft Docs
+title: Comments (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f319457da85378000ef974c3ace1ddbba87d18e1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042107"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709081"
 ---
 # <a name="comments-dmx"></a>Commentaires (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "38042107"
 -   **/\* ... \*/ (barre oblique-astérisque paires de caractères).** Ces caractères de commentaire permettent d'écrire un commentaire sur la même ligne que le code à exécuter, d'écrire un commentaire sur une ligne séparée ou même d'écrire des commentaires dans du code exécutable. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] évalue tous les éléments dans le commentaire ouvrant (/ *) pour le commentaire fermant (\*/) en tant que partie du commentaire. Pour créer un commentaire de plusieurs lignes, commencez le commentaire par la paire de caractères de commentaire (/\*) et le commentaire par la paire de caractères de commentaire de fermeture (\*/). Aucun autre caractère de commentaire ne doit être inclus dans les lignes de commentaire. Pour plus d’informations sur ce caractère de commentaire, consultez [barre oblique étoile &#40;commentaire&#41; &#40;DMX&#41;](../dmx/slash-star-comment-dmx.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Data Mining Extensions &#40;DMX&#41; référence](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Référence DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des opérateurs](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; référence des instructions](../dmx/data-mining-extensions-dmx-statements.md)   

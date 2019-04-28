@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f471800a72bdbec154fe7bedb89d9b5a10593132
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48062943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699756"
 ---
 # <a name="using-cube-writebacks-mdx"></a>Utilisation de l'écriture différée de cubes (MDX)
   Pour mettre à jour un cube, vous pouvez utiliser l’instruction [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube). Celle-ci permet de mettre à jour un tuple avec une valeur spécifique. Pour utiliser efficacement l'instruction UPDATE CUBE afin de mettre à jour un cube, vous devez comprendre la syntaxe de l'instruction, les conditions d'erreur susceptibles de se produire, ainsi que les effets potentiels des mises à jour sur un cube.  
@@ -42,7 +42,7 @@ UPDATE [CUBE] <Cube_Name> SET <tuple>.VALUE = <value> [,<tuple>.VALUE = <value>.
  Vous pouvez considérer l'instruction UPDATE CUBE comme une sous-routine générant une série d'opérations d'écriture différée isolées sur des cellules atomiques. Toutes ces opérations d'écriture différée sont ensuite regroupées dans la somme spécifiée.  
   
 > [!NOTE]  
->  Lorsque les cellules mises à jour ne se chevauchent pas, la propriété de chaîne de connexion `Update Isolation Level` peut être utilisée pour améliorer les performances pour UPDATE CUBE. Pour plus d’informations, consultez <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
+>  Lorsque les cellules mises à jour ne se chevauchent pas, la propriété de chaîne de connexion `Update Isolation Level` peut être utilisée pour améliorer les performances pour UPDATE CUBE. Pour plus d'informations, consultez <xref:Microsoft.AnalysisServices.AdomdClient.AdomdConnection.ConnectionString%2A>.  
   
 ## <a name="example"></a>Exemple  
  Pour tester l'instruction UPDATE CUBE, utilisez le groupe de mesures Cibles de ventes dans le cube Adventure Works. Ce groupe de mesures est constitué de mesures regroupées par SUM, qui est une condition requise pour l'instruction UPDATE CUBE.  
@@ -118,6 +118,6 @@ USE_EQUAL_ALLOCATION
 -   modification de la granularité d'une dimension comprise dans l'écriture différée.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Modification des données &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
+ [Modification de données &#40;MDX&#41;](mdx-data-modification-modifying-data.md)  
   
   

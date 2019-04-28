@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d4c7b695882605eacd19d61bf6fe2cc71d8a6048
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699848"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Membres calculés dans les sous-sélections et les sous-cubes
   Dans les versions précédentes, les membres calculés n'étaient pas autorisés dans les sous-sélections ou les sous-cubes. Toutefois, à partir de SQL Server 2008, ils sont autorisés et activés par une propriété de connexion. De plus, un nouveau comportement pour les membres calculés, dans les sous-sélections et les sous-cubes, a été introduit dans SQL Server 2008 R2.  
@@ -28,7 +28,7 @@ ms.locfileid: "50148251"
   
 |||  
 |-|-|  
-|Valeur|Description|  
+|Value|Description|  
 |0|Les membres calculés ne sont pas autorisés dans les sous-sélections ou les sous-cubes.<br /><br /> Une erreur est déclenchée lors de l'évaluation de la sous-sélection ou du sous-cube si un membre calculé est référencé.|  
 |1|Les membres calculés sont autorisés dans les sous-sélections ou les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné.|  
 |2|Les membres calculés sont autorisés dans les sous-sélections et les sous-cubes mais aucun membre ascendant n'est introduit dans le sous-espace retourné. Par ailleurs, la granularité mixte est autorisée dans la sélection des membres calculés.|  

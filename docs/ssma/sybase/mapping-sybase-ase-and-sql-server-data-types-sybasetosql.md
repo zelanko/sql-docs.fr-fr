@@ -14,11 +14,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 8e50253b7c7fb6c59b4303c528c1ef7267ccf644
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62706073"
 ---
 # <a name="mapping-sybase-ase-and-sql-server-data-types-sybasetosql"></a>Mappage des types de données Sybase ASE et SQL Server (SybaseToSQL)
 Les types de base de données Sybase Adaptive Server Enterprise (ASE) diffèrent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou types de base de données SQL Azure. Lorsque vous convertissez des objets de base de données ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou objets de SQL Azure, vous devez spécifier le mappage des types de données à partir de l’ASE à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou SQL Azure. Vous pouvez accepter les mappages de type de données par défaut, ou vous pouvez personnaliser les mappages comme indiqué dans les sections suivantes.  

@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c3ff85f2d8f99f530ad784b3a68c3ef2bfcd6432
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650270"
 ---
 # <a name="cluster-resource-group"></a>Groupe de ressources de cluster
   Utilisez la page Groupe de ressources de cluster pour spécifier le disque où les ressources du serveur virtuel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seront hébergées.  
@@ -31,6 +31,6 @@ ms.locfileid: "53369611"
 -   Tapez le nom d'un groupe à créer. Notez que le nom « Stockage disponible » n'est pas un nom de groupe valide.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Comment : Créer un nouveau Cluster de basculement SQL Server](https://go.microsoft.com/fwlink/?LinkId=190960)  
+ [Procédure : Créer un nouveau Cluster de basculement SQL Server](https://go.microsoft.com/fwlink/?LinkId=190960)  
   
   

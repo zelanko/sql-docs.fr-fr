@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: c13e41abea44bdbe0f954518f42aab118360a155
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62715836"
 ---
 # <a name="syspdwnodesindexes-transact-sql"></a>sys.pdw_nodes_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -30,14 +30,14 @@ ms.locfileid: "56012380"
 |object_id|**Int**|ID de l’objet auquel appartient cet index.||  
 |NAME|**sysname**|Nom de l’index. Nom est unique seulement dans l’objet. NULL = Segment||  
 |index_id|**Int**|ID de l’index. index_id est unique seulement dans l’objet.<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = index cluster<br /><br /> > 1 = index Non cluster||  
-|Type|**tinyint**|Type de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = ordonné en clusters<br /><br /> 2 = Non cluster<br /><br /> 5 = index columnstore optimisé en mémoire xVelocity Clustered|  
+|type|**tinyint**|Type de l'index :<br /><br /> 0 = Segment de mémoire<br /><br /> 1 = ordonné en clusters<br /><br /> 2 = Non cluster<br /><br /> 5 = index columnstore optimisé en mémoire xVelocity Clustered|  
 |type_desc|**nvarchar(60)**|Description du type d'index :<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> CLUSTER COLUMNSTORE||  
 |is_unique|**bit**|0 = L'index n'est pas unique.|Toujours 0.|  
 |data_space_id|**Int**|ID de l’espace de données pour cet index. L'espace de données est soit un groupe de fichiers, soit un schéma de partition.<br /><br /> 0 = object_id est une fonction table.||  
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY est OFF.|Toujours 0.|  
 |is_primary_key|**bit**|1 = L'index fait partie d'une contrainte PRIMARY KEY.|Toujours 0.|  
 |is_unique_constraint|**bit**|1 = L'index fait partie d'une contrainte UNIQUE.|Toujours 0.|  
-|fill_factor|**tinyint**|> 0 = Pourcentage FILLFACTOR utilisé lorsque l'index a été créé ou reconstruit.<br /><br /> 0 = Valeur par défaut|Toujours 0.|  
+|fill_factor|**tinyint**|> 0 = pourcentage FILLFACTOR utilisé lorsque l’index a été créé ou reconstruit.<br /><br /> 0 = Valeur par défaut|Toujours 0.|  
 |is_padded|**bit**|0 = PADINDEX est OFF.|Toujours 0.|  
 |is_disabled|**bit**|1 = L'index est désactivé.<br /><br /> 0 = L'index n'est pas désactivé.||  
 |is_hypothetical|**bit**|0 = L'index n'est pas hypothétique.|Toujours 0.|  

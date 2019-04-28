@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a372b5c0b89088a7054606e76138906f83598e5d
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699447"
 ---
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Spécifications relatives à l'architecture du client pour le développement d'Analysis Services
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] prend en charge une architecture de client léger. Le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] moteur de calcul étant entièrement basé sur serveur, toutes les requêtes sont résolues sur le serveur. De ce fait, chaque requête n'exige qu'un seul aller-retour entre le client et le serveur, et les performances peuvent évoluer lorsque la complexité des requêtes augmente.  

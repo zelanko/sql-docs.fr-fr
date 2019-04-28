@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: abcfea8c23806de0e784b8784064d77195ad5cf1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679777"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Créer/Modifier une relation (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer/Modifier une relation** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir ou modifier une relation dans une vue de source de données. Pour afficher la boîte de dialogue **Créer/Modifier une relation** , vous pouvez :  
@@ -47,7 +47,7 @@ ms.locfileid: "48197679"
  **Colonnes de destination**  
  Sélectionnez les colonnes qui sont référencées par des colonnes de la table source.  
   
- **inverse**  
+ **Reverse**  
  Inverse le sens de la relation.  
   
  **Description**  
@@ -55,6 +55,6 @@ ms.locfileid: "48197679"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de Source de données &#40;Analysis Services - données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

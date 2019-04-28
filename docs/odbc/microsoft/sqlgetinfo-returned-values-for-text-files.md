@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bbeceddb135649223be29956d0796e76fd5d57f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62816598"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>Valeurs retournées par SQLGetInfo pour les fichiers texte
 Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argument et les valeurs correspondantes retournées par **SQLGetInfo**. Ces informations peuvent être extraites en passant le répertoriés en langage C# defines à **SQLGetInfo** dans le *fInfoType* argument. Pour plus d’informations sur les valeurs retournées par **SQLGetInfo**, consultez le [de référence du programmeur ODBC](../../odbc/reference/odbc-programmer-s-reference.md).  
@@ -30,7 +30,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 > [!NOTE]  
 >  Où **SQLGetInfo** retourne un masque de bits 32 bits, une barre verticale (&#124;) représente une opération OR au niveau du bit.  
   
-|infoType|Valeur renvoyée|  
+|InfoType|Valeur renvoyée|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -87,7 +87,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_DATABASE_NAME|Répertoire de base de données en cours|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|« TEXT »|  
-|SQL_DBMS_VER|ISAM : texte<br /><br /> Version : 1.0<br /><br /> Format du numéro de version : 01.00.0000|  
+|SQL_DBMS_VER|ISAM : Text<br /><br /> Version : 1.0<br /><br /> Format du numéro de version : 01.00.0000|  
 |SQL_DDL_INDEX|0|  
 |SQL_DEFAULT_TXN_ISOLATION|0|  
 |SQL_DESCRIBE_PARAMETER|0|  
@@ -142,7 +142,7 @@ Le tableau suivant répertorie le langage C# defines pour le *fInfoType* argumen
 |SQL_NON_NULLABLE_COLUMNS|SQL_NNC_NON_NULL|  
 |SQL_NULL_COLLATION|SQL_NC_LOW|  
 |SQL_NUMERIC_FUNCTIONS|Valeurs multiples|  
-|MISE EN CONFORMITÉ SQL_ODBC_SAG_CLI_|SQL_OSCC_COMPLIANT|  
+|SQL_ODBC_SAG_CLI_ CONFORMANCE|SQL_OSCC_COMPLIANT|  
 |SQL_ODBC_SQL_INTEGRITY|"N"|  
 |SQL_ODBC_VER|À partir du Gestionnaire de pilotes|  
 |SQL_OJ_CAPABILITIES|Valeurs multiples|  

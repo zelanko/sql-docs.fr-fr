@@ -1,5 +1,5 @@
 ---
-title: Sys.database_mirroring (Transact-SQL) | Microsoft Docs
+title: sys.database_mirroring (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693911"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47796578"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**Int**|ID de la base de données. Unique dans une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**mirroring_guid**|**uniqueidentifier**|ID du partenariat de mise en miroir.<br /><br /> NULL = la base de données n’est pas accessible ou n’est pas mise en miroir.<br /><br /> Remarque : Si la base de données ne participe pas à la mise en miroir, le préfixe « Mirroring » de toutes les colonnes sont NULL.|  
+|**mirroring_guid**|**uniqueidentifier**|ID du partenariat de mise en miroir.<br /><br /> NULL = la base de données n’est pas accessible ou n’est pas mise en miroir.<br /><br /> Remarque : Si la base de données ne participe pas à la mise en miroir, toutes les colonnes que le préfixe « Mirroring » ont la valeur NULL.|  
 |**mirroring_state**|**tinyint**|État de la base de données miroir et de la session de mise en miroir de base de données.<br /><br /> 0 = suspendu<br /><br /> 1 = Déconnecté de l'autre partenaire<br /><br /> 2 = Synchronisation<br /><br /> 3 = Basculement en attente<br /><br /> 4 = Synchronisé<br /><br /> 5 = les serveurs partenaires ne sont pas synchronisés. Le basculement n'est maintenant pas possible.<br /><br /> 6 = les serveurs partenaires sont synchronisés. Le basculement est éventuellement possible. Pour plus d’informations sur la configuration requise pour le basculement, consultez [Database Mirroring Operating Modes](../../database-engine/database-mirroring/database-mirroring-operating-modes.md).<br /><br /> NULL = La base de données n'est pas accessible ou n'a pas été mise en miroir.|  
 |**mirroring_state_desc**|**nvarchar(60)**|La description de l'état de la base de données miroir et de la session de mise en miroir de base de données peut être :<br /><br /> DISCONNECTED<br /><br /> SYNCHRONIZED<br /><br /> SYNCHRONIZING<br /><br /> PENDING_FAILOVER<br /><br /> SUSPENDED<br /><br /> UNSYNCHRONIZED<br /><br /> SYNCHRONIZED<br /><br /> NULL<br /><br /> Pour plus d’informations, consultez [États de la mise en miroir &#40;SQL Server&#41;](../../database-engine/database-mirroring/mirroring-states-sql-server.md).|  
 |**mirroring_role**|**tinyint**|Rôle actuel de la base de données locale dans la session de mise en miroir de base de données.<br /><br /> 1 = Principal<br /><br /> 2 = Miroir<br /><br /> NULL = La base de données n'est pas accessible ou n'a pas été mise en miroir.|  
@@ -61,7 +61,7 @@ ms.locfileid: "47796578"
 |**mirroring_end_of_log_lsn**|**numeric(25,0)**|end-of-log local qui a été vidé sur le disque. Cela est comparable au LSN renforcé à partir du serveur miroir (voir la **mirroring_failover_lsn** colonne).|  
 |**mirroring_replication_lsn**|**numeric(25,0)**|Numéro séquentiel dans le journal maximum que la réplication peut envoyer.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Voir aussi  

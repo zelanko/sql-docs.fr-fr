@@ -14,19 +14,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f42b418a2cc40b3e805e0129dc3414c3db5bbdc
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48187280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650349"
 ---
 # <a name="browse-data-source-view-data-mining-wizard"></a>Parcourir Vue des sources de données (Assistant Exploration de données)
   Utilisez la boîte de dialogue **Parcourir Vue des sources de données** pour afficher la vue de la source de données sélectionnée dans la page **Sélectionner une vue de source de données** de l’Assistant.  
   
 > [!NOTE]  
->  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’une base de données relationnelles ou d’un entrepôt de données qui existent déjà** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
+>  Cette page s’affiche uniquement si vous avez sélectionné **À partir d’une base de données relationnelle ou d’un entrepôt de données qui existent déjà** dans la page **Sélectionner la méthode de définition** de l’Assistant.  
   
- **Pour plus d’informations :** [Vues de sources de données dans les modèles multidimensionnels](multidimensional-models/data-source-views-in-multidimensional-models.md), [Assistant Exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)  
+ **Pour plus d’informations :** [Dans les modèles multidimensionnels, les vues de Source de données](multidimensional-models/data-source-views-in-multidimensional-models.md), [Assistant exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)  
   
 ## <a name="options"></a>Options  
  **Zoom**  

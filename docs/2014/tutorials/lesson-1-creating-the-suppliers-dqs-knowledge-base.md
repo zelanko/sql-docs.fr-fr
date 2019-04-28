@@ -11,13 +11,13 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7aa0e4755de7f358596c7ce477367d84646fd176
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56010951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676045"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Leçon 1 : Création d'une base de connaissances DQS nommée Fournisseurs
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Leçon 1 : Création d’une base de connaissances DQS nommée Fournisseurs
   Dans cette leçon, vous créez une base de connaissances DQS nommée **fournisseurs** avec la base de connaissances (métadonnées) sur les données des fournisseurs. Utilisez la base de connaissances pour effectuer les activités de nettoyage et de correspondance sur les données d'entrée des fournisseurs. L'activité de nettoyage identifie les données incorrectes ou non valides, les corrige, propose des corrections/suggestions, normalise les données, et les enrichit avec des informations. L'activité de correspondance compare les données et identifie les enregistrements de données similaires (mais légèrement différents), et vous permet de supprimer les doublons.  
   
  Vous pouvez utiliser des processus assistés par ordinateur et interactifs pour créer et gérer une base de connaissances. Les connaissances contenues dans une base de connaissances sont conservées dans des domaines, chacun d'entre eux étant spécifique à un champ dans les données que vous souhaitez nettoyer et/ou mettre en correspondance.  

@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56040201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720047"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Spécification du type de données et du type de contenu (Didacticiel sur l'exploration de données de base)
   Maintenant que vous avez sélectionné les colonnes à utiliser pour la génération de votre structure et l'apprentissage de vos modèles, apportez les modifications nécessaires aux données et aux types de contenu par défaut définis par l'Assistant.  

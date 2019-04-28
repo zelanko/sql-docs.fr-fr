@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0ab7046e036a6f50f8009a481f92345d7ce12aea
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656067"
 ---
 # <a name="sqlrowcount-function"></a>SQLRowCount (fonction)
 **Conformité**  
@@ -44,7 +44,7 @@ SQLRETURN SQLRowCount(
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Au paramètre StatementHandle*  
+ *StatementHandle*  
  [Entrée] Descripteur d’instruction.  
   
  *RowCountPtr*  

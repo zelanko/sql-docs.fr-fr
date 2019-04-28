@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2ee2b3238a66000546619815a886fc6017c51fe6
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827399"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>Diriger le flux de capture de données modifiées en fonction du type de modification
   Pour pouvoir ajouter et configurer une transformation de séparateur de capture de données modifiées, le package doit contenir au moins une tâche de flux de données et une source CDC.  
@@ -36,11 +36,11 @@ ms.locfileid: "58377267"
   
 6.  Sélectionnez l'une des sorties suivantes :  
   
-    -   Supprimer la sortie : La sortie dans lequel les lignes de modification DELETE sont dirigées.  
+    -   Sortie de suppression : Sortie vers laquelle les lignes de modification DELETE sont dirigées.  
   
-    -   Sortie d’insertion : La sortie dans lequel les lignes de modification INSERT sont dirigées.  
+    -   Sortie d’insertion : Sortie vers laquelle les lignes de modification INSERT sont dirigées.  
   
-    -   Sortie de la mise à jour : La sortie où avant/après UPDATE lignes et fusion les lignes de modification sont dirigées.  
+    -   Sortie de mise à jour : Sortie vers laquelle les lignes de modification avant/après UPDATE et les lignes de modification MERGE sont dirigées.  
   
 7.  Éventuellement, vous pouvez configurer les propriétés avancées à l'aide de la boîte de dialogue **Éditeur avancé** .  
   

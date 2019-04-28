@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 14fa0cb949505ab2aeb15d1236add9acba9a1ab1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703728"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Paramètres du projet (Azure SQL DB) (SybaseToSQL)
 Les paramètres de projet de base de données SQL Azure vous permettent de configurer le suffixe de base de données de base de données SQL Azure à ajouter dans la boîte de dialogue de connexion et permettent également à implémenter le mécanisme de pulsation dans la connexion de base de données SQL Azure.  

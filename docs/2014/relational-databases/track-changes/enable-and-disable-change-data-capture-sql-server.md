@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670575"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Activer et désactiver la capture de données modifiées (SQL Server)
   Cette rubrique décrit l'activation et la désactivation de la capture de données modifiées pour une base de données et une table.  

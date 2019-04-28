@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 61b706145f708e9b2e8a04ba4e7bc574c503a742
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62795786"
 ---
 # <a name="mapping-oracle-schemas-to-sql-server-schemas-oracletosql"></a>Mappage de schémas Oracle à des schémas SQL Server (OracleToSQL)
 Dans Oracle, chaque base de données a un ou plusieurs schémas. Par défaut, SSMA migre tous les objets dans un schéma Oracle pour un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nommé pour le schéma de base de données. Toutefois, vous pouvez personnaliser le mappage entre les schémas Oracle et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de données.  

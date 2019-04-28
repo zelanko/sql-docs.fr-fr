@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691049"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "58658116"
 |step_index|**Int**|Étape de requête qui appelle ce processus de travail DMS.<br /><br /> request_id, step_index et dms_step_index forment la clé pour cette vue.|Identique à step_index dans [sys.dm_pdw_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**Int**|Étape actuelle dans le plan DMS.<br /><br /> request_id, step_index et dms_step_index forment la clé pour cette vue.|Identique à dms___step_index dans [sys.dm_pdw_dms_workers &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**Int**|Nœud qui exécute le processus de travail DMS.|Identique à node_id dans [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|Type|**nvarchar(60)**|Type d’opération externe que ce nœud est en cours d’exécution.<br /><br /> FICHIER fractionné est une opération sur un fichier Hadoop externe qui a été divisé en plusieurs concernent la plage plus petite.|« FRACTIONNEMENT DE FICHIER »|  
+|type|**nvarchar(60)**|Type d’opération externe que ce nœud est en cours d’exécution.<br /><br /> FICHIER fractionné est une opération sur un fichier Hadoop externe qui a été divisé en plusieurs concernent la plage plus petite.|« FRACTIONNEMENT DE FICHIER »|  
 |work_id|**Int**|Le fichier fractionné le code.|Supérieur ou égal à 0.<br /><br /> Unique pour chaque nœud de calcul.|  
 |input_name|**nvarchar(60)**|Nom de l’entrée en cours de lecture de la chaîne.|Pour un fichier Hadoop, ceci est le nom de fichier Hadoop.|  
 |read_location|**bigint**|Décalage de l’emplacement de lecture.||  

@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd497b6c4adae9a89ad0907985591675633a9c84
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48048980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679536"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Boîte de dialogue Options d'exploration de données (Analysis Services – Exploration de données)
   Utilisez la boîte de dialogue **Options d'exploration de données** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour définir les options d'échantillonnage et graphiques de la boîte de dialogue **Explorer les données** . Vous pouvez afficher la boîte de dialogue **Options d'exploration de données** en cliquant sur **Options d'échantillonnage** dans la boîte de dialogue **Explorer les données** .  

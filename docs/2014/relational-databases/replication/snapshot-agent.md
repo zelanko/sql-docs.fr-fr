@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7cccde764edca2b5552fb22490d971fe095c707e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676545"
 ---
 # <a name="snapshot-agent"></a>Agent d'instantané
   La boîte de dialogue **Agent d'instantané** affiche des informations détaillées concernant l'Agent d'instantané, notamment son état, son historique, des messages d'information ainsi que tout message d'erreur s'y rapportant.  

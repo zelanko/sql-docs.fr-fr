@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732195"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Onglet Réseau de dépendances (Visionneuse de modèle d'exploration de données)
   L'onglet **Réseau de dépendances** affiche sous forme graphique tous les attributs contenus dans le modèle d'exploration de données et illustre les relations qu'il existe entre eux.  
@@ -53,7 +53,7 @@ ms.locfileid: "48226169"
  **Copier le graphique entier**  
  Copie la totalité du diagramme dans le Presse-papiers.  
   
- **Liens**  
+ **Links**  
  Ajustez le nombre de liens (arêtes) et de nœuds affichés par la visionneuse en déplaçant le curseur à droite des attributs. Faites glisser la barre de curseur vers le bas pour augmenter la valeur de seuil, afin que seuls les liens les plus forts soient affichés. Pour chaque type de modèle, une valeur légèrement différente est utilisée pour représenter les liens dans le graphique :  
   
 -   Dans un modèle d' **arbre de décision** , les arêtes représentent la force prédictive de la connexion, déterminée en partie par le score de fractionnement.  
@@ -66,7 +66,7 @@ ms.locfileid: "48226169"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

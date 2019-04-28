@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 819d073ba286f0674dc3470a7e8d9d6469318b7f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48133989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730713"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Hiérarchies (onglet Structure de dimension, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Hiérarchies** pour gérer les hiérarchies et les niveaux de la dimension actuellement sélectionnée. Pour plus d’informations, consultez [Créer des hiérarchies définies par l’utilisateur](multidimensional-models/user-defined-hierarchies-create.md).  

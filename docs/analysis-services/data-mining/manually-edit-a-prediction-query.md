@@ -1,5 +1,5 @@
 ---
-title: Modifier manuellement une requête de prédiction | Documents Microsoft
+title: Modifier manuellement une requête de prédiction | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aba181ab73ab730869eaa7930591cf21a947d20c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679412"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Modifier manuellement une requête de prédiction
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "34014836"
     >  Si la requête que vous avez créée n'est pas valide, la fenêtre Résultats n'affiche ni erreur ni résultats. Cliquez sur le bouton **Conception** ou sélectionnez **Conception** ou **Requête** dans le menu **Modèle d’exploration de données** pour résoudre le problème et réexécuter la requête.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
- [Générateur de requête de prédiction & #40 ; exploration de données & #41 ;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
- [Leçon 6 : Création et utilisation des prédictions & #40 ; Didacticiel d’exploration de données de base de données & #41 ;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
+ [Requêtes d'exploration de données](../../analysis-services/data-mining/data-mining-queries.md)   
+ [Générateur de requêtes de prédiction &#40;exploration de données&#41;](http://msdn.microsoft.com/library/12900d49-db88-48bb-a5f4-0a9a172bc126)   
+ [Leçon 6 : Création et utilisation de prédictions &#40;didacticiel d’exploration de données de base&#41;](http://msdn.microsoft.com/library/b213cb58-2c40-4c89-b08b-d3c36a4afad3)  
   
   

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be629b4c2b8c47ed191651260bf1a722b40f007
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703319"
 ---
 # <a name="verify-a-powerpivot-for-sharepoint-installation"></a>Vérifier une installation PowerPivot pour SharePoint
   Une instance de PowerPivot pour SharePoint que vous installez dans une batterie de serveurs SharePoint est administrée via l'Administration centrale de SharePoint. Au minimum, vous pouvez vérifier des pages dans l'Administration centrale et sur les sites SharePoint pour vérifier que les composants et fonctionnalités du serveur PowerPivot sont disponibles. Toutefois, pour une vérification complète, vous devez disposer d'un classeur PowerPivot que vous pouvez publier sur SharePoint et auquel vous pouvez accéder à partir d'une bibliothèque. Vous pouvez, à des fins de test, publier un classeur d'exemple contenant déjà des données PowerPivot et l'utiliser pour confirmer que l'intégration SharePoint est correctement configurée.  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92b3a9491b8424fb9015fc4d30875fedb38758
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53353005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657778"
 ---
 # <a name="sqlgetdescfield"></a>SQLGetDescField
   Le pilote ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client expose uniquement les champs de descripteur spécifiques au pilote pour le descripteur de ligne d'implémentation (IRD). Dans le descripteur IRD, les champs de descripteur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sont référencés par le biais d'attributs de colonne spécifiques aux pilotes. Pour obtenir une liste complète des champs de descripteur spécifiques au pilote disponibles, consultez [SQLColAttribute](sqlcolattribute.md).  

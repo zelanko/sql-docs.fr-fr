@@ -15,11 +15,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: dd68505153eb43d826f3854bd4f525ed06ea072a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827429"
 ---
 # <a name="import-and-export-bulk-data-by-using-the-bcp-utility-sql-server"></a>Importer et exporter des données en bloc à l'aide de l'utilitaire bcp (SQL Server)
   Cette rubrique est une présentation générale de l'utilisation de l' [utilitaire bcp](../../tools/bcp-utility.md) pour exporter des données à partir de n'importe quel emplacement d'une base de données [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contenant une instruction SELECT, vues partitionnées comprises.  

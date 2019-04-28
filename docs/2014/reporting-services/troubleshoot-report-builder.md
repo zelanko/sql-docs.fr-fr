@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b0287d9b8533cc551f31c4c054db9bf87c5415a
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59958485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657407"
 ---
 # <a name="troubleshoot-report-builder"></a>Résolution des problèmes liés au Générateur de rapports
   Le Générateur de rapports est un outil de création de rapport [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] qui permet de générer des rapports à partir de nombreux types différents de sources de données et de les publier sur un serveur de rapports ou un site SharePoint. Les rapports que vous créez sont consultables dans le Générateur de rapports, dans un navigateur Web, ou en tant que partie d’un [!INCLUDE[msCoName](../includes/msconame-md.md)] application de Windows ou un site SharePoint.  

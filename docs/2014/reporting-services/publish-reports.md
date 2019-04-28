@@ -15,11 +15,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c37897df36297323d164e382b6af081f2985eaf1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59942675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657580"
 ---
 # <a name="publish-reports"></a>Publier des rapports
   Dans[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], vous pouvez publier l’ensemble des rapports et sources de données partagées dans un projet Report Server sur un serveur de rapports en déployant le projet, ou vous pouvez publier un rapport unique. Avant de pouvoir publier un rapport, vous devez spécifier l'URL du serveur de rapports cible. Pour plus d’informations, consultez [Définir des propriétés de déploiement &#40;Reporting Services&#41;](tools/set-deployment-properties-reporting-services.md).  

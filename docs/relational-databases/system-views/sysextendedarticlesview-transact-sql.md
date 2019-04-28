@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40a494f4cf157b85f13327f8367b90e8db2fcce7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62693765"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52757032"
 |**del_cmd**|**nvarchar(255)**|Commande à exécuter en cas d'instruction DELETE, sinon création à partir du journal|  
 |**description**|**nvarchar(255)**|L’entrée descriptive de l’article.|  
 |**dest_table**|**nvarchar(128)**|Nom de la table de destination|  
-|**Filter**|**Int**|Identificateur d'objet de la procédure stockée utilisée pour le partitionnement horizontal.|  
+|**filter**|**Int**|Identificateur d'objet de la procédure stockée utilisée pour le partitionnement horizontal.|  
 |**filter_clause**|**ntext**|Clause WHERE de l'article utilisée pour le filtrage horizontal.|  
 |**ins_cmd**|**nvarchar(255)**|Commande à exécuter lors d'une opération INSERT.|  
 |**nom**|**nvarchar(128)**|Nom associé à l'article et unique dans la publication|  

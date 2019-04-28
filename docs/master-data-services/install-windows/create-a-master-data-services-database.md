@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 449cf64468f7dcb3925b09af08fd0661f23b1cd1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695747"
 ---
 # <a name="create-a-master-data-services-database"></a>Créer une base de données Master Data Services
 
@@ -24,7 +24,7 @@ ms.locfileid: "47818587"
 
   Créez une base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] lorsque vous avez besoin d’une nouvelle base de données pour prendre en charge l’application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] et le service web [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Pour plus d’informations sur la configuration requise pour l’ordinateur qui héberge la base de données, consultez [Configuration requise pour la base de données &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
@@ -38,15 +38,15 @@ ms.locfileid: "47818587"
   
 4.  Exécutez l’Assistant **Création d’une base de données** pour créer et configurer la base de données. Pour plus d’informations sur les options d’interface utilisateur de l’Assistant, consultez [Create Database Wizard &#40;Master Data Services Configuration Manager&#41;](../../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) (Assistant Création d’une base de données (Gestionnaire de configuration de Master Data Services)).  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
--   Configurez les paramètres système pour la base de données et l'application Web. Pour plus d’informations, consultez [Paramètres système &#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md).  
+-   Configurez les paramètres système pour la base de données et l'application Web. Pour plus d’informations, consultez [System Settings &#40;Master Data Services&#41;](../../master-data-services/system-settings-master-data-services.md) (Paramètres système &#40;Master Data Services&#41;).  
   
 -   Créez une application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] à associer à cette base de données. Pour plus d’informations, consultez [Créer une application web Master Data Manager &#40;Master Data Services&#41;](../../master-data-services/install-windows/create-a-master-data-manager-web-application-master-data-services.md).  
   
 -   Configurez un plan de maintenance pour sauvegarder la base de données et les journaux des transactions. Pour plus d’informations, consultez [Configuration requise pour la base de données &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

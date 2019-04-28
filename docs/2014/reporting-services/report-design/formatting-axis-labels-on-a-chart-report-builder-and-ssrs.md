@@ -29,11 +29,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 80cc037b98e527815f1b0b2e7010c1411da03c16
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654618"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Mise en forme des étiquettes des axes sur un graphique (Générateur de rapports et SSRS)
   Les types de graphiques basés sur les coordonnées (histogramme, graphique à barres, graphique en aires, graphique à points, graphique en courbes et graphique d'étendue) comportent deux axes qui sont utilisés pour classer des données en catégories et afficher les relations de données. Des types de mises en forme différents seront appliqués à chaque axe.  

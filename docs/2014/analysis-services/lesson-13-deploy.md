@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 14 : Déployer | Microsoft Docs'
+title: 'Leçon 14 : Déployer | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,19 +12,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea979963906af46a1d032614ad6b398f70ef3483
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48196229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729455"
 ---
-# <a name="lesson-14-deploy"></a>Leçon 14 : Déploiement
-  Dans cette leçon, vous allez configurer les propriétés de déploiement ; pour cela, vous allez spécifier une instance de serveur de déploiement d'Analysis Services qui s'exécute en mode tabulaire, ainsi qu'un nom pour le modèle que vous déployez. Vous allez ensuite déployer le modèle sur cette instance. Après son déploiement, les utilisateurs peuvent se connecter au modèle en utilisant une application de création de rapports cliente. Pour plus d’informations, consultez [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
+# <a name="lesson-14-deploy"></a>Leçon 14 : Déployer
+  Dans cette leçon, vous allez configurer les propriétés de déploiement ; pour cela, vous allez spécifier une instance de serveur de déploiement d'Analysis Services qui s'exécute en mode tabulaire, ainsi qu'un nom pour le modèle que vous déployez. Vous allez ensuite déployer le modèle sur cette instance. Après son déploiement, les utilisateurs peuvent se connecter au modèle en utilisant une application de création de rapports cliente. Pour plus d’informations, consultez [Déploiement d’une solution de modèle tabulaire &#40;SSAS Tabulaire&#41;](tabular-models/tabular-model-solution-deployment-ssas-tabular.md).  
   
- Durée estimée pour effectuer cette leçon : **5 minutes**  
+ Durée estimée pour effectuer cette leçon : **5 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 13 : Analyser dans Excel](lesson-12-analyze-in-excel.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 13 : Analyser dans Excel](lesson-12-analyze-in-excel.md).  
   
 ## <a name="deploy-the-model"></a>Déployer le modèle  
   
@@ -55,14 +55,14 @@ ms.locfileid: "48196229"
      La boîte de dialogue Déployer apparaît et affiche l'état de déploiement des métadonnées ainsi que de chaque table incluse dans le modèle.  
   
 ## <a name="conclusion"></a>Conclusion  
- Félicitations ! Vous avez terminé de créer et déployer votre premier modèle tabulaire Analysis Services. Ce didacticiel vous a guidés dans les tâches courantes pour créer un modèle tabulaire. Maintenant que votre modèle Internet Sales Adventure Works est déployé, vous pouvez utiliser SQL Server Management Studio pour gérer le modèle, créer des scripts de processus et un plan de sauvegarde. Les utilisateurs peuvent se connecter au modèle à l'aide d'une application cliente de création de rapports telle que Microsoft Excel ou [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
+ Félicitations ! Vous avez terminé de créer et déployer votre premier modèle tabulaire Analysis Services. Ce didacticiel vous a guidés dans les tâches courantes pour créer un modèle tabulaire. Maintenant que votre modèle Internet Sales Adventure Works est déployé, vous pouvez utiliser SQL Server Management Studio pour gérer le modèle, créer des scripts de processus et un plan de sauvegarde. Les utilisateurs peuvent se connecter au modèle à l'aide d'une application cliente de création de rapports telle que Microsoft Excel ou [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)].  
   
 ## <a name="additional-resources"></a>Ressources supplémentaires  
  Pour en savoir plus sur les propriétés de modèle tabulaire qui prennent en charge les rapports [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], consultez [Propriétés de la génération de rapports Power View &#40;SSAS Tabulaire&#41;](tabular-models/properties-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mode DirectQuery &#40;SSAS Tabulaire&#41;](tabular-models/directquery-mode-ssas-tabular.md)   
- [Configurer les propriétés de déploiement et de modélisation des données par défaut &#40;SSAS tabulaire&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
- [Bases de données Model tabulaire &#40;SSAS tabulaire&#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
+ [Configurer les propriétés par défaut de modélisation des données et de déploiement &#40;SSAS Tabulaire&#41;](tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)   
+ [Bases de données model tabulaires #40;SSAS Tabulaire#41;](tabular-models/tabular-model-databases-ssas-tabular.md)  
   
   

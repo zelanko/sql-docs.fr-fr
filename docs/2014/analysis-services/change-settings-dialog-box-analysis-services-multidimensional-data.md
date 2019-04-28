@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e549e9b4121d116adc627c34dad017b85099a825
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48077859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681166"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Modifier les paramètres (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Modifier les paramètres** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour changer les paramètres de traitement des objets figurant dans la boîte de dialogue **Traiter** . Vous pouvez afficher la boîte de dialogue **Modifier les paramètres** en cliquant sur **Modifier les paramètres** dans la boîte de dialogue **Traiter** .  

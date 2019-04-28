@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 758c2b42d09e120bf0621bcdedf26b93f130b39f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786790"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurer l'option de configuration de serveur query governor cost limit
   Cette rubrique explique comment configurer le `query governor cost limit` option de configuration de serveur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l’aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou [!INCLUDE[tsql](../../includes/tsql-md.md)]. L’option query governor cost limit spécifie une limite supérieure de durée d’exécution d’une requête. Le coût d'une requête correspond à la durée (en secondes) estimée nécessaire à l'exécution complète d'une requête dans une configuration matérielle donnée. La valeur par défaut de cette option est 0, laquelle désactive l'Administrateur de requêtes. Cela permet l'exécution de toutes les requêtes sans limitation de temps. Si vous spécifiez une valeur positive et différente de zéro, l'Administrateur de requêtes n'autorise pas l'exécution de requêtes dont le coût estimé excède cette valeur.  

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788025"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Afficher les propriétés d’un écouteur de groupe de disponibilité (SQL Server)
   Cette rubrique explique comment afficher les propriétés d'un *écouteur de groupe de disponibilité* AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../../includes/tsql-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  

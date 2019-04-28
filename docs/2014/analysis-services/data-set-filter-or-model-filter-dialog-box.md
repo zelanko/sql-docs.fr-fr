@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 923467270901b91c35b40005c75207e7b1799194
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732593"
 ---
 # <a name="data-set-filter-or-model-filter-dialog-box"></a>Boîte de dialogue Filtre de jeu de données ou Filtre de modèle
   Cette boîte de dialogue vous permet de générer les filtres que vous pouvez appliquer à un jeu de données.  Le jeu de données peut être un jeu de données externes utilisé pour le test ou il peut s'agir des données de cas d'un modèle d'exploration de données. Le nom de la boîte de dialogue change selon que le filtre concerne un jeu de données externes ou un modèle d'exploration de données.  

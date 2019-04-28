@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 325d932a0c14cf4ca6b4ecf9e2349fb8064c45bd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48116309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699761"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Utilisation de la fonction RollupChildren (MDX)
   Le MDX (Multidimensional Expressions) [RollupChildren](/sql/mdx/rollupchildren-mdx) (fonction) [Script pour rechercher et remplacer] des enfants d’un membre, en appliquant un opérateur unaire différent à chaque enfant et retourne la valeur de ce cumul sous la forme d’un nombre. L'opérateur unaire peut être fourni par une propriété de membre associée au membre enfant, ou être une expression de type chaîne directement fournie à la fonction.  
@@ -37,12 +37,12 @@ ms.locfileid: "48116309"
   
  Dans le cadre du cumul, le total des ventes nettes fourni en l'occurrence par le membre parent Net Sales est exprimé par les valeurs des ventes brutes réalisées sur le marché national et à l'étranger, moins les invendus réalisés sur le marché national et à l'étranger.  
   
- Cependant, vous souhaitez fournir une estimation rapide et simple des ventes brutes réalisées sur le marché national et à l'étranger majorées de 10 %, sans tenir compte des invendus réalisés sur le marché national et à l'étranger. Pour calculer cette valeur, vous pouvez utiliser la fonction `RollupChildren` des deux manières suivantes : avec une propriété de membre personnalisée ou avec la fonction `IIf`.  
+ Cependant, vous souhaitez fournir une estimation rapide et simple des ventes brutes réalisées sur le marché national et à l'étranger majorées de 10 %, sans tenir compte des invendus réalisés sur le marché national et à l'étranger. Pour calculer cette valeur, vous pouvez utiliser la fonction `RollupChildren` des deux manières suivantes : avec une propriété de membre personnalisée ou avec la fonction `IIf`.  
   
 ### <a name="using-a-custom-member-property"></a>Utilisation d'une propriété de membre personnalisée  
  Si le calcul de cumuls est appelé à être souvent utilisé, une méthode consiste à créer pour une fonction donnée une propriété de membre qui stocke les opérateurs à utiliser pour chaque enfant. Le tableau suivant présente les opérateurs unaires corrects et décrit le résultat attendu.  
   
-|Opérateur|Résultats|  
+|Opérateur|Résultat|  
 |--------------|------------|  
 |+|total = total + enfant actuel|  
 |-|total = total - enfant actuel|  

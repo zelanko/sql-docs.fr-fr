@@ -1,5 +1,5 @@
 ---
-title: Fonctions (syntaxe MDX) | Documents Microsoft
+title: Fonctions (syntaxe MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34740728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690165"
 ---
 # <a name="functions-mdx-syntax"></a>Fonctions (syntaxe MDX)
 
@@ -26,10 +26,10 @@ ms.locfileid: "34740728"
   
 |Catégorie de fonction|Description|  
 |-----------------------|-----------------|  
-|Fonctions Tableau|Fournissent des tableaux à utiliser dans des procédures stockées.<br /><br /> Pour plus d’informations, consultez [à l’aide de procédures stockées &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md).|  
-|Fonctions Dimension|Retournent une référence à une dimension d'une hiérarchie, d'un niveau ou d'un membre.<br /><br /> Pour plus d’informations, consultez [à l’aide de la Dimension, hiérarchie et fonctions de niveau](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
-|Fonctions Hiérarchie|Retournent une référence à une hiérarchie d'une niveau ou d'un membre.<br /><br /> Pour plus d’informations, consultez [à l’aide de la Dimension, hiérarchie et fonctions de niveau](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
-|Fonctions Niveau|Retournent une référence à un niveau à partir d'une expression de membre, de dimension, de hiérarchie ou de chaîne.<br /><br /> Pour plus d’informations, consultez [à l’aide de la Dimension, hiérarchie et fonctions de niveau](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
+|Fonctions Tableau|Fournissent des tableaux à utiliser dans des procédures stockées.<br /><br /> Pour plus d’informations, consultez [à l’aide des procédures stockées &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md).|  
+|Fonctions Dimension|Retournent une référence à une dimension d'une hiérarchie, d'un niveau ou d'un membre.<br /><br /> Pour plus d’informations, consultez [à l’aide de fonctions de Dimension, hiérarchie et niveau](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
+|Fonctions Hiérarchie|Retournent une référence à une hiérarchie d'une niveau ou d'un membre.<br /><br /> Pour plus d’informations, consultez [à l’aide de fonctions de Dimension, hiérarchie et niveau](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
+|Fonctions Niveau|Retournent une référence à un niveau à partir d'une expression de membre, de dimension, de hiérarchie ou de chaîne.<br /><br /> Pour plus d’informations, consultez [à l’aide de fonctions de Dimension, hiérarchie et niveau](../mdx/using-dimension-hierarchy-and-level-functions.md).|  
 |Fonctions logiques|Effectuent des opérations logiques et des comparaisons sur des objets et des expressions.<br /><br /> Pour plus d’informations, consultez [à l’aide des fonctions logiques](../mdx/using-logical-functions.md).|  
 |Fonctions Membre|Retournent une référence à un membre à partir d'autres objets ou d'une expression de chaîne.<br /><br /> Pour plus d’informations, consultez [à l’aide des fonctions membres](../mdx/using-member-functions.md).|  
 |Fonctions Numériques|Exécutent des fonctions mathématiques et statistiques sur des objets ou des expressions.<br /><br /> Pour plus d’informations, consultez [à l’aide des fonctions mathématiques](../mdx/using-mathematical-functions.md).|  

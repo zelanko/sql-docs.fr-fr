@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1fc7ff4dc3142fa6f6cd18fc7b00e691d3bf29df
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52805530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655694"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sauvegarde et restauration de bases de données et de journaux de transactions
   Dans SMO, la classe <xref:Microsoft.SqlServer.Management.Smo.Backup> et la classe <xref:Microsoft.SqlServer.Management.Smo.Restore> sont des classes utilitaires qui fournissent les outils permettant d'accomplir les tâches spécifiques de sauvegarde et restauration. Un <xref:Microsoft.SqlServer.Management.Smo.Backup> objet représente une tâche de sauvegarde spécifique qui est nécessaire à la place d’un [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] objet sur l’instance de serveur.  

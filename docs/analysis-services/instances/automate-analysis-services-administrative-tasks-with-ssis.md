@@ -1,5 +1,5 @@
 ---
-title: Automatiser les tâches d’administration Analysis Services avec SSIS | Documents Microsoft
+title: Automatiser les tâches d’administration Analysis Services avec SSIS | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c750c0e8ee9f13c4b4751af872b02f4ed9ee419a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659592"
 ---
 # <a name="automate-analysis-services-administrative-tasks-with-ssis"></a>Automatiser les tâches d'administration Analysis Services avec SSIS
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permet d’automatiser l’exécution de scripts DDL, cube et de modèle d’exploration de données de traitement des tâches et les tâches de requête d’exploration de données. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut être considéré comme une collection de tâches de flux de contrôle et de maintenance, qui peuvent être liées pour former des tâches de traitement de données séquentielles et parallèles.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permet d'automatiser l'exécution de scripts DDL, de tâches de traitement de cube et de modèle d'exploration de données, ainsi que de tâches de requête d'exploration de données. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut être considéré comme une collection de tâches de flux de contrôle et de maintenance, qui peuvent être liées pour former des tâches de traitement de données séquentielles et parallèles.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] a été conçu pour effectuer des opérations de nettoyage de données au cours des tâches de traitement de données et pour rassembler des données de sources de données différentes. En cas d’utilisation de cubes et de modèles d’exploration de données, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] peut transformer des données non numériques en données numériques et peut garantir que les valeurs appartiennent aux intervalles prévus, créant ainsi des données propres qui permettront de remplir les tables de faits et les dimensions.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "34015646"
 ## <a name="analysis-services-processing-task"></a>tâche de traitement d'Analysis Services  
  La tâche de traitement Analysis Services dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permet de remplir automatiquement des cubes avec de nouvelles informations lorsque vous effectuez des mises à jour régulières de votre base de données relationnelle source. Vous pouvez effectuer le traitement au niveau d'une dimension, d'un cube ou d'une partition à l'aide de la tâche de traitement Analysis Services. Le traitement lui-même peut être de type **incremental** ou **full**, tel que vous le sélectionnez dans vos exigences de travail. Le traitement incrémentiel ajoute de nouvelles données et renouvelle suffisamment les calculs pour maintenir à jour la cible, tandis que le traitement complet supprime les données existantes pour effectuer un rechargement complet et renouveler tous les calculs. Le traitement complet prend plus de temps, mais il est plus complet. Pour plus d'informations sur la manière d'implémenter cette tâche, consultez [Analysis Services Processing Task](../../integration-services/control-flow/analysis-services-processing-task.md).  
   
-## <a name="data-mining-query-task"></a>Tâche de requête d'exploration de données  
+## <a name="data-mining-query-task"></a>Data Mining Query Task  
  La tâche de requête d'exploration de données dans [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] vous permet d'extraire et de stocker des informations à partir de modèles d'exploration de données. Les informations sont souvent stockées dans une base de données relationnelle et, par exemple, peuvent être utilisées pour isoler une liste de clients potentiels pour une campagne de marketing ciblée. L'exploration de données peut identifier la valeur d'un client et la probabilité que ce client réponde à une sollicitation marketing particulière. Vous pouvez utiliser la tâche de requête d'exploration de données pour extraire des données et les convertir dans un format préféré. Pour plus d'informations sur la manière d'implémenter cette tâche, consultez [Data Mining Query Task](../../integration-services/control-flow/data-mining-query-task.md).  
   
 ## <a name="see-also"></a>Voir aussi  

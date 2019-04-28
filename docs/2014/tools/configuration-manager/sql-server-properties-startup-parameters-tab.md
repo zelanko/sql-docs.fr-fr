@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ab3d9e9e4178b1ee2e10e5be63f0ea9252fd4a4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679160"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propriétés SQL Server (onglet Paramètres de démarrage)
   Utilisez cette boîte de dialogue pour ajouter ou supprimer des paramètres de démarrage pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Les paramètres de démarrage peuvent avoir un effet considérable sur les performances du [!INCLUDE[ssDE](../../includes/ssde-md.md)] . Avant d'ajouter ou de modifier des paramètres de démarrage, consultez la rubrique « Utilisation des options de démarrage du service [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -77,6 +77,6 @@ ms.locfileid: "52780116"
 -   Le compte de domaine utilisé par [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si le [!INCLUDE[ssDE](../../includes/ssde-md.md)] est configuré pour l'exécution sous un compte de domaine.  
   
 ## <a name="books-online-references"></a>Références de la documentation en ligne  
- Pour plus d’informations sur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] paramètres de démarrage, consultez « Comment : configurer les options de démarrage du serveur (Gestionnaire de configuration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) » dans la documentation en ligne de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Pour plus d'informations sur les paramètres de démarrage de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consultez « Procédure : Configurer les Options de démarrage du serveur ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager) » dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] la documentation en ligne.  
   
   

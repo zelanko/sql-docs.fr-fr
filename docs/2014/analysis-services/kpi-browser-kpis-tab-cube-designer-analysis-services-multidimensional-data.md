@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d399ec2f3388f61b8b8fdcd7f81cb0deeeaa8081
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48174599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730611"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Navigateur d'indicateur de performance clé (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Le volet **Navigateur d’indicateur de performance clé** de l’onglet **Indicateurs de performance clés** du Concepteur de cube permet d’afficher et de tester les résultats des indicateurs de performance clés (KPI). Vous devez d'abord déployer les indicateurs de performance clés sur une instance [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] avant d'exécuter le navigateur.  
@@ -39,7 +39,7 @@ ms.locfileid: "48174599"
  **Opérateur**  
  Sélectionnez l’opérateur qui définit comment l’expression dans **Expression de filtre** est appliquée à la hiérarchie sélectionnée. Le tableau suivant décrit les opérateurs disponibles.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**égal**|Les résultats se limitent à l'ensemble défini dans **Expression de filtre**.|  
 |**Non égal**|Les résultats se limitent aux membres n'appartenant pas à l'ensemble défini dans **Expression de filtre**.|  
@@ -72,7 +72,7 @@ ms.locfileid: "48174599"
  **État**  
  Affiche le graphique d'état de l'indicateur de performance clé.  
   
- **Tendance**  
+ **Trend**  
  Affiche le graphique de tendance de l'indicateur de performance clé.  
   
  **Weight**  

@@ -16,18 +16,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dbc80b6f50ea023a998b6a7958577933afd007a7
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53362342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653999"
 ---
 # <a name="server-configuration---collation"></a>Configuration du serveur - Classement
   Dans la page Configuration du serveur - Classement de l’Assistant Installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous pouvez modifier les paramètres de classement utilisés par [!INCLUDE[ssDE](../../includes/ssde-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] pour le tri. Sélectionnez l'option pour correspondre aux paramètres de classement de différentes installations de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ou d'un autre ordinateur.  
   
 ## <a name="options"></a>Options  
  Personnaliser pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit les deux groupes de classements suivants : les classements Windows et les classements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez spécifier des paramètres de classement distincts pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ou spécifier le même classement pour les deux.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fournit deux groupes de classements : Les classements Windows et [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] classements. Vous pouvez spécifier des paramètres de classement distincts pour le [!INCLUDE[ssDE](../../includes/ssde-md.md)] et [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], ou spécifier le même classement pour les deux.  
   
  Par défaut, un classement [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est sélectionné pour les paramètres régionaux système de langue anglaise (US). Le classement par défaut pour les versions localisées de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est déterminé par la valeur des paramètres régionaux système Windows pour votre ordinateur.  
   

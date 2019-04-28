@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 83142e83ba04328ddf025e0a2f16ff18ad947075
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48137499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688842"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
   Envoie une partie d'une valeur de type de données longue et de longueur variable à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -46,7 +46,7 @@ pData
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *pas*  
+ *hdbc*  
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *cbData*  

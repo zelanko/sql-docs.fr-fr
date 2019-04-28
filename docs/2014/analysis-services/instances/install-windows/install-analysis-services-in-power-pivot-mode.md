@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 614674d3ac7a14ec3a6143381ef249a215850bc0
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703569"
 ---
 # <a name="powerpivot-for-sharepoint-2013-installation"></a>PowerPivot for SharePoint 2013 Installation
   Les procédures de cette rubrique constituent un guide d'installation sur un serveur d'un serveur [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en mode de déploiement SharePoint. Ces étapes comprennent l'exécution de l'Assistant Installation de SQL Server ainsi que des tâches de configuration qui utilisent l'Administration centrale de SharePoint 2013.  
@@ -31,9 +31,9 @@ ms.locfileid: "53373971"
   
  [Étape 1 : Installer PowerPivot pour SharePoint](#InstallSQL)  
   
- [Étape 2 : Configurer l’intégration de SharePoint de base pour Analysis Services](#bkmk_config)  
+ [Étape 2 : Configurer l’intégration de SharePoint de base pour Analysis Services](#bkmk_config)  
   
- [Étape 3 : Vérifier l’intégration](#bkmk_verify)  
+ [Étape 3 : Vérifier l’intégration](#bkmk_verify)  
   
  [Configurer le Pare-feu Windows pour autoriser l’accès à Analysis Services](#bkmk_firewall)  
   
@@ -44,11 +44,11 @@ ms.locfileid: "53373971"
 ##  <a name="bkmk_background"></a> Arrière-plan  
  PowerPivot pour SharePoint est une collection de services de couche intermédiaire et de services principaux qui fournissent l'accès aux données PowerPivot dans une batterie de serveurs SharePoint 2013.  
   
--   **Services principaux :** si vous utilisez PowerPivot pour Excel pour créer des classeurs qui contiennent des données analytiques, vous devez disposer de PowerPivot pour SharePoint pour accéder à ces données dans un environnement serveur. Vous pouvez exécuter le programme d'installation de SQL Server sur un ordinateur qui possède un serveur SharePoint 2013 installé, ou sur un autre ordinateur sans logiciel SharePoint. Analysis Services n'a pas de dépendances de SharePoint.  
+-   **Services principaux :** Si vous utilisez PowerPivot pour Excel pour créer des classeurs qui contiennent des données analytiques, vous devez disposer de PowerPivot pour SharePoint pour accéder à ces données dans un environnement serveur. Vous pouvez exécuter le programme d'installation de SQL Server sur un ordinateur qui possède un serveur SharePoint 2013 installé, ou sur un autre ordinateur sans logiciel SharePoint. Analysis Services n'a pas de dépendances de SharePoint.  
   
      **Remarque :** Cette rubrique décrit l’installation de le [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server et les services principaux.  
   
--   **Niveau intermédiaire :** les améliorations apportées aux expériences PowerPivot dans SharePoint, dont la Galerie PowerPivot, l'actualisation planifiée des données, le tableau de bord de gestion et les fournisseurs de données. Pour plus d'informations sur l'installation et la configuration du niveau intermédiaire, consultez :  
+-   **Niveau intermédiaire :** Améliorations pour les expériences PowerPivot dans SharePoint, dont la galerie PowerPivot, actualisation planifiée des données, tableau de bord de gestion et les fournisseurs de données. Pour plus d'informations sur l'installation et la configuration du niveau intermédiaire, consultez :  
   
     -   [Installer ou désinstaller le PowerPivot pour SharePoint Add-in &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)  
   
@@ -96,7 +96,7 @@ ms.locfileid: "53373971"
   
 9. Si une autre page **Règles de support du programme d'installation**s'affiche, examinez les avertissements, puis cliquez sur **Suivant**.  
   
-     **Remarque :** le Pare-feu Windows étant activé, un avertissement s'affiche indiquant qu'il faut ouvrir les ports pour activer l'accès à distance.  
+     **Remarque :** Étant donné que le pare-feu Windows est activé, vous voyez un avertissement pour ouvrir des ports pour permettre l’accès à distance.  
   
 10. Dans la page **Rôle d'installation** , sélectionnez **SQL Server PowerPivot pour SharePoint**. Cette option installe Analysis Services en mode SharePoint.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "53373971"
   
 3.  Connectez-vous à l'instance Analysis Services, par exemple **[nom serveur]\POWERPIVOT**. Si vous vous connectez à l'instance, vous avez vérifié que le service s'exécute.  
   
-##  <a name="bkmk_config"></a> Étape 2 : Configurer l'intégration SharePoint pour Analysis Services de base  
+##  <a name="bkmk_config"></a> Étape 2 : Configurer l’intégration de SharePoint de base pour Analysis Services  
  Les étapes suivantes décrivent les modifications de configuration nécessaires pour que vous puissiez interagir avec des modèles de données avancés Excel dans une bibliothèque de documents SharePoint. Effectuez ces étapes, une fois que vous avez installé SharePoint Server 2013 et SQL Server Analysis Services.  
   
 ### <a name="grant-excel-services-server-administration-rights-on-analysis-services"></a>Accorder des droits d'administration de serveur Excel Services dans Analysis Services  
@@ -203,10 +203,10 @@ ms.locfileid: "53373971"
   
     ```  
   
-##  <a name="bkmk_verify"></a> Étape 3 : Vérifier l'intégration  
+##  <a name="bkmk_verify"></a> Étape 3 : Vérifier l’intégration  
  Les étapes suivantes vous guident tout au long des processus de création et de téléchargement d'un classeur pour vérifier l'intégration d'Analysis Services. Vous aurez besoin d'une base de données SQL Server pour terminer les étapes.  
   
-1.  **Remarque :** si vous disposez déjà d'un classeur avancé avec des segments ou des filtres, téléchargez-le dans votre bibliothèque de documents SharePoint et vérifiez que vous pouvez interagir avec les segments et les filtres à partir de la vue de la bibliothèque de documents.  
+1.  **Remarque :** Si vous disposez déjà d’un classeur avancé avec des segments ou filtres, vous pouvez télécharger sur votre bibliothèque de documents SharePoint et vérifiez que vous êtes en mesure d’interagir avec les segments et les filtres à partir de la vue bibliothèque de documents.  
   
 2.  Démarrez un nouveau classeur dans Excel.  
   

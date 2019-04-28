@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0a4c8105b023bbb98387315a37a770f7e034937
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648872"
 ---
 # <a name="analysis-services-tutorials-ssas"></a>Didacticiels sur Analysis Services (SSAS)
   Cette section contient des didacticiels pour [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services.  
@@ -37,7 +37,7 @@ ms.locfileid: "53359011"
  La plupart des didacticiels SQL Server 2008 R2 fonctionnent sur un serveur [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. Si vous découvrez l'exploration de données, utilisez ce lien pour rechercher les didacticiels expliquant l'exploration de données dans SQL Server 2008 R2 et dans une instance [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] d'Analysis Services.  
   
 ## <a name="see-also"></a>Voir aussi  
- [TechNet WIKI : Exemples SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)   
+ [Wiki TechNet : Exemples SQL Server 2012](https://go.microsoft.com/fwlink/?linkID=220734)   
  [Dataset Picnic (exemples de données)](https://go.microsoft.com/fwlink/?linkID=219108)  
   
   

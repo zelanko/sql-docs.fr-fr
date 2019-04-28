@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 72c449ee83798a99109029fc2d0b91e2b8c1e2b6
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691324"
 ---
 # <a name="sysdmpdwexecrequests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
 
@@ -41,7 +41,7 @@ ms.locfileid: "59583317"
 |database_id|**Int**|Identificateur de la base de données utilisée par le contexte explicite (par exemple, utilisez DB_X).|Consultez les ID dans [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
 |commande|**nvarchar(4000)**|Contient le texte intégral de la demande et soumis par l’utilisateur.|Tout texte de requête ou de requête valid. Requêtes qui comptent plus de 4 000 octets sont tronquées.|  
 |resource_class|**nvarchar(20)**|La classe de ressources pour cette demande. Consultez lié **concurrency_slots_used** dans [sys.dm_pdw_resource_waits &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-resource-waits-transact-sql.md).  Pour plus d’informations sur les classes de ressources, consultez [gestion des ressources de classes et de la charge de travail](https://docs.microsoft.com/azure/sql-data-warehouse/resource-classes-for-workload-management) |Classes de ressources statiques</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Classes de ressources dynamiques</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance (classification de la charge de travail est disponible en version préliminaire sur SQL Data Warehouse Gen2. Aperçu de Classification de gestion de la charge de travail et l’Importance est pour les builds avec une date de publication de 9 avril 2019 ou version ultérieure.  Les utilisateurs Évitez d’utiliser les builds antérieures à cette date pour le test de charge de travail administration.  Pour déterminer si votre build est la gestion de la charge de travail capable, exécutez select @@version lorsque connecté à votre instance SQL Data Warehouse.)|**nvarchar(32)**|L’importance de définition de la demande a été envoyée. Requêtes avec une importance inférieure reste en file d’attente dans un état suspendu, si les demandes d’importance plus élevées sont envoyés.  Requêtes avec une importance plus élevée s’exécutent avant les demandes importance inférieure qui ont été envoyées précédemment.  Pour plus d’informations sur l’importance, consultez [Importance de la charge de travail](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>low</br>below_normal</br>normal (valeur par défaut)</br>above_normal</br>high|
+|importance (classification de la charge de travail est disponible en version préliminaire sur SQL Data Warehouse Gen2. La préversion Classification et importance de la gestion de la charge de travail s’adresse aux builds avec une date de publication du 9 avril 2019 ou une version ultérieure.  Les utilisateurs doivent éviter d’utiliser des builds antérieures à cette date pour le test de la gestion de la charge de travail.  Pour déterminer si votre build est la gestion de la charge de travail capable, exécutez select @@version lorsque connecté à votre instance SQL Data Warehouse.)|**nvarchar(32)**|L’importance de définition de la demande a été envoyée. Requêtes avec une importance inférieure reste en file d’attente dans un état suspendu, si les demandes d’importance plus élevées sont envoyés.  Requêtes avec une importance plus élevée s’exécutent avant les demandes importance inférieure qui ont été envoyées précédemment.  Pour plus d’informations sur l’importance, consultez [Importance de la charge de travail](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-workload-importance).  |NULL</br>Faible</br>below_normal</br>normal (valeur par défaut)</br>above_normal</br>Haute|
   
  Pour plus d’informations sur le nombre maximal de lignes conservées par cette vue, consultez la section de métadonnées dans le [limites de capacité](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) rubrique.   
   

@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fece91698147ef11496855985f27ea81f84f62a5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537943"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62669447"
 ---
 # <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>Données spatiales - sys.dm_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 |**class_desc**|**nvarchar(60)**|OBJECT ou COLUMN pour les contraintes<br /><br /> INDEX pour les index et les segments|  
 |**major_id**|**Int**|OBJECT ID des contraintes<br /><br /> OBJECT ID de la table qui contient des index et des segments|  
 |**minor_id**|**Int**|NULL pour les contraintes<br /><br /> Index_id pour les index et les segments|  
-|**dépendance**|**nvarchar(60)**|Description de la dépendance qui provoque la désactivation de la contrainte ou de l'index. Les mêmes valeurs sont également utilisées dans les avertissements générés pendant la mise à niveau. En voici quelques exemples :<br /><br /> « space » pour un type intrinsèque<br /><br /> « geometry » pour un type défini par l'utilisateur système<br /><br /> « geography::Parse » pour une méthode d'un type défini par l'utilisateur système|  
+|**dependency**|**nvarchar(60)**|Description de la dépendance qui provoque la désactivation de la contrainte ou de l'index. Les mêmes valeurs sont également utilisées dans les avertissements générés pendant la mise à niveau. En voici quelques exemples :<br /><br /> « space » pour un type intrinsèque<br /><br /> « geometry » pour un type défini par l'utilisateur système<br /><br /> « geography::Parse » pour une méthode d'un type défini par l'utilisateur système|  
   
 ## <a name="general-remarks"></a>Remarques d'ordre général  
  Les colonnes calculées persistantes qui utilisent des fonctions intrinsèques sont désactivées lorsque le niveau de compatibilité est modifié. En outre, les colonnes calculées persistantes qui utilisent une méthode de type geometry ou geography sont désactivées lorsqu'une base de données est mise à niveau.  
@@ -107,14 +107,14 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Geography :: BufferWithTolerance**  
   
--   **Geography :: Analyser**  
+-   **Geography :: Parse**  
   
 -   **Geography :: réduire**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>Comportement des objets désactivés  
  **Index**  
   
- Si l'index cluster est désactivé, ou si un index non cluster est forcé, l'erreur suivante est générée : « Le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.*ls sur la table ou la vue ' %. \*%.*ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après mise à niveau en appelant **ALTER INDEX ON... REBUILD**.  
+ Si l’index cluster est désactivé, ou si un index non cluster est forcé, l’erreur suivante est générée : « Le processeur de requêtes ne peut pas créer de plan car l’index ' %. \*%.*ls sur la table ou la vue ' %. \*%.*ls est désactivé. » Pour réactiver ces objets, reconstruisez les index après mise à niveau en appelant **ALTER INDEX ON... REBUILD**.  
   
  **Segments de mémoire**  
   

@@ -15,20 +15,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48172769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689044"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Modifier les propriétés d'un modèle d'exploration de données
-  Certaines propriétés du modèle d'exploration de données s'appliquent au modèle dans son ensemble, et d'autres propriétés de modèle s'appliquent à des colonnes individuelles. Exemples de propriétés qui s’appliquent à l’ensemble du modèle serait le `Drillthrough` propriété qui spécifie si les données de cas doivent être disponibles pour l’interrogation, et le `Description` propriété. Les propriétés qui s'appliquent à la colonne incluent `Usage` et `ModelingFlags`, qui contrôlent l'utilisation des données de la colonne dans le modèle.  
+  Certaines propriétés du modèle d'exploration de données s'appliquent au modèle dans son ensemble, et d'autres propriétés de modèle s'appliquent à des colonnes individuelles. La propriété `Drillthrough`, qui spécifie si les données de cas doivent être disponibles pour l'interrogation, et la propriété `Description` sont des exemples de propriétés qui s'appliquent à l'ensemble du modèle. Les propriétés qui s'appliquent à la colonne incluent `Usage` et `ModelingFlags`, qui contrôlent l'utilisation des données de la colonne dans le modèle.  
   
  Les propriétés de modèle suivantes ont des éditeurs avancés que vous pouvez utiliser pour créer des expressions ou pour configurer les propriétés de modèle complexes. Les propriétés suivantes fournissent :  
   
--   `Filter` propriété : ouvre le [Boîte de dialogue Filtre de jeu de données ou Filtre de modèle](../data-set-filter-or-model-filter-dialog-box.md).  
+-   `Filter` Propriété : Ouvre le [Data Set filtre or Model filtre Dialog Box](../data-set-filter-or-model-filter-dialog-box.md).  
   
--   `AlgorithmParameters` propriété : ouvre le [boîte dialogue Paramètres d’algorithme &#40;vue de modèles d’exploration de données&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
+-   `AlgorithmParameters` Propriété : Ouvre le [boîte dialogue Paramètres d’algorithme &#40;affichage des modèles d’exploration de&#41;](../algorithm-parameters-dialog-box-mining-models-view.md).  
   
  Pour plus d’informations sur la définition des propriétés dans un modèle d’exploration, consultez [Colonnes de modèle d’exploration de données](mining-model-columns.md).  
   

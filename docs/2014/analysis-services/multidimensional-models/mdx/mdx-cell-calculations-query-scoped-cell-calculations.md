@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 35e720872257f1a1c96d8aa50aef8458daf574ad
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699830"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Création de calculs de cellules au niveau de la requête (MDX)
-  Pour décrire les cellules calculées au sein du contexte d'une requête, vous pouvez utiliser le mot clé `WITH` dans la syntaxe MDX (Multidimensional Expressions). Le `WITH` mot clé présente la syntaxe suivante :  
+  Pour décrire les cellules calculées au sein du contexte d'une requête, vous pouvez utiliser le mot clé `WITH` dans la syntaxe MDX (Multidimensional Expressions). Le mot clé `WITH` possède la syntaxe suivante :  
   
 ```  
 WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression  
@@ -30,7 +30,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  La valeur `CellCalc_Identifier` est le nom des cellules calculées. La valeur `String_Expression` contient une liste d’expressions de jeu MDX unidimensionnelles et orthogonales. Chacune de ces expressions d'ensemble doit être convertie en l'une des catégories répertoriées dans le tableau suivant.  
   
-|Catégorie|Description|  
+|Category|Description|  
 |--------------|-----------------|  
 |Jeu vide|Expression de jeu MDX qui prend la valeur d'un ensemble vide. Dans ce cas, la portée de la cellule calculée est l'intégralité du cube.|  
 |Jeu à un seul membre|Expression de jeu MDX qui prend la valeur d'un seul membre.|  

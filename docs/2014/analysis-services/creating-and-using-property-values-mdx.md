@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73215fc788e558e8bbbc006eb45f43b2514d21aa
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679737"
 ---
 # <a name="creating-and-using-property-values-mdx"></a>Création et utilisation de valeurs de propriétés (MDX)
   La syntaxe MDX (Multidimensional Expressions) prend en charge des propriétés intrinsèques et définies par l'utilisateur pour les dimensions, les niveaux, les membres et les cellules. Les propriétés intrinsèques permettent de définir des noms uniques, des légendes et même une mise en forme et une taille de caractères pour des cellules individuelles. Pour leur part, les propriétés définies par l'utilisateur permettent de fournir presque n'importe quel type d'attribut supplémentaire aux membres.  
@@ -39,6 +39,6 @@ ms.locfileid: "48195999"
  Pour plus d’informations sur les propriétés de cellule et leur utilisation, consultez [Utilisation des propriétés de cellule &#40;MDX&#41;](multidimensional-models/mdx/mdx-cell-properties-using-cell-properties.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Principes de base de requête MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

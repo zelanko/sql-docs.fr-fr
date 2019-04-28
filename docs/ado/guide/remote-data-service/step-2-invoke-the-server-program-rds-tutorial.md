@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a64e45f68003948f0d0f45d3932c1edf9b94972a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62675815"
 ---
-# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Étape 2 : Appeler le programme serveur (tutoriel RDS)
+# <a name="step-2-invoke-the-server-program-rds-tutorial"></a>Étape 2 : Appeler le programme serveur (tutoriel RDS)
 Lorsque vous appelez une méthode sur le client *proxy*, le programme sur le serveur qui exécute la méthode. Dans cette étape, vous allez exécuter une requête sur le serveur.  
   
 > [!IMPORTANT]
@@ -65,5 +65,5 @@ Sub RDSTutorial2B()
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Étape 3 : Le serveur obtient un Recordset (didacticiel RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
+ [Étape 3 : Serveur obtient un objet Recordset (didacticiel RDS)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)   
  [Didacticiel RDS (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   

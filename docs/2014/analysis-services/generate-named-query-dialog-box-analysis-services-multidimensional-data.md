@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ec993b67736c8f1d77341ff25b620796dd9a209b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48161609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730662"
 ---
 # <a name="generate-named-query-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Générer une requête nommée (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Générer une requête nommée** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour créer une requête nommée selon une série de graphiques, une valeur de série de graphiques ou un filtre de graphiques sélectionnés à partir du graphique affiché sous l'onglet **Graphique croisé dynamique** de la boîte de dialogue **Explorer les données** . Pour afficher la boîte de dialogue **Générer une requête nommée** , cliquez sur **Générer une requête nommée** dans la boîte de dialogue **Explorer les données** .  

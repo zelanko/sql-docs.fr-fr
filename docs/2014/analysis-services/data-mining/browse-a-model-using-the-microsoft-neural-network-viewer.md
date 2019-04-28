@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fcbca7ac7ae5d218d99623d1b98dd64e19dcda77
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689440"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MNN (Microsoft Neural Network)
   La Visionneuse de l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d'exploration de données qui sont générés avec l'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network). L'algorithme MNN ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network) crée des modèles d'exploration de données de classification et de régression qui peuvent analyser plusieurs entrées et sorties, et est très utile pour les analyses et l'exploration de durée indéterminée. Pour plus d'informations sur cet algorithme, consultez [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md).  
@@ -70,17 +70,17 @@ ms.locfileid: "48117859"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Characteristics"></a> Variables  
- La grille sous l’onglet **Variables** contient les colonnes suivantes : **Attribut**, **Valeur**, **Privilèges [Valeur 1]** et **Privilèges [Valeur 2]**. Par défaut, les colonnes sont triées en fonction de la valeur de **Privilèges [Valeur 1]**. En cliquant sur un en-tête de colonne, vous modifiez l'ordre de tri de la colonne sélectionnée.  
+ La grille dans le **Variables** onglet contient les colonnes suivantes : **Attribut**, **valeur**, **privilèges [valeur 1]**, et **privilèges [valeur 2]**. Par défaut, les colonnes sont triées en fonction de la valeur de **Privilèges [Valeur 1]**. En cliquant sur un en-tête de colonne, vous modifiez l'ordre de tri de la colonne sélectionnée.  
   
  Une barre à droite de l'attribut indique quel état de l'attribut de sortie est privilégié par l'état d'attribut d'entrée spécifié. La taille de la barre indique à quel degré l'état de sortie favorise l'état d'entrée.  
   
  [Retour au début](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme de réseau neuronal de Microsoft](microsoft-neural-network-algorithm.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](mining-model-viewer-tasks-and-how-tos.md)   
- [Outils d’exploration de données](data-mining-tools.md)   
+ [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](mining-model-viewer-tasks-and-how-tos.md)   
+ [Outils d'exploration de données](data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](data-mining-model-viewers.md)  
   
   

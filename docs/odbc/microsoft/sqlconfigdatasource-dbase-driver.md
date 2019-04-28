@@ -1,5 +1,5 @@
 ---
-title: SQLConfigDataSource (pilote dBASE) | Microsoft Docs
+title: SQLConfigDataSource (dBASE Driver) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62665351"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (pilote dBASE)
 > [!NOTE]  

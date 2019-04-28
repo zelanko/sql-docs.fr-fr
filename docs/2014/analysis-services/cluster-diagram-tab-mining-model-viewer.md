@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd66205c6f7a03d1bba0783aabbed3936b25e691
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48184195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681027"
 ---
 # <a name="cluster-diagram-tab-mining-model-viewer"></a>Onglet Diagramme de cluster (Visionneuse de modèle d'exploration de données)
   L’onglet **Diagramme de cluster** affiche sous forme graphique tous les clusters contenus dans le modèle de clustering.  
   
- **Pour plus d’informations :** [Algorithme de gestion de clusters Microsoft](data-mining/microsoft-clustering-algorithm.md), [Explorer un modèle à l’aide de Microsoft Sequence Cluster](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Pour plus d’informations :** [Algorithme de gestion de clusters Microsoft](data-mining/microsoft-clustering-algorithm.md), [Explorer un modèle à l’aide de Microsoft Cluster Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -67,12 +67,12 @@ ms.locfileid: "48184195"
  **État**  
  Sélectionnez un état unique de **Variable d’ombrage** à utiliser dans le diagramme de cluster.  
   
- **Liens**  
+ **Links**  
  Ajustez le nombre de liens qui sont affichés entre les clusters, en déplaçant le curseur vers le haut ou vers le bas. L'abaissement du curseur conserve uniquement les associations les plus fortes entre les clusters.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

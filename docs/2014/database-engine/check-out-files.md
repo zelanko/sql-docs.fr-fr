@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62786744"
 ---
 # <a name="check-out-files"></a>Extraire des fichiers
   À moins que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] ne soit configuré pour autoriser la modification des fichiers archivés, vous devez extraire un fichier avant de pouvoir le modifier. Lorsque vous procédez à l'extraction d'un fichier, une version du fichier est copiée sur votre disque local et l'attribut de lecture seule du fichier est désactivé.  
   
  Vous pouvez extraire des fichiers en mode exclusif ou en mode partagé. Lorsque vous procédez à l'extraction d'un fichier de manière exclusive, aucun autre utilisateur ne peut l'extraire tant que vous ne l'avez pas archivé. Lorsque vous procédez à l'extraction d'un fichier en mode partagé, d'autres utilisateurs peuvent l'extraire et le modifier ; lorsque vous l'archivez, vous pouvez être amené à fusionner la version que vous avez extraite avec les versions créées par d'autres utilisateurs.  
   
- Utilisez le **Check Out** commande pour extraire les fichiers et les projets sous contrôle de code source. Lorsque vous utilisez cette commande pour extraire une solution ou un projet, tous les fichiers figurant dans cette solution ou dans ce projet sont également extraits. Lorsque vous extrayez un fichier de code source individuel, cela n'entraîne toutefois pas l'extraction du projet ou de la solution dont il fait partie.  
+ Utilisez le **Check Out** commande pour extraire les fichiers et les projets sous contrôle de code source. Si vous utilisez cette commande pour extraire une solution ou un projet, tous les fichiers dans la solution ou le projet sont également extraits. Toutefois, la récupération d’un fichier de code source individuel n’entraîne l’extraction du projet ou solution auquel il appartient.  
   
 > [!NOTE]  
 >  Si le [!INCLUDE[msCoName](../includes/msconame-md.md)] base de données Visual SourceSafe pour votre projet est configuré pour autoriser les extractions multiples, et que vous souhaitez extraire un fichier exclusivement, vous devez effacer le **autoriser les extractions multiples** option dans le  **Advanced Options d’extraction** boîte de dialogue avant d’extraire le fichier. Vous devez redémarrer [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour que ce paramètre soit pris en compte.  
@@ -55,7 +55,7 @@ ms.locfileid: "48051219"
      Affiche les éléments que vous extrayez sous forme de liste en 2D sous leur connexion de contrôle de code source.  
   
      **Modifier**  
-     Permet de modifier un élément sans l'extraire. Le **modifier** bouton s’affiche uniquement si vous avez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] configuré pour prendre en charge la modification des fichiers archivés.  
+     Modifier un élément sans l’extraire. Le **modifier** bouton s’affiche uniquement si vous avez [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] configuré pour prendre en charge la modification des fichiers archivés.  
   
      **Nom**  
      Affiche les noms des éléments disponibles en vue d'une extraction. Les cases à cocher activées indiquent les éléments sélectionnés. Si vous ne souhaitez pas extraire un élément donné, désactivez la case à cocher correspondante.  

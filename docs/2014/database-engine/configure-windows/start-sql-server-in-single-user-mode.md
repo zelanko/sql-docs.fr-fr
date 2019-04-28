@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: 04dd0620202287869b23cc2fde998a18d3200c66
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52640890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62809053"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Démarrer SQL Server en mode mono-utilisateur
   Dans certaines circonstances, vous devrez peut-être démarrer une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur à l’aide de **startup option -m.** Vous pouvez par exemple vouloir modifier les options de configuration du serveur ou rétablir une base de données master ou une autre base de données système endommagées. Les deux actions requièrent le démarrage d'une instance de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en mode mono-utilisateur.  
@@ -55,7 +55,7 @@ ms.locfileid: "52640890"
   
 4.  Vérifiez dans la console de l'administrateur de cluster ou de gestion de cluster de basculement que la ressource [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] est encore hors connexion.  
   
-5.  Se connecter à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintenant en utilisant la commande suivante et exécutez l’opération nécessaire : SQLCMD-e-s\<nom_serveur >.  
+5.  Se connecter à la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintenant en utilisant la commande suivante et exécutez l’opération nécessaire : SQLCMD -E -S\<servername>.  
   
 6.  Une fois que l'opération est terminée, fermez l'invite de commandes et remettez les ressources SQL et d'autres ressources en ligne via la console de l'administrateur de cluster.  
   

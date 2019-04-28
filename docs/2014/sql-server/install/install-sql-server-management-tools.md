@@ -14,11 +14,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8298e0cf1e635d2adea47457d7d8827c9b530fcd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48061936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657625"
 ---
 # <a name="install-sql-server-management-tools"></a>Installer les outils d'administration SQL Server
   Les outils d'administration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluent les composants suivants :  
@@ -33,9 +33,9 @@ ms.locfileid: "48061936"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] compléments à [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]  
   
- Il est à noter que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est une option séparée pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Il est à noter que [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] est une option séparée pendant l'installation de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
- Quel que soit le nombre d'instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ou [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installées sur un ordinateur, une seule copie des outils d'administration [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sera installée.  
+ Quel que soit le nombre d'instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ou [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installées sur un ordinateur, une seule copie des outils d'administration [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] sera installée.  
   
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Outils de gestion peuvent s’exécuter côte à côte sur le même ordinateur avec les versions antérieures de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] outils de gestion.  
   

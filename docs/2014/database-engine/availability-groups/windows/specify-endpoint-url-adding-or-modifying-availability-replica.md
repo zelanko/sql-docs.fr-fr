@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 85f3fe4115f770f45df6dc226eac81e798514f08
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788460"
 ---
 # <a name="specify-the-endpoint-url-when-adding-or-modifying-an-availability-replica-sql-server"></a>Spécifier l'URL de point de terminaison lors de l'ajout ou lors de la modification d'un réplica de disponibilité (SQL Server)
   Pour héberger un réplica de disponibilité pour un groupe de disponibilité, une instance de serveur doit posséder un point de terminaison de mise en miroir de bases de données. L'instance de serveur utilise ce point de terminaison pour écouter les messages [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] des réplicas de disponibilité hébergés par d'autres instances de serveur. Pour définir un réplica de disponibilité pour un groupe de disponibilité, vous devez spécifier l'URL de point de terminaison de l'instance de serveur qui hébergera le réplica. L’*URL de point de terminaison* identifie le protocole de transport du point de terminaison de mise en miroir de bases de données (TCP), l’adresse système de l’instance de serveur et le numéro de port associé au point de terminaison.  
@@ -82,7 +82,7 @@ ms.locfileid: "54100264"
   
  `TCP://SYSTEM46:7022`  
   
-#### <a name="b-using-a-fully-qualified-domain-name"></a>b. Utilisation d'un nom de domaine complet  
+#### <a name="b-using-a-fully-qualified-domain-name"></a>B. Utilisation d'un nom de domaine complet  
  L'URL de point de terminaison suivante spécifie un nom de domaine complet, `DBSERVER8.manufacturing.Adventure-Works.com`, et le port `7024`.  
   
  `TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024`  

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b79b9c6662b40b860cfacd85d77b09dbfb04117d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703247"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Exemple de configuration avec privilèges minimum pour Power Pivot pour SharePoint 2013
   Cette rubrique décrit un exemple de configuration de PowerPivot pour SharePoint 2013 avec les privilèges minimums. La configuration utilise un compte différent pour chacun des trois composants et chaque compte dispose du niveau minimum de privilèges.  
@@ -26,7 +26,7 @@ ms.locfileid: "53368391"
   
  Le tableau suivant récapitule les trois comptes utilisés dans cet exemple de configuration avec privilèges minimums.  
   
-|Portée|Créer une vue d’abonnement|  
+|Portée|Nom|  
 |-----------|----------|  
 |Compte Administrateur SharePoint|**SPAdmin**|  
 |Compte de batterie de serveurs SharePoint|**SPFarm**|  

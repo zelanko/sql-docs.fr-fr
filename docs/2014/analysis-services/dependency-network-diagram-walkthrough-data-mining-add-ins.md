@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f8d69e97aa542d89291d81d60177e520e6a007b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48197929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732175"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Procédure pas à pas Diagramme Réseau de dépendances (Compléments d'exploration de données)
   Plusieurs types de modèles d'exploration de données différents utilisent un graphique de réseau comme manière d'explorer les relations dans les données. Vous pouvez importer ces modèles dans Visio à l’aide du **réseau de dépendances** mettre en forme, puis continuer de personnaliser et d’améliorer la disposition. Le **formes d’exploration de données pour Visio** incluent les contrôles personnalisés suivants pour travailler avec des diagrammes de réseau de dépendance :  
@@ -46,7 +46,7 @@ ms.locfileid: "48197929"
   
      \<lecteur > : \Program files (x85) \Microsoft SQL Server 2012 DM Add-Ins  
   
-2.  Faites glisser le **réseau de dépendances** forme sur la page pour démarrer l’Assistant. Cliquez sur **Suivant**.  
+2.  Faites glisser le **réseau de dépendances** forme sur la page pour démarrer l’Assistant. Cliquer sur **Suivant**.  
   
 3.  Sur la page d’accueil de la **Assistant Création de forme Visio dépendance réseau**, cliquez sur **suivant**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "48197929"
   
 3.  Cliquez sur le **Add-Ins** ruban et afficher une barre d’outils personnalisées utilisées pour travailler avec des diagrammes d’exploration de données :  
   
-     **Mise en page**  
+     **Disposition**  
      Optimise la disposition des nœuds sur la page et modifie l'affichage pour que tous les nœuds soient visibles.  
   
      **Redimensionner la Page**  
@@ -106,7 +106,7 @@ ms.locfileid: "48197929"
      **Résistance du bord**  
      Fait basculer l'affichage de la résistance du bord de l'ensemble du graphique. Un bord représente une connexion entre des nœuds. Vous pouvez utiliser le curseur pour exclure les connexions qui ne sont pas fortes.  
   
-     **Curseur**  
+     **Slider**  
      Le **curseur** vous permet de contrôler la force des relations qui sont affichés dans le diagramme de réseau de dépendances.  
   
      Chaque nœud du graphique représente un état. Une flèche représente une transition entre deux états et la probabilité associée à la transition. Pour réduire le nombre de nœuds dans le graphique, déplacez le curseur vers le haut.  

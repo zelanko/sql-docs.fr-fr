@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8690c252ddb1b91cd939044ee4f0ccc3a6f4a60
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703623"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Installer Analysis Services en mode tabulaire
   Si vous installez Analysis Services afin d'utiliser les nouvelles fonctionnalités tabulaires de modélisation, vous devez installer Analysis Services dans un mode serveur qui prend en charge ce type de modèle. Le mode serveur est un mode tabulaire configuré pendant l'installation.  
@@ -46,22 +46,22 @@ ms.locfileid: "48214649"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- `INSTANCENAME` doit comporter moins de 17 caractères.  
+ `INSTANCENAME` doit contenir moins de 17 caractères.  
   
  Toutes les valeurs de compte de l'espace réservé doivent être remplacées par des comptes valides et un mot de passe.  
   
- Des outils, tels que SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], ne sont pas installés à l'aide de l'exemple de syntaxe de ligne de commande fourni. Pour plus d’informations sur l’ajout de fonctionnalités, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
+ Des outils, tels que SQL Server Management Studio ou [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] , ne sont pas installés à l'aide de l'exemple de syntaxe de ligne de commande fourni. Pour plus d’informations sur l’ajout de fonctionnalités, consultez [installer SQL Server 2014 à partir de l’invite de commandes](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md).  
   
  `ASSERVERMODE` respecte la casse.  Toutes les valeurs doivent être exprimées en majuscules. Le tableau suivant décrit les valeurs valides pour `ASSERVERMODE`.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
-|MULTIDIMENSIONAL|Il s'agit de la valeur par défaut. Si vous ne définissez pas `ASSERVERMODE`, le serveur est installé en mode serveur multidimensionnel.|  
-|POWERPIVOT|Cette valeur est facultative. En pratique, si vous définissez le paramètre `ROLE`, le mode serveur est automatiquement défini sur 1, ce qui rend `ASSERVERMODE` facultatif pour une installation de PowerPivot pour SharePoint. Pour plus d’informations, consultez [installation de PowerPivot à partir de l’invite de commandes](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
+|MULTIDIMENSIONAL|Valeur par défaut. Si vous ne définissez pas `ASSERVERMODE`, le serveur est installé en mode serveur multidimensionnel.|  
+|POWERPIVOT|Cette valeur est facultative. En pratique, si vous définissez le paramètre `ROLE`, le mode serveur est automatiquement défini sur 1, ce qui rend `ASSERVERMODE` facultatif pour une installation de PowerPivot pour SharePoint. Pour plus d'informations, consultez [Install PowerPivot from the Command Prompt](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  
 |TABULAR|Cette valeur est obligatoire si vous installez Analysis Services en mode tabulaire à partir de la ligne de commande.|  
   
 ## <a name="see-also"></a>Voir aussi  
- [Déterminer le Mode de serveur d’une Instance Analysis Services](../determine-the-server-mode-of-an-analysis-services-instance.md)   
+ [Déterminer le mode serveur d'une instance Analysis Services](../determine-the-server-mode-of-an-analysis-services-instance.md)   
  [Configurer l’accès de DirectQuery pour une base de données de modèle tabulaire ou de In-Memory](../../tabular-models/enable-directquery-mode-in-ssms.md)   
  [Modélisation tabulaire &#40;SSAS tabulaire&#41;](../../tabular-models/tabular-models-ssas.md)  
   

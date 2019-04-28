@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0220e81325345e84524ec0218dbaff7d6143bdd8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52803451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663664"
 ---
 # <a name="exchange-spill-event-class"></a>Exchange Spill (classe d'événements)
   La classe d’événements **Exchange Spill** indique que les tampons d’un plan de requête parallèle ont été temporairement écrits dans la base de données **tempdb** . Cet événement intervient rarement, seulement lorsqu'un plan de requête inclut de multiples plages d'analyses.  

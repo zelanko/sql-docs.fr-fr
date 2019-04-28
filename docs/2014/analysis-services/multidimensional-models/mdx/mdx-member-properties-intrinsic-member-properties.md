@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d5359d5e40737a9989925e952ce674fe6d14114c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53370461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699833"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Propriétés de membre intrinsèques (MDX)
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] expose les propriétés intrinsèques sur les membres de dimension que vous pouvez inclure dans une requête afin de retourner des informations supplémentaires ou des métadonnées à utiliser dans une application personnalisée, ou pour faciliter l’analyse ou la construction d’un modèle. Si vous utilisez les outils clients SQL Server, vous pouvez voir les propriétés intrinsèques dans SQL Server Management Studio (SSMS).  
@@ -102,7 +102,7 @@ ms.locfileid: "53370461"
 |`IS_DATAMEMBER`|Valeur booléenne indiquant si le membre est un membre de données.|  
 |`IS_PLACEHOLDERMEMBER`|Valeur booléenne indiquant si le membre est un espace réservé.|  
 |`KEYx`|Clé du membre, où x est la valeur ordinale de base zéro de la clé. KEY0 est disponible pour les clés composites et non composites.<br /><br /> S'il s'agit d'une clé non composite, KEY0 équivaut alors à `Key`.<br /><br /> Pour les clés composites, KEY0, KEY1, KEY2, etc., forment collectivement la clé composite. Vous pouvez faire référence à chacune indépendamment dans une requête pour retourner la partie en question de la clé composite. Par exemple, la spécification de KEY0 retourne la première partie de la clé composite, la spécification de KEY1 retourne la partie suivante de la clé composite, et ainsi de suite.<br /><br /> Notez que `KEYx` peut être utilisé en contexte, ainsi que sans contexte. Pour cette raison, il apparaît dans les deux listes.<br /><br /> Pour obtenir un exemple montrant comment utiliser cette propriété de membre, consultez [A Simple MDX Tidbit : Key0, Key1, Key2](https://go.microsoft.com/fwlink/?LinkId=317364).|  
-|`LCID` *X*|Traduction de la légende du membre dans la valeur hexadécimale de l’ID des paramètres régionaux, où *x* correspond à la valeur décimale de l’ID des paramètres régionaux (par exemple, LCID1009 pour Anglais - Canada). Uniquement disponible si la colonne de légende de la traduction est liée à la source de données.|  
+|`LCID` *x*|Traduction de la légende du membre dans la valeur hexadécimale de l’ID des paramètres régionaux, où *x* correspond à la valeur décimale de l’ID des paramètres régionaux (par exemple, LCID1009 pour Anglais - Canada). Uniquement disponible si la colonne de légende de la traduction est liée à la source de données.|  
 |`LEVEL_NUMBER`|Distance du membre par rapport à la racine de la hiérarchie. Le niveau de la racine est égal à zéro.|  
 |`LEVEL_UNIQUE_NAME`|Nom unique du niveau auquel le membre appartient. Pour les fournisseurs qui produisent des noms uniques par qualification, chaque composant du nom est délimité.|  
 |`MEMBER_CAPTION`|Étiquette ou légende associée au membre. La légende est essentiellement utilisée à des fins d'affichage. En l'absence de légende, la requête retourne `MEMBER_NAME`.|  
@@ -134,7 +134,7 @@ ms.locfileid: "53370461"
 ### <a name="example"></a>Exemple  
  Les exemples suivants montrent des requêtes MDX qui retournent les propriétés intrinsèques.  
   
- **Exemple 1 : Utilisez les propriétés intrinsèques contextuelles dans la requête**  
+ **Exemple 1 : Utilisez les propriétés intrinsèques contextuelles dans la requête**  
   
  L'exemple suivant retourne l'ID parent, la clé et le nom de chaque catégorie de produits. Notez que les propriétés sont exposées en tant que mesures. Cela vous permet d'afficher les propriétés d'un ensemble de cellules lorsque vous exécutez la requête, plutôt que la boîte de dialogue Propriétés de membre dans SSMS. Vous pouvez exécuter une requête comme celle qui suit pour récupérer des métadonnées de membre à partir d'un cube déjà déployé.  
   
@@ -152,7 +152,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **Exemple 2 : Propriétés intrinsèques non sensibles au contexte**  
+ **Exemple 2 : Propriétés intrinsèques non sensibles au contexte**  
   
  L'exemple suivant correspond à la liste exhaustive des propriétés intrinsèques non sensibles au contexte. Après avoir exécuté la requête dans SSMS, cliquez sur les membres individuels pour afficher les propriétés dans la boîte de dialogue Propriétés de membre.  
   

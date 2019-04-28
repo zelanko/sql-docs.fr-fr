@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c74fcbc925091a563d10bc8feef44337af48f84
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52519926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681216"
 ---
 # <a name="checklist-of-preparation-for-data-mining"></a>Liste de vérification : préparation pour l'exploration de données
   Bien que les compléments d'exploration de données facilitent et agrémentent la création de modèles et leur expérimentation, lorsque vous devez obtenir des résultats reproductibles et utilisables, vous devez prévoir suffisamment de temps pour formuler les critères fondamentaux pour l'entreprise, ainsi que pour obtenir et préparer les données. Cette section fournit une liste de vérification pour vous aider à planifier les tâches d'inspection, et décrit les problèmes courants.  
@@ -71,7 +71,7 @@ ms.locfileid: "52519926"
   
 -   Si vous avez combiné des jeux de données, avez-vous recherché plusieurs colonnes représentant les mêmes données ?  
   
- **Je sais où les données sources sont stockées, d'où elles proviennent et comment elles sont traitées. Le processus peut être répété facilement si nécessaire.**  
+ **Je sais où les données sources sont stockées, d'où viennent ces données, et comment elles sont traitées. Le processus peut être répété facilement si nécessaire.**  
  Jeux de données uniques sont très bien pour les expériences, mais si vous voulez déplacer le modèle en production, vous souhaiterez penser à l’avance comment le processus de nettoyage peuvent être appliqué aux données opérationnelles. En outre, si vous disposez de données opérationnelles, vous devez savoir comment il ont été modifiée avant obtention-vous devez savoir comment il a été arrondie ou synthétisée.  
   
 -   Voulez-vous être en mesure de répéter l'expérience ?  

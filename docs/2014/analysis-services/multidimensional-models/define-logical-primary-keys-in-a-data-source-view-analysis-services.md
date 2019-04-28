@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 653d8a4f5fa8e0580e8b56a136cf2ca97c3e705a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48142512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700069"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Définir des clés primaires logiques dans une vue de source de données (Analysis Services)
   L'Assistant Vue de source de données et le Concepteur de vue de source de données définissent automatiquement une clé primaire pour une table ajoutée à une vue de source de données basée sur une table de base de données sous-jacente.  
@@ -47,6 +47,6 @@ ms.locfileid: "48142512"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Définir des calculs nommés dans une vue de Source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Définir des calculs nommés dans une vue de source de données &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8fb158b2c11f48733c5eacb3827a43a3303c4a51
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657702"
 ---
 # <a name="sqlgetdiagfield"></a>SQLGetDiagField
   Le [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pilote ODBC Native Client spécifie les champs de diagnostic supplémentaires suivants pour `SQLGetDiagField`. Ces champs prennent en charge la création de rapports d'erreurs riches pour les applications [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et sont disponibles dans tous les enregistrements de diagnostic générés sur les handles de connexion ODBC et les handles d'instructions ODBC connectés. Les champs sont définis dans sqlncli.h.  

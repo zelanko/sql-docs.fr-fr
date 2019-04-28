@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59946635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711256"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Ancrer le volet des données de rapport dans le Concepteur de rapports (SSRS)
   Dans le Concepteur de rapports dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], le volet des données de rapport affiche une vue hiérarchique des objets de données que vous pouvez utiliser dans un rapport, y compris les sources de données, datasets, champs, paramètres et images. Les sources de données dans cette vue peuvent être incorporées ou représenter des références aux sources de données partagées affichées dans l'Explorateur de solutions.  

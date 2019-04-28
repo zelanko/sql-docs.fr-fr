@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 40405d6bbdc4c1444a85ef77557346b9a35eb54d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62720313"
 ---
 # <a name="translation-dll-function-summary"></a>Récapitulatif des fonctions de la DLL de traduction
 Le tableau suivant décrit les fonctions des DLL de traduction. Pour plus d’informations sur la syntaxe et la sémantique pour chaque fonction, consultez [traduction de référence des fonctions DLL](../../../odbc/reference/syntax/translation-dll-api-reference.md).  
   
-|Tâche|Nom de la fonction|Fonction|  
+|Tâche|Nom de la fonction|Objectif|  
 |----------|-------------------|-------------|  
 |Traduction de données|[SQLDataSourceToDriver](../../../odbc/reference/syntax/sqldatasourcetodriver-function.md)|Convertit tous les flux de données à partir de la source de données vers le pilote.|  
 ||[SQLDriverToDataSource](../../../odbc/reference/syntax/sqldrivertodatasource-function.md)|Convertit tous les flux de données à partir du pilote vers la source de données.|

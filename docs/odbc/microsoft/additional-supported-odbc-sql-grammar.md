@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47675487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658254"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Grammaire SQL ODBC supplémentaire prise en charge
 Les pilotes ODBC prendre entièrement en charge la grammaire minimale ODBC 2.5 et les clauses suivantes dans la grammaire Core et étendus ODBC 2.5. Informations supplémentaires peuvent être affichées en accédant à la [instruction TABLE ALTER](../../odbc/microsoft/alter-table-statement.md), [des noms de corrélation](../../odbc/microsoft/correlation-names.md), et [appel de procédure](../../odbc/microsoft/procedure-invocation.md) rubriques.  
@@ -40,7 +40,7 @@ Les pilotes ODBC prendre entièrement en charge la grammaire minimale ODBC 2.5 e
   
 -   [Arithmétique des dates](../../odbc/microsoft/date-arithmetic.md)  
   
--   [Jet : littéraux de date, d’heure et d’horodatage](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
+-   [Jet: Date, Time et Timestamp littéraux](../../odbc/microsoft/jet-date-time-and-timestamp-literals.md)  
   
 -   [DROP INDEX, instruction](../../odbc/microsoft/drop-index-statement.md)  
   
@@ -56,7 +56,7 @@ Les pilotes ODBC prendre entièrement en charge la grammaire minimale ODBC 2.5 e
   
 -   IN (*valuelist*) (cœurs)  
   
--   [Jet : Jointures externes](../../odbc/microsoft/jet-outer-joins.md) (étendu)  
+-   [Jet: Jointures externes](../../odbc/microsoft/jet-outer-joins.md) (étendu)  
   
 -   Instruction SELECT (étendu) (y compris GROUP BY, HAVING et clauses UNION)  
   

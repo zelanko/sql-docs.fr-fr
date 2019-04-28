@@ -17,11 +17,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62651488"
 ---
 # <a name="create-nonclustered-indexes"></a>Créer des index non cluster
   Vous pouvez créer des index non-cluster dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Un index non-cluster est une structure d'index séparé des données stockées dans une table qui réorganise une ou plusieurs colonnes sélectionnées. Les index non-cluster peuvent vous aider à trouver plus rapidement les données au lieu de rechercher dans la table sous-jacente. Il est parfois possible de répondre entièrement aux requêtes selon les données dans l'index non-cluster, ou l'index non-cluster peut indiquer au [!INCLUDE[ssDE](../../includes/ssde-md.md)] les lignes dans la table sous-jacente. En général, les index non-cluster sont créés pour améliorer les performances des requêtes fréquemment utilisées qui ne sont pas couvertes par l'index cluster ou pour rechercher des lignes dans une table sans index cluster (ce qui s'appelle un « segment »). Vous pouvez créer plusieurs index non cluster sur une table ou une vue indexée.  
@@ -59,7 +59,7 @@ ms.locfileid: "54132013"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite une autorisation ALTER sur la table ou la vue. L’utilisateur doit être membre du rôle serveur fixe **sysadmin** ou des rôles de base de données fixes **db_ddladmin** et **db_owner** .  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  

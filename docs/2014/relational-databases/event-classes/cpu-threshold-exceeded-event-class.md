@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663482"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Classe d'événements CPU Threshold Exceeded
   La classe d'événements CPU Threshold Exceeded indique que Resource Governor détecte une requête qui dépasse le seuil de l'UC spécifié pour REQUEST_MAX_CPU_TIME_SEC.  
@@ -36,7 +36,7 @@ ms.locfileid: "52770451"
 |EventSubClass|`int`|Violation de la limite de l'UC.|21|Oui|  
 |GroupID|`int`|ID de groupe où la violation s'est produite.|66|Oui|  
 |OwnerID|`int`|SPID du processus qui a provoqué la violation.|58|Oui|  
-|SPID|`int`|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : Il peut être différent du SPID de l'utilisateur réel si un thread système valide l'utilisation de l'UC comme une tâche en arrière-plan.|12|Oui|  
+|SPID|`int`|ID du processus serveur qui déclenche cet événement.<br /><br /> Remarque : Cela peut différer de l’utilisateur réel SPID si un thread système valide l’utilisation du processeur en tant que tâche en arrière-plan.|12|Oui|  
 |StartTime|`datetime`|Heure de déclenchement de cet événement.|14|Oui|  
   
 ## <a name="see-also"></a>Voir aussi  

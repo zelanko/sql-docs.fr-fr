@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e74e63268a79915413955e33fdb2ed9f714f8a12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48099229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689494"
 ---
 # <a name="data-mining-wizards"></a>Assistants Exploration de données
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Fournit des Assistants pour une utilisation dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -39,10 +39,10 @@ ms.locfileid: "48099229"
  Pour plus d’informations sur les Assistants permettant de concevoir et d’utiliser des données multidimensionnelles, consultez [Assistants Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-wizards-multidimensional-data.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Outils d’exploration de données](data-mining/data-mining-tools.md)   
- [Didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
+ [Outils d'exploration de données](data-mining/data-mining-tools.md)   
+ [Didacticiel sur l'exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)   
  [Créer une Structure d’exploration de données OLAP](data-mining/create-an-olap-mining-structure.md)   
- [Créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md)   
+ [Créer une structure d'exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md)   
  [Créer une nouvelle Structure d’exploration de données relationnelles](data-mining/create-a-new-relational-mining-structure.md)   
  [Créer une structure d’exploration de données OLAP](data-mining/create-a-new-olap-mining-structure.md)  
   

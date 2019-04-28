@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71c4e3f36548ddd594b301a73f4032303e4ddea5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700879"
 ---
 # <a name="start-the-business-intelligence-wizard-in-dimension-designer"></a>Démarrer l'Assistant Business Intelligence dans le Concepteur de dimensions
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], vous créez des opérateurs de cumul personnalisés et des formules de membre personnalisées, et vous configurez des dimensions pour l'écriture différée à l'aide de l'Assistant Business Intelligence ou du Concepteur de dimensions. Vous pouvez démarrer l'Assistant Business Intelligence à partir de l'Explorateur de solutions ou du Concepteur de cube dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Le Concepteur de dimensions est accessible à partir de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

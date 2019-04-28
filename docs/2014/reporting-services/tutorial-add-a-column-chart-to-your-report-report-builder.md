@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 24c8e48ef26d3db2bc7662a36d40725c84b1bbc7
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59936855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648247"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un histogramme à un rapport (Générateur de rapports)
   Un histogramme affiche une série sous la forme d'un ensemble de barres verticales regroupées par catégorie. Un histogramme s'avère utile pour :  
@@ -53,7 +53,7 @@ ms.locfileid: "59936855"
 9. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   

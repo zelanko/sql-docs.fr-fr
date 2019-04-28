@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58bfdace704ee1be0c5b902fd24007844fcc4e45
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48051709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699797"
 ---
 # <a name="building-measures-in-mdx"></a>Génération de mesures dans une expression MDX
   Dans les expressions multidimensionnelles (MDX, Multidimensional Expressions), une mesure est une expression DAX nommée qui est résolue en calculant l'expression permettant de retourner une valeur dans un modèle tabulaire. Cette définition anodine couvre un vaste champ d'action. La possibilité de bâtir et d'utiliser des mesures dans une requête MDX est un élément fondamental de la manipulation des données tabulaires.  
@@ -45,7 +45,7 @@ from [Model]
   
 ## <a name="see-also"></a>Voir aussi  
  [Instruction CREATE MEMBER &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)   
- [Référence des fonctions MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)   
  [Instruction SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)  
   
   

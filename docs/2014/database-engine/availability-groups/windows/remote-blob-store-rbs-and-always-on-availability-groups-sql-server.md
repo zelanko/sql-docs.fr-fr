@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 32b2ab48c3406c9820ca264a1cef236a041a5924
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53359111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814550"
 ---
 # <a name="remote-blob-store-rbs-and-alwayson-availability-groups-sql-server"></a>Magasin d'objets blob distants et groupes de disponibilité AlwaysOn (SQL Server)
   [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] peut fournir une solution haute disponibilité et de récupération d’urgence pour les objets blob du [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][Magasin d’objets blob distants (RBS)](../../../relational-databases/blob/remote-blob-store-rbs-sql-server.md) . [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] protège les métadonnées et schémas du magasin d’objets blob distants stockés dans une base de données de disponibilité en les répliquant sur des réplicas secondaires. Il s'agit de la base de données de contenu SharePoint. De manière générale, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stocke ces métadonnées RBS indépendamment de l'objet blob.  

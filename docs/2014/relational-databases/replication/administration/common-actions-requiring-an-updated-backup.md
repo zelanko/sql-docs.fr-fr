@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 184bda56568cfcedbc07183bd2be7fdde7a789e4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705033"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>Actions courantes nécessitant une sauvegarde mise à jour
   Si vous effectuez des sauvegardes régulières des journaux, toutes les modifications liées à la réplication doivent être capturées dans les sauvegardes des journaux. Si vous ne sauvegardez pas les journaux, effectuez une sauvegarde des bases de données de publication, de distribution, d'abonnement ainsi que des bases de données **msdb**et **master** après avoir apporté des modifications à votre schéma ou topologie de réplication.  

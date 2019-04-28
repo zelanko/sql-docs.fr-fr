@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 233e8f36f103d1a5adac6937d47e1040dfe6395d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729659"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Éditeur de formulaire d'indicateur de performance clé (onglet Indicateurs de performance clés, Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez le volet **Éditeur de formulaire d’indicateur de performance clé** de l’onglet **Indicateurs de performance clés** dans le Concepteur de cube pour créer ou modifier l’indicateur de performance clé sélectionné.  
@@ -66,7 +66,7 @@ ms.locfileid: "52523474"
 > [!NOTE]  
 >  Les valeurs entre -1 et 1 sont possibles, mais ne peuvent pas être interprétées correctement par les applications clientes de tiers.  
   
- **Tendance**  
+ **Trend**  
  Développez pour afficher les options **Graphique de tendance** et **Expression de tendance** .  
   
  **Graphique de tendance**  

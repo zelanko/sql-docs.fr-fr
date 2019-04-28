@@ -24,11 +24,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661756"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Fenêtre Propriétés - Aide (F1) (Management Studio)
   Utilisez la boîte de dialogue **Propriétés** pour afficher ou modifier les propriétés d’éléments sélectionnés. Vous pouvez également utiliser la fenêtre **Propriétés** pour afficher les propriétés d’un fichier, d’un projet et d’une solution. Pour accéder à la fenêtre **Propriétés** , dans le menu **Affichage** , cliquez sur **Fenêtre Propriétés** .  

@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dc207c4c1bc7ddc2c7c4f590622e04a0f7739375
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698754"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obtenir des informations sur les déclencheurs DML
   Cette rubrique explique comment obtenir des informations sur les déclencheurs DML dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Ces informations peuvent inclure les types de déclencheurs existant sur une table, ainsi que leur nom, leur propriétaire et la date de leur création ou modification. Si le déclencheur n'a pas été chiffré lors de sa création, vous obtenez la définition du déclencheur. Vous pouvez utiliser la définition pour vous aider à comprendre comment un déclencheur affecte la table sur laquelle il est défini. En outre, vous pouvez déterminer les objets qu'un déclencheur spécifique utilise. Avec ces informations, vous pouvez identifier les objets dont l'éventuelle suppression ou modification aurait une répercussion sur le déclencheur.  
@@ -48,7 +48,7 @@ ms.locfileid: "58531861"
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Pour plus d'informations, consultez [Metadata Visibility Configuration](../security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l'objet ou les bénéficiaires de l'une des autorisations suivantes : ALTER, CONTROL, TAKE OWNERSHIP, ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
+ Nécessite l'appartenance au rôle **public** . La définition des objets utilisateur est visible par le propriétaire de l’objet ou les bénéficiaires de l’une des autorisations suivantes : ALTER, contrôle, TAKE OWNERSHIP ou VIEW DEFINITION. Ces autorisations sont implicitement possédées par des membres des rôles de base de données fixes **db_owner**, **db_ddladmin**et **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Requiert l’autorisation VIEW DEFINITION sur la base de données et l’autorisation SELECT sur **sys.sql_expression_dependencies** pour la base de données. Par défaut, l’autorisation SELECT est accordée uniquement aux membres du rôle de base de données fixe **db_owner** . Lorsque les autorisations SELECT et VIEW DEFINITION sont accordées à un autre utilisateur, le bénéficiaire peut consulter toutes les dépendances dans la base de données.  

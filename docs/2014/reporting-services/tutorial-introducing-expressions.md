@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d155dd77380b202938476e7a34fdb51d212b4330
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649183"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutoriel : Introduction aux expressions
   Les expressions vous permettent de créer des rapports puissants et flexibles. Ce didacticiel vous apprend à créer et implémenter des expressions qui utilisent des fonctions et des opérateurs communs. Vous utiliserez le **Expression** boîte de dialogue pour écrire des expressions qui concatènent des valeurs de nom, recherchent des valeurs dans un dataset distinct, afficher des images différentes en fonction des valeurs de champ et ainsi de suite.  
@@ -66,7 +66,7 @@ ms.locfileid: "59938325"
 >  Dans ce didacticiel, la requête contient les valeurs de données, afin qu'il ne soit pas nécessaire de disposer d'une source de données externe. Cela rend la requête assez longue. Dans un environnement métier, une requête ne contient pas les données. Ceci est nécessaire à des fins de formation uniquement.  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour savoir pas à pas comment accéder à un serveur de rapports, choisir une source de données et créer un jeu de données, voir le premier tutoriel de cette série : [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 #### <a name="to-create-a-new-table-report"></a>Pour créer un nouveau rapport de tableau  
   

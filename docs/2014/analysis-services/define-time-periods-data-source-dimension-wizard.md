@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aacc0e61ca3db517b5f05aa93ed43b3268e40529
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732322"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Définir des périodes (Source de données - Assistant Dimension)
   La page **Définir des périodes** permet de définir des attributs représentant des périodes dans la dimension de temps à l'aide de colonnes dans la table indiquée sur la page **Sélectionner le type de la dimension** .  

@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f24a5ca8ea44f3e05bc11d0148ab30d6f83e993
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48148549"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62730786"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Accorder des autorisations sur des procédures stockées (Analysis Services)
-  Les procédures stockées ou des assemblys, dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sont des routines externes, écrites un [!INCLUDE[msCoName](../includes/msconame-md.md)] langage de programmation .NET, qui étendent les fonctionnalités de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Les assemblys permettent au développeur de tirer parti de l'intégration interlangage, de la gestion des exceptions, ainsi que de la prise en charge du contrôle de version, du déploiement et du débogage.  
+  Dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], les procédures stockées, ou assemblys, sont des routines externes écrites dans un langage de programmation [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET, qui étendent les possibilités d'[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Les assemblys permettent au développeur de tirer parti de l'intégration interlangage, de la gestion des exceptions, ainsi que de la prise en charge du contrôle de version, du déploiement et du débogage.  
   
  Vous devez être administrateur du serveur pour inscrire un assembly. Consultez [accorder des autorisations administrateur du serveur &#40;Analysis Services&#41;](instances/grant-server-admin-rights-to-an-analysis-services-instance.md).  
   
@@ -37,6 +37,6 @@ ms.locfileid: "48148549"
 -   **Unrestricted** jeu d’autorisations avec le Unrestricted, une procédure stockée peut accéder aux ressources externes à l’aide de n’importe quel code. Avec ce jeu d'autorisations, il n'existe aucune garantie de sécurité ou de fiabilité pour les procédures stockées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Gestion des assemblys de modèle multidimensionnel](multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Gestion des assemblys de modèles multidimensionnels](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48176369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689409"
 ---
 # <a name="bcpwritefmt"></a>bcp_writefmt
   Crée un fichier de format qui contient une description du format du fichier de données de copie en bloc actif.  
@@ -43,7 +43,7 @@ szFormatFile
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *pas*  
+ *hdbc*  
  Handle de connexion ODBC compatible avec la copie en bloc.  
   
  *szFormatFile*  
@@ -53,14 +53,14 @@ szFormatFile
  SUCCEED ou FAIL.  
   
 ## <a name="remarks"></a>Notes  
- Le fichier de format spécifie le format de données d'un fichier de données créé par le biais d'une copie en bloc. Les appels à [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md) définissent le format du fichier de données. **bcp_writefmt** enregistre cette définition dans le fichier référencé par l'argument *szFormatFile*. Pour plus d’informations, consultez [bcp_init](bcp-init.md).  
+ Le fichier de format spécifie le format de données d'un fichier de données créé par le biais d'une copie en bloc. Les appels aux méthodes [bcp_columns](bcp-columns.md) et [bcp_colfmt](bcp-colfmt.md) définissent le format du fichier de données. **bcp_writefmt** enregistre cette définition dans le fichier référencé par l'argument *szFormatFile*. Pour plus d'informations, consultez [bcp_init](bcp-init.md).  
   
  Pour plus d’informations sur la structure de **bcp** fichiers de format de données, consultez [importer et exporter des données en bloc à l’aide de l’utilitaire bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
  Pour charger un fichier de format enregistré, utilisez [bcp_readfmt](bcp-readfmt.md).  
   
 > [!NOTE]  
->  Le fichier de format produit par **bcp_writefmt** est pris en charge uniquement par les versions de la **bcp** utilitaire distribué avec [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 et versions ultérieure.  
+>  Le fichier de format produit par **bcp_writefmt** est pris en charge uniquement par les versions de l'utilitaire **bcp** distribuées à l'aide de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version 7.0 ou ultérieure.  
   
 ## <a name="example"></a>Exemple  
   

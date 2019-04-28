@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bdc60f20e33a63da3819d9f920eea51fef8f1d6c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678658"
 ---
 # <a name="annotate-a-transaction-master-data-services"></a>Annoter une transaction (Master Data Services)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52754591"
 > [!NOTE]  
 >  Vous ne pouvez pas supprimer des annotations.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Pour annoter des transactions que vous avez créées, vous devez avoir l’autorisation d’accéder à la zone fonctionnelle **Explorateur** et disposer au minimum de l’autorisation **Mettre à jour** sur l’objet de modèle que vous souhaitez annoter.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "52754591"
   
 5.  Cliquez sur **OK**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Annotations &#40;Master Data Services&#41;](../master-data-services/annotations-master-data-services.md)   
  [Transactions &#40;Master Data Services&#41;](../master-data-services/transactions-master-data-services.md)  
   

@@ -1,5 +1,5 @@
 ---
-title: Instruction UPDATE MEMBER (MDX) | Documents Microsoft
+title: Instruction UPDATE MEMBER (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34742708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694815"
 ---
-# <a name="mdx-data-definition---update-member"></a>Définition de données MDX - membre de la mise à jour
+# <a name="mdx-data-definition---update-member"></a>Définition de données MDX - UPDATE MEMBER
 
 
   Met à jour un membre calculé existant.  
@@ -41,10 +41,10 @@ UPDATE MEMBER Cube_Name.Member_Name
  *MDX_Expression*  
  Expression MDX (Multidimensional Expressions) valide pour laquelle le membre doit être mis à jour.  
   
- *Property_name*  
+ *Property_Name*  
  Chaîne valide qui spécifie le nom d'une propriété de membre calculé.  
   
- *Nom*  
+ *Property_Value*  
  Expression scalaire valide qui spécifie la valeur de propriété du membre calculé.  
   
 ## <a name="remarks"></a>Notes  
@@ -62,7 +62,7 @@ UPDATE MEMBER Cube_Name.Member_Name
 |Identificateur de propriété|Signification|  
 |-------------------------|-------------|  
 |FORMAT_STRING|Une chaîne de format de style Office que l’application cliente peut utiliser pour afficher les valeurs de cellule.|  
-|VISIBLE|Valeur qui indique si le membre calculé est visible dans un ensemble de lignes de schéma. Calculés visibles membres peuvent être ajoutés à un jeu à le [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (fonction). Une valeur autre que zéro indique que le membre calculé est visible. La valeur par défaut de cette propriété est *Visible*.<br /><br /> Les membres calculés qui ne sont pas visibles sont généralement utilisés comme étapes intermédiaires dans des membres calculés plus complexes. Ces membres calculés peuvent également être référencés par d'autres types de membres, tels que des mesures.|  
+|VISIBLE|Valeur qui indique si le membre calculé est visible dans un ensemble de lignes de schéma. Calculés visibles membres peuvent être ajoutés à un ensemble avec le [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) (fonction). Une valeur autre que zéro indique que le membre calculé est visible. La valeur par défaut de cette propriété est *Visible*.<br /><br /> Les membres calculés qui ne sont pas visibles sont généralement utilisés comme étapes intermédiaires dans des membres calculés plus complexes. Ces membres calculés peuvent également être référencés par d'autres types de membres, tels que des mesures.|  
 |NON_EMPTY_BEHAVIOR|Mesure ou jeu utilisé par MDX pour déterminer le comportement des membres calculés lors de la résolution des cellules vides.|  
 |CAPTION|Valeur de chaîne qui spécifie la légende que l'application cliente utilise pour afficher le membre.|  
 |DISPLAY_FOLDER|Valeur de chaîne qui spécifie le chemin d'accès au dossier d'affichage dans lequel l'application cliente doit afficher le membre. Le séparateur de niveau de dossier est défini par l'application cliente. Pour les outils et les clients fournis par [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la barre oblique inverse (\\) comme séparateur de niveau. Pour fournir plusieurs dossiers d'affichage à un membre défini, utilisez un point-virgule (;) pour séparer les dossiers.|  
@@ -71,6 +71,6 @@ UPDATE MEMBER Cube_Name.Member_Name
 ## <a name="see-also"></a>Voir aussi  
  [Instruction de membre DROP &#40;MDX&#41;](../mdx/mdx-data-definition-drop-member.md)   
  [Instruction CREATE MEMBER &#40;MDX&#41;](../mdx/mdx-data-definition-create-member.md)   
- [Instructions MDX de définition de données &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Instructions de définition de données MDX &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

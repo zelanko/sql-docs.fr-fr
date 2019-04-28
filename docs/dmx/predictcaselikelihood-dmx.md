@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8e061269ebf864a93d6dde50455627cf8e2ea780
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659198"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +83,7 @@ NATURAL PREDICTION JOIN
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

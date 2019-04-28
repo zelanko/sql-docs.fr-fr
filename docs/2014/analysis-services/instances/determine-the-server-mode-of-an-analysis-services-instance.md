@@ -12,14 +12,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0f71f7b3f8d2cb6f7bd50ef676742282ee73d540
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703752"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Déterminer le mode serveur d'une instance Analysis Services
-  Analysis Services peuvent être installés dans l'un des trois modes serveur : multidimensionnel et exploration de données (par défaut), PowerPivot pour SharePoint et tabulaire. Le mode serveur d'une instance Analysis Services est déterminé au moment de l'installation lorsque vous choisissez les options d'installation du serveur.  
+  Analysis Services peut être installé dans un des trois modes serveur : Multidimensionnel et exploration de données (par défaut), PowerPivot pour SharePoint et tabulaire. Le mode serveur d'une instance Analysis Services est déterminé au moment de l'installation lorsque vous choisissez les options d'installation du serveur.  
   
  Le mode serveur détermine le type de solution que vous créez et déployez. Si vous n'avez pas installé le logiciel serveur et que vous souhaitez savoir dans quel mode le serveur a été installé, vous pouvez utiliser les informations de cette rubrique pour déterminer le mode. Pour plus d’informations sur la disponibilité des fonctionnalités dans un mode spécifique, consultez [Comparaison des solutions tabulaires et multidimensionnelles &#40;SSAS&#41;](../comparing-tabular-and-multidimensional-solutions-ssas.md).  
   

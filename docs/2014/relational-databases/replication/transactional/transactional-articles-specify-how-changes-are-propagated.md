@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52754161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655674"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Spécifier le mode de propagation des modifications des articles transactionnels
   La réplication transactionnelle permet de préciser comment les modifications des données sont propagées entre le serveur de publication et les Abonnés. Pour chaque table publiée, vous pouvez spécifier l'une des quatre méthodes de propagation possibles d'une opération (INSERT, UPDATE ou DELETE) vers l'Abonné :  

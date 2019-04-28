@@ -14,14 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 75af6924104764f372eefd0731799ec3566d0a0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808374"
 ---
 # <a name="correlate-a-trace-with-windows-performance-log-data-sql-server-profiler"></a>Corréler une trace aux données du journal de performances Windows (SQL Server Profiler)
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] peut corréler les compteurs du Moniteur système de Microsoft Windows avec [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] événements. Le Moniteur système Windows consigne dans des journaux de performances l'activité du système pour des compteurs spécifiés.  
+  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] peut corréler les compteurs du Moniteur système Microsoft Windows aux événements [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ou [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le Moniteur système Windows consigne dans des journaux de performances l'activité du système pour des compteurs spécifiés.  
   
 > [!NOTE]  
 >  Pour plus d'informations sur le partage de journaux entre plusieurs versions de Windows, consultez la procédure à la fin de cette rubrique.  

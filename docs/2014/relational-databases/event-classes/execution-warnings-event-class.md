@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 947866923053c025d125d36bda5eb514ae6c2005
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52766781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662412"
 ---
 # <a name="execution-warnings-event-class"></a>Execution Warnings, classe d’événements
   La classe d'événements Execution Warnings indique que des avertissements d'allocation de mémoire se sont produits lors de l'exécution d'une instruction [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou d'une procédure stockée. Il est possible de surveiller cette classe d'événements pour déterminer si des requêtes ont dû attendre une seconde ou plus que de la mémoire se libère avant de continuer, ou si la précédente tentative d'obtention de mémoire a échoué. Les informations sur la durée d'attente des requêtes peuvent faciliter la découverte de problèmes de contention dans le système qui peuvent nuire aux performances.  

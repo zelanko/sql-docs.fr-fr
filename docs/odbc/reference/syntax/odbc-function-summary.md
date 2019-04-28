@@ -14,18 +14,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6829f4f5197fca28944e5bc9d2f636f6624c9d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653331"
 ---
 # <a name="odbc-function-summary"></a>Récapitulatif des fonctions ODBC
 Le tableau suivant répertorie les fonctions ODBC, regroupées par type de tâche et inclut la désignation de la conformité et une brève description de l’objectif de chaque fonction. Pour plus d’informations sur les désignations de la conformité, consultez [ODBC et l’interface CLI Standard](../../../odbc/reference/odbc-and-the-standard-cli.md). Pour plus d’informations sur la syntaxe et la sémantique pour chaque fonction, consultez [ODBC API Reference](../../../odbc/reference/syntax/odbc-api-reference.md).  
   
  Une application peut appeler le **SQLGetInfo** fonction pour obtenir des informations de conformité sur un pilote. Pour obtenir des informations sur la prise en charge pour une fonction spécifique dans un pilote, une application peut appeler **SQLGetFunctions**.  
   
-|Tâche|Nom de la fonction|Conformité|Fonction|  
+|Tâche|Nom de la fonction|Conformité|Objectif|  
 |----------|-------------------|-----------------|-------------|  
 |Connexion à une source de données|[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)|ISO 92|Obtient un handle d’environnement, connexion, instruction ou descripteur.|  
 ||[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|ISO 92|Se connecte à un pilote spécifique par nom de source de données, ID d’utilisateur et mot de passe.|  

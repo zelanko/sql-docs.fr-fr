@@ -1,5 +1,5 @@
 ---
-title: Ajouter une agrégation personnalisée à une Dimension | Documents Microsoft
+title: Ajouter une agrégation personnalisée à une Dimension | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbe5c4a1f043ccc8e7f442213b8b024a3920663e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717376"
 ---
-# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>Assistant BI - ajouter une agrégation personnalisée à une Dimension
+# <a name="bi-wizard---add-a-custom-aggregation-to-a-dimension"></a>Assistant BI - Ajouter une agrégation personnalisée à une dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Ajoutez une agrégation personnalisée à un cube ou à une dimension pour remplacer les agrégations par défaut qui sont associées à un membre de dimension avec un opérateur unaire différent. Cette amélioration spécifie une colonne d'opérateur unaire qui, dans la table de dimension, définit le cumul pour les membres d'une hiérarchie parent-enfant. L'opérateur unaire agit sur l'attribut parent dans une hiérarchie parent-enfant.  
   

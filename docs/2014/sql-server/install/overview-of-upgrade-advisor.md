@@ -15,11 +15,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61ad84ce632de0431a584d6ca53b2673d37207c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676423"
 ---
 # <a name="overview-of-upgrade-advisor"></a>Vue d’ensemble du Conseiller de mise à niveau
   Cette section fournit une vue d'ensemble du processus de mise à niveau, ainsi que des informations qui vous aideront à comprendre et à utiliser l'Assistant Analyse du Conseiller de mise à niveau et la visionneuse de rapports du Conseiller de mise à niveau.  

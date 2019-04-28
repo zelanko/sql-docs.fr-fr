@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52798261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704914"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes
   Utilisez cette boîte de dialogue pour afficher la liste des stratégies qui font actuellement référence à cette facette de la Gestion basée sur des stratégies.  

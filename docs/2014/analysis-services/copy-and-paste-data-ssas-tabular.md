@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 24d35372e81b131ce9053649bc964edd9251efa4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48129299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62680124"
 ---
 # <a name="copy-and-paste-data-ssas-tabular"></a>Copier et coller des données (SSAS Tabulaire)
   Vous pouvez copier des données de table depuis des applications externes et les coller dans une table nouvelle ou existante du générateur de modèles. Les données que vous collez à partir du Presse-papiers doivent être au format HTML, notamment les données copiées à partir d’Excel ou de Word. Le générateur de modèles détecte et applique automatiquement les types de données aux données collées. Vous pouvez également modifier manuellement le type de données ou la mise en forme d'affichage d'une colonne.  
@@ -87,8 +87,8 @@ ms.locfileid: "48129299"
  Affiche un exemple de contenu du Presse-papiers. Les données existantes dans la table de destination sont supprimées et les nouvelles lignes sont insérées dans la table.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Importer des données &#40;SSAS tabulaire&#41;](import-data-ssas-tabular.md)   
- [Sources de données prises en charge &#40;SSAS tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
- [Définissez le Type de données d’une colonne &#40;SSAS tabulaire&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
+ [Importer des données &#40;SSAS Tabulaire&#41;](import-data-ssas-tabular.md)   
+ [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)   
+ [Définir le type de données d’une colonne &#40;SSAS Tabulaire&#41;](tabular-models/set-the-data-type-of-a-column-ssas-tabular.md)  
   
   

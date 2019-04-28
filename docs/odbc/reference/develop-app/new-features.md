@@ -18,16 +18,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4d425a6896a64f06bf1610ed8f6be87dd60af25d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658182"
 ---
 # <a name="new-features"></a>Nouvelles fonctionnalités
 Les nouvelles fonctionnalités suivantes a été introduite dans ODBC 3. *x*. Une application ODBC 3. *x* application fonctionne avec un ODBC 2 *.x* pilote ne sera pas en mesure d’utiliser cette fonctionnalité. ODBC 3. *x* Gestionnaire de pilotes ne mappe pas ces fonctionnalités lorsque vous travaillez avec un ODBC 2 *.x* pilote.  
   
--   Fonctions qui acceptent un descripteur de gérer en tant qu’argument : **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, et **SQLCopyDesc**.  
+-   Fonctions qui acceptent un descripteur de gérer en tant qu’argument : **SQLSetDescField**, **SQLGetDescField**, **SQLSetDescRec**, **SQLGetDescRec**, and **SQLCopyDesc**.  
   
 -   Les fonctions **SQLSetEnvAttr** et **SQLGetEnvAttr**.  
   

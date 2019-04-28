@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f903e6c783f71add561cafb1e1d5087b85c8d314
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48200419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792129"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Ajouter ou supprimer les Tables (Analysis Services - données multidimensionnelles)
   Utilisez la boîte de dialogue **Ajouter/Supprimer des tables** dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] pour ajouter des tables dans une source de données d’une vue de source de données, ou en supprimer. Pour afficher la boîte de dialogue **Ajouter/Supprimer des tables**, vous pouvez procéder de deux manières :  
@@ -54,6 +54,6 @@ ms.locfileid: "48200419"
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Concepteur de vue de Source de données &#40;Analysis Services - données multidimensionnelles&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Concepteur de vue de source de données &#40;Analysis Services - Données multidimensionnelles&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf2c26f3d2029e180261ba478184b3d95dd72a8e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703185"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Concepteur graphique d'analyse de précision (exploration de données)
   La vue **Graphique d'analyse de précision de l'exploration de données** vous permet de comparer les performances des modèles d'exploration de données de la structure sélectionnée.  
@@ -35,9 +35,9 @@ ms.locfileid: "48171969"
   
 -   [Onglet matrice de classification &#40;vue graphique d’analyse de précision d’exploration de données&#41;](classification-matrix-tab-mining-accuracy-chart-view.md)  
   
-     Affiche la matrice de classification des modèles sélectionnés sous le `Input Selection` onglet.  
+     Affiche la matrice de classification des modèles sélectionnés sous l'onglet `Input Selection`.  
   
--   [Onglet Validation croisée &#40;vue graphique d’analyse de précision d’exploration de données&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [Onglet Validation croisée &#40;vue Graphique d’analyse de précision de l’exploration de données&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      Définissez les options et générez les résultats de la validation croisée pour la structure d'exploration de données sélectionnée.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "48171969"
 ## <a name="see-also"></a>Voir aussi  
  [Vue de Structure d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Vue modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-models-view-data-mining-model-designer.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
   
   

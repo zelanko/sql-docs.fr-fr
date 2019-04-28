@@ -13,11 +13,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87f260bc69a582726c2e995ed1934d10a1481db9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654970"
 ---
 # <a name="ddl-triggers"></a>Déclencheurs DDL
   Les déclencheurs DDL sont activés en réponse à différents événements DDL (Data Definition Language). Ces événements correspondent principalement à des instructions [!INCLUDE[tsql](../../includes/tsql-md.md)] commençant par les mots clés CREATE, ALTER, DROP, GRANT, DENY, REVOKE ou UPDATE STATISTICS. Certaines procédures stockées système qui effectuent des opérations de type DDL peuvent également activer des déclencheurs DDL.  

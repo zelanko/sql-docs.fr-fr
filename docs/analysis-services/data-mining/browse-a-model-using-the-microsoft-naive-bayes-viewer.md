@@ -1,5 +1,5 @@
 ---
-title: Parcourir un modèle à l’aide de l’Observateur de Microsoft Naive Bayes | Documents Microsoft
+title: Explorer un modèle à l’aide de l’Observateur de Microsoft Naive Bayes | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e7afe60ffa61af8e2c1ae5b60deb596230738a78
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678809"
 ---
 # <a name="browse-a-model-using-the-microsoft-naive-bayes-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MNB (Microsoft Naive Bayes)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  La Visionneuse de l’algorithme MNB ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données générés avec l’algorithme MNB ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes). L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes est un algorithme de classification qui est fortement adaptable aux tâches de modélisation prédictive. Pour plus d’informations sur cet algorithme, consultez [Algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
+  La Visionneuse de l’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données générés avec l’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes). L'algorithme [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes est un algorithme de classification qui est fortement adaptable aux tâches de modélisation prédictive. Pour plus d’informations sur cet algorithme, consultez [Algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md).  
   
  Comme l’une des principales finalités d’un modèle Naive Bayes est de fournir un moyen rapide d’explorer les données d’un dataset, la Visionneuse de l’algorithme MNB ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes) propose plusieurs méthodes d’affichage de l’interaction entre les attributs prédictibles et les attributs d’entrée.  
   
@@ -62,11 +62,11 @@ ms.locfileid: "34014776"
 ##  <a name="BKMK_Discrimination"></a> Discrimination d'attribut  
  Pour utiliser l’onglet **Discrimination d’attribut** , sélectionnez un attribut prédictible et deux de ses états dans les listes **Attribut**, **Valeur 1**et **Valeur 2** . La grille de l’onglet **Discrimination d’attribut** affiche alors les informations suivantes dans des colonnes :  
   
- **Attribut**  
+ **Attribute**  
  Répertorie les autres attributs du jeu de données contenant un état qui privilégie fortement l'un des états de l'attribut prévisible.  
   
  **Valeurs**  
- Affiche la valeur de l’attribut dans la colonne **Attribut** .  
+ Affiche la valeur de l’attribut dans la colonne**Attribut**.  
   
  **Privilégie \<valeur 1 >**  
  Affiche une barre de couleur qui indique à quel degré la valeur d’attribut favorise la valeur d’attribut prédictible affichée dans **Valeur 1**.  
@@ -77,9 +77,9 @@ ms.locfileid: "34014776"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Naive Bayes](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Algorithme MNB (Microsoft Naive Bayes)](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

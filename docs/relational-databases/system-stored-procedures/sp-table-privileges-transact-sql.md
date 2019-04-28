@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62688367"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  [ @table_qualifier=] '*table_qualifier*'  
  Nom du qualificateur de la table. *TABLE_QUALIFIER* est **sysname**, avec NULL comme valeur par défaut. Divers produits SGBD prennent en charge la dénomination en trois parties pour les tables (*qualifier.owner.name*). Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], cette colonne représente le nom de la base de données. Dans d'autres produits, elle représente le nom du serveur de l'environnement de base de données de la table.  
   
- [ @fUsePattern=] '*fUsePattern*'  
+ [ @fUsePattern= ] '*fUsePattern*'  
  Détermine si le trait de soulignement (_), pourcentage (%) et entre crochets ([ou]) caractères sont interprétés comme des caractères génériques. Les valeurs valides sont 0 (critères spéciaux désactivés) et 1 (critères spéciaux activés). *fUsePattern* est **bits**, avec 1 comme valeur par défaut.  
   
 ## <a name="return-code-values"></a>Valeurs des codes de retour  
@@ -75,7 +75,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 ## <a name="remarks"></a>Notes  
  La procédure stockée sp_table_privileges est équivalente à SQLTablePrivileges dans ODBC. Les résultats retournés sont classés par TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME et PRIVILEGE.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l'autorisation SELECT sur le schéma.  
   
 ## <a name="examples"></a>Exemples  

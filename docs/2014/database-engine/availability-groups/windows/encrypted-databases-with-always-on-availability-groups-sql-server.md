@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5bafd990a7c115a6108b699a61897f9e587e83c4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48124180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814635"
 ---
 # <a name="encrypted-databases-with-alwayson-availability-groups-sql-server"></a>Bases de données chiffrées avec groupes de disponibilité AlwaysOn (SQL Server)
   Cette rubrique contient des informations sur l'utilisation des bases de données actuellement chiffrées ou récemment déchiffrées avec [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -56,6 +56,6 @@ ms.locfileid: "48124180"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble des groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Transparent Data Encryption &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
+ [Chiffrement transparent des données &#40;TDE&#41;](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
   

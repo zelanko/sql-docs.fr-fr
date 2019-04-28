@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58387427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62827563"
 ---
 # <a name="define-a-state-variable"></a>Définir une variable d’état
   Cette procédure explique comment définir une variable de package dans laquelle l'état de capture de données modifiées est stocké.  

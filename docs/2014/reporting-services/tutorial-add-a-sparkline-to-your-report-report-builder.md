@@ -12,13 +12,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 72a8778ce3edc2370c08d971703b5db09cd7f38d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59951235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648681"
 ---
-# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique Sparkline à votre rapport (Générateur de rapports)
+# <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique sparkline à un rapport (Générateur de rapports)
   Dans ce didacticiel, vous allez créer un rapport de tableau de base reposant sur les exemples de données de vente, puis ajouter un graphique sparkline à une cellule du tableau.  
   
  Une version améliorée du rapport créé dans ce didacticiel est disponible sous forme d'exemple de rapport Générateur de rapports de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Pour plus d’informations sur le téléchargement de cet exemple de rapport et d’autres, consultez [exemples de rapports Générateur de rapports](https://go.microsoft.com/fwlink/?LinkId=184851). L'illustration suivante montre l'exemple de rapport similaire à celui que vous allez créer.  

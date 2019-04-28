@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5d4fd0da06ec6e0cbdc578fe55e2549cefdc2794
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48146009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681176"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Onglet Graphique (Visionneuses de modèle d'exploration de données)
   Utilisez le volet **Graphique** pour afficher les données d’historique utilisées dans l’apprentissage d’un modèle de série chronologique, avec les valeurs prédites. L'axe vertical du graphique représente la valeur de la série et l'axe horizontal le temps. Les prévisions sont représentées par une ligne en pointillé.  
   
- **Pour plus d’informations :** [Algorithme MTS (Microsoft Time Series)](data-mining/microsoft-time-series-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MTS (Microsoft Time Series)](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Pour plus d’informations :** [Algorithme de série chronologique de Microsoft](data-mining/microsoft-time-series-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de la série Microsoft Time](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -61,7 +61,7 @@ ms.locfileid: "48146009"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

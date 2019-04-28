@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de6a4bf18a6502eba733fd48728e846ba8d1d20f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48054349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681137"
 ---
 # <a name="choose-how-to-import-the-data-ssas"></a>Choisir comment importer les données (SSAS)
   Cette page de l' **Assistant Importation de table** vous permet de choisir comment importer les données de la source de données sélectionnée. Pour accéder à l'Assistant [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], dans le menu **Modèle** , cliquez sur **Importer à partir de la source de données**.  

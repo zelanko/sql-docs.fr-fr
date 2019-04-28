@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bc4a06bd637d6fce460fb15739f8b291c95a3361
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702425"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensions (Analysis Services - Données multidimensionnelles)
   Dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], les dimensions sont un composant fondamental des cubes. Les dimensions organisent les données en relation avec un domaine d'intérêt (clients, magasins ou employés, par exemple) pour les utilisateurs. Les dimensions dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] contiennent des attributs qui correspondent à des colonnes dans des tables de dimension. Ces attributs apparaissent en tant que hiérarchies d'attributs et peuvent être organisés en hiérarchies définies par l'utilisateur ou peuvent être définies en tant que hiérarchies parent-enfant basées sur des colonnes dans la table de dimensions sous-jacente. Les hiérarchies sont utilisées pour organiser les mesures contenues dans un cube. Les rubriques suivantes donnent un aperçu des dimensions, des attributs et des hiérarchies.  

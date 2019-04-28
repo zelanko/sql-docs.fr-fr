@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 30966fc1ccc592539e543869aef03f555ca59b2d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59959505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648337"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique en secteurs à un rapport (Générateur de rapports)
   Les graphiques à secteurs et les graphiques en anneau affichent des données sous la forme d'une proportion de la totalité. Les graphiques en secteurs sont utilisés le plus souvent pour faire des comparaisons entre des groupes. Les graphique à secteurs et les graphiques en anneau, ainsi que les graphiques en pyramide et les graphiques en entonnoir, constituent un groupe de graphiques connus sous le nom de graphiques à base de formes. Les graphiques à base de formes n'ont pas d'axe. Lorsqu'un champ numérique est placé sur un graphique à base de formes, le graphique calcule le pourcentage de chaque valeur par rapport au total.  
@@ -45,7 +45,7 @@ ms.locfileid: "59959505"
 7.  [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l'accès à un serveur de rapports, l'ajout d'une source de données et l'ajout d'un dataset, consultez le premier didacticiel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en deux procédures. Pour obtenir des instructions pas à pas sur l'accès à un serveur de rapports, l'ajout d'une source de données et l'ajout d'un dataset, consultez le premier didacticiel de cette série : [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Durée estimée pour effectuer ce didacticiel : 10 minutes  
   

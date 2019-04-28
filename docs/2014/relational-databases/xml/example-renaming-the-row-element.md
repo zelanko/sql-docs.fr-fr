@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Renommer le &lt;ligne&gt; élément | Microsoft Docs'
+title: 'Exemple : Renommage de l’élément &lt;row&gt; | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,13 +13,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01b835696c5e64182cffb72aea80d53b3c3bb776
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532132"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704904"
 ---
-# <a name="example-renaming-the-ltrowgt-element"></a>Exemple : Renommer le &lt;ligne&gt; élément
+# <a name="example-renaming-the-ltrowgt-element"></a>Exemple : Renommage de l’élément &lt;row&gt;
   Pour chaque ligne du jeu de résultats, le mode RAW génère un élément `<row>`. Vous pouvez éventuellement spécifier un autre nom pour cet élément en spécifiant un argument facultatif pour le mode RAW, comme illustré dans cette requête. La requête retourne un élément <`ProductModel`> pour chaque ligne de l'ensemble de lignes.  
   
 ## <a name="example"></a>Exemple  

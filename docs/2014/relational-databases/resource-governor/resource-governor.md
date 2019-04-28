@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704877"
 ---
 # <a name="resource-governor"></a>gouverneur de ressources
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Resource Governor est une fonctionnalité que vous pouvez utiliser pour gérer la charge de travail et la consommation des ressources système de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Resource Governor vous permet de spécifier des limites sur l'utilisation de la quantité d'UC, d'E/S physiques et de mémoire par les demandes d'application entrantes.  

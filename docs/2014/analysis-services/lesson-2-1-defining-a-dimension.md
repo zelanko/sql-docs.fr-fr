@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7976ba0779553824e78856d212933272b3cd452e
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48168029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729544"
 ---
 # <a name="defining-a-dimension"></a>Définition d'une dimension
   Dans la tâche suivante, vous allez utiliser l'Assistant Dimension pour générer une dimension Date.  
@@ -36,7 +36,7 @@ ms.locfileid: "48168029"
   
 5.  Dans la liste **Table principale** , sélectionnez **Date**.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Dans la page **Sélectionner les attributs de la dimension** , cochez les cases à côté des attributs suivants :  
   
@@ -62,7 +62,7 @@ ms.locfileid: "48168029"
   
     -   **Calendar Semester** en **Half Year**  
   
-9. Cliquez sur **Suivant**.  
+9. Cliquer sur **Suivant**.  
   
 10. Dans la page **Fin de l’Assistant** , dans le volet de visualisation, vous pouvez consulter la dimension **Date** et ses attributs.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "48168029"
 12. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition d’un cube](lesson-2-2-defining-a-cube.md)  
+ [Définition d'un cube](lesson-2-2-defining-a-cube.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Dimensions dans les modèles multidimensionnels](multidimensional-models/dimensions-in-multidimensional-models.md)   

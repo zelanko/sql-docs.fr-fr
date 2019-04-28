@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7b070366c278576dc976c32305ab542aa92d7708
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48195889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729667"
 ---
 # <a name="defining-a-data-source"></a>Définition d'une source de données
   Après avoir créé un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], vous commencez généralement par définir une ou plusieurs sources de données à utiliser dans ce projet. Lorsque vous définissez une source de données, vous définissez les informations de la chaîne de connexion qui seront utilisées pour se connecter à la source de données. Pour plus d’informations, consultez [Créer une source de données &#40;SSAS Multidimensionnel&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md).  
@@ -53,9 +53,9 @@ ms.locfileid: "48195889"
 >  Pour modifier les propriétés d’une source de données après qu’elle a été créée, double-cliquez sur cette source de données dans le dossier **Sources de données** pour en afficher les propriétés dans le **Concepteur de source de données**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Définition d’une vue de source de données](lesson-1-3-defining-a-data-source-view.md)  
+ [Définition d'une vue de source de données](lesson-1-3-defining-a-data-source-view.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Créer une Source de données &#40;SSAS multidimensionnel&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
+ [Créer une source de données &#40;SSAS Multidimensionnel&#41;](multidimensional-models/create-a-data-source-ssas-multidimensional.md)  
   
   

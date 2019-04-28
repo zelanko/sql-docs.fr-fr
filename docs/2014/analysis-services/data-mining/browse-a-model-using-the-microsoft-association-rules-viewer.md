@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25fa0df8f0e3575b8767020721b56b4a19ac529d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691911"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MAR (Microsoft Association Rules)
   La Visionneuse de l'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d'exploration de données qui sont générés avec l'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules). L'algorithme MAR ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Rules) est un algorithme d'association conçu pour la création de modèles d'exploration de données permettant d'effectuer des analyses de panier d'achat. Pour plus d'informations sur cet algorithme, consultez [Microsoft Association Algorithm](microsoft-association-algorithm.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "52538803"
  Chaque onglet contient la case à cocher **Afficher le nom long** qui vous permet d'afficher ou de masquer, dans la règle ou le jeu d'éléments, la table d'où provient le jeu d'éléments.  
   
 ###  <a name="BKMK_Itemsets"></a> Jeux d'éléments  
- L'onglet **Jeux d'éléments** affiche la liste des jeux d'éléments que le modèle a identifiés comme apparaissant fréquemment ensemble. L'onglet contient une grille comportant les colonnes suivantes : **Prise en charge**, **taille**, et **jeu d’éléments**. Pour plus d'informations sur la prise en charge, consultez [Microsoft Association Algorithm](microsoft-association-algorithm.md). La colonne **Taille** affiche le nombre d'éléments présents dans le jeu d'éléments. La colonne **Jeu d'éléments** affiche le jeu d'éléments actuel que le modèle a découvert. Vous pouvez contrôler le format du jeu d'éléments à l'aide de la liste **Afficher** , en choisissant parmi les options suivantes :  
+ L'onglet **Jeux d'éléments** affiche la liste des jeux d'éléments que le modèle a identifiés comme apparaissant fréquemment ensemble. L’onglet affiche une grille comportant les colonnes suivantes : **Prise en charge**, **taille**, et **jeu d’éléments**. Pour plus d'informations sur la prise en charge, consultez [Microsoft Association Algorithm](microsoft-association-algorithm.md). La colonne **Taille** affiche le nombre d'éléments présents dans le jeu d'éléments. La colonne **Jeu d'éléments** affiche le jeu d'éléments actuel que le modèle a découvert. Vous pouvez contrôler le format du jeu d'éléments à l'aide de la liste **Afficher** , en choisissant parmi les options suivantes :  
   
 -   **Afficher le nom et la valeur de l'attribut**  
   

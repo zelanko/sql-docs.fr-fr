@@ -1,5 +1,5 @@
 ---
-title: Création d’étendue de requête calculé membres (MDX) | Documents Microsoft
+title: Création d’étendue de requête de membres (MDX) calculés | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dd315d5c7c7cc2e3cc9839c8831c5356fa3e8ac5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802680"
 ---
-# <a name="mdx-calculated-members---query-scoped-calculated-members"></a>MDX calculé membres : membres calculés d’étendue de requête
+# <a name="mdx-calculated-members---query-scoped-calculated-members"></a>Membres - membres calculés d’étendue de requête calculés MDX
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Si un membre calculé n'est nécessaire que pour une seule requête MDX (Multidimensional Expressions), vous pouvez le définir à l'aide du mot clé WITH. Un membre calculé créé à l'aide du mot clé WITH n'existe plus une fois que l'exécution de la requête est terminée.  
   
@@ -88,8 +88,8 @@ WHERE [Product].[Category].[Bikes]
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des fonctions MDX & #40 ; MDX & #41 ;](../../../mdx/mdx-function-reference-mdx.md)   
- [Instruction SELECT & #40 ; MDX & #41 ;](../../../mdx/mdx-data-manipulation-select.md)   
- [Création d’étendue de Session calculé membres & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
+ [Informations de référence sur les fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [Instruction SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)   
+ [Création de membres calculés au niveau de la session &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)  
   
   

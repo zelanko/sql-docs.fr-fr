@@ -11,13 +11,13 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653782"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Leçon 3 : Accès au service Web
+# <a name="lesson-3-accessing-the-web-service"></a>Leçon 3 : Accès au service web
   Après avoir ajouté une référence au service Web Report Server à votre projet, l'étape suivante consiste à créer une instance de la classe proxy du service Web. Vous pouvez alors accéder aux méthodes de ce service Web en les appelant dans la classe proxy. Lorsque votre application appelle ces méthodes, le code de la classe proxy générée par [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] gère les communications entre votre application et le service Web.  
   
  Vous allez tout d'abord créer une instance de la classe proxy du service Web <xref:ReportService2010.ReportingService2010>. Vous allez ensuite appeler la méthode <xref:ReportService2010.ReportingService2010.GetProperties%2A> du service Web en utilisant la classe proxy. Vous utiliserez cet appel pour extraire le nom et la description de l'un des exemples de rapports appelé Company Sales.  

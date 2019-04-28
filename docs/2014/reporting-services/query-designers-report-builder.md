@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3cfaca7dcd5e72eb5ca540debac6c6723246354d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657446"
 ---
 # <a name="query-designers-report-builder"></a>Concepteurs de requêtes (Générateur de rapports)
   Le Générateur de rapports fournit des concepteurs de requêtes graphiques et textuels pour vous aider à générer des requêtes pour votre rapport. Chaque type de source de données est associé à un concepteur de requêtes. Certaines sources de données prennent en charge des concepteurs graphiques qui vous aident à générer une requête de façon interactive. D'autres sources de données utilisent un concepteur de requêtes textuel. Une source de données SQL Server prend à la fois en charge les concepteurs de requêtes graphiques et textuels.  

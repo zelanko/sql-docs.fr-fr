@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f667ff368ca54f2ccfaeab47716338c7d694c1da
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48136219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792155"
 ---
 # <a name="join-a-secondary-replica-to-an-availability-group-sql-server"></a>Joindre un réplica secondaire à un groupe de disponibilité (SQL Server)
   Cette rubrique explique comment joindre un réplica secondaire à un groupe de disponibilité AlwaysOn à l'aide de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], de [!INCLUDE[tsql](../../../includes/tsql-md.md)], ou de PowerShell dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Une fois qu'un réplica secondaire a été ajouté à un groupe de disponibilité AlwaysOn, le réplica secondaire doit être joint au groupe de disponibilité. L'opération de jointure du réplica doit être effectuée sur l'instance de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le réplica secondaire.  
@@ -40,7 +40,7 @@ ms.locfileid: "48136219"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Suivi :** [configurer des bases de données secondaires](#FollowUp)  
+-   **Suivi :** [Configurer les bases de données secondaires](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   
@@ -57,7 +57,7 @@ ms.locfileid: "48136219"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation ALTER AVAILABILITY GROUP sur le groupe de disponibilité, l'autorisation CONTROL AVAILABILITY GROUP, l'autorisation ALTER ANY AVAILABILITY GROUP ou l'autorisation CONTROL SERVER.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -100,7 +100,7 @@ ms.locfileid: "48136219"
   
  Dans le fournisseur PowerShell [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
   
-1.  Accédez au répertoire (`cd`) à l’instance de serveur qui héberge le réplica secondaire.  
+1.  Remplacez le répertoire (`cd`) par l'instance de serveur qui héberge le réplica secondaire.  
   
 2.  Joignez le réplica secondaire au groupe de disponibilité en exécutant l’applet de commande **Join-SqlAvailabilityGroup** avec le nom du groupe de disponibilité.  
   
@@ -111,13 +111,13 @@ ms.locfileid: "48136219"
     ```  
   
     > [!NOTE]  
-    >  Pour afficher la syntaxe d’une applet de commande, utilisez le `Get-Help` applet de commande dans le [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] environnement PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
+    >  Pour afficher la syntaxe d'une applet de commande, utilisez l'applet de commande `Get-Help` dans l'environnement [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Pour en savoir plus, voir [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
  **Pour configurer et utiliser le fournisseur SQL Server PowerShell**  
   
 -   [Fournisseur SQL Server PowerShell](../../../powershell/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Suivi : configurer des bases de données secondaires  
+##  <a name="FollowUp"></a> Suivi : Configurer les bases de données secondaires  
  Pour chaque base de données dans le groupe de disponibilité, vous avez besoin d'une base de données secondaire sur l'instance de serveur qui héberge le réplica secondaire. Vous pouvez configurer des bases de données secondaires avant ou après avoir joint un réplica secondaire à un groupe de disponibilité, comme suit :  
   
 1.  Restaurez une base de données récente et les sauvegardes de fichier journal de chaque base de données primaire sur l'instance de serveur qui héberge le réplica secondaire, à l'aide de RESTORE WITH NORECOVERY pour chaque opération de restauration. Pour plus d’informations, consultez [Préparer manuellement une base de données secondaire pour un groupe de disponibilité &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  

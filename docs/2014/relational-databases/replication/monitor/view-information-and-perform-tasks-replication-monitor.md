@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667128"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication
-Moniteur de réplication fournit un nombre d’onglets et options pour afficher des informations et effectuer diverses tâches. Cet article décrit les différentes opérations qui peuvent être affichées et lors de l’utilisation du moniteur de réplication.
+Le moniteur de réplication fournit un certain nombre d’onglets et d’options vous permettant d’afficher des informations et d’effectuer des tâches diverses. Cet article décrit les informations que vous pouvez afficher et les tâches que vous pouvez accomplir à l’aide du moniteur de réplication.
 
-## <a name="for-a-publication"></a>Pour une Publication
+## <a name="for-a-publication"></a>Pour une publication
 
-### <a name="view-information"></a>Afficher les informations
+### <a name="view-information"></a>Afficher des informations
 
   Le moniteur de réplication comporte plusieurs onglets contenant des informations relatives à la publication sélectionnée :  
   
@@ -53,9 +53,9 @@ Moniteur de réplication fournit un nombre d’onglets et options pour afficher 
 2.  Pour afficher et modifier les propriétés de la publication, cliquez avec le bouton droit sur celle-ci puis cliquez sur **Propriétés**.    
 3.  Pour afficher des informations sur les abonnements, cliquez sur l'onglet **Tous les abonnements** .  
   
-     Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
+     Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   
-4.  Pour consulter les informations sur les agents, cliquez sur l'onglet **Agents** . Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).    
+4.  Pour consulter les informations sur les agents, cliquez sur l'onglet **Agents** . Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).    
 5.  Pour afficher les informations sur les avertissements d'agent et les seuils, cliquez sur l'onglet **Avertissements** . Pour plus d’informations, voir [Set Thresholds and Warnings in Replication Monitor](set-thresholds-and-warnings-in-replication-monitor.md).   
 6.  Pour afficher des informations sur les jetons de suivi, cliquez sur l'onglet **Jetons de suivi** . Pour plus d'informations sur l'utilisation des jetons de suivi, consultez [Mesurer la latence et valider les connexions pour la réplication transactionnelle](measure-latency-and-validate-connections-for-transactional-replication.md).  
   
@@ -100,16 +100,16 @@ Moniteur de réplication fournit un nombre d’onglets et options pour afficher 
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, développez un serveur de publication, puis cliquez sur une publication.   
 2.  Pour afficher des informations sur les abonnements, cliquez sur l'onglet **Tous les abonnements** . Pour n'afficher que les abonnements qui se trouvent dans un état donné, par exemple en cours de synchronisation, sélectionnez une option dans la liste déroulante **Afficher** .   
-3.  Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
+3.  Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   
-### <a name="subscription-watch-list-tab"></a>Onglet liste de suivi d’abonnement  
+### <a name="subscription-watch-list-tab"></a>Onglet Liste de suivi des abonnements  
   
 1.  Développez un groupe de serveurs de publication dans le volet gauche, puis développez un serveur de publication.   
 2.  Pour consulter des informations sur les abonnements, cliquez sur l'onglet **Liste de suivi des abonnements** .  
 3.  Sélectionnez le type d’abonnement à afficher dans la liste déroulante **Afficher les abonnements \<Type_abonnement>**. Pour n'afficher que les abonnements qui se trouvent dans un état donné, par exemple en cours de synchronisation, sélectionnez une option dans la liste déroulante **Afficher** .    
-4.  Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
+4.  Pour afficher et modifier les propriétés de l'abonnement, cliquez avec le bouton droit sur celui-ci puis cliquez sur **Propriétés**. Vous pouvez également accéder à des informations plus détaillées et effectuer certaines tâches dans cet onglet. Pour plus d’informations, consultez [Afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
 
-## <a name="for-publication-agents"></a>Pour les Agents de Publication
+## <a name="for-publication-agents"></a>Pour les Agents de publication
 
   Le moniteur de réplication fournit l'onglet **Agents** qui contient des informations sur les agents associés à la publication sélectionnée. L’Agent de Distribution et l’Agent de fusion sont associés à des abonnements ; Pour plus d’informations, consultez [afficher des informations et effectuer des tâches à l’aide du moniteur de réplication](view-information-and-perform-tasks-replication-monitor.md).  
   

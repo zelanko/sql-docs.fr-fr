@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 96fd36d1710a166285fecba092735c7d2495271e
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690446"
 ---
 # <a name="sysdmpdwdmsworkers-transact-sql"></a>sys.dm_pdw_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "58658243"
 |dms_step_index|**Int**|Étape dans le plan DMS que ce processus de travail est en cours d’exécution.<br /><br /> request_id, step_index et dms_step_index forment la clé pour cette vue.||  
 |pdw_node_id|**Int**|Nœud qui le processus de travail est en cours d’exécution.|Consultez node_id dans [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
 |distribution_id|**Int**|Distribution du travail s’exécute, le cas échéant.|Consultez l’argument distribution_id dans [sys.pdw_distributions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-distributions-transact-sql.md).|  
-|Type|**nvarchar(32)**|Type de thread de travail DMS que représente cette entrée.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', « REJECT_WRITER », « WRITER »|  
+|type|**nvarchar(32)**|Type de thread de travail DMS que représente cette entrée.|'DIRECT_CONVERTER', 'DIRECT_READER', 'FILE_READER', 'HASH_CONVERTER', 'HASH_READER', 'ROUNDROBIN_CONVERTER', 'EXPORT_READER', 'EXTERNAL_READER', 'EXTERNAL_WRITER', 'PARALLEL_COPY_READER', « REJECT_WRITER », « WRITER »|  
 |status|**nvarchar(32)**|État du processus de travail DMS.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |bytes_per_sec|**bigint**|Débit de lecture ou d’écriture de la dernière seconde.|Supérieur ou égal à 0. NULL si la requête a été annulée ou a échoué avant d’exécuter le processus de travail.|  
 |bytes_processed|**bigint**|Nombre total d’octets traité par ce processus de travail.|Supérieur ou égal à 0. NULL si la requête a été annulée ou a échoué avant d’exécuter le processus de travail.|  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d75b8b66157ee46b423800a430d4cef30d28359a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47678437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62709118"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures, exemple de méthode Delete (VB)
 Le code suivant montre comment supprimer une procédure à l’aide de la [supprimer](../../../ado/reference/adox-api/delete-method-adox-collections.md) méthode de la [procédures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  

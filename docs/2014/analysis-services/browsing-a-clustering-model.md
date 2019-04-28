@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a0fd00201f782bba8b06ddde8753a86aeb89046
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660053"
 ---
 # <a name="browsing-a-clustering-model"></a>Exploration d'un modèle de clustering
   Lorsque vous ouvrez un modèle de clustering avec **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de clustering dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Cette visionneuse vous aide à explorer les clusters qui ont été créés et à comprendre les caractéristiques de cluster. Vous pouvez également comparer des segments individuels avec d'autres segments ou avec la population, et mettre en évidence les différences.  

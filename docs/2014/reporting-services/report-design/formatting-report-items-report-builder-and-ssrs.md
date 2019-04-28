@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2762e1057e7d6343310ff5ae98257e4e4e331913
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59948514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62656442"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Mise en forme des éléments de rapport (Générateur de rapports et SSRS)
   La mise en forme des éléments du rapport rend celui-ci plus attrayant et améliore sa lisibilité. Vous pouvez mettre en forme les zones de texte et des éléments individuels dans les zones de texte, les images, les expressions et les données en mode création de rapport.  

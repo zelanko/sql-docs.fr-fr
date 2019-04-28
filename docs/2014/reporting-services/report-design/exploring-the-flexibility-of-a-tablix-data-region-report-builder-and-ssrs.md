@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a18d86d6e67eb88e9ce0d63298cab86ade9a8bb2
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59950755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695665"
 ---
 # <a name="exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs"></a>Exploration de la souplesse d'une région de données de tableau matriciel (Générateur de rapports et SSRS)
   Lorsque vous ajoutez une région de données de table, de matrice ou de liste à partir de l'onglet Insérer sur le ruban, vous démarrez avec un modèle initial de région de données de tableau matriciel, mais vous n'êtes pas limité par ce modèle. Vous pouvez continuer à développer vos affichages de données en ajoutant ou en supprimant des fonctionnalités de région de données de tableau matriciel (groupes, lignes et colonnes, par exemple).  

@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f2b84ce093c25faa284033065c329bb14f254a8f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676854"
 ---
 # <a name="view-facets-dialog-box"></a>Boîte de dialogue Afficher les facettes
   Utilisez cette boîte de dialogue pour consulter les propriétés d'une facette de la Gestion basée sur des stratégies. Les propriétés d'une facette sont définies lors de la création de la facette et ne peuvent pas être modifiées par le biais de cette boîte de dialogue.  

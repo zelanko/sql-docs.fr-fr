@@ -1,5 +1,5 @@
 ---
-title: Sys.syslogins (Transact-SQL) | Microsoft Docs
+title: sys.syslogins (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/08/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 54372511cab4cbcc3ecd7d2afe875325e105163d
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671928"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "53204231"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-**S’applique aux**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] via [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**S’applique à**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] à la [version actuelle](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
@@ -48,12 +48,12 @@ ms.locfileid: "53204231"
 |**totcpu**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**totio**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**spacelimit**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**TimeLimit**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**timelimit**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resultlimit**|**Int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**nom**|**sysname**|Nom de connexion de l’utilisateur.|  
 |**dbname**|**sysname**|Nom de la base de données par défaut de l'utilisateur lorsqu'une connexion est établie.|  
 |**password**|**nvarchar(128)**|Renvoie NULL.|  
-|**Langage**|**sysname**|Langue par défaut de l'utilisateur.|  
+|**language**|**sysname**|Langue par défaut de l'utilisateur.|  
 |**denylogin**|**Int**|1 = La connexion concerne un utilisateur ou un groupe [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows et l'accès a été refusé.|  
 |**hasaccess**|**Int**|1 = La connexion possède les droits d'accès au serveur.|  
 |**isntname**|**Int**|1 = La connexion est un utilisateur ou un groupe Windows.<br /><br /> 0 = Il s'agit d'une connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -67,7 +67,7 @@ ms.locfileid: "53204231"
 |**diskadmin**|**Int**|1 = connexion concerne un membre de la **diskadmin** rôle serveur fixe.|  
 |**dbcreator**|**Int**|1 = connexion concerne un membre de la **dbcreator** rôle serveur fixe.|  
 |**bulkadmin**|**Int**|1 = connexion concerne un membre de la **bulkadmin** rôle serveur fixe.|  
-|**LoginName**|**nvarchar(128)**|Nom de connexion de l’utilisateur. Fourni pour la compatibilité ascendante.|  
+|**loginname**|**nvarchar(128)**|Nom de connexion de l’utilisateur. Fourni pour la compatibilité ascendante.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Mappage des Tables système avec les vues système &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

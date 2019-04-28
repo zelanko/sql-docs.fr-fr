@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658891"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;modèle &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -129,13 +129,13 @@ FROM [TM Decision Tree]
   
  Par exemple, si vous parcourez le modèle en utilisant la Visionneuse d'arbre de décision et que vous cliquez sur un nœud qui contient des clients regroupés par revenu, les propriétés de nœud suivantes s'affichent dans l'info-bulle :  
   
- Age >=69 AND Yearly Income < 39221.41  
+ Âge > = 69 et Yearly Income < 39221.41  
   
 > [!NOTE]  
 >  La valeur minimale du compartiment minimal et la valeur maximale du compartiment maximal correspondent aux valeurs observées la plus élevée et la moins élevée. Les valeurs hors de cette plage observée sont supposées appartenir aux compartiments minimaux et maximaux.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SÉLECTIONNEZ &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

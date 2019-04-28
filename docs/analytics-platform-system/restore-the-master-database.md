@@ -1,6 +1,6 @@
 ---
-title: Restaurer la base de données master - système de plateforme Analytique | Documents Microsoft
-description: Restaurez la base de données master dans le système de plateforme d’Analytique.
+title: Restaurer la base de données master - Analytique Platform System | Microsoft Docs
+description: Restaurer la base de données master d’Analytique Platform System.
 author: mzaman1
 manager: craigg
 ms.prod: sql
@@ -10,23 +10,23 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 184184f332225e76e152c2d909cfff788b4fea91
-ms.sourcegitcommit: 056ce753c2d6b85cd78be4fc6a29c2b4daaaf26c
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/19/2018
-ms.locfileid: "31538399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678428"
 ---
-# <a name="restore-the-master-database-in-analytics-platform-system"></a>Restaurer la base de données master dans le système de plateforme Analytique
+# <a name="restore-the-master-database-in-analytics-platform-system"></a>Restaurer la base de données master d’Analytique Platform System
 Le **Restore Master** page du Gestionnaire de Configuration PDW SQL Server vous permet de restaurer la base de données master à partir d’une sauvegarde.  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
 > [!IMPORTANT]  
-> Pour effectuer la restauration, SQL Server PDW doit supprimer la base de données principale actuelle, qui contient les informations de sécurité d’utilisateur et le catalogue de base de données. Nous vous recommandons d’effectuer une sauvegarde de la base de données principale actuelle avant d’effectuer la restauration.  
+> Pour effectuer la restauration, SQL Server PDW doit supprimer la base de données master actuelle, qui contient les informations de sécurité d’utilisateur et le catalogue de base de données. Nous vous recommandons d’effectuer une sauvegarde de la base de données master actuelle avant d’effectuer la restauration.  
   
 ## <a name="to-restore-the-master-database"></a>Pour restaurer la base de données master  
   
-1.  Lancez le Gestionnaire de Configuration. Pour plus d’informations, consultez [lancer le Gestionnaire de Configuration &#40;système de plateforme Analytique&#41;](launch-the-configuration-manager.md).  
+1.  Lancez le Gestionnaire de Configuration. Pour plus d’informations, consultez [lancer le Gestionnaire de Configuration &#40;Analytique Platform System&#41;](launch-the-configuration-manager.md).  
   
 2.  Dans le volet gauche du Gestionnaire de Configuration, cliquez sur **Restore Master**.  
   
@@ -34,7 +34,7 @@ Le **Restore Master** page du Gestionnaire de Configuration PDW SQL Server vous 
   
 4.  Cliquez sur **Appliquer**.  
   
-5.  Pour effectuer la restauration, SQL Server PDW s’arrêter tous les services d’application et déconnecter tous les utilisateurs. Une fois la restauration terminée, SQL Server PDW redémarre les services d’application.  
+5.  Pour effectuer la restauration, SQL Server PDW arrête de tous les services d’appliance et déconnectez tous les utilisateurs. Une fois la restauration terminée, SQL Server PDW redémarre les services de l’appliance.  
   
 ![DWConfig Appliance Restore master PDW](./media/restore-the-master-database/SQL_Server_PDW_DWConfig_ApplPDWRestore.png "SQL_Server_PDW_DWConfig_ApplPDWRestore")  
   

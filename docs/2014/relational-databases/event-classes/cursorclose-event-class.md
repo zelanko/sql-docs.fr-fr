@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 386d9ac822b1524169021c5f9c6f27b0701221fa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52770551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62663785"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose (classe d'événements)
   Les événements de fermeture de curseur se produisent lorsque le [!INCLUDE[ssDE](../../includes/ssde-md.md)] se referme et libère un curseur. La classe d’événements **CursorClose** décrit les événements de fermeture de curseur qui se produisent dans les curseurs d’interface de programmation d’applications (API). Cette classe d'événements se produit lors de la fermeture d'une instruction de curseur [!INCLUDE[tsql](../../includes/tsql-md.md)] par ODBC, OLE DB ou DB-Library.  

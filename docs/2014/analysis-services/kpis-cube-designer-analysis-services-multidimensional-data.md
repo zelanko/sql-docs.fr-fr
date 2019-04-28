@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f3d99bf2af18b393275b68e7e56153fa1f49c2b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48089929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729650"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>Indicateurs de performance clés (Concepteur de cube) (Analysis Services - Données multidimensionnelles)
   Utilisez l’onglet **Indicateurs de performance clés** du Concepteur de cube pour afficher et modifier les indicateurs de performance clés (KPI) du cube sélectionné.  

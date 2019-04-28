@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 858789f7954d21c59db3d7221f23d1f429e1c5dd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62711710"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prérequis pour une journalisation minimale dans l’importation en bloc
   Pour une base de données en mode de récupération complète, toutes les opérations d'insertion de lignes effectuées par importation en bloc sont entièrement enregistrées dans le journal des transactions. Les importations de données de grande taille peuvent entraîner un remplissage rapide du journal des transactions si le mode de récupération complète est utilisé. Par opposition, en mode de récupération simple ou en mode de récupération utilisant les journaux de transactions, la journalisation minimale des opérations d'importation en bloc réduit la possibilité qu'une importation en bloc remplira l'espace de journal. La journalisation minimale est également plus efficace qu'une journalisation complète.  
@@ -41,7 +41,7 @@ ms.locfileid: "48072219"
   
 -   La table n'est pas une table mémoire optimisée.  
   
- La possibilité de journalisation minimale pour une table dépend également du fait que celle-ci soit indexée et, si elle l'est, du fait qu'elle soit vide :  
+ La possibilité de journalisation minimale pour une table dépend également du fait que celle-ci soit indexée et, si elle l'est, du fait qu'elle soit vide :  
   
 -   Si la table ne possède aucun index, les pages de données bénéficient de la journalisation minimale.  
   

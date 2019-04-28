@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e046aef7cd5fb4049b4bfb92c99272f625224c2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670472"
 ---
 # <a name="delete-queries-visual-database-tools"></a>Supprimer des requêtes (Visual Database Tools)
   Vous pouvez supprimer une requête en l'éliminant du projet et en la supprimant définitivement du système de fichiers. Les requêtes supprimées à l'aide de la procédure suivante ne sont pas envoyées à la Corbeille et ne peuvent pas être récupérées.  

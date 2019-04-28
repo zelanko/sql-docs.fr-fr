@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8ea4643354990ad416ac3975467c5991842adacc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52390572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658255"
 ---
 # <a name="driver-aware-connection-pooling"></a>Regroupement de connexions prenant en charge les pilotes
 Le regroupement de connexions prenant en charge de pilote est une nouvelle fonctionnalité du Gestionnaire de pilotes dans Windows 8. Le regroupement de connexions prenant en charge de pilote permet les rédacteurs de pilotes personnaliser la comportement dans leurs pilotes ODBC de regroupement de connexions.  

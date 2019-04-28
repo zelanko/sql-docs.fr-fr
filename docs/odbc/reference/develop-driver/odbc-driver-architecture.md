@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 260767c88fdf980466a21d4cc9658b259b91c854
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47788147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690653"
 ---
 # <a name="odbc-driver-architecture"></a>Architecture des pilotes ODBC
 Les rédacteurs de pilotes doivent être conscients que l’architecture du pilote peut affecter si une application peut utiliser SQL de SGBD spécifiques.  
@@ -45,11 +45,11 @@ Les rédacteurs de pilotes doivent être conscients que l’architecture du pilo
   
  Vous trouverez plus d’informations sur les problèmes liés aux pilotes dans les emplacements décrits dans le tableau suivant.  
   
-|Problème|Rubrique|Emplacement|  
+|Problème|Rubrique|Location|  
 |-----------|-----------|--------------|  
 |Problèmes de compatibilité avec les applications et les pilotes|[Compatibilité d’application/pilote](../../../odbc/reference/develop-app/application-and-driver-compatibility.md)|[Considérations sur la programmation](../../../odbc/reference/develop-app/programming-considerations.md), dans la référence du programmeur ODBC|  
 |Pilotes ODBC de rédaction|[Écriture de pilotes ODBC 3.x](../../../odbc/reference/develop-app/writing-odbc-3-x-drivers.md)|[Considérations sur la programmation](../../../odbc/reference/develop-app/programming-considerations.md), dans la référence du programmeur ODBC|  
-|Conseils sur les pilotes pour la compatibilité descendante|[Conseils sur les pilotes pour la compatibilité descendante](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Annexe g : conseils sur les pilotes pour la compatibilité descendante](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), dans la référence du programmeur ODBC|  
+|Conseils sur les pilotes pour la compatibilité descendante|[Conseils sur les pilotes pour la compatibilité descendante](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md)|[Annexe g : Conseils sur les pilotes pour la compatibilité descendante](../../../odbc/reference/appendixes/appendix-g-driver-guidelines-for-backward-compatibility.md), dans la référence du programmeur ODBC|  
 |Connexion à un pilote|[Choix d’une source de données ou d’un pilote](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md)|[Connexion à une données Source ou le pilote](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), dans la référence du programmeur ODBC|  
 |Identification des pilotes|[Affichage des pilotes](../../../odbc/admin/viewing-drivers.md)|[Affichage des pilotes](../../../odbc/admin/viewing-drivers.md), l’administrateur de sources de données ODBC Microsoft aide en ligne|  
 |Activer le regroupement de connexions|[Le regroupement de connexions ODBC](../../../odbc/reference/develop-app/driver-manager-connection-pooling.md)|[Connexion à une données Source ou le pilote](../../../odbc/reference/develop-app/connecting-to-a-data-source-or-driver.md), dans la référence du programmeur ODBC|  

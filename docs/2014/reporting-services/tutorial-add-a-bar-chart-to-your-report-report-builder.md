@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0b21826cb926dbd5f8b0315f490b20850c6ccd23
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59938155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62648313"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutoriel : Ajouter un graphique à barres à un rapport (Générateur de rapports)
   Un graphique à barres représente les données de catégorie horizontalement. Cela peut aider à :  
@@ -55,7 +55,7 @@ ms.locfileid: "59938155"
 10. [Enregistrer le rapport](#Save)  
   
 > [!NOTE]  
->  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l'accès à un serveur de rapports, la création d'un dataset et le choix d'une source de données, consultez le premier didacticiel de cette série : [Didacticiel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+>  Dans ce didacticiel, les étapes de l'Assistant sont consolidées en une seule procédure. Pour obtenir des instructions pas à pas sur l'accès à un serveur de rapports, la création d'un dataset et le choix d'une source de données, consultez le premier didacticiel de cette série : [Tutoriel : Créer un rapport de table de base &#40;Générateur de rapports&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
  Durée estimée pour effectuer ce didacticiel : 15 minutes.  
   

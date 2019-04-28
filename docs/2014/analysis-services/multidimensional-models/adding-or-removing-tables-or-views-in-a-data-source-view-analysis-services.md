@@ -21,11 +21,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dc78ad1f8a1f49d1a42c5b2ded45a913cdd7e669
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701874"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Ajout ou suppression de tables ou de vues dans une vue de source de données (Analysis Services)
   Après avoir créé une vue de source de données (DSV) dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], vous pouvez la modifier dans le concepteur de vue de source de données en ajoutant ou en supprimant des tables et des colonnes, y compris les tables et les colonnes d'une autre source de données.  
@@ -36,17 +36,17 @@ ms.locfileid: "48117951"
 >  Soyez prudent lors de la suppression d'une table. La suppression d'une table supprime toutes les colonnes et relations associées de la vue DSV et invalide tous les objets liés à cette table.  
   
 ## <a name="selecting-tables-or-views-to-add-or-remove"></a>Sélection des tables ou vues à ajouter ou supprimer  
- Dans la boîte de dialogue **Ajouter/supprimer des tables** , vous pouvez déplacer des tables ou des vues entre les listes **Objets disponibles** et **Objets inclus** . La liste **Objets disponibles** inclut à l’origine les tables ou les vues de la source de données principale qui ne se trouvent pas encore dans la vue de source de données. Si la principales source de données prend en charge le `OPENROWSET` (fonction), vous pouvez également ajouter des tables ou vues à partir d’autres sources de données dans le projet ou la base de données.  
+ Dans la boîte de dialogue **Ajouter/supprimer des tables** , vous pouvez déplacer des tables ou des vues entre les listes **Objets disponibles** et **Objets inclus** . La liste **Objets disponibles** inclut à l’origine les tables ou les vues de la source de données principale qui ne se trouvent pas encore dans la vue de source de données. Si la source de données principale prend en charge la fonction `OPENROWSET`, vous pouvez également ajouter des tables ou des vues à partir d'autres sources de données dans le projet ou une base de données.  
   
  L'ajout ou la suppression d'une table à la vue DSV ajoute ou supprime également la table au diagramme sélectionné dans cette vue DSV. Pour plus d’informations sur les diagrammes, consultez [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md).  
   
- Une fois que vous avez placé une table dans la liste **Objets inclus** de la boîte de dialogue **Ajouter/supprimer des tables** , vous pouvez ajouter toutes les tables associées. Cette opération ajoute des tables en fonction des contraintes de clé étrangère dans la source de données, si de telles contraintes existent. Si les contraintes de clé étrangère n’existent pas, vous pouvez utiliser le `NameMatchingCriteria` propriété de la vue de source de données pour déterminer les relations en spécifiant un critère de correspondance des noms de colonne dans les tables pour générer des relations possibles. Si le `NameMatchingCriteria`propriété est spécifiée pour la vue de source de données, cliquez sur **ajouter des Tables associées** pour ajouter des tables à partir de la source de données qui ont des noms de colonne correspondants. Pour plus d’informations sur la configuration de la `NameMatchingCriteria` propriété, consultez [des vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md).  
+ Une fois que vous avez placé une table dans la liste **Objets inclus** de la boîte de dialogue **Ajouter/supprimer des tables** , vous pouvez ajouter toutes les tables associées. Cette opération ajoute des tables en fonction des contraintes de clé étrangère dans la source de données, si de telles contraintes existent. Si aucune contrainte de clé étrangère n'existe, vous pouvez utiliser la propriété `NameMatchingCriteria` de la vue de source de données pour déterminer des relations en spécifiant un critère de correspondance des noms de colonnes dans les tables pour générer des relations possibles. Si le `NameMatchingCriteria`propriété est spécifiée pour la vue de source de données, cliquez sur **ajouter des Tables associées** pour ajouter des tables à partir de la source de données qui ont des noms de colonne correspondants. Pour plus d’informations sur la configuration de la `NameMatchingCriteria` propriété, consultez [des vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md).  
   
 > [!NOTE]  
 >  L'ajout ou la suppression d'objets dans une vue de source de données n'affecte pas la source de données sous-jacente.  
   
 ## <a name="see-also"></a>Voir aussi  
  [Vues de sources de données dans les modèles multidimensionnels](data-source-views-in-multidimensional-models.md)   
- [Utiliser des diagrammes dans le Concepteur de vue de Source de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Utiliser des diagrammes dans un concepteur de vues de sources de données &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

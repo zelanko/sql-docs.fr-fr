@@ -1,5 +1,5 @@
 ---
-title: Ajouter l’Intelligence des dimensions à une Dimension | Documents Microsoft
+title: Ajouter l’Intelligence des dimensions à une Dimension | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad714bfefa8010664a8105eebf1f45d63799847c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717336"
 ---
-# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Assistant BI - ajouter l’Intelligence des dimensions à une Dimension
+# <a name="bi-wizard---add-dimension-intelligence-to-a-dimension"></a>Assistant BI - Ajouter l’intelligence des dimensions à une dimension
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Ajoutez l'intelligence des dimensions à un cube ou à une dimension pour spécifier un type d'entreprise standard pour une dimension. Cette amélioration spécifie également les types correspondants pour les attributs de la dimension. Les applications clientes peuvent utiliser ces spécifications de type lors de l'analyse de données.  
   
@@ -36,6 +36,6 @@ ms.locfileid: "34027206"
  Par exemple, vous souhaitez ajouter l'intelligence des dimensions à une dimension Comptes. Dans **Type de dimension**, vous sélectionnez **Comptes**. Ensuite, si la dimension a les attributs **Type de compte** et **Description du compte** , dans la colonne **Inclure** , cochez les cases pour les types de comptes **Nom du compte** et **Type de compte** . Dans la colonne **Attribut de dimension** , vous associez ensuite ces types de comptes aux attributs **Description du compte** et **Type de compte** , respectivement, dans la dimension.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Définir des calculs Time Intelligence à l’aide de l’Assistant Business Intelligence](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
+ [Définir des calculs Time Intelligence à l'aide de l'Assistant Business Intelligence](../../analysis-services/multidimensional-models/define-time-intelligence-calculations-using-the-business-intelligence-wizard.md)  
   
   

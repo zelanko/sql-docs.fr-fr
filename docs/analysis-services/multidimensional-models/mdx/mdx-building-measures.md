@@ -1,5 +1,5 @@
 ---
-title: Création de mesures dans la syntaxe MDX | Documents Microsoft
+title: Création de mesures dans MDX | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c2095d3bde254a59c5b2edbe8ebb117854ab7777
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62806123"
 ---
-# <a name="mdx-building-measures"></a>Mesures de MDX
+# <a name="mdx-building-measures"></a>Création de mesures dans MDX
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Dans les expressions multidimensionnelles (MDX, Multidimensional Expressions), une mesure est une expression DAX nommée qui est résolue en calculant l'expression permettant de retourner une valeur dans un modèle tabulaire. Cette définition anodine couvre un vaste champ d'action. La possibilité de bâtir et d'utiliser des mesures dans une requête MDX est un élément fondamental de la manipulation des données tabulaires.  
   
@@ -43,8 +43,8 @@ from [Model]
 |2004|25808962.34||  
   
 ## <a name="see-also"></a>Voir aussi  
- [CRÉER une instruction MEMBER & #40 ; MDX & #41 ;](../../../mdx/mdx-data-definition-create-member.md)   
- [Référence des fonctions MDX & #40 ; MDX & #41 ;](../../../mdx/mdx-function-reference-mdx.md)   
- [Instruction SELECT & #40 ; MDX & #41 ;](../../../mdx/mdx-data-manipulation-select.md)  
+ [Instruction CREATE MEMBER &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-member.md)   
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../../../mdx/mdx-function-reference-mdx.md)   
+ [Instruction SELECT &#40;MDX&#41;](../../../mdx/mdx-data-manipulation-select.md)  
   
   

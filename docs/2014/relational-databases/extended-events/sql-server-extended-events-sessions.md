@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6e589ccad75cea729913b10b6232f61693446595
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52767521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62705740"
 ---
 # <a name="sql-server-extended-events-sessions"></a>Sessions Événements étendus SQL Server
   Une session Événements étendus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] est créée dans le processus [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] qui héberge le moteur des Événements étendus. Les aspects suivants d'une session Événements étendus fournissent le contexte nécessaire pour comprendre l'infrastructure des Événements étendus et le processus global qui est en cours :  

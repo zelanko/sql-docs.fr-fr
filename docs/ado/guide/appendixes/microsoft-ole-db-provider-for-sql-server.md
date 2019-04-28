@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f8b5759c0ede8ea6579da11563849df191ad84b1
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678667"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Fournisseur Microsoft OLE DB pour la présentation de SQL Server
 Le fournisseur Microsoft OLE DB pour SQL Server, SQLOLEDB, permet à ADO pour accéder à Microsoft SQL Server.
 
-**Remarque :** il n’est pas recommandé d’utiliser ce pilote pour un nouveau développement. Le nouveau fournisseur OLE DB est appelé le [Microsoft OLE DB Driver pour SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) qui seront mises à jour avec les fonctionnalités du serveur les plus récentes à l’avenir.
+**REMARQUE :**  Il n’est pas recommandé d’utiliser ce pilote pour un nouveau développement. Le nouveau fournisseur OLE DB est appelé le [Microsoft OLE DB Driver pour SQL Server](../../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) qui seront mises à jour avec les fonctionnalités du serveur les plus récentes à l’avenir.
 
 ## <a name="connection-string-parameters"></a>Paramètres de chaîne de connexion
  Pour vous connecter à ce fournisseur, définissez le *fournisseur* l’argument de la [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propriété :
@@ -135,7 +135,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 ## <a name="dynamic-properties"></a>Propriétés dynamiques
  Le fournisseur Microsoft OLE DB pour SQL Server insère plusieurs propriétés dynamiques dans le **propriétés** collection de non ouverts [connexion](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)et [ Commande](../../../ado/reference/ado-api/command-object-ado.md) objets.
 
- Les tableaux suivants sont un index croisé des noms ADO et OLE DB pour chaque propriété dynamique. Référence du programmeur OLE DB fait référence à un nom de la propriété ADO par le terme « Description ». Vous trouverez plus d’informations sur ces propriétés dans la référence du programmeur OLE DB. Recherchez le nom de propriété OLE DB dans l’Index ou consultez [propriétés OLE DB annexe c :](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
+ Les tableaux suivants sont un index croisé des noms ADO et OLE DB pour chaque propriété dynamique. Référence du programmeur OLE DB fait référence à un nom de la propriété ADO par le terme « Description ». Vous trouverez plus d’informations sur ces propriétés dans la référence du programmeur OLE DB. Recherchez le nom de propriété OLE DB dans l’Index ou consultez [annexe c : Propriétés OLE DB](https://msdn.microsoft.com/deded3ff-f508-4e1b-b2b1-fd9afd3bd292).
 
 ## <a name="connection-dynamic-properties"></a>Propriétés dynamiques de connexion
  Les propriétés suivantes sont ajoutées à la **propriétés** collection de la **connexion** objet.

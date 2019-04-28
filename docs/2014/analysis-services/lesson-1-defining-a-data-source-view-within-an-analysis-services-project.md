@@ -12,13 +12,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53365162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729608"
 ---
-# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Leçon 1 : Définition d'une vue de source de données dans un projet Analysis Services
+# <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Leçon 1 : Définition d’une vue de source de données dans un projet Analysis Services
   La conception d’une application Business Intelligence dans [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] commence par la création d’un projet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Dans ce projet, vous devez définir tous les éléments de votre solution, en commençant par une vue de source de données.  
   
  Cette leçon contient les tâches suivantes :  

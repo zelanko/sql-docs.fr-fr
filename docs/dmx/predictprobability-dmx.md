@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f2a01e2cfd460d503e4326c44eaf356b8a5ecb4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659129"
 ---
 # <a name="predictprobability-dmx"></a>PredictProbability (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -61,11 +61,11 @@ NATURAL PREDICTION JOIN
   
 |Bike Buyer|Bike Buyer = Yes|Bike Buyer = No|  
 |----------------|-----------------------|----------------------|  
-| 1|0.867074195848097|0.132755556974282|  
+|1|0.867074195848097|0.132755556974282|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

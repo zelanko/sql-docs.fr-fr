@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c3f6654480635966c2e77beb73ad6adc24add6a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48209631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671037"
 ---
 # <a name="calculation-properties-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Propriétés de calcul (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Propriétés de calcul** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour afficher ou modifier les paramètres de calcul du dossier d'affichage et du groupe de mesures associé définis dans l'onglet **Calculs** du Concepteur de cube pour le cube sélectionné. Pour afficher la boîte de dialogue **Propriétés de calcul** , cliquez sur **Propriétés de calcul** dans le volet **Barre d'outils** de l'onglet **Calculs** du Concepteur de cube.  

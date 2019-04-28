@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adba97ff78d22ef2e82bb53065952a716f71a1d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48082799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699231"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Bases de données de modèle multidimensionnel (SSAS)
   Une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] est une collection de sources de données, de vues de source de données, de cubes, de dimensions et de rôles. Éventuellement, une base de données [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] peut inclure des structures pour l'exploration de données et des assemblys personnalisés qui permettent d'ajouter des fonctions définies par l'utilisateur à la base de données.  
@@ -54,15 +54,15 @@ ms.locfileid: "48082799"
   
  [Définir la compatibilité de niveau d’une base de données multidimensionnelle &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [Définir les propriétés de la base de données multidimensionnelle &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [Définir les propriétés de base de données multidimensionnelle &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Synchroniser des bases de données Analysis Services](synchronize-analysis-services-databases.md)  
   
  [Basculer une base de données Analysis Services entre les modes ReadOnly et ReadWrite](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Se connecter en Mode en ligne à une base de données Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
+ [Connexion en mode en ligne à une base de données Analysis Services](connect-in-online-mode-to-an-analysis-services-database.md)   
  [Créer un projet Analysis Services &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)   
- [Interrogation de données multidimensionnelles avec MDX](mdx/querying-multidimensional-data-with-mdx.md)  
+ [Interrogation de données multidimensionnelles à l'aide de MDX](mdx/querying-multidimensional-data-with-mdx.md)  
   
   

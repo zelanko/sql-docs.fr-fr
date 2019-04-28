@@ -11,14 +11,14 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 566215be603b52e50999bb737451278881274402
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792185"
 ---
 # <a name="supported-sql-server-and-ssis-data-types-for-dqs-domains"></a>Types de données SQL Server et SSIS pris en charge pour les domaines DQS
-  Il existe de nombreux types de données dans SQL Server et SQL Server Integration Services (SSIS), mais seulement quatre types de données pour les domaines DQS : Date, décimal, entier et chaîne. Les types de données SQL Server et SSIS ne sont pas tous pris en charge dans DQS. Vous ne pouvez mapper vos données source à un domaine DQS en vue d'y effectuer des activités portant sur la qualité des données que si le type de données source est pris en charge dans DQS et qu'il correspond au type de données du domaine DQS. Cette rubrique fournit des informations relatives aux types de données SQL Server et SSIS qui sont pris en charge et disponibles en vue d'un mappage à chacun des quatre types de données de domaine dans DQS.  
+  Il existe de nombreux types de données dans SQL Server et SQL Server Integration Services (SSIS), mais il en existe seulement quatre pour les domaines DQS : Date, Decimal, Integer et String. Les types de données SQL Server et SSIS ne sont pas tous pris en charge dans DQS. Vous ne pouvez mapper vos données source à un domaine DQS en vue d'y effectuer des activités portant sur la qualité des données que si le type de données source est pris en charge dans DQS et qu'il correspond au type de données du domaine DQS. Cette rubrique fournit des informations relatives aux types de données SQL Server et SSIS qui sont pris en charge et disponibles en vue d'un mappage à chacun des quatre types de données de domaine dans DQS.  
   
 > [!NOTE]  
 >  Dans les fichiers .xlsx et .xls, le type de données de la colonne source est déterminé par le type de données prédominant des huit premières lignes. Si une cellule n'est pas conforme à ce type de données, elle recevra une valeur NULL. De la même manière, dans les fichiers .csv, le type de données de la colonne source est déterminé par le type de données prédominant des huit premières lignes.  
@@ -29,7 +29,7 @@ ms.locfileid: "56024701"
 |Type de données de domaine DQS|Type de données SQL Server pris en charge|  
 |--------------------------|------------------------------------|  
 |Date|Date|  
-|Décimal|Décimal<br /><br /> FLOAT<br /><br /> money<br /><br /> NUMERIC<br /><br /> REAL<br /><br /> SMALLMONEY|  
+|Décimal|Décimal<br /><br /> FLOAT<br /><br /> money<br /><br /> numeric<br /><br /> REAL<br /><br /> SMALLMONEY|  
 |Entier|BIGINT<br /><br /> INT<br /><br /> smallint<br /><br /> TINYINT|  
 |String|char<br /><br /> NCHAR<br /><br /> NVARCHAR<br /><br /> varchar|  
   

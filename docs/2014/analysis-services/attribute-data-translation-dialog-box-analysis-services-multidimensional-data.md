@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 32832a354342b822ac0e6b2853c18c11ed3eb004
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650660"
 ---
 # <a name="attribute-data-translation-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Traduction de données d'attribut (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Traduction de données d’attribut** pour configurer la colonne qui contient les données de sous-titre de traduction, ainsi que l’ordre de classement et de tri à utiliser avec les données traduites. Pour afficher la boîte de dialogue **Traduction de données d’attribut** , vous pouvez :  
@@ -64,7 +64,7 @@ ms.locfileid: "48117366"
  Si l’option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu’il n’y a pas de différences entre les lettres accentuées et non accentuées.  
   
  **Kana sensibles**  
- Sélectionnez cette option pour trier et comparer les données d'après les règles du dictionnaire de la langue ou de l'alphabet associé et pour faire la distinction entre les deux types de caractères japonais Kana : Hiragana et Katakana.  
+ Sélectionnez cette option pour trier et comparer les données selon les règles du dictionnaire pour la langue associée ou l’alphabet et faire la distinction entre les deux types de caractères japonais kana : Hiragana et Katakana.  
   
  Si l'option est désactivée, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] considère qu'il n'y a pas de différences entre les caractères Hiragana et Katakana.  
   

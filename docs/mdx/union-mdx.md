@@ -1,5 +1,5 @@
 ---
-title: Union (MDX) | Documents Microsoft
+title: Union  (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34743488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653459"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -46,7 +46,7 @@ Alternate syntax 2
  Cette fonction retourne l’union de deux ou plusieurs jeux spécifiés *.* Avec la syntaxe standard et la syntaxe alternative 1, les doublons sont éliminés par défaut. Avec la syntaxe standard, à l’aide de la **tous les** indicateur conserve les doublons dans le jeu joint. Les doublons sont supprimés de la fin du jeu. Avec la syntaxe alternative 2, les doublons sont toujours conservés.  
   
 ## <a name="examples"></a>Exemples  
- Les exemples suivants illustrent le comportement de la **Union** avec chaque syntaxe de fonction.  
+ Les exemples suivants montrent le comportement de la **Union** avec chaque syntaxe de fonction.  
   
 ### <a name="standard-syntax-duplicates-eliminated"></a>Syntaxe standard, doublons supprimés  
   
@@ -97,6 +97,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>Voir aussi  
  [+ &#40;Union&#41; &#40;MDX&#41;](../mdx/union-mdx-operator-reference.md)   
- [Référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [Guide de référence des fonctions MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 291d1429cdd7dbc4b4737f55b98dea2ba467512f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679500"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>Spécifier des métapropriétés dans OPENXML
   Les attributs de métapropriétés dans un document XML décrivent les propriétés d'un élément XML (élément, attribut ou tout autre nœud DOM). Ces attributs n'existent pas physiquement dans le texte du document XML. Toutefois, OPENXML fournit ces métapropriétés pour tous les éléments XML. Ces métapropriétés vous permettent d'extraire des informations (par exemple des informations de positionnement local et d'espace de noms) sur les nœuds XML. Ces informations vous procurent davantage de détails que ceux apparents dans la représentation textuelle.  

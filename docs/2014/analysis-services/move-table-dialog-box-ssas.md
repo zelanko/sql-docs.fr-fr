@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff10d4c1c2c70049549d848dd31736dbd898fb28
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48226749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702741"
 ---
 # <a name="move-table-dialog-box-ssas"></a>Déplacer la table, boîte de dialogue (SSAS)
   La boîte de dialogue **Déplacer la table** vous permet de modifier l’ordre des tables dans le Générateur de modèles. Pour accéder à cette boîte de dialogue, cliquez avec le bouton droit sur l’onglet situé en bas de la table à déplacer, puis sélectionnez **Déplacer**.  

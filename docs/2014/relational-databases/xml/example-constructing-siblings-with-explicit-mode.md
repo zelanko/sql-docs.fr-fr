@@ -1,5 +1,5 @@
 ---
-title: 'Exemple : Construction de frères avec le Mode EXPLICIT | Microsoft Docs'
+title: 'Exemple : Construction de frères à l’aide du mode EXPLICIT | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4f5ff9f8c153ab80adf5bc19fa5f78f58ddb58b1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62704735"
 ---
 # <a name="example-constructing-siblings-with-explicit-mode"></a>Exemple : Construction de frères à l’aide du mode EXPLICIT
   Supposons que vous souhaitiez construire un document XML qui fournit des informations sur les commandes. Les éléments <`SalesPerson`> et <`OrderDetail`> sont frères. Chaque commande possède un élément <`OrderHeader`>, un élément <`SalesPerson`> ainsi qu'un ou plusieurs éléments <`OrderDetail`>.  

@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 9f4e66d45a7116f20d4903da21508d0d22c6da61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654324"
 ---
 # <a name="view-errors-that-occur-during-staging-master-data-services"></a>Afficher les erreurs rencontrées lors de la mise en lots (Master Data Services)
 
@@ -30,7 +30,7 @@ ms.locfileid: "52817671"
   
 -   stg.viw_name_RelationshipErrorDetails pour les mises à jour de relation de hiérarchie.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Dans la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] , vous devez disposer des autorisations SELECT sur la vue stg.viw_name_MemberErrorDetails ou stg.viw_name_RelationshipErrorDetails.  
@@ -49,10 +49,10 @@ ms.locfileid: "52817671"
   
 4.  Exécutez la requête. Les détails des erreurs sont affichés dans le champ **ErrorDescription** .  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
  Pour plus d’informations sur les messages d’erreur, consultez [Erreurs du processus de mise en lots &#40;Master Data Services&#41;](../master-data-services/staging-process-errors-master-data-services.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Vue d’ensemble : importation de données à partir de tables &#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)   
  [Résolution des problèmes liés au processus de site (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   

@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62653396"
 ---
 # <a name="odbc-api-reference"></a>Informations de référence sur l’API ODBC
 Les rubriques de cette section décrivent chaque fonction ODBC dans l’ordre alphabétique. Chaque fonction est définie comme une fonction de langage de programmation de C. Descriptions sont les suivantes :  

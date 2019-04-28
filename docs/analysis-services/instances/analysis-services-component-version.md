@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b1da8384bb51360178e1735d13f6c6b706e8b7ff
-ms.sourcegitcommit: 87efa581f7d4d84e9e5c05690ee1cb43bd4532dc
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38999352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659057"
 ---
-# <a name="verify-analysis-services-cumulative-update-build-version"></a>Vérifier la version de build de mise à jour cumulative de Analysis Services
+# <a name="verify-analysis-services-cumulative-update-build-version"></a>Vérifier la version de build de la mise à jour cumulative d’Analysis Services
 
 À compter de SQL Server 2017, le numéro de version de build Analysis Services et le numéro de version de build de moteur de base de données SQL Server ne correspondent pas. Tandis que Analysis Services et le moteur de base de données utilisent le même programme d’installation, les systèmes de build chaque utilisation sont distincts.
 

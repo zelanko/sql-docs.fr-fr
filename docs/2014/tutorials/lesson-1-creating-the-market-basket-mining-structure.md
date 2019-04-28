@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56033630"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676274"
 ---
-# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Leçon 1 : Création de la structure d'exploration de données Market Basket
+# <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Leçon 1 : Création de la structure d’exploration de données Market Basket
   Dans cette leçon, vous allez créer une structure d'exploration de données à l'aide de laquelle vous pouvez prévoir quels produits [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] un client est susceptible d'acheter simultanément. Si vous n’êtes pas familiarisé avec les structures d’exploration de données et leur rôle dans l’exploration de données, consultez [les Structures d’exploration de données &#40;Analysis Services - Exploration de données&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md).  
   
  La structure d’exploration de données association que vous allez créer dans cette leçon prend en charge l’ajout de modèles d’exploration de données selon le [algorithme Microsoft Association](../../2014/analysis-services/data-mining/microsoft-association-algorithm.md). Au cours d'autres leçons, vous utiliserez les modèles d'exploration de données pour prévoir les types de produits qu'un client est susceptible d'acheter en même temps (on parle dans ce cas d'analyse de panier d'achat). Par exemple, vous découvrirez peut-être que des clients peuvent acheter en même temps des VTT, des pneus et des casques.  

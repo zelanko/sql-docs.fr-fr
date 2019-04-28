@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d91e282ebfe0299fd6015530e8af1b6d10e6547
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681096"
 ---
 # <a name="choosing-a-model"></a>Choix d'un modèle
   **Algorithme d’exploration de données :** L’exploration de données *algorithme* est un mécanisme qui crée des modèles de données. L'algorithme définit la façon dont les données sont comptées, les relations dérivées et les séquences stockées. La sélection d'un algorithme dépend en partie du type de données à analyser. Par exemple, certains algorithmes peuvent uniquement utiliser des nombres continus, tandis que d'autres peuvent être plus efficaces avec un nombre limité de valeurs distinctes.  

@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 751e70345876967a534df0fb234ee8511cc09fe1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694595"
 ---
 # <a name="use-the-visual-foxpro-odbc-driver-with-your-c-or-visual-c-application"></a>Utilisez le pilote ODBC Visual FoxPro avec votre C ou le Visual C++ Application
 Votre application C ou C++ communique avec les données Visual FoxPro en envoyant un [SQLExecute](../../odbc/microsoft/sqlexecute-visual-foxpro-odbc-driver.md) ou [SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md) instruction pour Visual FoxPro. Cette instruction peut contenir les éléments suivants :  
@@ -35,7 +35,7 @@ Votre application C ou C++ communique avec les données Visual FoxPro en envoyan
   
  Pour plus d’informations sur SQL natif de Visual FoxPro, consultez la documentation de Visual FoxPro.  
   
-## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>Exemple : Utilisation du pilote ODBC Visual FoxPro avec votre C ou d’une Application C++  
+## <a name="example-using-the-visual-foxpro-odbc-driver-with-your-c-or-c-application"></a>Exemple : À l’aide du pilote ODBC Visual FoxPro avec votre C ou d’une Application C++  
  L’exemple suivant utilise l’API C ODBC pour récupérer les données stockées dans le champ last_name dans la table employee dans l’exemple de base de données Microsoft® Visual FoxPro nommé TasTrade. Cette base de données est fourni avec Visual FoxPro et est installé par défaut à l’emplacement suivant :  
   
  `c:\vfp\samples\mainsamp\data\tastrade.dbc`  

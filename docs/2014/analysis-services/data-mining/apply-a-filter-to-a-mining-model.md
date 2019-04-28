@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b26f246b85f708976fd792247996cfb2084af5e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62692088"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Appliquer un filtre à un modèle d'exploration de données
   Si votre structure d'exploration de données contient une table imbriquée, vous pouvez appliquer un filtre à la table de cas, à la table imbriquée, ou aux deux.  
@@ -67,7 +67,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 8.  Cliquez sur la zone de texte **Valeur** et tapez une valeur dans la zone.  
   
-     Par exemple, sélectionnez `Income` en tant que colonne, choisissez l’opérateur supérieur à (>), puis tapez `30000`.  
+     Par exemple, sélectionnez `Income` que la colonne, sélectionnez le plus grand que l’opérateur (>) et tapez `30000`.  
   
 9. Cliquez sur la ligne suivante dans la grille.  
   
@@ -79,7 +79,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 11. Sélectionnez un opérateur et tapez une valeur comme décrit dans les étapes 7 et 8.  
   
-     Par exemple, sélectionnez de nouveau `Income` en tant que colonne, choisissez l’opérateur inférieur à (<), puis tapez `40000`.  
+     Par exemple, sélectionnez `Income` que la colonne à nouveau, sélectionnez l’opérateur inférieur à (<), puis tapez `40000`.  
   
 12. Cliquez sur la ligne suivante dans la grille.  
   

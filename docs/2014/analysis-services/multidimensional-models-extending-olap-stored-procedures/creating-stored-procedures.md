@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60158545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62703095"
 ---
 # <a name="creating-stored-procedures"></a>Création de procédures stockées
   Toutes les procédures stockées doivent être associées à une classe CLR (Common Language Runtime) ou COM (Component Object Model) pour pouvoir être utilisées. La classe doit être installée sur le serveur, généralement sous la forme d’un [!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX® dynamiques (DLL) - de bibliothèque de liens et inscrit en tant qu’assembly sur le serveur ou dans un [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de données.  

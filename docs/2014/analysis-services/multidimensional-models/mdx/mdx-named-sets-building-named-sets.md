@@ -19,11 +19,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b390fd7b731f37be46aae06f0b79473bda4f2e81
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699597"
 ---
 # <a name="building-named-sets-in-mdx-mdx"></a>Création de jeux nommés à l'aide d'expressions MDX (MDX)
   Une expression d'ensemble peut être une déclaration assez longue, complexe et donc difficile à assimiler. Ou bien, il est possible que vous l'utilisiez si souvent qu'il devient pénible de la redéfinir à chaque fois. Pour faciliter l’utilisation d’une expression longue, complexe ou fréquemment utilisée, MDX (Multidimensional Expressions) vous permet de traiter une telle expression sous forme de *jeu nommé*.  
@@ -43,6 +43,6 @@ ms.locfileid: "48083059"
 ## <a name="see-also"></a>Voir aussi  
  [Instruction SELECT &#40;MDX&#41;](/sql/mdx/mdx-data-manipulation-select)   
  [Instruction CREATE SET &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)   
- [Principes de base de requête MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

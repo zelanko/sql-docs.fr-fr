@@ -1,5 +1,5 @@
 ---
-title: 'Annexe b : erreurs ADO | Microsoft Docs'
+title: 'Annexe B : Erreurs ADO | Microsoft Docs'
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -14,13 +14,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 392b14a057c42091acb6b92e0c64d41d94b8eb10
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62719930"
 ---
-# <a name="appendix-b-ado-error-codes"></a>Annexe b : Codes d’erreur ADO
+# <a name="appendix-b-ado-error-codes"></a>Annexe B : Codes d’erreur ADO
 Consultez les rubriques suivantes pour plus d’informations sur les messages d’erreur particulier :
 
 -   [Codes d’erreur ADO](../../../ado/guide/appendixes/ado-error-codes.md)

@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 419db8a664d235090a68d495373eee1e0addbfff
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53354154"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643999"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Concepteur de requêtes MDX Analysis Services (PowerPivot)
   Le concepteur de requêtes MDX (Multidimensional Expression) Analysis Services fournit une interface graphique utilisateur qui vous aide à créer des requêtes MDX pour une source de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres de cubes sélectionnés pour créer une requête MDX qui extrait les données que vous souhaitez utiliser.  

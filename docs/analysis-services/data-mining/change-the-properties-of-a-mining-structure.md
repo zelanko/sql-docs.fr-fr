@@ -1,5 +1,5 @@
 ---
-title: Modifier les propriétés d’une Structure d’exploration de données | Documents Microsoft
+title: Modifier les propriétés d’une Structure d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8064fcc088c7ae9e7dd96c5c132b1246fe0ae2db
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670167"
 ---
 # <a name="change-the-properties-of-a-mining-structure"></a>Modifier les propriétés d'une structure d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "34014046"
      La nouvelle valeur est appliquée lorsque vous sélectionnez un élément différent dans le concepteur.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la Structure d’exploration de données et procédures](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
+ [Tâches et procédures relatives aux structures d’exploration de données](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: La gestion de la portée et le contexte (MDX) | Documents Microsoft
+title: La gestion de la portée et du contexte (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1656ac98555d4377ec70c37a43b70217b9be759c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026276"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62800038"
 ---
 # <a name="managing-scope-and-context-mdx"></a>Gestion de la portée et du contexte (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -107,8 +107,8 @@ END SCOPE;
  Pour plus d’informations sur la syntaxe de l’instruction SCOPE, consultez [Instruction SCOPE &#40;MDX&#41;](../../../mdx/mdx-scripting-scope.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence du langage MDX & #40 ; MDX & #41 ;](../../../mdx/mdx-language-reference-mdx.md)   
- [Le Script MDX de base & #40 ; MDX & #41 ;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
- [Principes de base de requête MDX & #40 ; Analysis Services & #41 ;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [Guide de référence du langage MDX &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [Script MDX de base &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/the-basic-mdx-script-mdx.md)   
+ [Principes de base des requêtes MDX &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

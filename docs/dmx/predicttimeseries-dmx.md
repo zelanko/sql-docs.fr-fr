@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659171"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n* ne peut pas être 0. La fonction retourne une erreur si vous ne faites pas au moins une prédiction.  
   
- *début de n, n-fin*  
+ *n-start, n-end*  
  Spécifie une plage d'étapes de série chronologique.  
   
  *n-début* doit être un entier et ne peut pas être 0.  
@@ -85,12 +85,12 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
 -   Le troisième exemple indique comment utiliser le paramètre EXTEND_MODEL_CASES pour mettre à jour un modèle d'exploration de données avec de nouvelles données.  
   
- Pour en savoir plus sur l’utilisation des modèles de série chronologique, consultez le didacticiel d’exploration de données, [leçon 2 : génération d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) et [temps série de prédiction DMX Didacticiel](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
+ Pour en savoir plus sur l’utilisation des modèles de série chronologique, consultez le didacticiel d’exploration de données, [leçon 2 : Création d’un scénario de prévision &#40;didacticiel d’exploration de données intermédiaire&#41; ](https://msdn.microsoft.com/library/9a988156-c900-4c22-97fa-f6b0c1aea9e2) et [temps série prédiction DMX didacticiel](https://msdn.microsoft.com/library/38ea7c03-4754-4e71-896a-f68cc2c98ce2).  
   
 > [!NOTE]  
 >  Vous pouvez obtenir des résultats différents de votre modèle ; les résultats des exemples suivants sont fournis uniquement pour illustrer le format de résultat.  
   
-### <a name="example-1-predicting-a-number-of-time-slices"></a>Exemple 1 : Prédiction de plusieurs tranches de temps  
+### <a name="example-1-predicting-a-number-of-time-slices"></a>Exemple 1 : Prédiction d’un nombre de tranches de temps  
  L’exemple suivant utilise le **PredictTimeSeries** fonction pour retourner une prédiction pour la prochaine heure trois étapes et limite les résultats à la série M200 dans les régions Europe et Pacifique. Dans ce modèle particulier, l’attribut prédictible est Quantity, vous devez donc utiliser `[Quantity]` comme premier argument à la fonction PredictTimeSeries.  
   
 ```  
@@ -116,7 +116,7 @@ OR [Model Region] = 'M200 Pacific'
   
  Dans cet exemple, le mot clé FLATTENED a été utilisé pour simplifier la lecture des résultats.  Si vous n'utilisez pas le mot clé FLATTENED et qu'à la place vous retournez un ensemble de lignes hiérarchique, cette requête retourne deux colonnes. La première contient la valeur de [ModelRegion] et la deuxième une table imbriquée à deux colonnes : $TIME, qui affiche les tranches de temps prédites, et Quantity, qui contient les valeurs prédites.  
   
-### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Exemple 2 : ajout de nouvelles données et utilisation de REPLACE_MODEL_CASES  
+### <a name="example-2-adding-new-data-and-using-replacemodelcases"></a>Exemple 2 : Ajout de nouvelles données et l’utilisation de REPLACE_MODEL_CASES  
  Supposez que vous constatez que les données étaient incorrectes pour une région particulière et que vous souhaitez utiliser les modèles dans le modèle, tout en ajustant les prédictions pour qu'elles correspondent aux nouvelles données. Ou il se peut que vous constatiez qu'une autre région a des tendances plus fiables et que vous souhaitiez appliquer le modèle le plus fiable aux données d'une région différente.  
   
  Dans de tels scénarios, vous pouvez utiliser le paramètre REPLACE_MODEL_CASES et spécifier un nouveau jeu de données à utiliser comme données d'historique. De cette façon, les projections seront basées sur les modèles dans le modèle spécifié, mais continueront de manière fluide à partir de la fin des nouveaux points de données. Pour obtenir une description complète de ce scénario, consultez [avancé des prédictions de série chronologique &#40;didacticiel d’exploration de données intermédiaire&#41;](https://msdn.microsoft.com/library/b614ebdb-07ca-44af-a0ff-893364bd4b71).  
@@ -162,7 +162,7 @@ ON
 |M200 Pacific|25/8/2008 12:00:00 AM|89|  
 |M200 Pacific|25/9/2008 12:00:00 AM|84|  
   
-### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>Exemple 3 : ajout de nouvelles données et utilisation d'EXTEND_MODEL_CASES  
+### <a name="example-3-adding-new-data-and-using-extendmodelcases"></a>Exemple 3 : Ajout de nouvelles données et l’utilisation d’EXTEND_MODEL_CASES  
  Exemple 3 illustre l’utilisation de la *EXTEND_MODEL_CASES* option pour fournir de nouvelles données, qui sont ajoutées à la fin d’une série de données existante. Plutôt que de remplacer les points de données existants, les nouvelles données sont ajoutées au modèle.  
   
  Dans l'exemple suivant, les nouvelles données sont fournies dans l'instruction SELECT qui suit NATURAL PREDICTION JOIN. Vous pouvez fournir plusieurs lignes de nouvelle entrée avec cette syntaxe, mais chaque nouvelle ligne d'entrée doit avoir un horodatage unique :  
@@ -194,7 +194,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Retourne de nouvelles prédictions pour les trois tranches de temps restantes selon le modèle nouvellement développé.  
   
- Le tableau suivant répertorie les résultats de la requête de l'exemple 2. Remarquez que les deux premières valeurs retournées pour M200 Europe sont exactement les mêmes que les nouvelles valeurs que vous avez fournies. Ce comportement est inhérent à la conception ; si vous souhaitez démarrer des prédictions après la fin des nouvelles données, vous devez spécifier des étapes de début et de fin. Pour obtenir un exemple de procédure à suivre, consultez [leçon 5 : extension du modèle de série chronologique](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ Le tableau suivant répertorie les résultats de la requête de l'exemple 2. Remarquez que les deux premières valeurs retournées pour M200 Europe sont exactement les mêmes que les nouvelles valeurs que vous avez fournies. Ce comportement est inhérent à la conception ; si vous souhaitez démarrer des prédictions après la fin des nouvelles données, vous devez spécifier des étapes de début et de fin. Pour obtenir un exemple de procédure à suivre, consultez [leçon 5 : Extension de la série chronologique de modèle](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
   
  Notez également que vous n'avez pas fourni de nouvelles données pour la région Pacifique. Par conséquent, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] retourne de nouvelles prédictions pour les cinq tranches de temps.  
   
@@ -208,7 +208,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|69|  
 |11/25/2008 0:00|68|  
   
- Quantité : M200 Pacific. EXTEND_MODEL_CASES :  
+ Quantité :  M200 Pacific. EXTEND_MODEL_CASES :  
   
 |$TIME|Quantité|  
 |-----------|--------------|  
@@ -218,7 +218,7 @@ WHERE ([Model Region] = 'M200 Europe'
 |10/25/2008 0:00|42|  
 |11/25/2008 0:00|38|  
   
-## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Exemple 4 : retour de statistiques dans une prédiction de série chronologique  
+## <a name="example-4-returning-statistics-in-a-time-series-prediction"></a>Exemple 4 : Retour de statistiques dans une prédiction de série chronologique  
  Le **PredictTimeSeries** fonction ne prend pas en charge *INCLUDE_STATISTICS* en tant que paramètre. Toutefois, la requête suivante peut être utilisée pour retourner les statistiques de prédiction pour une requête de série chronologique. Cette approche peut également être suivie avec des modèles qui ont des colonnes de tables imbriquées.  
   
  Dans ce modèle particulier, l’attribut prédictible est Quantity, vous devez donc utiliser `[Quantity]` comme premier argument à la fonction PredictTimeSeries. Si votre modèle utilise un autre attribut prédictible, vous pouvez substituer un nom de colonne différent.  

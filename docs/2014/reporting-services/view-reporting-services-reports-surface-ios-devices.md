@@ -18,11 +18,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1453d381b38d01cca5b531661714dbbce1693d1b
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647240"
 ---
 # <a name="view-reporting-services-reports-on-microsoft-surface-devices-and--apple-ios-devices"></a>Afficher des rapports Reporting Services sur des appareils Microsoft Surface et Apple iOS
   Cet article décrit les fonctionnalités et les flux de travail de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] pris en charge pour les appareils Microsoft Surface ainsi que les appareils utilisant Apple iOS 6 et Apple Safari, tels que les iPad.  

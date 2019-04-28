@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c216ce257c513d59a5007637ca4a5642104306f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48194539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650670"
 ---
 # <a name="attribute-profiles-tab-mining-model-viewer"></a>Onglet Profils d'attribut (Visionneuse de modèle d'exploration de données)
   Utilisez l’onglet **Profils d’attribut** pour voir comment la distribution des valeurs d’entrée dans un état de modèle Naive Bayes contribue à chaque état de l’attribut de résultat. La distribution de valeurs est affichée sous la forme d'un histogramme coloré, toutes les distributions étant présentées dans un format tabulaire, afin de faciliter la comparaison des valeurs.  
   
- **Pour plus d’informations :** [Algorithme MNB (Microsoft Naive Bayes)](data-mining/microsoft-naive-bayes-algorithm.md), [Explorer un modèle à l’aide de la visionneuse de l’algorithme MNB (Microsoft Naive Bayes)](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ **Pour plus d’informations :** [L’algorithme Microsoft Naive Bayes](data-mining/microsoft-naive-bayes-algorithm.md), [Explorer un modèle à l’aide de l’Observateur de Microsoft Naive Bayes](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
 ## <a name="options"></a>Options  
  **Actualiser le contenu de l’Observateur**  
@@ -44,10 +44,10 @@ ms.locfileid: "48194539"
  **Prévisibles**  
  Sélectionnez une colonne prédictible dans le modèle d'exploration de données.  
   
- **Profils d’attribut**  
+ **Profils d'attribut**  
  La table contient les colonnes suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Attributs**|Affiche la liste des colonnes contenues dans le modèle d'exploration de données.|  
 |**États**|Colonne facultative qui décrit l'état que représente la couleur de la ligne correspondante d'attributs. Ajoutez-la ou supprimez-la à l’aide de la case à cocher **Afficher la légende** .|  
@@ -56,7 +56,7 @@ ms.locfileid: "48194539"
   
 ## <a name="see-also"></a>Voir aussi  
  [Algorithmes d’exploration de données &#40;Analysis Services - Exploration de données&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Visionneuses de modèle d’exploration de données](data-mining/data-mining-model-viewers.md)  
   
   

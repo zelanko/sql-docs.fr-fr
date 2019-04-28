@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93a9f80d25619aafe6a8a46f7baa7b7106b93351
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48076215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699864"
 ---
 # <a name="using-drillthrough-to-retrieve-source-data-mdx"></a>Utilisation de l'instruction DRILLTHROUGH pour récupérer des données sources (MDX)
   L’instruction MDX (Multidimensional Expressions) utilise l’instruction [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough)pour récupérer un ensemble de lignes à partir des données sources d’une cellule d’un cube.  
@@ -29,7 +29,7 @@ ms.locfileid: "48076215"
  Pour exécuter une instruction `DRILLTHROUGH` sur un cube, une action d'extraction doit être définie pour ce dernier. Pour définir une action d’extraction, dans [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)], dans le Concepteur de cube, dans la barre d’outils du volet **Actions** , cliquez sur **Nouvelle action d’extraction**. Dans la nouvelle action d'extraction, spécifiez le nom de l'action, la cible, la condition et les colonnes retournées par une instruction `DRILLTHROUGH`.  
   
 ## <a name="drillthrough-statement-syntax"></a>Syntaxe de l'instruction DRILLTHROUGH  
- La `DRILLTHROUGH` instruction utilise la syntaxe suivante :  
+ L'instruction `DRILLTHROUGH` utilise la syntaxe suivante :  
   
 ```  
 <drillthrough> ::= DRILLTHROUGH [<Max_Rows>] [<First_Rowset>] <MDX select> [<Return_Columns>]  
@@ -38,7 +38,7 @@ ms.locfileid: "48076215"
    <Return_Columns> ::= RETURN <member or attribute> [, <member or attribute>]  
 ```  
   
- Le `SELECT` clause identifie la cellule du cube qui contient les données sources à récupérer. Cette clause `SELECT` est identique à une instruction MDX `SELECT` ordinaire, à la différence qu'un seul membre peut être spécifié sur chaque axe dans la clause `SELECT`. Si plusieurs membres sont spécifiés sur un axe, une erreur se produit.  
+ La clause `SELECT` identifie la cellule du cube qui contient les données sources à récupérer. Cette clause `SELECT` est identique à une instruction MDX `SELECT` ordinaire, à la différence qu'un seul membre peut être spécifié sur chaque axe dans la clause `SELECT`. Si plusieurs membres sont spécifiés sur un axe, une erreur se produit.  
   
  La syntaxe `<Max_Rows>` spécifie le nombre maximum de lignes de chaque ensemble de lignes retourné. Si le fournisseur OLE DB utilisé pour la connexion à la source de données ne prend pas en charge `DBPROP_MAXROWS`, le paramètre `<Max_Rows>` est ignoré.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "48076215"
  La syntaxe `<Return_Columns>` identifie les colonnes de la base de données sous-jacente à retourner.  
   
 ## <a name="drillthrough-statement-example"></a>Exemple d'instruction DRILLTHROUGH  
- L’exemple suivant illustre l’utilisation de la `DRILLTHROUGH` instruction. Dans cet exemple, l'instruction DRILLTHROUGH interroge les feuilles des dimensions Store, Product et Time le long de la dimension Stores (axe de découpage), puis retourne le groupe de mesures du service, l'ID de service et le prénom de l'employé.  
+ L'exemple suivant illustre l'utilisation de l'instruction `DRILLTHROUGH`. Dans cet exemple, l'instruction DRILLTHROUGH interroge les feuilles des dimensions Store, Product et Time le long de la dimension Stores (axe de découpage), puis retourne le groupe de mesures du service, l'ID de service et le prénom de l'employé.  
   
 ```  
 DRILLTHROUGH  

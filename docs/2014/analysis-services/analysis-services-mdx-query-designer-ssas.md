@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0f76c8df695dcb4e49c707409243b6f1aa1d28e
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53357284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643665"
 ---
 # <a name="analysis-services-mdx-query-designer-ssas"></a>Concepteur de requêtes MDX Analysis Services (SSAS)
   Le concepteur de requêtes MDX (Multidimensional Expression) Analysis Services fournit une interface graphique utilisateur qui vous aide à créer des requêtes MDX pour une source de données [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Le concepteur de requêtes graphique MDX comporte deux modes : le mode Création et le mode Requête. Chaque mode fournit un volet Métadonnées à partir duquel vous pouvez faire glisser des membres de cubes sélectionnés pour créer une requête MDX qui extrait les données que vous souhaitez utiliser.  

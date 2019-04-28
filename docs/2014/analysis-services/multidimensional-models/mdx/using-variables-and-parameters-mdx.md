@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc4ca51b182ca528c6bab05804da4396fbde4dff
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48131449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699493"
 ---
 # <a name="using-variables-and-parameters-mdx"></a>Utilisation de variables et de paramètres (MDX)
   Dans [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], vous pouvez paramétrer une instruction MDX (Multidimensional Expressions). Une instruction paramétrable permet de créer des instructions génériques pouvant être personnalisées au moment de l'exécution.  
@@ -57,7 +57,7 @@ from [Adventure Works]
 </Envelope>  
 ```  
   
- Pour utiliser cette fonctionnalité avec OLE DB, vous devez utiliser le `ICommandWithParameters` interface. Pour utiliser cette fonctionnalité avec ADOMD.Net, vous devez utiliser l’interface **AdomdCommand.Parameters** .  
+ Pour utiliser cette fonctionnalité avec OLE DB, vous devez utiliser l'interface `ICommandWithParameters`. Pour utiliser cette fonctionnalité avec ADOMD.Net, vous devez utiliser l’interface **AdomdCommand.Parameters** .  
   
 ## <a name="see-also"></a>Voir aussi  
  [Principes de base des scripts MDX &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  

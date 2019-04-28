@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca0ef50d40b1c4d4f481bef4de89b43ff4a275c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650412"
 ---
 # <a name="qntemplate-event-class"></a>Classe d'événements QN:Template
   L'événement QN:Template fournit des informations sur l'utilisation interne des modèles de requête. Ces derniers sont les mécanismes que le [!INCLUDE[ssDE](../../includes/ssde-md.md)] emploie pour partager les définitions d’une requête en vue des notifications. Ils sont créés en même temps que les tables de paramètres. Le [!INCLUDE[ssDE](../../includes/ssde-md.md)] crée un événement de ce type quand un modèle de requête est créé, utilisé ou détruit.  
@@ -34,7 +34,7 @@ ms.locfileid: "53349511"
 |DatabaseName|`nvarchar`|Nom de la base de données dans laquelle l'instruction de l'utilisateur est exécutée.|35|Oui|  
 |EventClass|`int`|Type d’événement = 201.|27|Non|  
 |EventSequence|`int`|Numéro de séquence de cet événement.|51|Non|  
-|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Modèle créé : Indique qu'un modèle de notification de requête a été créé dans la base de données.<br /><br /> Mise en correspondance de modèle : Indique qu'un modèle de notification de requête est réutilisé.<br /><br /> Modèle supprimé : Indique qu'un modèle de notification de requête est supprimé de la base de données.|21|Oui|  
+|EventSubClass|`nvarchar`|Type de sous-classe d’événements, qui fournit des informations complémentaires concernant chaque classe d’événements. Cette colonne peut contenir les valeurs suivantes :<br /><br /> Modèle créé : Indique qu’un modèle de notification de requête a été créé dans la base de données.<br /><br /> Mise en correspondance de modèle : Indique qu’un modèle de notification de requête est réutilisé.<br /><br /> Modèle supprimé : Indique qu’un modèle de notification de requête est supprimé à partir de la base de données.|21|Oui|  
 |GroupID|`int`|ID du groupe de charges de travail où l'événement Trace SQL se déclenche.|66|Oui|  
 |HostName|`nvarchar`|Nom de l'ordinateur sur lequel s'exécute le client. Cette colonne de données est remplie si le nom de l'hôte est fourni par le client. Pour déterminer le nom de l'hôte, utilisez la fonction HOST_NAME.|8|Oui|  
 |IsSystem|`int`|Indique si l'événement s'est produit sur un processus système ou sur un processus utilisateur.<br /><br /> 0 = utilisateur<br /><br /> 1 = système|60|Non|  

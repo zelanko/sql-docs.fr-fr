@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48067319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650459"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Sauvegarder la base de données (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Sauvegarder la base de données** dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] pour sauvegarder une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] dans un fichier de sauvegarde en utilisant le format de fichier de sauvegarde .abf [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  
@@ -86,7 +86,7 @@ ms.locfileid: "48067319"
 >  Cette option est activée uniquement si la base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] sélectionnée utilise des partitions distantes.  
   
  **Emplacement de sauvegarde de partition distante**  
- Affiche l'emplacement des partitions distantes associées à la base de données sélectionnée, ainsi que le fichier de sauvegarde distant utilisé pour sauvegarder les données et les métadonnées des partions distantes. Les colonnes suivantes sont disponibles :  
+ Affiche l'emplacement des partitions distantes associées à la base de données sélectionnée, ainsi que le fichier de sauvegarde distant utilisé pour sauvegarder les données et les métadonnées des partions distantes. Les colonnes suivantes sont disponibles :  
   
 |colonne|Description|  
 |------------|-----------------|  

@@ -1,5 +1,5 @@
 ---
-title: Parcourir un modèle à l’aide de la séquence de Microsoft Cluster Viewer | Documents Microsoft
+title: Explorer un modèle à l’aide de la séquence de Microsoft Cluster Viewer | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cce1203b73f5a1685634c4b50f6e5941bed3eb98
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62671317"
 ---
 # <a name="browse-a-model-using-the-microsoft-sequence-cluster-viewer"></a>Explorer un modèle à l'aide de la visionneuse de l'algorithme MSC (Microsoft Sequence Cluster)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  La Visionneuse de l’algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données qui sont générés avec l’algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). L’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme d’analyse de séquence conçu pour l’exploration des données qui contiennent des événements pouvant être liés par des chemins consécutifs, ou *séquences*. Pour plus d’informations sur cet algorithme, consultez [Algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
+  La Visionneuse de l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d’exploration de données qui sont générés avec l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering). L’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) est un algorithme d’analyse de séquence conçu pour l’exploration des données qui contiennent des événements pouvant être liés par des chemins consécutifs, ou *séquences*. Pour plus d’informations sur cet algorithme, consultez [Algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md).  
   
 > [!NOTE]  
 >  La visionneuse de l'arborescence de contenu générique [!INCLUDE[msCoName](../../includes/msconame-md.md)] permet de consulter des informations détaillées relatives aux équations utilisées dans le modèle et les motifs découverts. Pour plus d’informations, consultez [Explorer un modèle à l’aide de la visionneuse de l’arborescence de contenu générique Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) ou [Visionneuse de l’arborescence de contenu générique Microsoft &#40;exploration de données&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).  
   
 > [!NOTE]  
->  La visionneuse de l'algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) fournit des fonctionnalités et des options similaires à celles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer. Pour plus d’informations, consultez [Explorer un modèle à l’aide de Microsoft Cluster Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
+>  La visionneuse de l'algorithme MSC ([!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) fournit des fonctionnalités et des options similaires à celles de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer. Pour plus d’informations, consultez [Explorer un modèle à l’aide de Microsoft Sequence Cluster](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md).  
   
 ##  <a name="BKMK_ViewerTabs"></a> Onglets de la visionneuse  
  Lorsque vous parcourez un modèle d'exploration de données dans [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], le modèle s'affiche sous l'onglet **Visionneuse de modèle d'exploration de données** du Concepteur d'exploration de données, à l'aide de la visionneuse appropriée pour ce modèle. La Visionneuse de l’algorithme MSC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sequence Clustering) fournit les onglets suivants pour explorer les modèles d’exploration de données MSC :  
@@ -51,13 +51,13 @@ ms.locfileid: "34016786"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ###  <a name="BKMK_Profile"></a> Profils du cluster  
- L’onglet **Profil du cluster** fournit une vue d’ensemble des clusters créés par l’algorithme de votre modèle. Chacune des colonnes situées après la colonne **Remplissage** dans la grille représente un cluster qui a été découvert par le modèle. Le \<attribut > .samples ligne représente plusieurs séquences de données qui existent dans le cluster, et le \<attribut > ligne décrit tous les éléments que le cluster contient et leur distribution globale.  
+ L’onglet **Profil du cluster** fournit une vue d’ensemble des clusters créés par l’algorithme de votre modèle. Chacune des colonnes situées après la colonne **Remplissage** dans la grille représente un cluster qui a été découvert par le modèle. Le \<attribut > .samples ligne représente les différentes séquences de données qui existent dans le cluster, et le \<attribut > ligne décrit tous les éléments que le cluster contient et leur distribution globale.  
   
  L’option **Barres de l’histogramme** contrôle le nombre de barres qui sont visibles dans l’histogramme. Si le nombre réel de barres est supérieur au nombre de barres à afficher, les barres les plus importantes sont conservées et le reste des barres est regroupé dans un compartiment gris.  
   
  Vous pouvez modifier le nom par défaut des clusters afin de définir des noms plus descriptifs. Pour renommer un cluster, cliquez avec le bouton droit sur son en-tête de colonne et sélectionnez **Renommer le cluster**. Vous pouvez masquer des clusters en sélectionnant **Masquer la colonne**et vous pouvez aussi faire glisser des colonnes pour changer l’ordre dans lequel elles apparaissent dans la visionneuse.  
   
- Pour ouvrir une fenêtre fournissant une vue plus détaillée et plus grande des clusters, double-cliquez soit sur une cellule de la colonne **États** , soit sur un histogramme dans la visionneuse.  
+ Pour ouvrir une fenêtre qui offre une vue plus détaillée et plus grande des clusters, double-cliquez sur une cellule de la colonne **États** ou sur un histogramme dans la visionneuse.  
   
  [Retour au début](#BKMK_ViewerTabs)  
   
@@ -81,11 +81,11 @@ ms.locfileid: "34016786"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Algorithme de Microsoft Sequence Clustering](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Algorithme MSC (Microsoft Sequence Clustering)](../../analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
+ [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)   
- [Parcourir un modèle à l’aide de Microsoft Cluster Viewer](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Explorer un modèle à l’aide de Microsoft Sequence Cluster](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
   

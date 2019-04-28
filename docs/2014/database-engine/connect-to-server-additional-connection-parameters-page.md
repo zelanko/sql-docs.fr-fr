@@ -13,11 +13,11 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e92fbb8bc29aed54e43925a0670d9a365388df62
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48087949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62808670"
 ---
 # <a name="connect-to-server-additional-connection-parameters-page"></a>Se connecter au serveur (page Paramètres de connexion supplémentaires)
   La boîte de dialogue **Se connecter à** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] présente les valeurs de chaîne de connexion les plus courantes sous forme d’options. Vous pouvez utiliser la page **Paramètres de connexion supplémentaires** pour ajouter d’autres paramètres de connexion à la chaîne de connexion.  
@@ -45,14 +45,14 @@ ms.locfileid: "48087949"
   
 ## <a name="examples"></a>Exemples  
   
-### <a name="example-a-connecting-to-the-database-engine"></a>Exemple A : connexion au moteur de base de données  
+### <a name="example-a-connecting-to-the-database-engine"></a>Exemple a : Connexion au moteur de base de données  
  Pour vous connecter à la base de données [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] sur un serveur nommé ACCOUNTING, entrez la ligne suivante dans la page **Paramètres de connexion supplémentaires** :  
   
 ```  
 ;SERVER=ACCOUNTING;DATABASE=AdventureWorks2012  
 ```  
   
-### <a name="example-b-connecting-to-analysis-services"></a>Exemple B : connexion à Analysis Services  
+### <a name="example-b-connecting-to-analysis-services"></a>Exemple b : Connexion à Analysis Services  
  Pour vous connecter à des serveurs d’analyse, définir un délai d’expiration de l’écriture différée de 5 et faire en sorte que toutes les partitions à l’écoute des notifications soient interrogées en temps réel (en évitant la mise en cache), entrez la ligne suivante dans la page **Paramètres connexion supplémentaires** :  
   
 ```  

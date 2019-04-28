@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 169b7b266ab8230c2cc669353b6e02f66b9f1c65
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48218579"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660191"
 ---
 # <a name="browsing-a-neural-network-model"></a>Exploration d'un modèle MNN (Microsoft Neural Network)
   Quand vous ouvrez un modèle de réseau neuronal ou de régression logistique à l’aide de **Parcourir**, le modèle est affiché dans une visionneuse interactive semblable à la visionneuse de modèle de réseau neuronal dans [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. La visionneuse permet d'explorer les corrélations et d'obtenir des informations sur les schémas du modèle et les données sous-jacentes.  
@@ -79,7 +79,7 @@ ms.locfileid: "48218579"
   
     -   La **finesse** vous indique l’utilité de cette paire attribut-valeur particulière pour favoriser un résultat ou un autre.  
   
-     Remarque : l'info-bulle contient les mêmes informations, quelle que soit la colonne où vous positionnez la souris.  
+     Remarque : L’info-bulle contient les mêmes informations quel que soit le si vous positionnez la souris sur une colonne ou l’autre.  
   
  [Retour au début](#BKMK_Tabs)  
   
@@ -128,7 +128,7 @@ ms.locfileid: "48218579"
  [Retour au début](#BKMK_Tabs)  
   
 ## <a name="more-about-neural-network-models"></a>En savoir plus sur les modèles de réseau neuronal  
- Les informations de la visionneuse sont récupérées du serveur à l'aide d'une procédure stockée spécifique à ce type de modèle : System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
+ Les informations dans la visionneuse sont récupérées à partir du serveur à l’aide d’une procédure stockée spécifique à ce type de modèle : System.Microsoft.AnalysisServices.System.DataMining.NeuralNet.GetAttributeScores.  
   
  Si vous souhaitez créer un modèle comprenant de nombreux attributs prédictibles à l’aide des compléments, utilisez les options de modélisation **Avancé**.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 36f09632e55bfae58a30f571c2928564f4f7beee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679926"
 ---
 # <a name="create-a-custom-member-formula-dimension-business-intelligence-wizard"></a>Créer une formule de membre personnalisée (Dimension) (Assistant Business Intelligence)
   Utilisez le **créer une formule de membre personnalisée** page pour sélectionner une dimension à laquelle l’Assistant Business Intelligence associe les attributs avec la formule colonnes-colonnes de membre personnalisée qui contiennent des Expressions multidimensionnelles (MDX) instructions qui définissent les valeurs de membre pour cet attribut.  

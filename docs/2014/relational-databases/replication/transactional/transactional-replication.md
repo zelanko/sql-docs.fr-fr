@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9a6099a43713ebbcfdc65aec43aabcca95fe5e0b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655432"
 ---
 # <a name="transactional-replication"></a>Réplication transactionnelle
   La réplication transactionnelle commence en général avec l'instantané des objets et des données de la base de données de publication. Dès que l'instantané initial est effectué, les changements de données et les modifications de schémas effectués ensuite au niveau du serveur de publication sont en général transmis à l'Abonné à mesure qu'ils se produisent (presque en temps réel). Les changements de données sont appliqués à l'Abonné dans le même ordre et dans les mêmes limites de transaction que sur le serveur de publication ; c'est pourquoi, dans une publication, la cohérence des transactions est garantie.  
@@ -67,16 +67,16 @@ ms.locfileid: "54127679"
 ##  <a name="DistributionAgent"></a> Agent de distribution  
  Cet agent s'exécute généralement sur le serveur de distribution pour les abonnements par envoi de données et sur l'Abonné pour les abonnements par extraction. L'Agent déplace les transactions de la base de données de distribution vers l'Abonné. Si un abonnement est marqué pour validation, l'Agent de distribution vérifie également si les données correspondent entre le serveur de publication et l'Abonné.  
 
-## <a name="publication-types"></a>Types de publication
+## <a name="publication-types"></a>Types de publications
 
   
-La réplication transactionnelle propose quatre types de publication :  
+La réplication transactionnelle propose quatre types de publications :  
   
 |Type de publication|Description|  
 |----------------------|-----------------|  
 |Publication transactionnelle standard|Adaptée aux topologies dans lesquelles toutes les données de l'Abonné sont en lecture seule (la réplication transactionnelle ne l'applique pas sur l'Abonné).<br /><br /> Les publications transactionnelles standard sont créées par défaut lorsque vous utilisez Transact-SQL ou Replication Management Objects. Lorsque vous utilisez l'Assistant Nouvelle publication, elles sont créées par la sélection de l'option **Publication transactionnelle** dans la page **Type de publication** .<br /><br /> Pour plus d’informations sur la création de publications, consultez [Publier des données et des objets de base de données](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|  
-|Publication transactionnelle avec abonnements pouvant être mis à jour|Les caractéristiques de ce type de publication sont les suivantes :<br /><br /> -Chaque emplacement possède des données identiques, avec un seul éditeur et un abonné. <br /> -Il est possible de mettre à jour des lignes sur l’abonné<br /> -Cette topologie convient mieux aux environnements serveur exigeant une haute disponibilité et évolutivité de lecture.<br /><br />Pour plus d’informations, consultez [Updatable Subscriptions](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
-|Topologie d’égal à égal|Les caractéristiques de ce type de publication sont les suivantes :<br /> -Chaque emplacement possède des données identiques et agit comme un serveur de publication et l’abonné.<br /> -La même ligne peut être modifiée uniquement à un emplacement à la fois.<br /> -Prend en charge [la détection de conflit](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)  <br />-Cette topologie convient mieux aux environnements serveur exigeant une haute disponibilité et évolutivité de lecture.<br /><br />Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
-|Réplication transactionnelle bidirectionnelle|Les caractéristiques de ce type de publication sont les suivantes :<br />Réplication bidirectionnelle est similaire à la réplication d’égal à égal, toutefois, il ne fournit pas de résolution des conflits. En outre, la réplication bidirectionnelle est limitée à 2 serveurs. <br /><br /> Pour plus d’informations, consultez [la réplication transactionnelle bidirectionnelle](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md) |  
+|Publication transactionnelle avec abonnements pouvant être mis à jour|Les caractéristiques de ce type de publication sont les suivantes :<br /><br /> -Chaque emplacement possède des données identiques, avec un seul éditeur et un abonné. <br /> -Il est possible de mettre à jour des lignes sur l’abonné<br /> - Cette topologie convient surtout aux environnements serveur exigeant une disponibilité élevée et des possibilités de scalabilité en lecture.<br /><br />Pour plus d’informations, consultez [Abonnements pouvant être mis à jour](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|  
+|Topologie d’égal à égal|Les caractéristiques de ce type de publication sont les suivantes :<br /> - Chaque emplacement a des données identiques et fait à la fois office de serveur de publication et d’Abonné.<br /> - La même ligne ne peut être changée qu’à un seul emplacement à la fois.<br /> - Prend en charge la [détection de conflit](../../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  <br />- Cette topologie convient surtout aux environnements serveur exigeant une disponibilité élevée et des possibilités de scalabilité en lecture.<br /><br />Pour plus d'informations, consultez [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|Réplication transactionnelle bidirectionnelle|Les caractéristiques de ce type de publication sont les suivantes :<br />La réplication bidirectionnelle est similaire à la réplication d’égal à égal, mais elle n’offre pas la résolution des conflits. De plus, la réplication bidirectionnelle est limitée à 2 serveurs. <br /><br /> Pour plus d’informations, consultez [Réplication transactionnelle bidirectionnelle](../../../relational-databases/replication/transactional/bidirectional-transactional-replication.md). |  
   
   

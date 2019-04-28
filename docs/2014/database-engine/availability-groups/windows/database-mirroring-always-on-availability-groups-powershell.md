@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 77df7902f5dd1673736f4a993c4e29c50d7accc0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48157519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62814665"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-alwayson-availability-groups-sql-server-powershell"></a>Créer un point de terminaison de mise en miroir de bases de données pour les groupes de disponibilité AlwaysOn (SQL Server PowerShell)
   Cette rubrique explique comment créer un point de terminaison de mise en miroir de bases de données à utiliser par [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] dans [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] à l'aide de PowerShell.  
@@ -28,7 +28,7 @@ ms.locfileid: "48157519"
   
 -   **Avant de commencer :**  [Sécurité](#Security)  
   
--   **Pour créer un point de terminaison de mise en miroir de bases de données, à l'aide de :**  [PowerShell](#PowerShellProcedure)  
+-   **Pour créer un point de terminaison de mise en miroir de bases de données à l’aide de**  [PowerShell](#PowerShellProcedure)  
   
 ## <a name="before-you-begin"></a>Avant de commencer  
   
@@ -37,7 +37,7 @@ ms.locfileid: "48157519"
 > [!IMPORTANT]  
 >  L'algorithme RC4 est déconseillé. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Nous vous recommandons d'utiliser AES.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Requiert l'autorisation CREATE ENDPOINT ou l'appartenance au rôle serveur fixe sysadmin. Pour plus d’informations, consultez [Autorisations de point de terminaison GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-endpoint-permissions-transact-sql).  
   
 ##  <a name="PowerShellProcedure"></a> Utilisation de PowerShell  

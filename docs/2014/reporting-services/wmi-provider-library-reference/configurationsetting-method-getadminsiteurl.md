@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f99a269139c6c6be3cb52632481236eaa2ecf0f5
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649241"
 ---
 # <a name="getadminsiteurl-method-wmi"></a>Méthode GetAdminSiteUrl (WMI)
   Obtient l'URL absolue du site Web Administration centrale pour la batterie de serveurs Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)], [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)]ou [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] à laquelle le serveur de rapports est intégré.  

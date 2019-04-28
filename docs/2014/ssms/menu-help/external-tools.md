@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 264eb3c9b16c5eb12a578090d55e4f64884177c8
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649691"
 ---
 # <a name="external-tools"></a>Outils externes
   Utilisez cette boîte de dialogue pour ajouter des outils externes, tels que le Gestionnaire de configuration SQL Server ou le Bloc-notes, au menu **Outils** . L'ajout d'outils externes vous permet de lancer facilement d'autres applications tout en travaillant dans [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Vous pouvez spécifier des arguments et un répertoire de travail lors du lancement de l'outil. En outre, les sorties de certains outils peuvent être affichés dans la fenêtre de sortie. La boîte de dialogue **Outils externes** est accessible via le menu **Outils** .  

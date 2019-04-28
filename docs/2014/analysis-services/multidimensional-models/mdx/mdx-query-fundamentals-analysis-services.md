@@ -20,11 +20,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9287cc028357c8db8e37242153e9815398b11858
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699397"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>Principes de base des requêtes MDX (Analysis Services)
   La syntaxe MDX (Multidimensional Expressions) permet de lancer des requêtes sur des objets multidimensionnels, tels que des cubes, et de retourner des jeux de cellules multidimensionnels contenant les données du cube. Cette rubrique et ses sous-rubriques donnent une vue d'ensemble des requêtes MDX.  

@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23e39e48b8c4c20ab0e847d87b7193179e8d74ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664232"
 ---
 # <a name="brokerconversation-group-event-class"></a>Broker:Conversation Group, classe d'événements
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] génère un événement **Broker:Conversation Group** lorsque Service Broker crée un groupe de conversion ou supprime un groupe existant.  

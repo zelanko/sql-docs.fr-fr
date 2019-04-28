@@ -16,11 +16,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 33eea7308e4f2729a14ca1f3a0361b83ac566006
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678727"
 ---
 # <a name="create-a-consolidated-member-master-data-services"></a>Créer un membre consolidé (Master Data Services)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52780531"
 
   Dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], créez un membre consolidé lorsque vous souhaitez un nœud parent pour une hiérarchie explicite. Si vous souhaitez ajouter des données en bloc, utilisez à la place des tables de mise en lots. Pour plus d’informations, consultez [Importer des données à partir de tables &#40;Master Data Services&#41;](../master-data-services/import-data-from-tables-master-data-services.md).  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  
@@ -57,7 +57,7 @@ ms.locfileid: "52780531"
   
 10. Cliquez sur **OK**.  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Créer une hiérarchie explicite &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)   
  [Créer un membre feuille &#40;Master Data Services&#41;](../master-data-services/create-a-leaf-member-master-data-services.md)   
  [Membres &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)   

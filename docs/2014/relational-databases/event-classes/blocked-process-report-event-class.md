@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c3061794a565c4397bbf949211774306c9acebf
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664265"
 ---
 # <a name="blocked-process-report-event-class"></a>Blocked Process Report (classe d'événements)
   La classe d’événements **Blocked Process Report** indique qu’une tâche a été bloquée plus longtemps que la période spécifiée. Elle ne s'applique pas aux tâches système ou aux tâches en attente de ressources à blocage non détectable.  

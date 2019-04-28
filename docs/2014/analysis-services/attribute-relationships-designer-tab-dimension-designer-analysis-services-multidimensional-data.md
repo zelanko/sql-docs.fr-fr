@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 289ffeeb6158da7b2dce6d5be1ac0aa88ac029e1
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48220629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62650590"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Relations d'attributs (onglet Concepteur de relations d'attributs, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez la liste **Relation d'attribut** pour rechercher une relation d'attribut spécifique dans le diagramme des relations d'attributs et pour gérer cette relation. Ce volet apparaît immédiatement sous le volet qui contient le diagramme des relations d'attributs.  

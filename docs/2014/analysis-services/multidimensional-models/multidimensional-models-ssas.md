@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47efdd38b14a22f28026f98d2289c1c67fc65b9a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62699014"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Modélisation multidimensionnelle (SSAS)
   La solution multidimensionnelle Analysis Services utilise des structures de cube pour analyser les données d'entreprise entre plusieurs dimensions. Le mode multidimensionnel est le mode serveur par défaut d'Analysis Services. Il inclut une requête et un moteur de calcul pour les données OLAP, avec les modes de stockage MOLAP, ROLAP et HOLAP pour équilibrer les performances par des conditions de données évolutives. Le moteur OLAP d'Analysis Services est un serveur OLAP leader de l'industrie qui fonctionne parfaitement avec de nombreux outils BI. La plupart des déploiements Analysis Services sont installés comme des serveurs OLAP classiques.  
@@ -29,7 +29,7 @@ ms.locfileid: "48117559"
 ## <a name="in-this-section"></a>Dans cette section  
  [Solutions de modèles multidimensionnels &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [Bases de données Model multidimensionnelles &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Bases de données de modèle multidimensionnel &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [Traitement des objets de modèle multidimensionnel](processing-a-multidimensional-model-analysis-services.md)  
   
@@ -37,6 +37,6 @@ ms.locfileid: "48117559"
   
  [Power View pour les modèles multidimensionnels](power-view-for-multidimensional-models.md)  
   
- [Gestion des assemblys de modèle multidimensionnel](multidimensional-model-assemblies-management.md)  
+ [Gestion des assemblys de modèles multidimensionnels](multidimensional-model-assemblies-management.md)  
   
   

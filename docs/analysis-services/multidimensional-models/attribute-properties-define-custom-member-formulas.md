@@ -1,5 +1,5 @@
 ---
-title: Définir des formules de membre personnalisées | Documents Microsoft
+title: Définir des formules de membre personnalisées | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cfeee065f99a9071f7175d8344f7e6eae84a7bc6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666584"
 ---
-# <a name="attribute-properties---define-custom-member-formulas"></a>Propriétés d’attribut : permet de définir des formules de membre personnalisées
+# <a name="attribute-properties---define-custom-member-formulas"></a>Propriétés d’attribut - Définir des formules de membre personnalisées
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Vous pouvez définir une expression MDX (Multidimensional Expressions) appelée formule de membre personnalisée pour fournir les valeurs des membres d'un attribut spécifié. Une colonne d'une table issue d'une vue de source de données fournit, pour chaque membre d'un attribut, l'expression utilisée pour fournir la valeur de ce membre.  
   
@@ -33,23 +33,23 @@ ms.locfileid: "34021666"
   
 -   2003: 2100  
   
-    -   Quarter 1: 700  
+    -   Trimestre 1 : 700  
   
-    -   Quarter 2: 500  
+    -   2e trimestre : 500  
   
-    -   Quarter 3: 100  
+    -   Trimestre 3 : 100  
   
-    -   Quarter 4: 800  
+    -   Trimestre 4 : 800  
   
 -   2004: 1500  
   
-    -   Quarter 1: 600  
+    -   Trimestre 1 : 600  
   
-    -   Quarter 2: 200  
+    -   2e trimestre : 200  
   
-    -   Quarter 3: 300  
+    -   Trimestre 3 : 300  
   
-    -   Quarter 4 : 400  
+    -   Trimestre 4 : 400  
   
  Avec une formule de membre personnalisée, la valeur du membre est fournie par la formule de cumul personnalisée. Par exemple, la formule de membre personnalisée suivante permet de fournir 450 comme valeur du membre Quarter 4 enfant du membre 2004 dans la dimension Time.  
   
@@ -67,7 +67,7 @@ Time.[Quarter 3] * 1.5
  Si vous utilisez des membres calculés ainsi que des formules de cumul personnalisées pour les membres d'un attribut, vous devez être conscient de l'ordre d'évaluation. Les membres calculés sont résolus avant les formules de cumul personnalisées.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Attributs et hiérarchies d’attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Définir des formules de membre personnalisées pour les attributs dans une Dimension](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
+ [Attributs et hiérarchies d'attributs](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
+ [Définir des formules de membre personnalisées pour les attributs d’une dimension](../../analysis-services/multidimensional-models/bi-wizard-custom-member-formulas-for-attributes-in-a-dimension.md)  
   
   

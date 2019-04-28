@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59939155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657669"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Page de propriétés Options de traitement (Gestionnaire de rapports)
   La page de propriétés Options de traitement vous permet de définir les propriétés d'exécution du rapport actuellement sélectionné. Ces options déterminent à quel moment se produit le traitement des données du rapport. Vous pouvez définir ces options pour récupérer les données du rapport aux heures creuses. Si un rapport est consulté fréquemment, vous pouvez mettre en cache de façon temporaire des copies de ce dernier pour éliminer les temps d'attente lorsque plusieurs utilisateurs y accèdent à quelques minutes d'intervalle.  

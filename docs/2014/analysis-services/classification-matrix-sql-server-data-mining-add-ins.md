@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f2f1f055974edc3625ed66a8d803358b8345494
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52522172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681145"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Matrice de classification (Compléments d'exploration de données SQL Server)
   ![Bouton matrice de classification, ruban Exploration de données](media/dmc-cmatrix.gif "bouton matrice de Classification, ruban Exploration de données")  
@@ -37,11 +37,11 @@ ms.locfileid: "52522172"
   
 ||Bronze (réel)|Or (réel)|Argent (réel)|  
 |-|-----------------------|---------------------|-----------------------|  
-|Bronze|**94.45 %**|15.18 %|1.70 %|  
-|Or|2.72 %|**84.82 %**|0.00%|  
-|Argent|1.84 %|0.00%|**93.80 %**|  
-|*Correct*|*95.45 %*|*84.82 %*|*98.30 %*|  
-|*Mal classées*|*4.55 %*|*15.18 %*|*1.70 %*|  
+|Bronze|**94.45%**|15.18%|1.70%|  
+|Or|2.72%|**84.82%**|0.00%|  
+|Argent|1.84%|0.00%|**93.80%**|  
+|*Correct*|*95.45%*|*84.82%*|*98.30%*|  
+|*Mal classées*|*4.55%*|*15.18%*|*1.70%*|  
   
 -   Chaque colonne indique les valeurs réelles dans le jeu de données de test.  
   

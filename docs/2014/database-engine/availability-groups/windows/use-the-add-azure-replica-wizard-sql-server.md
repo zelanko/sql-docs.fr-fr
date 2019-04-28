@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f2b925540844a45d94fb2ee823a8ac5e9bc7ef2a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48095639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62788127"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Utiliser l'Assistant Ajout d’un réplica Azure (SQL Server)
   Utilisez l'Assistant Ajouter un réplica Windows Azure pour vous aider à créer un ordinateur virtuel Windows Azure dans un environnement informatique hybride et à le configurer comme réplica secondaire pour un groupe de disponibilité AlwaysOn nouveau ou existant.  
@@ -28,7 +28,7 @@ ms.locfileid: "48095639"
   
      [Sécurité](#Security)  
   
--   **Pour ajouter un réplica, consultez**  [Assistant Ajouter un réplica Microsoft Azure (SQL Server Management Studio)](#SSMSProcedure)  
+-   **Pour ajouter un réplica, utilisez :**  [Assistant Add Azure Replica (SQL Server Management Studio)](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
  Si vous n’avez jamais ajouté de réplica de disponibilité pour un groupe de disponibilité, consultez les sections « groupes de disponibilité et réplicas » dans « Instances de serveur » [prérequis, Restrictions et recommandations pour les groupes de disponibilité AlwaysOn &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -49,7 +49,7 @@ ms.locfileid: "48095639"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Consultez [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de l'Assistant Ajouter un réplica Windows Azure (SQL Server Management Studio)  

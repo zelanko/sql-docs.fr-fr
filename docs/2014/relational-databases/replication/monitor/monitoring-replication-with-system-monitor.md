@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2b5d1a63937a11da4703ec4ef0338dee89a5c33f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62667304"
 ---
 # <a name="monitoring-replication-with-system-monitor"></a>Contrôle de la réplication avec le Moniteur système
   Le Moniteur système[!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows permet d'utiliser des diagrammes, des graphiques et des rapports pour évaluer l'efficacité de votre ordinateur, identifier et résoudre les problèmes éventuels (utilisation déséquilibrée des ressources, configuration matérielle insuffisante ou conception logicielle déficiente) et anticiper les besoins matériels. Pour plus d’informations, consultez [Analyser l’utilisation des ressources &#40;Moniteur système&#41;](../../performance-monitor/monitor-resource-usage-system-monitor.md).  
@@ -29,12 +29,12 @@ ms.locfileid: "52815581"
 |Agent|Objet de performance|Compteur|Description|  
 |-----------|------------------------|-------------|-----------------|  
 |Tous les agents|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Agents de réplication|Exécution en cours|Nombre d'agents de réplication actuellement en cours d'exécution.|  
-|Agent d'instantané|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantané de réplication|Instantané : Commandes livrées/seconde|Nombre de commandes par seconde transmises au serveur de distribution.|  
+|Agent d'instantané|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantané de réplication|Instantané : Commandes livrées/s|Nombre de commandes par seconde transmises au serveur de distribution.|  
 |Agent d'instantané|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Instantané de réplication|Instantané : Transactions livrées/seconde|Nombre de transactions par seconde transmises au serveur de distribution.|  
-|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Journal des réplications|Lecteur de journal : Commandes livrées/seconde|Nombre de commandes par seconde transmises au serveur de distribution.|  
+|l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Journal des réplications|Lecteur de journal : Commandes livrées/s|Nombre de commandes par seconde transmises au serveur de distribution.|  
 |l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Journal des réplications|Lecteur de journal : Transactions livrées/seconde|Nombre de transactions par seconde transmises au serveur de distribution.|  
 |l'Agent de lecture du journal ;|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Journal des réplications|Lecteur de journal : Latence de livraison|Durée, en millisecondes, écoulée entre le moment où les transactions sont appliquées sur le serveur de publication et le moment où elles sont délivrées au serveur de distribution.|  
-|Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Serveur de distribution : Commandes livrées/seconde|Le nombre de commandes par seconde transmises à l'abonné.|  
+|Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Serveur de distribution : Commandes livrées/s|Le nombre de commandes par seconde transmises à l'abonné.|  
 |Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Serveur de distribution : Transactions livrées/seconde|Nombre de transactions par seconde transmises à l'abonné.|  
 |Agent de distribution|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Distribution de réplication|Serveur de distribution : Latence de livraison|Durée, en millisecondes, écoulée entre le moment où les transactions sont délivrées au serveur de distribution et le moment où elles sont appliquées à l'Abonné.|  
 |Agent de fusion|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: Fusion de réplication|Conflits/seconde|Nombre de conflits par seconde qui se produisent lors du processus de fusion.|  

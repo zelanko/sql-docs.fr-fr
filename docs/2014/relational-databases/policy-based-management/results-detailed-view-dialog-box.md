@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1bef947b8cad04acc69afe005a04747ceb85c3d2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62691706"
 ---
 # <a name="results-detailed-view-dialog-box"></a>Boîte de dialogue Vue détaillée des résultats
   Cette boîte de dialogue affiche les résultats d'évaluation de stratégie après l'exécution d'une stratégie lorsque vous ouvrez la boîte de dialogue **Évaluer les stratégies** et que vous cliquez sur **Afficher**. Cette boîte de dialogue est en lecture seule et vous aide à comprendre quelle partie d'une expression de propriété peut échouer.  

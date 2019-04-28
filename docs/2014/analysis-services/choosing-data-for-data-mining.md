@@ -22,11 +22,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a9c7a8152896aa3bd9f75cf483aaf29429a5638
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53355811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62681186"
 ---
 # <a name="choosing-data-for-data-mining"></a>Choisir les données pour l'exploration de données
   Lorsque vous commencez l’exploration de données, vous vous demandez peut-être « la quantité de données besoin ? » ou « Quels sont les exigences spéciales à que connaître lors du nettoyage ou de mise en forme de mes données ? »  

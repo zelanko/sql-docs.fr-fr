@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d719ebf47757a48b034d2a0cadd0ed68f51f0ee5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661630"
 ---
 # <a name="record-object-ado"></a>Record, objet (ADO)
 Représente une ligne à partir d’un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) ou le fournisseur de données, ou un objet retourné par un fournisseur de données semi-structurées, comme un fichier ou répertoire.  
@@ -83,7 +83,7 @@ Représente une ligne à partir d’un [Recordset](../../../ado/reference/ado-ap
 -   [Propriétés, méthodes et événements de l’objet Record](../../../ado/reference/ado-api/record-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Collection de champs (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
+ [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
  [Collection de propriétés (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
  [Enregistrements et flux](../../../ado/guide/data/records-and-streams.md)   
  [Recordset, objet (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

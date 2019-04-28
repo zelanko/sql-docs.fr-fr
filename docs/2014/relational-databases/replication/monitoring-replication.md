@@ -19,11 +19,11 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e2b3441d98bc9226abce3a49fd28820df6ec99ab
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62666865"
 ---
 # <a name="monitoring-replication"></a>Surveillance (réplication)
   L'analyse d'une topologie de réplication est un aspect important du déploiement de la réplication. L'activité de la réplication étant distribuée, il est essentiel de faire le suivi de cette activité et des états à travers tous les ordinateurs impliqués dans la réplication. Les outils suivants peuvent être utilisés pour surveiller la réplication :  
@@ -34,7 +34,7 @@ ms.locfileid: "54134299"
   
 -   [!INCLUDE[msCoName](../../includes/msCoName-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssManStudioFull-md.md)]  
   
-     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] donne accès au moniteur de réplication. Par ailleurs, il vous permet d’afficher l’état actuel et le dernier message consigné par les agents suivants et vous permet de démarrerez et arrêtez chaque agent : Agent de lecture du journal, Agent d'instantané, Agent de fusion et Agent de distribution. Pour plus d’informations, voir [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
+     [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] donne accès au moniteur de réplication. Il vous permet aussi d’afficher l’état actuel et le dernier message journalisé par les agents suivants ; il vous permet également de démarrer et d’arrêter chaque agent : Agent de lecture du journal, Agent d’instantané, Agent de fusion et Agent de Distribution. Pour plus d’informations, voir [Monitor Replication Agents](monitor/monitor-replication-agents.md).  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] et Replication Management Objects  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54134299"
      Le Moniteur système peut être utilisé pour surveiller les performances à travers plusieurs compteurs dédiés à la réplication. Pour plus d’informations, voir [Monitoring Replication with System Monitor](monitor/monitoring-replication-with-system-monitor.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Administration de réplication Forum aux questions](administration/frequently-asked-questions-for-replication-administrators.md)   
+ [FAQ sur l’administration de la réplication](administration/frequently-asked-questions-for-replication-administrators.md)   
  [Best Practices for Replication Administration](administration/best-practices-for-replication-administration.md)   
 
   

@@ -17,11 +17,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fc39cb2f4e6b5a5e296f623feea213374473e9a1
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59961375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655004"
 ---
 # <a name="retrieve-data-from-a-data-mining-model-dmx-ssrs"></a>Récupérer des données d'un modèle d'exploration de données (DMX) (SSRS)
   Pour utiliser les données d’un modèle d’exploration de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dans votre rapport, vous devez définir une source de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ainsi qu’un ou plusieurs datasets de rapport. Lorsque vous créez la définition de la source de données, vous devez spécifier une chaîne de connexion et des informations d'identification pour pouvoir accéder à la source de données à partir de l'ordinateur client.  

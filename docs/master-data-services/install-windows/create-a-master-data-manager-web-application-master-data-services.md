@@ -12,11 +12,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 21a9d96d54f1a5afcce2d5e2671b30460350cd76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694543"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62696313"
 ---
 # <a name="create-a-master-data-manager-web-application-master-data-services"></a>Créer une application Web Master Data Manager (Master Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "47694543"
   
  Après avoir créé l'application Web, vous l'associez à la base de données [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] .  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
   
 -   Pour plus d’informations sur la configuration requise pour l’ordinateur qui héberge l’application web, consultez [Configuration requise pour l’application Web &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md).  
   
@@ -81,7 +81,7 @@ ms.locfileid: "47694543"
   
 -   Éventuellement, configurez le site web qui héberge l’application web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] pour qu’il utilise une liaison HTTPS si vous souhaitez chiffrer le contenu à l’aide du protocole SSL (Secure Sockets Layer). Vous devez utiliser un outil IIS, tel que IIS Manager, pour configurer le certificat du serveur Web et configurer une liaison HTTPS et les paramètres SSL pour le site. Pour plus d’informations, consultez [Sécuriser une application Web Master Data Manager](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

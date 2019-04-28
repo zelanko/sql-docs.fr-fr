@@ -1,5 +1,5 @@
 ---
-title: Parcourir un modèle à l’aide de Microsoft Cluster Viewer | Documents Microsoft
+title: Explorer un modèle à l’aide de Microsoft Cluster Viewer | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 38091ba5623d84bf5876e7a6200a0bd1b2b3897e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676815"
 ---
-# <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Explorer un modèle à l'aide de Microsoft Sequence Cluster
+# <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Explorer un modèle à l’aide de Microsoft Sequence Cluster
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Le composant [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster Viewer de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] affiche les modèles d'exploration de données qui sont générés à l'aide de l'algorithme MC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering). L'algorithme MC ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering) est un algorithme de segmentation conçu pour explorer les données afin d'identifier d'éventuelles anomalies et de créer des prédictions. Pour plus d’informations sur cet algorithme, consultez [Microsoft Clustering Algorithm](../../analysis-services/data-mining/microsoft-clustering-algorithm.md).  
   
@@ -67,10 +67,10 @@ ms.locfileid: "34016396"
  [Retour au début](#BKMK_ViewerTabs)  
   
 ## <a name="see-also"></a>Voir aussi  
- [Algorithme Microsoft Clustering](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Tâches de la visionneuse modèle d’exploration de données et de procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
- [Outils d’exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
+ [Microsoft Clustering Algorithm](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tâches de la visionneuse de modèle d'exploration de données et procédures](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Outils d'exploration de données](../../analysis-services/data-mining/data-mining-tools.md)   
  [Visionneuses de modèle d’exploration de données](../../analysis-services/data-mining/data-mining-model-viewers.md)  
   
   

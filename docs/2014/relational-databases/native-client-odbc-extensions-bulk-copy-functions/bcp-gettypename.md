@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48086809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689026"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
   Retourne le nom de type de SQL pour un jeton de type BCP spécifié.  
@@ -43,7 +43,7 @@ fIsMaxType
 ```  
   
 ## <a name="arguments"></a>Arguments  
- *Jeton*  
+ *token*  
  Valeur indiquant un jeton de type BCP.  
   
  *field*  
@@ -69,32 +69,32 @@ fIsMaxType
 |`SQLDATETIME`|Avant ou après|**datetime**|  
 |`SQLBITN`|Avant ou après|**bit-null**|  
 |`SQLBIT`|Avant ou après|**bit**|  
-|`SQLBIGCHAR`|non|**char**|  
-|`SQLCHARACTER`|non|**char**|  
-|`SQLBIGVARCHAR`|non|**varchar**|  
-|`SQLVARCHAR`|non|**varchar**|  
+|`SQLBIGCHAR`|Non|**char**|  
+|`SQLCHARACTER`|Non|**char**|  
+|`SQLBIGVARCHAR`|Non|**varchar**|  
+|`SQLVARCHAR`|Non|**varchar**|  
 |`SQLTEXT`|Avant ou après|**texte**|  
-|`SQLBIGBINARY`|non|**binaire**|  
-|`SQLBINARY`|non|**Binaire**|  
-|`SQLBIGVARBINARY`|non|**varbinary**|  
-|`SQLVARBINARY`|non|**varbinary**|  
+|`SQLBIGBINARY`|Non|**binaire**|  
+|`SQLBINARY`|Non|**Binaire**|  
+|`SQLBIGVARBINARY`|Non|**Varbinary**|  
+|`SQLVARBINARY`|Non|**Varbinary**|  
 |`SQLIMAGE`|Avant ou après|**Image**|  
-|`SQLINTN`|Avant ou après|**int null**|  
+|`SQLINTN`|Avant ou après|**int-null**|  
 |`SQLDATETIMN`|Avant ou après|**datetime-null**|  
-|`SQLMONEYN`|Avant ou après|**valeur null de l’argent**|  
+|`SQLMONEYN`|Avant ou après|**money-null**|  
 |`SQLFLTN`|Avant ou après|**float-null**|  
 |`SQLAOPSUM`|Avant ou après|**Sum**|  
 |`SQLAOPAVG`|Avant ou après|**Avg**|  
-|`SQLAOPCNT`|Avant ou après|**Count**|  
+|`SQLAOPCNT`|Avant ou après|**Compter**|  
 |`SQLAOPMIN`|Avant ou après|**Min**|  
 |`SQLAOPMAX`|Avant ou après|**Max**|  
 |`SQLDATETIM4`|Avant ou après|**smalldatetime**|  
-|`SQLMONEY4`|Avant ou après|**smallmoney**|  
+|`SQLMONEY4`|Avant ou après|**Smallmoney**|  
 |`SQLFLT4`|Avant ou après|**réel**|  
 |`SQLUNIQUEID`|Avant ou après|**uniqueidentifier**|  
-|`SQLNCHAR`|non|**NCHAR**|  
-|`SQLNVARCHAR`|non|**Nvarchar**|  
-|`SQLNTEXT`|Avant ou après|**ntext**|  
+|`SQLNCHAR`|Non|**Nchar**|  
+|`SQLNVARCHAR`|Non|**Nvarchar**|  
+|`SQLNTEXT`|Avant ou après|**Ntext**|  
 |`SQLVARIANT`|Avant ou après|**sql_variant**|  
 |`SQLINT8`|Avant ou après|**Bigint**|  
 |`SQLCHARACTER`|Oui|**varchar(max)**|  
@@ -108,7 +108,7 @@ fIsMaxType
 |`SQLNCHAR`|Oui|**nvarchar(max)**|  
 |`SQLNVARCHAR`|Oui|**nvarchar(max)**|  
 |`SQLXML`|Oui|**Xml**|  
-|`SQLUDT`|Avant ou après|**UDT**|  
+|`SQLUDT`|Avant ou après|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>Prise en charge des fonctionnalités de date et heure améliorées par bcp_gettypename  
  Les valeurs de paramètre de jeton pour les types date/heure sont décrites dans la colonne « Type dans sqlncli.h » de la table dans [modifications de copie en bloc pour les Types améliorées de Date / heure &#40;OLE DB et ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). La valeur retournée est dans la ligne correspondante de la colonne « Type de stockage de fichier ».  

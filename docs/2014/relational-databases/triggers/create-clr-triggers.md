@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b68531b962b10785927c6212b2483f2d9c1d7d3a
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62698830"
 ---
 # <a name="create-clr-triggers"></a>Créer des déclencheurs CLR
   Dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vous pouvez créer un objet de base de données programmée en fonction d’un assembly créé dans le CLR (Common Language Runtime) [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Les objets de base de données qui peuvent tirer parti du modèle de programmation puissant qu'offre le CLR sont les déclencheurs DML, les déclencheurs DDL, les procédures stockées, les fonctions, les fonctions d'agrégation et les types.  

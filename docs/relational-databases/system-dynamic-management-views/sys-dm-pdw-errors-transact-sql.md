@@ -14,11 +14,11 @@ ms.author: rortloff
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 57b6bd92ded85345dc1b716df2fa395df17fff02
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690509"
 ---
 # <a name="sysdmpdwerrors-transact-sql"></a>sys.dm_pdw_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "58657123"
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|Clé pour cette vue.<br /><br /> Id numérique unique associé à l’erreur.|Le point d’entrée unique pour toutes les erreurs de requête dans le système.|  
 |source|**nvarchar(64)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
-|Type|**nvarchar(4000)**|Type d'erreur qui s'est produit.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
+|type|**nvarchar(4000)**|Type d'erreur qui s'est produit.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |create_time|**datetime**|Heure à laquelle l’erreur s’est produite.|Inférieur ou égal à l’heure actuelle.|  
 |pwd_node_id|**Int**|Identificateur du nœud spécifique impliqué, le cas échéant. Pour plus d’informations sur les ID de nœud, consultez [sys.dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).||  
 |session_id|**nvarchar(32)**|Identificateur de la session impliquée, le cas échéant. Pour plus d’informations sur les ID de session, consultez [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  

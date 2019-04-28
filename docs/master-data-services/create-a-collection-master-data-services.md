@@ -15,11 +15,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e17fe8627164132568be0b7447656cc02a221ea6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62678019"
 ---
 # <a name="create-a-collection-master-data-services"></a>Créer une collection (Master Data Services)
 
@@ -27,7 +27,7 @@ ms.locfileid: "52753514"
 
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], créez une collection lorsque vous souhaitez créer des listes en 2D de membres feuille et de membres consolidés. Les collections n'ont pas besoin d'inclure tous les membres de l'entité.  
   
-## <a name="prerequisites"></a>Conditions préalables requises  
+## <a name="prerequisites"></a>Prérequis  
  Pour effectuer cette procédure :  
   
 -   Vous devez avoir l'autorisation d'accéder à la zone fonctionnelle **Explorateur** .  
@@ -54,11 +54,11 @@ ms.locfileid: "52753514"
   
 9. Cliquez sur **OK**.  
   
-## <a name="next-steps"></a>Next Steps  
+## <a name="next-steps"></a>Étapes suivantes  
   
 -   [Ajouter des membres à une collection &#40;Master Data Services&#41;](../master-data-services/add-members-to-a-collection-master-data-services.md)  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Collections &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
  [Supprimer un membre ou une collection &#40;Master Data Services&#41;](../master-data-services/delete-a-member-or-collection-master-data-services.md)   
  [Créer une hiérarchie explicite &#40;Master Data Services&#41;](../master-data-services/create-an-explicit-hierarchy-master-data-services.md)  

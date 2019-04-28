@@ -19,11 +19,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 27b24a6e7686c136cf79fa882136a362c7560e42
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717416"
 ---
 # <a name="performing-bulk-load-of-xml-data-sqlxml-40"></a>Exécution du chargement en masse de données XML (SQLXML 4.0)
   Le chargement en masse XML est un objet COM autonome qui vous permet de charger des données XML semi-structurées dans des tables Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "52807551"
  [Enregistrer le processus de génération &#40;SQLXML 4.0&#41;](record-generation-process-sqlxml-4-0.md)  
  Décrit le processus et les règles régissant la génération des enregistrements pour le chargement en masse XML.  
   
- [Interprétation des annotations &#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
+ [Annotation Interpretation &#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
  Décrit la façon dont le chargement en masse XML interprète les annotations dans les schémas XSD et XDR.  
   
  [Modèle objet chargement en masse SQL Server XML &#40;SQLXML 4.0&#41;](sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)  

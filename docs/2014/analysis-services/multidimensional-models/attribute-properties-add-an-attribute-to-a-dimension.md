@@ -18,11 +18,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c45184e5be13193dc8b77924bc05debdc1911361
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62701928"
 ---
 # <a name="add-an--attribute-to-a-dimension"></a>Ajouter un attribut à une dimension
   Vous pouvez ajouter un attribut à une dimension soit automatiquement, soit manuellement dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -34,6 +34,6 @@ ms.locfileid: "48189660"
  Pour plus d’informations, consultez [Définir un nouvel attribut automatiquement](attribute-properties-define-a-new-attribute-automatically.md), [Définir un nouvel attribut manuellement](../define-a-new-attribute-manually.md), [Lier un attribut à une colonne de nom](attribute-properties-bind-an-attribute-to-a-name-column.md)et [Modifier la propriété KeyColumn d’un attribut](attribute-properties-modify-the-keycolumn-property.md).  
   
 ## <a name="see-also"></a>Voir aussi  
- [Référence des propriétés d’attribut de dimension](dimension-attribute-properties-reference.md)  
+ [Référence des propriétés d'attribut de dimension](dimension-attribute-properties-reference.md)  
   
   

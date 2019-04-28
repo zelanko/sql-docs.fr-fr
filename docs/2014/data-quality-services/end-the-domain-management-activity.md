@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ec0413f72261bf2890c372773a13a662e9182498
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792756"
 ---
 # <a name="end-the-domain-management-activity"></a>Terminer l'activité de gestion de l'arborescence du domaine
   Cette rubrique décrit comment effectuer, fermer ou annuler l'activité de gestion de l'arborescence du domaine dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). La gestion de l'arborescence du domaine n'étant pas exécutée par un Assistant, les contrôles décrits ci-dessous peuvent être utilisés à partir de toutes les pages de l'activité de gestion de l'arborescence du domaine.  
@@ -24,11 +24,11 @@ ms.locfileid: "56011190"
  **Terminer**  
  Cliquez sur cette option pour terminer la gestion de l'arborescence du domaine. Une fenêtre s'affichera pour vous permettre d'effectuer les opérations suivantes :  
   
--   **Oui - publier la base de connaissances et quitter**: La base de connaissances sera publiée pour l’utilisateur actuel ou d’autres personnes à utiliser. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. L'écran Ouvrir la base de connaissances s'affichera à nouveau.  
+-   **Oui - Publier la base de connaissances et quitter** : la base de connaissances est publiée pour permettre à l’utilisateur actuel ou à d’autres de l’utiliser. La base de connaissances ne sera pas verrouillée, l'état de la base de connaissances (dans la table de bases de connaissances) sera défini sur Vide, et les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. L'écran Ouvrir la base de connaissances s'affichera à nouveau.  
   
--   **Non - enregistrer le travail sur la base de connaissances et quitter**: Votre travail sera enregistré, la base de connaissances restera verrouillée et l’état de la base de connaissances sera défini sur en cours. Les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau.  
+-   **Non - Enregistrer le travail dans la base de connaissances et quitter** : votre travail est enregistré, la base de connaissances reste verrouillée et l’état de la base de connaissances est défini sur En cours. Les activités de gestion de l'arborescence du domaine et de découverte des connaissances seront disponibles. La page d'accueil s'affichera à nouveau.  
   
--   **Annuler - rester sur l’écran actuel**: La fenêtre sera fermée et vous serez redirigé vers l’écran de gestion de domaine.  
+-   **Annuler - Rester sur l’écran actuel** : la fenêtre se ferme et l’écran Gestion de l’arborescence de domaine s’affiche à nouveau.  
   
  **Annuler**  
  Cliquez sur cette option pour terminer l'activité de gestion de l'arborescence du domaine, auquel cas vous perdrez votre travail, et revenir à la page d'accueil de DQS.  

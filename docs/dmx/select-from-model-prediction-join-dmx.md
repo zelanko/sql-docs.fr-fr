@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f0778a104383f54cf2798c0d6f51f082926b1fd4
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658947"
 ---
 # <a name="select-from-ltmodelgt-prediction-join-dmx"></a>SELECT FROM &lt;modèle&gt; PREDICTION JOIN (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -78,7 +78,7 @@ FROM <model> | <sub select> [NATURAL] PREDICTION JOIN
   
  La clause ORDER BY ne peut accepter qu'une seule colonne comme argument ; autrement dit, vous ne pouvez pas effectuer de tri sur plusieurs colonnes.  
   
-## <a name="example-1-singleton-query"></a>Exemple 1 : requête singleton  
+## <a name="example-1-singleton-query"></a>Exemple 1 : Requête singleton  
  L'exemple suivant montre comment créer une requête permettant de prédire si une personne spécifique achètera ou non une bicyclette en temps réel. Dans cette requête, les données ne sont pas stockées dans une table ou toute autre source de données, mais sont directement entrées dans la requête. La personne spécifiée dans la requête possède les caractéristiques suivantes :  
   
 -   35 ans  
@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
   2 AS [Total Children]) AS t  
 ```  
   
-## <a name="example-2-using-openquery"></a>Exemple 2 : utilisation de OPENQUERY  
+## <a name="example-2-using-openquery"></a>Exemple 2 : À l’aide de OPENQUERY  
  L'exemple suivant montre comment créer une requête de prédiction par lot à l'aide d'une liste de clients potentiels stockés dans un dataset externe. Étant donné que la table fait partie d’une vue de source de données qui a été définie sur une instance de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], la requête peut utiliser [OPENQUERY](../dmx/source-data-query-openquery.md) pour récupérer les données. Étant donné que les noms des colonnes dans la table sont différentes de celles figurant dans le modèle d’exploration de données, le **ON** clause doit être utilisée pour mapper les colonnes de la table pour les colonnes dans le modèle.  
   
  La requête retourne le prénom et le nom de toutes les personnes de la table, ainsi qu'une colonne booléenne qui indique si chaque personne est susceptible d'acheter une bicyclette, où 0 signifie « n'achètera probablement pas de bicyclette » et 1 signifie « achètera probablement une bicyclette ». La dernière colonne contient la probabilité du résultat prédit.  
@@ -154,7 +154,7 @@ WHERE [BIKE Buyer]
 ORDER BY [LastName] ASC  
 ```  
   
-## <a name="example-3-predicting-associations"></a>Exemple 3 : prédiction des associations  
+## <a name="example-3-predicting-associations"></a>Exemple 3 : Prédiction d'associations  
  L'exemple suivant montre comment créer une prévision en utilisant un modèle construit à partir de l'algorithme [!INCLUDE[msCoName](../includes/msconame-md.md)] Association. Les prédictions sur un modèle d'association permettent de recommander des produits associés. Par exemple, la requête suivante retourne les trois produits qui ont le plus de chances d'être achetés ensemble :  
   
 -   Mountain Bottle Cage  
@@ -187,7 +187,7 @@ NATURAL PREDICTION JOIN
  La colonne contenant l'attribut prédictible `[v Assoc Seq Line Items]` étant une colonne de table, la requête retourne une colonne unique qui contient une table imbriquée. Par défaut, la colonne de table imbriquée est appelée `Expression`. Si votre fournisseur ne prend pas en charge les ensembles de lignes hiérarchiques, vous pouvez utiliser la **FLATTENED** mot clé, comme illustré dans cet exemple, pour que les résultats plus faciles à afficher.  
   
 ## <a name="see-also"></a>Voir aussi  
- [SÉLECTIONNEZ &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; les instructions de définition de données](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; les instructions de Manipulation de données](../dmx/dmx-statements-data-manipulation.md)   
  [Guide de référence des instructions DMX &#40;Data Mining Extensions&#41;](../dmx/data-mining-extensions-dmx-statements.md)  

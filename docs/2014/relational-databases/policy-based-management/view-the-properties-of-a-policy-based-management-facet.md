@@ -13,11 +13,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c819fc7fb3b1cc73b67362a0eabd82ad33946fbc
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62676863"
 ---
 # <a name="view-the-properties-of-a-policy-based-management-facet"></a>Afficher les propriétés d'une facette de gestion basée sur des stratégies
   Cette rubrique explique comment afficher les propriétés d'une facette de gestion basée sur des stratégies dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -36,7 +36,7 @@ ms.locfileid: "54100295"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Nécessite l'appartenance au rôle PolicyAdministratorRole dans la base de données msdb.  
   
 ##  <a name="SSMSProcedure"></a> Utilisation de SQL Server Management Studio  
@@ -51,7 +51,7 @@ ms.locfileid: "54100295"
   
 4.  Cliquez sur le signe plus (+) pour développer le dossier **Facettes** .  
   
-5.  Cliquez avec le bouton droit sur la facette dont vous souhaitez afficher les propriétés, puis sélectionnez **Propriétés**. Pour plus d’informations sur les options disponibles dans le **propriétés de la facette -**_nom_facette_ boîte de dialogue, consultez [boîte de dialogue Propriétés de facette, Général Page](../../integration-services/general-page-of-integration-services-designers-options.md), [ Boîte de dialogue Propriétés de facette, Page Stratégies dépendantes](facet-properties-dialog-box-dependent-policies-page.md), et [boîte de dialogue Propriétés de facette, Page Conditions dépendantes](facet-properties-dialog-box-dependent-conditions-page.md).  
+5.  Cliquez avec le bouton droit sur la facette dont vous souhaitez afficher les propriétés, puis sélectionnez **Propriétés**. Pour plus d’informations sur les options disponibles dans la boîte de dialogue **Propriétés de la facette -**_nom_facette_, consultez [Boîte de dialogue Propriétés de la facette, page Général](../../integration-services/general-page-of-integration-services-designers-options.md), [Boîte de dialogue Propriétés de la facette, page Stratégies dépendantes](facet-properties-dialog-box-dependent-policies-page.md) et [Boîte de dialogue Propriétés de la facette, page Conditions dépendantes](facet-properties-dialog-box-dependent-conditions-page.md).  
   
 6.  Lorsque vous avez terminé, cliquez sur **Fermer**.  
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 99b53c2559bf13f612a82c29ed7d41a5d58ac7cd
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48160429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62702994"
 ---
 # <a name="mining-models-view-data-mining-model-designer"></a>Vue Modèles d'exploration de données (Concepteur de modèle d'exploration de données)
   Utilisez la vue **Modèles d'exploration de données** pour créer ou modifier des modèles d'exploration de données contenus dans une structure d'exploration de données.  
@@ -29,7 +29,7 @@ ms.locfileid: "48160429"
   
 ## <a name="see-also"></a>Voir aussi  
  [Vue de Structure d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-structure-view-data-mining-model-designer.md)   
- [Visionneuses de modèle d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
+ [Visionneuses de modèles d’exploration de données &#40;Concepteur de modèle d’exploration de données&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Concepteur graphique d’analyse de précision d’exploration de données &#40;exploration de données&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Générateur de requêtes de prédiction &#40;exploration de données&#41;](prediction-query-builder-data-mining.md)  
   

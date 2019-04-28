@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695675"
 ---
-# <a name="job-properties-new-job-schedules-page"></a>Propriétés du travail : Nouveau travail (Page planifications)
+# <a name="job-properties-new-job-schedules-page"></a>Propriétés du travail : Nouveau travail (page Planifications)
   Utilisez cette page pour afficher et organiser des planifications pour un travail de l'Agent [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="options"></a>Options  

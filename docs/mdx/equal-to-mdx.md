@@ -1,5 +1,5 @@
 ---
-title: = (Égal à) (MDX) | Documents Microsoft
+title: = (Égal à) (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1fac06690d811c3ae3d4b00a82ad9088b2df4aae
-ms.sourcegitcommit: 97bef3f248abce57422f15530c1685f91392b494
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34739828"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62690923"
 ---
 # <a name="-equal-to-mdx"></a>= (Égal à) (MDX)
 
@@ -22,7 +22,7 @@ ms.locfileid: "34739828"
   Exécute une opération de comparaison qui détermine si la valeur d'une expression MDX est égale à celle d'une autre expression MDX.  
   
 > [!NOTE]  
->  Pour comparer des objets, utilisez la [IS &#40;MDX&#41; ](../mdx/is-mdx.md) opérateur. Par exemple, utilisez l'opérateur IS lorsque vous vérifiez si le membre actuel sur un axe de requête est un membre spécifique.  
+>  Pour comparer des objets, utilisez le [IS &#40;MDX&#41; ](../mdx/is-mdx.md) opérateur. Par exemple, utilisez l'opérateur IS lorsque vous vérifiez si le membre actuel sur un axe de requête est un membre spécifique.  
   
 ## <a name="syntax"></a>Syntaxe  
   

@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670690"
 ---
 # <a name="dta-utility"></a>dta (utilitaire)
   L'utilitaire **dta** constitue la version d'invite de commandes de l'Assistant Paramétrage du moteur de base de données. L'utilitaire **dta** est conçu pour permettre l'utilisation de l'Assistant Paramétrage du moteur de base de données dans des applications et des scripts.  

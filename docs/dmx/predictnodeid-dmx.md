@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5202662b1bd41671905379272b2a52ba87510ecc
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38037357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62658937"
 ---
 # <a name="predictnodeid-dmx"></a>PredictNodeId (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ WHERE NODE_UNIQUE_NAME= '00000000100'
   
 ## <a name="see-also"></a>Voir aussi  
  [Data Mining Extensions &#40;DMX&#41; référence de fonction](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Fonctions &#40;DMX&#41;](../dmx/functions-dmx.md)   
+ [Functions &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [Fonctions de prédiction générales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   
   

@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 45e8e37d8bb85e727771072abda9249b8155076f
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62802674"
 ---
 # <a name="schema-section"></a>Section de schéma
 La section de schéma est requise. Comme le montre l’exemple précédent, ADO écrit des métadonnées détaillées concernant chaque colonne pour préserver la sémantique des valeurs de données autant que possible pour la mise à jour. Toutefois, pour charger le code XML, ADO requiert uniquement les noms des colonnes et l’ensemble de lignes auquel elles appartiennent. Voici un exemple de schéma minimal :  

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb970a24faf35b269af2c9972e4d604be57d0f88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48096349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679867"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Créer un jeu de test (Assistant Exploration de données)
   Utilisez la page **Créer un jeu de test** pour spécifier la quantité des données à utiliser pour l’apprentissage et celle à réserver au jeu de test. La séparation des données dans un jeu d'apprentissage et de test lorsque vous créez une structure d'exploration de données facilite énormément l'évaluation de l'exactitude des modèles d'exploration de données que vous créez ultérieurement.  
@@ -35,7 +35,7 @@ ms.locfileid: "48096349"
   
 -   Vous ne pouvez pas partitionner des données si vous essayez de prédire une valeur qui est stockée dans une table imbriquée.  
   
- **Pour plus d’informations, consultez**  [Test et validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md), [Créer une structure d’exploration de données relationnelle](data-mining/create-a-relational-mining-structure.md) et [Didacticiel sur l’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Pour plus d’informations :** [Test et Validation &#40;exploration de données&#41;](data-mining/testing-and-validation-data-mining.md), [créer une Structure d’exploration de données relationnelles](data-mining/create-a-relational-mining-structure.md), [didacticiel d’exploration de données de base](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
 ## <a name="options"></a>Options  
  **Pourcentage des données de test**  

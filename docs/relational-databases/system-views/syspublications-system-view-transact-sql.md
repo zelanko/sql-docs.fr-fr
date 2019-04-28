@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db146c450afdae024942d543ff5c9fa5d7c169e3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62694218"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (vue système) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52773988"
 |**repl_freq**|**tinyint**|Fréquence de réplication :<br /><br /> **0** = en fonction des transactions (transactionnelle).<br /><br /> **1** = actualisation planifiée des tables (instantané).|  
 |**status**|**tinyint**|État de la publication :<br /><br /> **0** = inactif.<br /><br /> **1** = actif.|  
 |**sync_method**|**tinyint**|Méthode de synchronisation :<br /><br /> **0** = utilitaire de programme de copie en bloc natif (BCP).<br /><br /> **1** = caractère BCP.<br /><br /> **3** = simultanées, ce qui signifie que BCP natif est utilisé mais les tables ne sont pas verrouillées lors de l’instantané.<br /><br /> **4** = Concurrent_c, ce qui signifie que caractère BCP est utilisé mais les tables ne sont pas verrouillées lors de l’instantané.|  
-|**snapshot_jobid**|**binary (16)**|Identifie le travail d'agent planifié pour créer l'instantané initial.|  
+|**snapshot_jobid**|**binary(16)**|Identifie le travail d'agent planifié pour créer l'instantané initial.|  
 |**independent_agent**|**bit**|Spécifie s’il existe un Agent de Distribution autonome pour cette publication.<br /><br /> **0** = la publication utilise un Agent de Distribution partagé, et chaque paire de base de données de serveur de publication/abonné de base de données a un seul Agent partagé.<br /><br /> **1** = il existe un Agent de Distribution autonome pour cette publication.|  
 |**immediate_sync**|**bit**|Indique si les fichiers de synchronisation sont créés ou recréés chaque fois que l’Agent d’instantané s’exécute, où **1** signifie qu’ils sont créés chaque fois que l’agent s’exécute.|  
 |**enabled_for_internet**|**bit**|Indique si les fichiers de synchronisation pour la publication sont exposés à Internet via le protocole de transfert de fichiers (FTP) et d’autres services, où **1** signifie qu’ils soient accessibles à partir d’Internet.|  
@@ -65,8 +65,8 @@ ms.locfileid: "52773988"
 |**centralized_conflicts**|**bit**|Spécifie si les enregistrements en conflit sont stockés sur le serveur de publication :<br /><br /> **0** = les enregistrements en conflit sont stockés sur le serveur de publication et sur l’abonné qui a provoqué le conflit.<br /><br /> **1** = les enregistrements en conflit sont stockés sur le serveur de publication.|  
 |**conflict_retention**|**Int**|Spécifie (en jours) la durée de rétention des enregistrements des conflits.|  
 |**conflict_policy**|**Int**|Spécifie la stratégie de résolution de conflits à suivre lorsque l'option d'abonné avec mise à jour en attente est utilisée. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = serveur de publication gagne le conflit.<br /><br /> **2** = l’abonné gagne le conflit.<br /><br /> **3** = abonnement est réinitialisé.|  
-|**queue_type**|**Int**|Spécifie le type de file d'attente utilisé. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = .MSMQ. utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing pour stocker les transactions.<br /><br /> **2** = .sql, qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.<br /><br /> Remarque : [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing est déconseillé et n'est plus pris en charge.|  
-|**ad_guidname**|**sysname**|Spécifie si la publication est publiée dans l'annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificateur global unique (GUID) valide indique que la publication est publiée dans l'annuaire Active Directory ; le GUID correspond alors à l'objet de publication Active Directory objectGUID. Si la valeur est NULL, la publication n'est pas publiée dans l'annuaire Active Directory.<br /><br /> Remarque : La publication dans Active Directory n'est plus prise en charge.|  
+|**queue_type**|**Int**|Spécifie le type de file d'attente utilisé. Peut prendre l'une des valeurs suivantes :<br /><br /> **1** = .MSMQ. utilise [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing pour stocker les transactions.<br /><br /> **2** = .sql, qui utilise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pour stocker les transactions.<br /><br /> Remarque : À l’aide de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing a été déconseillée et n’est plus pris en charge.|  
+|**ad_guidname**|**sysname**|Spécifie si la publication est publiée dans l'annuaire [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory. Un identificateur global unique (GUID) valide indique que la publication est publiée dans l'annuaire Active Directory ; le GUID correspond alors à l'objet de publication Active Directory objectGUID. Si la valeur est NULL, la publication n'est pas publiée dans l'annuaire Active Directory.<br /><br /> Remarque : Publication dans Active Directory n’est plus pris en charge.|  
 |**backward_comp_level**|**Int**|Le niveau de compatibilité des bases de données peut avoir une des valeurs suivantes :<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|Indique si les Abonnés peuvent initialiser un abonnement à cette publication à partir d'une sauvegarde plutôt que d'un instantané initial. **1** signifie que les abonnements peuvent être initialisés à partir d’une sauvegarde, et **0** signifie qu’ils ne peuvent pas. Pour plus d’informations, consultez [Initialiser un abonnement transactionnel sans instantané](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md).|  
 |**min_autonosync_lsn**|**binary(1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

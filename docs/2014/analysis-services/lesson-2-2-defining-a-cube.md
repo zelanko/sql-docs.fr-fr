@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 47e1840318adf5e2b3638dd412de50144f7b2372
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729405"
 ---
 # <a name="defining-a-cube"></a>Définition d'un cube
   L'Assistant Cube vous aide à définir les groupes de mesures et les dimensions d'un cube. Dans la tâche suivante, vous allez utiliser l'Assistant Cube pour générer un cube.  
@@ -35,7 +35,7 @@ ms.locfileid: "48117467"
   
      L’Assistant examine les tables et suggère **InternetSales** comme table de groupes de mesures. Les tables de groupes de mesures, également appelées tables de faits, contiennent les mesures qui présentent un intérêt particulier pour vous, comme le nombre d’unités vendues.  
   
-6.  Cliquez sur **Suivant**.  
+6.  Cliquer sur **Suivant**.  
   
 7.  Dans la page **Sélectionner des mesures** , vérifiez les mesures sélectionnées dans le groupe de mesures **Internet Sales** , puis désactivez les cases à cocher correspondant aux mesures suivantes :  
   
@@ -49,13 +49,13 @@ ms.locfileid: "48117467"
   
      Par défaut, l'Assistant sélectionne comme mesures toutes les colonnes numériques de la table de faits qui ne sont pas liées à des dimensions. Toutefois, ces quatre colonnes ne sont pas vraiment des mesures. Les trois premières sont des valeurs clé qui lient la table de faits aux tables de dimension qui ne sont pas utilisées dans la première version de ce cube.  
   
-8.  Cliquez sur **Suivant**.  
+8.  Cliquer sur **Suivant**.  
   
 9. Dans la page **Sélectionner des dimensions existantes** , vérifiez que la dimension **Date** que vous avez créée précédemment est sélectionnée, puis cliquez sur **Suivant**.  
   
 10. Dans la page **Sélectionner de nouvelles dimensions** , sélectionnez les nouvelles dimensions à créer. Pour cela, vérifiez que les cases **Customer**, **Geography**et **Product** sont cochées, puis décochez la case **InternetSales** .  
   
-11. Cliquez sur **Suivant**.  
+11. Cliquer sur **Suivant**.  
   
 12. Sur le **fin de l’Assistant** page, remplacez le nom du cube à `Analysis Services Tutorial`. Dans le volet Aperçu, vous pouvez voir le groupe de mesures **InternetSales** et ses mesures. Vous pouvez également voir les dimensions **Date**, **Customer** et **Product** .  
   
@@ -68,7 +68,7 @@ ms.locfileid: "48117467"
 15. Dans le menu **Fichier** , cliquez sur **Enregistrer tout**.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Ajout d’attributs aux dimensions](lesson-2-3-adding-attributes-to-dimensions.md)  
+ [Ajout d'attributs aux dimensions](lesson-2-3-adding-attributes-to-dimensions.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [Cubes dans les modèles multidimensionnels](multidimensional-models/cubes-in-multidimensional-models.md)   

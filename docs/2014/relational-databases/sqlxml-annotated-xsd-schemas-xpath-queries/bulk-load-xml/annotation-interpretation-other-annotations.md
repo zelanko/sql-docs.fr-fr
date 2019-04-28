@@ -22,11 +22,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 668e26430e97a1e7d34e0e420966b975874224c0
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52750031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62717896"
 ---
 # <a name="other-annotations-sqlxml-40"></a>Autres annotations (SQLXML 4.0)
   Outre les annotations présentées dans les rubriques précédentes de cette section, le chargement en masse XML interprète les annotations suivantes, comme suit :  
@@ -50,6 +50,6 @@ ms.locfileid: "52750031"
  Le chargement en masse XML ignore toujours cette annotation.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Interprétation des annotations &#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
+ [Annotation Interpretation &#40;SQLXML 4.0&#41;](annotation-interpretation-sqlxml-4-0.md)  
   
   

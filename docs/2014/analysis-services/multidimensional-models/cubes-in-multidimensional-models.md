@@ -17,14 +17,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adb21e802d437f7cd1e2d805f90c4525d6f9e8ef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48103953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700136"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubes dans les modèles multidimensionnels
-  Un cube est une structure multidimensionnelle qui contient des informations à des fins analytiques ; les constituants principaux d'un cube sont des dimensions et des mesures. Les dimensions définissent la structure du cube que vous utilisez pour la découpe, et les mesures fournissent des valeurs numériques agrégées qui intéressent l'utilisateur final. Comme structure logique, un cube permet à une application cliente de récupérer des valeurs, de mesures, comme si elles étaient contenues dans des cellules du cube ; les cellules sont définies pour chaque valeur résumée possible. Une cellule, dans le cube, est définie par l'intersection des membres de dimension et contient les valeurs agrégées des mesures à cette intersection spécifique.  
+  Un cube est une structure multidimensionnelle qui contient des informations à des fins analytiques ; les constituants principaux d'un cube sont des dimensions et des mesures. Les dimensions définissent la structure du cube que vous utilisez pour la découpe, et les mesures fournissent des valeurs numériques agrégées qui intéressent l'utilisateur final. Comme structure logique, un cube permet à une application cliente de récupérer des valeurs, de mesures, comme si elles étaient contenues dans des cellules du cube ; les cellules sont définies pour chaque valeur résumée possible. Une cellule, dans le cube, est définie par l'intersection des membres de dimension et contient les valeurs agrégées des mesures à cette intersection spécifique.  
   
 ## <a name="benefits-of-using-cubes"></a>Avantages de l'utilisation des cubes  
  Un cube fournit un seul emplacement où toutes les données associées, pour l'analyse, sont stockées.  
@@ -35,12 +35,12 @@ ms.locfileid: "48103953"
 |Élément|Description|  
 |-------------|-----------------|  
 |Dimensions|[Dimensions dans les modèles multidimensionnels](dimensions-in-multidimensional-models.md)|  
-|Mesures et groupes de mesures|[Créer des mesures et groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|  
+|Mesures et groupes de mesures|[Création de mesures et de groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Partitions|[Partitions dans les modèles multidimensionnels](partitions-in-multidimensional-models.md)|  
 |perspectives|[Perspectives dans les modèles multidimensionnels](perspectives-in-multidimensional-models.md)|  
-|Hierarchies|[Créer des hiérarchies définies par l’utilisateur](user-defined-hierarchies-create.md)|  
+|Hierarchies|[Créer des hiérarchies définies par l'utilisateur](user-defined-hierarchies-create.md)|  
 |Actions|[Actions dans les modèles multidimensionnels](actions-in-multidimensional-models.md)|  
-|Indicateurs de performance clés (KPI)|[Indicateurs de Performance clés &#40;indicateurs de performance clés&#41; dans les modèles multidimensionnels](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Indicateurs de performance clés (KPI)|[Indicateurs de performance clés &#40;KPI&#41; dans les modèles multidimensionnels](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Calculs|[Calculs dans les modèles multidimensionnels](calculations-in-multidimensional-models.md)|  
 |Translations|[Traductions dans les modèles multidimensionnels](translations-in-multidimensional-models-analysis-services.md)|  
   
@@ -48,8 +48,8 @@ ms.locfileid: "48103953"
   
 |Rubrique|Description|  
 |-----------|-----------------|  
-|[Créer un cube à l’aide de l’Assistant Cube](create-a-cube-using-the-cube-wizard.md)|Décrit comment utiliser l'Assistant Cube pour définir un cube, des dimensions, des attributs de dimension et des hiérarchies définies par l'utilisateur.|  
-|[Créer des mesures et groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|Décrit comment définir des groupes de mesures.|  
+|[Créer un cube à l'aide de l'Assistant Cube](create-a-cube-using-the-cube-wizard.md)|Décrit comment utiliser l'Assistant Cube pour définir un cube, des dimensions, des attributs de dimension et des hiérarchies définies par l'utilisateur.|  
+|[Création de mesures et de groupes de mesures dans les modèles multidimensionnels](create-measures-and-measure-groups-in-multidimensional-models.md)|Décrit comment définir des groupes de mesures.|  
 |[Calculs dans les modèles multidimensionnels](calculations-in-multidimensional-models.md)|Décrit comment définir et configurer un calcul dans un script MDX.|  
 |[Actions dans les modèles multidimensionnels](actions-in-multidimensional-models.md)|Décrit comment définir et configurer une action.|  
 |[Perspectives dans les modèles multidimensionnels](perspectives-in-multidimensional-models.md)|Décrit comment définir et configurer une perspective.|  

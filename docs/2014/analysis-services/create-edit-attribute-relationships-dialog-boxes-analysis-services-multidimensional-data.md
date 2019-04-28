@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 936862a702d7ca6f82dab5104c5354105443c3be
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62679757"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Boîtes de dialogue Créer une relation d'attribut et Modifier la relation d'attribut (onglet Concepteur de relations d'attributs, Concepteur de dimensions) (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Créer une relation d’attribut** pour définir de nouvelles relations d’attributs et la boîte de dialogue **Modifier la relation d’attribut** pour modifier une relation d’attribut. Pour plus d’informations, consultez [Définir des relations d’attributs](multidimensional-models/attribute-relationships-define.md).  

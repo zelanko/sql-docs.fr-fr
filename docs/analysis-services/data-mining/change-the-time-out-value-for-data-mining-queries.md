@@ -1,5 +1,5 @@
 ---
-title: Modifiez la valeur de délai d’attente pour les requêtes d’exploration de données | Documents Microsoft
+title: Modifiez la valeur de délai d’attente de requêtes d’exploration de données | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c67744ea3862185b59d1a0af3e1bb144eba57e23
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62670978"
 ---
 # <a name="change-the-time-out-value-for-data-mining-queries"></a>Modifier la valeur du délai d'attente pour les requêtes d'exploration de données
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34016596"
 3.  Cliquez sur la zone de texte **Délai de requête** et tapez une valeur pour le nombre de secondes.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Tâches de requête d’exploration de données et de procédures](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
+ [Tâches de requête d’exploration de données et procédures](../../analysis-services/data-mining/data-mining-query-tasks-and-how-tos.md)   
  [Requêtes d’exploration de données](../../analysis-services/data-mining/data-mining-queries.md)  
   
   

@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28774dc49ba3052ee01d197570f3de87f7363cf2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62732125"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Volet Conception (vue Prévision de modèle d'exploration de données)
   Le volet **Conception** contient le Générateur de requêtes de prédiction qui peut servir à créer des prédictions d’exploration de données. Vous pouvez concevoir des requêtes de prédiction qui utilisent des tables de données d'entrée d'une vue de source de données, pour générer des prédictions en bloc, ou vous pouvez créer des requêtes singleton de prédiction qui vous permettent de fournir des valeurs individuelles.  
@@ -30,7 +30,7 @@ ms.locfileid: "48189761"
 > [!NOTE]  
 >  Si vous apportez des modifications manuelles à la requête, vous perdez les modifications lorsque vous repassez en mode Conception. Pour enregistrer la requête DMX, vous pouvez copier celle-ci vers le Presse-papiers Windows puis la coller dans un fichier texte.  
   
- **Pour plus d’informations :**[Requêtes d’exploration de données](data-mining/data-mining-queries.md)  
+ **Pour plus d’informations :** [Requêtes d’exploration de données](data-mining/data-mining-queries.md)  
   
 ## <a name="options"></a>Options  
  **Basculez vers l’affichage des résultats de requête**  
@@ -69,7 +69,7 @@ ms.locfileid: "48189761"
  **Entrée de requête singleton**  
  Cette option est activée quand vous sélectionnez le bouton **Requête singleton** . Elle contient les colonnes suivantes :  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**Colonne du modèle d’exploration de données**|Affiche la liste des colonnes du modèle d’exploration de données sélectionné dans la table **Modèle d’exploration de données** .|  
 |**Valeur**|Sélectionnez une valeur dans la liste qui contient tous les états possibles de la colonne du modèle d'exploration de données sélectionné.<br /><br /> Si la colonne est une colonne de table imbriquée, la boîte de dialogue **Entrée de la table imbriquée** s’ouvre quand vous cliquez dans la cellule de la valeur.|  

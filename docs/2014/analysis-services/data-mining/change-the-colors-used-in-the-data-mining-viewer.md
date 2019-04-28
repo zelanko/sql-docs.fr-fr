@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6152b183e00ca429efb817b9b19cdc0a7a1f77c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48225099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62689403"
 ---
 # <a name="change-the-colors-used-in-the-data-mining-viewer"></a>Modifier les couleurs utilisées dans la visionneuse d'exploration de données
   Vous pouvez modifier les couleurs utilisées dans les visionneuses d'explorations de données pour afficher des séries de données, des nœuds ou des clusters. Pour ce faire, définissez des options dans [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ou [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Après avoir modifié les paramètres, les sélections de couleur s'appliquent à tous les modèles que vous affichez à l'aide de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]; toutefois, vous devez fermer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] et rouvrir le modèle dans la visionneuse pour voir les nouvelles couleurs.  

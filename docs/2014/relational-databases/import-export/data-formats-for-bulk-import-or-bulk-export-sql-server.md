@@ -14,11 +14,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 676b5a8d8d05c5cb26a30eaa1b1fe9426ac30ea7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62661894"
 ---
 # <a name="data-formats-for-bulk-import-or-bulk-export-sql-server"></a>Formats de données pour l'importation en bloc ou l'exportation en bloc (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] peut accepter des données dans un format caractère ou binaire natif. Utilisez le format caractère lorsque vous déplacez des données entre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] et une autre application (telle que [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) ou un autre serveur de base de données (tel que Oracle ou [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). Vous ne pouvez utiliser le format natif que lorsque vous transférez des données entre des instances de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

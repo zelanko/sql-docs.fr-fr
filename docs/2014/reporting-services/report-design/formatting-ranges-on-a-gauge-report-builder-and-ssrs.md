@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de1906afd22e5a6e33fad54e331431611d9c0998
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654387"
 ---
 # <a name="formatting-ranges-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme de plages sur une jauge (Générateur de rapports et SSRS)
   Une plage de jauge est une zone ou une partie de l'échelle de la jauge qui indique une sous-section importante de valeurs sur la jauge. Une plage de jauge vous permet d'indiquer visuellement lorsque la valeur de pointeur entre dans une certaine plage de valeurs. Les plages sont délimitées par une valeur de début et une valeur de fin.  
@@ -32,7 +32,7 @@ ms.locfileid: "59956135"
  [Mise en forme des échelles sur une jauge &#40;Générateur de rapports et SSRS&#41;](formatting-scales-on-a-gauge-report-builder-and-ssrs.md)   
  [Mise en forme des pointeurs sur une jauge &#40;Générateur de rapports et SSRS&#41;](formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Définir un minimum ou un maximum sur une jauge &#40;Générateur de rapports et SSRS&#41;](set-a-minimum-or-maximum-on-a-gauge-report-builder-and-ssrs.md)   
- [Didacticiel : Ajouter un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
+ [Tutoriel : Ajouter un indicateur de performance clé à un rapport &#40;Générateur de rapports&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md)   
  [Jauges &#40;Générateur de rapports et SSRS&#41;](gauges-report-builder-and-ssrs.md)  
   
   

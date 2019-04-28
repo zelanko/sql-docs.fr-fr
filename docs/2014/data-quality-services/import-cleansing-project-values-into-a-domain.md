@@ -13,11 +13,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 07992b9a5150e6b81d869aa21831e019c32ae6e4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62792726"
 ---
 # <a name="import-cleansing-project-values-into-a-domain"></a>Importer des valeurs de projet de nettoyage dans un domaine
   Dans [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), vous pouvez importer les connaissances de qualité des données collectées pendant le processus de nettoyage dans un projet de nettoyage de qualité des données ou un package Integration Services qui contient le composant de nettoyage DQS dans un domaine. Cela garantit que des connaissances approuvées ne sont pas perdues, et que la base de connaissances est améliorée en permanence.  
@@ -32,7 +32,7 @@ ms.locfileid: "56020010"
   
 ###  <a name="Security"></a> Sécurité  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Autorisations  
  Vous devez disposer du rôle dqs_kb_editor ou dqs_administrator sur la base de données DQS_MAIN pour importer les connaissances de qualité des données collectées pendant le processus de nettoyage vers un domaine.  
   
 ##  <a name="Import"></a> Importer des valeurs de projet de nettoyage  
@@ -71,7 +71,7 @@ ms.locfileid: "56020010"
     > [!NOTE]  
     >  Pour plus d'informations sur l'utilisation des valeurs dans l'onglet **Valeurs du domaine** , consultez [Change Domain Values](../../2014/data-quality-services/change-domain-values.md).  
   
-##  <a name="FollowUp"></a> Suivi : Après avoir importé des valeurs de projet dans un domaine  
+##  <a name="FollowUp"></a> Suivi : après l’importation de valeurs de projet dans un domaine  
  Après avoir importé les connaissances de qualité des données collectées pendant le processus de nettoyage dans un domaine, vous pouvez effectuer d'autres tâches de gestion de domaine sur le domaine et les valeurs. Pour plus d’informations, consultez [Gestion d’un domaine](../../2014/data-quality-services/managing-a-domain.md).  
   
 ##  <a name="Values"></a> Valeurs qui seront importées  

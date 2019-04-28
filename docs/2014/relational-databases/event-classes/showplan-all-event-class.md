@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 487aaee17be13727f2c23de42b95afcc27b0b939
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52801111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62662193"
 ---
 # <a name="showplan-all-event-class"></a>Showplan All, classe d’événements
   La classe d'événements Showplan All intervient quand [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] exécute une instruction SQL. Les informations comprises sont un sous-ensemble des informations disponibles dans les classes d’événements Showplan XML Statistics Profile ou Showplan XML.  

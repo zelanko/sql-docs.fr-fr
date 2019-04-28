@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d81bb9f5ec54f3d66089205f5b5941119d365501
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62652897"
 ---
 # <a name="setup-dll-api-reference"></a>Informations de référence sur l’API de la DLL de configuration
 Cette section décrit la syntaxe de l’installation du pilote API de DLL, qui se compose de deux fonctions (**ConfigDriver** et **ConfigDSN**). **ConfigDriver** et **ConfigDSN** peut se trouver dans la DLL du pilote ou dans une fonction DLL d’installation.  

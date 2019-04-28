@@ -12,11 +12,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bddbad8ebe91aaa57ab76fdd4f30a5ebb9e5ab3d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48068309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62700116"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Créer un cube à l'aide d'une vue de source de données
   Utilisez cette méthode de génération d'un nouveau cube si vous envisagez d'utiliser une vue de source de données existante. Avec cette méthode, vous spécifiez la vue de source de données et sélectionnez les tables de faits et de dimension à utiliser dans la vue de source de données. Vous choisissez ensuite les dimensions et les mesures à inclure dans le cube.  

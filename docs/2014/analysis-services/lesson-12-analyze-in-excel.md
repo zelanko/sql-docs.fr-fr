@@ -1,5 +1,5 @@
 ---
-title: 'Leçon 13 : Analyser dans Excel | Microsoft Docs'
+title: 'Leçon 13 : Analyser dans Excel | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,24 +12,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8175fee7c1bf1f6472c8e302cf13c418295b9380
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48052079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62729445"
 ---
-# <a name="lesson-13-analyze-in-excel"></a>Leçon 13 : Analyser dans Excel
+# <a name="lesson-13-analyze-in-excel"></a>Leçon 13 : Analyser dans Excel
   Dans cette leçon, vous allez utiliser la fonction Analyser dans Excel dans [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] pour ouvrir Microsoft Excel, créer automatiquement une connexion de source de données à l'espace de travail du modèle et ajouter automatiquement un tableau croisé dynamique à la feuille de calcul. La fonction Analyser dans Excel offre un moyen simple et rapide de tester l'efficacité de votre conception de modèle avant de le déployer. Vous n'allez exécuter aucune analyse de données dans cette leçon. L'objectif de cette leçon est de vous familiariser, en tant qu'auteur de modèle, avec les outils que vous pouvez utiliser pour tester votre conception de modèle. Contrairement à la fonctionnalité Analyser dans Excel, qui est destinée aux auteurs de modèle, les utilisateurs finaux utilisent les applications de création de rapports clientes, par exemple Excel ou [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)], pour se connecter aux données du modèle déployé et les parcourir.  
   
  Pour pouvoir exécuter cette leçon, Excel doit être installé sur le même ordinateur que [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]. Pour en savoir plus, consultez [Analyser dans Excel &#40;SSAS Tabulaire&#41;](tabular-models/analyze-in-excel-ssas-tabular.md).  
   
- Durée estimée pour effectuer cette leçon : **20 minutes**  
+ Durée estimée pour effectuer cette leçon : **20 minutes**  
   
 ## <a name="prerequisites"></a>Prérequis  
- Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la [Leçon 11 : Créer des partitions](lesson-10-create-partitions.md).  
+ Cette rubrique fait partie d'un didacticiel de modélisation tabulaire, qui doit être suivi dans l'ordre. Avant d’effectuer les tâches de cette leçon, vous devez avoir terminé la leçon précédente : [Leçon 11 : Créer des Partitions](lesson-10-create-partitions.md).  
   
 ## <a name="browse-using-the-default-and-internet-sales-perspectives"></a>Parcourir des données à l'aide des perspectives par défaut et Internet Sales  
- Dans ces premières tâches, vous pourrez parcourir votre modèle à l'aide de la perspective par défaut, qui inclut tous les objets de modèle, et de la perspective Internet Sales que vous avez créée dans la leçon 8 : créer des perspectives. La perspective Internet Sales exclut l'objet table Customer.  
+ Dans ces premières tâches, vous pourrez parcourir votre modèle à l’aide à la fois la perspective par défaut, qui inclut tous les objets de modèle, et également à l’aide de la perspective Internet Sales créée dans la leçon 8 : Créer des Perspectives. La perspective Internet Sales exclut l'objet table Customer.  
   
 #### <a name="to-browse-by-using-the-default-perspective"></a>Pour parcourir les données à l'aide de la perspective par défaut  
   
@@ -63,6 +63,6 @@ ms.locfileid: "48052079"
      Excel s'ouvre avec un nouveau classeur. Un tableau croisé dynamique est créé automatiquement. La liste des champs du tableau croisé dynamique inclut tous les champs de données disponibles dans votre nouveau modèle.  
   
 ## <a name="next-steps"></a>Étapes suivantes  
- Pour continuer ce didacticiel, passez à la [Leçon 14 : Déployer](lesson-13-deploy.md).  
+ Pour continuer ce didacticiel, passez à la leçon suivante : [Leçon 14 : Déployer](lesson-13-deploy.md).  
   
   

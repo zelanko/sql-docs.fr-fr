@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59957025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62654466"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Mise en forme des pointeurs sur une jauge (Générateur de rapports et SSRS)
   Un pointeur de jauge indique la valeur actuelle de la jauge. Par défaut, lorsqu'un champ est ajouté, les valeurs contenues dans le champ sont agrégées en une valeur représentée par le pointeur sur la jauge. Vous pouvez ajouter plusieurs pointeurs à la jauge pour indiquer plusieurs valeurs sur la même échelle ou ajouter plusieurs échelles et un pointeur pour chaque échelle ajoutée. Après avoir ajouté un champ à une jauge, vous devez définir les valeurs maximale et minimale sur l'échelle correspondante pour donner le contexte de la valeur du pointeur. Vous avez également la possibilité de définir des valeurs minimale et maximale sur une plage qui représente une zone critique sur l'échelle.  
