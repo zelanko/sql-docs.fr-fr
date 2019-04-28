@@ -16,11 +16,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ddba1f5e79f1fe67f0b9319341f2599ac05cc9c2
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48179679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62655514"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>Boîte de dialogue Parcourir la source de données (Analysis Services - Données multidimensionnelles)
   Utilisez la boîte de dialogue **Parcourir la source de données** dans [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] pour afficher les 1 000 premiers enregistrements de la table sélectionnée.  

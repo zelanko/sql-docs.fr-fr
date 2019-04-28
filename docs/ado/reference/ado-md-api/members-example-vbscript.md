@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4a9febce34248bdab86fc2c7f8ae43f3cd41e2d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47751727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62659542"
 ---
 # <a name="members-example-vbscript"></a>Exemple avec Members (VBScript)
 Cet exemple utilise une chaîne de requête MDX pour récupérer des données OLAP et écrit l’ensemble de cellules résultant dans une structure de table HTML à l’aide des fonctionnalités d’étendue de colonne pour plusieurs cellules multidimensionnels.  
@@ -293,7 +293,7 @@ For h=0 to intDC0
                   Marker = Marker + 1  
                Else  
                   If aryRows(Marker) = aryRows(Marker - intDC1) then  
-                     Response.Write "<TD> </TD>"  
+                     Response.Write "<TD> </TD>"  
                      Marker = Marker + 1  
                   Else  
                      Response.Write "<TD><B>"  

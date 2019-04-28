@@ -19,11 +19,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 77b6eb7d3e82e2741c87612265ca69a75e369204
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59964405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62657364"
 ---
 # <a name="report-builder-help-for-dialog-boxes-panes-and-wizards"></a>Aide du Générateur de rapports pour les boîtes de dialogue, les volets et les Assistants
   Cette section contient des informations d'aide pour de nombreux assistants, vues, volets et boîtes de dialogue du Générateur de rapports. Vous pouvez également obtenir de l'aide en appuyant sur F1 ou en cliquant sur le bouton Aide affiché dans la boîte de dialogue.  

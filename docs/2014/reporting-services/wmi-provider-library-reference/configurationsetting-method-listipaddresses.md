@@ -14,11 +14,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e8ad172dae04aa8b1092d1ddde3bb523d40aa79
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59947858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62647073"
 ---
 # <a name="listipaddresses-method-wmi-msreportserverconfigurationsetting"></a>Méthode ListIPAddresses (WMI MSReportServer_ConfigurationSetting)
   Répertorie les adresses IP de l'ordinateur serveur de rapports.  

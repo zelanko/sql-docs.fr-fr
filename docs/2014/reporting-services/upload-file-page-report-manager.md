@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 271c97f635db61c0e66b7a22608272fde145387c
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59944105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62649277"
 ---
 # <a name="upload-file-page-report-manager"></a>Page Télécharger un fichier (Gestionnaire de rapports)
   La page Télécharger un fichier vous permet de publier un fichier du système de fichiers dans la base de données du serveur de rapports. Les fichiers téléchargés sont représentés comme des éléments dans l'arborescence des dossiers du serveur de rapports.  

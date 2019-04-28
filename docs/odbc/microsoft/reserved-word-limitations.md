@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 531a100fed389264d9af6a1733636792a3dc7920
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62660941"
 ---
 # <a name="reserved-keyword-limitations"></a>Limitations du mot clé réservé
 
@@ -31,5 +31,5 @@ Une liste des mots clés réservés ODBC est disponible à l’adresse :
 
 - [Mots clés réservés ODBC](https://docs.microsoft.com/sql/odbc/reference/appendixes/reserved-keywords).
 
-- Dans le *Guide de référence du programmeur ODBC*, consultez [annexe c : SQL grammaire](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
+- Dans le *Guide de référence du programmeur ODBC*, consultez [annexe c : Grammaire SQL](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-c-sql-grammar).
 

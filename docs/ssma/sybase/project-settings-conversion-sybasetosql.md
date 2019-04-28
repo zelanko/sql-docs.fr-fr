@@ -11,11 +11,11 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62664661"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Paramètres du projet (Conversion) (SybaseToSQL)
 La page de Conversion de la **paramètres du projet** boîte de dialogue contient les paramètres qui personnalisent comment SSMA convertit la syntaxe de Sybase Adaptive Server Enterprise (ASE) à [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ou la syntaxe de SQL Azure.  
@@ -148,7 +148,7 @@ Lorsque SSMA rencontre un *format_string* argument, il peut soit créer une cha�
   
 -   Pour utiliser un littéral de chaîne pour les fonctions PRINT et RAISERROR, sélectionnez **Créer nouvelle chaîne**.  
   
-    Dans ce mode, si une instruction PRINT ou RAISERROR n’utilise pas les espaces réservés et les variables locales, l’instruction est inchangée. Double caractères pourcentage (%) sont modifiées à un seul caractère de pourcentage % dans les littéraux de chaîne d’impression.  
+    Dans ce mode, si une instruction PRINT ou RAISERROR n’utilise pas les espaces réservés et les variables locales, l’instruction est inchangée. Double caractères pourcentage (%) sont modifiés en un seul caractère de pourcentage % dans les littéraux de chaîne d’impression.  
   
     Si une instruction PRINT ou RAISERROR utilise des espaces réservés et un ou plusieurs variables locales, comme dans l’exemple suivant :  
   
@@ -183,7 +183,7 @@ Lorsque SSMA rencontre un *format_string* argument, il peut soit créer une cha�
   
 -   Pour générer une nouvelle variable pour chaque instruction PRINT et RAISERROR et utilisez ensuite cette variable pour la valeur de chaîne SSMA, sélectionnez **créer une nouvelle variable**.  
   
-    Dans ce mode, si une instruction PRINT ou RAISERROR n’utilise pas les espaces réservés et les variables locales, SSMA remplace tous les caractères de pourcentage double (%) par des caractères de pourcentage uniques pour se conformer aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ syntaxe de SQL Azure.  
+    Dans ce mode, si une instruction PRINT ou RAISERROR n’utilise pas les espaces réservés et les variables locales, SSMA remplace tous les caractères de pourcentage double (%) avec des caractères de pourcentage uniques pour se conformer aux [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ syntaxe de SQL Azure.  
   
     Si une instruction PRINT ou RAISERROR utilise des espaces réservés et un ou plusieurs variables locales, comme dans l’exemple suivant :  
   
