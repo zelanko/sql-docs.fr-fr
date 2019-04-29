@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cede9be7c484d40c2220fc891779f7dfb6e5a8df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63028146"
 ---
 # <a name="filter-property"></a>Filter, propriété
 Indique un filtre pour les données dans un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -30,9 +30,9 @@ Indique un filtre pour les données dans un [Recordset](../../../ado/reference/a
 
 Définit ou retourne un **Variant** valeur, qui peut contenir un des éléments suivants :  
   
--   **Chaîne de critères :** une chaîne constituée d’une ou plusieurs clauses individuelles concaténées avec **AND** ou **OR** opérateurs.  
+-   **Chaîne de critères :** Une chaîne constituée d’une ou plusieurs clauses individuelles concaténées avec **AND** ou **OR** opérateurs.  
   
--   **Tableau de signets :** un tableau de signet unique des valeurs qui pointent vers les enregistrements dans le **Recordset** objet.  
+-   **Tableau de signets :** Tableau de signet unique valeurs qui pointent vers les enregistrements dans le **Recordset** objet.  
   
 -   Un [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) valeur.  
   
@@ -46,7 +46,7 @@ La chaîne de critères se compose de clauses sous la forme *NomChamp-Opérateur
   
 -   Opérateur doit être une des opérations suivantes : \<, >, \<=, > =, <>, =, ou **comme**.  
   
--   La valeur est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple, « Smith », #8/24/95 #, 12,345 ou 50,00 $). Utilisez des guillemets simples avec des chaînes et les signes dièse (##) avec des dates. Pour les nombres, vous pouvez utiliser décimales, signes dollar et la notation scientifique. Si l’opérateur est **comme**, valeur peut utiliser des caractères génériques. Seuls l’astérisque (*) et signe de pourcentage (%) les caractères génériques sont autorisés, et ils doivent être le dernier caractère de la chaîne. Valeur ne peut pas être null.  
+-   La valeur est la valeur avec laquelle vous allez comparer les valeurs de champ (par exemple, « Smith », #8/24/95 #, 12,345 ou 50,00 $). Utilisez des guillemets simples avec des chaînes et les signes dièse (##) avec des dates. Pour les nombres, vous pouvez utiliser décimales, signes dollar et la notation scientifique. Si l’opérateur est **comme**, valeur peut utiliser des caractères génériques. Uniquement l’astérisque (*) et le signe de pourcentage (%) les caractères génériques sont autorisés, et ils doivent être le dernier caractère de la chaîne. Valeur ne peut pas être null.  
   
 > [!NOTE]
 >  Pour inclure des guillemets simples (') dans le filtre de valeur, utilisez deux guillemets simples pour représenter un. Par exemple, pour filtrer sur o ' Malley, la chaîne de critères doit être `"col1 = 'O''Malley'"`. Pour inclure des guillemets simples au début et la fin de la valeur de filtre, délimitez la chaîne avec les signes dièse (#). Par exemple, pour filtrer sur '1', la chaîne de critères doit être `"col1 = #'1'#"`.  
@@ -94,8 +94,8 @@ Le tableau suivant récapitule les effets de **adFilterPendingRecords** dans dif
 ||Non-Windows clés|Clé unique|Plusieurs clés|
 |-|--------------|----------------|-------------------|
 |**Non-Windows clés**|+|+|+|
-|**Clé unique**|+|-|Néant|
-|**Plusieurs clés**|+|Néant|+|
+|**Clé unique**|+|-|N/A|
+|**Plusieurs clés**|+|N/A|+|
 |||||
   
 ## <a name="applies-to"></a>S'applique à

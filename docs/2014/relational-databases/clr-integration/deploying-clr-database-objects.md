@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48122779"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62920839"
 ---
 # <a name="deploying-clr-database-objects"></a>Déploiement d'objets de base de données CLR
   Le déploiement est le processus selon lequel une application ou un module fini est distribué en vue de son installation et de son exécution sur un autre ordinateur. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio vous permet de développer des objets de base de données CLR (Common Language Runtime) et de les déployer sur un serveur de test. Les objets de base de données managés peuvent également être compilés avec les fichiers de redistribution [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework, au lieu de Visual Studio. Une fois compilés, les assemblys qui contiennent les objets de base de données CLR peuvent être déployés sur un serveur de test à l'aide de Visual Studio ou d'instructions [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Notez que Visual Studio .NET 2003 ne peut pas être utilisé pour le déploiement ou la programmation de l'intégration du CLR. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] inclut le .NET Framework préinstallé et Visual Studio .NET 2003 ne peut pas utiliser les assemblys .NET Framework 2.0.  
@@ -92,7 +92,7 @@ ms.locfileid: "48122779"
   
 4.  Dans le **choisir les Options de Script** volet, cliquez sur **suivant**, ou modifier les options, puis sur **suivant**.  
   
-5.  Dans le **sélectionner les Types d’objet** volet, choisissez le type d’objet de base de données à déployer. Cliquez sur **Suivant**.  
+5.  Dans le **sélectionner les Types d’objet** volet, choisissez le type d’objet de base de données à déployer. Cliquer sur **Suivant**.  
   
 6.  Pour chaque type d’objet sélectionné dans le **sélectionner les Types d’objet** volet, un **choisir \<type >** volet s’affiche. Dans ce volet, vous pouvez choisir parmi toutes les instances de ce type d'objet de base de données inscrites dans la base de données spécifiée. Sélectionnez un ou plusieurs objets et cliquez sur **suivant**.  
   

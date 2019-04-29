@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f014cb37c6c28a0c9a91bd811b9e94d734167e1e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62916769"
 ---
 # <a name="rename-a-database"></a>Modifier le nom d'une base de données
   Cette rubrique explique comment renommer une base de données définie par l'utilisateur dans [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Le nom de la base de données peut contenir n'importe quel caractère conforme aux règles applicables aux identificateurs.  
@@ -37,7 +37,7 @@ ms.locfileid: "58531423"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Suivi :**  [Après avoir renommé une base de données](#FollowUp)  
+-   **Suivi :**  [Après le renommage d’une base de données](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Avant de commencer  
   

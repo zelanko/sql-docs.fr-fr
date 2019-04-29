@@ -17,11 +17,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: c814d1b486a7ba7736cf19119a66ab0845d33c6b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63127582"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Spécification d'un chemin d'accès d'emplacement (SQLXML 4.0)
   Les requêtes XPath sont spécifiées sous la forme d'une expression. Il existe divers types d'expressions. Un chemin d'accès d'emplacement est une expression qui sélectionne un ensemble de nœuds associés au nœud de contexte. L'évaluation d'un chemin d'accès d'emplacement doit aboutir à un élément node-set.  

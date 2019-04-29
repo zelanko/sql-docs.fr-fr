@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62998935"
 ---
 # <a name="outer-joins"></a>Jointures externes
 ODBC prend en charge le SQL-92 left, syntaxe de jointure externe complète, droite et complète. Est la séquence d’échappement pour les jointures externes  
   
- **{JO** _jointure externe_**}**  
+ **{oj** _outer-join_**}**  
   
  où *jointure externe* est  
   

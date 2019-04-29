@@ -20,11 +20,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f45fe94756ffa30a458aabbb078f6b01c9821918
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62921039"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurer des pages (SQL Server)
   Cette rubrique explique comment restaurer des pages dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] à l'aide de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ou de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Dans la restauration de pages, l'objectif est de restaurer une ou plusieurs pages endommagées sans restaurer toute la base de données. Généralement, les pages candidates à la restauration ont été marquées « suspectes » en raison d'une erreur rencontrée lors de l'accès à la page. Les pages suspectes sont identifiées dans la table [suspect_pages](/sql/relational-databases/system-tables/suspect-pages-transact-sql) dans la base de données **msdb** .  
@@ -62,7 +62,7 @@ ms.locfileid: "58536391"
   
     -   Journal des transactions  
   
-    -   Pages d'allocation : pages Global Allocation Map (GAM), pages Shared Global Allocation Map (SGAM) et pages Page Free Space (PFS).  
+    -   Pages d’allocation : Les pages GAM (Allocation Map) global, les pages SGAM Shared Global Allocation Map () et gratuit espace pages PFS (Page).  
   
     -   Page 0 de tous les fichiers de données (page de démarrage des fichiers)  
   
@@ -133,8 +133,8 @@ ms.locfileid: "58536391"
     |Header|Valeurs|  
     |------------|------------|  
     |**Nom**|Nom du jeu de sauvegarde.|  
-    |**Composant**|Composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour des journaux de transactions).|  
-    |**Type**|Types de sauvegarde proposés : **Complète**, **Différentielle** ou **Journal des transactions**.|  
+    |**Composant**|Le composant sauvegardé : **Base de données**, **Fichier** ou **\<vide>** (pour des journaux de transactions).|  
+    |**Type**|Le type de sauvegarde effectué : **Complète**, **Différentielle** ou **Journal des transactions**.|  
     |**Server**|Nom de l'instance [!INCLUDE[ssDE](../../includes/ssde-md.md)] du moteur de base de données qui a effectué l'opération de sauvegarde.|  
     |**Sauvegarde de la base de données**|Nom de la base de données impliquée dans la sauvegarde.|  
     |**Position**|La position du jeu de sauvegarde dans le volume.|  

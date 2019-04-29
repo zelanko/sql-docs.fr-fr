@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d89825bcfc9f885d4339874c870cbc5a29938062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042739"
 ---
 # <a name="connecting-with-sqlconnect"></a>Connexion avec SQLConnect
 **SQLConnect** est la fonction de connexion la plus simple. Il requiert un nom de source de données et accepte un ID d’utilisateur facultatif et le mot de passe. Il fonctionne bien pour les applications que coder en dur une source de données nom et ne nécessitent pas un ID d’utilisateur ou le mot de passe. Elle fonctionne également parfaitement pour les applications qui veulent contrôlent leur propre « apparence » ou qui n’ont aucune interface utilisateur. De telles applications peuvent générer une liste de sources de données à l’aide de **SQLDataSources**, inviter l’utilisateur à la source de données, ID d’utilisateur et mot de passe, puis appelez **SQLConnect**.  

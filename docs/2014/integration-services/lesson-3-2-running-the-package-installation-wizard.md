@@ -1,5 +1,5 @@
 ---
-title: 'Étape 2 : Exécuter l’Assistant Installation de Package | Microsoft Docs'
+title: 'Étape 2 : Exécution de l’Assistant Installation de package | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58385537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891577"
 ---
-# <a name="step-2-running-the-package-installation-wizard"></a>Étape 2 : Exécution de l'Assistant Installation de package
+# <a name="step-2-running-the-package-installation-wizard"></a>Étape 2 : Exécution de l’Assistant Installation de package
   Au cours de cette tâche, vous allez exécuter l'Assistant Installation de package pour déployer les packages du projet Didacticiel de déploiement dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Seuls des packages peuvent être installés dans la table sysssispackages de la base de données [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb, les fichiers de support inclus dans l'application de déploiement seront déployés dans le système de fichiers.  
   
  L'Assistant Installation de package va vous guider tout au long de l'installation et de la configuration des packages. Vous allez installer les packages dans une instance de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sur l'ordinateur de destination (ordinateur où vous avez copié l'application de déploiement). Vous allez aussi créer un dossier, C:\DeploymentTutorialInstall, où l'Assistant va installer les fichiers non-package.  
@@ -81,11 +81,11 @@ ms.locfileid: "58385537"
   
      Étant donné que les valeurs des variables d'environnement sur l'ordinateur de destination sont différentes des valeurs des variables d'environnement sur l'ordinateur de développement, plusieurs avertissements s'affichent dans la page Validation des packages. Attendez-vous à quatre avertissements :  
   
-    -   Le nom de fichier de configuration « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le fichier de configuration : « C:\DeploymentTutorial\DataTransferConfig.dtsConfig » n’est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   
-    -   Le nom de fichier de configuration « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig » n'est pas valide. Vérifiez le nom du fichier de configuration.  
+    -   Le fichier de configuration : « C:\DeploymentTutorial\LoadXMLDataConfig.dtsConfig n’est pas valide. Vérifiez le nom du fichier de configuration.  
   
     -   Impossible de charger au moins une des entrées de configuration du package. Recherchez dans les entrées de configuration et les précédents avertissements les descriptions de la configuration qui a échoué.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "58385537"
     >  Un fichier journal temporaire est créé pour être utilisé dans la validation de package. Ce fichier n'est pas utilisé lorsque le package s'exécute.  
   
 ## <a name="next-task-in-lesson"></a>Tâche suivante de la leçon  
- [Étape 3 : Test des Packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
+ [Étape 3 : Test des packages déployés](../integration-services/lesson-3-3-testing-the-deployed-packages.md)  
   
 ![Icône Integration Services (petite)](media/dts-16.gif "icône Integration Services (petite)")**rester jusqu'à la Date avec Integration Services**<br /> Pour obtenir les derniers téléchargements, articles, exemples et vidéos de Microsoft, ainsi que des solutions sélectionnées par la communauté, visitez la page [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sur MSDN :<br /><br /> [Visitez la page Integration Services sur MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Pour recevoir une notification automatique de ces mises à jour, abonnez-vous aux flux RSS disponibles sur la page.  
   

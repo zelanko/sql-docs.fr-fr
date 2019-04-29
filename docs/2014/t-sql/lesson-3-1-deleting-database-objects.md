@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48092305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063114"
 ---
 # <a name="deleting-database-objects"></a>Suppression des objets de base de données
   Pour supprimer toutes les traces de ce didacticiel, vous pouvez simplement supprimer la base de données. Cependant, dans cette rubrique, vous allez parcourir les étapes pour inverser chaque action effectuée au cours du didacticiel.  
@@ -100,7 +100,7 @@ ms.locfileid: "48092305"
  Cette étape conclut le didacticiel d'écriture d'instructions [!INCLUDE[tsql](../includes/tsql-md.md)] . N'oubliez pas que ce didacticiel est une brève présentation et ne décrit pas toutes les options des instructions utilisées. La conception et la création d'une structure de base de données efficace et la configuration de l'accès sécurisé aux données nécessitent une base de données plus complexe que celle de ce didacticiel.  
   
 ## <a name="return-to-sql-server-tools-portal"></a>Revenir au portail des outils SQL Server  
- [Didacticiel : écriture d'instructions Transact-SQL](tutorial-writing-transact-sql-statements.md)  
+ [Tutoriel : Écriture d’instructions Transact-SQL](tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Voir aussi  
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   

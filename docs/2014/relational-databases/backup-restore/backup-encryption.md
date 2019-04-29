@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 13fa1ce6411f2ce4de1526e847bc5a6191d698c7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48055829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62922170"
 ---
 # <a name="backup-encryption"></a>Chiffrement de sauvegarde
   Cette rubrique fournit une présentation des options de chiffrement pour les sauvegardes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Elle contient des informations détaillées sur l'utilisation, les avantages et les méthodes recommandées de chiffrement pendant la sauvegarde.  
@@ -26,20 +26,20 @@ ms.locfileid: "48055829"
   
  Pour chiffrer pendant la sauvegarde, vous devez spécifier un algorithme de chiffrement, et un chiffreur pour sécuriser la clé de chiffrement. Les options de chiffrement suivantes sont prises en charge :  
   
--   **Algorithme de chiffrement :** Les algorithmes de chiffrement pris en charge sont : AES 128, AES 192, AES 256 et Triple DES  
+-   **Algorithme de chiffrement :** Les algorithmes de chiffrement pris en charge sont : AES 128, AES 192, AES 256 et Triple DES  
   
--   **Encryptor :** certificat ou clé asymétrique.  
+-   **Chiffreur :** Un certificat ou une clé asymétrique  
   
 > [!CAUTION]  
->  Il est très important de sauvegarder le certificat ou la clé asymétrique, et de préférence dans un emplacement autre que le fichier de sauvegarde pour lequel il a été utilisé pour le chiffrement. Sans certificat ou clé asymétrique, vous ne pouvez pas restaurer la sauvegarde, ce qui rend le fichier de sauvegarde inutilisable.  
+>  Il est très important de sauvegarder le certificat ou la clé asymétrique, et de préférence dans un autre emplacement que celui du fichier de sauvegarde que le certificat ou la clé a servi à chiffrer. Sans le certificat ou la clé asymétrique, vous ne pouvez pas restaurer la sauvegarde, ce qui rend le fichier de sauvegarde inutilisable.  
   
- **Restauration de la sauvegarde chiffrée :** Une restauration SQL Server ne nécessite pas de paramètres de chiffrement lors des restaurations. Elle nécessite que le certificat ou la clé asymétrique qui a servi à chiffrer le fichier de sauvegarde soit disponible sur l'instance sur laquelle vous effectuez la restauration. Le compte d'utilisateur qui effectue la restauration doit avoir l'autorisation `VIEW DEFINITION` sur le certificat ou la clé. Si vous restaurez la sauvegarde chiffrée dans une autre instance, vous devez vous assurer que le certificat est disponible sur cette instance.  
+ **Restaurez la sauvegarde chiffrée :** Restauration de SQL Server ne nécessite pas de paramètres de chiffrement lors des restaurations. Elle nécessite que le certificat ou la clé asymétrique qui a servi à chiffrer le fichier de sauvegarde soit disponible sur l'instance sur laquelle vous effectuez la restauration. Le compte d'utilisateur qui effectue la restauration doit avoir l'autorisation `VIEW DEFINITION` sur le certificat ou la clé. Si vous restaurez la sauvegarde chiffrée dans une autre instance, vous devez vous assurer que le certificat est disponible sur cette instance.  
   
  Si vous restaurez une sauvegarde d'une base de données chiffrée par chiffrement transparent des données (TDE), le certificat de chiffrement transparent des données doit être disponible sur l'instance sur laquelle vous effectuez la restauration.  
   
 ##  <a name="Benefits"></a> Avantages  
   
-1.  Le chiffrement des sauvegardes de base de données vous aide à protéger les données : SQL Server fournit l'option permettant de chiffrer les données de sauvegarde lors de la création d'une sauvegarde.  
+1.  Le chiffrement des sauvegardes de base de données permet de sécuriser les données : SQL Server offre la possibilité de chiffrer les données de sauvegarde lors de la création d’une sauvegarde.  
   
 2.  Le chiffrement sert également pour les bases de données qui sont chiffrées à l'aide du chiffrement transparent des données.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "48055829"
 ##  <a name="Prerequisites"></a> Conditions préalables  
  Voici les conditions requises pour chiffrer une sauvegarde :  
   
-1.  **Créez une clé principale de base de données pour la base de données master :** la clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Pour plus d’informations, consultez [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
+1.  **Créer une clé principale de base de données pour la base de données master :** La clé principale de base de données est une clé symétrique qui permet de protéger les clés privées des certificats et des clés asymétriques présentes dans la base de données. Pour plus d’informations, consultez [SQL Server et clés de chiffrement de base de données &#40;moteur de base de données&#41;](../security/encryption/sql-server-and-database-encryption-keys-database-engine.md).  
   
 2.  Créez un certificat ou une clé asymétrique à utiliser pour le chiffrement de la sauvegarde. Pour plus d’informations sur la création d’un certificat, consultez [CREATE CERTIFICATE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql). Pour plus d’informations sur la création d’une clé asymétrique, consultez [CREATE ASYMMETRIC KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-asymmetric-key-transact-sql).  
   
@@ -72,7 +72,7 @@ ms.locfileid: "48055829"
 -   L'option Ajouter au jeu de sauvegarde existant n'est pas prise en charge pour les sauvegardes chiffrées.  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Autorisations  
  **Pour chiffrer une sauvegarde ou restaurer à partir d'une sauvegarde chiffrée :**  
   
  `VIEW DEFINITION` sur le certificat ou la clé asymétrique utilisée pour chiffrer la sauvegarde de la base de données.  

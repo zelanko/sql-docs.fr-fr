@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042185"
 ---
 # <a name="considering-database-features-to-use"></a>Considérations sur les fonctionnalités de base de données à utiliser
-Une fois le niveau de base d’interopérabilité est connu, les fonctionnalités de base de données utilisées par l’application doivent être examinées. Par exemple, les instructions SQL que l’application exécutera ? L’application va utiliser des curseurs avec défilement ? Transactions ? Procédures ? Données de type long ? Pour obtenir des suggestions sur les fonctionnalités ne peuvent pas pris en charge par tous les SGBD, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), et [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) les descriptions de fonction et [ Annexe c : SQL grammaire](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Les fonctionnalités requises par une application peuvent éliminer certains SGBD à partir de la liste des cibles SGBD. Il peuvent également indiquer que l’application peut cibler facilement les nombreux SGBD.  
+Une fois le niveau de base d’interopérabilité est connu, les fonctionnalités de base de données utilisées par l’application doivent être examinées. Par exemple, les instructions SQL que l’application exécutera ? L’application va utiliser des curseurs avec défilement ? Transactions ? Procédures ? Données de type long ? Pour obtenir des suggestions sur les fonctionnalités ne peuvent pas pris en charge par tous les SGBD, consultez le [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), et [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) les descriptions de fonction et [ Annexe c : Grammaire SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Les fonctionnalités requises par une application peuvent éliminer certains SGBD à partir de la liste des cibles SGBD. Il peuvent également indiquer que l’application peut cibler facilement les nombreux SGBD.  
   
- Par exemple, si les fonctionnalités requises sont simples, elles peuvent être implémentées généralement avec un degré élevé d’interopérabilité. Une application qui exécute une simple **sélectionnez** instruction et récupère les résultats avec un curseur avant uniquement est susceptible d’être hautement interopérable en vertu de sa simplicité : presque tous les pilotes et les SGBD prennent en charge la fonctionnalité il a besoin.  
+ Par exemple, si les fonctionnalités requises sont simples, elles peuvent être implémentées généralement avec un degré élevé d’interopérabilité. Une application qui exécute une simple **sélectionnez** instruction et récupère les résultats avec un curseur avant uniquement est susceptible d’être hautement interopérable en vertu de sa simplicité : Presque tous les pilotes et les SGBD prennent en charge les fonctionnalités dont il a besoin.  
   
  Toutefois, si les fonctionnalités requises sont plus complexes, telles que des procédures et instructions delete, curseurs avec défilement et mise à jour positionnée, compromis doivent souvent être établies. Il existe plusieurs possibilités :  
   

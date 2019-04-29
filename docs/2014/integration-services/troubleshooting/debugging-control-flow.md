@@ -18,11 +18,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1d338cc5c194b29b438af7593b80aaf580c64bca
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58382343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62926680"
 ---
 # <a name="debugging-control-flow"></a>Débogage du flux de contrôle
   [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] et [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] incluent des fonctionnalités et des outils permettant de résoudre les problèmes du flux de contrôle d’un package [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] .  

@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b60f402cdc7ba861a0d0550a92d16fa7dd1f59b7
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931415"
 ---
 # <a name="rds-programming-model-with-objects"></a>Modèle de programmation RDS avec des objets
 L’objectif des services Bureau à distance consiste à accéder à et mettre à jour les sources de données via un intermédiaire tel qu’IIS. Le modèle de programmation spécifie la séquence d’activités nécessaires pour atteindre cet objectif. Le modèle objet spécifie les objets dont les méthodes et propriétés affectent le modèle de programmation.  

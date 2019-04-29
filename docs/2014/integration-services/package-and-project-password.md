@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8f53b9972bfc9207bb7b9b06b7438e5fb8039ffd
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58374527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890292"
 ---
 # <a name="package-and-project-password"></a>Mot de passe des packages et des projets
   Utilisez la boîte de dialogue **Mot de passe du package** pour fournir le mot de passe d'un package qui est chiffré par un mot de passe. Vous devez fournir un mot de passe si le package utilise le niveau de protection **Chiffrer les données sensibles avec un mot de passe**ou **Chiffrer toutes les données avec un mot de passe** .  

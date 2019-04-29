@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d473cdf45eebeb0a5bd6268ed79c071741e74e8c
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62891672"
 ---
-# <a name="step-1-copying-the-lesson-1-package"></a>Étape 1 : Copie du Package de la leçon 1
+# <a name="step-1-copying-the-lesson-1-package"></a>Étape 1 : Copie du package de la leçon 1
   Dans cette tâche, vous allez créer une copie du package Lesson 1.dtsx que vous avez créé à la leçon 1. Si vous n’avez pas terminé la leçon 1, vous pouvez ajouter au projet le package final de la leçon 1 inclus avec le didacticiel, puis le copier à la place. Vous allez utiliser cette nouvelle copie tout au long de la leçon 2.  
   
 ### <a name="to-create-the-lesson-2-package"></a>Pour créer le package de la leçon 2  

@@ -15,11 +15,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 731dda855fe29a4aada9469a5d7744b9e1d5c3d1
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58377207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898927"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Utilisation de types de données dans le flux de données
   Lors du développement d'un composant de flux de données personnalisé dans Integration Services, vous travaillez constamment avec des types de données, en copiant des données depuis et vers les mémoires tampons du flux de données et en transformant des valeurs. Les informations contenues dans cette rubrique vous aident à choisir les types de données [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] corrects, ainsi qu'à utiliser les méthodes appropriées lorsque vous les utilisez.  

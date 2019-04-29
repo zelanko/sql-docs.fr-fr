@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c1400d43f2736505e0b9ba2364909986d47923da
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63019992"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchroniser des base de données Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "50145914"
  Désactivez le traitement différé des agrégations si vous l'utilisez sur le serveur source. Les agrégations traitées en arrière-plan peuvent interférer avec la synchronisation de bases de données. Pour plus d’informations sur la définition de cette propriété de serveur, consultez [Propriétés OLAP](../../analysis-services/server-properties/olap-properties.md).  
   
 > [!NOTE]  
->  La taille de la base de données est un facteur qui détermine si la synchronisation est une approche appropriée. Il n’existe aucune condition matérielle requise, mais si la synchronisation est trop lente, envisagez de synchroniser plusieurs serveurs en parallèle, comme décrit dans cet article technique : [Analysis Services Synchronization Best Practices](http://go.microsoft.com/fwlink/?LinkID=253136)(Bonnes pratiques en matière de synchronisation Analysis Services).  
+>  La taille de la base de données est un facteur qui détermine si la synchronisation est une approche appropriée. Il n’y a aucune condition matérielle requise, mais si la synchronisation est trop lente, envisagez de synchroniser plusieurs serveurs en parallèle, comme décrit dans cet article technique : [Analysis Services les meilleures pratiques de synchronisation](http://go.microsoft.com/fwlink/?LinkID=253136).  
   
 ## <a name="synchronize-database-wizard"></a>Assistant Synchronisation de base de données  
  Utilisez l'Assistant Synchronisation de base de données pour exécuter une synchronisation unidirectionnelle d'une base de données source à une base de données de destination, ou pour générer un script qui spécifie une opération de synchronisation de bases de données. Vous pouvez synchroniser des partitions locales et distantes au cours du processus de synchronisation et choisir si inclure les rôles.  

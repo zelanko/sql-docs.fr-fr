@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 75136807b3bf87d143ef037dcdf4c865f73a1f48
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59970125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63021308"
 ---
 # <a name="add-dataset-filters-data-region-filters-and-group-filters-report-builder-and-ssrs"></a>Ajouter des filtres de datasets, des filtres de régions de données et des filtres de groupes (Générateur de rapports et SSRS)
   Dans un rapport, un filtre est une partie d'un dataset, d'une région de données ou d'un groupe de régions de données que vous créez pour limiter les données utilisées dans le rapport. Les filtres vous aident à contrôler les données de rapport si vous ne pouvez pas modifier la requête de dataset, par exemple, si vous utilisez un dataset partagé.  

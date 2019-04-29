@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 98d3e61b37eb22ebaf793252f49b2b11621abd80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63027669"
 ---
 # <a name="state-property-ado"></a>State, propriété (ADO)
 Indique, pour tous les objets applicables si l’état de l’objet est ouvert ou fermé. Si l’objet s’exécute une méthode asynchrone, indique l’état actuel de l’objet se connecte, l’exécution ou récupération.  

@@ -21,11 +21,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7913d82b471b50605c51fbfb61b3782cf135382
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62898857"
 ---
 # <a name="identifiers-ssis"></a>Identificateurs (SSIS)
   Dans les expressions, les identificateurs sont des colonnes et des variables disponibles pour l'opération. Les expressions peuvent utiliser des identificateurs standard et qualifiés.  

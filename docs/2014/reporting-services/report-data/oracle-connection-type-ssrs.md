@@ -12,11 +12,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9a48a4dfa0689e4ee30036c41980c1f4ad929108
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59954185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63044138"
 ---
 # <a name="oracle-connection-type-ssrs"></a>Type de connexion Oracle (SSRS)
   Pour utiliser des données d'une base de données Oracle dans votre rapport, vous devez avoir un dataset basé sur une source de données de rapport de type Oracle. Ce type de source de données intégré est basé sur le fournisseur managé .NET Framework pour Oracle et requiert un composant logiciel client Oracle.  

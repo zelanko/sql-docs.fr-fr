@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 186aa762c9c176cab2bfa55de17a0a9d7ea3a301
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62911660"
 ---
 # <a name="propertyindex-property-sqlserviceadvancedproperty-class"></a>Propriété PropertyIndex (classe SqlServiceAdvancedProperty)
   Obtient ou définit l'index de propriété qui spécifie la position d'une propriété avancée dans un tableau de propriétés avancées qui appartiennent à un service référencé.  

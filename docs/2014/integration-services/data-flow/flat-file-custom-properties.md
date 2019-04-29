@@ -11,11 +11,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0a0516d2e038f206c140f010c2ca4a459f79956a
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58392077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62902046"
 ---
 # <a name="flat-file-custom-properties"></a>Propriétés personnalisées des fichiers plats
   **Propriétés personnalisées des sources**  
@@ -26,7 +26,7 @@ ms.locfileid: "58392077"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|FileNameColumnName|String|Nom d'une colonne de sortie qui contient le nom de fichier. Si le nom n'est pas spécifié, aucune colonne de sortie contenant le nom de fichier ne sera générée.<br /><br /> Remarque : Cette propriété n’est pas disponible dans le **éditeur de Source de fichier plat**, mais peut être définie à l’aide de la **éditeur avancé**.|  
+|FileNameColumnName|String|Nom d'une colonne de sortie qui contient le nom de fichier. Si le nom n'est pas spécifié, aucune colonne de sortie contenant le nom de fichier ne sera générée.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de source de fichier plat**, mais elle peut être définie avec **l’Éditeur avancé**.|  
 |RetainNulls|Booléen|Valeur qui spécifie si les valeurs NULL du fichier source doivent être conservées comme valeurs NULL lorsque les données sont traitées par le moteur du pipeline de transformation des données. La valeur par défaut de cette propriété est `False`.|  
   
  La sortie de la source de fichier plat n'est pas dotée de propriétés personnalisées.  
@@ -35,7 +35,7 @@ ms.locfileid: "58392077"
   
 |Nom de la propriété|Type de données|Description|  
 |-------------------|---------------|-----------------|  
-|FastParse|Booléen|Valeur qui indique si la colonne utilise les routines d'analyse fournies par DTS (routines plus rapides mais qui ne tiennent pas compte des paramètres régionaux) ou les routines d'analyse standard qui tiennent compte des paramètres régionaux. Pour plus d'informations, consultez [Fast Parse](../fast-parse.md) et [Standard Parse](../standard-parse.md). La valeur par défaut de cette propriété est `False`.<br /><br /> Remarque : Cette propriété n’est pas disponible dans le **éditeur de Source de fichier plat**, mais peut être définie à l’aide de la **éditeur avancé**.|  
+|FastParse|Booléen|Valeur qui indique si la colonne utilise les routines d'analyse fournies par DTS (routines plus rapides mais qui ne tiennent pas compte des paramètres régionaux) ou les routines d'analyse standard qui tiennent compte des paramètres régionaux. Pour plus d'informations, consultez [Fast Parse](../fast-parse.md) et [Standard Parse](../standard-parse.md). La valeur par défaut de cette propriété est `False`.<br /><br /> Remarque : cette propriété n’est pas disponible dans **l’Éditeur de source de fichier plat**, mais elle peut être définie avec **l’Éditeur avancé**.|  
   
  Pour plus d'informations, consultez [Flat File Source](flat-file-source.md).  
   

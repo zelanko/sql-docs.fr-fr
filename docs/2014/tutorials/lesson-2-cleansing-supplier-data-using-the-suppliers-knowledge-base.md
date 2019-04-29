@@ -11,20 +11,20 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 42006c68a50497034817cfe8df6c9172ea0cdc3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931424"
 ---
 # <a name="lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base"></a>Leçon 2 : Nettoyage des données des fournisseurs avec la base de connaissances Fournisseurs
   Dans cette leçon, vous nettoyez les données des fournisseurs dans un fichier Excel à l’aide de la **fournisseurs** vous avez créé dans la première leçon de base de connaissances. Nettoyage des données dans DQS comprend un **processus assisté par ordinateur** qui analyse la façon dont les données sont conformes à la base de connaissances dans une base de connaissances et un **processus interactif** qui vous permet de réviser et modifier résultats du processus assisté par ordinateur. La fonctionnalité de nettoyage des données identifie les données incorrectes dans votre source de données et les corrige, ou suggère des corrections. Elle normalise et enrichit également les données client en utilisant des valeurs de domaine, des valeurs menantes pour les synonymes, des règles de domaine, des relations à base de termes et des données de référence. Vous pouvez approuver ou refuser en mode interactif les modifications proposées par le processus assisté par ordinateur. Consultez [nettoyage des données](https://msdn.microsoft.com/library/gg524800.aspx) pour plus d’informations.  
   
  Le processus assisté par ordinateur utilise les valeurs de seuil suivantes, que vous pouvez configurer à l'aide de l'option Configuration dans la page principale du Client DQS.  
   
--   **Score minimal pour obtenir des suggestions :** le score minimal ou niveau de confiance est utilisé par DQS pour suggérer le remplacement d'une valeur.  
+-   **Score minimal pour obtenir des suggestions :** Le score minimal ou un niveau de confiance qui est utilisé par DQS pour suggérer le remplacement d’une valeur.  
   
--   **Score minimal pour les corrections automatiques :** le score minimal ou niveau de confiance est utilisé par DQS pour corriger automatiquement une valeur.  
+-   **Score minimal pour les corrections automatiques :** Le score minimal ou un niveau de confiance qui est utilisé par DQS pour corriger automatiquement une valeur.  
   
  Consultez [configurer les valeurs de seuil pour le nettoyage et correspondance](https://msdn.microsoft.com/library/hh510415.aspx) pour plus d’informations sur la façon de configurer ces paramètres.  
   

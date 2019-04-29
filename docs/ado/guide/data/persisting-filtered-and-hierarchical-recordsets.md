@@ -18,11 +18,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 53e28fdfbc49b53c4927bbcc0d5a6a8dc44b3d6d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913314"
 ---
 # <a name="persisting-filtered-and-hierarchical-recordsets"></a>Persistance des recordsets filtrés et hiérarchiques
 Si le [filtre](../../../ado/reference/ado-api/filter-property.md) propriété est en vigueur pour le **Recordset**, seules les lignes accessibles sous le filtre sont enregistrés. Si le **Recordset** est hiérarchique, l’enfant actuel **Recordset** et ses enfants sont enregistrés, y compris le parent **Recordset**. Si le **enregistrer** méthode d’un enfant **Recordset** est appelée, l’enfant et tous ses enfants sont enregistrés, mais le parent n’est pas. Pour plus d’informations sur hiérarchique **Recordsets**, consultez [mise en forme des données](../../../ado/guide/data/data-shaping.md).  

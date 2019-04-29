@@ -19,11 +19,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 8f70a2df2fd824d8a0021a0985d6f75e79efce48
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48083729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919605"
 ---
 # <a name="invoking-clr-user-defined-aggregate-functions"></a>Appel de fonctions d'agrégation CLR définies par l'utilisateur
   Dans les instructions SELECT [!INCLUDE[tsql](../../includes/tsql-md.md)] , vous pouvez appeler les agrégats CLR (Common Language Runtime) définis par l'utilisateur et soumis à toutes les règles qui s'appliquent aux fonctions d'agrégation système.  

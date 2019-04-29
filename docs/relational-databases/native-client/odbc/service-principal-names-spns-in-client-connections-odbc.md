@@ -13,11 +13,11 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a7d352dd345fa6d8e3fb1f2d3502279fd8ca68c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63018626"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Noms de principaux du service (SPN) dans les connexions clientes (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47597857"
 ## <a name="connection-string-keywords"></a>Mots clés de chaîne de connexion  
  Les mots clés de chaîne de connexion suivants permettent aux applications clientes de spécifier un nom principal de service.  
   
-|Mot clé|Valeur|  
+|Mot clé|Value|  
 |-------------|-----------|  
 |**ServerSPN**|Nom principal de service (SPN) du serveur. La valeur par défaut est une chaîne vide, ce qui force [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à utiliser le nom principal de service par défaut, généré par le pilote.|  
 |**FailoverPartnerSPN**|Nom principal de service du partenaire de basculement. La valeur par défaut est une chaîne vide, ce qui force [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à utiliser le nom principal de service par défaut, généré par le pilote.|  
@@ -36,7 +36,7 @@ ms.locfileid: "47597857"
 ## <a name="connection-attributes"></a>Attributs de connexion  
  Les attributs de connexion suivants permettent aux applications clientes de spécifier un nom principal de service et d'interroger la méthode d'authentification.  
   
-|Nom   |Type|Utilisation|  
+|Nom|Type|Utilisation|  
 |----------|----------|-----------|  
 |SQL_COPT_SS_SERVER_SPN<br /><br /> SQL_COPT_SS_FAILOVER_PARTNER_SPN|SQLTCHAR, lecture/écriture|Spécifie le nom principal de service du serveur. La valeur par défaut est une chaîne vide, ce qui force [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client à utiliser le nom principal de service par défaut, généré par le pilote.<br /><br /> Cet attribut peut être interrogé uniquement après avoir été défini par programme ou après l'ouverture d'une connexion. Si une tentative d'interrogation de cet attribut sur une connexion qui n'est pas ouverte est effectuée et que l'attribut n'a pas été défini par programme, SQL_ERROR est retournée et un enregistrement de diagnostic est enregistré avec SQLState 08003 et le message « Connexion non ouverte ».<br /><br /> Si une tentative de définition de cet attribut est effectuée lorsqu'une connexion est ouverte, SQL_ERROR est retournée et un enregistrement de diagnostic est consigné avec SQLState HY011 et le message « Opération actuellement non valide ».|  
 |SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD|SQLTCHAR, lecture seule|Retourne la méthode d'authentification utilisée pour la connexion. La valeur retournée à l'application est la valeur que Windows renvoie à [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Les valeurs possibles sont :<br /><br /> « NTLM », lorsqu'une connexion est ouverte à l'aide de l'authentification NTLM.<br /><br /> « Kerberos », lorsqu'une connexion est ouverte à l'aide de l'authentification Kerberos.<br /><br /> <br /><br /> Cet attribut peut être lu uniquement pour une connexion ouverte ayant utilisé l'authentification Windows. Si une tentative de lecture de cet attribut est effectuée avant qu'une connexion ait été ouverte, SQL_ERROR est retournée et une erreur est enregistrée avec SQLState 08003 et le message « Connexion non ouverte ».<br /><br /> Si cet attribut est interrogé sur une connexion qui n'a pas utilisé l'authentification Windows, SQL_ERROR est retournée, une erreur est enregistrée avec SQLState HY092 et le message « Identificateur d'option/attribut non valide (SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD n'est disponible que pour les connexions approuvées) ».<br /><br /> Si la méthode d'authentification ne peut pas être déterminée, SQL_ERROR est retournée et une erreur est enregistrée avec SQLState HY000 et le message « Erreur générale »|  

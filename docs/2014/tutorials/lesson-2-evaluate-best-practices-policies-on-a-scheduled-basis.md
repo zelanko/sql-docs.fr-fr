@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 29513ec37a946b9ec613ccc483048396149dd15a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042639"
 ---
-# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Leçon 2 : Évaluer les stratégies des meilleures pratiques de manière planifiée
+# <a name="lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis"></a>Leçon 2 : évaluer les stratégies des bonnes pratiques de façon planifiée
   Vous pouvez configurer des évaluations planifiées des stratégies des meilleures pratiques sur une ou plusieurs instances de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Pour configurer l'exécution des stratégies des meilleures pratiques de façon planifiée, vous devez importer les stratégies dans l'instance cible.  
   
  Pour déployer les stratégies planifiées vers plusieurs serveurs, vous pouvez importer les stratégies vers une instance, configurer les planifications pour chaque stratégie, exporter les stratégies planifiées vers un dossier, puis les déployer vers des instances cibles via des serveurs inscrits.  

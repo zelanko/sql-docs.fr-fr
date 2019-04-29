@@ -19,11 +19,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a46570a30254341fede1fb96fd368e94a09e58ea
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62910292"
 ---
 # <a name="msmergemetadataactionrequest-transact-sql"></a>MSmerge_metadataaction_request (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "52791661"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**tablenick**|**Int**|Surnom de la table publiée.|  
-|**ROWGUID**|**uniqueidentifier**|Identificateur de ligne pour la ligne concernée.|  
+|**rowguid**|**uniqueidentifier**|Identificateur de ligne pour la ligne concernée.|  
 |**action**|**tinyint**|Définit l'action de compensation nécessaire.|  
-|**génération**|**bigint**|Valeur de la génération pour laquelle l'action de compensation est nécessaire.|  
-|**modifié**|**Int**|Interne-usage uniquement.|  
+|**generation**|**bigint**|Valeur de la génération pour laquelle l'action de compensation est nécessaire.|  
+|**changed**|**Int**|Interne-usage uniquement.|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Tables de réplication &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

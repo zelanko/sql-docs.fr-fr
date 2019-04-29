@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8e4df670c5fe6ca42015e7e85445dafde47738f1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63042625"
 ---
 # <a name="type-property-ado-stream"></a>Type, propriété (objet Stream ADO)
 Indique le type de données contenues dans le [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (binaire ou texte).  
@@ -40,5 +40,5 @@ Indique le type de données contenues dans le [Stream](../../../ado/reference/ad
  [Stream, objet (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
 ## <a name="see-also"></a>Voir aussi  
- [RecordType, propriété (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
+ [RecordType Property (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)   
  [Type, propriété (ADO)](../../../ado/reference/ado-api/type-property-ado.md)

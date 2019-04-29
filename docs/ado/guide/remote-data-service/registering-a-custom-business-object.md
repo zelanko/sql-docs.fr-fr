@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 283e623b045e635ef3165b51270c2a257d7856fd
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62929897"
 ---
 # <a name="registering-a-custom-business-object"></a>Inscription d’un objet métier personnalisé
 Pour permettre l’exécution d’un objet métier personnalisé (.dll ou .exe) via le serveur Web, ProgID de l’objet métier doit être entrée dans le Registre, comme expliqué dans cette procédure. Cette fonctionnalité RDS protège la sécurité de votre serveur Web en exécutant uniquement les exécutables approuvés.  

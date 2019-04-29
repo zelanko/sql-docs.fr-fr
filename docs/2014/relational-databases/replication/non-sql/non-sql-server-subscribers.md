@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63022248"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
   Les abonnés non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] suivants peuvent s'abonner aux publications d'instantané et transactionnelle à l'aide d'abonnements par envoi de données (push). Les abonnements sont pris en charge pour les deux versions les plus récentes de chaque base de données listée, à l'aide de la version la plus récente du fournisseur OLE DB listé.  

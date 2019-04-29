@@ -15,11 +15,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ee814dc0891e70dfeccf2b96383d1d7b5c324aa8
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62931531"
 ---
 # <a name="lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial"></a>Leçon 2 : Création d’un scénario de prévision (didacticiel d’exploration de données intermédiaire)
   Vous êtes analyste des ventes pour [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]et il vous a été demandé de fournir une estimation des ventes des produits pour l'année à venir. Plus précisément, vous devez comparer les estimations entre les différentes régions et les différentes gammes de produits. Vous devez, de plus, déterminer si les ventes des différents produits varient en fonction de la période de l'année.  

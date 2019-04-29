@@ -14,11 +14,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c855cdfbcf622465390e433312d75343242aee50
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894530"
 ---
 # <a name="foreach-loop-editor-collection-page"></a>Éditeur de boucle Foreach (page de collection)
   La page **Collection** de la boîte de dialogue **Éditeur de boucle Foreach** permet de spécifier le type d’énumérateur et de configurer ce dernier.  
@@ -44,7 +44,7 @@ ms.locfileid: "58380267"
  **Expressions**  
  Cliquez sur **Expressions** ou développez ce groupe pour afficher la liste des expressions de propriété existantes. Cliquez sur le bouton représentant des points de suspension **(...)** pour ajouter une expression de propriété à une propriété d’énumérateur, ou modifiez et évaluez une expression de propriété existante.  
   
- **Rubriques connexes :**  [Integration Services &#40;SSIS&#41; Expressions](expressions/integration-services-ssis-expressions.md), [Éditeur d’Expressions de propriété](expressions/property-expressions-editor.md), [Générateur d’expressions](expressions/expression-builder.md)  
+ **Rubriques connexes :**  [Expressions Integration Services &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md), [Éditeur d’expressions de propriété](expressions/property-expressions-editor.md) et [Générateur d’expressions](expressions/expression-builder.md)  
   
 ## <a name="enumerator-dynamic-options"></a>Options dynamiques portant sur les énumérateurs  
   
@@ -121,7 +121,7 @@ ms.locfileid: "58380267"
 > [!NOTE]  
 >  La variable doit être de type Objet ; dans le cas contraire, une erreur se produit.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [ajouter une Variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
  **Lignes dans la première table**  
  Permet de n'énumérer que les lignes de la première table.  
@@ -141,7 +141,7 @@ ms.locfileid: "58380267"
 > [!IMPORTANT]  
 >  Le gestionnaire de connexions ADO.NET doit utiliser un fournisseur .NET pour OLE DB. Lors de la connexion à SQL Server, il est recommandé d'utiliser le fournisseur [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client, répertorié dans la section **Fournisseurs .Net pour OleDb** de la boîte de dialogue **Gestionnaire de connexions** .  
   
- **Rubriques connexes :** [Gestionnaire de connexions ADO](connection-manager/ado-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions ADO](connection-manager/ado-connection-manager.md), [Configurer le gestionnaire de connexions ADO.NET](configure-ado-net-connection-manager.md)  
   
  **Schéma**  
  Permet d'indiquer le schéma à énumérer.  
@@ -157,7 +157,7 @@ ms.locfileid: "58380267"
  **Variable**  
  Sélectionnez une variable dans la liste ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [ajouter une Variable](../../2014/integration-services/add-variable.md)  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md)  
   
 ### <a name="enumerator--foreach-nodelist-enumerator"></a>Enumerator = Foreach NodeList Enumerator  
  L'énumérateur Foreach Nodelist permet d'énumérer un ensemble de nœuds XML qui résulte de l'application d'une expression XPath à un fichier XML. Par exemple, si la boucle Foreach inclut une tâche de script, vous pouvez utiliser l'énumérateur Foreach NodeList pour transmettre une valeur qui correspond aux critères de l'expression XPath du fichier XML à la tâche de script.  
@@ -180,11 +180,11 @@ ms.locfileid: "58380267"
   
  Si **DocumentSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions file](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Si **DocumentSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [ajouter une Variable](../../2014/integration-services/add-variable.md).  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
  **EnumerationType**  
  Permet de sélectionner le type d'énumérateur dans la liste. Cette propriété dispose des options répertoriées dans le tableau suivant.  
@@ -210,11 +210,11 @@ ms.locfileid: "58380267"
   
  Si **OuterXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions file](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Si **OuterXPathStringSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...>** pour en créer une.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [ajouter une Variable](../../2014/integration-services/add-variable.md).  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
  **InnerElementType**  
  Si **EnumerationType** est défini sur `ElementCollection`, sélectionnez le type d’élément interne dans la liste.  
@@ -233,11 +233,11 @@ ms.locfileid: "58380267"
   
  Si **InnerXPathStringSourceType** est défini sur **Connexion de fichiers**, sélectionnez un gestionnaire de connexions de fichiers ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- **Rubriques connexes :** [Gestionnaire de connexions file](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Rubriques connexes :** [Gestionnaire de connexions de fichiers](connection-manager/file-connection-manager.md), [Éditeur du gestionnaire de connexions de fichiers](../../2014/integration-services/file-connection-manager-editor.md)  
   
  Si **InnerXPathStringSourceType** est défini sur **Variable**, sélectionnez une variable existante ou cliquez sur \<**Nouvelle variable...**> pour en créer une.  
   
- **Rubriques connexes :** [Integration Services &#40;SSIS&#41; Variables](integration-services-ssis-variables.md), [ajouter une Variable](../../2014/integration-services/add-variable.md).  
+ **Rubriques connexes :** [Variables Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Ajouter une variable](../../2014/integration-services/add-variable.md).  
   
 ### <a name="enumerator--foreach-smo-enumerator"></a>Enumerator = Foreach SMO Enumerator  
  L'énumérateur Foreach SMO permet d'énumérer des objets SQL-SMO (SQL Server Management Object). Par exemple, si la boucle Foreach inclut une tâche d'exécution SQL, vous pouvez utiliser l'énumérateur Foreach SMO pour énumérer les tables de la base de données **AdventureWorks** et exécuter des requêtes qui comptent le nombre de lignes dans chaque table.  
@@ -245,7 +245,7 @@ ms.locfileid: "58380267"
  **Connexion**  
  Sélectionnez un gestionnaire de connexions ADO.NET existant ou cliquez sur \<**Nouvelle connexion...**> pour en créer un.  
   
- Rubriques connexes : [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md), [Configure ADO.NET Connection Manager](configure-ado-net-connection-manager.md)  
+ Rubriques connexes : [Gestionnaire de connexions ADO.NET](connection-manager/ado-net-connection-manager.md), [Configurer le gestionnaire de connexions ADO.NET](configure-ado-net-connection-manager.md)  
   
  **Énumérer**  
  Permet de spécifier l'objet SMO à énumérer.  
@@ -261,7 +261,7 @@ ms.locfileid: "58380267"
  **Gestionnaire de connexions de stockage Azure**  
  Sélectionnez un gestionnaire de connexions Azure Storage existant ou créez-en un nouveau qui fait référence à un compte Azure Storage.  
   
- Rubriques connexes : [Gestionnaire de connexions Azure Storage](connection-manager/azure-storage-connection-manager.md).  
+ Rubriques connexes : [Gestionnaire de connexions de stockage Azure](connection-manager/azure-storage-connection-manager.md).  
   
  **Nom du conteneur d’objets blob**  
  Spécifiez le nom du conteneur d’objets blob qui contient les fichiers d’objets blob à énumérer...  

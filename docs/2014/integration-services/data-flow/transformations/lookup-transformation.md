@@ -20,11 +20,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58386547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62900223"
 ---
 # <a name="lookup-transformation"></a>Transformation de recherche
   La transformation de recherche effectue des recherches en joignant des données de colonnes d'entrée à des colonnes d'un dataset de référence. Vous utilisez la recherche pour accéder à des informations supplémentaires dans une table associée se basant sur des valeurs dans des colonnes communes.  
@@ -129,11 +129,11 @@ ms.locfileid: "58386547"
   
 ## <a name="related-content"></a>Contenu associé  
   
--   Vidéo, [Guide pratique pour Implémenter une Transformation de recherche en Mode Cache complet](https://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
+-   Vidéo, [Guide pratique pour Implémenter une transformation de recherche en mode Cache complet](https://go.microsoft.com/fwlink/?LinkId=131031), sur msdn.microsoft.com  
   
 -   Billet de blog, [Best Practices for Using the Lookup Transformation Cache Modes](https://go.microsoft.com/fwlink/?LinkId=146623)(Bonnes pratiques pour l’utilisation des modes de cache de transformation de recherche), sur blogs.msdn.com  
   
--   Entrée de blog, [modèle de recherche : Casse](https://go.microsoft.com/fwlink/?LinkId=157782), sur blogs.msdn.com  
+-   Billet de blog, [Modèle de recherche : respect de la casse](https://go.microsoft.com/fwlink/?LinkId=157782), sur blogs.msdn.com  
   
 -   Exemple, [Lookup Transformation](https://go.microsoft.com/fwlink/?LinkId=267528)(Transformation de recherche), sur msftisprodsamples.codeplex.com.  
   

@@ -21,11 +21,11 @@ author: douglaslMS
 ms.author: douglasl
 manager: craigg
 ms.openlocfilehash: 4753e1097dee300d4d806c42b71954e6e557ed12
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63063940"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Conserver les valeurs NULL ou utiliser la valeur par défaut lors de l'importation en bloc (SQL Server)
   Par défaut, lorsque des données sont importées dans une table, la commande **bcp** et l’instruction BULK INSERT inspectent toutes les valeurs par défaut définies pour les colonnes de la table. Par exemple, si un fichier de données contient un champ NULL, la valeur par défaut de la colonne est chargée à la place. La commande **bcp** et l’instruction BULK INSERT vous permettent de spécifier que les valeurs NULL doivent être conservées.  
@@ -33,13 +33,13 @@ ms.locfileid: "48186699"
  À l'opposé, une instruction INSERT standard conserve la valeur NULL au lieu d'insérer une valeur par défaut. L'instruction INSERT ... SELECT * FROM OPENROWSET(BULK...) présente le même comportement de base que l'instruction INSERT standard mais elle prend également en charge un indicateur de table pour l'insertion des valeurs par défaut.  
   
 > [!NOTE]  
->  Fichiers d’exemple format qui ignorent une colonne de table, consultez [utiliser un fichier de Format pour ignorer une colonne de Table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md).  
+>  Pour obtenir des exemples de fichiers de format qui ignorent une colonne de table, consultez [Utiliser un fichier de format pour ignorer une colonne de table &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md).  
   
 ## <a name="sample-table-and-data-file"></a>Exemples de table et de fichier de données  
  Pour exécuter les exemples proposés dans cette rubrique, vous devez créer un exemple de table et un exemple de fichier de données.  
   
 ### <a name="sample-table"></a>Exemple de table  
- Les exemples requièrent la création d'une table nommée **MyTestDefaultCol2** dans l'exemple de base de données **AdventureWorks** sous le schéma **dbo** . Pour créer cette table, dans [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l’éditeur de requête, exécutez :  
+ Les exemples requièrent la création d'une table nommée **MyTestDefaultCol2** dans l'exemple de base de données **AdventureWorks** sous le schéma **dbo** . Pour créer cette table, dans l'éditeur de requêtes [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , exécutez le code suivant :  
   
 ```  
 USE AdventureWorks;  
@@ -79,7 +79,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
   
 |Command|Qualificateur|Type de qualificateur|  
 |-------------|---------------|--------------------|  
-|**bcp**|`-k`|Commutateur|  
+|**bcp**|`-k`|Basculer|  
 |BULK INSERT|KEEPNULLS<sup>1</sup>|Argument|  
   
  <sup>1</sup> pour BULK INSERT, si les valeurs par défaut ne sont pas disponibles, la colonne de table doit être définie pour autoriser les valeurs null.  
@@ -87,7 +87,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 > [!NOTE]  
 >  Ces qualificateurs désactivent le contrôle des définitions DEFAULT sur une table par ces commandes d'importation en bloc. Toutefois, pour toute instruction INSERT concurrente, des définitions DEFAULT sont attendues.  
   
- Pour plus d’informations, consultez [utilitaire bcp](../../tools/bcp-utility.md) et [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
+ Pour plus d’informations, consultez [bcp Utility](../../tools/bcp-utility.md) et [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
 ### <a name="examples"></a>Exemples  
  Les exemples de cette section réalisent des importations en bloc à l’aide de la commande **bcp** ou de l’instruction BULK INSERT et conservent les valeurs NULL.  
@@ -104,7 +104,7 @@ bcp AdventureWorks..MyTestDefaultCol2 format nul -c -f C:\MyTestDefaultCol2-f-c.
 #### <a name="using-bcp-and-keeping-null-values"></a>Utilisation de la commande bcp et conservation des valeurs NULL  
  L’exemple suivant montre comment conserver les valeurs NULL dans une commande **bcp** . La commande **bcp** contient les commutateurs suivants :  
   
-|Commutateur|Description|  
+|Basculer|Description|  
 |------------|-----------------|  
 |`-f`|La commande utilise un fichier de format.|  
 |`-k`|Pendant l’opération, les colonnes vides doivent conserver une valeur NULL et les colonnes insérées ne doivent pas prendre de valeur par défaut.|  
@@ -118,7 +118,7 @@ bcp AdventureWorks..MyTestDefaultCol2 in C:\MyTestEmptyField2-c.Dat -f C:\MyTest
 ```  
   
 #### <a name="using-bulk-insert-and-keeping-null-values"></a>Utilisation de l'instruction BULK INSERT et conservation des valeurs NULL  
- L'exemple suivant montre comment utiliser l'option KEEPNULLS dans une instruction BULK INSERT. À partir d’un outil de requête, tel que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l’éditeur de requête, exécutez :  
+ L'exemple suivant montre comment utiliser l'option KEEPNULLS dans une instruction BULK INSERT. À partir d'un outil de requête tel que l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], exécutez :  
   
 ```  
 USE AdventureWorks;  
@@ -142,7 +142,7 @@ GO
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|WITH(KEEPDEFAULTS)|Indicateur de table|  
   
 > [!NOTE]  
->  Pour plus d’informations, consultez [insérer &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [sélectionnez &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41; ](/sql/t-sql/functions/openrowset-transact-sql), et [indicateurs de Table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table)  
+>  Pour plus d’informations, consultez [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql), [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql), [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql) et [Indicateurs de table &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table).  
   
 ### <a name="examples"></a>Exemples  
  L'exemple d'instruction INSERT ... SELECT * FROM OPENROWSET(BULK...) suivant importe des données en bloc et conserve les valeurs par défaut.  
@@ -156,7 +156,7 @@ GO
 |`1`|`NULL`|`DataField3`|  
 |`2`|`NULL`|`DataField3`|  
   
- Pour insérer la valeur par défaut «`Default value of Col2`», au lieu de «`NULL`», vous devez utiliser l'indicateur de table KEEPDEFAULTS, comme le montre l'exemple suivant. À partir d’un outil de requête, tel que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] l’éditeur de requête, exécutez :  
+ Pour insérer la valeur par défaut «`Default value of Col2`», au lieu de «`NULL`», vous devez utiliser l'indicateur de table KEEPDEFAULTS, comme le montre l'exemple suivant. À partir d'un outil de requête tel que l'Éditeur de requête [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], exécutez :  
   
 ```  
 USE AdventureWorks;  

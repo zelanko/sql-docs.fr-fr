@@ -16,11 +16,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b52eb9ecab5dd75e7f483bead1ef523b6b02360
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48170409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919614"
 ---
 # <a name="creating-a-user-defined-type"></a>Création d’un type défini par l’utilisateur
   Pour créer un type défini par l'utilisateur capable d'être installé dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vous devez créer tout d'abord une classe dans l'un des langages de programmation .NET Framework pris en charge, tels que Visual C# ou Visual Basic, conforme aux spécifications de création de types définis par l'utilisateur. La classe peut ensuite être compilée en tant que bibliothèque de liens dynamiques (DLL), qui peut être chargée dans [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Vous pouvez également créer et déployer des types définis par l'utilisateur à l'aide de Visual Studio.  

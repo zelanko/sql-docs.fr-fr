@@ -19,11 +19,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b7bcb751fb32634fc544dfa11ee862cd47112514
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043504"
 ---
 # <a name="underlyingvalue-property"></a>UnderlyingValue, propriété
 Indique la valeur actuelle d’un [champ](../../../ado/reference/ado-api/field-object.md) objet dans la base de données.  
@@ -38,7 +38,7 @@ Indique la valeur actuelle d’un [champ](../../../ado/reference/ado-api/field-o
   
  Lorsque vous utilisez cette propriété avec la **OriginalValue** propriété, vous pouvez résoudre les conflits qui proviennent des mises à jour par lots.  
   
-## <a name="record"></a>Record  
+## <a name="record"></a>Enregistrement  
  Pour [enregistrement](../../../ado/reference/ado-api/record-object-ado.md) objets, cette propriété est vide pour les champs ajoutés avant [mise à jour](../../../ado/reference/ado-api/update-method.md) est appelée.  
   
 ## <a name="applies-to"></a>S'applique à  

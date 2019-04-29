@@ -17,11 +17,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10fcf850a770296a81c99bc9b8168857b443df41
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58376088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62894783"
 ---
 # <a name="working-with-excel-files-with-the-script-task"></a>Utilisation de fichiers Excel avec la tâche de script
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] fournit le gestionnaire de connexions Excel, la source Excel et la destination Excel pour utiliser des données stockées dans des feuilles de calcul au format de fichier [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel. Les techniques décrites dans cette rubrique utilisent la tâche de script pour obtenir des informations sur les bases de données (fichiers de classeur) et tables (feuilles de calcul et plages nommées) Excel disponibles. Ces exemples peuvent être modifiés facilement afin d'utiliser l'une des autres sources de données basées sur des fichiers prises en charge par le fournisseur OLE DB [!INCLUDE[msCoName](../../includes/msconame-md.md)] Jet.  
@@ -74,7 +74,7 @@ ms.locfileid: "58376088"
   
 5.  Définissez le langage de script par défaut du composant Script en utilisant l’option **Langage de script** dans la page **Général** de la boîte de dialogue **Options**. Pour plus d'informations, consultez [General Page](../general-page-of-integration-services-designers-options.md).  
   
-##  <a name="example1"></a> Description de l’exemple 1 : Vérifier l’existence d’un fichier Excel  
+##  <a name="example1"></a> Description de l'exemple 1 : Vérifier si un fichier Excel existe  
  Cet exemple détermine si le fichier de classeur Excel spécifié dans la variable `ExcelFile` existe, puis définit la valeur booléenne de la variable `ExcelFileExists` sur le résultat. Vous pouvez utiliser cette valeur booléenne pour créer une branche dans le flux de travail du package.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
@@ -144,7 +144,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example2"></a> Description de l’exemple 2 : Vérifier l’existence d’un tableau Excel  
+##  <a name="example2"></a> Description de l'exemple 2 : Vérifier si une table Excel existe  
  Cet exemple détermine si la feuille de calcul ou la plage nommée Excel spécifiée dans la variable `ExcelTable` existe dans le fichier de classeur Excel spécifié dans la variable `ExcelFile`, puis définit la valeur booléenne de la variable `ExcelTableExists` sur le résultat. Vous pouvez utiliser cette valeur booléenne pour créer une branche dans le flux de travail du package.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
@@ -251,7 +251,7 @@ public class ScriptMain
 }  
 ```  
   
-##  <a name="example3"></a> Description de l’exemple 3 : Obtenir la liste des fichiers Excel dans un dossier  
+##  <a name="example3"></a> Description de l'exemple 3 : Obtenir la liste des fichiers Excel contenus dans un dossier  
  Cet exemple remplit un tableau à l'aide de la liste des fichiers Excel détectés dans le dossier spécifié dans la valeur de la variable `ExcelFolder`, puis copie le tableau dans la variable `ExcelFiles`. Vous pouvez utiliser l'énumérateur Foreach à partir d'une variable pour parcourir les fichiers inclus dans le tableau.  
   
 #### <a name="to-configure-this-script-task-example"></a>Pour configurer cet exemple de tâche de script  
@@ -323,7 +323,7 @@ public class ScriptMain
 ### <a name="alternate-solution"></a>Autre solution  
  Au lieu d'utiliser une tâche de script pour dresser la liste des fichiers Excel dans un tableau, vous pouvez également utiliser l'énumérateur ForEach File pour parcourir tous les fichiers Excel inclus dans un dossier. Pour plus d’informations, consultez [Effectuer une boucle dans des fichiers et des tables Excel en utilisant un conteneur de boucles Foreach](../control-flow/foreach-loop-container.md).  
   
-##  <a name="example4"></a> Description de l’exemple 4 : Obtenir la liste des Tables dans un fichier Excel  
+##  <a name="example4"></a> Description de l’exemple 4 : Obtenir la liste des tables contenues dans un fichier Excel  
  Cet exemple remplit un tableau à l'aide de la liste des feuilles de calcul et plages nommées détectées dans le fichier de classeur Excel spécifié par la valeur de la variable `ExcelFile`, puis copie le tableau dans la variable `ExcelTables`. Vous pouvez utiliser l'énumérateur Foreach à partir d'une variable pour parcourir les tables incluses dans le tableau.  
   
 > [!NOTE]  

@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e41d71cd3651e1db5d1a533159012b645b8c7764
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52504591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63043756"
 ---
 # <a name="core-interface-conformance"></a>Conformité de l’interface principale
 Tous les pilotes ODBC doivent présenter au moins au niveau du noyau conformité de l’interface. Les fonctionnalités dans le niveau principal sont celles qui sont requises par les applications interopérables plus génériques, le pilote peut travailler avec ces applications. Les fonctionnalités du niveau Core correspondent également pour les fonctionnalités définies dans la spécification ISO CLI et les fonctionnalités obligatoires définies dans la spécification CLI de groupe ouvert. Un pilote ODBC de conforme à l’interface au niveau du noyau permet à l’application effectuer toutes les conditions suivantes :  

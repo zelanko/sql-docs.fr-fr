@@ -14,11 +14,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e01209b78acb778d39d376172192ca7ee0f1a9e7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62924908"
 ---
 # <a name="delete-a-subscription-view-master-data-services"></a>Supprimer une vue d'abonnement (Master Data Services)
   Dans [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], supprimez une vue d’abonnement lorsque vous n’en avez plus besoin. La suppression d'une vue d'abonnement dans [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] supprime la vue de la base de données [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] .  

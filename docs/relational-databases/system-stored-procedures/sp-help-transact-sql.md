@@ -20,11 +20,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537111"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63017753"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|Nom de colonne.|  
         |**Type**|**nvarchar(** 128 **)**|Type de données de la colonne.|  
-        |**Calculée**|**varchar(** 35 **)**|Indique si les valeurs de la colonne sont calculées : Oui ou Non.|  
+        |**Calculée**|**varchar(** 35 **)**|Indique si les valeurs dans la colonne sont calculées : Oui ou Non.|  
         |**Longueur**|**Int**|Longueur de colonne en octets.<br /><br /> Remarque : Si le type de données de colonne est un type de valeur élevée (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, ou **xml**), la valeur sera afficher en tant que -1.|  
         |**PREC**|**char(** 5 **)**|Précision de la colonne|  
         |**Échelle**|**char(** 5 **)**|Échelle de la colonne|  
@@ -120,7 +120,7 @@ sp_help [ [ @objname = ] 'name' ]
   
         |Nom de colonne|Type de données|Description|  
         |-----------------|---------------|-----------------|  
-        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Groupe de fichiers dans lequel se trouvent les données : primaire, secondaire ou journal des transactions.|  
+        |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|Groupe de fichiers dans lequel se trouvent les données : Principal, secondaire ou journal des transactions.|  
   
     -   Jeu de résultats supplémentaire retourné sur les index :  
   
@@ -136,9 +136,9 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|Type de contrainte.|  
         |**constraint_name**|**nvarchar(** 128 **)**|Nom de la contrainte.|  
-        |**delete_action**|**nvarchar(** 9 **)**|Indique si l'action DELETE est : NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT, ou N/A.<br /><br /> Uniquement applicable aux contraintes FOREIGN KEY.|  
-        |**update_action**|**nvarchar(** 9 **)**|Indique si l'action UPDATE est : NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT, ou N/A.<br /><br /> Uniquement applicable aux contraintes FOREIGN KEY.|  
-        |**status_enabled**|**varchar(** 8 **)**|Indique si la contrainte est activée : Enabled, Disabled, ou N/A.<br /><br /> Uniquement applicable aux contraintes CHECK et FOREIGN KEY.|  
+        |**delete_action**|**nvarchar(** 9 **)**|Indique si l’action DELETE est : NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT ou n/a.<br /><br /> Uniquement applicable aux contraintes FOREIGN KEY.|  
+        |**update_action**|**nvarchar(** 9 **)**|Indique si l’action de mise à jour est : NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT ou n/a.<br /><br /> Uniquement applicable aux contraintes FOREIGN KEY.|  
+        |**status_enabled**|**varchar(** 8 **)**|Indique si la contrainte est activée : Activé, désactivé ou n/a.<br /><br /> Uniquement applicable aux contraintes CHECK et FOREIGN KEY.|  
         |**status_for_replication**|**varchar(** 19 **)**|Indique si la contrainte concerne la réplication.<br /><br /> Uniquement applicable aux contraintes CHECK et FOREIGN KEY.|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|Nom des colonnes qui constituent la contrainte ou, pour les valeurs par défaut ou les règles, le texte qui définit la valeur par défaut ou la règle.|  
   

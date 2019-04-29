@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52c1d38e115e4064e106175bb49d0a3ecb4318d
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48186809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62913779"
 ---
 # <a name="mssqlserver701"></a>MSSQLSERVER_701
     
@@ -46,7 +46,7 @@ ms.locfileid: "48186809"
   
 1.  Vérifiez si d'autres applications ou services consomment de la mémoire sur ce serveur. Reconfigurez les applications ou les services moins importants pour consommer moins de mémoire.  
   
-2.  Commencez la collecte des compteurs de l’analyseur de performances pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  **: Buffer Manager**, **SQL Server : Memory Manager**.  
+2.  Commencer à collecter les compteurs d’analyseur de performances pour [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **: Gestionnaire de tampons**, **SQL Server : Gestionnaire de mémoire**.  
   
 3.  Vérifiez les paramètres de configuration de la mémoire de SQL Server suivants :  
   

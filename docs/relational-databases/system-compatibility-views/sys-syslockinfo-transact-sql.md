@@ -1,5 +1,5 @@
 ---
-title: Sys.syslockinfo (Transact-SQL) | Microsoft Docs
+title: sys.syslockinfo (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -22,11 +22,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "63033011"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +42,8 @@ ms.locfileid: "47780877"
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|Description textuelle d’une ressource de verrouillage. Contient une partie du nom de la ressource.|  
-|**rsc_bin**|**binary (16)**|Ressource de verrouillage binaire. Contient la ressource de verrouillage réelle contenue dans le gestionnaire de verrouillage. Cette colonne est incluse pour les outils qui connaissent le format de ressource de verrou pour générer leur propre mise en forme de ressource de verrou, et pour effectuer des jointures automatiques sur **syslockinfo**.|  
-|**rsc_valblk**|**binary (16)**|Bloc de valeur de verrouillage. Certains types de ressources peuvent inclure des données supplémentaires dans la ressource de verrouillage qui n'est pas hachée par le gestionnaire de verrouillage, afin de déterminer le propriétaire d'une ressource de verrouillage particulière. Par exemple, les verrous de page ne sont pas détenus par un ID d'objet particulier. Pour l'escalade de verrous et d'autres utilisations. Toutefois, l'ID d'objet d'un verrou de page peut être inclus dans le bloc de valeurs de verrouillage.|  
+|**rsc_bin**|**binary(16)**|Ressource de verrouillage binaire. Contient la ressource de verrouillage réelle contenue dans le gestionnaire de verrouillage. Cette colonne est incluse pour les outils qui connaissent le format de ressource de verrou pour générer leur propre mise en forme de ressource de verrou, et pour effectuer des jointures automatiques sur **syslockinfo**.|  
+|**rsc_valblk**|**binary(16)**|Bloc de valeur de verrouillage. Certains types de ressources peuvent inclure des données supplémentaires dans la ressource de verrouillage qui n'est pas hachée par le gestionnaire de verrouillage, afin de déterminer le propriétaire d'une ressource de verrouillage particulière. Par exemple, les verrous de page ne sont pas détenus par un ID d'objet particulier. Pour l'escalade de verrous et d'autres utilisations. Toutefois, l'ID d'objet d'un verrou de page peut être inclus dans le bloc de valeurs de verrouillage.|  
 |**rsc_dbid**|**smallint**|ID de la base de données associé à la ressource.|  
 |**rsc_indid**|**smallint**|ID de l'index associé à la ressource (le cas échéant).|  
 |**rsc_objid**|**Int**|ID de l'objet associé à la ressource (le cas échéant).|  
@@ -60,7 +60,7 @@ ms.locfileid: "47780877"
 |**req_transactionID**|**bigint**|Transaction unique ID utilisé dans **syslockinfo** et dans les événements du profileur|  
 |**req_transactionUOW**|**uniqueidentifier**|Identifie l'ID de l'UOW (Unit of Work) de la transaction DTC. Pour les transactions non-MS DTC, UOW a la valeur 0.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  requièrent l'autorisation VIEW SERVER STATE sur le serveur.  
   
 ## <a name="see-also"></a>Voir aussi  

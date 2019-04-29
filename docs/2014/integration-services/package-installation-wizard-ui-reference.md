@@ -23,11 +23,11 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
-ms.sourcegitcommit: 5a8678bf85f65be590676745a7fe4fcbcc47e83d
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58380187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62890272"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Référence de l'interface utilisateur de l'Assistant Installation de package
   **L’Assistant Installation de package** permet de déployer un projet [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], dont les packages et les divers fichiers qu’il contient, ainsi que les dépendances de package éventuelles.  
