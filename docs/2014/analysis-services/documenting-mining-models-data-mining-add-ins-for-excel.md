@@ -17,11 +17,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34cae1b1fa4c63f0de28ad4389c1b2d304fc2d88
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731730"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Modèles de documentation de l'exploration de données (Compléments d'exploration de données pour Excel)
   ![Bouton modèle de document, ruban Exploration de données](media/dmc-docmodel.gif "bouton modèle de Document, ruban Exploration de données")  
@@ -36,7 +36,7 @@ ms.locfileid: "48118064"
   
 3.  Dans le **sélectionner un modèle** boîte de dialogue, sélectionnez le modèle sur lequel au rapport, puis cliquez sur **suivant**. Vous devez exécuter le **Document modèle** Assistant séparément pour chaque modèle que vous souhaitez documenter.  
   
-4.  Dans le **sélectionner les détails de la documentation** boîte de dialogue, sélectionnez une des deux options : **complétez** ou **des informations de synthèse**.  
+4.  Dans le **sélectionner les détails de la documentation** boîte de dialogue, sélectionnez une des deux options : **Complétez** ou **des informations de synthèse**.  
   
 5.  Cliquez sur **Terminer**.  
   

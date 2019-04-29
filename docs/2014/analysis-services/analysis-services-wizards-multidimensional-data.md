@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48189749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62643714"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Assistants Analysis Services (données multidimensionnelles)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Fournit des Assistants pour une utilisation dans [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] et [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Le tableau suivant décrit les Assistants disponibles.  
@@ -38,7 +38,7 @@ ms.locfileid: "48189749"
 |[Aide (F1) de l’Assistant Objet lié](linked-object-wizard-f1-help.md)|Utilisez l'Assistant Objet lié pour définir une dimension liée ou un groupe de mesures, et importer éventuellement des objets associés.|  
 |[Aide F1 de l’Assistant de partition &#40;Analysis Services - données multidimensionnelles&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Utilisez l'Assistant Partition pour définir une partition ou une partition distante.|  
 |[Aide F1 d’Assistant génération de schéma &#40;Analysis Services - données multidimensionnelles&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Utilisez l'Assistant Génération de schéma pour définir une vue de source de données, et créer éventuellement le script du schéma relationnel de la vue de source de données dans une source de données depuis un objet [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] existant.|  
-|[Aide (F1) de l’Assistant Optimisation de l’utilisation](usage-based-optimization-wizard-f1-help.md)|Utilisez l'Assistant Optimisation de l'utilisation pour définir des agrégations pour une conception d'agrégation basée sur des requêtes stockées dans le journal des requêtes d'une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].|  
+|[Aide (F1) de l’Assistant Optimisation de l’utilisation](usage-based-optimization-wizard-f1-help.md)|Utilisez l'Assistant Optimisation de l'utilisation pour définir des agrégations pour une conception d'agrégation basée sur des requêtes stockées dans le journal des requêtes d'une base de données [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .|  
   
 ## <a name="see-also"></a>Voir aussi  
  [Concepteurs et boîtes de dialogue Analysis Services &#40;données multidimensionnelles&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

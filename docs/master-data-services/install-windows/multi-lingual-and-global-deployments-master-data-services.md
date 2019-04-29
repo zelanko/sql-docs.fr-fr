@@ -11,11 +11,11 @@ author: leolimsft
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 775f3788946767b0a46ab4efd490cf2670d7ff76
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62695369"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>Déploiements multilingues et globaux (Master Data Services)
 
@@ -33,7 +33,7 @@ ms.locfileid: "47612307"
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|Lorsque vous exécutez le programme d'installation en anglais, l'application Web [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] est disponible et prise en charge dans toutes les langues d'application. [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] peut être affiché dans n’importe quelle de ces langues d’application et accepter des données spécifiques aux paramètres régionaux basés sur les préférences linguistiques du navigateur web client. Si les préférences linguistiques sont configurées pour une langue d'application non prise en charge, la langue par défaut du [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] est l'anglais.<br /><br /> Lorsque vous exécutez le programme d'installation dans une langue autre que l'anglais, les ressources sont incluses pour toutes les autres langues de l'application, mais le fait que les clients utilisent [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] dans une langue autre que la langue d'installation sélectionnée n'est pas un scénario pris en charge. Si vous essayez d'accéder au [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] dans une langue différente de la langue d'installation, vous pouvez rencontrer des problèmes avec l'entrée et l'affichage des données dans l'application.|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] base de données|Les informations dans la base de données des [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ne sont pas spécifiques à des paramètres régionaux. Cela permet au [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] de décider du mode d'affichage des informations, telles que les dates et nombres, au format déterminé par les préférences linguistiques du navigateur Web client.|  
   
-## <a name="see-also"></a> Voir aussi  
+## <a name="see-also"></a>Voir aussi  
  [Installer Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

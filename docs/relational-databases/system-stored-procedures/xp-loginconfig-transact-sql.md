@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8590a33f870dc14ac34118ce5e655acc6e67f257
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62645101"
 ---
 # <a name="xploginconfig-transact-sql"></a>xp_loginconfig (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ xp_loginconfig ['config_name']
 ```  
   
 ## <a name="arguments"></a>Arguments  
- **«** *nom_de_config* **»**  
+ **'** *config_name* **'**  
  Valeur de configuration à afficher. Si *nom_de_config* est ne pas spécifié, toutes les valeurs de configuration sont indiquées. *nom_de_config* est **sysname**, avec NULL comme valeur par défaut et peut prendre l’une des valeurs suivantes.  
   
-|Valeur|Description|  
+|Value|Description|  
 |-----------|-----------------|  
 |**mode de connexion**|Mode de sécurité de connexion. Les valeurs possibles sont **mixte** et **l’authentification Windows**.<br /><br /> Remplacé par :<br /><br /> `SELECT SERVERPROPERTY('IsIntegratedSecurityOnly'); GO`|  
 |**connexion par défaut**|Nom de l'ID de connexion [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] par défaut pour les utilisateurs autorisés de connexions approuvées (les utilisateurs sans nom de connexion correspondant). La connexion par défaut est **invité**. Cette valeur est fournie pour des raisons de compatibilité descendante.|  
@@ -65,14 +65,14 @@ xp_loginconfig ['config_name']
 |Nom de colonne|Type de données|Description|  
 |-----------------|---------------|-----------------|  
 |**nom**|**sysname**|Valeur de configuration|  
-|**valeur de configuration**|**sysname**|Paramètre de la valeur de configuration|  
+|**config value**|**sysname**|Paramètre de la valeur de configuration|  
   
 ## <a name="remarks"></a>Notes  
  **xp_loginconfig** ne peut pas être utilisé pour définir les valeurs de configuration.  
   
  Pour définir le mode de connexion et le niveau d'audit, utilisez [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>Autorisations  
  Nécessite l’autorisation CONTROL sur le **master** base de données.  
   
 ## <a name="examples"></a>Exemples  

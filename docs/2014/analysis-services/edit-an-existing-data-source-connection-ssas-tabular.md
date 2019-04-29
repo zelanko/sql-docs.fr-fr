@@ -14,11 +14,11 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a177971e13a100044ccc40de44b93dbf6816478
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48117799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62731568"
 ---
 # <a name="edit-an-existing-data-source-connection-ssas-tabular"></a>Modifier une connexion à une source de données existante (SSAS Tabulaire)
   Cette rubrique décrit la procédure de modification des propriétés d'une connexion de source de données existante dans un modèle tabulaire.  
@@ -79,7 +79,7 @@ ms.locfileid: "48117799"
      Lorsque vous enregistrez l'ensemble actuel de propriétés de table, un message peut apparaître pour vous prévenir que vous devez traiter les tables. Cliquez sur **Traiter** pour charger les données mises à jour dans votre modèle.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Traiter les données &#40;SSAS tabulaire&#41;](process-data-ssas-tabular.md)   
+ [Traiter les données &#40;SSAS Tabulaire&#41;](process-data-ssas-tabular.md)   
  [Sources de données prises en charge &#40;SSAS Tabulaire&#41;](tabular-models/data-sources-supported-ssas-tabular.md)  
   
   
