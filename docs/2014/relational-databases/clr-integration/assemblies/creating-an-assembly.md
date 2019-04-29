@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e28871e93bd718063692a31a4a3462399517dfc9
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48128999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62919572"
 ---
 # <a name="creating-an-assembly"></a>Création d'un assembly
   Les objets de base de données managés, tels que les procédures stockées ou les déclencheurs, sont successivement compilés et déployés dans des unités appelées « assemblys ». Les assemblys DLL managés doivent être enregistrés dans [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] avant de pouvoir utiliser la fonctionnalité fournie par l’assembly. Pour enregistrer un assembly dans une base de données [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , utilisez l'instruction CREATE ASSEMBLY. Cette rubrique explique comment enregistrer un assembly dans une base de données à l'aide de l'instruction CREATE ASSEMBLY, puis comment spécifier les paramètres de sécurité de l'assembly.  
